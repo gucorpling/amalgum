@@ -1,0 +1,53 @@
+Edited:
+=====
+
+Template:Listing
+Template:Mapframe
+
+Added:
+=====
+
+In Listing:
+NameAmirZ
+
+--&gt;{{#if:{{{name|}}}
+| &amp;#32;{{#ifeq:{{#invoke:IsLatin|IsLatin|{{{name|}}}}}|yes
+  | &lt;bdi class=&quot;listing-name&quot; style=&quot;font-style: italic;&quot;&gt;{{{name|}}}&lt;/bdi&gt;
+  | &lt;bdi class=&quot;listing-name&quot;&gt;{{{name|}}}&lt;/bdi&gt;}}
+}}&lt;!--
+
+Removed:
+========
+
+In Listing:
+
+Metadata - last edit date, &quot;edit&quot; link, etc.
+
+Note: an additional edit link will be inserted by Javacript at end of this required &quot;listing-metadata-items&quot; span.
+--&gt;&lt;span class=&quot;listing-metadata&quot;&gt;&lt;!--
+  --&gt;{{#if:{{{lastedit|}}}|&amp;#32;(}}&lt;!--
+  --&gt;&lt;span class=&quot;listing-metadata-items&quot;&gt;&lt;!--
+    --&gt;{{#if:{{{lastedit|}}}
+    | &lt;bdi class=&quot;listing-lastedit&quot;&gt;updated {{#time: M Y|{{{lastedit|}}}}}&lt;/bdi&gt;
+    | &amp;nbsp;&lt;!-- &quot;listing-metadata-items&quot; must NOT be empty, otherwise the &quot;edit&quot; link (not generated but inserted by javascript) will be missing --&gt;
+    }}&lt;!--
+  --&gt;&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{lastedit|}}}|)}}&lt;!--
+--&gt;&lt;/span&gt;&lt;!--
+
+In Mapframe:
+
+Metadata - last edit date, &quot;edit&quot; link, etc.
+
+Note: an additional edit link will be inserted by Javacript at end of this required &quot;listing-metadata-items&quot; span.
+--&gt;&lt;span class=&quot;listing-metadata&quot;&gt;&lt;!--
+  --&gt;{{#if:{{{lastedit|}}}|&amp;#32;(}}&lt;!--
+  --&gt;&lt;span class=&quot;listing-metadata-items&quot;&gt;&lt;!--
+    --&gt;{{#if:{{{lastedit|}}}
+    | &lt;bdi class=&quot;listing-lastedit&quot;&gt;updated {{#time: M Y|{{{lastedit|}}}}}&lt;/bdi&gt;
+    | &amp;nbsp;&lt;!-- &quot;listing-metadata-items&quot; must NOT be empty, otherwise the &quot;edit&quot; link (not generated but inserted by javascript) will be missing --&gt;
+    }}&lt;!--
+  --&gt;&lt;/span&gt;&lt;!--
+  --&gt;{{#if:{{{lastedit|}}}|)}}&lt;!--
+--&gt;&lt;/span&gt;&lt;!--
+
