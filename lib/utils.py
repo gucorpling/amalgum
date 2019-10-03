@@ -1,6 +1,10 @@
-import os, sys, tempfile, subprocess
+import os, sys, tempfile, subprocess, io
 
 PY3 = sys.version_info[0] == 3
+
+script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
+root_dir = script_dir + ".." + os.sep
+
 
 def get_col(data, colnum):
 	if not isinstance(data,list):
@@ -47,3 +51,33 @@ def exec_via_temp(input_text, command_params, workdir="", outfile=False):
 	finally:
 		os.remove(temp.name)
 		return output
+
+
+class Document:
+
+	def __init__(self,genre="voyage"):
+		self.title = ""
+		self.text = ""
+		self.author = ""
+		self.url = ""
+		self.lines = []
+		self.genre = genre
+		self.docnum = 0
+
+	def serialize(self,out_dir=None):
+		if out_dir is None:
+			out_dir = root_dir + "out" + os.sep + self.genre + os.sep
+
+		if not os.path.exists(out_dir):
+			os.mkdir(out_dir)
+
+		docname = 'autogum_'+ self.genre +'_doc' + str(self.docnum)
+
+		# TODO: more metadata
+		header = '<text id="' + docname + '" title="' + self.title + '"'
+		if self.author!= "":
+			header += ' author="'+self.author+'"'
+		header += '>\n'
+		output = header + self.text.strip() + "\n</text>\n"
+		with io.open(out_dir + docname + ".xml",'w',encoding="utf8",newline="\n") as f:
+			f.write(output)
