@@ -1,0 +1,19 @@
+# one of https://github.com/wikimedia/pywikibot/tree/master/pywikibot/families
+family: wikinews
+# parsoid needs this so it can fetch and expand templates
+url: en.wikinews.org
+transformations:
+  # see transformations/mwtext.py
+  mwtext:
+    - name: drop_templates
+      args:
+        names: ["audio"]
+    - name: drop_headings
+      args:
+        titles: ["references", "sister link", "sources", "external links"]
+
+  # see html.py
+  html:
+    - name: new_root
+      args:
+        css_selector: body
