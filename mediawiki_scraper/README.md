@@ -20,3 +20,5 @@ google-chrome tmp.xml
 ```sh
 python main.py --method scrape --config configs/wikinews.yaml
 ```
+
+5\. Output will be available in the `gum_tei` directory.
