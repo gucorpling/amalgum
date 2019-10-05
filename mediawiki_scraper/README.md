@@ -15,9 +15,9 @@ npm install
 cd ..
 ```
 
-4. Select a config describing the MediaWiki instance you want to scrape, e.g. `configs/wikinews.yaml`
+5. Select a config describing the MediaWiki instance you want to scrape, e.g. `configs/wikinews.yaml`
 
-5. Use `main.py` to prototype with a single file:
+6. Use `main.py` to prototype with a single file:
 
 ```sh
 python main.py \
@@ -29,10 +29,10 @@ python main.py \
 google-chrome tmp.xml
 ```
 
-6\. Once you're satisfied with the config, begin scraping:
+7. Once you're satisfied with the config, begin scraping:
 
 ```sh
 python main.py --method scrape --config configs/wikinews.yaml
 ```
 
-7\. Output will be available in the `gum_tei` directory.
+8. Output will be available in the `gum_tei` directory.
