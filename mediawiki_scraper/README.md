@@ -36,3 +36,7 @@ python main.py --method scrape --config configs/wikinews.yaml
 ```
 
 8. Output will be available in the `gum_tei` directory.
+
+# Notes
+- If an article has already been encountered, it will not be pulled again **regardless** of whether it has been updated since the last time it was seen
+- GUM TEI output will always be generated anew for all files (regardless of whether or not its mwtext was cached) according to the config as it currently is.
