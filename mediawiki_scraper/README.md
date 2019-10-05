@@ -9,7 +9,7 @@
 
 ```sh
 # make sure you checked out the parsoid submodule
-git submodule update --recursive
+git submodule update
 cd parsoid
 npm install
 cd ..
