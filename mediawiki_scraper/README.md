@@ -1,9 +1,23 @@
 # Usage
 1. Make sure you've installed the requirements from `../requirements.txt`
 
-2. Select a config describing the MediaWiki instance you want to scrape, e.g. `configs/wikinews.yaml`
+2. Install [Node.js](https://nodejs.org/en/)
 
-3. Use `main.py` to prototype with a single file:
+3. Install [npm](https://docs.npmjs.com/cli/install)
+
+4. Set up parsoid:
+
+```sh
+# make sure you checked out the parsoid submodule
+git submodule update --recursive
+cd parsoid
+npm install
+cd ..
+```
+
+4. Select a config describing the MediaWiki instance you want to scrape, e.g. `configs/wikinews.yaml`
+
+5. Use `main.py` to prototype with a single file:
 
 ```sh
 python main.py \
@@ -15,10 +29,10 @@ python main.py \
 google-chrome tmp.xml
 ```
 
-4\. Once you're satisfied with the config, begin scraping:
+6\. Once you're satisfied with the config, begin scraping:
 
 ```sh
 python main.py --method scrape --config configs/wikinews.yaml
 ```
 
-5\. Output will be available in the `gum_tei` directory.
+7\. Output will be available in the `gum_tei` directory.
