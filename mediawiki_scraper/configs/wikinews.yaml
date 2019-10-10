@@ -14,6 +14,43 @@ transformations:
 
   # see html.py
   html:
+    # get rid of the outer <html>
     - name: new_root
       args:
         css_selector: body
+
+    # get rid of <link/>s, <span/>s, etc.
+    - name: discard_empty_elements
+
+    # remove attrs we don't need
+    - name: discard_attributes_by_name
+      args:
+        name_regexes: ["^data-.*$", "class", "typeof", "about", "rel", "title"]
+
+    # remove elements but keep their children
+    - name: excise_elements
+      args:
+        css_selectors: [span]
+
+    # make substitutions so it's GUM TEI
+    - name: substitute_tags
+      args:
+        substitutions:
+          - src_tag: strong
+            new_tag: hi
+            new_tag_attrs:
+              rend: bold
+          - src_tag: b
+            new_tag: hi
+            new_tag_attrs:
+              rend: bold
+          - src_tag: i
+            new_tag: hi
+            new_tag_attrs:
+              rend: italic
+          - src_tag: figcaption
+            new_tag: caption
+          - src_tag: a
+            new_tag: ref
+            attr_map:
+              href: target

@@ -10,13 +10,13 @@ def apply_mwtext_transformations(config, mwtext):
         tfx_f = globals()[tfx["name"]] if tfx["name"] in globals() else None
         assert tfx_f is not None, "Transformation not found: " + tfx["name"]
         if "args" in tfx:
-            wikicode = tfx_f(wikicode, **tfx["args"])
+            wikicode = tfx_f(config, wikicode, **tfx["args"])
         else:
-            wikicode = tfx_f(wikicode)
+            wikicode = tfx_f(config, wikicode)
     return str(wikicode)
 
 
-def drop_headings(wikicode, titles=None):
+def drop_headings(config, wikicode, titles=None):
     out_nodes = []
     skip = False
     titles = [x.lower().strip() for x in titles]
@@ -35,7 +35,7 @@ def drop_headings(wikicode, titles=None):
     return wikicode
 
 
-def drop_templates(wikicode, names=None):
+def drop_templates(config, wikicode, names=None):
     out_nodes = []
     names = [x.lower().strip() for x in names]
     for n in wikicode._nodes:
