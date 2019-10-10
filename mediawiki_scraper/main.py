@@ -10,7 +10,7 @@ except ImportError:
     from yaml import Loader, Dumper
 from slugify import slugify
 
-from transformations.html import apply_html_transformations
+from transformations.html import apply_html_transformations, fix_root
 from transformations.mwtext import apply_mwtext_transformations
 
 
@@ -21,7 +21,7 @@ GUM_TEI_DIR = "gum_tei"
 
 # --------------------------------------------------------------------------------
 # the meat
-def convert(config, mwtext):
+def convert(config, mwtext, revid, url):
     mwtext = apply_mwtext_transformations(config, mwtext)
 
     # use Parsoid to produce HTML
@@ -35,7 +35,7 @@ def convert(config, mwtext):
     html = parser_subprocess.stdout.read().decode("utf-8")
     parser_subprocess.wait()
 
-    html = apply_html_transformations(config, html)
+    html = apply_html_transformations(config, html, revid, slugify(url), url)
     return html
 
 
@@ -72,7 +72,7 @@ def write_page_to_cache(url, revid, mwtext):
 
 
 def page_to_gum_tei_filepath(url, revid):
-    return os.sep.join([GUM_TEI_DIR, slugify(url) + "_" + revid])
+    return os.sep.join([GUM_TEI_DIR, slugify(url) + "_" + revid + ".xml"])
 
 
 def write_output(url, revid, gum_tei):
@@ -98,7 +98,7 @@ def process_page(config, page):
         mwtext = latest_revision["text"]
         write_page_to_cache(url, revid, mwtext)
 
-    gum_tei = convert(config, mwtext)
+    gum_tei = convert(config, mwtext, revid, url)
     write_output(url, revid, gum_tei)
 
 
@@ -129,7 +129,7 @@ def convert_file(config_filepath, mwtext_filepath):
     with open(mwtext_filepath, "r") as f:
         doc = f.read()
     config = load_config(config_filepath)
-    return convert(config, doc)
+    return convert(config, doc, "DEBUG", "DEBUG")
 
 
 # ------------------------------------------------------------------------------

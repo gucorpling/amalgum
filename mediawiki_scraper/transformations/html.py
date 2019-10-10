@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup, NavigableString
 import re
 
 
-def apply_html_transformations(config, html):
+def apply_html_transformations(config, html, revid, slug, url):
     tfxs = config["transformations"]["html"] or []
     soup = parse(html)
     for tfx in tfxs:
@@ -14,7 +14,20 @@ def apply_html_transformations(config, html):
             soup = tfx_f(config, soup, **tfx["args"])
         else:
             soup = tfx_f(config, soup)
+
+    soup = fix_root(config, soup, revid, slug, url)
     return str(soup)
+
+
+def fix_root(config, soup, revid, slug, url):
+    soup.name = "text"
+    soup.attrs = {
+        "id": "AUTOGUM_" + config["family"] + "_" + slug,
+        "revid": revid,
+        "sourceURL": url,
+        "type": config["family"],
+    }
+    return soup
 
 
 def parse(html):
