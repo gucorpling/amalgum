@@ -24,7 +24,7 @@ def convert(config, mwtext_object):
     mwtext = apply_mwtext_transformations(config, mwtext_object.text)
 
     # use Parsoid to produce HTML
-    if config['parsoid_mode'] == "http":
+    if config["parsoid_mode"] == "http":
         html = parsoid_convert_via_http(mwtext)
     else:
         html = parsoid_convert_via_cli(config, mwtext)
@@ -48,11 +48,12 @@ def parsoid_convert_via_cli(config, mwtext):
 def parsoid_convert_via_http(mwtext):
     resp = r.post(
         "http://localhost:8000/wikinews/v3/transform/wikitext/to/html/",
-        {"wikitext": mwtext}
+        {"wikitext": mwtext},
     )
     if resp.status_code != 200:
         raise Exception("Non-200 status code: " + resp)
     return resp.text
+
 
 # --------------------------------------------------------------------------------
 # scraper specific methods
@@ -86,20 +87,23 @@ def process_page(config, page):
 # ------------------------------------------------------------------------------
 # different methods for acquiring text
 
+
 def init_pywikibot(config):
     # pywikibot requires a file named user-config.py to be initialized before import
     # let's humor it...
     write_user_config(config)
     import pywikibot
+
     return pywikibot
 
 
 def page_generator(config, pywikibot, site):
     from pywikibot.data.api import ListGenerator
+
     lg = ListGenerator(
-        config['page_generation']['endpoint'],
+        config["page_generation"]["endpoint"],
         site=site,
-        **config['page_generation']['params']
+        **config["page_generation"]["params"],
     )
     return lg
 
@@ -124,7 +128,7 @@ def convert_specific_article(config_filepath, url):
     config = load_config(config_filepath)
     pywikibot = init_pywikibot(config)
     site = pywikibot.Site()
-    page = pywikibot.Page(site, url[url.rfind("/")+1:])
+    page = pywikibot.Page(site, url[url.rfind("/") + 1 :])
     mwtext_object = get_mwtext_object(page)
     return convert(config, mwtext_object)
 

@@ -26,7 +26,7 @@ def fix_root(config, soup, mwtext_object):
         "revid": mwtext_object.rev_id,
         "sourceURL": mwtext_object.url,
         "type": config["family"],
-        "title": mwtext_object.title
+        "title": mwtext_object.title,
     }
     return soup
 
