@@ -1,7 +1,28 @@
 # one of https://github.com/wikimedia/pywikibot/tree/master/pywikibot/families
 family: wikinews
+
 # parsoid needs this so it can fetch and expand templates
 url: en.wikinews.org
+
+# one of "http" or "cli". http is much quicker
+parsoid_mode: http
+
+# tells the scraper how to enumerate pages to scrape
+page_generation:
+  # https://www.mediawiki.org/wiki/API:Allpages
+  # https://www.mediawiki.org/wiki/API:Categorymembers
+  endpoint: allpages
+  params:
+    # in bytes, the max page size we will consider
+    # 1 kb = ~200 English words
+    # (an English word is about 5 chars long on average, and most English words use only ASCII chars)
+    apminsize: 2000   # ~400 words
+    apmaxsize: 8000   # ~1600 words
+    # only "real articles"
+    # see: https://www.mediawiki.org/wiki/Manual:Namespace
+    apnamespace: 0
+
+# how to turn the source text of each page into GUM TEI
 transformations:
   # see transformations/mwtext.py
   mwtext:
@@ -10,7 +31,7 @@ transformations:
         names: ["audio"]
     - name: drop_headings
       args:
-        titles: ["references", "sister link", "sources", "external links"]
+        titles: ["references", "sister link", "sources", "external links", "related news"]
 
   # see html.py
   html:
@@ -22,6 +43,9 @@ transformations:
     # get rid of <link/>s, <span/>s, etc.
     - name: discard_empty_elements
 
+    # i.e., html comments
+    - name: discard_comments
+
     # remove attrs we don't need
     - name: discard_attributes_by_name
       args:
@@ -30,7 +54,7 @@ transformations:
     # remove elements but keep their children
     - name: excise_elements
       args:
-        css_selectors: [span]
+        css_selectors: [span, section]
 
     # make substitutions so it's GUM TEI
     - name: substitute_tags

@@ -22,8 +22,8 @@ cd ..
 ```sh
 python main.py \
 --config configs/wikinews.yaml \
---method file \
---file mwtext/https-en-wikinews-org-wiki-22avast-ye-scurvy-file-sharers-21-22-3a-interview-with-swedish-pirate-party-leader-rickard-falkvinge_3911634  \
+--method url \
+--url '"Avast_ye_scurvy_file_sharers!":_Interview_with_Swedish_Pirate_Party_leader_Rickard_Falkvinge' \
 | tee tmp.xml
 # inspect the output and make changes to the yaml config as necessary
 google-chrome tmp.xml
@@ -36,6 +36,16 @@ python main.py --method scrape --config configs/wikinews.yaml
 ```
 
 8. Output will be available in the `gum_tei` directory.
+
+## Parsoid via HTTP
+By default, Parsoid is invoked via the command line. This method is slow. Parsoid can also be used via HTTP. To do this, first launch Parsoid in a separate shell session:
+
+```bash
+cd parsoid
+npm start
+```
+
+Now, go to your `config.yaml` file and change `parsoid_mode: cli` to `parsoid_mode: http`. The scraper will now communicate with the Parsoid server to convert documents.
 
 # Notes
 - If an article has already been encountered, it will not be pulled again **regardless** of whether it has been updated since the last time it was seen

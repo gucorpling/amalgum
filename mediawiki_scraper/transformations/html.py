@@ -1,8 +1,8 @@
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup, Comment
 import re
 
 
-def apply_html_transformations(config, html, revid, slug, url):
+def apply_html_transformations(config, html, mwtest_object):
     tfxs = config["transformations"]["html"] or []
     soup = parse(html)
     for tfx in tfxs:
@@ -15,17 +15,18 @@ def apply_html_transformations(config, html, revid, slug, url):
         else:
             soup = tfx_f(config, soup)
 
-    soup = fix_root(config, soup, revid, slug, url)
+    soup = fix_root(config, soup, mwtest_object)
     return str(soup)
 
 
-def fix_root(config, soup, revid, slug, url):
+def fix_root(config, soup, mwtext_object):
     soup.name = "text"
     soup.attrs = {
-        "id": "AUTOGUM_" + config["family"] + "_" + slug,
-        "revid": revid,
-        "sourceURL": url,
+        "id": "AUTOGUM_" + config["family"] + "_" + mwtext_object.file_safe_url,
+        "revid": mwtext_object.rev_id,
+        "sourceURL": mwtext_object.url,
         "type": config["family"],
+        "title": mwtext_object.title
     }
     return soup
 
@@ -44,6 +45,12 @@ def discard_empty_elements(config, soup):
     for tag in soup.find_all():
         if len(tag.get_text(strip=True)) == 0:
             tag.extract()
+    return soup
+
+
+def discard_comments(config, soup):
+    for tag in soup(text=lambda text: isinstance(text, Comment)):
+        tag.extract()
     return soup
 
 
@@ -69,12 +76,12 @@ def excise_elements(config, soup, css_selectors=[]):
     For each css selector, get rid of them while preserving their children.
     E.g., if the css selector is "span":
 
-        <p>Exact science based on <b><span><em><span>Cubics</span></em></span>,
+        <p>Exact science based on <b><span><em><span>Cubics</span></em></span></b>,
         not on <span>theories</span>. Wisdom is Cubic testing of knowledge.</p>
 
     becomes
 
-        <p>Exact science based on <b><em>Cubics</em>,
+        <p>Exact science based on <b><em>Cubics</em></b>,
         not on theories. Wisdom is Cubic testing of knowledge.</p>
 
     inspired by: https://stackoverflow.com/questions/1765848/remove-a-tag-using-beautifulsoup-but-keep-its-contents
@@ -87,9 +94,11 @@ def excise_elements(config, soup, css_selectors=[]):
 
     for selector in css_selectors:
         for tag in sorted(soup.select(selector), reverse=True, key=depth):
-            for c in tag.children:
-                tag.insert_before(c)
-            tag.extract()
+            if getattr(tag, "parent", None):
+                while len(tag.contents) > 0:
+                    c = tag.contents[0]
+                    tag.insert_before(c)
+                tag.extract()
 
     return soup
 
