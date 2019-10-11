@@ -23,7 +23,7 @@ cd ..
 python main.py \
 --config configs/wikinews.yaml \
 --method url \
---url '"Avast_ye_scurvy_file_sharers!":_Interview_with_Swedish_Pirate_Party_leader_Rickard_Falkvinge' \
+--url 'https://en.wikinews.org/wiki/%22Avast_ye_scurvy_file_sharers!%22:_Interview_with_Swedish_Pirate_Party_leader_Rickard_Falkvinge' \
 | tee tmp.xml
 # inspect the output and make changes to the yaml config as necessary
 google-chrome tmp.xml
