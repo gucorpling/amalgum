@@ -1,4 +1,9 @@
-import os, sys, tempfile, subprocess, io
+import os, sys, tempfile, subprocess, io, re
+import datetime
+import unidecode
+
+now = datetime.datetime.now()
+today = now.strftime("%Y-%m-%d")
 
 PY3 = sys.version_info[0] == 3
 
@@ -57,6 +62,7 @@ class Document:
 
 	def __init__(self,genre="voyage"):
 		self.title = ""
+		self.short_title = ""
 		self.text = ""
 		self.author = ""
 		self.url = ""
@@ -64,7 +70,27 @@ class Document:
 		self.genre = genre
 		self.docnum = 0
 
+	def make_short_title(self):
+		letters = set(list("abcdefghijklmnopqrstuvwxyz"))
+		stoplist = ["a","able","about","across","after","all","almost","also","am","among","an","and","any","are","as","at","be","because","been","but","by","can","cannot","could","dear","did","do","does","either","else","ever","every","for","from","get","got","had","has","have","he","her","hers","him","his","how","however","i","if","in","into","is","it","its","just","least","let","like","likely","may","me","might","most","must","my","neither","no","nor","not","of","off","often","on","only","or","other","our","own","rather","said","say","says","she","should","since","so","some","than","that","the","their","them","then","there","these","they","this","tis","to","too","twas","us","wants","was","we","were","what","when","where","which","while","who","whom","why","will","with","would","yet","you","your"]
+		stop_re = r"\b("+"|".join(stoplist)+r")\b"
+		title = unidecode.unidecode(self.title.lower())
+		title = re.sub(stop_re,'',title)
+		title = re.sub(' +'," ",title)
+		words = title.split()
+		title = ""
+		for word in words:
+			word = word
+			if len(title)>20:
+				break
+			word = "".join([c for c in word if c in letters])
+			title+=word
+		return title
+
 	def serialize(self,out_dir=None):
+
+		self.short_title = self.make_short_title()
+
 		if out_dir is None:
 			out_dir = root_dir + "out" + os.sep + self.genre + os.sep
 
@@ -75,9 +101,16 @@ class Document:
 
 		# TODO: more metadata
 		header = '<text id="' + docname + '" title="' + self.title + '"'
+		header += ' shortTile="' + self.short_title + '"'
 		if self.author!= "":
 			header += ' author="'+self.author+'"'
+
+		header += ' type="'+self.genre+'"'
+		header += ' dateCollected="'+today+'"'
+		if self.url != "":
+			header+= ' sourceURL="'+ self.url +'"'
 		header += '>\n'
 		output = header + self.text.strip() + "\n</text>\n"
+
 		with io.open(out_dir + docname + ".xml",'w',encoding="utf8",newline="\n") as f:
 			f.write(output)
