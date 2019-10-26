@@ -35,17 +35,20 @@ class Document:
         self.raw_text = ""
         self.docnum = 0
 
-    def serialize(self,out_dir=None):
-        if out_dir is None:
-            out_dir = script_dir + "out" + os.sep + "academic" + os.sep
-
-        docname = 'autogum_academic_doc' + str(self.docnum)
-
-        # TODO: more metadata
-        header = '<text id="' + docname + '" title="' + self.title + '">\n'
-        output = header + self.text.strip() + "\n</text>\n"
-        with io.open(out_dir + docname + ".xml",'w',encoding="utf8",newline="\n") as f:
-            f.write(output)
+    def serialize(self, path, if_raw=True):
+        if if_raw:
+            text = self.raw_text
+            title = "_".join(self.title.split()[:6])
+            title = re.sub("[/\-]", "_", title)
+            title = re.sub("\?|\*|\.|\#", "", title)
+            PATH = path + os.sep + f"{title}.txt"
+        else:
+            heading = f"<text id=autogum_academic_doc{self.docnum}> title={self.title} subject={self.subject} " \
+                      f"author={self.author} date={self.date} publisher={self.publisher} sourceURL={self.url}>\n"
+            text = heading + self.text + "\n</text>"
+            PATH = path + os.sep + f"autogum_academic_doc{self.docnum}.xml"
+        with open(PATH, "w", encoding="utf8") as f:
+            f.write(text)
 
 
 def write_file(path, doc, if_raw=True):
@@ -68,11 +71,16 @@ def soup(url):
     return parseed
 
 
-# TODO for clean text
 def clean_text(text):
     # split the text by sections, randomly select one section
-    index = random.randint(0, len(re.findall("data-nested=\"1\"", text))-1)
-    text = re.split("<section id=\".{1,30}\" type=\".{1,30}\"?><h2 data-nested=\"1\">", text)[1:][index]
+    if text.startswith("<div class=\"html-p\""):
+        text = text
+    else:
+        index = random.randint(0, len(re.findall("data-nested=\"1\"", text))-1)
+        sep = re.split("<section id=\".{1,30}\" type=\".{1,30}\"?><h2 data-nested=\"1\">", text)[1:]
+        if index >= len(sep):
+            index = 0
+        text = re.split("<section id=\".{1,30}\" type=\".{1,30}\"?><h2 data-nested=\"1\">", text)[1:][index]
 
     text = re.sub("<a href=(\".*?\").*?>(.*?)</a>", "<ref target=\g<1>>\g<2></ref>", text)  # href
     text = re.sub("<a class=\"html-fig\".*?>(.*?)</a>", "<figure>\g<1></figure>", text) # figure
@@ -148,8 +156,12 @@ def get_texts(url):
             current_doc = Document()
             parsed_html = soup(article_url+"/htm")
 
-            title = re.search("<div id=\"html-article-title\">(.*)</div>", str(parsed_html.find_all(id="html-article-title"))).group(1)
-            current_doc.title = re.sub("<.*?>", "", title)
+            title = re.search("<div id=\"html-article-title\">(.*)</div>", str(parsed_html.find_all(id="html-article-title")))
+            if title is not None:
+                title = title.group(1)
+            else:
+                title = ""
+            current_doc.title = BeautifulSoup(title, "lxml").text
             current_doc.subject = subject
             current_doc.author = ", ".join(re.findall("<meta content=\"(.*?)\" name=\".*?creator\"/>", str(parsed_html)))
             current_doc.date = re.search("<meta content=\"(.*?)\" name=\".*?date\"/>", str(parsed_html)).group(1)
@@ -176,7 +188,8 @@ def get_texts(url):
         subject_corpora_len = 0
         subject = subject_search_url[2]
         subject_url = []
-        for n in range(1, 2):   # The number of search pages
+        # if subject == "computer-math":
+        for n in range(1, 51):   # The number of search pages
             search_page = subject_search_url[0] + str(n) + subject_search_url[1]
             searched_urls = get_url(search_page, "href=\"(.*?)\"", ('a', 'title-link'))    # Get 50 articles in one search page for a subject
             subject_url += (searched_urls)
@@ -189,8 +202,8 @@ def get_texts(url):
                 all_docs.append(possible_texts)
                 count += 1
 
-                write_file(RAW_PATH, possible_texts, if_raw=True)  # write file to data/academic
-                write_file(OUT_PATH, possible_texts, if_raw=False) # write file to out/academic
+                possible_texts.serialize(RAW_PATH, if_raw=True)  # write file to data/academic
+                possible_texts.serialize(OUT_PATH, if_raw=False) # write file to out/academic
 
                 subject_corpora_len += len(possible_texts.text.split())
                 if subject_corpora_len >= subcorp_limit:
@@ -202,3 +215,4 @@ if __name__ == "__main__":
     url = "https://www.mdpi.com"
     sys.stderr.write("o Scraping articles\n")
     get_texts(url)
+    sys.stderr.write("o Done!\n")
