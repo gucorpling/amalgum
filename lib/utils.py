@@ -1,14 +1,25 @@
 import os, sys, tempfile, subprocess, io, re
 import datetime
 import unidecode
+from datetime import datetime
+from pytz import timezone
+from dateutil import tz
 
-now = datetime.datetime.now()
+now = datetime.now()
 today = now.strftime("%Y-%m-%d")
 
 PY3 = sys.version_info[0] == 3
 
 script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 root_dir = script_dir + ".." + os.sep
+
+
+def utc_to_date(utc):
+	fmt = "%Y-%m-%d"
+	zone = tz.gettz("US/Eastern")
+	d = datetime.fromtimestamp(int(utc))
+	d = d.astimezone(zone)
+	return d.strftime(fmt)
 
 
 def get_col(data, colnum):
@@ -66,6 +77,9 @@ class Document:
 		self.text = ""
 		self.author = ""
 		self.url = ""
+		self.date_created = ""
+		self.date_collected = ""
+		self.date_modified = ""
 		self.lines = []
 		self.genre = genre
 		self.docnum = 0
@@ -78,14 +92,24 @@ class Document:
 		title = re.sub(stop_re,'',title)
 		title = re.sub(' +'," ",title)
 		words = title.split()
-		title = ""
+		if len(words) < 2:
+			words = self.title.lower().split()
+		title = []
 		for word in words:
 			word = word
-			if len(title)>20:
+			if len("-".join(title))>15:
 				break
 			word = "".join([c for c in word if c in letters])
-			title+=word
-		return title
+			title.append(word)
+		return "-".join(title)
+
+	def get_speakers(self):
+		speakers = sorted(list(set(re.findall(r'who="(#[^"]+)"',self.text))))
+		speaker_count = len(speakers)
+		speakers = ", ".join(speakers)
+		if speaker_count == 0:
+			speakers = "none"
+		return speakers, speaker_count
 
 	def serialize(self,out_dir=None):
 
@@ -107,8 +131,14 @@ class Document:
 
 		header += ' type="'+self.genre+'"'
 		header += ' dateCollected="'+today+'"'
+		if self.date_created != "":
+			header += ' dateCreated="' + self.date_created + '"'
+		if self.date_modified != "":
+			header += ' dateModified="' + self.date_modified + '"'
 		if self.url != "":
 			header+= ' sourceURL="'+ self.url +'"'
+		speaker_list, speaker_count = self.get_speakers()
+		header += ' speakerList="' + speaker_list + '" speakerCount="' + str(speaker_count) + '"'
 		header += '>\n'
 		output = header + self.text.strip() + "\n</text>\n"
 
