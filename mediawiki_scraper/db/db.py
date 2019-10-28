@@ -5,7 +5,7 @@ import datetime
 
 
 PARENT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-db = pw.SqliteDatabase(PARENT_DIR + os.sep + "texts.db")
+db = pw.SqliteDatabase(None)
 
 
 class BaseModel(pw.Model):
@@ -50,9 +50,14 @@ def get_mwtext_by_url(url):
     return MWText.get(MWText.url == url)
 
 
-def initialize():
+def initialize(output_dir):
+    db.init(output_dir + os.sep + "scraping.db")
     db.connect()
     db.create_tables([MWText], safe=True)
 
 
-initialize()
+def remove_db(output_dir):
+    try:
+        os.remove(output_dir + os.sep + "scraping.db")
+    except:
+        pass

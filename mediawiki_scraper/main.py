@@ -1,5 +1,8 @@
 import os
 import subprocess
+from contextlib import contextmanager
+import tempfile
+import time
 
 import requests as r
 import yaml
@@ -11,23 +14,23 @@ except ImportError:
 
 from transformations.html import apply_html_transformations, fix_root
 from transformations.mwtext import apply_mwtext_transformations
-import db.db as db
+from db.db import initialize as initialize_db, remove_db
+from db import db
 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
-GUM_TEI_DIR = "gum_tei"
 
 
 # --------------------------------------------------------------------------------
 # the meat
-def convert(config, mwtext_object):
+def convert(config, mwtext_object, dev_mode=False):
     mwtext = apply_mwtext_transformations(config, mwtext_object.text)
 
     # use Parsoid to produce HTML
-    if config["parsoid_mode"] == "http":
-        html = parsoid_convert_via_http(mwtext)
-    else:
+    if config["parsoid_mode"] == "cli" or dev_mode:
         html = parsoid_convert_via_cli(config, mwtext)
+    else:
+        html = parsoid_convert_via_http(mwtext)
     html = apply_html_transformations(config, html, mwtext_object)
     return html
 
@@ -69,25 +72,60 @@ usernames['wikinews']['en'] = 'AutoGumBot'
         )
 
 
-def write_output(mwtext_object, gum_tei):
+def write_parsoid_config(config):
+    with open(os.sep.join([FILE_DIR, "parsoid", "config.yaml"]), "w") as f:
+        f.write(
+            f"""
+worker_heartbeat_timeout: 300000
+
+logging:
+    level: info
+
+services:
+  - module: lib/index.js
+    entrypoint: apiServiceWorker
+    conf:
+        mwApis:
+        - uri: 'https://{config['url']}/w/api.php'
+          domain: '{config['family']}'  # optional
+"""
+        )
+
+
+@contextmanager
+def boot_parsoid(config):
+    write_parsoid_config(config)
+    try:
+        p = subprocess.Popen(
+            ["npm", "start"],
+            cwd=FILE_DIR + os.sep + "parsoid",
+            stdout=subprocess.DEVNULL,
+        )
+        print("Started parsoid, sleeping to let it init...")
+        time.sleep(5)
+        yield p
+    finally:
+        p.terminate()  # send sigterm, or ...
+        p.kill()  # send sigkill
+
+
+def write_output(mwtext_object, gum_tei, output_dir):
     filename = mwtext_object.file_safe_url + "_" + str(mwtext_object.rev_id) + ".xml"
-    filepath = os.sep.join([GUM_TEI_DIR, filename])
+    filepath = os.sep.join([output_dir, filename])
     with open(filepath, "w") as f:
         f.write(gum_tei)
 
 
-def process_page(config, page):
+def process_page(config, page, output_dir):
     print(f"Processing `{str(page)}`... ", end="")
     mwtext_object = get_mwtext_object(page)
     gum_tei = convert(config, mwtext_object)
-    write_output(mwtext_object, gum_tei)
+    write_output(mwtext_object, gum_tei, output_dir)
     print("done.")
 
 
 # ------------------------------------------------------------------------------
 # different methods for acquiring text
-
-
 def init_pywikibot(config):
     # pywikibot requires a file named user-config.py to be initialized before import
     # let's humor it...
@@ -108,20 +146,26 @@ def page_generator(config, pywikibot, site):
     return lg
 
 
-def scrape(config_filepath):
+def scrape(config_filepath, output_dir):
     config = load_config(config_filepath)
+
+    # write pywikibot config
     pywikibot = init_pywikibot(config)
     site = pywikibot.Site()
-    if not os.path.exists(GUM_TEI_DIR):
-        os.mkdir(GUM_TEI_DIR)
 
-    for page_dict in page_generator(config, pywikibot, site):
-        try:
-            page = pywikibot.Page(site, page_dict["title"])
-            process_page(config, page)
-        except Exception as e:
-            print("Oops! Something went wrong.")
-            print(e)
+    # initialize db and output dir
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir, exist_ok=True)
+    initialize_db(output_dir)
+
+    with boot_parsoid(config) as _:
+        for page_dict in page_generator(config, pywikibot, site):
+            try:
+                page = pywikibot.Page(site, page_dict["title"])
+                process_page(config, page, output_dir)
+            except Exception as e:
+                print("Oops! Something went wrong.")
+                print(e)
 
 
 def convert_specific_article(config_filepath, url):
@@ -129,14 +173,16 @@ def convert_specific_article(config_filepath, url):
     pywikibot = init_pywikibot(config)
     site = pywikibot.Site()
     page = pywikibot.Page(site, url[url.rfind("/") + 1 :])
-    mwtext_object = get_mwtext_object(page)
-    return convert(config, mwtext_object)
+    remove_db(tempfile.gettempdir())
+    initialize_db(tempfile.gettempdir())
+    mwtext_object = get_mwtext_object(page, dev_mode=True)
+    return convert(config, mwtext_object, dev_mode=True)
 
 
 # ------------------------------------------------------------------------------
 # utils
-def get_mwtext_object(page):
-    if not db.mwtext_exists(str(page)):
+def get_mwtext_object(page, dev_mode=False):
+    if dev_mode or not db.mwtext_exists(str(page)):
         title = page.title()
         url = page.full_url()
         file_safe_url = page.title(as_filename=True)
@@ -167,10 +213,15 @@ if __name__ == "__main__":
         default=os.sep.join([FILE_DIR, "configs", "wikinews.yaml"]),
         help="yaml config that describes the MediaWiki instance to be scraped",
     )
+    p.add_argument(
+        "--output-dir",
+        default=os.sep.join([FILE_DIR, "output", "wikinews"]),
+        help="directory that will contain the output files",
+    )
     args = p.parse_args()
 
     if args.method == "scrape":
-        scrape(args.config)
+        scrape(args.config, args.output_dir)
     elif args.method == "url":
         assert args.url
         print(convert_specific_article(args.config, args.url))
