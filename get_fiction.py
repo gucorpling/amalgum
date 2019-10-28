@@ -2,6 +2,23 @@ import io, re, sys, os
 from glob import glob
 from random import shuffle, seed, choice
 from lib.utils import Document
+from gutenberg.acquire import load_etext
+from gutenberg.acquire.text import _format_download_uri
+from gutenberg.cleanup import strip_headers
+
+
+# Constants for limiting text sizes based on space count
+MAX_SPACES = 1000
+MIN_SPACES = 300
+TARGET_SPACES = 800
+TOTAL_GENRE_SIZE = 430000  # approx. ratio of 0.85 spaces to tokens, so just over 0.5 M tokens
+
+def detect_hyphenation(text):
+	"""Heuristically detects texts with unrestored hyphenation"""
+	bad = ["sug- g","dis- t","ig- n","un- "]
+	if any([b in text for b in bad]):
+		return True
+	return False
 
 
 def get_paragraphs(text):
@@ -36,10 +53,14 @@ def detect_headings(paragraphs):
 			elif "copyright" in para.lower():
 				output.append(0)
 				continue
-			elif re.match(r'".*"$',para):  # Direct speech line paragraph
+			elif para.startswith('"') or para.startswith("'") or para.startswith("‘") or para.startswith("“"):
+				# Possible direct speech line paragraph
 				output.append(0)
 				continue
 			elif re.search(r'[A-Za-z]',para) is None:  # No text in paragraph
+				output.append(0)
+				continue
+			elif para[-1] in [")","(","]","[",".","?","!", ":", "-", "”", '"', "'","’"]:  # Heading should not end in punctuation
 				output.append(0)
 				continue
 			else:
@@ -47,18 +68,33 @@ def detect_headings(paragraphs):
 	return output
 
 
-
-
 seed(42)
 
 script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 data_dir = script_dir + "data" + os.sep
 
-files = glob(data_dir + "fiction" + os.sep + "*.txt")
+meta = io.open("gutenberg_meta_filtered.tab",encoding="utf8").read().strip().split("\n")
 
 docnum = 0
-for file_ in files:
-	text = io.open(file_,encoding="utf8").read()
+
+total_spaces = 0
+accepted = 0
+
+for i, book in enumerate(meta):
+
+	if i+1 % 10 == 0:
+		sys.stderr.write("\rSeen " + str(i+1) + " books, accepted " + str(accepted) +
+						 " with " + str(total_spaces)+ " spaces              ")
+
+	book_id, title, author = book.split("\t")
+	try:
+		e_text = load_etext(int(book_id),mirror="http://gutenberg.readingroo.ms")
+		url = _format_download_uri(int(book_id),mirror="http://gutenberg.readingroo.ms")
+	except:  # can't find URI, e.g. UnknownDownloadUriException
+		sys.stderr.write("WARN: could not download text ID:" + str(book_id) + "\n")
+		continue
+
+	text = strip_headers(e_text).strip().replace("\r","")
 
 	# Collapse multiline brackets (e.g. multiline figure captions)
 	collapsed = ""
@@ -117,9 +153,9 @@ for file_ in files:
 		par_num +=1
 		output.append(para)
 
-		if spaces > 1000:
+		if spaces > TARGET_SPACES:
 			break
-	if spaces < 300:
+	if spaces < MIN_SPACES:
 		continue
 
 	# Remove alpha-less paragraphs in head/tail, ignoring XML:
@@ -142,16 +178,24 @@ for file_ in files:
 			break
 
 	doc = Document()
-	doc.url = "https://www.gutenberg.org/"
+	doc.url = url
 	doc.genre = "fiction"
-	doc.author, doc.title = os.path.basename(file_).replace(".txt","").split("___")
+	doc.author, doc.title = author, title  # os.path.basename(file_).replace(".txt","").split("___")
 	doc.text = "\n\n".join(output)
 	doc.docnum = docnum
 
-	if re.search(r'\bpoe',doc.title) is not None:  # Avoid poetry
+	if doc.text.count(" ") > MAX_SPACES:
+		continue
+	if detect_hyphenation(doc.text):
 		continue
 
 	doc.serialize()
+	accepted += 1
+
+	total_spaces += doc.text.count(" ")
+
+	if total_spaces > TOTAL_GENRE_SIZE:
+		break
 
 	docnum+=1
 
