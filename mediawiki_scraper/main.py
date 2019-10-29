@@ -3,6 +3,7 @@ import subprocess
 from contextlib import contextmanager
 import tempfile
 import time
+import traceback
 
 import requests as r
 import yaml
@@ -30,7 +31,7 @@ def convert(config, mwtext_object, dev_mode=False):
     if config["parsoid_mode"] == "cli" or dev_mode:
         html = parsoid_convert_via_cli(config, mwtext)
     else:
-        html = parsoid_convert_via_http(mwtext)
+        html = parsoid_convert_via_http(config, mwtext)
     html = apply_html_transformations(config, html, mwtext_object)
     return html
 
@@ -48,13 +49,13 @@ def parsoid_convert_via_cli(config, mwtext):
     return html
 
 
-def parsoid_convert_via_http(mwtext):
+def parsoid_convert_via_http(config, mwtext):
     resp = r.post(
-        "http://localhost:8000/wikinews/v3/transform/wikitext/to/html/",
+        f"http://localhost:8000/{config['family']}/v3/transform/wikitext/to/html/",
         {"wikitext": mwtext},
     )
     if resp.status_code != 200:
-        raise Exception("Non-200 status code: " + resp)
+        raise Exception(f"Non-200 status code {resp.status_code}: {resp.reason}")
     return resp.text
 
 
@@ -64,6 +65,7 @@ def write_user_config(config):
     with open(FILE_DIR + os.sep + "user-config.py", "w") as f:
         f.write(
             f"""
+family_files['wikihow'] = 'https://www.wikihow.com/api.php'
 family = '{config['family']}'
 userinterface_lang = 'en'
 mylang = 'en'
@@ -86,7 +88,7 @@ services:
     entrypoint: apiServiceWorker
     conf:
         mwApis:
-        - uri: 'https://{config['url']}/w/api.php'
+        - uri: {'https://' + config['url'] + '/w/api.php' if 'api_url' not in config else config['api_url']}
           domain: '{config['family']}'  # optional
 """
         )
@@ -102,7 +104,7 @@ def boot_parsoid(config):
             stdout=subprocess.DEVNULL,
         )
         print("Started parsoid, sleeping to let it init...")
-        time.sleep(5)
+        time.sleep(3)
         yield p
     finally:
         p.terminate()  # send sigterm, or ...
@@ -165,7 +167,7 @@ def scrape(config_filepath, output_dir):
                 process_page(config, page, output_dir)
             except Exception as e:
                 print("Oops! Something went wrong.")
-                print(e)
+                traceback.print_exc()
 
 
 def convert_specific_article(config_filepath, url):
