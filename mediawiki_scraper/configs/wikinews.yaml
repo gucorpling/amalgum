@@ -11,6 +11,7 @@ parsoid_mode: http
 page_generation:
   # https://www.mediawiki.org/wiki/API:Allpages
   # https://www.mediawiki.org/wiki/API:Categorymembers
+  # see also: https://www.mediawiki.org/wiki/API:Lists
   endpoint: allpages
   params:
     # in bytes, the max page size we will consider
@@ -28,10 +29,22 @@ transformations:
   mwtext:
     - name: drop_templates
       args:
-        names: ["audio"]
+        re_patterns:
+          - "audio"
+          - ".*_infobox"
+          - "haveyoursay"
+          - "archived"
+          - "interview"
+          - "publish"
+          - "WikimediaMention"
     - name: drop_headings
       args:
-        titles: ["references", "sister link", "sources", "external links", "related news"]
+        titles:
+          - "references"
+          - "sister link"
+          - "sources"
+          - "external links"
+          - "related news"
 
   # see html.py
   html:
@@ -46,15 +59,23 @@ transformations:
     # i.e., html comments
     - name: discard_comments
 
+    # remove tags
+    - name: discard_elements
+      args:
+        css_selectors:
+          - ".infobox"
+          - ".messagebox"
+
     # remove attrs we don't need
     - name: discard_attributes_by_name
       args:
-        name_regexes: ["^data-.*$", "class", "typeof", "about", "rel", "title"]
-
-    # remove elements but keep their children
-    - name: excise_elements
-      args:
-        css_selectors: [span, section]
+        name_regexes:
+          - "^data-.*$"
+          - "class"
+          - "typeof"
+          - "about"
+          - "rel"
+          - "title"
 
     # make substitutions so it's GUM TEI
     - name: substitute_tags
@@ -78,3 +99,14 @@ transformations:
             new_tag: ref
             attr_map:
               href: target
+
+    # remove ALL other tags that aren't in a closed set of GUM TEI tags
+    - name: excise_unless_whitelisted
+      args:
+        whitelist:
+          - text
+          - p
+          - hi
+          - ref
+          - figure
+          - caption

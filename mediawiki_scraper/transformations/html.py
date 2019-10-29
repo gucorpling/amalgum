@@ -16,7 +16,7 @@ def apply_html_transformations(config, html, mwtest_object):
             soup = tfx_f(config, soup)
 
     soup = fix_root(config, soup, mwtest_object)
-    return str(soup)
+    return re.sub(r"\n+", "\n", str(soup))
 
 
 def fix_root(config, soup, mwtext_object):
@@ -67,6 +67,19 @@ def discard_attributes_by_name(config, soup, name_regexes=[]):
                 tag.attrs = {
                     k: v for k, v in tag.attrs.items() if not re.search(pattern, k)
                 }
+
+    return soup
+
+
+def discard_elements(config, soup, css_selectors=[]):
+    def depth(node):
+        if node is None:
+            return 0
+        return 1 + depth(node.parent)
+
+    for selector in css_selectors:
+        for tag in sorted(soup.select(selector), reverse=True, key=depth):
+            tag.extract()
 
     return soup
 
@@ -132,5 +145,21 @@ def substitute_tags(config, soup, substitutions):
                         tag.attrs = new_attrs
                     else:
                         tag.attrs.update(new_attrs)
+
+    return soup
+
+
+def excise_unless_whitelisted(config, soup, whitelist=[]):
+    def depth(node):
+        if node is None:
+            return 0
+        return 1 + depth(node.parent)
+
+    for tag in sorted(soup.find_all(), reverse=True, key=depth):
+        if getattr(tag, "parent", None) and tag.name not in whitelist:
+            while len(tag.contents) > 0:
+                c = tag.contents[0]
+                tag.insert_before(c)
+            tag.extract()
 
     return soup

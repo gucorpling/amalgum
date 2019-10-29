@@ -1,4 +1,5 @@
 import mwparserfromhell
+import re
 
 
 def apply_mwtext_transformations(config, mwtext):
@@ -35,13 +36,12 @@ def drop_headings(config, wikicode, titles=None):
     return wikicode
 
 
-def drop_templates(config, wikicode, names=None):
+def drop_templates(config, wikicode, re_patterns=[]):
     out_nodes = []
-    names = [x.lower().strip() for x in names]
     for n in wikicode._nodes:
-        if (
-            isinstance(n, mwparserfromhell.nodes.template.Template)
-            and n.name.lower().strip() in names
+        name = str(n).replace(" ", "_").replace("{", "").replace("}", "")
+        if isinstance(n, mwparserfromhell.nodes.template.Template) and any(
+            re.match(pattern, name) for pattern in re_patterns
         ):
             continue
         out_nodes.append(n)

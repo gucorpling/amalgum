@@ -12,7 +12,7 @@ try:
 except ImportError:
     from yaml import Loader, Dumper
 
-from transformations.html import apply_html_transformations, fix_root
+from transformations.html import apply_html_transformations
 from transformations.mwtext import apply_mwtext_transformations
 from db.db import initialize as initialize_db, remove_db
 from db import db
