@@ -37,10 +37,11 @@ def convert(config, mwtext_object, dev_mode=False):
 
 
 def parsoid_convert_via_cli(config, mwtext):
+    command = ["parsoid/bin/parse.js", f"--domain={config['url']}"]
+    if "api_url" in config:
+        command.append(f"--apiURL={config['api_url']}")
     parser_subprocess = subprocess.Popen(
-        ["parsoid/bin/parse.js", f"--domain={config['url']}"],
-        stdin=subprocess.PIPE,
-        stdout=subprocess.PIPE,
+        command, stdin=subprocess.PIPE, stdout=subprocess.PIPE
     )
     parser_subprocess.stdin.write(str(mwtext).encode("utf-8"))
     parser_subprocess.stdin.close()
@@ -176,12 +177,24 @@ def scrape(config_filepath, output_dir):
 def convert_specific_article(config_filepath, url):
     config = load_config(config_filepath)
     pywikibot = init_pywikibot(config)
+    monkey_patch_pywikibot(pywikibot)
     site = pywikibot.Site()
     page = pywikibot.Page(site, url[url.rfind("/") + 1 :])
     remove_db(tempfile.gettempdir())
     initialize_db(tempfile.gettempdir())
     mwtext_object = get_mwtext_object(page, dev_mode=True)
     return convert(config, mwtext_object, dev_mode=True)
+
+
+def monkey_patch_pywikibot(pywikibot):
+    old_sametitle = pywikibot.BaseSite.sametitle
+
+    def new_sametitle(self, title1, title2):
+        title1 = title1.replace("-", "_")
+        title2 = title2.replace("-", "_")
+        return old_sametitle(self, title1, title2)
+
+    pywikibot.BaseSite.sametitle = new_sametitle
 
 
 # ------------------------------------------------------------------------------
