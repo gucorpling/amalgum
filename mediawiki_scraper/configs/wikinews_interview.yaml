@@ -31,10 +31,13 @@ transformations:
           - "audio"
           - ".*_infobox"
           - "haveyoursay"
+          - "archive"
           - "archived"
+          - "original"
           - "interview"
           - "publish"
           - "WikimediaMention"
+          - "desktop-only"
     - name: drop_headings
       args:
         titles:
@@ -63,6 +66,8 @@ transformations:
         css_selectors:
           - ".infobox"
           - ".messagebox"
+          - ".noprint"
+          - ".xambox"
 
     # remove attrs we don't need
     - name: discard_attributes_by_name
