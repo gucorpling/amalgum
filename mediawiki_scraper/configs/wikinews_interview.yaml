@@ -1,0 +1,110 @@
+# one of https://github.com/wikimedia/pywikibot/tree/master/pywikibot/families
+family: wikinews
+
+# parsoid needs this so it can fetch and expand templates
+url: en.wikinews.org
+
+# one of "http" or "cli". http is much quicker
+parsoid_mode: http
+
+# tells the scraper how to enumerate pages to scrape
+page_generation:
+  # https://www.mediawiki.org/wiki/API:Allpages
+  # https://www.mediawiki.org/wiki/API:Categorymembers
+  # see also: https://www.mediawiki.org/wiki/API:Lists
+  endpoint: categorymembers
+  params:
+    cmtitle: "Category:Interview"
+    cmnamespace: 0
+    cmtype: "page"
+    cmlimit: 5000
+    cmsort: timestamp
+    cmdir: older
+
+# how to turn the source text of each page into GUM TEI
+transformations:
+  # see transformations/mwtext.py
+  mwtext:
+    - name: drop_templates
+      args:
+        re_patterns:
+          - "audio"
+          - ".*_infobox"
+          - "haveyoursay"
+          - "archived"
+          - "interview"
+          - "publish"
+          - "WikimediaMention"
+    - name: drop_headings
+      args:
+        titles:
+          - "references"
+          - "sister link"
+          - "sources"
+          - "external links"
+          - "related news"
+
+  # see html.py
+  html:
+    # get rid of the outer <html>
+    - name: new_root
+      args:
+        css_selector: body
+
+    # get rid of <link/>s, <span/>s, etc.
+    - name: discard_empty_elements
+
+    # i.e., html comments
+    - name: discard_comments
+
+    # remove tags
+    - name: discard_elements
+      args:
+        css_selectors:
+          - ".infobox"
+          - ".messagebox"
+
+    # remove attrs we don't need
+    - name: discard_attributes_by_name
+      args:
+        name_regexes:
+          - "^data-.*$"
+          - "class"
+          - "typeof"
+          - "about"
+          - "rel"
+          - "title"
+
+    # make substitutions so it's GUM TEI
+    - name: substitute_tags
+      args:
+        substitutions:
+          - src_tag: strong
+            new_tag: hi
+            new_tag_attrs:
+              rend: bold
+          - src_tag: b
+            new_tag: hi
+            new_tag_attrs:
+              rend: bold
+          - src_tag: i
+            new_tag: hi
+            new_tag_attrs:
+              rend: italic
+          - src_tag: figcaption
+            new_tag: caption
+          - src_tag: a
+            new_tag: ref
+            attr_map:
+              href: target
+
+    # remove ALL other tags that aren't in a closed set of GUM TEI tags
+    - name: excise_unless_whitelisted
+      args:
+        whitelist:
+          - text
+          - p
+          - hi
+          - ref
+          - figure
+          - caption
