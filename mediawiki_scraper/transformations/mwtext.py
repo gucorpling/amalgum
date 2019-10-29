@@ -2,9 +2,15 @@ import mwparserfromhell
 import re
 
 
+def _cleanup(mwtext):
+    mwtext = mwtext.replace("<noinclude>", "")
+    mwtext = mwtext.replace("</noinclude>", "")
+    return mwtext
+
+
 def apply_mwtext_transformations(config, mwtext):
     tfxs = config["transformations"]["mwtext"] or []
-    wikicode = mwparserfromhell.parse(mwtext)
+    wikicode = mwparserfromhell.parse(_cleanup(mwtext))
     for tfx in tfxs:
         assert "name" in tfx, "Transformation must have a name"
 
