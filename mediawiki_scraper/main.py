@@ -169,6 +169,9 @@ def scrape(config_filepath, output_dir):
                 print("Oops! Something went wrong.")
                 traceback.print_exc()
 
+            if "rate_limit" in config:
+                time.sleep(config["rate_limit"])
+
 
 def convert_specific_article(config_filepath, url):
     config = load_config(config_filepath)
