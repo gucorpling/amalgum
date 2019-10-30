@@ -12,6 +12,10 @@ from argparse import ArgumentParser
 from lib.whitespace_tokenize import tokenize as tt_tokenize
 from lib.utils import exec_via_temp, get_col
 from lib.gumdrop.EnsembleSentencer import EnsembleSentencer
+from glob import glob
+
+import torch
+torch.cuda.init()
 
 PY3 = sys.version_info[0] == 3
 
@@ -35,7 +39,8 @@ config = {
 "treebank":"en_gum",
 'processors': 'tokenize,pos,lemma,depparse',
 'tokenize_pretokenized': True,
-'pos_batch_size': 1000,
+'pos_batch_size': 500, #1000,
+'depparse_batch_size': 500
 # We could possibly mix and match models here, but it is probably a bad idea
 #  'pos_model_path': 'en_ewt_models/en_ewt_tagger.pt',
 #  'pos_pretrain_path': 'en_ewt_models/en_ewt.pretrain.pt',
@@ -43,7 +48,6 @@ config = {
 #  'depparse_model_path': 'en_ewt_lemmatizer/en_ewt_parser.pt',
 #  'depparse_pretrain_path': 'en_ewt_lemmatizer/en_ewt.pretrain.pt'
 }
-stan = stanfordnlp.Pipeline(**config, use_gpu=False) # This sets up a default neural pipeline in English
 
 
 class AutoGumNLP:
@@ -111,6 +115,8 @@ class AutoGumNLP:
 
 		# StanfordNLP expects a list of sentences, each a list of token strings, in order to run in pre-tokenized mode
 		sent_list = [s.strip().split() for s in tokenized.strip().split("\n")]
+		torch.cuda.empty_cache()
+
 		doc = stan(sent_list)
 
 		return doc.conll_file.conll_as_string()
@@ -144,6 +150,10 @@ class AutoGumNLP:
 			...
 		"""
 
+		# Likely verbal VVN, probably not an amod
+		VVN = 'been|called|made|found|seen|done|based|taken|born|considered|got|located|said|told|started|shown|become|put|gone|created|had|asked'
+		ART = 'the|this|that|those|a|an'
+
 		def postprocess_tok(TTSGML):
 			# Phone numbers
 			phone_exp = re.findall(r'((?:☏|(?:fax|phone)\n:)\n(?:\+?[0-9]+\n|-\n)+)',TTSGML,flags=re.UNICODE)
@@ -168,6 +178,16 @@ class AutoGumNLP:
 			# Latin abbreviations
 			TTSGML = TTSGML.replace(" i. e. "," i.e. ").replace(" e. g. "," e.g. ")
 
+			# en dash spelled --
+			TTSGML = re.sub(r'([^\n])--',r'\1\n--',TTSGML)
+			TTSGML = re.sub(r'--([^\n]+)\n',r'--\n\1\n',TTSGML)
+
+			# Find missing contraction spellings
+			TTSGML = re.sub(r'\n([Ii]t)(s\nnot\n)',r'\n\1\n\2',TTSGML)
+			TTSGML = TTSGML.replace("\nIve\n","\nI\nve\n")
+
+			# Fix grammar-dependant tokenizations
+			TTSGML = re.sub(r'(\n[Ii]t)(s\n(?:'+VVN+ART+r')\n)',r'\1\n\2',TTSGML)
 
 			fixed = TTSGML
 			return fixed
@@ -185,30 +205,51 @@ class AutoGumNLP:
 
 if __name__ == "__main__":
 
+	p = ArgumentParser()
+	p.add_argument("--no_parse",action="store_true",help="do not perform dependency parsing")
+	p.add_argument("--no_sent",action="store_true",help="do not perform sentence splitting")
+	p.add_argument("-g","--genre",action="store",choices=["news","interview","bio","academic","voyage","whow",
+														  "reddit","fiction"],help="only process this genre")
+	opts = p.parse_args()
+
+	if opts.no_sent:
+		opts.no_parse = True
+	if not opts.no_parse:
+		stan = stanfordnlp.Pipeline(**config, use_gpu=True) # This sets up a default neural pipeline in English
+
 	nlp = AutoGumNLP()
 
-	# TODO: fetch all files
-	test = script_dir + "out" + os.sep + "voyage" + os.sep + "autogum_voyage_doc4.xml"
 	genre = "voyage"
+	test = script_dir + "out" + os.sep + genre + os.sep + "autogum_*.xml"
 
-	files = [test]
+	files = glob(test)
 
-	for file_ in files:
+	for file_num, file_ in enumerate(files):
 		raw_xml = io.open(file_,encoding="utf8").read()
 		tokenized = nlp.tokenize(raw_xml)
 
 		tok_count = len([t for t in tokenized.strip().split("\n") if not t.startswith("<")])
 
-		# Skip documents that are too big or small
-		if tok_count < 300 or tok_count > 5000:
+		sys.stderr.write("o Processing document: " + os.path.basename(file_) +
+						 " (" + str(file_num+1) + "/" + str(len(files)) + ")")
+
+		# Skip documents that are way too big or small
+		if tok_count < 300 or tok_count > 2000:
+			sys.stderr.write(" [skipped due to size]\n")
 			continue
+		else:
+			sys.stderr.write("\n")
 
 		# POS tag
-		# If we want to tag outside StanfordNLP, uncomment
-		#tagged = nlp.pos_tag(tokenized)
+		# If we want to tag outside StanfordNLP, a dedicated tagger can be used
+		if opts.no_parse:
+			tagged = nlp.pos_tag(tokenized)
 
 		# Add sentence splits - note this currently produces mal-nested SGML
-		split_indices = best_sentencer_ever.predict(tokenized,as_text=True,plain=True,genre=genre)
+		if opts.no_sent:
+			split_indices = [1] + [0]*(len(tokenized)-1)
+		else:
+			split_indices = best_sentencer_ever.predict(tokenized,as_text=True,plain=True,genre=genre)
 		counter = 0
 		splitted = []
 		opened_sent = False
@@ -224,7 +265,7 @@ if __name__ == "__main__":
 					opened_sent = True
 					para = False
 				counter += 1
-			elif "<p>" in line or "<head>" in line:  # New block, force sentence split
+			elif "<p>" in line or "<head>" in line or "<caption>":  # New block, force sentence split
 				para = True
 			splitted.append(line)
 		splitted = "\n".join(splitted)
@@ -234,12 +275,15 @@ if __name__ == "__main__":
 			else:
 				splitted += "\n</s>"
 
-		# Parse
-		no_xml = splitted.replace("</s>\n<s>","---SENT---")
-		no_xml = re.sub(r'<[^<>]+>\n?','',no_xml)
+		if not opts.no_parse:
+			# Parse
+			no_xml = splitted.replace("</s>\n<s>","---SENT---")
+			no_xml = re.sub(r'<[^<>]+>\n?','',no_xml)
 
-		sents = no_xml.strip().replace("\n"," ").replace("---SENT--- ","\n")
-		parsed = nlp.dep_parse(sents)
+			sents = no_xml.strip().replace("\n"," ").replace("---SENT--- ","\n")
+			parsed = nlp.dep_parse(sents)
+		else:
+			parsed = tagged
 
 		doc = os.path.basename(file_)
 
@@ -249,7 +293,10 @@ if __name__ == "__main__":
 		for line in parsed.split("\n"):
 			if "\t" in line:
 				fields = line.split("\t")
-				lemma, xpos = fields[2], fields[4]
+				if opts.no_parse:
+					lemma, xpos = fields[2], fields[1]
+				else:
+					lemma, xpos = fields[2], fields[4]
 				pos_lines.append(xpos)
 				lemma_lines.append(lemma)
 		tagged = []
@@ -267,8 +314,9 @@ if __name__ == "__main__":
 		with io.open(xml_out + doc, 'w', encoding="utf8", newline="\n") as f:
 			f.write(tagged)
 
-		with io.open(dep_out + doc.replace(".xml",".conllu"), 'w', encoding="utf8", newline="\n") as f:
-			f.write(parsed)
+		if not opts.no_parse:
+			with io.open(dep_out + doc.replace(".xml",".conllu"), 'w', encoding="utf8", newline="\n") as f:
+				f.write(parsed)
 
 		#TODO: entities + coref
 
