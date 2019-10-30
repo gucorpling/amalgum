@@ -39,9 +39,9 @@ def get_via_praw(post_id, post_type, praw_cred):
 			return ""
 		selftext = submission.mod.thing.selftext
 		selftext = re.sub(r'\s+',' ',selftext)
-		selftext = selftext.replace('"', '\\"').replace("\t"," ")#replace("'","\\'")
+		selftext = selftext.replace('"', '\\"').replace("\t"," ").replace("\t","\\t").replace("\r","\\r").replace("\n","\\n")
 		title = submission.mod.thing.title
-		title = title.replace('"', '\\"').replace("\t"," ")#replace("'","\\'")
+		title = title.replace('"', '\\"').replace("\t","\\t").replace("\r","\\r").replace("\n","\\n")#replace("'","\\'")
 		author = submission.mod.thing.author
 		if author is not None:
 			author = author.name
@@ -80,6 +80,9 @@ def make_para(text):
 	text = re.sub(r'((\s*<item>.*?</item>\s*\n?)+)',r'\n<list type="unordered">\1\n</list>',text)
 	# Hyperlinks
 	text = re.sub(r'\[(.*?)\]\((.*?)\)',r'<ref target="\2">\1</ref>',text)
+	# Bold/italic
+	text = re.sub(r'\b\*+([^\n<>]+)\*+\b]',r'<hi rend="bold">\1</hi>',text)
+	text = re.sub(r'\b_+([^\n<>]+)\*+\b]',r'<hi rend="italic">\1</hi>',text)
 	return text
 
 def flattenjson(b, delim):
@@ -114,6 +117,7 @@ for line in praw_cred.read().split("\n"):
 		praw_dict[key] = val
 
 total_docs = 0
+used = set([])  # prevent hitting the same OP from two posts
 
 # Cache to avoid asking reddit for same ID twice
 submission_cache = {}
@@ -204,7 +208,7 @@ for file_idx, file_ in enumerate(files):
 										pass
 									elif col == "created_utc":
 										this_utc = fields[idx]
-										if thread_created[thread_id] == 0 or thread_created[thread_id] > this_utc:
+										if thread_created[thread_id] == 0 or int(thread_created[thread_id]) > int(this_utc):
 											thread_created[thread_id] = this_utc
 										if thread_modified[thread_id] == 0 or int(thread_modified[thread_id]) < int(this_utc):
 											thread_modified[thread_id] = this_utc
@@ -217,6 +221,10 @@ for file_idx, file_ in enumerate(files):
 
 	# Get OP submissions for comments
 	for thread_id in threads:
+		if thread_id in used:
+			continue
+		else:
+			used.add(thread_id)
 		if thread_id in submission_cache:
 			json_result = submission_cache[thread_id]
 			if len(json_result.strip())>0:
@@ -248,7 +256,7 @@ for file_idx, file_ in enumerate(files):
 			doc = Document(genre="reddit")
 			doc.docnum = total_docs
 			doc.title = json_result["title"]
-			doc.author= "Reddit community (see URL)	"
+			doc.author= "Reddit community (see URL)"
 			doc.url = "http://redd.it/" + json_result["id"]
 			doc.date_created = utc_to_date(thread_created[thread_id])
 			doc.date_modified = utc_to_date(thread_modified[thread_id])
@@ -262,6 +270,6 @@ for file_idx, file_ in enumerate(files):
 				# Jump to next month
 				spaces_so_far = 0
 				break
-		if total_docs > 100:
+		if total_docs > 1000:
 			quit()
 
