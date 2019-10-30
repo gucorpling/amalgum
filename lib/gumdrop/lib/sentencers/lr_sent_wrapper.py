@@ -91,7 +91,7 @@ def gettokfreq(infile,as_text=False):
 
 class LRSentencer:
 
-	def __init__(self,lang="eng",model="eng.rst.gum",windowsize=5,use_words=False):
+	def __init__(self,lang="eng",model="eng.rst.gum",windowsize=5,use_words=False,load=True):
 		self.lang = lang
 		self.name = "LRSentencer"
 		self.corpus = model
@@ -108,6 +108,8 @@ class LRSentencer:
 		self.windowsize=windowsize
 		self.use_words = use_words
 		self.verbose = False
+		if load:
+			self.pickled = pickle.load(open(self.model_path, 'rb'))
 
 	def train(self,train_path,as_text=False,standardization=False,cut=True,multitrain=False):
 
@@ -180,17 +182,20 @@ class LRSentencer:
 		X_test = X_test.drop(todrop_test, axis=1)
 		predictors_test = list(X_test)
 
-		loaded_model, predictors_train = pickle.load(open(self.model_path, 'rb'))
+		loaded_model, predictors_train = self.pickled
 		loaded_model.set_params(**{"n_jobs":3})
 
 		diff_predictors = list(set(predictors_train) - set(predictors_test))
-		for c in diff_predictors:
-			X_test[c] = 0
+		#for c in diff_predictors:
+		#	X_test[c] = 0
+
+		X_test = X_test.reindex( columns = X_test.columns.tolist() + diff_predictors)
+		X_test.fillna(0, inplace=True)
 
 		revdiff_predictors = list(set(list(predictors_test)) - set(predictors_train))
 		X_test = X_test.drop(revdiff_predictors, axis=1)
 
-		X_test = X_test.to_sparse(fill_value=0)
+		#X_test = X_test.to_sparse(fill_value=0)
 
 		# standardization of vectors
 		# @logan: note that this won't work at predict time unless you preserve the scale from training

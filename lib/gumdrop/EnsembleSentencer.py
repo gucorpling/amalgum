@@ -34,7 +34,7 @@ from .lib.exec import exec_via_temp
 
 class EnsembleSentencer:
 
-	def __init__(self,lang="eng",model="eng.rst.gum",genre_pat="^(..)"):
+	def __init__(self,lang="eng",model="eng.rst.gum",genre_pat="^(..)",model_path=None,load=True):
 		self.name = "EnsembleSentencer"
 		self.lang = lang
 		lang_map = {"deu":"german","eng":"english","spa":"spanish","fra":"french","nld":"dutch","rus":"russian","eus":"basque","por":"portuguese","zho":"chinese", "tur":"turkish"}
@@ -53,6 +53,10 @@ class EnsembleSentencer:
 		self.estimators.append(UDPipeSentencer(lang=lang))
 		self.estimators.append(LRSentencer(lang=lang,model=model))
 		self.estimators.append(RuleBasedSplitter(lang=lang))
+		if model_path is None:  # Try default model location
+			model_path = script_dir + os.sep + "models" + os.sep + self.corpus + "_ensemble_sent.pkl"
+		if load:
+			self.pickled = joblib.load(model_path)
 
 	def train(self,training_file,rare_thresh=100,clf_params=None,model_path=None,chosen_feats=None,tune_mode=None,size=None,as_text=False,multitrain=True,chosen_clf=None):
 		"""
@@ -79,9 +83,6 @@ class EnsembleSentencer:
 			train = shuffle_cut_conllu(train,size)
 		#tagged = udpipe_tag(train,self.udpipe_model)
 		tagged = tt_tag(train,self.lang,preserve_sent=True)
-
-		if model_path is None:  # Try default model location
-			model_path = script_dir + os.sep + "models" + os.sep + self.corpus + "_ensemble_sent.pkl"
 
 		if clf_params is None:
 			# Default classifier parameters
@@ -325,10 +326,8 @@ class EnsembleSentencer:
 		:return: tokenwise binary prediction vector if eval_gold is False, otherwise prints evaluation metrics and diff to gold
 		"""
 
-		if model_path is None:  # Try default model location
-			model_path = script_dir + os.sep + "models" + os.sep + self.corpus + "_ensemble_sent.pkl"
 
-		clf, num_labels, cat_labels, multicol_dict, vocab, firsts, lasts = joblib.load(model_path)
+		clf, num_labels, cat_labels, multicol_dict, vocab, firsts, lasts = self.pickled
 
 		if as_text:
 			conllu = infile
