@@ -2,15 +2,8 @@ from bs4 import BeautifulSoup, Comment
 import re
 
 
-def unescape_html_elements(html):
-    html = re.sub(r"___/(.*)___", r"</\1>", html)
-    html = re.sub(r"___(.*)___", r"<\1>", html)
-    return html
-
-
 def apply_html_transformations(config, html, mwtest_object):
     tfxs = config["transformations"]["html"] or []
-    html = unescape_html_elements(html)
     soup = parse(html)
     for tfx in tfxs:
         assert "name" in tfx, "Transformation must have a name"
@@ -21,6 +14,8 @@ def apply_html_transformations(config, html, mwtest_object):
             soup = tfx_f(config, soup, **tfx["args"])
         else:
             soup = tfx_f(config, soup)
+
+    soup
 
     soup = fix_root(config, soup, mwtest_object)
     return re.sub(r"\n+", "\n", str(soup))
@@ -47,10 +42,10 @@ def new_root(config, soup, css_selector=None):
     return soup.select(css_selector)[0]
 
 
-def discard_empty_elements(config, soup, exempt=[]):
+def discard_empty_elements(config, soup):
     """Remove HTML elements that have no/whitespace-only content"""
     for tag in soup.find_all():
-        if len(tag.get_text(strip=True)) == 0 and tag.name not in exempt:
+        if len(tag.get_text(strip=True)) == 0:
             tag.extract()
     return soup
 

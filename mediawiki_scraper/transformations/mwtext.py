@@ -20,6 +20,7 @@ def apply_mwtext_transformations(config, mwtext):
             wikicode = tfx_f(config, wikicode, **tfx["args"])
         else:
             wikicode = tfx_f(config, wikicode)
+
     return str(wikicode)
 
 
@@ -51,5 +52,23 @@ def drop_templates(config, wikicode, re_patterns=[]):
         ):
             continue
         out_nodes.append(n)
+    wikicode._nodes = out_nodes
+    return wikicode
+
+
+def transform_image_wikilinks(config, wikicode):
+    out_nodes = []
+    for n in wikicode._nodes:
+        name = str(n)
+        if isinstance(n, mwparserfromhell.nodes.wikilink.Wikilink) and name.startswith(
+            "[[Image:"
+        ):
+            title_str = str(n.title).replace("Image:", "")
+            tag = mwparserfromhell.nodes.text.Text(
+                f'___figure rend="{title_str}"______/figure___'
+            )
+            out_nodes.append(tag)
+        else:
+            out_nodes.append(n)
     wikicode._nodes = out_nodes
     return wikicode

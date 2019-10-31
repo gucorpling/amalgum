@@ -53,6 +53,9 @@ transformations:
           - "external links"
           - "related news"
           - "notes"
+    - name: transform_image_wikilinks
+      args:
+        re_patterns: []
 
   # see html.py
   html:
@@ -63,6 +66,9 @@ transformations:
 
     # get rid of <link/>s, <span/>s, etc.
     - name: discard_empty_elements
+      args:
+        exempt:
+          - figure
 
     # i.e., html comments
     - name: discard_comments
@@ -75,6 +81,7 @@ transformations:
           - ".messagebox"
           - ".noprint"
           - ".xambox"
+          - "[about]"
 
     # remove attrs we don't need
     - name: discard_attributes_by_name
