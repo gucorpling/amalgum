@@ -6,7 +6,7 @@ url: www.wikihow.com
 api_url: https://www.wikihow.com/api.php
 
 # wait 3 seconds in between pages
-rate_limit: 3
+rate_limit: 10
 
 # one of "http" or "cli". http is much quicker
 parsoid_mode: http
@@ -86,6 +86,7 @@ transformations:
           - "about"
           - "rel"
           - "title"
+          - "id"
 
     # make substitutions so it's GUM TEI
     - name: substitute_tags
@@ -109,6 +110,16 @@ transformations:
             new_tag: ref
             attr_map:
               href: target
+          - src_tag: ul
+            new_tag: list
+          - src_tag: li
+            new_tag: item
+          - {src_tag: h1, new_tag: head}
+          - {src_tag: h2, new_tag: head}
+          - {src_tag: h3, new_tag: head}
+          - {src_tag: h4, new_tag: head}
+          - {src_tag: h5, new_tag: head}
+          - {src_tag: h6, new_tag: head}
 
     # remove ALL other tags that aren't in a closed set of GUM TEI tags
     - name: excise_unless_whitelisted
@@ -120,3 +131,6 @@ transformations:
           - ref
           - figure
           - caption
+          - list
+          - item
+          - head
