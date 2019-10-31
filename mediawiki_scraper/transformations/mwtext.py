@@ -20,7 +20,6 @@ def apply_mwtext_transformations(config, mwtext):
             wikicode = tfx_f(config, wikicode, **tfx["args"])
         else:
             wikicode = tfx_f(config, wikicode)
-
     return str(wikicode)
 
 
@@ -63,9 +62,9 @@ def transform_image_wikilinks(config, wikicode):
         if isinstance(n, mwparserfromhell.nodes.wikilink.Wikilink) and name.startswith(
             "[[Image:"
         ):
-            title_str = str(n.title).replace("Image:", "")
+            title_str = str(n.title).replace("Image:", "").replace('"', "🥧🥧quot🥧🥧")
             tag = mwparserfromhell.nodes.text.Text(
-                f'___figure rend="{title_str}"______/figure___'
+                f' 👻🎃figure rend="{title_str}"🎃👻👻🎃/figure🎃👻'
             )
             out_nodes.append(tag)
         else:
@@ -83,7 +82,7 @@ def transform_wikihow_video_templates(config, wikicode):
         ):
             title_str = str(n.params[0])
             tag = mwparserfromhell.nodes.text.Text(
-                f'___figure rend="{title_str}"______/figure___'
+                f' 👻🎃figure rend="{title_str}"🎃👻👻🎃/figure🎃👻'
             )
             out_nodes.append(tag)
         else:

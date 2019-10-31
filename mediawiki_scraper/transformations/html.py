@@ -3,8 +3,9 @@ import re
 
 
 def unescape_html_elements(html):
-    html = re.sub(r"___/(.*)___", r"</\1>", html)
-    html = re.sub(r"___(.*)___", r"<\1>", html)
+    html = re.sub(r"👻🎃/(.*)🎃👻", r"</\1>", html)
+    html = re.sub(r"👻🎃(.*)🎃👻", r"<\1>", html)
+    html = re.sub(r"🥧🥧quot🥧🥧", r"&quot;", html)
     return html
 
 
