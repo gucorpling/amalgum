@@ -72,3 +72,21 @@ def transform_image_wikilinks(config, wikicode):
             out_nodes.append(n)
     wikicode._nodes = out_nodes
     return wikicode
+
+
+def transform_wikihow_video_templates(config, wikicode):
+    out_nodes = []
+    for n in wikicode._nodes:
+        if (
+            isinstance(n, mwparserfromhell.nodes.template.Template)
+            and n.name == "whvid"
+        ):
+            title_str = str(n.params[0])
+            tag = mwparserfromhell.nodes.text.Text(
+                f'___figure rend="{title_str}"______/figure___'
+            )
+            out_nodes.append(tag)
+        else:
+            out_nodes.append(n)
+    wikicode._nodes = out_nodes
+    return wikicode
