@@ -87,7 +87,6 @@ def discard_elements(config, soup, css_selectors=[]):
     for selector in css_selectors:
         for tag in sorted(soup.select(selector), reverse=True, key=depth):
             tag.extract()
-
     return soup
 
 
