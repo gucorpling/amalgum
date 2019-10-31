@@ -47,6 +47,7 @@ transformations:
           - "external links"
           - "related news"
           - "notes"
+    - name: transform_image_wikilinks
 
   # see html.py
   html:
@@ -103,6 +104,22 @@ transformations:
             new_tag: ref
             attr_map:
               href: target
+          - src_tag: ul
+            new_tag: list
+            new_tag_attrs:
+              type: unordered
+          - src_tag: ol
+            new_tag: list
+            new_tag_attrs:
+              type: ordered
+          - src_tag: li
+            new_tag: item
+          - {src_tag: h1, new_tag: head}
+          - {src_tag: h2, new_tag: head}
+          - {src_tag: h3, new_tag: head}
+          - {src_tag: h4, new_tag: head}
+          - {src_tag: h5, new_tag: head}
+          - {src_tag: h6, new_tag: head}
 
     # remove ALL other tags that aren't in a closed set of GUM TEI tags
     - name: excise_unless_whitelisted
@@ -114,3 +131,6 @@ transformations:
           - ref
           - figure
           - caption
+          - list
+          - item
+          - head
