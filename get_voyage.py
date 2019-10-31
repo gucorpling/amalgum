@@ -6,32 +6,11 @@ from multiprocessing import cpu_count
 from glob import glob
 from random import shuffle, seed
 from lib.WikiExtractor import process_dump
+from lib.utils import Document
 
 seed(42)
 
 script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
-
-
-class Document:
-
-	def __init__(self):
-		self.title = ""
-		self.text = ""
-		self.url = ""
-		self.lines = []
-		self.docnum = 0
-
-	def serialize(self,out_dir=None):
-		if out_dir is None:
-			out_dir = script_dir + "out" + os.sep + "voyage" + os.sep
-
-		docname = 'autogum_voyage_doc' + str(self.docnum)
-
-		# TODO: more metadata
-		header = '<text id="' + docname + '" title="' + self.title + '">\n'
-		output = header + self.text.strip() + "\n</text>\n"
-		with io.open(out_dir + docname + ".xml",'w',encoding="utf8",newline="\n") as f:
-			f.write(output)
 
 
 def get_dump(dump_file="enwikivoyage-latest-pages-articles.xml"):
@@ -133,6 +112,9 @@ def reformat_text(text):
 
 
 if __name__ == "__main__":
+
+	MAX_PER_FILE = 10
+
 	dump_file = "enwikivoyage-latest-pages-articles.xml"
 	if not os.path.exists(script_dir + dump_file):
 		sys.stderr.write("o Downloading data\n")
@@ -170,23 +152,50 @@ if __name__ == "__main__":
 	all_docs = []
 
 	files = glob(script_dir + "data" + os.sep + "voyage" + os.sep + "**" + os.sep + "wiki*",recursive=True)
-	#shuffle(files)
-	files = files[:1]
+	shuffle(files)
+	#files = files[:1]
 
 	for file_ in files:
+		current_file_docs = 0
 		docs = io.open(file_,encoding="utf8").read().split("</doc>")
+		if len(all_docs) > 600:
+			break
 
 		for doc in docs:
+			if current_file_docs > MAX_PER_FILE:
+				break
+			if len(all_docs) > 600:
+				break
 			if "<doc" not in doc:
 				continue
-			current_doc = Document()
+			current_doc = Document(genre="voyage")
 			m = re.search('<doc id="([^"]*)" url="([^"]*)" title="([^"]*)"', doc)
 			current_doc.url = m.group(2)
 			current_doc.title = m.group(3)
 			text = re.sub('<doc[^<>]*?>', '', doc)
 			text = reformat_text(text)
+			if text.count(" ") < 400:
+				continue
+			if text.count(" ") > 1000:
+				# Truncate text at first section exceeding 1000 spaces
+				sections = text.split("<head>")
+				current_text = []
+				for section in sections:
+					prev_text = current_text
+					current_text.append(section)
+					if "".join(current_text).count(" ") > 1000 and "".join(prev_text).count(" ") > 400:
+						break
+				text = "<head>".join(current_text)
+
+
+			# Remove empty section
+			text = re.sub(r'<head>[^<>]+</head>\s*(?=(<head>|</text>|$))',r'',text)
+
+
 			current_doc.text = text
 			all_docs.append(current_doc)
+			current_file_docs += 1
+
 
 	if not os.path.exists(script_dir + "out"):
 		os.mkdir(script_dir + "out")
@@ -197,8 +206,12 @@ if __name__ == "__main__":
 		os.mkdir(script_dir + "out" + os.sep + "voyage")
 
 	out_dir = script_dir + "out" + os.sep + "voyage" + os.sep
+	shuffle(all_docs)
 	for i, doc in enumerate(all_docs):
 		doc.docnum = i
+		doc.author= "Wikivoyage community (see URL)"
+		#doc.date_created = ?
+		#doc.date_modified = ?
 		doc.serialize(out_dir)
 
 	sys.stdout.write("\no Wrote " + str(len(all_docs)) + " documents\n")

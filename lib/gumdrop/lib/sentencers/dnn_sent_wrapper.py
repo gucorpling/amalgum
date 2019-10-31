@@ -122,17 +122,13 @@ def loadvec(word_embed_path):
     for line in f:
         parts = line.strip().split()
         word = parts[0]
-        vec = [x for x in parts[1:]]
+        vec = [float(x) for x in parts[1:]]
         word_embed[word] = vec
     return word_embed
 
 
 def unique_embed(f_cols, word_embed):
-    word_unique = []
-    for x in f_cols:
-        word = x['word']
-        if word not in word_unique:
-            word_unique.append(word)
+    word_unique = {x['word'] for x in f_cols}
     embed_vector = {w:word_embed[w] if w in word_embed else [0.0001]*300 for w in word_unique}
     embed_vector['<s>'] = [0.7]*300
     embed_vector['</s>'] = [0.05]*300
@@ -142,10 +138,9 @@ def unique_embed(f_cols, word_embed):
 def mergeWord2Vec(word_grams, uni_embed):
     fec_vec = []
     for words in word_grams:
-        word_vec = []
-        for word in words:
-            word_vec += uni_embed[word]
-        fec_vec.append(word_vec)
+        nested = [uni_embed[w] for w in words]
+        fec_vec.append([scalar for word in nested for scalar in word])
+
     return np.asarray(fec_vec, dtype=np.float32)
 
 
@@ -216,7 +211,7 @@ def get_best_params(corpus, model_name):
 
 
 class DNNSentencer:
-    def __init__(self,lang="eng",model="eng.rst.gum"):
+    def __init__(self,lang="eng",model="eng.rst.gum",load=True):
         self.lang = lang
         self.name = "DNNSentencer"
         self.corpus = model
@@ -229,11 +224,14 @@ class DNNSentencer:
             vec = "wiki.**lang**.vec_trim.vec".replace("**lang**",lang)
         self.vec_path = vec_dir + os.sep + vec
         self.space = get_best_params(self.corpus, self.name)
+        self.word_embed = loadvec(self.vec_path)
+        if load:
+            self.model = load_model(self.model_path)
 
 
     def process_data(self,path,as_text=True):
         MB = 1024*1024
-        word_embed = loadvec(self.vec_path)
+        word_embed = self.word_embed
         features = ['word', 'label', 'doc_id']
         output = read_conll(features, path, mode="sent", genre_pat=None, as_text=as_text)
         uni_embed = unique_embed(output, word_embed)
@@ -314,7 +312,7 @@ class DNNSentencer:
 
     def predict(self,test_path,as_text=True):
         # predict the model
-        model = load_model(self.model_path)
+        model = self.model
         X_test, y_test = self.process_data(test_path,as_text=as_text)
 
         probas = model.predict(X_test)

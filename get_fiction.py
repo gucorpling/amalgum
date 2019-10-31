@@ -21,6 +21,30 @@ def detect_hyphenation(text):
 	return False
 
 
+def detect_non_fiction(text):
+	if "endnote" in text.lower():
+		return True
+	if "<head>contents" in text.lower():
+		return True
+	if "<head>table of contents" in text.lower():
+		return True
+	if "<head>list of chapters" in text.lower():
+		return True
+	if "<p>contents.</p>" in text.lower():
+		return True
+	if "<head>illustrations</head>" in text.lower():
+		return True
+	if "<head>acknowledgments" in text.lower():
+		return True
+	if " trans. by" in text.lower():
+		return True
+
+	# Archaic language:
+	if " doth " in text or " hath " in text or " thou art " in text:
+		return True
+
+	return False
+
 def get_paragraphs(text):
 	"""Divides a string into a list of paragraphs based on multiple white space lines"""
 	text = re.sub('(^ +|\t)','',text.strip())  # Trim all leading space and tabs in lines
@@ -147,7 +171,7 @@ for i, book in enumerate(meta):
 			para = para.replace(fn.group(0),'<note'+note_num+'>'+fn.group(2)+'</note>')
 
 		# Figures
-		para = re.sub(r'\[illustration:?([^\]]*)\]',r'<figure><caption>\1</caption></figure>',para,flags=re.IGNORECASE)
+		para = re.sub(r'\[(?:[Ii]llustration|[Pp]icture):?([^\]]*)\]',r'<figure><caption>\1</caption></figure>',para,flags=re.IGNORECASE)
 		para = para.replace("<figure><caption></caption></figure>","<figure/>")
 
 		par_num +=1
@@ -187,6 +211,8 @@ for i, book in enumerate(meta):
 	if doc.text.count(" ") > MAX_SPACES:
 		continue
 	if detect_hyphenation(doc.text):
+		continue
+	if detect_non_fiction(doc.text):
 		continue
 
 	doc.serialize()
