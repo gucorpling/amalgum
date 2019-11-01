@@ -111,13 +111,11 @@ class AutoGumNLP:
 
 	def dep_parse(self, tokenized):
 
-		global stan
-
 		# StanfordNLP expects a list of sentences, each a list of token strings, in order to run in pre-tokenized mode
 		sent_list = [s.strip().split() for s in tokenized.strip().split("\n")]
 		torch.cuda.empty_cache()
 
-		doc = stan(sent_list)
+		doc = self.stan(sent_list)
 
 		return doc.conll_file.conll_as_string()
 
@@ -202,8 +200,7 @@ class AutoGumNLP:
 
 		return tokenized
 
-
-if __name__ == "__main__":
+def main():
 
 	p = ArgumentParser()
 	p.add_argument("--no_parse",action="store_true",help="do not perform dependency parsing")
@@ -212,12 +209,13 @@ if __name__ == "__main__":
 														  "reddit","fiction"],help="only process this genre")
 	opts = p.parse_args()
 
+	nlp = AutoGumNLP()
+
 	if opts.no_sent:
 		opts.no_parse = True
 	if not opts.no_parse:
 		stan = stanfordnlp.Pipeline(**config, use_gpu=True) # This sets up a default neural pipeline in English
-
-	nlp = AutoGumNLP()
+		nlp.stan = stan
 
 	genre = "voyage"
 	test = script_dir + "out" + os.sep + genre + os.sep + "autogum_*.xml"
@@ -265,7 +263,7 @@ if __name__ == "__main__":
 					opened_sent = True
 					para = False
 				counter += 1
-			elif "<p>" in line or "<head>" in line or "<caption>":  # New block, force sentence split
+			elif "<p>" in line or "<head>" in line or "<caption>" in line:  # New block, force sentence split
 				para = True
 			splitted.append(line)
 		splitted = "\n".join(splitted)
@@ -321,3 +319,7 @@ if __name__ == "__main__":
 		#TODO: entities + coref
 
 		#TODO: RST
+
+
+if __name__ == "__main__":
+	main()
