@@ -1,3 +1,4 @@
+import glob
 import os
 import re
 import subprocess
@@ -13,7 +14,6 @@ try:
     from yaml import CLoader as Loader, CDumper as Dumper
 except ImportError:
     from yaml import Loader, Dumper
-from bs4 import BeautifulSoup
 
 from transformations.html import apply_html_transformations
 from transformations.mwtext import apply_mwtext_transformations
@@ -24,6 +24,7 @@ from lib.utils import Document
 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
+GUM_DIR = os.path.dirname(FILE_DIR) + os.sep + "srcdata" + os.sep + "gum"
 
 
 # --------------------------------------------------------------------------------
@@ -123,6 +124,13 @@ def write_output(mwtext_object, gum_tei, output_dir):
         f.write(gum_tei)
 
 
+def genre(output_dir):
+    if output_dir.endswith(os.sep):
+        return output_dir.split(os.sep)[-2]
+    else:
+        return output_dir.split(os.sep)[-1]
+
+
 def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number):
     html = re.sub(r"^<text[^>]*>", "", gum_tei)
     html = re.sub(r"</text>$", "", html)
@@ -134,7 +142,7 @@ def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_num
         date_collected=time.time(),
         date_created=mwtext_object.created_at.split("T")[0],
         date_modified=mwtext_object.modified_at.split("T")[0],
-        genre=output_dir.split(os.sep)[-2],
+        genre=genre(output_dir),
         docnum=doc_number,
     )
     d.short_title = d.make_short_title()
@@ -171,6 +179,24 @@ def page_generator(config, pywikibot, site):
     return lg
 
 
+def urls_already_scraped_for_genre(genre):
+    files = glob.glob(GUM_DIR + os.sep + "xml" + os.sep + f"GUM_{genre}*")
+    urls = []
+    for file in files:
+        with open(file, "r") as f:
+            match = re.search(r'sourceURL="([^"]*)"', f.read())
+        if match:
+            urls.append(match.groups()[0].replace("-", "_"))
+        else:
+            raise Exception(f"Couldn't find a URL for {file}.")
+    return urls
+
+
+def already_scraped(urls, page):
+    page_url = page.title(as_url=True)
+    return any(url.endswith(page_url) for url in urls)
+
+
 def scrape(config_filepath, output_dir):
     config = load_config(config_filepath)
 
@@ -183,11 +209,17 @@ def scrape(config_filepath, output_dir):
         os.makedirs(output_dir, exist_ok=True)
     initialize_db(output_dir)
 
+    urls_already_scraped = urls_already_scraped_for_genre(genre(output_dir))
+
     i = 0
     with boot_parsoid(config) as _:
         for page_dict in page_generator(config, pywikibot, site):
             try:
                 page = pywikibot.Page(site, page_dict["title"])
+                if already_scraped(urls_already_scraped, page):
+                    print(
+                        f'"{page.title(as_url=True)}" has already been included in GUM. Skipping...'
+                    )
                 process_page(config, page, output_dir, i)
                 i += 1
             except Exception as e:

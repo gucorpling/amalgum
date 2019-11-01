@@ -21,9 +21,13 @@ class MWText(BaseModel):
     title = pw.CharField()
     file_safe_url = pw.CharField()
     scraped_at = pw.DateTimeField(default=datetime.datetime.now)
+    created_at = pw.DateTimeField(default=datetime.datetime.now)
+    modified_at = pw.DateTimeField(default=datetime.datetime.now)
 
 
-def add_text(mediawiki_link, url, rev_id, text, title, file_safe_url):
+def add_text(
+    mediawiki_link, url, rev_id, text, title, file_safe_url, created_at, modified_at
+):
     return MWText.create(
         mediawiki_link=mediawiki_link,
         url=url,
@@ -31,6 +35,8 @@ def add_text(mediawiki_link, url, rev_id, text, title, file_safe_url):
         text=text,
         title=title,
         file_safe_url=file_safe_url,
+        created_at=created_at,
+        modified_at=modified_at,
     )
 
 
