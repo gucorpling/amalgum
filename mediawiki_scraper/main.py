@@ -1,4 +1,5 @@
 import os
+import re
 import subprocess
 from contextlib import contextmanager
 import tempfile
@@ -12,11 +13,14 @@ try:
     from yaml import CLoader as Loader, CDumper as Dumper
 except ImportError:
     from yaml import Loader, Dumper
+from bs4 import BeautifulSoup
 
 from transformations.html import apply_html_transformations
 from transformations.mwtext import apply_mwtext_transformations
 from db.db import initialize as initialize_db, remove_db
 from db import db
+
+from lib.utils import Document
 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -119,11 +123,29 @@ def write_output(mwtext_object, gum_tei, output_dir):
         f.write(gum_tei)
 
 
-def process_page(config, page, output_dir):
+def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number):
+    html = re.sub(r"^<text[^>]*>", "", gum_tei)
+    html = re.sub(r"</text>$", "", html)
+
+    d = Document(
+        title=mwtext_object.title,
+        text=html,
+        url=mwtext_object.url,
+        date_collected=time.time(),
+        date_created=mwtext_object.created_at.split("T")[0],
+        date_modified=mwtext_object.modified_at.split("T")[0],
+        genre=output_dir.split(os.sep)[-2],
+        docnum=doc_number,
+    )
+    d.short_title = d.make_short_title()
+    d.serialize(out_dir=output_dir)
+
+
+def process_page(config, page, output_dir, doc_number):
     print(f"Processing `{str(page)}`... ", end="")
     mwtext_object = get_mwtext_object(page)
     gum_tei = convert(config, mwtext_object)
-    write_output(mwtext_object, gum_tei, output_dir)
+    write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
     print("done.")
 
 
@@ -161,11 +183,13 @@ def scrape(config_filepath, output_dir):
         os.makedirs(output_dir, exist_ok=True)
     initialize_db(output_dir)
 
+    i = 0
     with boot_parsoid(config) as _:
         for page_dict in page_generator(config, pywikibot, site):
             try:
                 page = pywikibot.Page(site, page_dict["title"])
-                process_page(config, page, output_dir)
+                process_page(config, page, output_dir, i)
+                i += 1
             except Exception as e:
                 print("Oops! Something went wrong.")
                 traceback.print_exc()
@@ -207,7 +231,18 @@ def get_mwtext_object(page, dev_mode=False):
         latest_revision = page.latest_revision
         rev_id = str(latest_revision["revid"])
         text = latest_revision["text"]
-        db.add_text(str(page), url, rev_id, text, title, file_safe_url)
+        oldest_revision_time = page.oldest_revision.timestamp.isoformat()
+        latest_revision_time = latest_revision.timestamp.isoformat()
+        db.add_text(
+            str(page),
+            url,
+            rev_id,
+            text,
+            title,
+            file_safe_url,
+            oldest_revision_time,
+            latest_revision_time,
+        )
     return db.get_mwtext(str(page))
 
 
