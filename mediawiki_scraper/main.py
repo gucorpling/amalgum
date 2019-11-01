@@ -6,6 +6,7 @@ from contextlib import contextmanager
 import tempfile
 import time
 import traceback
+from bs4 import BeautifulSoup
 
 import requests as r
 import yaml
@@ -197,6 +198,12 @@ def already_scraped(urls, page):
     return any(url.endswith(page_url) for url in urls)
 
 
+def rough_token_count(page):
+    text = page.latest_revision["text"]
+    text = re.sub(r"\s+", " ", text)
+    return len(text.split(" "))
+
+
 def scrape(config_filepath, output_dir):
     config = load_config(config_filepath)
 
@@ -216,18 +223,26 @@ def scrape(config_filepath, output_dir):
         for page_dict in page_generator(config, pywikibot, site):
             try:
                 page = pywikibot.Page(site, page_dict["title"])
+                count = rough_token_count(page)
                 if already_scraped(urls_already_scraped, page):
                     print(
-                        f'"{page.title(as_url=True)}" has already been included in GUM. Skipping...'
+                        f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
                     )
-                process_page(config, page, output_dir, i)
-                i += 1
+                elif not (450 <= count <= 1050):
+                    print(
+                        f'\tSKIPPING: "{page.title(as_url=True)} has roughly {count} tokens.'
+                    )
+                else:
+                    process_page(config, page, output_dir, i)
+                    i += 1
             except Exception as e:
                 print("Oops! Something went wrong.")
                 traceback.print_exc()
 
             if "rate_limit" in config:
                 time.sleep(config["rate_limit"])
+            else:
+                time.sleep(1)
 
 
 def convert_specific_article(config_filepath, url):
