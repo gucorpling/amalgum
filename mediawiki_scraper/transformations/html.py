@@ -1,3 +1,4 @@
+import bs4
 from bs4 import BeautifulSoup, Comment
 import re
 
@@ -9,7 +10,13 @@ def unescape_html_elements(html):
     return html
 
 
-def apply_html_transformations(config, html, mwtest_object):
+def insert_document_title(soup, mwtext_object):
+    title_head = BeautifulSoup(f"<head>{mwtext_object.title}</head>", "html.parser")
+    soup.insert(0, title_head)
+    return soup
+
+
+def apply_html_transformations(config, html, mwtext_object):
     tfxs = config["transformations"]["html"] or []
     html = unescape_html_elements(html)
     soup = parse(html)
@@ -23,7 +30,8 @@ def apply_html_transformations(config, html, mwtest_object):
         else:
             soup = tfx_f(config, soup)
 
-    soup = fix_root(config, soup, mwtest_object)
+    soup = fix_root(config, soup, mwtext_object)
+    soup = insert_document_title(soup, mwtext_object)
     return re.sub(r"\n+", "\n", str(soup))
 
 
