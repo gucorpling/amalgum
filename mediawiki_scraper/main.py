@@ -22,10 +22,13 @@ from db.db import initialize as initialize_db, remove_db
 from db import db
 
 from lib.utils import Document
+from lib.whitespace_tokenize import tokenize
 
 
 FILE_DIR = os.path.dirname(os.path.abspath(__file__))
 GUM_DIR = os.path.dirname(FILE_DIR) + os.sep + "srcdata" + os.sep + "gum"
+MIN_TOKEN_COUNT = 450
+MAX_TOKEN_COUNT = 1100
 
 
 # --------------------------------------------------------------------------------
@@ -150,12 +153,25 @@ def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_num
     d.serialize(out_dir=output_dir)
 
 
+def rough_token_count(gum_tei):
+    tokens = tokenize(gum_tei).split("\n")
+    tokens = [t for t in tokens if not t.startswith("<") or t.isspace()]
+    return len(tokens)
+
+
 def process_page(config, page, output_dir, doc_number):
     print(f"Processing `{str(page)}`... ", end="")
     mwtext_object = get_mwtext_object(page)
     gum_tei = convert(config, mwtext_object)
-    write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
-    print("done.")
+    token_count = rough_token_count(gum_tei)
+    if MIN_TOKEN_COUNT <= token_count <= MAX_TOKEN_COUNT:
+        write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
+        print("done.")
+    else:
+        print()
+        print(
+            f'\tSKIPPING: "{page.title(as_url=True)} has roughly {token_count} tokens.'
+        )
 
 
 # ------------------------------------------------------------------------------
@@ -198,12 +214,6 @@ def already_scraped(urls, page):
     return any(url.endswith(page_url) for url in urls)
 
 
-def rough_token_count(page):
-    text = page.latest_revision["text"]
-    text = re.sub(r"\s+", " ", text)
-    return len(text.split(" "))
-
-
 def scrape(config_filepath, output_dir):
     config = load_config(config_filepath)
 
@@ -223,14 +233,9 @@ def scrape(config_filepath, output_dir):
         for page_dict in page_generator(config, pywikibot, site):
             try:
                 page = pywikibot.Page(site, page_dict["title"])
-                count = rough_token_count(page)
                 if already_scraped(urls_already_scraped, page):
                     print(
                         f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
-                    )
-                elif not (450 <= count <= 1050):
-                    print(
-                        f'\tSKIPPING: "{page.title(as_url=True)} has roughly {count} tokens.'
                     )
                 else:
                     process_page(config, page, output_dir, i)
