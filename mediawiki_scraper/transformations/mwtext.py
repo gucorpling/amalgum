@@ -95,7 +95,7 @@ def drop_empty_headings(config, wikicode):
     out_nodes = []
     for i, n in enumerate(wikicode._nodes):
         if isinstance(n, mwparserfromhell.nodes.heading.Heading):
-            if i - 1 == len(wikicode._nodes):
+            if n == wikicode._nodes[-1]:
                 continue
             next_node = wikicode._nodes[i + 1]
             if (
