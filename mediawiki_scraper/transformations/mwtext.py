@@ -89,20 +89,3 @@ def transform_wikihow_video_templates(config, wikicode):
             out_nodes.append(n)
     wikicode._nodes = out_nodes
     return wikicode
-
-
-def drop_empty_headings(config, wikicode):
-    out_nodes = []
-    for i, n in enumerate(wikicode._nodes):
-        if isinstance(n, mwparserfromhell.nodes.heading.Heading):
-            if n == wikicode._nodes[-1]:
-                continue
-            next_node = wikicode._nodes[i + 1]
-            if (
-                isinstance(next_node, mwparserfromhell.nodes.heading.Heading)
-                and next_node.level == n.level
-            ):
-                continue
-        out_nodes.append(n)
-    wikicode._nodes = out_nodes
-    return wikicode
