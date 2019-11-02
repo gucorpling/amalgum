@@ -175,11 +175,13 @@ def process_page(config, page, output_dir, doc_number):
     if MIN_TOKEN_COUNT <= token_count <= MAX_TOKEN_COUNT:
         write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
         print("done.")
+        return token_count
     else:
         print()
         print(
             f'\tSKIPPING: "{page.title(as_url=True)} has roughly {token_count} tokens.'
         )
+        return 0
 
 
 # ------------------------------------------------------------------------------
@@ -237,6 +239,7 @@ def scrape(config_filepath, output_dir):
     urls_already_scraped = urls_already_scraped_for_genre(genre(output_dir))
 
     i = 0
+    word_count_total = 0
     with boot_parsoid(config) as _:
         for page_dict in page_generator(config, pywikibot, site):
             try:
@@ -246,7 +249,7 @@ def scrape(config_filepath, output_dir):
                         f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
                     )
                 else:
-                    process_page(config, page, output_dir, i)
+                    word_count_total += process_page(config, page, output_dir, i)
                     i += 1
             except Exception as e:
                 print("Oops! Something went wrong.")
@@ -256,6 +259,8 @@ def scrape(config_filepath, output_dir):
                 time.sleep(config["rate_limit"])
             else:
                 time.sleep(1)
+
+    print("Finished processing. Total word count: ", word_count_total)
 
 
 def convert_specific_article(config_filepath, url):
