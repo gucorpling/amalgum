@@ -1,0 +1,145 @@
+# one of https://github.com/wikimedia/pywikibot/tree/master/pywikibot/families
+family: wikipedia
+
+# parsoid needs this so it can fetch and expand templates
+url: en.wikipedia.org
+
+# one of "http" or "cli". http is much quicker
+parsoid_mode: http
+
+# tells the scraper how to enumerate pages to scrape
+page_generation:
+  # https://www.mediawiki.org/wiki/API:Allpages
+  # https://www.mediawiki.org/wiki/API:Categorymembers
+  # see also: https://www.mediawiki.org/wiki/API:Lists
+  endpoint: categorymembers
+  params:
+    cmtitle: "Category:People"
+    cmnamespace: 0
+    cmtype: "page"
+    cmlimit: 5000
+    cmsort: timestamp
+    cmdir: older
+
+# how to turn the source text of each page into GUM TEI
+transformations:
+  # see transformations/mwtext.py
+  mwtext:
+    - name: drop_templates
+      args:
+        re_patterns:
+          - "audio"
+          - ".*_infobox"
+          - "haveyoursay"
+          - "archive"
+          - "archived"
+          - "original"
+          - "interview"
+          - "publish"
+          - "WikimediaMention"
+          - "desktop-only"
+    - name: drop_headings
+      args:
+        titles:
+          - "references"
+          - "sister link"
+          - "sources"
+          - "external links"
+          - "related news"
+          - "notes"
+          - "related wikihows"
+    - name: transform_image_wikilinks
+    - name: transform_wikihow_video_templates
+
+  # see html.py
+  html:
+    # get rid of the outer <html>
+    - name: new_root
+      args:
+        css_selector: body
+
+    # get rid of <link/>s, <span/>s, etc.
+    - name: discard_empty_elements
+      args:
+        exempt:
+          - figure
+
+    # i.e., html comments
+    - name: discard_comments
+
+    # remove tags
+    - name: discard_elements
+      args:
+        css_selectors:
+          - ".infobox"
+          - ".messagebox"
+          - ".noprint"
+          - ".xambox"
+          - ".relatedwikihows"
+          - ".references"
+          - "[about]"
+
+    # remove attrs we don't need
+    - name: discard_attributes_by_name
+      args:
+        name_regexes:
+          - "^data-.*$"
+          - "class"
+          - "typeof"
+          - "about"
+          - "rel"
+          - "title"
+          - "id"
+
+    # make substitutions so it's GUM TEI
+    - name: substitute_tags
+      args:
+        substitutions:
+          - src_tag: strong
+            new_tag: hi
+            new_tag_attrs:
+              rend: bold
+          - src_tag: b
+            new_tag: hi
+            new_tag_attrs:
+              rend: bold
+          - src_tag: i
+            new_tag: hi
+            new_tag_attrs:
+              rend: italic
+          - src_tag: figcaption
+            new_tag: caption
+          - src_tag: a
+            new_tag: ref
+            attr_map:
+              href: target
+          - src_tag: ul
+            new_tag: list
+            new_tag_attrs:
+              type: unordered
+          - src_tag: ol
+            new_tag: list
+            new_tag_attrs:
+              type: ordered
+          - src_tag: li
+            new_tag: item
+          - {src_tag: h1, new_tag: head}
+          - {src_tag: h2, new_tag: head}
+          - {src_tag: h3, new_tag: head}
+          - {src_tag: h4, new_tag: head}
+          - {src_tag: h5, new_tag: head}
+          - {src_tag: h6, new_tag: head}
+
+    # remove ALL other tags that aren't in a closed set of GUM TEI tags
+    - name: excise_unless_whitelisted
+      args:
+        whitelist:
+          - text
+          - p
+          - hi
+          - ref
+          - figure
+          - caption
+          - list
+          - item
+          - head
