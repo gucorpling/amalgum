@@ -181,11 +181,17 @@ def excise_unless_whitelisted(config, soup, whitelist=[]):
 
 
 def drop_empty_headings(config, soup):
+    headings = ["h1", "h2", "h3", "h4", "h5", "h6"]
+
     def last_non_whitespace_child(children, i):
-        return all(str(c).isspace() for c in children[i + 1 :])
+        section_end = len(children)
+        for j in range(i, len(children)):
+            if children[j].name in headings:
+                section_end = j
+                break
+        return all(str(c).isspace() for c in children[i + 1 : section_end])
 
     children = list(soup.children)
-    headings = ["h1", "h2", "h3", "h4", "h5", "h6"]
     for i, child in enumerate(children):
         if child.name in headings:
             if last_non_whitespace_child(children, i):
