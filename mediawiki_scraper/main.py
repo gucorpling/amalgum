@@ -250,7 +250,8 @@ def scrape(config_filepath, output_dir):
                     )
                 else:
                     word_count_total += process_page(config, page, output_dir, i)
-                    i += 1
+                    if word_count_total > 0:
+                        i += 1
             except Exception as e:
                 print("Oops! Something went wrong.")
                 traceback.print_exc()
