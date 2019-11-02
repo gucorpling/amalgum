@@ -6,7 +6,7 @@ from contextlib import contextmanager
 import tempfile
 import time
 import traceback
-from bs4 import BeautifulSoup
+from unicodedata import category
 
 import requests as r
 import yaml
@@ -153,9 +153,17 @@ def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_num
     d.serialize(out_dir=output_dir)
 
 
-def rough_token_count(gum_tei):
+def rough_word_count(gum_tei):
     tokens = tokenize(gum_tei).split("\n")
-    tokens = [t for t in tokens if not t.startswith("<") or t.isspace()]
+    tokens = [
+        t
+        for t in tokens
+        if (
+            not t.startswith("<")
+            and not t.isspace()
+            and any(category(c).startswith("L") for c in t)
+        )
+    ]
     return len(tokens)
 
 
@@ -163,7 +171,7 @@ def process_page(config, page, output_dir, doc_number):
     print(f"Processing `{str(page)}`... ", end="")
     mwtext_object = get_mwtext_object(page)
     gum_tei = convert(config, mwtext_object)
-    token_count = rough_token_count(gum_tei)
+    token_count = rough_word_count(gum_tei)
     if MIN_TOKEN_COUNT <= token_count <= MAX_TOKEN_COUNT:
         write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
         print("done.")
