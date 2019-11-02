@@ -186,7 +186,9 @@ def drop_empty_headings(config, soup):
     def last_non_whitespace_child(children, i):
         section_end = len(children)
         for j in range(i, len(children)):
-            if children[j].name in headings:
+            if children[j].name in headings and int(children[j].name[1]) > int(
+                children[i].name[1]
+            ):
                 section_end = j
                 break
         return all(str(c).isspace() for c in children[i + 1 : section_end])
