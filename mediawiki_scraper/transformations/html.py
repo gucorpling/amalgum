@@ -180,7 +180,7 @@ def excise_unless_whitelisted(config, soup, whitelist=[]):
     return soup
 
 
-def drop_empty_headings(config, soup):
+def drop_empty_headings(config, soup, depth=0):
     headings = ["h1", "h2", "h3", "h4", "h5", "h6"]
 
     def last_non_whitespace_child(children, i):
@@ -201,5 +201,8 @@ def drop_empty_headings(config, soup):
             next_child = children[i + 1]
             if next_child.name in headings and next_child.name == child.name:
                 child.extract()
+
+    if depth < 5:
+        return drop_empty_headings(config, soup, depth + 1)
 
     return soup
