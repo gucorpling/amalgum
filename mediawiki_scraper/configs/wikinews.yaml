@@ -49,6 +49,7 @@ transformations:
           - "external links"
           - "related news"
           - "notes"
+          - "see also"
     - name: transform_image_wikilinks
 
   # see html.py
@@ -57,12 +58,6 @@ transformations:
     - name: new_root
       args:
         css_selector: body
-
-    # get rid of <link/>s, <span/>s, etc.
-    - name: discard_empty_elements
-
-    # i.e., html comments
-    - name: discard_comments
 
     # remove tags
     - name: discard_elements
@@ -83,6 +78,18 @@ transformations:
           - "about"
           - "rel"
           - "title"
+
+    # get rid of <link/>s, <span/>s, etc.
+    - name: discard_empty_elements
+      args:
+        exempt:
+          - figure
+
+    # i.e., html comments
+    - name: discard_comments
+
+    # remove h1-h6 tags with "nothing in them"
+    - name: drop_empty_headings
 
     # make substitutions so it's GUM TEI
     - name: substitute_tags

@@ -53,6 +53,7 @@ transformations:
           - "related news"
           - "notes"
           - "related wikihows"
+          - "see also"
     - name: transform_image_wikilinks
     - name: transform_wikihow_video_templates
 
@@ -62,12 +63,6 @@ transformations:
     - name: new_root
       args:
         css_selector: body
-
-    # get rid of <link/>s, <span/>s, etc.
-    - name: discard_empty_elements
-      args:
-        exempt:
-          - figure
 
     # i.e., html comments
     - name: discard_comments
@@ -95,6 +90,15 @@ transformations:
           - "rel"
           - "title"
           - "id"
+
+    # get rid of <link/>s, <span/>s, etc.
+    - name: discard_empty_elements
+      args:
+        exempt:
+          - figure
+
+    # remove h1-h6 tags with "nothing in them"
+    - name: drop_empty_headings
 
     # make substitutions so it's GUM TEI
     - name: substitute_tags
