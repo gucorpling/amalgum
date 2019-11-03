@@ -48,6 +48,7 @@ transformations:
           - "related news"
           - "notes"
           - "related wikihows"
+          - "see also"
     - name: transform_image_wikilinks
     - name: transform_wikihow_video_templates
 
@@ -77,7 +78,8 @@ transformations:
           - ".xambox"
           - ".relatedwikihows"
           - ".references"
-          - "[about]"
+          - "table"
+          - "style"
 
     # remove attrs we don't need
     - name: discard_attributes_by_name
@@ -90,9 +92,8 @@ transformations:
           - "rel"
           - "title"
           - "id"
-
+          - "style"
     - name: drop_empty_headings
-
     # make substitutions so it's GUM TEI
     - name: substitute_tags
       args:
