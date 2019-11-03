@@ -1,0 +1,1960 @@
+ 1. IntroductionGraphs are powerful data structures that can capture topological and semantic information from data. This is one of the main reasons they are commonly used for modelling several real-world systems in fields such as biology and chemistry [1,2,3,4,5,6,7,8], social networks [9], telecommunication networks [10,11] and natural language processing [12,13,14].However, solving pattern recognition problems in structured domains such as graphs pose additional challenges. Indeed, many structured domains are also non-metric in nature [15,16,17] and patterns lack any geometrical interpretation. In brief, an input space is said to be non-metric if pairwise dissimilarities between patterns lying in such space do not satisfy the properties of a metric (non-negativity, identity, symmetry and triangle inequality) [17,18].In the literature, several strategies can be found in order to perform pattern recognition tasks in structured domains [17], namely:feature generation and feature engineering, where numerical features are ad-hoc extracted from the input patternsad-hoc dissimilarities in the input space, where custom dissimilarity measures (e.g., edit distances [19,20,21,22]) are designed in order to directly process patterns in the input space (without moving towards Euclidean spaces)dissimilarity representations [18,23], where each pattern is described by the pairwise distances with other patterns or with respect to a properly chosen subset of pivotal training patterns [23,24,25,26]kernel methods, where the mapping between the original input space and the Euclidean space exploits positive-definite kernel functions [27,28,29,30,31,32]embedding via information granulation.As the latter is concerned, embedding techniques are gaining more and more attention especially since the breakthrough of Granular Computing [33,34]. In short, Granular Computing is a human-inspired information processing paradigm which aims at the extraction of meaningful entities (information granules) arising from both the problem at hand and the data representation. The challenge with Granular Computing-based pattern recognition systems is that there are different levels of granularity according to which a given system can be observed [35,36,37]; nonetheless, one shall choose a suitable level of granularity for the problem at hand. These information granules are usually extracted in a data-driven manner and describe data aggregates, namely data which are similar according to structural and/or functional similarity [15,16,17]. Data clustering, for example, is a promising tool for extracting information granules [38], especially when clustering algorithms can be equipped with ad-hoc dissimilarity measures in order to deal with structured data [17,39,40,41,42]. Indeed, several works focused on extracting information granules via motifs clustering (see e.g., Refs. [43,44,45,46,47]), where a proper granulation module is in charge of extracting and clustering sub-structures (i.e., sub-graphs). The resulting clusters can be considered as information granules and the clusters’ representatives form an alphabet on the top of which the embedding procedure is performed thanks to the symbolic histograms approach [46]: let M be the size of the alphabet, each input pattern is transformed into an M-length integer-valued feature vector whose ith element contains the number of occurrences of the ith alphabet member within the pattern itself. Thanks to the embedding, the problem is moved towards a metric (Euclidean) space and plain pattern recognition algorithms can be used without alterations.The symbols extraction and alphabet synthesis is crucial in granulation-based classifiers: the resulting embedding space must preserve (the vast majority of) the original input space properties (e.g., the more different two objects drawn from the input space are, the more distant they must appear in the embedding space.) [17,18]. Also, for the sake of modelling complexity, the size of the alphabet must be as small as possible or, specifically, the set of resulting alphabet symbols should be small, yet informative. This aspect is crucial since Granular Computing-based pattern recognition systems aim to be human interpretable: the resulting set of symbols forming the alphabet, hence pivotal for the embedding space, should allow field experts to gather further insights for the problem at hand [17].The aim of this paper is to investigate a novel procedure for extracting meaningful information granules thanks to simplicial complexes. Conversely to network motifs and graphlets, simplicial complexes are able to capture the multi-scale/higher-order organisation in complex networks [48,49], overcoming the main limitation offered by ‘plain graphs’; that is, they only considers pairwise relations, whereas simplicial complexes (and hypergraphs, in general) also consider multi-way relations. On the top of simplicial complexes, an embedding space is built for pattern recognition purposes.In order to show the effectiveness of the proposed embedding procedure, a set of thirty open-access datasets for graph classification has been considered. Furthermore, the proposed technique has been benchmarked against two suitable competitors and a null-model for statistical assessment. In order to stress the knowledge discovery phase offered by Granular Computing-based classifiers, additional experiments are proposed. Specifically, starting from real-world proteomic data, two problems will be addressed regarding the possibility to predict the enzymatic function and the solution/folding propensity starting from proteins’ folded 3D-structure.This paper is organised as follows: in Section 2 the approach at the basis of work is presented by giving a brief overview of simplicial complexes (Section 2.1) before diving into the proper embedding procedure (Section 2.2); in Section 3 the results over benchmark datasets (Section 3.1) and real-world problems (Section 3.2) are shown. Section 4 remarks the interpretability of the proposed model and, finally, Section 5 concludes the paper, remarking future directions. 2. Information Granulation and Classification Systems 2.1. An Introduction to Simplicial ComplexesLet
+P
+ be a set of points in a multi-dimensional space equipped with a notion of distance
+
+d
+(
+·
+,
+·
+)
+
+ and let
+X
+ be the topological space enclosing
+P
+. The topological space
+X
+ can be described by means of its simplices, that are multidimensional objects of different order (dimension) drawn from
+P
+. Formally, a k-simplex (simplex of order k) is a set of
+
+k
++
+1
+
+ points drawn from
+P
+, for example, 0-dimensional simplices correspond to points, 1-dimensional simplices correspond to lines, 2-dimensional simplices correspond to triangles, 3-dimensional simplices correspond to tetrahedrons and so on for higher-dimensional simplices. Every non-empty subset of the
+
+(
+k
++
+1
+)
+
+ vertices of a k-simplex is a face of the simplex: a face is itself a simplex. Simplicial complexes [50,51] are properly constructed finite collections of simplices that are closed with respect to inclusions of the faces: if a given simplex s belongs to a given simplicial complex
+S
+, then all faces of s also belong to
+S
+. The order (dimension) of the simplicial complex is the maximum order of any of its simplices.A graph
+
+G
+=
+(
+V
+,
+E
+)
+
+, where
+E
+ is the set of edges and
+V
+ is the set of vertices, is also commonly-known as “1-skeleton” or “simplicial complex of order 1” since the only entities involved are 0-simplices (nodes) and 1-simplices (edges). However, the modelling capabilities offered by graphs are often not sufficient as they only regard pairwise relations. Indeed, for some problems (ranging from bioinformatics [52,53,54] to signal processing [55,56,57]), multi-way relations are more suited, where two or more nodes are more conveniently connected by an hyperedge (in this scenario, we are de facto talking about hypergraphs [58]). Simplicial complexes are an example of hypergraphs and therefore able to capture the multi-scale organisation in real-world complex networks [48,49].A straightforward example in order to focus hypergraphs and complexes may regard a scientific collaboration network in which nodes are authors and edges exist whether two authors co-authored a paper. This representation does not consider the case in which three or more authors wrote a paper together or, better, it would be ambiguous: three authors (for example) can be connected by
+
+3
+·
+(
+3
+−
+1
+)
+/
+2
+
+ edges in a graph but this scenario is ambiguous about whether the three authors co-authored a paper or each pair of authors co-authored a paper. By using hypergraphs, the same problem can be modelled where nodes are authors and hyperedges connect groups of authors that co-authored a paper together. A more biologically-oriented example include protein interaction networks, where nodes correspond to proteins and edges exist whether they interact. Yet, this representation does not consider protein complexes [52].In literature, several simplicial complexes have been proposed, with the Čech complex, the Alpha complex and the Vietoris-Rips complex being the most studied [50,51,59,60,61]. In order to introduce the three simplicial complexes, let
+P
+ be a point cloud and let
+
+ϵ
+>
+0
+
+ be a real-valued number:Čech complex: for each subset
+
+S
+⊂
+P
+
+ of points, form an
+ϵ
+-ball (A ball with radius
+ϵ
+) centred at each point in S, and include S as a simplex if there is a common point contained in all of the balls created so far.Alpha complex: for each point
+
+x
+∈
+P
+
+, evaluate its Voronoi region
+
+V
+(
+x
+)
+
+ (i.e., the set of points closest to it). The set of Voronoi regions forms the widely-known Voronoi diagram and the nerve of the latter is usually referred to as Delaunay complex. By considering an
+ϵ
+-ball around each point
+
+x
+∈
+P
+
+, it is possible to intersect said ball with
+
+V
+(
+x
+)
+
+, leading to a restricted Voronoi region and the nerve of the set of restricted Voronoi regions for all points in
+P
+ is the Alpha complex.Vietoris-Rips complex: for each subset
+
+S
+⊂
+P
+
+ of points, check whether all of their pairwise distances are below
+ϵ
+. If so, S is a valid simplex to be included in the Vietoris-Rips complex.Čech complex, Alpha complex and Vietoris-Rips complex strictly depend on
+ϵ
+, which somehow determines the ’resolution’ of the simplicial complex. Amongst the three, the Vietoris-Rips is the most used due to lower computational complexity and intuitiveness [59]. Indeed, the latter can be easily evaluated as follows [62]:
+build the Vietoris-Rips neighbourhood graph
+
+
+G
+VR
+
+
+(
+V
+,
+E
+)
+
+
+ where
+V
+ is the set of vertices and
+E
+ is the set of edges, hence
+
+V
+≡
+P
+
+ and
+
+e
+(
+
+v
+i
+
+,
+
+v
+j
+
+)
+∈
+E
+
+ if
+
+d
+(
+
+v
+i
+
+,
+
+v
+j
+
+)
+≤
+ϵ
+
+ for any two nodes
+
+
+v
+i
+
+,
+
+v
+j
+
+∈
+V
+
+ with
+
+i
+≠
+j
+
+evaluate all maximal cliques in
+
+G
+VR
+
+.The second step is due to the fact that the Vietoris-Rips complex is dually definable as the Clique complex of the Vietoris-Rips neighbourhood graph. The latter complex [48,63,64] is defined as follows:
+Clique complex: for a given underlying graph
+G
+, the Clique complex is the simplicial complex formed by the set of vertices of its (maximal) cliques. In other words, a clique of k vertices is represented by a simplex of order
+
+(
+k
+−
+1
+)
+
+.Despite its ’minimalistic’ definition, proving that the Clique complex is a valid simplicial complex is straightforward: any subset of a clique is also a clique, meeting the requirement of being closed with respect to inclusions of the faces. A useful facet of the Clique complex relies on its parameter-free peculiarity: if the underlying 1-skeleton is available beforehand, one can directly use the Clique complex which not only does not need any scale parameter (e.g.,
+ϵ
+ for the Vietoris-Rips complex and the Alpha complex) but also encodes the same information as the underlying graph and additionally completes a topological object with its fullest possible simplicial structure, being it a canonical polyadic extension of existing networks (1-skeletons) [65]. Further, it is noteworthy that from the set of cliques it is possible to recover the k-faces of the simplices by extracting all
+
+(
+k
++
+1
+)
+
+-combinations of these cliques. This is crucial when one wants to study the homology of the simplicial complex which is, however, out of the scope of this paper [66,67]. Despite enumerating the maximal cliques being well-known as an NP-complete problem, several heuristics can be found in the literature [68,69,70]. 2.2. Proposed Approach 2.2.1. EmbeddingLet
+
+D
+=
+{
+
+G
+1
+
+,
+…
+,
+
+G
+
+N
+P
+
+
+}
+
+ be a dataset of
+
+N
+P
+
+ graphs, where each graph has the form
+
+G
+=
+(
+V
+,
+E
+,
+
+L
+v
+
+)
+
+, where
+
+L
+v
+
+ is the set of vertices labels. For the sake of argument, let us consider a supervised problem, thus let
+L
+ be the corresponding ground-truth class labels for each of the
+
+N
+P
+
+ graphs in
+D
+. Further, consider
+D
+ to be split into three non-overlapping training, validation and test sets (
+
+D
+TR
+
+,
+
+D
+VAL
+
+,
+
+D
+TS
+
+, respectively) and, by extension, the labels
+L
+ are split accordingly (
+
+L
+TR
+
+,
+
+L
+VAL
+
+,
+
+L
+TS
+
+). Let q be the number of classes for the classification problem at hand.The first step is to evaluate the simplicial complex separately for all graphs in the three datasets splits, hence
+
+
+
+
+
+
+
+D
+TR
+SC
+
+
+
+
+=
+{
+s
+c
+
+(
+G
+)
+
+,
+
+∀
+G
+∈
+
+D
+TR
+
+}
+
+
+
+
+
+
+
+(1)
+
+
+
+
+
+
+
+
+D
+VAL
+SC
+
+
+
+
+=
+{
+s
+c
+
+(
+G
+)
+
+,
+
+∀
+G
+∈
+
+D
+VAL
+
+}
+
+
+
+
+
+
+
+(2)
+
+
+
+
+
+
+
+
+D
+TS
+SC
+
+
+
+
+=
+{
+s
+c
+
+(
+G
+)
+
+,
+
+∀
+G
+∈
+
+D
+TS
+
+}
+
+
+
+
+
+
+
+(3)
+
+
+where
+
+s
+c
+(
+G
+)
+:
+G
+→
+S
+
+ is a function that evaluates the simplicial complex starting from the 1-skeleton
+G
+.However, the embedding is performed on the concatenation of
+
+D
+TR
+
+ and
+
+D
+VAL
+
+ or, specifically,
+
+D
+TR
+SC
+
+ and
+
+D
+VAL
+SC
+
+. In other words, the alphabet sees the concatenation of the simplices belonging to the simplicial complexes evaluated starting from all graphs in
+
+D
+TR
+
+ and
+
+D
+VAL
+
+.In cases of large networks and/or large datasets, this might lead to a huge number of simplices which are hard to match. For example, let us consider any given node belonging to a given graph to be identified by a progressive unique number. In this case, it is impossible to match two simplices belonging to possibly two different simplicial complexes (i.e., determine whether they are equal or not). In order to overcome this problem, node labels
+
+L
+v
+
+ play an important role. Indeed, a simplex can dually be described by the set of node labels belonging to its vertices. This conversion from ’simplices-of-nodes’ to ’simplices-of-node-labels’ has a three-fold meaning, especially if node labels belong to a categorical and finite set:the match between two simplices (possibly belonging to different simplicial complexes) can be done in an exact manner: two simplices are equal if they have the same order and they share the same set of node labelssimplicial complexes become multi-sets: two simplices (also within the same simplicial complex) can have the same order and can share the same set of node labelsthe enumeration of different (unique) simplices is straightforward.In light of these observations, it is possible to define the three counterparts of Equations (1)–(3) where each given node u belonging to a given simplex
+σ
+ is represented by its node label:
+
+
+
+
+
+
+
+D
+¯
+
+TR
+SC
+
+
+
+
+=
+{
+
+L
+v
+
+
+(
+u
+)
+
+,
+
+∀
+u
+∈
+σ
+,
+
+∀
+σ
+∈
+S
+,
+
+∀
+S
+∈
+
+D
+TR
+SC
+
+}
+
+
+
+
+
+
+
+(4)
+
+
+
+
+
+
+
+
+
+D
+¯
+
+VAL
+SC
+
+
+
+
+=
+{
+
+L
+v
+
+
+(
+u
+)
+
+,
+
+∀
+u
+∈
+σ
+,
+
+∀
+σ
+∈
+S
+,
+
+∀
+S
+∈
+
+D
+VAL
+SC
+
+}
+
+
+
+
+
+
+
+(5)
+
+
+
+
+
+
+
+
+
+D
+¯
+
+TS
+SC
+
+
+
+
+=
+{
+
+L
+v
+
+
+(
+u
+)
+
+,
+
+∀
+u
+∈
+σ
+,
+
+∀
+σ
+∈
+S
+,
+
+∀
+S
+∈
+
+D
+TS
+SC
+
+}
+
+
+
+
+
+
+
+(6)
+
+Let
+A
+ be the set of unique (distinct) simplices belonging to the simplicial complexes evaluated from graphs in
+
+
+D
+TR
+
+∪
+
+D
+VAL
+
+
+:
+
+
+
+
+A
+=
+{
+σ
+,
+
+∀
+σ
+∈
+S
+,
+
+∀
+S
+∈
+
+
+D
+¯
+
+TR
+SC
+
+∪
+
+
+D
+¯
+
+VAL
+SC
+
+}
+,
+
+
+
+
+(7)
+
+
+and let
+
+|
+A
+|
+=
+M
+
+. The next step is to properly build the embedding vectors thanks to the symbolic histograms paradigm. Accordingly, each simplicial complex
+S
+ (evaluated on the top of a given graph, that is, 1-skeleton) is mapped into an M-length integer-valued vector
+h
+ as follows
+
+
+
+
+h
+=
+[
+count
+
+(
+
+A
+1
+
+,
+S
+)
+
+,
+…
+,
+count
+
+(
+
+A
+M
+
+,
+S
+)
+
+]
+,
+
+
+
+
+(8)
+
+
+where
+
+count
+(
+a
+,
+b
+)
+
+ is a function that counts the number of times a appears in b.The three sets
+
+D
+TR
+
+,
+
+D
+VAL
+
+ and
+
+D
+TS
+
+ are separately cast into three proper instance matrices
+
+
+D
+TR
+
+∈
+
+R
+
+
+|
+
+
+D
+TR
+
+
+|
+×
+M
+
+
+
+
+,
+
+
+D
+VAL
+
+∈
+
+R
+
+
+|
+
+
+D
+VAL
+
+
+|
+×
+M
+
+
+
+
+ and
+
+
+D
+TS
+
+∈
+
+R
+
+
+|
+
+
+D
+TS
+
+
+|
+×
+M
+
+
+
+
+. For each set, the corresponding instance matrix scores in position
+
+(
+i
+,
+j
+)
+
+ the number of occurrences of the jth symbol (simplex) from
+A
+ within the ith simplicial complex (in turn, evaluated on the top of the ith graph). 2.2.2. ClassificationIn the embedding space, namely the vector space spanned by the symbolic histograms of the form as in Equation (8), any classification system can be used. However, it is worth stressing the importance of feature selection whilst performing classification as per the following two (not mutually exclusive) rationales:
+there is no guarantee that all symbols in
+A
+ are indeed useful for the classification problem at handas introduced in Section 1, it is preferable to have a small, yet informative, alphabet in order to eventually ease an a-posteriori knowledge discovery phase (less symbols to be analysed by field-experts).For a given classification system C, let us consider its set of hyper-parameters
+H
+ to be tuned. Further, let
+
+w
+∈
+
+
+{
+0
+,
+1
+}
+
+M
+
+
+ be an M-length binary vector in charge of selecting features (columns) from the instance matrices (i.e., symbols from
+A
+) corresponding to non-zero elements. The tuple
+
+
+
+
+[
+H
+,
+
+w
+]
+
+
+
+
+(9)
+
+
+can be optimised, for example, by means of a genetic algorithm [71] or other metaheuristics.In this work, two different classification systems are investigated. The former relies on non-linear
+ν
+-Support Vector Machines (
+ν
+-SVMs) [72], whereas the latter relies on 1-norm Support Vector Machines (
+
+ℓ
+1
+
+-SVMs) [73].The rationale behind using the latter is as follows.
+
+ℓ
+1
+
+-SVMs, by minimising the 1-norm instead of the 2-norm of the separating hyperplane as in standard SVMs [72,74,75], return a solution (hyperplane coefficient vector) which is sparse: this allows to perform feature selection during training.For the sake of sketching a general framework, let us start our discussion from
+ν
+-SVMs which do not natively return a sparse solution (i.e., do not natively perform any feature selection). The
+ν
+-SVM is equipped with the radial basis function kernel:
+
+
+
+
+K
+
+(
+x
+,
+y
+)
+
+=
+exp
+{
+−
+γ
+·
+D
+
+
+(
+x
+,
+y
+)
+
+2
+
+}
+
+
+
+
+(10)
+
+
+where
+
+x
+,
+y
+
+ are two given patterns from the dataset at hand,
+
+D
+(
+·
+,
+·
+)
+
+ is a suitable (dis)similarity measure and
+γ
+ is the kernel shape parameter. The adopted dissimilarity measure is the weighted Euclidean distance:
+
+
+
+
+D
+
+(
+x
+,
+y
+,
+w
+)
+
+=
+
+
+
+∑
+
+i
+=
+1
+
+M
+
+
+w
+i
+
+·
+
+
+(
+
+x
+i
+
+−
+
+y
+i
+
+)
+
+2
+
+
+
+
+
+
+
+(11)
+
+
+where M is the number of features and
+
+
+w
+i
+
+∈
+
+{
+0
+,
+1
+}
+
+
+ is the binary weight for the ith feature. Hence, it is possible to define
+
+H
+=
+[
+ν
+,
+γ
+]
+
+ and the overall genetic code for
+ν
+-SVM has the form
+
+
+
+
+[
+ν
+,
+
+γ
+,
+
+w
+]
+
+
+
+
+(12)
+
+Each individual from the evolving population exploits
+
+D
+TR
+
+ to train a
+ν
+-SVM using the parameters written in its genetic code as follows:
+evaluates the kernel matrix using
+w
+ and
+γ
+ (cf. Equation (10)–(11))trains the
+ν
+-SVM with regularisation parameter
+ν
+The optimal hyperparameters set is the one that minimises the following objective function on
+
+D
+VAL
+
+:
+
+
+
+
+F
+=
+α
+·
+
+(
+1
+−
+J
+)
+
++
+
+(
+1
+−
+α
+)
+
+·
+
+
+|
+w
+≠
+0
+|
+
+
+|
+w
+|
+
+
+,
+
+
+
+
+(13)
+
+
+where J is the (normalised (Originally, the informedness is defined as
+
+J
+=
+(
+Sensitivity
++
+Specificity
+−
+1
+)
+
+ and therefore is bounded in
+
+[
+−
+1
+,
++
+1
+]
+
+. However, since the rightmost term in Equation (13) is bounded in
+
+[
+0
+,
+1
+]
+
+ and
+
+α
+∈
+[
+0
+,
+1
+]
+
+, we adopt a normalised version in order to ensure a fair combination.)) informedness (The informedness, by definition, takes into account binary problems. In case of multiclass problems, one can evaluate the informedness for each class by marking it as positive and then consider the average value amongst the problem-related classes.) [76,77], defined as:
+
+
+
+
+J
+=
+
+
+(
+Sensitivity
++
+Specificity
+−
+1
+)
++
+1
+
+2
+
+∈
+
+[
+0
+,
+1
+]
+
+,
+
+
+
+
+(14)
+
+
+whereas the rightmost term takes into account the sparsity of the feature selection vector
+w
+. Finally,
+
+α
+∈
+[
+0
+,
+1
+]
+
+ is a user-defined parameter which weights the contribution of performances (leftmost term) and number of selected alphabet symbols (rightmost term). As the evolution ends, the best individual is evaluated on
+
+D
+TS
+
+.As previously introduced,
+
+ℓ
+1
+
+-SVMs minimise the 1-norm of the separating hyperplane and natively return a sparse hyperplane coefficient vector, say
+β
+. In this case, the genetic code will not consider
+w
+ and only
+H
+ can be optimised. For
+
+ℓ
+1
+
+-SVMs the genetic code has the form
+
+
+
+
+[
+C
+,
+
+c
+]
+,
+
+
+
+
+(15)
+
+
+where C is the regularisation parameter and
+
+c
+∈
+
+R
+q
+
+
+ are additional weights in order to adjust C in a class-wise fashion (
+c
+ is not mandatory for
+
+ℓ
+1
+
+-SVMs to work, but it might be of help in case of heavily-unbalanced classes.). Specifically, for the ith class, the misclassification penalty is given by
+
+C
+·
+
+c
+i
+
+
+. The evolutionary optimisation does not significantly change with respect to the
+ν
+-SVM case: each individual trains a
+
+ℓ
+1
+
+-SVM using the hyperparameters written in its genetic code on
+
+D
+TR
+
+ and its results are validated on
+
+D
+VAL
+
+. The fitness function is still given by Equation (13) with
+β
+ in lieu of
+w
+. As the evolution ends, the best individual is evaluated on
+
+D
+TS
+
+. 3. Results 3.1. On Benchmark DataIn order to show the effectiveness of the proposed embedding procedure, both of the classification strategies (
+ν
+-SVM and
+
+ℓ
+1
+
+-SVM) have been considered. The genetic algorithm has been configured as follows: 100 individuals per 100 generations with a strict early-stop criterion if the average fitness function over
+
+1
+/
+3
+
+rd of the total number of generations is less than or equal to
+
+10
+
+−
+6
+
+
+, the elitism is set to 10% of the population, the selection follows the roulette wheel heuristic, the crossover operator generates new offsprings in a scattered fashion and the mutation acts in a flip-the-bit fashion for boolean genes and adds to real-valued genes a random number extracted from a zero-mean Gaussian distribution whose variance shrinks as generations go by. The upper and lower bounds for SVMs hyperparameters are
+
+ν
+∈
+(
+0
+,
+1
+]
+
+ by definition,
+
+γ
+∈
+(
+0
+,
+100
+]
+
+,
+
+C
+∈
+(
+0
+,
+10
+]
+
+ and
+c
+ has entries in range
+
+[
+−
+10
+,
++
+10
+]
+
+.Two classification systems have been used as competitors:The Weighted Jaccard Kernel. Originally proposed in Ref. [78], the Weighted Jaccard Kernel (WJK) is an hypergraph kernel working on the top of the simplicial complexes from the underlying graphs. As a proper kernel function, WJK performs an implicit embedding procedure towards a possibly infinite-dimensional Hilbert space. In synthesis, the WJK between two simplicial complexes, say
+S
+ and
+R
+, is evaluated as follows: after considering the ’simplices-of-node-labels’ rather than the ’simplices-of-nodes’ as described in Section 2.2.1, the set of unique simplices belonging to either
+S
+ or
+R
+ is considered. Then,
+S
+ and
+R
+ are transformed in two vectors, say
+s
+ and
+r
+, by counting the occurrences of simplices in the unique set within the two simplicial complexes. Finally,
+
+W
+J
+K
+
+(
+S
+,
+R
+)
+
+=
+
+
+
+∑
+i
+
+min
+
+(
+
+s
+i
+
+,
+
+r
+i
+
+)
+
+
+
+
+∑
+i
+
+max
+
+(
+
+s
+i
+
+,
+
+r
+i
+
+)
+
+
+
+
+. The kernel matrix obtained by evaluating the pairwise weighted Jaccard similarity between any two pairs of simplicial complexes in the available dataset is finally fed to a
+ν
+-SVM.GRALG. Originally proposed in Ref. [43] and later used in Refs. [44,79] for image classification, GRALG is a Granular Computing-based classification system for graphs. Despite the fact that it considers network motifs rather than simplices, it is still based on the same embedding procedure by means of symbolic histograms. In synthesis, GRALG extracts network motifs from the training data and runs a clustering procedure on such subgraphs by using a graph edit distance as the core (dis)similarity measure. The medoids (MinSODs [39,40,41,42]) of these clusters form the alphabet on top of which the embedding space is built. Two genetic algorithms take care of tuning the alphabet synthesis and the feature selection procedure, respectively. GRALG, however, suffers from an heavy computational burden which may become unfeasible for large datasets. In order to overcome this problem, the random walk-based variant proposed in Ref. [80] has been used.Thirty datasets freely available from Ref. [81] have been considered for testing, all of which well suit the classification problem at hand being labelled on nodes with categorical attributes. Each dataset has been split into a training set (
+
+70
+%
+
+) and test set (
+
+30
+%
+
+) in a stratified manner in order to preserve ground-truth labels distribution across the two splits. Validation data have been taken from the training set via 5-fold cross-validation. For the proposed embedding procedure and WJK, the Clique complex has been used since the underlying 1-skeleton is already available from the considered datasets. For GRALG, the maximum motifs size has been set to 5 and, following Ref. [80], a subsampling rate of
+
+50
+%
+
+ has been performed on the training set. Alongside GRALG and WJK, the accuracy of the dummy classifier is also included [82]: the latter serves as a baseline solution and quantifies the performance obtained by a purely random decision rule. Indeed, the dummy classifier outputs a given label, say
+
+l
+i
+
+ with a probability related to the relative frequency of
+
+l
+i
+
+ amongst the training patterns and, by definition, does not consider the information carried out by the pattern descriptions (input domain) in training data.In Figure 1, the accuracy on the test set is shown for the five competitors: the dummy classifier, WJK, GRALG and the proposed embedding procedure using both non-linear
+ν
+-SVM and
+
+ℓ
+1
+
+-SVM. In order to take into account intrinsic randomness in stratified training/test splitting and in genetic optimisation, the results presented here have been averaged across five different runs. Clearly, for the tested datasets, a linear classifier performs poorly: it is indeed well-known that especially for high-dimensional datasets non-linear and linear methods have comparable performances [31,83]. As a matter of fact, for these datasets, Peking_1 leaded to the largest embedding space (approx. 1500 symbols), followed by MSRC_9 (approx. 220 symbols). From Figure 1, it emerges that WJK is generally the best performing method, followed by the proposed embedding procedure with
+ν
+-SVM which is, in turn, followed by GRALG. Indeed, WJK exploits the entire simplicial complexes to the fullest, by considering only simplices belonging to the two simplicial complexes to be matched and without ’discarding’ any simplices due to the explicit (and optimised) embedding procedure, as proposed in this work. Amongst the three methods, WJK is also the fastest to train: the kernel matrix can be pre-evaluated using very fast vectorised statements and the only hyperparameter that needs to be tuned is the
+ν
+-SVM regularisation term, which can done by performing a plain random search in
+
+(
+0
+,
+1
+]
+
+. Amongst the two information granulation-based techniques, the proposed system outperforms GRALG in the vast majority of the cases. This not only has to be imputed to the modelling capabilities offered by hypergraphs but also has a merely computational facet: the number of simple paths is much greater than the number of simplices (A graph with n vertices has
+
+O
+(
+n
+!
+)
+
+ paths, whereas the number of cliques goes like
+
+O
+(
+
+3
+
+n
+/
+3
+
+
+)
+
+), hence GRALG needs a ’compression stage’ (i.e., a clustering procedure) to return a feasible number of alphabet symbols. This compression stage not only may impact the quality of the embedding procedure, but also leads to training times that are incredibly high with respect to the proposed technique in which simplices can be interpreted as granules themselves.Another interesting aspect that should be considered for comparison relies on the model interpretability. Despite WJK seems the most appealing technique due to high training efficiency and remarkable generalisation capabilities, it basically relies on pairwise evaluations of a positive-definite kernel function between pair of simplicial complexes which can then be fed into a kernelised classifier. This modus operandi does not make the model interpretable and no knowledge discovery phase can be pursued afterwards. The same is not true for Granular Computing-based pattern recognition systems such as GRALG or the one proposed in this paper, as will be confirmed in Section 4. 3.2. On Real-world Proteomic Data 3.2.1. Experiment #1: Protein Function Classification Data Retrieval and PreprocessingThe data retrieval process can be summarised as follows:
+the entire Escherichia coli (str. K12) list of proteins has been retrieved from UniProt [84]the list has been cross-checked with Protein Data Bank [85] in order to download PDB files for resolved proteinsproteins with multiple EC numbers have been discardedin PDB files containing multiple structure models, only the first model is retained; similarly, for atoms having alternate coordinate locations, only the first location is retained.After this retrieval stage, a total number of 6685 proteins has been collected. From this initial set, all proteins without information regarding the measurement resolution have been discarded. Further, in order to consider only good quality structures (i.e., reliable atomic coordinates for building PCNs), all proteins whose measurement resolution is greater than 3Å have been discarded as well. The 3Å threshold has been selected by jointly considering the PCNs connectivity range and the measurement resolution distribution within the dataset (Figure 2). This resolution-based filtering dropped the number of available proteins from 6685 to 5583. The classes distribution is summarised in Figure 3. Computational ResultsFor a thorough investigation, this 7-classes problem has been cast into 7 one-against-all binary problems: the ith classifier sees the ith class as positive and all other classes as negatives. In order to take into account the intrinsic random behaviour for both classifiers’ training phases, five stratified training-validation-test sets (Proportions: 50% for training set, 25% for validation set and 25% for test set. The stratified splitting thanks to
+L
+ is performed to preserve labels’ distribution across splits. have been considered and the same splits are fed to both classifiers in order to ensure a fair comparison. Hereafter the average results across these five splits are shown. Again, the Clique complex has been considered in order to build simplicial complexes for PCNs since (by construction) the underlying graph is already available by scoring edges between
+
+[
+4
+,
+8
+]
+
+Å. The resulting alphabet size is reported in Table 1.Table 2 and Table 3 show the results on the test set for
+
+ℓ
+1
+
+-SVM and
+ν
+-SVM (respectively) with
+
+α
+=
+1
+
+ and
+
+α
+=
+0.5
+
+ in the fitness function (13): the former case does not foster any feature selection during training (classifiers can choose as many features as they like), whereas the latter equally optimises performances and sparsity in selecting symbols from the alphabet. The rationale behind using
+
+ℓ
+1
+
+-SVMs alongside
+ν
+-SVMs, despite their poor performances on benchmark data, stems from Section 3; by looking at Table 1 it is clear that this is a properly-said high-dimensional problem (converse to benchmark datasets whose maximum number of features reaches 1500), so it is also worth trying linear methods alongside non-linear ones. Performances on the test set are presented via the following parameters: accuracy (ACC), specificity (SPC), sensitivity (SNS), negative predictive value (NPV) and positive predictive value (PPV), along with the sparsity, defined as percentage of non-zero elements in
+w
+ (or
+β
+); that is, the number of selected alphabet symbols over the entire alphabet size: the lower, the better.From Table 2 it is possible to see that when switching from
+
+α
+=
+1
+
+ to
+
+α
+=
+0.5
+
+, other than selecting a smaller number of symbols,
+
+ℓ
+1
+
+-SVMs tend to improve in terms of SNS and NPV for almost all classes. Similarly, from Table 3, it is possible to see that, when switching from
+
+α
+=
+1
+
+ to
+
+α
+=
+0.5
+
+,
+ν
+-SVMs mainly benefit in terms of feature selection, with only class 7 showing minor performance improvements in terms of SNS and NPV.By comparing the two classification systems (i.e., by matching Table 2 and Table 3) it is possible to draw the following conclusions:at
+
+α
+=
+1
+
+:
+
+ℓ
+1
+
+-SVMs outperform the kernelised counterpart in terms of SNS (all classes) and NPV (all classes), whereas
+ν
+-SVMs outperform the former in terms of SPC (all classes) and PPV (all classes). The overall ACC sees
+
+ℓ
+1
+
+-SVMs outperforming
+ν
+-SVMs only for class 7, the two classifiers perform equally for classes 2 and 4 and for the remaining classes
+ν
+-SVMs perform better. Regardless of which performs the best in an absolute manner, the performance shifts are rather small as far as ACC, SPC and NPV are concerned (
+
+≈
+3.3
+%
+
+ or less), whereas interesting shifts include SNS (
+
+ℓ
+1
+
+-SVMs outperforming by
+
+≈
+10
+%
+
+ on class 4) and PPV (
+ν
+-SVMs outperforming by
+
+≈
+10
+%
+
+ on class 3 and
+
+≈
+22
+%
+
+ on class 5);at
+
+α
+=
+0.5
+
+:
+
+ℓ
+1
+
+-SVMs outperform the kernelised counterpart in terms of SNS (all classes) and NPV (all classes), whereas
+ν
+-SVMs outperform the former in terms of SPC (all classes), PPV (all classes) and ACC (all classes). While the performance shifts are rather small for ACC (≈1–2%) and SPC (
+
+≈
+3
+−
+4
+%
+
+), there are remarkable shifts regarding PPV (
+ν
+-SVMs outperform up to
+
+36
+%
+
+ for class 5) and SNS (
+
+ℓ
+1
+
+-SVMs outperform up to
+
+13
+%
+
+ for class 4).Conversely, as the sparsity is concerned:at
+
+α
+=
+1
+
+:
+
+ℓ
+1
+
+-SVMs select fewer symbols with respect to
+ν
+-SVMs only for classes 1 and 7at
+
+α
+=
+0.5
+
+:
+
+ℓ
+1
+
+-SVMs outperform
+ν
+-SVMs for all classes.Finally, is also worth stressing that
+
+ℓ
+1
+
+-SVMs are easier to train with respect to the non-linear counterpart for the following reasons: (a)
+
+ℓ
+1
+
+-SVMs, being linear classifiers, do not require the (explicit) kernel evaluation (cf. Equations (10) and (11)); (b) their training consists of solving a Linear Programming optimisation problem (the same is not true for
+ν
+-SVMs, which solve a Quadratic Programming problem); (c) they automatically return a sparse solution, so they only need hyperparameter optimisation (We considered a genetic algorithm for the sake of consistency with
+ν
+-SVMs but lighter procedures can also be pursued for hyperparameter optimisation (e.g., random search or grid search)).Globally, we can safely say that the adopted strategy allowed for a statistically significant prediction of the functional classes, greatly outperforming previous works [25,67,86]. 3.2.2. Experiment #2: Protein Solubility Classification Data Retrieval and PreprocessingThe data retrieval process and be summarised as follows:from the eSOL database (eSOL database http://tp-esol.genes.nig.ac.jp/)) developed in the Targeted Proteins Research Project., containing the solubility degree (in percentage) for the E. coli proteins using the chaperone-free PURE system [87], the entire dump has been collectedproteins with no information about their solubility degree have been discardedin order to enlarge the number of samples (From the entire dump, only 432 proteins had their corresponding PDB ID.), we reversed the JW-to-PDB relation by downloading all structure files (if any) related to each JW entry from eSOL. Each structure will inherit the solubility degree from the JW entryinconsistent data (e.g., the same PDB with different solubility values) have been discarded; duplicates have been removed in case of redundant data (e.g., one solubility per PDB but multiple JWs)proteins that have a solubility degree greater than
+
+100
+%
+
+ have been set as
+
+100
+%
+
+. The (small) deviations from
+
+100
+%
+
+ can be ascribed to minor experimental errors. After straightforward normalisation, the solubility degree can be considered a real-valued number in range
+
+[
+0
+,
+1
+]
+
+.This first preprocessing stage leads to a dataset of 5517 proteins. As per the previous experiment, PDB files have been parsed by removing alternate models and alternate atom locations. Finally, proteins with no resolution information or whose resolution is greater than 3Å have been discarded as well. This resolution-based filtering dropped the number of available proteins from 5517 to 4781. The solubility distribution within the resulting dataset is summarised in Figure 4.Since aim of the classification system is to discriminate between soluble versus non-soluble proteins, a threshold
+
+τ
+∈
+(
+0
+,
+1
+)
+
+ must be set in order to generate categorical output values starting from real-valued solubility degrees. Specifically, all proteins whose solubility degree is greater than
+τ
+ will be considered ‘soluble’, whereas the remaining proteins will be considered ‘non-soluble’. Computational ResultsFor a thorough investigation, the threshold
+τ
+ has been varied from
+
+0.1
+
+ to
+
+0.9
+
+ with step size
+
+0.1
+
+. For the sake of shorthand, only
+
+ℓ
+1
+
+-SVM has been used for classification since it has been proved successful both in terms of efficiency and effectiveness for the previous PCN experiment.Figure 5 and Figure 6 show the classification results on test set averaged across five splits for
+
+α
+=
+1
+
+ and
+
+α
+=
+0.5
+
+, respectively. By matching the top plots from Figure 5 and Figure 6, the best threshold values are in range
+
+τ
+∈
+[
+0.5
+,
+0.7
+]
+
+ for
+
+α
+=
+1
+
+ and
+
+τ
+∈
+[
+0.5
+,
+0.6
+]
+
+ for
+
+α
+=
+0.5
+
+: in the latter case, as
+
+τ
+→
+0.7
+
+, precision (PPV) starts deteriorating. Indeed, for very low threshold values (i.e.,
+
+τ
+→
+0.1
+
+) there will be a lot of ‘soluble’ proteins with respect to the ‘non-soluble’ ones (Many positive instances with respect to the negative ones). Trivially, this is reflected in very high positive-related performance indices (circa
+
+100
+%
+
+) such as SNS and PPV and rather low negative-related performance indices (circa 80–90%) such as NPV and SPC. The opposite is true for very high thresholds (i.e.,
+
+τ
+→
+0.9
+
+). In the aforementioned ranges, all performance indices are rather balanced: in Figure 5, for
+
+τ
+∈
+[
+0.5
+,
+0.7
+]
+
+, all performance indices are in range 89–94%; in Figure 6, for
+
+τ
+∈
+[
+0.5
+,
+0.6
+]
+
+, all performance indices are in range 89–92%. This (minor) shift in performances is counterbalanced by the number of selected symbols: for
+
+α
+=
+1
+
+ approximately
+
+20
+%
+
+ of the alphabet symbols have been selected, whereas for
+
+α
+=
+0.5
+
+ the percentage of selected symbols is always below
+
+5
+%
+
+. Interestingly, see Figure 6, the range
+
+τ
+∈
+[
+0.5
+,
+0.7
+]
+
+ is also featured by the largest alphabet: a slightly more complex embedding space is needed for maximising the overall performances. 4. DiscussionIn order to extract a biochemically relevant explanation from the results of the pattern recognition procedure, for both experiments, we computed over the extracted granules (simplices), namely small peptides located into the protein structure, the main chemico-physical parameters at the amino-acid residue level according to the results presented in Ref. [88]. Each information granule (simplex) has been mapped with 6 real values indicating the average and standard deviation of polarity, volume and hydrophilicity evaluated amongst the amino-acids forming the simplex. The chemico-physical properties of each information granule have been correlated with a score ranging from 1 to 5, namely the number of times said granule has been selected across the five runs: the higher the score, the higher the confidence about its discrimination importance for the classification problem.Let us discuss the solubility classification problem first. The score assigned to each simplex has been discretised according to the following rules: all scores greater than 2 have been considered ‘positives’, all scores equal to 0 have been considered ‘negatives’ and all other simplices have been discarded. Statistical tests show that, despite the huge number of samples (approx. 11000 simplices), the average volume is not statistically significant (p-value approx. 0.11). This is perfectly coherent if we consider that the volume of a simplex (usually less than 5 residues) is very unlikely to endow biological meaning in terms of the overall protein solubility. On the other hand, the standard deviation volume has been shown to be statistically significant (p-value
+
+<
+0.0001
+
+). This interesting result shows that simplices composed of ‘similar amino-acids’ (small standard deviation) show better solubility. Nonetheless, it is important to note that, for a given chemico-physical property (e.g., volume in this case) the standard deviation and the average value shall be treated independently and do not show any correlation. This latter aspect of average and standard deviation carrying different information has also been confirmed by analysing the two other properties (polarity and hydrophilicity).Polarity and hydrophilicity not only show statistical significance (all p-values are less than 0.0001) but also show a strong correlation (>0.99) in terms of both mean values and standard deviations, as shown in Table 4, yet mean values and standard deviations are not correlated with each other (as per the volume case). This perfectly fits with current biochemical knowledge and, specifically, this is consistent with the well-known importance of ‘hydrophobic interaction’ in protein folding (residues with hydrophobicity/hydrophilicity values tend to aggregate [89]).Similar analyses have been carried for the EC classification problem. All of the seven statistical models show statistical significance, mainly thanks to the large number of samples (more than 12,000 simplices). Table 5 summarises their main characteristics. Alongside the statistical significance, it is interesting to note that all of the seven models have
+
+
+R
+2
+
+≈
+0.02
+
+, meaning that they explain 2% of the overall variance.Furthermore, also in this experiment, hydrophilicity has been shown to be the most important predictor according to linear discriminant analysis [90] and completely superimposable results are obtained for average polarity, which is strictly related to hydrophilicity. Table 6 shows the main characteristics of the seven models where hydrophilicity is concerned and Table 7 is its counterpart as regards polarity. They both report the t-statistics and the relative p-value of the null hypothesis of no contribution of hydrophilicity (polarity) of the multiple linear regression having score for different classes as dependent variable and different chemico-physical indexes relative to the simplices as regressors. As evident, especially hydrophilicity enters a significant contribution to all models as the most important predictor (i.e., the estimated coefficient for average hydrophilicity is approximately one order of magnitude higher with respect to other coefficients). Another interesting aspect is that all models show a negative coefficient for average hydrophilicity and a positive sign for its standard deviation.In conclusion, beside the confirmation of the pivotal role of residue hydrophilic character in determining the protein structure, it is well known [91] that when shifting from a single residue to an entire protein level, new organisation principles arise and ‘context-dependent’ features largely overcome single residue level properties. The 2% of variance explained is the percentage that can be imputed to the plain chemico-physical properties of individual simplices and one might ask whether the same analyses can be carried out by considering ‘groups of simplices’ instead of individual simplices and scoring their relevance for the problem at hand. This paves the way for new granulation-based studies which should also take into account these aspects. All in all, the observed results confirm the actual biochemical theory, thus providing a ‘lateral validation’ to the pattern recognition procedure, while at the same time pushing biochemists to look for non-local chemico-physical properties for getting rid of protein folding and structure-function relations. 5. ConclusionsGraphs are powerful structures that can capture topological and semantic information from data. However, in many contexts, graphs suffer from the major drawback of having different sizes, hence they cannot be easily compared (e.g., by means of their respective adjacency matrices) and designing a graph-based pattern recognition system is not trivial. In this paper, this problem has been addressed by moving towards an embedding space built on top of simplicial complexes extracted in a fully data-driven manner from the dataset at hand. The embedding procedure follows the symbolic histogram approach, where each pattern is described by the number of occurrences of a given meaningful symbol within the original pattern (graph). In the embedding space any Euclidean classifier can be used, either equipped or not with feature selection capabilities.Although not mandatory, performing feature selection either by properly choosing the classification system or with the help of optimisation techniques, benefits the model in a two-fold fashion: first, it reduces the embedding space dimension, speeding up the classification of new patterns; second, it improves the model interpretability. Indeed, a major strength of information granulation-based pattern recognition systems is that relevant, meaningful information granules (alphabet symbols) can be analysed by field-experts to derive insights for the problem at hand.The proposed pattern recognition system has been tested on thirty open-access datasets and benchmarked against two suitable competitors: a kernel method (WJK) which works on simplicial complexes and (by definition) performs an implicit embedding towards an high-dimensional feature space and another information granulation-based classifier (GRALG) which performs explicit embedding but relies on simple paths rather than simplices. Computational results show that the proposed embedding technique outperforms GRALG in almost all of the tested datasets. Albeit WJK seems to be the best performing classification technique, it is noteworthy that no a-posteriori knowledge discovery phase can be performed, whereas the same is not true for information granulation-based classifiers. In order to stress this aspect, we faced two additional real-world problems: the prediction of proteins’ enzymatic class and their solubility. For these problems, along with remarkable classification results, we also investigated some chemico-physical properties related to the amino-acids belonging to the simplices which have been selected as pivotal for the embedding space: statistical analyses confirmed their biological relevance.A non negligible facet of this work is that the proposed approach is suitable for dealing both with graphs (which can be ’transformed’ into an hypergraph–for example, via Clique complex) and with hypergraphs directly (the embedding procedure indeed relies on simplicial complexes). For the sake of demonstration and testing, graphs have been the major starting point for analysis in order to build simplicial complexes; nonetheless, simplicial complexes can also be evaluated over point clouds (e.g., via Vietoris-Rips complex, Alpha complex). As far as the graph experiments are concerned, an interesting aspect of the proposed technique is that building the embedding space is parameter-free and it can be evaluated in a one-shot fashion: this is true, however, only if the underlying topology is known a-priori and the Clique complex can be used. As other simplicial complexes need to be used (for example, if underlying topology is not available beforehand), the embedding procedure looses its parameter-free peculiarity. Finally, it is worth noting that, in its current implementation, the matching procedure between simplices can be done in an exact manner by considering categorical node labels: future research endeavours can extend the proposed procedure to more complex semantic information on nodes and/or edges.

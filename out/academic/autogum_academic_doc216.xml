@@ -1,0 +1,35 @@
+<text id="autogum_academic_doc216" title="Detection and Classification of Advanced Persistent Threats and Attacks Using the Support Vector Machine" shortTile="detection-classification" author="Wen-Lin Chu, Chih-Jer Lin, Ke-Neng Chang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4579/htm" speakerList="none" speakerCount="0">
+<head> 2. Methods</head><head> 2.1. Materials and Experimental Setup</head>
+<p>
+The analysis of APT network attack packets is not new technology, but it has become an essential part of network administrators and information security and is used to analyze regular activities. In the past, it usually applied to the analysis of network behavior or debugging of the network environment. In the current network milieu, where information security incidents are frequent, this investigation has become regular and essential. Side recording of network packets from a target host can provide information about events that enables even more information to be obtained through analysis. Therefore, while facing current popular APT attacks hidden behind communication behavior, and even in the communication content, it is possible to obtain key information by using network packet analysis technology. In this study, a comparison has been made between the correct rate of APT network attack detection using the NSL-KDD data sets and PCA dimensionality reduction technology and four machine learning classification algorithms: SVM, naive Bayes, decision tree, and the multi-layer perceptron neural network (MLP). Most relevant work has been done using the “WEKA Spreadsheet to ARFF” service to convert the NSL-KDD data set format from files with the csv extension to ARFF extension format (including “training data set (KDDTrain+)” and “test data set (KDDTest+)” (<ref target="https://github.com/jmnwong/NSL-KDD-Dataset">https://github.com/jmnwong/NSL-KDD-Dataset</ref>) is the reference URL. Because the data has different ranges, preprocessing needed to be done to round up all the features. Two type classifiers were used, normal, and anomaly. The PCA algorithm was then used to reduce the size of the classified data set. Finally, the pre-processed training and test data sets were grouped and tested, and experiments with the four classification algorithms were carried out. These were SVM, naive Bayes, decision tree, and MLP and they were used to train and test the data and compare and analyze the results. Each record had data with 41 different feature attributes presenting the content of the network packets. There were four categories of anomalous attack DoS, Probe, R2L, and U2R and the definitions are shown in Table 1. </p>
+
+<head> 2.2. Method of Signal Dimension Reduction</head>
+<p>
+PCA is a statistical technique that transforms a set of possible correlation variables to a set of linearly uncorrelated variables by orthogonal transformation. The transformed set of variables is the principal component. A set of related features in high-dimensional data is converted to a smaller subset and named as principal component. High-dimensional  data can be transformed to low-order  dimension data (). PCA does this transformation by finding a  feature vector, and projecting the  dimension data onto that feature vector to minimize the overall projection error. PCA can preserve around 0.9 variance of the original data set and significantly reduce the number of features as well as the dimensions. The original high-dimensional data set is projected onto a smaller subspace while preserving most of the information contained in the original data set. Assuming , and , the random dimension  with the mean () inputs the data recording its definition as (1)
+
+(1)
+
+</p>
+
+<p>The definition <hi rend="italic">f</hi> the covariance matrix of  is (2):
+
+(2)
+
+</p>
+
+<p>PCA solves the eigenvalues problem of Covariance matrix
+
+(3)
+
+</p>
+
+<p>In Equation (3),  is the eigenvalue and  is the corresponding eigenvector. </p>
+
+<p>To represent the data record with a low-dimensional vector, only  pieces of eigenvector (named as the principal direction) are needed, corresponding to  pieces of the largest eigenvalue (), and the variance of the projection of the input data in the principal direction is greater than the variance in any other direction. Hence parameter  is the approximate precision of the  pieces of the largest eigenvector, so the following relationship (4) is obtained
+
+(4)
+
+</p>
+
+<p>The purpose of PCA is to maximize internal information and increase calculation speed after dimension reduction, and to evaluate the importance of the direction by the size of the data variance in the projection direction. </p>
+</text>

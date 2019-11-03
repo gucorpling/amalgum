@@ -1,0 +1,43 @@
+<text id="autogum_academic_doc538" title="Non-Rigid Multi-Modal 3D Medical Image Registration Based on Foveated Modality Independent Neighborhood Descriptor" shortTile="nonrigid-multimodal" author="Feng Yang, Mingyue Ding, Xuming Zhang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4675/htm" speakerList="none" speakerCount="0">
+<head> 2. Methods</head><head> 2.1. The Framework of the FMIND Based Image Registration Method</head>
+<p>
+<figure>Figure 1</figure> shows the flowchart of the proposed image registration based on the FMIND. Firstly, the FMIND is constructed based on the foveated nonlocal self-similarity and it is applied to the reference image <hi rend="italic">IR</hi> and the float image <hi rend="italic">IF</hi> to produce the corresponding structural representations FMIND (<hi rend="italic">IR</hi>) and FMIND (<hi rend="italic">IF</hi>), respectively. Afterwards, the objective function, i.e., the energy function, is established based on the free-from deformation (FFD) model and the similarity measure defined as the sum of absolute differences (SAD) between FMIND(<hi rend="italic">IR</hi>) and FMIND(<hi rend="italic">IF</hi>). Finally, the FMIND based spatial constraint is introduced to produce the mask image for the MRF discrete optimization. During the iterative optimization, the deformation vector, which is a vector of parameters defining the deformation field, is produced at each iteration. The final optimal deformation vector <hi rend="italic">T</hi>’ will be obtained once the optimization procedure is terminated, and it is utilized to produce the registration result. </p>
+
+<head> 2.2. The Foveated Modality Independent Neighborhood Descriptor</head>
+<p>
+The FMIND is presented based on the characteristics of human visual system (HVS). In the HVS, the distribution of cone cells is uneven. The foveation has the highest density. If the foveation is taken as the center, the cell density will fall fast when it is extended around. The optic nerve cells have similar characteristics. Therefore, when we watch a point in an image, this point will have the highest sensitivity and the sensitivity will drop with the increasing distance to the point. Inspired by the characteristics of the HVS, Alessandro Foi et al. have proposed calculating the patch similarity based on the Euclidean distance  between the the foveated patches, defined as:
+
+(1)
+
+where  and  denote the foveated patches that were obtained by foveating the image  at the two fixation points  and . By applying the foveation operator  to the image <hi rend="italic">I</hi>, the foveated patch  is produced as:
+
+(2)
+
+where  denotes the location of any pixel in the foveated image patch . In, the designed foveation operators mainly include the isotropic and anisotropic foveation operators. As the latter has more advantages than the former in describing the image edges and textures, it will be used as the foveation operator. This operator is defined as:
+
+(3)
+
+where  denotes the blur kernel and it is mainly structured by the elliptical Gaussian probability density function (PDF),  determines the elongation of the Gaussian PDF, and  denotes the angular offset, respectively. The blur kernel  is defined as:
+
+(4)
+
+where , ,  denote the elliptical Gaussian PDF with the standard deviation of  and <hi rend="italic">u</hi>+ determines the orientation of the axes of the elliptical Gaussian PDF. </p>
+
+<p><figure>Figure 2</figure> gives an example of two anisotropic foveation operators, where  is a 7 × 7 foveated patch, , and the different kernel elongation parameters  and  are used, respectively. Clearly, this radial design of these anisotropic foveation operators is consistent with HVS features, which thereby leads to the effective structural representation of images for the FMIND. </p>
+
+<p>We will propose the FMIND based on the foveated nonlocal self-similarity between different image patches in the same image borrowing the idea of self-similarity in the non-local means denoising. The FMIND is expressed as:
+
+(5)
+
+where  denotes a search window centered at <hi rend="italic">x</hi>,  denotes the distance between the foveated image patches  and ; <hi rend="italic">n</hi> is a normalization constant to ensure that the maximum of  is 1;  denotes the variance of the foveated image patch  centered at <hi rend="italic">x</hi> in the image <hi rend="italic">I</hi>, and it controls the attenuation degree of this function in Equation (5). The variance  is estimated as the mean of foveated distances for all the pixels in the foveated patch .
+
+(6)
+
+where || denotes the number of pixels in . </p>
+
+<p>The structural information around the pixel <hi rend="italic">x</hi> in the image <hi rend="italic">I</hi> will be described by one-dimensional vector of size , where |<hi rend="italic">R</hi>| denotes the number of pixels in the search window <hi rend="italic">R</hi> by means of the FMIND. After obtaining the FMIND for the reference and float images, the similarity metric  between two pixels at the same position <hi rend="italic">x</hi> in the images <hi rend="italic">I</hi> and <hi rend="italic">J</hi> can be expressed as the mean SAD between  and  of pixels in <hi rend="italic">R</hi>.
+
+(7)
+
+where <hi rend="italic">R</hi> takes a six-neighborhood in this paper. </p>
+</text>

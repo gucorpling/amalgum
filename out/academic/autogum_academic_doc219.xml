@@ -1,0 +1,61 @@
+<text id="autogum_academic_doc219" title="DynamFluid: Development and Validation of a New GUI-Based CFD Tool for the Analysis of Incompressible Non-Isothermal Flows" shortTile="dynamfluid-development" author="Héctor Redal, Jaime Carpio, Pablo  A. García-Salaberri, Marcos Vera" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2227-9717/7/11/777/htm" speakerList="none" speakerCount="0">
+<head> 2. Governing Equations</head>
+<p>
+Let  be the spatial domain at time , with  denoting the <hi rend="italic">i</hi>-th cartesian coordinate. Using the Einstein summation convention, the governing equations for three-dimensional unsteady flow with variable density (due, e.g., to temperature variations) can be written as follows
+
+(1)
+
+(2)
+
+(3)
+
+where  is the fluid density,  the <hi rend="italic">i</hi>-th component of the velocity vector ,  the total energy per unit mass (with  the specific internal energy per unit mass, assuming a calorically perfect fluid), <hi rend="italic">p</hi> the pressure, <hi rend="italic">T</hi> the absolute temperature,  the <hi rend="italic">i</hi>-th component of the acceleration of gravity, and <hi rend="italic">k</hi> the thermal conductivity. In the above equations  represent the deviatoric stress components
+
+(4)
+
+where  is the dynamic viscosity and  the Kronecker delta. </p>
+
+<p>In non-isothermal flows where the density variations are small but the flow is driven by buoyancy forces, such as in natural or mixed convection problems, one may simplify the equations by means of the Boussinesq approximation. This approximation assumes that variations in density have no effect on the flow field other than to give rise to buoyancy forces. In this case, the continuity and momentum equations take the simplified form
+
+(5)
+
+(6)
+
+where  is the reference fluid density,  the reference temperature, and  the thermal expansion coefficient. </p>
+
+<p>In the Boussinesq approximation, the energy equation is often simplified by also ignoring the density variations. However, in this work, the energy equation will be kept in its general form, without any further simplification. The reason for this approach is to minimize the approximation error when computing the temperature field in a fluid that undergoes tiny variations of density, and to give a unified treatment to the energy equation independently of the way density is computed. In the range of Reynolds number considered here, the different treatments of the energy equation, and the assumption of constant specific heats, do not make a significant difference. Leaving the general form allows validating the implementation of the energy equation when the Boussinesq approximation is used in the Navier–Stokes equations but not in the energy equation. </p>
+
+<p>Let  be the characteristic length,  the characteristic velocity,  the characteristic residence time of the problem,  the reference density,  the reference dynamic viscosity, and  the reference thermal conductivity. With these scales, the following dimensionless variables can be introduced
+
+(7)
+
+where  represents a convenient pressure datum, and  is the acceleration of gravity. </p>
+
+<p>The asterisk will be dropped in the following for simplicity, so that all variables will be assumed to be non-dimensional. Thus, the general governing Equations (1)–(3) can be rewritten as follows
+
+(8)
+
+(9)
+
+(10)
+
+where  is the Reynolds number,  is the Froude number, and  is the Prandtl number, defined in terms of the specific heat at constant pressure , assumed here to be constant. Note that for liquids both specific heats are equal , whereas for gases , where  is the gas constant, defined as the ratio between the universal gas constant  and the molecular mass of the gas <hi rend="italic">W</hi> that is constant for gases of uniform composition. </p>
+
+<p>Under the Boussinesq approximation, it is convenient to define the normalized dimensionless temperature
+
+(11)
+
+in terms of the reference temperature  and a characteristic temperature  (e.g., that of a hot or cold wall, thereby the subscript <hi rend="italic">w</hi>) that determines the characteristic temperature difference of the problem, . In this case, the momentum conservation Equation (6) and the energy conservation Equation (3) can be rewritten as follows, where the asterisks are dropped again so that all variables are non-dimensional
+
+(12)
+
+(13)
+
+while the continuity Equation (5) remains unchanged, implying the divergence-free nature of the velocity field. The simplified form of the continuity equation has been used, in particular, to rewrite the convective term in the energy Equation (13) including the velocity  into the spatial derivative. Note that, following standard practice, in the momentum conservation Equation (12) the dimensionless density has been assumed to be constant () except in the buoyancy term, which is written in terms of the Grashof number
+
+(14)
+
+and the normalized dimensionless temperature , given by (11) in terms of the dimensionless temperature <hi rend="italic">T</hi> computed from (13). </p>
+
+<p>Finally, to be well posed, the mathematical problem also requires appropriate boundary conditions and a set of initial conditions for all the variables to be solved. </p>
+</text>

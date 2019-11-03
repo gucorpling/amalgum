@@ -1,0 +1,73 @@
+<text id="autogum_academic_doc527" title="Self-Adaptive Filtering Approach for Improved Indoor Localization of a Mobile Node with Zigbee-Based RSSI and Odometry" shortTile="selfadaptive-filtering" author="Anbalagan Loganathan, Nur  Syazreen Ahmad, Patrick Goh" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4748/htm" speakerList="none" speakerCount="0">
+<head> 2. Indoor Localization Framework and Strategies</head><head> 2.1. System Architecture and Path-Loss Propagation Model</head>
+<p>
+Zigbee is a low-cost wireless communication technology based on the IEEE 802.15.4 standard, which is often used to create personal area networks. Due to its low power consumption and secure networking capabilities, it is often preferable for wireless control and monitoring in smart-building technologies. </p>
+
+<p>In this study, we use XBee embedded modules with the Zigbee protocol to create four transmitters that are placed at preassigned positions, and one receiver which is the target node to be localized. In order to introduce mobility to the target node and to verify the proposed indoor localization strategies, NSBot2, which is a nonholonomic wheeled mobile robot was built with ATMega microcontrollers connected to the target node as shown in <figure>Figure 1</figure>. </p>
+
+<p>With regard to control mechanism, NSbot2 was preprogrammed with closed-loop cascade control where its motion was constrained to constant translational and rotational velocities. This technique does not just allow the robot to travel along various types of planned path, but it also enables each experiment with a specific path to be repeated with minimal variations. </p>
+
+<p>The basic idea for indoor localization with RSSI is that the target node to be localized stays at a fixed coordinate, and the RSSI from different anchor nodes with known positions are measured. RSSI values can be converted into distances using a path-loss model, which are then used with the triangulation, multilateration, or trilateration method to estimate the position of the target node. </p>
+
+<p>One of the most commonly used path-loss propagation models in a WSN is the log-distance function. Via this model, the value of RSSI,  (in dBm) can be theoretically expressed as follows:
+
+(1)
+
+where <hi rend="italic">d</hi> (in m) is the distance between transmitter (anchor node) and receiver (target node),  is the free space reference distance, typically 1 m,  is the path-loss exponent coefficient, and  is the RSSI value when the transmitter and the receiver are 1 m apart, which in this case is found to be  dBm. The theoretical value for  with some calibrations is 1.8. From Equation (1), the distance <hi rend="italic">d</hi> can be simply retrieved with:
+
+(2)
+
+</p>
+
+<p>In real situations, when the target node is continuously moving, the effects of noise from multipath propagation, signal occlusions, and diffractions can be undesirably amplified. Hence, the theoretical RSSI-distance relation in Equation (1) may no longer be sufficient to predict the actual path-loss model. In order to estimate the real distance for a continuously moving node more accurately, sampled data for  are collected when the transmitter is placed at a fixed coordinate, and the receiver, named Node M, is moved at a speed of approximately 20 cm/s from  cm until  cm. This is illustrated in <figure>Figure 2</figure>. </p>
+
+<p>A curve-fitting method is then utilized to generate an improved path-loss propagation model, , as follows:
+
+(3)
+
+where ; and <hi rend="italic">n</hi> is the number of sampled data. </p>
+
+<head> 2.2. RSSI-Based Localization</head>
+<p>
+In this work, four transmitters were configured as anchor nodes (Anchors A, B, C, and D); hence, four distance values can be obtained at each time instance from the path-loss propagation model. They are also placed at points where any three of them are always noncollinear, which ensures the feasibility of the trilateration method at each time instance. </p>
+
+<p>Consider  as the unknown coordinate of the mobile node, and  with  be the first three coordinates from three different anchor nodes received by the mobile node. Let  be the estimated distance from Node M to , and
+
+(4)
+
+where
+
+(5)
+
+</p>
+
+<p>The coordinate of the mobile node can then be retrieved via Cramer’s rule as follows:
+
+(6)
+
+</p>
+
+<head> 2.3. Odometry</head>
+<p>
+Odometry is a process of estimating the position change of a mobile robot on the basis of data from motion sensors. For this research, the encoders on both wheels of the mobile robot were used to estimate the path taken as well as the heading direction. <figure>Figure 3</figure> illustrates the robot’s position with respect to two different frames, namely  and .  denotes the world coordinate system, whereas  represents the robot-attached frame. The robot’s translational velocity, <hi rend="italic">v</hi>, and rotational velocity, , can be written as follows:
+
+(7)
+
+(8)
+
+where <hi rend="italic">r</hi> is the radius of the wheel, <hi rend="italic">D</hi> is the azimuth length between wheels, and  and  represent the angular velocities of the right and left wheels respectively. Let  be the center of the robot,  be the current coordinate based on the  plane,  be the current coordinate based on the  plane, and  be the robot’s heading angle with respect to the <hi rend="italic">X</hi> axis. The relation between , , and  can be written as:
+
+(9)
+
+where
+
+(10)
+
+</p>
+
+<p>The movement of the robot can be decomposed into linear velocities with respect to the <hi rend="italic">X</hi> and <hi rend="italic">Y</hi> axes, i.e.,  and , which have a relation with linear and angular velocities as follows:
+
+(11)
+
+</p>
+</text>

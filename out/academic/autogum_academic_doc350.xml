@@ -1,0 +1,49 @@
+<text id="autogum_academic_doc350" title="Integrated Predictor Based on Decomposition Mechanism for PM2.5 Long-Term Prediction" shortTile="integrated-predictor" author="Xuebo Jin, Nianxiang Yang, Xiaoyi Wang, Yuting Bai, Tingli Su, Jianlei Kong" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4533/htm" speakerList="none" speakerCount="0">
+<head> 2. Distributed Decomposition Model</head><head> 2.1. Model Framework</head>
+<p>
+The model has three parts (i.e., decomposition, prediction, and fusion). In the decomposed node, the PM2.5 data are decomposed to three subsequences. In the network training stage, each component is trained separately to obtain different sub-predictors (i.e., the trend component is trained to obtain ARIMA model, and the period and residual components are trained to obtain two GRUs). </p>
+
+<p>The prediction framework is shown in <figure>Figure 2</figure>. In the prediction stage, the ARIMA model is used to obtain the prediction of the trend component, and two different GRUs are used to predict the period and residual components, respectively, before finally, all the predictions are added together to obtain the final predicted result in fusion node. </p>
+
+<head> 2.2. Decomposition</head>
+<p>
+Assume that PM2.5 time-series data  has <hi rend="italic">N</hi> data, which means <hi rend="italic">t</hi> = 1, 2, …, <hi rend="italic">N</hi>. The relation with  and its three independent components (i.e., trend, period, and residual), as shown in Equation (1).
+
+(1)
+
+where , , and  are the trend component, period component, and residual component, respectively. Then, we have to obtain these three components , , and  from the one time-series data , but this is mathematically an unsolvable equation. </p>
+
+<p>Each component has different frequency bands, that is, the trend and period component are in the low and middle band, respectively. We used the cycle calculation process, shown in <figure>Figure 3</figure>, to calculate the trend and period components until these two components tended to be stable and no longer changed. In order to start the loop operation, we assumed  = 0 in the first loop. The time series is fitted iteratively until the trend and period component stabilize, and at the end of the cycle calculation process, the trend component  and period component  are extracted from the data series, and the residual component is obtained by
+
+(2)
+
+</p>
+
+<p><figure>Figure 3</figure> shows that the decomposition has two important steps: one is “Remove high frequencies”, and the other is “Remove low frequencies”. Next, we will discuss the method of these two steps. </p>
+
+<p>To remove the high frequencies, we used the locally weighted scatterplot smoothing (LOESS) smoother, which is based on fitting a weighted polynomial regression for a given time of observation, where weights decrease with distance from the nearest neighbor. LOESS is a combination of the local fitting of polynomials and iteratively weighted least squares. At each point <hi rend="italic">x</hi> in the dataset, a linear or quadratic polynomial is fit using the weighted least squares, giving more weight to points near point <hi rend="italic">x</hi> that need to be smoothed and less weight to points further away. </p>
+
+<p>Suppose <hi rend="italic">x</hi> is the point to be smoothed,  is the number of data points around <hi rend="italic">x</hi> to be smoothed, and  is the point around <hi rend="italic">x</hi> within the width . We chose a Gaussian function as the weighting factor
+
+(3)
+
+where  is a constant to be set. It is always set according to the number of the data, and for PM2.5, which is a complex nonlinear data, we suggest that it is set to  as within. The value of the regression function for the point is then obtained by evaluating the local polynomial for that data point. By minimizing the value of the following
+
+(4)
+
+to find the  parameter, then the smoothed value  of point  can be obtained by
+
+(5)
+
+and the LOESS fit is complete after the regression function values have been computed for each of the data points. </p>
+
+<p>On the other hand, we used a high-pass filter with cutoff frequency to remove low frequency bands. Obviously, it is critical to ensure that the loop converges to the trend component and the period component. We chose the so called seasonal-trend decomposition procedure based on LOESS (STL) to achieve the loop convergence. </p>
+
+<p>The STL method can adaptively adjust parameters according to each cycle calculation, so it can obtain good performance in ensuring convergence, and has many applications in data decomposition. Here, we have omitted the details of the STL in order to focus our work (please refer for the details of STL). </p>
+
+<head> 2.3. Autoregressive-Integrated Moving Average (ARIMA) Model: Prediction Model for Trend Component</head>
+<p>
+In this paper, the ARIMA  model was used and applied to model the trend component , by which the future value of  is to be predicted based on the linear modeling function of the past trend value. As a consequence, the time-series data that are fed to ARIMA should be linear and stationary. It returns the dependent variable only to its lag value and the present and lag values of the random error term. In terms of modeling, it is mainly divided into four steps as follows: </p>
+
+<p>Step 1: Import the raw data sequence to be predicted; </p>
+</text>

@@ -1,0 +1,31 @@
+<text id="autogum_academic_doc571" title="Cluster Analysis of Distribution Grids in Baden-Württemberg" shortTile="cluster-analysis" author="Tobias Rösch, Peter Treffinger" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/20/4016/htm" speakerList="none" speakerCount="0">
+<head> 4. Results</head>
+<p>
+Section 4 presents by clustering the input factors specified in Section 3 for each of the algorithms and compares the results. </p>
+
+<head> 4.1. Descriptive Results</head>
+<p>
+The data set gained according to the method described in Section 4.2 is assessed for plausibility by calculating the minimum, maximum and first two sample moments. Table 5 shows the results: </p>
+
+<p>From Table 5, the great variance of distribution grids in Baden-Württemberg is evident. Population density (Dpo in Inhabitants km−2) is between 54 and 5288. The number of inhabitants in the lowest voltage level nia corresponds in distribution. The number of grid connection points ngc ranges from around 300 to 3,000,000. Equally the other attributes, withdrawal of electricity WOP and yearly photovoltaic feed-in WPV vary widely.  </p>
+
+<head> 4.2. Results for k-Means Algorithm</head>
+<p>
+Frist the results are calculated using the k-Means Algorithm. <figure>Figure 6</figure>. shows the clustering results for the attributes  and DPO, which examines that high population density requires high levels of peak power photovoltaics in grid connection points.  </p>
+
+<p>Using k-Means four plausible clusters are identified, where three clusters show areas of low to moderate population density and three levels (circle, square, triangle) of peak power photovoltaics per grid connection point. For the cluster marked with cross low population density corresponds with the installed peak power capacity. For the intermediate cluster no definite statement on the adequacy of grid development can be made. For the upper third cluster (triangle), the installed PV peak power capacity is high as compared to population density and there are no development requirements at present. The right/lower forth cluster (cross) however is critical due low installed PV peak power capacity in spite of high population density. Further development needs could result, when PV fed-in steps up.  </p>
+
+<p>The results for k-means clustering provide some overview on the network structure but are little precise concerning the results. A comparatively high number of DSO results in the top-left (triangle) cluster or in the second cluster (squares), while only a single critical DSO in the fourth cluster (cross) is identified. The method risks to underestimate check-up and development requirements. </p>
+
+<p><figure>Figure 7</figure> shows the clustering results with k-means considering the attributes lc and ngc. </p>
+
+<p>The area in the left lower quadrant comprises the grids of with few of grid connection points ngc (for each grid- and transformation level) and low cable length lc, which is typical for lean rural grids. The grids located in the upper right quadrant are characterized by a large number of grid connection points and high cable lengths, a typical status of well-developed urban grids. K-means identifies a fourth cluster comprising only a single grind with very high lc and ngc values, which like the grids in cluster 3 is balanced and thus does not require development. The grids in the lower right section have got a large number of connection points and low cable lengths i.e. are densely interconnected, and there is no development need. K-Means clustering delivers a large number of grids in this section, which however are broadly dispersed and partly overlap with other sections. The upper left area however comprises grids of high cable length but few interconnection points. These grids are poorly interconnected to neighboring networks and among themselves and should be developed further to master high photovoltaic peak inflows. K-means locates none of the grids in this section. Since these results of k-means do not deliver precise information on development requirements, other algorithms are tried to obtain more distinct insights. </p>
+
+<head> 4.3. Results for DBSCAN Algorithm</head>
+<p>
+To improve and validate the results, now the corresponding analysis is performed with the DBSCAN Algorithm and using four clusters with the parameters of nmin = 3 and ε = 0.07. Clustering the attributes  and DPO,N, <figure>Figure 8</figure> results: </p>
+
+<p><figure>Figure 8</figure> illustrates that DB SCAN identifies essentially three comprehensive clusters of DSO. Some noise (cross) remains. The first cluster (circle) in the left-bottom area comprises DSO in rural areas, i.e., of low population density and low peak power photovoltaics in grid connection points. The grids in this cluster are adequately equipped corresponding to the present low PV-requirements. The second cluster (square) comprises DSO with low population density but high peak power photovoltaics in grid connection points, these grids are very well equipped above the requirements at present. The third cluster (triangle) on the other hand comprises DSO with high population density buy low peak power photovoltaics in grid connection points, i.e., poorly furnished grids which should be inspected and remunerated to stabilize the Baden-Württemberg TSO network as a whole. </p>
+
+<p>Although there is some noise the DBSCAN Algorithm provides valuable results and reliably extracts grids with remuneration needs. The results for Baden-Württemberg are more plausible for DBSCAN than for K-Means, since DBSCAN selects a limited number of improvable DSO more accurately. </p>
+</text>

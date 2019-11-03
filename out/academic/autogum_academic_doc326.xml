@@ -1,0 +1,49 @@
+<text id="autogum_academic_doc326" title="A SAFT Method for the Detection of Void Defect inside a Ballastless Track Structure Using Ultrasonic Array Sensors" shortTile="saft-method-detection" author="Wen-Fa Zhu, Xing-Jie Chen, Zai-Wei Li, Xiang-Zhen Meng, Guo-Peng Fan, Wei Shao, Hai-Yan Zhang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4677/htm" speakerList="none" speakerCount="0">
+<head> 2. Ballastless Track Structure Multilayer Synthetic Aperture Focusing Technique Method</head><head> 2.1. SAFT Imaging Method</head>
+<p>
+The principle of the SAFT imaging method is shown in <figure>Figure 1</figure>. In a group of ultrasonic transducer arrays, ultrasonic waves are sequentially emitted by one probe. The other probes receive ultrasonic waves. The received ultrasonic echo signals are processed by DAS. Lastly, a reconstructed B-scan image is produced. </p>
+
+<p>When information such as the position and size of the defects in the object to be measured are unknown, SAFT imaging can be used to calculate the value of all the pixels by traversing the imaging region. </p>
+
+<p>As shown in <figure>Figure 1</figure>, it is assumed that the sensor position is <hi rend="italic">un</hi> (<hi rend="italic">n</hi> = 1, 2, 3...<hi rend="italic">n</hi>), while the exciting sensor position coordinates are (<hi rend="italic">xi</hi>, <hi rend="italic">zi</hi>). The receiving sensor position coordinates are (<hi rend="italic">xj</hi>, <hi rend="italic">zj</hi>). The position coordinate of any pixel <hi rend="italic">D</hi> is (<hi rend="italic">x</hi>, <hi rend="italic">z</hi>). The time delay <hi rend="italic">tij</hi> (<hi rend="italic">x</hi>, <hi rend="italic">z</hi>) experienced by the ultrasonic wave is transmitted from the position of the exciting sensor <hi rend="italic">ui</hi> and then reaches the position of the receiving sensor <hi rend="italic">uj</hi> via point <hi rend="italic">D</hi>, as shown in Equation (1):
+
+(1)
+
+where the <hi rend="italic">ri</hi> is given by:
+
+and <hi rend="italic">v</hi> is the speed at which sound waves travel in the object being measured, <hi rend="italic">i</hi>, <hi rend="italic">j</hi> = 1,2,3…<hi rend="italic">n</hi>. </p>
+
+<p>When the exciting and receiving transducer positions are <hi rend="italic">ui</hi> and <hi rend="italic">uj</hi>, respectively, the value of any pixel <hi rend="italic">D</hi> (<hi rend="italic">x</hi>, <hi rend="italic">z</hi>) can be expressed as Equation (2):
+
+(2)
+
+where <hi rend="italic">Iij</hi> (<hi rend="italic">x</hi>, <hi rend="italic">z</hi>) represents the value of pixel <hi rend="italic">D</hi> (<hi rend="italic">x</hi>, <hi rend="italic">z</hi>) when the exciting and receiving transducer positions are <hi rend="italic">ui</hi> and <hi rend="italic">uj</hi>. <hi rend="italic">Sij</hi> represents the amplitude envelope of the received signal when the exciting and receiving transducer positions are <hi rend="italic">ui</hi> and <hi rend="italic">uj</hi>. </p>
+
+<p>According to Equation (3), the value of any pixel can be obtained in the imaging area grid:
+
+(3)
+
+</p>
+
+<head> 2.2. Multilayer SAFT Imaging Method Based on Ray Tracing Technique</head>
+<p>
+The SAFT imaging method makes it easier to achieve the ultrasound imaging of a single medium object, while for multilayer structures like ballastless track structures, ultrasound imaging calculations are much more complicated. The ultrasonic phenomenon occurs when the ultrasonic wave penetrates the interface between two adjacent layers of multilayer structures, and the sound propagation path at this time is composed of the refracting line segments in each layer. According to the conventional SAFT calculation model, the ultrasonic propagation delay is calculated using Equation (1). For multilayer structures (especially when the wave velocity of each layer medium is large), the calculation of the propagation delay using Equation (1) will produce a large error. </p>
+
+<p>The difficulty of SAFT imaging in multilayer structures lies in accurately obtaining the propagation delay of acoustic waves, that is, accurately obtaining the propagation path. The ray-tracing technique is one of the effective methods to solve this problem. As shown in <figure>Figure 2</figure>, <hi rend="italic">α</hi> is the incident angle of the acoustic wave and <hi rend="italic">θ</hi> is the angle of refraction of the acoustic wave. The time at which the acoustic wave is refracted from point <hi rend="italic">A</hi> through point <hi rend="italic">P</hi> and propagates to point <hi rend="italic">B</hi> can be expressed by Equation (4).
+
+(4)
+
+where <hi rend="italic">t</hi> is the total delay of the acoustic wave propagating from <hi rend="italic">A</hi> to <hi rend="italic">B</hi>, <hi rend="italic">v</hi>1 is the speed of sound in the first layer of the medium, and <hi rend="italic">v</hi>2 is the speed of sound in the second layer of the medium. </p>
+
+<p>The ray-tracing technique is a method to calculate the acoustic wave propagation time according to Snell’s law or Fermat’s shortest time principle. The actual path of soundwave from point a to point B conforms to Snell’s Law (Equation (5)). At the same time, according to Fermat’s principle, the actual acoustic wave propagation time from point A to point B is the shortest.
+
+(5)
+
+</p>
+
+<p>As shown in <figure>Figure 3</figure>, in order to calculate the time when the acoustic wave reaches a certain point D of the second layer, firstly, the traversal method is used to find the refraction point that makes the acoustic wave propagation path delay the shortest at the interface of the discrete layer. Then the acoustic wave propagation path is segmented by the position of the refraction point, and the ultrasonic propagation is obtained one by one. When the propagation delay of the ultrasonic wave in the multilayer structure is accurately obtained, a focused image can finally be obtained according to the DAS algorithm. The specific algorithm is as follows: </p>
+
+<p>Step 1: Calculate the acoustic wave from the probe <hi rend="italic">ui</hi> through point <hi rend="italic">Pk</hi> to the pixel point of the refractive time <hi rend="italic">tik</hi> of <hi rend="italic">D</hi> using Equation (6). </p>
+
+<p>Step 2: Obtain the time delay <hi rend="italic">ti</hi> of the refractive propagation path from Equation (7). </p>
+</text>

@@ -1,0 +1,772 @@
+ 1. IntroductionContagion propagation [1,2,3] is an important topic in social network research [4], which brings huge damage to society [5,6,7], drawing much attention from researchers. When severe contagion outbreaks occur in important places simultaneously, decision-makers including government leaders almost have no ability to deal with the disaster very well. Here is a real case. In 2009, the H1N1 pandemic spread almost simultaneously in Beijing, Shanghai, Fujian and Guangdong provinces, which were the sources propagating the virus in China, and then across the country. After the application of medical treatment over several months, the number of infected people declined gradually and disappeared. If we acquired the infection state of the whole country at an early stage, we could know the cities which spread the virus initially and then take practical actions to prevent it from spreading further. Furthermore, for each originally infected city, we are able to adopt appropriate measures to eliminate it after the disease spread for a short while. Therefore, it makes sense for us to design a pre-warning system, whose core content means a fast and accurate multiple sources of contagion localization method in complex networks under the SIR [8,9] model.Despite many studies having been done in this field, the problem of multiple sources localization is still a challenging work. On the one hand, the exact number of sources and initial time of sources remain unknown to us; on the other hand, it is inevitable that the randomness of the propagation process will decrease the accuracy of multiple sources localization methods. In the past ten years, the multiple sources localization problem has attracted many researchers’ attention. Shah et al. [10] first proposed a rumor centrality, as a maximum likelihood estimation of single source, in a tree network under the SI model. Then Lou et al. [2] popularized it to a multiple sources localization method. They proposed a Multiple Sources Estimation and Partitioning algorithm, the key to which lies in dividing the network to several disjoint infection regions by infection partitioning, where one region corresponds to one source. Zhu et al. [11] defined Jordan centrality, the farthest distance a node to all the infected nodes and the sources are the nodes with the smallest Jordan centrality. In addition, there is a similar concept, namely distance centrality, the sum distance of the node to the whole infected nodes and the sources have the smallest distance centrality analogously. Fioriti et al. [12] presented to calculate the dynamical age of each node based on the importance of node dynamical. They considered the eigenvalue drop rate of the adjacency matrix as the dynamical age when a node was eliminated from this network and the sources are the nodes with the highest dynamical age. Based on the SIR model and incomplete node information, Zang et al. [13] proposed an advanced unbiased betweenness algorithm. They used a reverse propagation algorithm to build an extended infection graph and marked off several infection subgraphs where we can identify the source with the highest unbiased betweenness. Moreover, based on source identification algorithm, Wang et al. [14] presented label propagation, where they set up an initial label, propagated label and chose the nodes with the tallest label as the sources. Hu et al. [15] combined a backward diffusion-based method with IP to locate both sources and the initial diffusion time with a limited number of observers.In addition, some scholars study the source localization problems from different angles [16,17,18,19,20]. Nino Antulov-Fantulin et al. [21] proposed a new source localization method based Monte-Carlo simulation under the SIR model. Fu et al. [22] studied a backward diffusion-based source localization method. Based on the times at which the diffusion reached partial observers, the maximum time when the diffusion goes reversely from partial observers to each node is calculated. Then the node with the minimum value is picked up and recognized as the source. Huang et al. [23] used observers to diffuse reversely and found the node as the source with minimum variance yields, resolving the single source localization problem in the temporal network.In this paper, we propose the Potential Concentration Label method (
+PCL
+) to locate multiple sources of contagion in complex networks under the SIR model. The main idea in this paper reflects that the sources prefer to exist in the infection region with more infected neighbor nodes where the nodes have the maximal value of potential concentration label just right. In the following sections, we first define the Potential Concentration Label and propose the PCL method. After that, we test the performance network parameters on sources localization accuracy in synthetic networks and real networks, compared to the other four benchmark methods. Finally, some experiments are carried out to measure the anti-noise ability of our method. 2. Model and Method 2.1. SIR Model for Contagion PropagationIn this work, we focus on an undirected graph
+
+G
+=
+{
+V
+,
+E
+}
+
+, where V is the set of nodes and E is the set of edges. Each node
+
+v
+∈
+V
+
+ has its possible state—Susceptible (S), Infected (I), Recovered (R). The susceptible nodes represent the people who are infected easily but have not been infected yet, meanwhile the infected nodes denote the citizens who have already been infected and are capable of infecting other nodes. The recovered nodes are the individuals who remain immune or die. Suppose that there is a time-slotted system. At first, only several nodes are infected, which are the contagion sources in the network. Meanwhile, the other nodes are susceptible. At each time step, each infected node infects its susceptible neighbors with probability p independently, that is, a susceptible node is infected with probability
+
+1
+−
+
+
+(
+1
+−
+p
+)
+
+n
+
+
+ when it has n infected neighbors. Meanwhile, the infected nodes turn to be recovered with probability q. Additionally, the recovered nodes will not be infected, which may die or be removed. 2.2. Problem FormulationAs a contagion propagates through a complex network under the SIR model, all the nodes will change infection state as time goes by. The susceptible nodes may be infected by infected neighbour nodes and the infected nodes recover to a recovered node with a certain probability. Due to the emergency response to contagion, we mainly consider an initial infection situation of the whole network and only collect two states, infected and uninfected (susceptible, recovered), of all nodes. Accordingly, the problem of the multiple sources localization problem can be described as—given the simple snapshot of the network at an early certain moment, how can we accurately locate multiple sources?It is common that we know the state of almost all nodes, but we have no ability to distinguish the susceptible nodes from the recovered nodes. Therefore, all nodes can be divided into two states—infected and uninfected, which decreases the accuracy of multiple sources localization certainty. 2.3. Potential Concentration Label DefinitionIn the early period of severe contagion propagation, disease outbreaks through a crowd quickly. It comes to the situation that the nodes around sources are more likely to be the infected nodes, that is, the sources are surrounded by many infected nodes. Only by depending on the infection states can we locate the sources in a complex network accurately.Inspired by Figure 1a, which shows the concentration of a pollutant, it is clear that the sources are more likely to be the node set
+
+{
+d
+,
+k
+}
+
+, whose concentration is the highest (10). In fact, to get the state of each node is not easy, for example, some sensors do not have the capacity to measure concentrations, and can only judge whether the concentration surpasses a threshold value or not, and even then we may lose the concentration information. Therefore, the information we can obtain is incomplete, just like in Figure 1b. We can see two concentration states easily, 0 or 1 (1 denotes concentration over 8, 0 denotes concentration under 8) in a network, where an error occurred with node c. It seems we have no ability to identify the sources according to these concentrations, which is similar to the infection situation of contagion.Therefore, a new index needs to be proposed so as to distinguish between the sources and other nodes for incomplete pollutant diffusion and contagion propagation. We think the node with more infected neighbors, including the first order neighbor, the second order neighbor and so forth, is closer to the sources. Based on the above analysis, we propose a new concept, namely a potential concentration label, denoted by
+L
+. The potential concentration label is determined by its initial label and the labels of neighbor nodes. The experiments demonstrate that it is a good index for locating multiple sources of contagion in complex networks under the SIR model. 2.4. The
+PCL
+ MethodIn this section, we present the
+PCL
+ method at length in this section. The purpose of
+PCL
+ is to locate multiple contagion sources, which is realized by following four steps in Algorithm 1. 2.4.1. Step 1: Label Assignment in the Snapshot of NetworkDue to the incomplete information, only two states can be seen in the network—infected and uninfected (susceptible and recovered). The infection state of nodes
+X
+ is shown as follows—infected nodes carry the virus, denoted by 1; uninfected nodes carry no virus, denoted by 0. That is, if node i is infected, then
+
+
+L
+i
+0
+
+=
+1
+
+; if node i is uninfected, then
+
+
+L
+i
+0
+
+=
+0
+
+, where
+
+L
+i
+0
+
+ is the initial potential concentration label of node i. 2.4.2. Step 2: Adding One Hub Node to the NetworkIn real networks, it comes up all the time that the network we acquire is disconnected, but connected actually. To avoid this situation, we can add a hub node in the network, which has a link with every node, to make it connect for certain and to increase its connectivity. Besides, the possibility of this node being infected is high enough that we assign label 1 to it directly. 2.4.3. Step 3: Potential Concentration Label Calculation by IterationThe potential concentration label of a node is connected with the potential concentration label of neighbor nodes and its initial potential concentration label, so the potential concentration label of node i at t iterations becomes:
+
+
+
+
+L
+i
+t
+
+=
+α
+
+
+∑
+
+j
+∈
+
+Γ
+i
+
+
+
+
+
+T
+
+i
+,
+j
+
+
+
+L
+j
+
+t
+−
+1
+
+
++
+β
+
+L
+i
+0
+
+
+
+
+
+(1)
+
+
+where
+
+α
+,
+β
+
+ is the proportionality coefficient,
+
+Γ
+i
+
+ represents the first order neighbors of node i.Before starting iteration, we should build an adjacency matrix A and a degree matrix D. Matrix A is decided by edge E, where
+
+
+A
+
+i
+j
+
+
+=
+1
+
+ represents node i and node j have an edge. Matrix D is a diagonal matrix, where the i-th element is the sum of i-th row of matrix A. The transmission probability matrix
+T
+ from neighbors is decided by adjacency matrix A and degree matrix D, such that
+
+T
+=
+
+
+D
+
+
+−
+
+1
+2
+
+
+
+A
+
+
+D
+
+
+−
+
+1
+2
+
+
+
+
+.The state of a node at moment t is mainly dependent on the states of its neighbor nodes at moment
+
+t
+−
+1
+
+. Apparently, the potential concentration label of each node at moment t is proportional to the initial potential concentration label. Therefore, we choose
+
+α
+>
+0
+
+,
+
+β
+>
+0
+
+.Thanks to the hub node, the diameter of the network decreases to two. That is to say, every node only has the first order neighbor and the second order neighbor. Therefore, a node acquires the label information from other nodes in the network, only requiring two iterations. It spends little time in getting the potential concentration label.Algorithm 1 Potential Concentration LabelInput: The network topology G and infection state
+X
+.Output: The multiple sources
+
+S
+⋆
+
+.1:Set up the initial label
+
+
+L
+i
+0
+
+,
+i
+∈
+V
+
+;2:Add a hub node to the network and
+
+
+L
+
+N
++
+1
+
+0
+
+=
+1
+
+;3:Construct the transmission matrix
+
+T
+=
+
+
+D
+
+
+−
+
+1
+2
+
+
+
+A
+
+
+D
+
+
+−
+
+1
+2
+
+
+
+
+4:for t=1:
+
+t
+1
+
+ do5:    
+
+
+L
+i
+t
+
+=
+α
+
+∑
+
+j
+∈
+
+Γ
+i
+
+
+
+
+T
+
+i
+,
+j
+
+
+
+L
+j
+
+t
+−
+1
+
+
++
+β
+
+L
+i
+0
+
+
+6:end for7:
+
+α
+>
+0
+,
+β
+>
+0
+
+,
+
+Γ
+i
+
+ represents the first order neighbors of node i.8:We choose the nodes with maximal value as the sources
+
+S
+⋆
+
+;9:return
+
+S
+⋆
+
+. 2.4.4. Step 4: The Multiple Sources LocalizationThe central idea of this paper is that the sources prefer to exist in an infection region with more infected nodes, meanwhile the potential concentration label of sources is superior to that of neighbor nodes. After several iterations, there are several maximal values of potential concentration labels existing in the network. Finally, we choose the nodes with the maximal value as multiple sources. 2.5. A Simple Example of Multiple Sources LocalizationTo better describe the PCL method, we just introduce a simple example of multiple sources localization. Given a snapshot of the network at some point, we can know the infection state of all the nodes. In addition, the sources are
+
+{
+f
+,
+h
+}
+
+. From Figure 2, it is easy to find that the node f and h always have the maximal value. According to PCL, we see nodes
+
+{
+f
+,
+h
+}
+
+ as the estimated sources, which also are the true sources. 3. Simulation and Analysis 3.1. Data Descriptions and MeasurementsTo evaluate the performance of
+PCL
+ method, we firstly introduce several synthetic networks, that is, ER, WS and BA, and real networks, that is,
+Karate
+,
+Lesmis
+,
+Adjnoun
+,
+Football
+,
+Jazz
+ and
+USAir
+, as the experimental data. Synthetic networks are controllable, where network parameters can be adjusted, so that many tests can be done to verify the efficiency of the method. What is more, the data of
+Karate
+,
+Lesmis
+,
+Adjnoun
+ and
+Football
+ networks can be downloaded via the network data of Newman [24]. The other data sets come from the corresponding references. Basic characteristics are shown in Table 1.As we know, F-measure is usually used to check the accuracy of estimated or identified sources in a complex network [25]. It can be defined as follows:
+
+
+
+F
+
+m
+e
+a
+s
+u
+r
+e
+=
+
+
+2
+∗
+p
+r
+e
+c
+i
+s
+i
+o
+n
+∗
+r
+e
+c
+a
+l
+l
+
+
+p
+r
+e
+c
+i
+s
+i
+o
+n
++
+r
+e
+c
+a
+l
+l
+
+
+
+
+
+
+(2)
+
+
+where precision is the ratio of the number of correctly identified sources over the number of all retrieved sources which is defined in Equation (3) and recall is the ratio of the number of correctly identified sources over the ground truth source, defined in Equation (4)
+
+
+
+
+p
+r
+e
+c
+i
+s
+i
+o
+n
+=
+
+
+|
+{
+r
+e
+t
+r
+i
+e
+v
+e
+d
+
+s
+o
+u
+r
+c
+e
+s
+}
+∩
+{
+t
+r
+u
+e
+
+s
+o
+u
+r
+c
+e
+s
+}
+|
+
+
+|
+{
+r
+e
+t
+r
+i
+e
+v
+e
+d
+
+s
+o
+u
+r
+c
+e
+s
+}
+|
+
+
+
+
+
+
+(3)
+
+
+
+
+
+r
+e
+c
+a
+l
+l
+=
+
+
+|
+{
+r
+e
+t
+r
+i
+e
+v
+e
+d
+
+s
+o
+u
+r
+c
+e
+s
+}
+∩
+{
+t
+r
+u
+e
+
+s
+o
+u
+r
+c
+e
+s
+}
+|
+
+
+|
+{
+t
+r
+u
+e
+
+s
+o
+u
+r
+c
+e
+s
+}
+|
+
+
+
+
+
+
+(4)
+
+In this paper, suppose that we already know the number of sources so that retrieved sources equal true sources, that is, precision equals F-measure.Therefore, we choose the precision as the evaluation index of sources localization accuracy in this paper. The situation we face is a serious contagion so that we suppose infection probability
+
+p
+=
+0.8
+
+, recovery probability
+
+q
+=
+0.1
+
+. What is more, the results are obtained by averaging over 100 independent realizations. 3.2. Optimal Iteration Frequency ChoiceWe choose the nodes with the maximal value of the potential concentration label as the sources and the potential concentration label is related to the number of iterations. Therefore, we next test the performance of our multiple sources localization method under six iteration frequencies in synthetic networks and real networks, which can help us find the appropriate iteration frequency.Figure 3 shows that the source’s localization accuracy changes sharply when
+
+t
+1
+
+ is different. It is an interesting phenomenon that the accuracy reaches its highest when
+
+t
+1
+=
+2
+
+. The hub node plays a decisive role in the change of accuracy. On the first iteration, the hub node is an unnecessary node which brings error to the potential concentration label of each node. However, on the next iterations, the hub node transmits all node labels to each node as a bridge, which increases the accuracy of sources localization. Moreover, there is a turning point when
+
+β
+=
+0
+
+. The accuracy is higher for
+
+β
+<
+0
+
+ than it is for
+
+β
+>
+0
+
+. The main reason lies in the incomplete infection information where a recovered node has actually been infecte, especially the sources, but it is considered to be uninfected when calculating. To get a better multiple sources localization performance, we choose
+
+t
+1
+=
+2
+,
+β
+=
+−
+1
+
+ in the following experiments. 3.3. Comparison MethodsTo compare with the performance of
+PCL
+, we pick up some sources localization methods as benchmarks.Distance Centrality (
+DC
+) [10]—represents the sum of the distances from one node to all the infected nodes. The sources usually have the smallest Distance Centrality.Jordan Centrality (
+JC
+) [11]—denotes the maximum of the distances from one node to all the infected nodes. The sources prefer to have the least Jordan Centrality.Unbiased Betweenness Centrality (
+UBC
+) [13]—the betweenness of one node eliminates the effect of degree, namely unbiased betweenness. The nodes are the sources, which always have the biggest unbiased betweenness.Modified Label Propagation based Source Identification (
+LPSI
+) [14]: This method lets infection status iteratively propagate in the network as labels, and finally uses local peaks of the label propagation result as source nodes. 3.4. Sources Localization in Synthetic NetworksTo test the efficiency of the
+PCL
+ method, we first carry out some experiments in synthetic networks, that is, the Radom (
+ER
+) network [26], the Watts-Strogtz small world(WS) network [27], and the scale-free (BA) network [28]. The
+ER
+ network and
+WS
+ network are homogeneous networks, and the
+BA
+ network is a heterogeneous network. We focus our attention on the influence the network parameter has on sources localization accuracy. The main parameters are the scale of network N, average degree
+
+<
+k
+>
+
+ and the number of sources s.This paper mainly considers the sources localization problem, there is no denying that the number of sources is the most important network parameter. At first, we examine the effects the number of sources has on the performance of sources localization. Figure 4 shows that when the number of sources increases, the sources localization accuracy has a decrease tendency for all the methods, that is, PCL, LPSI, DC, JC and UBC. When the number of sources becomes large, multiple sources may be too closed to identify them easily. To find the number of sources accurately is the first problem we need to solve urgently. In a short, in the above three synthetic networks,
+PCL
+ behaves better than the other four methods in sources localization accuracy. With the increasing of the number of sources, the sources localization accuracy of
+PCL
+ only declines slightly, reflecting its strong robustness.From Figure 6, we find that the average degree has little influence on the sources localization accuracy with almost all methods. The results of the four methods in the ER network distinguish that PCL > DC > JC > UBC > LPSI; meanwhile those in the WS and BA networks distinguish that PCL > JC > DC > UBC > LPSI. All in all,
+PCL
+ can always solve the sources localization problems, no matter whether the network is sparse or not. In other words, the accuracy of
+PCL
+ keeps very robust when the number of edges in the network increases or decreases.For different scales of networks, Figure 7 indicates that the sources localization accuracy has a mild fluctuation with the increasing of network scale for all the methods except for
+DC
+. In the
+ER
+ network, the
+DC
+ method can get a higher accuracy when the scale of network increases. Of course, the accuracy of
+PCL
+ keeps robust when network size changes. Thanks to its result, we can generalize this method to large networks based on the background of big data. 3.5. Sources Localization in Real NetworksIn addition to the synthetic network, we test the performance of the above five methods in real networks (
+Karate
+,
+Lesmis
+,
+Adjnoun
+,
+Football
+,
+Jazz
+ and
+USAir
+). These networks are social networks, where propagation usually occurs.From Figure 5, we can find that
+PCL
+ has the highest sources localization accuracy in all real networks. Meanwhile, the sources localization accuracy of
+PCL
+ keeps robust with a different network structure. Moreover, it confirms that the average degree and the scale of the network have less effect on sources localization accuracy. All in all,
+PCL
+ behaves best in sources localization accuracy of five different methods, that is, PCL, LPSI, DC, JC and UBC. 4. Anti-NoiseAn efficient method needs to keep high accuracy under noise of various intensities. In this section, noise disposal strategies and infection state noise are taken into account so as to test the anti-noise of the sources localization method.It is very common that the infection information of partial nodes may be lost. Now suppose that there is 20% nodes in a network unknown to us. There are three strategies to deal with it.
+
+(
+i
+)
+
+ All-inf, a strategy where the nodes without infection information are considered to be infected;
+
+(
+i
+i
+)
+
+ None-inf, a strategy where the nodes without infection information are regarded as uninfected;
+
+(
+i
+i
+i
+)
+
+ Rand-inf, a strategy where the nodes without infection information are thought to be infected randomly. Next, we test the performance of sources localization accuracy with five methods in synthetic networks and real networks. The results are shown in Table 2 and Table 3.Table 2 suggests that the sources localization accuracy of
+PCL
+ reaches its highest among all the methods with each strategy in each network. The accuracy changes slightly, due to different strategies of dealing with noise, of the whole methods except for
+PCL
+. In most cases, when noise exists,
+PCL
+ method achieves the highest sources localization accuracy, mostly choosing the None-inf strategy to deal with noise.Except for the different strategies for dealing with unknown infection information, we further study the sources localization performance under noise of three various intensities (
+
+n
+i
+
+), which denotes the proportion of nodes we are unaware of. The noise intensities are shown such that
+
+n
+i
+=
+0.05
+,
+
+
+
+n
+i
+=
+0.1
+,
+n
+i
+=
+0.2
+
+. From Table 3, with increasing noise intensity, the sources localization accuracy of all methods decreases in all networks. Apparently, our method shows a huge advantage in sources localization in all methods.
+PCL
+ achieves the highest sources localization accuracy not only in an ideal situation (without noise), but also in a real situation(with noise). 5. Conclusions and DiscussionIn this paper, we study multiple sources of the contagion localization problem under the
+SIR
+ model. Given the snapshot of a network, we propose a fast and more accurate multiple sources localization method, namely Potential Concentration Label. What matters in this method is to find the nodes with the maximal value of the potential concentration label as the sources. Firstly, we assign the initial concentration label to each node according to its infection state; next, it begins the label propagation process, where the label of one node is determined by its neighbors’ and its initial own, through two iterations; finally, we choose the nodes with the maximal value of the potential concentration label as the contagion sources. The experiments demonstrate that when the number of sources increases, the sources localization accuracy of our method decreases gradually. However, it keeps very robust as the average degree and network scale make a change. Compared to other benchmark methods, this method has a low time complexity and higher sources localization accuracy in synthetic networks and real networks. What is more, the anti-noise ability of our method is strong enough, which shows its effectiveness.Although our method provide a new reference for the problem of multiple sources localization in complex networks, much work still needs to be done. The issue of sources localization we proposed is based on an undirected network, while this method may extend to the directed network. Moreover, the network topology we consider in this paper is static and known to us. In fact, the topology in the real world remains dynamic as time goes by. This makes us improve our model so as to solve the sources localization problem in a temporal network [29,30]. In addition, as we know, few theoretical and practical studies have focused attention on multiple sources localization in multi-layer networks [31].

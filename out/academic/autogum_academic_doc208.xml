@@ -1,0 +1,91 @@
+<text id="autogum_academic_doc208" title="ScanSAR Interferometry of the Gaofen-3 Satellite with Unsynchronized Repeat-Pass Images" shortTile="scansar-interferometry" author="Zaoyu Sun, Anxi Yu, Zhen Dong, Hui Luo" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4689/htm" speakerList="none" speakerCount="0">
+<head> 2. Interferometric Model and Performance of Gaofen-3</head>
+<p>
+The ScanSAR mode is a SAR mode with a width swath. By beam scanning, ScanSAR can observe several sub-swathes simultaneously. These sub-swathes are located at different points along the range direction. Together, they can cover a whole wide swath. Because only a single beam is used in ScanSAR, the observing time must be separated and allocated to different sub-swathes. Thus, for a single sub-swath, the observing signals are in the burst mode. During bursts, signal pulses are transmitted to the sub-swath, but no signal pulses are used between bursts. In burst mode, the azimuth resolution is decreased. ScanSAR can cover a width swath but with low resolution. Thus, ScanSAR is suitable for rapid mapping, but not suitable for subtle measurement. ScanSAR interferometry is based on the ScanSAR mode, so it has similar characteristics. </p>
+
+<p>The ScanSAR interferometry of Gaofen-3 works in a repeat-pass mode. The two images achieved from the two passes may be unsynchronized. In this paper, we used a pair of Gaofen-3 interferometric images over Kunlun Mountain. These images were achieved in ScanSAR mode for wide-swath remote sensing. The main parameters are listed as Table 1. </p>
+
+<p>In the parameters, the PRFs and velocities are different. Burst durations are decided by PRFs and pulse numbers, so they were also different. Because there was no burst synchronization between the two images, a burst central time difference also existed. These unsynchronized characteristics influence interferometric performance. </p>
+
+<p>From the ScanSAR principle, the ScanSAR mode observes the Earth’s surface only in bursts. It is different from the normal stripmap mode, which uses continuous observation. Thus, the interferometric performance of the ScanSAR mode needs to consider these burst characteristics in the signal model. The burst characteristics also include the above-mentioned unsynchronizations. This paper analyzed the interferometric performance of the ScanSAR signal model:
+
+(1)
+
+where
+
+(2)
+
+where  is the slow time,  is the fast time,  is the scattering coefficient,  stands for azimuth envelope,  stands for pulse envelope,  stands for rectangular function,  is the vertical distance from the orbit to target ,  is the moment when the vertical sight line passing target ,  is the time offset caused by squint,  is the equivalent velocity,  is the burst central time,  is the burst cycle time,  is the burst duration, and <hi rend="italic">k</hi> is the pulse modulation rate. </p>
+
+<p>The ScanSAR signal can be processed by the extended chirp scaling (ECS) algorithm. In this algorithm, the signal is first translated into the range-Doppler domain and processed along the range dimension, and then processed by azimuth scaling and focusing. The range processing includes chirp scaling, bulk range cell migration correction (RCMC), range compressing, and second-range compressing. After range processing, we retrieve the processed signal in the range-Doppler domain. Considering a single burst, the processed signal can be expressed as follows:
+
+(3)
+
+where
+
+(4)
+
+(5)
+
+(6)
+
+is the azimuth frequency,  is a constant coefficient,  is the pulse duration of the transmitted signal, and  is the central frequency of the chirp signal. </p>
+
+<p>By azimuth scaling processing, the second phase term of the range processed signal can be transformed as follows:
+
+(7)
+
+where  is the referenced range distance. </p>
+
+<p>In order to focus the signal along the azimuth dimension, the signal can be processed by the spectral analysis (SPECAN) algorithm. According to the algorithm, the signal needs to be transformed into the time domain. In this domain, the signal can be dechirped by multiplying . The dechirped signal is expressed as:
+
+(8)
+
+where
+
+(9)
+
+</p>
+
+<p>The signal can then be transformed by Fourier-transform (FT) along the azimuth dimension. The transformed signal is:
+
+(10)
+
+</p>
+
+<p>By multiplying , the azimuth phase of the signal can be compensated. This is the last step of the SPECAN algorithm. At this stage, we can acquire the focused image, the expression of which can be approximated by the following equation:
+
+(11)
+
+</p>
+
+<p>In ScanSAR interferometry, the interferometric image pair can also be expressed as Equation (11) with slow time , fast time , target time , target range , burst central time , Doppler modulation rate , burst duration  and equivalent velocity  instead of , , , , , , , and , where the subscript “” means the image index. “<hi rend="italic">i</hi> = 1” indicates the master image and “<hi rend="italic">i</hi> = 2” means the slave image. </p>
+
+<p>After image co-registration, the slave image can be expressed as:
+
+(12)
+
+</p>
+
+<p>Then we substitute Equations (11) and (12) into the expression of interferometric coherence:
+
+(13)
+
+</p>
+
+<p>We can get:
+
+(14)
+
+(15)
+
+(16)
+
+where  is the coherence caused by the baseline and  is the coherence caused by burst central time difference.  is the same as the corresponding coherence in stripmap mode, and  can be simplified as follows:
+
+(17)
+
+where  and . </p>
+
+<p>From Equation (17), we can see that the interferometric coherence is influenced by the burst central time difference . The difference needs to be kept low relative to the burst duration. The interferometric coherence is also influenced by the burst duration difference as a secondary factor. The velocity difference and PRF difference relate to the burst central time difference and burst duration difference. </p>
+</text>

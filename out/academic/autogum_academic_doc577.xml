@@ -1,0 +1,41 @@
+<text id="autogum_academic_doc577" title="A SINS/DVL Integrated Positioning System through Filtering Gain Compensation Adaptive Filtering" shortTile="sinsdvl-integrated" author="Xiaozhen Yan, Yipeng Yang, Qinghua Luo, Yunsai Chen, Cong Hu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/20/4576/htm" speakerList="none" speakerCount="0">
+<head> 3. SINS/DVL Integrated Positioning System Based on a Filtering Gain Compensation Adaptive Kalman Filter</head>
+<p>
+In this section, we first illustrate the framework for the SINS/DVL integrated navigation system based on a filtering gain compensation adaptive Kalman filter. Then, we describe each sub-module and its implementation. </p>
+
+<head> 3.1. Framework for the SINS/DVL Integrated Positioning System</head>
+<p>
+The framework for the SINS/DVL integrated positioning system is shown in <figure>Figure 1</figure>. It is composed of three sub-systems: the <hi rend="italic">Strapdown Inertial Navigation Subsystem and Error Analysis</hi> sub-module, the <hi rend="italic">Doppler Velocity Log Subsystem and Error Analysis</hi> sub-module, and the <hi rend="italic">SINS/DVL integrated filter</hi> sub-module. </p>
+
+<p>The <hi rend="italic">Strapdown Inertial Navigation system and Error Analysis</hi> sub-module provides pure inertial positioning results to the SINS/DVL filter. The inertial navigation system error is used to estimate the navigation parameters in the mechanical programming of the inertial navigation system as feedback correction. In practical applications, feedback correction is generally used; however, Kalman filtering takes time to stabilize, and the error is very large at first, which leads to a decrease in system accuracy and is not suitable for feedback. To address these issues, we use a combination of output correction and feedback correction. </p>
+
+<p>The <hi rend="italic">Doppler Velocity Log Subsystem and Error Analysis</hi> sub-module provides high-precision velocity information and performs an error analysis in DVL. In this system, we utilized the difference in value between the solution velocity of the strap down inertial navigation system and the velocity of the Doppler velocity log as the observation of the SINS/DVL filter. </p>
+
+<p>The <hi rend="italic">SINS/DVL integrated filter</hi> sub-module is the positioning information fusion center. It is composed of a SINS/DVL integrated navigation error model and filtering gain compensation-based adaptive filtering. The SINS/DVL integrated navigation error model constructs the system state variable, the system state equation, and the system measurement equation. The filtering gain compensation-based adaptive filter performs data fusion and filtering. It is an organic combination of an adaptive filtering and a strong tracking Kalman filtering. We combine the inverse-free matrix with the improved adaptive filter, so a high positioning accuracy with stability and efficiency can be obtained. </p>
+
+<p>The SINS/DVL integrated positioning system is suitable for a remote AUV underwater navigation. When we describe the system’s dynamic characteristics and measurement equations, we divide the integrated navigation filtering methods into direct and indirect methods. Compared with the direct method, the indirect method has the characteristics of relatively high complexity and higher accuracy. We use the indirect filtering to obtain higher accuracy. The indirect filtering has output correction and feedback correction. Regarding the output correction, we use the inertial navigation system’s error estimation to correct the navigation parameters of the inertial navigation system. </p>
+
+<head> 3.2. Strapdown Inertial Navigation Subsystem and Error Analysis</head>
+<p>
+The strap down inertial navigation system consists of a three-axis accelerometer assembly and three orthogonal rate gyros. Without a solid platform, both the accelerometer and the inertial gyros are mounted on the target. The cost is lower, the structure is simpler, and the space utilization rate is higher; however, the calculation process is more complicated. To aid in computing, another important part of the Strapdown Inertial Navigation System is its computer. </p>
+
+<p>During the movement of the target, the installed gyroscope obtains the angular velocity of the aircraft relative to the inertial reference frame. Taking this into account, the transformation matrix of the coordinate system that corresponds to the target coordinate system can be calculated in order to obtain the three-axis accelerometer. The acceleration variable is fed back into the positioning coordinate system, and the specific navigation information is obtained through the final operation of the computer. </p>
+
+<p>During the navigation process, an underwater vehicle is equipped with an accelerometer and a gyroscope in the northeast direction of the navigation coordinate system. Let the acceleration of the carrier in the north direction be <hi rend="italic">an</hi>. Similarly, the east acceleration and the vertical acceleration are recorded as <hi rend="italic">ae</hi> and <hi rend="italic">au</hi>, respectively. With the passage of time, the acceleration is integrated with time, and the velocity components in the three directions of the aircraft can be calculated:
+
+(1)
+
+</p>
+
+<p>In the same way, to obtain the latitude, longitude, and depth of the aircraft on the earth, we can also obtain Equation (2) from Equation (1):
+
+(2)
+
+where ,  and  are the initial positions of the warp, weft, and depth of the aircraft, respectively, and ,  and  are the rates of change of the warp, latitude, and depth, respectively. The speed can be tracked in real time by the SINS/DVL combined positioning system, so the rate of change of warp, latitude, and depth can be extrapolated from speed as follows:
+
+(3)
+
+</p>
+
+<p>In the formula, in order to simplify the calculation, we approximate the Earth as a sphere with radius <hi rend="italic">R</hi>. Then, <hi rend="italic">M</hi> = <hi rend="italic">N</hi> = <hi rend="italic">R</hi>. </p>
+</text>
