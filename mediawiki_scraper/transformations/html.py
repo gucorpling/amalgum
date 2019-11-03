@@ -3,17 +3,18 @@ from bs4 import BeautifulSoup, Comment
 import re
 
 
-def unescape_html_elements(html):
-    html = re.sub(r"👻🎃/(.*)🎃👻", r"</\1>", html)
-    html = re.sub(r"👻🎃(.*)🎃👻", r"<\1>", html)
-    html = re.sub(r"🥧🥧quot🥧🥧", r"&quot;", html)
-    return html
+def get_children_for_partition(gum_tei):
+    """Given the output of apply_html_transformations, return the direct children
+    of the root element so we can partition them."""
+    soup = parse(gum_tei)
+    return soup.contents[0].contents
 
 
-def insert_document_title(soup, mwtext_object):
-    title_head = BeautifulSoup(f"<head>{mwtext_object.title}</head>", "html.parser")
-    soup.insert(0, title_head)
-    return soup
+def rewrap_partition(children):
+    text = BeautifulSoup(f"<text>", "html.parser")
+    for child in children:
+        text.append(child)
+    return str(text)
 
 
 def apply_html_transformations(config, html, mwtext_object):
@@ -33,6 +34,19 @@ def apply_html_transformations(config, html, mwtext_object):
     soup = fix_root(config, soup, mwtext_object)
     soup = insert_document_title(soup, mwtext_object)
     return re.sub(r"\n+", "\n", str(soup))
+
+
+def unescape_html_elements(html):
+    html = re.sub(r"👻🎃/(.*)🎃👻", r"</\1>", html)
+    html = re.sub(r"👻🎃(.*)🎃👻", r"<\1>", html)
+    html = re.sub(r"🥧🥧quot🥧🥧", r"&quot;", html)
+    return html
+
+
+def insert_document_title(soup, mwtext_object):
+    title_head = BeautifulSoup(f"<head>{mwtext_object.title}</head>", "html.parser")
+    soup.insert(0, title_head)
+    return soup
 
 
 def fix_root(config, soup, mwtext_object):

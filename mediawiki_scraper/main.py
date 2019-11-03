@@ -16,7 +16,11 @@ try:
 except ImportError:
     from yaml import Loader, Dumper
 
-from transformations.html import apply_html_transformations
+from transformations.html import (
+    apply_html_transformations,
+    get_children_for_partition,
+    rewrap_partition,
+)
 from transformations.mwtext import apply_mwtext_transformations
 from db.db import initialize as initialize_db, remove_db
 from db import db
@@ -135,12 +139,14 @@ def genre(output_dir):
         return output_dir.split(os.sep)[-1]
 
 
-def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number):
+def write_output_with_document_class(
+    mwtext_object, gum_tei, output_dir, doc_number, title_override=None
+):
     html = re.sub(r"^<text[^>]*>", "", gum_tei)
     html = re.sub(r"</text>$", "", html)
 
     d = Document(
-        title=mwtext_object.title,
+        title=title_override or mwtext_object.title,
         text=html,
         url=mwtext_object.url,
         date_collected=time.time(),
@@ -167,21 +173,58 @@ def rough_word_count(gum_tei):
     return len(tokens)
 
 
+def partition_page(config, output_dir, mwtext_object, gum_tei, doc_number):
+    partitions = []
+    current_partition = []
+    current_wc = 0
+    for child in get_children_for_partition(gum_tei):
+        wc = rough_word_count(str(child))
+        current_partition.append(child)
+        current_wc += wc
+        if MIN_TOKEN_COUNT <= current_wc <= MAX_TOKEN_COUNT:
+            partitions.append((wc, current_partition))
+            current_partition = []
+            current_wc = 0
+        # too long? start over
+        elif current_wc > MAX_TOKEN_COUNT:
+            current_partition = []
+            current_wc = 0
+
+    if len(partitions) > 0:
+        for i, (wc, partition) in enumerate(partitions):
+            new_title = f"part{i}_" + mwtext_object.title
+            partitioned_gum_tei = rewrap_partition(partition)
+            write_output_with_document_class(
+                mwtext_object,
+                partitioned_gum_tei,
+                output_dir,
+                doc_number + i,
+                title_override=new_title,
+            )
+
+        print(f"\tSUCCESS: split document into {len(partitions)} chunks.")
+        return sum(p[0] for p in partitions), len(partitions)
+    else:
+        print(f"\tCouldn't split the document into any reasonable chunks :(")
+        return 0, 0
+
+
 def process_page(config, page, output_dir, doc_number):
-    print(f"Processing `{str(page)}`... ", end="")
+    print(f"Processing `{str(page)}`... ")
     mwtext_object = get_mwtext_object(page)
     gum_tei = convert(config, mwtext_object)
     token_count = rough_word_count(gum_tei)
     if MIN_TOKEN_COUNT <= token_count <= MAX_TOKEN_COUNT:
         write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
-        print("done.")
-        return token_count
-    else:
-        print()
+        print(f"\tSUCCESS: scraped with {token_count} tokens.")
+        return token_count, 1
+    elif token_count > MAX_TOKEN_COUNT:
         print(
-            f'\tSKIPPING: "{page.title(as_url=True)} has roughly {token_count} tokens.'
+            f"\tPage is too long at {token_count} tokens. Attempting to partition into smaller documents."
         )
-        return 0
+        return partition_page(config, output_dir, mwtext_object, gum_tei, doc_number)
+    else:
+        print(f"\tPage is too short at {token_count} tokens. Skipping.")
 
 
 # ------------------------------------------------------------------------------
@@ -273,10 +316,12 @@ def scrape(config_filepath, output_dir, stop_after, cmtitles):
                             f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
                         )
                     else:
-                        page_words = process_page(config, page, output_dir, doc_number)
+                        page_words, num_docs = process_page(
+                            config, page, output_dir, doc_number
+                        )
                         if page_words > 0:
-                            doc_number += 1
-                            docs_scraped += 1
+                            doc_number += num_docs
+                            docs_scraped += num_docs
                             word_count_total += page_words
 
                 except Exception as e:
