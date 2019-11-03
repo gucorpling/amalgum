@@ -224,7 +224,7 @@ def already_scraped(urls, page):
     return any(url.endswith(page_url) for url in urls)
 
 
-def scrape(config_filepath, output_dir):
+def scrape(config_filepath, output_dir, stop_after):
     config = load_config(config_filepath)
 
     # write pywikibot config
@@ -260,6 +260,9 @@ def scrape(config_filepath, output_dir):
                 time.sleep(config["rate_limit"])
             else:
                 time.sleep(1)
+
+            if stop_after is not None and i >= stop_after:
+                break
 
     print("Finished processing. Total word count: ", word_count_total)
 
@@ -337,10 +340,15 @@ if __name__ == "__main__":
         default=os.sep.join([FILE_DIR, "output", "wikinews"]),
         help="directory that will contain the output files",
     )
+    p.add_argument(
+        "--stop-after",
+        type=int,
+        help="if supplied, stops scraping after successfully scraping this many documents",
+    )
     args = p.parse_args()
 
     if args.method == "scrape":
-        scrape(args.config, args.output_dir)
+        scrape(args.config, args.output_dir, getattr(args, "stop_after", None))
     elif args.method == "url":
         assert args.url
         print(convert_specific_article(args.config, args.url))
