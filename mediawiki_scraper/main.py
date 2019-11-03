@@ -195,8 +195,14 @@ def init_pywikibot(config):
     return pywikibot
 
 
-def page_generator(config, pywikibot, site):
+def page_generator(config, pywikibot, site, cmtitle):
     from pywikibot.data.api import ListGenerator
+
+    if (
+        config["page_generation"]["endpoint"] == "categorymembers"
+        and cmtitle is not None
+    ):
+        config["page_generation"]["params"]["cmtitle"] = cmtitle
 
     lg = ListGenerator(
         config["page_generation"]["endpoint"],
@@ -224,7 +230,7 @@ def already_scraped(urls, page):
     return any(url.endswith(page_url) for url in urls)
 
 
-def scrape(config_filepath, output_dir, stop_after):
+def scrape(config_filepath, output_dir, stop_after, cmtitle):
     config = load_config(config_filepath)
 
     # write pywikibot config
@@ -241,7 +247,7 @@ def scrape(config_filepath, output_dir, stop_after):
     i = 0
     word_count_total = 0
     with boot_parsoid(config) as _:
-        for page_dict in page_generator(config, pywikibot, site):
+        for page_dict in page_generator(config, pywikibot, site, cmtitle):
             try:
                 page = pywikibot.Page(site, page_dict["title"])
                 if already_scraped(urls_already_scraped, page):
@@ -345,10 +351,19 @@ if __name__ == "__main__":
         type=int,
         help="if supplied, stops scraping after successfully scraping this many documents",
     )
+    p.add_argument(
+        "--cmtitle",
+        help="the category being scraped over, if using the categorymembers api endpoint",
+    )
     args = p.parse_args()
 
     if args.method == "scrape":
-        scrape(args.config, args.output_dir, getattr(args, "stop_after", None))
+        scrape(
+            args.config,
+            args.output_dir,
+            getattr(args, "stop_after", None),
+            getattr(args, "cmtitle", None),
+        )
     elif args.method == "url":
         assert args.url
         print(convert_specific_article(args.config, args.url))
