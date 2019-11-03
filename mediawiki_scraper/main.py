@@ -135,9 +135,7 @@ def genre(output_dir):
         return output_dir.split(os.sep)[-1]
 
 
-def write_output_with_document_class(
-    mwtext_object, gum_tei, output_dir, doc_number, already_existing_docs
-):
+def write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number):
     html = re.sub(r"^<text[^>]*>", "", gum_tei)
     html = re.sub(r"</text>$", "", html)
 
@@ -149,7 +147,7 @@ def write_output_with_document_class(
         date_created=mwtext_object.created_at.split("T")[0],
         date_modified=mwtext_object.modified_at.split("T")[0],
         genre=genre(output_dir),
-        docnum=already_existing_docs + doc_number,
+        docnum=doc_number,
     )
     d.short_title = d.make_short_title()
     d.serialize(out_dir=output_dir)
@@ -169,15 +167,13 @@ def rough_word_count(gum_tei):
     return len(tokens)
 
 
-def process_page(config, page, output_dir, doc_number, already_existing_docs):
+def process_page(config, page, output_dir, doc_number):
     print(f"Processing `{str(page)}`... ", end="")
     mwtext_object = get_mwtext_object(page)
     gum_tei = convert(config, mwtext_object)
     token_count = rough_word_count(gum_tei)
     if MIN_TOKEN_COUNT <= token_count <= MAX_TOKEN_COUNT:
-        write_output_with_document_class(
-            mwtext_object, gum_tei, output_dir, doc_number, already_existing_docs
-        )
+        write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
         print("done.")
         return token_count
     else:
@@ -206,7 +202,7 @@ def page_generator(config, pywikibot, site, cmtitle):
         config["page_generation"]["endpoint"] == "categorymembers"
         and cmtitle is not None
     ):
-        config["page_generation"]["params"]["cmtitle"] = cmtitle
+        config["page_generation"]["params"]["cmtitle"] = cmtitle[0]
 
     lg = ListGenerator(
         config["page_generation"]["endpoint"],
@@ -234,7 +230,7 @@ def already_scraped(urls, page):
     return any(url.endswith(page_url) for url in urls)
 
 
-def scrape(config_filepath, output_dir, stop_after, cmtitle):
+def scrape(config_filepath, output_dir, stop_after, cmtitles):
     config = load_config(config_filepath)
 
     # write pywikibot config
@@ -248,34 +244,53 @@ def scrape(config_filepath, output_dir, stop_after, cmtitle):
 
     urls_already_scraped = urls_already_scraped_for_genre(genre(output_dir))
 
-    already_existing_docs = len(glob.glob(output_dir + os.sep + "*.xml"))
-    i = 0
+    doc_number = 0
     word_count_total = 0
     with boot_parsoid(config) as _:
-        for page_dict in page_generator(config, pywikibot, site, cmtitle):
-            try:
-                page = pywikibot.Page(site, page_dict["title"])
-                if already_scraped(urls_already_scraped, page):
-                    print(
-                        f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
-                    )
+        if (
+            config["page_generation"]["endpoint"] == "categorymembers"
+            and cmtitles is not None
+        ):
+            page_generators = [
+                (cmtitle, page_generator(config, pywikibot, site, cmtitle))
+                for cmtitle in cmtitles
+            ]
+            print("Scraping the categories: ", cmtitles)
+        else:
+            page_generators = [
+                (None, page_generator(config, pywikibot, site, cmtitles))
+            ]
+
+        for category, pages in page_generators:
+            if category:
+                print("Scraping category", category)
+            docs_scraped = 0
+            for page_dict in pages:
+                try:
+                    page = pywikibot.Page(site, page_dict["title"])
+                    if already_scraped(urls_already_scraped, page):
+                        print(
+                            f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
+                        )
+                    else:
+                        page_words = process_page(config, page, output_dir, doc_number)
+                        if page_words > 0:
+                            doc_number += 1
+                            docs_scraped += 1
+                            word_count_total += page_words
+
+                except Exception as e:
+                    print("Oops! Something went wrong.")
+                    traceback.print_exc()
+
+                if "rate_limit" in config:
+                    time.sleep(config["rate_limit"])
                 else:
-                    word_count_total += process_page(
-                        config, page, output_dir, i, already_existing_docs
-                    )
-                    if word_count_total > 0:
-                        i += 1
-            except Exception as e:
-                print("Oops! Something went wrong.")
-                traceback.print_exc()
+                    time.sleep(1)
 
-            if "rate_limit" in config:
-                time.sleep(config["rate_limit"])
-            else:
-                time.sleep(1)
-
-            if stop_after is not None and i >= stop_after:
-                break
+                if stop_after is not None and docs_scraped >= stop_after:
+                    print("Have scraped ", docs_scraped, " documents, stopping now.")
+                    break
 
     print("Finished processing. Total word count: ", word_count_total)
 
@@ -360,7 +375,9 @@ if __name__ == "__main__":
     )
     p.add_argument(
         "--cmtitle",
-        help="the category being scraped over, if using the categorymembers api endpoint",
+        action="append",
+        nargs="*",
+        help="the categories being scraped over, if using the categorymembers api endpoint",
     )
     args = p.parse_args()
 
