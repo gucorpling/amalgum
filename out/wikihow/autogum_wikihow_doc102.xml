@@ -1,0 +1,42 @@
+<text id="autogum_wikihow_doc102" title="Convert GPT Disk to MBR Without Any Data Lose at All" shortTile="convert-gpt-disk" type="wikihow" dateCollected="2019-11-03" dateCreated="2016-06-13" dateModified="2017-01-17" sourceURL="https://www.wikihow.com/Convert_GPT_Disk_to_MBR_Without_Any_Data_Lose_at_All" speakerList="none" speakerCount="0">
+<head>Convert GPT Disk to MBR Without Any Data Lose at All</head><p>MBR (Master Boot Record) and GPT (GUID Partition Table) are two different techniques used to store partition information of your disk. But windows is compatible with MBR. Due to some reason, like OS corruption or mishandling or some unknown reason, the MBR gets converted to GPT. Normally, to convert a GPT partitioned disk back to MBR, you need to delete all the volumes in the disk and wipe it off which results in the lose of all the data on that disk. But if you want no data to be lost follow the steps below.</p>
+<head>Steps</head>
+<list type="ordered"><item>Things you need before proceeding further.
+<list type="unordered"><item>A storage device(external HDD or SSD, a Pen Drive) with around 100gb space available.</item>
+<item>EasyUS Partition Master version 11. The lower version do not support GPT to MBR convertion.</item>
+<item>WintoUSB software.</item>
+<item>A spare usb device(optional).</item>
+<item>Rufus software(optional).</item></list></item>
+<item>This step helps you create a bootable device that will be used further in the process.
+<list type="unordered"><item>Install WintoUSB software on the spare machine.</item>
+<item>Plug in the storage device with around 100gigs of stroage.</item>
+<item>Choose the Windows iso you want to install.</item>
+<item>Choose the storage device.</item>
+<item>Let WintoUSB do the magic.</item>
+<item>After this process is complete move to the next step.</item></list></item>
+<item>By now you have a bootable device that is ready to be plugged into your unwell machine.
+<list type="unordered"><item>Insert the bootable device into the machine having the GPT partitioned disk.</item>
+<item>Wait for a while until the machine configures windows.</item>
+<item>Follow all the steps Windows Pops Up. And complete the installation.</item>
+<item>Move on to the next step when windows finally opens to desktop.</item></list></item>
+<item>This is the most important step. Here, you will convert your GPT partitioned disk to MBR:
+<list type="unordered"><item>Install the EaseUS Partition Master on the machine having the problem.</item>
+<item>Note, that if there are any unused partitiones created by Windows or by the user that are not useful, delete them. To do that, right click on the partition and select 'Delete Volume'. Click 'Apply' to apply the changes.</item>
+<item>Now, select the disk causing the problem and choose 'Convert to MBR' option.</item>
+<item>Click on Apply Button.</item>
+<item>The machine will restart and boot again to a black screen which will show the success rate of the GPT to MBR conversion.</item>
+<item>Viola! Its done. The GPT partitions are converted back to MBR.</item>
+<item>But its not done. Follow the next steps to complete the procedure.</item></list></item>
+<item>This step will allow you to boot you machine back to normal.
+<list type="unordered"><item>Shut the machine down. Unplug external devices from which was used to boot the machine previously.</item>
+<item>Now to need to create a bootable USB that has your desired Windows OS. You do this by using RUFUS software. Download the latest version.</item>
+<item>Plug in the USB into the machine and turn it on.</item>
+<item>Boot it from USB.</item>
+<item>Install the Operating System.</item>
+<item>Note, if you want the files of the C-Drive, do not format the drive. Just select the drive you want to currently install Windows. You will have a Windows.old folder when the machine boots into the newly installed Windows.</item>
+<item>That all! You have saved yourself from data lose. Congrats.</item></list></item></list>
+<head>Tips</head>
+<list type="unordered"><item>Have some patience. The software mentioned above require license. But you can always google them ;)</item></list>
+<head>Warnings</head>
+<list type="unordered"><item>Do not use windows 7 in WintoUSB. It will cause issues.</item></list>
+</text>
