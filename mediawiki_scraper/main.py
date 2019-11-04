@@ -211,7 +211,7 @@ def partition_page(config, output_dir, mwtext_object, gum_tei, doc_number):
 
 def process_page(config, page, output_dir, doc_number):
     print(f"Processing `{str(page)}`... ")
-    mwtext_object = get_mwtext_object(page)
+    mwtext_object = get_mwtext_object(page, config)
     gum_tei = convert(config, mwtext_object)
     token_count = rough_word_count(gum_tei)
     if MIN_TOKEN_COUNT <= token_count <= MAX_TOKEN_COUNT:
@@ -349,7 +349,7 @@ def convert_specific_article(config_filepath, url):
     page = pywikibot.Page(site, url[url.rfind("/") + 1 :])
     remove_db(tempfile.gettempdir())
     initialize_db(tempfile.gettempdir())
-    mwtext_object = get_mwtext_object(page, dev_mode=True)
+    mwtext_object = get_mwtext_object(page, config, dev_mode=True)
     return convert(config, mwtext_object, dev_mode=True)
 
 
@@ -366,10 +366,12 @@ def monkey_patch_pywikibot(pywikibot):
 
 # ------------------------------------------------------------------------------
 # utils
-def get_mwtext_object(page, dev_mode=False):
+def get_mwtext_object(page, config, dev_mode=False):
     if dev_mode or not db.mwtext_exists(str(page)):
         title = page.title()
         url = page.full_url()
+        if config["family"] == "wikihow":
+            url = url.replace("_", "-")
         file_safe_url = page.title(as_filename=True)
         latest_revision = page.latest_revision
         rev_id = str(latest_revision["revid"])
