@@ -37,9 +37,9 @@ def apply_html_transformations(config, html, mwtext_object):
 
 
 def unescape_html_elements(html):
-    html = re.sub(r"👻🎃/(.*)🎃👻", r"</\1>", html)
-    html = re.sub(r"👻🎃(.*)🎃👻", r"<\1>", html)
-    html = re.sub(r"🥧🥧quot🥧🥧", r"&quot;", html)
+    html = re.sub(r"_-=(.*?)=-_", r"<\1>", html)
+    html = re.sub(r"_-=/(.*?)=-_", r"<\1>", html)
+    html = re.sub(r"_-=quot=-_", r"&quot;", html)
     return html
 
 

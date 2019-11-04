@@ -62,9 +62,9 @@ def transform_image_wikilinks(config, wikicode):
         if isinstance(n, mwparserfromhell.nodes.wikilink.Wikilink) and name.startswith(
             "[[Image:"
         ):
-            title_str = str(n.title).replace("Image:", "").replace('"', "🥧🥧quot🥧🥧")
+            title_str = str(n.title).replace("Image:", "").replace('"', "_=_quot_=_")
             tag = mwparserfromhell.nodes.text.Text(
-                f' 👻🎃figure rend="{title_str}"🎃👻👻🎃/figure🎃👻'
+                f' _-=figure rend="{title_str}"=-__-=/figure=-_'
             )
             out_nodes.append(tag)
         else:
@@ -82,7 +82,7 @@ def transform_wikihow_video_templates(config, wikicode):
         ):
             title_str = str(n.params[0])
             tag = mwparserfromhell.nodes.text.Text(
-                f' 👻🎃figure rend="{title_str}"🎃👻👻🎃/figure🎃👻'
+                f' _-=figure rend="{title_str}"=-__-=/figure=-_'
             )
             out_nodes.append(tag)
         else:
