@@ -238,3 +238,21 @@ def trim_trailing_headings(config, soup):
         children[-1].extract()
         children = soup.contents
     return soup
+
+
+def remove_nested_tags(config, soup, tag_names=[]):
+    def depth(node):
+        if node is None:
+            return 0
+        return 1 + depth(node.parent)
+
+    for tag_name in tag_names:
+        for element in sorted(soup.find_all(), reverse=True, key=depth):
+            child_element = element.contents[0]
+            if (
+                len(element.contents) == 1
+                and child_element.name == tag_name
+                and element.name == tag_name
+            ):
+                element.unwrap()
+    return soup
