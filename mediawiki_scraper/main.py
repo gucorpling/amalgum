@@ -369,6 +369,8 @@ def monkey_patch_pywikibot(pywikibot):
 def get_mwtext_object(page, config, dev_mode=False):
     if dev_mode or not db.mwtext_exists(str(page)):
         title = page.title()
+        if config["family"] == "wikihow":
+            title = title.replace("-", " ")
         url = page.full_url()
         if config["family"] == "wikihow":
             url = url.replace("_", "-")
