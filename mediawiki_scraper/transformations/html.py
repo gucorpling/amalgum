@@ -248,10 +248,15 @@ def remove_nested_tags(config, soup, tag_names=[]):
 
     for tag_name in tag_names:
         for element in sorted(soup.find_all(), reverse=True, key=depth):
+            if not hasattr(element, "contents") or len(element.contents) == 0:
+                continue
+
             child_element = element.contents[0]
             if (
                 len(element.contents) == 1
+                and hasattr(child_element, "name")
                 and child_element.name == tag_name
+                and hasattr(element, "name")
                 and element.name == tag_name
             ):
                 element.unwrap()
