@@ -1,0 +1,38 @@
+<text id="autogum_wikihow_doc65" title="Add Vector Features to an OpenLayers 3 Map" shortTile="add-vector-features" type="wikihow" dateCollected="2019-11-03" dateCreated="2015-12-20" dateModified="2019-08-14" sourceURL="https://www.wikihow.com/Add_Vector_Features_to_an_OpenLayers_3_Map" speakerList="none" speakerCount="0">
+<head>Add Vector Features to an OpenLayers 3 Map</head><p>OpenLayers is a powerful JavaScript tool that enables us to create and display all sorts of maps on a website. This article will guide you in adding a point and a line string feature, then transform their projections to use coordinates, then add some colour by setting the layer's style.</p>
+<p>Please note that you need to have a working OpenLayers map installed in a webpage to follow this article. If you don't have one, see <ref target="https://www.wikihow.com/wiki/Make_a_Map_Using_OpenLayers_3">How to Make a Map Using OpenLayers 3</ref>.</p>
+<head>Steps</head>
+<head>Adding Point and Line String Features</head>
+<list type="ordered">
+<item>Create a point feature. Simply copy the following line of code into your &lt;script&gt;&lt;/script&gt; element:.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_1.jpg">Image:7062783 1.jpg</ref></figure>
+</item>
+<item>Set the point's geometry. To tell OpenLayers where to place the point, you need to create a geometry and give it a set of coordinates, which is an array in the form of [longitude (E-W), latitude (N-S)]. The following code creates this and set's the point's geometry:<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_2.jpg">Image:7062783 2.jpg</ref></figure>
+</item>
+<item>Create a line string feature. Line strings are straight lines broken into segments. We create them just like points, but we provide a pair of coordinates for each point of the line string:<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_3.jpg">Image:7062783 3.jpg</ref></figure>
+</item>
+<item>Add the features to a vector layer. To add the features to the map, you need to add them to a source, which you add to a vector layer, which you can then add to the map:<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_4.jpg">Image:7062783 4.jpg</ref></figure>
+</item>
+</list>
+<head>Transforming the Features’ Geometries to Use Coordinates</head>
+<p>As with any powerful mapping software, OpenLayers maps can have different layers with different ways of displaying information. Because Earth is a globe and not flat, when we try to display it on our flat maps, the software has to adjust the locations to match the flat map. These different ways to display map information are called <hi rend="italic"><hi rend="bold">projections</hi></hi>. To use a vector layer and a tile layer together on the same map means we have to transform the layers from one projection to another.</p>
+<list type="ordered">
+<item>Put the features into an array. We start by putting the features we want to transform together into an array that we can iterative through.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_5.jpg">Image:7062783 5.jpg</ref></figure>
+</item>
+<item>Write the transform function. In OpenLayers, we can use the transform() function on the geometry object of each feature. Put this transform code into a function that we can call later:<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_6.jpg">Image:7062783 6.jpg</ref></figure>
+</item>
+<item>Call the transform function on the features. Now simply iterate through the array.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_7.jpg">Image:7062783 7.jpg</ref></figure>
+</item>
+</list>
+<head>Setting the Vector Layer's Style</head>
+<p>To change what each feature on the map looks like, we need to create and apply a style. Styles can change colours, sizes, and other attributes of points and lines, and they can also display images for each point, which is very handy for customised maps. This section isn't necessary, but it is fun and useful.</p>
+<list type="ordered">
+<item>Create the fill and stoke. Create a fill style object and a semi-transparent red colour, and a stroke (line) style that is a solid red line:<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_8.jpg">Image:7062783 8.jpg</ref></figure>
+</item>
+<item>Create the style and apply it to the layer. The OpenLayers style object is quite powerful, but we're only going to set the fill and stroke for now:<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_9.jpg">Image:7062783 9.jpg</ref></figure>
+</item>
+<item>Check out the finished map.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/7062783_10.jpg">Image:7062783 10.jpg</ref></figure>
+</item>
+</list>
+<head>Tips</head>
+<list type="unordered"><item>Don't be afraid to use <ref target="http://openlayers.org/en/latest/apidoc/">OpenLayers 3 API documentation</ref>: Although it's overwhelming at first, it's vital to learn how to do new things with OpenLayers.</item></list>
+</text>
