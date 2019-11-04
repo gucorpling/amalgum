@@ -233,7 +233,8 @@ def drop_empty_headings(config, soup, depth=0):
 def trim_trailing_headings(config, soup):
     """get rid of any <head>s, starting from the end of the document"""
 
-    body = soup.contents[0]
-    while len(body.contents) > 0 and body.contents[-1].name == "head":
-        body.contents[-1].extract()
+    children = soup.contents
+    while len(children) > 0 and children[-1].name == "head":
+        children[-1].extract()
+        children = soup.contents
     return soup
