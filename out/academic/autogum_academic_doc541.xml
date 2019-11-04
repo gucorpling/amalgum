@@ -1,0 +1,65 @@
+<text id="autogum_academic_doc541" title="Hard Decision-Based Cooperative Localization for Wireless Sensor Networks" shortTile="hard-decisionbased" author="Zhaoyang Wang, Xuebo Jin, Xiaoyi Wang, Jiping Xu, Yuting Bai" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4665/htm" speakerList="none" speakerCount="0">
+<head> 3. Cooperative Localization</head>
+<p>
+For range-free localization, a large deviation of distance estimation and position estimation may often happen, due to scarce information and difficult communication environment. These unwelcome estimations are called outliers. Especially in cooperative localization, outliers may lead to the failure of whole network. To alleviate the effect of the outliers, we propose a cooperative localization method with outlier constraints. Outlier constraints are divided into distance constraints and position constraints, which both rely on neighboring anchors. The estimated distance and position will not exceed the communication range of neighboring anchors for both distance constraints and position constraints. These constraints are represented by the parameters  and , which condition the cooperative method. The cooperative method introduces message passing and updates the estimated position through the variational message passing rule. The final localization result depends on confidence of the agent to be located. </p>
+
+<head> 3.1. Outlier Constraints</head>
+<p>
+For range-based localization, the estimated distances are relatively accurate, so that the localization of agents is quite precise. For range-free localization, in our paper, the accuracy fails to meet the requirement of cooperative localization for both node distance and node position. If the outlier distance and position are regarded as key information of a virtual anchor, this will cause a large derivation in the subsequent iteration, leading, finally, to disruption of the whole network and localization failure. To avoid this problem, we propose the outlier constraint method, which includes position constraint and distance constraint. </p>
+
+<p>It is inevitable to have low accuracy of distance estimation with the multi-hop method. The outlier distance has a negative effect on cooperative localization, so it is better to exclude the outlier distances. The outlier distance is excluded by constraints from anchors, as shown in <figure>Figure 5</figure> and <figure>Figure 6</figure>. <figure>Figure 5</figure> shows the distance between agent and anchor. <figure>Figure 6</figure> shows the distance between agents. For the distance between agent and anchor, the outlier constraint is
+
+(14)
+
+where  is the estimated distance according to Section 2,  denotes the neighboring anchors within communication range of ,  denotes the true distance between anchor  and any anchor in .  </p>
+
+<p>Hence, we propose a constraint function as
+
+(15)
+
+</p>
+
+<p>For the distance between agents, the outlier constraint is
+
+(16)
+
+where  is the estimated distance according to Section 2,  denotes the neighboring anchors within communication range of ,  denotes the neighboring anchors within communication range of ,  denotes the real distance between any anchor in  and any anchor in .  </p>
+
+<p>Hence, we propose the constraint function
+
+(17)
+
+</p>
+
+<p>In a cooperative network, the outlier position of the agent also has a negative effect on cooperative localization. It is better to exclude these outlier positions through neighboring anchors. In the network, agents can communicate with all nodes that are in their communication range. Therefore, distance between the agent and its neighboring anchor is lower than the communication range:
+
+(18)
+
+where  is the estimated position of agent ,  denotes the neighboring anchors within communication range of ,  denotes position of any anchor in . </p>
+
+<p>Hence, we propose the constraint function
+
+(19)
+
+where  is the Euclidean norm of estimated position  and true position . </p>
+
+<head> 3.2. Cooperative Localization</head>
+<p>
+Thanks to the locally factorized structure of the joint likelihood function, the cooperative localization problem can be addressed under the framework of factor graph. Inference and estimation tasks are typically carried out on a factor graph by message passing between variable nodes and factor nodes. Existing methods do not consider the outlier variable nodes and factor, which indicates that cooperative localization is not suitable for a range-free situation. In the cooperative phase, we explore a hard decision-based cooperative way for a range-free situation applying outlier constraints.  </p>
+
+<p>We assume that the sensor node  acquires a noisy measurement  and that , which is the estimated distance from the sensor node  ( can be either an agent or an anchor). Then, we have
+
+(20)
+
+where  is the measurement noise. Without loss of generality, we assume that measurement noise obeys a Gaussian distribution, so ;  is the standard deviation. The probability density function of node distance is
+
+(21)
+
+</p>
+
+<p>We define  and assume that the relative positions are conditionally independent and only depend on the two nodes involved:
+
+(22)
+
+where  is defined as the position set  of all nodes, and  is defined as the distance set  of all nodes. </p>
+</text>

@@ -1,0 +1,59 @@
+<text id="autogum_academic_doc251" title="Hierarchical Semantic Correspondence Analysis on Feature Classes between Two Geospatial Datasets Using a Graph Embedding Method" shortTile="hierarchical-semantic" author="Yong Huh" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2220-9964/8/11/479/htm" speakerList="none" speakerCount="0">
+<head> 2. Laplacian Graph Embedding</head><head> 2.1. One-dimensional Embedding</head>
+<p>
+In this paper, we assume an undirected and connected graph. The graph  is represented by sets of vertices  and edges . Given a weighted graph, edge weights are represented as a weight matrix . One-dimensional graph embedding finds a configuration of embedded vertices in one-dimensional space, such that the vertices’ proximities from the edge weights are preserved as the embedded vertices’ distances. Assuming each entry of a column vector  as coordinates of the embedded vertices, this problem can be solved through minimization of the following objective function.
+
+(1)
+
+</p>
+
+<p>This function could be minimized when vertices <hi rend="italic">i</hi> and <hi rend="italic">j</hi> with large  are embedded at close coordinates, whereas vertices with small  are embedded into distant coordinates. In this study, this mathematical property is applied as follows: feature classes (e.g., land-use category and record) with a greater degree of object sharing have close coordinates in their embedding space and feature classes with a lesser degree of object sharing have distant coordinates. Equation (1) can be expressed in a matrix operation form with a Laplacian matrix , and can be represented as Equation (2).
+
+(2)
+
+where, the Laplacian matrix  is defined as Equation (3) with a vertex degree matrix  whose diagonal entries are obtained as  and the remaining entries are 0.
+
+(3)
+
+</p>
+
+<p>Now, the problem can be changed to find a vector  that minimizes , and can be represented as Equation (4).
+
+(4)
+
+</p>
+
+<p>Since the value of  is vulnerable to the scaling of a vector , a constraint  is imposed to remove any such arbitrary scaling effect. The diagonal matrix  provides weights on the vertices, so that the higher  is, the more important is that vertex. Equation (4) with the constraint can be solved by the Lagrange multiplier method as in Equations (5)–(7).
+
+(5)
+
+(6)
+
+(7)
+
+</p>
+
+<p>Thus, the solution of one-dimensional embedding, , is obtained by solving the eigenproblem . However, according to the rank of matrix , there could be more than one eigenvector. In the field of graph spectral theory, the eigenvector corresponding to the smallest eigenvalue larger than 0 is the proven solution, which is called a Fiedler vector. Thus, the coordinates of vertices in one-dimensional embedding are obtained as components of the Fiedler vector as represented by Equation (7). </p>
+
+<head> 2.2. k-dimensional Embedding</head>
+<p>
+Now, consider k-dimensional graph embedding. These embedded coordinates are represented as an  matrix , so that the <hi rend="italic">i</hi>th row of , , contains the k-dimensional coordinates of vertex . Now, an objective function is defined as Equation (8) with the constraint, .
+
+(8)
+
+</p>
+
+<p>Sameh and Wisniewski proved that the solution to this trace minimization problem is obtained by the k-eigenvectors of  that correspond to its smallest eigenvalues other than 0. Thus, the solution of Equation (8) is obtained by a matrix , where  represents an eigenvector corresponding to eigenvalue  under the condition . </p>
+
+<p>However, the constraint  normalizes the scales of the coordinates in each dimension. Thus, it is necessary to rescale them according to each dimension’s relative importance. Sameh and Wisniewski also proved that the minimum value of  in Equation (8) equals the sum of the corresponding eigenvalues, as shown by Equation (9).
+
+(9)
+
+</p>
+
+<p>Accordingly, we can assume the eigenvalue  as the amount of either the penalty or the cost caused by the <hi rend="italic">i</hi>th dimensional space in the embedding problem. So, when , it is appropriate to apply more weight to  than  in measuring the proximity for a clustering analysis. Based on these mathematical properties, we determined the embedded coordinates as Equation (10), because the increase in distance is proportional to that of the root-squared coordinate difference.
+
+(10)
+
+ </p>
+</text>

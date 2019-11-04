@@ -1,0 +1,31 @@
+<text id="autogum_academic_doc222" title="Sensor Fault Tolerant Control for Aircraft Engines Using Sliding Mode Observer" shortTile="sensor-fault-tolerant" author="Xiaodong Chang, Jinquan Huang, Feng Lu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/21/4109/htm" speakerList="none" speakerCount="0">
+<head> 2. Aircraft Engine Descriptions and Modeling</head><head> 2.1. Engine Descriptions</head>
+<p>
+A high bypass twin spool mixing-exhaust turbofan engine was studied in this paper, of which the schematic description is shown in <figure>Figure 2</figure>. The airflow was supplied by a single inlet. Airflow passed through the fan and separated into two streams—one passed through engine core path, and the other passed through the bypass duct. Fuel was injected in the combustor and burned to produce the hot gas to drive the turbines. The fan and low pressure compressor (LPC) were driven by a low pressure turbine (LPT), whereas the high pressure compressor (HPC) was driven by a high pressure turbine (HPT). The airflow left through the nozzle. The notations used in this paper and their descriptions are shown in Table 1. </p>
+
+<p>Mechanical system dynamics due to rotating inertias constituted the most important contribution to engine transient behavior. Thus, rotating dynamics were the most important dynamics to be considered. In light of this, the state vector  was chosen as . Newton’s law for rotating masses was applied to each shaft as
+
+(1)
+
+where <hi rend="italic">f</hi>1 and <hi rend="italic">f</hi>2 are the net torques delivered by LPT and HPT.  is the control input and <b><hi rend="italic">v</hi></b> denotes the external parameters (flight condition). Considering air flow mass, power, and momentum conservation laws, a general gas turbine simulation was designed using the concept in. The engine design operation data and characteristic maps of rotating components such as fan, compressor, HPT, and LPT were loaded to the general simulation for obtaining a certain turbofan engine model. The nonlinear model representing a turbofan engine was given by
+
+(2)
+
+where  is the output. In the engine involved in this paper, the available sensors were  The function  and  are, respectively, the engine process and measurement expressions. The engine was coded with C language and packaged by Dynamic Link Library (DLL) for simulation in Matlab (2016a, MathWorks, Natick, MA, USA) environment. Taylor approximation was applied to the engine model Equation (2) at the equilibrium point (, ), and retaining constant and first-order terms yielded the following state variable model (SVM):
+
+(3)
+
+</p>
+
+<p>Equation (3) can be further depicted as
+
+(4)
+
+where , , , and  are the system matrices with appropriate dimensions, and , , and . For simplicity, the sign “” in Equation (4) was omitted in the following deductions. In addition, the quantities of different variables in Equation (4) were far away from each other. For instance, the normal physical quantity of  at the design point was about 15,012 r/min, whereas the normal physical value of fuel flow  at the design point was around 0.3606 kg/s. The large difference in the magnitudes of various model variables would lead to large difference of matrix singular values in the SVM, and it produced a big condition number of the system matrix. The larger the condition number was, the harder it was to compute a matrix inverse. Hence, physical operating parameters in the in-flight model were performed by parameter normalization, details referred in. </p>
+
+<head> 2.2. Hybrid Fitting Method for Linearization</head>
+<p>
+The system matrices played an important role in the steady and transient performance of the SVM. There are commonly two ways to compute the system matrices, these being partial derivative method and fitting method. In the former method, partial derivative in the element of system matrices is computed by perturbing one state variable, and other state variables remain unchanged. However, in practice it is merely impossible that only one state changes while another remains unchanged by engine nature; thus, models solved by partial derivative method lack accuracy, especially during dynamic process. The fitting method generates the system matrices’ elements with the object function of least square errors between the component-level model (CLM) and model responses to step inputs. Choosing the perturbing amplitude and direction relies on the experiences—they closely affect to the SVM modeling accuracy. In addition, the curve part of step response data mainly depicts the system dynamics, and the remainder of the data shows the system steady behavior. Because the different part is processed in the same way, it is thus hard to address the steady and transient performance of the SVM at the same time. </p>
+
+<p>In this paper, a hybrid fitting method was developed from the combination of partial perturbing and fitting methods. The matrices  and  were related to the transient stage, whereas the matrices  and  related to steady stage of step response. The initials of matrices  and  were obtained by the partial perturbing method, and steady-state component was used to compute the initials of matrices  and . The initials of matrices  and  were directly computed from the steady terminal values of one-control-variable step response by algebraic operation. The initials of these system matrices were acquired from the above implementations, and then the fitting method was employed to obtain the optimal system matrices, which follow the least square errors. The detailed procedure of the hybrid fitting approach is given as follows: </p>
+</text>

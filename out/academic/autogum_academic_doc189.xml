@@ -1,0 +1,27 @@
+<text id="autogum_academic_doc189" title="A Chance-Constrained Multistage Planning Method for Active Distribution Networks" shortTile="chanceconstrained" author="Nikolaos Koutsoukis, Pavlos Georgilakis" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/21/4154/htm" speakerList="none" speakerCount="0">
+<head> 2. Load and Renewable Generation Data Modeling</head>
+<p>
+Distribution networks are, in general, planned in order to ensure the safe network operation under any possible loading conditions over the planning period. In distribution networks with no or low penetration of RES, in which power flows from the high voltage (HV) / medium voltage (MV) substation to the MV/low voltage (LV) substations, the reinforcement and expansion plan of a distribution network was determined based on a given forecast of the maximum load demand of each year of the planning period without taking into account the variability of the output power of RES. However, in distribution networks with high penetration of RES, the aforementioned approach is not adequate, since reverse power flows occur quite often during every year of the planning period, especially in periods of low demand and high RES generation, creating new technical challenges that need to be solved at the planning stage, such as line congestion and voltage rise issues. </p>
+
+<p>Thus, a planning method for ADNs with high penetration of DERs, especially RES, has to take into account a proper dataset of load demand and RES generation during each stage of the planning period in order to determine the optimal reinforcement and expansion plan. It is important that the dataset of load demand and RES generation that will be incorporated into the planning process contains the possible combinations of load demand and RES generation. Furthermore, each set of this dataset should be different from the rest in order to avoid the unnecessary repetition of similar load-generation sets. </p>
+
+<p>The first feature of this dataset is the quality. A high quality dataset for the planning of a distribution network needs to be created in a way that it adequately considers the uncertainties of load demand and RES generation during each stage of the planning period. The dataset’s second feature is its proper size. A large dataset will increase significantly the computation time of the solution of the DNP problem, making it sometimes impractical to solve. However, a small dataset would deteriorate the dataset’s quality. </p>
+
+<p>This paper proposes a method that is based on a k-means clustering method to generate probabilistic load-generation sets for each stage of the planning period in order to model accurately the load and renewable generation uncertainties. The k-means method is an established clustering method, which has been widely employed for the classification of large volumes of data. The probabilistic load-generation sets are determined based on historical data of wind speed, solar irradiance and load demand variability in order to be used as the input data of the proposed multistage planning method of ADNs. </p>
+
+<head> 2.1. The k-Means Clustering Method</head>
+<p>
+Data clustering is a process that allocates a set of individual data into smaller groups (clusters) such that (a) the individual data with similar features are grouped into the same cluster and (b) the dissimilarity of each created cluster compared to the rest is high enough making each cluster distinct. The k-means clustering method is a partitioning clustering technique that employs an iterative process to optimize the quality, i.e., the dissimilarity, of a predetermined number of distinct clusters. </p>
+
+<p>The k-means clustering method is initialized by specifying the number of clusters (<hi rend="italic">k</hi>) and selecting randomly individual data from the whole dataset as the cluster centroids. The optimal number of clusters can be determined by the method presented in. The k-means method allocates the remaining individual data between clusters so that the Euclidean distance of an individual vector data () from its corresponding cluster centroid () is minimized as shown in (1). The k-means clustering method has been widely used for data management of power systems related problems:
+
+(1)
+
+</p>
+
+<p>Then, the average of all the individual data that are the members of a cluster is set as the new centroid of that cluster. Overall, the k-means method determines the clusters’ centroids so that the sum of squared distances of each individual vector data from its corresponding cluster centroid is minimized. This iterative process is terminated when a convergence criterion is fulfilled. The convergence criterion is that there is no change in the clusters’ centroids or after a certain number of iterations the change in the clusters’ centroids is below a threshold. After the data clustering is terminated, the occurrence probability of each cluster’s centroid can be calculated, as follows:
+
+(2)
+
+</p>
+</text>

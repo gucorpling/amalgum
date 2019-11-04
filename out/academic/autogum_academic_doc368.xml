@@ -1,0 +1,29 @@
+<text id="autogum_academic_doc368" title="Effective Planar Cluster Detection in Point Clouds Using Histogram-Driven Kd-Like Partition and Shifted Mahalanobis Distance Based Regression" shortTile="effective-planar" author="Jakub Walczak, Tadeusz Poreda, Adam Wojciechowski" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2072-4292/11/21/2465/htm" speakerList="none" speakerCount="0">
+<head> 4. Methodology</head><head> 4.1. Datasets</head>
+<p>
+The notion of a <hi rend="italic">benchmark dataset</hi> for planes detection task is not well established in the literature. Almost every reported method used a different dataset, including artificially generated ones. In and, S3DIS dataset was used. However, it contains points labelled with respect to objects’ adherence (i.e., a chair, a table, a lamp) rather than the individual planes. On the other hand, Li et al. made use of a laser scan (Room-1) from Rooms UZH Irchel dataset, in spite of the fact that it does not contain any labelled data. The S3DIS dataset shows much sparser point clouds density than in the case of rooms from UZH Irchel dataset. These datasets differ significantly in terms of accuracy, noise, scan shadows, cardinality, and scene complexity. Therefore, it was decided to use representatives from both of them to verify the proposed method on point clouds of varying nature. </p>
+
+<p>The present study uses point clouds of the S3DIS dataset and the Room-1 point set used by Li et al. (Table 2). </p>
+
+<p>Because for the Room-1 dataset no ground truth segmentation was provided, it was labelled manually. The ground truth segmentation of the S3DIS dataset, in turn, was manually modified to represent individual planes. An example of six point clouds from S3DIS and Room-1 datasets are presented in Table 2. </p>
+
+<head> 4.2. Experiments</head>
+<p>
+Experiments were conducted in two stages. At first, the space partition methods: PCP, octree, kd-tree, VCCS, and the proposed hd-kd-tree were examined. Secondly, planar clusters detection was assessed. </p>
+
+<p>For the space partition juxtaposition, four values were presented: the division tree spreadness (number of all nodes in division tree), the final number of groups, the number of points, which remains after the partition process was accomplished, and the partition time. All space partition methods were tested on the S3DIS dataset with the same setup (Table 3). </p>
+
+<p>A decision to use quality measures applied by Dong et al. and Li et al. for planar cluster detection was made to clearly demonstrate the superiority of the proposed method. Hence, ordinary plane precision (Equation (12)), plane recall (Equation (13)) and over- as well as under- segmentation rates (Equations (14) and eqrefeq:usr) were used as the validity measures of the entire procedure.
+
+(12)
+
+(13)
+
+where  stands for a number of correctly segmented planar clusters (with maximum overlapping strategy, 80%),  represents the total number of planar clusters obtained as the algorithm output, and  is a number of ground truth planar clusters.
+
+(14)
+
+(15)
+
+where  is a number of resulting planar clusters that overlap the multiple ground truth planar clusters. , in turn, is a number of ground truth planar clusters overlapping more than one resulting planar cluster. </p>
+</text>

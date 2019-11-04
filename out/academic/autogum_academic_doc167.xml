@@ -1,0 +1,73 @@
+<text id="autogum_academic_doc167" title="Angle Tracking Observer with Improved Accuracy for Resolver-to-Digital Conversion" shortTile="angle-tracking-observer" author="Haoye Qin, Zhong Wu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-8994/11/11/1347/htm" speakerList="none" speakerCount="0">
+<head> 2. Principles of Resolver-to-Digital Conversion</head>
+<p>
+In this section we first introduce the basic principle of the resolver and its subsequent demodulation methods, and then several previous RDC solutions are presented and evaluated for their advantages and drawbacks. </p>
+
+<head> 2.1. Principle of Resolver</head>
+<p>
+A resolver is a position sensor comprising of a stator and a rotor, which is connected to the shaft of the motor for detecting its angular position. The stator portion houses three windings, namely one excitation winding and two output windings (sine and cosine windings), of which the voltage output amplitudes are orthogonally symmetric, specifically, sinusoidally and cosinusoidally related to the shaft angle. The excitation winding is responsible for inducing voltage in the rotator windings through electromagnetic induction. With the shaft angle changing, amplitudes of the two-phase voltages from sine and cosine output windings are measured and employed to determine relative position between the stator and rotor. </p>
+
+<p><figure>Figure 1</figure> illustrates the configuration of a resolver and subsequent software-based RDC scheme, which serves as an integrated position estimation system. The excitation windings are usually applied with a sinusoidal reference voltage of constant amplitude and high frequency, expressed as:
+
+(1)
+
+where <hi rend="italic">A</hi> is the amplitude of the reference voltage and <hi rend="italic">ω</hi><hi rend="italic">ref</hi> is the angular frequency. </p>
+
+<p>When the rotor rotates, the output windings will generate amplitude-modulated pair signals as:
+
+(2)
+
+where <hi rend="italic">K</hi> is the effective transformation ratio of the resolver and <hi rend="italic">θ</hi> represents the angular position of the rotor with respect to the stator winding. These two modulated signals <hi rend="italic">u</hi>1(<hi rend="italic">θ</hi>,<hi rend="italic">t</hi>) and <hi rend="italic">u</hi>2(<hi rend="italic">θ</hi>,<hi rend="italic">t</hi>) have the form of sinusoidal and cosinusoidal envelopes. Then, envelope detection is necessary to obtain the needed signal. In practice, there are always disturbances from imperfect characteristics, namely the amplitude imbalances, DC offsets and imperfect quadrature, which arise from eccentric rotor, unequal winding and non-orthogonal symmetry of the windings. Hence, the signal after envelope detection can be expressed in the form:
+
+(3)
+
+where  and  are the offsets, and  represents the imperfect quadrature. Preprocessing methods (noise reduction, calibration and correction) are carried out to result in:
+
+(4)
+
+where <hi rend="italic">u</hi>sin and <hi rend="italic">u</hi>cos are two ortho-symmetric signals, whose trigonometric features aid in subsequent demodulation. </p>
+
+<p>Finally, the angular position <hi rend="italic">θ</hi> and velocity are calculated through suitable demodulation algorithms (for example, phase-locked loop and arctangent algorithms) to obtain the estimation speed  and position . </p>
+
+<p>As is demonstrated in the resolver’s principle, the orthogonal symmetry of alignment of two output windings results in the orthogonal symmetry of both envelope signals and post-envelope-detection signals. </p>
+
+<head> 2.2. Classical Resolver-to-Digital Conversion</head><head> 2.2.1. Arctangent Method</head>
+<p>
+A straightforward method is to obtain the angular position <hi rend="italic">θ</hi> is through arctangent operation of <hi rend="italic">u</hi>sin and <hi rend="italic">u</hi>cos, given by:
+
+(5)
+
+</p>
+
+<p>As is clearly indicated by Equation (5), the arctangent method suffers from its highly nonlinear arctangent operation and is limited to application on low-speed estimation. Also, with a nonlinear feature, there needs to be a look-up table for the arctangent calculation, which increases the software loads. </p>
+
+<head> 2.2.2. Conventional PLL-Based ATO</head>
+<p>
+As shown in <figure>Figure 2</figure>, the conventional ATO method tracks angular position based on PLL technique. <figure>Figure 2</figure>a is the actual form of the ATO, where <hi rend="italic">kI</hi> and <hi rend="italic">kP</hi> are the coefficients for the integral and proportional terms, respectively, and <figure>Figure 2</figure>b shows the linearized structure. </p>
+
+<p>The estimated angular position is transformed through trigonometric function and multiplied by the demodulated signals. By utilizing the feature of orthogonal symmetry in the resolver signals in Equation (4), the phase error can be derived from the phase detector (PD), expressed as:
+
+(6)
+
+</p>
+
+<p>When the ATO functions properly, the position error is small enough, that is, , so the input error signal can be expressed as . Therefore, linearization of the ATO can be implemented, as shown in <figure>Figure 2</figure>b, and the closed loop transfer function is derived as:
+
+(7)
+
+</p>
+
+<p>The conventional ATO is a representative closed-loop estimation system which overcomes noise and track the input signal with a relatively high precision. The linearized structure of the ATO belongs to a type-II system. </p>
+
+<head> 2.2.3. Compensated Type-III ATO</head>
+<p>
+In, an acceleration-compensated ATO was proposed by employing the estimated speed to generate a compensation module for the position error, comprising a differentiator and a first-order low-pass filter, which finally makes this ATO a type-III system. The actual scheme of this method is shown in <figure>Figure 3</figure> and a linearized structure of this ATO is analogous to <figure>Figure 2</figure>b. Compared with <figure>Figure 2</figure>, there is a third parameter <hi rend="italic">T</hi> representing the time constant of the low-pass filter. </p>
+
+<p>The linearized closed-loop transfer function can be denoted as:
+
+(8)
+
+</p>
+
+<p>This compensated type-III ATO has the basic structure inherited from the conventional ATO but resolves the steady-error of estimating constant acceleration signal (<hi rend="italic">θ</hi> = <hi rend="italic">α</hi><hi rend="italic">t</hi>2) with a time-saving and simple technique of adding a compensation module, which achieves a higher precision in tracking the position of an accelerating motor. However, this method fails to eliminate steady-state error resulting from a first- or higher-order acceleration signal. </p>
+</text>

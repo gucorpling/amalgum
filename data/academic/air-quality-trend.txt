@@ -1,0 +1,151 @@
+ 1. IntroductionDue to rapid industrialization, air quality is recognized to be an issue of primary importance for human health. Scientific studies have suggested links between air pollutants and numerous health problems [1,2,3,4]. Thereby, the neediness of improvement air quality in terms of pollutants concentration reduction is essential. In order to deal with this issue, it is necessary to identify and implement long-term air pollution abatement strategies [5]. In this way, the European Union (EU) Framework supplies useful information on air quality assessment techniques, establishes limit values of the pollutants, and urges to develop Air Quality Plans, in particular through Directive 2008/50/EC [6] of the European Parliament and of the Council on ambient air quality and cleaner air for Europe [6] (amended by 2015/1480/EC [7]).In order to develop Air Quality Plans is essential to know properly the concentrations of the different several pollutants. The EU normative (Directive 2008/50/EC [6], amended by 2015/1480/EC [7]) suggests that 90% of the data per year are necessary, and where possible, modelling techniques should be applied to enable point data to be interpreted in terms of geographical distribution of concentration. This could serve as a basis for calculating the collective exposure of the population living in the area. The results of modelling shall be taken into account for the assessment of air quality with respect to the target values.In this context, a spatio-temporal modelling of PM10 (particles < 10
+μ
+m) concentration is applied to understand the trend, to know the influence of the variables to exposure risk, to find the missing data to evaluate air quality, and to estimate data for those sites where they are not available. In addition, it is a useful tool to reduce the number of the sampling points or the days of sampling when there is not enough equipment. This assessment is essential to improve air quality policies and warning alert systems.The lack of information in time series for each of the monitoring stations makes it difficult to analyse and manage statistics. Previously, statistical methods have been used to predict the concentration of PM10 over time [8,9,10,11]. The aim of this study is to fill missing data by using interpolation statistical methods. The study also focuses on testing the goodness of these methods in order to find the one that better approaches the gaps. After comparing the results of the methods employed through the correlation analysis, the best matching method to restore missing data is chosen. 2. Description of the Study AreaThe study area is one of 50 provinces administratively dividing Spain, located in the east of Spain (Figure 1) called Castellón. With 6632 Km
+
+
+2
+
+ and 587,327 inhabitant, this province has a density of 87.81 inhabitants/Km
+
+
+2
+
+ distributed unevenly inside territory, namely, the 85% of the residents live on the coast, 60% in the metropolitan area, and 30% in the capital (INE 2015, Spanish Statistical Office, www.ine.es).A Mediterranean climate defines this area, a variety of subtropical climate characterized by wet and mild winters, dry and hot summers, and with a mean temperature around 17
+
+
+∘
+
+C in coastal areas. Temperatures are colder in the inland, and rainfall in winter is in the form of snow around 600 mm. At the coast, the annual rainfall is around 500 mm, it is abundant in spring and autumn. Summer is prevailed by Azores anticyclone [12].This area has a complex atmospheric environment with a system of local breezes due to geographical characteristics and the proximity to the sea. These periodic land-sea winds have been extensively studied by several authors [13,14,15,16]. Thus, the concentration of the different pollutants may be affected by the emission of contamination sources located outside of the study area on a daily basis.The natural source of PM10 in this area is the resuspension of mineral materials from the surrounding mountains with a poor vegetation cover due to the low rainfall. Soil erosion is a concern for air quality. In fact, the study area, in the province of Castellón, is located in the geological context of the Iberian Range (Iberian Plate), in the easternmost part of the Aragonese branch, characterized by preferential NW-SE structural alignments. The geologic materials that predominate are mainly sedimentary materials. Firstly, carbonates (limestones and dolomites), followed by sandstones and lutites and to a lesser extent gypsum. Standing out that towards the coast there is a considerable extension of quaternary deposits of colluvial and alluvial origin that form the great glacis of La Plana (the plain area). On the other hand, in a more local and less widespread way, some ancient outcrops of Paleozoic metamorphic rocks formed by slates, phyllites and schists appear. Therefore, the phenomena of resuspension of mineral particulate matter in the atmosphere would be mainly associated to: clay, quartz, calcite, dolomite, hematite and gypsum minerals. Low rainfall favours the long residence time of particles from these geological materials. Moreover, considering the presence of a nearby coast, the PM10 concentrations are also affected by sea spray. It is produced by bubble-bursting processes when wind hits the surface of the ocean and waves occur. Small bubbles are formed, which discharge liquid particles in the range of submicrometre size up a few micrometres. These particles projected at very high speeds are incorporated into the masses of moving air [17]. In addition, it is important to consider the long-range transport of materials from North Africa [18,19]. These dust intrusions from North Africa influence ambient PM10 levels in the study area at around 2
+μ
+g/m
+
+
+3
+
+ on an annual basis [20].Anthropogenic pollution sources originate from automobile traffic (mobile sources) and industrial activity (fixed sources). The urban and industrial development of Castellón region is especially prominent, causing heavy and complex air pollution problems as many research articles have reported [21,22]. This region is a strategic area in the framework of European Union (EU) pollution control. It is the first manufacturer and exporter of ceramics tiles in the EU. This industrial sector has an important feature, which is a large concentration of manufacturers in a tiny space. In addition, at the East of the study area, there is a thermal power plant (coal gasification integrated in a combined cycle), a refinery and several chemical industries. These industries together contribute to environmental pollution in the small area. 3. Methodology 3.1. Data CollectionThe measurements conducted by “Red Valenciana de Vigilancia y Control de la Contaminación Atmosféric” of “Conselleria de Agricultura, Medio Ambiente, Cambio Climático y Desarrollo Rural, Generalitat Valencian” are used in this analysis to assess air quality status in the Castellón region. The management of the sampling fulfils European Directive 2008/50/EC [6] (amended by 2015/1480/EC [7]) on ambient air quality and cleaner air for Europe. Firstly, Figure 1 shows the network location of stations which monitors air quality levels for PM10 in the period 2006–2015, and secondly, Table 1 shows the characteristics of the monitoring stations. 3.2. Modelling ToolA common problem encountered in time series analysis evaluating air quality is the scarcity or nonexistence of current daily or historical measurements. Missing data in time series analysis may lead to a biased estimation of the pollutants and perform erroneous air quality assessment, which means that a more suitable solution is needed in order to create results that are more realistic.The mentioned restriction urges to fill the data gaps by using statistical methods, and after testing different alternatives and reviewing interpolation methods used to fill gaps in time-series in the literature [23,24,25], we focused on three interpolation methods (a) Linear Interpolation (LI) [26,27], (b) Exponential Weighted Moving Average (EWMA) model [28] and (c) Kalman Smoothing on structural time series model (KS-StructTS), as these were the ones that better commit with our data. The first one is characterized for returning a list of points (x,y) which linearly interpolate given data points. The next one reduces influences by ranking first recent data points and addresses both of the problems associated with the simple moving average as prioritises recent data. The Kalman Smoothing applies to a structural model for a time series by maximum likelihood [29,30,31].In order to better understand differences between these three methods a correlation analysis was carried out by performing three plots considering the correlation between two methods each time. All the interpolation methods have been managed by the free R software [32]. 4. Results and Discussion 4.1. PM10 TrendsA comparison of PM10 levels was carried out at different points in the Castellón region, and Figure 2 shows the blox-pot of the data of all stations in the study period (2006–2015). The three typologies of stations are significantly different confirmed with an anova test. Industrial stations present higher levels than the others and rural stations have the least PM10 concentrations although Zorita presents a higher value than all distributions which justifies studying the trend in order to assess the variables that influence it. 4.1.1. PM10 BackgroundIt is very important to know the regional background in order to estimate the contribution of anthropogenic sources. The data used for estimating the regional background are from monitoring stations located in the countryside at some distance from anthropogenic PM emission sources and urban nuclei. European Community has stabled some stations of this type throughout its territory through the EMEP, Cooperative Programme for the Monitoring and Evaluation of Long Range Transmission of Air Pollutants in Europe. The EMEP is a scientifically based and policy-driven program under the Convention on Long-range Transboundary Air Pollution (CLRTAP) for international co-operation to tackle transboundary air pollution problems. Ten EMEP stations are currently operative in Spain, distributed all over the country [33].In the study area, the Morella station could be considered a background EMEP program station as it adjusts to its parameters (see criterion in Van Dingenen et al. [34]), and in the study period (2006–2015) the annual mean of PM10 ranges 8–14
+μ
+g/m
+
+
+3
+
+. Van Dingenen et al. [34] in 2004 determined the European continental background concentration about 7.0
+μ
+g/m
+
+
+3
+
+ and in the same year Querol et al. [33] studied PM10 concentrations at regional background in different EMEP station around Spain. They determined regional background around 15
+μ
+g/m
+
+
+3
+
+ in Galicia, Euskadi and central Spain, 17
+μ
+g/m
+
+
+3
+
+ in Andalucia and 19
+μ
+g/m
+
+
+3
+
+ in Canary Island. The regional background in the study area is over European continental background concentration and in the same range of the other region of Spain. Being in mind the annual average data of Castellón region, there is a difference between Morella station and industrial and urban stations about 15
+μ
+g/m
+
+
+3
+
+, and 5
+μ
+g/m
+
+
+3
+
+ from the other rural stations. These differences are attributable to anthropogenic sources. 4.1.2. PM10 Spatio-Temporal TrendFigure 3 presents the PM10 concentration of all stations in the study period (2006–2015) for available measurements. A general decrease of PM10 concentration levels over the study period is observed in the case of industrial and urban stations due to economic crisis. A consequence of the economic recession is a reduction of industrial production in this area and therefore, a decrease in traffic is observed (Table 2). Along with this line, the main sources of emission have been reduced, not linearly, but with oscillations when activation or deactivation of the local economy takes place. Thereby, it is expected that when the productive processes increase, more pollutants could be emitted and consequently the levels of PM10 could increase. In the case of rural stations, the levels remain constant throughout the study period.In addition, in Figure 3 it is observed that the behaviour is tri-modal for the case of industrial and urban stations, and bi-modal in the case of rural stations. The two peaks that are coincident in the three types of stations were observed in spring and summer. In these months, rainfall is lower and temperatures are higher which leads to dryness of the terrain, and consequently, there is an increase in the resuspension of the substrate in this area and there are more particles in the air. This fact was also observed by Cesari et al, 2018 [35] in the southern of Italy. In addition, the mixed layer, caused by the vertical heat convection, is increasing that favours the intrusion of particulate matter from long-range transport. The atmospheric dust in the upper layer has the possibility of downward mixing [36,37]. The assessment of PM10 cannot be done with one criterion due to long-range transport of particles from North Africa. Figure 4 shows the frequency per month of this phenomenon over the study area. Mainly, it occurs in spring and summer.This seasonal pattern is frequently observed from April to August and at the end of the autumn, which coincides with what was observed by Escudero et al. [38]. During these periods, surface winds introduce mineral particles into the atmosphere from African dry soils. Sahara and Sahel areas together entail 99% of North African dust emissions. Sahara emits between 13.4 × 10
+
+
+8
+
+ to 15.7 × 10
+
+
+8
+
+ Tn·year
+
+
+
+−
+1
+
+
+ while Sahel 2.3 × 10
+
+
+8
+
+ to 3.8 × 10
+
+
+8
+
+ Tn·year
+
+
+
+−
+1
+
+
+[39]. It is calculated that a 12% of this dust is transported northward to Europe [40], therefore about 2 × 10
+
+
+8
+
+ Tn·year
+
+
+
+−
+1
+
+
+ arrive at Mediterranean Basin. Initially, this phenomenon induces that the regional background of particles are increased [41], and Querol et al. [42], in 2009 reported that the annual mean levels of PM10 was heightened around 10
+μ
+g/m
+
+
+3
+
+ in air quality networks from the Eastern Mediterranean, and 2 to 4
+μ
+g/m
+
+
+3
+
+ in the Western Mediterranean.The third peak, which is observed in industrial and urban stations, is monitored in winter. During this season, a thermal inversion phenomenon occurs that stabilises the air mass, which reduces turbulence and mixing [43]. Under these conditions, emitted pollutants are accumulated and its concentration increases. The last peak also points out the use of domestic heating (mainly biomass and fuel) that depends on the number of inhabitants of each zone, which fades in rural areas where the density of the population is lower. 4.2. Modelling ResultsAs previously mentioned, the EU normative (Directive 2008/50/EC [6], amended by 2015/1480/EC [7]) suggests that the 90% of the data per year is necessary to do this assessment. For this reason, it is necessary to formulate a statistical model for estimating the missing data.In order to compare interpolation methods with each other, two-to-two correlations have been calculated to analyze their similarity. Thus, in Figure 5 it is shown the correlation graph between two interpolation methods. Black points show the performance between linear interpolation and EWMA; red points between linear interpolation and Kalman Smoothing and green points between EWMA and Kalman Smoothing. Even if we do not observe great differences between them, the EWMA method is the one that differs most from the other two. In particular, analysing the correlation coefficient, even if all of them are statistical significant the highest value correspond to the pair between linear interpolation and Kalman Smoothing. The visual analysis derived from Figure 5 is supported by the values shown in Table A1 (Appendix A). Moreover, this table also includes the RMSE values which show that the lowest values also occur between linear interpolation and Kalman Smoothing methods. Thus, these two methods are those more similar.In addition, Figure 6, Figure 7 and Figure 8, which represents both, the initial graph with missing data and the one filling the gaps using an interpolation method, suggests that Kalman Smoothing is usually the best choice for imputation as it is the one which better collects the variations between one gap and another. Linear method is only based on imputing the data following a straight line. When the number of missing is high this methods is not very accurate. The other two methods employed in this research try to impute the missing data considering the entire series and this lead to a better approximation and to a better adjustment. This result is also confirmed with the values shown in Table A2 (Appendix A). It shows how the RMSE, calculated between real data and imputed values, for each of the interpolation methods used, indicate the lowest values for the KAL for five of the study stations.Nevertheless, the goodness of the interpolation methods depends on the number of missing values of the series. Therefore, Table 3, which shows the number of missing values for each station, gives an idea about which stations will be better refilled. It is obvious, than when there are less missing values the fit is better. This is the case of Vila-real. In addition, if the missing values are distributed over the entire study period, the goodness is better. Against, if they are consecutive, the interpolation method does not present a good fit. This is the case of Castellón de la Plana, in the first year the fit is worse than the last. 5. ConclusionsPM10 trend is assessed by 10 monitoring stations with different character through time series of daily data (2006–2015) in Castellón region, Spain. These stations have industrial character, urban and rural; 4, 3 and 3 respectively. To evaluate the air quality in this region, a combination of statistical methods is used in this research to withdraw the missing data.As a first conclusion, the industrial stations present higher levels of PM10 than the rural stations, which show the lowest levels. An exception of it is Zorita station which presents a higher value than the rest of the distributions. This phenomenon occurs due to natural and anthropogenic sources that influence in each station. Natural sources are the resuspension of mineral material from surrounding mountains and the long-transport of material from North Africa, and anthropogenic sources are traffic and industrial activity since it is the first manufacturer and exporter of ceramic tiles in the EU. In reference to the PM10 regional background, a difference of 15
+μ
+g/m
+
+
+3
+
+ has been found in the case of industrial and urban stations and 5
+μ
+g/m
+
+
+3
+
+ in the case of rural stations due to anthropogenic sources in this area. During the study period (2006–2015) a decrease of PM10 levels is observed for industrial and urban monitoring stations due to anthropogenic reduction consequence to economic crisis. In the case of rural stations, the levels remain constant throughout the study period.A second conclusion is the behaviour of PM10 annual trend is tri-modal for the case of industrial and urban stations, and bi-modal in the case of rural stations. The peaks depend of the general weather conditions, that influence over the resuspension of the mineral material, the long-transport particles from North Africa and the increase of anthropogenic sources when a thermic inversion phenomenon occurs.The third conclusion of the research is that the spatio-temporal modelling of PM10 concentrations is presented to properly assess the air quality in the study area. Since we do not have the complete data series and to be able to make proper estimations, three interpolation methods have been employed. As the analysis is sensitive to missing values, many efforts have been devoted to the validation of interpolation methods with the intention of minimizing the possible errors that could be created by the imputed values in the trend of the actual values of the PM10 that we are analyzing. For this reason the graphic analysis has been combined with numerical values that confirm the conclusions drawn visually. Thus, after making comparative analyzes between the interpolation methods and studying which one best approximates the data, we have concluded that Kalman Smoothing is, in general, the best option. In addition, it has also been shown that the number of missing values and their distribution in the study period are important factors in order to apply the interpolations methods properly.

@@ -1,0 +1,71 @@
+<text id="autogum_academic_doc273" title="An Effective Multiclass Twin Hypersphere Support Vector Machine and Its Practical Engineering Applications" shortTile="effective-multiclass" author="Qing Ai, Anna Wang, Aihua Zhang, Wenhui Wang, Yang Wang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/10/1195/htm" speakerList="none" speakerCount="0">
+<head> 2. Related Works</head>
+<p>
+In this paper, we consider a multi-class classification problem with a training dataset , where <hi rend="italic">K</hi> is the number of classes and  is the number of the samples of the <hi rend="italic">k</hi>-th class. The size of training dataset is . Denote, for convenience, by  the sets of samples of the <hi rend="italic">k</hi>-th class, i.e., . </p>
+
+<head> 2.1. Review of K-SVCR Multi-Classifier</head>
+<p>
+The K-SVCR multi-classifier is based on decomposition-reconstruction strategy.  binary SVM sub-classifiers are constructed, each of which evaluates each sample into 1-vs-1-vs-rest structure. The classification result of K-SVCR is shown in <figure>Figure 1</figure>a intuitively. </p>
+
+<p>The sub-classifier  for two focused classes <hi rend="italic">i</hi> and <hi rend="italic">j</hi> in K-SVCR seeks an optimal hyperplane
+
+(1)
+
+here  is the normal vector and  is the bias term. The optimal hyperplane can be obtained by resolving the following QPP:
+
+(2)
+
+where , , ,  and ,  are slack variables, the parameter  is restricted to . </p>
+
+<p>For a testing sample <hi rend="italic">x</hi>, the sub-classifier  determines its class by
+
+(3)
+
+</p>
+
+<p>For the testing sample <hi rend="italic">x</hi>, the final label can be determined by vote rule. </p>
+
+<head> 2.2. Review of Twin-KSVC Multi-Classifier</head>
+<p>
+Twin-KSVC is an improvement of K-SVCR. The Twin-KSVC constructs  pairs of binary TSVM sub-classifiers, which evaluates each sample into 1-vs-1-vs-rest structure. The classification result is intuitively presented in <figure>Figure 1</figure>b. </p>
+
+<p>The sub-classifiers  and  for two focused classes <hi rend="italic">i</hi> and <hi rend="italic">j</hi> in Twin-KSVC seek a pair of hyperplane
+
+(4)
+
+where  and  are the normal vector and the bias term of the corresponding hyperplane, respectively. The two hyperplanes can be obtained by resolving the QPPs as follows:
+
+(5)
+
+(6)
+
+where  and  are slack variables. </p>
+
+<p>For a testing sample <hi rend="italic">x</hi>, the sub-classifiers  and  assign its class by
+
+(7)
+
+</p>
+
+<p>For the testing sample <hi rend="italic">x</hi>, the final label can be also determined by vote rule. </p>
+
+<head> 2.3. Review of THKSVM Multi-Classifier</head>
+<p>
+THKSVM (Twin Hypersphere Multiclass Support Vector Machine) integrates THSVM and 1-vs-rest structure. THKSVM constructs <hi rend="italic">K</hi> hyperspheres in the training stage, whose classification result is intuitively shown in <figure>Figure 1</figure>c. </p>
+
+<p>The sub-classifier for the focused classes <hi rend="italic">i</hi> in THKSVM seeks a hypersphere
+
+(8)
+
+where  and  are the center and the radius of the corresponding hypersphere, respectively. The hypersphere can be constructed by resolving the following QPP:
+
+(9)
+
+where ,  and  are slack variables. </p>
+
+<p>The class of a testing sample <hi rend="italic">x</hi> can be determined by
+
+(10)
+
+ </p>
+</text>

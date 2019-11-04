@@ -1,0 +1,53 @@
+<text id="autogum_academic_doc171" title="Detection of Transcoding from H.264/AVC to HEVC Based on CU and PU Partition Types" shortTile="detection-transcoding" author="Zhenzhen Zhang, Changbo Liu, Zhaohong Li, Lifang Yu, Huanma Yan" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-8994/11/11/1343/htm" speakerList="none" speakerCount="0">
+<head> 3. CU and PU Partition Types Analysis in Singly Compressed HEVC Videos and AVC/HEVC Videos</head>
+<p>
+In the AVC and HEVC encoding process, quantization and reconstruction are basic operations, but they will introduce irreversible quantization errors and reconstruction errors, which make the decoded video different from the original one. The change of video content will further affect the CU and PU partition types and makes them different between AVC/HEVC videos and singly compressed HEVC videos. We will illustrate the difference elaborately in this section. </p>
+
+<head> 3.1. Theoretical Analysis</head>
+<p>
+<figure>Figure 4</figure> describes the simplified block diagram of AVC/HEVC transcoding. YUV video is a kind of uncompressed video and often used as test example of video encoders. Given a YUV video <b><hi rend="italic">V</hi></b>, the first step is to encode <b><hi rend="italic">V</hi></b> into the AVC bit stream  with bitrate . Then  will be decoded to YUV video  and recompressed into the HEVC bit stream  with bitrate . Please note two points here. One is that the reconstruction module in the encoding process is equivalent to the decoding process; thus we directly use the reconstruction module to represent the decoder in <figure>Figure 4</figure> to save space. The other one is that only HEVC encoding is implemented for a singly compressed HEVC video. That is to say, for a singly compressed HEVC video, the input video is the uncompressed YUV video <b><hi rend="italic">V</hi></b>, not its decoded version . </p>
+
+<p>From <figure>Figure 4</figure>, we can see that CU and PU partition types of each picture are determined by the content of the picture and the number of bits allocated to it by the rate control module. Here, please note that in this paper, a picture contains only one slice. Though CU and PU partition types in I pictures are different from P pictures, the partition strategy is similar. Therefore, we take the CU types in P pictures as an example to analyze the difference between AVC/HEVC videos and singly compressed HEVC videos.  </p>
+
+<p>Now let’s consider the AVC/HEVC transcoding process. Assume one uncompressed video sequence <b><hi rend="italic">V</hi></b> consists of <hi rend="italic">N</hi> P pictures and is expressed as Equation (1), where  denotes the <hi rend="italic">n</hi>th P picture of <b><hi rend="italic">V</hi></b>, then the bit stream  can be obtained by implementing the prediction, transform, quantization, and entropy coding process.
+
+(1)
+
+</p>
+
+<p>In the AVC encoding process, a rate control process is implemented. Assume the bit rate for <b><hi rend="italic">V</hi></b> is <hi rend="italic">r</hi>, let  denote the rate control process, then, the number of bits allocated to the <hi rend="italic">n</hi>th P picture can be represented as . After that, the quantization step  for the picture will be determined according to . In addition, AVC standard adopts macroblock as the basic coding unit and does not introduce the concept of CU; hence, CU types do not exist in the AVC encoding process.  </p>
+
+<p>The decoding process is the inverse process of encoding. Let  stand for the prediction signal of ,  and  represent discrete cosine transform (DCT) and inverse DCT, respectively, then the decoded video sequence  can be obtained by Equations (2) and (3), where  means the decoded version of ,  represents the rounding operator, and  denote the irreversible quantization error and reconstruction error of  and , respectively. The quantization error means the error introduced in the quantization process. The reconstruction error means the rounding error and truncation error generated in the reconstruction process.
+
+(2)
+
+(3)
+
+</p>
+
+<p>In the process of transcoding  to the HEVC bit stream , the number of bits are allocated to the <hi rend="italic">n</hi>th P picture according to Equation (4). Here we use  rather than  to represent the rate control process because the bits allocation function adopted in HEVC is different from the AVC standard.
+
+(4)
+
+</p>
+
+<p>Knowing the number of bits allocated to the <hi rend="italic">n</hi>th P picture, the type of the <hi rend="italic">k</hi>th CU in the <hi rend="italic">n</hi>th P picture  can be written as Equation (5), where  stands for the CU partition process, and  denotes the corresponding prediction signal of .
+
+(5)
+
+</p>
+
+<p>For a singly compressed HEVC video with bitrate , the number of bits allocated to the <hi rend="italic">n</hi>th P picture, and the CU partition type will be determined by Equations (6) and (7).
+
+(6)
+
+(7)
+
+</p>
+
+<p>Eventually, we can get the difference of CU partition types between the AVC/HEVC video and the singly compressed HEVC video according to Equation (8).
+
+(8)
+
+</p>
+</text>

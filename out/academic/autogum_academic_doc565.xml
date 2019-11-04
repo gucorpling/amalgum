@@ -1,0 +1,25 @@
+<text id="autogum_academic_doc565" title="A Hybrid Predictive Control for a Current Source Converter in an Aircraft DC Microgrid" shortTile="hybrid-predictive" author="Hui Yang, Rui Tu, Ke Wang, Jiaxing Lei, Wenjia Wang, Shuang Feng, Chaofan Wei" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/21/4025/htm" speakerList="none" speakerCount="0">
+<head> 2. Mathematical Model of the CSC System</head>
+<p>
+Schematic of the CSC system for the aircraft DC MG is shown in <figure>Figure 2</figure>. Power source connected to the input side of CSC could be the variable frequency main generators or the auxiliary power units. The input LC filter constituted by the inductor <hi rend="italic">L</hi>fi and the capacitor <hi rend="italic">C</hi>fi attenuates high-frequency harmonics in input currents of CSC. In practice, part or all of the filter inductance can be provided by the armature inductance of generators. CSC consists of six switches with reverse blocking capability. If bidirectional power flow is required, each switch can be composed of two transistors in common-source connection. Otherwise, one transistor and one diode in series could serve as each switch if unidirectional power flow is sufficient. One freewheeling diode can be installed at the output side of CSC to reduce the conduction loss, yet negative output voltage will be unavailable. An LC filter composed of the inductor <hi rend="italic">L</hi>fo and capacitor <hi rend="italic">C</hi>fo is installed at the output of CSC to provide smooth load voltage. </p>
+
+<p>According to <figure>Figure 2</figure>, continuous model of the input circuit of CSC can be expressed in the state-space form:
+
+(1)
+
+where <b><hi rend="italic">u</hi></b>s and <b><hi rend="italic">i</hi></b>s are the vectors representing source voltages and currents respectively; <b><hi rend="italic">u</hi></b>i and <b><hi rend="italic">i</hi></b>i are the vectors representing input voltages and currents of CSC respectively and matrices <hi rend="italic">A</hi>i and <hi rend="italic">B</hi>i are expressed as:
+
+(2)
+
+where <hi rend="italic">R</hi>fi is the parasitic resistance of the filter inductor <hi rend="italic">L</hi>fi. </p>
+
+<p>For simplifying the derivation of prediction models for the output DBPC, differential equations rather than the state-space equation are adopted to model the output circuit:
+
+(3)
+
+(4)
+
+where <hi rend="italic">u</hi>o and <hi rend="italic">i</hi>o are the output voltage and current of CSC respectively; <hi rend="italic">u</hi>L and <hi rend="italic">i</hi>L are the load voltage and current respectively and <hi rend="italic">R</hi>fo is the parasitic resistance of the inductor <hi rend="italic">L</hi>fo. </p>
+
+<p>By controlling switches of CSC, appropriate input current vector <b><hi rend="italic">i</hi></b>i and output voltage <hi rend="italic">u</hi>o can be generated to obtain desired source current vector <b><hi rend="italic">i</hi></b>s, output current <hi rend="italic">i</hi>o and load voltage <hi rend="italic">u</hi>L. According to the principle of CSC, there are nine valid switching states in total, as listed in Table 1. The first six states generate active <b><hi rend="italic">i</hi></b>i and non-zero <hi rend="italic">u</hi>o. In Table 1, <hi rend="italic">uxy</hi> denotes the input line–line voltage between phase <hi rend="italic">x</hi> and phase <hi rend="italic">y</hi>, where <hi rend="italic">x</hi>, <hi rend="italic">y</hi> ∈ {A, B, C}. The last three states generate zero <b><hi rend="italic">i</hi></b>i and <hi rend="italic">u</hi>o. If a freewheeling diode is adopted, these zero states can be replaced by the on-state of the freewheeling diode. </p>
+</text>

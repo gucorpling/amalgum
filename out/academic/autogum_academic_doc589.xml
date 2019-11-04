@@ -1,0 +1,33 @@
+<text id="autogum_academic_doc589" title="Hyperspectral Super-Resolution Technique Using Histogram Matching and Endmember Optimization" shortTile="hyperspectral-superresolution" author="Byunghyun Kim, Soojin Cho" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4444/htm" speakerList="none" speakerCount="0">
+<head> 3. Proposed Solution</head><head> 3.1. Overall Scheme</head>
+<p>
+In this paper, we propose a solution to the problem formulated in Section 2, using histogram matching and the endmember abundance optimization process proposed in Lanaras et al.. As briefly explained in Section 1, defined a high-resolution HSI as a factorization of spectral endmembers and its per-pixel abundance. The authors of find a high-resolution HSI by optimizing the spectral endmembers to a low-resolution HSI, and the per-pixel endmember abundances to a high-resolution RGB, image. The optimization step for endmember abundance is adopted in this method to find the per-pixel endmember abundance. The overall framework of the proposed solution is displayed in <figure>Figure 1</figure>. The HSR procedure proposed in this paper consists of three steps:  </p>
+
+<p>Step 1. Creating an RGB image from a low-resolution HSI, using a spectral response function of a commercial RGB camera. </p>
+
+<p>Step 2. Matching the histogram of a high-resolution RGB image with that of a low-resolution RGB image, obtained in Step 1. </p>
+
+<p>Step 3. Optimizing endmember abundance of a high-resolution HSI toward the histogram-matched high-resolution RGB image obtained in Step 2.  </p>
+
+<p>In Step 1, a low-resolution RGB image is reconstructed from a low-resolution HSI by factorizing a spectral response function of a commercial RGB camera. The reconstructed low-resolution RGB image is used as a color distribution standard point for both the low-resolution HSI and high-resolution RGB image. In Step 2, the histogram of the high-resolution RGB image is matched with the low-resolution RGB image obtained in Step 1. Since the high-resolution RGB image has the same color distribution as the low-resolution RGB image, it is less necessary to match the color distribution using an optimization process. In Step 3, the per-pixel endmember abundance optimization process of is adopted, to match the spatial distribution of endmember abundance between the high-resolution HSI and the high-resolution RGB image. The per-pixel endmember abundance optimization is performed by reducing the subtraction between the target high-resolution RGB image and the high-resolution RGB image obtained from the high-resolution HSI. Because this optimization process disregards the objective function, representing the difference between low- and high-resolution HSIs, the endmember abundance freely converges to the pixel location of the high-resolution RGB image. </p>
+
+<p>Each part of the proposed method is formulated as explained below. Step 1 factorizes the spectral response function of a RGB camera with a low-resolution HSI to reconstruct a low-resolution RGB image. An RGB image is reconstructed the equation formulated in:
+
+(5)
+
+where ) is the spectral response function of an camera for each channel of RGB,  is spectral power distribution of an illuminant and  is a spectral reflectance of a point in an image. Equation (5) can also be written in a matrix form, for a discrete summation along the spectral range of a hyperspectral camera with a given bandwidth. Step 2 matches the histogram of an RGB image to that of a low-resolution RGB image <b>L</b>, obtained from an HSI. The histogram-matching process is a minimization of grayscale transformation <hi rend="italic">T</hi> in the following equation:
+
+(6)
+
+where  is a specific index on a gray scale,  is the cumulative distribution function of <b>L</b>’s histogram and  is the cumulative distribution function of <b>I</b>’s histogram for all intensities <hi rend="italic">k</hi> on a gray scale. Since the histogram equalization is defined on a gray scale, it has to be iteratively performed on each channel of a RGB image. <hi rend="italic">T</hi> is a function that finds the index on  that has the value most similar to the value of  at a particular index  on grayscale. After the function <hi rend="italic">T</hi> is defined for <hi rend="italic">g</hi> on all intensities on a gray scale, histogram equalization is performed by finding and mapping a value corresponding to <b>L</b> in the input image <b>I</b>, using <hi rend="italic">T</hi>. In Step 3 of the proposed algorithm, an estimate of <b>Z</b>, or equivalently <b>E</b> and <b>A</b>, is needed. From the given super-resolution problem, the following constrained least-squares problem is formulated as:
+
+(7a)
+
+(7b)
+
+with  denoting the Frobenius norm, and  is elements of <b>A</b> and constrained to non-negative values.  </p>
+
+<head> 3.2. Overall Algorithm and Implementation </head>
+<p>
+The method proposed in Section 3.1 proceeds with the following procedure, as described in Table 1. The algorithm requires <b>H</b> and <b>I</b>, which are low-resolution HSI and high-resolution RGB images, respectively. Because <b>Z</b> will be reconstructed using endmember abundance with the same resolution as <b>I</b>, the resolution of <b>I</b> has to be an integer multiple of the resolution of <b>H</b> with upsampling rate <b>S</b>. Additionally, RGB camera sensitivity <b>C</b> is required to reconstruct an RGB image from <b>H</b>.  </p>
+</text>

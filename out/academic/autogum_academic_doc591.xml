@@ -1,0 +1,35 @@
+<text id="autogum_academic_doc591" title="A Hybrid Data Hiding Method for Strict AMBTC Format Images with High-Fidelity" shortTile="hybrid-data-hiding" author="Chin-Chen Chang, Xu Wang, Ji-Hwei Horng" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-8994/11/10/1314/htm" speakerList="none" speakerCount="0">
+<head> 2. Related Work</head>
+<p>
+Two important techniques are used in our proposed method: absolute moment block truncation coding (AMBTC) compression and matrix coding. These techniques are briefly introduced in Section 2.1 and Section 2.2, respectively. </p>
+
+<head> 2.1. Absolute Moment Block Truncation Coding (AMBTC)</head>
+<p>
+In 1979, an efficient block-based lossy image compression technique named block truncation coding (BTC) was proposed by Delp and Mitchell. In order to achieve compression, an image is divided into several non-overlapping blocks and stores only one bitmap and two corresponding quantization values of each block. Because the algorithm utilized in the BTC technique has significant computational complexity, Lema and Mitchell proposed an improved version named absolute moment block truncation coding (AMBTC). In AMBTC, the image is also divided into several non-overlapping blocks with a size of <hi rend="italic">k</hi> × <hi rend="italic">k</hi> pixels, for each block, the mean value <hi rend="italic">AVG</hi> can be calculated by Equation (1).
+
+(1)
+
+where  denotes the <hi rend="italic">j</hi>-th pixel value in the block. The bitmap can then be constructed by comparing each pixel value with <hi rend="italic">AVG</hi>: Set the bit value of bitmap to ‘0’ if the pixel value  is less than <hi rend="italic">AVG</hi> and set to ‘1’ for others. </p>
+
+<p>Next, Equations (2) and (3) can be applied to derive two quantization values, i.e., the low mean value <hi rend="italic">L</hi> and the high mean value <hi rend="italic">H</hi>, respectively.
+
+(2)
+
+(3)
+
+where <hi rend="italic">q</hi> represents the number of ‘1’ that exist in the bitmap <hi rend="italic">BM</hi>. Meanwhile,  and  denote two original pixel sets which the corresponding bits are ‘0’ and ‘1’, respectively in bitmap <hi rend="italic">BM</hi>. Therefore, the final compression code of the block can be obtained by concatenating <hi rend="italic">L</hi>, <hi rend="italic">H</hi>, and <hi rend="italic">BM</hi>, i.e., (<hi rend="italic">L</hi>, <hi rend="italic">H</hi>, <hi rend="italic">BM</hi>). The corresponding restored block can be constructed by replacing each ‘0’ and ‘1’ of the bitmap with low mean value <hi rend="italic">L</hi> and high mean value <hi rend="italic">H</hi>, respectively. </p>
+
+<head> 2.2. Matrix Coding</head>
+<p>
+Matrix coding method is a modified version of the (7, 4) Hamming code, and is widely used in LSB-based data hiding methods. By utilizing the matrix operation, for a seven-bit sequence (also called a code-word), at most one bit is changed when embedding three secret bits. In the matrix coding method, <hi rend="italic">H</hi> is the check matrix and is defined as . Equation (4) is used to obtain which bit needs to be changed.
+
+(4)
+
+where <hi rend="italic">CW</hi> denotes the seven-bit sequence, and <hi rend="italic">S</hi> represents the three-bit vector to be hidden. Notice that Equation (4) is calculated under the modulo-2 operation. The location of <hi rend="italic">z</hi> is listed in Table 1. </p>
+
+<p>In the data extraction phase, Equation (5) can be used to extract three bits of secret data from each seven-bit sequence.
+
+(5)
+
+where <hi rend="italic">RCW</hi> denotes the seven-bit sequence that has been embedded. Equation (5) is also calculated under the modulo-2 operation. </p>
+</text>

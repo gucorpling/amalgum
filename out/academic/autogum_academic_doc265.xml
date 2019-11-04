@@ -1,0 +1,35 @@
+<text id="autogum_academic_doc265" title="A Reinforcement Learning Method for a Hybrid Flow-Shop Scheduling Problem" shortTile="reinforcement-learning" author="Wei Han, Fang Guo, Xichao Su" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1999-4893/12/11/222/htm" speakerList="none" speakerCount="0">
+<head> 3. Description of the Hybrid Flow-Shop Scheduling Problem</head>
+<p>
+In this section, HFSP is introduced, and its standard model is established. </p>
+
+<p>A typical HFSP is shown in <figure>Figure 1</figure>, there are S stages in total in the process of HFSP, and <hi rend="italic">m</hi>1, <hi rend="italic">m</hi>2, …, <hi rend="italic">m</hi>S machines are included in each stage, respectively. Every workpiece must be worked in all stages in a certain order. In each stage, however, any one machine can be selected for each workpiece. For instance, the sequence [<hi rend="italic">start</hi>, <hi rend="italic">M</hi>12, <hi rend="italic">M</hi>24, …, <hi rend="italic">M</hi><hi rend="italic">S</hi>3, stop] can be one of an order of a workpiece being machined. </p>
+
+<p>In HFSP, several assumptions are usually made as follows: first, once a workpiece starts to be worked, it cannot be interrupted; second, a machine can only process one workpiece at a time; third, a workpiece can only be processed on one machine at a time; fourth, workpieces can be machined on any machine at each stage; fifth, there is unlimited storage capacity between any two stages (i.e., a workpiece can wait for any time between the two processes). </p>
+
+<p>HFSP is divided into the determined initial sequence HFSP and the non-determined initial sequence HFSP in this paper, according to whether the initial sequence of the workpiece is deterministic or not. Knowing the processing time in each stage of the workpiece on each machine, the purpose of HFSP is to determine the distribution of each workpiece on the machines at each stage to minimize the maximum completion time for the former. For the latter, the ordering of all workpieces is necessary to define additionally. </p>
+
+<p>( = 1, 2, …, <hi rend="italic">n</hi>) indicates the workpieces needed to be worked, in which <hi rend="italic">n</hi> is the total number of workpieces. ( = 1, 2, …, <hi rend="italic">S</hi>) is the number of machines in each stage.  is the machining time of the workpiece  at stage , machine .  is the time cost on the way from stage  to stage .  is the arrival time of workpiece  at stage , machine . Correspondingly,  and  indicate the starting and ending times of workpiece  which is machined at stage , machine .  and  reveal the time when the machine  at stage  starts to work and stops working. The standard mathematical model of HFSP is as follows:
+
+(1)
+
+(2)
+
+where  if workpiece  is worked at stage , machine , else
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+if workpiece  is the first one machined at stage , machine  and without interruption.
+
+(7)
+
+if workpiece  is worked at stage , machine . </p>
+
+<p>Equation (1) is the objective function, minimizing the maximum ending time of all workpieces in the last stage S. Equation (2) ensures that there is only one workpiece at any machine in any stage. Equation (3) clears the time limitation of arrival and start. Equation (4) shows the relationship between the completion time and the start time of the process at the same stage. Equation (5) calculates the arrival time on the next stage utilizing the end time of the previous stage. Equations (6) and (7) reveal the time when the machine  at stage  starts to work and stops working. </p>
+</text>

@@ -1,0 +1,27 @@
+<text id="autogum_academic_doc573" title="Locating Multiple Sources of Contagion in Complex Networks under the SIR Model" shortTile="locating-multiple" author="Xiang Li, Yangyang Liu, Chengli Zhao, Xue Zhang, Dongyun Yi" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4472/htm" speakerList="none" speakerCount="0">
+<head> 2. Model and Method</head><head> 2.1. SIR Model for Contagion Propagation</head>
+<p>
+In this work, we focus on an undirected graph , where <hi rend="italic">V</hi> is the set of nodes and <hi rend="italic">E</hi> is the set of edges. Each node  has its possible state—Susceptible (<hi rend="italic">S</hi>), Infected (<hi rend="italic">I</hi>), Recovered (<hi rend="italic">R</hi>). The susceptible nodes represent the people who are infected easily but have not been infected yet, meanwhile the infected nodes denote the citizens who have already been infected and are capable of infecting other nodes. The recovered nodes are the individuals who remain immune or die. Suppose that there is a time-slotted system. At first, only several nodes are infected, which are the contagion sources in the network. Meanwhile, the other nodes are susceptible. At each time step, each infected node infects its susceptible neighbors with probability <hi rend="italic">p</hi> independently, that is, a susceptible node is infected with probability  when it has <hi rend="italic">n</hi> infected neighbors. Meanwhile, the infected nodes turn to be recovered with probability <hi rend="italic">q</hi>. Additionally, the recovered nodes will not be infected, which may die or be removed. </p>
+
+<head> 2.2. Problem Formulation</head>
+<p>
+As a contagion propagates through a complex network under the SIR model, all the nodes will change infection state as time goes by. The susceptible nodes may be infected by infected neighbour nodes and the infected nodes recover to a recovered node with a certain probability. Due to the emergency response to contagion, we mainly consider an initial infection situation of the whole network and only collect two states, infected and uninfected (susceptible, recovered), of all nodes. Accordingly, the problem of the multiple sources localization problem can be described as—given the simple snapshot of the network at an early certain moment, how can we accurately locate multiple sources? </p>
+
+<p>It is common that we know the state of almost all nodes, but we have no ability to distinguish the susceptible nodes from the recovered nodes. Therefore, all nodes can be divided into two states—infected and uninfected, which decreases the accuracy of multiple sources localization certainty. </p>
+
+<head> 2.3. Potential Concentration Label Definition</head>
+<p>
+In the early period of severe contagion propagation, disease outbreaks through a crowd quickly. It comes to the situation that the nodes around sources are more likely to be the infected nodes, that is, the sources are surrounded by many infected nodes. Only by depending on the infection states can we locate the sources in a complex network accurately. </p>
+
+<p>Inspired by <figure>Figure 1</figure>a, which shows the concentration of a pollutant, it is clear that the sources are more likely to be the node set , whose concentration is the highest (10). In fact, to get the state of each node is not easy, for example, some sensors do not have the capacity to measure concentrations, and can only judge whether the concentration surpasses a threshold value or not, and even then we may lose the concentration information. Therefore, the information we can obtain is incomplete, just like in <figure>Figure 1</figure>b. We can see two concentration states easily, 0 or 1 (1 denotes concentration over 8, 0 denotes concentration under 8) in a network, where an error occurred with node <hi rend="italic">c</hi>. It seems we have no ability to identify the sources according to these concentrations, which is similar to the infection situation of contagion. </p>
+
+<p>Therefore, a new index needs to be proposed so as to distinguish between the sources and other nodes for incomplete pollutant diffusion and contagion propagation. We think the node with more infected neighbors, including the first order neighbor, the second order neighbor and so forth, is closer to the sources. Based on the above analysis, we propose a new concept, namely a potential concentration label, denoted by . The potential concentration label is determined by its initial label and the labels of neighbor nodes. The experiments demonstrate that it is a good index for locating multiple sources of contagion in complex networks under the SIR model. </p>
+
+<head> 2.4. The  Method</head>
+<p>
+In this section, we present the  method at length in this section. The purpose of  is to locate multiple contagion sources, which is realized by following four steps in Algorithm 1. </p>
+
+<head> 2.4.1. Step 1: Label Assignment in the Snapshot of Network</head>
+<p>
+Due to the incomplete information, only two states can be seen in the network—infected and uninfected (susceptible and recovered). The infection state of nodes  is shown as follows—infected nodes carry the virus, denoted by 1; uninfected nodes carry no virus, denoted by 0. That is, if node <hi rend="italic">i</hi> is infected, then ; if node <hi rend="italic">i</hi> is uninfected, then , where  is the initial potential concentration label of node <hi rend="italic">i</hi>. </p>
+</text>

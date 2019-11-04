@@ -1,0 +1,45 @@
+<text id="autogum_academic_doc152" title="Magnetic-Map-Matching-Aided Pedestrian Navigation Using Outlier Mitigation Based on Multiple Sensors and Roughness Weighting" shortTile="magneticmapmatchingaided" author="Yong  Hun Kim, Min  Jun Choi, Eung  Ju Kim, Jin  Woo Song" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4782/htm" speakerList="none" speakerCount="0">
+<head> 4. Magnetic-Map-Matching-Aided Pedestrian Dead Reckoning</head>
+<p>
+In Section 3, it is verified that the number of outliers is reduced, and the magnetic-map-matching accuracy is improved by employing multiple magnetic sensors and proposed mitigation techniques. This section describes combining PDR and magnetic map matching. By integrating them, it is expected that the positioning accuracy will be improved even when a magnetic map does not cover all the areas.  </p>
+
+<p>In this study, map-matching-aided pedestrian dead reckoning (MAPDR) was constructed. To estimate and compensate for the navigation errors, a 15th-order EKF is used. The error state vector is given by the following equation:
+
+(23)
+
+where , , and  are the position error, velocity error, and attitude error in the North-East-Down (NED) coordinate system, respectively. The gyro bias and acceleration bias are  and , respectively. Since the navigation sensors used in a PDR cannot measure the earth rate, the error models, including the position error, can be simplified as follows:
+
+(24)
+
+(25)
+
+(26)
+
+where  is a rotation matrix from the body frame to NED frame, and  is a skew-symmetric matrix corresponding to input acceleration  which is defined as follows:
+
+(27)
+
+</p>
+
+<p>Thus, the 15th-order state-space-error model can be expressed as follows:
+
+(28)
+
+where  is the input noise vector, and  is an identity matrix. The biases of the accelerometer and gyroscope sensors are assumed to be a first-order Markov process, with a large time constant to compensate the slowly varying bias drift over time. Thus,  and  are set to be very small in this model.  </p>
+
+<p>In addition to the position measurements from magnetic map matching, the heading information using the magnetic sensor mounted on the waist is utilized as a measurement for preventing the divergence of the yaw angle. While ZUPT is performed repeatedly in a stance phase, the magnetic heading update and position update are carried out once in the stance phase because they are relatively less accurate than the zero velocity measurements. Therefore, two measurement models are required. One is for the position and heading measurement update at the time when the stance phase starts, which is defined as follows:
+
+(29)
+
+</p>
+
+<p>In this case, the measurement becomes  where  is obtained by importance sampling and magnetic map matching, and  is a heading measurement obtained from the waist-mounted magnetic sensor. The measurement covariance matrix,  for the measurements noise, , is composed of , which is automatically calculated by the importance sampling and , which represents the variance of the heading measurement. Although the magnetic field around the waist is less distorted, the heading information is not sufficiently accurate. Moreover, the position measurement can be used for the EKF, so that  is set to a slightly large value. </p>
+
+<p>The other measurement model is for ZUPT during the stance phase, which is expressed as follows:
+
+(30)
+
+where  is the measured noise vector modeled as white Gaussian noise with covariance, . The velocity measurement is , the and velocity measurement noise covariance  is usually small when the stance phase can be detected perfectly.  </p>
+
+<p><figure>Figure 7</figure> shows a block diagram of the proposed MAPDR algorithm. The MAPDR algorithm is roughly divided into three parts: an inertial navigation algorithm, a magnetic-field map-matching with outlier mitigation and importance sampling, and an extended Kalman filter. Basically, attitude, velocity, and position are obtained through an inertial navigation process based on the quaternion. The heading measurements from the magnetic sensor, the position measurement from the magnetic map matching, and the ZUPT are used for the EKF to correct navigation and sensor bias errors. </p>
+</text>
