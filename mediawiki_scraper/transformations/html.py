@@ -11,9 +11,9 @@ def get_children_for_partition(gum_tei):
 
 
 def rewrap_partition(children):
-    text = BeautifulSoup(f"<text>", "html.parser")
+    text = BeautifulSoup(f"<text></text>", "html.parser")
     for child in children:
-        text.append(child)
+        text.contents[0].append(child)
     return str(text)
 
 
@@ -198,13 +198,21 @@ def drop_empty_headings(config, soup, depth=0):
     headings = ["h1", "h2", "h3", "h4", "h5", "h6"]
 
     def last_non_whitespace_child(children, i):
+        # start by assuming the heading "spans" the rest of the document
         section_end = len(children)
+
+        # go through every child occuring later in the document
         for j in range(i + 1, len(children)):
+
+            # if we encounter another heading that is "bigger" than the one we're considering
+            # (i.e., one where the number following the "h" is less than or equal to this one's)
+            # then that is where the section ends
             if children[j].name in headings and int(children[j].name[1]) <= int(
                 children[i].name[1]
             ):
                 section_end = j
                 break
+
         return all(str(c).isspace() for c in children[i + 1 : section_end])
 
     children = list(soup.children)
@@ -219,4 +227,13 @@ def drop_empty_headings(config, soup, depth=0):
     if depth < 5:
         return drop_empty_headings(config, soup, depth + 1)
 
+    return soup
+
+
+def trim_trailing_headings(config, soup):
+    """get rid of any <head>s, starting from the end of the document"""
+
+    body = soup.contents[0]
+    while len(body.contents) > 0 and body.contents[-1].name == "head":
+        body.contents[-1].extract()
     return soup

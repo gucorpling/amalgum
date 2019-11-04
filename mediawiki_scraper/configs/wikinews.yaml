@@ -12,16 +12,14 @@ page_generation:
   # https://www.mediawiki.org/wiki/API:Allpages
   # https://www.mediawiki.org/wiki/API:Categorymembers
   # see also: https://www.mediawiki.org/wiki/API:Lists
-  endpoint: allpages
+  endpoint: categorymembers
   params:
-    # in bytes, the max page size we will consider
-    # 1 kb = ~200 English words
-    # (an English word is about 5 chars long on average, and most English words use only ASCII chars)
-    apminsize: 2000   # ~400 words
-    apmaxsize: 8000   # ~1600 words
-    # only "real articles"
-    # see: https://www.mediawiki.org/wiki/Manual:Namespace
-    apnamespace: 0
+    cmtitle: "Category:Health"
+    cmlimit: 5000
+    cmnamespace: 0
+    cmtype: "page"
+    cmsort: timestamp
+    cmdir: older
 
 # how to turn the source text of each page into GUM TEI
 transformations:
@@ -143,3 +141,6 @@ transformations:
           - list
           - item
           - head
+
+    # get rid of any <head>s at the end of the document
+    - name: trim_trailing_headings
