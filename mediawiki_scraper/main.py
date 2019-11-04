@@ -225,6 +225,7 @@ def process_page(config, page, output_dir, doc_number):
         return partition_page(config, output_dir, mwtext_object, gum_tei, doc_number)
     else:
         print(f"\tPage is too short at {token_count} tokens. Skipping.")
+        return 0, 0
 
 
 # ------------------------------------------------------------------------------
