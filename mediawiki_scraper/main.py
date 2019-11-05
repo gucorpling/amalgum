@@ -287,7 +287,6 @@ def scrape(config_filepath, output_dir, stop_after, cmtitles, split_if_long):
     initialize_db(output_dir)
 
     urls_already_scraped = urls_already_scraped_for_genre(genre(output_dir))
-    print(urls_already_scraped)
 
     doc_number = 0
     word_count_total = 0
