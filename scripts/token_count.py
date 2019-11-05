@@ -26,7 +26,7 @@ def main(d):
         file_names = glob.glob(os.path.join(dirname, "*.xml"))
         total_wc = 0
         for file_name in file_names:
-            with open(file_name, 'r') as f:
+            with open(file_name, "r") as f:
                 total_wc += rough_word_count(f.read())
 
         print(f"Total word count for {os.path.join(dirname, '*.xml')}:\t{total_wc}")
@@ -34,9 +34,11 @@ def main(d):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("""usage: 
+        print(
+            """usage: 
 
     python token_count.py xml_dir...
-""")
+"""
+        )
         sys.exit(0)
     main(sys.argv[1:])
