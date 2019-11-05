@@ -209,7 +209,7 @@ def partition_page(config, output_dir, mwtext_object, gum_tei, doc_number):
         return 0, 0
 
 
-def process_page(config, page, output_dir, doc_number):
+def process_page(config, page, output_dir, doc_number, split_if_long):
     print(f"Processing `{str(page)}`... ")
     mwtext_object = get_mwtext_object(page, config)
     gum_tei = convert(config, mwtext_object)
@@ -218,7 +218,7 @@ def process_page(config, page, output_dir, doc_number):
         write_output_with_document_class(mwtext_object, gum_tei, output_dir, doc_number)
         print(f"\tSUCCESS: scraped with {token_count} tokens.")
         return token_count, 1
-    elif token_count > MAX_TOKEN_COUNT:
+    elif split_if_long and token_count > MAX_TOKEN_COUNT:
         print(
             f"\tPage is too long at {token_count} tokens. Attempting to partition into smaller documents."
         )
@@ -274,7 +274,7 @@ def already_scraped(urls, page):
     return any(url.endswith(page_url) for url in urls)
 
 
-def scrape(config_filepath, output_dir, stop_after, cmtitles):
+def scrape(config_filepath, output_dir, stop_after, cmtitles, split_if_long):
     config = load_config(config_filepath)
 
     # write pywikibot config
@@ -287,6 +287,7 @@ def scrape(config_filepath, output_dir, stop_after, cmtitles):
     initialize_db(output_dir)
 
     urls_already_scraped = urls_already_scraped_for_genre(genre(output_dir))
+    print(urls_already_scraped)
 
     doc_number = 0
     word_count_total = 0
@@ -314,16 +315,17 @@ def scrape(config_filepath, output_dir, stop_after, cmtitles):
                     page = pywikibot.Page(site, page_dict["title"])
                     if already_scraped(urls_already_scraped, page):
                         print(
-                            f'\tSKIPPING: "{page.title(as_url=True)}" has already been included in GUM.'
+                            f'\tSKIPPING: "{page.title(as_url=True)}" has already either been included in GUM or scraped.'
                         )
                     else:
                         page_words, num_docs = process_page(
-                            config, page, output_dir, doc_number
+                            config, page, output_dir, doc_number, split_if_long
                         )
                         if page_words > 0:
                             doc_number += num_docs
                             docs_scraped += num_docs
                             word_count_total += page_words
+                            urls_already_scraped.append(page.full_url())
 
                 except Exception as e:
                     print("Oops! Something went wrong.")
@@ -429,6 +431,12 @@ if __name__ == "__main__":
         nargs="*",
         help="the categories being scraped over, if using the categorymembers api endpoint",
     )
+    p.add_argument(
+        "--split-if-long",
+        action="store_true",
+        default=False,
+        help="when set to true, split documents that are too long into pieces",
+    )
     args = p.parse_args()
 
     if args.method == "scrape":
@@ -437,6 +445,7 @@ if __name__ == "__main__":
             args.output_dir,
             getattr(args, "stop_after", None),
             getattr(args, "cmtitle", None),
+            args.split_if_long,
         )
     elif args.method == "url":
         assert args.url
