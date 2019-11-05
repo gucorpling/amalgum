@@ -252,11 +252,11 @@ class Document:
         return speakers, speaker_count
 
     def escape_attr_val(self, v):
+        v = v.replace("&", "&amp;")
         v = v.replace('"', "&quot;")
         v = v.replace("'", "&apos;")
         v = v.replace("<", "&lt;")
         v = v.replace(">", "&gt;")
-        v = v.replace("&", "&amp;")
         return v
 
     def serialize(self, out_dir=None):
@@ -272,7 +272,13 @@ class Document:
         docname = "autogum_" + self.genre + "_doc" + str(self.docnum)
 
         # TODO: more metadata
-        header = '<text id="' + self.escape_attr_val(docname) + '" title="' + self.escape_attr_val(self.title) + '"'
+        header = (
+            '<text id="'
+            + self.escape_attr_val(docname)
+            + '" title="'
+            + self.escape_attr_val(self.title)
+            + '"'
+        )
         header += ' shortTile="' + self.escape_attr_val(self.short_title) + '"'
         if self.author != "":
             header += ' author="' + self.escape_attr_val(self.author) + '"'
