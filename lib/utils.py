@@ -251,6 +251,14 @@ class Document:
             speakers = "none"
         return speakers, speaker_count
 
+    def escape_attr_val(self, v):
+        v = v.replace('"', "&quot;")
+        v = v.replace("'", "&apos;")
+        v = v.replace("<", "&lt;")
+        v = v.replace(">", "&gt;")
+        v = v.replace("&", "&amp;")
+        return v
+
     def serialize(self, out_dir=None):
 
         self.short_title = self.make_short_title()
@@ -264,25 +272,25 @@ class Document:
         docname = "autogum_" + self.genre + "_doc" + str(self.docnum)
 
         # TODO: more metadata
-        header = '<text id="' + docname + '" title="' + self.title + '"'
-        header += ' shortTile="' + self.short_title + '"'
+        header = '<text id="' + self.escape_attr_val(docname) + '" title="' + self.escape_attr_val(self.title) + '"'
+        header += ' shortTile="' + self.escape_attr_val(self.short_title) + '"'
         if self.author != "":
-            header += ' author="' + self.author + '"'
+            header += ' author="' + self.escape_attr_val(self.author) + '"'
 
-        header += ' type="' + self.genre + '"'
-        header += ' dateCollected="' + today + '"'
+        header += ' type="' + self.escape_attr_val(self.genre) + '"'
+        header += ' dateCollected="' + self.escape_attr_val(today) + '"'
         if self.date_created != "":
-            header += ' dateCreated="' + self.date_created + '"'
+            header += ' dateCreated="' + self.escape_attr_val(self.date_created) + '"'
         if self.date_modified != "":
-            header += ' dateModified="' + self.date_modified + '"'
+            header += ' dateModified="' + self.escape_attr_val(self.date_modified) + '"'
         if self.url != "":
-            header += ' sourceURL="' + self.url + '"'
+            header += ' sourceURL="' + self.escape_attr_val(self.url) + '"'
         speaker_list, speaker_count = self.get_speakers()
         header += (
             ' speakerList="'
-            + speaker_list
+            + self.escape_attr_val(speaker_list)
             + '" speakerCount="'
-            + str(speaker_count)
+            + self.escape_attr_val(str(speaker_count))
             + '"'
         )
         header += ">\n"
