@@ -182,7 +182,7 @@ def partition_page(config, output_dir, mwtext_object, gum_tei, doc_number):
         current_partition.append(child)
         current_wc += wc
         if MIN_TOKEN_COUNT <= current_wc <= MAX_TOKEN_COUNT:
-            partitions.append((wc, current_partition))
+            partitions.append((current_wc, current_partition))
             current_partition = []
             current_wc = 0
         # too long? start over
