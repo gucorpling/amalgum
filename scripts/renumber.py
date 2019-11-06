@@ -2,7 +2,6 @@ import glob
 import sys
 import re
 import os
-from bs4 import BeautifulSoup
 
 NUMBER_PATTERN = re.compile(r"(\d+).xml")
 ID_PATTERN = re.compile(r' id="([^"]*)"')
@@ -32,8 +31,8 @@ def main(d):
             else:
                 filepaths_with_numbers.append((match.group(1), filepath))
 
-        for new_i, (old_i, filepath) in enumerate(
-            sorted(filepaths_with_numbers, key=lambda x: int(x[0]))
+        for new_i, (old_i, filepath) in reversed(
+            list(enumerate(sorted(filepaths_with_numbers, key=lambda x: int(x[0]))))
         ):
             new_i = pad(str(new_i))
             old_i = str(old_i)
