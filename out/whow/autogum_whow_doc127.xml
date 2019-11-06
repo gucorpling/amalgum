@@ -1,0 +1,69 @@
+<text id="autogum_whow_doc127" title="Create a Robot Model in MATLAB" shortTile="create-robot-model" type="whow" dateCollected="2019-11-06" dateCreated="2018-10-14" dateModified="2019-06-24" sourceURL="https://www.wikihow.com/Create-a-Robot-Model-in-MATLAB" speakerList="none" speakerCount="0">
+<head>Create a Robot Model in MATLAB</head><p>You can model your robot in MATLAB using the robotics toolbox. This article will help you understand the basic process and commands used. All the code in this tutorial can be copied and pasted into MATLAB and the appropriate places changed to match your data.</p>
+<head>Steps</head>
+<head>Preparing</head>
+<list type="ordered"><item>Understand the terminology you'll need to know:
+<list type="unordered"><item>Tool: This is the end of the robot. The tool would equivalent to your hand on your arm.</item>
+<item>Base: This is the beginning of the robot. Think of how your shoulder is the base of your arm.</item></list></item>
+<item>Learn what DH parameters are. DH parameters are like the dimensions of the robot.</item>
+<item>Familiarize yourself with MATLAB, specifically with matrices and vectors.
+<list type="unordered"><item>If you need a refresher, Chapter 2 of the MATLAB Primer contains information on matrices.</item></list></item>
+<item>Read through the Robotics Toolbox for MATLAB.
+<list type="unordered"><item>Specifically, the Prismatic.Prismatic, Revolute.Revolute, SerialLink.plot, and SerialLink.fkine commands</item></list></item>
+<item>Install the Robotics Toolbox.</item></list>
+<head>Collecting Robot Data</head>
+<list type="ordered"><item>Determine the types of joints that are in your robot.
+<list type="unordered"><item>Prismatic joints are ones that actuate in and out. Examples are shocks or pistons.</item>
+<item>Revolute joints are ones that rotate. For example, any kind of hinge.</item></list></item>
+<item>Determine the limits for each joint. This is the range for which each joint can slide or rotate through.</item>
+<item>Create a table that contains the DH parameters for each joint. <figure rend="Robot_Data_Collection_New.png"></figure></item></list>
+<head>Creating the Robot Model</head>
+<list type="ordered">
+<item>Create each joint in the MATLAB command window.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_Step_4.png">Image:How to create a robot model in MATLAB Step 4.png</ref></figure>
+<list type="unordered">
+<item>Call this code if your joint is prismatic:
+</item>
+<item>Call this code if your joint is revolute:
+ </item>
+</list></item>
+<item> Repeat the last step for each joint.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_5.png">Image:How to create a robot model in MATLAB step 5.png</ref></figure></item>
+<list type="unordered">
+<item>For example, the second joint should start off with L(2)=Revolute/Prismatic(...)</item>
+<item>The third joint should be L(3)=Revolute/Prismatic(...)</item>
+<item>The last joint should be L(last joint number)=Revolute/Prismatic(...)</item>
+</list>
+<item>Call the following command, where "your robots name" is the identifier that you want for your robot.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_6.png">Image:How to create a robot model in MATLAB step 6.png</ref></figure>
+</item>
+<item>Add an external reference frame to your robot by calling the following command, where T is a 4x4 matrix between the external reference frame and the first reference frame of your robot.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_7.png">Image:How to create a robot model in MATLAB step 7.png</ref></figure>
+<list type="unordered">
+<item>Call the following instead, if your external reference frame is only translated with respect to first robot frame:
+</item>
+</list></item>
+<item>Add a tool to the robot by calling the following command, where S is a 4x4 matrix that relates the tool tip frame to the last robot joint frame.<figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_8.png">Image:How to create a robot model in MATLAB step 8.png</ref></figure>
+<list type="unordered">
+<item>Call the following command instead, if your tool tip is only translated from the last robot joint frame.
+</item></list></item>
+<item>Plot the robot by calling this command: <figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_9.png">Image:How to create a robot model in MATLAB step 9.png</ref></figure>
+<list type="unordered">
+<item>Usually you will set all the joint angles to zero.</item>
+<item>If the robot is not all on the screen or there is too much empty space, you can use the option of 'workspace' to change the size of the plot in each direction from the origin. When calling the plot command, add this to the inside of the parenthesis of the plot command:
+</item>
+<item>You will have to play around with these values until the whole robot fits in the plot.</item></list></item>
+</list>
+<head>Verifying the Model</head>
+<list type="ordered">
+Predict what the X,Y,and Z distances will be from your tool to your external reference frame. Do this by calling:  <figure rend="Step_10_Final Edit.png"></figure>
+<list type="unordered">
+<item>A 4x4 matrix is returned that relates the tool tip frame in reference to the external reference frame.</item></list>
+<item>Check the results by getting a rough measurement of the actual robot distances from the reference frame.<figure></figure></item>
+<list type="unordered">
+<item>If you don't have the actual robot or it is not built. Sketch the robot and then calculate how far the end of the tool should be from the base frame.</item></list>
+</list>
+<head>Tips</head>
+<list type="unordered"><item>If the robot model does not have the same number of joints than it should, make sure that you aren't overwriting joints. The first joint should be L(1)=..., the second joint should be L(2)=...,L(3)=...,L(...)=... ,the last joint should be L(last joint number) when created.</item>
+<item>If the values of your actual robot are far off, take a look at your DH parameters and make sure that you follow the proper procedure for defining robot parameters.</item>
+<item>Make sure to convert all your measurements to meters and Radians. Otherwise, your model will not behave like your actual robot and could cause issues when the real thing is built.</item></list>
+<head>Warnings</head>
+<list type="unordered"><item>When building a program to move the robot. Make sure to check the angle/distance it is supposed to move against the limits that were set earlier. This ensures that the robot model behaves like the actual robot.</item>
+<item>Make sure that you accurately measure the limits and DH parameters. If this is done incorrectly, the actual robot may not behave the way you expect. This could pose serious risks for injury, especially if the robot reaches the hardware limits and tries to continue.</item></list>
+</text>
