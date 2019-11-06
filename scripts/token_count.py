@@ -1,22 +1,13 @@
 import glob
 import os
 import sys
-from unicodedata import category
 
 from lib.whitespace_tokenize import tokenize
 
 
 def rough_word_count(gum_tei):
     tokens = tokenize(gum_tei).split("\n")
-    tokens = [
-        t
-        for t in tokens
-        if (
-            not t.startswith("<")
-            and not t.isspace()
-            and any(category(c).startswith("L") for c in t)
-        )
-    ]
+    tokens = [t for t in tokens if (not t.startswith("<") and not t.isspace())]
     return len(tokens)
 
 
@@ -35,7 +26,7 @@ def main(d):
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print(
-            """usage: 
+            """usage:
 
     python token_count.py xml_dir...
 """

@@ -2,7 +2,6 @@ import glob
 import sys
 import re
 import os
-from unicodedata import category
 from xml.etree import ElementTree as ET
 from xml.etree.ElementTree import ParseError
 
@@ -17,15 +16,7 @@ MAX_WORD_COUNT = 1100
 
 def rough_word_count(gum_tei):
     tokens = tokenize(gum_tei).split("\n")
-    tokens = [
-        t
-        for t in tokens
-        if (
-            not t.startswith("<")
-            and not t.isspace()
-            and any(category(c).startswith("L") for c in t)
-        )
-    ]
+    tokens = [t for t in tokens if (not t.startswith("<") and not t.isspace())]
     return len(tokens)
 
 
