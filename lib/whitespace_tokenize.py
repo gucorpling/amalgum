@@ -19,6 +19,7 @@
 
 from argparse import ArgumentParser
 import io, sys, re
+from html import unescape
 
 PY3 = sys.version_info[0] >2
 
@@ -90,9 +91,8 @@ def tokenize(text,abbr=None,add_sents=False):
 				# SGML tag
 				output += unit + "\n"
 			else:
-				#add a blank at the beginning and the end of each segment
-				if i==45:
-					a=5
+				# unescape entities
+				unit = unescape(unit)
 				email = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
 				url = r'https?://(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)'
 
