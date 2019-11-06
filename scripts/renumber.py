@@ -12,52 +12,53 @@ def pad(numstring, padding_length=3):
     return ("0" * (padding_length - len(str(numstring)))) + str(numstring)
 
 
-def new_filename(filename, old_i, new_i):
-    assert filename.endswith(old_i + ".xml")
-    filename = filename[: len(filename) - len(old_i + ".xml")]
-    filename = filename + new_i + ".xml"
-    return filename
+def new_filepath(filepath, old_i, new_i):
+    assert filepath.endswith(old_i + ".xml")
+    filepath = filepath[: len(filepath) - len(old_i + ".xml")]
+    filepath = filepath + new_i + ".xml"
+    return filepath
 
 
 def main(d):
     for dirname in d:
-        filenames_with_numbers = []
+        filepaths_with_numbers = []
 
-        filenames = glob.glob(f"{dirname}/*.xml")
-        for filename in filenames:
-            match = re.search(NUMBER_PATTERN, filename.split(os.sep)[-1])
+        filepaths = glob.glob(f"{dirname}/*.xml")
+        for filepath in filepaths:
+            match = re.search(NUMBER_PATTERN, filepath.split(os.sep)[-1])
             if not match:
-                print(f"Couldn't find a number in {filename}!")
+                print(f"Couldn't find a number in {filepath}!")
                 sys.exit(1)
             else:
-                filenames_with_numbers.append((int(match.group(1)), filename))
+                filepaths_with_numbers.append((match.group(1), filepath))
 
-        for new_i, (old_i, filename) in enumerate(
-            sorted(filenames_with_numbers, key=lambda x: x[0])
+        for new_i, (old_i, filepath) in enumerate(
+            sorted(filepaths_with_numbers, key=lambda x: x[0])
         ):
             new_i = pad(str(new_i))
             old_i = str(old_i)
             if new_i != old_i:
-                new_name = new_filename(filename, old_i, new_i)
-                print(f"Renaming:\t'{filename}' -> '{new_name}'")
-                os.rename(filename, new_name)
+                new_name = new_filepath(filepath, old_i, new_i)
+                print(f"Renaming:\t'{filepath}' -> '{new_name}'")
+                os.rename(filepath, new_name)
 
-                filename = new_name
+                filepath = new_name
 
-            with open(filename, "r") as f:
+            with open(filepath, "r") as f:
                 s = f.read()
 
+            filename = filepath.split(os.sep)[-1][:-4]
             match = re.search(ID_PATTERN, s)
             if match is None:
-                print(f"{filename} doesn't have an id attribute!")
+                print(f"{filepath} doesn't have an id attribute!")
                 sys.exit(1)
-            elif match.group(1) != filename[:-4]:
+            elif match.group(1) != filename:
                 print(
-                    f"<text>'s id attribute is {match.group(1)}, but filename is {filename[:-4]}"
+                    f"<text>'s id attribute is {match.group(1)}, but filename is {filename}"
                 )
-                s = s.replace(f' id="{match.group(1)}"', f' id="{filename[:-4]}"')
-                print("\tReplaced id attribute with the filename.")
-                with open(filename, "w") as f:
+                s = s.replace(f' id="{match.group(1)}"', f' id="{filename}"')
+                print("\tReplaced id attribute with the filepath.")
+                with open(filepath, "w") as f:
                     f.write(s)
 
 
