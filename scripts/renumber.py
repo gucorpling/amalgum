@@ -6,7 +6,7 @@ import os
 NUMBER_PATTERN = re.compile(r"(\d+).xml")
 
 
-def pad(numstring, padding_length=4):
+def pad(numstring, padding_length=3):
     return ("0" * (padding_length - len(str(numstring)))) + str(numstring)
 
 
