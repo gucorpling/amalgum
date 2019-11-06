@@ -260,6 +260,12 @@ class Document:
         return v
 
     def serialize(self, out_dir=None):
+        def three_digit(num):
+            if len(num) == 1:
+                num = "00" + num
+            elif len(num) == 2:
+                num = "0" + num
+            return num
 
         self.short_title = self.make_short_title()
 
@@ -269,7 +275,7 @@ class Document:
         if not os.path.exists(out_dir):
             os.mkdir(out_dir)
 
-        docname = "autogum_" + self.genre + "_doc" + str(self.docnum)
+        docname = 'autogum_'+ self.genre +'_doc' + three_digit(str(self.docnum))
 
         # TODO: more metadata
         header = (
