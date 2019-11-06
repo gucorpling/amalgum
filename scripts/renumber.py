@@ -35,7 +35,7 @@ def main(d):
         for new_i, (old_i, filename) in enumerate(
             sorted(filenames_with_numbers, key=lambda x: x[0])
         ):
-            new_i = str(new_i)
+            new_i = pad(str(new_i))
             old_i = str(old_i)
             if new_i != old_i:
                 new_name = new_filename(filename, old_i, new_i)
