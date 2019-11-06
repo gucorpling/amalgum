@@ -63,7 +63,7 @@ def filename_and_id_identical(files):
             print(f"{f}: has filename {f.filename}, but id is {f.id}")
 
 
-def filenames_contiguous(files):
+def file_numbers_consecutive(files):
     last_number = -1
     for f in sorted(files, key=lambda x: x.doc_number):
         if f.doc_number != last_number + 1:
@@ -73,7 +73,7 @@ def filenames_contiguous(files):
         last_number = f.doc_number
 
 
-def token_count_within_bounds(files):
+def word_count_within_bounds(files):
     for f in files:
         if not MIN_WORD_COUNT <= f.text_length <= MAX_WORD_COUNT:
             print(
@@ -95,8 +95,8 @@ def main(directory):
         GUMTEIFile(filepath) for filepath in glob.glob(directory + os.sep + "*.xml")
     ]
     filename_and_id_identical(files)
-    filenames_contiguous(files)
-    token_count_within_bounds(files)
+    file_numbers_consecutive(files)
+    word_count_within_bounds(files)
     valid_xml(files)
 
 
