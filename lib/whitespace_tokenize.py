@@ -95,9 +95,10 @@ def tokenize(text,abbr=None,add_sents=False):
 				unit = unescape(unit)
 				email = r'^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$'
 				url = r'https?://(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)'
+				acro = r'([A-Z]\.([A-Z]\.)+)'
 
 				# insert missing blanks after punctuation if not an abbreviation
-				if unit not in Token and re.search(email,unit) is None and re.search(url,unit) is None:
+				if unit not in Token and re.search(email,unit) is None and re.search(url,unit) is None and re.search(acro,unit) is None:
 					unit = " " + unit + " "
 					unit = re.sub(r'\.\.\.'," ... ",unit)
 					unit = re.sub(r'([;!?])([^ ])',r'\1 \2', unit)
