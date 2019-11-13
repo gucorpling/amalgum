@@ -4,8 +4,8 @@
 Using conda:
 
 ```sh
-conda create --name autogum python=3.7
-conda activate autogum
+conda create --name gumby python=3.7
+conda activate gumby
 pip install -r requirements.txt
 ```
 
