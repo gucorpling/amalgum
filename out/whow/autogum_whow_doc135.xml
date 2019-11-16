@@ -1,0 +1,38 @@
+<text id="autogum_whow_doc135" title="Hack a Rumble Robot" shortTile="hack-rumble-robot" type="whow" dateCollected="2019-11-06" dateCreated="2009-06-30" dateModified="2018-08-23" sourceURL="https://www.wikihow.com/Hack-a-Rumble-Robot" speakerList="none" speakerCount="0">
+<head>Hack a Rumble Robot</head><p> <figure rend="Dino_fab_finished_476.jpg"></figure>Do you want to hack a Rumble Robot with an Arduino microcontroller? Your robot will have the ability to turn around and head in another direction when it senses an obstacle. You can use the code provided, or write your own and see how your roving rumble bot responds. If you're not used to tinkering with robots, it's an ambitious project, but it's well worth the trouble to take it on.
+</p>
+<head>Steps</head>
+<list type="ordered"><item>Put some batteries in the robot to see if it works.  Typically, they take four AA <ref target="https://www.wikihow.com/wiki/Lengthen_the_Life_of_Batteries_Without_Recharging">batteries.</ref> <figure rend="Dino_fab_1_230.jpg"></figure>
+<list type="unordered"><item>On the back are some switches.  There is "off/on" and also "A/B" to determine which team the robot is on.  Push the "on" switch.  If the bot is working, it should say its name.  Put the cover and the batteries off to the side for now. <figure rend="Dino_fab_2_897.jpg"></figure></item></list></item>
+<item>Take the head off the robot. On the "neck" of the robot (between the head and body) there is a little screw that can be taken off with a small phillips head <ref target="https://www.wikihow.com/wiki/Unscrew_a_Screw_Without_a_Screwdriver">screwdriver</ref>.  Put the screw aside.  There is a small lip in the front of the head that is a little tricky, but should come loose after a little light twisting and turning. <figure rend="Dino_fab_3_893.jpg"></figure></item>
+<item>Disconnect the cable from the motherboard that connects the head to the body.  Using a small <ref target="https://www.wikihow.com/wiki/Magnetize_a_Screwdriver">screwdriver</ref>, pry back the tabs keeping the board down, and pop the board out.  You should now have just the naked board. <figure rend="Dino_fab_4_153.jpg"></figure>
+<list type="unordered"><item>You should see the black micro processor that makes the bot move backward and forward.  This is what we'll be hacking and wiring into. <figure rend="Dino_fab_5_702.jpg"></figure></item>
+<item>These are the pin outs on the board where you'll need to connect new wires. The main pins we're concerned with are the four that operate the drive motors. They are connected to the "H-Bridge" that will allow us to trigger the motors to rotate forward or reverse by applying a positive voltage to one of two wires for each motor.  There is one for forward and one for reverse on each motor. They are connected as follows: <figure rend="Dino_fab_6_216.jpg"></figure>
+<list type="unordered"><item>Pin 1.0    Left motor FORWARD</item>
+<item>Pin 1.1    Left motor REVERSE</item>
+<item>Pin 1.2    Right motor FORWARD</item>
+<item>Pin 1.3    Right motor REVERSE</item></list></item></list></item>
+<item>Solder the wires that will go out to the Arduino. In this photo we see the ground wire which is connected to the pin labeled in the photo on the white connector and the other four wires soldered in place. <figure rend="Dino_fab_7_578.jpg"></figure></item>
+<item>Unscrew the upper body and pull it apart. <figure rend="Dino_fab_8_338.jpg"></figure></item>
+<item>Wire everything together using this schematic. The video demonstrates how everything is put together. Make your wires at least 5" in length to make it easier to mount everything up. <figure rend="Schematic_260.jpg"></figure>
+<list type="unordered"><item>The schematic shown in this article assumes that there will be one sensor on the front of the bot. The video below shows how you can make both the arms sense obstacles, but this will require an extra bump switch (connected to Pin 3 and the ground wire) as described in the video section. The code will also need to be changed accordingly. <figure rend="Dino_fab_9_540.jpg"></figure></item>
+<item>If you mount everything on top of the chassis where the head used to be and mount the bump switch on the front,  use a micro switch and glue on some pieces of wire from a paper clip as whiskers.  The whiskers on the switch should extend left and right the same width as the robot.  Add one more whisker pointing down close to the floor.  These will help the bot avoid anything that might not return an echo from the PING sensor.  Make sure the PING sensor points towards the front and is at 90 degrees to the floor.  The LED connected to pin 13 blinks each time the PING scans and it can mounted anywhere you like.  The power switch is optional and simply goes in line on the positive battery lead. <figure rend="Dino_fab_10_40.jpg"></figure></item>
+<item>When connecting the motherboard to the microcontroller, you may need to make a notch so that the wires don't get pinched when you put the robot back together. <figure rend="Dino_fab_16_501.jpg"></figure></item>
+<item>The battery can be held in place by a small piece of velcro or some EPS foam. <ref target="https://www.wikihow.com/wiki/Solder_Copper_Tubing">Solder</ref> the negative lead of the 9-volt battery to the auxiliary battery input.  Be sure to place the jumper onto "extension power" not "USB." <figure rend="Dino_fab_17_100.jpg"></figure></item>
+<item>If you want to be able to use the "on/off" switch, connect the white wire to the back of the switch. The power should go to the switch, run back into the white wire, and feed the Arduino power when you turn it on. <figure rend="Dino_fab_19_622.jpg"></figure></item>
+<item>The PING sensor can go anywhere on the front of the robot. In this example, the sensor has been glued into the faceplate of the robot.  Cut out the "eye-holes" on the faceplate and then just add glue around the "eyes" of the sensor to keep the plate sturdy. The ribbon cable that connected to the head of the robot has been stripped down to three leads (instead of the original four) and soldered to the three leads on the PING sensor. The other end connects to the Arduino as specified in the schematic. <figure rend="Dino_fab_22_972.jpg"></figure></item></list></item>
+<item>Solder the leads and attach them to the Arduino board. Refer to the schematic once again for help. <figure rend="Dino_fab_24_655.jpg"></figure></item>
+<item>Put the robot back together.  <figure rend="Dino_fab_26_654.jpg"></figure></item>
+<item>Upload the code.  Connect the USB cable to your computer and plug the other end into the Arduino's USB port.  Set your robot on a riser so the wheels don't touch anything and power up the Arduino.  Copy the code and paste it into a new window in the Arduino software. Save the sketch as "rumblebot ping bump" and upload it.  After it's uploaded, power down the Arduino, disconnect the USB cable, set the bot on the floor and power up the Arduino.  It should start to drive forward with the LED blinking.  As it gets within  of an object, it should turn away and keep driving forward. If it hits an object and triggers the bump switch, it should stop, reverse its direction and turn, then proceed forward.</item></list>
+<head>Video</head>
+
+<head>Things You'll Need</head>
+<list type="unordered"><item>Find a Rumble Robot on eBay, at a yard sale or a thrift store.</item>
+<item>Arduino micro controller</item>
+<item>A Parallax PING sensor</item>
+<item>An LED</item>
+<item>A micro switch</item>
+<item>A 100 ohm resistor</item>
+<item>Arduino software which you can download <ref target="http://arduino.cc/en/Main/Software">here</ref></item>
+<item>You'll also need coding, which you can write yourself.</item></list>
+</text>
