@@ -307,7 +307,7 @@ def main():
     genre = "voyage"
     test = script_dir + "out" + os.sep + genre + os.sep + "autogum_*.xml"
 
-    files = glob(test)
+    files = sorted(glob(test))
 
     for file_num, file_ in enumerate(files):
         raw_xml = io.open(file_, encoding="utf8").read()
