@@ -27,11 +27,6 @@ bin_dir = script_dir + "bin" + os.sep
 xml_out = script_dir + "nlped" + os.sep + "xml" + os.sep
 dep_out = script_dir + "nlped" + os.sep + "dep" + os.sep
 
-# Setup gumdrop sentencer
-best_sentencer_ever = EnsembleSentencer(
-    lang="eng", model="eng.rst.gum", genre_pat="_([^_]+)_"
-)
-
 # Setup StanfordNLP
 # Uncomment to download models
 # stanfordnlp.download('en')       # This downloads the English models for the neural pipeline
@@ -348,6 +343,9 @@ def main():
         if opts.no_sent:
             split_indices = [1] + [0] * (len(tokenized) - 1)
         else:
+            best_sentencer_ever = EnsembleSentencer(
+                lang="eng", model="eng.rst.gum", genre_pat="_([^_]+)_"
+            )
             split_indices = best_sentencer_ever.predict(
                 tokenized, as_text=True, plain=True, genre=genre
             )
