@@ -158,31 +158,31 @@ class AutoGumNLP:
     def tokenize(self, xml_data):
         """Tokenize input XML or plain text into TT SGML format.
 
-		:param xml_data: input string of a single document
-		:return: TTSGML with exactly one token or opening tag or closing tag per line
+        :param xml_data: input string of a single document
+        :return: TTSGML with exactly one token or opening tag or closing tag per line
 
-		example input:
+        example input:
 
-			<text id="autogum_voyage_doc3" title="Aakirkeby">
-			<head>Aakirkeby</head>
+            <text id="autogum_voyage_doc3" title="Aakirkeby">
+            <head>Aakirkeby</head>
 
-			<p><hi rend="bold">Aakirkeby</hi> is a city on <ref target="Bornholm">Bornholm</ref>,
+            <p><hi rend="bold">Aakirkeby</hi> is a city on <ref target="Bornholm">Bornholm</ref>,
 
-		example output:
+        example output:
 
-			<text id="autogum_voyage_doc3" title="Aakirkeby">
-			<head>
-			Aakirkeby
-			</head>
-			<p>
-			<hi rend="bold">
-			Aakirkeby
-			</hi>
-			is
-			a
-			city
-			...
-		"""
+            <text id="autogum_voyage_doc3" title="Aakirkeby">
+            <head>
+            Aakirkeby
+            </head>
+            <p>
+            <hi rend="bold">
+            Aakirkeby
+            </hi>
+            is
+            a
+            city
+            ...
+        """
 
         # Likely verbal VVN, probably not an amod
         VVN = "been|called|made|found|seen|done|based|taken|born|considered|got|located|said|told|started|shown|become|put|gone|created|had|asked"
@@ -234,6 +234,9 @@ class AutoGumNLP:
             # Latin abbreviations
             TTSGML = TTSGML.replace(" i. e. ", " i.e. ").replace(" e. g. ", " e.g. ")
 
+            # Trailing periods in section headings like "1. Introduction", usually following an XML tag
+            TTSGML = re.sub(r"(>\n[0-9]+)\n(\.\n)", r"\1\2", TTSGML)
+
             # en dash spelled --
             TTSGML = re.sub(r"([^\n])--", r"\1\n--", TTSGML)
             TTSGML = re.sub(r"--([^\n]+)\n", r"--\n\1\n", TTSGML)
@@ -241,6 +244,9 @@ class AutoGumNLP:
             # Find missing contraction spellings
             TTSGML = re.sub(r"\n([Ii]t)(s\nnot\n)", r"\n\1\n\2", TTSGML)
             TTSGML = TTSGML.replace("\nIve\n", "\nI\nve\n")
+            TTSGML = re.sub(
+                r"\n(did|do|was|were|would|should|had|must)nt\n", r"\n\1\nnt\n", TTSGML
+            )
 
             # Fix grammar-dependant tokenizations
             TTSGML = re.sub(
@@ -304,7 +310,7 @@ def main():
         )  # This sets up a default neural pipeline in English
         nlp.stan = stan
 
-    genre = "voyage"
+    genre = opts.genre
     test = script_dir + "out" + os.sep + genre + os.sep + "autogum_*.xml"
 
     files = sorted(glob(test))
