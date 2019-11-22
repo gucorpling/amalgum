@@ -235,7 +235,7 @@ class AutoGumNLP:
             TTSGML = TTSGML.replace(" i. e. ", " i.e. ").replace(" e. g. ", " e.g. ")
 
             # Trailing periods in section headings like "1. Introduction", usually following an XML tag
-            TTSGML = re.sub(r'(>\n[0-9]+)\n(\.\n)',r'\1\2',TTSGML)
+            TTSGML = re.sub(r"(>\n[0-9]+)\n(\.\n)", r"\1\2", TTSGML)
 
             # en dash spelled --
             TTSGML = re.sub(r"([^\n])--", r"\1\n--", TTSGML)
@@ -244,7 +244,9 @@ class AutoGumNLP:
             # Find missing contraction spellings
             TTSGML = re.sub(r"\n([Ii]t)(s\nnot\n)", r"\n\1\n\2", TTSGML)
             TTSGML = TTSGML.replace("\nIve\n", "\nI\nve\n")
-            TTSGML = re.sub(r"\n(did|do|was|were|would|should|had|must)nt\n", r"\n\1\nnt\n",TTSGML)
+            TTSGML = re.sub(
+                r"\n(did|do|was|were|would|should|had|must)nt\n", r"\n\1\nnt\n", TTSGML
+            )
 
             # Fix grammar-dependant tokenizations
             TTSGML = re.sub(
@@ -308,7 +310,7 @@ def main():
         )  # This sets up a default neural pipeline in English
         nlp.stan = stan
 
-    genre = "voyage"
+    genre = opts.genre
     test = script_dir + "out" + os.sep + genre + os.sep + "autogum_*.xml"
 
     files = sorted(glob(test))
