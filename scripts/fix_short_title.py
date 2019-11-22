@@ -4,7 +4,7 @@ import sys
 
 def main(d):
     for dirname in d:
-        filepaths = glob.glob(dirname[0] + "/*.xml")
+        filepaths = glob.glob(f"{dirname}/*.xml")
         for filepath in filepaths:
             with open(filepath, "r") as f:
                 s = f.read()
@@ -31,5 +31,4 @@ if __name__ == "__main__":
     python fix_short_title.py xml_dir...
 """
         )
-        sys.exit(0)
     main(sys.argv[1:])
