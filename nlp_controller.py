@@ -268,9 +268,11 @@ class AutoGumNLP:
         xml_data = xml_data.replace("–", " – ").replace("—", " — ")
 
         tokenized = tt_tokenize(xml_data, abbr=abbreviations)
+        metadata = tokenized.split("\n", 1)[0]
+        tokenized = tokenized.split("\n", 1)[1]
         tokenized = postprocess_tok(tokenized)
 
-        return tokenized
+        return metadata + "\n" + tokenized
 
 
 def main():
