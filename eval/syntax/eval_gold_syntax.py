@@ -46,16 +46,47 @@ def process(nlp, filepath):
     processed = nlp(doc)
     CoNLL.dict2conll(processed.to_dict(), "predicted/" + filepath.split("/")[-1])
 
+    return processed
 
-def main():
+
+def concat(f_dir, out_path):
+    conll_out = ""
+    for filename in os.listdir(f_dir):
+        with open("predicted" + os.sep + filename, encoding="utf-8") as f:
+            lines = f.read()
+            conll_out += lines
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(conll_out)
+
+
+def main(config):
     os.makedirs("tagged_fixed", exist_ok=True)
     os.makedirs("predicted", exist_ok=True)
-    nlp = stanfordnlp.Pipeline(
-        **{"processors": "depparse", "lang": "en", "depparse_pretagged": True}
-    )
+    nlp = stanfordnlp.Pipeline(**config)
     for filepath in glob("tagged/*.conllu"):
         process(nlp, filepath)
+    concat("predicted", "en_gumby-ud.pred.conllu")
 
 
 if __name__ == "__main__":
-    main()
+    config = {
+        "processors": "depparse",
+        "lang": "en",
+        "treebank": "en_gum",
+        # 'treebank': 'en_ewt',
+        "tokenize_pretokenized": True,
+        "pos_batch_size": 1000,
+        # 'pos_model_path': './stanfordnlp/saved_models/pos/en_gum_tagger.pt',
+        # 'pos_pretrain_path': './stanfordnlp/saved_models/depparse/en_gum.pretrain.pt',
+        # 'lemma_model_path': './stanfordnlp/saved_models/lemma/en_gum_lemmatizer.pt',
+        # 'depparse_model_path': './stanfordnlp/saved_models/depparse/en_gum_parser.pt',
+        # 'depparse_pretrain_path': './stanfordnlp/saved_models/depparse/en_gum.pretrain.pt',
+        # 'pos_model_path': './stanfordnlp/en_ewt_models/en_ewt_tagger.pt',
+        # 'pos_pretrain_path': './stanfordnlp/en_ewt_models/en_ewt.pretrain.pt',
+        # 'lemma_model_path': './stanfordnlp/en_ewt_models/en_ewt_lemmatizer.pt',
+        "depparse_model_path": "./stanfordnlp/en_ewt_models/en_ewt_parser.pt",
+        "depparse_pretrain_path": "./stanfordnlp/en_ewt_models/en_ewt.pretrain.pt",
+        "depparse_pretagged": True,
+    }
+
+    main(config)
