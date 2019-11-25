@@ -126,7 +126,7 @@ def tokenize(text, abbr=None, add_sents=False):
                         m = re.match(r"([" + PChar + "])(.)", subunit)
                         if m is not None:
                             m1 = m.group(1)
-                            subunit = re.sub("([" + PChar + "])(.)", r"\2", subunit)
+                            subunit = re.sub("^([" + PChar + "])(.)", r"\2", subunit)
                             output += m1 + "\n"
                             finished = 0
                         # cut off trailing punctuation
