@@ -241,5 +241,5 @@ if __name__ == "__main__":
             config1["pos_pretrain_path"] = dir + f"en_{corpus_name}.pretrain.pt"
             config2["depparse_pretrain_path"] = dir + f"en_{corpus_name}.pretrain.pt"
 
-        # eval_gumby(config1, config2, dir)
+        eval_gumby(config1, config2, dir)
         eval_gum(config1, config2, dir)
