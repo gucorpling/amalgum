@@ -112,6 +112,7 @@ def eval_gumby(config1, config2, corpus):
             os.sep.join(["stanfordnlp", "stanfordnlp", "utils", "conll18_ud_eval.py"]),
             "en_gumby-ud.gold.conllu",
             "en_gumby-ud.pred.conllu",
+            # "--verbose",
         ]
     )
     p.communicate()
@@ -120,8 +121,8 @@ def eval_gumby(config1, config2, corpus):
 
 def download_models():
     os.makedirs("./models/", exist_ok=True)
-    stanfordnlp.download("en_gum", resource_dir="./models", confirm_if_exists=True)
-    stanfordnlp.download("en_ewt", resource_dir="./models", confirm_if_exists=True)
+    # stanfordnlp.download("en_gum", resource_dir="./models", confirm_if_exists=True)
+    # stanfordnlp.download("en_ewt", resource_dir="./models", confirm_if_exists=True)
 
 
 if __name__ == "__main__":
@@ -131,7 +132,7 @@ if __name__ == "__main__":
         "tokenize_pretokenized": True,
         "processors": "tokenize,pos,lemma",
         "pos_model_path": "./models/en_gum_models/en_gum_tagger.pt",
-        "pos_pretrain_path": "./models/en_gum_models/en_gum.pretrain.pt",
+        "pos_pretrain_path": "./models/yilun/en_gum.pretrain.pt",
         "lemma_model_path": "./models/en_gum_models/en_gum_lemmatizer.pt",
     }
     gum_config2 = {
@@ -139,7 +140,7 @@ if __name__ == "__main__":
         "processors": "depparse",
         "tokenize_pretokenized": True,
         "depparse_model_path": "./models/en_gum_models/en_gum_parser.pt",
-        "depparse_pretrain_path": "./models/en_gum_models/en_gum.pretrain.pt",
+        "depparse_pretrain_path": "./models/yilun/en_gum.pretrain.pt",
         "depparse_pretagged": True,
     }
 
@@ -159,4 +160,4 @@ if __name__ == "__main__":
     }
 
     eval_gumby(gum_config1, gum_config2, "gum")
-    eval_gumby(ewt_config1, ewt_config2, "ewt")
+    # eval_gumby(ewt_config1, ewt_config2, "ewt")
