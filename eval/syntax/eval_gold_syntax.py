@@ -9,6 +9,7 @@ To do that:
 import os
 import sys
 import re
+from argparse import ArgumentParser
 
 if not os.path.exists("./stanfordnlp"):
     print(
@@ -79,6 +80,8 @@ def fix_upos(word):
     xpos_sub(r"POS", "PART")
     xpos_sub(r"\$", "SYM")
     xpos_sub(r"-[RL][SR]B-", "PUNCT")
+    if word.text == "%":
+        word.upos = "SYM"
 
 
 def replace_xpos(doc, doc_with_our_xpos):
@@ -129,7 +132,7 @@ def concat(f_dir, out_path):
         f.write(conll_out)
 
 
-def eval_gumby(config1, config2, corpus):
+def eval_gumby(config1, config2, model):
     os.makedirs("tagged_fixed", exist_ok=True)
     os.makedirs("predicted", exist_ok=True)
     nlp1 = stanfordnlp.Pipeline(**config1)
@@ -138,7 +141,7 @@ def eval_gumby(config1, config2, corpus):
         process(nlp1, nlp2, filepath)
     concat("predicted", "en_gumby-ud.pred.conllu")
     concat("gold", "en_gumby-ud.gold.conllu")
-    print("GUMBY score using " + corpus + ":")
+    print("GUMBY score using '" + model + "':")
     p = sp.Popen(
         [
             "python",
@@ -160,37 +163,37 @@ def download_models():
 
 if __name__ == "__main__":
     download_models()
-    gum_config1 = {
-        "lang": "en",
-        "tokenize_pretokenized": True,
-        "processors": "tokenize,pos,lemma",
-        "pos_model_path": "./models/en_gum_models/en_gum_tagger.pt",
-        "pos_pretrain_path": "./models/yilun/en_gum.pretrain.pt",
-        "lemma_model_path": "./models/en_gum_models/en_gum_lemmatizer.pt",
-    }
-    gum_config2 = {
-        "lang": "en",
-        "processors": "depparse",
-        "tokenize_pretokenized": True,
-        "depparse_model_path": "./models/en_gum_models/en_gum_parser.pt",
-        "depparse_pretrain_path": "./models/yilun/en_gum.pretrain.pt",
-        "depparse_pretagged": True,
-    }
+    ap = ArgumentParser()
+    ap.add_argument("model_dirs", nargs="+")
+    args = ap.parse_args()
+    args.model_dirs = [
+        dir if dir.endswith(os.sep) else dir + os.sep for dir in args.model_dirs
+    ]
 
-    ewt_config1 = {
-        "lang": "en",
-        "tokenize_pretokenized": True,
-        "processors": "tokenize,pos,lemma",
-        "pos_model_path": "./models/en_ewt_models/en_ewt_tagger.pt",
-        "lemma_model_path": "./models/en_ewt_models/en_ewt_lemmatizer.pt",
-    }
-    ewt_config2 = {
-        "lang": "en",
-        "processors": "depparse",
-        "tokenize_pretokenized": True,
-        "depparse_model_path": "./models/en_ewt_models/en_ewt_parser.pt",
-        "depparse_pretagged": True,
-    }
+    for dir in args.model_dirs:
+        if "ewt" in dir:
+            corpus_name = "ewt"
+        else:
+            corpus_name = "gum"
 
-    eval_gumby(gum_config1, gum_config2, "gum")
-    # eval_gumby(ewt_config1, ewt_config2, "ewt")
+        # before pos replacements
+        config1 = {
+            "lang": "en",
+            "processors": "tokenize,pos,lemma",
+            "pos_model_path": dir + f"en_{corpus_name}_tagger.pt",
+            "lemma_model_path": dir + f"en_{corpus_name}_lemmatizer.pt",
+            "tokenize_pretokenized": True,
+        }
+        # after pos replacements
+        config2 = {
+            "lang": "en",
+            "processors": "depparse",
+            "depparse_model_path": dir + f"en_{corpus_name}_parser.pt",
+            "tokenize_pretokenized": True,
+            "depparse_pretagged": True,
+        }
+        if corpus_name == "gum":
+            config1["pos_pretrain_path"] = dir + f"en_{corpus_name}.pretrain.pt"
+            config2["depparse_pretrain_path"] = dir + f"en_{corpus_name}.pretrain.pt"
+
+        eval_gumby(config1, config2, dir)
