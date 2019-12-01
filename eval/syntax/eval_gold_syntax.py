@@ -8,6 +8,7 @@ To do that:
 """
 import os
 import sys
+import re
 
 if not os.path.exists("./stanfordnlp"):
     print(
@@ -54,6 +55,42 @@ def fix_conllu(filepath):
     return outstring
 
 
+def fix_upos(word):
+    """If we replaced the xpos, we should try to fix the upos.
+    Follows https://github.com/amir-zeldes/gum/blob/dev/_build/utils/upos.ini
+    """
+
+    def xpos_sub(xpos_pattern, upos):
+        nonlocal word
+        if re.match("^" + xpos_pattern + "$", word.xpos):
+            word.upos = upos
+
+    xpos_sub(r"JJ[RS]?", "ADJ")
+    xpos_sub(r"WRB", "SCONJ")
+    xpos_sub(r"UH", "INTJ")
+    xpos_sub(r"CC", "CCONJ")
+    xpos_sub(r"CD", "NUM")
+    xpos_sub(r"NNS?", "NOUN")
+    xpos_sub(r"NNPS?", "PROPN")
+    xpos_sub(r"V.*", "VERB")
+    xpos_sub(r"FW|LS", "X")
+    xpos_sub(r"MD", "AUX")
+    xpos_sub(r"SENT", "PUNCT")
+    xpos_sub(r"POS", "PART")
+    xpos_sub(r"\$", "SYM")
+    xpos_sub(r"-[RL][SR]B-", "PUNCT")
+
+
+def replace_xpos(doc, doc_with_our_xpos):
+    for i, sent in enumerate(doc.sentences):
+        our_sent = doc_with_our_xpos.sentences[i]
+        for j, word in enumerate(sent.words):
+            our_word = our_sent.words[j]
+            if word.xpos != our_word.xpos:
+                word.xpos = our_word.xpos
+                fix_upos(word)
+
+
 def process(nlp1, nlp2, filepath):
     conll_string = fix_conllu(filepath)
     print("Reading from " + filepath + "...")
@@ -72,11 +109,7 @@ def process(nlp1, nlp2, filepath):
 
     # overwrite snlp's xpos with our xpos
     doc_with_our_xpos = stanfordnlp.Document(CoNLL.conll2dict(input_str=conll_string))
-    for i, sent in enumerate(doc.sentences):
-        our_sent = doc_with_our_xpos.sentences[i]
-        for j, word in enumerate(sent.words):
-            our_word = our_sent.words[j]
-            word.xpos = our_word.xpos
+    replace_xpos(doc, doc_with_our_xpos)
 
     processed = nlp2(doc)
     d = processed.to_dict()
