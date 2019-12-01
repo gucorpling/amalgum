@@ -94,12 +94,12 @@ def replace_xpos(doc, doc_with_our_xpos):
                 fix_upos(word)
 
 
-def process(nlp1, nlp2, filepath):
+def process_gumby(nlp1, nlp2, filepath):
     conll_string = fix_conllu(filepath)
     print("Reading from " + filepath + "...")
     doc = CoNLL.conll2dict(input_str=conll_string)
 
-    # get rid of xpos
+    # get just the text
     sents = []
     for sent in doc:
         words = []
@@ -138,7 +138,7 @@ def eval_gumby(config1, config2, model):
     nlp1 = stanfordnlp.Pipeline(**config1)
     nlp2 = stanfordnlp.Pipeline(**config2)
     for filepath in glob("tagged/*.conllu"):
-        process(nlp1, nlp2, filepath)
+        process_gumby(nlp1, nlp2, filepath)
     concat("predicted", "en_gumby-ud.pred.conllu")
     concat("gold", "en_gumby-ud.gold.conllu")
     print("GUMBY score using '" + model + "':")
@@ -148,7 +148,55 @@ def eval_gumby(config1, config2, model):
             os.sep.join(["stanfordnlp", "stanfordnlp", "utils", "conll18_ud_eval.py"]),
             "en_gumby-ud.gold.conllu",
             "en_gumby-ud.pred.conllu",
-            # "--verbose",
+            "--verbose",
+        ]
+    )
+    p.communicate()
+    p.wait()
+
+
+def process_gum(nlp1, nlp2, filepath):
+    with open(filepath, "r") as f:
+        conll_string = f.read()
+    doc = CoNLL.conll2dict(input_str=conll_string)
+
+    # get just the text
+    sents = []
+    for sent in doc:
+        words = []
+        for word in sent:
+            words.append(word["text"])
+        sents.append(" ".join(words))
+
+    # put it through first part of the pipeline
+    doc = nlp1("\n".join(sents))
+
+    # overwrite snlp's xpos with our xpos
+    doc_with_our_xpos = stanfordnlp.Document(CoNLL.conll2dict(input_str=conll_string))
+    replace_xpos(doc, doc_with_our_xpos)
+
+    processed = nlp2(doc)
+    d = processed.to_dict()
+    CoNLL.dict2conll(d, "predicted/" + filepath.split("/")[-1])
+    print("Wrote predictions to predicted/" + filepath.split("/")[-1])
+
+    return processed
+
+
+def eval_gum(config1, config2, model):
+    os.makedirs("tagged_fixed", exist_ok=True)
+    os.makedirs("predicted", exist_ok=True)
+    nlp1 = stanfordnlp.Pipeline(**config1)
+    nlp2 = stanfordnlp.Pipeline(**config2)
+    process_gum(nlp1, nlp2, "en_gum-ud-test.conllu")
+    print("GUM score using '" + model + "':")
+    p = sp.Popen(
+        [
+            "python",
+            os.sep.join(["stanfordnlp", "stanfordnlp", "utils", "conll18_ud_eval.py"]),
+            "en_gum-ud-test.conllu",
+            "predicted/en_gum-ud-test.conllu",
+            "--verbose",
         ]
     )
     p.communicate()
@@ -171,10 +219,7 @@ if __name__ == "__main__":
     ]
 
     for dir in args.model_dirs:
-        if "ewt" in dir:
-            corpus_name = "ewt"
-        else:
-            corpus_name = "gum"
+        corpus_name = "ewt" if "ewt" in dir else "gum"
 
         # before pos replacements
         config1 = {
@@ -196,4 +241,5 @@ if __name__ == "__main__":
             config1["pos_pretrain_path"] = dir + f"en_{corpus_name}.pretrain.pt"
             config2["depparse_pretrain_path"] = dir + f"en_{corpus_name}.pretrain.pt"
 
-        eval_gumby(config1, config2, dir)
+        # eval_gumby(config1, config2, dir)
+        eval_gum(config1, config2, dir)
