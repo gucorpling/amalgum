@@ -57,12 +57,12 @@ def process(nlp1, nlp2, filepath):
     doc = nlp1("\n".join(sents))
 
     # overwrite snlp's xpos with our xpos
-    # doc_with_our_xpos = stanfordnlp.Document(CoNLL.conll2dict(input_str=conll_string))
-    # for i, sent in enumerate(doc.sentences):
-    #    our_sent = doc_with_our_xpos.sentences[i]
-    #    for j, word in enumerate(sent.words):
-    #        our_word = our_sent.words[j]
-    #        word.xpos = our_word.xpos
+    doc_with_our_xpos = stanfordnlp.Document(CoNLL.conll2dict(input_str=conll_string))
+    for i, sent in enumerate(doc.sentences):
+        our_sent = doc_with_our_xpos.sentences[i]
+        for j, word in enumerate(sent.words):
+            our_word = our_sent.words[j]
+            word.xpos = our_word.xpos
 
     processed = nlp2(doc)
     d = processed.to_dict()
