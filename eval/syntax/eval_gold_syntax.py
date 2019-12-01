@@ -6,10 +6,24 @@ To do that:
     git checkout dev
     pip install -e .
 """
-from glob import glob
+import os
+import sys
+
+if not os.path.exists("./stanfordnlp"):
+    print(
+        """
+    NOTE: you need to use the dev branch of stanfordnlp to run this.
+    To do that:
+        git clone https://github.com/stanfordnlp/stanfordnlp.git
+        cd stanfordnlp
+        git checkout dev
+        pip install -e .
+    """
+    )
+    sys.exit(1)
 import stanfordnlp
 from stanfordnlp.utils.conll import CoNLL
-import os
+from glob import glob
 import subprocess as sp
 
 
@@ -143,21 +157,6 @@ if __name__ == "__main__":
         "depparse_model_path": "./models/en_ewt_models/en_ewt_parser.pt",
         "depparse_pretagged": True,
     }
-
-    if not os.path.exists("./stanfordnlp"):
-        print(
-            """
-        NOTE: you need to use the dev branch of stanfordnlp to run this.
-        To do that:
-            git clone https://github.com/stanfordnlp/stanfordnlp.git
-            cd stanfordnlp
-            git checkout dev
-            pip install -e .
-        """
-        )
-        import sys
-
-        sys.exit(1)
 
     eval_gumby(gum_config1, gum_config2, "gum")
     eval_gumby(ewt_config1, ewt_config2, "ewt")
