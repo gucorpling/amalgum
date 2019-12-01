@@ -1,0 +1,15 @@
+<text id="autogum_academic_doc084" title="Design of Urban Rail Transit Network Constrained by Urban Road Network, Trips and Land-Use Characteristics" shortTile="design-urban-rail" author="Shushan Chai, Qinghuai Liang, Simin Zhong" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2071-1050/11/21/6128/htm" speakerList="none" speakerCount="0">
+<head> 4. Neighborhood Search Algorithm</head>
+<p>
+The problem dealt with in this paper is NP-hard. It has high structural complexity, multiple constraints and large search space, etc. So a neighborhood search algorithm is developed based on a simulated annealing algorithm. A simulated annealing algorithm is a random optimization algorithm based on a Monte Carlo iterative solution strategy, and has strong robustness, global convergence and wide adaptability, which is suitable for solving the problem. </p>
+
+<p>In order to obtain a variety of perturbation solutions in the iteration process, four neighborhood transform operators are designed. The functions of these operators are as follows: adding a line randomly, deleting a line randomly, adding a section in a line randomly and deleting a section in a line randomly, as shown in <figure>Figure 10</figure>, <figure>Figure 11</figure>, <figure>Figure 12</figure> and <figure>Figure 13</figure>. Different neighborhood transform operators are executed according to a certain probability. Different types of perturbations are randomly applied to the current solution  to obtain new solution . Each operator can be executed independently or simultaneously, for example, one line can be added while another line can be deleted at the same time. </p>
+
+<p>Let ,  and  be the objective function values of the current solution , the new solution  (perturbation solution) and the optimal solution  in the existing iteration process, respectively. If ,  is accepted as the new current solution. Otherwise,  is accepted according to the Metropolis criterion. Metropolis criterion is that the algorithm allows the inferior solution to be accepted with a certain probability, so that the algorithm can jump out of the trap of the local optimum. The acceptance probability in the criterion is calculated by Equation (46). As the temperature decreases, the probability of accepting an inferior solution decreases gradually.
+
+(46)
+
+where  is the current temperature. </p>
+
+<p>The algorithm is designed with the memory function of the optimal solution  in the existing iteration process, that is, to remember the ‘best so far’ state. As the iteration proceeds, the solution  in the memory base is continuously updated until the algorithm converges. Therefore, the objective value will approach the global optimum gradually in the iterative process. A solution has many kinds of changes after perturbation, so even if the current solution is perturbed into the solution that has appeared in previous iterations, it will change in other directions when perturbed again, which will not have a negative impact on the results. The overall flow of the algorithm is shown in <figure>Figure 14</figure>. </p>
+</text>
