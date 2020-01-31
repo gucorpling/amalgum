@@ -1,31 +1,20 @@
 <text id="autogum_academic_doc059" title="A Landscape Connectivity Approach for Determining Minimum Ecological Lake Level: Implications for Lake Restoration" shortTile="landscape-connectivity" author="Dan Liu, Xuan Wang, Yun-long Zhang, Sheng-jun Yan, Bao-shan Cui, Zhi-feng Yang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-4441/11/11/2237/htm" speakerList="none" speakerCount="0">
 <head> 3. Methods</head><head> 3.1. Framework for Developing a Landscape Connectivity Approach to Determine the Minimum Ecological Lake Level</head>
-<p>
-Lake level influences the area of water patches, which is an important factor in determining landscape connectivity. Therefore, we assumed that a direct relationship existed between lake level and connectivity. Ideally, the minimum ecological lake level will correspond to the minimum connectivity necessary to prevent lake degradation. The relationship between connectivity and lake level can be expressed by the following:
+<p>Lake level influences the area of water patches, which is an important factor in determining landscape connectivity. Therefore, we assumed that a direct relationship existed between lake level and connectivity. Ideally, the minimum ecological lake level will correspond to the minimum connectivity necessary to prevent lake degradation. The relationship between connectivity and lake level can be expressed by the following: (1) where <hi rend="italic">C</hi> is the connectivity of water patches, and <hi rend="italic">H</hi> is the lake level. </p>
 
-(1)
+<p>Generally, connectivity increases with the increased lake level. However, the rate of increasing connectivity as a function of lake level (<hi rend="italic">dC</hi>/<hi rend="italic">dH</hi>) may increase or decrease with the lake level. Similar to widely used lake morphology analysis methods, the minimum ecological lake level, <hi rend="italic">He</hi>, can be determined as the critical lake level corresponding to the maximum <hi rend="italic">dC</hi>/<hi rend="italic">dH</hi>, that is </p>
 
-where <hi rend="italic">C</hi> is the connectivity of water patches, and <hi rend="italic">H</hi> is the lake level. </p>
-
-<p>Generally, connectivity increases with the increased lake level. However, the rate of increasing connectivity as a function of lake level (<hi rend="italic">dC</hi>/<hi rend="italic">dH</hi>) may increase or decrease with the lake level. Similar to widely used lake morphology analysis methods, the minimum ecological lake level, <hi rend="italic">He</hi>, can be determined as the critical lake level corresponding to the maximum <hi rend="italic">dC</hi>/<hi rend="italic">dH</hi>, that is
-
-(2)
-
-</p>
-
-<p>The connectivity corresponding to minimum ecological lake level is called the minimum ecological landscape connectivity. Accordingly, we define this approach as the landscape connectivity approach, as shown in <figure>Figure 3</figure>. </p>
+<p>(2) The connectivity corresponding to minimum ecological lake level is called the minimum ecological landscape connectivity. Accordingly, we define this approach as the landscape connectivity approach, as shown in <figure>Figure 3</figure>. </p>
 
 <p>At the minimum ecological lake level, landscape connectivity is most sensitive to changes in lake level. A small drop in lake level would lead to a significant reduction in connectivity and a correspondingly significant degradation of lake ecosystems. Conversely, a small increase in lake level can provide a significant increase in connectivity and ecosystem health. </p>
 
 <p>Three steps (<figure>Figure 4</figure>) are required to obtain the minimum ecological lake level: </p>
 
-<p><dl class="html-order"><dt id="">(1)</dt><dd>
-<p>
-Simulating landscape patterns of water at different lake levels. In this study, the hydrodynamic module (HD) of MIKE21 software was used to calculate the water depth at different lake levels based on measured topographic and bathymetric data of Baiyangdian Lake. Those grids with water depth greater than 0 m were then identified using ArcGIS and the distribution of water patches was mapped. It is also feasible to obtain the landscape patterns by interpreting Landsat images corresponding to known historical lake levels. However, Landsat images corresponding to different lake levels are not always available.</dd><dt id="">(2)</dt><dd>
-<p>
-Calculating the connectivity of water patches. With ArcGIS, water patch areas and edge-to-edge Euclidean distances between patches were calculated. Connectivity was then calculated using CONEFOR software. Commonly used connectivity indexes include the integral index of connectivity (<hi rend="italic">IIC</hi>) and the probability index of connectivity (<hi rend="italic">PC</hi>).</dd><dt id="">(3)</dt><dd>
-<p>
-Determining the minimum ecological lake level. Based on the relationship between connectivity and lake level, the lake level-connectivity (<hi rend="italic">H</hi>-<hi rend="italic">C</hi>) curve can be obtained. The breakpoint corresponding to the maximum <hi rend="italic">dC</hi>/<hi rend="italic">dH</hi> can then be determined and identified as the minimum ecological lake level of Baiyangdian Lake.</dd></dl> </p>
+<p>(1) Simulating landscape patterns of water at different lake levels. In this study, the hydrodynamic module (HD) of MIKE21 software was used to calculate the water depth at different lake levels based on measured topographic and bathymetric data of Baiyangdian Lake. Those grids with water depth greater than 0 m were then identified using ArcGIS and the distribution of water patches was mapped. It is also feasible to obtain the landscape patterns by interpreting Landsat images corresponding to known historical lake levels. However, Landsat images corresponding to different lake levels are not always available. </p>
+
+<p>(2) Calculating the connectivity of water patches. With ArcGIS, water patch areas and edge-to-edge Euclidean distances between patches were calculated. Connectivity was then calculated using CONEFOR software. Commonly used connectivity indexes include the integral index of connectivity (<hi rend="italic">IIC</hi>) and the probability index of connectivity (<hi rend="italic">PC</hi>). </p>
+
+<p>(3) Determining the minimum ecological lake level. Based on the relationship between connectivity and lake level, the lake level-connectivity (<hi rend="italic">H</hi>-<hi rend="italic">C</hi>) curve can be obtained. The breakpoint corresponding to the maximum <hi rend="italic">dC</hi>/<hi rend="italic">dH</hi> can then be determined and identified as the minimum ecological lake level of Baiyangdian Lake. </p>
 
 <head> 3.2. Water Landscape Simulation</head>
 <p>
@@ -36,7 +25,5 @@ As is typical of shallow lakes, the water landscape of Baiyangdian Lake is signi
 <p>The initial conditions for solving HD included surface elevation and the initial velocity in the horizontal and vertical directions. Because there were a few spatial differences in lake level, the initial lake level at varied grid cells was set to be identical, that is, . The initial velocities in both the horizontal and vertical directions were set to zero. To keep the lake level stable, the boundary condition was set as land boundary (zero velocity), and rainfall and evaporation were set to zero. The solution parameters values were as shown in Table 1. By running the model with different initial lake levels, the distributions of water depth under varied lake levels in Baiyangdian Lake can be obtained. </p>
 
 <head> 3.3. Landscape Connectivity</head>
-<p>
-In this study, two kinds of indices were adopted to reflect the landscape connectivity of Baiyangdian Lake, namely, the integral index of connectivity and the probability index of connectivity. These two indices can be calculated using the CONEFOR software package, which calculates a variety of graph-theoretic connectivity indices. Connectivity indices are calculated using the following functions:
-</p>
+<p>In this study, two kinds of indices were adopted to reflect the landscape connectivity of Baiyangdian Lake, namely, the integral index of connectivity and the probability index of connectivity. These two indices can be calculated using the CONEFOR software package, which calculates a variety of graph-theoretic connectivity indices. Connectivity indices are calculated using the following functions:</p>
 </text>
