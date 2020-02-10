@@ -1,6 +1,6 @@
 import re
 from lib.whitespace_tokenize import tokenize as tt_tokenize
-from .base import NLPModule
+from .base import NLPModule, PipelineDep
 from xml.dom import minidom
 
 
@@ -95,6 +95,9 @@ def escape_treetagger(tt_sgml):
 
 
 class TreeTaggerTokenizer(NLPModule):
+    requires = ()
+    provides = (PipelineDep.TOKENIZE,)
+
     def __init__(self, config):
         self.LIB_DIR = config["LIB_DIR"]
 

@@ -1,16 +1,42 @@
 import logging
 import os
 from abc import ABC, abstractmethod
+from enum import Enum
 from glob import glob
-from traceback import print_exc
 
 from tqdm import tqdm
 
 
+class PipelineDep(Enum):
+    TOKENIZE = "TOKENIZE"
+    SENTENCE = "SENTENCE"
+    POS_TAG = "POS_TAG"
+    PARSE = "PARSE"
+
+    def __str__(self):
+        return self.value
+
+
 class NLPModule(ABC):
+    """Superclass for all NLP modules, which are elements of the NLP pipeline."""
+
     @abstractmethod
     def __init__(self, config):
+        """Config is a dict containing command-line arguments and other information.
+        See nlp_controller.py."""
         pass
+
+    @property
+    @abstractmethod
+    def requires(self):
+        """Returns a tuple of NLPRequirements that must be provided before this step of the pipeline."""
+        return ()
+
+    @property
+    @abstractmethod
+    def provides(self):
+        """Returns a tuple of NLPRequirements that this module provides for downstream modules."""
+        return ()
 
     @abstractmethod
     def test_dependencies(self):

@@ -47,6 +47,27 @@ class NLPController:
         self.input_dir = opts["input_dir"]
         self.output_dir = opts["output_dir"]
 
+        logging.info("Resolving pipeline module dependencies...")
+        satisfied = set()
+        for module in self.pipeline:
+            if any(req not in satisfied for req in module.__class__.requires):
+                formatted_reqs = [
+                    f"{m.__class__.__name__}\t"
+                    + "{"
+                    + ",".join(str(dep) for dep in m.requires)
+                    + " -> "
+                    + ",".join(str(dep) for dep in m.provides)
+                    + "}"
+                    for m in self.pipeline
+                ]
+                raise Exception(
+                    f"Invalid pipeline: module {module.__class__} requires "
+                    f"{module.__class__.requires}, but pipeline only provides "
+                    f"{satisfied}. Full pipeline requirements:\n"
+                    + "\n".join(formatted_reqs)
+                )
+            satisfied.update(module.provides)
+
         for module in self.pipeline:
             logging.info(
                 f"Checking dependencies for module {module.__class__.__name__}..."

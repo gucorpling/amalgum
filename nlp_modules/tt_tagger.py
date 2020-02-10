@@ -3,10 +3,13 @@ import sys
 from xml.dom import minidom
 
 from lib.utils import exec_via_temp, get_col
-from nlp_modules.base import NLPModule
+from nlp_modules.base import NLPModule, PipelineDep
 
 
 class TreeTaggerTagger(NLPModule):
+    requires = (PipelineDep.TOKENIZE,)
+    provides = (PipelineDep.POS_TAG,)
+
     def __init__(self, config):
         TT_PATH = config["TT_PATH"]
         self.TT_PATH = TT_PATH
