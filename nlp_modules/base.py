@@ -4,21 +4,22 @@ from abc import ABC, abstractmethod
 from enum import Enum
 from glob import glob
 import pmap
+from functools import partial
 
 from tqdm import tqdm
 
 
 class PipelineDep(Enum):
-    TOKENIZE = "TOKENIZE"       # XML that is tokenized tree-tagger style 
-    POS_TAG = "POS_TAG"         # POS tags
-    S_TYPE = "SENT_TYPE"        # sentence types
-    S_SPLIT = "SENT_SPLIT"      # sentence splitting
-    EDUS = "EDUS"               # EDU segmenting
-    PARSE = "PARSE"             # dependency parse
-    
-    # only produced   
-    RST_OUT = "RST_OUT"         # output for rhetorical structure theory
-    TSV_OUT = "TSV_OUT"         # coref/entity output
+    TOKENIZE = "TOKENIZE"  # XML that is tokenized tree-tagger style
+    POS_TAG = "POS_TAG"  # POS tags
+    S_TYPE = "SENT_TYPE"  # sentence types
+    S_SPLIT = "SENT_SPLIT"  # sentence splitting
+    EDUS = "EDUS"  # EDU segmenting
+    PARSE = "PARSE"  # dependency parse
+
+    # only produced
+    RST_OUT = "RST_OUT"  # output for rhetorical structure theory
+    TSV_OUT = "TSV_OUT"  # coref/entity output
 
     def __str__(self):
         return self.value
@@ -81,7 +82,12 @@ class NLPModule(ABC):
         pass
 
     def process_files(
-        self, input_dir, output_dir, process_document_content, file_type="xml"
+        self,
+        input_dir,
+        output_dir,
+        process_document_content,
+        file_type="xml",
+        multithreaded=False,
     ):
         """
         Handles the most common case of iteration where processing can be handled with a function that is
@@ -95,7 +101,12 @@ class NLPModule(ABC):
         """
         os.makedirs(os.path.join(output_dir, file_type), exist_ok=True)
         sorted_filepaths = sorted(glob(os.path.join(input_dir, file_type, "*")))
-        for filepath in tqdm(sorted_filepaths):
+
+        progress = tqdm(total=len(sorted_filepaths))
+
+        def process_file(filepath, report_progress=False):
+            nonlocal progress
+
             filename = filepath.split(os.sep)[-1]
             with open(filepath, "r") as f:
                 s = f.read()
@@ -106,6 +117,20 @@ class NLPModule(ABC):
                 raise e
             with open(os.path.join(output_dir, file_type, filename), "w") as f:
                 f.write(s)
+
+            # This could lead to race conditions, but it doesn't really matter if
+            # the count gets messed up, so we let it be
+            if report_progress:
+                progress.update(1)
+
+        if multithreaded:
+            list(
+                pmap.pmap(partial(process_file, report_progress=True), sorted_filepaths)
+            )
+            progress.close()
+        else:
+            for filepath in tqdm(sorted_filepaths):
+                process_file(filepath)
 
     # A map from the subdirectory name to the extension of the files that go in that dir.
     FILE_EXT_MAP = {"rst": "rs3", "dep": "conllu"}
@@ -145,7 +170,10 @@ class NLPModule(ABC):
             [filename.split(".")[0] for filename in os.listdir(base_dir)]
         )
 
-        def process_filename(filename):
+        progress = tqdm(total=len(filenames))
+
+        def process_filename(filename, report_progress=False):
+            nonlocal progress
             # Refuse to proceed if every other directory doesn't also have a file with the same name
             if not all(
                 any(fname.startswith(filename) for fname in os.listdir(subdir))
@@ -194,8 +222,14 @@ class NLPModule(ABC):
                 with open(filepath, "w") as f:
                     f.write(content)
 
+            # This could lead to race conditions, but it doesn't really matter if
+            # the count gets messed up, so we let it be
+            if report_progress:
+                progress.update(1)
+
         if multithreaded:
-            list(pmap.pmap(process_filename, filenames))
+            list(pmap.pmap(partial(process_filename, report_progress=True), filenames))
+            progress.close()
         else:
             for filename in tqdm(filenames):
                 process_filename(filename)
