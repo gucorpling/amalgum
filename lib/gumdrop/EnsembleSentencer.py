@@ -44,7 +44,7 @@ class EnsembleSentencer:
 		try:
 			self.udpipe_model = glob(os.path.abspath(os.path.join(lib,"udpipe",self.long_lang+"*.udpipe")))[0]
 		except:
-			sys.stderr.write("! Model not found for language " + self.long_lang + "*.udpipe in " + os.path.abspath(os.path.join([lib,"udpipe",self.long_lang+"*.udpipe"]))+"\n")
+			sys.stderr.write("! Model not found for language " + self.long_lang + "*.udpipe in " + os.path.abspath(os.path.join(lib,"udpipe",self.long_lang+"*.udpipe"))+"\n")
 			sys.exit(0)
 		self.udpipe_path = os.path.abspath(os.path.join(lib,"udpipe")) + os.sep
 		self.corpus = model
