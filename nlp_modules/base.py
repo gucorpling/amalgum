@@ -9,10 +9,16 @@ from tqdm import tqdm
 
 
 class PipelineDep(Enum):
-    TOKENIZE = "TOKENIZE"
-    SENTENCE = "SENTENCE"
-    POS_TAG = "POS_TAG"
-    PARSE = "PARSE"
+    TOKENIZE = "TOKENIZE"       # XML that is tokenized tree-tagger style 
+    POS_TAG = "POS_TAG"         # POS tags
+    S_TYPE = "SENT_TYPE"        # sentence types
+    S_SPLIT = "SENT_SPLIT"      # sentence splitting
+    EDUS = "EDUS"               # EDU segmenting
+    PARSE = "PARSE"             # dependency parse
+    
+    # only produced   
+    RST_OUT = "RST_OUT"         # output for rhetorical structure theory
+    TSV_OUT = "TSV_OUT"         # coref/entity output
 
     def __str__(self):
         return self.value
