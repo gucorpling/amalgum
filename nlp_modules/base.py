@@ -97,6 +97,9 @@ class NLPModule(ABC):
         :param output_dir: From `run`
         :param process_document_content: A method that accepts a single argument, the contents of an input file.
         :param file_type: The AMALGUM file type folder that should be used under input_dir and output_dir.
+        :param multithreaded: Use python-pmap to apply the process_document_content_dict in parallel. Only use if
+                              the function is CPU-intensive (and not, e.g., I/O intensive) and there are no race
+                              conditions that would be introduced by having multiple threads use the function.
         :return: None
         """
         os.makedirs(os.path.join(output_dir, file_type), exist_ok=True)
@@ -154,6 +157,9 @@ class NLPModule(ABC):
         :param output_dir: if True, use the python-pmap library to run the document processing function in parallel.
                            Do NOT set this to True unless you are CERTAIN that there will not be any race conditions
                            that could corrupt the data.
+        :param multithreaded: Use python-pmap to apply the process_document_content_dict in parallel. Only use if
+                              the function is CPU-intensive (and not, e.g., I/O intensive) and there are no race
+                              conditions that would be introduced by having multiple threads use the function.
         :return: None
         """
         existing_input_dirs = [
