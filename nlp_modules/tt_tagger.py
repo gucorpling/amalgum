@@ -44,7 +44,9 @@ class TreeTaggerTagger(NLPModule):
             )
             sys.exit(1)
 
-    def tag(self, tokenized_document):
+    def tag(self, doc_dict):
+        tokenized_document = doc_dict["xml"]
+
         data = tokenized_document.strip().split("\n")
         orig_data_split = data
         data = [
@@ -93,8 +95,10 @@ class TreeTaggerTagger(NLPModule):
         postprocess(xml)
         tagged = xml.toxml()
 
-        return tagged
+        return {"xml": tagged}
 
     def run(self, input_dir, output_dir):
         processing_function = self.tag
-        self.process_files(input_dir, output_dir, processing_function)
+        self.process_files_multiformat(
+            input_dir, output_dir, processing_function, multithreaded=True
+        )

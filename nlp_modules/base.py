@@ -3,6 +3,7 @@ import os
 from abc import ABC, abstractmethod
 from enum import Enum
 from glob import glob
+import pmap
 
 from tqdm import tqdm
 
@@ -99,6 +100,99 @@ class NLPModule(ABC):
                 raise e
             with open(os.path.join(output_dir, file_type, filename), "w") as f:
                 f.write(s)
+
+    # A map from the subdirectory name to the extension of the files that go in that dir.
+    FILE_EXT_MAP = {"rst": "rs3", "dep": "conllu"}
+
+    def process_files_multiformat(
+        self, input_dir, output_dir, process_document_content_dict, multithreaded=False
+    ):
+        """
+        Like process_files, with one difference: the supplied function `process_document_content_dict` now
+        (1) receives a dict of dir -> file contents, e.g. {'xml': '<text ...>...</text>', 'rst': '...', ...},
+            which contains every version of the document that is currently in the pipeline
+        (2) expects a dict with the same structure to be returned, e.g. {'tsv': '...'}. Every pair in the
+            returned dict will be written to the appropriate file, e.g. 'tsv/doc_name.tsv', 'rst/doc_name.rs3'.
+            File extension is determined from NLPModule.FILE_EXT_MAP, or if it is not present there, is assumed
+            to be the same as the name of the subdirectory.
+        :param input_dir: From `run`
+        :param output_dir: From `run`
+        :param process_document_content_dict: A method that accepts a single argument, a dict with
+                                              the key being the subdirectory that the file is in, and
+                                              the value being the contents of that file as a string
+        :param output_dir: if True, use the python-pmap library to run the document processing function in parallel.
+                           Do NOT set this to True unless you are CERTAIN that there will not be any race conditions
+                           that could corrupt the data.
+        :return: None
+        """
+        existing_input_dirs = [
+            os.path.join(input_dir, subdir)
+            for subdir in os.listdir(input_dir)
+            if os.path.isdir(os.path.join(input_dir, subdir))
+        ]
+        if len(existing_input_dirs) == 0:
+            raise Exception("No input directories found!")
+
+        # Use the first dir to derive filenames without filetypes
+        base_dir = sorted(existing_input_dirs)[0]
+        filenames = sorted(
+            [filename.split(".")[0] for filename in os.listdir(base_dir)]
+        )
+
+        def process_filename(filename):
+            # Refuse to proceed if every other directory doesn't also have a file with the same name
+            if not all(
+                any(fname.startswith(filename) for fname in os.listdir(subdir))
+                for subdir in existing_input_dirs
+            ):
+                raise Exception(
+                    f"File {filename} does not exist in all of these directories: {existing_input_dirs}"
+                )
+
+            # construct the content dict
+            content_dict = {}
+            for subdir in existing_input_dirs:
+                matching_files = [
+                    f for f in os.listdir(subdir) if f.startswith(filename)
+                ]
+                assert (
+                    len(matching_files) > 0
+                ), f"Couldn't find {filename} in directory {subdir}"
+                assert (
+                    len(matching_files) < 2
+                ), f"More than one file starting with {filename} in directory {subdir}"
+
+                filepath = os.path.join(subdir, matching_files[0])
+                with open(filepath, "r") as f:
+                    content_dict[subdir.split(os.sep)[-1]] = f.read()
+
+            # run the processing function
+            try:
+                output_dict = process_document_content_dict(content_dict)
+            except Exception as e:
+                logging.error(f"Encountered an error while processing file {filepath}!")
+                raise e
+
+            # write out all the output documents
+            for subdir, content in output_dict.items():
+                subdir_path = os.path.join(output_dir, subdir)
+                if not os.path.exists(subdir_path):
+                    os.makedirs(subdir_path)
+
+                file_ext = (
+                    NLPModule.FILE_EXT_MAP[subdir]
+                    if subdir in NLPModule.FILE_EXT_MAP
+                    else subdir
+                )
+                filepath = os.path.join(output_dir, subdir, filename + "." + file_ext)
+                with open(filepath, "w") as f:
+                    f.write(content)
+
+        if multithreaded:
+            list(pmap.pmap(process_filename, filenames))
+        else:
+            for filename in tqdm(filenames):
+                process_filename(filename)
 
 
 class NLPDependencyException(Exception):
