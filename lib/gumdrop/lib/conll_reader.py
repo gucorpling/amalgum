@@ -633,7 +633,17 @@ def tt_tag(conllu,lang="eng",preserve_sent=False):
 	toks = "\n".join(toks)
 
 	tt_path = os.path.abspath(os.path.join(lib,"treetagger")) + os.sep
-	cmd = [tt_path + "tree-tagger","-token","-lemma","-no-unknown","-cap-heuristics","-hyphen-heuristics",lib+os.sep+"treetagger"+os.sep+lang+".par","tempfilename"]
+	cmd = [
+		tt_path + "tree-tagger",
+		"-token",
+		"-lemma",
+		"-no-unknown",
+		# "-cap-heuristics", # not found in 3.2.2 for some reason?
+		"-hyphen-heuristics",
+		lib+os.sep+"treetagger"+os.sep+lang+".par",
+		"tempfilename"
+	]
+	print(cmd)
 	tagged = exec_via_temp(toks, cmd)
 
 	conllized = conllize(tagged, element="s", newdoc="newdoc", ten_cols=True)
@@ -680,7 +690,7 @@ def get_multitrain_preds(clf,X,y,multifolds):
 	y_folds = np.array_split(y, multifolds)
 	for i in range(multifolds):
 		X_train = np.vstack(tuple([X_folds[j] for j in range(multifolds) if j!=i]))
-		y_train = np.concatenate(tuple([y_folds[j] for j in range(multifolds) if j!=i]))
+		y_train = np.concatenate(tuple([np.array(y_folds[j]) for j in range(multifolds) if j!=i]))
 		X_heldout = X_folds[i]
 		sys.stderr.write("o Training on fold " + str(i+1) +" of " + str(multifolds) + "\n")
 		clf.fit(X_train,y_train)
