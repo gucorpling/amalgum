@@ -29,19 +29,20 @@ class GumdropSplitter(NLPModule):
         import scipy
         import torch
         import hyperopt
+        import wget
 
         if tensorflow.version.VERSION[0] != "1":
             raise Exception("TensorFlow version 1.x must be used with GumdropSplitter")
         model_dir = os.path.join(self.LIB_DIR, "gumdrop", "lib", "udpipe")
-        if len(glob(os.path.join(model_dir, "english-gum-ud-*.udpipe"))) == 0:
+        if len(glob(os.path.join(model_dir, "english-*.udpipe"))) == 0:
             raise Exception(
-                "No GUM udpipe model found. Please download the latest pretrained "
-                "GUM udpipe model from https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-3131"
+                "No English udpipe model found. Please download the an English udpipe model from "
+                "from https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-3131"
                 f" and place it in {model_dir}/."
             )
 
     def split(self, xml_data):
-        genre = re.findall(r'type="(.*?)"', xml_data)
+        genre = re.findall(r'type="(.*?)"', xml_data.split("\n")[0])
         assert len(genre) == 1
         genre = genre[0]
         split_indices = self.sentencer.predict(
