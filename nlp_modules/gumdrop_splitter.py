@@ -13,12 +13,6 @@ class GumdropSplitter(NLPModule):
         self.LIB_DIR = config["LIB_DIR"]
         self.test_dependencies()
 
-        from lib.gumdrop.EnsembleSentencer import EnsembleSentencer
-
-        self.sentencer = EnsembleSentencer(
-            lang="eng", model="eng.rst.gum", genre_pat="_([^_]+)_"
-        )
-
     def test_dependencies(self):
         import tensorflow
         import keras
@@ -80,6 +74,12 @@ class GumdropSplitter(NLPModule):
         return splitted
 
     def run(self, input_dir, output_dir):
+        from lib.gumdrop.EnsembleSentencer import EnsembleSentencer
+
+        self.sentencer = EnsembleSentencer(
+            lang="eng", model="eng.rst.gum", genre_pat="_([^_]+)_"
+        )
+
         # Identify a function that takes data and returns output at the document level
         processing_function = self.split
 
