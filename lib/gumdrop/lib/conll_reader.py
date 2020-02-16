@@ -643,7 +643,6 @@ def tt_tag(conllu,lang="eng",preserve_sent=False):
 		lib+os.sep+"treetagger"+os.sep+lang+".par",
 		"tempfilename"
 	]
-	print(cmd)
 	tagged = exec_via_temp(toks, cmd)
 
 	conllized = conllize(tagged, element="s", newdoc="newdoc", ten_cols=True)
