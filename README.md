@@ -1,6 +1,6 @@
 # Build
 ## Dependencies
-Using conda:
+1. Set up a conda environment:
 
 ```sh
 conda create --name amalgum python=3.7
@@ -8,11 +8,16 @@ conda activate amalgum
 pip install -r requirements.txt
 ```
 
+2. Install a version of `pytorch` and `tensorflow` 1.x appropriate for your machine's hardware.
+
+3. Download [files required for GUMDROP](https://corpling.uis.georgetown.edu/amir/gumdrop/) and follow
+[the instructions](https://corpling.uis.georgetown.edu/amir/gumdrop/README.md) for unpacking them.
+
 ## NLP Pipeline
-Invoke nlp_controller.py:
+Invoke nlp_controller.py on the tiny subset to ensure the pipeline is working properly:
 
 ```bash
-python nlp_controller.py processed -i out_tiny -m tt_tokenizer tt_tagger
+python nlp_controller.py target -i out_tiny
 ```
 
 # Development
