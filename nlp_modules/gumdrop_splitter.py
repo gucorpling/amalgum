@@ -5,6 +5,10 @@ from glob import glob
 from nlp_modules.base import NLPModule, PipelineDep
 
 
+def is_sgml_tag(line):
+    return line.startswith("<") and line.endswith(">")
+
+
 class GumdropSplitter(NLPModule):
     requires = (PipelineDep.TOKENIZE,)
     provides = (PipelineDep.S_SPLIT, PipelineDep.S_TYPE)
@@ -50,12 +54,14 @@ class GumdropSplitter(NLPModule):
         opened_sent = False
         para = True
         for line in xml_data.strip().split("\n"):
-            if not (line.startswith("<") and line.endswith(">")):
+            if not is_sgml_tag(line):
                 # Token
                 if split_indices[counter] == 1 or para:
                     if opened_sent:
-                        splitted.append("</s>")
-                        opened_sent = False
+                        rev_counter = len(splitted) - 1
+                        while is_sgml_tag(splitted[rev_counter]):
+                            rev_counter -= 1
+                        splitted.insert(rev_counter + 1, "</s>")
                     splitted.append("<s>")
                     opened_sent = True
                     para = False
