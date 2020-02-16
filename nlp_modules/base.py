@@ -12,8 +12,8 @@ from tqdm import tqdm
 class PipelineDep(Enum):
     TOKENIZE = "TOKENIZE"  # XML that is tokenized tree-tagger style
     POS_TAG = "POS_TAG"  # POS tags
-    S_TYPE = "SENT_TYPE"  # sentence types
-    S_SPLIT = "SENT_SPLIT"  # sentence splitting
+    S_TYPE = "S_TYPE"  # sentence types
+    S_SPLIT = "S_SPLIT"  # sentence splitting
     EDUS = "EDUS"  # EDU segmenting
     PARSE = "PARSE"  # dependency parse
 

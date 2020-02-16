@@ -1,3 +1,4 @@
+import logging
 import re
 from lib.whitespace_tokenize import tokenize as tt_tokenize
 from .base import NLPModule, PipelineDep
@@ -153,6 +154,16 @@ class TreeTaggerTokenizer(NLPModule):
         postprocess_text_nodes(xml)
         tokenized = xml.toxml()
 
+        tok_count = len(
+            [t for t in tokenized.strip().split("\n") if not t.startswith("<")]
+        )
+        if not (300 <= tok_count <= 2000):
+            top_elt = tokenized.strip().split("\n")[0]
+            id = re.findall(r'id="(.*?)"', tokenized)
+            logging.warning(
+                f"Document '{top_elt if len(id) == 0 else id[0]}' has {tok_count} tokens."
+            )
+
         return tokenized
 
     def run(self, input_dir, output_dir):
@@ -160,4 +171,6 @@ class TreeTaggerTokenizer(NLPModule):
         processing_function = self.tokenize
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
-        self.process_files(input_dir, output_dir, processing_function)
+        self.process_files(
+            input_dir, output_dir, processing_function, multithreaded=True
+        )

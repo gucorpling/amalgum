@@ -5,10 +5,13 @@ from os import environ as env
 from xml.dom import minidom
 
 from lib.utils import get_col, exec_via_temp
-from nlp_modules.base import NLPModule, NLPDependencyException
+from nlp_modules.base import NLPModule, NLPDependencyException, PipelineDep
 
 
 class MarmotTagger(NLPModule):
+    requires = (PipelineDep.TOKENIZE,)
+    provides = (PipelineDep.POS_TAG,)
+
     def __init__(self, config):
         jar_sep = ";" if platform.system() == "Windows" else ":"
         self.command = [
@@ -41,7 +44,8 @@ class MarmotTagger(NLPModule):
             )
 
     def run(self, input_dir, output_dir):
-        pass
+        processing_function = self.tag
+        self.process_files(input_dir, output_dir, processing_function)
 
     def tag(self, tokenized_document):
         data = tokenized_document.strip().split("\n")

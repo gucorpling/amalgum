@@ -1,10 +1,13 @@
 import stanfordnlp
 import torch
 
-from nlp_modules.base import NLPModule
+from nlp_modules.base import NLPModule, PipelineDep
 
 
 class StanfordNLPParser(NLPModule):
+    requires = (PipelineDep.TOKENIZE, PipelineDep.POS_TAG)
+    provides = (PipelineDep.PARSE,)
+
     def __init__(self, config):
         use_gpu = config.get("use_gpu", None)
         if use_gpu:
