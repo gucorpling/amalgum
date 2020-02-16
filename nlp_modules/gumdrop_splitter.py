@@ -39,8 +39,10 @@ class GumdropSplitter(NLPModule):
         genre = re.findall(r'type="(.*?)"', xml_data.split("\n")[0])
         assert len(genre) == 1
         genre = genre[0]
+        # don't feed the sentencer our pos and lemma predictions, if we have them
+        no_pos_lemma = re.sub(r"([^\n\t]*?)\t[^\n\t]*?\t[^\n\t]*?\n", r"\1\n", xml_data)
         split_indices = self.sentencer.predict(
-            xml_data, as_text=True, plain=True, genre=genre
+            no_pos_lemma, as_text=True, plain=True, genre=genre
         )
 
         counter = 0
