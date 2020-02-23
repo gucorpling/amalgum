@@ -22,7 +22,7 @@ class PoSTagger(NLPModule):
     def test_dependencies(self):
         if not os.path.exists("pos-dependencies"):
             raise NLPDependencyException(
-                "Could not locate folder `pos-dependencies`. Please download from github: gucorpling/amalgum/nlp_modules"
+                "Could not locate folder `pos-dependencies`. It has to be in the same directory as this script. Please download from https://drive.google.com/file/d/1P5yRDKuBx1hDgOmZU1tNYyt6oZciRx_u/view?usp=sharing"
             )
             sys.exit(1)
 
