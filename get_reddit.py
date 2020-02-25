@@ -21,6 +21,25 @@ if sys.platform == "win32" and not PY3:
 	msvcrt.setmode(sys.stdout.fileno(), os.O_BINARY)
 
 
+def bad_reddit(xml):
+	if "> > >" in xml:  # plain text quotation structures:
+		return True
+	if xml.count("target=") > 20:  # Could be just a bunch of links
+		return True
+	if xml.count("*") > 10:  # Unprocessed bold/bullets, who knows what
+		return True
+	if xml.count("@") > 20:  # List of e-mail addresses?
+		return True
+	if re.search(r'\bbot\b',xml.lower()):
+		return True
+
+	return False
+
+def unescape_reddit(xml):
+	xml = xml.replace(r'\(','(').replace(r'\)',')').replace(r'\-','-').replace("\_","_")
+	xml = xml.replace(r'\+','+').replace(r'\>','&gt;').replace(r'\<','&lt;')
+	return xml
+
 def get_via_praw(post_id, post_type, praw_cred):
 
 	if praw_cred is None:
@@ -39,16 +58,19 @@ def get_via_praw(post_id, post_type, praw_cred):
 			return ""
 		selftext = submission.mod.thing.selftext
 		selftext = re.sub(r'\s+',' ',selftext)
-		selftext = selftext.replace('"', '\\"').replace("\t"," ").replace("\t","\\t").replace("\r","\\r").replace("\n","\\n")
+		#selftext = selftext.replace("\\","\\\\").replace('"', '\\"').replace("\t"," ").replace("\t","\\t").replace("\r","\\r").replace("\n","\\n")
+		selftext = json.dumps(selftext)
 		title = submission.mod.thing.title
-		title = title.replace('"', '\\"').replace("\t","\\t").replace("\r","\\r").replace("\n","\\n")#replace("'","\\'")
+		title = title.replace('"',"&quot;")
+		title = json.dumps(title)
+		#title = title.replace('"', '\\"').replace("\t","\\t").replace("\r","\\r").replace("\n","\\n")#replace("'","\\'")
 		author = submission.mod.thing.author
 		if author is not None:
 			author = author.name
 		else:
 			author = "unknown"
-		out_json = '{"id":"'+post_id+'","selftext":"'+selftext+'","created_utc":'+str(int(created_utc))+\
-				   ',"title":"'+title+'","author":"'+author+'"}'
+		out_json = '{"id":"'+post_id+'","selftext":'+selftext+',"created_utc":'+str(int(created_utc))+\
+				   ',"title":'+title+',"author":"'+author+'"}'
 	else:
 		submission = reddit.comment(post_id)
 		created_utc = submission.mod.thing.created_utc
@@ -56,7 +78,11 @@ def get_via_praw(post_id, post_type, praw_cred):
 		selftext = re.sub(r'\s+',' ',selftext)
 		selftext = selftext.replace('"', '\\"').replace("'","\\'")
 		out_json = "[{'id':'"+post_id+"','body':'"+selftext+"','created_utc':"+str(int(created_utc))+"}]"
-	out_json = json.loads(out_json)
+	try:
+		out_json = json.loads(out_json)
+	except:
+		print("Invalid json: " + out_json)
+		quit()
 
 	return out_json
 
@@ -69,6 +95,24 @@ def escape_reddit(lines):
 	lines = re.sub(" +"," ",lines)
 	return lines
 
+def fix_bullets(text):
+	if "</list>" in text:
+		lists = text.split("</list>")
+		processed = ""
+		for i, l in enumerate(lists[:-1]):
+			parts = l.split("</item>")
+			prolog, part1 = parts[0].split("<item")
+			part1 = "<item" + part1
+			epilog = parts[-1]
+			parts = [part1] + parts[1:-1]
+			output = []
+			for part in parts:
+				part = re.sub('\*+','</item>\n<item>',part)
+				output.append(part)
+			output = "</item>".join(output) + "</item>"
+			processed += prolog + output + epilog + "</list>"
+		text = processed + lists[-1]
+	return text
 
 def make_para(text):
 	text = text.split("___NEWLINE__")
@@ -81,8 +125,10 @@ def make_para(text):
 	# Hyperlinks
 	text = re.sub(r'\[(.*?)\]\((.*?)\)',r'<ref target="\2">\1</ref>',text)
 	# Bold/italic
-	text = re.sub(r'\b\*+([^\n<>]+)\*+\b]',r'<hi rend="bold">\1</hi>',text)
-	text = re.sub(r'\b_+([^\n<>]+)\*+\b]',r'<hi rend="italic">\1</hi>',text)
+	#text = re.sub(r'(?<=\W)\*+([^\n<>]+?)\*+(?=[^\w\*])',r'<hi rend="bold">\1</hi>',text)
+	#text = re.sub(r'(?<=\W)_+([^\n<>]+?)\*+(?=[^\w_])',r'<hi rend="italic">\1</hi>',text)
+	text = re.sub(r'(?<=[ >])\*+([^\n<>\*]+?)\*+(?=[ !?.,:<])',r' <hi rend="bold">\1</hi> ',text)
+	text = re.sub(r'(?<=[ >])_+([^\n<>_]+?)_+(?= [ !?.,:<])',r' <hi rend="italic">\1</hi> ',text)
 	return text
 
 def flattenjson(b, delim):
@@ -101,7 +147,7 @@ def flattenjson(b, delim):
 # AutoGum settings
 min_length = 25  # Min length for some comment in the thread
 max_length = 500  # Max length for some comment in the thread
-max_tokens_per_slice = 7000  # Max amount of tokens out of any single month dump of reddit
+max_tokens_per_slice = 9000  # Max amount of tokens out of any single month dump of reddit
 min_doc_length = 400  # Min length for total thread comprising one document
 max_doc_length = 1000  # Max length for total thread comprising one document
 
@@ -136,8 +182,17 @@ thread_created = defaultdict(int)
 thread_utcs = defaultdict(list)
 
 
-files = glob("data" + os.sep + "reddit" + os.sep + "*.json")
+files = glob("data" + os.sep + "reddit" + os.sep + "*.json")[::-1]
 docs = []
+
+
+## OLD FILES
+old_files = glob("out" + os.sep + "reddit" + os.sep + ".xml")
+old_files += glob("out" + os.sep + "reddit" + os.sep + "done" + os.sep + ".xml")
+for file_ in old_files:
+	text = io.open(file_,encoding="utf8").read()
+	t = re.search(r'sourceURL="http://redd.it/([^"]+)"',text).group(1)
+	used.add(t)
 
 for file_idx, file_ in enumerate(files):
 	sys.stderr.write("o reading file " + file_ + "\n")
@@ -177,6 +232,9 @@ for file_idx, file_ in enumerate(files):
 			if col == "body":
 				length = str(row["body"].count(" ") + 1)
 
+		thread_id = fields[parent_id_col].split("_")[-1]
+		if thread_id in used:
+			continue
 		if PY3:
 			line = "\t".join(fields + [length])
 		else:
@@ -196,7 +254,6 @@ for file_idx, file_ in enumerate(files):
 					if lang == 'en':  # Check that this is probably in English
 						meta = []
 						this_post = ""
-						thread_id = fields[parent_id_col].split("_")[-1]
 						for idx, col in enumerate(columns):
 							if idx == 0:
 								this_post += '<sp'
@@ -253,8 +310,12 @@ for file_idx, file_ in enumerate(files):
 				break
 			out_xml += comment
 		if out_xml.count(" ") > min_doc_length:
+			if bad_reddit(out_xml):
+				continue
+			out_xml = unescape_reddit(out_xml)
+			out_xml = fix_bullets(out_xml)
 			doc = Document(genre="reddit")
-			doc.docnum = total_docs
+			doc.docnum = total_docs + 598
 			doc.title = json_result["title"]
 			doc.author= "Reddit community (see URL)"
 			doc.url = "http://redd.it/" + json_result["id"]
@@ -270,6 +331,6 @@ for file_idx, file_ in enumerate(files):
 				# Jump to next month
 				spaces_so_far = 0
 				break
-		if total_docs > 1000:
+		if total_docs > 700:
 			quit()
 
