@@ -16,6 +16,7 @@ class PipelineDep(Enum):
     S_SPLIT = "S_SPLIT"  # sentence splitting
     EDUS = "EDUS"  # EDU segmenting
     PARSE = "PARSE"  # dependency parse
+    ACE_ENTITIES= "ACE_ENTITIES"  # nested entity prediction in ACE format
 
     # only produced
     RST_OUT = "RST_OUT"  # output for rhetorical structure theory
