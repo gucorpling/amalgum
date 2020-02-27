@@ -12,8 +12,8 @@ from tqdm import tqdm
 
 
 class PoSTagger(NLPModule):
-    requires = (PipelineDep.S_SPLIT, PipelineDep.TOKENIZE)
-    provides = (PipelineDep.POS_TAG,)
+    requires = ()
+    provides = (PipelineDep.TOKENIZE,)
 
     def __init__(self):
         # self.LIB_DIR = config["LIB_DIR"]
