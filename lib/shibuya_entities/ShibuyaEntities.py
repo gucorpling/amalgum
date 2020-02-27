@@ -59,25 +59,25 @@ class ShibuyaEntities:
 		
 	def gen_data(self, dataset="amalgum"):
 		reader = Reader(config.bert_model)
-		reader.read_all_data("./data/" + dataset + "/", dataset + ".train", dataset + ".dev",
+		reader.read_all_data("./lib/shibuya_entities/data/" + dataset + "/", dataset + ".train", dataset + ".dev",
 		                     dataset + ".test")
 		
 		train_batches, dev_batches, test_batches = reader.to_batch(config.batch_size)
-		f = open(os.path.normpath('./data/' + dataset + '_train.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_train.pkl'), 'wb')
 		pickle.dump(train_batches, f)
 		f.close()
 		
-		f = open(os.path.normpath('./data/' + dataset + '_dev.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_dev.pkl'), 'wb')
 		pickle.dump(dev_batches, f)
 		f.close()
 		
-		f = open(os.path.normpath('./data/' + dataset + '_test.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_test.pkl'), 'wb')
 		pickle.dump(test_batches, f)
 		f.close()
 		
 		# misc config
 		misc_dict = save_dynamic_config(reader)
-		f = open(os.path.normpath('./data/' + dataset + '_config.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_config.pkl'), 'wb')
 		
 		pickle.dump(misc_dict, f)
 		f.close()
@@ -205,14 +205,14 @@ class ShibuyaEntities:
 		Predict sentence NNER
 		"""
 		
-		f = open(os.path.normpath('./data/' + dataset + '_test.pkl'), 'rb')
+		f = open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_test.pkl'), 'rb')
 		
 		
-		this_model_path = config.model_path + "_" + serialnumber
+		this_model_path = "./lib/shibuya_entities/dumps/sample_model" + "_" + serialnumber
 		
 		# misc info
 		misc_config: Dict[str, Alphabet] = pickle.load(
-			open(os.path.normpath('./data/' + dataset + '_config.pkl'), 'rb'))
+			open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_config.pkl'), 'rb'))
 		
 		voc_dict, label_dict = load_dynamic_config(misc_config)
 		config.voc_size = voc_dict.size()
@@ -240,7 +240,7 @@ class ShibuyaEntities:
 		
 		in_lines = outputstr.strip().split('\n')
 		
-		goldtokenized_lines = [x for idx, x in enumerate(tokenizedstr.strip().split('\n')) if idx % 3 == 0]
+		goldtokenized_lines = [x for idx, x in enumerate(tokenizedstr.strip().split('\n')) if idx % 3 == 0 and x.strip()!='']
 		
 		out_lines = []
 		
