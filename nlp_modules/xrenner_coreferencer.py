@@ -44,6 +44,7 @@ class XrennerCoref(NLPModule):
             import flair
 
     def resolve_entities_coref(self, doc_dict):
+        self.xrenner.set_doc_name(doc_dict["filename"])
         if self.use_oracle:
             self.xrenner.lex.read_oracle(doc_dict["ace"], as_text=True)
 
