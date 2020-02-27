@@ -100,7 +100,7 @@ class DepWithPosParser(NLPModule):
         replace_xpos(doc, doc_with_our_xpos)
 
         parsed = self.nlp2(doc)
-        return parsed
+        return {"dep": parsed}
 
     def run(self, input_dir, output_dir):
         # before pos replacements
@@ -109,6 +109,7 @@ class DepWithPosParser(NLPModule):
             "processors": "tokenize,pos,lemma",
             "pos_model_path": self.model_dir + f"en_{self.model}_tagger.pt",
             "lemma_model_path": self.model_dir + f"en_{self.model}_lemmatizer.pt",
+            "pos_pretrain_path": self.model_dir + f"en_{self.model}.pretrain.pt",
             "tokenize_pretokenized": True,
         }
 
@@ -117,17 +118,11 @@ class DepWithPosParser(NLPModule):
             "lang": "en",
             "processors": "depparse",
             "depparse_model_path": self.model_dir + f"en_{self.model}_parser.pt",
+            "depparse_pretrain_path": self.model_dir + f"en_{self.model}.pretrain.pt",
             "tokenize_pretokenized": True,
             "depparse_pretagged": True,
         }
 
-        if self.model == "gum":
-            config1["pos_pretrain_path"] = (
-                self.model_dir + f"en_{self.model}.pretrain.pt"
-            )
-            config2["depparse_pretrain_path"] = (
-                self.model_dir + f"en_{self.model}.pretrain.pt"
-            )
         self.nlp1 = stanfordnlp.Pipeline(**config1)
         self.nlp2 = stanfordnlp.Pipeline(**config2)
 
