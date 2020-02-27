@@ -75,6 +75,11 @@ class PoSTagger(NLPModule):
         return f
 
     def get_flair_predictions(self, model_type, data_path, fileName):
+        if model_type == "onto":
+            model = self.flair_onto   
+        else:
+            model = self.flair_gum
+
         f = open("pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt", "w")
         count = 0
         notFirst = False
@@ -94,11 +99,6 @@ class PoSTagger(NLPModule):
 
         f.close()
 
-        # load the model you trained
-        if model_type == "onto":
-            model = self.flair_onto   
-        else:
-            model = self.flair_gum
         sentences = []
         with open(
             "pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt"
@@ -130,15 +130,18 @@ class PoSTagger(NLPModule):
 
     def get_ensemble_predictions(self, test_x):
         test_encoded = []
-        le = pickle.load(open("nlp_modules/pos-dependencies/all-encodings.pickle.dat", "rb"))
-        le2 = pickle.load(open("nlp_modules/pos-dependencies/y-encodings.pickle.dat", "rb"))
+        with open("nlp_modules/pos-dependencies/all-encodings.pickle.dat", "rb") as f:
+            le = pickle.load(f)
+        with open("nlp_modules/pos-dependencies/y-encodings.pickle.dat", "rb") as f:
+            le2 = pickle.load(f)
 
         test_x = np.column_stack((k for k in test_x))
         for k in test_x:
             test_encoded.append(le.transform(k))
 
         dtest = xgb.DMatrix(np.array(test_encoded))
-        loaded_model = pickle.load(open("nlp_modules/pos-dependencies/xg-model.pickle.dat", "rb"))
+        with open("nlp_modules/pos-dependencies/xg-model.pickle.dat", "rb") as f:
+            loaded_model = pickle.load(f)
 
         predictions = loaded_model.predict(dtest)
         predictions = [int(x) for x in predictions]
