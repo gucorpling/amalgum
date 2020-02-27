@@ -5,9 +5,6 @@ Resolves entity types and coreference from conllu parses.
 Optionally consults external sequence labels in ACE format for entity types.
 """
 
-import stanfordnlp
-import torch
-
 from nlp_modules.base import NLPModule, PipelineDep
 from xrenner import Xrenner
 
