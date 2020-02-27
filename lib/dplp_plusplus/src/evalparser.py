@@ -68,6 +68,7 @@ def write_rs3(docname,doc,pred_rst):
             f.write(output)
         else:
             f.write(unicode(output.decode("utf8")))
+        return output
 
 
 def evalparser(fmerge, report=False,
@@ -86,7 +87,7 @@ def evalparser(fmerge, report=False,
     print('Load parsing model ...')
     pm = ParsingModel(withdp=withdp,
         fdpvocab=fdpvocab, fprojmat=fprojmat)
-    pm.loadmodel("models/parsing-model.pickle.gz")
+    pm.loadmodel("lib/dplp_plusplus/models/parsing-model.pickle.gz")
     # ----------------------------------------
     # Evaluation
     met = Metrics(levels=['span','nuclearity','relation'])
@@ -123,3 +124,4 @@ def evalparser(fmerge, report=False,
     #         met.eval(gold_rst, pred_rst)
     # if report:
     #     met.report()
+    return write_rs3(docname,doc,pred_rst)

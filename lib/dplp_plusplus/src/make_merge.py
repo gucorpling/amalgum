@@ -52,7 +52,10 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 		xml_lines = xml
 		dep_lines = dep
 		format = "rs3"
-		genre = filename.split("_")[1]
+		if filename.count("_") == 2:
+			genre = filename.split("_")[1]
+		else:
+			genre = "None"
 	else:
 		rst_lines = io.open(rst, encoding="utf8").read().strip().split("\n")
 		xml_lines = io.open(xml, encoding="utf8").read().strip().split("\n")
@@ -100,7 +103,7 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 	edus = []
 
 	counter = 0
-	for line in rst_lines:
+	for line in rst_lines.split("\n"):
 		if "<segment" in line and format == "rs3":
 			edu_num = re.search('id="([^"]+)"',line).group(1)
 			text = re.search(r'>(.*)<',line).group(1)
@@ -160,7 +163,7 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 	counter = 0
 	s_type = "other"
 	output_lines = ""
-	for line in dep_lines:
+	for line in dep_lines.split("\n"):
 		if "s_type" in line:
 			s_type = re.search(r'=\s*([^\n]+)',line).group(1)
 		elif "\t" in line:
@@ -207,6 +210,6 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 		with io.open((os.path.splitext(os.path.basename(rst)))[0] + ".merge", 'w', encoding="utf8", newline="\n") as f:
 			f.write("\n".join(output)+"\n")
 
-		output_lines += "\n".join(output)+"\n"
+		output_lines = "\n".join(output)+"\n"
 
 	return output_lines
