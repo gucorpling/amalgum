@@ -41,7 +41,7 @@ class rstParser(NLPModule):
     def parse(self, doc_dict):
 
         # construct .merge file that contains all the features
-        fmerge = merge(doc_dict["edu"], doc_dict["xml"], doc_dict["dep"], seq=self.parse, as_text=True)
+        fmerge = merge(doc_dict["edu"], doc_dict["xml"], doc_dict["dep"], doc_dict["filename"], seq=self.parse, as_text=True)
 
         # Use brown clsuters
         with gzip.open("resources/bc3200.pickle.gz") as fin:

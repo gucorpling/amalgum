@@ -44,15 +44,15 @@ class Sequencer:
 		return output
 
 
-def merge(rst, xml, dep, seq=None, as_text=True):
+def merge(rst, xml, dep, filename, seq=None, as_text=True):
 	flair.device = torch.device('cpu')
 
 	if as_text:
 		rst_lines = rst
 		xml_lines = xml
 		dep_lines = dep
-		format = "rs3" 		# check with Luke wrt input format: rs3 or dis
-		genre = "NONE"		# check how to get genre information
+		format = "rs3"
+		genre = filename.split("_")[1]
 	else:
 		rst_lines = io.open(rst, encoding="utf8").read().strip().split("\n")
 		xml_lines = io.open(xml, encoding="utf8").read().strip().split("\n")
