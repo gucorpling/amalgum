@@ -192,7 +192,7 @@ class NLPModule(ABC):
 
             # construct the content dict
             content_dict = {}
-            context_dict["filename"] = filename
+            content_dict["filename"] = filename
             for subdir in existing_input_dirs:
                 matching_files = [
                     f for f in os.listdir(subdir) if f.startswith(filename)
