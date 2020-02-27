@@ -1,42 +1,29 @@
 import io, os, re, sys
-import stanfordnlp
-from stanfordnlp.utils.conll import CoNLL
 from glob import glob
 import subprocess as sp
 from nlp_modules.base import NLPModule, PipelineDep
 
 
-def fix_conllu(filepath):
-    sentences = []
-    token_list = None
-    with open(filepath, "r") as f:
-        s = f.read()
-    for line in s.split("\n"):
-        if line.strip() == "" and token_list is not None:
-            sentences.append(token_list)
-            token_list = None
-        elif line.strip() != "":
-            if token_list is None:
-                token_list = []
-            tok, xpos = line.strip().split("\t")
-            token_list.append((tok, xpos))
+def fix_conllu(pos, tokens):
+    lines = tokens.split("\n")
+    pos = pos.split("\n")
+    assert len(pos) == len(lines)
 
-    outstring = ""
-    for sentence in sentences:
-        for i, (tok, xpos) in enumerate(sentence):
-            outstring += f"{i+1}\t{tok}\t_\t_\t{xpos}\t_\t_\t_\t_\t_\n"
-        outstring += "\n"
+    for i, line in enumerate(lines):
+        if line.strip() != "":
+            # if in conllu file
+            line = line.strip().split["\t"]
+            line[4] = pos[i].strip().split["\t"][1]
+            lines[i] = "\t".join(line)
 
-    with open(filepath.replace("tagged", "tagged_fixed"), "w") as f:
-        f.write(outstring)
-
-    return outstring
+    out_string = "\n".join(lines)
+    return out_string
 
 
 def fix_upos(word):
     """If we replaced the xpos, we should try to fix the upos.
-	Follows https://github.com/amir-zeldes/gum/blob/dev/_build/utils/upos.ini
-	"""
+    Follows https://github.com/amir-zeldes/gum/blob/dev/_build/utils/upos.ini
+    """
 
     def xpos_sub(xpos_pattern, upos):
         nonlocal word
@@ -72,23 +59,27 @@ def replace_xpos(doc, doc_with_our_xpos):
 
 
 class DepWithPosParser(NLPModule):
-    requires = PipelineDep.POS_TAG
-    provides = PipelineDep.PARSE
+    requires = (PipelineDep.S_SPLIT, PipelineDep.POS_TAG)
+    provides = (PipelineDep.PARSE,)
 
-    def __init__(self, model):
-        """
-		the argument "model" is required to indicate which model (gum or ewt) to use
-		"""
+    def __init__(self, model="gum"):
+        self.LIB_DIR = config["LIB_DIR"]
         self.model = model
 
     def test_dependencies(self):
-        if not os.path.exists("parse-dependencies"):
-            raise NLPDependencyException("The folder 'parse-dependencies' is missing.")
+        import stanfordnlp
+        from stanfordnlp.utils.conll import CoNLL
 
-    def process_amalgum(self, nlp1, nlp2, filepath):
-        # process file first
-        conll_string = fix_conllu(filepath)
-        sys.stdout.write("Reading from " + filepath + "...")
+        self.model_dir = os.path.join(self.LIB_DIR, "parse-dependencies", "models")
+        if len(glob(os.path.join(self.model_dir, "en_*.pt"))) == 0:
+            # TODO: upload pretrained GUM models
+            raise NLPDependencyException(
+                "No pre-trained GUM stanfordnlp models. Please download the pretrained GUM models"
+                f"from xxx and place it in {self.model_dir}/"
+            )
+
+    def predict_with_pos(self, doc_dict):
+        conll_string = fix_conllu(doc_dict["pos"], doc_dict["dep"])
         doc = CoNLL.conll2dict(input_str=conll_string)
 
         # get just the text
@@ -100,7 +91,7 @@ class DepWithPosParser(NLPModule):
             sents.append(" ".join(words))
 
         # put it through first part of the pipeline
-        doc = nlp1("\n".join(sents))
+        doc = self.nlp1("\n".join(sents))
 
         # overwrite snlp's xpos with our xpos
         doc_with_our_xpos = stanfordnlp.Document(
@@ -108,144 +99,16 @@ class DepWithPosParser(NLPModule):
         )
         replace_xpos(doc, doc_with_our_xpos)
 
-        processed = nlp2(doc)
-        d = processed.to_dict()
-
-        # write into a conllu file under output_dir
-        CoNLL.dict2conll(d, self.output_dir + os.sep + filepath.split("/")[-1])
-        sys.stdout.write(
-            f"Wrote predictions to {self.output_dir}/" + filepath.split("/")[-1]
-        )
-
-        return processed
-
-    def concat(self, f_dir, out_path):
-        conll_out = ""
-        for filename in sorted(os.listdir(f_dir)):
-            with open(f_dir + os.sep + filename, encoding="utf-8") as f:
-                lines = f.read()
-                conll_out += lines
-        with open(out_path, "w", encoding="utf-8") as f:
-            f.write(conll_out)
-
-    def eval_amalgum(self, config1, config2):
-        os.makedirs("parse-dependencies" + os.sep + "tagged_fixed", exist_ok=True)
-        os.makedirs("parse-dependencies" + os.sep + "conllu", exist_ok=True)
-        nlp1 = stanfordnlp.Pipeline(**config1)
-        nlp2 = stanfordnlp.Pipeline(**config2)
-
-        for filepath in glob(self.input_dir + os.sep + "conllu/*.conllu"):
-            self.process_amalgum(nlp1, nlp2, filepath)
-
-        # concatenate files for further evaluation
-        self.concat("parse-dependencies" + os.sep + "conllu", "en_gumby-ud.pred.conllu")
-        self.concat("parse-dependencies" + os.sep + "gold", "en_gumby-ud.gold.conllu")
-        sys.stdout.write("GUMBY score using '" + self.model + "':")
-
-        # TODO: stanfordnlp filepath
-        p = sp.Popen(
-            [
-                "python",
-                os.sep.join(
-                    [
-                        "parse-dependencies",
-                        "stanfordnlp",
-                        "stanfordnlp",
-                        "utils",
-                        "conll18_ud_eval.py",
-                    ]
-                ),
-                "parse-dependencies" + os.sep + "en_gumby-ud.gold.conllu",
-                "parse-dependencies" + os.sep + "en_gumby-ud.pred.conllu",
-                "--verbose",
-            ]
-        )
-        p.communicate()
-        p.wait()
-
-    def process_gum(self, nlp1, nlp2, filepath):
-        with open(filepath, "r") as f:
-            conll_string = f.read()
-        doc = CoNLL.conll2dict(input_str=conll_string)
-
-        # get just the text
-        sents = []
-        for sent in doc:
-            words = []
-            for word in sent:
-                words.append(word["text"])
-            sents.append(" ".join(words))
-
-        # put it through first part of the pipeline
-        doc = nlp1("\n".join(sents))
-
-        # overwrite snlp's xpos with our xpos
-        doc_with_our_xpos = stanfordnlp.Document(
-            CoNLL.conll2dict(input_str=conll_string)
-        )
-        replace_xpos(doc, doc_with_our_xpos)
-
-        processed = nlp2(doc)
-        d = processed.to_dict()
-
-        # warning: do not pass the predicted results to the next module
-        CoNLL.dict2conll(
-            d,
-            "parse-dependencies"
-            + os.sep
-            + "gum_predicted"
-            + os.sep
-            + filepath.split("/")[-1],
-        )
-        sys.stdout.write(
-            "Wrote predictions to parse-dependencies/gum_predicted/"
-            + filepath.split("/")[-1]
-        )
-
-        return processed
-
-    def eval_gum(self, config1, config2):
-        os.makedirs("parse-dependencies" + os.sep + "tagged_fixed", exist_ok=True)
-        os.makedirs("parse-dependencies" + os.sep + "gum_predicted", exist_ok=True)
-        nlp1 = stanfordnlp.Pipeline(**config1)
-        nlp2 = stanfordnlp.Pipeline(**config2)
-        self.process_gum(nlp1, nlp2, "en_gum-ud-test.conllu")
-        sys.stdout.write("GUM score using '" + self.model + "':")
-        p = sp.Popen(
-            [
-                "python",
-                os.sep.join(
-                    [
-                        "parse-dependencies",
-                        "stanfordnlp",
-                        "stanfordnlp",
-                        "utils",
-                        "conll18_ud_eval.py",
-                    ]
-                ),
-                "parse-dependencies" + os.sep + "en_gum-ud-test.conllu",
-                "parse-dependencies"
-                + os.sep
-                + "gum_predicted"
-                + os.sep
-                + "en_gum-ud-test.conllu",
-                "--verbose",
-            ]
-        )
-        p.communicate()
-        p.wait()
+        parsed = self.nlp2(doc)
+        return parsed
 
     def run(self, input_dir, output_dir):
-        model_dir = "parse-dependencies" + os.sep + "models"
-        self.input_dir = input_dir
-        self.output_dir = output_dir
-
         # before pos replacements
         config1 = {
             "lang": "en",
             "processors": "tokenize,pos,lemma",
-            "pos_model_path": model_dir + f"en_{self.model}_tagger.pt",
-            "lemma_model_path": model_dir + f"en_{self.model}_lemmatizer.pt",
+            "pos_model_path": self.model_dir + f"en_{self.model}_tagger.pt",
+            "lemma_model_path": self.model_dir + f"en_{self.model}_lemmatizer.pt",
             "tokenize_pretokenized": True,
         }
 
@@ -253,17 +116,23 @@ class DepWithPosParser(NLPModule):
         config2 = {
             "lang": "en",
             "processors": "depparse",
-            "depparse_model_path": model_dir + f"en_{self.model}_parser.pt",
+            "depparse_model_path": self.model_dir + f"en_{self.model}_parser.pt",
             "tokenize_pretokenized": True,
             "depparse_pretagged": True,
         }
+
         if self.model == "gum":
-            config1["pos_pretrain_path"] = model_dir + f"en_{self.model}.pretrain.pt"
-            config2["depparse_pretrain_path"] = (
-                model_dir + f"en_{self.model}.pretrain.pt"
+            config1["pos_pretrain_path"] = (
+                self.model_dir + f"en_{self.model}.pretrain.pt"
             )
+            config2["depparse_pretrain_path"] = (
+                self.model_dir + f"en_{self.model}.pretrain.pt"
+            )
+        self.nlp1 = stanfordnlp.Pipeline(**config1)
+        self.nlp2 = stanfordnlp.Pipeline(**config2)
 
-        self.eval_amalgum(config1, config2)
-        self.eval_gum(config1, config2)
+        # Identify a function that takes data and returns output at the document level
+        processing_function = self.predict_with_pos
 
-        sys.stdout.write("Completed: Module stanfordnlp parser")
+        # use process_files, inherited from NLPModule, to apply this function to all docs
+        self.process_files_multiformat(input_dir, output_dir, processing_function)
