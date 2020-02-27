@@ -6,7 +6,7 @@ from lib.shibuya_entities.ShibuyaEntities import ShibuyaEntities
 
 
 class AceEntities(NLPModule):
-    requires = (PipelineDep.S_SPLIT,)
+    requires = (PipelineDep.PARSE)
     provides = (PipelineDep.CRF_ENTITIES)
 
     def __init__(self, config, serialnumber="200226_153935"):
@@ -16,16 +16,13 @@ class AceEntities(NLPModule):
         self.serialnumber = serialnumber
 
 
-    def parse(self, sent_data):
-        # sentence data should be a string in the form of "I love dogs.\nThey are cute.\nYeah!"
-        sent_data = sent_data.replace('\r','\n').strip()
-        assert '\n\n' not in sent_data
+    def parse(self, inputstr):
         
-        # save single file in ACE format to acedir
-        sent_data = sent_data.replace('\n', '\n0,1 person\n\n') + '\n0,1 person\n\n'
+        assert '\n\n' in inputstr and '\t' in inputstr
+        acegoldstr = self.shibuyaentities.conllu2acegold(inputstr)
         
         with io.open(self.acedir + 'amalgum.test', 'w', encoding='utf8') as ftest:
-            ftest.write(sent_data)
+            ftest.write(acegoldstr)
         
         # Pickle test data
         self.shibuyaentities.gen_data(dataset="amalgum")
@@ -34,7 +31,7 @@ class AceEntities(NLPModule):
         outputstr, _ = self.shibuyaentities.predict(dataset="amalgum", serialnumber=self.serialnumber)
         
         # convert subtoks to toks
-        outputstr = self.shibuyaentities.subtok2tok(outputstr, sent_data)
+        outputstr = self.shibuyaentities.subtok2tok(outputstr, acegoldstr)
         
         return {"ace": outputstr}
 
@@ -52,4 +49,3 @@ class AceEntities(NLPModule):
         # )
         
         self.process_files_multiformat(input_dir, processing_function, output_dir, multithreaded=False)
-
