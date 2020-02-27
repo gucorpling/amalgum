@@ -38,9 +38,6 @@ class rstParser(NLPModule):
         # Check the pretrain model
         model_dir = os.path.join(self.LIB_DIR, "dplp_plusplus", "models")
 
-        # Check brown cluster
-        bc_dir = os.path.join(self.LIB_DIR, "dplp_plusplus", "resources")
-
     def parse(self, doc_dict):
 
         # construct .merge file that contains all the features
