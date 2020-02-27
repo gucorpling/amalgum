@@ -3,10 +3,28 @@ import re
 
 from glob import glob
 from nlp_modules.base import NLPModule, PipelineDep
+import conllu
+from collections import OrderedDict
 
 
 def is_sgml_tag(line):
     return line.startswith("<") and line.endswith(">")
+
+
+def tokens2conllu(tokens):
+    tokens = [
+        OrderedDict(
+            (k, v)
+            for k, v in zip(
+                conllu.parser.DEFAULT_FIELDS,
+                [i + 1, token]
+                + ["_" for i in range(len(conllu.parser.DEFAULT_FIELDS) - 1)],
+            )
+        )
+        for i, token in enumerate(tokens)
+    ]
+    tl = conllu.TokenList(tokens)
+    return tl
 
 
 class GumdropSplitter(NLPModule):
@@ -39,7 +57,8 @@ class GumdropSplitter(NLPModule):
                 f" and place it in {model_dir}/."
             )
 
-    def split(self, xml_data):
+    def split(self, context):
+        xml_data = context["xml"]
         genre = re.findall(r'type="(.*?)"', xml_data.split("\n")[0])
         assert len(genre) == 1
         genre = genre[0]
@@ -49,10 +68,16 @@ class GumdropSplitter(NLPModule):
             no_pos_lemma, as_text=True, plain=True, genre=genre
         )
 
+        # for xml
         counter = 0
         splitted = []
         opened_sent = False
         para = True
+
+        # for conllu
+        conllu_sentences = []
+        tokens = []
+
         for line in xml_data.strip().split("\n"):
             if not is_sgml_tag(line):
                 # Token
@@ -62,7 +87,9 @@ class GumdropSplitter(NLPModule):
                         while is_sgml_tag(splitted[rev_counter]):
                             rev_counter -= 1
                         splitted.insert(rev_counter + 1, "</s>")
+                        conllu_sentences.append(tokens2conllu(tokens))
                     splitted.append("<s>")
+                    tokens = []
                     opened_sent = True
                     para = False
                 counter += 1
@@ -79,7 +106,10 @@ class GumdropSplitter(NLPModule):
             else:
                 splitted += "\n</s>"
 
-        return splitted
+        return {
+            "xml": splitted,
+            "dep": "\n".join(tl.serialize() for tl in conllu_sentences),
+        }
 
     def run(self, input_dir, output_dir):
         from lib.gumdrop.EnsembleSentencer import EnsembleSentencer
@@ -92,6 +122,6 @@ class GumdropSplitter(NLPModule):
         processing_function = self.split
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
-        self.process_files(
+        self.process_files_multiformat(
             input_dir, output_dir, processing_function, multithreaded=False
         )
