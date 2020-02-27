@@ -48,8 +48,10 @@ class rstParser(NLPModule):
             print('Load Brown clusters for creating features ...')
             bcvocab = load(fin)
 
-        evalparser(fmerge, report=False, bcvocab=bcvocab,  draw=False, withdp=False,
+        rst_out = evalparser(fmerge, report=False, bcvocab=bcvocab,  draw=False, withdp=False,
                    fdpvocab="data/resources/word-dict.pickle.gz", fprojmat="data/resources/projmat.pickle.gz")
+
+        return {"rst": rst_out}
 
     def run(self, input_dir, output_dir):
 
