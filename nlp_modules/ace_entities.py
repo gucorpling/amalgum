@@ -1,4 +1,4 @@
-import os, io, re
+import os, io, re, sys, requests
 
 from glob import glob
 from nlp_modules.base import NLPModule, PipelineDep
@@ -15,10 +15,22 @@ class AceEntities(NLPModule):
         self.shibuya = ShibuyaEntities()
         self.test_dependencies()
 
-        
+    def download_file(self, url, local_path):
+        try:
+            sys.stderr.write("o Downloading model from " + url + "...\n")
+            with requests.get(url, stream=True) as r:
+                with io.open(local_path, 'wb') as f:
+                    shutil.copyfileobj(r.raw, f)
+            sys.stderr.write("o Download successful\n")
+        except Exception as e:
+            sys.stderr.write("\n! Could not download model from " + url + "\n")
+            sys.stderr.write(str(e))
+
     def test_dependencies(self):
         import torch
         import pandas, numpy
+        self.download_file('https://corpling.uis.georgetown.edu/amir/download/sample_model_200226_153935.pt',
+                           os.path.join('.','lib', 'shibuya_entities', 'dumps', 'sample_model_200226_153935.pt'))
 
 
     def parse(self, doc_dict):
