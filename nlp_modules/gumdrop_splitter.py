@@ -46,6 +46,7 @@ class GumdropSplitter(NLPModule):
         import torch
         import hyperopt
         import wget
+        import conllu
 
         if tensorflow.version.VERSION[0] != "1":
             raise Exception("TensorFlow version 1.x must be used with GumdropSplitter")
@@ -93,6 +94,7 @@ class GumdropSplitter(NLPModule):
                     opened_sent = True
                     para = False
                 counter += 1
+                tokens.append(line)
             elif (
                 "<p>" in line or "<head>" in line or "<caption>" in line
             ):  # New block, force sentence split
