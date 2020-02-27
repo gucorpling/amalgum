@@ -16,7 +16,7 @@ class PipelineDep(Enum):
     S_SPLIT = "S_SPLIT"  # sentence splitting
     EDUS = "EDUS"  # EDU segmenting
     PARSE = "PARSE"  # dependency parse
-    ACE_ENTITIES= "ACE_ENTITIES"  # nested entity prediction in ACE format
+    ACE_ENTITIES = "ACE_ENTITIES"  # nested entity prediction in ACE format
 
     # only produced
     RST_OUT = "RST_OUT"  # output for rhetorical structure theory
@@ -192,6 +192,7 @@ class NLPModule(ABC):
 
             # construct the content dict
             content_dict = {}
+            context_dict["filename"] = filename
             for subdir in existing_input_dirs:
                 matching_files = [
                     f for f in os.listdir(subdir) if f.startswith(filename)
