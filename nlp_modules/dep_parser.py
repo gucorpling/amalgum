@@ -1,7 +1,8 @@
 import io, os, re, sys
 from glob import glob
-import subprocess as sp
-from nlp_modules.base import NLPModule, PipelineDep
+import stanfordnlp
+from stanfordnlp.utils.conll import CoNLL
+from nlp_modules.base import NLPModule, PipelineDep, NLPDependencyException
 
 
 def replace_xpos(doc, doc_with_our_xpos):
@@ -13,12 +14,44 @@ def replace_xpos(doc, doc_with_our_xpos):
                 word.xpos = our_word.xpos
 
 
+def conllu2xml(conllu, xml):
+    conllu_sents = CoNLL.conll2dict(input_str=conllu)
+    # conllu_lines = conllu.split("\n")
+    xml_lines = xml.split("\n")
+    s_count = -1
+    tok_count = -1
+    for i, line in enumerate(xml_lines):
+        line = line.strip()
+        if line:
+            # match xml sent with conllu sent
+            if line.startswith("<s type"):
+                s_count += 1
+                tok_count = 0
+                continue
+            if line.startswith("<"):
+                continue
+
+            conllu_line = conllu_sents[s_count][tok_count]
+            xml_lines[i] = (
+                conllu_line["text"]
+                + "\t"
+                + conllu_line["lemma"]
+                + "\t"
+                + "_"
+                + "\t"
+                + conllu_line["deprel"]
+            )
+            tok_count += 1
+
+    return "\n".join(xml_lines)
+
+
 class DepWithPosParser(NLPModule):
     requires = PipelineDep.POS_TAG
     provides = (PipelineDep.PARSE,)
 
     def __init__(self, model="gum"):
-        self.LIB_DIR = config["LIB_DIR"]
+        self.LIB_DIR = "lib"
         self.model = model
 
     def test_dependencies(self):
@@ -27,13 +60,13 @@ class DepWithPosParser(NLPModule):
 
         self.model_dir = os.path.join(self.LIB_DIR, "dep_parsing", "models")
         if len(glob(os.path.join(self.model_dir, "en_*.pt"))) == 0:
-            # TODO: upload pretrained GUM models
             raise NLPDependencyException(
                 "No pre-trained GUM stanfordnlp models. Please download the pretrained GUM models"
-                f"from xxx and place it in {self.model_dir}/"
+                "from https://drive.google.com/drive/folders/1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00?usp=sharing"
+                f" and place it in {self.model_dir}/"
             )
 
-    def predict_with_pos(self, conllu_data: str):
+    def predict_with_pos(self, doc_dict):
         # before pos replacements
         config1 = {
             "lang": "en",
@@ -62,8 +95,8 @@ class DepWithPosParser(NLPModule):
             "depparse_pretagged": True,
         }
 
-        self.nlp1 = stanfordnlp.Pipeline(**config1)
-        self.nlp2 = stanfordnlp.Pipeline(**config2)
+        conllu_data = doc_dict["dep"]
+        xml_data = doc_dict["xml"]
 
         doc = CoNLL.conll2dict(input_str=conllu_data)
 
@@ -75,30 +108,68 @@ class DepWithPosParser(NLPModule):
                 words.append(word["text"])
             sents.append(" ".join(words))
 
+        self.nlp1 = stanfordnlp.Pipeline(**config1)
+        self.nlp2 = stanfordnlp.Pipeline(**config2)
+
         # put it through first part of the pipeline
         doc = self.nlp1("\n".join(sents))
 
         # overwrite snlp's xpos with our xpos
         doc_with_our_xpos = stanfordnlp.Document(
-            CoNLL.conll2dict(input_str=conll_string)
+            CoNLL.conll2dict(input_str=conllu_data)
         )
         replace_xpos(doc, doc_with_our_xpos)
 
         parsed = self.nlp2(doc)
-        return parsed
+        xmled = conllu2xml(parsed, xml_data)
+
+        return {"dep": parsed, "xml": xmled}
 
     def run(self, input_dir, output_dir):
         # Identify a function that takes data and returns output at the document level
         processing_function = self.predict_with_pos
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
-        self.process_files(input_dir, output_dir, processing_function, file_type="dep")
+        self.process_files_multiformat(input_dir, output_dir, processing_function)
+
+
+def test_main():
+    test_xml = """<text id="GUM_academic_art" author="Claire Bailey-Ross, Andrew Beresford, Daniel Smith, Claire Warwick" dateCollected="2017-09-13" dateCreated="2017-08-08" dateModified="2017-09-13" shortTitle="art" sourceURL="https://dh2017.adho.org/abstracts/333/333.pdf" speakerCount="0" speakerList="none" title="Aesthetic Appreciation and Spanish Art: Insights from Eye-Tracking" type="academic">
+                <head>
+                <hi rend="bold blue">
+                <s>
+                Aesthetic	JJ	aesthetic
+                Appreciation	NN	appreciation
+                and	CC	and
+                Spanish	JJ	Spanish
+                Art	NN	art
+                :	:	:
+                </s>
+                <s>
+                Insights	NNS	insight
+                from	IN	from
+                Eye-Tracking	NN	eye-tracking
+                </s>
+                </hi>
+                </head>"""
+
+    test_conll = """1	Aesthetic	_	_	JJ	_	_	_	_	_
+                2	Appreciation	_	_	NN	_	_	_	_	_
+                3	and	_	_	CC	_	_	_	_	_
+                4	Spanish	_	_	JJ	_	_	_	_	_
+                5	Art	_	_	NN	_	_	_	_	_
+                6	:	_	_	:	_	_	_	_	_
+
+                1	Insights	_	_	NNS	_	_	_	_	_
+                2	from	_	_	IN	_	_	_	_	_
+                3	Eye-Tracking	_	_	NN	_	_	_	_	_
+                """
+    module = DepWithPosParser()
+    module.test_dependencies()
+    res = module.predict_with_pos({"xml": test_xml, "dep": test_conll})
+    print(res["xml"])
+    print(res["dep"])
 
 
 if __name__ == "__main__":
-    x = open("temp.conllu").read()
-    input_dir = x
-    output_dir = 1
-    module = DepWithPosParser()
-    module.test_dependencies()
-    module.predict_with_pos(x)
+    test_main()
