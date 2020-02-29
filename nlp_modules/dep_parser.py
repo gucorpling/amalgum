@@ -21,7 +21,7 @@ def conllu2xml(conllu, xml):
         line = line.strip()
         if line:
             # match xml sent with conllu sent
-            if line.startswith("<s"):
+            if line.startswith("<s "):
                 s_count += 1
                 tok_count = 0
                 continue
@@ -35,7 +35,7 @@ def conllu2xml(conllu, xml):
                 + "\t"
                 + conllu_line.xpos
                 + "\t"
-                + conllu_line.lemma
+                + conllu_line.lemma if conllu_line.lemma is not None else conllu_line.text
                 + "\t"
                 + conllu_line.dependency_relation
             )
