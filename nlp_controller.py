@@ -116,13 +116,15 @@ class NLPController:
                 os.path.join(self.output_dir, str(begin_step).zfill(2) + "*")
             )[0]
             dirs_to_delete = [
-                glob(os.path.join(self.output_dir, str(i).zfill(2) + "*"))[0]
-                for i in range(begin_step + 1, len(self.pipeline) + 1)
+                glob(os.path.join(self.output_dir, str(i).zfill(2) + "*"))
+                for i in range(begin_step + 1, len(self.opts['modules']) + 1)
             ]
-            for dirname in dirs_to_delete:
-                print(f"removing {dirname}")
-                shutil.rmtree(dirname)
-            steps = list(enumerate(self.pipeline))[self.opts["begin_step"] :]
+            for dirnames in dirs_to_delete:
+                if len(dirnames) == 1:
+                    dirname = dirnames[0]
+                    print(f"removing {dirname}")
+                    shutil.rmtree(dirname)
+            steps = (MODULES[slug](self.opts) for slug in self.opts['modules'][self.opts["begin_step"]:])
             i = self.opts["begin_step"]
 
         for module in steps:
