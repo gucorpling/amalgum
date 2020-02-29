@@ -21,7 +21,7 @@ def conllu2xml(conllu, xml):
         line = line.strip()
         if line:
             # match xml sent with conllu sent
-            if line.startswith("<s "):
+            if line.startswith("<s ") or line.startswith("<s>"):
                 s_count += 1
                 tok_count = 0
                 continue
