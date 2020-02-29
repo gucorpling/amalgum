@@ -34,11 +34,6 @@ MODULES = {
 }
 
 
-def lazy_pipeline(slugs, opts):
-    for slug in slugs:
-        yield MODULES[slug](opts)
-
-
 class NLPController:
     def __init__(self, opts):
         logging.info("Initializing NLP Controller...")
@@ -54,36 +49,40 @@ class NLPController:
 
         logging.info("Initializing NLP modules...")
         module_slugs = opts["modules"]
-        self.pipeline = [MODULES[slug](opts) for slug in module_slugs]
         self.input_dir = opts["input_dir"]
         self.output_dir = opts["output_dir"]
 
-        logging.info("Resolving pipeline module dependencies...")
-        satisfied = set()
-        for module in self.pipeline:
-            if any(req not in satisfied for req in module.__class__.requires):
-                formatted_reqs = [
-                    f"{m.__class__.__name__}\t"
-                    + "{"
-                    + ",".join(str(dep) for dep in m.requires)
-                    + " -> "
-                    + ",".join(str(dep) for dep in m.provides)
-                    + "}"
-                    for m in self.pipeline
-                ]
-                raise Exception(
-                    f"Invalid pipeline: module {module.__class__} requires "
-                    f"{module.__class__.requires}, but pipeline only provides "
-                    f"{satisfied}. Full pipeline requirements:\n"
-                    + "\n".join(formatted_reqs)
-                )
-            satisfied.update(module.provides)
+        if opts['lazy']:
+            # use a generator to avoid initialization of all modules at once
+            self.pipeline = (MODULES[slug](opts) for slug in module_slugs)
+        else:
+            self.pipeline = [MODULES[slug](opts) for slug in module_slugs]
+            logging.info("Resolving pipeline module dependencies...")
+            satisfied = set()
+            for module in self.pipeline:
+                if any(req not in satisfied for req in module.__class__.requires):
+                    formatted_reqs = [
+                        f"{m.__class__.__name__}\t"
+                        + "{"
+                        + ",".join(str(dep) for dep in m.requires)
+                        + " -> "
+                        + ",".join(str(dep) for dep in m.provides)
+                        + "}"
+                        for m in self.pipeline
+                    ]
+                    raise Exception(
+                        f"Invalid pipeline: module {module.__class__} requires "
+                        f"{module.__class__.requires}, but pipeline only provides "
+                        f"{satisfied}. Full pipeline requirements:\n"
+                        + "\n".join(formatted_reqs)
+                    )
+                satisfied.update(module.provides)
 
-        for module in self.pipeline:
-            logging.info(
-                f"Checking dependencies for module {module.__class__.__name__}..."
-            )
-            module.test_dependencies()
+            for module in self.pipeline:
+                logging.info(
+                    f"Checking dependencies for module {module.__class__.__name__}..."
+                )
+                module.test_dependencies()
 
         logging.info("NLPController initialization complete.\n")
 
@@ -109,6 +108,8 @@ class NLPController:
         if begin_step == 0:
             last_dir_name = os.path.join(self.output_dir, "00_initial")
             self._init_output_dir(last_dir_name)
+            steps = self.pipeline
+            i = 0
         # if we are skipping steps, delete the dirs after the skipped steps
         else:
             last_dir_name = glob(
@@ -121,9 +122,10 @@ class NLPController:
             for dirname in dirs_to_delete:
                 print(f"removing {dirname}")
                 shutil.rmtree(dirname)
+            steps = list(enumerate(self.pipeline))[self.opts["begin_step"] :]
+            i = self.opts["begin_step"]
 
-        steps = list(enumerate(self.pipeline))[self.opts["begin_step"] :]
-        for i, module in steps:
+        for module in steps:
             input_dir = last_dir_name
             output_dir = os.path.join(
                 self.output_dir, str(i + 1).zfill(2) + "_" + module.__class__.__name__
@@ -133,6 +135,7 @@ class NLPController:
             logging.info(f"Running module {module.__class__.__name__}")
             module.run(input_dir, output_dir)
             last_dir_name = output_dir
+            i += 1
 
 
 def main():
@@ -150,7 +153,8 @@ def main():
         "-i",
         "--input-dir",
         default="out",
-        help="The directory that holds the unprocessed XML files. Useful for prototyping on a small set of documents.",
+        help="The directory that holds the unprocessed XML files. "
+             "Useful for prototyping on a small set of documents.",
     )
     p.add_argument(
         "--overwrite",
@@ -177,6 +181,12 @@ def main():
             "before the resumed step is assumed to have been executed successfully."
             " If the value if this parameter is greater than 0, --overwrite is ignored."
         ),
+    )
+    p.add_argument(
+        "--lazy",
+        default=False,
+        action='store_true',
+        help='When true, skip all dependency checks and do not preload pipeline modules.'
     )
     opts = p.parse_args()
 
