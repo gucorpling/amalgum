@@ -1,5 +1,7 @@
 from glob import glob
+from flair.data import Sentence, Token
 from flair.models import SequenceTagger
+import conllu
 import stanfordnlp
 import pickle
 import numpy as np
@@ -80,52 +82,18 @@ class PoSTagger(NLPModule):
         else:
             model = self.flair_gum
 
-        f = open("pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt", "w")
-        count = 0
-        notFirst = False
-
-        with open(data_path) as file:
-            for line in file:
-                if line.startswith("#") or line.startswith("\n"):
-                    continue
-                else:
-                    sp = line.split("\t")
-                    if sp[0] == "1" and notFirst:
-                        f.write("\n")
-                    f.write(sp[1] + "\t" + sp[4] + "\n")
-                    count += 1
-                    notFirst = True
-            f.write("\n")
-
-        f.close()
-
         sentences = []
-        with open(
-            "pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt"
-        ) as f:
-            s = ""
-            for line in f:
-                if line == "\n" and len(s) > 0:
-                    sentences.append(s)
-                    s = ""
-                else:
-                    s += line.split("\t")[0] + " "
-        sents = [(len(s.split()), i, s) for i, s in enumerate(sentences)]
+        with open(data_path, 'r') as f:
+            for token_list in conllu.parse(f.read()):
+                sentence = Sentence()
+                for token in token_list:
+                    sentence.add_token(Token(token['form']))
+                sentences.append(sentence)
 
-        sents.sort(key=lambda x: x[0], reverse=True)
-        sentences = [s[2] for s in sents]
-
-        preds = model.predict(sentences)
-
-        # sort back
-        sents = [tuple(list(sents[i]) + [s]) for i, s in enumerate(preds)]
-        sents.sort(key=lambda x: x[1])
-        sents = [s[3] for s in sents]
         output = []
-        for s in sents:
-            for tok in s.tokens:
-                output.append(tok.tags["pos"].value)
-        os.remove("pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt")
+        for sentence in model.predict(sentences):
+            for token in sentence:
+                output.append(token.tags['pos'].value)
         return output
 
     def get_ensemble_predictions(self, test_x):
@@ -167,6 +135,7 @@ class PoSTagger(NLPModule):
         for filepath in tqdm(sorted_filepaths):
             filename = filepath.split(os.sep)[-1]
 
+            print(f"POS tagging {filepath}...")
             stanford_ewt_t = self.get_stanford_predictions("ewt", filepath)
             stanford_gum_t = self.get_stanford_predictions("gum", filepath)
             flair_onto_t = self.get_flair_predictions("onto", filepath, filename)
