@@ -11,13 +11,21 @@ def is_sgml_tag(line):
     return line.startswith("<") and line.endswith(">")
 
 
+def unescape(token):
+    token = token.replace("&quot;", '"')
+    token = token.replace("&lt;", '<')
+    token = token.replace("&gt;", '>')
+    token = token.replace("&amp;", '&')
+    token = token.replace("&apos;", "'")
+    return token
+
 def tokens2conllu(tokens):
     tokens = [
         OrderedDict(
             (k, v)
             for k, v in zip(
                 conllu.parser.DEFAULT_FIELDS,
-                [i + 1, token]
+                [i + 1, unescape(token)]
                 + ["_" for i in range(len(conllu.parser.DEFAULT_FIELDS) - 1)],
             )
         )
