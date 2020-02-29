@@ -99,12 +99,13 @@ class GumdropSplitter(NLPModule):
                 para = True
             splitted.append(line)
 
-        splitted = "\n".join(splitted)
         if opened_sent:
-            if splitted.endswith("</text>"):
-                splitted = splitted.replace("</text>", "</s>\n</text>")
-            else:
-                splitted += "\n</s>"
+            rev_counter = len(splitted) - 1
+            while is_sgml_tag(splitted[rev_counter]):
+                rev_counter -= 1
+            splitted.insert(rev_counter + 1, "</s>")
+
+        splitted = "\n".join(splitted)
 
         return {
             "xml": splitted,
