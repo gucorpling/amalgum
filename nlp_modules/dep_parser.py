@@ -109,19 +109,12 @@ class DepParser(NLPModule):
         conllu_data = doc_dict["dep"]
         xml_data = doc_dict["xml"]
 
-        doc = CoNLL.conll2dict(input_str=conllu_data)
-
-        # get just the text
-        sents = []
-        for sent in doc:
-            words = []
-            for word in sent:
-                words.append(word["text"])
-            sents.append(" ".join(words))
-
+        # load just the tokens (we'll use the pos tags later)
+        doc = CoNLL.load_conll(io.StringIO(conllu_data))
+        doc = [[t[1] for t in s] for s in doc]
 
         # put it through first part of the pipeline
-        doc = self.nlp1("\n".join(sents))
+        doc = self.nlp1(doc)
 
         # overwrite snlp's xpos with our xpos
         doc_with_our_xpos = CoNLL.conll2dict(input_str=conllu_data)
