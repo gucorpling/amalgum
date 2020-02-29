@@ -106,6 +106,7 @@ class GumdropSplitter(NLPModule):
             while is_sgml_tag(splitted[rev_counter]):
                 rev_counter -= 1
             splitted.insert(rev_counter + 1, "</s>")
+            conllu_sentences.append(tokens2conllu(tokens))
 
         splitted = "\n".join(splitted)
 
