@@ -40,29 +40,44 @@ class ShibuyaEntities:
 
 	def __init__(self):
 		self.name = "ShibuyaEntities"
+		
+	def conllu2acegold(self, conllustr):
+		lines = [x.strip().split('\n') for x in conllustr.strip().split('\n\n')]
+		acegoldstr = ""
+		
+		for line in lines:
+			acegoldstr += " ".join([x.split('\t')[1] for x in line if '\t' in x]) + "\n"
+			# Add fake-gold entities
+			acegoldstr += '0,1 person\n\n'
+
+		return acegoldstr
 	
+	def txt2acegold(self, txtstr):
+		acegoldstr = txtstr.replace('\n', '\n0,1 person\n\n') + '\n1,2 person\n\n\n'
+		return acegoldstr
+		
 		
 	def gen_data(self, dataset="amalgum"):
 		reader = Reader(config.bert_model)
-		reader.read_all_data("./data/" + dataset + "/", dataset + ".train", dataset + ".dev",
+		reader.read_all_data("./lib/shibuya_entities/data/" + dataset + "/", dataset + ".train", dataset + ".dev",
 		                     dataset + ".test")
 		
 		train_batches, dev_batches, test_batches = reader.to_batch(config.batch_size)
-		f = open(os.path.normpath('./data/' + dataset + '_train.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_train.pkl'), 'wb')
 		pickle.dump(train_batches, f)
 		f.close()
 		
-		f = open(os.path.normpath('./data/' + dataset + '_dev.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_dev.pkl'), 'wb')
 		pickle.dump(dev_batches, f)
 		f.close()
 		
-		f = open(os.path.normpath('./data/' + dataset + '_test.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_test.pkl'), 'wb')
 		pickle.dump(test_batches, f)
 		f.close()
 		
 		# misc config
 		misc_dict = save_dynamic_config(reader)
-		f = open(os.path.normpath('./data/' + dataset + '_config.pkl'), 'wb')
+		f = open(os.path.normpath("./lib/shibuya_entities/data/" + dataset + '_config.pkl'), 'wb')
 		
 		pickle.dump(misc_dict, f)
 		f.close()
@@ -190,14 +205,14 @@ class ShibuyaEntities:
 		Predict sentence NNER
 		"""
 		
-		f = open(os.path.normpath('./data/' + dataset + '_test.pkl'), 'rb')
+		f = open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_test.pkl'), 'rb')
 		
 		
-		this_model_path = config.model_path + "_" + serialnumber
+		this_model_path = "./lib/shibuya_entities/dumps/sample_model" + "_" + serialnumber
 		
 		# misc info
 		misc_config: Dict[str, Alphabet] = pickle.load(
-			open(os.path.normpath('./data/' + dataset + '_config.pkl'), 'rb'))
+			open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_config.pkl'), 'rb'))
 		
 		voc_dict, label_dict = load_dynamic_config(misc_config)
 		config.voc_size = voc_dict.size()
@@ -225,7 +240,7 @@ class ShibuyaEntities:
 		
 		in_lines = outputstr.strip().split('\n')
 		
-		goldtokenized_lines = [x for idx, x in enumerate(tokenizedstr.strip().split('\n')) if idx % 3 == 0]
+		goldtokenized_lines = [x for idx, x in enumerate(tokenizedstr.strip().split('\n')) if idx % 3 == 0 and x.strip()!='']
 		
 		out_lines = []
 		
@@ -322,26 +337,29 @@ if __name__ == "__main__":
 	p = ArgumentParser()
 	p.add_argument('--dataset', '-d', default='amalgum', help='Input dataset')
 	p.add_argument('--serialnumber', '-s', default='200226_153935', help='Best model pt serial number')
+	p.add_argument('--inputfile', '-i', default="shortsample.conllu", help='Input file')
 	opts = p.parse_args()
 
 	print('Step 0: Processing dataset ' + opts.dataset)
 	
-
 	# Predict sentence splits
 	e = ShibuyaEntities()
 	
-	sample = "shortsample.txt"
+	inputstr = io.open(opts.inputfile, 'r', encoding="utf8").read()
 	
-	# sample sentence data within the directory
-	sent_data = io.open(sample, 'r', encoding="utf8").read().strip()
-
-	assert '\n\n' not in sent_data
+	assert opts.inputfile.endswith(".txt") or opts.inputfile.endswith(".conllu")
+	if opts.inputfile.endswith(".txt"):
+		assert '\n\n' not in inputstr.strip()
+		acegoldstr = e.txt2acegold(inputstr)
+		outputfilename = opts.inputfile.replace('.txt', '.ace')
+	elif opts.inputfile.endswith(".conllu"):
+		assert '\n\n' in inputstr and '\t' in inputstr
+		acegoldstr = e.conllu2acegold(inputstr)
+		outputfilename = opts.inputfile.replace('.conllu', '.ace')
 	
-	# save single file in ACE format to acedir
-	sent_data = sent_data.replace('\n', '\n0,1 person\n\n') + '\n0,1 person\n\n'
 	
 	with io.open(os.path.join('.', 'data', opts.dataset, opts.dataset+'.test'), 'w', encoding='utf8') as ftest:
-		ftest.write(sent_data)
+		ftest.write(acegoldstr)
 	print("Step 1: File written to ACE format")
 	
 	# Pickle test data
@@ -349,18 +367,23 @@ if __name__ == "__main__":
 	print("Step 2: File converted to pickle")
 
 	# predicts and outputs subtoks
-	outputstr, _ = e.predict(dataset="amalgum", serialnumber=opts.serialnumber)
+	outputstr, f1 = e.predict(dataset="amalgum", serialnumber=opts.serialnumber)
 	print("Step 3: File predicted into BERT subtokens")
 
 	
 	# convert subtoks to toks
-	outputstr = e.subtok2tok(outputstr, sent_data)
+	outputstr = e.subtok2tok(outputstr, acegoldstr)
 	print("Step 4: File converted into tokens")
 	
-	with io.open(sample.replace('.txt', '.ace'), 'w', encoding='utf8') as face:
+	
+	with io.open(outputfilename, 'w', encoding='utf8') as face:
 		face.write(outputstr)
 
+	if int(f1)!=0 and int(f1)!=100:
+		print("o F1 score is", f1)
+	
 	print("o Done!")
+	
 	
 	
 	

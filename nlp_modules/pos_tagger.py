@@ -15,40 +15,43 @@ class PoSTagger(NLPModule):
     requires = ()
     provides = (PipelineDep.TOKENIZE,)
 
-    def __init__(self):
+    def __init__(self, opts):
         # self.LIB_DIR = config["LIB_DIR"]
-        pass
+        self.stanford_ewt = nlp = stanfordnlp.Pipeline(
+            processors="tokenize,pos",
+            models_dir="nlp_modules/pos-dependencies/stanfordnlp_models/",
+            tokenize_pretokenized=True,
+            treebank="en_ewt",
+            use_gpu=True,
+            pos_batch_size=1000,
+        )
+
+        config = {
+            "processors": "tokenize,pos",
+            "tokenize_pretokenized": True,
+            "pos_model_path": "nlp_modules/pos-dependencies/saved_models/pos/en_gum_tagger.pt",
+            "pos_pretrain_path": "nlp_modules/pos-dependencies/saved_models/pos/en_gum.pretrain.pt",
+            "pos_batch_size": 1000,
+            "treebank": "en_gum",
+        }
+        self.stanford_gum = stanfordnlp.Pipeline(**config)
+        self.flair_onto = SequenceTagger.load("pos")
+        self.flair_gum = SequenceTagger.load("nlp_modules/pos-dependencies/gum-flair/final-model.pt")
 
     def test_dependencies(self):
-        if not os.path.exists("pos-dependencies"):
+        stanfordnlp.download("en", "nlp_modules/pos-dependencies/stanfordnlp_models/")
+        if not os.path.exists("nlp_modules/pos-dependencies"):
             raise NLPDependencyException(
                 "Could not locate folder `pos-dependencies`. It has to be in the same directory as this script. Please download from https://drive.google.com/file/d/1P5yRDKuBx1hDgOmZU1tNYyt6oZciRx_u/view?usp=sharing"
             )
             sys.exit(1)
 
     def get_stanford_predictions(self, model, data_path):
-
-        output_path = "pos_tmp/stanford_" + model + "_predictions.txt"
-
-        if model == "ewt":
-            nlp = stanfordnlp.Pipeline(
-                processors="tokenize,pos",
-                models_dir="pos-dependencies/stanfordnlp_models/",
-                tokenize_pretokenized=True,
-                treebank="en_ewt",
-                use_gpu=True,
-                pos_batch_size=1000,
-            )
+        if model == 'ewt':
+            nlp = self.stanford_ewt
         else:
-            config = {
-                "processors": "tokenize,pos",
-                "tokenize_pretokenized": True,
-                "pos_model_path": "pos-dependencies/saved_models/pos/en_gum_tagger.pt",
-                "pos_pretrain_path": "pos-dependencies/saved_models/pos/en_gum.pretrain.pt",
-                "pos_batch_size": 1000,
-                "treebank": "en_gum",
-            }
-            nlp = stanfordnlp.Pipeline(**config)
+            nlp = self.stanford_gum
+
         data = []
         with open(data_path) as file:
             data.append([])
@@ -63,16 +66,21 @@ class PoSTagger(NLPModule):
                         data[-1].append([])
                     data[-1][-1].append(sp[1])
 
-        f = open(output_path, "w")
+        f = []
         for tokenized_text in data:
             doc = nlp(tokenized_text)
             for sent in doc.sentences:
                 for word in sent.words:
-                    f.write(word.xpos + "\n")
-        f.close()
+                    f.append(word.xpos)
+        return f
 
-    def get_flair_predictions(self, model_type, data_path):
-        f = open("pos_tmp/flair_" + model_type + "_reformat.txt", "w")
+    def get_flair_predictions(self, model_type, data_path, fileName):
+        if model_type == "onto":
+            model = self.flair_onto   
+        else:
+            model = self.flair_gum
+
+        f = open("pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt", "w")
         count = 0
         notFirst = False
 
@@ -91,13 +99,10 @@ class PoSTagger(NLPModule):
 
         f.close()
 
-        # load the model you trained
-        if model_type == "onto":
-            model = SequenceTagger.load("pos")
-        else:
-            model = SequenceTagger.load("pos-dependencies/gum-flair/final-model.pt")
         sentences = []
-        with open("pos_tmp/flair_" + model_type + "_reformat.txt") as f:
+        with open(
+            "pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt"
+        ) as f:
             s = ""
             for line in f:
                 if line == "\n" and len(s) > 0:
@@ -116,34 +121,27 @@ class PoSTagger(NLPModule):
         sents = [tuple(list(sents[i]) + [s]) for i, s in enumerate(preds)]
         sents.sort(key=lambda x: x[1])
         sents = [s[3] for s in sents]
-        output = open("pos_tmp/flair_" + model_type + "_predictions.txt", "w")
+        output = []
         for s in sents:
             for tok in s.tokens:
-                output.write(tok.tags["pos"].value + "\n")
-
-    def get_model_predictions(self, path):
-        preds = []
-        with open(path) as f:
-            for line in f:
-                if line.startswith("\n"):
-                    continue
-                else:
-                    line = line.strip("\n")
-                    line = line.split("\t")
-                    preds.append([line[0]])
-        return preds
+                output.append(tok.tags["pos"].value)
+        os.remove("pos_tmp/flair_" + fileName + "_" + model_type + "_reformat.txt")
+        return output
 
     def get_ensemble_predictions(self, test_x):
         test_encoded = []
-        le = pickle.load(open("pos-dependencies/all-encodings.pickle.dat", "rb"))
-        le2 = pickle.load(open("pos-dependencies/y-encodings.pickle.dat", "rb"))
+        with open("nlp_modules/pos-dependencies/all-encodings.pickle.dat", "rb") as f:
+            le = pickle.load(f)
+        with open("nlp_modules/pos-dependencies/y-encodings.pickle.dat", "rb") as f:
+            le2 = pickle.load(f)
 
         test_x = np.column_stack((k for k in test_x))
         for k in test_x:
             test_encoded.append(le.transform(k))
 
         dtest = xgb.DMatrix(np.array(test_encoded))
-        loaded_model = pickle.load(open("pos-dependencies/xg-model.pickle.dat", "rb"))
+        with open("nlp_modules/pos-dependencies/xg-model.pickle.dat", "rb") as f:
+            loaded_model = pickle.load(f)
 
         predictions = loaded_model.predict(dtest)
         predictions = [int(x) for x in predictions]
@@ -153,68 +151,43 @@ class PoSTagger(NLPModule):
                 predictions[i] = "-LRB-"
             if predictions[i] == "-RSB-":
                 predictions[i] = "-RRB-"
-        pickle.dump(predictions, open("pos_tmp/preds.pickle.dat", "wb"))
 
-        return
-
-    def predict(self):
-        stanford_gum_test = self.get_model_predictions(
-            "pos_tmp/stanford_gum_predictions.txt"
-        )
-
-        stanford_ewt_test = self.get_model_predictions(
-            "pos_tmp/stanford_ewt_predictions.txt"
-        )
-
-        flair_gum_test = self.get_model_predictions("pos_tmp/flair_gum_predictions.txt")
-
-        flair_onto_test = self.get_model_predictions(
-            "pos_tmp/flair_onto_predictions.txt"
-        )
-
-        self.get_ensemble_predictions(
-            np.array(
-                [stanford_ewt_test, stanford_gum_test, flair_onto_test, flair_gum_test]
-            )
-        )
+        return predictions
 
     def run(self, input_dir, output_dir):
         # Identify a function that takes data and returns output at the document level
         # processing_function = self.tokenize
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
-        file_type = "conllu"
+        file_type = "dep"
         os.makedirs(os.path.join(output_dir, file_type), exist_ok=True)
         sorted_filepaths = sorted(glob(os.path.join(input_dir, file_type, "*")))
+        if not os.path.exists("pos_tmp"):
+            os.mkdir("pos_tmp")
         for filepath in tqdm(sorted_filepaths):
             filename = filepath.split(os.sep)[-1]
-            try:
-                shutil.rmtree("pos_tmp")
-            except:
-                pass
-            os.mkdir("pos_tmp")
 
-            stanfordnlp.download("en", "pos-dependencies/stanfordnlp_models/")
+            stanford_ewt_t = self.get_stanford_predictions("ewt", filepath)
+            stanford_gum_t = self.get_stanford_predictions("gum", filepath)
+            flair_onto_t = self.get_flair_predictions("onto", filepath, filename)
+            flair_gum_t = self.get_flair_predictions("gum", filepath, filename)
+            results = self.get_ensemble_predictions(
+                np.array([stanford_ewt_t, stanford_gum_t, flair_onto_t, flair_gum_t])
+            )
 
-            self.get_stanford_predictions("ewt", filepath)
-            self.get_stanford_predictions("gum", filepath)
-            self.get_flair_predictions("onto", filepath)
-            self.get_flair_predictions("gum", filepath)
-            self.predict()
-            results = pickle.load(open("pos_tmp/preds.pickle.dat", "rb"))
             indx = 0
 
             with open(filepath) as inp:
                 output = open(os.path.join(output_dir, file_type, filename), "w")
                 for line in inp:
-                    if line.startswith("#"):
-                        continue
-                    elif line.startswith("\n"):
-                        output.write("\n")
-                    else:
-                        sp = line.split("\t")
-                        output.write(sp[1] + "\t" + results[indx] + "\n")
+                    sp = line.split("\t")
+                    if sp[0].isdigit():
+                        sp[4] = results[indx]
+                        output.write("\t".join(sp))
                         indx += 1
+                    else:
+                        output.write(line)
+
                 output.close()
         try:
             shutil.rmtree("pos_tmp")
