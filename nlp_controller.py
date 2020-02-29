@@ -11,10 +11,12 @@ from glob import glob
 from time import sleep
 
 from nlp_modules.marmot_tagger import MarmotTagger
-from nlp_modules.snlp_parser import StanfordNLPParser
+from nlp_modules.dep_parser import DepParser
 from nlp_modules.tt_tagger import TreeTaggerTagger
 from nlp_modules.tt_tokenizer import TreeTaggerTokenizer
 from nlp_modules.gumdrop_splitter import GumdropSplitter
+from nlp_modules.pos_tagger import PoSTagger
+from nlp_modules.s_typer import STyper
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
@@ -24,9 +26,11 @@ TT_PATH = BIN_DIR + "treetagger" + os.sep + "bin" + os.sep
 MODULES = {
     "tt_tokenizer": TreeTaggerTokenizer,
     "tt_tagger": TreeTaggerTagger,
+    "ensemble_tagger": PoSTagger,
     "marmot_tagger": MarmotTagger,
-    "snlp_parser": StanfordNLPParser,
     "gumdrop_splitter": GumdropSplitter,
+    "s_typer": STyper,
+    "dep_parser": DepParser,
 }
 
 
@@ -139,7 +143,7 @@ def main():
         "--modules",
         nargs="+",
         choices=MODULES.keys(),
-        default=["tt_tokenizer", "tt_tagger", "gumdrop_splitter"],
+        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser"],
         help="NLP pipeline modules, included in the order they are specified.",
     )
     p.add_argument(

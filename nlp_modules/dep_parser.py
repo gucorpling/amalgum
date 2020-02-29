@@ -28,7 +28,8 @@ def conllu2xml(conllu, xml):
             if line.startswith("<"):
                 continue
 
-            conllu_line = conllu.sentences[s_count].words[tok_count]
+            sentence = conllu.sentences[s_count]
+            conllu_line = sentence.words[tok_count]
             xml_lines[i] = (
                 conllu_line.text
                 + "\t"
@@ -43,34 +44,15 @@ def conllu2xml(conllu, xml):
     return "\n".join(xml_lines)
 
 
-class DepWithPosParser(NLPModule):
+class DepParser(NLPModule):
     requires = (PipelineDep.S_SPLIT, PipelineDep.POS_TAG)
     provides = (PipelineDep.PARSE,)
 
-    def __init__(self, model="gum"):
+    def __init__(self, config, model="gum"):
         self.use_gpu = config.get("use_gpu", False)
         self.LIB_DIR = config["LIB_DIR"]
-        self.model = model
-
-    def test_dependencies(self):
-        if not os.path.isdir(os.getcwd() + os.sep + "stanfordnlp"):
-            raise NLPDependencyException("Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git")
-
-        if len(glob(os.path.join(self.LIB_DIR, "dep_parsing", "*.py"))) == 0:
-            raise NLPDependencyException("No stanfordnlp dependencies. Please download the files from"
-                                         "https://drive.google.com/open?id=1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00. "
-                                         "Put core.py and depparse_processor.py under stanfordnlp/pipeline/ "
-                                         "and overwrite the two scripts.")
-
         self.model_dir = os.path.join(self.LIB_DIR, "dep_parsing", "models")
-        if len(glob(os.path.join(self.model_dir, "en_*.pt"))) == 0:
-            raise NLPDependencyException(
-                "No pre-trained GUM stanfordnlp models. Please download the pretrained GUM models"
-                "from https://drive.google.com/open?id=1s5DRHHGqpnlCQ6UK95GbAxexXIh6mFzr"
-                f" and place it in {self.model_dir}/"
-            )
-
-    def predict_with_pos(self, doc_dict):
+        self.model = model
         # before pos replacements
         config1 = {
             "lang": "en",
@@ -103,6 +85,27 @@ class DepWithPosParser(NLPModule):
             "depparse_pretagged": True,
         }
 
+        self.nlp1 = stanfordnlp.Pipeline(**config1)
+        self.nlp2 = stanfordnlp.Pipeline(**config2)
+
+    def test_dependencies(self):
+        if not os.path.isdir(os.getcwd() + os.sep + "stanfordnlp"):
+            raise NLPDependencyException("Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git")
+
+        if len(glob(os.path.join(self.LIB_DIR, "dep_parsing", "*.py"))) == 0:
+            raise NLPDependencyException("No stanfordnlp dependencies. Please download the files from"
+                                         "https://drive.google.com/open?id=1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00. "
+                                         "Put core.py and depparse_processor.py under stanfordnlp/pipeline/ "
+                                         "and overwrite the two scripts.")
+
+        if len(glob(os.path.join(self.model_dir, "en_*.pt"))) == 0:
+            raise NLPDependencyException(
+                "No pre-trained GUM stanfordnlp models. Please download the pretrained GUM models"
+                "from https://drive.google.com/open?id=1s5DRHHGqpnlCQ6UK95GbAxexXIh6mFzr"
+                f" and place it in {self.model_dir}/"
+            )
+
+    def predict_with_pos(self, doc_dict):
         conllu_data = doc_dict["dep"]
         xml_data = doc_dict["xml"]
 
@@ -116,18 +119,17 @@ class DepWithPosParser(NLPModule):
                 words.append(word["text"])
             sents.append(" ".join(words))
 
-        nlp1 = stanfordnlp.Pipeline(**config1)
 
         # put it through first part of the pipeline
-        doc = nlp1("\n".join(sents))
+        doc = self.nlp1("\n".join(sents))
 
         # overwrite snlp's xpos with our xpos
         doc_with_our_xpos = CoNLL.conll2dict(input_str=conllu_data)
         replace_xpos(doc, doc_with_our_xpos)
 
-        nlp2 = stanfordnlp.Pipeline(**config2)
-        parsed = nlp2(doc)
+        parsed = self.nlp2(doc)
         deped = parsed.conll_file.conll_as_string().strip()
+
         xmled = conllu2xml(parsed, xml_data)
 
         return {"dep": deped, "xml": xmled}
@@ -171,7 +173,7 @@ Eye-Tracking	NN	eye-tracking
 2	from	_	_	IN	_	_	_	_	_
 3	Eye-Tracking	_	_	NN	_	_	_	_	_
 """
-    module = DepWithPosParser()
+    module = DepParser({'LIB_DIR': 'lib'})
     module.test_dependencies()
     res = module.predict_with_pos({"xml": test_xml, "dep": test_conll})
     print(res["xml"])
