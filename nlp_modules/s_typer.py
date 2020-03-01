@@ -9,10 +9,10 @@ from nlp_modules.base import NLPModule, PipelineDep
 from lib.stype_classifier import STypeClassifier
 
 class STyper(NLPModule):
-    requires = (PipelineDep.S_SPLIT,PipelineDep.POS_TAG)
+    requires = (PipelineDep.S_SPLIT, PipelineDep.POS_TAG)
     provides = (PipelineDep.S_TYPE,)
 
-    def __init__(self):
+    def __init__(self, opts):
         self.test_dependencies()
         self.styper = STypeClassifier()
 
