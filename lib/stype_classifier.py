@@ -155,10 +155,12 @@ class STypeClassifier:
 		dataframe['postags'].str.split().apply(pos_tags.update)
 		if "#" in pos_tags:
 			pos_tags.remove("#")
+		root_combo_tags = ['_']
+		for tag1 in pos_tags:
+			for tag2 in pos_tags:
+				root_combo_tags.append(tag1 + "_" + tag2)
+		root_combo_tags = [root_combo_tags]
 		pos_tags = [list(pos_tags)]
-		root_combo_tags = set()
-		dataframe['root_combo_pos'].str.split().apply(root_combo_tags.update)
-		root_combo_tags = [list(root_combo_tags)]
 
 		func_vectorizer = CountVectorizer(vocabulary=white_funcs,token_pattern='[^\s]+')
 		word_func_vectorizer = CountVectorizer(max_features=300,token_pattern='[^\s]+')#,vocabulary=allowed_vocab)
@@ -309,8 +311,12 @@ class STypeClassifier:
 
 
 if __name__ == "__main__":
-	from argparse import ArgumentParser
-	p = ArgumentParser()
+	from argparse import ArgumentParser, RawTextHelpFormatter
+
+	usage = "Training:\n  python stype_classifier.py -td gum/_build/src/\n"
+	usage += "Predicting:\n  python stype_classifier.py conll_files_dir/\n"
+
+	p = ArgumentParser(epilog=usage, formatter_class=RawTextHelpFormatter)
 	p.add_argument("-t","--train",action="store_true")
 	p.add_argument("-d","--devtrain",action="store_true",help="train with dev")
 	p.add_argument("-w","--write",action="store_true",help="write training data table")
