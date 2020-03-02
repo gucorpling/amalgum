@@ -148,7 +148,7 @@ def main():
         "--modules",
         nargs="+",
         choices=MODULES.keys(),
-        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser"],
+        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser", "s_typer"],
         help="NLP pipeline modules, included in the order they are specified.",
     )
     p.add_argument(
