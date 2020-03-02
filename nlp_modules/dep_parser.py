@@ -36,8 +36,9 @@ def conllu2xml(conllu, xml):
                 + conllu_line.xpos
                 + "\t"
                 + conllu_line.lemma if conllu_line.lemma is not None else '%NONE%' # Seems like a bug, make it %NONE% so we can track it
-                + "\t"
-                + conllu_line.dependency_relation
+                # tentetively leave the dep_rel out of the xml
+                # + "\t"
+                # + conllu_line.dependency_relation
             )
             tok_count += 1
 
