@@ -1,0 +1,40 @@
+<text id="autogum_academic_doc305" title="A Vehicle Target Recognition Algorithm for Wide-Angle SAR Based on Joint Feature Set Matching" shortTile="vehicle-target-recognition" author="Rongchun Hu, Zhenming Peng, Juan Ma" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/11/1252/htm" speakerList="none" speakerCount="0">
+<head> 4. Feature Set Extraction and Matching</head>
+<p>After the previous processing, the obtained image is used for feature set extraction. It can be seen from <figure>Figure 2</figure>a–d that the image obtained by the traditional backprojection algorithm is fuzzy, and it is difficult to directly extract the shape, contour, and other features of the vehicle. After contour thinning and speckle reduction, the vehicle contour is much clearer than before, and it is convenient to detect the contour line, calculate the rotation angle of the vehicle, and other contour data. In this paper, a vehicle recognition algorithm that is based on combined matching of contour image feature set and orthogonal projection feature set is proposed. </p>
+
+<head> 4.1. Feature Set Extraction</head>
+<p><figure>Figure 5</figure> shows an example of the imaging results for four different models of vehicle at different positions and detection heights. These images have been pre-processed by contour thinning, speckle reduction, and rotation correction. <figure>Figure 5</figure>a–d are images of the vehicle model Chevrolet Impala LT. <figure>Figure 5</figure>e–h are images of the vehicle model Mitsubishi Galant ES. <figure>Figure 5</figure>i–l are images of the vehicle model Toyota Highlander. <figure>Figure 5</figure>m–p are images of the vehicle model Chevrolet HHR LT. </p>
+
+<p>It can be seen from <figure>Figure 5</figure> that different contour sizes of the same model will appear when imaging in different detection locations and different detection heights. Moreover, the contours of different models are sometimes very similar and, in some cases, are more similar than the contours of the same model. Therefore, if only a simple size feature, such as the length or width of the contour, is used, it is difficult to recognize the model of the vehicle. Accordingly, we consider establishing a feature set for each model for recognition. The feature set consists of two parts, one is the selected image data set and the other is the projection data set. </p>
+
+<head> 4.1.1. Selected Image Set</head>
+<p>Template matching is a simple and direct method for image classification. The matching value can be calculated between the contour image to be recognized and the image in the existing image set and then the category of the image with the largest matching value can then be taken as the vehicle recognition result. Obviously, the more images in the image set and the more representative the images are, the higher the recognition accuracy is. In extreme cases, if the image set contains all of the known images, then the highest recognition accuracy should ideally be achieved. However, in reality, the image set cannot contain all the images, because the actual images are endless, and there will always be new images that have not appeared. Moreover, the image set containing all images loses the significance of studying representative features, and it becomes unnecessarily large and redundant. </p>
+
+<p>Therefore, this paper proposes a simple image set generation algorithm. The algorithm can preserve as many representative images as possible and remove redundant images as possible. Let <hi rend="italic">K</hi> denote the total number of known contour images and  denote the <hi rend="italic">k</hi>-th contour image. Let <hi rend="italic">N</hi> denote the number of vehicle models and  indicate the <hi rend="italic">i</hi>-th model. For any contour image , there is , where . Let  denote the image set corresponding , and the steps for generating the image set are as follows:
+<list>
+<item>All images belonging to  are added to the image set , and an image is then randomly selected from  as the reference image .</item>
+<item>The correlation coefficients <hi rend="italic">C</hi> of  and all other model of images is calculated. The minimum <hi rend="italic">C</hi>min of correlation coefficients <hi rend="italic">C</hi> is obtained. The equations are as follows:
+
+(13)
+
+(14)
+
+(15)
+
+(16)
+
+where  is the mean of the <hi rend="italic">I</hi>.  represents the correlation coefficient of the overlapping region with <hi rend="italic">Ii</hi>, when <hi rend="italic">Ij</hi> is shift to (<hi rend="italic">u, v</hi>), so the mean value is also the mean value of the overlapping region.</item>
+<item>The correlation coefficients of  and all of the images in  are calculated, and the image with the correlation coefficient smaller than  is removed from .</item>
+<item>A new image is randomly selected from  as the reference image , and then Step 2–4 are repeated. If all the images in  have been reference images, the algorithm ends. Finally,  is the generated image set.</item>
+</list>
+</p>
+
+<p>The image set corresponding to each model can be obtained by following the above steps for all models. </p>
+
+<head> 4.1.2. Projection Set</head>
+<p>The image set that was obtained after selection process retains some representative images, but many images are also removed, and some features of this model are inevitably lost. In order to compensate for the feature loss, the orthogonal projection feature of the image is saved to increase the recognition accuracy. The horizontal projection and vertical projection have obvious characteristics because the image has been rotated before. Additionally, since the projection data is much smaller than the image data, it is very convenient and cost-effective to store the projection features, and the projection features of all the images can be saved. The horizontal and vertical projection of the image is calculated, as follows:
+
+(17)
+
+(18)</p>
+</text>

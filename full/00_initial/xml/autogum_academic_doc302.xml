@@ -1,0 +1,69 @@
+<text id="autogum_academic_doc302" title="Fault Classification Decision Fusion System Based on Combination Weights and an Improved Voting Method" shortTile="fault-classification" author="Fanliang Zeng, Zuxin Li, Zhe Zhou, Shuxin Du" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2227-9717/7/11/783/htm" speakerList="none" speakerCount="0">
+<head> 3. The Proposed Method</head>
+<p>
+The ensemble method integrates various fault classification methods to improve the fault classification capability. A basic ensemble method includes the selection of base classifiers and the determination of fusion strategies. In this study, six basic classifiers were selected: linear discriminant analysis (LDA), K-nearest neighbor (KNN), Bayesian classifier (BN), random forest (RF), support vector machine (SVM) and the BP neural network (BP). Decision fusion is achieved by the CW and improved voting methods. </p>
+
+<p>The specific framework of our proposed fusion system is shown in <figure>Figure 1</figure>. </p>
+
+<head> 3.1. Selection of Base Classifiers</head>
+<p>
+Considering the requirement of diversity for the ensemble classification system, we selected six representative classifiers from the supervised category. Among them, LDA is a linear classifier, which is suitable for the classification of linear separable problems. KNN is a simple classifier, which determines the classification result by comparing the distance between the sample to be classified and all training samples. BN is one of the commonly used classifiers. It has an advantage in terms of classification speed and is suitable for applications with small-scale samples and missing values. RF is an integrated classifier based on the decision tree and has the advantage of a low computation cost. It can deal with high-dimensional samples and sample imbalance. The typical advantage of SVM is that it can use small samples and is also good for nonlinear problems. The BP neural network is a multi-layer feed-forward neural network with error backpropagation, which is advantageous for dealing with nonlinear problems. </p>
+
+<head> 3.2. Classifier Performance Evaluation</head>
+<p>
+To measure the classification performance, four evaluation indicators were used:
+
+(21)
+
+(22)
+
+(23)
+
+where <hi rend="italic">t</hi> is the number of fault classes.
+
+(24)
+
+where <hi rend="italic">P</hi> is the precision and <hi rend="italic">R</hi> is the recall rate. </p>
+
+<p>The information used to calculate these performance evaluation indicators is given by the confusion matrix. The confusion matrix is also a way to measure the classifier’s performance, and its form is as follows:
+
+(25)
+
+where  represents the percentage of cases where fault <hi rend="italic">i</hi> classified as fault <hi rend="italic">j</hi> by classifier <hi rend="italic">k</hi>. <hi rend="italic">c</hi> is the number of base classifiers, and <hi rend="italic">t</hi> is the number of fault classes. </p>
+
+<head> 3.3. Formatting of Mathematical Components</head>
+<p>
+Voting is a simple and practical decision-making fusion strategy, but its fusion results are often unreasonable because it ignores the performance differences of various methods. In the process of fusion, the method with excellent performance should have greater/more influence on the voting results. This paper proposes a validity concept based on the confusion matrix to improve the voting method. </p>
+
+<p>The concept of the validity value is defined as follows:
+
+(26)
+
+where  represents the validity of classifier <hi rend="italic">k</hi> for fault <hi rend="italic">j</hi>. The larger the value of , the higher the credibility of the result when a test sample is classified as fault <hi rend="italic">j</hi> by classifier <hi rend="italic">k</hi>. Additionally, the following conditions should be met:
+
+(27)
+
+</p>
+
+<p>In the improved voting method, the voting result is determined by the validity value of the base classifier for different faults. Different from the conventional voting method, the fusion results given by the improved voting method are no longer crisp (i.e., either 0 or 1), but they take values in the interval of 0–1. This not only avoids the shortcomings of the original voting method, which does not consider the difference in performance of each classifier on different faults, but also enhances the impact of the classifiers with good performance in terms of voting results. </p>
+
+<p>A validity matrix can be obtained by using the improved voting method:
+
+(28)
+
+</p>
+
+<p>Combined with the combined weights, the decision of the fusion system is:
+
+(29)
+
+</p>
+
+<p>Finally, the maximum value is used as the fusion decision:
+
+(30)
+
+</p>
+
+<p>In summary, the proposed decision fusion system uses multiple performance evaluation indicators to measure the performance of the base classifier and determine the combined weights based on AHP and EW-TOPSIS for the base classifiers under these indicators. In addition, an improved voting method based on validity was developed to improve the effectiveness of decision fusion. In the next section, the proposed method is verified by the TE process. </p>
+</text>

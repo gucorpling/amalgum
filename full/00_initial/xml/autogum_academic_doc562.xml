@@ -1,0 +1,31 @@
+<text id="autogum_academic_doc562" title="Comparative Study on Parameter Identification Methods for Dual-Polarization Lithium-Ion Equivalent Circuit Model" shortTile="comparative-study" author="Theodoros Kalogiannis, Md  Sazzad Hosen, Mohsen  Akbarzadeh Sokkeh, Shovon Goutam, Joris Jaguemont, Lu Jin, Geng Qiao, Maitane Berecibar, Joeri Van Mierlo" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/21/4031/htm" speakerList="none" speakerCount="0">
+<head> 3. Model Development</head><head> 3.1. In Discrete-Time Domain</head>
+<p>
+The model that is employed in this work is the dual-polarization ECM which refers to the second-order RC circuit as shown in <figure>Figure 6</figure>. It represents the time-dependent polarization processes taking place during charge/discharge, the relaxation effect and the equilibrium open circuit  in the battery cells. At a current passage, the terminal voltage  diverges from the  due to material resistivity, electrochemical reactions and diffusion processes. </p>
+
+<p>The ECM considers the load demand, the initial SoC of the cells and the temperature as inputs in order to estimate the terminal voltage and the states of the Li-ion cells which are described by Equation (1):
+
+(1)
+
+where  is the OCV obtained from the experiment,  is Ohmic resistance,  and  represent the activation (electrochemical) and the concentration polarization respectively (m) with the capacitances ( and  in ) as to relate the voltage drops across them ( and  in mV) with the two different time-constant. The former, activation polarization  is associated with the charge-transfer and the SEI layer build up resistance. The latter accounts a concentration gradient build-up taking place at current flow or during vice-versa during relaxation, represented by .  is the current flow through the battery cells (Amps) with a sampling period of  s and it is considered negative for charge. </p>
+
+<p>Since the impedance is dependent on the SoC, a function for this purpose is integrated in the DP ECM. Generally, the SoC of cells can be estimated with OCV(SoC)-based method, with power electronics such as online EIS measurement, model-based-estimation and machine learning algorithms, and Ah(Coulomb)-counting, as it thoughtfully discussed in previous studies. Challenges with certain chemistries can rise, as for LFP’s low  at the slow dynamic area and its hysteresis effect makes OCV (SoC)-based methods not optimal, whereas EIS-based measurements lack accuracy through ageing and the estimations are highly influenced from chemistry and experimental conditions. Also, due to overload on computational complexity and memory storage or lack of accuracy, most implementation are to not suitable for on-board applications. However, certain model-based methods and the Ah-counting are proven more relevant for this purpose. </p>
+
+<p>More in precise, the model-based estimation with adaptive Kalman and particle filters or observers and fuzzy logic or machine learning algorithms such as artificial neural networks (ANN) and support vector machines (SVM) are typically used for on-board implementation, taking into account their increased computational and memory requirements. On the other hand, the SoC estimation from Ah-counting depends on the accuracy (sampling precision and frequency) of the current sensors and the initialization of the cell’s capacity. It usually gives accurate results, which also relies on the initial and re-calibrated (to avoid error accumulation) SoC after dynamic load profiles. This low-cost estimation method is used in this work as well, according to Equation (2).
+
+(2)
+
+where  is the initial state of charge,  is the Coulombic efficiency of the cell at the certain C-rates,  is the instantaneous current through the cell and  is the initial capacity ( = discrete sampling period) as a function of temperature and current rate. </p>
+
+<p>Besides the ECM parameters, the total cell’s resistance incorporates both the Ohmic and polarizations and is considered to be the DC resistance of the Li-ion that can be extracted according to Ohm’s law from the measured voltage drop at a current pulse as in Equation (3):
+
+(3)
+
+where  is the overpotential between the terminal voltage  and the  of the current pulse. This resistance is a modeling assumption that represents the overall impedance of the cells during a current excitation which is practical for on-board estimation of the available source or sink power capability of the cells , and also the limitation on rate of current  that can be drawn or fed on either charge or discharge direction over a short period of . They can be estimated according to Equation (4):
+
+(4)
+
+</p>
+
+<p>The power capability is inverse dependent on the  of the battery cells and follows the overpotential  build-up during the pulse. As a result, it is highly influenced from the C-rates, the operating temperature and the current pulse length period, as well as the SoC of the cells throughout ageing and their chemistry. Consequently,  is assessed here for three C-rates (0.33 C, 1 C and 2 C-NMC or 3 C-LTO) and at three SoCs (20%, 50% and 80%), for three different pulse times  = 2 s, 10 s and 20 s at C and BoL. The generated power losses at the respective states can be simply calculated by  [in the range of a few Watts]. </p>
+</text>

@@ -1,0 +1,31 @@
+<text id="autogum_academic_doc247" title="Intercept-Resend Emulation Attacks against a Continuous-Variable Quantum Authentication Protocol with Physical Unclonable Keys" shortTile="interceptresend-emulation" author="Lukas Fladung, Georgios  M. Nikolopoulos, Gernot Alber, Marc Fischlin" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2410-387X/3/4/25/htm" speakerList="none" speakerCount="0">
+<head> 3. Intercept–Resend Emulation Attacks</head>
+<p>
+The emulation attacks under consideration follow closely the general theoretical framework of Ref., which is summarized in <figure>Figure 3</figure>. We assume that the adversary does not have access to the preparation of the probe states, the actual PUK, the SLM, or the HD set-up. However, he has obtained somehow a copy of all the possible CRPs to be used in the authentication of the PUK, and moreover he has obtained access to the incoming and outgoing SMFs, without being detected. Hence, if the adversary were able to estimate exactly the probe state, he would be able to impersonate successfully the holder of the PUK, by looking at the CRPs and by sending to the HD set-up the expected response state. However, quantum physics does not allow for perfect discrimination between non-orthogonal quantum states, or the measurement of non-communting quantum observables with arbitrary accuracy. As a result, it is inevitable for the adversary’s intervention to introduce errors in the HD performed by the verifier. </p>
+
+<p>Given that the probe states in the <hi rend="italic">M</hi> queries are chosen at random and independently from a uniform distribution over the set , from now on, we can focus on one of the queries and let  denote the incoming probe state. The adversary’s task is to obtain an estimate of the integer <hi rend="italic">k</hi>, which determines fully the challenge and the expected response. To this end, he performs a measurement on the incoming probe state, and, based on the outcome, the adversary makes an educated guess about <hi rend="italic">k</hi>, to be denoted by . For the reasons discussed above, this guess may or may not be equal to the actual <hi rend="italic">k</hi> used by the verifier, and thus the adversary’s intervention will affect the probability with which the verifier obtains an outcome in the expected bin. More precisely, instead of Equation (3), one has
+
+(4a)
+
+where  and  denote the -quadratures of the response field, when the adversary deduces the correct and the wrong value of <hi rend="italic">k</hi>. Both of them are given by Equation (2) for <hi rend="italic">k</hi> and , respectively. </p>
+
+<p>Given that the verifier samples from both quadratures at random and independently, after <hi rend="italic">M</hi> queries, the verifier will obtain an estimate of the average probability
+
+(4b)
+
+where  is given by Equation (4a) and
+
+(5)
+
+is the probability for the adversary to make an error in his estimation of <hi rend="italic">k</hi>. </p>
+
+<p>The probability  takes into account all of the events irrespective of whether the adversary deduced the correct value of <hi rend="italic">k</hi> or not. In the second equality of Equation (4b), we have taken into account the uniform distribution of <hi rend="italic">k</hi> over  and of  over . Moreover, we have used the fact that the state of the probe and the outcome of the adversary are independent of the quadrature to be measured by the verifier. A straightforward calculation shows that  is always smaller than the corresponding expression in the absence of cheating [which is given by Equation (3)], and the difference
+
+(6a)
+
+basically quantifies the adversary’s intervention. The adversary’s intervention will be detected by the verifier when the observed deviations from  exceed the statistical deviations i.e., when
+
+(6b)
+
+</p>
+</text>

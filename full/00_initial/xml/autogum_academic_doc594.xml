@@ -1,0 +1,35 @@
+<text id="autogum_academic_doc594" title="Outdoor Scene Understanding Based on Multi-Scale PBA Image Features and Point Cloud Features" shortTile="outdoor-scene-understanding" author="Yisha Liu, Yufeng Gu, Fei Yan, Yan Zhuang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/20/4546/htm" speakerList="none" speakerCount="0">
+<head> 3. Laser Point Clouds Classification Using Multi-Scale PBA Image Features and Point Cloud Features</head>
+<p>
+It is important to select the neighborhood range of the laser points in the feature extraction step. In our work, the image pyramid model is adopted to extract the texture features of PBA images on multiple scales. The point cloud pyramid model is then used to extract the local features of the 3D point cloud on multiple scales. </p>
+
+<head> 3.1. Multi-Scale PBA Image Feature Extraction</head>
+<p>
+In our work, feature extraction is accomplished in 2D gray images on multiple scales. When the scale is large, the computational cost is very high. Therefore, the PBA image is downsampled by using the image pyramid model. The image pyramid model for PBA images is given in <figure>Figure 8</figure>. It should be noted that the image in each layer of the pyramid model is generated directly from the 3D laser point cloud, rather than from the downsampling of the original image. </p>
+
+<p>Local Binary Pattern (LBP) is a kind of image texture feature, which is extracted from multi-resolution PBA images. For the classic LBP feature, eight fixed neighborhood pixels are selected (see <figure>Figure 9</figure>a). In order to extract multi-scale texture features an improved neighborhood selection method is adopted for LBP feature extraction in our work, in which a circular neighborhood is selected with variable radius <hi rend="italic">r</hi>. The pixel coordinate of the neighborhood points (<hi rend="italic">xp</hi>, <hi rend="italic">yp</hi>) can be obtained as follows:
+
+(6)
+
+where (<hi rend="italic">xc</hi>, <hi rend="italic">yc</hi>) is the pixel coordinate of the center pixel. As shown in <figure>Figure 9</figure>a,b, <hi rend="italic">r</hi> is selected as 1 and 2, respectively. </p>
+
+<p>Reduce the original 256-level gray PBA image to 3-level and the pixel gray value <hi rend="italic">Gnew</hi> of the simplified 3-level image can be obtained as follows:
+
+(7)
+
+where <hi rend="italic">Gold</hi> is the pixel gray value of the original PBA image.  </p>
+
+<p><figure>Figure 10</figure> shows an example of the simplified 3-level PBA image (black-0; gray-127; white-255), and four categories of typical local scenes also show distinct texture features, which are artificial ground (top left), natural ground (bottom left), buildings (top right), and vegetation (bottom right).  </p>
+
+<p>When feature extraction in different layers of the image pyramid model for the PBA images is completed, these features in different layers need to be fused. Starting from the top layer image of the pyramid, the image features are upsampled, and then superimposed with the image features of the next layer. These two steps are repeated until the features in all layers are superimposed on the image at the bottom layer of the image pyramid model. </p>
+
+<p>In summary, the (<hi rend="italic">P</hi> + 1) layer image pyramid model of PBA images is built from the original laser point cloud, and each layer of PBA images is converted to a 3-level gray image. LBP features are then extracted in each image pixel on <hi rend="italic">m</hi> scales. Finally, the features in different layers are superimposed together from the top layer to the bottom layer. Therefore, there are <hi rend="italic">m</hi> × (<hi rend="italic">P</hi> + 1) image features for every pixel in the original PBA image. </p>
+
+<head> 3.2. Multi-Scale Point Cloud Feature Extraction</head>
+<p>
+In our work, features are extracted from 3D laser point clouds on multiple scales. However, when the neighborhood radius is expanded at a linear rate, the number of neighborhood points of a laser point is approximately increased at a cubic speed, which greatly increases the computational burden. In order to solve this problem, the point cloud pyramid model is derived which is inspired by the image pyramid model in image processing. </p>
+
+<p>Similar to the image pyramid model, the downsampling algorithm is utilized for the original point clouds to build the point cloud pyramid model. The voxel model is used to divide the laser point cloud to be downsampled into different 3D grids. Then the center of gravity of the laser points in each voxel (3D grid) is calculated to represent all the points in the voxel. An illustration of the point cloud pyramid model is shown in <figure>Figure 11</figure>, in which the bottom layer is the original laser point cloud. Then a fixed number of laser points are selected as neighborhood points in different layers of the point cloud pyramid model. </p>
+
+<p>After determining the neighborhood range of each laser point, feature extraction will be performed which includes statistical features, geometric morphological features, and histogram features. </p>
+</text>

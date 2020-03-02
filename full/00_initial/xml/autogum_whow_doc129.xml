@@ -1,0 +1,21 @@
+<text id="autogum_whow_doc129" title="Program a VEX Robotics Clawbot" shortTile="program-vex-robotics" type="whow" dateCollected="2019-11-06" dateCreated="2017-01-25" dateModified="2019-05-08" sourceURL="https://www.wikihow.com/Program-a-VEX-Robotics-Clawbot" speakerList="none" speakerCount="0">
+<head>Program a VEX Robotics Clawbot</head><p>You have built a clawbot but it doesn't do anything because you haven't programmed it. This page will take you step by step through programming your clawbot.</p>
+<head>Steps</head>
+<list type="ordered">
+<item><figure></figure>Get the programming environment. You can download RobotC for free here: <ref target="http://www.robotc.net/download/vexrobotics/">http://www.robotc.net/download/vexrobotics/</ref> </item>
+<item><figure><ref target="https://www.wikihow.com/wiki/Special:FilePath/Vexclaw1_1.png">Image:Vexclaw1 1.png</ref></figure>Create a new bit of code. Go to File/New/New File. You could also use a 'Competition Template' if you are planning on using this code in a competition. But if you are just testing your robot, 'New file' works.</item>
+<item> <figure></figure>Set up the motors. Go to the motors and sensors set-up page (robot/motors and sensors). When the box pops up enter in your motor name (anything you want but stick with things like front right and lift) into the corresponding port number. Use the drop down on the right to select the type of motor you are using and check whether you need it reversed or not. You can use trial and error to find out if it needs to be reversed or not.</item>
+<item>Code the while loop. You will want to make sure that all of the code to control your motors is inside some type of infinite while loop. This will make your program run smoothly as it is constantly checking to see if the controller is requesting a motor to move.
+</item>
+<item> Code the wheels. If you have four motors for your wheels you can set up your motors two on each side. The code looks like this:
+This is taking a specific motor and assigning it to a channel; in this case, either 3 or 2. These are the y axis on the joysticks. The code automatically takes the position of the joystick and gives the wheels appropriate rpm (rotations per minute).</item>
+<item> Code the lift. This will raise and lower the arm that your claw is on.
+It is saying: If Btn5U is being held down lift motor rotate forwards (clockwise) at the speed of 127 rpm. Then- If that isn't happening is Btn5D being pressed, if that is true then rotate the motor backwards (anti-clockwise). If none of that is happening, don't turn the motor at all.</item>
+<item>
+Add the claw code.
+This code looks a lot like the lift code but, instead of Btn5U and Btn5D it uses Btn6U and Btn6D. This means that you use a different set of buttons on your controller for the lift and claw. The other difference is that this bit of code activates the motor 'claw' rather than the motor 'lift'.</item>
+<item> <figure rend="Clawbot10.jpg"></figure>Test and adapt your new code. After you have your code completed compile and download it onto your clawbot (Windows - F5).
+<list type="unordered"><item>You can change the buttons that activate the motors and change the rpm of the motors. The fastest the standard 393 motors can go is 127rpm. </item></list></item>
+<item>Feel free to play around with the code and find what works for you. There are other ways to make the same thing happen using robotC but the above is the easiest to create edit and understand.</item>
+</list>
+</text>

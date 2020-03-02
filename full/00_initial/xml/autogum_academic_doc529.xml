@@ -1,0 +1,33 @@
+<text id="autogum_academic_doc529" title="Nonreference Image Quality Evaluation Algorithm Based on Wavelet Convolutional Neural Network and Information Entropy" shortTile="nonreference-image" author="Jinhua Liu, Mulian Xu, Xinye Xu, Yuanyuan Huang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1099-4300/21/11/1070/htm" speakerList="none" speakerCount="0">
+<head> 2. Information Entropy of Sub-Band Image</head><head> 2.1. Application of the Discrete Wavelet Transform (DWT)</head>
+<p>
+Wavelet transform is an effective tool to combine time domain and frequency domain. In most applications, discrete signals are used. Therefore, discrete wavelet transform (DWT) must be used instead of continuous wavelet transform. Wavelet transform can decompose the signal by band-pass filter. The result of the band filtering operation will be two different signals, one will be related to the high frequency components and the other related to the low frequency component of the original signal. </p>
+
+<p>To compute the DWT of an image  of size , it must identify the wavelet scale function  to define the approximation coefficients and the wavelet function  responsible for horizontal, vertical and diagonal coefficients  following the equations below:
+
+(1)
+
+(2)
+
+with:
+
+(3)
+
+(4)
+
+where  is the start resolution and the scale parameter <hi rend="italic">j</hi> is always greater or equal to . In general, we choose  and  in order that  and . </p>
+
+<head> 2.2. Calculation of Information Entropy</head>
+<p>
+After an image is transformed by wavelet, a series of sub-band images with different resolutions can be obtained. <figure>Figure 1</figure> shows the results of a Barbara image with a size of 512 × 512 decomposed by two layers of wavelets. The upper leftmost part of each layer in <figure>Figure 1</figure> is a low-frequency image, and the upper right, lower left, and upper right corners are the vertical high-frequency, horizontal high-frequency, and diagonal sub-band images, respectively. The second layer decomposes the low-frequency image of the first layer into a low-frequency sub-band image (upper left corner in <figure>Figure 2</figure>) and a high-frequency sub-band image in the vertical, horizontal, and diagonal directions. Subsequently, the third layer wavelet transform repeats this process to continue to decompose the low-frequency image of the second layer, and the like. </p>
+
+<p>The above evaluation shows that the multiscale analysis of wavelet transform can efficiently describe the global and local information of the image. Generally, a low-frequency image reflects the global information of the entire image, but a high-frequency sub-band image reflects the local details, such as edge, contour, and other image areas with mutations. Therefore, this section calculates the corresponding information entropy of each wavelet sub-band image on the basis of the information of multiple directions. Then, each information entropy is used as the visual quality weight of the corresponding sub-band image to describe the effects of different sub-band images on the quality of the entire image. The calculation process of information entropy is summarized as follows: </p>
+
+<p>Distorted image <hi rend="italic">I</hi> is imput, and S-layer wavelet decomposition is performed for distorted image to obtain low-frequency, horizontal, vertical, and diagonal sub-band images, denoted as , , , and , respectively. Then, each sub-band image is divided into image sub-blocks that do not overlap, and the information entropy of each sub-block is calculated. Finally, the average information entropy of all sub-blocks is obtained and used as the visual content weight of the cost function. The number of layers S of the wavelet decomposition is set to 1. The information entropy of each sub-block is calculated as follows:
+
+(5)
+
+where  denotes the probability of wavelet coefficient  appearing in the sub-block image, and .  represents the wavelet coefficients of the sub-block image,  is the number of all wavelet coefficients of each sub-block image. </p>
+
+<p>Generally, information entropy reflects the intensity of image information to a certain extent. The larger the information entropy of an image, the larger the amount of information, and the better the visual quality of the image. Moreover, the information entropy of the image includes rich structural information, which can be used to measure the sensitivity of the local image. Therefore, people are inclined to evaluate the visual quality of images from areas with high acuity. <figure>Figure 2</figure> presents the information entropy map of the low-frequency and three high-frequency sub-band images after the wavelet transform of Barbara image. <figure>Figure 2</figure> also shows the large amount of structural information and the distribution of the information entropy, which is close to the image area of human visual perception. Therefore, the wavelet information entropy of the image can be used as the visual weight to improve the subjective and objective consistencies of the image quality evaluation. </p>
+</text>

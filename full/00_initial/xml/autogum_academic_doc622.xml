@@ -1,0 +1,46 @@
+<text id="autogum_academic_doc622" title="A Novel Preference Elicitation Technique Based on a Graph Model and Its Application to a Brownfield Redevelopment Conflict in China" shortTile="novel-preference" author="Shinan Zhao, Haiyan Xu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1660-4601/16/21/4088/htm" speakerList="none" speakerCount="0">
+<head> 3. Methodology</head><head> 3.1. Graph Model and Traditional Option Prioritization Approach</head>
+<p>
+A conflict can be expressed by a graph model , where <hi rend="italic">N</hi>, <hi rend="italic">S</hi>, and <hi rend="italic">A</hi> represent the set of DMs, states, and oriented arcs, respectively, and  refers to a binary preference relationship. For instance,  means that state  is more preferred to state  by DM <hi rend="italic">i</hi>, while  indicates that the two states are equally preferred by DM <hi rend="italic">i</hi>. There are three preference elicitation approaches within the framework of the GMCR: direct ranking, option weighting, and option prioritization. More specifically, the first approach can be easily used in smaller conflict models with limited states for directly ranking states according to a DM’s value-based system. In the second method, the ordering of states is determined according to their total weights which can be calculated by using each option’s weight. However, some preference ordering over states cannot obtained by using this approach. In a given conflict, if the number of options is <hi rend="italic">a</hi>, then the number of states can be written as 2<hi rend="italic">a</hi> since each option can be chosen or not. The option prioritization is from the option level instead of the state level, which can significantly improve the computational efficiency of preference ranking, especially for large-scale conflicts. When analyzing the preference of DMs in a dispute, we only need to acquire a set of option statements for each DM which are ranked from most to least important in a hierarchical order. Therefore, the option prioritization approach is the most effective and convenient preference ranking method. An option statement consists of numbered options and logical operators. </p>
+
+<p>In a given conflict, DM <hi rend="italic">i</hi>’s preference over states can be intuitively expressed by a set of option statements  ordered by priority, where <hi rend="italic">k</hi> is the total number of statements, and the former statement is more important than the latter one. Each option statement  takes a truth value at state , denoted by . Specifically,  if the statement  is true (T) at state <hi rend="italic">s</hi>; otherwise, . Let  be the incremental score of  at state <hi rend="italic">s</hi>, where
+
+(1)
+
+</p>
+
+<p>Then, the total score of state <hi rend="italic">s</hi> can be determined by
+
+(2)
+
+</p>
+
+<p>All of the states can be ranked from most to least preferred according to their total scores, in which a state with a higher score is more preferred to a state with a lower score by DM <hi rend="italic">i</hi>, and states with the same score are equally preferred. Therefore, each DM’s preference can be determined using the option prioritization approach. In many real-world conflicts, however, the most and least preferred states which can be easily and directly obtained may be not consistent with the results by using the option prioritization technique. Moreover, the option statements given by conflict analysts may be different or inconsistent because of subjective judgments. Hence, a novel preference ranking approach is purposefully developed below. </p>
+
+<head> 3.2. A Novel Option Weighing Technique for Preference Ranking</head>
+<p>
+In a given conflict, as mentioned above, the most and least preferred states can be easily and intuitively identified by a focal DM, which indicates that it is not necessary to obtain them by using option prioritization. Moreover, the remaining states can be ranked from most to least preferred according to their similarities and closeness to the best and worst states, which is similar to the technique for order preference by similarity to an ideal solution (TOPSIS). In this research, a novel option weighing approach is proposed within the framework of GMCR for more efficiently eliciting the preference information of a DM. To begin with, some symbols which are used later, as well as their corresponding explanations, are presented in Table 1. </p>
+
+<p>Let  be the set of options in a given conflict. A strategy for a DM is a combination of its options, and a state is an outcome when each DM’s strategy is determined, which can be represented by a <hi rend="italic">k</hi>-dimensional column vector , where
+
+(3)
+
+</p>
+
+<p>Let the set of states be . The procedure for determining a DM’s preference by using the novel option weighing approach is designed as follows: </p>
+
+<p><b>Step 1:</b> Identify the most and least preferred states for the DM denoted by  and , respectively. </p>
+
+<p><b>Step 2:</b> Determine the weight vector  of all elements in , in which  is the weight of .
+</p>
+
+<dl class="html-order"><dt id="">(1)</dt><dd>
+Rank  in order of priority from most to least important, where
+<list>
+<item>if  and , then , and</item>
+<item>if , then  and  are evaluated according to their importance to the focal DM.</item>
+</list>
+</dd><dt id="">(2)</dt><dd>
+<p>
+Assign the numerical scores for each weight according to their orders in (1), in which the <hi rend="italic">l</hi>th biggest weight is 2<hi rend="italic">k</hi> − <hi rend="italic">l</hi>.</p></dd></dl>
+</text>

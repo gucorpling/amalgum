@@ -1,0 +1,65 @@
+<text id="autogum_academic_doc244" title="Adaptive Natural Gradient Method for Learning of Stochastic Neural Networks in Mini-Batch Mode" shortTile="adaptive-natural" author="Hyeyoung Park, Kwanyong Lee" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4568/htm" speakerList="none" speakerCount="0">
+<head> 2. Gradient Descent Learning of Stochastic Neural Networks</head><head> 2.1. Stochastic Neural Networks</head>
+<p>
+Since the natural gradient is derived from stochastic neural network models, let us start from the brief description of the two popular stochastic models. Although typical neural networks, including deep networks, are defined as deterministic input-output mapping functions  of input , output , and parameter , the observed data for training the networks always have inevitable noises and thus the input-output relation can be described in the stochastic manner. In other words, the observed output  can be regarded as a random vector that is dependent on the deterministic function  and some additional stochastic process that is described by the conditional probability . </p>
+
+<p>Then the goal of learning is to find an optimal value of parameter  that minimizes the loss function defined as negative log likelihood of given input-output sample . The loss function can then be written as
+
+(1)
+
+and the optimal parameter is described as
+
+(2)
+
+</p>
+
+<p>Note that the last term  in equation (1) is independent of parameter  and can be ignored in the objective function for optimization. </p>
+
+<p>Based on the general definition, the conventional neural networks can be regarded as a special case with a specific conditional probability distribution, . For example, consider that the output  is observed with additive noise to the deterministic neural networks function such as
+
+(3)
+
+where  is a random noise vector. When we assume that the random vector  is subject to the standard Gaussian distribution, its probability density  is defined as the normal distribution function, and its loss function becomes the well-known squared error function, which can be written as
+
+(4)
+
+</p>
+
+<p>Therefore, the stochastic neural network model with additive Gaussian noise is equivalent to the typical neural network model trained with squared error function, which is widely used for regression task. </p>
+
+<p>On the other hand, in case that the output  is a binary vector, the corresponding probability distribution can be defined by using a logistic model, such as
+
+(5)
+
+where  and  are the <hi rend="italic">i</hi>-th component of <hi rend="italic">L</hi>-dimensional vector  and , respectively. Since the typical problems with binary target output vector is pattern classification, the logistic model is appropriate for <hi rend="italic">L</hi>-class classification tasks. The corresponding loss function of the logistic model is obtained by taking negative log likelihood of Equation (5), which can be written as,
+
+(6)
+
+</p>
+
+<p>Noting that this is the well-known cross-entropy error, we can say that the logistic regression model is equivalent to the typical neural networks with cross-entropy error, which is widely used for classification task. </p>
+
+<p>Likewise, by defining a proper stochastic model, we can derive various types of neural network models, which can explain the given task more adequately and get a new insight to solve many unresolved problems in the field of neural network learning. Natural gradient is also derived from a new metric for the space of probability density function of stochastic neural networks. In this paper, we present explicit algorithms of adaptive natural gradient learning method for two representative stochastic neural network models: The additive Gaussian noise model and the logistic regression model. </p>
+
+<head> 2.2. Gradient Descent Learning</head>
+<p>
+Once a specific model of stochastic neural networks and its corresponding loss function are determined, the weight parameters are optimized by gradient descent method. The well-known error-backpropagation algorithm is the standard type of gradient descent learning method. There have been numerous variations of the standard gradient descent method, including second-order methods, momentum method, and adaptive learning rate methods. Since the natural gradient learning method is also based on the gradient descent method, we describe the basic formula of gradient descent learning and its online version that is called stochastic gradient descent method.  </p>
+
+<p>When a set of training data  is given, a neural network is trained in order to find an input-output mapping  that is specified with weight parameter vector . The error of neural network for the whole data set  can then be defined by using a loss function such as
+
+(7)
+
+and the goal of learning is to get the optimal  minimizing . To achieve the goal, the weight parameter is updated starting from the current position , according to the opposite direction of the gradient of , which can be written as
+
+(8)
+
+</p>
+
+<p>This update rule is called batch learning mode, meaning that an update is done for the whole batch set . Theoretically, the batch mode learning gives the steepest descent direction of  at the current position of , but it has two practical drawbacks. First, it is too stable to be easily trapped in undesirable local minima. In addition, when the number of data  is large, it needs large amounts of computation for just a single update, making the learning process slow. </p>
+
+<p>To overcome this practical inefficiency, online stochastic gradient decent learning is proposed, in which parameters are updated for each data sample by using gradient of loss function  defined with a single data pair , such as
+
+(9)
+
+</p>
+</text>

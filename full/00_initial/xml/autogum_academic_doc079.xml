@@ -1,0 +1,33 @@
+<text id="autogum_academic_doc079" title="Analytic Correlation Filtration: A New Tool to Reduce Analytical Complexity of Metabolomic Datasets" shortTile="analytic-correlation" author="Stephanie Monnerie, Melanie Petera, Bernard Lyan, Pierrette Gaudreau, Blandine Comte, Estelle Pujos-Guillot" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2218-1989/9/11/250/htm" speakerList="none" speakerCount="0">
+<head> 2. Materials and Methods</head>
+<p>Our aim was to detect analytical correlations into MS-based metabolomics datasets (tabular files) without confounding them with biological ones that may exist within samples. To achieve our goal, we developed a Perl tool supported by metabolomics experts to translate and understand the chemical complexity of datasets as well as possible. </p>
+
+<p>The algorithm principle is to group features coming from the same metabolite and to suggest one single representative per group. In optimal settings, the grouping criteria include a similarity measure, retention time, and mass information from a reference list containing isotopes, adducts, and fragments. Thresholds for all these criteria can be fixed, and the representative feature can be determined following four methods according to the user’s needs and the analytical technology used, either LC- or GC-MS. As the output, the module returns the input file with new columns in relation to resulting groups (representative feature choice, grouping information, and annotation of features), as well as a .sif file allowing correlation network visualisation of the dataset of interest. The present tool “Analytic correlation filtration” (ACorF) is available via the web interface Galaxy as a single module and can be chained with other W4M modules. </p>
+
+<p>As CAMERA is also available in W4M; the present tool was compared to this package by using a published dataset, demonstrating its utility and various possibilities of use. </p>
+
+<head> 2.1. Algorithm Description</head>
+<p>Major steps of the algorithm are presented in <figure>Figure 1</figure>. Source code is freely available for download under CeCILL 2.1 license at <ref target="https://services.pfem.clermont.inra.fr/gitlab/grandpa/tool-acf">https://services.pfem.clermont.inra.fr/gitlab/grandpa/tool-acf</ref> and implement in Perl. </p>
+
+<head> 2.1.1. Input Files</head>
+<p>The ACorF tool takes 3 files related to collected data as input, in tabular format (see Supplemental Figure S1). The first file, referred to as data matrix, consists in a table containing intensities of each variable (each ion detected on the mass spectrum) per sample; the second file, referred to as variable metadata, consists in descriptive additional metadata of variables (e.g., m/z, retention time). The tool also takes, as input, a third file, the similarity matrix: a table representing pair-wise similarity within the dataset, in CSV or tabular format. This table generation is not included in the tool to allow more flexibility: there is a large variety of similarity measures (Pearson/Spearman correlation, Clustering, Partial correlation, et al.), whose relevance can vary depending on the filtering goal. The similarity matrix can be obtained either using W4M (e.g., Metabolites Correlation Analysis, Between Table Correlation, et al.) or any external tool. </p>
+
+<p>The last file, containing a list of known adducts, fragments, and isotopes, and their associated masses, is needed when choosing the mass comparison option. </p>
+
+<head> 2.1.2. Processing</head>
+<p>The first step of the algorithm is performing a pair-wise comparison of the different variables. The similarity matrix is read, and only pairs having a similarity coefficient higher than the chosen threshold are selected. </p>
+
+<p>The next two steps are optional but highly recommended to increase analytical relevance. In a pair-wise process once again, the retention times of variables within the selected pairs are compared. If the ions have an identical RT (more or less a delta fixed by the user), their mass difference can be taken into account. Indeed, the user can specify the use of a list of known isotope, adduct, and fragment mass differences. In case the user does not provide a personal uploaded list, a default one is available within ACorF. The mass difference between two variables is compared to this list with a tolerance defined by the user, to confirm the chemical link between them. If a match is found, the two ions are considered as coming from the same metabolite and will be put in the same group. Those steps are repeated for each selected pair to obtain analytical correlation groups. </p>
+
+<p>The last step consists of choosing a representative variable for each group. The user can choose among four options to allow the best choice of the quantifier depending on its technology and method (ensuring good signal to noise ratio and specificity). </p>
+
+<list>
+<item>(1) Retaining the ion with the highest intensity </item>
+<item>(2) Retaining the ion with the highest mass </item>
+<item>(3) Retaining the ion with the highest ‘mass² × average intensity’ </item>
+<item>(4) Retaining the highest mass among the top highest average intensities of the group. For this last option, the user determines the number of ions considered in the top list (top 5, top 3, top 10, etc.). </item>
+</list>
+
+<head> 2.1.3. Output Files</head>
+<p>The correlated pairs are used to create the first output, a *.sif file containing pair-wise correlation rate. This file allows correlation network visualisation using tools such as Cytoscape. </p>
+</text>

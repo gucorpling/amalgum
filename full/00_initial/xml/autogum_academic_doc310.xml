@@ -1,0 +1,37 @@
+<text id="autogum_academic_doc310" title="Investigations of Evaporative Cooling and Turbulence Flame Interaction Modeling in Ethanol Turbulent Spray Combustion Using Tabulated Chemistry" shortTile="investigations-evaporative" author="Fernando  Luiz Sacomano Filho, Louis Dressler, Arash Hosseinzadeh, Amsini Sadiki, Guenther  Carlos Krieger Filho" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2311-5521/4/4/187/htm" speakerList="none" speakerCount="0">
+<head> 2. Materials and Methods</head>
+<p>
+A Euler–Lagrangian approach was adopted to represent the two-phase flow. Herein, a full inter-phase two-way coupling was accounted for. Carrier gas-phase quantities were interpolated into droplets positions, while influences of the dispersed phase were introduced through source terms in computational cells. </p>
+
+<head> 2.1. Gas Phase</head>
+<p>
+The turbulent motions of the carrier phase are described in the LES context following a variable-density low Mach number formulation. According to this approach, mass and momentum equations are described by
+
+(1)
+
+(2)
+
+</p>
+
+<p>The dependent filtered variables were obtained from spatial filtering as  with . Over-bars and tildes express spatially filtered and density-weighted filtered values with a filter width , respectively, while double prime represents sub-grid scale (SGS) fluctuations.  is the mixture density, <hi rend="italic">t</hi> time,  components of velocity in <hi rend="italic">j</hi> () direction, <hi rend="italic">p</hi> pressure,  Cartesian coordinate in <hi rend="italic">j</hi> direction,  the dynamic viscosity,  the component of gravitational acceleration,  the Kronecker’s delta, and  the strain rate. The term  corresponds to the introduction of mass from the droplets into the carrier phase, while  is the source term of momentum due to the presence of the dispersed phase. Both follow the implementations presented by Chrigui et al.. The SGS stress tensor  is closed by means of the Smagorinsky model with the dynamic procedure of Germano et al.. More details about the mathematical treatment given here to mass and momentum equations can be found in Sacomano Filho et al.. </p>
+
+<head> 2.1.1. Mixture Formation and Combustion Modeling</head>
+<p>
+In order to account for the evaporative cooling and general heat exchanges, three scalar quantities are used to characterize the mixture following the FGM method: the mixture fraction <hi rend="italic">Z</hi>, the reaction progress variable , and the absolute enthalpy of the gas mixture <hi rend="italic">h</hi>. The transport equation for them can be written in terms of a general variable  within the ATF modeling as
+
+(3)
+
+where  is the turbulent viscosity. For the transport equations of <hi rend="italic">Z</hi> and ,  and  respectively represent the laminar  and the turbulent  Schmidt numbers (), while for <hi rend="italic">h</hi> both respectively correspond to the laminar  and the turbulent  Prandtl numbers (). It is important to highlight that, with these values for  and  the unitary  approach is maintained. The quantity <hi rend="italic">F</hi> corresponds to the thickening factor,  to the efficiency function, and  denotes the flame sensor. Details about these quantities are addressed below. </p>
+
+<p>The term  corresponds to the reaction rate for the  whereas it is set to zero for the mixture fraction and absolute enthalpy equation. Similarly to the reaction progress variable source term,  and  are obtained from the employed FGM table. Therefore, these are expressed as functions of the transported scalar quantities <hi rend="italic">Z</hi>, , and <hi rend="italic">h</hi>. The source term  consists of the source of vapor introduced by the dispersed phase in the transport equation for <hi rend="italic">Z</hi>, specifically . Considering that the mass fraction of fuel is not present in the combination used to define the reaction progress variable (see Equation (15)), as well as no isolated droplet burning model is included in the employed approach,  does not contribute (therefore it is set to zero) for the transport of . For the transport equation of <hi rend="italic">h</hi>,  is given by
+
+(4)
+
+where  denotes the mass of vapor released by the parcel <hi rend="italic">p</hi> into the control volume <hi rend="italic">V</hi>,  is the droplet mass,  the number of real droplets in parcel <hi rend="italic">p</hi>, <hi rend="italic">N</hi> the total number of tracked parcels,  the specific sensible heat of liquid,  a reference temperature (298 K),  the droplet temperature at time step ,  the formations enthalpy, and  the heat of vaporization. More description about how the phase coupling source terms are computed in the ATF context can be found in. </p>
+
+<p>Following the ATF method, the flame thickening is performed by means of a dynamic procedure. Accordingly, only the flame region is thickened and no interferences of the ATF with the pre-vaporization zone occur. The flame sensor  used by Aschmoneit to simulate partially premixed flames is employed here. The quantity  in Equation (5) is associated to the maximum value of the source term  at the same mixture composition and enthalpy level.
+
+(5)
+
+where  is the flame sensor proposed by Durand and Polifke as implemented in. In this context, a progress variable in its normalized form is needed, which is defined as . Herein,  denotes the equilibrium value of  for a specific mixture composition. </p>
+</text>

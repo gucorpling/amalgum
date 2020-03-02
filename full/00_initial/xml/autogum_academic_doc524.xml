@@ -1,0 +1,49 @@
+<text id="autogum_academic_doc524" title="A Prior Estimation of the Spatial Distribution Parameter of Soil Moisture Storage Capacity Using Satellite-Based Root-Zone Soil Moisture Data" shortTile="prior-estimation" author="Yifei Tian, Lihua Xiong, Bin Xiong, Ruodan Zhuang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2072-4292/11/21/2580/htm" speakerList="none" speakerCount="0">
+<head> 3. Methodology</head><head> 3.1. Structure of Hymod Model</head>
+<p>
+A parsimonious conceptual rainfall-runoff model structure of the Hymod model was adopted in this case study. The Hymod model has been widely applied in hydrological modeling and provided satisfactory performance. This five-parameter model is based on the probability-distribution model (PDM) proposed by Moore and was originally introduced by Boyle et al.. As shown in <figure>Figure 3</figure>a, the model structure consists of two main components, which are the rainfall excess component and the routing component. Table 2 presents a brief description of the free parameters of the Hymod model. </p>
+
+<p>The core of the Hymod model is a two-parameter nonlinear tank with a rainfall excess component. In order to split the rainfall into direct runoff and subsurface runoff, this tank statistically describes the heterogeneous spatial distribution of soil moisture storage capability. It is hypothesized that the soil moisture storage capacity  varies across the catchment and has a maximum soil moisture storage capacity, . Thus, this tank allows deriving the saturated proportion of a catchment and its relative saturation. In practice, a Pareto distribution function describes the fraction of the catchment having a storage capacity .
+
+(1)
+
+where  denotes the soil moisture storage capacity,  is the maximum soil moisture storage capacity in the catchment, and parameter  defines the degree of spatial variability of storage capacities over the catchment (see <figure>Figure 3</figure>a). <figure>Figure 3</figure>b demonstrates the examples of Equation (1), which is plotted for different values of attention . The corresponding probability density function of the soil moisture storage capacity is shown below.
+
+(2)
+
+</p>
+
+<p>A similar function is also employed in the Xinanjiang model and the Variable Infiltration Capacity (VIC) model. <figure>Figure 3</figure>a illustrates that the area producing fast runoff is calculated from the proportion of the catchment with saturated reservoirs. The effective rainfall is equal to the soil moisture excess calculated at each time step. </p>
+
+<p>The routing component consists of two series of linear reservoirs, a single reservoir for the slow flow, and three identical quick flow reservoirs (<figure>Figure 3</figure>a). The slow flow reservoir, modelled using one linear reservoir, represents the groundwater. The quick flow is routed by surface runoff using a cascade of three linear quick flow reservoirs. A more detailed description of the Hymod model can be found in Moore. </p>
+
+<head> 3.2. Semi-Distributed Model Setup</head>
+<p>
+In this study, the Hymod model was set up using a semi-distributed modelling system. The semi-distributed scheme was applied in two catchments, which had been respectively delineated into three sub-catchments. Modelling at each sub-catchment was performed using the lumped version of the Hymod model. The river routing between sub-catchments was conducted by a linear Muskingum river model. The forcing data (i.e., precipitation and potential evapotranspiration) was interpolated, according to sub-catchment boundaries with the purpose of running a semi-distributed model. Only the streamflow data at the outlet station were used for calibration. The lumped Hymod model was run at each sub-catchment, and the same set of parameters was estimated for all sub-catchments. Since the amount of sub-catchment is small and the area of each sub-catchment is similar, two parameters in the Muskingum routing model were both treated as homogeneous. As a result, in addition to the parameters of the Hymod model, the Muskingum river model has two free parameters that need to be calibrated. </p>
+
+<head> 3.3. Prior Estimation of the Degree of Parameter β</head>
+<p>
+The prior estimation of the  was conducted by using SMAP root-zone soil moisture data based on the method of moments. As mentioned in Section 3.1,  is the shape parameter of Pareto distribution, which was utilized to describe the spatial variability of soil moisture storage capability. This spatial distribution can be related to different soil moisture storage capacity among the study catchment. </p>
+
+<p>The form of the curve of the spatial distribution of soil moisture storage capacity is shown in Equation (2), and the first theoretical moment of Equation (2) is shown below.
+
+(3)
+
+</p>
+
+<p>Solving for  in Equation (3) gives the following.
+
+(4)
+
+</p>
+
+<p>In this study, SMAP root-zone soil moisture data were used to yield the samples () for the soil moisture storage capacity . For each cell of SMAP data, the soil moisture storage capacity sample  of the <hi rend="italic">i</hi>-th cell could be estimated as follows:
+
+(5)
+
+(6)
+
+(7)
+
+where  means the SMAP root-zone soil moisture for the <hi rend="italic">i</hi>-th cell at the time step ,  is the total number of time steps, and  is the depth of the root zone. Note that Equation (7) is based on the assumption that the soil moisture will reach the maximum and minimum soil wetness at least once during the study period. </p>
+</text>

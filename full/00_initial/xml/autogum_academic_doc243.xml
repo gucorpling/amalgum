@@ -1,0 +1,43 @@
+<text id="autogum_academic_doc243" title="A Concept of the Non-Stationary Filtering Network with Reduced Transient Response" shortTile="concept-nonstationary" author="Katarzyna Wiechetek, Jacek Piskorowski" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4570/htm" speakerList="none" speakerCount="0">
+<head> 2. First-Order Element as a Basic Part of the Network</head>
+<p>
+In the first phase of the research, the first-order analog element was selected as the fundamental network component. It was characterized by two outputs: low-pass and high-pass. This can be described by the following system of equations:
+
+(1)
+
+where:<list>
+<item><hi rend="italic">x</hi>(<hi rend="italic">t</hi>)—input signal subjected to filtration;</item>
+<item><hi rend="italic">z</hi>(<hi rend="italic">t</hi>)—high-pass output signal;</item>
+<item><hi rend="italic">y</hi>(<hi rend="italic">t</hi>)—low-pass output signal;</item>
+<item><hi rend="italic">Td</hi>—time of derivative (defines the lower limit of the high-pass frequency);</item>
+<item><hi rend="italic">T</hi>—time constant (defines the upper limit of the low-pass frequency);</item>
+<item>—function varying the time constant coefficient;</item>
+<item><hi rend="italic">fk</hi>(<hi rend="italic">t</hi>)—function varying the gain coefficient;</item>
+<item><hi rend="italic">k</hi>∞—gain coefficient with the time approaching infinity.</item>
+</list>
+</p>
+
+<p>The results of the preceding research have shown that filters with time-varying parameters work undoubtedly better in the time domain than filters with time-invariant parameters. The quality of their operation is determined by the time after which the error value of the output signal is no greater than the assumed accuracy, <hi rend="italic">α.</hi> Replacing the time constant with the time function and the gain coefficient with the gain function significantly shortens the duration of the transient state without changing the filters properties in the frequency domain. </p>
+
+<p>The functions of the gain factor and the time constant are described as follows:
+
+(2)
+
+(3)
+
+where <hi rend="italic">hT</hi>(<hi rend="italic">t</hi>) and <hi rend="italic">hk</hi>(<hi rend="italic">t</hi>) are the step responses of the second order element with time-invariant parameters. </p>
+
+<p>The function varying the parameters allows for the creation of the time function of the time constant  and the gain function , where parameters  and  are a multiplication of their value change. Both functions have to obtain the value specified in the spectral assumptions in time no longer than the duration of the transient state. The easiest way to accomplish this requirement is to set the value of damping factor <hi rend="italic">β</hi> between . The damping factor is responsible for suppressing oscillation, with higher values making it work better. The function varying the parameters used in the paper generated a step response of the second-order inertial element. This form was accepted due to previously conducted studies and its current state of art in the field. </p>
+
+<p>In order to transform the continuous-time system model mentioned above to the discrete-time system, the bilinear transform was used. The bilinear transformation maps the s-plane (Laplace transform) to the z-plane (Z transformations). Although this transformation is non-linear, it is useful considering that it maps the entire s-plane axis to the z-plane unit circle. After specifying the requirements for the designed digital filter, using the applicable mapping, the proper equation forms were obtained. Obtained equation:
+
+(4)
+
+where the low-pass filter coefficients are:
+
+and the high-pass filter are:
+
+</p>
+
+<p>The next step was to implement prepared elements and connect them into the network. Simulations were carried out in order to analyze operation of the network, its speed, and its effectiveness. </p>
+</text>

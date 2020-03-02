@@ -1,0 +1,33 @@
+<text id="autogum_academic_doc316" title="Design and Performance Analysis of Pads for Dynamic Wireless Charging of EVs using the Finite Element Method" shortTile="design-performance" author="Davide De Marco, Alberto Dolara, Michela Longo, Wahiba Yaïci" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/21/4139/htm" speakerList="none" speakerCount="0">
+<head> 3. Design of the Pad Prototypes</head>
+<p>
+The objective of the analysis is to use the finite element method approach for a preliminary study of the best pad configuration that can be applied for a DWC with a lumped track. The geometries that are modelled and analyzed in ANSYS® Maxwell are the circular pad, the double-D pad, and the DDQ pad. These pads are at first coupled in a homogeneous way, such as a CP–CP configuration, and then are combined in order to obtain the different values of the coupling coefficients that will help us in the choice of the best configuration. The computing machine chosen for the simulations is an Asus® ROG with an Intel® core i7700 3.6 GHz processor, 16 Gb of RAM, and a dedicated GTX 1050 4 Gb graphic card. Before the start of the analysis, it is necessary to define the method and the procedure used in the design of the models for the simulation. The idea is to study the change in the coupling factor when the receiving side (Rx) is moving upon two different pads in the transmitting side (Tx), as shown in <figure>Figure 8</figure>.  </p>
+
+<p>These pads, whose characteristics are reported in Table 1, have a design that can be challenging for a computing machine, especially because the building of the mesh for the coil that is characterized by a short distance between every turn is complex and time-consuming. Consequently, it is necessary to make some assumptions and simplifications that can make the simulations less challenging and faster. </p>
+
+<p>A first assumption can be made starting with an analysis on how the Rx pad moves along the track. The power exchanged between the primary and secondary sides is expressed as follows:
+
+(1)
+
+where  and  are the mutual inductances between the pick-up coil and the two respective transmitting coils,  is the load attached to the pick-up coil,  is the current that flows in the transmitting coils, and  is the angular frequency of the current. From the expression it is highlighted how the power exchanged between couplers depends on the mutual inductances that are a function of the distance <hi rend="italic">x</hi>. The mutual inductance is composed of two terms: a first one that represents the static component, which is also called transformer component, and a second one that represents the motion component, which is a function of the distance <hi rend="italic">x</hi>. As demonstrated in Reference, the motion component is negligible when compared to the transformer component. Therefore, it is not necessary to perform a simulation with a transient solution, which requires more computational power. However, it is possible to perform a sweep-analysis with an eddy current solution, where the distance between the Rx and the Txs along the x-axis is changed with the start when the receiver is perfectly aligned with the first transmitter and the stop when the receiver is perfectly aligned with the second transmitter. Moreover, there is the possibility to perform a further simplification by changing the geometry of the pads, making them less difficult to mesh for the computing machine.  </p>
+
+<p>According to Ampere’s law, the magnetic field is related to the current density (<hi rend="italic">J</hi>) in the coil and not with any geometric parameter:
+
+(2)
+
+</p>
+
+<p>Therefore, it is possible to simplify the pads used in the simulation by substituting the 20-turns with 4 mm of copper wire diameter pad with a new one consisting of a single turn that can grant the same current density as the previous one, as shown in <figure>Figure 9</figure>. </p>
+
+<p>The new pad will have then a radius equal to 8.95 mm due to the following relation:
+
+(3)
+
+where  is the radius of the conductor of the new pad,  is the radius of the conductor of the previous pad,  is the area of the section of the conductor of the new pad, and as last  is the total area of the section of all the conductors of the old pad.  </p>
+
+<p>Furthermore, in order to grant the same total current density in both the cases, it is necessary to increase the excitation current of the new and simplified CP up to 400 A. With a wire of this size, it is necessary to take into account that the eddy effect and the displacement currents would reach high values and, as a consequence, their effect will be removed from the simulation. The drawback of this design choice is that the mutual and auto inductances that will be computed by ANSYS® Maxwell are not the same as the original pads that would be used in a real scenario. This can be easily verified by observing the expression of the inductance of an ideal solenoid:
+
+(4)
+
+where  is the permeability of the material,  is the number of turns of the coil,  is the area of the section of the coil, and as last,  is the length of the coil.  </p>
+</text>

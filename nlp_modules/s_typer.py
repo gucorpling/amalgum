@@ -40,6 +40,7 @@ class STyper(NLPModule):
         for line in doc_dict["xml"].split("\n"):
             if line == "<s>":
                 line = '<s type="' + preds[counter] + '">'
+                counter += 1
             out_xml.append(line)
         out_xml = "\n".join(out_xml)
 

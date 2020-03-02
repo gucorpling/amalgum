@@ -1,0 +1,29 @@
+<text id="autogum_academic_doc262" title="Hybrid Zoning Algorithm to Optimize Overhead in Smart Mobile Communication" shortTile="hybrid-zoning-algorithm" author="Mohammed Souidi, Ahmed Habbani, Halim Berradi" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2224-2708/8/4/53/htm" speakerList="none" speakerCount="0">
+<head> 4. OLSR Protocol</head>
+<p>The optimized link state routing protocol is one of the most used protocols in MANETs. It is part of the table-driven (proactive) routing protocols that build the routing tables by periodically exchanging topology control messages. The OLSR has adopted the MPR concept to achieve good dissemination of TC messages. The MPR concept optimizes the overhead, firstly, by selecting the minimum number of nodes to act as forwarders of TC messages. Secondly, only links between MPRs and their selectors are shared to reduce the size of TC messages. <figure>Figure 2</figure> shows the principle of the MPR concept. We model the OLSR network as a unit disk graph , where <hi rend="italic">V</hi> represents the set of nodes and <hi rend="italic">E</hi> the set of symmetric edges.  is the signal length of the node <hi rend="italic">u</hi>. For simplicity, we consider that signal range <hi rend="italic">R</hi> is uniform for all nodes. Two nodes <hi rend="italic">u</hi> and <hi rend="italic">v</hi> form a symmetric link if and only if they are at distance . The OLSR protocol maintains regularly local information and global information in each node. Neighborhood information is broadcasted via HELLO messages by each node <hi rend="italic">u</hi> in the network. The HELLO messages are never forwarded and they serve to discover one-hop and two-hop neighbor sets denoted  and , respectively. Every node elects from its neighbors a set of nodes to act as MPRs to forward TC messages. We denote the set of MPRs of a node <hi rend="italic">u</hi> as  and the set of MPR selectors as . A node <hi rend="italic">u</hi> updates its topology information information each time a HELLO or a TC message is received. The topology information on a node <hi rend="italic">u</hi> is a directed subgraph of the graph <hi rend="italic">G</hi> denoted . </p>
+
+<p>In this section, we describe the MPR concept of OLSR, especially the MPR selection and the default forwarding rules (DFR) of TC messages. </p>
+
+<head> 4.1. The MPR Computation of OLSR</head>
+<p>The OLSR exchanges HELLO messages on a regular interval to sense links between nodes, to discover one-hop and two-hop neighbors and to build a local topology. HELLO messages are exchanged in broadcast manner and they are never forwarded to other nodes. A device informs, within the HELLO messages, its adjacent nodes about its links with other nodes. The MPR set is computed every time a HELLO message is received. A node selects among its one-hop neighbors the minimum number of MPRs to cover its two-hop neighbors. After the MPR computation is completed, all the two-hop neighbors are covered. The MPR collection should be as small as possible. The smaller the MPR collection is, the lower the overhead would be. Let us consider the OLSR network presented in <figure>Figure 3</figure>,  and . <figure>Figure 4</figure> presents the default MPR computation algorithm of original OLSR on the node <hi rend="italic">x</hi> as described in.
+<list>
+<item>Input: , , ; </item>
+<item>Start with an MPR set made of all members of  with willingness equal to WILL_ALWAYS;</item>
+<item>calculate , where .  is defined as the number of nodes ;</item>
+<item> if , <hi rend="italic">m</hi> is the only node that covers a node ;</item>
+<item>Remove from  all reached nodes by <hi rend="italic">m</hi>;</item>
+<item>While there are nodes in  which are not covered by at least one node in ;</item>
+</list>
+</p>
+
+<p>
+<list>
+<item>(a) Calculate  for each . R(w) is the number of nodes in  which are not yet covered by a node in  and are reachable through <hi rend="italic">w</hi>;</item>
+<item>(b) if <hi rend="italic">w</hi> has the highest willingness with ;</item>
+<item>(c) In case of multiple choice, , <hi rend="italic">u</hi> has the maximum reachability.</item>
+<item>(d) In case of multiple nodes providing the same amount of reachability, , where  is greater; Remove , the nodes which are now covered by nodes in .</item>
+</list>
+</p>
+
+<p>According to the default MPR computation algorithm in <figure>Figure 4</figure>, <hi rend="italic">x</hi> adds <hi rend="italic">a</hi> and <hi rend="italic">d</hi> to  because they are the only nodes connected to <hi rend="italic">e</hi> and <hi rend="italic">i</hi>, respectively. , , , and . Both <hi rend="italic">b</hi> and <hi rend="italic">c</hi> have the same reachability. However, . The node <hi rend="italic">x</hi> will select node <hi rend="italic">c</hi> as MPR and all nodes in  will be covered. This MPR set rises the broadcast zone because nodes <hi rend="italic">c</hi> and <hi rend="italic">d</hi> are close to each other which will increase the collision. </p>
+</text>

@@ -1,0 +1,45 @@
+<text id="autogum_academic_doc295" title="Secured by Fluctuating Topology Using the Fluctuating Topology of MANETs to Secure Key Exchange" shortTile="secured-fluctuating" author="Ariel Stulman, Alan Stulman" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/10/1172/htm" speakerList="none" speakerCount="0">
+<head> 2. Preliminaries</head><head> 2.1. Threat Model</head>
+<p>The current work places no limitations on the attacker. Eavesdropping, injecting data into the communication stream or stopping the stream itself are feasible. Thus, for every route under her control, she can drop packets (dos) or taint the data to initiate a mitm attack. </p>
+
+<p>We allow attackers to collude, bringing under their joint control multiple routes. For simplicity’s sake, we will refer to all of the colluding parties as one entity. </p>
+
+<head> 2.2. Assumptions and Definitions</head>
+<p>To allow for communication, the only prior knowledge assumed is the address of both parties. This address can be in any form: ip address, unique imei embedded in the device, or phone number allocated to the smart node. To avoid collisions, we assume that this address is unique and cannot be spoofed. To justify this assumption, we note that spoofing an address only influences some of the routing tables; not all of them. This allows for the correct delivery of packets not traveling through malicious nodes. Last, no trusted third party (ttp) is available for the coordination or authentication of sender and receiver.<b>Definition</b> <b>1.</b></p>
+
+<p><hi rend="italic">Let  be a topology graph of a</hi>manet<hi rend="italic">at a specific time, where  are the hosts in the network, and  are the bidirectional communication links between these hosts.</hi> </p>
+
+<p><hi rend="italic">Let  be a noncyclic route () in G, between the sender () and receiver (). Let  denote the length of the path.</hi> </p>
+
+<p><hi rend="italic">Let  denote the set of all possible such routes,  the size of , and  the set of chosen routes from ; implying, .</hi> </p>
+
+<p><hi rend="italic">Let , such that  and , , which is under the attacker’s control. Let  equal the size of A.</hi> </p>
+
+<p>In essence, we define that it suffices for one host, , to come under the attacker’s control for the entire route, , to be tainted.<b>Definition</b> <b>2.</b></p>
+
+<p><hi rend="italic">Let . That is , denoting all the paths not under the attacker’s control. Let  be the size of F.</hi> </p>
+
+<p>Based on the above definition, we assume that the manet is such that , meaning that at least one route between the sender and receiver is not under the attacker’s control. That the attacker has not taken over the entire network, for which no leap of faith algorithms can succeed. </p>
+
+<head> 2.3. Simulation Parameters</head>
+<p>Prior to implementing our algorithm on a real-world manet application (e.g., Serval), we ran multiple preliminary simulations to test its feasibility. In this section, we describe our simulation model. </p>
+
+<head> 2.3.1. Random Number Generator</head>
+<p>All simulations must have the means of generating random data. Of the many algorithms available (e.g., Mersenne Twister), we chose the combined multiple recursive random number generator (cmrg) algorithm, an algorithm that passed a wide range of empirical tests of randomness and is the algorithm of choice in many simulation software (e.g., Arena). Of course, similar results should be achieved using all good random number generators. </p>
+
+<head> 2.3.2. Mobility Model</head>
+<p>The mobility of nodes in the real world exhibits vastly varying behaviors. Some walk, others drive. Some move about randomly, others in specific formations or patterns. Each of these have their own characteristics, and must be modelled accordingly (for a survey see). Due to its prevalence (see, e.g.,), in this work, all simulations followed a random walk model, which captures the pattern of people in open spaces or recreational parks. We leave other models to future research. </p>
+
+<head> 2.3.3. Routing Algorithm</head>
+<p>Network simulation requires that one choose the means by which packets are forwarded on the path to the destination. Being the basis behind ospf, implementation of the Dijkstra graph theory best route algorithm using standard dynamic programming techniques, allows us to find the optimal (shortest) route. We randomly chose between multiple paths having similar lengths, classifying one as the better of the bunch. All packets were sent through optimal paths when possible. </p>
+
+<head> 2.3.4. Attacker Dispersion</head>
+<p>Attackers are randomly placed on the graph, allowing for all possible attacker dispersion scenarios. The number of attackers are a function of the size of the population, with a linear increase in the population entailing a similar increase in the number of attackers. </p>
+
+<p>These attackers are assumed colluding. Knowledge gleaned by one attacker (e.g., intercept of a micro-ke message) and/or spoofing requirements are instantly shared with all others through external means. </p>
+
+<head> 2.3.5. Simulation Round</head>
+<p>Each round was preset with a specific combination of parameters that we are checking for (see Section 3.3 and Section 4.2). Next, we randomly chose some of the nodes in the network to represent colluding attackers; their specific number a function of predetermined parameter. Last, assuming there is a connection between sender and receiver, , we sprayed the <hi rend="italic">k</hi> micro-ke messages documenting whether all , none , or some  of the messages were intercepted. Rounds for which , were discarded. </p>
+
+<p>The actual spraying algorithm was done using either random message spraying or even message spraying algorithm (see Section 3.2). Both techniques were executed on the same network graph so we can get comparable results. </p>
+</text>

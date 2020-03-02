@@ -1,0 +1,61 @@
+<text id="autogum_academic_doc212" title="Derivation of All Attitude Error Governing Equations for Attitude Filtering and Control" shortTile="derivation-attitude" author="Ahmad Bani Younes, Daniele Mortari" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4682/htm" speakerList="none" speakerCount="0">
+<head> 4. Optimal Tracking Control</head>
+<p>
+A general scalar nonnegative attitude penalty function is utilized to formulate an optimal feedback control for the spacecraft tracking problem. This new variable yields identical performance index values, regardless of the attitude variables selected. The general final finite-time optimal control formulating is given by minimizing the following performance index:
+
+(79)
+
+which is subject to , where  is the angular velocity error,  is an arbitrary attitude representation of the attitude error, and the penalty functions are (using  and ):
+
+(80)
+
+</p>
+
+<p>The weights  and  are scalars, and the weights , , and <hi rend="italic">R</hi> are  matrices. The  is the spacecraft error dynamics. The scalar function  is a general nonnegative attitude penalty function. The function is chosen to produce the same cost for a given physical orientation:
+
+(81)
+
+when using exact nonlinear attitude error kinematics, the orientation will work for large angles; . Therefore, the function is bounded  for all possible rotations. Thus, the attitude cost reaches its highest value at the maximum rotation angle. Defining the attitude cost function in terms of the DCM makes it universally valid for arbitrary choice of attitude coordinates. It can be simply parameterized by any other attitude coordinate. The universal quadratic penalty function for arbitrary attitude error representations is given in Table 3. This penalty function returns the same cost for a given physical attitude, thereby eliminating the dependency of the optimal control solution on the choice of the attitude coordinate. </p>
+
+<head> 4.1. Reference Angular Velocity Defined in the Body Attitude Frame</head>
+<p>
+The reference  and current  angular velocities are expressed in the same coordinate frames; i.e., . It can be shown that the general expression of the attitude error kinematics of this set can be given as follows:
+
+(82)
+
+with initial state . The Hamiltonian <hi rend="italic">H</hi> for this system of equations is defined, for the given optimal control problem in Equations (79) and (80), as follows:
+
+(83)
+
+where  and  are the co-state variables for the angular velocity error and the attitude error, respectively. Invoking the standard necessary condition for optimality, the co-state differential equations are given by the following:
+
+(84)
+
+</p>
+
+<p>The two co-state differential equations are integrated backward in time with given terminal values  and . The optimal control is given by the first-order necessary conditions for an extremum, , leading to . </p>
+
+<head> 4.2. Reference Angular Velocity Defined in the Reference Attitude Frame</head>
+<p>
+The reference and current angular velocities are expressed in different coordinate frames, i.e., . Therefore, this definition explicitly computes the angular velocity error in the current body frame. As an important result of this set, the expressions of the attitude error kinematics follow the attitude kinematics equation for any given attitude representation choice. Therefore, the general expression of the attitude error kinematics of this set can be given as follows:
+
+(85)
+
+with initial state . The Hamiltonian <hi rend="italic">H</hi> for this system of equations is as follows:
+
+(86)
+
+</p>
+
+<p>Invoking the standard necessary condition for optimality, the co-state differential equations are given by the following:
+
+(87)
+
+</p>
+
+<p>The optimal control is given by the first-order necessary conditions for an extremum, , leading to . Note the last term in the () expression involves calculating the partial derivative of the angular velocity error kinematic, , which obviously leads to difficult math. This step is also required when performing coordinate mapping between the DCM into other attitude parameters. </p>
+
+<head> 4.3. Numerical Simulation</head>
+<p>
+This section presents simulation results of a fixed final-time and final-state open-loop optimal control solution for the spacecraft tracking problem. Modified Rodrigues parameters are used for the attitude motion. The initial and final state variable conditions for this example are given in Table 4. The spacecraft moment of inertia tensor is given in Table 5. For simplicity, the weighting matrices are , , , and . However, one can sweep those penalties to obtain different solutions sets. This example stands to solve the open-loop optimal control problem for the spacecraft tracking problem using arbitrary attitude representation. We consider the universal performance index given in Table 3. The state and co-state differential equations are solved in a Boundary Value Problem (BVP) framework using a shooting method (MATLAB <tt>fsolve</tt>). The optimal open-loop solution is shown in <figure>Figure 5</figure>. The time history of the optimal trajectory and control is shown in <figure>Figure 5</figure>a for MRPs representation. The trajectory is controlled to drive the spacecraft for a given initial state error,  and , to rest at zero attitude error after 25 seconds. It is noted that the optimal open-loop solution obtained for various attitude representation produces the same angular displacement  and total cost, as given in <figure>Figure 5</figure>b. </p>
+</text>

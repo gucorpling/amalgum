@@ -1,0 +1,27 @@
+<text id="autogum_academic_doc344" title="A Dynamic Programmable Network for Large-Scale Scientific Data Transfer Using AmoebaNet" shortTile="dynamic-programmable" author="Syed  Asif Raza Shah, Seo-Young Noh" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4541/htm" speakerList="none" speakerCount="0">
+<head> 2. Proposed Solution</head><head> 2.1. Overview of AmoebaNet Solution</head>
+<p>We originally proposed AmoebaNet solution to support BigData Express (BDE) scientific application. AmoebaNet project is currently ongoing evaluation and enhancement. There are several design goals for AmoebaNet: (1) our primary goal is “Network as a Service”. This feature provides a dynamic programmable networking services for scientific applications to achieve the optimum performance level of networks. (2) QoS-guaranteed service. When applications require QoS guaranteed services for priority traffic, AmoebaNet must provide such types of services. (3) Wide applicability. AmoebaNet has to provide a mechanism for wide applicability to support a wide range of applications other than scientific applications only. (4) It must be easily deployable and operable. Followings are the salient features of AmoebaNet:
+<list>
+<item>To provide a dynamic programmability feature for underlying network resources, AMQP interface was provided. The JSON-RPC style based communication system of AMQP will allow an application to interact with the underlying networks in a flexible manner.</item>
+<item>QoS-guaranteed path computation service along with route selection.</item>
+<item>Provide “Application-aware” networking services.</item>
+<item>Support differentiated service to ensure the required QoS services for priority traffic.</item>
+<item>Provision the QoS-guaranteed network path between two ends with a fastest possible time.</item>
+<item>REST-based network initialization and configuration.</item>
+<item>Path resiliency.</item>
+<item>Advanced reservation system.</item>
+<item>Service locking/unlocking.</item>
+</list>
+</p>
+
+<p>As shown in <figure>Figure 1</figure>, the architecture of AmoebaNet consists of several internal services that allow scientific applications (such as BDE) to program the underlying networks. AmoebaNet is an enterprise network service and we integrated and tested this service along with the ESNet OSCARS’s wide area network connection service. It can promptly provision end-to-end QoS guaranteed network paths across the multiple scientific domains. We implemented the AmoebaNet’s service on top of the ONOS (Open Network Operating System) SDN controller and developed the entire application in Java language. AmoebaNet successfully addressed the last mile, scalability, and dynamic programmability challenges for extreme-scale distributed scientific applications. In order to address these challenges, AmoebaNet introduced the following key features:
+<list>
+<item>By realizing network as a service, AmoebaNet supports various extreme-scale scientific applications and provides the rich and powerful set of dynamic programming primitives. These dynamic programming primitives make it possible for scientific applications to program the networks in more flexible ways. AmoebaNet also provides run-time programming capability for bulk data transfer, and utilizes the underlying network resources in an efficient and optimum way. These supported features of AmoebaNet address the agility, automation, programmability challenges.</item>
+<item>To address the last mile challenges, AmoebaNet provides a newly QoS-aware end-to-end bandwidth reservation feature. It is a new rate enforcement mechanism by combining the meters and queuing based techniques and characterizes the traffic into two classes of services: best effort and priority. AmoebaNet also has a feature of a new path computation service by using the largest bottleneck bandwidth algorithm. In this mechanism the bandwidth can be considered as constraints and the best available paths between two end-points can be calculated. To solve the scalability challenges of science networks, AmoebaNet uses the spoke-hub distribution model. AmoebaNet at each site supports a hub-spoke distribution model for LAN or campus network. It allows seamless integration of local networks and wide area networks. When two systems are trying to send/receive the traffic to/from two physically isolated sites, then the service of AmoebaNet carefully identifies the corresponding p2p layer-2 circuits between sites and properly multiplexed and/or de-multiplexed the traffics accordingly.</item>
+<item>AmoebaNet is able to provide a novel control plane logic, which consists of different sub-modules. Each sub-module of control plane architecture is dedicated for a specific task and interacts with each other. The entire control plane architecture is implemented inside ONOS SDN controller as a service and it uses north-bound and south-bound APIs to interact with applications and data plane, respectively.</item>
+<item>To avoid the unsynchronized access and provides advanced reservation capability to network resources, we introduced the new locking/unlocking and scheduler mechanisms in AmoebaNet’s solution.</item>
+</list>
+</p>
+
+<p>The more detailed information about AmoebaNet can be found in for its design, implementation, and evaluation. </p>
+</text>

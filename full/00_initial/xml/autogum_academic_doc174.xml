@@ -1,0 +1,66 @@
+<text id="autogum_academic_doc174" title="Optimal Design of Electrothermal Microactuators for Many Criteria by Means of an Immune Game Theory Multiobjective Algorithm" shortTile="optimal-design-electrothermal" author="Adam Długosz, Paweł Jarosz, Tomasz Schlieter" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4654/htm" speakerList="none" speakerCount="0">
+<head> 2. Model of the Chevron Type Microactuator</head>
+<head> 2.1. Governing Equations</head>
+<p>As mentioned in the previous paragraph actuation of the thermal microactuator is caused due to the electrical current , which is converted to the heat according to the Joule-Lentz law:
+
+(1)
+
+where  is internal heat generated,  is electrical resistivity and  is the time. </p>
+
+<p>The thermal strain occurring in the longitudinal arms causes structural deflection. Usually such an actuator is affected by the voltage of the magnitude of a few volts, which causes an increase of temperature, even above 1200 K. Nevertheless, the linear behavior of the microactuator with respect to electric, thermal and mechanical effects is preserved. Such a phenomenon is described by the partial differential equation of electrostatics, Equation (2); heat conduction, Equation (3); and thermoelasticity, Equation (4). </p>
+
+<p>
+
+(2)
+
+(3)
+
+(4)
+
+where  is electric potential,  is the temperature,  represents the displacement values,  is charge flux density,  is electric constant,  is thermal conductivity,  is internal heat source,  is the linear expansion coefficient, and  and  are the Lamé constants, which can be expressed as follows:
+
+(5)
+
+where ,  and  are Poisson’s ratio, Young’s modulus and the shear modulus, respectively. </p>
+
+<p>The structure considered here is an electro-thermo-elastic body of the domain , with the boundary area  (<figure>Figure 3</figure>). Partial differential Equations (2)–(4) have to be supplemented by boundary conditions.<item>For electrostatics:</item></p>
+
+<p>(6)
+
+where  and  denote known electric potential and electric charge flux density on the appropriate parts of the boundary  and ;<item>For the heat conduction problem, boundary conditions are as follows:</item></p>
+
+<p>(7)
+
+where  and  are known temperature and heat flux on the parts  and  of the boundary. The third type of thermal boundary condition (Robin condition) is convection condition, for which  is an ambient temperature, whereas  is a heat convection coefficient.<item>For the elasticity problem boundary condition can be defined as:</item></p>
+
+<p>(8)
+
+where  and  are known displacement and mechanical loads on the parts  and . </p>
+
+<p>Separate parts of the boundaries where electrical, thermal and mechanical boundary conditions are specified define the boundary of the body. When no electrical, thermal or mechanical boundary conditions are specified on the particular parts of the boundary, it corresponds to the charge flux density free, heat flux free or traction-free conditions respectively. The relationships between separate parts of the boundary  can be written as:
+
+(9)</p>
+
+<p>The finite element method (FEM) has been used for solving the electro-thermo-mechanical problem. The partial differential equation after discretization and after taking into account boundary conditions, can be written as a set of algebraic equations and given in the following matrix form:
+
+(10)
+
+(11)
+
+(12)
+
+</p>
+
+<p>The global electrical conductivity matrix , global thermal conductivity matrix  and global stiffness matrix  are assembled over element matrices. ,,,, and  are the nodal vector of voltage, electric current, temperatures, heat fluxes, displacements and applied forces, respectively. The problem is weakly coupled, so electrical, thermal and mechanical analyses can be solved separately. Coupling is carried out by transferring loads between the analyses considered and by using staggered procedures. After solving Equation (10), the nodal vector of heat generation due to the current flow  is calculated, whereas after solving Equation (11), the nodal vector of forces due to the thermal strain vector  is calculated. </p>
+
+<p>For the buckling analysis, the finite element formulation takes the form:
+
+(13)</p>
+
+<p>Linear buckling analysis is assumed. Equation (13) describes the eigenvalue problem, which is solved by the Lanczos method. Matrix  is a function of the load increment ;  is the eigenvalue, whereas eigenvector  allows for the calculation of post-buckling deformation mode. </p>
+
+<p>As mentioned in the first paragraph, one of the criteria formulated depends on the contact force. Because the movement of the central shaft is almost perfectly vertical, friction between the end of the central shaft and the reaction plane can be neglected. The contact problem is modelled as rigid, deformable and frictionless. The thermal actuator is modelled as a deformable body, whereas the rigid surface is placed with the arbitrarily chosen initial gap between the tip of the central shaft and the rigid surface. For the contact between a deformable body and the rigid surface, the constraint responsible for maintaining the lack of penetration is implemented by transforming the degrees of freedom of the contact node and applying a boundary condition to the normal displacement. </p>
+
+<head> 2.2. Verification of the Numerical Model</head>
+<p>The optimal design of the chevron type thermal actuator requires building a numerical model of the actuator, which allows one to calculate the values of criteria with the satisfactory level of accuracy. It is possible to analytically calculate electrical, thermal and structural quantities for the actuator with straight arms. This subsection is dedicated to the verification of the numerical model prepared. Simplifying the verification procedure comparison between the numerical and analytical models only for mechanical quantities is shown. Since the thickness perpendicular to the midplane of the actuator (z-axis) and boundary conditions are constant, and thickness is very small compared to other dimensions in the model, only two-dimensional models will be considered. </p>
+</text>

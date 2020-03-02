@@ -1,0 +1,1233 @@
+<?xml version="1.0" ?><text author="Xin Zhang, Gang Zhao, Yingxiu Qi, Botang Li" dateCollected="2019-11-03" id="autogum_academic_doc716" shortTile="robust-fuzzy-optimization" sourceURL="https://www.mdpi.com/2071-1050/11/20/5726/htm" speakerCount="0" speakerList="none" title="A Robust Fuzzy Optimization Model for Closed-Loop Supply Chain Networks Considering Sustainability" type="academic">
+<head>
+<s type="frag">
+5	CD	5
+.	.	.
+</s>
+<s type="frag">
+Mathematical	JJ	mathematical
+Model	NN	Model
+</s>
+</head>
+<p>
+<s type="decl">
+According	VBG	accord
+to	TO	to
+the	DT	the
+above	NN	above
+description	NN	description
+and	CC	and
+assumption	NN	assumption
+of	IN	of
+the	DT	the
+problem	NN	problem
+,	,	,
+the	DT	the
+mathematical	JJ	mathematical
+model	NN	model
+for	IN	for
+a	DT	a
+CLSCN	NNP	CLSCN
+considering	VBG	consider
+sustainability	NN	sustainability
+will	MD	will
+be	VB	be
+presented	VBN	present
+in	IN	in
+detail	NN	detail
+.	.	.
+</s>
+<s type="decl">
+These	DT	these
+formulations	NNS	formulation
+are	VBP	be
+developed	VBN	develop
+by	IN	by
+extending	VBG	extend
+previous	JJ	previous
+works	NNS	work
+(	-LRB-	(
+mainly	RB	mainly
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+5.1	CD	@card@
+.	.	.
+</s>
+<s type="frag">
+Notations	NNS	Notations
+</s>
+</head>
+<head>
+<s type="frag">
+5.1.1	CD	@card@
+.	.	.
+</s>
+<s type="frag">
+Sets	NNS	set
+and	CC	and
+Indices	NNS	Indices
+</head>
+<list>
+<item>
+Set	VBN	set
+of	IN	of
+candidate	NN	candidate
+plants	NNS	plant
+,	,	,
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Set	VBN	set
+of	IN	of
+candidate	NN	candidate
+distribution	NN	distribution
+centers	NNS	center
+,	,	,
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Set	NN	set
+of	IN	of
+candidate	NN	candidate
+collection	NN	collection
+center	NN	center
+,	,	,
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Set	VBN	set
+of	IN	of
+candidate	NN	candidate
+remanufacturing	NN	remanufacture
+center	NN	center
+,	,	,
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Set	VBN	set
+of	IN	of
+fixed	JJ	fix
+customers	NNS	customer
+,	,	,
+.	.	.
+</s>
+</item>
+</list>
+<head>
+<s type="frag">
+5.1.2	CD	@card@
+.	.	.
+</s>
+<s type="frag">
+Parameters	NNS	Parameter
+</head>
+<list>
+<item>
+Demand	NN	Demand
+of	IN	of
+customer	NN	customer
+<hi rend="italic">
+m	NN	m
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+Return	VB	return
+rate	NN	rate
+of	IN	of
+used	VBN	use
+products	NNS	product
+from	IN	from
+customer	NN	customer
+<hi rend="italic">
+m	NN	m
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+Remanufacturing	VBG	Remanufacturing
+rate	NN	rate
+of	IN	of
+used	VBN	use
+products	NNS	product
+at	IN	at
+remanufacturing	VBG	remanufacture
+centers	NNS	center
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Carbon	NN	Carbon
+cap	NN	cap
+of	IN	of
+supply	NN	supply
+chain	NN	chain
+set	VBN	set
+by	IN	by
+the	DT	the
+government	NN	government
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Cost	NN	cost
+of	IN	of
+producing	VBG	produce
+one	CD	one
+unit	NN	unit
+product	NN	product
+at	IN	at
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Cost	NN	cost
+of	IN	of
+distributing	VBG	distribute
+one	CD	one
+unit	NN	unit
+product	NN	product
+at	IN	at
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Cost	NN	cost
+of	IN	of
+collecting	VBG	collect
+one	CD	one
+unit	NN	unit
+product	NN	product
+at	IN	at
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Cost	NN	cost
+of	IN	of
+remanufacturing	VBG	remanufacture
+one	CD	one
+unit	NN	unit
+product	NN	product
+at	IN	at
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Cost	NN	cost
+of	IN	of
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+new	JJ	new
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+A.	NNP	A.
+</item>
+<item>
+Cost	NNP	cost
+of	IN	of
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+used	VBN	use
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+A.	NNP	A.
+</item>
+<item>
+Cost	NNP	cost
+of	IN	of
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+new	JJ	new
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+B.	NNP	B.
+</item>
+<item>
+Cost	NN	cost
+of	IN	of
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+used	VBN	use
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+B.	FW	B.
+</item>
+<item>
+Distance	NNP	Distance
+between	IN	between
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+and	CC	and
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Distance	NN	Distance
+between	IN	between
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+and	CC	and
+customer	NN	customer
+<hi rend="italic">
+m	NN	m
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Distance	NN	Distance
+between	IN	between
+customer	NN	customer
+<hi rend="italic">
+m	NN	m
+</hi>
+and	CC	and
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Distance	NN	Distance
+between	IN	between
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+and	CC	and
+remanufacturing	NN	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Distance	NN	Distance
+between	IN	between
+remanufacturing	NN	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+and	CC	and
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Fixed	JJ	Fixed
+cost	NN	cost
+of	IN	of
+establishing	VBG	establishing
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Cost	NN	cost
+of	IN	of
+establishing	VBG	establishing
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Fixed	JJ	Fixed
+cost	NN	cost
+of	IN	of
+establishing	VBG	establishing
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Fixed	JJ	Fixed
+cost	NN	cost
+of	IN	of
+establishing	VBG	establishing
+remanufacturing	NN	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Minimum	JJ	Minimum
+capacity	NN	capacity
+for	IN	for
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+capacity	NN	capacity
+for	IN	for
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Minimum	JJ	Minimum
+capacity	NN	capacity
+for	IN	for
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+capacity	NN	capacity
+for	IN	for
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Minimum	JJ	Minimum
+capacity	NN	capacity
+for	IN	for
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+capacity	NN	capacity
+for	IN	for
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Minimum	JJ	Minimum
+capacity	NN	capacity
+for	IN	for
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+capacity	NN	capacity
+for	IN	for
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Carbon	NN	Carbon
+emission	NN	emission
+for	IN	for
+producing	VBG	produce
+one	CD	one
+unit	NN	unit
+of	IN	of
+product	NN	product
+at	IN	at
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Carbon	NN	Carbon
+emission	NN	emission
+for	IN	for
+distributing	VBG	distribute
+one	CD	one
+unit	NN	unit
+of	IN	of
+product	NN	product
+at	IN	at
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Carbon	NN	Carbon
+emission	NN	emission
+for	IN	for
+collecting	VBG	collect
+one	CD	one
+unit	NN	unit
+of	IN	of
+product	NN	product
+at	IN	at
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Carbon	NN	Carbon
+emission	NN	emission
+for	IN	for
+remanufacturing	VBG	remanufacture
+one	CD	one
+unit	NN	unit
+of	IN	of
+product	NN	product
+at	IN	at
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Carbon	NN	Carbon
+emission	NN	emission
+for	IN	for
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+new	JJ	new
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+A.	NNP	A.
+</item>
+<item>
+Carbon	NNP	Carbon
+emission	NN	emission
+for	IN	for
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+used	VBN	use
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+A.	NNP	A.
+</item>
+<item>
+Carbon	NNP	Carbon
+emission	NN	emission
+for	IN	for
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+new	JJ	new
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+B.	FW	B.
+</item>
+<item>
+Carbon	NN	Carbon
+emission	NN	emission
+for	IN	for
+transporting	VBG	transport
+one	CD	one
+unit	NN	unit
+of	IN	of
+used	VBN	use
+product	NN	product
+per	IN	per
+mile	NN	mile
+by	IN	by
+transport	NN	transport
+vehicle	NN	vehicle
+type	NN	type
+B.	NNP	B.
+</item>
+<item>
+Numbers	NNP	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+during	IN	during
+establishing	VBG	establishing
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+averages	NNS	average
+of	IN	of
+missed	VBN	miss
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Numbers	NNS	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+averages	NNS	average
+of	IN	of
+missed	VBN	miss
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Numbers	NNS	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	NN	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+averages	NNS	average
+of	IN	of
+missed	VBN	miss
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	NN	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Numbers	NNS	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Maximum	JJ	Maximum
+averages	NNS	average
+of	IN	of
+missed	VBN	miss
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+when	WRB	when
+establishing	VBG	establishing
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+</list>
+<head>
+<s type="frag">
+5.1.3	CD	@card@
+.	.	.
+</s>
+<s type="other">
+Decision	NN	Decision
+Variables	NNS	Variables
+</head>
+<list>
+<item>
+A	DT	a
+binary	JJ	binary
+variable	NN	variable
+,	,	,
+it	PRP	it
+is	VBZ	be
+1	CD	1
+:	:	:
+if	IN	if
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+is	VBZ	be
+established	VBN	establish
+;	:	;
+otherwise	RB	otherwise
+,	,	,
+0	CD	0
+.	.	.
+</s>
+</item>
+<item>
+<s type="multiple">
+A	DT	a
+binary	JJ	binary
+variable	NN	variable
+,	,	,
+it	PRP	it
+is	VBZ	be
+1	CD	1
+:	:	:
+if	IN	if
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+is	VBZ	be
+established	VBN	establish
+;	:	;
+otherwise	RB	otherwise
+,	,	,
+0	CD	0
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+A	DT	a
+binary	JJ	binary
+variable	NN	variable
+,	,	,
+it	PRP	it
+is	VBZ	be
+1	CD	1
+:	:	:
+if	IN	if
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+is	VBZ	be
+established	VBN	establish
+;	:	;
+otherwise	RB	otherwise
+,	,	,
+0	CD	0
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+A	DT	a
+binary	JJ	binary
+variable	NN	variable
+,	,	,
+it	PRP	it
+is	VBZ	be
+1	CD	1
+:	:	:
+if	IN	if
+remanufacturing	VBG	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+is	VBZ	be
+established	VBN	establish
+;	:	;
+otherwise	RB	otherwise
+,	,	,
+0	CD	0
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Volume	NN	Volume
+of	IN	of
+products	NNS	product
+shipped	VBN	ship
+from	IN	from
+plant	NN	plant
+<hi rend="italic">
+i	PRP	i
+</hi>
+to	TO	to
+distribution	VB	distribution
+center	NN	center
+<hi rend="italic">
+j	NNP	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Volume	NN	Volume
+of	IN	of
+products	NNS	product
+shipped	VBN	ship
+from	IN	from
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+to	TO	to
+customer	NN	customer
+<hi rend="italic">
+m	NN	m
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Volume	NN	Volume
+of	IN	of
+used	VBN	use
+products	NNS	product
+shipped	VBN	ship
+from	IN	from
+customer	NN	customer
+<hi rend="italic">
+m	NN	m
+</hi>
+and	CC	and
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k.	NNP	k.
+</hi>
+</item>
+<item>
+Volume	NNP	Volume
+of	IN	of
+used	VBN	use
+products	NNS	product
+shipped	VBN	ship
+from	IN	from
+collection	NN	collection
+center	NN	center
+<hi rend="italic">
+k	NN	k
+</hi>
+and	CC	and
+remanufacturing	NN	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Volume	NN	Volume
+of	IN	of
+products	NNS	product
+shipped	VBN	ship
+from	IN	from
+remanufacturing	NN	remanufacture
+center	NN	center
+<hi rend="italic">
+l	NN	l
+</hi>
+and	CC	and
+distribution	NN	distribution
+center	NN	center
+<hi rend="italic">
+j	NN	j
+</hi>
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Membership	NN	Membership
+degree	NN	degree
+for	IN	for
+the	DT	the
+number	NN	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+for	IN	for
+each	DT	each
+worker	NN	worker
+during	IN	during
+establishing	VBG	establishing
+plants	NNS	plant
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Membership	NN	Membership
+degree	NN	degree
+for	IN	for
+the	DT	the
+number	NN	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+for	IN	for
+each	DT	each
+worker	NN	worker
+during	IN	during
+establishing	VBG	establishing
+distribution	NN	distribution
+centers	NNS	center
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Membership	NN	Membership
+degree	NN	degree
+for	IN	for
+the	DT	the
+number	NN	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+for	IN	for
+each	DT	each
+worker	NN	worker
+during	IN	during
+establishing	VBG	establishing
+collection	NN	collection
+centers	NNS	center
+.	.	.
+</s>
+</item>
+<item>
+<s type="frag">
+Membership	NN	Membership
+degree	NN	degree
+for	IN	for
+the	DT	the
+number	NN	number
+of	IN	of
+missed	VBN	miss
+working	VBG	work
+days	NNS	day
+due	JJ	due
+to	TO	to
+work	VB	work
+’s	POS	's
+damages	NNS	damage
+for	IN	for
+each	DT	each
+worker	NN	worker
+during	IN	during
+establishing	VBG	establishing
+remanufacturing	VBG	remanufacture
+centers	NNS	center
+.	.	.
+</s>
+</item>
+</list>
+<head>
+<s type="frag">
+5.2	CD	@card@
+.	.	.
+</s>
+<s type="frag">
+Objective	NN	Objective
+Functions	NNS	Functions
+</s>
+</head>
+<p>
+<s type="decl">
+We	PRP	we
+use	VBP	use
+the	DT	the
+notations	NNS	notation
+described	VBN	describe
+in	IN	in
+the	DT	the
+previous	JJ	previous
+subsection	NN	subsection
+to	TO	to
+develop	VB	develop
+the	DT	the
+objectives	NNS	objective
+step-by-step	NN	step-by-step
+as	IN	as
+follows	NNS	follow
+:	:	:
+</s>
+</p>
+</text>

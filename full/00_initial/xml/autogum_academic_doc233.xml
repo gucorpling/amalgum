@@ -1,0 +1,45 @@
+<text id="autogum_academic_doc233" title="Design Methodology for the Implementation of Fuzzy Inference Systems Based on Boolean Relations" shortTile="design-methodology" author="Helbert Espitia, José Soriano, Iván Machón, Hilario López" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/11/1243/htm" speakerList="none" speakerCount="0">
+<head> 3. Fuzzy Inference Systems Based on Boolean Relations</head>
+<p>This is a mechanism designed to implement fuzzy inference systems focused on control systems. The offered methodology with BBR is based on the possible transition from Boolean to fuzzy logic by using mechanisms of Boolean and Kleene logic design. </p>
+
+<p>The concept of FIS-BBR allows performing a methodology to fuzzy inference systems design based on truth tables. The basis of BBR corresponds to an extrapolation from Boolean sets to fuzzy sets. </p>
+
+<p>The control process is achieved via virtual outputs using activation functions established in a truth table. Disjunctive Normal Form (DNF) is used to obtain the inference equations for activation functions, <figure>Figure 5</figure> shows how the process is performed, the simplification of inference rules using Kleene algebra is also considered for the design process. </p>
+
+<p>FIS-BBR becomes an alternative to implement systems of control based on automation, thus, it is rooted in automation design principles (such as that one applied to model digital circuits) but extended to fuzzy systems. The extension from Boolean to fuzzy systems can be developed by trivalent systems (Kleene algebra), which can be directly extended to fuzzy systems. </p>
+
+<p>From the automatism viewpoint there is an action of one or several actuators starting from values determined by sensors; this action is usually ON/OFF (as in classic sets or crisp), generating in the process abrupt transitions. FIS-BBR aims to avoid these abrupt transitions when converting Boolean sets to fuzzy, and at the same time exploits the methodology in automatism development from the Kleene domain. The notion of virtual output is introduced in the following subsection. </p>
+
+<head> 3.1. Virtual Output</head>
+<p>In control systems the actuator is the element used for applying the control action; for automatism design it is possible to employ several actuators for the control action (several batteries, valves, switches...). However, when there is only one element of action, this can be considered as the sum of several actuators called “virtual”. Those at the same time have an associated virtual output. From this viewpoint the actuator may be considered as the discourse universe in the consequent. According to the application, the value of virtual actuators may be positive or negative, and also the total output may be higher than partial virtual actions. </p>
+
+<p>The output corresponds to the sum of the respective virtual outputs: (13) where  being  the activation function, and  is the respective value of virtual actuator. The concept of virtual output was conceived under a real physical correspondence in control applications to the total output in the inference system. </p>
+
+<head> Example</head>
+<p>
+Looking at the action of a valve of 6 cm/s filling a tank, this valve may be considered as the contribution present in three different valves, which are given by virtual actuators:<list>
+<item>Small flow:  = 1 cm/s.</item>
+<item>Medium flow:  = 2 cm/s.</item>
+<item>Large flow:  = 3 cm/s.</item>
+</list>
+</p>
+
+<p><figure>Figure 6</figure> shows the filling scheme of a tank with three virtual valves. </p>
+
+<p>Using these virtual valves make possible the actions displayed in Table 2 where ON is the valve activation. In this table “Conf.” means configuration. </p>
+
+<p>In this way it is conceivable to define the “Boolean actions” as the possible actions produced using Boolean sets. </p>
+
+<head> 3.2. Fuzzy Inference Process for FIS-BBR</head>
+<p>Considering that fuzzy inference systems based on Boolean relations use design tools and codification of Boolean systems, the structure of the inference process is given by the truth table associated with the Boolean design. For the implementation of the FIS-BBR the Boolean codification can be extended to Kleene algebra. </p>
+
+<p>Table 3 shows a possible codification for inputs and control actions of a system. According to, considering the normal forms for Boolean and Kleene algebras in general terms the conjunction  is applied to the corresponding rows of inputs in Table 3, which represent the rules that provide an activation output. The disjunction  is applied over the columns of the activation outputs in Table 3. </p>
+
+<p>In Table 3 variables  and  are used to represent relations between  (set associated to input) and  (activation function associated to output) while for a Boolean case it has values  and in a Kleene case values . Table 3 can be a truth table Boolean or Kleenean, some examples are in. It is noteworthy that  can be a Boolean or fuzzy set associated to input and  is an activation function associated to output. </p>
+
+<p>The implementation of FIS-BBR using Kleene algebra is made according to, where it is established that <hi rend="italic">fuzzy propositional logic is the same as the three valued Kleene propositional logic</hi>. </p>
+
+<p>The combination of concepts using a Disjunctive Normal Form (DNF) in general can be expressed as: (14) where  is a function that can be 0, 1, ,  or  and depends on  and  respectively (for more information about function  in Boolean and Kleene case see). Table 4 shows the values of  for a Kleene or Boolean case. </p>
+
+<p>The <hi rend="italic">m</hi>-th output activation function , using DNF can be expressed as: (15) </p>
+</text>
