@@ -1,7 +1,7 @@
 # Description
 Coming soon. 
 
-Full data is available under `[https://github.com/gucorpling/amalgum/tree/master/full](full/)`. 
+Full data is available under [https://github.com/gucorpling/amalgum/tree/master/full](`full/`). 
 
 **NOTE**: `xml/` and `dep/` are finished, but `rst/` and `tsv/` are still coming. (ETA: 3/20/2020.) 
 
