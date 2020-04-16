@@ -80,7 +80,8 @@ def fix_malformed_sentences(sgml_list):
             if (
                 tagname != 's'                                       # the closing tag is not an s
                 and len(tag_opened['s']) > 0                         # and we're in a sentence
-                and tag_opened[tagname][-1] < tag_opened['s'][-1]    # and the sentence opened after the tag
+                and len(tag_opened[tagname]) > 0 and len(tag_opened['s']) > 0  # and the sentence opened after the tag
+                and tag_opened[tagname][-1] < tag_opened['s'][-1]
                 and '</s>' not in mns                                # the sentence is not closed in the mns
             ):
                 # end sentence here and move i back to the line we were looking at
@@ -171,6 +172,8 @@ class GumdropSplitter(NLPModule):
         xml_data = context["xml"]
         # Sometimes the tokenizer doesn't newline every elt
         xml_data = xml_data.replace('><', '>\n<')
+        # Ad hoc fix for a tokenization error
+        xml_data = xml_data.replace('°<', '°\n<')
         # Remove empty elements?
         #for elt in TAGS:
         #    xml_data = xml_data.replace(f"<{elt}>\n</{elt}>\n", "")
