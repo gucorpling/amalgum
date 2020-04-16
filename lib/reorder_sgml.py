@@ -4,6 +4,9 @@ from collections import defaultdict
 PRIORITIES = ["sp","table","row","cell","head","p","figure","caption","list","item","quote","s","q","hi","sic","ref",
 			  "date","incident","w"]
 
+OPEN_SGML_ELT = re.compile(r'^<([^/ ]+)( .*)?>$')
+CLOSE_SGML_ELT = re.compile(r'^</([^/]+)>$')
+
 class Span:
 
 	def __init__(self,start=0,end=0,text="", elem="", priorities=PRIORITIES):
@@ -19,11 +22,22 @@ class Span:
 
 
 def reorder(tt_sgml,priorities=PRIORITIES):
-	# Pass 1: build data model
-
-	open_elems = defaultdict(list)
-
+	# Preprocessing: if an element opens and closes immediately, the rest of the code will handle it incorrectly
+	# unless we add a dummy token. It will be removed later.
 	lines = tt_sgml.split("\n")
+	i = 0
+	while i < len(lines) - 1:
+		line = lines[i]
+		next_line = lines[i+1]
+		open_match = re.search(OPEN_SGML_ELT, line)
+		close_match = re.search(CLOSE_SGML_ELT, next_line)
+		if open_match and close_match and open_match.groups()[0] == close_match.groups()[0]:
+			lines.insert(i+1, "__SECRET_DUMMY_TOKEN__")
+			i += 1
+		i += 1
+
+	# Pass 1: build data model
+	open_elems = defaultdict(list)
 	spans = []
 	toknum = 1
 	for line in lines:
@@ -72,7 +86,7 @@ def reorder(tt_sgml,priorities=PRIORITIES):
 		for elem in elems:
 			output.append("</" + elem.elem + ">")
 
-	return "\n".join(output) + "\n"
+	return "\n".join(output).replace("__SECRET_DUMMY_TOKEN__\n", "") + "\n"
 
 
 if __name__ == "__main__":

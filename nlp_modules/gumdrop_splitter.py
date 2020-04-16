@@ -171,9 +171,9 @@ class GumdropSplitter(NLPModule):
         xml_data = context["xml"]
         # Sometimes the tokenizer doesn't newline every elt
         xml_data = xml_data.replace('><', '>\n<')
-        # Remove empty elements.
-        for elt in TAGS:
-            xml_data = xml_data.replace(f"<{elt}>\n</{elt}>\n", "")
+        # Remove empty elements?
+        #for elt in TAGS:
+        #    xml_data = xml_data.replace(f"<{elt}>\n</{elt}>\n", "")
 
         # Search for genre in the first 2 lines (in case there's an <?xml version="1.0" ?>
         genre = re.findall(r'type="(.*?)"', "\n".join(xml_data.split("\n")[:2]))
@@ -218,13 +218,8 @@ class GumdropSplitter(NLPModule):
             splitted.insert(rev_counter + 1, "</s>")
 
         lines = fix_malformed_sentences(splitted)
-
-        # The reorderer gets confused when it sees <figure x="foo">\n</figure>\n.
-        # Would be best to fix it but we'll cheat instead by temporarily filling it with a dummy str.
         lines = "\n".join(lines)
-        lines = lines.replace("</figure>", "__SECRETSEQUENCE__\n</figure>")
         lines = reorder(lines)
-        lines = lines.replace("__SECRETSEQUENCE__\n</figure>", "</figure>")
 
         # now, we need to construct the sentences for conllu
         conllu_sentences = []
