@@ -38,8 +38,9 @@ from util.utils import Alphabet, load_dynamic_config
 
 class ShibuyaEntities:
 
-	def __init__(self):
+	def __init__(self, use_gpu=False):
 		self.name = "ShibuyaEntities"
+		self.use_gpu = use_gpu
 		
 	def conllu2acegold(self, conllustr):
 		lines = [x.strip().split('\n') for x in conllustr.strip().split('\n\n')]
@@ -216,7 +217,7 @@ class ShibuyaEntities:
 			config.voc_size = voc_dict.size()
 			config.label_size = label_dict.size()
 
-			device = torch.device('cuda')
+			device = torch.device('cuda' if self.use_gpu else 'cpu')
 
 			model = BiRecurrentConvCRF4NestedNER(config.bert_model, config.label_size, hidden_size=config.hidden_size,
 												 layers=config.layers, lstm_dropout=config.lstm_dropout)

@@ -13,7 +13,7 @@ class AceEntities(NLPModule):
     def __init__(self, config, serialnumber="200226_153935"):
         self.acedir = os.path.join('.', 'lib', 'shibuya_entities', 'data', 'amalgum')
         self.serialnumber = serialnumber
-        self.shibuya = ShibuyaEntities()
+        self.shibuya = ShibuyaEntities(use_gpu=config['use_gpu'])
         self.test_dependencies()
 
     def download_file(self, url, local_path):
@@ -41,7 +41,7 @@ class AceEntities(NLPModule):
         inputstr = doc_dict["dep"]
         assert '\n\n' in inputstr and '\t' in inputstr
         acegoldstr = self.shibuya.conllu2acegold(inputstr)
-        
+
         with io.open(self.acedir + os.sep + 'amalgum.test', 'w', encoding='utf8') as ftest:
             ftest.write(acegoldstr)
         print("Step 1: File written to ACE format")
@@ -69,7 +69,7 @@ class AceEntities(NLPModule):
         # self.process_files(
         #     input_dir, output_dir, processing_function, multithreaded=False
         # )
-        
+
         self.process_files_multiformat(input_dir, output_dir, processing_function, multithreaded=False)
 
 
