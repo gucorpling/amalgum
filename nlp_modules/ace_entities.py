@@ -1,4 +1,5 @@
 import os, io, re, sys, requests
+import shutil
 
 from glob import glob
 from nlp_modules.base import NLPModule, PipelineDep
@@ -9,7 +10,7 @@ class AceEntities(NLPModule):
     requires = (PipelineDep.PARSE)
     provides = (PipelineDep.ACE_ENTITIES)
 
-    def __init__(self, serialnumber="200226_153935"):
+    def __init__(self, config, serialnumber="200226_153935"):
         self.acedir = os.path.join('.', 'lib', 'shibuya_entities', 'data', 'amalgum')
         self.serialnumber = serialnumber
         self.shibuya = ShibuyaEntities()
@@ -29,12 +30,14 @@ class AceEntities(NLPModule):
     def test_dependencies(self):
         import torch
         import pandas, numpy
-        self.download_file('https://corpling.uis.georgetown.edu/amir/download/sample_model_200226_153935.pt',
-                           os.path.join('.','lib', 'shibuya_entities', 'dumps', 'sample_model_200226_153935.pt'))
-
+        filepath = os.path.join('.','lib', 'shibuya_entities', 'dumps', 'sample_model_200226_153935.pt')
+        if not os.path.isfile(filepath):
+            print("Downloading https://corpling.uis.georgetown.edu/amir/download/sample_model_200226_153935.pt...")
+            self.download_file('https://corpling.uis.georgetown.edu/amir/download/sample_model_200226_153935.pt', filepath)
+        else:
+            print("Found pretrained ace entities model at", filepath)
 
     def parse(self, doc_dict):
-        
         inputstr = doc_dict["dep"]
         assert '\n\n' in inputstr and '\t' in inputstr
         acegoldstr = self.shibuya.conllu2acegold(inputstr)
@@ -59,8 +62,6 @@ class AceEntities(NLPModule):
 
 
     def run(self, input_dir, output_dir):
- 
-
         # Identify a function that takes data and returns output at the document level
         processing_function = self.parse
 
@@ -69,7 +70,7 @@ class AceEntities(NLPModule):
         #     input_dir, output_dir, processing_function, multithreaded=False
         # )
         
-        self.process_files_multiformat(input_dir, processing_function, output_dir, multithreaded=False)
+        self.process_files_multiformat(input_dir, output_dir, processing_function, multithreaded=False)
 
 
 
