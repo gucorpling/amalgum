@@ -3,6 +3,7 @@ from glob import glob
 import stanfordnlp
 from lib.dep_parsing.conll import CoNLL
 from nlp_modules.base import NLPModule, PipelineDep, NLPDependencyException
+import torch
 
 
 def replace_xpos(doc, doc_with_our_xpos):
@@ -25,17 +26,15 @@ def conllu2xml(conllu, xml):
                 s_count += 1
                 tok_count = 0
                 continue
-            if line.startswith("<"):
+            if line.startswith("<") and line.endswith(">"):
                 continue
 
             sentence = conllu.sentences[s_count]
             conllu_line = sentence.words[tok_count]
             xml_lines[i] = (
-                conllu_line.text
-                + "\t"
-                + conllu_line.xpos
-                + "\t"
-                + conllu_line.lemma if conllu_line.lemma is not None else '%NONE%' # Seems like a bug, make it %NONE% so we can track it
+                conllu_line.text + "\t" + conllu_line.xpos + "\t" + conllu_line.lemma
+                if conllu_line.lemma is not None
+                else "%NONE%"  # Seems like a bug, make it %NONE% so we can track it
                 # tentetively leave the dep_rel out of the xml
                 # + "\t"
                 # + conllu_line.dependency_relation
@@ -91,13 +90,17 @@ class DepParser(NLPModule):
 
     def test_dependencies(self):
         if not os.path.isdir(os.getcwd() + os.sep + "stanfordnlp"):
-            raise NLPDependencyException("Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git")
+            raise NLPDependencyException(
+                "Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git"
+            )
 
         if len(glob(os.path.join(self.LIB_DIR, "dep_parsing", "*.py"))) == 0:
-            raise NLPDependencyException("No stanfordnlp dependencies. Please download the files from"
-                                         "https://drive.google.com/open?id=1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00. "
-                                         "Put core.py and depparse_processor.py under stanfordnlp/pipeline/ "
-                                         "and overwrite the two scripts.")
+            raise NLPDependencyException(
+                "No stanfordnlp dependencies. Please download the files from"
+                "https://drive.google.com/open?id=1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00. "
+                "Put core.py and depparse_processor.py under stanfordnlp/pipeline/ "
+                "and overwrite the two scripts."
+            )
 
         if len(glob(os.path.join(self.model_dir, "en_*.pt"))) == 0:
             raise NLPDependencyException(
@@ -107,6 +110,9 @@ class DepParser(NLPModule):
             )
 
     def predict_with_pos(self, doc_dict):
+        # fix potential memory leak
+        torch.cuda.empty_cache()
+
         conllu_data = doc_dict["dep"]
         xml_data = doc_dict["xml"]
 
@@ -167,7 +173,7 @@ Eye-Tracking	NN	eye-tracking
 2	from	_	_	IN	_	_	_	_	_
 3	Eye-Tracking	_	_	NN	_	_	_	_	_
 """
-    module = DepParser({'LIB_DIR': 'lib'})
+    module = DepParser({"LIB_DIR": "lib"})
     module.test_dependencies()
     res = module.predict_with_pos({"xml": test_xml, "dep": test_conll})
     print(res["xml"])
