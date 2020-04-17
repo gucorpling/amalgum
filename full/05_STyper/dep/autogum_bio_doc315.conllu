@@ -1,9 +1,11 @@
 # s_type = frag
-1	PierCarlo	PierCarlo	PROPN	NNP	Number=Sing	4	compound	_	_
+1	PierCarlo	PierCarlo	PROPN	NNP	Number=Sing	0	root	_	_
 2	Di	Di	PROPN	NNP	Number=Sing	1	flat	_	_
-3	Lietto	lietto	PROPN	NNP	Number=Sing	4	compound	_	_
-4	Warning	Warning	NOUN	NN	Number=Sing	0	root	_	_
-5	:	:	PUNCT	:	_	4	punct	_	_
+3	Lietto	lietto	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = ger
+1	Warning	Warning	VERB	VBG	VerbForm=Ger	0	root	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
 
 # s_type = decl
 1	Page	Page	NOUN	NN	Number=Sing	17	nsubj:pass	_	_
@@ -29,32 +31,34 @@
 21	)	)	PUNCT	-RRB-	_	17	punct	_	_
 22	.	.	PUNCT	.	_	17	punct	_	_
 
-# s_type = decl
-1	Pierre-Charles	Pierre-Charles	PROPN	NNP	Number=Sing	12	nsubj	_	_
+# s_type = frag
+1	Pierre-Charles	Pierre-Charles	PROPN	NNP	Number=Sing	0	root	_	_
 2	de	de	PROPN	NNP	Number=Sing	1	flat	_	_
 3	Liette	Liette	PROPN	NNP	Number=Sing	1	flat	_	_
-4	(	(	PUNCT	-LRB-	_	5	punct	_	_
-5	born	bear	VERB	VBN	Tense=Past|VerbForm=Part	1	parataxis	_	_
-6	PierCarlo	PierCarlo	PROPN	NNP	Number=Sing	5	obj	_	_
-7	Di	Di	PROPN	NNP	Number=Sing	5	obj	_	_
-8	Lietto	lietto	PROPN	NNP	Number=Sing	7	compound	_	_
-9	)	)	PUNCT	-RRB-	_	5	punct	_	_
-10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	_	_
-11	an	an	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
-12	Italian	Italian	ADJ	JJ	Degree=Pos	0	root	_	_
-13	who	who	PRON	WP	PronType=Rel	14	nsubj	_	_
-14	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
-15	to	to	ADP	TO	_	18	case	_	_
-16	French	French	PROPN	NNP	Number=Sing	18	compound	_	_
-17	North	North	PROPN	NNP	Number=Sing	18	compound	_	_
-18	America	America	PROPN	NNP	Number=Sing	14	obj	_	_
-19	and	and	CCONJ	CC	_	20	cc	_	_
-20	enrolled	enroll	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	14	conj	_	_
-21	there	there	ADV	RB	PronType=Dem	20	advmod	_	_
-22	as	as	ADP	IN	_	24	case	_	_
-23	French	French	ADJ	JJ	Degree=Pos	24	amod	_	_
-24	soldier	soldier	NOUN	NN	Number=Sing	20	obl	_	_
-25	.	.	PUNCT	.	_	12	punct	_	_
+
+# s_type = decl
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	born	bear	VERB	VBN	Tense=Past|VerbForm=Part	9	csubj	_	_
+3	PierCarlo	PierCarlo	PROPN	NNP	Number=Sing	2	obj	_	_
+4	Di	Di	PROPN	NNP	Number=Sing	3	flat	_	_
+5	Lietto	lietto	PROPN	NNP	Number=Sing	3	flat	_	_
+6	)	)	PUNCT	-RRB-	_	2	punct	_	_
+7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	_	_
+8	an	an	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
+9	Italian	Italian	ADJ	JJ	Degree=Pos	0	root	_	_
+10	who	who	PRON	WP	PronType=Rel	11	nsubj	_	_
+11	moved	move	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	acl:relcl	_	_
+12	to	to	ADP	TO	_	15	case	_	_
+13	French	French	PROPN	NNP	Number=Sing	15	compound	_	_
+14	North	North	PROPN	NNP	Number=Sing	15	compound	_	_
+15	America	America	PROPN	NNP	Number=Sing	11	obj	_	_
+16	and	and	CCONJ	CC	_	17	cc	_	_
+17	enrolled	enroll	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	conj	_	_
+18	there	there	ADV	RB	PronType=Dem	17	advmod	_	_
+19	as	as	ADP	IN	_	21	case	_	_
+20	French	French	ADJ	JJ	Degree=Pos	21	amod	_	_
+21	soldier	soldier	NOUN	NN	Number=Sing	17	obl	_	_
+22	.	.	PUNCT	.	_	9	punct	_	_
 
 # s_type = decl
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
@@ -492,8 +496,10 @@
 27	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	28	nsubj	_	_
 28	lived	live	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	acl:relcl	_	_
 29	.	.	PUNCT	.	_	13	punct	_	_
-30	—	—	PUNCT	:	_	31	punct	_	_
-31	C.J.Russ	C.J.Russ	PROPN	NNP	Number=Sing	13	dep	_	_
+
+# s_type = frag
+1	—	—	PUNCT	:	_	2	punct	_	_
+2	C.J.Russ	C.J.Russ	PROPN	NNP	Number=Sing	0	root	_	_
 
 # s_type = frag
 1	Fort	Fort	PROPN	NNP	Number=Sing	2	compound	_	_

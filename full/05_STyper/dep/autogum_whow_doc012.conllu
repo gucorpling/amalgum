@@ -29,14 +29,16 @@
 7	how-to	how-to	NOUN	NN	Number=Sing	4	obj	_	_
 8	!	!	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Visit	visit	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
-4	local	local	ADJ	JJ	Degree=Pos	5	amod	_	_
-5	library	library	NOUN	NN	Number=Sing	2	obj	_	_
-6	often	often	ADV	RB	_	2	advmod	_	_
-7	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Visit	visit	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
+3	local	local	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	library	library	NOUN	NN	Number=Sing	1	obj	_	_
+5	often	often	ADV	RB	_	1	advmod	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
@@ -510,18 +512,20 @@
 1	Start	start	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	chapter	chapter	NOUN	NN	Number=Sing	3	compound	_	_
 3	books	book	NOUN	NNS	Number=Plur	1	obj	_	_
-4	at	at	ADP	IN	_	9	case	_	_
+4	at	at	ADP	IN	_	6	case	_	_
 5	about	about	ADV	RB	_	6	advmod	_	_
 6	six	six	NUM	CD	NumType=Card	9	nummod	_	_
 7	or	or	CCONJ	CC	_	8	cc	_	_
-8	seven	seven	NUM	CD	NumType=Card	6	conj	_	_
+8	seven	seven	NUM	CD	NumType=Card	9	nummod	_	_
 9	years	year	NOUN	NNS	Number=Plur	1	obl	_	_
 10	of	of	ADP	IN	_	11	case	_	_
 11	age	age	NOUN	NN	Number=Sing	9	nmod	_	_
 12	.	.	PUNCT	.	_	1	punct	_	_
-13	Read	read	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-14	series	series	NOUN	NN	Number=Sing	13	obj	_	_
-15	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	series	series	NOUN	NN	Number=Sing	1	obj	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	3	nsubj	_	_
@@ -809,23 +813,29 @@
 2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 3	'll	will	AUX	MD	VerbForm=Fin	4	aux	_	_
 4	Need	need	VERB	VB	VerbForm=Inf	1	acl:relcl	_	_
-5	A	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
-6	library	library	NOUN	NN	Number=Sing	4	obj	_	_
-7	(	(	PUNCT	-LRB-	_	9	punct	_	_
-8	or	or	CCONJ	CC	_	9	cc	_	_
-9	bookstore	bookstore	NOUN	NN	Number=Sing	6	conj	_	_
-10	)	)	PUNCT	-RRB-	_	9	punct	_	_
-11	to	to	PART	TO	_	12	mark	_	_
-12	visit	visit	VERB	VB	VerbForm=Inf	4	advcl	_	_
-13	Someone	someone	NOUN	NN	Number=Sing	12	obj	_	_
-14	who	who	PRON	WP	PronType=Rel	15	nsubj	_	_
-15	shares	share	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	acl:relcl	_	_
-16	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	_	_
-17	love	love	NOUN	NN	Number=Sing	15	obj	_	_
-18	of	of	ADP	IN	_	19	case	_	_
-19	books	book	NOUN	NNS	Number=Plur	17	nmod	_	_
-20	A	a	DET	DT	Definite=Ind|PronType=Art	21	det	_	_
-21	will/passion	will/passion	NOUN	NN	Number=Sing	19	appos	_	_
-22	to	to	PART	TO	_	23	mark	_	_
-23	read	read	VERB	VB	VerbForm=Inf	21	acl	_	_
+
+# s_type = frag
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	library	library	NOUN	NN	Number=Sing	0	root	_	_
+3	(	(	PUNCT	-LRB-	_	5	punct	_	_
+4	or	or	CCONJ	CC	_	5	cc	_	_
+5	bookstore	bookstore	NOUN	NN	Number=Sing	2	conj	_	_
+6	)	)	PUNCT	-RRB-	_	5	punct	_	_
+7	to	to	PART	TO	_	8	mark	_	_
+8	visit	visit	VERB	VB	VerbForm=Inf	2	xcomp	_	_
+
+# s_type = frag
+1	Someone	someone	NOUN	NN	Number=Sing	0	root	_	_
+2	who	who	PRON	WP	PronType=Rel	3	nsubj	_	_
+3	shares	share	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	_	_
+4	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
+5	love	love	NOUN	NN	Number=Sing	3	obj	_	_
+6	of	of	ADP	IN	_	7	case	_	_
+7	books	book	NOUN	NNS	Number=Plur	5	nmod	_	_
+
+# s_type = frag
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	will/passion	will/passion	NOUN	NN	Number=Sing	0	root	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	read	read	VERB	VB	VerbForm=Inf	2	xcomp	_	_
 

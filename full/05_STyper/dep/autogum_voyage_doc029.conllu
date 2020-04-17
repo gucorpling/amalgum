@@ -39,14 +39,16 @@
 
 # s_type = frag
 1	Position	position	NOUN	NN	Number=Sing	0	root	_	_
-2	Approximately	approximately	ADV	RB	_	3	advmod	_	_
-3	60km	60km	NUM	CD	NumType=Card	1	nummod	_	_
-4	from	from	ADP	IN	_	5	case	_	_
-5	Lichtenburg	Lichtenburg	PROPN	NNP	Number=Sing	1	nmod	_	_
-6	and	and	CCONJ	CC	_	7	cc	_	_
-7	30km	30km	NUM	CD	NumType=Card	5	conj	_	_
-8	from	from	ADP	IN	_	9	case	_	_
-9	Mafikeng	Mafikeng	PROPN	NNP	Number=Sing	5	nmod	_	_
+
+# s_type = frag
+1	Approximately	approximately	ADV	RB	_	2	advmod	_	_
+2	60km	60km	NUM	CD	NumType=Card	0	root	_	_
+3	from	from	ADP	IN	_	4	case	_	_
+4	Lichtenburg	Lichtenburg	PROPN	NNP	Number=Sing	2	nmod	_	_
+5	and	and	CCONJ	CC	_	6	cc	_	_
+6	30km	30km	NUM	CD	NumType=Card	4	conj	_	_
+7	from	from	ADP	IN	_	8	case	_	_
+8	Mafikeng	Mafikeng	PROPN	NNP	Number=Sing	4	nmod	_	_
 
 # s_type = decl
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	_	_
@@ -230,10 +232,12 @@
 
 # s_type = frag
 1	Geology	Geology	NOUN	NN	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	4	punct	_	_
-3	Dolomite	Dolomite	PROPN	NNP	Number=Sing	4	compound	_	_
-4	sinkhole	sinkhole	NOUN	NN	Number=Sing	1	dep	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Dolomite	Dolomite	ADJ	JJ	Degree=Pos	2	amod	_	_
+2	sinkhole	sinkhole	NOUN	NN	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	Conditions	condition	NOUN	NNS	Number=Plur	0	root	_	_
@@ -302,31 +306,35 @@
 22	in	in	ADP	IN	_	23	case	_	_
 23	silt	silt	NOUN	NN	Number=Sing	21	obl	_	_
 
-# s_type = decl
+# s_type = frag
 1	Facilities	Facility	NOUN	NNS	Number=Plur	0	root	_	_
-2	Two	Two	NUM	CD	NumType=Card	4	nummod	_	_
-3	permanent	permanent	ADJ	JJ	Degree=Pos	4	amod	_	_
-4	shotlines	shotline	NOUN	NNS	Number=Plur	1	obj	_	_
-5	with	with	ADP	IN	_	6	case	_	_
-6	grids	grid	NOUN	NNS	Number=Plur	4	nmod	_	_
-7	at	at	ADP	IN	_	12	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-9	bottom	bottom	ADJ	JJ	Degree=Pos	12	amod	_	_
-10	Large	Large	ADJ	JJ	Degree=Pos	12	amod	_	_
-11	capacity	capacity	NOUN	NN	Number=Sing	12	compound	_	_
-12	Air	Air	PROPN	NNP	Number=Sing	6	nmod	_	_
-13	(	(	PUNCT	-LRB-	_	16	punct	_	_
-14	to	to	ADP	TO	_	16	case	_	_
-15	300	@card@	NUM	CD	NumType=Card	16	nummod	_	_
-16	bar	bar	NOUN	NN	Number=Sing	12	nmod	_	_
-17	)	)	PUNCT	-RRB-	_	16	punct	_	_
-18	and	and	CCONJ	CC	_	21	cc	_	_
-19	Nitrox	Nitrox	NOUN	NN	Number=Sing	21	compound	_	_
-20	filling	fill	VERB	VBG	VerbForm=Ger	21	amod	_	_
-21	station	station	NOUN	NN	Number=Sing	12	conj	_	_
-22	on	on	ADP	IN	_	23	case	_	_
-23	site	site	NOUN	NN	Number=Sing	21	nmod	_	_
-24	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Two	Two	NUM	CD	NumType=Card	3	nummod	_	_
+2	permanent	permanent	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	shotlines	shotline	NOUN	NNS	Number=Plur	0	root	_	_
+4	with	with	ADP	IN	_	5	case	_	_
+5	grids	grid	NOUN	NNS	Number=Plur	3	nmod	_	_
+6	at	at	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	bottom	bottom	NOUN	NN	Number=Sing	5	nmod	_	_
+
+# s_type = frag
+1	Large	Large	ADJ	JJ	Degree=Pos	2	amod	_	_
+2	capacity	capacity	NOUN	NN	Number=Sing	3	compound	_	_
+3	Air	Air	PROPN	NNP	Number=Sing	0	root	_	_
+4	(	(	PUNCT	-LRB-	_	7	punct	_	_
+5	to	to	ADP	TO	_	7	case	_	_
+6	300	@card@	NUM	CD	NumType=Card	7	nummod	_	_
+7	bar	bar	NOUN	NN	Number=Sing	3	nmod	_	_
+8	)	)	PUNCT	-RRB-	_	7	punct	_	_
+9	and	and	CCONJ	CC	_	12	cc	_	_
+10	Nitrox	Nitrox	NOUN	NN	Number=Sing	12	compound	_	_
+11	filling	fill	VERB	VBG	VerbForm=Ger	12	amod	_	_
+12	station	station	NOUN	NN	Number=Sing	3	conj	_	_
+13	on	on	ADP	IN	_	14	case	_	_
+14	site	site	NOUN	NN	Number=Sing	12	nmod	_	_
+15	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
 1	Oxygen	oxygen	NOUN	NN	Number=Sing	2	compound	_	_
@@ -428,15 +436,17 @@
 6	site	site	NOUN	NN	Number=Sing	0	root	_	_
 7	if	if	SCONJ	IN	_	8	mark	_	_
 8	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	_	_
-9	All	all	DET	DT	_	13	det	_	_
-10	South	South	PROPN	NNP	Number=Sing	13	compound	_	_
-11	African	African	ADJ	JJ	Degree=Pos	13	amod	_	_
-12	cellular	cellular	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	networks	network	NOUN	NNS	Number=Plur	14	nsubj	_	_
-14	cover	cover	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	ccomp	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
-16	dive	dive	NOUN	NN	Number=Sing	17	compound	_	_
-17	site	site	NOUN	NN	Number=Sing	14	obj	_	_
+
+# s_type = decl
+1	All	all	DET	DT	_	5	det	_	_
+2	South	South	PROPN	NNP	Number=Sing	5	compound	_	_
+3	African	African	ADJ	JJ	Degree=Pos	5	amod	_	_
+4	cellular	cellular	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	networks	network	NOUN	NNS	Number=Plur	6	nsubj	_	_
+6	cover	cover	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+8	dive	dive	NOUN	NN	Number=Sing	9	compound	_	_
+9	site	site	NOUN	NN	Number=Sing	6	obj	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
@@ -557,18 +567,20 @@
 8	south	south	NOUN	NN	Number=Sing	5	nmod	_	_
 9	and	and	CCONJ	CC	_	10	cc	_	_
 10	east	east	NOUN	NN	Number=Sing	8	conj	_	_
-11	:	:	PUNCT	:	_	13	punct	_	_
-12	From	from	ADP	IN	_	13	case	_	_
-13	Pretoria	Pretoria	PROPN	NNP	Number=Sing	8	nmod	_	_
-14	and	and	CCONJ	CC	_	16	cc	_	_
-15	other	other	ADJ	JJ	Degree=Pos	16	amod	_	_
-16	places	place	NOUN	NNS	Number=Plur	13	conj	_	_
-17	to	to	ADP	TO	_	19	case	_	_
-18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
-19	north	north	NOUN	NN	Number=Sing	16	nmod	_	_
-20	and	and	CCONJ	CC	_	21	cc	_	_
-21	west	west	NOUN	NN	Number=Sing	19	conj	_	_
-22	:	:	PUNCT	:	_	2	punct	_	_
+11	:	:	PUNCT	:	_	2	punct	_	_
+
+# s_type = frag
+1	From	from	ADP	IN	_	2	case	_	_
+2	Pretoria	Pretoria	PROPN	NNP	Number=Sing	0	root	_	_
+3	and	and	CCONJ	CC	_	5	cc	_	_
+4	other	other	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	places	place	NOUN	NNS	Number=Plur	2	conj	_	_
+6	to	to	ADP	TO	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	north	north	NOUN	NN	Number=Sing	5	nmod	_	_
+9	and	and	CCONJ	CC	_	10	cc	_	_
+10	west	west	NOUN	NN	Number=Sing	8	conj	_	_
+11	:	:	PUNCT	:	_	2	punct	_	_
 
 # s_type = decl
 1	Wondergat	Wondergat	NOUN	NN	Number=Sing	5	nsubj:pass	_	_
@@ -658,16 +670,20 @@
 3	and	and	CCONJ	CC	_	5	cc	_	_
 4	north	north	ADJ	JJ	Degree=Pos	5	amod	_	_
 5	caverns	cavern	NOUN	NNS	Number=Plur	2	conj	_	_
-6	The	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	Leopard	Leopard	PROPN	NNP	Number=Sing	9	nmod:poss	_	_
-8	's	's	PART	POS	_	7	case	_	_
-9	cave	cave	NOUN	NN	Number=Sing	2	nmod	_	_
-10	A	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
-11	bell	bell	NOUN	NN	Number=Sing	12	compound	_	_
-12	chamber	chamber	NOUN	NN	Number=Sing	2	appos	_	_
-13	at	at	ADP	IN	_	15	case	_	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-15	bottom	bottom	NOUN	NN	Number=Sing	12	nmod	_	_
+
+# s_type = frag
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
+2	Leopard	Leopard	PROPN	NNP	Number=Sing	4	nmod:poss	_	_
+3	's	's	PART	POS	_	2	case	_	_
+4	cave	cave	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+2	bell	bell	NOUN	NN	Number=Sing	3	compound	_	_
+3	chamber	chamber	NOUN	NN	Number=Sing	0	root	_	_
+4	at	at	ADP	IN	_	6	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	bottom	bottom	NOUN	NN	Number=Sing	3	nmod	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
@@ -693,9 +709,11 @@
 1	Suggested	Suggested	VERB	VBN	Tense=Past|VerbForm=Part	2	amod	_	_
 2	routes	route	NOUN	NNS	Number=Plur	3	nsubj	_	_
 3	include	include	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-4	:	:	PUNCT	:	_	5	punct	_	_
-5	1	1	NUM	CD	NumType=Card	3	dep	_	_
-6	.	.	PUNCT	.	_	3	punct	_	_
+4	:	:	PUNCT	:	_	3	punct	_	_
+
+# s_type = frag
+1	1	1	NUM	CD	NumType=Card	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Cavern	cavern	NOUN	NN	Number=Sing	2	nsubj	_	_
@@ -709,12 +727,14 @@
 9	grid	grid	NOUN	NN	Number=Sing	5	obl	_	_
 10	to	to	ADP	TO	_	12	case	_	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	back	back	NOUN	NN	Number=Sing	5	obl	_	_
+12	back	back	NOUN	NN	Number=Sing	9	nmod	_	_
 13	of	of	ADP	IN	_	15	case	_	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
 15	cave	cave	NOUN	NN	Number=Sing	12	nmod	_	_
-16	2	2	NUM	CD	NumType=Card	15	nummod	_	_
-17	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	2	2	NUM	CD	NumType=Card	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	From	from	ADP	IN	_	4	case	_	_
@@ -731,9 +751,11 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
 13	guide	guide	NOUN	NN	Number=Sing	14	compound	_	_
 14	ropes	rope	NOUN	NNS	Number=Plur	9	nmod	_	_
-15	.	.	PUNCT	.	_	14	punct	_	_
-16	3	3	NUM	CD	NumType=Card	14	dep	_	_
-17	.	.	PUNCT	.	_	4	punct	_	_
+15	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	3	3	NUM	CD	NumType=Card	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	From	from	ADP	IN	_	2	case	_	_

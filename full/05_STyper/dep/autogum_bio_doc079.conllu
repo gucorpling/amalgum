@@ -1,40 +1,44 @@
-# s_type = decl
-1	Stephen	Stephen	PROPN	NNP	Number=Sing	7	nsubj:pass	_	_
+# s_type = frag
+1	Stephen	Stephen	PROPN	NNP	Number=Sing	0	root	_	_
 2	G.	G.	PROPN	NNP	Number=Sing	1	flat	_	_
 3	Weber	weber	PROPN	NNP	Number=Sing	1	flat	_	_
-4	Not	not	PART	RB	_	0	root	_	_
-5	to	to	PART	TO	_	7	mark	_	_
-6	be	be	AUX	VB	VerbForm=Inf	7	aux:pass	_	_
-7	confused	confuse	VERB	VBN	Tense=Past|VerbForm=Part	4	xcomp	_	_
-8	with	with	ADP	IN	_	9	case	_	_
-9	Steven	Steven	PROPN	NNP	Number=Sing	7	obl	_	_
-10	Weber	weber	PROPN	NNP	Number=Sing	9	flat	_	_
-11	(	(	PUNCT	-LRB-	_	12	punct	_	_
-12	professor	professor	NOUN	NN	Number=Sing	9	appos	_	_
-13	)	)	PUNCT	-RRB-	_	12	punct	_	_
-14	.	.	PUNCT	.	_	7	punct	_	_
+
+# s_type = frag
+1	Not	not	PART	RB	Polarity=Neg	4	advmod	_	_
+2	to	to	PART	TO	_	4	mark	_	_
+3	be	be	AUX	VB	VerbForm=Inf	4	aux:pass	_	_
+4	confused	confuse	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+5	with	with	ADP	IN	_	6	case	_	_
+6	Steven	Steven	PROPN	NNP	Number=Sing	4	obl	_	_
+7	Weber	weber	PROPN	NNP	Number=Sing	6	flat	_	_
+8	(	(	PUNCT	-LRB-	_	9	punct	_	_
+9	professor	professor	NOUN	NN	Number=Sing	6	appos	_	_
+10	)	)	PUNCT	-RRB-	_	9	punct	_	_
+11	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
 1	Stephen	Stephen	PROPN	NNP	Number=Sing	0	root	_	_
 2	G.	G.	PROPN	NNP	Number=Sing	1	flat	_	_
 
+# s_type = frag
+1	Weber	weber	PROPN	NNP	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	Weber	weber	PROPN	NNP	Number=Sing	4	nsubj	_	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
-3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
-4	professor	professor	NOUN	NN	Number=Sing	0	root	_	_
-5	of	of	ADP	IN	_	6	case	_	_
-6	chemistry	chemistry	NOUN	NN	Number=Sing	4	nmod	_	_
-7	and	and	CCONJ	CC	_	10	cc	_	_
-8	clinical	clinical	ADJ	JJ	Degree=Pos	10	amod	_	_
-9	translational	translational	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	science	science	NOUN	NN	Number=Sing	6	conj	_	_
-11	at	at	ADP	IN	_	13	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	University	University	PROPN	NNP	Number=Sing	10	nmod	_	_
-14	of	of	ADP	IN	_	15	case	_	_
-15	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	13	nmod	_	_
-16	.	.	PUNCT	.	_	4	punct	_	_
+1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+3	professor	professor	NOUN	NN	Number=Sing	0	root	_	_
+4	of	of	ADP	IN	_	5	case	_	_
+5	chemistry	chemistry	NOUN	NN	Number=Sing	3	nmod	_	_
+6	and	and	CCONJ	CC	_	9	cc	_	_
+7	clinical	clinical	ADJ	JJ	Degree=Pos	9	amod	_	_
+8	translational	translational	ADJ	JJ	Degree=Pos	9	amod	_	_
+9	science	science	NOUN	NN	Number=Sing	5	conj	_	_
+10	at	at	ADP	IN	_	12	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+12	University	University	PROPN	NNP	Number=Sing	9	nmod	_	_
+13	of	of	ADP	IN	_	14	case	_	_
+14	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	12	nmod	_	_
+15	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
@@ -621,57 +625,65 @@
 1	Awards	Awards	NOUN	NNS	Number=Plur	0	root	_	_
 2	and	and	CCONJ	CC	_	3	cc	_	_
 3	honors	honors	NOUN	NNS	Number=Plur	1	conj	_	_
-4	2016	@card@	NUM	CD	NumType=Card	1	appos	_	_
+
+# s_type = frag
+1	2016	@card@	NUM	CD	NumType=Card	5	nmod:tmod	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	Dal	dal	PROPN	NNP	Number=Sing	5	compound	_	_
+4	Nogare	Nogare	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Award	Award	PROPN	NNP	Number=Sing	0	root	_	_
+6	,	,	PUNCT	,	_	8	punct	_	_
+7	Chromatography	chromatography	PROPN	NNP	Number=Sing	8	compound	_	_
+8	Forum	Forum	PROPN	NNP	Number=Sing	5	appos	_	_
+9	of	of	ADP	IN	_	12	case	_	_
+10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+11	Delaware	Delaware	PROPN	NNP	Number=Sing	12	compound	_	_
+12	Valley	Valley	PROPN	NNP	Number=Sing	8	nmod	_	_
+13	[	[	PUNCT	-LSB-	_	14	punct	_	_
+14	1	1	NUM	CD	NumType=Card	5	dep	_	_
+15	]	]	PUNCT	-RSB-	_	14	punct	_	_
+
+# s_type = frag
+1	2015	@card@	NUM	CD	NumType=Card	4	compound	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	Palmer	Palmer	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Award	Award	PROPN	NNP	Number=Sing	0	root	_	_
 5	,	,	PUNCT	,	_	8	punct	_	_
-6	Dal	dal	PROPN	NNP	Number=Sing	8	compound	_	_
-7	Nogare	Nogare	PROPN	NNP	Number=Sing	8	compound	_	_
-8	Award	Award	PROPN	NNP	Number=Sing	1	appos	_	_
-9	,	,	PUNCT	,	_	11	punct	_	_
-10	Chromatography	chromatography	PROPN	NNP	Number=Sing	11	compound	_	_
-11	Forum	Forum	PROPN	NNP	Number=Sing	8	conj	_	_
-12	of	of	ADP	IN	_	15	case	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-14	Delaware	Delaware	PROPN	NNP	Number=Sing	15	compound	_	_
-15	Valley	Valley	PROPN	NNP	Number=Sing	11	nmod	_	_
-16	[	[	PUNCT	-LSB-	_	17	punct	_	_
-17	1	1	NUM	CD	NumType=Card	1	dep	_	_
-18	]	]	PUNCT	-RSB-	_	17	punct	_	_
-19	2015	@card@	NUM	CD	NumType=Card	17	nmod:tmod	_	_
-20	,	,	PUNCT	,	_	22	punct	_	_
-21	Palmer	Palmer	PROPN	NNP	Number=Sing	22	compound	_	_
-22	Award	Award	PROPN	NNP	Number=Sing	1	conj	_	_
-23	,	,	PUNCT	,	_	26	punct	_	_
-24	Minnesota	Minnesota	PROPN	NNP	Number=Sing	26	compound	_	_
-25	Chromatography	chromatography	PROPN	NNP	Number=Sing	26	compound	_	_
-26	Forum	Forum	PROPN	NNP	Number=Sing	22	conj	_	_
-27	[	[	PUNCT	-LSB-	_	28	punct	_	_
-28	8	8	NUM	CD	NumType=Card	22	dep	_	_
-29	]	]	PUNCT	-RSB-	_	28	punct	_	_
-30	2012	@card@	NUM	CD	NumType=Card	28	nmod:tmod	_	_
-31	,	,	PUNCT	,	_	34	punct	_	_
-32	Provost	Provost	PROPN	NNP	Number=Sing	34	nmod:poss	_	_
-33	’s	's	PART	POS	_	32	case	_	_
-34	Award	Award	PROPN	NNP	Number=Sing	22	appos	_	_
-35	for	for	ADP	IN	_	36	case	_	_
-36	Excellence	excellence	PROPN	NNP	Number=Sing	34	nmod	_	_
-37	in	in	ADP	IN	_	38	case	_	_
-38	Mentoring	mentore	PROPN	NNP	Number=Sing	36	nmod	_	_
-39	,	,	PUNCT	,	_	40	punct	_	_
-40	University	University	PROPN	NNP	Number=Sing	36	appos	_	_
-41	of	of	ADP	IN	_	42	case	_	_
-42	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	40	nmod	_	_
-43	[	[	PUNCT	-LSB-	_	44	punct	_	_
-44	9	9	NUM	CD	NumType=Card	40	dep	_	_
-45	]	]	PUNCT	-RSB-	_	44	punct	_	_
-46	2008	@card@	NUM	CD	NumType=Card	49	nmod:tmod	_	_
-47	,	,	PUNCT	,	_	49	punct	_	_
-48	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	49	compound	_	_
-49	Award	Award	PROPN	NNP	Number=Sing	34	conj	_	_
-50	,	,	PUNCT	,	_	53	punct	_	_
-51	American	American	PROPN	NNP	Number=Sing	53	amod	_	_
-52	Chemical	Chemical	PROPN	NNP	Number=Sing	53	compound	_	_
-53	Society	Society	PROPN	NNP	Number=Sing	49	conj	_	_
-54	[	[	PUNCT	-LSB-	_	55	punct	_	_
-55	4	4	NUM	CD	NumType=Card	49	dep	_	_
-56	]	]	PUNCT	-RSB-	_	55	punct	_	_
+6	Minnesota	Minnesota	PROPN	NNP	Number=Sing	8	compound	_	_
+7	Chromatography	chromatography	PROPN	NNP	Number=Sing	8	compound	_	_
+8	Forum	Forum	PROPN	NNP	Number=Sing	4	conj	_	_
+9	[	[	PUNCT	-LSB-	_	10	punct	_	_
+10	8	8	NUM	CD	NumType=Card	4	dep	_	_
+11	]	]	PUNCT	-RSB-	_	10	punct	_	_
+
+# s_type = frag
+1	2012	@card@	NUM	CD	NumType=Card	5	nmod:tmod	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	Provost	Provost	PROPN	NNP	Number=Sing	5	nmod:poss	_	_
+4	’s	's	PART	POS	_	3	case	_	_
+5	Award	Award	PROPN	NNP	Number=Sing	0	root	_	_
+6	for	for	ADP	IN	_	7	case	_	_
+7	Excellence	excellence	PROPN	NNP	Number=Sing	5	nmod	_	_
+8	in	in	ADP	IN	_	9	case	_	_
+9	Mentoring	mentore	PROPN	NNP	Number=Sing	7	nmod	_	_
+10	,	,	PUNCT	,	_	11	punct	_	_
+11	University	University	PROPN	NNP	Number=Sing	9	appos	_	_
+12	of	of	ADP	IN	_	13	case	_	_
+13	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	11	nmod	_	_
+14	[	[	PUNCT	-LSB-	_	15	punct	_	_
+15	9	9	NUM	CD	NumType=Card	5	dep	_	_
+16	]	]	PUNCT	-RSB-	_	15	punct	_	_
+
+# s_type = frag
+1	2008	@card@	NUM	CD	NumType=Card	4	compound	_	_
+2	,	,	PUNCT	,	_	4	punct	_	_
+3	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Award	Award	PROPN	NNP	Number=Sing	0	root	_	_
+5	,	,	PUNCT	,	_	8	punct	_	_
+6	American	American	PROPN	NNP	Number=Sing	8	amod	_	_
+7	Chemical	Chemical	PROPN	NNP	Number=Sing	8	compound	_	_
+8	Society	Society	PROPN	NNP	Number=Sing	4	conj	_	_
+9	[	[	PUNCT	-LSB-	_	10	punct	_	_
+10	4	4	NUM	CD	NumType=Card	4	dep	_	_
+11	]	]	PUNCT	-RSB-	_	10	punct	_	_
 

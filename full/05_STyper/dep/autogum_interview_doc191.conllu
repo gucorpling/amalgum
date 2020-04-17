@@ -223,18 +223,20 @@
 2	's	's	PART	POS	_	1	case	_	_
 3	beginnings	beginning	NOUN	NNS	Number=Plur	0	root	_	_
 
-# s_type = other
+# s_type = frag
 1	Mike	mike	PROPN	NNP	Number=Sing	0	root	_	_
 2	Halterman	Halterman	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Tell	tell	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-5	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	4	iobj	_	_
-6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
-7	bit	bit	NOUN	NN	Number=Sing	4	obj	_	_
-8	about	about	ADP	IN	_	10	case	_	_
-9	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	_	_
-10	background	background	NOUN	NN	Number=Sing	7	nmod	_	_
-11	.	.	PUNCT	.	_	1	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = imp
+1	Tell	tell	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	1	iobj	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+4	bit	bit	NOUN	NN	Number=Sing	1	obj	_	_
+5	about	about	ADP	IN	_	7	case	_	_
+6	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
+7	background	background	NOUN	NN	Number=Sing	4	nmod	_	_
+8	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	_	_
@@ -335,16 +337,18 @@
 21	,	,	PUNCT	,	_	22	punct	_	_
 22	etc.	etc.	X	FW	_	18	conj	_	_
 
-# s_type = wh
+# s_type = frag
 1	MH	MH	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	7	punct	_	_
-3	How	how	SCONJ	WRB	PronType=Int	4	mark	_	_
-4	geeky	geeky	ADJ	JJ	Degree=Pos	7	ccomp	_	_
-5	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	_
-6	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	_	_
-7	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	1	parataxis	_	_
-8	here	here	ADV	RB	PronType=Dem	7	advmod	_	_
-9	?	?	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = wh
+1	How	how	SCONJ	WRB	PronType=Int	2	mark	_	_
+2	geeky	geeky	ADJ	JJ	Degree=Pos	5	obl	_	_
+3	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	_	_
+4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	_	_
+5	talking	talk	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	_
+6	here	here	ADV	RB	PronType=Dem	5	advmod	_	_
+7	?	?	PUNCT	.	_	5	punct	_	_
 
 # s_type = q
 1	Worse	Worse	ADJ	JJR	Degree=Cmp	0	root	_	_
@@ -354,37 +358,39 @@
 5	teenager	teenager	NOUN	NN	Number=Sing	1	obl	_	_
 6	?	?	PUNCT	.	_	1	punct	_	_
 
+# s_type = frag
+1	AM	AM	NOUN	NN	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
 # s_type = decl
-1	AM	AM	PROPN	NNP	Number=Sing	6	discourse	_	_
-2	:	:	PUNCT	:	_	6	punct	_	_
-3	Probably	probably	ADV	RB	_	6	advmod	_	_
-4	not	not	PART	RB	Polarity=Neg	6	advmod	_	_
-5	extremely	extremely	ADV	RB	_	6	advmod	_	_
-6	geeky	geeky	ADJ	JJ	Degree=Pos	0	root	_	_
-7	;	;	PUNCT	:	_	8	punct	_	_
-8	more	more	ADJ	JJR	Degree=Cmp	12	nsubj	_	_
-9	of	of	SCONJ	IN	_	12	mark	_	_
-10	being	be	AUX	VBG	VerbForm=Ger	12	cop	_	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
-12	victim	victim	NOUN	NN	Number=Sing	6	advcl	_	_
-13	of	of	ADP	IN	_	15	case	_	_
-14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
-15	bully	bully	NOUN	NN	Number=Sing	12	nmod	_	_
-16	who	who	PRON	WP	PronType=Rel	17	nsubj	_	_
-17	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	15	acl:relcl	_	_
-18	to	to	PART	TO	_	19	mark	_	_
-19	pick	pick	VERB	VB	VerbForm=Inf	17	xcomp	_	_
-20	on	on	ADP	IN	_	21	case	_	_
-21	me	me	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	19	obl	_	_
-22	continuously	continuously	ADV	RB	_	19	advmod	_	_
-23	and	and	CCONJ	CC	_	24	cc	_	_
-24	influenced	influence	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	19	conj	_	_
-25	other	other	ADJ	JJ	Degree=Pos	26	amod	_	_
-26	kids	kid	NOUN	NNS	Number=Plur	24	obj	_	_
-27	to	to	PART	TO	_	28	mark	_	_
-28	do	do	VERB	VB	VerbForm=Inf	24	xcomp	_	_
-29	likewise	likewise	ADV	RB	_	28	advmod	_	_
-30	.	.	PUNCT	.	_	6	punct	_	_
+1	Probably	probably	ADV	RB	_	4	advmod	_	_
+2	not	not	PART	RB	Polarity=Neg	4	advmod	_	_
+3	extremely	extremely	ADV	RB	_	4	advmod	_	_
+4	geeky	geeky	ADJ	JJ	Degree=Pos	0	root	_	_
+5	;	;	PUNCT	:	_	6	punct	_	_
+6	more	more	ADJ	JJR	Degree=Cmp	4	conj	_	_
+7	of	of	SCONJ	IN	_	10	mark	_	_
+8	being	be	AUX	VBG	VerbForm=Ger	10	cop	_	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
+10	victim	victim	NOUN	NN	Number=Sing	6	advcl	_	_
+11	of	of	ADP	IN	_	13	case	_	_
+12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
+13	bully	bully	NOUN	NN	Number=Sing	10	nmod	_	_
+14	who	who	PRON	WP	PronType=Rel	15	nsubj	_	_
+15	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	13	acl:relcl	_	_
+16	to	to	PART	TO	_	17	mark	_	_
+17	pick	pick	VERB	VB	VerbForm=Inf	15	xcomp	_	_
+18	on	on	ADP	IN	_	19	case	_	_
+19	me	me	PRON	PRP	Case=Acc|Number=Sing|Person=1|PronType=Prs	17	obl	_	_
+20	continuously	continuously	ADV	RB	_	17	advmod	_	_
+21	and	and	CCONJ	CC	_	22	cc	_	_
+22	influenced	influence	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	conj	_	_
+23	other	other	ADJ	JJ	Degree=Pos	24	amod	_	_
+24	kids	kid	NOUN	NNS	Number=Plur	22	obj	_	_
+25	to	to	PART	TO	_	26	mark	_	_
+26	do	do	VERB	VB	VerbForm=Inf	22	xcomp	_	_
+27	likewise	likewise	ADV	RB	_	26	advmod	_	_
+28	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
 1	MH	MH	PROPN	NNP	Number=Sing	0	root	_	_
@@ -414,15 +420,17 @@
 9	9	9	NUM	CD	NumType=Card	3	obl	_	_
 10	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = wh
+# s_type = frag
 1	MH	MH	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	4	punct	_	_
-3	What	What	PRON	WP	PronType=Int	4	nsubj	_	_
-4	happened	happen	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	parataxis	_	_
-5	after	after	ADP	IN	_	7	case	_	_
-6	that	that	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
-7	point	point	NOUN	NN	Number=Sing	4	obl	_	_
-8	?	?	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = wh
+1	What	What	PRON	WP	PronType=Int	2	nsubj	_	_
+2	happened	happen	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	after	after	ADP	IN	_	5	case	_	_
+4	that	that	DET	DT	Number=Sing|PronType=Dem	5	det	_	_
+5	point	point	NOUN	NN	Number=Sing	2	obl	_	_
+6	?	?	PUNCT	.	_	2	punct	_	_
 
 # s_type = q
 1	Did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	aux	_	_
@@ -444,60 +452,66 @@
 17	else	else	ADV	RB	_	16	advmod	_	_
 18	?	?	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	AM	AM	PROPN	NNP	Number=Sing	12	dislocated	_	_
+# s_type = frag
+1	AM	AM	NOUN	NN	Number=Sing	0	root	_	_
 2	:	:	PUNCT	:	_	1	punct	_	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
-4	definitely	definitely	ADV	RB	_	5	advmod	_	_
-5	grew	grow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	parataxis	_	_
-6	into	into	ADP	IN	_	8	case	_	_
-7	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
-8	looks	look	NOUN	NNS	Number=Plur	5	obl	_	_
-9	,	,	PUNCT	,	_	5	punct	_	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
-11	braces	brace	NOUN	NNS	Number=Plur	12	nsubj	_	_
-12	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-13	off	off	ADP	RP	_	12	compound:prt	_	_
-14	;	;	PUNCT	:	_	20	punct	_	_
-15	high	high	ADJ	JJ	Degree=Pos	16	amod	_	_
-16	school	school	NOUN	NN	Number=Sing	20	nsubj	_	_
-17	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	_	_
-18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	_	_
-19	bigger	big	ADJ	JJR	Degree=Cmp	20	amod	_	_
-20	place	place	NOUN	NN	Number=Sing	12	parataxis	_	_
-21	and	and	CCONJ	CC	_	24	cc	_	_
-22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-23	bullying	bully	NOUN	NN	Number=Sing	24	nsubj	_	_
-24	subsided	subsided	VERB	VBN	Tense=Past|VerbForm=Part	20	conj	_	_
-25	because	because	SCONJ	IN	_	27	mark	_	_
-26	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	27	nsubj	_	_
-27	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	advcl	_	_
-28	new	new	ADJ	JJ	Degree=Pos	29	amod	_	_
-29	friends	friend	NOUN	NNS	Number=Plur	27	obj	_	_
-30	.	.	PUNCT	.	_	12	punct	_	_
 
-# s_type = q
-1	MH	MH	PROPN	NNP	Number=Sing	8	nsubj	_	_
-2	:	:	PUNCT	:	_	8	punct	_	_
-3	This	this	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	_	_
-4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
-5	also	also	ADV	RB	_	8	advmod	_	_
-6	around	around	ADP	IN	_	8	case	_	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-8	time	time	NOUN	NN	Number=Sing	0	root	_	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	_	_
-10	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	acl:relcl	_	_
-11	to	to	PART	TO	_	12	mark	_	_
-12	model	model	VERB	VB	VerbForm=Inf	10	xcomp	_	_
-13	,	,	PUNCT	,	_	14	punct	_	_
-14	right	right	ADV	RB	_	12	advmod	_	_
-15	?	?	PUNCT	.	_	8	punct	_	_
+# s_type = decl
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
+2	definitely	definitely	ADV	RB	_	3	advmod	_	_
+3	grew	grow	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	into	into	ADP	IN	_	6	case	_	_
+5	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
+6	looks	look	NOUN	NNS	Number=Plur	3	obl	_	_
+7	,	,	PUNCT	,	_	10	punct	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	braces	brace	NOUN	NNS	Number=Plur	10	nsubj	_	_
+10	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	parataxis	_	_
+11	off	off	ADP	RP	_	10	compound:prt	_	_
+12	;	;	PUNCT	:	_	18	punct	_	_
+13	high	high	ADJ	JJ	Degree=Pos	14	amod	_	_
+14	school	school	NOUN	NN	Number=Sing	18	nsubj	_	_
+15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	_	_
+16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	_	_
+17	bigger	big	ADJ	JJR	Degree=Cmp	18	amod	_	_
+18	place	place	NOUN	NN	Number=Sing	3	parataxis	_	_
+19	and	and	CCONJ	CC	_	22	cc	_	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
+21	bullying	bully	NOUN	NN	Number=Sing	22	nsubj	_	_
+22	subsided	subsided	VERB	VBN	Tense=Past|VerbForm=Part	18	conj	_	_
+23	because	because	SCONJ	IN	_	25	mark	_	_
+24	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	_	_
+25	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	advcl	_	_
+26	new	new	ADJ	JJ	Degree=Pos	27	amod	_	_
+27	friends	friend	NOUN	NNS	Number=Plur	25	obj	_	_
+28	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
-1	AM	AM	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Correct	correct	ADJ	JJ	Degree=Pos	1	amod	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+1	MH	MH	PROPN	NNP	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = q
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	_	_
+2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
+3	also	also	ADV	RB	_	6	advmod	_	_
+4	around	around	ADP	IN	_	6	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	time	time	NOUN	NN	Number=Sing	0	root	_	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
+8	wanted	want	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	acl:relcl	_	_
+9	to	to	PART	TO	_	10	mark	_	_
+10	model	model	VERB	VB	VerbForm=Inf	8	xcomp	_	_
+11	,	,	PUNCT	,	_	12	punct	_	_
+12	right	right	ADV	RB	_	10	advmod	_	_
+13	?	?	PUNCT	.	_	6	punct	_	_
+
+# s_type = frag
+1	AM	AM	NOUN	NN	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Correct	correct	ADJ	JJ	Degree=Pos	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Once	once	ADV	RB	NumType=Mult	3	advmod	_	_
@@ -555,47 +569,51 @@
 33	candidate	candidate	NOUN	NN	Number=Sing	26	ccomp	_	_
 34	.	.	PUNCT	.	_	11	punct	_	_
 
-# s_type = q
+# s_type = frag
 1	MH	MH	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	8	punct	_	_
-3	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
-4	that	that	SCONJ	IN	_	8	mark	_	_
-5	when	when	SCONJ	WRB	PronType=Int	8	mark	_	_
-6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-7	first	first	ADV	RB	_	8	advmod	_	_
-8	became	become	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	_	_
-9	anorexic	anorexic	ADJ	JJ	Degree=Pos	8	xcomp	_	_
-10	?	?	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = q
+1	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+2	that	that	SCONJ	IN	_	6	mark	_	_
+3	when	when	SCONJ	WRB	PronType=Int	6	mark	_	_
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
+5	first	first	ADV	RB	_	6	advmod	_	_
+6	became	become	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+7	anorexic	anorexic	ADJ	JJ	Degree=Pos	6	xcomp	_	_
+8	?	?	PUNCT	.	_	6	punct	_	_
+
+# s_type = frag
+1	AM	AM	NOUN	NN	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
 
 # s_type = decl
-1	AM	AM	PROPN	NNP	Number=Sing	6	discourse	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Yes	yes	INTJ	UH	_	6	discourse	_	_
-4	-	-	PUNCT	:	_	3	punct	_	_
-5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
-6	lost	lose	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-7	20	@card@	NUM	CD	NumType=Card	8	nummod	_	_
-8	pounds	pound	NOUN	NNS	Number=Plur	6	obj	_	_
-9	that	that	DET	DT	PronType=Dem	10	det	_	_
-10	summer	summer	NOUN	NN	Number=Sing	6	obl:tmod	_	_
-11	and	and	CCONJ	CC	_	19	cc	_	_
-12	then	then	ADV	RB	PronType=Dem	13	advmod	_	_
-13	starting	start	VERB	VBG	VerbForm=Ger	6	conj	_	_
-14	losing	lose	VERB	VBG	VerbForm=Ger	13	xcomp	_	_
-15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
-16	control	control	NOUN	NN	Number=Sing	14	obj	_	_
-17	and	and	CCONJ	CC	_	19	cc	_	_
-18	modelling	model	NOUN	NN	Number=Sing	19	nsubj	_	_
-19	became	become	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	conj	_	_
-20	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	22	nmod:poss	_	_
-21	new	new	ADJ	JJ	Degree=Pos	22	amod	_	_
-22	excuse	excuse	NOUN	NN	Number=Sing	19	xcomp	_	_
-23	for	for	ADP	IN	_	26	case	_	_
-24	this	this	DET	DT	Number=Sing|PronType=Dem	26	det	_	_
-25	weight	weight	NOUN	NN	Number=Sing	26	compound	_	_
-26	loss	loss	NOUN	NN	Number=Sing	22	nmod	_	_
-27	and	and	CCONJ	CC	_	29	cc	_	_
-28	soon-to-be	soon-to-be	ADJ	JJ	Degree=Pos	29	amod	_	_
-29	disorder	disorder	NOUN	NN	Number=Sing	26	conj	_	_
-30	.	.	PUNCT	.	_	6	punct	_	_
+1	Yes	yes	INTJ	UH	_	4	discourse	_	_
+2	-	-	PUNCT	:	_	1	punct	_	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+4	lost	lose	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+5	20	@card@	NUM	CD	NumType=Card	6	nummod	_	_
+6	pounds	pound	NOUN	NNS	Number=Plur	4	obj	_	_
+7	that	that	DET	DT	PronType=Dem	8	det	_	_
+8	summer	summer	NOUN	NN	Number=Sing	4	obl:tmod	_	_
+9	and	and	CCONJ	CC	_	17	cc	_	_
+10	then	then	ADV	RB	PronType=Dem	11	advmod	_	_
+11	starting	start	VERB	VBG	VerbForm=Ger	4	conj	_	_
+12	losing	lose	VERB	VBG	VerbForm=Ger	11	xcomp	_	_
+13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
+14	control	control	NOUN	NN	Number=Sing	12	obj	_	_
+15	and	and	CCONJ	CC	_	17	cc	_	_
+16	modelling	model	NOUN	NN	Number=Sing	17	nsubj	_	_
+17	became	become	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	_	_
+18	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	20	nmod:poss	_	_
+19	new	new	ADJ	JJ	Degree=Pos	20	amod	_	_
+20	excuse	excuse	NOUN	NN	Number=Sing	17	xcomp	_	_
+21	for	for	ADP	IN	_	24	case	_	_
+22	this	this	DET	DT	Number=Sing|PronType=Dem	24	det	_	_
+23	weight	weight	NOUN	NN	Number=Sing	24	compound	_	_
+24	loss	loss	NOUN	NN	Number=Sing	20	nmod	_	_
+25	and	and	CCONJ	CC	_	27	cc	_	_
+26	soon-to-be	soon-to-be	ADJ	JJ	Degree=Pos	27	amod	_	_
+27	disorder	disorder	NOUN	NN	Number=Sing	24	conj	_	_
+28	.	.	PUNCT	.	_	4	punct	_	_
 

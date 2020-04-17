@@ -103,7 +103,9 @@
 49	years	year	NOUN	NNS	Number=Plur	50	nmod:npmod	_	_
 50	ago	ago	ADV	RB	_	45	advmod	_	_
 51	.	.	PUNCT	.	_	16	punct	_	_
-52	[	[	PUNCT	-LSB-	_	32	punct	_	_
+
+# s_type = frag
+1	[	[	PUNCT	-LSB-	_	0	root	_	_
 
 # s_type = decl
 1	T]his	t]his	DET	DT	PronType=Dem	2	det	_	_
@@ -126,12 +128,14 @@
 18	be	be	AUX	VB	VerbForm=Inf	19	cop	_	_
 19	something	something	NOUN	NN	Number=Sing	16	xcomp	_	_
 20	that	that	SCONJ	IN	_	23	mark	_	_
-21	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	23	nsubj	_	_
+21	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	19	nsubj	_	_
 22	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	cop	_	_
 23	not	not	PART	RB	Polarity=Neg	19	advmod	_	_
-24	—	—	PUNCT	:	_	25	punct	_	_
-25	Park	Park	PROPN	NNP	Number=Sing	19	dep	_	_
-26	Jae-Sang	Jae-Sang	PROPN	NNP	Number=Sing	25	flat	_	_
+
+# s_type = frag
+1	—	—	PUNCT	:	_	2	punct	_	_
+2	Park	Park	PROPN	NNP	Number=Sing	0	root	_	_
+3	Jae-Sang	Jae-Sang	PROPN	NNP	Number=Sing	2	flat	_	_
 
 # s_type = decl
 1	With	with	ADP	IN	_	2	case	_	_
@@ -405,11 +409,13 @@
 3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	_	_
 4	.	.	PUNCT	.	_	2	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = imp
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	HAVE	have	VERB	VB	VerbForm=Fin	0	root	_	_
-3	YOUR	YOUR	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
-4	SAY	SAY	NOUN	NN	Number=Sing	2	obj	_	_
+1	HAVE	have	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	YOUR	YOUR	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	_	_
+3	SAY	SAY	NOUN	NN	Number=Sing	1	obj	_	_
 
 # s_type = wh
 1	Why	why	SCONJ	WRB	PronType=Int	4	mark	_	_
@@ -447,22 +453,24 @@
 12	UK	UK	PROPN	NNP	Number=Sing	13	compound	_	_
 13	newspaper	newspaper	NOUN	NN	Number=Sing	11	obj	_	_
 
-# s_type = decl
+# s_type = frag
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
-2	Daily	Daily	PROPN	NNP	Number=Sing	3	compound	_	_
-3	Telegraph	Telegraph	PROPN	NNP	Number=Sing	5	nsubj	_	_
-4	to	to	PART	TO	_	5	mark	_	_
-5	suggest	suggest	VERB	VB	VerbForm=Inf	0	root	_	_
-6	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	12	nsubj	_	_
-7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	_	_
-8	"	"	PUNCT	``	_	12	punct	_	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-10	most	most	ADV	RBS	_	11	advmod	_	_
-11	parodied	parody	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	_	_
-12	video	video	NOUN	NN	Number=Sing	5	ccomp	_	_
-13	ever	ever	ADV	RB	_	12	advmod	_	_
-14	"	"	PUNCT	''	_	12	punct	_	_
-15	.	.	PUNCT	.	_	5	punct	_	_
+2	Daily	Daily	PROPN	NNP	Number=Sing	3	amod	_	_
+3	Telegraph	Telegraph	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = inf
+1	to	to	PART	TO	_	2	mark	_	_
+2	suggest	suggest	VERB	VB	VerbForm=Inf	0	root	_	_
+3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	9	nsubj	_	_
+4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	_	_
+5	"	"	PUNCT	``	_	9	punct	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+7	most	most	ADV	RBS	_	8	advmod	_	_
+8	parodied	parody	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	_	_
+9	video	video	NOUN	NN	Number=Sing	2	ccomp	_	_
+10	ever	ever	ADV	RB	_	9	advmod	_	_
+11	"	"	PUNCT	''	_	9	punct	_	_
+12	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	Among	Among	ADP	IN	_	4	case	_	_

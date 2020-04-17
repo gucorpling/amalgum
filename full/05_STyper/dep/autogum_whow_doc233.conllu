@@ -251,10 +251,12 @@
 12	Over	over	ADP	IN	_	14	case	_	_
 13	One	One	NUM	CD	NumType=Card	14	nummod	_	_
 14	Year	Year	PROPN	NNP	Number=Sing	11	nmod	_	_
-15	=	=	SYM	SYM	_	4	parataxis	_	_
-16	Example	example	NOUN	NN	Number=Sing	17	compound	_	_
-17	Problem	Problem	NOUN	NN	Number=Sing	15	obj	_	_
-18	.	.	PUNCT	.	_	4	punct	_	_
+15	=	=	SYM	SYM	_	11	punct	_	_
+
+# s_type = frag
+1	Example	example	NOUN	NN	Number=Sing	2	compound	_	_
+2	Problem	Problem	NOUN	NN	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
@@ -289,11 +291,17 @@
 6	year	year	NOUN	NN	Number=Sing	1	obl:tmod	_	_
 7	as	as	SCONJ	IN	_	8	mark	_	_
 8	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	_	_
-9	:	:	PUNCT	:	_	12	punct	_	_
-10	Growth	Growth	PROPN	NNP	Number=Sing	11	compound	_	_
-11	Percentage	Percentage	PROPN	NNP	Number=Sing	12	compound	_	_
-12	≈	≈	SYM	SYM	_	8	parataxis	_	_
-13	=	=	SYM	SYM	_	12	punct	_	_
+9	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Growth	Growth	NOUN	NN	Number=Sing	2	compound	_	_
+2	Percentage	Percentage	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	≈	≈	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	=	=	SYM	SYM	_	0	root	_	_
 
 # s_type = ger
 1	Calculating	Calculating	VERB	VBG	VerbForm=Ger	0	root	_	_
@@ -624,36 +632,46 @@
 11	find	find	VERB	VB	VerbForm=Inf	1	advcl	_	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
 13	answer	answer	NOUN	NN	Number=Sing	11	obj	_	_
-14	:	:	PUNCT	:	_	18	punct	_	_
-15	Annual	annual	PROPN	NNP	Number=Sing	17	compound	_	_
-16	Growth	Growth	PROPN	NNP	Number=Sing	17	compound	_	_
-17	Rate	rate	PROPN	NNP	Number=Sing	18	compound	_	_
-18	≈	≈	SYM	SYM	_	19	nsubj	_	_
-19	=	=	SYM	SYM	_	13	parataxis	_	_
-20	59.67	@card@	NUM	CD	NumType=Card	21	nummod	_	_
-21	%	%	SYM	NN	Number=Sing	24	compound	_	_
-22	annual	annual	ADJ	JJ	Degree=Pos	24	amod	_	_
-23	growth	growth	NOUN	NN	Number=Sing	24	compound	_	_
-24	Note	note	NOUN	NN	Number=Sing	19	obj	_	_
-25	—	—	PUNCT	:	_	34	punct	_	_
-26	raising	raise	VERB	VBG	VerbForm=Ger	34	csubj	_	_
-27	a	a	DET	DT	Definite=Ind|PronType=Art	28	det	_	_
-28	value	value	NOUN	NN	Number=Sing	26	obj	_	_
-29	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	_	_
-30	to	to	ADP	TO	_	32	case	_	_
-31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	_	_
-32	exponent	exponent	NOUN	NN	Number=Sing	34	nsubj	_	_
-33	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	34	cop	_	_
-34	equivalent	equivalent	ADJ	JJ	Degree=Pos	24	acl:relcl	_	_
-35	to	to	PART	TO	_	36	mark	_	_
-36	taking	take	VERB	VBG	VerbForm=Ger	34	xcomp	_	_
-37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	_	_
-38	b	b	NOUN	NN	Number=Sing	40	compound	_	_
-39	th	th	ADJ	JJ	Degree=Pos	40	amod	_	_
-40	root	root	NOUN	NN	Number=Sing	36	obj	_	_
-41	of	of	ADP	IN	_	40	case	_	_
-42	a	a	DET	DT	Definite=Ind|PronType=Art	40	det	_	_
-43	.	.	PUNCT	.	_	1	punct	_	_
+14	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Annual	annual	NOUN	NN	Number=Sing	2	compound	_	_
+2	Growth	Growth	NOUN	NN	Number=Sing	3	compound	_	_
+3	Rate	rate	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	≈	≈	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	=	=	SYM	SYM	_	0	root	_	_
+2	59.67	@card@	NUM	CD	NumType=Card	3	nummod	_	_
+3	%	%	SYM	NN	Number=Sing	5	nmod:npmod	_	_
+4	annual	annual	NOUN	NN	Number=Sing	5	compound	_	_
+5	growth	growth	NOUN	NN	Number=Sing	1	obj	_	_
+
+# s_type = frag
+1	Note	note	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	—	—	PUNCT	:	_	10	punct	_	_
+2	raising	raise	VERB	VBG	VerbForm=Ger	10	csubj	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+4	value	value	NOUN	NN	Number=Sing	2	obj	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+6	to	to	ADP	TO	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	exponent	exponent	NOUN	NN	Number=Sing	2	obl	_	_
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	_
+10	equivalent	equivalent	ADJ	JJ	Degree=Pos	0	root	_	_
+11	to	to	PART	TO	_	12	mark	_	_
+12	taking	take	VERB	VBG	VerbForm=Ger	10	xcomp	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+14	b	b	NOUN	NN	Number=Sing	12	obj	_	_
+15	th	th	ADJ	JJ	Degree=Pos	16	amod	_	_
+16	root	root	NOUN	NN	Number=Sing	12	obj	_	_
+17	of	of	ADP	IN	_	16	fixed	_	_
+18	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	_	_
+19	.	.	PUNCT	.	_	10	punct	_	_
 
 # s_type = decl
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_

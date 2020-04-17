@@ -149,10 +149,12 @@
 # s_type = ger
 1	Signing	signing	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	Up	up	ADP	RP	_	1	compound:prt	_	_
-3	Complete	Complete	VERB	VB	VerbForm=Inf	1	xcomp	_	_
-4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-5	application	application	NOUN	NN	Number=Sing	3	obj	_	_
-6	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Complete	Complete	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	application	application	NOUN	NN	Number=Sing	1	obj	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	In	in	SCONJ	IN	_	4	mark	_	_
@@ -257,31 +259,33 @@
 9	U.S.	U.S.	PROPN	NNP	Number=Sing	5	nmod	_	_
 10	and	and	CCONJ	CC	_	12	cc	_	_
 11	16	@card@	NUM	CD	NumType=Card	12	nummod	_	_
-12	Euros	Euros	PROPN	NNP	Number=Plur	9	conj	_	_
+12	Euros	Euros	PROPN	NNP	Number=Plur	5	conj	_	_
 13	in	in	ADP	IN	_	15	case	_	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
 15	U.K.	U.K.	PROPN	NNP	Number=Sing	12	nmod	_	_
-16	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	_	_
-17	will	will	AUX	MD	VerbForm=Fin	18	aux	_	_
-18	need	need	VERB	VB	VerbForm=Inf	5	conj	_	_
-19	to	to	PART	TO	_	20	mark	_	_
-20	fill	fill	VERB	VB	VerbForm=Inf	18	xcomp	_	_
-21	out	out	ADP	RP	_	20	compound:prt	_	_
-22	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	_	_
-23	name	name	NOUN	NN	Number=Sing	20	obj	_	_
-24	,	,	PUNCT	,	_	25	punct	_	_
-25	address	address	VERB	VB	VerbForm=Inf	20	conj	_	_
-26	,	,	PUNCT	,	_	27	punct	_	_
-27	contact	contact	VERB	VB	VerbForm=Inf	20	conj	_	_
-28	information	information	NOUN	NN	Number=Sing	27	obj	_	_
-29	,	,	PUNCT	,	_	33	punct	_	_
-30	and	and	CCONJ	CC	_	33	cc	_	_
-31	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	33	nmod:poss	_	_
-32	preferred	prefer	ADJ	JJ	Degree=Pos	33	amod	_	_
-33	type	type	NOUN	NN	Number=Sing	28	conj	_	_
-34	of	of	ADP	IN	_	35	case	_	_
-35	communication	communication	NOUN	NN	Number=Sing	33	nmod	_	_
-36	.	.	PUNCT	.	_	5	punct	_	_
+
+# s_type = decl
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+2	will	will	AUX	MD	VerbForm=Fin	3	aux	_	_
+3	need	need	VERB	VB	VerbForm=Inf	0	root	_	_
+4	to	to	PART	TO	_	5	mark	_	_
+5	fill	fill	VERB	VB	VerbForm=Inf	3	xcomp	_	_
+6	out	out	ADP	RP	_	5	compound:prt	_	_
+7	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
+8	name	name	NOUN	NN	Number=Sing	5	obj	_	_
+9	,	,	PUNCT	,	_	10	punct	_	_
+10	address	address	VERB	VB	Mood=Imp|VerbForm=Inf	3	conj	_	_
+11	,	,	PUNCT	,	_	12	punct	_	_
+12	contact	contact	VERB	VB	VerbForm=Inf	10	conj	_	_
+13	information	information	NOUN	NN	Number=Sing	12	obj	_	_
+14	,	,	PUNCT	,	_	18	punct	_	_
+15	and	and	CCONJ	CC	_	18	cc	_	_
+16	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	_	_
+17	preferred	prefer	ADJ	JJ	Degree=Pos	18	amod	_	_
+18	type	type	NOUN	NN	Number=Sing	10	conj	_	_
+19	of	of	ADP	IN	_	20	case	_	_
+20	communication	communication	NOUN	NN	Number=Sing	18	nmod	_	_
+21	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = imp
 1	If	if	SCONJ	IN	_	5	mark	_	_
@@ -619,15 +623,17 @@
 14	order	order	NOUN	NN	Number=Sing	11	obj	_	_
 15	.	.	PUNCT	.	_	5	punct	_	_
 
-# s_type = other
+# s_type = ger
 1	Finding	find	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	Support	Support	NOUN	NN	Number=Sing	1	obj	_	_
-3	Go	Go	VERB	VB	VerbForm=Inf	1	ccomp	_	_
-4	to	to	ADP	TO	_	7	case	_	_
-5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
-6	local	local	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	meeting	meeting	NOUN	NN	Number=Sing	3	obl	_	_
-8	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	to	to	ADP	TO	_	5	case	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+4	local	local	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	meeting	meeting	NOUN	NN	Number=Sing	1	obl	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	For	for	ADP	IN	_	3	case	_	_
@@ -742,12 +748,14 @@
 9	same	same	ADJ	JJ	Degree=Pos	7	xcomp	_	_
 10	?	?	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = imp
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	Find	find	VERB	VB	VerbForm=Inf	0	root	_	_
-3	support	support	NOUN	NN	Number=Sing	2	obj	_	_
-4	online	online	ADV	RB	_	2	advmod	_	_
-5	.	.	PUNCT	.	_	2	punct	_	_
+1	Find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	support	support	NOUN	NN	Number=Sing	1	obj	_	_
+3	online	online	ADV	RB	_	1	advmod	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = sub
 1	Through	through	ADP	IN	_	4	case	_	_
@@ -841,25 +849,27 @@
 19	customers	customer	NOUN	NNS	Number=Plur	17	obj	_	_
 20	?	?	PUNCT	.	_	8	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = decl
-1	"	"	PUNCT	``	_	5	punct	_	_
-2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
-3	can	can	AUX	MD	VerbForm=Fin	5	aux	_	_
-4	also	also	ADV	RB	_	5	advmod	_	_
-5	find	find	VERB	VB	VerbForm=Inf	0	root	_	_
-6	online	online	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	training	training	NOUN	NN	Number=Sing	5	obj	_	_
-8	in	in	ADP	IN	_	13	case	_	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-10	“	"	PUNCT	``	_	13	punct	_	_
-11	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
-12	Learning	learning	PROPN	NNP	Number=Sing	13	compound	_	_
-13	Zone	Zone	PROPN	NNP	Number=Sing	5	obl	_	_
-14	”	"	PUNCT	''	_	13	punct	_	_
-15	in	in	ADP	IN	_	17	case	_	_
-16	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	_	_
-17	portal	portal	NOUN	NN	Number=Sing	5	obl	_	_
-18	.	.	PUNCT	.	_	5	punct	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+2	can	can	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	also	also	ADV	RB	_	4	advmod	_	_
+4	find	find	VERB	VB	VerbForm=Inf	0	root	_	_
+5	online	online	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	training	training	NOUN	NN	Number=Sing	4	obj	_	_
+7	in	in	ADP	IN	_	12	case	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+9	“	"	PUNCT	``	_	12	punct	_	_
+10	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
+11	Learning	learning	PROPN	NNP	Number=Sing	12	compound	_	_
+12	Zone	Zone	PROPN	NNP	Number=Sing	6	nmod	_	_
+13	”	"	PUNCT	''	_	12	punct	_	_
+14	in	in	ADP	IN	_	16	case	_	_
+15	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
+16	portal	portal	NOUN	NN	Number=Sing	4	obl	_	_
+17	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj:pass	_	_
@@ -967,17 +977,21 @@
 
 # s_type = frag
 1	https://www.avon.uk.com/help-support	https://www.avon.uk.com/help-support	NOUN	NN	Number=Sing	0	root	_	_
-2	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Selling	Selling	VERB	VBG	VerbForm=Ger	4	csubj	_	_
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
+
+# s_type = ger
+1	Selling	Selling	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	Avon	Avon	PROPN	NNP	Number=Sing	3	compound	_	_
-3	Products	product	PROPN	NNPS	Number=Plur	1	obj	_	_
-4	Set-up	set-up	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-5	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
-6	online	online	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	store	store	NOUN	NN	Number=Sing	4	obj	_	_
-8	.	.	PUNCT	.	_	4	punct	_	_
+3	Products	product	NOUN	NNS	Number=Plur	1	obj	_	_
+
+# s_type = imp
+1	Set-up	set-up	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
+3	online	online	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	store	store	NOUN	NN	Number=Sing	1	obj	_	_
+5	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Representatives	representative	NOUN	NNS	Number=Plur	3	nsubj:pass	_	_

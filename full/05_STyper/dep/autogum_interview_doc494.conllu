@@ -141,19 +141,21 @@
 22	Coast	Coast	PROPN	NNP	Number=Sing	18	nmod	_	_
 23	.	.	PUNCT	.	_	5	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	Queensland	Queensland	PROPN	NNP	Number=Sing	4	nmod:poss	_	_
 2	's	's	PART	POS	_	1	case	_	_
 3	unicameral	unicameral	ADJ	JJ	Degree=Pos	4	amod	_	_
-4	parliament	parliament	NOUN	NN	Number=Sing	8	nsubj	_	_
-5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
-6	up	up	ADP	RP	_	8	case	_	_
-7	for	for	ADP	IN	_	8	case	_	_
-8	election	election	NOUN	NN	Number=Sing	0	root	_	_
-9	on	on	ADP	IN	_	11	case	_	_
-10	March	March	PROPN	NNP	Number=Sing	11	compound	_	_
-11	21	@card@	NUM	CD	NumType=Card	8	nmod	_	_
-12	.	.	PUNCT	.	_	8	punct	_	_
+4	parliament	parliament	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+2	up	up	ADP	RP	_	4	case	_	_
+3	for	for	ADP	IN	_	4	case	_	_
+4	election	election	NOUN	NN	Number=Sing	0	root	_	_
+5	on	on	ADP	IN	_	7	case	_	_
+6	March	March	PROPN	NNP	Number=Sing	7	compound	_	_
+7	21	@card@	NUM	CD	NumType=Card	4	nmod	_	_
+8	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
@@ -201,12 +203,16 @@
 16	.	.	PUNCT	.	_	7	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Patrick	Patrick	PROPN	NNP	Number=Sing	0	root	_	_
-4	Gillett	Gillett	PROPN	NNP	Number=Sing	3	flat	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	)	)	PUNCT	-RRB-	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Patrick	Patrick	PROPN	NNP	Number=Sing	0	root	_	_
+2	Gillett	Gillett	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = wh
 1	Why	why	SCONJ	WRB	PronType=Int	4	mark	_	_
@@ -259,26 +265,32 @@
 5	policy	policy	NOUN	NN	Number=Sing	2	obj	_	_
 6	.	.	PUNCT	.	_	2	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	PG	PG	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	PG	PG	PROPN	NNP	Number=Sing	6	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	What	What	PRON	WP	PronType=Int	11	nsubj	_	_
-7	would	would	AUX	MD	VerbForm=Fin	6	aux	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
-9	three	three	NUM	CD	NumType=Card	11	nummod	_	_
-10	main	main	ADJ	JJ	Degree=Pos	11	amod	_	_
-11	policies	policy	NOUN	NNS	Number=Plur	0	root	_	_
-12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	14	nsubj	_	_
-13	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	aux	_	_
-14	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	11	acl:relcl	_	_
-15	into	into	ADP	IN	_	17	case	_	_
-16	this	this	DET	DT	Number=Sing|PronType=Dem	17	det	_	_
-17	election	election	NOUN	NN	Number=Sing	14	obl	_	_
-18	be	be	AUX	VB	VerbForm=Inf	14	cop	_	_
-19	?	?	PUNCT	.	_	11	punct	_	_
+1	What	What	PRON	WP	PronType=Int	6	nsubj	_	_
+2	would	would	AUX	MD	VerbForm=Fin	6	aux	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+4	three	three	NUM	CD	NumType=Card	6	nummod	_	_
+5	main	main	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	policies	policy	NOUN	NNS	Number=Plur	0	root	_	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
+8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	aux	_	_
+9	taking	take	VERB	VBG	Tense=Pres|VerbForm=Part	6	acl:relcl	_	_
+10	into	into	ADP	IN	_	12	case	_	_
+11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	_	_
+12	election	election	NOUN	NN	Number=Sing	9	obl	_	_
+13	be	be	AUX	VB	VerbForm=Inf	1	cop	_	_
+14	?	?	PUNCT	.	_	6	punct	_	_
 
 # s_type = decl
 1	What	What	PRON	WP	PronType=Int	3	obj	_	_
@@ -347,14 +359,16 @@
 16	such	such	ADJ	JJ	Degree=Pos	21	case	_	_
 17	as	as	ADP	IN	_	16	fixed	_	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
-19	Traveston	Traveston	PROPN	NNP	Number=Sing	21	compound	_	_
+19	Traveston	Traveston	PROPN	NNP	Number=Sing	20	compound	_	_
 20	Crossing	cross	PROPN	NNP	Number=Sing	21	compound	_	_
 21	Dam	Dam	PROPN	NNP	Number=Sing	15	nmod	_	_
-22	and	and	CCONJ	CC	_	25	cc	_	_
-23	locally	locally	ADV	RB	_	25	advmod	_	_
-24	,	,	PUNCT	,	_	23	punct	_	_
-25	education	education	NOUN	NN	Number=Sing	21	conj	_	_
-26	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	and	and	CCONJ	CC	_	4	cc	_	_
+2	locally	locally	ADV	RB	_	4	advmod	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+4	education	education	NOUN	NN	Number=Sing	0	root	_	_
+5	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = imp
 1	Give	give	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -382,19 +396,25 @@
 13	level	level	NOUN	NN	Number=Sing	3	conj	_	_
 14	.	.	PUNCT	.	_	2	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	PG	PG	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	PG	PG	PROPN	NNP	Number=Sing	9	vocative	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	How	how	SCONJ	WRB	PronType=Int	9	mark	_	_
-7	would	would	AUX	MD	VerbForm=Fin	9	aux	_	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-9	address	address	VERB	VB	VerbForm=Inf	0	root	_	_
-10	these	these	DET	DT	Number=Plur|PronType=Dem	11	det	_	_
-11	policies	policy	NOUN	NNS	Number=Plur	9	obj	_	_
-12	?	?	PUNCT	.	_	9	punct	_	_
+1	How	how	SCONJ	WRB	PronType=Int	4	mark	_	_
+2	would	would	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	address	address	VERB	VB	VerbForm=Inf	0	root	_	_
+5	these	these	DET	DT	Number=Plur|PronType=Dem	6	det	_	_
+6	policies	policy	NOUN	NNS	Number=Plur	4	obj	_	_
+7	?	?	PUNCT	.	_	4	punct	_	_
 
 # s_type = imp
 1	Basically	basically	ADV	RB	_	2	advmod	_	_
@@ -460,27 +480,33 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
 13	electorate	electorate	NOUN	NN	Number=Sing	10	nmod	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	PG	PG	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	PG	PG	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-7	recently	recently	ADV	RB	_	8	advmod	_	_
-8	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-9	comment	comment	NOUN	NN	Number=Sing	8	obj	_	_
-10	to	to	ADP	TO	_	14	case	_	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
-12	Sunshine	Sunshine	PROPN	NNP	Number=Sing	14	compound	_	_
-13	Coast	Coast	PROPN	NNP	Number=Sing	14	compound	_	_
-14	Daily	Daily	PROPN	NNP	Number=Sing	8	obl	_	_
-15	about	about	ADP	IN	_	17	case	_	_
-16	uranium	uranium	NOUN	NN	Number=Sing	17	compound	_	_
-17	mining	mining	NOUN	NN	Number=Sing	14	nmod	_	_
-18	in	in	ADP	IN	_	19	case	_	_
-19	Queensland	Queensland	PROPN	NNP	Number=Sing	17	nmod	_	_
-20	.	.	PUNCT	.	_	8	punct	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+2	recently	recently	ADV	RB	_	3	advmod	_	_
+3	gave	give	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	comment	comment	NOUN	NN	Number=Sing	3	obj	_	_
+5	to	to	ADP	TO	_	9	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+7	Sunshine	Sunshine	PROPN	NNP	Number=Sing	9	compound	_	_
+8	Coast	Coast	PROPN	NNP	Number=Sing	9	compound	_	_
+9	Daily	Daily	PROPN	NNP	Number=Sing	3	obl	_	_
+10	about	about	ADP	IN	_	12	case	_	_
+11	uranium	uranium	NOUN	NN	Number=Sing	12	compound	_	_
+12	mining	mining	NOUN	NN	Number=Sing	9	nmod	_	_
+13	in	in	ADP	IN	_	14	case	_	_
+14	Queensland	Queensland	PROPN	NNP	Number=Sing	12	nmod	_	_
+15	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = q
 1	Does	do	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
@@ -568,25 +594,31 @@
 16	Gillett	Gillett	PROPN	NNP	Number=Sing	15	flat	_	_
 17	.	.	PUNCT	.	_	4	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	PG	PG	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	PG	PG	PROPN	NNP	Number=Sing	9	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Which	which	PRON	WDT	PronType=Rel	12	obj	_	_
-7	renewable	renewable	ADJ	JJ	Degree=Pos	9	amod	_	_
-8	energy	energy	NOUN	NN	Number=Sing	9	compound	_	_
-9	technology	technology	NOUN	NN	Number=Sing	12	nsubj	_	_
-10	would	would	AUX	MD	VerbForm=Fin	12	aux	_	_
-11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	_	_
-12	prefer	prefer	VERB	VB	VerbForm=Inf	0	root	_	_
-13	to	to	PART	TO	_	14	mark	_	_
-14	see	see	VERB	VB	VerbForm=Inf	12	xcomp	_	_
-15	invested	invest	VERB	VBN	Tense=Past|VerbForm=Part	14	xcomp	_	_
-16	in	in	ADP	IN	_	17	case	_	_
-17	most	most	ADJ	JJS	Degree=Sup	15	obl	_	_
-18	?	?	PUNCT	.	_	12	punct	_	_
+1	Which	which	DET	WDT	PronType=Int	4	det	_	_
+2	renewable	renewable	ADJ	JJ	Degree=Pos	4	amod	_	_
+3	energy	energy	NOUN	NN	Number=Sing	4	compound	_	_
+4	technology	technology	NOUN	NN	Number=Sing	7	obj	_	_
+5	would	would	AUX	MD	VerbForm=Fin	7	aux	_	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
+7	prefer	prefer	VERB	VB	VerbForm=Inf	0	root	_	_
+8	to	to	PART	TO	_	9	mark	_	_
+9	see	see	VERB	VB	VerbForm=Inf	7	xcomp	_	_
+10	invested	invest	VERB	VBN	Tense=Past|VerbForm=Part	9	xcomp	_	_
+11	in	in	ADP	IN	_	12	case	_	_
+12	most	most	ADJ	JJS	Degree=Sup	10	obl	_	_
+13	?	?	PUNCT	.	_	7	punct	_	_
 
 # s_type = frag
 1	Solar	Solar	NOUN	NN	Number=Sing	0	root	_	_
@@ -670,49 +702,55 @@
 41	.	.	PUNCT	.	_	14	punct	_	_
 42	”	"	PUNCT	''	_	14	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	PG	PG	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	PG	PG	PROPN	NNP	Number=Sing	9	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	In	in	ADP	IN	_	9	case	_	_
-7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
-8	recent	recent	ADJ	JJ	Degree=Pos	9	amod	_	_
-9	article	article	NOUN	NN	Number=Sing	11	obl	_	_
-10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
-11	wrote	write	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-12	about	about	ADP	IN	_	15	case	_	_
-13	McDonald	McDonald	PROPN	NNP	Number=Sing	15	nmod:poss	_	_
-14	’s	's	PART	POS	_	13	case	_	_
-15	appeal	appeal	NOUN	NN	Number=Sing	11	obl	_	_
-16	against	against	ADP	IN	_	19	case	_	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	_	_
-18	council	council	NOUN	NN	Number=Sing	19	compound	_	_
-19	decision	decision	NOUN	NN	Number=Sing	15	nmod	_	_
-20	,	,	PUNCT	,	_	22	punct	_	_
-21	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	_	_
-22	commented	comment	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	conj	_	_
-23	that	that	SCONJ	IN	_	33	mark	_	_
-24	Labor	labor	PROPN	NNP	Number=Sing	33	nsubj	_	_
-25	and	and	CCONJ	CC	_	27	cc	_	_
-26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	_	_
-27	LNP	LNP	PROPN	NNP	Number=Sing	24	conj	_	_
-28	[	[	PUNCT	-LSB-	_	31	punct	_	_
-29	Liberal	Liberal	PROPN	NNP	Number=Sing	31	compound	_	_
-30	National	National	PROPN	NNP	Number=Sing	31	amod	_	_
-31	party	party	NOUN	NN	Number=Sing	24	appos	_	_
-32	]	]	PUNCT	-RSB-	_	31	punct	_	_
-33	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	ccomp	_	_
-34	a	a	DET	DT	Definite=Ind|PronType=Art	36	det	_	_
-35	long	long	ADJ	JJ	Degree=Pos	36	amod	_	_
-36	history	history	NOUN	NN	Number=Sing	33	obj	_	_
-37	of	of	SCONJ	IN	_	39	mark	_	_
-38	being	be	AUX	VBG	VerbForm=Ger	39	cop	_	_
-39	pro	pro	ADJ	JJ	Degree=Pos	36	acl	_	_
-40	big	big	ADJ	JJ	Degree=Pos	41	amod	_	_
-41	business	business	NOUN	NN	Number=Sing	39	obj	_	_
-42	.	.	PUNCT	.	_	11	punct	_	_
+1	In	in	ADP	IN	_	4	case	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+3	recent	recent	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	article	article	NOUN	NN	Number=Sing	6	obl	_	_
+5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
+6	wrote	write	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+7	about	about	ADP	IN	_	10	case	_	_
+8	McDonald	McDonald	PROPN	NNP	Number=Sing	10	nmod:poss	_	_
+9	’s	's	PART	POS	_	8	case	_	_
+10	appeal	appeal	NOUN	NN	Number=Sing	6	obl	_	_
+11	against	against	ADP	IN	_	14	case	_	_
+12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
+13	council	council	NOUN	NN	Number=Sing	14	compound	_	_
+14	decision	decision	NOUN	NN	Number=Sing	10	nmod	_	_
+15	,	,	PUNCT	,	_	17	punct	_	_
+16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	_	_
+17	commented	comment	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	conj	_	_
+18	that	that	SCONJ	IN	_	28	mark	_	_
+19	Labor	labor	PROPN	NNP	Number=Sing	28	nsubj	_	_
+20	and	and	CCONJ	CC	_	22	cc	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
+22	LNP	LNP	PROPN	NNP	Number=Sing	19	conj	_	_
+23	[	[	PUNCT	-LSB-	_	26	punct	_	_
+24	Liberal	Liberal	PROPN	NNP	Number=Sing	26	compound	_	_
+25	National	National	PROPN	NNP	Number=Sing	26	amod	_	_
+26	party	party	NOUN	NN	Number=Sing	19	appos	_	_
+27	]	]	PUNCT	-RSB-	_	26	punct	_	_
+28	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	ccomp	_	_
+29	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	_	_
+30	long	long	ADJ	JJ	Degree=Pos	31	amod	_	_
+31	history	history	NOUN	NN	Number=Sing	28	obj	_	_
+32	of	of	SCONJ	IN	_	34	mark	_	_
+33	being	be	AUX	VBG	VerbForm=Ger	34	cop	_	_
+34	pro	pro	ADJ	JJ	Degree=Pos	31	acl	_	_
+35	big	big	ADJ	JJ	Degree=Pos	36	amod	_	_
+36	business	business	NOUN	NN	Number=Sing	34	obj	_	_
+37	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = q
 1	Would	would	AUX	MD	VerbForm=Fin	4	aux	_	_
@@ -771,22 +809,28 @@
 6	directing	direct	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	_	_
 7	policy	policy	NOUN	NN	Number=Sing	6	obj	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	PG	PG	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	PG	PG	PROPN	NNP	Number=Sing	8	compound	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Should	should	AUX	MD	VerbForm=Fin	8	aux	_	_
-7	big	big	ADJ	JJ	Degree=Pos	8	amod	_	_
-8	business	business	NOUN	NN	Number=Sing	0	root	_	_
-9	back	back	ADV	RB	_	8	advmod	_	_
-10	off	off	ADP	RP	_	8	compound:prt	_	_
-11	and	and	CCONJ	CC	_	12	cc	_	_
-12	respect	respect	VERB	VB	VerbForm=Inf	8	conj	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
-14	community	community	NOUN	NN	Number=Sing	12	obj	_	_
-15	?	?	PUNCT	.	_	8	punct	_	_
+1	Should	should	AUX	MD	VerbForm=Fin	3	aux	_	_
+2	big	big	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	business	business	NOUN	NN	Number=Sing	0	root	_	_
+4	back	back	ADV	RB	_	3	advmod	_	_
+5	off	off	ADP	RP	_	3	compound:prt	_	_
+6	and	and	CCONJ	CC	_	7	cc	_	_
+7	respect	respect	VERB	VB	VerbForm=Inf	4	conj	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	community	community	NOUN	NN	Number=Sing	7	obj	_	_
+10	?	?	PUNCT	.	_	3	punct	_	_
 
 # s_type = sub
 1	Should	should	AUX	MD	VerbForm=Fin	3	aux	_	_

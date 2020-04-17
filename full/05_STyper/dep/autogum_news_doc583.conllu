@@ -7,12 +7,14 @@
 6	Marta	Marta	PROPN	NNP	Number=Sing	5	flat	_	_
 7	Gómez	Gómez	PROPN	NNP	Number=Sing	6	flat	_	_
 
-# s_type = decl
-1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	2	nsubj	_	_
-2	interviews	interview	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	Marta	Marta	PROPN	NNP	Number=Sing	2	obj	_	_
-4	Gomez	Gomez	PROPN	NNP	Number=Sing	3	flat	_	_
-5	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	interviews	interview	NOUN	NNS	Number=Plur	0	root	_	_
+2	Marta	Marta	PROPN	NNP	Number=Sing	1	flat	_	_
+3	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
@@ -82,38 +84,44 @@
 35	Canada	Canada	PROPN	NNP	Number=Sing	33	appos	_	_
 36	.	.	PUNCT	.	_	9	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Wikinews	Wikinews	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	This	this	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	_	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
-8	Laura	Laura	PROPN	NNP	Number=Sing	0	root	_	_
-9	Hale	hale	PROPN	NNP	Number=Sing	8	flat	_	_
-10	,	,	PUNCT	,	_	13	punct	_	_
-11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	_	_
-12	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	_	_
-13	interviewing	interview	VERB	VBG	Tense=Pres|VerbForm=Part	8	acl:relcl	_	_
-14	Marta	Marta	PROPN	NNP	Number=Sing	13	obj	_	_
-15	Gómez	Gómez	PROPN	NNP	Number=Sing	14	flat	_	_
-16	,	,	PUNCT	,	_	20	punct	_	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	_	_
-18	Spanish	Spanish	ADJ	JJ	Degree=Pos	20	amod	_	_
-19	Paralympic	Paralympic	ADJ	JJ	Degree=Pos	20	amod	_	_
-20	swimmer	swimmer	NOUN	NN	Number=Sing	14	appos	_	_
-21	going	go	VERB	VBG	VerbForm=Ger	20	acl	_	_
-22	to	to	ADP	TO	_	28	case	_	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	28	det	_	_
-24	2013	@card@	NUM	CD	NumType=Card	28	compound	_	_
-25	IPC	IPC	PROPN	NNP	Number=Sing	28	compound	_	_
-26	Swimming	Swim	PROPN	NNP	Number=Sing	28	compound	_	_
-27	World	World	PROPN	NNP	Number=Sing	28	compound	_	_
-28	Championships	Championship	NOUN	NNS	Number=Plur	21	obl	_	_
-29	in	in	ADP	IN	_	30	case	_	_
-30	Montreal	Montreal	PROPN	NNP	Number=Sing	28	nmod	_	_
-31	.	.	PUNCT	.	_	8	punct	_	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	_	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+3	Laura	Laura	PROPN	NNP	Number=Sing	0	root	_	_
+4	Hale	hale	PROPN	NNP	Number=Sing	3	flat	_	_
+5	,	,	PUNCT	,	_	8	punct	_	_
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	_
+7	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
+8	interviewing	interview	VERB	VBG	Tense=Pres|VerbForm=Part	3	acl:relcl	_	_
+9	Marta	Marta	PROPN	NNP	Number=Sing	8	obj	_	_
+10	Gómez	Gómez	PROPN	NNP	Number=Sing	9	flat	_	_
+11	,	,	PUNCT	,	_	15	punct	_	_
+12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
+13	Spanish	Spanish	ADJ	JJ	Degree=Pos	15	amod	_	_
+14	Paralympic	Paralympic	ADJ	JJ	Degree=Pos	15	amod	_	_
+15	swimmer	swimmer	NOUN	NN	Number=Sing	9	appos	_	_
+16	going	go	VERB	VBG	VerbForm=Ger	15	acl	_	_
+17	to	to	ADP	TO	_	23	case	_	_
+18	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
+19	2013	@card@	NUM	CD	NumType=Card	23	compound	_	_
+20	IPC	IPC	PROPN	NNP	Number=Sing	23	compound	_	_
+21	Swimming	Swim	PROPN	NNP	Number=Sing	23	compound	_	_
+22	World	World	PROPN	NNP	Number=Sing	23	compound	_	_
+23	Championships	Championship	NOUN	NNS	Number=Plur	16	obl	_	_
+24	in	in	ADP	IN	_	25	case	_	_
+25	Montreal	Montreal	PROPN	NNP	Number=Sing	23	nmod	_	_
+26	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = wh
 1	Are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
@@ -132,31 +140,33 @@
 14	in	in	ADP	IN	_	7	case	_	_
 15	?	?	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	6	punct	_	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
-5	'll	will	AUX	MD	VerbForm=Fin	6	aux	_	_
-6	swim	swim	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-8	100	@card@	NUM	CD	NumType=Card	9	nummod	_	_
-9	meter	meter	NOUN	NN	Number=Sing	6	obj	_	_
-10	and	and	CCONJ	CC	_	12	cc	_	_
-11	400	@card@	NUM	CD	NumType=Card	12	nummod	_	_
-12	freestyle	freestyle	NOUN	NN	Number=Sing	9	conj	_	_
-13	,	,	PUNCT	,	_	18	punct	_	_
-14	and	and	CCONJ	CC	_	18	cc	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-16	200	@card@	NUM	CD	NumType=Card	18	nummod	_	_
-17	individual	individual	ADJ	JJ	Degree=Pos	18	amod	_	_
-18	medley	medley	NOUN	NN	Number=Sing	9	conj	_	_
-19	.	.	PUNCT	.	_	6	punct	_	_
-20	(	(	PUNCT	-LRB-	_	23	punct	_	_
-21	(	(	PUNCT	-LRB-	_	23	punct	_	_
-22	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	23	amod	_	_
-23	language	language	NOUN	NN	Number=Sing	18	appos	_	_
-24	:	:	PUNCT	:	_	6	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	4	punct	_	_
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+3	'll	will	AUX	MD	VerbForm=Fin	4	aux	_	_
+4	swim	swim	VERB	VB	VerbForm=Inf	0	root	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+6	100	@card@	NUM	CD	NumType=Card	7	nummod	_	_
+7	meter	meter	NOUN	NN	Number=Sing	4	obj	_	_
+8	and	and	CCONJ	CC	_	10	cc	_	_
+9	400	@card@	NUM	CD	NumType=Card	10	nummod	_	_
+10	freestyle	freestyle	NOUN	NN	Number=Sing	7	conj	_	_
+11	,	,	PUNCT	,	_	16	punct	_	_
+12	and	and	CCONJ	CC	_	16	cc	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
+14	200	@card@	NUM	CD	NumType=Card	16	nummod	_	_
+15	individual	individual	ADJ	JJ	Degree=Pos	16	amod	_	_
+16	medley	medley	NOUN	NN	Number=Sing	7	conj	_	_
+17	.	.	PUNCT	.	_	4	punct	_	_
+18	(	(	PUNCT	-LRB-	_	21	punct	_	_
+19	(	(	PUNCT	-LRB-	_	21	punct	_	_
+20	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	21	amod	_	_
+21	language	language	NOUN	NN	Number=Sing	16	appos	_	_
+22	:	:	PUNCT	:	_	4	punct	_	_
 
 # s_type = frag
 1	‍Voy	‍Voy	ADP	IN	_	4	case	_	_
@@ -178,101 +188,117 @@
 17	giro	giro	NOUN	NN	Number=Sing	9	conj	_	_
 18	.	.	PUNCT	.	_	9	punct	_	_
 
-# s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	won	win	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-9	any	any	DET	DT	_	10	det	_	_
-10	medals	medal	NOUN	NNS	Number=Plur	8	obj	_	_
-11	at	at	ADP	IN	_	13	case	_	_
-12	previous	previous	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	championships	championship	NOUN	NNS	Number=Plur	8	obl	_	_
-14	?	?	PUNCT	.	_	8	punct	_	_
-15	(	(	PUNCT	-LRB-	_	18	punct	_	_
-16	(	(	PUNCT	-LRB-	_	18	punct	_	_
-17	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	18	amod	_	_
-18	language	language	NOUN	NN	Number=Sing	8	parataxis	_	_
-19	:	:	PUNCT	:	_	20	punct	_	_
-20	‍¿Vas	‍¿Vas	X	FW	_	18	dep	_	_
-21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	_	_
-22	ganar	ganar	X	FW	_	20	nmod:npmod	_	_
-23	alguna	alguna	X	FW	_	24	case	_	_
-24	medalla	medalla	X	FW	_	22	nmod	_	_
-25	?	?	PUNCT	.	_	8	punct	_	_
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
 
-# s_type = decl
-1	Marta	Marta	PROPN	NNP	Number=Sing	15	nsubj	_	_
-2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	5	punct	_	_
-4	In	in	ADP	IN	_	5	case	_	_
-5	2011	@card@	NUM	CD	NumType=Card	15	obl	_	_
-6	,	,	PUNCT	,	_	10	punct	_	_
-7	at	at	ADP	IN	_	10	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-9	European	European	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	Championships	Championship	NOUN	NNS	Number=Plur	1	nmod	_	_
-11	in	in	ADP	IN	_	12	case	_	_
-12	Berlin	Berlin	PROPN	NNP	Number=Sing	10	nmod	_	_
-13	,	,	PUNCT	,	_	1	punct	_	_
-14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	_	_
-15	won	win	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-16	3	3	NUM	CD	NumType=Card	17	nummod	_	_
-17	bronze	bronze	NOUN	NN	Number=Sing	15	obj	_	_
-18	.	.	PUNCT	.	_	15	punct	_	_
-19	(	(	PUNCT	-LRB-	_	22	punct	_	_
-20	(	(	PUNCT	-LRB-	_	22	punct	_	_
-21	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	22	amod	_	_
-22	language	language	NOUN	NN	Number=Sing	15	parataxis	_	_
-23	:	:	PUNCT	:	_	24	punct	_	_
-24	‍En	‍En	X	FW	_	22	dep	_	_
-25	Europeo	Europeo	X	FW	_	24	compound	_	_
-26	2011	@card@	NUM	CD	NumType=Card	24	nummod	_	_
-27	,	,	PUNCT	,	_	29	punct	_	_
-28	en	en	X	FW	_	29	cc	_	_
-29	Berlín	Berlín	X	FW	_	24	conj	_	_
-30	,	,	PUNCT	,	_	31	punct	_	_
-31	gané	gané	X	FW	_	29	nmod:npmod	_	_
-32	3	3	NUM	CD	NumType=Card	33	nummod	_	_
-33	bronces	bronce	NOUN	NNS	Number=Plur	22	conj	_	_
-34	.	.	PUNCT	.	_	15	punct	_	_
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	think	think	VERB	VB	Tense=Pres|VerbForm=Inf	0	root	_	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	_
-10	will	will	AUX	MD	VerbForm=Fin	11	aux	_	_
-11	win	win	VERB	VB	VerbForm=Inf	8	ccomp	_	_
-12	any	any	DET	DT	_	13	det	_	_
-13	medals	medal	NOUN	NNS	Number=Plur	11	obj	_	_
-14	in	in	ADP	IN	_	15	case	_	_
-15	Montreal	Montreal	PROPN	NNP	Number=Sing	13	nmod	_	_
-16	?	?	PUNCT	.	_	11	punct	_	_
-17	(	(	PUNCT	-LRB-	_	20	punct	_	_
-18	(	(	PUNCT	-LRB-	_	20	punct	_	_
-19	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	20	amod	_	_
-20	language	language	NOUN	NN	Number=Sing	8	parataxis	_	_
-21	:	:	PUNCT	:	_	22	punct	_	_
-22	‍¿Tienes	CCTienes	X	FW	_	20	appos	_	_
-23	medalla	medalla	X	FW	_	22	compound	_	_
-24	en	en	X	FW	_	25	case	_	_
-25	Montreal	Montreal	PROPN	NNP	Number=Sing	23	nmod	_	_
-26	?	?	PUNCT	.	_	8	punct	_	_
+1	Have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+3	won	win	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+4	any	any	DET	DT	_	5	det	_	_
+5	medals	medal	NOUN	NNS	Number=Plur	3	obj	_	_
+6	at	at	ADP	IN	_	8	case	_	_
+7	previous	previous	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	championships	championship	NOUN	NNS	Number=Plur	5	nmod	_	_
+9	?	?	PUNCT	.	_	3	punct	_	_
+10	(	(	PUNCT	-LRB-	_	13	punct	_	_
+11	(	(	PUNCT	-LRB-	_	13	punct	_	_
+12	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	13	amod	_	_
+13	language	language	NOUN	NN	Number=Sing	3	parataxis	_	_
+14	:	:	PUNCT	:	_	15	punct	_	_
+15	‍¿Vas	‍¿Vas	X	FW	_	13	dep	_	_
+16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	_	_
+17	ganar	ganar	X	FW	_	15	nmod:npmod	_	_
+18	alguna	alguna	X	FW	_	19	case	_	_
+19	medalla	medalla	X	FW	_	17	nmod	_	_
+20	?	?	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	13	punct	_	_
+2	In	in	ADP	IN	_	3	case	_	_
+3	2011	@card@	NUM	CD	NumType=Card	13	obl	_	_
+4	,	,	PUNCT	,	_	3	punct	_	_
+5	at	at	ADP	IN	_	8	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+7	European	European	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	Championships	Championship	NOUN	NNS	Number=Plur	13	obl	_	_
+9	in	in	ADP	IN	_	10	case	_	_
+10	Berlin	Berlin	PROPN	NNP	Number=Sing	8	nmod	_	_
+11	,	,	PUNCT	,	_	8	punct	_	_
+12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	_	_
+13	won	win	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+14	3	3	NUM	CD	NumType=Card	15	nummod	_	_
+15	bronze	bronze	NOUN	NN	Number=Sing	13	obj	_	_
+16	.	.	PUNCT	.	_	13	punct	_	_
+17	(	(	PUNCT	-LRB-	_	20	punct	_	_
+18	(	(	PUNCT	-LRB-	_	20	punct	_	_
+19	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	20	amod	_	_
+20	language	language	NOUN	NN	Number=Sing	13	parataxis	_	_
+21	:	:	PUNCT	:	_	22	punct	_	_
+22	‍En	‍En	X	FW	_	20	dep	_	_
+23	Europeo	Europeo	X	FW	_	22	compound	_	_
+24	2011	@card@	NUM	CD	NumType=Card	22	nummod	_	_
+25	,	,	PUNCT	,	_	27	punct	_	_
+26	en	en	X	FW	_	27	cc	_	_
+27	Berlín	Berlín	X	FW	_	22	conj	_	_
+28	,	,	PUNCT	,	_	29	punct	_	_
+29	gané	gané	X	FW	_	27	nmod:npmod	_	_
+30	3	3	NUM	CD	NumType=Card	31	nummod	_	_
+31	bronces	bronce	NOUN	NNS	Number=Plur	20	punct	_	_
+32	.	.	PUNCT	.	_	13	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = q
+1	Do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+3	think	think	VERB	VB	VerbForm=Inf	0	root	_	_
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
+5	will	will	AUX	MD	VerbForm=Fin	6	aux	_	_
+6	win	win	VERB	VB	VerbForm=Inf	3	ccomp	_	_
+7	any	any	DET	DT	_	8	det	_	_
+8	medals	medal	NOUN	NNS	Number=Plur	6	obj	_	_
+9	in	in	ADP	IN	_	10	case	_	_
+10	Montreal	Montreal	PROPN	NNP	Number=Sing	8	nmod	_	_
+11	?	?	PUNCT	.	_	6	punct	_	_
+12	(	(	PUNCT	-LRB-	_	15	punct	_	_
+13	(	(	PUNCT	-LRB-	_	15	punct	_	_
+14	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	15	amod	_	_
+15	language	language	NOUN	NN	Number=Sing	3	parataxis	_	_
+16	:	:	PUNCT	:	_	17	punct	_	_
+17	‍¿Tienes	CCTienes	X	FW	_	15	appos	_	_
+18	medalla	medalla	X	FW	_	17	compound	_	_
+19	en	en	X	FW	_	20	case	_	_
+20	Montreal	Montreal	PROPN	NNP	Number=Sing	18	nmod	_	_
+21	?	?	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
+2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
@@ -373,59 +399,75 @@
 96	claro	claro	X	FW	_	95	compound	_	_
 97	.	.	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-7	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
-8	competed	compet	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-9	at	at	ADP	IN	_	12	case	_	_
-10	previous	previous	ADJ	JJ	Degree=Pos	12	amod	_	_
-11	Paralympic	Paralympic	PROPN	NNP	Number=Sing	12	amod	_	_
-12	Games	Games	PROPN	NNPS	Number=Plur	8	obl	_	_
-13	?	?	PUNCT	.	_	8	punct	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+2	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+3	competed	compet	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+4	at	at	ADP	IN	_	7	case	_	_
+5	previous	previous	ADJ	JJ	Degree=Pos	7	amod	_	_
+6	Paralympic	Paralympic	PROPN	NNP	Number=Sing	7	amod	_	_
+7	Games	Games	PROPN	NNPS	Number=Plur	3	obl	_	_
+8	?	?	PUNCT	.	_	3	punct	_	_
 
 # s_type = q
 1	In	in	ADP	IN	_	2	case	_	_
 2	London	London	PROPN	NNP	Number=Sing	0	root	_	_
 3	?	?	PUNCT	.	_	2	punct	_	_
 
-# s_type = intj
+# s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Yes	yes	INTJ	UH	_	1	dep	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
-6	(	(	PUNCT	-LRB-	_	9	punct	_	_
-7	(	(	PUNCT	-LRB-	_	9	punct	_	_
-8	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	9	amod	_	_
-9	language	language	NOUN	NN	Number=Sing	1	parataxis	_	_
-10	:	:	PUNCT	:	_	11	punct	_	_
-11	‍Sí	‍Sí	PROPN	NNP	Number=Sing	9	dep	_	_
-12	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = intj
+1	:	:	PUNCT	:	_	2	punct	_	_
+2	Yes	yes	INTJ	UH	_	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
+4	(	(	PUNCT	-LRB-	_	7	punct	_	_
+5	(	(	PUNCT	-LRB-	_	7	punct	_	_
+6	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	language	language	NOUN	NN	Number=Sing	2	parataxis	_	_
+8	:	:	PUNCT	:	_	9	punct	_	_
+9	‍Sí	‍Sí	PROPN	NNP	Number=Sing	7	dep	_	_
+10	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	10	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	And	and	CCONJ	CC	_	10	cc	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	_	_
-8	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	10	aux	_	_
-9	n't	n't	PART	RB	Polarity=Neg	10	advmod	_	_
-10	win	win	VERB	VB	VerbForm=Inf	0	root	_	_
-11	any	any	DET	DT	_	12	det	_	_
-12	medals	medal	NOUN	NNS	Number=Plur	10	obj	_	_
-13	?	?	PUNCT	.	_	10	punct	_	_
+1	And	and	CCONJ	CC	_	5	cc	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
+3	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	5	aux	_	_
+4	n't	n't	PART	RB	Polarity=Neg	5	advmod	_	_
+5	win	win	VERB	VB	VerbForm=Inf	0	root	_	_
+6	any	any	DET	DT	_	7	det	_	_
+7	medals	medal	NOUN	NNS	Number=Plur	5	obj	_	_
+8	?	?	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	No	no	INTJ	UH	_	6	discourse	_	_
@@ -451,49 +493,57 @@
 21	Londres	Londres	X	FW	_	19	nmod	_	_
 22	.	.	PUNCT	.	_	6	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	What	What	PRON	WP	PronType=Int	9	nsubj	_	_
-7	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	difference	difference	NOUN	NN	Number=Sing	0	root	_	_
-10	preparing	prepare	VERB	VBG	VerbForm=Ger	9	acl	_	_
-11	for	for	ADP	IN	_	12	case	_	_
-12	London	London	PROPN	NNP	Number=Sing	10	obl	_	_
-13	to	to	ADP	TO	_	16	case	_	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-15	World	World	PROPN	NNP	Number=Sing	16	compound	_	_
-16	Championships	Championship	NOUN	NNS	Number=Plur	12	nmod	_	_
-17	?	?	PUNCT	.	_	21	punct	_	_
-18	(	(	PUNCT	-LRB-	_	21	punct	_	_
-19	(	(	PUNCT	-LRB-	_	21	punct	_	_
-20	es))Spanish	es))Spanish	NOUN	NN	Number=Sing	21	compound	_	_
-21	language	language	NOUN	NN	Number=Sing	9	dep	_	_
-22	:	:	PUNCT	:	_	23	punct	_	_
-23	‍¿Cuál	‍¿Cuál	X	FW	_	21	compound	_	_
-24	es	es	X	FW	_	23	compound	_	_
-25	la	la	X	FW	_	24	compound	_	_
-26	diferencia	diferencia	X	FW	_	24	compound	_	_
-27	de	de	X	FW	_	26	compound	_	_
-28	la	la	X	FW	_	29	compound	_	_
-29	preparación	preparación	X	FW	_	26	compound	_	_
-30	para	para	X	FW	_	29	compound	_	_
-31	Londres	Londres	X	FW	_	29	compound	_	_
-32	para	para	X	FW	_	31	compound	_	_
-33	el	el	X	FW	_	34	compound	_	_
-34	Campeonato	Campeonato	X	FW	_	31	dep	_	_
-35	del	del	X	FW	_	36	case	_	_
-36	Mundo	Mundo	X	FW	_	34	nmod	_	_
-37	?	?	PUNCT	.	_	9	punct	_	_
+1	What	What	PRON	WP	PronType=Int	4	nsubj	_	_
+2	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+4	difference	difference	NOUN	NN	Number=Sing	0	root	_	_
+5	preparing	prepare	VERB	VBG	VerbForm=Ger	4	acl	_	_
+6	for	for	ADP	IN	_	7	case	_	_
+7	London	London	PROPN	NNP	Number=Sing	5	obl	_	_
+8	to	to	ADP	TO	_	11	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+10	World	World	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Championships	Championship	NOUN	NNS	Number=Plur	5	obl	_	_
+12	?	?	PUNCT	.	_	16	punct	_	_
+13	(	(	PUNCT	-LRB-	_	16	punct	_	_
+14	(	(	PUNCT	-LRB-	_	16	punct	_	_
+15	es))Spanish	es))Spanish	NOUN	NN	Number=Sing	16	compound	_	_
+16	language	language	NOUN	NN	Number=Sing	4	dep	_	_
+17	:	:	PUNCT	:	_	18	punct	_	_
+18	‍¿Cuál	‍¿Cuál	X	FW	_	16	compound	_	_
+19	es	es	X	FW	_	18	compound	_	_
+20	la	la	X	FW	_	19	compound	_	_
+21	diferencia	diferencia	X	FW	_	19	compound	_	_
+22	de	de	X	FW	_	21	compound	_	_
+23	la	la	X	FW	_	21	compound	_	_
+24	preparación	preparación	X	FW	_	21	compound	_	_
+25	para	para	X	FW	_	24	compound	_	_
+26	Londres	Londres	X	FW	_	24	compound	_	_
+27	para	para	X	FW	_	26	compound	_	_
+28	el	el	X	FW	_	29	compound	_	_
+29	Campeonato	Campeonato	X	FW	_	26	dep	_	_
+30	del	del	X	FW	_	31	case	_	_
+31	Mundo	Mundo	X	FW	_	29	nmod	_	_
+32	?	?	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	That	that	SCONJ	IN	_	4	mark	_	_
@@ -594,21 +644,27 @@
 96	competitiva	competitiva	X	FW	_	94	nmod	_	_
 97	.	.	PUNCT	.	_	4	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	parataxis	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
-9	swimmer	swimmer	NOUN	NN	Number=Sing	0	root	_	_
-10	with	with	ADP	IN	_	13	case	_	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
-12	visual	visual	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	impediment	impediment	NOUN	NN	Number=Sing	9	nmod	_	_
-14	?	?	PUNCT	.	_	9	punct	_	_
+1	Are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+4	swimmer	swimmer	NOUN	NN	Number=Sing	0	root	_	_
+5	with	with	ADP	IN	_	8	case	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+7	visual	visual	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	impediment	impediment	NOUN	NN	Number=Sing	4	nmod	_	_
+9	?	?	PUNCT	.	_	4	punct	_	_
 
 # s_type = other
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
@@ -630,41 +686,49 @@
 # s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	S13	S13	PROPN	NNP	Number=Sing	1	dep	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
-6	(	(	PUNCT	-LRB-	_	9	punct	_	_
-7	(	(	PUNCT	-LRB-	_	9	punct	_	_
-8	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	9	amod	_	_
-9	language	language	NOUN	NN	Number=Sing	1	parataxis	_	_
-10	:	:	PUNCT	:	_	11	punct	_	_
-11	‍S13	‍S13	PROPN	NNP	Number=Sing	9	dep	_	_
-12	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	2	punct	_	_
+2	S13	S13	PROPN	NNP	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
+4	(	(	PUNCT	-LRB-	_	7	punct	_	_
+5	(	(	PUNCT	-LRB-	_	7	punct	_	_
+6	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	language	language	NOUN	NN	Number=Sing	2	parataxis	_	_
+8	:	:	PUNCT	:	_	9	punct	_	_
+9	‍S13	‍S13	PROPN	NNP	Number=Sing	7	dep	_	_
+10	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	acl:relcl	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	When	when	SCONJ	WRB	PronType=Int	8	mark	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	swim	swim	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	advcl	_	_
-9	,	,	PUNCT	,	_	8	punct	_	_
-10	can	can	AUX	MD	VerbForm=Fin	12	aux	_	_
-11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	_	_
-12	see	see	VERB	VB	VerbForm=Inf	0	root	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
-14	swimmers	swimmer	NOUN	NNS	Number=Plur	12	obj	_	_
-15	next	next	ADJ	JJ	Degree=Pos	14	amod	_	_
-16	to	to	ADP	TO	_	17	case	_	_
-17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	obl	_	_
-18	?	?	PUNCT	.	_	12	punct	_	_
-19	(	(	PUNCT	-LRB-	_	22	punct	_	_
-20	(	(	PUNCT	-LRB-	_	22	punct	_	_
-21	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	22	amod	_	_
-22	language	language	NOUN	NN	Number=Sing	12	dep	_	_
-23	:	:	PUNCT	:	_	12	punct	_	_
+1	When	when	SCONJ	WRB	PronType=Int	3	mark	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+3	swim	swim	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	advcl	_	_
+4	,	,	PUNCT	,	_	3	punct	_	_
+5	can	can	AUX	MD	VerbForm=Fin	7	aux	_	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
+7	see	see	VERB	VB	VerbForm=Inf	0	root	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	swimmers	swimmer	NOUN	NNS	Number=Plur	7	obj	_	_
+10	next	next	ADJ	JJ	Degree=Pos	9	amod	_	_
+11	to	to	ADP	TO	_	12	case	_	_
+12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	obl	_	_
+13	?	?	PUNCT	.	_	7	punct	_	_
+14	(	(	PUNCT	-LRB-	_	17	punct	_	_
+15	(	(	PUNCT	-LRB-	_	17	punct	_	_
+16	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	17	amod	_	_
+17	language	language	NOUN	NN	Number=Sing	7	dep	_	_
+18	:	:	PUNCT	:	_	7	punct	_	_
 
 # s_type = q
 1	‍¿Cuando	‍¿Cuando	X	FW	_	0	root	_	_
@@ -681,67 +745,69 @@
 12	lado	lado	X	FW	_	9	obj	_	_
 13	?	?	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Marta	Marta	PROPN	NNP	Number=Sing	13	nsubj	_	_
+# s_type = frag
+1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	7	punct	_	_
-4	Depending	depend	VERB	VBG	VerbForm=Ger	7	case	_	_
-5	on	on	ADP	IN	_	7	case	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	race	race	NOUN	NN	Number=Sing	13	obl	_	_
-8	,	,	PUNCT	,	_	7	punct	_	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	_	_
-10	will	will	AUX	MD	VerbForm=Fin	13	aux	_	_
-11	always	always	ADV	RB	_	13	advmod	_	_
-12	be	be	AUX	VB	VerbForm=Inf	13	cop	_	_
-13	able	able	ADJ	JJ	Degree=Pos	0	root	_	_
-14	to	to	PART	TO	_	13	mark	_	_
-15	—	—	PUNCT	:	_	14	punct	_	_
-16	some	some	DET	DT	_	17	det	_	_
-17	races	race	NOUN	NNS	Number=Plur	13	parataxis	_	_
-18	like	like	ADP	IN	_	21	case	_	_
-19	in	in	ADP	IN	_	21	case	_	_
-20	short	short	ADJ	JJ	Degree=Pos	21	amod	_	_
-21	distances	distance	NOUN	NNS	Number=Plur	17	nmod	_	_
-22	like	like	ADP	IN	_	26	case	_	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
-24	100	@card@	NUM	CD	NumType=Card	26	nummod	_	_
-25	meter	meter	NOUN	NN	Number=Sing	26	compound	_	_
-26	breaststroke	breaststroke	NOUN	NN	Number=Sing	21	nmod	_	_
-27	and	and	CCONJ	CC	_	30	cc	_	_
-28	100	@card@	NUM	CD	NumType=Card	30	nummod	_	_
-29	meter	meter	NOUN	NN	Number=Sing	30	compound	_	_
-30	freestyle	freestyle	NOUN	NN	Number=Sing	26	conj	_	_
-31	as	as	SCONJ	IN	_	35	mark	_	_
-32	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	35	nsubj	_	_
-33	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	35	cop	_	_
-34	too	too	ADV	RB	_	35	advmod	_	_
-35	short	short	ADJ	JJ	Degree=Pos	13	advcl	_	_
-36	to	to	PART	TO	_	37	mark	_	_
-37	lose	lose	VERB	VB	VerbForm=Inf	35	xcomp	_	_
-38	sight	sight	NOUN	NN	Number=Sing	37	obj	_	_
-39	of	of	ADP	IN	_	41	case	_	_
-40	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	41	nmod:poss	_	_
-41	rivals	rival	NOUN	NNS	Number=Plur	38	nmod	_	_
-42	,	,	PUNCT	,	_	43	punct	_	_
-43	but	but	CCONJ	CC	_	56	cc	_	_
-44	for	for	ADP	IN	_	45	case	_	_
-45	example	example	NOUN	NN	Number=Sing	56	obl	_	_
-46	in	in	ADP	IN	_	48	case	_	_
-47	400	@card@	NUM	CD	NumType=Card	48	nummod	_	_
-48	meters	meter	NOUN	NNS	Number=Plur	45	nmod	_	_
-49	,	,	PUNCT	,	_	50	punct	_	_
-50	yes	yes	INTJ	UH	_	48	dep	_	_
-51	,	,	PUNCT	,	_	56	punct	_	_
-52	but	but	CCONJ	CC	_	56	cc	_	_
-53	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	56	nsubj	_	_
-54	can	can	AUX	MD	VerbForm=Fin	56	aux	_	_
-55	only	only	ADV	RB	_	56	advmod	_	_
-56	see	see	VERB	VB	VerbForm=Inf	35	conj	_	_
-57	from	from	ADP	IN	_	59	case	_	_
-58	the	the	DET	DT	Definite=Def|PronType=Art	59	det	_	_
-59	sides	side	NOUN	NNS	Number=Plur	56	obl	_	_
-60	.	.	PUNCT	.	_	13	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	11	punct	_	_
+2	Depending	depend	VERB	VBG	VerbForm=Ger	5	case	_	_
+3	on	on	ADP	IN	_	5	case	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+5	race	race	NOUN	NN	Number=Sing	11	obl	_	_
+6	,	,	PUNCT	,	_	5	punct	_	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	_
+8	will	will	AUX	MD	VerbForm=Fin	11	aux	_	_
+9	always	always	ADV	RB	_	11	advmod	_	_
+10	be	be	AUX	VB	VerbForm=Inf	11	cop	_	_
+11	able	able	ADJ	JJ	Degree=Pos	0	root	_	_
+12	to	to	PART	TO	_	11	mark	_	_
+13	—	—	PUNCT	:	_	12	punct	_	_
+14	some	some	DET	DT	_	15	det	_	_
+15	races	race	NOUN	NNS	Number=Plur	11	parataxis	_	_
+16	like	like	ADP	IN	_	19	case	_	_
+17	in	in	ADP	IN	_	19	case	_	_
+18	short	short	ADJ	JJ	Degree=Pos	19	amod	_	_
+19	distances	distance	NOUN	NNS	Number=Plur	15	nmod	_	_
+20	like	like	ADP	IN	_	24	case	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
+22	100	@card@	NUM	CD	NumType=Card	24	nummod	_	_
+23	meter	meter	NOUN	NN	Number=Sing	24	compound	_	_
+24	breaststroke	breaststroke	NOUN	NN	Number=Sing	19	nmod	_	_
+25	and	and	CCONJ	CC	_	28	cc	_	_
+26	100	@card@	NUM	CD	NumType=Card	28	nummod	_	_
+27	meter	meter	NOUN	NN	Number=Sing	28	compound	_	_
+28	freestyle	freestyle	NOUN	NN	Number=Sing	24	conj	_	_
+29	as	as	SCONJ	IN	_	33	mark	_	_
+30	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	33	nsubj	_	_
+31	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	cop	_	_
+32	too	too	ADV	RB	_	33	advmod	_	_
+33	short	short	ADJ	JJ	Degree=Pos	11	advcl	_	_
+34	to	to	PART	TO	_	35	mark	_	_
+35	lose	lose	VERB	VB	VerbForm=Inf	33	xcomp	_	_
+36	sight	sight	NOUN	NN	Number=Sing	35	obj	_	_
+37	of	of	ADP	IN	_	39	case	_	_
+38	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	39	nmod:poss	_	_
+39	rivals	rival	NOUN	NNS	Number=Plur	36	nmod	_	_
+40	,	,	PUNCT	,	_	41	punct	_	_
+41	but	but	CCONJ	CC	_	54	cc	_	_
+42	for	for	ADP	IN	_	43	case	_	_
+43	example	example	NOUN	NN	Number=Sing	54	obl	_	_
+44	in	in	ADP	IN	_	46	case	_	_
+45	400	@card@	NUM	CD	NumType=Card	46	nummod	_	_
+46	meters	meter	NOUN	NNS	Number=Plur	43	nmod	_	_
+47	,	,	PUNCT	,	_	48	punct	_	_
+48	yes	yes	INTJ	UH	_	46	dep	_	_
+49	,	,	PUNCT	,	_	54	punct	_	_
+50	but	but	CCONJ	CC	_	54	cc	_	_
+51	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	54	nsubj	_	_
+52	can	can	AUX	MD	VerbForm=Fin	54	aux	_	_
+53	only	only	ADV	RB	_	54	advmod	_	_
+54	see	see	VERB	VB	VerbForm=Inf	33	conj	_	_
+55	from	from	ADP	IN	_	57	case	_	_
+56	the	the	DET	DT	Definite=Def|PronType=Art	57	det	_	_
+57	sides	side	NOUN	NNS	Number=Plur	54	obl	_	_
+58	.	.	PUNCT	.	_	11	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
@@ -859,31 +925,37 @@
 104	verlas	verla	X	FW	_	102	nmod:npmod	_	_
 105	.	.	PUNCT	.	_	12	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	acl:relcl	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	When	when	SCONJ	WRB	PronType=Int	8	mark	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	swim	swim	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	advcl	_	_
-9	,	,	PUNCT	,	_	8	punct	_	_
-10	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	_	_
-11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	_	_
-12	mostly	mostly	ADV	RB	_	13	advmod	_	_
-13	think	think	VERB	VB	VerbForm=Inf	0	root	_	_
-14	about	about	ADP	IN	_	17	case	_	_
-15	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	_	_
-16	own	own	ADJ	JJ	Degree=Pos	17	amod	_	_
-17	race	race	NOUN	NN	Number=Sing	13	obl	_	_
-18	because	because	SCONJ	IN	_	22	mark	_	_
-19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	_	_
-20	cannot	can	AUX	MD	VerbForm=Fin	22	aux	_	_
-21	fully	fully	ADV	RB	_	22	advmod	_	_
-22	see	see	VERB	VB	VerbForm=Inf	13	advcl	_	_
-23	everyone	everyone	NOUN	NN	Number=Sing	22	obj	_	_
-24	?	?	PUNCT	.	_	13	punct	_	_
+1	When	when	SCONJ	WRB	PronType=Int	3	mark	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+3	swim	swim	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	_	_
+4	,	,	PUNCT	,	_	3	punct	_	_
+5	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
+7	mostly	mostly	ADV	RB	_	8	advmod	_	_
+8	think	think	VERB	VB	VerbForm=Inf	0	root	_	_
+9	about	about	ADP	IN	_	12	case	_	_
+10	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
+11	own	own	ADJ	JJ	Degree=Pos	12	amod	_	_
+12	race	race	NOUN	NN	Number=Sing	8	obl	_	_
+13	because	because	SCONJ	IN	_	17	mark	_	_
+14	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	_	_
+15	cannot	can	AUX	MD	VerbForm=Fin	17	aux	_	_
+16	fully	fully	ADV	RB	_	17	advmod	_	_
+17	see	see	VERB	VB	VerbForm=Inf	8	advcl	_	_
+18	everyone	everyone	NOUN	NN	Number=Sing	17	obj	_	_
+19	?	?	PUNCT	.	_	8	punct	_	_
 
 # s_type = q
 1	Do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
@@ -924,7 +996,9 @@
 # s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = intj
 1	Yes	yes	INTJ	UH	_	0	root	_	_
@@ -1030,86 +1104,94 @@
 44	misma	misma	X	FW	_	43	compound	_	_
 45	.	.	PUNCT	.	_	2	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Why	why	SCONJ	WRB	PronType=Int	9	mark	_	_
-7	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	aux	_	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-9	choose	choose	VERB	VB	VerbForm=Inf	0	root	_	_
-10	swimming	swim	VERB	VBG	VerbForm=Ger	9	xcomp	_	_
-11	as	as	SCONJ	IN	_	12	mark	_	_
-12	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	_	_
-13	to	to	ADP	TO	_	14	case	_	_
-14	athletics	athletic	NOUN	NN	Number=Sing	12	obl	_	_
-15	or	or	CCONJ	CC	_	16	cc	_	_
-16	Goalball	Goalball	PROPN	NNP	Number=Sing	14	conj	_	_
-17	or	or	CCONJ	CC	_	20	cc	_	_
-18	some	some	DET	DT	_	20	det	_	_
-19	other	other	ADJ	JJ	Degree=Pos	20	amod	_	_
-20	sport	sport	NOUN	NN	Number=Sing	14	conj	_	_
-21	?	?	PUNCT	.	_	9	punct	_	_
+1	Why	why	SCONJ	WRB	PronType=Int	4	mark	_	_
+2	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	choose	choose	VERB	VB	VerbForm=Inf	0	root	_	_
+5	swimming	swim	VERB	VBG	VerbForm=Ger	4	xcomp	_	_
+6	as	as	SCONJ	IN	_	7	mark	_	_
+7	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part	5	advcl	_	_
+8	to	to	ADP	TO	_	9	case	_	_
+9	athletics	athletic	NOUN	NN	Number=Sing	7	obl	_	_
+10	or	or	CCONJ	CC	_	11	cc	_	_
+11	Goalball	Goalball	PROPN	NNP	Number=Sing	9	conj	_	_
+12	or	or	CCONJ	CC	_	15	cc	_	_
+13	some	some	DET	DT	_	15	det	_	_
+14	other	other	ADJ	JJ	Degree=Pos	15	amod	_	_
+15	sport	sport	NOUN	NN	Number=Sing	9	conj	_	_
+16	?	?	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
+2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
 
 # s_type = decl
-1	Marta	Marta	PROPN	NNP	Number=Sing	15	nsubj	_	_
-2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	7	punct	_	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
-5	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	_
-6	only	only	ADV	RB	_	7	advmod	_	_
-7	practiced	practice	VERB	VBN	Tense=Past|VerbForm=Part	15	advcl	_	_
-8	swimming	swim	NOUN	NN	Number=Sing	7	obj	_	_
-9	since	since	ADP	IN	_	10	case	_	_
-10	childhood	childhood	NOUN	NN	Number=Sing	7	obl	_	_
-11	,	,	PUNCT	,	_	7	punct	_	_
-12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	_	_
-13	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	aux	_	_
-14	always	always	ADV	RB	_	15	advmod	_	_
-15	liked	like	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
-17	water	water	NOUN	NN	Number=Sing	15	obj	_	_
-18	and	and	CCONJ	CC	_	24	cc	_	_
-19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	24	nsubj	_	_
-20	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	_	_
-21	been	be	AUX	VBN	Tense=Past|VerbForm=Part	24	cop	_	_
-22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
-23	only	only	ADJ	JJ	Degree=Pos	24	amod	_	_
-24	sport	sport	NOUN	NN	Number=Sing	15	conj	_	_
-25	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	27	nsubj	_	_
-26	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	aux	_	_
-27	practiced	practice	VERB	VBN	Tense=Past|VerbForm=Part	24	acl:relcl	_	_
-28	because	because	SCONJ	IN	_	30	mark	_	_
-29	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	_	_
-30	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	27	advcl	_	_
-31	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	34	nsubj	_	_
-32	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	34	cop	_	_
-33	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	_	_
-34	sport	sport	NOUN	NN	Number=Sing	30	ccomp	_	_
-35	where	where	SCONJ	WRB	PronType=Int	37	mark	_	_
-36	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	37	nsubj	_	_
-37	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	34	acl	_	_
-38	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	_	_
-39	lot	lot	NOUN	NN	Number=Sing	37	obj	_	_
-40	of	of	ADP	IN	_	41	case	_	_
-41	freedom	freedom	NOUN	NN	Number=Sing	39	nmod	_	_
-42	and	and	CCONJ	CC	_	45	cc	_	_
-43	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	45	aux	_	_
-44	n't	n't	PART	RB	Polarity=Neg	45	advmod	_	_
-45	have	have	VERB	VB	VerbForm=Inf	37	conj	_	_
-46	any	any	DET	DT	_	48	det	_	_
-47	architectural	architectural	ADJ	JJ	Degree=Pos	48	amod	_	_
-48	barriers	barrier	NOUN	NNS	Number=Plur	45	obj	_	_
-49	or	or	CCONJ	CC	_	50	cc	_	_
-50	anything	anything	NOUN	NN	Number=Sing	48	conj	_	_
-51	.	.	PUNCT	.	_	55	punct	_	_
-52	(	(	PUNCT	-LRB-	_	55	punct	_	_
-53	(	(	PUNCT	-LRB-	_	55	punct	_	_
-54	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	55	amod	_	_
-55	language	language	NOUN	NN	Number=Sing	45	obj	_	_
-56	:	:	PUNCT	:	_	15	punct	_	_
+1	:	:	PUNCT	:	_	5	punct	_	_
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+3	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	_	_
+4	only	only	ADV	RB	_	5	advmod	_	_
+5	practiced	practice	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+6	swimming	swim	NOUN	NN	Number=Sing	5	obj	_	_
+7	since	since	ADP	IN	_	8	case	_	_
+8	childhood	childhood	NOUN	NN	Number=Sing	5	obl	_	_
+9	,	,	PUNCT	,	_	13	punct	_	_
+10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	_	_
+11	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	_	_
+12	always	always	ADV	RB	_	13	advmod	_	_
+13	liked	like	VERB	VBN	Tense=Past|VerbForm=Part	5	parataxis	_	_
+14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
+15	water	water	NOUN	NN	Number=Sing	13	obj	_	_
+16	and	and	CCONJ	CC	_	22	cc	_	_
+17	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	22	nsubj	_	_
+18	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	_	_
+19	been	be	AUX	VBN	Tense=Past|VerbForm=Part	22	cop	_	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
+21	only	only	ADJ	JJ	Degree=Pos	22	amod	_	_
+22	sport	sport	NOUN	NN	Number=Sing	13	conj	_	_
+23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	_	_
+24	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	25	aux	_	_
+25	practiced	practice	VERB	VBN	Tense=Past|VerbForm=Part	22	acl:relcl	_	_
+26	because	because	SCONJ	IN	_	28	mark	_	_
+27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	28	nsubj	_	_
+28	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	25	advcl	_	_
+29	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	32	nsubj	_	_
+30	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	32	cop	_	_
+31	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	_	_
+32	sport	sport	NOUN	NN	Number=Sing	28	ccomp	_	_
+33	where	where	SCONJ	WRB	PronType=Int	35	mark	_	_
+34	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	35	nsubj	_	_
+35	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	32	acl	_	_
+36	a	a	DET	DT	Definite=Ind|PronType=Art	37	det	_	_
+37	lot	lot	NOUN	NN	Number=Sing	35	obj	_	_
+38	of	of	ADP	IN	_	39	case	_	_
+39	freedom	freedom	NOUN	NN	Number=Sing	37	nmod	_	_
+40	and	and	CCONJ	CC	_	43	cc	_	_
+41	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	43	aux	_	_
+42	n't	n't	PART	RB	Polarity=Neg	43	advmod	_	_
+43	have	have	VERB	VB	VerbForm=Inf	35	conj	_	_
+44	any	any	DET	DT	_	46	det	_	_
+45	architectural	architectural	ADJ	JJ	Degree=Pos	46	amod	_	_
+46	barriers	barrier	NOUN	NNS	Number=Plur	43	obj	_	_
+47	or	or	CCONJ	CC	_	48	cc	_	_
+48	anything	anything	NOUN	NN	Number=Sing	46	conj	_	_
+49	.	.	PUNCT	.	_	53	punct	_	_
+50	(	(	PUNCT	-LRB-	_	53	punct	_	_
+51	(	(	PUNCT	-LRB-	_	53	punct	_	_
+52	es))Spanish	es))Spanish	ADJ	JJ	Degree=Pos	53	amod	_	_
+53	language	language	NOUN	NN	Number=Sing	43	obj	_	_
+54	:	:	PUNCT	:	_	5	punct	_	_
 
 # s_type = decl
 1	‍Yo	‍Yo	X	FW	_	2	compound	_	_
@@ -1160,36 +1242,44 @@
 46	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Gracías	Gracías	PROPN	NNP	Number=Sing	0	root	_	_
-7	.	.	PUNCT	.	_	6	punct	_	_
-8	(	(	PUNCT	-LRB-	_	11	punct	_	_
-9	(	(	PUNCT	-LRB-	_	11	punct	_	_
-10	en))Spanish	en))Spanish	NOUN	NN	Number=Sing	11	compound	_	_
-11	language	language	NOUN	NN	Number=Sing	6	dep	_	_
-12	:	:	PUNCT	:	_	13	punct	_	_
-13	‍Thank	‍Thank	PROPN	NNP	Number=Sing	11	appos	_	_
-14	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	13	obj	_	_
-15	.	.	PUNCT	.	_	6	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	Gracías	Gracías	PROPN	NNP	Number=Sing	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
+3	(	(	PUNCT	-LRB-	_	6	punct	_	_
+4	(	(	PUNCT	-LRB-	_	6	punct	_	_
+5	en))Spanish	en))Spanish	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	language	language	NOUN	NN	Number=Sing	1	parataxis	_	_
+7	:	:	PUNCT	:	_	8	punct	_	_
+8	‍Thank	‍Thank	PROPN	NNP	Number=Sing	6	appos	_	_
+9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obj	_	_
+10	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Marta	Marta	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gomez	Gomez	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	5	punct	_	_
-4	De	De	X	FW	_	5	case	_	_
-5	nada	nada	X	FW	_	1	dep	_	_
-6	.	.	PUNCT	.	_	1	punct	_	_
-7	(	(	PUNCT	-LRB-	_	10	punct	_	_
-8	(	(	PUNCT	-LRB-	_	10	punct	_	_
-9	en))Spanish	en))Spanish	NOUN	NN	Number=Sing	10	compound	_	_
-10	language	language	NOUN	NN	Number=Sing	1	parataxis	_	_
-11	:	:	PUNCT	:	_	14	punct	_	_
-12	‍You	‍you	PROPN	NNP	Number=Sing	14	nsubj	_	_
-13	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	cop	_	_
-14	welcome	welcome	ADJ	JJ	Degree=Pos	10	parataxis	_	_
-15	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	3	punct	_	_
+2	De	De	X	FW	_	3	case	_	_
+3	nada	nada	X	FW	_	12	obl	_	_
+4	.	.	PUNCT	.	_	3	punct	_	_
+5	(	(	PUNCT	-LRB-	_	8	punct	_	_
+6	(	(	PUNCT	-LRB-	_	8	punct	_	_
+7	en))Spanish	en))Spanish	NOUN	NN	Number=Sing	8	compound	_	_
+8	language	language	NOUN	NN	Number=Sing	3	parataxis	_	_
+9	:	:	PUNCT	:	_	12	punct	_	_
+10	‍You	‍you	PROPN	NNP	Number=Sing	12	nsubj	_	_
+11	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	cop	_	_
+12	welcome	welcome	ADJ	JJ	Degree=Pos	0	root	_	_
+13	.	.	PUNCT	.	_	12	punct	_	_
 

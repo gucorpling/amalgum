@@ -1,24 +1,24 @@
 # s_type = frag
 1	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	0	root	_	_
 
-# s_type = decl
-1	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	4	nsubj	_	_
-2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
-3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
-4	city	city	NOUN	NN	Number=Sing	0	root	_	_
-5	in	in	ADP	IN	_	6	case	_	_
-6	Kern	kern	PROPN	NNP	Number=Sing	4	nmod	_	_
-
 # s_type = frag
-1	County	County	PROPN	NNP	Number=Sing	0	root	_	_
-2	,	,	PUNCT	,	_	3	punct	_	_
-3	California	California	PROPN	NNP	Number=Sing	1	appos	_	_
-4	at	at	ADP	IN	_	6	case	_	_
-5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
-6	top	top	NOUN	NN	Number=Sing	1	nmod	_	_
-7	of	of	ADP	IN	_	9	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	6	nmod	_	_
+1	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+3	city	city	NOUN	NN	Number=Sing	0	root	_	_
+4	in	in	ADP	IN	_	6	case	_	_
+5	Kern	kern	PROPN	NNP	Number=Sing	6	compound	_	_
+6	County	County	PROPN	NNP	Number=Sing	3	nmod	_	_
+7	,	,	PUNCT	,	_	8	punct	_	_
+8	California	California	PROPN	NNP	Number=Sing	6	appos	_	_
+9	at	at	ADP	IN	_	11	case	_	_
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+11	top	top	NOUN	NN	Number=Sing	3	nmod	_	_
+12	of	of	ADP	IN	_	14	case	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+14	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	11	nmod	_	_
 
 # s_type = frag
 1	Mountains	Mountain	NOUN	NNS	Number=Plur	0	root	_	_
@@ -99,9 +99,13 @@
 
 # s_type = imp
 1	See	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	BeeKay	BeeKay	PROPN	NNP	Number=Sing	3	compound	_	_
-3	Theatre	Theatre	PROPN	NNP	Number=Sing	1	obj	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	BeeKay	BeeKay	PROPN	NNP	Number=Sing	2	compound	_	_
+2	Theatre	Theatre	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = imp
 1	Do	do	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -139,9 +143,11 @@
 
 # s_type = frag
 1	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	3	compound	_	_
-2	Mountain	Mountain	PROPN	NNP	Number=Sing	3	amod	_	_
+2	Mountain	Mountain	PROPN	NNP	Number=Sing	3	compound	_	_
 3	Park	Park	PROPN	NNP	Number=Sing	0	root	_	_
-4	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = frag
 1	Great	great	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -180,17 +186,21 @@
 
 # s_type = imp
 1	Eat	eat	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	Petra	Petra	PROPN	NNP	Number=Sing	1	obj	_	_
-3	,	,	PUNCT	,	_	7	punct	_	_
-4	200	@card@	NUM	CD	NumType=Card	5	nummod	_	_
-5	S	S	PROPN	NNP	Number=Sing	6	compound	_	_
-6	Green	Green	PROPN	NNP	Number=Sing	7	compound	_	_
-7	St	St	PROPN	NNP	Number=Sing	2	appos	_	_
-8	,	,	PUNCT	,	_	9	punct	_	_
-9	☏	☏	NUM	CD	NumType=Card	1	advmod	_	_
-10	+1661	+1661	NUM	CD	NumType=Card	11	nummod	_	_
-11	822-1900	@card@	NUM	CD	NumType=Card	9	nummod	_	_
-12	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Petra	Petra	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	5	punct	_	_
+2	200	@card@	NUM	CD	NumType=Card	5	nummod	_	_
+3	S	S	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Green	Green	PROPN	NNP	Number=Sing	5	compound	_	_
+5	St	St	PROPN	NNP	Number=Sing	0	root	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	5	nummod	_	_
+8	+1661	+1661	NUM	CD	NumType=Card	9	nummod	_	_
+9	822-1900	@card@	NUM	CD	NumType=Card	7	nummod	_	_
+10	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	Mediterranean	Mediterranean	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -202,17 +212,19 @@
 2	's	's	PART	POS	_	1	case	_	_
 3	Country	Country	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Bakery	Bakery	PROPN	NNP	Number=Sing	0	root	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	125	@card@	NUM	CD	NumType=Card	9	nummod	_	_
-7	W	W	ADP	IN	_	9	case	_	_
-8	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	9	compound	_	_
-9	Blvd	Blvd	PROPN	NNP	Number=Sing	4	appos	_	_
-10	D.	D.	PROPN	NNP	Number=Sing	9	compound	_	_
-11	6AM	6AM	NUM	CD	NumType=Card	10	nummod	_	_
-12	–	–	ADP	TO	_	13	case	_	_
-13	6PM	6PM	NUM	CD	NumType=Card	11	nmod	_	_
-14	daily	daily	ADV	RB	_	10	advmod	_	_
-15	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	125	@card@	NUM	CD	NumType=Card	0	root	_	_
+3	W	W	ADP	IN	_	5	case	_	_
+4	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Blvd	Blvd	PROPN	NNP	Number=Sing	2	nmod	_	_
+6	D.	D.	PROPN	NNP	Number=Sing	5	compound	_	_
+7	6AM	6AM	NUM	CD	NumType=Card	5	nummod	_	_
+8	–	–	ADP	TO	_	9	case	_	_
+9	6PM	6PM	NUM	CD	NumType=Card	7	nmod	_	_
+10	daily	daily	ADV	RB	_	6	advmod	_	_
+11	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	German	German	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -220,12 +232,16 @@
 3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
-1	Sleep	sleep	PROPN	NNP	Number=Sing	4	compound	_	_
-2	Stallion	Stallion	PROPN	NNP	Number=Sing	4	compound	_	_
-3	Springs	Springs	PROPN	NNP	Number=Sing	4	compound	_	_
-4	Resort	Resort	PROPN	NNP	Number=Sing	0	root	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	28681	@card@	NUM	CD	NumType=Card	4	dep	_	_
+1	Sleep	sleep	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	Stallion	Stallion	PROPN	NNP	Number=Sing	3	compound	_	_
+2	Springs	Springs	PROPN	NNP	Number=Sing	3	compound	_	_
+3	Resort	Resort	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	28681	@card@	NUM	CD	NumType=Card	0	root	_	_
 
 # s_type = frag
 1	Stallion	Stallion	PROPN	NNP	Number=Sing	3	compound	_	_
@@ -269,68 +285,74 @@
 1	Fairfield	Fairfield	PROPN	NNP	Number=Sing	2	compound	_	_
 2	Inn	Inn	PROPN	NNP	Number=Sing	0	root	_	_
 3	&	&	CCONJ	CC	_	4	cc	_	_
-4	Suites	Suites	PROPN	NNP	Number=Sing	2	conj	_	_
+4	Suites	Suites	PROPN	NNP	Number=Plur	2	conj	_	_
 5	,	,	PUNCT	,	_	7	punct	_	_
 6	by	by	ADP	IN	_	7	case	_	_
 7	Marriott	Marriott	PROPN	NNP	Number=Sing	2	nmod	_	_
-8	,	,	PUNCT	,	_	9	punct	_	_
-9	422	@card@	NUM	CD	NumType=Card	7	appos	_	_
-10	W	W	ADP	IN	_	12	case	_	_
-11	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	12	compound	_	_
-12	Blvd	Blvd	PROPN	NNP	Number=Sing	2	nmod	_	_
-13	,	,	PUNCT	,	_	14	punct	_	_
-14	☏	☏	NUM	CD	NumType=Card	12	nummod	_	_
-15	+1661	+1661	NUM	CD	NumType=Card	16	compound	_	_
-16	822-4800	@card@	NUM	CD	NumType=Card	12	nummod	_	_
-17	,	,	PUNCT	,	_	18	punct	_	_
-18	fax	fax	NOUN	NN	Number=Sing	2	parataxis	_	_
-19	:	:	PUNCT	:	_	21	punct	_	_
-20	+1661	+1661	NUM	CD	NumType=Card	21	nummod	_	_
-21	822-5269	@card@	NUM	CD	NumType=Card	18	nummod	_	_
-22	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	422	@card@	NUM	CD	NumType=Card	0	root	_	_
+3	W	W	ADP	IN	_	5	case	_	_
+4	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Blvd	Blvd	PROPN	NNP	Number=Sing	2	nmod	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	5	appos	_	_
+8	+1661	+1661	NUM	CD	NumType=Card	9	compound	_	_
+9	822-4800	@card@	NUM	CD	NumType=Card	5	appos	_	_
+10	,	,	PUNCT	,	_	11	punct	_	_
+11	fax	fax	NOUN	NN	Number=Sing	5	appos	_	_
+12	:	:	PUNCT	:	_	14	punct	_	_
+13	+1661	+1661	NUM	CD	NumType=Card	14	nummod	_	_
+14	822-5269	@card@	NUM	CD	NumType=Card	11	nummod	_	_
+15	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	Best	Best	ADJ	JJS	Degree=Sup	5	amod	_	_
-2	Western	Western	PROPN	NNP	Number=Sing	3	compound	_	_
+2	Western	Western	PROPN	NNP	Number=Sing	3	amod	_	_
 3	Country	Country	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Park	Park	PROPN	NNP	Number=Sing	5	compound	_	_
 5	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	420	@card@	NUM	CD	NumType=Card	0	root	_	_
+3	W	W	ADP	IN	_	5	case	_	_
+4	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Blvd	Blvd	PROPN	NNP	Number=Sing	2	nmod	_	_
 6	,	,	PUNCT	,	_	7	punct	_	_
-7	420	@card@	NUM	CD	NumType=Card	10	nummod	_	_
-8	W	W	ADP	IN	_	10	case	_	_
-9	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	10	compound	_	_
-10	Blvd	Blvd	PROPN	NNP	Number=Sing	5	nmod	_	_
-11	,	,	PUNCT	,	_	12	punct	_	_
-12	☏	☏	NUM	CD	NumType=Card	10	nummod	_	_
-13	+1661	+1661	NUM	CD	NumType=Card	12	nummod	_	_
-14	823-1800	@card@	NUM	CD	NumType=Card	13	nummod	_	_
-15	,	,	PUNCT	,	_	16	punct	_	_
-16	fax	fax	NOUN	NN	Number=Sing	5	parataxis	_	_
-17	:	:	PUNCT	:	_	19	punct	_	_
-18	+1661	+1661	NUM	CD	NumType=Card	19	nummod	_	_
-19	823-1600	@card@	NUM	CD	NumType=Card	16	nummod	_	_
-20	.	.	PUNCT	.	_	5	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	5	appos	_	_
+8	+1661	+1661	NUM	CD	NumType=Card	5	nummod	_	_
+9	823-1800	@card@	NUM	CD	NumType=Card	8	nummod	_	_
+10	,	,	PUNCT	,	_	11	punct	_	_
+11	fax	fax	NOUN	NN	Number=Sing	5	appos	_	_
+12	:	:	PUNCT	:	_	14	punct	_	_
+13	+1661	+1661	NUM	CD	NumType=Card	14	nummod	_	_
+14	823-1600	@card@	NUM	CD	NumType=Card	11	nummod	_	_
+15	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	Best	Best	ADJ	JJS	Degree=Sup	4	amod	_	_
-2	Western	Western	PROPN	NNP	Number=Sing	3	amod	_	_
+2	Western	Western	PROPN	NNP	Number=Sing	4	amod	_	_
 3	Mountain	Mountain	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Inn	Inn	PROPN	NNP	Number=Sing	0	root	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	418	@card@	NUM	CD	NumType=Card	4	appos	_	_
-7	W	W	ADP	IN	_	9	case	_	_
-8	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	9	compound	_	_
-9	Blvd	Blvd	PROPN	NNP	Number=Sing	4	nmod	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	418	@card@	NUM	CD	NumType=Card	0	root	_	_
+3	W	W	ADP	IN	_	5	case	_	_
+4	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Blvd	Blvd	PROPN	NNP	Number=Sing	2	nmod	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	5	appos	_	_
+8	+1661	+1661	NUM	CD	NumType=Card	7	nummod	_	_
+9	822-5591	@card@	NUM	CD	NumType=Card	8	nummod	_	_
 10	,	,	PUNCT	,	_	11	punct	_	_
-11	☏	☏	NUM	CD	NumType=Card	9	nummod	_	_
-12	+1661	+1661	NUM	CD	NumType=Card	11	nummod	_	_
-13	822-5591	@card@	NUM	CD	NumType=Card	12	compound	_	_
-14	,	,	PUNCT	,	_	15	punct	_	_
-15	fax	fax	NOUN	NN	Number=Sing	4	parataxis	_	_
-16	:	:	PUNCT	:	_	18	punct	_	_
-17	+1661	+1661	NUM	CD	NumType=Card	18	nummod	_	_
-18	822-6197	@card@	NUM	CD	NumType=Card	15	nummod	_	_
-19	.	.	PUNCT	.	_	4	punct	_	_
+11	fax	fax	NOUN	NN	Number=Sing	5	appos	_	_
+12	:	:	PUNCT	:	_	14	punct	_	_
+13	+1661	+1661	NUM	CD	NumType=Card	14	nummod	_	_
+14	822-6197	@card@	NUM	CD	NumType=Card	11	nummod	_	_
+15	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	Holiday	Holiday	PROPN	NNP	Number=Sing	4	compound	_	_
@@ -338,100 +360,108 @@
 3	Express	Express	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	_	_
 5	&	&	CCONJ	CC	_	6	cc	_	_
-6	Suites	Suites	PROPN	NNP	Number=Sing	4	conj	_	_
-7	,	,	PUNCT	,	_	10	punct	_	_
-8	901	@card@	NUM	CD	NumType=Card	9	nummod	_	_
-9	Capital	Capital	PROPN	NNP	Number=Sing	10	compound	_	_
-10	Hills	Hills	PROPN	NNP	Number=Sing	4	appos	_	_
-11	Pkwy	pkwy	PROPN	NNP	Number=Sing	10	compound	_	_
-12	&	&	CCONJ	CC	_	13	cc	_	_
-13	Hwy	Hwy	PROPN	NNP	Number=Sing	11	conj	_	_
-14	58	@card@	NUM	CD	NumType=Card	11	nummod	_	_
-15	,	,	PUNCT	,	_	16	punct	_	_
-16	☏	☏	NUM	CD	NumType=Card	4	parataxis	_	_
-17	+1661	+1661	NUM	CD	NumType=Card	18	nummod	_	_
-18	822-9837	@card@	NUM	CD	NumType=Card	16	nummod	_	_
-19	.	.	PUNCT	.	_	4	punct	_	_
+6	Suites	Suites	PROPN	NNPS	Number=Plur	4	conj	_	_
 
-# s_type = decl
+# s_type = frag
+1	,	,	PUNCT	,	_	4	punct	_	_
+2	901	@card@	NUM	CD	NumType=Card	3	nummod	_	_
+3	Capital	Capital	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Hills	Hills	PROPN	NNP	Number=Sing	0	root	_	_
+5	Pkwy	pkwy	PROPN	NNP	Number=Sing	4	compound	_	_
+6	&	&	CCONJ	CC	_	7	cc	_	_
+7	Hwy	Hwy	PROPN	NNP	Number=Sing	5	conj	_	_
+8	58	@card@	NUM	CD	NumType=Card	4	nummod	_	_
+9	,	,	PUNCT	,	_	10	punct	_	_
+10	☏	☏	NUM	CD	NumType=Card	11	compound	_	_
+11	+1661	+1661	NUM	CD	NumType=Card	12	nummod	_	_
+12	822-9837	@card@	NUM	CD	NumType=Card	4	nummod	_	_
+13	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = imp
 1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	next	next	ADJ	JJ	Degree=Pos	3	amod	_	_
-3	Bakersfield	Bakersfield	PROPN	NNP	Number=Sing	1	obj	_	_
-4	-	-	PUNCT	:	_	5	punct	_	_
-5	Nicknamed	Nicknamed	VERB	VBN	Tense=Past|VerbForm=Part	1	conj	_	_
-6	"	"	PUNCT	``	_	10	punct	_	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-8	country	country	NOUN	NN	Number=Sing	10	compound	_	_
-9	music	music	NOUN	NN	Number=Sing	10	compound	_	_
-10	capital	capital	NOUN	NN	Number=Sing	5	xcomp	_	_
-11	of	of	ADP	IN	_	14	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
-13	West	West	PROPN	NNP	Number=Sing	14	compound	_	_
-14	Coast	Coast	PROPN	NNP	Number=Sing	10	nmod	_	_
-15	"	"	PUNCT	''	_	10	punct	_	_
-16	,	,	PUNCT	,	_	21	punct	_	_
-17	Bakersfield	Bakersfield	PROPN	NNP	Number=Sing	21	nsubj	_	_
-18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	cop	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
-20	largest	large	ADJ	JJS	Degree=Sup	21	amod	_	_
-21	city	city	NOUN	NN	Number=Sing	1	parataxis	_	_
-22	in	in	ADP	IN	_	27	case	_	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	27	det	_	_
-24	southern	southern	ADJ	JJ	Degree=Pos	25	amod	_	_
-25	San	San	PROPN	NNP	Number=Sing	27	compound	_	_
-26	Joaquin	Joaquin	PROPN	NNP	Number=Sing	27	compound	_	_
-27	Valley	Valley	PROPN	NNP	Number=Sing	21	nmod	_	_
-28	and	and	CCONJ	CC	_	33	cc	_	_
-29	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	cop	_	_
-30	thus	thus	ADV	RB	_	33	advmod	_	_
-31	the	the	DET	DT	Definite=Def|PronType=Art	33	det	_	_
-32	best	good	ADJ	JJS	Degree=Sup	33	amod	_	_
-33	option	option	NOUN	NN	Number=Sing	21	conj	_	_
-34	for	for	ADP	IN	_	37	case	_	_
-35	those	those	DET	DT	Number=Plur|PronType=Dem	37	det	_	_
-36	seeking	seek	VERB	VBG	VerbForm=Ger	37	amod	_	_
-37	lodging	lodging	NOUN	NN	Number=Sing	33	nmod	_	_
-38	,	,	PUNCT	,	_	39	punct	_	_
-39	transportation	transportation	NOUN	NN	Number=Sing	37	conj	_	_
-40	,	,	PUNCT	,	_	43	punct	_	_
-41	or	or	CCONJ	CC	_	43	cc	_	_
-42	other	other	ADJ	JJ	Degree=Pos	43	amod	_	_
-43	services	service	NOUN	NNS	Number=Plur	37	conj	_	_
-44	.	.	PUNCT	.	_	1	punct	_	_
+2	next	next	ADJ	JJ	Degree=Pos	1	xcomp	_	_
+
+# s_type = frag
+1	Bakersfield	Bakersfield	PROPN	NNP	Number=Sing	0	root	_	_
 
 # s_type = decl
-1	Keene	keene	PROPN	NNP	Number=Sing	11	nsubj	_	_
-2	-	-	PUNCT	:	_	3	punct	_	_
-3	Located	locate	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	_	_
-4	west	west	ADV	RB	_	3	advmod	_	_
-5	on	on	ADP	IN	_	6	case	_	_
-6	Highway	highway	PROPN	NNP	Number=Sing	3	obl	_	_
-7	58	@card@	NUM	CD	NumType=Card	6	nummod	_	_
-8	,	,	PUNCT	,	_	1	punct	_	_
-9	Keene	keene	PROPN	NNP	Number=Sing	11	nsubj	_	_
-10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	_
-11	home	home	NOUN	NN	Number=Sing	0	root	_	_
-12	to	to	ADP	TO	_	18	case	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-14	Cesar	Cesar	PROPN	NNP	Number=Sing	18	compound	_	_
-15	E.	E.	PROPN	NNP	Number=Sing	14	flat	_	_
-16	Chavez	Chavez	PROPN	NNP	Number=Sing	18	compound	_	_
-17	National	National	PROPN	NNP	Number=Sing	18	amod	_	_
-18	Monument	monument	PROPN	NNP	Number=Sing	11	nmod	_	_
-19	,	,	PUNCT	,	_	21	punct	_	_
-20	which	which	PRON	WDT	PronType=Rel	21	nsubj	_	_
-21	contains	contain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	_	_
-22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-23	headquarters	headquarters	NOUN	NN	Number=Sing	21	obj	_	_
-24	and	and	CCONJ	CC	_	26	cc	_	_
-25	grave	grave	NOUN	NN	Number=Sing	26	compound	_	_
-26	site	site	NOUN	NN	Number=Sing	23	conj	_	_
-27	of	of	ADP	IN	_	31	case	_	_
-28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	_	_
-29	famous	famous	ADJ	JJ	Degree=Pos	31	amod	_	_
-30	labor	labor	NOUN	NN	Number=Sing	31	compound	_	_
-31	leader	leader	NOUN	NN	Number=Sing	23	nmod	_	_
-32	.	.	PUNCT	.	_	11	punct	_	_
+1	-	-	PUNCT	:	_	2	punct	_	_
+2	Nicknamed	Nicknamed	VERB	VBN	Tense=Past|VerbForm=Part	18	csubj	_	_
+3	"	"	PUNCT	``	_	7	punct	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+5	country	country	NOUN	NN	Number=Sing	7	compound	_	_
+6	music	music	NOUN	NN	Number=Sing	7	compound	_	_
+7	capital	capital	NOUN	NN	Number=Sing	2	obl	_	_
+8	of	of	ADP	IN	_	11	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+10	West	West	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Coast	Coast	PROPN	NNP	Number=Sing	7	nmod	_	_
+12	"	"	PUNCT	''	_	7	punct	_	_
+13	,	,	PUNCT	,	_	2	punct	_	_
+14	Bakersfield	Bakersfield	PROPN	NNP	Number=Sing	18	nsubj	_	_
+15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	_	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
+17	largest	large	ADJ	JJS	Degree=Sup	18	amod	_	_
+18	city	city	NOUN	NN	Number=Sing	0	root	_	_
+19	in	in	ADP	IN	_	24	case	_	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
+21	southern	southern	ADJ	JJ	Degree=Pos	22	amod	_	_
+22	San	San	PROPN	NNP	Number=Sing	24	compound	_	_
+23	Joaquin	Joaquin	PROPN	NNP	Number=Sing	24	compound	_	_
+24	Valley	Valley	PROPN	NNP	Number=Sing	18	nmod	_	_
+25	and	and	CCONJ	CC	_	30	cc	_	_
+26	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	30	cop	_	_
+27	thus	thus	ADV	RB	_	30	advmod	_	_
+28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
+29	best	good	ADJ	JJS	Degree=Sup	30	amod	_	_
+30	option	option	NOUN	NN	Number=Sing	18	conj	_	_
+31	for	for	ADP	IN	_	34	case	_	_
+32	those	those	DET	DT	Number=Plur|PronType=Dem	34	det	_	_
+33	seeking	seek	VERB	VBG	VerbForm=Ger	34	amod	_	_
+34	lodging	lodging	NOUN	NN	Number=Sing	30	nmod	_	_
+35	,	,	PUNCT	,	_	36	punct	_	_
+36	transportation	transportation	NOUN	NN	Number=Sing	34	conj	_	_
+37	,	,	PUNCT	,	_	40	punct	_	_
+38	or	or	CCONJ	CC	_	40	cc	_	_
+39	other	other	ADJ	JJ	Degree=Pos	40	amod	_	_
+40	services	service	NOUN	NNS	Number=Plur	34	conj	_	_
+41	.	.	PUNCT	.	_	18	punct	_	_
+
+# s_type = frag
+1	Keene	keene	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	-	-	PUNCT	:	_	2	punct	_	_
+2	Located	locate	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	_	_
+3	west	west	ADV	RB	_	2	advmod	_	_
+4	on	on	ADP	IN	_	5	case	_	_
+5	Highway	highway	PROPN	NNP	Number=Sing	2	obl	_	_
+6	58	@card@	NUM	CD	NumType=Card	5	nummod	_	_
+7	,	,	PUNCT	,	_	2	punct	_	_
+8	Keene	keene	PROPN	NNP	Number=Sing	10	nsubj	_	_
+9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	_
+10	home	home	NOUN	NN	Number=Sing	0	root	_	_
+11	to	to	ADP	TO	_	17	case	_	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+13	Cesar	Cesar	PROPN	NNP	Number=Sing	17	compound	_	_
+14	E.	E.	PROPN	NNP	Number=Sing	13	flat	_	_
+15	Chavez	Chavez	PROPN	NNP	Number=Sing	17	compound	_	_
+16	National	National	PROPN	NNP	Number=Sing	17	amod	_	_
+17	Monument	monument	PROPN	NNP	Number=Sing	10	nmod	_	_
+18	,	,	PUNCT	,	_	20	punct	_	_
+19	which	which	PRON	WDT	PronType=Rel	20	nsubj	_	_
+20	contains	contain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	acl:relcl	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
+22	headquarters	headquarters	NOUN	NN	Number=Sing	20	obj	_	_
+23	and	and	CCONJ	CC	_	25	cc	_	_
+24	grave	grave	NOUN	NN	Number=Sing	25	compound	_	_
+25	site	site	NOUN	NN	Number=Sing	22	conj	_	_
+26	of	of	ADP	IN	_	30	case	_	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
+28	famous	famous	ADJ	JJ	Degree=Pos	30	amod	_	_
+29	labor	labor	NOUN	NN	Number=Sing	30	compound	_	_
+30	leader	leader	NOUN	NN	Number=Sing	22	nmod	_	_
+31	.	.	PUNCT	.	_	10	punct	_	_
 
 # s_type = decl
 1	Another	another	DET	DT	_	2	det	_	_
@@ -479,45 +509,47 @@
 43	itself	itself	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	41	obl	_	_
 44	.	.	PUNCT	.	_	6	punct	_	_
 
+# s_type = frag
+1	Mojave	mojave	NOUN	NN	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	Mojave	mojave	PROPN	NNP	Number=Sing	13	nsubj	_	_
-2	-	-	PUNCT	:	_	3	punct	_	_
-3	East	East	PROPN	NNP	Number=Sing	1	appos	_	_
-4	of	of	ADP	IN	_	5	case	_	_
-5	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	3	nmod	_	_
-6	on	on	ADP	IN	_	7	case	_	_
-7	Highway	highway	PROPN	NNP	Number=Sing	3	nmod	_	_
-8	58	@card@	NUM	CD	NumType=Card	7	nummod	_	_
-9	,	,	PUNCT	,	_	1	punct	_	_
-10	Mojave	mojave	PROPN	NNP	Number=Sing	13	nsubj	_	_
-11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	_
-12	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
-13	hotbed	hot	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-14	of	of	ADP	IN	_	16	case	_	_
-15	aerospace	aerospace	NOUN	NN	Number=Sing	16	compound	_	_
-16	activity	activity	NOUN	NN	Number=Sing	13	obl	_	_
-17	,	,	PUNCT	,	_	21	punct	_	_
-18	with	with	ADP	IN	_	21	case	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
-20	Mojave	mojave	PROPN	NNP	Number=Sing	21	compound	_	_
-21	Spaceport	Spaceport	PROPN	NNP	Number=Sing	13	obl	_	_
-22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-23	headquarters	headquarters	NOUN	NN	Number=Sing	13	obl	_	_
-24	of	of	ADP	IN	_	26	case	_	_
-25	Scaled	Scaled	PROPN	NNP	Number=Sing	26	compound	_	_
-26	Composites	Composites	PROPN	NNPS	Number=Plur	23	nmod	_	_
-27	,	,	PUNCT	,	_	31	punct	_	_
-28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	_	_
-29	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	31	amod	_	_
-30	private	private	ADJ	JJ	Degree=Pos	31	amod	_	_
-31	company	company	NOUN	NN	Number=Sing	26	appos	_	_
-32	to	to	PART	TO	_	33	mark	_	_
-33	launch	launch	VERB	VB	VerbForm=Inf	31	acl	_	_
-34	a	a	DET	DT	Definite=Ind|PronType=Art	35	det	_	_
-35	human	human	NOUN	NN	Number=Sing	33	obj	_	_
-36	into	into	ADP	IN	_	37	case	_	_
-37	space	space	NOUN	NN	Number=Sing	33	obl	_	_
-38	.	.	PUNCT	.	_	13	punct	_	_
+1	-	-	PUNCT	:	_	12	punct	_	_
+2	East	East	PROPN	NNP	Number=Sing	12	nsubj	_	_
+3	of	of	ADP	IN	_	4	case	_	_
+4	Tehachapi	Tehachapi	PROPN	NNP	Number=Sing	2	nmod	_	_
+5	on	on	ADP	IN	_	6	case	_	_
+6	Highway	highway	PROPN	NNP	Number=Sing	2	nmod	_	_
+7	58	@card@	NUM	CD	NumType=Card	6	nummod	_	_
+8	,	,	PUNCT	,	_	2	punct	_	_
+9	Mojave	mojave	PROPN	NNP	Number=Sing	12	nsubj	_	_
+10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	_	_
+11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
+12	hotbed	hot	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+13	of	of	ADP	IN	_	15	case	_	_
+14	aerospace	aerospace	NOUN	NN	Number=Sing	15	compound	_	_
+15	activity	activity	NOUN	NN	Number=Sing	12	obl	_	_
+16	,	,	PUNCT	,	_	20	punct	_	_
+17	with	with	ADP	IN	_	20	case	_	_
+18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
+19	Mojave	mojave	PROPN	NNP	Number=Sing	20	compound	_	_
+20	Spaceport	Spaceport	PROPN	NNP	Number=Sing	12	obl	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
+22	headquarters	headquarters	NOUN	NN	Number=Sing	12	obl	_	_
+23	of	of	ADP	IN	_	25	case	_	_
+24	Scaled	Scaled	PROPN	NNP	Number=Sing	25	compound	_	_
+25	Composites	Composites	PROPN	NNPS	Number=Plur	22	nmod	_	_
+26	,	,	PUNCT	,	_	30	punct	_	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
+28	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	30	amod	_	_
+29	private	private	ADJ	JJ	Degree=Pos	30	amod	_	_
+30	company	company	NOUN	NN	Number=Sing	25	appos	_	_
+31	to	to	PART	TO	_	32	mark	_	_
+32	launch	launch	VERB	VB	VerbForm=Inf	30	acl	_	_
+33	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	_	_
+34	human	human	NOUN	NN	Number=Sing	32	obj	_	_
+35	into	into	ADP	IN	_	36	case	_	_
+36	space	space	NOUN	NN	Number=Sing	32	obl	_	_
+37	.	.	PUNCT	.	_	12	punct	_	_
 
 # s_type = decl
 1	Edwards	Edwards	PROPN	NNP	Number=Sing	4	compound	_	_

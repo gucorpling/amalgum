@@ -322,9 +322,13 @@
 20	if	if	SCONJ	IN	_	22	mark	_	_
 21	one	one	NUM	CD	NumType=Card	22	nsubj	_	_
 22	considers	consider	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	_	_
-23	Figure	Figure	NOUN	NN	Number=Sing	22	obj	_	_
-24	4	4	NUM	CD	NumType=Card	23	nummod	_	_
-25	.	.	PUNCT	.	_	12	punct	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	4	4	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	If	if	SCONJ	IN	_	3	mark	_	_
@@ -497,12 +501,16 @@
 22	solar	solar	ADJ	JJ	Degree=Pos	23	amod	_	_
 23	irradiance	irradiance	NOUN	NN	Number=Sing	25	nsubj	_	_
 24	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	cop	_	_
-25	high	high	ADJ	JJ	Degree=Pos	15	conj	_	_
-26	(	(	PUNCT	-LRB-	_	27	punct	_	_
-27	Figure	Figure	NOUN	NN	Number=Sing	25	appos	_	_
-28	3	3	NUM	CD	NumType=Card	27	nummod	_	_
-29	)	)	PUNCT	-RRB-	_	27	punct	_	_
-30	.	.	PUNCT	.	_	6	punct	_	_
+25	high	high	ADJ	JJ	Degree=Pos	15	parataxis	_	_
+26	(	(	PUNCT	-LRB-	_	6	punct	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	3	3	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	2	punct	_	_
+2	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	Therefore	therefore	ADV	RB	_	17	advmod	_	_

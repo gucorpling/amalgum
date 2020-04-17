@@ -313,14 +313,16 @@
 # s_type = imp
 1	Speak	Speak	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	clearly	clearly	ADV	RB	_	1	advmod	_	_
-3	and	and	CCONJ	CC	_	4	cc	_	_
-4	articulately	articulately	ADV	RB	_	2	conj	_	_
-5	,	,	PUNCT	,	_	7	punct	_	_
-6	and	and	CCONJ	CC	_	7	cc	_	_
-7	make	make	VERB	VB	VerbForm=Inf	1	conj	_	_
-8	eye	eye	NOUN	NN	Number=Sing	9	compound	_	_
-9	contact	contact	NOUN	NN	Number=Sing	7	obj	_	_
-10	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = other
+1	and	and	CCONJ	CC	_	5	cc	_	_
+2	articulately	articulately	ADV	RB	_	0	root	_	_
+3	,	,	PUNCT	,	_	5	punct	_	_
+4	and	and	CCONJ	CC	_	5	cc	_	_
+5	make	make	VERB	VB	VerbForm=Inf	2	conj	_	_
+6	eye	eye	NOUN	NN	Number=Sing	7	compound	_	_
+7	contact	contact	NOUN	NN	Number=Sing	5	obj	_	_
+8	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	Older	Older	ADJ	JJR	Degree=Cmp	2	amod	_	_
@@ -818,15 +820,17 @@
 31	Susan	Susan	PROPN	NNP	Number=Sing	29	appos	_	_
 32	.	.	PUNCT	.	_	11	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = imp
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	Employ	employ	VERB	VB	VerbForm=Inf	0	root	_	_
-3	visual	visual	ADJ	JJ	Degree=Pos	4	amod	_	_
-4	aids	aid	NOUN	NNS	Number=Plur	2	obj	_	_
-5	,	,	PUNCT	,	_	7	punct	_	_
-6	if	if	SCONJ	IN	_	7	mark	_	_
-7	possible	possible	ADJ	JJ	Degree=Pos	2	advcl	_	_
-8	.	.	PUNCT	.	_	2	punct	_	_
+1	Employ	employ	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	visual	visual	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	aids	aid	NOUN	NNS	Number=Plur	1	obj	_	_
+4	,	,	PUNCT	,	_	6	punct	_	_
+5	if	if	SCONJ	IN	_	6	mark	_	_
+6	possible	possible	ADJ	JJ	Degree=Pos	1	advcl	_	_
+7	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	If	if	SCONJ	IN	_	5	mark	_	_
@@ -926,18 +930,20 @@
 13	discomfort	discomfort	NOUN	NN	Number=Sing	11	conj	_	_
 14	?	?	PUNCT	.	_	9	punct	_	_
 
-# s_type = decl
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	Take	take	VERB	VB	VerbForm=Inf	7	discourse	_	_
-3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	_	_
-4	slow	slow	ADJ	JJ	Degree=Pos	2	xcomp	_	_
-5	,	,	PUNCT	,	_	2	punct	_	_
-6	be	be	AUX	VB	VerbForm=Inf	7	cop	_	_
-7	patient	patient	NOUN	NN	Number=Sing	0	root	_	_
-8	,	,	PUNCT	,	_	10	punct	_	_
-9	and	and	CCONJ	CC	_	10	cc	_	_
-10	smile	smile	NOUN	NN	Number=Sing	7	conj	_	_
-11	.	.	PUNCT	.	_	7	punct	_	_
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
+# s_type = imp
+1	Take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	1	obj	_	_
+3	slow	slow	ADJ	JJ	Degree=Pos	1	advmod	_	_
+4	,	,	PUNCT	,	_	6	punct	_	_
+5	be	be	AUX	VB	VerbForm=Inf	6	cop	_	_
+6	patient	patient	NOUN	NN	Number=Sing	1	parataxis	_	_
+7	,	,	PUNCT	,	_	9	punct	_	_
+8	and	and	CCONJ	CC	_	9	cc	_	_
+9	smile	smile	NOUN	NN	Number=Sing	6	conj	_	_
+10	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
@@ -1015,24 +1021,26 @@
 9	patience	patience	NOUN	NN	Number=Sing	7	conj	_	_
 10	.	.	PUNCT	.	_	6	punct	_	_
 
-# s_type = decl
-1	Tips	tip	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Remember	remember	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	that	that	SCONJ	IN	_	13	mark	_	_
-4	touching	touch	VERB	VBG	VerbForm=Ger	13	advcl	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	holding	hold	VERB	VBG	VerbForm=Ger	4	conj	_	_
-7	hands	hand	NOUN	NNS	Number=Plur	6	obj	_	_
-8	,	,	PUNCT	,	_	11	punct	_	_
-9	and	and	CCONJ	CC	_	11	cc	_	_
-10	physical	physical	ADJ	JJ	Degree=Pos	11	amod	_	_
-11	warmth	warmth	NOUN	NN	Number=Sing	13	nsubj	_	_
-12	often	often	ADV	RB	_	13	advmod	_	_
-13	communicate	communicate	VERB	VB	VerbForm=Fin	2	ccomp	_	_
-14	more	more	ADV	RBR	_	13	obj	_	_
-15	than	than	ADP	IN	_	16	case	_	_
-16	words	word	NOUN	NNS	Number=Plur	13	obl	_	_
-17	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Tips	tip	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Remember	remember	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	that	that	SCONJ	IN	_	12	mark	_	_
+3	touching	touch	VERB	VBG	VerbForm=Ger	12	advcl	_	_
+4	,	,	PUNCT	,	_	5	punct	_	_
+5	holding	hold	VERB	VBG	VerbForm=Ger	3	conj	_	_
+6	hands	hand	NOUN	NNS	Number=Plur	5	obj	_	_
+7	,	,	PUNCT	,	_	10	punct	_	_
+8	and	and	CCONJ	CC	_	10	cc	_	_
+9	physical	physical	ADJ	JJ	Degree=Pos	10	amod	_	_
+10	warmth	warmth	NOUN	NN	Number=Sing	12	nsubj	_	_
+11	often	often	ADV	RB	_	12	advmod	_	_
+12	communicate	communicate	VERB	VB	VerbForm=Inf	1	ccomp	_	_
+13	more	more	ADV	RBR	_	12	obj	_	_
+14	than	than	ADP	IN	_	15	case	_	_
+15	words	word	NOUN	NNS	Number=Plur	12	obl	_	_
+16	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Remember	remember	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

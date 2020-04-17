@@ -32,26 +32,28 @@
 8	Ogden	Ogden	PROPN	NNP	Number=Sing	7	flat	_	_
 9	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Dale	dale	PROPN	NNP	Number=Sing	10	nsubj	_	_
+# s_type = frag
+1	Dale	dale	PROPN	NNP	Number=Sing	0	root	_	_
 2	Ogden	Ogden	PROPN	NNP	Number=Sing	1	flat	_	_
-3	,	,	PUNCT	,	_	8	punct	_	_
-4	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
-5	2010	@card@	NUM	CD	NumType=Card	8	compound	_	_
-6	California	California	PROPN	NNP	Number=Sing	8	compound	_	_
-7	gubernatorial	gubernatorial	NOUN	NN	Number=Sing	8	compound	_	_
-8	candidate	candidate	NOUN	NN	Number=Sing	1	appos	_	_
-9	,	,	PUNCT	,	_	1	punct	_	_
-10	talks	talk	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-11	with	with	ADP	IN	_	13	case	_	_
-12	Wikinews	Wikinews	PROPN	NNP	Number=Sing	13	compound	_	_
-13	reporter	reporter	NOUN	NN	Number=Sing	10	obl	_	_
-14	Mike	mike	PROPN	NNP	Number=Sing	13	flat	_	_
-15	Morales	Morales	PROPN	NNP	Number=Sing	13	flat	_	_
-16	about	about	ADP	IN	_	18	case	_	_
-17	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	_	_
-18	platform	platform	NOUN	NN	Number=Sing	10	obl	_	_
-19	.	.	PUNCT	.	_	10	punct	_	_
+
+# s_type = decl
+1	,	,	PUNCT	,	_	6	punct	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
+3	2010	@card@	NUM	CD	NumType=Card	6	compound	_	_
+4	California	California	PROPN	NNP	Number=Sing	6	compound	_	_
+5	gubernatorial	gubernatorial	NOUN	NN	Number=Sing	6	compound	_	_
+6	candidate	candidate	NOUN	NN	Number=Sing	8	nsubj	_	_
+7	,	,	PUNCT	,	_	6	punct	_	_
+8	talks	talk	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+9	with	with	ADP	IN	_	11	case	_	_
+10	Wikinews	Wikinews	PROPN	NNP	Number=Sing	11	compound	_	_
+11	reporter	reporter	NOUN	NN	Number=Sing	8	obl	_	_
+12	Mike	mike	PROPN	NNP	Number=Sing	11	flat	_	_
+13	Morales	Morales	PROPN	NNP	Number=Sing	11	flat	_	_
+14	about	about	ADP	IN	_	16	case	_	_
+15	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
+16	platform	platform	NOUN	NN	Number=Sing	8	obl	_	_
+17	.	.	PUNCT	.	_	8	punct	_	_
 
 # s_type = decl
 1	Ogden	Ogden	PROPN	NNP	Number=Sing	4	nsubj	_	_
@@ -85,43 +87,55 @@
 4	Party	Party	PROPN	NNP	Number=Sing	1	dep	_	_
 5	.	.	PUNCT	.	_	1	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Mike	mike	PROPN	NNP	Number=Sing	0	root	_	_
+2	Morales	Morales	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Mike	mike	PROPN	NNP	Number=Sing	10	vocative	_	_
-4	Morales	Morales	PROPN	NNP	Number=Sing	3	flat	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	)	)	PUNCT	-RRB-	_	3	punct	_	_
-7	How	how	SCONJ	WRB	PronType=Int	10	mark	_	_
-8	would	would	AUX	MD	VerbForm=Fin	10	aux	_	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	_	_
-10	define	define	VERB	VB	VerbForm=Inf	0	root	_	_
-11	libertarianism	libertarianism	NOUN	NN	Number=Sing	10	obj	_	_
-12	?	?	PUNCT	.	_	10	punct	_	_
+1	How	how	SCONJ	WRB	PronType=Int	4	mark	_	_
+2	would	would	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	define	define	VERB	VB	VerbForm=Inf	0	root	_	_
+5	libertarianism	libertarianism	NOUN	NN	Number=Sing	4	obj	_	_
+6	?	?	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Dale	dale	PROPN	NNP	Number=Sing	0	root	_	_
+2	Ogden	Ogden	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Dale	dale	PROPN	NNP	Number=Sing	7	compound	_	_
-4	Ogden	Ogden	PROPN	NNP	Number=Sing	3	compound	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	)	)	PUNCT	-RRB-	_	3	punct	_	_
-7	Libertarianism	libertarianism	PROPN	NNP	Number=Sing	11	nsubj	_	_
-8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	_	_
-9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
-10	political	political	ADJ	JJ	Degree=Pos	11	amod	_	_
-11	philosophy	philosophy	NOUN	NN	Number=Sing	0	root	_	_
-12	of	of	ADP	IN	_	14	case	_	_
-13	minimum	minimum	ADJ	JJ	Degree=Pos	14	amod	_	_
-14	government	government	NOUN	NN	Number=Sing	11	nmod	_	_
-15	espoused	espouse	VERB	VBN	Tense=Past|VerbForm=Part	14	acl	_	_
-16	by	by	ADP	IN	_	18	case	_	_
-17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-18	founders	founder	NOUN	NNS	Number=Plur	15	obl	_	_
-19	of	of	ADP	IN	_	21	case	_	_
-20	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	21	nmod:poss	_	_
-21	nation	nation	NOUN	NN	Number=Sing	18	nmod	_	_
-22	.	.	PUNCT	.	_	11	punct	_	_
+1	Libertarianism	libertarianism	NOUN	NN	Number=Sing	5	nsubj	_	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+4	political	political	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	philosophy	philosophy	NOUN	NN	Number=Sing	0	root	_	_
+6	of	of	ADP	IN	_	8	case	_	_
+7	minimum	minimum	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	government	government	NOUN	NN	Number=Sing	5	nmod	_	_
+9	espoused	espouse	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	_	_
+10	by	by	ADP	IN	_	12	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+12	founders	founder	NOUN	NNS	Number=Plur	9	obl	_	_
+13	of	of	ADP	IN	_	15	case	_	_
+14	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	_	_
+15	nation	nation	NOUN	NN	Number=Sing	12	nmod	_	_
+16	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = decl
 1	People	people	NOUN	NNS	Number=Plur	4	nsubj	_	_
@@ -241,126 +255,138 @@
 # s_type = frag
 1	"	"	PUNCT	``	_	0	root	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	MM	MM	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	MM	MM	PROPN	NNP	Number=Sing	7	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	On	on	ADP	IN	_	7	case	_	_
-7	one	one	NUM	CD	NumType=Card	18	obl	_	_
-8	of	of	ADP	IN	_	12	case	_	_
-9	California	California	PROPN	NNP	Number=Sing	12	nmod:poss	_	_
-10	's	's	PART	POS	_	9	case	_	_
-11	major	major	ADJ	JJ	Degree=Pos	12	amod	_	_
-12	issues	issue	NOUN	NNS	Number=Plur	7	nmod	_	_
-13	today	today	NOUN	NN	Number=Sing	12	nmod:tmod	_	_
-14	,	,	PUNCT	,	_	18	punct	_	_
-15	how	how	SCONJ	WRB	PronType=Int	18	mark	_	_
-16	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	18	aux	_	_
-17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	_	_
-18	propose	propose	VERB	VB	VerbForm=Inf	0	root	_	_
-19	to	to	PART	TO	_	20	mark	_	_
-20	fix	fix	VERB	VB	VerbForm=Inf	18	xcomp	_	_
-21	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	23	nmod:poss	_	_
-22	failing	fail	VERB	VBG	VerbForm=Ger	23	amod	_	_
-23	economy	economy	NOUN	NN	Number=Sing	20	obj	_	_
-24	?	?	PUNCT	.	_	18	punct	_	_
+1	On	on	ADP	IN	_	2	case	_	_
+2	one	one	NUM	CD	NumType=Card	13	obl	_	_
+3	of	of	ADP	IN	_	7	case	_	_
+4	California	California	PROPN	NNP	Number=Sing	7	nmod:poss	_	_
+5	's	's	PART	POS	_	4	case	_	_
+6	major	major	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	issues	issue	NOUN	NNS	Number=Plur	2	nmod	_	_
+8	today	today	NOUN	NN	Number=Sing	2	obl:tmod	_	_
+9	,	,	PUNCT	,	_	2	punct	_	_
+10	how	how	SCONJ	WRB	PronType=Int	13	mark	_	_
+11	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux	_	_
+12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	_	_
+13	propose	propose	VERB	VB	VerbForm=Inf	0	root	_	_
+14	to	to	PART	TO	_	15	mark	_	_
+15	fix	fix	VERB	VB	VerbForm=Inf	13	xcomp	_	_
+16	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	18	nmod:poss	_	_
+17	failing	fail	VERB	VBG	VerbForm=Ger	18	amod	_	_
+18	economy	economy	NOUN	NN	Number=Sing	15	obj	_	_
+19	?	?	PUNCT	.	_	13	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = imp
+1	DO	DO	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	DO	DO	VERB	VB	VerbForm=Inf	7	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	_	_
-7	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-8	to	to	PART	TO	_	9	mark	_	_
-9	roll-back	roll-back	VERB	VB	VerbForm=Inf	7	xcomp	_	_
-10	spending	spend	VERB	VBG	VerbForm=Ger	9	xcomp	_	_
-11	to	to	ADP	TO	_	13	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	level	level	NOUN	NN	Number=Sing	10	obl	_	_
-14	of	of	ADP	IN	_	15	case	_	_
-15	1998	@card@	NUM	CD	NumType=Card	13	nmod	_	_
-16	,	,	PUNCT	,	_	17	punct	_	_
-17	adjusted	adjust	VERB	VBN	Tense=Past|VerbForm=Part	13	acl	_	_
-18	for	for	ADP	IN	_	19	case	_	_
-19	inflation	inflation	NOUN	NN	Number=Sing	17	obl	_	_
-20	and	and	CCONJ	CC	_	21	cc	_	_
-21	population	population	NOUN	NN	Number=Sing	19	conj	_	_
-22	(	(	PUNCT	-LRB-	_	25	punct	_	_
-23	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	aux	_	_
-24	anyone	anyone	NOUN	NN	Number=Sing	25	nsubj	_	_
-25	think	think	VERB	VB	VerbForm=Inf	17	parataxis	_	_
-26	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	29	nsubj	_	_
-27	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	29	aux	_	_
-28	n't	n't	PART	RB	Polarity=Neg	29	advmod	_	_
-29	have	have	VERB	VB	VerbForm=Inf	25	ccomp	_	_
-30	enough	enough	ADJ	JJ	Degree=Pos	31	amod	_	_
-31	government	government	NOUN	NN	Number=Sing	29	obj	_	_
-32	in	in	ADP	IN	_	33	case	_	_
-33	1998	@card@	NUM	CD	NumType=Card	29	obl	_	_
-34	?	?	PUNCT	.	_	25	punct	_	_
-35	)	)	PUNCT	-RRB-	_	25	punct	_	_
-36	;	;	PUNCT	:	_	38	punct	_	_
-37	lower	low	ADJ	JJR	Degree=Cmp	38	amod	_	_
-38	taxes	taxis	NOUN	NNS	Number=Plur	29	nsubj	_	_
-39	significantly	significantly	ADV	RB	_	42	advmod	_	_
-40	(	(	PUNCT	-LRB-	_	42	punct	_	_
-41	especially	especially	ADV	RB	_	42	advmod	_	_
-42	income	income	NOUN	NN	Number=Sing	38	appos	_	_
-43	and	and	CCONJ	CC	_	45	cc	_	_
-44	sales	sale	NOUN	NNS	Number=Plur	45	compound	_	_
-45	taxes	taxis	NOUN	NNS	Number=Plur	42	conj	_	_
-46	)	)	PUNCT	-RRB-	_	42	punct	_	_
-47	;	;	PUNCT	:	_	48	punct	_	_
-48	eliminate	eliminate	VERB	VB	VerbForm=Inf	38	dep	_	_
-49	harmful	harmful	ADJ	JJ	Degree=Pos	56	amod	_	_
-50	,	,	PUNCT	,	_	51	punct	_	_
-51	useless	useless	ADJ	JJ	Degree=Pos	49	conj	_	_
-52	,	,	PUNCT	,	_	54	punct	_	_
-53	and	and	CCONJ	CC	_	54	cc	_	_
-54	duplicate	duplicate	VERB	VB	VerbForm=Inf	48	conj	_	_
-55	regulatory	regulatory	ADJ	JJ	Degree=Pos	56	amod	_	_
-56	agencies	agency	NOUN	NNS	Number=Plur	54	obj	_	_
-57	;	;	PUNCT	:	_	59	punct	_	_
-58	significantly	significantly	ADV	RB	_	59	advmod	_	_
-59	reduce	reduce	VERB	VB	VerbForm=Inf	54	dep	_	_
-60	the	the	DET	DT	Definite=Def|PronType=Art	61	det	_	_
-61	number	number	NOUN	NN	Number=Sing	59	obj	_	_
-62	of	of	ADP	IN	_	63	case	_	_
-63	employees	employee	NOUN	NNS	Number=Plur	61	nmod	_	_
-64	at	at	ADP	IN	_	67	case	_	_
-65	most	most	ADJ	JJS	Degree=Sup	67	amod	_	_
-66	state	state	NOUN	NN	Number=Sing	67	compound	_	_
-67	agencies	agency	NOUN	NNS	Number=Plur	63	nmod	_	_
-68	;	;	PUNCT	:	_	71	punct	_	_
-69	and	and	CCONJ	CC	_	71	cc	_	_
-70	permanently	permanently	ADV	RB	_	71	advmod	_	_
-71	limit	limit	VERB	VB	VerbForm=Inf	59	conj	_	_
-72	future	future	ADJ	JJ	Degree=Pos	74	amod	_	_
-73	spending	spend	VERB	VBG	VerbForm=Ger	74	amod	_	_
-74	increases	increase	NOUN	NNS	Number=Plur	71	obj	_	_
-75	based	base	VERB	VBN	Tense=Past|VerbForm=Part	74	acl	_	_
-76	on	on	ADP	IN	_	77	case	_	_
-77	population	population	NOUN	NN	Number=Sing	75	obl	_	_
-78	and	and	CCONJ	CC	_	79	cc	_	_
-79	inflation	inflation	NOUN	NN	Number=Sing	77	conj	_	_
-80	and	and	CCONJ	CC	_	81	cc	_	_
-81	limited	limit	VERB	VBN	Tense=Past|VerbForm=Part	75	conj	_	_
-82	to	to	ADP	TO	_	85	case	_	_
-83	the	the	DET	DT	Definite=Def|PronType=Art	85	det	_	_
-84	tax	tax	NOUN	NN	Number=Sing	85	compound	_	_
-85	receipts	receipt	NOUN	NNS	Number=Plur	81	obl	_	_
-86	available	available	ADJ	JJ	Degree=Pos	85	amod	_	_
-87	(	(	PUNCT	-LRB-	_	91	punct	_	_
-88	no	no	DET	DT	Polarity=Neg	91	det	_	_
-89	more	more	ADJ	JJR	Degree=Cmp	90	amod	_	_
-90	deficit	deficit	NOUN	NN	Number=Sing	91	compound	_	_
-91	spending	spend	NOUN	NN	Number=Sing	85	appos	_	_
-92	)	)	PUNCT	-RRB-	_	91	punct	_	_
-93	.	.	PUNCT	.	_	7	punct	_	_
+1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	_	_
+2	need	need	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	roll-back	roll-back	VERB	VB	VerbForm=Inf	2	xcomp	_	_
+5	spending	spend	VERB	VBG	VerbForm=Ger	4	ccomp	_	_
+6	to	to	ADP	TO	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	level	level	NOUN	NN	Number=Sing	5	obl	_	_
+9	of	of	ADP	IN	_	10	case	_	_
+10	1998	@card@	NUM	CD	NumType=Card	8	nmod	_	_
+11	,	,	PUNCT	,	_	12	punct	_	_
+12	adjusted	adjust	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	_	_
+13	for	for	ADP	IN	_	14	case	_	_
+14	inflation	inflation	NOUN	NN	Number=Sing	12	obl	_	_
+15	and	and	CCONJ	CC	_	16	cc	_	_
+16	population	population	NOUN	NN	Number=Sing	14	conj	_	_
+17	(	(	PUNCT	-LRB-	_	20	punct	_	_
+18	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	_	_
+19	anyone	anyone	NOUN	NN	Number=Sing	20	nsubj	_	_
+20	think	think	VERB	VB	VerbForm=Inf	2	parataxis	_	_
+21	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	24	nsubj	_	_
+22	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	aux	_	_
+23	n't	n't	PART	RB	Polarity=Neg	24	advmod	_	_
+24	have	have	VERB	VB	VerbForm=Inf	20	ccomp	_	_
+25	enough	enough	ADJ	JJ	Degree=Pos	26	amod	_	_
+26	government	government	NOUN	NN	Number=Sing	24	obj	_	_
+27	in	in	ADP	IN	_	28	case	_	_
+28	1998	@card@	NUM	CD	NumType=Card	24	obl	_	_
+29	?	?	PUNCT	.	_	20	punct	_	_
+30	)	)	PUNCT	-RRB-	_	20	punct	_	_
+31	;	;	PUNCT	:	_	33	punct	_	_
+32	lower	low	ADJ	JJR	Degree=Cmp	33	amod	_	_
+33	taxes	taxis	NOUN	NNS	Number=Plur	20	nsubj	_	_
+34	significantly	significantly	ADV	RB	_	37	advmod	_	_
+35	(	(	PUNCT	-LRB-	_	37	punct	_	_
+36	especially	especially	ADV	RB	_	37	advmod	_	_
+37	income	income	NOUN	NN	Number=Sing	33	appos	_	_
+38	and	and	CCONJ	CC	_	40	cc	_	_
+39	sales	sale	NOUN	NNS	Number=Plur	40	compound	_	_
+40	taxes	taxis	NOUN	NNS	Number=Plur	37	conj	_	_
+41	)	)	PUNCT	-RRB-	_	37	punct	_	_
+42	;	;	PUNCT	:	_	43	punct	_	_
+43	eliminate	eliminate	VERB	VB	VerbForm=Inf	33	dep	_	_
+44	harmful	harmful	ADJ	JJ	Degree=Pos	43	obj	_	_
+45	,	,	PUNCT	,	_	46	punct	_	_
+46	useless	useless	ADJ	JJ	Degree=Pos	44	conj	_	_
+47	,	,	PUNCT	,	_	49	punct	_	_
+48	and	and	CCONJ	CC	_	49	cc	_	_
+49	duplicate	duplicate	VERB	VB	VerbForm=Inf	43	conj	_	_
+50	regulatory	regulatory	ADJ	JJ	Degree=Pos	51	amod	_	_
+51	agencies	agency	NOUN	NNS	Number=Plur	49	obj	_	_
+52	;	;	PUNCT	:	_	54	punct	_	_
+53	significantly	significantly	ADV	RB	_	54	advmod	_	_
+54	reduce	reduce	VERB	VB	VerbForm=Inf	49	dep	_	_
+55	the	the	DET	DT	Definite=Def|PronType=Art	56	det	_	_
+56	number	number	NOUN	NN	Number=Sing	54	obj	_	_
+57	of	of	ADP	IN	_	58	case	_	_
+58	employees	employee	NOUN	NNS	Number=Plur	56	nmod	_	_
+59	at	at	ADP	IN	_	62	case	_	_
+60	most	most	ADJ	JJS	Degree=Sup	62	amod	_	_
+61	state	state	NOUN	NN	Number=Sing	62	compound	_	_
+62	agencies	agency	NOUN	NNS	Number=Plur	58	nmod	_	_
+63	;	;	PUNCT	:	_	66	punct	_	_
+64	and	and	CCONJ	CC	_	66	cc	_	_
+65	permanently	permanently	ADV	RB	_	66	advmod	_	_
+66	limit	limit	VERB	VB	VerbForm=Inf	54	conj	_	_
+67	future	future	ADJ	JJ	Degree=Pos	69	amod	_	_
+68	spending	spend	VERB	VBG	VerbForm=Ger	69	amod	_	_
+69	increases	increase	NOUN	NNS	Number=Plur	66	obj	_	_
+70	based	base	VERB	VBN	Tense=Past|VerbForm=Part	69	acl	_	_
+71	on	on	ADP	IN	_	72	case	_	_
+72	population	population	NOUN	NN	Number=Sing	70	obl	_	_
+73	and	and	CCONJ	CC	_	74	cc	_	_
+74	inflation	inflation	NOUN	NN	Number=Sing	72	conj	_	_
+75	and	and	CCONJ	CC	_	76	cc	_	_
+76	limited	limit	VERB	VBN	Tense=Past|VerbForm=Part	70	conj	_	_
+77	to	to	ADP	TO	_	80	case	_	_
+78	the	the	DET	DT	Definite=Def|PronType=Art	80	det	_	_
+79	tax	tax	NOUN	NN	Number=Sing	80	compound	_	_
+80	receipts	receipt	NOUN	NNS	Number=Plur	76	obl	_	_
+81	available	available	ADJ	JJ	Degree=Pos	80	amod	_	_
+82	(	(	PUNCT	-LRB-	_	86	punct	_	_
+83	no	no	DET	DT	Polarity=Neg	86	det	_	_
+84	more	more	ADJ	JJR	Degree=Cmp	85	amod	_	_
+85	deficit	deficit	NOUN	NN	Number=Sing	86	compound	_	_
+86	spending	spend	NOUN	NN	Number=Sing	80	appos	_	_
+87	)	)	PUNCT	-RRB-	_	86	punct	_	_
+88	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	2	nsubj	_	_
@@ -484,39 +510,51 @@
 16	taxpayers	taxpayer	NOUN	NNS	Number=Plur	13	obl	_	_
 17	.	.	PUNCT	.	_	8	punct	_	_
 
-# s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	MM	MM	PROPN	NNP	Number=Sing	6	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	What	What	PRON	WP	PronType=Int	9	nsubj	_	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
-8	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
-9	stance	stance	NOUN	NN	Number=Sing	0	root	_	_
-10	on	on	ADP	IN	_	12	case	_	_
-11	gay	gay	ADJ	JJ	Degree=Pos	12	amod	_	_
-12	marriage	marriage	NOUN	NN	Number=Sing	9	nmod	_	_
-13	?	?	PUNCT	.	_	9	punct	_	_
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	MM	MM	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	DO	DO	VERB	VB	VerbForm=Inf	9	parataxis	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Why	why	SCONJ	WRB	PronType=Int	9	mark	_	_
-7	not	not	PART	RB	Polarity=Neg	9	advmod	_	_
-8	just	just	ADV	RB	_	9	advmod	_	_
-9	get	get	VERB	VB	VerbForm=Inf	0	root	_	_
-10	government	government	NOUN	NN	Number=Sing	9	obj	_	_
-11	out	out	ADP	IN	_	16	case	_	_
-12	of	of	ADP	IN	_	11	fixed	_	_
-13	people	people	NOUN	NNS	Number=Plur	16	nmod:poss	_	_
-14	’s	's	PART	POS	_	13	case	_	_
-15	personal	personal	ADJ	JJ	Degree=Pos	16	amod	_	_
-16	lives	life	NOUN	NNS	Number=Plur	9	obl	_	_
-17	?	?	PUNCT	.	_	9	punct	_	_
+1	What	What	PRON	WP	PronType=Int	0	root	_	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	cop	_	_
+3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
+4	stance	stance	NOUN	NN	Number=Sing	1	nsubj	_	_
+5	on	on	ADP	IN	_	7	case	_	_
+6	gay	gay	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	marriage	marriage	NOUN	NN	Number=Sing	4	nmod	_	_
+8	?	?	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = imp
+1	DO	DO	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = wh
+1	Why	why	SCONJ	WRB	PronType=Int	4	mark	_	_
+2	not	not	PART	RB	Polarity=Neg	4	advmod	_	_
+3	just	just	ADV	RB	_	4	advmod	_	_
+4	get	get	VERB	VB	VerbForm=Inf	0	root	_	_
+5	government	government	NOUN	NN	Number=Sing	4	obj	_	_
+6	out	out	ADP	IN	_	11	case	_	_
+7	of	of	ADP	IN	_	6	fixed	_	_
+8	people	people	NOUN	NNS	Number=Plur	11	nmod:poss	_	_
+9	’s	's	PART	POS	_	8	case	_	_
+10	personal	personal	ADJ	JJ	Degree=Pos	11	amod	_	_
+11	lives	life	NOUN	NNS	Number=Plur	4	obl	_	_
+12	?	?	PUNCT	.	_	4	punct	_	_
 
 # s_type = imp
 1	Let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

@@ -23,7 +23,9 @@
 4	27	@card@	NUM	CD	NumType=Card	1	appos	_	_
 5	,	,	PUNCT	,	_	6	punct	_	_
 6	2012	@card@	NUM	CD	NumType=Card	4	nmod:tmod	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = imp
 1	If	if	SCONJ	IN	_	3	mark	_	_
@@ -63,21 +65,23 @@
 9	torture	torture	ADJ	JJ	Degree=Pos	10	amod	_	_
 10	abuses	abuse	NOUN	NNS	Number=Plur	6	nmod	_	_
 
+# s_type = frag
+1	Medicins	Medicins	PROPN	NNPS	Number=Plur	2	compound	_	_
+2	Sans	San	PROPN	NNP	Number=Sing	0	root	_	_
+3	Frontieres	Frontieres	PROPN	NNP	Number=Sing	2	flat	_	_
+
 # s_type = decl
-1	Medicins	Medicins	PROPN	NNP	Number=Plur	8	nsubj	_	_
-2	Sans	San	PROPN	NNP	Number=Sing	3	compound	_	_
-3	Frontieres	Frontieres	PROPN	NNP	Number=Sing	1	appos	_	_
-4	(	(	PUNCT	-LRB-	_	5	punct	_	_
-5	MSF	MSF	PROPN	NNP	Number=Sing	3	appos	_	_
-6	)	)	PUNCT	-RRB-	_	5	punct	_	_
-7	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
-8	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
-10	partial	partial	ADJ	JJ	Degree=Pos	11	amod	_	_
-11	withdrawal	withdrawal	NOUN	NN	Number=Sing	8	obj	_	_
-12	from	from	ADP	IN	_	13	case	_	_
-13	Libya	Libya	PROPN	NNP	Number=Sing	11	nmod	_	_
-14	.	.	PUNCT	.	_	8	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	MSF	MSF	PROPN	NNP	Number=Sing	5	nsubj	_	_
+3	)	)	PUNCT	-RRB-	_	2	punct	_	_
+4	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	_	_
+5	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+7	partial	partial	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	withdrawal	withdrawal	NOUN	NN	Number=Sing	5	obj	_	_
+9	from	from	ADP	IN	_	10	case	_	_
+10	Libya	Libya	PROPN	NNP	Number=Sing	8	nmod	_	_
+11	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
@@ -182,7 +186,7 @@
 
 # s_type = decl
 1	"	"	PUNCT	``	_	2	punct	_	_
-2	Libya	Libya	PROPN	NNP	Number=Sing	5	nsubj	_	_
+2	Libya	Libya	PROPN	NNP	Number=Sing	5	ccomp	_	_
 3	:	:	PUNCT	:	_	2	punct	_	_
 4	UN	un	PROPN	NNP	Number=Sing	5	nsubj	_	_
 5	alarmed	alarmed	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
@@ -196,32 +200,34 @@
 13	"	"	PUNCT	''	_	9	punct	_	_
 14	—	—	PUNCT	:	_	16	punct	_	_
 15	The	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-16	Telegraph	Telegraph	PROPN	NNP	Number=Sing	10	appos	_	_
+16	Telegraph	Telegraph	PROPN	NNP	Number=Sing	12	appos	_	_
 17	,	,	PUNCT	,	_	19	punct	_	_
 18	January	January	PROPN	NNP	Number=Sing	19	compound	_	_
 19	26	@card@	NUM	CD	NumType=Card	16	appos	_	_
 20	,	,	PUNCT	,	_	21	punct	_	_
 21	2012	@card@	NUM	CD	NumType=Card	19	nmod:tmod	_	_
-22	"	"	PUNCT	``	_	25	punct	_	_
-23	Libyan	Libyan	PROPN	NNP	Number=Sing	24	compound	_	_
-24	detainees	detainee	NOUN	NNS	Number=Plur	25	nsubj	_	_
-25	die	die	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	parataxis	_	_
-26	after	after	ADP	IN	_	27	case	_	_
-27	torture	torture	NOUN	NN	Number=Sing	25	obl	_	_
-28	,	,	PUNCT	,	_	25	punct	_	_
-29	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	parataxis	_	_
-30	Amnesty	Amnesty	PROPN	NNP	Number=Sing	31	compound	_	_
-31	International	International	PROPN	NNP	Number=Sing	29	xcomp	_	_
-32	"	"	PUNCT	''	_	29	punct	_	_
-33	—	—	PUNCT	:	_	36	punct	_	_
-34	BBC	BBC	PROPN	NNP	Number=Sing	36	compound	_	_
-35	News	News	PROPN	NNP	Number=Sing	36	compound	_	_
-36	Online	online	PROPN	NNP	Number=Sing	29	obj	_	_
-37	,	,	PUNCT	,	_	39	punct	_	_
-38	January	January	PROPN	NNP	Number=Sing	39	compound	_	_
-39	26	@card@	NUM	CD	NumType=Card	36	appos	_	_
-40	,	,	PUNCT	,	_	41	punct	_	_
-41	2012	@card@	NUM	CD	NumType=Card	39	nmod:tmod	_	_
+
+# s_type = decl
+1	"	"	PUNCT	``	_	4	punct	_	_
+2	Libyan	Libyan	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	detainees	detainee	NOUN	NNS	Number=Plur	4	nsubj	_	_
+4	die	die	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	_	_
+5	after	after	ADP	IN	_	6	case	_	_
+6	torture	torture	NOUN	NN	Number=Sing	4	obl	_	_
+7	,	,	PUNCT	,	_	4	punct	_	_
+8	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+9	Amnesty	Amnesty	PROPN	NNP	Number=Sing	10	compound	_	_
+10	International	International	PROPN	NNP	Number=Sing	8	xcomp	_	_
+11	"	"	PUNCT	''	_	8	punct	_	_
+12	—	—	PUNCT	:	_	15	punct	_	_
+13	BBC	BBC	PROPN	NNP	Number=Sing	15	compound	_	_
+14	News	News	PROPN	NNP	Number=Sing	15	compound	_	_
+15	Online	online	PROPN	NNP	Number=Sing	8	obj	_	_
+16	,	,	PUNCT	,	_	18	punct	_	_
+17	January	January	PROPN	NNP	Number=Sing	18	compound	_	_
+18	26	@card@	NUM	CD	NumType=Card	15	appos	_	_
+19	,	,	PUNCT	,	_	20	punct	_	_
+20	2012	@card@	NUM	CD	NumType=Card	18	nmod:tmod	_	_
 
 # s_type = decl
 1	Jagger	Jagger	PROPN	NNP	Number=Sing	2	nsubj	_	_
@@ -321,32 +327,34 @@
 53	inaccurate	inaccurate	ADJ	JJ	Degree=Pos|Polarity=Neg	50	acl:relcl	_	_
 54	.	.	PUNCT	.	_	32	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = decl
-1	"	"	PUNCT	``	_	5	punct	_	_
-2	"	"	PUNCT	``	_	5	punct	_	_
-3	Mick	Mick	PROPN	NNP	Number=Sing	5	nsubj	_	_
-4	Jagger	Jagger	PROPN	NNP	Number=Sing	3	flat	_	_
-5	pulls	pull	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-6	out	out	ADP	RP	_	5	compound:prt	_	_
-7	of	of	ADP	IN	_	10	case	_	_
-8	David	David	PROPN	NNP	Number=Sing	10	compound	_	_
-9	Cameron	cameron	PROPN	NNP	Number=Sing	8	flat	_	_
-10	event	event	NOUN	NN	Number=Sing	5	obl	_	_
-11	amid	amid	ADP	IN	_	14	case	_	_
-12	'	'	PUNCT	``	_	14	punct	_	_
-13	political	political	ADJ	JJ	Degree=Pos	14	amod	_	_
-14	football	football	NOUN	NN	Number=Sing	5	obl	_	_
-15	'	'	PUNCT	''	_	14	punct	_	_
-16	claims	claim	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	_	_
-17	"	"	PUNCT	''	_	16	punct	_	_
-18	—	—	PUNCT	:	_	20	punct	_	_
-19	The	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	Telegraph	Telegraph	PROPN	NNP	Number=Sing	16	obj	_	_
-21	,	,	PUNCT	,	_	23	punct	_	_
-22	January	January	PROPN	NNP	Number=Sing	23	compound	_	_
-23	25	@card@	NUM	CD	NumType=Card	20	appos	_	_
-24	,	,	PUNCT	,	_	25	punct	_	_
-25	2012	@card@	NUM	CD	NumType=Card	23	nmod:tmod	_	_
+1	"	"	PUNCT	``	_	4	punct	_	_
+2	Mick	Mick	PROPN	NNP	Number=Sing	4	nsubj	_	_
+3	Jagger	Jagger	PROPN	NNP	Number=Sing	2	flat	_	_
+4	pulls	pull	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	out	out	ADP	RP	_	4	compound:prt	_	_
+6	of	of	ADP	IN	_	7	case	_	_
+7	David	David	PROPN	NNP	Number=Sing	9	compound	_	_
+8	Cameron	cameron	PROPN	NNP	Number=Sing	7	flat	_	_
+9	event	event	NOUN	NN	Number=Sing	4	obl	_	_
+10	amid	amid	ADP	IN	_	13	case	_	_
+11	'	'	PUNCT	``	_	13	punct	_	_
+12	political	political	ADJ	JJ	Degree=Pos	13	amod	_	_
+13	football	football	NOUN	NN	Number=Sing	4	obl	_	_
+14	'	'	PUNCT	''	_	13	punct	_	_
+15	claims	claim	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	_	_
+16	"	"	PUNCT	''	_	15	punct	_	_
+17	—	—	PUNCT	:	_	19	punct	_	_
+18	The	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
+19	Telegraph	Telegraph	PROPN	NNP	Number=Sing	15	obj	_	_
+20	,	,	PUNCT	,	_	22	punct	_	_
+21	January	January	PROPN	NNP	Number=Sing	22	compound	_	_
+22	25	@card@	NUM	CD	NumType=Card	19	appos	_	_
+23	,	,	PUNCT	,	_	24	punct	_	_
+24	2012	@card@	NUM	CD	NumType=Card	22	nmod:tmod	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -453,13 +461,15 @@
 33	.	.	PUNCT	.	_	12	punct	_	_
 
 # s_type = frag
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	Larry	larry	PROPN	NNP	Number=Sing	0	root	_	_
-3	Elliott	Elliott	PROPN	NNP	Number=Sing	2	flat	_	_
-4	and	and	CCONJ	CC	_	5	cc	_	_
-5	Jill	Jill	PROPN	NNP	Number=Sing	2	conj	_	_
-6	Treanor	Treanor	PROPN	NNP	Number=Sing	5	flat	_	_
-7	.	.	PUNCT	.	_	2	punct	_	_
+1	"	"	PUNCT	``	_	0	root	_	_
+
+# s_type = frag
+1	Larry	larry	PROPN	NNP	Number=Sing	0	root	_	_
+2	Elliott	Elliott	PROPN	NNP	Number=Sing	1	flat	_	_
+3	and	and	CCONJ	CC	_	4	cc	_	_
+4	Jill	Jill	PROPN	NNP	Number=Sing	1	conj	_	_
+5	Treanor	Treanor	PROPN	NNP	Number=Sing	4	flat	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	2	punct	_	_
@@ -486,9 +496,11 @@
 22	26	@card@	NUM	CD	NumType=Card	19	appos	_	_
 23	,	,	PUNCT	,	_	24	punct	_	_
 24	2012	@card@	NUM	CD	NumType=Card	22	nmod:tmod	_	_
-25	Daniel	Daniel	PROPN	NNP	Number=Sing	22	appos	_	_
-26	Bentley	Bentley	PROPN	NNP	Number=Sing	25	flat	_	_
-27	.	.	PUNCT	.	_	6	punct	_	_
+
+# s_type = frag
+1	Daniel	Daniel	PROPN	NNP	Number=Sing	0	root	_	_
+2	Bentley	Bentley	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -601,7 +613,7 @@
 25	.	.	PUNCT	.	_	9	punct	_	_
 
 # s_type = decl
-1	"	"	PUNCT	``	_	13	punct	_	_
+1	"	"	PUNCT	``	_	4	punct	_	_
 2	Papua	Papua	PROPN	NNP	Number=Sing	4	compound	_	_
 3	New	New	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Guinea	Guinea	PROPN	NNP	Number=Sing	8	compound	_	_
@@ -610,7 +622,7 @@
 7	Military	Military	PROPN	NNP	Number=Sing	8	compound	_	_
 8	Mutiny	Mutiny	PROPN	NNP	Number=Sing	13	nsubj	_	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	_
-10	Over	over	ADP	IN	_	13	case	_	_
+10	Over	over	ADP	IN	_	8	case	_	_
 11	"	"	PUNCT	''	_	13	punct	_	_
 12	—	—	PUNCT	:	_	13	punct	_	_
 13	Voice	Voice	PROPN	NNP	Number=Sing	0	root	_	_
@@ -618,12 +630,14 @@
 15	America	America	PROPN	NNP	Number=Sing	13	nmod	_	_
 16	,	,	PUNCT	,	_	18	punct	_	_
 17	January	January	PROPN	NNP	Number=Sing	18	compound	_	_
-18	26	@card@	NUM	CD	NumType=Card	13	conj	_	_
+18	26	@card@	NUM	CD	NumType=Card	13	appos	_	_
 19	,	,	PUNCT	,	_	20	punct	_	_
 20	2012	@card@	NUM	CD	NumType=Card	18	nmod:tmod	_	_
-21	Kate	kate	PROPN	NNP	Number=Sing	22	compound	_	_
-22	Hodal	hodal	PROPN	NNP	Number=Sing	18	appos	_	_
-23	.	.	PUNCT	.	_	13	punct	_	_
+
+# s_type = frag
+1	Kate	kate	PROPN	NNP	Number=Sing	2	compound	_	_
+2	Hodal	hodal	PROPN	NNP	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	7	punct	_	_

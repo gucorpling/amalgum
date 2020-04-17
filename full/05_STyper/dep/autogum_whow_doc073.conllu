@@ -75,15 +75,17 @@
 14	today	today	NOUN	NN	Number=Sing	9	obl:tmod	_	_
 15	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Prevent	Prevent	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	oily	oily	ADJ	JJ	Degree=Pos	4	amod	_	_
-4	discharges	discharge	NOUN	NNS	Number=Plur	2	obj	_	_
-5	from	from	ADP	IN	_	7	case	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	bilge	bilge	NOUN	NN	Number=Sing	4	nmod	_	_
-8	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Prevent	Prevent	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	oily	oily	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	discharges	discharge	NOUN	NNS	Number=Plur	1	obj	_	_
+4	from	from	ADP	IN	_	6	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	bilge	bilge	NOUN	NN	Number=Sing	3	nmod	_	_
+7	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Keep	keep	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -553,8 +555,10 @@
 11	maintenance	maintenance	NOUN	NN	Number=Sing	8	obl	_	_
 12	.	.	PUNCT	.	_	7	punct	_	_
 13	)	)	PUNCT	-RRB-	_	7	punct	_	_
-14	Sail	Sail	PROPN	NNP	Number=Sing	7	appos	_	_
-15	.	.	PUNCT	.	_	7	punct	_	_
+
+# s_type = imp
+1	Sail	Sail	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Wind	wind	NOUN	NN	Number=Sing	8	nsubj	_	_
@@ -584,7 +588,7 @@
 8	gas	gas	NOUN	NN	Number=Sing	5	obl	_	_
 9	or	or	CCONJ	CC	_	10	cc	_	_
 10	oil	oil	NOUN	NN	Number=Sing	8	conj	_	_
-11	soaked	soak	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	_	_
+11	soaked	soak	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	_	_
 12	rags	rag	NOUN	NNS	Number=Plur	8	conj	_	_
 13	or	or	CCONJ	CC	_	14	cc	_	_
 14	pads	pad	NOUN	NNS	Number=Plur	12	conj	_	_
@@ -594,25 +598,27 @@
 18	be	be	AUX	VB	VerbForm=Inf	20	cop	_	_
 19	highly	highly	ADV	RB	_	20	advmod	_	_
 20	flammable	flammable	ADJ	JJ	Degree=Pos	1	advcl	_	_
-21	Always	always	ADV	RB	_	22	advmod	_	_
-22	consult	consult	VERB	VB	VerbForm=Inf	20	xcomp	_	_
-23	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	24	nmod:poss	_	_
-24	owner	owner	NOUN	NN	Number=Sing	26	nmod:poss	_	_
-25	’s	's	PART	POS	_	24	case	_	_
-26	manual	manual	NOUN	NN	Number=Sing	22	obj	_	_
-27	for	for	ADP	IN	_	29	case	_	_
-28	maintenance	maintenance	NOUN	NN	Number=Sing	29	compound	_	_
-29	instructions	instruction	NOUN	NNS	Number=Plur	26	nmod	_	_
-30	specific	specific	ADJ	JJ	Degree=Pos	29	amod	_	_
-31	to	to	ADP	TO	_	34	case	_	_
-32	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	34	nmod:poss	_	_
-33	boat	boat	NOUN	NN	Number=Sing	34	compound	_	_
-34	model	model	NOUN	NN	Number=Sing	30	obl	_	_
-35	before	before	SCONJ	IN	_	36	mark	_	_
-36	performing	perform	VERB	VBG	VerbForm=Ger	30	advcl	_	_
-37	any	any	DET	DT	_	38	det	_	_
-38	maintenance	maintenance	NOUN	NN	Number=Sing	36	obj	_	_
-39	on	on	ADP	IN	_	41	case	_	_
-40	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	41	nmod:poss	_	_
-41	boat	boat	NOUN	NN	Number=Sing	38	nmod	_	_
+
+# s_type = imp
+1	Always	always	ADV	RB	_	2	advmod	_	_
+2	consult	consult	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
+4	owner	owner	NOUN	NN	Number=Sing	6	nmod:poss	_	_
+5	’s	's	PART	POS	_	4	case	_	_
+6	manual	manual	NOUN	NN	Number=Sing	2	obj	_	_
+7	for	for	ADP	IN	_	9	case	_	_
+8	maintenance	maintenance	NOUN	NN	Number=Sing	9	compound	_	_
+9	instructions	instruction	NOUN	NNS	Number=Plur	6	nmod	_	_
+10	specific	specific	ADJ	JJ	Degree=Pos	9	amod	_	_
+11	to	to	ADP	TO	_	14	case	_	_
+12	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
+13	boat	boat	NOUN	NN	Number=Sing	14	compound	_	_
+14	model	model	NOUN	NN	Number=Sing	10	obl	_	_
+15	before	before	SCONJ	IN	_	16	mark	_	_
+16	performing	perform	VERB	VBG	VerbForm=Ger	2	advcl	_	_
+17	any	any	DET	DT	_	18	det	_	_
+18	maintenance	maintenance	NOUN	NN	Number=Sing	16	obj	_	_
+19	on	on	ADP	IN	_	21	case	_	_
+20	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	21	nmod:poss	_	_
+21	boat	boat	NOUN	NN	Number=Sing	18	nmod	_	_
 

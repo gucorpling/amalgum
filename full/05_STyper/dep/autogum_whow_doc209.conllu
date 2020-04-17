@@ -58,11 +58,13 @@
 6	some	some	PRON	DT	_	5	obj	_	_
 7	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	3	nsubj	_	_
-2	Be	be	AUX	VB	VerbForm=Inf	3	cop	_	_
-3	polite	polite	ADJ	JJ	Degree=Pos	0	root	_	_
-4	.	.	PUNCT	.	_	3	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Be	be	AUX	VB	VerbForm=Inf	2	cop	_	_
+2	polite	polite	ADJ	JJ	Degree=Pos	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	Politeness	Politeness	NOUN	NN	Number=Sing	2	nsubj	_	_
@@ -696,13 +698,13 @@
 18	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	acl:relcl	_	_
 19	.	.	PUNCT	.	_	5	punct	_	_
 
-# s_type = multiple
+# s_type = sub
 1	If	if	SCONJ	IN	_	3	mark	_	_
 2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
 3	cook	cook	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	advcl	_	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
 5	lot	lot	NOUN	NN	Number=Sing	3	obj	_	_
-6	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	3	obl:npmod	_	_
+6	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	5	nmod:npmod	_	_
 7	,	,	PUNCT	,	_	3	punct	_	_
 8	consider	consider	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 9	wrapping	wrap	VERB	VBG	VerbForm=Ger	8	xcomp	_	_
@@ -723,10 +725,12 @@
 24	thinking	think	VERB	VBG	Tense=Pres|VerbForm=Part	20	ccomp	_	_
 25	about	about	ADP	IN	_	26	case	_	_
 26	them	them	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	24	obl	_	_
-27	Tell	tell	VERB	VB	VerbForm=Inf	24	xcomp	_	_
-28	them	them	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	27	obj	_	_
-29	jokes	joke	NOUN	NNS	Number=Plur	27	obj	_	_
-30	.	.	PUNCT	.	_	8	punct	_	_
+
+# s_type = imp
+1	Tell	tell	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	them	them	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	obj	_	_
+3	jokes	joke	NOUN	NNS	Number=Plur	1	obj	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	2	nsubj	_	_

@@ -496,8 +496,10 @@
 
 # s_type = frag
 1	Assumption	Assumption	NOUN	NN	Number=Sing	0	root	_	_
-2	1	1	NUM	CD	NumType=Card	1	amod	_	_
-3	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	1	1	NUM	CD	NumType=Card	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	In	in	ADP	IN	_	3	case	_	_
@@ -512,7 +514,9 @@
 
 # s_type = frag
 1	1	1	NUM	CD	NumType=Card	0	root	_	_
-2	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	Every	every	DET	DT	_	2	det	_	_
@@ -523,64 +527,80 @@
 6	generated	generate	VERB	VBN	Tense=Past|VerbForm=Part	8	amod	_	_
 7	countable	countable	ADJ	JJ	Degree=Pos	8	amod	_	_
 8	group	group	NOUN	NN	Number=Sing	0	root	_	_
-9	,	,	PUNCT	,	_	10	punct	_	_
-10	2	2	NUM	CD	NumType=Card	8	dep	_	_
-11	.	.	PUNCT	.	_	8	punct	_	_
-12	every	every	DET	DT	_	13	det	_	_
-13	graph	graph	NOUN	NN	Number=Sing	19	nsubj	_	_
-14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	_	_
-15	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	_	_
-16	connected	connect	VERB	VBN	Tense=Past|VerbForm=Part	19	amod	_	_
-17	finite	finite	ADJ	JJ	Degree=Pos	19	amod	_	_
-18	directed	direct	VERB	VBN	Tense=Past|VerbForm=Part	19	amod	_	_
-19	graph	graph	NOUN	NN	Number=Sing	8	parataxis	_	_
-20	with	with	ADP	IN	_	22	case	_	_
-21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
-22	properties	property	NOUN	NNS	Number=Plur	19	nmod	_	_
-23	that	that	PRON	WDT	PronType=Rel	26	obj	_	_
-24	every	every	DET	DT	_	25	det	_	_
-25	circuit	circuit	NOUN	NN	Number=Sing	26	nsubj	_	_
-26	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	acl:relcl	_	_
-27	an	an	DET	DT	Definite=Ind|PronType=Art	28	det	_	_
-28	entry	entry	NOUN	NN	Number=Sing	26	obj	_	_
-29	and	and	CCONJ	CC	_	31	cc	_	_
-30	and	and	CCONJ	CC	_	31	cc	_	_
-31	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	26	conj	_	_
-32	nonempty	nonempty	ADJ	JJ	Degree=Pos	33	amod	_	_
-33	sets	set	NOUN	NNS	Number=Plur	31	nsubj	_	_
-34	for	for	ADP	IN	_	36	case	_	_
-35	every	every	DET	DT	_	36	det	_	_
-36	vertex	vertex	NOUN	NN	Number=Sing	33	nmod	_	_
-37	,	,	PUNCT	,	_	38	punct	_	_
-38	3	3	NUM	CD	NumType=Card	36	appos	_	_
-39	.	.	PUNCT	.	_	43	punct	_	_
-40	every	every	DET	DT	_	42	det	_	_
-41	finite	finite	ADJ	JJ	Degree=Pos	42	amod	_	_
-42	path	path	NOUN	NN	Number=Sing	43	nsubj	_	_
-43	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	parataxis	_	_
-44	an	an	DET	DT	Definite=Ind|PronType=Art	45	det	_	_
-45	entry	entry	NOUN	NN	Number=Sing	43	obj	_	_
-46	,	,	PUNCT	,	_	47	punct	_	_
-47	4	4	NUM	CD	NumType=Card	45	dep	_	_
-48	.	.	PUNCT	.	_	43	punct	_	_
-49	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	52	nmod:poss	_	_
-50	self-similar	self-similar	ADJ	JJ	Degree=Pos	52	amod	_	_
-51	graph	graph	NOUN	NN	Number=Sing	52	compound	_	_
-52	action	action	NOUN	NN	Number=Sing	54	nsubj	_	_
-53	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	54	cop	_	_
-54	pseudo-free	pseudo-free	ADJ	JJ	Degree=Pos	43	parataxis	_	_
-55	,	,	PUNCT	,	_	56	punct	_	_
-56	and	and	CCONJ	CC	_	57	cc	_	_
-57	5	5	NUM	CD	NumType=Card	54	conj	_	_
-58	.	.	PUNCT	.	_	54	punct	_	_
-59	the	the	DET	DT	Definite=Def|PronType=Art	61	det	_	_
-60	G	G	PROPN	NNP	Number=Sing	61	compound	_	_
-61	action	action	NOUN	NN	Number=Sing	65	nsubj	_	_
-62	on	on	ADP	IN	_	65	case	_	_
-63	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	65	cop	_	_
-64	topologically	topologically	ADV	RB	_	65	advmod	_	_
-65	free	free	ADJ	JJ	Degree=Pos	54	parataxis	_	_
-66	.	.	PUNCT	.	_	8	punct	_	_
+9	,	,	PUNCT	,	_	8	punct	_	_
+
+# s_type = frag
+1	2	2	X	LS	_	0	root	_	_
+
+# s_type = decl
+1	.	.	PUNCT	.	_	9	punct	_	_
+2	every	every	DET	DT	_	3	det	_	_
+3	graph	graph	NOUN	NN	Number=Sing	9	nsubj	_	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
+6	connected	connect	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	_	_
+7	finite	finite	ADJ	JJ	Degree=Pos	9	amod	_	_
+8	directed	direct	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	_	_
+9	graph	graph	NOUN	NN	Number=Sing	0	root	_	_
+10	with	with	ADP	IN	_	12	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+12	properties	property	NOUN	NNS	Number=Plur	9	nmod	_	_
+13	that	that	PRON	WDT	PronType=Rel	16	obj	_	_
+14	every	every	DET	DT	_	15	det	_	_
+15	circuit	circuit	NOUN	NN	Number=Sing	16	nsubj	_	_
+16	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	acl:relcl	_	_
+17	an	an	DET	DT	Definite=Ind|PronType=Art	18	det	_	_
+18	entry	entry	NOUN	NN	Number=Sing	16	obj	_	_
+19	and	and	CCONJ	CC	_	21	cc	_	_
+20	and	and	CCONJ	CC	_	21	cc	_	_
+21	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	16	conj	_	_
+22	nonempty	nonempty	ADJ	JJ	Degree=Pos	23	amod	_	_
+23	sets	set	NOUN	NNS	Number=Plur	21	nsubj	_	_
+24	for	for	ADP	IN	_	26	case	_	_
+25	every	every	DET	DT	_	26	det	_	_
+26	vertex	vertex	NOUN	NN	Number=Sing	23	nmod	_	_
+27	,	,	PUNCT	,	_	9	punct	_	_
+
+# s_type = frag
+1	3	3	X	LS	_	0	root	_	_
+
+# s_type = decl
+1	.	.	PUNCT	.	_	5	punct	_	_
+2	every	every	DET	DT	_	4	det	_	_
+3	finite	finite	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	path	path	NOUN	NN	Number=Sing	5	nsubj	_	_
+5	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	an	an	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+7	entry	entry	NOUN	NN	Number=Sing	5	obj	_	_
+8	,	,	PUNCT	,	_	5	punct	_	_
+
+# s_type = frag
+1	4	4	X	LS	_	0	root	_	_
+
+# s_type = decl
+1	.	.	PUNCT	.	_	7	punct	_	_
+2	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
+3	self-similar	self-similar	ADJ	JJ	Degree=Pos	5	amod	_	_
+4	graph	graph	NOUN	NN	Number=Sing	5	compound	_	_
+5	action	action	NOUN	NN	Number=Sing	7	nsubj	_	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+7	pseudo-free	pseudo-free	ADJ	JJ	Degree=Pos	0	root	_	_
+8	,	,	PUNCT	,	_	9	punct	_	_
+9	and	and	CCONJ	CC	_	7	punct	_	_
+
+# s_type = frag
+1	5	5	X	LS	_	0	root	_	_
+
+# s_type = decl
+1	.	.	PUNCT	.	_	8	punct	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	G	G	PROPN	NNP	Number=Sing	4	compound	_	_
+4	action	action	NOUN	NN	Number=Sing	8	nsubj	_	_
+5	on	on	ADP	IN	_	8	case	_	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
+7	topologically	topologically	ADV	RB	_	8	advmod	_	_
+8	free	free	ADJ	JJ	Degree=Pos	0	root	_	_
+9	.	.	PUNCT	.	_	8	punct	_	_
 
 # s_type = frag
 1	Inverse	Inverse	NOUN	NN	Number=Sing	0	root	_	_

@@ -152,10 +152,14 @@
 17	,	,	PUNCT	,	_	19	punct	_	_
 18	as	as	SCONJ	IN	_	19	mark	_	_
 19	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	_	_
-20	in	in	ADP	IN	_	21	case	_	_
-21	Figure	Figure	PROPN	NNP	Number=Sing	19	obl	_	_
-22	1	1	NUM	CD	NumType=Card	21	nummod	_	_
-23	.	.	PUNCT	.	_	9	punct	_	_
+20	in	in	ADP	IN	_	19	obl	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	1	1	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	Among	Among	ADP	IN	_	3	case	_	_
@@ -486,11 +490,11 @@
 26	tumors	tumor	NOUN	NNS	Number=Plur	24	obj	_	_
 27	.	.	PUNCT	.	_	8	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	Given	give	VERB	VBN	Tense=Past|VerbForm=Part	4	case	_	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
 3	wide	wide	ADJ	JJ	Degree=Pos	4	amod	_	_
-4	heterogeneity	heterogeneity	NOUN	NN	Number=Sing	39	obl	_	_
+4	heterogeneity	heterogeneity	NOUN	NN	Number=Sing	0	root	_	_
 5	in	in	ADP	IN	_	7	case	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 7	repertoire	repertoire	NOUN	NN	Number=Sing	4	nmod	_	_
@@ -499,34 +503,38 @@
 10	alterations	alteration	NOUN	NNS	Number=Plur	7	nmod	_	_
 11	in	in	ADP	IN	_	13	case	_	_
 12	immune-related	immune-related	VERB	VBN	Tense=Past|VerbForm=Part	13	amod	_	_
-13	genes	gene	NOUN	NNS	Number=Plur	7	nmod	_	_
+13	genes	gene	NOUN	NNS	Number=Plur	10	nmod	_	_
 14	across	across	ADP	IN	_	17	case	_	_
 15	different	different	ADJ	JJ	Degree=Pos	17	amod	_	_
 16	tumor	tumor	NOUN	NN	Number=Sing	17	compound	_	_
 17	types	type	NOUN	NNS	Number=Plur	13	nmod	_	_
-18	(	(	PUNCT	-LRB-	_	19	punct	_	_
-19	Figure	Figure	NOUN	NN	Number=Sing	17	appos	_	_
-20	2	2	NUM	CD	NumType=Card	19	nummod	_	_
-21	)	)	PUNCT	-RRB-	_	19	punct	_	_
-22	,	,	PUNCT	,	_	23	punct	_	_
-23	novel	novel	NOUN	NN	Number=Sing	39	nsubj:pass	_	_
-24	,	,	PUNCT	,	_	31	punct	_	_
-25	efficient	efficient	ADJ	JJ	Degree=Pos	31	amod	_	_
-26	,	,	PUNCT	,	_	27	punct	_	_
-27	reproducible	reproducible	ADJ	JJ	Degree=Pos	25	conj	_	_
-28	,	,	PUNCT	,	_	30	punct	_	_
-29	and	and	CCONJ	CC	_	30	cc	_	_
-30	reliable	reliable	ADJ	JJ	Degree=Pos	25	conj	_	_
-31	techniques	technique	NOUN	NNS	Number=Plur	23	conj	_	_
-32	coupled	coupled	VERB	VBN	Tense=Past|VerbForm=Part	31	acl	_	_
-33	with	with	ADP	IN	_	35	case	_	_
-34	tumor-specific	tumor-specific	ADJ	JJ	Degree=Pos	35	amod	_	_
-35	methods	method	NOUN	NNS	Number=Plur	32	obl	_	_
-36	and	and	CCONJ	CC	_	37	cc	_	_
-37	guidelines	guideline	NOUN	NNS	Number=Plur	35	conj	_	_
-38	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	39	aux:pass	_	_
-39	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-40	.	.	PUNCT	.	_	39	punct	_	_
+18	(	(	PUNCT	-LRB-	_	17	punct	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	2	2	NUM	CD	NumType=Card	1	amod	_	_
+
+# s_type = decl
+1	)	)	PUNCT	-RRB-	_	19	punct	_	_
+2	,	,	PUNCT	,	_	19	punct	_	_
+3	novel	novel	NOUN	NN	Number=Sing	19	nsubj:pass	_	_
+4	,	,	PUNCT	,	_	11	punct	_	_
+5	efficient	efficient	ADJ	JJ	Degree=Pos	3	conj	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	reproducible	reproducible	ADJ	JJ	Degree=Pos	5	conj	_	_
+8	,	,	PUNCT	,	_	10	punct	_	_
+9	and	and	CCONJ	CC	_	10	cc	_	_
+10	reliable	reliable	ADJ	JJ	Degree=Pos	5	conj	_	_
+11	techniques	technique	NOUN	NNS	Number=Plur	3	conj	_	_
+12	coupled	coupled	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	_	_
+13	with	with	ADP	IN	_	15	case	_	_
+14	tumor-specific	tumor-specific	ADJ	JJ	Degree=Pos	15	amod	_	_
+15	methods	method	NOUN	NNS	Number=Plur	12	obl	_	_
+16	and	and	CCONJ	CC	_	17	cc	_	_
+17	guidelines	guideline	NOUN	NNS	Number=Plur	15	conj	_	_
+18	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	aux:pass	_	_
+19	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+20	.	.	PUNCT	.	_	19	punct	_	_
 
 # s_type = decl
 1	Another	another	DET	DT	_	3	det	_	_

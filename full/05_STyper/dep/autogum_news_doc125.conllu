@@ -23,7 +23,9 @@
 4	11	@card@	NUM	CD	NumType=Card	1	appos	_	_
 5	,	,	PUNCT	,	_	6	punct	_	_
 6	2008	@card@	NUM	CD	NumType=Card	4	nmod:tmod	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = imp
 1	Contribute	Contribute	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -112,30 +114,34 @@
 22	mammal	mammal	NOUN	NN	Number=Sing	16	conj	_	_
 23	.	.	PUNCT	.	_	4	punct	_	_
 
+# s_type = frag
+1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Sources	Sources	NOUN	NNS	Number=Plur	10	nsubj	_	_
-2	"	"	PUNCT	``	_	3	punct	_	_
-3	Bones	bone	PROPN	NNPS	Number=Plur	10	nsubj	_	_
-4	found	find	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	_	_
-5	in	in	ADP	IN	_	7	case	_	_
-6	Ohioville	ohioville	PROPN	NNP	Number=Sing	7	compound	_	_
-7	creek	creek	NOUN	NN	Number=Sing	4	obl	_	_
-8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	_	_
-9	n't	n't	PART	RB	Polarity=Neg	10	advmod	_	_
-10	human	human	ADJ	JJ	Degree=Pos	0	root	_	_
-11	"	"	PUNCT	''	_	10	punct	_	_
-12	—	—	PUNCT	:	_	15	punct	_	_
-13	The	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-14	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	15	compound	_	_
-15	Tribune-Review	Tribune-Review	PROPN	NNP	Number=Sing	10	parataxis	_	_
-16	,	,	PUNCT	,	_	18	punct	_	_
-17	August	August	PROPN	NNP	Number=Sing	18	compound	_	_
-18	10	@card@	NUM	CD	NumType=Card	15	appos	_	_
-19	,	,	PUNCT	,	_	20	punct	_	_
-20	2008	@card@	NUM	CD	NumType=Card	18	nmod:tmod	_	_
-21	Bill	Bill	PROPN	NNP	Number=Sing	22	compound	_	_
-22	Vidonic	Vidonic	PROPN	NNP	Number=Sing	18	nmod	_	_
-23	.	.	PUNCT	.	_	10	punct	_	_
+1	"	"	PUNCT	``	_	9	punct	_	_
+2	Bones	bone	NOUN	NNS	Number=Plur	3	nsubj	_	_
+3	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	advcl	_	_
+4	in	in	ADP	IN	_	6	case	_	_
+5	Ohioville	ohioville	PROPN	NNP	Number=Sing	6	compound	_	_
+6	creek	creek	NOUN	NN	Number=Sing	3	obl	_	_
+7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	_	_
+8	n't	n't	PART	RB	Polarity=Neg	9	advmod	_	_
+9	human	human	ADJ	JJ	Degree=Pos	0	root	_	_
+10	"	"	PUNCT	''	_	9	punct	_	_
+11	—	—	PUNCT	:	_	14	punct	_	_
+12	The	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+13	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	14	compound	_	_
+14	Tribune-Review	Tribune-Review	PROPN	NNP	Number=Sing	9	parataxis	_	_
+15	,	,	PUNCT	,	_	17	punct	_	_
+16	August	August	PROPN	NNP	Number=Sing	17	compound	_	_
+17	10	@card@	NUM	CD	NumType=Card	14	appos	_	_
+18	,	,	PUNCT	,	_	19	punct	_	_
+19	2008	@card@	NUM	CD	NumType=Card	17	nmod:tmod	_	_
+
+# s_type = frag
+1	Bill	Bill	NOUN	NN	Number=Sing	0	root	_	_
+2	Vidonic	Vidonic	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -246,9 +252,11 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	Bobby	Bobby	PROPN	NNP	Number=Sing	1	flat	_	_
-3	Kerlik	Kerlik	PROPN	NNP	Number=Sing	1	flat	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Bobby	Bobby	PROPN	NNP	Number=Sing	0	root	_	_
+2	Kerlik	Kerlik	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -266,54 +274,60 @@
 13	—	—	PUNCT	:	_	16	punct	_	_
 14	The	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
 15	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	16	compound	_	_
-16	Tribune-Review	Tribune-Review	PROPN	NNP	Number=Sing	11	appos	_	_
+16	Tribune-Review	Tribune-Review	PROPN	NNP	Number=Sing	3	parataxis	_	_
 17	,	,	PUNCT	,	_	19	punct	_	_
 18	August	August	PROPN	NNP	Number=Sing	19	compound	_	_
-19	10	@card@	NUM	CD	NumType=Card	16	dep	_	_
+19	10	@card@	NUM	CD	NumType=Card	3	obl	_	_
 20	,	,	PUNCT	,	_	21	punct	_	_
 21	2008	@card@	NUM	CD	NumType=Card	19	nmod:tmod	_	_
-22	"	"	PUNCT	``	_	23	punct	_	_
-23	Motorcyclist	motorcyclist	PROPN	NNP	Number=Sing	16	conj	_	_
-24	In	in	ADP	IN	_	27	case	_	_
-25	Etna	Etna	PROPN	NNP	Number=Sing	27	compound	_	_
-26	Accident	Accident	PROPN	NNP	Number=Sing	27	compound	_	_
-27	Dies	die	PROPN	NNP	Number=Sing	23	nmod	_	_
-28	"	"	PUNCT	''	_	23	punct	_	_
-29	—	—	PUNCT	:	_	32	punct	_	_
-30	The	the	DET	DT	Definite=Def|PronType=Art	32	det	_	_
-31	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	32	compound	_	_
-32	Channel	Channel	PROPN	NNP	Number=Sing	23	appos	_	_
-33	,	,	PUNCT	,	_	35	punct	_	_
-34	August	August	PROPN	NNP	Number=Sing	35	compound	_	_
-35	9	9	NUM	CD	NumType=Card	32	appos	_	_
-36	,	,	PUNCT	,	_	37	punct	_	_
-37	2008	@card@	NUM	CD	NumType=Card	35	nmod:tmod	_	_
-38	"	"	PUNCT	``	_	40	punct	_	_
-39	Truck	Truck	PROPN	NNP	Number=Sing	40	compound	_	_
-40	Flips	flip	PROPN	NNPS	Number=Plur	32	appos	_	_
-41	Down	down	ADP	IN	_	42	case	_	_
-42	Hill	Hill	PROPN	NNP	Number=Sing	40	nmod	_	_
-43	,	,	PUNCT	,	_	45	punct	_	_
-44	1	1	NUM	CD	NumType=Card	45	dep	_	_
-45	Killed	Killed	VERB	VBN	Tense=Past|VerbForm=Part	40	acl	_	_
-46	In	in	ADP	IN	_	48	case	_	_
-47	Etna	Etna	PROPN	NNP	Number=Sing	48	compound	_	_
-48	Accident	Accident	PROPN	NNP	Number=Sing	45	obl	_	_
-49	"	"	PUNCT	''	_	45	punct	_	_
-50	—	—	PUNCT	:	_	51	punct	_	_
-51	KDKA	KDKA	PROPN	NNP	Number=Sing	48	appos	_	_
-52	,	,	PUNCT	,	_	54	punct	_	_
-53	August	August	PROPN	NNP	Number=Sing	54	compound	_	_
-54	9	9	NUM	CD	NumType=Card	51	conj	_	_
-55	,	,	PUNCT	,	_	58	punct	_	_
-56	2008	@card@	NUM	CD	NumType=Card	58	compound	_	_
-57	Police	Police	PROPN	NNP	Number=Sing	58	compound	_	_
-58	dog	dog	NOUN	NN	Number=Sing	51	conj	_	_
-59	found	find	VERB	VBN	Tense=Past|VerbForm=Part	58	acl	_	_
-60	in	in	ADP	IN	_	61	case	_	_
-61	Pasadena	Pasadena	PROPN	NNP	Number=Sing	59	obl	_	_
-62	,	,	PUNCT	,	_	63	punct	_	_
-63	California	California	PROPN	NNP	Number=Sing	61	appos	_	_
+
+# s_type = frag
+1	"	"	PUNCT	``	_	2	punct	_	_
+2	Motorcyclist	motorcyclist	PROPN	NNP	Number=Sing	0	root	_	_
+3	In	in	ADP	IN	_	6	case	_	_
+4	Etna	Etna	PROPN	NNP	Number=Sing	6	compound	_	_
+5	Accident	Accident	PROPN	NNP	Number=Sing	6	compound	_	_
+6	Dies	die	PROPN	NNP	Number=Sing	2	nmod	_	_
+7	"	"	PUNCT	''	_	2	punct	_	_
+8	—	—	PUNCT	:	_	11	punct	_	_
+9	The	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+10	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Channel	Channel	PROPN	NNP	Number=Sing	2	appos	_	_
+12	,	,	PUNCT	,	_	14	punct	_	_
+13	August	August	PROPN	NNP	Number=Sing	14	compound	_	_
+14	9	9	NUM	CD	NumType=Card	11	appos	_	_
+15	,	,	PUNCT	,	_	16	punct	_	_
+16	2008	@card@	NUM	CD	NumType=Card	14	nmod:tmod	_	_
+
+# s_type = frag
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	Truck	Truck	PROPN	NNP	Number=Sing	3	compound	_	_
+3	Flips	flip	PROPN	NNPS	Number=Plur	0	root	_	_
+4	Down	down	ADP	IN	_	5	case	_	_
+5	Hill	Hill	PROPN	NNP	Number=Sing	3	nmod	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	1	1	NUM	CD	NumType=Card	3	dep	_	_
+8	Killed	Killed	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	_	_
+9	In	in	ADP	IN	_	11	case	_	_
+10	Etna	Etna	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Accident	Accident	PROPN	NNP	Number=Sing	8	obl	_	_
+12	"	"	PUNCT	''	_	11	punct	_	_
+13	—	—	PUNCT	:	_	14	punct	_	_
+14	KDKA	KDKA	PROPN	NNP	Number=Sing	11	appos	_	_
+15	,	,	PUNCT	,	_	17	punct	_	_
+16	August	August	PROPN	NNP	Number=Sing	17	compound	_	_
+17	9	9	NUM	CD	NumType=Card	14	appos	_	_
+18	,	,	PUNCT	,	_	19	punct	_	_
+19	2008	@card@	NUM	CD	NumType=Card	17	nmod:tmod	_	_
+
+# s_type = decl
+1	Police	Police	NOUN	NN	Number=Sing	2	compound	_	_
+2	dog	dog	NOUN	NN	Number=Sing	3	nsubj	_	_
+3	found	find	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	in	in	ADP	IN	_	5	case	_	_
+5	Pasadena	Pasadena	PROPN	NNP	Number=Sing	3	obl	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	California	California	PROPN	NNP	Number=Sing	5	appos	_	_
 
 # s_type = decl
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
@@ -377,25 +391,27 @@
 13	unit	unit	NOUN	NN	Number=Sing	9	obl	_	_
 14	.	.	PUNCT	.	_	6	punct	_	_
 
+# s_type = frag
+1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Sources	Sources	NOUN	NNS	Number=Plur	4	nsubj	_	_
-2	"	"	PUNCT	``	_	4	punct	_	_
-3	Robby	Robby	PROPN	NNP	Number=Sing	1	appos	_	_
-4	picked	pick	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-5	up	up	ADP	RP	_	4	compound:prt	_	_
-6	by	by	ADP	IN	_	9	case	_	_
-7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
-8	Good	good	PROPN	NNP	Number=Sing	9	amod	_	_
-9	Samaritan	Samaritan	PROPN	NNP	Number=Sing	4	obl	_	_
-10	"	"	PUNCT	''	_	9	punct	_	_
-11	—	—	PUNCT	:	_	13	punct	_	_
-12	Houston	Houston	PROPN	NNP	Number=Sing	13	compound	_	_
-13	Chronicle	chronicle	PROPN	NNP	Number=Sing	9	appos	_	_
-14	,	,	PUNCT	,	_	16	punct	_	_
-15	August	August	PROPN	NNP	Number=Sing	16	compound	_	_
-16	9	9	NUM	CD	NumType=Card	13	appos	_	_
-17	,	,	PUNCT	,	_	18	punct	_	_
-18	2008	@card@	NUM	CD	NumType=Card	16	nmod:tmod	_	_
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	Robby	Robby	PROPN	NNP	Number=Sing	3	nsubj	_	_
+3	picked	pick	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	up	up	ADP	RP	_	3	compound:prt	_	_
+5	by	by	ADP	IN	_	8	case	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+7	Good	good	PROPN	NNP	Number=Sing	8	amod	_	_
+8	Samaritan	Samaritan	PROPN	NNP	Number=Sing	3	obl	_	_
+9	"	"	PUNCT	''	_	8	punct	_	_
+10	—	—	PUNCT	:	_	12	punct	_	_
+11	Houston	Houston	PROPN	NNP	Number=Sing	12	compound	_	_
+12	Chronicle	chronicle	PROPN	NNP	Number=Sing	8	appos	_	_
+13	,	,	PUNCT	,	_	15	punct	_	_
+14	August	August	PROPN	NNP	Number=Sing	15	compound	_	_
+15	9	9	NUM	CD	NumType=Card	12	appos	_	_
+16	,	,	PUNCT	,	_	17	punct	_	_
+17	2008	@card@	NUM	CD	NumType=Card	15	nmod:tmod	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	4	punct	_	_
@@ -506,49 +522,51 @@
 22	son	son	NOUN	NN	Number=Sing	19	nmod	_	_
 23	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Sources	Sources	NOUN	NNS	Number=Plur	2	compound	_	_
-2	AFP	AFP	PROPN	NNP	Number=Sing	0	root	_	_
-3	.	.	PUNCT	.	_	6	punct	_	_
-4	"	"	PUNCT	``	_	6	punct	_	_
-5	Attack	attack	PROPN	NNP	Number=Sing	6	nsubj	_	_
-6	kills	kill	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	dep	_	_
-7	Somali	Somali	ADJ	JJ	Degree=Pos	9	amod	_	_
-8	police	police	NOUN	NN	Number=Sing	9	compound	_	_
-9	chief	chief	NOUN	NN	Number=Sing	6	obj	_	_
-10	,	,	PUNCT	,	_	12	punct	_	_
-11	civilians	civilian	NOUN	NNS	Number=Plur	12	nsubj	_	_
-12	die	die	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	parataxis	_	_
-13	in	in	ADP	IN	_	14	case	_	_
-14	reply	reply	NOUN	NN	Number=Sing	12	obl	_	_
-15	:	:	PUNCT	:	_	16	punct	_	_
-16	witnesses	witness	NOUN	NNS	Number=Plur	14	appos	_	_
-17	"	"	PUNCT	''	_	6	punct	_	_
-18	—	—	PUNCT	:	_	19	punct	_	_
-19	Yahoo	Yahoo	PROPN	NNP	Number=Sing	16	conj	_	_
-20	!	!	PUNCT	.	_	2	punct	_	_
-
 # s_type = frag
-1	News	News	PROPN	NNP	Number=Sing	0	root	_	_
-2	,	,	PUNCT	,	_	4	punct	_	_
-3	August	August	PROPN	NNP	Number=Sing	4	compound	_	_
-4	9	9	NUM	CD	NumType=Card	1	appos	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	2008	@card@	NUM	CD	NumType=Card	4	nmod:tmod	_	_
-7	"	"	PUNCT	``	_	10	punct	_	_
-8	Somali	Somali	PROPN	NNP	Number=Sing	9	compound	_	_
-9	police	police	NOUN	NN	Number=Sing	10	compound	_	_
-10	chief	chief	NOUN	NN	Number=Sing	1	appos	_	_
-11	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	_	_
-12	"	"	PUNCT	''	_	10	punct	_	_
-13	—	—	PUNCT	:	_	15	punct	_	_
-14	News	News	PROPN	NNP	Number=Sing	15	compound	_	_
-15	24	@card@	NUM	CD	NumType=Card	1	appos	_	_
-16	,	,	PUNCT	,	_	18	punct	_	_
-17	August	August	PROPN	NNP	Number=Sing	18	compound	_	_
-18	9	9	NUM	CD	NumType=Card	1	appos	_	_
-19	,	,	PUNCT	,	_	20	punct	_	_
-20	2008	@card@	NUM	CD	NumType=Card	18	nmod:tmod	_	_
+1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = decl
+1	AFP	AFP	PROPN	NNP	Number=Sing	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
+3	"	"	PUNCT	``	_	5	punct	_	_
+4	Attack	attack	PROPN	NNP	Number=Sing	5	nsubj	_	_
+5	kills	kill	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
+6	Somali	Somali	ADJ	JJ	Degree=Pos	8	amod	_	_
+7	police	police	NOUN	NN	Number=Sing	8	compound	_	_
+8	chief	chief	NOUN	NN	Number=Sing	5	obj	_	_
+9	,	,	PUNCT	,	_	11	punct	_	_
+10	civilians	civilian	NOUN	NNS	Number=Plur	11	nsubj	_	_
+11	die	die	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	conj	_	_
+12	in	in	ADP	IN	_	13	case	_	_
+13	reply	reply	NOUN	NN	Number=Sing	11	obl	_	_
+14	:	:	PUNCT	:	_	15	punct	_	_
+15	witnesses	witness	NOUN	NNS	Number=Plur	11	parataxis	_	_
+16	"	"	PUNCT	''	_	15	punct	_	_
+17	—	—	PUNCT	:	_	18	punct	_	_
+18	Yahoo	Yahoo	PROPN	NNP	Number=Sing	20	compound	_	_
+19	!	!	PUNCT	.	_	18	punct	_	_
+20	News	News	PROPN	NNP	Number=Sing	15	conj	_	_
+21	,	,	PUNCT	,	_	23	punct	_	_
+22	August	August	PROPN	NNP	Number=Sing	23	compound	_	_
+23	9	9	NUM	CD	NumType=Card	15	conj	_	_
+24	,	,	PUNCT	,	_	25	punct	_	_
+25	2008	@card@	NUM	CD	NumType=Card	23	nmod:tmod	_	_
+
+# s_type = decl
+1	"	"	PUNCT	``	_	4	punct	_	_
+2	Somali	Somali	ADJ	JJ	Degree=Pos	4	amod	_	_
+3	police	police	NOUN	NN	Number=Sing	4	compound	_	_
+4	chief	chief	NOUN	NN	Number=Sing	5	nsubj:pass	_	_
+5	killed	kill	VERB	VBN	Tense=Past|VerbForm=Fin	0	root	_	_
+6	"	"	PUNCT	''	_	5	punct	_	_
+7	—	—	PUNCT	:	_	9	punct	_	_
+8	News	News	PROPN	NNP	Number=Sing	9	compound	_	_
+9	24	@card@	NUM	CD	NumType=Card	5	obl	_	_
+10	,	,	PUNCT	,	_	12	punct	_	_
+11	August	August	PROPN	NNP	Number=Sing	12	compound	_	_
+12	9	9	NUM	CD	NumType=Card	9	appos	_	_
+13	,	,	PUNCT	,	_	14	punct	_	_
+14	2008	@card@	NUM	CD	NumType=Card	12	nmod:tmod	_	_
 
 # s_type = decl
 1	Cassini	Cassini	PROPN	NNP	Number=Sing	2	compound	_	_
@@ -717,26 +735,28 @@
 16	,	,	PUNCT	,	_	17	punct	_	_
 17	2008	@card@	NUM	CD	NumType=Card	15	nmod:tmod	_	_
 
+# s_type = imp
+1	Press	press	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	Release	Release	NOUN	NN	Number=Sing	1	obj	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
 # s_type = frag
-1	Press	Press	PROPN	NNP	Number=Sing	2	compound	_	_
-2	Release	Release	NOUN	NN	Number=Sing	0	root	_	_
-3	:	:	PUNCT	:	_	6	punct	_	_
-4	"	"	PUNCT	``	_	6	punct	_	_
-5	Soil	soil	PROPN	NNP	Number=Sing	6	compound	_	_
-6	Studies	Studies	PROPN	NNP	Number=Plur	2	appos	_	_
-7	Continue	continue	PROPN	NNP	Number=Sing	6	compound	_	_
-8	at	at	ADP	IN	_	9	case	_	_
-9	Site	Site	PROPN	NNP	Number=Sing	6	nmod	_	_
-10	of	of	ADP	IN	_	11	case	_	_
-11	Phoenix	Phoenix	PROPN	NNP	Number=Sing	9	nmod	_	_
-12	Mars	Mar	PROPN	NNP	Number=Sing	13	compound	_	_
-13	Lander	Lander	PROPN	NNP	Number=Sing	6	conj	_	_
-14	"	"	PUNCT	''	_	13	punct	_	_
-15	—	—	PUNCT	:	_	16	punct	_	_
-16	NASA	NASA	PROPN	NNP	Number=Sing	2	parataxis	_	_
-17	,	,	PUNCT	,	_	19	punct	_	_
-18	August	August	PROPN	NNP	Number=Sing	19	compound	_	_
-19	8	8	NUM	CD	NumType=Card	2	parataxis	_	_
-20	,	,	PUNCT	,	_	21	punct	_	_
-21	2008	@card@	NUM	CD	NumType=Card	19	nmod:tmod	_	_
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	Soil	soil	PROPN	NNP	Number=Sing	3	compound	_	_
+3	Studies	Studies	PROPN	NNP	Number=Plur	0	root	_	_
+4	Continue	continue	PROPN	NNP	Number=Sing	3	appos	_	_
+5	at	at	ADP	IN	_	6	case	_	_
+6	Site	Site	PROPN	NNP	Number=Sing	3	nmod	_	_
+7	of	of	ADP	IN	_	8	case	_	_
+8	Phoenix	Phoenix	PROPN	NNP	Number=Sing	6	nmod	_	_
+9	Mars	Mar	PROPN	NNP	Number=Sing	10	compound	_	_
+10	Lander	Lander	PROPN	NNP	Number=Sing	3	appos	_	_
+11	"	"	PUNCT	''	_	10	punct	_	_
+12	—	—	PUNCT	:	_	13	punct	_	_
+13	NASA	NASA	PROPN	NNP	Number=Sing	3	appos	_	_
+14	,	,	PUNCT	,	_	16	punct	_	_
+15	August	August	PROPN	NNP	Number=Sing	16	compound	_	_
+16	8	8	NUM	CD	NumType=Card	13	appos	_	_
+17	,	,	PUNCT	,	_	18	punct	_	_
+18	2008	@card@	NUM	CD	NumType=Card	16	nmod:tmod	_	_
 

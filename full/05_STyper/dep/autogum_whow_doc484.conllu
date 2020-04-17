@@ -383,20 +383,22 @@
 4	afraid	afraid	ADJ	JJ	Degree=Pos	0	root	_	_
 5	to	to	PART	TO	_	6	mark	_	_
 6	use	use	VERB	VB	VerbForm=Inf	4	xcomp	_	_
-7	both	both	CCONJ	CC	_	6	obj	_	_
-8	!	!	PUNCT	.	_	9	punct	_	_
-9	Buy	buy	VERB	VB	VerbForm=Inf	6	conj	_	_
-10	black	black	ADJ	JJ	Degree=Pos	11	amod	_	_
-11	t-shirts	t-shirt	NOUN	NNS	Number=Plur	9	obj	_	_
-12	from	from	ADP	IN	_	15	case	_	_
-13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
-14	charity	charity	NOUN	NN	Number=Sing	15	compound	_	_
-15	store	store	NOUN	NN	Number=Sing	9	obl	_	_
-16	or	or	CCONJ	CC	_	19	cc	_	_
-17	army	army	NOUN	NN	Number=Sing	19	compound	_	_
-18	surplus	surplus	NOUN	NN	Number=Sing	19	compound	_	_
-19	store	store	NOUN	NN	Number=Sing	15	conj	_	_
-20	.	.	PUNCT	.	_	4	punct	_	_
+7	both	both	PRON	DT	_	6	obj	_	_
+8	!	!	PUNCT	.	_	4	punct	_	_
+
+# s_type = imp
+1	Buy	buy	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	black	black	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	t-shirts	t-shirt	NOUN	NNS	Number=Plur	1	obj	_	_
+4	from	from	ADP	IN	_	7	case	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+6	charity	charity	NOUN	NN	Number=Sing	7	compound	_	_
+7	store	store	NOUN	NN	Number=Sing	1	obl	_	_
+8	or	or	CCONJ	CC	_	11	cc	_	_
+9	army	army	NOUN	NN	Number=Sing	11	compound	_	_
+10	surplus	surplus	NOUN	NN	Number=Sing	11	compound	_	_
+11	store	store	NOUN	NN	Number=Sing	7	conj	_	_
+12	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Then	then	ADV	RB	PronType=Dem	2	advmod	_	_
@@ -676,9 +678,9 @@
 11	cool	cool	ADJ	JJ	Degree=Pos	0	root	_	_
 12	.	.	PUNCT	.	_	11	punct	_	_
 
-# s_type = sub
+# s_type = imp
 1	Even	even	ADV	RB	_	2	advmod	_	_
-2	better	good	ADJ	JJR	Degree=Cmp	18	advcl	_	_
+2	better	good	ADJ	JJR	Degree=Cmp	0	root	_	_
 3	if	if	SCONJ	IN	_	5	mark	_	_
 4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
 5	buy	buy	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	advcl	_	_
@@ -687,27 +689,29 @@
 8	making	make	VERB	VBG	VerbForm=Ger	5	ccomp	_	_
 9	machine	machine	NOUN	NN	Number=Sing	8	obj	_	_
 10	and	and	CCONJ	CC	_	11	cc	_	_
-11	make	make	VERB	VB	VerbForm=Inf	8	conj	_	_
-12	them	them	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	11	iobj	_	_
+11	make	make	VERB	VB	VerbForm=Inf	5	conj	_	_
+12	them	them	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	11	obj	_	_
 13	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	11	obj	_	_
-14	Alternatively	alternatively	ADV	RB	_	11	advmod	_	_
-15	,	,	PUNCT	,	_	2	punct	_	_
-16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	18	nsubj	_	_
-17	could	could	AUX	MD	VerbForm=Fin	18	aux	_	_
-18	buy	buy	VERB	VB	VerbForm=Inf	0	root	_	_
-19	an	an	DET	DT	Definite=Ind|PronType=Art	21	det	_	_
-20	army	army	NOUN	NN	Number=Sing	21	compound	_	_
-21	jacket	jacket	NOUN	NN	Number=Sing	18	obj	_	_
-22	from	from	ADP	IN	_	25	case	_	_
-23	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	_	_
-24	charity	charity	NOUN	NN	Number=Sing	25	compound	_	_
-25	store	store	NOUN	NN	Number=Sing	18	obl	_	_
-26	or	or	CCONJ	CC	_	30	cc	_	_
-27	an	an	DET	DT	Definite=Ind|PronType=Art	30	det	_	_
-28	army	army	NOUN	NN	Number=Sing	30	compound	_	_
-29	surplus	surplus	NOUN	NN	Number=Sing	30	compound	_	_
-30	store	store	NOUN	NN	Number=Sing	25	conj	_	_
-31	.	.	PUNCT	.	_	18	punct	_	_
+
+# s_type = sub
+1	Alternatively	alternatively	ADV	RB	_	5	advmod	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
+4	could	could	AUX	MD	VerbForm=Fin	5	aux	_	_
+5	buy	buy	VERB	VB	VerbForm=Inf	0	root	_	_
+6	an	an	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+7	army	army	NOUN	NN	Number=Sing	8	compound	_	_
+8	jacket	jacket	NOUN	NN	Number=Sing	5	obj	_	_
+9	from	from	ADP	IN	_	12	case	_	_
+10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
+11	charity	charity	NOUN	NN	Number=Sing	12	compound	_	_
+12	store	store	NOUN	NN	Number=Sing	5	obl	_	_
+13	or	or	CCONJ	CC	_	17	cc	_	_
+14	an	an	DET	DT	Definite=Ind|PronType=Art	17	det	_	_
+15	army	army	NOUN	NN	Number=Sing	17	compound	_	_
+16	surplus	surplus	NOUN	NN	Number=Sing	17	compound	_	_
+17	store	store	NOUN	NN	Number=Sing	12	conj	_	_
+18	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = imp
 1	Customize	Customize	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

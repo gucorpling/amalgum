@@ -1,6 +1,8 @@
 # s_type = frag
 1	MR	MR	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
@@ -100,54 +102,62 @@
 17	deference	deference	NOUN	NN	Number=Sing	16	obj	_	_
 18	to	to	ADP	TO	_	21	case	_	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
-20	First	First	PROPN	NNP	Number=Sing	21	amod	_	_
+20	First	first	ADJ	JJ	Degree=Pos|NumType=Ord	21	amod	_	_
 21	Amendment	Amendment	PROPN	NNP	Number=Sing	16	obl	_	_
 22	.	.	PUNCT	.	_	4	punct	_	_
-23	—	—	PUNCT	.	_	24	punct	_	_
-24	Marc	Marc	PROPN	NNP	Number=Sing	4	dep	_	_
-25	Randazza	Randazza	PROPN	NNP	Number=Sing	24	flat	_	_
+
+# s_type = frag
+1	—	—	PUNCT	:	_	2	punct	_	_
+2	Marc	Marc	PROPN	NNP	Number=Sing	0	root	_	_
+3	Randazza	Randazza	PROPN	NNP	Number=Sing	2	flat	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	On	on	ADP	IN	_	8	case	_	_
-7	September	September	PROPN	NNP	Number=Sing	8	compound	_	_
-8	29	@card@	NUM	CD	NumType=Card	13	obl	_	_
-9	,	,	PUNCT	,	_	10	punct	_	_
-10	2009	@card@	NUM	CD	NumType=Card	8	nmod:tmod	_	_
-11	,	,	PUNCT	,	_	8	punct	_	_
-12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj	_	_
-13	requested	request	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-14	that	that	SCONJ	IN	_	17	mark	_	_
-15	Glenn	Glenn	PROPN	NNP	Number=Sing	17	nsubj	_	_
-16	Beck	Beck	PROPN	NNP	Number=Sing	15	flat	_	_
-17	agree	agree	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	ccomp	_	_
-18	to	to	PART	TO	_	19	mark	_	_
-19	stipulate	stipulate	VERB	VB	VerbForm=Inf	17	xcomp	_	_
-20	to	to	ADP	TO	_	22	case	_	_
-21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
-22	application	application	NOUN	NN	Number=Sing	19	obl	_	_
-23	of	of	ADP	IN	_	27	case	_	_
-24	the	the	DET	DT	Definite=Def|PronType=Art	27	det	_	_
-25	United	United	PROPN	NNP	Number=Sing	26	amod	_	_
-26	States	States	PROPN	NNPS	Number=Plur	27	compound	_	_
-27	Constitution	constitution	PROPN	NNP	Number=Sing	22	nmod	_	_
-28	,	,	PUNCT	,	_	35	punct	_	_
-29	and	and	CCONJ	CC	_	35	cc	_	_
-30	also	also	ADV	RB	_	35	advmod	_	_
-31	especially	especially	ADV	RB	_	35	advmod	_	_
-32	to	to	ADP	TO	_	35	case	_	_
-33	the	the	DET	DT	Definite=Def|PronType=Art	35	det	_	_
-34	First	First	PROPN	NNP	Number=Sing	35	amod	_	_
-35	Amendment	Amendment	PROPN	NNP	Number=Sing	17	conj	_	_
-36	to	to	ADP	TO	_	39	case	_	_
-37	the	the	DET	DT	Definite=Def|PronType=Art	39	det	_	_
-38	U.S.	U.S.	PROPN	NNP	Number=Sing	39	compound	_	_
-39	Constitution	constitution	PROPN	NNP	Number=Sing	35	nmod	_	_
-40	.	.	PUNCT	.	_	13	punct	_	_
+1	On	on	ADP	IN	_	3	case	_	_
+2	September	September	PROPN	NNP	Number=Sing	3	compound	_	_
+3	29	@card@	NUM	CD	NumType=Card	8	obl	_	_
+4	,	,	PUNCT	,	_	5	punct	_	_
+5	2009	@card@	NUM	CD	NumType=Card	3	nmod:tmod	_	_
+6	,	,	PUNCT	,	_	3	punct	_	_
+7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
+8	requested	request	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+9	that	that	SCONJ	IN	_	12	mark	_	_
+10	Glenn	Glenn	PROPN	NNP	Number=Sing	12	nsubj	_	_
+11	Beck	Beck	PROPN	NNP	Number=Sing	10	flat	_	_
+12	agree	agree	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	ccomp	_	_
+13	to	to	PART	TO	_	14	mark	_	_
+14	stipulate	stipulate	VERB	VB	VerbForm=Inf	12	xcomp	_	_
+15	to	to	ADP	TO	_	17	case	_	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+17	application	application	NOUN	NN	Number=Sing	14	obl	_	_
+18	of	of	ADP	IN	_	22	case	_	_
+19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
+20	United	United	PROPN	NNP	Number=Sing	21	amod	_	_
+21	States	States	PROPN	NNPS	Number=Plur	22	compound	_	_
+22	Constitution	constitution	PROPN	NNP	Number=Sing	17	nmod	_	_
+23	,	,	PUNCT	,	_	30	punct	_	_
+24	and	and	CCONJ	CC	_	30	cc	_	_
+25	also	also	ADV	RB	_	30	advmod	_	_
+26	especially	especially	ADV	RB	_	30	advmod	_	_
+27	to	to	ADP	TO	_	30	case	_	_
+28	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
+29	First	First	PROPN	NNP	Number=Sing	30	amod	_	_
+30	Amendment	Amendment	PROPN	NNP	Number=Sing	12	conj	_	_
+31	to	to	ADP	TO	_	34	case	_	_
+32	the	the	DET	DT	Definite=Def|PronType=Art	34	det	_	_
+33	U.S.	U.S.	PROPN	NNP	Number=Sing	34	compound	_	_
+34	Constitution	constitution	PROPN	NNP	Number=Sing	30	nmod	_	_
+35	.	.	PUNCT	.	_	8	punct	_	_
 
 # s_type = q
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	_	_
@@ -174,34 +184,36 @@
 11	request	request	NOUN	NN	Number=Sing	8	nmod	_	_
 12	?	?	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	MR	MR	PROPN	NNP	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	MR	MR	PROPN	NNP	Number=Sing	7	nsubj	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Mr.	Mr.	PROPN	NNP	Number=Sing	1	appos	_	_
-4	Beck	Beck	PROPN	NNP	Number=Sing	3	flat	_	_
-5	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	_	_
-6	publicly	publicly	ADV	RB	_	7	advmod	_	_
-7	stated	state	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-8	,	,	PUNCT	,	_	10	punct	_	_
-9	many	many	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	times	time	NOUN	NNS	Number=Plur	7	obj	_	_
-11	over	over	ADP	IN	_	7	obl	_	_
-12	,	,	PUNCT	,	_	16	punct	_	_
-13	that	that	SCONJ	IN	_	16	mark	_	_
-14	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	16	nsubj:pass	_	_
-15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux:pass	_	_
-16	offended	offended	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	_	_
-17	at	at	ADP	IN	_	19	case	_	_
-18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
-19	thought	thought	NOUN	NN	Number=Sing	16	obl	_	_
-20	of	of	ADP	IN	_	22	case	_	_
-21	international	international	ADJ	JJ	Degree=Pos	22	amod	_	_
-22	law	law	NOUN	NN	Number=Sing	19	nmod	_	_
-23	trumping	trumping	VERB	VBG	VerbForm=Ger	22	acl	_	_
-24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
-25	U.S.	U.S.	PROPN	NNP	Number=Sing	26	compound	_	_
-26	constitution	constitution	NOUN	NN	Number=Sing	23	obj	_	_
-27	.	.	PUNCT	.	_	7	punct	_	_
+1	:	:	PUNCT	:	_	6	punct	_	_
+2	Mr.	Mr.	PROPN	NNP	Number=Sing	6	nsubj	_	_
+3	Beck	Beck	PROPN	NNP	Number=Sing	2	flat	_	_
+4	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux	_	_
+5	publicly	publicly	ADV	RB	_	6	advmod	_	_
+6	stated	state	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+7	,	,	PUNCT	,	_	9	punct	_	_
+8	many	many	ADJ	JJ	Degree=Pos	9	amod	_	_
+9	times	time	NOUN	NNS	Number=Plur	6	obj	_	_
+10	over	over	ADP	IN	_	6	obl	_	_
+11	,	,	PUNCT	,	_	15	punct	_	_
+12	that	that	SCONJ	IN	_	15	mark	_	_
+13	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	15	nsubj:pass	_	_
+14	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	aux:pass	_	_
+15	offended	offended	VERB	VBN	Tense=Past|VerbForm=Part	6	advcl	_	_
+16	at	at	ADP	IN	_	18	case	_	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
+18	thought	thought	NOUN	NN	Number=Sing	15	obl	_	_
+19	of	of	ADP	IN	_	21	case	_	_
+20	international	international	ADJ	JJ	Degree=Pos	21	amod	_	_
+21	law	law	NOUN	NN	Number=Sing	18	nmod	_	_
+22	trumping	trumping	VERB	VBG	VerbForm=Ger	21	acl	_	_
+23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	_	_
+24	U.S.	U.S.	PROPN	NNP	Number=Sing	25	compound	_	_
+25	constitution	constitution	NOUN	NN	Number=Sing	22	obj	_	_
+26	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -230,74 +242,88 @@
 8	request	request	NOUN	NN	Number=Sing	5	obl	_	_
 9	.	.	PUNCT	.	_	5	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	What	What	PRON	WP	PronType=Int	10	nsubj	_	_
-7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-9	next	next	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	steps	step	NOUN	NNS	Number=Plur	0	root	_	_
-11	that	that	PRON	WDT	PronType=Rel	13	nsubj	_	_
-12	will	will	AUX	MD	VerbForm=Fin	13	aux	_	_
-13	occur	occur	VERB	VB	VerbForm=Inf	10	acl:relcl	_	_
-14	in	in	ADP	IN	_	19	case	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
-16	Beck	Beck	PROPN	NNP	Number=Sing	19	compound	_	_
-17	v.	v.	PART	POS	_	16	flat	_	_
-18	Eiland-Hall	Eiland-Hall	PROPN	NNP	Number=Sing	19	compound	_	_
-19	case	case	NOUN	NN	Number=Sing	13	obl	_	_
-20	?	?	PUNCT	.	_	10	punct	_	_
+1	What	What	PRON	WP	PronType=Int	5	nsubj	_	_
+2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	cop	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+4	next	next	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+6	that	that	PRON	WDT	PronType=Rel	8	nsubj	_	_
+7	will	will	AUX	MD	VerbForm=Fin	8	aux	_	_
+8	occur	occur	VERB	VB	VerbForm=Inf	5	acl:relcl	_	_
+9	in	in	ADP	IN	_	14	case	_	_
+10	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+11	Beck	Beck	PROPN	NNP	Number=Sing	14	compound	_	_
+12	v.	v.	PART	POS	_	11	flat	_	_
+13	Eiland-Hall	Eiland-Hall	PROPN	NNP	Number=Sing	14	compound	_	_
+14	case	case	NOUN	NN	Number=Sing	8	obl	_	_
+15	?	?	PUNCT	.	_	5	punct	_	_
+
+# s_type = frag
+1	MR	MR	PROPN	NNP	Number=Sing	0	root	_	_
 
 # s_type = decl
-1	MR	MR	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	4	punct	_	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
-4	presume	presume	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
-5	that	that	SCONJ	IN	_	10	mark	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-7	arbitration	arbitration	NOUN	NN	Number=Sing	8	compound	_	_
-8	panel	panel	NOUN	NN	Number=Sing	10	nsubj	_	_
-9	will	will	AUX	MD	VerbForm=Fin	10	aux	_	_
-10	decide	decide	VERB	VB	VerbForm=Inf	4	ccomp	_	_
-11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	_	_
-12	case	case	NOUN	NN	Number=Sing	10	obj	_	_
-13	in	in	ADP	IN	_	17	case	_	_
-14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	_	_
-15	client	client	NOUN	NN	Number=Sing	17	nmod:poss	_	_
-16	's	's	PART	POS	_	15	case	_	_
-17	favor	favor	NOUN	NN	Number=Sing	12	nmod	_	_
-18	.	.	PUNCT	.	_	4	punct	_	_
+1	:	:	PUNCT	:	_	3	punct	_	_
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
+3	presume	presume	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	that	that	SCONJ	IN	_	9	mark	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+6	arbitration	arbitration	NOUN	NN	Number=Sing	7	compound	_	_
+7	panel	panel	NOUN	NN	Number=Sing	9	nsubj	_	_
+8	will	will	AUX	MD	VerbForm=Fin	9	aux	_	_
+9	decide	decide	VERB	VB	VerbForm=Inf	3	ccomp	_	_
+10	this	this	DET	DT	Number=Sing|PronType=Dem	11	det	_	_
+11	case	case	NOUN	NN	Number=Sing	9	obj	_	_
+12	in	in	ADP	IN	_	16	case	_	_
+13	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
+14	client	client	NOUN	NN	Number=Sing	16	nmod:poss	_	_
+15	's	's	PART	POS	_	14	case	_	_
+16	favor	favor	NOUN	NN	Number=Sing	11	nmod	_	_
+17	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	aux	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-9	that	that	SCONJ	IN	_	13	mark	_	_
-10	Glenn	Glenn	PROPN	NNP	Number=Sing	13	nsubj	_	_
-11	Beck	Beck	PROPN	NNP	Number=Sing	10	flat	_	_
-12	will	will	AUX	MD	VerbForm=Fin	13	aux	_	_
-13	bring	bring	VERB	VB	VerbForm=Inf	8	ccomp	_	_
-14	legal	legal	ADJ	JJ	Degree=Pos	15	amod	_	_
-15	actions	action	NOUN	NNS	Number=Plur	13	obj	_	_
-16	related	relate	VERB	VBN	Tense=Past|VerbForm=Part	15	acl	_	_
-17	to	to	ADP	TO	_	20	case	_	_
-18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-19	Eiland-Hall	Eiland-Hall	PROPN	NNP	Number=Sing	20	compound	_	_
-20	website	website	NOUN	NN	Number=Sing	16	obl	_	_
-21	in	in	ADP	IN	_	24	case	_	_
-22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
-23	United	United	PROPN	NNP	Number=Sing	24	amod	_	_
-24	States	States	PROPN	NNPS	Number=Plur	20	nmod	_	_
-25	?	?	PUNCT	.	_	8	punct	_	_
+1	Do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+3	think	think	VERB	VB	VerbForm=Inf	0	root	_	_
+4	that	that	SCONJ	IN	_	8	mark	_	_
+5	Glenn	Glenn	PROPN	NNP	Number=Sing	8	nsubj	_	_
+6	Beck	Beck	PROPN	NNP	Number=Sing	5	flat	_	_
+7	will	will	AUX	MD	VerbForm=Fin	8	aux	_	_
+8	bring	bring	VERB	VB	VerbForm=Inf	3	ccomp	_	_
+9	legal	legal	ADJ	JJ	Degree=Pos	10	amod	_	_
+10	actions	action	NOUN	NNS	Number=Plur	8	obj	_	_
+11	related	relate	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	_	_
+12	to	to	ADP	TO	_	15	case	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
+14	Eiland-Hall	Eiland-Hall	PROPN	NNP	Number=Sing	15	compound	_	_
+15	website	website	NOUN	NN	Number=Sing	11	obl	_	_
+16	in	in	ADP	IN	_	19	case	_	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
+18	United	United	PROPN	NNP	Number=Sing	19	amod	_	_
+19	States	States	PROPN	NNPS	Number=Plur	15	nmod	_	_
+20	?	?	PUNCT	.	_	3	punct	_	_
 
 # s_type = wh
 1	How	how	SCONJ	WRB	PronType=Int	4	mark	_	_
@@ -319,34 +345,36 @@
 17	libel/defamation	libel/defamation	NOUN	NN	Number=Sing	15	nmod	_	_
 18	?	?	PUNCT	.	_	4	punct	_	_
 
+# s_type = frag
+1	MR	MR	PROPN	NNP	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	MR	MR	PROPN	NNP	Number=Sing	6	nsubj	_	_
-2	:	:	PUNCT	:	_	6	punct	_	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
-4	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	_	_
-5	n't	n't	PART	RB	Polarity=Neg	6	advmod	_	_
-6	think	think	VERB	VB	VerbForm=Inf	0	root	_	_
-7	so	so	ADV	RB	_	6	advmod	_	_
-8	,	,	PUNCT	,	_	12	punct	_	_
-9	but	but	CCONJ	CC	_	12	cc	_	_
-10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	12	nsubj	_	_
-11	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	aux	_	_
-12	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	6	conj	_	_
-13	many	many	ADJ	JJ	Degree=Pos	22	amod	_	_
-14	frivolous	frivolous	ADJ	JJ	Degree=Pos	22	amod	_	_
-15	,	,	PUNCT	,	_	16	punct	_	_
-16	stupid	stupid	ADJ	JJ	Degree=Pos	14	conj	_	_
-17	,	,	PUNCT	,	_	22	punct	_	_
-18	and	and	CCONJ	CC	_	20	cc	_	_
-19	ultimately	ultimately	ADV	RB	_	20	advmod	_	_
-20	disastrous	disastrous	ADJ	JJ	Degree=Pos	22	amod	_	_
-21	defamation	defamation	NOUN	NN	Number=Sing	22	compound	_	_
-22	suits	suit	NOUN	NNS	Number=Plur	12	obj	_	_
-23	filed	file	VERB	VBN	Tense=Past|VerbForm=Part	22	acl	_	_
-24	in	in	ADP	IN	_	26	case	_	_
-25	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	26	nmod:poss	_	_
-26	career	career	NOUN	NN	Number=Sing	23	obl	_	_
-27	.	.	PUNCT	.	_	6	punct	_	_
+1	:	:	PUNCT	:	_	5	punct	_	_
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+3	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	_	_
+4	n't	n't	PART	RB	Polarity=Neg	5	advmod	_	_
+5	think	think	VERB	VB	VerbForm=Inf	0	root	_	_
+6	so	so	ADV	RB	_	5	advmod	_	_
+7	,	,	PUNCT	,	_	11	punct	_	_
+8	but	but	CCONJ	CC	_	11	cc	_	_
+9	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	_	_
+10	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	aux	_	_
+11	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	_	_
+12	many	many	ADJ	JJ	Degree=Pos	21	amod	_	_
+13	frivolous	frivolous	ADJ	JJ	Degree=Pos	21	amod	_	_
+14	,	,	PUNCT	,	_	15	punct	_	_
+15	stupid	stupid	ADJ	JJ	Degree=Pos	13	conj	_	_
+16	,	,	PUNCT	,	_	21	punct	_	_
+17	and	and	CCONJ	CC	_	19	cc	_	_
+18	ultimately	ultimately	ADV	RB	_	19	advmod	_	_
+19	disastrous	disastrous	ADJ	JJ	Degree=Pos	21	amod	_	_
+20	defamation	defamation	NOUN	NN	Number=Sing	21	compound	_	_
+21	suits	suit	NOUN	NNS	Number=Plur	11	obj	_	_
+22	filed	file	VERB	VBN	Tense=Past|VerbForm=Part	21	acl	_	_
+23	in	in	ADP	IN	_	25	case	_	_
+24	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	25	nmod:poss	_	_
+25	career	career	NOUN	NN	Number=Sing	22	obl	_	_
+26	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = decl
 1	If	if	SCONJ	IN	_	3	mark	_	_
@@ -373,11 +401,15 @@
 22	.	.	PUNCT	.	_	16	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
 1	An	an	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
@@ -461,13 +493,17 @@
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	cop	_	_
 16	defamatory	defamatory	ADJ	JJ	Degree=Pos	9	ccomp	_	_
 17	.	.	PUNCT	.	_	5	punct	_	_
-18	—	—	PUNCT	.	_	19	punct	_	_
-19	Marc	Marc	PROPN	NNP	Number=Sing	5	dep	_	_
-20	Randazza	Randazza	PROPN	NNP	Number=Sing	19	flat	_	_
+
+# s_type = frag
+1	—	—	PUNCT	:	_	2	punct	_	_
+2	Marc	Marc	PROPN	NNP	Number=Sing	0	root	_	_
+3	Randazza	Randazza	PROPN	NNP	Number=Sing	2	flat	_	_
 
 # s_type = frag
 1	MR	MR	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
@@ -552,30 +588,36 @@
 29	case	case	NOUN	NN	Number=Sing	23	obl	_	_
 30	.	.	PUNCT	.	_	15	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-7	there	there	PRON	EX	_	6	expl	_	_
-8	any	any	DET	DT	_	10	det	_	_
-9	other	other	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	points	point	NOUN	NNS	Number=Plur	6	nsubj	_	_
-11	regarding	regard	VERB	VBG	VerbForm=Ger	10	acl	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-13	Beck	Beck	PROPN	NNP	Number=Sing	16	compound	_	_
-14	v.	v.	PART	POS	_	13	flat	_	_
-15	Eiland-Hall	Eiland-Hall	PROPN	NNP	Number=Sing	16	compound	_	_
-16	case	case	NOUN	NN	Number=Sing	11	obj	_	_
-17	that	that	PRON	WDT	PronType=Rel	20	obj	_	_
-18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	_	_
-19	would	would	AUX	MD	VerbForm=Fin	20	aux	_	_
-20	like	like	VERB	VB	VerbForm=Inf	16	acl:relcl	_	_
-21	to	to	PART	TO	_	22	mark	_	_
-22	elaborate	elaborate	VERB	VB	VerbForm=Inf	20	xcomp	_	_
-23	or	or	CCONJ	CC	_	24	cc	_	_
-24	explain	explain	VERB	VB	VerbForm=Inf	22	conj	_	_
-25	?	?	PUNCT	.	_	6	punct	_	_
+1	Are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	there	there	PRON	EX	_	1	expl	_	_
+3	any	any	DET	DT	_	5	det	_	_
+4	other	other	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	points	point	NOUN	NNS	Number=Plur	1	nsubj	_	_
+6	regarding	regard	VERB	VBG	VerbForm=Ger	5	acl	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+8	Beck	Beck	PROPN	NNP	Number=Sing	11	compound	_	_
+9	v.	v.	PART	POS	_	8	flat	_	_
+10	Eiland-Hall	Eiland-Hall	PROPN	NNP	Number=Sing	11	compound	_	_
+11	case	case	NOUN	NN	Number=Sing	6	obj	_	_
+12	that	that	PRON	WDT	PronType=Rel	15	obj	_	_
+13	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	_	_
+14	would	would	AUX	MD	VerbForm=Fin	15	aux	_	_
+15	like	like	VERB	VB	VerbForm=Inf	11	acl:relcl	_	_
+16	to	to	PART	TO	_	17	mark	_	_
+17	elaborate	elaborate	VERB	VB	VerbForm=Inf	15	xcomp	_	_
+18	or	or	CCONJ	CC	_	19	cc	_	_
+19	explain	explain	VERB	VB	VerbForm=Inf	17	conj	_	_
+20	?	?	PUNCT	.	_	1	punct	_	_
 

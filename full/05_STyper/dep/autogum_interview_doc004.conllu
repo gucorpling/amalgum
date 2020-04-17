@@ -70,14 +70,16 @@
 48	"	"	PUNCT	''	_	40	punct	_	_
 49	.	.	PUNCT	.	_	25	punct	_	_
 
-# s_type = decl
-1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	2	nsubj	_	_
-2	interviewed	interview	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-3	Siegel	Siegel	PROPN	NNP	Number=Sing	2	obj	_	_
-4	to	to	PART	TO	_	5	mark	_	_
-5	learn	learn	VERB	VB	VerbForm=Inf	2	xcomp	_	_
-6	more	more	ADV	RBR	_	5	obj	_	_
-7	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = imp
+1	interviewed	interview	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+2	Siegel	Siegel	PROPN	NNP	Number=Sing	1	obj	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	learn	learn	VERB	VB	VerbForm=Inf	1	xcomp	_	_
+5	more	more	ADV	RBR	_	4	obj	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
@@ -420,21 +422,23 @@
 18	individuals	individual	NOUN	NNS	Number=Plur	15	nmod	_	_
 19	.	.	PUNCT	.	_	10	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	New	New	PROPN	NNP	Number=Sing	2	compound	_	_
-2	Jersey	Jersey	PROPN	NNP	Number=Sing	3	nsubj	_	_
-3	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
-5	lowest	low	ADJ	JJS	Degree=Sup	6	amod	_	_
-6	rate	rate	NOUN	NN	Number=Sing	3	obj	_	_
-7	,	,	PUNCT	,	_	10	punct	_	_
-8	which	which	PRON	WDT	PronType=Rel	10	nsubj	_	_
-9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
-10	three	three	NUM	CD	NumType=Card	6	acl:relcl	_	_
-11	per	per	ADP	IN	_	13	case	_	_
-12	100,000	@card@	NUM	CD	NumType=Card	13	nummod	_	_
-13	people	people	NOUN	NNS	Number=Plur	10	nmod	_	_
-14	.	.	PUNCT	.	_	3	punct	_	_
+2	Jersey	Jersey	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = imp
+1	had	have	VERB	VBN	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	lowest	low	ADJ	JJS	Degree=Sup	4	amod	_	_
+4	rate	rate	NOUN	NN	Number=Sing	1	obj	_	_
+5	,	,	PUNCT	,	_	8	punct	_	_
+6	which	which	PRON	WDT	PronType=Rel	8	nsubj	_	_
+7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
+8	three	three	NUM	CD	NumType=Card	4	acl:relcl	_	_
+9	per	per	ADP	IN	_	11	case	_	_
+10	100,000	@card@	NUM	CD	NumType=Card	11	nummod	_	_
+11	people	people	NOUN	NNS	Number=Plur	8	nmod	_	_
+12	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	There	There	PRON	EX	_	2	expl	_	_
@@ -514,23 +518,29 @@
 11	correspondent	correspondent	NOUN	NN	Number=Sing	4	obl	_	_
 12	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Wikinews	Wikinews	PROPN	NNP	Number=Sing	6	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Thank	thank	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-7	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	6	obj	_	_
-8	for	for	SCONJ	IN	_	9	mark	_	_
-9	taking	take	VERB	VBG	VerbForm=Ger	6	advcl	_	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
-11	time	time	NOUN	NN	Number=Sing	9	obj	_	_
-12	to	to	PART	TO	_	13	mark	_	_
-13	speak	speak	VERB	VB	VerbForm=Inf	9	xcomp	_	_
-14	with	with	ADP	IN	_	15	case	_	_
-15	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	13	obl	_	_
-16	.	.	PUNCT	.	_	6	punct	_	_
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = imp
+1	Thank	thank	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	1	obj	_	_
+3	for	for	SCONJ	IN	_	4	mark	_	_
+4	taking	take	VERB	VBG	VerbForm=Ger	1	advcl	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	time	time	NOUN	NN	Number=Sing	4	obj	_	_
+7	to	to	PART	TO	_	8	mark	_	_
+8	speak	speak	VERB	VB	VerbForm=Inf	6	acl	_	_
+9	with	with	ADP	IN	_	10	case	_	_
+10	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	8	obl	_	_
+11	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = wh
 1	Would	would	AUX	MD	VerbForm=Fin	3	aux	_	_
@@ -557,29 +567,31 @@
 22	subject	subject	NOUN	NN	Number=Sing	19	obl	_	_
 23	?	?	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Michael	Michael	PROPN	NNP	Number=Sing	6	nsubj	_	_
+# s_type = frag
+1	Michael	Michael	PROPN	NNP	Number=Sing	0	root	_	_
 2	Siegel	Siegel	PROPN	NNP	Number=Sing	1	flat	_	_
-3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	1	nmod:npmod	_	_
-4	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	cop	_	_
-5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
-6	professor	professor	NOUN	NN	Number=Sing	0	root	_	_
-7	in	in	ADP	IN	_	9	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	Department	Department	PROPN	NNP	Number=Sing	6	nmod	_	_
-10	of	of	ADP	IN	_	13	case	_	_
-11	Community	Community	PROPN	NNP	Number=Sing	13	compound	_	_
-12	Health	Health	PROPN	NNP	Number=Sing	13	compound	_	_
-13	Sciences	Science	PROPN	NNPS	Number=Plur	9	nmod	_	_
-14	at	at	ADP	IN	_	18	case	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-16	Boston	Boston	PROPN	NNP	Number=Sing	18	compound	_	_
-17	University	University	PROPN	NNP	Number=Sing	18	compound	_	_
-18	School	School	PROPN	NNP	Number=Sing	13	nmod	_	_
-19	of	of	ADP	IN	_	21	case	_	_
-20	Public	Public	PROPN	NNP	Number=Sing	21	amod	_	_
-21	Health	Health	PROPN	NNP	Number=Sing	18	nmod	_	_
-22	.	.	PUNCT	.	_	6	punct	_	_
+
+# s_type = decl
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+2	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	cop	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+4	professor	professor	NOUN	NN	Number=Sing	0	root	_	_
+5	in	in	ADP	IN	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	Department	Department	PROPN	NNP	Number=Sing	4	nmod	_	_
+8	of	of	ADP	IN	_	11	case	_	_
+9	Community	Community	PROPN	NNP	Number=Sing	11	compound	_	_
+10	Health	Health	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Sciences	Science	PROPN	NNPS	Number=Plur	7	nmod	_	_
+12	at	at	ADP	IN	_	16	case	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
+14	Boston	Boston	PROPN	NNP	Number=Sing	16	compound	_	_
+15	University	University	PROPN	NNP	Number=Sing	16	compound	_	_
+16	School	School	PROPN	NNP	Number=Sing	11	nmod	_	_
+17	of	of	ADP	IN	_	19	case	_	_
+18	Public	Public	PROPN	NNP	Number=Sing	19	amod	_	_
+19	Health	Health	PROPN	NNP	Number=Sing	16	nmod	_	_
+20	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	My	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	2	nmod:poss	_	_

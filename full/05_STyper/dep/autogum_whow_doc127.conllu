@@ -75,17 +75,19 @@
 6	need	need	VERB	VB	VerbForm=Inf	3	acl:relcl	_	_
 7	to	to	PART	TO	_	8	mark	_	_
 8	know	know	VERB	VB	VerbForm=Inf	6	xcomp	_	_
-9	:	:	PUNCT	:	_	10	punct	_	_
-10	Tool	Tool	NOUN	NN	Number=Sing	1	parataxis	_	_
-11	:	:	PUNCT	:	_	15	punct	_	_
-12	This	this	PRON	DT	Number=Sing|PronType=Dem	15	nsubj	_	_
-13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	_	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-15	end	end	NOUN	NN	Number=Sing	1	parataxis	_	_
-16	of	of	ADP	IN	_	18	case	_	_
-17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
-18	robot	robot	NOUN	NN	Number=Sing	15	nmod	_	_
-19	.	.	PUNCT	.	_	1	punct	_	_
+9	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	Tool	Tool	NOUN	NN	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	6	punct	_	_
+3	This	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	_	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	end	end	NOUN	NN	Number=Sing	1	parataxis	_	_
+7	of	of	ADP	IN	_	9	case	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	robot	robot	NOUN	NN	Number=Sing	6	nmod	_	_
+10	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = sub
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
@@ -221,21 +223,23 @@
 4	Toolbox	Toolbox	NOUN	NN	Number=Sing	1	obj	_	_
 5	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Collecting	collect	VERB	VBG	VerbForm=Ger	4	csubj	_	_
+# s_type = ger
+1	Collecting	collect	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	Robot	Robot	NOUN	NN	Number=Sing	3	compound	_	_
 3	Data	Data	NOUN	NNS	Number=Plur	1	obj	_	_
-4	Determine	determine	VERB	VB	VerbForm=Fin	0	root	_	_
-5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
-6	types	type	NOUN	NNS	Number=Plur	4	obj	_	_
-7	of	of	ADP	IN	_	8	case	_	_
-8	joints	joint	NOUN	NNS	Number=Plur	6	nmod	_	_
-9	that	that	PRON	WDT	PronType=Rel	13	nsubj	_	_
-10	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	cop	_	_
-11	in	in	ADP	IN	_	13	case	_	_
-12	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
-13	robot	robot	NOUN	NN	Number=Sing	6	acl:relcl	_	_
-14	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = imp
+1	Determine	determine	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	types	type	NOUN	NNS	Number=Plur	1	obj	_	_
+4	of	of	ADP	IN	_	5	case	_	_
+5	joints	joint	NOUN	NNS	Number=Plur	3	nmod	_	_
+6	that	that	PRON	WDT	PronType=Rel	10	nsubj	_	_
+7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	10	cop	_	_
+8	in	in	ADP	IN	_	10	case	_	_
+9	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	_	_
+10	robot	robot	NOUN	NN	Number=Sing	3	acl:relcl	_	_
+11	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Prismatic	Prismatic	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -315,20 +319,22 @@
 11	joint	joint	NOUN	NN	Number=Sing	8	nmod	_	_
 12	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Creating	create	VERB	VBG	VerbForm=Ger	5	csubj	_	_
+# s_type = ger
+1	Creating	create	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
 3	Robot	Robot	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Model	Model	PROPN	NNP	Number=Sing	1	obj	_	_
-5	Create	create	VERB	VB	VerbForm=Fin	0	root	_	_
-6	each	each	DET	DT	_	7	det	_	_
-7	joint	joint	NOUN	NN	Number=Sing	5	obj	_	_
-8	in	in	ADP	IN	_	12	case	_	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-10	MATLAB	MATLAB	PROPN	NNP	Number=Sing	12	compound	_	_
-11	command	command	NOUN	NN	Number=Sing	12	compound	_	_
-12	window	window	NOUN	NN	Number=Sing	7	nmod	_	_
-13	.	.	PUNCT	.	_	5	punct	_	_
+
+# s_type = imp
+1	Create	create	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	each	each	DET	DT	_	3	det	_	_
+3	joint	joint	NOUN	NN	Number=Sing	1	obj	_	_
+4	in	in	ADP	IN	_	8	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+6	MATLAB	MATLAB	PROPN	NNP	Number=Sing	8	compound	_	_
+7	command	command	NOUN	NN	Number=Sing	8	compound	_	_
+8	window	window	NOUN	NN	Number=Sing	1	obl	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
@@ -355,24 +361,28 @@
 6	joint	joint	NOUN	NN	Number=Sing	8	nsubj	_	_
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
 8	prismatic	prismatic	ADJ	JJ	Degree=Pos	1	advcl	_	_
-9	:	:	PUNCT	:	_	10	punct	_	_
-10	Call	Call	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-11	this	this	DET	DT	Number=Sing|PronType=Dem	12	det	_	_
-12	code	code	NOUN	NN	Number=Sing	10	obj	_	_
-13	if	if	SCONJ	IN	_	17	mark	_	_
-14	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	_	_
-15	joint	joint	NOUN	NN	Number=Sing	17	nsubj	_	_
-16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	cop	_	_
-17	revolute	revolute	ADJ	JJ	Degree=Pos	10	advcl	_	_
-18	:	:	PUNCT	:	_	19	punct	_	_
-19	Repeat	repeat	VERB	VB	VerbForm=Inf	17	parataxis	_	_
-20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
-21	last	last	ADJ	JJ	Degree=Pos	22	amod	_	_
-22	step	step	NOUN	NN	Number=Sing	19	obj	_	_
-23	for	for	ADP	IN	_	25	case	_	_
-24	each	each	DET	DT	_	25	det	_	_
-25	joint	joint	NOUN	NN	Number=Sing	22	nmod	_	_
-26	.	.	PUNCT	.	_	1	punct	_	_
+9	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = imp
+1	Call	Call	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	_	_
+3	code	code	NOUN	NN	Number=Sing	1	obj	_	_
+4	if	if	SCONJ	IN	_	8	mark	_	_
+5	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
+6	joint	joint	NOUN	NN	Number=Sing	8	nsubj	_	_
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
+8	revolute	revolute	ADJ	JJ	Degree=Pos	1	advcl	_	_
+9	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = imp
+1	Repeat	repeat	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	last	last	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	step	step	NOUN	NN	Number=Sing	1	obj	_	_
+5	for	for	ADP	IN	_	7	case	_	_
+6	each	each	DET	DT	_	7	det	_	_
+7	joint	joint	NOUN	NN	Number=Sing	4	nmod	_	_
+8	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
@@ -415,7 +425,7 @@
 7	...	...	PUNCT	:	_	6	punct	_	_
 8	)	)	PUNCT	-RRB-	_	6	punct	_	_
 
-# s_type = imp
+# s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
 2	last	last	ADJ	JJ	Degree=Pos	3	amod	_	_
 3	joint	joint	NOUN	NN	Number=Sing	8	nsubj	_	_
@@ -423,30 +433,32 @@
 5	be	be	AUX	VB	VerbForm=Inf	8	cop	_	_
 6	L(last	l(last	PROPN	NNP	Number=Sing	8	compound	_	_
 7	joint	joint	ADJ	JJ	Degree=Pos	8	amod	_	_
-8	number)=Revolute/Prismatic(	number)=Revolute/Prismatic(	PROPN	NNP	Number=Sing	11	obj	_	_
+8	number)=Revolute/Prismatic(	number)=Revolute/Prismatic(	PROPN	NNP	Number=Sing	0	root	_	_
 9	...	...	PUNCT	:	_	8	punct	_	_
 10	)	)	PUNCT	-RRB-	_	8	punct	_	_
-11	Call	Call	VERB	VB	VerbForm=Inf	0	root	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
-13	following	follow	VERB	VBG	VerbForm=Ger	14	amod	_	_
-14	command	command	NOUN	NN	Number=Sing	11	obj	_	_
-15	,	,	PUNCT	,	_	24	punct	_	_
-16	where	where	SCONJ	WRB	PronType=Int	24	mark	_	_
-17	"	"	PUNCT	``	_	20	punct	_	_
-18	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	_	_
-19	robots	robot	NOUN	NNS	Number=Plur	20	compound	_	_
-20	name	name	NOUN	NN	Number=Sing	24	nsubj	_	_
-21	"	"	PUNCT	''	_	20	punct	_	_
-22	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	_	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
-24	identifier	identifier	NOUN	NN	Number=Sing	11	advcl	_	_
-25	that	that	PRON	WDT	PronType=Rel	27	obj	_	_
-26	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	27	nsubj	_	_
-27	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	24	acl:relcl	_	_
-28	for	for	ADP	IN	_	30	case	_	_
-29	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	30	nmod:poss	_	_
-30	robot	robot	NOUN	NN	Number=Sing	27	obl	_	_
-31	.	.	PUNCT	.	_	11	punct	_	_
+
+# s_type = imp
+1	Call	Call	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	following	follow	VERB	VBG	VerbForm=Ger	4	amod	_	_
+4	command	command	NOUN	NN	Number=Sing	1	obj	_	_
+5	,	,	PUNCT	,	_	6	punct	_	_
+6	where	where	SCONJ	WRB	PronType=Int	14	mark	_	_
+7	"	"	PUNCT	``	_	10	punct	_	_
+8	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	_	_
+9	robots	robot	NOUN	NNS	Number=Plur	10	compound	_	_
+10	name	name	NOUN	NN	Number=Sing	14	nsubj	_	_
+11	"	"	PUNCT	''	_	10	punct	_	_
+12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+14	identifier	identifier	NOUN	NN	Number=Sing	1	advcl	_	_
+15	that	that	PRON	WDT	PronType=Rel	17	obj	_	_
+16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	_	_
+17	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	acl:relcl	_	_
+18	for	for	ADP	IN	_	20	case	_	_
+19	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	_	_
+20	robot	robot	NOUN	NN	Number=Sing	17	obl	_	_
+21	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
@@ -519,7 +531,7 @@
 # s_type = imp
 1	Call	Call	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
-3	following	follow	VERB	VBG	VerbForm=Ger	1	obj	_	_
+3	following	follow	VERB	VBG	VerbForm=Ger	1	xcomp	_	_
 4	instead	instead	ADV	RB	_	1	advmod	_	_
 5	,	,	PUNCT	,	_	13	punct	_	_
 6	if	if	SCONJ	IN	_	13	mark	_	_
@@ -536,38 +548,40 @@
 17	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	19	amod	_	_
 18	robot	robot	NOUN	NN	Number=Sing	19	compound	_	_
 19	frame	frame	NOUN	NN	Number=Sing	15	nmod	_	_
-20	:	:	PUNCT	:	_	21	punct	_	_
-21	Add	add	VERB	VB	VerbForm=Inf	13	parataxis	_	_
-22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
-23	tool	tool	NOUN	NN	Number=Sing	21	obj	_	_
-24	to	to	ADP	TO	_	26	case	_	_
-25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
-26	robot	robot	NOUN	NN	Number=Sing	23	nmod	_	_
-27	by	by	SCONJ	IN	_	28	mark	_	_
-28	calling	call	VERB	VBG	VerbForm=Ger	21	advcl	_	_
-29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	_	_
-30	following	follow	VERB	VBG	VerbForm=Ger	31	amod	_	_
-31	command	command	NOUN	NN	Number=Sing	28	obj	_	_
-32	,	,	PUNCT	,	_	38	punct	_	_
-33	where	where	SCONJ	WRB	PronType=Int	38	mark	_	_
-34	S	S	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	38	aux	_	_
-35	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	38	cop	_	_
-36	a	a	DET	DT	Definite=Ind|PronType=Art	38	det	_	_
-37	4x4	@card@	PROPN	NNP	Number=Sing	38	compound	_	_
-38	matrix	matrix	NOUN	NN	Number=Sing	28	advcl	_	_
-39	that	that	PRON	WDT	PronType=Rel	40	nsubj	_	_
-40	relates	relate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	38	acl:relcl	_	_
-41	the	the	DET	DT	Definite=Def|PronType=Art	44	det	_	_
-42	tool	tool	NOUN	NN	Number=Sing	44	compound	_	_
-43	tip	tip	NOUN	NN	Number=Sing	44	compound	_	_
-44	frame	frame	NOUN	NN	Number=Sing	40	obj	_	_
-45	to	to	ADP	TO	_	50	case	_	_
-46	the	the	DET	DT	Definite=Def|PronType=Art	50	det	_	_
-47	last	last	ADJ	JJ	Degree=Pos	50	amod	_	_
-48	robot	robot	NOUN	NN	Number=Sing	50	compound	_	_
-49	joint	joint	ADJ	JJ	Degree=Pos	50	amod	_	_
-50	frame	frame	NOUN	NN	Number=Sing	40	obl	_	_
-51	.	.	PUNCT	.	_	1	punct	_	_
+20	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = imp
+1	Add	add	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+3	tool	tool	NOUN	NN	Number=Sing	1	obj	_	_
+4	to	to	ADP	TO	_	6	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	robot	robot	NOUN	NN	Number=Sing	3	nmod	_	_
+7	by	by	SCONJ	IN	_	8	mark	_	_
+8	calling	call	VERB	VBG	VerbForm=Ger	1	advcl	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+10	following	follow	VERB	VBG	VerbForm=Ger	11	amod	_	_
+11	command	command	NOUN	NN	Number=Sing	8	obj	_	_
+12	,	,	PUNCT	,	_	18	punct	_	_
+13	where	where	SCONJ	WRB	PronType=Int	18	mark	_	_
+14	S	S	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	_	_
+15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	_	_
+16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	_	_
+17	4x4	@card@	PROPN	NNP	Number=Sing	18	compound	_	_
+18	matrix	matrix	NOUN	NN	Number=Sing	1	advcl	_	_
+19	that	that	PRON	WDT	PronType=Rel	20	nsubj	_	_
+20	relates	relate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
+22	tool	tool	NOUN	NN	Number=Sing	24	compound	_	_
+23	tip	tip	NOUN	NN	Number=Sing	24	compound	_	_
+24	frame	frame	NOUN	NN	Number=Sing	20	obj	_	_
+25	to	to	ADP	TO	_	30	case	_	_
+26	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
+27	last	last	ADJ	JJ	Degree=Pos	30	amod	_	_
+28	robot	robot	NOUN	NN	Number=Sing	30	compound	_	_
+29	joint	joint	ADJ	JJ	Degree=Pos	30	amod	_	_
+30	frame	frame	NOUN	NN	Number=Sing	20	obl	_	_
+31	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
@@ -615,21 +629,23 @@
 5	calling	call	VERB	VBG	VerbForm=Ger	1	advcl	_	_
 6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
 7	command	command	NOUN	NN	Number=Sing	5	obj	_	_
-8	:	:	PUNCT	:	_	9	punct	_	_
-9	Image	image	NOUN	NN	Number=Sing	1	parataxis	_	_
-10	:	:	PUNCT	:	_	11	punct	_	_
-11	How	how	SCONJ	WRB	PronType=Int	9	mark	_	_
-12	to	to	PART	TO	_	13	mark	_	_
-13	create	create	VERB	VB	VerbForm=Inf	11	acl:relcl	_	_
-14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	_	_
-15	robot	robot	NOUN	NN	Number=Sing	16	compound	_	_
-16	model	model	NOUN	NN	Number=Sing	13	obj	_	_
-17	in	in	ADP	IN	_	19	case	_	_
-18	MATLAB	MATLAB	PROPN	NNP	Number=Sing	19	compound	_	_
-19	step	step	NOUN	NN	Number=Sing	16	nmod	_	_
-20	9	9	NUM	CD	NumType=Card	19	nummod	_	_
-21	.	.	PUNCT	.	_	1	punct	_	_
-22	png	png	NOUN	NN	Number=Sing	1	dep	_	_
+8	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	5	punct	_	_
+3	How	how	SCONJ	WRB	PronType=Int	5	mark	_	_
+4	to	to	PART	TO	_	5	mark	_	_
+5	create	create	VERB	VB	VerbForm=Inf	1	acl	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+7	robot	robot	NOUN	NN	Number=Sing	8	compound	_	_
+8	model	model	NOUN	NN	Number=Sing	5	obj	_	_
+9	in	in	ADP	IN	_	11	case	_	_
+10	MATLAB	MATLAB	PROPN	NNP	Number=Sing	11	compound	_	_
+11	step	step	NOUN	NN	Number=Sing	5	obl	_	_
+12	9	9	NUM	CD	NumType=Card	11	nummod	_	_
+13	.	.	PUNCT	.	_	1	punct	_	_
+14	png	png	NOUN	NN	Number=Sing	1	dep	_	_
 
 # s_type = decl
 1	Usually	usually	ADV	RB	_	4	advmod	_	_
@@ -686,7 +702,7 @@
 39	origin	origin	NOUN	NN	Number=Sing	36	nmod	_	_
 40	.	.	PUNCT	.	_	20	punct	_	_
 
-# s_type = decl
+# s_type = imp
 1	When	when	SCONJ	WRB	PronType=Int	2	mark	_	_
 2	calling	call	VERB	VBG	VerbForm=Ger	7	advcl	_	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
@@ -705,77 +721,83 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
 17	plot	plot	NOUN	NN	Number=Sing	18	compound	_	_
 18	command	command	NOUN	NN	Number=Sing	14	nmod	_	_
-19	:	:	PUNCT	:	_	22	punct	_	_
-20	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	_	_
-21	will	will	AUX	MD	VerbForm=Fin	22	aux	_	_
-22	have	have	VERB	VB	VerbForm=Inf	7	parataxis	_	_
-23	to	to	PART	TO	_	24	mark	_	_
-24	play	play	VERB	VB	VerbForm=Inf	22	xcomp	_	_
-25	around	around	ADP	IN	_	28	case	_	_
-26	with	with	ADP	IN	_	28	case	_	_
-27	these	these	DET	DT	Number=Plur|PronType=Dem	28	det	_	_
-28	values	value	NOUN	NNS	Number=Plur	24	obl	_	_
-29	until	until	SCONJ	IN	_	33	mark	_	_
-30	the	the	DET	DT	Definite=Def|PronType=Art	32	det	_	_
-31	whole	whole	ADJ	JJ	Degree=Pos	32	amod	_	_
-32	robot	robot	NOUN	NN	Number=Sing	33	nsubj	_	_
-33	fits	fit	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	advcl	_	_
-34	in	in	ADP	IN	_	36	case	_	_
-35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	_	_
-36	plot	plot	NOUN	NN	Number=Sing	33	obl	_	_
-37	.	.	PUNCT	.	_	7	punct	_	_
+19	:	:	PUNCT	:	_	7	punct	_	_
 
 # s_type = decl
-1	Verifying	Verifying	VERB	VBG	VerbForm=Ger	18	csubj	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+2	will	will	AUX	MD	VerbForm=Fin	3	aux	_	_
+3	have	have	VERB	VB	VerbForm=Inf	0	root	_	_
+4	to	to	PART	TO	_	5	mark	_	_
+5	play	play	VERB	VB	VerbForm=Inf	3	xcomp	_	_
+6	around	around	ADP	IN	_	9	case	_	_
+7	with	with	ADP	IN	_	9	case	_	_
+8	these	these	DET	DT	Number=Plur|PronType=Dem	9	det	_	_
+9	values	value	NOUN	NNS	Number=Plur	5	obl	_	_
+10	until	until	SCONJ	IN	_	14	mark	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
+12	whole	whole	ADJ	JJ	Degree=Pos	13	amod	_	_
+13	robot	robot	NOUN	NN	Number=Sing	14	nsubj	_	_
+14	fits	fit	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	_	_
+15	in	in	ADP	IN	_	17	case	_	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+17	plot	plot	NOUN	NN	Number=Sing	14	obl	_	_
+18	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = ger
+1	Verifying	Verifying	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
-3	Model	Model	PROPN	NNP	Number=Sing	1	obj	_	_
-4	Predict	Predict	PROPN	NNP	Number=Sing	1	obj	_	_
-5	what	what	PRON	WP	PronType=Int	1	ccomp	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	X	X	NOUN	NN	Number=Sing	5	nsubj	_	_
-8	,	,	PUNCT	,	_	9	punct	_	_
-9	Y	Y	PROPN	NNP	Number=Sing	7	conj	_	_
-10	,	,	PUNCT	,	_	13	punct	_	_
-11	and	and	CCONJ	CC	_	13	cc	_	_
-12	Z	Z	NOUN	NN	Number=Sing	13	compound	_	_
-13	distances	distance	NOUN	NNS	Number=Plur	7	conj	_	_
-14	will	will	AUX	MD	VerbForm=Fin	18	aux	_	_
-15	be	be	AUX	VB	VerbForm=Inf	18	cop	_	_
-16	from	from	ADP	IN	_	18	case	_	_
-17	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	_	_
-18	tool	tool	NOUN	NN	Number=Sing	0	root	_	_
-19	to	to	ADP	TO	_	23	case	_	_
-20	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	_	_
-21	external	external	ADJ	JJ	Degree=Pos	23	amod	_	_
-22	reference	reference	NOUN	NN	Number=Sing	23	compound	_	_
-23	frame	frame	NOUN	NN	Number=Sing	18	nmod	_	_
-24	.	.	PUNCT	.	_	18	punct	_	_
+3	Model	Model	NOUN	NN	Number=Sing	1	obj	_	_
 
 # s_type = imp
-1	Do	do	VERB	VB	VerbForm=Fin	0	root	_	_
+1	Predict	Predict	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	what	what	PRON	WP	PronType=Int	15	nsubj	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+4	X	X	NOUN	NN	Number=Sing	2	nsubj	_	_
+5	,	,	PUNCT	,	_	6	punct	_	_
+6	Y	Y	NOUN	NN	Number=Sing	4	conj	_	_
+7	,	,	PUNCT	,	_	9	punct	_	_
+8	and	and	CCONJ	CC	_	9	cc	_	_
+9	Z	Z	VERB	VB	VerbForm=Inf	2	conj	_	_
+10	distances	distance	NOUN	NNS	Number=Plur	9	obj	_	_
+11	will	will	AUX	MD	VerbForm=Fin	15	aux	_	_
+12	be	be	AUX	VB	VerbForm=Inf	15	cop	_	_
+13	from	from	ADP	IN	_	15	case	_	_
+14	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	15	nmod:poss	_	_
+15	tool	tool	NOUN	NN	Number=Sing	1	ccomp	_	_
+16	to	to	ADP	TO	_	20	case	_	_
+17	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	20	nmod:poss	_	_
+18	external	external	ADJ	JJ	Degree=Pos	20	amod	_	_
+19	reference	reference	NOUN	NN	Number=Sing	20	compound	_	_
+20	frame	frame	NOUN	NN	Number=Sing	15	nmod	_	_
+21	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Do	do	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	obj	_	_
 3	by	by	SCONJ	IN	_	4	mark	_	_
 4	calling	call	VERB	VBG	VerbForm=Ger	1	advcl	_	_
-5	:	:	PUNCT	:	_	8	punct	_	_
-6	A	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
-7	4x4	@card@	PROPN	NNP	Number=Sing	8	compound	_	_
-8	matrix	matrix	NOUN	NN	Number=Sing	10	nsubj:pass	_	_
-9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux:pass	_	_
-10	returned	return	VERB	VBN	Tense=Past|VerbForm=Part	1	parataxis	_	_
-11	that	that	SCONJ	IN	_	12	mark	_	_
-12	relates	relate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	ccomp	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-14	tool	tool	NOUN	NN	Number=Sing	16	compound	_	_
-15	tip	tip	NOUN	NN	Number=Sing	16	compound	_	_
-16	frame	frame	NOUN	NN	Number=Sing	12	obj	_	_
-17	in	in	ADP	IN	_	18	case	_	_
-18	reference	reference	NOUN	NN	Number=Sing	12	obl	_	_
-19	to	to	ADP	TO	_	23	case	_	_
-20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-21	external	external	ADJ	JJ	Degree=Pos	23	amod	_	_
-22	reference	reference	NOUN	NN	Number=Sing	23	compound	_	_
-23	frame	frame	NOUN	NN	Number=Sing	18	nmod	_	_
-24	.	.	PUNCT	.	_	1	punct	_	_
+5	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+2	4x4	@card@	PROPN	NNP	Number=Sing	3	compound	_	_
+3	matrix	matrix	NOUN	NN	Number=Sing	5	nsubj:pass	_	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	_	_
+5	returned	return	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+6	that	that	SCONJ	IN	_	7	mark	_	_
+7	relates	relate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	ccomp	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+9	tool	tool	NOUN	NN	Number=Sing	11	compound	_	_
+10	tip	tip	NOUN	NN	Number=Sing	11	compound	_	_
+11	frame	frame	NOUN	NN	Number=Sing	7	obj	_	_
+12	in	in	ADP	IN	_	13	case	_	_
+13	reference	reference	NOUN	NN	Number=Sing	7	obl	_	_
+14	to	to	ADP	TO	_	18	case	_	_
+15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
+16	external	external	ADJ	JJ	Degree=Pos	18	amod	_	_
+17	reference	reference	NOUN	NN	Number=Sing	18	compound	_	_
+18	frame	frame	NOUN	NN	Number=Sing	13	nmod	_	_
+19	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = imp
 1	Check	Check	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

@@ -300,9 +300,11 @@
 1	How	how	SCONJ	WRB	PronType=Int	3	mark	_	_
 2	to	to	PART	TO	_	3	mark	_	_
 3	enter	enter	VERB	VB	VerbForm=Inf	0	root	_	_
-4	:	:	PUNCT	:	_	5	punct	_	_
-5	1	1	NUM	CD	NumType=Card	3	dep	_	_
-6	.	.	PUNCT	.	_	3	punct	_	_
+4	:	:	PUNCT	:	_	3	punct	_	_
+
+# s_type = frag
+1	1	1	NUM	CD	NumType=Card	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Comment	Comment	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -330,51 +332,47 @@
 6	can	can	AUX	MD	VerbForm=Fin	7	aux	_	_
 7	generate	generate	VERB	VB	VerbForm=Inf	1	ccomp	_	_
 8	and	and	CCONJ	CC	_	9	cc	_	_
-9	contact	contact	VERB	VB	VerbForm=Inf	1	conj	_	_
+9	contact	contact	VERB	VB	VerbForm=Inf	7	conj	_	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
 11	winner	winner	NOUN	NN	Number=Sing	9	obj	_	_
-12	:	:	PUNCT	:	_	13	punct	_	_
+12	:	:	PUNCT	:	_	15	punct	_	_
 13	https://goo.gl/forms/gXzaWi3D3sMqCizM2	https://goo.gl/forms/gXzaWi3D3sMqCizM2	PROPN	NNP	Number=Sing	11	appos	_	_
 14	Contest	Contest	PROPN	NNP	Number=Sing	15	nsubj	_	_
-15	ends	end	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	parataxis	_	_
+15	ends	end	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	dep	_	_
 16	11:59PM	@card@	NUM	CD	NumType=Card	17	nummod	_	_
-17	3rd	3rd	ADJ	JJ	Degree=Pos|NumType=Ord	15	obj	_	_
-18	May	May	PROPN	NNP	Number=Sing	19	compound	_	_
-19	2018	@card@	NUM	CD	NumType=Card	17	nummod	_	_
+17	3rd	3rd	PROPN	NNP	Number=Sing	15	obj	_	_
+18	May	May	PROPN	NNP	Number=Sing	17	compound	_	_
+19	2018	@card@	NUM	CD	NumType=Card	17	nmod:tmod	_	_
 20	(	(	PUNCT	-LRB-	_	22	punct	_	_
-21	Central	Central	PROPN	NNP	Number=Sing	22	amod	_	_
-22	Time	Time	PROPN	NNP	Number=Sing	19	appos	_	_
+21	Central	Central	PROPN	NNP	Number=Sing	22	compound	_	_
+22	Time	Time	PROPN	NNP	Number=Sing	17	appos	_	_
 23	(	(	PUNCT	-LRB-	_	24	punct	_	_
-24	US	US	PROPN	NNP	Number=Sing	22	dep	_	_
+24	US	US	PROPN	NNP	Number=Sing	22	appos	_	_
 25	&	&	CCONJ	CC	_	26	cc	_	_
 26	Canada	Canada	PROPN	NNP	Number=Sing	24	conj	_	_
 27	)	)	PUNCT	-RRB-	_	24	punct	_	_
 28	)	)	PUNCT	-RRB-	_	24	punct	_	_
-29	.	.	PUNCT	.	_	1	punct	_	_
-
-# s_type = decl
-1	Winners	Winners	NOUN	NNS	Number=Plur	4	nsubj:pass	_	_
-2	will	will	AUX	MD	VerbForm=Fin	4	aux	_	_
-3	be	be	AUX	VB	VerbForm=Inf	4	aux:pass	_	_
-4	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-5	May	May	PROPN	NNP	Number=Sing	6	compound	_	_
-6	5th	5th	ADJ	JJ	Degree=Pos|NumType=Ord	4	advmod	_	_
-7	on	on	ADP	IN	_	9	case	_	_
-8	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	_	_
-9	thread	thread	NOUN	NN	Number=Sing	6	obl	_	_
-10	and	and	CCONJ	CC	_	11	cc	_	_
-11	contacted	contact	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	conj	_	_
-12	via	via	ADP	IN	_	13	case	_	_
-13	e-mail	E-mail	NOUN	NN	Number=Sing	11	obl	_	_
-14	.	.	PUNCT	.	_	4	punct	_	_
-
-# s_type = decl
-1	Winners	Winners	NOUN	NNS	Number=Plur	5	nsubj	_	_
-2	will	will	AUX	MD	VerbForm=Fin	5	aux	_	_
-3	be	be	AUX	VB	VerbForm=Inf	5	cop	_	_
-4	randomly	randomly	ADV	RB	_	5	advmod	_	_
-5	selected	select	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-6	.	.	PUNCT	.	_	5	punct	_	_
+29	.	.	PUNCT	.	_	33	punct	_	_
+30	Winners	Winners	PROPN	NNPS	Number=Plur	33	nsubj:pass	_	_
+31	will	will	AUX	MD	VerbForm=Fin	33	aux	_	_
+32	be	be	AUX	VB	VerbForm=Inf	33	aux:pass	_	_
+33	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part	1	parataxis	_	_
+34	May	May	PROPN	NNP	Number=Sing	35	compound	_	_
+35	5th	5th	ADJ	JJ	Degree=Pos|NumType=Ord	33	xcomp	_	_
+36	on	on	ADP	IN	_	38	case	_	_
+37	this	this	DET	DT	Number=Sing|PronType=Dem	38	det	_	_
+38	thread	thread	NOUN	NN	Number=Sing	35	obl	_	_
+39	and	and	CCONJ	CC	_	40	cc	_	_
+40	contacted	contact	VERB	VBN	Tense=Past|VerbForm=Part	33	conj	_	_
+41	via	via	ADP	IN	_	42	case	_	_
+42	e-mail	E-mail	NOUN	NN	Number=Sing	40	obl	_	_
+43	.	.	PUNCT	.	_	33	punct	_	_
+44	Winners	Winners	PROPN	NNPS	Number=Plur	48	nsubj:pass	_	_
+45	will	will	AUX	MD	VerbForm=Fin	48	aux	_	_
+46	be	be	AUX	VB	VerbForm=Inf	48	aux:pass	_	_
+47	randomly	randomly	ADV	RB	_	48	advmod	_	_
+48	selected	select	VERB	VBN	Tense=Past|VerbForm=Part	33	conj	_	_
+49	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	EDIT	EDIT	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

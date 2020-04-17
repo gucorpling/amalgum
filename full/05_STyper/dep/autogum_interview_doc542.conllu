@@ -70,22 +70,24 @@
 23	Scientology	Scientology	PROPN	NNP	Number=Sing	21	nmod	_	_
 24	.	.	PUNCT	.	_	5	punct	_	_
 
-# s_type = decl
-1	Lisa	Lisa	PROPN	NNP	Number=Sing	3	nsubj	_	_
+# s_type = frag
+1	Lisa	Lisa	PROPN	NNP	Number=Sing	0	root	_	_
 2	McPherson	McPherson	PROPN	NNP	Number=Sing	1	flat	_	_
-3	died	die	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-4	in	in	ADP	IN	_	5	case	_	_
-5	1995	@card@	NUM	CD	NumType=Card	3	obl	_	_
-6	while	while	SCONJ	IN	_	9	mark	_	_
-7	in	in	ADP	IN	_	9	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	care	care	NOUN	NN	Number=Sing	3	advcl	_	_
-10	of	of	ADP	IN	_	12	case	_	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	Church	Church	PROPN	NNP	Number=Sing	9	nmod	_	_
-13	of	of	ADP	IN	_	14	case	_	_
-14	Scientology	Scientology	PROPN	NNP	Number=Sing	12	nmod	_	_
-15	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	died	die	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+2	in	in	ADP	IN	_	3	case	_	_
+3	1995	@card@	NUM	CD	NumType=Card	1	obl	_	_
+4	while	while	SCONJ	IN	_	7	mark	_	_
+5	in	in	ADP	IN	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	care	care	NOUN	NN	Number=Sing	1	advcl	_	_
+8	of	of	ADP	IN	_	10	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	Church	Church	PROPN	NNP	Number=Sing	7	nmod	_	_
+11	of	of	ADP	IN	_	12	case	_	_
+12	Scientology	Scientology	PROPN	NNP	Number=Sing	10	nmod	_	_
+13	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	After	after	ADP	IN	_	4	case	_	_
@@ -188,45 +190,53 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
 2	Interview	interview	NOUN	NN	Number=Sing	0	root	_	_
 
-# s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Wikinews	Wikinews	PROPN	NNP	Number=Sing	7	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	7	punct	_	_
-7	Give	give	VERB	VB	VerbForm=Inf	0	root	_	_
-8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
-9	short	short	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	description	description	NOUN	NN	Number=Sing	7	obj	_	_
-11	of	of	ADP	IN	_	12	case	_	_
-12	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	10	nmod	_	_
-13	and	and	CCONJ	CC	_	16	cc	_	_
-14	what	what	PRON	WP	PronType=Int	16	obj	_	_
-15	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	nsubj	_	_
-16	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	conj	_	_
-17	outside	outside	SCONJ	IN	_	19	mark	_	_
-18	of	of	ADP	IN	_	17	fixed	_	_
-19	protesting	protest	VERB	VBG	VerbForm=Ger	16	advcl	_	_
-20	Scientology	Scientology	PROPN	NNP	Number=Sing	19	obj	_	_
-21	.	.	PUNCT	.	_	7	punct	_	_
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
-1	Jeff	Jeff	PROPN	NNP	Number=Sing	9	nsubj	_	_
+1	:	:	PUNCT	:	_	2	punct	_	_
+2	Give	give	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+4	short	short	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	description	description	NOUN	NN	Number=Sing	2	obj	_	_
+6	of	of	ADP	IN	_	7	case	_	_
+7	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	5	nmod	_	_
+8	and	and	CCONJ	CC	_	11	cc	_	_
+9	what	what	PRON	WP	PronType=Int	11	obj	_	_
+10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	_
+11	do	do	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	2	conj	_	_
+12	outside	outside	SCONJ	IN	_	14	mark	_	_
+13	of	of	ADP	IN	_	12	fixed	_	_
+14	protesting	protest	VERB	VBG	VerbForm=Ger	11	advcl	_	_
+15	Scientology	Scientology	PROPN	NNP	Number=Sing	14	obj	_	_
+16	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	Jeff	Jeff	PROPN	NNP	Number=Sing	0	root	_	_
 2	Jacobsen	Jacobsen	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	9	punct	_	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
-5	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	_	_
-6	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
-7	Political	Political	PROPN	NNP	Number=Sing	9	compound	_	_
-8	Science	Science	PROPN	NNP	Number=Sing	9	compound	_	_
-9	senior	senior	NOUN	NN	Number=Sing	0	root	_	_
-10	at	at	ADP	IN	_	12	case	_	_
-11	Arizona	Arizona	PROPN	NNP	Number=Sing	12	compound	_	_
-12	State	State	PROPN	NNP	Number=Sing	9	nmod	_	_
-13	right	right	ADV	RB	_	14	advmod	_	_
-14	now	now	ADV	RB	_	9	advmod	_	_
-15	.	.	PUNCT	.	_	9	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	7	punct	_	_
+2	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
+3	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	cop	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+5	Political	Political	PROPN	NNP	Number=Sing	7	compound	_	_
+6	Science	Science	PROPN	NNP	Number=Sing	7	compound	_	_
+7	senior	senior	NOUN	NN	Number=Sing	0	root	_	_
+8	at	at	ADP	IN	_	10	case	_	_
+9	Arizona	Arizona	PROPN	NNP	Number=Sing	10	compound	_	_
+10	State	State	PROPN	NNP	Number=Sing	7	nmod	_	_
+11	right	right	ADV	RB	_	12	advmod	_	_
+12	now	now	ADV	RB	_	7	advmod	_	_
+13	.	.	PUNCT	.	_	7	punct	_	_
 
 # s_type = frag
 1	Full-time	full-time	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -275,30 +285,38 @@
 8	closed	close	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	advcl	_	_
 9	.	.	PUNCT	.	_	1	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	7	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	10	punct	_	_
-7	What	What	PRON	WP	PronType=Int	10	nsubj	_	_
-8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	_	_
-9	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	_	_
-10	job	job	NOUN	NN	Number=Sing	0	root	_	_
-11	at	at	ADP	IN	_	13	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	trust	trust	NOUN	NN	Number=Sing	10	nmod	_	_
-14	?	?	PUNCT	.	_	10	punct	_	_
+1	:	:	PUNCT	:	_	2	punct	_	_
+2	What	What	PRON	WP	PronType=Int	0	root	_	_
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	cop	_	_
+4	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
+5	job	job	NOUN	NN	Number=Sing	2	nsubj	_	_
+6	at	at	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	trust	trust	NOUN	NN	Number=Sing	2	nmod	_	_
+9	?	?	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	J.J.	J.J.	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Librarian	librarian	PROPN	NNP	Number=Sing	1	dep	_	_
-4	,	,	PUNCT	,	_	6	punct	_	_
-5	and	and	CCONJ	CC	_	6	cc	_	_
-6	researcher	researcher	NOUN	NN	Number=Sing	3	conj	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	2	punct	_	_
+2	Librarian	librarian	NOUN	NN	Number=Sing	0	root	_	_
+3	,	,	PUNCT	,	_	5	punct	_	_
+4	and	and	CCONJ	CC	_	5	cc	_	_
+5	researcher	researcher	NOUN	NN	Number=Sing	2	conj	_	_
+6	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	So	so	ADV	RB	_	3	advmod	_	_
@@ -318,12 +336,18 @@
 15	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -363,16 +387,18 @@
 10	"	"	PUNCT	''	_	9	punct	_	_
 11	?	?	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	J.J.	J.J.	PROPN	NNP	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	J.J.	J.J.	PROPN	NNP	Number=Sing	8	nsubj	_	_
-2	:	:	PUNCT	:	_	6	punct	_	_
-3	No.	No.	PROPN	NNP	Number=Sing	6	nsubj	_	_
-4	Not	not	PART	RB	Polarity=Neg	6	advmod	_	_
-5	all	all	DET	DT	_	6	det	_	_
-6	religions	religion	NOUN	NNS	Number=Plur	8	nsubj	_	_
-7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	_	_
-8	cults	cult	NOUN	NNS	Number=Plur	0	root	_	_
-9	.	.	PUNCT	.	_	8	punct	_	_
+1	:	:	PUNCT	:	_	7	punct	_	_
+2	No.	No.	INTJ	UH	_	7	discourse	_	_
+3	Not	not	PART	RB	Polarity=Neg	7	advmod	_	_
+4	all	all	DET	DT	_	5	det	_	_
+5	religions	religion	NOUN	NNS	Number=Plur	7	nsubj	_	_
+6	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	cop	_	_
+7	cults	cult	NOUN	NNS	Number=Plur	0	root	_	_
+8	.	.	PUNCT	.	_	7	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
@@ -420,12 +446,18 @@
 31	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = wh
 1	How	how	SCONJ	WRB	PronType=Int	4	mark	_	_
@@ -441,48 +473,58 @@
 
 # s_type = frag
 1	J.J.	J.J.	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=3|PronType=Prs	1	dep	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	2	punct	_	_
+2	Myself	myself	PRON	PRP	Case=Acc|Number=Sing|Person=3|PronType=Prs	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	8	punct	_	_
-7	What	What	PRON	WP	PronType=Int	8	nsubj	_	_
-8	happened	happen	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-9	to	to	ADP	TO	_	10	case	_	_
-10	Bob	bob	PROPN	NNP	Number=Sing	8	obl	_	_
-11	Minton	Minton	PROPN	NNP	Number=Sing	10	flat	_	_
-12	,	,	PUNCT	,	_	17	punct	_	_
-13	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	_	_
-14	former	former	ADJ	JJ	Degree=Pos	17	amod	_	_
-15	chief	chief	ADJ	JJ	Degree=Pos	17	amod	_	_
-16	financial	financial	ADJ	JJ	Degree=Pos	17	amod	_	_
-17	supporter	supporter	NOUN	NN	Number=Sing	10	appos	_	_
-18	?	?	PUNCT	.	_	8	punct	_	_
+1	:	:	PUNCT	:	_	3	punct	_	_
+2	What	What	PRON	WP	PronType=Int	3	nsubj	_	_
+3	happened	happen	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	to	to	ADP	TO	_	5	case	_	_
+5	Bob	bob	PROPN	NNP	Number=Sing	3	obl	_	_
+6	Minton	Minton	PROPN	NNP	Number=Sing	5	flat	_	_
+7	,	,	PUNCT	,	_	12	punct	_	_
+8	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
+9	former	former	ADJ	JJ	Degree=Pos	12	amod	_	_
+10	chief	chief	ADJ	JJ	Degree=Pos	12	amod	_	_
+11	financial	financial	ADJ	JJ	Degree=Pos	12	amod	_	_
+12	supporter	supporter	NOUN	NN	Number=Sing	5	appos	_	_
+13	?	?	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	J.J.	J.J.	PROPN	NNP	Number=Sing	0	root	_	_
 
 # s_type = decl
-1	J.J.	J.J.	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	7	punct	_	_
-3	That	that	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	_	_
-4	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
-5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
-6	sore	sore	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	point	point	NOUN	NN	Number=Sing	1	parataxis	_	_
-8	for	for	ADP	IN	_	9	case	_	_
-9	many	many	ADJ	JJ	Degree=Pos	7	nmod	_	_
-10	,	,	PUNCT	,	_	14	punct	_	_
-11	but	but	CCONJ	CC	_	14	cc	_	_
-12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	nsubj	_	_
-13	'll	will	AUX	MD	VerbForm=Fin	14	aux	_	_
-14	give	give	VERB	VB	VerbForm=Inf	7	conj	_	_
-15	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
-16	version	version	NOUN	NN	Number=Sing	14	obj	_	_
-17	.	.	PUNCT	.	_	7	punct	_	_
+1	:	:	PUNCT	:	_	6	punct	_	_
+2	That	that	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	_	_
+3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
+5	sore	sore	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	point	point	NOUN	NN	Number=Sing	0	root	_	_
+7	for	for	ADP	IN	_	8	case	_	_
+8	many	many	ADJ	JJ	Degree=Pos	6	nmod	_	_
+9	,	,	PUNCT	,	_	13	punct	_	_
+10	but	but	CCONJ	CC	_	13	cc	_	_
+11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	_	_
+12	'll	will	AUX	MD	VerbForm=Fin	13	aux	_	_
+13	give	give	VERB	VB	VerbForm=Inf	6	conj	_	_
+14	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	15	nmod:poss	_	_
+15	version	version	NOUN	NN	Number=Sing	13	obj	_	_
+16	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -556,36 +598,44 @@
 52	scene	scene	NOUN	NN	Number=Sing	50	obj	_	_
 53	.	.	PUNCT	.	_	4	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	8	punct	_	_
-7	How	how	SCONJ	WRB	PronType=Int	8	mark	_	_
-8	powerful	powerful	ADJ	JJ	Degree=Pos	0	root	_	_
-9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
-11	Church	Church	PROPN	NNP	Number=Sing	8	nsubj	_	_
-12	of	of	ADP	IN	_	13	case	_	_
-13	Scientology	Scientology	PROPN	NNP	Number=Sing	11	nmod	_	_
-14	in	in	ADP	IN	_	16	case	_	_
-15	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
-16	opinion	opinion	NOUN	NN	Number=Sing	8	obl	_	_
-17	?	?	PUNCT	.	_	8	punct	_	_
+1	:	:	PUNCT	:	_	3	punct	_	_
+2	How	how	SCONJ	WRB	PronType=Int	3	mark	_	_
+3	powerful	powerful	ADJ	JJ	Degree=Pos	0	root	_	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	Church	Church	PROPN	NNP	Number=Sing	3	nsubj	_	_
+7	of	of	ADP	IN	_	8	case	_	_
+8	Scientology	Scientology	PROPN	NNP	Number=Sing	6	nmod	_	_
+9	in	in	ADP	IN	_	11	case	_	_
+10	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
+11	opinion	opinion	NOUN	NN	Number=Sing	3	obl	_	_
+12	?	?	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	J.J.	J.J.	PROPN	NNP	Number=Sing	0	root	_	_
 
 # s_type = decl
-1	J.J.	J.J.	PROPN	NNP	Number=Sing	6	nsubj	_	_
-2	:	:	PUNCT	:	_	6	punct	_	_
-3	Their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
-4	power	power	NOUN	NN	Number=Sing	6	nsubj	_	_
-5	now	now	ADV	RB	_	6	advmod	_	_
-6	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-7	from	from	ADP	IN	_	9	case	_	_
-8	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
-9	money	money	NOUN	NN	Number=Sing	6	obl	_	_
-10	.	.	PUNCT	.	_	6	punct	_	_
+1	:	:	PUNCT	:	_	5	punct	_	_
+2	Their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	_	_
+3	power	power	NOUN	NN	Number=Sing	5	nsubj	_	_
+4	now	now	ADV	RB	_	5	advmod	_	_
+5	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	from	from	ADP	IN	_	8	case	_	_
+7	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
+8	money	money	NOUN	NN	Number=Sing	5	obl	_	_
+9	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_

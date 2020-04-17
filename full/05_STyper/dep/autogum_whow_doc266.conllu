@@ -37,14 +37,16 @@
 9	stocks	stock	NOUN	NNS	Number=Plur	8	obj	_	_
 10	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Cover	cover	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
-4	expenses	expense	NOUN	NNS	Number=Plur	2	obj	_	_
-5	every	every	DET	DT	_	6	det	_	_
-6	month	month	NOUN	NN	Number=Sing	2	obl:tmod	_	_
-7	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Cover	cover	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	_	_
+3	expenses	expense	NOUN	NNS	Number=Plur	1	iobj	_	_
+4	every	every	DET	DT	_	5	det	_	_
+5	month	month	NOUN	NN	Number=Sing	1	obl:tmod	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Then	then	ADV	RB	PronType=Dem	2	advmod	_	_
@@ -116,7 +118,7 @@
 21	risk	risk	NOUN	NN	Number=Sing	19	obj	_	_
 22	.	.	PUNCT	.	_	11	punct	_	_
 
-# s_type = decl
+# s_type = imp
 1	Base	Base	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
 2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
 3	stock-trading	stock-trading	ADJ	JJ	Degree=Pos	5	amod	_	_
@@ -131,25 +133,33 @@
 12	of	of	ADP	IN	_	13	case	_	_
 13	importance	importance	NOUN	NN	Number=Sing	11	nmod	_	_
 14	)	)	PUNCT	-RRB-	_	11	punct	_	_
-15	:	:	PUNCT	:	_	16	punct	_	_
-16	Preservation	preservation	PROPN	NNP	Number=Sing	8	appos	_	_
-17	of	of	ADP	IN	_	18	case	_	_
-18	capital	capital	NOUN	NN	Number=Sing	21	nmod	_	_
-19	Consistent	Consistent	ADJ	JJ	Degree=Pos	21	amod	_	_
-20	profitability	profitability	NOUN	NN	Number=Sing	21	compound	_	_
-21	Pursuit	pursuit	NOUN	NN	Number=Sing	24	nsubj	_	_
-22	of	of	ADP	IN	_	23	case	_	_
-23	superior	superior	ADJ	JJ	Degree=Pos	21	amod	_	_
-24	returns	return	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
-25	Preserve	Preserve	VERB	VB	VerbForm=Inf	24	xcomp	_	_
-26	capital	capital	NOUN	NN	Number=Sing	25	obj	_	_
-27	in	in	ADP	IN	_	29	case	_	_
-28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	_	_
-29	interests	interest	NOUN	NNS	Number=Plur	25	obl	_	_
-30	of	of	ADP	IN	_	32	case	_	_
-31	money	money	NOUN	NN	Number=Sing	32	compound	_	_
-32	management	management	NOUN	NN	Number=Sing	29	nmod	_	_
-33	.	.	PUNCT	.	_	1	punct	_	_
+15	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Preservation	preservation	NOUN	NN	Number=Sing	0	root	_	_
+2	of	of	ADP	IN	_	3	case	_	_
+3	capital	capital	NOUN	NN	Number=Sing	1	nmod	_	_
+
+# s_type = frag
+1	Consistent	Consistent	ADJ	JJ	Degree=Pos	2	amod	_	_
+2	profitability	profitability	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	Pursuit	pursuit	NOUN	NN	Number=Sing	0	root	_	_
+2	of	of	ADP	IN	_	4	case	_	_
+3	superior	superior	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	returns	return	NOUN	NNS	Number=Plur	1	nmod	_	_
+
+# s_type = imp
+1	Preserve	Preserve	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	capital	capital	NOUN	NN	Number=Sing	1	obj	_	_
+3	in	in	ADP	IN	_	5	case	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+5	interests	interest	NOUN	NNS	Number=Plur	1	obl	_	_
+6	of	of	ADP	IN	_	8	case	_	_
+7	money	money	NOUN	NN	Number=Sing	8	compound	_	_
+8	management	management	NOUN	NN	Number=Sing	5	nmod	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	_	_
@@ -364,13 +374,15 @@
 22	pain	pain	NOUN	NN	Number=Sing	19	nmod	_	_
 23	.	.	PUNCT	.	_	5	punct	_	_
 
-# s_type = intj
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	Beware	Beware	INTJ	UH	_	0	root	_	_
-3	of	of	ADP	IN	_	5	case	_	_
-4	emotional	emotional	ADJ	JJ	Degree=Pos	5	amod	_	_
-5	trading	trading	NOUN	NN	Number=Sing	2	nmod	_	_
-6	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
+# s_type = frag
+1	Beware	Beware	NOUN	NN	Number=Sing	0	root	_	_
+2	of	of	ADP	IN	_	4	case	_	_
+3	emotional	emotional	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	trading	trading	NOUN	NN	Number=Sing	1	nmod	_	_
+5	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = sub
 1	Trading	trade	VERB	VBG	VerbForm=Ger	5	csubj	_	_

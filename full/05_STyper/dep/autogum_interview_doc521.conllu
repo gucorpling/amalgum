@@ -146,12 +146,18 @@
 8	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = wh
 1	If	if	SCONJ	IN	_	2	mark	_	_
@@ -168,43 +174,45 @@
 12	system	system	NOUN	NN	Number=Sing	7	obj	_	_
 13	?	?	PUNCT	.	_	7	punct	_	_
 
-# s_type = decl
-1	Lt.	Lt.	PROPN	NNP	Number=Sing	6	nsubj	_	_
+# s_type = frag
+1	Lt.	Lt.	PROPN	NNP	Number=Sing	0	root	_	_
 2	Colonel	Colonel	PROPN	NNP	Number=Sing	1	flat	_	_
 3	Riekse	Riekse	PROPN	NNP	Number=Sing	1	flat	_	_
-4	:	:	PUNCT	:	_	6	punct	_	_
-5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
-6	retired	retire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-7	out	out	ADP	RP	_	6	compound:prt	_	_
-8	of	of	ADP	IN	_	13	case	_	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-10	Michigan	Michigan	PROPN	NNP	Number=Sing	13	compound	_	_
-11	Public	Public	PROPN	NNP	Number=Sing	12	amod	_	_
-12	School	School	PROPN	NNP	Number=Sing	13	compound	_	_
-13	system	system	NOUN	NN	Number=Sing	6	obl	_	_
-14	with	with	ADP	IN	_	17	case	_	_
-15	over	over	ADV	IN	_	16	advmod	_	_
-16	23	@card@	NUM	CD	NumType=Card	17	nummod	_	_
-17	years	year	NOUN	NNS	Number=Plur	6	obl	_	_
-18	of	of	ADP	IN	_	19	case	_	_
-19	service	service	NOUN	NN	Number=Sing	17	nmod	_	_
-20	;	;	PUNCT	:	_	21	punct	_	_
-21	K-12	K-12	PROPN	NNP	Number=Sing	17	appos	_	_
-22	;	;	PUNCT	:	_	25	punct	_	_
-23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	_	_
-24	can	can	AUX	MD	VerbForm=Fin	25	aux	_	_
-25	help	help	VERB	VB	VerbForm=Inf	6	parataxis	_	_
-26	bring	bring	VERB	VB	VerbForm=Inf	25	ccomp	_	_
-27	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	29	nmod:poss	_	_
-28	public	public	ADJ	JJ	Degree=Pos	29	amod	_	_
-29	schools	school	NOUN	NNS	Number=Plur	26	obj	_	_
-30	to	to	ADP	TO	_	33	case	_	_
-31	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	_	_
-32	higher	high	ADJ	JJR	Degree=Cmp	33	amod	_	_
-33	level	level	NOUN	NN	Number=Sing	26	obl	_	_
-34	of	of	ADP	IN	_	35	case	_	_
-35	achievement	achievement	NOUN	NN	Number=Sing	33	nmod	_	_
-36	.	.	PUNCT	.	_	25	punct	_	_
+4	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
+2	retired	retire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	out	out	ADP	RP	_	2	compound:prt	_	_
+4	of	of	ADP	IN	_	9	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+6	Michigan	Michigan	PROPN	NNP	Number=Sing	9	compound	_	_
+7	Public	Public	PROPN	NNP	Number=Sing	9	compound	_	_
+8	School	School	PROPN	NNP	Number=Sing	9	compound	_	_
+9	system	system	NOUN	NN	Number=Sing	2	obl	_	_
+10	with	with	ADP	IN	_	13	case	_	_
+11	over	over	ADV	IN	_	12	advmod	_	_
+12	23	@card@	NUM	CD	NumType=Card	13	nummod	_	_
+13	years	year	NOUN	NNS	Number=Plur	2	obl	_	_
+14	of	of	ADP	IN	_	15	case	_	_
+15	service	service	NOUN	NN	Number=Sing	13	nmod	_	_
+16	;	;	PUNCT	:	_	17	punct	_	_
+17	K-12	K-12	PROPN	NNP	Number=Sing	13	appos	_	_
+18	;	;	PUNCT	:	_	21	punct	_	_
+19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	_	_
+20	can	can	AUX	MD	VerbForm=Fin	21	aux	_	_
+21	help	help	VERB	VB	VerbForm=Inf	2	parataxis	_	_
+22	bring	bring	VERB	VB	VerbForm=Inf	21	ccomp	_	_
+23	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	25	nmod:poss	_	_
+24	public	public	ADJ	JJ	Degree=Pos	25	amod	_	_
+25	schools	school	NOUN	NNS	Number=Plur	22	obj	_	_
+26	to	to	ADP	TO	_	29	case	_	_
+27	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	_	_
+28	higher	high	ADJ	JJR	Degree=Cmp	29	amod	_	_
+29	level	level	NOUN	NN	Number=Sing	22	obl	_	_
+30	of	of	ADP	IN	_	31	case	_	_
+31	achievement	achievement	NOUN	NN	Number=Sing	29	nmod	_	_
+32	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = imp
 1	First	first	ADV	RB	_	3	advmod	_	_
@@ -428,12 +436,18 @@
 13	.	.	PUNCT	.	_	10	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = wh
 1	How	how	SCONJ	WRB	PronType=Int	4	mark	_	_
@@ -443,19 +457,21 @@
 5	abortion	abortion	NOUN	NN	Number=Sing	4	obj	_	_
 6	?	?	PUNCT	.	_	4	punct	_	_
 
-# s_type = imp
+# s_type = frag
 1	Lt.	Lt.	PROPN	NNP	Number=Sing	0	root	_	_
 2	Colonel	Colonel	PROPN	NNP	Number=Sing	1	flat	_	_
 3	Riekse	Riekse	PROPN	NNP	Number=Sing	1	flat	_	_
-4	:	:	PUNCT	:	_	5	punct	_	_
-5	Push	push	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
-7	issue	issue	NOUN	NN	Number=Sing	5	obj	_	_
-8	back	back	ADV	RB	_	5	advmod	_	_
-9	to	to	ADP	TO	_	11	case	_	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
-11	states	state	NOUN	NNS	Number=Plur	5	obl	_	_
-12	.	.	PUNCT	.	_	5	punct	_	_
+4	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = imp
+1	Push	push	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	_	_
+3	issue	issue	NOUN	NN	Number=Sing	1	obj	_	_
+4	back	back	ADV	RB	_	1	advmod	_	_
+5	to	to	ADP	TO	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	states	state	NOUN	NNS	Number=Plur	1	obl	_	_
+8	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -556,12 +572,18 @@
 36	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	:	:	PUNCT	:	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = q
 1	Do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	aux	_	_

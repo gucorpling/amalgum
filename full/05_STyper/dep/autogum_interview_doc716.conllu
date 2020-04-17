@@ -2,11 +2,15 @@
 1	Interview	interview	NOUN	NN	Number=Sing	0	root	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = wh
 1	Can	can	AUX	MD	VerbForm=Fin	3	aux	_	_
@@ -32,10 +36,12 @@
 21	Scientology	Scientology	PROPN	NNP	Number=Sing	19	obl	_	_
 22	?	?	PUNCT	.	_	3	punct	_	_
 
-# s_type = other
-1	Nancy	nancy	PROPN	NNP	Number=Sing	2	nsubj	_	_
-2	Many	Many	ADJ	JJ	Degree=Pos	0	root	_	_
-3	:	:	PUNCT	:	_	2	punct	_	_
+# s_type = frag
+1	Nancy	nancy	PROPN	NNP	Number=Sing	0	root	_	_
+2	Many	Many	ADJ	JJ	Degree=Pos	1	amod	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
@@ -178,31 +184,39 @@
 11	drugs	drug	NOUN	NNS	Number=Plur	8	obl	_	_
 12	.	.	PUNCT	.	_	7	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	When	when	SCONJ	WRB	PronType=Int	9	mark	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-8	first	first	ADV	RB	_	9	advmod	_	_
-9	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-10	getting	get	VERB	VBG	VerbForm=Ger	9	ccomp	_	_
-11	involved	involve	VERB	VBN	Tense=Past|VerbForm=Part	10	xcomp	_	_
-12	in	in	ADP	IN	_	13	case	_	_
-13	Scientology	Scientology	PROPN	NNP	Number=Sing	11	obl	_	_
-14	,	,	PUNCT	,	_	16	punct	_	_
-15	what	what	PRON	WP	PronType=Int	16	nsubj	_	_
-16	attracted	attract	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	ccomp	_	_
-17	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	16	obj	_	_
-18	to	to	ADP	TO	_	19	case	_	_
-19	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	obl	_	_
-20	?	?	PUNCT	.	_	9	punct	_	_
+1	When	when	SCONJ	WRB	PronType=Int	4	mark	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+3	first	first	ADV	RB	_	4	advmod	_	_
+4	started	start	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	advcl	_	_
+5	getting	get	VERB	VBG	VerbForm=Ger	4	xcomp	_	_
+6	involved	involve	VERB	VBN	Tense=Past|VerbForm=Part	5	xcomp	_	_
+7	in	in	ADP	IN	_	8	case	_	_
+8	Scientology	Scientology	PROPN	NNP	Number=Sing	6	obl	_	_
+9	,	,	PUNCT	,	_	4	punct	_	_
+10	what	what	PRON	WP	PronType=Int	11	nsubj	_	_
+11	attracted	attract	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+12	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	11	obj	_	_
+13	to	to	ADP	TO	_	14	case	_	_
+14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obl	_	_
+15	?	?	PUNCT	.	_	11	punct	_	_
 
 # s_type = frag
 1	NM	NM	NOUN	NN	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	That	that	SCONJ	IN	_	4	mark	_	_
@@ -251,24 +265,30 @@
 18	Thomas	Thomas	PROPN	NNP	Number=Sing	17	flat	_	_
 19	.	.	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	acl:relcl	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	What	What	PRON	WP	PronType=Int	11	obj	_	_
-7	positive	positive	ADJ	JJ	Degree=Pos	8	amod	_	_
-8	aspects	aspect	NOUN	NNS	Number=Plur	11	nsubj	_	_
-9	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	11	aux	_	_
-10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	_
-11	gain	gain	VERB	VB	VerbForm=Inf	0	root	_	_
-12	from	from	ADP	IN	_	14	case	_	_
-13	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
-14	experiences	experience	NOUN	NNS	Number=Plur	11	obl	_	_
-15	in	in	ADP	IN	_	16	case	_	_
-16	Scientology	Scientology	PROPN	NNP	Number=Sing	14	nmod	_	_
-17	?	?	PUNCT	.	_	11	punct	_	_
+1	What	What	DET	WP	PronType=Int	3	det	_	_
+2	positive	positive	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	aspects	aspect	NOUN	NNS	Number=Plur	6	obj	_	_
+4	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	6	aux	_	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
+6	gain	gain	VERB	VB	VerbForm=Inf	0	root	_	_
+7	from	from	ADP	IN	_	9	case	_	_
+8	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
+9	experiences	experience	NOUN	NNS	Number=Plur	6	obl	_	_
+10	in	in	ADP	IN	_	11	case	_	_
+11	Scientology	Scientology	PROPN	NNP	Number=Sing	9	nmod	_	_
+12	?	?	PUNCT	.	_	6	punct	_	_
 
 # s_type = wh
 1	What	What	PRON	WP	PronType=Int	3	obj	_	_
@@ -287,7 +307,9 @@
 
 # s_type = frag
 1	NM	NM	NOUN	NN	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -505,91 +527,99 @@
 19	country	country	NOUN	NN	Number=Sing	16	nmod	_	_
 20	.	.	PUNCT	.	_	16	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	If	if	SCONJ	IN	_	8	mark	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	desired	desire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-9	something	something	NOUN	NN	Number=Sing	8	obj	_	_
-10	that	that	SCONJ	IN	_	12	mark	_	_
-11	Scientology	Scientology	PROPN	NNP	Number=Sing	12	nsubj	_	_
-12	offered	offer	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	ccomp	_	_
-13	-	-	PUNCT	:	_	17	punct	_	_
-14	and	and	CCONJ	CC	_	17	cc	_	_
-15	felt	feel	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	aux	_	_
-16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	17	nsubj	_	_
-17	gain	gain	VERB	VB	VerbForm=Inf	8	conj	_	_
-18	positively	positively	ADV	RB	_	17	advmod	_	_
-19	from	from	ADP	IN	_	20	case	_	_
-20	some	some	PRON	DT	_	17	obl	_	_
-21	of	of	ADP	IN	_	23	case	_	_
-22	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	_	_
-23	experiences	experience	NOUN	NNS	Number=Plur	20	nmod	_	_
-24	while	while	SCONJ	IN	_	27	mark	_	_
-25	inside	inside	ADP	IN	_	27	case	_	_
-26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	_	_
-27	organization	organization	NOUN	NN	Number=Sing	31	advcl	_	_
-28	-	-	PUNCT	:	_	31	punct	_	_
-29	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	31	aux	_	_
-30	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	31	nsubj	_	_
-31	sought	sought	VERB	VBN	Tense=Past|VerbForm=Part	17	parataxis	_	_
-32	out	out	ADP	RP	_	31	compound:prt	_	_
-33	and	and	CCONJ	CC	_	34	cc	_	_
-34	found	find	VERB	VBN	Tense=Past|VerbForm=Part	31	conj	_	_
-35	such	such	ADJ	JJ	Degree=Pos	36	amod	_	_
-36	values	value	NOUN	NNS	Number=Plur	34	obj	_	_
-37	elsewhere	elsewhere	ADV	RB	_	34	advmod	_	_
-38	,	,	PUNCT	,	_	40	punct	_	_
-39	for	for	ADP	IN	_	40	case	_	_
-40	example	example	NOUN	NN	Number=Sing	31	obl	_	_
-41	,	,	PUNCT	,	_	42	punct	_	_
-42	spirituality	spirituality	NOUN	NN	Number=Sing	40	conj	_	_
-43	or	or	CCONJ	CC	_	45	cc	_	_
-44	another	another	DET	DT	_	45	det	_	_
-45	form	form	NOUN	NN	Number=Sing	40	conj	_	_
-46	of	of	ADP	IN	_	50	case	_	_
-47	a	a	DET	DT	Definite=Ind|PronType=Art	50	det	_	_
-48	religious	religious	ADJ	JJ	Degree=Pos	50	amod	_	_
-49	belief	belief	NOUN	NN	Number=Sing	50	compound	_	_
-50	system	system	NOUN	NN	Number=Sing	45	nmod	_	_
-51	?	?	PUNCT	.	_	31	punct	_	_
+1	If	if	SCONJ	IN	_	3	mark	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
+3	desired	desire	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	26	advcl	_	_
+4	something	something	NOUN	NN	Number=Sing	3	obj	_	_
+5	that	that	SCONJ	IN	_	7	mark	_	_
+6	Scientology	Scientology	PROPN	NNP	Number=Sing	7	nsubj	_	_
+7	offered	offer	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	ccomp	_	_
+8	-	-	PUNCT	:	_	10	punct	_	_
+9	and	and	CCONJ	CC	_	10	cc	_	_
+10	felt	feel	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	_	_
+11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	_	_
+12	gain	gain	VERB	VB	VerbForm=Inf	10	ccomp	_	_
+13	positively	positively	ADV	RB	_	12	advmod	_	_
+14	from	from	ADP	IN	_	15	case	_	_
+15	some	some	PRON	DT	_	12	obl	_	_
+16	of	of	ADP	IN	_	18	case	_	_
+17	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	18	nmod:poss	_	_
+18	experiences	experience	NOUN	NNS	Number=Plur	15	nmod	_	_
+19	while	while	SCONJ	IN	_	22	mark	_	_
+20	inside	inside	ADP	IN	_	22	case	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
+22	organization	organization	NOUN	NN	Number=Sing	26	advcl	_	_
+23	-	-	PUNCT	:	_	26	punct	_	_
+24	have	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	26	aux	_	_
+25	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	26	nsubj	_	_
+26	sought	sought	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+27	out	out	ADP	RP	_	26	compound:prt	_	_
+28	and	and	CCONJ	CC	_	29	cc	_	_
+29	found	find	VERB	VBN	Tense=Past|VerbForm=Part	26	conj	_	_
+30	such	such	ADJ	JJ	Degree=Pos	31	amod	_	_
+31	values	value	NOUN	NNS	Number=Plur	29	obj	_	_
+32	elsewhere	elsewhere	ADV	RB	_	29	advmod	_	_
+33	,	,	PUNCT	,	_	35	punct	_	_
+34	for	for	ADP	IN	_	35	case	_	_
+35	example	example	NOUN	NN	Number=Sing	26	obl	_	_
+36	,	,	PUNCT	,	_	37	punct	_	_
+37	spirituality	spirituality	NOUN	NN	Number=Sing	35	conj	_	_
+38	or	or	CCONJ	CC	_	40	cc	_	_
+39	another	another	DET	DT	_	40	det	_	_
+40	form	form	NOUN	NN	Number=Sing	35	conj	_	_
+41	of	of	ADP	IN	_	45	case	_	_
+42	a	a	DET	DT	Definite=Ind|PronType=Art	45	det	_	_
+43	religious	religious	ADJ	JJ	Degree=Pos	45	amod	_	_
+44	belief	belief	NOUN	NN	Number=Sing	45	compound	_	_
+45	system	system	NOUN	NN	Number=Sing	40	nmod	_	_
+46	?	?	PUNCT	.	_	26	punct	_	_
+
+# s_type = frag
+1	NM	NM	NOUN	NN	Number=Sing	0	root	_	_
 
 # s_type = decl
-1	NM	NM	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	5	punct	_	_
-3	After	after	SCONJ	IN	_	5	mark	_	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
-5	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	advcl	_	_
-6	Scientology	Scientology	PROPN	NNP	Number=Sing	5	obj	_	_
-7	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
-8	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	aux	_	_
-9	make	make	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
-11	list	list	NOUN	NN	Number=Sing	9	obj	_	_
-12	of	of	ADP	IN	_	15	case	_	_
-13	all	all	PRON	PDT	_	15	det:predet	_	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-15	courses	course	NOUN	NNS	Number=Plur	11	nmod	_	_
-16	,	,	PUNCT	,	_	17	punct	_	_
-17	things	thing	NOUN	NNS	Number=Plur	15	appos	_	_
-18	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	_	_
-19	learned	learn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	acl:relcl	_	_
-20	,	,	PUNCT	,	_	22	punct	_	_
-21	personal	personal	ADJ	JJ	Degree=Pos	22	amod	_	_
-22	abilities	ability	NOUN	NNS	Number=Plur	17	appos	_	_
-23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	24	nsubj	_	_
-24	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	acl:relcl	_	_
-25	and	and	CCONJ	CC	_	28	cc	_	_
-26	what	what	PRON	WP	PronType=Int	28	obj	_	_
-27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	28	nsubj	_	_
-28	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	24	conj	_	_
-29	from	from	ADP	IN	_	30	case	_	_
-30	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	28	obl	_	_
-31	.	.	PUNCT	.	_	1	punct	_	_
+1	:	:	PUNCT	:	_	8	punct	_	_
+2	After	after	SCONJ	IN	_	4	mark	_	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+4	left	leave	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	advcl	_	_
+5	Scientology	Scientology	PROPN	NNP	Number=Sing	4	obj	_	_
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	8	nsubj	_	_
+7	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	aux	_	_
+8	make	make	VERB	VB	VerbForm=Inf	0	root	_	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
+10	list	list	NOUN	NN	Number=Sing	8	obj	_	_
+11	of	of	ADP	IN	_	14	case	_	_
+12	all	all	PRON	PDT	_	14	det:predet	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+14	courses	course	NOUN	NNS	Number=Plur	10	nmod	_	_
+15	,	,	PUNCT	,	_	16	punct	_	_
+16	things	thing	NOUN	NNS	Number=Plur	14	appos	_	_
+17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	_	_
+18	learned	learn	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	16	acl:relcl	_	_
+19	,	,	PUNCT	,	_	21	punct	_	_
+20	personal	personal	ADJ	JJ	Degree=Pos	21	amod	_	_
+21	abilities	ability	NOUN	NNS	Number=Plur	16	appos	_	_
+22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	_	_
+23	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	21	acl:relcl	_	_
+24	and	and	CCONJ	CC	_	27	cc	_	_
+25	what	what	PRON	WP	PronType=Int	27	obj	_	_
+26	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	27	nsubj	_	_
+27	liked	like	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	23	conj	_	_
+28	from	from	ADP	IN	_	29	case	_	_
+29	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	27	obl	_	_
+30	.	.	PUNCT	.	_	8	punct	_	_
 
 # s_type = decl
 1	Over	over	ADP	IN	_	3	case	_	_

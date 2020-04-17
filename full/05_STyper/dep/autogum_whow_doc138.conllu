@@ -48,16 +48,18 @@
 22	showpiece	showpiece	NOUN	NN	Number=Sing	12	obl	_	_
 23	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Pick	Pick	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
-4	LED	LED	NOUN	NN	Number=Sing	5	compound	_	_
-5	lights	light	NOUN	NNS	Number=Plur	2	obj	_	_
-6	and	and	CCONJ	CC	_	7	cc	_	_
-7	heat	heat	VERB	VB	VerbForm=Inf	2	conj	_	_
-8	shrink	shrink	NOUN	NN	Number=Sing	7	obj	_	_
-9	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Pick	Pick	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
+3	LED	LED	NOUN	NN	Number=Sing	4	compound	_	_
+4	lights	light	NOUN	NNS	Number=Plur	1	obj	_	_
+5	and	and	CCONJ	CC	_	6	cc	_	_
+6	heat	heat	VERB	VB	VerbForm=Inf	1	conj	_	_
+7	shrink	shrink	VERB	VB	VerbForm=Inf	6	xcomp	_	_
+8	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
@@ -304,33 +306,37 @@
 8	stripped	strip	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	_	_
 9	.	.	PUNCT	.	_	1	punct	_	_
 
+# s_type = frag
+1	Solder	Solder	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	these	these	DET	DT	Number=Plur|PronType=Dem	2	det	_	_
+2	components	component	NOUN	NNS	Number=Plur	0	root	_	_
+3	as	as	SCONJ	IN	_	4	mark	_	_
+4	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	acl	_	_
+5	:	:	PUNCT	:	_	2	punct	_	_
+
 # s_type = imp
 1	Solder	Solder	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	these	these	DET	DT	Number=Plur|PronType=Dem	3	det	_	_
-3	components	component	NOUN	NNS	Number=Plur	1	obj	_	_
-4	as	as	SCONJ	IN	_	5	mark	_	_
-5	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	advcl	_	_
-6	:	:	PUNCT	:	_	7	punct	_	_
-7	Solder	Solder	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-9	negative	negative	ADJ	JJ	Degree=Pos	13	amod	_	_
-10	(	(	PUNCT	-LRB-	_	11	punct	_	_
-11	black	black	ADJ	JJ	Degree=Pos	9	appos	_	_
-12	)	)	PUNCT	-RRB-	_	11	punct	_	_
-13	wire	bire	NOUN	NN	Number=Sing	7	obj	_	_
-14	of	of	ADP	IN	_	17	case	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
-16	battery	battery	NOUN	NN	Number=Sing	17	compound	_	_
-17	pack	pack	NOUN	NN	Number=Sing	13	nmod	_	_
-18	to	to	ADP	TO	_	21	case	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
-20	short	short	ADJ	JJ	Degree=Pos	21	amod	_	_
-21	terminal	terminal	NOUN	NN	Number=Sing	7	obl	_	_
-22	of	of	ADP	IN	_	25	case	_	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	_	_
-24	LED	LED	PROPN	NNP	Number=Sing	25	amod	_	_
-25	lights	light	NOUN	NNS	Number=Plur	21	nmod	_	_
-26	.	.	PUNCT	.	_	1	punct	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+3	negative	negative	ADJ	JJ	Degree=Pos	7	amod	_	_
+4	(	(	PUNCT	-LRB-	_	5	punct	_	_
+5	black	black	ADJ	JJ	Degree=Pos	3	dep	_	_
+6	)	)	PUNCT	-RRB-	_	5	punct	_	_
+7	wire	bire	NOUN	NN	Number=Sing	1	obj	_	_
+8	of	of	ADP	IN	_	11	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+10	battery	battery	NOUN	NN	Number=Sing	11	compound	_	_
+11	pack	pack	NOUN	NN	Number=Sing	7	nmod	_	_
+12	to	to	ADP	TO	_	15	case	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
+14	short	short	ADJ	JJ	Degree=Pos	15	amod	_	_
+15	terminal	terminal	NOUN	NN	Number=Sing	1	obl	_	_
+16	of	of	ADP	IN	_	19	case	_	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
+18	LED	LED	PROPN	NNP	Number=Sing	19	amod	_	_
+19	lights	light	NOUN	NNS	Number=Plur	15	nmod	_	_
+20	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Take	take	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -644,29 +650,43 @@
 2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 3	'll	will	AUX	MD	VerbForm=Fin	4	aux	_	_
 4	Need	need	VERB	VB	VerbForm=Inf	1	acl:relcl	_	_
-5	2	2	NUM	CD	NumType=Card	7	nummod	_	_
-6	LED	LED	NOUN	NN	Number=Sing	7	compound	_	_
-7	crystals	crystal	NOUN	NNS	Number=Plur	4	obj	_	_
-8	4	4	NUM	CD	NumType=Card	10	nummod	_	_
-9	Jumbo	Jumbo	NOUN	NN	Number=Sing	10	compound	_	_
-10	paperclips	paperclip	NOUN	NNS	Number=Plur	7	conj	_	_
-11	Soldering	solder	VERB	VBG	VerbForm=Ger	10	acl	_	_
-12	iron	iron	NOUN	NN	Number=Sing	10	compound	_	_
-13	2	2	NUM	CD	NumType=Card	15	nummod	_	_
-14	AA	AA	PROPN	NNP	Number=Sing	19	compound	_	_
-15	batteries	battery	NOUN	NNS	Number=Plur	19	compound	_	_
-16	Battery	Battery	NOUN	NN	Number=Sing	19	compound	_	_
-17	holder	holder	NOUN	NN	Number=Sing	19	compound	_	_
-18	Pager	Pager	NOUN	NN	Number=Sing	19	compound	_	_
-19	motor	motor	NOUN	NN	Number=Sing	7	conj	_	_
-20	(	(	PUNCT	-LRB-	_	23	punct	_	_
-21	small	small	ADJ	JJ	Degree=Pos	23	amod	_	_
-22	vibrating	vibrate	VERB	VBG	VerbForm=Ger	23	amod	_	_
-23	motor	motor	NOUN	NN	Number=Sing	19	appos	_	_
-24	found	find	VERB	VBN	Tense=Past|VerbForm=Part	23	acl	_	_
-25	in	in	ADP	IN	_	26	case	_	_
-26	cell-phones	cell-phone	NOUN	NNS	Number=Plur	24	obl	_	_
-27	)	)	PUNCT	-RRB-	_	23	punct	_	_
-28	100Ω	@card@	NUM	CD	NumType=Card	29	nummod	_	_
-29	resistor	resistor	NOUN	NN	Number=Sing	24	obl	_	_
+
+# s_type = frag
+1	2	2	NUM	CD	NumType=Card	2	nummod	_	_
+2	LED	LED	NOUN	NN	Number=Sing	3	compound	_	_
+3	crystals	crystal	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	4	4	NUM	CD	NumType=Card	2	nummod	_	_
+2	Jumbo	Jumbo	NOUN	NN	Number=Sing	3	compound	_	_
+3	paperclips	paperclip	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Soldering	solder	NOUN	NN	Number=Sing	2	compound	_	_
+2	iron	iron	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	2	2	NUM	CD	NumType=Card	3	nummod	_	_
+2	AA	AA	NOUN	NN	Number=Sing	3	compound	_	_
+3	batteries	battery	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Battery	Battery	NOUN	NN	Number=Sing	2	compound	_	_
+2	holder	holder	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	Pager	Pager	NOUN	NN	Number=Sing	2	compound	_	_
+2	motor	motor	NOUN	NN	Number=Sing	0	root	_	_
+3	(	(	PUNCT	-LRB-	_	6	punct	_	_
+4	small	small	ADJ	JJ	Degree=Pos	6	amod	_	_
+5	vibrating	vibrate	VERB	VBG	VerbForm=Ger	6	amod	_	_
+6	motor	motor	NOUN	NN	Number=Sing	2	appos	_	_
+7	found	find	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	_	_
+8	in	in	ADP	IN	_	9	case	_	_
+9	cell-phones	cell-phone	NOUN	NNS	Number=Plur	7	obl	_	_
+10	)	)	PUNCT	-RRB-	_	6	punct	_	_
+
+# s_type = frag
+1	100Ω	@card@	NUM	CD	NumType=Card	2	nummod	_	_
+2	resistor	resistor	NOUN	NN	Number=Sing	0	root	_	_
 

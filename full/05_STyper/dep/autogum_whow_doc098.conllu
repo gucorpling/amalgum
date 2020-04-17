@@ -38,27 +38,29 @@
 32	parts	part	NOUN	NNS	Number=Plur	28	nmod	_	_
 33	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Access	access	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
-4	computer	computer	NOUN	NN	Number=Sing	8	nmod:poss	_	_
-5	's	's	PART	POS	_	4	case	_	_
-6	BIOS	BIOS	PROPN	NNP	Number=Sing	8	compound	_	_
-7	settings	setting	NOUN	NNS	Number=Plur	8	compound	_	_
-8	page	page	NOUN	NN	Number=Sing	2	obj	_	_
-9	(	(	PUNCT	-LRB-	_	11	punct	_	_
-10	BIOS	BIOS	PROPN	NNP	Number=Sing	11	nsubj	_	_
-11	stands	stand	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	parataxis	_	_
-12	for	for	ADP	IN	_	17	case	_	_
-13	"	"	PUNCT	``	_	17	punct	_	_
-14	Basic	Basic	PROPN	NNP	Number=Sing	17	compound	_	_
-15	Input	input	PROPN	NNP	Number=Sing	17	compound	_	_
-16	Output	output	PROPN	NNP	Number=Sing	17	compound	_	_
-17	System	System	PROPN	NNP	Number=Sing	11	obl	_	_
-18	"	"	PUNCT	''	_	17	punct	_	_
-19	)	)	PUNCT	-RRB-	_	11	punct	_	_
-20	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = multiple
+1	Access	access	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	computer	computer	NOUN	NN	Number=Sing	7	nmod:poss	_	_
+4	's	's	PART	POS	_	3	case	_	_
+5	BIOS	BIOS	PROPN	NNP	Number=Sing	7	compound	_	_
+6	settings	setting	NOUN	NNS	Number=Plur	7	compound	_	_
+7	page	page	NOUN	NN	Number=Sing	1	obj	_	_
+8	(	(	PUNCT	-LRB-	_	10	punct	_	_
+9	BIOS	BIOS	PROPN	NNP	Number=Sing	10	nsubj	_	_
+10	stands	stand	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
+11	for	for	ADP	IN	_	16	case	_	_
+12	"	"	PUNCT	``	_	16	punct	_	_
+13	Basic	Basic	PROPN	NNP	Number=Sing	14	compound	_	_
+14	Input	input	PROPN	NNP	Number=Sing	16	compound	_	_
+15	Output	output	PROPN	NNP	Number=Sing	16	compound	_	_
+16	System	System	PROPN	NNP	Number=Sing	10	obl	_	_
+17	"	"	PUNCT	''	_	16	punct	_	_
+18	)	)	PUNCT	-RRB-	_	10	punct	_	_
+19	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Depending	depend	SCONJ	VBG	VerbForm=Ger	3	mark	_	_
@@ -120,7 +122,7 @@
 36	screen	screen	NOUN	NN	Number=Sing	33	nmod	_	_
 37	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
+# s_type = other
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
 2	:	:	PUNCT	:	_	3	punct	_	_
 3	Underclock	Underclock	VERB	VB	VerbForm=Inf	1	dep	_	_
@@ -128,15 +130,17 @@
 5	PC	PC	PROPN	NNP	Number=Sing	6	compound	_	_
 6	Step	step	NOUN	NN	Number=Sing	3	obj	_	_
 7	1	1	NUM	CD	NumType=Card	6	nummod	_	_
-8	.	.	PUNCT	.	_	3	punct	_	_
-9	jpg	jpg	NOUN	NN	Number=Sing	10	nsubj	_	_
-10	Locate	Locate	VERB	VB	VerbForm=Inf	1	parataxis	_	_
-11	"	"	PUNCT	``	_	13	punct	_	_
-12	Frequency/Voltage	Frequency/Voltage	PROPN	NNP	Number=Sing	13	compound	_	_
-13	Control	Control	NOUN	NN	Number=Sing	15	compound	_	_
-14	"	"	PUNCT	''	_	13	punct	_	_
-15	settings	setting	NOUN	NNS	Number=Plur	10	obj	_	_
-16	.	.	PUNCT	.	_	1	punct	_	_
+8	.	.	PUNCT	.	_	1	punct	_	_
+9	jpg	jpg	NOUN	NN	Number=Sing	3	dep	_	_
+
+# s_type = imp
+1	Locate	Locate	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	"	"	PUNCT	``	_	4	punct	_	_
+3	Frequency/Voltage	Frequency/Voltage	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Control	Control	NOUN	NN	Number=Sing	6	compound	_	_
+5	"	"	PUNCT	''	_	4	punct	_	_
+6	settings	setting	NOUN	NNS	Number=Plur	1	obj	_	_
+7	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	BIOS	BIOS	NOUN	NN	Number=Sing	2	compound	_	_
@@ -197,42 +201,44 @@
 # s_type = other
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
 2	:	:	PUNCT	:	_	3	punct	_	_
-3	Underclock	Underclock	VERB	VB	VerbForm=Inf	1	parataxis	_	_
+3	Underclock	Underclock	VERB	VB	VerbForm=Inf	1	dep	_	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
 5	PC	PC	PROPN	NNP	Number=Sing	6	compound	_	_
 6	Step	step	NOUN	NN	Number=Sing	3	obj	_	_
 7	2	2	NUM	CD	NumType=Card	8	nummod	_	_
 8	Version	Version	NOUN	NN	Number=Sing	3	obj	_	_
 9	2	2	NUM	CD	NumType=Card	8	nummod	_	_
-10	.	.	PUNCT	.	_	12	punct	_	_
-11	jpg	jpg	NOUN	NN	Number=Sing	12	compound	_	_
-12	Scroll	Scroll	NOUN	NN	Number=Sing	1	parataxis	_	_
-13	down	down	ADP	RP	_	12	compound:prt	_	_
-14	to	to	ADP	TO	_	19	case	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
-16	"	"	PUNCT	``	_	17	punct	_	_
-17	CPU	CPU	PROPN	NNP	Number=Sing	19	compound	_	_
-18	Frequency/Voltage	Frequency/Voltage	PROPN	NNP	Number=Sing	19	compound	_	_
-19	Control	Control	PROPN	NNP	Number=Sing	12	nmod	_	_
-20	.	.	PUNCT	.	_	24	punct	_	_
-21	"	"	PUNCT	``	_	24	punct	_	_
-22	Press	Press	PROPN	NNP	Number=Sing	24	nsubj	_	_
-23	"	"	PUNCT	``	_	24	punct	_	_
-24	Enter	enter	VERB	VB	VerbForm=Inf	19	parataxis	_	_
-25	"	"	PUNCT	''	_	24	punct	_	_
-26	or	or	CCONJ	CC	_	27	cc	_	_
-27	use	use	VERB	VB	VerbForm=Inf	24	conj	_	_
-28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	_	_
-29	left	left	NOUN	NN	Number=Sing	27	obj	_	_
-30	and	and	CCONJ	CC	_	33	cc	_	_
-31	right	right	ADJ	JJ	Degree=Pos	33	amod	_	_
-32	arrow	arrow	NOUN	NN	Number=Sing	33	compound	_	_
-33	keys	key	NOUN	NNS	Number=Plur	29	conj	_	_
-34	to	to	PART	TO	_	35	mark	_	_
-35	select	select	VERB	VB	VerbForm=Inf	27	advcl	_	_
-36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	_	_
-37	value	value	NOUN	NN	Number=Sing	35	obj	_	_
-38	.	.	PUNCT	.	_	1	punct	_	_
+10	.	.	PUNCT	.	_	3	punct	_	_
+11	jpg	jpg	NOUN	NN	Number=Sing	3	dep	_	_
+
+# s_type = imp
+1	Scroll	Scroll	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	down	down	ADP	RP	_	1	compound:prt	_	_
+3	to	to	ADP	TO	_	8	case	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+5	"	"	PUNCT	``	_	6	punct	_	_
+6	CPU	CPU	PROPN	NNP	Number=Sing	8	compound	_	_
+7	Frequency/Voltage	Frequency/Voltage	PROPN	NNP	Number=Sing	6	flat	_	_
+8	Control	Control	PROPN	NNP	Number=Sing	1	obl	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
+10	"	"	PUNCT	``	_	13	punct	_	_
+11	Press	Press	PROPN	NNP	Number=Sing	1	parataxis	_	_
+12	"	"	PUNCT	``	_	13	punct	_	_
+13	Enter	enter	VERB	VB	VerbForm=Inf	1	parataxis	_	_
+14	"	"	PUNCT	''	_	13	punct	_	_
+15	or	or	CCONJ	CC	_	16	cc	_	_
+16	use	use	VERB	VB	VerbForm=Inf	1	conj	_	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
+18	left	left	NOUN	NN	Number=Sing	16	obj	_	_
+19	and	and	CCONJ	CC	_	22	cc	_	_
+20	right	right	ADJ	JJ	Degree=Pos	22	amod	_	_
+21	arrow	arrow	NOUN	NN	Number=Sing	22	compound	_	_
+22	keys	key	NOUN	NNS	Number=Plur	18	conj	_	_
+23	to	to	PART	TO	_	24	mark	_	_
+24	select	select	VERB	VB	VerbForm=Inf	16	advcl	_	_
+25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
+26	value	value	NOUN	NN	Number=Sing	24	obj	_	_
+27	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Use	use	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -254,7 +260,7 @@
 17	lower	low	ADJ	JJR	Degree=Cmp	14	xcomp	_	_
 18	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
+# s_type = other
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
 2	:	:	PUNCT	:	_	3	punct	_	_
 3	Underclock	Underclock	VERB	VB	VerbForm=Inf	1	dep	_	_
@@ -265,13 +271,15 @@
 8	Version	Version	NOUN	NN	Number=Sing	3	obj	_	_
 9	2	2	NUM	CD	NumType=Card	8	nummod	_	_
 10	.	.	PUNCT	.	_	3	punct	_	_
-11	jpg	jpg	NOUN	NN	Number=Sing	3	parataxis	_	_
-12	Lower	Lower	ADJ	JJ	Degree=Cmp	1	parataxis	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-14	CPU	CPU	PROPN	NNP	Number=Sing	16	compound	_	_
-15	clock	clock	NOUN	NN	Number=Sing	16	compound	_	_
-16	speed	speed	NOUN	NN	Number=Sing	12	nsubj	_	_
-17	.	.	PUNCT	.	_	1	punct	_	_
+11	jpg	jpg	NOUN	NN	Number=Sing	3	dep	_	_
+
+# s_type = frag
+1	Lower	Lower	ADV	RB	Degree=Cmp	5	advmod	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+3	CPU	CPU	PROPN	NNP	Number=Sing	5	compound	_	_
+4	clock	clock	NOUN	NN	Number=Sing	5	compound	_	_
+5	speed	speed	NOUN	NN	Number=Sing	0	root	_	_
+6	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	Lower	Lower	ADV	RB	Degree=Cmp	0	root	_	_
@@ -298,7 +306,7 @@
 10	speed	speed	NOUN	NN	Number=Sing	5	obl	_	_
 11	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = frag
+# s_type = other
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
 2	:	:	PUNCT	:	_	3	punct	_	_
 3	Underclock	Underclock	VERB	VB	VerbForm=Inf	1	dep	_	_
@@ -310,14 +318,16 @@
 9	2	2	NUM	CD	NumType=Card	8	nummod	_	_
 10	.	.	PUNCT	.	_	3	punct	_	_
 11	jpg	jpg	NOUN	NN	Number=Sing	3	dep	_	_
-12	Lower	Lower	ADV	RB	_	15	advmod	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-14	core	core	ADJ	JJ	Degree=Pos	15	amod	_	_
-15	voltage	voltage	NOUN	NN	Number=Sing	1	parataxis	_	_
-16	(	(	PUNCT	-LRB-	_	17	punct	_	_
-17	vCore	vCore	NOUN	NN	Number=Sing	15	appos	_	_
-18	)	)	PUNCT	-RRB-	_	17	punct	_	_
-19	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Lower	Lower	ADV	RBR	Degree=Cmp	4	advmod	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	core	core	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	voltage	voltage	NOUN	NN	Number=Sing	0	root	_	_
+5	(	(	PUNCT	-LRB-	_	6	punct	_	_
+6	vCore	vCore	NOUN	NN	Number=Sing	4	appos	_	_
+7	)	)	PUNCT	-RRB-	_	6	punct	_	_
+8	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
 1	Lower	Lower	ADV	RB	Degree=Cmp	0	root	_	_
@@ -440,7 +450,7 @@
 17	Manufacturers	Manufacturers	PROPN	NNPS	Number=Plur	15	obl	_	_
 18	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = frag
+# s_type = other
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
 2	:	:	PUNCT	:	_	3	punct	_	_
 3	Underclock	Underclock	VERB	VB	VerbForm=Inf	1	dep	_	_
@@ -448,34 +458,38 @@
 5	PC	PC	PROPN	NNP	Number=Sing	6	compound	_	_
 6	Step	step	NOUN	NN	Number=Sing	3	obj	_	_
 7	7	7	NUM	CD	NumType=Card	8	nummod	_	_
-8	Version	Version	NOUN	NN	Number=Sing	6	appos	_	_
+8	Version	Version	NOUN	NN	Number=Sing	3	obj	_	_
 9	2	2	NUM	CD	NumType=Card	8	nummod	_	_
 10	.	.	PUNCT	.	_	3	punct	_	_
-11	jpg	jpg	NOUN	NN	Number=Sing	3	conj	_	_
-12	"	"	PUNCT	``	_	13	punct	_	_
-13	alt	alt	NOUN	NN	Number=Sing	11	dep	_	_
-14	"	"	PUNCT	''	_	13	punct	_	_
+11	jpg	jpg	NOUN	NN	Number=Sing	3	dep	_	_
 
-# s_type = decl
-1	Tips	tip	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Locate	Locate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	or	or	CCONJ	CC	_	4	cc	_	_
-4	download	download	VERB	VB	VerbForm=Inf	2	conj	_	_
-5	and	and	CCONJ	CC	_	6	cc	_	_
-6	print	print	VERB	VB	VerbForm=Inf	2	conj	_	_
-7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
-8	copy	copy	NOUN	NN	Number=Sing	6	obj	_	_
-9	of	of	ADP	IN	_	12	case	_	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-11	system	system	NOUN	NN	Number=Sing	12	compound	_	_
-12	board	board	NOUN	NN	Number=Sing	8	nmod	_	_
-13	or	or	CCONJ	CC	_	18	cc	_	_
-14	computer	computer	NOUN	NN	Number=Sing	15	compound	_	_
-15	manual	manual	NOUN	NN	Number=Sing	18	nmod:poss	_	_
-16	's	's	PART	POS	_	15	case	_	_
-17	BIOS	BIOS	PROPN	NNP	Number=Sing	18	compound	_	_
-18	section	section	NOUN	NN	Number=Sing	12	conj	_	_
-19	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = intj
+1	"	"	PUNCT	``	_	2	punct	_	_
+2	alt	alt	INTJ	UH	_	0	root	_	_
+3	"	"	PUNCT	''	_	2	punct	_	_
+
+# s_type = frag
+1	Tips	tip	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Locate	Locate	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	or	or	CCONJ	CC	_	3	cc	_	_
+3	download	download	VERB	VB	VerbForm=Inf	1	conj	_	_
+4	and	and	CCONJ	CC	_	5	cc	_	_
+5	print	print	VERB	VB	VerbForm=Inf	1	conj	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+7	copy	copy	NOUN	NN	Number=Sing	5	obj	_	_
+8	of	of	ADP	IN	_	11	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+10	system	system	NOUN	NN	Number=Sing	11	compound	_	_
+11	board	board	NOUN	NN	Number=Sing	7	nmod	_	_
+12	or	or	CCONJ	CC	_	17	cc	_	_
+13	computer	computer	NOUN	NN	Number=Sing	14	compound	_	_
+14	manual	manual	NOUN	NN	Number=Sing	17	nmod:poss	_	_
+15	's	's	PART	POS	_	14	case	_	_
+16	BIOS	BIOS	PROPN	NNP	Number=Sing	17	compound	_	_
+17	section	section	NOUN	NN	Number=Sing	11	conj	_	_
+18	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_

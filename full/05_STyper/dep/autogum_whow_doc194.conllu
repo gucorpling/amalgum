@@ -79,14 +79,16 @@
 3	Right	right	ADJ	JJ	Degree=Pos	4	amod	_	_
 4	Time	Time	NOUN	NN	Number=Sing	1	obj	_	_
 5	to	to	PART	TO	_	6	mark	_	_
-6	Talk	talk	VERB	VB	VerbForm=Inf	4	acl	_	_
-7	Find	find	VERB	VB	VerbForm=Inf	6	xcomp	_	_
-8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
-9	good	good	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	place	place	NOUN	NN	Number=Sing	7	obj	_	_
-11	to	to	PART	TO	_	12	mark	_	_
-12	talk	talk	VERB	VB	VerbForm=Inf	10	acl	_	_
-13	.	.	PUNCT	.	_	7	punct	_	_
+6	Talk	talk	VERB	VB	VerbForm=Inf	4	xcomp	_	_
+
+# s_type = imp
+1	Find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+3	good	good	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	place	place	NOUN	NN	Number=Sing	1	obj	_	_
+5	to	to	PART	TO	_	6	mark	_	_
+6	talk	talk	VERB	VB	VerbForm=Inf	4	xcomp	_	_
+7	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = sub
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
@@ -274,23 +276,25 @@
 28	to	to	PART	TO	_	25	mark	_	_
 29	.	.	PUNCT	.	_	4	punct	_	_
 
-# s_type = decl
+# s_type = ger
 1	Being	Being	AUX	VBG	VerbForm=Ger	2	cop	_	_
 2	Open	Open	ADJ	JJ	Degree=Pos	0	root	_	_
 3	and	and	CCONJ	CC	_	4	cc	_	_
 4	Honest	Honest	ADJ	JJ	Degree=Pos	2	conj	_	_
-5	with	with	ADP	IN	_	8	case	_	_
+5	with	with	ADP	IN	_	7	case	_	_
 6	Your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
-7	Daughter	Daughter	PROPN	NNP	Number=Sing	8	compound	_	_
-8	Talk	talk	PROPN	NNP	Number=Sing	2	obl	_	_
-9	with	with	ADP	IN	_	13	case	_	_
-10	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
-11	daughter	daughter	NOUN	NN	Number=Sing	13	nmod:poss	_	_
-12	’s	's	PART	POS	_	11	case	_	_
-13	interests	interest	NOUN	NNS	Number=Plur	8	nmod	_	_
-14	at	at	ADP	IN	_	15	case	_	_
-15	heart	heart	NOUN	NN	Number=Sing	13	nmod	_	_
-16	.	.	PUNCT	.	_	2	punct	_	_
+7	Daughter	Daughter	NOUN	NN	Number=Sing	2	obl	_	_
+
+# s_type = imp
+1	Talk	talk	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	with	with	ADP	IN	_	6	case	_	_
+3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	_	_
+4	daughter	daughter	NOUN	NN	Number=Sing	6	nmod:poss	_	_
+5	’s	's	PART	POS	_	4	case	_	_
+6	interests	interest	NOUN	NNS	Number=Plur	1	obl	_	_
+7	at	at	ADP	IN	_	8	case	_	_
+8	heart	heart	NOUN	NN	Number=Sing	6	nmod	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Telling	Telling	VERB	VBG	VerbForm=Ger	16	csubj	_	_
@@ -465,18 +469,20 @@
 28	behaves	behave	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	acl:relcl	_	_
 29	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Birds	bird	NOUN	NNS	Number=Plur	5	nsubj	_	_
+# s_type = frag
+1	Birds	bird	NOUN	NNS	Number=Plur	0	root	_	_
 2	and	and	CCONJ	CC	_	4	cc	_	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
-4	Bees	be	PROPN	NNPS	Number=Plur	1	conj	_	_
-5	Avoid	Avoid	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-6	going	go	VERB	VBG	VerbForm=Ger	5	xcomp	_	_
-7	into	into	ADP	IN	_	10	case	_	_
-8	too	too	ADV	RB	_	9	advmod	_	_
-9	much	much	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	detail	detail	NOUN	NN	Number=Sing	6	obl	_	_
-11	.	.	PUNCT	.	_	5	punct	_	_
+4	Bees	be	NOUN	NNS	Number=Plur	1	conj	_	_
+
+# s_type = imp
+1	Avoid	Avoid	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	going	go	VERB	VBG	VerbForm=Ger	1	xcomp	_	_
+3	into	into	ADP	IN	_	6	case	_	_
+4	too	too	ADV	RB	_	5	advmod	_	_
+5	much	much	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	detail	detail	NOUN	NN	Number=Sing	2	obl	_	_
+7	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = sub
 1	If	if	SCONJ	IN	_	5	mark	_	_

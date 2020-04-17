@@ -74,17 +74,19 @@
 52	.	.	PUNCT	.	_	21	punct	_	_
 
 # s_type = frag
-1	Protoceratops	Protoceratops	ADJ	JJ	Degree=Pos	3	amod	_	_
-2	andrewsi	andrewsi	NOUN	NN	Number=Sing	3	compound	_	_
-3	display	display	NOUN	NN	Number=Sing	0	root	_	_
-4	at	at	ADP	IN	_	7	case	_	_
-5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-6	American	American	PROPN	NNP	Number=Sing	7	amod	_	_
-7	Museum	Museum	PROPN	NNP	Number=Sing	3	nmod	_	_
-8	of	of	ADP	IN	_	10	case	_	_
-9	Natural	Natural	PROPN	NNP	Number=Sing	10	compound	_	_
-10	History	History	PROPN	NNP	Number=Sing	7	nmod	_	_
-11	.	.	PUNCT	.	_	3	punct	_	_
+1	Protoceratops	Protoceratops	ADJ	JJ	Degree=Pos	2	amod	_	_
+2	andrewsi	andrewsi	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = imp
+1	display	display	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	at	at	ADP	IN	_	5	case	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+4	American	American	PROPN	NNP	Number=Sing	5	amod	_	_
+5	Museum	Museum	PROPN	NNP	Number=Sing	1	obl	_	_
+6	of	of	ADP	IN	_	8	case	_	_
+7	Natural	Natural	PROPN	NNP	Number=Sing	8	compound	_	_
+8	History	History	PROPN	NNP	Number=Sing	5	nmod	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_
@@ -95,7 +97,7 @@
 6	Commons	Commons	PROPN	NNP	Number=Sing	3	nmod	_	_
 7	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
+# s_type = sub
 1	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	4	nsubj	_	_
 2	could	could	AUX	MD	VerbForm=Fin	4	aux	_	_
 3	literally	literally	ADV	RB	_	4	advmod	_	_
@@ -103,25 +105,27 @@
 5	[	[	PUNCT	-LSB-	_	8	punct	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
 7	growth	growth	NOUN	NN	Number=Sing	8	compound	_	_
-8	rings	ring	NOUN	NNS	Number=Plur	4	dep	_	_
+8	rings	ring	NOUN	NNS	Number=Plur	4	obj	_	_
 9	]	]	PUNCT	-RSB-	_	8	punct	_	_
 10	to	to	PART	TO	_	11	mark	_	_
 11	see	see	VERB	VB	VerbForm=Inf	4	advcl	_	_
 12	how	how	SCONJ	WRB	PronType=Int	13	mark	_	_
-13	long	long	ADV	RB	Degree=Pos	18	advmod	_	_
+13	long	long	ADJ	JJ	Degree=Pos	18	advmod	_	_
 14	each	each	DET	DT	_	15	det	_	_
 15	dinosaur	dinosaur	NOUN	NN	Number=Sing	18	nsubj	_	_
 16	had	have	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	18	aux	_	_
 17	been	be	AUX	VBN	Tense=Past|VerbForm=Part	18	aux	_	_
 18	developing	develop	VERB	VBG	Tense=Pres|VerbForm=Part	11	ccomp	_	_
 19	.	.	PUNCT	.	_	4	punct	_	_
-20	—	—	PUNCT	:	_	21	punct	_	_
-21	Gregory	Gregory	PROPN	NNP	Number=Sing	4	parataxis	_	_
-22	Erickson	Erickson	PROPN	NNP	Number=Sing	21	flat	_	_
-23	of	of	ADP	IN	_	26	case	_	_
-24	Florida	Florida	PROPN	NNP	Number=Sing	26	compound	_	_
-25	State	State	PROPN	NNP	Number=Sing	26	compound	_	_
-26	University	University	PROPN	NNP	Number=Sing	21	nmod	_	_
+
+# s_type = frag
+1	—	—	PUNCT	:	_	2	punct	_	_
+2	Gregory	Gregory	PROPN	NNP	Number=Sing	0	root	_	_
+3	Erickson	Erickson	PROPN	NNP	Number=Sing	2	flat	_	_
+4	of	of	ADP	IN	_	7	case	_	_
+5	Florida	Florida	PROPN	NNP	Number=Sing	7	compound	_	_
+6	State	State	PROPN	NNP	Number=Sing	7	compound	_	_
+7	University	University	PROPN	NNP	Number=Sing	2	nmod	_	_
 
 # s_type = decl
 1	Bird	Bird	NOUN	NN	Number=Sing	2	compound	_	_
@@ -523,12 +527,14 @@
 1	"	"	PUNCT	``	_	0	root	_	_
 
 # s_type = frag
-1	Hypacrosaurus	hypacrosaurus	ADJ	JJ	Degree=Pos	3	amod	_	_
-2	stebingeri	stebingeri	NOUN	NN	Number=Sing	3	compound	_	_
-3	nest	nest	NOUN	NN	Number=Sing	0	root	_	_
-4	with	with	ADP	IN	_	5	case	_	_
-5	eggs	egg	NOUN	NNS	Number=Plur	3	nmod	_	_
-6	.	.	PUNCT	.	_	3	punct	_	_
+1	Hypacrosaurus	hypacrosaurus	NOUN	NN	Number=Sing	2	compound	_	_
+2	stebingeri	stebingeri	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = imp
+1	nest	nest	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	with	with	ADP	IN	_	3	case	_	_
+3	eggs	egg	NOUN	NNS	Number=Plur	1	obl	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Image	image	NOUN	NN	Number=Sing	0	root	_	_

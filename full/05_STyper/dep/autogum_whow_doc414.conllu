@@ -45,13 +45,15 @@
 14	else	else	ADV	RB	_	13	advmod	_	_
 15	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Embrace	embrace	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-4	joint	joint	ADJ	JJ	Degree=Pos	5	amod	_	_
-5	celebration	celebration	NOUN	NN	Number=Sing	2	obj	_	_
-6	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Embrace	embrace	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	joint	joint	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	celebration	celebration	NOUN	NN	Number=Sing	1	obj	_	_
+5	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	If	if	SCONJ	IN	_	3	mark	_	_
@@ -190,7 +192,7 @@
 10	twice	twice	ADV	RB	NumType=Mult	9	advmod	_	_
 11	!	!	PUNCT	.	_	7	punct	_	_
 
-# s_type = sub
+# s_type = decl
 1	One	One	NUM	CD	NumType=Card	5	nsubj	_	_
 2	of	of	ADP	IN	_	3	case	_	_
 3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	1	nmod	_	_
@@ -218,10 +220,12 @@
 25	birthday	birthday	NOUN	NN	Number=Sing	29	nsubj	_	_
 26	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	cop	_	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	_	_
-28	week	week	NOUN	NN	Number=Sing	29	compound	_	_
+28	week	week	NOUN	NN	Number=Sing	29	nmod:npmod	_	_
 29	day	day	NOUN	NN	Number=Sing	21	advcl	_	_
 30	.	.	PUNCT	.	_	5	punct	_	_
-31	.	.	PUNCT	.	_	5	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = imp
 1	Try	try	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

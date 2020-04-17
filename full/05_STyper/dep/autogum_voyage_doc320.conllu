@@ -236,10 +236,12 @@
 1	Wausau	Wausau	PROPN	NNP	Number=Sing	3	compound	_	_
 2	Downtown	downtown	PROPN	NNP	Number=Sing	3	compound	_	_
 3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	_	_
-4	(	(	PUNCT	-LRB-	_	5	punct	_	_
-5	AUW	AUW	PROPN	NNP	Number=Sing	3	nmod:tmod	_	_
-6	)	)	PUNCT	-RRB-	_	5	punct	_	_
-7	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	AUW	AUW	PROPN	NNP	Number=Sing	0	root	_	_
+3	)	)	PUNCT	-RRB-	_	2	punct	_	_
+4	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
@@ -519,21 +521,25 @@
 
 # s_type = imp
 1	See	see	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	Leigh	Leigh	PROPN	NNP	Number=Sing	6	compound	_	_
-3	Yawkey	Yawkey	PROPN	NNP	Number=Sing	4	compound	_	_
-4	Woodson	Woodson	PROPN	NNP	Number=Sing	6	compound	_	_
-5	Art	Art	PROPN	NNP	Number=Sing	6	compound	_	_
-6	Museum	Museum	PROPN	NNP	Number=Sing	1	obj	_	_
-7	,	,	PUNCT	,	_	11	punct	_	_
-8	700	@card@	NUM	CD	NumType=Card	11	nummod	_	_
-9	North	North	PROPN	NNP	Number=Sing	11	compound	_	_
-10	Twelfth	twelfth	PROPN	NNP	Number=Sing	11	compound	_	_
-11	Street	Street	PROPN	NNP	Number=Sing	6	appos	_	_
-12	,	,	PUNCT	,	_	13	punct	_	_
-13	☏	☏	NUM	CD	NumType=Card	1	parataxis	_	_
-14	+1715	+1715	NUM	CD	NumType=Card	15	nummod	_	_
-15	845-7010	@card@	NUM	CD	NumType=Card	13	nummod	_	_
-16	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Leigh	Leigh	PROPN	NNP	Number=Sing	0	root	_	_
+2	Yawkey	Yawkey	PROPN	NNP	Number=Sing	1	flat	_	_
+3	Woodson	Woodson	PROPN	NNP	Number=Sing	1	flat	_	_
+4	Art	Art	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Museum	Museum	PROPN	NNP	Number=Sing	1	appos	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	5	punct	_	_
+2	700	@card@	NUM	CD	NumType=Card	5	nummod	_	_
+3	North	North	PROPN	NNP	Number=Sing	5	amod	_	_
+4	Twelfth	twelfth	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Street	Street	PROPN	NNP	Number=Sing	0	root	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	5	nummod	_	_
+8	+1715	+1715	NUM	CD	NumType=Card	9	nummod	_	_
+9	845-7010	@card@	NUM	CD	NumType=Card	7	nummod	_	_
+10	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	_	_
@@ -683,21 +689,23 @@
 3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
-1	Marathon	Marathon	PROPN	NNP	Number=Sing	2	compound	_	_
+1	Marathon	Marathon	PROPN	NNP	Number=Sing	4	compound	_	_
 2	County	County	PROPN	NNP	Number=Sing	4	compound	_	_
-3	Historical	historical	PROPN	NNP	Number=Sing	4	compound	_	_
-4	Museums	Museums	PROPN	NNP	Number=Sing	0	root	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	403	@card@	NUM	CD	NumType=Card	4	appos	_	_
-7	and	and	CCONJ	CC	_	10	cc	_	_
-8	410	@card@	NUM	CD	NumType=Card	9	nummod	_	_
-9	McIndoe	McIndoe	PROPN	NNP	Number=Sing	10	compound	_	_
-10	St	St	PROPN	NNP	Number=Sing	4	appos	_	_
-11	,	,	PUNCT	,	_	12	punct	_	_
-12	☏	☏	NUM	CD	NumType=Card	4	appos	_	_
-13	+1715	+1715	NUM	CD	NumType=Card	14	nummod	_	_
-14	848-6143	@card@	NUM	CD	NumType=Card	12	nummod	_	_
-15	.	.	PUNCT	.	_	4	punct	_	_
+3	Historical	historical	PROPN	NNP	Number=Sing	4	amod	_	_
+4	Museums	Museums	PROPN	NNPS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	403	@card@	NUM	CD	NumType=Card	0	root	_	_
+3	and	and	CCONJ	CC	_	6	cc	_	_
+4	410	@card@	NUM	CD	NumType=Card	5	nummod	_	_
+5	McIndoe	McIndoe	PROPN	NNP	Number=Sing	6	compound	_	_
+6	St	St	PROPN	NNP	Number=Sing	2	conj	_	_
+7	,	,	PUNCT	,	_	8	punct	_	_
+8	☏	☏	NUM	CD	NumType=Card	2	conj	_	_
+9	+1715	+1715	NUM	CD	NumType=Card	10	nummod	_	_
+10	848-6143	@card@	NUM	CD	NumType=Card	8	nummod	_	_
+11	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	_	_
@@ -929,31 +937,33 @@
 2	Mountain	Mountain	PROPN	NNP	Number=Sing	4	compound	_	_
 3	State	State	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Park	Park	PROPN	NNP	Number=Sing	0	root	_	_
-5	(	(	PUNCT	-LRB-	_	7	punct	_	_
-6	Four	Four	NUM	CD	NumType=Card	7	nummod	_	_
-7	miles	mile	NOUN	NNS	Number=Plur	8	nmod:npmod	_	_
-8	southwest	southwest	ADV	RB	_	4	advmod	_	_
-9	off	off	ADP	IN	_	11	case	_	_
-10	of	of	ADP	IN	_	11	case	_	_
-11	Highway	highway	PROPN	NNP	Number=Sing	4	nmod	_	_
-12	51	51	NUM	CD	NumType=Card	11	nummod	_	_
-13	,	,	PUNCT	,	_	14	punct	_	_
-14	Exit	exit	PROPN	NNP	Number=Sing	4	parataxis	_	_
-15	188	@card@	NUM	CD	NumType=Card	14	nummod	_	_
-16	to	to	ADP	TO	_	19	case	_	_
-17	Rib	Rib	PROPN	NNP	Number=Sing	19	compound	_	_
-18	Mountain	Mountain	PROPN	NNP	Number=Sing	19	compound	_	_
-19	Drive	Drive	PROPN	NNP	Number=Sing	14	nmod	_	_
-20	(	(	PUNCT	-LRB-	_	21	punct	_	_
-21	follow	follow	VERB	VB	VerbForm=Inf	4	dep	_	_
-22	signs	sign	NOUN	NNS	Number=Plur	21	obj	_	_
-23	)	)	PUNCT	-RRB-	_	21	punct	_	_
-24	)	)	PUNCT	-RRB-	_	21	punct	_	_
-25	,	,	PUNCT	,	_	26	punct	_	_
-26	☏	☏	NUM	CD	NumType=Card	4	parataxis	_	_
-27	+1715	+1715	NUM	CD	NumType=Card	28	nummod	_	_
-28	842-7522	@card@	NUM	CD	NumType=Card	26	conj	_	_
-29	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	4	punct	_	_
+2	Four	Four	NUM	CD	NumType=Card	3	nummod	_	_
+3	miles	mile	NOUN	NNS	Number=Plur	4	nmod:npmod	_	_
+4	southwest	southwest	ADV	RB	_	0	root	_	_
+5	off	off	ADP	IN	_	7	case	_	_
+6	of	of	ADP	IN	_	7	case	_	_
+7	Highway	highway	PROPN	NNP	Number=Sing	4	nmod	_	_
+8	51	51	NUM	CD	NumType=Card	7	nummod	_	_
+9	,	,	PUNCT	,	_	10	punct	_	_
+10	Exit	exit	PROPN	NNP	Number=Sing	7	appos	_	_
+11	188	@card@	NUM	CD	NumType=Card	10	nummod	_	_
+12	to	to	ADP	TO	_	15	case	_	_
+13	Rib	Rib	PROPN	NNP	Number=Sing	15	compound	_	_
+14	Mountain	Mountain	PROPN	NNP	Number=Sing	15	compound	_	_
+15	Drive	Drive	PROPN	NNP	Number=Sing	10	nmod	_	_
+16	(	(	PUNCT	-LRB-	_	17	punct	_	_
+17	follow	follow	VERB	VB	VerbForm=Inf	15	dep	_	_
+18	signs	sign	NOUN	NNS	Number=Plur	17	obj	_	_
+19	)	)	PUNCT	-RRB-	_	17	punct	_	_
+20	)	)	PUNCT	-RRB-	_	17	punct	_	_
+21	,	,	PUNCT	,	_	22	punct	_	_
+22	☏	☏	NUM	CD	NumType=Card	3	conj	_	_
+23	+1715	+1715	NUM	CD	NumType=Card	24	nummod	_	_
+24	842-7522	@card@	NUM	CD	NumType=Card	22	nummod	_	_
+25	.	.	PUNCT	.	_	22	punct	_	_
 
 # s_type = frag
 1	Daily	daily	ADV	RB	_	0	root	_	_
@@ -1121,11 +1131,13 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
 2	Wausau	Wausau	PROPN	NNP	Number=Sing	3	compound	_	_
 3	Depot	Depot	PROPN	NNP	Number=Sing	0	root	_	_
-4	,	,	PUNCT	,	_	7	punct	_	_
-5	720	@card@	NUM	CD	NumType=Card	7	nummod	_	_
-6	Grant	Grant	PROPN	NNP	Number=Sing	7	compound	_	_
-7	Street	Street	PROPN	NNP	Number=Sing	3	appos	_	_
-8	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	4	punct	_	_
+2	720	@card@	NUM	CD	NumType=Card	4	nummod	_	_
+3	Grant	Grant	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Street	Street	PROPN	NNP	Number=Sing	0	root	_	_
+5	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
 1	Wausau	Wausau	PROPN	NNP	Number=Sing	0	root	_	_

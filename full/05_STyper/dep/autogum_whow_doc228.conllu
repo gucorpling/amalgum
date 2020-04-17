@@ -88,24 +88,26 @@
 # s_type = frag
 1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
 
-# s_type = decl
-1	Reaching	reach	VERB	VBG	VerbForm=Ger	11	csubj	_	_
+# s_type = ger
+1	Reaching	reach	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	out	out	ADP	RP	_	1	compound:prt	_	_
-3	to	to	ADP	TO	_	6	case	_	_
-4	Customer	Customer	PROPN	NNP	Number=Sing	6	compound	_	_
-5	Support	Support	PROPN	NNP	Number=Sing	6	compound	_	_
-6	Call	Call	PROPN	NNP	Number=Sing	1	obl	_	_
-7	+1	+1	PROPN	NNP	Number=Sing	6	compound	_	_
-8	(	(	PUNCT	-LRB-	_	9	punct	_	_
-9	888	@card@	NUM	CD	NumType=Card	7	conj	_	_
-10	)	)	PUNCT	-RRB-	_	9	punct	_	_
-11	908-7930	@card@	NUM	CD	NumType=Card	0	root	_	_
-12	for	for	ADP	IN	_	13	case	_	_
-13	help	help	NOUN	NN	Number=Sing	11	nmod	_	_
-14	over	over	ADP	IN	_	16	case	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-16	phone	phone	NOUN	NN	Number=Sing	13	nmod	_	_
-17	.	.	PUNCT	.	_	11	punct	_	_
+3	to	to	ADP	TO	_	5	case	_	_
+4	Customer	Customer	NOUN	NN	Number=Sing	5	compound	_	_
+5	Support	Support	NOUN	NN	Number=Sing	1	obl	_	_
+
+# s_type = imp
+1	Call	Call	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	+1	+1	NOUN	NN	Number=Sing	1	obj	_	_
+3	(	(	PUNCT	-LRB-	_	4	punct	_	_
+4	888	@card@	NUM	CD	NumType=Card	2	dep	_	_
+5	)	)	PUNCT	-RRB-	_	4	punct	_	_
+6	908-7930	@card@	NUM	CD	NumType=Card	1	obj	_	_
+7	for	for	ADP	IN	_	8	case	_	_
+8	help	help	NOUN	NN	Number=Sing	1	obl	_	_
+9	over	over	ADP	IN	_	11	case	_	_
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+11	phone	phone	NOUN	NN	Number=Sing	8	nmod	_	_
+12	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Unfortunately	unfortunately	ADV	RB	_	9	advmod	_	_
@@ -654,45 +656,47 @@
 22	link	link	NOUN	NN	Number=Sing	20	obj	_	_
 23	.	.	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = decl
-1	"	"	PUNCT	``	_	22	punct	_	_
-2	If	if	SCONJ	IN	_	6	mark	_	_
-3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
-4	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	_	_
-5	n't	n't	PART	RB	Polarity=Neg	6	advmod	_	_
-6	ask	ask	VERB	VB	VerbForm=Inf	22	advcl	_	_
-7	Ada	Ada	PROPN	NNP	Number=Sing	6	obj	_	_
-8	how	how	SCONJ	WRB	PronType=Int	10	mark	_	_
-9	to	to	PART	TO	_	10	mark	_	_
-10	solve	solve	VERB	VB	VerbForm=Inf	6	xcomp	_	_
-11	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
-12	query	query	NOUN	NN	Number=Sing	10	obj	_	_
-13	in	in	ADP	IN	_	15	case	_	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-15	format	format	NOUN	NN	Number=Sing	10	obl	_	_
-16	of	of	ADP	IN	_	18	case	_	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	_	_
-18	question	question	NOUN	NN	Number=Sing	15	nmod	_	_
-19	,	,	PUNCT	,	_	6	punct	_	_
-20	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	22	nsubj	_	_
-21	will	will	AUX	MD	VerbForm=Fin	22	aux	_	_
-22	get	get	VERB	VB	VerbForm=Inf	0	root	_	_
-23	a	a	DET	DT	Definite=Ind|PronType=Art	24	det	_	_
-24	response	response	NOUN	NN	Number=Sing	22	obj	_	_
-25	like	like	ADP	IN	_	30	case	_	_
-26	"	"	PUNCT	``	_	30	punct	_	_
-27	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	30	nsubj	_	_
-28	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	30	cop	_	_
-29	not	not	PART	RB	Polarity=Neg	30	advmod	_	_
-30	sure	sure	ADJ	JJ	Degree=Pos	22	advcl	_	_
-31	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	32	nsubj	_	_
-32	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	30	ccomp	_	_
-33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	_	_
-34	answer	answer	NOUN	NN	Number=Sing	32	obj	_	_
-35	to	to	ADP	TO	_	36	case	_	_
-36	that	that	PRON	DT	Number=Sing|PronType=Dem	34	nmod	_	_
-37	yet	yet	ADV	RB	_	32	advmod	_	_
-38	.	.	PUNCT	.	_	22	punct	_	_
+1	If	if	SCONJ	IN	_	5	mark	_	_
+2	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
+3	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	aux	_	_
+4	n't	n't	PART	RB	Polarity=Neg	5	advmod	_	_
+5	ask	ask	VERB	VB	VerbForm=Inf	21	advcl	_	_
+6	Ada	Ada	PROPN	NNP	Number=Sing	5	obj	_	_
+7	how	how	SCONJ	WRB	PronType=Int	9	mark	_	_
+8	to	to	PART	TO	_	9	mark	_	_
+9	solve	solve	VERB	VB	VerbForm=Inf	5	xcomp	_	_
+10	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
+11	query	query	NOUN	NN	Number=Sing	9	obj	_	_
+12	in	in	ADP	IN	_	14	case	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+14	format	format	NOUN	NN	Number=Sing	9	obl	_	_
+15	of	of	ADP	IN	_	17	case	_	_
+16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	_	_
+17	question	question	NOUN	NN	Number=Sing	14	nmod	_	_
+18	,	,	PUNCT	,	_	5	punct	_	_
+19	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	21	nsubj	_	_
+20	will	will	AUX	MD	VerbForm=Fin	21	aux	_	_
+21	get	get	VERB	VB	VerbForm=Inf	0	root	_	_
+22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
+23	response	response	NOUN	NN	Number=Sing	21	obj	_	_
+24	like	like	ADP	IN	_	29	case	_	_
+25	"	"	PUNCT	``	_	29	punct	_	_
+26	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	29	nsubj	_	_
+27	'm	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	29	cop	_	_
+28	not	not	PART	RB	Polarity=Neg	29	advmod	_	_
+29	sure	sure	ADJ	JJ	Degree=Pos	21	advcl	_	_
+30	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	31	nsubj	_	_
+31	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	29	ccomp	_	_
+32	the	the	DET	DT	Definite=Def|PronType=Art	33	det	_	_
+33	answer	answer	NOUN	NN	Number=Sing	31	obj	_	_
+34	to	to	ADP	TO	_	35	case	_	_
+35	that	that	PRON	DT	Number=Sing|PronType=Dem	33	nmod	_	_
+36	yet	yet	ADV	RB	_	31	advmod	_	_
+37	.	.	PUNCT	.	_	21	punct	_	_
 
 # s_type = imp
 1	Please	Please	ADV	RB	_	2	advmod	_	_
@@ -714,21 +718,23 @@
 17	center	center	NOUN	NN	Number=Sing	14	obj	_	_
 18	.	.	PUNCT	.	_	2	punct	_	_
 
+# s_type = frag
+1	"	"	PUNCT	``	_	0	root	_	_
+
 # s_type = imp
-1	"	"	PUNCT	``	_	2	punct	_	_
-2	Search	Search	VERB	VB	VerbForm=Fin	0	root	_	_
-3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-4	support	support	NOUN	NN	Number=Sing	5	compound	_	_
-5	center	center	NOUN	NN	Number=Sing	2	obj	_	_
-6	if	if	SCONJ	IN	_	11	mark	_	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-8	bot	bot	NOUN	NN	Number=Sing	11	nsubj	_	_
-9	could	could	AUX	MD	VerbForm=Fin	11	aux	_	_
-10	n't	n't	PART	RB	Polarity=Neg	11	advmod	_	_
-11	solve	solve	VERB	VB	VerbForm=Inf	2	advcl	_	_
-12	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
-13	problem	problem	NOUN	NN	Number=Sing	11	obj	_	_
-14	.	.	PUNCT	.	_	2	punct	_	_
+1	Search	Search	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	support	support	NOUN	NN	Number=Sing	4	compound	_	_
+4	center	center	NOUN	NN	Number=Sing	1	obj	_	_
+5	if	if	SCONJ	IN	_	10	mark	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	bot	bot	NOUN	NN	Number=Sing	10	nsubj	_	_
+8	could	could	AUX	MD	VerbForm=Fin	10	aux	_	_
+9	n't	n't	PART	RB	Polarity=Neg	10	advmod	_	_
+10	solve	solve	VERB	VB	VerbForm=Inf	1	advcl	_	_
+11	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
+12	problem	problem	NOUN	NN	Number=Sing	10	obj	_	_
+13	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

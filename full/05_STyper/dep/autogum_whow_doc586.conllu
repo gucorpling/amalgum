@@ -86,10 +86,12 @@
 6	thinking	think	VERB	VBG	VerbForm=Ger	5	xcomp	_	_
 7	!	!	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Awaken	Awaken	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Awaken	Awaken	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Become	Become	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -272,10 +274,12 @@
 3	exercises	exercise	NOUN	NNS	Number=Plur	4	nsubj	_	_
 4	practice	practice	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 5	mindfulness	mindfulness	NOUN	NN	Number=Sing	4	obj	_	_
-6	:	:	PUNCT	:	_	7	punct	_	_
-7	Eat	eat	VERB	VB	VerbForm=Inf	4	parataxis	_	_
-8	mindfully	mindfully	ADV	RB	_	7	advmod	_	_
-9	.	.	PUNCT	.	_	4	punct	_	_
+6	:	:	PUNCT	:	_	4	punct	_	_
+
+# s_type = imp
+1	Eat	eat	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	mindfully	mindfully	ADV	RB	_	1	advmod	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Be	be	AUX	VB	VerbForm=Inf	2	cop	_	_
@@ -355,9 +359,11 @@
 5	during	during	ADP	IN	_	7	case	_	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 7	process	process	NOUN	NN	Number=Sing	1	obl	_	_
-8	Talk	talk	VERB	VB	VerbForm=Inf	1	advcl	_	_
-9	mindfully	mindfully	ADV	RB	_	8	advmod	_	_
-10	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Talk	talk	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	mindfully	mindfully	ADV	RB	_	1	advmod	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Be	be	AUX	VB	VerbForm=Inf	2	cop	_	_
@@ -931,7 +937,7 @@
 6	exercises	exercise	NOUN	NNS	Number=Plur	2	nmod	_	_
 7	to	to	PART	TO	_	9	mark	_	_
 8	‘	‘	PUNCT	``	_	9	punct	_	_
-9	break	break	VERB	VB	VerbForm=Inf	6	dep	_	_
+9	break	break	VERB	VB	VerbForm=Inf	1	conj	_	_
 10	’	's	PART	POS	_	9	case	_	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
 12	chains	chain	NOUN	NNS	Number=Plur	9	obj	_	_
@@ -946,10 +952,12 @@
 21	around	around	ADP	IN	_	23	case	_	_
 22	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	23	nmod:poss	_	_
 23	neck	neck	NOUN	NN	Number=Sing	20	obl	_	_
-24	:	:	PUNCT	:	_	25	punct	_	_
-25	Go	Go	VERB	VB	VerbForm=Inf	20	parataxis	_	_
-26	walking	walk	VERB	VBG	VerbForm=Ger	25	xcomp	_	_
-27	backwards	backwards	ADV	RB	_	25	advmod	_	_
+24	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = imp
+1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	walking	walk	VERB	VBG	VerbForm=Ger	1	xcomp	_	_
+3	backwards	backwards	ADV	RB	_	1	advmod	_	_
 
 # s_type = imp
 1	Stop	stop	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -958,7 +966,7 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 5	street	street	NOUN	NN	Number=Sing	7	compound	_	_
 6	music	music	NOUN	NN	Number=Sing	7	compound	_	_
-7	player	player	NOUN	NN	Number=Sing	1	obl	_	_
+7	player	player	NOUN	NN	Number=Sing	2	obl	_	_
 8	and	and	CCONJ	CC	_	9	cc	_	_
 9	start	start	VERB	VB	VerbForm=Inf	1	conj	_	_
 10	dancing	dance	VERB	VBG	VerbForm=Ger	9	xcomp	_	_
@@ -966,16 +974,20 @@
 12	singing	sing	VERB	VBG	VerbForm=Ger	10	conj	_	_
 13	with	with	ADP	IN	_	14	case	_	_
 14	him	him	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	obl	_	_
-15	Go	Go	VERB	VB	VerbForm=Inf	12	xcomp	_	_
-16	to	to	ADP	TO	_	20	case	_	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	_	_
-18	nudist	nudist	ADJ	JJ	Degree=Pos	20	amod	_	_
-19	beach	beach	NOUN	NN	Number=Sing	20	compound	_	_
-20	Stop	stop	NOUN	NN	Number=Sing	15	obl	_	_
-21	to	to	PART	TO	_	22	mark	_	_
-22	talk	talk	VERB	VB	VerbForm=Inf	15	xcomp	_	_
-23	with	with	ADP	IN	_	24	case	_	_
-24	strangers	stranger	NOUN	NNS	Number=Plur	22	obl	_	_
+
+# s_type = imp
+1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	to	to	ADP	TO	_	5	case	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+4	nudist	nudist	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	beach	beach	NOUN	NN	Number=Sing	1	obl	_	_
+
+# s_type = imp
+1	Stop	stop	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	to	to	PART	TO	_	3	mark	_	_
+3	talk	talk	VERB	VB	VerbForm=Inf	1	xcomp	_	_
+4	with	with	ADP	IN	_	5	case	_	_
+5	strangers	stranger	NOUN	NNS	Number=Plur	3	obl	_	_
 
 # s_type = imp
 1	If	if	SCONJ	IN	_	5	mark	_	_
@@ -989,17 +1001,19 @@
 9	and	and	CCONJ	CC	_	10	cc	_	_
 10	observe	observe	VERB	VB	VerbForm=Inf	8	conj	_	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	crowd	crowd	NOUN	NN	Number=Sing	8	obj	_	_
+12	crowd	crowd	NOUN	NN	Number=Sing	10	obj	_	_
 13	moving	move	VERB	VBG	VerbForm=Ger	12	acl	_	_
-14	next	next	ADJ	JJ	Degree=Pos	13	advmod	_	_
+14	next	next	ADJ	JJ	Degree=Pos	13	xcomp	_	_
 15	to	to	ADP	TO	_	16	case	_	_
 16	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	obl	_	_
-17	Read	read	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	conj	_	_
-18	inspiring	inspire	VERB	VBG	VerbForm=Ger	17	xcomp	_	_
-19	and	and	CCONJ	CC	_	21	cc	_	_
-20	spiritual	spiritual	ADJ	JJ	Degree=Pos	21	amod	_	_
-21	books	book	NOUN	NNS	Number=Plur	18	conj	_	_
-22	.	.	PUNCT	.	_	8	punct	_	_
+
+# s_type = imp
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	inspiring	inspire	VERB	VBG	VerbForm=Ger	1	xcomp	_	_
+3	and	and	CCONJ	CC	_	5	cc	_	_
+4	spiritual	spiritual	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	books	book	NOUN	NNS	Number=Plur	2	conj	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

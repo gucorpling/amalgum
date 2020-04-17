@@ -10,15 +10,17 @@
 9	equal	equal	ADJ	JJ	Degree=Pos	5	ccomp	_	_
 10	?	?	PUNCT	.	_	1	punct	_	_
 
-# s_type = intj
+# s_type = frag
 1	BW	BW	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	No	no	INTJ	UH	_	1	discourse	_	_
-4	,	,	PUNCT	,	_	6	punct	_	_
-5	of	of	ADP	IN	_	6	case	_	_
-6	course	course	NOUN	NN	Number=Sing	3	nmod	_	_
-7	not	not	PART	RB	_	6	fixed	_	_
-8	.	.	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = intj
+1	No	no	INTJ	UH	_	0	root	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	of	of	ADP	IN	_	4	case	_	_
+4	course	course	NOUN	NN	Number=Sing	5	obl:npmod	_	_
+5	not	not	PART	RB	_	1	advmod	_	_
+6	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = q
 1	DS	DS	PROPN	NNP	Number=Sing	0	root	_	_
@@ -35,14 +37,16 @@
 12	equal	equal	ADJ	JJ	Degree=Pos	9	acl:relcl	_	_
 13	?	?	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	BW	BW	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	6	punct	_	_
-3	Both	both	PRON	DT	_	6	nsubj	_	_
-4	can	can	AUX	MD	VerbForm=Fin	6	aux	_	_
-5	be	be	AUX	VB	VerbForm=Inf	6	cop	_	_
-6	famous	famous	ADJ	JJ	Degree=Pos	1	parataxis	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	Both	both	PRON	DT	_	4	nsubj	_	_
+2	can	can	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	be	be	AUX	VB	VerbForm=Inf	4	cop	_	_
+4	famous	famous	ADJ	JJ	Degree=Pos	0	root	_	_
+5	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	_	_
@@ -165,28 +169,30 @@
 14	feel	feel	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	ccomp	_	_
 15	.	.	PUNCT	.	_	6	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	BW	BW	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Yeah	Yeah	INTJ	UH	_	1	parataxis	_	_
-4	,	,	PUNCT	,	_	5	punct	_	_
-5	but	but	CCONJ	CC	_	9	cc	_	_
-6	even	even	ADV	RB	_	9	advmod	_	_
-7	if	if	SCONJ	IN	_	9	mark	_	_
-8	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	9	nsubj	_	_
-9	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	conj	_	_
-10	cable	cable	NOUN	NN	Number=Sing	9	obj	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	Yeah	Yeah	INTJ	UH	_	17	discourse	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	but	but	CCONJ	CC	_	17	cc	_	_
+4	even	even	ADV	RB	_	7	advmod	_	_
+5	if	if	SCONJ	IN	_	7	mark	_	_
+6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
+7	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	advcl	_	_
+8	cable	cable	NOUN	NN	Number=Sing	7	obj	_	_
+9	,	,	PUNCT	,	_	10	punct	_	_
+10	satellite	satellite	NOUN	NN	Number=Sing	8	conj	_	_
 11	,	,	PUNCT	,	_	12	punct	_	_
-12	satellite	satellite	NOUN	NN	Number=Sing	10	conj	_	_
-13	,	,	PUNCT	,	_	14	punct	_	_
-14	everything	everything	NOUN	NN	Number=Sing	10	conj	_	_
-15	,	,	PUNCT	,	_	19	punct	_	_
-16	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	19	nsubj	_	_
-17	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	aux	_	_
-18	n’t	n't	PART	RB	Polarity=Neg	19	advmod	_	_
-19	watch	watch	VERB	VB	VerbForm=Inf	1	conj	_	_
-20	television	television	NOUN	NN	Number=Sing	19	obj	_	_
-21	.	.	PUNCT	.	_	1	punct	_	_
+12	everything	everything	NOUN	NN	Number=Sing	8	conj	_	_
+13	,	,	PUNCT	,	_	7	punct	_	_
+14	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	17	nsubj	_	_
+15	do	do	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	17	aux	_	_
+16	n’t	n't	PART	RB	Polarity=Neg	17	advmod	_	_
+17	watch	watch	VERB	VB	VerbForm=Inf	0	root	_	_
+18	television	television	NOUN	NN	Number=Sing	17	obj	_	_
+19	.	.	PUNCT	.	_	17	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -299,16 +305,18 @@
 21	?	?	PUNCT	.	_	16	punct	_	_
 22	”	"	PUNCT	''	_	16	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	BW	BW	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	8	punct	_	_
-3	But	but	CCONJ	CC	_	8	cc	_	_
-4	that	that	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	_	_
-5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-7	Fourth	Fourth	PROPN	NNP	Number=Sing	8	compound	_	_
-8	Estate	Estate	PROPN	NNP	Number=Sing	1	conj	_	_
-9	.	.	PUNCT	.	_	1	punct	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	But	but	CCONJ	CC	_	6	cc	_	_
+2	that	that	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	_	_
+3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+5	Fourth	Fourth	PROPN	NNP	Number=Sing	6	compound	_	_
+6	Estate	Estate	PROPN	NNP	Number=Sing	0	root	_	_
+7	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = decl
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	_	_
@@ -420,26 +428,28 @@
 27	decide	decide	VERB	VB	VerbForm=Inf	24	ccomp	_	_
 28	.	.	PUNCT	.	_	6	punct	_	_
 
+# s_type = frag
+1	BS	BS	NOUN	NN	Number=Sing	0	root	_	_
+2	:	:	PUNCT	:	_	1	punct	_	_
+
 # s_type = decl
-1	BS	BS	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Yeah	Yeah	INTJ	UH	_	1	parataxis	_	_
-4	,	,	PUNCT	,	_	5	punct	_	_
-5	but	but	CCONJ	CC	_	15	cc	_	_
-6	if	if	SCONJ	IN	_	15	mark	_	_
-7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
-8	lot	lot	NOUN	NN	Number=Sing	15	advcl	_	_
-9	of	of	ADP	IN	_	10	case	_	_
-10	times	time	NOUN	NNS	Number=Plur	8	nmod	_	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	information	information	NOUN	NN	Number=Sing	15	nsubj	_	_
-13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	_	_
-14	totally	totally	ADV	RB	_	15	advmod	_	_
-15	incorrect	incorrect	ADJ	JJ	Degree=Pos|Polarity=Neg	1	advcl	_	_
-16	to	to	PART	TO	_	17	mark	_	_
-17	begin	begin	VERB	VB	VerbForm=Inf	15	xcomp	_	_
-18	with	with	ADP	IN	_	17	obl	_	_
-19	.	.	PUNCT	.	_	1	punct	_	_
+1	Yeah	Yeah	INTJ	UH	_	13	discourse	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	but	but	CCONJ	CC	_	13	cc	_	_
+4	if	if	SCONJ	IN	_	13	mark	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
+6	lot	lot	NOUN	NN	Number=Sing	13	nsubj	_	_
+7	of	of	ADP	IN	_	8	case	_	_
+8	times	time	NOUN	NNS	Number=Plur	6	nmod	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	information	information	NOUN	NN	Number=Sing	13	nsubj	_	_
+11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	_
+12	totally	totally	ADV	RB	_	13	advmod	_	_
+13	incorrect	incorrect	ADJ	JJ	Degree=Pos|Polarity=Neg	0	root	_	_
+14	to	to	PART	TO	_	15	mark	_	_
+15	begin	begin	VERB	VB	VerbForm=Inf	13	xcomp	_	_
+16	with	with	ADP	IN	_	15	obl	_	_
+17	.	.	PUNCT	.	_	13	punct	_	_
 
 # s_type = decl
 1	DS	DS	PROPN	NNP	Number=Sing	0	root	_	_

@@ -1,9 +1,11 @@
 # s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Perth	Perth	PROPN	NNP	Number=Sing	1	dep	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Perth	Perth	PROPN	NNP	Number=Sing	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	And	and	CCONJ	CC	_	4	cc	_	_
@@ -19,13 +21,19 @@
 11	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	6	compound	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	2000	@card@	NUM	CD	NumType=Card	0	root	_	_
-7	.	.	PUNCT	.	_	6	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = frag
+1	2000	@card@	NUM	CD	NumType=Card	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Sydney	Sydney	PROPN	NNP	Number=Sing	0	root	_	_
@@ -73,10 +81,12 @@
 # s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	5	punct	_	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
-5	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
-6	!	!	PUNCT	.	_	1	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
+2	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	!	!	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	That	that	PRON	DT	Number=Sing|PronType=Dem	4	nsubj	_	_
@@ -282,20 +292,26 @@
 11	Ping	Ping	PROPN	NNP	Number=Sing	9	vocative	_	_
 12	!	!	PUNCT	.	_	5	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	7	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	That	that	PRON	WDT	PronType=Rel	7	nsubj	_	_
-7	brings	bring	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-8	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	7	obj	_	_
-9	to	to	ADP	TO	_	12	case	_	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-11	2000	@card@	NUM	CD	NumType=Card	12	nummod	_	_
-12	Paralympics	Paralympics	PROPN	NNPS	Number=Plur	7	obl	_	_
-13	.	.	PUNCT	.	_	3	punct	_	_
+1	That	that	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	_	_
+2	brings	bring	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	2	obj	_	_
+4	to	to	ADP	TO	_	7	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+6	2000	@card@	NUM	CD	NumType=Card	7	nummod	_	_
+7	Paralympics	Paralympics	PROPN	NNPS	Number=Plur	2	obl	_	_
+8	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	nsubj	_	_
@@ -324,82 +340,104 @@
 24	game	game	NOUN	NN	Number=Sing	17	obl	_	_
 25	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = intj
+# s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Yeah	Yeah	INTJ	UH	_	1	discourse	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
-
-# s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	7	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
-7	scored	score	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-8	twelve	twelve	NUM	CD	NumType=Card	9	nummod	_	_
-9	points	point	NOUN	NNS	Number=Plur	7	obj	_	_
-10	against	against	ADP	IN	_	12	case	_	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	Netherlands	Netherlands	PROPN	NNP	Number=Plur	7	obl	_	_
-13	,	,	PUNCT	,	_	15	punct	_	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-15	most	most	ADJ	JJS	Degree=Sup	7	obl	_	_
-16	that	that	SCONJ	IN	_	20	mark	_	_
-17	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	20	nsubj	_	_
-18	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	_	_
-19	ever	ever	ADV	RB	_	20	advmod	_	_
-20	scored	score	VERB	VBN	Tense=Past|VerbForm=Part	15	ccomp	_	_
-21	in	in	ADP	IN	_	24	case	_	_
-22	an	an	DET	DT	Definite=Ind|PronType=Art	24	det	_	_
-23	international	international	ADJ	JJ	Degree=Pos	24	amod	_	_
-24	match	match	NOUN	NN	Number=Sing	20	obl	_	_
-25	.	.	PUNCT	.	_	7	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
 
 # s_type = intj
-1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
-2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	5	punct	_	_
-4	Quite	Quite	ADV	RB	_	5	advmod	_	_
-5	likely	likely	ADJ	JJ	Degree=Pos	1	parataxis	_	_
-6	,	,	PUNCT	,	_	7	punct	_	_
-7	yeah	yeah	INTJ	UH	_	5	discourse	_	_
-8	.	.	PUNCT	.	_	1	punct	_	_
+1	Yeah	Yeah	INTJ	UH	_	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	appos	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	At	at	ADP	IN	_	8	case	_	_
-7	one	one	NUM	CD	NumType=Card	8	nummod	_	_
-8	point	point	NOUN	NN	Number=Sing	10	obl	_	_
-9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	_	_
-10	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-11	four	four	NUM	CD	NumType=Card	12	nummod	_	_
-12	baskets	basket	NOUN	NNS	Number=Plur	10	obj	_	_
-13	in	in	ADP	IN	_	15	case	_	_
-14	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
-15	row	row	NOUN	NN	Number=Sing	12	nmod	_	_
-16	.	.	PUNCT	.	_	10	punct	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	_	_
+2	scored	score	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	twelve	twelve	NUM	CD	NumType=Card	4	nummod	_	_
+4	points	point	NOUN	NNS	Number=Plur	2	obj	_	_
+5	against	against	ADP	IN	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	Netherlands	Netherlands	PROPN	NNP	Number=Plur	2	obl	_	_
+8	,	,	PUNCT	,	_	10	punct	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	most	most	ADJ	JJS	Degree=Sup	2	obl	_	_
+11	that	that	SCONJ	IN	_	15	mark	_	_
+12	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	15	nsubj	_	_
+13	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	15	aux	_	_
+14	ever	ever	ADV	RB	_	15	advmod	_	_
+15	scored	score	VERB	VBN	Tense=Past|VerbForm=Part	10	ccomp	_	_
+16	in	in	ADP	IN	_	19	case	_	_
+17	an	an	DET	DT	Definite=Ind|PronType=Art	19	det	_	_
+18	international	international	ADJ	JJ	Degree=Pos	19	amod	_	_
+19	match	match	NOUN	NN	Number=Sing	15	obl	_	_
+20	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	5	punct	_	_
-4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
-5	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	1	acl:relcl	_	_
-6	!	!	PUNCT	.	_	1	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = intj
+1	Quite	Quite	ADV	RB	_	2	advmod	_	_
+2	likely	likely	ADJ	JJ	Degree=Pos	0	root	_	_
+3	,	,	PUNCT	,	_	4	punct	_	_
+4	yeah	yeah	INTJ	UH	_	2	discourse	_	_
+5	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	0	root	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = decl
+1	At	at	ADP	IN	_	3	case	_	_
+2	one	one	NUM	CD	NumType=Card	3	nummod	_	_
+3	point	point	NOUN	NN	Number=Sing	5	obl	_	_
+4	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
+5	made	make	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+6	four	four	NUM	CD	NumType=Card	7	nummod	_	_
+7	baskets	basket	NOUN	NNS	Number=Plur	5	obj	_	_
+8	in	in	ADP	IN	_	10	case	_	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
+10	row	row	NOUN	NN	Number=Sing	7	nmod	_	_
+11	.	.	PUNCT	.	_	5	punct	_	_
+
+# s_type = frag
+1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
+2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = decl
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
+2	did	do	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	!	!	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
@@ -432,112 +470,140 @@
 13	injury	injury	NOUN	NN	Number=Sing	9	obl	_	_
 14	?	?	PUNCT	.	_	2	punct	_	_
 
-# s_type = decl
-1	Amanda	Amanda	PROPN	NNP	Number=Sing	7	nsubj	_	_
+# s_type = frag
+1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	No	no	INTJ	UH	_	1	dep	_	_
-5	,	,	PUNCT	,	_	4	punct	_	_
-6	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	7	nsubj	_	_
-7	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-9	elbow	elbow	NOUN	NN	Number=Sing	10	compound	_	_
-10	injury	injury	NOUN	NN	Number=Sing	7	obj	_	_
-11	during	during	ADP	IN	_	15	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-13	gold	gold	NOUN	NN	Number=Sing	15	compound	_	_
-14	medal	medal	NOUN	NN	Number=Sing	15	compound	_	_
-15	game	game	NOUN	NN	Number=Sing	7	obl	_	_
-16	.	.	PUNCT	.	_	7	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
 
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	During	during	ADP	IN	_	8	case	_	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
-8	match	match	NOUN	NN	Number=Sing	12	obl	_	_
-9	,	,	PUNCT	,	_	8	punct	_	_
-10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj:pass	_	_
-11	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	aux:pass	_	_
-12	knocked	knock	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-13	onto	onto	ADP	IN	_	16	case	_	_
-14	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	16	nmod:poss	_	_
-15	right	right	ADJ	JJ	Degree=Pos	16	amod	_	_
-16	side	side	NOUN	NN	Number=Sing	12	obl	_	_
-17	,	,	PUNCT	,	_	18	punct	_	_
-18	and	and	CCONJ	CC	_	12	cc	_	_
-19	...	...	PUNCT	.	_	12	punct	_	_
+1	No	no	INTJ	UH	_	4	discourse	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	_	_
+4	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+6	elbow	elbow	NOUN	NN	Number=Sing	7	compound	_	_
+7	injury	injury	NOUN	NN	Number=Sing	4	obj	_	_
+8	during	during	ADP	IN	_	12	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+10	gold	gold	NOUN	NN	Number=Sing	12	compound	_	_
+11	medal	medal	NOUN	NN	Number=Sing	12	compound	_	_
+12	game	game	NOUN	NN	Number=Sing	4	obl	_	_
+13	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
 
 # s_type = decl
-1	Amanda	Amanda	PROPN	NNP	Number=Sing	7	nsubj:pass	_	_
-2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	7	punct	_	_
-4	The	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-5	arm	arm	NOUN	NN	Number=Sing	7	nsubj:pass	_	_
-6	got	get	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
-7	trapped	trap	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-8	underneath	underneath	ADP	IN	_	10	case	_	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-10	wheelchair	wheelchair	NOUN	NN	Number=Sing	7	obl	_	_
-11	.	.	PUNCT	.	_	7	punct	_	_
-
-# s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Someone	someone	NOUN	NN	Number=Sing	8	nsubj	_	_
-7	just	just	ADV	RB	_	8	advmod	_	_
-8	bumped	bump	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-9	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	8	obj	_	_
-10	?	?	PUNCT	.	_	8	punct	_	_
+1	During	during	ADP	IN	_	3	case	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	match	match	NOUN	NN	Number=Sing	7	obl	_	_
+4	,	,	PUNCT	,	_	3	punct	_	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj:pass	_	_
+6	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
+7	knocked	knock	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+8	onto	onto	ADP	IN	_	11	case	_	_
+9	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
+10	right	right	ADJ	JJ	Degree=Pos	11	amod	_	_
+11	side	side	NOUN	NN	Number=Sing	7	obl	_	_
+12	,	,	PUNCT	,	_	13	punct	_	_
+13	and	and	CCONJ	CC	_	7	cc	_	_
+14	...	...	PUNCT	.	_	7	punct	_	_
 
 # s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Tracey	Tracey	PROPN	NNP	Number=Sing	1	dep	_	_
-5	Fergusson	Fergusson	PROPN	NNP	Number=Sing	4	flat	_	_
-6	from	from	ADP	IN	_	7	case	_	_
-7	Canada	Canada	PROPN	NNP	Number=Sing	4	nmod	_	_
-8	.	.	PUNCT	.	_	1	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
 
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	8	discourse	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj:pass	_	_
-7	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	aux:pass	_	_
-8	knocked	knock	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-9	down	down	ADP	RP	_	8	compound:prt	_	_
-10	and	and	CCONJ	CC	_	12	cc	_	_
-11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	12	nsubj	_	_
-12	tore	tore	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	8	conj	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
-14	tendons	tendon	NOUN	NNS	Number=Plur	12	obj	_	_
-15	in	in	ADP	IN	_	17	case	_	_
-16	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	17	nmod:poss	_	_
-17	elbow	elbow	NOUN	NN	Number=Sing	12	obl	_	_
-18	,	,	PUNCT	,	_	20	punct	_	_
-19	which	which	PRON	WDT	PronType=Rel	20	nsubj	_	_
-20	required	require	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	17	acl:relcl	_	_
-21	an	an	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
-22	elbow	elbow	NOUN	NN	Number=Sing	23	compound	_	_
-23	reconstruction	reconstruction	NOUN	NN	Number=Sing	20	obj	_	_
-24	...	...	PUNCT	.	_	8	punct	_	_
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
+2	arm	arm	NOUN	NN	Number=Sing	4	nsubj:pass	_	_
+3	got	get	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	aux:pass	_	_
+4	trapped	trap	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+5	underneath	underneath	ADP	IN	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	wheelchair	wheelchair	NOUN	NN	Number=Sing	4	obl	_	_
+8	.	.	PUNCT	.	_	4	punct	_	_
 
-# s_type = intj
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = q
+1	Someone	someone	NOUN	NN	Number=Sing	3	nsubj	_	_
+2	just	just	ADV	RB	_	3	advmod	_	_
+3	bumped	bump	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	3	obj	_	_
+5	?	?	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
 2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Yes	yes	INTJ	UH	_	1	discourse	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	Tracey	Tracey	PROPN	NNP	Number=Sing	0	root	_	_
+2	Fergusson	Fergusson	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = frag
+1	from	from	ADP	IN	_	2	case	_	_
+2	Canada	Canada	PROPN	NNP	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = decl
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj:pass	_	_
+2	were	be	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	aux:pass	_	_
+3	knocked	knock	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+4	down	down	ADP	RP	_	3	compound:prt	_	_
+5	and	and	CCONJ	CC	_	7	cc	_	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
+7	tore	tore	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	3	conj	_	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
+9	tendons	tendon	NOUN	NNS	Number=Plur	7	obj	_	_
+10	in	in	ADP	IN	_	12	case	_	_
+11	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
+12	elbow	elbow	NOUN	NN	Number=Sing	7	obl	_	_
+13	,	,	PUNCT	,	_	15	punct	_	_
+14	which	which	PRON	WDT	PronType=Rel	15	nsubj	_	_
+15	required	require	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	12	acl:relcl	_	_
+16	an	an	DET	DT	Definite=Ind|PronType=Art	18	det	_	_
+17	elbow	elbow	NOUN	NN	Number=Sing	18	compound	_	_
+18	reconstruction	reconstruction	NOUN	NN	Number=Sing	15	obj	_	_
+19	...	...	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_
+2	Carter	Carter	PROPN	NNP	Number=Sing	1	flat	_	_
+3	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = intj
+1	Yes	yes	INTJ	UH	_	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	And	and	CCONJ	CC	_	3	cc	_	_
@@ -547,27 +613,33 @@
 5	that	that	PRON	DT	Number=Sing|PronType=Dem	3	nmod	_	_
 6	.	.	PUNCT	.	_	3	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	7	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
-7	spent	spend	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-8	eleven	eleven	NUM	CD	NumType=Card	9	nummod	_	_
-9	weeks	week	NOUN	NNS	Number=Plur	7	obj	_	_
-10	on	on	ADP	IN	_	13	case	_	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
-12	CPM	CPM	PROPN	NNP	Number=Sing	13	compound	_	_
-13	machine	machine	NOUN	NN	Number=Sing	7	obl	_	_
-14	–	–	PUNCT	:	_	19	punct	_	_
-15	what	what	PRON	WP	PronType=Int	19	nsubj	_	_
-16	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	19	cop	_	_
-17	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	_	_
-18	CPM	CPM	PROPN	NNP	Number=Sing	19	compound	_	_
-19	machine	machine	NOUN	NN	Number=Sing	7	advcl	_	_
-20	?	?	PUNCT	.	_	7	punct	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	2	nsubj	_	_
+2	spent	spend	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+3	eleven	eleven	NUM	CD	NumType=Card	4	nummod	_	_
+4	weeks	week	NOUN	NNS	Number=Plur	2	obj	_	_
+5	on	on	ADP	IN	_	8	case	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
+7	CPM	CPM	PROPN	NNP	Number=Sing	8	compound	_	_
+8	machine	machine	NOUN	NN	Number=Sing	2	obl	_	_
+9	–	–	PUNCT	:	_	14	punct	_	_
+10	what	what	PRON	WP	PronType=Int	14	nsubj	_	_
+11	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	_	_
+12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
+13	CPM	CPM	PROPN	NNP	Number=Sing	14	compound	_	_
+14	machine	machine	NOUN	NN	Number=Sing	2	parataxis	_	_
+15	?	?	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	Amanda	Amanda	PROPN	NNP	Number=Sing	0	root	_	_

@@ -23,7 +23,9 @@
 4	8	8	NUM	CD	NumType=Card	1	appos	_	_
 5	,	,	PUNCT	,	_	6	punct	_	_
 6	2008	@card@	NUM	CD	NumType=Card	4	nmod:tmod	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = imp
 1	Contribute	Contribute	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -131,9 +133,11 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	Michael	Michael	PROPN	NNP	Number=Sing	1	flat	_	_
-3	McCarthy	McCarthy	PROPN	NNP	Number=Sing	1	flat	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Michael	Michael	PROPN	NNP	Number=Sing	0	root	_	_
+2	McCarthy	McCarthy	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -153,23 +157,25 @@
 15	5	5	NUM	CD	NumType=Card	12	appos	_	_
 16	,	,	PUNCT	,	_	17	punct	_	_
 17	2008	@card@	NUM	CD	NumType=Card	15	nmod:tmod	_	_
-18	"	"	PUNCT	``	_	19	punct	_	_
-19	Glimmer	Glimmer	PROPN	NNP	Number=Sing	12	appos	_	_
-20	of	of	ADP	IN	_	21	case	_	_
-21	hope	hope	NOUN	NN	Number=Sing	19	nmod	_	_
-22	for	for	ADP	IN	_	24	case	_	_
-23	rare	rare	ADJ	JJ	Degree=Pos	24	amod	_	_
-24	monkey	monkey	NOUN	NN	Number=Sing	19	nmod	_	_
-25	"	"	PUNCT	''	_	24	punct	_	_
-26	—	—	PUNCT	:	_	29	punct	_	_
-27	BBC	BBC	PROPN	NNP	Number=Sing	29	compound	_	_
-28	News	News	PROPN	NNP	Number=Sing	29	compound	_	_
-29	Online	online	PROPN	NNP	Number=Sing	24	appos	_	_
-30	,	,	PUNCT	,	_	32	punct	_	_
-31	December	December	PROPN	NNP	Number=Sing	32	compound	_	_
-32	7	7	NUM	CD	NumType=Card	29	appos	_	_
-33	,	,	PUNCT	,	_	34	punct	_	_
-34	2008	@card@	NUM	CD	NumType=Card	32	nmod:tmod	_	_
+
+# s_type = frag
+1	"	"	PUNCT	``	_	2	punct	_	_
+2	Glimmer	Glimmer	NOUN	NN	Number=Sing	0	root	_	_
+3	of	of	ADP	IN	_	4	case	_	_
+4	hope	hope	NOUN	NN	Number=Sing	2	nmod	_	_
+5	for	for	ADP	IN	_	7	case	_	_
+6	rare	rare	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	monkey	monkey	NOUN	NN	Number=Sing	4	nmod	_	_
+8	"	"	PUNCT	''	_	2	punct	_	_
+9	—	—	PUNCT	:	_	12	punct	_	_
+10	BBC	BBC	PROPN	NNP	Number=Sing	12	compound	_	_
+11	News	News	PROPN	NNP	Number=Sing	12	compound	_	_
+12	Online	online	PROPN	NNP	Number=Sing	2	appos	_	_
+13	,	,	PUNCT	,	_	15	punct	_	_
+14	December	December	PROPN	NNP	Number=Sing	15	compound	_	_
+15	7	7	NUM	CD	NumType=Card	12	appos	_	_
+16	,	,	PUNCT	,	_	17	punct	_	_
+17	2008	@card@	NUM	CD	NumType=Card	15	nmod:tmod	_	_
 
 # s_type = decl
 1	India	India	PROPN	NNP	Number=Sing	2	nsubj	_	_
@@ -180,39 +186,41 @@
 6	stimulus	stimulus	NOUN	NN	Number=Sing	7	compound	_	_
 7	package	package	NOUN	NN	Number=Sing	2	obj	_	_
 
+# s_type = frag
+1	India	India	PROPN	NNP	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	India	India	PROPN	NNP	Number=Sing	3	nsubj	_	_
-2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	_	_
-3	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-4	that	that	SCONJ	IN	_	7	mark	_	_
-5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	7	nsubj	_	_
-6	will	will	AUX	MD	VerbForm=Fin	7	aux	_	_
-7	release	release	VERB	VB	VerbForm=Inf	3	ccomp	_	_
-8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
-9	stimulus	stimulus	NOUN	NN	Number=Sing	10	compound	_	_
-10	package	package	NOUN	NN	Number=Sing	7	obj	_	_
-11	worth	worth	ADJ	JJ	Degree=Pos	10	amod	_	_
-12	$	$	SYM	SYM	_	10	compound	_	_
-13	4	4	NUM	CD	NumType=Card	14	nummod	_	_
-14	billion	billion	NOUN	NN	Number=Sing	12	compound	_	_
-15	,	,	PUNCT	,	_	19	punct	_	_
-16	or	or	CCONJ	CC	_	19	cc	_	_
-17	200	@card@	NUM	CD	NumType=Card	19	nummod	_	_
-18	billion	billion	NOUN	NN	Number=Sing	19	compound	_	_
-19	rupees	rupee	NOUN	NNS	Number=Plur	12	conj	_	_
-20	,	,	PUNCT	,	_	22	punct	_	_
-21	to	to	PART	TO	_	22	mark	_	_
-22	help	help	VERB	VB	VerbForm=Inf	7	advcl	_	_
-23	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	24	nmod:poss	_	_
-24	economy	economy	NOUN	NN	Number=Sing	22	obj	_	_
-25	,	,	PUNCT	,	_	31	punct	_	_
-26	as	as	SCONJ	IN	_	31	mark	_	_
-27	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
-28	global	global	ADJ	JJ	Degree=Pos	30	amod	_	_
-29	economic	economic	ADJ	JJ	Degree=Pos	30	amod	_	_
-30	slowdown	slowdown	NOUN	NN	Number=Sing	31	nsubj	_	_
-31	continues	continue	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	advcl	_	_
-32	.	.	PUNCT	.	_	3	punct	_	_
+1	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	aux	_	_
+2	announced	announce	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+3	that	that	SCONJ	IN	_	6	mark	_	_
+4	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	_
+5	will	will	AUX	MD	VerbForm=Fin	6	aux	_	_
+6	release	release	VERB	VB	VerbForm=Inf	2	ccomp	_	_
+7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
+8	stimulus	stimulus	NOUN	NN	Number=Sing	9	compound	_	_
+9	package	package	NOUN	NN	Number=Sing	6	obj	_	_
+10	worth	worth	ADJ	JJ	Degree=Pos	9	amod	_	_
+11	$	$	SYM	SYM	_	9	compound	_	_
+12	4	4	NUM	CD	NumType=Card	13	nummod	_	_
+13	billion	billion	NOUN	NN	Number=Sing	11	compound	_	_
+14	,	,	PUNCT	,	_	18	punct	_	_
+15	or	or	CCONJ	CC	_	18	cc	_	_
+16	200	@card@	NUM	CD	NumType=Card	18	nummod	_	_
+17	billion	billion	NOUN	NN	Number=Sing	18	compound	_	_
+18	rupees	rupee	NOUN	NNS	Number=Plur	11	conj	_	_
+19	,	,	PUNCT	,	_	21	punct	_	_
+20	to	to	PART	TO	_	21	mark	_	_
+21	help	help	VERB	VB	VerbForm=Inf	6	advcl	_	_
+22	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	_	_
+23	economy	economy	NOUN	NN	Number=Sing	21	obj	_	_
+24	,	,	PUNCT	,	_	30	punct	_	_
+25	as	as	SCONJ	IN	_	30	mark	_	_
+26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	_	_
+27	global	global	ADJ	JJ	Degree=Pos	29	amod	_	_
+28	economic	economic	ADJ	JJ	Degree=Pos	29	amod	_	_
+29	slowdown	slowdown	NOUN	NN	Number=Sing	30	nsubj	_	_
+30	continues	continue	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	advcl	_	_
+31	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	_	_
@@ -302,24 +310,26 @@
 21	dead	dead	ADJ	JJ	Degree=Pos	16	xcomp	_	_
 22	.	.	PUNCT	.	_	8	punct	_	_
 
+# s_type = frag
+1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Sources	Sources	NOUN	NNS	Number=Plur	4	nsubj	_	_
-2	"	"	PUNCT	``	_	4	punct	_	_
-3	India	India	PROPN	NNP	Number=Sing	4	nsubj	_	_
-4	unveils	unveil	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-5	$4bn	$4bn	PROPN	NNP	Number=Sing	7	compound	_	_
-6	stimulus	stimulus	NOUN	NN	Number=Sing	7	compound	_	_
-7	plan	plan	NOUN	NN	Number=Sing	4	obj	_	_
-8	"	"	PUNCT	''	_	7	punct	_	_
-9	—	—	PUNCT	:	_	12	punct	_	_
-10	BBC	BBC	PROPN	NNP	Number=Sing	12	compound	_	_
-11	News	News	PROPN	NNP	Number=Sing	12	compound	_	_
-12	Online	online	PROPN	NNP	Number=Sing	7	appos	_	_
-13	,	,	PUNCT	,	_	15	punct	_	_
-14	December	December	PROPN	NNP	Number=Sing	15	compound	_	_
-15	7	7	NUM	CD	NumType=Card	12	appos	_	_
-16	,	,	PUNCT	,	_	17	punct	_	_
-17	2008	@card@	NUM	CD	NumType=Card	15	nmod:tmod	_	_
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	India	India	PROPN	NNP	Number=Sing	3	nsubj	_	_
+3	unveils	unveil	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	$4bn	$4bn	PROPN	NNP	Number=Sing	6	compound	_	_
+5	stimulus	stimulus	NOUN	NN	Number=Sing	6	compound	_	_
+6	plan	plan	NOUN	NN	Number=Sing	3	obj	_	_
+7	"	"	PUNCT	''	_	6	punct	_	_
+8	—	—	PUNCT	:	_	11	punct	_	_
+9	BBC	BBC	PROPN	NNP	Number=Sing	11	compound	_	_
+10	News	News	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Online	online	PROPN	NNP	Number=Sing	6	appos	_	_
+12	,	,	PUNCT	,	_	14	punct	_	_
+13	December	December	PROPN	NNP	Number=Sing	14	compound	_	_
+14	7	7	NUM	CD	NumType=Card	11	appos	_	_
+15	,	,	PUNCT	,	_	16	punct	_	_
+16	2008	@card@	NUM	CD	NumType=Card	14	nmod:tmod	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -475,39 +485,43 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	"	"	PUNCT	``	_	4	punct	_	_
-3	'	'	PUNCT	``	_	4	punct	_	_
-4	Turnout	turnout	NOUN	NN	Number=Sing	1	appos	_	_
-5	high	high	ADJ	JJ	Degree=Pos	4	amod	_	_
-6	'	'	PUNCT	''	_	4	punct	_	_
-7	in	in	ADP	IN	_	9	case	_	_
-8	Ghana	Ghana	PROPN	NNP	Number=Sing	9	compound	_	_
-9	elections	election	NOUN	NNS	Number=Plur	1	nmod	_	_
-10	"	"	PUNCT	''	_	9	punct	_	_
-11	—	—	PUNCT	:	_	14	punct	_	_
-12	BBC	BBC	PROPN	NNP	Number=Sing	14	compound	_	_
-13	News	News	PROPN	NNP	Number=Sing	14	compound	_	_
-14	Online	online	PROPN	NNP	Number=Sing	1	appos	_	_
-15	,	,	PUNCT	,	_	17	punct	_	_
-16	December	December	PROPN	NNP	Number=Sing	17	compound	_	_
-17	7	7	NUM	CD	NumType=Card	14	appos	_	_
-18	,	,	PUNCT	,	_	19	punct	_	_
-19	2008	@card@	NUM	CD	NumType=Card	17	nmod:tmod	_	_
-20	"	"	PUNCT	``	_	22	punct	_	_
-21	Mass	Mass	PROPN	NNP	Number=Sing	22	compound	_	_
-22	turnout	turnout	NOUN	NN	Number=Sing	14	appos	_	_
-23	in	in	ADP	IN	_	25	case	_	_
-24	Ghana	Ghana	PROPN	NNP	Number=Sing	25	compound	_	_
-25	elections	election	NOUN	NNS	Number=Plur	22	nmod	_	_
-26	"	"	PUNCT	''	_	22	punct	_	_
-27	—	—	PUNCT	:	_	29	punct	_	_
-28	Press	Press	PROPN	NNP	Number=Sing	29	compound	_	_
-29	TV	TV	PROPN	NNP	Number=Sing	1	appos	_	_
-30	,	,	PUNCT	,	_	32	punct	_	_
-31	December	December	PROPN	NNP	Number=Sing	32	compound	_	_
-32	7	7	NUM	CD	NumType=Card	29	appos	_	_
-33	,	,	PUNCT	,	_	34	punct	_	_
-34	2008	@card@	NUM	CD	NumType=Card	32	nmod:tmod	_	_
+
+# s_type = decl
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	'	'	PUNCT	``	_	3	punct	_	_
+3	Turnout	turnout	NOUN	NN	Number=Sing	4	nsubj	_	_
+4	high	high	ADJ	JJ	Degree=Pos	0	root	_	_
+5	'	'	PUNCT	''	_	3	punct	_	_
+6	in	in	ADP	IN	_	8	case	_	_
+7	Ghana	Ghana	PROPN	NNP	Number=Sing	8	compound	_	_
+8	elections	election	NOUN	NNS	Number=Plur	4	obl	_	_
+9	"	"	PUNCT	''	_	8	punct	_	_
+10	—	—	PUNCT	:	_	13	punct	_	_
+11	BBC	BBC	PROPN	NNP	Number=Sing	13	compound	_	_
+12	News	News	PROPN	NNP	Number=Sing	13	compound	_	_
+13	Online	online	PROPN	NNP	Number=Sing	8	appos	_	_
+14	,	,	PUNCT	,	_	16	punct	_	_
+15	December	December	PROPN	NNP	Number=Sing	16	compound	_	_
+16	7	7	NUM	CD	NumType=Card	13	appos	_	_
+17	,	,	PUNCT	,	_	18	punct	_	_
+18	2008	@card@	NUM	CD	NumType=Card	16	nmod:tmod	_	_
+
+# s_type = frag
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	Mass	Mass	NOUN	NN	Number=Sing	3	compound	_	_
+3	turnout	turnout	NOUN	NN	Number=Sing	0	root	_	_
+4	in	in	ADP	IN	_	6	case	_	_
+5	Ghana	Ghana	PROPN	NNP	Number=Sing	6	compound	_	_
+6	elections	election	NOUN	NNS	Number=Plur	3	nmod	_	_
+7	"	"	PUNCT	''	_	3	punct	_	_
+8	—	—	PUNCT	:	_	10	punct	_	_
+9	Press	Press	PROPN	NNP	Number=Sing	10	compound	_	_
+10	TV	TV	PROPN	NNP	Number=Sing	3	appos	_	_
+11	,	,	PUNCT	,	_	13	punct	_	_
+12	December	December	PROPN	NNP	Number=Sing	13	compound	_	_
+13	7	7	NUM	CD	NumType=Card	10	appos	_	_
+14	,	,	PUNCT	,	_	15	punct	_	_
+15	2008	@card@	NUM	CD	NumType=Card	13	nmod:tmod	_	_
 
 # s_type = decl
 1	Sudan	Sudan	PROPN	NNP	Number=Sing	2	nsubj	_	_
@@ -637,41 +651,45 @@
 24	year	year	NOUN	NN	Number=Sing	21	nmod	_	_
 25	.	.	PUNCT	.	_	7	punct	_	_
 
+# s_type = frag
+1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	Sudan	Sudan	PROPN	NNP	Number=Sing	3	compound	_	_
+3	build-up	build-up	NOUN	NN	Number=Sing	0	root	_	_
+4	in	in	ADP	IN	_	6	case	_	_
+5	oil-rich	oil-rich	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	state	state	NOUN	NN	Number=Sing	3	nmod	_	_
+7	"	"	PUNCT	''	_	3	punct	_	_
+8	—	—	PUNCT	:	_	11	punct	_	_
+9	BBC	BBC	PROPN	NNP	Number=Sing	11	compound	_	_
+10	News	News	PROPN	NNP	Number=Sing	11	compound	_	_
+11	Online	online	PROPN	NNP	Number=Sing	3	appos	_	_
+12	,	,	PUNCT	,	_	14	punct	_	_
+13	December	December	PROPN	NNP	Number=Sing	14	compound	_	_
+14	7	7	NUM	CD	NumType=Card	11	appos	_	_
+15	,	,	PUNCT	,	_	16	punct	_	_
+16	2008	@card@	NUM	CD	NumType=Card	14	nmod:tmod	_	_
+
 # s_type = decl
-1	Sources	Sources	NOUN	NNS	Number=Plur	20	nsubj	_	_
-2	"	"	PUNCT	``	_	4	punct	_	_
-3	Sudan	Sudan	PROPN	NNP	Number=Sing	4	compound	_	_
-4	build-up	build-up	NOUN	NN	Number=Sing	1	appos	_	_
-5	in	in	ADP	IN	_	7	case	_	_
-6	oil-rich	oil-rich	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	state	state	NOUN	NN	Number=Sing	4	nmod	_	_
-8	"	"	PUNCT	''	_	4	punct	_	_
-9	—	—	PUNCT	:	_	12	punct	_	_
-10	BBC	BBC	PROPN	NNP	Number=Sing	12	compound	_	_
-11	News	News	PROPN	NNP	Number=Sing	12	compound	_	_
-12	Online	online	PROPN	NNP	Number=Sing	1	appos	_	_
+1	"	"	PUNCT	``	_	3	punct	_	_
+2	Sudan	Sudan	PROPN	NNP	Number=Sing	3	nsubj	_	_
+3	builds	build	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	up	up	ADP	RP	_	3	compound:prt	_	_
+5	troops	troop	NOUN	NNS	Number=Plur	3	obj	_	_
+6	in	in	ADP	IN	_	8	case	_	_
+7	oil	oil	NOUN	NN	Number=Sing	8	compound	_	_
+8	region	region	NOUN	NN	Number=Sing	5	nmod	_	_
+9	"	"	PUNCT	''	_	3	punct	_	_
+10	—	—	PUNCT	:	_	12	punct	_	_
+11	Welt	Welt	PROPN	NNP	Number=Sing	12	compound	_	_
+12	Online	online	PROPN	NNP	Number=Sing	8	appos	_	_
 13	,	,	PUNCT	,	_	15	punct	_	_
 14	December	December	PROPN	NNP	Number=Sing	15	compound	_	_
 15	7	7	NUM	CD	NumType=Card	12	appos	_	_
 16	,	,	PUNCT	,	_	17	punct	_	_
-17	2008	@card@	NUM	CD	NumType=Card	14	nmod:tmod	_	_
-18	"	"	PUNCT	''	_	15	punct	_	_
-19	Sudan	Sudan	PROPN	NNP	Number=Sing	20	nsubj	_	_
-20	builds	build	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-21	up	up	ADP	RP	_	20	compound:prt	_	_
-22	troops	troop	NOUN	NNS	Number=Plur	20	obj	_	_
-23	in	in	ADP	IN	_	25	case	_	_
-24	oil	oil	NOUN	NN	Number=Sing	25	compound	_	_
-25	region	region	NOUN	NN	Number=Sing	22	nmod	_	_
-26	"	"	PUNCT	''	_	25	punct	_	_
-27	—	—	PUNCT	:	_	29	punct	_	_
-28	Welt	Welt	PROPN	NNP	Number=Sing	29	compound	_	_
-29	Online	online	PROPN	NNP	Number=Sing	25	appos	_	_
-30	,	,	PUNCT	,	_	32	punct	_	_
-31	December	December	PROPN	NNP	Number=Sing	32	compound	_	_
-32	7	7	NUM	CD	NumType=Card	29	appos	_	_
-33	,	,	PUNCT	,	_	34	punct	_	_
-34	2008	@card@	NUM	CD	NumType=Card	32	nmod:tmod	_	_
+17	2008	@card@	NUM	CD	NumType=Card	15	nmod:tmod	_	_
 
 # s_type = frag
 1	Walmart.com	Walmart.com	NOUN	NN	Number=Sing	0	root	_	_
@@ -821,10 +839,14 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Nicole	Nicole	PROPN	NNP	Number=Sing	1	dep	_	_
-4	Maestri	Maestri	PROPN	NNP	Number=Sing	3	flat	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	:	:	PUNCT	:	_	0	root	_	_
+
+# s_type = frag
+1	Nicole	Nicole	PROPN	NNP	Number=Sing	0	root	_	_
+2	Maestri	Maestri	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	3	punct	_	_
@@ -839,15 +861,17 @@
 10	Monday	Monday	PROPN	NNP	Number=Sing	3	obl	_	_
 11	"	"	PUNCT	''	_	3	punct	_	_
 12	—	—	PUNCT	:	_	13	punct	_	_
-13	Reuters.com	Reuters.com	PROPN	NNP	Number=Sing	5	conj	_	_
+13	Reuters.com	Reuters.com	PROPN	NNP	Number=Sing	3	parataxis	_	_
 14	,	,	PUNCT	,	_	16	punct	_	_
 15	Dec	Dec	PROPN	NNP	Number=Sing	16	compound	_	_
-16	7	7	NUM	CD	NumType=Card	13	appos	_	_
+16	7	7	NUM	CD	NumType=Card	3	obl	_	_
 17	,	,	PUNCT	,	_	18	punct	_	_
 18	2008	@card@	NUM	CD	NumType=Card	16	nmod:tmod	_	_
-19	Luigi	Luigi	PROPN	NNP	Number=Sing	20	compound	_	_
-20	Lugmayr	Lugmayr	PROPN	NNP	Number=Sing	16	nmod	_	_
-21	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	Luigi	Luigi	PROPN	NNP	Number=Sing	0	root	_	_
+2	Lugmayr	Lugmayr	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	"	"	PUNCT	``	_	4	punct	_	_

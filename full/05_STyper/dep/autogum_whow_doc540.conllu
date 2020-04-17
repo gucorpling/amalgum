@@ -95,9 +95,11 @@
 
 # s_type = frag
 1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
-2	Research	research	NOUN	NN	Number=Sing	1	dep	_	_
-3	thoroughly	thoroughly	ADV	RB	_	1	advmod	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = other
+1	Research	research	NOUN	NN	Number=Sing	2	nsubj	_	_
+2	thoroughly	thoroughly	ADV	RB	_	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = sub
 1	Although	although	SCONJ	IN	_	5	mark	_	_
@@ -562,15 +564,17 @@
 12	ruin	ruin	VERB	VB	VerbForm=Inf	10	acl	_	_
 13	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
 14	day	day	NOUN	NN	Number=Sing	12	obj	_	_
-15	!	!	PUNCT	.	_	18	punct	_	_
-16	Do	do	AUX	VB	VerbForm=Inf	18	aux	_	_
-17	n't	n't	PART	RB	Polarity=Neg	18	advmod	_	_
-18	nag	nag	VERB	VB	VerbForm=Inf	10	parataxis	_	_
-19	,	,	PUNCT	,	_	22	punct	_	_
-20	but	but	CCONJ	CC	_	22	cc	_	_
-21	be	be	AUX	VB	VerbForm=Inf	22	cop	_	_
-22	persistent	persistent	ADJ	JJ	Degree=Pos	18	conj	_	_
-23	.	.	PUNCT	.	_	10	punct	_	_
+15	!	!	PUNCT	.	_	10	punct	_	_
+
+# s_type = imp
+1	Do	do	AUX	VB	VerbForm=Inf	3	aux	_	_
+2	n't	n't	PART	RB	Polarity=Neg	3	advmod	_	_
+3	nag	nag	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+4	,	,	PUNCT	,	_	7	punct	_	_
+5	but	but	CCONJ	CC	_	7	cc	_	_
+6	be	be	AUX	VB	VerbForm=Inf	7	cop	_	_
+7	persistent	persistent	ADJ	JJ	Degree=Pos	3	conj	_	_
+8	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	Parents	parent	NOUN	NNS	Number=Plur	5	nsubj	_	_
@@ -1033,17 +1037,19 @@
 40	pet	pet	NOUN	NN	Number=Sing	37	nmod	_	_
 41	.	.	PUNCT	.	_	15	punct	_	_
 
-# s_type = decl
-1	Warnings	warning	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Remember	remember	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	never	never	ADV	RB	Polarity=Neg	2	advmod	_	_
-4	to	to	PART	TO	_	5	mark	_	_
-5	get	get	VERB	VB	VerbForm=Inf	2	xcomp	_	_
-6	bored	bore	VERB	VBN	Tense=Past|VerbForm=Part	5	xcomp	_	_
-7	of	of	ADP	IN	_	9	case	_	_
-8	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
-9	pets	pet	NOUN	NNS	Number=Plur	6	obl	_	_
-10	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Warnings	warning	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Remember	remember	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	never	never	ADV	RB	Polarity=Neg	1	advmod	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	get	get	VERB	VB	VerbForm=Inf	1	xcomp	_	_
+5	bored	bore	VERB	VBN	Tense=Past|VerbForm=Part	4	xcomp	_	_
+6	of	of	ADP	IN	_	8	case	_	_
+7	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
+8	pets	pet	NOUN	NNS	Number=Plur	5	obl	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = multiple
 1	Do	do	AUX	VB	VerbForm=Inf	3	aux	_	_

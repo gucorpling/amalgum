@@ -223,7 +223,7 @@
 7	,	,	PUNCT	,	_	8	punct	_	_
 8	promotion	promotion	NOUN	NN	Number=Sing	6	conj	_	_
 9	and	and	CCONJ	CC	_	10	cc	_	_
-10	sponsorship	sponsorship	NOUN	NN	Number=Sing	8	conj	_	_
+10	sponsorship	sponsorship	NOUN	NN	Number=Sing	6	conj	_	_
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	_	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
 13	powerful	powerful	ADJ	JJ	Degree=Pos	14	amod	_	_
@@ -238,12 +238,14 @@
 22	’s	's	PART	POS	_	21	case	_	_
 23	youth	youth	NOUN	NN	Number=Sing	19	obj	_	_
 24	.	.	PUNCT	.	_	14	punct	_	_
-25	—	—	PUNCT	:	_	27	punct	_	_
-26	WHO	who	PRON	WP	PronType=Rel	27	nsubj	_	_
-27	Director-General	Director-General	PROPN	NNP	Number=Sing	23	appos	_	_
-28	Dr.	Dr.	PROPN	NNP	Number=Sing	27	flat	_	_
-29	Margaret	Margaret	PROPN	NNP	Number=Sing	27	flat	_	_
-30	Chan	Chan	PROPN	NNP	Number=Sing	27	flat	_	_
+
+# s_type = decl
+1	—	—	PUNCT	:	_	3	punct	_	_
+2	WHO	who	PRON	WP	PronType=Rel	3	nsubj	_	_
+3	Director-General	Director-General	PROPN	NNP	Number=Sing	0	root	_	_
+4	Dr.	Dr.	PROPN	NNP	Number=Sing	3	flat	_	_
+5	Margaret	Margaret	PROPN	NNP	Number=Sing	3	flat	_	_
+6	Chan	Chan	PROPN	NNP	Number=Sing	3	flat	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	10	punct	_	_
@@ -460,35 +462,37 @@
 7	laws	law	NOUN	NNS	Number=Plur	4	obj	_	_
 8	.	.	PUNCT	.	_	4	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	BBC	BBC	PROPN	NNP	Number=Sing	2	compound	_	_
-2	News	News	PROPN	NNP	Number=Sing	3	nsubj	_	_
-3	compared	compare	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-4	this	this	PRON	DT	Number=Sing|PronType=Dem	3	obj	_	_
-5	to	to	ADP	TO	_	6	case	_	_
-6	Canada	Canada	PROPN	NNP	Number=Sing	3	obl	_	_
-7	,	,	PUNCT	,	_	14	punct	_	_
-8	where	where	SCONJ	WRB	PronType=Int	14	mark	_	_
-9	smoking	smok	VERB	VBG	VerbForm=Ger	10	amod	_	_
-10	levels	level	NOUN	NNS	Number=Plur	14	nsubj	_	_
-11	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	cop	_	_
-12	at	at	ADP	IN	_	14	case	_	_
-13	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	_	_
-14	lowest	low	ADJ	JJS	Degree=Sup	3	advcl	_	_
-15	in	in	ADP	IN	_	17	case	_	_
-16	40	@card@	NUM	CD	NumType=Card	17	nummod	_	_
-17	years	year	NOUN	NNS	Number=Plur	14	obl	_	_
-18	and	and	CCONJ	CC	_	21	cc	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	country	country	NOUN	NN	Number=Sing	21	nsubj	_	_
-21	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	_	_
-22	very	very	ADV	RB	_	23	advmod	_	_
-23	restrictive	restrictive	ADJ	JJ	Degree=Pos	24	amod	_	_
-24	laws	law	NOUN	NNS	Number=Plur	21	obj	_	_
-25	on	on	SCONJ	IN	_	26	mark	_	_
-26	smoking	smok	VERB	VBG	VerbForm=Ger	24	acl	_	_
-27	advertising	advertising	NOUN	NN	Number=Sing	26	obj	_	_
-28	.	.	PUNCT	.	_	3	punct	_	_
+2	News	news	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	compared	compare	VERB	VBN	Tense=Past|VerbForm=Part	12	advcl	_	_
+2	this	this	PRON	DT	Number=Sing|PronType=Dem	1	obj	_	_
+3	to	to	ADP	TO	_	4	case	_	_
+4	Canada	Canada	PROPN	NNP	Number=Sing	1	obl	_	_
+5	,	,	PUNCT	,	_	1	punct	_	_
+6	where	where	SCONJ	WRB	PronType=Int	12	mark	_	_
+7	smoking	smok	VERB	VBG	VerbForm=Ger	8	amod	_	_
+8	levels	level	NOUN	NNS	Number=Plur	12	nsubj	_	_
+9	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	cop	_	_
+10	at	at	ADP	IN	_	12	case	_	_
+11	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	_	_
+12	lowest	low	ADJ	JJS	Degree=Sup	0	root	_	_
+13	in	in	ADP	IN	_	15	case	_	_
+14	40	@card@	NUM	CD	NumType=Card	15	nummod	_	_
+15	years	year	NOUN	NNS	Number=Plur	12	obl	_	_
+16	and	and	CCONJ	CC	_	19	cc	_	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
+18	country	country	NOUN	NN	Number=Sing	19	nsubj	_	_
+19	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	_	_
+20	very	very	ADV	RB	_	21	advmod	_	_
+21	restrictive	restrictive	ADJ	JJ	Degree=Pos	22	amod	_	_
+22	laws	law	NOUN	NNS	Number=Plur	19	obj	_	_
+23	on	on	SCONJ	IN	_	24	mark	_	_
+24	smoking	smok	VERB	VBG	VerbForm=Ger	22	acl	_	_
+25	advertising	advertising	NOUN	NN	Number=Sing	24	obj	_	_
+26	.	.	PUNCT	.	_	12	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
@@ -508,18 +512,20 @@
 15	addictive	addictive	ADJ	JJ	Degree=Pos	16	amod	_	_
 16	drug	drug	NOUN	NN	Number=Sing	12	obl	_	_
 17	.	.	PUNCT	.	_	4	punct	_	_
-18	—	—	PUNCT	:	_	19	punct	_	_
-19	Dr.	Dr.	PROPN	NNP	Number=Sing	4	dep	_	_
-20	Douglas	douglas	PROPN	NNP	Number=Sing	19	flat	_	_
-21	Bettcher	Bettcher	PROPN	NNP	Number=Sing	19	flat	_	_
-22	,	,	PUNCT	,	_	23	punct	_	_
-23	Director	Director	PROPN	NNP	Number=Sing	19	appos	_	_
-24	of	of	ADP	IN	_	29	case	_	_
-25	WHO	who	PRON	WP	PronType=Rel	29	nmod:poss	_	_
-26	's	's	PART	POS	_	25	case	_	_
-27	Tobacco	Tobacco	PROPN	NNP	Number=Sing	29	compound	_	_
-28	Free	free	ADJ	JJ	Degree=Pos	29	amod	_	_
-29	Initiative	Initiative	PROPN	NNP	Number=Sing	23	nmod	_	_
+
+# s_type = frag
+1	—	—	PUNCT	:	_	2	punct	_	_
+2	Dr.	Dr.	PROPN	NNP	Number=Sing	0	root	_	_
+3	Douglas	douglas	PROPN	NNP	Number=Sing	2	flat	_	_
+4	Bettcher	Bettcher	PROPN	NNP	Number=Sing	2	flat	_	_
+5	,	,	PUNCT	,	_	6	punct	_	_
+6	Director	Director	PROPN	NNP	Number=Sing	2	appos	_	_
+7	of	of	ADP	IN	_	12	case	_	_
+8	WHO	who	PRON	WP	PronType=Rel	12	nmod:poss	_	_
+9	's	's	PART	POS	_	8	case	_	_
+10	Tobacco	Tobacco	PROPN	NNP	Number=Sing	12	compound	_	_
+11	Free	free	ADJ	JJ	Degree=Pos	12	amod	_	_
+12	Initiative	Initiative	NOUN	NN	Number=Sing	6	nmod	_	_
 
 # s_type = frag
 1	"	"	PUNCT	``	_	0	root	_	_
@@ -630,31 +636,33 @@
 43	Turkey	Turkey	PROPN	NNP	Number=Sing	24	conj	_	_
 44	.	.	PUNCT	.	_	9	punct	_	_
 
+# s_type = frag
+1	Reuters	reuter	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Reuters	reuter	PROPN	NNPS	Number=Plur	2	nsubj	_	_
-2	reported	report	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-3	that	that	SCONJ	IN	_	23	mark	_	_
-4	companies	company	NOUN	NNS	Number=Plur	23	nsubj	_	_
-5	Philip	Philip	PROPN	NNP	Number=Sing	4	flat	_	_
-6	Morris	Morris	PROPN	NNP	Number=Sing	4	flat	_	_
-7	,	,	PUNCT	,	_	9	punct	_	_
-8	Imperial	Imperial	PROPN	NNP	Number=Sing	9	amod	_	_
-9	Tobacco	Tobacco	PROPN	NNP	Number=Sing	4	appos	_	_
-10	,	,	PUNCT	,	_	13	punct	_	_
-11	British	British	PROPN	NNP	Number=Sing	13	amod	_	_
-12	American	American	PROPN	NNP	Number=Sing	13	amod	_	_
-13	Tobacco	Tobacco	PROPN	NNP	Number=Sing	4	appos	_	_
-14	and	and	CCONJ	CC	_	16	cc	_	_
-15	Japan	Japan	PROPN	NNP	Number=Sing	16	compound	_	_
-16	Tobacco	Tobacco	PROPN	NNP	Number=Sing	4	conj	_	_
-17	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	23	cop	_	_
-18	among	among	ADP	IN	_	23	case	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	world	world	NOUN	NN	Number=Sing	23	nmod:poss	_	_
-21	's	's	PART	POS	_	20	case	_	_
-22	largest	large	ADJ	JJS	Degree=Sup	23	amod	_	_
-23	producers	producer	NOUN	NNS	Number=Plur	2	ccomp	_	_
-24	of	of	ADP	IN	_	25	case	_	_
-25	cigarettes	cigarette	NOUN	NNS	Number=Plur	23	nmod	_	_
-26	.	.	PUNCT	.	_	2	punct	_	_
+1	reported	report	VERB	VBN	Tense=Past|VerbForm=Part	22	csubj	_	_
+2	that	that	DET	DT	Number=Sing|PronType=Dem	3	det	_	_
+3	companies	company	NOUN	NNS	Number=Plur	1	obj	_	_
+4	Philip	Philip	PROPN	NNP	Number=Sing	3	appos	_	_
+5	Morris	Morris	PROPN	NNP	Number=Sing	4	flat	_	_
+6	,	,	PUNCT	,	_	8	punct	_	_
+7	Imperial	Imperial	PROPN	NNP	Number=Sing	8	amod	_	_
+8	Tobacco	Tobacco	PROPN	NNP	Number=Sing	3	appos	_	_
+9	,	,	PUNCT	,	_	12	punct	_	_
+10	British	British	PROPN	NNP	Number=Sing	12	amod	_	_
+11	American	American	PROPN	NNP	Number=Sing	12	amod	_	_
+12	Tobacco	Tobacco	PROPN	NNP	Number=Sing	4	conj	_	_
+13	and	and	CCONJ	CC	_	15	cc	_	_
+14	Japan	Japan	PROPN	NNP	Number=Sing	15	compound	_	_
+15	Tobacco	Tobacco	PROPN	NNP	Number=Sing	8	conj	_	_
+16	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	cop	_	_
+17	among	among	ADP	IN	_	22	case	_	_
+18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	_	_
+19	world	world	NOUN	NN	Number=Sing	22	nmod:poss	_	_
+20	's	's	PART	POS	_	19	case	_	_
+21	largest	large	ADJ	JJS	Degree=Sup	22	amod	_	_
+22	producers	producer	NOUN	NNS	Number=Plur	0	root	_	_
+23	of	of	ADP	IN	_	24	case	_	_
+24	cigarettes	cigarette	NOUN	NNS	Number=Plur	22	nmod	_	_
+25	.	.	PUNCT	.	_	22	punct	_	_
 

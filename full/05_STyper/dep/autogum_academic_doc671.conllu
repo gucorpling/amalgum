@@ -310,8 +310,8 @@
 16	Nash	Nash	PROPN	NNP	Number=Sing	15	flat	_	_
 17	’s	's	PART	POS	_	15	case	_	_
 18	question	question	NOUN	NN	Number=Sing	14	obj	_	_
-19	,	,	PUNCT	,	_	21	punct	_	_
-20	“	"	PUNCT	``	_	21	punct	_	_
+19	,	,	PUNCT	,	_	14	punct	_	_
+20	“	"	PUNCT	``	_	27	punct	_	_
 21	Who	who	PRON	WP	PronType=Rel	27	nsubj	_	_
 22	,	,	PUNCT	,	_	21	punct	_	_
 23	or	or	CCONJ	CC	_	24	cc	_	_
@@ -322,7 +322,7 @@
 28	Smith	Smith	PROPN	NNP	Number=Sing	27	flat	_	_
 29	?	?	PUNCT	.	_	27	punct	_	_
 30	”	"	PUNCT	''	_	27	punct	_	_
-31	3	3	NUM	CD	NumType=Card	27	dep	_	_
+31	3	3	NUM	CD	NumType=Card	27	nummod	_	_
 32	in	in	ADP	IN	_	34	case	_	_
 33	real	real	ADJ	JJ	Degree=Pos	34	amod	_	_
 34	earnest	earnest	NOUN	NN	Number=Sing	31	nmod	_	_
@@ -335,39 +335,41 @@
 41	,	,	PUNCT	,	_	47	punct	_	_
 42	as	as	SCONJ	IN	_	47	mark	_	_
 43	the	the	DET	DT	Definite=Def|PronType=Art	44	det	_	_
-44	poet	poet	NOUN	NN	Number=Sing	47	nsubj	_	_
-45	Jonathan	Jonathan	PROPN	NNP	Number=Sing	44	appos	_	_
+44	poet	poet	NOUN	NN	Number=Sing	45	compound	_	_
+45	Jonathan	Jonathan	PROPN	NNP	Number=Sing	47	nsubj	_	_
 46	Williams	Williams	PROPN	NNP	Number=Sing	45	flat	_	_
 47	discovered	discover	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	38	advcl	_	_
-48	:	:	PUNCT	:	_	50	punct	_	_
-49	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	50	nsubj	_	_
-50	remember	remember	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	47	parataxis	_	_
-51	once	once	SCONJ	IN	_	52	mark	_	_
-52	picking	picking	VERB	VBG	VerbForm=Ger	50	advcl	_	_
-53	up	up	ADP	RP	_	52	compound:prt	_	_
-54	a	a	DET	DT	Definite=Ind|PronType=Art	55	det	_	_
-55	copy	copy	NOUN	NN	Number=Sing	52	obj	_	_
-56	of	of	ADP	IN	_	60	case	_	_
-57	a	a	DET	DT	Definite=Ind|PronType=Art	60	det	_	_
-58	faded	fade	VERB	VBN	Tense=Past|VerbForm=Part	60	amod	_	_
-59	blue	blue	ADJ	JJ	Degree=Pos	60	amod	_	_
-60	book	book	NOUN	NN	Number=Sing	55	nmod	_	_
-61	of	of	ADP	IN	_	62	case	_	_
-62	poems	poem	NOUN	NNS	Number=Plur	60	nmod	_	_
-63	from	from	ADP	IN	_	65	case	_	_
-64	the	the	DET	DT	Definite=Def|PronType=Art	65	det	_	_
-65	thirties	thirty	NOUN	NNS	Number=Plur	62	nmod	_	_
-66	in	in	ADP	IN	_	70	case	_	_
-67	Bertram	Bertram	PROPN	NNP	Number=Sing	70	nmod:poss	_	_
-68	Rota	Rota	PROPN	NNP	Number=Sing	70	nmod:poss	_	_
-69	’s	's	PART	POS	_	67	case	_	_
-70	bookshop	bookshop	NOUN	NN	Number=Sing	65	nmod	_	_
-71	in	in	ADP	IN	_	73	case	_	_
-72	Vigo	Vigo	PROPN	NNP	Number=Sing	73	compound	_	_
-73	Street	Street	PROPN	NNP	Number=Sing	70	nmod	_	_
-74	,	,	PUNCT	,	_	75	punct	_	_
-75	London	London	PROPN	NNP	Number=Sing	73	appos	_	_
-76	.	.	PUNCT	.	_	38	punct	_	_
+48	:	:	PUNCT	:	_	38	punct	_	_
+
+# s_type = decl
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
+2	remember	remember	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	once	once	SCONJ	IN	_	4	mark	_	_
+4	picking	picking	VERB	VBG	VerbForm=Ger	2	advcl	_	_
+5	up	up	ADP	RP	_	4	compound:prt	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+7	copy	copy	NOUN	NN	Number=Sing	4	obj	_	_
+8	of	of	ADP	IN	_	12	case	_	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
+10	faded	fade	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	_	_
+11	blue	blue	ADJ	JJ	Degree=Pos	12	amod	_	_
+12	book	book	NOUN	NN	Number=Sing	7	nmod	_	_
+13	of	of	ADP	IN	_	14	case	_	_
+14	poems	poem	NOUN	NNS	Number=Plur	12	nmod	_	_
+15	from	from	ADP	IN	_	17	case	_	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
+17	thirties	thirty	NOUN	NNS	Number=Plur	4	obl	_	_
+18	in	in	ADP	IN	_	22	case	_	_
+19	Bertram	Bertram	PROPN	NNP	Number=Sing	20	compound	_	_
+20	Rota	Rota	PROPN	NNP	Number=Sing	22	nmod:poss	_	_
+21	’s	's	PART	POS	_	20	case	_	_
+22	bookshop	bookshop	NOUN	NN	Number=Sing	17	nmod	_	_
+23	in	in	ADP	IN	_	25	case	_	_
+24	Vigo	Vigo	PROPN	NNP	Number=Sing	25	compound	_	_
+25	Street	Street	PROPN	NNP	Number=Sing	22	nmod	_	_
+26	,	,	PUNCT	,	_	27	punct	_	_
+27	London	London	PROPN	NNP	Number=Sing	25	appos	_	_
+28	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = wh
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -440,7 +442,7 @@
 8	Brighton	Brighton	PROPN	NNP	Number=Sing	9	compound	_	_
 9	beach	beach	NOUN	NN	Number=Sing	6	nmod	_	_
 10	,	,	PUNCT	,	_	11	punct	_	_
-11	Amy	Amy	PROPN	NNP	Number=Sing	19	nsubj	_	_
+11	Amy	Amy	PROPN	NNP	Number=Sing	9	appos	_	_
 12	Jenkins	Jenkins	PROPN	NNP	Number=Sing	11	flat	_	_
 13	,	,	PUNCT	,	_	14	punct	_	_
 14	writing	write	VERB	VBG	VerbForm=Ger	11	acl	_	_
@@ -457,15 +459,17 @@
 25	her	her	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	_	_
 26	final	final	ADJ	JJ	Degree=Pos	27	amod	_	_
 27	decade	decade	NOUN	NN	Number=Sing	23	nmod	_	_
-28	:	:	PUNCT	:	_	31	punct	_	_
-29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
-30	patriarchy	patriarchy	NOUN	NN	Number=Sing	31	nsubj	_	_
-31	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	19	parataxis	_	_
-32	her	her	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	31	obj	_	_
-33	in	in	ADP	IN	_	35	case	_	_
-34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	_	_
-35	end	end	NOUN	NN	Number=Sing	31	obl	_	_
-36	.	.	PUNCT	.	_	19	punct	_	_
+28	:	:	PUNCT	:	_	19	punct	_	_
+
+# s_type = decl
+1	the	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
+2	patriarchy	patriarchy	NOUN	NN	Number=Sing	3	nsubj	_	_
+3	got	get	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+4	her	her	PRON	PRP	Case=Acc|Gender=Fem|Number=Sing|Person=3|PronType=Prs	3	obj	_	_
+5	in	in	ADP	IN	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	end	end	NOUN	NN	Number=Sing	3	obl	_	_
+8	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	In	in	ADP	IN	_	3	case	_	_

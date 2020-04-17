@@ -1,14 +1,16 @@
-# s_type = decl
+# s_type = frag
 1	Johnson	Johnson	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	6	punct	_	_
-3	Well	well	INTJ	UH	_	6	discourse	_	_
-4	,	,	PUNCT	,	_	3	punct	_	_
-5	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	_	_
-6	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
-7	libertarians	libertarian	NOUN	NNS	Number=Plur	8	nsubj	_	_
-8	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	ccomp	_	_
-9	libertarians	libertarian	NOUN	NNS	Number=Plur	8	obj	_	_
-10	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	5	punct	_	_
+2	Well	well	INTJ	UH	_	5	discourse	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+4	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	_	_
+5	think	think	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+6	libertarians	libertarian	NOUN	NNS	Number=Plur	7	nsubj	_	_
+7	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	ccomp	_	_
+8	libertarians	libertarian	NOUN	NNS	Number=Plur	7	obj	_	_
+9	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
@@ -91,28 +93,34 @@
 39	libertarian-leaning	libertarian-leaning	NOUN	NN	Number=Sing	36	obl	_	_
 40	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WSS	WSS	PROPN	NNP	Number=Sing	7	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	Well	well	INTJ	UH	_	7	discourse	_	_
-7	let	let	VERB	VB	VerbForm=Fin	9	csubj	_	_
-8	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	_	_
-9	say	say	VERB	VB	VerbForm=Inf	0	root	_	_
-10	someone	someone	NOUN	NN	Number=Sing	14	nsubj	_	_
-11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	cop	_	_
-12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
-13	libertarian-leaning	libertarian-leaning	ADJ	JJ	Degree=Pos	14	amod	_	_
-14	Republican	Republican	PROPN	NNP	Number=Sing	9	ccomp	_	_
-15	like	like	ADP	IN	_	16	case	_	_
-16	Rand	Rand	PROPN	NNP	Number=Sing	14	nmod	_	_
-17	Paul	Paul	PROPN	NNP	Number=Sing	16	flat	_	_
-18	in	in	ADP	IN	_	20	case	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
-20	Senate	Senate	PROPN	NNP	Number=Sing	16	nmod	_	_
-21	.	.	PUNCT	.	_	9	punct	_	_
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WSS	WSS	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
+# s_type = imp
+1	Well	well	INTJ	UH	_	2	discourse	_	_
+2	let	let	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+3	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	_	_
+4	say	say	VERB	VB	VerbForm=Inf	2	ccomp	_	_
+5	someone	someone	NOUN	NN	Number=Sing	9	nsubj	_	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
+7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
+8	libertarian-leaning	libertarian-leaning	ADJ	JJ	Degree=Pos	9	amod	_	_
+9	Republican	Republican	PROPN	NNP	Number=Sing	4	ccomp	_	_
+10	like	like	ADP	IN	_	11	case	_	_
+11	Rand	Rand	PROPN	NNP	Number=Sing	9	nmod	_	_
+12	Paul	Paul	PROPN	NNP	Number=Sing	11	flat	_	_
+13	in	in	ADP	IN	_	15	case	_	_
+14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
+15	Senate	Senate	PROPN	NNP	Number=Sing	11	nmod	_	_
+16	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	Should	should	AUX	MD	VerbForm=Fin	5	aux	_	_
@@ -212,104 +220,102 @@
 66	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	65	obj	_	_
 67	?	?	PUNCT	.	_	3	punct	_	_
 
-# s_type = other
+# s_type = frag
 1	Johnson	Johnson	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	4	punct	_	_
-3	Well	well	INTJ	UH	_	4	discourse	_	_
-4	yeah	yeah	INTJ	UH	_	1	parataxis	_	_
-5	,	,	PUNCT	,	_	12	punct	_	_
-6	because	because	SCONJ	IN	_	12	mark	_	_
-7	really	really	ADV	RB	_	8	advmod	_	_
-8	Republicans	Republicans	PROPN	NNPS	Number=Plur	12	nsubj	_	_
-9	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	12	cop	_	_
-10	n't	n't	PART	RB	Polarity=Neg	12	advmod	_	_
-11	small	small	ADJ	JJ	Degree=Pos	12	amod	_	_
-12	government	government	NOUN	NN	Number=Sing	1	advcl	_	_
-13	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	11	punct	_	_
+2	Well	well	INTJ	UH	_	3	discourse	_	_
+3	yeah	yeah	INTJ	UH	_	11	discourse	_	_
+4	,	,	PUNCT	,	_	3	punct	_	_
+5	because	because	SCONJ	IN	_	11	mark	_	_
+6	really	really	ADV	RB	_	11	advmod	_	_
+7	Republicans	Republicans	PROPN	NNPS	Number=Plur	11	nsubj	_	_
+8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	11	cop	_	_
+9	n't	n't	PART	RB	Polarity=Neg	11	advmod	_	_
+10	small	small	ADJ	JJ	Degree=Pos	11	amod	_	_
+11	government	government	NOUN	NN	Number=Sing	0	root	_	_
+12	.	.	PUNCT	.	_	11	punct	_	_
 
 # s_type = decl
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	2	nsubj	_	_
 2	mean	mean	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	_	_
-3	,	,	PUNCT	,	_	6	punct	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
 4	if	if	SCONJ	IN	_	6	mark	_	_
 5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
 6	go	go	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	advcl	_	_
 7	back	back	ADV	RB	_	6	advmod	_	_
 8	to	to	ADP	TO	_	12	case	_	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-10	[	[	PUNCT	-LSB-	_	12	punct	_	_
+10	[	[	PUNCT	-LSB-	_	11	punct	_	_
 11	Vice	vice	PROPN	NNP	Number=Sing	12	compound	_	_
-12	presidential	presidential	NOUN	NN	Number=Sing	6	obl	_	_
-13	]	]	PUNCT	-RSB-	_	12	punct	_	_
+12	presidential	presidential	ADJ	JJ	Degree=Pos	6	xcomp	_	_
+13	]	]	PUNCT	-RSB-	_	6	punct	_	_
 14	debate	debate	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	_	_
 16	other	other	ADJ	JJ	Degree=Pos	17	amod	_	_
 17	night	night	NOUN	NN	Number=Sing	14	obj	_	_
 18	between	between	ADP	IN	_	23	case	_	_
 19	[	[	PUNCT	-LSB-	_	20	punct	_	_
-20	Republican	Republican	PROPN	NNP	Number=Sing	23	compound	_	_
-21	vice	vice	NOUN	NN	Number=Sing	23	compound	_	_
+20	Republican	Republican	PROPN	NNP	Number=Sing	23	dep	_	_
+21	vice	vice	NOUN	NN	Number=Sing	20	flat	_	_
 22	presidential	presidential	ADJ	JJ	Degree=Pos	23	amod	_	_
-23	nominee	nominee	NOUN	NN	Number=Sing	24	compound	_	_
-24	Paul	Paul	PROPN	NNP	Number=Sing	14	obl	_	_
-25	]	]	PUNCT	-RSB-	_	24	punct	_	_
-
-# s_type = frag
-1	Ryan	Ryan	PROPN	NNP	Number=Sing	0	root	_	_
-2	and	and	CCONJ	CC	_	4	cc	_	_
-3	[	[	PUNCT	-LSB-	_	4	punct	_	_
-4	Vice	vice	PROPN	NNP	Number=Sing	1	dep	_	_
-5	president	president	NOUN	NN	Number=Sing	4	flat	_	_
-6	Joe	Joe	PROPN	NNP	Number=Sing	4	flat	_	_
-7	]	]	PUNCT	-RSB-	_	4	punct	_	_
-
-# s_type = decl
-1	Biden	Biden	PROPN	NNP	Number=Sing	4	nsubj	_	_
-2	,	,	PUNCT	,	_	1	punct	_	_
-3	Ryan	Ryan	PROPN	NNP	Number=Sing	4	nsubj	_	_
-4	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-5	toward	toward	ADP	IN	_	7	case	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	end	end	NOUN	NN	Number=Sing	4	obl	_	_
-8	of	of	ADP	IN	_	10	case	_	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-10	debate	debate	NOUN	NN	Number=Sing	7	nmod	_	_
-11	,	,	PUNCT	,	_	13	punct	_	_
-12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	_	_
-13	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	_	_
-14	,	,	PUNCT	,	_	17	punct	_	_
-15	hey	hey	INTJ	UH	_	17	discourse	_	_
-16	,	,	PUNCT	,	_	17	punct	_	_
-17	look	look	VERB	VBP	VerbForm=Fin	13	conj	_	_
-18	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	_	_
-19	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	20	aux	_	_
-20	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	17	ccomp	_	_
-21	to	to	PART	TO	_	22	mark	_	_
-22	increase	increase	VERB	VB	VerbForm=Inf	20	xcomp	_	_
-23	spending	spend	VERB	VBG	VerbForm=Ger	22	xcomp	_	_
-24	by	by	ADP	IN	_	26	case	_	_
-25	three	three	NUM	CD	NumType=Card	26	nummod	_	_
-26	percent	percent	NOUN	NN	Number=Sing	23	obl	_	_
-27	,	,	PUNCT	,	_	30	punct	_	_
-28	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	30	nsubj	_	_
-29	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	30	aux	_	_
-30	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	26	acl:relcl	_	_
-31	to	to	PART	TO	_	32	mark	_	_
-32	increase	increase	VERB	VB	VerbForm=Inf	30	xcomp	_	_
-33	spending	spend	VERB	VBG	VerbForm=Ger	32	xcomp	_	_
-34	by	by	ADP	IN	_	35	case	_	_
-35	four	four	NUM	CD	NumType=Card	33	obl	_	_
-36	and	and	CCONJ	CC	_	39	cc	_	_
-37	a	a	DET	DT	Definite=Ind|PronType=Art	39	det	_	_
-38	half	half	ADJ	JJ	Degree=Pos	39	amod	_	_
-39	percent	percent	NOUN	NN	Number=Sing	35	conj	_	_
-40	,	,	PUNCT	,	_	45	punct	_	_
-41	what	what	PRON	WP	PronType=Int	45	nsubj	_	_
-42	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	45	cop	_	_
-43	the	the	DET	DT	Definite=Def|PronType=Art	45	det	_	_
-44	big	big	ADJ	JJ	Degree=Pos	45	amod	_	_
-45	deal	deal	NOUN	NN	Number=Sing	32	ccomp	_	_
-46	?	?	PUNCT	.	_	4	punct	_	_
+23	nominee	nominee	NOUN	NN	Number=Sing	17	appos	_	_
+24	Paul	Paul	PROPN	NNP	Number=Sing	23	flat	_	_
+25	]	]	PUNCT	-RSB-	_	23	punct	_	_
+26	Ryan	Ryan	PROPN	NNP	Number=Sing	23	flat	_	_
+27	and	and	CCONJ	CC	_	29	cc	_	_
+28	[	[	PUNCT	-LSB-	_	29	punct	_	_
+29	Vice	vice	PROPN	NNP	Number=Sing	26	conj	_	_
+30	president	president	NOUN	NN	Number=Sing	29	flat	_	_
+31	Joe	Joe	PROPN	NNP	Number=Sing	29	flat	_	_
+32	]	]	PUNCT	-RSB-	_	29	punct	_	_
+33	Biden	Biden	PROPN	NNP	Number=Sing	29	dep	_	_
+34	,	,	PUNCT	,	_	29	punct	_	_
+35	Ryan	Ryan	PROPN	NNP	Number=Sing	36	nsubj	_	_
+36	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	conj	_	_
+37	toward	toward	ADP	IN	_	39	case	_	_
+38	the	the	DET	DT	Definite=Def|PronType=Art	39	det	_	_
+39	end	end	NOUN	NN	Number=Sing	36	obl	_	_
+40	of	of	ADP	IN	_	42	case	_	_
+41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	_	_
+42	debate	debate	NOUN	NN	Number=Sing	39	nmod	_	_
+43	,	,	PUNCT	,	_	45	punct	_	_
+44	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	45	nsubj	_	_
+45	goes	go	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	36	parataxis	_	_
+46	,	,	PUNCT	,	_	49	punct	_	_
+47	hey	hey	INTJ	UH	_	49	discourse	_	_
+48	,	,	PUNCT	,	_	49	punct	_	_
+49	look	look	VERB	VB	VerbForm=Fin	45	parataxis	_	_
+50	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	52	nsubj	_	_
+51	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	52	aux	_	_
+52	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	49	ccomp	_	_
+53	to	to	PART	TO	_	54	mark	_	_
+54	increase	increase	VERB	VB	VerbForm=Inf	52	xcomp	_	_
+55	spending	spend	VERB	VBG	VerbForm=Ger	54	xcomp	_	_
+56	by	by	ADP	IN	_	58	case	_	_
+57	three	three	NUM	CD	NumType=Card	58	nummod	_	_
+58	percent	percent	NOUN	NN	Number=Sing	55	obl	_	_
+59	,	,	PUNCT	,	_	62	punct	_	_
+60	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	62	nsubj	_	_
+61	're	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	62	aux	_	_
+62	going	go	VERB	VBG	Tense=Pres|VerbForm=Part	58	acl:relcl	_	_
+63	to	to	PART	TO	_	64	mark	_	_
+64	increase	increase	VERB	VB	VerbForm=Inf	62	xcomp	_	_
+65	spending	spend	VERB	VBG	VerbForm=Ger	64	xcomp	_	_
+66	by	by	ADP	IN	_	67	case	_	_
+67	four	four	NUM	CD	NumType=Card	65	obl	_	_
+68	and	and	CCONJ	CC	_	71	cc	_	_
+69	a	a	DET	DT	Definite=Ind|PronType=Art	71	det	_	_
+70	half	half	ADJ	JJ	Degree=Pos	71	amod	_	_
+71	percent	percent	NOUN	NN	Number=Sing	67	conj	_	_
+72	,	,	PUNCT	,	_	77	punct	_	_
+73	what	what	PRON	WP	PronType=Int	77	nsubj	_	_
+74	's	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	77	cop	_	_
+75	the	the	DET	DT	Definite=Def|PronType=Art	77	det	_	_
+76	big	big	ADJ	JJ	Degree=Pos	77	amod	_	_
+77	deal	deal	NOUN	NN	Number=Sing	64	ccomp	_	_
+78	?	?	PUNCT	.	_	14	punct	_	_
 
 # s_type = sub
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	_	_
@@ -396,19 +402,25 @@
 9	nothing	nothing	NOUN	NN	Number=Sing|Polarity=Neg	7	obl	_	_
 10	.	.	PUNCT	.	_	5	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WSS	WSS	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WSS	WSS	PROPN	NNP	Number=Sing	10	nsubj	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	This	this	PRON	DT	Number=Sing|PronType=Dem	10	nsubj	_	_
-7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	_	_
-8	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	10	nmod:poss	_	_
-9	final	final	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	question	question	NOUN	NN	Number=Sing	0	root	_	_
-11	here	here	ADV	RB	PronType=Dem	10	advmod	_	_
-12	.	.	PUNCT	.	_	10	punct	_	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	_	_
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
+3	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	5	nmod:poss	_	_
+4	final	final	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	question	question	NOUN	NN	Number=Sing	0	root	_	_
+6	here	here	ADV	RB	PronType=Dem	5	advmod	_	_
+7	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
@@ -454,17 +466,19 @@
 7	correct	correct	ADJ	JJ	Degree=Pos	3	ccomp	_	_
 8	?	?	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	Johnson	Johnson	PROPN	NNP	Number=Sing	0	root	_	_
-2	:	:	PUNCT	:	_	3	punct	_	_
-3	Well	well	INTJ	UH	_	7	discourse	_	_
-4	,	,	PUNCT	,	_	3	punct	_	_
-5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	7	nsubj	_	_
-6	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	7	aux	_	_
-7	created	create	VERB	VBN	Tense=Past|VerbForm=Part	1	parataxis	_	_
-8	statewide	statewide	ADJ	JJ	Degree=Pos	9	amod	_	_
-9	organizations	organization	NOUN	NNS	Number=Plur	7	obj	_	_
-10	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = decl
+1	:	:	PUNCT	:	_	6	punct	_	_
+2	Well	well	INTJ	UH	_	6	discourse	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+4	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	_	_
+5	've	have	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	6	aux	_	_
+6	created	create	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+7	statewide	statewide	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	organizations	organization	NOUN	NNS	Number=Plur	6	obj	_	_
+9	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = decl
 1	There	There	PRON	EX	_	2	expl	_	_

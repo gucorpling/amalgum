@@ -66,11 +66,13 @@
 39	needs	need	NOUN	NNS	Number=Plur	34	obj	_	_
 40	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Join	Join	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	Yummly	Yummly	PROPN	NNP	Number=Sing	2	obj	_	_
-4	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Join	Join	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	Yummly	Yummly	NOUN	NN	Number=Sing	1	obj	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
@@ -130,63 +132,79 @@
 15	under	under	ADP	IN	_	21	case	_	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	21	det	_	_
 17	"	"	PUNCT	``	_	19	punct	_	_
-18	Favorite	Favorite	PROPN	NNP	Number=Sing	19	compound	_	_
+18	Favorite	Favorite	PROPN	NNP	Number=Sing	19	amod	_	_
 19	Recipes	Recipe	PROPN	NNPS	Number=Plur	21	compound	_	_
 20	"	"	PUNCT	''	_	19	punct	_	_
 21	tab	tab	NOUN	NN	Number=Sing	14	nmod	_	_
 22	as	as	SCONJ	IN	_	23	mark	_	_
-23	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	acl	_	_
-24	:	:	PUNCT	:	_	26	punct	_	_
-25	Ingredients	ingredient	PROPN	NNP	Number=Plur	26	compound	_	_
-26	Taste	Taste	PROPN	NNP	Number=Sing	23	obj	_	_
-27	(	(	PUNCT	-LRB-	_	28	punct	_	_
-28	sweet	sweet	ADJ	JJ	Degree=Pos	26	dep	_	_
-29	,	,	PUNCT	,	_	30	punct	_	_
-30	sour	sour	NOUN	NN	Number=Sing	28	conj	_	_
-31	,	,	PUNCT	,	_	32	punct	_	_
-32	bitter	bitter	ADJ	JJ	Degree=Pos	28	conj	_	_
-33	,	,	PUNCT	,	_	34	punct	_	_
-34	etc.	etc.	X	FW	_	28	conj	_	_
-35	)	)	PUNCT	-RRB-	_	28	punct	_	_
-36	Cuisines	Cuisines	NOUN	NNS	Number=Plur	26	conj	_	_
-37	Courses	Courses	PROPN	NNPS	Number=Plur	38	compound	_	_
-38	Time	Time	PROPN	NNP	Number=Sing	26	conj	_	_
-39	and	and	CCONJ	CC	_	41	cc	_	_
-40	Price	Price	PROPN	NNP	Number=Sing	41	compound	_	_
-41	Nutrition	nutrition	PROPN	NNP	Number=Sing	38	conj	_	_
-42	,	,	PUNCT	,	_	43	punct	_	_
-43	Diets	Diets	NOUN	NNS	Number=Plur	38	conj	_	_
-44	,	,	PUNCT	,	_	47	punct	_	_
-45	and	and	CCONJ	CC	_	47	cc	_	_
-46	Allergies	Allergies	NOUN	NNS	Number=Plur	47	compound	_	_
-47	Favorites	favorite	NOUN	NNS	Number=Plur	26	conj	_	_
-48	and	and	CCONJ	CC	_	49	cc	_	_
-49	Sources	Sources	NOUN	NNS	Number=Plur	47	conj	_	_
-50	(	(	PUNCT	-LRB-	_	52	punct	_	_
-51	this	this	DET	DT	Number=Sing|PronType=Dem	52	det	_	_
-52	lists	list	NOUN	NNS	Number=Plur	47	appos	_	_
-53	set	set	VERB	VBN	Tense=Past|VerbForm=Part	52	acl	_	_
-54	recipe	recipe	NOUN	NN	Number=Sing	55	compound	_	_
-55	sites	site	NOUN	NNS	Number=Plur	53	obj	_	_
-56	for	for	ADP	IN	_	57	case	_	_
-57	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	53	obl	_	_
-58	to	to	PART	TO	_	59	mark	_	_
-59	select	select	VERB	VB	VerbForm=Inf	53	xcomp	_	_
-60	)	)	PUNCT	-RRB-	_	52	punct	_	_
-61	Choose	choose	VERB	VB	VerbForm=Inf	53	xcomp	_	_
-62	whether	whether	SCONJ	IN	_	66	mark	_	_
-63	or	or	CCONJ	CC	_	66	cc	_	_
-64	not	not	PART	RB	Polarity=Neg	66	advmod	_	_
-65	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	66	nsubj	_	_
-66	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	61	conj	_	_
-67	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	69	nmod:poss	_	_
-68	FoodFinder	foodfinder	PROPN	NNP	Number=Sing	69	compound	_	_
-69	searches	search	NOUN	NNS	Number=Plur	66	obj	_	_
-70	restricted	restrict	VERB	VBN	Tense=Past|VerbForm=Part	69	acl	_	_
-71	to	to	ADP	TO	_	73	case	_	_
-72	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	73	nmod:poss	_	_
-73	preferences	preference	NOUN	NNS	Number=Plur	70	obl	_	_
-74	.	.	PUNCT	.	_	9	punct	_	_
+23	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	_	_
+24	:	:	PUNCT	:	_	9	punct	_	_
+
+# s_type = frag
+1	Ingredients	ingredient	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Taste	Taste	NOUN	NN	Number=Sing	0	root	_	_
+2	(	(	PUNCT	-LRB-	_	3	punct	_	_
+3	sweet	sweet	ADJ	JJ	Degree=Pos	1	dep	_	_
+4	,	,	PUNCT	,	_	5	punct	_	_
+5	sour	sour	NOUN	NN	Number=Sing	3	conj	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	bitter	bitter	ADJ	JJ	Degree=Pos	3	conj	_	_
+8	,	,	PUNCT	,	_	9	punct	_	_
+9	etc.	etc.	X	FW	_	3	conj	_	_
+10	)	)	PUNCT	-RRB-	_	3	punct	_	_
+
+# s_type = frag
+1	Cuisines	Cuisines	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Courses	Courses	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Time	Time	NOUN	NN	Number=Sing	0	root	_	_
+2	and	and	CCONJ	CC	_	3	cc	_	_
+3	Price	Price	NOUN	NN	Number=Sing	1	conj	_	_
+
+# s_type = frag
+1	Nutrition	nutrition	NOUN	NN	Number=Sing	0	root	_	_
+2	,	,	PUNCT	,	_	3	punct	_	_
+3	Diets	Diets	NOUN	NNS	Number=Plur	1	conj	_	_
+4	,	,	PUNCT	,	_	6	punct	_	_
+5	and	and	CCONJ	CC	_	6	cc	_	_
+6	Allergies	Allergies	NOUN	NNS	Number=Plur	1	conj	_	_
+
+# s_type = decl
+1	Favorites	favorite	NOUN	NNS	Number=Plur	0	root	_	_
+2	and	and	CCONJ	CC	_	3	cc	_	_
+3	Sources	Sources	NOUN	NNS	Number=Plur	1	conj	_	_
+4	(	(	PUNCT	-LRB-	_	6	punct	_	_
+5	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	_	_
+6	lists	list	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	parataxis	_	_
+7	set	set	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	_	_
+8	recipe	recipe	NOUN	NN	Number=Sing	9	compound	_	_
+9	sites	site	NOUN	NNS	Number=Plur	6	obj	_	_
+10	for	for	ADP	IN	_	11	case	_	_
+11	you	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	9	nmod	_	_
+12	to	to	PART	TO	_	13	mark	_	_
+13	select	select	VERB	VB	VerbForm=Inf	6	advcl	_	_
+14	)	)	PUNCT	-RRB-	_	6	punct	_	_
+
+# s_type = imp
+1	Choose	choose	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	whether	whether	SCONJ	IN	_	6	mark	_	_
+3	or	or	CCONJ	CC	_	6	cc	_	_
+4	not	not	PART	RB	Polarity=Neg	6	advmod	_	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
+6	want	want	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	1	ccomp	_	_
+7	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
+8	FoodFinder	foodfinder	PROPN	NNP	Number=Sing	9	compound	_	_
+9	searches	search	NOUN	NNS	Number=Plur	6	obj	_	_
+10	restricted	restrict	VERB	VBN	Tense=Past|VerbForm=Part	9	acl	_	_
+11	to	to	ADP	TO	_	13	case	_	_
+12	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
+13	preferences	preference	NOUN	NNS	Number=Plur	10	obl	_	_
+14	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Select	select	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -883,29 +901,31 @@
 # s_type = frag
 1	Video	video	NOUN	NN	Number=Sing	0	root	_	_
 
+# s_type = frag
+1	Tips	tip	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Tips	tip	NOUN	NNS	Number=Plur	5	nsubj	_	_
-2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	5	nsubj	_	_
-3	can	can	AUX	MD	VerbForm=Fin	5	aux	_	_
-4	quickly	quickly	ADV	RB	_	5	advmod	_	_
-5	see	see	VERB	VB	VerbForm=Inf	0	root	_	_
-6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-7	values	value	NOUN	NNS	Number=Plur	5	obj	_	_
-8	of	of	ADP	IN	_	10	case	_	_
-9	each	each	DET	DT	_	10	det	_	_
-10	recipe	recipe	NOUN	NN	Number=Sing	7	nmod	_	_
-11	in	in	ADP	IN	_	15	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
-13	right	right	ADJ	JJ	Degree=Pos	15	amod	_	_
-14	hand	hand	NOUN	NN	Number=Sing	15	compound	_	_
-15	box	box	NOUN	NN	Number=Sing	5	obl	_	_
-16	that	that	PRON	WDT	PronType=Rel	17	nsubj	_	_
-17	appears	appear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	acl:relcl	_	_
-18	with	with	ADP	IN	_	20	case	_	_
-19	each	each	DET	DT	_	20	det	_	_
-20	recipe	recipe	NOUN	NN	Number=Sing	17	obl	_	_
-21	returned	return	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	_	_
-22	.	.	PUNCT	.	_	5	punct	_	_
+1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+2	can	can	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	quickly	quickly	ADV	RB	_	4	advmod	_	_
+4	see	see	VERB	VB	VerbForm=Inf	0	root	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	values	value	NOUN	NNS	Number=Plur	4	obj	_	_
+7	of	of	ADP	IN	_	9	case	_	_
+8	each	each	DET	DT	_	9	det	_	_
+9	recipe	recipe	NOUN	NN	Number=Sing	6	nmod	_	_
+10	in	in	ADP	IN	_	14	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+12	right	right	ADJ	JJ	Degree=Pos	14	amod	_	_
+13	hand	hand	NOUN	NN	Number=Sing	14	compound	_	_
+14	box	box	NOUN	NN	Number=Sing	4	obl	_	_
+15	that	that	PRON	WDT	PronType=Rel	16	nsubj	_	_
+16	appears	appear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	acl:relcl	_	_
+17	with	with	ADP	IN	_	19	case	_	_
+18	each	each	DET	DT	_	19	det	_	_
+19	recipe	recipe	NOUN	NN	Number=Sing	16	obl	_	_
+20	returned	return	VERB	VBN	Tense=Past|VerbForm=Part	16	advcl	_	_
+21	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	Recipes	Recipe	NOUN	NNS	Number=Plur	4	nsubj:pass	_	_
@@ -990,5 +1010,7 @@
 2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 3	'll	will	AUX	MD	VerbForm=Fin	4	aux	_	_
 4	Need	need	VERB	VB	VerbForm=Inf	1	acl:relcl	_	_
-5	Internet	Internet	PROPN	NNP	Number=Sing	4	obj	_	_
+
+# s_type = frag
+1	Internet	Internet	NOUN	NN	Number=Sing	0	root	_	_
 

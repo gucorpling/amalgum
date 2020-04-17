@@ -141,8 +141,10 @@
 
 # s_type = frag
 1	Boston	Boston	PROPN	NNP	Number=Sing	0	root	_	_
-2	,	,	PUNCT	,	_	3	punct	_	_
-3	Massachusetts	Massachusetts	PROPN	NNP	Number=Sing	1	appos	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	Massachusetts	Massachusetts	PROPN	NNP	Number=Sing	0	root	_	_
 
 # s_type = frag
 1	Correspondent	Correspondent	NOUN	NN	Number=Sing	0	root	_	_
@@ -510,20 +512,24 @@
 4	TUFKAAP	TUFKAAP	PROPN	NNP	Number=Sing	6	nmod:poss	_	_
 5	's	's	PART	POS	_	4	case	_	_
 6	report	report	NOUN	NN	Number=Sing	2	nmod	_	_
-7	(	(	PUNCT	-LRB-	_	8	punct	_	_
-8	Video	video	NOUN	NN	Number=Sing	6	appos	_	_
-9	)	)	PUNCT	-RRB-	_	8	punct	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	Video	video	NOUN	NN	Number=Sing	0	root	_	_
+3	)	)	PUNCT	-RRB-	_	2	punct	_	_
+
+# s_type = frag
+1	Boston	Boston	PROPN	NNP	Number=Sing	2	compound	_	_
+2	Galleries	Gallery	PROPN	NNPS	Number=Plur	0	root	_	_
 
 # s_type = decl
-1	Boston	Boston	PROPN	NNP	Number=Sing	2	compound	_	_
-2	Galleries	Gallery	PROPN	NNPS	Number=Plur	5	nsubj	_	_
-3	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
-4	protester	protester	NOUN	NN	Number=Sing	5	nsubj	_	_
-5	confronts	confront	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
-7	Scientolgist	Scientolgist	PROPN	NNP	Number=Sing	8	compound	_	_
-8	cameraman	cameraman	NOUN	NN	Number=Sing	5	obj	_	_
-9	.	.	PUNCT	.	_	5	punct	_	_
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	protester	protester	NOUN	NN	Number=Sing	3	nsubj	_	_
+3	confronts	confront	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
+5	Scientolgist	Scientolgist	PROPN	NNP	Number=Sing	6	compound	_	_
+6	cameraman	cameraman	NOUN	NN	Number=Sing	3	obj	_	_
+7	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	Protesters	protester	NOUN	NNS	Number=Plur	3	nsubj:pass	_	_
@@ -541,133 +547,151 @@
 13	of	of	ADP	IN	_	15	case	_	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	_	_
 15	church	church	NOUN	NN	Number=Sing	12	nmod	_	_
-16	A	a	DET	DT	Definite=Ind|PronType=Art	17	det	_	_
-17	protester	protester	NOUN	NN	Number=Sing	18	nsubj	_	_
-18	holds	hold	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	advcl	_	_
-19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	_	_
-20	sign	sign	NOUN	NN	Number=Sing	18	obj	_	_
-21	calling	call	VERB	VBG	VerbForm=Ger	20	acl	_	_
-22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-23	church	church	NOUN	NN	Number=Sing	27	nmod:poss	_	_
-24	an	an	DET	DT	Definite=Ind|PronType=Art	27	det	_	_
-25	organized	organize	VERB	VBN	Tense=Past|VerbForm=Part	27	amod	_	_
-26	crime	crime	NOUN	NN	Number=Sing	27	compound	_	_
-27	front	front	NOUN	NN	Number=Sing	21	obj	_	_
-28	A	a	DET	DT	Definite=Ind|PronType=Art	29	det	_	_
-29	protester	protester	NOUN	NN	Number=Sing	27	appos	_	_
-30	dressed	dress	VERB	VBN	Tense=Past|VerbForm=Part	29	acl	_	_
-31	as	as	ADP	IN	_	33	case	_	_
-32	"	"	PUNCT	``	_	33	punct	_	_
-33	Anonymous	anonymous	PROPN	NNP	Number=Sing	30	obl	_	_
-34	"	"	PUNCT	''	_	33	punct	_	_
-35	encourages	encourage	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	33	acl:relcl	_	_
-36	people	people	NOUN	NNS	Number=Plur	35	obj	_	_
-37	to	to	PART	TO	_	38	mark	_	_
-38	honk	honk	VERB	VB	VerbForm=Inf	35	advcl	_	_
-39	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	41	nmod:poss	_	_
-40	horns	horn	NOUN	NNS	Number=Plur	41	compound	_	_
-41	Protesters	protester	PROPN	NNPS	Number=Plur	38	obj	_	_
-42	in	in	ADP	IN	_	43	case	_	_
-43	Boston	Boston	PROPN	NNP	Number=Sing	44	obl	_	_
-44	stand	stand	VERB	VB	VerbForm=Inf	38	conj	_	_
-45	across	across	ADP	IN	_	47	case	_	_
-46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	_	_
-47	street	street	NOUN	NN	Number=Sing	44	obl	_	_
-48	from	from	ADP	IN	_	50	case	_	_
-49	the	the	DET	DT	Definite=Def|PronType=Art	50	det	_	_
-50	church	church	NOUN	NN	Number=Sing	44	obl	_	_
-51	A	a	DET	DT	Definite=Ind|PronType=Art	53	det	_	_
-52	"	"	PUNCT	``	_	53	punct	_	_
-53	nun	nun	NOUN	NN	Number=Sing	50	appos	_	_
-54	"	"	PUNCT	''	_	53	punct	_	_
-55	casting	cast	VERB	VBG	VerbForm=Ger	53	acl	_	_
-56	thetans	thetan	NOUN	NNS	Number=Plur	55	obj	_	_
-57	out	out	ADP	IN	_	59	case	_	_
-58	A	a	DET	DT	Definite=Ind|PronType=Art	59	det	_	_
-59	protester	protester	NOUN	NN	Number=Sing	55	obl	_	_
-60	dressed	dress	VERB	VBN	Tense=Past|VerbForm=Part	59	acl	_	_
-61	as	as	ADP	IN	_	63	case	_	_
-62	a	a	DET	DT	Definite=Ind|PronType=Art	63	det	_	_
-63	Charmeleon	Charmeleon	PROPN	NNP	Number=Sing	60	obl	_	_
-64	from	from	ADP	IN	_	65	case	_	_
-65	Pokemon	Pokemon	PROPN	NNP	Number=Sing	63	nmod	_	_
-66	holds	hold	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	59	acl:relcl	_	_
-67	a	a	DET	DT	Definite=Ind|PronType=Art	68	det	_	_
-68	sign	sign	NOUN	NN	Number=Sing	66	obj	_	_
-69	parodying	parody	VERB	VBG	VerbForm=Ger	68	acl	_	_
-70	Rick	Rick	PROPN	NNP	Number=Sing	68	nmod:poss	_	_
-71	Astley	Astley	PROPN	NNP	Number=Sing	70	flat	_	_
-72	's	's	PART	POS	_	70	case	_	_
-73	"	"	PUNCT	``	_	76	punct	_	_
-74	Never	never	ADV	RB	Polarity=Neg	76	advmod	_	_
-75	Gonna	Gonna	PROPN	NNP	Number=Sing	76	nsubj	_	_
-76	Give	give	VERB	VB	VerbForm=Inf	68	dep	_	_
-77	You	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	76	obj	_	_
-78	Up	up	ADP	RP	_	76	compound:prt	_	_
-79	"	"	PUNCT	''	_	76	punct	_	_
-80	and	and	CCONJ	CC	_	85	cc	_	_
-81	the	the	DET	DT	Definite=Def|PronType=Art	85	det	_	_
-82	"	"	PUNCT	``	_	83	punct	_	_
-83	Rickroll	Rickroll	PROPN	NNP	Number=Sing	85	compound	_	_
-84	"	"	PUNCT	''	_	83	punct	_	_
-85	meme	meme	NOUN	NN	Number=Sing	76	obj	_	_
-86	while	while	SCONJ	IN	_	87	mark	_	_
-87	making	make	VERB	VBG	VerbForm=Ger	76	advcl	_	_
-88	references	reference	NOUN	NNS	Number=Plur	87	obj	_	_
-89	to	to	ADP	TO	_	93	case	_	_
-90	Scientology	Scientology	PROPN	NNP	Number=Sing	93	nmod:poss	_	_
-91	's	's	PART	POS	_	90	case	_	_
-92	tax-exempt	tax-exempt	NOUN	NN	Number=Sing	93	compound	_	_
-93	status	status	NOUN	NN	Number=Sing	88	nmod	_	_
-94	and	and	CCONJ	CC	_	103	cc	_	_
-95	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	100	nmod:poss	_	_
-96	"	"	PUNCT	``	_	98	punct	_	_
-97	Fair	Fair	PROPN	NNP	Number=Sing	98	compound	_	_
-98	Game	Game	PROPN	NNP	Number=Sing	100	compound	_	_
-99	"	"	PUNCT	''	_	98	punct	_	_
-100	policy	policy	NOUN	NN	Number=Sing	103	compound	_	_
-101	Protester	Protester	PROPN	NNP	Number=Sing	103	compound	_	_
-102	hold	hold	NOUN	NN	Number=Sing	103	compound	_	_
-103	signs	sign	NOUN	NNS	Number=Plur	88	appos	_	_
-104	asking	ask	VERB	VBG	VerbForm=Ger	103	acl	_	_
-105	for	for	ADP	IN	_	106	case	_	_
-106	Scientology	Scientology	PROPN	NNP	Number=Sing	104	obl	_	_
-107	to	to	PART	TO	_	109	mark	_	_
-108	be	be	AUX	VB	VerbForm=Inf	109	aux:pass	_	_
-109	taxed	taxid	VERB	VBN	Tense=Past|VerbForm=Part	104	xcomp	_	_
-110	and	and	CCONJ	CC	_	116	cc	_	_
-111	that	that	SCONJ	IN	_	116	mark	_	_
-112	"	"	PUNCT	``	_	116	punct	_	_
-113	Religion	religion	PROPN	NNP	Number=Sing	116	nsubj	_	_
-114	should	should	AUX	MD	VerbForm=Fin	116	aux	_	_
-115	be	be	AUX	VB	VerbForm=Inf	116	cop	_	_
-116	free	free	ADJ	JJ	Degree=Pos	109	conj	_	_
-117	"	"	PUNCT	``	_	119	punct	_	_
-118	Protesters	protester	PROPN	NNPS	Number=Plur	119	nsubj	_	_
-119	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	116	ccomp	_	_
-120	signs	sign	NOUN	NNS	Number=Plur	119	obj	_	_
-121	next	next	ADJ	JJ	Degree=Pos	120	amod	_	_
-122	to	to	ADP	TO	_	125	case	_	_
-123	the	the	DET	DT	Definite=Def|PronType=Art	125	det	_	_
-124	church	church	NOUN	NN	Number=Sing	125	compound	_	_
-125	Protesters	protester	PROPN	NNPS	Number=Plur	126	obl	_	_
-126	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	119	ccomp	_	_
-127	signs	sign	NOUN	NNS	Number=Plur	126	obj	_	_
-128	on	on	ADP	IN	_	130	case	_	_
-129	the	the	DET	DT	Definite=Def|PronType=Art	130	det	_	_
-130	sidewalk	sidewalk	NOUN	NN	Number=Sing	127	nmod	_	_
-131	next	next	ADJ	JJ	Degree=Pos	130	amod	_	_
-132	to	to	ADP	TO	_	135	case	_	_
-133	the	the	DET	DT	Definite=Def|PronType=Art	135	det	_	_
-134	church	church	NOUN	NN	Number=Sing	135	compound	_	_
-135	Protesters	protester	PROPN	NNPS	Number=Plur	131	obl	_	_
-136	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	126	advcl	_	_
-137	signs	sign	NOUN	NNS	Number=Plur	136	obj	_	_
-138	advertising	advertising	NOUN	NN	Number=Sing	139	compound	_	_
-139	websites	websites	NOUN	NNS	Number=Plur	136	obj	_	_
-140	and	and	CCONJ	CC	_	142	cc	_	_
-141	birthday	birthday	NOUN	NN	Number=Sing	142	compound	_	_
-142	wishes	wish	NOUN	NNS	Number=Plur	139	conj	_	_
+
+# s_type = decl
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	protester	protester	NOUN	NN	Number=Sing	3	nsubj	_	_
+3	holds	hold	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+5	sign	sign	NOUN	NN	Number=Sing	3	obj	_	_
+6	calling	call	VERB	VBG	VerbForm=Ger	5	acl	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	church	church	NOUN	NN	Number=Sing	6	iobj	_	_
+9	an	an	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
+10	organized	organize	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	_	_
+11	crime	crime	NOUN	NN	Number=Sing	12	compound	_	_
+12	front	front	NOUN	NN	Number=Sing	6	obj	_	_
+
+# s_type = decl
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	protester	protester	NOUN	NN	Number=Sing	8	nsubj	_	_
+3	dressed	dress	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	_	_
+4	as	as	ADP	IN	_	6	case	_	_
+5	"	"	PUNCT	``	_	6	punct	_	_
+6	Anonymous	anonymous	PROPN	NNP	Number=Sing	3	obl	_	_
+7	"	"	PUNCT	''	_	6	punct	_	_
+8	encourages	encourage	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+9	people	people	NOUN	NNS	Number=Plur	8	obj	_	_
+10	to	to	PART	TO	_	11	mark	_	_
+11	honk	honk	VERB	VB	VerbForm=Inf	8	xcomp	_	_
+12	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
+13	horns	horn	NOUN	NNS	Number=Plur	11	obj	_	_
+
+# s_type = decl
+1	Protesters	protester	NOUN	NNS	Number=Plur	4	nsubj	_	_
+2	in	in	ADP	IN	_	3	case	_	_
+3	Boston	Boston	PROPN	NNP	Number=Sing	1	nmod	_	_
+4	stand	stand	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	across	across	ADP	IN	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	street	street	NOUN	NN	Number=Sing	4	obl	_	_
+8	from	from	ADP	IN	_	10	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	church	church	NOUN	NN	Number=Sing	7	nmod	_	_
+
+# s_type = decl
+1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+2	"	"	PUNCT	``	_	3	punct	_	_
+3	nun	nun	NOUN	NN	Number=Sing	5	nsubj	_	_
+4	"	"	PUNCT	''	_	3	punct	_	_
+5	casting	cast	VERB	VBG	VerbForm=Ger	0	root	_	_
+6	thetans	thetan	NOUN	NNS	Number=Plur	5	obj	_	_
+7	out	out	ADP	RP	_	5	compound:prt	_	_
+
+# s_type = decl
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	protester	protester	NOUN	NN	Number=Sing	9	nsubj	_	_
+3	dressed	dress	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	_	_
+4	as	as	ADP	IN	_	6	case	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
+6	Charmeleon	Charmeleon	PROPN	NNP	Number=Sing	3	obl	_	_
+7	from	from	ADP	IN	_	8	case	_	_
+8	Pokemon	Pokemon	PROPN	NNP	Number=Sing	3	obl	_	_
+9	holds	hold	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
+11	sign	sign	NOUN	NN	Number=Sing	9	obj	_	_
+12	parodying	parody	VERB	VBG	VerbForm=Ger	11	acl	_	_
+13	Rick	Rick	PROPN	NNP	Number=Sing	19	nsubj	_	_
+14	Astley	Astley	PROPN	NNP	Number=Sing	13	flat	_	_
+15	's	's	PART	POS	_	13	case	_	_
+16	"	"	PUNCT	``	_	19	punct	_	_
+17	Never	never	ADV	RB	Polarity=Neg	19	advmod	_	_
+18	Gonna	Gonna	PROPN	NNP	Number=Sing	19	nsubj	_	_
+19	Give	give	VERB	VB	VerbForm=Inf	11	parataxis	_	_
+20	You	you	PRON	PRP	Case=Acc|Person=2|PronType=Prs	19	obj	_	_
+21	Up	up	ADP	RP	_	19	compound:prt	_	_
+22	"	"	PUNCT	''	_	19	punct	_	_
+23	and	and	CCONJ	CC	_	28	cc	_	_
+24	the	the	DET	DT	Definite=Def|PronType=Art	28	det	_	_
+25	"	"	PUNCT	``	_	26	punct	_	_
+26	Rickroll	Rickroll	PROPN	NNP	Number=Sing	28	compound	_	_
+27	"	"	PUNCT	''	_	26	punct	_	_
+28	meme	meme	NOUN	NN	Number=Sing	19	obj	_	_
+29	while	while	SCONJ	IN	_	30	mark	_	_
+30	making	make	VERB	VBG	VerbForm=Ger	19	advcl	_	_
+31	references	reference	NOUN	NNS	Number=Plur	30	obj	_	_
+32	to	to	ADP	TO	_	36	case	_	_
+33	Scientology	Scientology	PROPN	NNP	Number=Sing	36	nmod:poss	_	_
+34	's	's	PART	POS	_	33	case	_	_
+35	tax-exempt	tax-exempt	NOUN	NN	Number=Sing	36	compound	_	_
+36	status	status	NOUN	NN	Number=Sing	31	nmod	_	_
+37	and	and	CCONJ	CC	_	43	cc	_	_
+38	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	43	nmod:poss	_	_
+39	"	"	PUNCT	``	_	41	punct	_	_
+40	Fair	Fair	PROPN	NNP	Number=Sing	41	compound	_	_
+41	Game	Game	PROPN	NNP	Number=Sing	43	compound	_	_
+42	"	"	PUNCT	''	_	41	punct	_	_
+43	policy	policy	NOUN	NN	Number=Sing	36	conj	_	_
+
+# s_type = decl
+1	Protester	Protester	NOUN	NN	Number=Sing	2	nsubj	_	_
+2	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	signs	sign	NOUN	NNS	Number=Plur	2	obj	_	_
+4	asking	ask	VERB	VBG	VerbForm=Ger	3	acl	_	_
+5	for	for	ADP	IN	_	6	case	_	_
+6	Scientology	Scientology	PROPN	NNP	Number=Sing	4	obl	_	_
+7	to	to	PART	TO	_	9	mark	_	_
+8	be	be	AUX	VB	VerbForm=Inf	9	aux:pass	_	_
+9	taxed	taxid	VERB	VBN	Tense=Past|VerbForm=Part	4	xcomp	_	_
+10	and	and	CCONJ	CC	_	16	cc	_	_
+11	that	that	SCONJ	IN	_	16	mark	_	_
+12	"	"	PUNCT	``	_	16	punct	_	_
+13	Religion	religion	PROPN	NNP	Number=Sing	16	nsubj	_	_
+14	should	should	AUX	MD	VerbForm=Fin	16	aux	_	_
+15	be	be	AUX	VB	VerbForm=Inf	16	cop	_	_
+16	free	free	ADJ	JJ	Degree=Pos	9	conj	_	_
+17	"	"	PUNCT	''	_	16	punct	_	_
+
+# s_type = decl
+1	Protesters	protester	NOUN	NNS	Number=Plur	2	nsubj	_	_
+2	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	signs	sign	NOUN	NNS	Number=Plur	2	obj	_	_
+4	next	next	ADJ	JJ	Degree=Pos	2	advmod	_	_
+5	to	to	ADP	TO	_	7	case	_	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
+7	church	church	NOUN	NN	Number=Sing	4	obl	_	_
+
+# s_type = decl
+1	Protesters	protester	NOUN	NNS	Number=Plur	2	nsubj	_	_
+2	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	signs	sign	NOUN	NNS	Number=Plur	2	obj	_	_
+4	on	on	ADP	IN	_	6	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	sidewalk	sidewalk	NOUN	NN	Number=Sing	2	obl	_	_
+7	next	next	ADJ	JJ	Degree=Pos	6	advmod	_	_
+8	to	to	ADP	TO	_	10	case	_	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
+10	church	church	NOUN	NN	Number=Sing	7	obl	_	_
+
+# s_type = decl
+1	Protesters	protester	NOUN	NNS	Number=Plur	2	nsubj	_	_
+2	hold	hold	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	signs	sign	NOUN	NNS	Number=Plur	2	obj	_	_
+4	advertising	advertising	NOUN	NN	Number=Sing	5	compound	_	_
+5	websites	websites	NOUN	NNS	Number=Plur	2	obj	_	_
+6	and	and	CCONJ	CC	_	8	cc	_	_
+7	birthday	birthday	NOUN	NN	Number=Sing	8	compound	_	_
+8	wishes	wish	NOUN	NNS	Number=Plur	5	conj	_	_
 
 # s_type = decl
 1	File	file	NOUN	NN	Number=Sing	0	root	_	_
@@ -680,42 +704,48 @@
 8	picture	picture	NOUN	NN	Number=Sing	5	obl	_	_
 9	.	.	PUNCT	.	_	1	punct	_	_
 
+# s_type = frag
+1	JPG	JPG	NOUN	NN	Number=Sing	0	root	_	_
+
 # s_type = decl
-1	JPG	JPG	NOUN	NN	Number=Sing	2	compound	_	_
-2	Protesters	protester	PROPN	NNPS	Number=Plur	3	nsubj	_	_
-3	pose	pose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-4	for	for	ADP	IN	_	6	case	_	_
-5	group	group	NOUN	NN	Number=Sing	6	compound	_	_
-6	pictures	picture	NOUN	NNS	Number=Plur	3	obl	_	_
-7	near	near	ADP	IN	_	9	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	end	end	NOUN	NN	Number=Sing	6	nmod	_	_
-10	of	of	ADP	IN	_	13	case	_	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-12	protest	protest	NOUN	NN	Number=Sing	13	compound	_	_
-13	Protesters	protester	PROPN	NNPS	Number=Plur	9	nmod	_	_
-14	share	share	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	conj	_	_
-15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	_	_
-16	group	group	NOUN	NN	Number=Sing	17	compound	_	_
-17	hug	hug	NOUN	NN	Number=Sing	14	obj	_	_
-18	with	with	ADP	IN	_	24	case	_	_
-19	each	each	DET	DT	_	22	det	_	_
-20	other	other	ADJ	JJ	Degree=Pos	24	amod	_	_
-21	A	a	DET	DT	Definite=Ind|PronType=Art	22	det	_	_
-22	protester	protester	NOUN	NN	Number=Sing	24	nmod:poss	_	_
-23	's	's	PART	POS	_	22	case	_	_
-24	sign	sign	NOUN	NN	Number=Sing	29	nsubj	_	_
-25	laying	lay	VERB	VBG	VerbForm=Ger	24	acl	_	_
-26	on	on	ADP	IN	_	28	case	_	_
-27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	_	_
-28	ground	ground	NOUN	NN	Number=Sing	25	obl	_	_
-29	suggests	suggest	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	advcl	_	_
-30	other	other	ADJ	JJ	Degree=Pos	31	amod	_	_
-31	names	name	NOUN	NNS	Number=Plur	29	obj	_	_
-32	for	for	ADP	IN	_	34	case	_	_
-33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	_	_
-34	Church	Church	PROPN	NNP	Number=Sing	31	nmod	_	_
-35	.	.	PUNCT	.	_	3	punct	_	_
+1	Protesters	protester	NOUN	NNS	Number=Plur	2	nsubj	_	_
+2	pose	pose	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	for	for	ADP	IN	_	5	case	_	_
+4	group	group	NOUN	NN	Number=Sing	5	compound	_	_
+5	pictures	picture	NOUN	NNS	Number=Plur	2	obl	_	_
+6	near	near	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	end	end	NOUN	NN	Number=Sing	5	nmod	_	_
+9	of	of	ADP	IN	_	11	case	_	_
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+11	protest	protest	NOUN	NN	Number=Sing	8	nmod	_	_
+
+# s_type = decl
+1	Protesters	protester	NOUN	NNS	Number=Plur	2	nsubj	_	_
+2	share	share	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+4	group	group	NOUN	NN	Number=Sing	5	compound	_	_
+5	hug	hug	NOUN	NN	Number=Sing	2	obj	_	_
+6	with	with	ADP	IN	_	8	case	_	_
+7	each	each	DET	DT	_	8	det	_	_
+8	other	other	ADJ	JJ	Degree=Pos	2	obl	_	_
+
+# s_type = decl
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	protester	protester	NOUN	NN	Number=Sing	4	nmod:poss	_	_
+3	's	's	PART	POS	_	2	case	_	_
+4	sign	sign	NOUN	NN	Number=Sing	9	nsubj	_	_
+5	laying	lay	VERB	VBG	VerbForm=Ger	4	acl	_	_
+6	on	on	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	ground	ground	NOUN	NN	Number=Sing	5	obl	_	_
+9	suggests	suggest	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+10	other	other	ADJ	JJ	Degree=Pos	11	amod	_	_
+11	names	name	NOUN	NNS	Number=Plur	9	obj	_	_
+12	for	for	ADP	IN	_	14	case	_	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+14	Church	Church	PROPN	NNP	Number=Sing	11	nmod	_	_
+15	.	.	PUNCT	.	_	9	punct	_	_
 
 # s_type = decl
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	_	_
@@ -739,14 +769,16 @@
 19	"	"	PUNCT	``	_	20	punct	_	_
 20	SP	SP	PROPN	NNP	Number=Sing	16	conj	_	_
 21	"	"	PUNCT	''	_	20	punct	_	_
-22	A	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
-23	protester	protester	NOUN	NN	Number=Sing	16	conj	_	_
-24	with	with	ADP	IN	_	27	case	_	_
-25	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	_	_
-26	V	V	NOUN	NN	Number=Sing	27	compound	_	_
-27	mask	mask	NOUN	NN	Number=Sing	23	nmod	_	_
-28	and	and	CCONJ	CC	_	31	cc	_	_
-29	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	_	_
-30	plastic	plastic	NOUN	NN	Number=Sing	31	compound	_	_
-31	afro	afro	NOUN	NN	Number=Sing	27	conj	_	_
+
+# s_type = frag
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	_	_
+2	protester	protester	NOUN	NN	Number=Sing	0	root	_	_
+3	with	with	ADP	IN	_	6	case	_	_
+4	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	_	_
+5	V	V	NOUN	NN	Number=Sing	6	compound	_	_
+6	mask	mask	NOUN	NN	Number=Sing	2	nmod	_	_
+7	and	and	CCONJ	CC	_	10	cc	_	_
+8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
+9	plastic	plastic	NOUN	NN	Number=Sing	10	compound	_	_
+10	afro	afro	NOUN	NN	Number=Sing	6	conj	_	_
 

@@ -23,7 +23,9 @@
 4	27	@card@	NUM	CD	NumType=Card	1	appos	_	_
 5	,	,	PUNCT	,	_	6	punct	_	_
 6	2014	@card@	NUM	CD	NumType=Card	4	nmod:tmod	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	Asiana	Asiana	PROPN	NNP	Number=Sing	2	compound	_	_
@@ -56,48 +58,50 @@
 3	Jkhoo	Jkhoo	PROPN	NNP	Number=Sing	1	dep	_	_
 4	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	South	South	PROPN	NNP	Number=Sing	2	compound	_	_
-2	Korea	Korea	PROPN	NNP	Number=Sing	3	nsubj	_	_
-3	-based	-base	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-4	Asiana	Asiana	PROPN	NNP	Number=Sing	5	compound	_	_
-5	Airlines	Airlines	PROPN	NNPS	Number=Plur	7	nsubj:pass	_	_
-6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	_	_
-7	fined	fine	VERB	VBN	Tense=Past|VerbForm=Part	3	ccomp	_	_
-8	US$	US$	PROPN	NNP	Number=Sing	7	obj	_	_
-9	500,000	@card@	NUM	CD	NumType=Card	8	nummod	_	_
-10	on	on	ADP	IN	_	11	case	_	_
-11	Tuesday	Tuesday	PROPN	NNP	Number=Sing	7	obl	_	_
-12	by	by	ADP	IN	_	16	case	_	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-14	United	United	PROPN	NNP	Number=Sing	15	amod	_	_
-15	States	States	PROPN	NNPS	Number=Plur	16	compound	_	_
-16	Department	Department	PROPN	NNP	Number=Sing	7	obl	_	_
-17	of	of	ADP	IN	_	18	case	_	_
-18	Transportation	transportation	PROPN	NNP	Number=Sing	16	nmod	_	_
-19	for	for	SCONJ	IN	_	20	mark	_	_
-20	failing	fail	VERB	VBG	VerbForm=Ger	16	acl	_	_
-21	to	to	PART	TO	_	22	mark	_	_
-22	provide	provide	VERB	VB	VerbForm=Inf	20	xcomp	_	_
-23	support	support	NOUN	NN	Number=Sing	22	obj	_	_
-24	for	for	ADP	IN	_	27	case	_	_
-25	victims	victim	NOUN	NNS	Number=Plur	27	nmod:poss	_	_
-26	'	's	PART	POS	_	25	case	_	_
-27	families	family	NOUN	NNS	Number=Plur	23	nmod	_	_
-28	after	after	ADP	IN	_	30	case	_	_
-29	Asiana	Asiana	PROPN	NNP	Number=Sing	30	compound	_	_
-30	Airlines	Airlines	PROPN	NNPS	Number=Plur	27	nmod	_	_
-31	Flight	flight	PROPN	NNP	Number=Sing	30	flat	_	_
-32	214	@card@	NUM	CD	NumType=Card	31	appos	_	_
-33	crashed	crash	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	22	xcomp	_	_
-34	at	at	ADP	IN	_	37	case	_	_
-35	San	San	PROPN	NNP	Number=Sing	37	compound	_	_
-36	Francisco	Francisco	PROPN	NNP	Number=Sing	37	compound	_	_
-37	airport	airport	NOUN	NN	Number=Sing	33	obl	_	_
-38	in	in	ADP	IN	_	39	case	_	_
-39	July	July	PROPN	NNP	Number=Sing	33	obl	_	_
-40	2013	@card@	NUM	CD	NumType=Card	39	nmod:tmod	_	_
-41	.	.	PUNCT	.	_	3	punct	_	_
+2	Korea	Korea	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	-based	-base	VERB	VBN	Tense=Past|VerbForm=Part	3	amod	_	_
+2	Asiana	Asiana	PROPN	NNP	Number=Sing	3	compound	_	_
+3	Airlines	Airlines	PROPN	NNPS	Number=Plur	5	nsubj:pass	_	_
+4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	_	_
+5	fined	fine	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+6	US$	US$	PROPN	NNP	Number=Sing	5	obj	_	_
+7	500,000	@card@	NUM	CD	NumType=Card	6	nummod	_	_
+8	on	on	ADP	IN	_	9	case	_	_
+9	Tuesday	Tuesday	PROPN	NNP	Number=Sing	5	obl	_	_
+10	by	by	ADP	IN	_	14	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	_	_
+12	United	United	PROPN	NNP	Number=Sing	13	amod	_	_
+13	States	States	PROPN	NNPS	Number=Plur	14	compound	_	_
+14	Department	Department	PROPN	NNP	Number=Sing	5	obl	_	_
+15	of	of	ADP	IN	_	16	case	_	_
+16	Transportation	transportation	PROPN	NNP	Number=Sing	14	nmod	_	_
+17	for	for	SCONJ	IN	_	18	mark	_	_
+18	failing	fail	VERB	VBG	VerbForm=Ger	14	acl	_	_
+19	to	to	PART	TO	_	20	mark	_	_
+20	provide	provide	VERB	VB	VerbForm=Inf	18	xcomp	_	_
+21	support	support	NOUN	NN	Number=Sing	20	obj	_	_
+22	for	for	ADP	IN	_	25	case	_	_
+23	victims	victim	NOUN	NNS	Number=Plur	25	nmod:poss	_	_
+24	'	's	PART	POS	_	23	case	_	_
+25	families	family	NOUN	NNS	Number=Plur	21	nmod	_	_
+26	after	after	ADP	IN	_	28	case	_	_
+27	Asiana	Asiana	PROPN	NNP	Number=Sing	28	compound	_	_
+28	Airlines	Airlines	PROPN	NNPS	Number=Plur	25	nmod	_	_
+29	Flight	flight	PROPN	NNP	Number=Sing	30	compound	_	_
+30	214	@card@	NUM	CD	NumType=Card	25	nmod	_	_
+31	crashed	crash	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	20	xcomp	_	_
+32	at	at	ADP	IN	_	35	case	_	_
+33	San	San	PROPN	NNP	Number=Sing	35	compound	_	_
+34	Francisco	Francisco	PROPN	NNP	Number=Sing	35	compound	_	_
+35	airport	airport	NOUN	NN	Number=Sing	31	obl	_	_
+36	in	in	ADP	IN	_	37	case	_	_
+37	July	July	PROPN	NNP	Number=Sing	31	obl	_	_
+38	2013	@card@	NUM	CD	NumType=Card	37	nmod:tmod	_	_
+39	.	.	PUNCT	.	_	31	punct	_	_
 
 # s_type = decl
 1	Foreign	Foreign	ADJ	JJ	Degree=Pos	2	amod	_	_
@@ -206,30 +210,32 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	Jeff	Jeff	PROPN	NNP	Number=Sing	1	flat	_	_
-3	Black	Black	PROPN	NNP	Number=Sing	1	amod	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
-5	"	"	PUNCT	``	_	7	punct	_	_
-6	U.S.	U.S.	PROPN	NNP	Number=Sing	7	compound	_	_
-7	Fines	Fines	PROPN	NNPS	Number=Plur	1	appos	_	_
-8	Asiana	Asiana	PROPN	NNP	Number=Sing	9	compound	_	_
-9	Airlines	Airlines	PROPN	NNPS	Number=Plur	7	compound	_	_
-10	$500K	@card@	NUM	CD	NumType=Card	7	nummod	_	_
-11	for	for	ADP	IN	_	13	case	_	_
-12	Not	not	PART	RB	Polarity=Neg	13	advmod	_	_
-13	Helping	Helping	VERB	VBG	VerbForm=Ger	7	acl	_	_
-14	Victims	victim	PROPN	NNPS	Number=Plur	16	nmod:poss	_	_
-15	'	's	PART	POS	_	14	case	_	_
-16	Families	Families	PROPN	NNPS	Number=Plur	13	obj	_	_
-17	"	"	PUNCT	''	_	16	punct	_	_
-18	—	—	PUNCT	:	_	20	punct	_	_
-19	NBC	NBC	PROPN	NNP	Number=Sing	20	compound	_	_
-20	News	News	PROPN	NNP	Number=Sing	16	appos	_	_
-21	,	,	PUNCT	,	_	23	punct	_	_
-22	February	February	PROPN	NNP	Number=Sing	23	compound	_	_
-23	25	@card@	NUM	CD	NumType=Card	20	appos	_	_
-24	,	,	PUNCT	,	_	25	punct	_	_
-25	2014	@card@	NUM	CD	NumType=Card	23	nmod:tmod	_	_
+
+# s_type = frag
+1	Jeff	Jeff	PROPN	NNP	Number=Sing	2	compound	_	_
+2	Black	Black	PROPN	NNP	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
+4	"	"	PUNCT	``	_	6	punct	_	_
+5	U.S.	U.S.	PROPN	NNP	Number=Sing	6	compound	_	_
+6	Fines	Fines	PROPN	NNPS	Number=Plur	1	appos	_	_
+7	Asiana	Asiana	PROPN	NNP	Number=Sing	8	compound	_	_
+8	Airlines	Airlines	PROPN	NNPS	Number=Plur	6	dep	_	_
+9	$500K	@card@	NUM	CD	NumType=Card	6	nummod	_	_
+10	for	for	ADP	IN	_	12	case	_	_
+11	Not	not	PART	RB	Polarity=Neg	12	advmod	_	_
+12	Helping	Helping	VERB	VBG	VerbForm=Ger	6	acl	_	_
+13	Victims	victim	PROPN	NNPS	Number=Plur	15	nmod:poss	_	_
+14	'	's	PART	POS	_	13	case	_	_
+15	Families	Families	PROPN	NNPS	Number=Plur	12	obj	_	_
+16	"	"	PUNCT	''	_	15	punct	_	_
+17	—	—	PUNCT	:	_	19	punct	_	_
+18	NBC	NBC	PROPN	NNP	Number=Sing	19	compound	_	_
+19	News	News	PROPN	NNP	Number=Sing	15	appos	_	_
+20	,	,	PUNCT	,	_	22	punct	_	_
+21	February	February	PROPN	NNP	Number=Sing	22	compound	_	_
+22	25	@card@	NUM	CD	NumType=Card	19	appos	_	_
+23	,	,	PUNCT	,	_	24	punct	_	_
+24	2014	@card@	NUM	CD	NumType=Card	22	nmod:tmod	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	4	punct	_	_
@@ -394,9 +400,11 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	Karen	Karen	PROPN	NNP	Number=Sing	1	flat	_	_
-3	DeYoung	DeYoung	PROPN	NNP	Number=Sing	1	flat	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Karen	Karen	PROPN	NNP	Number=Sing	0	root	_	_
+2	DeYoung	DeYoung	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	"	"	PUNCT	``	_	4	punct	_	_
@@ -634,9 +642,11 @@
 
 # s_type = frag
 1	Sources	Sources	NOUN	NNS	Number=Plur	0	root	_	_
-2	Laura	Laura	PROPN	NNP	Number=Sing	1	flat	_	_
-3	Smith-Spark	Smith-Spark	PROPN	NNP	Number=Sing	1	flat	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Laura	Laura	PROPN	NNP	Number=Sing	0	root	_	_
+2	Smith-Spark	Smith-Spark	PROPN	NNP	Number=Sing	1	flat	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Claudia	Claudia	PROPN	NNP	Number=Sing	0	root	_	_

@@ -51,10 +51,12 @@
 1	Organizing	organize	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
 3	Group	Group	NOUN	NN	Number=Sing	1	obj	_	_
-4	Announce	announce	VERB	VB	VerbForm=Inf	1	ccomp	_	_
-5	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
-6	group	group	NOUN	NN	Number=Sing	4	obj	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Announce	announce	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	3	nmod:poss	_	_
+3	group	group	NOUN	NN	Number=Sing	1	obj	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Choose	choose	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -527,12 +529,14 @@
 16	discussions	discussion	NOUN	NNS	Number=Plur	9	obl	_	_
 17	.	.	PUNCT	.	_	8	punct	_	_
 
-# s_type = decl
-1	Starting	start	VERB	VBG	VerbForm=Ger	2	amod	_	_
-2	Discussions	discussion	NOUN	NNS	Number=Plur	3	nsubj	_	_
-3	Introduce	introduce	VERB	VB	VerbForm=Fin	0	root	_	_
-4	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	3	obj	_	_
-5	.	.	PUNCT	.	_	3	punct	_	_
+# s_type = ger
+1	Starting	start	VERB	VBG	VerbForm=Ger	2	compound	_	_
+2	Discussions	discussion	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Introduce	introduce	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obj	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Keep	keep	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -789,13 +793,15 @@
 11	teacher	teacher	NOUN	NN	Number=Sing	3	parataxis	_	_
 12	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = decl
-1	Facilitating	facilitate	VERB	VBG	VerbForm=Ger	3	csubj	_	_
+# s_type = ger
+1	Facilitating	facilitate	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	Discussion	discussion	NOUN	NN	Number=Sing	1	obj	_	_
-3	Ask	ask	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-4	open-ended	open-ended	ADJ	JJ	Degree=Pos	5	amod	_	_
-5	questions	question	NOUN	NNS	Number=Plur	3	obj	_	_
-6	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = imp
+1	Ask	ask	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	open-ended	open-ended	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	questions	question	NOUN	NNS	Number=Plur	1	obj	_	_
+4	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Avoid	Avoid	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -1177,14 +1183,24 @@
 2	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
 3	'll	will	AUX	MD	VerbForm=Fin	4	aux	_	_
 4	Need	need	VERB	VB	VerbForm=Inf	1	acl:relcl	_	_
-5	Watch	watch	PROPN	NNP	Number=Sing	4	obj	_	_
-6	Research/reports	research/report	NOUN	NNS	Number=Plur	9	compound	_	_
-7	Email	Email	PROPN	NNP	Number=Sing	9	compound	_	_
-8	addresses/flyers	addresses/eruer	NOUN	NNS	Number=Plur	9	compound	_	_
-9	Chairs	Chairs	NOUN	NNS	Number=Plur	4	obj	_	_
-10	in	in	ADP	IN	_	14	case	_	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
-12	circle	circle	NOUN	NN	Number=Sing	14	compound	_	_
-13	Evaluation	evaluation	NOUN	NN	Number=Sing	14	compound	_	_
-14	form	form	NOUN	NN	Number=Sing	9	nmod	_	_
+
+# s_type = imp
+1	Watch	watch	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+
+# s_type = frag
+1	Research/reports	research/report	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Email	Email	NOUN	NN	Number=Sing	2	compound	_	_
+2	addresses/flyers	addresses/eruer	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Chairs	Chairs	NOUN	NNS	Number=Plur	0	root	_	_
+2	in	in	ADP	IN	_	4	case	_	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+4	circle	circle	NOUN	NN	Number=Sing	1	nmod	_	_
+
+# s_type = frag
+1	Evaluation	evaluation	NOUN	NN	Number=Sing	2	compound	_	_
+2	form	form	NOUN	NN	Number=Sing	0	root	_	_
 

@@ -282,14 +282,18 @@
 37	.	.	PUNCT	.	_	18	punct	_	_
 
 # s_type = decl
-1	This	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj:pass	_	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	_	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux:pass	_	_
 3	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-4	in	in	ADP	IN	_	5	case	_	_
-5	Figure	Figure	PROPN	NNP	Number=Sing	3	obl	_	_
-6	5	5	NUM	CD	NumType=Card	5	nummod	_	_
-7	schematically	schematically	ADV	RB	_	3	advmod	_	_
-8	.	.	PUNCT	.	_	3	punct	_	_
+4	in	in	ADP	IN	_	3	obl	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	5	5	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	schematically	schematically	ADV	RB	_	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Note	note	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -387,27 +391,31 @@
 50	)	)	PUNCT	-RRB-	_	45	punct	_	_
 51	.	.	PUNCT	.	_	4	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	By	by	SCONJ	IN	_	2	mark	_	_
-2	doing	do	VERB	VBG	VerbForm=Ger	13	advcl	_	_
+2	doing	do	VERB	VBG	VerbForm=Ger	7	acl	_	_
 3	so	so	ADV	RB	_	2	advmod	_	_
 4	,	,	PUNCT	,	_	2	punct	_	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
 6	rippled	ripple	ADJ	JJ	Degree=Pos	7	amod	_	_
-7	curve	curve	NOUN	NN	Number=Sing	13	nsubj:pass	_	_
+7	curve	curve	NOUN	NN	Number=Sing	0	root	_	_
 8	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	_	_
-9	in	in	ADP	IN	_	10	case	_	_
-10	Figure	Figure	PROPN	NNP	Number=Sing	8	obl	_	_
-11	6	6	NUM	CD	NumType=Card	10	amod	_	_
-12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	_	_
-13	smoothed	smoothed	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-14	to	to	ADP	TO	_	16	case	_	_
-15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	_	_
-16	curve	curve	NOUN	NN	Number=Sing	13	obl	_	_
-17	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	16	acl	_	_
-18	in	in	ADP	IN	_	19	case	_	_
-19	red	red	NOUN	NN	Number=Sing	17	obl	_	_
-20	.	.	PUNCT	.	_	13	punct	_	_
+9	in	in	ADP	IN	_	8	obl	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	6	6	NUM	CD	NumType=Card	1	amod	_	_
+
+# s_type = frag
+1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	aux:pass	_	_
+2	smoothed	smoothed	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+3	to	to	ADP	TO	_	5	case	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+5	curve	curve	NOUN	NN	Number=Sing	2	obl	_	_
+6	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	_	_
+7	in	in	ADP	IN	_	8	case	_	_
+8	red	red	NOUN	NN	Number=Sing	6	obl	_	_
+9	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	Next	next	ADV	RB	_	7	advmod	_	_
@@ -429,44 +437,46 @@
 17	4	4	NUM	CD	NumType=Card	7	dep	_	_
 18	)	)	PUNCT	-RRB-	_	17	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
-2	6	6	NUM	CD	NumType=Card	3	nummod	_	_
-3	shows	show	NOUN	NNS	Number=Plur	1	appos	_	_
-4	that	that	SCONJ	IN	_	9	mark	_	_
-5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	_	_
-6	slip	slip	NOUN	NN	Number=Sing	7	compound	_	_
-7	area	area	NOUN	NN	Number=Sing	9	nsubj:pass	_	_
-8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	_	_
-9	found	find	VERB	VBN	Tense=Past|VerbForm=Part	3	ccomp	_	_
-10	by	by	SCONJ	IN	_	11	mark	_	_
-11	computing	computing	VERB	VBG	VerbForm=Ger	9	advcl	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	integral	integral	NOUN	NN	Number=Sing	11	obj	_	_
-14	of	of	ADP	IN	_	15	case	_	_
-15	p	p	NOUN	NN	Number=Sing	13	nmod	_	_
-16	with	with	ADP	IN	_	17	case	_	_
-17	respect	respect	NOUN	NN	Number=Sing	13	nmod	_	_
-18	to	to	ADP	TO	_	19	case	_	_
-19	x	x	NOUN	NN	Number=Sing	17	nmod	_	_
-20	,	,	PUNCT	,	_	21	punct	_	_
-21	using	use	VERB	VBG	VerbForm=Ger	11	conj	_	_
-22	repeated	repeat	VERB	VBN	Tense=Past|VerbForm=Part	24	amod	_	_
-23	trapezium	trapezium	NOUN	NN	Number=Sing	24	compound	_	_
-24	integration	integration	NOUN	NN	Number=Sing	21	obj	_	_
-25	and	and	CCONJ	CC	_	27	cc	_	_
-26	then	then	ADV	RB	PronType=Dem	27	advmod	_	_
-27	subtracting	subtract	VERB	VBG	VerbForm=Ger	21	conj	_	_
-28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	_	_
-29	area	area	NOUN	NN	Number=Sing	27	obj	_	_
-30	of	of	ADP	IN	_	32	case	_	_
-31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	_	_
-32	triangle	triangle	NOUN	NN	Number=Sing	29	nmod	_	_
-33	above	above	ADP	IN	_	36	case	_	_
-34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	_	_
-35	slope	slope	NOUN	NN	Number=Sing	36	compound	_	_
-36	face	face	NOUN	NN	Number=Sing	32	nmod	_	_
-37	.	.	PUNCT	.	_	1	punct	_	_
+2	6	6	NUM	CD	NumType=Card	1	amod	_	_
+
+# s_type = decl
+1	shows	show	NOUN	NNS	Number=Plur	0	root	_	_
+2	that	that	SCONJ	IN	_	7	mark	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+4	slip	slip	NOUN	NN	Number=Sing	5	compound	_	_
+5	area	area	NOUN	NN	Number=Sing	7	nsubj:pass	_	_
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	_	_
+7	found	find	VERB	VBN	Tense=Past|VerbForm=Part	1	ccomp	_	_
+8	by	by	SCONJ	IN	_	9	mark	_	_
+9	computing	computing	VERB	VBG	VerbForm=Ger	7	advcl	_	_
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	_	_
+11	integral	integral	NOUN	NN	Number=Sing	9	obj	_	_
+12	of	of	ADP	IN	_	13	case	_	_
+13	p	p	NOUN	NN	Number=Sing	11	nmod	_	_
+14	with	with	ADP	IN	_	15	case	_	_
+15	respect	respect	NOUN	NN	Number=Sing	11	nmod	_	_
+16	to	to	ADP	TO	_	17	case	_	_
+17	x	x	NOUN	NN	Number=Sing	15	nmod	_	_
+18	,	,	PUNCT	,	_	19	punct	_	_
+19	using	use	VERB	VBG	VerbForm=Ger	9	conj	_	_
+20	repeated	repeat	VERB	VBN	Tense=Past|VerbForm=Part	22	amod	_	_
+21	trapezium	trapezium	ADJ	JJ	Degree=Pos	22	amod	_	_
+22	integration	integration	NOUN	NN	Number=Sing	19	obj	_	_
+23	and	and	CCONJ	CC	_	25	cc	_	_
+24	then	then	ADV	RB	PronType=Dem	25	advmod	_	_
+25	subtracting	subtract	VERB	VBG	VerbForm=Ger	19	conj	_	_
+26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	_	_
+27	area	area	NOUN	NN	Number=Sing	25	obj	_	_
+28	of	of	ADP	IN	_	30	case	_	_
+29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
+30	triangle	triangle	NOUN	NN	Number=Sing	27	nmod	_	_
+31	above	above	ADP	IN	_	34	case	_	_
+32	the	the	DET	DT	Definite=Def|PronType=Art	34	det	_	_
+33	slope	slope	NOUN	NN	Number=Sing	34	compound	_	_
+34	face	face	NOUN	NN	Number=Sing	30	nmod	_	_
+35	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	For	for	ADP	IN	_	5	case	_	_

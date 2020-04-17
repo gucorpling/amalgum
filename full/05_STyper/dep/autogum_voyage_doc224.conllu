@@ -342,18 +342,20 @@
 15	.	.	PUNCT	.	_	9	punct	_	_
 
 # s_type = frag
-1	Tourist	Tourist	PROPN	NNP	Number=Sing	2	compound	_	_
-2	Information	Information	PROPN	NNP	Number=Sing	3	compound	_	_
-3	Office	office	PROPN	NNP	Number=Sing	0	root	_	_
-4	,	,	PUNCT	,	_	8	punct	_	_
-5	5	5	NUM	CD	NumType=Card	6	nummod	_	_
-6	Plaza	Plaza	PROPN	NNP	Number=Sing	8	compound	_	_
-7	de	de	PROPN	NNP	Number=Sing	8	compound	_	_
-8	Andalucia	Andalucia	PROPN	NNP	Number=Sing	3	appos	_	_
-9	,	,	PUNCT	,	_	11	punct	_	_
-10	☏	☏	NUM	CD	NumType=Card	11	nummod	_	_
-11	+34953779204	+3435777	NUM	CD	NumType=Card	3	appos	_	_
-12	.	.	PUNCT	.	_	3	punct	_	_
+1	Tourist	Tourist	NOUN	NN	Number=Sing	2	compound	_	_
+2	Information	information	NOUN	NN	Number=Sing	3	compound	_	_
+3	Office	office	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	5	punct	_	_
+2	5	5	NUM	CD	NumType=Card	3	nummod	_	_
+3	Plaza	Plaza	PROPN	NNP	Number=Sing	5	compound	_	_
+4	de	de	PROPN	NNP	Number=Sing	5	compound	_	_
+5	Andalucia	Andalucia	PROPN	NNP	Number=Sing	0	root	_	_
+6	,	,	PUNCT	,	_	8	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	8	nummod	_	_
+8	+34953779204	+3435777	NUM	CD	NumType=Card	5	dep	_	_
+9	.	.	PUNCT	.	_	5	punct	_	_
 
 # s_type = frag
 1	9AM-5PM	RAM-5PM	PROPN	NNP	Number=Sing	0	root	_	_
@@ -760,12 +762,12 @@
 5	let	let	VERB	VB	VerbForm=Inf	3	xcomp	_	_
 6	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	7	nmod:poss	_	_
 7	imagination	imagination	NOUN	NN	Number=Sing	5	obj	_	_
-8	run	run	VERB	VB	VerbForm=Inf	5	ccomp	_	_
+8	run	run	VERB	VB	VerbForm=Inf	5	xcomp	_	_
 9	wild	wild	ADJ	JJ	Degree=Pos	8	xcomp	_	_
 10	as	as	SCONJ	IN	_	13	mark	_	_
 11	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	13	nsubj:pass	_	_
 12	get	get	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	13	aux:pass	_	_
-13	lost	lose	VERB	VBN	Tense=Past|VerbForm=Part	3	advcl	_	_
+13	lost	lose	VERB	VBN	Tense=Past|VerbForm=Part	5	advcl	_	_
 14	rambling	ramble	VERB	VBG	VerbForm=Ger	13	xcomp	_	_
 15	through	through	ADP	IN	_	18	case	_	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	_	_
@@ -776,15 +778,19 @@
 21	old	old	ADJ	JJ	Degree=Pos	22	amod	_	_
 22	city	city	NOUN	NN	Number=Sing	18	nmod	_	_
 23	.	.	PUNCT	.	_	3	punct	_	_
-24	Murallas	Murallas	PROPN	NNP	Number=Sing	22	appos	_	_
-25	de	de	PROPN	NNP	Number=Sing	24	compound	_	_
-26	la	la	PROPN	NNP	Number=Sing	27	compound	_	_
-27	Ciudad	Ciudad	PROPN	NNP	Number=Sing	24	conj	_	_
-28	,	,	PUNCT	,	_	31	punct	_	_
-29	Redonda	Redonda	PROPN	NNP	Number=Sing	31	compound	_	_
-30	de	de	PROPN	NNP	Number=Sing	31	compound	_	_
-31	Miradores	Miradores	PROPN	NNP	Number=Sing	27	appos	_	_
-32	.	.	PUNCT	.	_	3	punct	_	_
+
+# s_type = frag
+1	Murallas	Murallas	PROPN	NNP	Number=Sing	4	compound	_	_
+2	de	de	PROPN	NNP	Number=Sing	1	flat	_	_
+3	la	la	PROPN	NNP	Number=Sing	4	compound	_	_
+4	Ciudad	Ciudad	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	Redonda	Redonda	PROPN	NNP	Number=Sing	4	compound	_	_
+3	de	de	PROPN	NNP	Number=Sing	2	flat	_	_
+4	Miradores	Miradores	PROPN	NNP	Number=Sing	0	root	_	_
+5	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = frag
 1	24	@card@	NUM	CD	NumType=Card	2	nummod	_	_
@@ -864,26 +870,28 @@
 
 # s_type = frag
 1	Palacio	Palacio	PROPN	NNP	Number=Sing	0	root	_	_
-2	de	de	PROPN	NNP	Number=Sing	1	compound	_	_
-3	Juan	Juan	PROPN	NNP	Number=Sing	1	compound	_	_
-4	Vázquez	Vázquez	PROPN	NNP	Number=Sing	1	compound	_	_
-5	de	de	PROPN	NNP	Number=Sing	6	compound	_	_
-6	Molina	Molina	PROPN	NNP	Number=Sing	1	compound	_	_
-7	(	(	PUNCT	-LRB-	_	8	punct	_	_
-8	Palacio	Palacio	X	FW	_	1	appos	_	_
-9	de	de	X	FW	_	11	case	_	_
-10	las	las	X	FW	_	11	compound	_	_
-11	Cadenas	Cadenas	X	FW	_	8	compound	_	_
-12	)	)	PUNCT	-RRB-	_	8	punct	_	_
-13	,	,	PUNCT	,	_	14	punct	_	_
-14	Plaza	Plaza	PROPN	NNP	Number=Sing	6	appos	_	_
-15	Vázquez	Vázquez	PROPN	NNP	Number=Sing	14	compound	_	_
-16	de	de	X	FW	_	17	case	_	_
-17	Molina	Molina	PROPN	NNP	Number=Sing	14	nmod	_	_
-18	,	,	PUNCT	,	_	20	punct	_	_
-19	☏	☏	NUM	CD	NumType=Card	20	nummod	_	_
-20	+34953750440	+a4r5875	NUM	CD	NumType=Card	14	nummod	_	_
-21	.	.	PUNCT	.	_	1	punct	_	_
+2	de	de	PROPN	NNP	Number=Sing	1	flat	_	_
+3	Juan	Juan	PROPN	NNP	Number=Sing	1	flat	_	_
+4	Vázquez	Vázquez	PROPN	NNP	Number=Sing	1	flat	_	_
+5	de	de	PROPN	NNP	Number=Sing	1	flat	_	_
+6	Molina	Molina	PROPN	NNP	Number=Sing	5	flat	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	Palacio	Palacio	PROPN	NNP	Number=Sing	0	root	_	_
+3	de	de	X	FW	_	5	case	_	_
+4	las	las	X	FW	_	5	compound	_	_
+5	Cadenas	Cadenas	X	FW	_	2	appos	_	_
+6	)	)	PUNCT	-RRB-	_	2	punct	_	_
+7	,	,	PUNCT	,	_	8	punct	_	_
+8	Plaza	Plaza	PROPN	NNP	Number=Sing	2	appos	_	_
+9	Vázquez	Vázquez	PROPN	NNP	Number=Sing	8	compound	_	_
+10	de	de	X	FW	_	11	case	_	_
+11	Molina	Molina	PROPN	NNP	Number=Sing	8	nmod	_	_
+12	,	,	PUNCT	,	_	14	punct	_	_
+13	☏	☏	NUM	CD	NumType=Card	14	nummod	_	_
+14	+34953750440	+a4r5875	NUM	CD	NumType=Card	2	conj	_	_
+15	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	M	M	PROPN	NNP	Number=Sing	0	root	_	_
@@ -988,10 +996,12 @@
 2	de	de	PROPN	NNP	Number=Sing	4	compound	_	_
 3	San	San	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Pablo	Pablo	PROPN	NNP	Number=Sing	0	root	_	_
-5	,	,	PUNCT	,	_	7	punct	_	_
-6	☏	☏	NUM	CD	NumType=Card	7	nummod	_	_
-7	+34953750637	+card@	NUM	CD	NumType=Card	4	appos	_	_
-8	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	3	punct	_	_
+2	☏	☏	NUM	CD	NumType=Card	3	nummod	_	_
+3	+34953750637	+card@	NUM	CD	NumType=Card	0	root	_	_
+4	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
 1	Tu	Tu	PROPN	NNP	Number=Sing	0	root	_	_
@@ -1096,19 +1106,21 @@
 # s_type = frag
 1	Sacra	Sacra	X	FW	_	2	compound	_	_
 2	Capilla	Capilla	X	FW	_	0	root	_	_
-3	del	del	X	FW	_	4	punct	_	_
-4	Salvador	Salvador	X	FW	_	2	appos	_	_
-5	del	del	X	FW	_	6	compound	_	_
-6	Mundo	Mundo	X	FW	_	4	compound	_	_
-7	,	,	PUNCT	,	_	8	punct	_	_
-8	Plaza	Plaza	PROPN	NNP	Number=Sing	4	conj	_	_
-9	Vázquez	Vázquez	PROPN	NNP	Number=Sing	8	compound	_	_
-10	de	de	X	FW	_	11	case	_	_
-11	Molina	Molina	PROPN	NNP	Number=Sing	8	nmod	_	_
-12	,	,	PUNCT	,	_	14	punct	_	_
-13	☏	☏	NUM	CD	NumType=Card	14	nummod	_	_
-14	+34609279905	+34609279	NUM	CD	NumType=Card	2	appos	_	_
-15	.	.	PUNCT	.	_	2	punct	_	_
+3	del	del	X	FW	_	4	case	_	_
+4	Salvador	Salvador	X	FW	_	2	nmod	_	_
+5	del	del	X	FW	_	6	case	_	_
+6	Mundo	Mundo	X	FW	_	4	nmod	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	Plaza	Plaza	PROPN	NNP	Number=Sing	0	root	_	_
+3	Vázquez	Vázquez	PROPN	NNP	Number=Sing	2	flat	_	_
+4	de	de	PROPN	NNP	Number=Sing	2	appos	_	_
+5	Molina	Molina	PROPN	NNP	Number=Sing	2	appos	_	_
+6	,	,	PUNCT	,	_	8	punct	_	_
+7	☏	☏	NUM	CD	NumType=Card	8	nummod	_	_
+8	+34609279905	+34609279	NUM	CD	NumType=Card	2	appos	_	_
+9	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = frag
 1	M	M	PROPN	NNP	Number=Sing	0	root	_	_
@@ -1232,11 +1244,15 @@
 
 # s_type = imp
 1	Do	do	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
-2	Hospital	Hospital	PROPN	NNP	Number=Sing	1	obj	_	_
-3	of	of	ADP	IN	_	4	case	_	_
-4	Santiago	Santiago	PROPN	NNP	Number=Sing	2	nmod	_	_
-5	,	,	PUNCT	,	_	6	punct	_	_
-6	28	@card@	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	Hospital	Hospital	PROPN	NNP	Number=Sing	0	root	_	_
+2	of	of	ADP	IN	_	3	case	_	_
+3	Santiago	Santiago	PROPN	NNP	Number=Sing	1	nmod	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	2	punct	_	_
+2	28	@card@	NUM	CD	NumType=Card	0	root	_	_
 
 # s_type = frag
 1	Calle	Calle	PROPN	NNP	Number=Sing	3	compound	_	_

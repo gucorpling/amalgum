@@ -144,11 +144,13 @@
 14	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
-1	Some	some	PRON	DT	_	4	nsubj	_	_
-2	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	4	cop	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	Paint	Paint	NOUN	NN	Number=Sing	0	root	_	_
-5	.	.	PUNCT	.	_	4	punct	_	_
+1	Some	some	PRON	DT	_	2	nsubj	_	_
+2	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+3	:	:	PUNCT	:	_	2	punct	_	_
+
+# s_type = imp
+1	Paint	Paint	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Acrylic	Acrylic	NOUN	NN	Number=Sing	7	nsubj	_	_
@@ -335,8 +337,10 @@
 13	color	color	NOUN	NN	Number=Sing	14	compound	_	_
 14	washes	wash	NOUN	NNS	Number=Plur	12	obj	_	_
 15	.	.	PUNCT	.	_	6	punct	_	_
-16	Chalk	chalk	NOUN	NN	Number=Sing	14	appos	_	_
-17	.	.	PUNCT	.	_	6	punct	_	_
+
+# s_type = imp
+1	Chalk	chalk	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Pastels	pastel	NOUN	NNS	Number=Plur	3	nsubj	_	_
@@ -443,10 +447,12 @@
 22	matter	matter	NOUN	NN	Number=Sing	4	conj	_	_
 23	of	of	ADP	IN	_	24	case	_	_
 24	opinion	opinion	NOUN	NN	Number=Sing	22	nmod	_	_
-25	:	:	PUNCT	:	_	27	punct	_	_
-26	Sheet	Sheet	NOUN	NN	Number=Sing	27	compound	_	_
-27	metal	metal	NOUN	NN	Number=Sing	24	appos	_	_
-28	.	.	PUNCT	.	_	4	punct	_	_
+25	:	:	PUNCT	:	_	4	punct	_	_
+
+# s_type = frag
+1	Sheet	Sheet	NOUN	NN	Number=Sing	2	compound	_	_
+2	metal	metal	NOUN	NN	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = sub
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
@@ -799,41 +805,45 @@
 # s_type = frag
 1	Video	video	NOUN	NN	Number=Sing	0	root	_	_
 
+# s_type = frag
+1	Tips	tip	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Tips	tip	NOUN	NNS	Number=Plur	23	nsubj	_	_
-2	Some	some	DET	DT	_	3	det	_	_
-3	places	place	NOUN	NNS	Number=Plur	1	appos	_	_
-4	to	to	PART	TO	_	5	mark	_	_
-5	shop	shop	VERB	VB	VerbForm=Inf	3	acl	_	_
-6	for	for	ADP	IN	_	7	case	_	_
-7	materials	material	NOUN	NNS	Number=Plur	5	obl	_	_
-8	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	cop	_	_
-9	Dick	Dick	PROPN	NNP	Number=Sing	0	root	_	_
-10	Blick	Blick	PROPN	NNP	Number=Sing	9	flat	_	_
-11	,	,	PUNCT	,	_	12	punct	_	_
-12	Michaels	Michaels	PROPN	NNP	Number=Sing	9	conj	_	_
-13	,	,	PUNCT	,	_	15	punct	_	_
-14	and	and	CCONJ	CC	_	15	cc	_	_
-15	Joann	Joann	PROPN	NNP	Number=Sing	9	conj	_	_
-16	Fabrics	Fabrics	PROPN	NNPS	Number=Plur	15	flat	_	_
-17	Listening	listen	VERB	VBG	VerbForm=Ger	15	acl	_	_
-18	to	to	ADP	TO	_	19	case	_	_
-19	music	music	NOUN	NN	Number=Sing	17	obl	_	_
-20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	_	_
-21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
-22	great	great	ADJ	JJ	Degree=Pos	23	amod	_	_
-23	way	way	NOUN	NN	Number=Sing	9	acl:relcl	_	_
-24	to	to	PART	TO	_	25	mark	_	_
-25	have	have	VERB	VB	VerbForm=Inf	23	acl	_	_
-26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	_	_
-27	lot	lot	NOUN	NN	Number=Sing	25	obj	_	_
-28	of	of	ADP	IN	_	29	case	_	_
-29	fun	fun	NOUN	NN	Number=Sing	27	nmod	_	_
-30	while	while	SCONJ	IN	_	31	mark	_	_
-31	painting	painting	NOUN	NN	Number=Sing	25	advcl	_	_
-32	or	or	CCONJ	CC	_	33	cc	_	_
-33	drawing	drawing	VERB	VBG	VerbForm=Ger	31	conj	_	_
-34	!	!	PUNCT	.	_	23	punct	_	_
+1	Some	some	DET	DT	_	2	det	_	_
+2	places	place	NOUN	NNS	Number=Plur	8	nsubj	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	shop	shop	VERB	VB	VerbForm=Inf	2	acl	_	_
+5	for	for	ADP	IN	_	6	case	_	_
+6	materials	material	NOUN	NNS	Number=Plur	4	obl	_	_
+7	are	be	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	cop	_	_
+8	Dick	Dick	PROPN	NNP	Number=Sing	0	root	_	_
+9	Blick	Blick	PROPN	NNP	Number=Sing	8	flat	_	_
+10	,	,	PUNCT	,	_	11	punct	_	_
+11	Michaels	Michaels	PROPN	NNP	Number=Sing	8	conj	_	_
+12	,	,	PUNCT	,	_	15	punct	_	_
+13	and	and	CCONJ	CC	_	15	cc	_	_
+14	Joann	Joann	PROPN	NNP	Number=Sing	15	compound	_	_
+15	Fabrics	Fabrics	PROPN	NNPS	Number=Plur	8	conj	_	_
+
+# s_type = decl
+1	Listening	listen	VERB	VBG	VerbForm=Ger	7	csubj	_	_
+2	to	to	ADP	TO	_	3	case	_	_
+3	music	music	NOUN	NN	Number=Sing	1	obl	_	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+6	great	great	ADJ	JJ	Degree=Pos	7	amod	_	_
+7	way	way	NOUN	NN	Number=Sing	0	root	_	_
+8	to	to	PART	TO	_	9	mark	_	_
+9	have	have	VERB	VB	VerbForm=Inf	7	acl	_	_
+10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	_	_
+11	lot	lot	NOUN	NN	Number=Sing	9	obj	_	_
+12	of	of	ADP	IN	_	13	case	_	_
+13	fun	fun	NOUN	NN	Number=Sing	11	nmod	_	_
+14	while	while	SCONJ	IN	_	15	mark	_	_
+15	painting	painting	NOUN	NN	Number=Sing	11	nmod	_	_
+16	or	or	CCONJ	CC	_	17	cc	_	_
+17	drawing	drawing	VERB	VBG	VerbForm=Ger	15	conj	_	_
+18	!	!	PUNCT	.	_	7	punct	_	_
 
 # s_type = decl
 1	Online	online	ADJ	JJ	Degree=Pos	3	amod	_	_
@@ -867,20 +877,22 @@
 14	project	project	NOUN	NN	Number=Sing	11	nmod	_	_
 15	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Warnings	warning	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Read	read	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
-4	directions	direction	NOUN	NNS	Number=Plur	2	obj	_	_
-5	for	for	ADP	IN	_	6	case	_	_
-6	use	use	NOUN	NN	Number=Sing	4	nmod	_	_
-7	on	on	ADP	IN	_	9	case	_	_
-8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
-9	product	product	NOUN	NN	Number=Sing	6	nmod	_	_
-10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	_
-11	buy	buy	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	9	acl:relcl	_	_
-12	thoroughly	thoroughly	ADV	RB	_	11	advmod	_	_
-13	!	!	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Warnings	warning	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	directions	direction	NOUN	NNS	Number=Plur	1	obj	_	_
+4	for	for	ADP	IN	_	5	case	_	_
+5	use	use	NOUN	NN	Number=Sing	3	nmod	_	_
+6	on	on	ADP	IN	_	8	case	_	_
+7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+8	product	product	NOUN	NN	Number=Sing	5	nmod	_	_
+9	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	10	nsubj	_	_
+10	buy	buy	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	8	acl:relcl	_	_
+11	thoroughly	thoroughly	ADV	RB	_	10	advmod	_	_
+12	!	!	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Use	use	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -909,12 +921,14 @@
 24	messy	messy	ADJ	JJ	Degree=Pos	22	xcomp	_	_
 25	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = imp
+# s_type = other
 1	Related	relate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
 2	wikiHow	wikiHow	PROPN	NNP	Number=Sing	1	obj	_	_
-3	How	how	SCONJ	WRB	PronType=Int	5	mark	_	_
-4	to	to	PART	TO	_	5	mark	_	_
-5	Become	Become	VERB	VB	VerbForm=Inf	1	xcomp	_	_
-6	an	an	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
-7	Artist	artist	NOUN	NN	Number=Sing	5	xcomp	_	_
+
+# s_type = inf
+1	How	how	SCONJ	WRB	PronType=Int	3	mark	_	_
+2	to	to	PART	TO	_	3	mark	_	_
+3	Become	Become	VERB	VB	VerbForm=Inf	0	root	_	_
+4	an	an	DET	DT	Definite=Ind|PronType=Art	5	det	_	_
+5	Artist	artist	NOUN	NN	Number=Sing	3	xcomp	_	_
 

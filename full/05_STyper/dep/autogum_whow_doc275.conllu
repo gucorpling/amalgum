@@ -38,32 +38,42 @@
 # s_type = frag
 1	Dough	dough	NOUN	NN	Number=Sing	0	root	_	_
 
-# s_type = frag
+# s_type = other
 1	(	(	PUNCT	-LRB-	_	2	punct	_	_
 2	Yields	Yields	NOUN	NN	Number=Sing	0	root	_	_
 3	24	@card@	NUM	CD	NumType=Card	4	nummod	_	_
-4	dumplings	dumpling	NOUN	NNS	Number=Plur	2	appos	_	_
+4	dumplings	dumpling	NOUN	NNS	Number=Plur	2	obj	_	_
 5	)	)	PUNCT	-RRB-	_	2	punct	_	_
-6	180g	@card@	NUM	CD	NumType=Card	9	nummod	_	_
-7	wheat	wheat	NOUN	NN	Number=Sing	9	compound	_	_
-8	starch	starch	NOUN	NN	Number=Sing	9	compound	_	_
-9	50g	@card@	NOUN	NN	Number=Sing	11	compound	_	_
-10	tapioca	tapioca	NOUN	NN	Number=Sing	11	compound	_	_
-11	starch	starch	NOUN	NN	Number=Sing	2	conj	_	_
-12	310ml	310ml	NUM	CD	NumType=Card	16	nummod	_	_
-13	Butterfly	Butterfly	NOUN	NN	Number=Sing	16	compound	_	_
-14	pea	pea	NOUN	NN	Number=Sing	16	compound	_	_
-15	blue	blue	ADJ	JJ	Degree=Pos	16	amod	_	_
-16	water-boiling	water-boiling	NOUN	NN	Number=Sing	11	conj	_	_
-17	,	,	PUNCT	,	_	22	punct	_	_
-18	212F	@card@	NUM	CD	NumType=Card	20	nummod	_	_
-19	4	4	NUM	CD	NumType=Card	20	nummod	_	_
-20	tsp	tsp	NOUN	NN	Number=Sing	22	compound	_	_
-21	avocado	avocado	NOUN	NN	Number=Sing	22	compound	_	_
-22	oil	oil	NOUN	NN	Number=Sing	25	compound	_	_
-23	80g	@card@	NUM	CD	NumType=Card	25	nummod	_	_
-24	chicken	chicken	NOUN	NN	Number=Sing	25	compound	_	_
-25	thigh	thigh	NOUN	NN	Number=Sing	16	conj	_	_
+
+# s_type = frag
+1	180g	@card@	NUM	CD	NumType=Card	2	nummod	_	_
+2	wheat	wheat	NOUN	NN	Number=Sing	3	compound	_	_
+3	starch	starch	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	50g	@card@	NOUN	NN	Number=Sing	2	compound	_	_
+2	tapioca	tapioca	NOUN	NN	Number=Sing	3	compound	_	_
+3	starch	starch	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	310ml	310ml	NUM	CD	NumType=Card	5	nummod	_	_
+2	Butterfly	Butterfly	ADJ	JJ	Degree=Pos	5	amod	_	_
+3	pea	pea	NOUN	NN	Number=Sing	5	compound	_	_
+4	blue	blue	ADJ	JJ	Degree=Pos	5	amod	_	_
+5	water-boiling	water-boiling	NOUN	NN	Number=Sing	0	root	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	212F	@card@	NUM	CD	NumType=Card	5	dep	_	_
+
+# s_type = frag
+1	4	4	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	avocado	avocado	NOUN	NN	Number=Sing	4	compound	_	_
+4	oil	oil	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	80g	@card@	NUM	CD	NumType=Card	2	nummod	_	_
+2	chicken	chicken	NOUN	NN	Number=Sing	3	compound	_	_
+3	thigh	thigh	NOUN	NN	Number=Sing	0	root	_	_
 
 # s_type = ger
 1	Shrimp	shrimp	NOUN	NN	Number=Sing	2	compound	_	_
@@ -82,41 +92,53 @@
 10	,	,	PUNCT	,	_	11	punct	_	_
 11	minced	mince	NOUN	NN	Number=Sing	7	conj	_	_
 12	)	)	PUNCT	-RRB-	_	2	punct	_	_
-13	(	(	PUNCT	-LRB-	_	16	punct	_	_
-14	Yields	Yields	NOUN	NN	Number=Sing	2	dep	_	_
+13	(	(	PUNCT	-LRB-	_	14	punct	_	_
+14	Yields	Yields	NOUN	NN	Number=Sing	2	parataxis	_	_
 15	24	@card@	NUM	CD	NumType=Card	16	nummod	_	_
-16	dumplings	dumpling	NOUN	NNS	Number=Plur	14	dep	_	_
-17	)	)	PUNCT	-RRB-	_	16	punct	_	_
-18	1	1	NUM	CD	NumType=Card	19	nummod	_	_
-19	tsp	tsp	NOUN	NN	Number=Sing	20	compound	_	_
-20	garlic	garlic	NOUN	NN	Number=Sing	21	compound	_	_
-21	fresh	fresh	ADJ	JJ	Degree=Pos	2	parataxis	_	_
-22	,	,	PUNCT	,	_	23	punct	_	_
-23	minced	mince	VERB	VBN	Tense=Past|VerbForm=Part	21	acl	_	_
-24	1/2	@card@	NUM	CD	NumType=Card	25	nummod	_	_
-25	tsp	tsp	NOUN	NN	Number=Sing	27	compound	_	_
-26	white	white	ADJ	JJ	Degree=Pos	27	amod	_	_
-27	pepper	pepper	NOUN	NN	Number=Sing	23	obj	_	_
-28	freshly	freshly	ADV	RB	_	29	advmod	_	_
-29	ground	ground	NOUN	NN	Number=Sing	27	compound	_	_
-30	1	1	NUM	CD	NumType=Card	33	nummod	_	_
-31	tsp	tsp	NOUN	NN	Number=Sing	33	compound	_	_
-32	coriander	coriander	NOUN	NN	Number=Sing	33	compound	_	_
-33	stems	stem	NOUN	NNS	Number=Plur	35	nsubj	_	_
-34	finely	finely	ADV	RB	_	35	advmod	_	_
-35	diced	dice	VERB	VBN	Mood=Ind|Tense=Past|VerbForm=Fin	29	acl	_	_
-36	3	3	NUM	CD	NumType=Card	37	nummod	_	_
-37	tsp	tsp	NOUN	NN	Number=Sing	39	compound	_	_
-38	palm	palm	NOUN	NN	Number=Sing	39	compound	_	_
-39	sugar	sugar	NOUN	NN	Number=Sing	35	obj	_	_
-40	2	2	NUM	CD	NumType=Card	41	nummod	_	_
-41	tsp	tsp	NOUN	NN	Number=Sing	43	compound	_	_
-42	fish	fish	NOUN	NN	Number=Sing	43	compound	_	_
-43	sauce	sauce	NOUN	NN	Number=Sing	35	obj	_	_
-44	2	2	NUM	CD	NumType=Card	45	nummod	_	_
-45	tsp	tsp	NOUN	NN	Number=Sing	47	compound	_	_
-46	avocado	avocado	NOUN	NN	Number=Sing	47	compound	_	_
-47	oil	oil	NOUN	NN	Number=Sing	43	conj	_	_
+16	dumplings	dumpling	NOUN	NNS	Number=Plur	14	obj	_	_
+17	)	)	PUNCT	-RRB-	_	14	punct	_	_
+
+# s_type = frag
+1	1	1	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	3	nmod:npmod	_	_
+3	garlic	garlic	NOUN	NN	Number=Sing	0	root	_	_
+4	fresh	fresh	ADJ	JJ	Degree=Pos	3	amod	_	_
+5	,	,	PUNCT	,	_	6	punct	_	_
+6	minced	mince	NOUN	NN	Number=Sing	4	conj	_	_
+
+# s_type = frag
+1	1/2	@card@	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	white	white	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	pepper	pepper	NOUN	NN	Number=Sing	0	root	_	_
+5	freshly	freshly	ADV	RB	_	6	advmod	_	_
+6	ground	ground	NOUN	NN	Number=Sing	4	nmod	_	_
+
+# s_type = frag
+1	1	1	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	coriander	coriander	NOUN	NN	Number=Sing	4	compound	_	_
+4	stems	stem	NOUN	NNS	Number=Plur	0	root	_	_
+5	finely	finely	ADV	RB	_	6	advmod	_	_
+6	diced	dice	VERB	VBN	Mood=Ind|Tense=Past|VerbForm=Fin	4	xcomp	_	_
+
+# s_type = frag
+1	3	3	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	palm	palm	NOUN	NN	Number=Sing	4	compound	_	_
+4	sugar	sugar	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	2	2	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	fish	fish	NOUN	NN	Number=Sing	4	compound	_	_
+4	sauce	sauce	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	2	2	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	avocado	avocado	NOUN	NN	Number=Sing	4	compound	_	_
+4	oil	oil	NOUN	NN	Number=Sing	0	root	_	_
 
 # s_type = frag
 1	Butterfly	Butterfly	NOUN	NN	Number=Sing	4	compound	_	_
@@ -124,38 +146,48 @@
 3	Blue	blue	PROPN	NNP	Number=Sing	4	compound	_	_
 4	Water	water	NOUN	NN	Number=Sing	0	root	_	_
 
-# s_type = frag
+# s_type = other
 1	(	(	PUNCT	-LRB-	_	2	punct	_	_
 2	Yields	Yields	NOUN	NN	Number=Sing	0	root	_	_
 3	24	@card@	NUM	CD	NumType=Card	4	nummod	_	_
-4	dumplings	dumpling	NOUN	NNS	Number=Plur	2	appos	_	_
+4	dumplings	dumpling	NOUN	NNS	Number=Plur	2	obj	_	_
 5	)	)	PUNCT	-RRB-	_	2	punct	_	_
-6	4	4	NUM	CD	NumType=Card	7	nummod	_	_
-7	tsp	tsp	NOUN	NN	Number=Sing	9	compound	_	_
-8	Butterfly	Butterfly	NOUN	NN	Number=Sing	9	compound	_	_
-9	pea	pea	NOUN	NN	Number=Sing	10	compound	_	_
-10	flowers	flower	NOUN	NNS	Number=Plur	2	conj	_	_
-11	dry	dry	ADJ	JJ	Degree=Pos	13	amod	_	_
-12	320ml	320ml	NUM	CD	NumType=Card	13	nummod	_	_
-13	water-boiling	water-boiling	NOUN	NN	Number=Sing	10	appos	_	_
-14	,	,	PUNCT	,	_	15	punct	_	_
-15	212F	@card@	NUM	CD	NumType=Card	2	conj	_	_
+
+# s_type = frag
+1	4	4	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	5	nmod:npmod	_	_
+3	Butterfly	Butterfly	NOUN	NN	Number=Sing	5	compound	_	_
+4	pea	pea	NOUN	NN	Number=Sing	5	compound	_	_
+5	flowers	flower	NOUN	NNS	Number=Plur	0	root	_	_
+6	dry	dry	ADJ	JJ	Degree=Pos	5	amod	_	_
+
+# s_type = frag
+1	320ml	320ml	NUM	CD	NumType=Card	2	nummod	_	_
+2	water-boiling	water-boiling	NOUN	NN	Number=Sing	0	root	_	_
+3	,	,	PUNCT	,	_	4	punct	_	_
+4	212F	@card@	NUM	CD	NumType=Card	2	dep	_	_
 
 # s_type = ger
 1	Serving	serve	VERB	VBG	VerbForm=Ger	0	root	_	_
-2	4	4	NUM	CD	NumType=Card	3	nummod	_	_
-3	tsp	tsp	NOUN	NN	Number=Sing	4	compound	_	_
-4	garlic	garlic	NOUN	NN	Number=Sing	5	compound	_	_
-5	fresh	fresh	ADJ	JJ	Degree=Pos	1	advmod	_	_
-6	,	,	PUNCT	,	_	7	punct	_	_
-7	minced	mince	VERB	VBN	Tense=Past|VerbForm=Part	1	conj	_	_
-8	4	4	NUM	CD	NumType=Card	9	nummod	_	_
-9	tbsp	tbsp	NOUN	NNS	Number=Sing	11	compound	_	_
-10	avocado	avocado	NOUN	NN	Number=Sing	11	compound	_	_
-11	oil	oil	NOUN	NN	Number=Sing	14	compound	_	_
-12	8	8	NUM	CD	NumType=Card	13	nummod	_	_
-13	leaves	leave	NOUN	NNS	Number=Plur	14	compound	_	_
-14	lettuce	lettuce	NOUN	NN	Number=Sing	7	obj	_	_
+
+# s_type = frag
+1	4	4	NUM	CD	NumType=Card	2	nummod	_	_
+2	tsp	tsp	NOUN	NN	Number=Sing	3	nmod:npmod	_	_
+3	garlic	garlic	NOUN	NN	Number=Sing	0	root	_	_
+4	fresh	fresh	ADJ	JJ	Degree=Pos	3	amod	_	_
+5	,	,	PUNCT	,	_	6	punct	_	_
+6	minced	mince	NOUN	NN	Number=Sing	4	conj	_	_
+
+# s_type = frag
+1	4	4	NUM	CD	NumType=Card	2	nummod	_	_
+2	tbsp	tbsp	NOUN	NN	Number=Sing	4	nmod:npmod	_	_
+3	avocado	avocado	NOUN	NN	Number=Sing	4	compound	_	_
+4	oil	oil	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	8	8	NUM	CD	NumType=Card	2	nummod	_	_
+2	leaves	leave	NOUN	NNS	Number=Plur	3	nmod:npmod	_	_
+3	lettuce	lettuce	NOUN	NN	Number=Sing	0	root	_	_
 
 # s_type = frag
 1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
@@ -469,19 +501,21 @@
 8	heat	heat	NOUN	NN	Number=Sing	5	nmod	_	_
 9	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = imp
+# s_type = ger
 1	Making	Making	VERB	VBG	VerbForm=Ger	0	root	_	_
-2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
-3	Stuffing	stuff	VERB	VBG	VerbForm=Ger	4	amod	_	_
-4	Peel	peel	NOUN	NN	Number=Sing	1	obj	_	_
-5	and	and	CCONJ	CC	_	6	cc	_	_
-6	mince	mince	VERB	VB	VerbForm=Inf	1	conj	_	_
-7	3	3	NUM	CD	NumType=Card	8	nummod	_	_
-8	tsp	tsp	NOUN	NN	Number=Sing	6	obj	_	_
-9	of	of	ADP	IN	_	11	case	_	_
-10	fresh	fresh	ADJ	JJ	Degree=Pos	11	amod	_	_
-11	garlic	garlic	NOUN	NN	Number=Sing	8	nmod	_	_
-12	.	.	PUNCT	.	_	1	punct	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	Stuffing	stuff	NOUN	NN	Number=Sing	1	obj	_	_
+
+# s_type = imp
+1	Peel	peel	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	and	and	CCONJ	CC	_	3	cc	_	_
+3	mince	mince	VERB	VB	VerbForm=Inf	1	conj	_	_
+4	3	3	NUM	CD	NumType=Card	5	nummod	_	_
+5	tsp	tsp	NOUN	NN	Number=Sing	3	obj	_	_
+6	of	of	ADP	IN	_	8	case	_	_
+7	fresh	fresh	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	garlic	garlic	NOUN	NN	Number=Sing	5	nmod	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = frag
 1	Ground	Ground	NOUN	NN	Number=Sing	2	compound	_	_
@@ -647,9 +681,11 @@
 
 # s_type = ger
 1	Serving	serve	VERB	VBG	VerbForm=Ger	0	root	_	_
-2	Heat	heat	NOUN	NN	Number=Sing	3	compound	_	_
-3	oil	oil	NOUN	NN	Number=Sing	1	obj	_	_
-4	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	Heat	heat	NOUN	NN	Number=Sing	2	compound	_	_
+2	oil	oil	NOUN	NN	Number=Sing	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = imp
 1	In	in	ADP	IN	_	4	case	_	_
@@ -717,21 +753,23 @@
 23	garlic	garlic	NOUN	NN	Number=Sing	16	obl	_	_
 24	.	.	PUNCT	.	_	4	punct	_	_
 
+# s_type = frag
+1	Tips	tip	NOUN	NNS	Number=Plur	0	root	_	_
+
 # s_type = decl
-1	Tips	tip	NOUN	NNS	Number=Plur	9	nsubj	_	_
-2	Butterfly	Butterfly	ADJ	JJ	Degree=Pos	4	amod	_	_
-3	pea	pea	NOUN	NN	Number=Sing	4	compound	_	_
-4	flowers	flower	NOUN	NNS	Number=Plur	9	nsubj	_	_
-5	used	use	VERB	VBN	Tense=Past|VerbForm=Part	4	acl	_	_
-6	for	for	ADP	IN	_	8	case	_	_
-7	this	this	DET	DT	Number=Sing|PronType=Dem	8	det	_	_
-8	recipe	recipe	NOUN	NN	Number=Sing	5	obl	_	_
-9	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
-10	from	from	ADP	IN	_	13	case	_	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	_	_
-12	family-owned	family-owned	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	farm	farm	NOUN	NN	Number=Sing	9	obl	_	_
-14	in	in	ADP	IN	_	15	case	_	_
-15	Thailand	Thailand	PROPN	NNP	Number=Sing	13	nmod	_	_
-16	.	.	PUNCT	.	_	9	punct	_	_
+1	Butterfly	Butterfly	ADJ	JJ	Degree=Pos	3	amod	_	_
+2	pea	pea	NOUN	NN	Number=Sing	3	compound	_	_
+3	flowers	flower	NOUN	NNS	Number=Plur	8	nsubj	_	_
+4	used	use	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	_	_
+5	for	for	ADP	IN	_	7	case	_	_
+6	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	_	_
+7	recipe	recipe	NOUN	NN	Number=Sing	4	obl	_	_
+8	came	come	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+9	from	from	ADP	IN	_	12	case	_	_
+10	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
+11	family-owned	family-owned	ADJ	JJ	Degree=Pos	12	amod	_	_
+12	farm	farm	NOUN	NN	Number=Sing	8	obl	_	_
+13	in	in	ADP	IN	_	14	case	_	_
+14	Thailand	Thailand	PROPN	NNP	Number=Sing	12	nmod	_	_
+15	.	.	PUNCT	.	_	8	punct	_	_
 

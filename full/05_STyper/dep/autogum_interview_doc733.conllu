@@ -24,18 +24,20 @@
 5	,	,	PUNCT	,	_	6	punct	_	_
 6	2008	@card@	NUM	CD	NumType=Card	4	nmod:tmod	_	_
 
-# s_type = decl
-1	Randall	Randall	PROPN	NNP	Number=Sing	5	nsubj	_	_
+# s_type = frag
+1	Randall	Randall	PROPN	NNP	Number=Sing	0	root	_	_
 2	Munroe	Munroe	PROPN	NNP	Number=Sing	1	flat	_	_
-3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	_	_
-4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-5	writer	writer	NOUN	NN	Number=Sing	0	root	_	_
-6	of	of	ADP	IN	_	10	case	_	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	_	_
-8	popular	popular	ADJ	JJ	Degree=Pos	10	amod	_	_
-9	webcomic	webcomic	NOUN	NN	Number=Sing	10	compound	_	_
-10	xkcd	xkcd	NOUN	NN	Number=Sing	5	nmod	_	_
-11	.	.	PUNCT	.	_	5	punct	_	_
+
+# s_type = decl
+1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	writer	writer	NOUN	NN	Number=Sing	0	root	_	_
+4	of	of	ADP	IN	_	8	case	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	_	_
+6	popular	popular	ADJ	JJ	Degree=Pos	8	amod	_	_
+7	webcomic	webcomic	NOUN	NN	Number=Sing	8	compound	_	_
+8	xkcd	xkcd	NOUN	NN	Number=Sing	3	nmod	_	_
+9	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
@@ -98,24 +100,30 @@
 3	Randall	Randall	PROPN	NNP	Number=Sing	1	nmod	_	_
 4	Munroe	Munroe	PROPN	NNP	Number=Sing	3	flat	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = q
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	So	so	ADV	RB	_	9	advmod	_	_
-7	could	could	AUX	MD	VerbForm=Fin	9	aux	_	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-9	tell	tell	VERB	VB	VerbForm=Inf	0	root	_	_
-10	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	9	iobj	_	_
-11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
-12	little	little	ADV	RB	Degree=Pos	9	obj	_	_
-13	about	about	ADP	IN	_	14	case	_	_
-14	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	12	nmod	_	_
-15	and	and	CCONJ	CC	_	16	cc	_	_
-16	xkcd	xkcd	NOUN	NN	Number=Sing	14	conj	_	_
-17	?	?	PUNCT	.	_	9	punct	_	_
+1	So	so	ADV	RB	_	4	advmod	_	_
+2	could	could	AUX	MD	VerbForm=Fin	4	aux	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	tell	tell	VERB	VB	VerbForm=Inf	0	root	_	_
+5	us	us	PRON	PRP	Case=Acc|Number=Plur|Person=1|PronType=Prs	4	iobj	_	_
+6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	_	_
+7	little	little	ADV	RB	Degree=Pos	4	obj	_	_
+8	about	about	ADP	IN	_	9	case	_	_
+9	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	7	nmod	_	_
+10	and	and	CCONJ	CC	_	11	cc	_	_
+11	xkcd	xkcd	NOUN	NN	Number=Sing	9	conj	_	_
+12	?	?	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	RM	RM	PROPN	NNP	Number=Sing	6	nsubj	_	_
@@ -205,39 +213,45 @@
 7	general	general	NOUN	NN	Number=Sing	5	obl	_	_
 8	.	.	PUNCT	.	_	5	punct	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = decl
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	So	so	ADV	RB	_	9	advmod	_	_
-7	,	,	PUNCT	,	_	6	punct	_	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-9	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-10	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	_	_
-11	somewhat	somewhat	ADV	RB	_	12	advmod	_	_
-12	non-standard	non-standard	ADJ	JJ	Degree=Pos|Polarity=Neg	14	amod	_	_
-13	style	style	NOUN	NN	Number=Sing	14	compound	_	_
-14	rule	rule	NOUN	NN	Number=Sing	9	obj	_	_
-15	for	for	SCONJ	IN	_	16	mark	_	_
-16	typing	tiping	VERB	VBG	VerbForm=Ger	14	acl	_	_
-17	out	out	ADP	RP	_	16	compound:prt	_	_
-18	"	"	PUNCT	``	_	19	punct	_	_
-19	xkcd	xkcd	NOUN	NN	Number=Sing	16	obj	_	_
-20	"	"	PUNCT	''	_	19	punct	_	_
-21	which	which	PRON	WDT	PronType=Rel	23	obj	_	_
-22	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	23	nsubj	_	_
-23	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	19	acl:relcl	_	_
-24	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	25	aux	_	_
-25	caused	cause	VERB	VBN	Tense=Past|VerbForm=Part	19	acl:relcl	_	_
-26	great	great	ADJ	JJ	Degree=Pos	27	amod	_	_
-27	consternation	consternation	NOUN	NN	Number=Sing	25	obj	_	_
-28	on	on	ADP	IN	_	29	case	_	_
-29	Wikipedia	Wikipedia	PROPN	NNP	Number=Sing	27	nmod	_	_
-30	and	and	CCONJ	CC	_	31	cc	_	_
-31	elsewhere	elsewhere	ADV	RB	_	25	conj	_	_
-32	.	.	PUNCT	.	_	9	punct	_	_
+1	So	so	ADV	RB	_	4	advmod	_	_
+2	,	,	PUNCT	,	_	1	punct	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	have	have	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
+5	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	_	_
+6	somewhat	somewhat	ADV	RB	_	7	advmod	_	_
+7	non-standard	non-standard	ADJ	JJ	Degree=Pos|Polarity=Neg	9	amod	_	_
+8	style	style	NOUN	NN	Number=Sing	9	compound	_	_
+9	rule	rule	NOUN	NN	Number=Sing	4	obj	_	_
+10	for	for	SCONJ	IN	_	11	mark	_	_
+11	typing	tiping	VERB	VBG	VerbForm=Ger	9	acl	_	_
+12	out	out	ADP	RP	_	11	compound:prt	_	_
+13	"	"	PUNCT	``	_	14	punct	_	_
+14	xkcd	xkcd	NOUN	NN	Number=Sing	11	obj	_	_
+15	"	"	PUNCT	''	_	14	punct	_	_
+16	which	which	PRON	WDT	PronType=Rel	18	obj	_	_
+17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	18	nsubj	_	_
+18	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	14	acl:relcl	_	_
+19	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	_	_
+20	caused	cause	VERB	VBN	Tense=Past|VerbForm=Part	14	acl:relcl	_	_
+21	great	great	ADJ	JJ	Degree=Pos	22	amod	_	_
+22	consternation	consternation	NOUN	NN	Number=Sing	20	obj	_	_
+23	on	on	ADP	IN	_	24	case	_	_
+24	Wikipedia	Wikipedia	PROPN	NNP	Number=Sing	22	nmod	_	_
+25	and	and	CCONJ	CC	_	26	cc	_	_
+26	elsewhere	elsewhere	ADV	RB	_	20	conj	_	_
+27	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	RM	RM	PROPN	NNP	Number=Sing	11	nsubj	_	_
@@ -524,23 +538,29 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
 2	comic	comic	NOUN	NN	Number=Sing	0	root	_	_
 
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	(	(	PUNCT	-LRB-	_	0	root	_	_
+
+# s_type = frag
+1	WN	wn	NOUN	NN	Number=Sing	0	root	_	_
+
+# s_type = frag
+1	)	)	PUNCT	-RRB-	_	0	root	_	_
+2	)	)	PUNCT	-RRB-	_	1	punct	_	_
+
 # s_type = wh
-1	(	(	PUNCT	-LRB-	_	3	punct	_	_
-2	(	(	PUNCT	-LRB-	_	3	punct	_	_
-3	WN	wn	PROPN	NNP	Number=Sing	9	dep	_	_
-4	)	)	PUNCT	-RRB-	_	3	punct	_	_
-5	)	)	PUNCT	-RRB-	_	3	punct	_	_
-6	When	when	SCONJ	WRB	PronType=Int	9	mark	_	_
-7	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	aux	_	_
-8	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	9	nsubj	_	_
-9	realize	realize	VERB	VB	VerbForm=Inf	0	root	_	_
-10	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	11	nsubj	_	_
-11	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	9	ccomp	_	_
-12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	_	_
-13	genuinely	genuinely	ADV	RB	_	14	advmod	_	_
-14	successful	successful	ADJ	JJ	Degree=Pos	15	amod	_	_
-15	webcomic	webcomic	NOUN	NN	Number=Sing	11	obj	_	_
-16	?	?	PUNCT	.	_	9	punct	_	_
+1	When	when	SCONJ	WRB	PronType=Int	4	mark	_	_
+2	did	do	AUX	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	aux	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	realize	realize	VERB	VB	VerbForm=Inf	0	root	_	_
+5	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	6	nsubj	_	_
+6	had	have	VERB	VBD	Mood=Ind|Tense=Past|VerbForm=Fin	4	ccomp	_	_
+7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	_	_
+8	genuinely	genuinely	ADV	RB	_	9	advmod	_	_
+9	successful	successful	ADJ	JJ	Degree=Pos	10	amod	_	_
+10	webcomic	webcomic	NOUN	NN	Number=Sing	6	obj	_	_
+11	?	?	PUNCT	.	_	4	punct	_	_
 
 # s_type = decl
 1	RM	RM	PROPN	NNP	Number=Sing	0	root	_	_

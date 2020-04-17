@@ -102,19 +102,21 @@
 # s_type = frag
 1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
 
-# s_type = imp
+# s_type = frag
 1	As	as	ADV	RB	_	2	advmod	_	_
-2	Soon	soon	ADV	RB	Degree=Pos	5	advmod	_	_
-3	as	as	SCONJ	IN	_	5	mark	_	_
-4	Possible	Possible	ADJ	JJ	Degree=Pos	5	advcl	_	_
-5	Find	find	VERB	VB	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-6	out	out	ADP	RP	_	5	compound:prt	_	_
-7	what	what	PRON	WP	PronType=Int	11	obj	_	_
-8	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	10	nmod:poss	_	_
-9	pre-op	pre-op	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	instructions	instruction	NOUN	NNS	Number=Plur	11	nsubj	_	_
-11	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	ccomp	_	_
-12	.	.	PUNCT	.	_	5	punct	_	_
+2	Soon	soon	ADV	RB	Degree=Pos	0	root	_	_
+3	as	as	ADP	IN	_	4	case	_	_
+4	Possible	Possible	ADJ	JJ	Degree=Pos	2	nmod	_	_
+
+# s_type = imp
+1	Find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	out	out	ADP	RP	_	1	compound:prt	_	_
+3	what	what	PRON	WP	PronType=Int	1	ccomp	_	_
+4	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	6	nmod:poss	_	_
+5	pre-op	pre-op	ADJ	JJ	Degree=Pos	6	amod	_	_
+6	instructions	instruction	NOUN	NNS	Number=Plur	7	nsubj	_	_
+7	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	_	_
+8	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = sub
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
@@ -475,21 +477,23 @@
 18	stays	stays	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	ccomp	_	_
 19	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	One	One	NUM	CD	NumType=Card	2	nummod	_	_
-2	Week	week	NOUN	NN	Number=Sing	5	obl:tmod	_	_
+2	Week	week	NOUN	NN	Number=Sing	0	root	_	_
 3	Before	before	ADP	IN	_	4	case	_	_
-4	Surgery	Surgery	PROPN	NNP	Number=Sing	2	nmod	_	_
-5	Make	make	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-6	sure	sure	ADP	RP	_	5	compound:prt	_	_
-7	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
-8	know	know	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	5	ccomp	_	_
-9	all	all	PRON	DT	_	8	obj	_	_
-10	of	of	ADP	IN	_	13	case	_	_
-11	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	13	nmod:poss	_	_
-12	pre-op	pre-op	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	instructions	instruction	NOUN	NNS	Number=Plur	9	nmod	_	_
-14	.	.	PUNCT	.	_	5	punct	_	_
+4	Surgery	Surgery	NOUN	NN	Number=Sing	2	nmod	_	_
+
+# s_type = imp
+1	Make	make	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	sure	sure	ADP	RP	_	1	compound:prt	_	_
+3	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	4	nsubj	_	_
+4	know	know	VERB	VB	VerbForm=Inf	1	ccomp	_	_
+5	all	all	PRON	DT	_	4	obj	_	_
+6	of	of	ADP	IN	_	9	case	_	_
+7	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	9	nmod:poss	_	_
+8	pre-op	pre-op	ADJ	JJ	Degree=Pos	9	amod	_	_
+9	instructions	instruction	NOUN	NNS	Number=Plur	5	nmod	_	_
+10	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	If	if	SCONJ	IN	_	5	mark	_	_
@@ -714,11 +718,13 @@
 # s_type = frag
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_
 2	Day	day	PROPN	NNP	Number=Sing	0	root	_	_
-3	of	of	ADP	IN	_	6	case	_	_
-4	Surgery	Surgery	PROPN	NNP	Number=Sing	5	compound	_	_
-5	Stay	stay	PROPN	NNP	Number=Sing	6	compound	_	_
-6	NPO	NPO	PROPN	NNP	Number=Sing	2	nmod	_	_
-7	.	.	PUNCT	.	_	2	punct	_	_
+3	of	of	ADP	IN	_	4	case	_	_
+4	Surgery	Surgery	PROPN	NNP	Number=Sing	2	nmod	_	_
+
+# s_type = imp
+1	Stay	stay	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	NPO	NPO	PROPN	NNP	Number=Sing	1	obj	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	5	nsubj	_	_

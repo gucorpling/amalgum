@@ -97,13 +97,15 @@
 # s_type = frag
 1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
 
-# s_type = decl
-1	Using	use	VERB	VBG	VerbForm=Ger	4	csubj	_	_
-2	PVC	PVC	PROPN	NNP	Number=Sing	3	compound	_	_
+# s_type = ger
+1	Using	use	VERB	VBG	VerbForm=Ger	0	root	_	_
+2	PVC	PVC	NOUN	NN	Number=Sing	3	compound	_	_
 3	Pipe	pipe	NOUN	NN	Number=Sing	1	obj	_	_
-4	Stay	stay	VERB	VB	VerbForm=Fin	0	root	_	_
-5	safe	safe	ADJ	JJ	Degree=Pos	4	xcomp	_	_
-6	.	.	PUNCT	.	_	4	punct	_	_
+
+# s_type = imp
+1	Stay	stay	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	safe	safe	ADJ	JJ	Degree=Pos	1	xcomp	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	You	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	3	nsubj	_	_
@@ -129,14 +131,14 @@
 21	earplugs	earplug	NOUN	NNS	Number=Plur	14	conj	_	_
 22	.	.	PUNCT	.	_	3	punct	_	_
 
-# s_type = imp
+# s_type = decl
 1	(	(	PUNCT	-LRB-	_	7	punct	_	_
 2	This	this	PRON	DT	Number=Sing|PronType=Dem	7	nsubj	_	_
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	_	_
 4	only	only	ADV	RB	_	7	advmod	_	_
 5	if	if	SCONJ	IN	_	7	mark	_	_
 6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	7	nsubj	_	_
-7	plan	plan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	22	advcl	_	_
+7	plan	plan	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 8	to	to	PART	TO	_	9	mark	_	_
 9	drill	drill	VERB	VB	VerbForm=Inf	7	xcomp	_	_
 10	holes	hole	NOUN	NNS	Number=Plur	9	obj	_	_
@@ -151,15 +153,17 @@
 19	them	them	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	18	obj	_	_
 20	.	.	PUNCT	.	_	7	punct	_	_
 21	)	)	PUNCT	-RRB-	_	7	punct	_	_
-22	Find	find	VERB	VB	VerbForm=Inf	0	root	_	_
-23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	_	_
-24	perfect	perfect	ADJ	JJ	Degree=Pos	25	amod	_	_
-25	spot	spot	NOUN	NN	Number=Sing	22	obj	_	_
-26	for	for	ADP	IN	_	29	case	_	_
-27	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	29	nmod:poss	_	_
-28	vertical	vertical	ADJ	JJ	Degree=Pos	29	amod	_	_
-29	farm	farm	NOUN	NN	Number=Sing	25	nmod	_	_
-30	.	.	PUNCT	.	_	22	punct	_	_
+
+# s_type = imp
+1	Find	find	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	perfect	perfect	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	spot	spot	NOUN	NN	Number=Sing	1	obj	_	_
+5	for	for	ADP	IN	_	8	case	_	_
+6	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	8	nmod:poss	_	_
+7	vertical	vertical	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	farm	farm	NOUN	NN	Number=Sing	4	nmod	_	_
+9	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Gather	Gather	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -170,90 +174,100 @@
 # s_type = decl
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	2	nsubj	_	_
 2	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	:	:	PUNCT	:	_	4	punct	_	_
-4	4”-6	48-6	PROPN	NNP	Number=Sing	2	nsubj	_	_
-5	”	"	PUNCT	''	_	4	punct	_	_
+3	:	:	PUNCT	:	_	2	punct	_	_
+
+# s_type = frag
+1	4”-6	48-6	NOUN	NN	Number=Sing	4	compound	_	_
+2	”	"	PUNCT	''	_	1	punct	_	_
+3	PVC	PVC	NOUN	NN	Number=Sing	4	compound	_	_
+4	pipes	pipe	NOUN	NNS	Number=Plur	0	root	_	_
+5	-	-	PUNCT	:	_	7	punct	_	_
+6	as	as	ADV	RB	_	7	advmod	_	_
+7	many	many	ADJ	JJ	Degree=Pos	4	parataxis	_	_
+8	as	as	SCONJ	IN	_	9	mark	_	_
+9	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	_	_
+10	-	-	PUNCT	:	_	12	punct	_	_
+11	with	with	ADP	IN	_	12	case	_	_
+12	holes	hole	NOUN	NNS	Number=Plur	4	nmod	_	_
+13	spaced	space	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	_	_
+14	evenly	evenly	ADV	RB	_	13	advmod	_	_
+15	throughout	throughout	ADP	IN	_	13	obl	_	_
+16	(	(	PUNCT	-LRB-	_	18	punct	_	_
+17	can	can	AUX	MD	VerbForm=Fin	18	aux	_	_
+18	buy	buy	VERB	VB	VerbForm=Inf	12	dep	_	_
+19	these	these	PRON	DT	Number=Plur|PronType=Dem	18	obj	_	_
+20	at	at	ADP	IN	_	23	case	_	_
+21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	_	_
+22	DIY/hardware	DIY/hardware	PROPN	NNP	Number=Sing	23	compound	_	_
+23	store	store	NOUN	NN	Number=Sing	18	obl	_	_
+24	or	or	CCONJ	CC	_	26	cc	_	_
+25	can	can	AUX	MD	VerbForm=Fin	26	aux	_	_
+26	drill	drill	VERB	VB	VerbForm=Inf	18	conj	_	_
+27	holes	hole	NOUN	NNS	Number=Plur	26	obj	_	_
+28	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	26	obj	_	_
+29	)	)	PUNCT	-RRB-	_	18	punct	_	_
+
+# s_type = decl
+1	An	an	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+2	end	end	NOUN	NN	Number=Sing	3	compound	_	_
+3	cap	cap	NOUN	NN	Number=Sing	7	nsubj	_	_
+4	for	for	ADP	IN	_	6	case	_	_
+5	PVC	PVC	PROPN	NNP	Number=Sing	6	compound	_	_
+6	pipe	pipe	NOUN	NN	Number=Sing	3	nmod	_	_
+7	mentioned	mention	VERB	VBN	Mood=Ind|Tense=Past|VerbForm=Fin	0	root	_	_
+8	above	above	ADP	IN	_	11	case	_	_
+9	,	,	PUNCT	,	_	11	punct	_	_
+10	for	for	ADP	IN	_	11	case	_	_
+11	stabilization	stabilization	NOUN	NN	Number=Sing	7	obl	_	_
+12	and	and	CCONJ	CC	_	13	cc	_	_
+13	balance	balance	NOUN	NN	Number=Sing	11	conj	_	_
+14	(	(	PUNCT	-LRB-	_	17	punct	_	_
+15	Can	can	AUX	MD	VerbForm=Fin	17	aux	_	_
+16	also	also	ADV	RB	_	17	advmod	_	_
+17	buy	buy	VERB	VB	VerbForm=Inf	7	parataxis	_	_
+18	these	these	PRON	DT	Number=Plur|PronType=Dem	17	obj	_	_
+19	at	at	ADP	IN	_	22	case	_	_
+20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	_	_
+21	DIY/hardware	DIY/hardware	PROPN	NNP	Number=Sing	22	compound	_	_
+22	store	store	NOUN	NN	Number=Sing	17	obl	_	_
+23	)	)	PUNCT	-RRB-	_	17	punct	_	_
+
+# s_type = frag
+1	Rocks	Rocks	NOUN	NNS	Number=Plur	0	root	_	_
+2	(	(	PUNCT	-LRB-	_	4	punct	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	weigh	weigh	VERB	VB	VerbForm=Inf	1	acl	_	_
+5	down	down	ADP	RP	_	4	compound:prt	_	_
 6	PVC	PVC	NOUN	NN	Number=Sing	7	compound	_	_
-7	pipes	pipe	NOUN	NNS	Number=Plur	4	conj	_	_
-8	-	-	PUNCT	:	_	10	punct	_	_
-9	as	as	ADV	RB	_	10	advmod	_	_
-10	many	many	ADJ	JJ	Degree=Pos	7	amod	_	_
-11	as	as	SCONJ	IN	_	12	mark	_	_
-12	needed	need	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	_	_
-13	-	-	PUNCT	:	_	15	punct	_	_
-14	with	with	ADP	IN	_	15	case	_	_
-15	holes	hole	NOUN	NNS	Number=Plur	12	obl	_	_
-16	spaced	space	VERB	VBN	Tense=Past|VerbForm=Part	15	acl	_	_
-17	evenly	evenly	ADV	RB	_	16	advmod	_	_
-18	throughout	throughout	ADP	IN	_	16	compound:prt	_	_
-19	(	(	PUNCT	-LRB-	_	21	punct	_	_
-20	can	can	AUX	MD	VerbForm=Fin	21	aux	_	_
-21	buy	buy	VERB	VB	VerbForm=Inf	16	advcl	_	_
-22	these	these	PRON	DT	Number=Plur|PronType=Dem	21	obj	_	_
-23	at	at	ADP	IN	_	26	case	_	_
-24	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	_	_
-25	DIY/hardware	DIY/hardware	PROPN	NNP	Number=Sing	26	compound	_	_
-26	store	store	NOUN	NN	Number=Sing	21	obl	_	_
-27	or	or	CCONJ	CC	_	29	cc	_	_
-28	can	can	AUX	MD	VerbForm=Fin	29	aux	_	_
-29	drill	drill	VERB	VB	VerbForm=Inf	21	conj	_	_
-30	holes	hole	NOUN	NNS	Number=Plur	29	obj	_	_
-31	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	29	obj	_	_
-32	)	)	PUNCT	-RRB-	_	29	punct	_	_
-33	An	an	DET	DT	Definite=Ind|PronType=Art	35	det	_	_
-34	end	end	NOUN	NN	Number=Sing	35	compound	_	_
-35	cap	cap	NOUN	NN	Number=Sing	30	appos	_	_
-36	for	for	ADP	IN	_	38	case	_	_
-37	PVC	PVC	PROPN	NNP	Number=Sing	38	compound	_	_
-38	pipe	pipe	NOUN	NN	Number=Sing	35	nmod	_	_
-39	mentioned	mention	VERB	VBN	Tense=Past|VerbForm=Part	38	acl	_	_
-40	above	above	ADP	IN	_	39	compound:prt	_	_
-41	,	,	PUNCT	,	_	40	punct	_	_
-42	for	for	ADP	IN	_	43	case	_	_
-43	stabilization	stabilization	NOUN	NN	Number=Sing	39	obl	_	_
-44	and	and	CCONJ	CC	_	45	cc	_	_
-45	balance	balance	NOUN	NN	Number=Sing	43	conj	_	_
-46	(	(	PUNCT	-LRB-	_	49	punct	_	_
-47	Can	can	AUX	MD	VerbForm=Fin	49	aux	_	_
-48	also	also	ADV	RB	_	49	advmod	_	_
-49	buy	buy	VERB	VB	VerbForm=Inf	43	dep	_	_
-50	these	these	PRON	DT	Number=Plur|PronType=Dem	49	obj	_	_
-51	at	at	ADP	IN	_	56	case	_	_
-52	a	a	DET	DT	Definite=Ind|PronType=Art	54	det	_	_
-53	DIY/hardware	DIY/hardware	PROPN	NNP	Number=Sing	54	compound	_	_
-54	store	store	NOUN	NN	Number=Sing	49	obl	_	_
-55	)	)	PUNCT	-RRB-	_	49	punct	_	_
-56	Rocks	Rocks	NOUN	NNS	Number=Plur	49	obl	_	_
-57	(	(	PUNCT	-LRB-	_	59	punct	_	_
-58	to	to	PART	TO	_	59	mark	_	_
-59	weigh	weigh	VERB	VB	VerbForm=Inf	49	xcomp	_	_
-60	down	down	ADP	RP	_	59	compound:prt	_	_
-61	PVC	PVC	NOUN	NN	Number=Sing	62	compound	_	_
-62	pipe	pipe	NOUN	NN	Number=Sing	59	obj	_	_
-63	to	to	PART	TO	_	64	mark	_	_
-64	stay	stay	VERB	VB	VerbForm=Inf	59	xcomp	_	_
-65	in	in	ADP	IN	_	66	case	_	_
-66	place	place	NOUN	NN	Number=Sing	64	obl	_	_
-67	)	)	PUNCT	-RRB-	_	59	punct	_	_
-68	Soil	soil	NOUN	NN	Number=Sing	64	obj	_	_
-69	(	(	PUNCT	-LRB-	_	71	punct	_	_
-70	to	to	PART	TO	_	71	mark	_	_
-71	plant	plant	VERB	VB	VerbForm=Inf	68	acl	_	_
-72	the	the	DET	DT	Definite=Def|PronType=Art	73	det	_	_
-73	crops	crop	NOUN	NNS	Number=Plur	71	obj	_	_
-74	in	in	ADP	IN	_	71	obl	_	_
-75	)	)	PUNCT	-RRB-	_	71	punct	_	_
-76	And	and	CCONJ	CC	_	80	cc	_	_
-77	finally	finally	ADV	RB	_	80	advmod	_	_
-78	,	,	PUNCT	,	_	77	punct	_	_
-79	the	the	DET	DT	Definite=Def|PronType=Art	80	det	_	_
-80	crops	crop	NOUN	NNS	Number=Plur	68	conj	_	_
-81	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	83	nsubj	_	_
-82	would	would	AUX	MD	VerbForm=Fin	83	aux	_	_
-83	like	like	VERB	VB	VerbForm=Inf	80	acl:relcl	_	_
-84	to	to	PART	TO	_	85	mark	_	_
-85	grow	grow	VERB	VB	VerbForm=Inf	83	xcomp	_	_
-86	.	.	PUNCT	.	_	2	punct	_	_
+7	pipe	pipe	NOUN	NN	Number=Sing	4	obj	_	_
+8	to	to	PART	TO	_	9	mark	_	_
+9	stay	stay	VERB	VB	VerbForm=Inf	4	xcomp	_	_
+10	in	in	ADP	IN	_	11	case	_	_
+11	place	place	NOUN	NN	Number=Sing	9	obl	_	_
+12	)	)	PUNCT	-RRB-	_	4	punct	_	_
+
+# s_type = frag
+1	Soil	soil	NOUN	NN	Number=Sing	0	root	_	_
+2	(	(	PUNCT	-LRB-	_	4	punct	_	_
+3	to	to	PART	TO	_	4	mark	_	_
+4	plant	plant	VERB	VB	VerbForm=Inf	1	acl	_	_
+5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
+6	crops	crop	NOUN	NNS	Number=Plur	4	obj	_	_
+7	in	in	ADP	IN	_	4	case	_	_
+8	)	)	PUNCT	-RRB-	_	4	punct	_	_
+
+# s_type = sub
+1	And	and	CCONJ	CC	_	8	cc	_	_
+2	finally	finally	ADV	RB	_	8	advmod	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+5	crops	crop	NOUN	NNS	Number=Plur	8	nsubj	_	_
+6	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	8	nsubj	_	_
+7	would	would	AUX	MD	VerbForm=Fin	8	aux	_	_
+8	like	like	VERB	VB	VerbForm=Inf	0	root	_	_
+9	to	to	PART	TO	_	10	mark	_	_
+10	grow	grow	VERB	VB	VerbForm=Inf	8	xcomp	_	_
+11	.	.	PUNCT	.	_	8	punct	_	_
 
 # s_type = imp
 1	Use	use	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -424,9 +438,11 @@
 1	Using	use	VERB	VBG	VerbForm=Ger	0	root	_	_
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
 3	Pallet	Pallet	NOUN	NN	Number=Sing	1	obj	_	_
-4	Stay	stay	VERB	VB	VerbForm=Inf	1	ccomp	_	_
-5	safe	safe	ADJ	JJ	Degree=Pos	4	xcomp	_	_
-6	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = imp
+1	Stay	stay	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	safe	safe	ADJ	JJ	Degree=Pos	1	xcomp	_	_
+3	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	As	as	ADP	IN	_	5	case	_	_
@@ -830,14 +846,16 @@
 28	no	no	DET	DT	Polarity=Neg	30	det	_	_
 29	wrong	wrong	ADJ	JJ	Degree=Pos	30	amod	_	_
 30	answer	answer	NOUN	NN	Number=Sing	27	nsubj	_	_
-31	!	!	PUNCT	.	_	30	punct	_	_
-32	)	)	PUNCT	-RRB-	_	30	punct	_	_
-33	Pour	pour	VERB	VB	VerbForm=Inf	27	parataxis	_	_
-34	soil	soil	NOUN	NN	Number=Sing	33	obj	_	_
-35	over	over	ADP	IN	_	37	case	_	_
-36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	_	_
-37	pallet	pallet	NOUN	NN	Number=Sing	34	nmod	_	_
-38	.	.	PUNCT	.	_	1	punct	_	_
+31	!	!	PUNCT	.	_	17	punct	_	_
+32	)	)	PUNCT	-RRB-	_	17	punct	_	_
+
+# s_type = imp
+1	Pour	pour	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	soil	soil	NOUN	NN	Number=Sing	1	obj	_	_
+3	over	over	ADP	IN	_	5	case	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+5	pallet	pallet	NOUN	NN	Number=Sing	2	nmod	_	_
+6	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Use	use	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

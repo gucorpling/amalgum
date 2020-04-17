@@ -50,11 +50,13 @@
 6	how	how	SCONJ	WRB	PronType=Int	4	ccomp	_	_
 7	.	.	PUNCT	.	_	4	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	3	nsubj	_	_
-2	Get	get	AUX	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	3	cop	_	_
-3	organized	organize	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-4	.	.	PUNCT	.	_	3	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Get	get	AUX	VB	VerbForm=Inf	2	cop	_	_
+2	organized	organize	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+3	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = imp
 1	Categorize	Categorize	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -1028,36 +1030,38 @@
 23	business	business	NOUN	NN	Number=Sing	20	nmod	_	_
 24	.	.	PUNCT	.	_	17	punct	_	_
 
-# s_type = decl
+# s_type = frag
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
 2	Arts	Art	PROPN	NNPS	Number=Plur	4	compound	_	_
 3	Business	Business	PROPN	NNP	Number=Sing	4	compound	_	_
-4	Institute	Institute	PROPN	NNP	Number=Sing	8	nsubj	_	_
-5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	_	_
-6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
-7	nonprofit	nonprofit	ADJ	JJ	Degree=Pos	8	amod	_	_
-8	organization	organization	NOUN	NN	Number=Sing	0	root	_	_
-9	that	that	PRON	WDT	PronType=Rel	10	nsubj	_	_
-10	offers	offer	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	_	_
-11	seminars	seminar	NOUN	NNS	Number=Plur	10	obj	_	_
-12	,	,	PUNCT	,	_	13	punct	_	_
-13	mentoring	mentoring	VERB	VBG	VerbForm=Ger	10	advcl	_	_
-14	program	program	NOUN	NN	Number=Sing	13	obj	_	_
-15	an	an	DET	DT	Definite=Ind|PronType=Art	16	det	_	_
-16	e-course	e-course	NOUN	NN	Number=Sing	13	obj	_	_
-17	and	and	CCONJ	CC	_	20	cc	_	_
-18	many	many	ADJ	JJ	Degree=Pos	20	amod	_	_
-19	other	other	ADJ	JJ	Degree=Pos	20	amod	_	_
-20	resources	resource	NOUN	NNS	Number=Plur	16	conj	_	_
-21	to	to	ADP	TO	_	22	case	_	_
-22	people	people	NOUN	NNS	Number=Plur	20	nmod	_	_
-23	working	work	VERB	VBG	VerbForm=Ger	22	acl	_	_
-24	in	in	ADP	IN	_	28	case	_	_
-25	the	the	DET	DT	Definite=Def|PronType=Art	28	det	_	_
-26	wholesale	wholesale	NOUN	NN	Number=Sing	28	compound	_	_
-27	craft	craft	NOUN	NN	Number=Sing	28	compound	_	_
-28	market	market	NOUN	NN	Number=Sing	23	obl	_	_
-29	.	.	PUNCT	.	_	8	punct	_	_
+4	Institute	Institute	PROPN	NNP	Number=Sing	0	root	_	_
+
+# s_type = decl
+1	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	_	_
+3	nonprofit	nonprofit	ADJ	JJ	Degree=Pos	4	amod	_	_
+4	organization	organization	NOUN	NN	Number=Sing	0	root	_	_
+5	that	that	PRON	WDT	PronType=Rel	6	nsubj	_	_
+6	offers	offer	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	acl:relcl	_	_
+7	seminars	seminar	NOUN	NNS	Number=Plur	6	obj	_	_
+8	,	,	PUNCT	,	_	9	punct	_	_
+9	mentoring	mentoring	VERB	VBG	VerbForm=Ger	6	advcl	_	_
+10	program	program	NOUN	NN	Number=Sing	9	obj	_	_
+11	an	an	DET	DT	Definite=Ind|PronType=Art	12	det	_	_
+12	e-course	e-course	NOUN	NN	Number=Sing	9	obj	_	_
+13	and	and	CCONJ	CC	_	16	cc	_	_
+14	many	many	ADJ	JJ	Degree=Pos	16	amod	_	_
+15	other	other	ADJ	JJ	Degree=Pos	16	amod	_	_
+16	resources	resource	NOUN	NNS	Number=Plur	12	conj	_	_
+17	to	to	ADP	TO	_	18	case	_	_
+18	people	people	NOUN	NNS	Number=Plur	16	nmod	_	_
+19	working	work	VERB	VBG	VerbForm=Ger	18	acl	_	_
+20	in	in	ADP	IN	_	24	case	_	_
+21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	_	_
+22	wholesale	wholesale	NOUN	NN	Number=Sing	24	compound	_	_
+23	craft	craft	NOUN	NN	Number=Sing	24	compound	_	_
+24	market	market	NOUN	NN	Number=Sing	19	obl	_	_
+25	.	.	PUNCT	.	_	4	punct	_	_
 
 # s_type = imp
 1	Join	Join	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_

@@ -115,7 +115,7 @@
 1	In	in	SCONJ	IN	_	4	mark	_	_
 2	order	order	NOUN	NN	Number=Sing	1	fixed	_	_
 3	to	to	PART	TO	_	4	mark	_	_
-4	introduce	introduce	VERB	VB	VerbForm=Inf	29	advcl	_	_
+4	introduce	introduce	VERB	VB	VerbForm=Inf	0	root	_	_
 5	mobility	mobility	NOUN	NN	Number=Sing	4	obj	_	_
 6	to	to	ADP	TO	_	9	case	_	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	_	_
@@ -140,7 +140,7 @@
 26	mobile	mobile	NOUN	NN	Number=Sing	27	compound	_	_
 27	robot	robot	NOUN	NN	Number=Sing	29	nsubj:pass	_	_
 28	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	aux:pass	_	_
-29	built	build	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
+29	built	build	VERB	VBN	Tense=Past|VerbForm=Part	17	acl:relcl	_	_
 30	with	with	ADP	IN	_	32	case	_	_
 31	ATMega	ATMega	PROPN	NNP	Number=Sing	32	compound	_	_
 32	microcontrollers	microcontroller	NOUN	NNS	Number=Plur	29	obl	_	_
@@ -150,11 +150,15 @@
 36	target	target	NOUN	NN	Number=Sing	37	compound	_	_
 37	node	node	NOUN	NN	Number=Sing	33	obl	_	_
 38	as	as	SCONJ	IN	_	39	mark	_	_
-39	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	33	advcl	_	_
-40	in	in	ADP	IN	_	41	case	_	_
-41	Figure	Figure	PROPN	NNP	Number=Sing	39	obl	_	_
-42	1	1	NUM	CD	NumType=Card	41	amod	_	_
-43	.	.	PUNCT	.	_	29	punct	_	_
+39	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	37	acl	_	_
+40	in	in	ADP	IN	_	39	obl	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	1	1	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	With	with	ADP	IN	_	2	case	_	_
@@ -545,13 +549,17 @@
 52	.	.	PUNCT	.	_	20	punct	_	_
 
 # s_type = decl
-1	This	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj:pass	_	_
+1	This	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	_	_
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux:pass	_	_
 3	illustrated	illustrate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	_	_
-4	in	in	ADP	IN	_	5	case	_	_
-5	Figure	Figure	PROPN	NNP	Number=Sing	3	obl	_	_
-6	2	2	NUM	CD	NumType=Card	5	nummod	_	_
-7	.	.	PUNCT	.	_	3	punct	_	_
+4	in	in	ADP	IN	_	3	obl	_	_
+
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	2	2	NUM	CD	NumType=Card	1	amod	_	_
+
+# s_type = frag
+1	.	.	PUNCT	.	_	0	root	_	_
 
 # s_type = decl
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
@@ -800,36 +808,38 @@
 26	direction	direction	NOUN	NN	Number=Sing	19	conj	_	_
 27	.	.	PUNCT	.	_	15	punct	_	_
 
+# s_type = frag
+1	Figure	Figure	NOUN	NN	Number=Sing	0	root	_	_
+2	3	3	NUM	CD	NumType=Card	1	dep	_	_
+
 # s_type = decl
-1	Figure	Figure	NOUN	NN	Number=Sing	3	nsubj	_	_
-2	3	3	NUM	CD	NumType=Card	1	nummod	_	_
-3	illustrates	illustrate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
-4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
-5	robot	robot	NOUN	NN	Number=Sing	7	nmod:poss	_	_
-6	’s	's	PART	POS	_	5	case	_	_
-7	position	position	NOUN	NN	Number=Sing	3	obj	_	_
-8	with	with	ADP	IN	_	9	case	_	_
-9	respect	respect	NOUN	NN	Number=Sing	7	nmod	_	_
-10	to	to	ADP	TO	_	13	case	_	_
-11	two	two	NUM	CD	NumType=Card	13	nummod	_	_
-12	different	different	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	frames	frame	NOUN	NNS	Number=Plur	9	nmod	_	_
-14	,	,	PUNCT	,	_	18	punct	_	_
-15	namely	namely	ADV	RB	_	18	advmod	_	_
-16	and	and	CCONJ	CC	_	18	cc	_	_
-17	.	.	PUNCT	.	_	16	punct	_	_
-18	denotes	denote	VERB	VB	VerbForm=Inf	3	conj	_	_
-19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	_	_
-20	world	world	NOUN	NN	Number=Sing	22	compound	_	_
-21	coordinate	coordinate	NOUN	NN	Number=Sing	22	compound	_	_
-22	system	system	NOUN	NN	Number=Sing	18	obj	_	_
-23	,	,	PUNCT	,	_	25	punct	_	_
-24	whereas	whereas	SCONJ	IN	_	25	mark	_	_
-25	represents	represent	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	_	_
-26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	_	_
-27	robot-attached	robot-attached	ADJ	JJ	Degree=Pos	28	amod	_	_
-28	frame	frame	NOUN	NN	Number=Sing	25	obj	_	_
-29	.	.	PUNCT	.	_	3	punct	_	_
+1	illustrates	illustrate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	_	_
+3	robot	robot	NOUN	NN	Number=Sing	5	nmod:poss	_	_
+4	’s	's	PART	POS	_	3	case	_	_
+5	position	position	NOUN	NN	Number=Sing	1	obj	_	_
+6	with	with	ADP	IN	_	7	case	_	_
+7	respect	respect	NOUN	NN	Number=Sing	5	nmod	_	_
+8	to	to	ADP	TO	_	11	case	_	_
+9	two	two	NUM	CD	NumType=Card	11	nummod	_	_
+10	different	different	ADJ	JJ	Degree=Pos	11	amod	_	_
+11	frames	frame	NOUN	NNS	Number=Plur	7	nmod	_	_
+12	,	,	PUNCT	,	_	13	punct	_	_
+13	namely	namely	ADV	RB	_	16	advmod	_	_
+14	and	and	CCONJ	CC	_	16	cc	_	_
+15	.	.	PUNCT	.	_	13	punct	_	_
+16	denotes	denote	VERB	VB	Mood=Ind|Tense=Pres|VerbForm=Fin	1	conj	_	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	20	det	_	_
+18	world	world	NOUN	NN	Number=Sing	20	compound	_	_
+19	coordinate	coordinate	NOUN	NN	Number=Sing	20	compound	_	_
+20	system	system	NOUN	NN	Number=Sing	16	obj	_	_
+21	,	,	PUNCT	,	_	23	punct	_	_
+22	whereas	whereas	SCONJ	IN	_	23	mark	_	_
+23	represents	represent	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	advcl	_	_
+24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	_	_
+25	robot-attached	robot-attached	ADJ	JJ	Degree=Pos	26	amod	_	_
+26	frame	frame	NOUN	NN	Number=Sing	23	obj	_	_
+27	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	_	_

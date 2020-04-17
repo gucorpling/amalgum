@@ -78,11 +78,13 @@
 10	book	book	NOUN	NN	Number=Sing	7	obj	_	_
 11	.	.	PUNCT	.	_	1	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Reread	reread	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	obj	_	_
-4	!	!	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Reread	reread	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	1	obj	_	_
+3	!	!	PUNCT	.	_	1	punct	_	_
 
 # s_type = imp
 1	Flip	flip	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
@@ -342,7 +344,7 @@
 12	find	find	VERB	VB	VerbForm=Inf	3	parataxis	_	_
 13	that	that	SCONJ	IN	_	15	mark	_	_
 14	just	just	ADV	RB	_	15	advmod	_	_
-15	reading	read	VERB	VBG	VerbForm=Ger	12	ccomp	_	_
+15	reading	read	VERB	VBG	VerbForm=Ger	12	advcl	_	_
 16	or	or	CCONJ	CC	_	17	cc	_	_
 17	talking	talk	VERB	VBG	VerbForm=Ger	15	conj	_	_
 18	about	about	SCONJ	IN	_	21	mark	_	_
@@ -353,11 +355,13 @@
 23	good	good	ADJ	JJ	Degree=Pos	24	amod	_	_
 24	feelings	feeling	NOUN	NNS	Number=Plur	21	obj	_	_
 25	back	back	ADV	RB	_	21	advmod	_	_
-26	!	!	PUNCT	.	_	27	punct	_	_
-27	Enjoy	enjoy	VERB	VB	VerbForm=Inf	21	advcl	_	_
-28	fan-made	fan-made	ADJ	JJ	Degree=Pos	29	amod	_	_
-29	creations	creation	NOUN	NNS	Number=Plur	27	obj	_	_
-30	!	!	PUNCT	.	_	3	punct	_	_
+26	!	!	PUNCT	.	_	3	punct	_	_
+
+# s_type = imp
+1	Enjoy	enjoy	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	fan-made	fan-made	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	creations	creation	NOUN	NNS	Number=Plur	1	obj	_	_
+4	!	!	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	There	There	PRON	EX	_	2	expl	_	_
@@ -667,35 +671,49 @@
 # s_type = decl
 1	Season	season	NOUN	NN	Number=Sing	2	nsubj	_	_
 2	permitting	permit	VERB	VBG	VerbForm=Ger	5	advcl	_	_
-3	,	,	PUNCT	,	_	5	punct	_	_
-4	here	here	ADV	RB	PronType=Dem	5	expl	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+4	here	here	ADV	RB	PronType=Dem	5	advmod	_	_
 5	are	be	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	_	_
 7	few	few	ADJ	JJ	Degree=Pos	8	amod	_	_
 8	suggestions	suggestion	NOUN	NNS	Number=Plur	5	nsubj	_	_
-9	:	:	PUNCT	:	_	10	punct	_	_
-10	Go	Go	VERB	VB	VerbForm=Inf	8	dep	_	_
-11	to	to	ADP	TO	_	13	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	beach	beach	NOUN	NN	Number=Sing	10	obl	_	_
-14	Learn	learn	VERB	VB	VerbForm=Inf	8	acl:relcl	_	_
-15	to	to	PART	TO	_	16	mark	_	_
-16	skateboard	skateboard	VERB	VB	VerbForm=Inf	14	xcomp	_	_
-17	Bake	Bake	VERB	VB	VerbForm=Inf	16	xcomp	_	_
-18	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	_	_
-19	cake	cake	NOUN	NN	Number=Sing	20	compound	_	_
-20	Tour	Tour	NOUN	NN	Number=Sing	17	obj	_	_
-21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	_	_
-22	Crayola	Crayola	PROPN	NNP	Number=Sing	23	compound	_	_
-23	factory	factory	NOUN	NN	Number=Sing	24	nsubj	_	_
-24	Build	build	VERB	VB	VerbForm=Inf	17	xcomp	_	_
-25	a	a	DET	DT	Definite=Ind|PronType=Art	26	det	_	_
-26	snowman	snowman	NOUN	NN	Number=Sing	27	nsubj	_	_
-27	Go	Go	VERB	VB	VerbForm=Inf	24	xcomp	_	_
-28	to	to	ADP	TO	_	30	case	_	_
-29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	_	_
-30	gym	gym	NOUN	NN	Number=Sing	27	obl	_	_
-31	Play	play	VERB	VB	VerbForm=Inf	27	xcomp	_	_
-32	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	_	_
-33	sport	sport	NOUN	NN	Number=Sing	31	obj	_	_
+9	:	:	PUNCT	:	_	5	punct	_	_
+
+# s_type = imp
+1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	to	to	ADP	TO	_	4	case	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+4	beach	beach	NOUN	NN	Number=Sing	1	obl	_	_
+
+# s_type = imp
+1	Learn	learn	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	to	to	PART	TO	_	3	mark	_	_
+3	skateboard	skateboard	VERB	VB	VerbForm=Inf	1	xcomp	_	_
+
+# s_type = imp
+1	Bake	Bake	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+3	cake	cake	NOUN	NN	Number=Sing	1	obj	_	_
+
+# s_type = imp
+1	Tour	Tour	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+3	Crayola	Crayola	PROPN	NNP	Number=Sing	4	compound	_	_
+4	factory	factory	NOUN	NN	Number=Sing	1	obj	_	_
+
+# s_type = imp
+1	Build	build	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+3	snowman	snowman	NOUN	NN	Number=Sing	1	obj	_	_
+
+# s_type = imp
+1	Go	Go	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	to	to	ADP	TO	_	4	case	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	_	_
+4	gym	gym	NOUN	NN	Number=Sing	1	obl	_	_
+
+# s_type = imp
+1	Play	play	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	_	_
+3	sport	sport	NOUN	NN	Number=Sing	1	obj	_	_
 

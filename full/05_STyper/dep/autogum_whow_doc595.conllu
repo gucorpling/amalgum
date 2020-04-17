@@ -82,21 +82,23 @@
 6	for	for	ADP	IN	_	5	obl	_	_
 7	.	.	PUNCT	.	_	2	punct	_	_
 
-# s_type = decl
-1	Steps	step	NOUN	NNS	Number=Plur	2	nsubj	_	_
-2	Read	read	VERB	VBP	Mood=Ind|Tense=Pres|VerbForm=Fin	0	root	_	_
-3	Investigate	Investigate	VERB	VB	VerbForm=Inf	2	xcomp	_	_
-4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	_	_
-5	Feeling	Feeling	VERB	VBG	VerbForm=Ger	6	amod	_	_
-6	Aggregate	aggregate	PROPN	NNP	Number=Sing	3	obj	_	_
-7	or	or	CCONJ	CC	_	10	cc	_	_
-8	other	other	ADJ	JJ	Degree=Pos	10	amod	_	_
-9	similar	similar	ADJ	JJ	Degree=Pos	10	amod	_	_
-10	works	work	NOUN	NNS	Number=Plur	6	conj	_	_
-11	on	on	ADP	IN	_	13	case	_	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	_	_
-13	subject	subject	NOUN	NN	Number=Sing	10	nmod	_	_
-14	.	.	PUNCT	.	_	2	punct	_	_
+# s_type = frag
+1	Steps	step	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = imp
+1	Read	read	VERB	VB	Mood=Imp|VerbForm=Fin	0	root	_	_
+2	Investigate	Investigate	VERB	VB	VerbForm=Inf	1	xcomp	_	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+4	Feeling	Feeling	VERB	VBG	VerbForm=Ger	5	amod	_	_
+5	Aggregate	aggregate	PROPN	NNP	Number=Sing	2	obj	_	_
+6	or	or	CCONJ	CC	_	9	cc	_	_
+7	other	other	ADJ	JJ	Degree=Pos	9	amod	_	_
+8	similar	similar	ADJ	JJ	Degree=Pos	9	amod	_	_
+9	works	work	NOUN	NNS	Number=Plur	5	conj	_	_
+10	on	on	ADP	IN	_	12	case	_	_
+11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
+12	subject	subject	NOUN	NN	Number=Sing	9	nmod	_	_
+13	.	.	PUNCT	.	_	1	punct	_	_
 
 # s_type = decl
 1	Feeling	Feeling	VERB	VBG	VerbForm=Ger	7	csubj	_	_
@@ -332,45 +334,53 @@
 3	order	order	NOUN	NN	Number=Sing	1	obj	_	_
 4	that	that	SCONJ	IN	_	6	mark	_	_
 5	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj	_	_
-6	arises	arise	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	_	_
-7	:	:	PUNCT	:	_	9	punct	_	_
-8	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	9	amod	_	_
-9	materiality	materiality	NOUN	NN	Number=Sing	6	obj	_	_
-10	-	-	PUNCT	:	_	12	punct	_	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	_	_
-12	body	body	NOUN	NN	Number=Sing	9	conj	_	_
-13	,	,	PUNCT	,	_	15	punct	_	_
-14	physical	physical	ADJ	JJ	Degree=Pos	15	amod	_	_
-15	objects	object	NOUN	NNS	Number=Plur	9	conj	_	_
-16	and	and	CCONJ	CC	_	18	cc	_	_
-17	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	_	_
-18	characteristics	characteristic	NOUN	NNS	Number=Plur	9	conj	_	_
-19	,	,	PUNCT	,	_	21	punct	_	_
-20	then	then	ADV	RB	PronType=Dem	21	advmod	_	_
-21	feeling	feel	VERB	VBG	VerbForm=Ger	9	conj	_	_
-22	,	,	PUNCT	,	_	24	punct	_	_
-23	then	then	ADV	RB	PronType=Dem	21	advmod	_	_
-24	perception	perception	NOUN	NN	Number=Sing	9	conj	_	_
-25	,	,	PUNCT	,	_	28	punct	_	_
-26	then	then	ADV	RB	PronType=Dem	28	advmod	_	_
-27	mental	mental	ADJ	JJ	Degree=Pos	28	amod	_	_
-28	fabrications	fabrication	NOUN	NNS	Number=Plur	9	conj	_	_
-29	,	,	PUNCT	,	_	30	punct	_	_
-30	activities	activity	NOUN	NNS	Number=Plur	9	conj	_	_
-31	,	,	PUNCT	,	_	32	punct	_	_
-32	constructions	construction	NOUN	NNS	Number=Plur	9	conj	_	_
-33	,	,	PUNCT	,	_	34	punct	_	_
-34	formations	formation	NOUN	NNS	Number=Plur	9	conj	_	_
-35	,	,	PUNCT	,	_	36	punct	_	_
-36	responses	response	NOUN	NNS	Number=Plur	9	conj	_	_
-37	or	or	CCONJ	CC	_	39	cc	_	_
-38	any	any	DET	DT	_	39	det	_	_
-39	word	word	NOUN	NN	Number=Sing	9	conj	_	_
-40	that	that	PRON	WDT	PronType=Rel	41	nsubj	_	_
-41	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	39	acl:relcl	_	_
-42	for	for	ADP	IN	_	43	case	_	_
-43	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	41	obl	_	_
-44	.	.	PUNCT	.	_	1	punct	_	_
+6	arises	arise	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	_	_
+7	:	:	PUNCT	:	_	1	punct	_	_
+
+# s_type = frag
+1	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	2	amod	_	_
+2	materiality	materiality	NOUN	NN	Number=Sing	0	root	_	_
+3	-	-	PUNCT	:	_	5	punct	_	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	_	_
+5	body	body	NOUN	NN	Number=Sing	2	conj	_	_
+6	,	,	PUNCT	,	_	8	punct	_	_
+7	physical	physical	ADJ	JJ	Degree=Pos	8	amod	_	_
+8	objects	object	NOUN	NNS	Number=Plur	2	conj	_	_
+9	and	and	CCONJ	CC	_	11	cc	_	_
+10	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	_	_
+11	characteristics	characteristic	NOUN	NNS	Number=Plur	2	conj	_	_
+12	,	,	PUNCT	,	_	2	punct	_	_
+
+# s_type = ger
+1	then	then	ADV	RB	PronType=Dem	2	advmod	_	_
+2	feeling	feel	VERB	VBG	VerbForm=Ger	0	root	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+
+# s_type = frag
+1	then	then	ADV	RB	PronType=Dem	2	advmod	_	_
+2	perception	perception	NOUN	NN	Number=Sing	0	root	_	_
+3	,	,	PUNCT	,	_	2	punct	_	_
+
+# s_type = frag
+1	then	then	ADV	RB	PronType=Dem	3	advmod	_	_
+2	mental	mental	ADJ	JJ	Degree=Pos	3	amod	_	_
+3	fabrications	fabrication	NOUN	NNS	Number=Plur	0	root	_	_
+4	,	,	PUNCT	,	_	5	punct	_	_
+5	activities	activity	NOUN	NNS	Number=Plur	3	conj	_	_
+6	,	,	PUNCT	,	_	7	punct	_	_
+7	constructions	construction	NOUN	NNS	Number=Plur	3	conj	_	_
+8	,	,	PUNCT	,	_	9	punct	_	_
+9	formations	formation	NOUN	NNS	Number=Plur	3	conj	_	_
+10	,	,	PUNCT	,	_	11	punct	_	_
+11	responses	response	NOUN	NNS	Number=Plur	3	conj	_	_
+12	or	or	CCONJ	CC	_	14	cc	_	_
+13	any	any	DET	DT	_	14	det	_	_
+14	word	word	NOUN	NN	Number=Sing	3	conj	_	_
+15	that	that	PRON	WDT	PronType=Rel	16	nsubj	_	_
+16	works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	acl:relcl	_	_
+17	for	for	ADP	IN	_	18	case	_	_
+18	you	you	PRON	PRP	Case=Nom|Person=2|PronType=Prs	16	obl	_	_
+19	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	After	after	SCONJ	IN	_	3	mark	_	_

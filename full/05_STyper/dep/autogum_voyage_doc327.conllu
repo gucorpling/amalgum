@@ -4,21 +4,23 @@
 3	International	International	PROPN	NNP	Number=Sing	4	amod	_	_
 4	Airport	Airport	PROPN	NNP	Number=Sing	1	nmod	_	_
 
-# s_type = decl
-1	Ben	Ben	PROPN	NNP	Number=Sing	4	compound	_	_
+# s_type = frag
+1	Ben	Ben	PROPN	NNP	Number=Sing	0	root	_	_
 2	Gurion	Gurion	PROPN	NNP	Number=Sing	1	flat	_	_
 3	International	International	PROPN	NNP	Number=Sing	4	amod	_	_
-4	Airport	Airport	PROPN	NNP	Number=Sing	13	nsubj	_	_
-5	(	(	PUNCT	-LRB-	_	6	punct	_	_
-6	TLV	TLV	PROPN	NNP	Number=Sing	4	appos	_	_
-7	)	)	PUNCT	-RRB-	_	6	punct	_	_
-8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	_	_
-9	Israel	Israel	PROPN	NNP	Number=Sing	13	nmod:poss	_	_
-10	'	's	PART	POS	_	9	case	_	_
-11	s	's	PART	POS	_	9	case	_	_
-12	primary	primary	ADJ	JJ	Degree=Pos	13	amod	_	_
-13	airport	airport	NOUN	NN	Number=Sing	0	root	_	_
-14	.	.	PUNCT	.	_	13	punct	_	_
+4	Airport	Airport	PROPN	NNP	Number=Sing	1	nmod	_	_
+
+# s_type = decl
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	TLV	TLV	PROPN	NNP	Number=Sing	9	nsubj	_	_
+3	)	)	PUNCT	-RRB-	_	2	punct	_	_
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	_	_
+5	Israel	Israel	PROPN	NNP	Number=Sing	9	nmod:poss	_	_
+6	'	's	PART	POS	_	5	case	_	_
+7	s	's	PART	POS	_	5	case	_	_
+8	primary	primary	ADJ	JJ	Degree=Pos	9	amod	_	_
+9	airport	airport	NOUN	NN	Number=Sing	0	root	_	_
+10	.	.	PUNCT	.	_	9	punct	_	_
 
 # s_type = decl
 1	Named	Named	VERB	VBN	Tense=Past|VerbForm=Part	9	acl	_	_
@@ -845,13 +847,17 @@
 11	main	main	ADJ	JJ	Degree=Pos	13	amod	_	_
 12	international	international	ADJ	JJ	Degree=Pos	13	amod	_	_
 13	airlines	airline	NOUN	NNS	Number=Plur	6	nmod	_	_
-14	:	:	PUNCT	:	_	16	punct	_	_
-15	El	El	PROPN	NNP	Number=Sing	16	compound	_	_
-16	Al	Al	PROPN	NNP	Number=Sing	13	appos	_	_
-17	,	,	PUNCT	,	_	19	punct	_	_
-18	☏	☏	NUM	CD	NumType=Card	19	nummod	_	_
-19	+972(3)9771111	+r7e	NUM	CD	NumType=Card	16	nummod	_	_
-20	.	.	PUNCT	.	_	3	punct	_	_
+14	:	:	PUNCT	:	_	3	punct	_	_
+
+# s_type = frag
+1	El	El	PROPN	NNP	Number=Sing	0	root	_	_
+2	Al	Al	PROPN	NNP	Number=Sing	1	flat	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	3	punct	_	_
+2	☏	☏	NUM	CD	NumType=Card	3	nummod	_	_
+3	+972(3)9771111	+r7e	NUM	CD	NumType=Card	0	root	_	_
+4	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	Israel	Israel	PROPN	NNP	Number=Sing	4	nmod:poss	_	_
@@ -903,16 +909,18 @@
 15	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = frag
-1	Arkia	Arkia	PROPN	NNP	Number=Sing	0	root	_	_
+1	Arkia	Arkia	PROPN	NNP	Number=Sing	3	compound	_	_
 2	Israel	Israel	PROPN	NNP	Number=Sing	3	compound	_	_
-3	Airlines	Airlines	PROPN	NNPS	Number=Plur	1	appos	_	_
-4	,	,	PUNCT	,	_	5	punct	_	_
-5	☏	☏	NUM	CD	NumType=Card	1	appos	_	_
-6	+972-3-6902255	+972-3-6902255	NUM	CD	NumType=Card	1	appos	_	_
-7	,	,	PUNCT	,	_	9	punct	_	_
-8	✉	✉	PROPN	NNP	Number=Sing	9	compound	_	_
-9	incoming@arkia.co.il	incoming@arkia.co.il	PROPN	NNP	Number=Sing	3	appos	_	_
-10	.	.	PUNCT	.	_	1	punct	_	_
+3	Airlines	Airlines	PROPN	NNPS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	3	punct	_	_
+2	☏	☏	NUM	CD	NumType=Card	3	nummod	_	_
+3	+972-3-6902255	+972-3-6902255	NUM	CD	NumType=Card	0	root	_	_
+4	,	,	PUNCT	,	_	6	punct	_	_
+5	✉	✉	PROPN	NNP	Number=Sing	6	compound	_	_
+6	incoming@arkia.co.il	incoming@arkia.co.il	PROPN	NNP	Number=Sing	3	appos	_	_
+7	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = frag
 1	Israel	Israel	PROPN	NNP	Number=Sing	5	nmod:poss	_	_
@@ -932,10 +940,12 @@
 
 # s_type = frag
 1	Israir	Israir	PROPN	NNP	Number=Sing	0	root	_	_
-2	,	,	PUNCT	,	_	4	punct	_	_
-3	☏	☏	NUM	CD	NumType=Card	4	nummod	_	_
-4	+972-3-5109589	+972-3-5109589	NUM	CD	NumType=Card	1	appos	_	_
-5	.	.	PUNCT	.	_	1	punct	_	_
+
+# s_type = frag
+1	,	,	PUNCT	,	_	3	punct	_	_
+2	☏	☏	NUM	CD	NumType=Card	3	nummod	_	_
+3	+972-3-5109589	+972-3-5109589	NUM	CD	NumType=Card	0	root	_	_
+4	.	.	PUNCT	.	_	3	punct	_	_
 
 # s_type = decl
 1	Su	Su	PROPN	NNP	Number=Sing	12	nsubj	_	_
@@ -1221,14 +1231,18 @@
 53	)	)	PUNCT	-RRB-	_	52	punct	_	_
 
 # s_type = frag
-1	Terminals	terminal	NOUN	NNS	Number=Plur	2	compound	_	_
-2	Terminal	Terminal	PROPN	NNP	Number=Sing	0	root	_	_
+1	Terminals	terminal	NOUN	NNS	Number=Plur	0	root	_	_
+
+# s_type = frag
+1	Terminal	Terminal	NOUN	NN	Number=Sing	0	root	_	_
+2	3	3	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	טרמינל	טרמינל	NOUN	NN	Number=Sing	0	root	_	_
 3	3	3	NUM	CD	NumType=Card	2	nummod	_	_
-4	(	(	PUNCT	-LRB-	_	5	punct	_	_
-5	טרמינל	טרמינל	NOUN	NN	Number=Sing	2	appos	_	_
-6	3	3	NUM	CD	NumType=Card	5	nummod	_	_
-7	)	)	PUNCT	-RRB-	_	5	punct	_	_
-8	.	.	PUNCT	.	_	2	punct	_	_
+4	)	)	PUNCT	-RRB-	_	2	punct	_	_
+5	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	This	this	PRON	DT	Number=Sing|PronType=Dem	6	nsubj	_	_
@@ -1271,13 +1285,15 @@
 23	.	.	PUNCT	.	_	6	punct	_	_
 
 # s_type = frag
-1	Terminal	Terminal	PROPN	NNP	Number=Sing	0	root	_	_
-2	1	1	NUM	CD	NumType=Card	1	nummod	_	_
-3	(	(	PUNCT	-LRB-	_	4	punct	_	_
-4	טרמינל	טרמינל	NOUN	NN	Number=Sing	1	parataxis	_	_
-5	1	1	NUM	CD	NumType=Card	4	nummod	_	_
-6	)	)	PUNCT	-RRB-	_	4	punct	_	_
-7	.	.	PUNCT	.	_	1	punct	_	_
+1	Terminal	Terminal	NOUN	NN	Number=Sing	0	root	_	_
+2	1	1	NUM	CD	NumType=Card	1	dep	_	_
+
+# s_type = frag
+1	(	(	PUNCT	-LRB-	_	2	punct	_	_
+2	טרמינל	טרמינל	NOUN	NN	Number=Sing	0	root	_	_
+3	1	1	NUM	CD	NumType=Card	2	nummod	_	_
+4	)	)	PUNCT	-RRB-	_	2	punct	_	_
+5	.	.	PUNCT	.	_	2	punct	_	_
 
 # s_type = decl
 1	Many	Many	ADJ	JJ	Degree=Pos	3	amod	_	_
