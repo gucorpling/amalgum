@@ -17,6 +17,7 @@ from nlp_modules.tt_tokenizer import TreeTaggerTokenizer
 from nlp_modules.gumdrop_splitter import GumdropSplitter
 from nlp_modules.pos_tagger import PoSTagger
 from nlp_modules.s_typer import STyper
+from nlp_modules.ace_entities import AceEntities
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
@@ -31,6 +32,7 @@ MODULES = {
     "gumdrop_splitter": GumdropSplitter,
     "s_typer": STyper,
     "dep_parser": DepParser,
+    "ace_entities": AceEntities,
 }
 
 
@@ -148,7 +150,7 @@ def main():
         "--modules",
         nargs="+",
         choices=MODULES.keys(),
-        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser", "s_typer"],
+        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser", "s_typer", "ace_entities"],
         help="NLP pipeline modules, included in the order they are specified.",
     )
     p.add_argument(
@@ -178,7 +180,7 @@ def main():
         default=0,
         help=(
             "If provided, will begin the pipeline from the ZERO-INDEXED step "
-            "in the pipeline corresponding to this value. E.g., --resume-step 1"
+            "in the pipeline corresponding to this value. E.g., --begin-step 1"
             " would resume step y in the pipeline [x y z]. Every other step "
             "before the resumed step is assumed to have been executed successfully."
             " If the value if this parameter is greater than 0, --overwrite is ignored."
