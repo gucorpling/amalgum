@@ -13,7 +13,7 @@ class AceEntities(NLPModule):
     def __init__(self, config, serialnumber="200226_153935"):
         self.acedir = os.path.join('.', 'lib', 'shibuya_entities', 'data', 'amalgum')
         self.serialnumber = serialnumber
-        self.shibuya = ShibuyaEntities(use_gpu=config['use_gpu'])
+        self.shibuya = ShibuyaEntities(use_gpu=config['use_gpu'] if 'use_gpu' in config else False)
         self.test_dependencies()
 
     def download_file(self, url, local_path):
@@ -131,7 +131,7 @@ def test_main():
 """
 
 
-    e = AceEntities()
+    e = AceEntities({})
     res = e.parse({"dep":test_conll,"filename":"autogum_voyage_doc001"})
     print(res["ace"])
 
