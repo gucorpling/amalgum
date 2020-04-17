@@ -205,33 +205,32 @@ class ShibuyaEntities:
 		Predict sentence NNER
 		"""
 		
-		f = open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_test.pkl'), 'rb')
-		
-		
-		this_model_path = "./lib/shibuya_entities/dumps/sample_model" + "_" + serialnumber
-		
-		# misc info
-		misc_config: Dict[str, Alphabet] = pickle.load(
-			open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_config.pkl'), 'rb'))
-		
-		voc_dict, label_dict = load_dynamic_config(misc_config)
-		config.voc_size = voc_dict.size()
-		config.label_size = label_dict.size()
-		
-		device = torch.device('cpu')
-		
-		model = BiRecurrentConvCRF4NestedNER(config.bert_model, config.label_size, hidden_size=config.hidden_size,
-		                                     layers=config.layers, lstm_dropout=config.lstm_dropout)
-		
-		model.load_state_dict(torch.load(this_model_path + '.pt', map_location=device))
-		
-		print('o before f1 score')
-		
-		cur_time = time.time()
-		outputstr, f1 = self.get_f1(model, 'test', file_path=this_model_path + '_' + dataset + '_pred.result.txt',
-		                            f=f, voc_dict=voc_dict, label_dict=label_dict)
-		print("test step took {:.4f} seconds".format(time.time() - cur_time))
-		
+		with open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_test.pkl'), 'rb') as f:
+			this_model_path = "./lib/shibuya_entities/dumps/sample_model" + "_" + serialnumber
+
+			# misc info
+			misc_config: Dict[str, Alphabet] = pickle.load(
+				open(os.path.normpath('./lib/shibuya_entities/data/' + dataset + '_config.pkl'), 'rb'))
+
+			voc_dict, label_dict = load_dynamic_config(misc_config)
+			config.voc_size = voc_dict.size()
+			config.label_size = label_dict.size()
+
+			device = torch.device('cuda')
+
+			model = BiRecurrentConvCRF4NestedNER(config.bert_model, config.label_size, hidden_size=config.hidden_size,
+												 layers=config.layers, lstm_dropout=config.lstm_dropout)
+
+			print(this_model_path)
+			model.load_state_dict(torch.load(this_model_path + '.pt', map_location=device))
+
+			print('o before f1 score')
+
+			cur_time = time.time()
+			outputstr, f1 = self.get_f1(model, 'test', file_path=this_model_path + '_' + dataset + '_pred.result.txt',
+										f=f, voc_dict=voc_dict, label_dict=label_dict)
+			print("test step took {:.4f} seconds".format(time.time() - cur_time))
+
 		return outputstr, f1
 		
 	
