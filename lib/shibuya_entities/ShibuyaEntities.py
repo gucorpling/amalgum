@@ -56,6 +56,10 @@ class ShibuyaEntities:
 	def txt2acegold(self, txtstr):
 		acegoldstr = txtstr.replace('\n', '\n0,1 person\n\n') + '\n1,2 person\n\n\n'
 		return acegoldstr
+	
+	def is_subseq(self, x, y):
+		it = iter(y)
+		return all(any(c == ch for c in it) for ch in x)
 		
 		
 	def gen_data(self, dataset="amalgum"):
@@ -254,7 +258,11 @@ class ShibuyaEntities:
 			                                                                                                      '')
 			
 			# find matching gold string
-			goldtoks = [x for x in goldtokenized_lines if re.sub(r'(\s+)|(##)', '', x) == subtoks_string]
+			# goldtoks = [x for x in goldtokenized_lines if re.sub(r'(\s+)|(##)', '', x) == subtoks_string]
+			goldtoks = [x for x in goldtokenized_lines if self.is_subseq(subtoks_string.replace(r'[UNK]', ''), re.sub(r'(\s+)|(##)', '', x))]
+			
+			if 'UNK' in subtoks_string:
+				print()
 			
 			if len(goldtoks) > 1:
 				for otherid in range(1, len(goldtoks)):
@@ -295,7 +303,11 @@ class ShibuyaEntities:
 				# 	subtoks[idsub-1] += subtoks[idsub][2:]
 				# 	subtoks[idsub] = ''
 				
-				if subtoks[idsub] != goldtoks[idgoldtok]:
+				if subtoks[idsub] == '[UNK]':
+					subtoks[idsub] = goldtoks[idgoldtok]
+					idgoldtok -= 1
+				
+				elif subtoks[idsub] != goldtoks[idgoldtok]:
 					subtoks[idsub - 1] += subtoks[idsub]
 					subtoks[idsub] = ''
 					
