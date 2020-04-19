@@ -130,11 +130,11 @@ def test_main():
 
 """
 
-    test_conll2 = io.open(r'autogum_academic_doc240.conllu', 'r', encoding='utf8').read()
+    test_conll2 = io.open(r'autogum_academic_doc001.conllu', 'r', encoding='utf8').read()
 
 
     e = AceEntities({})
-    res = e.parse({"dep":test_conll2,"filename":"autogum_academic_doc240"})
+    res = e.parse({"dep":test_conll2,"filename":"autogum_academic_doc001"})
     print(res["ace"])
 
 if __name__ == "__main__":
