@@ -258,9 +258,13 @@ class ShibuyaEntities:
 			                                                                                                      '')
 			
 			# find matching gold string
-			# goldtoks = [x for x in goldtokenized_lines if re.sub(r'(\s+)|(##)', '', x) == subtoks_string]
-			goldtoks = [x for x in goldtokenized_lines if self.is_subseq(subtoks_string.replace(r'[UNK]', ''), re.sub(r'(\s+)|(##)', '', x))]
 			
+			if '[UNK]' in subtoks_string:
+				goldtoks = [x for x in goldtokenized_lines if self.is_subseq(subtoks_string.replace(r'[UNK]', ''),
+				                                                             re.sub(r'(\s+)|(##)', '', x))]
+			else:
+				goldtoks = [x for x in goldtokenized_lines if re.sub(r'(\s+)|(##)', '', x) == subtoks_string]
+		
 			if 'UNK' in subtoks_string:
 				print()
 			
