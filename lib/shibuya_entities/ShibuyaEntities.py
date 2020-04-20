@@ -253,7 +253,7 @@ class ShibuyaEntities:
 			if len(in_lines) <= 4 * multiplier + 2:
 				continue
 			
-			subtoks_string = re.sub(r'(\s+)|(##)', '',
+			subtoks_string = re.sub(r'(\s+)|(##)|(\u200E)|(\u200F)', '',
 			                        re.sub(r'^\[CLS\](.*)\[SEP\]$', r'\1', in_lines[4 * multiplier + 0])).replace('##',
 			                                                                                                      '')
 			
@@ -261,13 +261,13 @@ class ShibuyaEntities:
 			
 			if '[UNK]' in subtoks_string:
 				noUNKstrs = subtoks_string.split("[UNK]")
-				goldtoks = [x for x in goldtokenized_lines if all(y in re.sub(r'(\s+)|(##)', '', x) for y in noUNKstrs)]
+				goldtoks = [x for x in goldtokenized_lines if all(y in re.sub(r'(\s+)|(##)|(\u200E)|(\u200F)', '', x) for y in noUNKstrs)]
 				
 
 				# goldtoks = [x for x in goldtokenized_lines if self.is_subseq(subtoks_string.replace(r'[UNK]', ''),
 				#                                                              re.sub(r'(\s+)|(##)', '', x))]
 			else:
-				goldtoks = [x for x in goldtokenized_lines if re.sub(r'(\s+)|(##)', '', x) == subtoks_string]
+				goldtoks = [x for x in goldtokenized_lines if re.sub(r'(\s+)|(##)|(\u200E)|(\u200F)', '', x) == subtoks_string]
 		
 			if 'UNK' in subtoks_string:
 				print()
