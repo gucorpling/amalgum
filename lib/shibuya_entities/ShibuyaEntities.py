@@ -23,6 +23,7 @@ lib = os.path.abspath(script_dir + os.sep + "lib")
 sys.path.append(script_dir + os.sep)
 
 
+from unicodedata import category
 from typing import Tuple, List, Dict
 from collections import defaultdict
 from reader.reader import Reader
@@ -35,7 +36,14 @@ from util.evaluate import evaluate
 from util.utils import Alphabet, load_dynamic_config
 
 
-BERT_SPACE_PAT = re.compile(r'(\s+)|(##)|(\u200B)|(\u200C)|(\u200D)|(\u200E)|(\u200F)')
+def filter_bert_chars(s):
+	"""Filter characters in a string so we can compare BERT tokenization output to gold tokenization."""
+	new_chars = []
+	s = s.replace('##', '')
+	for c in s:
+		if category(c)[0] in ['L', 'N', 'P'] or category(c) in ['Sc', 'Sk', 'Sm']:
+			new_chars.append(c)
+	return "".join(new_chars)
 
 
 class ShibuyaEntities:
@@ -255,7 +263,7 @@ class ShibuyaEntities:
 			if len(in_lines) <= 4 * multiplier + 2:
 				continue
 			
-			subtoks_string = re.sub(BERT_SPACE_PAT, '',
+			subtoks_string = filter_bert_chars(
 			                        re.sub(r'^\[CLS\](.*)\[SEP\]$', r'\1', in_lines[4 * multiplier + 0])).replace('##',
 			                                                                                                      '')
 			
@@ -263,13 +271,13 @@ class ShibuyaEntities:
 			
 			if '[UNK]' in subtoks_string:
 				noUNKstrs = subtoks_string.split("[UNK]")
-				goldtoks = [x for x in goldtokenized_lines if all(y in re.sub(BERT_SPACE_PAT, '', x) for y in noUNKstrs)]
+				goldtoks = [x for x in goldtokenized_lines if all(y in filter_bert_chars(x) for y in noUNKstrs)]
 				
 
 				# goldtoks = [x for x in goldtokenized_lines if self.is_subseq(subtoks_string.replace(r'[UNK]', ''),
 				#                                                              re.sub(r'(\s+)|(##)', '', x))]
 			else:
-				goldtoks = [x for x in goldtokenized_lines if re.sub(BERT_SPACE_PAT, '', x) == subtoks_string]
+				goldtoks = [x for x in goldtokenized_lines if filter_bert_chars(x) == subtoks_string]
 		
 			if 'UNK' in subtoks_string:
 				print()
