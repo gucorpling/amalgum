@@ -1,0 +1,103 @@
+The goal of the PDN design is to achieve the input impedance seen by the power pins of the active devices ( integrated circuits , IC , such as FPGA , DSP etc. ) below the target impedance ; with the latter being the ratio between the maximum noise on the DC supply voltage that can be tolerated by the active circuits , Δ Vn , and the current Iin drawn from the PDN by the transmitting devices .
+1,2 person
+1,7 abstract|4,7 abstract|5,6 object|10,13 abstract|15,22 object|19,22 object|23,25 object|36,39 abstract|51,55 abstract|52,55 abstract|64,66 abstract|65,66 abstract|68,71 abstract|73,75 object|76,79 object
+
+In this scenario of miniaturized devices , the integrity of the digital signals ( Signal Integrity , SI ) is impaired by the quality ( or even , in this case , integrity ) of the electric power ( Power Integrity , PI ) associated with/given by the power/ground supply voltage at board level .
+1,2 person
+5,7 object|8,14 abstract|11,14 abstract|15,17 abstract|18,19 abstract|23,25 abstract|30,32 abstract|33,34 abstract|36,39 abstract|40,41 abstract|40,42 abstract|43,44 abstract|48,52 abstract
+
+The miniaturization of the devices is nowadays a consolidated trend in the industry development of the electronic products that are also boosted by the spread of the Internet of Thing ( IoT ) paradigm , as well as by other new technologies , such as 5G and high-speed digital transmission .
+1,2 person
+1,6 abstract|4,6 object|8,19 abstract|12,19 abstract|16,19 abstract|16,19 object|27,35 abstract|32,35 abstract|40,43 abstract|48,51 abstract
+
+Moreover , since the goal is represented by a frequency-dependent impedance to be moved below the target impedance , the GA is particularly suitable for this problem where the target impedance may be defined at most , even frequency-by-frequency or , more practically , based on a hybrid profile .
+1,2 person
+4,6 abstract|9,12 abstract|16,19 abstract|20,22 abstract|26,28 abstract|29,32 abstract|39,40 abstract|47,50 abstract
+
+Aim of this work is to add some features to the GA and to the decoupling strategy in order to improve their global performances , with the main advantage of the proposed placement strategy that relies on the iterative application of the optimization starting from 1 single decap .
+1,2 person
+1,5 abstract|3,5 abstract|8,10 abstract|11,13 abstract|15,18 abstract|22,23 abstract|22,25 abstract|27,35 abstract|31,35 abstract|38,44 event|42,44 abstract|46,49 abstract
+
+The current trend in the PDN decoupling for voltage noise reduction is the optimized placement of decoupling capacitors , with the key task aimed at minimizing their number ( and thus , the inherent costs ) and at achieving the most effective PDN impedance design .
+1,2 person
+1,8 abstract|5,8 abstract|9,12 abstract|17,19 object|21,24 abstract|33,36 abstract|40,46 abstract|40,46 event|43,44 object
+
+The GA represents a good candidate for successfully optimize the decap placement of the PDN in PCBs , due to the randomness of its core algorithm that is able to effectively take into account the full range of possible combination of decap type and locations .
+1,2 person
+17,18 object|21,27 abstract|24,25 abstract|24,27 abstract|35,44 abstract|35,46 abstract|42,44 abstract
+
+Together to this change in the optimization architecture , the GA developed in Reference has been improved for a more effective and reliable process by adding the twin removal , and the binary coding of all inputs to increase the randomness of the configuration selection .
+1,2 person
+6,9 abstract|10,12 abstract|14,15 abstract|19,25 abstract|27,30 abstract|32,38 abstract|36,38 abstract|40,46 abstract|43,46 abstract
+
+The electromagnetic interferences ( EMI ) among signals ( digital , analog , at radio frequency ) in the same device and the susceptibility of the electronic circuits to EMI , due to other systems and/or devices placed nearby .
+1,2 person
+1,4 abstract|5,6 abstract|8,9 abstract|15,17 abstract|19,22 object|23,31 abstract|30,31 abstract|34,36 abstract|37,38 object
+
+At the clear advantages of device ( or part of them ) miniaturization are associated a good number of engineering challenges such an increased design and manufacturing complexity , increasing of power density with the related heat dissipation problems .
+1,2 person
+2,7 abstract|6,7 object|9,12 abstract|9,12 object|16,22 abstract|20,22 abstract|24,29 abstract|27,29 abstract|30,34 abstract|32,34 abstract|35,40 abstract|37,40 abstract
+
+Moreover , the low frequency portion can also be relaxed by ignoring the impact of the VRM impedance and taking into account the low frequency capacitive trend as the sum of the required total PDN capacitance .
+1,2 person
+3,7 abstract|4,7 abstract|13,19 abstract|16,19 abstract|23,28 abstract|24,28 abstract|32,37 abstract
+
+This allows an efficient decap placement by gradually improving the input impedance until the stopping criteria are met ; the actual decap configuration is the one that fulfill the requirement with a minimum number of components .
+1,2 person
+1,2 abstract|3,7 abstract|10,13 abstract|14,17 abstract|20,24 abstract|22,24 abstract|29,31 abstract|32,37 abstract
+
+Modern approaches cannot disregard or ignore a correct and efficient design of the power delivery network ( PDN ) in order to decrease the transient noise caused by voltage droops , due to switching currents .
+1,2 person
+1,3 abstract|7,17 abstract|13,17 abstract|14,15 abstract|18,19 abstract|24,27 abstract|29,31 abstract|34,36 abstract
+
+A preliminary work by the authors in Reference where the GA has been adopted for finding the optimum number and values of decaps to be mounted on a PDN of a printed circuit board .
+1,2 person
+1,4 abstract|5,7 person|8,9 abstract|10,12 abstract|17,24 abstract|28,35 object|31,35 object
+
+Moreover , the new algorithm is developed based on multiple-input impedances to be optimized , as a more realistic scenario in modern electronics where multiple ICs may share the same voltage supply rail .
+1,2 person
+3,6 abstract|10,12 abstract|22,24 abstract|25,27 object
+
+This reduction of the overall geometrical dimensions is greatly implemented at the printed circuit board ( PCB ) level and , with the proper scaling factor , at package and chip level respectively .
+1,2 person
+4,8 abstract|12,16 object|12,20 abstract|17,18 object|23,27 abstract|29,30 object|29,33 abstract|31,32 object
+
+Other alternatives help to relax the PDN impedance constraints with a constant impedance up to a frequency when the inductance toward the package guides the impedance profile .
+1,2 person
+1,3 abstract|6,10 abstract|7,8 abstract|7,10 abstract|11,14 abstract|16,18 time|19,24 abstract|22,24 object|25,28 abstract
+
+Usually , the target impedance is flat over a wide range of frequency , leading to overdesign the PDN by adding more decaps than needed .
+1,2 person
+3,6 abstract|9,14 abstract|18,20 object|22,24 abstract
+
+Several techniques have been proposed to improve the PI , based on Electromagnetic Band-gap ( EBG ) structures , among other techniques .
+1,2 person
+1,3 abstract|8,10 abstract|13,19 abstract|16,19 abstract|21,23 abstract
+
+The use of optimization algorithms , and , specifically , of genetic algorithm ( GA ) is widely spread for electromagnetic problems .
+1,2 person
+1,6 abstract|4,6 abstract|12,14 abstract|15,16 abstract|21,23 abstract
+
+The presents work is carried out to solve several limitations in Reference by achieving a more efficient and practical optimization process .
+1,2 person
+1,4 abstract|9,13 abstract|12,13 abstract|15,22 abstract
+
+However , the use of decoupling capacitances ( decaps ) is still one of the more effective and currently investigated .
+1,2 person
+3,8 abstract|9,10 abstract
+
+At each new iteration a new decap is added whose value and location comes from the GA-based optimization .
+1,2 person
+5,8 object|10,12 abstract|10,14 abstract|16,19 abstract
+
+Recent studies also suggest further alternatives aimed at jitter minimization and focus on specific bands .
+1,2 person
+1,3 abstract|5,7 abstract|9,11 abstract|14,16 abstract
+
+1 .
+1,2 person
+
+
+Introduction
+1,2 person
+1,2 abstract

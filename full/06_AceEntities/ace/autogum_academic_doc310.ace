@@ -1,0 +1,143 @@
+For the transport equation of h , is given by ( 4 ) where denotes the mass of vapor released by the parcel p into the control volume V , is the droplet mass , the number of real droplets in parcel p , N the total number of tracked parcels , the specific sensible heat of liquid , a reference temperature ( 298 K ) , the droplet temperature at time step , the formations enthalpy , and the heat of vaporization .
+1,2 person
+2,7 abstract|6,7 quantity|11,13 abstract|22,25 object|32,35 object|36,44 quantity|42,44 object|46,52 object|46,52 quantity|50,52 object|53,59 quantity|60,63 quantity|64,66 quantity|68,71 quantity|69,70 object|72,74 time|75,78 abstract|75,78 quantity|80,84 quantity
+
+Over-bars and tildes express spatially filtered and density-weighted filtered values with a filter width , respectively , while double prime represents sub-grid scale ( SGS ) fluctuations . is the mixture density , t time , components of velocity in j ( ) direction , p pressure , Cartesian coordinate in j direction , the dynamic viscosity , the component of gravitational acceleration , the Kronecker ’s delta , and the strain rate .
+1,2 person
+1,4 object|3,4 object|5,11 abstract|8,11 abstract|12,15 abstract|12,15 quantity|19,21 abstract|22,24 abstract|25,26 abstract|30,33 abstract|30,33 quantity|34,36 time|37,45 abstract|37,48 abstract|46,48 abstract|49,51 abstract|49,54 abstract|55,58 abstract|59,64 abstract|62,64 abstract|65,69 abstract|66,69 abstract|71,74 abstract
+
+Considering that the mass fraction of fuel is not present in the combination used to define the reaction progress variable ( see Equation ( 15 ) ) , as well as no isolated droplet burning model is included in the employed approach , does not contribute ( therefore it is set to zero ) for the transport of .
+1,2 person
+3,8 abstract|3,8 quantity|12,14 abstract|17,20 abstract|17,21 abstract|18,19 event|23,24 abstract|33,37 abstract|40,43 abstract|49,50 abstract
+
+In order to account for the evaporative cooling and general heat exchanges , three scalar quantities are used to characterize the mixture following the FGM method : the mixture fraction Z , the reaction progress variable , and the absolute enthalpy of the gas mixture h .
+1,2 person
+6,9 abstract|10,13 abstract|14,17 abstract|21,23 object|24,26 abstract|24,27 abstract|25,26 abstract|28,32 abstract|33,36 abstract|33,37 abstract|34,35 event|39,46 quantity|39,47 abstract|43,47 abstract
+
+The quantity in Equation ( 5 ) is associated to the maximum value of the source term at the same mixture composition and enthalpy level . ( 5 ) where is the flame sensor proposed by Durand and Polifke as implemented in .
+1,2 person
+1,7 abstract|4,5 abstract|4,7 abstract|6,7 abstract|11,18 quantity|15,18 abstract|24,26 abstract|28,29 abstract|32,35 object|37,38 person|37,40 person|39,40 person
+
+For the transport equations of Z and , and respectively represent the laminar and the turbulent Schmidt numbers ( ) , while for h both respectively correspond to the laminar and the turbulent Prandtl numbers ( ) .
+1,2 person
+2,8 abstract|12,19 abstract|15,19 abstract|29,36 abstract
+
+The term corresponds to the introduction of mass from the droplets into the carrier phase , while is the source term of momentum due to the presence of the dispersed phase .
+1,2 person
+1,3 abstract|5,12 event|10,12 object|23,24 abstract|26,32 abstract
+
+The transport equation for them can be written in terms of a general variable within the ATF modeling as ( 3 ) where is the turbulent viscosity .
+1,2 person
+1,3 abstract|1,6 abstract|5,6 object|16,19 abstract|20,22 abstract|25,28 abstract
+
+Carrier gas-phase quantities were interpolated into droplets positions , while influences of the dispersed phase were introduced through source terms in computational cells .
+1,2 person
+1,4 abstract|7,9 abstract|11,16 abstract|13,16 abstract|19,24 abstract|22,24 object
+
+The term corresponds to the reaction rate for the whereas it is set to zero for the mixture fraction and absolute enthalpy equation .
+1,2 person
+1,3 abstract|6,7 event|9,10 abstract|11,12 abstract|17,24 abstract|21,24 abstract
+
+The source term consists of the source of vapor introduced by the dispersed phase in the transport equation for Z , specifically .
+1,2 person
+1,4 abstract|16,21 abstract
+
+More details about the mathematical treatment given here to mass and momentum equations can be found in Sacomano Filho et al. .
+1,2 person
+1,7 abstract|4,7 abstract|10,13 abstract|10,14 abstract|18,22 person|21,22 person
+
+The SGS stress tensor is closed by means of the Smagorinsky model with the dynamic procedure of Germano et al. .
+1,2 person
+1,5 abstract|2,5 abstract|8,13 abstract|10,13 abstract|14,17 abstract|18,19 person|18,21 person|20,21 person
+
+The turbulent motions of the carrier phase are described in the LES context following a variable-density low Mach number formulation .
+1,2 person
+1,8 abstract|5,8 abstract|11,14 abstract|12,13 abstract|15,20 abstract|15,21 abstract
+
+Accordingly , only the flame region is thickened and no interferences of the ATF with the pre-vaporization zone occur .
+1,2 person
+11,19 abstract|13,19 abstract|16,19 abstract
+
+More description about how the phase coupling source terms are computed in the ATF context can be found in .
+1,2 person
+5,10 abstract|6,10 abstract|13,16 abstract
+
+The quantity F corresponds to the thickening factor , to the efficiency function , and denotes the flame sensor .
+1,2 person
+1,4 abstract|3,4 abstract|6,9 abstract|11,14 abstract|17,20 object
+
+In this context , a progress variable in its normalized form is needed , which is defined as .
+1,2 person
+2,4 abstract|5,8 abstract|5,12 abstract|9,12 abstract
+
+Therefore , these are expressed as functions of the transported scalar quantities Z , , and h .
+1,2 person
+3,4 abstract|9,18 abstract
+
+Similarly to the reaction progress variable source term , and are obtained from the employed FGM table .
+1,2 person
+3,6 abstract|3,9 abstract|7,8 abstract|10,11 abstract|14,18 object|16,17 abstract
+
+According to this approach , mass and momentum equations are described by ( 1 ) ( 2 )
+1,2 person
+3,5 abstract|6,9 abstract|6,10 abstract
+
+It is important to highlight that , with these values for and the unitary approach is maintained .
+1,2 person
+1,2 event|9,11 abstract|13,16 abstract
+
+Following the ATF method , the flame thickening is performed by means of a dynamic procedure .
+1,2 person
+2,5 abstract|6,9 abstract|14,17 abstract
+
+The flame sensor used by Aschmoneit to simulate partially premixed flames is employed here .
+1,2 person
+1,4 object|9,12 object|14,15 place
+
+A Euler – Lagrangian approach was adopted to represent the two-phase flow .
+1,2 person
+1,6 abstract|10,13 abstract|11,13 abstract
+
+Herein , denotes the equilibrium value of for a specific mixture composition .
+1,2 person
+4,13 abstract|9,13 abstract
+
+The dependent filtered variables were obtained from spatial filtering as with .
+1,2 person
+1,5 abstract|8,10 abstract
+
+Herein , a full inter-phase two-way coupling was accounted for .
+1,2 person
+3,8 abstract|5,8 abstract
+
+Both follow the implementations presented by Chrigui et al. .
+1,2 person
+1,2 abstract|3,5 abstract|7,8 person|7,10 person
+
+Details about these quantities are addressed below .
+1,2 person
+1,5 abstract|3,5 abstract
+
+Mixture Formation and Combustion Modeling
+1,2 person
+1,3 abstract|1,6 abstract|4,6 abstract
+
+Materials and Methods
+1,2 person
+3,4 abstract
+
+2.1.1 .
+1,2 person
+1,2 abstract
+
+2.1 .
+1,2 person
+1,2 abstract
+
+2 .
+1,2 person
+
+
+Gas Phase
+1,2 person
+1,2 substance|1,3 abstract

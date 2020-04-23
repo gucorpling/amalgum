@@ -1,0 +1,107 @@
+The new pad will have then a radius equal to 8.95 mm due to the following relation : ( 3 ) where is the radius of the conductor of the new pad , is the radius of the conductor of the previous pad , is the area of the section of the conductor of the new pad , and as last is the total area of the section of all the conductors of the old pad .
+1,2 person
+1,4 object|11,13 quantity|15,18 abstract|27,33 object|30,33 object|38,44 object|41,44 object|49,58 object|52,58 object|55,58 object|63,77 quantity|67,77 object|70,77 object|70,77 person|71,77 object|74,77 object
+
+Furthermore , in order to grant the same total current density in both the cases , it is necessary to increase the excitation current of the new and simplified CP up to 400 A. With a wire of this size , it is necessary to take into account that the eddy effect and the displacement currents would reach high values and , as a consequence , their effect will be removed from the simulation .
+1,2 person
+7,12 abstract|13,16 abstract|22,31 abstract|26,31 abstract|33,35 quantity|33,41 quantity|36,41 abstract|36,41 object|39,41 abstract|39,41 quantity|42,43 abstract|50,53 abstract|54,57 abstract|59,61 abstract|67,69 abstract|73,75 abstract
+
+The power exchanged between the primary and secondary sides is expressed as follows : ( 1 ) where and are the mutual inductances between the pick-up coil and the two respective transmitting coils , is the load attached to the pick-up coil , is the current that flows in the transmitting coils , and is the angular frequency of the current .
+1,2 person
+1,3 abstract|5,10 abstract|5,10 object|25,28 object|29,34 object|40,43 object|45,47 abstract|50,53 object|56,62 abstract|60,62 abstract
+
+This can be easily verified by observing the expression of the inductance of an ideal solenoid : ( 4 ) where is the permeability of the material , is the number of turns of the coil , is the area of the section of the coil , and as last , is the length of the coil .
+1,2 person
+1,2 abstract|8,17 abstract|11,17 abstract|14,17 object|18,20 abstract|26,28 substance|35,37 object|45,47 object|56,58 object
+
+However , it is possible to perform a sweep-analysis with an eddy current solution , where the distance between the Rx and the Txs along the x-axis is changed with the start when the receiver is perfectly aligned with the first transmitter and the stop when the receiver is perfectly aligned with the second transmitter .
+1,2 person
+3,4 abstract|11,15 abstract|20,22 abstract|20,25 abstract|23,25 abstract|24,25 abstract|26,28 abstract|31,33 event|40,43 object|44,46 abstract|44,46 event|47,49 object|53,56 object
+
+Therefore , it is possible to simplify the pads used in the simulation by substituting the 20-turns with 4 mm of copper wire diameter pad with a new one consisting of a single turn that can grant the same current density as the previous one , as shown in
+1,2 person
+8,10 object|12,14 abstract|12,14 event|16,26 object|19,24 quantity|19,25 quantity|19,26 object|22,26 object|27,30 object|32,35 object|38,42 abstract|38,42 quantity|43,46 object
+
+These pads , whose characteristics are reported in Table 1 , have a design that can be challenging for a computing machine , especially because the building of the mesh for the coil that is characterized by a short distance between every turn is complex and time-consuming .
+1,2 person
+1,3 object|4,6 abstract|9,11 object|13,15 abstract|20,23 object|29,34 object|32,34 object|38,41 abstract|38,44 abstract|42,44 abstract
+
+These pads are at first coupled in a homogeneous way , such as a CP – CP configuration , and then are combined in order to obtain the different values of the coupling coefficients that will help us in the choice of the best configuration .
+1,2 person
+1,3 object|8,11 abstract|14,19 abstract|32,35 abstract|33,35 abstract|38,39 person|40,46 abstract|40,46 event|43,46 abstract
+
+The mutual inductance is composed of two terms : a first one that represents the static component , which is also called transformer component , and a second one that represents the motion component , which is a function of the distance x .
+1,2 person
+1,4 abstract|7,9 abstract|10,13 object|15,18 abstract|23,25 abstract|27,30 abstract|27,30 object|32,35 abstract|41,44 abstract
+
+The drawback of this design choice is that the mutual and auto inductances that will be computed by ANSYS® Maxwell are not the same as the original pads that would be used in a real scenario .
+1,2 person
+1,7 abstract|4,7 abstract|9,14 abstract|19,21 abstract|19,21 object|26,29 object|34,37 abstract
+
+The computing machine chosen for the simulations is an Asus® ROG with an Intel® core i7700 3.6 GHz processor , 16 Gb of RAM , and a dedicated GTX 1050 4 Gb graphic card .
+1,2 person
+1,4 object|6,8 event|9,12 object|13,20 object|21,23 quantity|21,25 quantity|27,35 object|29,35 object
+
+The idea is to study the change in the coupling factor when the receiving side ( Rx ) is moving upon two different pads in the transmitting side ( Tx ) , as shown in
+1,2 person
+1,3 abstract|9,12 abstract|13,16 abstract|22,29 abstract|26,29 object
+
+The objective of the analysis is to use the finite element method approach for a preliminary study of the best pad configuration that can be applied for a DWC with a lumped track .
+1,2 person
+1,6 abstract|4,6 abstract|9,13 abstract|9,14 abstract|15,23 abstract|19,23 abstract|28,34 object|31,34 object
+
+According to Ampere ’s law , the magnetic field is related to the current density ( J ) in the coil and not with any geometric parameter : ( 2 )
+1,2 person
+3,5 person|3,6 abstract|7,10 abstract|13,16 abstract|17,18 abstract|20,22 object|25,28 abstract
+
+Moreover , there is the possibility to perform a further simplification by changing the geometry of the pads , making them less difficult to mesh for the computing machine .
+1,2 person
+5,7 abstract|9,12 abstract|14,19 abstract|17,19 object|21,22 object|27,30 object
+
+Before the start of the analysis , it is necessary to define the method and the procedure used in the design of the models for the simulation .
+1,2 person
+5,7 abstract|5,7 event|8,9 event|13,15 abstract|16,18 abstract|20,28 abstract|20,28 event|23,28 abstract|23,28 object|26,28 abstract
+
+From the expression it is highlighted how the power exchanged between couplers depends on the mutual inductances that are a function of the distance x .
+1,2 person
+2,4 abstract|8,10 abstract|8,13 abstract|15,18 abstract|23,26 abstract
+
+The geometries that are modelled and analyzed in ANSYS® Maxwell are the circular pad , the double-D pad , and the DDQ pad .
+1,2 person
+1,3 abstract|1,3 object|9,11 abstract|9,11 object|12,15 object|16,19 object|21,24 object
+
+Consequently , it is necessary to make some assumptions and simplifications that can make the simulations less challenging and faster .
+1,2 person
+3,4 abstract|8,12 abstract
+
+Therefore , it is not necessary to perform a simulation with a transient solution , which requires more computational power .
+1,2 person
+3,4 abstract|9,15 abstract|9,15 event|12,15 abstract|18,21 abstract
+
+A first assumption can be made starting with an analysis on how the Rx pad moves along the track .
+1,2 person
+1,4 abstract|9,16 abstract|13,16 object|18,20 abstract
+
+As demonstrated in Reference , the motion component is negligible when compared to the transformer component .
+1,2 person
+4,5 abstract|6,9 abstract|14,17 abstract
+
+Design of the Pad Prototypes
+1,2 person
+3,5 object
+
+3 .
+1,2 person
+
+
+Figure 8
+1,2 person
+1,3 abstract
+
+Figure 9
+1,2 person
+1,3 abstract
+
+.
+1,2 person
+

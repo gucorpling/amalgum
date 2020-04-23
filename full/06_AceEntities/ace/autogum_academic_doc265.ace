@@ -1,0 +1,79 @@
+In HFSP , several assumptions are usually made as follows : first , once a workpiece starts to be worked , it cannot be interrupted ; second , a machine can only process one workpiece at a time ; third , a workpiece can only be processed on one machine at a time ; fourth , workpieces can be machined on any machine at each stage ; fifth , there is unlimited storage capacity between any two stages ( i. e. , a workpiece can wait for any time between the two processes ) .
+1,2 person
+2,3 abstract|4,6 abstract|15,17 abstract|15,17 object|29,31 object|34,36 abstract|34,36 object|42,44 abstract|42,44 object|57,58 object|62,64 object|65,67 abstract|72,75 abstract|76,79 abstract|83,85 object|88,90 time|91,94 abstract
+
+( = 1 , 2 , … , n ) indicates the workpieces needed to be worked , in which n is the total number of workpieces . ( = 1 , 2 , … , S ) is the number of machines in each stage . is the machining time of the workpiece at stage , machine . is the time cost on the way from stage to stage . is the arrival time of workpiece at stage , machine .
+1,2 person
+3,10 quantity|9,10 quantity|21,22 quantity|23,28 abstract|23,28 quantity|31,34 quantity|31,36 quantity|31,38 quantity|37,38 abstract|43,44 object|43,47 object|45,47 place|53,55 object|53,59 object|56,59 object|58,59 object|65,71 abstract|68,71 place|77,82 object|79,82 object|81,82 object
+
+The standard mathematical model of HFSP is as follows : ( 1 ) ( 2 ) where if workpiece is worked at stage , machine , else ( 3 ) ( 4 ) ( 5 ) ( 6 ) if workpiece is the first one machined at stage , machine and without interruption . ( 7 ) if workpiece is worked at stage , machine .
+1,2 person
+1,7 abstract|6,7 abstract|19,20 abstract|29,30 abstract|32,33 abstract|35,36 abstract|41,42 object|53,54 event|59,60 abstract|59,60 object
+
+Knowing the processing time in each stage of the workpiece on each machine , the purpose of HFSP is to determine the distribution of each workpiece on the machines at each stage to minimize the maximum completion time for the former .
+1,2 person
+2,14 abstract|12,14 object|15,19 abstract|18,19 abstract|22,33 abstract|28,30 object|31,33 abstract|35,42 abstract|40,42 abstract
+
+Equation ( 1 ) is the objective function , minimizing the maximum ending time of all workpieces in the last stage S. Equation ( 2 ) ensures that there is only one workpiece at any machine in any stage .
+1,2 person
+1,2 abstract|6,9 abstract|11,26 abstract|19,26 abstract|35,37 object|35,40 object|38,40 abstract
+
+Equation ( 3 ) clears the time limitation of arrival and start . Equation ( 4 ) shows the relationship between the completion time and the start time of the process at the same stage .
+1,2 person
+1,2 abstract|6,13 abstract|10,11 event|14,15 abstract|19,25 abstract|19,32 abstract|19,36 abstract|22,25 time|30,32 abstract|33,36 abstract|33,36 place
+
+Correspondingly , and indicate the starting and ending times of workpiece which is machined at stage , machine . and reveal the time when the machine at stage starts to work and stops working .
+1,2 person
+11,12 object|22,24 time|25,27 object|25,29 object
+
+For instance , the sequence [ start , M 12 , M 24 , … , M S 3 , stop ] can be one of an order of a workpiece being machined .
+1,2 person
+4,6 abstract|25,32 abstract|27,32 abstract|30,32 object
+
+HFSP is divided into the determined initial sequence HFSP and the non-determined initial sequence HFSP in this paper , according to whether the initial sequence of the workpiece is deterministic or not .
+1,2 person
+1,2 abstract|5,9 abstract|9,10 abstract|11,15 abstract|13,15 abstract|15,16 abstract|17,19 abstract|17,19 object|23,29 abstract|27,29 object
+
+, there are S stages in total in the process of HFSP , and m 1 , m 2 , … , m S machines are included in each stage , respectively .
+1,2 person
+4,6 abstract|9,13 abstract|12,13 abstract|15,17 abstract|15,17 quantity|18,26 quantity|21,26 quantity|23,26 quantity|29,31 abstract
+
+Equations ( 6 ) and ( 7 ) reveal the time when the machine at stage starts to work and stops working .
+1,2 person
+10,12 time|13,15 object|13,17 object
+
+Equation ( 5 ) calculates the arrival time on the next stage utilizing the end time of the previous stage .
+1,2 person
+1,2 abstract|1,4 abstract|10,13 abstract|10,13 object|14,21 abstract|18,21 abstract
+
+In each stage , however , any one machine can be selected for each workpiece .
+1,2 person
+2,4 abstract|7,10 object|14,16 abstract|14,16 object
+
+In this section , HFSP is introduced , and its standard model is established .
+1,2 person
+2,4 abstract|5,6 abstract|10,11 abstract|10,13 abstract
+
+For the latter , the ordering of all workpieces is necessary to define additionally .
+1,2 person
+2,4 abstract|5,10 abstract|8,10 object
+
+Every workpiece must be worked in all stages in a certain order .
+1,2 person
+1,3 object|7,9 abstract|10,13 abstract
+
+Description of the Hybrid Flow-Shop Scheduling Problem
+1,2 person
+1,8 abstract|3,7 abstract|3,8 abstract
+
+A typical HFSP is shown in
+1,2 person
+1,4 abstract
+
+3 .
+1,2 person
+
+
+Figure 1
+1,2 person
+1,3 object

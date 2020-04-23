@@ -1,0 +1,171 @@
+Area-based methods , however , are not employed due to two reasons : ( 1 ) the first reason is that this method is computationally heavy as it performs cross correlation on multiple image patches and ( 2 ) the second reason is that image patches under different exposure levels may display extremely different characteristics , which may fail cross the correlation method .
+1,2 person
+1,3 abstract|11,13 abstract|17,20 abstract|22,24 abstract|28,29 abstract|30,32 abstract|33,36 abstract|40,43 abstract|53,56 abstract|60,64 abstract
+
+We selected this model because during the bracketing stage , hand-shake is inevitably introduced , leading to different imaging angles for the same document object , and the planar homograph model is suitable for the situation where the imaging object is put on a planar surface and is captured from different view-angles .
+1,2 person
+1,2 person|3,5 abstract|7,10 abstract|11,12 object|18,26 abstract|22,26 abstract|22,26 object|28,32 abstract|35,37 abstract|38,41 object|44,47 place|51,53 abstract
+
+Under this model , points in two different images can be mapped as : ( 1 ) where points are represented by homogeneous coordinates and so point ( x , y , z ) is the same as ( x / z , y / z ) in the inhomogeneous coordinate .
+1,2 person
+2,4 abstract|7,10 abstract|23,25 abstract|33,34 quantity|44,47 abstract|49,52 abstract
+
+a is the left central image patch and we can see that the geometric difference between the well-exposed image and over-exposed image in this region is around 10 pixels ( half the size of the lowercase letter “ a ” ) in the vertical direction .
+1,2 person
+3,8 abstract|9,10 person|13,26 abstract|17,20 object|17,26 abstract|21,23 object|24,26 place|27,30 quantity|28,30 quantity|39,40 abstract|43,46 abstract
+
+b , the right central image patch , we can see that the geometric difference between the well-exposed image and over-exposed image in this region is around 20 pixels ( the size of the lowercase letter “ a ” ) in the vertical direction .
+1,2 person
+9,10 person|13,26 abstract|17,20 object|17,26 abstract|21,23 object|24,26 place|27,30 quantity|28,30 quantity|31,40 abstract|38,40 abstract|42,45 abstract
+
+We expect that the extracted features will be consistent regardless of exposure levels and among all the feature extraction methods , we selected the Scale-invariant Feature Transform ( SIFT ) method because it improves detection stability in situations of illumination changes .
+1,2 person
+1,2 person|4,7 abstract|18,19 abstract|18,21 abstract|22,23 person|24,28 abstract|25,28 abstract|29,30 abstract|29,32 abstract|33,34 abstract|35,37 abstract|38,42 abstract|40,42 abstract
+
+Using this method to estimate the planar homograph model involves two steps : in the first step , a moving window is defined in the reference image and the image patch within the window is regarded as the template .
+1,2 person
+2,4 abstract|6,10 abstract|7,10 abstract|15,18 event|15,18 time|19,22 object|25,28 object|29,31 object|29,35 object|33,35 object|38,40 abstract|38,40 object
+
+Among all the geometric models , such as the affine model , translational model , rotation model , and so on , we ended up selecting the planar homograph model to represent the geometric disparity between LDR images .
+1,2 person
+2,6 abstract|9,12 abstract|9,15 abstract|9,18 abstract|23,24 person|27,31 abstract|33,39 abstract|37,39 object
+
+SIFT does not only define the position of detected points , but also provides a description of the region around the feature point by means of a descriptor , which is then used to match SIFT feature points .
+1,2 person
+6,11 abstract|9,11 abstract|15,24 abstract|15,24 object|18,24 abstract|18,24 place|27,29 object|36,37 object|36,39 abstract
+
+The image registration problem has been intensively studied in remote sensing images , medical images , and camera images and very rarely , research can be found for document image registration .
+1,2 person
+1,5 abstract|2,5 abstract|10,13 object|10,16 abstract|14,16 object|18,20 object|24,25 abstract|29,31 object|29,32 abstract
+
+The most popular registration in the context of exposure bracketing is from , where a translational geometric model was employed to account for the geometric disparity between two images .
+1,2 person
+1,5 abstract|6,11 abstract|9,11 abstract|9,11 event|15,19 abstract|24,30 abstract|28,30 object
+
+The green band and blue band come from the corresponding bands in the well-exposed image while the red band is from the corresponding band in the over-exposed image .
+1,2 person
+1,4 object|1,7 object|9,16 object|13,16 object|17,20 object|22,29 object|26,29 object
+
+This is obvious evidence that the geometric disparity between LDR images cannot be translational and that it must follow a more complicated geometric model .
+1,2 person
+1,2 abstract|3,5 abstract|4,5 abstract|6,12 abstract|10,12 object|17,18 abstract|20,25 abstract
+
+On top of it , we can clearly see that the global translational model cannot account for the geometric disparity between these two images .
+1,2 person
+4,5 abstract|6,7 person|11,15 abstract|18,25 abstract|22,25 abstract|22,25 object
+
+If there are no geometric disparities between these two images , the foreground ( textual part ) of the image should overlap .
+1,2 person
+5,7 abstract|5,11 abstract|8,11 abstract|8,11 object|15,17 abstract|19,21 object
+
+We used the template to search for a corresponding image patch in the sensed image ( an image that was registered ) .
+1,2 person
+1,2 person|3,5 object|8,16 abstract|8,16 object|13,16 object|17,19 object
+
+There are many ways of finding a matching template , and one of the most popular criteria is cross correlation .
+1,2 person
+3,5 abstract|3,10 abstract|7,10 object|12,18 abstract|19,21 abstract
+
+In the meantime , it achieves almost real-time performance and the features that are detected are highly distinctive .
+1,2 person
+5,6 abstract|7,10 abstract|8,10 abstract|11,13 abstract
+
+When multiple CPs are generated , we then use these CPs to estimate the planar homograph model .
+1,2 person
+2,4 abstract|7,8 person|10,12 abstract|14,18 abstract
+
+When the planar homograph model is selected , we have to estimate this model ’s eight parameters .
+1,2 person
+2,6 abstract|9,10 person|13,18 abstract
+
+shows two pseudo color image patches that are composed of two LDR images that are already illustrated in
+1,2 person
+2,7 abstract|2,7 object|11,14 abstract|11,14 object
+
+However , we found that the translational model is not suitable for general camera document images .
+1,2 person
+3,4 person|6,9 abstract|13,17 object|14,17 object
+
+, we can clearly see that geometric difference exists as the foreground texts do not overlap .
+1,2 person
+2,3 person|7,9 abstract|11,14 abstract|11,14 object
+
+The second method to estimate the planar homograph transformation is called the feature-based method .
+1,2 person
+1,4 abstract|6,10 abstract|12,15 abstract|13,15 abstract
+
+The centers of matched image templates are used as control points ( CPs ) .
+1,2 person
+1,7 abstract|1,7 object|4,6 object|4,7 object|13,14 abstract
+
+Two critical steps in feature-based methods are feature extraction and feature matching .
+1,2 person
+5,7 abstract|8,9 abstract|8,10 abstract|11,12 abstract|11,13 abstract
+
+Therefore , we have used the SIFT method to find CP pairs .
+1,2 person
+3,4 person|6,9 abstract|7,8 abstract|11,12 abstract|11,13 abstract
+
+shows the extracted matched SIFT features for two LDR images .
+1,2 person
+2,11 object|8,11 object|9,11 object
+
+The first method is called the area-based method .
+1,2 person
+1,4 abstract|6,9 abstract
+
+Basically , there are two methods .
+1,2 person
+5,7 abstract
+
+HDR Document Image Generation
+1,2 person
+1,4 object|1,5 abstract|2,3 abstract|2,5 abstract|3,4 object
+
+Document Image Registration
+1,2 person
+1,2 object|1,3 object|1,4 abstract|2,3 object
+
+For example ,
+1,2 person
+
+
+However , in
+1,2 person
+
+
+3.1 .
+1,2 person
+1,2 abstract
+
+3 .
+1,2 person
+
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 5
+1,2 person
+1,3 abstract
+
+.
+1,2 person
+

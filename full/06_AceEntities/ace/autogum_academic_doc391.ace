@@ -1,0 +1,199 @@
+Assuming lossless and ideally fast switches , an ideal inductor , that is a constant voltage source , that and are approximately constant or rather their time constants are large compared to the switching frequency the differential equation ( 1 ) with yields the linearly rising and falling current wave , that is depicted in
+1,2 person
+2,7 object|8,11 object|14,18 object|26,27 abstract|26,29 abstract|33,36 abstract|36,39 abstract|36,41 abstract|44,51 abstract|49,51 abstract
+
+In this paper , a reasonable compromise is found : Using the widely known half bridge converter as shown for example in at low voltage as a foundation to cycle single cells is still a practical approach that is cheap , scalable and does not have to deal with high voltage and severe noise .
+1,2 person
+2,4 abstract|5,8 event|24,26 abstract|27,29 abstract|31,33 object|35,38 abstract|50,52 abstract|53,55 abstract
+
+The battery that has been used in every ageing test is a commercially available ’ LG 18650 HE4 ’ cylindrical 18,650 lithium-ion battery with a graphite anode and a cathode made out of cobalt- , nickel- and manganese oxide ( NMC ) .
+1,2 person
+1,3 object|8,11 abstract|12,19 object|20,24 object|25,28 object|29,31 object
+
+At the cost of higher noise and a slight signal dependency on the state of the circuit , actual DC/DC-converters might also be used as cycling circuits that induce ripple currents on the batteries as De Breucker et al. have done in .
+1,2 person
+5,7 abstract|8,18 abstract|13,18 abstract|16,18 abstract|19,21 abstract|20,21 abstract|26,28 abstract|30,32 abstract|33,35 object|36,38 person|36,40 person|39,40 person
+
+This is a very viable approach since the spectra only consist of the fundamental wave in case of the sinusoidal excitation or in the well known form of odd harmonics that decline in orders of in case of triangular ripple currents .
+1,2 person
+1,2 abstract|8,10 abstract|13,16 abstract|19,22 abstract|24,31 abstract|29,31 abstract|39,42 abstract
+
+At the high-side a 12 V voltage source or a resistive load with a smoothing capacitor are connected to the circuit with a simple switch , depending on whether the the battery is charged or discharged , respectively .
+1,2 person
+4,9 object|10,17 object|14,17 object|20,22 abstract|23,26 object|30,33 object|31,33 object
+
+However , it is more convenient to separate the equations as indicated by the switch on top of the circuit diagram and design independent control algorithms for charging and discharging , i. e. , for the highlighted paths in
+1,2 person
+9,11 abstract|14,22 object|19,22 object|24,27 abstract|24,31 abstract|36,39 abstract
+
+Combining the differential equation ( 2 ) that affects the system while discharging the battery with Equation ( 1 ) yields the full dynamic description of the circuit model in the upper half of
+1,2 person
+1,5 abstract|1,7 abstract|2,5 abstract|10,12 abstract|14,16 object|17,18 abstract|22,30 abstract|27,30 abstract|31,35 abstract
+
+As the other state variable , that does not appear while charging , is not measured while discharging , a state observer , e. g. , as in , has to be added .
+1,2 person
+2,6 abstract|12,13 event|18,19 event|20,23 abstract|20,29 abstract
+
+Although one can expect the most practical results , it comes with a lot of constraints such as expected noise because of the voluminous setup and very high currents or voltages , respectively .
+1,2 person
+2,3 person|5,9 abstract|10,11 abstract|13,17 abstract|19,21 abstract|23,26 abstract|27,30 abstract|31,32 abstract
+
+Especially a pure sinusoidal excitation should be considered carefully as a recent study , has shown , that using higher harmonics is a feasible tool to analyse the electrode reactions .
+1,2 person
+2,6 abstract|11,14 abstract|20,22 abstract|23,26 abstract|28,31 abstract
+
+Keeping the focus on the selected literature , the authors of use signal generators to induce sinusoidal or triangular waves on the DC-current flowing in and out of the batteries .
+1,2 person
+2,4 abstract|5,8 abstract|9,12 person|13,15 abstract|17,21 abstract|22,24 abstract|29,31 object
+
+The short literature overview in the introduction has already been a glimpse of how challenging the investigation of the influence of current ripple on battery ageing appears to be .
+1,2 person
+1,5 abstract|1,8 object|6,8 abstract|6,8 object|11,27 abstract|16,27 abstract|19,24 abstract|19,27 abstract|25,27 abstract
+
+In this chapter , the circuit for the cyclic ageing tests is proposed , the setup is shown and the design of the ageing tests is elaborated .
+1,2 person
+2,4 abstract|5,12 abstract|8,12 abstract|15,17 abstract|20,26 abstract|23,26 abstract
+
+It is designed so that the output asymptotically follows the desired value , i. e. , the charge or discharge current of the battery .
+1,2 person
+1,2 abstract|6,8 abstract|10,13 abstract|17,25 abstract|23,25 object
+
+The incoming measurements on the PC are gathered , visualised in real time and continuously saved with a GUI that is implemented in LabView .
+1,2 person
+1,7 object|5,7 object|12,14 time|18,20 abstract
+
+Thus , the battery current is basically a triangular wave that is induced on a mean value comparable with the approach in .
+1,2 person
+3,6 abstract|8,11 abstract|20,23 abstract
+
+Besides , a high voltage system is more hazardous and makes repeated tests with more cells or battery packs quite costly .
+1,2 person
+3,7 abstract|15,17 object|16,17 object|18,19 object|18,20 object
+
+Moreover , an interface is implemented so that the cycling circuit is able to communicate with a PC via USB .
+1,2 person
+3,5 abstract|9,12 abstract|9,12 object|17,19 object|20,21 object
+
+In this case , it is an ’ ARM Cortex-M4 ’ on an ’ Infineon XMC4700 Relax Kit ’ .
+1,2 person
+5,6 object|7,11 object|9,11 object|13,17 object|13,19 object|13,20 object
+
+Its nominal capacity is , measured at a 1 C discharge from the end-of-charge voltage to the end-of-discharge voltage .
+1,2 person
+1,2 object|1,4 abstract|17,20 abstract
+
+Thus , these methods have the highest potential for reproducibility but cannot be seen as a practical approach .
+1,2 person
+3,5 abstract|6,11 abstract|16,19 abstract
+
+Thus , an impact of higher current harmonics on the quality of the electrode reactions cannot be excluded .
+1,2 person
+3,9 abstract|6,9 abstract|10,16 abstract|13,16 abstract
+
+Low- and high-side are interconnected with field-effect transistors ( FET ) and their internal body diodes .
+1,2 person
+1,4 abstract|7,9 abstract|13,14 object|13,17 object
+
+a. As indicated in the picture , the control algorithms are carried out on a microcontroller .
+1,2 person
+5,7 object|8,11 abstract|15,17 object
+
+The battery is located at the low side and is connected directly to the smoothing inductance .
+1,2 person
+1,3 object|6,9 place|14,17 abstract
+
+The control loop is based on a state feedback controller taken from a textbook such as .
+1,2 person
+1,4 abstract|7,11 abstract|13,15 object
+
+On top of that , the case comes with basic I/O-features and a status display .
+1,2 person
+6,8 object|10,12 abstract|10,12 object|13,16 abstract|14,15 abstract
+
+a , b , the current flow is given , depending on the operation mode .
+1,2 person
+5,8 abstract|13,16 abstract
+
+In both cases , the output variable is the same as the state variable .
+1,2 person
+2,4 abstract|5,8 abstract|12,15 abstract
+
+First of all , well suited test equipment has to be found .
+1,2 person
+5,9 object
+
+They use a half-bridge converter with a high voltage battery pack .
+1,2 person
+1,2 object|1,2 person|3,6 object|3,12 object|7,12 object
+
+shows the basic working principle of the circuit .
+1,2 person
+2,9 abstract|7,9 abstract
+
+A representative photo of the circuit is shown in
+1,2 person
+1,7 abstract|1,7 object|5,7 abstract
+
+A full block diagram is shown in
+1,2 person
+1,5 abstract|1,5 object
+
+c , d respectively .
+1,2 person
+1,2 abstract
+
+a , b respectively .
+1,2 person
+
+
+Ripple Current Test Circuit
+1,2 person
+1,4 abstract|1,5 abstract
+
+2.1 .
+1,2 person
+1,2 abstract
+
+2 .
+1,2 person
+
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 2
+1,2 person
+1,3 abstract
+
+Figure 2
+1,2 person
+1,3 abstract
+
+b.
+1,2 person
+
+
+Experimental
+1,2 person
+
+
+In
+1,2 person
+

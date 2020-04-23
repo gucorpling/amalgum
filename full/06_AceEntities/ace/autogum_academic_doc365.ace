@@ -1,0 +1,215 @@
+Although the time-varying features of multivariate data are critical to identify the types of faults , the distinction between various types of faults is a challenging task due to the complex interaction among control processes .
+1,2 person
+2,8 abstract|6,8 abstract|12,16 abstract|15,16 abstract|17,24 abstract|20,24 abstract|25,28 abstract|30,36 abstract|34,36 abstract
+
+We only use the normal state samples without any faults to train the autoencoder for fault detection where anomalous and normal states correspond to positive and negative class , respectively .
+1,2 person
+1,2 person|9,11 abstract|16,18 abstract|19,23 abstract|21,23 abstract|25,29 abstract|27,29 abstract
+
+In this section , we describe the benchmark dataset of the practical industrial process and the existing deep neural network approach that we used to compare our proposed method .
+1,2 person
+2,4 abstract|5,6 person|7,15 abstract|11,15 abstract|13,15 abstract|16,22 abstract|23,24 person|27,28 person|27,30 abstract
+
+In previous research , a deep convolutional neural network ( DCNN)-based approach achieves the best reported results in multivariate time series data from the simulated TEP dataset .
+1,2 person
+2,4 abstract|5,10 abstract|5,13 abstract|11,12 organization|11,13 abstract|14,18 abstract|19,28 abstract|24,28 abstract|24,28 object
+
+The input sequence of the testing set for LSTM includes time series data before the first event of the fault detection , captured by the autoencoder .
+1,2 person
+1,10 abstract|5,10 abstract|9,10 abstract|11,14 abstract|19,22 abstract|25,27 object
+
+To model a practical industrial process , the TEP simulator consists of five major units : reactor , condenser , compressor , separator and stripper .
+1,2 person
+3,7 abstract|8,11 abstract|8,11 object|13,16 object|17,18 object
+
+The fraction of the normal state samples prior to faults is used to compensate the detection delay and the possible false positives of the autoencoder .
+1,2 person
+1,7 abstract|1,7 quantity|1,8 quantity|1,11 abstract|15,18 abstract|19,26 abstract|24,26 abstract
+
+In addition , 20 % of the whole training set is used as the validation set to optimize the decision threshold for the autoencoder .
+1,2 person
+4,9 quantity|4,11 quantity|14,17 abstract|19,25 abstract|23,25 abstract|23,25 object
+
+The reaction to produce G has a higher activation energy than the one producing H , thus resulting in more sensitivity to temperature .
+1,2 person
+1,3 event|5,6 substance|7,11 abstract|15,16 substance|20,24 abstract|23,24 abstract
+
+Furthermore , even if some variables are oscillating due to faults , there is a significant delay to recognize it as shown in
+1,2 person
+5,7 abstract|11,12 abstract|15,18 abstract|20,21 abstract
+
+Condensed components are moved to a product stripping column by stripping with feed stream number 4 to eliminate remaining reactants .
+1,2 person
+1,3 object|6,10 object|13,17 abstract|15,17 quantity
+
+shows the raw process variable deviations from their normal states when fault 02 is introduced at after the simulation started .
+1,2 person
+8,11 abstract|12,14 abstract|18,20 abstract|18,20 event
+
+On the other hand , the time series samples with temporal features are used to train the LSTM-based classifier .
+1,2 person
+6,13 abstract|11,13 abstract|17,20 abstract
+
+Hence , each training set of the LSTM network consists with of normal data and of faulty state data .
+1,2 person
+7,10 abstract|13,15 abstract|17,20 abstract
+
+We set the sampling time as ( 20 samples/h ) to support the fast fault detection and fault diagnosis .
+1,2 person
+1,2 person|3,6 abstract|8,10 quantity|13,17 abstract|15,16 abstract|18,19 abstract|18,20 abstract
+
+TEP is a widely-used benchmark testbed to investigate the large-scale control and FDD schemes of realistic chemical processes .
+1,2 person
+1,2 abstract|9,19 abstract|13,19 abstract|16,19 abstract
+
+In TEP , we monitor a total of 52 variables including 41 measured variables and 11 manipulated variables .
+1,2 person
+2,3 abstract|4,5 person|6,11 abstract|12,15 abstract|12,19 abstract
+
+We randomly select 80 % time series sample as training sets and the remaining sample as testing sets .
+1,2 person
+1,2 person|4,6 quantity|4,9 quantity|6,9 quantity|10,12 object
+
+The product stream of the reactor is cooled through a condenser and fed to a vapor-liquid separator .
+1,2 person
+1,7 abstract|1,7 object|5,7 object|10,12 object|15,18 object
+
+Furthermore , each failure mode typically has long-term dependencies along with short-term ones of time series data .
+1,2 person
+3,6 abstract|8,10 abstract
+
+We evaluate the performance of the proposed method for FDD on Tennessee Eastman Process ( TEP ) .
+1,2 person
+1,2 person|3,15 abstract|6,15 abstract|10,11 abstract
+
+Besides normal data , Table 1 describes 20 different types of faults to evaluate various FDD methods .
+1,2 person
+2,4 abstract|5,7 object|8,13 abstract|12,13 abstract|15,18 abstract|16,17 abstract
+
+The specific fault out of 20 different types is then injected and it continues to run for .
+1,2 person
+1,4 abstract|1,9 abstract|6,9 abstract|13,14 abstract
+
+In this training set , we remove the first of the normal state samples in each simulation .
+1,2 person
+2,5 abstract|6,7 person|16,18 abstract
+
+All chemical reactions are irreversible , exothermic and approximately first-order with respect to the reactant concentrations .
+1,2 person
+1,4 event|14,17 abstract
+
+The modern industrial systems interact with multiple subcomponents where each component has several different failure modes .
+1,2 person
+1,5 abstract|7,9 abstract|10,12 object|13,17 abstract
+
+We compare the fault diagnosis performance of LSTM and DCNN-based approaches on the TEP dataset .
+1,2 person
+1,2 person|3,12 abstract|4,12 abstract|8,12 abstract|13,16 abstract
+
+The TEP produces two products G and H from four reactants with additional byproduct F .
+1,2 person
+1,3 abstract|4,6 object|4,9 abstract|13,16 abstract
+
+The combined autoencoder and LSTM network must mine the hidden features of time series data .
+1,2 person
+1,7 abstract|1,7 object|9,16 abstract|13,16 abstract
+
+Products G and H are separated in a downstream refining section from the stripper base .
+1,2 person
+1,5 substance|8,12 place|13,15 object|13,16 object
+
+We also show the normalized variables by the mean and standard deviation of each feature .
+1,2 person
+1,2 person|4,7 abstract|8,16 abstract|14,16 abstract
+
+Hence , the total simulation time is based on the recommendation of the TEP model .
+1,2 person
+3,7 abstract|10,16 abstract|13,16 abstract
+
+Each simulation of the fault repeats 500 times with various initial states and random noise .
+1,2 person
+1,6 abstract|1,6 event|4,6 abstract|10,13 abstract|14,16 abstract
+
+The simulation data of TEP are highly nonlinear with strong coupling and dynamical behavior .
+1,2 person
+1,6 abstract|1,6 object|5,6 abstract|10,12 abstract|13,15 abstract
+
+The gaseous reactants are fed into the reactor where liquid products are formed .
+1,2 person
+1,4 abstract|7,9 object|10,12 object
+
+The simulation code and data are available for download in References , respectively .
+1,2 person
+1,6 abstract|1,6 object
+
+In fact , the fault effect is considerably different for various process variables .
+1,2 person
+4,7 abstract|11,14 abstract
+
+The inert and byproducts are purged as vapor from the vapor-liquid separator .
+1,2 person
+8,9 substance|10,13 object
+
+The reaction rates are a function of temperature through an Arrhenius expression .
+1,2 person
+1,4 abstract|8,9 abstract|10,13 abstract
+
+Non-condensed components are recycled back to the reactor via a compressor .
+1,2 person
+1,3 object|7,9 object|10,12 object
+
+The simulation starts to run in the normal state for .
+1,2 person
+1,3 abstract|1,3 event|7,10 abstract
+
+The main structure of the TEP simulator is described in
+1,2 person
+1,7 abstract|1,8 abstract|5,8 object
+
+More detailed information of TEP is described in Reference .
+1,2 person
+1,6 abstract|5,6 abstract|9,10 abstract
+
+Tennessee Eastman Challenge Problem
+1,2 person
+1,5 abstract
+
+The reactions are
+1,2 person
+1,3 abstract
+
+4.1 .
+1,2 person
+1,2 abstract
+
+4.2 .
+1,2 person
+1,2 abstract
+
+Evaluation Setup
+1,2 person
+1,2 abstract|1,2 event
+
+4 .
+1,2 person
+
+
+Figure 3
+1,2 person
+1,3 abstract
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 4
+1,2 person
+1,3 abstract
+
+DCNN
+1,2 person
+
+
+.
+1,2 person
+

@@ -1,0 +1,115 @@
+In distribution networks with no or low penetration of RES , in which power flows from the high voltage ( HV ) / medium voltage ( MV ) substation to the MV/low voltage ( LV ) substations , the reinforcement and expansion plan of a distribution network was determined based on a given forecast of the maximum load demand of each year of the planning period without taking into account the variability of the output power of RES .
+1,2 person
+2,11 abstract|10,11 quantity|14,15 abstract|31,38 object|39,48 abstract|45,48 place|61,67 time|64,67 abstract|64,67 time|71,79 abstract|74,79 abstract
+
+However , in distribution networks with high penetration of RES , the aforementioned approach is not adequate , since reverse power flows occur quite often during every year of the planning period , especially in periods of low demand and high RES generation , creating new technical challenges that need to be solved at the planning stage , such as line congestion and voltage rise issues .
+1,2 person
+7,11 abstract|12,15 abstract|20,23 abstract|20,23 event|27,33 time|46,49 abstract|55,58 abstract|61,63 abstract|64,67 abstract
+
+Data clustering is a process that allocates a set of individual data into smaller groups ( clusters ) such that ( a ) the individual data with similar features are grouped into the same cluster and ( b ) the dissimilarity of each created cluster compared to the rest is high enough making each cluster distinct .
+1,2 person
+1,3 abstract|4,6 abstract|8,13 object|11,13 abstract|28,30 abstract|33,36 object|48,50 object
+
+Thus , a planning method for ADNs with high penetration of DERs , especially RES , has to take into account a proper dataset of load demand and RES generation during each stage of the planning period in order to determine the optimal reinforcement and expansion plan .
+1,2 person
+3,13 abstract|9,13 abstract|12,13 abstract|22,28 abstract|26,28 abstract|29,31 abstract|32,38 time|35,38 abstract|42,48 abstract
+
+The probabilistic load-generation sets are determined based on historical data of wind speed , solar irradiance and load demand variability in order to be used as the input data of the proposed multistage planning method of ADNs .
+1,2 person
+1,5 abstract|9,14 abstract|12,14 abstract|18,21 abstract|27,30 abstract|27,35 abstract|27,38 abstract|31,35 abstract|37,38 abstract
+
+The k-means method allocates the remaining individual data between clusters so that the Euclidean distance of an individual vector data ( ) from its corresponding cluster centroid ( ) is minimized as shown in ( 1 ) .
+1,2 person
+1,4 abstract|2,4 abstract|5,9 abstract|13,21 abstract|13,28 abstract|24,25 object
+
+A high quality dataset for the planning of a distribution network needs to be created in a way that it adequately considers the uncertainties of load demand and RES generation during each stage of the planning period .
+1,2 person
+1,12 abstract|6,12 abstract|9,12 abstract|20,21 object|23,28 abstract|26,28 abstract|29,31 abstract|32,38 time|35,38 abstract
+
+This paper proposes a method that is based on a k-means clustering method to generate probabilistic load-generation sets for each stage of the planning period in order to model accurately the load and renewable generation uncertainties .
+1,2 person
+1,3 abstract|4,6 abstract|10,13 abstract|10,14 abstract|23,26 abstract|31,37 abstract|34,37 abstract
+
+The k-means clustering method is a partitioning clustering technique that employs an iterative process to optimize the quality , i. e. , the dissimilarity , of a predetermined number of distinct clusters .
+1,2 person
+1,5 abstract|2,5 abstract|6,10 abstract|12,15 abstract|17,19 abstract|23,25 abstract|27,33 abstract|27,33 object
+
+The convergence criterion is that there is no change in the clusters ’ centroids or after a certain number of iterations the change in the clusters ’ centroids is below a threshold .
+1,2 person
+1,4 abstract|11,15 abstract|11,15 object|17,22 time|22,29 abstract|25,29 abstract|31,33 abstract
+
+It is important that the dataset of load demand and RES generation that will be incorporated into the planning process contains the possible combinations of load demand and RES generation .
+1,2 person
+1,2 abstract|4,10 abstract|5,10 abstract|8,10 abstract|11,13 abstract|18,21 abstract|22,28 abstract|22,31 abstract|26,28 abstract|29,31 abstract
+
+Overall , the k-means method determines the clusters ’ centroids so that the sum of squared distances of each individual vector data from its corresponding cluster centroid is minimized .
+1,2 person
+3,6 abstract|4,6 abstract|7,11 abstract|7,11 object|13,28 abstract|16,23 abstract|16,28 abstract|19,23 abstract|24,25 object|24,28 abstract
+
+The k-means clustering method is initialized by specifying the number of clusters ( k ) and selecting randomly individual data from the whole dataset as the cluster centroids .
+1,2 person
+1,5 abstract|2,5 abstract|9,13 quantity|22,25 object|26,29 abstract|26,29 object
+
+Then , the average of all the individual data that are the members of a cluster is set as the new centroid of that cluster .
+1,2 person
+3,10 abstract|6,10 abstract|12,17 abstract|20,26 abstract|24,26 abstract
+
+Distribution networks are , in general , planned in order to ensure the safe network operation under any possible loading conditions over the planning period .
+1,2 person
+13,17 abstract|13,17 event|13,22 abstract|18,22 abstract|23,26 abstract|23,26 time
+
+Furthermore , each set of this dataset should be different from the rest in order to avoid the unnecessary repetition of similar load-generation sets .
+1,2 person
+3,8 abstract|6,8 object|12,14 object|18,25 abstract|22,25 abstract
+
+After the data clustering is terminated , the occurrence probability of each cluster ’s centroid can be calculated , as follows : ( 2 )
+1,2 person
+2,5 abstract|8,16 abstract|12,16 abstract
+
+A large dataset will increase significantly the computation time of the solution of the DNP problem , making it sometimes impractical to solve .
+1,2 person
+1,4 abstract|1,4 object|11,17 abstract|11,17 event|14,17 abstract|19,20 abstract
+
+The k-means method is an established clustering method , which has been widely employed for the classification of large volumes of data .
+1,2 person
+1,4 abstract|2,4 abstract|5,9 abstract|16,23 abstract|16,23 event|19,23 abstract|19,23 object
+
+The k-means clustering method has been widely used for data management of power systems related problems : ( 1 )
+1,2 person
+1,5 abstract|10,11 abstract|10,17 abstract|13,15 abstract|13,17 abstract
+
+The optimal number of clusters can be determined by the method presented in .
+1,2 person
+1,6 abstract|1,6 quantity|5,6 object|10,12 abstract
+
+However , a small dataset would deteriorate the dataset ’s quality .
+1,2 person
+8,11 object|8,12 abstract
+
+This iterative process is terminated when a convergence criterion is fulfilled .
+1,2 person
+1,4 abstract|1,4 event|7,10 abstract
+
+The dataset ’s second feature is its proper size .
+1,2 person
+1,4 abstract|1,4 object|1,6 abstract|7,8 object|7,10 abstract
+
+The first feature of this dataset is the quality .
+1,2 person
+1,7 abstract|5,7 object|8,10 abstract
+
+The k-Means Clustering Method
+1,2 person
+1,5 abstract|2,5 abstract
+
+Load and Renewable Generation
+1,2 person
+1,5 abstract|3,5 abstract
+
+2.1 .
+1,2 person
+1,2 abstract
+
+Data Modeling
+1,2 person
+1,3 abstract

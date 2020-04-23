@@ -1,0 +1,163 @@
+Via this model , the value of RSSI , ( in dBm ) can be theoretically expressed as follows : ( 1 ) where d ( in m ) is the distance between transmitter ( anchor node ) and receiver ( target node ) , is the free space reference distance , typically 1 m , is the path-loss exponent coefficient , and is the RSSI value when the transmitter and the receiver are 1 m apart , which in this case is found to be dBm .
+1,2 person
+2,4 abstract|5,9 abstract|8,9 abstract|12,13 quantity|28,29 quantity|34,35 person|36,38 place|40,41 person|42,44 object|47,52 abstract|54,56 quantity|58,62 abstract|65,68 abstract|65,68 quantity|69,71 person|69,74 object|69,74 person|72,74 object|75,77 quantity|81,83 abstract|87,88 quantity
+
+The robot ’s translational velocity , v , and rotational velocity , , can be written as follows : ( 7 ) ( 8 ) where r is the radius of the wheel , D is the azimuth length between wheels , and and represent the angular velocities of the right and left wheels respectively .
+1,2 person
+1,6 abstract|7,8 abstract|10,11 abstract|24,25 abstract|32,34 object|35,36 abstract|37,42 abstract|46,56 abstract|50,55 object
+
+In order to estimate the real distance for a continuously moving node more accurately , sampled data for are collected when the transmitter is placed at a fixed coordinate , and the receiver , named Node M , is moved at a speed of approximately 20 cm/s from cm until cm .
+1,2 person
+5,8 abstract|9,13 object|16,19 abstract|22,24 object|32,34 object|36,38 abstract|36,38 place|42,44 abstract|42,48 abstract|45,48 quantity|46,48 quantity
+
+In this work , four transmitters were configured as anchor nodes ( Anchors A , B , C , and D ) ; hence , four distance values can be obtained at each time instance from the path-loss propagation model .
+1,2 person
+2,4 abstract|5,7 object|5,7 person|13,15 place|13,22 abstract|13,22 place|14,15 place|26,29 abstract|37,41 abstract
+
+In order to introduce mobility to the target node and to verify the proposed indoor localization strategies , NSBot2 , which is a nonholonomic wheeled mobile robot was built with ATMega microcontrollers connected to the target node as shown in
+1,2 person
+5,6 abstract|7,10 place|13,18 abstract|15,18 abstract|19,20 organization|23,28 object|31,33 object|35,38 object|35,38 place
+
+The movement of the robot can be decomposed into linear velocities with respect to the X and Y axes , i. e. , and , which have a relation with linear and angular velocities as follows : ( 11 )
+1,2 person
+1,6 abstract|4,6 object|10,12 abstract|10,20 abstract|15,20 abstract|28,35 abstract|31,35 abstract|38,40 abstract|39,40 abstract
+
+Let be the center of the robot , be the current coordinate based on the plane , be the current coordinate based on the plane , and be the robot ’s heading angle with respect to the X axis .
+1,2 person
+3,8 place|6,8 object|10,13 abstract|15,17 place|19,26 abstract|29,40 abstract|37,40 abstract
+
+In this study , we use XBee embedded modules with the Zigbee protocol to create four transmitters that are placed at preassigned positions , and one receiver which is the target node to be localized .
+1,2 person
+2,4 abstract|5,6 person|7,8 abstract|11,14 abstract|12,14 abstract|16,18 object|22,24 place|26,28 object|26,28 person
+
+The basic idea for indoor localization with RSSI is that the target node to be localized stays at a fixed coordinate , and the RSSI from different anchor nodes with known positions are measured .
+1,2 person
+1,9 abstract|8,9 abstract|31,33 abstract
+
+RSSI values can be converted into distances using a path-loss model , which are then used with the triangulation , multilateration , or trilateration method to estimate the position of the target node .
+1,2 person
+1,3 abstract|7,8 abstract|9,12 abstract|18,26 abstract|24,26 abstract|28,34 abstract|31,34 object
+
+This technique does not just allow the robot to travel along various types of planned path , but it also enables each experiment with a specific path to be repeated with minimal variations .
+1,2 person
+1,3 abstract|12,17 abstract|19,20 abstract|22,24 event|25,28 abstract|32,34 abstract
+
+A curve-fitting method is then utilized to generate an improved path-loss propagation model , , as follows : ( 3 ) where ; and n is the number of sampled data .
+1,2 person
+1,4 abstract|9,14 abstract|25,26 quantity|27,32 abstract|27,32 quantity
+
+In real situations , when the target node is continuously moving , the effects of noise from multipath propagation , signal occlusions , and diffractions can be undesirably amplified .
+1,2 person
+2,4 abstract|6,9 object|13,20 abstract|16,17 abstract|18,20 abstract|21,23 abstract
+
+They are also placed at points where any three of them are always noncollinear , which ensures the feasibility of the trilateration method at each time instance .
+1,2 person
+1,2 object|8,12 abstract|11,12 abstract|18,24 abstract|21,24 abstract|25,28 abstract
+
+Consider as the unknown coordinate of the mobile node , and with be the first three coordinates from three different anchor nodes received by the mobile node .
+1,2 person
+14,23 abstract|19,23 abstract|25,28 object
+
+illustrates the robot ’s position with respect to two different frames , namely and . denotes the world coordinate system , whereas represents the robot-attached frame .
+1,2 person
+2,6 abstract|2,12 abstract|9,12 abstract|17,21 abstract|24,27 abstract
+
+For this research , the encoders on both wheels of the mobile robot were used to estimate the path taken as well as the heading direction .
+1,2 person
+2,4 abstract|5,14 abstract|5,14 object|8,14 object|11,14 object|18,20 abstract|24,26 abstract|24,27 abstract
+
+With regard to control mechanism , NSbot2 was preprogrammed with closed-loop cascade control where its motion was constrained to constant translational and rotational velocities .
+1,2 person
+4,6 abstract|7,8 object|7,8 organization|11,14 abstract|15,16 object|15,17 abstract|20,24 abstract|20,25 abstract
+
+Zigbee is a low-cost wireless communication technology based on the IEEE 802.15.4 standard , which is often used to create personal area networks .
+1,2 person
+1,2 object|3,8 abstract|10,14 abstract|10,14 object|21,24 object|21,24 place
+
+Due to its low power consumption and secure networking capabilities , it is often preferable for wireless control and monitoring in smart-building technologies .
+1,2 person
+3,7 abstract|8,11 abstract|17,19 abstract|17,24 abstract|22,24 abstract
+
+Hence , the theoretical RSSI-distance relation in Equation ( 1 ) may no longer be sufficient to predict the actual path-loss model .
+1,2 person
+3,11 abstract|5,6 abstract|8,9 abstract|19,23 abstract
+
+Odometry is a process of estimating the position change of a mobile robot on the basis of data from motion sensors .
+1,2 person
+1,2 abstract|7,9 abstract|7,14 abstract|11,14 object|20,21 abstract|20,22 object
+
+The coordinate of the mobile node can then be retrieved via Cramer ’s rule as follows : ( 6 )
+1,2 person
+1,7 abstract|4,7 object|12,14 person|12,15 abstract
+
+From Equation ( 1 ) , the distance d can be simply retrieved with : ( 2 )
+1,2 person
+2,3 abstract|7,9 abstract|7,10 abstract
+
+Let be the estimated distance from Node M to , and ( 4 ) where ( 5 )
+1,2 person
+3,9 abstract|7,9 place
+
+The relation between , , and can be written as : ( 9 ) where ( 10 )
+1,2 person
+1,7 abstract
+
+One of the most commonly used path-loss propagation models in a WSN is the log-distance function .
+1,2 person
+1,13 object|7,13 abstract|14,17 abstract
+
+The theoretical value for with some calibrations is 1.8 .
+1,2 person
+1,8 abstract|6,8 abstract|9,10 quantity
+
+System Architecture and Path-Loss Propagation Model
+1,2 person
+1,3 abstract|4,7 abstract
+
+Indoor Localization Framework and Strategies
+1,2 person
+1,4 abstract|5,6 abstract
+
+This is illustrated in
+1,2 person
+1,2 abstract
+
+RSSI-Based Localization
+1,2 person
+1,2 abstract|1,3 abstract
+
+2.1 .
+1,2 person
+1,2 abstract
+
+2.2 .
+1,2 person
+1,2 abstract
+
+2.3 .
+1,2 person
+1,2 abstract
+
+2 .
+1,2 person
+
+
+Figure 1
+1,2 person
+1,3 object
+
+Figure 2
+1,2 person
+1,3 abstract
+
+Figure 3
+1,2 person
+1,3 abstract
+
+Odometry
+1,2 person
+1,2 abstract
+
+.
+1,2 person
+
