@@ -1,0 +1,99 @@
+Non-adaptive systems which run on PCs , tablets , or mobile phones and self-adaptive systems such as a robot or unmanned aerial vehicle ( UAV ) can collaborate to achieve a common service goal .
+1,2 person
+1,3 abstract|6,7 object|8,9 object|11,13 object|14,16 abstract|21,24 object|25,26 abstract|31,35 abstract
+
+The former layer is provided equally to developers , literally , as a middleware framework , and the latter layer includes the components developed by IoT service developers according to the domain requirements .
+1,2 person
+1,4 abstract|8,9 person|13,16 abstract|13,16 object|18,21 abstract|23,24 abstract|26,27 object|26,29 person|31,34 abstract
+
+To construct a generic conceptual architecture , we have designed to separate IoT service domain-dependent components from the core MAPE loop components , which are domain-independent parts .
+1,2 person
+3,7 abstract|8,9 person|13,17 abstract|18,23 abstract|20,21 object
+
+One is the MAPE Core Bundle Layer , which implements the connectors between the four MAAPE components , the Publish-Subscribe Communication Layer , and the ParticipantRegistry .
+1,2 person
+1,2 abstract|3,8 abstract|11,18 object|14,18 abstract|14,18 object|19,23 abstract|19,23 object
+
+The developers can easily perform a series of tasks until the actual IoT service is launched , including the creation/deletion/start/stop of each IoT collaboration service VM .
+1,2 person
+1,3 person|6,10 abstract|11,15 abstract|19,27 abstract|22,27 abstract|22,27 object
+
+Whenever the devices or systems which can participate in an IoT collaboration are power-on , information of the participant is automatically registered to the Participant Registry .
+1,2 person
+2,4 object|2,6 object|10,13 abstract|16,20 abstract|18,20 person|24,27 abstract
+
+To help developers easily manage the IoT Service Bundles , we provide each operation of the IoT Service Launcher in the form of a cloud service .
+1,2 person
+3,4 person|6,10 abstract|7,10 abstract|11,12 person|13,20 abstract|13,20 event|16,20 object|21,27 abstract|24,27 abstract
+
+The IoT Service Launcher by itself works as one of the VMs created in the cloud area like other VMs for implementing IoT collaboration services .
+1,2 person
+9,13 object|15,18 place|23,26 abstract
+
+As is named , this layer provides a high-performance scalable communication among a large number of IoT devices based on the publish-subscribe communication model .
+1,2 person
+5,7 abstract|8,12 abstract|8,19 abstract|13,19 object|17,19 object|21,25 abstract
+
+The other layer is the IoT Service Bundle Layer , which consists of concrete MAPE components required to control a specific IoT collaboration service .
+1,2 person
+1,4 abstract|5,10 abstract|6,10 abstract|14,17 abstract|15,16 object|20,25 abstract|20,25 object
+
+The passive actuator may be embedded in and controlled by a single system , or directly receives the commands of the IoT collaboration controller .
+1,2 person
+11,14 abstract|11,14 object|18,25 abstract|21,25 object
+
+The addition/removal of a specific service bundle can be done by using the cloud service provided by the IoT Service Launcher as well .
+1,2 person
+4,8 abstract|13,16 abstract|18,22 object
+
+shows the overview of a conceptual architecture of the proposed cloud-based middleware framework for the self-adaptive IoT based collaboration among multiple systems .
+1,2 person
+2,14 abstract|2,23 abstract|5,14 abstract|9,14 abstract|15,23 abstract|21,23 abstract
+
+The Adaptation Executor can look up a specific object among the registered systems and devices in the Participant Registry as needed .
+1,2 person
+1,4 person|7,10 object|7,20 abstract|17,20 place
+
+Each MAPE cycle for controlling the collaboration of multiple systems and devices is created into one VM in the cloud area .
+1,2 person
+1,4 abstract|6,13 abstract|9,11 abstract|9,13 abstract|9,13 object|19,22 place
+
+Besides , passive sensors or actuator devices with no separate control unit can also participate in the collaboration as well .
+1,2 person
+3,5 object|3,8 object|6,8 object|10,13 abstract|17,19 abstract
+
+This layer delivers newly published data to consumers who subscribe from multiple but different subsets of sensing data simultaneously .
+1,2 person
+1,3 abstract|4,7 abstract|8,9 person|12,19 abstract|17,19 abstract
+
+The IoT Service Participant Manager provides an auto-registration mechanism of participant systems or devices collaborating in IoT collaboration .
+1,2 person
+1,6 abstract|2,6 abstract|7,13 abstract|14,15 object|17,19 abstract
+
+The address of the IoT Service Participant Manager should be saved in the devices and systems before .
+1,2 person
+1,9 abstract|1,9 object
+
+This communication between various systems and devices is carried out through the Publish-Subscribe Communication Layer .
+1,2 person
+1,3 abstract|1,6 abstract|1,8 abstract|4,8 object|12,16 abstract
+
+The components belonging to both layers are in the form of OSGi bundles .
+1,2 person
+1,7 abstract|5,7 abstract|9,14 abstract|12,14 object
+
+Cloud-based Middleware Platform for Self-Adaptive IoT Collaboration Services
+1,2 person
+1,8 object|1,9 abstract|1,9 object
+
+Each VM is divided into two layers .
+1,2 person
+1,3 object|6,8 abstract
+
+3 .
+1,2 person
+
+
+Figure
+1,2 person
+

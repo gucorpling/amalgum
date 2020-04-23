@@ -1,0 +1,592 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=1 .
+1-1	0-1	1	quantity	new	_	_
+1-2	2-3	.	_	_	_	_
+
+#Text=Introduction
+2-1	4-16	Introduction	abstract	new	_	_
+
+#Text=Autophagy , a self-eating process , is involved in the development and the differentiation of various cell types including the adipocyte .
+3-1	17-26	Autophagy	abstract	new	coref	4-1
+3-2	27-28	,	_	_	_	_
+3-3	29-30	a	event[5]	new[5]	_	_
+3-4	31-42	self-eating	abstract|event[5]	new|new[5]	_	_
+3-5	43-50	process	event[5]	new[5]	_	_
+3-6	51-52	,	_	_	_	_
+3-7	53-55	is	_	_	_	_
+3-8	56-64	involved	_	_	_	_
+3-9	65-67	in	_	_	_	_
+3-10	68-71	the	event[6]	new[6]	coref	4-23[18_6]
+3-11	72-83	development	event[6]	new[6]	_	_
+3-12	84-87	and	_	_	_	_
+3-13	88-91	the	event[7]	new[7]	coref	4-4[12_7]
+3-14	92-107	differentiation	event[7]	new[7]	_	_
+3-15	108-110	of	event[7]	new[7]	_	_
+3-16	111-118	various	event[7]|place[8]	new[7]|new[8]	_	_
+3-17	119-123	cell	event[7]|place[8]	new[7]|new[8]	_	_
+3-18	124-129	types	event[7]|place[8]	new[7]|new[8]	_	_
+3-19	130-139	including	event[7]|place[8]	new[7]|new[8]	_	_
+3-20	140-143	the	event[7]|place[8]|object[9]	new[7]|new[8]|new[9]	coref	4-5[0_9]
+3-21	144-153	adipocyte	event[7]|place[8]|object[9]	new[7]|new[8]|new[9]	_	_
+3-22	154-155	.	_	_	_	_
+
+#Text=Autophagy contributes to the adipocyte differentiation by reorganizing the intracellular components , forming the fat droplets and/or providing the energy source for the development of the phenotype .
+4-1	156-165	Autophagy	abstract	giv	coref	5-7
+4-2	166-177	contributes	_	_	_	_
+4-3	178-180	to	_	_	_	_
+4-4	181-184	the	event[12]	giv[12]	coref	5-10[24_12]
+4-5	185-194	adipocyte	object|event[12]	giv|giv[12]	coref	5-11
+4-6	195-210	differentiation	event[12]	giv[12]	_	_
+4-7	211-213	by	_	_	_	_
+4-8	214-226	reorganizing	_	_	_	_
+4-9	227-230	the	abstract[13]	new[13]	_	_
+4-10	231-244	intracellular	abstract[13]	new[13]	_	_
+4-11	245-255	components	abstract[13]	new[13]	_	_
+4-12	256-257	,	_	_	_	_
+4-13	258-265	forming	_	_	_	_
+4-14	266-269	the	object[15]	new[15]	_	_
+4-15	270-273	fat	substance|object[15]	new|new[15]	_	_
+4-16	274-282	droplets	object[15]	new[15]	_	_
+4-17	283-289	and/or	_	_	_	_
+4-18	290-299	providing	_	_	_	_
+4-19	300-303	the	abstract[17]	new[17]	_	_
+4-20	304-310	energy	abstract|abstract[17]	new|new[17]	_	_
+4-21	311-317	source	abstract[17]	new[17]	_	_
+4-22	318-321	for	_	_	_	_
+4-23	322-325	the	event[18]	giv[18]	_	_
+4-24	326-337	development	event[18]	giv[18]	_	_
+4-25	338-340	of	event[18]	giv[18]	_	_
+4-26	341-344	the	event[18]|abstract[19]	giv[18]|new[19]	_	_
+4-27	345-354	phenotype	event[18]|abstract[19]	giv[18]|new[19]	_	_
+4-28	355-356	.	_	_	_	_
+
+#Text=Therefore , the knockdown of essential autophagy genes prevents the adipocyte differentiation and intervenes in the lipid accumulation within adipogenic cells .
+5-1	357-366	Therefore	_	_	_	_
+5-2	367-368	,	_	_	_	_
+5-3	369-372	the	event[20]	new[20]	_	_
+5-4	373-382	knockdown	event[20]	new[20]	_	_
+5-5	383-385	of	event[20]	new[20]	_	_
+5-6	386-395	essential	event[20]|abstract[22]	new[20]|new[22]	coref	10-11[50_22]
+5-7	396-405	autophagy	event[20]|abstract|abstract[22]	new[20]|giv|new[22]	coref	10-12
+5-8	406-411	genes	event[20]|abstract[22]	new[20]|new[22]	_	_
+5-9	412-420	prevents	_	_	_	_
+5-10	421-424	the	event[24]	giv[24]	coref	6-1[30_24]
+5-11	425-434	adipocyte	object|event[24]	giv|giv[24]	coref	6-2
+5-12	435-450	differentiation	event[24]	giv[24]	_	_
+5-13	451-454	and	_	_	_	_
+5-14	455-465	intervenes	_	_	_	_
+5-15	466-468	in	_	_	_	_
+5-16	469-472	the	abstract[26]	new[26]	_	_
+5-17	473-478	lipid	abstract|abstract[26]	new|new[26]	_	_
+5-18	479-491	accumulation	abstract[26]	new[26]	_	_
+5-19	492-498	within	_	_	_	_
+5-20	499-509	adipogenic	abstract|object[28]	new|new[28]	coref|coref|coref|coref	12-27[73_28]|13-19|12-27[73_28]|13-19
+5-21	510-515	cells	object[28]	new[28]	_	_
+5-22	516-517	.	_	_	_	_
+
+#Text=The adipocyte differentiation is a well-understood process .
+6-1	518-521	The	event[30]	giv[30]	coref	6-5[31_30]
+6-2	522-531	adipocyte	object|event[30]	giv|giv[30]	coref	9-33[45_0]
+6-3	532-547	differentiation	event[30]	giv[30]	_	_
+6-4	548-550	is	_	_	_	_
+6-5	551-552	a	event[31]	giv[31]	coref	8-11[38_31]
+6-6	553-568	well-understood	event[31]	giv[31]	_	_
+6-7	569-576	process	event[31]	giv[31]	_	_
+6-8	577-578	.	_	_	_	_
+
+#Text=A well defined transcriptional program is initiated and maintained by specific transcription factors .
+7-1	579-580	A	abstract[32]	new[32]	_	_
+7-2	581-585	well	abstract[32]	new[32]	_	_
+7-3	586-593	defined	abstract[32]	new[32]	_	_
+7-4	594-609	transcriptional	abstract[32]	new[32]	_	_
+7-5	610-617	program	abstract[32]	new[32]	_	_
+7-6	618-620	is	_	_	_	_
+7-7	621-630	initiated	_	_	_	_
+7-8	631-634	and	_	_	_	_
+7-9	635-645	maintained	_	_	_	_
+7-10	646-648	by	_	_	_	_
+7-11	649-657	specific	abstract[34]	new[34]	coref	10-7[48_34]
+7-12	658-671	transcription	abstract|abstract[34]	new|new[34]	coref	20-22
+7-13	672-679	factors	abstract[34]	new[34]	_	_
+7-14	680-681	.	_	_	_	_
+
+#Text=The 3T3-L1 mouse fibroblast is a key model for studying this process .
+8-1	682-685	The	abstract[36]	new[36]	coref	8-6[37_36]
+8-2	686-692	3T3-L1	abstract[36]	new[36]	_	_
+8-3	693-698	mouse	animal|abstract[36]	new|new[36]	_	_
+8-4	699-709	fibroblast	abstract[36]	new[36]	_	_
+8-5	710-712	is	_	_	_	_
+8-6	713-714	a	abstract[37]	giv[37]	_	_
+8-7	715-718	key	abstract[37]	giv[37]	_	_
+8-8	719-724	model	abstract[37]	giv[37]	_	_
+8-9	725-728	for	_	_	_	_
+8-10	729-737	studying	_	_	_	_
+8-11	738-742	this	event[38]	giv[38]	coref	14-11[86_38]
+8-12	743-750	process	event[38]	giv[38]	_	_
+8-13	751-752	.	_	_	_	_
+
+#Text=When the pre-adipocyte is induced with a chemical cocktail containing MDI ( 1-Methyl-3-isobutylxanthine , Dexamethasone , and Insulin ) , the cell witnesses morphological and metabolic changes and is finally transformed into mature adipocyte .
+9-1	753-757	When	_	_	_	_
+9-2	758-761	the	substance[39]	new[39]	_	_
+9-3	762-775	pre-adipocyte	substance[39]	new[39]	_	_
+9-4	776-778	is	_	_	_	_
+9-5	779-786	induced	_	_	_	_
+9-6	787-791	with	_	_	_	_
+9-7	792-793	a	substance[40]	new[40]	_	_
+9-8	794-802	chemical	substance[40]	new[40]	_	_
+9-9	803-811	cocktail	substance[40]	new[40]	_	_
+9-10	812-822	containing	_	_	_	_
+9-11	823-826	MDI	substance	new	appos	9-13[42_0]
+9-12	827-828	(	_	_	_	_
+9-13	829-856	1-Methyl-3-isobutylxanthine	substance[42]	giv[42]	_	_
+9-14	857-858	,	substance[42]	giv[42]	_	_
+9-15	859-872	Dexamethasone	substance[42]	giv[42]	_	_
+9-16	873-874	,	substance[42]	giv[42]	_	_
+9-17	875-878	and	substance[42]	giv[42]	_	_
+9-18	879-886	Insulin	substance[42]	giv[42]	_	_
+9-19	887-888	)	_	_	_	_
+9-20	889-890	,	_	_	_	_
+9-21	891-894	the	place[43]	new[43]	_	_
+9-22	895-899	cell	place[43]	new[43]	_	_
+9-23	900-909	witnesses	_	_	_	_
+9-24	910-923	morphological	abstract[44]	new[44]	coref	17-1[103_44]
+9-25	924-927	and	abstract[44]	new[44]	_	_
+9-26	928-937	metabolic	abstract[44]	new[44]	_	_
+9-27	938-945	changes	abstract[44]	new[44]	_	_
+9-28	946-949	and	_	_	_	_
+9-29	950-952	is	_	_	_	_
+9-30	953-960	finally	_	_	_	_
+9-31	961-972	transformed	_	_	_	_
+9-32	973-977	into	_	_	_	_
+9-33	978-984	mature	object[45]	giv[45]	coref	17-18[0_45]
+9-34	985-994	adipocyte	object[45]	giv[45]	_	_
+9-35	995-996	.	_	_	_	_
+
+#Text=Several studies reported functional links between the adipogenic factors and key autophagy genes .
+10-1	997-1004	Several	event[46]	new[46]	_	_
+10-2	1005-1012	studies	event[46]	new[46]	_	_
+10-3	1013-1021	reported	_	_	_	_
+10-4	1022-1032	functional	abstract[47]	new[47]	coref	24-5[137_47]
+10-5	1033-1038	links	abstract[47]	new[47]	_	_
+10-6	1039-1046	between	abstract[47]	new[47]	_	_
+10-7	1047-1050	the	abstract[47]|abstract[48]	new[47]|giv[48]	coref	20-11[121_48]
+10-8	1051-1061	adipogenic	abstract[47]|abstract[48]	new[47]|giv[48]	_	_
+10-9	1062-1069	factors	abstract[47]|abstract[48]	new[47]|giv[48]	_	_
+10-10	1070-1073	and	abstract[47]|abstract[48]	new[47]|giv[48]	_	_
+10-11	1074-1077	key	abstract[47]|abstract[48]|abstract[50]	new[47]|giv[48]|giv[50]	coref	16-10[101_50]
+10-12	1078-1087	autophagy	abstract[47]|abstract[48]|abstract|abstract[50]	new[47]|giv[48]|giv|giv[50]	coref	12-14
+10-13	1088-1093	genes	abstract[47]|abstract[48]|abstract[50]	new[47]|giv[48]|giv[50]	_	_
+10-14	1094-1095	.	_	_	_	_
+
+#Text=For example , the transcription factor CCAAT enhancer-binding protein beta ( CEBPB ) controls the expression of the autophagy-related 4b cysteine peptidase ( Atg4b ) .
+11-1	1096-1099	For	_	_	_	_
+11-2	1100-1107	example	_	_	_	_
+11-3	1108-1109	,	_	_	_	_
+11-4	1110-1113	the	abstract[51]	new[51]	coref	13-17[83_51]
+11-5	1114-1127	transcription	abstract[51]	new[51]	_	_
+11-6	1128-1134	factor	abstract[51]	new[51]	_	_
+11-7	1135-1140	CCAAT	abstract	new	_	_
+11-8	1141-1157	enhancer-binding	abstract	new	_	_
+11-9	1158-1165	protein	substance	new	coref	12-19
+11-10	1166-1170	beta	_	_	_	_
+11-11	1171-1172	(	_	_	_	_
+11-12	1173-1178	CEBPB	object	new	_	_
+11-13	1179-1180	)	_	_	_	_
+11-14	1181-1189	controls	_	_	_	_
+11-15	1190-1193	the	abstract[56]	new[56]	coref	12-24[71_56]
+11-16	1194-1204	expression	abstract[56]	new[56]	_	_
+11-17	1205-1207	of	abstract[56]	new[56]	_	_
+11-18	1208-1211	the	abstract[56]|abstract[58]	new[56]|new[58]	appos	11-24[0_58]
+11-19	1212-1229	autophagy-related	abstract[56]|abstract[58]	new[56]|new[58]	_	_
+11-20	1230-1232	4b	abstract[56]|abstract[58]	new[56]|new[58]	_	_
+11-21	1233-1241	cysteine	abstract[56]|abstract|abstract[58]	new[56]|new|new[58]	_	_
+11-22	1242-1251	peptidase	abstract[56]|abstract[58]	new[56]|new[58]	_	_
+11-23	1252-1253	(	_	_	_	_
+11-24	1254-1259	Atg4b	abstract	giv	_	_
+11-25	1260-1261	)	_	_	_	_
+11-26	1262-1263	.	_	_	_	_
+
+#Text=A recent study suggested that peroxisome proliferator-activated receptor gamma ( PPARG ) regulates autophagy through NEDD4 E3 ubiquitin protein ligase ( NEDD4 ) gene expression in thiazolidinediones-treated HepG2 cells .
+12-1	1264-1265	A	abstract[60]	new[60]	coref	15-2[87_60]
+12-2	1266-1272	recent	abstract[60]	new[60]	_	_
+12-3	1273-1278	study	abstract[60]	new[60]	_	_
+12-4	1279-1288	suggested	_	_	_	_
+12-5	1289-1293	that	_	_	_	_
+12-6	1294-1304	peroxisome	place	new	_	_
+12-7	1305-1327	proliferator-activated	place[62]	new[62]	_	_
+12-8	1328-1336	receptor	place[62]	new[62]	_	_
+12-9	1337-1342	gamma	place[62]	new[62]	_	_
+12-10	1343-1344	(	_	_	_	_
+12-11	1345-1350	PPARG	abstract	new	coref	13-15
+12-12	1351-1352	)	_	_	_	_
+12-13	1353-1362	regulates	_	_	_	_
+12-14	1363-1372	autophagy	event	giv	coref	13-8
+12-15	1373-1380	through	_	_	_	_
+12-16	1381-1386	NEDD4	abstract|abstract[66]	new|new[66]	appos|appos	12-22|12-22
+12-17	1387-1389	E3	abstract[66]	new[66]	_	_
+12-18	1390-1399	ubiquitin	abstract	new	_	_
+12-19	1400-1407	protein	substance	giv	_	_
+12-20	1408-1414	ligase	_	_	_	_
+12-21	1415-1416	(	_	_	_	_
+12-22	1417-1422	NEDD4	abstract	giv	_	_
+12-23	1423-1424	)	_	_	_	_
+12-24	1425-1429	gene	abstract|abstract[71]	new|giv[71]	coref|coref|coref|coref	15-15[93_0]|15-26[96_71]|15-15[93_0]|15-26[96_71]
+12-25	1430-1440	expression	abstract[71]	giv[71]	_	_
+12-26	1441-1443	in	abstract[71]	giv[71]	_	_
+12-27	1444-1470	thiazolidinediones-treated	abstract[71]|object[73]	giv[71]|giv[73]	_	_
+12-28	1471-1476	HepG2	abstract[71]|substance|object[73]	giv[71]|new|giv[73]	_	_
+12-29	1477-1482	cells	abstract[71]|object[73]	giv[71]|giv[73]	_	_
+12-30	1483-1484	.	_	_	_	_
+
+#Text=Forkhead box o1 ( FOXO1 ) regulates autophagy induction and it also negatively regulates Pparg , the master adipogenic factor .
+13-1	1485-1493	Forkhead	object|object[75]|abstract[76]	new|new[75]|new[76]	appos|appos|appos	13-5[0_76]|13-5[0_76]|13-5[0_76]
+13-2	1494-1497	box	object[75]|abstract[76]	new[75]|new[76]	_	_
+13-3	1498-1500	o1	abstract[76]	new[76]	_	_
+13-4	1501-1502	(	_	_	_	_
+13-5	1503-1508	FOXO1	abstract	giv	coref	14-6
+13-6	1509-1510	)	_	_	_	_
+13-7	1511-1520	regulates	_	_	_	_
+13-8	1521-1530	autophagy	place|event[79]	giv|new[79]	ana|coref|ana|coref	13-11[0_79]|16-12|13-11[0_79]|16-12
+13-9	1531-1540	induction	event[79]	new[79]	_	_
+13-10	1541-1544	and	_	_	_	_
+13-11	1545-1547	it	event	giv	_	_
+13-12	1548-1552	also	_	_	_	_
+13-13	1553-1563	negatively	_	_	_	_
+13-14	1564-1573	regulates	_	_	_	_
+13-15	1574-1579	Pparg	object	giv	_	_
+13-16	1580-1581	,	_	_	_	_
+13-17	1582-1585	the	abstract[83]	giv[83]	coref	29-17[175_83]
+13-18	1586-1592	master	abstract[83]	giv[83]	_	_
+13-19	1593-1603	adipogenic	abstract|abstract[83]	giv|giv[83]	_	_
+13-20	1604-1610	factor	abstract[83]	giv[83]	_	_
+13-21	1611-1612	.	_	_	_	_
+
+#Text=Indeed , the inhibition of FOXO1 is thus necessary for the differentiation to proceed .
+14-1	1613-1619	Indeed	_	_	_	_
+14-2	1620-1621	,	_	_	_	_
+14-3	1622-1625	the	event[84]	new[84]	_	_
+14-4	1626-1636	inhibition	event[84]	new[84]	_	_
+14-5	1637-1639	of	event[84]	new[84]	_	_
+14-6	1640-1645	FOXO1	event[84]|abstract	new[84]|giv	_	_
+14-7	1646-1648	is	_	_	_	_
+14-8	1649-1653	thus	_	_	_	_
+14-9	1654-1663	necessary	_	_	_	_
+14-10	1664-1667	for	_	_	_	_
+14-11	1668-1671	the	event[86]	giv[86]	coref	15-22[0_86]
+14-12	1672-1687	differentiation	event[86]	giv[86]	_	_
+14-13	1688-1690	to	event[86]	giv[86]	_	_
+14-14	1691-1698	proceed	event[86]	giv[86]	_	_
+14-15	1699-1700	.	_	_	_	_
+
+#Text=In a previous study from our laboratory , we reported the progressive activation of the Foxo1 gene during the course of differentiation , to reach the highest expression in the mature adipocytes .
+15-1	1701-1703	In	_	_	_	_
+15-2	1704-1705	a	abstract[87]	giv[87]	_	_
+15-3	1706-1714	previous	abstract[87]	giv[87]	_	_
+15-4	1715-1720	study	abstract[87]	giv[87]	_	_
+15-5	1721-1725	from	abstract[87]	giv[87]	_	_
+15-6	1726-1729	our	abstract[87]|person|abstract[89]	giv[87]|acc|new[89]	ana|ana	15-9|15-9
+15-7	1730-1740	laboratory	abstract[87]|abstract[89]	giv[87]|new[89]	_	_
+15-8	1741-1742	,	_	_	_	_
+15-9	1743-1745	we	person	giv	ana	16-4
+15-10	1746-1754	reported	_	_	_	_
+15-11	1755-1758	the	abstract[91]	new[91]	_	_
+15-12	1759-1770	progressive	abstract[91]	new[91]	_	_
+15-13	1771-1781	activation	abstract[91]	new[91]	_	_
+15-14	1782-1784	of	abstract[91]	new[91]	_	_
+15-15	1785-1788	the	abstract[91]|abstract[93]	new[91]|giv[93]	coref	17-4[0_93]
+15-16	1789-1794	Foxo1	abstract[91]|person|abstract[93]	new[91]|new|giv[93]	_	_
+15-17	1795-1799	gene	abstract[91]|abstract[93]	new[91]|giv[93]	_	_
+15-18	1800-1806	during	abstract[91]	new[91]	_	_
+15-19	1807-1810	the	abstract[91]|abstract[94]	new[91]|new[94]	_	_
+15-20	1811-1817	course	abstract[91]|abstract[94]	new[91]|new[94]	_	_
+15-21	1818-1820	of	abstract[91]|abstract[94]	new[91]|new[94]	_	_
+15-22	1821-1836	differentiation	abstract[91]|abstract[94]|event	new[91]|new[94]|giv	coref	17-18[109_0]
+15-23	1837-1838	,	_	_	_	_
+15-24	1839-1841	to	_	_	_	_
+15-25	1842-1847	reach	_	_	_	_
+15-26	1848-1851	the	abstract[96]	giv[96]	coref	17-4[105_96]
+15-27	1852-1859	highest	abstract[96]	giv[96]	_	_
+15-28	1860-1870	expression	abstract[96]	giv[96]	_	_
+15-29	1871-1873	in	abstract[96]	giv[96]	_	_
+15-30	1874-1877	the	abstract[96]|object[97]	giv[96]|new[97]	coref	16-15[102_97]
+15-31	1878-1884	mature	abstract[96]|object[97]	giv[96]|new[97]	_	_
+15-32	1885-1895	adipocytes	abstract[96]|object[97]	giv[96]|new[97]	_	_
+15-33	1896-1897	.	_	_	_	_
+
+#Text=In addition , we identified a large number of differentially expressed autophagy genes between differentiated and undifferentiated adipocytes .
+16-1	1898-1900	In	_	_	_	_
+16-2	1901-1909	addition	_	_	_	_
+16-3	1910-1911	,	_	_	_	_
+16-4	1912-1914	we	person	giv	ana	20-1
+16-5	1915-1925	identified	_	_	_	_
+16-6	1926-1927	a	abstract[99]	new[99]	_	_
+16-7	1928-1933	large	abstract[99]	new[99]	_	_
+16-8	1934-1940	number	abstract[99]	new[99]	_	_
+16-9	1941-1943	of	abstract[99]	new[99]	_	_
+16-10	1944-1958	differentially	abstract[99]|abstract[101]	new[99]|giv[101]	coref	19-11[117_101]
+16-11	1959-1968	expressed	abstract[99]|abstract[101]	new[99]|giv[101]	_	_
+16-12	1969-1978	autophagy	abstract[99]|abstract|abstract[101]	new[99]|giv|giv[101]	coref	18-6
+16-13	1979-1984	genes	abstract[99]|abstract[101]	new[99]|giv[101]	_	_
+16-14	1985-1992	between	abstract[99]|abstract[101]	new[99]|giv[101]	_	_
+16-15	1993-2007	differentiated	abstract[99]|abstract[101]|object[102]	new[99]|giv[101]|giv[102]	_	_
+16-16	2008-2011	and	abstract[99]|abstract[101]|object[102]	new[99]|giv[101]|giv[102]	_	_
+16-17	2012-2028	undifferentiated	abstract[99]|abstract[101]|object[102]	new[99]|giv[101]|giv[102]	_	_
+16-18	2029-2039	adipocytes	abstract[99]|abstract[101]|object[102]	new[99]|giv[101]|giv[102]	_	_
+16-19	2040-2041	.	_	_	_	_
+
+#Text=The changes in gene expression were clustered into several groups that corresponded to the known stages of adipocyte differentiation .
+17-1	2042-2045	The	abstract[103]	giv[103]	coref	25-6[145_103]
+17-2	2046-2053	changes	abstract[103]	giv[103]	_	_
+17-3	2054-2056	in	abstract[103]	giv[103]	_	_
+17-4	2057-2061	gene	abstract[103]|abstract|abstract[105]	giv[103]|giv|giv[105]	coref|coref|coref|coref	21-9|21-8[128_105]|21-9|21-8[128_105]
+17-5	2062-2072	expression	abstract[103]|abstract[105]	giv[103]|giv[105]	_	_
+17-6	2073-2077	were	_	_	_	_
+17-7	2078-2087	clustered	_	_	_	_
+17-8	2088-2092	into	_	_	_	_
+17-9	2093-2100	several	abstract[106]	new[106]	_	_
+17-10	2101-2107	groups	abstract[106]	new[106]	_	_
+17-11	2108-2112	that	_	_	_	_
+17-12	2113-2125	corresponded	_	_	_	_
+17-13	2126-2128	to	_	_	_	_
+17-14	2129-2132	the	abstract[107]	new[107]	_	_
+17-15	2133-2138	known	abstract[107]	new[107]	_	_
+17-16	2139-2145	stages	abstract[107]	new[107]	_	_
+17-17	2146-2148	of	abstract[107]	new[107]	_	_
+17-18	2149-2158	adipocyte	abstract[107]|object|event[109]	new[107]|giv|giv[109]	coref|coref|coref|coref	18-11[113_109]|21-21|18-11[113_109]|21-21
+17-19	2159-2174	differentiation	abstract[107]|event[109]	new[107]|giv[109]	_	_
+17-20	2175-2176	.	_	_	_	_
+
+#Text=Therefore , the regulation of autophagy during the course of the differentiation seems to be more dynamic and stage-dependant .
+18-1	2177-2186	Therefore	_	_	_	_
+18-2	2187-2188	,	_	_	_	_
+18-3	2189-2192	the	abstract[110]	new[110]	_	_
+18-4	2193-2203	regulation	abstract[110]	new[110]	_	_
+18-5	2204-2206	of	abstract[110]	new[110]	_	_
+18-6	2207-2216	autophagy	abstract[110]|abstract	new[110]|giv	coref	19-11
+18-7	2217-2223	during	abstract[110]	new[110]	_	_
+18-8	2224-2227	the	abstract[110]|abstract[112]	new[110]|new[112]	_	_
+18-9	2228-2234	course	abstract[110]|abstract[112]	new[110]|new[112]	_	_
+18-10	2235-2237	of	abstract[110]|abstract[112]	new[110]|new[112]	_	_
+18-11	2238-2241	the	abstract[110]|abstract[112]|event[113]	new[110]|new[112]|giv[113]	coref	20-4[120_113]
+18-12	2242-2257	differentiation	abstract[110]|abstract[112]|event[113]	new[110]|new[112]|giv[113]	_	_
+18-13	2258-2263	seems	_	_	_	_
+18-14	2264-2266	to	_	_	_	_
+18-15	2267-2269	be	_	_	_	_
+18-16	2270-2274	more	_	_	_	_
+18-17	2275-2282	dynamic	_	_	_	_
+18-18	2283-2286	and	_	_	_	_
+18-19	2287-2302	stage-dependant	_	_	_	_
+18-20	2303-2304	.	_	_	_	_
+
+#Text=Only a few examples of direct and indirect regulation of autophagy genes have been studied .
+19-1	2305-2309	Only	_	_	_	_
+19-2	2310-2311	a	abstract[114]	new[114]	_	_
+19-3	2312-2315	few	abstract[114]	new[114]	_	_
+19-4	2316-2324	examples	abstract[114]	new[114]	_	_
+19-5	2325-2327	of	abstract[114]	new[114]	_	_
+19-6	2328-2334	direct	abstract[114]|abstract[115]	new[114]|new[115]	_	_
+19-7	2335-2338	and	abstract[114]|abstract[115]	new[114]|new[115]	_	_
+19-8	2339-2347	indirect	abstract[114]|abstract[115]	new[114]|new[115]	_	_
+19-9	2348-2358	regulation	abstract[114]|abstract[115]	new[114]|new[115]	_	_
+19-10	2359-2361	of	abstract[114]|abstract[115]	new[114]|new[115]	_	_
+19-11	2362-2371	autophagy	abstract[114]|abstract[115]|abstract|abstract[117]	new[114]|new[115]|giv|giv[117]	coref|coref|coref|coref	20-5|24-15[141_117]|20-5|24-15[141_117]
+19-12	2372-2377	genes	abstract[114]|abstract[115]|abstract[117]	new[114]|new[115]|giv[117]	_	_
+19-13	2378-2382	have	_	_	_	_
+19-14	2383-2387	been	_	_	_	_
+19-15	2388-2395	studied	_	_	_	_
+19-16	2396-2397	.	_	_	_	_
+
+#Text=We hypothesize that the autophagy process may be regulated by the same adipogenic factors either directly or indirectly through specific autophagy transcription factors .
+20-1	2398-2400	We	person	giv	ana	21-6
+20-2	2401-2412	hypothesize	_	_	_	_
+20-3	2413-2417	that	_	_	_	_
+20-4	2418-2421	the	event[120]	giv[120]	_	_
+20-5	2422-2431	autophagy	abstract|event[120]	giv|giv[120]	coref	20-21
+20-6	2432-2439	process	event[120]	giv[120]	_	_
+20-7	2440-2443	may	_	_	_	_
+20-8	2444-2446	be	_	_	_	_
+20-9	2447-2456	regulated	_	_	_	_
+20-10	2457-2459	by	_	_	_	_
+20-11	2460-2463	the	abstract[121]	giv[121]	coref	20-20[124_121]
+20-12	2464-2468	same	abstract[121]	giv[121]	_	_
+20-13	2469-2479	adipogenic	abstract[121]	giv[121]	_	_
+20-14	2480-2487	factors	abstract[121]	giv[121]	_	_
+20-15	2488-2494	either	abstract[121]	giv[121]	_	_
+20-16	2495-2503	directly	abstract[121]	giv[121]	_	_
+20-17	2504-2506	or	abstract[121]	giv[121]	_	_
+20-18	2507-2517	indirectly	abstract[121]	giv[121]	_	_
+20-19	2518-2525	through	_	_	_	_
+20-20	2526-2534	specific	abstract[124]	giv[124]	coref	21-12[130_124]
+20-21	2535-2544	autophagy	abstract|abstract[124]	giv|giv[124]	coref	24-16
+20-22	2545-2558	transcription	abstract|abstract[124]	giv|giv[124]	coref	21-12
+20-23	2559-2566	factors	abstract[124]	giv[124]	_	_
+20-24	2567-2568	.	_	_	_	_
+
+#Text=To investigate this hypothesis , we modeled the gene expression and transcription factors and co-factors binding at different stages of adipocyte maturation (
+21-1	2569-2571	To	_	_	_	_
+21-2	2572-2583	investigate	_	_	_	_
+21-3	2584-2588	this	abstract[125]	new[125]	_	_
+21-4	2589-2599	hypothesis	abstract[125]	new[125]	_	_
+21-5	2600-2601	,	_	_	_	_
+21-6	2602-2604	we	person	giv	ana	24-3
+21-7	2605-2612	modeled	_	_	_	_
+21-8	2613-2616	the	abstract[128]	giv[128]	_	_
+21-9	2617-2621	gene	abstract|abstract[128]	giv|giv[128]	coref	26-5[154_0]
+21-10	2622-2632	expression	abstract[128]	giv[128]	_	_
+21-11	2633-2636	and	_	_	_	_
+21-12	2637-2650	transcription	abstract|abstract[130]	giv|giv[130]	coref|coref|coref|coref	24-12|24-10[139_130]|24-12|24-10[139_130]
+21-13	2651-2658	factors	abstract[130]	giv[130]	_	_
+21-14	2659-2662	and	_	_	_	_
+21-15	2663-2673	co-factors	abstract	new	coref	29-7[170_0]
+21-16	2674-2681	binding	_	_	_	_
+21-17	2682-2684	at	_	_	_	_
+21-18	2685-2694	different	abstract[132]	new[132]	_	_
+21-19	2695-2701	stages	abstract[132]	new[132]	_	_
+21-20	2702-2704	of	abstract[132]	new[132]	_	_
+21-21	2705-2714	adipocyte	abstract[132]|object|abstract[134]	new[132]|giv|new[134]	coref|coref	25-21[0_134]|25-21[0_134]
+21-22	2715-2725	maturation	abstract[132]|abstract[134]	new[132]|new[134]	_	_
+21-23	2726-2727	(	_	_	_	_
+
+#Text=Figure 1
+22-1	2728-2734	Figure	object[135]	new[135]	_	_
+22-2	2735-2736	1	object[135]	new[135]	_	_
+
+#Text=) .
+23-1	2737-2738	)	_	_	_	_
+23-2	2739-2740	.	_	_	_	_
+
+#Text=Then , we studied the direct regulatory links between the adipogenic transcription factors and key autophagy genes as well as specific autophagy transcription factors .
+24-1	2741-2745	Then	_	_	_	_
+24-2	2746-2747	,	_	_	_	_
+24-3	2748-2750	we	person	giv	ana	25-1
+24-4	2751-2758	studied	_	_	_	_
+24-5	2759-2762	the	abstract[137]	giv[137]	coref	27-5[159_137]
+24-6	2763-2769	direct	abstract[137]	giv[137]	_	_
+24-7	2770-2780	regulatory	abstract[137]	giv[137]	_	_
+24-8	2781-2786	links	abstract[137]	giv[137]	_	_
+24-9	2787-2794	between	abstract[137]	giv[137]	_	_
+24-10	2795-2798	the	abstract[137]|abstract[139]	giv[137]|giv[139]	coref	27-8[161_139]
+24-11	2799-2809	adipogenic	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-12	2810-2823	transcription	abstract[137]|abstract|abstract[139]	giv[137]|giv|giv[139]	coref	24-23
+24-13	2824-2831	factors	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-14	2832-2835	and	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-15	2836-2839	key	abstract[137]|abstract[139]|abstract[141]	giv[137]|giv[139]|giv[141]	coref	25-13[148_141]
+24-16	2840-2849	autophagy	abstract[137]|abstract[139]|abstract|abstract[141]	giv[137]|giv[139]|giv|giv[141]	coref	24-22
+24-17	2850-2855	genes	abstract[137]|abstract[139]|abstract[141]	giv[137]|giv[139]|giv[141]	_	_
+24-18	2856-2858	as	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-19	2859-2863	well	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-20	2864-2866	as	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-21	2867-2875	specific	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-22	2876-2885	autophagy	abstract[137]|abstract[139]|abstract	giv[137]|giv[139]|giv	coref	25-13
+24-23	2886-2899	transcription	abstract[137]|abstract[139]|abstract	giv[137]|giv[139]|giv	coref	27-11
+24-24	2900-2907	factors	abstract[137]|abstract[139]	giv[137]|giv[139]	_	_
+24-25	2908-2909	.	_	_	_	_
+
+#Text=We were able to quantify the changes in the global expression of autophagy genes as the pre-adipocytes progressed toward the maturation stage .
+25-1	2910-2912	We	person	giv	ana	26-1
+25-2	2913-2917	were	_	_	_	_
+25-3	2918-2922	able	_	_	_	_
+25-4	2923-2925	to	_	_	_	_
+25-5	2926-2934	quantify	_	_	_	_
+25-6	2935-2938	the	abstract[145]	giv[145]	coref	26-3[153_145]
+25-7	2939-2946	changes	abstract[145]	giv[145]	_	_
+25-8	2947-2949	in	_	_	_	_
+25-9	2950-2953	the	abstract[146]	new[146]	coref	27-18[164_146]
+25-10	2954-2960	global	abstract[146]	new[146]	_	_
+25-11	2961-2971	expression	abstract[146]	new[146]	_	_
+25-12	2972-2974	of	abstract[146]	new[146]	_	_
+25-13	2975-2984	autophagy	abstract[146]|abstract|abstract[148]	new[146]|giv|giv[148]	_	_
+25-14	2985-2990	genes	abstract[146]|abstract[148]	new[146]|giv[148]	_	_
+25-15	2991-2993	as	_	_	_	_
+25-16	2994-2997	the	person[149]	new[149]	_	_
+25-17	2998-3012	pre-adipocytes	person[149]	new[149]	_	_
+25-18	3013-3023	progressed	_	_	_	_
+25-19	3024-3030	toward	_	_	_	_
+25-20	3031-3034	the	abstract[151]	new[151]	_	_
+25-21	3035-3045	maturation	abstract|abstract[151]	giv|new[151]	_	_
+25-22	3046-3051	stage	abstract[151]	new[151]	_	_
+25-23	3052-3053	.	_	_	_	_
+
+#Text=We considered changes at both the individual gene and the gene set levels .
+26-1	3054-3056	We	person	giv	ana	27-3
+26-2	3057-3067	considered	_	_	_	_
+26-3	3068-3075	changes	abstract[153]	giv[153]	coref	27-14[162_153]
+26-4	3076-3078	at	abstract[153]	giv[153]	_	_
+26-5	3079-3083	both	abstract[153]|abstract[154]	giv[153]|giv[154]	coref	26-11[0_154]
+26-6	3084-3087	the	abstract[153]|abstract[154]	giv[153]|giv[154]	_	_
+26-7	3088-3098	individual	abstract[153]|abstract[154]	giv[153]|giv[154]	_	_
+26-8	3099-3103	gene	abstract[153]|abstract[154]	giv[153]|giv[154]	_	_
+26-9	3104-3107	and	abstract[153]	giv[153]	_	_
+26-10	3108-3111	the	abstract[153]|abstract[157]	giv[153]|new[157]	_	_
+26-11	3112-3116	gene	abstract[153]|abstract|abstract[157]	giv[153]|giv|new[157]	coref	27-18
+26-12	3117-3120	set	abstract[153]|abstract|abstract[157]	giv[153]|new|new[157]	_	_
+26-13	3121-3127	levels	abstract[153]|abstract[157]	giv[153]|new[157]	_	_
+26-14	3128-3129	.	_	_	_	_
+
+#Text=Then , we investigated the links between the master adipogenic transcription factors and the observed changes in gene expression .
+27-1	3130-3134	Then	_	_	_	_
+27-2	3135-3136	,	_	_	_	_
+27-3	3137-3139	we	person	giv	ana	28-1
+27-4	3140-3152	investigated	_	_	_	_
+27-5	3153-3156	the	abstract[159]	giv[159]	coref	28-4[166_159]
+27-6	3157-3162	links	abstract[159]	giv[159]	_	_
+27-7	3163-3170	between	abstract[159]	giv[159]	_	_
+27-8	3171-3174	the	abstract[159]|abstract[161]	giv[159]|giv[161]	coref	28-13[168_161]
+27-9	3175-3181	master	abstract[159]|abstract[161]	giv[159]|giv[161]	_	_
+27-10	3182-3192	adipogenic	abstract[159]|abstract[161]	giv[159]|giv[161]	_	_
+27-11	3193-3206	transcription	abstract[159]|abstract|abstract[161]	giv[159]|giv|giv[161]	coref	29-18
+27-12	3207-3214	factors	abstract[159]|abstract[161]	giv[159]|giv[161]	_	_
+27-13	3215-3218	and	abstract[159]|abstract[161]	giv[159]|giv[161]	_	_
+27-14	3219-3222	the	abstract[159]|abstract[161]|abstract[162]	giv[159]|giv[161]|giv[162]	_	_
+27-15	3223-3231	observed	abstract[159]|abstract[161]|abstract[162]	giv[159]|giv[161]|giv[162]	_	_
+27-16	3232-3239	changes	abstract[159]|abstract[161]|abstract[162]	giv[159]|giv[161]|giv[162]	_	_
+27-17	3240-3242	in	abstract[159]|abstract[161]|abstract[162]	giv[159]|giv[161]|giv[162]	_	_
+27-18	3243-3247	gene	abstract[159]|abstract[161]|abstract[162]|abstract|abstract[164]	giv[159]|giv[161]|giv[162]|giv|giv[164]	_	_
+27-19	3248-3258	expression	abstract[159]|abstract[161]|abstract[162]|abstract[164]	giv[159]|giv[161]|giv[162]|giv[164]	_	_
+27-20	3259-3260	.	_	_	_	_
+
+#Text=We tested whether the established links hold in the knockdown condition of the adipogenic factors .
+28-1	3261-3263	We	person	giv	_	_
+28-2	3264-3270	tested	_	_	_	_
+28-3	3271-3278	whether	_	_	_	_
+28-4	3279-3282	the	abstract[166]	giv[166]	_	_
+28-5	3283-3294	established	abstract[166]	giv[166]	_	_
+28-6	3295-3300	links	abstract[166]	giv[166]	_	_
+28-7	3301-3305	hold	_	_	_	_
+28-8	3306-3308	in	_	_	_	_
+28-9	3309-3312	the	abstract[167]	new[167]	_	_
+28-10	3313-3322	knockdown	abstract[167]	new[167]	_	_
+28-11	3323-3332	condition	abstract[167]	new[167]	_	_
+28-12	3333-3335	of	abstract[167]	new[167]	_	_
+28-13	3336-3339	the	abstract[167]|abstract[168]	new[167]|giv[168]	_	_
+28-14	3340-3350	adipogenic	abstract[167]|abstract[168]	new[167]|giv[168]	_	_
+28-15	3351-3358	factors	abstract[167]|abstract[168]	new[167]|giv[168]	_	_
+28-16	3359-3360	.	_	_	_	_
+
+#Text=In addition , the role of transcription co-factors and histone modifications in modulating the function of the transcription factor was discussed .
+29-1	3361-3363	In	_	_	_	_
+29-2	3364-3372	addition	_	_	_	_
+29-3	3373-3374	,	_	_	_	_
+29-4	3375-3378	the	abstract[169]	new[169]	_	_
+29-5	3379-3383	role	abstract[169]	new[169]	_	_
+29-6	3384-3386	of	abstract[169]	new[169]	_	_
+29-7	3387-3400	transcription	abstract[169]|abstract[170]	new[169]|giv[170]	_	_
+29-8	3401-3411	co-factors	abstract[169]|abstract[170]	new[169]|giv[170]	_	_
+29-9	3412-3415	and	abstract[169]|abstract[170]	new[169]|giv[170]	_	_
+29-10	3416-3423	histone	abstract[169]|abstract[170]|place|abstract[172]	new[169]|giv[170]|new|new[172]	_	_
+29-11	3424-3437	modifications	abstract[169]|abstract[170]|abstract[172]	new[169]|giv[170]|new[172]	_	_
+29-12	3438-3440	in	_	_	_	_
+29-13	3441-3451	modulating	_	_	_	_
+29-14	3452-3455	the	abstract[173]	new[173]	_	_
+29-15	3456-3464	function	abstract[173]	new[173]	_	_
+29-16	3465-3467	of	abstract[173]	new[173]	_	_
+29-17	3468-3471	the	abstract[173]|abstract[175]	new[173]|giv[175]	_	_
+29-18	3472-3485	transcription	abstract[173]|abstract|abstract[175]	new[173]|giv|giv[175]	_	_
+29-19	3486-3492	factor	abstract[173]|abstract[175]	new[173]|giv[175]	_	_
+29-20	3493-3496	was	_	_	_	_
+29-21	3497-3506	discussed	_	_	_	_
+29-22	3507-3508	.	_	_	_	_

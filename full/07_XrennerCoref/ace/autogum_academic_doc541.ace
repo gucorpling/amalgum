@@ -1,0 +1,183 @@
+For the distance between agents , the outlier constraint is ( 16 ) where is the estimated distance according to Section 2 , denotes the neighboring anchors within communication range of , denotes the neighboring anchors within communication range of , denotes the real distance between any anchor in and any anchor in .
+1,2 person
+2,6 abstract|5,6 person|7,10 abstract|11,13 abstract|16,19 abstract|21,23 abstract|47,54 person|51,54 person
+
+Thanks to the locally factorized structure of the joint likelihood function , the cooperative localization problem can be addressed under the framework of factor graph . Inference and estimation tasks are typically carried out on a factor graph by message passing between variable nodes and factor nodes .
+1,2 person
+3,12 abstract|8,12 abstract|9,12 abstract|13,17 abstract|21,26 abstract|24,26 abstract|27,31 abstract|36,39 abstract|46,47 person|46,48 place
+
+For the distance between agent and anchor , the outlier constraint is ( 14 ) where is the estimated distance according to Section 2 , denotes the neighboring anchors within communication range of , denotes the true distance between anchor and any anchor in .
+1,2 person
+2,8 abstract|5,6 person|7,8 person|9,12 abstract|13,15 abstract|18,21 abstract|23,25 abstract|40,41 person
+
+We define and assume that the relative positions are conditionally independent and only depend on the two nodes involved : ( 22 ) where is defined as the position set of all nodes , and is defined as the distance set of all nodes .
+1,2 person
+1,2 person|6,9 abstract|16,20 abstract|21,23 abstract|28,34 abstract|28,34 object|28,34 place|39,45 abstract|39,45 place|43,45 object
+
+Therefore , distance between the agent and its neighboring anchor is lower than the communication range : ( 18 ) where is the estimated position of agent , denotes the neighboring anchors within communication range of , denotes position of any anchor in .
+1,2 person
+5,7 person|5,11 person|8,11 person|18,20 abstract|23,28 abstract|27,28 person|41,43 person|41,44 person
+
+If the outlier distance and position are regarded as key information of a virtual anchor , this will cause a large derivation in the subsequent iteration , leading , finally , to disruption of the whole network and localization failure .
+1,2 person
+2,5 abstract|2,7 abstract|10,16 abstract|13,16 abstract|17,18 abstract|17,18 event|20,27 abstract|24,27 abstract|33,38 abstract|33,38 event
+
+We assume that the sensor node acquires a noisy measurement and that , which is the estimated distance from the sensor node ( can be either an agent or an anchor ) .
+1,2 person
+1,2 person|4,7 object|8,11 abstract|16,23 abstract|20,23 object|27,29 abstract|30,32 abstract
+
+For range-free localization , a large deviation of distance estimation and position estimation may often happen , due to scarce information and difficult communication environment .
+1,2 person
+2,4 abstract|5,11 abstract|9,10 abstract|9,11 abstract|12,13 abstract|12,14 abstract|20,22 abstract|23,26 abstract
+
+For range-free localization , in our paper , the accuracy fails to meet the requirement of cooperative localization for both node distance and node position .
+1,2 person
+6,7 person|6,8 abstract|6,8 object|9,11 abstract|14,19 abstract|14,23 abstract|20,23 abstract|21,23 abstract|24,26 abstract
+
+Existing methods do not consider the outlier variable nodes and factor , which indicates that cooperative localization is not suitable for a range-free situation .
+1,2 person
+1,3 abstract|6,10 abstract|11,12 abstract|22,25 abstract
+
+Hence , we propose the constraint function ( 19 ) where is the Euclidean norm of estimated position and true position .
+1,2 person
+3,4 person|5,8 abstract|13,19 abstract|17,19 abstract|20,22 abstract
+
+Without loss of generality , we assume that measurement noise obeys a Gaussian distribution , so ; is the standard deviation .
+1,2 person
+6,7 person|9,11 abstract|12,15 abstract|19,22 abstract
+
+The estimated distance and position will not exceed the communication range of neighboring anchors for both distance constraints and position constraints .
+1,2 person
+1,4 abstract|1,6 abstract|9,15 abstract|16,19 abstract|16,22 abstract|17,18 abstract|17,19 abstract|20,22 abstract
+
+For range-based localization , the estimated distances are relatively accurate , so that the localization of agents is quite precise .
+1,2 person
+5,8 abstract|14,18 abstract
+
+The outlier distance has a negative effect on cooperative localization , so it is better to exclude the outlier distances .
+1,2 person
+1,4 abstract|5,8 abstract|5,11 abstract|9,11 abstract|13,14 event|18,21 abstract
+
+To avoid this problem , we propose the outlier constraint method , which includes position constraint and distance constraint .
+1,2 person
+3,5 abstract|6,7 person|8,12 abstract|15,17 abstract|18,20 abstract
+
+In the cooperative phase , we explore a hard decision-based cooperative way for a range-free situation applying outlier constraints .
+1,2 person
+2,5 abstract|6,7 person|8,13 abstract|14,17 abstract|18,20 abstract
+
+In a cooperative network , the outlier position of the agent also has a negative effect on cooperative localization .
+1,2 person
+6,12 abstract|10,12 person|14,17 abstract|18,20 abstract
+
+To alleviate the effect of the outliers , we propose a cooperative localization method with outlier constraints .
+1,2 person
+3,8 abstract|6,8 abstract|9,10 person|11,18 abstract|16,18 abstract
+
+Outlier constraints are divided into distance constraints and position constraints , which both rely on neighboring anchors .
+1,2 person
+1,3 abstract|6,7 abstract|6,8 abstract|9,10 abstract|9,11 abstract
+
+The cooperative method introduces message passing and updates the estimated position through the variational message passing rule .
+1,2 person
+1,4 abstract|5,7 abstract|9,12 abstract|13,18 abstract|14,18 abstract|15,18 abstract
+
+In the network , agents can communicate with all nodes that are in their communication range .
+1,2 person
+2,4 abstract|2,4 place|5,6 person|9,11 object|14,15 person|14,17 place
+
+It is inevitable to have low accuracy of distance estimation with the multi-hop method .
+1,2 person
+1,2 event|6,11 abstract|9,10 abstract|9,11 abstract|12,15 abstract
+
+Especially in cooperative localization , outliers may lead to the failure of whole network .
+1,2 person
+3,5 abstract|6,7 abstract|10,15 abstract|10,15 event|13,15 object
+
+These constraints are represented by the parameters and , which condition the cooperative method .
+1,2 person
+1,3 abstract|6,8 abstract|12,15 abstract
+
+The final localization result depends on confidence of the agent to be located .
+1,2 person
+1,5 abstract|7,11 abstract|7,14 abstract
+
+The outlier distance is excluded by constraints from anchors , as shown in
+1,2 person
+1,4 abstract|7,10 abstract
+
+Then , we have ( 20 ) where is the measurement noise .
+1,2 person
+3,4 person|5,7 abstract|10,13 abstract
+
+It is better to exclude these outlier positions through neighboring anchors .
+1,2 person
+1,2 event|6,9 abstract|10,12 abstract
+
+Hence , we propose a constraint function as ( 15 )
+1,2 person
+3,4 person|5,8 abstract|9,12 abstract
+
+The probability density function of node distance is ( 21 )
+1,2 person
+1,8 abstract|6,8 abstract|9,12 abstract
+
+Hence , we propose the constraint function ( 17 )
+1,2 person
+3,4 person|5,8 abstract|5,11 abstract
+
+shows the distance between agent and anchor .
+1,2 person
+2,8 abstract|5,6 person|7,8 person
+
+These unwelcome estimations are called outliers .
+1,2 person
+1,4 abstract|6,7 abstract
+
+shows the distance between agents .
+1,2 person
+5,6 person
+
+Outlier Constraints
+1,2 person
+1,3 abstract
+
+3.1 .
+1,2 person
+1,2 abstract
+
+3.2 .
+1,2 person
+1,2 abstract
+
+Cooperative Localization
+1,2 person
+1,3 abstract
+
+Cooperative Localization
+1,2 person
+1,3 abstract
+
+3 .
+1,2 person
+
+
+Figure 5
+1,2 person
+1,3 abstract
+
+Figure 6
+1,2 person
+1,3 abstract|1,3 object
+
+Figure 5
+1,2 person
+1,3 abstract
+
+Figure 6
+1,2 person
+1,3 abstract|1,3 object
+
+and
+1,2 person
+

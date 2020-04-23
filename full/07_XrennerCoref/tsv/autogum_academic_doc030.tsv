@@ -1,0 +1,601 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=4 .
+1-1	0-1	4	quantity	new	_	_
+1-2	2-3	.	_	_	_	_
+
+#Text=Discussion
+2-1	4-14	Discussion	abstract	new	_	_
+
+#Text=Several bacterial taxa , such as enteropathogenic Escherichia coli , Helicobacter pylori , Staphylococcus aureus , and Shigella flexneri , survive by preventing apoptosis .
+3-1	15-22	Several	animal[4]	new[4]	_	_
+3-2	23-32	bacterial	substance|animal[4]	new|new[4]	_	_
+3-3	33-37	taxa	animal[4]	new[4]	_	_
+3-4	38-39	,	animal[4]	new[4]	_	_
+3-5	40-44	such	animal[4]	new[4]	_	_
+3-6	45-47	as	animal[4]	new[4]	_	_
+3-7	48-64	enteropathogenic	animal[4]	new[4]	_	_
+3-8	65-76	Escherichia	animal[4]	new[4]	_	_
+3-9	77-81	coli	animal[4]	new[4]	_	_
+3-10	82-83	,	animal[4]	new[4]	_	_
+3-11	84-96	Helicobacter	animal[4]|person|place[6]	new[4]|new|new[6]	_	_
+3-12	97-103	pylori	animal[4]|place[6]	new[4]|new[6]	_	_
+3-13	104-105	,	animal[4]	new[4]	_	_
+3-14	106-120	Staphylococcus	animal[4]|abstract	new[4]|new	_	_
+3-15	121-127	aureus	animal[4]	new[4]	_	_
+3-16	128-129	,	animal[4]	new[4]	_	_
+3-17	130-133	and	animal[4]	new[4]	_	_
+3-18	134-142	Shigella	animal[4]|person	new[4]|new	_	_
+3-19	143-151	flexneri	animal[4]	new[4]	_	_
+3-20	152-153	,	_	_	_	_
+3-21	154-161	survive	_	_	_	_
+3-22	162-164	by	_	_	_	_
+3-23	165-175	preventing	_	_	_	_
+3-24	176-185	apoptosis	abstract	new	coref	12-7
+3-25	186-187	.	_	_	_	_
+
+#Text=Disruption of the mitochondrial fusion/fission balance leads to increased mitochondrial fragmentation .
+4-1	188-198	Disruption	abstract[10]	new[10]	_	_
+4-2	199-201	of	abstract[10]	new[10]	_	_
+4-3	202-205	the	abstract[10]|abstract[13]	new[10]|new[13]	coref	8-10[43_13]
+4-4	206-219	mitochondrial	abstract[10]|object|abstract[13]	new[10]|new|new[13]	coref	8-2
+4-5	220-234	fusion/fission	abstract[10]|object|abstract[13]	new[10]|new|new[13]	coref	8-12
+4-6	235-242	balance	abstract[10]|abstract[13]	new[10]|new[13]	_	_
+4-7	243-248	leads	_	_	_	_
+4-8	249-251	to	_	_	_	_
+4-9	252-261	increased	abstract[14]	new[14]	coref	5-14[20_14]
+4-10	262-275	mitochondrial	abstract[14]	new[14]	_	_
+4-11	276-289	fragmentation	abstract[14]	new[14]	_	_
+4-12	290-291	.	_	_	_	_
+
+#Text=In this study , we showed that infection with attenuated Ra Mtb induced greater mitochondrial fragmentation than infection with Rv Mtb .
+5-1	292-294	In	_	_	_	_
+5-2	295-299	this	abstract[15]	new[15]	coref	16-1[102_15]
+5-3	300-305	study	abstract[15]	new[15]	_	_
+5-4	306-307	,	_	_	_	_
+5-5	308-310	we	person	acc	ana	14-3
+5-6	311-317	showed	_	_	_	_
+5-7	318-322	that	_	_	_	_
+5-8	323-332	infection	abstract[17]	new[17]	coref	5-18[21_17]
+5-9	333-337	with	abstract[17]	new[17]	_	_
+5-10	338-348	attenuated	abstract[17]|abstract[19]	new[17]|new[19]	coref	5-20[23_19]
+5-11	349-351	Ra	abstract[17]|person|abstract[19]	new[17]|new|new[19]	coref	13-11
+5-12	352-355	Mtb	abstract[17]|abstract[19]	new[17]|new[19]	_	_
+5-13	356-363	induced	_	_	_	_
+5-14	364-371	greater	abstract[20]	giv[20]	coref	8-1[40_20]
+5-15	372-385	mitochondrial	abstract[20]	giv[20]	_	_
+5-16	386-399	fragmentation	abstract[20]	giv[20]	_	_
+5-17	400-404	than	abstract[20]	giv[20]	_	_
+5-18	405-414	infection	abstract[20]|abstract[21]	giv[20]|giv[21]	coref	9-19[52_21]
+5-19	415-419	with	abstract[20]|abstract[21]	giv[20]|giv[21]	_	_
+5-20	420-422	Rv	abstract[20]|abstract[21]|abstract|abstract[23]	giv[20]|giv[21]|new|giv[23]	coref|coref|coref|coref	6-23|9-19[0_23]|6-23|9-19[0_23]
+5-21	423-426	Mtb	abstract[20]|abstract[21]|abstract[23]	giv[20]|giv[21]|giv[23]	_	_
+5-22	427-428	.	_	_	_	_
+
+#Text=However , the levels of MMP , OCR , and ATP were significantly lower in Ra-infected macrophages than in those infected with Rv .
+6-1	429-436	However	_	_	_	_
+6-2	437-438	,	_	_	_	_
+6-3	439-442	the	abstract[24]	new[24]	_	_
+6-4	443-449	levels	abstract[24]	new[24]	_	_
+6-5	450-452	of	abstract[24]	new[24]	_	_
+6-6	453-456	MMP	abstract[24]|substance|substance[26]	new[24]|new|new[26]	coref|coref|coref|coref	7-15[35_0]|7-15[36_26]|7-15[35_0]|7-15[36_26]
+6-7	457-458	,	abstract[24]|substance[26]	new[24]|new[26]	_	_
+6-8	459-462	OCR	abstract[24]|substance[26]|substance	new[24]|new[26]|new	coref	9-8
+6-9	463-464	,	abstract[24]|substance[26]	new[24]|new[26]	_	_
+6-10	465-468	and	abstract[24]|substance[26]	new[24]|new[26]	_	_
+6-11	469-472	ATP	abstract[24]|substance[26]|substance	new[24]|new[26]|new	coref	7-18
+6-12	473-477	were	_	_	_	_
+6-13	478-491	significantly	_	_	_	_
+6-14	492-497	lower	_	_	_	_
+6-15	498-500	in	_	_	_	_
+6-16	501-512	Ra-infected	animal[29]	new[29]	coref	8-15[0_29]
+6-17	513-524	macrophages	animal[29]	new[29]	_	_
+6-18	525-529	than	_	_	_	_
+6-19	530-532	in	_	_	_	_
+6-20	533-538	those	_	_	_	_
+6-21	539-547	infected	_	_	_	_
+6-22	548-552	with	_	_	_	_
+6-23	553-555	Rv	substance	giv	coref	13-9
+6-24	556-557	.	_	_	_	_
+
+#Text=Mitochondrial dysfunction is reportedly increased in Ra- compared to Rv-infected THP-1 cells , decreasing the MMP and ATP synthesis .
+7-1	558-571	Mitochondrial	abstract[31]	new[31]	_	_
+7-2	572-583	dysfunction	abstract[31]	new[31]	_	_
+7-3	584-586	is	_	_	_	_
+7-4	587-597	reportedly	_	_	_	_
+7-5	598-607	increased	_	_	_	_
+7-6	608-610	in	_	_	_	_
+7-7	611-614	Ra-	person	new	_	_
+7-8	615-623	compared	_	_	_	_
+7-9	624-626	to	_	_	_	_
+7-10	627-638	Rv-infected	object[34]	new[34]	_	_
+7-11	639-644	THP-1	event|object[34]	new|new[34]	_	_
+7-12	645-650	cells	object[34]	new[34]	_	_
+7-13	651-652	,	_	_	_	_
+7-14	653-663	decreasing	_	_	_	_
+7-15	664-667	the	substance[35]|substance[36]	giv[35]|giv[36]	coref|coref|coref|coref	9-6[0_35]|9-6[47_36]|9-6[0_35]|9-6[47_36]
+7-16	668-671	MMP	substance[35]|substance[36]	giv[35]|giv[36]	_	_
+7-17	672-675	and	substance[36]	giv[36]	_	_
+7-18	676-679	ATP	substance[36]|substance	giv[36]|giv	coref	9-11
+7-19	680-689	synthesis	substance[36]|abstract	giv[36]|new	_	_
+7-20	690-691	.	_	_	_	_
+
+#Text=Ra-induced mitochondrial fragmentation may be due to disruption of the mitochondrial fusion/fission balance in macrophages .
+8-1	692-702	Ra-induced	abstract[40]	giv[40]	coref	9-16[50_40]
+8-2	703-716	mitochondrial	abstract|abstract[40]	giv|giv[40]	coref	13-4
+8-3	717-730	fragmentation	abstract[40]	giv[40]	_	_
+8-4	731-734	may	_	_	_	_
+8-5	735-737	be	_	_	_	_
+8-6	738-741	due	_	_	_	_
+8-7	742-744	to	_	_	_	_
+8-8	745-755	disruption	abstract[41]	new[41]	_	_
+8-9	756-758	of	abstract[41]	new[41]	_	_
+8-10	759-762	the	abstract[41]|abstract[43]	new[41]|giv[43]	_	_
+8-11	763-776	mitochondrial	abstract[41]|abstract[43]	new[41]|giv[43]	_	_
+8-12	777-791	fusion/fission	abstract[41]|object|abstract[43]	new[41]|giv|giv[43]	coref	13-19
+8-13	792-799	balance	abstract[41]|abstract[43]	new[41]|giv[43]	_	_
+8-14	800-802	in	abstract[41]|abstract[43]	new[41]|giv[43]	_	_
+8-15	803-814	macrophages	abstract[41]|abstract[43]|animal	new[41]|giv[43]|giv	coref	10-11[56_0]
+8-16	815-816	.	_	_	_	_
+
+#Text=Therefore , lower levels of MMP , OCR , and ATP may be associated with mitochondrial fragmentation during Mtb infection .
+9-1	817-826	Therefore	_	_	_	_
+9-2	827-828	,	_	_	_	_
+9-3	829-834	lower	abstract[45]	new[45]	_	_
+9-4	835-841	levels	abstract[45]	new[45]	_	_
+9-5	842-844	of	abstract[45]	new[45]	_	_
+9-6	845-848	MMP	abstract[45]|substance|substance[47]	new[45]|giv|giv[47]	coref|coref	28-7[179_0]|28-7[179_0]
+9-7	849-850	,	abstract[45]|substance[47]	new[45]|giv[47]	_	_
+9-8	851-854	OCR	abstract[45]|substance[47]|substance	new[45]|giv[47]|giv	_	_
+9-9	855-856	,	abstract[45]|substance[47]	new[45]|giv[47]	_	_
+9-10	857-860	and	abstract[45]|substance[47]	new[45]|giv[47]	_	_
+9-11	861-864	ATP	abstract[45]|substance[47]|substance	new[45]|giv[47]|giv	_	_
+9-12	865-868	may	_	_	_	_
+9-13	869-871	be	_	_	_	_
+9-14	872-882	associated	_	_	_	_
+9-15	883-887	with	_	_	_	_
+9-16	888-901	mitochondrial	abstract[50]	giv[50]	coref	13-4[79_50]
+9-17	902-915	fragmentation	abstract[50]	giv[50]	_	_
+9-18	916-922	during	abstract[50]	giv[50]	_	_
+9-19	923-926	Mtb	abstract[50]|abstract|abstract[52]	giv[50]|giv|giv[52]	coref|coref|coref|coref	13-7[80_52]|14-18|13-7[80_52]|14-18
+9-20	927-936	infection	abstract[50]|abstract[52]	giv[50]|giv[52]	_	_
+9-21	937-938	.	_	_	_	_
+
+#Text=Production of MFN2 was significantly reduced in Ra- compared with Rv-infected macrophages .
+10-1	939-949	Production	abstract[53]	new[53]	coref	13-19[86_53]
+10-2	950-952	of	abstract[53]	new[53]	_	_
+10-3	953-957	MFN2	abstract[53]|object	new[53]|new	coref	14-15
+10-4	958-961	was	_	_	_	_
+10-5	962-975	significantly	_	_	_	_
+10-6	976-983	reduced	_	_	_	_
+10-7	984-986	in	_	_	_	_
+10-8	987-990	Ra-	abstract	new	_	_
+10-9	991-999	compared	_	_	_	_
+10-10	1000-1004	with	_	_	_	_
+10-11	1005-1016	Rv-infected	animal[56]	giv[56]	coref	11-16[62_56]
+10-12	1017-1028	macrophages	animal[56]	giv[56]	_	_
+10-13	1029-1030	.	_	_	_	_
+
+#Text=In contrast , the levels of the fission proteins DRP1 and MFF were increased in Ra-infected macrophages compared to the control .
+11-1	1031-1033	In	_	_	_	_
+11-2	1034-1042	contrast	_	_	_	_
+11-3	1043-1044	,	_	_	_	_
+11-4	1045-1048	the	abstract[57]	new[57]	_	_
+11-5	1049-1055	levels	abstract[57]	new[57]	_	_
+11-6	1056-1058	of	abstract[57]	new[57]	_	_
+11-7	1059-1062	the	abstract[57]|substance[59]	new[57]|new[59]	_	_
+11-8	1063-1070	fission	abstract[57]|abstract|substance[59]	new[57]|new|new[59]	_	_
+11-9	1071-1079	proteins	abstract[57]|substance[59]	new[57]|new[59]	_	_
+11-10	1080-1084	DRP1	abstract[57]|abstract	new[57]|new	_	_
+11-11	1085-1088	and	abstract[57]	new[57]	_	_
+11-12	1089-1092	MFF	abstract[57]|object	new[57]|new	_	_
+11-13	1093-1097	were	_	_	_	_
+11-14	1098-1107	increased	_	_	_	_
+11-15	1108-1110	in	_	_	_	_
+11-16	1111-1122	Ra-infected	animal[62]	giv[62]	coref	16-14[108_62]
+11-17	1123-1134	macrophages	animal[62]	giv[62]	_	_
+11-18	1135-1143	compared	_	_	_	_
+11-19	1144-1146	to	_	_	_	_
+11-20	1147-1150	the	abstract[63]	new[63]	_	_
+11-21	1151-1158	control	abstract[63]	new[63]	_	_
+11-22	1159-1160	.	_	_	_	_
+
+#Text=DRP1 induces cytochrome c release during apoptosis and MFN1/2 delays Bax activation , cytochrome c release , and apoptosis .
+12-1	1161-1165	DRP1	person	new	_	_
+12-2	1166-1173	induces	_	_	_	_
+12-3	1174-1184	cytochrome	abstract[65]	new[65]	coref	12-14[0_65]
+12-4	1185-1186	c	abstract[65]|abstract	new[65]|new	coref	12-15
+12-5	1187-1194	release	event[67]	new[67]	_	_
+12-6	1195-1201	during	event[67]	new[67]	_	_
+12-7	1202-1211	apoptosis	event[67]|event	new[67]|giv	coref	12-19
+12-8	1212-1215	and	event[67]	new[67]	_	_
+12-9	1216-1222	MFN1/2	event[67]|event|abstract[70]	new[67]|new|new[70]	_	_
+12-10	1223-1229	delays	event[67]|abstract[70]	new[67]|new[70]	_	_
+12-11	1230-1233	Bax	event[67]|abstract[70]|person|event[72]	new[67]|new[70]|new|new[72]	_	_
+12-12	1234-1244	activation	event[67]|abstract[70]|event[72]	new[67]|new[70]|new[72]	_	_
+12-13	1245-1246	,	event[67]|abstract[70]	new[67]|new[70]	_	_
+12-14	1247-1257	cytochrome	event[67]|abstract[70]|abstract	new[67]|new[70]|giv	_	_
+12-15	1258-1259	c	event[67]|abstract[70]|abstract|event[75]	new[67]|new[70]|giv|new[75]	_	_
+12-16	1260-1267	release	event[67]|abstract[70]|event[75]	new[67]|new[70]|new[75]	_	_
+12-17	1268-1269	,	event[67]	new[67]	_	_
+12-18	1270-1273	and	event[67]	new[67]	_	_
+12-19	1274-1283	apoptosis	event[67]|event	new[67]|giv	coref	23-10[147_0]
+12-20	1284-1285	.	_	_	_	_
+
+#Text=The difference in mitochondrial fragmentation between infection with Rv and Ra is likely dependent on the levels of fusion/fission protein production .
+13-1	1286-1289	The	abstract[77]	new[77]	_	_
+13-2	1290-1300	difference	abstract[77]	new[77]	_	_
+13-3	1301-1303	in	abstract[77]	new[77]	_	_
+13-4	1304-1317	mitochondrial	abstract[77]|abstract|abstract[79]	new[77]|giv|giv[79]	coref|coref|coref|coref	14-8|14-7[90_79]|14-8|14-7[90_79]
+13-5	1318-1331	fragmentation	abstract[77]|abstract[79]	new[77]|giv[79]	_	_
+13-6	1332-1339	between	abstract[77]|abstract[79]	new[77]|giv[79]	_	_
+13-7	1340-1349	infection	abstract[77]|abstract[79]|abstract[80]	new[77]|giv[79]|giv[80]	coref	14-18[94_80]
+13-8	1350-1354	with	abstract[77]|abstract[79]|abstract[80]	new[77]|giv[79]|giv[80]	_	_
+13-9	1355-1357	Rv	abstract[77]|abstract[79]|abstract[80]|abstract	new[77]|giv[79]|giv[80]|giv	coref	20-21[130_0]
+13-10	1358-1361	and	abstract[77]|abstract[79]|abstract[80]	new[77]|giv[79]|giv[80]	_	_
+13-11	1362-1364	Ra	abstract[77]|abstract[79]|abstract[80]|person	new[77]|giv[79]|giv[80]|giv	coref	21-3
+13-12	1365-1367	is	_	_	_	_
+13-13	1368-1374	likely	_	_	_	_
+13-14	1375-1384	dependent	_	_	_	_
+13-15	1385-1387	on	_	_	_	_
+13-16	1388-1391	the	abstract[83]	new[83]	coref	29-9[187_83]
+13-17	1392-1398	levels	abstract[83]	new[83]	_	_
+13-18	1399-1401	of	abstract[83]	new[83]	_	_
+13-19	1402-1416	fusion/fission	abstract[83]|abstract|abstract[86]	new[83]|giv|giv[86]	coref|coref	14-14[92_86]|14-14[92_86]
+13-20	1417-1424	protein	abstract[83]|substance|abstract[86]	new[83]|new|giv[86]	_	_
+13-21	1425-1435	production	abstract[83]|abstract[86]	new[83]|giv[86]	_	_
+13-22	1436-1437	.	_	_	_	_
+
+#Text=Therefore , our data suggest that increased mitochondrial fragmentation may be caused by reduced MFN2 production during Mtb infection .
+14-1	1438-1447	Therefore	_	_	_	_
+14-2	1448-1449	,	_	_	_	_
+14-3	1450-1453	our	person|abstract[88]	giv|new[88]	ana|coref|ana|coref	26-1|26-1[164_88]|26-1|26-1[164_88]
+14-4	1454-1458	data	abstract[88]	new[88]	_	_
+14-5	1459-1466	suggest	_	_	_	_
+14-6	1467-1471	that	_	_	_	_
+14-7	1472-1481	increased	abstract[90]	giv[90]	coref	30-11[195_90]
+14-8	1482-1495	mitochondrial	abstract|abstract[90]	giv|giv[90]	coref	27-9
+14-9	1496-1509	fragmentation	abstract[90]	giv[90]	_	_
+14-10	1510-1513	may	_	_	_	_
+14-11	1514-1516	be	_	_	_	_
+14-12	1517-1523	caused	_	_	_	_
+14-13	1524-1526	by	_	_	_	_
+14-14	1527-1534	reduced	abstract[92]	giv[92]	coref	15-8[99_92]
+14-15	1535-1539	MFN2	object|abstract[92]	giv|giv[92]	coref	15-8
+14-16	1540-1550	production	abstract[92]	giv[92]	_	_
+14-17	1551-1557	during	abstract[92]	giv[92]	_	_
+14-18	1558-1561	Mtb	abstract[92]|object|abstract[94]	giv[92]|giv|giv[94]	coref|coref|coref|coref	16-9|20-9[126_94]|16-9|20-9[126_94]
+14-19	1562-1571	infection	abstract[92]|abstract[94]	giv[92]|giv[94]	_	_
+14-20	1572-1573	.	_	_	_	_
+
+#Text=Parkin ( an E3 ligase ) reduces MFN2 production by ubiquitination in damaged mitochondria .
+15-1	1574-1580	Parkin	person	new	coref	16-6
+15-2	1581-1582	(	_	_	_	_
+15-3	1583-1585	an	abstract[97]	new[97]	_	_
+15-4	1586-1588	E3	abstract|abstract[97]	new|new[97]	_	_
+15-5	1589-1595	ligase	abstract[97]	new[97]	_	_
+15-6	1596-1597	)	_	_	_	_
+15-7	1598-1605	reduces	_	_	_	_
+15-8	1606-1610	MFN2	object|abstract[99]	giv|giv[99]	coref|coref|coref|coref	17-8|18-5[116_99]|17-8|18-5[116_99]
+15-9	1611-1621	production	abstract[99]	giv[99]	_	_
+15-10	1622-1624	by	abstract[99]	giv[99]	_	_
+15-11	1625-1639	ubiquitination	abstract[99]|substance[100]	giv[99]|new[100]	coref	18-12[0_100]
+15-12	1640-1642	in	abstract[99]|substance[100]	giv[99]|new[100]	_	_
+15-13	1643-1650	damaged	abstract[99]|substance[100]|place[101]	giv[99]|new[100]|new[101]	coref	31-8[0_101]
+15-14	1651-1663	mitochondria	abstract[99]|substance[100]|place[101]	giv[99]|new[100]|new[101]	_	_
+15-15	1664-1665	.	_	_	_	_
+
+#Text=A recent study showed that Parkin induction limited Mtb survival through autophagy of Mtb-infected macrophages .
+16-1	1666-1667	A	abstract[102]	giv[102]	coref	18-2[114_102]
+16-2	1668-1674	recent	abstract[102]	giv[102]	_	_
+16-3	1675-1680	study	abstract[102]	giv[102]	_	_
+16-4	1681-1687	showed	_	_	_	_
+16-5	1688-1692	that	_	_	_	_
+16-6	1693-1699	Parkin	person|abstract[104]	giv|new[104]	coref|coref	17-6|17-6
+16-7	1700-1709	induction	abstract[104]	new[104]	_	_
+16-8	1710-1717	limited	_	_	_	_
+16-9	1718-1721	Mtb	abstract|event[106]	giv|new[106]	coref|coref|coref|coref	17-12|29-15[188_106]|17-12|29-15[188_106]
+16-10	1722-1730	survival	event[106]	new[106]	_	_
+16-11	1731-1738	through	_	_	_	_
+16-12	1739-1748	autophagy	abstract[107]	new[107]	_	_
+16-13	1749-1751	of	abstract[107]	new[107]	_	_
+16-14	1752-1764	Mtb-infected	abstract[107]|animal[108]	new[107]|giv[108]	coref	22-11[143_108]
+16-15	1765-1776	macrophages	abstract[107]|animal[108]	new[107]|giv[108]	_	_
+16-16	1777-1778	.	_	_	_	_
+
+#Text=However , the relationship between Parkin and MFN2 is unclear during Mtb infections .
+17-1	1779-1786	However	_	_	_	_
+17-2	1787-1788	,	_	_	_	_
+17-3	1789-1792	the	abstract[109]	new[109]	_	_
+17-4	1793-1805	relationship	abstract[109]	new[109]	_	_
+17-5	1806-1813	between	abstract[109]	new[109]	_	_
+17-6	1814-1820	Parkin	abstract[109]|person	new[109]|giv	coref	18-6
+17-7	1821-1824	and	abstract[109]	new[109]	_	_
+17-8	1825-1829	MFN2	abstract[109]|abstract	new[109]|giv	coref	18-9
+17-9	1830-1832	is	_	_	_	_
+17-10	1833-1840	unclear	_	_	_	_
+17-11	1841-1847	during	_	_	_	_
+17-12	1848-1851	Mtb	object|abstract[113]	giv|new[113]	coref|coref	27-16|27-16
+17-13	1852-1862	infections	abstract[113]	new[113]	_	_
+17-14	1863-1864	.	_	_	_	_
+
+#Text=In this study , Mtb-mediated Parkin production decreased MFN2 production via ubiquitination .
+18-1	1865-1867	In	_	_	_	_
+18-2	1868-1872	this	abstract[114]	giv[114]	_	_
+18-3	1873-1878	study	abstract[114]	giv[114]	_	_
+18-4	1879-1880	,	_	_	_	_
+18-5	1881-1893	Mtb-mediated	abstract[116]	giv[116]	coref	18-9[118_116]
+18-6	1894-1900	Parkin	person|abstract[116]	giv|giv[116]	coref	19-4
+18-7	1901-1911	production	abstract[116]	giv[116]	_	_
+18-8	1912-1921	decreased	_	_	_	_
+18-9	1922-1926	MFN2	object|abstract[118]	giv|giv[118]	coref|coref	27-3|27-3
+18-10	1927-1937	production	abstract[118]	giv[118]	_	_
+18-11	1938-1941	via	abstract[118]	giv[118]	_	_
+18-12	1942-1956	ubiquitination	abstract[118]|substance	giv[118]|giv	_	_
+18-13	1957-1958	.	_	_	_	_
+
+#Text=The production of Parkin is induced by ER stress .
+19-1	1959-1962	The	abstract[120]	new[120]	coref	21-9[134_120]
+19-2	1963-1973	production	abstract[120]	new[120]	_	_
+19-3	1974-1976	of	abstract[120]	new[120]	_	_
+19-4	1977-1983	Parkin	abstract[120]|person	new[120]|giv	coref	21-9
+19-5	1984-1986	is	_	_	_	_
+19-6	1987-1994	induced	_	_	_	_
+19-7	1995-1997	by	_	_	_	_
+19-8	1998-2000	ER	person|abstract[123]	new|new[123]	coref|coref|coref|coref	20-2[124_123]|20-13|20-2[124_123]|20-13
+19-9	2001-2007	stress	abstract[123]	new[123]	_	_
+19-10	2008-2009	.	_	_	_	_
+
+#Text=Although ER stress plays an important role in mycobacterial infection , Ra-mediated ER stress was stronger than that induced by the virulent strain Rv .
+20-1	2010-2018	Although	_	_	_	_
+20-2	2019-2021	ER	abstract[124]	giv[124]	coref	20-12[128_124]
+20-3	2022-2028	stress	abstract[124]	giv[124]	_	_
+20-4	2029-2034	plays	_	_	_	_
+20-5	2035-2037	an	abstract[125]	new[125]	coref	31-3[198_125]
+20-6	2038-2047	important	abstract[125]	new[125]	_	_
+20-7	2048-2052	role	abstract[125]	new[125]	_	_
+20-8	2053-2055	in	abstract[125]	new[125]	_	_
+20-9	2056-2069	mycobacterial	abstract[125]|abstract[126]	new[125]|giv[126]	coref	26-13[168_126]
+20-10	2070-2079	infection	abstract[125]|abstract[126]	new[125]|giv[126]	_	_
+20-11	2080-2081	,	_	_	_	_
+20-12	2082-2093	Ra-mediated	abstract[128]	giv[128]	coref	21-20[138_128]
+20-13	2094-2096	ER	person|abstract[128]	giv|giv[128]	coref	21-20
+20-14	2097-2103	stress	abstract[128]	giv[128]	_	_
+20-15	2104-2107	was	_	_	_	_
+20-16	2108-2116	stronger	_	_	_	_
+20-17	2117-2121	than	_	_	_	_
+20-18	2122-2126	that	_	_	_	_
+20-19	2127-2134	induced	_	_	_	_
+20-20	2135-2137	by	_	_	_	_
+20-21	2138-2141	the	abstract[130]	giv[130]	coref	21-12[0_130]
+20-22	2142-2150	virulent	abstract[130]	giv[130]	_	_
+20-23	2151-2157	strain	abstract|abstract[130]	new|giv[130]	_	_
+20-24	2158-2160	Rv	abstract[130]	giv[130]	_	_
+20-25	2161-2162	.	_	_	_	_
+
+#Text=Also , Ra induced a higher level of Parkin production than Rv , possibly due to different intensities of ER stress .
+21-1	2163-2167	Also	_	_	_	_
+21-2	2168-2169	,	_	_	_	_
+21-3	2170-2172	Ra	person	giv	_	_
+21-4	2173-2180	induced	_	_	_	_
+21-5	2181-2182	a	abstract[132]	new[132]	_	_
+21-6	2183-2189	higher	abstract[132]	new[132]	_	_
+21-7	2190-2195	level	abstract[132]	new[132]	_	_
+21-8	2196-2198	of	abstract[132]	new[132]	_	_
+21-9	2199-2205	Parkin	abstract[132]|person|abstract[134]	new[132]|giv|giv[134]	coref|coref|coref|coref	23-4|23-4[146_134]|23-4|23-4[146_134]
+21-10	2206-2216	production	abstract[132]|abstract[134]	new[132]|giv[134]	_	_
+21-11	2217-2221	than	abstract[132]|abstract[134]	new[132]|giv[134]	_	_
+21-12	2222-2224	Rv	abstract[132]|abstract[134]|substance	new[132]|giv[134]|giv	coref	22-3
+21-13	2225-2226	,	_	_	_	_
+21-14	2227-2235	possibly	_	_	_	_
+21-15	2236-2239	due	_	_	_	_
+21-16	2240-2242	to	_	_	_	_
+21-17	2243-2252	different	abstract[136]	new[136]	_	_
+21-18	2253-2264	intensities	abstract[136]	new[136]	_	_
+21-19	2265-2267	of	abstract[136]	new[136]	_	_
+21-20	2268-2270	ER	abstract[136]|person|abstract[138]	new[136]|giv|giv[138]	coref|coref|coref|coref	22-5|22-6[0_138]|22-5|22-6[0_138]
+21-21	2271-2277	stress	abstract[136]|abstract[138]	new[136]|giv[138]	_	_
+21-22	2278-2279	.	_	_	_	_
+
+#Text=Compared to Rv , ER stress response is strong in Ra-infected macrophages .
+22-1	2280-2288	Compared	_	_	_	_
+22-2	2289-2291	to	_	_	_	_
+22-3	2292-2294	Rv	substance	giv	ana	23-1
+22-4	2295-2296	,	_	_	_	_
+22-5	2297-2299	ER	person|event[142]	giv|new[142]	coref|coref	24-2|24-2
+22-6	2300-2306	stress	abstract|event[142]	giv|new[142]	coref	24-3
+22-7	2307-2315	response	event[142]	new[142]	_	_
+22-8	2316-2318	is	_	_	_	_
+22-9	2319-2325	strong	_	_	_	_
+22-10	2326-2328	in	_	_	_	_
+22-11	2329-2340	Ra-infected	animal[143]	giv[143]	coref	26-16[0_143]
+22-12	2341-2352	macrophages	animal[143]	giv[143]	_	_
+22-13	2353-2354	.	_	_	_	_
+
+#Text=It sequentially induced Parkin production and eventually resulted in strong apoptosis .
+23-1	2355-2357	It	substance	giv	_	_
+23-2	2358-2370	sequentially	_	_	_	_
+23-3	2371-2378	induced	_	_	_	_
+23-4	2379-2385	Parkin	person|abstract[146]	giv|giv[146]	coref|coref|coref|coref	24-9|24-9[153_146]|24-9|24-9[153_146]
+23-5	2386-2396	production	abstract[146]	giv[146]	_	_
+23-6	2397-2400	and	_	_	_	_
+23-7	2401-2411	eventually	_	_	_	_
+23-8	2412-2420	resulted	_	_	_	_
+23-9	2421-2423	in	_	_	_	_
+23-10	2424-2430	strong	abstract[147]	giv[147]	coref	27-5[0_147]
+23-11	2431-2440	apoptosis	abstract[147]	giv[147]	_	_
+23-12	2441-2442	.	_	_	_	_
+
+#Text=Three ER stress sensor molecules were involved in Parkin production : PERK , IRE1 , and ATF6 .
+24-1	2443-2448	Three	object[151]	new[151]	_	_
+24-2	2449-2451	ER	person|object[151]	giv|new[151]	coref	26-5
+24-3	2452-2458	stress	abstract|object[151]	giv|new[151]	_	_
+24-4	2459-2465	sensor	substance|object[151]	new|new[151]	_	_
+24-5	2466-2475	molecules	object[151]	new[151]	_	_
+24-6	2476-2480	were	_	_	_	_
+24-7	2481-2489	involved	_	_	_	_
+24-8	2490-2492	in	_	_	_	_
+24-9	2493-2499	Parkin	person|abstract[153]	giv|giv[153]	appos|coref|appos|coref	24-12[155_153]|25-16|24-12[155_153]|25-16
+24-10	2500-2510	production	abstract[153]	giv[153]	_	_
+24-11	2511-2512	:	_	_	_	_
+24-12	2513-2517	PERK	object|abstract[155]	new|giv[155]	ana|ana	25-1[0_155]|25-1[0_155]
+24-13	2518-2519	,	abstract[155]	giv[155]	_	_
+24-14	2520-2524	IRE1	abstract[155]|object	giv[155]|new	_	_
+24-15	2525-2526	,	abstract[155]	giv[155]	_	_
+24-16	2527-2530	and	abstract[155]	giv[155]	_	_
+24-17	2531-2535	ATF6	abstract[155]	giv[155]	_	_
+24-18	2536-2537	.	_	_	_	_
+
+#Text=These contribute to the generation of reactive oxygen species , which triggers mitochondrial recruitment of Parkin .
+25-1	2538-2543	These	abstract	giv	_	_
+25-2	2544-2554	contribute	_	_	_	_
+25-3	2555-2557	to	_	_	_	_
+25-4	2558-2561	the	event[158]	new[158]	_	_
+25-5	2562-2572	generation	event[158]	new[158]	_	_
+25-6	2573-2575	of	event[158]	new[158]	_	_
+25-7	2576-2584	reactive	event[158]|person[160]	new[158]|new[160]	_	_
+25-8	2585-2591	oxygen	event[158]|substance|person[160]	new[158]|new|new[160]	_	_
+25-9	2592-2599	species	event[158]|person[160]	new[158]|new[160]	_	_
+25-10	2600-2601	,	_	_	_	_
+25-11	2602-2607	which	_	_	_	_
+25-12	2608-2616	triggers	_	_	_	_
+25-13	2617-2630	mitochondrial	abstract[161]	new[161]	_	_
+25-14	2631-2642	recruitment	abstract[161]	new[161]	_	_
+25-15	2643-2645	of	abstract[161]	new[161]	_	_
+25-16	2646-2652	Parkin	abstract[161]|person	new[161]|giv	coref	26-7
+25-17	2653-2654	.	_	_	_	_
+
+#Text=Our data suggest that ER stress-mediated Parkin is a MFN2 regulator during mycobacterial infection in macrophages .
+26-1	2655-2658	Our	person|abstract[164]	giv|giv[164]	ana|coref|ana|coref	29-3|29-3[184_164]|29-3|29-3[184_164]
+26-2	2659-2663	data	abstract[164]	giv[164]	_	_
+26-3	2664-2671	suggest	_	_	_	_
+26-4	2672-2676	that	_	_	_	_
+26-5	2677-2679	ER	person	giv	_	_
+26-6	2680-2695	stress-mediated	_	_	_	_
+26-7	2696-2702	Parkin	person	giv	_	_
+26-8	2703-2705	is	_	_	_	_
+26-9	2706-2707	a	substance[167]	new[167]	_	_
+26-10	2708-2712	MFN2	substance[167]	new[167]	_	_
+26-11	2713-2722	regulator	substance[167]	new[167]	_	_
+26-12	2723-2729	during	substance[167]	new[167]	_	_
+26-13	2730-2743	mycobacterial	substance[167]|abstract[168]	new[167]|giv[168]	coref	32-12[206_168]
+26-14	2744-2753	infection	substance[167]|abstract[168]	new[167]|giv[168]	_	_
+26-15	2754-2756	in	substance[167]|abstract[168]	new[167]|giv[168]	_	_
+26-16	2757-2768	macrophages	substance[167]|abstract[168]|animal	new[167]|giv[168]|giv	coref	29-20
+26-17	2769-2770	.	_	_	_	_
+
+#Text=Knockdown of MFN2 induces apoptosis by disrupting the mitochondrial network , suppressing the growth of Mtb .
+27-1	2771-2780	Knockdown	event[170]	new[170]	_	_
+27-2	2781-2783	of	event[170]	new[170]	_	_
+27-3	2784-2788	MFN2	event[170]|object	new[170]|giv	coref	28-5
+27-4	2789-2796	induces	_	_	_	_
+27-5	2797-2806	apoptosis	abstract	giv	coref	28-15
+27-6	2807-2809	by	_	_	_	_
+27-7	2810-2820	disrupting	_	_	_	_
+27-8	2821-2824	the	abstract[174]	new[174]	_	_
+27-9	2825-2838	mitochondrial	place|abstract[174]	giv|new[174]	coref	28-12
+27-10	2839-2846	network	abstract[174]	new[174]	_	_
+27-11	2847-2848	,	_	_	_	_
+27-12	2849-2860	suppressing	_	_	_	_
+27-13	2861-2864	the	event[175]	new[175]	_	_
+27-14	2865-2871	growth	event[175]	new[175]	_	_
+27-15	2872-2874	of	event[175]	new[175]	_	_
+27-16	2875-2878	Mtb	event[175]|abstract	new[175]|giv	coref	29-18[189_0]
+27-17	2879-2880	.	_	_	_	_
+
+#Text=A low level of MFN2 decreases the MMP , leading to mitochondrial dysfunction and apoptosis .
+28-1	2881-2882	A	abstract[177]	new[177]	_	_
+28-2	2883-2886	low	abstract[177]	new[177]	_	_
+28-3	2887-2892	level	abstract[177]	new[177]	_	_
+28-4	2893-2895	of	abstract[177]	new[177]	_	_
+28-5	2896-2900	MFN2	abstract[177]|object	new[177]|giv	coref	29-9
+28-6	2901-2910	decreases	_	_	_	_
+28-7	2911-2914	the	object[179]	giv[179]	_	_
+28-8	2915-2918	MMP	object[179]	giv[179]	_	_
+28-9	2919-2920	,	_	_	_	_
+28-10	2921-2928	leading	_	_	_	_
+28-11	2929-2931	to	_	_	_	_
+28-12	2932-2945	mitochondrial	abstract|abstract[181]	giv|new[181]	coref|coref	30-11|30-11
+28-13	2946-2957	dysfunction	abstract[181]	new[181]	_	_
+28-14	2958-2961	and	_	_	_	_
+28-15	2962-2971	apoptosis	abstract	giv	coref	30-14
+28-16	2972-2973	.	_	_	_	_
+
+#Text=Therefore , our data suggest that regulation of MFN2 levels is important for suppressing the survival of Mtb in macrophages .
+29-1	2974-2983	Therefore	_	_	_	_
+29-2	2984-2985	,	_	_	_	_
+29-3	2986-2989	our	person|abstract[184]	giv|giv[184]	ana|ana	30-4|30-4
+29-4	2990-2994	data	abstract[184]	giv[184]	_	_
+29-5	2995-3002	suggest	_	_	_	_
+29-6	3003-3007	that	_	_	_	_
+29-7	3008-3018	regulation	abstract[185]	new[185]	_	_
+29-8	3019-3021	of	abstract[185]	new[185]	_	_
+29-9	3022-3026	MFN2	abstract[185]|abstract|abstract[187]	new[185]|giv|giv[187]	coref|coref	31-1|31-1
+29-10	3027-3033	levels	abstract[185]|abstract[187]	new[185]|giv[187]	_	_
+29-11	3034-3036	is	_	_	_	_
+29-12	3037-3046	important	_	_	_	_
+29-13	3047-3050	for	_	_	_	_
+29-14	3051-3062	suppressing	_	_	_	_
+29-15	3063-3066	the	event[188]	giv[188]	_	_
+29-16	3067-3075	survival	event[188]	giv[188]	_	_
+29-17	3076-3078	of	event[188]	giv[188]	_	_
+29-18	3079-3082	Mtb	event[188]|abstract[189]	giv[188]|giv[189]	coref	31-15[201_189]
+29-19	3083-3085	in	event[188]|abstract[189]	giv[188]|giv[189]	_	_
+29-20	3086-3097	macrophages	event[188]|abstract[189]|animal	giv[188]|giv[189]|giv	coref	31-17
+29-21	3098-3099	.	_	_	_	_
+
+#Text=In summary , we found that Mtb-induced ER stress increases mitochondrial fragmentation and apoptosis .
+30-1	3100-3102	In	_	_	_	_
+30-2	3103-3110	summary	abstract	new	_	_
+30-3	3111-3112	,	_	_	_	_
+30-4	3113-3115	we	person	giv	_	_
+30-5	3116-3121	found	_	_	_	_
+30-6	3122-3126	that	_	_	_	_
+30-7	3127-3138	Mtb-induced	abstract[193]	new[193]	_	_
+30-8	3139-3141	ER	abstract[193]	new[193]	_	_
+30-9	3142-3148	stress	abstract[193]	new[193]	_	_
+30-10	3149-3158	increases	_	_	_	_
+30-11	3159-3172	mitochondrial	abstract|abstract[195]	giv|giv[195]	_	_
+30-12	3173-3186	fragmentation	abstract[195]	giv[195]	_	_
+30-13	3187-3190	and	_	_	_	_
+30-14	3191-3200	apoptosis	abstract	giv	_	_
+30-15	3201-3202	.	_	_	_	_
+
+#Text=MFN2 plays a key role in disrupting mitochondria , which suppresses the growth of Mtb in macrophages .
+31-1	3203-3207	MFN2	object	giv	coref	32-3
+31-2	3208-3213	plays	_	_	_	_
+31-3	3214-3215	a	abstract[198]	giv[198]	_	_
+31-4	3216-3219	key	abstract[198]	giv[198]	_	_
+31-5	3220-3224	role	abstract[198]	giv[198]	_	_
+31-6	3225-3227	in	_	_	_	_
+31-7	3228-3238	disrupting	_	_	_	_
+31-8	3239-3251	mitochondria	place	giv	_	_
+31-9	3252-3253	,	_	_	_	_
+31-10	3254-3259	which	_	_	_	_
+31-11	3260-3270	suppresses	_	_	_	_
+31-12	3271-3274	the	event[200]	new[200]	_	_
+31-13	3275-3281	growth	event[200]	new[200]	_	_
+31-14	3282-3284	of	event[200]	new[200]	_	_
+31-15	3285-3288	Mtb	event[200]|object[201]	new[200]|giv[201]	_	_
+31-16	3289-3291	in	event[200]|object[201]	new[200]|giv[201]	_	_
+31-17	3292-3303	macrophages	event[200]|object[201]|animal	new[200]|giv[201]|giv	_	_
+31-18	3304-3305	.	_	_	_	_
+
+#Text=Therefore , MFN2 may be a target for host-derived therapeutics against mycobacterial infection .
+32-1	3306-3315	Therefore	_	_	_	_
+32-2	3316-3317	,	_	_	_	_
+32-3	3318-3322	MFN2	abstract	giv	coref	32-6[204_0]
+32-4	3323-3326	may	_	_	_	_
+32-5	3327-3329	be	_	_	_	_
+32-6	3330-3331	a	abstract[204]	giv[204]	_	_
+32-7	3332-3338	target	abstract[204]	giv[204]	_	_
+32-8	3339-3342	for	abstract[204]	giv[204]	_	_
+32-9	3343-3355	host-derived	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+32-10	3356-3368	therapeutics	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+32-11	3369-3376	against	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+32-12	3377-3390	mycobacterial	abstract[204]|abstract[205]|abstract[206]	giv[204]|new[205]|giv[206]	_	_
+32-13	3391-3400	infection	abstract[204]|abstract[205]|abstract[206]	giv[204]|new[205]|giv[206]	_	_
+32-14	3401-3402	.	_	_	_	_

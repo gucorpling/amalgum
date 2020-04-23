@@ -1,0 +1,107 @@
+Therefore , given the panel estimation techniques commonly used in these studies ( e. g. , Prais – Winsten ) , if the longitudinal coverage is incomplete for a particular country ( i. e. , if a country has a single missing value for one variable in one time period ) , the wave with incomplete data for that country is entirely dropped from the model .
+1,2 person
+4,8 abstract|11,13 abstract|17,18 person|19,20 person|23,26 abstract|29,32 place|37,39 place|40,51 abstract|45,47 abstract|45,51 abstract|48,51 time|53,61 abstract|56,61 abstract|59,61 place|65,67 abstract
+
+Some quantitative scholars ran longitudinal models after having selected a stratified sample of countries using different criteria ( e. g. , countries with populations greater than 500,000 or one million ; high income countries ; least developed countries ; Organization for Economic Co-Operation and Development ( OECD ) Countries ; former Soviet republics , etc. ) .
+1,2 person
+1,4 person|5,7 abstract|16,18 abstract|27,28 quantity|29,31 quantity|40,46 organization
+
+Moreover , with FIML , missing values are not imputed , as they are in mean imputation , linear imputation , or multiple imputation ; instead , with FIML , the missing values are mathematically integrated out of the likelihood function ; for a detailed review of the mathematics of this technique , see .
+1,2 person
+4,5 abstract|6,8 abstract|13,14 abstract|19,21 abstract|19,25 abstract|23,25 abstract|29,30 abstract|31,34 abstract|39,42 abstract|44,53 abstract|48,53 abstract|51,53 abstract
+
+For our analysis , we utilized the command xtdpdml in Stata , the syntax of which is in Appendix C , which also provides the syntax for Prais-Winsten regression models with panel corrected standard errors and an AR ( 1 ) serial correlation , using the Stata command xtpcse .
+1,2 person
+2,3 person|2,4 abstract|5,6 person|7,9 abstract|7,12 abstract|9,10 abstract|11,12 abstract|13,17 abstract|19,21 abstract|25,31 abstract|25,36 abstract|32,36 abstract|34,36 abstract|37,44 abstract|38,44 abstract|40,41 quantity|46,49 abstract|46,50 abstract|49,50 abstract
+
+Nevertheless , as seen in Appendix B , many countries meeting these selection criteria , including OECD countries and countries with more than one million people , still have missing values , and with listwise deletion , get dropped from the panel models .
+1,2 person
+6,8 abstract|12,15 abstract|17,19 place|20,27 person|22,27 person|30,32 abstract|35,37 abstract|41,44 abstract|41,44 object
+
+In this sense , the default for handling missing data in these commonly used longitudinal models is listwise deletion , which can result in a reduction in the overall sample size and the amount of information used for estimation .
+1,2 person
+2,4 abstract|5,17 abstract|9,17 abstract|12,17 abstract|18,20 abstract|28,32 abstract|28,32 quantity|30,32 quantity|33,37 quantity|33,40 abstract|39,40 abstract
+
+FIML has long been a common technique used to handle missing values in SEM , and criminologists have begun using this statistical tool to study the longitudinal variation in homicide rates across cities in the United States .
+1,2 person
+1,2 abstract|5,8 abstract|11,13 abstract|11,15 abstract|14,15 abstract|17,18 person|21,24 abstract|26,32 abstract|26,38 abstract|30,31 event|33,38 place|35,38 place
+
+Data used for this study came mostly from the World Bank ’s online World Development Indicators , covering the years 2000 – 2015 for 217 countries ( see Appendix A for list of countries ) .
+1,2 person
+1,2 object|4,6 abstract|9,13 organization|14,17 abstract|19,21 time|19,22 time|19,24 time|21,22 time|23,24 time|29,31 abstract|34,35 place
+
+With listwise deletion , if a case has a missing value in one time period for one variable but not another variable , that wave of information is still dropped from the longitudinal model .
+1,2 person
+2,4 abstract|6,8 abstract|9,12 abstract|9,19 abstract|13,16 time|13,19 time|17,19 abstract|21,23 abstract|24,28 abstract|32,35 abstract
+
+While some social scientists have utilized advanced imputation procedures ( e. g. , multiple imputation ) to handle missing values , these approaches require the researcher to make numerous decisions affected by uncertainty .
+1,2 person
+2,5 person|3,5 person|7,10 abstract|14,16 abstract|19,21 abstract|22,24 abstract|25,27 person|29,31 abstract|33,34 abstract
+
+As such , statisticians have cautioned against their use , now preferring instead readily available , user-friendly techniques using maximum likelihood for handling missing values in longitudinal data analysis .
+1,2 person
+4,5 person|8,9 object|8,10 abstract|20,22 abstract|24,26 abstract|27,30 abstract
+
+As a result , with these particular panel techniques , some countries have more time periods of data than other countries , resulting in what are called unbalanced panels .
+1,2 person
+6,10 abstract|11,13 place|20,22 place
+
+Thus , for the time period with partially complete coverage , the available information for that case is used to estimate the slope of the variable in the model .
+1,2 person
+4,6 time|4,11 time|12,18 abstract|16,18 abstract|22,27 abstract|22,30 abstract|28,30 abstract
+
+While we emphasize the benefits of full information maximum likelihood , we also acknowledge some of its limitations , particularly with respect to problems of computational speed and convergence .
+1,2 person
+2,3 person|4,11 abstract|7,9 abstract|7,11 abstract|12,13 person|15,19 abstract|17,18 abstract|17,19 abstract|24,30 abstract|26,28 abstract|26,30 abstract|29,30 abstract
+
+Indeed , linear dynamic panel-data estimation using maximum likelihood and structural equation modeling is a computationally intensive command and is sensitive to model specification and variable selection .
+1,2 person
+3,7 abstract|5,6 object|8,10 abstract|11,14 abstract|15,19 abstract|23,25 abstract|26,28 abstract
+
+Nevertheless , in the World Bank data , there are many countries that do not have complete longitudinal coverage for the variables being incorporated into the analysis .
+1,2 person
+4,8 abstract|5,7 organization|11,13 place|17,20 abstract|21,23 abstract|26,28 abstract
+
+For linear , dynamic panel-data estimation using maximum likelihood and SEM , Allison et al. provide commands for use in a variety of statistical software packages .
+1,2 person
+2,7 abstract|5,6 object|8,10 abstract|11,12 abstract|13,14 person|15,16 person|21,27 object|24,27 object
+
+Using structural equation modeling ( SEM ) for longitudinal data analysis allows the option to handle missing values with full information maximum likelihood ( FIML ) .
+1,2 person
+1,5 abstract|2,5 abstract|6,7 abstract|9,12 abstract|13,15 abstract|17,19 abstract|20,22 abstract|20,24 abstract|25,26 abstract
+
+Common data issues , such as high collinearity over time and severely unbalanced panel data , can slow down processing speed and prevent convergence .
+1,2 person
+1,4 abstract|7,9 abstract|8,9 abstract|10,11 time|12,16 abstract|14,15 object|14,16 object|20,22 abstract|24,25 abstract
+
+Nevertheless , it has many options , and there are a number of other techniques available in various software packages to address these issues .
+1,2 person
+3,4 abstract|5,7 abstract|11,16 abstract|14,16 abstract|18,21 abstract|23,25 abstract
+
+For instance , we considered the recent statistical work on linear , dynamic panel-data estimation using maximum likelihood and structural equation modeling .
+1,2 person
+4,5 person|6,16 abstract|8,16 abstract|11,16 abstract|14,15 object|17,19 abstract|20,23 abstract
+
+We also drew from the Standardized World Income Inequality Database to access a measure of inequality ( see below ) .
+1,2 person
+1,2 person|5,11 abstract|8,9 abstract|13,17 abstract|16,17 abstract
+
+Compared to multiple imputation , the FIML option greatly simplifies the process of handling missing values in longitudinal models .
+1,2 person
+3,5 abstract|3,5 event|6,9 abstract|7,8 abstract|15,17 abstract|15,20 abstract|18,20 abstract
+
+In our study , we report results from Prais – Winsten models using the default of listwise deletion .
+1,2 person
+2,3 person|2,4 abstract|5,6 person|7,13 abstract|9,10 person|9,13 abstract|11,12 person|14,19 abstract|17,18 abstract|17,19 abstract
+
+The World Development Indicators are regularly used by quantitative scholars studying the many dimensions of development .
+1,2 person
+1,5 abstract|9,11 person|12,17 abstract|16,17 abstract
+
+Here we provide a conceptual summary of this technique .
+1,2 person
+2,3 person|4,10 abstract|8,10 abstract
+
+Data and Analysis
+1,2 person
+1,4 abstract|3,4 abstract

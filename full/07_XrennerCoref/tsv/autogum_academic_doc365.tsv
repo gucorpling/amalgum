@@ -1,0 +1,953 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=4 .
+1-1	0-1	4	quantity	new	_	_
+1-2	2-3	.	_	_	_	_
+
+#Text=Evaluation Setup
+2-1	4-14	Evaluation	event|abstract[3]	new|new[3]	_	_
+2-2	15-20	Setup	abstract[3]	new[3]	_	_
+
+#Text=In this section , we describe the benchmark dataset of the practical industrial process and the existing deep neural network approach that we used to compare our proposed method .
+3-1	21-23	In	_	_	_	_
+3-2	24-28	this	place[4]	new[4]	coref	23-8[100_4]
+3-3	29-36	section	place[4]	new[4]	_	_
+3-4	37-38	,	_	_	_	_
+3-5	39-41	we	person	acc	ana	3-23
+3-6	42-50	describe	_	_	_	_
+3-7	51-54	the	abstract[7]	new[7]	_	_
+3-8	55-64	benchmark	abstract|abstract[7]	new|new[7]	coref	7-5
+3-9	65-72	dataset	abstract[7]	new[7]	_	_
+3-10	73-75	of	abstract[7]	new[7]	_	_
+3-11	76-79	the	abstract[7]|abstract[8]	new[7]|new[8]	coref	6-12[25_8]
+3-12	80-89	practical	abstract[7]|abstract[8]	new[7]|new[8]	_	_
+3-13	90-100	industrial	abstract[7]|abstract[8]	new[7]|new[8]	_	_
+3-14	101-108	process	abstract[7]|abstract[8]	new[7]|new[8]	_	_
+3-15	109-112	and	abstract[7]	new[7]	_	_
+3-16	113-116	the	abstract[7]|abstract[10]	new[7]|new[10]	_	_
+3-17	117-125	existing	abstract[7]|abstract[10]	new[7]|new[10]	_	_
+3-18	126-130	deep	abstract[7]|abstract[10]	new[7]|new[10]	_	_
+3-19	131-137	neural	abstract[7]|abstract[10]	new[7]|new[10]	_	_
+3-20	138-145	network	abstract[7]|place|abstract[10]	new[7]|new|new[10]	_	_
+3-21	146-154	approach	abstract[7]|abstract[10]	new[7]|new[10]	_	_
+3-22	155-159	that	_	_	_	_
+3-23	160-162	we	person	giv	ana	3-27
+3-24	163-167	used	_	_	_	_
+3-25	168-170	to	_	_	_	_
+3-26	171-178	compare	_	_	_	_
+3-27	179-182	our	person|abstract[13]	giv|new[13]	ana|coref|ana|coref	6-1|6-6[21_13]|6-1|6-6[21_13]
+3-28	183-191	proposed	abstract[13]	new[13]	_	_
+3-29	192-198	method	abstract[13]	new[13]	_	_
+3-30	199-200	.	_	_	_	_
+
+#Text=4.1 .
+4-1	201-204	4.1	abstract	new	_	_
+4-2	205-206	.	_	_	_	_
+
+#Text=Tennessee Eastman Challenge Problem
+5-1	207-216	Tennessee	place|abstract[18]	new|new[18]	coref|coref	6-12|6-12
+5-2	217-224	Eastman	person|abstract[18]	new|new[18]	coref	6-13
+5-3	225-234	Challenge	abstract|abstract[18]	new|new[18]	_	_
+5-4	235-242	Problem	abstract[18]	new[18]	_	_
+
+#Text=We evaluate the performance of the proposed method for FDD on Tennessee Eastman Process ( TEP ) .
+6-1	243-245	We	person	giv	ana	25-4
+6-2	246-254	evaluate	_	_	_	_
+6-3	255-258	the	abstract[20]	new[20]	_	_
+6-4	259-270	performance	abstract[20]	new[20]	_	_
+6-5	271-273	of	abstract[20]	new[20]	_	_
+6-6	274-277	the	abstract[20]|abstract[21]	new[20]|giv[21]	_	_
+6-7	278-286	proposed	abstract[20]|abstract[21]	new[20]|giv[21]	_	_
+6-8	287-293	method	abstract[20]|abstract[21]	new[20]|giv[21]	_	_
+6-9	294-297	for	abstract[20]|abstract[21]	new[20]|giv[21]	_	_
+6-10	298-301	FDD	abstract[20]|abstract[21]|abstract[22]	new[20]|giv[21]|new[22]	_	_
+6-11	302-304	on	abstract[20]|abstract[21]|abstract[22]	new[20]|giv[21]|new[22]	_	_
+6-12	305-314	Tennessee	abstract[20]|abstract[21]|abstract[22]|place|abstract[25]	new[20]|giv[21]|new[22]|giv|giv[25]	appos|appos	6-16[0_25]|6-16[0_25]
+6-13	315-322	Eastman	abstract[20]|abstract[21]|abstract[22]|person|abstract[25]	new[20]|giv[21]|new[22]|giv|giv[25]	_	_
+6-14	323-330	Process	abstract[20]|abstract[21]|abstract[22]|abstract[25]	new[20]|giv[21]|new[22]|giv[25]	_	_
+6-15	331-332	(	_	_	_	_
+6-16	333-336	TEP	abstract	giv	coref	7-1
+6-17	337-338	)	_	_	_	_
+6-18	339-340	.	_	_	_	_
+
+#Text=TEP is a widely-used benchmark testbed to investigate the large-scale control and FDD schemes of realistic chemical processes .
+7-1	341-344	TEP	abstract	giv	coref	7-3[29_0]
+7-2	345-347	is	_	_	_	_
+7-3	348-349	a	abstract[29]	giv[29]	coref	8-5[0_29]
+7-4	350-361	widely-used	abstract[29]	giv[29]	_	_
+7-5	362-371	benchmark	abstract|abstract[29]	giv|giv[29]	_	_
+7-6	372-379	testbed	abstract[29]	giv[29]	_	_
+7-7	380-382	to	_	_	_	_
+7-8	383-394	investigate	_	_	_	_
+7-9	395-398	the	abstract[30]	new[30]	_	_
+7-10	399-410	large-scale	abstract[30]	new[30]	_	_
+7-11	411-418	control	abstract[30]	new[30]	_	_
+7-12	419-422	and	_	_	_	_
+7-13	423-426	FDD	abstract[31]	new[31]	_	_
+7-14	427-434	schemes	abstract[31]	new[31]	_	_
+7-15	435-437	of	abstract[31]	new[31]	_	_
+7-16	438-447	realistic	abstract[31]|abstract[32]	new[31]|new[32]	_	_
+7-17	448-456	chemical	abstract[31]|abstract[32]	new[31]|new[32]	_	_
+7-18	457-466	processes	abstract[31]|abstract[32]	new[31]|new[32]	_	_
+7-19	467-468	.	_	_	_	_
+
+#Text=The simulation data of TEP are highly nonlinear with strong coupling and dynamical behavior .
+8-1	469-472	The	abstract[34]	new[34]	coref	9-5[0_34]
+8-2	473-483	simulation	abstract|abstract[34]	new|new[34]	coref	9-2
+8-3	484-488	data	abstract[34]	new[34]	_	_
+8-4	489-491	of	abstract[34]	new[34]	_	_
+8-5	492-495	TEP	abstract[34]|abstract	new[34]|giv	coref	10-6
+8-6	496-499	are	_	_	_	_
+8-7	500-506	highly	_	_	_	_
+8-8	507-516	nonlinear	_	_	_	_
+8-9	517-521	with	_	_	_	_
+8-10	522-528	strong	abstract[36]	new[36]	_	_
+8-11	529-537	coupling	abstract[36]	new[36]	_	_
+8-12	538-541	and	_	_	_	_
+8-13	542-551	dynamical	abstract[37]	new[37]	_	_
+8-14	552-560	behavior	abstract[37]	new[37]	_	_
+8-15	561-562	.	_	_	_	_
+
+#Text=The simulation code and data are available for download in References , respectively .
+9-1	563-566	The	abstract[39]	new[39]	_	_
+9-2	567-577	simulation	abstract|abstract[39]	giv|new[39]	_	_
+9-3	578-582	code	abstract[39]	new[39]	_	_
+9-4	583-586	and	_	_	_	_
+9-5	587-591	data	abstract	giv	coref	27-15[122_0]
+9-6	592-595	are	_	_	_	_
+9-7	596-605	available	_	_	_	_
+9-8	606-609	for	_	_	_	_
+9-9	610-618	download	abstract[41]	new[41]	_	_
+9-10	619-621	in	abstract[41]	new[41]	_	_
+9-11	622-632	References	abstract[41]|abstract	new[41]|new	_	_
+9-12	633-634	,	_	_	_	_
+9-13	635-647	respectively	_	_	_	_
+9-14	648-649	.	_	_	_	_
+
+#Text=The main structure of the TEP simulator is described in
+10-1	650-653	The	abstract[43]	new[43]	_	_
+10-2	654-658	main	abstract[43]	new[43]	_	_
+10-3	659-668	structure	abstract[43]	new[43]	_	_
+10-4	669-671	of	abstract[43]	new[43]	_	_
+10-5	672-675	the	abstract[43]|object[45]	new[43]|new[45]	coref	18-8[76_45]
+10-6	676-679	TEP	abstract[43]|abstract|object[45]	new[43]|giv|new[45]	coref	13-1[47_0]
+10-7	680-689	simulator	abstract[43]|object[45]	new[43]|new[45]	_	_
+10-8	690-692	is	_	_	_	_
+10-9	693-702	described	_	_	_	_
+10-10	703-705	in	_	_	_	_
+
+#Text=Figure 3
+11-1	706-712	Figure	abstract[46]	new[46]	_	_
+11-2	713-714	3	abstract[46]	new[46]	_	_
+
+#Text=.
+12-1	715-716	.	_	_	_	_
+
+#Text=The TEP produces two products G and H from four reactants with additional byproduct F .
+13-1	717-720	The	abstract[47]	giv[47]	coref	18-3[74_47]
+13-2	721-724	TEP	abstract[47]	giv[47]	_	_
+13-3	725-733	produces	_	_	_	_
+13-4	734-737	two	object[48]|person[49]	new[48]|new[49]	coref|coref|coref|coref	17-5[0_49]|19-10[83_48]|17-5[0_49]|19-10[83_48]
+13-5	738-746	products	object[48]|person[49]	new[48]|new[49]	_	_
+13-6	747-748	G	object[48]|person[49]	new[48]|new[49]	_	_
+13-7	749-752	and	object[48]|person[49]	new[48]|new[49]	_	_
+13-8	753-754	H	object[48]|person[49]|person	new[48]|new[49]|new	coref	17-15
+13-9	755-759	from	object[48]|person[49]	new[48]|new[49]	_	_
+13-10	760-764	four	object[48]|person[49]|substance[51]	new[48]|new[49]|new[51]	coref	19-1[81_51]
+13-11	765-774	reactants	object[48]|person[49]|substance[51]	new[48]|new[49]|new[51]	_	_
+13-12	775-779	with	object[48]|person[49]|substance[51]	new[48]|new[49]|new[51]	_	_
+13-13	780-790	additional	object[48]|person[49]|substance[51]|abstract[52]	new[48]|new[49]|new[51]|new[52]	_	_
+13-14	791-800	byproduct	object[48]|person[49]|substance[51]|abstract[52]	new[48]|new[49]|new[51]|new[52]	_	_
+13-15	801-802	F	object[48]|person[49]|substance[51]|abstract[52]	new[48]|new[49]|new[51]|new[52]	_	_
+13-16	803-804	.	_	_	_	_
+
+#Text=The reactions are
+14-1	805-808	The	event[53]	new[53]	coref	15-1[54_53]
+14-2	809-818	reactions	event[53]	new[53]	_	_
+14-3	819-822	are	_	_	_	_
+
+#Text=All chemical reactions are irreversible , exothermic and approximately first-order with respect to the reactant concentrations .
+15-1	823-826	All	event[54]	giv[54]	_	_
+15-2	827-835	chemical	event[54]	giv[54]	_	_
+15-3	836-845	reactions	event[54]	giv[54]	_	_
+15-4	846-849	are	_	_	_	_
+15-5	850-862	irreversible	_	_	_	_
+15-6	863-864	,	_	_	_	_
+15-7	865-875	exothermic	abstract	new	_	_
+15-8	876-879	and	_	_	_	_
+15-9	880-893	approximately	abstract[56]	new[56]	_	_
+15-10	894-905	first-order	abstract[56]	new[56]	_	_
+15-11	906-910	with	abstract[56]	new[56]	_	_
+15-12	911-918	respect	abstract[56]|abstract[57]	new[56]|new[57]	_	_
+15-13	919-921	to	abstract[56]|abstract[57]	new[56]|new[57]	_	_
+15-14	922-925	the	abstract[56]|abstract[57]|abstract[59]	new[56]|new[57]|new[59]	_	_
+15-15	926-934	reactant	abstract[56]|abstract[57]|substance|abstract[59]	new[56]|new[57]|new|new[59]	_	_
+15-16	935-949	concentrations	abstract[56]|abstract[57]|abstract[59]	new[56]|new[57]|new[59]	_	_
+15-17	950-951	.	_	_	_	_
+
+#Text=The reaction rates are a function of temperature through an Arrhenius expression .
+16-1	952-955	The	abstract[61]	new[61]	coref	16-5[62_61]
+16-2	956-964	reaction	event|abstract[61]	new|new[61]	coref	17-1[66_0]
+16-3	965-970	rates	abstract[61]	new[61]	_	_
+16-4	971-974	are	_	_	_	_
+16-5	975-976	a	abstract[62]	giv[62]	_	_
+16-6	977-985	function	abstract[62]	giv[62]	_	_
+16-7	986-988	of	abstract[62]	giv[62]	_	_
+16-8	989-1000	temperature	abstract[62]|abstract[63]	giv[62]|new[63]	coref	17-23[0_63]
+16-9	1001-1008	through	abstract[62]|abstract[63]	giv[62]|new[63]	_	_
+16-10	1009-1011	an	abstract[62]|abstract[63]|abstract[65]	giv[62]|new[63]|new[65]	_	_
+16-11	1012-1021	Arrhenius	abstract[62]|abstract[63]|person|abstract[65]	giv[62]|new[63]|new|new[65]	_	_
+16-12	1022-1032	expression	abstract[62]|abstract[63]|abstract[65]	giv[62]|new[63]|new[65]	_	_
+16-13	1033-1034	.	_	_	_	_
+
+#Text=The reaction to produce G has a higher activation energy than the one producing H , thus resulting in more sensitivity to temperature .
+17-1	1035-1038	The	event[66]	giv[66]	_	_
+17-2	1039-1047	reaction	event[66]	giv[66]	_	_
+17-3	1048-1050	to	_	_	_	_
+17-4	1051-1058	produce	_	_	_	_
+17-5	1059-1060	G	person	giv	_	_
+17-6	1061-1064	has	_	_	_	_
+17-7	1065-1066	a	abstract[69]	new[69]	_	_
+17-8	1067-1073	higher	abstract[69]	new[69]	_	_
+17-9	1074-1084	activation	abstract|abstract[69]	new|new[69]	_	_
+17-10	1085-1091	energy	abstract[69]	new[69]	_	_
+17-11	1092-1096	than	_	_	_	_
+17-12	1097-1100	the	event[70]	new[70]	_	_
+17-13	1101-1104	one	event[70]	new[70]	_	_
+17-14	1105-1114	producing	_	_	_	_
+17-15	1115-1116	H	substance	giv	_	_
+17-16	1117-1118	,	_	_	_	_
+17-17	1119-1123	thus	_	_	_	_
+17-18	1124-1133	resulting	_	_	_	_
+17-19	1134-1136	in	_	_	_	_
+17-20	1137-1141	more	abstract[72]	new[72]	_	_
+17-21	1142-1153	sensitivity	abstract[72]	new[72]	_	_
+17-22	1154-1156	to	abstract[72]	new[72]	_	_
+17-23	1157-1168	temperature	abstract[72]|abstract	new[72]|giv	_	_
+17-24	1169-1170	.	_	_	_	_
+
+#Text=To model a practical industrial process , the TEP simulator consists of five major units : reactor , condenser , compressor , separator and stripper .
+18-1	1171-1173	To	_	_	_	_
+18-2	1174-1179	model	abstract	new	coref|none	18-2|18-2
+18-3	1180-1181	a	abstract[74]	giv[74]	coref	18-9[0_74]
+18-4	1182-1191	practical	abstract[74]	giv[74]	_	_
+18-5	1192-1202	industrial	abstract[74]	giv[74]	_	_
+18-6	1203-1210	process	abstract[74]	giv[74]	_	_
+18-7	1211-1212	,	_	_	_	_
+18-8	1213-1216	the	object[76]	giv[76]	_	_
+18-9	1217-1220	TEP	abstract|object[76]	giv|giv[76]	coref	25-2
+18-10	1221-1230	simulator	object[76]	giv[76]	_	_
+18-11	1231-1239	consists	_	_	_	_
+18-12	1240-1242	of	_	_	_	_
+18-13	1243-1247	five	object[77]	new[77]	appos	18-17[78_77]
+18-14	1248-1253	major	object[77]	new[77]	_	_
+18-15	1254-1259	units	object[77]	new[77]	_	_
+18-16	1260-1261	:	_	_	_	_
+18-17	1262-1269	reactor	object[78]	giv[78]	_	_
+18-18	1270-1271	,	object[78]	giv[78]	_	_
+18-19	1272-1281	condenser	object[78]	giv[78]	_	_
+18-20	1282-1283	,	object[78]	giv[78]	_	_
+18-21	1284-1294	compressor	object[78]	giv[78]	_	_
+18-22	1295-1296	,	object[78]	giv[78]	_	_
+18-23	1297-1306	separator	object[78]	giv[78]	_	_
+18-24	1307-1310	and	object[78]	giv[78]	_	_
+18-25	1311-1319	stripper	object[78]|person	giv[78]|new	coref	23-14
+18-26	1320-1321	.	_	_	_	_
+
+#Text=The gaseous reactants are fed into the reactor where liquid products are formed .
+19-1	1322-1325	The	substance[81]	giv[81]	coref	22-19[98_81]
+19-2	1326-1333	gaseous	person|substance[81]	new|giv[81]	_	_
+19-3	1334-1343	reactants	substance[81]	giv[81]	_	_
+19-4	1344-1347	are	_	_	_	_
+19-5	1348-1351	fed	_	_	_	_
+19-6	1352-1356	into	_	_	_	_
+19-7	1357-1360	the	object[82]	new[82]	coref	20-5[86_82]
+19-8	1361-1368	reactor	object[82]	new[82]	_	_
+19-9	1369-1374	where	_	_	_	_
+19-10	1375-1381	liquid	object[83]	giv[83]	_	_
+19-11	1382-1390	products	object[83]	giv[83]	_	_
+19-12	1391-1394	are	_	_	_	_
+19-13	1395-1401	formed	_	_	_	_
+19-14	1402-1403	.	_	_	_	_
+
+#Text=The product stream of the reactor is cooled through a condenser and fed to a vapor-liquid separator .
+20-1	1404-1407	The	abstract[85]	new[85]	coref	22-14[0_85]
+20-2	1408-1415	product	substance|abstract[85]	new|new[85]	coref	22-6[93_0]
+20-3	1416-1422	stream	abstract[85]	new[85]	_	_
+20-4	1423-1425	of	abstract[85]	new[85]	_	_
+20-5	1426-1429	the	abstract[85]|object[86]	new[85]|giv[86]	coref	21-7[90_86]
+20-6	1430-1437	reactor	abstract[85]|object[86]	new[85]|giv[86]	_	_
+20-7	1438-1440	is	_	_	_	_
+20-8	1441-1447	cooled	_	_	_	_
+20-9	1448-1455	through	_	_	_	_
+20-10	1456-1457	a	object[87]	new[87]	_	_
+20-11	1458-1467	condenser	object[87]	new[87]	_	_
+20-12	1468-1471	and	_	_	_	_
+20-13	1472-1475	fed	_	_	_	_
+20-14	1476-1478	to	_	_	_	_
+20-15	1479-1480	a	object[88]	new[88]	coref	24-10[104_88]
+20-16	1481-1493	vapor-liquid	object[88]	new[88]	_	_
+20-17	1494-1503	separator	object[88]	new[88]	_	_
+20-18	1504-1505	.	_	_	_	_
+
+#Text=Non-condensed components are recycled back to the reactor via a compressor .
+21-1	1506-1519	Non-condensed	object[89]	new[89]	coref	22-1[92_89]
+21-2	1520-1530	components	object[89]	new[89]	_	_
+21-3	1531-1534	are	_	_	_	_
+21-4	1535-1543	recycled	_	_	_	_
+21-5	1544-1548	back	_	_	_	_
+21-6	1549-1551	to	_	_	_	_
+21-7	1552-1555	the	object[90]	giv[90]	_	_
+21-8	1556-1563	reactor	object[90]	giv[90]	_	_
+21-9	1564-1567	via	object[90]	giv[90]	_	_
+21-10	1568-1569	a	object[90]|object[91]	giv[90]|new[91]	_	_
+21-11	1570-1580	compressor	object[90]|object[91]	giv[90]|new[91]	_	_
+21-12	1581-1582	.	_	_	_	_
+
+#Text=Condensed components are moved to a product stripping column by stripping with feed stream number 4 to eliminate remaining reactants .
+22-1	1583-1592	Condensed	object[92]	giv[92]	_	_
+22-2	1593-1603	components	object[92]	giv[92]	_	_
+22-3	1604-1607	are	_	_	_	_
+22-4	1608-1613	moved	_	_	_	_
+22-5	1614-1616	to	_	_	_	_
+22-6	1617-1618	a	substance[93]	giv[93]	_	_
+22-7	1619-1626	product	substance[93]	giv[93]	_	_
+22-8	1627-1636	stripping	_	_	_	_
+22-9	1637-1643	column	object	new	_	_
+22-10	1644-1646	by	_	_	_	_
+22-11	1647-1656	stripping	_	_	_	_
+22-12	1657-1661	with	_	_	_	_
+22-13	1662-1666	feed	substance|abstract[97]	new|new[97]	_	_
+22-14	1667-1673	stream	abstract|abstract[97]	giv|new[97]	_	_
+22-15	1674-1680	number	abstract[97]	new[97]	_	_
+22-16	1681-1682	4	abstract[97]	new[97]	_	_
+22-17	1683-1685	to	_	_	_	_
+22-18	1686-1695	eliminate	_	_	_	_
+22-19	1696-1705	remaining	substance[98]	giv[98]	_	_
+22-20	1706-1715	reactants	substance[98]	giv[98]	_	_
+22-21	1716-1717	.	_	_	_	_
+
+#Text=Products G and H are separated in a downstream refining section from the stripper base .
+23-1	1718-1726	Products	substance[99]	new[99]	_	_
+23-2	1727-1728	G	substance[99]	new[99]	_	_
+23-3	1729-1732	and	substance[99]	new[99]	_	_
+23-4	1733-1734	H	substance[99]	new[99]	_	_
+23-5	1735-1738	are	_	_	_	_
+23-6	1739-1748	separated	_	_	_	_
+23-7	1749-1751	in	_	_	_	_
+23-8	1752-1753	a	place[100]	giv[100]	_	_
+23-9	1754-1764	downstream	place[100]	giv[100]	_	_
+23-10	1765-1773	refining	place[100]	giv[100]	_	_
+23-11	1774-1781	section	place[100]	giv[100]	_	_
+23-12	1782-1786	from	place[100]	giv[100]	_	_
+23-13	1787-1790	the	place[100]|object[102]	giv[100]|new[102]	_	_
+23-14	1791-1799	stripper	place[100]|person|object[102]	giv[100]|giv|new[102]	_	_
+23-15	1800-1804	base	place[100]|object[102]	giv[100]|new[102]	_	_
+23-16	1805-1806	.	_	_	_	_
+
+#Text=The inert and byproducts are purged as vapor from the vapor-liquid separator .
+24-1	1807-1810	The	_	_	_	_
+24-2	1811-1816	inert	_	_	_	_
+24-3	1817-1820	and	_	_	_	_
+24-4	1821-1831	byproducts	substance	new	_	_
+24-5	1832-1835	are	_	_	_	_
+24-6	1836-1842	purged	_	_	_	_
+24-7	1843-1845	as	_	_	_	_
+24-8	1846-1851	vapor	_	_	_	_
+24-9	1852-1856	from	_	_	_	_
+24-10	1857-1860	the	object[104]	giv[104]	_	_
+24-11	1861-1873	vapor-liquid	object[104]	giv[104]	_	_
+24-12	1874-1883	separator	object[104]	giv[104]	_	_
+24-13	1884-1885	.	_	_	_	_
+
+#Text=In TEP , we monitor a total of 52 variables including 41 measured variables and 11 manipulated variables .
+25-1	1886-1888	In	_	_	_	_
+25-2	1889-1892	TEP	abstract	giv	coref	30-2[130_0]
+25-3	1893-1894	,	_	_	_	_
+25-4	1895-1897	we	person	giv	ana	31-1
+25-5	1898-1905	monitor	_	_	_	_
+25-6	1906-1907	a	abstract[107]	new[107]	_	_
+25-7	1908-1913	total	abstract[107]	new[107]	_	_
+25-8	1914-1916	of	abstract[107]	new[107]	_	_
+25-9	1917-1919	52	abstract[107]	new[107]	_	_
+25-10	1920-1929	variables	abstract[107]	new[107]	_	_
+25-11	1930-1939	including	abstract[107]	new[107]	_	_
+25-12	1940-1942	41	abstract[107]|abstract[108]	new[107]|new[108]	_	_
+25-13	1943-1951	measured	abstract[107]|abstract[108]	new[107]|new[108]	_	_
+25-14	1952-1961	variables	abstract[107]|abstract[108]	new[107]|new[108]	_	_
+25-15	1962-1965	and	abstract[107]	new[107]	_	_
+25-16	1966-1968	11	abstract[107]|abstract[109]	new[107]|new[109]	coref	31-4[138_109]
+25-17	1969-1980	manipulated	abstract[107]|abstract[109]	new[107]|new[109]	_	_
+25-18	1981-1990	variables	abstract[107]|abstract[109]	new[107]|new[109]	_	_
+25-19	1991-1992	.	_	_	_	_
+
+#Text=The modern industrial systems interact with multiple subcomponents where each component has several different failure modes .
+26-1	1993-1996	The	abstract[110]	new[110]	_	_
+26-2	1997-2003	modern	abstract[110]	new[110]	_	_
+26-3	2004-2014	industrial	abstract[110]	new[110]	_	_
+26-4	2015-2022	systems	abstract[110]	new[110]	_	_
+26-5	2023-2031	interact	_	_	_	_
+26-6	2032-2036	with	_	_	_	_
+26-7	2037-2045	multiple	abstract[111]	new[111]	_	_
+26-8	2046-2059	subcomponents	abstract[111]	new[111]	_	_
+26-9	2060-2065	where	_	_	_	_
+26-10	2066-2070	each	object[112]	new[112]	_	_
+26-11	2071-2080	component	object[112]	new[112]	_	_
+26-12	2081-2084	has	_	_	_	_
+26-13	2085-2092	several	abstract[114]	new[114]	_	_
+26-14	2093-2102	different	abstract[114]	new[114]	_	_
+26-15	2103-2110	failure	abstract|abstract[114]	new|new[114]	coref	27-4
+26-16	2111-2116	modes	abstract[114]	new[114]	_	_
+26-17	2117-2118	.	_	_	_	_
+
+#Text=Furthermore , each failure mode typically has long-term dependencies along with short-term ones of time series data .
+27-1	2119-2130	Furthermore	_	_	_	_
+27-2	2131-2132	,	_	_	_	_
+27-3	2133-2137	each	abstract[116]	new[116]	_	_
+27-4	2138-2145	failure	abstract|abstract[116]	giv|new[116]	_	_
+27-5	2146-2150	mode	abstract[116]	new[116]	_	_
+27-6	2151-2160	typically	_	_	_	_
+27-7	2161-2164	has	_	_	_	_
+27-8	2165-2174	long-term	abstract|abstract[118]	new|new[118]	_	_
+27-9	2175-2187	dependencies	abstract[118]	new[118]	_	_
+27-10	2188-2193	along	_	_	_	_
+27-11	2194-2198	with	_	_	_	_
+27-12	2199-2209	short-term	object[119]	new[119]	_	_
+27-13	2210-2214	ones	object[119]	new[119]	_	_
+27-14	2215-2217	of	object[119]	new[119]	_	_
+27-15	2218-2222	time	object[119]|abstract|abstract[121]|abstract[122]	new[119]|new|new[121]|giv[122]	coref|coref|coref|coref|coref|coref|coref|coref|coref	28-2[123_122]|37-13|37-13[167_121]|28-2[123_122]|37-13|37-13[167_121]|28-2[123_122]|37-13|37-13[167_121]
+27-16	2223-2229	series	object[119]|abstract[121]|abstract[122]	new[119]|new[121]|giv[122]	_	_
+27-17	2230-2234	data	object[119]|abstract[122]	new[119]|giv[122]	_	_
+27-18	2235-2236	.	_	_	_	_
+
+#Text=Besides normal data , Table 1 describes 20 different types of faults to evaluate various FDD methods .
+28-1	2237-2244	Besides	_	_	_	_
+28-2	2245-2251	normal	abstract[123]	giv[123]	coref	32-6[143_123]
+28-3	2252-2256	data	abstract[123]	giv[123]	_	_
+28-4	2257-2258	,	_	_	_	_
+28-5	2259-2264	Table	abstract|object[125]	new|new[125]	_	_
+28-6	2265-2266	1	object[125]	new[125]	_	_
+28-7	2267-2276	describes	_	_	_	_
+28-8	2277-2279	20	abstract[126]	new[126]	coref	40-6[175_126]
+28-9	2280-2289	different	abstract[126]	new[126]	_	_
+28-10	2290-2295	types	abstract[126]	new[126]	_	_
+28-11	2296-2298	of	abstract[126]	new[126]	_	_
+28-12	2299-2305	faults	abstract[126]|abstract	new[126]|new	coref	32-15
+28-13	2306-2308	to	_	_	_	_
+28-14	2309-2317	evaluate	_	_	_	_
+28-15	2318-2325	various	abstract[128]	new[128]	_	_
+28-16	2326-2329	FDD	abstract[128]	new[128]	_	_
+28-17	2330-2337	methods	abstract[128]	new[128]	_	_
+28-18	2338-2339	.	_	_	_	_
+
+#Text=Figure 4
+29-1	2340-2346	Figure	abstract[129]	new[129]	coref	35-1[161_129]
+29-2	2347-2348	4	abstract[129]	new[129]	_	_
+
+#Text=shows the raw process variable deviations from their normal states when fault 02 is introduced at after the simulation started .
+30-1	2349-2354	shows	_	_	_	_
+30-2	2355-2358	the	abstract[130]	giv[130]	coref	33-12[0_130]
+30-3	2359-2362	raw	abstract[130]	giv[130]	_	_
+30-4	2363-2370	process	abstract[130]	giv[130]	_	_
+30-5	2371-2379	variable	abstract[131]	new[131]	ana	30-8[0_131]
+30-6	2380-2390	deviations	abstract[131]	new[131]	_	_
+30-7	2391-2395	from	_	_	_	_
+30-8	2396-2401	their	abstract|abstract[133]	giv|new[133]	coref|coref	42-10[185_133]|42-10[185_133]
+30-9	2402-2408	normal	abstract[133]	new[133]	_	_
+30-10	2409-2415	states	abstract[133]	new[133]	_	_
+30-11	2416-2420	when	_	_	_	_
+30-12	2421-2426	fault	abstract|abstract[135]	new|new[135]	coref|coref	33-5|33-5
+30-13	2427-2429	02	abstract[135]	new[135]	_	_
+30-14	2430-2432	is	_	_	_	_
+30-15	2433-2443	introduced	_	_	_	_
+30-16	2444-2446	at	_	_	_	_
+30-17	2447-2452	after	_	_	_	_
+30-18	2453-2456	the	event[136]	new[136]	coref	39-1[172_136]
+30-19	2457-2467	simulation	event[136]	new[136]	_	_
+30-20	2468-2475	started	_	_	_	_
+30-21	2476-2477	.	_	_	_	_
+
+#Text=We also show the normalized variables by the mean and standard deviation of each feature .
+31-1	2478-2480	We	person	giv	ana	43-1
+31-2	2481-2485	also	_	_	_	_
+31-3	2486-2490	show	_	_	_	_
+31-4	2491-2494	the	abstract[138]	giv[138]	coref	33-11[156_138]
+31-5	2495-2505	normalized	abstract[138]	giv[138]	_	_
+31-6	2506-2515	variables	abstract[138]	giv[138]	_	_
+31-7	2516-2518	by	_	_	_	_
+31-8	2519-2522	the	abstract[139]	new[139]	_	_
+31-9	2523-2527	mean	abstract[139]	new[139]	_	_
+31-10	2528-2531	and	abstract[139]	new[139]	_	_
+31-11	2532-2540	standard	abstract[139]	new[139]	_	_
+31-12	2541-2550	deviation	abstract[139]	new[139]	_	_
+31-13	2551-2553	of	abstract[139]	new[139]	_	_
+31-14	2554-2558	each	abstract[139]|abstract[140]	new[139]|new[140]	_	_
+31-15	2559-2566	feature	abstract[139]|abstract[140]	new[139]|new[140]	_	_
+31-16	2567-2568	.	_	_	_	_
+
+#Text=Although the time-varying features of multivariate data are critical to identify the types of faults , the distinction between various types of faults is a challenging task due to the complex interaction among control processes .
+32-1	2569-2577	Although	_	_	_	_
+32-2	2578-2581	the	abstract[142]	new[142]	_	_
+32-3	2582-2594	time-varying	abstract|abstract[142]	new|new[142]	_	_
+32-4	2595-2603	features	abstract[142]	new[142]	_	_
+32-5	2604-2606	of	abstract[142]	new[142]	_	_
+32-6	2607-2619	multivariate	abstract[142]|abstract[143]	new[142]|giv[143]	coref	37-13[168_143]
+32-7	2620-2624	data	abstract[142]|abstract[143]	new[142]|giv[143]	_	_
+32-8	2625-2628	are	_	_	_	_
+32-9	2629-2637	critical	_	_	_	_
+32-10	2638-2640	to	_	_	_	_
+32-11	2641-2649	identify	_	_	_	_
+32-12	2650-2653	the	abstract[144]	new[144]	_	_
+32-13	2654-2659	types	abstract[144]	new[144]	_	_
+32-14	2660-2662	of	abstract[144]	new[144]	_	_
+32-15	2663-2669	faults	abstract[144]|abstract	new[144]|giv	coref	32-23
+32-16	2670-2671	,	_	_	_	_
+32-17	2672-2675	the	abstract[146]	new[146]	coref	32-25[149_146]
+32-18	2676-2687	distinction	abstract[146]	new[146]	_	_
+32-19	2688-2695	between	abstract[146]	new[146]	_	_
+32-20	2696-2703	various	abstract[146]|abstract[147]	new[146]|new[147]	_	_
+32-21	2704-2709	types	abstract[146]|abstract[147]	new[146]|new[147]	_	_
+32-22	2710-2712	of	abstract[146]|abstract[147]	new[146]|new[147]	_	_
+32-23	2713-2719	faults	abstract[146]|abstract[147]|abstract	new[146]|new[147]|giv	coref	34-11
+32-24	2720-2722	is	_	_	_	_
+32-25	2723-2724	a	abstract[149]	giv[149]	_	_
+32-26	2725-2736	challenging	abstract[149]	giv[149]	_	_
+32-27	2737-2741	task	abstract[149]	giv[149]	_	_
+32-28	2742-2745	due	abstract[149]	giv[149]	_	_
+32-29	2746-2748	to	_	_	_	_
+32-30	2749-2752	the	abstract[150]	new[150]	_	_
+32-31	2753-2760	complex	abstract[150]	new[150]	_	_
+32-32	2761-2772	interaction	abstract[150]	new[150]	_	_
+32-33	2773-2778	among	abstract[150]	new[150]	_	_
+32-34	2779-2786	control	abstract[150]|abstract|abstract[152]	new[150]|new|new[152]	_	_
+32-35	2787-2796	processes	abstract[150]|abstract[152]	new[150]|new[152]	_	_
+32-36	2797-2798	.	_	_	_	_
+
+#Text=In fact , the fault effect is considerably different for various process variables .
+33-1	2799-2801	In	_	_	_	_
+33-2	2802-2806	fact	_	_	_	_
+33-3	2807-2808	,	_	_	_	_
+33-4	2809-2812	the	abstract[154]	new[154]	_	_
+33-5	2813-2818	fault	abstract|abstract[154]	giv|new[154]	coref	40-1[174_0]
+33-6	2819-2825	effect	abstract[154]	new[154]	_	_
+33-7	2826-2828	is	_	_	_	_
+33-8	2829-2841	considerably	_	_	_	_
+33-9	2842-2851	different	_	_	_	_
+33-10	2852-2855	for	_	_	_	_
+33-11	2856-2863	various	abstract[156]	giv[156]	coref	34-5[157_156]
+33-12	2864-2871	process	abstract|abstract[156]	giv|giv[156]	coref	38-5
+33-13	2872-2881	variables	abstract[156]	giv[156]	_	_
+33-14	2882-2883	.	_	_	_	_
+
+#Text=Furthermore , even if some variables are oscillating due to faults , there is a significant delay to recognize it as shown in
+34-1	2884-2895	Furthermore	_	_	_	_
+34-2	2896-2897	,	_	_	_	_
+34-3	2898-2902	even	_	_	_	_
+34-4	2903-2905	if	_	_	_	_
+34-5	2906-2910	some	abstract[157]	giv[157]	_	_
+34-6	2911-2920	variables	abstract[157]	giv[157]	_	_
+34-7	2921-2924	are	_	_	_	_
+34-8	2925-2936	oscillating	_	_	_	_
+34-9	2937-2940	due	_	_	_	_
+34-10	2941-2943	to	_	_	_	_
+34-11	2944-2950	faults	abstract	giv	coref	45-9[203_0]
+34-12	2951-2952	,	_	_	_	_
+34-13	2953-2958	there	_	_	_	_
+34-14	2959-2961	is	_	_	_	_
+34-15	2962-2963	a	abstract[159]	new[159]	ana	34-20[0_159]
+34-16	2964-2975	significant	abstract[159]	new[159]	_	_
+34-17	2976-2981	delay	abstract[159]	new[159]	_	_
+34-18	2982-2984	to	_	_	_	_
+34-19	2985-2994	recognize	_	_	_	_
+34-20	2995-2997	it	abstract	giv	coref	50-15[241_0]
+34-21	2998-3000	as	_	_	_	_
+34-22	3001-3006	shown	_	_	_	_
+34-23	3007-3009	in	_	_	_	_
+
+#Text=Figure 4
+35-1	3010-3016	Figure	abstract[161]	giv[161]	_	_
+35-2	3017-3018	4	abstract[161]	giv[161]	_	_
+
+#Text=.
+36-1	3019-3020	.	_	_	_	_
+
+#Text=The combined autoencoder and LSTM network must mine the hidden features of time series data .
+37-1	3021-3024	The	abstract[162]	new[162]	coref	45-13[204_162]
+37-2	3025-3033	combined	abstract[162]	new[162]	_	_
+37-3	3034-3045	autoencoder	abstract[162]	new[162]	_	_
+37-4	3046-3049	and	_	_	_	_
+37-5	3050-3054	LSTM	object|abstract[164]	new|new[164]	coref|coref|coref|coref	49-8|49-7[232_164]|49-8|49-7[232_164]
+37-6	3055-3062	network	abstract[164]	new[164]	_	_
+37-7	3063-3067	must	_	_	_	_
+37-8	3068-3072	mine	_	_	_	_
+37-9	3073-3076	the	abstract[165]	new[165]	coref	47-11[220_165]
+37-10	3077-3083	hidden	abstract[165]	new[165]	_	_
+37-11	3084-3092	features	abstract[165]	new[165]	_	_
+37-12	3093-3095	of	abstract[165]	new[165]	_	_
+37-13	3096-3100	time	abstract[165]|abstract|abstract[167]|abstract[168]	new[165]|giv|giv[167]|giv[168]	coref|coref|coref|coref|coref|coref	44-7[0_167]|49-13[233_168]|44-7[0_167]|49-13[233_168]|44-7[0_167]|49-13[233_168]
+37-14	3101-3107	series	abstract[165]|abstract[167]|abstract[168]	new[165]|giv[167]|giv[168]	_	_
+37-15	3108-3112	data	abstract[165]|abstract[168]	new[165]|giv[168]	_	_
+37-16	3113-3114	.	_	_	_	_
+
+#Text=More detailed information of TEP is described in Reference .
+38-1	3115-3119	More	abstract[169]	new[169]	_	_
+38-2	3120-3128	detailed	abstract[169]	new[169]	_	_
+38-3	3129-3140	information	abstract[169]	new[169]	_	_
+38-4	3141-3143	of	abstract[169]	new[169]	_	_
+38-5	3144-3147	TEP	abstract[169]|abstract	new[169]|giv	coref	41-14
+38-6	3148-3150	is	_	_	_	_
+38-7	3151-3160	described	_	_	_	_
+38-8	3161-3163	in	_	_	_	_
+38-9	3164-3173	Reference	abstract	new	_	_
+38-10	3174-3175	.	_	_	_	_
+
+#Text=The simulation starts to run in the normal state for .
+39-1	3176-3179	The	event[172]	giv[172]	coref	41-5[0_172]
+39-2	3180-3190	simulation	event[172]	giv[172]	_	_
+39-3	3191-3197	starts	_	_	_	_
+39-4	3198-3200	to	_	_	_	_
+39-5	3201-3204	run	_	_	_	_
+39-6	3205-3207	in	_	_	_	_
+39-7	3208-3211	the	abstract[173]	new[173]	coref	45-6[0_173]
+39-8	3212-3218	normal	abstract[173]	new[173]	_	_
+39-9	3219-3224	state	abstract[173]	new[173]	_	_
+39-10	3225-3228	for	abstract[173]	new[173]	_	_
+39-11	3229-3230	.	_	_	_	_
+
+#Text=The specific fault out of 20 different types is then injected and it continues to run for .
+40-1	3231-3234	The	abstract[174]	giv[174]	ana	40-13[0_174]
+40-2	3235-3243	specific	abstract[174]	giv[174]	_	_
+40-3	3244-3249	fault	abstract[174]	giv[174]	_	_
+40-4	3250-3253	out	abstract[174]	giv[174]	_	_
+40-5	3254-3256	of	abstract[174]	giv[174]	_	_
+40-6	3257-3259	20	abstract[174]|abstract[175]	giv[174]|giv[175]	_	_
+40-7	3260-3269	different	abstract[174]|abstract[175]	giv[174]|giv[175]	_	_
+40-8	3270-3275	types	abstract[174]|abstract[175]	giv[174]|giv[175]	_	_
+40-9	3276-3278	is	_	_	_	_
+40-10	3279-3283	then	_	_	_	_
+40-11	3284-3292	injected	_	_	_	_
+40-12	3293-3296	and	_	_	_	_
+40-13	3297-3299	it	abstract	giv	coref	42-4[183_0]
+40-14	3300-3309	continues	_	_	_	_
+40-15	3310-3312	to	_	_	_	_
+40-16	3313-3316	run	_	_	_	_
+40-17	3317-3320	for	_	_	_	_
+40-18	3321-3322	.	_	_	_	_
+
+#Text=Hence , the total simulation time is based on the recommendation of the TEP model .
+41-1	3323-3328	Hence	_	_	_	_
+41-2	3329-3330	,	_	_	_	_
+41-3	3331-3334	the	abstract[178]	new[178]	coref	43-3[189_178]
+41-4	3335-3340	total	abstract[178]	new[178]	_	_
+41-5	3341-3351	simulation	event|abstract[178]	giv|new[178]	coref	42-1[182_0]
+41-6	3352-3356	time	abstract[178]	new[178]	_	_
+41-7	3357-3359	is	_	_	_	_
+41-8	3360-3365	based	_	_	_	_
+41-9	3366-3368	on	_	_	_	_
+41-10	3369-3372	the	abstract[179]	new[179]	_	_
+41-11	3373-3387	recommendation	abstract[179]	new[179]	_	_
+41-12	3388-3390	of	abstract[179]	new[179]	_	_
+41-13	3391-3394	the	abstract[179]|abstract[181]	new[179]|new[181]	_	_
+41-14	3395-3398	TEP	abstract[179]|object|abstract[181]	new[179]|giv|new[181]	coref	54-26
+41-15	3399-3404	model	abstract[179]|abstract[181]	new[179]|new[181]	_	_
+41-16	3405-3406	.	_	_	_	_
+
+#Text=Each simulation of the fault repeats 500 times with various initial states and random noise .
+42-1	3407-3411	Each	event[182]	giv[182]	coref	48-16[228_182]
+42-2	3412-3422	simulation	event[182]	giv[182]	_	_
+42-3	3423-3425	of	event[182]	giv[182]	_	_
+42-4	3426-3429	the	event[182]|abstract[183]	giv[182]|giv[183]	coref	43-15[0_183]
+42-5	3430-3435	fault	event[182]|abstract[183]	giv[182]|giv[183]	_	_
+42-6	3436-3443	repeats	_	_	_	_
+42-7	3444-3447	500	time[184]	new[184]	_	_
+42-8	3448-3453	times	time[184]	new[184]	_	_
+42-9	3454-3458	with	_	_	_	_
+42-10	3459-3466	various	abstract[185]	giv[185]	coref	45-19[207_185]
+42-11	3467-3474	initial	abstract[185]	giv[185]	_	_
+42-12	3475-3481	states	abstract[185]	giv[185]	_	_
+42-13	3482-3485	and	abstract[185]	giv[185]	_	_
+42-14	3486-3492	random	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+42-15	3493-3498	noise	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+42-16	3499-3500	.	_	_	_	_
+
+#Text=We set the sampling time as ( 20 samples/h ) to support the fast fault detection and fault diagnosis .
+43-1	3501-3503	We	person	giv	ana	44-1
+43-2	3504-3507	set	_	_	_	_
+43-3	3508-3511	the	abstract[189]	giv[189]	coref	51-11[0_189]
+43-4	3512-3520	sampling	object|abstract[189]	new|giv[189]	_	_
+43-5	3521-3525	time	abstract[189]	giv[189]	_	_
+43-6	3526-3528	as	_	_	_	_
+43-7	3529-3530	(	_	_	_	_
+43-8	3531-3533	20	_	_	_	_
+43-9	3534-3543	samples/h	_	_	_	_
+43-10	3544-3545	)	_	_	_	_
+43-11	3546-3548	to	_	_	_	_
+43-12	3549-3556	support	_	_	_	_
+43-13	3557-3560	the	abstract[191]	new[191]	coref	45-16[206_191]
+43-14	3561-3565	fast	abstract[191]	new[191]	_	_
+43-15	3566-3571	fault	abstract|abstract[191]	giv|new[191]	coref	43-18
+43-16	3572-3581	detection	abstract[191]	new[191]	_	_
+43-17	3582-3585	and	_	_	_	_
+43-18	3586-3591	fault	abstract|abstract[193]	giv|new[193]	coref|coref|coref|coref	51-20|55-5[0_193]|51-20|55-5[0_193]
+43-19	3592-3601	diagnosis	abstract[193]	new[193]	_	_
+43-20	3602-3603	.	_	_	_	_
+
+#Text=We randomly select 80 % time series sample as training sets and the remaining sample as testing sets .
+44-1	3604-3606	We	person	giv	ana	45-1
+44-2	3607-3615	randomly	_	_	_	_
+44-3	3616-3622	select	_	_	_	_
+44-4	3623-3625	80	quantity[195]|quantity[198]	new[195]|new[198]	_	_
+44-5	3626-3627	%	quantity[195]|quantity[198]	new[195]|new[198]	_	_
+44-6	3628-3632	time	time|quantity[198]	new|new[198]	coref	47-7
+44-7	3633-3639	series	abstract|quantity[198]	giv|new[198]	coref	47-8
+44-8	3640-3646	sample	quantity[198]	new[198]	_	_
+44-9	3647-3649	as	_	_	_	_
+44-10	3650-3658	training	abstract	new	coref	46-9
+44-11	3659-3663	sets	_	_	_	_
+44-12	3664-3667	and	_	_	_	_
+44-13	3668-3671	the	_	_	_	_
+44-14	3672-3681	remaining	_	_	_	_
+44-15	3682-3688	sample	_	_	_	_
+44-16	3689-3691	as	_	_	_	_
+44-17	3692-3699	testing	_	_	_	_
+44-18	3700-3704	sets	_	_	_	_
+44-19	3705-3706	.	_	_	_	_
+
+#Text=We only use the normal state samples without any faults to train the autoencoder for fault detection where anomalous and normal states correspond to positive and negative class , respectively .
+45-1	3707-3709	We	person	giv	ana	48-6
+45-2	3710-3714	only	_	_	_	_
+45-3	3715-3718	use	_	_	_	_
+45-4	3719-3722	the	object[202]	new[202]	coref	47-6[219_202]
+45-5	3723-3729	normal	object[202]	new[202]	_	_
+45-6	3730-3735	state	abstract|object[202]	giv|new[202]	coref	48-13
+45-7	3736-3743	samples	object[202]	new[202]	_	_
+45-8	3744-3751	without	_	_	_	_
+45-9	3752-3755	any	abstract[203]	giv[203]	coref	50-10[0_203]
+45-10	3756-3762	faults	abstract[203]	giv[203]	_	_
+45-11	3763-3765	to	_	_	_	_
+45-12	3766-3771	train	_	_	_	_
+45-13	3772-3775	the	abstract[204]	giv[204]	coref	46-23[216_204]
+45-14	3776-3787	autoencoder	abstract[204]	giv[204]	_	_
+45-15	3788-3791	for	abstract[204]	giv[204]	_	_
+45-16	3792-3797	fault	abstract[204]|person|abstract[206]	giv[204]|new|giv[206]	coref|coref	50-16[0_206]|50-16[0_206]
+45-17	3798-3807	detection	abstract[204]|abstract[206]	giv[204]|giv[206]	_	_
+45-18	3808-3813	where	_	_	_	_
+45-19	3814-3823	anomalous	abstract[207]	giv[207]	_	_
+45-20	3824-3827	and	abstract[207]	giv[207]	_	_
+45-21	3828-3834	normal	abstract[207]	giv[207]	_	_
+45-22	3835-3841	states	abstract[207]	giv[207]	_	_
+45-23	3842-3852	correspond	_	_	_	_
+45-24	3853-3855	to	_	_	_	_
+45-25	3856-3864	positive	event[208]	new[208]	coref	51-15[252_208]
+45-26	3865-3868	and	event[208]	new[208]	_	_
+45-27	3869-3877	negative	event[208]	new[208]	_	_
+45-28	3878-3883	class	event[208]	new[208]	_	_
+45-29	3884-3885	,	_	_	_	_
+45-30	3886-3898	respectively	_	_	_	_
+45-31	3899-3900	.	_	_	_	_
+
+#Text=In addition , 20 % of the whole training set is used as the validation set to optimize the decision threshold for the autoencoder .
+46-1	3901-3903	In	_	_	_	_
+46-2	3904-3912	addition	_	_	_	_
+46-3	3913-3914	,	_	_	_	_
+46-4	3915-3917	20	quantity[209]	new[209]	_	_
+46-5	3918-3919	%	quantity[209]	new[209]	_	_
+46-6	3920-3922	of	quantity[209]	new[209]	_	_
+46-7	3923-3926	the	quantity[209]|abstract[211]	new[209]|new[211]	coref	46-14[213_211]
+46-8	3927-3932	whole	quantity[209]|abstract[211]	new[209]|new[211]	_	_
+46-9	3933-3941	training	quantity[209]|abstract|abstract[211]	new[209]|giv|new[211]	coref	48-3
+46-10	3942-3945	set	quantity[209]|abstract[211]	new[209]|new[211]	_	_
+46-11	3946-3948	is	_	_	_	_
+46-12	3949-3953	used	_	_	_	_
+46-13	3954-3956	as	_	_	_	_
+46-14	3957-3960	the	abstract[213]	giv[213]	coref	48-2[224_213]
+46-15	3961-3971	validation	event|abstract[213]	new|giv[213]	_	_
+46-16	3972-3975	set	abstract[213]	giv[213]	_	_
+46-17	3976-3978	to	_	_	_	_
+46-18	3979-3987	optimize	_	_	_	_
+46-19	3988-3991	the	abstract[215]	new[215]	_	_
+46-20	3992-4000	decision	abstract|abstract[215]	new|new[215]	_	_
+46-21	4001-4010	threshold	abstract[215]	new[215]	_	_
+46-22	4011-4014	for	abstract[215]	new[215]	_	_
+46-23	4015-4018	the	abstract[215]|abstract[216]	new[215]|giv[216]	coref	50-24[243_216]
+46-24	4019-4030	autoencoder	abstract[215]|abstract[216]	new[215]|giv[216]	_	_
+46-25	4031-4032	.	_	_	_	_
+
+#Text=On the other hand , the time series samples with temporal features are used to train the LSTM-based classifier .
+47-1	4033-4035	On	_	_	_	_
+47-2	4036-4039	the	_	_	_	_
+47-3	4040-4045	other	_	_	_	_
+47-4	4046-4050	hand	_	_	_	_
+47-5	4051-4052	,	_	_	_	_
+47-6	4053-4056	the	object[219]	giv[219]	coref	48-11[227_219]
+47-7	4057-4061	time	time|object[219]	giv|giv[219]	_	_
+47-8	4062-4068	series	abstract|object[219]	giv|giv[219]	coref	51-12
+47-9	4069-4076	samples	object[219]	giv[219]	_	_
+47-10	4077-4081	with	object[219]	giv[219]	_	_
+47-11	4082-4090	temporal	object[219]|abstract[220]	giv[219]|giv[220]	_	_
+47-12	4091-4099	features	object[219]|abstract[220]	giv[219]|giv[220]	_	_
+47-13	4100-4103	are	_	_	_	_
+47-14	4104-4108	used	_	_	_	_
+47-15	4109-4111	to	_	_	_	_
+47-16	4112-4117	train	_	_	_	_
+47-17	4118-4121	the	abstract[222]	new[222]	_	_
+47-18	4122-4132	LSTM-based	abstract|abstract[222]	new|new[222]	_	_
+47-19	4133-4143	classifier	abstract[222]	new[222]	_	_
+47-20	4144-4145	.	_	_	_	_
+
+#Text=In this training set , we remove the first of the normal state samples in each simulation .
+48-1	4146-4148	In	_	_	_	_
+48-2	4149-4153	this	abstract[224]	giv[224]	coref	49-3[230_224]
+48-3	4154-4162	training	abstract|abstract[224]	giv|giv[224]	coref	49-4
+48-4	4163-4166	set	abstract[224]	giv[224]	_	_
+48-5	4167-4168	,	_	_	_	_
+48-6	4169-4171	we	person	giv	ana	55-1
+48-7	4172-4178	remove	_	_	_	_
+48-8	4179-4182	the	_	_	_	_
+48-9	4183-4188	first	_	_	_	_
+48-10	4189-4191	of	_	_	_	_
+48-11	4192-4195	the	object[227]	giv[227]	coref	50-4[238_227]
+48-12	4196-4202	normal	object[227]	giv[227]	_	_
+48-13	4203-4208	state	abstract|object[227]	giv|giv[227]	coref	49-18
+48-14	4209-4216	samples	object[227]	giv[227]	_	_
+48-15	4217-4219	in	object[227]	giv[227]	_	_
+48-16	4220-4224	each	object[227]|event[228]	giv[227]|giv[228]	_	_
+48-17	4225-4235	simulation	object[227]|event[228]	giv[227]|giv[228]	_	_
+48-18	4236-4237	.	_	_	_	_
+
+#Text=Hence , each training set of the LSTM network consists with of normal data and of faulty state data .
+49-1	4238-4243	Hence	_	_	_	_
+49-2	4244-4245	,	_	_	_	_
+49-3	4246-4250	each	abstract[230]	giv[230]	coref	51-5[247_230]
+49-4	4251-4259	training	abstract|abstract[230]	giv|giv[230]	_	_
+49-5	4260-4263	set	abstract[230]	giv[230]	_	_
+49-6	4264-4266	of	abstract[230]	giv[230]	_	_
+49-7	4267-4270	the	abstract[230]|abstract[232]	giv[230]|giv[232]	coref	54-5[259_232]
+49-8	4271-4275	LSTM	abstract[230]|object|abstract[232]	giv[230]|giv|giv[232]	coref	51-9
+49-9	4276-4283	network	abstract[230]|abstract[232]	giv[230]|giv[232]	_	_
+49-10	4284-4292	consists	_	_	_	_
+49-11	4293-4297	with	_	_	_	_
+49-12	4298-4300	of	_	_	_	_
+49-13	4301-4307	normal	abstract[233]	giv[233]	coref	49-17[235_233]
+49-14	4308-4312	data	abstract[233]	giv[233]	_	_
+49-15	4313-4316	and	_	_	_	_
+49-16	4317-4319	of	_	_	_	_
+49-17	4320-4326	faulty	abstract[235]	giv[235]	coref	51-11[251_235]
+49-18	4327-4332	state	abstract|abstract[235]	giv|giv[235]	coref	50-6
+49-19	4333-4337	data	abstract[235]	giv[235]	_	_
+49-20	4338-4339	.	_	_	_	_
+
+#Text=The fraction of the normal state samples prior to faults is used to compensate the detection delay and the possible false positives of the autoencoder .
+50-1	4340-4343	The	abstract[236]	new[236]	_	_
+50-2	4344-4352	fraction	abstract[236]	new[236]	_	_
+50-3	4353-4355	of	abstract[236]	new[236]	_	_
+50-4	4356-4359	the	abstract[236]|object[238]	new[236]|giv[238]	_	_
+50-5	4360-4366	normal	abstract[236]|object[238]	new[236]|giv[238]	_	_
+50-6	4367-4372	state	abstract[236]|abstract|object[238]	new[236]|giv|giv[238]	_	_
+50-7	4373-4380	samples	abstract[236]|object[238]	new[236]|giv[238]	_	_
+50-8	4381-4386	prior	abstract[236]|object[238]	new[236]|giv[238]	_	_
+50-9	4387-4389	to	abstract[236]|object[238]	new[236]|giv[238]	_	_
+50-10	4390-4396	faults	abstract[236]|object[238]|abstract	new[236]|giv[238]|giv	_	_
+50-11	4397-4399	is	_	_	_	_
+50-12	4400-4404	used	_	_	_	_
+50-13	4405-4407	to	_	_	_	_
+50-14	4408-4418	compensate	_	_	_	_
+50-15	4419-4422	the	abstract[241]	giv[241]	_	_
+50-16	4423-4432	detection	abstract|abstract[241]	giv|giv[241]	coref	51-19[254_0]
+50-17	4433-4438	delay	abstract[241]	giv[241]	_	_
+50-18	4439-4442	and	_	_	_	_
+50-19	4443-4446	the	abstract[242]	new[242]	_	_
+50-20	4447-4455	possible	abstract[242]	new[242]	_	_
+50-21	4456-4461	false	abstract[242]	new[242]	_	_
+50-22	4462-4471	positives	abstract[242]	new[242]	_	_
+50-23	4472-4474	of	abstract[242]	new[242]	_	_
+50-24	4475-4478	the	abstract[242]|abstract[243]	new[242]|giv[243]	coref	51-25[255_243]
+50-25	4479-4490	autoencoder	abstract[242]|abstract[243]	new[242]|giv[243]	_	_
+50-26	4491-4492	.	_	_	_	_
+
+#Text=The input sequence of the testing set for LSTM includes time series data before the first event of the fault detection , captured by the autoencoder .
+51-1	4493-4496	The	abstract[245]	new[245]	_	_
+51-2	4497-4502	input	abstract|abstract[245]	new|new[245]	_	_
+51-3	4503-4511	sequence	abstract[245]	new[245]	_	_
+51-4	4512-4514	of	abstract[245]	new[245]	_	_
+51-5	4515-4518	the	abstract[245]|abstract[247]	new[245]|giv[247]	_	_
+51-6	4519-4526	testing	abstract[245]|abstract|abstract[247]	new[245]|new|giv[247]	_	_
+51-7	4527-4530	set	abstract[245]|abstract[247]	new[245]|giv[247]	_	_
+51-8	4531-4534	for	abstract[245]|abstract[247]	new[245]|giv[247]	_	_
+51-9	4535-4539	LSTM	abstract[245]|abstract[247]|abstract	new[245]|giv[247]|giv	coref	55-8
+51-10	4540-4548	includes	_	_	_	_
+51-11	4549-4553	time	abstract|abstract[251]	giv|giv[251]	coref|coref|coref|coref	54-20|54-19[264_251]|54-20|54-19[264_251]
+51-12	4554-4560	series	abstract|abstract[251]	giv|giv[251]	coref	54-21
+51-13	4561-4565	data	abstract[251]	giv[251]	_	_
+51-14	4566-4572	before	_	_	_	_
+51-15	4573-4576	the	event[252]	giv[252]	_	_
+51-16	4577-4582	first	event[252]	giv[252]	_	_
+51-17	4583-4588	event	event[252]	giv[252]	_	_
+51-18	4589-4591	of	event[252]	giv[252]	_	_
+51-19	4592-4595	the	event[252]|abstract[254]	giv[252]|giv[254]	_	_
+51-20	4596-4601	fault	event[252]|abstract|abstract[254]	giv[252]|giv|giv[254]	coref	55-4
+51-21	4602-4611	detection	event[252]|abstract[254]	giv[252]|giv[254]	_	_
+51-22	4612-4613	,	_	_	_	_
+51-23	4614-4622	captured	_	_	_	_
+51-24	4623-4625	by	_	_	_	_
+51-25	4626-4629	the	abstract[255]	giv[255]	_	_
+51-26	4630-4641	autoencoder	abstract[255]	giv[255]	_	_
+51-27	4642-4643	.	_	_	_	_
+
+#Text=4.2 .
+52-1	4644-4647	4.2	abstract	new	_	_
+52-2	4648-4649	.	_	_	_	_
+
+#Text=DCNN
+53-1	4650-4654	DCNN	organization	new	_	_
+
+#Text=In previous research , a deep convolutional neural network ( DCNN)-based approach achieves the best reported results in multivariate time series data from the simulated TEP dataset .
+54-1	4655-4657	In	_	_	_	_
+54-2	4658-4666	previous	abstract[258]	new[258]	_	_
+54-3	4667-4675	research	abstract[258]	new[258]	_	_
+54-4	4676-4677	,	_	_	_	_
+54-5	4678-4679	a	abstract[259]	giv[259]	_	_
+54-6	4680-4684	deep	abstract[259]	giv[259]	_	_
+54-7	4685-4698	convolutional	abstract[259]	giv[259]	_	_
+54-8	4699-4705	neural	abstract[259]	giv[259]	_	_
+54-9	4706-4713	network	abstract[259]	giv[259]	_	_
+54-10	4714-4715	(	_	_	_	_
+54-11	4716-4727	DCNN)-based	abstract[260]	new[260]	_	_
+54-12	4728-4736	approach	abstract[260]	new[260]	_	_
+54-13	4737-4745	achieves	_	_	_	_
+54-14	4746-4749	the	abstract[261]	new[261]	_	_
+54-15	4750-4754	best	abstract[261]	new[261]	_	_
+54-16	4755-4763	reported	abstract[261]	new[261]	_	_
+54-17	4764-4771	results	abstract[261]	new[261]	_	_
+54-18	4772-4774	in	abstract[261]	new[261]	_	_
+54-19	4775-4787	multivariate	abstract[261]|abstract[264]	new[261]|giv[264]	_	_
+54-20	4788-4792	time	abstract[261]|abstract|abstract[264]	new[261]|giv|giv[264]	_	_
+54-21	4793-4799	series	abstract[261]|abstract|abstract[264]	new[261]|giv|giv[264]	_	_
+54-22	4800-4804	data	abstract[261]|abstract[264]	new[261]|giv[264]	_	_
+54-23	4805-4809	from	abstract[261]|abstract[264]	new[261]|giv[264]	_	_
+54-24	4810-4813	the	abstract[261]|abstract[264]|object[266]	new[261]|giv[264]|new[266]	coref	55-13[274_266]
+54-25	4814-4823	simulated	abstract[261]|abstract[264]|object[266]	new[261]|giv[264]|new[266]	_	_
+54-26	4824-4827	TEP	abstract[261]|abstract[264]|abstract|object[266]	new[261]|giv[264]|giv|new[266]	coref	55-14
+54-27	4828-4835	dataset	abstract[261]|abstract[264]|object[266]	new[261]|giv[264]|new[266]	_	_
+54-28	4836-4837	.	_	_	_	_
+
+#Text=We compare the fault diagnosis performance of LSTM and DCNN-based approaches on the TEP dataset .
+55-1	4838-4840	We	person	giv	_	_
+55-2	4841-4848	compare	_	_	_	_
+55-3	4849-4852	the	abstract[270]	new[270]	_	_
+55-4	4853-4858	fault	abstract|abstract[270]	giv|new[270]	_	_
+55-5	4859-4868	diagnosis	abstract|abstract[270]	giv|new[270]	_	_
+55-6	4869-4880	performance	abstract[270]	new[270]	_	_
+55-7	4881-4883	of	abstract[270]	new[270]	_	_
+55-8	4884-4888	LSTM	abstract[270]|abstract	new[270]|giv	_	_
+55-9	4889-4892	and	abstract[270]	new[270]	_	_
+55-10	4893-4903	DCNN-based	abstract[270]|abstract[272]	new[270]|new[272]	_	_
+55-11	4904-4914	approaches	abstract[270]|abstract[272]	new[270]|new[272]	_	_
+55-12	4915-4917	on	abstract[270]|abstract[272]	new[270]|new[272]	_	_
+55-13	4918-4921	the	abstract[270]|abstract[272]|object[274]	new[270]|new[272]|giv[274]	_	_
+55-14	4922-4925	TEP	abstract[270]|abstract[272]|abstract|object[274]	new[270]|new[272]|giv|giv[274]	_	_
+55-15	4926-4933	dataset	abstract[270]|abstract[272]|object[274]	new[270]|new[272]|giv[274]	_	_
+55-16	4934-4935	.	_	_	_	_

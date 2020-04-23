@@ -1,0 +1,167 @@
+Let stand for the prediction signal of , and represent discrete cosine transform ( DCT ) and inverse DCT , respectively , then the decoded video sequence can be obtained by Equations ( 2 ) and ( 3 ) , where means the decoded version of , represents the rounding operator , and denote the irreversible quantization error and reconstruction error of and , respectively .
+1,2 person
+4,8 abstract|11,14 abstract|11,20 abstract|15,16 abstract|24,28 abstract|26,28 abstract|32,33 abstract|32,39 abstract|49,52 abstract|55,59 abstract|55,66 abstract|60,61 abstract
+
+Assume one uncompressed video sequence V consists of N P pictures and is expressed as Equation ( 1 ) , where denotes the n th P picture of V , then the bit stream can be obtained by implementing the prediction , transform , quantization , and entropy coding process .
+1,2 person
+1,7 abstract|9,12 abstract|9,12 object|16,17 abstract|16,19 abstract|23,30 object|32,35 abstract|40,46 abstract|40,51 abstract|48,51 abstract
+
+Knowing the number of bits allocated to the n th P picture , the type of the k th CU in the n th P picture can be written as Equation ( 5 ) , where stands for the CU partition process , and denotes the corresponding prediction signal of .
+1,2 person
+2,6 abstract|2,6 quantity|8,13 abstract|8,13 object|14,27 abstract|17,27 abstract|22,27 abstract|22,27 object|31,32 abstract|31,34 abstract|39,43 abstract|46,51 abstract
+
+For a singly compressed HEVC video with bitrate , the number of bits allocated to the n th P picture , and the CU partition type will be determined by Equations ( 6 ) and ( 7 ) . ( 6 ) ( 7 )
+1,2 person
+2,9 abstract|8,9 abstract|10,14 quantity|16,21 abstract|16,21 object|23,27 abstract|31,32 abstract|37,38 abstract|44,45 abstract
+
+In the AVC and HEVC encoding process , quantization and reconstruction are basic operations , but they will introduce irreversible quantization errors and reconstruction errors , which make the decoded video different from the original one .
+1,2 person
+2,8 abstract|5,8 abstract|9,10 abstract|9,12 abstract|13,15 abstract|17,18 abstract|20,23 abstract|24,26 abstract|29,32 object|34,37 object
+
+, we can see that CU and PU partition types of each picture are determined by the content of the picture and the number of bits allocated to it by the rate control module .
+1,2 person
+2,3 person|6,7 abstract|6,14 abstract|8,9 abstract|12,14 abstract|12,14 object|17,22 abstract|20,22 object|23,27 abstract|29,30 abstract|31,34 abstract|31,35 abstract|31,35 object
+
+In addition , AVC standard adopts macroblock as the basic coding unit and does not introduce the concept of CU ; hence , CU types do not exist in the AVC encoding process .
+1,2 person
+7,8 abstract|7,8 object|9,13 abstract|17,21 abstract|20,21 abstract|24,25 abstract|24,26 abstract|30,34 abstract|31,34 abstract
+
+Assume the bit rate for V is r , let denote the rate control process , then , the number of bits allocated to the n th P picture can be represented as .
+1,2 person
+2,7 abstract|6,7 abstract|8,9 abstract|12,16 abstract|13,16 abstract|19,23 abstract|19,23 quantity|25,30 abstract|25,30 object
+
+Eventually , we can get the difference of CU partition types between the AVC/HEVC video and the singly compressed HEVC video according to Equation ( 8 ) . ( 8 )
+1,2 person
+3,4 person|6,12 abstract|9,12 abstract|13,16 abstract|17,22 abstract|24,25 abstract|30,31 abstract
+
+In the process of transcoding to the HEVC bit stream , the number of bits are allocated to the n th P picture according to Equation ( 4 ) .
+1,2 person
+2,11 abstract|7,11 abstract|12,16 abstract|12,16 quantity|19,24 object|26,27 abstract|28,29 abstract
+
+One is that the reconstruction module in the encoding process is equivalent to the decoding process ; thus we directly use the reconstruction module to represent the decoder in
+1,2 person
+1,2 abstract|4,7 abstract|8,11 abstract|14,17 abstract|19,20 person|22,25 abstract|27,29 abstract
+
+Here we use rather than to represent the rate control process because the bits allocation function adopted in HEVC is different from the AVC standard . ( 4 )
+1,2 person
+2,3 person|8,12 abstract|9,12 abstract|13,16 abstract|13,17 abstract|19,20 abstract|23,26 abstract
+
+The change of video content will further affect the CU and PU partition types and makes them different between AVC/HEVC videos and singly compressed HEVC videos .
+1,2 person
+1,6 abstract|4,5 abstract|4,6 abstract|9,15 abstract|12,15 abstract|20,22 abstract|20,27 abstract|20,27 object|23,27 object
+
+That is to say , for a singly compressed HEVC video , the input video is the uncompressed YUV video V , not its decoded version .
+1,2 person
+7,12 abstract|7,12 object|13,16 abstract|13,16 object|17,22 object|17,27 abstract|24,25 object|24,27 abstract
+
+Therefore , we take the CU types in P pictures as an example to analyze the difference between AVC/HEVC videos and singly compressed HEVC videos .
+1,2 person
+3,4 person|5,8 abstract|5,11 abstract|9,11 abstract|9,11 object|12,14 abstract|16,21 abstract|16,26 abstract|19,21 object|19,26 object|22,26 object
+
+Given a YUV video V , the first step is to encode V into the AVC bit stream with bitrate .
+1,2 person
+2,6 abstract|7,10 abstract|13,14 abstract|15,19 abstract|20,21 abstract
+
+Though CU and PU partition types in I pictures are different from P pictures , the partition strategy is similar .
+1,2 person
+2,3 abstract|2,10 abstract|2,10 object|4,5 abstract|8,10 object|13,15 object|16,19 abstract|17,19 abstract
+
+YUV video is a kind of uncompressed video and often used as test example of video encoders .
+1,2 person
+1,3 abstract|4,9 abstract|13,18 abstract
+
+Then will be decoded to YUV video and recompressed into the HEVC bit stream with bitrate .
+1,2 person
+6,7 abstract|6,8 abstract|11,15 abstract|11,17 abstract|16,17 abstract
+
+The other one is that only HEVC encoding is implemented for a singly compressed HEVC video .
+1,2 person
+1,4 abstract|7,9 abstract|12,17 abstract
+
+The reconstruction error means the rounding error and truncation error generated in the reconstruction process .
+1,2 person
+1,4 abstract|5,8 abstract|9,11 abstract|13,16 abstract
+
+Here , please note that in this paper , a picture contains only one slice .
+1,2 person
+7,9 object|10,12 object|13,16 object
+
+After that , the quantization step for the picture will be determined according to .
+1,2 person
+4,10 abstract|8,10 abstract|8,10 object
+
+In the AVC encoding process , a rate control process is implemented .
+1,2 person
+2,6 abstract|3,6 abstract|7,10 abstract|7,11 abstract
+
+The quantization error means the error introduced in the quantization process .
+1,2 person
+1,4 abstract|5,7 abstract|9,12 abstract
+
+The decoding process is the inverse process of encoding .
+1,2 person
+1,4 abstract|5,10 abstract|9,10 abstract
+
+We will illustrate the difference elaborately in this section .
+1,2 person
+1,2 person|4,6 abstract|8,10 abstract|8,10 object
+
+Now let ’s consider the AVC/HEVC transcoding process .
+1,2 person
+3,4 person|5,9 abstract
+
+CU and PU Partition Types Analysis in Singly Compressed
+1,2 person
+1,6 abstract|1,10 abstract|4,5 abstract
+
+describes the simplified block diagram of AVC/HEVC transcoding .
+1,2 person
+2,9 abstract|7,9 abstract
+
+Please note two points here .
+1,2 person
+3,5 abstract
+
+( 2 ) ( 3 )
+1,2 person
+1,3 abstract|2,3 abstract
+
+HEVC Videos and AVC/HEVC Videos
+1,2 person
+1,3 object|4,6 object
+
+to save space .
+1,2 person
+3,4 abstract
+
+( 1 )
+1,2 person
+2,3 abstract
+
+( 5 )
+1,2 person
+
+
+3.1 .
+1,2 person
+1,2 abstract
+
+Theoretical Analysis
+1,2 person
+1,3 abstract
+
+3 .
+1,2 person
+
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 4
+1,2 person
+1,3 abstract
+
+Figure 4
+1,2 person
+1,3 abstract

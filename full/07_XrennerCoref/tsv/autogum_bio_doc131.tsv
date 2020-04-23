@@ -1,0 +1,988 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Andrew N.
+1-1	0-6	Andrew	person[1]	new[1]	coref	3-1[3_1]
+1-2	7-9	N.	person[1]	new[1]	_	_
+
+#Text=Iwaniuk
+2-1	10-17	Iwaniuk	person	new	_	_
+
+#Text=Andrew N. Iwaniuk
+3-1	18-24	Andrew	person[3]	giv[3]	_	_
+3-2	25-27	N.	person[3]	giv[3]	_	_
+3-3	28-35	Iwaniuk	person[3]	giv[3]	_	_
+
+#Text=is a Canadian biologist who largely works in the fields of evolutionary neuroscience , neuroethology and ornithology .
+4-1	36-38	is	_	_	_	_
+4-2	39-40	a	person[4]	new[4]	_	_
+4-3	41-49	Canadian	person[4]	new[4]	_	_
+4-4	50-59	biologist	person[4]	new[4]	_	_
+4-5	60-63	who	_	_	_	_
+4-6	64-71	largely	_	_	_	_
+4-7	72-77	works	_	_	_	_
+4-8	78-80	in	_	_	_	_
+4-9	81-84	the	abstract[5]	new[5]	_	_
+4-10	85-91	fields	abstract[5]	new[5]	_	_
+4-11	92-94	of	abstract[5]	new[5]	_	_
+4-12	95-107	evolutionary	abstract[5]|abstract[6]	new[5]|new[6]	coref	12-11[0_6]
+4-13	108-120	neuroscience	abstract[5]|abstract[6]	new[5]|new[6]	_	_
+4-14	121-122	,	abstract[5]	new[5]	_	_
+4-15	123-136	neuroethology	abstract[5]|abstract	new[5]|new	_	_
+4-16	137-140	and	abstract[5]	new[5]	_	_
+4-17	141-152	ornithology	abstract[5]|abstract	new[5]|new	_	_
+4-18	153-154	.	_	_	_	_
+
+#Text=Biography
+5-1	155-164	Biography	abstract	new	_	_
+
+#Text=Iwaniuk was born in Toronto , Ontario , Canada and grew up in Edmonton , Alberta , Canada .
+6-1	165-172	Iwaniuk	person	new	ana	7-1
+6-2	173-176	was	_	_	_	_
+6-3	177-181	born	_	_	_	_
+6-4	182-184	in	_	_	_	_
+6-5	185-192	Toronto	place[11]	new[11]	_	_
+6-6	193-194	,	place[11]	new[11]	_	_
+6-7	195-202	Ontario	place[11]|place[12]	new[11]|new[12]	_	_
+6-8	203-204	,	place[11]|place[12]	new[11]|new[12]	_	_
+6-9	205-211	Canada	place[11]|place[12]|place	new[11]|new[12]|new	coref	6-18
+6-10	212-215	and	_	_	_	_
+6-11	216-220	grew	_	_	_	_
+6-12	221-223	up	_	_	_	_
+6-13	224-226	in	_	_	_	_
+6-14	227-235	Edmonton	place	new	_	_
+6-15	236-237	,	_	_	_	_
+6-16	238-245	Alberta	place	new	coref	7-7
+6-17	246-247	,	_	_	_	_
+6-18	248-254	Canada	place	giv	coref	8-6
+6-19	255-256	.	_	_	_	_
+
+#Text=He went to the University of Alberta but decided not to stay there , instead he went to Monash University in Melbourne , Australia to complete his Honours degree with John E. Nelson .
+7-1	257-259	He	person	giv	ana	7-16
+7-2	260-264	went	_	_	_	_
+7-3	265-267	to	_	_	_	_
+7-4	268-271	the	organization[18]	new[18]	coref	7-19[22_18]
+7-5	272-282	University	organization[18]	new[18]	_	_
+7-6	283-285	of	organization[18]	new[18]	_	_
+7-7	286-293	Alberta	organization[18]|place	new[18]|giv	coref	10-21
+7-8	294-297	but	_	_	_	_
+7-9	298-305	decided	_	_	_	_
+7-10	306-309	not	_	_	_	_
+7-11	310-312	to	_	_	_	_
+7-12	313-317	stay	_	_	_	_
+7-13	318-323	there	_	_	_	_
+7-14	324-325	,	_	_	_	_
+7-15	326-333	instead	_	_	_	_
+7-16	334-336	he	person	giv	ana	7-27
+7-17	337-341	went	_	_	_	_
+7-18	342-344	to	_	_	_	_
+7-19	345-351	Monash	person|organization[22]	new|giv[22]	coref|coref	10-18[57_22]|10-18[57_22]
+7-20	352-362	University	organization[22]	giv[22]	_	_
+7-21	363-365	in	organization[22]	giv[22]	_	_
+7-22	366-375	Melbourne	organization[22]|place[23]	giv[22]|new[23]	_	_
+7-23	376-377	,	organization[22]|place[23]	giv[22]|new[23]	_	_
+7-24	378-387	Australia	organization[22]|place[23]|place	giv[22]|new[23]|new	coref	9-9
+7-25	388-390	to	_	_	_	_
+7-26	391-399	complete	_	_	_	_
+7-27	400-403	his	person|abstract[27]	giv|new[27]	coref|coref|coref|coref	8-9[33_27]|14-16[89_0]|8-9[33_27]|14-16[89_0]
+7-28	404-411	Honours	abstract|abstract[27]	new|new[27]	_	_
+7-29	412-418	degree	abstract[27]	new[27]	_	_
+7-30	419-423	with	_	_	_	_
+7-31	424-428	John	person[28]	new[28]	ana	8-3[0_28]
+7-32	429-431	E.	person[28]	new[28]	_	_
+7-33	432-438	Nelson	person[28]	new[28]	_	_
+7-34	439-440	.	_	_	_	_
+
+#Text=Later on he returned to Canada to get his master 's degree from the University of Lethbridge with Ian Q. Whishaw and Sergio M. Pellis .
+8-1	441-446	Later	_	_	_	_
+8-2	447-449	on	_	_	_	_
+8-3	450-452	he	person	giv	ana	8-9
+8-4	453-461	returned	_	_	_	_
+8-5	462-464	to	_	_	_	_
+8-6	465-471	Canada	place	giv	_	_
+8-7	472-474	to	_	_	_	_
+8-8	475-478	get	_	_	_	_
+8-9	479-482	his	person|person[32]|abstract[33]	giv|new[32]|giv[33]	_	_
+8-10	483-489	master	person[32]|abstract[33]	new[32]|giv[33]	_	_
+8-11	490-492	's	person[32]|abstract[33]	new[32]|giv[33]	_	_
+8-12	493-499	degree	abstract[33]	giv[33]	_	_
+8-13	500-504	from	_	_	_	_
+8-14	505-508	the	organization[34]	new[34]	coref	12-13[72_34]
+8-15	509-519	University	organization[34]	new[34]	_	_
+8-16	520-522	of	organization[34]	new[34]	_	_
+8-17	523-533	Lethbridge	organization[34]|place	new[34]|new	coref	12-16
+8-18	534-538	with	_	_	_	_
+8-19	539-542	Ian	person[36]	new[36]	ana	9-2[0_36]
+8-20	543-545	Q.	person[36]	new[36]	_	_
+8-21	546-553	Whishaw	person[36]	new[36]	_	_
+8-22	554-557	and	_	_	_	_
+8-23	558-564	Sergio	person[37]	new[37]	_	_
+8-24	565-567	M.	person[37]	new[37]	_	_
+8-25	568-574	Pellis	person[37]	new[37]	_	_
+8-26	575-576	.	_	_	_	_
+
+#Text=For his Ph. D. , he returned to Australia where he focused his study into the evolution of the bird brain , especially parrots and began development of a large comparative brain collection .
+9-1	577-580	For	_	_	_	_
+9-2	581-584	his	person|abstract[39]	giv|new[39]	ana|coref|ana|coref	9-6|10-5[54_39]|9-6|10-5[54_39]
+9-3	585-588	Ph.	abstract[39]	new[39]	_	_
+9-4	589-591	D.	abstract[39]	new[39]	_	_
+9-5	592-593	,	_	_	_	_
+9-6	594-596	he	person	giv	ana	9-11
+9-7	597-605	returned	_	_	_	_
+9-8	606-608	to	_	_	_	_
+9-9	609-618	Australia	place	giv	_	_
+9-10	619-624	where	_	_	_	_
+9-11	625-627	he	person	giv	ana	9-13
+9-12	628-635	focused	_	_	_	_
+9-13	636-639	his	person|abstract[44]	giv|new[44]	ana|coref|ana|coref	10-5|10-26[60_44]|10-5|10-26[60_44]
+9-14	640-645	study	abstract[44]	new[44]	_	_
+9-15	646-650	into	_	_	_	_
+9-16	651-654	the	abstract[45]	new[45]	_	_
+9-17	655-664	evolution	abstract[45]	new[45]	_	_
+9-18	665-667	of	abstract[45]	new[45]	_	_
+9-19	668-671	the	abstract[45]|object[47]	new[45]|new[47]	coref	9-32[0_47]
+9-20	672-676	bird	abstract[45]|animal|object[47]	new[45]|new|new[47]	_	_
+9-21	677-682	brain	abstract[45]|object[47]	new[45]|new[47]	_	_
+9-22	683-684	,	_	_	_	_
+9-23	685-695	especially	animal[48]	new[48]	_	_
+9-24	696-703	parrots	animal[48]	new[48]	_	_
+9-25	704-707	and	_	_	_	_
+9-26	708-713	began	_	_	_	_
+9-27	714-725	development	abstract[49]	new[49]	_	_
+9-28	726-728	of	abstract[49]	new[49]	_	_
+9-29	729-730	a	abstract[49]|object[51]	new[49]|new[51]	_	_
+9-30	731-736	large	abstract[49]|object[51]	new[49]|new[51]	_	_
+9-31	737-748	comparative	abstract[49]|object[51]	new[49]|new[51]	_	_
+9-32	749-754	brain	abstract[49]|object|object[51]	new[49]|giv|new[51]	coref	12-29[79_0]
+9-33	755-765	collection	abstract[49]|object[51]	new[49]|new[51]	_	_
+9-34	766-767	.	_	_	_	_
+
+#Text=Following the completion of his Ph. D. , he worked as a post-doc with Douglas Wong-Wylie at the University of Alberta which focus was on the study of neuroanatomy and neurochemistry of birds .
+10-1	768-777	Following	_	_	_	_
+10-2	778-781	the	event[52]	new[52]	_	_
+10-3	782-792	completion	event[52]	new[52]	_	_
+10-4	793-795	of	event[52]	new[52]	_	_
+10-5	796-799	his	event[52]|person|abstract[54]	new[52]|giv|giv[54]	ana|ana	10-9|10-9
+10-6	800-803	Ph.	event[52]|abstract[54]	new[52]|giv[54]	_	_
+10-7	804-806	D.	event[52]|abstract[54]	new[52]|giv[54]	_	_
+10-8	807-808	,	_	_	_	_
+10-9	809-811	he	person	giv	ana	11-1
+10-10	812-818	worked	_	_	_	_
+10-11	819-821	as	_	_	_	_
+10-12	822-823	a	_	_	_	_
+10-13	824-832	post-doc	_	_	_	_
+10-14	833-837	with	_	_	_	_
+10-15	838-845	Douglas	person	new	_	_
+10-16	846-856	Wong-Wylie	_	_	_	_
+10-17	857-859	at	_	_	_	_
+10-18	860-863	the	organization[57]	giv[57]	_	_
+10-19	864-874	University	organization[57]	giv[57]	_	_
+10-20	875-877	of	organization[57]	giv[57]	_	_
+10-21	878-885	Alberta	organization[57]|place	giv[57]|giv	_	_
+10-22	886-891	which	_	_	_	_
+10-23	892-897	focus	abstract	new	_	_
+10-24	898-901	was	_	_	_	_
+10-25	902-904	on	_	_	_	_
+10-26	905-908	the	abstract[60]	giv[60]	_	_
+10-27	909-914	study	abstract[60]	giv[60]	_	_
+10-28	915-917	of	abstract[60]	giv[60]	_	_
+10-29	918-930	neuroanatomy	abstract[60]|abstract	giv[60]|new	_	_
+10-30	931-934	and	abstract[60]	giv[60]	_	_
+10-31	935-949	neurochemistry	abstract[60]|animal[62]	giv[60]|new[62]	_	_
+10-32	950-952	of	abstract[60]|animal[62]	giv[60]|new[62]	_	_
+10-33	953-958	birds	abstract[60]|animal[62]|animal	giv[60]|new[62]|new	coref	25-9
+10-34	959-960	.	_	_	_	_
+
+#Text=He briefly worked as a fellow at the National Museum of Natural History at Washington , D.C. .
+11-1	961-963	He	person	giv	ana	12-1
+11-2	964-971	briefly	_	_	_	_
+11-3	972-978	worked	_	_	_	_
+11-4	979-981	as	_	_	_	_
+11-5	982-983	a	_	_	_	_
+11-6	984-990	fellow	_	_	_	_
+11-7	991-993	at	_	_	_	_
+11-8	994-997	the	place[65]	new[65]	_	_
+11-9	998-1006	National	place[65]	new[65]	_	_
+11-10	1007-1013	Museum	place[65]	new[65]	_	_
+11-11	1014-1016	of	place[65]	new[65]	_	_
+11-12	1017-1024	Natural	place[65]|abstract[66]	new[65]|new[66]	_	_
+11-13	1025-1032	History	place[65]|abstract[66]	new[65]|new[66]	_	_
+11-14	1033-1035	at	place[65]|abstract[66]	new[65]|new[66]	_	_
+11-15	1036-1046	Washington	place[65]|abstract[66]|place[67]	new[65]|new[66]|new[67]	_	_
+11-16	1047-1048	,	place[65]|abstract[66]|place[67]	new[65]|new[66]|new[67]	_	_
+11-17	1049-1053	D.C.	place[65]|abstract[66]|place[67]	new[65]|new[66]|new[67]	_	_
+11-18	1054-1055	.	_	_	_	_
+
+#Text=He is currently an associate professor in the Department of Neuroscience at the University of Lethbridge working with grouse , ground squirrels and broad , comparative studies of avian brain anatomy . [ 1 ]
+12-1	1056-1058	He	person	giv	coref	12-3[69_0]
+12-2	1059-1061	is	_	_	_	_
+12-3	1062-1071	currently	person[69]	giv[69]	_	_
+12-4	1072-1074	an	person[69]	giv[69]	_	_
+12-5	1075-1084	associate	person[69]	giv[69]	_	_
+12-6	1085-1094	professor	person[69]	giv[69]	_	_
+12-7	1095-1097	in	person[69]	giv[69]	_	_
+12-8	1098-1101	the	person[69]|organization[70]	giv[69]|new[70]	_	_
+12-9	1102-1112	Department	person[69]|organization[70]	giv[69]|new[70]	_	_
+12-10	1113-1115	of	person[69]|organization[70]	giv[69]|new[70]	_	_
+12-11	1116-1128	Neuroscience	person[69]|organization[70]|abstract	giv[69]|new[70]|giv	coref	16-1
+12-12	1129-1131	at	person[69]|organization[70]	giv[69]|new[70]	_	_
+12-13	1132-1135	the	person[69]|organization[70]|organization[72]	giv[69]|new[70]|giv[72]	_	_
+12-14	1136-1146	University	person[69]|organization[70]|organization[72]	giv[69]|new[70]|giv[72]	_	_
+12-15	1147-1149	of	person[69]|organization[70]|organization[72]	giv[69]|new[70]|giv[72]	_	_
+12-16	1150-1160	Lethbridge	person[69]|organization[70]|organization[72]|place	giv[69]|new[70]|giv[72]|giv	_	_
+12-17	1161-1168	working	_	_	_	_
+12-18	1169-1173	with	_	_	_	_
+12-19	1174-1180	grouse	animal	new	_	_
+12-20	1181-1182	,	_	_	_	_
+12-21	1183-1189	ground	place|animal[76]	new|new[76]	_	_
+12-22	1190-1199	squirrels	animal[76]	new[76]	_	_
+12-23	1200-1203	and	animal[76]	new[76]	_	_
+12-24	1204-1209	broad	animal[76]	new[76]	_	_
+12-25	1210-1211	,	_	_	_	_
+12-26	1212-1223	comparative	event[77]	new[77]	_	_
+12-27	1224-1231	studies	event[77]	new[77]	_	_
+12-28	1232-1234	of	event[77]	new[77]	_	_
+12-29	1235-1240	avian	event[77]|animal|object[79]|abstract[80]	new[77]|new|giv[79]|new[80]	coref|coref|coref	29-5[0_79]|29-5[0_79]|29-5[0_79]
+12-30	1241-1246	brain	event[77]|object[79]|abstract[80]	new[77]|giv[79]|new[80]	_	_
+12-31	1247-1254	anatomy	event[77]|abstract[80]	new[77]|new[80]	_	_
+12-32	1255-1256	.	_	_	_	_
+12-33	1257-1258	[	_	_	_	_
+12-34	1259-1260	1	abstract	new	_	_
+12-35	1261-1262	]	_	_	_	_
+
+#Text=Papers
+13-1	1263-1269	Papers	object	new	_	_
+
+#Text=Wylie DR , Gutiérrez-Ibáñez C , Graham DJ ; Kreuzer MB ; Pakan JMP ; Iwaniuk AN . ( 2011 ) .
+14-1	1270-1275	Wylie	person[83]	new[83]	_	_
+14-2	1276-1278	DR	person[83]	new[83]	_	_
+14-3	1279-1280	,	_	_	_	_
+14-4	1281-1297	Gutiérrez-Ibáñez	person[84]|person[85]	new[84]|new[85]	coref|coref	44-4[201_85]|44-4[201_85]
+14-5	1298-1299	C	person[84]|person[85]	new[84]|new[85]	_	_
+14-6	1300-1301	,	person[84]|person[85]	new[84]|new[85]	_	_
+14-7	1302-1308	Graham	person[84]|person[85]	new[84]|new[85]	_	_
+14-8	1309-1311	DJ	person[84]|person[85]	new[84]|new[85]	_	_
+14-9	1312-1313	;	person[85]	new[85]	_	_
+14-10	1314-1321	Kreuzer	person[85]|person[86]	new[85]|new[86]	_	_
+14-11	1322-1324	MB	person[85]|person[86]|abstract	new[85]|new[86]|new	_	_
+14-12	1325-1326	;	person[85]	new[85]	_	_
+14-13	1327-1332	Pakan	person[85]|person[88]	new[85]|new[88]	coref	60-10[262_88]
+14-14	1333-1336	JMP	person[85]|person[88]	new[85]|new[88]	_	_
+14-15	1337-1338	;	person[85]	new[85]	_	_
+14-16	1339-1346	Iwaniuk	person[85]|person[89]	new[85]|giv[89]	coref	18-1[0_89]
+14-17	1347-1349	AN	person[85]|person[89]	new[85]|giv[89]	_	_
+14-18	1350-1351	.	person[85]|person[89]	new[85]|giv[89]	_	_
+14-19	1352-1353	(	person[85]|person[89]	new[85]|giv[89]	_	_
+14-20	1354-1358	2011	person[85]|person[89]|time	new[85]|giv[89]|new	_	_
+14-21	1359-1360	)	person[85]|person[89]	new[85]|giv[89]	_	_
+14-22	1361-1362	.	_	_	_	_
+
+#Text=" Heterogeneity of parvalbumin expression in the avian cerebellar cortex and comparisons with zebrin II " . 185 .
+15-1	1363-1364	"	abstract[91]	new[91]	_	_
+15-2	1365-1378	Heterogeneity	abstract[91]	new[91]	_	_
+15-3	1379-1381	of	abstract[91]	new[91]	_	_
+15-4	1382-1393	parvalbumin	abstract[91]|person|abstract[93]	new[91]|new|new[93]	_	_
+15-5	1394-1404	expression	abstract[91]|abstract[93]	new[91]|new[93]	_	_
+15-6	1405-1407	in	abstract[91]|abstract[93]	new[91]|new[93]	_	_
+15-7	1408-1411	the	abstract[91]|abstract[93]|place[94]	new[91]|new[93]|new[94]	_	_
+15-8	1412-1417	avian	abstract[91]|abstract[93]|place[94]	new[91]|new[93]|new[94]	_	_
+15-9	1418-1428	cerebellar	abstract[91]|abstract[93]|place[94]	new[91]|new[93]|new[94]	_	_
+15-10	1429-1435	cortex	abstract[91]|abstract[93]|place[94]	new[91]|new[93]|new[94]	_	_
+15-11	1436-1439	and	abstract[91]|abstract[93]	new[91]|new[93]	_	_
+15-12	1440-1451	comparisons	abstract[91]|abstract[93]|abstract[95]	new[91]|new[93]|new[95]	_	_
+15-13	1452-1456	with	abstract[91]|abstract[93]|abstract[95]	new[91]|new[93]|new[95]	_	_
+15-14	1457-1463	zebrin	abstract[91]|abstract[93]|abstract[95]|person[96]	new[91]|new[93]|new[95]|new[96]	_	_
+15-15	1464-1466	II	abstract[91]|abstract[93]|abstract[95]|person[96]	new[91]|new[93]|new[95]|new[96]	_	_
+15-16	1467-1468	"	abstract[91]	new[91]	_	_
+15-17	1469-1470	.	abstract[91]	new[91]	_	_
+15-18	1471-1474	185	abstract[91]	new[91]	_	_
+15-19	1475-1476	.	_	_	_	_
+
+#Text=Neuroscience
+16-1	1477-1489	Neuroscience	abstract	giv	_	_
+
+#Text=: 73 – 84 . Cite journal requires |journal= ( help )CS1 maint : multiple names : authors list ( link )
+17-1	1490-1491	:	_	_	_	_
+17-2	1492-1494	73	time[98]	new[98]	_	_
+17-3	1495-1496	–	time[98]	new[98]	_	_
+17-4	1497-1499	84	time[98]|quantity	new[98]|new	_	_
+17-5	1500-1501	.	_	_	_	_
+17-6	1502-1506	Cite	_	_	_	_
+17-7	1507-1514	journal	object	new	coref	23-2
+17-8	1515-1523	requires	_	_	_	_
+17-9	1524-1533	|journal=	_	_	_	_
+17-10	1534-1535	(	_	_	_	_
+17-11	1536-1540	help	_	_	_	_
+17-12	1541-1545	)CS1	_	_	_	_
+17-13	1546-1551	maint	_	_	_	_
+17-14	1552-1553	:	_	_	_	_
+17-15	1554-1562	multiple	abstract[101]	new[101]	appos	17-18[103_101]
+17-16	1563-1568	names	abstract[101]	new[101]	_	_
+17-17	1569-1570	:	_	_	_	_
+17-18	1571-1578	authors	person|abstract[103]	new|giv[103]	appos|coref|appos|coref	17-21[0_103]|32-13|17-21[0_103]|32-13
+17-19	1579-1583	list	abstract[103]	giv[103]	_	_
+17-20	1584-1585	(	_	_	_	_
+17-21	1586-1590	link	abstract	giv	coref	32-10[148_0]
+17-22	1591-1592	)	_	_	_	_
+
+#Text=Iwaniuk AN , Heesy CP , Hall MI ( 2010 ) .
+18-1	1593-1600	Iwaniuk	person	giv	coref	24-1
+18-2	1601-1603	AN	abstract[107]	new[107]	appos	18-7[108_107]
+18-3	1604-1605	,	abstract[107]	new[107]	_	_
+18-4	1606-1611	Heesy	person|abstract[107]	new|new[107]	_	_
+18-5	1612-1614	CP	abstract[107]	new[107]	_	_
+18-6	1615-1616	,	_	_	_	_
+18-7	1617-1621	Hall	abstract[108]	giv[108]	coref	44-1[199_108]
+18-8	1622-1624	MI	abstract[108]	giv[108]	_	_
+18-9	1625-1626	(	abstract[108]	giv[108]	_	_
+18-10	1627-1631	2010	abstract[108]	giv[108]	_	_
+18-11	1632-1633	)	abstract[108]	giv[108]	_	_
+18-12	1634-1635	.	_	_	_	_
+
+#Text="
+19-1	1636-1637	"	abstract[109]	new[109]	_	_
+
+#Text=The morphometrics of the eyes and orbits of the nocturnal Swallow-tailed Gull ( Creagrus furcatus ) " . 88 .
+20-1	1638-1641	The	abstract[109]	new[109]	_	_
+20-2	1642-1655	morphometrics	abstract[109]	new[109]	_	_
+20-3	1656-1658	of	abstract[109]	new[109]	_	_
+20-4	1659-1662	the	abstract[109]|object[110]	new[109]|new[110]	_	_
+20-5	1663-1667	eyes	abstract[109]|object[110]	new[109]|new[110]	_	_
+20-6	1668-1671	and	abstract[109]	new[109]	_	_
+20-7	1672-1678	orbits	abstract[109]|abstract[111]	new[109]|new[111]	_	_
+20-8	1679-1681	of	abstract[109]|abstract[111]	new[109]|new[111]	_	_
+20-9	1682-1685	the	abstract[109]|abstract[111]|animal[113]	new[109]|new[111]|new[113]	_	_
+20-10	1686-1695	nocturnal	abstract[109]|abstract[111]|animal[113]	new[109]|new[111]|new[113]	_	_
+20-11	1696-1710	Swallow-tailed	abstract[109]|abstract[111]|abstract|animal[113]	new[109]|new[111]|new|new[113]	_	_
+20-12	1711-1715	Gull	abstract[109]|abstract[111]|animal[113]	new[109]|new[111]|new[113]	_	_
+20-13	1716-1717	(	abstract[109]	new[109]	_	_
+20-14	1718-1726	Creagrus	abstract[109]	new[109]	_	_
+20-15	1727-1735	furcatus	abstract[109]	new[109]	_	_
+20-16	1736-1737	)	abstract[109]	new[109]	_	_
+20-17	1738-1739	"	abstract[109]	new[109]	_	_
+20-18	1740-1741	.	abstract[109]	new[109]	_	_
+20-19	1742-1744	88	abstract[109]	new[109]	_	_
+20-20	1745-1746	.	_	_	_	_
+
+#Text=Can J Zool
+21-1	1747-1750	Can	_	_	_	_
+21-2	1751-1752	J	person|abstract[115]	new|new[115]	coref|coref|coref|coref	40-2|58-3[0_115]|40-2|58-3[0_115]
+21-3	1753-1757	Zool	abstract[115]	new[115]	_	_
+
+#Text=: 855 – 865 .
+22-1	1758-1759	:	_	_	_	_
+22-2	1760-1763	855	abstract[116]	new[116]	_	_
+22-3	1764-1765	–	abstract[116]	new[116]	_	_
+22-4	1766-1769	865	abstract[116]|quantity	new[116]|new	_	_
+22-5	1770-1771	.	_	_	_	_
+
+#Text=Cite journal requires |journal= ( help )
+23-1	1772-1776	Cite	_	_	_	_
+23-2	1777-1784	journal	object	giv	coref	27-2
+23-3	1785-1793	requires	_	_	_	_
+23-4	1794-1803	|journal=	_	_	_	_
+23-5	1804-1805	(	_	_	_	_
+23-6	1806-1810	help	_	_	_	_
+23-7	1811-1812	)	_	_	_	_
+
+#Text=Iwaniuk AN , Gutiérrez-Ibáñez C , Pakan JM , Wylie DR ( 2010 ) .
+24-1	1813-1820	Iwaniuk	person	giv	appos	24-2[120_0]
+24-2	1821-1823	AN	person[120]	giv[120]	coref	28-7[0_120]
+24-3	1824-1825	,	person[120]	giv[120]	_	_
+24-4	1826-1842	Gutiérrez-Ibáñez	person[120]	giv[120]	_	_
+24-5	1843-1844	C	person[120]	giv[120]	_	_
+24-6	1845-1846	,	person[120]	giv[120]	_	_
+24-7	1847-1852	Pakan	person[120]	giv[120]	_	_
+24-8	1853-1855	JM	person[120]	giv[120]	_	_
+24-9	1856-1857	,	person[120]	giv[120]	_	_
+24-10	1858-1863	Wylie	person[120]|person|place[122]	giv[120]|new|new[122]	coref|coref|coref|coref	33-7|33-5[155_122]|33-7|33-5[155_122]
+24-11	1864-1866	DR	person[120]|place[122]	giv[120]|new[122]	_	_
+24-12	1867-1868	(	person[120]|place[122]	giv[120]|new[122]	_	_
+24-13	1869-1873	2010	person[120]|place[122]|time	giv[120]|new[122]|new	coref	28-22
+24-14	1874-1875	)	person[120]|place[122]	giv[120]|new[122]	_	_
+24-15	1876-1877	.	_	_	_	_
+
+#Text=" Allometric scaling of the tectofugal pathway in birds " . 75 .
+25-1	1878-1879	"	abstract[124]	new[124]	_	_
+25-2	1880-1890	Allometric	abstract[124]	new[124]	_	_
+25-3	1891-1898	scaling	abstract[124]	new[124]	_	_
+25-4	1899-1901	of	abstract[124]	new[124]	_	_
+25-5	1902-1905	the	abstract[124]|place[125]	new[124]|new[125]	_	_
+25-6	1906-1916	tectofugal	abstract[124]|place[125]	new[124]|new[125]	_	_
+25-7	1917-1924	pathway	abstract[124]|place[125]	new[124]|new[125]	_	_
+25-8	1925-1927	in	abstract[124]|place[125]	new[124]|new[125]	_	_
+25-9	1928-1933	birds	abstract[124]|place[125]|animal	new[124]|new[125]|giv	coref	29-8[143_0]
+25-10	1934-1935	"	abstract[124]	new[124]	_	_
+25-11	1936-1937	.	abstract[124]	new[124]	_	_
+25-12	1938-1940	75	abstract[124]	new[124]	_	_
+25-13	1941-1942	.	_	_	_	_
+
+#Text=Brain Behav Evol : 122 – 137 .
+26-1	1943-1948	Brain	person|abstract[128]	new|new[128]	coref|coref|coref|coref	36-1|36-1[164_128]|36-1|36-1[164_128]
+26-2	1949-1954	Behav	abstract[128]	new[128]	_	_
+26-3	1955-1959	Evol	abstract[128]	new[128]	_	_
+26-4	1960-1961	:	_	_	_	_
+26-5	1962-1965	122	quantity[129]	new[129]	_	_
+26-6	1966-1967	–	quantity[129]	new[129]	_	_
+26-7	1968-1971	137	quantity[129]|quantity	new[129]|new	_	_
+26-8	1972-1973	.	_	_	_	_
+
+#Text=Cite journal requires |journal= ( help )
+27-1	1974-1978	Cite	_	_	_	_
+27-2	1979-1986	journal	object	giv	coref	32-2
+27-3	1987-1995	requires	_	_	_	_
+27-4	1996-2005	|journal=	_	_	_	_
+27-5	2006-2007	(	_	_	_	_
+27-6	2008-2012	help	_	_	_	_
+27-7	2013-2014	)	_	_	_	_
+
+#Text=Sol D , Garcia N , Iwaniuk A , Davis K ; Meade A ; Boyle A ; Szekely T ( 2010 ) .
+28-1	2015-2018	Sol	organization[132]	new[132]	_	_
+28-2	2019-2020	D	organization[132]	new[132]	_	_
+28-3	2021-2022	,	organization[132]	new[132]	_	_
+28-4	2023-2029	Garcia	organization[132]|person[133]	new[132]|new[133]	_	_
+28-5	2030-2031	N	organization[132]|person[133]	new[132]|new[133]	_	_
+28-6	2032-2033	,	organization[132]|person[133]	new[132]|new[133]	_	_
+28-7	2034-2041	Iwaniuk	organization[132]|person[133]|person	new[132]|new[133]|giv	appos	28-10[135_0]
+28-8	2042-2043	A	organization[132]|person[133]	new[132]|new[133]	_	_
+28-9	2044-2045	,	_	_	_	_
+28-10	2046-2051	Davis	person[135]	giv[135]	coref	33-1[152_135]
+28-11	2052-2053	K	person[135]	giv[135]	_	_
+28-12	2054-2055	;	_	_	_	_
+28-13	2056-2061	Meade	person[136]	new[136]	_	_
+28-14	2062-2063	A	person[136]	new[136]	_	_
+28-15	2064-2065	;	_	_	_	_
+28-16	2066-2071	Boyle	person[137]	new[137]	_	_
+28-17	2072-2073	A	person[137]	new[137]	_	_
+28-18	2074-2075	;	_	_	_	_
+28-19	2076-2083	Szekely	person[138]	new[138]	_	_
+28-20	2084-2085	T	person[138]	new[138]	_	_
+28-21	2086-2087	(	person[138]	new[138]	_	_
+28-22	2088-2092	2010	person[138]|time	new[138]|giv	_	_
+28-23	2093-2094	)	person[138]	new[138]	_	_
+28-24	2095-2096	.	_	_	_	_
+
+#Text=" Evolutionary divergence in brain size between migratory and resident birds " . 5 .
+29-1	2097-2098	"	abstract[140]	new[140]	_	_
+29-2	2099-2111	Evolutionary	abstract[140]	new[140]	_	_
+29-3	2112-2122	divergence	abstract[140]	new[140]	_	_
+29-4	2123-2125	in	abstract[140]	new[140]	_	_
+29-5	2126-2131	brain	abstract[140]|object|abstract[142]	new[140]|giv|new[142]	_	_
+29-6	2132-2136	size	abstract[140]|abstract[142]	new[140]|new[142]	_	_
+29-7	2137-2144	between	abstract[140]|abstract[142]	new[140]|new[142]	_	_
+29-8	2145-2154	migratory	abstract[140]|abstract[142]|animal[143]	new[140]|new[142]|giv[143]	coref	35-24[0_143]
+29-9	2155-2158	and	abstract[140]|abstract[142]|animal[143]	new[140]|new[142]|giv[143]	_	_
+29-10	2159-2167	resident	abstract[140]|abstract[142]|animal[143]	new[140]|new[142]|giv[143]	_	_
+29-11	2168-2173	birds	abstract[140]|abstract[142]|animal[143]	new[140]|new[142]|giv[143]	_	_
+29-12	2174-2175	"	abstract[140]	new[140]	_	_
+29-13	2176-2177	.	abstract[140]	new[140]	_	_
+29-14	2178-2179	5	abstract[140]	new[140]	_	_
+29-15	2180-2181	.	_	_	_	_
+
+#Text=PLOS ONE
+30-1	2182-2186	PLOS	person|abstract[145]	new|new[145]	_	_
+30-2	2187-2190	ONE	abstract[145]	new[145]	_	_
+
+#Text=: 9613 .
+31-1	2191-2192	:	_	_	_	_
+31-2	2193-2197	9613	quantity	new	_	_
+31-3	2198-2199	.	_	_	_	_
+
+#Text=Cite journal requires |journal= ( help )CS1 maint : multiple names : authors list ( link )
+32-1	2200-2204	Cite	_	_	_	_
+32-2	2205-2212	journal	object	giv	coref	37-2
+32-3	2213-2221	requires	_	_	_	_
+32-4	2222-2231	|journal=	_	_	_	_
+32-5	2232-2233	(	_	_	_	_
+32-6	2234-2238	help	_	_	_	_
+32-7	2239-2243	)CS1	_	_	_	_
+32-8	2244-2249	maint	_	_	_	_
+32-9	2250-2251	:	_	_	_	_
+32-10	2252-2260	multiple	abstract[148]	giv[148]	appos	32-13[150_148]
+32-11	2261-2266	names	abstract[148]	giv[148]	_	_
+32-12	2267-2268	:	_	_	_	_
+32-13	2269-2276	authors	person|abstract[150]	giv|giv[150]	appos|appos	32-16[0_150]|32-16[0_150]
+32-14	2277-2281	list	abstract[150]	giv[150]	_	_
+32-15	2282-2283	(	_	_	_	_
+32-16	2284-2288	link	abstract	giv	_	_
+32-17	2289-2290	)	_	_	_	_
+
+#Text=Gutiérrez-Ibáñez C , Iwaniuk AN , Wylie DR ( 2009 ) .
+33-1	2291-2307	Gutiérrez-Ibáñez	person[152]	giv[152]	coref	33-4[0_152]
+33-2	2308-2309	C	person[152]	giv[152]	_	_
+33-3	2310-2311	,	_	_	_	_
+33-4	2312-2319	Iwaniuk	person	giv	coref	38-4[169_0]
+33-5	2320-2322	AN	place[155]	giv[155]	coref	47-10[217_155]
+33-6	2323-2324	,	place[155]	giv[155]	_	_
+33-7	2325-2330	Wylie	person|place[155]	giv|giv[155]	coref	47-10
+33-8	2331-2333	DR	place[155]	giv[155]	_	_
+33-9	2334-2335	(	place[155]	giv[155]	_	_
+33-10	2336-2340	2009	place[155]	giv[155]	_	_
+33-11	2341-2342	)	place[155]	giv[155]	_	_
+33-12	2343-2344	.	_	_	_	_
+
+#Text="
+34-1	2345-2346	"	_	_	_	_
+
+#Text=The independent evolution of the enlargement of the principal sensory nucleus of the trigeminal nerve ( PrV ) in three different groups of birds " . 74 .
+35-1	2347-2350	The	abstract[156]	new[156]	_	_
+35-2	2351-2362	independent	abstract[156]	new[156]	_	_
+35-3	2363-2372	evolution	abstract[156]	new[156]	_	_
+35-4	2373-2375	of	abstract[156]	new[156]	_	_
+35-5	2376-2379	the	abstract[156]|abstract[157]	new[156]|new[157]	_	_
+35-6	2380-2391	enlargement	abstract[156]|abstract[157]	new[156]|new[157]	_	_
+35-7	2392-2394	of	abstract[156]|abstract[157]	new[156]|new[157]	_	_
+35-8	2395-2398	the	abstract[156]|abstract[157]|object[158]	new[156]|new[157]|new[158]	_	_
+35-9	2399-2408	principal	abstract[156]|abstract[157]|object[158]	new[156]|new[157]|new[158]	_	_
+35-10	2409-2416	sensory	abstract[156]|abstract[157]|object[158]	new[156]|new[157]|new[158]	_	_
+35-11	2417-2424	nucleus	abstract[156]|abstract[157]|object[158]	new[156]|new[157]|new[158]	_	_
+35-12	2425-2427	of	abstract[156]|abstract[157]|object[158]	new[156]|new[157]|new[158]	_	_
+35-13	2428-2431	the	abstract[156]|abstract[157]|object[158]|object[159]	new[156]|new[157]|new[158]|new[159]	appos	35-17[0_159]
+35-14	2432-2442	trigeminal	abstract[156]|abstract[157]|object[158]|object[159]	new[156]|new[157]|new[158]|new[159]	_	_
+35-15	2443-2448	nerve	abstract[156]|abstract[157]|object[158]|object[159]	new[156]|new[157]|new[158]|new[159]	_	_
+35-16	2449-2450	(	_	_	_	_
+35-17	2451-2454	PrV	object	giv	_	_
+35-18	2455-2456	)	_	_	_	_
+35-19	2457-2459	in	_	_	_	_
+35-20	2460-2465	three	person[161]	new[161]	_	_
+35-21	2466-2475	different	person[161]	new[161]	_	_
+35-22	2476-2482	groups	person[161]	new[161]	_	_
+35-23	2483-2485	of	person[161]	new[161]	_	_
+35-24	2486-2491	birds	person[161]|animal	new[161]|giv	coref	39-6
+35-25	2492-2493	"	person[161]	new[161]	_	_
+35-26	2494-2495	.	person[161]	new[161]	_	_
+35-27	2496-2498	74	person[161]	new[161]	_	_
+35-28	2499-2500	.	_	_	_	_
+
+#Text=Brain Behav Evol : 280 – 294 .
+36-1	2501-2506	Brain	person|abstract[164]	giv|giv[164]	_	_
+36-2	2507-2512	Behav	abstract[164]	giv[164]	_	_
+36-3	2513-2517	Evol	abstract[164]	giv[164]	_	_
+36-4	2518-2519	:	_	_	_	_
+36-5	2520-2523	280	quantity[165]	new[165]	_	_
+36-6	2524-2525	–	quantity[165]	new[165]	_	_
+36-7	2526-2529	294	quantity[165]|quantity	new[165]|new	_	_
+36-8	2530-2531	.	_	_	_	_
+
+#Text=Cite journal requires |journal= ( help )
+37-1	2532-2536	Cite	_	_	_	_
+37-2	2537-2544	journal	object	giv	coref	41-7
+37-3	2545-2553	requires	_	_	_	_
+37-4	2554-2563	|journal=	_	_	_	_
+37-5	2564-2565	(	_	_	_	_
+37-6	2566-2570	help	_	_	_	_
+37-7	2571-2572	)	_	_	_	_
+
+#Text=Wylie DR , Gutiérrez-Ibáñez C , Pakan JM , Iwaniuk AN ( 2009 ) .
+38-1	2573-2578	Wylie	person[168]	new[168]	_	_
+38-2	2579-2581	DR	person[168]	new[168]	_	_
+38-3	2582-2583	,	_	_	_	_
+38-4	2584-2600	Gutiérrez-Ibáñez	person[169]	giv[169]	coref	38-7[170_169]
+38-5	2601-2602	C	person[169]	giv[169]	_	_
+38-6	2603-2604	,	_	_	_	_
+38-7	2605-2610	Pakan	person[170]	giv[170]	coref	38-10[0_170]
+38-8	2611-2613	JM	person[170]	giv[170]	_	_
+38-9	2614-2615	,	_	_	_	_
+38-10	2616-2623	Iwaniuk	person	giv	coref	42-1
+38-11	2624-2626	AN	time[172]	new[172]	coref	44-8[203_172]
+38-12	2627-2628	(	time[172]	new[172]	_	_
+38-13	2629-2633	2009	time[172]	new[172]	_	_
+38-14	2634-2635	)	time[172]	new[172]	_	_
+38-15	2636-2637	.	_	_	_	_
+
+#Text=" The optic tectum of birds : Mapping our way to understanding visual processing " . 63 .
+39-1	2638-2639	"	_	_	_	_
+39-2	2640-2643	The	_	_	_	_
+39-3	2644-2649	optic	substance	new	coref	45-6
+39-4	2650-2656	tectum	_	_	_	_
+39-5	2657-2659	of	_	_	_	_
+39-6	2660-2665	birds	animal	giv	coref	45-12
+39-7	2666-2667	:	_	_	_	_
+39-8	2668-2675	Mapping	_	_	_	_
+39-9	2676-2679	our	person|abstract[176]	acc|new[176]	_	_
+39-10	2680-2683	way	abstract[176]	new[176]	_	_
+39-11	2684-2686	to	_	_	_	_
+39-12	2687-2700	understanding	_	_	_	_
+39-13	2701-2707	visual	abstract[177]	new[177]	_	_
+39-14	2708-2718	processing	abstract[177]	new[177]	_	_
+39-15	2719-2720	"	_	_	_	_
+39-16	2721-2722	.	_	_	_	_
+39-17	2723-2725	63	_	_	_	_
+39-18	2726-2727	.	_	_	_	_
+
+#Text=Can J Exp Psychol
+40-1	2728-2731	Can	_	_	_	_
+40-2	2732-2733	J	person|abstract[179]	giv|new[179]	coref|coref|coref|coref	54-2|54-2[240_179]|54-2|54-2[240_179]
+40-3	2734-2737	Exp	abstract[179]	new[179]	_	_
+40-4	2738-2745	Psychol	abstract[179]	new[179]	_	_
+
+#Text=: 328 – 338 . Cite journal requires |journal= ( help )
+41-1	2746-2747	:	_	_	_	_
+41-2	2748-2751	328	quantity[180]	new[180]	_	_
+41-3	2752-2753	–	quantity[180]	new[180]	_	_
+41-4	2754-2757	338	quantity[180]|quantity	new[180]|new	_	_
+41-5	2758-2759	.	_	_	_	_
+41-6	2760-2764	Cite	_	_	_	_
+41-7	2765-2772	journal	organization	giv	coref	43-33
+41-8	2773-2781	requires	_	_	_	_
+41-9	2782-2791	|journal=	_	_	_	_
+41-10	2792-2793	(	_	_	_	_
+41-11	2794-2798	help	_	_	_	_
+41-12	2799-2800	)	_	_	_	_
+
+#Text=Iwaniuk AN , Olson SL , James HF ( 2009 ) .
+42-1	2801-2808	Iwaniuk	person	giv	coref	44-4[200_0]
+42-2	2809-2811	AN	abstract[185]	new[185]	appos	42-7[187_185]
+42-3	2812-2813	,	abstract[185]	new[185]	_	_
+42-4	2814-2819	Olson	person|abstract[185]	new|new[185]	_	_
+42-5	2820-2822	SL	abstract[185]	new[185]	_	_
+42-6	2823-2824	,	_	_	_	_
+42-7	2825-2830	James	person|abstract[187]	new|giv[187]	_	_
+42-8	2831-2833	HF	abstract[187]	giv[187]	_	_
+42-9	2834-2835	(	abstract[187]	giv[187]	_	_
+42-10	2836-2840	2009	abstract[187]	giv[187]	_	_
+42-11	2841-2842	)	abstract[187]	giv[187]	_	_
+42-12	2843-2844	.	_	_	_	_
+
+#Text=" Extraordinary cranial specialization in a new genus of extinct duck ( Aves : Anseriformes ) from Kauai , Hawaiian Islands " . 2296 . Zootaxa : 47 – 67 . Cite journal requires |journal= ( help )
+43-1	2845-2846	"	_	_	_	_
+43-2	2847-2860	Extraordinary	abstract[188]	new[188]	_	_
+43-3	2861-2868	cranial	abstract[188]	new[188]	_	_
+43-4	2869-2883	specialization	abstract[188]	new[188]	_	_
+43-5	2884-2886	in	abstract[188]	new[188]	_	_
+43-6	2887-2888	a	abstract[188]|animal[189]	new[188]|new[189]	_	_
+43-7	2889-2892	new	abstract[188]|animal[189]	new[188]|new[189]	_	_
+43-8	2893-2898	genus	abstract[188]|animal[189]	new[188]|new[189]	_	_
+43-9	2899-2901	of	abstract[188]|animal[189]	new[188]|new[189]	_	_
+43-10	2902-2909	extinct	abstract[188]|animal[189]|animal[190]	new[188]|new[189]|new[190]	appos	43-15[0_190]
+43-11	2910-2914	duck	abstract[188]|animal[189]|animal[190]	new[188]|new[189]|new[190]	_	_
+43-12	2915-2916	(	_	_	_	_
+43-13	2917-2921	Aves	animal	new	coref	61-10
+43-14	2922-2923	:	_	_	_	_
+43-15	2924-2936	Anseriformes	animal	giv	_	_
+43-16	2937-2938	)	_	_	_	_
+43-17	2939-2943	from	_	_	_	_
+43-18	2944-2949	Kauai	person|place[195]	new|new[195]	_	_
+43-19	2950-2951	,	place[195]	new[195]	_	_
+43-20	2952-2960	Hawaiian	person|place[195]	new|new[195]	_	_
+43-21	2961-2968	Islands	place[195]	new[195]	_	_
+43-22	2969-2970	"	place[195]	new[195]	_	_
+43-23	2971-2972	.	place[195]	new[195]	_	_
+43-24	2973-2977	2296	place[195]	new[195]	_	_
+43-25	2978-2979	.	_	_	_	_
+43-26	2980-2987	Zootaxa	animal[196]	new[196]	_	_
+43-27	2988-2989	:	animal[196]	new[196]	_	_
+43-28	2990-2992	47	animal[196]	new[196]	_	_
+43-29	2993-2994	–	animal[196]	new[196]	_	_
+43-30	2995-2997	67	animal[196]|quantity	new[196]|new	_	_
+43-31	2998-2999	.	_	_	_	_
+43-32	3000-3004	Cite	_	_	_	_
+43-33	3005-3012	journal	object	giv	coref	46-9
+43-34	3013-3021	requires	_	_	_	_
+43-35	3022-3031	|journal=	_	_	_	_
+43-36	3032-3033	(	_	_	_	_
+43-37	3034-3038	help	_	_	_	_
+43-38	3039-3040	)	_	_	_	_
+
+#Text=Hall MI , Gutiérrez-Ibáñez C , Iwaniuk AN ( 2009 ) .
+44-1	3041-3045	Hall	abstract[199]	giv[199]	_	_
+44-2	3046-3048	MI	abstract[199]	giv[199]	_	_
+44-3	3049-3050	,	_	_	_	_
+44-4	3051-3067	Gutiérrez-Ibáñez	person[200]|person[201]	giv[200]|giv[201]	coref|coref	44-7[202_200]|44-7[202_200]
+44-5	3068-3069	C	person[200]|person[201]	giv[200]|giv[201]	_	_
+44-6	3070-3071	,	person[201]	giv[201]	_	_
+44-7	3072-3079	Iwaniuk	person[201]|person[202]	giv[201]|giv[202]	coref	47-1[0_202]
+44-8	3080-3082	AN	person[201]|person[202]|time[203]	giv[201]|giv[202]|giv[203]	coref	47-13[0_203]
+44-9	3083-3084	(	person[201]|person[202]|time[203]	giv[201]|giv[202]|giv[203]	_	_
+44-10	3085-3089	2009	person[201]|person[202]|time[203]	giv[201]|giv[202]|giv[203]	_	_
+44-11	3090-3091	)	person[201]|person[202]|time[203]	giv[201]|giv[202]|giv[203]	_	_
+44-12	3092-3093	.	_	_	_	_
+
+#Text=" The morphology of the optic foramen and activity pattern in birds " . 292 .
+45-1	3094-3095	"	person[204]	new[204]	_	_
+45-2	3096-3099	The	person[204]	new[204]	_	_
+45-3	3100-3110	morphology	person[204]	new[204]	_	_
+45-4	3111-3113	of	person[204]	new[204]	_	_
+45-5	3114-3117	the	person[204]|object[206]	new[204]|new[206]	_	_
+45-6	3118-3123	optic	person[204]|substance|object[206]	new[204]|giv|new[206]	_	_
+45-7	3124-3131	foramen	person[204]|object[206]	new[204]|new[206]	_	_
+45-8	3132-3135	and	person[204]	new[204]	_	_
+45-9	3136-3144	activity	person[204]|event|abstract[208]	new[204]|new|new[208]	_	_
+45-10	3145-3152	pattern	person[204]|abstract[208]	new[204]|new[208]	_	_
+45-11	3153-3155	in	person[204]|abstract[208]	new[204]|new[208]	_	_
+45-12	3156-3161	birds	person[204]|abstract[208]|animal	new[204]|new[208]|giv	_	_
+45-13	3162-3163	"	person[204]	new[204]	_	_
+45-14	3164-3165	.	person[204]	new[204]	_	_
+45-15	3166-3169	292	person[204]	new[204]	_	_
+45-16	3170-3171	.	_	_	_	_
+
+#Text=Anat Rec : 1827 – 1845 . Cite journal requires |journal= ( help )
+46-1	3172-3176	Anat	abstract[210]	new[210]	appos	46-4[211_210]
+46-2	3177-3180	Rec	abstract[210]	new[210]	_	_
+46-3	3181-3182	:	_	_	_	_
+46-4	3183-3187	1827	abstract[211]	giv[211]	_	_
+46-5	3188-3189	–	abstract[211]	giv[211]	_	_
+46-6	3190-3194	1845	abstract[211]|time	giv[211]|new	_	_
+46-7	3195-3196	.	_	_	_	_
+46-8	3197-3201	Cite	_	_	_	_
+46-9	3202-3209	journal	object	giv	coref	50-7
+46-10	3210-3218	requires	_	_	_	_
+46-11	3219-3228	|journal=	_	_	_	_
+46-12	3229-3230	(	_	_	_	_
+46-13	3231-3235	help	_	_	_	_
+46-14	3236-3237	)	_	_	_	_
+
+#Text=Iwaniuk AN , Gutiérrez-Ibáñez C , Pakan JM , Wylie DR ( 2009 ) .
+47-1	3238-3245	Iwaniuk	person	giv	appos	47-2[215_0]
+47-2	3246-3248	AN	person[215]	giv[215]	coref	51-1[0_215]
+47-3	3249-3250	,	person[215]	giv[215]	_	_
+47-4	3251-3267	Gutiérrez-Ibáñez	person[215]	giv[215]	_	_
+47-5	3268-3269	C	person[215]	giv[215]	_	_
+47-6	3270-3271	,	person[215]	giv[215]	_	_
+47-7	3272-3277	Pakan	person[215]	giv[215]	_	_
+47-8	3278-3280	JM	person[215]	giv[215]	_	_
+47-9	3281-3282	,	_	_	_	_
+47-10	3283-3288	Wylie	person|place[217]	giv|giv[217]	coref|coref|coref|coref	51-7|51-2[233_217]|51-7|51-2[233_217]
+47-11	3289-3291	DR	place[217]	giv[217]	_	_
+47-12	3292-3293	(	place[217]	giv[217]	_	_
+47-13	3294-3298	2009	place[217]|time	giv[217]|giv	coref	55-5[246_0]
+47-14	3299-3300	)	place[217]	giv[217]	_	_
+47-15	3301-3302	.	_	_	_	_
+
+#Text=" Expression of calcium binding proteins in cerebellar- and inferior olivary-projecting neurons in the nucleus lentiformis mesencephali of pigeons " . 26 .
+48-1	3303-3304	"	_	_	_	_
+48-2	3305-3315	Expression	abstract[219]	new[219]	_	_
+48-3	3316-3318	of	abstract[219]	new[219]	_	_
+48-4	3319-3326	calcium	abstract[219]|substance	new[219]|new	_	_
+48-5	3327-3334	binding	_	_	_	_
+48-6	3335-3343	proteins	substance	new	_	_
+48-7	3344-3346	in	_	_	_	_
+48-8	3347-3358	cerebellar-	object[222]	new[222]	_	_
+48-9	3359-3362	and	object[222]	new[222]	_	_
+48-10	3363-3371	inferior	object[222]	new[222]	_	_
+48-11	3372-3390	olivary-projecting	object[222]	new[222]	_	_
+48-12	3391-3398	neurons	object[222]	new[222]	_	_
+48-13	3399-3401	in	object[222]	new[222]	_	_
+48-14	3402-3405	the	object[222]|object[223]	new[222]|new[223]	_	_
+48-15	3406-3413	nucleus	object[222]|object[223]	new[222]|new[223]	_	_
+48-16	3414-3425	lentiformis	object[222]|object[223]	new[222]|new[223]	_	_
+48-17	3426-3438	mesencephali	object[222]|object[223]	new[222]|new[223]	_	_
+48-18	3439-3441	of	object[222]|object[223]	new[222]|new[223]	_	_
+48-19	3442-3449	pigeons	object[222]|object[223]|animal	new[222]|new[223]|new	_	_
+48-20	3450-3451	"	object[222]|object[223]	new[222]|new[223]	_	_
+48-21	3452-3453	.	object[222]|object[223]	new[222]|new[223]	_	_
+48-22	3454-3456	26	object[222]|object[223]	new[222]|new[223]	_	_
+48-23	3457-3458	.	_	_	_	_
+
+#Text=Vis Neurosci
+49-1	3459-3462	Vis	person|abstract[226]	new|new[226]	_	_
+49-2	3463-3471	Neurosci	abstract[226]	new[226]	_	_
+
+#Text=: 341 – 347 . Cite journal requires |journal= ( help )
+50-1	3472-3473	:	_	_	_	_
+50-2	3474-3477	341	abstract[227]	new[227]	_	_
+50-3	3478-3479	–	abstract[227]	new[227]	_	_
+50-4	3480-3483	347	abstract[227]|quantity	new[227]|new	_	_
+50-5	3484-3485	.	_	_	_	_
+50-6	3486-3490	Cite	_	_	_	_
+50-7	3491-3498	journal	object	giv	coref	54-11
+50-8	3499-3507	requires	_	_	_	_
+50-9	3508-3517	|journal=	_	_	_	_
+50-10	3518-3519	(	_	_	_	_
+50-11	3520-3524	help	_	_	_	_
+50-12	3525-3526	)	_	_	_	_
+
+#Text=Iwaniuk AN , Lefebvre L , Wylie DR ( 2009 ) .
+51-1	3527-3534	Iwaniuk	person	giv	appos	51-4[231_0]
+51-2	3535-3537	AN	place[233]	giv[233]	_	_
+51-3	3538-3539	,	place[233]	giv[233]	_	_
+51-4	3540-3548	Lefebvre	person[231]|place[233]	giv[231]|giv[233]	coref	55-4[0_231]
+51-5	3549-3550	L	person[231]|place[233]	giv[231]|giv[233]	_	_
+51-6	3551-3552	,	place[233]	giv[233]	_	_
+51-7	3553-3558	Wylie	person|place[233]	giv|giv[233]	coref	60-16
+51-8	3559-3561	DR	place[233]	giv[233]	_	_
+51-9	3562-3563	(	place[233]	giv[233]	_	_
+51-10	3564-3568	2009	place[233]	giv[233]	_	_
+51-11	3569-3570	)	place[233]	giv[233]	_	_
+51-12	3571-3572	.	_	_	_	_
+
+#Text="
+52-1	3573-3574	"	_	_	_	_
+
+#Text=The comparative approach and brain-behaviour relationships : A tool for understanding tool use " . 63 .
+53-1	3575-3578	The	abstract[234]	new[234]	_	_
+53-2	3579-3590	comparative	abstract[234]	new[234]	_	_
+53-3	3591-3599	approach	abstract[234]	new[234]	_	_
+53-4	3600-3603	and	_	_	_	_
+53-5	3604-3619	brain-behaviour	abstract[235]	new[235]	_	_
+53-6	3620-3633	relationships	abstract[235]	new[235]	_	_
+53-7	3634-3635	:	_	_	_	_
+53-8	3636-3637	A	abstract[236]	new[236]	_	_
+53-9	3638-3642	tool	abstract[236]	new[236]	_	_
+53-10	3643-3646	for	abstract[236]	new[236]	_	_
+53-11	3647-3660	understanding	abstract[236]|abstract[238]	new[236]|new[238]	_	_
+53-12	3661-3665	tool	abstract[236]|object|abstract[238]	new[236]|new|new[238]	_	_
+53-13	3666-3669	use	abstract[236]|abstract[238]	new[236]|new[238]	_	_
+53-14	3670-3671	"	abstract[236]	new[236]	_	_
+53-15	3672-3673	.	abstract[236]	new[236]	_	_
+53-16	3674-3676	63	abstract[236]	new[236]	_	_
+53-17	3677-3678	.	_	_	_	_
+
+#Text=Can J Exp Psychol : 50 – 59 . Cite journal requires |journal= ( help )
+54-1	3679-3682	Can	_	_	_	_
+54-2	3683-3684	J	person|abstract[240]	giv|giv[240]	coref|coref	62-1[275_0]|62-1[275_0]
+54-3	3685-3688	Exp	abstract[240]	giv[240]	_	_
+54-4	3689-3696	Psychol	abstract[240]	giv[240]	_	_
+54-5	3697-3698	:	_	_	_	_
+54-6	3699-3701	50	time[241]	new[241]	_	_
+54-7	3702-3703	–	time[241]	new[241]	_	_
+54-8	3704-3706	59	time[241]|quantity	new[241]|new	_	_
+54-9	3707-3708	.	_	_	_	_
+54-10	3709-3713	Cite	_	_	_	_
+54-11	3714-3721	journal	object	giv	coref	59-7
+54-12	3722-3730	requires	_	_	_	_
+54-13	3731-3740	|journal=	_	_	_	_
+54-14	3741-3742	(	_	_	_	_
+54-15	3743-3747	help	_	_	_	_
+54-16	3748-3749	)	_	_	_	_
+
+#Text=Guay PJ , Iwaniuk AN ( 2009 ) .
+55-1	3750-3754	Guay	person[244]	new[244]	_	_
+55-2	3755-3757	PJ	person[244]	new[244]	_	_
+55-3	3758-3759	,	_	_	_	_
+55-4	3760-3767	Iwaniuk	person	giv	coref	60-1
+55-5	3768-3770	AN	time[246]	giv[246]	coref	60-19[0_246]
+55-6	3771-3772	(	time[246]	giv[246]	_	_
+55-7	3773-3777	2009	time[246]	giv[246]	_	_
+55-8	3778-3779	)	time[246]	giv[246]	_	_
+55-9	3780-3781	.	_	_	_	_
+
+#Text="
+56-1	3782-3783	"	_	_	_	_
+
+#Text=Inter-specific variation in relative brain size is not correlated with intensity of sexual selection in waterfowl ( Anseriformes ) " . 56 .
+57-1	3784-3798	Inter-specific	abstract[247]	new[247]	_	_
+57-2	3799-3808	variation	abstract[247]	new[247]	_	_
+57-3	3809-3811	in	abstract[247]	new[247]	_	_
+57-4	3812-3820	relative	abstract[247]|quantity[249]	new[247]|new[249]	_	_
+57-5	3821-3826	brain	abstract[247]|object|quantity[249]	new[247]|new|new[249]	_	_
+57-6	3827-3831	size	abstract[247]|quantity[249]	new[247]|new[249]	_	_
+57-7	3832-3834	is	_	_	_	_
+57-8	3835-3838	not	_	_	_	_
+57-9	3839-3849	correlated	_	_	_	_
+57-10	3850-3854	with	_	_	_	_
+57-11	3855-3864	intensity	abstract[250]	new[250]	_	_
+57-12	3865-3867	of	abstract[250]	new[250]	_	_
+57-13	3868-3874	sexual	abstract[250]|abstract[251]	new[250]|new[251]	_	_
+57-14	3875-3884	selection	abstract[250]|abstract[251]	new[250]|new[251]	_	_
+57-15	3885-3887	in	abstract[250]|abstract[251]	new[250]|new[251]	_	_
+57-16	3888-3897	waterfowl	abstract[250]|abstract[251]|animal	new[250]|new[251]|new	appos	57-18
+57-17	3898-3899	(	_	_	_	_
+57-18	3900-3912	Anseriformes	animal	giv	_	_
+57-19	3913-3914	)	_	_	_	_
+57-20	3915-3916	"	_	_	_	_
+57-21	3917-3918	.	_	_	_	_
+57-22	3919-3921	56	_	_	_	_
+57-23	3922-3923	.	_	_	_	_
+
+#Text=Austr J Zool
+58-1	3924-3929	Austr	abstract[254]	new[254]	_	_
+58-2	3930-3931	J	abstract[254]	new[254]	_	_
+58-3	3932-3936	Zool	abstract	giv	_	_
+
+#Text=: 311 – 321 . Cite journal requires |journal= ( help )
+59-1	3937-3938	:	_	_	_	_
+59-2	3939-3942	311	abstract[256]	new[256]	_	_
+59-3	3943-3944	–	abstract[256]	new[256]	_	_
+59-4	3945-3948	321	abstract[256]|quantity	new[256]|new	_	_
+59-5	3949-3950	.	_	_	_	_
+59-6	3951-3955	Cite	_	_	_	_
+59-7	3956-3963	journal	organization	giv	coref	63-7
+59-8	3964-3972	requires	_	_	_	_
+59-9	3973-3982	|journal=	_	_	_	_
+59-10	3983-3984	(	_	_	_	_
+59-11	3985-3989	help	_	_	_	_
+59-12	3990-3991	)	_	_	_	_
+
+#Text=Iwaniuk AN , Marzban H , Hawkes R ; Pakan JMP ; Watanabe M ; Wylie DRW ( 2009 ) .
+60-1	3992-3999	Iwaniuk	person	giv	appos	60-2[260_0]
+60-2	4000-4002	AN	person[260]	giv[260]	appos	60-7[0_260]
+60-3	4003-4004	,	person[260]	giv[260]	_	_
+60-4	4005-4012	Marzban	person[260]	giv[260]	_	_
+60-5	4013-4014	H	person[260]	giv[260]	_	_
+60-6	4015-4016	,	_	_	_	_
+60-7	4017-4023	Hawkes	person	giv	_	_
+60-8	4024-4025	R	_	_	_	_
+60-9	4026-4027	;	_	_	_	_
+60-10	4028-4033	Pakan	person[262]	giv[262]	_	_
+60-11	4034-4037	JMP	person[262]	giv[262]	_	_
+60-12	4038-4039	;	_	_	_	_
+60-13	4040-4048	Watanabe	person[263]	new[263]	_	_
+60-14	4049-4050	M	person[263]	new[263]	_	_
+60-15	4051-4052	;	_	_	_	_
+60-16	4053-4058	Wylie	person|abstract[265]	giv|new[265]	_	_
+60-17	4059-4062	DRW	abstract[265]	new[265]	_	_
+60-18	4063-4064	(	abstract[265]	new[265]	_	_
+60-19	4065-4069	2009	abstract[265]|time	new[265]|giv	_	_
+60-20	4070-4071	)	abstract[265]	new[265]	_	_
+60-21	4072-4073	.	_	_	_	_
+
+#Text=" Compartmentation of the cerebellar cortex of hummingbirds ( Aves : Trochilidae ) revealed by the expression of zebrin II and phospholipase cb4 " . 37 .
+61-1	4074-4075	"	_	_	_	_
+61-2	4076-4092	Compartmentation	abstract[267]	new[267]	_	_
+61-3	4093-4095	of	abstract[267]	new[267]	_	_
+61-4	4096-4099	the	abstract[267]|place[268]	new[267]|new[268]	_	_
+61-5	4100-4110	cerebellar	abstract[267]|place[268]	new[267]|new[268]	_	_
+61-6	4111-4117	cortex	abstract[267]|place[268]	new[267]|new[268]	_	_
+61-7	4118-4120	of	abstract[267]|place[268]	new[267]|new[268]	_	_
+61-8	4121-4133	hummingbirds	abstract[267]|place[268]|animal	new[267]|new[268]|new	_	_
+61-9	4134-4135	(	_	_	_	_
+61-10	4136-4140	Aves	place	giv	_	_
+61-11	4141-4142	:	_	_	_	_
+61-12	4143-4154	Trochilidae	animal	new	_	_
+61-13	4155-4156	)	_	_	_	_
+61-14	4157-4165	revealed	_	_	_	_
+61-15	4166-4168	by	_	_	_	_
+61-16	4169-4172	the	abstract[272]	new[272]	_	_
+61-17	4173-4183	expression	abstract[272]	new[272]	_	_
+61-18	4184-4186	of	abstract[272]	new[272]	_	_
+61-19	4187-4193	zebrin	abstract[272]|abstract[273]	new[272]|new[273]	_	_
+61-20	4194-4196	II	abstract[272]|abstract[273]	new[272]|new[273]	_	_
+61-21	4197-4200	and	abstract[272]	new[272]	_	_
+61-22	4201-4214	phospholipase	abstract[272]|abstract[274]	new[272]|new[274]	_	_
+61-23	4215-4218	cb4	abstract[272]|abstract[274]	new[272]|new[274]	_	_
+61-24	4219-4220	"	_	_	_	_
+61-25	4221-4222	.	_	_	_	_
+61-26	4223-4225	37	_	_	_	_
+61-27	4226-4227	.	_	_	_	_
+
+#Text=J Chem Neuroanat
+62-1	4228-4229	J	person[275]	giv[275]	_	_
+62-2	4230-4234	Chem	person[275]	giv[275]	_	_
+62-3	4235-4244	Neuroanat	person[275]	giv[275]	_	_
+
+#Text=: 55 – 63 . Cite journal requires |journal= ( help )CS1 maint : multiple names : authors list ( link )
+63-1	4245-4246	:	_	_	_	_
+63-2	4247-4249	55	time[276]	new[276]	_	_
+63-3	4250-4251	–	time[276]	new[276]	_	_
+63-4	4252-4254	63	time[276]|quantity	new[276]|new	_	_
+63-5	4255-4256	.	_	_	_	_
+63-6	4257-4261	Cite	_	_	_	_
+63-7	4262-4269	journal	object	giv	_	_
+63-8	4270-4278	requires	_	_	_	_
+63-9	4279-4288	|journal=	_	_	_	_
+63-10	4289-4290	(	_	_	_	_
+63-11	4291-4295	help	_	_	_	_
+63-12	4296-4300	)CS1	_	_	_	_
+63-13	4301-4306	maint	_	_	_	_
+63-14	4307-4308	:	_	_	_	_
+63-15	4309-4317	multiple	abstract[279]	new[279]	appos	63-18[281_279]
+63-16	4318-4323	names	abstract[279]	new[279]	_	_
+63-17	4324-4325	:	_	_	_	_
+63-18	4326-4333	authors	person|abstract[281]	new|giv[281]	appos|appos	63-21[0_281]|63-21[0_281]
+63-19	4334-4338	list	abstract[281]	giv[281]	_	_
+63-20	4339-4340	(	_	_	_	_
+63-21	4341-4345	link	abstract	giv	_	_
+63-22	4346-4347	)	_	_	_	_

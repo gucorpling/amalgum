@@ -1,0 +1,131 @@
+Therefore , a cluster of networked machines or cloud computing platforms ( e. g. , Amazon EC2 ( Amazon EC2 : https://aws.amazon.com ) , Microsoft Azure ( Microsoft Azure : https://azure.microsoft.com ) , or Google Cloud Platform ( Google Cloud Platform : https://cloud.google.com ) ) are generally leveraged to run service-based applications .
+1,2 person
+3,8 object|6,8 object|9,12 abstract|9,12 object|16,18 object|19,21 object|35,38 abstract|35,38 object|35,38 organization|39,42 abstract|39,42 object|51,53 abstract
+
+In the definition ( Microservices : https://martinfowler.com/tags/microservices.html ) , the microservice architectural style is an approach to develop a single application as a suite of small services , each running in its own process and communicating with lightweight mechanisms ( e. g. , HTTP resource API ) .
+1,2 person
+2,4 abstract|5,6 abstract|7,8 place|10,14 abstract|11,14 abstract|15,22 abstract|19,22 abstract|23,30 object|32,33 object|32,35 abstract|32,35 object|38,40 abstract|44,47 abstract
+
+Microservice architecture is a new trend rising fast for application development , as it enhances flexibility to incorporate different technologies , it reduces complexity by using lightweight and modular services , and it improves overall scalability and resilience of the system .
+1,2 person
+1,3 abstract|4,7 abstract|10,12 abstract|14,15 abstract|16,17 abstract|19,21 abstract|22,23 abstract|24,25 abstract|27,31 abstract|33,34 abstract|35,37 abstract|40,42 abstract
+
+For instance , an online shopping application could be basically divided into product service , cart service , and order service , which can greatly improve the productivity , agility , and resilience of the application .
+1,2 person
+4,8 abstract|13,14 abstract|13,15 abstract|13,22 abstract|16,17 object|16,22 abstract|27,29 abstract|30,31 abstract|33,37 abstract|35,37 abstract|35,37 object
+
+Furthermore , the network communication between different services needs to be handled well , as the communication conditions significantly influence the quality of service ( e. g. , the response time of a service ) .
+1,2 person
+3,9 abstract|16,19 abstract|21,25 abstract|24,25 abstract|29,35 abstract|33,35 abstract
+
+Considering the traffic demands , an intuitive solution is to place the services that have large traffic demands among them on the same machine , which can achieve intra-machine communication and reduce inter-machine traffic .
+1,2 person
+2,5 abstract|6,9 abstract|6,9 event|12,14 abstract|16,19 abstract|22,25 object|22,25 place|29,31 abstract|33,35 abstract
+
+More importantly , containers are emerging as the disruptive technology for effectively encapsulating runtime contexts of software components and services , which significantly improves portability and efficiency of deploying applications in clouds .
+1,2 person
+4,5 object|8,19 abstract|8,21 abstract|17,21 object|25,26 abstract|32,33 place
+
+In order to achieve a desired performance of a service-based application , cluster schedulers have to carefully place each service of the application with respect to the resource demands and traffic demands .
+1,2 person
+5,12 abstract|9,12 abstract|10,12 abstract|13,15 abstract|19,24 abstract|22,24 abstract|27,30 abstract|31,33 abstract
+
+For traffic-aware scheduling , relevant research solutions are proposed to handle virtual machine ( VM ) placement problem , which aims to optimize network resource usage over the cluster .
+1,2 person
+2,4 abstract|5,8 abstract|12,14 abstract|12,19 abstract|24,27 abstract|24,30 abstract
+
+When deploying a service-based application in clouds , the scheduler has to carefully schedule each service , which may have diverse resource demands , on distributed compute clusters .
+1,2 person
+3,6 abstract|4,6 abstract|7,8 place|9,11 abstract|15,17 abstract|21,24 abstract|26,29 object|26,29 place
+
+Some other research works concentrate on composite Software as a service ( SaaS ) placement problem , which try to minimize the total execution time for composite SaaS .
+1,2 person
+1,5 abstract|7,12 abstract|7,17 abstract|13,17 abstract|22,26 abstract|22,29 abstract|27,29 abstract
+
+Poor handling of the traffic demands can result in severe performance degradation , as the response time of a service is directly affected by its traffic situation .
+1,2 person
+1,7 abstract|4,7 abstract|10,13 abstract|15,21 abstract|19,21 abstract|25,26 object|25,28 abstract
+
+For instance , Tetris , a multi-resource cluster scheduler , adapts heuristics for the multi-dimensional bin packing problem to efficiently pack tasks on multi-resource cluster .
+1,2 person
+4,5 organization|6,9 object|6,10 object|14,19 abstract|16,17 object|22,23 abstract|22,26 object|24,26 object
+
+However , these solutions rely on a certain network topology , while most of existing cluster schedulers are agnostic to network topology .
+1,2 person
+3,5 abstract|7,11 abstract|15,18 abstract|16,17 object|21,23 abstract
+
+Second , services involved in the application often have traffic demands among them due to data communication , which require meticulous treatment .
+1,2 person
+3,4 abstract|6,8 abstract|10,14 abstract|13,14 abstract|16,17 abstract|16,18 abstract|21,23 abstract
+
+Unfortunately , these solutions would face difficulties for handling service-based applications , as they ignore the traffic demands when making placement decisions .
+1,2 person
+3,5 abstract|7,12 abstract|10,11 abstract|10,12 abstract|16,19 abstract|21,22 abstract|21,23 abstract
+
+The application then is composed of a number of services ( service-based application ) that work cohesively to provide complex functionalities .
+1,2 person
+1,3 abstract|7,11 abstract|12,14 abstract|20,22 abstract
+
+Efficient resource allocation to each service is difficult , while it becomes more challenging when the cluster consists of heterogeneous machines .
+1,2 person
+1,7 abstract|5,7 abstract|11,12 abstract|16,18 place|20,22 object
+
+In particular , it is hard to get the network topology information when deploying a service-based application on a virtual infrastructure .
+1,2 person
+9,13 abstract|15,18 abstract|15,18 object|15,22 object|19,22 abstract|19,22 place
+
+In general , service-based applications involve numerous distributed and complex services which usually require more computing resources beyond single machine capability .
+1,2 person
+4,6 abstract|7,12 abstract|15,18 abstract|19,22 abstract
+
+Firmament , a centralized cluster scheduler , can make high-quality placement decisions on large-scale clusters via a min-cost max-flow optimization .
+1,2 person
+3,7 object|5,6 object|10,16 abstract|14,16 object|14,16 place|17,21 abstract
+
+Ensuring the desired performance of service-based applications , especially the network performance between the involved services , becomes increasingly important .
+1,2 person
+2,8 abstract|6,8 abstract|10,17 abstract
+
+The underlying machine has to ensure sufficient resources to run each service and at the same time provide cohesive functionalities .
+1,2 person
+1,4 abstract|7,9 abstract|11,13 abstract|19,21 abstract
+
+First , services involved in the application often have diverse resource demands , such as CPU , memory and disk .
+1,2 person
+3,4 abstract|6,8 abstract|10,13 abstract
+
+Due to the advantages of microservices architecture , many developers intend to transform traditional monolithic applications into service-based applications .
+1,2 person
+3,8 abstract|6,7 object|6,8 abstract|9,11 person|14,17 abstract|18,20 abstract
+
+Recent cluster scheduling methods mainly focus on the cluster resource efficiency or job completion time of batch workloads .
+1,2 person
+1,5 abstract|2,5 abstract|8,12 abstract|9,12 abstract|13,19 abstract|13,19 object|17,19 abstract
+
+When deploying a service-based application in clouds , several essential aspects have to be taken into account .
+1,2 person
+3,6 abstract|4,6 abstract|7,8 place|9,12 abstract
+
+However , they only focus on a set of predefined service components for the application placement .
+1,2 person
+3,4 person|7,13 abstract|14,17 abstract
+
+However , such services cannot all be co-located on one machine due to limited resource capacities .
+1,2 person
+3,5 abstract|10,12 object|10,12 place|14,17 abstract
+
+Hence , placement of service-based applications is quite complicated in clouds .
+1,2 person
+5,7 abstract|11,12 place
+
+However , it also brings challenges .
+1,2 person
+3,4 event|6,7 abstract
+
+1 .
+1,2 person
+
+
+Introduction
+1,2 person
+1,2 abstract

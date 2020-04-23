@@ -1,0 +1,907 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Francisco Serrão
+1-1	0-9	Francisco	person[1]	new[1]	_	_
+1-2	10-16	Serrão	person[1]	new[1]	_	_
+
+#Text=Francisco Serrão
+2-1	17-26	Francisco	person[2]	new[2]	_	_
+2-2	27-33	Serrão	person[2]	new[2]	_	_
+
+#Text=( died 1521 ) was a Portuguese explorer and a cousin of Ferdinand Magellan .
+3-1	34-35	(	_	_	_	_
+3-2	36-40	died	_	_	_	_
+3-3	41-45	1521	time	new	_	_
+3-4	46-47	)	_	_	_	_
+3-5	48-51	was	_	_	_	_
+3-6	52-53	a	person[4]	new[4]	_	_
+3-7	54-64	Portuguese	person[4]	new[4]	_	_
+3-8	65-73	explorer	person[4]	new[4]	_	_
+3-9	74-77	and	_	_	_	_
+3-10	78-79	a	person[5]	new[5]	_	_
+3-11	80-86	cousin	person[5]	new[5]	_	_
+3-12	87-89	of	person[5]	new[5]	_	_
+3-13	90-99	Ferdinand	person[5]|person[6]	new[5]|new[6]	ana	4-1[0_6]
+3-14	100-108	Magellan	person[5]|person[6]	new[5]|new[6]	_	_
+3-15	109-110	.	_	_	_	_
+
+#Text=His 1512 voyage was the first known European sailing east past Malacca through modern Indonesia and the East Indies .
+4-1	111-114	His	person|object[8]	giv|new[8]	coref|ana|coref|ana	4-5[9_8]|5-1|4-5[9_8]|5-1
+4-2	115-119	1512	object[8]	new[8]	_	_
+4-3	120-126	voyage	object[8]	new[8]	_	_
+4-4	127-130	was	_	_	_	_
+4-5	131-134	the	object[9]	giv[9]	_	_
+4-6	135-140	first	object[9]	giv[9]	_	_
+4-7	141-146	known	object[9]	giv[9]	_	_
+4-8	147-155	European	object[9]	giv[9]	_	_
+4-9	156-163	sailing	object[9]	giv[9]	_	_
+4-10	164-168	east	object[9]|place	giv[9]|new	coref	4-18
+4-11	169-173	past	object[9]|place[11]	giv[9]|new[11]	coref	8-26[0_11]
+4-12	174-181	Malacca	object[9]|place[11]	giv[9]|new[11]	_	_
+4-13	182-189	through	object[9]	giv[9]	_	_
+4-14	190-196	modern	object[9]|place[12]	giv[9]|new[12]	coref	24-2[166_12]
+4-15	197-206	Indonesia	object[9]|place[12]	giv[9]|new[12]	_	_
+4-16	207-210	and	object[9]	giv[9]	_	_
+4-17	211-214	the	object[9]|place[14]	giv[9]|new[14]	coref	7-3[26_14]
+4-18	215-219	East	object[9]|place|place[14]	giv[9]|giv|new[14]	_	_
+4-19	220-226	Indies	object[9]|place[14]	giv[9]|new[14]	_	_
+4-20	227-228	.	_	_	_	_
+
+#Text=He became a confidante of the Sultan Bayan Sirrullah , the ruler of Ternate , becoming his personal advisor .
+5-1	229-231	He	person	giv	ana	5-17
+5-2	232-238	became	_	_	_	_
+5-3	239-240	a	_	_	_	_
+5-4	241-251	confidante	_	_	_	_
+5-5	252-254	of	_	_	_	_
+5-6	255-258	the	person[16]	new[16]	appos	5-11[17_16]
+5-7	259-265	Sultan	person[16]	new[16]	_	_
+5-8	266-271	Bayan	person[16]	new[16]	_	_
+5-9	272-281	Sirrullah	person[16]	new[16]	_	_
+5-10	282-283	,	_	_	_	_
+5-11	284-287	the	person[17]	giv[17]	coref	24-31[177_17]
+5-12	288-293	ruler	person[17]	giv[17]	_	_
+5-13	294-296	of	person[17]	giv[17]	_	_
+5-14	297-304	Ternate	person[17]|place	giv[17]|new	coref	6-4
+5-15	305-306	,	_	_	_	_
+5-16	307-315	becoming	_	_	_	_
+5-17	316-319	his	person	giv	ana	6-1
+5-18	320-328	personal	_	_	_	_
+5-19	329-336	advisor	_	_	_	_
+5-20	337-338	.	_	_	_	_
+
+#Text=He remained in Ternate where he died around the same time Magellan died .
+6-1	339-341	He	person	giv	ana	6-6
+6-2	342-350	remained	_	_	_	_
+6-3	351-353	in	_	_	_	_
+6-4	354-361	Ternate	place	giv	coref	23-19
+6-5	362-367	where	_	_	_	_
+6-6	368-370	he	person	giv	coref	28-6[201_0]
+6-7	371-375	died	_	_	_	_
+6-8	376-382	around	_	_	_	_
+6-9	383-386	the	object[24]	new[24]	coref	28-24[0_24]
+6-10	387-391	same	object[24]	new[24]	_	_
+6-11	392-396	time	time|object[24]	new|new[24]	_	_
+6-12	397-405	Magellan	object[24]	new[24]	_	_
+6-13	406-410	died	_	_	_	_
+6-14	411-412	.	_	_	_	_
+
+#Text=Voyage to the Indies
+7-1	413-419	Voyage	event[25]	new[25]	_	_
+7-2	420-422	to	event[25]	new[25]	_	_
+7-3	423-426	the	event[25]|place[26]	new[25]|giv[26]	_	_
+7-4	427-433	Indies	event[25]|place[26]	new[25]|giv[26]	_	_
+
+#Text=Serrão served as captain of one of three vessels ( and second in overall command under António de Abreu [ 1 ] ) sent from Malacca by Afonso de Albuquerque to find the Spice Islands of Banda in Maluku in 1511 . [ 2 ]
+8-1	434-440	Serrão	person	new	coref	12-2[62_0]
+8-2	441-447	served	_	_	_	_
+8-3	448-450	as	_	_	_	_
+8-4	451-458	captain	_	_	_	_
+8-5	459-461	of	_	_	_	_
+8-6	462-465	one	person[28]	new[28]	_	_
+8-7	466-468	of	person[28]	new[28]	_	_
+8-8	469-474	three	person[28]|object[29]	new[28]|new[29]	coref	14-14[84_29]
+8-9	475-482	vessels	person[28]|object[29]	new[28]|new[29]	_	_
+8-10	483-484	(	person[28]	new[28]	_	_
+8-11	485-488	and	person[28]	new[28]	_	_
+8-12	489-495	second	person[28]	new[28]	_	_
+8-13	496-498	in	_	_	_	_
+8-14	499-506	overall	abstract[30]	new[30]	_	_
+8-15	507-514	command	abstract[30]	new[30]	_	_
+8-16	515-520	under	abstract[30]	new[30]	_	_
+8-17	521-528	António	abstract[30]|person[31]	new[30]|new[31]	_	_
+8-18	529-531	de	abstract[30]|person[31]	new[30]|new[31]	_	_
+8-19	532-537	Abreu	abstract[30]|person[31]	new[30]|new[31]	_	_
+8-20	538-539	[	_	_	_	_
+8-21	540-541	1	abstract	new	coref	14-35
+8-22	542-543	]	_	_	_	_
+8-23	544-545	)	_	_	_	_
+8-24	546-550	sent	_	_	_	_
+8-25	551-555	from	_	_	_	_
+8-26	556-563	Malacca	place	giv	coref	22-40
+8-27	564-566	by	_	_	_	_
+8-28	567-573	Afonso	person[34]	new[34]	_	_
+8-29	574-576	de	person[34]	new[34]	_	_
+8-30	577-588	Albuquerque	person[34]	new[34]	_	_
+8-31	589-591	to	_	_	_	_
+8-32	592-596	find	_	_	_	_
+8-33	597-600	the	place[35]	new[35]	coref	35-9[251_35]
+8-34	601-606	Spice	place[35]	new[35]	_	_
+8-35	607-614	Islands	place[35]	new[35]	_	_
+8-36	615-617	of	place[35]	new[35]	_	_
+8-37	618-623	Banda	place[35]|place	new[35]|new	coref	9-1
+8-38	624-626	in	_	_	_	_
+8-39	627-633	Maluku	place	new	coref	16-10
+8-40	634-636	in	_	_	_	_
+8-41	637-641	1511	time	new	_	_
+8-42	642-643	.	_	_	_	_
+8-43	644-645	[	_	_	_	_
+8-44	646-647	2	abstract	new	coref	23-34
+8-45	648-649	]	_	_	_	_
+
+#Text=Banda was the world 's only source of nutmeg and mace , spices used as flavourings , medicines , preserving agents , that were at the time highly valued in European markets .
+9-1	650-655	Banda	place	giv	coref	9-3[42_0]
+9-2	656-659	was	_	_	_	_
+9-3	660-663	the	place[42]	giv[42]	coref	10-6[50_42]
+9-4	664-669	world	place[41]|place[42]	new[41]|giv[42]	_	_
+9-5	670-672	's	place[41]|place[42]	new[41]|giv[42]	_	_
+9-6	673-677	only	place[42]	giv[42]	_	_
+9-7	678-684	source	place[42]	giv[42]	_	_
+9-8	685-687	of	place[42]	giv[42]	_	_
+9-9	688-694	nutmeg	place[42]|plant|abstract[44]	giv[42]|new|new[44]	coref|coref|coref|coref	14-17|14-17[86_44]|14-17|14-17[86_44]
+9-10	695-698	and	place[42]|abstract[44]	giv[42]|new[44]	_	_
+9-11	699-703	mace	place[42]|abstract[44]|person	giv[42]|new[44]|new	coref	14-19
+9-12	704-705	,	place[42]|abstract[44]	giv[42]|new[44]	_	_
+9-13	706-712	spices	place[42]|abstract[44]|plant	giv[42]|new[44]|new	coref	22-14
+9-14	713-717	used	_	_	_	_
+9-15	718-720	as	_	_	_	_
+9-16	721-732	flavourings	_	_	_	_
+9-17	733-734	,	_	_	_	_
+9-18	735-744	medicines	_	_	_	_
+9-19	745-746	,	_	_	_	_
+9-20	747-757	preserving	_	_	_	_
+9-21	758-764	agents	person	new	_	_
+9-22	765-766	,	_	_	_	_
+9-23	767-771	that	_	_	_	_
+9-24	772-776	were	_	_	_	_
+9-25	777-779	at	_	_	_	_
+9-26	780-783	the	_	_	_	_
+9-27	784-788	time	_	_	_	_
+9-28	789-795	highly	_	_	_	_
+9-29	796-802	valued	_	_	_	_
+9-30	803-805	in	_	_	_	_
+9-31	806-814	European	place[48]	new[48]	_	_
+9-32	815-822	markets	place[48]	new[48]	_	_
+9-33	823-824	.	_	_	_	_
+
+#Text=The Portuguese sought to dominate the source , rather than relying on Arab traders who sold it to the Venetians for exorbitant prices .
+10-1	825-828	The	abstract[49]	new[49]	_	_
+10-2	829-839	Portuguese	abstract[49]	new[49]	_	_
+10-3	840-846	sought	_	_	_	_
+10-4	847-849	to	_	_	_	_
+10-5	850-858	dominate	_	_	_	_
+10-6	859-862	the	place[50]	giv[50]	ana	10-17[0_50]
+10-7	863-869	source	place[50]	giv[50]	_	_
+10-8	870-871	,	_	_	_	_
+10-9	872-878	rather	_	_	_	_
+10-10	879-883	than	_	_	_	_
+10-11	884-891	relying	_	_	_	_
+10-12	892-894	on	_	_	_	_
+10-13	895-899	Arab	person[51]	new[51]	_	_
+10-14	900-907	traders	person[51]	new[51]	_	_
+10-15	908-911	who	_	_	_	_
+10-16	912-916	sold	_	_	_	_
+10-17	917-919	it	place	giv	coref	11-19[60_0]
+10-18	920-922	to	_	_	_	_
+10-19	923-926	the	organization[53]	new[53]	_	_
+10-20	927-936	Venetians	organization[53]	new[53]	_	_
+10-21	937-940	for	_	_	_	_
+10-22	941-951	exorbitant	abstract[54]	new[54]	_	_
+10-23	952-958	prices	abstract[54]	new[54]	_	_
+10-24	959-960	.	_	_	_	_
+
+#Text=Malay pilots guided the expedition east via Java and along the Lesser Sundas before steering them north to Banda via Ambon .
+11-1	961-966	Malay	person[55]	new[55]	ana	11-16[0_55]
+11-2	967-973	pilots	person[55]	new[55]	_	_
+11-3	974-980	guided	_	_	_	_
+11-4	981-984	the	event[56]	new[56]	coref	12-27[70_56]
+11-5	985-995	expedition	event[56]	new[56]	_	_
+11-6	996-1000	east	_	_	_	_
+11-7	1001-1004	via	_	_	_	_
+11-8	1005-1009	Java	place	new	coref	12-10
+11-9	1010-1013	and	_	_	_	_
+11-10	1014-1019	along	_	_	_	_
+11-11	1020-1023	the	place[58]	new[58]	_	_
+11-12	1024-1030	Lesser	place[58]	new[58]	_	_
+11-13	1031-1037	Sundas	place[58]	new[58]	_	_
+11-14	1038-1044	before	_	_	_	_
+11-15	1045-1053	steering	_	_	_	_
+11-16	1054-1058	them	person	giv	ana	14-14
+11-17	1059-1064	north	_	_	_	_
+11-18	1065-1067	to	_	_	_	_
+11-19	1068-1073	Banda	place[60]	giv[60]	coref	14-5[0_60]
+11-20	1074-1077	via	place[60]	giv[60]	_	_
+11-21	1078-1083	Ambon	place[60]|place	giv[60]|new	coref	13-19
+11-22	1084-1085	.	_	_	_	_
+
+#Text=When Serrão 's ship had berthed at Gresik on Java , he married a Javanese woman as his wife , who then accompanied him on the expedition 's further journey . [ 3 ]
+12-1	1086-1090	When	_	_	_	_
+12-2	1091-1097	Serrão	person[62]|object[63]	giv[62]|new[63]	ana|coref|ana|coref	12-12[0_62]|13-3[75_63]|12-12[0_62]|13-3[75_63]
+12-3	1098-1100	's	person[62]|object[63]	giv[62]|new[63]	_	_
+12-4	1101-1105	ship	object[63]	new[63]	_	_
+12-5	1106-1109	had	_	_	_	_
+12-6	1110-1117	berthed	_	_	_	_
+12-7	1118-1120	at	_	_	_	_
+12-8	1121-1127	Gresik	place	new	_	_
+12-9	1128-1130	on	_	_	_	_
+12-10	1131-1135	Java	place	giv	_	_
+12-11	1136-1137	,	_	_	_	_
+12-12	1138-1140	he	person	giv	ana	12-18
+12-13	1141-1148	married	_	_	_	_
+12-14	1149-1150	a	person[67]	new[67]	_	_
+12-15	1151-1159	Javanese	person[67]	new[67]	_	_
+12-16	1160-1165	woman	person[67]	new[67]	_	_
+12-17	1166-1168	as	_	_	_	_
+12-18	1169-1172	his	person	giv	ana	12-24
+12-19	1173-1177	wife	_	_	_	_
+12-20	1178-1179	,	_	_	_	_
+12-21	1180-1183	who	_	_	_	_
+12-22	1184-1188	then	_	_	_	_
+12-23	1189-1200	accompanied	_	_	_	_
+12-24	1201-1204	him	person	giv	ana	13-3
+12-25	1205-1207	on	_	_	_	_
+12-26	1208-1211	the	event[71]	new[71]	_	_
+12-27	1212-1222	expedition	event[70]|event[71]	giv[70]|new[71]	coref	14-1[80_70]
+12-28	1223-1225	's	event[70]|event[71]	giv[70]|new[71]	_	_
+12-29	1226-1233	further	event[71]	new[71]	_	_
+12-30	1234-1241	journey	event[71]	new[71]	_	_
+12-31	1242-1243	.	_	_	_	_
+12-32	1244-1245	[	_	_	_	_
+12-33	1246-1247	3	abstract	new	_	_
+12-34	1248-1249	]	_	_	_	_
+
+#Text=In 1512 his ship was shipwrecked but managed to reach Luco-Pino island ( Hitu ) , north of Ambon .
+13-1	1250-1252	In	_	_	_	_
+13-2	1253-1257	1512	time	new	_	_
+13-3	1258-1261	his	person|object[75]	giv|giv[75]	coref|coref|coref|coref	15-1|15-15[98_75]|15-1|15-15[98_75]
+13-4	1262-1266	ship	object[75]	giv[75]	_	_
+13-5	1267-1270	was	_	_	_	_
+13-6	1271-1282	shipwrecked	_	_	_	_
+13-7	1283-1286	but	_	_	_	_
+13-8	1287-1294	managed	_	_	_	_
+13-9	1295-1297	to	_	_	_	_
+13-10	1298-1303	reach	_	_	_	_
+13-11	1304-1313	Luco-Pino	person|place[77]	new|new[77]	coref|coref	17-22[110_77]|17-22[110_77]
+13-12	1314-1320	island	place[77]	new[77]	_	_
+13-13	1321-1322	(	_	_	_	_
+13-14	1323-1327	Hitu	place	new	coref	20-17
+13-15	1328-1329	)	_	_	_	_
+13-16	1330-1331	,	_	_	_	_
+13-17	1332-1337	north	_	_	_	_
+13-18	1338-1340	of	_	_	_	_
+13-19	1341-1346	Ambon	place	giv	coref	16-4
+13-20	1347-1348	.	_	_	_	_
+
+#Text=The expedition remained in Banda for about one month , purchasing and filling their ships with nutmeg and mace , as well as cloves in which Banda had a thriving entrepôt trade . [ 1 ]
+14-1	1349-1352	The	event[80]	giv[80]	_	_
+14-2	1353-1363	expedition	event[80]	giv[80]	_	_
+14-3	1364-1372	remained	_	_	_	_
+14-4	1373-1375	in	_	_	_	_
+14-5	1376-1381	Banda	place	giv	coref	14-27
+14-6	1382-1385	for	_	_	_	_
+14-7	1386-1391	about	time[82]	new[82]	_	_
+14-8	1392-1395	one	time[82]	new[82]	_	_
+14-9	1396-1401	month	time[82]	new[82]	_	_
+14-10	1402-1403	,	_	_	_	_
+14-11	1404-1414	purchasing	_	_	_	_
+14-12	1415-1418	and	_	_	_	_
+14-13	1419-1426	filling	_	_	_	_
+14-14	1427-1432	their	person|object[84]	giv|giv[84]	_	_
+14-15	1433-1438	ships	object[84]	giv[84]	_	_
+14-16	1439-1443	with	object[84]	giv[84]	_	_
+14-17	1444-1450	nutmeg	object[84]|plant|abstract[86]	giv[84]|giv|giv[86]	_	_
+14-18	1451-1454	and	object[84]|abstract[86]	giv[84]|giv[86]	_	_
+14-19	1455-1459	mace	object[84]|abstract[86]|object	giv[84]|giv[86]|giv	_	_
+14-20	1460-1461	,	object[84]|abstract[86]	giv[84]|giv[86]	_	_
+14-21	1462-1464	as	object[84]|abstract[86]	giv[84]|giv[86]	_	_
+14-22	1465-1469	well	object[84]|abstract[86]	giv[84]|giv[86]	_	_
+14-23	1470-1472	as	object[84]|abstract[86]	giv[84]|giv[86]	_	_
+14-24	1473-1479	cloves	object[84]|abstract[86]|substance	giv[84]|giv[86]|new	_	_
+14-25	1480-1482	in	_	_	_	_
+14-26	1483-1488	which	_	_	_	_
+14-27	1489-1494	Banda	place	giv	coref	15-3
+14-28	1495-1498	had	_	_	_	_
+14-29	1499-1500	a	abstract[91]	new[91]	coref	22-19[151_91]
+14-30	1501-1509	thriving	abstract[91]	new[91]	_	_
+14-31	1510-1518	entrepôt	abstract|abstract[91]	new|new[91]	_	_
+14-32	1519-1524	trade	abstract[91]	new[91]	_	_
+14-33	1525-1526	.	_	_	_	_
+14-34	1527-1528	[	_	_	_	_
+14-35	1529-1530	1	abstract	giv	coref	15-20
+14-36	1531-1532	]	_	_	_	_
+
+#Text=Serrão left Banda in a Chinese junk purchased from a regional trader to replace his lost ship . [ 1 ]
+15-1	1533-1539	Serrão	person	giv	ana	15-15
+15-2	1540-1544	left	_	_	_	_
+15-3	1545-1550	Banda	place	giv	coref	22-7[145_0]
+15-4	1551-1553	in	_	_	_	_
+15-5	1554-1555	a	object[95]	new[95]	_	_
+15-6	1556-1563	Chinese	object[95]	new[95]	_	_
+15-7	1564-1568	junk	object[95]	new[95]	_	_
+15-8	1569-1578	purchased	_	_	_	_
+15-9	1579-1583	from	_	_	_	_
+15-10	1584-1585	a	person[96]	new[96]	_	_
+15-11	1586-1594	regional	person[96]	new[96]	_	_
+15-12	1595-1601	trader	person[96]	new[96]	_	_
+15-13	1602-1604	to	_	_	_	_
+15-14	1605-1612	replace	_	_	_	_
+15-15	1613-1616	his	person|object[98]	giv|giv[98]	coref|coref|coref|coref	16-6|17-9[107_98]|16-6|17-9[107_98]
+15-16	1617-1621	lost	object[98]	giv[98]	_	_
+15-17	1622-1626	ship	object[98]	giv[98]	_	_
+15-18	1627-1628	.	_	_	_	_
+15-19	1629-1630	[	_	_	_	_
+15-20	1631-1632	1	abstract	giv	coref	20-20
+15-21	1633-1634	]	_	_	_	_
+
+#Text=D'Abreu sailed through Ambon while Serrão went ahead towards Maluku islands .
+16-1	1635-1642	D'Abreu	person	new	_	_
+16-2	1643-1649	sailed	_	_	_	_
+16-3	1650-1657	through	_	_	_	_
+16-4	1658-1663	Ambon	place	giv	coref	20-11
+16-5	1664-1669	while	_	_	_	_
+16-6	1670-1676	Serrão	person	giv	coref	18-18[117_0]
+16-7	1677-1681	went	_	_	_	_
+16-8	1682-1687	ahead	_	_	_	_
+16-9	1688-1695	towards	_	_	_	_
+16-10	1696-1702	Maluku	person|place[104]	giv|new[104]	coref|coref	41-1|41-1
+16-11	1703-1710	islands	place[104]	new[104]	_	_
+16-12	1711-1712	.	_	_	_	_
+
+#Text=With nine Portuguese crew and nine Indonesians , the ship foundered in a squall and broke up on a reef off a small island .
+17-1	1713-1717	With	_	_	_	_
+17-2	1718-1722	nine	person[105]	new[105]	coref	18-18[118_105]
+17-3	1723-1733	Portuguese	person[105]	new[105]	_	_
+17-4	1734-1738	crew	person[105]	new[105]	_	_
+17-5	1739-1742	and	_	_	_	_
+17-6	1743-1747	nine	person[106]	new[106]	_	_
+17-7	1748-1759	Indonesians	person[106]	new[106]	_	_
+17-8	1760-1761	,	_	_	_	_
+17-9	1762-1765	the	object[107]	giv[107]	_	_
+17-10	1766-1770	ship	object[107]	giv[107]	_	_
+17-11	1771-1780	foundered	_	_	_	_
+17-12	1781-1783	in	_	_	_	_
+17-13	1784-1785	a	event[108]	new[108]	_	_
+17-14	1786-1792	squall	event[108]	new[108]	_	_
+17-15	1793-1796	and	_	_	_	_
+17-16	1797-1802	broke	_	_	_	_
+17-17	1803-1805	up	_	_	_	_
+17-18	1806-1808	on	_	_	_	_
+17-19	1809-1810	a	object[109]	new[109]	_	_
+17-20	1811-1815	reef	object[109]	new[109]	_	_
+17-21	1816-1819	off	_	_	_	_
+17-22	1820-1821	a	place[110]	giv[110]	coref	18-3[111_110]
+17-23	1822-1827	small	place[110]	giv[110]	_	_
+17-24	1828-1834	island	place[110]	giv[110]	_	_
+17-25	1835-1836	.	_	_	_	_
+
+#Text=When the island 's inhabitants , notorious shipwreck scavengers , surveyed the wreck from a boat , Serrão 's crew posed as unarmed and helpless but wealthy castaways .
+18-1	1837-1841	When	_	_	_	_
+18-2	1842-1845	the	person[112]	new[112]	_	_
+18-3	1846-1852	island	place[111]|person[112]	giv[111]|new[112]	coref	24-32[176_111]
+18-4	1853-1855	's	place[111]|person[112]	giv[111]|new[112]	_	_
+18-5	1856-1867	inhabitants	person[112]	new[112]	_	_
+18-6	1868-1869	,	_	_	_	_
+18-7	1870-1879	notorious	person[114]	new[114]	coref	19-2[119_114]
+18-8	1880-1889	shipwreck	object|person[114]	new|new[114]	_	_
+18-9	1890-1900	scavengers	person[114]	new[114]	_	_
+18-10	1901-1902	,	_	_	_	_
+18-11	1903-1911	surveyed	_	_	_	_
+18-12	1912-1915	the	place[115]	new[115]	_	_
+18-13	1916-1921	wreck	place[115]	new[115]	_	_
+18-14	1922-1926	from	_	_	_	_
+18-15	1927-1928	a	object[116]	new[116]	_	_
+18-16	1929-1933	boat	object[116]	new[116]	_	_
+18-17	1934-1935	,	_	_	_	_
+18-18	1936-1942	Serrão	person[117]|person[118]	giv[117]|giv[118]	coref|coref|coref|coref	19-16[0_118]|21-1[131_117]|19-16[0_118]|21-1[131_117]
+18-19	1943-1945	's	person[117]|person[118]	giv[117]|giv[118]	_	_
+18-20	1946-1950	crew	person[118]	giv[118]	_	_
+18-21	1951-1956	posed	_	_	_	_
+18-22	1957-1959	as	_	_	_	_
+18-23	1960-1967	unarmed	_	_	_	_
+18-24	1968-1971	and	_	_	_	_
+18-25	1972-1980	helpless	_	_	_	_
+18-26	1981-1984	but	_	_	_	_
+18-27	1985-1992	wealthy	_	_	_	_
+18-28	1993-2002	castaways	_	_	_	_
+18-29	2003-2004	.	_	_	_	_
+
+#Text=As the scavengers drew near , the Portuguese attacked and commandeered both their craft and crew .
+19-1	2005-2007	As	_	_	_	_
+19-2	2008-2011	the	person[119]	giv[119]	ana	19-13[0_119]
+19-3	2012-2022	scavengers	person[119]	giv[119]	_	_
+19-4	2023-2027	drew	_	_	_	_
+19-5	2028-2032	near	_	_	_	_
+19-6	2033-2034	,	_	_	_	_
+19-7	2035-2038	the	abstract[120]	new[120]	_	_
+19-8	2039-2049	Portuguese	abstract[120]	new[120]	_	_
+19-9	2050-2058	attacked	_	_	_	_
+19-10	2059-2062	and	_	_	_	_
+19-11	2063-2075	commandeered	_	_	_	_
+19-12	2076-2080	both	object[122]	new[122]	_	_
+19-13	2081-2086	their	person|object[122]	giv|new[122]	ana	20-1
+19-14	2087-2092	craft	object[122]	new[122]	_	_
+19-15	2093-2096	and	_	_	_	_
+19-16	2097-2101	crew	person	giv	_	_
+19-17	2102-2103	.	_	_	_	_
+
+#Text=Their inadvertent rescuers were then forced to take them to Ambon , where they disembarked in Hitu . [ 1 ]
+20-1	2104-2109	Their	person|person[125]	giv|new[125]	ana|ana	20-9|20-9
+20-2	2110-2121	inadvertent	person[125]	new[125]	_	_
+20-3	2122-2130	rescuers	person[125]	new[125]	_	_
+20-4	2131-2135	were	_	_	_	_
+20-5	2136-2140	then	_	_	_	_
+20-6	2141-2147	forced	_	_	_	_
+20-7	2148-2150	to	_	_	_	_
+20-8	2151-2155	take	_	_	_	_
+20-9	2156-2160	them	person	giv	ana	20-14
+20-10	2161-2163	to	_	_	_	_
+20-11	2164-2169	Ambon	place	giv	_	_
+20-12	2170-2171	,	_	_	_	_
+20-13	2172-2177	where	_	_	_	_
+20-14	2178-2182	they	person	giv	_	_
+20-15	2183-2194	disembarked	_	_	_	_
+20-16	2195-2197	in	_	_	_	_
+20-17	2198-2202	Hitu	place	giv	coref	21-13
+20-18	2203-2204	.	_	_	_	_
+20-19	2205-2206	[	_	_	_	_
+20-20	2207-2208	1	abstract	giv	_	_
+20-21	2209-2210	]	_	_	_	_
+
+#Text=Serrão 's armour , muskets and marksmanship impressed the powerful chiefs of Hitu who were warring against Luhu , the principal settlement on Seram ' s Hoamal Peninsula near Hitu . [ 4 ]
+21-1	2211-2217	Serrão	person[131]|object[132]	giv[131]|new[132]	coref|coref	24-15[0_131]|24-15[0_131]
+21-2	2218-2220	's	person[131]|object[132]	giv[131]|new[132]	_	_
+21-3	2221-2227	armour	object[132]	new[132]	_	_
+21-4	2228-2229	,	_	_	_	_
+21-5	2230-2237	muskets	object	new	_	_
+21-6	2238-2241	and	_	_	_	_
+21-7	2242-2254	marksmanship	object	new	_	_
+21-8	2255-2264	impressed	_	_	_	_
+21-9	2265-2268	the	person[135]	new[135]	_	_
+21-10	2269-2277	powerful	person[135]	new[135]	_	_
+21-11	2278-2284	chiefs	person[135]	new[135]	_	_
+21-12	2285-2287	of	person[135]	new[135]	_	_
+21-13	2288-2292	Hitu	person[135]|person	new[135]|giv	coref	21-30
+21-14	2293-2296	who	_	_	_	_
+21-15	2297-2301	were	_	_	_	_
+21-16	2302-2309	warring	_	_	_	_
+21-17	2310-2317	against	_	_	_	_
+21-18	2318-2322	Luhu	place	new	appos	21-20[138_0]
+21-19	2323-2324	,	_	_	_	_
+21-20	2325-2328	the	place[138]	giv[138]	_	_
+21-21	2329-2338	principal	place[138]	giv[138]	_	_
+21-22	2339-2349	settlement	place[138]	giv[138]	_	_
+21-23	2350-2352	on	place[138]	giv[138]	_	_
+21-24	2353-2358	Seram	place[138]|place[139]|place[141]	giv[138]|new[139]|new[141]	_	_
+21-25	2359-2360	'	place[138]|place[139]|place[141]	giv[138]|new[139]|new[141]	_	_
+21-26	2361-2362	s	place[138]|person[140]|place[141]	giv[138]|new[140]|new[141]	_	_
+21-27	2363-2369	Hoamal	place[138]|person[140]|place[141]	giv[138]|new[140]|new[141]	_	_
+21-28	2370-2379	Peninsula	place[138]|place[141]	giv[138]|new[141]	_	_
+21-29	2380-2384	near	place[138]|place[141]	giv[138]|new[141]	_	_
+21-30	2385-2389	Hitu	place[138]|place[141]|place	giv[138]|new[141]|giv	_	_
+21-31	2390-2391	.	_	_	_	_
+21-32	2392-2393	[	_	_	_	_
+21-33	2394-2395	4	abstract	new	_	_
+21-34	2396-2397	]	_	_	_	_
+
+#Text=The Portuguese were also welcomed in the area as buyers of food and spices during a lull in the spice trade due to a temporary disruption to Javanese and Malay sailings to the area following the 1511 conflicts in Malacca .
+22-1	2398-2401	The	abstract[144]	new[144]	coref	24-11[0_144]
+22-2	2402-2412	Portuguese	abstract[144]	new[144]	_	_
+22-3	2413-2417	were	_	_	_	_
+22-4	2418-2422	also	_	_	_	_
+22-5	2423-2431	welcomed	_	_	_	_
+22-6	2432-2434	in	_	_	_	_
+22-7	2435-2438	the	place[145]	giv[145]	coref	22-33[154_145]
+22-8	2439-2443	area	place[145]	giv[145]	_	_
+22-9	2444-2446	as	_	_	_	_
+22-10	2447-2453	buyers	_	_	_	_
+22-11	2454-2456	of	_	_	_	_
+22-12	2457-2461	food	substance|person[147]	new|new[147]	ana|ana	29-2[0_147]|29-2[0_147]
+22-13	2462-2465	and	person[147]	new[147]	_	_
+22-14	2466-2472	spices	person[147]|plant	new[147]|giv	_	_
+22-15	2473-2479	during	_	_	_	_
+22-16	2480-2481	a	event[149]	new[149]	_	_
+22-17	2482-2486	lull	event[149]	new[149]	_	_
+22-18	2487-2489	in	event[149]	new[149]	_	_
+22-19	2490-2493	the	event[149]|abstract[151]	new[149]|giv[151]	coref	24-46[181_151]
+22-20	2494-2499	spice	event[149]|object|abstract[151]	new[149]|new|giv[151]	coref	24-47
+22-21	2500-2505	trade	event[149]|abstract[151]	new[149]|giv[151]	_	_
+22-22	2506-2509	due	_	_	_	_
+22-23	2510-2512	to	_	_	_	_
+22-24	2513-2514	a	event[152]	new[152]	_	_
+22-25	2515-2524	temporary	event[152]	new[152]	_	_
+22-26	2525-2535	disruption	event[152]	new[152]	_	_
+22-27	2536-2538	to	event[152]	new[152]	_	_
+22-28	2539-2547	Javanese	event[152]|event[153]	new[152]|new[153]	_	_
+22-29	2548-2551	and	event[152]|event[153]	new[152]|new[153]	_	_
+22-30	2552-2557	Malay	event[152]|event[153]	new[152]|new[153]	_	_
+22-31	2558-2566	sailings	event[152]|event[153]	new[152]|new[153]	_	_
+22-32	2567-2569	to	event[152]|event[153]	new[152]|new[153]	_	_
+22-33	2570-2573	the	event[152]|event[153]|place[154]	new[152]|new[153]|giv[154]	coref	35-1[245_154]
+22-34	2574-2578	area	event[152]|event[153]|place[154]	new[152]|new[153]|giv[154]	_	_
+22-35	2579-2588	following	_	_	_	_
+22-36	2589-2592	the	event[155]	new[155]	_	_
+22-37	2593-2597	1511	event[155]	new[155]	_	_
+22-38	2598-2607	conflicts	event[155]	new[155]	_	_
+22-39	2608-2610	in	event[155]	new[155]	_	_
+22-40	2611-2618	Malacca	event[155]|place	new[155]|giv	coref	26-23
+22-41	2619-2620	.	_	_	_	_
+
+#Text=The visitors were recruited as military allies and their subsequent exploits were heard in the rival neighbours of Ternate and Tidore who both rushed emissaries to induce the visitors to assist . [ 2 ]
+23-1	2621-2624	The	person[157]	new[157]	ana	23-9[0_157]
+23-2	2625-2633	visitors	person[157]	new[157]	_	_
+23-3	2634-2638	were	_	_	_	_
+23-4	2639-2648	recruited	_	_	_	_
+23-5	2649-2651	as	_	_	_	_
+23-6	2652-2660	military	_	_	_	_
+23-7	2661-2667	allies	_	_	_	_
+23-8	2668-2671	and	_	_	_	_
+23-9	2672-2677	their	person|event[159]	giv|new[159]	coref|coref	23-28[164_0]|23-28[164_0]
+23-10	2678-2688	subsequent	event[159]	new[159]	_	_
+23-11	2689-2697	exploits	event[159]	new[159]	_	_
+23-12	2698-2702	were	_	_	_	_
+23-13	2703-2708	heard	_	_	_	_
+23-14	2709-2711	in	_	_	_	_
+23-15	2712-2715	the	person[160]	new[160]	_	_
+23-16	2716-2721	rival	person[160]	new[160]	_	_
+23-17	2722-2732	neighbours	person[160]	new[160]	_	_
+23-18	2733-2735	of	person[160]	new[160]	_	_
+23-19	2736-2743	Ternate	person[160]|place	new[160]|giv	coref	24-8
+23-20	2744-2747	and	person[160]	new[160]	_	_
+23-21	2748-2754	Tidore	person[160]|place	new[160]|new	_	_
+23-22	2755-2758	who	_	_	_	_
+23-23	2759-2763	both	_	_	_	_
+23-24	2764-2770	rushed	_	_	_	_
+23-25	2771-2781	emissaries	person	new	_	_
+23-26	2782-2784	to	_	_	_	_
+23-27	2785-2791	induce	_	_	_	_
+23-28	2792-2795	the	person[164]	giv[164]	_	_
+23-29	2796-2804	visitors	person[164]	giv[164]	_	_
+23-30	2805-2807	to	_	_	_	_
+23-31	2808-2814	assist	_	_	_	_
+23-32	2815-2816	.	_	_	_	_
+23-33	2817-2818	[	_	_	_	_
+23-34	2819-2820	2	abstract	giv	_	_
+23-35	2821-2822	]	_	_	_	_
+
+#Text=Supporting the territory of the Sultanate of Ternate , the Portuguese strongest power , Serrão served as the head of a mercenary band of Portuguese warriors under the service of the island 's Sultan Bayan Sirrullah , one of two feuding powerful sultans who controlled the spice trade .
+24-1	2823-2833	Supporting	_	_	_	_
+24-2	2834-2837	the	place[166]	giv[166]	_	_
+24-3	2838-2847	territory	place[166]	giv[166]	_	_
+24-4	2848-2850	of	place[166]	giv[166]	_	_
+24-5	2851-2854	the	place[166]|organization[167]	giv[166]|new[167]	_	_
+24-6	2855-2864	Sultanate	place[166]|organization[167]	giv[166]|new[167]	_	_
+24-7	2865-2867	of	place[166]|organization[167]	giv[166]|new[167]	_	_
+24-8	2868-2875	Ternate	place[166]|organization[167]|place	giv[166]|new[167]|giv	coref	29-11
+24-9	2876-2877	,	_	_	_	_
+24-10	2878-2881	the	abstract[170]	new[170]	_	_
+24-11	2882-2892	Portuguese	abstract|abstract[170]	giv|new[170]	_	_
+24-12	2893-2902	strongest	abstract[170]	new[170]	_	_
+24-13	2903-2908	power	abstract[170]	new[170]	_	_
+24-14	2909-2910	,	_	_	_	_
+24-15	2911-2917	Serrão	person	giv	coref	25-9
+24-16	2918-2924	served	_	_	_	_
+24-17	2925-2927	as	_	_	_	_
+24-18	2928-2931	the	_	_	_	_
+24-19	2932-2936	head	_	_	_	_
+24-20	2937-2939	of	_	_	_	_
+24-21	2940-2941	a	organization[173]	new[173]	_	_
+24-22	2942-2951	mercenary	person|organization[173]	new|new[173]	_	_
+24-23	2952-2956	band	organization[173]	new[173]	_	_
+24-24	2957-2959	of	organization[173]	new[173]	_	_
+24-25	2960-2970	Portuguese	organization[173]|person[174]	new[173]|new[174]	_	_
+24-26	2971-2979	warriors	organization[173]|person[174]	new[173]|new[174]	_	_
+24-27	2980-2985	under	organization[173]	new[173]	_	_
+24-28	2986-2989	the	organization[173]|abstract[175]	new[173]|new[175]	_	_
+24-29	2990-2997	service	organization[173]|abstract[175]	new[173]|new[175]	_	_
+24-30	2998-3000	of	organization[173]|abstract[175]	new[173]|new[175]	_	_
+24-31	3001-3004	the	organization[173]|abstract[175]|person[177]	new[173]|new[175]|giv[177]	appos	24-38[178_177]
+24-32	3005-3011	island	organization[173]|abstract[175]|place[176]|person[177]	new[173]|new[175]|giv[176]|giv[177]	coref	29-25[218_176]
+24-33	3012-3014	's	organization[173]|abstract[175]|place[176]|person[177]	new[173]|new[175]|giv[176]|giv[177]	_	_
+24-34	3015-3021	Sultan	organization[173]|abstract[175]|person[177]	new[173]|new[175]|giv[177]	_	_
+24-35	3022-3027	Bayan	organization[173]|abstract[175]|person[177]	new[173]|new[175]|giv[177]	_	_
+24-36	3028-3037	Sirrullah	organization[173]|abstract[175]|person[177]	new[173]|new[175]|giv[177]	_	_
+24-37	3038-3039	,	_	_	_	_
+24-38	3040-3043	one	person[178]	giv[178]	coref	25-6[184_178]
+24-39	3044-3046	of	person[178]	giv[178]	_	_
+24-40	3047-3050	two	person[178]|person[179]	giv[178]|new[179]	ana	25-1[0_179]
+24-41	3051-3058	feuding	person[178]|person[179]	giv[178]|new[179]	_	_
+24-42	3059-3067	powerful	person[178]|person[179]	giv[178]|new[179]	_	_
+24-43	3068-3075	sultans	person[178]|person[179]	giv[178]|new[179]	_	_
+24-44	3076-3079	who	_	_	_	_
+24-45	3080-3090	controlled	_	_	_	_
+24-46	3091-3094	the	abstract[181]	giv[181]	_	_
+24-47	3095-3100	spice	object|abstract[181]	giv|giv[181]	_	_
+24-48	3101-3106	trade	abstract[181]	giv[181]	_	_
+24-49	3107-3108	.	_	_	_	_
+
+#Text=They became close friends and the Sultan appointed Serrão as his personal adviser for all matters , including military ( Portuguese document purport ) and family issues .
+25-1	3109-3113	They	person	giv	_	_
+25-2	3114-3120	became	_	_	_	_
+25-3	3121-3126	close	person[183]	new[183]	_	_
+25-4	3127-3134	friends	person[183]	new[183]	_	_
+25-5	3135-3138	and	person[183]	new[183]	_	_
+25-6	3139-3142	the	person[183]|person[184]	new[183]|giv[184]	ana	25-11[0_184]
+25-7	3143-3149	Sultan	person[183]|person[184]	new[183]|giv[184]	_	_
+25-8	3150-3159	appointed	person[183]	new[183]	_	_
+25-9	3160-3166	Serrão	person[183]|person	new[183]|giv	coref	29-7
+25-10	3167-3169	as	person[183]	new[183]	_	_
+25-11	3170-3173	his	person[183]|person	new[183]|giv	coref	26-6[193_0]
+25-12	3174-3182	personal	person[183]	new[183]	_	_
+25-13	3183-3190	adviser	person[183]	new[183]	_	_
+25-14	3191-3194	for	person[183]	new[183]	_	_
+25-15	3195-3198	all	person[183]|event[187]	new[183]|new[187]	_	_
+25-16	3199-3206	matters	person[183]|event[187]	new[183]|new[187]	_	_
+25-17	3207-3208	,	person[183]	new[183]	_	_
+25-18	3209-3218	including	person[183]	new[183]	_	_
+25-19	3219-3227	military	person[183]|abstract	new[183]|new	appos	25-21[190_0]
+25-20	3228-3229	(	_	_	_	_
+25-21	3230-3240	Portuguese	abstract[190]	giv[190]	_	_
+25-22	3241-3249	document	object|abstract[190]	new|giv[190]	coref	32-1[233_0]
+25-23	3250-3257	purport	abstract[190]	giv[190]	_	_
+25-24	3258-3259	)	_	_	_	_
+25-25	3260-3263	and	_	_	_	_
+25-26	3264-3270	family	abstract|abstract[192]	new|new[192]	coref|coref	31-1[228_0]|31-1[228_0]
+25-27	3271-3277	issues	abstract[192]	new[192]	_	_
+25-28	3278-3279	.	_	_	_	_
+
+#Text=Having been well received by the Sultan , Francisco Serrão decided to remain there , not making any efforts to return to Malacca . [ 5 ]
+26-1	3280-3286	Having	_	_	_	_
+26-2	3287-3291	been	_	_	_	_
+26-3	3292-3296	well	_	_	_	_
+26-4	3297-3305	received	_	_	_	_
+26-5	3306-3308	by	_	_	_	_
+26-6	3309-3312	the	person[193]	giv[193]	_	_
+26-7	3313-3319	Sultan	person[193]	giv[193]	_	_
+26-8	3320-3321	,	person[193]	giv[193]	_	_
+26-9	3322-3331	Francisco	person[193]|person[194]	giv[193]|giv[194]	coref	28-1[0_194]
+26-10	3332-3338	Serrão	person[193]|person[194]	giv[193]|giv[194]	_	_
+26-11	3339-3346	decided	_	_	_	_
+26-12	3347-3349	to	_	_	_	_
+26-13	3350-3356	remain	_	_	_	_
+26-14	3357-3362	there	_	_	_	_
+26-15	3363-3364	,	_	_	_	_
+26-16	3365-3368	not	_	_	_	_
+26-17	3369-3375	making	_	_	_	_
+26-18	3376-3379	any	abstract[195]	new[195]	_	_
+26-19	3380-3387	efforts	abstract[195]	new[195]	_	_
+26-20	3388-3390	to	_	_	_	_
+26-21	3391-3397	return	_	_	_	_
+26-22	3398-3400	to	_	_	_	_
+26-23	3401-3408	Malacca	place	giv	coref	28-13[203_0]
+26-24	3409-3410	.	_	_	_	_
+26-25	3411-3412	[	_	_	_	_
+26-26	3413-3414	5	abstract	new	coref	29-32
+26-27	3415-3416	]	_	_	_	_
+
+#Text=Final years
+27-1	3417-3422	Final	time[198]	new[198]	_	_
+27-2	3423-3428	years	time[198]	new[198]	_	_
+
+#Text=Francisco Serrão 's letters to Ferdinand Magellan , carried to Portugal via Portuguese Malacca and describing the ' Spice Islands ' , helped Magellan persuade the King of Spain to finance his circumnavigation . [ 6 ]
+28-1	3429-3438	Francisco	person|abstract[200]	giv|new[200]	_	_
+28-2	3439-3445	Serrão	abstract[200]	new[200]	_	_
+28-3	3446-3448	's	abstract[200]	new[200]	_	_
+28-4	3449-3456	letters	abstract[200]	new[200]	_	_
+28-5	3457-3459	to	abstract[200]	new[200]	_	_
+28-6	3460-3469	Ferdinand	abstract[200]|person[201]	new[200]|giv[201]	ana	28-32[0_201]
+28-7	3470-3478	Magellan	abstract[200]|person[201]	new[200]|giv[201]	_	_
+28-8	3479-3480	,	_	_	_	_
+28-9	3481-3488	carried	_	_	_	_
+28-10	3489-3491	to	_	_	_	_
+28-11	3492-3500	Portugal	place[202]	new[202]	_	_
+28-12	3501-3504	via	place[202]	new[202]	_	_
+28-13	3505-3515	Portuguese	place[202]|place[203]	new[202]|giv[203]	_	_
+28-14	3516-3523	Malacca	place[202]|place[203]	new[202]|giv[203]	_	_
+28-15	3524-3527	and	_	_	_	_
+28-16	3528-3538	describing	_	_	_	_
+28-17	3539-3542	the	person[204]	new[204]	_	_
+28-18	3543-3544	'	person[204]	new[204]	_	_
+28-19	3545-3550	Spice	person[204]	new[204]	_	_
+28-20	3551-3558	Islands	person[204]	new[204]	_	_
+28-21	3559-3560	'	person[204]	new[204]	_	_
+28-22	3561-3562	,	_	_	_	_
+28-23	3563-3569	helped	_	_	_	_
+28-24	3570-3578	Magellan	object	giv	coref	29-13[215_0]
+28-25	3579-3587	persuade	_	_	_	_
+28-26	3588-3591	the	person[206]	new[206]	_	_
+28-27	3592-3596	King	person[206]	new[206]	_	_
+28-28	3597-3599	of	person[206]	new[206]	_	_
+28-29	3600-3605	Spain	person[206]|person	new[206]|new	_	_
+28-30	3606-3608	to	_	_	_	_
+28-31	3609-3616	finance	_	_	_	_
+28-32	3617-3620	his	person|abstract[209]	giv|new[209]	_	_
+28-33	3621-3637	circumnavigation	abstract[209]	new[209]	_	_
+28-34	3638-3639	.	_	_	_	_
+28-35	3640-3641	[	_	_	_	_
+28-36	3642-3643	6	abstract	new	coref	30-16
+28-37	3644-3645	]	_	_	_	_
+
+#Text=Before they met each other , Serrão mysteriously died in Ternate at almost the same time Magellan was killed in the Philippines ( in Mactan Island , Cebu ) . [ 5 ]
+29-1	3646-3652	Before	_	_	_	_
+29-2	3653-3657	they	person	giv	_	_
+29-3	3658-3661	met	_	_	_	_
+29-4	3662-3666	each	_	_	_	_
+29-5	3667-3672	other	_	_	_	_
+29-6	3673-3674	,	_	_	_	_
+29-7	3675-3681	Serrão	person	giv	coref	30-4
+29-8	3682-3694	mysteriously	_	_	_	_
+29-9	3695-3699	died	_	_	_	_
+29-10	3700-3702	in	_	_	_	_
+29-11	3703-3710	Ternate	place	giv	coref	30-13
+29-12	3711-3713	at	_	_	_	_
+29-13	3714-3720	almost	time[214]|object[215]	new[214]|giv[215]	coref|coref	32-16[238_215]|32-16[238_215]
+29-14	3721-3724	the	time[214]|object[215]	new[214]|giv[215]	_	_
+29-15	3725-3729	same	time[214]|object[215]	new[214]|giv[215]	_	_
+29-16	3730-3734	time	time[214]|object[215]	new[214]|giv[215]	_	_
+29-17	3735-3743	Magellan	object[215]	giv[215]	_	_
+29-18	3744-3747	was	_	_	_	_
+29-19	3748-3754	killed	_	_	_	_
+29-20	3755-3757	in	_	_	_	_
+29-21	3758-3761	the	place[216]	new[216]	_	_
+29-22	3762-3773	Philippines	place[216]	new[216]	_	_
+29-23	3774-3775	(	_	_	_	_
+29-24	3776-3778	in	_	_	_	_
+29-25	3779-3785	Mactan	person|place[218]	new|giv[218]	_	_
+29-26	3786-3792	Island	place[218]	giv[218]	_	_
+29-27	3793-3794	,	place[218]	giv[218]	_	_
+29-28	3795-3799	Cebu	place[218]|place	giv[218]|new	_	_
+29-29	3800-3801	)	_	_	_	_
+29-30	3802-3803	.	_	_	_	_
+29-31	3804-3805	[	_	_	_	_
+29-32	3806-3807	5	abstract	giv	coref	32-20
+29-33	3808-3809	]	_	_	_	_
+
+#Text=One theory suggests Serrão died of poison administered by the Sultan of Ternate . [ 6 ]
+30-1	3810-3813	One	abstract[221]	new[221]	_	_
+30-2	3814-3820	theory	abstract[221]	new[221]	_	_
+30-3	3821-3829	suggests	_	_	_	_
+30-4	3830-3836	Serrão	person	giv	_	_
+30-5	3837-3841	died	_	_	_	_
+30-6	3842-3844	of	_	_	_	_
+30-7	3845-3851	poison	substance	new	_	_
+30-8	3852-3864	administered	_	_	_	_
+30-9	3865-3867	by	_	_	_	_
+30-10	3868-3871	the	person[224]	new[224]	ana	31-1[0_224]
+30-11	3872-3878	Sultan	person[224]	new[224]	_	_
+30-12	3879-3881	of	person[224]	new[224]	_	_
+30-13	3882-3889	Ternate	person[224]|place	new[224]|giv	_	_
+30-14	3890-3891	.	_	_	_	_
+30-15	3892-3893	[	_	_	_	_
+30-16	3894-3895	6	abstract	giv	_	_
+30-17	3896-3897	]	_	_	_	_
+
+#Text=His family ties with João Serrão remain unclear in the historiography of Portuguese expeditions to Southeast Asia .
+31-1	3898-3901	His	person|abstract[228]	giv|giv[228]	_	_
+31-2	3902-3908	family	abstract[228]	giv[228]	_	_
+31-3	3909-3913	ties	_	_	_	_
+31-4	3914-3918	with	_	_	_	_
+31-5	3919-3923	João	person[229]	new[229]	_	_
+31-6	3924-3930	Serrão	person[229]	new[229]	_	_
+31-7	3931-3937	remain	_	_	_	_
+31-8	3938-3945	unclear	_	_	_	_
+31-9	3946-3948	in	_	_	_	_
+31-10	3949-3952	the	abstract[230]	new[230]	_	_
+31-11	3953-3967	historiography	abstract[230]	new[230]	_	_
+31-12	3968-3970	of	abstract[230]	new[230]	_	_
+31-13	3971-3981	Portuguese	abstract[230]|event[231]	new[230]|new[231]	_	_
+31-14	3982-3993	expeditions	abstract[230]|event[231]	new[230]|new[231]	_	_
+31-15	3994-3996	to	abstract[230]|event[231]	new[230]|new[231]	_	_
+31-16	3997-4006	Southeast	abstract[230]|event[231]|place[232]	new[230]|new[231]|new[232]	_	_
+31-17	4007-4011	Asia	abstract[230]|event[231]|place[232]	new[230]|new[231]|new[232]	_	_
+31-18	4012-4013	.	_	_	_	_
+
+#Text=The only written document is a list of captains ' names in the fleet of Magellan 's . [ 5 ]
+32-1	4014-4017	The	object[233]	giv[233]	coref	32-6[234_233]
+32-2	4018-4022	only	object[233]	giv[233]	_	_
+32-3	4023-4030	written	object[233]	giv[233]	_	_
+32-4	4031-4039	document	object[233]	giv[233]	_	_
+32-5	4040-4042	is	_	_	_	_
+32-6	4043-4044	a	object[234]	giv[234]	_	_
+32-7	4045-4049	list	object[234]	giv[234]	_	_
+32-8	4050-4052	of	object[234]	giv[234]	_	_
+32-9	4053-4061	captains	object[234]|person[235]|person[236]	giv[234]|new[235]|new[236]	_	_
+32-10	4062-4063	'	object[234]|person[235]|person[236]	giv[234]|new[235]|new[236]	_	_
+32-11	4064-4069	names	object[234]|person[236]	giv[234]|new[236]	_	_
+32-12	4070-4072	in	object[234]|person[236]	giv[234]|new[236]	_	_
+32-13	4073-4076	the	object[234]|person[236]|organization[237]	giv[234]|new[236]|new[237]	_	_
+32-14	4077-4082	fleet	object[234]|person[236]|organization[237]	giv[234]|new[236]|new[237]	_	_
+32-15	4083-4085	of	object[234]|person[236]|organization[237]	giv[234]|new[236]|new[237]	_	_
+32-16	4086-4094	Magellan	object[234]|person[236]|organization[237]|object[238]	giv[234]|new[236]|new[237]|giv[238]	_	_
+32-17	4095-4097	's	object[234]|person[236]|organization[237]|object[238]	giv[234]|new[236]|new[237]|giv[238]	_	_
+32-18	4098-4099	.	_	_	_	_
+32-19	4100-4101	[	_	_	_	_
+32-20	4102-4103	5	abstract	giv	_	_
+32-21	4104-4105	]	_	_	_	_
+
+#Text=General
+33-1	4106-4113	General	person	new	_	_
+
+#Text=Hannard , Willard A. ( 1991 ) .
+34-1	4114-4121	Hannard	person	new	appos	34-3[242_0]
+34-2	4122-4123	,	_	_	_	_
+34-3	4124-4131	Willard	person[242]	giv[242]	_	_
+34-4	4132-4134	A.	person[242]	giv[242]	_	_
+34-5	4135-4136	(	_	_	_	_
+34-6	4137-4141	1991	time	new	_	_
+34-7	4142-4143	)	_	_	_	_
+34-8	4144-4145	.	_	_	_	_
+
+#Text=Indonesian Banda : Colonialism and its Aftermath in the Nutmeg Islands
+35-1	4146-4156	Indonesian	person|place[245]	new|giv[245]	appos|appos	35-4[247_245]|35-4[247_245]
+35-2	4157-4162	Banda	place[245]	giv[245]	_	_
+35-3	4163-4164	:	_	_	_	_
+35-4	4165-4176	Colonialism	abstract|place[247]	new|giv[247]	ana|ana	35-6|35-6
+35-5	4177-4180	and	place[247]	giv[247]	_	_
+35-6	4181-4184	its	place[247]|abstract|abstract[249]	giv[247]|giv|new[249]	_	_
+35-7	4185-4194	Aftermath	place[247]|abstract[249]	giv[247]|new[249]	_	_
+35-8	4195-4197	in	place[247]|abstract[249]	giv[247]|new[249]	_	_
+35-9	4198-4201	the	place[247]|abstract[249]|place[251]	giv[247]|new[249]|giv[251]	coref	41-3[262_251]
+35-10	4202-4208	Nutmeg	place[247]|abstract[249]|object|place[251]	giv[247]|new[249]|new|giv[251]	_	_
+35-11	4209-4216	Islands	place[247]|abstract[249]|place[251]	giv[247]|new[249]|giv[251]	_	_
+
+#Text=.
+36-1	4217-4218	.	_	_	_	_
+
+#Text=Bandanaira
+37-1	4219-4229	Bandanaira	person	new	_	_
+
+#Text=: Yayasan Warisan dan Budaya Banda Naira .
+38-1	4230-4231	:	_	_	_	_
+38-2	4232-4239	Yayasan	person[253]	new[253]	_	_
+38-3	4240-4247	Warisan	person[253]	new[253]	_	_
+38-4	4248-4251	dan	person[253]	new[253]	_	_
+38-5	4252-4258	Budaya	person[253]	new[253]	_	_
+38-6	4259-4264	Banda	person[253]|person	new[253]|new	_	_
+38-7	4265-4270	Naira	person[253]	new[253]	_	_
+38-8	4271-4272	.	_	_	_	_
+
+#Text=Muller , Karl ( 1997 ) .
+39-1	4273-4279	Muller	person	new	appos	39-3[256_0]
+39-2	4280-4281	,	_	_	_	_
+39-3	4282-4286	Karl	person[256]	giv[256]	_	_
+39-4	4287-4288	(	person[256]	giv[256]	_	_
+39-5	4289-4293	1997	person[256]|time	giv[256]|new	_	_
+39-6	4294-4295	)	person[256]	giv[256]	_	_
+39-7	4296-4297	.	_	_	_	_
+
+#Text=Pickell , David ( ed . ) .
+40-1	4298-4305	Pickell	person[258]	new[258]	_	_
+40-2	4306-4307	,	person[258]	new[258]	_	_
+40-3	4308-4313	David	person[258]|person	new[258]|new	appos	40-5
+40-4	4314-4315	(	_	_	_	_
+40-5	4316-4318	ed	person	giv	_	_
+40-6	4319-4320	.	_	_	_	_
+40-7	4321-4322	)	_	_	_	_
+40-8	4323-4324	.	_	_	_	_
+
+#Text=Maluku : Indonesian Spice Islands
+41-1	4325-4331	Maluku	place	giv	_	_
+41-2	4332-4333	:	_	_	_	_
+41-3	4334-4344	Indonesian	place[262]	giv[262]	_	_
+41-4	4345-4350	Spice	place[262]	giv[262]	_	_
+41-5	4351-4358	Islands	place[262]	giv[262]	_	_
+
+#Text=.
+42-1	4359-4360	.	_	_	_	_
+
+#Text=Singapore : Periplus Editions . ISBN 962-593-176-7 .
+43-1	4361-4370	Singapore	place	new	_	_
+43-2	4371-4372	:	_	_	_	_
+43-3	4373-4381	Periplus	abstract|abstract[265]	new|new[265]	appos|appos	43-6[267_265]|43-6[267_265]
+43-4	4382-4390	Editions	abstract[265]	new[265]	_	_
+43-5	4391-4392	.	_	_	_	_
+43-6	4393-4397	ISBN	abstract|abstract[267]	new|giv[267]	_	_
+43-7	4398-4411	962-593-176-7	abstract[267]	giv[267]	_	_
+43-8	4412-4413	.	_	_	_	_

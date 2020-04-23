@@ -1,0 +1,603 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=William
+1-1	0-7	William	person	new	coref	3-1[4_0]
+
+#Text=Finch ( merchant )
+2-1	8-13	Finch	person[2]	new[2]	coref	7-1[0_2]
+2-2	14-15	(	person[2]	new[2]	_	_
+2-3	16-24	merchant	person[2]|person	new[2]|new	coref	4-6[6_0]
+2-4	25-26	)	person[2]	new[2]	_	_
+
+#Text=William Finch
+3-1	27-34	William	person[4]	giv[4]	coref	21-15[105_4]
+3-2	35-40	Finch	person[4]	giv[4]	_	_
+
+#Text=( died 1613 ) was an English merchant in the service of the East India Company ( EIC ) .
+4-1	41-42	(	_	_	_	_
+4-2	43-47	died	_	_	_	_
+4-3	48-52	1613	time	new	_	_
+4-4	53-54	)	_	_	_	_
+4-5	55-58	was	_	_	_	_
+4-6	59-61	an	person[6]	giv[6]	ana	5-1[0_6]
+4-7	62-69	English	person[6]	giv[6]	_	_
+4-8	70-78	merchant	person[6]	giv[6]	_	_
+4-9	79-81	in	person[6]	giv[6]	_	_
+4-10	82-85	the	person[6]|abstract[7]	giv[6]|new[7]	_	_
+4-11	86-93	service	person[6]|abstract[7]	giv[6]|new[7]	_	_
+4-12	94-96	of	person[6]|abstract[7]	giv[6]|new[7]	_	_
+4-13	97-100	the	person[6]|abstract[7]|organization[8]	giv[6]|new[7]|new[8]	appos	4-18[0_8]
+4-14	101-105	East	person[6]|abstract[7]|organization[8]	giv[6]|new[7]|new[8]	_	_
+4-15	106-111	India	person[6]|abstract[7]|organization[8]	giv[6]|new[7]|new[8]	_	_
+4-16	112-119	Company	person[6]|abstract[7]|organization[8]	giv[6]|new[7]|new[8]	_	_
+4-17	120-121	(	_	_	_	_
+4-18	122-125	EIC	organization	giv	coref	10-9[38_0]
+4-19	126-127	)	_	_	_	_
+4-20	128-129	.	_	_	_	_
+
+#Text=He travelled to India along with Captain Hawkins during the reign of the Mughal emperor Jehangir .
+5-1	130-132	He	person	giv	_	_
+5-2	133-142	travelled	_	_	_	_
+5-3	143-145	to	_	_	_	_
+5-4	146-151	India	place	new	coref	6-20
+5-5	152-157	along	_	_	_	_
+5-6	158-162	with	_	_	_	_
+5-7	163-170	Captain	person[12]	new[12]	_	_
+5-8	171-178	Hawkins	person[12]	new[12]	_	_
+5-9	179-185	during	_	_	_	_
+5-10	186-189	the	time[13]	new[13]	_	_
+5-11	190-195	reign	time[13]	new[13]	_	_
+5-12	196-198	of	time[13]	new[13]	_	_
+5-13	199-202	the	time[13]|person[14]	new[13]|new[14]	coref	15-20[71_14]
+5-14	203-209	Mughal	time[13]|person[14]	new[13]|new[14]	_	_
+5-15	210-217	emperor	time[13]|person[14]	new[13]|new[14]	_	_
+5-16	218-226	Jehangir	time[13]|person[14]	new[13]|new[14]	_	_
+5-17	227-228	.	_	_	_	_
+
+#Text=The two of them attended on the emperor at the Mughal court and established trade relations between England and India .
+6-1	229-232	The	person[15]	new[15]	_	_
+6-2	233-236	two	person[15]	new[15]	_	_
+6-3	237-239	of	person[15]	new[15]	_	_
+6-4	240-244	them	person[15]|person	new[15]|acc	_	_
+6-5	245-253	attended	_	_	_	_
+6-6	254-256	on	_	_	_	_
+6-7	257-260	the	person[17]	giv[17]	ana	7-16[0_17]
+6-8	261-268	emperor	person[17]	giv[17]	_	_
+6-9	269-271	at	_	_	_	_
+6-10	272-275	the	place[19]	new[19]	coref	17-5[80_19]
+6-11	276-282	Mughal	person|place[19]	giv|new[19]	_	_
+6-12	283-288	court	place[19]	new[19]	_	_
+6-13	289-292	and	_	_	_	_
+6-14	293-304	established	_	_	_	_
+6-15	305-310	trade	abstract|abstract[21]	new|new[21]	ana|coref|ana|coref	7-14[0_21]|20-6[97_0]|7-14[0_21]|20-6[97_0]
+6-16	311-320	relations	abstract[21]	new[21]	_	_
+6-17	321-328	between	abstract[21]	new[21]	_	_
+6-18	329-336	England	abstract[21]|place	new[21]|new	coref	19-4
+6-19	337-340	and	abstract[21]	new[21]	_	_
+6-20	341-346	India	abstract[21]|place	new[21]|giv	coref	7-7
+6-21	347-348	.	_	_	_	_
+
+#Text=Finch subsequently explored various cities in India and left a valuable account of them in his journal , which was subsequently published .
+7-1	349-354	Finch	person	giv	coref	9-1
+7-2	355-367	subsequently	_	_	_	_
+7-3	368-376	explored	_	_	_	_
+7-4	377-384	various	place[25]	new[25]	coref	23-3[114_25]
+7-5	385-391	cities	place[25]	new[25]	_	_
+7-6	392-394	in	place[25]	new[25]	_	_
+7-7	395-400	India	place[25]|place	new[25]|giv	coref	23-6
+7-8	401-404	and	_	_	_	_
+7-9	405-409	left	_	_	_	_
+7-10	410-411	a	abstract[27]	new[27]	_	_
+7-11	412-420	valuable	abstract[27]	new[27]	_	_
+7-12	421-428	account	abstract[27]	new[27]	_	_
+7-13	429-431	of	abstract[27]	new[27]	_	_
+7-14	432-436	them	abstract[27]|abstract	new[27]|giv	_	_
+7-15	437-439	in	_	_	_	_
+7-16	440-443	his	person|object[30]	giv|new[30]	coref|coref|coref|coref	21-3[101_0]|26-5[136_30]|21-3[101_0]|26-5[136_30]
+7-17	444-451	journal	object[30]	new[30]	_	_
+7-18	452-453	,	_	_	_	_
+7-19	454-459	which	_	_	_	_
+7-20	460-463	was	_	_	_	_
+7-21	464-476	subsequently	_	_	_	_
+7-22	477-486	published	_	_	_	_
+7-23	487-488	.	_	_	_	_
+
+#Text=Career
+8-1	489-495	Career	abstract	new	_	_
+
+#Text=Finch was a native of London .
+9-1	496-501	Finch	person	giv	coref	9-3[33_0]
+9-2	502-505	was	_	_	_	_
+9-3	506-507	a	person[33]	giv[33]	ana	10-1[0_33]
+9-4	508-514	native	person[33]	giv[33]	_	_
+9-5	515-517	of	person[33]	giv[33]	_	_
+9-6	518-524	London	person[33]|place	giv[33]|new	_	_
+9-7	525-526	.	_	_	_	_
+
+#Text=He was agent to an expedition sent by the East India Company , under Captains Hawkins and Keeling , in 1607 to treat with the Great Mogul .
+10-1	527-529	He	person	giv	coref	10-3[36_0]
+10-2	530-533	was	_	_	_	_
+10-3	534-539	agent	person[36]	giv[36]	coref	11-3[0_36]
+10-4	540-542	to	person[36]	giv[36]	_	_
+10-5	543-545	an	person[36]|event[37]	giv[36]|new[37]	_	_
+10-6	546-556	expedition	person[36]|event[37]	giv[36]|new[37]	_	_
+10-7	557-561	sent	_	_	_	_
+10-8	562-564	by	_	_	_	_
+10-9	565-568	the	organization[38]	giv[38]	coref	14-22[64_38]
+10-10	569-573	East	organization[38]	giv[38]	_	_
+10-11	574-579	India	organization[38]	giv[38]	_	_
+10-12	580-587	Company	organization[38]	giv[38]	_	_
+10-13	588-589	,	_	_	_	_
+10-14	590-595	under	_	_	_	_
+10-15	596-604	Captains	person[39]|person[40]	new[39]|new[40]	coref|coref	11-1[44_40]|11-1[44_40]
+10-16	605-612	Hawkins	person[39]|person[40]	new[39]|new[40]	_	_
+10-17	613-616	and	person[40]	new[40]	_	_
+10-18	617-624	Keeling	person[40]|person[41]	new[40]|new[41]	_	_
+10-19	625-626	,	person[40]|person[41]	new[40]|new[41]	_	_
+10-20	627-629	in	person[40]|person[41]	new[40]|new[41]	_	_
+10-21	630-634	1607	person[40]|person[41]|time	new[40]|new[41]|new	_	_
+10-22	635-637	to	_	_	_	_
+10-23	638-643	treat	_	_	_	_
+10-24	644-648	with	_	_	_	_
+10-25	649-652	the	person[43]	giv[43]	coref	17-6[79_43]
+10-26	653-658	Great	person[43]	giv[43]	_	_
+10-27	659-664	Mogul	person[43]	giv[43]	_	_
+10-28	665-666	.	_	_	_	_
+
+#Text=Hawkins and Finch landed at Surat on 24 August 1608 .
+11-1	667-674	Hawkins	person[44]	giv[44]	ana	12-1[0_44]
+11-2	675-678	and	person[44]	giv[44]	_	_
+11-3	679-684	Finch	person[44]|person	giv[44]|giv	coref	13-1
+11-4	685-691	landed	_	_	_	_
+11-5	692-694	at	_	_	_	_
+11-6	695-700	Surat	place	new	_	_
+11-7	701-703	on	_	_	_	_
+11-8	704-706	24	time[47]	new[47]	_	_
+11-9	707-713	August	time[47]|time	new[47]|new	_	_
+11-10	714-718	1608	time[47]|time	new[47]|new	_	_
+11-11	719-720	.	_	_	_	_
+
+#Text=They were violently opposed by the Portuguese .
+12-1	721-725	They	person	giv	ana	13-18
+12-2	726-730	were	_	_	_	_
+12-3	731-740	violently	_	_	_	_
+12-4	741-748	opposed	_	_	_	_
+12-5	749-751	by	_	_	_	_
+12-6	752-755	the	person[51]	new[51]	_	_
+12-7	756-766	Portuguese	person[51]	new[51]	_	_
+12-8	767-768	.	_	_	_	_
+
+#Text=Finch , however , obtained permission from the governor of Cambay to dispose of the goods in their vessels .
+13-1	769-774	Finch	person	giv	coref	15-4
+13-2	775-776	,	_	_	_	_
+13-3	777-784	however	_	_	_	_
+13-4	785-786	,	_	_	_	_
+13-5	787-795	obtained	_	_	_	_
+13-6	796-806	permission	abstract	new	_	_
+13-7	807-811	from	_	_	_	_
+13-8	812-815	the	person[54]	new[54]	_	_
+13-9	816-824	governor	person[54]	new[54]	_	_
+13-10	825-827	of	person[54]	new[54]	_	_
+13-11	828-834	Cambay	person[54]|place	new[54]|new	_	_
+13-12	835-837	to	_	_	_	_
+13-13	838-845	dispose	_	_	_	_
+13-14	846-848	of	_	_	_	_
+13-15	849-852	the	object[56]	new[56]	_	_
+13-16	853-858	goods	object[56]	new[56]	_	_
+13-17	859-861	in	_	_	_	_
+13-18	862-867	their	person|object[58]	giv|new[58]	coref|coref|coref|coref	14-10[61_58]|15-9|14-10[61_58]|15-9
+13-19	868-875	vessels	object[58]	new[58]	_	_
+13-20	876-877	.	_	_	_	_
+
+#Text=Incited by the Portuguese , who seized two of the English ships , the natives refused to have dealings with the company 's representatives .
+14-1	878-885	Incited	_	_	_	_
+14-2	886-888	by	_	_	_	_
+14-3	889-892	the	person[59]	new[59]	_	_
+14-4	893-903	Portuguese	person[59]	new[59]	_	_
+14-5	904-905	,	_	_	_	_
+14-6	906-909	who	_	_	_	_
+14-7	910-916	seized	_	_	_	_
+14-8	917-920	two	object[60]	new[60]	_	_
+14-9	921-923	of	object[60]	new[60]	_	_
+14-10	924-927	the	object[60]|object[61]	new[60]|giv[61]	_	_
+14-11	928-935	English	object[60]|object[61]	new[60]|giv[61]	_	_
+14-12	936-941	ships	object[60]|object[61]	new[60]|giv[61]	_	_
+14-13	942-943	,	_	_	_	_
+14-14	944-947	the	person[62]	new[62]	_	_
+14-15	948-955	natives	person[62]	new[62]	_	_
+14-16	956-963	refused	_	_	_	_
+14-17	964-966	to	_	_	_	_
+14-18	967-971	have	_	_	_	_
+14-19	972-980	dealings	event	new	_	_
+14-20	981-985	with	_	_	_	_
+14-21	986-989	the	person[65]	new[65]	_	_
+14-22	990-997	company	organization[64]|person[65]	giv[64]|new[65]	coref	25-8[133_64]
+14-23	998-1000	's	organization[64]|person[65]	giv[64]|new[65]	_	_
+14-24	1001-1016	representatives	person[65]	new[65]	_	_
+14-25	1017-1018	.	_	_	_	_
+
+#Text=During these squabbles Finch fell ill , and Hawkins , proceeding to Agra alone , obtained favourable notice from the Emperor Jehangir .
+15-1	1019-1025	During	_	_	_	_
+15-2	1026-1031	these	event[66]	new[66]	_	_
+15-3	1032-1041	squabbles	event[66]	new[66]	_	_
+15-4	1042-1047	Finch	person	giv	coref	16-1
+15-5	1048-1052	fell	_	_	_	_
+15-6	1053-1056	ill	_	_	_	_
+15-7	1057-1058	,	_	_	_	_
+15-8	1059-1062	and	_	_	_	_
+15-9	1063-1070	Hawkins	person	giv	coref	16-6
+15-10	1071-1072	,	_	_	_	_
+15-11	1073-1083	proceeding	_	_	_	_
+15-12	1084-1086	to	_	_	_	_
+15-13	1087-1091	Agra	place	new	coref	16-8
+15-14	1092-1097	alone	_	_	_	_
+15-15	1098-1099	,	_	_	_	_
+15-16	1100-1108	obtained	_	_	_	_
+15-17	1109-1119	favourable	abstract[70]	new[70]	_	_
+15-18	1120-1126	notice	abstract[70]	new[70]	_	_
+15-19	1127-1131	from	abstract[70]	new[70]	_	_
+15-20	1132-1135	the	abstract[70]|person[71]	new[70]|giv[71]	coref	18-13[0_71]
+15-21	1136-1143	Emperor	abstract[70]|person[71]	new[70]|giv[71]	_	_
+15-22	1144-1152	Jehangir	abstract[70]|person[71]	new[70]|giv[71]	_	_
+15-23	1153-1154	.	_	_	_	_
+
+#Text=Finch recovered , and joined Hawkins at Agra on 14 April 1610 .
+16-1	1155-1160	Finch	person	giv	coref	18-1
+16-2	1161-1170	recovered	_	_	_	_
+16-3	1171-1172	,	_	_	_	_
+16-4	1173-1176	and	_	_	_	_
+16-5	1177-1183	joined	_	_	_	_
+16-6	1184-1191	Hawkins	person	giv	coref	19-1
+16-7	1192-1194	at	_	_	_	_
+16-8	1195-1199	Agra	place	giv	_	_
+16-9	1200-1202	on	_	_	_	_
+16-10	1203-1205	14	time[75]	new[75]	coref	30-31[177_75]
+16-11	1206-1211	April	time[75]|time	new[75]|new	_	_
+16-12	1212-1216	1610	time[75]|time	new[75]|new	_	_
+16-13	1217-1218	.	_	_	_	_
+
+#Text=The two remained at the mogul ' s court for about a year and a half .
+17-1	1219-1222	The	person[78]	new[78]	_	_
+17-2	1223-1226	two	person[78]	new[78]	_	_
+17-3	1227-1235	remained	_	_	_	_
+17-4	1236-1238	at	_	_	_	_
+17-5	1239-1242	the	place[80]	giv[80]	_	_
+17-6	1243-1248	mogul	person[79]|place[80]	giv[79]|giv[80]	_	_
+17-7	1249-1250	'	person[79]|place[80]	giv[79]|giv[80]	_	_
+17-8	1251-1252	s	person[79]|place[80]	giv[79]|giv[80]	_	_
+17-9	1253-1258	court	place[80]	giv[80]	_	_
+17-10	1259-1262	for	_	_	_	_
+17-11	1263-1268	about	_	_	_	_
+17-12	1269-1270	a	time[81]	new[81]	_	_
+17-13	1271-1275	year	time[81]	new[81]	_	_
+17-14	1276-1279	and	_	_	_	_
+17-15	1280-1281	a	_	_	_	_
+17-16	1282-1286	half	_	_	_	_
+17-17	1287-1288	.	_	_	_	_
+
+#Text=Finch refused tempting offers to attach himself permanently to the service of Jehangir .
+18-1	1289-1294	Finch	person	giv	ana	18-7
+18-2	1295-1302	refused	_	_	_	_
+18-3	1303-1311	tempting	_	_	_	_
+18-4	1312-1318	offers	_	_	_	_
+18-5	1319-1321	to	_	_	_	_
+18-6	1322-1328	attach	_	_	_	_
+18-7	1329-1336	himself	person	giv	coref	19-7
+18-8	1337-1348	permanently	_	_	_	_
+18-9	1349-1351	to	_	_	_	_
+18-10	1352-1355	the	abstract[84]	new[84]	_	_
+18-11	1356-1363	service	abstract[84]	new[84]	_	_
+18-12	1364-1366	of	abstract[84]	new[84]	_	_
+18-13	1367-1375	Jehangir	abstract[84]|person	new[84]|giv	_	_
+18-14	1376-1377	.	_	_	_	_
+
+#Text=Hawkins returned to England , but Finch delayed his departure in order to make further explorations , visiting Byana and Lahore among other places .
+19-1	1378-1385	Hawkins	person	giv	coref	21-17
+19-2	1386-1394	returned	_	_	_	_
+19-3	1395-1397	to	_	_	_	_
+19-4	1398-1405	England	place	giv	_	_
+19-5	1406-1407	,	_	_	_	_
+19-6	1408-1411	but	_	_	_	_
+19-7	1412-1417	Finch	person	giv	ana	19-9
+19-8	1418-1425	delayed	_	_	_	_
+19-9	1426-1429	his	person|event[90]	giv|new[90]	coref|coref	20-1|20-1
+19-10	1430-1439	departure	event[90]	new[90]	_	_
+19-11	1440-1442	in	_	_	_	_
+19-12	1443-1448	order	_	_	_	_
+19-13	1449-1451	to	_	_	_	_
+19-14	1452-1456	make	_	_	_	_
+19-15	1457-1464	further	event[91]	new[91]	_	_
+19-16	1465-1477	explorations	event[91]	new[91]	_	_
+19-17	1478-1479	,	_	_	_	_
+19-18	1480-1488	visiting	_	_	_	_
+19-19	1489-1494	Byana	place	new	_	_
+19-20	1495-1498	and	_	_	_	_
+19-21	1499-1505	Lahore	place	new	coref	23-17
+19-22	1506-1511	among	_	_	_	_
+19-23	1512-1517	other	place[94]	new[94]	coref	23-24[122_94]
+19-24	1518-1524	places	place[94]	new[94]	_	_
+19-25	1525-1526	.	_	_	_	_
+
+#Text=Finch made careful observations on the commerce and natural products of the districts visited .
+20-1	1527-1532	Finch	person	giv	coref	21-15
+20-2	1533-1537	made	_	_	_	_
+20-3	1538-1545	careful	abstract[96]	new[96]	_	_
+20-4	1546-1558	observations	abstract[96]	new[96]	_	_
+20-5	1559-1561	on	abstract[96]	new[96]	_	_
+20-6	1562-1565	the	abstract[96]|abstract[97]	new[96]|giv[97]	_	_
+20-7	1566-1574	commerce	abstract[96]|abstract[97]	new[96]|giv[97]	_	_
+20-8	1575-1578	and	abstract[96]|abstract[97]	new[96]|giv[97]	_	_
+20-9	1579-1586	natural	abstract[96]|abstract[97]|abstract[98]	new[96]|giv[97]|new[98]	_	_
+20-10	1587-1595	products	abstract[96]|abstract[97]|abstract[98]	new[96]|giv[97]|new[98]	_	_
+20-11	1596-1598	of	abstract[96]|abstract[97]|abstract[98]	new[96]|giv[97]|new[98]	_	_
+20-12	1599-1602	the	abstract[96]|abstract[97]|abstract[98]|place[99]	new[96]|giv[97]|new[98]|new[99]	_	_
+20-13	1603-1612	districts	abstract[96]|abstract[97]|abstract[98]|place[99]	new[96]|giv[97]|new[98]|new[99]	_	_
+20-14	1613-1620	visited	_	_	_	_
+20-15	1621-1622	.	_	_	_	_
+
+#Text=In 1612 the Moghul emperor confirmed and extended the privileges he had promised to Finch and Hawkins , and the East India Company in that year set up their first little factory at Surat .
+21-1	1623-1625	In	_	_	_	_
+21-2	1626-1630	1612	time	new	coref	24-16
+21-3	1631-1634	the	person[101]	giv[101]	ana	21-11[0_101]
+21-4	1635-1641	Moghul	person[101]	giv[101]	_	_
+21-5	1642-1649	emperor	person[101]	giv[101]	_	_
+21-6	1650-1659	confirmed	_	_	_	_
+21-7	1660-1663	and	_	_	_	_
+21-8	1664-1672	extended	_	_	_	_
+21-9	1673-1676	the	abstract[102]	new[102]	_	_
+21-10	1677-1687	privileges	abstract[102]	new[102]	_	_
+21-11	1688-1690	he	person	giv	_	_
+21-12	1691-1694	had	_	_	_	_
+21-13	1695-1703	promised	_	_	_	_
+21-14	1704-1706	to	_	_	_	_
+21-15	1707-1712	Finch	person|person[105]	giv|giv[105]	ana|coref|ana|coref	21-29[0_105]|23-1|21-29[0_105]|23-1
+21-16	1713-1716	and	person[105]	giv[105]	_	_
+21-17	1717-1724	Hawkins	person[105]|person	giv[105]|giv	coref	21-20[107_0]
+21-18	1725-1726	,	_	_	_	_
+21-19	1727-1730	and	_	_	_	_
+21-20	1731-1734	the	person[107]	giv[107]	_	_
+21-21	1735-1739	East	person[107]	giv[107]	_	_
+21-22	1740-1745	India	person[107]	giv[107]	_	_
+21-23	1746-1753	Company	person[107]	giv[107]	_	_
+21-24	1754-1756	in	person[107]	giv[107]	_	_
+21-25	1757-1761	that	person[107]|time[108]	giv[107]|new[108]	_	_
+21-26	1762-1766	year	person[107]|time[108]	giv[107]|new[108]	_	_
+21-27	1767-1770	set	_	_	_	_
+21-28	1771-1773	up	_	_	_	_
+21-29	1774-1779	their	person|place[110]	giv|new[110]	_	_
+21-30	1780-1785	first	place[110]	new[110]	_	_
+21-31	1786-1792	little	place[110]	new[110]	_	_
+21-32	1793-1800	factory	place[110]	new[110]	_	_
+21-33	1801-1803	at	place[110]	new[110]	_	_
+21-34	1804-1809	Surat	place[110]|place	new[110]|new	_	_
+21-35	1810-1811	.	_	_	_	_
+
+#Text=Exploration
+22-1	1812-1823	Exploration	event	new	_	_
+
+#Text=Finch explored various cities in India , including Delhi , Ambala , Sultanpur , Ayodhya and Lahore , and left valuable accounts of these places in his diary .
+23-1	1824-1829	Finch	person	giv	ana	23-27
+23-2	1830-1838	explored	_	_	_	_
+23-3	1839-1846	various	place[114]	giv[114]	_	_
+23-4	1847-1853	cities	place[114]	giv[114]	_	_
+23-5	1854-1856	in	place[114]	giv[114]	_	_
+23-6	1857-1862	India	place[114]|place	giv[114]|giv	coref	23-9
+23-7	1863-1864	,	place[114]	giv[114]	_	_
+23-8	1865-1874	including	place[114]	giv[114]	_	_
+23-9	1875-1880	Delhi	place[114]|place	giv[114]|giv	coref	30-24[174_0]
+23-10	1881-1882	,	place[114]	giv[114]	_	_
+23-11	1883-1889	Ambala	place[114]|place	giv[114]|new	_	_
+23-12	1890-1891	,	place[114]	giv[114]	_	_
+23-13	1892-1901	Sultanpur	place[114]|place	giv[114]|new	_	_
+23-14	1902-1903	,	place[114]	giv[114]	_	_
+23-15	1904-1911	Ayodhya	place[114]|place	giv[114]|new	coref	27-2
+23-16	1912-1915	and	place[114]	giv[114]	_	_
+23-17	1916-1922	Lahore	place[114]|place	giv[114]|giv	_	_
+23-18	1923-1924	,	_	_	_	_
+23-19	1925-1928	and	_	_	_	_
+23-20	1929-1933	left	_	_	_	_
+23-21	1934-1942	valuable	object[121]	new[121]	_	_
+23-22	1943-1951	accounts	object[121]	new[121]	_	_
+23-23	1952-1954	of	object[121]	new[121]	_	_
+23-24	1955-1960	these	object[121]|place[122]	new[121]|giv[122]	_	_
+23-25	1961-1967	places	object[121]|place[122]	new[121]|giv[122]	_	_
+23-26	1968-1970	in	object[121]|place[122]	new[121]|giv[122]	_	_
+23-27	1971-1974	his	object[121]|place[122]|person|object[124]	new[121]|giv[122]|giv|new[124]	ana|ana	24-1|24-1
+23-28	1975-1980	diary	object[121]|place[122]|object[124]	new[121]|giv[122]|new[124]	_	_
+23-29	1981-1982	.	_	_	_	_
+
+#Text=He intended to return to Europe overland , but died en route in Baghdad in 1612 probably due to infected water .
+24-1	1983-1985	He	person	giv	ana	25-1
+24-2	1986-1994	intended	_	_	_	_
+24-3	1995-1997	to	_	_	_	_
+24-4	1998-2004	return	_	_	_	_
+24-5	2005-2007	to	_	_	_	_
+24-6	2008-2014	Europe	place	new	_	_
+24-7	2015-2023	overland	_	_	_	_
+24-8	2024-2025	,	_	_	_	_
+24-9	2026-2029	but	_	_	_	_
+24-10	2030-2034	died	_	_	_	_
+24-11	2035-2037	en	_	_	_	_
+24-12	2038-2043	route	abstract[127]	new[127]	_	_
+24-13	2044-2046	in	abstract[127]	new[127]	_	_
+24-14	2047-2054	Baghdad	abstract[127]|place	new[127]|new	_	_
+24-15	2055-2057	in	_	_	_	_
+24-16	2058-2062	1612	time	giv	_	_
+24-17	2063-2071	probably	_	_	_	_
+24-18	2072-2075	due	_	_	_	_
+24-19	2076-2078	to	_	_	_	_
+24-20	2079-2087	infected	place[130]	new[130]	coref	27-10[146_130]
+24-21	2088-2093	water	place[130]	new[130]	_	_
+24-22	2094-2095	.	_	_	_	_
+
+#Text=His belongings were saved and returned to the East India Company .
+25-1	2096-2099	His	person|object[132]	giv|new[132]	coref|coref	26-5[135_0]|26-5[135_0]
+25-2	2100-2110	belongings	object[132]	new[132]	_	_
+25-3	2111-2115	were	_	_	_	_
+25-4	2116-2121	saved	_	_	_	_
+25-5	2122-2125	and	_	_	_	_
+25-6	2126-2134	returned	_	_	_	_
+25-7	2135-2137	to	_	_	_	_
+25-8	2138-2141	the	organization[133]	giv[133]	coref	26-12[138_133]
+25-9	2142-2146	East	organization[133]	giv[133]	_	_
+25-10	2147-2152	India	organization[133]	giv[133]	_	_
+25-11	2153-2160	Company	organization[133]	giv[133]	_	_
+25-12	2161-2162	.	_	_	_	_
+
+#Text=Reverend Samuel Purchas found Finch 's journal in the archives of the Company and published an abridged version of it as a chapter in his " Pilgrimes " . [ 1 ]
+26-1	2163-2171	Reverend	person[134]	new[134]	_	_
+26-2	2172-2178	Samuel	person[134]	new[134]	_	_
+26-3	2179-2186	Purchas	person[134]	new[134]	_	_
+26-4	2187-2192	found	_	_	_	_
+26-5	2193-2198	Finch	person[135]|object[136]	giv[135]|giv[136]	ana|ana	26-25[0_135]|26-25[0_135]
+26-6	2199-2201	's	person[135]|object[136]	giv[135]|giv[136]	_	_
+26-7	2202-2209	journal	object[136]	giv[136]	_	_
+26-8	2210-2212	in	object[136]	giv[136]	_	_
+26-9	2213-2216	the	object[136]|place[137]	giv[136]|new[137]	_	_
+26-10	2217-2225	archives	object[136]|place[137]	giv[136]|new[137]	_	_
+26-11	2226-2228	of	object[136]|place[137]	giv[136]|new[137]	_	_
+26-12	2229-2232	the	object[136]|place[137]|organization[138]	giv[136]|new[137]|giv[138]	_	_
+26-13	2233-2240	Company	object[136]|place[137]|organization[138]	giv[136]|new[137]|giv[138]	_	_
+26-14	2241-2244	and	_	_	_	_
+26-15	2245-2254	published	_	_	_	_
+26-16	2255-2257	an	abstract[139]	new[139]	_	_
+26-17	2258-2266	abridged	abstract[139]	new[139]	_	_
+26-18	2267-2274	version	abstract[139]	new[139]	_	_
+26-19	2275-2277	of	abstract[139]	new[139]	_	_
+26-20	2278-2280	it	abstract[139]	new[139]	_	_
+26-21	2281-2283	as	_	_	_	_
+26-22	2284-2285	a	_	_	_	_
+26-23	2286-2293	chapter	_	_	_	_
+26-24	2294-2296	in	_	_	_	_
+26-25	2297-2300	his	person|object[141]	giv|new[141]	coref|coref	27-4|27-4
+26-26	2301-2302	"	object[141]	new[141]	_	_
+26-27	2303-2312	Pilgrimes	object[141]	new[141]	_	_
+26-28	2313-2314	"	object[141]	new[141]	_	_
+26-29	2315-2316	.	_	_	_	_
+26-30	2317-2318	[	_	_	_	_
+26-31	2319-2320	1	abstract	new	_	_
+26-32	2321-2322	]	_	_	_	_
+
+#Text=In Ayodhya , Finch was an early witness to the location of the Ram Janmabhoomi ( the birth place of Rama ) , the source of the present day Ayodhya dispute .
+27-1	2323-2325	In	_	_	_	_
+27-2	2326-2333	Ayodhya	place	giv	appos	27-17[150_0]
+27-3	2334-2335	,	_	_	_	_
+27-4	2336-2341	Finch	person	giv	coref	27-6[145_0]
+27-5	2342-2345	was	_	_	_	_
+27-6	2346-2348	an	person[145]	giv[145]	coref	28-1[0_145]
+27-7	2349-2354	early	person[145]	giv[145]	_	_
+27-8	2355-2362	witness	person[145]	giv[145]	_	_
+27-9	2363-2365	to	person[145]	giv[145]	_	_
+27-10	2366-2369	the	person[145]|place[146]	giv[145]|giv[146]	_	_
+27-11	2370-2378	location	person[145]|place[146]	giv[145]|giv[146]	_	_
+27-12	2379-2381	of	person[145]|place[146]	giv[145]|giv[146]	_	_
+27-13	2382-2385	the	person[145]|place[146]|abstract[148]	giv[145]|giv[146]|new[148]	_	_
+27-14	2386-2389	Ram	person[145]|place[146]|person|abstract[148]	giv[145]|giv[146]|new|new[148]	_	_
+27-15	2390-2401	Janmabhoomi	person[145]|place[146]|abstract[148]	giv[145]|giv[146]|new[148]	_	_
+27-16	2402-2403	(	_	_	_	_
+27-17	2404-2407	the	place[150]	giv[150]	coref	27-30[0_150]
+27-18	2408-2413	birth	event|place[150]	new|giv[150]	_	_
+27-19	2414-2419	place	place[150]	giv[150]	_	_
+27-20	2420-2422	of	place[150]	giv[150]	_	_
+27-21	2423-2427	Rama	place[150]|person	giv[150]|new	_	_
+27-22	2428-2429	)	_	_	_	_
+27-23	2430-2431	,	_	_	_	_
+27-24	2432-2435	the	abstract[152]	new[152]	_	_
+27-25	2436-2442	source	abstract[152]	new[152]	_	_
+27-26	2443-2445	of	abstract[152]	new[152]	_	_
+27-27	2446-2449	the	abstract[152]|time[153]|event[155]	new[152]|new[153]|new[155]	_	_
+27-28	2450-2457	present	abstract[152]|time[153]|event[155]	new[152]|new[153]|new[155]	_	_
+27-29	2458-2461	day	abstract[152]|time[153]|event[155]	new[152]|new[153]|new[155]	_	_
+27-30	2462-2469	Ayodhya	abstract[152]|place|event[155]	new[152]|giv|new[155]	coref	30-12
+27-31	2470-2477	dispute	abstract[152]|event[155]	new[152]|new[155]	_	_
+27-32	2478-2479	.	_	_	_	_
+
+#Text=Finch did not mention the birthplace or a mosque ( Babri Masjid , believed to have been constructed by a general of Babur ) .
+28-1	2480-2485	Finch	person	giv	coref	30-15[171_0]
+28-2	2486-2489	did	_	_	_	_
+28-3	2490-2493	not	_	_	_	_
+28-4	2494-2501	mention	_	_	_	_
+28-5	2502-2505	the	place[157]	new[157]	_	_
+28-6	2506-2516	birthplace	place[157]	new[157]	_	_
+28-7	2517-2519	or	_	_	_	_
+28-8	2520-2521	a	place[158]	new[158]	_	_
+28-9	2522-2528	mosque	place[158]	new[158]	_	_
+28-10	2529-2530	(	_	_	_	_
+28-11	2531-2536	Babri	person|place[160]	new|new[160]	_	_
+28-12	2537-2543	Masjid	place[160]	new[160]	_	_
+28-13	2544-2545	,	_	_	_	_
+28-14	2546-2554	believed	_	_	_	_
+28-15	2555-2557	to	_	_	_	_
+28-16	2558-2562	have	_	_	_	_
+28-17	2563-2567	been	_	_	_	_
+28-18	2568-2579	constructed	_	_	_	_
+28-19	2580-2582	by	_	_	_	_
+28-20	2583-2584	a	person[161]	new[161]	_	_
+28-21	2585-2592	general	person[161]	new[161]	_	_
+28-22	2593-2595	of	person[161]	new[161]	_	_
+28-23	2596-2601	Babur	person[161]|person	new[161]|new	ana	29-1
+28-24	2602-2603	)	_	_	_	_
+28-25	2604-2605	.	_	_	_	_
+
+#Text=He did mention ruins , which were apparently believed to be Rama 's castle and houses .
+29-1	2606-2608	He	person	giv	_	_
+29-2	2609-2612	did	_	_	_	_
+29-3	2613-2620	mention	_	_	_	_
+29-4	2621-2626	ruins	object	new	_	_
+29-5	2627-2628	,	_	_	_	_
+29-6	2629-2634	which	_	_	_	_
+29-7	2635-2639	were	_	_	_	_
+29-8	2640-2650	apparently	_	_	_	_
+29-9	2651-2659	believed	_	_	_	_
+29-10	2660-2662	to	_	_	_	_
+29-11	2663-2665	be	_	_	_	_
+29-12	2666-2670	Rama	person[165]|object[166]	new[165]|new[166]	_	_
+29-13	2671-2673	's	person[165]|object[166]	new[165]|new[166]	_	_
+29-14	2674-2680	castle	object[166]	new[166]	_	_
+29-15	2681-2684	and	_	_	_	_
+29-16	2685-2691	houses	object	new	_	_
+29-17	2692-2693	.	_	_	_	_
+
+#Text=Scholar Hans T. Bakker , who made a detailed study of Ayodhya , takes Finch 's account to be an authentic record of the state of the Ramkot area at that time . [ 2 ] [ 3 ]
+30-1	2694-2701	Scholar	person[168]	new[168]	_	_
+30-2	2702-2706	Hans	person[168]	new[168]	_	_
+30-3	2707-2709	T.	person[168]	new[168]	_	_
+30-4	2710-2716	Bakker	person[168]	new[168]	_	_
+30-5	2717-2718	,	_	_	_	_
+30-6	2719-2722	who	_	_	_	_
+30-7	2723-2727	made	_	_	_	_
+30-8	2728-2729	a	abstract[169]	new[169]	_	_
+30-9	2730-2738	detailed	abstract[169]	new[169]	_	_
+30-10	2739-2744	study	abstract[169]	new[169]	_	_
+30-11	2745-2747	of	abstract[169]	new[169]	_	_
+30-12	2748-2755	Ayodhya	abstract[169]|place	new[169]|giv	_	_
+30-13	2756-2757	,	_	_	_	_
+30-14	2758-2763	takes	_	_	_	_
+30-15	2764-2769	Finch	person[171]|abstract[172]	giv[171]|new[172]	_	_
+30-16	2770-2772	's	person[171]|abstract[172]	giv[171]|new[172]	_	_
+30-17	2773-2780	account	abstract[172]	new[172]	_	_
+30-18	2781-2783	to	_	_	_	_
+30-19	2784-2786	be	_	_	_	_
+30-20	2787-2789	an	abstract[173]	new[173]	_	_
+30-21	2790-2799	authentic	abstract[173]	new[173]	_	_
+30-22	2800-2806	record	abstract[173]	new[173]	_	_
+30-23	2807-2809	of	abstract[173]	new[173]	_	_
+30-24	2810-2813	the	abstract[173]|place[174]	new[173]|giv[174]	_	_
+30-25	2814-2819	state	abstract[173]|place[174]	new[173]|giv[174]	_	_
+30-26	2820-2822	of	abstract[173]|place[174]	new[173]|giv[174]	_	_
+30-27	2823-2826	the	abstract[173]|place[174]|place[176]	new[173]|giv[174]|new[176]	_	_
+30-28	2827-2833	Ramkot	abstract[173]|place[174]|place|place[176]	new[173]|giv[174]|new|new[176]	_	_
+30-29	2834-2838	area	abstract[173]|place[174]|place[176]	new[173]|giv[174]|new[176]	_	_
+30-30	2839-2841	at	abstract[173]|place[174]|place[176]	new[173]|giv[174]|new[176]	_	_
+30-31	2842-2846	that	abstract[173]|place[174]|place[176]|time[177]	new[173]|giv[174]|new[176]|giv[177]	_	_
+30-32	2847-2851	time	abstract[173]|place[174]|place[176]|time[177]	new[173]|giv[174]|new[176]|giv[177]	_	_
+30-33	2852-2853	.	_	_	_	_
+30-34	2854-2855	[	_	_	_	_
+30-35	2856-2857	2	abstract	new	_	_
+30-36	2858-2859	]	_	_	_	_
+30-37	2860-2861	[	_	_	_	_
+30-38	2862-2863	3	abstract	new	_	_
+30-39	2864-2865	]	_	_	_	_

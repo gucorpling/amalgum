@@ -1,0 +1,163 @@
+The confusion matrix is also a way to measure the classifier ’s performance , and its form is as follows : ( 25 ) where represents the percentage of cases where fault i classified as fault j by classifier k . c is the number of base classifiers , and t is the number of fault classes .
+1,2 person
+1,4 abstract|1,4 object|2,3 abstract|6,8 abstract|10,14 abstract|11,14 abstract|16,17 abstract|16,18 abstract|32,33 abstract|36,38 abstract|39,41 object|44,49 abstract|44,49 quantity|51,52 quantity|53,58 abstract|53,58 quantity|56,58 abstract
+
+In this study , six basic classifiers were selected : linear discriminant analysis ( LDA ) , K-nearest neighbor ( KNN ) , Bayesian classifier ( BN ) , random forest ( RF ) , support vector machine ( SVM ) and the BP neural network ( BP ) .
+1,2 person
+2,4 abstract|5,8 abstract|11,13 abstract|11,14 abstract|15,16 abstract|18,20 abstract|24,26 abstract|36,39 abstract|43,47 abstract|48,49 object
+
+To measure the classification performance , four evaluation indicators were used : ( 21 ) ( 22 ) ( 23 ) where t is the number of fault classes . ( 24 ) where P is the precision and R is the recall rate .
+1,2 person
+3,5 abstract|3,6 abstract|7,10 abstract|20,21 time|25,30 abstract|28,30 abstract|35,36 abstract|37,39 abstract|40,41 abstract|42,45 abstract
+
+This not only avoids the shortcomings of the original voting method , which does not consider the difference in performance of each classifier on different faults , but also enhances the impact of the classifiers with good performance in terms of voting results .
+1,2 person
+1,2 abstract|5,12 abstract|8,12 abstract|17,24 abstract|25,27 abstract|31,39 abstract|37,39 abstract|42,44 abstract
+
+Different from the conventional voting method , the fusion results given by the improved voting method are no longer crisp ( i. e. , either 0 or 1 ) , but they take values in the interval of 0 – 1 .
+1,2 person
+3,7 abstract|8,11 abstract|13,17 abstract|32,33 abstract|34,42 abstract
+
+In summary , the proposed decision fusion system uses multiple performance evaluation indicators to measure the performance of the base classifier and determine the combined weights based on AHP and EW-TOPSIS for the base classifiers under these indicators .
+1,2 person
+4,9 abstract|6,9 abstract|10,14 abstract|11,12 abstract|16,22 abstract|19,22 abstract|24,27 abstract|29,30 abstract|29,36 abstract|31,32 abstract|33,39 object|37,39 object
+
+Voting is a simple and practical decision-making fusion strategy , but its fusion results are often unreasonable because it ignores the performance differences of various methods .
+1,2 person
+1,2 abstract|3,10 abstract|12,13 abstract|12,15 abstract|19,20 abstract|21,27 abstract|25,27 abstract
+
+KNN is a simple classifier , which determines the classification result by comparing the distance between the sample to be classified and all training samples .
+1,2 person
+1,2 organization|3,6 abstract|9,12 abstract|14,19 abstract|14,22 abstract|14,26 abstract|17,22 object|23,26 object
+
+The larger the value of , the higher the credibility of the result when a test sample is classified as fault j by classifier k .
+1,2 person
+1,6 quantity|9,14 abstract|12,14 abstract|15,18 abstract|21,23 abstract|21,26 abstract|24,26 abstract
+
+The concept of the validity value is defined as follows : ( 26 ) where represents the validity of classifier k for fault j .
+1,2 person
+1,7 abstract|4,7 abstract|17,25 abstract|20,21 abstract|23,24 abstract|23,25 abstract
+
+The BP neural network is a multi-layer feed-forward neural network with error backpropagation , which is advantageous for dealing with nonlinear problems .
+1,2 person
+1,5 abstract|1,5 object|6,11 abstract|6,14 abstract|12,13 abstract|12,14 abstract|21,23 abstract
+
+In the improved voting method , the voting result is determined by the validity value of the base classifier for different faults .
+1,2 person
+2,6 abstract|7,10 abstract|13,20 abstract|17,20 abstract|21,23 abstract
+
+Considering the requirement of diversity for the ensemble classification system , we selected six representative classifiers from the supervised category .
+1,2 person
+2,11 abstract|5,6 abstract|7,11 abstract|8,11 abstract|12,13 person|18,21 abstract
+
+It has an advantage in terms of classification speed and is suitable for applications with small-scale samples and missing values .
+1,2 person
+1,2 abstract|3,5 abstract|8,9 abstract|8,10 abstract|14,18 abstract|19,21 abstract
+
+Among them , LDA is a linear classifier , which is suitable for the classification of linear separable problems .
+1,2 person
+2,3 abstract|4,5 abstract|6,9 abstract|14,20 abstract|17,20 abstract
+
+RF is an integrated classifier based on the decision tree and has the advantage of a low computation cost .
+1,2 person
+1,2 abstract|3,6 object|3,11 object|8,11 abstract|8,11 object|13,20 abstract|16,20 abstract
+
+The typical advantage of SVM is that it can use small samples and is also good for nonlinear problems .
+1,2 person
+1,6 abstract|5,6 abstract|8,9 abstract|11,13 abstract|11,13 object|18,20 abstract
+
+In the process of fusion , the method with excellent performance should have greater/more influence on the voting results .
+1,2 person
+2,6 abstract|2,6 event|7,12 abstract|10,12 abstract|14,16 abstract|17,20 abstract
+
+In addition , an improved voting method based on validity was developed to improve the effectiveness of decision fusion .
+1,2 person
+4,11 abstract|10,11 abstract|15,20 abstract|18,20 abstract
+
+A basic ensemble method includes the selection of base classifiers and the determination of fusion strategies .
+1,2 person
+1,5 abstract|6,11 abstract|9,11 abstract|12,17 abstract|15,17 abstract
+
+This paper proposes a validity concept based on the confusion matrix to improve the voting method .
+1,2 person
+1,3 abstract|4,7 abstract|9,12 abstract|14,17 abstract
+
+Combined with the combined weights , the decision of the fusion system is : ( 29 )
+1,2 person
+3,6 abstract|7,13 abstract|10,13 abstract
+
+The information used to calculate these performance evaluation indicators is given by the confusion matrix .
+1,2 person
+1,3 abstract|6,10 abstract|7,8 abstract|7,10 abstract|13,16 object
+
+A validity matrix can be obtained by using the improved voting method : ( 28 )
+1,2 person
+1,4 abstract|9,13 abstract|14,17 abstract
+
+The ensemble method integrates various fault classification methods to improve the fault classification capability .
+1,2 person
+1,4 abstract|5,9 abstract|6,9 abstract|11,15 abstract|12,15 abstract
+
+In the next section , the proposed method is verified by the TE process .
+1,2 person
+2,5 abstract|6,9 abstract|12,15 abstract
+
+Finally , the maximum value is used as the fusion decision : ( 30 )
+1,2 person
+3,6 abstract|9,12 abstract
+
+Decision fusion is achieved by the CW and improved voting methods .
+1,2 person
+1,3 abstract|6,8 abstract|6,12 abstract|9,12 abstract
+
+Additionally , the following conditions should be met : ( 27 )
+1,2 person
+3,6 abstract
+
+The specific framework of our proposed fusion system is shown in
+1,2 person
+1,9 abstract|5,6 person|5,9 abstract|7,9 abstract
+
+It can deal with high-dimensional samples and sample imbalance .
+1,2 person
+1,2 abstract|5,10 abstract|8,10 abstract
+
+BN is one of the commonly used classifiers .
+1,2 person
+1,2 abstract|3,9 abstract
+
+Formatting of Mathematical Components
+1,2 person
+1,5 abstract|3,5 object
+
+Selection of Base Classifiers
+1,2 person
+
+
+The Proposed Method
+1,2 person
+1,4 abstract
+
+Classifier Performance Evaluation
+1,2 person
+1,3 abstract|1,4 abstract
+
+3.1 .
+1,2 person
+1,2 abstract
+
+3.2 .
+1,2 person
+1,2 abstract
+
+3.3 .
+1,2 person
+1,2 abstract
+
+3 .
+1,2 person
+
+
+Figure 1
+1,2 person
+1,3 object

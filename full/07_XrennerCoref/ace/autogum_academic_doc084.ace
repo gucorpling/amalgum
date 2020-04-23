@@ -1,0 +1,131 @@
+A solution has many kinds of changes after perturbation , so even if the current solution is perturbed into the solution that has appeared in previous iterations , it will change in other directions when perturbed again , which will not have a negative impact on the results .
+1,2 person
+1,3 abstract|4,8 abstract|9,10 event|14,17 abstract|20,22 abstract|29,30 abstract|33,35 abstract|43,46 abstract|47,49 abstract
+
+A simulated annealing algorithm is a random optimization algorithm based on a Monte Carlo iterative solution strategy , and has strong robustness , global convergence and wide adaptability , which is suitable for solving the problem .
+1,2 person
+1,5 abstract|6,10 abstract|12,15 abstract|12,18 abstract|15,18 abstract|21,23 abstract|24,26 abstract|27,29 abstract|35,37 abstract
+
+Metropolis criterion is that the algorithm allows the inferior solution to be accepted with a certain probability , so that the algorithm can jump out of the trap of the local optimum .
+1,2 person
+1,3 abstract|5,7 abstract|8,11 abstract|15,18 abstract|21,23 abstract|27,33 abstract|30,33 abstract
+
+Let , and be the objective function values of the current solution , the new solution ( perturbation solution ) and the optimal solution in the existing iteration process , respectively .
+1,2 person
+5,8 abstract|5,13 abstract|10,13 abstract|14,17 abstract|18,20 abstract|18,25 abstract|26,30 abstract
+
+The algorithm is designed with the memory function of the optimal solution in the existing iteration process , that is , to remember the ‘ best so far ’ state .
+1,2 person
+1,3 abstract|6,13 abstract|6,18 abstract|14,18 abstract|24,31 abstract
+
+adding a line randomly , deleting a line randomly , adding a section in a line randomly and deleting a section in a line randomly , as shown in
+1,2 person
+2,4 object|7,9 object|12,17 object|15,17 object|20,25 object|23,25 object
+
+Each operator can be executed independently or simultaneously , for example , one line can be added while another line can be deleted at the same time .
+1,2 person
+1,3 abstract|13,15 abstract|19,21 abstract|25,28 time
+
+In order to obtain a variety of perturbation solutions in the iteration process , four neighborhood transform operators are designed .
+1,2 person
+5,10 abstract|8,10 abstract|11,14 abstract|16,19 abstract
+
+As the iteration proceeds , the solution in the memory base is continuously updated until the algorithm converges .
+1,2 person
+2,4 event|6,8 abstract|6,12 abstract|9,12 abstract|16,18 abstract
+
+Different types of perturbations are randomly applied to the current solution to obtain new solution .
+1,2 person
+1,5 abstract|9,12 abstract|14,16 abstract
+
+Therefore , the objective value will approach the global optimum gradually in the iterative process .
+1,2 person
+3,6 abstract|8,11 abstract|13,16 abstract
+
+As the temperature decreases , the probability of accepting an inferior solution decreases gradually .
+1,2 person
+2,4 abstract|6,13 abstract|10,13 abstract|10,13 substance
+
+So a neighborhood search algorithm is developed based on a simulated annealing algorithm .
+1,2 person
+2,6 abstract|10,14 abstract
+
+The acceptance probability in the criterion is calculated by Equation ( 46 ) .
+1,2 person
+1,4 abstract|1,7 abstract|5,7 abstract|10,11 abstract
+
+It has high structural complexity , multiple constraints and large search space , etc.
+1,2 person
+1,2 abstract|3,6 abstract|7,9 abstract|10,13 abstract
+
+Different neighborhood transform operators are executed according to a certain probability .
+1,2 person
+1,5 abstract|2,5 abstract|9,12 abstract
+
+The problem dealt with in this paper is NP-hard .
+1,2 person
+1,3 abstract|6,8 abstract|6,8 object
+
+If , is accepted as the new current solution .
+1,2 person
+6,10 abstract
+
+Otherwise , is accepted according to the Metropolis criterion .
+1,2 person
+7,10 abstract
+
+The functions of these operators are as follows :
+1,2 person
+1,6 abstract|4,6 abstract
+
+( 46 ) where is the current temperature .
+1,2 person
+1,3 abstract|6,9 abstract
+
+The overall flow of the algorithm is shown in
+1,2 person
+1,7 abstract|5,7 abstract
+
+Neighborhood Search Algorithm
+1,2 person
+1,3 abstract|1,4 abstract
+
+4 .
+1,2 person
+
+
+Figure 10
+1,2 person
+1,3 abstract
+
+Figure 11
+1,2 person
+1,3 abstract
+
+Figure 12
+1,2 person
+1,3 abstract
+
+Figure 13
+1,2 person
+1,3 abstract
+
+Figure 14
+1,2 person
+1,3 abstract
+
+,
+1,2 person
+
+
+,
+1,2 person
+
+
+and
+1,2 person
+
+
+.
+1,2 person
+

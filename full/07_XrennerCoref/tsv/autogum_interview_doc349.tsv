@@ -1,0 +1,616 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=http://www.who.int/csr/disease/swineflu/guidance/national_authorities/en/index.html
+1-1	0-83	http://www.who.int/csr/disease/swineflu/guidance/national_authorities/en/index.html	place	new	_	_
+
+#Text=( (
+2-1	84-85	(	_	_	_	_
+2-2	86-87	(	_	_	_	_
+
+#Text=MM
+3-1	88-90	MM	person	new	_	_
+
+#Text=) )
+4-1	91-92	)	_	_	_	_
+4-2	93-94	)	_	_	_	_
+
+#Text=What does the WHO recommend for those individuals affected by H1N1 ?
+5-1	95-99	What	_	_	_	_
+5-2	100-104	does	_	_	_	_
+5-3	105-108	the	_	_	_	_
+5-4	109-112	WHO	_	_	_	_
+5-5	113-122	recommend	_	_	_	_
+5-6	123-126	for	_	_	_	_
+5-7	127-132	those	person[3]	new[3]	_	_
+5-8	133-144	individuals	person[3]	new[3]	_	_
+5-9	145-153	affected	_	_	_	_
+5-10	154-156	by	_	_	_	_
+5-11	157-161	H1N1	abstract	new	coref	6-3
+5-12	162-163	?	_	_	_	_
+
+#Text=How does H1N1 affect someone who is infected ?
+6-1	164-167	How	_	_	_	_
+6-2	168-172	does	_	_	_	_
+6-3	173-177	H1N1	abstract	giv	coref	10-3
+6-4	178-184	affect	_	_	_	_
+6-5	185-192	someone	person	new	ana	20-22[91_0]
+6-6	193-196	who	_	_	_	_
+6-7	197-199	is	_	_	_	_
+6-8	200-208	infected	_	_	_	_
+6-9	209-210	?	_	_	_	_
+
+#Text=( (
+7-1	211-212	(	_	_	_	_
+7-2	213-214	(	_	_	_	_
+
+#Text=KM
+8-1	215-217	KM	quantity	new	coref	28-1
+
+#Text=) )
+9-1	218-219	)	_	_	_	_
+9-2	220-221	)	_	_	_	_
+
+#Text=Since the H1N1 pandemic virus is now the dominant influenza virus circulating worldwide , most cases of influenza-like illness are likely pandemic influenza .
+10-1	222-227	Since	_	_	_	_
+10-2	228-231	the	abstract[10]	new[10]	coref	10-7[11_10]
+10-3	232-236	H1N1	object|abstract[10]	giv|new[10]	coref	13-3
+10-4	237-245	pandemic	plant|abstract[10]	new|new[10]	coref	10-22
+10-5	246-251	virus	abstract[10]	new[10]	_	_
+10-6	252-254	is	_	_	_	_
+10-7	255-258	now	abstract[11]	giv[11]	coref	13-1[41_11]
+10-8	259-262	the	abstract[11]	giv[11]	_	_
+10-9	263-271	dominant	abstract[11]	giv[11]	_	_
+10-10	272-281	influenza	abstract[11]	giv[11]	_	_
+10-11	282-287	virus	abstract[11]	giv[11]	_	_
+10-12	288-299	circulating	_	_	_	_
+10-13	300-309	worldwide	place	new	coref	13-8
+10-14	310-311	,	_	_	_	_
+10-15	312-316	most	abstract[13]	new[13]	_	_
+10-16	317-322	cases	abstract[13]	new[13]	_	_
+10-17	323-325	of	abstract[13]	new[13]	_	_
+10-18	326-340	influenza-like	abstract[13]|abstract[14]	new[13]|new[14]	coref	12-10[29_14]
+10-19	341-348	illness	abstract[13]|abstract[14]	new[13]|new[14]	_	_
+10-20	349-352	are	_	_	_	_
+10-21	353-359	likely	_	_	_	_
+10-22	360-368	pandemic	animal|abstract[16]	giv|new[16]	coref|coref|coref|coref	12-31|12-31[38_16]|12-31|12-31[38_16]
+10-23	369-378	influenza	abstract[16]	new[16]	_	_
+10-24	379-380	.	_	_	_	_
+
+#Text=Typical symptoms to watch for include fever , cough , headache , body aches , sore throat and runny nose .
+11-1	381-388	Typical	abstract[17]	new[17]	coref	12-14[31_17]
+11-2	389-397	symptoms	abstract[17]	new[17]	_	_
+11-3	398-400	to	_	_	_	_
+11-4	401-406	watch	_	_	_	_
+11-5	407-410	for	_	_	_	_
+11-6	411-418	include	_	_	_	_
+11-7	419-424	fever	abstract	new	coref	22-7[108_0]
+11-8	425-426	,	_	_	_	_
+11-9	427-432	cough	abstract	new	_	_
+11-10	433-434	,	_	_	_	_
+11-11	435-443	headache	abstract	new	_	_
+11-12	444-445	,	_	_	_	_
+11-13	446-450	body	object|abstract[22]	new|new[22]	_	_
+11-14	451-456	aches	abstract[22]	new[22]	_	_
+11-15	457-458	,	_	_	_	_
+11-16	459-463	sore	abstract[23]	new[23]	_	_
+11-17	464-470	throat	abstract[23]	new[23]	_	_
+11-18	471-474	and	_	_	_	_
+11-19	475-480	runny	object[24]	new[24]	_	_
+11-20	481-485	nose	object[24]	new[24]	_	_
+11-21	486-487	.	_	_	_	_
+
+#Text=WHO advises health care providers to treat people with influenza-like illness based on their symptoms and the progress of their illness , and not to wait for laboratory confirmation of pandemic influenza .
+12-1	488-491	WHO	_	_	_	_
+12-2	492-499	advises	_	_	_	_
+12-3	500-506	health	abstract|person[27]	new|new[27]	coref|coref	14-8|14-8
+12-4	507-511	care	abstract|person[27]	new|new[27]	_	_
+12-5	512-521	providers	person[27]	new[27]	_	_
+12-6	522-524	to	_	_	_	_
+12-7	525-530	treat	_	_	_	_
+12-8	531-537	people	person	new	ana	12-14
+12-9	538-542	with	_	_	_	_
+12-10	543-557	influenza-like	abstract[29]	giv[29]	coref	12-20[34_29]
+12-11	558-565	illness	abstract[29]	giv[29]	_	_
+12-12	566-571	based	_	_	_	_
+12-13	572-574	on	_	_	_	_
+12-14	575-580	their	person|abstract[31]	giv|giv[31]	ana|coref|ana|coref	12-20|19-4[74_31]|12-20|19-4[74_31]
+12-15	581-589	symptoms	abstract[31]	giv[31]	_	_
+12-16	590-593	and	abstract[31]	giv[31]	_	_
+12-17	594-597	the	abstract[31]|abstract[32]	giv[31]|new[32]	_	_
+12-18	598-606	progress	abstract[31]|abstract[32]	giv[31]|new[32]	_	_
+12-19	607-609	of	abstract[31]|abstract[32]	giv[31]|new[32]	_	_
+12-20	610-615	their	abstract[31]|abstract[32]|person|abstract[34]	giv[31]|new[32]|giv|giv[34]	coref|coref|coref|coref	14-23[51_34]|21-1[100_0]|14-23[51_34]|21-1[100_0]
+12-21	616-623	illness	abstract[31]|abstract[32]|abstract[34]	giv[31]|new[32]|giv[34]	_	_
+12-22	624-625	,	_	_	_	_
+12-23	626-629	and	_	_	_	_
+12-24	630-633	not	_	_	_	_
+12-25	634-636	to	_	_	_	_
+12-26	637-641	wait	_	_	_	_
+12-27	642-645	for	_	_	_	_
+12-28	646-656	laboratory	place|abstract[36]	new|new[36]	coref|coref	19-36|19-36
+12-29	657-669	confirmation	abstract[36]	new[36]	_	_
+12-30	670-672	of	abstract[36]	new[36]	_	_
+12-31	673-681	pandemic	abstract[36]|animal|abstract[38]	new[36]|giv|giv[38]	coref|coref|coref|coref	13-2|17-12[0_38]|13-2|17-12[0_38]
+12-32	682-691	influenza	abstract[36]|abstract[38]	new[36]|giv[38]	_	_
+12-33	692-693	.	_	_	_	_
+
+#Text=The pandemic H1N1 virus has already spread worldwide .
+13-1	694-697	The	abstract[41]	giv[41]	coref	14-30[53_41]
+13-2	698-706	pandemic	plant|abstract[41]	giv|giv[41]	coref	17-11
+13-3	707-711	H1N1	object|abstract[41]	giv|giv[41]	coref	16-22
+13-4	712-717	virus	abstract[41]	giv[41]	_	_
+13-5	718-721	has	_	_	_	_
+13-6	722-729	already	_	_	_	_
+13-7	730-736	spread	_	_	_	_
+13-8	737-746	worldwide	place	giv	_	_
+13-9	747-748	.	_	_	_	_
+
+#Text=Regarding laboratory testing of cases , public health authorities and WHO partners continue to do selective testing of samples from patients with influenza-like illness to characterize outbreaks , monitor the virus and identify disease trends .
+14-1	749-758	Regarding	_	_	_	_
+14-2	759-769	laboratory	abstract[43]	new[43]	_	_
+14-3	770-777	testing	abstract[43]	new[43]	_	_
+14-4	778-780	of	abstract[43]	new[43]	_	_
+14-5	781-786	cases	abstract[43]|abstract	new[43]|new	_	_
+14-6	787-788	,	abstract[43]	new[43]	_	_
+14-7	789-795	public	abstract[43]|organization[46]	new[43]|new[46]	_	_
+14-8	796-802	health	abstract[43]|abstract|organization[46]	new[43]|giv|new[46]	_	_
+14-9	803-814	authorities	abstract[43]|organization[46]	new[43]|new[46]	_	_
+14-10	815-818	and	_	_	_	_
+14-11	819-822	WHO	_	_	_	_
+14-12	823-831	partners	person	new	_	_
+14-13	832-840	continue	_	_	_	_
+14-14	841-843	to	_	_	_	_
+14-15	844-846	do	_	_	_	_
+14-16	847-856	selective	abstract[48]	new[48]	_	_
+14-17	857-864	testing	abstract[48]	new[48]	_	_
+14-18	865-867	of	abstract[48]	new[48]	_	_
+14-19	868-875	samples	abstract[48]|object	new[48]|new	_	_
+14-20	876-880	from	abstract[48]	new[48]	_	_
+14-21	881-889	patients	abstract[48]|person[50]	new[48]|new[50]	coref	19-2[73_50]
+14-22	890-894	with	abstract[48]|person[50]	new[48]|new[50]	_	_
+14-23	895-909	influenza-like	abstract[48]|person[50]|abstract[51]	new[48]|new[50]|giv[51]	coref	19-6[75_51]
+14-24	910-917	illness	abstract[48]|person[50]|abstract[51]	new[48]|new[50]|giv[51]	_	_
+14-25	918-920	to	_	_	_	_
+14-26	921-933	characterize	_	_	_	_
+14-27	934-943	outbreaks	event	new	_	_
+14-28	944-945	,	_	_	_	_
+14-29	946-953	monitor	_	_	_	_
+14-30	954-957	the	abstract[53]	giv[53]	coref	18-15[0_53]
+14-31	958-963	virus	abstract[53]	giv[53]	_	_
+14-32	964-967	and	_	_	_	_
+14-33	968-976	identify	_	_	_	_
+14-34	977-984	disease	abstract|abstract[55]	new|new[55]	coref|coref	20-7[86_0]|20-7[86_0]
+14-35	985-991	trends	abstract[55]	new[55]	_	_
+14-36	992-993	.	_	_	_	_
+
+#Text=Anti-viral drugs
+15-1	994-1004	Anti-viral	substance[56]	new[56]	coref	17-3[62_56]
+15-2	1005-1010	drugs	substance[56]	new[56]	_	_
+
+#Text=( which are medicines that act directly on viruses to stop them from multiplying ) should not be taken to prevent H1N1 .
+16-1	1011-1012	(	_	_	_	_
+16-2	1013-1018	which	_	_	_	_
+16-3	1019-1022	are	_	_	_	_
+16-4	1023-1032	medicines	substance	new	_	_
+16-5	1033-1037	that	_	_	_	_
+16-6	1038-1041	act	_	_	_	_
+16-7	1042-1050	directly	_	_	_	_
+16-8	1051-1053	on	_	_	_	_
+16-9	1054-1061	viruses	substance	new	ana	16-12
+16-10	1062-1064	to	_	_	_	_
+16-11	1065-1069	stop	_	_	_	_
+16-12	1070-1074	them	substance	giv	coref	30-15[121_0]
+16-13	1075-1079	from	_	_	_	_
+16-14	1080-1091	multiplying	abstract	new	_	_
+16-15	1092-1093	)	_	_	_	_
+16-16	1094-1100	should	_	_	_	_
+16-17	1101-1104	not	_	_	_	_
+16-18	1105-1107	be	_	_	_	_
+16-19	1108-1113	taken	_	_	_	_
+16-20	1114-1116	to	_	_	_	_
+16-21	1117-1124	prevent	_	_	_	_
+16-22	1125-1129	H1N1	abstract	giv	coref	26-3
+16-23	1130-1131	.	_	_	_	_
+
+#Text=There are two antiviral drugs are being used to treat pandemic influenza infections .
+17-1	1132-1137	There	_	_	_	_
+17-2	1138-1141	are	_	_	_	_
+17-3	1142-1145	two	substance[62]	giv[62]	_	_
+17-4	1146-1155	antiviral	substance[62]	giv[62]	_	_
+17-5	1156-1161	drugs	substance[62]	giv[62]	_	_
+17-6	1162-1165	are	_	_	_	_
+17-7	1166-1171	being	_	_	_	_
+17-8	1172-1176	used	_	_	_	_
+17-9	1177-1179	to	_	_	_	_
+17-10	1180-1185	treat	_	_	_	_
+17-11	1186-1194	pandemic	object|abstract[65]	giv|new[65]	ana|coref|ana|coref	18-1[0_65]|19-13|18-1[0_65]|19-13
+17-12	1195-1204	influenza	abstract|abstract[65]	giv|new[65]	coref	19-13[77_0]
+17-13	1205-1215	infections	abstract[65]	new[65]	_	_
+17-14	1216-1217	.	_	_	_	_
+
+#Text=These are oseltamivir and zanamivir , which both block the action of an influenza virus protein called neuraminidase .
+18-1	1218-1223	These	abstract	giv	coref	18-3[67_0]
+18-2	1224-1227	are	_	_	_	_
+18-3	1228-1239	oseltamivir	abstract[67]	giv[67]	coref	19-21[0_67]
+18-4	1240-1243	and	abstract[67]	giv[67]	_	_
+18-5	1244-1253	zanamivir	abstract[67]|object	giv[67]|new	coref	20-36
+18-6	1254-1255	,	_	_	_	_
+18-7	1256-1261	which	_	_	_	_
+18-8	1262-1266	both	_	_	_	_
+18-9	1267-1272	block	_	_	_	_
+18-10	1273-1276	the	abstract[69]	new[69]	_	_
+18-11	1277-1283	action	abstract[69]	new[69]	_	_
+18-12	1284-1286	of	abstract[69]	new[69]	_	_
+18-13	1287-1289	an	abstract[69]|substance[71]	new[69]|new[71]	_	_
+18-14	1290-1299	influenza	abstract[69]|substance[71]	new[69]|new[71]	_	_
+18-15	1300-1305	virus	abstract[69]|abstract|substance[71]	new[69]|giv|new[71]	coref	30-1[116_0]
+18-16	1306-1313	protein	abstract[69]|substance[71]	new[69]|new[71]	_	_
+18-17	1314-1320	called	_	_	_	_
+18-18	1321-1334	neuraminidase	abstract	new	_	_
+18-19	1335-1336	.	_	_	_	_
+
+#Text=For patients with symptoms of severe illness that are probably due to pandemic influenza , WHO recommends that treatment with oseltamivir should start immediately , no matter when the illness started and without waiting for laboratory results to confirm infection .
+19-1	1337-1340	For	_	_	_	_
+19-2	1341-1349	patients	person[73]	giv[73]	coref	20-2[84_73]
+19-3	1350-1354	with	person[73]	giv[73]	_	_
+19-4	1355-1363	symptoms	person[73]|abstract[74]	giv[73]|giv[74]	coref	20-45[0_74]
+19-5	1364-1366	of	person[73]|abstract[74]	giv[73]|giv[74]	_	_
+19-6	1367-1373	severe	person[73]|abstract[74]|abstract[75]	giv[73]|giv[74]|giv[75]	coref	19-29[80_75]
+19-7	1374-1381	illness	person[73]|abstract[74]|abstract[75]	giv[73]|giv[74]|giv[75]	_	_
+19-8	1382-1386	that	_	_	_	_
+19-9	1387-1390	are	_	_	_	_
+19-10	1391-1399	probably	_	_	_	_
+19-11	1400-1403	due	_	_	_	_
+19-12	1404-1406	to	_	_	_	_
+19-13	1407-1415	pandemic	animal|abstract[77]	giv|giv[77]	coref|coref|coref|coref	20-10|20-10[88_77]|20-10|20-10[88_77]
+19-14	1416-1425	influenza	abstract[77]	giv[77]	_	_
+19-15	1426-1427	,	_	_	_	_
+19-16	1428-1431	WHO	_	_	_	_
+19-17	1432-1442	recommends	_	_	_	_
+19-18	1443-1447	that	_	_	_	_
+19-19	1448-1457	treatment	abstract[78]	new[78]	coref	20-31[93_78]
+19-20	1458-1462	with	abstract[78]	new[78]	_	_
+19-21	1463-1474	oseltamivir	abstract[78]|substance	new[78]|giv	coref	20-33[94_0]
+19-22	1475-1481	should	_	_	_	_
+19-23	1482-1487	start	_	_	_	_
+19-24	1488-1499	immediately	_	_	_	_
+19-25	1500-1501	,	_	_	_	_
+19-26	1502-1504	no	_	_	_	_
+19-27	1505-1511	matter	_	_	_	_
+19-28	1512-1516	when	_	_	_	_
+19-29	1517-1520	the	abstract[80]	giv[80]	coref	33-9[144_80]
+19-30	1521-1528	illness	abstract[80]	giv[80]	_	_
+19-31	1529-1536	started	_	_	_	_
+19-32	1537-1540	and	_	_	_	_
+19-33	1541-1548	without	_	_	_	_
+19-34	1549-1556	waiting	_	_	_	_
+19-35	1557-1560	for	_	_	_	_
+19-36	1561-1571	laboratory	place|abstract[82]	giv|new[82]	coref|coref	20-51[98_82]|20-51[98_82]
+19-37	1572-1579	results	abstract[82]	new[82]	_	_
+19-38	1580-1582	to	_	_	_	_
+19-39	1583-1590	confirm	_	_	_	_
+19-40	1591-1600	infection	event	new	_	_
+19-41	1601-1602	.	_	_	_	_
+
+#Text=For patients at higher risk for serious disease from pandemic influenza , including pregnant women , children under age 5 and those with certain underlying medical conditions , WHO recommends treatment with either oseltamivir or zanamivir as soon as possible after the onset of symptoms , and without waiting for the results of laboratory tests .
+20-1	1603-1606	For	_	_	_	_
+20-2	1607-1615	patients	person[84]	giv[84]	_	_
+20-3	1616-1618	at	person[84]	giv[84]	_	_
+20-4	1619-1625	higher	person[84]|abstract[85]	giv[84]|new[85]	coref	21-10[0_85]
+20-5	1626-1630	risk	person[84]|abstract[85]	giv[84]|new[85]	_	_
+20-6	1631-1634	for	person[84]|abstract[85]	giv[84]|new[85]	_	_
+20-7	1635-1642	serious	person[84]|abstract[85]|abstract[86]	giv[84]|new[85]|giv[86]	_	_
+20-8	1643-1650	disease	person[84]|abstract[85]|abstract[86]	giv[84]|new[85]|giv[86]	_	_
+20-9	1651-1655	from	person[84]|abstract[85]|abstract[86]	giv[84]|new[85]|giv[86]	_	_
+20-10	1656-1664	pandemic	person[84]|abstract[85]|abstract[86]|animal|abstract[88]	giv[84]|new[85]|giv[86]|giv|giv[88]	coref|coref|coref|coref	30-1|30-16[0_88]|30-1|30-16[0_88]
+20-11	1665-1674	influenza	person[84]|abstract[85]|abstract[86]|abstract[88]	giv[84]|new[85]|giv[86]|giv[88]	_	_
+20-12	1675-1676	,	person[84]	giv[84]	_	_
+20-13	1677-1686	including	person[84]	giv[84]	_	_
+20-14	1687-1695	pregnant	person[84]	giv[84]	_	_
+20-15	1696-1701	women	person[84]	giv[84]	_	_
+20-16	1702-1703	,	person[84]	giv[84]	_	_
+20-17	1704-1712	children	person[84]|person[89]	giv[84]|new[89]	_	_
+20-18	1713-1718	under	person[84]|person[89]	giv[84]|new[89]	_	_
+20-19	1719-1722	age	person[84]|person[89]|abstract[90]	giv[84]|new[89]|new[90]	_	_
+20-20	1723-1724	5	person[84]|person[89]|abstract[90]	giv[84]|new[89]|new[90]	_	_
+20-21	1725-1728	and	person[84]	giv[84]	_	_
+20-22	1729-1734	those	person[84]|person[91]	giv[84]|giv[91]	coref	26-5[0_91]
+20-23	1735-1739	with	person[84]|person[91]	giv[84]|giv[91]	_	_
+20-24	1740-1747	certain	person[84]|person[91]|abstract[92]	giv[84]|giv[91]|new[92]	_	_
+20-25	1748-1758	underlying	person[84]|person[91]|abstract[92]	giv[84]|giv[91]|new[92]	_	_
+20-26	1759-1766	medical	person[84]|person[91]|abstract[92]	giv[84]|giv[91]|new[92]	_	_
+20-27	1767-1777	conditions	person[84]|person[91]|abstract[92]	giv[84]|giv[91]|new[92]	_	_
+20-28	1778-1779	,	_	_	_	_
+20-29	1780-1783	WHO	_	_	_	_
+20-30	1784-1794	recommends	_	_	_	_
+20-31	1795-1804	treatment	abstract[93]	giv[93]	coref	33-15[0_93]
+20-32	1805-1809	with	abstract[93]	giv[93]	_	_
+20-33	1810-1816	either	abstract[93]|substance[94]	giv[93]|giv[94]	_	_
+20-34	1817-1828	oseltamivir	abstract[93]|substance[94]	giv[93]|giv[94]	_	_
+20-35	1829-1831	or	abstract[93]	giv[93]	_	_
+20-36	1832-1841	zanamivir	abstract[93]|substance	giv[93]|giv	_	_
+20-37	1842-1844	as	abstract[93]	giv[93]	_	_
+20-38	1845-1849	soon	abstract[93]	giv[93]	_	_
+20-39	1850-1852	as	abstract[93]	giv[93]	_	_
+20-40	1853-1861	possible	abstract[93]	giv[93]	_	_
+20-41	1862-1867	after	_	_	_	_
+20-42	1868-1871	the	event[96]	new[96]	_	_
+20-43	1872-1877	onset	event[96]	new[96]	_	_
+20-44	1878-1880	of	event[96]	new[96]	_	_
+20-45	1881-1889	symptoms	event[96]|abstract	new[96]|giv	coref	21-15[103_0]
+20-46	1890-1891	,	_	_	_	_
+20-47	1892-1895	and	_	_	_	_
+20-48	1896-1903	without	_	_	_	_
+20-49	1904-1911	waiting	_	_	_	_
+20-50	1912-1915	for	_	_	_	_
+20-51	1916-1919	the	abstract[98]	giv[98]	_	_
+20-52	1920-1927	results	abstract[98]	giv[98]	_	_
+20-53	1928-1930	of	abstract[98]	giv[98]	_	_
+20-54	1931-1941	laboratory	abstract[98]|abstract[99]	giv[98]|new[99]	_	_
+20-55	1942-1947	tests	abstract[98]|abstract[99]	giv[98]|new[99]	_	_
+20-56	1948-1949	.	_	_	_	_
+
+#Text=Otherwise healthy people who are not from a higher risk group but who have persistent or rapidly worsening symptoms should be treated with antivirals .
+21-1	1950-1959	Otherwise	person[100]	giv[100]	coref	31-16[123_100]
+21-2	1960-1967	healthy	person[100]	giv[100]	_	_
+21-3	1968-1974	people	person[100]	giv[100]	_	_
+21-4	1975-1978	who	_	_	_	_
+21-5	1979-1982	are	_	_	_	_
+21-6	1983-1986	not	_	_	_	_
+21-7	1987-1991	from	_	_	_	_
+21-8	1992-1993	a	person[102]	new[102]	_	_
+21-9	1994-2000	higher	person[102]	new[102]	_	_
+21-10	2001-2005	risk	abstract|person[102]	giv|new[102]	_	_
+21-11	2006-2011	group	person[102]	new[102]	_	_
+21-12	2012-2015	but	_	_	_	_
+21-13	2016-2019	who	_	_	_	_
+21-14	2020-2024	have	_	_	_	_
+21-15	2025-2035	persistent	abstract[103]	giv[103]	coref	22-1[105_103]
+21-16	2036-2038	or	abstract[103]	giv[103]	_	_
+21-17	2039-2046	rapidly	abstract[103]	giv[103]	_	_
+21-18	2047-2056	worsening	abstract[103]	giv[103]	_	_
+21-19	2057-2065	symptoms	abstract[103]	giv[103]	_	_
+21-20	2066-2072	should	_	_	_	_
+21-21	2073-2075	be	_	_	_	_
+21-22	2076-2083	treated	_	_	_	_
+21-23	2084-2088	with	_	_	_	_
+21-24	2089-2099	antivirals	substance	new	_	_
+21-25	2100-2101	.	_	_	_	_
+
+#Text=These symptoms include difficulty breathing or a high fever that lasts beyond three days .
+22-1	2102-2107	These	abstract[105]	giv[105]	_	_
+22-2	2108-2116	symptoms	abstract[105]	giv[105]	_	_
+22-3	2117-2124	include	_	_	_	_
+22-4	2125-2135	difficulty	abstract|abstract[107]	new|new[107]	coref|coref|coref|coref	34-15|34-15[152_107]|34-15|34-15[152_107]
+22-5	2136-2145	breathing	abstract[107]	new[107]	_	_
+22-6	2146-2148	or	_	_	_	_
+22-7	2149-2150	a	abstract[108]	giv[108]	coref	32-12[0_108]
+22-8	2151-2155	high	abstract[108]	giv[108]	_	_
+22-9	2156-2161	fever	abstract[108]	giv[108]	_	_
+22-10	2162-2166	that	_	_	_	_
+22-11	2167-2172	lasts	_	_	_	_
+22-12	2173-2179	beyond	_	_	_	_
+22-13	2180-2185	three	time[109]	new[109]	coref	34-29[156_109]
+22-14	2186-2190	days	time[109]	new[109]	_	_
+22-15	2191-2192	.	_	_	_	_
+
+#Text=( (
+23-1	2193-2194	(	_	_	_	_
+23-2	2195-2196	(	_	_	_	_
+
+#Text=MM
+24-1	2197-2199	MM	person	new	_	_
+
+#Text=) )
+25-1	2200-2201	)	_	_	_	_
+25-2	2202-2203	)	_	_	_	_
+
+#Text=How does H1N1 affect someone who is infected ?
+26-1	2204-2207	How	_	_	_	_
+26-2	2208-2212	does	_	_	_	_
+26-3	2213-2217	H1N1	abstract	giv	coref	30-2
+26-4	2218-2224	affect	_	_	_	_
+26-5	2225-2232	someone	person	giv	_	_
+26-6	2233-2236	who	_	_	_	_
+26-7	2237-2239	is	_	_	_	_
+26-8	2240-2248	infected	_	_	_	_
+26-9	2249-2250	?	_	_	_	_
+
+#Text=( (
+27-1	2251-2252	(	_	_	_	_
+27-2	2253-2254	(	_	_	_	_
+
+#Text=KM
+28-1	2255-2257	KM	quantity	giv	_	_
+
+#Text=) )
+29-1	2258-2259	)	_	_	_	_
+29-2	2260-2261	)	_	_	_	_
+
+#Text=Pandemic H1N1 virus is spread from person to person in the same way that seasonal influenza viruses are spread .
+30-1	2262-2270	Pandemic	person|abstract[116]	giv|giv[116]	coref|coref	32-4|32-4
+30-2	2271-2275	H1N1	object|abstract[116]	giv|giv[116]	_	_
+30-3	2276-2281	virus	abstract[116]	giv[116]	_	_
+30-4	2282-2284	is	_	_	_	_
+30-5	2285-2291	spread	_	_	_	_
+30-6	2292-2296	from	_	_	_	_
+30-7	2297-2303	person	person	new	_	_
+30-8	2304-2306	to	_	_	_	_
+30-9	2307-2313	person	person	new	_	_
+30-10	2314-2316	in	_	_	_	_
+30-11	2317-2320	the	abstract[119]	new[119]	ana	31-1[0_119]
+30-12	2321-2325	same	abstract[119]	new[119]	_	_
+30-13	2326-2329	way	abstract[119]	new[119]	_	_
+30-14	2330-2334	that	abstract[119]	new[119]	_	_
+30-15	2335-2343	seasonal	abstract[119]|substance[121]	new[119]|giv[121]	_	_
+30-16	2344-2353	influenza	abstract[119]|abstract|substance[121]	new[119]|giv|giv[121]	coref	32-3[130_0]
+30-17	2354-2361	viruses	abstract[119]|substance[121]	new[119]|giv[121]	_	_
+30-18	2362-2365	are	abstract[119]	new[119]	_	_
+30-19	2366-2372	spread	abstract[119]	new[119]	_	_
+30-20	2373-2374	.	_	_	_	_
+
+#Text=It is transmitted as easily as the normal seasonal flu and can be passed to other people by exposure to infected droplets expelled by coughing or sneezing that can be inhaled , or that can contaminate hands or surfaces .
+31-1	2375-2377	It	abstract	giv	_	_
+31-2	2378-2380	is	_	_	_	_
+31-3	2381-2392	transmitted	_	_	_	_
+31-4	2393-2395	as	_	_	_	_
+31-5	2396-2402	easily	_	_	_	_
+31-6	2403-2405	as	_	_	_	_
+31-7	2406-2409	the	_	_	_	_
+31-8	2410-2416	normal	_	_	_	_
+31-9	2417-2425	seasonal	_	_	_	_
+31-10	2426-2429	flu	_	_	_	_
+31-11	2430-2433	and	_	_	_	_
+31-12	2434-2437	can	_	_	_	_
+31-13	2438-2440	be	_	_	_	_
+31-14	2441-2447	passed	_	_	_	_
+31-15	2448-2450	to	_	_	_	_
+31-16	2451-2456	other	person[123]	giv[123]	coref	33-1[141_123]
+31-17	2457-2463	people	person[123]	giv[123]	_	_
+31-18	2464-2466	by	_	_	_	_
+31-19	2467-2475	exposure	abstract[124]	new[124]	_	_
+31-20	2476-2478	to	abstract[124]	new[124]	_	_
+31-21	2479-2487	infected	abstract[124]|object[125]	new[124]|new[125]	_	_
+31-22	2488-2496	droplets	abstract[124]|object[125]	new[124]|new[125]	_	_
+31-23	2497-2505	expelled	_	_	_	_
+31-24	2506-2508	by	_	_	_	_
+31-25	2509-2517	coughing	_	_	_	_
+31-26	2518-2520	or	_	_	_	_
+31-27	2521-2529	sneezing	_	_	_	_
+31-28	2530-2534	that	_	_	_	_
+31-29	2535-2538	can	_	_	_	_
+31-30	2539-2541	be	_	_	_	_
+31-31	2542-2549	inhaled	_	_	_	_
+31-32	2550-2551	,	_	_	_	_
+31-33	2552-2554	or	_	_	_	_
+31-34	2555-2559	that	_	_	_	_
+31-35	2560-2563	can	_	_	_	_
+31-36	2564-2575	contaminate	_	_	_	_
+31-37	2576-2581	hands	object	new	_	_
+31-38	2582-2584	or	_	_	_	_
+31-39	2585-2593	surfaces	place	new	_	_
+31-40	2594-2595	.	_	_	_	_
+
+#Text=Signs of the pandemic influenza are flu-like , including malaise , fever , cough , headache , muscle and joint pain , sore throat and runny nose , and sometimes vomiting and diarrhoea .
+32-1	2596-2601	Signs	abstract[128]	new[128]	coref	32-7[131_128]
+32-2	2602-2604	of	abstract[128]	new[128]	_	_
+32-3	2605-2608	the	abstract[128]|abstract[130]	new[128]|giv[130]	coref	33-6[143_130]
+32-4	2609-2617	pandemic	abstract[128]|animal|abstract[130]	new[128]|giv|giv[130]	coref	33-6
+32-5	2618-2627	influenza	abstract[128]|abstract[130]	new[128]|giv[130]	_	_
+32-6	2628-2631	are	_	_	_	_
+32-7	2632-2640	flu-like	abstract[131]	giv[131]	_	_
+32-8	2641-2642	,	abstract[131]	giv[131]	_	_
+32-9	2643-2652	including	abstract[131]	giv[131]	_	_
+32-10	2653-2660	malaise	abstract[131]|abstract	giv[131]|new	_	_
+32-11	2661-2662	,	abstract[131]	giv[131]	_	_
+32-12	2663-2668	fever	abstract[131]|abstract	giv[131]|giv	coref	34-20[153_0]
+32-13	2669-2670	,	abstract[131]	giv[131]	_	_
+32-14	2671-2676	cough	abstract[131]|abstract	giv[131]|new	_	_
+32-15	2677-2678	,	abstract[131]	giv[131]	_	_
+32-16	2679-2687	headache	abstract[131]|abstract	giv[131]|new	_	_
+32-17	2688-2689	,	abstract[131]	giv[131]	_	_
+32-18	2690-2696	muscle	abstract[131]|object	giv[131]|new	_	_
+32-19	2697-2700	and	abstract[131]	giv[131]	_	_
+32-20	2701-2706	joint	abstract[131]|abstract[137]	giv[131]|new[137]	_	_
+32-21	2707-2711	pain	abstract[131]|abstract[137]	giv[131]|new[137]	_	_
+32-22	2712-2713	,	abstract[131]	giv[131]	_	_
+32-23	2714-2718	sore	abstract[131]|abstract[138]	giv[131]|new[138]	_	_
+32-24	2719-2725	throat	abstract[131]|abstract[138]	giv[131]|new[138]	_	_
+32-25	2726-2729	and	abstract[131]	giv[131]	_	_
+32-26	2730-2735	runny	abstract[131]|object[139]	giv[131]|new[139]	_	_
+32-27	2736-2740	nose	abstract[131]|object[139]	giv[131]|new[139]	_	_
+32-28	2741-2742	,	_	_	_	_
+32-29	2743-2746	and	_	_	_	_
+32-30	2747-2756	sometimes	_	_	_	_
+32-31	2757-2765	vomiting	_	_	_	_
+32-32	2766-2769	and	_	_	_	_
+32-33	2770-2779	diarrhoea	abstract	new	_	_
+32-34	2780-2781	.	_	_	_	_
+
+#Text=The majority of people with pandemic influenza experience mild illness and recover fully without treatment .
+33-1	2782-2785	The	person[141]	giv[141]	coref	34-3[0_141]
+33-2	2786-2794	majority	person[141]	giv[141]	_	_
+33-3	2795-2797	of	person[141]	giv[141]	_	_
+33-4	2798-2804	people	person[141]	giv[141]	_	_
+33-5	2805-2809	with	person[141]	giv[141]	_	_
+33-6	2810-2818	pandemic	person[141]|animal|abstract[143]	giv[141]|giv|giv[143]	_	_
+33-7	2819-2828	influenza	person[141]|abstract[143]	giv[141]|giv[143]	_	_
+33-8	2829-2839	experience	_	_	_	_
+33-9	2840-2844	mild	abstract[144]	giv[144]	_	_
+33-10	2845-2852	illness	abstract[144]	giv[144]	_	_
+33-11	2853-2856	and	_	_	_	_
+33-12	2857-2864	recover	_	_	_	_
+33-13	2865-2870	fully	_	_	_	_
+33-14	2871-2878	without	_	_	_	_
+33-15	2879-2888	treatment	abstract	giv	_	_
+33-16	2889-2890	.	_	_	_	_
+
+#Text=However , people should seek medical care if they experience shortness of breath or difficulty breathing , or if a fever , and especially high fever , continues more than three days .
+34-1	2891-2898	However	_	_	_	_
+34-2	2899-2900	,	_	_	_	_
+34-3	2901-2907	people	person	giv	ana	34-9
+34-4	2908-2914	should	_	_	_	_
+34-5	2915-2919	seek	_	_	_	_
+34-6	2920-2927	medical	abstract[147]	new[147]	coref	35-12[159_147]
+34-7	2928-2932	care	abstract[147]	new[147]	_	_
+34-8	2933-2935	if	_	_	_	_
+34-9	2936-2940	they	person	giv	_	_
+34-10	2941-2951	experience	_	_	_	_
+34-11	2952-2961	shortness	abstract[149]	new[149]	_	_
+34-12	2962-2964	of	abstract[149]	new[149]	_	_
+34-13	2965-2971	breath	abstract[149]|abstract	new[149]|new	_	_
+34-14	2972-2974	or	abstract[149]	new[149]	_	_
+34-15	2975-2985	difficulty	abstract[149]|abstract|abstract[152]	new[149]|giv|giv[152]	coref|coref	35-18[161_152]|35-18[161_152]
+34-16	2986-2995	breathing	abstract[149]|abstract[152]	new[149]|giv[152]	_	_
+34-17	2996-2997	,	_	_	_	_
+34-18	2998-3000	or	_	_	_	_
+34-19	3001-3003	if	_	_	_	_
+34-20	3004-3005	a	abstract[153]|abstract[154]	giv[153]|new[154]	coref|coref|coref|coref	34-24[155_153]|35-24[163_154]|34-24[155_153]|35-24[163_154]
+34-21	3006-3011	fever	abstract[153]|abstract[154]	giv[153]|new[154]	_	_
+34-22	3012-3013	,	abstract[154]	new[154]	_	_
+34-23	3014-3017	and	abstract[154]	new[154]	_	_
+34-24	3018-3028	especially	abstract[154]|abstract[155]	new[154]|giv[155]	coref	35-24[0_155]
+34-25	3029-3033	high	abstract[154]|abstract[155]	new[154]|giv[155]	_	_
+34-26	3034-3039	fever	abstract[154]|abstract[155]	new[154]|giv[155]	_	_
+34-27	3040-3041	,	_	_	_	_
+34-28	3042-3051	continues	_	_	_	_
+34-29	3052-3056	more	time[156]	giv[156]	_	_
+34-30	3057-3061	than	time[156]	giv[156]	_	_
+34-31	3062-3067	three	time[156]	giv[156]	_	_
+34-32	3068-3072	days	time[156]	giv[156]	_	_
+34-33	3073-3074	.	_	_	_	_
+
+#Text=For parents with a young child who is ill , seek medical care if a child has fast or labored breathing , continuing fever or convulsions ( seizures ) .
+35-1	3075-3078	For	_	_	_	_
+35-2	3079-3086	parents	person[157]	new[157]	_	_
+35-3	3087-3091	with	person[157]	new[157]	_	_
+35-4	3092-3093	a	person[157]|person[158]	new[157]|new[158]	coref	35-15[160_158]
+35-5	3094-3099	young	person[157]|person[158]	new[157]|new[158]	_	_
+35-6	3100-3105	child	person[157]|person[158]	new[157]|new[158]	_	_
+35-7	3106-3109	who	_	_	_	_
+35-8	3110-3112	is	_	_	_	_
+35-9	3113-3116	ill	_	_	_	_
+35-10	3117-3118	,	_	_	_	_
+35-11	3119-3123	seek	_	_	_	_
+35-12	3124-3131	medical	abstract[159]	giv[159]	_	_
+35-13	3132-3136	care	abstract[159]	giv[159]	_	_
+35-14	3137-3139	if	_	_	_	_
+35-15	3140-3141	a	person[160]	giv[160]	_	_
+35-16	3142-3147	child	person[160]	giv[160]	_	_
+35-17	3148-3151	has	_	_	_	_
+35-18	3152-3156	fast	abstract[161]	giv[161]	_	_
+35-19	3157-3159	or	abstract[161]	giv[161]	_	_
+35-20	3160-3167	labored	abstract[161]	giv[161]	_	_
+35-21	3168-3177	breathing	abstract[161]	giv[161]	_	_
+35-22	3178-3179	,	_	_	_	_
+35-23	3180-3190	continuing	_	_	_	_
+35-24	3191-3196	fever	abstract|abstract[163]	giv|giv[163]	_	_
+35-25	3197-3199	or	abstract[163]	giv[163]	_	_
+35-26	3200-3211	convulsions	abstract[163]|abstract	giv[163]|new	appos	35-28
+35-27	3212-3213	(	_	_	_	_
+35-28	3214-3222	seizures	abstract	giv	_	_
+35-29	3223-3224	)	_	_	_	_
+35-30	3225-3226	.	_	_	_	_

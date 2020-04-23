@@ -1,0 +1,743 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=2 .
+1-1	0-1	2	quantity	new	_	_
+1-2	2-3	.	_	_	_	_
+
+#Text=Typical Ligands for Bile Acids
+2-1	4-11	Typical	substance[2]	new[2]	_	_
+2-2	12-19	Ligands	substance[2]	new[2]	_	_
+2-3	20-23	for	substance[2]	new[2]	_	_
+2-4	24-28	Bile	substance[2]|object|substance[4]	new[2]|new|new[4]	ana|coref|ana|coref	3-7[0_4]|15-5|3-7[0_4]|15-5
+2-5	29-34	Acids	substance[2]|substance[4]	new[2]|new[4]	_	_
+
+#Text=BA targeted therapy is based on their receptors and ligands .
+3-1	35-37	BA	person	new	coref	7-4[40_0]
+3-2	38-46	targeted	_	_	_	_
+3-3	47-54	therapy	abstract	new	_	_
+3-4	55-57	is	_	_	_	_
+3-5	58-63	based	_	_	_	_
+3-6	64-66	on	_	_	_	_
+3-7	67-72	their	substance|substance[8]	giv|new[8]	coref|coref	4-14[15_8]|4-14[15_8]
+3-8	73-82	receptors	substance[8]	new[8]	_	_
+3-9	83-86	and	_	_	_	_
+3-10	87-94	ligands	abstract	new	_	_
+3-11	95-96	.	_	_	_	_
+
+#Text=The regulation of BAs on other pathways occurs mainly through the activation of nuclear hormone receptors ( NHRs ) such as the farnesoid X receptor ( FXR ) , pregnane X receptor ( PXR ) , and vitamin D receptor ( VDR ) .
+4-1	97-100	The	abstract[10]	new[10]	_	_
+4-2	101-111	regulation	abstract[10]	new[10]	_	_
+4-3	112-114	of	abstract[10]	new[10]	_	_
+4-4	115-118	BAs	abstract[10]|abstract[11]	new[10]|new[11]	coref	7-1[39_11]
+4-5	119-121	on	abstract[10]|abstract[11]	new[10]|new[11]	_	_
+4-6	122-127	other	abstract[10]|abstract[11]|abstract[12]	new[10]|new[11]|new[12]	_	_
+4-7	128-136	pathways	abstract[10]|abstract[11]|abstract[12]	new[10]|new[11]|new[12]	_	_
+4-8	137-143	occurs	_	_	_	_
+4-9	144-150	mainly	_	_	_	_
+4-10	151-158	through	_	_	_	_
+4-11	159-162	the	event[13]	new[13]	_	_
+4-12	163-173	activation	event[13]	new[13]	_	_
+4-13	174-176	of	event[13]	new[13]	_	_
+4-14	177-184	nuclear	event[13]|abstract[15]	new[13]|giv[15]	appos	4-18[0_15]
+4-15	185-192	hormone	event[13]|substance|abstract[15]	new[13]|new|giv[15]	coref	6-12
+4-16	193-202	receptors	event[13]|abstract[15]	new[13]|giv[15]	_	_
+4-17	203-204	(	event[13]	new[13]	_	_
+4-18	205-209	NHRs	event[13]|abstract	new[13]|giv	coref	5-5[24_0]
+4-19	210-211	)	event[13]	new[13]	_	_
+4-20	212-216	such	event[13]	new[13]	_	_
+4-21	217-219	as	event[13]	new[13]	_	_
+4-22	220-223	the	event[13]|object[17]	new[13]|new[17]	_	_
+4-23	224-233	farnesoid	event[13]|object[17]	new[13]|new[17]	_	_
+4-24	234-235	X	event[13]|object[17]	new[13]|new[17]	_	_
+4-25	236-244	receptor	event[13]|object[17]	new[13]|new[17]	_	_
+4-26	245-246	(	_	_	_	_
+4-27	247-250	FXR	object	new	coref	7-14
+4-28	251-252	)	_	_	_	_
+4-29	253-254	,	_	_	_	_
+4-30	255-263	pregnane	object	new	_	_
+4-31	264-265	X	_	_	_	_
+4-32	266-274	receptor	_	_	_	_
+4-33	275-276	(	_	_	_	_
+4-34	277-280	PXR	_	_	_	_
+4-35	281-282	)	_	_	_	_
+4-36	283-284	,	_	_	_	_
+4-37	285-288	and	_	_	_	_
+4-38	289-296	vitamin	substance	new	_	_
+4-39	297-298	D	person	new	_	_
+4-40	299-307	receptor	_	_	_	_
+4-41	308-309	(	_	_	_	_
+4-42	310-313	VDR	abstract	new	_	_
+4-43	314-315	)	_	_	_	_
+4-44	316-317	.	_	_	_	_
+
+#Text=For the activation of these receptors , it is necessary that they interact with the retinoid X receptor as a heterodimer ( RXR ) .
+5-1	318-321	For	_	_	_	_
+5-2	322-325	the	event[23]	new[23]	coref	15-10[80_23]
+5-3	326-336	activation	event[23]	new[23]	_	_
+5-4	337-339	of	event[23]	new[23]	_	_
+5-5	340-345	these	event[23]|substance[24]	new[23]|giv[24]	ana	5-12[0_24]
+5-6	346-355	receptors	event[23]|substance[24]	new[23]|giv[24]	_	_
+5-7	356-357	,	_	_	_	_
+5-8	358-360	it	abstract	new	cata	5-8[0_27]
+5-9	361-363	is	_	_	_	_
+5-10	364-373	necessary	_	_	_	_
+5-11	374-378	that	abstract[27]	new[27]	_	_
+5-12	379-383	they	substance|abstract[27]	giv|new[27]	ana	6-3
+5-13	384-392	interact	abstract[27]	new[27]	_	_
+5-14	393-397	with	_	_	_	_
+5-15	398-401	the	object[28]	new[28]	_	_
+5-16	402-410	retinoid	object[28]	new[28]	_	_
+5-17	411-412	X	object[28]	new[28]	_	_
+5-18	413-421	receptor	object[28]|substance	new[28]|new	coref	16-29[92_0]
+5-19	422-424	as	_	_	_	_
+5-20	425-426	a	_	_	_	_
+5-21	427-438	heterodimer	_	_	_	_
+5-22	439-440	(	_	_	_	_
+5-23	441-444	RXR	abstract	new	_	_
+5-24	445-446	)	_	_	_	_
+5-25	447-448	.	_	_	_	_
+
+#Text=Afterwards , they act on various regulatory regions by binding to hormone response elements causing several genes to be up or downregulated in their transcription .
+6-1	449-459	Afterwards	_	_	_	_
+6-2	460-461	,	_	_	_	_
+6-3	462-466	they	abstract	giv	_	_
+6-4	467-470	act	_	_	_	_
+6-5	471-473	on	_	_	_	_
+6-6	474-481	various	place[32]	new[32]	_	_
+6-7	482-492	regulatory	place[32]	new[32]	_	_
+6-8	493-500	regions	place[32]	new[32]	_	_
+6-9	501-503	by	_	_	_	_
+6-10	504-511	binding	_	_	_	_
+6-11	512-514	to	_	_	_	_
+6-12	515-522	hormone	substance|abstract[35]	giv|new[35]	_	_
+6-13	523-531	response	abstract|abstract[35]	new|new[35]	_	_
+6-14	532-540	elements	abstract[35]	new[35]	_	_
+6-15	541-548	causing	_	_	_	_
+6-16	549-556	several	abstract[36]	new[36]	ana	6-24[0_36]
+6-17	557-562	genes	abstract[36]	new[36]	_	_
+6-18	563-565	to	_	_	_	_
+6-19	566-568	be	_	_	_	_
+6-20	569-571	up	_	_	_	_
+6-21	572-574	or	_	_	_	_
+6-22	575-588	downregulated	_	_	_	_
+6-23	589-591	in	_	_	_	_
+6-24	592-597	their	abstract|abstract[38]	giv|new[38]	_	_
+6-25	598-611	transcription	abstract[38]	new[38]	_	_
+6-26	612-613	.	_	_	_	_
+
+#Text=Most BAs and the secondary BA , and LCA , are binding to FXR and PXR respectively .
+7-1	614-618	Most	abstract[39]	giv[39]	coref	14-8[0_39]
+7-2	619-622	BAs	abstract[39]	giv[39]	_	_
+7-3	623-626	and	_	_	_	_
+7-4	627-630	the	person[40]	giv[40]	coref	10-7[0_40]
+7-5	631-640	secondary	person[40]	giv[40]	_	_
+7-6	641-643	BA	person[40]	giv[40]	_	_
+7-7	644-645	,	_	_	_	_
+7-8	646-649	and	_	_	_	_
+7-9	650-653	LCA	substance	new	coref	12-14
+7-10	654-655	,	_	_	_	_
+7-11	656-659	are	_	_	_	_
+7-12	660-667	binding	_	_	_	_
+7-13	668-670	to	_	_	_	_
+7-14	671-674	FXR	abstract	giv	coref	9-1
+7-15	675-678	and	_	_	_	_
+7-16	679-682	PXR	abstract	new	_	_
+7-17	683-695	respectively	_	_	_	_
+7-18	696-697	.	_	_	_	_
+
+#Text=2.1 .
+8-1	698-701	2.1	abstract	new	_	_
+8-2	702-703	.	_	_	_	_
+
+#Text=FXR
+9-1	704-707	FXR	abstract	giv	coref	10-1
+
+#Text=FXR plays an important role in BA , glucose , and lipid metabolism .
+10-1	708-711	FXR	abstract	giv	coref	13-11
+10-2	712-717	plays	_	_	_	_
+10-3	718-720	an	abstract[47]	new[47]	coref	25-10[142_47]
+10-4	721-730	important	abstract[47]	new[47]	_	_
+10-5	731-735	role	abstract[47]	new[47]	_	_
+10-6	736-738	in	abstract[47]	new[47]	_	_
+10-7	739-741	BA	abstract[47]|person	new[47]|giv	coref	16-5[81_0]
+10-8	742-743	,	abstract[47]	new[47]	_	_
+10-9	744-751	glucose	abstract[47]|substance	new[47]|new	coref	19-19
+10-10	752-753	,	abstract[47]	new[47]	_	_
+10-11	754-757	and	abstract[47]	new[47]	_	_
+10-12	758-763	lipid	abstract[47]|object|abstract[51]	new[47]|new|new[51]	ana|coref|ana|coref	11-1[0_51]|20-13|11-1[0_51]|20-13
+10-13	764-774	metabolism	abstract[47]|abstract[51]	new[47]|new[51]	_	_
+10-14	775-776	.	_	_	_	_
+
+#Text=It is most highly expressed in the liver , ileum , kidneys , and adrenal glands .
+11-1	777-779	It	abstract	giv	coref	19-18[105_0]
+11-2	780-782	is	_	_	_	_
+11-3	783-787	most	_	_	_	_
+11-4	788-794	highly	_	_	_	_
+11-5	795-804	expressed	_	_	_	_
+11-6	805-807	in	_	_	_	_
+11-7	808-811	the	object[53]	new[53]	coref	15-2[76_53]
+11-8	812-817	liver	object[53]	new[53]	_	_
+11-9	818-819	,	_	_	_	_
+11-10	820-825	ileum	place	new	coref	16-7[82_0]
+11-11	826-827	,	_	_	_	_
+11-12	828-835	kidneys	place	new	_	_
+11-13	836-837	,	_	_	_	_
+11-14	838-841	and	_	_	_	_
+11-15	842-849	adrenal	abstract|object[57]	new|new[57]	_	_
+11-16	850-856	glands	object[57]	new[57]	_	_
+11-17	857-858	.	_	_	_	_
+
+#Text=The strongest activator is CDCA , followed by DCA , CA , and LCA .
+12-1	859-862	The	object[58]	new[58]	coref	12-5[0_58]
+12-2	863-872	strongest	object[58]	new[58]	_	_
+12-3	873-882	activator	object[58]	new[58]	_	_
+12-4	883-885	is	_	_	_	_
+12-5	886-890	CDCA	object	giv	coref	32-6[178_0]
+12-6	891-892	,	_	_	_	_
+12-7	893-901	followed	_	_	_	_
+12-8	902-904	by	_	_	_	_
+12-9	905-908	DCA	abstract	new	_	_
+12-10	909-910	,	_	_	_	_
+12-11	911-913	CA	abstract	new	_	_
+12-12	914-915	,	_	_	_	_
+12-13	916-919	and	_	_	_	_
+12-14	920-923	LCA	abstract	giv	coref	13-5
+12-15	924-925	.	_	_	_	_
+
+#Text=Despite the fact that LCA is a weak activator of FXR , it is a very strong downregulator of its function and thus could be termed a partial agonist .
+13-1	926-933	Despite	_	_	_	_
+13-2	934-937	the	abstract[63]	new[63]	_	_
+13-3	938-942	fact	abstract[63]	new[63]	_	_
+13-4	943-947	that	abstract[63]	new[63]	_	_
+13-5	948-951	LCA	abstract[63]|abstract	new[63]|giv	coref	13-7[65_0]
+13-6	952-954	is	abstract[63]	new[63]	_	_
+13-7	955-956	a	abstract[63]|abstract[65]	new[63]|giv[65]	coref	32-1[0_65]
+13-8	957-961	weak	abstract[63]|abstract[65]	new[63]|giv[65]	_	_
+13-9	962-971	activator	abstract[63]|abstract[65]	new[63]|giv[65]	_	_
+13-10	972-974	of	abstract[63]|abstract[65]	new[63]|giv[65]	_	_
+13-11	975-978	FXR	abstract[63]|abstract[65]|abstract	new[63]|giv[65]|giv	ana	13-13
+13-12	979-980	,	_	_	_	_
+13-13	981-983	it	abstract	giv	coref	13-15[68_0]
+13-14	984-986	is	_	_	_	_
+13-15	987-988	a	abstract[68]	giv[68]	coref	14-15[0_68]
+13-16	989-993	very	abstract[68]	giv[68]	_	_
+13-17	994-1000	strong	abstract[68]	giv[68]	_	_
+13-18	1001-1014	downregulator	abstract[68]	giv[68]	_	_
+13-19	1015-1017	of	abstract[68]	giv[68]	_	_
+13-20	1018-1021	its	abstract[68]|abstract[69]	giv[68]|new[69]	coref	14-11[74_69]
+13-21	1022-1030	function	abstract[68]|abstract[69]	giv[68]|new[69]	_	_
+13-22	1031-1034	and	_	_	_	_
+13-23	1035-1039	thus	_	_	_	_
+13-24	1040-1045	could	_	_	_	_
+13-25	1046-1048	be	_	_	_	_
+13-26	1049-1055	termed	_	_	_	_
+13-27	1056-1057	a	abstract[70]	new[70]	_	_
+13-28	1058-1065	partial	abstract[70]	new[70]	_	_
+13-29	1066-1073	agonist	abstract[70]	new[70]	_	_
+13-30	1074-1075	.	_	_	_	_
+
+#Text=Controlling the synthesis and enterohepatic circulation of BAs , represents the major function of FXR .
+14-1	1076-1087	Controlling	_	_	_	_
+14-2	1088-1091	the	abstract[71]	new[71]	coref	19-24[107_71]
+14-3	1092-1101	synthesis	abstract[71]	new[71]	_	_
+14-4	1102-1105	and	_	_	_	_
+14-5	1106-1119	enterohepatic	abstract[72]	new[72]	_	_
+14-6	1120-1131	circulation	abstract[72]	new[72]	_	_
+14-7	1132-1134	of	abstract[72]	new[72]	_	_
+14-8	1135-1138	BAs	abstract[72]|abstract	new[72]|giv	coref	26-6
+14-9	1139-1140	,	_	_	_	_
+14-10	1141-1151	represents	_	_	_	_
+14-11	1152-1155	the	abstract[74]	giv[74]	_	_
+14-12	1156-1161	major	abstract[74]	giv[74]	_	_
+14-13	1162-1170	function	abstract[74]	giv[74]	_	_
+14-14	1171-1173	of	abstract[74]	giv[74]	_	_
+14-15	1174-1177	FXR	abstract[74]|abstract	giv[74]|giv	coref	15-10
+14-16	1178-1179	.	_	_	_	_
+
+#Text=In the liver , bile flow is prompted through FXR activation .
+15-1	1180-1182	In	_	_	_	_
+15-2	1183-1186	the	object[76]	giv[76]	coref	21-7[0_76]
+15-3	1187-1192	liver	object[76]	giv[76]	_	_
+15-4	1193-1194	,	_	_	_	_
+15-5	1195-1199	bile	object|abstract[78]	giv|new[78]	_	_
+15-6	1200-1204	flow	abstract[78]	new[78]	_	_
+15-7	1205-1207	is	_	_	_	_
+15-8	1208-1216	prompted	_	_	_	_
+15-9	1217-1224	through	_	_	_	_
+15-10	1225-1228	FXR	object|event[80]	giv|giv[80]	coref|coref	24-7[140_0]|24-7[140_0]
+15-11	1229-1239	activation	event[80]	giv[80]	_	_
+15-12	1240-1241	.	_	_	_	_
+
+#Text=After being activated through BA in the ileum , the expression of fibroblast growth factor 15/19 ( FGF15/19 ) increases , leading to an activation of fibroblast growth factor receptor 4 ( FGFR4 ) in hepatocytes (
+16-1	1242-1247	After	_	_	_	_
+16-2	1248-1253	being	_	_	_	_
+16-3	1254-1263	activated	_	_	_	_
+16-4	1264-1271	through	_	_	_	_
+16-5	1272-1274	BA	person[81]	giv[81]	coref	19-14[0_81]
+16-6	1275-1277	in	person[81]	giv[81]	_	_
+16-7	1278-1281	the	person[81]|place[82]	giv[81]|giv[82]	coref	33-15[0_82]
+16-8	1282-1287	ileum	person[81]|place[82]	giv[81]|giv[82]	_	_
+16-9	1288-1289	,	_	_	_	_
+16-10	1290-1293	the	abstract[83]	new[83]	_	_
+16-11	1294-1304	expression	abstract[83]	new[83]	_	_
+16-12	1305-1307	of	abstract[83]	new[83]	_	_
+16-13	1308-1318	fibroblast	abstract[83]|event|abstract[86]	new[83]|new|new[86]	coref|coref|coref|coref	16-27|16-29[0_86]|16-27|16-29[0_86]
+16-14	1319-1325	growth	abstract[83]|abstract|abstract[86]	new[83]|new|new[86]	coref	16-27[90_0]
+16-15	1326-1332	factor	abstract[83]|abstract[86]	new[83]|new[86]	_	_
+16-16	1333-1338	15/19	abstract[83]|abstract[86]	new[83]|new[86]	_	_
+16-17	1339-1340	(	_	_	_	_
+16-18	1341-1349	FGF15/19	time	new	coref	19-7
+16-19	1350-1351	)	_	_	_	_
+16-20	1352-1361	increases	_	_	_	_
+16-21	1362-1363	,	_	_	_	_
+16-22	1364-1371	leading	_	_	_	_
+16-23	1372-1374	to	_	_	_	_
+16-24	1375-1377	an	event[88]	new[88]	_	_
+16-25	1378-1388	activation	event[88]	new[88]	_	_
+16-26	1389-1391	of	event[88]	new[88]	_	_
+16-27	1392-1402	fibroblast	event[88]|event|abstract[90]	new[88]|giv|giv[90]	_	_
+16-28	1403-1409	growth	event[88]|abstract[90]	new[88]|giv[90]	_	_
+16-29	1410-1416	factor	abstract|substance[92]|time[93]	giv|giv[92]|new[93]	coref|coref|coref|coref|coref|coref	28-8[162_92]|35-19|28-8[162_92]|35-19|28-8[162_92]|35-19
+16-30	1417-1425	receptor	substance[92]|time[93]	giv[92]|new[93]	_	_
+16-31	1426-1427	4	time[93]	new[93]	_	_
+16-32	1428-1429	(	_	_	_	_
+16-33	1430-1435	FGFR4	abstract	new	coref	23-4[132_0]
+16-34	1436-1437	)	_	_	_	_
+16-35	1438-1440	in	_	_	_	_
+16-36	1441-1452	hepatocytes	place	new	coref	33-23[187_0]
+16-37	1453-1454	(	_	_	_	_
+
+#Text=Figure 1
+17-1	1455-1461	Figure	object[96]	new[96]	ana	19-1[0_96]
+17-2	1462-1463	1	object[96]	new[96]	_	_
+
+#Text=) .
+18-1	1464-1465	)	_	_	_	_
+18-2	1466-1467	.	_	_	_	_
+
+#Text=This is of great importance as FGF15/19 is an ileum-derived enterokine that governs BA homeostasis , regulates hepatic glucose metabolism , and stimulates protein synthesis .
+19-1	1468-1472	This	object	giv	_	_
+19-2	1473-1475	is	_	_	_	_
+19-3	1476-1478	of	_	_	_	_
+19-4	1479-1484	great	abstract[98]	new[98]	_	_
+19-5	1485-1495	importance	abstract[98]	new[98]	_	_
+19-6	1496-1498	as	_	_	_	_
+19-7	1499-1507	FGF15/19	abstract	giv	coref	19-9[100_0]
+19-8	1508-1510	is	_	_	_	_
+19-9	1511-1513	an	abstract[100]	giv[100]	_	_
+19-10	1514-1527	ileum-derived	abstract[100]	giv[100]	_	_
+19-11	1528-1538	enterokine	abstract[100]	giv[100]	_	_
+19-12	1539-1543	that	_	_	_	_
+19-13	1544-1551	governs	_	_	_	_
+19-14	1552-1554	BA	person|abstract[102]	giv|new[102]	coref|coref|coref|coref	27-3[155_102]|34-5|27-3[155_102]|34-5
+19-15	1555-1566	homeostasis	abstract[102]	new[102]	_	_
+19-16	1567-1568	,	_	_	_	_
+19-17	1569-1578	regulates	_	_	_	_
+19-18	1579-1586	hepatic	object|abstract[105]	new|giv[105]	coref|coref|coref|coref	22-9|28-15[166_105]|22-9|28-15[166_105]
+19-19	1587-1594	glucose	substance|abstract[105]	giv|giv[105]	coref	34-7
+19-20	1595-1605	metabolism	abstract[105]	giv[105]	_	_
+19-21	1606-1607	,	_	_	_	_
+19-22	1608-1611	and	_	_	_	_
+19-23	1612-1622	stimulates	_	_	_	_
+19-24	1623-1630	protein	substance|abstract[107]	new|giv[107]	coref|coref	26-9[150_107]|26-9[150_107]
+19-25	1631-1640	synthesis	abstract[107]	giv[107]	_	_
+19-26	1641-1642	.	_	_	_	_
+
+#Text=If administered pharmacologically or expressed transgenically in mice , FGF19 increases hepatic lipid oxidation , reduces lipogenesis and protects from hepatosteatosis .
+20-1	1643-1645	If	_	_	_	_
+20-2	1646-1658	administered	_	_	_	_
+20-3	1659-1676	pharmacologically	_	_	_	_
+20-4	1677-1679	or	_	_	_	_
+20-5	1680-1689	expressed	_	_	_	_
+20-6	1690-1704	transgenically	_	_	_	_
+20-7	1705-1707	in	_	_	_	_
+20-8	1708-1712	mice	animal	new	coref	22-26
+20-9	1713-1714	,	_	_	_	_
+20-10	1715-1720	FGF19	abstract	new	_	_
+20-11	1721-1730	increases	_	_	_	_
+20-12	1731-1738	hepatic	abstract[111]	new[111]	_	_
+20-13	1739-1744	lipid	person|abstract[111]	giv|new[111]	coref	27-5
+20-14	1745-1754	oxidation	abstract[111]	new[111]	_	_
+20-15	1755-1756	,	_	_	_	_
+20-16	1757-1764	reduces	_	_	_	_
+20-17	1765-1776	lipogenesis	substance	new	_	_
+20-18	1777-1780	and	_	_	_	_
+20-19	1781-1789	protects	_	_	_	_
+20-20	1790-1794	from	_	_	_	_
+20-21	1795-1810	hepatosteatosis	abstract	new	_	_
+20-22	1811-1812	.	_	_	_	_
+
+#Text=A lack of it causes impaired liver regeneration .
+21-1	1813-1814	A	abstract[114]	new[114]	_	_
+21-2	1815-1819	lack	abstract[114]	new[114]	_	_
+21-3	1820-1822	of	abstract[114]	new[114]	_	_
+21-4	1823-1825	it	abstract[114]	new[114]	_	_
+21-5	1826-1832	causes	_	_	_	_
+21-6	1833-1841	impaired	abstract[116]	new[116]	_	_
+21-7	1842-1847	liver	object|abstract[116]	giv|new[116]	coref	22-23[127_0]
+21-8	1848-1860	regeneration	abstract[116]	new[116]	_	_
+21-9	1861-1862	.	_	_	_	_
+
+#Text=A lack of FGF 15 results in increased hepatic steatosis and in the development of endoplasmic reticulum ( ER ) stress in the liver of mice fed a high fat diet .
+22-1	1863-1864	A	abstract[117]	new[117]	_	_
+22-2	1865-1869	lack	abstract[117]	new[117]	_	_
+22-3	1870-1872	of	abstract[117]	new[117]	_	_
+22-4	1873-1876	FGF	abstract[117]|event|abstract[119]	new[117]|new|new[119]	_	_
+22-5	1877-1879	15	abstract[117]|abstract[119]	new[117]|new[119]	_	_
+22-6	1880-1887	results	abstract[117]|abstract[119]	new[117]|new[119]	_	_
+22-7	1888-1890	in	abstract[117]|abstract[119]	new[117]|new[119]	_	_
+22-8	1891-1900	increased	abstract[117]|abstract[119]|abstract[121]	new[117]|new[119]|new[121]	coref	36-24[230_121]
+22-9	1901-1908	hepatic	abstract[117]|abstract[119]|abstract|abstract[121]	new[117]|new[119]|giv|new[121]	coref	27-4
+22-10	1909-1918	steatosis	abstract[117]|abstract[119]|abstract[121]	new[117]|new[119]|new[121]	_	_
+22-11	1919-1922	and	_	_	_	_
+22-12	1923-1925	in	_	_	_	_
+22-13	1926-1929	the	abstract[122]	new[122]	_	_
+22-14	1930-1941	development	abstract[122]	new[122]	_	_
+22-15	1942-1944	of	abstract[122]	new[122]	_	_
+22-16	1945-1956	endoplasmic	abstract[122]|abstract|object[124]	new[122]|new|new[124]	_	_
+22-17	1957-1966	reticulum	abstract[122]|object[124]	new[122]|new[124]	_	_
+22-18	1967-1968	(	_	_	_	_
+22-19	1969-1971	ER	person	new	_	_
+22-20	1972-1973	)	_	_	_	_
+22-21	1974-1980	stress	abstract[126]	new[126]	_	_
+22-22	1981-1983	in	abstract[126]	new[126]	_	_
+22-23	1984-1987	the	abstract[126]|object[127]	new[126]|giv[127]	coref	23-17[137_127]
+22-24	1988-1993	liver	abstract[126]|object[127]	new[126]|giv[127]	_	_
+22-25	1994-1996	of	abstract[126]|object[127]	new[126]|giv[127]	_	_
+22-26	1997-2001	mice	abstract[126]|object[127]|animal	new[126]|giv[127]|giv	coref	36-5[224_0]
+22-27	2002-2005	fed	_	_	_	_
+22-28	2006-2007	a	substance[130]	new[130]	_	_
+22-29	2008-2012	high	substance[130]	new[130]	_	_
+22-30	2013-2016	fat	substance|substance[130]	new|new[130]	_	_
+22-31	2017-2021	diet	substance[130]	new[130]	_	_
+22-32	2022-2023	.	_	_	_	_
+
+#Text=The activation of FGFR4 together with the activation of small heterodimer partner ( SHP ) in the liver , inhibits CYP7A1 .
+23-1	2024-2027	The	abstract[131]	new[131]	_	_
+23-2	2028-2038	activation	abstract[131]	new[131]	_	_
+23-3	2039-2041	of	abstract[131]	new[131]	_	_
+23-4	2042-2047	FGFR4	abstract[131]|abstract[132]	new[131]|giv[132]	_	_
+23-5	2048-2056	together	abstract[131]|abstract[132]	new[131]|giv[132]	_	_
+23-6	2057-2061	with	abstract[131]	new[131]	_	_
+23-7	2062-2065	the	abstract[131]|abstract[133]	new[131]|new[133]	_	_
+23-8	2066-2076	activation	abstract[131]|abstract[133]	new[131]|new[133]	_	_
+23-9	2077-2079	of	abstract[131]|abstract[133]	new[131]|new[133]	_	_
+23-10	2080-2085	small	abstract[131]|abstract[133]|person[135]	new[131]|new[133]|new[135]	appos	23-14[0_135]
+23-11	2086-2097	heterodimer	abstract[131]|abstract[133]|object|person[135]	new[131]|new[133]|new|new[135]	_	_
+23-12	2098-2105	partner	abstract[131]|abstract[133]|person[135]	new[131]|new[133]|new[135]	_	_
+23-13	2106-2107	(	_	_	_	_
+23-14	2108-2111	SHP	person	giv	_	_
+23-15	2112-2113	)	_	_	_	_
+23-16	2114-2116	in	_	_	_	_
+23-17	2117-2120	the	object[137]	giv[137]	coref	33-19[186_137]
+23-18	2121-2126	liver	object[137]	giv[137]	_	_
+23-19	2127-2128	,	_	_	_	_
+23-20	2129-2137	inhibits	_	_	_	_
+23-21	2138-2144	CYP7A1	abstract	new	coref	24-5
+23-22	2145-2146	.	_	_	_	_
+
+#Text=In order to downregulate CYP7A1 , intestinal-specific FXR is required .
+24-1	2147-2149	In	_	_	_	_
+24-2	2150-2155	order	_	_	_	_
+24-3	2156-2158	to	_	_	_	_
+24-4	2159-2171	downregulate	_	_	_	_
+24-5	2172-2178	CYP7A1	abstract	giv	_	_
+24-6	2179-2180	,	_	_	_	_
+24-7	2181-2200	intestinal-specific	object[140]	giv[140]	coref	25-6[141_140]
+24-8	2201-2204	FXR	object[140]	giv[140]	_	_
+24-9	2205-2207	is	_	_	_	_
+24-10	2208-2216	required	_	_	_	_
+24-11	2217-2218	.	_	_	_	_
+
+#Text=On the other hand , the liver-specific FXR plays an important role in the repression of the expression of CYP8B1 .
+25-1	2219-2221	On	_	_	_	_
+25-2	2222-2225	the	_	_	_	_
+25-3	2226-2231	other	_	_	_	_
+25-4	2232-2236	hand	_	_	_	_
+25-5	2237-2238	,	_	_	_	_
+25-6	2239-2242	the	object[141]	giv[141]	coref	26-14[0_141]
+25-7	2243-2257	liver-specific	object[141]	giv[141]	_	_
+25-8	2258-2261	FXR	object[141]	giv[141]	_	_
+25-9	2262-2267	plays	_	_	_	_
+25-10	2268-2270	an	abstract[142]	giv[142]	coref	34-18[198_142]
+25-11	2271-2280	important	abstract[142]	giv[142]	_	_
+25-12	2281-2285	role	abstract[142]	giv[142]	_	_
+25-13	2286-2288	in	abstract[142]	giv[142]	_	_
+25-14	2289-2292	the	abstract[142]|event[143]	giv[142]|new[143]	_	_
+25-15	2293-2303	repression	abstract[142]|event[143]	giv[142]|new[143]	_	_
+25-16	2304-2306	of	abstract[142]|event[143]	giv[142]|new[143]	_	_
+25-17	2307-2310	the	abstract[142]|event[143]|abstract[144]	giv[142]|new[143]|new[144]	_	_
+25-18	2311-2321	expression	abstract[142]|event[143]|abstract[144]	giv[142]|new[143]|new[144]	_	_
+25-19	2322-2324	of	abstract[142]|event[143]|abstract[144]	giv[142]|new[143]|new[144]	_	_
+25-20	2325-2331	CYP8B1	abstract[142]|event[143]|abstract[144]|abstract	giv[142]|new[143]|new[144]|new	_	_
+25-21	2332-2333	.	_	_	_	_
+
+#Text=One of the mechanisms for BAs to suppress their own synthesis is through FXR .
+26-1	2334-2337	One	object[146]	new[146]	_	_
+26-2	2338-2340	of	object[146]	new[146]	_	_
+26-3	2341-2344	the	object[146]|abstract[147]	new[146]|new[147]	ana	26-9[0_147]
+26-4	2345-2355	mechanisms	object[146]|abstract[147]	new[146]|new[147]	_	_
+26-5	2356-2359	for	object[146]|abstract[147]	new[146]|new[147]	_	_
+26-6	2360-2363	BAs	object[146]|abstract[147]|substance	new[146]|new[147]|giv	coref	31-9
+26-7	2364-2366	to	_	_	_	_
+26-8	2367-2375	suppress	_	_	_	_
+26-9	2376-2381	their	abstract|abstract[150]	giv|giv[150]	_	_
+26-10	2382-2385	own	abstract[150]	giv[150]	_	_
+26-11	2386-2395	synthesis	abstract[150]	giv[150]	_	_
+26-12	2396-2398	is	_	_	_	_
+26-13	2399-2406	through	_	_	_	_
+26-14	2407-2410	FXR	abstract	giv	coref	27-1
+26-15	2411-2412	.	_	_	_	_
+
+#Text=FXR influences the hepatic lipid homeostasis via SHP , which reduces the expression of SREBP1 .
+27-1	2413-2416	FXR	abstract	giv	_	_
+27-2	2417-2427	influences	_	_	_	_
+27-3	2428-2431	the	abstract[155]	giv[155]	_	_
+27-4	2432-2439	hepatic	abstract|abstract[155]	giv|giv[155]	coref	36-24
+27-5	2440-2445	lipid	person|abstract[155]	giv|giv[155]	coref	34-10
+27-6	2446-2457	homeostasis	abstract[155]	giv[155]	_	_
+27-7	2458-2461	via	abstract[155]	giv[155]	_	_
+27-8	2462-2465	SHP	abstract[155]|abstract	giv[155]|new	_	_
+27-9	2466-2467	,	_	_	_	_
+27-10	2468-2473	which	_	_	_	_
+27-11	2474-2481	reduces	_	_	_	_
+27-12	2482-2485	the	abstract[157]	new[157]	_	_
+27-13	2486-2496	expression	abstract[157]	new[157]	_	_
+27-14	2497-2499	of	abstract[157]	new[157]	_	_
+27-15	2500-2506	SREBP1	abstract[157]|abstract	new[157]|new	ana	28-1
+27-16	2507-2508	.	_	_	_	_
+
+#Text=It also regulates the expression of peroxisome proliferator-activated receptor PPAR-α , a regulator of triglyceride metabolism , that can induce free fatty acid β-oxidation .
+28-1	2509-2511	It	abstract	giv	_	_
+28-2	2512-2516	also	_	_	_	_
+28-3	2517-2526	regulates	_	_	_	_
+28-4	2527-2530	the	abstract[160]	new[160]	appos	28-8[163_160]
+28-5	2531-2541	expression	abstract[160]	new[160]	_	_
+28-6	2542-2544	of	abstract[160]	new[160]	_	_
+28-7	2545-2555	peroxisome	abstract[160]|abstract	new[160]|new	_	_
+28-8	2556-2578	proliferator-activated	substance[162]|substance[163]	giv[162]|giv[163]	appos|coref|appos|coref	28-12[164_163]|30-3[171_162]|28-12[164_163]|30-3[171_162]
+28-9	2579-2587	receptor	substance[162]|substance[163]	giv[162]|giv[163]	_	_
+28-10	2588-2594	PPAR-α	substance[163]	giv[163]	_	_
+28-11	2595-2596	,	_	_	_	_
+28-12	2597-2598	a	substance[164]	giv[164]	coref	34-25[201_164]
+28-13	2599-2608	regulator	substance[164]	giv[164]	_	_
+28-14	2609-2611	of	substance[164]	giv[164]	_	_
+28-15	2612-2624	triglyceride	substance[164]|object|abstract[166]	giv[164]|new|giv[166]	coref|coref	34-10[196_166]|34-10[196_166]
+28-16	2625-2635	metabolism	substance[164]|abstract[166]	giv[164]|giv[166]	_	_
+28-17	2636-2637	,	_	_	_	_
+28-18	2638-2642	that	_	_	_	_
+28-19	2643-2646	can	_	_	_	_
+28-20	2647-2653	induce	_	_	_	_
+28-21	2654-2658	free	substance[168]	new[168]	_	_
+28-22	2659-2664	fatty	substance[168]	new[168]	_	_
+28-23	2665-2669	acid	substance|substance[168]	new|new[168]	_	_
+28-24	2670-2681	β-oxidation	substance[168]	new[168]	_	_
+28-25	2682-2683	.	_	_	_	_
+
+#Text=2.2 .
+29-1	2684-2687	2.2	abstract	new	_	_
+29-2	2688-2689	.	_	_	_	_
+
+#Text=Takeda G-Protein-Coupled Receptor 5 ( TGR5 )
+30-1	2690-2696	Takeda	person[170]	new[170]	_	_
+30-2	2697-2714	G-Protein-Coupled	person[170]	new[170]	_	_
+30-3	2715-2723	Receptor	substance[171]	giv[171]	_	_
+30-4	2724-2725	5	substance[171]	giv[171]	_	_
+30-5	2726-2727	(	_	_	_	_
+30-6	2728-2732	TGR5	abstract	new	coref	31-1
+30-7	2733-2734	)	_	_	_	_
+
+#Text=TGR5 is a G-protein coupled membrane receptor that BAs activate .
+31-1	2735-2739	TGR5	abstract	giv	coref	31-3[175_0]
+31-2	2740-2742	is	_	_	_	_
+31-3	2743-2744	a	substance[175]	giv[175]	coref	32-10[179_175]
+31-4	2745-2754	G-protein	substance[175]	giv[175]	_	_
+31-5	2755-2762	coupled	substance[175]	giv[175]	_	_
+31-6	2763-2771	membrane	object|substance[175]	new|giv[175]	_	_
+31-7	2772-2780	receptor	substance[175]	giv[175]	_	_
+31-8	2781-2785	that	_	_	_	_
+31-9	2786-2789	BAs	abstract	giv	coref	32-12[180_0]
+31-10	2790-2798	activate	_	_	_	_
+31-11	2799-2800	.	_	_	_	_
+
+#Text=LCA is considered to be the strongest activator of TGR5 among the main primary and secondary BAs .
+32-1	2801-2804	LCA	place	giv	_	_
+32-2	2805-2807	is	_	_	_	_
+32-3	2808-2818	considered	_	_	_	_
+32-4	2819-2821	to	_	_	_	_
+32-5	2822-2824	be	_	_	_	_
+32-6	2825-2828	the	object[178]	giv[178]	_	_
+32-7	2829-2838	strongest	object[178]	giv[178]	_	_
+32-8	2839-2848	activator	object[178]	giv[178]	_	_
+32-9	2849-2851	of	object[178]	giv[178]	_	_
+32-10	2852-2856	TGR5	object[178]|abstract[179]	giv[178]|giv[179]	coref	35-1[0_179]
+32-11	2857-2862	among	object[178]|abstract[179]	giv[178]|giv[179]	_	_
+32-12	2863-2866	the	object[178]|abstract[179]|abstract[180]	giv[178]|giv[179]|giv[180]	ana	33-1[0_180]
+32-13	2867-2871	main	object[178]|abstract[179]|abstract[180]	giv[178]|giv[179]|giv[180]	_	_
+32-14	2872-2879	primary	object[178]|abstract[179]|abstract[180]	giv[178]|giv[179]|giv[180]	_	_
+32-15	2880-2883	and	object[178]|abstract[179]|abstract[180]	giv[178]|giv[179]|giv[180]	_	_
+32-16	2884-2893	secondary	object[178]|abstract[179]|abstract[180]	giv[178]|giv[179]|giv[180]	_	_
+32-17	2894-2897	BAs	object[178]|abstract[179]|abstract[180]	giv[178]|giv[179]|giv[180]	_	_
+32-18	2898-2899	.	_	_	_	_
+
+#Text=It is widely expressed in the body , for example in the gallbladder , ileum , colon , liver ( not in hepatocytes though ) , brown adipose tissue ( BAT ) , nervous system , and muscle .
+33-1	2900-2902	It	abstract	giv	_	_
+33-2	2903-2905	is	_	_	_	_
+33-3	2906-2912	widely	_	_	_	_
+33-4	2913-2922	expressed	_	_	_	_
+33-5	2923-2925	in	_	_	_	_
+33-6	2926-2929	the	place[182]	new[182]	_	_
+33-7	2930-2934	body	place[182]	new[182]	_	_
+33-8	2935-2936	,	_	_	_	_
+33-9	2937-2940	for	_	_	_	_
+33-10	2941-2948	example	_	_	_	_
+33-11	2949-2951	in	_	_	_	_
+33-12	2952-2955	the	place[183]	new[183]	_	_
+33-13	2956-2967	gallbladder	place[183]	new[183]	_	_
+33-14	2968-2969	,	_	_	_	_
+33-15	2970-2975	ileum	place	giv	_	_
+33-16	2976-2977	,	_	_	_	_
+33-17	2978-2983	colon	place	new	_	_
+33-18	2984-2985	,	_	_	_	_
+33-19	2986-2991	liver	object[186]	giv[186]	_	_
+33-20	2992-2993	(	object[186]	giv[186]	_	_
+33-21	2994-2997	not	object[186]	giv[186]	_	_
+33-22	2998-3000	in	object[186]	giv[186]	_	_
+33-23	3001-3012	hepatocytes	object[186]|place[187]	giv[186]|giv[187]	_	_
+33-24	3013-3019	though	object[186]|place[187]	giv[186]|giv[187]	_	_
+33-25	3020-3021	)	object[186]	giv[186]	_	_
+33-26	3022-3023	,	_	_	_	_
+33-27	3024-3029	brown	object[189]	new[189]	appos	33-31[0_189]
+33-28	3030-3037	adipose	abstract|object[189]	new|new[189]	coref	34-36
+33-29	3038-3044	tissue	object[189]	new[189]	_	_
+33-30	3045-3046	(	_	_	_	_
+33-31	3047-3050	BAT	object	giv	coref	34-25
+33-32	3051-3052	)	_	_	_	_
+33-33	3053-3054	,	_	_	_	_
+33-34	3055-3062	nervous	object[191]	new[191]	_	_
+33-35	3063-3069	system	object[191]	new[191]	_	_
+33-36	3070-3071	,	_	_	_	_
+33-37	3072-3075	and	_	_	_	_
+33-38	3076-3082	muscle	object	new	_	_
+33-39	3083-3084	.	_	_	_	_
+
+#Text=Besides being involved in BA , glucose , and lipid metabolism , interestingly , it also plays a role in increasing the induction of BAT expression in thermogenesis and energy release via browning of white adipose tissue and .
+34-1	3085-3092	Besides	_	_	_	_
+34-2	3093-3098	being	_	_	_	_
+34-3	3099-3107	involved	_	_	_	_
+34-4	3108-3110	in	_	_	_	_
+34-5	3111-3113	BA	substance	giv	coref	35-7
+34-6	3114-3115	,	_	_	_	_
+34-7	3116-3123	glucose	substance	giv	coref	36-28
+34-8	3124-3125	,	_	_	_	_
+34-9	3126-3129	and	_	_	_	_
+34-10	3130-3135	lipid	object|abstract[196]	giv|giv[196]	ana|ana	34-15[0_196]|34-15[0_196]
+34-11	3136-3146	metabolism	abstract[196]	giv[196]	_	_
+34-12	3147-3148	,	_	_	_	_
+34-13	3149-3162	interestingly	_	_	_	_
+34-14	3163-3164	,	_	_	_	_
+34-15	3165-3167	it	abstract	giv	_	_
+34-16	3168-3172	also	_	_	_	_
+34-17	3173-3178	plays	_	_	_	_
+34-18	3179-3180	a	abstract[198]	giv[198]	_	_
+34-19	3181-3185	role	abstract[198]	giv[198]	_	_
+34-20	3186-3188	in	_	_	_	_
+34-21	3189-3199	increasing	_	_	_	_
+34-22	3200-3203	the	abstract[199]	new[199]	_	_
+34-23	3204-3213	induction	abstract[199]	new[199]	_	_
+34-24	3214-3216	of	abstract[199]	new[199]	_	_
+34-25	3217-3220	BAT	abstract[199]|object|abstract[201]	new[199]|giv|giv[201]	_	_
+34-26	3221-3231	expression	abstract[199]|abstract[201]	new[199]|giv[201]	_	_
+34-27	3232-3234	in	abstract[199]|abstract[201]	new[199]|giv[201]	_	_
+34-28	3235-3248	thermogenesis	abstract[199]|abstract[201]|abstract	new[199]|giv[201]|new	_	_
+34-29	3249-3252	and	abstract[199]|abstract[201]	new[199]|giv[201]	_	_
+34-30	3253-3259	energy	abstract[199]|abstract[201]|substance|abstract[204]	new[199]|giv[201]|new|new[204]	coref|coref	36-34|36-34
+34-31	3260-3267	release	abstract[199]|abstract[201]|abstract[204]	new[199]|giv[201]|new[204]	_	_
+34-32	3268-3271	via	_	_	_	_
+34-33	3272-3280	browning	event[205]	new[205]	_	_
+34-34	3281-3283	of	event[205]	new[205]	_	_
+34-35	3284-3289	white	event[205]|object[207]	new[205]|new[207]	_	_
+34-36	3290-3297	adipose	event[205]|abstract|object[207]	new[205]|giv|new[207]	_	_
+34-37	3298-3304	tissue	event[205]|object[207]	new[205]|new[207]	_	_
+34-38	3305-3308	and	event[205]	new[205]	_	_
+34-39	3309-3310	.	_	_	_	_
+
+#Text=TGR5 knockout leads to a changed BA composition and has anti-inflammatory properties by for example by inhibiting nuclear factor kappa-light-chain-enhancer of activated B cells ( NF-κB ) or LPS-induced production of inflammatory cytokines in macrophages .
+35-1	3311-3315	TGR5	event|abstract[209]	giv|new[209]	coref|coref|coref|coref	36-5|36-6[0_209]|36-5|36-6[0_209]
+35-2	3316-3324	knockout	abstract[209]	new[209]	_	_
+35-3	3325-3330	leads	_	_	_	_
+35-4	3331-3333	to	_	_	_	_
+35-5	3334-3335	a	abstract[211]	new[211]	_	_
+35-6	3336-3343	changed	abstract[211]	new[211]	_	_
+35-7	3344-3346	BA	person|abstract[211]	giv|new[211]	_	_
+35-8	3347-3358	composition	abstract[211]	new[211]	_	_
+35-9	3359-3362	and	_	_	_	_
+35-10	3363-3366	has	_	_	_	_
+35-11	3367-3384	anti-inflammatory	abstract[212]	new[212]	_	_
+35-12	3385-3395	properties	abstract[212]	new[212]	_	_
+35-13	3396-3398	by	_	_	_	_
+35-14	3399-3402	for	_	_	_	_
+35-15	3403-3410	example	_	_	_	_
+35-16	3411-3413	by	_	_	_	_
+35-17	3414-3424	inhibiting	_	_	_	_
+35-18	3425-3432	nuclear	abstract[214]	new[214]	_	_
+35-19	3433-3439	factor	abstract|abstract[214]	giv|new[214]	_	_
+35-20	3440-3466	kappa-light-chain-enhancer	abstract[214]	new[214]	_	_
+35-21	3467-3469	of	abstract[214]	new[214]	_	_
+35-22	3470-3479	activated	abstract[214]|abstract[215]	new[214]|new[215]	appos	35-26[0_215]
+35-23	3480-3481	B	abstract[214]|abstract[215]	new[214]|new[215]	_	_
+35-24	3482-3487	cells	abstract[214]|abstract[215]	new[214]|new[215]	_	_
+35-25	3488-3489	(	_	_	_	_
+35-26	3490-3495	NF-κB	abstract	giv	_	_
+35-27	3496-3497	)	_	_	_	_
+35-28	3498-3500	or	_	_	_	_
+35-29	3501-3512	LPS-induced	object|abstract[218]	new|new[218]	_	_
+35-30	3513-3523	production	abstract[218]	new[218]	_	_
+35-31	3524-3526	of	abstract[218]	new[218]	_	_
+35-32	3527-3539	inflammatory	abstract[218]|substance[219]	new[218]|new[219]	_	_
+35-33	3540-3549	cytokines	abstract[218]|substance[219]	new[218]|new[219]	_	_
+35-34	3550-3552	in	abstract[218]|substance[219]	new[218]|new[219]	_	_
+35-35	3553-3564	macrophages	abstract[218]|substance[219]|object	new[218]|new[219]|new	_	_
+35-36	3565-3566	.	_	_	_	_
+
+#Text=In another experiment , TGR5 knockout mice received a sleeve gastrectomy and it was shown how TGR5 is important in order to decrease hepatic steatosis , improve glucose control , and increase the energy expenditure post-surgery .
+36-1	3567-3569	In	_	_	_	_
+36-2	3570-3577	another	abstract[221]	new[221]	ana	36-13[0_221]
+36-3	3578-3588	experiment	abstract[221]	new[221]	_	_
+36-4	3589-3590	,	_	_	_	_
+36-5	3591-3595	TGR5	animal|animal[224]	giv|giv[224]	coref|coref	36-17|36-17
+36-6	3596-3604	knockout	abstract|animal[224]	giv|giv[224]	_	_
+36-7	3605-3609	mice	animal[224]	giv[224]	_	_
+36-8	3610-3618	received	_	_	_	_
+36-9	3619-3620	a	object[226]	new[226]	_	_
+36-10	3621-3627	sleeve	object|object[226]	new|new[226]	_	_
+36-11	3628-3639	gastrectomy	object[226]	new[226]	_	_
+36-12	3640-3643	and	_	_	_	_
+36-13	3644-3646	it	abstract	giv	_	_
+36-14	3647-3650	was	_	_	_	_
+36-15	3651-3656	shown	_	_	_	_
+36-16	3657-3660	how	_	_	_	_
+36-17	3661-3665	TGR5	abstract	giv	_	_
+36-18	3666-3668	is	_	_	_	_
+36-19	3669-3678	important	_	_	_	_
+36-20	3679-3681	in	_	_	_	_
+36-21	3682-3687	order	_	_	_	_
+36-22	3688-3690	to	_	_	_	_
+36-23	3691-3699	decrease	_	_	_	_
+36-24	3700-3707	hepatic	abstract|abstract[230]	giv|giv[230]	_	_
+36-25	3708-3717	steatosis	abstract[230]	giv[230]	_	_
+36-26	3718-3719	,	_	_	_	_
+36-27	3720-3727	improve	_	_	_	_
+36-28	3728-3735	glucose	substance|abstract[232]	giv|new[232]	_	_
+36-29	3736-3743	control	abstract[232]	new[232]	_	_
+36-30	3744-3745	,	_	_	_	_
+36-31	3746-3749	and	_	_	_	_
+36-32	3750-3758	increase	_	_	_	_
+36-33	3759-3762	the	_	_	_	_
+36-34	3763-3769	energy	abstract	giv	_	_
+36-35	3770-3781	expenditure	abstract	new	_	_
+36-36	3782-3794	post-surgery	_	_	_	_
+36-37	3795-3796	.	_	_	_	_
