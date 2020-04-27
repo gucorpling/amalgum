@@ -227,12 +227,20 @@ class GumdropSplitter(NLPModule):
         # now, we need to construct the sentences for conllu
         conllu_sentences = []
         tokens = []
-        for line in lines.strip().split("\n"):
-            if line == '<s>' and len(tokens) > 0:
-                conllu_sentences.append(tokens2conllu(tokens))
-                tokens = []
+        in_sent = False
+        for i, line in enumerate(lines.strip().split("\n")):
+            if line == '<s>':
+                in_sent = True
+                if len(tokens) > 0:
+                    conllu_sentences.append(tokens2conllu(tokens))
+                    tokens = []
+            elif line == '</s>':
+                in_sent = False
             elif not is_sgml_tag(line):
-                tokens.append(line)
+                if not in_sent:
+                    raise Exception(f"Encountered a token '{line}' not in a sentence at line {i}")
+                else:
+                    tokens.append(line)
         if len(tokens) > 0:
             conllu_sentences.append(tokens2conllu(tokens))
 
