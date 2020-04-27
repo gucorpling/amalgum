@@ -15,6 +15,7 @@ import torch.cuda
 import torch.nn
 import copy
 import time
+from editdistance import eval as str_dist
 
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
@@ -268,7 +269,7 @@ class ShibuyaEntities:
 			                                                                                                      '')
 			
 			# find matching gold string
-			
+
 			if '[UNK]' in subtoks_string:
 				noUNKstrs = subtoks_string.split("[UNK]")
 				goldtoks = [x for x in goldtokenized_lines if all(y in filter_bert_chars(x) for y in noUNKstrs)]
@@ -282,18 +283,24 @@ class ShibuyaEntities:
 			if 'UNK' in subtoks_string:
 				print()
 			
-			if len(goldtoks) > 1:
-				for otherid in range(1, len(goldtoks)):
-					assert goldtoks[0] == goldtoks[otherid]
-			
-			goldtokenized_lines.remove(goldtoks[0])
+			#if len(goldtoks) > 1:
+			#	for otherid in range(1, len(goldtoks)):
+			#		assert goldtoks[0] == goldtoks[otherid]
+
+			if len(goldtoks) != 0:
+				goldtokenized_lines.remove(goldtoks[0])
+			# remove the most similar string instead if we couldn't find an exact goldtoks match
+			else:
+				i, _ = sorted(enumerate(goldtokenized_lines), key=lambda s: str_dist(filter_bert_chars(s[1]), subtoks_string))[0]
+				goldtoks = goldtokenized_lines[i]
+				goldtokenized_lines.pop(i)
 			goldtoks = goldtoks[0].split()
 			
 			# subtoks = re.sub(r'^\[CLS\](.*)\[SEP\]$', r'\1', in_lines[4 * multiplier + 0]).strip().split()
 			subtoks = re.sub(r'^\[CLS\](.*)\[SEP\]$', r'\1', in_lines[4 * multiplier + 0]).strip().replace('##',
 			                                                                                               '').split()
 			
-			assert len(subtoks) >= len(goldtoks)
+			#assert len(subtoks) >= len(goldtoks)
 			
 			emptygold = False
 			emptypred = False
