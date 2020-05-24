@@ -220,7 +220,9 @@ class GumdropSplitter(NLPModule):
                 rev_counter -= 1
             splitted.insert(rev_counter + 1, "</s>")
 
-        lines = fix_malformed_sentences(splitted)
+        lines = "\n".join(splitted)
+        lines = reorder(lines)
+        lines = fix_malformed_sentences(lines.split("\n"))
         lines = "\n".join(lines)
         lines = reorder(lines)
 
