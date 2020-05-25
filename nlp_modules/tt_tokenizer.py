@@ -52,7 +52,7 @@ def postprocess_text(TTSGML):
     TTSGML = TTSGML.replace(" i. e. ", " i.e. ").replace(" e. g. ", " e.g. ")
 
     # Trailing periods in section headings like "1. Introduction", usually following an XML tag
-    TTSGML = re.sub(r"(>\n[0-9]+)\n(\.\n)", r"\1\2", TTSGML)
+    TTSGML = re.sub(r"^(\n[0-9]+)\n(\.\n)", r"\1\2", TTSGML)
 
     # en dash spelled --
     TTSGML = re.sub(r"([^\n])--", r"\1\n--", TTSGML)
@@ -69,7 +69,7 @@ def postprocess_text(TTSGML):
     TTSGML = re.sub(r"(\n[Ii]t)(s\n(?:" + VVN + ART + r")\n)", r"\1\n\2", TTSGML)
 
     # Fix apostrophes
-    TTSGML = re.sub(r">\n'\ns\n", r">\n's\n", TTSGML)
+    TTSGML = re.sub(r"^\n'\ns\n", r"\n's\n", TTSGML)
 
     # Fix parentheses in tokens like parent(s)
     TTSGML = re.sub(r"\n(\w+)\(s\n\)\n", r"\n\1(s)\n", TTSGML)
