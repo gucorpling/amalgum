@@ -1,0 +1,977 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=2. Model and Method
+1-1	0-2	2.	_	_	_	_
+1-2	3-8	Model	person	new	_	_
+1-3	9-12	and	_	_	_	_
+1-4	13-19	Method	abstract	new	_	_
+
+#Text=2.1 .
+2-1	20-23	2.1	abstract	new	_	_
+2-2	24-25	.	_	_	_	_
+
+#Text=SIR Model for Contagion Propagation
+3-1	26-29	SIR	event[4]	new[4]	_	_
+3-2	30-35	Model	event[4]	new[4]	_	_
+3-3	36-39	for	event[4]	new[4]	_	_
+3-4	40-49	Contagion	event[4]|organization|abstract[6]	new[4]|new|new[6]	coref|coref	9-13|9-13
+3-5	50-61	Propagation	event[4]|abstract[6]	new[4]|new[6]	_	_
+
+#Text=In this work , we focus on an undirected graph , where V is the set of nodes and E is the set of edges .
+4-1	62-64	In	_	_	_	_
+4-2	65-69	this	abstract[7]	new[7]	_	_
+4-3	70-74	work	abstract[7]	new[7]	_	_
+4-4	75-76	,	_	_	_	_
+4-5	77-79	we	person	acc	ana	18-9
+4-6	80-85	focus	_	_	_	_
+4-7	86-88	on	_	_	_	_
+4-8	89-91	an	place[9]	new[9]	_	_
+4-9	92-102	undirected	place[9]	new[9]	_	_
+4-10	103-108	graph	place[9]	new[9]	_	_
+4-11	109-110	,	_	_	_	_
+4-12	111-116	where	_	_	_	_
+4-13	117-118	V	abstract	new	coref	4-15[11_0]
+4-14	119-121	is	_	_	_	_
+4-15	122-125	the	abstract[11]	giv[11]	_	_
+4-16	126-129	set	abstract[11]	giv[11]	_	_
+4-17	130-132	of	abstract[11]	giv[11]	_	_
+4-18	133-138	nodes	abstract[11]|abstract	giv[11]|new	coref	6-1[23_0]
+4-19	139-142	and	_	_	_	_
+4-20	143-144	E	abstract	new	coref	4-22[14_0]
+4-21	145-147	is	_	_	_	_
+4-22	148-151	the	abstract[14]	giv[14]	_	_
+4-23	152-155	set	abstract[14]	giv[14]	_	_
+4-24	156-158	of	abstract[14]	giv[14]	_	_
+4-25	159-164	edges	abstract[14]|place	giv[14]|new	_	_
+4-26	165-166	.	_	_	_	_
+
+#Text=Each node has its possible state — Susceptible ( S ) , Infected ( I ) , Recovered ( R ) .
+5-1	167-171	Each	object[16]	new[16]	ana	5-4[0_16]
+5-2	172-176	node	object[16]	new[16]	_	_
+5-3	177-180	has	_	_	_	_
+5-4	181-184	its	object|abstract[18]	giv|new[18]	coref|coref|coref|coref	11-6[38_0]|16-19[60_18]|11-6[38_0]|16-19[60_18]
+5-5	185-193	possible	abstract[18]	new[18]	_	_
+5-6	194-199	state	abstract[18]	new[18]	_	_
+5-7	200-201	—	_	_	_	_
+5-8	202-213	Susceptible	place	new	_	_
+5-9	214-215	(	_	_	_	_
+5-10	216-217	S	abstract	new	_	_
+5-11	218-219	)	_	_	_	_
+5-12	220-221	,	_	_	_	_
+5-13	222-230	Infected	_	_	_	_
+5-14	231-232	(	_	_	_	_
+5-15	233-234	I	person	acc	_	_
+5-16	235-236	)	_	_	_	_
+5-17	237-238	,	_	_	_	_
+5-18	239-248	Recovered	_	_	_	_
+5-19	249-250	(	_	_	_	_
+5-20	251-252	R	person	new	coref	16-11
+5-21	253-254	)	_	_	_	_
+5-22	255-256	.	_	_	_	_
+
+#Text=The susceptible nodes represent the people who are infected easily but have not been infected yet , meanwhile the infected nodes denote the citizens who have already been infected and are capable of infecting other nodes .
+6-1	257-260	The	abstract[23]	giv[23]	coref	6-19[25_23]
+6-2	261-272	susceptible	abstract[23]	giv[23]	_	_
+6-3	273-278	nodes	abstract[23]	giv[23]	_	_
+6-4	279-288	represent	_	_	_	_
+6-5	289-292	the	person[24]	new[24]	_	_
+6-6	293-299	people	person[24]	new[24]	_	_
+6-7	300-303	who	_	_	_	_
+6-8	304-307	are	_	_	_	_
+6-9	308-316	infected	_	_	_	_
+6-10	317-323	easily	_	_	_	_
+6-11	324-327	but	_	_	_	_
+6-12	328-332	have	_	_	_	_
+6-13	333-336	not	_	_	_	_
+6-14	337-341	been	_	_	_	_
+6-15	342-350	infected	_	_	_	_
+6-16	351-354	yet	_	_	_	_
+6-17	355-356	,	_	_	_	_
+6-18	357-366	meanwhile	_	_	_	_
+6-19	367-370	the	abstract[25]	giv[25]	coref	6-35[27_25]
+6-20	371-379	infected	abstract[25]	giv[25]	_	_
+6-21	380-385	nodes	abstract[25]	giv[25]	_	_
+6-22	386-392	denote	_	_	_	_
+6-23	393-396	the	person[26]	new[26]	_	_
+6-24	397-405	citizens	person[26]	new[26]	_	_
+6-25	406-409	who	_	_	_	_
+6-26	410-414	have	_	_	_	_
+6-27	415-422	already	_	_	_	_
+6-28	423-427	been	_	_	_	_
+6-29	428-436	infected	_	_	_	_
+6-30	437-440	and	_	_	_	_
+6-31	441-444	are	_	_	_	_
+6-32	445-452	capable	_	_	_	_
+6-33	453-455	of	_	_	_	_
+6-34	456-465	infecting	_	_	_	_
+6-35	466-471	other	abstract[27]	giv[27]	coref	7-1[28_27]
+6-36	472-477	nodes	abstract[27]	giv[27]	_	_
+6-37	478-479	.	_	_	_	_
+
+#Text=The recovered nodes are the individuals who remain immune or die .
+7-1	480-483	The	person[28]	giv[28]	coref	7-5[29_28]
+7-2	484-493	recovered	person[28]	giv[28]	_	_
+7-3	494-499	nodes	person[28]	giv[28]	_	_
+7-4	500-503	are	_	_	_	_
+7-5	504-507	the	person[29]	giv[29]	coref	9-4[31_29]
+7-6	508-519	individuals	person[29]	giv[29]	_	_
+7-7	520-523	who	_	_	_	_
+7-8	524-530	remain	_	_	_	_
+7-9	531-537	immune	_	_	_	_
+7-10	538-540	or	_	_	_	_
+7-11	541-544	die	_	_	_	_
+7-12	545-546	.	_	_	_	_
+
+#Text=Suppose that there is a time-slotted system .
+8-1	547-554	Suppose	_	_	_	_
+8-2	555-559	that	_	_	_	_
+8-3	560-565	there	_	_	_	_
+8-4	566-568	is	_	_	_	_
+8-5	569-570	a	abstract[30]	new[30]	_	_
+8-6	571-583	time-slotted	abstract[30]	new[30]	_	_
+8-7	584-590	system	abstract[30]	new[30]	_	_
+8-8	591-592	.	_	_	_	_
+
+#Text=At first , only several nodes are infected , which are the contagion sources in the network .
+9-1	593-595	At	_	_	_	_
+9-2	596-601	first	_	_	_	_
+9-3	602-603	,	_	_	_	_
+9-4	604-608	only	abstract[31]	giv[31]	coref	10-3[35_31]
+9-5	609-616	several	abstract[31]	giv[31]	_	_
+9-6	617-622	nodes	abstract[31]	giv[31]	_	_
+9-7	623-626	are	_	_	_	_
+9-8	627-635	infected	_	_	_	_
+9-9	636-637	,	_	_	_	_
+9-10	638-643	which	_	_	_	_
+9-11	644-647	are	_	_	_	_
+9-12	648-651	the	abstract[33]	new[33]	coref	19-8[0_33]
+9-13	652-661	contagion	organization|abstract[33]	giv|new[33]	coref	16-2[54_0]
+9-14	662-669	sources	abstract[33]	new[33]	_	_
+9-15	670-672	in	abstract[33]	new[33]	_	_
+9-16	673-676	the	abstract[33]|place[34]	new[33]|new[34]	coref	16-6[55_34]
+9-17	677-684	network	abstract[33]|place[34]	new[33]|new[34]	_	_
+9-18	685-686	.	_	_	_	_
+
+#Text=Meanwhile , the other nodes are susceptible .
+10-1	687-696	Meanwhile	_	_	_	_
+10-2	697-698	,	_	_	_	_
+10-3	699-702	the	abstract[35]	giv[35]	coref	12-3[47_35]
+10-4	703-708	other	abstract[35]	giv[35]	_	_
+10-5	709-714	nodes	abstract[35]	giv[35]	_	_
+10-6	715-718	are	_	_	_	_
+10-7	719-730	susceptible	_	_	_	_
+10-8	731-732	.	_	_	_	_
+
+#Text=At each time step , each infected node infects its susceptible neighbors with probability p independently , that is , a susceptible node is infected with probability when it has n infected neighbors .
+11-1	733-735	At	_	_	_	_
+11-2	736-740	each	abstract[37]	new[37]	_	_
+11-3	741-745	time	time|abstract[37]	new|new[37]	coref	16-22
+11-4	746-750	step	abstract[37]	new[37]	_	_
+11-5	751-752	,	_	_	_	_
+11-6	753-757	each	object[38]	giv[38]	ana	11-10[0_38]
+11-7	758-766	infected	object[38]	giv[38]	_	_
+11-8	767-771	node	object[38]	giv[38]	_	_
+11-9	772-779	infects	_	_	_	_
+11-10	780-783	its	object|person[40]	giv|new[40]	coref|coref|coref|coref	11-21[43_0]|11-33[0_40]|11-21[43_0]|11-33[0_40]
+11-11	784-795	susceptible	person[40]	new[40]	_	_
+11-12	796-805	neighbors	person[40]	new[40]	_	_
+11-13	806-810	with	_	_	_	_
+11-14	811-822	probability	abstract|quantity[42]	new|new[42]	coref|coref	11-27|11-27
+11-15	823-824	p	quantity[42]	new[42]	_	_
+11-16	825-838	independently	quantity[42]	new[42]	_	_
+11-17	839-840	,	_	_	_	_
+11-18	841-845	that	_	_	_	_
+11-19	846-848	is	_	_	_	_
+11-20	849-850	,	_	_	_	_
+11-21	851-852	a	object[43]	giv[43]	ana	11-29[0_43]
+11-22	853-864	susceptible	object[43]	giv[43]	_	_
+11-23	865-869	node	object[43]	giv[43]	_	_
+11-24	870-872	is	_	_	_	_
+11-25	873-881	infected	_	_	_	_
+11-26	882-886	with	_	_	_	_
+11-27	887-898	probability	abstract	giv	coref	12-11
+11-28	899-903	when	_	_	_	_
+11-29	904-906	it	object	giv	coref	17-17[66_0]
+11-30	907-910	has	_	_	_	_
+11-31	911-912	n	_	_	_	_
+11-32	913-921	infected	_	_	_	_
+11-33	922-931	neighbors	person	giv	_	_
+11-34	932-933	.	_	_	_	_
+
+#Text=Meanwhile , the infected nodes turn to be recovered with probability q .
+12-1	934-943	Meanwhile	_	_	_	_
+12-2	944-945	,	_	_	_	_
+12-3	946-949	the	abstract[47]	giv[47]	coref	13-3[50_47]
+12-4	950-958	infected	abstract[47]	giv[47]	_	_
+12-5	959-964	nodes	abstract[47]	giv[47]	_	_
+12-6	965-969	turn	_	_	_	_
+12-7	970-972	to	_	_	_	_
+12-8	973-975	be	_	_	_	_
+12-9	976-985	recovered	_	_	_	_
+12-10	986-990	with	_	_	_	_
+12-11	991-1002	probability	abstract|abstract[49]	giv|new[49]	coref|coref	17-21[67_0]|17-21[67_0]
+12-12	1003-1004	q	abstract[49]	new[49]	_	_
+12-13	1005-1006	.	_	_	_	_
+
+#Text=Additionally , the recovered nodes will not be infected , which may die or be removed .
+13-1	1007-1019	Additionally	_	_	_	_
+13-2	1020-1021	,	_	_	_	_
+13-3	1022-1025	the	abstract[50]	giv[50]	coref	16-14[58_50]
+13-4	1026-1035	recovered	abstract[50]	giv[50]	_	_
+13-5	1036-1041	nodes	abstract[50]	giv[50]	_	_
+13-6	1042-1046	will	_	_	_	_
+13-7	1047-1050	not	_	_	_	_
+13-8	1051-1053	be	_	_	_	_
+13-9	1054-1062	infected	_	_	_	_
+13-10	1063-1064	,	_	_	_	_
+13-11	1065-1070	which	_	_	_	_
+13-12	1071-1074	may	_	_	_	_
+13-13	1075-1078	die	_	_	_	_
+13-14	1079-1081	or	_	_	_	_
+13-15	1082-1084	be	_	_	_	_
+13-16	1085-1092	removed	_	_	_	_
+13-17	1093-1094	.	_	_	_	_
+
+#Text=2.2 .
+14-1	1095-1098	2.2	abstract	new	_	_
+14-2	1099-1100	.	_	_	_	_
+
+#Text=Problem Formulation
+15-1	1101-1108	Problem	abstract|abstract[53]	new|new[53]	coref|coref	19-3[77_0]|19-3[77_0]
+15-2	1109-1120	Formulation	abstract[53]	new[53]	_	_
+
+#Text=As a contagion propagates through a complex network under the SIR model , all the nodes will change infection state as time goes by .
+16-1	1121-1123	As	_	_	_	_
+16-2	1124-1125	a	organization[54]	giv[54]	coref	18-7[0_54]
+16-3	1126-1135	contagion	organization[54]	giv[54]	_	_
+16-4	1136-1146	propagates	_	_	_	_
+16-5	1147-1154	through	_	_	_	_
+16-6	1155-1156	a	place[55]	giv[55]	coref	18-17[74_55]
+16-7	1157-1164	complex	place[55]	giv[55]	_	_
+16-8	1165-1172	network	place[55]	giv[55]	_	_
+16-9	1173-1178	under	_	_	_	_
+16-10	1179-1182	the	abstract[57]	new[57]	_	_
+16-11	1183-1186	SIR	person|abstract[57]	giv|new[57]	coref	39-21
+16-12	1187-1192	model	abstract[57]	new[57]	_	_
+16-13	1193-1194	,	_	_	_	_
+16-14	1195-1198	all	abstract[58]	giv[58]	coref	17-1[62_58]
+16-15	1199-1202	the	abstract[58]	giv[58]	_	_
+16-16	1203-1208	nodes	abstract[58]	giv[58]	_	_
+16-17	1209-1213	will	_	_	_	_
+16-18	1214-1220	change	_	_	_	_
+16-19	1221-1230	infection	abstract|abstract[60]	new|giv[60]	coref|coref|coref|coref	18-14|20-7[88_60]|18-14|20-7[88_60]
+16-20	1231-1236	state	abstract[60]	giv[60]	_	_
+16-21	1237-1239	as	_	_	_	_
+16-22	1240-1244	time	time	giv	_	_
+16-23	1245-1249	goes	_	_	_	_
+16-24	1250-1252	by	_	_	_	_
+16-25	1253-1254	.	_	_	_	_
+
+#Text=The susceptible nodes may be infected by infected neighbour nodes and the infected nodes recover to a recovered node with a certain probability .
+17-1	1255-1258	The	abstract[62]	giv[62]	coref	17-8[64_62]
+17-2	1259-1270	susceptible	abstract[62]	giv[62]	_	_
+17-3	1271-1276	nodes	abstract[62]	giv[62]	_	_
+17-4	1277-1280	may	_	_	_	_
+17-5	1281-1283	be	_	_	_	_
+17-6	1284-1292	infected	_	_	_	_
+17-7	1293-1295	by	_	_	_	_
+17-8	1296-1304	infected	abstract[64]	giv[64]	coref	17-12[65_64]
+17-9	1305-1314	neighbour	person|abstract[64]	new|giv[64]	coref	36-11[175_0]
+17-10	1315-1320	nodes	abstract[64]	giv[64]	_	_
+17-11	1321-1324	and	_	_	_	_
+17-12	1325-1328	the	abstract[65]	giv[65]	coref	18-36[76_65]
+17-13	1329-1337	infected	abstract[65]	giv[65]	_	_
+17-14	1338-1343	nodes	abstract[65]	giv[65]	_	_
+17-15	1344-1351	recover	_	_	_	_
+17-16	1352-1354	to	_	_	_	_
+17-17	1355-1356	a	object[66]	giv[66]	coref	29-23[0_66]
+17-18	1357-1366	recovered	object[66]	giv[66]	_	_
+17-19	1367-1371	node	object[66]	giv[66]	_	_
+17-20	1372-1376	with	object[66]	giv[66]	_	_
+17-21	1377-1378	a	object[66]|abstract[67]	giv[66]|giv[67]	_	_
+17-22	1379-1386	certain	object[66]|abstract[67]	giv[66]|giv[67]	_	_
+17-23	1387-1398	probability	object[66]|abstract[67]	giv[66]|giv[67]	_	_
+17-24	1399-1400	.	_	_	_	_
+
+#Text=Due to the emergency response to contagion , we mainly consider an initial infection situation of the whole network and only collect two states , infected and uninfected ( susceptible , recovered ) , of all nodes .
+18-1	1401-1404	Due	_	_	_	_
+18-2	1405-1407	to	_	_	_	_
+18-3	1408-1411	the	event[69]	new[69]	_	_
+18-4	1412-1421	emergency	abstract|event[69]	new|new[69]	_	_
+18-5	1422-1430	response	event[69]	new[69]	_	_
+18-6	1431-1433	to	event[69]	new[69]	_	_
+18-7	1434-1443	contagion	event[69]|organization	new[69]|giv	coref	24-7
+18-8	1444-1445	,	_	_	_	_
+18-9	1446-1448	we	person	giv	ana	19-31
+18-10	1449-1455	mainly	_	_	_	_
+18-11	1456-1464	consider	_	_	_	_
+18-12	1465-1467	an	abstract[73]	new[73]	coref	25-4[111_73]
+18-13	1468-1475	initial	abstract[73]	new[73]	_	_
+18-14	1476-1485	infection	event|abstract[73]	giv|new[73]	coref	26-6
+18-15	1486-1495	situation	abstract[73]	new[73]	_	_
+18-16	1496-1498	of	abstract[73]	new[73]	_	_
+18-17	1499-1502	the	abstract[73]|place[74]	new[73]|giv[74]	coref	19-21[81_74]
+18-18	1503-1508	whole	abstract[73]|place[74]	new[73]|giv[74]	_	_
+18-19	1509-1516	network	abstract[73]|place[74]	new[73]|giv[74]	_	_
+18-20	1517-1520	and	_	_	_	_
+18-21	1521-1525	only	_	_	_	_
+18-22	1526-1533	collect	_	_	_	_
+18-23	1534-1537	two	person[75]	new[75]	coref	21-9[95_75]
+18-24	1538-1544	states	person[75]	new[75]	_	_
+18-25	1545-1546	,	_	_	_	_
+18-26	1547-1555	infected	_	_	_	_
+18-27	1556-1559	and	_	_	_	_
+18-28	1560-1570	uninfected	_	_	_	_
+18-29	1571-1572	(	_	_	_	_
+18-30	1573-1584	susceptible	_	_	_	_
+18-31	1585-1586	,	_	_	_	_
+18-32	1587-1596	recovered	_	_	_	_
+18-33	1597-1598	)	_	_	_	_
+18-34	1599-1600	,	_	_	_	_
+18-35	1601-1603	of	_	_	_	_
+18-36	1604-1607	all	abstract[76]	giv[76]	coref	20-10[89_76]
+18-37	1608-1613	nodes	abstract[76]	giv[76]	_	_
+18-38	1614-1615	.	_	_	_	_
+
+#Text=Accordingly , the problem of the multiple sources localization problem can be described as — given the simple snapshot of the network at an early certain moment , how can we accurately locate multiple sources ?
+19-1	1616-1627	Accordingly	_	_	_	_
+19-2	1628-1629	,	_	_	_	_
+19-3	1630-1633	the	abstract[77]	giv[77]	_	_
+19-4	1634-1641	problem	abstract[77]	giv[77]	_	_
+19-5	1642-1644	of	abstract[77]	giv[77]	_	_
+19-6	1645-1648	the	abstract[77]	giv[77]	_	_
+19-7	1649-1657	multiple	abstract[77]	giv[77]	_	_
+19-8	1658-1665	sources	abstract[77]|abstract	giv[77]|giv	coref	19-34[84_0]
+19-9	1666-1678	localization	abstract[77]|abstract	giv[77]|new	coref	21-23
+19-10	1679-1686	problem	abstract[77]	giv[77]	_	_
+19-11	1687-1690	can	_	_	_	_
+19-12	1691-1693	be	_	_	_	_
+19-13	1694-1703	described	_	_	_	_
+19-14	1704-1706	as	_	_	_	_
+19-15	1707-1708	—	_	_	_	_
+19-16	1709-1714	given	_	_	_	_
+19-17	1715-1718	the	object[80]	new[80]	_	_
+19-18	1719-1725	simple	object[80]	new[80]	_	_
+19-19	1726-1734	snapshot	object[80]	new[80]	_	_
+19-20	1735-1737	of	object[80]	new[80]	_	_
+19-21	1738-1741	the	object[80]|place[81]	new[80]|giv[81]	coref	26-14[121_81]
+19-22	1742-1749	network	object[80]|place[81]	new[80]|giv[81]	_	_
+19-23	1750-1752	at	object[80]|place[81]	new[80]|giv[81]	_	_
+19-24	1753-1755	an	object[80]|place[81]|time[82]	new[80]|giv[81]|new[82]	coref	24-2[104_82]
+19-25	1756-1761	early	object[80]|place[81]|time[82]	new[80]|giv[81]|new[82]	_	_
+19-26	1762-1769	certain	object[80]|place[81]|time[82]	new[80]|giv[81]|new[82]	_	_
+19-27	1770-1776	moment	object[80]|place[81]|time[82]	new[80]|giv[81]|new[82]	_	_
+19-28	1777-1778	,	_	_	_	_
+19-29	1779-1782	how	_	_	_	_
+19-30	1783-1786	can	_	_	_	_
+19-31	1787-1789	we	person	giv	ana	20-5
+19-32	1790-1800	accurately	_	_	_	_
+19-33	1801-1807	locate	_	_	_	_
+19-34	1808-1816	multiple	abstract[84]	giv[84]	coref	21-21[97_84]
+19-35	1817-1824	sources	abstract[84]	giv[84]	_	_
+19-36	1825-1826	?	_	_	_	_
+
+#Text=It is common that we know the state of almost all nodes , but we have no ability to distinguish the susceptible nodes from the recovered nodes .
+20-1	1827-1829	It	place	new	cata	20-1[0_87]
+20-2	1830-1832	is	_	_	_	_
+20-3	1833-1839	common	_	_	_	_
+20-4	1840-1844	that	place[87]	new[87]	_	_
+20-5	1845-1847	we	person|place[87]	giv|new[87]	ana	20-15
+20-6	1848-1852	know	place[87]	new[87]	_	_
+20-7	1853-1856	the	place[87]|abstract[88]	new[87]|giv[88]	_	_
+20-8	1857-1862	state	place[87]|abstract[88]	new[87]|giv[88]	_	_
+20-9	1863-1865	of	place[87]|abstract[88]	new[87]|giv[88]	_	_
+20-10	1866-1872	almost	place[87]|abstract[88]|abstract[89]	new[87]|giv[88]|giv[89]	coref	20-21[92_89]
+20-11	1873-1876	all	place[87]|abstract[88]|abstract[89]	new[87]|giv[88]|giv[89]	_	_
+20-12	1877-1882	nodes	place[87]|abstract[88]|abstract[89]	new[87]|giv[88]|giv[89]	_	_
+20-13	1883-1884	,	_	_	_	_
+20-14	1885-1888	but	_	_	_	_
+20-15	1889-1891	we	person	giv	ana	26-9
+20-16	1892-1896	have	_	_	_	_
+20-17	1897-1899	no	abstract[91]	new[91]	coref	30-23[134_91]
+20-18	1900-1907	ability	abstract[91]	new[91]	_	_
+20-19	1908-1910	to	_	_	_	_
+20-20	1911-1922	distinguish	_	_	_	_
+20-21	1923-1926	the	abstract[92]	giv[92]	coref	20-25[93_92]
+20-22	1927-1938	susceptible	abstract[92]	giv[92]	_	_
+20-23	1939-1944	nodes	abstract[92]	giv[92]	_	_
+20-24	1945-1949	from	_	_	_	_
+20-25	1950-1953	the	abstract[93]	giv[93]	coref	21-3[94_93]
+20-26	1954-1963	recovered	abstract[93]	giv[93]	_	_
+20-27	1964-1969	nodes	abstract[93]	giv[93]	_	_
+20-28	1970-1971	.	_	_	_	_
+
+#Text=Therefore , all nodes can be divided into two states — infected and uninfected , which decreases the accuracy of multiple sources localization certainty .
+21-1	1972-1981	Therefore	_	_	_	_
+21-2	1982-1983	,	_	_	_	_
+21-3	1984-1987	all	abstract[94]	giv[94]	coref	25-7[112_94]
+21-4	1988-1993	nodes	abstract[94]	giv[94]	_	_
+21-5	1994-1997	can	_	_	_	_
+21-6	1998-2000	be	_	_	_	_
+21-7	2001-2008	divided	_	_	_	_
+21-8	2009-2013	into	_	_	_	_
+21-9	2014-2017	two	person[95]	giv[95]	coref	26-5[118_95]
+21-10	2018-2024	states	person[95]	giv[95]	_	_
+21-11	2025-2026	—	_	_	_	_
+21-12	2027-2035	infected	_	_	_	_
+21-13	2036-2039	and	_	_	_	_
+21-14	2040-2050	uninfected	_	_	_	_
+21-15	2051-2052	,	_	_	_	_
+21-16	2053-2058	which	_	_	_	_
+21-17	2059-2068	decreases	_	_	_	_
+21-18	2069-2072	the	abstract[96]	new[96]	_	_
+21-19	2073-2081	accuracy	abstract[96]	new[96]	_	_
+21-20	2082-2084	of	abstract[96]	new[96]	_	_
+21-21	2085-2093	multiple	abstract[96]|abstract[97]	new[96]|giv[97]	appos	21-23[99_97]
+21-22	2094-2101	sources	abstract[96]|abstract[97]	new[96]|giv[97]	_	_
+21-23	2102-2114	localization	event|abstract[99]	giv|giv[99]	coref|coref	25-10[0_99]|25-10[0_99]
+21-24	2115-2124	certainty	abstract[99]	giv[99]	_	_
+21-25	2125-2126	.	_	_	_	_
+
+#Text=2.3 .
+22-1	2127-2130	2.3	abstract	new	_	_
+22-2	2131-2132	.	_	_	_	_
+
+#Text=Potential Concentration Label Definition
+23-1	2133-2142	Potential	abstract[102]|abstract[103]	new[102]|new[103]	_	_
+23-2	2143-2156	Concentration	abstract|abstract[102]|abstract[103]	new|new[102]|new[103]	coref	29-5[123_0]
+23-3	2157-2162	Label	abstract[102]|abstract[103]	new[102]|new[103]	_	_
+23-4	2163-2173	Definition	abstract[103]	new[103]	_	_
+
+#Text=In the early period of severe contagion propagation , disease outbreaks through a crowd quickly .
+24-1	2174-2176	In	_	_	_	_
+24-2	2177-2180	the	time[104]|event[108]	giv[104]|new[108]	ana|ana	25-1[0_104]|25-1[0_104]
+24-3	2181-2186	early	time[104]|event[108]	giv[104]|new[108]	_	_
+24-4	2187-2193	period	time[104]|event[108]	giv[104]|new[108]	_	_
+24-5	2194-2196	of	time[104]|event[108]	giv[104]|new[108]	_	_
+24-6	2197-2203	severe	time[104]|abstract[106]|event[108]	giv[104]|new[106]|new[108]	coref	35-25[170_106]
+24-7	2204-2213	contagion	time[104]|organization|abstract[106]|event[108]	giv[104]|giv|new[106]|new[108]	coref	34-24
+24-8	2214-2225	propagation	time[104]|abstract[106]|event[108]	giv[104]|new[106]|new[108]	_	_
+24-9	2226-2227	,	event[108]	new[108]	_	_
+24-10	2228-2235	disease	abstract|event[108]	new|new[108]	_	_
+24-11	2236-2245	outbreaks	event[108]	new[108]	_	_
+24-12	2246-2253	through	event[108]	new[108]	_	_
+24-13	2254-2255	a	event[108]|person[109]	new[108]|new[109]	_	_
+24-14	2256-2261	crowd	event[108]|person[109]	new[108]|new[109]	_	_
+24-15	2262-2269	quickly	event[108]	new[108]	_	_
+24-16	2270-2271	.	_	_	_	_
+
+#Text=It comes to the situation that the nodes around sources are more likely to be the infected nodes , that is , the sources are surrounded by many infected nodes .
+25-1	2272-2274	It	time	giv	_	_
+25-2	2275-2280	comes	_	_	_	_
+25-3	2281-2283	to	_	_	_	_
+25-4	2284-2287	the	abstract[111]	giv[111]	_	_
+25-5	2288-2297	situation	abstract[111]	giv[111]	_	_
+25-6	2298-2302	that	_	_	_	_
+25-7	2303-2306	the	abstract[112]	giv[112]	coref	25-16[114_112]
+25-8	2307-2312	nodes	abstract[112]	giv[112]	_	_
+25-9	2313-2319	around	abstract[112]	giv[112]	_	_
+25-10	2320-2327	sources	abstract[112]|abstract	giv[112]|giv	coref	25-23[115_0]
+25-11	2328-2331	are	_	_	_	_
+25-12	2332-2336	more	_	_	_	_
+25-13	2337-2343	likely	_	_	_	_
+25-14	2344-2346	to	_	_	_	_
+25-15	2347-2349	be	_	_	_	_
+25-16	2350-2353	the	abstract[114]	giv[114]	coref	25-28[116_114]
+25-17	2354-2362	infected	abstract[114]	giv[114]	_	_
+25-18	2363-2368	nodes	abstract[114]	giv[114]	_	_
+25-19	2369-2370	,	_	_	_	_
+25-20	2371-2375	that	_	_	_	_
+25-21	2376-2378	is	_	_	_	_
+25-22	2379-2380	,	_	_	_	_
+25-23	2381-2384	the	abstract[115]	giv[115]	coref	26-11[120_115]
+25-24	2385-2392	sources	abstract[115]	giv[115]	_	_
+25-25	2393-2396	are	_	_	_	_
+25-26	2397-2407	surrounded	_	_	_	_
+25-27	2408-2410	by	_	_	_	_
+25-28	2411-2415	many	abstract[116]	giv[116]	coref	35-18[166_116]
+25-29	2416-2424	infected	abstract[116]	giv[116]	_	_
+25-30	2425-2430	nodes	abstract[116]	giv[116]	_	_
+25-31	2431-2432	.	_	_	_	_
+
+#Text=Only by depending on the infection states can we locate the sources in a complex network accurately .
+26-1	2433-2437	Only	_	_	_	_
+26-2	2438-2440	by	_	_	_	_
+26-3	2441-2450	depending	_	_	_	_
+26-4	2451-2453	on	_	_	_	_
+26-5	2454-2457	the	person[118]	giv[118]	coref	33-5[146_118]
+26-6	2458-2467	infection	abstract|person[118]	giv|giv[118]	coref	34-21
+26-7	2468-2474	states	person[118]	giv[118]	_	_
+26-8	2475-2478	can	_	_	_	_
+26-9	2479-2481	we	person	giv	ana	30-46
+26-10	2482-2488	locate	_	_	_	_
+26-11	2489-2492	the	abstract[120]	giv[120]	coref	29-15[126_120]
+26-12	2493-2500	sources	abstract[120]	giv[120]	_	_
+26-13	2501-2503	in	abstract[120]	giv[120]	_	_
+26-14	2504-2505	a	abstract[120]|place[121]	giv[120]|giv[121]	coref	33-27[153_121]
+26-15	2506-2513	complex	abstract[120]|place[121]	giv[120]|giv[121]	_	_
+26-16	2514-2521	network	abstract[120]|place[121]	giv[120]|giv[121]	_	_
+26-17	2522-2532	accurately	_	_	_	_
+26-18	2533-2534	.	_	_	_	_
+
+#Text=Inspired by
+27-1	2535-2543	Inspired	_	_	_	_
+27-2	2544-2546	by	_	_	_	_
+
+#Text=Figure 1
+28-1	2547-2553	Figure	object[122]	new[122]	coref	32-1[143_122]
+28-2	2554-2555	1	object[122]	new[122]	_	_
+
+#Text=a , which shows the concentration of a pollutant , it is clear that the sources are more likely to be the node set , whose concentration is the highest ( 10 ) .
+29-1	2556-2557	a	_	_	_	_
+29-2	2558-2559	,	_	_	_	_
+29-3	2560-2565	which	_	_	_	_
+29-4	2566-2571	shows	_	_	_	_
+29-5	2572-2575	the	abstract[123]	giv[123]	coref	29-26[130_123]
+29-6	2576-2589	concentration	abstract[123]	giv[123]	_	_
+29-7	2590-2592	of	abstract[123]	giv[123]	_	_
+29-8	2593-2594	a	abstract[123]|abstract[124]	giv[123]|new[124]	coref	35-22[0_124]
+29-9	2595-2604	pollutant	abstract[123]|abstract[124]	giv[123]|new[124]	_	_
+29-10	2605-2606	,	_	_	_	_
+29-11	2607-2609	it	abstract	new	cata	29-11[0_127]
+29-12	2610-2612	is	_	_	_	_
+29-13	2613-2618	clear	_	_	_	_
+29-14	2619-2623	that	abstract[127]	new[127]	_	_
+29-15	2624-2627	the	abstract[126]|abstract[127]	giv[126]|new[127]	coref	34-9[159_126]
+29-16	2628-2635	sources	abstract[126]|abstract[127]	giv[126]|new[127]	_	_
+29-17	2636-2639	are	abstract[127]	new[127]	_	_
+29-18	2640-2644	more	abstract[127]	new[127]	_	_
+29-19	2645-2651	likely	abstract[127]	new[127]	_	_
+29-20	2652-2654	to	abstract[127]	new[127]	_	_
+29-21	2655-2657	be	abstract[127]	new[127]	_	_
+29-22	2658-2661	the	abstract[127]|place[129]	new[127]|new[129]	_	_
+29-23	2662-2666	node	abstract[127]|object|place[129]	new[127]|giv|new[129]	coref	30-9[132_0]
+29-24	2667-2670	set	abstract[127]|place[129]	new[127]|new[129]	_	_
+29-25	2671-2672	,	_	_	_	_
+29-26	2673-2678	whose	abstract[130]	giv[130]	coref	30-34[136_130]
+29-27	2679-2692	concentration	abstract[130]	giv[130]	_	_
+29-28	2693-2695	is	_	_	_	_
+29-29	2696-2699	the	_	_	_	_
+29-30	2700-2707	highest	_	_	_	_
+29-31	2708-2709	(	_	_	_	_
+29-32	2710-2712	10	_	_	_	_
+29-33	2713-2714	)	_	_	_	_
+29-34	2715-2716	.	_	_	_	_
+
+#Text=In fact , to get the state of each node is not easy , for example , some sensors do not have the capacity to measure concentrations , and can only judge whether the concentration surpasses a threshold value or not , and even then we may lose the concentration information .
+30-1	2717-2719	In	_	_	_	_
+30-2	2720-2724	fact	_	_	_	_
+30-3	2725-2726	,	_	_	_	_
+30-4	2727-2729	to	_	_	_	_
+30-5	2730-2733	get	_	_	_	_
+30-6	2734-2737	the	abstract[131]	new[131]	_	_
+30-7	2738-2743	state	abstract[131]	new[131]	_	_
+30-8	2744-2746	of	abstract[131]	new[131]	_	_
+30-9	2747-2751	each	abstract[131]|object[132]	new[131]|giv[132]	coref	33-35[155_132]
+30-10	2752-2756	node	abstract[131]|object[132]	new[131]|giv[132]	_	_
+30-11	2757-2759	is	_	_	_	_
+30-12	2760-2763	not	_	_	_	_
+30-13	2764-2768	easy	_	_	_	_
+30-14	2769-2770	,	_	_	_	_
+30-15	2771-2774	for	_	_	_	_
+30-16	2775-2782	example	_	_	_	_
+30-17	2783-2784	,	_	_	_	_
+30-18	2785-2789	some	object[133]	new[133]	_	_
+30-19	2790-2797	sensors	object[133]	new[133]	_	_
+30-20	2798-2800	do	_	_	_	_
+30-21	2801-2804	not	_	_	_	_
+30-22	2805-2809	have	_	_	_	_
+30-23	2810-2813	the	abstract[134]	giv[134]	coref	34-5[158_134]
+30-24	2814-2822	capacity	abstract[134]	giv[134]	_	_
+30-25	2823-2825	to	_	_	_	_
+30-26	2826-2833	measure	_	_	_	_
+30-27	2834-2848	concentrations	animal	new	coref	34-13[160_0]
+30-28	2849-2850	,	_	_	_	_
+30-29	2851-2854	and	_	_	_	_
+30-30	2855-2858	can	_	_	_	_
+30-31	2859-2863	only	_	_	_	_
+30-32	2864-2869	judge	_	_	_	_
+30-33	2870-2877	whether	_	_	_	_
+30-34	2878-2881	the	abstract[136]	giv[136]	coref	30-50[0_136]
+30-35	2882-2895	concentration	abstract[136]	giv[136]	_	_
+30-36	2896-2905	surpasses	_	_	_	_
+30-37	2906-2907	a	abstract[137]	new[137]	_	_
+30-38	2908-2917	threshold	abstract[137]	new[137]	_	_
+30-39	2918-2923	value	abstract[137]	new[137]	_	_
+30-40	2924-2926	or	_	_	_	_
+30-41	2927-2930	not	_	_	_	_
+30-42	2931-2932	,	_	_	_	_
+30-43	2933-2936	and	_	_	_	_
+30-44	2937-2941	even	_	_	_	_
+30-45	2942-2946	then	_	_	_	_
+30-46	2947-2949	we	person	giv	ana	31-5
+30-47	2950-2953	may	_	_	_	_
+30-48	2954-2958	lose	_	_	_	_
+30-49	2959-2962	the	abstract[140]	new[140]	coref	31-3[141_140]
+30-50	2963-2976	concentration	abstract|abstract[140]	giv|new[140]	coref	33-6
+30-51	2977-2988	information	abstract[140]	new[140]	_	_
+30-52	2989-2990	.	_	_	_	_
+
+#Text=Therefore , the information we can obtain is incomplete , just like in
+31-1	2991-3000	Therefore	_	_	_	_
+31-2	3001-3002	,	_	_	_	_
+31-3	3003-3006	the	abstract[141]	giv[141]	coref	46-3[216_141]
+31-4	3007-3018	information	abstract[141]	giv[141]	_	_
+31-5	3019-3021	we	person	giv	ana	33-2
+31-6	3022-3025	can	_	_	_	_
+31-7	3026-3032	obtain	_	_	_	_
+31-8	3033-3035	is	_	_	_	_
+31-9	3036-3046	incomplete	_	_	_	_
+31-10	3047-3048	,	_	_	_	_
+31-11	3049-3053	just	_	_	_	_
+31-12	3054-3058	like	_	_	_	_
+31-13	3059-3061	in	_	_	_	_
+
+#Text=Figure 1
+32-1	3062-3068	Figure	object[143]	giv[143]	_	_
+32-2	3069-3070	1	object[143]	giv[143]	_	_
+
+#Text=b. We can see two concentration states easily , 0 or 1 ( 1 denotes concentration over 8 , 0 denotes concentration under 8 ) in a network , where an error occurred with node c .
+33-1	3071-3073	b.	_	_	_	_
+33-2	3074-3076	We	person	giv	ana	34-3
+33-3	3077-3080	can	_	_	_	_
+33-4	3081-3084	see	_	_	_	_
+33-5	3085-3088	two	person[146]	giv[146]	coref	46-7[217_146]
+33-6	3089-3102	concentration	abstract|person[146]	giv|giv[146]	coref	33-14[148_0]
+33-7	3103-3109	states	person[146]	giv[146]	_	_
+33-8	3110-3116	easily	person[146]	giv[146]	_	_
+33-9	3117-3118	,	person[146]	giv[146]	_	_
+33-10	3119-3120	0	person[146]	giv[146]	_	_
+33-11	3121-3123	or	person[146]	giv[146]	_	_
+33-12	3124-3125	1	person[146]	giv[146]	_	_
+33-13	3126-3127	(	_	_	_	_
+33-14	3128-3129	1	abstract[148]	giv[148]	coref	33-20[151_148]
+33-15	3130-3137	denotes	place|abstract[148]	new|giv[148]	coref	33-21
+33-16	3138-3151	concentration	abstract[148]	giv[148]	_	_
+33-17	3152-3156	over	abstract[148]	giv[148]	_	_
+33-18	3157-3158	8	abstract[148]|quantity	giv[148]|new	coref	33-24
+33-19	3159-3160	,	_	_	_	_
+33-20	3161-3162	0	abstract[151]	giv[151]	coref	37-16[0_151]
+33-21	3163-3170	denotes	place|abstract[151]	giv|giv[151]	_	_
+33-22	3171-3184	concentration	abstract[151]	giv[151]	_	_
+33-23	3185-3190	under	abstract[151]	giv[151]	_	_
+33-24	3191-3192	8	abstract[151]|quantity	giv[151]|giv	_	_
+33-25	3193-3194	)	_	_	_	_
+33-26	3195-3197	in	_	_	_	_
+33-27	3198-3199	a	place[153]	giv[153]	coref	46-14[218_153]
+33-28	3200-3207	network	place[153]	giv[153]	_	_
+33-29	3208-3209	,	_	_	_	_
+33-30	3210-3215	where	_	_	_	_
+33-31	3216-3218	an	abstract[154]	new[154]	_	_
+33-32	3219-3224	error	abstract[154]	new[154]	_	_
+33-33	3225-3233	occurred	_	_	_	_
+33-34	3234-3238	with	_	_	_	_
+33-35	3239-3243	node	object[155]	giv[155]	coref	36-3[172_155]
+33-36	3244-3245	c	object[155]|abstract	giv[155]|new	_	_
+33-37	3246-3247	.	_	_	_	_
+
+#Text=It seems we have no ability to identify the sources according to these concentrations , which is similar to the infection situation of contagion .
+34-1	3248-3250	It	_	_	_	_
+34-2	3251-3256	seems	_	_	_	_
+34-3	3257-3259	we	person	giv	ana	36-1
+34-4	3260-3264	have	_	_	_	_
+34-5	3265-3267	no	abstract[158]	giv[158]	_	_
+34-6	3268-3275	ability	abstract[158]	giv[158]	_	_
+34-7	3276-3278	to	_	_	_	_
+34-8	3279-3287	identify	_	_	_	_
+34-9	3288-3291	the	abstract[159]	giv[159]	coref	35-15[165_159]
+34-10	3292-3299	sources	abstract[159]	giv[159]	_	_
+34-11	3300-3309	according	_	_	_	_
+34-12	3310-3312	to	_	_	_	_
+34-13	3313-3318	these	animal[160]	giv[160]	_	_
+34-14	3319-3333	concentrations	animal[160]	giv[160]	_	_
+34-15	3334-3335	,	_	_	_	_
+34-16	3336-3341	which	_	_	_	_
+34-17	3342-3344	is	_	_	_	_
+34-18	3345-3352	similar	_	_	_	_
+34-19	3353-3355	to	_	_	_	_
+34-20	3356-3359	the	abstract[162]	new[162]	_	_
+34-21	3360-3369	infection	abstract|abstract[162]	giv|new[162]	coref	47-2
+34-22	3370-3379	situation	abstract[162]	new[162]	_	_
+34-23	3380-3382	of	abstract[162]	new[162]	_	_
+34-24	3383-3392	contagion	abstract[162]|organization	new[162]|giv	coref	35-25
+34-25	3393-3394	.	_	_	_	_
+
+#Text=Therefore , a new index needs to be proposed so as to distinguish between the sources and other nodes for incomplete pollutant diffusion and contagion propagation .
+35-1	3395-3404	Therefore	_	_	_	_
+35-2	3405-3406	,	_	_	_	_
+35-3	3407-3408	a	abstract[164]	new[164]	_	_
+35-4	3409-3412	new	abstract[164]	new[164]	_	_
+35-5	3413-3418	index	abstract[164]	new[164]	_	_
+35-6	3419-3424	needs	_	_	_	_
+35-7	3425-3427	to	_	_	_	_
+35-8	3428-3430	be	_	_	_	_
+35-9	3431-3439	proposed	_	_	_	_
+35-10	3440-3442	so	_	_	_	_
+35-11	3443-3445	as	_	_	_	_
+35-12	3446-3448	to	_	_	_	_
+35-13	3449-3460	distinguish	_	_	_	_
+35-14	3461-3468	between	_	_	_	_
+35-15	3469-3472	the	abstract[165]	giv[165]	coref	36-27[178_165]
+35-16	3473-3480	sources	abstract[165]	giv[165]	_	_
+35-17	3481-3484	and	abstract[165]	giv[165]	_	_
+35-18	3485-3490	other	abstract[165]|abstract[166]	giv[165]|giv[166]	coref	38-15[189_166]
+35-19	3491-3496	nodes	abstract[165]|abstract[166]	giv[165]|giv[166]	_	_
+35-20	3497-3500	for	abstract[165]|abstract[166]	giv[165]|giv[166]	_	_
+35-21	3501-3511	incomplete	abstract[165]|abstract[166]|abstract[168]	giv[165]|giv[166]|new[168]	_	_
+35-22	3512-3521	pollutant	abstract[165]|abstract[166]|abstract|abstract[168]	giv[165]|giv[166]|giv|new[168]	_	_
+35-23	3522-3531	diffusion	abstract[165]|abstract[166]|abstract[168]	giv[165]|giv[166]|new[168]	_	_
+35-24	3532-3535	and	abstract[165]|abstract[166]	giv[165]|giv[166]	_	_
+35-25	3536-3545	contagion	abstract[165]|abstract[166]|organization|abstract[170]	giv[165]|giv[166]|giv|giv[170]	coref|coref	39-15[194_0]|39-15[194_0]
+35-26	3546-3557	propagation	abstract[165]|abstract[166]|abstract[170]	giv[165]|giv[166]|giv[170]	_	_
+35-27	3558-3559	.	_	_	_	_
+
+#Text=We think the node with more infected neighbors , including the first order neighbor , the second order neighbor and so forth , is closer to the sources .
+36-1	3560-3562	We	person	giv	ana	37-7
+36-2	3563-3568	think	_	_	_	_
+36-3	3569-3572	the	object[172]	giv[172]	coref	48-5[0_172]
+36-4	3573-3577	node	object[172]	giv[172]	_	_
+36-5	3578-3582	with	object[172]	giv[172]	_	_
+36-6	3583-3587	more	object[172]|person[173]	giv[172]|new[173]	_	_
+36-7	3588-3596	infected	object[172]|person[173]	giv[172]|new[173]	_	_
+36-8	3597-3606	neighbors	object[172]|person[173]	giv[172]|new[173]	_	_
+36-9	3607-3608	,	object[172]|person[173]	giv[172]|new[173]	_	_
+36-10	3609-3618	including	object[172]|person[173]	giv[172]|new[173]	_	_
+36-11	3619-3622	the	object[172]|person[173]|person[175]	giv[172]|new[173]|giv[175]	_	_
+36-12	3623-3628	first	object[172]|person[173]|person[175]	giv[172]|new[173]|giv[175]	_	_
+36-13	3629-3634	order	object[172]|person[173]|object|person[175]	giv[172]|new[173]|new|giv[175]	coref	36-18
+36-14	3635-3643	neighbor	object[172]|person[173]|person[175]	giv[172]|new[173]|giv[175]	_	_
+36-15	3644-3645	,	object[172]|person[173]|person[175]	giv[172]|new[173]|giv[175]	_	_
+36-16	3646-3649	the	object[172]|person[173]|person[175]	giv[172]|new[173]|giv[175]	_	_
+36-17	3650-3656	second	object[172]|person[173]|person[175]	giv[172]|new[173]|giv[175]	_	_
+36-18	3657-3662	order	object[172]|person[173]|person[175]|abstract	giv[172]|new[173]|giv[175]|giv	_	_
+36-19	3663-3671	neighbor	object[172]|person[173]|person[175]|person	giv[172]|new[173]|giv[175]|new	coref	38-15
+36-20	3672-3675	and	_	_	_	_
+36-21	3676-3678	so	_	_	_	_
+36-22	3679-3684	forth	_	_	_	_
+36-23	3685-3686	,	_	_	_	_
+36-24	3687-3689	is	_	_	_	_
+36-25	3690-3696	closer	_	_	_	_
+36-26	3697-3699	to	_	_	_	_
+36-27	3700-3703	the	abstract[178]	giv[178]	coref	39-12[193_178]
+36-28	3704-3711	sources	abstract[178]	giv[178]	_	_
+36-29	3712-3713	.	_	_	_	_
+
+#Text=Based on the above analysis , we propose a new concept , namely a potential concentration label , denoted by .
+37-1	3714-3719	Based	_	_	_	_
+37-2	3720-3722	on	_	_	_	_
+37-3	3723-3726	the	abstract[179]	new[179]	_	_
+37-4	3727-3732	above	abstract[179]	new[179]	_	_
+37-5	3733-3741	analysis	abstract[179]	new[179]	_	_
+37-6	3742-3743	,	_	_	_	_
+37-7	3744-3746	we	person	giv	ana	42-5
+37-8	3747-3754	propose	_	_	_	_
+37-9	3755-3756	a	abstract[181]	new[181]	appos	37-13[183_181]
+37-10	3757-3760	new	abstract[181]	new[181]	_	_
+37-11	3761-3768	concept	abstract[181]	new[181]	_	_
+37-12	3769-3770	,	_	_	_	_
+37-13	3771-3777	namely	abstract[183]	giv[183]	coref	38-1[185_183]
+37-14	3778-3779	a	abstract[183]	giv[183]	_	_
+37-15	3780-3789	potential	abstract[183]	giv[183]	_	_
+37-16	3790-3803	concentration	abstract|abstract[183]	giv|giv[183]	coref	38-3
+37-17	3804-3809	label	abstract[183]	giv[183]	_	_
+37-18	3810-3811	,	_	_	_	_
+37-19	3812-3819	denoted	_	_	_	_
+37-20	3820-3822	by	_	_	_	_
+37-21	3823-3824	.	_	_	_	_
+
+#Text=The potential concentration label is determined by its initial label and the labels of neighbor nodes .
+38-1	3825-3828	The	abstract[185]	giv[185]	coref	38-8[186_185]
+38-2	3829-3838	potential	abstract[185]	giv[185]	_	_
+38-3	3839-3852	concentration	abstract|abstract[185]	giv|giv[185]	coref	48-25
+38-4	3853-3858	label	abstract[185]	giv[185]	_	_
+38-5	3859-3861	is	_	_	_	_
+38-6	3862-3872	determined	_	_	_	_
+38-7	3873-3875	by	_	_	_	_
+38-8	3876-3879	its	abstract[186]	giv[186]	ana	39-5[0_186]
+38-9	3880-3887	initial	abstract[186]	giv[186]	_	_
+38-10	3888-3893	label	abstract[186]	giv[186]	_	_
+38-11	3894-3897	and	_	_	_	_
+38-12	3898-3901	the	object[187]	new[187]	_	_
+38-13	3902-3908	labels	object[187]	new[187]	_	_
+38-14	3909-3911	of	object[187]	new[187]	_	_
+38-15	3912-3920	neighbor	object[187]|person|abstract[189]	new[187]|giv|giv[189]	coref|coref	47-5[0_189]|47-5[0_189]
+38-16	3921-3926	nodes	object[187]|abstract[189]	new[187]|giv[189]	_	_
+38-17	3927-3928	.	_	_	_	_
+
+#Text=The experiments demonstrate that it is a good index for locating multiple sources of contagion in complex networks under the SIR model .
+39-1	3929-3932	The	abstract[190]	new[190]	_	_
+39-2	3933-3944	experiments	abstract[190]	new[190]	_	_
+39-3	3945-3956	demonstrate	_	_	_	_
+39-4	3957-3961	that	_	_	_	_
+39-5	3962-3964	it	abstract	giv	coref	39-7[192_0]
+39-6	3965-3967	is	_	_	_	_
+39-7	3968-3969	a	abstract[192]	giv[192]	coref	45-4[0_192]
+39-8	3970-3974	good	abstract[192]	giv[192]	_	_
+39-9	3975-3980	index	abstract[192]	giv[192]	_	_
+39-10	3981-3984	for	_	_	_	_
+39-11	3985-3993	locating	_	_	_	_
+39-12	3994-4002	multiple	abstract[193]	giv[193]	coref	43-7[207_193]
+39-13	4003-4010	sources	abstract[193]	giv[193]	_	_
+39-14	4011-4013	of	abstract[193]	giv[193]	_	_
+39-15	4014-4023	contagion	abstract[193]|organization[194]	giv[193]|giv[194]	coref	43-8[0_194]
+39-16	4024-4026	in	abstract[193]|organization[194]	giv[193]|giv[194]	_	_
+39-17	4027-4034	complex	abstract[193]|organization[194]|place[195]	giv[193]|giv[194]|new[195]	_	_
+39-18	4035-4043	networks	abstract[193]|organization[194]|place[195]	giv[193]|giv[194]|new[195]	_	_
+39-19	4044-4049	under	abstract[193]|organization[194]|place[195]	giv[193]|giv[194]|new[195]	_	_
+39-20	4050-4053	the	abstract[193]|organization[194]|place[195]|abstract[197]	giv[193]|giv[194]|new[195]|new[197]	_	_
+39-21	4054-4057	SIR	abstract[193]|organization[194]|place[195]|person|abstract[197]	giv[193]|giv[194]|new[195]|giv|new[197]	_	_
+39-22	4058-4063	model	abstract[193]|organization[194]|place[195]|abstract[197]	giv[193]|giv[194]|new[195]|new[197]	_	_
+39-23	4064-4065	.	_	_	_	_
+
+#Text=2.4 .
+40-1	4066-4069	2.4	abstract	new	_	_
+40-2	4070-4071	.	_	_	_	_
+
+#Text=The Method
+41-1	4072-4075	The	abstract[199]	new[199]	coref	42-7[202_199]
+41-2	4076-4082	Method	abstract[199]	new[199]	_	_
+
+#Text=In this section , we present the method at length in this section .
+42-1	4083-4085	In	_	_	_	_
+42-2	4086-4090	this	abstract[200]	new[200]	coref	42-12[204_200]
+42-3	4091-4098	section	abstract[200]	new[200]	_	_
+42-4	4099-4100	,	_	_	_	_
+42-5	4101-4103	we	person	giv	_	_
+42-6	4104-4111	present	_	_	_	_
+42-7	4112-4115	the	abstract[202]	giv[202]	_	_
+42-8	4116-4122	method	abstract[202]	giv[202]	_	_
+42-9	4123-4125	at	abstract[202]	giv[202]	_	_
+42-10	4126-4132	length	abstract[202]|quantity[203]	giv[202]|new[203]	_	_
+42-11	4133-4135	in	abstract[202]|quantity[203]	giv[202]|new[203]	_	_
+42-12	4136-4140	this	abstract[202]|quantity[203]|object[204]	giv[202]|new[203]|giv[204]	_	_
+42-13	4141-4148	section	abstract[202]|quantity[203]|object[204]	giv[202]|new[203]|giv[204]	_	_
+42-14	4149-4150	.	_	_	_	_
+
+#Text=The purpose of is to locate multiple contagion sources , which is realized by following four steps in Algorithm 1 .
+43-1	4151-4154	The	abstract[205]	new[205]	_	_
+43-2	4155-4162	purpose	abstract[205]	new[205]	_	_
+43-3	4163-4165	of	abstract[205]	new[205]	_	_
+43-4	4166-4168	is	_	_	_	_
+43-5	4169-4171	to	_	_	_	_
+43-6	4172-4178	locate	_	_	_	_
+43-7	4179-4187	multiple	abstract[207]	giv[207]	_	_
+43-8	4188-4197	contagion	organization|abstract[207]	giv|giv[207]	_	_
+43-9	4198-4205	sources	abstract[207]	giv[207]	_	_
+43-10	4206-4207	,	_	_	_	_
+43-11	4208-4213	which	_	_	_	_
+43-12	4214-4216	is	_	_	_	_
+43-13	4217-4225	realized	_	_	_	_
+43-14	4226-4228	by	_	_	_	_
+43-15	4229-4238	following	_	_	_	_
+43-16	4239-4243	four	abstract[208]	new[208]	_	_
+43-17	4244-4249	steps	abstract[208]	new[208]	_	_
+43-18	4250-4252	in	abstract[208]	new[208]	_	_
+43-19	4253-4262	Algorithm	abstract[208]|abstract[209]	new[208]|new[209]	_	_
+43-20	4263-4264	1	abstract[208]|abstract[209]	new[208]|new[209]	_	_
+43-21	4265-4266	.	_	_	_	_
+
+#Text=2.4.1 .
+44-1	4267-4272	2.4.1	person	new	ana	48-6
+44-2	4273-4274	.	_	_	_	_
+
+#Text=Step 1 : Label Assignment in the Snapshot of Network
+45-1	4275-4279	Step	abstract[211]	new[211]	_	_
+45-2	4280-4281	1	abstract[211]	new[211]	_	_
+45-3	4282-4283	:	_	_	_	_
+45-4	4284-4289	Label	abstract|object[213]	giv|new[213]	coref|coref	48-22[233_0]|48-22[233_0]
+45-5	4290-4300	Assignment	object[213]	new[213]	_	_
+45-6	4301-4303	in	object[213]	new[213]	_	_
+45-7	4304-4307	the	object[213]|abstract[214]	new[213]|new[214]	_	_
+45-8	4308-4316	Snapshot	object[213]|abstract[214]	new[213]|new[214]	_	_
+45-9	4317-4319	of	object[213]|abstract[214]	new[213]|new[214]	_	_
+45-10	4320-4327	Network	object[213]|abstract[214]|organization	new[213]|new[214]|new	_	_
+
+#Text=Due to the incomplete information , only two states can be seen in the network — infected and uninfected ( susceptible and recovered ) .
+46-1	4328-4331	Due	_	_	_	_
+46-2	4332-4334	to	_	_	_	_
+46-3	4335-4338	the	abstract[216]	giv[216]	_	_
+46-4	4339-4349	incomplete	abstract[216]	giv[216]	_	_
+46-5	4350-4361	information	abstract[216]	giv[216]	_	_
+46-6	4362-4363	,	_	_	_	_
+46-7	4364-4368	only	person[217]	giv[217]	_	_
+46-8	4369-4372	two	person[217]	giv[217]	_	_
+46-9	4373-4379	states	person[217]	giv[217]	_	_
+46-10	4380-4383	can	_	_	_	_
+46-11	4384-4386	be	_	_	_	_
+46-12	4387-4391	seen	_	_	_	_
+46-13	4392-4394	in	_	_	_	_
+46-14	4395-4398	the	place[218]	giv[218]	_	_
+46-15	4399-4406	network	place[218]	giv[218]	_	_
+46-16	4407-4408	—	_	_	_	_
+46-17	4409-4417	infected	_	_	_	_
+46-18	4418-4421	and	_	_	_	_
+46-19	4422-4432	uninfected	_	_	_	_
+46-20	4433-4434	(	_	_	_	_
+46-21	4435-4446	susceptible	_	_	_	_
+46-22	4447-4450	and	_	_	_	_
+46-23	4451-4460	recovered	_	_	_	_
+46-24	4461-4462	)	_	_	_	_
+46-25	4463-4464	.	_	_	_	_
+
+#Text=The infection state of nodes is shown as follows — infected nodes carry the virus , denoted by 1 ; uninfected nodes carry no virus , denoted by 0 .
+47-1	4465-4468	The	abstract[220]	new[220]	_	_
+47-2	4469-4478	infection	abstract|abstract[220]	giv|new[220]	_	_
+47-3	4479-4484	state	abstract[220]	new[220]	_	_
+47-4	4485-4487	of	abstract[220]	new[220]	_	_
+47-5	4488-4493	nodes	abstract[220]|abstract	new[220]|giv	coref	47-11[222_0]
+47-6	4494-4496	is	_	_	_	_
+47-7	4497-4502	shown	_	_	_	_
+47-8	4503-4505	as	_	_	_	_
+47-9	4506-4513	follows	_	_	_	_
+47-10	4514-4515	—	_	_	_	_
+47-11	4516-4524	infected	abstract[222]	giv[222]	coref	47-21[225_222]
+47-12	4525-4530	nodes	abstract[222]	giv[222]	_	_
+47-13	4531-4536	carry	_	_	_	_
+47-14	4537-4540	the	abstract[223]	new[223]	coref	47-24[226_223]
+47-15	4541-4546	virus	abstract[223]	new[223]	_	_
+47-16	4547-4548	,	_	_	_	_
+47-17	4549-4556	denoted	_	_	_	_
+47-18	4557-4559	by	_	_	_	_
+47-19	4560-4561	1	quantity	new	_	_
+47-20	4562-4563	;	_	_	_	_
+47-21	4564-4574	uninfected	abstract[225]	giv[225]	_	_
+47-22	4575-4580	nodes	abstract[225]	giv[225]	_	_
+47-23	4581-4586	carry	_	_	_	_
+47-24	4587-4589	no	abstract[226]	giv[226]	_	_
+47-25	4590-4595	virus	abstract[226]	giv[226]	_	_
+47-26	4596-4597	,	_	_	_	_
+47-27	4598-4605	denoted	_	_	_	_
+47-28	4606-4608	by	_	_	_	_
+47-29	4609-4610	0	quantity	new	_	_
+47-30	4611-4612	.	_	_	_	_
+
+#Text=That is , if node i is infected , then ; if node i is uninfected , then , where is the initial potential concentration label of node i .
+48-1	4613-4617	That	_	_	_	_
+48-2	4618-4620	is	_	_	_	_
+48-3	4621-4622	,	_	_	_	_
+48-4	4623-4625	if	_	_	_	_
+48-5	4626-4630	node	object	giv	coref	48-13
+48-6	4631-4632	i	person	giv	ana	48-14
+48-7	4633-4635	is	_	_	_	_
+48-8	4636-4644	infected	_	_	_	_
+48-9	4645-4646	,	_	_	_	_
+48-10	4647-4651	then	_	_	_	_
+48-11	4652-4653	;	_	_	_	_
+48-12	4654-4656	if	_	_	_	_
+48-13	4657-4661	node	object	giv	coref	48-28
+48-14	4662-4663	i	person	giv	ana	48-29
+48-15	4664-4666	is	_	_	_	_
+48-16	4667-4677	uninfected	_	_	_	_
+48-17	4678-4679	,	_	_	_	_
+48-18	4680-4684	then	_	_	_	_
+48-19	4685-4686	,	_	_	_	_
+48-20	4687-4692	where	_	_	_	_
+48-21	4693-4695	is	_	_	_	_
+48-22	4696-4699	the	abstract[233]	giv[233]	_	_
+48-23	4700-4707	initial	abstract[233]	giv[233]	_	_
+48-24	4708-4717	potential	abstract[233]	giv[233]	_	_
+48-25	4718-4731	concentration	abstract|abstract[233]	giv|giv[233]	_	_
+48-26	4732-4737	label	abstract[233]	giv[233]	_	_
+48-27	4738-4740	of	abstract[233]	giv[233]	_	_
+48-28	4741-4745	node	abstract[233]|object	giv[233]|giv	_	_
+48-29	4746-4747	i	person	giv	_	_
+48-30	4748-4749	.	_	_	_	_
