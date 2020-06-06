@@ -2,6 +2,7 @@ import glob
 import os
 import sys
 
+from tqdm import tqdm
 from lib.whitespace_tokenize import tokenize
 
 
@@ -16,7 +17,7 @@ def main(d):
     for dirname in d:
         file_names = glob.glob(os.path.join(dirname, "*.xml"))
         total_wc = 0
-        for file_name in file_names:
+        for file_name in tqdm(file_names):
             with open(file_name, "r") as f:
                 total_wc += rough_word_count(f.read())
 
