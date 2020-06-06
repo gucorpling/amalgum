@@ -19,6 +19,7 @@ from nlp_modules.pos_tagger import PoSTagger
 from nlp_modules.s_typer import STyper
 from nlp_modules.ace_entities import AceEntities
 from nlp_modules.xrenner_coreferencer import XrennerCoref
+from nlp_modules.rst_parser import RSTParser
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
@@ -35,6 +36,7 @@ MODULES = {
     "dep_parser": DepParser,
     "ace_entities": AceEntities,
     "xrenner": XrennerCoref,
+    "rst_parser": RSTParser
 }
 
 
@@ -152,7 +154,7 @@ def main():
         "--modules",
         nargs="+",
         choices=MODULES.keys(),
-        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser", "s_typer", "ace_entities", "xrenner"],
+        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser", "s_typer", "ace_entities", "xrenner", "rst_parser"],
         help="NLP pipeline modules, included in the order they are specified.",
     )
     p.add_argument(

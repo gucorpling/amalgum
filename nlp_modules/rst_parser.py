@@ -17,9 +17,9 @@ else:
 script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 lib_dir = script_dir + ".." + os.sep + "lib"
 
-class rstParser(NLPModule):
+class RSTParser(NLPModule):
 
-    requires = (PipelineDep.S_TYPE, PipelineDep.EDUS, PipelineDep.PARSE)
+    requires = (PipelineDep.S_TYPE, PipelineDep.PARSE)
     provides = (PipelineDep.RST_OUT,)
 
     def __init__(self):
@@ -56,7 +56,7 @@ class rstParser(NLPModule):
     def parse(self, doc_dict):
 
         # construct .merge file that contains all the features
-        fmerge = merge(doc_dict["edu"], doc_dict["xml"], doc_dict["dep"], doc_dict["filename"], seq=self.sequencer, as_text=True)
+        fmerge = merge(doc_dict["rst"], doc_dict["xml"], doc_dict["dep"], doc_dict["filename"], seq=self.sequencer, as_text=True)
 
         # Use brown clsuters
         with gzip.open(lib_dir + "/dplp_plusplus/resources/bc3200.pickle.gz") as fin:
