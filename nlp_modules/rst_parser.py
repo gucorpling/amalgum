@@ -22,10 +22,14 @@ class RSTParser(NLPModule):
     requires = (PipelineDep.S_TYPE, PipelineDep.PARSE)
     provides = (PipelineDep.RST_OUT,)
 
-    def __init__(self):
+    def __init__(self, opts):
         self.test_dependencies()
         self.sequencer = Sequencer()
         self.dr = DocReader()
+        # Use brown clsuters
+        with gzip.open(lib_dir + "/dplp_plusplus/resources/bc3200.pickle.gz") as fin:
+            print('Load Brown clusters for creating features ...')
+            self.bcvocab = load(fin)
 
     @staticmethod
     def download_file(url, local_path):
@@ -43,10 +47,10 @@ class RSTParser(NLPModule):
         import flair            # version==0.4.4
         import torch            # version==1.2.0; torchvision==0.4.0; tqdm==4.43.0
         # Check flair and torch version
-        if flair.__version__ != '0.4.4':
-            raise Exception("flair version 1.4.0 must be used with rstParser")
-        if torch.__version__ != '1.2.0':
-            raise Exception("Torch version 1.4.0 must be used with rstParser")
+        #if flair.__version__ != '0.4.4':
+        #    raise Exception("flair version 0.4.4 must be used with rstParser")
+        #if torch.__version__ != '1.2.0':
+        #    raise Exception("Torch version 1.4.0 must be used with rstParser")
 
         # Check the pretrain model
         model_dir = os.path.join(lib_dir, "dplp_plusplus", "models")
@@ -58,12 +62,7 @@ class RSTParser(NLPModule):
         # construct .merge file that contains all the features
         fmerge = merge(doc_dict["rst"], doc_dict["xml"], doc_dict["dep"], doc_dict["filename"], seq=self.sequencer, as_text=True)
 
-        # Use brown clsuters
-        with gzip.open(lib_dir + "/dplp_plusplus/resources/bc3200.pickle.gz") as fin:
-            print('Load Brown clusters for creating features ...')
-            bcvocab = load(fin)
-
-        rst_out = evalparser(fmerge, report=False, bcvocab=bcvocab,  draw=False, withdp=False,
+        rst_out = evalparser(fmerge, report=False, bcvocab=self.bcvocab,  draw=False, withdp=False,
                    fdpvocab="data/resources/word-dict.pickle.gz", fprojmat="data/resources/projmat.pickle.gz")
 
         return {"rst": rst_out}
@@ -73,7 +72,7 @@ class RSTParser(NLPModule):
         processing_function = self.parse
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
-        self.process_files_multiformat(input_dir, processing_function, output_dir, multithreaded=False)
+        self.process_files_multiformat(input_dir, output_dir, processing_function, multithreaded=False)
 
 
 def test_main():
