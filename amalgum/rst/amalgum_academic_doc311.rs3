@@ -1,0 +1,233 @@
+<rst>
+<header>
+	<relations>
+			<rel name="elaboration" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3.</segment>
+<segment id="2" parent="1002" relname="preparation">Design of the Pad Prototypes</segment>
+<segment id="3" parent="1003" relname="span">The objective of the analysis is to use the finite element method approach for a preliminary study of the best pad configuration</segment>
+<segment id="4" parent="3" relname="elaboration">that can be applied for a DWC with a lumped track .</segment>
+<segment id="5" parent="1006" relname="span">The geometries</segment>
+<segment id="6" parent="5" relname="elaboration">that are modelled and analyzed in ANSYS® Maxwell</segment>
+<segment id="7" parent="1005" relname="same_unit">are the circular pad , the double-D pad , and the DDQ pad .</segment>
+<segment id="8" parent="1007" relname="sequence">These pads are at first coupled in a homogeneous way , such as a CP – CP configuration ,</segment>
+<segment id="9" parent="1009" relname="span">and then are combined</segment>
+<segment id="10" parent="1010" relname="span">in order to obtain the different values of the coupling coefficients</segment>
+<segment id="11" parent="10" relname="elaboration">that will help us in the choice of the best configuration .</segment>
+<segment id="12" parent="1013" relname="span">The computing machine</segment>
+<segment id="13" parent="12" relname="elaboration">chosen for the simulations</segment>
+<segment id="14" parent="1012" relname="same_unit">is an Asus® ROG with an Intel® core i7700 3.6 GHz processor , 16 Gb of RAM , and a dedicated GTX 1050 4 Gb graphic card .</segment>
+<segment id="15" parent="1015" relname="span">Before the start of the analysis , it is necessary to define the method and the procedure</segment>
+<segment id="16" parent="15" relname="elaboration">used in the design of the models for the simulation .</segment>
+<segment id="17" parent="1018" relname="span">The idea is to study the change in the coupling factor</segment>
+<segment id="18" parent="1020" relname="span">when the receiving side</segment>
+<segment id="19" parent="18" relname="restatement">( Rx )</segment>
+<segment id="20" parent="1021" relname="span">is moving upon two different pads in the transmitting side</segment>
+<segment id="21" parent="20" relname="elaboration">( Tx ) ,</segment>
+<segment id="22" parent="1018" relname="circumstance">as shown in</segment>
+<segment id="23" parent="24" relname="preparation">Figure 8</segment>
+<segment id="24" parent="1023" relname="span">.</segment>
+<segment id="25" parent="1025" relname="span">These pads ,</segment>
+<segment id="26" parent="25" relname="elaboration">whose characteristics are reported in Table 1 ,</segment>
+<segment id="27" parent="1027" relname="preparation">have a design</segment>
+<segment id="28" parent="1027" relname="joint">that can be challenging for a computing machine ,</segment>
+<segment id="29" parent="1029" relname="span">especially</segment>
+<segment id="30" parent="1030" relname="span">because the building of the mesh for the coil</segment>
+<segment id="31" parent="30" relname="elaboration">that is characterized by a short distance between every turn is complex and time-consuming .</segment>
+<segment id="32" parent="1032" relname="span">Consequently , it is necessary to make some assumptions and simplifications</segment>
+<segment id="33" parent="32" relname="elaboration">that can make the simulations less challenging and faster .</segment>
+<segment id="34" parent="1035" relname="span">A first assumption can be made</segment>
+<segment id="35" parent="34" relname="elaboration">starting with an analysis on how the Rx pad moves along the track .</segment>
+<segment id="36" parent="1036" relname="span">The power</segment>
+<segment id="37" parent="1038" relname="span">exchanged between the primary and secondary sides is expressed as follows :</segment>
+<segment id="38" parent="37" relname="evidence">( 1 )</segment>
+<segment id="39" parent="1040" relname="circumstance">where and are the mutual inductances between the pick-up coil and the two respective transmitting coils ,</segment>
+<segment id="40" parent="1041" relname="span">is the load</segment>
+<segment id="41" parent="40" relname="elaboration">attached to the pick-up coil ,</segment>
+<segment id="42" parent="1042" relname="span">is the current</segment>
+<segment id="43" parent="1043" relname="joint">that flows in the transmitting coils ,</segment>
+<segment id="44" parent="1043" relname="joint">and is the angular frequency of the current .</segment>
+<segment id="45" parent="1046" relname="span">From the expression</segment>
+<segment id="46" parent="45" relname="elaboration">it is highlighted</segment>
+<segment id="47" parent="1047" relname="span">how the power</segment>
+<segment id="48" parent="1048" relname="span">exchanged between couplers depends on the mutual inductances</segment>
+<segment id="49" parent="48" relname="elaboration">that are a function of the distance x .</segment>
+<segment id="50" parent="1050" relname="span">The mutual inductance is composed of two terms :</segment>
+<segment id="51" parent="1051" relname="span">a first one</segment>
+<segment id="52" parent="1052" relname="span">that represents the static component ,</segment>
+<segment id="53" parent="1053" relname="joint">which is also called transformer component ,</segment>
+<segment id="54" parent="1054" relname="span">and a second one</segment>
+<segment id="55" parent="1055" relname="span">that represents the motion component ,</segment>
+<segment id="56" parent="55" relname="elaboration">which is a function of the distance x .</segment>
+<segment id="57" parent="1058" relname="circumstance">As demonstrated in Reference ,</segment>
+<segment id="58" parent="1058" relname="span">the motion component is negligible</segment>
+<segment id="59" parent="58" relname="circumstance">when compared to the transformer component .</segment>
+<segment id="60" parent="1060" relname="span">Therefore , it is not necessary to perform a simulation with a transient solution ,</segment>
+<segment id="61" parent="60" relname="elaboration">which requires more computational power .</segment>
+<segment id="62" parent="1062" relname="span">However , it is possible to perform a sweep-analysis with an eddy current solution ,</segment>
+<segment id="63" parent="1063" relname="span">where the distance between the Rx and the Txs along the x-axis is changed with the start</segment>
+<segment id="64" parent="1065" relname="circumstance">when the receiver is perfectly aligned with the first transmitter</segment>
+<segment id="65" parent="1065" relname="span">and the stop</segment>
+<segment id="66" parent="65" relname="circumstance">when the receiver is perfectly aligned with the second transmitter .</segment>
+<segment id="67" parent="1068" relname="span">Moreover , there is the possibility</segment>
+<segment id="68" parent="1069" relname="span">to perform a further simplification</segment>
+<segment id="69" parent="68" relname="means">by changing the geometry of the pads ,</segment>
+<segment id="70" parent="1068" relname="elaboration">making them less difficult to mesh for the computing machine .</segment>
+<segment id="71" parent="1072" relname="span">According to Ampere ’s law , the magnetic field is related to the current density</segment>
+<segment id="72" parent="71" relname="elaboration">( J )</segment>
+<segment id="73" parent="1073" relname="span">in the coil and not with any geometric parameter :</segment>
+<segment id="74" parent="73" relname="elaboration">( 2 )</segment>
+<segment id="75" parent="1076" relname="span">Therefore , it is possible to simplify the pads</segment>
+<segment id="76" parent="75" relname="elaboration">used in the simulation</segment>
+<segment id="77" parent="1077" relname="span">by substituting the 20-turns with 4 mm of copper wire diameter pad with a new one</segment>
+<segment id="78" parent="1079" relname="span">consisting of a single turn</segment>
+<segment id="79" parent="78" relname="elaboration">that can grant the same current density as the previous one ,</segment>
+<segment id="80" parent="1078" relname="same_unit">as shown in</segment>
+<segment id="81" parent="82" relname="preparation">Figure 9</segment>
+<segment id="82" parent="1081" relname="span">.</segment>
+<segment id="83" parent="1083" relname="span">The new pad will have then a radius equal to 8.95 mm</segment>
+<segment id="84" parent="1085" relname="span">due to the following relation :</segment>
+<segment id="85" parent="84" relname="evidence">( 3 )</segment>
+<segment id="86" parent="1086" relname="same_unit">where is the radius of the conductor of the new pad ,</segment>
+<segment id="87" parent="1088" relname="same_unit">is the radius of the conductor of the previous pad ,</segment>
+<segment id="88" parent="1088" relname="same_unit">is the area of the section of the conductor of the new pad ,</segment>
+<segment id="89" parent="1087" relname="same_unit">and as last is the total area of the section of all the conductors of the old pad .</segment>
+<segment id="90" parent="1090" relname="span">Furthermore ,</segment>
+<segment id="91" parent="1091" relname="span">in order to grant the same total current density in both the cases ,</segment>
+<segment id="92" parent="1092" relname="span">it is necessary to increase the excitation current of the new and simplified CP up to 400 A.</segment>
+<segment id="93" parent="1093" relname="span">With a wire of this size ,</segment>
+<segment id="94" parent="1094" relname="span">it is necessary to take into account</segment>
+<segment id="95" parent="1095" relname="joint">that the eddy effect and the displacement currents would reach high values</segment>
+<segment id="96" parent="1095" relname="joint">and , as a consequence , their effect will be removed from the simulation .</segment>
+<segment id="97" parent="1097" relname="same_unit">The drawback of this design choice</segment>
+<segment id="98" parent="1098" relname="span">is that the mutual and auto inductances</segment>
+<segment id="99" parent="1099" relname="span">that will be computed by ANSYS® Maxwell are not the same as the original pads</segment>
+<segment id="100" parent="99" relname="elaboration">that would be used in a real scenario .</segment>
+<segment id="101" parent="1102" relname="span">This can be easily verified</segment>
+<segment id="102" parent="1104" relname="span">by observing the expression of the inductance of an ideal solenoid :</segment>
+<segment id="103" parent="102" relname="evidence">( 4 )</segment>
+<segment id="104" parent="1104" relname="elaboration">where is the permeability of the material ,</segment>
+<segment id="105" parent="1105" relname="same_unit">is the number of turns of the coil ,</segment>
+<segment id="106" parent="1105" relname="same_unit">is the area of the section of the coil ,</segment>
+<segment id="107" parent="1100" relname="joint">and as last , is the length of the coil .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1004" relname="preparation"/>
+<group id="1004" type="span" parent="1002" relname="span"/>
+<group id="1005" type="multinuc" parent="1007" relname="preparation"/>
+<group id="1006" type="span" parent="1005" relname="same_unit"/>
+<group id="1007" type="multinuc" parent="1004" relname="span"/>
+<group id="1009" type="span" parent="1007" relname="sequence"/>
+<group id="1010" type="span" parent="9" relname="purpose"/>
+<group id="1011" type="span" parent="1007" relname="sequence"/>
+<group id="1012" type="multinuc" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="1012" relname="same_unit"/>
+<group id="1014" type="multinuc" parent="1012" relname="circumstance"/>
+<group id="1015" type="span" parent="1014" relname="joint"/>
+<group id="1016" type="multinuc" parent="1014" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1019" type="multinuc" parent="17" relname="circumstance"/>
+<group id="1020" type="span" parent="1019" relname="same_unit"/>
+<group id="1021" type="span" parent="1019" relname="same_unit"/>
+<group id="1022" type="multinuc" parent="1016" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="joint"/>
+<group id="1024" type="span" parent="1022" relname="joint"/>
+<group id="1025" type="span" parent="1026" relname="preparation"/>
+<group id="1026" type="span" parent="1024" relname="span"/>
+<group id="1027" type="multinuc" parent="1026" relname="span"/>
+<group id="1028" type="multinuc" parent="1027" relname="joint"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="29" relname="cause"/>
+<group id="1031" type="multinuc" parent="1028" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="multinuc" parent="1031" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="1034" relname="span"/>
+<group id="1036" type="span" parent="1035" relname="elaboration"/>
+<group id="1037" type="multinuc" parent="36" relname="elaboration"/>
+<group id="1038" type="span" parent="1037" relname="same_unit"/>
+<group id="1039" type="span" parent="1037" relname="same_unit"/>
+<group id="1040" type="multinuc" parent="1039" relname="span"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="span" parent="1040" relname="same_unit"/>
+<group id="1043" type="multinuc" parent="42" relname="elaboration"/>
+<group id="1044" type="multinuc" parent="1033" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="joint"/>
+<group id="1046" type="span" parent="1045" relname="same_unit"/>
+<group id="1047" type="span" parent="1045" relname="same_unit"/>
+<group id="1048" type="span" parent="47" relname="elaboration"/>
+<group id="1049" type="multinuc" parent="1044" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="50" relname="elaboration"/>
+<group id="1052" type="span" parent="51" relname="elaboration"/>
+<group id="1053" type="multinuc" parent="52" relname="elaboration"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+<group id="1055" type="span" parent="54" relname="elaboration"/>
+<group id="1056" type="multinuc" parent="1049" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="multinuc" parent="1056" relname="joint"/>
+<group id="1060" type="span" parent="1059" relname="contrast"/>
+<group id="1061" type="multinuc" parent="1059" relname="contrast"/>
+<group id="1062" type="span" parent="1061" relname="joint"/>
+<group id="1063" type="span" parent="62" relname="elaboration"/>
+<group id="1064" type="span" parent="63" relname="circumstance"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="multinuc" parent="1061" relname="joint"/>
+<group id="1067" type="span" parent="1066" relname="joint"/>
+<group id="1068" type="span" parent="1067" relname="span"/>
+<group id="1069" type="span" parent="67" relname="purpose"/>
+<group id="1070" type="span" parent="1066" relname="joint"/>
+<group id="1071" type="multinuc" parent="1074" relname="attribution"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="span" parent="1071" relname="same_unit"/>
+<group id="1074" type="multinuc" parent="1070" relname="span"/>
+<group id="1075" type="multinuc" parent="1074" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="same_unit"/>
+<group id="1077" type="span" parent="1075" relname="same_unit"/>
+<group id="1078" type="multinuc" parent="77" relname="elaboration"/>
+<group id="1079" type="span" parent="1078" relname="same_unit"/>
+<group id="1080" type="span" parent="1074" relname="joint"/>
+<group id="1081" type="span" parent="1082" relname="preparation"/>
+<group id="1082" type="multinuc" parent="1080" relname="span"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="83" relname="elaboration"/>
+<group id="1085" type="span" parent="1084" relname="span"/>
+<group id="1086" type="multinuc" parent="1085" relname="elaboration"/>
+<group id="1087" type="multinuc" parent="1086" relname="same_unit"/>
+<group id="1088" type="multinuc" parent="1087" relname="same_unit"/>
+<group id="1089" type="multinuc" parent="1082" relname="joint"/>
+<group id="1090" type="span" parent="1089" relname="joint"/>
+<group id="1091" type="span" parent="90" relname="purpose"/>
+<group id="1092" type="span" parent="91" relname="elaboration"/>
+<group id="1093" type="span" parent="92" relname="elaboration"/>
+<group id="1094" type="span" parent="93" relname="elaboration"/>
+<group id="1095" type="multinuc" parent="94" relname="elaboration"/>
+<group id="1096" type="multinuc" parent="1089" relname="joint"/>
+<group id="1097" type="multinuc" parent="1096" relname="joint"/>
+<group id="1098" type="span" parent="1097" relname="same_unit"/>
+<group id="1099" type="span" parent="98" relname="elaboration"/>
+<group id="1100" type="multinuc" parent="1096" relname="joint"/>
+<group id="1101" type="multinuc" parent="1100" relname="joint"/>
+<group id="1102" type="span" parent="1101" relname="same_unit"/>
+<group id="1103" type="span" parent="101" relname="means"/>
+<group id="1104" type="span" parent="1103" relname="span"/>
+<group id="1105" type="multinuc" parent="1101" relname="same_unit"/>
+	</body>
+</rst>

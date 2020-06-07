@@ -1,0 +1,1527 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=West Kirby
+1-1	0-4	West	person[1]	new[1]	_	_
+1-2	5-10	Kirby	person[1]	new[1]	_	_
+
+#Text=West Kirby is on the Wirral Peninsula in Merseyside .
+2-1	11-15	West	person[2]	new[2]	_	_
+2-2	16-21	Kirby	person[2]	new[2]	_	_
+2-3	22-24	is	_	_	_	_
+2-4	25-27	on	_	_	_	_
+2-5	28-31	the	place[4]	new[4]	_	_
+2-6	32-38	Wirral	person|place[4]	new|new[4]	coref	21-15
+2-7	39-48	Peninsula	place[4]	new[4]	_	_
+2-8	49-51	in	place[4]	new[4]	_	_
+2-9	52-62	Merseyside	place[4]|place	new[4]|new	_	_
+2-10	63-64	.	_	_	_	_
+
+#Text=Hoylake is an idyllic seaside town overlooking the Irish Sea with views of Wales , Hilbre Island and Liverpool .
+3-1	65-72	Hoylake	organization	new	coref	3-3[8_0]
+3-2	73-75	is	_	_	_	_
+3-3	76-78	an	organization[8]	giv[8]	coref	6-11[28_8]
+3-4	79-86	idyllic	organization[8]	giv[8]	_	_
+3-5	87-94	seaside	place|organization[8]	new|giv[8]	coref	10-8
+3-6	95-99	town	organization[8]	giv[8]	_	_
+3-7	100-111	overlooking	_	_	_	_
+3-8	112-115	the	place[9]	new[9]	_	_
+3-9	116-121	Irish	place[9]	new[9]	_	_
+3-10	122-125	Sea	place[9]	new[9]	_	_
+3-11	126-130	with	_	_	_	_
+3-12	131-136	views	abstract[10]	new[10]	coref	11-7[52_10]
+3-13	137-139	of	abstract[10]	new[10]	_	_
+3-14	140-145	Wales	abstract[10]|place|place[12]	new[10]|new|new[12]	coref|coref|coref|coref	11-10[54_0]|11-10[55_12]|11-10[54_0]|11-10[55_12]
+3-15	146-147	,	abstract[10]|place[12]	new[10]|new[12]	_	_
+3-16	148-154	Hilbre	abstract[10]|place[12]|person|place[14]	new[10]|new[12]|new|new[14]	coref|coref|coref|coref	11-13|11-13[57_14]|11-13|11-13[57_14]
+3-17	155-161	Island	abstract[10]|place[12]|place[14]	new[10]|new[12]|new[14]	_	_
+3-18	162-165	and	abstract[10]|place[12]	new[10]|new[12]	_	_
+3-19	166-175	Liverpool	abstract[10]|place[12]|place	new[10]|new[12]|new	ana	4-1
+3-20	176-177	.	_	_	_	_
+
+#Text=It has been ranked a top global tourist destination .
+4-1	178-180	It	place	giv	coref	5-11
+4-2	181-184	has	_	_	_	_
+4-3	185-189	been	_	_	_	_
+4-4	190-196	ranked	_	_	_	_
+4-5	197-198	a	place[18]	new[18]	_	_
+4-6	199-202	top	place[18]	new[18]	_	_
+4-7	203-209	global	place[18]	new[18]	_	_
+4-8	210-217	tourist	person|place[18]	new|new[18]	_	_
+4-9	218-229	destination	place[18]	new[18]	_	_
+4-10	230-231	.	_	_	_	_
+
+#Text=International tourism booms during major golf tournaments at the Royal Liverpool Golf Club .
+5-1	232-245	International	abstract[19]	new[19]	_	_
+5-2	246-253	tourism	abstract[19]	new[19]	_	_
+5-3	254-259	booms	_	_	_	_
+5-4	260-266	during	_	_	_	_
+5-5	267-272	major	event[21]	new[21]	_	_
+5-6	273-277	golf	abstract|event[21]	new|new[21]	coref	5-12
+5-7	278-289	tournaments	event[21]	new[21]	_	_
+5-8	290-292	at	event[21]	new[21]	_	_
+5-9	293-296	the	event[21]|place[24]	new[21]|new[24]	coref	59-1[326_24]
+5-10	297-302	Royal	event[21]|place[24]	new[21]|new[24]	_	_
+5-11	303-312	Liverpool	event[21]|place|place[24]	new[21]|giv|new[24]	coref	38-31
+5-12	313-317	Golf	event[21]|abstract|place[24]	new[21]|giv|new[24]	coref	59-3
+5-13	318-322	Club	event[21]|place[24]	new[21]|new[24]	_	_
+5-14	323-324	.	_	_	_	_
+
+#Text=Tiger Woods is one of many celebrities who have popularised the town .
+6-1	325-330	Tiger	person[25]	new[25]	_	_
+6-2	331-336	Woods	person[25]	new[25]	_	_
+6-3	337-339	is	_	_	_	_
+6-4	340-343	one	person[26]	new[26]	_	_
+6-5	344-346	of	person[26]	new[26]	_	_
+6-6	347-351	many	person[26]|person[27]	new[26]|new[27]	_	_
+6-7	352-363	celebrities	person[26]|person[27]	new[26]|new[27]	_	_
+6-8	364-367	who	_	_	_	_
+6-9	368-372	have	_	_	_	_
+6-10	373-384	popularised	_	_	_	_
+6-11	385-388	the	organization[28]	giv[28]	coref	7-4[0_28]
+6-12	389-393	town	organization[28]	giv[28]	_	_
+6-13	394-395	.	_	_	_	_
+
+#Text=The award winning Hoylake branch of Home Bargains has become a must visit location in the past decade after achieving a cult status .
+7-1	396-399	The	abstract[29]	new[29]	_	_
+7-2	400-405	award	abstract[29]	new[29]	_	_
+7-3	406-413	winning	abstract[29]	new[29]	_	_
+7-4	414-421	Hoylake	abstract[29]|organization|object[31]	new[29]|giv|new[31]	coref|coref	12-5|12-5
+7-5	422-428	branch	abstract[29]|object[31]	new[29]|new[31]	_	_
+7-6	429-431	of	abstract[29]|object[31]	new[29]|new[31]	_	_
+7-7	432-436	Home	abstract[29]|object[31]|person	new[29]|new[31]|new	_	_
+7-8	437-445	Bargains	abstract[29]|object[31]|place	new[29]|new[31]|new	_	_
+7-9	446-449	has	_	_	_	_
+7-10	450-456	become	_	_	_	_
+7-11	457-458	a	place[34]	new[34]	_	_
+7-12	459-463	must	place[34]	new[34]	_	_
+7-13	464-469	visit	place[34]	new[34]	_	_
+7-14	470-478	location	place[34]	new[34]	_	_
+7-15	479-481	in	_	_	_	_
+7-16	482-485	the	time[35]	new[35]	_	_
+7-17	486-490	past	time[35]	new[35]	_	_
+7-18	491-497	decade	time[35]	new[35]	_	_
+7-19	498-503	after	_	_	_	_
+7-20	504-513	achieving	_	_	_	_
+7-21	514-515	a	abstract[37]	new[37]	_	_
+7-22	516-520	cult	place|abstract[37]	new|new[37]	_	_
+7-23	521-527	status	abstract[37]	new[37]	_	_
+7-24	528-529	.	_	_	_	_
+
+#Text=Situated on Market Street , the towns central road , it has been catching attention and has gained a growing fan base .
+8-1	530-538	Situated	_	_	_	_
+8-2	539-541	on	_	_	_	_
+8-3	542-548	Market	place[38]	new[38]	appos	8-6[40_38]
+8-4	549-555	Street	place[38]	new[38]	_	_
+8-5	556-557	,	_	_	_	_
+8-6	558-561	the	place[40]	giv[40]	ana	8-11[0_40]
+8-7	562-567	towns	place|place[40]	new|giv[40]	_	_
+8-8	568-575	central	place[40]	giv[40]	_	_
+8-9	576-580	road	place[40]	giv[40]	_	_
+8-10	581-582	,	_	_	_	_
+8-11	583-585	it	place	giv	coref	13-2
+8-12	586-589	has	_	_	_	_
+8-13	590-594	been	_	_	_	_
+8-14	595-603	catching	_	_	_	_
+8-15	604-613	attention	abstract	new	_	_
+8-16	614-617	and	_	_	_	_
+8-17	618-621	has	_	_	_	_
+8-18	622-628	gained	_	_	_	_
+8-19	629-630	a	person[43]	new[43]	_	_
+8-20	631-638	growing	person[43]	new[43]	_	_
+8-21	639-642	fan	person[43]	new[43]	_	_
+8-22	643-647	base	person[43]	new[43]	_	_
+8-23	648-649	.	_	_	_	_
+
+#Text=Understand
+9-1	650-660	Understand	_	_	_	_
+
+#Text=West Kirby is a small , Edwardian seaside town at the mouth of the Dee estuary .
+10-1	661-665	West	person[44]	new[44]	coref	10-4[46_44]
+10-2	666-671	Kirby	person[44]	new[44]	_	_
+10-3	672-674	is	_	_	_	_
+10-4	675-676	a	person[46]	giv[46]	_	_
+10-5	677-682	small	person[46]	giv[46]	_	_
+10-6	683-684	,	person[46]	giv[46]	_	_
+10-7	685-694	Edwardian	person[46]	giv[46]	_	_
+10-8	695-702	seaside	place|person[46]	giv|giv[46]	_	_
+10-9	703-707	town	person[46]	giv[46]	_	_
+10-10	708-710	at	person[46]	giv[46]	_	_
+10-11	711-714	the	person[46]|place[47]	giv[46]|new[47]	_	_
+10-12	715-720	mouth	person[46]|place[47]	giv[46]|new[47]	_	_
+10-13	721-723	of	person[46]|place[47]	giv[46]|new[47]	_	_
+10-14	724-727	the	person[46]|place[47]|place[49]	giv[46]|new[47]|new[49]	ana	11-1[0_49]
+10-15	728-731	Dee	person[46]|place[47]|person|place[49]	giv[46]|new[47]|new|new[49]	coref	21-23[99_0]
+10-16	732-739	estuary	person[46]|place[47]|place[49]	giv[46]|new[47]|new[49]	_	_
+10-17	740-741	.	_	_	_	_
+
+#Text=It offers a pleasant beach , views across to North Wales and Hilbre Island , as well as Coronation Gardens and a rare marine lake walk .
+11-1	742-744	It	place	giv	_	_
+11-2	745-751	offers	_	_	_	_
+11-3	752-753	a	place[51]	new[51]	_	_
+11-4	754-762	pleasant	place[51]	new[51]	_	_
+11-5	763-768	beach	place[51]	new[51]	_	_
+11-6	769-770	,	_	_	_	_
+11-7	771-776	views	abstract[52]	giv[52]	_	_
+11-8	777-783	across	abstract[52]	giv[52]	_	_
+11-9	784-786	to	abstract[52]	giv[52]	_	_
+11-10	787-792	North	abstract[52]|person|place[54]|place[55]	giv[52]|new|giv[54]|giv[55]	coref|coref|coref	40-30[0_54]|40-30[0_54]|40-30[0_54]
+11-11	793-798	Wales	abstract[52]|place[54]|place[55]	giv[52]|giv[54]|giv[55]	_	_
+11-12	799-802	and	abstract[52]|place[55]	giv[52]|giv[55]	_	_
+11-13	803-809	Hilbre	abstract[52]|place[55]|person|place[57]	giv[52]|giv[55]|giv|giv[57]	coref|coref|coref|coref	21-1|21-1[92_57]|21-1|21-1[92_57]
+11-14	810-816	Island	abstract[52]|place[55]|place[57]	giv[52]|giv[55]|giv[57]	_	_
+11-15	817-818	,	abstract[52]|place[55]	giv[52]|giv[55]	_	_
+11-16	819-821	as	abstract[52]|place[55]	giv[52]|giv[55]	_	_
+11-17	822-826	well	abstract[52]|place[55]	giv[52]|giv[55]	_	_
+11-18	827-829	as	abstract[52]|place[55]	giv[52]|giv[55]	_	_
+11-19	830-840	Coronation	abstract[52]|place[55]|person|place[59]	giv[52]|giv[55]|new|new[59]	_	_
+11-20	841-848	Gardens	abstract[52]|place[55]|place[59]	giv[52]|giv[55]|new[59]	_	_
+11-21	849-852	and	abstract[52]|place[55]	giv[52]|giv[55]	_	_
+11-22	853-854	a	abstract[52]|place[55]|event[62]	giv[52]|giv[55]|new[62]	coref	24-14[120_62]
+11-23	855-859	rare	abstract[52]|place[55]|event[62]	giv[52]|giv[55]|new[62]	_	_
+11-24	860-866	marine	abstract[52]|place[55]|organization|event[62]	giv[52]|giv[55]|new|new[62]	_	_
+11-25	867-871	lake	abstract[52]|place[55]|place|event[62]	giv[52]|giv[55]|new|new[62]	coref	23-35[116_0]
+11-26	872-876	walk	abstract[52]|place[55]|event[62]	giv[52]|giv[55]|new[62]	_	_
+11-27	877-878	.	_	_	_	_
+
+#Text=Caldy , Thurstaston , Hoylake and Meols are adjacent villages along the coast .
+12-1	879-884	Caldy	place	new	_	_
+12-2	885-886	,	_	_	_	_
+12-3	887-898	Thurstaston	place	new	coref	36-5
+12-4	899-900	,	_	_	_	_
+12-5	901-908	Hoylake	organization	giv	coref	19-1
+12-6	909-912	and	_	_	_	_
+12-7	913-918	Meols	place	new	coref	12-9[67_0]
+12-8	919-922	are	_	_	_	_
+12-9	923-931	adjacent	place[67]	giv[67]	coref	89-8[0_67]
+12-10	932-940	villages	place[67]	giv[67]	_	_
+12-11	941-946	along	place[67]	giv[67]	_	_
+12-12	947-950	the	place[67]|place[68]	giv[67]|new[68]	_	_
+12-13	951-956	coast	place[67]|place[68]	giv[67]|new[68]	_	_
+12-14	957-958	.	_	_	_	_
+
+#Text=By road
+13-1	959-961	By	_	_	_	_
+13-2	962-966	road	place	giv	coref	87-10[441_0]
+
+#Text=A540
+14-1	967-971	A540	abstract	new	_	_
+
+#Text=A5027 and B5192 from the M53 motorway , junction 2a
+15-1	972-977	A5027	place	new	_	_
+15-2	978-981	and	_	_	_	_
+15-3	982-987	B5192	place[72]	new[72]	_	_
+15-4	988-992	from	place[72]	new[72]	_	_
+15-5	993-996	the	place[72]|place[74]	new[72]|new[74]	appos	15-9[75_74]
+15-6	997-1000	M53	place[72]|abstract|place[74]	new[72]|new|new[74]	_	_
+15-7	1001-1009	motorway	place[72]|place[74]	new[72]|new[74]	_	_
+15-8	1010-1011	,	_	_	_	_
+15-9	1012-1020	junction	place[75]	giv[75]	_	_
+15-10	1021-1023	2a	place[75]	giv[75]	_	_
+
+#Text=By train
+16-1	1024-1026	By	_	_	_	_
+16-2	1027-1032	train	object	new	_	_
+
+#Text=West Kirby railway station , Grange Road , CH48 4DZ , ☏ +44151 201-0001 .
+17-1	1033-1037	West	person[77]|place[79]	new[77]|new[79]	coref|coref|coref|coref	19-1[90_79]|45-3[0_77]|19-1[90_79]|45-3[0_77]
+17-2	1038-1043	Kirby	person[77]|place[79]	new[77]|new[79]	_	_
+17-3	1044-1051	railway	object|place[79]	new|new[79]	coref	19-2
+17-4	1052-1059	station	place[79]	new[79]	_	_
+17-5	1060-1061	,	_	_	_	_
+17-6	1062-1068	Grange	person|place[81]	new|new[81]	appos|coref|appos|coref	17-9[83_81]|60-9|17-9[83_81]|60-9
+17-7	1069-1073	Road	place[81]	new[81]	_	_
+17-8	1074-1075	,	_	_	_	_
+17-9	1076-1080	CH48	abstract|place[83]	new|giv[83]	appos|coref|appos|coref	17-12[84_83]|34-7|17-12[84_83]|34-7
+17-10	1081-1084	4DZ	place[83]	giv[83]	_	_
+17-11	1085-1086	,	_	_	_	_
+17-12	1087-1088	☏	place[84]	giv[84]	coref	36-10[185_84]
+17-13	1089-1095	+44151	place[84]	giv[84]	_	_
+17-14	1096-1104	201-0001	place[84]	giv[84]	_	_
+17-15	1105-1106	.	_	_	_	_
+
+#Text=Monday - Saturday : 05:36-00:22 , Sunday : 07:46-00:22 .
+18-1	1107-1113	Monday	time[85]	new[85]	_	_
+18-2	1114-1115	-	time[85]	new[85]	_	_
+18-3	1116-1124	Saturday	time[85]	new[85]	_	_
+18-4	1125-1126	:	_	_	_	_
+18-5	1127-1138	05:36-00:22	time	new	_	_
+18-6	1139-1140	,	_	_	_	_
+18-7	1141-1147	Sunday	time[87]	new[87]	_	_
+18-8	1148-1149	:	time[87]	new[87]	_	_
+18-9	1150-1161	07:46-00:22	time[87]	new[87]	_	_
+18-10	1162-1163	.	_	_	_	_
+
+#Text=Hoylake railway station .
+19-1	1164-1171	Hoylake	organization|place[90]	giv|giv[90]	coref|coref|coref|coref	27-21[145_0]|37-8[201_90]|27-21[145_0]|37-8[201_90]
+19-2	1172-1179	railway	object|place[90]	giv|giv[90]	coref	37-9
+19-3	1180-1187	station	place[90]	giv[90]	_	_
+19-4	1188-1189	.	_	_	_	_
+
+#Text=See
+20-1	1190-1193	See	_	_	_	_
+
+#Text=Hilbre Island ( about 40 minutes walk from the noticeboard , adjacent to the Wirral Sailing Centre , at the end of Dee Lane in West Kirby ) .
+21-1	1194-1200	Hilbre	person|place[92]	giv|giv[92]	coref|coref|coref|coref	22-2[0_92]|22-6[103_0]|22-2[0_92]|22-6[103_0]
+21-2	1201-1207	Island	place[92]	giv[92]	_	_
+21-3	1208-1209	(	_	_	_	_
+21-4	1210-1215	about	time[93]	new[93]	_	_
+21-5	1216-1218	40	time[93]	new[93]	_	_
+21-6	1219-1226	minutes	time[93]	new[93]	_	_
+21-7	1227-1231	walk	_	_	_	_
+21-8	1232-1236	from	_	_	_	_
+21-9	1237-1240	the	object[94]	new[94]	_	_
+21-10	1241-1252	noticeboard	object[94]	new[94]	_	_
+21-11	1253-1254	,	_	_	_	_
+21-12	1255-1263	adjacent	_	_	_	_
+21-13	1264-1266	to	_	_	_	_
+21-14	1267-1270	the	place[97]	new[97]	coref	36-5[183_97]
+21-15	1271-1277	Wirral	person|place[97]	giv|new[97]	coref	33-23
+21-16	1278-1285	Sailing	person|place[97]	new|new[97]	coref	30-23
+21-17	1286-1292	Centre	place[97]	new[97]	_	_
+21-18	1293-1294	,	_	_	_	_
+21-19	1295-1297	at	_	_	_	_
+21-20	1298-1301	the	place[98]	new[98]	_	_
+21-21	1302-1305	end	place[98]	new[98]	_	_
+21-22	1306-1308	of	place[98]	new[98]	_	_
+21-23	1309-1312	Dee	place[98]|person[99]	new[98]|giv[99]	coref	40-27[0_99]
+21-24	1313-1317	Lane	place[98]|person[99]	new[98]|giv[99]	_	_
+21-25	1318-1320	in	place[98]|person[99]	new[98]|giv[99]	_	_
+21-26	1321-1325	West	place[98]|person[99]|person[100]	new[98]|giv[99]|new[100]	_	_
+21-27	1326-1331	Kirby	place[98]|person[99]|person[100]	new[98]|giv[99]|new[100]	_	_
+21-28	1332-1333	)	_	_	_	_
+21-29	1334-1335	.	_	_	_	_
+
+#Text=The island group consists of Hilbre itself , Middle Eye and Little Eye .
+22-1	1336-1339	The	place[102]	new[102]	ana	22-7[0_102]
+22-2	1340-1346	island	place|place[102]	giv|new[102]	coref	25-4[121_0]
+22-3	1347-1352	group	place[102]	new[102]	_	_
+22-4	1353-1361	consists	_	_	_	_
+22-5	1362-1364	of	_	_	_	_
+22-6	1365-1371	Hilbre	person[103]	giv[103]	coref	23-4[107_103]
+22-7	1372-1378	itself	person[103]|place	giv[103]|giv	ana	23-6
+22-8	1379-1380	,	_	_	_	_
+22-9	1381-1387	Middle	object[105]	new[105]	coref	25-42[128_105]
+22-10	1388-1391	Eye	object[105]	new[105]	_	_
+22-11	1392-1395	and	_	_	_	_
+22-12	1396-1402	Little	place[106]	new[106]	_	_
+22-13	1403-1406	Eye	place[106]	new[106]	_	_
+22-14	1407-1408	.	_	_	_	_
+
+#Text=Walk out to Hilbre or its smaller ( and closer ) outcrop , Little Eye ( be VERY careful of tides - read guidance on signs near the boathouse , at northern end of the marine lake ) .
+23-1	1409-1413	Walk	_	_	_	_
+23-2	1414-1417	out	_	_	_	_
+23-3	1418-1420	to	_	_	_	_
+23-4	1421-1427	Hilbre	person[107]	giv[107]	coref	25-62[132_107]
+23-5	1428-1430	or	person[107]	giv[107]	_	_
+23-6	1431-1434	its	person[107]|place|place[109]	giv[107]|giv|new[109]	_	_
+23-7	1435-1442	smaller	person[107]|place[109]	giv[107]|new[109]	_	_
+23-8	1443-1444	(	person[107]|place[109]	giv[107]|new[109]	_	_
+23-9	1445-1448	and	person[107]|place[109]	giv[107]|new[109]	_	_
+23-10	1449-1455	closer	person[107]|place[109]	giv[107]|new[109]	_	_
+23-11	1456-1457	)	person[107]|place[109]	giv[107]|new[109]	_	_
+23-12	1458-1465	outcrop	person[107]|place[109]	giv[107]|new[109]	_	_
+23-13	1466-1467	,	person[107]	giv[107]	_	_
+23-14	1468-1474	Little	person[107]|place[110]	giv[107]|new[110]	_	_
+23-15	1475-1478	Eye	person[107]|place[110]	giv[107]|new[110]	_	_
+23-16	1479-1480	(	_	_	_	_
+23-17	1481-1483	be	_	_	_	_
+23-18	1484-1488	VERY	_	_	_	_
+23-19	1489-1496	careful	_	_	_	_
+23-20	1497-1499	of	_	_	_	_
+23-21	1500-1505	tides	object	new	coref	26-5[134_0]
+23-22	1506-1507	-	_	_	_	_
+23-23	1508-1512	read	_	_	_	_
+23-24	1513-1521	guidance	abstract	new	_	_
+23-25	1522-1524	on	_	_	_	_
+23-26	1525-1530	signs	object[113]	new[113]	_	_
+23-27	1531-1535	near	object[113]	new[113]	_	_
+23-28	1536-1539	the	object[113]|place[114]	new[113]|new[114]	_	_
+23-29	1540-1549	boathouse	object[113]|place[114]	new[113]|new[114]	_	_
+23-30	1550-1551	,	_	_	_	_
+23-31	1552-1554	at	_	_	_	_
+23-32	1555-1563	northern	place[115]	new[115]	_	_
+23-33	1564-1567	end	place[115]	new[115]	_	_
+23-34	1568-1570	of	place[115]	new[115]	_	_
+23-35	1571-1574	the	place[115]|place[116]	new[115]|giv[116]	coref	29-1[146_116]
+23-36	1575-1581	marine	place[115]|place[116]	new[115]|giv[116]	_	_
+23-37	1582-1586	lake	place[115]|place[116]	new[115]|giv[116]	_	_
+23-38	1587-1588	)	_	_	_	_
+23-39	1589-1590	.	_	_	_	_
+
+#Text=A raincoat and wellies or sturdy , waterproof walking boots are recommended for the walk across .
+24-1	1591-1592	A	object[117]	new[117]	_	_
+24-2	1593-1601	raincoat	object[117]	new[117]	_	_
+24-3	1602-1605	and	_	_	_	_
+24-4	1606-1613	wellies	object	new	_	_
+24-5	1614-1616	or	_	_	_	_
+24-6	1617-1623	sturdy	object[119]	new[119]	_	_
+24-7	1624-1625	,	object[119]	new[119]	_	_
+24-8	1626-1636	waterproof	object[119]	new[119]	_	_
+24-9	1637-1644	walking	object[119]	new[119]	_	_
+24-10	1645-1650	boots	object[119]	new[119]	_	_
+24-11	1651-1654	are	_	_	_	_
+24-12	1655-1666	recommended	_	_	_	_
+24-13	1667-1670	for	_	_	_	_
+24-14	1671-1674	the	event[120]	giv[120]	_	_
+24-15	1675-1679	walk	event[120]	giv[120]	_	_
+24-16	1680-1686	across	event[120]	giv[120]	_	_
+24-17	1687-1688	.	_	_	_	_
+
+#Text=To get to the island accepted wisdom is , when the tide is on the ebb to walk from West Kirby from the northern end of the Marine Lake to Little Eye first and then around the " back " of Middle Eye avoiding what can be impassable gullies to the " front " of the islands , and thence to Hilbre itself .
+25-1	1689-1691	To	_	_	_	_
+25-2	1692-1695	get	_	_	_	_
+25-3	1696-1698	to	_	_	_	_
+25-4	1699-1702	the	place[121]	giv[121]	coref	25-56[131_121]
+25-5	1703-1709	island	place[121]	giv[121]	_	_
+25-6	1710-1718	accepted	abstract[122]	new[122]	_	_
+25-7	1719-1725	wisdom	abstract[122]	new[122]	_	_
+25-8	1726-1728	is	_	_	_	_
+25-9	1729-1730	,	_	_	_	_
+25-10	1731-1735	when	_	_	_	_
+25-11	1736-1739	the	object[123]	new[123]	coref	26-19[136_123]
+25-12	1740-1744	tide	object[123]	new[123]	_	_
+25-13	1745-1747	is	_	_	_	_
+25-14	1748-1750	on	_	_	_	_
+25-15	1751-1754	the	event[124]	new[124]	_	_
+25-16	1755-1758	ebb	event[124]	new[124]	_	_
+25-17	1759-1761	to	_	_	_	_
+25-18	1762-1766	walk	_	_	_	_
+25-19	1767-1771	from	_	_	_	_
+25-20	1772-1776	West	person[125]	new[125]	coref	40-13[232_125]
+25-21	1777-1782	Kirby	person[125]	new[125]	_	_
+25-22	1783-1787	from	_	_	_	_
+25-23	1788-1791	the	place[126]	new[126]	_	_
+25-24	1792-1800	northern	place[126]	new[126]	_	_
+25-25	1801-1804	end	place[126]	new[126]	_	_
+25-26	1805-1807	of	place[126]	new[126]	_	_
+25-27	1808-1811	the	place[126]	new[126]	_	_
+25-28	1812-1818	Marine	place[126]	new[126]	_	_
+25-29	1819-1823	Lake	place[126]	new[126]	_	_
+25-30	1824-1826	to	place[126]	new[126]	_	_
+25-31	1827-1833	Little	place[126]	new[126]	_	_
+25-32	1834-1837	Eye	place[126]	new[126]	_	_
+25-33	1838-1843	first	place[126]	new[126]	_	_
+25-34	1844-1847	and	_	_	_	_
+25-35	1848-1852	then	_	_	_	_
+25-36	1853-1859	around	_	_	_	_
+25-37	1860-1863	the	place[127]	new[127]	_	_
+25-38	1864-1865	"	place[127]	new[127]	_	_
+25-39	1866-1870	back	place[127]	new[127]	_	_
+25-40	1871-1872	"	place[127]	new[127]	_	_
+25-41	1873-1875	of	place[127]	new[127]	_	_
+25-42	1876-1882	Middle	place[127]|place[128]	new[127]|giv[128]	_	_
+25-43	1883-1886	Eye	place[127]|place[128]	new[127]|giv[128]	_	_
+25-44	1887-1895	avoiding	_	_	_	_
+25-45	1896-1900	what	_	_	_	_
+25-46	1901-1904	can	_	_	_	_
+25-47	1905-1907	be	_	_	_	_
+25-48	1908-1918	impassable	place[129]	new[129]	coref	26-33[138_129]
+25-49	1919-1926	gullies	place[129]	new[129]	_	_
+25-50	1927-1929	to	place[129]	new[129]	_	_
+25-51	1930-1933	the	place[129]|place[130]	new[129]|new[130]	_	_
+25-52	1934-1935	"	place[129]|place[130]	new[129]|new[130]	_	_
+25-53	1936-1941	front	place[129]|place[130]	new[129]|new[130]	_	_
+25-54	1942-1943	"	place[129]|place[130]	new[129]|new[130]	_	_
+25-55	1944-1946	of	place[129]|place[130]	new[129]|new[130]	_	_
+25-56	1947-1950	the	place[129]|place[130]|place[131]	new[129]|new[130]|giv[131]	ana	25-63[0_131]
+25-57	1951-1958	islands	place[129]|place[130]|place[131]	new[129]|new[130]|giv[131]	_	_
+25-58	1959-1960	,	_	_	_	_
+25-59	1961-1964	and	_	_	_	_
+25-60	1965-1971	thence	_	_	_	_
+25-61	1972-1974	to	_	_	_	_
+25-62	1975-1981	Hilbre	place[132]	giv[132]	coref	27-11[0_132]
+25-63	1982-1988	itself	place[132]|place	giv[132]|giv	coref	26-16[135_0]
+25-64	1989-1990	.	_	_	_	_
+
+#Text=Crossing when unsure of the tides can mean , at best , being isolated on the islands until the tide ebbs , or at worst , the risk of being caught between fast flowing tidal gullies .
+26-1	1991-1999	Crossing	_	_	_	_
+26-2	2000-2004	when	_	_	_	_
+26-3	2005-2011	unsure	_	_	_	_
+26-4	2012-2014	of	_	_	_	_
+26-5	2015-2018	the	object[134]	giv[134]	_	_
+26-6	2019-2024	tides	object[134]	giv[134]	_	_
+26-7	2025-2028	can	_	_	_	_
+26-8	2029-2033	mean	_	_	_	_
+26-9	2034-2035	,	_	_	_	_
+26-10	2036-2038	at	_	_	_	_
+26-11	2039-2043	best	_	_	_	_
+26-12	2044-2045	,	_	_	_	_
+26-13	2046-2051	being	_	_	_	_
+26-14	2052-2060	isolated	_	_	_	_
+26-15	2061-2063	on	_	_	_	_
+26-16	2064-2067	the	place[135]	giv[135]	_	_
+26-17	2068-2075	islands	place[135]	giv[135]	_	_
+26-18	2076-2081	until	_	_	_	_
+26-19	2082-2085	the	object[136]	giv[136]	_	_
+26-20	2086-2090	tide	object[136]	giv[136]	_	_
+26-21	2091-2095	ebbs	_	_	_	_
+26-22	2096-2097	,	_	_	_	_
+26-23	2098-2100	or	_	_	_	_
+26-24	2101-2103	at	_	_	_	_
+26-25	2104-2109	worst	abstract[137]	new[137]	_	_
+26-26	2110-2111	,	abstract[137]	new[137]	_	_
+26-27	2112-2115	the	abstract[137]	new[137]	_	_
+26-28	2116-2120	risk	abstract[137]	new[137]	_	_
+26-29	2121-2123	of	_	_	_	_
+26-30	2124-2129	being	_	_	_	_
+26-31	2130-2136	caught	_	_	_	_
+26-32	2137-2144	between	_	_	_	_
+26-33	2145-2149	fast	place[138]	giv[138]	_	_
+26-34	2150-2157	flowing	place[138]	giv[138]	_	_
+26-35	2158-2163	tidal	place[138]	giv[138]	_	_
+26-36	2164-2171	gullies	place[138]	giv[138]	_	_
+26-37	2172-2173	.	_	_	_	_
+
+#Text=The walker should not be tempted to walk direct to Hilbre from " Red Rocks " at the end of Stanley Rd Hoylake .
+27-1	2174-2177	The	place[139]	new[139]	coref	33-1[157_139]
+27-2	2178-2184	walker	place[139]	new[139]	_	_
+27-3	2185-2191	should	_	_	_	_
+27-4	2192-2195	not	_	_	_	_
+27-5	2196-2198	be	_	_	_	_
+27-6	2199-2206	tempted	_	_	_	_
+27-7	2207-2209	to	_	_	_	_
+27-8	2210-2214	walk	_	_	_	_
+27-9	2215-2221	direct	_	_	_	_
+27-10	2222-2224	to	_	_	_	_
+27-11	2225-2231	Hilbre	place	giv	coref	47-3
+27-12	2232-2236	from	_	_	_	_
+27-13	2237-2238	"	_	_	_	_
+27-14	2239-2242	Red	person[141]	new[141]	_	_
+27-15	2243-2248	Rocks	person[141]	new[141]	_	_
+27-16	2249-2250	"	_	_	_	_
+27-17	2251-2253	at	_	_	_	_
+27-18	2254-2257	the	place[142]	new[142]	coref	38-12[211_142]
+27-19	2258-2261	end	place[142]	new[142]	_	_
+27-20	2262-2264	of	place[142]	new[142]	_	_
+27-21	2265-2272	Stanley	place[142]|person|organization[145]	new[142]|new|giv[145]	coref|coref	45-1[0_145]|45-1[0_145]
+27-22	2273-2275	Rd	place[142]|abstract|organization[145]	new[142]|new|giv[145]	coref	34-4[171_0]
+27-23	2276-2283	Hoylake	place[142]|organization[145]	new[142]|giv[145]	_	_
+27-24	2284-2285	.	_	_	_	_
+
+#Text=Free .
+28-1	2286-2290	Free	_	_	_	_
+28-2	2291-2292	.	_	_	_	_
+
+#Text=West Kirby Marine Lake .
+29-1	2293-2297	West	place[146]	giv[146]	coref	30-1[147_146]
+29-2	2298-2303	Kirby	place[146]	giv[146]	_	_
+29-3	2304-2310	Marine	place[146]	giv[146]	_	_
+29-4	2311-2315	Lake	place[146]	giv[146]	_	_
+29-5	2316-2317	.	_	_	_	_
+
+#Text=The marine lake can be viewed from the lengthy promenade , which has parking , plus benches to enjoy the often busy sailing activity .
+30-1	2318-2321	The	place[147]	giv[147]	coref	31-7[153_147]
+30-2	2322-2328	marine	place[147]	giv[147]	_	_
+30-3	2329-2333	lake	place[147]	giv[147]	_	_
+30-4	2334-2337	can	_	_	_	_
+30-5	2338-2340	be	_	_	_	_
+30-6	2341-2347	viewed	_	_	_	_
+30-7	2348-2352	from	_	_	_	_
+30-8	2353-2356	the	place[148]	new[148]	_	_
+30-9	2357-2364	lengthy	place[148]	new[148]	_	_
+30-10	2365-2374	promenade	place[148]	new[148]	_	_
+30-11	2375-2376	,	_	_	_	_
+30-12	2377-2382	which	_	_	_	_
+30-13	2383-2386	has	_	_	_	_
+30-14	2387-2394	parking	_	_	_	_
+30-15	2395-2396	,	_	_	_	_
+30-16	2397-2401	plus	_	_	_	_
+30-17	2402-2409	benches	place	new	_	_
+30-18	2410-2412	to	_	_	_	_
+30-19	2413-2418	enjoy	_	_	_	_
+30-20	2419-2422	the	event[151]	new[151]	_	_
+30-21	2423-2428	often	event[151]	new[151]	_	_
+30-22	2429-2433	busy	event[151]	new[151]	_	_
+30-23	2434-2441	sailing	object|event[151]	giv|new[151]	coref	57-1[314_0]
+30-24	2442-2450	activity	event[151]	new[151]	_	_
+30-25	2451-2452	.	_	_	_	_
+
+#Text=There is also a walkway around the marine lake , which provides very good views of the summer sunset .
+31-1	2453-2458	There	_	_	_	_
+31-2	2459-2461	is	_	_	_	_
+31-3	2462-2466	also	_	_	_	_
+31-4	2467-2468	a	place[152]	new[152]	_	_
+31-5	2469-2476	walkway	place[152]	new[152]	_	_
+31-6	2477-2483	around	place[152]	new[152]	_	_
+31-7	2484-2487	the	place[152]|place[153]	new[152]|giv[153]	_	_
+31-8	2488-2494	marine	place[152]|place[153]	new[152]|giv[153]	_	_
+31-9	2495-2499	lake	place[152]|place[153]	new[152]|giv[153]	_	_
+31-10	2500-2501	,	_	_	_	_
+31-11	2502-2507	which	_	_	_	_
+31-12	2508-2516	provides	_	_	_	_
+31-13	2517-2521	very	abstract[154]	new[154]	coref	33-40[168_154]
+31-14	2522-2526	good	abstract[154]	new[154]	_	_
+31-15	2527-2532	views	abstract[154]	new[154]	_	_
+31-16	2533-2535	of	abstract[154]	new[154]	_	_
+31-17	2536-2539	the	abstract[154]|time[156]	new[154]|new[156]	_	_
+31-18	2540-2546	summer	abstract[154]|time|time[156]	new[154]|new|new[156]	_	_
+31-19	2547-2553	sunset	abstract[154]|time[156]	new[154]|new[156]	_	_
+31-20	2554-2555	.	_	_	_	_
+
+#Text=Free .
+32-1	2556-2560	Free	_	_	_	_
+32-2	2561-2562	.	_	_	_	_
+
+#Text=The Old Village is quite pretty ; visit St. Bridget 's church , maybe walk through Ashton Park , which straddles the Wirral Way , itself a lengthy stroll along the bed of an old rail branchline , with fine views .
+33-1	2563-2566	The	place[157]	giv[157]	coref	74-10[0_157]
+33-2	2567-2570	Old	place[157]	giv[157]	_	_
+33-3	2571-2578	Village	place[157]	giv[157]	_	_
+33-4	2579-2581	is	_	_	_	_
+33-5	2582-2587	quite	_	_	_	_
+33-6	2588-2594	pretty	_	_	_	_
+33-7	2595-2596	;	_	_	_	_
+33-8	2597-2602	visit	_	_	_	_
+33-9	2603-2606	St.	place[158]|place[159]	new[158]|new[159]	ana|coref|ana|coref	33-26[0_159]|53-5[300_158]|33-26[0_159]|53-5[300_158]
+33-10	2607-2614	Bridget	place[158]|place[159]	new[158]|new[159]	_	_
+33-11	2615-2617	's	place[158]|place[159]	new[158]|new[159]	_	_
+33-12	2618-2624	church	place[159]	new[159]	_	_
+33-13	2625-2626	,	_	_	_	_
+33-14	2627-2632	maybe	_	_	_	_
+33-15	2633-2637	walk	_	_	_	_
+33-16	2638-2645	through	_	_	_	_
+33-17	2646-2652	Ashton	place[160]	new[160]	_	_
+33-18	2653-2657	Park	place[160]	new[160]	_	_
+33-19	2658-2659	,	_	_	_	_
+33-20	2660-2665	which	_	_	_	_
+33-21	2666-2675	straddles	_	_	_	_
+33-22	2676-2679	the	object[162]	new[162]	coref	35-6[178_162]
+33-23	2680-2686	Wirral	person|object[162]	giv|new[162]	coref	35-7
+33-24	2687-2690	Way	object[162]	new[162]	_	_
+33-25	2691-2692	,	_	_	_	_
+33-26	2693-2699	itself	place	giv	_	_
+33-27	2700-2701	a	event[164]	new[164]	_	_
+33-28	2702-2709	lengthy	event[164]	new[164]	_	_
+33-29	2710-2716	stroll	event[164]	new[164]	_	_
+33-30	2717-2722	along	event[164]	new[164]	_	_
+33-31	2723-2726	the	event[164]|place[165]	new[164]|new[165]	_	_
+33-32	2727-2730	bed	event[164]|place[165]	new[164]|new[165]	_	_
+33-33	2731-2733	of	event[164]|place[165]	new[164]|new[165]	_	_
+33-34	2734-2736	an	event[164]|place[165]|object[167]	new[164]|new[165]|new[167]	_	_
+33-35	2737-2740	old	event[164]|place[165]|object[167]	new[164]|new[165]|new[167]	_	_
+33-36	2741-2745	rail	event[164]|place[165]|object|object[167]	new[164]|new[165]|new|new[167]	_	_
+33-37	2746-2756	branchline	event[164]|place[165]|object[167]	new[164]|new[165]|new[167]	_	_
+33-38	2757-2758	,	event[164]|place[165]|object[167]	new[164]|new[165]|new[167]	_	_
+33-39	2759-2763	with	event[164]|place[165]|object[167]	new[164]|new[165]|new[167]	_	_
+33-40	2764-2768	fine	event[164]|place[165]|object[167]|abstract[168]	new[164]|new[165]|new[167]|giv[168]	coref	40-23[236_168]
+33-41	2769-2774	views	event[164]|place[165]|object[167]|abstract[168]	new[164]|new[165]|new[167]|giv[168]	_	_
+33-42	2775-2776	.	_	_	_	_
+
+#Text=Ashton Park , Westbourne Rd , CH48 4DH ( about 10 minutes walk from West Kirby Station ) .
+34-1	2777-2783	Ashton	place[169]	new[169]	coref	36-1[180_169]
+34-2	2784-2788	Park	place[169]	new[169]	_	_
+34-3	2789-2790	,	_	_	_	_
+34-4	2791-2801	Westbourne	object|abstract[171]	new|giv[171]	appos|appos	34-7[173_171]|34-7[173_171]
+34-5	2802-2804	Rd	abstract[171]	giv[171]	_	_
+34-6	2805-2806	,	_	_	_	_
+34-7	2807-2811	CH48	abstract|abstract[173]	giv|giv[173]	coref|coref	53-15|53-15
+34-8	2812-2815	4DH	abstract[173]	giv[173]	_	_
+34-9	2816-2817	(	_	_	_	_
+34-10	2818-2823	about	time[174]	new[174]	coref	65-1[349_174]
+34-11	2824-2826	10	time[174]	new[174]	_	_
+34-12	2827-2834	minutes	time[174]	new[174]	_	_
+34-13	2835-2839	walk	_	_	_	_
+34-14	2840-2844	from	_	_	_	_
+34-15	2845-2849	West	place[175]	new[175]	coref	36-10[0_175]
+34-16	2850-2855	Kirby	place[175]	new[175]	_	_
+34-17	2856-2863	Station	place[175]	new[175]	_	_
+34-18	2864-2865	)	_	_	_	_
+34-19	2866-2867	.	_	_	_	_
+
+#Text=The most northerly point of the Wirral Way . free .
+35-1	2868-2871	The	place[176]	new[176]	_	_
+35-2	2872-2876	most	place[176]	new[176]	_	_
+35-3	2877-2886	northerly	place[176]	new[176]	_	_
+35-4	2887-2892	point	place[176]	new[176]	_	_
+35-5	2893-2895	of	place[176]	new[176]	_	_
+35-6	2896-2899	the	place[176]|object[178]	new[176]|giv[178]	coref	37-1[198_178]
+35-7	2900-2906	Wirral	place[176]|person|object[178]	new[176]|giv|giv[178]	coref	36-1
+35-8	2907-2910	Way	place[176]|object[178]	new[176]|giv[178]	_	_
+35-9	2911-2912	.	place[176]|object[178]	new[176]|giv[178]	_	_
+35-10	2913-2917	free	place[176]|object[178]	new[176]|giv[178]	_	_
+35-11	2918-2919	.	_	_	_	_
+
+#Text=Wirral Country Park ( Thurstaston Visitor Centre ) , Station Road , Thurstaston . CH61 0HN ( The 22 ( and 22a ) bus routes run to Wirral Country Park , Thurstaston from Chester via Willaston , Neston and Heswall .
+36-1	2920-2926	Wirral	place|place[180]	giv|giv[180]	coref|coref|coref|coref	36-28|36-28[192_180]|36-28|36-28[192_180]
+36-2	2927-2934	Country	place[180]	giv[180]	_	_
+36-3	2935-2939	Park	place[180]	giv[180]	_	_
+36-4	2940-2941	(	_	_	_	_
+36-5	2942-2953	Thurstaston	event|place[183]	giv|giv[183]	appos|coref|appos|coref	36-13|41-16[247_183]|36-13|41-16[247_183]
+36-6	2954-2961	Visitor	person|place[183]	new|giv[183]	coref	41-17
+36-7	2962-2968	Centre	place[183]	giv[183]	_	_
+36-8	2969-2970	)	_	_	_	_
+36-9	2971-2972	,	_	_	_	_
+36-10	2973-2980	Station	place|place[185]	giv|giv[185]	appos|coref|appos|coref	36-15[188_185]|44-11|36-15[188_185]|44-11
+36-11	2981-2985	Road	place[185]	giv[185]	_	_
+36-12	2986-2987	,	_	_	_	_
+36-13	2988-2999	Thurstaston	place	giv	coref	36-32
+36-14	3000-3001	.	_	_	_	_
+36-15	3002-3006	CH61	abstract|place[188]	new|giv[188]	coref|coref|coref|coref	38-20[214_188]|88-13|38-20[214_188]|88-13
+36-16	3007-3010	0HN	place[188]	giv[188]	_	_
+36-17	3011-3012	(	place[190]	new[190]	_	_
+36-18	3013-3016	The	place[190]	new[190]	_	_
+36-19	3017-3019	22	place[190]	new[190]	_	_
+36-20	3020-3021	(	place[190]	new[190]	_	_
+36-21	3022-3025	and	place[190]	new[190]	_	_
+36-22	3026-3029	22a	place[190]	new[190]	_	_
+36-23	3030-3031	)	place[190]	new[190]	_	_
+36-24	3032-3035	bus	object|place[190]	new|new[190]	_	_
+36-25	3036-3042	routes	place[190]	new[190]	_	_
+36-26	3043-3046	run	_	_	_	_
+36-27	3047-3049	to	_	_	_	_
+36-28	3050-3056	Wirral	person|place[192]	giv|giv[192]	coref|coref|coref|coref	38-8|40-1[228_192]|38-8|40-1[228_192]
+36-29	3057-3064	Country	place[192]	giv[192]	_	_
+36-30	3065-3069	Park	place[192]	giv[192]	_	_
+36-31	3070-3071	,	place[192]	giv[192]	_	_
+36-32	3072-3083	Thurstaston	place[192]|place	giv[192]|giv	coref	88-9
+36-33	3084-3088	from	_	_	_	_
+36-34	3089-3096	Chester	place[194]	new[194]	_	_
+36-35	3097-3100	via	place[194]	new[194]	_	_
+36-36	3101-3110	Willaston	place[194]|place	new[194]|new	_	_
+36-37	3111-3112	,	place[194]	new[194]	_	_
+36-38	3113-3119	Neston	place[194]|place	new[194]|new	_	_
+36-39	3120-3123	and	place[194]	new[194]	_	_
+36-40	3124-3131	Heswall	place[194]|place	new[194]|new	_	_
+36-41	3132-3133	.	_	_	_	_
+
+#Text=The Wirral Way can be accessed from Hooton railway station , where there is a gate on top of the bridge crossing the railway track .
+37-1	3134-3137	The	object[198]	giv[198]	coref	38-7[210_198]
+37-2	3138-3144	Wirral	object[198]	giv[198]	_	_
+37-3	3145-3148	Way	object[198]	giv[198]	_	_
+37-4	3149-3152	can	_	_	_	_
+37-5	3153-3155	be	_	_	_	_
+37-6	3156-3164	accessed	_	_	_	_
+37-7	3165-3169	from	_	_	_	_
+37-8	3170-3176	Hooton	person|place[201]	new|giv[201]	coref|coref	40-18|40-18
+37-9	3177-3184	railway	place|place[201]	giv|giv[201]	coref	37-24
+37-10	3185-3192	station	place[201]	giv[201]	_	_
+37-11	3193-3194	,	_	_	_	_
+37-12	3195-3200	where	_	_	_	_
+37-13	3201-3206	there	_	_	_	_
+37-14	3207-3209	is	_	_	_	_
+37-15	3210-3211	a	object[202]	new[202]	_	_
+37-16	3212-3216	gate	object[202]	new[202]	_	_
+37-17	3217-3219	on	object[202]	new[202]	_	_
+37-18	3220-3223	top	object[202]|place[203]	new[202]|new[203]	_	_
+37-19	3224-3226	of	object[202]|place[203]	new[202]|new[203]	_	_
+37-20	3227-3230	the	object[202]|place[203]|place[204]	new[202]|new[203]|new[204]	_	_
+37-21	3231-3237	bridge	object[202]|place[203]|place[204]	new[202]|new[203]|new[204]	_	_
+37-22	3238-3246	crossing	_	_	_	_
+37-23	3247-3250	the	object[206]	new[206]	ana	38-1[0_206]
+37-24	3251-3258	railway	object|object[206]	giv|new[206]	coref	40-19
+37-25	3259-3264	track	object[206]	new[206]	_	_
+37-26	3265-3266	.	_	_	_	_
+
+#Text=This is now the start of the Wirral Way , at this end , as it was extended from Hadlow Road to make it easier to access by train from Liverpool via the Merseyrail system .
+38-1	3267-3271	This	event	giv	coref	38-3[208_0]
+38-2	3272-3274	is	_	_	_	_
+38-3	3275-3278	now	event[208]	giv[208]	ana	38-16[0_208]
+38-4	3279-3282	the	event[208]	giv[208]	_	_
+38-5	3283-3288	start	event[208]	giv[208]	_	_
+38-6	3289-3291	of	event[208]	giv[208]	_	_
+38-7	3292-3295	the	event[208]|place[210]	giv[208]|giv[210]	coref	39-1[220_210]
+38-8	3296-3302	Wirral	event[208]|person|place[210]	giv[208]|giv|giv[210]	coref	40-1
+38-9	3303-3306	Way	event[208]|place[210]	giv[208]|giv[210]	_	_
+38-10	3307-3308	,	event[208]	giv[208]	_	_
+38-11	3309-3311	at	event[208]	giv[208]	_	_
+38-12	3312-3316	this	event[208]|place[211]	giv[208]|giv[211]	_	_
+38-13	3317-3320	end	event[208]|place[211]	giv[208]|giv[211]	_	_
+38-14	3321-3322	,	_	_	_	_
+38-15	3323-3325	as	_	_	_	_
+38-16	3326-3328	it	event	giv	ana	38-24
+38-17	3329-3332	was	_	_	_	_
+38-18	3333-3341	extended	_	_	_	_
+38-19	3342-3346	from	_	_	_	_
+38-20	3347-3353	Hadlow	person|place[214]	new|giv[214]	coref|coref	44-11[273_214]|44-11[273_214]
+38-21	3354-3358	Road	place[214]	giv[214]	_	_
+38-22	3359-3361	to	_	_	_	_
+38-23	3362-3366	make	_	_	_	_
+38-24	3367-3369	it	event	giv	_	_
+38-25	3370-3376	easier	_	_	_	_
+38-26	3377-3379	to	_	_	_	_
+38-27	3380-3386	access	_	_	_	_
+38-28	3387-3389	by	_	_	_	_
+38-29	3390-3395	train	object	new	_	_
+38-30	3396-3400	from	_	_	_	_
+38-31	3401-3410	Liverpool	place	giv	coref	50-3
+38-32	3411-3414	via	_	_	_	_
+38-33	3415-3418	the	abstract[219]	new[219]	_	_
+38-34	3419-3429	Merseyrail	place|abstract[219]	new|new[219]	_	_
+38-35	3430-3436	system	abstract[219]	new[219]	_	_
+38-36	3437-3438	.	_	_	_	_
+
+#Text=The Wirral Way is very popular with pedestrians , dog walkers , horse riders and cyclists . ) .
+39-1	3439-3442	The	place[220]	giv[220]	coref	48-9[285_220]
+39-2	3443-3449	Wirral	place[220]	giv[220]	_	_
+39-3	3450-3453	Way	place[220]	giv[220]	_	_
+39-4	3454-3456	is	_	_	_	_
+39-5	3457-3461	very	_	_	_	_
+39-6	3462-3469	popular	_	_	_	_
+39-7	3470-3474	with	_	_	_	_
+39-8	3475-3486	pedestrians	person	new	_	_
+39-9	3487-3488	,	_	_	_	_
+39-10	3489-3492	dog	animal|person[223]	new|new[223]	_	_
+39-11	3493-3500	walkers	person[223]	new[223]	_	_
+39-12	3501-3502	,	_	_	_	_
+39-13	3503-3508	horse	animal|person[225]	new|new[225]	coref|coref	48-7|48-7
+39-14	3509-3515	riders	person[225]	new[225]	_	_
+39-15	3516-3519	and	_	_	_	_
+39-16	3520-3528	cyclists	person	new	_	_
+39-17	3529-3530	.	_	_	_	_
+39-18	3531-3532	)	_	_	_	_
+39-19	3533-3534	.	_	_	_	_
+
+#Text=Wirral Country Park features a 12 mile footpath following the line of the old West Kirby to Hooton railway line , offering superb views over the Dee Estuary to Wales .
+40-1	3535-3541	Wirral	place|place[228]	giv|giv[228]	coref|coref|coref|coref	48-10|49-3[287_228]|48-10|49-3[287_228]
+40-2	3542-3549	Country	place[228]	giv[228]	_	_
+40-3	3550-3554	Park	place[228]	giv[228]	_	_
+40-4	3555-3563	features	_	_	_	_
+40-5	3564-3565	a	object[230]	new[230]	_	_
+40-6	3566-3568	12	quantity[229]|object[230]	new[229]|new[230]	_	_
+40-7	3569-3573	mile	quantity[229]|object[230]	new[229]|new[230]	_	_
+40-8	3574-3582	footpath	object[230]	new[230]	_	_
+40-9	3583-3592	following	_	_	_	_
+40-10	3593-3596	the	object[231]	new[231]	_	_
+40-11	3597-3601	line	object[231]	new[231]	_	_
+40-12	3602-3604	of	object[231]	new[231]	_	_
+40-13	3605-3608	the	object[231]|person[232]	new[231]|giv[232]	coref	45-4[0_232]
+40-14	3609-3612	old	object[231]|person[232]	new[231]|giv[232]	_	_
+40-15	3613-3617	West	object[231]|person[232]	new[231]|giv[232]	_	_
+40-16	3618-3623	Kirby	object[231]|person[232]	new[231]|giv[232]	_	_
+40-17	3624-3626	to	object[231]	new[231]	_	_
+40-18	3627-3633	Hooton	object[231]|person|place[235]	new[231]|giv|new[235]	_	_
+40-19	3634-3641	railway	object[231]|object|place[235]	new[231]|giv|new[235]	_	_
+40-20	3642-3646	line	object[231]|place[235]	new[231]|new[235]	_	_
+40-21	3647-3648	,	_	_	_	_
+40-22	3649-3657	offering	_	_	_	_
+40-23	3658-3664	superb	abstract[236]	giv[236]	_	_
+40-24	3665-3670	views	abstract[236]	giv[236]	_	_
+40-25	3671-3675	over	abstract[236]	giv[236]	_	_
+40-26	3676-3679	the	abstract[236]|place[238]	giv[236]|new[238]	_	_
+40-27	3680-3683	Dee	abstract[236]|person|place[238]	giv[236]|giv|new[238]	coref	81-2
+40-28	3684-3691	Estuary	abstract[236]|place[238]	giv[236]|new[238]	_	_
+40-29	3692-3694	to	abstract[236]|place[238]	giv[236]|new[238]	_	_
+40-30	3695-3700	Wales	abstract[236]|place[238]|place	giv[236]|new[238]|giv	_	_
+40-31	3701-3702	.	_	_	_	_
+
+#Text=Today it is a must for a family day out and it 's facilities include the Visitor Centre , Bird Hide , Toilets , Picnic Areas , BBQ area , Café , and Green Shop .
+41-1	3703-3708	Today	time	new	ana	41-2
+41-2	3709-3711	it	time	giv	ana	41-12
+41-3	3712-3714	is	_	_	_	_
+41-4	3715-3716	a	event[243]	new[243]	_	_
+41-5	3717-3721	must	event[243]	new[243]	_	_
+41-6	3722-3725	for	event[243]	new[243]	_	_
+41-7	3726-3727	a	event[243]	new[243]	_	_
+41-8	3728-3734	family	abstract|event[243]	new|new[243]	_	_
+41-9	3735-3738	day	event[243]	new[243]	_	_
+41-10	3739-3742	out	_	_	_	_
+41-11	3743-3746	and	_	_	_	_
+41-12	3747-3749	it	time	giv	_	_
+41-13	3750-3752	's	_	_	_	_
+41-14	3753-3763	facilities	place	new	_	_
+41-15	3764-3771	include	_	_	_	_
+41-16	3772-3775	the	place[247]	giv[247]	coref	53-5[301_247]
+41-17	3776-3783	Visitor	person|place[247]	giv|giv[247]	_	_
+41-18	3784-3790	Centre	place[247]	giv[247]	_	_
+41-19	3791-3792	,	_	_	_	_
+41-20	3793-3797	Bird	person[248]	new[248]	_	_
+41-21	3798-3802	Hide	person[248]	new[248]	_	_
+41-22	3803-3804	,	_	_	_	_
+41-23	3805-3812	Toilets	place	new	_	_
+41-24	3813-3814	,	_	_	_	_
+41-25	3815-3821	Picnic	abstract|place[251]	new|new[251]	_	_
+41-26	3822-3827	Areas	place[251]	new[251]	_	_
+41-27	3828-3829	,	_	_	_	_
+41-28	3830-3833	BBQ	substance|place[253]	new|new[253]	_	_
+41-29	3834-3838	area	place[253]	new[253]	_	_
+41-30	3839-3840	,	_	_	_	_
+41-31	3841-3845	Café	place	new	_	_
+41-32	3846-3847	,	_	_	_	_
+41-33	3848-3851	and	_	_	_	_
+41-34	3852-3857	Green	person|place[256]	new|new[256]	coref|coref|coref|coref	42-2|42-1[258_256]|42-2|42-1[258_256]
+41-35	3858-3862	Shop	place[256]	new[256]	_	_
+41-36	3863-3864	.	_	_	_	_
+
+#Text=The Green Shop contains an information and sales desk where you can pick up leaflets , guides , books of special interest and information .
+42-1	3865-3868	The	place[258]	giv[258]	_	_
+42-2	3869-3874	Green	person|place[258]	giv|giv[258]	_	_
+42-3	3875-3879	Shop	place[258]	giv[258]	_	_
+42-4	3880-3888	contains	_	_	_	_
+42-5	3889-3891	an	abstract[259]	new[259]	coref	42-24[0_259]
+42-6	3892-3903	information	abstract[259]	new[259]	_	_
+42-7	3904-3907	and	_	_	_	_
+42-8	3908-3913	sales	_	_	_	_
+42-9	3914-3918	desk	object	new	_	_
+42-10	3919-3924	where	_	_	_	_
+42-11	3925-3928	you	person	acc	ana	43-7
+42-12	3929-3932	can	_	_	_	_
+42-13	3933-3937	pick	_	_	_	_
+42-14	3938-3940	up	_	_	_	_
+42-15	3941-3949	leaflets	object	new	_	_
+42-16	3950-3951	,	_	_	_	_
+42-17	3952-3958	guides	object	new	_	_
+42-18	3959-3960	,	_	_	_	_
+42-19	3961-3966	books	object[264]	new[264]	_	_
+42-20	3967-3969	of	object[264]	new[264]	_	_
+42-21	3970-3977	special	object[264]|abstract[265]	new[264]|new[265]	_	_
+42-22	3978-3986	interest	object[264]|abstract[265]	new[264]|new[265]	_	_
+42-23	3987-3990	and	object[264]	new[264]	_	_
+42-24	3991-4002	information	object[264]|abstract	new[264]|giv	_	_
+42-25	4003-4004	.	_	_	_	_
+
+#Text=Staff will be happy to assist you .
+43-1	4005-4010	Staff	person	new	_	_
+43-2	4011-4015	will	_	_	_	_
+43-3	4016-4018	be	_	_	_	_
+43-4	4019-4024	happy	_	_	_	_
+43-5	4025-4027	to	_	_	_	_
+43-6	4028-4034	assist	_	_	_	_
+43-7	4035-4038	you	person	giv	ana	44-1
+43-8	4039-4040	.	_	_	_	_
+
+#Text=You can access the beautiful beach from the bottom of Station Road or Tinkers Dell Steps .
+44-1	4041-4044	You	person	giv	_	_
+44-2	4045-4048	can	_	_	_	_
+44-3	4049-4055	access	_	_	_	_
+44-4	4056-4059	the	place[270]	new[270]	_	_
+44-5	4060-4069	beautiful	place[270]	new[270]	_	_
+44-6	4070-4075	beach	place[270]	new[270]	_	_
+44-7	4076-4080	from	_	_	_	_
+44-8	4081-4084	the	place[271]	new[271]	_	_
+44-9	4085-4091	bottom	place[271]	new[271]	_	_
+44-10	4092-4094	of	place[271]	new[271]	_	_
+44-11	4095-4102	Station	place[271]|place|place[273]	new[271]|giv|giv[273]	coref|coref	60-9[333_273]|60-9[333_273]
+44-12	4103-4107	Road	place[271]|place[273]	new[271]|giv[273]	_	_
+44-13	4108-4110	or	place[271]	new[271]	_	_
+44-14	4111-4118	Tinkers	place[271]|person|object[275]	new[271]|new|new[275]	_	_
+44-15	4119-4123	Dell	place[271]|object[275]	new[271]|new[275]	_	_
+44-16	4124-4129	Steps	place[271]|object[275]	new[271]|new[275]	_	_
+44-17	4130-4131	.	_	_	_	_
+
+#Text=Hoylake and West Kirby War Memorial .
+45-1	4132-4139	Hoylake	place|place[280]	giv|new[280]	coref|coref	58-4|58-4
+45-2	4140-4143	and	place[280]	new[280]	_	_
+45-3	4144-4148	West	person|place[280]	giv|new[280]	coref	60-1
+45-4	4149-4154	Kirby	person|place[280]	giv|new[280]	coref	53-2
+45-5	4155-4158	War	person|place[280]	new|new[280]	_	_
+45-6	4159-4167	Memorial	place[280]	new[280]	_	_
+45-7	4168-4169	.	_	_	_	_
+
+#Text=Do
+46-1	4170-4172	Do	_	_	_	_
+
+#Text=Walk to Hilbre .
+47-1	4173-4177	Walk	_	_	_	_
+47-2	4178-4180	to	_	_	_	_
+47-3	4181-4187	Hilbre	place	giv	_	_
+47-4	4188-4189	.	_	_	_	_
+
+#Text=Walk , run , cycle or horse ride the Wirral Way .
+48-1	4190-4194	Walk	_	_	_	_
+48-2	4195-4196	,	_	_	_	_
+48-3	4197-4200	run	_	_	_	_
+48-4	4201-4202	,	_	_	_	_
+48-5	4203-4208	cycle	abstract	new	coref	50-1[288_0]
+48-6	4209-4211	or	_	_	_	_
+48-7	4212-4217	horse	animal	giv	_	_
+48-8	4218-4222	ride	_	_	_	_
+48-9	4223-4226	the	place[285]	giv[285]	_	_
+48-10	4227-4233	Wirral	person|place[285]	giv|giv[285]	coref	57-1
+48-11	4234-4237	Way	place[285]	giv[285]	_	_
+48-12	4238-4239	.	_	_	_	_
+
+#Text=Amble in Ashton park .
+49-1	4240-4245	Amble	_	_	_	_
+49-2	4246-4248	in	_	_	_	_
+49-3	4249-4255	Ashton	person|place[287]	new|giv[287]	_	_
+49-4	4256-4260	park	place[287]	giv[287]	_	_
+49-5	4261-4262	.	_	_	_	_
+
+#Text=Cycle to Liverpool along the coast path .
+50-1	4263-4268	Cycle	abstract[288]	giv[288]	_	_
+50-2	4269-4271	to	abstract[288]	giv[288]	_	_
+50-3	4272-4281	Liverpool	abstract[288]|place	giv[288]|giv	coref	59-2
+50-4	4282-4287	along	abstract[288]	giv[288]	_	_
+50-5	4288-4291	the	abstract[288]|place[291]	giv[288]|new[291]	_	_
+50-6	4292-4297	coast	abstract[288]|place|place[291]	giv[288]|new|new[291]	_	_
+50-7	4298-4302	path	abstract[288]|place[291]	giv[288]|new[291]	_	_
+50-8	4303-4304	.	_	_	_	_
+
+#Text=Idle in one of many independent cafes .
+51-1	4305-4309	Idle	abstract[292]	new[292]	_	_
+51-2	4310-4312	in	abstract[292]	new[292]	_	_
+51-3	4313-4316	one	abstract[292]|place[293]	new[292]|new[293]	_	_
+51-4	4317-4319	of	abstract[292]|place[293]	new[292]|new[293]	_	_
+51-5	4320-4324	many	abstract[292]|place[293]|place[294]	new[292]|new[293]|new[294]	_	_
+51-6	4325-4336	independent	abstract[292]|place[293]|place[294]	new[292]|new[293]|new[294]	_	_
+51-7	4337-4342	cafes	abstract[292]|place[293]|place[294]	new[292]|new[293]|new[294]	_	_
+51-8	4343-4344	.	_	_	_	_
+
+#Text=Take in the sunset , alongside the marine lake .
+52-1	4345-4349	Take	_	_	_	_
+52-2	4350-4352	in	_	_	_	_
+52-3	4353-4356	the	time[295]	new[295]	_	_
+52-4	4357-4363	sunset	time[295]	new[295]	_	_
+52-5	4364-4365	,	_	_	_	_
+52-6	4366-4375	alongside	_	_	_	_
+52-7	4376-4379	the	place[296]	new[296]	_	_
+52-8	4380-4386	marine	place[296]	new[296]	_	_
+52-9	4387-4391	lake	place[296]	new[296]	_	_
+52-10	4392-4393	.	_	_	_	_
+
+#Text=West Kirby Museum , St Bridget 's Centre , St Bridget 's Lane , CH48 3JT , ☏ +44771 610-0131 .
+53-1	4394-4398	West	place[298]	new[298]	coref	55-2[308_298]
+53-2	4399-4404	Kirby	person|place[298]	giv|new[298]	coref	60-2
+53-3	4405-4411	Museum	place[298]	new[298]	_	_
+53-4	4412-4413	,	_	_	_	_
+53-5	4414-4416	St	person|place[300]|place[301]	new|giv[300]|giv[301]	coref|coref|coref|coref|coref|coref	53-10[302_300]|57-1[315_301]|53-10[302_300]|57-1[315_301]|53-10[302_300]|57-1[315_301]
+53-6	4417-4424	Bridget	place[300]|place[301]	giv[300]|giv[301]	_	_
+53-7	4425-4427	's	place[300]|place[301]	giv[300]|giv[301]	_	_
+53-8	4428-4434	Centre	place[301]	giv[301]	_	_
+53-9	4435-4436	,	_	_	_	_
+53-10	4437-4439	St	person[302]|place[303]	giv[302]|new[303]	_	_
+53-11	4440-4447	Bridget	person[302]|place[303]	giv[302]|new[303]	_	_
+53-12	4448-4450	's	person[302]|place[303]	giv[302]|new[303]	_	_
+53-13	4451-4455	Lane	place[303]	new[303]	_	_
+53-14	4456-4457	,	_	_	_	_
+53-15	4458-4462	CH48	abstract|person[305]	giv|new[305]	coref|coref	57-12|57-12
+53-16	4463-4466	3JT	person[305]	new[305]	_	_
+53-17	4467-4468	,	_	_	_	_
+53-18	4469-4470	☏	abstract[306]	new[306]	_	_
+53-19	4471-4477	+44771	abstract[306]	new[306]	_	_
+53-20	4478-4486	610-0131	abstract[306]	new[306]	_	_
+53-21	4487-4488	.	_	_	_	_
+
+#Text=Saturday , 10am-1pm .
+54-1	4489-4497	Saturday	time	new	_	_
+54-2	4498-4499	,	_	_	_	_
+54-3	4500-4508	10am-1pm	_	_	_	_
+54-4	4509-4510	.	_	_	_	_
+
+#Text=Visit the museum to see the collection of stone artefacts , dating from 900AD onwards .
+55-1	4511-4516	Visit	_	_	_	_
+55-2	4517-4520	the	place[308]	giv[308]	_	_
+55-3	4521-4527	museum	place[308]	giv[308]	_	_
+55-4	4528-4530	to	_	_	_	_
+55-5	4531-4534	see	_	_	_	_
+55-6	4535-4538	the	object[309]	new[309]	_	_
+55-7	4539-4549	collection	object[309]	new[309]	_	_
+55-8	4550-4552	of	object[309]	new[309]	_	_
+55-9	4553-4558	stone	object[309]|object|object[311]	new[309]|new|new[311]	_	_
+55-10	4559-4568	artefacts	object[309]|object[311]	new[309]|new[311]	_	_
+55-11	4569-4570	,	_	_	_	_
+55-12	4571-4577	dating	_	_	_	_
+55-13	4578-4582	from	_	_	_	_
+55-14	4583-4588	900AD	time[312]	new[312]	_	_
+55-15	4589-4596	onwards	time[312]	new[312]	_	_
+55-16	4597-4598	.	_	_	_	_
+
+#Text=Free .
+56-1	4599-4603	Free	_	_	_	_
+56-2	4604-4605	.	_	_	_	_
+
+#Text=Wirral Sailing Centre ( Marine Lake ) , South Parade , CH48 0QG , ☏ +44151 625-3292 .
+57-1	4606-4612	Wirral	place|person[314]|place[315]	giv|giv[314]|giv[315]	coref|coref|coref	78-10|78-10|78-10
+57-2	4613-4620	Sailing	person[314]|place[315]	giv[314]|giv[315]	_	_
+57-3	4621-4627	Centre	place[315]	giv[315]	_	_
+57-4	4628-4629	(	_	_	_	_
+57-5	4630-4636	Marine	place[316]	new[316]	_	_
+57-6	4637-4641	Lake	place[316]	new[316]	_	_
+57-7	4642-4643	)	_	_	_	_
+57-8	4644-4645	,	_	_	_	_
+57-9	4646-4651	South	abstract[317]	new[317]	appos	57-12[319_317]
+57-10	4652-4658	Parade	abstract[317]	new[317]	_	_
+57-11	4659-4660	,	_	_	_	_
+57-12	4661-4665	CH48	abstract|abstract[319]	giv|giv[319]	appos|coref|appos|coref	57-15[320_319]|60-12|57-15[320_319]|60-12
+57-13	4666-4669	0QG	abstract[319]	giv[319]	_	_
+57-14	4670-4671	,	_	_	_	_
+57-15	4672-4673	☏	abstract[320]	giv[320]	coref	75-5[387_320]
+57-16	4674-4680	+44151	abstract[320]	giv[320]	_	_
+57-17	4681-4689	625-3292	abstract[320]	giv[320]	_	_
+57-18	4690-4691	.	_	_	_	_
+
+#Text=Sand yachting in Hoylake .
+58-1	4692-4696	Sand	person|object[322]	new|new[322]	_	_
+58-2	4697-4705	yachting	object[322]	new[322]	_	_
+58-3	4706-4708	in	object[322]	new[322]	_	_
+58-4	4709-4716	Hoylake	object[322]|place	new[322]|giv	coref	63-1
+58-5	4717-4718	.	_	_	_	_
+
+#Text=Royal Liverpool Golf Club . founded in 1869
+59-1	4719-4724	Royal	place[326]	giv[326]	_	_
+59-2	4725-4734	Liverpool	place|place[326]	giv|giv[326]	_	_
+59-3	4735-4739	Golf	abstract|place[326]	giv|giv[326]	_	_
+59-4	4740-4744	Club	place[326]	giv[326]	_	_
+59-5	4745-4746	.	_	_	_	_
+59-6	4747-4754	founded	_	_	_	_
+59-7	4755-4757	in	_	_	_	_
+59-8	4758-4762	1869	time	new	_	_
+
+#Text=West Kirby Concourse ( The Concourse ) , Grange Road , CH48 4HX ( 1 minute walk from West Kirby Station ) .
+60-1	4763-4767	West	person|place[330]	giv|new[330]	appos|appos	60-5[331_330]|60-5[331_330]
+60-2	4768-4773	Kirby	person|place[330]	giv|new[330]	_	_
+60-3	4774-4783	Concourse	place[330]	new[330]	_	_
+60-4	4784-4785	(	_	_	_	_
+60-5	4786-4789	The	place[331]	giv[331]	coref	81-17[418_331]
+60-6	4790-4799	Concourse	place[331]	giv[331]	_	_
+60-7	4800-4801	)	_	_	_	_
+60-8	4802-4803	,	_	_	_	_
+60-9	4804-4810	Grange	person|place[333]	giv|giv[333]	appos|coref|appos|coref	60-12[335_333]|73-4[371_0]|60-12[335_333]|73-4[371_0]
+60-10	4811-4815	Road	place[333]	giv[333]	_	_
+60-11	4816-4817	,	_	_	_	_
+60-12	4818-4822	CH48	abstract|place[335]	giv|giv[335]	coref|coref|coref|coref	73-4[372_335]|73-8|73-4[372_335]|73-8
+60-13	4823-4826	4HX	place[335]	giv[335]	_	_
+60-14	4827-4828	(	_	_	_	_
+60-15	4829-4830	1	event[337]	new[337]	_	_
+60-16	4831-4837	minute	time|event[337]	new|new[337]	_	_
+60-17	4838-4842	walk	event[337]	new[337]	_	_
+60-18	4843-4847	from	event[337]	new[337]	_	_
+60-19	4848-4852	West	event[337]|place[338]	new[337]|new[338]	_	_
+60-20	4853-4858	Kirby	event[337]|place[338]	new[337]|new[338]	_	_
+60-21	4859-4866	Station	event[337]|place[338]	new[337]|new[338]	_	_
+60-22	4867-4868	)	_	_	_	_
+60-23	4869-4870	.	_	_	_	_
+
+#Text=Indoor swimming .
+61-1	4871-4877	Indoor	object|abstract[340]	new|new[340]	_	_
+61-2	4878-4886	swimming	abstract[340]	new[340]	_	_
+61-3	4887-4888	.	_	_	_	_
+
+#Text=Events
+62-1	4889-4895	Events	abstract	new	_	_
+
+#Text=Hoylake RNLI Open Day North Parade , Hoylake .
+63-1	4896-4903	Hoylake	place|person[344]|place[346]	giv|new[344]|new[346]	appos|coref|appos|coref|appos|coref	63-8|69-5[360_346]|63-8|69-5[360_346]|63-8|69-5[360_346]
+63-2	4904-4908	RNLI	place|person[344]|place[346]	new|new[344]|new[346]	coref	69-1[358_0]
+63-3	4909-4913	Open	person[344]|place[346]	new[344]|new[346]	_	_
+63-4	4914-4917	Day	person[344]|place[346]	new[344]|new[346]	_	_
+63-5	4918-4923	North	organization|place[346]	new|new[346]	_	_
+63-6	4924-4930	Parade	place[346]	new[346]	_	_
+63-7	4931-4932	,	_	_	_	_
+63-8	4933-4940	Hoylake	place	giv	coref	65-6
+63-9	4941-4942	.	_	_	_	_
+
+#Text=CH47 2BB .
+64-1	4943-4947	CH47	abstract[348]	new[348]	coref	69-10[0_348]
+64-2	4948-4951	2BB	abstract[348]	new[348]	_	_
+64-3	4952-4953	.	_	_	_	_
+
+#Text=About 10 minutes walk from Hoylake station .
+65-1	4954-4959	About	time[349]	giv[349]	_	_
+65-2	4960-4962	10	time[349]	giv[349]	_	_
+65-3	4963-4970	minutes	time[349]	giv[349]	_	_
+65-4	4971-4975	walk	_	_	_	_
+65-5	4976-4980	from	_	_	_	_
+65-6	4981-4988	Hoylake	place|place[351]	giv|new[351]	coref|coref|coref|coref	69-1|81-20[420_351]|69-1|81-20[420_351]
+65-7	4989-4996	station	place[351]	new[351]	_	_
+65-8	4997-4998	.	_	_	_	_
+
+#Text=End of August .
+66-1	4999-5002	End	time[352]	new[352]	_	_
+66-2	5003-5005	of	time[352]	new[352]	_	_
+66-3	5006-5012	August	time[352]|time	new[352]|new	_	_
+66-4	5013-5014	.	_	_	_	_
+
+#Text=The Red Arrows provide flight displays .
+67-1	5015-5018	The	person[354]	new[354]	_	_
+67-2	5019-5022	Red	person[354]	new[354]	_	_
+67-3	5023-5029	Arrows	person[354]	new[354]	_	_
+67-4	5030-5037	provide	_	_	_	_
+67-5	5038-5044	flight	event|event[356]	new|new[356]	_	_
+67-6	5045-5053	displays	event[356]	new[356]	_	_
+67-7	5054-5055	.	_	_	_	_
+
+#Text=Buy
+68-1	5056-5059	Buy	_	_	_	_
+
+#Text=Hoylake RNLI shop , North Parade , Hoylake . CH47 3AL .
+69-1	5060-5067	Hoylake	place|place[358]|place[359]	giv|giv[358]|new[359]	appos|appos|appos	69-8|69-8|69-8
+69-2	5068-5072	RNLI	place[358]|place[359]	giv[358]|new[359]	_	_
+69-3	5073-5077	shop	place[359]	new[359]	_	_
+69-4	5078-5079	,	_	_	_	_
+69-5	5080-5085	North	place[360]	giv[360]	_	_
+69-6	5086-5092	Parade	place[360]	giv[360]	_	_
+69-7	5093-5094	,	_	_	_	_
+69-8	5095-5102	Hoylake	abstract	giv	appos	69-10[363_0]
+69-9	5103-5104	.	_	_	_	_
+69-10	5105-5109	CH47	abstract|abstract[363]	giv|giv[363]	coref|coref|coref|coref	77-8[0_363]|77-10|77-8[0_363]|77-10
+69-11	5110-5113	3AL	abstract[363]	giv[363]	_	_
+69-12	5114-5115	.	_	_	_	_
+
+#Text=Sundays , 11am-3pm ( weather permitting ) .
+70-1	5116-5123	Sundays	time	new	_	_
+70-2	5124-5125	,	_	_	_	_
+70-3	5126-5134	11am-3pm	time	new	_	_
+70-4	5135-5136	(	_	_	_	_
+70-5	5137-5144	weather	abstract|person[367]	new|new[367]	_	_
+70-6	5145-5155	permitting	person[367]	new[367]	_	_
+70-7	5156-5157	)	_	_	_	_
+70-8	5158-5159	.	_	_	_	_
+
+#Text=RNLI-related gifts and merchandise .
+71-1	5160-5172	RNLI-related	object[368]	new[368]	_	_
+71-2	5173-5178	gifts	object[368]	new[368]	_	_
+71-3	5179-5182	and	_	_	_	_
+71-4	5183-5194	merchandise	object	new	_	_
+71-5	5195-5196	.	_	_	_	_
+
+#Text=Eat
+72-1	5197-5200	Eat	_	_	_	_
+
+#Text=Karma Restaurant , 9 Grange Road , CH48 4DY , ☏ +44151 625-5999 .
+73-1	5201-5206	Karma	place[370]	new[370]	_	_
+73-2	5207-5217	Restaurant	place[370]	new[370]	_	_
+73-3	5218-5219	,	_	_	_	_
+73-4	5220-5221	9	person[371]|place[372]	giv[371]|giv[372]	appos|coref|appos|coref	73-8[374_372]|76-7[393_371]|73-8[374_372]|76-7[393_371]
+73-5	5222-5228	Grange	person[371]|place[372]	giv[371]|giv[372]	_	_
+73-6	5229-5233	Road	place[372]	giv[372]	_	_
+73-7	5234-5235	,	_	_	_	_
+73-8	5236-5240	CH48	abstract|place[374]	giv|giv[374]	appos|coref|appos|coref	73-11[375_374]|74-13|73-11[375_374]|74-13
+73-9	5241-5244	4DY	place[374]	giv[374]	_	_
+73-10	5245-5246	,	_	_	_	_
+73-11	5247-5248	☏	place[375]	giv[375]	coref	74-10[381_375]
+73-12	5249-5255	+44151	place[375]	giv[375]	_	_
+73-13	5256-5264	625-5999	place[375]	giv[375]	_	_
+73-14	5265-5266	.	_	_	_	_
+
+#Text=Ring O ' Bells ( Greene King ) , Village Road , CH48 7HE , ☏ +44151 929-6750 .
+74-1	5267-5271	Ring	person|abstract[377]|object[378]	new|new[377]|new[378]	_	_
+74-2	5272-5273	O	abstract[377]|object[378]	new[377]|new[378]	_	_
+74-3	5274-5275	'	abstract[377]|object[378]	new[377]|new[378]	_	_
+74-4	5276-5281	Bells	object[378]	new[378]	_	_
+74-5	5282-5283	(	_	_	_	_
+74-6	5284-5290	Greene	person[379]	new[379]	_	_
+74-7	5291-5295	King	person[379]	new[379]	_	_
+74-8	5296-5297	)	_	_	_	_
+74-9	5298-5299	,	_	_	_	_
+74-10	5300-5307	Village	place|place[381]	giv|giv[381]	appos|coref|appos|coref	74-13[383_381]|93-10|74-13[383_381]|93-10
+74-11	5308-5312	Road	place[381]	giv[381]	_	_
+74-12	5313-5314	,	_	_	_	_
+74-13	5315-5319	CH48	abstract|place[383]	giv|giv[383]	appos|coref|appos|coref	74-16[384_383]|75-9|74-16[384_383]|75-9
+74-14	5320-5323	7HE	place[383]	giv[383]	_	_
+74-15	5324-5325	,	_	_	_	_
+74-16	5326-5327	☏	place[384]	giv[384]	coref	76-7[394_384]
+74-17	5328-5334	+44151	place[384]	giv[384]	_	_
+74-18	5335-5343	929-6750	place[384]	giv[384]	_	_
+74-19	5344-5345	.	_	_	_	_
+
+#Text=Tanskey 's Bistro , 105 South Parade , CH48 0RR , ☏ +44151 625-3882 .
+75-1	5346-5353	Tanskey	person[385]|place[386]	new[385]|new[386]	_	_
+75-2	5354-5356	's	person[385]|place[386]	new[385]|new[386]	_	_
+75-3	5357-5363	Bistro	place[386]	new[386]	_	_
+75-4	5364-5365	,	_	_	_	_
+75-5	5366-5369	105	abstract[387]	giv[387]	appos	75-9[389_387]
+75-6	5370-5375	South	abstract[387]	giv[387]	_	_
+75-7	5376-5382	Parade	abstract[387]	giv[387]	_	_
+75-8	5383-5384	,	_	_	_	_
+75-9	5385-5389	CH48	abstract|abstract[389]	giv|giv[389]	appos|coref|appos|coref	75-12[390_389]|76-11|75-12[390_389]|76-11
+75-10	5390-5393	0RR	abstract[389]	giv[389]	_	_
+75-11	5394-5395	,	_	_	_	_
+75-12	5396-5397	☏	abstract[390]	giv[390]	_	_
+75-13	5398-5404	+44151	abstract[390]	giv[390]	_	_
+75-14	5405-5413	625-3882	abstract[390]	giv[390]	_	_
+75-15	5414-5415	.	_	_	_	_
+
+#Text=The Wro Lounge & Bar , 2 Grange Road , CH48 4HA , ☏ +44151 625-2010 .
+76-1	5416-5419	The	place[391]	new[391]	_	_
+76-2	5420-5423	Wro	place[391]	new[391]	_	_
+76-3	5424-5430	Lounge	place[391]	new[391]	_	_
+76-4	5431-5432	&	abstract[392]	new[392]	appos	76-7[395_392]
+76-5	5433-5436	Bar	abstract[392]	new[392]	_	_
+76-6	5437-5438	,	_	_	_	_
+76-7	5439-5440	2	person[393]|place[394]|place[395]	giv[393]|giv[394]|giv[395]	coref|coref|coref|coref|coref|coref|coref|coref|coref	77-4[399_394]|81-10[0_393]|88-5[451_395]|77-4[399_394]|81-10[0_393]|88-5[451_395]|77-4[399_394]|81-10[0_393]|88-5[451_395]
+76-8	5441-5447	Grange	person[393]|place[394]|place[395]	giv[393]|giv[394]|giv[395]	_	_
+76-9	5448-5452	Road	place[394]|place[395]	giv[394]|giv[395]	_	_
+76-10	5453-5454	,	place[395]	giv[395]	_	_
+76-11	5455-5459	CH48	place[395]|abstract	giv[395]|giv	coref	81-13
+76-12	5460-5463	4HA	place[395]	giv[395]	_	_
+76-13	5464-5465	,	place[395]	giv[395]	_	_
+76-14	5466-5467	☏	place[395]	giv[395]	_	_
+76-15	5468-5474	+44151	place[395]	giv[395]	_	_
+76-16	5475-5483	625-2010	place[395]	giv[395]	_	_
+76-17	5484-5485	.	_	_	_	_
+
+#Text=Julian 's , 20 Birkenhead Road , Hoylake , CH47 3BW , ☏ +44151 632-6241 .
+77-1	5486-5492	Julian	person[397]	new[397]	_	_
+77-2	5493-5495	's	person[397]	new[397]	_	_
+77-3	5496-5497	,	_	_	_	_
+77-4	5498-5500	20	place[398]|place[399]	new[398]|giv[399]	coref|coref|coref|coref	81-9[415_399]|89-5[0_398]|81-9[415_399]|89-5[0_398]
+77-5	5501-5511	Birkenhead	place[398]|place[399]	new[398]|giv[399]	_	_
+77-6	5512-5516	Road	place[399]	giv[399]	_	_
+77-7	5517-5518	,	_	_	_	_
+77-8	5519-5526	Hoylake	abstract	giv	appos	77-10[402_0]
+77-9	5527-5528	,	_	_	_	_
+77-10	5529-5533	CH47	abstract|abstract[402]	giv|giv[402]	coref|coref|coref|coref	78-8[0_402]|79-1[408_0]|78-8[0_402]|79-1[408_0]
+77-11	5534-5537	3BW	abstract[402]	giv[402]	_	_
+77-12	5538-5539	,	abstract[402]	giv[402]	_	_
+77-13	5540-5541	☏	abstract[402]	giv[402]	_	_
+77-14	5542-5548	+44151	abstract[402]	giv[402]	_	_
+77-15	5549-5557	632-6241	abstract[402]	giv[402]	_	_
+77-16	5558-5559	.	_	_	_	_
+
+#Text=The Quadrant , 5-6 The Quadrant , Hoylake , Wirral .
+78-1	5560-5563	The	abstract[403]	new[403]	appos	78-4[0_403]
+78-2	5564-5572	Quadrant	abstract[403]	new[403]	_	_
+78-3	5573-5574	,	_	_	_	_
+78-4	5575-5578	5-6	abstract	giv	appos	78-5[405_0]
+78-5	5579-5582	The	place[405]	giv[405]	_	_
+78-6	5583-5591	Quadrant	place[405]	giv[405]	_	_
+78-7	5592-5593	,	_	_	_	_
+78-8	5594-5601	Hoylake	organization	giv	coref	87-1
+78-9	5602-5603	,	_	_	_	_
+78-10	5604-5610	Wirral	place	giv	coref	88-11
+78-11	5611-5612	.	_	_	_	_
+
+#Text=CH47 2EE , ☏ +44151 632-4444 .
+79-1	5613-5617	CH47	abstract[408]	giv[408]	appos	79-4[409_408]
+79-2	5618-5621	2EE	abstract[408]	giv[408]	_	_
+79-3	5622-5623	,	_	_	_	_
+79-4	5624-5625	☏	abstract[409]	giv[409]	coref	87-16[0_409]
+79-5	5626-5632	+44151	abstract[409]	giv[409]	_	_
+79-6	5633-5641	632-4444	abstract[409]	giv[409]	_	_
+79-7	5642-5643	.	_	_	_	_
+
+#Text=Drink
+80-1	5644-5649	Drink	abstract	new	_	_
+
+#Text=The Dee Hotel ( JD Wetherspoons ) , 44 Grange Road , CH48 4EF ( Opposite the Concourse and railway station ) , ☏ +44151 929-6300 .
+81-1	5650-5653	The	place[412]	new[412]	_	_
+81-2	5654-5657	Dee	person|place[412]	giv|new[412]	_	_
+81-3	5658-5663	Hotel	place[412]	new[412]	_	_
+81-4	5664-5665	(	_	_	_	_
+81-5	5666-5668	JD	person[413]	new[413]	coref	87-4[440_413]
+81-6	5669-5681	Wetherspoons	person[413]	new[413]	_	_
+81-7	5682-5683	)	_	_	_	_
+81-8	5684-5685	,	_	_	_	_
+81-9	5686-5688	44	place[415]	giv[415]	appos	81-13[417_415]
+81-10	5689-5695	Grange	person|place[415]	giv|giv[415]	coref	83-5[426_0]
+81-11	5696-5700	Road	place[415]	giv[415]	_	_
+81-12	5701-5702	,	_	_	_	_
+81-13	5703-5707	CH48	abstract|place[417]	giv|giv[417]	coref|coref|coref|coref	83-5[427_417]|83-9|83-5[427_417]|83-9
+81-14	5708-5711	4EF	place[417]	giv[417]	_	_
+81-15	5712-5713	(	_	_	_	_
+81-16	5714-5722	Opposite	_	_	_	_
+81-17	5723-5726	the	place[418]	giv[418]	_	_
+81-18	5727-5736	Concourse	place[418]	giv[418]	_	_
+81-19	5737-5740	and	_	_	_	_
+81-20	5741-5748	railway	object|place[420]	new|giv[420]	ana|ana	82-4[0_420]|82-4[0_420]
+81-21	5749-5756	station	place[420]	giv[420]	_	_
+81-22	5757-5758	)	_	_	_	_
+81-23	5759-5760	,	_	_	_	_
+81-24	5761-5762	☏	abstract[421]	new[421]	_	_
+81-25	5763-5769	+44151	abstract[421]	new[421]	_	_
+81-26	5770-5778	929-6300	abstract[421]	new[421]	_	_
+81-27	5779-5780	.	_	_	_	_
+
+#Text=Actually better than it used to be , when it was a ' real ' pub !
+82-1	5781-5789	Actually	_	_	_	_
+82-2	5790-5796	better	_	_	_	_
+82-3	5797-5801	than	_	_	_	_
+82-4	5802-5804	it	place	giv	ana	82-10
+82-5	5805-5809	used	_	_	_	_
+82-6	5810-5812	to	_	_	_	_
+82-7	5813-5815	be	_	_	_	_
+82-8	5816-5817	,	_	_	_	_
+82-9	5818-5822	when	_	_	_	_
+82-10	5823-5825	it	place	giv	coref	82-12[424_0]
+82-11	5826-5829	was	_	_	_	_
+82-12	5830-5831	a	place[424]	giv[424]	coref	84-1[430_424]
+82-13	5832-5833	'	place[424]	giv[424]	_	_
+82-14	5834-5838	real	place[424]	giv[424]	_	_
+82-15	5839-5840	'	place[424]	giv[424]	_	_
+82-16	5841-5844	pub	place[424]	giv[424]	_	_
+82-17	5845-5846	!	_	_	_	_
+
+#Text=The White Lion , 44 Grange Road , CH48 4EF , ☏ +44151 929-6300 .
+83-1	5847-5850	The	place[425]	new[425]	_	_
+83-2	5851-5856	White	place[425]	new[425]	_	_
+83-3	5857-5861	Lion	place[425]	new[425]	_	_
+83-4	5862-5863	,	_	_	_	_
+83-5	5864-5866	44	person[426]|place[427]	giv[426]|giv[427]	coref|coref	83-9[429_427]|83-9[429_427]
+83-6	5867-5873	Grange	person[426]|place[427]	giv[426]|giv[427]	_	_
+83-7	5874-5878	Road	place[427]	giv[427]	_	_
+83-8	5879-5880	,	_	_	_	_
+83-9	5881-5885	CH48	abstract|place[429]	giv|giv[429]	coref|coref	85-4[433_429]|85-4[433_429]
+83-10	5886-5889	4EF	place[429]	giv[429]	_	_
+83-11	5890-5891	,	_	_	_	_
+83-12	5892-5893	☏	_	_	_	_
+83-13	5894-5900	+44151	_	_	_	_
+83-14	5901-5909	929-6300	_	_	_	_
+83-15	5910-5911	.	_	_	_	_
+
+#Text=The pub is quite small but friendly & interesting .
+84-1	5912-5915	The	place[430]	giv[430]	coref	87-22[447_430]
+84-2	5916-5919	pub	place[430]	giv[430]	_	_
+84-3	5920-5922	is	_	_	_	_
+84-4	5923-5928	quite	_	_	_	_
+84-5	5929-5934	small	_	_	_	_
+84-6	5935-5938	but	_	_	_	_
+84-7	5939-5947	friendly	_	_	_	_
+84-8	5948-5949	&	_	_	_	_
+84-9	5950-5961	interesting	_	_	_	_
+84-10	5962-5963	.	_	_	_	_
+
+#Text=Slinky 's , 84 Banks Road . , ☏ +44151 625-6711 .
+85-1	5964-5970	Slinky	organization[431]	new[431]	_	_
+85-2	5971-5973	's	organization[431]	new[431]	_	_
+85-3	5974-5975	,	_	_	_	_
+85-4	5976-5978	84	person[432]|place[433]	new[432]|giv[433]	appos|appos	85-9[434_433]|85-9[434_433]
+85-5	5979-5984	Banks	person[432]|place[433]	new[432]|giv[433]	_	_
+85-6	5985-5989	Road	place[433]	giv[433]	_	_
+85-7	5990-5991	.	_	_	_	_
+85-8	5992-5993	,	_	_	_	_
+85-9	5994-5995	☏	place[434]	giv[434]	coref	89-4[463_434]
+85-10	5996-6002	+44151	place[434]	giv[434]	_	_
+85-11	6003-6011	625-6711	place[434]	giv[434]	_	_
+85-12	6012-6013	.	_	_	_	_
+
+#Text=A laid-back cafe and wine bar .
+86-1	6014-6015	A	place[435]	new[435]	_	_
+86-2	6016-6025	laid-back	place[435]	new[435]	_	_
+86-3	6026-6030	cafe	place[435]	new[435]	_	_
+86-4	6031-6034	and	_	_	_	_
+86-5	6035-6039	wine	substance|place[437]	new|new[437]	_	_
+86-6	6040-6043	bar	place[437]	new[437]	_	_
+86-7	6044-6045	.	_	_	_	_
+
+#Text=Hoylake Lights ( JD Wetherspoons ) , 52 – 54 Market Street , Hoylake . CH47 3BB ( 10 minutes from Hoylake station ) , ☏ +44151 632-1209 .
+87-1	6046-6053	Hoylake	organization|place[439]	giv|new[439]	appos|appos	87-14|87-14
+87-2	6054-6060	Lights	place[439]	new[439]	_	_
+87-3	6061-6062	(	_	_	_	_
+87-4	6063-6065	JD	person[440]	giv[440]	_	_
+87-5	6066-6078	Wetherspoons	person[440]	giv[440]	_	_
+87-6	6079-6080	)	_	_	_	_
+87-7	6081-6082	,	_	_	_	_
+87-8	6083-6085	52	_	_	_	_
+87-9	6086-6087	–	_	_	_	_
+87-10	6088-6090	54	place[441]	giv[441]	coref	91-4[469_441]
+87-11	6091-6097	Market	place[441]	giv[441]	_	_
+87-12	6098-6104	Street	place[441]	giv[441]	_	_
+87-13	6105-6106	,	_	_	_	_
+87-14	6107-6114	Hoylake	place	giv	coref	87-22
+87-15	6115-6116	.	_	_	_	_
+87-16	6117-6121	CH47	abstract|time[444]	giv|new[444]	appos|coref|appos|coref	87-19[445_444]|90-1[465_0]|87-19[445_444]|90-1[465_0]
+87-17	6122-6125	3BB	time[444]	new[444]	_	_
+87-18	6126-6127	(	_	_	_	_
+87-19	6128-6130	10	time[445]	giv[445]	_	_
+87-20	6131-6138	minutes	time[445]	giv[445]	_	_
+87-21	6139-6143	from	time[445]	giv[445]	_	_
+87-22	6144-6151	Hoylake	time[445]|place|place[447]	giv[445]|giv|giv[447]	coref|coref|coref|coref	91-8|92-7[475_447]|91-8|92-7[475_447]
+87-23	6152-6159	station	time[445]|place[447]	giv[445]|giv[447]	_	_
+87-24	6160-6161	)	_	_	_	_
+87-25	6162-6163	,	_	_	_	_
+87-26	6164-6165	☏	_	_	_	_
+87-27	6166-6172	+44151	_	_	_	_
+87-28	6173-6181	632-1209	_	_	_	_
+87-29	6182-6183	.	_	_	_	_
+
+#Text=The Cottage Loaf , 338 Telegraph Road , Thurstaston , Wirral . CH61 0HJ ( On the A540 , near the Thurstaston and Irby roundabout . ) , ☏ +44151 648-2837 .
+88-1	6184-6187	The	place[448]	new[448]	_	_
+88-2	6188-6195	Cottage	place[448]	new[448]	_	_
+88-3	6196-6200	Loaf	place[448]	new[448]	_	_
+88-4	6201-6202	,	_	_	_	_
+88-5	6203-6206	338	place[450]|place[451]	new[450]|giv[451]	_	_
+88-6	6207-6216	Telegraph	place|place[450]|place[451]	new|new[450]|giv[451]	_	_
+88-7	6217-6221	Road	place[450]|place[451]	new[450]|giv[451]	_	_
+88-8	6222-6223	,	place[451]	giv[451]	_	_
+88-9	6224-6235	Thurstaston	place[451]|place	giv[451]|giv	coref	88-21[457_0]
+88-10	6236-6237	,	place[451]	giv[451]	_	_
+88-11	6238-6244	Wirral	place[451]|place	giv[451]|giv	_	_
+88-12	6245-6246	.	_	_	_	_
+88-13	6247-6251	CH61	abstract|abstract[455]	giv|new[455]	_	_
+88-14	6252-6255	0HJ	abstract[455]	new[455]	_	_
+88-15	6256-6257	(	abstract[455]	new[455]	_	_
+88-16	6258-6260	On	abstract[455]	new[455]	_	_
+88-17	6261-6264	the	abstract[455]|place[456]	new[455]|new[456]	_	_
+88-18	6265-6269	A540	abstract[455]|place[456]	new[455]|new[456]	_	_
+88-19	6270-6271	,	abstract[455]|place[456]	new[455]|new[456]	_	_
+88-20	6272-6276	near	abstract[455]|place[456]	new[455]|new[456]	_	_
+88-21	6277-6280	the	abstract[455]|place[456]|place[457]	new[455]|new[456]|giv[457]	_	_
+88-22	6281-6292	Thurstaston	abstract[455]|place[456]|place[457]	new[455]|new[456]|giv[457]	_	_
+88-23	6293-6296	and	abstract[455]|place[456]	new[455]|new[456]	_	_
+88-24	6297-6301	Irby	abstract[455]|place[456]|place|place[459]	new[455]|new[456]|new|new[459]	_	_
+88-25	6302-6312	roundabout	abstract[455]|place[456]|place[459]	new[455]|new[456]|new[459]	_	_
+88-26	6313-6314	.	abstract[455]	new[455]	_	_
+88-27	6315-6316	)	abstract[455]	new[455]	_	_
+88-28	6317-6318	,	abstract[455]	new[455]	_	_
+88-29	6319-6320	☏	abstract[455]|abstract[460]	new[455]|new[460]	_	_
+88-30	6321-6327	+44151	abstract[455]|abstract[460]	new[455]|new[460]	_	_
+88-31	6328-6336	648-2837	abstract[455]|abstract[460]	new[455]|new[460]	_	_
+88-32	6337-6338	.	_	_	_	_
+
+#Text=The Railway , 143-145 Birkenhead Road , Meols .
+89-1	6339-6342	The	place[461]	new[461]	_	_
+89-2	6343-6350	Railway	place[461]	new[461]	_	_
+89-3	6351-6352	,	_	_	_	_
+89-4	6353-6360	143-145	place[463]	giv[463]	_	_
+89-5	6361-6371	Birkenhead	place|place[463]	giv|giv[463]	_	_
+89-6	6372-6376	Road	place[463]	giv[463]	_	_
+89-7	6377-6378	,	_	_	_	_
+89-8	6379-6384	Meols	place	giv	_	_
+89-9	6385-6386	.	_	_	_	_
+
+#Text=CH47 6AA , ☏ +44151 632-3320 .
+90-1	6387-6391	CH47	abstract[465]	giv[465]	appos	90-4[466_465]
+90-2	6392-6395	6AA	abstract[465]	giv[465]	_	_
+90-3	6396-6397	,	_	_	_	_
+90-4	6398-6399	☏	abstract[466]	giv[466]	coref	92-1[0_466]
+90-5	6400-6406	+44151	abstract[466]	giv[466]	_	_
+90-6	6407-6415	632-3320	abstract[466]	giv[466]	_	_
+90-7	6416-6417	.	_	_	_	_
+
+#Text=Vanilla Lounge , 6 Market Street , Hoylake .
+91-1	6418-6425	Vanilla	place[467]	new[467]	_	_
+91-2	6426-6432	Lounge	place[467]	new[467]	_	_
+91-3	6433-6434	,	_	_	_	_
+91-4	6435-6436	6	place[468]|place[469]	new[468]|giv[469]	_	_
+91-5	6437-6443	Market	place[468]|place[469]	new[468]|giv[469]	_	_
+91-6	6444-6450	Street	place[469]	giv[469]	_	_
+91-7	6451-6452	,	_	_	_	_
+91-8	6453-6460	Hoylake	place	giv	coref	92-7
+91-9	6461-6462	.	_	_	_	_
+
+#Text=CH47 2AE ( 1 minute from Hoylake station ) , ☏ +44151 633-2390 .
+92-1	6463-6467	CH47	object|time[472]	giv|new[472]	appos|appos	92-4[473_472]|92-4[473_472]
+92-2	6468-6471	2AE	time[472]	new[472]	_	_
+92-3	6472-6473	(	_	_	_	_
+92-4	6474-6475	1	abstract[473]	giv[473]	appos	92-11[476_473]
+92-5	6476-6482	minute	abstract[473]	giv[473]	_	_
+92-6	6483-6487	from	abstract[473]	giv[473]	_	_
+92-7	6488-6495	Hoylake	abstract[473]|place|place[475]	giv[473]|giv|giv[475]	_	_
+92-8	6496-6503	station	abstract[473]|place[475]	giv[473]|giv[475]	_	_
+92-9	6504-6505	)	_	_	_	_
+92-10	6506-6507	,	_	_	_	_
+92-11	6508-6509	☏	abstract[476]	giv[476]	_	_
+92-12	6510-6516	+44151	abstract[476]	giv[476]	_	_
+92-13	6517-6525	633-2390	abstract[476]	giv[476]	_	_
+92-14	6526-6527	.	_	_	_	_
+
+#Text=Moby Dick - ( in)famous place in the Old Village area , said to be now back in action , after a period of closure .
+93-1	6528-6532	Moby	person[477]	new[477]	_	_
+93-2	6533-6537	Dick	person[477]	new[477]	_	_
+93-3	6538-6539	-	_	_	_	_
+93-4	6540-6541	(	_	_	_	_
+93-5	6542-6551	in)famous	place[478]	new[478]	_	_
+93-6	6552-6557	place	place[478]	new[478]	_	_
+93-7	6558-6560	in	place[478]	new[478]	_	_
+93-8	6561-6564	the	place[478]|place[480]	new[478]|new[480]	_	_
+93-9	6565-6568	Old	place[478]|place[480]	new[478]|new[480]	_	_
+93-10	6569-6576	Village	place[478]|place|place[480]	new[478]|giv|new[480]	_	_
+93-11	6577-6581	area	place[478]|place[480]	new[478]|new[480]	_	_
+93-12	6582-6583	,	_	_	_	_
+93-13	6584-6588	said	_	_	_	_
+93-14	6589-6591	to	_	_	_	_
+93-15	6592-6594	be	_	_	_	_
+93-16	6595-6598	now	_	_	_	_
+93-17	6599-6603	back	_	_	_	_
+93-18	6604-6606	in	_	_	_	_
+93-19	6607-6613	action	abstract	new	_	_
+93-20	6614-6615	,	_	_	_	_
+93-21	6616-6621	after	_	_	_	_
+93-22	6622-6623	a	event[482]	new[482]	_	_
+93-23	6624-6630	period	event[482]	new[482]	_	_
+93-24	6631-6633	of	event[482]	new[482]	_	_
+93-25	6634-6641	closure	event[482]|event	new[482]|new	_	_
+93-26	6642-6643	.	_	_	_	_

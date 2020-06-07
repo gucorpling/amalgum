@@ -1,0 +1,263 @@
+<rst>
+<header>
+	<relations>
+			<rel name="means" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">5. Mathematical Model</segment>
+<segment id="2" parent="1003" relname="attribution">According to the above description and assumption of the problem ,</segment>
+<segment id="3" parent="1003" relname="span">the mathematical model for a CLSCN</segment>
+<segment id="4" parent="3" relname="elaboration">considering sustainability will be presented in detail .</segment>
+<segment id="5" parent="1007" relname="span">These formulations are developed</segment>
+<segment id="6" parent="5" relname="means">by extending previous works</segment>
+<segment id="7" parent="1006" relname="same_unit">( mainly ) .</segment>
+<segment id="8" parent="1004" relname="joint">5.1 .</segment>
+<segment id="9" parent="1009" relname="preparation">Notations</segment>
+<segment id="10" parent="1009" relname="joint">5.1.1 .</segment>
+<segment id="11" parent="1011" relname="preparation">Sets and Indices</segment>
+<segment id="12" parent="1012" relname="span">Set of candidate plants , .</segment>
+<segment id="13" parent="12" relname="elaboration">Set of candidate distribution centers , .</segment>
+<segment id="14" parent="1014" relname="span">Set of candidate collection center , .</segment>
+<segment id="15" parent="1015" relname="span">Set of candidate remanufacturing center , .</segment>
+<segment id="16" parent="1016" relname="span">Set of fixed customers , .</segment>
+<segment id="17" parent="16" relname="elaboration">5.1.2 .</segment>
+<segment id="18" parent="1018" relname="preparation">Parameters</segment>
+<segment id="19" parent="1019" relname="preparation">Demand of customer m .</segment>
+<segment id="20" parent="1020" relname="span">Return rate of used products from customer m .</segment>
+<segment id="21" parent="20" relname="elaboration">Remanufacturing rate of used products at remanufacturing centers .</segment>
+<segment id="22" parent="1022" relname="span">Carbon cap of supply chain</segment>
+<segment id="23" parent="22" relname="elaboration">set by the government .</segment>
+<segment id="24" parent="1024" relname="preparation">Cost of producing one unit product at plant i .</segment>
+<segment id="25" parent="1025" relname="preparation">Cost of distributing one unit product at distribution center j .</segment>
+<segment id="26" parent="1026" relname="preparation">Cost of collecting one unit product at collection center k .</segment>
+<segment id="27" parent="1027" relname="preparation">Cost of remanufacturing one unit product at remanufacturing center l .</segment>
+<segment id="28" parent="1028" relname="preparation">Cost of transporting one unit of new product per mile by transport vehicle type A.</segment>
+<segment id="29" parent="1029" relname="preparation">Cost of transporting one unit of used product per mile by transport vehicle type A.</segment>
+<segment id="30" parent="1030" relname="preparation">Cost of transporting one unit of new product per mile by transport vehicle type B.</segment>
+<segment id="31" parent="1031" relname="preparation">Cost of transporting one unit of used product per mile by transport vehicle type B.</segment>
+<segment id="32" parent="1032" relname="preparation">Distance between plant i and distribution center j .</segment>
+<segment id="33" parent="1033" relname="preparation">Distance between distribution center j and customer m .</segment>
+<segment id="34" parent="1034" relname="span">Distance between customer m and collection center k .</segment>
+<segment id="35" parent="34" relname="elaboration">Distance between collection center k and remanufacturing center l .</segment>
+<segment id="36" parent="1036" relname="preparation">Distance between remanufacturing center l and distribution center j .</segment>
+<segment id="37" parent="1037" relname="span">Fixed cost</segment>
+<segment id="38" parent="37" relname="elaboration">of establishing plant i .</segment>
+<segment id="39" parent="1039" relname="preparation">Cost of establishing distribution center j .</segment>
+<segment id="40" parent="1040" relname="span">Fixed cost</segment>
+<segment id="41" parent="40" relname="elaboration">of establishing collection center k .</segment>
+<segment id="42" parent="1042" relname="span">Fixed cost</segment>
+<segment id="43" parent="42" relname="elaboration">of establishing remanufacturing center l .</segment>
+<segment id="44" parent="1044" relname="preparation">Minimum capacity for plant i .</segment>
+<segment id="45" parent="1045" relname="span">Maximum capacity for plant i .</segment>
+<segment id="46" parent="45" relname="elaboration">Minimum capacity for distribution center j .</segment>
+<segment id="47" parent="1047" relname="preparation">Maximum capacity for distribution center j .</segment>
+<segment id="48" parent="1048" relname="preparation">Minimum capacity for collection center k .</segment>
+<segment id="49" parent="1049" relname="preparation">Maximum capacity for collection center k .</segment>
+<segment id="50" parent="1050" relname="preparation">Minimum capacity for remanufacturing center l .</segment>
+<segment id="51" parent="1051" relname="preparation">Maximum capacity for remanufacturing center l .</segment>
+<segment id="52" parent="1052" relname="span">Carbon emission</segment>
+<segment id="53" parent="52" relname="purpose">for producing one unit of product at plant i .</segment>
+<segment id="54" parent="1054" relname="span">Carbon emission</segment>
+<segment id="55" parent="54" relname="purpose">for distributing one unit of product at distribution center j .</segment>
+<segment id="56" parent="1056" relname="span">Carbon emission</segment>
+<segment id="57" parent="56" relname="purpose">for collecting one unit of product at collection center k .</segment>
+<segment id="58" parent="1058" relname="span">Carbon emission</segment>
+<segment id="59" parent="58" relname="purpose">for remanufacturing one unit of product at remanufacturing center l .</segment>
+<segment id="60" parent="1060" relname="span">Carbon emission</segment>
+<segment id="61" parent="60" relname="purpose">for transporting one unit of new product per mile by transport vehicle type A.</segment>
+<segment id="62" parent="1062" relname="span">Carbon emission</segment>
+<segment id="63" parent="62" relname="purpose">for transporting one unit of used product per mile by transport vehicle type A.</segment>
+<segment id="64" parent="1064" relname="span">Carbon emission</segment>
+<segment id="65" parent="64" relname="purpose">for transporting one unit of new product per mile by transport vehicle type B.</segment>
+<segment id="66" parent="1066" relname="span">Carbon emission</segment>
+<segment id="67" parent="66" relname="purpose">for transporting one unit of used product per mile by transport vehicle type B.</segment>
+<segment id="68" parent="1068" relname="span">Numbers of missed working days</segment>
+<segment id="69" parent="68" relname="elaboration">due to work ’s damages during establishing plant i .</segment>
+<segment id="70" parent="1070" relname="span">Maximum averages of missed days</segment>
+<segment id="71" parent="1071" relname="span">due to work ’s damages</segment>
+<segment id="72" parent="71" relname="circumstance">when establishing plant i .</segment>
+<segment id="73" parent="1074" relname="joint">Numbers of missed working days</segment>
+<segment id="74" parent="1075" relname="span">due to work ’s damages</segment>
+<segment id="75" parent="74" relname="circumstance">when establishing distribution center j .</segment>
+<segment id="76" parent="1077" relname="span">Maximum averages of missed days</segment>
+<segment id="77" parent="1078" relname="span">due to work ’s damages</segment>
+<segment id="78" parent="77" relname="circumstance">when establishing distribution center j .</segment>
+<segment id="79" parent="1080" relname="span">Numbers of missed working days</segment>
+<segment id="80" parent="1081" relname="span">due to work ’s damages</segment>
+<segment id="81" parent="80" relname="circumstance">when establishing collection center k .</segment>
+<segment id="82" parent="1083" relname="span">Maximum averages of missed days</segment>
+<segment id="83" parent="1084" relname="span">due to work ’s damages</segment>
+<segment id="84" parent="83" relname="circumstance">when establishing collection center k .</segment>
+<segment id="85" parent="1085" relname="span">Numbers of missed working days</segment>
+<segment id="86" parent="1086" relname="span">due to work ’s damages</segment>
+<segment id="87" parent="86" relname="circumstance">when establishing remanufacturing center l .</segment>
+<segment id="88" parent="1088" relname="span">Maximum averages of missed days</segment>
+<segment id="89" parent="1089" relname="span">due to work ’s damages</segment>
+<segment id="90" parent="89" relname="circumstance">when establishing remanufacturing center l .</segment>
+<segment id="91" parent="1091" relname="preparation">5.1.3 .</segment>
+<segment id="92" parent="1092" relname="span">Decision Variables</segment>
+<segment id="93" parent="1093" relname="same_unit">A binary variable , it is 1 :</segment>
+<segment id="94" parent="95" relname="condition">if plant i is established ;</segment>
+<segment id="95" parent="1094" relname="span">otherwise , 0 .</segment>
+<segment id="96" parent="1096" relname="same_unit">A binary variable , it is 1 :</segment>
+<segment id="97" parent="98" relname="condition">if distribution center j is established ;</segment>
+<segment id="98" parent="1097" relname="span">otherwise , 0 .</segment>
+<segment id="99" parent="1099" relname="same_unit">A binary variable , it is 1 :</segment>
+<segment id="100" parent="101" relname="condition">if collection center k is established ;</segment>
+<segment id="101" parent="1100" relname="span">otherwise , 0 .</segment>
+<segment id="102" parent="1102" relname="same_unit">A binary variable , it is 1 :</segment>
+<segment id="103" parent="104" relname="condition">if remanufacturing center l is established ;</segment>
+<segment id="104" parent="1103" relname="span">otherwise , 0 .</segment>
+<segment id="105" parent="1105" relname="span">Volume of products</segment>
+<segment id="106" parent="105" relname="elaboration">shipped from plant i to distribution center j .</segment>
+<segment id="107" parent="1107" relname="preparation">Volume of products shipped from distribution center j to customer m .</segment>
+<segment id="108" parent="1108" relname="span">Volume of used products</segment>
+<segment id="109" parent="108" relname="elaboration">shipped from customer m and collection center k.</segment>
+<segment id="110" parent="1110" relname="span">Volume of used products</segment>
+<segment id="111" parent="110" relname="elaboration">shipped from collection center k and remanufacturing center l .</segment>
+<segment id="112" parent="1112" relname="span">Volume of products</segment>
+<segment id="113" parent="112" relname="elaboration">shipped from remanufacturing center l and distribution center j .</segment>
+<segment id="114" parent="1114" relname="span">Membership degree for the number of missed working days</segment>
+<segment id="115" parent="114" relname="elaboration">due to work ’s damages for each worker during establishing plants .</segment>
+<segment id="116" parent="1116" relname="span">Membership degree for the number of missed working days</segment>
+<segment id="117" parent="116" relname="elaboration">due to work ’s damages for each worker during establishing distribution centers .</segment>
+<segment id="118" parent="1118" relname="span">Membership degree for the number of missed working days</segment>
+<segment id="119" parent="118" relname="elaboration">due to work ’s damages for each worker during establishing collection centers .</segment>
+<segment id="120" parent="1120" relname="span">Membership degree for the number of missed working days</segment>
+<segment id="121" parent="1121" relname="span">due to work ’s damages for each worker</segment>
+<segment id="122" parent="121" relname="elaboration">during establishing remanufacturing centers .</segment>
+<segment id="123" parent="1117" relname="joint">5.2 .</segment>
+<segment id="124" parent="1124" relname="preparation">Objective Functions</segment>
+<segment id="125" parent="1124" relname="span">We use the notations</segment>
+<segment id="126" parent="1125" relname="span">described in the previous subsection</segment>
+<segment id="127" parent="126" relname="purpose">to develop the objectives step-by-step as follows :</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1004" relname="preparation"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="multinuc" parent="1001" relname="span"/>
+<group id="1006" type="multinuc" parent="1004" relname="joint"/>
+<group id="1007" type="span" parent="1006" relname="same_unit"/>
+<group id="1008" type="span" parent="1004" relname="joint"/>
+<group id="1009" type="multinuc" parent="1008" relname="span"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="joint"/>
+<group id="1014" type="span" parent="1011" relname="joint"/>
+<group id="1015" type="span" parent="14" relname="elaboration"/>
+<group id="1016" type="span" parent="15" relname="elaboration"/>
+<group id="1017" type="span" parent="1011" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1019" type="span" parent="1018" relname="span"/>
+<group id="1020" type="span" parent="1021" relname="preparation"/>
+<group id="1021" type="span" parent="1019" relname="span"/>
+<group id="1022" type="span" parent="1023" relname="preparation"/>
+<group id="1023" type="span" parent="1021" relname="span"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1028" type="span" parent="1027" relname="span"/>
+<group id="1029" type="span" parent="1028" relname="span"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="1030" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="span"/>
+<group id="1033" type="multinuc" parent="1032" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="1033" relname="joint"/>
+<group id="1036" type="multinuc" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1036" relname="joint"/>
+<group id="1038" type="span" parent="1036" relname="joint"/>
+<group id="1039" type="multinuc" parent="1038" relname="span"/>
+<group id="1040" type="span" parent="1039" relname="joint"/>
+<group id="1042" type="span" parent="1039" relname="joint"/>
+<group id="1043" type="span" parent="1039" relname="joint"/>
+<group id="1044" type="multinuc" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1046" type="span" parent="1044" relname="joint"/>
+<group id="1047" type="span" parent="1046" relname="span"/>
+<group id="1048" type="span" parent="1047" relname="span"/>
+<group id="1049" type="span" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="span" parent="1050" relname="span"/>
+<group id="1052" type="span" parent="1053" relname="preparation"/>
+<group id="1053" type="span" parent="1051" relname="span"/>
+<group id="1054" type="span" parent="1055" relname="preparation"/>
+<group id="1055" type="span" parent="1053" relname="span"/>
+<group id="1056" type="span" parent="1057" relname="preparation"/>
+<group id="1057" type="span" parent="1055" relname="span"/>
+<group id="1058" type="span" parent="1059" relname="preparation"/>
+<group id="1059" type="span" parent="1057" relname="span"/>
+<group id="1060" type="span" parent="1061" relname="preparation"/>
+<group id="1061" type="span" parent="1059" relname="span"/>
+<group id="1062" type="span" parent="1063" relname="preparation"/>
+<group id="1063" type="span" parent="1061" relname="span"/>
+<group id="1064" type="span" parent="1065" relname="preparation"/>
+<group id="1065" type="span" parent="1063" relname="span"/>
+<group id="1066" type="span" parent="1067" relname="preparation"/>
+<group id="1067" type="span" parent="1065" relname="span"/>
+<group id="1068" type="span" parent="1069" relname="preparation"/>
+<group id="1069" type="span" parent="1067" relname="span"/>
+<group id="1070" type="span" parent="1072" relname="preparation"/>
+<group id="1071" type="span" parent="70" relname="purpose"/>
+<group id="1072" type="multinuc" parent="1069" relname="span"/>
+<group id="1073" type="span" parent="1072" relname="joint"/>
+<group id="1074" type="multinuc" parent="1073" relname="span"/>
+<group id="1075" type="span" parent="1074" relname="joint"/>
+<group id="1076" type="multinuc" parent="1074" relname="elaboration"/>
+<group id="1077" type="span" parent="1076" relname="joint"/>
+<group id="1078" type="span" parent="76" relname="purpose"/>
+<group id="1079" type="span" parent="1076" relname="joint"/>
+<group id="1080" type="span" parent="1079" relname="span"/>
+<group id="1081" type="span" parent="79" relname="elaboration"/>
+<group id="1082" type="multinuc" parent="1080" relname="elaboration"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="82" relname="purpose"/>
+<group id="1085" type="span" parent="1082" relname="joint"/>
+<group id="1086" type="span" parent="85" relname="elaboration"/>
+<group id="1088" type="span" parent="1072" relname="joint"/>
+<group id="1089" type="span" parent="88" relname="purpose"/>
+<group id="1090" type="span" parent="1072" relname="joint"/>
+<group id="1091" type="multinuc" parent="1090" relname="span"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="multinuc" parent="92" relname="elaboration"/>
+<group id="1094" type="span" parent="1093" relname="same_unit"/>
+<group id="1095" type="multinuc" parent="1091" relname="joint"/>
+<group id="1096" type="multinuc" parent="1095" relname="sequence"/>
+<group id="1097" type="span" parent="1096" relname="same_unit"/>
+<group id="1099" type="multinuc" parent="1095" relname="sequence"/>
+<group id="1100" type="span" parent="1099" relname="same_unit"/>
+<group id="1101" type="multinuc" parent="1095" relname="sequence"/>
+<group id="1102" type="multinuc" parent="1101" relname="joint"/>
+<group id="1103" type="span" parent="1102" relname="same_unit"/>
+<group id="1105" type="span" parent="1101" relname="joint"/>
+<group id="1106" type="span" parent="1101" relname="joint"/>
+<group id="1107" type="span" parent="1106" relname="span"/>
+<group id="1108" type="span" parent="1109" relname="preparation"/>
+<group id="1109" type="span" parent="1107" relname="span"/>
+<group id="1110" type="span" parent="1111" relname="preparation"/>
+<group id="1111" type="span" parent="1109" relname="span"/>
+<group id="1112" type="span" parent="1113" relname="preparation"/>
+<group id="1113" type="multinuc" parent="1111" relname="span"/>
+<group id="1114" type="span" parent="1113" relname="joint"/>
+<group id="1115" type="span" parent="1113" relname="joint"/>
+<group id="1116" type="span" parent="1117" relname="preparation"/>
+<group id="1117" type="multinuc" parent="1115" relname="span"/>
+<group id="1118" type="span" parent="1117" relname="joint"/>
+<group id="1120" type="span" parent="1117" relname="joint"/>
+<group id="1121" type="span" parent="120" relname="elaboration"/>
+<group id="1123" type="span" parent="1117" relname="joint"/>
+<group id="1124" type="span" parent="1123" relname="span"/>
+<group id="1125" type="span" parent="125" relname="elaboration"/>
+	</body>
+</rst>

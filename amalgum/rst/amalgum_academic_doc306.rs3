@@ -1,0 +1,170 @@
+<rst>
+<header>
+	<relations>
+			<rel name="elaboration" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1003" relname="span">The concept of precision viticulture has rapidly developed and extended to a variety of unmanned aerial vehicle</segment>
+<segment id="3" parent="2" relname="restatement">( UAV )</segment>
+<segment id="4" parent="1002" relname="same_unit">applications in recent years .</segment>
+<segment id="5" parent="1005" relname="span">These include digital 3D vineyard structure reconstruction from UAV imagery</segment>
+<segment id="6" parent="1006" relname="span">for precise row monitoring and crop status quantification ,</segment>
+<segment id="7" parent="1007" relname="joint">such as evaluating growth conditions with hyperspectral sensors , RGB , multispectral , thermal sensors combined together ,</segment>
+<segment id="8" parent="1008" relname="span">and utilizing machine-learning techniques for multispectral sensors</segment>
+<segment id="9" parent="8" relname="purpose">to schedule the irrigation .</segment>
+<segment id="10" parent="1010" relname="span">All of the mentioned quantification works have used optical sensors ,</segment>
+<segment id="11" parent="10" relname="elaboration">which heavily rely upon the accurate derivation of canopy reflectance .</segment>
+<segment id="12" parent="1012" relname="preparation">In viticulture , this demand faces two unique geometric problems .</segment>
+<segment id="13" parent="1013" relname="same_unit">First , the canopy converges to a narrower shape</segment>
+<segment id="14" parent="15" relname="circumstance">after pruning ,</segment>
+<segment id="15" parent="1014" relname="span">limiting the retrievable information from nadir orthophotos .</segment>
+<segment id="16" parent="1016" relname="same_unit">Second ,</segment>
+<segment id="17" parent="1018" relname="span">although the former problem can be improved</segment>
+<segment id="18" parent="1019" relname="span">by tilting the camera ’s view angle</segment>
+<segment id="19" parent="18" relname="purpose">to observe the side of the canopies ,</segment>
+<segment id="20" parent="1017" relname="span">the enlarged sun-target-sensor angle in the sloped areas will further interfere with the target reflectance anisotropy .</segment>
+<segment id="21" parent="1012" relname="joint">The resulting consequences have been demonstrated in other scenarios .</segment>
+<segment id="22" parent="23" relname="attribution">One study on wheat showed</segment>
+<segment id="23" parent="1022" relname="span">that SCOPE-modeled directional reflectance was largely different from the UAV hyperspectral spectrometer measurement in low-tilt angles .</segment>
+<segment id="24" parent="1025" relname="span">Another hyperspectral study highlighted the influence of viewing geometry on the Normalized Differential Vegetation Index</segment>
+<segment id="25" parent="24" relname="elaboration">( NDVI )</segment>
+<segment id="26" parent="1026" relname="span">values ,</segment>
+<segment id="27" parent="26" relname="elaboration">demanding the necessary compensation .</segment>
+<segment id="28" parent="1028" relname="span">The angular reflectance dependency has been intensively studied within the framework of the bidirectional reflectance distribution function</segment>
+<segment id="29" parent="28" relname="elaboration">( BRDF ) .</segment>
+<segment id="30" parent="1032" relname="span">For vegetation canopies , the anisotropic reflectance can be dependent on the canopy structure</segment>
+<segment id="31" parent="30" relname="elaboration">( surface curvature , leaf layers , shadow proportion , leaf orientations , etc. )</segment>
+<segment id="32" parent="1031" relname="same_unit">and visible background at different view geometries .</segment>
+<segment id="33" parent="1033" relname="span">This has resulted in a series of modeling tools .</segment>
+<segment id="34" parent="1035" relname="same_unit">One of the commonly used models</segment>
+<segment id="35" parent="1035" relname="same_unit">was described by Walthall et al. .</segment>
+<segment id="36" parent="1037" relname="span">It was then improved in a detailed layout in Nilson and Kuusk ’s work ,</segment>
+<segment id="37" parent="36" relname="elaboration">which was illustrated by Beisl et al. .</segment>
+<segment id="38" parent="1038" relname="joint">Another commonly used model was proposed by Rahman et al. .</segment>
+<segment id="39" parent="1040" relname="span">These models have been used</segment>
+<segment id="40" parent="39" relname="purpose">to semi-empirically establish the relation between canopy directional reflectance and geometry .</segment>
+<segment id="41" parent="1039" relname="joint">Further modeling with BRDF simulation tools , such as PROSAIL , can also be found in application reviews .</segment>
+<segment id="42" parent="1042" relname="span">Early works have used ground goniometers</segment>
+<segment id="43" parent="42" relname="purpose">to study the angular reflectance dependency .</segment>
+<segment id="44" parent="1043" relname="span">But</segment>
+<segment id="45" parent="1044" relname="joint">by paralleling the goniometer measured ground truth and UAV measurements ,</segment>
+<segment id="46" parent="1046" relname="span">studies have already shown</segment>
+<segment id="47" parent="46" relname="elaboration">that the UAV-mounted cameras can obtain bidirectional reflectance factors without ground measurements .</segment>
+<segment id="48" parent="1047" relname="joint">For example , a correspondence was found between goniometer and UAV commercial camera on a smooth snow surface .</segment>
+<segment id="49" parent="1048" relname="span">A low standard deviation between goniometer and UAV directional reflectance on reference panels was found in another study .</segment>
+<segment id="50" parent="1050" relname="same_unit">By involving a sun sensor ,</segment>
+<segment id="51" parent="1050" relname="same_unit">UAV directional reflectance can also be derived without a reference panel .</segment>
+<segment id="52" parent="1052" relname="span">Such a method was tested and evaluated in a very recent work ,</segment>
+<segment id="53" parent="52" relname="elaboration">where high correlation coefficients were found between UAV measurement and literature goniometer values on a spectralon white reference panel .</segment>
+<segment id="54" parent="1053" relname="joint">A range of dedicated UAV reflectance anisotropy studies have been conducted on different types of vegetation .</segment>
+<segment id="55" parent="1055" relname="span">Aside from the wheat study</segment>
+<segment id="56" parent="1057" relname="condition">mentioned before ,</segment>
+<segment id="57" parent="58" relname="attribution">another hyperspectral study on wheat and barley found</segment>
+<segment id="58" parent="1057" relname="span">that the scattering parameter in the Rahman – Pinty – Verstraete model differed by the crop heading stage .</segment>
+<segment id="59" parent="1059" relname="span">It also found a strong backscattering reduction in potato after the full coverage of canopies ,</segment>
+<segment id="60" parent="59" relname="elaboration">indicating the potential of crop-growth stage monitoring by angular observation .</segment>
+<segment id="61" parent="1062" relname="attribution">Taking the bidirectional effect into consideration ,</segment>
+<segment id="62" parent="1062" relname="span">the radiometric correction via geometric block adjustment method was developed</segment>
+<segment id="63" parent="62" relname="purpose">to significantly improve the uniformity of spectral mosaics .</segment>
+<segment id="64" parent="1065" relname="span">Another assessment study of BRDF in UAV near-infrared</segment>
+<segment id="65" parent="64" relname="restatement">( NIR )</segment>
+<segment id="66" parent="1066" relname="span">imagery</segment>
+<segment id="67" parent="66" relname="elaboration">has illustrated the compensation method for angular radiometric disturbances .</segment>
+<segment id="68" parent="1069" relname="circumstance">As part of a UAV-monitoring project on a sloped vineyard ,</segment>
+<segment id="69" parent="1069" relname="span">this paper focuses on delivering a feasible approach</segment>
+<segment id="70" parent="1070" relname="span">to sample , model , and correct the angular dependency for the vine canopy reflectance from UAV imagery</segment>
+<segment id="71" parent="70" relname="circumstance">without field measurements .</segment>
+<segment id="72" parent="1072" relname="span">In the study , the UAV carried a tilted RedEdge-M sensor</segment>
+<segment id="73" parent="72" relname="purpose">to take the images from a sloped vineyard .</segment>
+<segment id="74" parent="1074" relname="span">The reflectance anisotropy was studied on these images</segment>
+<segment id="75" parent="74" relname="means">by combining the RedEdge Python package and the 3D-reconstruction software Agisoft© Metashape applications .</segment>
+<segment id="76" parent="1076" relname="span">Then , both the corrected and uncorrected reflectance images of the red and NIR bands were used</segment>
+<segment id="77" parent="76" relname="purpose">to compute their side-view orthomosaics and corresponding NDVI maps from different directions .</segment>
+<segment id="78" parent="1078" relname="span">The goal of this study is to deliver a 3D NDVI surface</segment>
+<segment id="79" parent="78" relname="elaboration">that is independent of the angular effects .</segment>
+<segment id="80" parent="1078" relname="background">The hypothesis is that the corrected NDVI values from different views should be significantly lower than the uncorrected ones .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1004" relname="background"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1004" type="multinuc" parent="1001" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="5" relname="purpose"/>
+<group id="1007" type="multinuc" parent="6" relname="elaboration"/>
+<group id="1008" type="span" parent="1007" relname="joint"/>
+<group id="1010" type="span" parent="1004" relname="joint"/>
+<group id="1011" type="span" parent="1004" relname="joint"/>
+<group id="1012" type="multinuc" parent="1011" relname="span"/>
+<group id="1013" type="multinuc" parent="1012" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="same_unit"/>
+<group id="1016" type="multinuc" parent="1012" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="same_unit"/>
+<group id="1018" type="span" parent="20" relname="concession"/>
+<group id="1019" type="span" parent="17" relname="means"/>
+<group id="1022" type="span" parent="1012" relname="joint"/>
+<group id="1024" type="multinuc" parent="1012" relname="joint"/>
+<group id="1025" type="span" parent="1024" relname="same_unit"/>
+<group id="1026" type="span" parent="1024" relname="same_unit"/>
+<group id="1028" type="span" parent="1012" relname="joint"/>
+<group id="1031" type="multinuc" parent="1012" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="same_unit"/>
+<group id="1033" type="span" parent="1012" relname="joint"/>
+<group id="1034" type="multinuc" parent="33" relname="elaboration"/>
+<group id="1035" type="multinuc" parent="1034" relname="joint"/>
+<group id="1036" type="multinuc" parent="1034" relname="joint"/>
+<group id="1037" type="span" parent="1036" relname="joint"/>
+<group id="1038" type="multinuc" parent="1036" relname="joint"/>
+<group id="1039" type="multinuc" parent="1038" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="joint"/>
+<group id="1042" type="span" parent="1012" relname="joint"/>
+<group id="1043" type="span" parent="1012" relname="joint"/>
+<group id="1044" type="multinuc" parent="44" relname="means"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1046" type="span" parent="1045" relname="span"/>
+<group id="1047" type="multinuc" parent="1046" relname="elaboration"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="multinuc" parent="49" relname="means"/>
+<group id="1050" type="multinuc" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="1049" relname="joint"/>
+<group id="1052" type="span" parent="1053" relname="preparation"/>
+<group id="1053" type="multinuc" parent="1051" relname="span"/>
+<group id="1054" type="multinuc" parent="1053" relname="joint"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="55" relname="elaboration"/>
+<group id="1057" type="span" parent="1056" relname="span"/>
+<group id="1058" type="multinuc" parent="1054" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="joint"/>
+<group id="1060" type="multinuc" parent="1058" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="span"/>
+<group id="1063" type="multinuc" parent="1060" relname="joint"/>
+<group id="1064" type="multinuc" parent="1063" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="same_unit"/>
+<group id="1066" type="span" parent="1064" relname="same_unit"/>
+<group id="1067" type="multinuc" parent="1063" relname="joint"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="span"/>
+<group id="1070" type="span" parent="69" relname="purpose"/>
+<group id="1071" type="multinuc" parent="1067" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="multinuc" parent="1071" relname="joint"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="multinuc" parent="1073" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="span" parent="1075" relname="joint"/>
+<group id="1078" type="span" parent="1077" relname="span"/>
+	</body>
+</rst>

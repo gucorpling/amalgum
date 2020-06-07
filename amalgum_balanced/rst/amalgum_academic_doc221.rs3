@@ -1,0 +1,182 @@
+<rst>
+<header>
+	<relations>
+			<rel name="means" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. Fault Signals for Detection</segment>
+<segment id="2" parent="1002" relname="span">This section discuss the signals</segment>
+<segment id="3" parent="1003" relname="span">used for fault detection for the methods</segment>
+<segment id="4" parent="3" relname="elaboration">proposed .</segment>
+<segment id="5" parent="1005" relname="span">Signals are generated</segment>
+<segment id="6" parent="5" relname="elaboration">such that the fault detection is more clear .</segment>
+<segment id="7" parent="1001" relname="joint">3.1 .</segment>
+<segment id="8" parent="1008" relname="preparation">Commanded Voltages Method</segment>
+<segment id="9" parent="1008" relname="joint">The difference in the voltages between healthy and faulty cases is directly proportional to the difference in the flux linkages of healthy and faulty case .</segment>
+<segment id="10" parent="1008" relname="joint">The difference between the flux linkages is significant in certain range of the current .</segment>
+<segment id="11" parent="1011" relname="span">The difference is maximum at the point</segment>
+<segment id="12" parent="11" relname="elaboration">shown in</segment>
+<segment id="13" parent="1013" relname="preparation">Figure 4</segment>
+<segment id="14" parent="1013" relname="joint">.</segment>
+<segment id="15" parent="1013" relname="joint">Therefore , for fault detection the machine should be operated as close as possible to point of maximum separation .</segment>
+<segment id="16" parent="1013" relname="joint">3.2 .</segment>
+<segment id="17" parent="1017" relname="preparation">Calculation of Incremental Inductance</segment>
+<segment id="18" parent="1018" relname="span">Incremental inductance is generated</segment>
+<segment id="19" parent="18" relname="means">by using DC current injection in the d-axis with constant rotation .</segment>
+<segment id="20" parent="1017" relname="joint">The current is injected with increasing current levels</segment>
+<segment id="21" parent="1022" relname="span">and the q-axis voltage</segment>
+<segment id="22" parent="21" relname="elaboration">( )</segment>
+<segment id="23" parent="1021" relname="same_unit">is recorded at each level .</segment>
+<segment id="24" parent="1026" relname="span">The value of d-axis flux</segment>
+<segment id="25" parent="24" relname="elaboration">( )</segment>
+<segment id="26" parent="1025" relname="same_unit">is calculated from the q-axis voltage</segment>
+<segment id="27" parent="1025" relname="elaboration">( ) .</segment>
+<segment id="28" parent="1028" relname="span">Finally , incremental inductance is calculated</segment>
+<segment id="29" parent="1029" relname="span">by taking the derivative of vs. curve</segment>
+<segment id="30" parent="1030" relname="span">given by</segment>
+<segment id="31" parent="30" relname="evidence">( 29 )</segment>
+<segment id="32" parent="1017" relname="joint">The difference in the two current levels is .</segment>
+<segment id="33" parent="1035" relname="span">Therefore , the above relation reduces to</segment>
+<segment id="34" parent="33" relname="restatement">( 30 )</segment>
+<segment id="35" parent="1035" relname="elaboration">where is the difference in the flux linkages at two different levels of current .</segment>
+<segment id="36" parent="1033" relname="joint">and are shown in</segment>
+<segment id="37" parent="1037" relname="preparation">Figure 5</segment>
+<segment id="38" parent="1037" relname="joint">.</segment>
+<segment id="39" parent="1039" relname="span">The difference in current levels is chosen</segment>
+<segment id="40" parent="39" relname="elaboration">such that there is a measurable difference in the q-axis voltages between two levels .</segment>
+<segment id="41" parent="1041" relname="span">The minimum difference in current levels is chosen</segment>
+<segment id="42" parent="1042" relname="span">once measurable difference in the voltages is recorded ,</segment>
+<segment id="43" parent="42" relname="cause">because increased difference in current levels decreases peak prominence .</segment>
+<segment id="44" parent="1040" relname="joint">3.3 .</segment>
+<segment id="45" parent="1045" relname="preparation">Harmonics in Voltage and Current Signals</segment>
+<segment id="46" parent="1048" relname="span">The first 15 harmonics</segment>
+<segment id="47" parent="1049" relname="span">present in IAP</segment>
+<segment id="48" parent="47" relname="elaboration">( Instantaneous Active Power )</segment>
+<segment id="49" parent="1050" relname="span">are used for analysis for fault detection</segment>
+<segment id="50" parent="49" relname="elaboration">which was extracted</segment>
+<segment id="51" parent="1051" relname="span">using FFT</segment>
+<segment id="52" parent="51" relname="elaboration">( Fast Fourier Transform ) .</segment>
+<segment id="53" parent="1054" relname="span">The harmonic</segment>
+<segment id="54" parent="53" relname="elaboration">that shows the maximum separation between the healthy and faulty cases</segment>
+<segment id="55" parent="1053" relname="same_unit">is used for analysis .</segment>
+<segment id="56" parent="1056" relname="span">The machine is operated at the same operating conditions</segment>
+<segment id="57" parent="56" relname="elaboration">as it is operated for commanded voltages method .</segment>
+<segment id="58" parent="1045" relname="joint">3.4 .</segment>
+<segment id="59" parent="1059" relname="preparation">Vibration Signals for Analysis</segment>
+<segment id="60" parent="1060" relname="span">The oscillating forces were calculated</segment>
+<segment id="61" parent="60" relname="means">by using FEA model .</segment>
+<segment id="62" parent="1061" relname="sequence">First the magnitude of magnetic field density was calculated around the rotor .</segment>
+<segment id="63" parent="1063" relname="span">After that for an angle ,</segment>
+<segment id="64" parent="63" relname="circumstance">as shown in</segment>
+<segment id="65" parent="1065" relname="preparation">Figure 6</segment>
+<segment id="66" parent="1067" relname="span">, radial stress was estimated</segment>
+<segment id="67" parent="1068" relname="span">using Equation</segment>
+<segment id="68" parent="67" relname="evidence">( 31 ) .</segment>
+<segment id="69" parent="1067" relname="evidence">( 31 )</segment>
+<segment id="70" parent="1070" relname="span">Then , the stress is calculated</segment>
+<segment id="71" parent="1072" relname="span">by taking projections in y and x-axis as follows</segment>
+<segment id="72" parent="71" relname="restatement">( 32 )</segment>
+<segment id="73" parent="1072" relname="restatement">( 33 )</segment>
+<segment id="74" parent="1075" relname="span">Net force at a given time</segment>
+<segment id="75" parent="1076" relname="span">can be calculated</segment>
+<segment id="76" parent="75" relname="means">by integrating the forces over the periphery of the rotor .</segment>
+<segment id="77" parent="1077" relname="span">( 34 )</segment>
+<segment id="78" parent="77" relname="restatement">( 35 )</segment>
+<segment id="79" parent="1079" relname="span">Therefore , forces are estimated</segment>
+<segment id="80" parent="79" relname="means">using flux density at different times .</segment>
+<segment id="81" parent="1083" relname="circumstance">Once , forces are estimated ,</segment>
+<segment id="82" parent="1083" relname="joint">FFT is performed</segment>
+<segment id="83" parent="1083" relname="joint">and results are analyzed .</segment>
+<segment id="84" parent="1084" relname="span">To analyze the vibration signals</segment>
+<segment id="85" parent="1086" relname="span">the accelerometers were placed on both stator core and rotor bearing in the direction of static eccentricity</segment>
+<segment id="86" parent="85" relname="elaboration">( y-axis )</segment>
+<segment id="87" parent="1087" relname="span">and 90 °apart from the direction of static eccentricity</segment>
+<segment id="88" parent="87" relname="elaboration">( x-axis ) .</segment>
+<segment id="89" parent="1089" relname="span">The arrangement of accelerometers on the rotor bearing and stator core is shown in</segment>
+<segment id="90" parent="89" relname="evidence">Figure 7</segment>
+<segment id="91" parent="1089" relname="elaboration">.</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="2" relname="elaboration"/>
+<group id="1005" type="span" parent="1001" relname="joint"/>
+<group id="1007" type="span" parent="1001" relname="joint"/>
+<group id="1008" type="multinuc" parent="1007" relname="span"/>
+<group id="1010" type="span" parent="1008" relname="joint"/>
+<group id="1011" type="span" parent="1012" relname="preparation"/>
+<group id="1012" type="span" parent="1010" relname="span"/>
+<group id="1013" type="multinuc" parent="1012" relname="span"/>
+<group id="1016" type="span" parent="1013" relname="joint"/>
+<group id="1017" type="multinuc" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="joint"/>
+<group id="1021" type="multinuc" parent="1017" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="same_unit"/>
+<group id="1024" type="span" parent="1017" relname="joint"/>
+<group id="1025" type="multinuc" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="same_unit"/>
+<group id="1028" type="span" parent="1017" relname="joint"/>
+<group id="1029" type="span" parent="28" relname="means"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1032" type="multinuc" parent="1017" relname="joint"/>
+<group id="1033" type="multinuc" parent="1032" relname="sequence"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="1034" relname="span"/>
+<group id="1036" type="span" parent="1032" relname="sequence"/>
+<group id="1037" type="multinuc" parent="1036" relname="span"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="span" parent="1040" relname="preparation"/>
+<group id="1040" type="multinuc" parent="1038" relname="span"/>
+<group id="1041" type="span" parent="1040" relname="joint"/>
+<group id="1042" type="span" parent="41" relname="elaboration"/>
+<group id="1044" type="span" parent="1040" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="1045" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="span"/>
+<group id="1048" type="span" parent="1047" relname="same_unit"/>
+<group id="1049" type="span" parent="46" relname="elaboration"/>
+<group id="1050" type="span" parent="1047" relname="same_unit"/>
+<group id="1051" type="span" parent="1047" relname="means"/>
+<group id="1053" type="multinuc" parent="1045" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="same_unit"/>
+<group id="1056" type="span" parent="1045" relname="joint"/>
+<group id="1058" type="span" parent="1045" relname="joint"/>
+<group id="1059" type="multinuc" parent="1058" relname="span"/>
+<group id="1060" type="span" parent="1059" relname="joint"/>
+<group id="1061" type="multinuc" parent="1059" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="sequence"/>
+<group id="1063" type="span" parent="1064" relname="circumstance"/>
+<group id="1064" type="span" parent="1062" relname="span"/>
+<group id="1065" type="multinuc" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="span" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="66" relname="means"/>
+<group id="1070" type="span" parent="1065" relname="joint"/>
+<group id="1071" type="span" parent="70" relname="means"/>
+<group id="1072" type="span" parent="1071" relname="span"/>
+<group id="1074" type="span" parent="1065" relname="joint"/>
+<group id="1075" type="span" parent="1074" relname="span"/>
+<group id="1076" type="span" parent="74" relname="elaboration"/>
+<group id="1077" type="span" parent="1075" relname="restatement"/>
+<group id="1079" type="span" parent="1065" relname="joint"/>
+<group id="1081" type="span" parent="1065" relname="joint"/>
+<group id="1082" type="span" parent="1081" relname="span"/>
+<group id="1083" type="multinuc" parent="1082" relname="span"/>
+<group id="1084" type="span" parent="1082" relname="purpose"/>
+<group id="1085" type="multinuc" parent="84" relname="elaboration"/>
+<group id="1086" type="span" parent="1085" relname="joint"/>
+<group id="1087" type="span" parent="1085" relname="joint"/>
+<group id="1088" type="span" parent="1065" relname="joint"/>
+<group id="1089" type="span" parent="1088" relname="span"/>
+	</body>
+</rst>

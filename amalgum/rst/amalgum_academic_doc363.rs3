@@ -1,0 +1,158 @@
+<rst>
+<header>
+	<relations>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Methodology</segment>
+<segment id="2" parent="1002" relname="preparation">4.1 .</segment>
+<segment id="3" parent="1003" relname="span">Datasets</segment>
+<segment id="4" parent="1005" relname="same_unit">The notion of a benchmark dataset for planes detection task</segment>
+<segment id="5" parent="1005" relname="same_unit">is not well established in the literature .</segment>
+<segment id="6" parent="1007" relname="span">Almost every reported method used a different dataset ,</segment>
+<segment id="7" parent="6" relname="elaboration">including artificially generated ones .</segment>
+<segment id="8" parent="1008" relname="contrast">In and , S3DIS dataset was used .</segment>
+<segment id="9" parent="1009" relname="span">However , it contains points</segment>
+<segment id="10" parent="1010" relname="span">labelled with respect to objects ’ adherence</segment>
+<segment id="11" parent="1011" relname="span">( i. e. , a chair , a table , a lamp )</segment>
+<segment id="12" parent="11" relname="antithesis">rather than the individual planes .</segment>
+<segment id="13" parent="1015" relname="span">On the other hand , Li et al. made use of a laser scan</segment>
+<segment id="14" parent="13" relname="restatement">( Room-1 )</segment>
+<segment id="15" parent="1014" relname="same_unit">from Rooms UZH Irchel dataset ,</segment>
+<segment id="16" parent="1016" relname="span">in spite of the fact</segment>
+<segment id="17" parent="16" relname="elaboration">that it does not contain any labelled data .</segment>
+<segment id="18" parent="1017" relname="span">The S3DIS dataset shows much sparser point clouds density than in the case of rooms from UZH Irchel dataset .</segment>
+<segment id="19" parent="1018" relname="sequence">These datasets differ significantly in terms of accuracy , noise , scan shadows , cardinality , and scene complexity .</segment>
+<segment id="20" parent="1020" relname="span">Therefore , it was decided to use representatives from both of them</segment>
+<segment id="21" parent="20" relname="purpose">to verify the proposed method on point clouds of varying nature .</segment>
+<segment id="22" parent="1023" relname="span">The present study uses point clouds of the S3DIS dataset and the Room-1 point set</segment>
+<segment id="23" parent="22" relname="elaboration">used by Li et al.</segment>
+<segment id="24" parent="1023" relname="elaboration">( Table 2 ) .</segment>
+<segment id="25" parent="26" relname="condition">Because for the Room-1 dataset no ground truth segmentation was provided ,</segment>
+<segment id="26" parent="1025" relname="span">it was labelled manually .</segment>
+<segment id="27" parent="1027" relname="span">The ground truth segmentation of the S3DIS dataset , in turn , was manually modified</segment>
+<segment id="28" parent="27" relname="purpose">to represent individual planes .</segment>
+<segment id="29" parent="1029" relname="span">An example of six point clouds from S3DIS and Room-1 datasets are presented in Table 2 .</segment>
+<segment id="30" parent="29" relname="elaboration">4.2 .</segment>
+<segment id="31" parent="1031" relname="preparation">Experiments</segment>
+<segment id="32" parent="1031" relname="joint">Experiments were conducted in two stages .</segment>
+<segment id="33" parent="1033" relname="span">At first , the space partition methods :</segment>
+<segment id="34" parent="33" relname="elaboration">PCP , octree , kd-tree , VCCS , and the proposed hd-kd-tree were examined .</segment>
+<segment id="35" parent="1034" relname="joint">Secondly , planar clusters detection was assessed .</segment>
+<segment id="36" parent="1037" relname="preparation">For the space partition juxtaposition , four values were presented :</segment>
+<segment id="37" parent="1038" relname="span">the division tree spreadness</segment>
+<segment id="38" parent="37" relname="elaboration">( number of all nodes in division tree ) ,</segment>
+<segment id="39" parent="1039" relname="span">the final number of groups , the number of points ,</segment>
+<segment id="40" parent="1040" relname="span">which remains</segment>
+<segment id="41" parent="1041" relname="joint">after the partition process was accomplished ,</segment>
+<segment id="42" parent="1041" relname="joint">and the partition time .</segment>
+<segment id="43" parent="1043" relname="span">All space partition methods were tested on the S3DIS dataset with the same setup</segment>
+<segment id="44" parent="43" relname="elaboration">( Table 3 ) .</segment>
+<segment id="45" parent="1046" relname="span">A decision</segment>
+<segment id="46" parent="1047" relname="span">to use quality measures</segment>
+<segment id="47" parent="46" relname="elaboration">applied by Dong et al. and Li et al. for planar cluster detection</segment>
+<segment id="48" parent="1048" relname="span">was made</segment>
+<segment id="49" parent="48" relname="purpose">to clearly demonstrate the superiority of the proposed method .</segment>
+<segment id="50" parent="1050" relname="span">Hence , ordinary plane precision</segment>
+<segment id="51" parent="50" relname="elaboration">( Equation ( 12 ) ) ,</segment>
+<segment id="52" parent="1053" relname="span">plane recall</segment>
+<segment id="53" parent="52" relname="restatement">( Equation ( 13 ) )</segment>
+<segment id="54" parent="1054" relname="span">and over- as well as under- segmentation rates</segment>
+<segment id="55" parent="54" relname="elaboration">( Equations ( 14 )</segment>
+<segment id="56" parent="1056" relname="preparation">and eqrefeq :</segment>
+<segment id="57" parent="1056" relname="same_unit">usr )</segment>
+<segment id="58" parent="1059" relname="span">were used as the validity measures of the entire procedure .</segment>
+<segment id="59" parent="58" relname="evidence">( 12 )</segment>
+<segment id="60" parent="1059" relname="evidence">( 13 )</segment>
+<segment id="61" parent="1062" relname="span">where stands for a number of correctly segmented planar clusters</segment>
+<segment id="62" parent="61" relname="elaboration">( with maximum overlapping strategy , 80 % ) ,</segment>
+<segment id="63" parent="1063" relname="span">represents the total number of planar clusters</segment>
+<segment id="64" parent="63" relname="elaboration">obtained as the algorithm output ,</segment>
+<segment id="65" parent="1066" relname="span">and is a number of ground truth planar clusters .</segment>
+<segment id="66" parent="65" relname="evidence">( 14 )</segment>
+<segment id="67" parent="1066" relname="restatement">( 15 )</segment>
+<segment id="68" parent="1068" relname="span">where is a number of resulting planar clusters</segment>
+<segment id="69" parent="68" relname="elaboration">that overlap the multiple ground truth planar clusters . , in turn , is a number of ground truth planar clusters</segment>
+<segment id="70" parent="1068" relname="elaboration">overlapping more than one resulting planar cluster .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="3" relname="elaboration"/>
+<group id="1005" type="multinuc" parent="1004" relname="span"/>
+<group id="1006" type="multinuc" parent="1005" relname="elaboration"/>
+<group id="1007" type="span" parent="1006" relname="joint"/>
+<group id="1008" type="multinuc" parent="1006" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="contrast"/>
+<group id="1010" type="span" parent="9" relname="elaboration"/>
+<group id="1011" type="span" parent="10" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1002" relname="joint"/>
+<group id="1014" type="multinuc" parent="1013" relname="same_unit"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1016" type="span" parent="1013" relname="same_unit"/>
+<group id="1017" type="span" parent="1002" relname="joint"/>
+<group id="1018" type="multinuc" parent="18" relname="elaboration"/>
+<group id="1019" type="multinuc" parent="1018" relname="sequence"/>
+<group id="1020" type="span" parent="1019" relname="joint"/>
+<group id="1021" type="multinuc" parent="1019" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="span"/>
+<group id="1024" type="multinuc" parent="1021" relname="joint"/>
+<group id="1025" type="span" parent="1024" relname="joint"/>
+<group id="1026" type="span" parent="1024" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1028" type="multinuc" parent="1027" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="1028" relname="joint"/>
+<group id="1031" type="multinuc" parent="1030" relname="span"/>
+<group id="1032" type="multinuc" parent="1031" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="joint"/>
+<group id="1034" type="multinuc" parent="1032" relname="joint"/>
+<group id="1035" type="multinuc" parent="1034" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="1036" relname="span"/>
+<group id="1038" type="span" parent="1037" relname="same_unit"/>
+<group id="1039" type="span" parent="1037" relname="same_unit"/>
+<group id="1040" type="span" parent="39" relname="elaboration"/>
+<group id="1041" type="multinuc" parent="40" relname="circumstance"/>
+<group id="1042" type="multinuc" parent="1035" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="multinuc" parent="1042" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="joint"/>
+<group id="1046" type="span" parent="1045" relname="same_unit"/>
+<group id="1047" type="span" parent="45" relname="purpose"/>
+<group id="1048" type="span" parent="1045" relname="same_unit"/>
+<group id="1049" type="multinuc" parent="1044" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="same_unit"/>
+<group id="1051" type="multinuc" parent="1049" relname="same_unit"/>
+<group id="1052" type="multinuc" parent="1051" relname="joint"/>
+<group id="1053" type="span" parent="1052" relname="joint"/>
+<group id="1054" type="span" parent="1052" relname="joint"/>
+<group id="1055" type="span" parent="1051" relname="joint"/>
+<group id="1056" type="multinuc" parent="1055" relname="span"/>
+<group id="1057" type="span" parent="1056" relname="same_unit"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="multinuc" parent="1058" relname="elaboration"/>
+<group id="1061" type="multinuc" parent="1060" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="same_unit"/>
+<group id="1063" type="span" parent="1061" relname="same_unit"/>
+<group id="1064" type="span" parent="1060" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1065" relname="elaboration"/>
+<group id="1068" type="span" parent="1067" relname="span"/>
+	</body>
+</rst>

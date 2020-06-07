@@ -1,0 +1,195 @@
+<rst>
+<header>
+	<relations>
+			<rel name="elaboration" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">5. Conclusions and Outlook</segment>
+<segment id="2" parent="1002" relname="span">In this work we presented a validation of a short-term forecast ,</segment>
+<segment id="3" parent="1003" relname="span">also called nowcasting ,</segment>
+<segment id="4" parent="3" relname="elaboration">based on the optical flow of effective cloud albedo for solar surface irradiance .</segment>
+<segment id="5" parent="1005" relname="span">The basis of our nowcasting works with the optical flow method TV- by OpenCV .</segment>
+<segment id="6" parent="1007" relname="span">The effective cloud albedo</segment>
+<segment id="7" parent="6" relname="elaboration">that can be retrieved by the reflectivity of the visible channel of MSG</segment>
+<segment id="8" parent="1006" relname="same_unit">serves as input for our algorithm .</segment>
+<segment id="9" parent="1009" relname="span">As a result we have a field of cloud motion vectors</segment>
+<segment id="10" parent="9" relname="elaboration">that describe the apparent motion between two consecutive satellite images .</segment>
+<segment id="11" parent="1011" relname="span">These vectors are applied to the latter of the satellite images</segment>
+<segment id="12" parent="11" relname="purpose">to create the first forecast step .</segment>
+<segment id="13" parent="1014" relname="span">The stage</segment>
+<segment id="14" parent="13" relname="elaboration">of applying the motion vectors can be repeated as often as desired</segment>
+<segment id="15" parent="1014" relname="purpose">to generate another forecast step .</segment>
+<segment id="16" parent="1015" relname="sequence">In that case the vectors are being applied to the latest available forecast step .</segment>
+<segment id="17" parent="1017" relname="span">Finally , by means of SPECMAGIC NOW the solar surface irradiance is calculated for every CAL forecast step</segment>
+<segment id="18" parent="17" relname="purpose">to create the final SIS nowcasting .</segment>
+<segment id="19" parent="1018" relname="sequence">We performed the validation with SARAH-2 data as well as with ground stations from the BSRN and the DWD .</segment>
+<segment id="20" parent="1021" relname="span">In both cases we calculated three different error measures , namely the bias , absolute bias , and root mean square error</segment>
+<segment id="21" parent="20" relname="restatement">( Section 2.4 )</segment>
+<segment id="22" parent="1020" relname="same_unit">These error measures were calculated as absolute and relative errors respectively .</segment>
+<segment id="23" parent="1025" relname="span">All nowcastings</segment>
+<segment id="24" parent="23" relname="elaboration">shown in this study had a maximum forecast time of 480 min ,</segment>
+<segment id="25" parent="1025" relname="elaboration">which conflicts with the sunset .</segment>
+<segment id="26" parent="1027" relname="preparation">As a consequence the values of the solar surface irradiance , their absolute errors decreased with increasing forecast time .</segment>
+<segment id="27" parent="1028" relname="span">The maximum of the absolute bias and the RMSE can be found approximately after 180 min of forecast time</segment>
+<segment id="28" parent="27" relname="condition">if one considers</segment>
+<segment id="29" parent="1030" relname="preparation">Figure 4</segment>
+<segment id="30" parent="1030" relname="span">.</segment>
+<segment id="31" parent="1032" relname="span">If we look at the calculated values ,</segment>
+<segment id="32" parent="1033" relname="span">which are available every 30 min</segment>
+<segment id="33" parent="34" relname="attribution">due to the validation with the SARAH-2 data set</segment>
+<segment id="34" parent="1034" relname="span">we find the highest errors for 165 min .</segment>
+<segment id="35" parent="1036" relname="joint">The absolute bias for 165 min equals 97 W/m</segment>
+<segment id="36" parent="1036" relname="joint">and the RMSE equals 142 W/m for the same time .</segment>
+<segment id="37" parent="1038" relname="span">Relative errors are shown to grow</segment>
+<segment id="38" parent="1039" relname="joint">with increasing forecast time</segment>
+<segment id="39" parent="1039" relname="joint">and the maximum of the relative RMSE equals 0.41 after 480 min .</segment>
+<segment id="40" parent="1040" relname="span">A large issue with relative errors is high background radiances .</segment>
+<segment id="41" parent="1041" relname="span">As a consequence , resulting errors could be higher than large relative errors of low background radiances .</segment>
+<segment id="42" parent="1043" relname="span">Thus , even a small relative error could have an impact on the grid stability in that case</segment>
+<segment id="43" parent="42" relname="elaboration">where the forecast error affects a large number of photovoltaic systems .</segment>
+<segment id="44" parent="1044" relname="span">However , the SESORA forecast works best for high pressure system situations</segment>
+<segment id="45" parent="1045" relname="joint">when there are only a few clouds</segment>
+<segment id="46" parent="1046" relname="span">and the solar irradiance is high</segment>
+<segment id="47" parent="46" relname="elaboration">(</segment>
+<segment id="48" parent="1048" relname="preparation">Figure 3</segment>
+<segment id="49" parent="1048" relname="joint">) .</segment>
+<segment id="50" parent="1050" relname="span">Therefore , the risk</segment>
+<segment id="51" parent="50" relname="elaboration">of providing a bad forecast for the TSOs and DSOs is rather small .</segment>
+<segment id="52" parent="1053" relname="contrast">Moreover , the biggest errors are caused by convection</segment>
+<segment id="53" parent="1054" relname="joint">but convective cells are rather local phenomena</segment>
+<segment id="54" parent="55" relname="attribution">and it is very unlikely that enough photovoltaic systems are simultaneously affected by this type of error in Germany ,</segment>
+<segment id="55" parent="1055" relname="span">that they would induce grid instability .</segment>
+<segment id="56" parent="1057" relname="span">Furthermore , after the SPECMAGIC NOW update the constant bias of solar irradiance should be significantly lower</segment>
+<segment id="57" parent="56" relname="elaboration">due to corrections in the clear sky calculation .</segment>
+<segment id="58" parent="1059" relname="span">For the upcoming merge with the NWP , a quality check is planned</segment>
+<segment id="59" parent="58" relname="purpose">to determine the intersection point with the nowcasting .</segment>
+<segment id="60" parent="1060" relname="same_unit">Thus ,</segment>
+<segment id="61" parent="1062" relname="condition">if the errors of the nowcasting will actually rise too quickly</segment>
+<segment id="62" parent="1062" relname="span">the merge with the NWP will be performed earlier</segment>
+<segment id="63" parent="62" relname="purpose">to prevent large forecast errors and as a consequence of grid instability .</segment>
+<segment id="64" parent="1064" relname="span">Absolute errors of the effective cloud albedo rise as well as the relative errors of solar irradiance with increasing forecast time .</segment>
+<segment id="65" parent="1065" relname="span">The results for the validation with ground stations showed similar results with slightly higher errors</segment>
+<segment id="66" parent="65" relname="elaboration">( relative RMSE after 480 min ) .</segment>
+<segment id="67" parent="1067" relname="span">The linear regression proved the bias of W/m</segment>
+<segment id="68" parent="67" relname="elaboration">found in the validation with the SARAH-2 data .</segment>
+<segment id="69" parent="1069" relname="span">There is a planned update of SPECMAGIC NOW</segment>
+<segment id="70" parent="1070" relname="span">that should reduce this bias</segment>
+<segment id="71" parent="70" relname="means">by adapting the optical thickness of clouds .</segment>
+<segment id="72" parent="1072" relname="span">By reducing the systematic error of the SESORA forecast</segment>
+<segment id="73" parent="72" relname="elaboration">the overall results will improve .</segment>
+<segment id="74" parent="1075" relname="span">Errors</segment>
+<segment id="75" parent="74" relname="elaboration">that occur</segment>
+<segment id="76" parent="77" relname="attribution">due to the optical flow method</segment>
+<segment id="77" parent="1076" relname="span">TV- cannot be corrected as easily .</segment>
+<segment id="78" parent="1078" relname="same_unit">The effect of growing errors with increasing forecast time</segment>
+<segment id="79" parent="1078" relname="same_unit">is represented by the spread of the data points in the regression .</segment>
+<segment id="80" parent="1079" relname="joint">Furthermore , the effect of the sunset can be corrected by the cosine of the solar zenith angle .</segment>
+<segment id="81" parent="1081" relname="span">This correction also improved the quality of the forecast</segment>
+<segment id="82" parent="81" relname="circumstance">as can be seen in the increased R value .</segment>
+<segment id="83" parent="1083" relname="joint">Overall , the results appear promising</segment>
+<segment id="84" parent="1083" relname="joint">and the errors of the examined cases are small .</segment>
+<segment id="85" parent="1084" relname="joint">The largest errors occur at cloud edges or in the case of formation or dissipation of clouds .</segment>
+<segment id="86" parent="1085" relname="span">Since the algorithm of our nowcasting is built on extrapolation</segment>
+<segment id="87" parent="86" relname="elaboration">it neglects convective or dissipative processes .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="2" relname="elaboration"/>
+<group id="1004" type="multinuc" parent="1002" relname="elaboration"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="multinuc" parent="5" relname="elaboration"/>
+<group id="1007" type="span" parent="1006" relname="same_unit"/>
+<group id="1008" type="multinuc" parent="1004" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="multinuc" parent="1008" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="joint"/>
+<group id="1012" type="multinuc" parent="1010" relname="joint"/>
+<group id="1013" type="span" parent="1012" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="span"/>
+<group id="1015" type="multinuc" parent="1012" relname="joint"/>
+<group id="1016" type="multinuc" parent="1015" relname="sequence"/>
+<group id="1017" type="span" parent="1016" relname="sequence"/>
+<group id="1018" type="multinuc" parent="1016" relname="sequence"/>
+<group id="1019" type="multinuc" parent="1018" relname="sequence"/>
+<group id="1020" type="multinuc" parent="1019" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="same_unit"/>
+<group id="1022" type="multinuc" parent="1019" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1024" relname="evidence"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1028" type="span" parent="1027" relname="span"/>
+<group id="1029" type="span" parent="1028" relname="elaboration"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="30" relname="evidence"/>
+<group id="1032" type="span" parent="1031" relname="span"/>
+<group id="1033" type="span" parent="31" relname="elaboration"/>
+<group id="1034" type="span" parent="32" relname="elaboration"/>
+<group id="1035" type="span" parent="1032" relname="evidence"/>
+<group id="1036" type="multinuc" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1036" relname="elaboration"/>
+<group id="1038" type="span" parent="1037" relname="span"/>
+<group id="1039" type="multinuc" parent="37" relname="purpose"/>
+<group id="1040" type="span" parent="1038" relname="evidence"/>
+<group id="1041" type="span" parent="40" relname="evidence"/>
+<group id="1042" type="span" parent="41" relname="evidence"/>
+<group id="1043" type="span" parent="1042" relname="span"/>
+<group id="1044" type="span" parent="1043" relname="concession"/>
+<group id="1045" type="multinuc" parent="44" relname="circumstance"/>
+<group id="1046" type="span" parent="1045" relname="joint"/>
+<group id="1047" type="span" parent="1022" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="span"/>
+<group id="1049" type="multinuc" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="multinuc" parent="1049" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1052" relname="joint"/>
+<group id="1054" type="multinuc" parent="1053" relname="contrast"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="1052" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="span"/>
+<group id="1058" type="span" parent="1057" relname="elaboration"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="multinuc" parent="1059" relname="elaboration"/>
+<group id="1061" type="span" parent="1060" relname="same_unit"/>
+<group id="1062" type="span" parent="1061" relname="span"/>
+<group id="1063" type="multinuc" parent="1051" relname="joint"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1065" type="span" parent="64" relname="elaboration"/>
+<group id="1066" type="multinuc" parent="1063" relname="joint"/>
+<group id="1067" type="span" parent="1066" relname="joint"/>
+<group id="1068" type="span" parent="1066" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="span"/>
+<group id="1070" type="span" parent="69" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1069" relname="means"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="multinuc" parent="1071" relname="joint"/>
+<group id="1074" type="multinuc" parent="1073" relname="joint"/>
+<group id="1075" type="span" parent="1074" relname="same_unit"/>
+<group id="1076" type="span" parent="1074" relname="same_unit"/>
+<group id="1077" type="multinuc" parent="1073" relname="joint"/>
+<group id="1078" type="multinuc" parent="1077" relname="joint"/>
+<group id="1079" type="multinuc" parent="1077" relname="joint"/>
+<group id="1080" type="multinuc" parent="1079" relname="joint"/>
+<group id="1081" type="span" parent="1080" relname="joint"/>
+<group id="1082" type="multinuc" parent="1080" relname="joint"/>
+<group id="1083" type="multinuc" parent="1082" relname="joint"/>
+<group id="1084" type="multinuc" parent="1082" relname="joint"/>
+<group id="1085" type="span" parent="1084" relname="joint"/>
+	</body>
+</rst>

@@ -1,0 +1,927 @@
+<?xml version="1.0" ?>
+<text author="Isabel Urbich, Jörg Bendix, Richard Müller" dateCollected="2019-11-03" id="amalgum_academic_doc520" shortTile="seamless-solar-radiation" sourceURL="https://www.mdpi.com/2072-4292/11/21/2576/htm" speakerCount="0" speakerList="none" title="The Seamless Solar Radiation (SESORA) Forecast for Solar Surface Irradiance — Method and Validation" type="academic">
+<head>
+<s type="frag">
+5.	CD	@ord@
+Conclusions	NNS	conclusions
+and	CC	and
+Outlook	NN	outlook
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+work	NN	work
+we	PRP	we
+presented	VBD	present
+a	DT	a
+validation	NN	validation
+of	IN	of
+a	DT	a
+short-term	JJ	short-term
+forecast	NN	forecast
+,	,	,
+also	RB	also
+called	VBN	call
+nowcasting	NN	nowcasting
+,	,	,
+based	VBN	base
+on	IN	on
+the	DT	the
+optical	JJ	optical
+flow	NN	flow
+of	IN	of
+effective	JJ	effective
+cloud	NN	cloud
+albedo	NN	albedo
+for	IN	for
+solar	NN	solar
+surface	NN	surface
+irradiance	NN	irradiance
+.	.	.
+</s>
+<s type="frag">
+The	DT	the
+basis	NN	basis
+of	IN	of
+our	PRP$	our
+nowcasting	NN	nowcasting
+works	NNS	work
+with	IN	with
+the	DT	the
+optical	JJ	optical
+flow	NN	flow
+method	NN	method
+TV-	NNP	TV-
+by	IN	by
+OpenCV	NNP	OpenCV
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+effective	JJ	effective
+cloud	JJ	cloud
+albedo	NN	albedo
+that	WDT	that
+can	MD	can
+be	VB	be
+retrieved	VBN	retrieve
+by	IN	by
+the	DT	the
+reflectivity	NN	reflectivity
+of	IN	of
+the	DT	the
+visible	JJ	visible
+channel	NN	channel
+of	IN	of
+MSG	NNP	MSG
+serves	VBZ	serve
+as	IN	as
+input	NN	input
+for	IN	for
+our	PRP$	our
+algorithm	NN	algorithm
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+a	DT	a
+result	NN	result
+we	PRP	we
+have	VBP	have
+a	DT	a
+field	NN	field
+of	IN	of
+cloud	NN	cloud
+motion	NN	motion
+vectors	NNS	vector
+that	WDT	that
+describe	VBP	describe
+the	DT	the
+apparent	JJ	apparent
+motion	NN	motion
+between	IN	between
+two	CD	two
+consecutive	JJ	consecutive
+satellite	NN	satellite
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+These	DT	these
+vectors	NNS	vector
+are	VBP	be
+applied	VBN	apply
+to	TO	to
+the	DT	the
+latter	JJR	latter
+of	IN	of
+the	DT	the
+satellite	JJ	satellite
+images	NNS	image
+to	TO	to
+create	VB	create
+the	DT	the
+first	JJ	first
+forecast	NN	forecast
+step	NN	step
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+stage	NN	stage
+of	IN	of
+applying	VBG	apply
+the	DT	the
+motion	NN	motion
+vectors	NNS	vector
+can	MD	can
+be	VB	be
+repeated	VBN	repeat
+as	RB	as
+often	RB	often
+as	IN	as
+desired	VBN	desire
+to	TO	to
+generate	VB	generate
+another	DT	another
+forecast	NN	forecast
+step	NN	step
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+that	DT	that
+case	NN	case
+the	DT	the
+vectors	NNS	vector
+are	VBP	be
+being	VBG	be
+applied	VBN	apply
+to	TO	to
+the	DT	the
+latest	JJS	late
+available	JJ	available
+forecast	NN	forecast
+step	NN	step
+.	.	.
+</s>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+by	IN	by
+means	NNS	means
+of	IN	of
+SPECMAGIC	NNP	SPECMAGIC
+NOW	RB	NOW
+the	DT	the
+solar	NN	solar
+surface	NN	surface
+irradiance	NN	irradiance
+is	VBZ	be
+calculated	VBN	calculate
+for	IN	for
+every	DT	every
+CAL	NNP	CAL
+forecast	NN	forecast
+step	NN	step
+to	TO	to
+create	VB	create
+the	DT	the
+final	JJ	final
+SIS	NNP	SIS
+nowcasting	NN	nowcasting
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+performed	VBD	perform
+the	DT	the
+validation	NN	validation
+with	IN	with
+SARAH-2	NNP	SARAH-2
+data	NNS	datum
+as	RB	as
+well	RB	well
+as	IN	as
+with	IN	with
+ground	NN	ground
+stations	NNS	station
+from	IN	from
+the	DT	the
+BSRN	NNP	BSRN
+and	CC	and
+the	DT	the
+DWD	NNP	DWD
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+both	DT	both
+cases	NNS	case
+we	PRP	we
+calculated	VBD	calculate
+three	CD	three
+different	JJ	different
+error	NN	error
+measures	NNS	measure
+,	,	,
+namely	RB	namely
+the	DT	the
+bias	NN	bias
+,	,	,
+absolute	JJ	absolute
+bias	NN	bias
+,	,	,
+and	CC	and
+root	NN	root
+mean	VBP	mean
+square	NN	square
+error	NN	error
+(	-LRB-	(
+Section	NNP	Section
+2.4	CD	@card@
+)	-RRB-	)
+These	DT	these
+error	NN	error
+measures	NNS	measure
+were	VBD	be
+calculated	VBN	calculate
+as	IN	as
+absolute	JJ	absolute
+and	CC	and
+relative	JJ	relative
+errors	NNS	error
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+All	DT	all
+nowcastings	NNS	nowcastings
+shown	VBN	show
+in	IN	in
+this	DT	this
+study	NN	study
+had	VBD	have
+a	DT	a
+maximum	JJ	maximum
+forecast	NN	forecast
+time	NN	time
+of	IN	of
+480	CD	@card@
+min	NNS	min
+,	,	,
+which	WDT	which
+conflicts	VBZ	conflict
+with	IN	with
+the	DT	the
+sunset	NN	sunset
+.	.	.
+</s>
+<s type="frag">
+As	IN	as
+a	DT	a
+consequence	NN	consequence
+the	DT	the
+values	NNS	value
+of	IN	of
+the	DT	the
+solar	NN	solar
+surface	NN	surface
+irradiance	NN	irradiance
+,	,	,
+their	PRP$	their
+absolute	JJ	absolute
+errors	NNS	error
+decreased	VBN	decrease
+with	IN	with
+increasing	VBG	increase
+forecast	NN	forecast
+time	NN	time
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+maximum	NN	maximum
+of	IN	of
+the	DT	the
+absolute	JJ	absolute
+bias	NN	bias
+and	CC	and
+the	DT	the
+RMSE	NNP	RMSE
+can	MD	can
+be	VB	be
+found	VBN	find
+approximately	RB	approximately
+after	IN	after
+180	CD	@card@
+min	NN	min
+of	IN	of
+forecast	NN	forecast
+time	NN	time
+if	IN	if
+one	CD	one
+considers	VBZ	consider
+</s>
+<figure>
+<s type="frag">
+Figure	NN	Figure
+4	CD	4
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+we	PRP	we
+look	VBP	look
+at	IN	at
+the	DT	the
+calculated	JJ	calculate
+values	NNS	value
+,	,	,
+which	WDT	which
+are	VBP	be
+available	JJ	available
+every	DT	every
+30	CD	@card@
+min	NN	min
+due	JJ	due
+to	TO	to
+the	DT	the
+validation	NN	validation
+with	IN	with
+the	DT	the
+SARAH-2	NNP	SARAH-2
+data	NNS	datum
+set	VBN	set
+we	PRP	we
+find	VBP	find
+the	DT	the
+highest	JJS	high
+errors	NNS	error
+for	IN	for
+165	CD	@card@
+min	NN	min
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+absolute	JJ	absolute
+bias	NN	bias
+for	IN	for
+165	CD	@card@
+min	NN	min
+equals	NNS	equal
+97	CD	@card@
+W/m	NNP	W/m
+and	CC	and
+the	DT	the
+RMSE	NNP	RMSE
+equals	VBZ	equal
+142	CD	@card@
+W/m	NNP	W/m
+for	IN	for
+the	DT	the
+same	JJ	same
+time	NN	time
+.	.	.
+</s>
+<s type="decl">
+Relative	JJ	relative
+errors	NNS	error
+are	VBP	be
+shown	VBN	show
+to	TO	to
+grow	VB	grow
+with	IN	with
+increasing	VBG	increase
+forecast	NN	forecast
+time	NN	time
+and	CC	and
+the	DT	the
+maximum	NN	maximum
+of	IN	of
+the	DT	the
+relative	JJ	relative
+RMSE	NNP	RMSE
+equals	VBZ	equal
+0.41	CD	@card@
+after	IN	after
+480	CD	@card@
+min	NN	min
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+large	JJ	large
+issue	NN	issue
+with	IN	with
+relative	JJ	relative
+errors	NNS	error
+is	VBZ	be
+high	JJ	high
+background	NN	background
+radiances	NNS	radiance
+.	.	.
+</s>
+<s type="sub">
+As	IN	as
+a	DT	a
+consequence	NN	consequence
+,	,	,
+resulting	VBG	result
+errors	NNS	error
+could	MD	could
+be	VB	be
+higher	JJR	high
+than	IN	than
+large	JJ	large
+relative	JJ	relative
+errors	NNS	error
+of	IN	of
+low	JJ	low
+background	NN	background
+radiances	NNS	radiance
+.	.	.
+</s>
+<s type="sub">
+Thus	RB	thus
+,	,	,
+even	RB	even
+a	DT	a
+small	JJ	small
+relative	JJ	relative
+error	NN	error
+could	MD	could
+have	VB	have
+an	DT	an
+impact	NN	impact
+on	IN	on
+the	DT	the
+grid	NN	grid
+stability	NN	stability
+in	IN	in
+that	DT	that
+case	NN	case
+where	WRB	where
+the	DT	the
+forecast	NN	forecast
+error	NN	error
+affects	VBZ	affect
+a	DT	a
+large	JJ	large
+number	NN	number
+of	IN	of
+photovoltaic	JJ	photovoltaic
+systems	NNS	system
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+the	DT	the
+SESORA	NNP	SESORA
+forecast	NN	forecast
+works	VBZ	work
+best	JJS	good
+for	IN	for
+high	JJ	high
+pressure	NN	pressure
+system	NN	system
+situations	NNS	situation
+when	WRB	when
+there	EX	there
+are	VBP	be
+only	RB	only
+a	DT	a
+few	JJ	few
+clouds	NNS	cloud
+and	CC	and
+the	DT	the
+solar	JJ	solar
+irradiance	NN	irradiance
+is	VBZ	be
+high	JJ	high
+(	-LRB-	(
+</s>
+<figure>
+<s type="frag">
+Figure	NN	Figure
+3	CD	3
+</s>
+</figure>
+<s type="frag">
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+the	DT	the
+risk	NN	risk
+of	IN	of
+providing	VBG	provide
+a	DT	a
+bad	JJ	bad
+forecast	NN	forecast
+for	IN	for
+the	DT	the
+TSOs	NNPS	tSO
+and	CC	and
+DSOs	NNPS	dS
+is	VBZ	be
+rather	RB	rather
+small	JJ	small
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+the	DT	the
+biggest	JJS	big
+errors	NNS	error
+are	VBP	be
+caused	VBN	cause
+by	IN	by
+convection	NN	convection
+but	CC	but
+convective	JJ	convective
+cells	NNS	cell
+are	VBP	be
+rather	RB	rather
+local	JJ	local
+phenomena	NNS	phenomena
+and	CC	and
+it	PRP	it
+is	VBZ	be
+very	RB	very
+unlikely	JJ	unlikely
+that	IN	that
+enough	JJ	enough
+photovoltaic	JJ	photovoltaic
+systems	NNS	system
+are	VBP	be
+simultaneously	RB	simultaneously
+affected	VBN	affect
+by	IN	by
+this	DT	this
+type	NN	type
+of	IN	of
+error	NN	error
+in	IN	in
+Germany	NNP	Germany
+,	,	,
+that	IN	that
+they	PRP	they
+would	MD	would
+induce	VB	induce
+grid	NN	grid
+instability	NN	instability
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+after	IN	after
+the	DT	the
+SPECMAGIC	NNP	SPECMAGIC
+NOW	RB	NOW
+update	VBP	update
+the	DT	the
+constant	JJ	constant
+bias	NN	bias
+of	IN	of
+solar	NN	solar
+irradiance	NN	irradiance
+should	MD	should
+be	VB	be
+significantly	RB	significantly
+lower	JJR	low
+due	JJ	due
+to	TO	to
+corrections	NNS	correction
+in	IN	in
+the	DT	the
+clear	JJ	clear
+sky	NN	sky
+calculation	NN	calculation
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+the	DT	the
+upcoming	JJ	upcoming
+merge	NN	merge
+with	IN	with
+the	DT	the
+NWP	NNP	NWP
+,	,	,
+a	DT	a
+quality	NN	quality
+check	NN	check
+is	VBZ	be
+planned	VBN	plan
+to	TO	to
+determine	VB	determine
+the	DT	the
+intersection	NN	intersection
+point	NN	point
+with	IN	with
+the	DT	the
+nowcasting	NN	nowcasting
+.	.	.
+</s>
+<s type="decl">
+Thus	RB	thus
+,	,	,
+if	IN	if
+the	DT	the
+errors	NNS	error
+of	IN	of
+the	DT	the
+nowcasting	NN	nowcasting
+will	MD	will
+actually	RB	actually
+rise	VB	rise
+too	RB	too
+quickly	RB	quickly
+the	DT	the
+merge	NN	merge
+with	IN	with
+the	DT	the
+NWP	NNP	NWP
+will	MD	will
+be	VB	be
+performed	VBN	perform
+earlier	RBR	early
+to	TO	to
+prevent	VB	prevent
+large	JJ	large
+forecast	NN	forecast
+errors	NNS	error
+and	CC	and
+as	IN	as
+a	DT	a
+consequence	NN	consequence
+of	IN	of
+grid	NN	grid
+instability	NN	instability
+.	.	.
+</s>
+<s type="frag">
+Absolute	JJ	absolute
+errors	NNS	error
+of	IN	of
+the	DT	the
+effective	JJ	effective
+cloud	JJ	cloud
+albedo	NN	albedo
+rise	NN	rise
+as	RB	as
+well	RB	well
+as	IN	as
+the	DT	the
+relative	JJ	relative
+errors	NNS	error
+of	IN	of
+solar	NN	solar
+irradiance	NN	irradiance
+with	IN	with
+increasing	VBG	increase
+forecast	NN	forecast
+time	NN	time
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+results	NNS	result
+for	IN	for
+the	DT	the
+validation	NN	validation
+with	IN	with
+ground	NN	ground
+stations	NNS	station
+showed	VBD	show
+similar	JJ	similar
+results	NNS	result
+with	IN	with
+slightly	RB	slightly
+higher	JJR	high
+errors	NNS	error
+(	-LRB-	(
+relative	JJ	relative
+RMSE	NNP	RMSE
+after	IN	after
+480	CD	@card@
+min	NN	min
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+linear	JJ	linear
+regression	NN	regression
+proved	VBD	prove
+the	DT	the
+bias	NN	bias
+of	IN	of
+W/m	NNP	W/m
+found	VBN	find
+in	IN	in
+the	DT	the
+validation	NN	validation
+with	IN	with
+the	DT	the
+SARAH-2	NNP	SARAH-2
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+There	EX	There
+is	VBZ	be
+a	DT	a
+planned	VBN	plan
+update	NN	update
+of	IN	of
+SPECMAGIC	NNP	SPECMAGIC
+NOW	RB	NOW
+that	WDT	that
+should	MD	should
+reduce	VB	reduce
+this	DT	this
+bias	NN	bias
+by	IN	by
+adapting	VBG	adapt
+the	DT	the
+optical	JJ	optical
+thickness	NN	thickness
+of	IN	of
+clouds	NNS	cloud
+.	.	.
+</s>
+<s type="decl">
+By	IN	by
+reducing	VBG	reduce
+the	DT	the
+systematic	JJ	systematic
+error	NN	error
+of	IN	of
+the	DT	the
+SESORA	NNP	SESORA
+forecast	NN	forecast
+the	DT	the
+overall	JJ	overall
+results	NNS	result
+will	MD	will
+improve	VB	improve
+.	.	.
+</s>
+<s type="decl">
+Errors	NNS	Errors
+that	WDT	that
+occur	VBP	occur
+due	JJ	due
+to	TO	to
+the	DT	the
+optical	JJ	optical
+flow	NN	flow
+method	NN	method
+TV-	NN	TV-
+cannot	MD	can
+be	VB	be
+corrected	VBN	correct
+as	RB	as
+easily	RB	easily
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+effect	NN	effect
+of	IN	of
+growing	VBG	grow
+errors	NNS	error
+with	IN	with
+increasing	VBG	increase
+forecast	NN	forecast
+time	NN	time
+is	VBZ	be
+represented	VBN	represent
+by	IN	by
+the	DT	the
+spread	NN	spread
+of	IN	of
+the	DT	the
+data	NN	datum
+points	NNS	point
+in	IN	in
+the	DT	the
+regression	NN	regression
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+the	DT	the
+effect	NN	effect
+of	IN	of
+the	DT	the
+sunset	NN	sunset
+can	MD	can
+be	VB	be
+corrected	VBN	correct
+by	IN	by
+the	DT	the
+cosine	NN	cosine
+of	IN	of
+the	DT	the
+solar	JJ	solar
+zenith	NN	zenith
+angle	NN	angle
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+correction	NN	correction
+also	RB	also
+improved	VBD	improve
+the	DT	the
+quality	NN	quality
+of	IN	of
+the	DT	the
+forecast	NN	forecast
+as	IN	as
+can	MD	can
+be	VB	be
+seen	VBN	see
+in	IN	in
+the	DT	the
+increased	VBN	increase
+R	NN	R
+value	NN	value
+.	.	.
+</s>
+<s type="decl">
+Overall	JJ	overall
+,	,	,
+the	DT	the
+results	NNS	result
+appear	VBP	appear
+promising	VBG	promising
+and	CC	and
+the	DT	the
+errors	NNS	error
+of	IN	of
+the	DT	the
+examined	VBN	examine
+cases	NNS	case
+are	VBP	be
+small	JJ	small
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+largest	JJS	large
+errors	NNS	error
+occur	VBP	occur
+at	IN	at
+cloud	NN	cloud
+edges	NNS	edge
+or	CC	or
+in	IN	in
+the	DT	the
+case	NN	case
+of	IN	of
+formation	NN	formation
+or	CC	or
+dissipation	NN	dissipation
+of	IN	of
+clouds	NNS	cloud
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+the	DT	the
+algorithm	NN	algorithm
+of	IN	of
+our	PRP$	our
+nowcasting	NN	nowcasting
+is	VBZ	be
+built	VBN	build
+on	IN	on
+extrapolation	NN	extrapolation
+it	PRP	it
+neglects	VBZ	neglect
+convective	JJ	convective
+or	CC	or
+dissipative	JJ	dissipative
+processes	NNS	process
+.	.	.
+</s>
+</p>
+</text>

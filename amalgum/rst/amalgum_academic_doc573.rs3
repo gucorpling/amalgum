@@ -1,0 +1,202 @@
+<rst>
+<header>
+	<relations>
+			<rel name="means" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Power Flow and Switched Reactor</segment>
+<segment id="2" parent="1001" relname="joint">4.1 .</segment>
+<segment id="3" parent="1003" relname="preparation">Voltage Source Inverter and Grid Interactive Power Flow</segment>
+<segment id="4" parent="1004" relname="span">In inverter grid supporting mode , there is power interaction with host grid</segment>
+<segment id="5" parent="4" relname="elaboration">which involves power exchange .</segment>
+<segment id="6" parent="1006" relname="same_unit">The equivalent power flow diagram between the inverter-based microgrid and the host grid</segment>
+<segment id="7" parent="1006" relname="same_unit">is shown in</segment>
+<segment id="8" parent="1008" relname="preparation">Figure 6</segment>
+<segment id="9" parent="1009" relname="span">,</segment>
+<segment id="10" parent="1010" relname="joint">where vi signifies the VSI voltage</segment>
+<segment id="11" parent="1010" relname="joint">and vg represents the grid voltage .</segment>
+<segment id="12" parent="1012" relname="span">Similarly , the inherent impedances of the inverter and its filter circuit are lumped together as Zi</segment>
+<segment id="13" parent="12" relname="circumstance">while the grid impedance is represented as Zg .</segment>
+<segment id="14" parent="1008" relname="joint">The load current and impedance are signified by IL and ZL .</segment>
+<segment id="15" parent="1015" relname="span">These aforementioned impedances are typically inductive</segment>
+<segment id="16" parent="15" relname="elaboration">owing to the significant output inductance of the VSI .</segment>
+<segment id="17" parent="1018" relname="span">Nevertheless , this inverter impedance can be greatly influenced by the type of control strategy</segment>
+<segment id="18" parent="17" relname="elaboration">employed ,</segment>
+<segment id="19" parent="1008" relname="joint">and grid impedance is highly resistive in low-voltage distribution feeder lines .</segment>
+<segment id="20" parent="1022" relname="span">Similarly , the impedance</segment>
+<segment id="21" parent="20" relname="elaboration">( resistance and inductive reactance )</segment>
+<segment id="22" parent="1021" relname="same_unit">of the grid is significantly present</segment>
+<segment id="23" parent="1023" relname="span">and taken into consideration in microgrids</segment>
+<segment id="24" parent="23" relname="elaboration">located at a long distance away far from the host grid .</segment>
+<segment id="25" parent="1008" relname="joint">Consequently , this work put into consideration the line impedance of the grid .</segment>
+<segment id="26" parent="1026" relname="span">In line with the stipulation of the grid codes ,</segment>
+<segment id="27" parent="26" relname="elaboration">only reactive current is injected all through the period of voltage sag .</segment>
+<segment id="28" parent="1008" relname="joint">Consequently , the resulting compensating voltage is relatively in phase with the grid voltage .</segment>
+<segment id="29" parent="1028" relname="span">4.2 .</segment>
+<segment id="30" parent="1030" relname="span">Switched Inductance :</segment>
+<segment id="31" parent="30" relname="elaboration">Sizing and Switching</segment>
+<segment id="32" parent="1032" relname="span">A microgrid is to ensure required uninterrupted supply of quality power to the local sensitive loads</segment>
+<segment id="33" parent="32" relname="elaboration">besides fulfilling FRT requirement of reactive power support in the event of disturbance on the main grid .</segment>
+<segment id="34" parent="1034" relname="span">In this work , this is ensured</segment>
+<segment id="35" parent="34" relname="means">by ascertaining that all the sections in the microgrid are supplied with a constant voltage at a regular frequency .</segment>
+<segment id="36" parent="1036" relname="span">The proposed scheme in</segment>
+<segment id="37" parent="36" relname="evidence">Figure 5</segment>
+<segment id="38" parent="1038" relname="preparation">shows the implementation of this requirement through an additional reactive power injection .</segment>
+<segment id="39" parent="1039" relname="span">The VSI injects a significantly high amount of reactive power</segment>
+<segment id="40" parent="1040" relname="joint">in supporting the utility grid</segment>
+<segment id="41" parent="1041" relname="span">and sustain microgrid load voltages</segment>
+<segment id="42" parent="41" relname="circumstance">since the grid impedance is usually low .</segment>
+<segment id="43" parent="1043" relname="preparation">However , the aforementioned secondary control based LVRT schemes are significantly limited in voltage sag compensation .</segment>
+<segment id="44" parent="1045" relname="purpose">To tackle this problem ,</segment>
+<segment id="45" parent="1045" relname="span">a PCC voltage moderation scheme</segment>
+<segment id="46" parent="1046" relname="span">based on PI control</segment>
+<segment id="47" parent="46" relname="means">using the DSC positive and negative is introduced .</segment>
+<segment id="48" parent="1049" relname="span">Furthermore , under a strong</segment>
+<segment id="49" parent="48" relname="restatement">( stiff )</segment>
+<segment id="50" parent="1050" relname="span">main grid connection , independent control of the point of common coupling voltage and by extension microgrid voltage is not sufficient for good power quality</segment>
+<segment id="51" parent="50" relname="circumstance">since the host grid imposes the voltage .</segment>
+<segment id="52" parent="1051" relname="joint">Thus , control strategies may not be able to effectively restore the network voltage especially at the PCC .</segment>
+<segment id="53" parent="1054" relname="span">Hence , a switched inductance is inserted in series at the PCC to the main network during a voltage disturbance</segment>
+<segment id="54" parent="1055" relname="span">to increase the network impedance</segment>
+<segment id="55" parent="54" relname="purpose">to independently regulate the microgrid voltage</segment>
+<segment id="56" parent="1053" relname="same_unit">irrespective of the host grid condition .</segment>
+<segment id="57" parent="1057" relname="preparation">Thus , sustaining the PCC voltage at the rated magnitude .</segment>
+<segment id="58" parent="1057" relname="joint">The appropriate sizing and switching of this inductance ensure sustained microgrid voltage irrespective of a host grid disturbance .</segment>
+<segment id="59" parent="1059" relname="span">The inductance size is estimated in relation to the voltage sag in the worst-case scenario</segment>
+<segment id="60" parent="59" relname="elaboration">which must be compensated at PCC .</segment>
+<segment id="61" parent="1060" relname="joint">It also depends on the expected current flow through the inductance under voltage sag .</segment>
+<segment id="62" parent="1063" relname="span">The balance between microgrid generated power</segment>
+<segment id="63" parent="62" relname="elaboration">( active and reactive )</segment>
+<segment id="64" parent="1065" relname="span">and the local load consumption determines the current flow</segment>
+<segment id="65" parent="64" relname="elaboration">( magnitude and phase angle )</segment>
+<segment id="66" parent="1064" relname="same_unit">through the inductance during grid disturbance .</segment>
+<segment id="67" parent="1067" relname="span">In the proposed strategy of this work , during the grid fault , the total microgrid</segment>
+<segment id="68" parent="1068" relname="span">generated active power is commensurate with the rated local load capacity</segment>
+<segment id="69" parent="68" relname="purpose">to limit the amplitude of the current flow into the main grid .</segment>
+<segment id="70" parent="1070" relname="span">However , excess active power may still be supplied to the main grid</segment>
+<segment id="71" parent="1071" relname="joint">due to varying load demand</segment>
+<segment id="72" parent="1071" relname="joint">and this affects the inductance size .</segment>
+<segment id="73" parent="1074" relname="attribution">To estimate required value for the series inductance ,</segment>
+<segment id="74" parent="1074" relname="joint">the load demand is assumed to be zero</segment>
+<segment id="75" parent="1075" relname="span">and the rated load power is assumed</segment>
+<segment id="76" parent="75" relname="elaboration">generated and supplied to the host grid .</segment>
+<segment id="77" parent="1077" relname="preparation">The phasor diagram of this estimation is presented in</segment>
+<segment id="78" parent="1078" relname="preparation">Figure 7</segment>
+<segment id="79" parent="1079" relname="span">,</segment>
+<segment id="80" parent="81" relname="circumstance">where Vg represents the phase voltage of the host grid ,</segment>
+<segment id="81" parent="1080" relname="span">Vmg represents phase voltage within the microgrid .</segment>
+<segment id="82" parent="1082" relname="span">Similarly , Xn signifies needed switched inductive reactance</segment>
+<segment id="83" parent="82" relname="circumstance">while In signifies current flow across Xn .</segment>
+<segment id="84" parent="1084" relname="span">The inverter voltage is therefore given by</segment>
+<segment id="85" parent="84" relname="evidence">( 19 )</segment>
+<segment id="86" parent="1086" relname="span">Consequently , the value of the series inductance is determined</segment>
+<segment id="87" parent="1088" relname="span">by solving the quadratic equation</segment>
+<segment id="88" parent="87" relname="elaboration">generated</segment>
+<segment id="89" parent="1089" relname="span">by making the Xn the subject of the formula in Equation</segment>
+<segment id="90" parent="89" relname="evidence">( 18 ) .</segment>
+<segment id="91" parent="1091" relname="span">It is therefore given as</segment>
+<segment id="92" parent="91" relname="restatement">( 20 )</segment>
+<segment id="93" parent="1093" relname="preparation">The inverter current</segment>
+<segment id="94" parent="1093" relname="span">Ii is in phase with the current</segment>
+<segment id="95" parent="1094" relname="span">flowing through the switched inductance Xn ,</segment>
+<segment id="96" parent="1095" relname="span">hence angle θ is calculated from</segment>
+<segment id="97" parent="96" relname="evidence">( 21 )</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="joint"/>
+<group id="1003" type="multinuc" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="1003" relname="joint"/>
+<group id="1006" type="multinuc" parent="1003" relname="joint"/>
+<group id="1007" type="span" parent="1003" relname="joint"/>
+<group id="1008" type="multinuc" parent="1007" relname="span"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="multinuc" parent="9" relname="elaboration"/>
+<group id="1012" type="span" parent="1008" relname="joint"/>
+<group id="1015" type="span" parent="1008" relname="joint"/>
+<group id="1018" type="span" parent="1008" relname="joint"/>
+<group id="1021" type="multinuc" parent="1008" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="same_unit"/>
+<group id="1023" type="span" parent="1008" relname="joint"/>
+<group id="1026" type="span" parent="1008" relname="joint"/>
+<group id="1028" type="span" parent="1008" relname="joint"/>
+<group id="1029" type="span" parent="29" relname="elaboration"/>
+<group id="1030" type="span" parent="1031" relname="preparation"/>
+<group id="1031" type="span" parent="1029" relname="span"/>
+<group id="1032" type="span" parent="1033" relname="preparation"/>
+<group id="1033" type="multinuc" parent="1031" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="multinuc" parent="1033" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="1035" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="1038" relname="sequence"/>
+<group id="1040" type="multinuc" parent="39" relname="elaboration"/>
+<group id="1041" type="span" parent="1040" relname="joint"/>
+<group id="1042" type="span" parent="1038" relname="sequence"/>
+<group id="1043" type="multinuc" parent="1042" relname="span"/>
+<group id="1044" type="span" parent="1043" relname="joint"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="45" relname="elaboration"/>
+<group id="1047" type="multinuc" parent="1043" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="same_unit"/>
+<group id="1050" type="span" parent="1048" relname="same_unit"/>
+<group id="1051" type="multinuc" parent="1047" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1052" relname="sequence"/>
+<group id="1054" type="span" parent="1053" relname="same_unit"/>
+<group id="1055" type="span" parent="53" relname="purpose"/>
+<group id="1056" type="span" parent="1052" relname="sequence"/>
+<group id="1057" type="multinuc" parent="1056" relname="span"/>
+<group id="1058" type="multinuc" parent="1057" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="joint"/>
+<group id="1060" type="multinuc" parent="1058" relname="joint"/>
+<group id="1061" type="multinuc" parent="1060" relname="joint"/>
+<group id="1062" type="multinuc" parent="1061" relname="joint"/>
+<group id="1063" type="span" parent="1062" relname="same_unit"/>
+<group id="1064" type="multinuc" parent="1062" relname="same_unit"/>
+<group id="1065" type="span" parent="1064" relname="same_unit"/>
+<group id="1066" type="multinuc" parent="1061" relname="joint"/>
+<group id="1067" type="span" parent="1066" relname="sequence"/>
+<group id="1068" type="span" parent="67" relname="elaboration"/>
+<group id="1069" type="multinuc" parent="1066" relname="sequence"/>
+<group id="1070" type="span" parent="1069" relname="joint"/>
+<group id="1071" type="multinuc" parent="70" relname="antithesis"/>
+<group id="1072" type="multinuc" parent="1069" relname="joint"/>
+<group id="1073" type="span" parent="1072" relname="joint"/>
+<group id="1074" type="multinuc" parent="1073" relname="span"/>
+<group id="1075" type="span" parent="1074" relname="joint"/>
+<group id="1076" type="span" parent="1072" relname="joint"/>
+<group id="1077" type="span" parent="1076" relname="span"/>
+<group id="1078" type="multinuc" parent="1077" relname="span"/>
+<group id="1079" type="span" parent="1078" relname="joint"/>
+<group id="1080" type="span" parent="79" relname="elaboration"/>
+<group id="1081" type="multinuc" parent="1078" relname="joint"/>
+<group id="1082" type="span" parent="1081" relname="joint"/>
+<group id="1083" type="multinuc" parent="1081" relname="joint"/>
+<group id="1084" type="span" parent="1083" relname="joint"/>
+<group id="1085" type="multinuc" parent="1083" relname="joint"/>
+<group id="1086" type="span" parent="1085" relname="joint"/>
+<group id="1087" type="span" parent="86" relname="means"/>
+<group id="1088" type="span" parent="1087" relname="span"/>
+<group id="1089" type="span" parent="1088" relname="means"/>
+<group id="1090" type="multinuc" parent="1085" relname="joint"/>
+<group id="1091" type="span" parent="1090" relname="joint"/>
+<group id="1092" type="span" parent="1090" relname="joint"/>
+<group id="1093" type="span" parent="1092" relname="span"/>
+<group id="1094" type="span" parent="94" relname="elaboration"/>
+<group id="1095" type="span" parent="95" relname="elaboration"/>
+	</body>
+</rst>

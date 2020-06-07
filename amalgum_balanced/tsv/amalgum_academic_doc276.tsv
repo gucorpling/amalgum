@@ -1,0 +1,748 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=2. System Model
+1-1	0-2	2.	abstract[1]	new[1]	_	_
+1-2	3-9	System	abstract[1]	new[1]	_	_
+1-3	10-15	Model	abstract[1]	new[1]	_	_
+
+#Text=2.1 .
+2-1	16-19	2.1	abstract	new	_	_
+2-2	20-21	.	_	_	_	_
+
+#Text=Network Topology
+3-1	22-29	Network	abstract|abstract[4]	new|new[4]	_	_
+3-2	30-38	Topology	abstract[4]	new[4]	_	_
+
+#Text=Consider a mmWave cellular network consisting of base stations , blockages , and a source transmitter , which is a UE .
+4-1	39-47	Consider	_	_	_	_
+4-2	48-49	a	abstract[5]	new[5]	coref	8-7[33_5]
+4-3	50-56	mmWave	abstract[5]	new[5]	_	_
+4-4	57-65	cellular	abstract[5]	new[5]	_	_
+4-5	66-73	network	abstract[5]	new[5]	_	_
+4-6	74-84	consisting	_	_	_	_
+4-7	85-87	of	_	_	_	_
+4-8	88-92	base	abstract|place[7]	new|new[7]	coref|coref|coref|coref	5-10|5-7[15_7]|5-10|5-7[15_7]
+4-9	93-101	stations	place[7]	new[7]	_	_
+4-10	102-103	,	_	_	_	_
+4-11	104-113	blockages	person	new	coref	7-6[24_0]
+4-12	114-115	,	_	_	_	_
+4-13	116-119	and	_	_	_	_
+4-14	120-121	a	person[10]	new[10]	_	_
+4-15	122-128	source	organization|person[10]	new|new[10]	coref	8-4
+4-16	129-140	transmitter	person[10]	new[10]	_	_
+4-17	141-142	,	_	_	_	_
+4-18	143-148	which	_	_	_	_
+4-19	149-151	is	_	_	_	_
+4-20	152-153	a	abstract[11]	new[11]	coref	5-1[12_11]
+4-21	154-156	UE	abstract[11]	new[11]	_	_
+4-22	157-158	.	_	_	_	_
+
+#Text=The UE attempts to connect to the N closest base stations , and therefore operates in a th order macrodiversity mode .
+5-1	159-162	The	abstract[12]	giv[12]	ana	11-3[0_12]
+5-2	163-165	UE	abstract[12]	giv[12]	_	_
+5-3	166-174	attempts	_	_	_	_
+5-4	175-177	to	_	_	_	_
+5-5	178-185	connect	_	_	_	_
+5-6	186-188	to	_	_	_	_
+5-7	189-192	the	place[15]	giv[15]	coref	6-1[19_15]
+5-8	193-194	N	person|place[15]	new|giv[15]	coref	14-12
+5-9	195-202	closest	place[15]	giv[15]	_	_
+5-10	203-207	base	abstract|place[15]	giv|giv[15]	coref	6-5
+5-11	208-216	stations	place[15]	giv[15]	_	_
+5-12	217-218	,	_	_	_	_
+5-13	219-222	and	_	_	_	_
+5-14	223-232	therefore	_	_	_	_
+5-15	233-241	operates	_	_	_	_
+5-16	242-244	in	_	_	_	_
+5-17	245-246	a	abstract[18]	new[18]	_	_
+5-18	247-249	th	abstract[18]	new[18]	_	_
+5-19	250-255	order	event|abstract[18]	new|new[18]	_	_
+5-20	256-270	macrodiversity	abstract|abstract[18]	new|new[18]	coref	17-5[73_0]
+5-21	271-275	mode	abstract[18]	new[18]	_	_
+5-22	276-277	.	_	_	_	_
+
+#Text=The locations of the base stations are modeled as an infinite homogeneous PPP with density .
+6-1	278-281	The	place[19]	giv[19]	coref	11-5[49_19]
+6-2	282-291	locations	place[19]	giv[19]	_	_
+6-3	292-294	of	place[19]	giv[19]	_	_
+6-4	295-298	the	place[19]	giv[19]	_	_
+6-5	299-303	base	place[19]|abstract	giv[19]|giv	coref	7-19
+6-6	304-312	stations	place[19]	giv[19]	_	_
+6-7	313-316	are	_	_	_	_
+6-8	317-324	modeled	_	_	_	_
+6-9	325-327	as	_	_	_	_
+6-10	328-330	an	_	_	_	_
+6-11	331-339	infinite	_	_	_	_
+6-12	340-351	homogeneous	_	_	_	_
+6-13	352-355	PPP	_	_	_	_
+6-14	356-360	with	_	_	_	_
+6-15	361-368	density	abstract	new	coref	7-14[26_0]
+6-16	369-370	.	_	_	_	_
+
+#Text=We assume the centers of the blockages also form a homogeneous PPP with density , independent from the base station process .
+7-1	371-373	We	person	acc	ana	9-15
+7-2	374-380	assume	_	_	_	_
+7-3	381-384	the	object[23]	new[23]	_	_
+7-4	385-392	centers	object[23]	new[23]	_	_
+7-5	393-395	of	object[23]	new[23]	_	_
+7-6	396-399	the	object[23]|person[24]	new[23]|giv[24]	_	_
+7-7	400-409	blockages	object[23]|person[24]	new[23]|giv[24]	_	_
+7-8	410-414	also	_	_	_	_
+7-9	415-419	form	_	_	_	_
+7-10	420-421	a	abstract[25]	new[25]	coref	15-2[63_25]
+7-11	422-433	homogeneous	abstract[25]	new[25]	_	_
+7-12	434-437	PPP	abstract[25]	new[25]	_	_
+7-13	438-442	with	abstract[25]	new[25]	_	_
+7-14	443-450	density	abstract[25]|abstract[26]	new[25]|giv[26]	_	_
+7-15	451-452	,	abstract[25]|abstract[26]	new[25]|giv[26]	_	_
+7-16	453-464	independent	abstract[25]|abstract[26]	new[25]|giv[26]	_	_
+7-17	465-469	from	_	_	_	_
+7-18	470-473	the	abstract[29]	new[29]	_	_
+7-19	474-478	base	abstract|abstract[29]	giv|new[29]	coref	11-6
+7-20	479-486	station	place|abstract[29]	new|new[29]	ana	8-7
+7-21	487-494	process	abstract[29]	new[29]	_	_
+7-22	495-496	.	_	_	_	_
+
+#Text=Let indicate the source transmitter and its location .
+8-1	497-500	Let	_	_	_	_
+8-2	501-509	indicate	_	_	_	_
+8-3	510-513	the	object[31]	new[31]	coref	9-24[41_31]
+8-4	514-520	source	organization|object[31]	giv|new[31]	coref	9-25
+8-5	521-532	transmitter	object[31]	new[31]	_	_
+8-6	533-536	and	_	_	_	_
+8-7	537-540	its	place|abstract[33]	giv|giv[33]	coref|coref|coref|coref	17-5[74_33]|18-11[83_0]|17-5[74_33]|18-11[83_0]
+8-8	541-549	location	abstract[33]	giv[33]	_	_
+8-9	550-551	.	_	_	_	_
+
+#Text=Due to the stationarity of the PPPs , and without loss of generality , we can assume the coordinates are chosen such that the source transmitter is located at the origin ; i. e. , .
+9-1	552-555	Due	_	_	_	_
+9-2	556-558	to	_	_	_	_
+9-3	559-562	the	abstract[34]	new[34]	_	_
+9-4	563-575	stationarity	abstract[34]	new[34]	_	_
+9-5	576-578	of	abstract[34]	new[34]	_	_
+9-6	579-582	the	abstract[34]|abstract[35]	new[34]|new[35]	_	_
+9-7	583-587	PPPs	abstract[34]|abstract[35]	new[34]|new[35]	_	_
+9-8	588-589	,	_	_	_	_
+9-9	590-593	and	_	_	_	_
+9-10	594-601	without	_	_	_	_
+9-11	602-606	loss	abstract[36]	new[36]	_	_
+9-12	607-609	of	abstract[36]	new[36]	_	_
+9-13	610-620	generality	abstract[36]|abstract	new[36]|new	_	_
+9-14	621-622	,	_	_	_	_
+9-15	623-625	we	person	giv	ana	10-5
+9-16	626-629	can	_	_	_	_
+9-17	630-636	assume	_	_	_	_
+9-18	637-640	the	abstract[39]	new[39]	_	_
+9-19	641-652	coordinates	abstract[39]	new[39]	_	_
+9-20	653-656	are	_	_	_	_
+9-21	657-663	chosen	_	_	_	_
+9-22	664-668	such	_	_	_	_
+9-23	669-673	that	_	_	_	_
+9-24	674-677	the	abstract[41]	giv[41]	coref	14-4[57_41]
+9-25	678-684	source	organization|abstract[41]	giv|giv[41]	coref	14-5
+9-26	685-696	transmitter	abstract[41]	giv[41]	_	_
+9-27	697-699	is	_	_	_	_
+9-28	700-707	located	_	_	_	_
+9-29	708-710	at	_	_	_	_
+9-30	711-714	the	place[42]	new[42]	_	_
+9-31	715-721	origin	place[42]	new[42]	_	_
+9-32	722-723	;	_	_	_	_
+9-33	724-726	i.	_	_	_	_
+9-34	727-729	e.	_	_	_	_
+9-35	730-731	,	_	_	_	_
+9-36	732-733	.	_	_	_	_
+
+#Text=In Section 6 , we will consider additional transmitters located in neighboring cells , which act as interferers .
+10-1	734-736	In	_	_	_	_
+10-2	737-744	Section	abstract[43]	new[43]	_	_
+10-3	745-746	6	abstract[43]	new[43]	_	_
+10-4	747-748	,	_	_	_	_
+10-5	749-751	we	person	giv	_	_
+10-6	752-756	will	_	_	_	_
+10-7	757-765	consider	_	_	_	_
+10-8	766-776	additional	person[45]	new[45]	_	_
+10-9	777-789	transmitters	person[45]	new[45]	_	_
+10-10	790-797	located	_	_	_	_
+10-11	798-800	in	_	_	_	_
+10-12	801-812	neighboring	place[46]	new[46]	_	_
+10-13	813-818	cells	place[46]	new[46]	_	_
+10-14	819-820	,	_	_	_	_
+10-15	821-826	which	_	_	_	_
+10-16	827-830	act	_	_	_	_
+10-17	831-833	as	_	_	_	_
+10-18	834-845	interferers	_	_	_	_
+10-19	846-847	.	_	_	_	_
+
+#Text=Let for i denote the base stations and their locations .
+11-1	848-851	Let	_	_	_	_
+11-2	852-855	for	_	_	_	_
+11-3	856-857	i	abstract	giv	_	_
+11-4	858-864	denote	_	_	_	_
+11-5	865-868	the	place[49]	giv[49]	coref	13-1[52_49]
+11-6	869-873	base	abstract|place[49]	giv|giv[49]	coref	14-13
+11-7	874-882	stations	place[49]	giv[49]	_	_
+11-8	883-886	and	place[49]	giv[49]	_	_
+11-9	887-892	their	place[49]	giv[49]	_	_
+11-10	893-902	locations	place[49]	giv[49]	_	_
+11-11	903-904	.	_	_	_	_
+
+#Text=Let be the distance from to .
+12-1	905-908	Let	_	_	_	_
+12-2	909-911	be	_	_	_	_
+12-3	912-915	the	abstract[50]	new[50]	_	_
+12-4	916-924	distance	abstract[50]	new[50]	_	_
+12-5	925-929	from	abstract[50]	new[50]	_	_
+12-6	930-932	to	abstract[50]	new[50]	_	_
+12-7	933-934	.	_	_	_	_
+
+#Text=Base stations are ordered according to their distances to such that .
+13-1	935-939	Base	place|place[52]	new|giv[52]	ana|ana	13-7[0_52]|13-7[0_52]
+13-2	940-948	stations	place[52]	giv[52]	_	_
+13-3	949-952	are	_	_	_	_
+13-4	953-960	ordered	_	_	_	_
+13-5	961-970	according	_	_	_	_
+13-6	971-973	to	_	_	_	_
+13-7	974-979	their	place|quantity[54]	giv|new[54]	coref|coref|coref|coref	14-10[60_0]|15-23[69_54]|14-10[60_0]|15-23[69_54]
+13-8	980-989	distances	quantity[54]	new[54]	_	_
+13-9	990-992	to	quantity[54]	new[54]	_	_
+13-10	993-997	such	quantity[54]	new[54]	_	_
+13-11	998-1002	that	quantity[54]	new[54]	_	_
+13-12	1003-1004	.	_	_	_	_
+
+#Text=The signal of the source transmitter is received at the closest N base stations , and hence , N is the number of connected to .
+14-1	1005-1008	The	abstract[55]	new[55]	_	_
+14-2	1009-1015	signal	abstract[55]	new[55]	_	_
+14-3	1016-1018	of	abstract[55]	new[55]	_	_
+14-4	1019-1022	the	abstract[55]|object[57]	new[55]|giv[57]	coref	32-21[125_57]
+14-5	1023-1029	source	abstract[55]|organization|object[57]	new[55]|giv|giv[57]	_	_
+14-6	1030-1041	transmitter	abstract[55]|object[57]	new[55]|giv[57]	_	_
+14-7	1042-1044	is	_	_	_	_
+14-8	1045-1053	received	_	_	_	_
+14-9	1054-1056	at	_	_	_	_
+14-10	1057-1060	the	place[60]	giv[60]	coref	17-18[78_60]
+14-11	1061-1068	closest	place[60]	giv[60]	_	_
+14-12	1069-1070	N	person|place[60]	giv|giv[60]	coref	14-19
+14-13	1071-1075	base	abstract|place[60]	giv|giv[60]	coref	17-21
+14-14	1076-1084	stations	place[60]	giv[60]	_	_
+14-15	1085-1086	,	_	_	_	_
+14-16	1087-1090	and	_	_	_	_
+14-17	1091-1096	hence	_	_	_	_
+14-18	1097-1098	,	_	_	_	_
+14-19	1099-1100	N	abstract	giv	coref	14-21[62_0]
+14-20	1101-1103	is	_	_	_	_
+14-21	1104-1107	the	abstract[62]	giv[62]	_	_
+14-22	1108-1114	number	abstract[62]	giv[62]	_	_
+14-23	1115-1117	of	_	_	_	_
+14-24	1118-1127	connected	_	_	_	_
+14-25	1128-1130	to	_	_	_	_
+14-26	1131-1132	.	_	_	_	_
+
+#Text=For a PPP , a derivation of the distribution of is given in Appendix B , which implies a methodology for generating these distances within a simulation .
+15-1	1133-1136	For	_	_	_	_
+15-2	1137-1138	a	abstract[63]	giv[63]	_	_
+15-3	1139-1142	PPP	abstract[63]	giv[63]	_	_
+15-4	1143-1144	,	_	_	_	_
+15-5	1145-1146	a	abstract[64]	new[64]	_	_
+15-6	1147-1157	derivation	abstract[64]	new[64]	_	_
+15-7	1158-1160	of	abstract[64]	new[64]	_	_
+15-8	1161-1164	the	abstract[64]|abstract[65]	new[64]|new[65]	_	_
+15-9	1165-1177	distribution	abstract[64]|abstract[65]	new[64]|new[65]	_	_
+15-10	1178-1180	of	_	_	_	_
+15-11	1181-1183	is	_	_	_	_
+15-12	1184-1189	given	_	_	_	_
+15-13	1190-1192	in	_	_	_	_
+15-14	1193-1201	Appendix	abstract|abstract[67]	new|new[67]	_	_
+15-15	1202-1203	B	abstract[67]	new[67]	_	_
+15-16	1204-1205	,	_	_	_	_
+15-17	1206-1211	which	_	_	_	_
+15-18	1212-1219	implies	_	_	_	_
+15-19	1220-1221	a	abstract[68]	new[68]	_	_
+15-20	1222-1233	methodology	abstract[68]	new[68]	_	_
+15-21	1234-1237	for	_	_	_	_
+15-22	1238-1248	generating	_	_	_	_
+15-23	1249-1254	these	quantity[69]	giv[69]	_	_
+15-24	1255-1264	distances	quantity[69]	giv[69]	_	_
+15-25	1265-1271	within	_	_	_	_
+15-26	1272-1273	a	abstract[70]	new[70]	_	_
+15-27	1274-1284	simulation	abstract[70]	new[70]	_	_
+15-28	1285-1286	.	_	_	_	_
+
+#Text=Figure 1
+16-1	1287-1293	Figure	object[71]	new[71]	coref	19-1[88_71]
+16-2	1294-1295	1	object[71]	new[71]	_	_
+
+#Text=shows an example of second-order macrodiversity ( ) cellular network where the user attempts to connect to its closest two base stations .
+17-1	1296-1301	shows	_	_	_	_
+17-2	1302-1304	an	abstract[72]	new[72]	_	_
+17-3	1305-1312	example	abstract[72]	new[72]	_	_
+17-4	1313-1315	of	abstract[72]	new[72]	_	_
+17-5	1316-1328	second-order	abstract[72]|abstract[73]|abstract[74]	new[72]|giv[73]|giv[74]	ana|ana	17-18[0_74]|17-18[0_74]
+17-6	1329-1343	macrodiversity	abstract[72]|abstract[73]|abstract[74]	new[72]|giv[73]|giv[74]	_	_
+17-7	1344-1345	(	abstract[72]|abstract[74]	new[72]|giv[74]	_	_
+17-8	1346-1347	)	abstract[72]|abstract[74]	new[72]|giv[74]	_	_
+17-9	1348-1356	cellular	abstract[72]|abstract[74]	new[72]|giv[74]	_	_
+17-10	1357-1364	network	abstract[72]|abstract[74]	new[72]|giv[74]	_	_
+17-11	1365-1370	where	_	_	_	_
+17-12	1371-1374	the	person[75]	new[75]	coref	18-8[81_75]
+17-13	1375-1379	user	person[75]	new[75]	_	_
+17-14	1380-1388	attempts	_	_	_	_
+17-15	1389-1391	to	_	_	_	_
+17-16	1392-1399	connect	_	_	_	_
+17-17	1400-1402	to	_	_	_	_
+17-18	1403-1406	its	abstract|place[78]	giv|giv[78]	coref|coref	36-7[135_78]|36-7[135_78]
+17-19	1407-1414	closest	place[78]	giv[78]	_	_
+17-20	1415-1418	two	place[78]	giv[78]	_	_
+17-21	1419-1423	base	abstract|place[78]	giv|giv[78]	coref	18-12
+17-22	1424-1432	stations	place[78]	giv[78]	_	_
+17-23	1433-1434	.	_	_	_	_
+
+#Text=The solid line indicates the link from the user to the base station is LOS , while the dashed line indicates the link is NLOS .
+18-1	1435-1438	The	abstract[79]	new[79]	coref	18-18[85_79]
+18-2	1439-1444	solid	abstract[79]	new[79]	_	_
+18-3	1445-1449	line	abstract[79]	new[79]	_	_
+18-4	1450-1459	indicates	_	_	_	_
+18-5	1460-1463	the	abstract[80]	new[80]	coref	18-22[86_80]
+18-6	1464-1468	link	abstract[80]	new[80]	_	_
+18-7	1469-1473	from	abstract[80]	new[80]	_	_
+18-8	1474-1477	the	abstract[80]|person[81]	new[80]|giv[81]	coref	22-14[97_81]
+18-9	1478-1482	user	abstract[80]|person[81]	new[80]|giv[81]	_	_
+18-10	1483-1485	to	abstract[80]|person[81]	new[80]|giv[81]	_	_
+18-11	1486-1489	the	abstract[80]|person[81]|place[83]	new[80]|giv[81]|giv[83]	coref	22-1[94_83]
+18-12	1490-1494	base	abstract[80]|person[81]|abstract|place[83]	new[80]|giv[81]|giv|giv[83]	coref	22-4
+18-13	1495-1502	station	abstract[80]|person[81]|place[83]	new[80]|giv[81]|giv[83]	_	_
+18-14	1503-1505	is	_	_	_	_
+18-15	1506-1509	LOS	abstract	new	coref	22-9
+18-16	1510-1511	,	_	_	_	_
+18-17	1512-1517	while	_	_	_	_
+18-18	1518-1521	the	abstract[85]	giv[85]	coref	32-7[121_85]
+18-19	1522-1528	dashed	abstract[85]	giv[85]	_	_
+18-20	1529-1533	line	abstract[85]	giv[85]	_	_
+18-21	1534-1543	indicates	_	_	_	_
+18-22	1544-1547	the	abstract[86]	giv[86]	coref	18-25[0_86]
+18-23	1548-1552	link	abstract[86]	giv[86]	_	_
+18-24	1553-1555	is	_	_	_	_
+18-25	1556-1560	NLOS	abstract	giv	coref	22-12[96_0]
+18-26	1561-1562	.	_	_	_	_
+
+#Text=The figure shows examples of two different blockage scenarios .
+19-1	1563-1566	The	object[88]	giv[88]	coref	21-1[92_88]
+19-2	1567-1573	figure	object[88]	giv[88]	_	_
+19-3	1574-1579	shows	_	_	_	_
+19-4	1580-1588	examples	abstract[89]	new[89]	_	_
+19-5	1589-1591	of	abstract[89]	new[89]	_	_
+19-6	1592-1595	two	abstract[89]|abstract[91]	new[89]|new[91]	_	_
+19-7	1596-1605	different	abstract[89]|abstract[91]	new[89]|new[91]	_	_
+19-8	1606-1614	blockage	abstract[89]|abstract|abstract[91]	new[89]|new|new[91]	coref	22-20[99_0]
+19-9	1615-1624	scenarios	abstract[89]|abstract[91]	new[89]|new[91]	_	_
+19-10	1625-1626	.	_	_	_	_
+
+#Text=In
+20-1	1627-1629	In	_	_	_	_
+
+#Text=Figure 1
+21-1	1630-1636	Figure	object[92]	giv[92]	coref	24-1[101_92]
+21-2	1637-1638	1	object[92]	giv[92]	_	_
+
+#Text=a the closest base station ( ) is LOS while is NLOS to the user , in which case the blockage only blocks a single link .
+22-1	1639-1640	a	place[94]	giv[94]	coref	39-1[152_94]
+22-2	1641-1644	the	place[94]	giv[94]	_	_
+22-3	1645-1652	closest	place[94]	giv[94]	_	_
+22-4	1653-1657	base	abstract|place[94]	giv|giv[94]	coref	36-9
+22-5	1658-1665	station	place[94]	giv[94]	_	_
+22-6	1666-1667	(	_	_	_	_
+22-7	1668-1669	)	_	_	_	_
+22-8	1670-1672	is	_	_	_	_
+22-9	1673-1676	LOS	abstract	giv	coref	37-21
+22-10	1677-1682	while	_	_	_	_
+22-11	1683-1685	is	_	_	_	_
+22-12	1686-1690	NLOS	abstract[96]	giv[96]	coref	22-24[100_96]
+22-13	1691-1693	to	abstract[96]	giv[96]	_	_
+22-14	1694-1697	the	abstract[96]|person[97]	giv[96]|giv[97]	_	_
+22-15	1698-1702	user	abstract[96]|person[97]	giv[96]|giv[97]	_	_
+22-16	1703-1704	,	_	_	_	_
+22-17	1705-1707	in	_	_	_	_
+22-18	1708-1713	which	abstract[98]	new[98]	_	_
+22-19	1714-1718	case	abstract[98]	new[98]	_	_
+22-20	1719-1722	the	abstract[99]	giv[99]	coref	25-4[0_99]
+22-21	1723-1731	blockage	abstract[99]	giv[99]	_	_
+22-22	1732-1736	only	_	_	_	_
+22-23	1737-1743	blocks	_	_	_	_
+22-24	1744-1745	a	abstract[100]	giv[100]	coref	37-15[0_100]
+22-25	1746-1752	single	abstract[100]	giv[100]	_	_
+22-26	1753-1757	link	abstract[100]	giv[100]	_	_
+22-27	1758-1759	.	_	_	_	_
+
+#Text=In
+23-1	1760-1762	In	_	_	_	_
+
+#Text=Figure 1
+24-1	1763-1769	Figure	object[101]	giv[101]	_	_
+24-2	1770-1771	1	object[101]	giv[101]	_	_
+
+#Text=b a single blockage blocks both links to and .
+25-1	1772-1773	b	_	_	_	_
+25-2	1774-1775	a	object[103]	new[103]	_	_
+25-3	1776-1782	single	object[103]	new[103]	_	_
+25-4	1783-1791	blockage	abstract|object[103]	giv|new[103]	coref	26-5[106_0]
+25-5	1792-1798	blocks	object[103]	new[103]	_	_
+25-6	1799-1803	both	abstract[104]	new[104]	coref	26-10[107_104]
+25-7	1804-1809	links	abstract[104]	new[104]	_	_
+25-8	1810-1812	to	abstract[104]	new[104]	_	_
+25-9	1813-1816	and	abstract[104]	new[104]	_	_
+25-10	1817-1818	.	_	_	_	_
+
+#Text=The fact that sometimes a single blockage can block both links is an illustration of the effect of correlated blocking .
+26-1	1819-1822	The	object[105]	new[105]	coref	26-13[108_105]
+26-2	1823-1827	fact	object[105]	new[105]	_	_
+26-3	1828-1832	that	object[105]	new[105]	_	_
+26-4	1833-1842	sometimes	object[105]	new[105]	_	_
+26-5	1843-1844	a	object[105]|abstract[106]	new[105]|giv[106]	coref	28-1[0_106]
+26-6	1845-1851	single	object[105]|abstract[106]	new[105]|giv[106]	_	_
+26-7	1852-1860	blockage	object[105]|abstract[106]	new[105]|giv[106]	_	_
+26-8	1861-1864	can	object[105]	new[105]	_	_
+26-9	1865-1870	block	object[105]	new[105]	_	_
+26-10	1871-1875	both	object[105]|abstract[107]	new[105]|giv[107]	_	_
+26-11	1876-1881	links	object[105]|abstract[107]	new[105]|giv[107]	_	_
+26-12	1882-1884	is	_	_	_	_
+26-13	1885-1887	an	object[108]	giv[108]	_	_
+26-14	1888-1900	illustration	object[108]	giv[108]	_	_
+26-15	1901-1903	of	object[108]	giv[108]	_	_
+26-16	1904-1907	the	object[108]|abstract[109]	giv[108]|new[109]	_	_
+26-17	1908-1914	effect	object[108]|abstract[109]	giv[108]|new[109]	_	_
+26-18	1915-1917	of	object[108]|abstract[109]	giv[108]|new[109]	_	_
+26-19	1918-1928	correlated	object[108]|abstract[109]|abstract[110]	giv[108]|new[109]|new[110]	coref	45-29[186_110]
+26-20	1929-1937	blocking	object[108]|abstract[109]|abstract[110]	giv[108]|new[109]|new[110]	_	_
+26-21	1938-1939	.	_	_	_	_
+
+#Text=2.2 .
+27-1	1940-1943	2.2	abstract	new	_	_
+27-2	1944-1945	.	_	_	_	_
+
+#Text=Blockage Model
+28-1	1946-1954	Blockage	abstract|abstract[113]	giv|new[113]	coref|coref	29-4[114_0]|29-4[114_0]
+28-2	1955-1960	Model	abstract[113]	new[113]	_	_
+
+#Text=As in , each blockage is a segment of length W .
+29-1	1961-1963	As	_	_	_	_
+29-2	1964-1966	in	_	_	_	_
+29-3	1967-1968	,	_	_	_	_
+29-4	1969-1973	each	abstract[114]	giv[114]	coref	29-7[115_114]
+29-5	1974-1982	blockage	abstract[114]	giv[114]	_	_
+29-6	1983-1985	is	_	_	_	_
+29-7	1986-1987	a	abstract[115]	giv[115]	coref	32-10[122_115]
+29-8	1988-1995	segment	abstract[115]	giv[115]	_	_
+29-9	1996-1998	of	abstract[115]	giv[115]	_	_
+29-10	1999-2005	length	abstract[115]|quantity|person[117]	giv[115]|new|new[117]	coref|coref|coref|coref	33-2[0_117]|43-6|33-2[0_117]|43-6
+29-11	2006-2007	W	abstract[115]|person[117]	giv[115]|new[117]	_	_
+29-12	2008-2009	.	_	_	_	_
+
+#Text=To capture the worst-case scenario , as shown in
+30-1	2010-2012	To	_	_	_	_
+30-2	2013-2020	capture	_	_	_	_
+30-3	2021-2024	the	abstract[118]	new[118]	_	_
+30-4	2025-2035	worst-case	abstract[118]	new[118]	_	_
+30-5	2036-2044	scenario	abstract[118]	new[118]	_	_
+30-6	2045-2046	,	_	_	_	_
+30-7	2047-2049	as	_	_	_	_
+30-8	2050-2055	shown	_	_	_	_
+30-9	2056-2058	in	_	_	_	_
+
+#Text=Figure 2
+31-1	2059-2065	Figure	abstract[119]	new[119]	ana	32-1[120_119]
+31-2	2066-2067	2	abstract[119]	new[119]	_	_
+
+#Text=a , it is assumed that the line representing the blockage is perpendicular to the line that connects it to the transmitter .
+32-1	2068-2069	a	abstract[120]	giv[120]	ana	32-19[0_120]
+32-2	2070-2071	,	abstract[120]	giv[120]	_	_
+32-3	2072-2074	it	abstract[120]	giv[120]	_	_
+32-4	2075-2077	is	_	_	_	_
+32-5	2078-2085	assumed	_	_	_	_
+32-6	2086-2090	that	_	_	_	_
+32-7	2091-2094	the	abstract[121]	giv[121]	coref	32-15[123_121]
+32-8	2095-2099	line	abstract[121]	giv[121]	_	_
+32-9	2100-2112	representing	_	_	_	_
+32-10	2113-2116	the	abstract[122]	giv[122]	coref	37-2[137_122]
+32-11	2117-2125	blockage	abstract[122]	giv[122]	_	_
+32-12	2126-2128	is	_	_	_	_
+32-13	2129-2142	perpendicular	_	_	_	_
+32-14	2143-2145	to	_	_	_	_
+32-15	2146-2149	the	abstract[123]	giv[123]	ana	33-4[0_123]
+32-16	2150-2154	line	abstract[123]	giv[123]	_	_
+32-17	2155-2159	that	_	_	_	_
+32-18	2160-2168	connects	_	_	_	_
+32-19	2169-2171	it	object	giv	coref	35-1[132_0]
+32-20	2172-2174	to	_	_	_	_
+32-21	2175-2178	the	object[125]	giv[125]	_	_
+32-22	2179-2190	transmitter	object[125]	giv[125]	_	_
+32-23	2191-2192	.	_	_	_	_
+
+#Text=Although W can itself be random as in , we assume here that all blockages have the same value of W .
+33-1	2193-2201	Although	_	_	_	_
+33-2	2202-2203	W	person	giv	coref	33-21
+33-3	2204-2207	can	_	_	_	_
+33-4	2208-2214	itself	abstract	giv	_	_
+33-5	2215-2217	be	_	_	_	_
+33-6	2218-2224	random	_	_	_	_
+33-7	2225-2227	as	_	_	_	_
+33-8	2228-2230	in	_	_	_	_
+33-9	2231-2232	,	_	_	_	_
+33-10	2233-2235	we	person	acc	ana	38-3
+33-11	2236-2242	assume	_	_	_	_
+33-12	2243-2247	here	_	_	_	_
+33-13	2248-2252	that	_	_	_	_
+33-14	2253-2256	all	abstract[129]	new[129]	_	_
+33-15	2257-2266	blockages	abstract[129]	new[129]	_	_
+33-16	2267-2271	have	_	_	_	_
+33-17	2272-2275	the	abstract[130]	new[130]	_	_
+33-18	2276-2280	same	abstract[130]	new[130]	_	_
+33-19	2281-2286	value	abstract[130]	new[130]	_	_
+33-20	2287-2289	of	abstract[130]	new[130]	_	_
+33-21	2290-2291	W	abstract[130]|person	new[130]|giv	_	_
+33-22	2292-2293	.	_	_	_	_
+
+#Text=In
+34-1	2294-2296	In	_	_	_	_
+
+#Text=Figure 2
+35-1	2297-2303	Figure	abstract[132]	giv[132]	coref	40-1[157_132]
+35-2	2304-2305	2	abstract[132]	giv[132]	_	_
+
+#Text=a , the red stars indicate the blocked base stations , which are located in the blue shaded region .
+36-1	2306-2307	a	person[133]	new[133]	_	_
+36-2	2308-2309	,	person[133]	new[133]	_	_
+36-3	2310-2313	the	person[133]	new[133]	_	_
+36-4	2314-2317	red	person[133]	new[133]	_	_
+36-5	2318-2323	stars	person[133]	new[133]	_	_
+36-6	2324-2332	indicate	_	_	_	_
+36-7	2333-2336	the	place[135]	giv[135]	_	_
+36-8	2337-2344	blocked	place[135]	giv[135]	_	_
+36-9	2345-2349	base	abstract|place[135]	giv|giv[135]	coref	39-2
+36-10	2350-2358	stations	place[135]	giv[135]	_	_
+36-11	2359-2360	,	_	_	_	_
+36-12	2361-2366	which	_	_	_	_
+36-13	2367-2370	are	_	_	_	_
+36-14	2371-2378	located	_	_	_	_
+36-15	2379-2381	in	_	_	_	_
+36-16	2382-2385	the	place[136]	new[136]	coref	39-5[154_136]
+36-17	2386-2390	blue	place[136]	new[136]	_	_
+36-18	2391-2397	shaded	place[136]	new[136]	_	_
+36-19	2398-2404	region	place[136]	new[136]	_	_
+36-20	2405-2406	.	_	_	_	_
+
+#Text=If a blockage cuts the path from to , then the signal from is NLOS , while otherwise it is LOS .
+37-1	2407-2409	If	_	_	_	_
+37-2	2410-2411	a	abstract[137]	giv[137]	coref	39-6[0_137]
+37-3	2412-2420	blockage	abstract[137]	giv[137]	_	_
+37-4	2421-2425	cuts	_	_	_	_
+37-5	2426-2429	the	abstract[138]	new[138]	coref	42-24[168_138]
+37-6	2430-2434	path	abstract[138]	new[138]	_	_
+37-7	2435-2439	from	_	_	_	_
+37-8	2440-2442	to	_	_	_	_
+37-9	2443-2444	,	_	_	_	_
+37-10	2445-2449	then	_	_	_	_
+37-11	2450-2453	the	abstract[139]	new[139]	_	_
+37-12	2454-2460	signal	abstract[139]	new[139]	_	_
+37-13	2461-2465	from	_	_	_	_
+37-14	2466-2468	is	_	_	_	_
+37-15	2469-2473	NLOS	abstract	giv	ana	37-19
+37-16	2474-2475	,	_	_	_	_
+37-17	2476-2481	while	_	_	_	_
+37-18	2482-2491	otherwise	_	_	_	_
+37-19	2492-2494	it	abstract	giv	coref	38-6
+37-20	2495-2497	is	_	_	_	_
+37-21	2498-2501	LOS	abstract	giv	coref	38-12
+37-22	2502-2503	.	_	_	_	_
+
+#Text=Here , we assume that NLOS signals are completely blocked while LOS signals experience exponential path-loss with a path-loss exponent ; i. e. , the power received by is proportional to .
+38-1	2504-2508	Here	_	_	_	_
+38-2	2509-2510	,	_	_	_	_
+38-3	2511-2513	we	person	giv	ana	41-2
+38-4	2514-2520	assume	_	_	_	_
+38-5	2521-2525	that	_	_	_	_
+38-6	2526-2530	NLOS	substance|abstract[145]	giv|new[145]	coref|coref	38-12[147_145]|38-12[147_145]
+38-7	2531-2538	signals	abstract[145]	new[145]	_	_
+38-8	2539-2542	are	_	_	_	_
+38-9	2543-2553	completely	_	_	_	_
+38-10	2554-2561	blocked	_	_	_	_
+38-11	2562-2567	while	_	_	_	_
+38-12	2568-2571	LOS	substance|abstract[147]	giv|giv[147]	_	_
+38-13	2572-2579	signals	abstract[147]	giv[147]	_	_
+38-14	2580-2590	experience	_	_	_	_
+38-15	2591-2602	exponential	abstract[148]	new[148]	_	_
+38-16	2603-2612	path-loss	abstract[148]	new[148]	_	_
+38-17	2613-2617	with	_	_	_	_
+38-18	2618-2619	a	abstract[149]	new[149]	_	_
+38-19	2620-2629	path-loss	abstract[149]	new[149]	_	_
+38-20	2630-2638	exponent	abstract[149]	new[149]	_	_
+38-21	2639-2640	;	_	_	_	_
+38-22	2641-2643	i.	_	_	_	_
+38-23	2644-2646	e.	_	_	_	_
+38-24	2647-2648	,	_	_	_	_
+38-25	2649-2652	the	abstract[150]	new[150]	ana	39-10[0_150]
+38-26	2653-2658	power	abstract[150]	new[150]	_	_
+38-27	2659-2667	received	_	_	_	_
+38-28	2668-2670	by	_	_	_	_
+38-29	2671-2673	is	_	_	_	_
+38-30	2674-2686	proportional	_	_	_	_
+38-31	2687-2689	to	_	_	_	_
+38-32	2690-2691	.	_	_	_	_
+
+#Text=Each base station has a blockage region associated with it , illustrated by the blue shaded rectangles shown in
+39-1	2692-2696	Each	place[152]	giv[152]	_	_
+39-2	2697-2701	base	abstract|place[152]	giv|giv[152]	_	_
+39-3	2702-2709	station	place[152]	giv[152]	_	_
+39-4	2710-2713	has	_	_	_	_
+39-5	2714-2715	a	place[154]	giv[154]	coref	41-6[160_154]
+39-6	2716-2724	blockage	abstract|place[154]	giv|giv[154]	coref	41-7
+39-7	2725-2731	region	place[154]	giv[154]	_	_
+39-8	2732-2742	associated	_	_	_	_
+39-9	2743-2747	with	_	_	_	_
+39-10	2748-2750	it	abstract	giv	_	_
+39-11	2751-2752	,	_	_	_	_
+39-12	2753-2764	illustrated	_	_	_	_
+39-13	2765-2767	by	_	_	_	_
+39-14	2768-2771	the	object[156]	new[156]	_	_
+39-15	2772-2776	blue	object[156]	new[156]	_	_
+39-16	2777-2783	shaded	object[156]	new[156]	_	_
+39-17	2784-2794	rectangles	object[156]	new[156]	_	_
+39-18	2795-2800	shown	_	_	_	_
+39-19	2801-2803	in	_	_	_	_
+
+#Text=Figure 2
+40-1	2804-2810	Figure	abstract[157]	giv[157]	_	_
+40-2	2811-2812	2	abstract[157]	giv[157]	_	_
+
+#Text=b. We use to denote the blockage region associated with and its area ; i. e. , is both a region and an area .
+41-1	2813-2815	b.	_	_	_	_
+41-2	2816-2818	We	person	giv	_	_
+41-3	2819-2822	use	_	_	_	_
+41-4	2823-2825	to	_	_	_	_
+41-5	2826-2832	denote	_	_	_	_
+41-6	2833-2836	the	place[160]	giv[160]	ana	41-12[0_160]
+41-7	2837-2845	blockage	abstract|place[160]	giv|giv[160]	coref	42-5[166_0]
+41-8	2846-2852	region	place[160]	giv[160]	_	_
+41-9	2853-2863	associated	_	_	_	_
+41-10	2864-2868	with	_	_	_	_
+41-11	2869-2872	and	_	_	_	_
+41-12	2873-2876	its	place	giv	coref	41-19[163_0]
+41-13	2877-2881	area	abstract	new	coref	41-23[164_0]
+41-14	2882-2883	;	_	_	_	_
+41-15	2884-2886	i.	_	_	_	_
+41-16	2887-2889	e.	_	_	_	_
+41-17	2890-2891	,	_	_	_	_
+41-18	2892-2894	is	_	_	_	_
+41-19	2895-2899	both	place[163]	giv[163]	coref	44-9[176_163]
+41-20	2900-2901	a	place[163]	giv[163]	_	_
+41-21	2902-2908	region	place[163]	giv[163]	_	_
+41-22	2909-2912	and	_	_	_	_
+41-23	2913-2915	an	abstract[164]	giv[164]	_	_
+41-24	2916-2920	area	abstract[164]	giv[164]	_	_
+41-25	2921-2922	.	_	_	_	_
+
+#Text=If the center of a blockage falls within , then will be blocked since at least some part of the blockage will intersect the path between and .
+42-1	2923-2925	If	_	_	_	_
+42-2	2926-2929	the	place[165]	new[165]	ana	43-11[0_165]
+42-3	2930-2936	center	place[165]	new[165]	_	_
+42-4	2937-2939	of	place[165]	new[165]	_	_
+42-5	2940-2941	a	place[165]|abstract[166]	new[165]|giv[166]	coref	42-20[167_166]
+42-6	2942-2950	blockage	place[165]|abstract[166]	new[165]|giv[166]	_	_
+42-7	2951-2956	falls	_	_	_	_
+42-8	2957-2963	within	_	_	_	_
+42-9	2964-2965	,	_	_	_	_
+42-10	2966-2970	then	_	_	_	_
+42-11	2971-2975	will	_	_	_	_
+42-12	2976-2978	be	_	_	_	_
+42-13	2979-2986	blocked	_	_	_	_
+42-14	2987-2992	since	_	_	_	_
+42-15	2993-2995	at	_	_	_	_
+42-16	2996-3001	least	_	_	_	_
+42-17	3002-3006	some	_	_	_	_
+42-18	3007-3011	part	_	_	_	_
+42-19	3012-3014	of	_	_	_	_
+42-20	3015-3018	the	abstract[167]	giv[167]	coref	45-10[181_167]
+42-21	3019-3027	blockage	abstract[167]	giv[167]	_	_
+42-22	3028-3032	will	_	_	_	_
+42-23	3033-3042	intersect	_	_	_	_
+42-24	3043-3046	the	abstract[168]	giv[168]	_	_
+42-25	3047-3051	path	abstract[168]	giv[168]	_	_
+42-26	3052-3059	between	_	_	_	_
+42-27	3060-3063	and	_	_	_	_
+42-28	3064-3065	.	_	_	_	_
+
+#Text=Because is a rectangle of length and width W , it is clear that .
+43-1	3066-3073	Because	_	_	_	_
+43-2	3074-3076	is	_	_	_	_
+43-3	3077-3078	a	object[169]	new[169]	_	_
+43-4	3079-3088	rectangle	object[169]	new[169]	_	_
+43-5	3089-3091	of	object[169]	new[169]	_	_
+43-6	3092-3098	length	object[169]|quantity	new[169]|giv	_	_
+43-7	3099-3102	and	object[169]	new[169]	_	_
+43-8	3103-3108	width	object[169]|abstract|abstract[172]	new[169]|new|new[172]	ana|ana	43-14[0_172]|43-14[0_172]
+43-9	3109-3110	W	object[169]|abstract[172]	new[169]|new[172]	_	_
+43-10	3111-3112	,	_	_	_	_
+43-11	3113-3115	it	place	giv	_	_
+43-12	3116-3118	is	_	_	_	_
+43-13	3119-3124	clear	_	_	_	_
+43-14	3125-3129	that	abstract	giv	ana	45-6
+43-15	3130-3131	.	_	_	_	_
+
+#Text=Unless and are exactly on opposite sides of the region , there will be an overlapping region v common to both and .
+44-1	3132-3138	Unless	_	_	_	_
+44-2	3139-3142	and	_	_	_	_
+44-3	3143-3146	are	_	_	_	_
+44-4	3147-3154	exactly	object[175]	new[175]	_	_
+44-5	3155-3157	on	object[175]	new[175]	_	_
+44-6	3158-3166	opposite	object[175]	new[175]	_	_
+44-7	3167-3172	sides	object[175]	new[175]	_	_
+44-8	3173-3175	of	object[175]	new[175]	_	_
+44-9	3176-3179	the	object[175]|place[176]	new[175]|giv[176]	coref	44-15[177_176]
+44-10	3180-3186	region	object[175]|place[176]	new[175]|giv[176]	_	_
+44-11	3187-3188	,	_	_	_	_
+44-12	3189-3194	there	_	_	_	_
+44-13	3195-3199	will	_	_	_	_
+44-14	3200-3202	be	_	_	_	_
+44-15	3203-3205	an	place[177]	giv[177]	ana	44-21[0_177]
+44-16	3206-3217	overlapping	place[177]	giv[177]	_	_
+44-17	3218-3224	region	place[177]	giv[177]	_	_
+44-18	3225-3226	v	place[177]	giv[177]	_	_
+44-19	3227-3233	common	place[177]	giv[177]	_	_
+44-20	3234-3236	to	_	_	_	_
+44-21	3237-3241	both	place	giv	coref	45-23
+44-22	3242-3245	and	_	_	_	_
+44-23	3246-3247	.	_	_	_	_
+
+#Text=Because of the overlap , it is possible for a single blockage to simultaneously block both and if the blockage falls within region v , which corresponds to correlated blocking .
+45-1	3248-3255	Because	_	_	_	_
+45-2	3256-3258	of	_	_	_	_
+45-3	3259-3262	the	abstract[179]	new[179]	_	_
+45-4	3263-3270	overlap	abstract[179]	new[179]	_	_
+45-5	3271-3272	,	_	_	_	_
+45-6	3273-3275	it	abstract	giv	ana	45-16
+45-7	3276-3278	is	_	_	_	_
+45-8	3279-3287	possible	_	_	_	_
+45-9	3288-3291	for	_	_	_	_
+45-10	3292-3293	a	abstract[181]	giv[181]	coref	45-19[183_181]
+45-11	3294-3300	single	abstract[181]	giv[181]	_	_
+45-12	3301-3309	blockage	abstract[181]	giv[181]	_	_
+45-13	3310-3312	to	_	_	_	_
+45-14	3313-3327	simultaneously	_	_	_	_
+45-15	3328-3333	block	_	_	_	_
+45-16	3334-3338	both	abstract	giv	_	_
+45-17	3339-3342	and	_	_	_	_
+45-18	3343-3345	if	_	_	_	_
+45-19	3346-3349	the	abstract[183]	giv[183]	_	_
+45-20	3350-3358	blockage	abstract[183]	giv[183]	_	_
+45-21	3359-3364	falls	_	_	_	_
+45-22	3365-3371	within	_	_	_	_
+45-23	3372-3378	region	place|abstract[185]	giv|new[185]	_	_
+45-24	3379-3380	v	abstract[185]	new[185]	_	_
+45-25	3381-3382	,	_	_	_	_
+45-26	3383-3388	which	_	_	_	_
+45-27	3389-3400	corresponds	_	_	_	_
+45-28	3401-3403	to	_	_	_	_
+45-29	3404-3414	correlated	abstract[186]	giv[186]	_	_
+45-30	3415-3423	blocking	abstract[186]	giv[186]	_	_
+45-31	3424-3425	.	_	_	_	_
