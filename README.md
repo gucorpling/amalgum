@@ -1,4 +1,4 @@
-# AMALGUM
+# AMALGUM v0.1
 ## Download
 Latest data **without Reddit texts** for is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and [`amalgum_balanced`](https://github.com/gucorpling/amalgum/tree/master/amalgum_balanced). (The `_balanced` variant contains nearly 500,000 tokens for each genre, while the unbalanced variant contains slightly more data.)
 
