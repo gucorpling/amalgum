@@ -30,7 +30,9 @@ AMALGUM contains annotations for the following information:
 * Coreference
 * Rhetorical structure theory
 
-These annotations are across four file formats: [GUM-style XML](https://github.com/gucorpling/amalgum/blob/master/amalgum/xml/amalgum_bio_doc124.xml), [CONLLU](https://github.com/gucorpling/amalgum/blob/master/amalgum/dep/amalgum_bio_doc124.conllu), [WebAnno TSV](https://github.com/gucorpling/amalgum/blob/master/amalgum/tsv/amalgum_bio_doc124.tsv), and [RS3](https://github.com/gucorpling/amalgum/blob/master/amalgum/rst/amalgum_bio_doc124.rs3).
+These annotations are across four file formats: [GUM-style XML](https://github.com/amir-zeldes/gum), [CONLLU](https://universaldependencies.org/format.html), [WebAnno TSV](https://webanno.github.io/webanno/releases/3.4.5/docs/user-guide.html#sect_webannotsv), and [RS3](https://github.com/gucorpling/rst-xsd).
+
+You can see samples of the data for `bio_doc124`: [xml](https://github.com/gucorpling/amalgum/blob/master/amalgum/xml/amalgum_bio_doc124.xml), [conllu](https://github.com/gucorpling/amalgum/blob/master/amalgum/dep/amalgum_bio_doc124.conllu), [tsv](https://github.com/gucorpling/amalgum/blob/master/amalgum/tsv/amalgum_bio_doc124.tsv), [rs3](https://github.com/gucorpling/amalgum/blob/master/amalgum/rst/amalgum_bio_doc124.rs3)
 
 ### Further Information
 Please see [our paper](https://www.aclweb.org/anthology/2020.lrec-1.648.pdf).
