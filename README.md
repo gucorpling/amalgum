@@ -50,6 +50,7 @@ All annotations under the folders `amalgum/` and `amalgum_balanced/` are availab
 
 **NOTE:** Our [ACL Anthology](https://www.aclweb.org/anthology/2020.lrec-1.648/) listing currently uses an old name for the corpus. **Please use this corrected citation:** 
 
+```
 @inproceedings{gessler-etal-2020-amalgum,
     title = "{AMALGUM} {--} A Free, Balanced, and Rich {E}nglish Web Corpus",
     author = "Gessler, Luke  and
@@ -69,6 +70,7 @@ All annotations under the folders `amalgum/` and `amalgum_balanced/` are availab
     language = "English",
     ISBN = "979-10-95546-34-4",
 }
+```
 
 # Build
 See [BUILD.md](./BUILD.md).
