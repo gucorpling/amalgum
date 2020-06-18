@@ -54,7 +54,7 @@ All annotations under the folders `amalgum/` and `amalgum_balanced/` are availab
 
 ```
 @inproceedings{gessler-etal-2020-amalgum,
-    title = "{AMALGUM} {--} A Free, Balanced, and Rich {E}nglish Web Corpus",
+    title = "{AMALGUM} {--} A Free, Balanced, Multilayer {E}nglish Web Corpus",
     author = "Gessler, Luke  and
       Peng, Siyao  and
       Liu, Yang  and
