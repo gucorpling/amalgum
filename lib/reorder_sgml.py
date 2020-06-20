@@ -1,7 +1,7 @@
 import io, re
 from collections import defaultdict
 
-PRIORITIES = ["sp","table","row","cell","head","p","figure","caption","list","item","quote","s","q","hi","sic","ref",
+PRIORITIES = ["text","sp","table","row","cell","head","p","figure","caption","list","item","s","quote","q","hi","sic","ref",
 			  "date","incident","w"]
 
 OPEN_SGML_ELT = re.compile(r'^<([^/ ]+)( .*)?>$')
