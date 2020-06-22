@@ -1,5 +1,5 @@
 import logging
-import os, io
+import os, io, sys, requests, shutil
 from abc import ABC, abstractmethod
 from enum import Enum
 from glob import glob
@@ -217,6 +217,30 @@ class NLPModule(ABC):
         else:
             for filename in tqdm(filenames):
                 process_filename(filename)
+
+    @staticmethod
+    def download_file(model, local_path, subfolder=None):
+        server = "corpling.uis.georgetown.edu"
+        resource = [server, "amir", "download", "amalgum"]
+        if subfolder is not None:
+            resource.append(subfolder)
+        resource.append(model)
+        resource = "/".join(resource)
+        url = "https://" + resource
+        if not local_path.endswith(model):
+            if not local_path.endswith(os.sep):
+                local_path += os.sep
+            local_path += model
+        try:
+            sys.stderr.write("o Downloading model from " + url + "...\n")
+            with requests.get(url, stream=True) as r:
+                with io.open(local_path, "wb") as f:
+                    shutil.copyfileobj(r.raw, f)
+            sys.stderr.write("o Download successful\n")
+        except Exception as e:
+            sys.stderr.write("\n! Could not download model from " + url + "\n")
+            sys.stderr.write(str(e))
+            raise NLPDependencyException()
 
 
 class NLPDependencyException(Exception):
