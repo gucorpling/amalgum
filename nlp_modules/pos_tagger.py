@@ -41,12 +41,15 @@ class PoSTagger(NLPModule):
         self.flair_gum = SequenceTagger.load("nlp_modules/pos-dependencies/gum-pos-flair.pt")
 
     def test_dependencies(self):
-        stanfordnlp.download("en", "nlp_modules/pos-dependencies/stanfordnlp_models/")
-        if not os.path.exists("nlp_modules/pos-dependencies"):
-            raise NLPDependencyException(
-                "Could not locate folder `pos-dependencies`. It has to be in the same directory as this script. Please download from https://drive.google.com/file/d/1P5yRDKuBx1hDgOmZU1tNYyt6oZciRx_u/view?usp=sharing"
-            )
-            sys.exit(1)
+        files = ["en_gum.pretrain.pt","en-pos-ontonotes-v0.4.pt","gum-pos-flair.pt","en_ewt.pretrain.pt","en_ewt_parser.pt",
+                 "en_ewt_tagger.pt","en_gum_tagger.pt","en_ewt_lemmatizer.pt"]
+        pos_dependencies_dir = script_dir + "pos-dependencies" + os.sep
+        for file_ in files:
+            suffix = ""
+            if file_.startswith("en_ewt"):
+                suffix = 'en_ewt_models' + os.sep
+            if not os.path.exists(pos_dependencies_dir + suffix + file_):
+                self.download_file(file_, pos_dependencies_dir + suffix, subfolder="pos")
 
     def get_stanford_predictions(self, model, data_path):
         if model == 'ewt':
