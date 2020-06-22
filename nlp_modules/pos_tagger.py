@@ -1,6 +1,7 @@
 from glob import glob
 from flair.data import Sentence, Token
 from flair.models import SequenceTagger
+import flair
 import conllu
 import stanfordnlp
 import pickle
@@ -99,7 +100,10 @@ class PoSTagger(NLPModule):
         output = []
         for sentence in model.predict(sentences):
             for token in sentence:
-                output.append(token.tags['pos'].value)
+                if str(flair.__version__).startswith("0.4"):
+                    output.append(token.tags['pos'].value)
+                else:
+                    output.append(token.labels[0].value)
         return output
 
     def get_ensemble_predictions(self, test_x):
