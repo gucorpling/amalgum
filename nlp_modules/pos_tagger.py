@@ -12,28 +12,31 @@ from nlp_modules.base import NLPModule, PipelineDep
 
 from tqdm import tqdm
 
+script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 
 class PoSTagger(NLPModule):
     requires = (PipelineDep.TOKENIZE, PipelineDep.S_SPLIT)
     provides = (PipelineDep.POS_TAG,)
 
-    def __init__(self, opts):
+    def __init__(self, global_config):
         # self.LIB_DIR = config["LIB_DIR"]
-        self.stanford_ewt = nlp = stanfordnlp.Pipeline(
+        self.test_dependencies()
+        self.stanford_ewt = stanfordnlp.Pipeline(
             processors="tokenize,pos",
-            models_dir="nlp_modules/pos-dependencies/stanfordnlp_models/",
+            models_dir="nlp_modules/pos-dependencies/",
             tokenize_pretokenized=True,
             treebank="en_ewt",
-            use_gpu=True,
+            use_gpu=global_config.get("use_gpu", False),
             pos_batch_size=1000,
         )
 
         config = {
             "processors": "tokenize,pos",
             "tokenize_pretokenized": True,
-            "pos_model_path": "nlp_modules/pos-dependencies/saved_models/pos/en_gum_tagger.pt",
-            "pos_pretrain_path": "nlp_modules/pos-dependencies/saved_models/pos/en_gum.pretrain.pt",
+            "pos_model_path": "nlp_modules/pos-dependencies/en_gum_tagger.pt",
+            "pos_pretrain_path": "nlp_modules/pos-dependencies/en_gum.pretrain.pt",
             "pos_batch_size": 1000,
+            "use_gpu": global_config.get("use_gpu", False),
             "treebank": "en_gum",
         }
         self.stanford_gum = stanfordnlp.Pipeline(**config)
