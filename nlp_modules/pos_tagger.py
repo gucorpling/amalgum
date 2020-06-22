@@ -7,7 +7,7 @@ import pickle
 import numpy as np
 import xgboost as xgb
 import shutil
-import os
+import os, io
 from nlp_modules.base import NLPModule, PipelineDep
 
 from tqdm import tqdm
@@ -61,7 +61,7 @@ class PoSTagger(NLPModule):
             nlp = self.stanford_gum
 
         data = []
-        with open(data_path) as file:
+        with io.open(data_path, encoding="utf8") as file:
             data.append([])
             for line in file:
                 if line.startswith("# newdoc id"):
@@ -89,7 +89,7 @@ class PoSTagger(NLPModule):
             model = self.flair_gum
 
         sentences = []
-        with open(data_path, 'r') as f:
+        with io.open(data_path, 'r', encoding="utf8") as f:
             for token_list in conllu.parse(f.read()):
                 sentence = Sentence()
                 for token in token_list:
@@ -152,8 +152,8 @@ class PoSTagger(NLPModule):
 
             indx = 0
 
-            with open(filepath) as inp:
-                output = open(os.path.join(output_dir, file_type, filename), "w")
+            with io.open(filepath, encoding="utf8") as inp:
+                output = io.open(os.path.join(output_dir, file_type, filename), "w", encoding="utf8", newline="\n")
                 for line in inp:
                     sp = line.split("\t")
                     if sp[0].isdigit():
