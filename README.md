@@ -37,20 +37,7 @@ You can see samples of the data for `bio_doc124`: [xml](https://github.com/gucor
 ### Further Information
 Please see [our paper](https://www.aclweb.org/anthology/2020.lrec-1.648.pdf).
 
-# License
-All annotations under the folders `amalgum/` and `amalgum_balanced/` are available under a [Creative Commons Attribution (CC-BY) license, version 4.0](https://creativecommons.org/licenses/by/4.0/). Note that their texts are sourced from the following websites under their own licenses:
-
-* `academic`: [MDPI](https://www.mdpi.com/about), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
-* `bio`: [Wikipedia](https://creativecommons.org/licenses/by/4.0/), [CC BY-SA 3.0](https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
-* `fiction`: [Project Gutenberg](https://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License), [The Project Gutenberg License](https://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License#The_Full_Project_Gutenberg_License_in_Legalese_.28normative.29)
-* `interview`: [Wikinews](https://en.wikinews.org/wiki/Wikinews:Copyright), [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/)
-* `news`: [Wikinews](https://en.wikinews.org/wiki/Wikinews:Copyright), [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/)
-* `whow`: [wikiHow](https://www.wikihow.com/), [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
-* `voyage`: [wikiVoyage](https://en.wikivoyage.org/wiki/Wikivoyage:Dual_licensing), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
-
 # Citation
-
-**NOTE:** Our [ACL Anthology](https://www.aclweb.org/anthology/2020.lrec-1.648/) listing currently uses an old name for the corpus. **Please use this corrected citation:** 
 
 ```
 @inproceedings{gessler-etal-2020-amalgum,
@@ -73,6 +60,19 @@ All annotations under the folders `amalgum/` and `amalgum_balanced/` are availab
     ISBN = "979-10-95546-34-4",
 }
 ```
+
+
+# License
+All annotations under the folders `amalgum/` and `amalgum_balanced/` are available under a [Creative Commons Attribution (CC-BY) license, version 4.0](https://creativecommons.org/licenses/by/4.0/). Note that their texts are sourced from the following websites under their own licenses:
+
+* `academic`: [MDPI](https://www.mdpi.com/about), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
+* `bio`: [Wikipedia](https://creativecommons.org/licenses/by/4.0/), [CC BY-SA 3.0](https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
+* `fiction`: [Project Gutenberg](https://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License), [The Project Gutenberg License](https://www.gutenberg.org/wiki/Gutenberg:The_Project_Gutenberg_License#The_Full_Project_Gutenberg_License_in_Legalese_.28normative.29)
+* `interview`: [Wikinews](https://en.wikinews.org/wiki/Wikinews:Copyright), [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/)
+* `news`: [Wikinews](https://en.wikinews.org/wiki/Wikinews:Copyright), [CC BY 2.5](http://creativecommons.org/licenses/by/2.5/)
+* `whow`: [wikiHow](https://www.wikihow.com/), [CC BY-NC-SA 3.0](http://creativecommons.org/licenses/by-nc-sa/3.0/)
+* `voyage`: [wikiVoyage](https://en.wikivoyage.org/wiki/Wikivoyage:Dual_licensing), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
+
 
 # Build
 See [BUILD.md](./BUILD.md).
