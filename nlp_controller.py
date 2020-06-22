@@ -14,7 +14,7 @@ from nlp_modules.marmot_tagger import MarmotTagger
 from nlp_modules.dep_parser import DepParser
 from nlp_modules.tt_tagger import TreeTaggerTagger
 from nlp_modules.tt_tokenizer import TreeTaggerTokenizer
-from nlp_modules.gumdrop_splitter import GumdropSplitter
+from nlp_modules.flair_splitter import FlairSplitter
 from nlp_modules.pos_tagger import PoSTagger
 from nlp_modules.s_typer import STyper
 from nlp_modules.ace_entities import AceEntities
@@ -31,7 +31,7 @@ MODULES = {
     "tt_tagger": TreeTaggerTagger,
     "ensemble_tagger": PoSTagger,
     "marmot_tagger": MarmotTagger,
-    "gumdrop_splitter": GumdropSplitter,
+    "flair_splitter": FlairSplitter,
     "s_typer": STyper,
     "dep_parser": DepParser,
     "ace_entities": AceEntities,
@@ -154,7 +154,7 @@ def main():
         "--modules",
         nargs="+",
         choices=MODULES.keys(),
-        default=["tt_tokenizer", "gumdrop_splitter", "ensemble_tagger", "dep_parser", "s_typer", "ace_entities", "xrenner", "rst_parser"],
+        default=["tt_tokenizer", "flair_splitter", "ensemble_tagger", "dep_parser", "s_typer"], #"ace_entities", "xrenner", "rst_parser"],
         help="NLP pipeline modules, included in the order they are specified.",
     )
     p.add_argument(
