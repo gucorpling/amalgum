@@ -37,8 +37,8 @@ class PoSTagger(NLPModule):
             "treebank": "en_gum",
         }
         self.stanford_gum = stanfordnlp.Pipeline(**config)
-        self.flair_onto = SequenceTagger.load("pos")
-        self.flair_gum = SequenceTagger.load("nlp_modules/pos-dependencies/gum-flair/final-model.pt")
+        self.flair_onto = SequenceTagger.load("nlp_modules/pos-dependencies/en-pos-ontonotes-v0.4.pt")
+        self.flair_gum = SequenceTagger.load("nlp_modules/pos-dependencies/gum-pos-flair.pt")
 
     def test_dependencies(self):
         stanfordnlp.download("en", "nlp_modules/pos-dependencies/stanfordnlp_models/")
