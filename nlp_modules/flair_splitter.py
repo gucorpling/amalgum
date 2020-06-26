@@ -446,7 +446,7 @@ if __name__ == "__main__":
     from argparse import ArgumentParser
 
     p = ArgumentParser()
-    p.add_argument("file",help="TT SGML file to test sentence splitting on")
+    p.add_argument("file",help="TT SGML file to test sentence splitting on, or training dir")
     p.add_argument("-m","--mode",choices=["test","train"],default="test")
     p.add_argument(
         "-o",
