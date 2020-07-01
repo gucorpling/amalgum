@@ -207,9 +207,9 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 			sent_num += 1
 			output.append("")
 
-		with io.open((os.path.splitext(os.path.basename(rst)))[0] + ".merge", 'w', encoding="utf8", newline="\n") as f:
-			f.write("\n".join(output)+"\n")
+	with io.open(filename + ".merge", 'w', encoding="utf8", newline="\n") as f:
+		f.write("\n".join(output)+"\n")
 
-		output_lines = "\n".join(output)+"\n"
+	output_lines = "\n".join(output)+"\n"
 
 	return output_lines
