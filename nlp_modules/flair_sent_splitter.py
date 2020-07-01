@@ -15,7 +15,10 @@ lib_dir = script_dir + ".." + os.sep + "lib" + os.sep
 nlp_modules_dir = script_dir + ".." + os.sep + "nlp_modules" + os.sep
 flair_splitter_dep_dir = nlp_modules_dir + "splitter-dependencies" + os.sep
 
-from nlp_modules.base import NLPModule, PipelineDep
+try:
+    from nlp_modules.base import NLPModule, PipelineDep
+except:
+    from base import NLPModule, PipelineDep
 import conllu
 from collections import OrderedDict, defaultdict
 
@@ -178,20 +181,20 @@ def tokens2conllu(tokens):
     return tl
 
 
-class FlairSplitter(NLPModule):
+class FlairSentSplitter(NLPModule):
     requires = (PipelineDep.TOKENIZE,)
     provides = (PipelineDep.S_SPLIT, PipelineDep.S_TYPE)
 
     def __init__(self, config, model_path=None, span_size=20, stride_size=10):
 
+        self.span_size = span_size  # Each shingle is 20 tokens by default
+        self.stride_size = stride_size  # Tag a shingle every stride_size tokens
+        self.LIB_DIR = config["LIB_DIR"]
         self.test_dependencies()
         if model_path is not None:
             self.load_model(model_path)
         else:
             self.model = None
-        self.span_size = span_size
-        self.stride_size = stride_size
-        self.LIB_DIR = config["LIB_DIR"]
 
     def load_model(self, path=None):
         model = "flair-splitter-sent.pt"
@@ -210,8 +213,9 @@ class FlairSplitter(NLPModule):
         import flair
 
         # Get model if needed
-        if not os.path.exists(flair_splitter_dep_dir + "flair-splitter-sent.pt"):
-            self.download_file("flair-splitter-sent.pt", flair_splitter_dep_dir, subfolder="split")
+        model = "flair-splitter-sent.pt"
+        if not os.path.exists(flair_splitter_dep_dir + model):
+            self.download_file(model, flair_splitter_dep_dir, subfolder="split")
 
     def train(self, training_dir=None):
         from flair.trainers import ModelTrainer
@@ -226,12 +230,13 @@ class FlairSplitter(NLPModule):
         data_folder = flair_splitter_dep_dir + "data"
 
         # init a corpus using column format, data folder and the names of the train, dev and test files
+        # note that training data should be unescaped, i.e. tokens like "&", not "&amp;"
         corpus: Corpus = ColumnCorpus(
             data_folder,
             columns,
-            train_file="train.txt",
-            test_file="test.txt",
-            dev_file="dev.txt",
+            train_file="sent_train.txt",
+            test_file="sent_test.txt",
+            dev_file="sent_dev.txt",
             document_separator_token="-DOCSTART-",
         )
 
@@ -241,7 +246,7 @@ class FlairSplitter(NLPModule):
         tag_dictionary = corpus.make_tag_dictionary(tag_type=tag_type)
         print(tag_dictionary)
 
-        # 4. initialize embeddings
+        # initialize embeddings
         embedding_types = [
             # WordEmbeddings('glove'),
             # comment in this line to use character embeddings
@@ -260,14 +265,12 @@ class FlairSplitter(NLPModule):
 
         trainer: ModelTrainer = ModelTrainer(tagger, corpus)
 
-        trainer.train(
-            training_dir, learning_rate=0.1, mini_batch_size=16, max_epochs=20,
-        )
+        trainer.train(training_dir, learning_rate=0.1, mini_batch_size=16, max_epochs=30)
         self.model = tagger
 
     def predict(self, tt_sgml, outmode="binary"):
         def is_tok(sgml_line):
-            return not (sgml_line.startswith("<") and sgml_line.endswith(">"))
+            return len(sgml_line) > 0 and not (sgml_line.startswith("<") and sgml_line.endswith(">"))
 
         def is_sent(line):
             return line in ["<s>", "</s>"] or line.startswith("<s ")
@@ -275,19 +278,17 @@ class FlairSplitter(NLPModule):
         if self.model is None:
             self.load_model()
 
+        final_mapping = {}  # Map each contextualized token to its (sequence_number, position)
+        spans = []  # Holds flair Sentence objects for labeling
+
+        tt_sgml = unescape(tt_sgml)  # Splitter is trained on UTF-8 forms, since LM embeddings know characters like '&'
         lines = tt_sgml.strip().split("\n")
         toks = [l for l in lines if is_tok(l)]
         toks = [re.sub(r"\t.*", "", t) for t in toks]
 
         # Hack tokens up into overlapping shingles
         wraparound = toks[-self.stride_size :] + toks + toks[: self.span_size]
-        indices = (
-            list(range(-self.stride_size, 0))
-            + list(range(len(toks)))
-            + list(range(len(toks), len(toks) + self.stride_size))
-        )
         idx = 0
-        sentences = []
         mapping = defaultdict(set)
         snum = 0
         while idx < len(toks):
@@ -296,7 +297,7 @@ class FlairSplitter(NLPModule):
             else:
                 span = wraparound[idx:]
             sent = Sentence(" ".join(span))
-            sentences.append(sent)
+            spans.append(sent)
             for i in range(idx - self.stride_size, idx + self.span_size - self.stride_size):
                 # start, end, snum
                 if i >= 0 and i < len(toks):
@@ -304,7 +305,6 @@ class FlairSplitter(NLPModule):
             idx += self.stride_size
             snum += 1
 
-        final_mapping = {}
         for idx in mapping:
             best = self.span_size
             for m in mapping[idx]:
@@ -317,7 +317,7 @@ class FlairSplitter(NLPModule):
                     final_mapping[idx] = (snum, idx - start)  # Get sentence number and position in sentence
 
         # Predict
-        preds = self.model.predict(sentences)
+        preds = self.model.predict(spans)
 
         labels = []
         for idx in final_mapping:
@@ -326,16 +326,17 @@ class FlairSplitter(NLPModule):
                 label = 0 if preds[snum].tokens[position].tags["ner"].value == "O" else 1
             else:
                 label = 0 if preds[snum].tokens[position].labels[0].value == "O" else 1
+
             labels.append(label)
 
         if outmode == "binary":
             return labels
 
-        # Generate edited SGML if desired
+        # Generate edited XML if desired
         output = []
         counter = 0
         first = True
-        for line in lines:
+        for line in tt_sgml.strip().split("\n"):
             if is_sent(line):  # Remove existing sentence tags
                 continue
             if is_tok(line):
@@ -348,9 +349,9 @@ class FlairSplitter(NLPModule):
             output.append(line)
         output.append("</s>")  # Final closing </s>
 
-        ordered = reorder("\n".join(output))
+        output = reorder("\n".join(output))
 
-        return ordered.strip() + "\n"
+        return output.strip() + "\n"
 
     def split(self, context):
         xml_data = context["xml"]
@@ -446,8 +447,8 @@ if __name__ == "__main__":
     from argparse import ArgumentParser
 
     p = ArgumentParser()
-    p.add_argument("file",help="TT SGML file to test sentence splitting on, or training dir")
-    p.add_argument("-m","--mode",choices=["test","train"],default="test")
+    p.add_argument("file", help="TT SGML file to test sentence splitting on, or training dir")
+    p.add_argument("-m", "--mode", choices=["test", "train"], default="test")
     p.add_argument(
         "-o",
         "--out_format",
@@ -457,7 +458,7 @@ if __name__ == "__main__":
     )
 
     opts = p.parse_args()
-    sentencer = FlairSplitter(config={"LIB_DIR": lib_dir})
+    sentencer = FlairSentSplitter(config={"LIB_DIR": lib_dir})
     if opts.mode == "train":
         sentencer.train()
     else:
