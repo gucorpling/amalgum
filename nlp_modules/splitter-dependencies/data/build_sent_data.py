@@ -87,5 +87,5 @@ for file_ in files:
 
 for partition in data:
     lines = data[partition]
-    with io.open("gum6_" + partition + ".txt", "w", encoding="utf8", newline="\n") as f:
+    with io.open("sent_" + partition + ".txt", "w", encoding="utf8", newline="\n") as f:
         f.write("\n".join(lines) + "\n")
