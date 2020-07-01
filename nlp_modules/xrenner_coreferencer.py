@@ -11,11 +11,12 @@ from xrenner import Xrenner
 class XrennerCoref(NLPModule):
     # Note this module requires PARSE to contain s_type comments like:
     # s_type = decl
-    # The CRF_ENTITIES file comes from a secondary nested sequency labeler and is consulted by the entity recognizer
-    requires = (PipelineDep.PARSE, PipelineDep.ACE_ENTITIES)
+    requires = (PipelineDep.PARSE, )
     provides = (PipelineDep.TSV_OUT,)
+    # To use ACE format entity type predictions from and external tool, comment out above and uncomment this:
+    # provides = (PipelineDep.TSV_OUT, PipelineDep.ACE_ENTITIES)
 
-    def __init__(self, rule_based=False, no_rnn=False, use_oracle=True):
+    def __init__(self, rule_based=False, no_rnn=False, use_oracle=False):
         """
 
         :param rule_based: whether to turn off machine learning coref classification (much faster, less accurate)
@@ -47,6 +48,7 @@ class XrennerCoref(NLPModule):
     def resolve_entities_coref(self, doc_dict):
         self.xrenner.set_doc_name(doc_dict["filename"])
         if self.use_oracle:
+            # Only used if ace format data is provided with entity type predictions from an external tool
             self.xrenner.lex.read_oracle(doc_dict["ace"], as_text=True)
 
         tsv_output = self.xrenner.analyze(doc_dict["dep"], "webannotsv")
@@ -54,7 +56,6 @@ class XrennerCoref(NLPModule):
         return {"tsv": tsv_output}
 
     def run(self, input_dir, output_dir):
-
 
         # Identify a function that takes data and returns output at the document level
         processing_function = self.resolve_entities_coref
@@ -132,8 +133,10 @@ Thais are a polite people and , while remarkably tolerant of foreigners gallivan
 
     xr = XrennerCoref()
     xr.test_dependencies()
-    res = xr.resolve_entities_coref({"ace":test_ace,"dep":test_conll,"filename":"autogum_voyage_doc001"})
+    # res = xr.resolve_entities_coref({"ace":test_ace,"dep":test_conll,"filename":"autogum_voyage_doc001"})
+    res = xr.resolve_entities_coref({"dep":test_conll,"filename":"autogum_voyage_doc001"})
     print(res["tsv"])
+
 
 if __name__ == "__main__":
     test_main()

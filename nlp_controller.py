@@ -17,7 +17,6 @@ from nlp_modules.tt_tokenizer import TreeTaggerTokenizer
 from nlp_modules.flair_splitter import FlairSplitter
 from nlp_modules.pos_tagger import PoSTagger
 from nlp_modules.s_typer import STyper
-from nlp_modules.ace_entities import AceEntities
 from nlp_modules.xrenner_coreferencer import XrennerCoref
 from nlp_modules.rst_parser import RSTParser
 
@@ -34,7 +33,6 @@ MODULES = {
     "flair_splitter": FlairSplitter,
     "s_typer": STyper,
     "dep_parser": DepParser,
-    "ace_entities": AceEntities,
     "xrenner": XrennerCoref,
     "rst_parser": RSTParser
 }
@@ -150,19 +148,28 @@ def main():
     p = ArgumentParser()
     p.add_argument("output_dir", help="The directory that output should be written to.")
     p.add_argument(
-        "-m",
-        "--modules",
-        nargs="+",
-        choices=MODULES.keys(),
-        default=["tt_tokenizer", "flair_splitter", "ensemble_tagger", "dep_parser", "s_typer"], #"ace_entities", "xrenner", "rst_parser"],
-        help="NLP pipeline modules, included in the order they are specified.",
-    )
-    p.add_argument(
         "-i",
         "--input-dir",
         default="out",
         help="The directory that holds the unprocessed XML files. "
-             "Useful for prototyping on a small set of documents.",
+        "Useful for prototyping on a small set of documents.",
+    )
+    p.add_argument(
+        "-m",
+        "--modules",
+        nargs="+",
+        choices=MODULES.keys(),
+        default=[
+            "tt_tokenizer",
+            "flair_sent_splitter",
+            "ensemble_tagger",
+            "dep_parser",
+            "s_typer",
+            "xrenner",
+            "flair_edu_splitter",
+            "rst_parser",
+        ],  # "ace_entities"
+        help="NLP pipeline modules, included in the order they are specified.",
     )
     p.add_argument(
         "--overwrite",
@@ -174,9 +181,7 @@ def main():
         ),
     )
     p.add_argument(
-        "--use-gpu",
-        action="store_true",
-        help="Modules will attempt to use GPU if this flag is provided.",
+        "--use-gpu", action="store_true", help="Modules will attempt to use GPU if this flag is provided.",
     )
     p.add_argument(
         "--begin-step",
@@ -193,17 +198,15 @@ def main():
     p.add_argument(
         "--lazy",
         default=False,
-        action='store_true',
-        help='When true, skip all dependency checks and do not preload pipeline modules.'
+        action="store_true",
+        help="When true, skip all dependency checks and do not preload pipeline modules.",
     )
     opts = p.parse_args()
 
     # Check if output directory already exists.
     if os.path.exists(opts.output_dir):
         if opts.overwrite and opts.begin_step == 0:
-            logging.warning(
-                f"About to delete ALL data from {opts.output_dir}. Interrupt now if you want to keep it."
-            )
+            logging.warning(f"About to delete ALL data from {opts.output_dir}. Interrupt now if you want to keep it.")
             for i in range(3, 0, -1):
                 print(f"Deleting in {i}s...\r", end="")
                 sleep(1)
@@ -212,9 +215,7 @@ def main():
             logging.info(f"Deleted and re-created {opts.output_dir}.\n")
         elif opts.begin_step == 0:
             raise Exception(
-                "Output path "
-                + opts.output_dir
-                + " already exists. Use the flag --overwrite "
+                "Output path " + opts.output_dir + " already exists. Use the flag --overwrite "
                 "if you know this and want to LOSE all the data in it."
             )
 
