@@ -14,10 +14,11 @@ from nlp_modules.marmot_tagger import MarmotTagger
 from nlp_modules.dep_parser import DepParser
 from nlp_modules.tt_tagger import TreeTaggerTagger
 from nlp_modules.tt_tokenizer import TreeTaggerTokenizer
-from nlp_modules.flair_splitter import FlairSplitter
+from nlp_modules.flair_sent_splitter import FlairSentSplitter
 from nlp_modules.pos_tagger import PoSTagger
 from nlp_modules.s_typer import STyper
 from nlp_modules.xrenner_coreferencer import XrennerCoref
+from nlp_modules.flair_edu_segmenter import FlairEDUSplitter
 from nlp_modules.rst_parser import RSTParser
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
@@ -30,11 +31,12 @@ MODULES = {
     "tt_tagger": TreeTaggerTagger,
     "ensemble_tagger": PoSTagger,
     "marmot_tagger": MarmotTagger,
-    "flair_splitter": FlairSplitter,
+    "flair_sent_splitter": FlairSentSplitter,
     "s_typer": STyper,
     "dep_parser": DepParser,
     "xrenner": XrennerCoref,
-    "rst_parser": RSTParser
+    "flair_edu_splitter": FlairEDUSplitter,
+    "rst_parser": RSTParser,
 }
 
 
@@ -42,12 +44,7 @@ class NLPController:
     def __init__(self, opts):
         logging.info("Initializing NLP Controller...")
         opts.update(
-            {
-                "SCRIPT_DIR": SCRIPT_DIR,
-                "LIB_DIR": LIB_DIR,
-                "BIN_DIR": BIN_DIR,
-                "TT_PATH": TT_PATH,
-            }
+            {"SCRIPT_DIR": SCRIPT_DIR, "LIB_DIR": LIB_DIR, "BIN_DIR": BIN_DIR, "TT_PATH": TT_PATH,}
         )
         self.opts = opts
 
@@ -56,7 +53,7 @@ class NLPController:
         self.input_dir = opts["input_dir"]
         self.output_dir = opts["output_dir"]
 
-        if opts['lazy']:
+        if opts["lazy"]:
             # use a generator to avoid initialization of all modules at once
             self.pipeline = (MODULES[slug](opts) for slug in module_slugs)
         else:
@@ -77,15 +74,12 @@ class NLPController:
                     raise Exception(
                         f"Invalid pipeline: module {module.__class__} requires "
                         f"{module.__class__.requires}, but pipeline only provides "
-                        f"{satisfied}. Full pipeline requirements:\n"
-                        + "\n".join(formatted_reqs)
+                        f"{satisfied}. Full pipeline requirements:\n" + "\n".join(formatted_reqs)
                     )
                 satisfied.update(module.provides)
 
             for module in self.pipeline:
-                logging.info(
-                    f"Checking dependencies for module {module.__class__.__name__}..."
-                )
+                logging.info(f"Checking dependencies for module {module.__class__.__name__}...")
                 module.test_dependencies()
 
         logging.info("NLPController initialization complete.\n")
@@ -97,9 +91,7 @@ class NLPController:
         filepaths = glob(os.path.join(self.input_dir, "**/*.xml"), recursive=True)
         logging.info(f"Copying {len(filepaths)} files into {initial_dir_path}...")
         for filepath in filepaths:
-            new_filepath = os.path.join(
-                initial_dir_path, "xml", filepath.split(os.sep)[-1]
-            )
+            new_filepath = os.path.join(initial_dir_path, "xml", filepath.split(os.sep)[-1])
             shutil.copy(filepath, new_filepath)
         logging.info(f"Done copying initial files.\n")
 
@@ -116,26 +108,22 @@ class NLPController:
             i = 0
         # if we are skipping steps, delete the dirs after the skipped steps
         else:
-            last_dir_name = glob(
-                os.path.join(self.output_dir, str(begin_step).zfill(2) + "*")
-            )[0]
+            last_dir_name = glob(os.path.join(self.output_dir, str(begin_step).zfill(2) + "*"))[0]
             dirs_to_delete = [
                 glob(os.path.join(self.output_dir, str(i).zfill(2) + "*"))
-                for i in range(begin_step + 1, len(self.opts['modules']) + 1)
+                for i in range(begin_step + 1, len(self.opts["modules"]) + 1)
             ]
             for dirnames in dirs_to_delete:
                 if len(dirnames) == 1:
                     dirname = dirnames[0]
                     print(f"removing {dirname}")
                     shutil.rmtree(dirname)
-            steps = (MODULES[slug](self.opts) for slug in self.opts['modules'][self.opts["begin_step"]:])
+            steps = (MODULES[slug](self.opts) for slug in self.opts["modules"][self.opts["begin_step"] :])
             i = self.opts["begin_step"]
 
         for module in steps:
             input_dir = last_dir_name
-            output_dir = os.path.join(
-                self.output_dir, str(i + 1).zfill(2) + "_" + module.__class__.__name__
-            )
+            output_dir = os.path.join(self.output_dir, str(i + 1).zfill(2) + "_" + module.__class__.__name__)
             shutil.copytree(input_dir, output_dir)
             logging.info(f"Created directory {output_dir} from {input_dir}.")
             logging.info(f"Running module {module.__class__.__name__}")
