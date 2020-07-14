@@ -170,6 +170,9 @@ class FlairEDUSplitter(NLPModule):
         # Predict
         preds = self.model.predict(spans)
 
+        if preds is None:  # Newer versions of flair have void predict method, use modified Sentence list
+            preds = spans
+
         labels = []
         for idx in final_mapping:
             snum, position = final_mapping[idx]

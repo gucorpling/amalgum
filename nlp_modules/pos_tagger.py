@@ -98,7 +98,12 @@ class PoSTagger(NLPModule):
                 sentences.append(sentence)
 
         output = []
-        for sentence in model.predict(sentences):
+        
+        preds = model.predict(sentences)
+        if preds is None:  # Newer versions of flair have void predict method, use modified Sentence list
+            preds = sentences
+
+        for sentence in preds:
             for token in sentence:
                 if str(flair.__version__).startswith("0.4"):
                     output.append(token.tags['pos'].value)
