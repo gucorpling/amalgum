@@ -234,6 +234,9 @@ class NLPModule(ABC):
         try:
             sys.stderr.write("o Downloading model from " + url + "...\n")
             with requests.get(url, stream=True) as r:
+                write_dir = os.sep.join(local_path.split(os.sep)[:-1])
+                if not os.path.exists(write_dir):
+                    os.makedirs(write_dir)
                 with io.open(local_path, "wb") as f:
                     shutil.copyfileobj(r.raw, f)
             sys.stderr.write("o Download successful\n")
