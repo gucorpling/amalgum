@@ -5,6 +5,10 @@ from lib.dep_parsing.conll import CoNLL
 from nlp_modules.base import NLPModule, PipelineDep, NLPDependencyException
 import torch
 
+script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
+nlp_modules_dir = script_dir + ".." + os.sep + "nlp_modules" + os.sep
+parser_dep_dir = nlp_modules_dir + "parser-dependencies" + os.sep
+
 
 def replace_xpos(doc, doc_with_our_xpos):
     for i, sent in enumerate(doc.sentences):
@@ -51,7 +55,7 @@ class DepParser(NLPModule):
     def __init__(self, config, model="gum"):
         self.use_gpu = config.get("use_gpu", False)
         self.LIB_DIR = config["LIB_DIR"]
-        self.model_dir = os.path.join(self.LIB_DIR, "dep_parsing", "models")
+        self.model_dir = parser_dep_dir
         self.model = model
         # before pos replacements
         config1 = {
@@ -60,12 +64,8 @@ class DepParser(NLPModule):
             "use_gpu": self.use_gpu,
             "processors": "tokenize,pos,lemma",
             "pos_model_path": self.model_dir + os.sep + f"en_{self.model}_tagger.pt",
-            "lemma_model_path": self.model_dir
-            + os.sep
-            + f"en_{self.model}_lemmatizer.pt",
-            "pos_pretrain_path": self.model_dir
-            + os.sep
-            + f"en_{self.model}.pretrain.pt",
+            "lemma_model_path": self.model_dir + os.sep + f"en_{self.model}_lemmatizer.pt",
+            "pos_pretrain_path": self.model_dir + os.sep + f"en_{self.model}.pretrain.pt",
             "tokenize_pretokenized": True,
         }
 
@@ -75,12 +75,8 @@ class DepParser(NLPModule):
             "treebank": "en_gum",
             "use_gpu": self.use_gpu,
             "processors": "depparse",
-            "depparse_model_path": self.model_dir
-            + os.sep
-            + f"en_{self.model}_parser.pt",
-            "depparse_pretrain_path": self.model_dir
-            + os.sep
-            + f"en_{self.model}.pretrain.pt",
+            "depparse_model_path": self.model_dir + os.sep + f"en_{self.model}_parser.pt",
+            "depparse_pretrain_path": self.model_dir + os.sep + f"en_{self.model}.pretrain.pt",
             "tokenize_pretokenized": True,
             "depparse_pretagged": True,
         }
@@ -90,9 +86,7 @@ class DepParser(NLPModule):
 
     def test_dependencies(self):
         if not os.path.isdir(os.getcwd() + os.sep + "stanfordnlp"):
-            raise NLPDependencyException(
-                "Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git"
-            )
+            raise NLPDependencyException("Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git")
 
         if len(glob(os.path.join(self.LIB_DIR, "dep_parsing", "*.py"))) == 0:
             raise NLPDependencyException(
@@ -102,7 +96,19 @@ class DepParser(NLPModule):
                 "and overwrite the two scripts."
             )
 
-        if len(glob(os.path.join(self.model_dir, "en_*.pt"))) == 0:
+        if len(glob(os.path.join(self.model_dir, "en_*.pt"))) < 5:
+            models = [
+                "en_gum.pretrain.pt",
+                "en_gum_lemmatizer.pt",
+                "en_gum_parser.pt",
+                "en_gum_tagger.pt",
+                "en_gum_tokenizer.pt",
+            ]
+            for model in models:
+                if not os.path.exists(parser_dep_dir + model):
+                    self.download_file(model, parser_dep_dir, subfolder="dep")
+
+        if len(glob(os.path.join(self.model_dir, "en_*.pt"))) < 5:
             raise NLPDependencyException(
                 "No pre-trained GUM stanfordnlp models. Please download the pretrained GUM models"
                 "from https://drive.google.com/open?id=1s5DRHHGqpnlCQ6UK95GbAxexXIh6mFzr"
@@ -174,7 +180,6 @@ Eye-Tracking	NN	eye-tracking
 3	Eye-Tracking	_	_	NN	_	_	_	_	_
 """
     module = DepParser({"LIB_DIR": "lib"})
-    module.test_dependencies()
     res = module.predict_with_pos({"xml": test_xml, "dep": test_conll})
     print(res["xml"])
     print(res["dep"])
