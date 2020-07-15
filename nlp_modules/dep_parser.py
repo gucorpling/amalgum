@@ -63,9 +63,9 @@ class DepParser(NLPModule):
             "treebank": "en_gum",
             "use_gpu": self.use_gpu,
             "processors": "tokenize,pos,lemma",
-            "pos_model_path": self.model_dir + os.sep + f"en_{self.model}_tagger.pt",
-            "lemma_model_path": self.model_dir + os.sep + f"en_{self.model}_lemmatizer.pt",
-            "pos_pretrain_path": self.model_dir + os.sep + f"en_{self.model}.pretrain.pt",
+            "pos_model_path": self.model_dir + f"en_{self.model}_tagger.pt",
+            "lemma_model_path": self.model_dir + f"en_{self.model}_lemmatizer.pt",
+            "pos_pretrain_path": self.model_dir + f"en_{self.model}.pretrain.pt",
             "tokenize_pretokenized": True,
         }
 
@@ -75,8 +75,8 @@ class DepParser(NLPModule):
             "treebank": "en_gum",
             "use_gpu": self.use_gpu,
             "processors": "depparse",
-            "depparse_model_path": self.model_dir + os.sep + f"en_{self.model}_parser.pt",
-            "depparse_pretrain_path": self.model_dir + os.sep + f"en_{self.model}.pretrain.pt",
+            "depparse_model_path": self.model_dir + f"en_{self.model}_parser.pt",
+            "depparse_pretrain_path": self.model_dir + f"en_{self.model}.pretrain.pt",
             "tokenize_pretokenized": True,
             "depparse_pretagged": True,
         }
