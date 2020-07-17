@@ -8,14 +8,10 @@ conda activate amalgum
 pip install -r requirements.txt
 ```
 
-2. Install a version of `pytorch` and `tensorflow` 1.x appropriate for your machine's hardware.
+2. Install a version of `pytorch` appropriate for your machine's hardware.
 
-3. Download [files required for GUMDROP](https://corpling.uis.georgetown.edu/amir/gumdrop/) and follow
-[the instructions](https://corpling.uis.georgetown.edu/amir/gumdrop/README.md) for unpacking them.
+3. Download `punkt`: `python -c "import nltk; nltk.download('punkt')"`
 
-4. Download `punkt`: `python -c "import nltk; nltk.download('punkt')"`
-
-5. Download [the UDPipe binary](https://github.com/ufal/udpipe/releases/download/v1.2.0/udpipe-1.2.0-bin.zip) bundle and move the binary that is appropriate for your machine to `lib/gumdrop/lib/udpipe/udpipe`
 
 ## NLP Pipeline
 Invoke nlp_controller.py on the tiny subset to ensure the pipeline is working properly:
