@@ -57,6 +57,9 @@ class DepParser(NLPModule):
         self.LIB_DIR = config["LIB_DIR"]
         self.model_dir = parser_dep_dir
         self.model = model
+
+        self.download_models()
+
         # before pos replacements
         config1 = {
             "lang": "en",
@@ -84,18 +87,9 @@ class DepParser(NLPModule):
         self.nlp1 = stanfordnlp.Pipeline(**config1)
         self.nlp2 = stanfordnlp.Pipeline(**config2)
 
-    def test_dependencies(self):
-        if not os.path.isdir(os.getcwd() + os.sep + "stanfordnlp"):
-            raise NLPDependencyException("Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git")
 
-        if len(glob(os.path.join(self.LIB_DIR, "dep_parsing", "*.py"))) == 0:
-            raise NLPDependencyException(
-                "No stanfordnlp dependencies. Please download the files from"
-                "https://drive.google.com/open?id=1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00. "
-                "Put core.py and depparse_processor.py under stanfordnlp/pipeline/ "
-                "and overwrite the two scripts."
-            )
-
+    # Separating the model download from the other dependencies
+    def download_models(self):
         if len(glob(os.path.join(self.model_dir, "en_*.pt"))) < 5:
             models = [
                 "en_gum.pretrain.pt",
@@ -107,6 +101,18 @@ class DepParser(NLPModule):
             for model in models:
                 if not os.path.exists(parser_dep_dir + model):
                     self.download_file(model, parser_dep_dir, subfolder="dep")
+
+    def test_dependencies(self):
+        if not os.path.isdir(os.getcwd() + os.sep + "stanfordnlp"):
+            raise NLPDependencyException("Download stanfordnlp from https://github.com/stanfordnlp/stanfordnlp.git")
+
+        if len(glob(os.path.join(self.LIB_DIR, "dep_parsing", "*.py"))) == 0:
+            raise NLPDependencyException(
+                "No stanfordnlp dependencies. Please download the files from"
+                "https://drive.google.com/open?id=1MAWXSUDCYZSmVcoFkDGFt0ARlkK5vq00. "
+                "Put core.py and depparse_processor.py under stanfordnlp/pipeline/ "
+                "and overwrite the two scripts."
+            )
 
         if len(glob(os.path.join(self.model_dir, "en_*.pt"))) < 5:
             raise NLPDependencyException(
