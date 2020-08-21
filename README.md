@@ -1,6 +1,6 @@
 # AMALGUM v0.1
 ## Download
-Latest data **without Reddit texts** for is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and [`amalgum_balanced/`](https://github.com/gucorpling/amalgum/tree/master/amalgum_balanced). (The `_balanced` variant contains nearly 500,000 tokens for each genre, while the unbalanced variant contains slightly more data.)
+Latest data **without Reddit texts** is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and [`amalgum_balanced/`](https://github.com/gucorpling/amalgum/tree/master/amalgum_balanced). (The `_balanced` variant contains nearly 500,000 tokens for each genre, while the unbalanced variant contains slightly more data.)
 
 You may [download the data **without Reddit texts** as a zip](https://drive.google.com/file/d/1StyZjJ6u84vZgJ2bIgsuCb037zc36RXB/view?usp=sharing). The complete corpus, with Reddit data, is available upon request: please email [lg876@georgetown.edu](mailto:lg876@georgetown.edu).
 
