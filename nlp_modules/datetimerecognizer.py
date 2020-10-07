@@ -2,8 +2,12 @@ import jpype
 import xml.etree.ElementTree as ET # this is fast!
 import html
 import re
+import pickle
+import pandas as pd
 
-from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3
+import time
+
+from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_FILTER_PROBA_THRESHOLD
 from nlp_modules.base import NLPModule
 from glob import glob
 
@@ -93,6 +97,10 @@ class DateTimeFilterModel():
 
         self.articles=['a','an']
 
+        #load the random forest model
+        with open('/home/gooseg/Desktop/datetimeparsers/datetimeparsers/evaluation/data/datetimefilter.pickle', 'rb') as f:
+            self.rf = pickle.load(f)
+
         # this is just a template and not the real feature set; this is used to build the real featureset
         self.featuredict = {'obl': 0, 'obl:npmod': 0, 'obl:tmod': 0, 'nsubj': 0, 'nsubj:pass': 0, 'obj': 0, 'iobj': 0,
                        'csubj': 0, 'csubj:pass': 0, 'ccomp': 0, 'xcomp': 0, 'nummod': 0, 'acl': 0, 'amod': 0,
@@ -112,7 +120,7 @@ class DateTimeFilterModel():
                        'may': 0, 'june': 0, 'july': 0, 'august': 0, 'september': 0, 'october': 0, 'november': 0,
                        'december': 0, 'summer': 0, 'winter': 0, 'autumn': 0, 'spring': 0, 'christmas': 0,
                        'christmas_eve': 0, 'easter': 0, 'easter_sunday': 0, 'monday': 0, 'tuesday': 0, 'wednesday': 0,
-                       'thursday': 0, 'friday': 0, 'saturday': 0, 'sunday': 0, 'label': 0, 'phrase': None}
+                       'thursday': 0, 'friday': 0, 'saturday': 0, 'sunday': 0, 'phrase': None,'sentence_index':None}
 
     def train(self):
         pass # TODO
@@ -120,7 +128,7 @@ class DateTimeFilterModel():
     def inference(self):
         pass
 
-    def build_featureset(self,sfull,stok,phrase,category):
+    def build_featureset(self,sfull,stok,phrase,index):
         """
         Builds a row of features for the date phrase from a template and adds some extra features
         sfull is the sentence with each token tagged with its corresponding feature
@@ -246,9 +254,16 @@ class DateTimeFilterModel():
         fdict['NN1_compound'] = fdict['NN1'] * fdict['compound']
         fdict['ORD_amod'] = fdict['ORD'] * fdict['amod']
 
+        # these become useful when adding the tags to the xml
+        fdict['sentence_index'] = index
+        fdict['phrase'] = phrase
+
+        """
+        TODO: bring these back , use the file name which contains the category 
         fdict['news'] = int(category == 'news')
         fdict['interview'] = int(category == 'interview')
         fdict['bio'] = int(category == 'bio')
+        """
 
         return fdict
 
@@ -256,11 +271,12 @@ class DateTimeFilterModel():
 
 
 class DateTimeRecognizer(NLPModule):
-    def __init__(self,heideltimeobj,decoding='ascii'):
+    def __init__(self,heideltimeobj,datefilterobj,decoding='ascii'):
 
         super().__init__(config=None)
         self.decoding = decoding
         self.hw = heideltimeobj
+        self.datefilter = datefilterobj
 
     def requires(self):
         pass
@@ -312,6 +328,9 @@ class DateTimeRecognizer(NLPModule):
             sentences.append(sent)
             sentencestokens.append(senttoken)
 
+        # need this later when writing the xml file
+        indexes = list(range(len(sentences)))
+
         # now call heideltime to process the sentence
         text = '\n'.join(sentencestokens)
         # the main course...you should have had your appetizers by now..
@@ -321,9 +340,30 @@ class DateTimeRecognizer(NLPModule):
         # This has been empirically proven.
         dates = self.parse_timex3_xml(result)
 
-        # Testing only
-        df = pd.concat([pd.Series(sentences),pd.Series(dates)],axis=1)
-        df.to_csv('test.csv')
+        # build dataframe for inference
+        # there are as many number of dates as there are number of sentences
+        # so the prediction can be made for the whole file at once
+
+        inferencedf = pd.DataFrame(columns=self.datefilter.featuredict.keys())
+        for i in range(0,len(dates)):
+            if str(dates[i]).strip() == '': continue # nothing
+
+            # each date is delimited by semi-colon, as there might be more than one date detected in a sentence
+            for d in dates[i].split(';'):
+                f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],d,i)
+                inferencedf = inferencedf.append(f,ignore_index=True)
+
+        indexphrases = inferencedf[['sentence_index','phrase']]
+
+        inferencedf.drop(columns=['sentence_index','phrase'],axis=1,inplace=True)
+
+        tpprobs = self.datefilter.rf.predict_proba(inferencedf)[:,1]
+        tpprobs = (tpprobs > DATE_FILTER_PROBA_THRESHOLD).astype(int).tolist() # 0's or 1's based on the threshold
+
+        indexphrases['label'] = pd.Series(tpprobs)
+        print(indexphrases.head(10))
+
+
 
         # TODO: parse xml, extract all time phrases - done
         #  classify as TP, then add as TEI xml - need to pickle model
@@ -394,10 +434,11 @@ class DateTimeRecognizer(NLPModule):
     def run(self, input_dir, output_dir):
 
         # Get list of all xml files to parse
+        start = time.time()
         for file in glob(input_dir + '*.xml'):
             self.process_file(file)
             break
-
+        print (time.time() - start)
 
 def main():
     """
@@ -406,10 +447,15 @@ def main():
 
     jar = "/home/gooseg/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
 
-
+    start = time.time()
     hw = HeidelTimeWrapper('english',jarpath=jar)
-    dtr = DateTimeRecognizer(heideltimeobj=hw)
-    dtr.run(input_dir='/home/gooseg/Desktop/amalgum/amalgum/target/08_RSTParser/xml/',output_dir=None)
+    print(time.time() - start)
+    dfilter = DateTimeFilterModel()
+    print(time.time() - start)
+    dtr = DateTimeRecognizer(heideltimeobj=hw,datefilterobj=dfilter)
+    print(time.time() - start)
+    dtr.run(input_dir='/home/gooseg/Desktop/gum/gum/_build/target/xml/',output_dir=None)
+
 
 
     pass
