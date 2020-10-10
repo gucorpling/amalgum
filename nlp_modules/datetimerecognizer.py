@@ -3,9 +3,9 @@ import xml.etree.ElementTree as ET # this is fast!
 import html
 import re
 import pickle
-import pandas as pd
-
 import time
+import pandas as pd
+pd.options.mode.chained_assignment = None  # default='warn'
 
 from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_FILTER_PROBA_THRESHOLD
 from nlp_modules.base import NLPModule
@@ -101,7 +101,10 @@ class DateTimeFilterModel():
         with open('/home/gooseg/Desktop/datetimeparsers/datetimeparsers/evaluation/data/datetimefilter.pickle', 'rb') as f:
             self.rf = pickle.load(f)
 
+
         # this is just a template and not the real feature set; this is used to build the real featureset
+        # the postags are taken from the label encoder model that encodes the result of the
+        # pos tag ensembler
         self.featuredict = {'obl': 0, 'obl:npmod': 0, 'obl:tmod': 0, 'nsubj': 0, 'nsubj:pass': 0, 'obj': 0, 'iobj': 0,
                        'csubj': 0, 'csubj:pass': 0, 'ccomp': 0, 'xcomp': 0, 'nummod': 0, 'acl': 0, 'amod': 0,
                        'appos': 0, 'acl:relcl': 0, 'det': 0, 'det:predet': 0,  'nmod': 0, 'case': 0,
@@ -109,14 +112,13 @@ class DateTimeFilterModel():
                        'compound': 0, 'compound:prt': 0, 'flat': 0, 'fixed': 0, 'foreign': 0, 'goeswith': 0, 'list': 0,
                        'dislocated': 0, 'parataxis': 0, 'orphan': 0, 'reparandum': 0, 'vocative': 0, 'discourse': 0,
                        'expl': 0, 'aux': 0, 'aux:pass': 0, 'cop': 0, 'mark': 0, 'punct': 0, 'conj': 0, 'cc': 0,
-                       'cc:preconj': 0,  'root': 0, 'dep': 0, 'AJ0': 0, 'AJC': 0, 'AJS': 0, 'AT0': 0,
-                       'AV0': 0, 'AVP': 0, 'AVQ': 0, 'CJC': 0, 'CJS': 0, 'CJT': 0, 'CRD': 0, 'DPS': 0, 'DT0': 0,
-                       'DTQ': 0, 'EX0': 0, 'ITJ': 0, 'NN0': 0, 'NN1': 0, 'NN2': 0, 'NP0': 0, 'NULL': 0, 'ORD': 0,
-                       'PNI': 0, 'PNP': 0, 'PNQ': 0, 'PNX': 0, 'POS': 0, 'PRF': 0, 'PRP': 0, 'PUL': 0, 'PUN': 0,
-                       'PUQ': 0, 'PUR': 0, 'TO0': 0, 'UNC': 0, 'VBB': 0, 'VBD': 0, 'VBG': 0, 'VBI': 0, 'VBN': 0,
-                       'VBZ': 0, 'VDB': 0, 'VDD': 0, 'VDG': 0, 'VDI': 0, 'VDN': 0, 'VDZ': 0, 'VHB': 0, 'VHD': 0,
-                       'VHG': 0, 'VHI': 0, 'VHN': 0, 'VHZ': 0, 'VM0': 0, 'VVB': 0, 'VVD': 0, 'VVG': 0, 'VVI': 0,
-                       'VVN': 0, 'VVZ': 0, 'XX0': 0, 'ZZ0': 0, 'january': 0, 'february': 0, 'march': 0, 'april': 0,
+                       'cc:preconj': 0,  'root': 0, 'dep': 0, '$':0, "''":0, ',':0, '-LRB-':0, '-LSB-':0, '-RRB-':0, '-RSB-':0,
+                        '.':0, ':':0, 'ADD':0, 'ADJ':0, 'ADP':0, 'ADV':0, 'AFX':0, 'AUX':0, 'CC':0, 'CCONJ':0, 'CD':0,
+                        'DET':0, 'DT':0, 'EX':0, 'FW':0, 'GW':0, 'HYPH':0, 'IN':0,'INTJ':0, 'JJ':0, 'JJR':0, 'JJS':0,
+                        'LS':0, 'MD':0, 'NFP':0, 'NN':0, 'NNP':0, 'NP':0, 'NNPS':0, 'NNS':0, 'NOUN':0,'NUM':0, 'PART':0, 'PDT':0,
+                        'POS':0, 'PRON':0, 'PROPN':0, 'PRP':0, 'PRP$':0, 'PUNCT':0, 'RB':0, 'RBR':0,'RBS':0, 'RP':0, 'SYM':0,
+                        'TO':0, 'UH':0, 'VB':0, 'VBD':0, 'VBG':0, 'VBN':0, 'VBP':0, 'VBZ':0, 'VERB':0, 'WDT':0, 'WP':0, 'WP$':0,
+                        'WRB':0, 'X':0, '``':0, 'january': 0, 'february': 0, 'march': 0, 'april': 0,
                        'may': 0, 'june': 0, 'july': 0, 'august': 0, 'september': 0, 'october': 0, 'november': 0,
                        'december': 0, 'summer': 0, 'winter': 0, 'autumn': 0, 'spring': 0, 'christmas': 0,
                        'christmas_eve': 0, 'easter': 0, 'easter_sunday': 0, 'monday': 0, 'tuesday': 0, 'wednesday': 0,
@@ -158,15 +160,14 @@ class DateTimeFilterModel():
         featurelist = fdict.keys()
 
         # This will check features that are specific word tokens in the sentence, e.g January, Tuesday,
-        # and which match the CLAW5 tag and UD tag of the token
         for i in range(startindex,endindex):
             feats = features[i].split('/') # get the token word
-            if str(feats[0]).lower() in featurelist:
-                fdict[str(feats[0]).lower()] += 1 # Increment if the word is in the feature list
-            if str(feats[3]) in fdict.keys():
-                fdict[str(feats[3])] += 1 # the CLAW5 tag
+            if str(feats[1]).lower() in featurelist:
+                fdict[str(feats[1]).lower()] += 1 # Increment if the word is in the feature list
             if str(feats[4]) in fdict.keys():
-                fdict[str(feats[4])] += 1 # the UD tag
+                fdict[str(feats[4])] += 1 # the Penn treebank POS tag
+            if str(feats[7]) in fdict.keys():
+                fdict[str(feats[7])] += 1 # the UD tag
 
 
         # Next some features based on the immediately preceding and following tokens, padding the phrase
@@ -218,10 +219,10 @@ class DateTimeFilterModel():
             fdict['end_dep'] = 0
 
         # and finally, dump out all the other interactions
-        fdict['CRD_nmod'] = int(fdict['CRD']) * int(fdict['nmod'])
-        fdict['CRD_nmodtmod'] = int(fdict['CRD']) * int(fdict['nmod:tmod'])
-        fdict['CRD_compound'] = int(fdict['CRD']) * int(fdict['compound'])
-        fdict['CRD_nummod'] = int(fdict['CRD']) * int(fdict['nummod'])
+        fdict['CD_nmod'] = int(fdict['CD']) * int(fdict['nmod'])
+        fdict['CD_nmodtmod'] = int(fdict['CD']) * int(fdict['nmod:tmod'])
+        fdict['CD_compound'] = int(fdict['CD']) * int(fdict['compound'])
+        fdict['CD_nummod'] = int(fdict['CD']) * int(fdict['nummod'])
 
         fdict['countmods'] = fdict['obl:npmod'] + fdict['obl:tmod'] + fdict['nummod'] + fdict['amod'] + fdict['nmod'] + \
                              fdict['nmod:npmod'] + fdict['nmod:tmod'] + fdict['nmod:poss'] + fdict['advmod']
@@ -236,8 +237,8 @@ class DateTimeFilterModel():
         fdict['christmas_compound'] = fdict['christmas'] * fdict['compound']
         fdict['christmaseve_compound'] = fdict['christmas_eve'] * fdict['compound']
 
-        fdict['CRD_obl'] = fdict['CRD'] * fdict['obl']
-        fdict['CRD_dep'] = fdict['CRD'] * fdict['dep']
+        fdict['CD_obl'] = fdict['CD'] * fdict['obl']
+        fdict['CD_dep'] = fdict['CD'] * fdict['dep']
         fdict['sunday_obl'] = fdict['sunday'] * fdict['obl']
         fdict['monday_obl'] = fdict['monday'] * fdict['obl']
         fdict['tuesday_obl'] = fdict['tuesday'] * fdict['obl']
@@ -246,13 +247,14 @@ class DateTimeFilterModel():
         fdict['friday_obl'] = fdict['friday'] * fdict['obl']
         fdict['saturday_obl'] = fdict['saturday'] * fdict['obl']
 
-        fdict['NP0_flat'] = fdict['NP0'] * fdict['flat']
-        fdict['NP0_obl'] = fdict['NP0'] * fdict['obl']
-        fdict['NP0_nummod'] = fdict['NP0'] * fdict['nummod']
-        fdict['NP0_nmod'] = fdict['NP0'] * fdict['nmod']
-        fdict['NP0_compound'] = fdict['NP0'] * fdict['compound']
-        fdict['NN1_compound'] = fdict['NN1'] * fdict['compound']
-        fdict['ORD_amod'] = fdict['ORD'] * fdict['amod']
+        fdict['NP_flat'] = fdict['NP'] * fdict['flat']
+        fdict['NP_obl'] = fdict['NP'] * fdict['obl']
+        fdict['NP_nummod'] = fdict['NP'] * fdict['nummod']
+        fdict['NP_nmod'] = fdict['NP'] * fdict['nmod']
+        fdict['NP_compound'] = fdict['NP'] * fdict['compound']
+        fdict['NN_compound'] = fdict['NN'] * fdict['compound']
+        fdict['RB_amod'] = fdict['RB'] * fdict['amod']
+        fdict['JJ_amod'] = fdict['JJ'] * fdict['amod']
 
         # these become useful when adding the tags to the xml
         fdict['sentence_index'] = index
@@ -271,12 +273,20 @@ class DateTimeFilterModel():
 
 
 class DateTimeRecognizer(NLPModule):
-    def __init__(self,heideltimeobj,datefilterobj,decoding='ascii'):
+    def __init__(self,heideltimeobj,datefilterobj,postaglabelencoderobj,decoding='ascii'):
 
         super().__init__(config=None)
         self.decoding = decoding
         self.hw = heideltimeobj
         self.datefilter = datefilterobj
+
+        # TODO: depends on the label encoder that marks the stacked POS tag output
+        # 'soft-wire' feature names from here instead of hard-wiring in the dictionary
+        #self.cd = '/'.join(os.path.abspath(__file__).split('/')[:-2])
+        #with open(self.cd + postaglabelencoderobj, "rb") as f:
+        #    le = pickle.load(f)
+
+
 
     def requires(self):
         pass
@@ -293,7 +303,7 @@ class DateTimeRecognizer(NLPModule):
     def process_file(self,filename):
         """
         Method to process a single file
-        :param filename: The xml filename to parse
+        :param filename: The conllu filename to parse
         :return:
         """
 
@@ -310,6 +320,10 @@ class DateTimeRecognizer(NLPModule):
             senttokens = ' '.join(senttokens)
             return sents.strip(), senttokens.strip()
 
+        # The POS tags and UD tags are in the conllu format..
+        conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml','.conllu')
+        print(conllufile)
+
         xmltree = ET.parse(filename)
         root = xmltree.getroot()
         dateCreated = root.attrib[XML_ATTRIB_REFDATE] # assumed to be in default YYYY-MM-DD or the process breaks
@@ -317,6 +331,26 @@ class DateTimeRecognizer(NLPModule):
         sentences = [] # to hold the list of sentences in the file built from everything
         sentencestokens = [] # holds sentences built from tokens only
 
+        # build the sentences from the conllu file
+        # sentence boundaries have multiple \n in between
+
+        with open(conllufile,'r') as r:
+            sent = []
+            senttok = []
+            for line in r:
+                line = line.strip()
+                if line == '':
+                    if len(sent) == 0: continue # second newline
+                    sentences.append(sent)
+                    sentencestokens.append(senttok)
+                    sent = []
+                    senttok = []
+                else:
+                    senttok.append(line.split('\t')[1])
+                    sent.append(line.replace('\t','/'))
+
+        """
+        # old way - build from XML 
         for sent in xmltree.iter('s'):
 
             sent, senttoken = make_sent(ET.tostring(sent, method='text').decode(self.decoding))
@@ -327,12 +361,15 @@ class DateTimeRecognizer(NLPModule):
 
             sentences.append(sent)
             sentencestokens.append(senttoken)
-
-        # need this later when writing the xml file
-        indexes = list(range(len(sentences)))
+        """
+        # rollup
+        for i in range(0,len(sentencestokens)):
+            sentencestokens[i] = str(' '.join(sentencestokens[i])).strip()
+            sentences[i] = str(' '.join(sentences[i])).strip() # now inner delimited by '/
 
         # now call heideltime to process the sentence
         text = '\n'.join(sentencestokens)
+
         # the main course...you should have had your appetizers by now..
         result = self.hw.parse(text,dateCreated)
 
@@ -361,9 +398,7 @@ class DateTimeRecognizer(NLPModule):
         tpprobs = (tpprobs > DATE_FILTER_PROBA_THRESHOLD).astype(int).tolist() # 0's or 1's based on the threshold
 
         indexphrases['label'] = pd.Series(tpprobs)
-        print(indexphrases.head(10))
-
-
+        print(indexphrases)
 
         # TODO: parse xml, extract all time phrases - done
         #  classify as TP, then add as TEI xml - need to pickle model
@@ -390,6 +425,7 @@ class DateTimeRecognizer(NLPModule):
         """
 
         xmltree = ET.fromstring(xmltext)
+
 
         # extract the sentences
         for node in xmltree.iter(XML_ROOT_TIMEX3):
@@ -434,11 +470,10 @@ class DateTimeRecognizer(NLPModule):
     def run(self, input_dir, output_dir):
 
         # Get list of all xml files to parse
-        start = time.time()
         for file in glob(input_dir + '*.xml'):
             self.process_file(file)
             break
-        print (time.time() - start)
+
 
 def main():
     """
@@ -447,14 +482,15 @@ def main():
 
     jar = "/home/gooseg/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
 
-    start = time.time()
+
     hw = HeidelTimeWrapper('english',jarpath=jar)
-    print(time.time() - start)
     dfilter = DateTimeFilterModel()
-    print(time.time() - start)
-    dtr = DateTimeRecognizer(heideltimeobj=hw,datefilterobj=dfilter)
-    print(time.time() - start)
-    dtr.run(input_dir='/home/gooseg/Desktop/gum/gum/_build/target/xml/',output_dir=None)
+    postagleobj = "/nlp_modules/pos-dependencies/all-encodings.pickle.dat"
+    dtr = DateTimeRecognizer(heideltimeobj=hw,datefilterobj=dfilter,postaglabelencoderobj=postagleobj)
+
+    start = time.time()
+    dtr.run(input_dir='/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/',output_dir=None)
+    print (time.time() - start)
 
 
 
