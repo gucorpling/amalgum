@@ -5,6 +5,7 @@ import re
 import pickle
 import time
 import pandas as pd
+import copy
 pd.options.mode.chained_assignment = None  # default='warn'
 
 from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_FILTER_PROBA_THRESHOLD
@@ -130,7 +131,7 @@ class DateTimeFilterModel():
     def inference(self):
         pass
 
-    def build_featureset(self,sfull,stok,phrase,index):
+    def build_featureset(self,sfull,stok,phrase,index,timextype,timexvalue):
         """
         Builds a row of features for the date phrase from a template and adds some extra features
         sfull is the sentence with each token tagged with its corresponding feature
@@ -259,6 +260,8 @@ class DateTimeFilterModel():
         # these become useful when adding the tags to the xml
         fdict['sentence_index'] = index
         fdict['phrase'] = phrase
+        fdict['timextype'] = timextype
+        fdict['timexvalue'] = timexvalue
 
         """
         TODO: bring these back , use the file name which contains the category 
@@ -270,8 +273,6 @@ class DateTimeFilterModel():
         return fdict
 
 
-
-
 class DateTimeRecognizer(NLPModule):
     def __init__(self,heideltimeobj,datefilterobj,postaglabelencoderobj,decoding='ascii'):
 
@@ -279,6 +280,18 @@ class DateTimeRecognizer(NLPModule):
         self.decoding = decoding
         self.hw = heideltimeobj
         self.datefilter = datefilterobj
+
+        self.regex1 = r'[^0-9-]' # anything not a number or hyphen
+        self.regex2 = r'[0-9]{4}-[0-9]{2}-[0-9]{2}' # matches YYYY-MM-DD
+        self.regex3 = r'XXXX-[0-9]{2}-[0-9]{2}' #--mm-dd
+        self.regex4 = r'XXXX-XX-[0-9]{2}'  # matches --dd
+        self.regex5 = r'XXXX-[0-9]{2}-XX'  # matches --mm
+        self.regex6 = r'[0-9]{4}-[0-9]{2}'  # matches YYYY-MM
+        self.regex7 = r'[0-9]{4}'  # matches YYYY
+        self.seasons = {'SU':['--06','--09'],'WI':['--12','--03'],'FA':['--09','--12'],'SP':['--03','--06']}
+        self.holidates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']}
+
+
 
         # TODO: depends on the label encoder that marks the stacked POS tag output
         # 'soft-wire' feature names from here instead of hard-wiring in the dictionary
@@ -294,6 +307,25 @@ class DateTimeRecognizer(NLPModule):
     def provides(self):
         pass
 
+    def annotate_xml_with_date(self,datephrase,sentenceindex,timextype,timexvalue,xmltreeobj):
+        # TODO:
+        # YYYY-MM-DD and all its variations
+        # gazette for listed holidayes
+        # seasons
+        # from-to or notbefore-notafter
+        # centuries, decades
+        # times
+
+
+        timexvalue = re.sub(self.regex1,'X',timexvalue)
+
+
+
+
+
+
+        pass
+
     def test_dependencies(self):
         """
         TODO: copy heideltime standalone and treetagger to the bin folder and Runs the test by trying to parse an example sentence
@@ -307,18 +339,39 @@ class DateTimeRecognizer(NLPModule):
         :return:
         """
 
+        def recur_node(node,targetnode,datesdf,counter=0):
+            """
+            Recursively builds the new xml file and stamps the date xml on it
+            """
+            if node != None:
+                for item in node.getchildren():
+                    if item.tag == 's':
+
+                        counter += 1
+                    item2 = ET.SubElement(targetnode,item.tag)
+                    item2.text = item.text
+                    item2.tail = item.tail
+
+                    counter = recur_node(item,item2,counter)
+            else:
+                return 0
+
+            return counter
+
+        """
         def make_sent(text):
-            """
-            Helper method to get the sentence with features
-            :param text: text rows to parse
-            :return: tokens from the text rows aligned in sentence format
-            """
+            
+            #Helper method to get the sentence with features
+            #:param text: text rows to parse
+            #:return: tokens from the text rows aligned in sentence format
+            
             sents = text.split('\n')
             sents = [sent.replace('\t', '/') for sent in sents] # all features seprated by '/'
             senttokens = [sent.split('/')[0] for sent in sents]
             sents = ' '.join(sents)
             senttokens = ' '.join(senttokens)
             return sents.strip(), senttokens.strip()
+        """
 
         # The POS tags and UD tags are in the conllu format..
         conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml','.conllu')
@@ -326,6 +379,7 @@ class DateTimeRecognizer(NLPModule):
 
         xmltree = ET.parse(filename)
         root = xmltree.getroot()
+
         dateCreated = root.attrib[XML_ATTRIB_REFDATE] # assumed to be in default YYYY-MM-DD or the process breaks
 
         sentences = [] # to hold the list of sentences in the file built from everything
@@ -375,7 +429,7 @@ class DateTimeRecognizer(NLPModule):
 
         # We'll assume here that the list of dates returned matches the sentence indexes properly.
         # This has been empirically proven.
-        dates = self.parse_timex3_xml(result)
+        dates,attribs = self.parse_timex3_xml(result)
 
         # build dataframe for inference
         # there are as many number of dates as there are number of sentences
@@ -386,22 +440,35 @@ class DateTimeRecognizer(NLPModule):
             if str(dates[i]).strip() == '': continue # nothing
 
             # each date is delimited by semi-colon, as there might be more than one date detected in a sentence
-            for d in dates[i].split(';'):
-                f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],d,i)
+            # also build the attributeset
+            subdates = dates[i].split(';')
+            for j in range(0,len(subdates)):
+                timextype = attribs[i][j][0]['type']
+                timexvalue = attribs[i][j][0]['value']
+                f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],subdates[j],i,timextype,timexvalue)
                 inferencedf = inferencedf.append(f,ignore_index=True)
 
-        indexphrases = inferencedf[['sentence_index','phrase']]
+        indexphrases = inferencedf[['sentence_index','phrase','timextype','timexvalue']]
 
-        inferencedf.drop(columns=['sentence_index','phrase'],axis=1,inplace=True)
+        inferencedf.drop(columns=['sentence_index','phrase','timextype','timexvalue'],axis=1,inplace=True)
 
+        # Filter the dates
         tpprobs = self.datefilter.rf.predict_proba(inferencedf)[:,1]
         tpprobs = (tpprobs > DATE_FILTER_PROBA_THRESHOLD).astype(int).tolist() # 0's or 1's based on the threshold
 
         indexphrases['label'] = pd.Series(tpprobs)
+        indexphrases = indexphrases.loc[indexphrases['label'] == 1]
         print(indexphrases)
 
-        # TODO: parse xml, extract all time phrases - done
-        #  classify as TP, then add as TEI xml - need to pickle model
+        # Build the xml with the new date tag
+        targetroot = copy.deepcopy(root)
+        _ = recur_node(root, targetroot,indexphrases) # not too happy with passing the df here..
+        tree = ET.ElementTree(targetroot)
+        tree.write(open('test.xml', 'w'), encoding='unicode')
+
+
+
+
 
     def replace_xml_chars(self,text):
         return text.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;').replace('"', '&quot;').replace("'",'&apos;')  # assumes these dont affect time recognition..
@@ -423,9 +490,7 @@ class DateTimeRecognizer(NLPModule):
         :param xmlfile: The xml file output with TIMEX3 tags created by the tool
         :return: list of dates for each GUM sentence separated by ';'
         """
-
         xmltree = ET.fromstring(xmltext)
-
 
         # extract the sentences
         for node in xmltree.iter(XML_ROOT_TIMEX3):
@@ -436,6 +501,7 @@ class DateTimeRecognizer(NLPModule):
 
         # fetch all the dates
         all_dates = []
+        all_attributes = []
         for node in xmltree.iter('TIMEX3'):
             attributes = self.get_attr(node)
             if len(attributes) > 0:
@@ -443,29 +509,37 @@ class DateTimeRecognizer(NLPModule):
 
             if '\n' in node.text: continue  # invalid date has been tagged
             all_dates.append(node.text)
+            all_attributes.append(attributes)
 
         # Now 'assign' the date to the text sentence
         i = 0
         j = 0
 
         sorted_dates = []
+        sorted_attribs = []
         dates = []
+        attribs = []
         while i < len(s):
             if j == len(all_dates):
                 sorted_dates.append(dates)
+                sorted_attribs.append(attribs)
                 break
 
             if all_dates[j] in s[i]:
                 dates.append(all_dates[j])
+                attribs.append(all_attributes[j])
                 j += 1
             else:
                 sorted_dates.append(dates)
+                sorted_attribs.append(attribs)
                 dates = []
+                attribs = []
                 i += 1
 
         sorted_dates = [';'.join(date) for date in sorted_dates]
+        sorted_attribs = [None if len(s) == 0 else s for s in sorted_attribs]
 
-        return sorted_dates
+        return sorted_dates,sorted_attribs
 
     def run(self, input_dir, output_dir):
 
