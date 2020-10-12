@@ -258,7 +258,8 @@ class DateTimeFilterModel():
         fdict['JJ_amod'] = fdict['JJ'] * fdict['amod']
 
         # these become useful when adding the tags to the xml
-        fdict['sentence_index'] = index
+        fdict['sentence_index'] = index + 1
+        fdict['sentence_tokens'] = stok
         fdict['phrase'] = phrase
         fdict['timextype'] = timextype
         fdict['timexvalue'] = timexvalue
@@ -339,19 +340,54 @@ class DateTimeRecognizer(NLPModule):
         :return:
         """
 
-        def recur_node(node,targetnode,datesdf,counter=0):
+        def recur_node(node,targetnode,counter=0):
             """
             Recursively builds the new xml file and stamps the date xml on it
             """
+
             if node != None:
                 for item in node.getchildren():
-                    if item.tag == 's':
-
-                        counter += 1
                     item2 = ET.SubElement(targetnode,item.tag)
-                    item2.text = item.text
-                    item2.tail = item.tail
+                    if item.tag == 's':
+                        counter += 1
+                        if counter in sentenceindices:
+                            df = indexphrases.loc[indexphrases['sentence_index'] == counter]
+                            for _,row in df.iterrows():
+                                phrase = str(row['phrase'])
+                                sent = str(row['sentence_tokens'])
+                                search = re.search(phrase.lower(),sent.lower())
 
+                                # Gets the start index of the phrase in the sentence
+                                if search.start() > 0:
+                                    startindex = sent[0:search.start()].count(' ')
+                                else:
+                                    startindex = 0
+                                endindex = startindex + len(phrase.split())
+
+                                splittext = item.text.split('\n')
+                                splittext = [t for t in splittext if t]
+                                predatetext = splittext[0:startindex]
+                                datetext = splittext[startindex:endindex]
+                                postdatetext = splittext[endindex:len(splittext)]
+
+                                # build the xml elements
+                                item2.text = '\n' + '\n'.join(predatetext) + '\n'
+                                itemdate = ET.SubElement(item2,'date') # TODO
+                                itemdate.text = '\n' + '\n'.join(datetext) + '\n'
+                                itemdate.tail = '\n'+ '\n'.join(postdatetext) + '\n'
+
+                                item2.tail = item.tail
+
+                        else:
+
+                            item2.text = item.text
+                            item2.tail = item.tail
+
+                    else:
+                        item2.text = item.text
+                        item2.tail = item.tail
+
+                    print(counter)
                     counter = recur_node(item,item2,counter)
             else:
                 return 0
@@ -448,9 +484,9 @@ class DateTimeRecognizer(NLPModule):
                 f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],subdates[j],i,timextype,timexvalue)
                 inferencedf = inferencedf.append(f,ignore_index=True)
 
-        indexphrases = inferencedf[['sentence_index','phrase','timextype','timexvalue']]
+        indexphrases = inferencedf[['sentence_index','sentence_tokens','phrase','timextype','timexvalue']]
 
-        inferencedf.drop(columns=['sentence_index','phrase','timextype','timexvalue'],axis=1,inplace=True)
+        inferencedf.drop(columns=['sentence_index','sentence_tokens','phrase','timextype','timexvalue'],axis=1,inplace=True)
 
         # Filter the dates
         tpprobs = self.datefilter.rf.predict_proba(inferencedf)[:,1]
@@ -459,10 +495,12 @@ class DateTimeRecognizer(NLPModule):
         indexphrases['label'] = pd.Series(tpprobs)
         indexphrases = indexphrases.loc[indexphrases['label'] == 1]
         print(indexphrases)
-
+        sentenceindices = set(indexphrases['sentence_index'].tolist())
         # Build the xml with the new date tag
         targetroot = copy.deepcopy(root)
-        _ = recur_node(root, targetroot,indexphrases) # not too happy with passing the df here..
+        counter = recur_node(root, targetroot)
+        print('counter')
+        print(counter)
         tree = ET.ElementTree(targetroot)
         tree.write(open('test.xml', 'w'), encoding='unicode')
 
