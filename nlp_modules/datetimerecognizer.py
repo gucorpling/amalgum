@@ -6,7 +6,6 @@ import pickle
 import time
 import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
-pd.set_option('display.max_columns', None)
 
 from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_FILTER_PROBA_THRESHOLD
 from nlp_modules.base import NLPModule
@@ -282,14 +281,13 @@ class DateTimeRecognizer(NLPModule):
         self.hw = heideltimeobj
         self.datefilter = datefilterobj
 
-        self.regex1 = r'[^0-9-]' # anything not a number or hyphen
-        self.regex2 = r'[0-9]{4}-[0-9]{2}-[0-9]{2}' # matches YYYY-MM-DD
-        self.regex3 = r'XXXX-[0-9]{2}-[0-9]{2}' #--mm-dd
-        self.regex4 = r'XXXX-XX-[0-9]{2}'  # matches --dd
-        self.regex5 = r'XXXX-[0-9]{2}-XX'  # matches --mm
-        self.regex6 = r'[0-9]{4}-[0-9]{2}'  # matches YYYY-MM
-        self.regex7 = r'[0-9]{4}'  # matches YYYY
-        self.seasons = {'SU':['--06','--09'],'WI':['--12','--03'],'FA':['--09','--12'],'SP':['--03','--06']}
+        self.regexnonchars = r'[^0-9-]' # anything not a number or hyphen
+        self.regexyyyymmdd = r'[0-9]{4}-[0-9]{2}-[0-9]{2}' # matches YYYY-MM-DD
+        self.regexmmdd = r'--[0-9]{2}-[0-9]{2}' #--mm-dd, unlikely to be found in TimeML
+        self.regexmm = r'--[0-9]{2}'  # matches --mm, unlikely
+        self.regexyyyymm= r'[0-9]{4}-[0-9]{2}'  # matches YYYY-MM, likely!
+        self.regexyyyy = r'[0-9]{4}'  # matches YYYY, likely!
+        self.seasons = {'SU':['from:--06','to:--09'],'WI':['from:--12','to:--03'],'FA':['from:--09','to:--12'],'SP':['from:--03','to:--06']}
         self.holidates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']}
 
         # TODO: 'soft-wire' feature names from the label encoder for pos tagging instead of hard-wiring in the dictionary features
@@ -303,18 +301,46 @@ class DateTimeRecognizer(NLPModule):
     def provides(self):
         pass
 
-    def annotate_xml_with_date(self,datephrase,sentenceindex,timextype,timexvalue,xmltreeobj):
+    def timex_to_tei(self,timextype,timexvalue):
+        """
+        Converts TIMEX3 values to TEI encodings
+        Returns the tag type with attributes to build the date/time tag
+        """
+
         # TODO:
-        # YYYY-MM-DD and all its variations
+        # check min date, sometimes 200 years apart!
         # gazette for listed holidayes
-        # seasons
         # from-to or notbefore-notafter
         # centuries, decades
         # times
 
-        timexvalue = re.sub(self.regex1,'X',timexvalue)
+        def striphyphens(text):
+            if text[-1:] == '-': text = text[:-1]
+            if text[:1] == '-' and text[:2] != '-': text = text[1:]
+            return text
 
-        pass
+        # init
+        result = {}
+
+        temp = re.sub(self.regexnonchars, '', timexvalue)
+        temp = striphyphens(temp)
+
+        # see if yyyy-mm-dd. -mm-dd, or --mm matched
+        if re.match(self.regexyyyymmdd, temp) or re.match(self.regexmmdd, temp) \
+                or re.match(self.regexmm,temp) or re.match(self.regexyyyymm, temp):
+            result['date'] = ['when:' + temp]
+            return result
+
+        for item in self.seasons.keys():
+            if item in timexvalue:
+                if re.match(self.regexyyyy,temp):
+                    result['date'] = [i.replace('--',temp + '-') for i in self.seasons[item]]
+                else:
+                    result['date'] = self.seasons[item]
+                break
+
+        return result
+
 
     def test_dependencies(self):
         """
@@ -331,34 +357,40 @@ class DateTimeRecognizer(NLPModule):
 
         def add_datetime_tags(node,counter=0):
             """
-            Recursively builds the new xml file in memory, and stamps the date xml on it
+            Recursively builds the new xml file in memory in place, and stamps the date xml on it
             don't remove the counter, it is an accumulator that keep tracks of how many sentences we have iterated over
             """
-            if node is not None:
-                for item in node:
-                    if item.tag == 's':
-                        counter += 1
-                        if counter in sentenceindices:
-                            df = indexphrases.loc[indexphrases['sentence_index'] == counter]
-                            datetags = [] # only way to add the tags is sequentially after determining the text and tails
-                            for _,row in df.iterrows(): # adding date tags backwards up
-                                phrase = str(row['phrase'])
-                                startindex = int(row['start_index'])
-                                endindex = startindex + len(phrase.split())
 
-                                splittext = item.text.split('\n')
-                                splittext = [t for t in splittext if t]
-                                predatetext = splittext[0:startindex]
-                                datetext = splittext[startindex:endindex]
-                                postdatetext = splittext[endindex:len(splittext)]
+            for item in node:
+                if item.tag == 's':
+                    counter += 1
+                    if counter in sentenceindices:
+                        df = indexphrases.loc[indexphrases['sentence_index'] == counter]
+                        datetags = [] # only way to add the tags is sequentially after determining the text and tails
+                        for _,row in df.iterrows(): # adding date tags backwards up
+                            phrase = str(row['phrase'])
+                            startindex = int(row['start_index'])
+                            endindex = startindex + len(phrase.split())
 
-                                # build the xml elements and date tags
-                                if str('\n'.join(predatetext)).strip() == '':
-                                    item.text = '\n'
-                                else:
-                                    item.text = '\n' + '\n'.join(predatetext) + '\n'
+                            splittext = item.text.split('\n')
+                            splittext = [t for t in splittext if t]
+                            predatetext = splittext[0:startindex]
+                            datetext = splittext[startindex:endindex]
+                            postdatetext = splittext[endindex:len(splittext)]
 
-                                date = ET.Element('date') # TODO: build attributes and time tags
+                            # build the xml elements and date tags
+                            if str('\n'.join(predatetext)).strip() == '':
+                                item.text = '\n'
+                            else:
+                                item.text = '\n' + '\n'.join(predatetext) + '\n'
+
+                            attributes = self.timex_to_tei(str(row['timextype']),str(row['timexvalue']))
+
+                            for key,value in attributes.items():
+                                date = ET.Element(key) # Only one attribute
+                                for attribs in value : #only one value
+                                    date.set(attribs.split(':')[0],attribs.split(':')[1])
+
                                 date.text = '\n' + '\n'.join(datetext) + '\n'
 
                                 if str('\n'.join(postdatetext)).strip() == '':
@@ -368,13 +400,11 @@ class DateTimeRecognizer(NLPModule):
 
                                 datetags.append(date)
 
-                            # now build the final tag sequentially with all nested date tags
-                            for i in range(len(datetags) - 1,-1,-1):
-                                item.append(datetags[i])
+                        # now build the final tag sequentially with all nested date tags
+                        for i in range(len(datetags) - 1,-1,-1):
+                            item.append(datetags[i])
 
-                    counter = add_datetime_tags(item,counter) # don't remove the accumulator pattern
-            else:
-                return 0
+                counter = add_datetime_tags(item,counter) # don't remove the accumulator pattern
 
             return counter
 
@@ -395,7 +425,6 @@ class DateTimeRecognizer(NLPModule):
 
         # The POS tags and UD tags are in the conllu format..
         conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml','.conllu')
-        print(conllufile)
 
         xmltree = ET.parse(filename)
         root = xmltree.getroot()
