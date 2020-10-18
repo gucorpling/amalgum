@@ -8,7 +8,7 @@ conda activate amalgum
 pip install -r requirements.txt
 ```
 
-2. Install a version of `pytorch` appropriate for your machine's hardware.
+2. *(optional)* If you have CUDA-capable hardware, add CUDA support: `conda install "pytorch<1.6" torchvision cudatoolkit -c pytorch`
 
 3. Download `punkt`: `python -c "import nltk; nltk.download('punkt')"`
 
