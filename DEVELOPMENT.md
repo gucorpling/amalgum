@@ -8,7 +8,7 @@ conda activate amalgum
 pip install -r requirements.txt
 ```
 
-2. Install a version of `pytorch` and `tensorflow` 1.x appropriate for your machine's hardware.
+2. Install a version of `pytorch` appropriate for your machine's hardware.
 
 3. Download `punkt`: `python -c "import nltk; nltk.download('punkt')"`
 
