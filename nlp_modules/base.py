@@ -38,13 +38,18 @@ class NLPModule(ABC):
     @property
     @abstractmethod
     def requires(self):
-        """Returns a tuple of NLPRequirements that must be provided before this step of the pipeline."""
+        """Returns a tuple of PipelineDeps that must be provided before this step of the pipeline. 
+        For instance, a POS tagger should return `(PipelineDep.TOKENIZE,)` here since it requires
+        tokens to do its work."""
         return ()
 
     @property
     @abstractmethod
     def provides(self):
-        """Returns a tuple of NLPRequirements that this module provides for downstream modules."""
+        """Returns a tuple of PipelineDeps that this module provides for downstream modules.
+        For instance, a POS tagger should return `(PipelineDep.POS_TAG,)` here since it provides 
+        POS tags for any downstream modules that might need them (like a dependency parser)
+        """
         return ()
 
     @abstractmethod
@@ -101,6 +106,7 @@ class NLPModule(ABC):
         :param multithreaded: Use python-pmap to apply the process_document_content_dict in parallel. Only use if
                               the function is CPU-intensive (and not, e.g., I/O intensive) and there are no race
                               conditions that would be introduced by having multiple threads use the function.
+                              (If in doubt, don't set this to True!)
         :return: None
         """
         os.makedirs(os.path.join(output_dir, file_type), exist_ok=True)
@@ -161,6 +167,7 @@ class NLPModule(ABC):
         :param multithreaded: Use python-pmap to apply the process_document_content_dict in parallel. Only use if
                               the function is CPU-intensive (and not, e.g., I/O intensive) and there are no race
                               conditions that would be introduced by having multiple threads use the function.
+                              (If in doubt, don't set this to True!)
         :return: None
         """
         existing_input_dirs = [
