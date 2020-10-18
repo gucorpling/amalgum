@@ -3,6 +3,10 @@
 1. Set up a conda environment:
 
 ```sh
+# OPTION 1 (recommended): using env.yml
+conda env create -f env.yml
+
+# OPTION 2: using requirements.txt
 conda create --name amalgum python=3.7
 conda activate amalgum
 pip install -r requirements.txt
