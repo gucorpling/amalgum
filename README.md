@@ -74,5 +74,5 @@ All annotations under the folders `amalgum/` and `amalgum_balanced/` are availab
 * `voyage`: [wikiVoyage](https://en.wikivoyage.org/wiki/Wikivoyage:Dual_licensing), [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/)
 
 
-# Build
-See [BUILD.md](./BUILD.md).
+# Development
+See [DEVELOPMENT.md](./DEVELOPMENT.md).
