@@ -6,10 +6,12 @@ import pickle
 import time
 import pandas as pd
 pd.options.mode.chained_assignment = None  # default='warn'
+pd.set_option('display.max_columns', None)
 
 from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_FILTER_PROBA_THRESHOLD
 from nlp_modules.base import NLPModule
 from glob import glob
+from datetime import datetime
 
 
 class HeidelTimeWrapper():
@@ -105,24 +107,8 @@ class DateTimeFilterModel():
         # this is just a template and not the real feature set; this is used to build the real featureset
         # the postags are taken from the label encoder model that encodes the result of the
         # pos tag ensembler
-        self.featuredict = {'obl': 0, 'obl:npmod': 0, 'obl:tmod': 0, 'nsubj': 0, 'nsubj:pass': 0, 'obj': 0, 'iobj': 0,
-                       'csubj': 0, 'csubj:pass': 0, 'ccomp': 0, 'xcomp': 0, 'nummod': 0, 'acl': 0, 'amod': 0,
-                       'appos': 0, 'acl:relcl': 0, 'det': 0, 'det:predet': 0,  'nmod': 0, 'case': 0,
-                       'nmod:npmod': 0, 'nmod:tmod': 0, 'nmod:poss': 0, 'advcl': 0, 'advmod': 0, 'neg': 0,
-                       'compound': 0, 'compound:prt': 0, 'flat': 0, 'fixed': 0, 'foreign': 0, 'goeswith': 0, 'list': 0,
-                       'dislocated': 0, 'parataxis': 0, 'orphan': 0, 'reparandum': 0, 'vocative': 0, 'discourse': 0,
-                       'expl': 0, 'aux': 0, 'aux:pass': 0, 'cop': 0, 'mark': 0, 'punct': 0, 'conj': 0, 'cc': 0,
-                       'cc:preconj': 0,  'root': 0, 'dep': 0, '$':0, "''":0, ',':0, '-LRB-':0, '-LSB-':0, '-RRB-':0, '-RSB-':0,
-                        '.':0, ':':0, 'ADD':0, 'ADJ':0, 'ADP':0, 'ADV':0, 'AFX':0, 'AUX':0, 'CC':0, 'CCONJ':0, 'CD':0,
-                        'DET':0, 'DT':0, 'EX':0, 'FW':0, 'GW':0, 'HYPH':0, 'IN':0,'INTJ':0, 'JJ':0, 'JJR':0, 'JJS':0,
-                        'LS':0, 'MD':0, 'NFP':0, 'NN':0, 'NNP':0, 'NP':0, 'NNPS':0, 'NNS':0, 'NOUN':0,'NUM':0, 'PART':0, 'PDT':0,
-                        'POS':0, 'PRON':0, 'PROPN':0, 'PRP':0, 'PRP$':0, 'PUNCT':0, 'RB':0, 'RBR':0,'RBS':0, 'RP':0, 'SYM':0,
-                        'TO':0, 'UH':0, 'VB':0, 'VBD':0, 'VBG':0, 'VBN':0, 'VBP':0, 'VBZ':0, 'VERB':0, 'WDT':0, 'WP':0, 'WP$':0,
-                        'WRB':0, 'X':0, '``':0, 'january': 0, 'february': 0, 'march': 0, 'april': 0,
-                       'may': 0, 'june': 0, 'july': 0, 'august': 0, 'september': 0, 'october': 0, 'november': 0,
-                       'december': 0, 'summer': 0, 'winter': 0, 'autumn': 0, 'spring': 0, 'christmas': 0,
-                       'christmas_eve': 0, 'easter': 0, 'easter_sunday': 0, 'monday': 0, 'tuesday': 0, 'wednesday': 0,
-                       'thursday': 0, 'friday': 0, 'saturday': 0, 'sunday': 0, 'phrase': None,'sentence_index':None}
+        self.featuredict = featuredict = {'obl':0,'obl:npmod':0,'obl:tmod':0,'nsubj':0,'nsubj:pass':0,'obj':0,'iobj':0,'csubj':0,'csubj:pass':0,'ccomp':0,'xcomp':0,'nummod':0,'acl':0,'amod':0,'appos':0,'acl:relcl':0,'det':0,'det:predet':0,'neg':0,'nmod':0,'case':0,'nmod:npmod':0,'nmod:tmod':0,'nmod:poss':0,'advcl':0,'advmod':0,'compound':0,'compound:prt':0,'flat':0,'fixed':0,'foreign':0,'goeswith':0,'list':0,'dislocated':0,'parataxis':0,'orphan':0,'reparandum':0,'vocative':0,'discourse':0,'expl':0,'aux':0,'aux:pass':0,'cop':0,'mark':0,'punct':0,'conj':0,'cc':0,'cc:preconj':0,'punct':0,'root':0,'dep':0,'$':0, "''":0, ',':0, '-LRB-':0, '-LSB-':0, '-RRB-':0, '-RSB-':0, '.':0 ,':':0, 'ADD':0, 'ADJ':0,'NP':0, 'ADP':0,'ADV':0, 'AFX':0, 'AUX':0, 'CC':0, 'CCONJ':0, 'CD':0, 'DET':0, 'DT':0, 'EX':0, 'FW':0, 'GW':0, 'HYPH':0, 'IN':0,'INTJ':0, 'JJ':0, 'JJR':0, 'JJS':0, 'LS':0, 'MD':0, 'NFP':0, 'NN':0, 'NNP':0, 'NNPS':0, 'NNS':0, 'NOUN':0,'NUM':0, 'PART':0, 'PDT':0, 'POS':0, 'PRON':0, 'PROPN':0, 'PRP':0, 'PRP$':0, 'PUNCT':0, 'RB':0, 'RBR':0,'RBS':0, 'RP':0, 'SYM':0, 'TO':0, 'UH':0, 'VB':0, 'VBD':0, 'VBG':0, 'VBN':0, 'VBP':0, 'VBZ':0, 'VERB':0,'WDT':0, 'WP':0, 'WP$':0, 'WRB':0, 'X':0, '``':0,'january':0,'february':0,'march':0,'april':0,'may':0,'june':0,'july':0,'august':0,'september':0,'october':0,'november':0,'december':0,'summer':0,'winter':0,'autumn':0,'spring':0,'christmas':0,'christmas_eve':0,'easter':0,'easter_sunday':0,'monday':0,'tuesday':0,'wednesday':0,'thursday':0,'friday':0,'saturday':0,'sunday':0,'start1_obl':0,'start1_obl:npmod':0,'start1_obl:tmod':0,'start1_nsubj':0,'start1_nsubj:pass':0,'start1_obj':0,'start1_iobj':0,'start1_csubj':0,'start1_csubj:pass':0,'start1_ccomp':0,'start1_xcomp':0,'start1_nummod':0,'start1_acl':0,'start1_amod':0,'start1_appos':0,'start1_acl:relcl':0,'start1_det':0,'start1_det:predet':0,'start1_neg':0,'start1_nmod':0,'start1_case':0,'start1_nmod:npmod':0,'start1_nmod:tmod':0,'start1_nmod:poss':0,'start1_advcl':0,'start1_advmod':0,'start1_compound':0,'start1_compound:prt':0,'start1_flat':0,'start1_fixed':0,'start1_foreign':0,'start1_goeswith':0,'start1_list':0,'start1_dislocated':0,'start1_parataxis':0,'start1_orphan':0,'start1_reparandum':0,'start1_vocative':0,'start1_discourse':0,'start1_expl':0,'start1_aux':0,'start1_aux:pass':0,'start1_cop':0,'start1_mark':0,'start1_punct':0,'start1_conj':0,'start1_cc':0,'start1_cc:preconj':0,'start1_punct':0,'start1_root':0,'start1_dep':0,'start1_$':0, "start1_''":0, 'start1_,':0, 'start1_-LRB-':0, 'start1_-LSB-':0, 'start1_-RRB-':0, 'start1_-RSB-':0, 'start1_.':0 ,'start1_:':0, 'start1_ADD':0, 'start1_ADJ':0,'start1_NP':0, 'start1_ADP':0,'start1_ADV':0, 'start1_AFX':0, 'start1_AUX':0, 'start1_CC':0, 'start1_CCONJ':0, 'start1_CD':0, 'start1_DET':0, 'start1_DT':0, 'start1_EX':0, 'start1_FW':0, 'start1_GW':0, 'start1_HYPH':0, 'start1_IN':0,'start1_INTJ':0, 'start1_JJ':0, 'start1_JJR':0, 'start1_JJS':0, 'start1_LS':0, 'start1_MD':0, 'start1_NFP':0, 'start1_NN':0, 'start1_NNP':0, 'start1_NNPS':0, 'start1_NNS':0, 'start1_NOUN':0,'start1_NUM':0, 'start1_PART':0, 'start1_PDT':0, 'start1_POS':0, 'start1_PRON':0, 'start1_PROPN':0, 'start1_PRP':0, 'start1_PRP$':0, 'start1_PUNCT':0, 'start1_RB':0, 'start1_RBR':0,'start1_RBS':0, 'start1_RP':0, 'start1_SYM':0, 'start1_TO':0, 'start1_UH':0, 'start1_VB':0, 'start1_VBD':0, 'start1_VBG':0, 'start1_VBN':0, 'start1_VBP':0, 'start1_VBZ':0, 'start1_VERB':0,'start1_WDT':0, 'start1_WP':0, 'start1_WP$':0, 'start1_WRB':0, 'start1_X':0, 'start1_``':0,'end1_obl':0,'end1_obl:npmod':0,'end1_obl:tmod':0,'end1_nsubj':0,'end1_nsubj:pass':0,'end1_obj':0,'end1_iobj':0,'end1_csubj':0,'end1_csubj:pass':0,'end1_ccomp':0,'end1_xcomp':0,'end1_nummod':0,'end1_acl':0,'end1_amod':0,'end1_appos':0,'end1_acl:relcl':0,'end1_det':0,'end1_det:predet':0,'end1_neg':0,'end1_nmod':0,'end1_case':0,'end1_nmod:npmod':0,'end1_nmod:tmod':0,'end1_nmod:poss':0,'end1_advcl':0,'end1_advmod':0,'end1_compound':0,'end1_compound:prt':0,'end1_flat':0,'end1_fixed':0,'end1_foreign':0,'end1_goeswith':0,'end1_list':0,'end1_dislocated':0,'end1_parataxis':0,'end1_orphan':0,'end1_reparandum':0,'end1_vocative':0,'end1_discourse':0,'end1_expl':0,'end1_aux':0,'end1_aux:pass':0,'end1_cop':0,'end1_mark':0,'end1_punct':0,'end1_conj':0,'end1_cc':0,'end1_cc:preconj':0,'end1_punct':0,'end1_root':0,'end1_dep':0,'end1_$':0, "end1_''":0, 'end1_,':0, 'end1_-LRB-':0, 'end1_-LSB-':0, 'end1_-RRB-':0, 'end1_-RSB-':0, 'end1_.':0 ,'end1_:':0, 'end1_ADD':0, 'end1_ADJ':0,'end1_NP':0, 'end1_ADP':0,'end1_ADV':0, 'end1_AFX':0, 'end1_AUX':0, 'end1_CC':0, 'end1_CCONJ':0, 'end1_CD':0, 'end1_DET':0, 'end1_DT':0, 'end1_EX':0, 'end1_FW':0, 'end1_GW':0, 'end1_HYPH':0, 'end1_IN':0,'end1_INTJ':0, 'end1_JJ':0, 'end1_JJR':0, 'end1_JJS':0, 'end1_LS':0, 'end1_MD':0, 'end1_NFP':0, 'end1_NN':0, 'end1_NNP':0, 'end1_NNPS':0, 'end1_NNS':0, 'end1_NOUN':0,'end1_NUM':0, 'end1_PART':0, 'end1_PDT':0, 'end1_POS':0, 'end1_PRON':0, 'end1_PROPN':0, 'end1_PRP':0, 'end1_PRP$':0, 'end1_PUNCT':0, 'end1_RB':0, 'end1_RBR':0,'end1_RBS':0, 'end1_RP':0, 'end1_SYM':0, 'end1_TO':0, 'end1_UH':0, 'end1_VB':0, 'end1_VBD':0, 'end1_VBG':0, 'end1_VBN':0, 'end1_VBP':0, 'end1_VBZ':0, 'end1_VERB':0,'end1_WDT':0, 'end1_WP':0, 'end1_WP$':0, 'end1_WRB':0, 'end1_X':0, 'end1_``':0,'end2_obl':0,'end2_obl:npmod':0,'end2_obl:tmod':0,'end2_nsubj':0,'end2_nsubj:pass':0,'end2_obj':0,'end2_iobj':0,'end2_csubj':0,'end2_csubj:pass':0,'end2_ccomp':0,'end2_xcomp':0,'end2_nummod':0,'end2_acl':0,'end2_amod':0,'end2_appos':0,'end2_acl:relcl':0,'end2_det':0,'end2_det:predet':0,'end2_neg':0,'end2_nmod':0,'end2_case':0,'end2_nmod:npmod':0,'end2_nmod:tmod':0,'end2_nmod:poss':0,'end2_advcl':0,'end2_advmod':0,'end2_compound':0,'end2_compound:prt':0,'end2_flat':0,'end2_fixed':0,'end2_foreign':0,'end2_goeswith':0,'end2_list':0,'end2_dislocated':0,'end2_parataxis':0,'end2_orphan':0,'end2_reparandum':0,'end2_vocative':0,'end2_discourse':0,'end2_expl':0,'end2_aux':0,'end2_aux:pass':0,'end2_cop':0,'end2_mark':0,'end2_punct':0,'end2_conj':0,'end2_cc':0,'end2_cc:preconj':0,'end2_punct':0,'end2_root':0,'end2_dep':0,'end2_$':0, "end2_''":0, 'end2_,':0, 'end2_-LRB-':0, 'end2_-LSB-':0, 'end2_-RRB-':0, 'end2_-RSB-':0, 'end2_.':0 ,'end2_:':0, 'end2_ADD':0, 'end2_ADJ':0,'end2_NP':0, 'end2_ADP':0,'end2_ADV':0, 'end2_AFX':0, 'end2_AUX':0, 'end2_CC':0, 'end2_CCONJ':0, 'end2_CD':0, 'end2_DET':0, 'end2_DT':0, 'end2_EX':0, 'end2_FW':0, 'end2_GW':0, 'end2_HYPH':0, 'end2_IN':0,'end2_INTJ':0, 'end2_JJ':0, 'end2_JJR':0, 'end2_JJS':0, 'end2_LS':0, 'end2_MD':0, 'end2_NFP':0, 'end2_NN':0, 'end2_NNP':0, 'end2_NNPS':0, 'end2_NNS':0, 'end2_NOUN':0,'end2_NUM':0, 'end2_PART':0, 'end2_PDT':0, 'end2_POS':0, 'end2_PRON':0, 'end2_PROPN':0, 'end2_PRP':0,'end2_PP$':0,'end1_PP$':0,'start2_PP$':0,'start1_PP$':0,'end2_PP':0,'end1_PP':0,'start2_PP':0,'start1_PP':0, 'end2_PRP$':0, 'end2_PUNCT':0, 'end2_RB':0, 'end2_RBR':0,'end2_RBS':0, 'end2_RP':0, 'end2_SYM':0, 'end2_TO':0, 'end2_UH':0, 'end2_VB':0, 'end2_VBD':0, 'end2_VBG':0, 'end2_VBN':0, 'end2_VBP':0, 'end2_VBZ':0, 'end2_VERB':0,'end2_WDT':0, 'end2_WP':0, 'end2_WP$':0, 'end2_WRB':0, 'end2_X':0, 'end2_``':0,'start2_obl':0,'start2_obl:npmod':0,'start2_obl:tmod':0,'start2_nsubj':0,'start2_nsubj:pass':0,'start2_obj':0,'start2_iobj':0,'start2_csubj':0,'start2_csubj:pass':0,'start2_ccomp':0,'start2_xcomp':0,'start2_nummod':0,'start2_acl':0,'start2_amod':0,'start2_appos':0,'start2_acl:relcl':0,'start2_det':0,'start2_det:predet':0,'start2_neg':0,'start2_nmod':0,'start2_case':0,'start2_nmod:npmod':0,'start2_nmod:tmod':0,'start2_nmod:poss':0,'start2_advcl':0,'start2_advmod':0,'start2_compound':0,'start2_compound:prt':0,'start2_flat':0,'start2_fixed':0,'start2_foreign':0,'start2_goeswith':0,'start2_list':0,'start2_dislocated':0,'start2_parataxis':0,'start2_orphan':0,'start2_reparandum':0,'start2_vocative':0,'start2_discourse':0,'start2_expl':0,'start2_aux':0,'start2_aux:pass':0,'start2_cop':0,'start2_mark':0,'start2_punct':0,'start2_conj':0,'start2_cc':0,'start2_cc:preconj':0,'start2_punct':0,'start2_root':0,'start2_dep':0,'start2_$':0, "start2_''":0, 'start2_,':0, 'start2_-LRB-':0, 'start2_-LSB-':0, 'start2_-RRB-':0, 'start2_-RSB-':0, 'start2_.':0 ,'start2_:':0, 'start2_ADD':0, 'start2_ADJ':0,'start2_NP':0, 'start2_ADP':0,'start2_ADV':0, 'start2_AFX':0, 'start2_AUX':0, 'start2_CC':0, 'start2_CCONJ':0, 'start2_CD':0, 'start2_DET':0, 'start2_DT':0, 'start2_EX':0, 'start2_FW':0, 'start2_GW':0, 'start2_HYPH':0, 'start2_IN':0,'start2_INTJ':0, 'start2_JJ':0, 'start2_JJR':0, 'start2_JJS':0, 'start2_LS':0, 'start2_MD':0, 'start2_NFP':0, 'start2_NN':0, 'start2_NNP':0, 'start2_NNPS':0, 'start2_NNS':0, 'start2_NOUN':0,'start2_NUM':0, 'start2_PART':0, 'start2_PDT':0, 'start2_POS':0, 'start2_PRON':0, 'start2_PROPN':0, 'start2_PRP':0, 'start2_PRP$':0, 'start2_PUNCT':0, 'start2_RB':0, 'start2_RBR':0,'start2_RBS':0, 'start2_RP':0, 'start2_SYM':0, 'start2_TO':0, 'start2_UH':0, 'start2_VB':0, 'start2_VBD':0, 'start2_VBG':0, 'start2_VBN':0, 'start2_VBP':0, 'start2_VBZ':0, 'start2_VERB':0,'start2_WDT':0, 'start2_WP':0, 'start2_WP$':0, 'start2_WRB':0, 'start2_X':0, 'start2_``':0,'day':0,'century':0,'millenia':0,'hour':0,'minute':0,'year':0,'second':0,'month':0,'start2_day':0,'start2_century':0,'start2_millenia':0,'start2_hour':0,'start2_minute':0,'start2_year':0,'start2_second':0,'start2_month':0,'start2_day':0,'start2_century':0,'start2_millenia':0,'start2_hour':0,'start2_minute':0,'start2_year':0,'start2_second':0,'start2_month':0,'start1_day':0,'start1_century':0,'start1_millenia':0,'start1_hour':0,'start1_minute':0,'start1_year':0,'start1_second':0,'start1_month':0,'end2_day':0,'end2_century':0,'end2_millenia':0,'end2_hour':0,'end2_minute':0,'end2_year':0,'end2_second':0,'end2_month':0,'end1_day':0,'end1_century':0,'end1_millenia':0,'end1_hour':0,'end1_minute':0,'end1_year':0,'end1_second':0,'end1_month':0,'start1_january':0,'start1_february':0,'start1_march':0,'start1_april':0,'start1_may':0,'start1_june':0,'start1_july':0,'start1_august':0,'start1_september':0,'start1_october':0,'start1_november':0,
+               'start1_december':0,'start1_summer':0,'start1_winter':0,'start1_autumn':0,'start1_spring':0,'start1_christmas':0,'start1_christmas_eve':0,'start1_easter':0,'start1_easter_sunday':0,'start1_monday':0,'start1_tuesday':0,'start1_wednesday':0,'start1_thursday':0,'start1_friday':0,'start1_saturday':0,'start1_sunday':0,'start2_january':0,'start2_february':0,'start2_march':0,'start2_april':0,'start2_may':0,'start2_june':0,'start2_july':0,'start2_august':0,'start2_september':0,'start2_october':0,'start2_november':0,'start2_december':0,'start2_summer':0,'start2_winter':0,'start2_autumn':0,'start2_spring':0,'start2_christmas':0,'start2_christmas_eve':0,'start2_easter':0,'start2_easter_sunday':0,'start2_monday':0,'start2_tuesday':0,'start2_wednesday':0,'start2_thursday':0,'start2_friday':0,'start2_saturday':0,'start2_sunday':0,'end2_january':0,'end2_february':0,'end2_march':0,'end2_april':0,'end2_may':0,'end2_june':0,'end2_july':0,'end2_august':0,'end2_september':0,'end2_october':0,'end2_november':0,'end2_december':0,'end2_summer':0,'end2_winter':0,'end2_autumn':0,'end2_spring':0,'end2_christmas':0,'end2_christmas_eve':0,'end2_easter':0,'end2_easter_sunday':0,'end2_monday':0,'end2_tuesday':0,'end2_wednesday':0,'end2_thursday':0,'end2_friday':0,'end2_saturday':0,'end2_sunday':0,'end1_january':0,'end1_february':0,'end1_march':0,'end1_april':0,'end1_may':0,'end1_june':0,'end1_july':0,'end1_august':0,'end1_september':0,'end1_october':0,'end1_november':0,'end1_december':0,'end1_summer':0,'end1_winter':0,'end1_autumn':0,'end1_spring':0,'end1_christmas':0,'end1_christmas_eve':0,'end1_easter':0,'end1_easter_sunday':0,'end1_monday':0,'end1_tuesday':0,'end1_wednesday':0,'end1_thursday':0,'end1_friday':0,'end1_saturday':0,'end1_sunday':0}
 
     def train(self):
         pass # TODO
@@ -152,7 +138,7 @@ class DateTimeFilterModel():
         else:
             startindex = 0
 
-        endindex = startindex + len(phrase.split())
+        endindex = startindex + len(phrase.split()) - 1
 
         # start building the features now that we have the indices of the phrase in the sentence
         # Features are basically count vectors of the defined featureset in the template
@@ -160,7 +146,7 @@ class DateTimeFilterModel():
         featurelist = fdict.keys()
 
         # This will check features that are specific word tokens in the sentence, e.g January, Tuesday,
-        for i in range(startindex,endindex):
+        for i in range(startindex,endindex + 1,1):
             feats = features[i].split('/') # get the token word
             if str(feats[1]).lower() in featurelist:
                 fdict[str(feats[1]).lower()] += 1 # Increment if the word is in the feature list
@@ -170,53 +156,42 @@ class DateTimeFilterModel():
                 fdict[str(feats[7])] += 1 # the UD tag
 
 
-        # Next some features based on the immediately preceding and following tokens, padding the phrase
         if startindex > 0:
-            prevtokenfeatures = str(features[startindex - 1]).lower().split('/')
-            fdict['prev_compound'] = int(prevtokenfeatures[-1].strip() == 'compound')
-            fdict['a_an'] = int(prevtokenfeatures[0].lower().strip() in self.articles)
-            if 'mod' in prevtokenfeatures[-1]:
-                fdict['prev_mod'] = 1
-            else:
-                fdict['prev_mod'] = 0
+            feats = features[startindex - 1].split('/')  # get the token word
+            if str(feats[1]).lower() in fdict.keys():
+                fdict['start1_' + str(feats[1]).lower()] += 1
+            if str(feats[4]) in fdict.keys():
+                fdict['start1_' + str(feats[4])] += 1
+            if str(feats[7]) in fdict.keys():
+                fdict['start1_' + str(feats[7])] += 1
 
-            if str(prevtokenfeatures[-1]).strip() == 'dep':
-                fdict['prev_dep'] = 1
-            else:
-                fdict['prev_dep'] = 0
-
-            if 'det' in prevtokenfeatures[-1]:
-                fdict['prev_det'] = 1
-            else:
-                fdict['prev_det'] = 0
-        else:
-            fdict['a_an'] = 0
-            fdict['prev_mod'] = 0
-            fdict['prev_compound'] = 0
-            fdict['prev_det'] = 0
-            fdict['prev_dep'] = 0
+        if startindex > 1:
+            feats = features[startindex - 2].split('/')  # get the token word
+            if str(feats[1]).lower() in fdict.keys():
+                fdict['start2_' + str(feats[1]).lower()] += 1
+            if str(feats[4]) in fdict.keys():
+                fdict['start2_' + str(feats[4])] += 1
+            if str(feats[7]) in fdict.keys():
+                fdict['start2_' + str(feats[7])] += 1
 
         if endindex + 1 < len(features):
-            endtokenfeatures = str(features[endindex + 1]).lower().split('/')
-            fdict['next_compound'] = int(endtokenfeatures[-1].strip() == 'compound')
-            if 'mod' in endtokenfeatures[-1]:
-                fdict['end_mod'] = 1
-            else:
-                fdict['end_mod'] = 0
+            feats = features[endindex + 1].split('/')  # get the token word
+            if str(feats[1]).lower() in fdict.keys():
+                fdict['end1_' + str(feats[1]).lower()] += 1
+            if str(feats[4]) in fdict.keys():
+                fdict['end1_' + str(feats[4])] += 1
+            if str(feats[7]) in fdict.keys():
+                fdict['end1_' + str(feats[7])] += 1
 
-            if endtokenfeatures[-1].strip() == 'dep':
-                fdict['end_dep'] = 1
-            else:
-                fdict['end_dep'] = 0
-            if 'det' in endtokenfeatures[-1]:
-                fdict['end_det'] = 1
-            else:
-                fdict['end_det'] = 0
-        else:
-            fdict['next_compound'] = 0
-            fdict['end_mod'] = 0
-            fdict['end_det'] = 0
-            fdict['end_dep'] = 0
+        if endindex + 2 < len(features):
+            feats = features[endindex + 2].split('/')  # get the token word
+            if str(feats[1]).lower() in fdict.keys():
+                fdict['end2_' + str(feats[1]).lower()] += 1
+            if str(feats[4]) in fdict.keys():
+                fdict['end2_' + str(feats[4])] += 1
+            if str(feats[7]) in fdict.keys():
+                fdict['end2_' + str(feats[7])] += 1
+
 
         # and finally, dump out all the other interactions
         fdict['CD_nmod'] = int(fdict['CD']) * int(fdict['nmod'])
@@ -249,12 +224,16 @@ class DateTimeFilterModel():
 
         fdict['NP_flat'] = fdict['NP'] * fdict['flat']
         fdict['NP_obl'] = fdict['NP'] * fdict['obl']
+        fdict['NN_obl'] = fdict['NN'] * fdict['obl']
         fdict['NP_nummod'] = fdict['NP'] * fdict['nummod']
+        fdict['NN_nummod'] = fdict['NN'] * fdict['nummod']
         fdict['NP_nmod'] = fdict['NP'] * fdict['nmod']
+        fdict['NN_nmod'] = fdict['NN'] * fdict['nmod']
         fdict['NP_compound'] = fdict['NP'] * fdict['compound']
         fdict['NN_compound'] = fdict['NN'] * fdict['compound']
         fdict['RB_amod'] = fdict['RB'] * fdict['amod']
         fdict['JJ_amod'] = fdict['JJ'] * fdict['amod']
+        fdict['NN_obltmod'] = fdict['NN'] * fdict['obl:tmod']
 
         # these become useful when adding the tags to the xml
         fdict['sentence_index'] = index + 1
@@ -263,12 +242,6 @@ class DateTimeFilterModel():
         fdict['timextype'] = timextype
         fdict['timexvalue'] = timexvalue
 
-        """
-        TODO: bring these back , use the file name which contains the category 
-        fdict['news'] = int(category == 'news')
-        fdict['interview'] = int(category == 'interview')
-        fdict['bio'] = int(category == 'bio')
-        """
 
         return fdict
 
@@ -361,34 +334,37 @@ class DateTimeRecognizer(NLPModule):
             don't remove the counter, it is an accumulator that keep tracks of how many sentences we have iterated over
             """
 
+            #TODO: deconstruct and reconstruct all elements in a sentence along with the dates
             for item in node:
                 if item.tag == 's':
                     counter += 1
                     if counter in sentenceindices:
                         df = indexphrases.loc[indexphrases['sentence_index'] == counter]
+
                         datetags = [] # only way to add the tags is sequentially after determining the text and tails
+
                         for _,row in df.iterrows(): # adding date tags backwards up
                             phrase = str(row['phrase'])
                             startindex = int(row['start_index'])
                             endindex = startindex + len(phrase.split())
 
-                            splittext = item.text.split('\n')
-                            splittext = [t for t in splittext if t]
-                            predatetext = splittext[0:startindex]
-                            datetext = splittext[startindex:endindex]
-                            postdatetext = splittext[endindex:len(splittext)]
+                            attributes = self.timex_to_tei(str(row['timextype']), str(row['timexvalue']))
+                            for key, value in attributes.items():  # just one attribute in the collection
 
-                            # build the xml elements and date tags
-                            if str('\n'.join(predatetext)).strip() == '':
-                                item.text = '\n'
-                            else:
-                                item.text = '\n' + '\n'.join(predatetext) + '\n'
+                                splittext = item.text.split('\n')
+                                splittext = [t for t in splittext if t]
+                                predatetext = splittext[0:startindex]
+                                datetext = splittext[startindex:endindex]
+                                postdatetext = splittext[endindex:len(splittext)]
 
-                            attributes = self.timex_to_tei(str(row['timextype']),str(row['timexvalue']))
+                                # build the xml elements and date tags
+                                if str('\n'.join(predatetext)).strip() == '':
+                                    item.text = '\n'
+                                else:
+                                    item.text = '\n' + '\n'.join(predatetext) + '\n'
 
-                            for key,value in attributes.items():
-                                date = ET.Element(key) # Only one attribute
-                                for attribs in value : #only one value
+                                date = ET.Element(key)
+                                for attribs in value :
                                     date.set(attribs.split(':')[0],attribs.split(':')[1])
 
                                 date.text = '\n' + '\n'.join(datetext) + '\n'
@@ -429,7 +405,10 @@ class DateTimeRecognizer(NLPModule):
         xmltree = ET.parse(filename)
         root = xmltree.getroot()
 
-        dateCreated = root.attrib[XML_ATTRIB_REFDATE] # assumed to be in default YYYY-MM-DD or the process breaks
+        if XML_ATTRIB_REFDATE  in root.attrib:
+            dateCreated = root.attrib[XML_ATTRIB_REFDATE] # assumed to be in default YYYY-MM-DD or the process breaks
+        else:
+            dateCreated = datetime.today().strftime('%Y-%m-%d')
 
         sentences = [] # to hold the list of sentences in the file built from everything
         sentencestokens = [] # holds sentences built from tokens only
@@ -495,28 +474,30 @@ class DateTimeRecognizer(NLPModule):
                 f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],subdates[j],i,timextype,timexvalue)
                 inferencedf = inferencedf.append(f,ignore_index=True)
 
-        indexphrases = inferencedf[['sentence_index','start_index','phrase','timextype','timexvalue']]
-        inferencedf.drop(columns=['sentence_index','start_index','phrase','timextype','timexvalue'],axis=1,inplace=True)
+        if len(inferencedf) != 0:
+            indexphrases = inferencedf[['sentence_index','start_index','phrase','timextype','timexvalue']]
+            inferencedf.drop(columns=['sentence_index','start_index','phrase','timextype','timexvalue'],axis=1,inplace=True)
 
-        # Filter the dates that dont pass GUM annotated standards..
-        tpprobs = self.datefilter.rf.predict_proba(inferencedf)[:,1]
-        tpprobs = (tpprobs > DATE_FILTER_PROBA_THRESHOLD).astype(int).tolist() # 0's or 1's based on the threshold
+            # Filter the dates that dont pass GUM annotated standards..
+            tpprobs = self.datefilter.rf.predict(inferencedf)
 
-        indexphrases['label'] = pd.Series(tpprobs)
-        indexphrases = indexphrases.loc[indexphrases['label'] == 1]
-        if indexphrases is not None and len(indexphrases) != 0: # only if we have dates..
-            indexphrases.sort_values(['sentence_index','start_index'],ascending=[True,False],inplace=True)
+            indexphrases['label'] = pd.Series(tpprobs)
+            #indexphrases = indexphrases.loc[indexphrases['label'] == 1]
+            print(indexphrases)
 
-            # just in case..this leads to selection of only 1 date element in the same token....
-            indexphrases= indexphrases.groupby(by=['sentence_index','start_index']).head(1)
-            sentenceindices = set(indexphrases['sentence_index'].tolist())
+            if indexphrases is not None and len(indexphrases) != 0: # only if we have dates..
+                indexphrases.sort_values(['sentence_index','start_index'],ascending=[True,False],inplace=True)
 
-            # Build the xml with the new date tag
-            _ = add_datetime_tags(root) # modify xml in place and add date tags
+                # just in case..this leads to selection of only 1 date element in the same token....
+                indexphrases= indexphrases.groupby(by=['sentence_index','start_index']).head(1)
+                sentenceindices = set(indexphrases['sentence_index'].tolist())
+
+                # Build the xml with the new date tag
+                _ = add_datetime_tags(root) # modify xml in place and add date tags
 
         # write to disk
         tree = ET.ElementTree(root)
-        tree.write(open('test.xml', 'w'), encoding='unicode',xml_declaration=True)
+        return tree
 
     def replace_xml_chars(self,text):
         return text.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;').replace('"', '&quot;').replace("'",'&apos;')  # assumes these dont affect time recognition..
@@ -588,8 +569,12 @@ class DateTimeRecognizer(NLPModule):
 
         # Get list of all xml files to parse
         for file in glob(input_dir + '*.xml'):
-            self.process_file(file)
+            file = '/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_bio_doc005.xml'
+            print(file)
+            treeobj = self.process_file(file)
+            treeobj.write(open(output_dir + file.split('/')[-1], 'w'), encoding='unicode', xml_declaration=True)
             break
+
 
 
 def main():
@@ -606,7 +591,7 @@ def main():
     dtr = DateTimeRecognizer(heideltimeobj=hw,datefilterobj=dfilter,postaglabelencoderobj=postagleobj)
 
     start = time.time()
-    dtr.run(input_dir='/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/',output_dir=None)
+    dtr.run(input_dir='/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/',output_dir='/home/gooseg/Desktop/amalgum/amalgum/target/testdate/')
     print (time.time() - start)
 
 
