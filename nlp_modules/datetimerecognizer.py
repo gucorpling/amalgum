@@ -5,6 +5,7 @@ import re
 import pickle
 import time
 import pandas as pd
+import traceback
 pd.options.mode.chained_assignment = None  # default='warn'
 pd.set_option('display.max_columns', None)
 
@@ -12,6 +13,7 @@ from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_F
 from nlp_modules.base import NLPModule
 from glob import glob
 from datetime import datetime
+from xml.sax.saxutils import escape
 
 
 class HeidelTimeWrapper():
@@ -131,7 +133,7 @@ class DateTimeFilterModel():
         phrase = re.sub(' +',' ',phrase)
 
         features = sfull.split()
-        search = re.search(phrase.lower(),stok.lower()) # this is not supposed to return None, generally
+        search = re.search(re.escape(phrase.lower()),stok.lower()) # this is not supposed to return None, generally
 
         # Gets the start index of the phrase in the sentence
         if search.start() > 0:
@@ -243,7 +245,6 @@ class DateTimeFilterModel():
         fdict['timextype'] = timextype
         fdict['timexvalue'] = timexvalue
 
-
         return fdict
 
 
@@ -266,6 +267,7 @@ class DateTimeRecognizer(NLPModule):
         self.regexyyyy = r'[0-9]{4}'  # matches YYYY, likely!
         self.seasons = {'SU':['from:--06','to:--09'],'WI':['from:--12','to:--03'],'FA':['from:--09','to:--12'],'SP':['from:--03','to:--06']}
         self.holidates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']}
+
 
         # TODO: 'soft-wire' feature names from the label encoder for pos tagging instead of hard-wiring in the dictionary features
         #self.cd = '/'.join(os.path.abspath(__file__).split('/')[:-2])
@@ -329,7 +331,7 @@ class DateTimeRecognizer(NLPModule):
 
         def add_datetime_tags(node,counter=0):
             """
-            Recursively builds the new xml file in memory in place, and stamps the date xml on it
+            Recursively builds the xml file in memory in place, and stamps the date xml on it
             the counter is an accumulator that keep tracks of how many sentences we have iterated over
             """
             for item in node:
@@ -364,7 +366,7 @@ class DateTimeRecognizer(NLPModule):
                                     fulltext = ' '.join(fulltext)
 
                                     if phrase not in fulltext: # will always be exact match, not fuzzy
-                                        elements.append(n) # move to the next element while building
+                                        elements.append(n) # move to the next element
                                     else:
                                         # its in the text or the tail
                                         attributes = self.timex_to_tei(timextype, timexvalue)
@@ -381,7 +383,7 @@ class DateTimeRecognizer(NLPModule):
                                             tail = ' '.join(tail)
 
                                             if phrase in text:
-                                                search = re.search(phrase,text)
+                                                search = re.search(re.escape(phrase),text)
                                                 if search.start() > 0:
                                                     startindex = text[0:search.start()].count(' ')
                                                 else:
@@ -390,7 +392,7 @@ class DateTimeRecognizer(NLPModule):
                                                 splittext = n.text.split('\n')
 
                                             else:
-                                                search = re.search(phrase, tail)
+                                                search = re.search(re.escape(phrase), tail)
                                                 if search.start() > 0:
                                                     startindex = tail[0:search.start()].count(' ')
                                                 else:
@@ -450,41 +452,47 @@ class DateTimeRecognizer(NLPModule):
                                     attributes = self.timex_to_tei(timextype, timexvalue)
                                     for key, value in attributes.items():  # loops only once
 
-                                        search = re.search(phrase, text)
-                                        if search.start() > 0:
-                                            startindex = text[0:search.start()].count(' ')
-                                        else:
-                                            startindex = 0
+                                        search = re.search(re.escape(phrase), text)
 
-                                        splittext = item.text.split('\n')
-                                        splittext = [s for s in splittext if s]
+                                        # TODO: find a way to remove this None check.
+                                        # With this, some dates dont get tagged where there
+                                        # are multiple dates within a Nested element in the sentence
+                                        # these are pretty hard to add :), skipping for now as the number should be minimal
+                                        if search is not None:
+                                            if search.start() > 0:
+                                                startindex = text[0:search.start()].count(' ')
+                                            else:
+                                                startindex = 0
 
-                                        endindex = startindex + len(phrase.split())
+                                            splittext = item.text.split('\n')
+                                            splittext = [s for s in splittext if s]
 
-                                        predatetext = splittext[0:startindex]
-                                        datetext = splittext[startindex:endindex]
-                                        postdatetext = splittext[endindex:len(splittext)]
+                                            endindex = startindex + len(phrase.split())
 
-                                        if str('\n'.join(predatetext)).strip() == '':
-                                            item.text = '\n'
-                                        else:
-                                            item.text = '\n' + '\n'.join(predatetext) + '\n'
+                                            predatetext = splittext[0:startindex]
+                                            datetext = splittext[startindex:endindex]
+                                            postdatetext = splittext[endindex:len(splittext)]
 
-                                        # build the date element
-                                        date = ET.Element(key)
-                                        for attribs in value:
-                                            date.set(attribs.split(':')[0], attribs.split(':')[1])
+                                            if str('\n'.join(predatetext)).strip() == '':
+                                                item.text = '\n'
+                                            else:
+                                                item.text = '\n' + '\n'.join(predatetext) + '\n'
 
-                                        date.text = '\n' + '\n'.join(datetext) + '\n'
+                                            # build the date element
+                                            date = ET.Element(key)
+                                            for attribs in value:
+                                                date.set(attribs.split(':')[0], attribs.split(':')[1])
 
-                                        if str('\n'.join(postdatetext)).strip() == '':
-                                            date.tail = '\n'
-                                        else:
-                                            date.tail = '\n' + '\n'.join(postdatetext) + '\n'
+                                            date.text = '\n' + '\n'.join(datetext) + '\n'
 
-                                    elements.insert(0,date)
+                                            if str('\n'.join(postdatetext)).strip() == '':
+                                                date.tail = '\n'
+                                            else:
+                                                date.tail = '\n' + '\n'.join(postdatetext) + '\n'
+
+                                            elements.insert(0,date)
+
                                     dateindex += 1
-                                    processed = True
 
                                 # now build the final tag sequentially with all nested date tags
                                 text = item.text
@@ -505,8 +513,11 @@ class DateTimeRecognizer(NLPModule):
         # The POS tags and UD tags are in the conllu format..
         conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml','.conllu')
 
-        xmltree = ET.parse(filename)
-        root = xmltree.getroot()
+        # some xml files have an '&' character in them!!
+        # forcibly convert to XML-friendly chars and keep them in the pipeline..
+        xmltext = open(filename,'r').read().replace('&','&amp;')
+        xmltree = ET.fromstring(xmltext)
+        root = xmltree
 
         if XML_ATTRIB_REFDATE  in root.attrib:
             dateCreated = root.attrib[XML_ATTRIB_REFDATE] # assumed to be in default YYYY-MM-DD or the process breaks
@@ -581,8 +592,7 @@ class DateTimeRecognizer(NLPModule):
             tpprobs = self.datefilter.rf.predict(inferencedf)
             indexphrases['label'] = pd.Series(tpprobs)
             indexphrases = indexphrases.loc[indexphrases['label'] == 1]
-            indexphrases['processed'] = 0
-            print(indexphrases)
+            #print(indexphrases)
 
             if indexphrases is not None and len(indexphrases) != 0: # only if we have dates..
                 indexphrases.sort_values(['sentence_index','start_index'],ascending=[True,True],inplace=True)
@@ -655,11 +665,13 @@ class DateTimeRecognizer(NLPModule):
 
         # Get list of all xml files to parse
         for file in glob(input_dir + '*.xml'):
-            file = '/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_bio_doc005.xml'
+            #file = '/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_whow_doc008.xml'
             print(file)
+
             treeobj = self.process_file(file)
             treeobj.write(open(output_dir + file.split('/')[-1], 'w'), encoding='unicode', xml_declaration=True)
-            break
+
+            #break
 
 
 
