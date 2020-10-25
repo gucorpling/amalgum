@@ -238,7 +238,7 @@ class DateTimeFilterModel():
 
         # these become useful when adding the tags to the xml
         fdict['sentence_index'] = index + 1
-        fdict['start_index'] = int(startindex) + 1
+        fdict['start_index'] = int(startindex)
         fdict['phrase'] = phrase
         fdict['timextype'] = timextype
         fdict['timexvalue'] = timexvalue
@@ -332,86 +332,171 @@ class DateTimeRecognizer(NLPModule):
             Recursively builds the new xml file in memory in place, and stamps the date xml on it
             the counter is an accumulator that keep tracks of how many sentences we have iterated over
             """
-
             for item in node:
                 if item.tag == 's':
                     counter += 1
 
-                if counter in sentenceindices:
-                    df = indexphrases[(indexphrases.sentence_index == counter) & (indexphrases.processed == 0)]
+                    if counter in sentenceindices:
+                        df = indexphrases[(indexphrases.sentence_index == counter)]
+                        if len(df) > 0:
+                            # initialization
+                            dateindex = 0
 
-                    datetags = [] # only way to add the tags is sequentially after determining the text and tails
+                            while dateindex < len(df):  # will loop top to bottom
+                                elements = [] # rebuild the sentence xml elements for every phrase
+                                phrase = str(df['phrase'].iloc[dateindex])
+                                timextype = df['timextype'].iloc[dateindex]
+                                timexvalue = df['timexvalue'].iloc[dateindex]
+                                processed = False
 
-                    for index,row in df.iterrows(): # adding date tags
-                        phrase = str(row['phrase'])
-                        startindex = int(row['start_index'])
-                        endindex = startindex + len(phrase.split())
+                                for n in item:
+                                    if processed == True:
+                                        # the date has been processed.
+                                        # add all the other elements and rebuild the sentence xml
+                                        # then move to the next date in the sentence
+                                        # quadratic processing but cant think of any other way
+                                        elements.append(n)
+                                        continue
 
+                                    fulltext = n.text.split('\n') + n.tail.split('\n')
+                                    fulltext = [f for f in fulltext if f]
+                                    fulltext = [f.split('\t')[0] for f in fulltext ]
+                                    fulltext = ' '.join(fulltext)
 
-                        fulltext = item.text.split('\n') + item.tail.split('\n')
-                        fulltext = [f for f in fulltext if f]
+                                    if phrase not in fulltext: # will always be exact match, not fuzzy
+                                        elements.append(n) # move to the next element while building
+                                    else:
+                                        # its in the text or the tail
+                                        attributes = self.timex_to_tei(timextype, timexvalue)
+                                        for key,value in attributes.items(): # loops only once
 
-                        if len(fulltext) < startindex:
-                            # jump to the next element, no need to change the counter as it wont increment
-                            # but need to change the start_index value of all phrases in the sentence
-                            temp = indexphrases[(indexphrases.sentence_index == counter) & (indexphrases.processed == 0)]
-                            for index,row in temp.iterrows():
-                                startindex = int(row['start_index'])
-                                if len(fulltext) < startindex:
-                                    indexphrases.set_value(index,'start_index',startindex - len(fulltext))
-                            break
+                                            text = n.text.split('\n')
+                                            text = [f for f in text if f]
+                                            text = [f.split('\t')[0] for f in text]
+                                            text = ' '.join(text)
 
+                                            tail = n.tail.split('\n')
+                                            tail = [f for f in tail if f]
+                                            tail = [f.split('\t')[0] for f in tail]
+                                            tail = ' '.join(tail)
 
-                        attributes = self.timex_to_tei(str(row['timextype']), str(row['timexvalue']))
-                        for key, value in attributes.items():  # just one attribute in the collection
+                                            if phrase in text:
+                                                search = re.search(phrase,text)
+                                                if search.start() > 0:
+                                                    startindex = text[0:search.start()].count(' ')
+                                                else:
+                                                    startindex = 0
 
-                            textlen = len([t for t in item.text.split('\n') if t])
-                            usetext = textlen >= startindex
+                                                splittext = n.text.split('\n')
 
-                            if usetext == True:
-                                splittext = item.text.split('\n')
-                            else:
-                                splittext = item.tail.split('\n')
-                                startindex -= textlen + 1
-                                endindex -= textlen + 1
+                                            else:
+                                                search = re.search(phrase, tail)
+                                                if search.start() > 0:
+                                                    startindex = tail[0:search.start()].count(' ')
+                                                else:
+                                                    startindex = 0
 
-                            splittext = [t for t in splittext if t]
-                            predatetext = splittext[0:startindex]
-                            datetext = splittext[startindex:endindex]
-                            postdatetext = splittext[endindex:len(splittext)]
+                                                splittext = n.tail.split('\n')
 
-                            # build the xml elements and date tags
-                            if usetext == True:
-                                if str('\n'.join(predatetext)).strip() == '':
-                                    item.text = '\n'
-                                else:
-                                    item.text = '\n' + '\n'.join(predatetext) + '\n'
-                            else:
-                                if str('\n'.join(predatetext)).strip() == '':
-                                    item.tail = '\n'
-                                else:
-                                    item.tail = '\n' + '\n'.join(predatetext) + '\n'
+                                            endindex = startindex + len(phrase.split())
 
+                                            splittext = [t for t in splittext if t]
+                                            predatetext = splittext[0:startindex]
+                                            datetext = splittext[startindex:endindex]
+                                            postdatetext = splittext[endindex:len(splittext)]
 
-                            date = ET.Element(key)
-                            for attribs in value :
-                                date.set(attribs.split(':')[0],attribs.split(':')[1])
+                                            if phrase in text:
+                                                if str('\n'.join(predatetext)).strip() == '':
+                                                    n.text = '\n'
+                                                else:
+                                                    n.text = '\n' + '\n'.join(predatetext) + '\n'
+                                            else:
+                                                if str('\n'.join(predatetext)).strip() == '':
+                                                    n.tail = '\n'
+                                                else:
+                                                    n.tail = '\n' + '\n'.join(predatetext) + '\n'
 
-                            date.text = '\n' + '\n'.join(datetext) + '\n'
+                                            # build the date element
+                                            date = ET.Element(key)
+                                            for attribs in value:
+                                                date.set(attribs.split(':')[0], attribs.split(':')[1])
 
-                            if str('\n'.join(postdatetext)).strip() == '':
-                                date.tail = '\n'
-                            else:
-                                date.tail = '\n' + '\n'.join(postdatetext) + '\n'
+                                            date.text = '\n' + '\n'.join(datetext) + '\n'
 
+                                            if str('\n'.join(postdatetext)).strip() == '':
+                                                date.tail = '\n'
+                                            else:
+                                                date.tail = '\n' + '\n'.join(postdatetext) + '\n'
 
-                            datetags.append(date)
+                                            if phrase in text: # the date is nested in the text of the element and a child of the elem
+                                                n.append(date)
+                                                elements.append(n)
+                                            else: # the date is a new child of the sentence, immediately follows the element
+                                                elements.append(n)
+                                                elements.append(date)
 
-                        indexphrases.set_value(index,'processed',1)
+                                        # mark processed
+                                        processed = True
+                                        dateindex += 1
 
-                    # now build the final tag sequentially with all nested date tags
-                    for i in range(len(datetags) - 1,-1,-1):
-                        item.append(datetags[i])
+                                if processed == False:
+
+                                    # the date is in the item's text. Not in any of the elements.
+                                    text = item.text.split('\n')
+                                    text = [f for f in text if f]
+                                    text = [f.split('\t')[0] for f in text]
+                                    text = ' '.join(text)
+
+                                    attributes = self.timex_to_tei(timextype, timexvalue)
+                                    for key, value in attributes.items():  # loops only once
+
+                                        search = re.search(phrase, text)
+                                        if search.start() > 0:
+                                            startindex = text[0:search.start()].count(' ')
+                                        else:
+                                            startindex = 0
+
+                                        splittext = item.text.split('\n')
+                                        splittext = [s for s in splittext if s]
+
+                                        endindex = startindex + len(phrase.split())
+
+                                        predatetext = splittext[0:startindex]
+                                        datetext = splittext[startindex:endindex]
+                                        postdatetext = splittext[endindex:len(splittext)]
+
+                                        if str('\n'.join(predatetext)).strip() == '':
+                                            item.text = '\n'
+                                        else:
+                                            item.text = '\n' + '\n'.join(predatetext) + '\n'
+
+                                        # build the date element
+                                        date = ET.Element(key)
+                                        for attribs in value:
+                                            date.set(attribs.split(':')[0], attribs.split(':')[1])
+
+                                        date.text = '\n' + '\n'.join(datetext) + '\n'
+
+                                        if str('\n'.join(postdatetext)).strip() == '':
+                                            date.tail = '\n'
+                                        else:
+                                            date.tail = '\n' + '\n'.join(postdatetext) + '\n'
+
+                                    elements.insert(0,date)
+                                    dateindex += 1
+                                    processed = True
+
+                                # now build the final tag sequentially with all nested date tags
+                                text = item.text
+                                tail = item.tail
+                                for i in range(0,len(elements)):
+                                    if elements[i] in item:
+                                        item.remove(elements[i])
+
+                                item.text = text
+                                for i in range(0,len(elements)):
+                                    item.append(elements[i])
+                                item.tail = tail
 
                 counter = add_datetime_tags(item,counter) # don't remove the accumulator pattern
 
@@ -502,8 +587,9 @@ class DateTimeRecognizer(NLPModule):
             if indexphrases is not None and len(indexphrases) != 0: # only if we have dates..
                 indexphrases.sort_values(['sentence_index','start_index'],ascending=[True,True],inplace=True)
 
-                # just in case..this leads to selection of only 1 date element in the same token....
-                #indexphrases= indexphrases.groupby(by=['sentence_index','start_index']).head(1)
+                # need to collapse the same phrase in different places in the sentence
+                # guessing this doesnt happen too often so we can get away with it
+                indexphrases= indexphrases.groupby(by=['sentence_index','phrase']).head(1)
                 sentenceindices = set(indexphrases['sentence_index'].tolist())
 
                 # Build the xml document with the new date tags
