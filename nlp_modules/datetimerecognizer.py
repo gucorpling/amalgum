@@ -252,20 +252,24 @@ class DateTimeRecognizer(NLPModule):
         self.hw = heideltimeobj
         self.datefilter = datefilterobj
 
+        # to extract TIMEX3 expressions from TimeML xml standard
         self.timex3regex = r'<TIMEX3.*?<\/TIMEX3>'
         self.timex3tagregex = r'(?<=\<)(.*?)(?=\>)'
 
+        # TEI normalization rules
         self.regexnonchars = r'[^0-9-]' # anything not a number or hyphen
         self.regexyyyymmdd = r'[0-9]{4}-[0-9]{2}-[0-9]{2}' # matches YYYY-MM-DD
         self.regexmmdd = r'--[0-9]{2}-[0-9]{2}' #--mm-dd, unlikely to be found in TimeML
         self.regexmm = r'--[0-9]{2}'  # matches --mm, unlikely
         self.regexyyyymm= r'[0-9]{4}-[0-9]{2}'  # matches YYYY-MM, likely!
         self.regexyyyy = r'[0-9]{4}'  # matches YYYY, likely!
+        self.regexyyyy_yyyy = r'\b[0-9]{4}-[0-9]{4}\b' # matches year ranges e.g 2006-2007
         self.seasons = {'SU':['from:--06','to:--09'],'WI':['from:--12','to:--03'],'FA':['from:--09','to:--12'],'SP':['from:--03','to:--06']}
-        self.holidates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']}
+        self.gazettedates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']}
 
 
         # TODO: 'soft-wire' feature names from the label encoder for pos tagging instead of hard-wiring in the dictionary features
+        # of the datetime filter model class
         #self.cd = '/'.join(os.path.abspath(__file__).split('/')[:-2])
         #with open(self.cd + postaglabelencoderobj, "rb") as f:
         #    le = pickle.load(f)
@@ -276,9 +280,9 @@ class DateTimeRecognizer(NLPModule):
     def provides(self):
         pass
 
-    def timex_to_tei(self,timextype,timexvalue):
+    def timex_to_tei(self,timextype,timexvalue,phrase):
         """
-        Converts TIMEX3 values to TEI encodings
+        Normalizes TIMEX3 values to TEI encodings
         Returns the tag type with attributes to build the date/time tag
         """
 
@@ -297,10 +301,14 @@ class DateTimeRecognizer(NLPModule):
         # init
         result = {}
 
+        if timextype == "SET": # dont handle SETs in TEI
+            return result
+
+
         temp = re.sub(self.regexnonchars, '', timexvalue)
         temp = striphyphens(temp)
 
-        # see if yyyy-mm-dd. -mm-dd, or --mm matched
+        # see if yyyy-mm-dd. -mm-dd, or --mm or yyyy-mm matches
         if re.match(self.regexyyyymmdd, temp) or re.match(self.regexmmdd, temp) \
                 or re.match(self.regexmm,temp) or re.match(self.regexyyyymm, temp):
             result['date'] = ['when:' + temp]
@@ -329,6 +337,17 @@ class DateTimeRecognizer(NLPModule):
             """
             Recursively builds the xml file in memory in place, and stamps the date xml on it
             the counter is an accumulator that keep tracks of how many sentences we have iterated over
+
+            the basic idea is to loop through each sentence with all its elements top down, and add the date/time phrases
+            sequentially from the top down. When a date element is added to the sentence, all the elements of the sentence
+            are rebuilt and re-ordered in place before the next element is added. Date elements are added either in an existing
+            element's text, or tail. In the event that the date phrase is not present in any element's text or tail, it is added to the
+            "s"'s text element.
+
+            The key to the logic is that the sentence elements are rebuilt top to bottom for every new date element added to the sent
+            the key variables 'elements' and 'processed'
+            the list 'elements' stores the order of elements in a sentence every time a date is added
+            and the bool processed flag ensures that the sentence is rebuilt top to bottom for every date addition
             """
             for item in node:
                 if item.tag == 's':
@@ -350,7 +369,7 @@ class DateTimeRecognizer(NLPModule):
                                 for n in item:
                                     if processed == True:
                                         # the date has been processed.
-                                        # add all the other elements and rebuild the sentence xml
+                                        # add all the other elements and rebuild the full sentence xml
                                         # then move to the next date in the sentence
                                         # quadratic processing but cant think of any other way
                                         elements.append(n)
@@ -365,7 +384,7 @@ class DateTimeRecognizer(NLPModule):
                                         elements.append(n) # move to the next element
                                     else:
                                         # its in the text or the tail
-                                        attributes = self.timex_to_tei(timextype, timexvalue)
+                                        attributes = self.timex_to_tei(timextype, timexvalue,phrase) # normalization happens here
                                         for key,value in attributes.items(): # loops only once
 
                                             text = n.text.split('\n')
@@ -433,7 +452,7 @@ class DateTimeRecognizer(NLPModule):
                                                 elements.append(n)
                                                 elements.append(date)
 
-                                        if n not in elements:
+                                        if n not in elements: # if normalization rejects the phrase, add the existing element
                                             elements.append(n)
                                         # mark processed
                                         processed = True
@@ -441,13 +460,13 @@ class DateTimeRecognizer(NLPModule):
 
                                 if processed == False:
 
-                                    # the date is in the item's text. Not in any of the elements.
+                                    # the date is in the item's ("s"'s) text. Not in any of the elements.
                                     text = item.text.split('\n')
                                     text = [f for f in text if f]
                                     text = [f.split('\t')[0] for f in text]
                                     text = ' '.join(text)
 
-                                    attributes = self.timex_to_tei(timextype, timexvalue)
+                                    attributes = self.timex_to_tei(timextype, timexvalue,phrase) # normalization happens here
                                     for key, value in attributes.items():  # loops only once
 
                                         search = re.search(re.escape(phrase), text)
@@ -455,7 +474,7 @@ class DateTimeRecognizer(NLPModule):
                                         # TODO: find a way to remove this None check.
                                         # With this, some dates dont get tagged where there
                                         # are multiple dates within a Nested element in the sentence
-                                        # these are pretty hard to add :), skipping for now as the number should be minimal
+                                        # these are pretty hard to add :), skipping for now as their number should be minimal
                                         if search is not None:
                                             if search.start() > 0:
                                                 startindex = text[0:search.start()].count(' ')
@@ -492,7 +511,7 @@ class DateTimeRecognizer(NLPModule):
 
                                     dateindex += 1
 
-                                # now build the final tag sequentially with all nested date tags
+                                # now build the final sentence sequentially with all tags and date tags
                                 text = item.text
                                 tail = item.tail
                                 for i in range(0,len(elements)):
@@ -557,7 +576,8 @@ class DateTimeRecognizer(NLPModule):
         # for the whole document
         dates,attribs = self.parse_timex3_xml(result)
 
-        # build dataframe for inference
+        # build dataframe for second filter pass
+        # custom random forest model that filters out all the False Positives generated by HT
         inferencedf = pd.DataFrame(columns=self.datefilter.featuredict.keys())
         for i in range(0,len(dates)):
             if len(dates[i]) == 0: continue # nothing in the sentence
@@ -581,7 +601,7 @@ class DateTimeRecognizer(NLPModule):
             if indexphrases is not None and len(indexphrases) != 0: # only if we have dates..
                 indexphrases.sort_values(['sentence_index','start_index'],ascending=[True,True],inplace=True)
 
-                # need to collapse the same phrase in different places in the sentence
+                # need to collapse the same phrase text in different places in the sentence
                 # guessing this doesnt happen too often so we can get away with it
                 indexphrases= indexphrases.groupby(by=['sentence_index','phrase']).head(1)
                 sentenceindices = set(indexphrases['sentence_index'].tolist())
