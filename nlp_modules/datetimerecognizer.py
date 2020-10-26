@@ -1,19 +1,15 @@
 import jpype
 import xml.etree.ElementTree as ET # this is fast!
-import html
 import re
 import pickle
 import time
 import pandas as pd
 import traceback
-pd.options.mode.chained_assignment = None  # default='warn'
-pd.set_option('display.max_columns', None)
 
-from nlp_modules.configuration import XML_ATTRIB_REFDATE,XML_ROOT_TIMEX3, DATE_FILTER_PROBA_THRESHOLD
+from nlp_modules.configuration import XML_ATTRIB_REFDATE
 from nlp_modules.base import NLPModule
 from glob import glob
 from datetime import datetime
-from xml.sax.saxutils import escape
 
 
 class HeidelTimeWrapper():
@@ -437,6 +433,8 @@ class DateTimeRecognizer(NLPModule):
                                                 elements.append(n)
                                                 elements.append(date)
 
+                                        if n not in elements:
+                                            elements.append(n)
                                         # mark processed
                                         processed = True
                                         dateindex += 1
@@ -544,20 +542,6 @@ class DateTimeRecognizer(NLPModule):
                     senttok.append(line.split('\t')[1])
                     sent.append(line.replace('\t','/')) # changes the delimiter to a cleaner one
 
-        """
-        # old way - build from XML 
-        for sent in xmltree.iter('s'):
-
-            sent, senttoken = make_sent(ET.tostring(sent, method='text').decode(self.decoding))
-
-            # some html and xml unfriendly characters throw off processing..
-            senttoken = html.unescape(senttoken)
-            senttoken = self.replace_xml_chars(senttoken)
-
-            sentences.append(sent)
-            sentencestokens.append(senttoken)
-        """
-
         # rollup
         for i in range(0,len(sentencestokens)):
             sentencestokens[i] = str(' '.join(sentencestokens[i])).strip()
@@ -609,7 +593,7 @@ class DateTimeRecognizer(NLPModule):
         tree = ET.ElementTree(root)
         return tree
 
-    # helper method
+    # helper method, unused
     def replace_xml_chars(self,text):
         return text.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;').replace('"', '&quot;').replace("'",'&apos;')  # assumes these dont affect time recognition..
 
@@ -665,15 +649,11 @@ class DateTimeRecognizer(NLPModule):
 
         # Get list of all xml files to parse
         for file in glob(input_dir + '*.xml'):
-            #file = '/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_whow_doc008.xml'
+            #file = '/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_bio_doc000.xml'
             print(file)
-
             treeobj = self.process_file(file)
             treeobj.write(open(output_dir + file.split('/')[-1], 'w'), encoding='unicode', xml_declaration=True)
-
             #break
-
-
 
 def main():
     """
