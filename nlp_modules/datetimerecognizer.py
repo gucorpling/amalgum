@@ -21,7 +21,7 @@ class HeidelTimeWrapper():
     (roughly 1 minute for the full GUM corpus v6.0)
     """
 
-    def __init__(self, lang,config=None, doc=None, output=None,jarpath=None):
+    def __init__(self, lang, config=None, doc=None, output=None,jarpath=None):
 
         if not jpype.isJVMStarted():
             jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=%s" % jarpath,convertStrings=True)
@@ -56,7 +56,7 @@ class HeidelTimeWrapper():
             'xmi': heideltime_standalone.OutputType.XMI
         }
 
-        config = '/home/gooseg/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/config.props'
+        config = '/home/nitin/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/config.props'
 
         self.language = LANGUAGES[lang]
         if (doc is None):
@@ -100,7 +100,7 @@ class DateTimeFilterModel():
         self.articles=['a','an']
 
         #load the random forest model
-        with open('/home/gooseg/Desktop/datetimeparsers/datetimeparsers/evaluation/data/datetimefilter_final.pickle', 'rb') as f:
+        with open('/home/nitin/Desktop/amalgum/amalgum/lib/datetime/datetimefilter_final.pickle', 'rb') as f:
             self.rf = pickle.load(f)
 
 
@@ -647,7 +647,7 @@ class DateTimeRecognizer(NLPModule):
         """
         Parses the TimeX3 file and returns hypotheses
         maps the dates and attributes, to each sentence as a list of lists
-        :param xmlfile: The xml file output with TIMEX3 tags created by the tool
+        :param xmltext: The xml file output with TIMEX3 tags created by the tool
         :return: list of list of dates and attributes for each sentence
         """
 
@@ -680,7 +680,7 @@ def main():
     Testing only
     """
 
-    jar = "/home/gooseg/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
+    jar = "/home/nitin/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
 
 
     hw = HeidelTimeWrapper('english',jarpath=jar)
@@ -689,7 +689,7 @@ def main():
     dtr = DateTimeRecognizer(heideltimeobj=hw,datefilterobj=dfilter,postaglabelencoderobj=postagleobj)
 
     start = time.time()
-    dtr.run(input_dir='/home/gooseg/Desktop/amalgum/amalgum/target/04_DepParser/xml/',output_dir='/home/gooseg/Desktop/amalgum/amalgum/target/testdate/')
+    dtr.run(input_dir='/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/',output_dir='/home/nitin/Desktop/amalgum/amalgum/target/testdate/')
     print (time.time() - start)
 
 
