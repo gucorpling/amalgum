@@ -249,7 +249,8 @@ class DateTimeRecognizer(NLPModule):
 
         super().__init__(config=None)
         self.decoding = decoding
-        self.hw = heideltimeobj
+        self.hw = HeidelTimeWrapper('english',doc='news')
+        self.hwnarr = HeidelTimeWrapper('english',doc='narratives')
         self.datefilter = datefilterobj
 
         # to extract TIMEX3 expressions from TimeML xml standard
@@ -266,6 +267,7 @@ class DateTimeRecognizer(NLPModule):
         self.regexyyyy_yyyy = r'\b[0-9]{4}-[0-9]{4}\b' # matches year ranges e.g 2006-2007
         self.regexyyyy_d = r'\b[0-9]{4}-[0-9]{1}\b' # a negative match, yyyy-i which comes up in soccer match descriptions (the second half)
         self.regexyyyyss = r'\b[0-9]{4}-(SU|WI|FA|SP)\b' # yyyy_seasoncode eg 2014-SU
+        self.regexcentury = r'^(0|1|2)[0-9]\b' #centuries e.g 18 for 18th century
 
         self.regexyearrange = r'\b(|1|2)[0-9]{2}\b' # where the timex3 value is like 198 for 'the 1980s'
         self.phraseyearrange = r'\b([0-9]{2}|[0-9]{4})s\b' # validates that the phrase itself is a year range 'the 1980s'
@@ -337,6 +339,11 @@ class DateTimeRecognizer(NLPModule):
         # check for negative matches here and skip
         if re.match(self.regexyyyy_d,temp): return result
 
+        # TIMEX centuries are two digit values
+        if re.search(self.regexcentury,temp):
+            result['date'] =['from:' + temp + '00','to:' + temp + '99']
+            return result
+
         # check for year ranges
         if re.search(self.phraseyearrange,phrase) and re.match(self.regexyearrange,temp):
             result['date'] = ['from:' + str(temp) + '0','to:' + str(temp) + '9'  ]
@@ -359,6 +366,11 @@ class DateTimeRecognizer(NLPModule):
         # see if yyyy-mm-dd or yyyy-mm matches
         if re.match(self.regexyyyymmdd, temp) \
                 or re.match(self.regexyyyymm, temp):
+
+            date = temp.split('-')
+            if int(date[1]) > 12: return result
+            if len(date) == 3:
+                if int(date[2]) > 31: return result
 
             self.prevsentencedate = check_year(temp,phrase)
             result['date'] = ['when:' + self.prevsentencedate]
@@ -636,7 +648,10 @@ class DateTimeRecognizer(NLPModule):
         text = '\n'.join(sentencestokens)
 
         # the main course...
-        result = self.hw.parse(text,dateCreated) # heideltime lets you pass a reference date for each file. #TODO: pass category e.g 'news'
+        if '_news_' in filename or '_interview_' in filename:
+            result = self.hw.parse(text,dateCreated)
+        else:
+            result = self.hwnarr.parse(text,dateCreated)
 
         # gets datetime expressions and timex3 attributes for said expression
         # for the whole document
