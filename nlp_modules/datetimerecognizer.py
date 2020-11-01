@@ -4,6 +4,7 @@ import re
 import pickle
 import time
 import pandas as pd
+import math
 import traceback
 
 from nlp_modules.configuration import XML_ATTRIB_REFDATE
@@ -115,7 +116,7 @@ class DateTimeFilterModel():
     def inference(self):
         pass
 
-    def build_featureset(self,sfull,stok,phrase,index,timextype,timexvalue):
+    def build_featureset(self,sfull,stok,phrase,index,timextype,timexvalue,timexmod):
         """
         Builds a row of features for the date phrase from a template and adds some extra features
         sfull is the sentence with each token tagged with its corresponding feature
@@ -240,6 +241,7 @@ class DateTimeFilterModel():
         fdict['phrase'] = phrase
         fdict['timextype'] = timextype
         fdict['timexvalue'] = timexvalue
+        fdict['timexmod'] = timexmod
 
         return fdict
 
@@ -249,8 +251,12 @@ class DateTimeRecognizer(NLPModule):
 
         super().__init__(config=None)
         self.decoding = decoding
+
+        # Two HeidelTime instantiations, as HT treats doc categories differently
         self.hw = HeidelTimeWrapper('english',doc='news')
         self.hwnarr = HeidelTimeWrapper('english',doc='narratives')
+
+        # object for refining HT dates to better align to GUM standards
         self.datefilter = datefilterobj
 
         # to extract TIMEX3 expressions from TimeML xml standard
@@ -258,7 +264,7 @@ class DateTimeRecognizer(NLPModule):
         self.timex3tagregex = r'(?<=\<)(.*?)(?=\>)'
 
         # TEI normalization rules
-        self.regexnonchars = r'[^0-9-]' # anything not a number or hyphen
+        self.regexnonchars = r'[^0-9-PYSUWIFASP:]' # anything not a number or hyphen, or P or Y e.g P19Y or seasons
         self.regexyyyymmdd = r'[0-9]{4}-[0-9]{2}-[0-9]{2}' # matches YYYY-MM-DD
         self.regexmmdd = r'--[0-9]{2}-[0-9]{2}' #--mm-dd, unlikely to be found in TimeML
         self.regexmm = r'--[0-9]{2}'  # matches --mm, unlikely
@@ -268,14 +274,14 @@ class DateTimeRecognizer(NLPModule):
         self.regexyyyy_d = r'\b[0-9]{4}-[0-9]{1}\b' # a negative match, yyyy-i which comes up in soccer match descriptions (the second half)
         self.regexyyyyss = r'\b[0-9]{4}-(SU|WI|FA|SP)\b' # yyyy_seasoncode eg 2014-SU
         self.regexcentury = r'^(0|1|2)[0-9]\b' #centuries e.g 18 for 18th century
-
         self.regexyearrange = r'\b(|1|2)[0-9]{2}\b' # where the timex3 value is like 198 for 'the 1980s'
         self.phraseyearrange = r'\b([0-9]{2}|[0-9]{4})s\b' # validates that the phrase itself is a year range 'the 1980s'
+        self.regexduration = r'\bP([0-9]{2}|[0-9]{1})Y\b' # captures duration values
+        self.regextimeformat = r'\b[0-9]{2}:[0-9]{2}\b' # matches time formats eg 20:00
+        self.seasons = {'SU':['--06','--09'],'WI':['--12','--03'],'FA':['--09','--12'],'SP':['--03','--06']} # taken from the Farmer's Almanac
+        self.gazettedates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']} # dates based on lookups of events
 
-
-        self.seasons = {'SU':['--06','--09'],'WI':['--12','--03'],'FA':['--09','--12'],'SP':['--03','--06']}
-        self.gazettedates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']}
-
+        # helps check against impossible years relative to the dct
         self.prevsentencedate = None
 
         # TODO: 'soft-wire' feature names from the label encoder for pos tagging instead of hard-wiring in the dictionary features
@@ -290,30 +296,37 @@ class DateTimeRecognizer(NLPModule):
     def provides(self):
         pass
 
-    def timex_to_tei(self,timextype,timexvalue,phrase,dct=None):
+    def timex_to_tei(self,timextype,timexvalue,timexmod,phrase,dct=None):
         """
+        Params: the timex3 type, the timex3 val, timex3 mod attribute, the actual date phrase, and the document creation time
+
         Normalizes TIMEX3 values to TEI encodings
         Returns the tag type with attributes to build the date/time tag
+        Also does some validations and makes some assumptions
         Add any fixes for normalization issues here
+
+        To skip conversion and the date/time phrase, return an empty dictionary
         """
 
-        # Some validations
-
-        # for yyyymmdd, checks that the year matches the year of the dct and the previous detected year
-        # from-to or notbefore-notafter
-        # centuries, decades
-        # times
-
+        # Helper - cleans the timex3 val
         def striphyphens(text):
             if text[-1:] == '-': text = text[:-1]
             if text[:1] == '-' and text[:2] != '-': text = text[1:]
             return text
 
+        # Helper - screens impossible years
         def check_year(text,phrase):
+            """
+            filters out impossible years in a date that have been marked years by mistake
+            and if necessary rebuilds the timex3 val with just the month and day part
+            """
+
             dctyear = dct.split('-')[0]
 
             if self.prevsentencedate is not None and '--' not in self.prevsentencedate:  # this means it has a year
                 prevsentyear = self.prevsentencedate.split('-')[0]
+                if abs(int(dctyear) - int(prevsentyear)) > 100:
+                    prevsentyear = None # revert to None
             else:
                 prevsentyear = None
 
@@ -323,14 +336,23 @@ class DateTimeRecognizer(NLPModule):
                 matches = re.findall(self.regexyyyy,phrase)
                 for match in matches:
                     if match == textyear: return text
-                else: return prevsentyear + '-' + '-'.join(text.split('-')[1:])
+                    else: return prevsentyear + '-' + '-'.join(text.split('-')[1:])
+
+            elif abs(int(dctyear) - int(textyear)) > 100: # cant really be 100+ year diff between dct and the timex date
+                matches = re.findall(self.regexyyyy, phrase)
+                for match in matches:
+                    if match == textyear: return text
+
+                text = '--' + '-'.join(text.split('-')[1:])  # get rid of text and dct year as they are impossible
+
+                return text
 
             return text
 
         # init
         result = {}
 
-        if timextype == "SET": # dont handle SETs in TEI
+        if timextype == "SET": # dont handle SETs in TEI as they cant be mapped to the TEI attributes
             return result
 
         temp = re.sub(self.regexnonchars, '', timexvalue)
@@ -339,58 +361,107 @@ class DateTimeRecognizer(NLPModule):
         # check for negative matches here and skip
         if re.match(self.regexyyyy_d,temp): return result
 
-        # TIMEX centuries are two digit values
-        if re.search(self.regexcentury,temp):
-            result['date'] =['from:' + temp + '00','to:' + temp + '99']
+        #  TODO: gazetted dates, extract straight from the token as the date/time filter will remove these
+        for key, value in self.gazettedates.items():
+            if key in phrase.lower().strip():
+                result['date'] = value
+                return result
+
+        # check for time TODO: revisit, Heideltime cant detect time values in raw tokens like 20:00, 08:30, etc
+        if re.search(self.regextimeformat,temp):
+            result['time'] = ['when:' + temp.replace(':','').replace('-','')]
             return result
 
-        # check for year ranges
+        # mod MORE_THAN - will result in a date_notBefore:dct - timex3 duration val
+        if timexmod == "MORE_THAN" and re.search(self.regexduration,temp):
+            #e.g more than 20 years ago.
+            result['date'] = ['notBefore:' + str(int(dct.split('-')[0]) - int(temp.replace('P','').replace('Y',''))) + '-' + '-'.join(dct.split('-')[1:]) ]
+            return result
+
+        # TIMEX3 centuries are two digit values. Convert to a date from_to
+        if re.search(self.regexcentury,temp):
+            if timexmod is None:
+                result['date'] =['from:' + temp + '00','to:' + temp + '99']
+            else: # TIMEX3 has START, MID, END so split it 3 ways
+                if timexmod == "START":
+                    result['date'] = ['from:' + temp + '00', 'to:' + temp + '33']
+                elif timexmod == "MID":
+                    result['date'] = ['from:' + temp + '33', 'to:' + temp + '66']
+                elif timexmod == "END":
+                    result['date'] = ['from:' + temp + '66', 'to:' + temp + '99']
+            return result
+
+        # check for year ranges, e.g 1980s, 1990s
         if re.search(self.phraseyearrange,phrase) and re.match(self.regexyearrange,temp):
             result['date'] = ['from:' + str(temp) + '0','to:' + str(temp) + '9'  ]
             return result
 
-        #yyyy-yyyy
+        #Check for year range specified in the phrase as yyyy-yyyy
         if re.search(self.regexyyyy_yyyy,phrase):
             fromyear = phrase.split('-')[0]
             toyear = phrase.split('-')[1]
             result['date'] = ['from:' + fromyear,'to:' + toyear]
             return result
 
-        #  -mm-dd, or --mm
+        # Check for -mm-dd, or --mm. This rarely happens based on the target folder samples
         if re.match(self.regexmmdd, temp) \
            or re.match(self.regexmm, temp):
             result['date'] = ['when:' + temp]
             return result
 
 
-        # see if yyyy-mm-dd or yyyy-mm matches
+        # Check if yyyy-mm-dd or yyyy-mm matches
         if re.match(self.regexyyyymmdd, temp) \
                 or re.match(self.regexyyyymm, temp):
 
             date = temp.split('-')
+            if date[0] not in phrase and phrase in temp: # this is a cricket score, likely
+                return result
+
+            temp = check_year(temp, phrase)
+
+            if re.match(self.regexmm,temp): # too sparse, skip this
+                return result
+
+            # if the year turned out to be impossible, dont reset the previous date marker
+            if re.match(self.regexyyyymmdd,temp) or re.match(self.regexyyyymm,temp):
+                self.prevsentencedate = temp
+
             if int(date[1]) > 12: return result
             if len(date) == 3:
                 if int(date[2]) > 31: return result
 
-            self.prevsentencedate = check_year(temp,phrase)
-            result['date'] = ['when:' + self.prevsentencedate]
+            result['date'] = ['when:' + temp]
             return result
 
+        # Seasons! the timex3 val is always YYYY-(SU|WI|FA|SP)
         if re.match(self.regexyyyyss,temp):
-            season = temp.split('-')[-1]
-            result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--',''),'to:' + temp.split('-')[0] + '-' + self.seasons[season][1].replace('--','')]
+            season = check_year(temp,phrase)
+            if re.match(self.regexyyyyss,season):
+                # require the season year to match dct year or something's off
+                seasonyear = temp.split('-')[0]
+                dctyear = dct.split('-')[0]
+                if seasonyear != dctyear: return result
+
+                season = temp.split('-')[-1]
+                if season != 'WI':
+                    result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--',''),'to:' + temp.split('-')[0] + '-' + self.seasons[season][1].replace('--','')]
+                else:
+                    result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--',''),'to:' + str(int(temp.split('-')[0]) + 1 )+ '-' + self.seasons[season][1].replace('--','')]
+
             return result
 
 
+        # Normal years
         if re.match(self.regexyyyy,temp):
+            # if the year is way too far into the future, something's off
+            # will affect sci-fi genres mostly without a  better method
+            if int(temp) > 2500: # 500 years
+                return result
             result['date'] = ['when:' + temp]
             return result
 
 
-        for key,value in self.gazettedates.items():
-            if key in phrase.lower().strip():
-                result['date'] = value
-                return result
 
         return result
 
@@ -439,6 +510,7 @@ class DateTimeRecognizer(NLPModule):
                                 phrase = str(df['phrase'].iloc[dateindex])
                                 timextype = df['timextype'].iloc[dateindex]
                                 timexvalue = df['timexvalue'].iloc[dateindex]
+                                timexmod = df['timexmod'].iloc[dateindex]
                                 processed = False
 
                                 for n in item:
@@ -446,7 +518,6 @@ class DateTimeRecognizer(NLPModule):
                                         # the date has been processed.
                                         # add all the other elements and rebuild the full sentence xml
                                         # then move to the next date in the sentence
-                                        # quadratic processing but cant think of any other way
                                         elements.append(n)
                                         continue
 
@@ -459,7 +530,7 @@ class DateTimeRecognizer(NLPModule):
                                         elements.append(n) # move to the next element
                                     else:
                                         # its in the text or the tail
-                                        attributes = self.timex_to_tei(timextype, timexvalue,phrase,dateCreated) # normalization happens here
+                                        attributes = self.timex_to_tei(timextype, timexvalue,timexmod,phrase,dateCreated) # normalization happens here
                                         for key,value in attributes.items(): # loops only once
 
                                             text = n.text.split('\n')
@@ -541,7 +612,7 @@ class DateTimeRecognizer(NLPModule):
                                     text = [f.split('\t')[0] for f in text]
                                     text = ' '.join(text)
 
-                                    attributes = self.timex_to_tei(timextype, timexvalue,phrase,dateCreated) # normalization happens here
+                                    attributes = self.timex_to_tei(timextype, timexvalue,timexmod,phrase,dateCreated) # normalization happens here
                                     for key, value in attributes.items():  # loops only once
 
                                         search = re.search(re.escape(phrase), text)
@@ -666,14 +737,20 @@ class DateTimeRecognizer(NLPModule):
             if len(dates[i]) == 0: continue # nothing in the sentence
 
             for j in range(0,len(dates[i])):
-                timextype = attribs[i][j][0][1] # assumes that the order is always type then value
+                timextype = attribs[i][j][0][1] # assumes that the order is always type then value then mod
                 timexvalue = attribs[i][j][1][1]
-                f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],dates[i][j],i,timextype,timexvalue)
+                if len(attribs[i][j]) > 2:
+                    timexmod = attribs[i][j][2][1]
+                    timexmod = timexmod.replace('"','')
+                else:
+                    timexmod = None
+
+                f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],dates[i][j],i,timextype,timexvalue,timexmod)
                 inferencedf = inferencedf.append(f,ignore_index=True)
 
         if len(inferencedf) != 0:
-            indexphrases = inferencedf[['sentence_index','start_index','phrase','timextype','timexvalue']]
-            inferencedf.drop(columns=['sentence_index','start_index','phrase','timextype','timexvalue'],axis=1,inplace=True)
+            indexphrases = inferencedf[['sentence_index','start_index','phrase','timextype','timexvalue','timexmod']]
+            inferencedf.drop(columns=['sentence_index','start_index','phrase','timextype','timexvalue','timexmod'],axis=1,inplace=True)
 
             # Filter the dates that dont pass GUM annotated standards..
             tpprobs = self.datefilter.rf.predict(inferencedf)
@@ -721,8 +798,8 @@ class DateTimeRecognizer(NLPModule):
             attrib = str(attrib[0]).replace('TIMEX3','') # there's only going to be one match ever
             attrib = attrib.split()
             attrib = [attr.split('=') for attr in attrib]
-            # we only want the type and value for now, fetch more if needed
-            attrib = [attr for attr in attrib if attr[0] == 'type' or attr[0] == 'value']
+            # we only want the type and value and mod for now, fetch more if needed
+            attrib = [attr for attr in attrib if attr[0] == 'type' or attr[0] == 'value' or attr[0] == "mod"]
             attributes.append(attrib)
 
             phrase = (re.sub(self.timex3tagregex, '', match))
@@ -757,7 +834,7 @@ class DateTimeRecognizer(NLPModule):
 
         # Get list of all xml files to parse
         for file in glob(input_dir + '*.xml'):
-            #file = '/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_bio_doc008.xml'
+            #file = '/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_voyage_doc008.xml'
             #print(file)
             treeobj = self.process_file(file)
             treeobj.write(open(output_dir + file.split('/')[-1], 'w'), encoding='unicode', xml_declaration=True)
