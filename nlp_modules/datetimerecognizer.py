@@ -4,14 +4,14 @@ import re
 import pickle
 import time
 import pandas as pd
-import math
-import traceback
+import os
+import wget
+import tarfile
 
-from nlp_modules.configuration import XML_ATTRIB_REFDATE
-from nlp_modules.base import NLPModule
+from nlp_modules.configuration import XML_ATTRIB_REFDATE, HEIDELTIME_STANDALONE
+from nlp_modules.base import NLPModule,  PipelineDep, NLPDependencyException
 from glob import glob
 from datetime import datetime
-
 
 class HeidelTimeWrapper():
 
@@ -22,10 +22,10 @@ class HeidelTimeWrapper():
     (roughly 1 minute for the full GUM corpus v6.0)
     """
 
-    def __init__(self, lang, config=None, doc=None, output=None,jarpath=None):
+    def __init__(self,  lang,  config=None,  doc=None,  output=None, jarpath=None):
 
         if not jpype.isJVMStarted():
-            jpype.startJVM(jpype.getDefaultJVMPath(), "-ea", "-Djava.class.path=%s" % jarpath,convertStrings=True)
+            jpype.startJVM(jpype.getDefaultJVMPath(),  "-ea",  "-Djava.class.path=%s" % jarpath, convertStrings=True)
 
         # get the Java classes we want to use
         heideltime_resources = jpype.JPackage("de.unihd.dbs.uima.annotator.heideltime.resources")
@@ -34,26 +34,26 @@ class HeidelTimeWrapper():
         # constants
         LANGUAGES = {
             'english': heideltime_resources.Language.ENGLISH
-            #'german': heideltime_resources.Language.GERMAN,
-            #'dutch': heideltime_resources.Language.DUTCH,
-            #'italian': heideltime_resources.Language.ITALIAN,
-            #'spanish': heideltime_resources.Language.SPANISH,
-            #'arabic': heideltime_resources.Language.ARABIC,
-            #'french': heideltime_resources.Language.FRENCH,
-            #'chinese': heideltime_resources.Language.CHINESE,
-            #'russian': heideltime_resources.Language.RUSSIAN,
+            #'german': heideltime_resources.Language.GERMAN, 
+            #'dutch': heideltime_resources.Language.DUTCH, 
+            #'italian': heideltime_resources.Language.ITALIAN, 
+            #'spanish': heideltime_resources.Language.SPANISH, 
+            #'arabic': heideltime_resources.Language.ARABIC, 
+            #'french': heideltime_resources.Language.FRENCH, 
+            #'chinese': heideltime_resources.Language.CHINESE, 
+            #'russian': heideltime_resources.Language.RUSSIAN, 
             #'portuguese': heideltime_resources.Language.PORTUGUESE
         }
 
         DOCUMENTS = {
-            'narratives': heideltime_standalone.DocumentType.NARRATIVES,
-            'news': heideltime_standalone.DocumentType.NEWS,
-            'colloquial': heideltime_standalone.DocumentType.COLLOQUIAL,
+            'narratives': heideltime_standalone.DocumentType.NARRATIVES, 
+            'news': heideltime_standalone.DocumentType.NEWS, 
+            'colloquial': heideltime_standalone.DocumentType.COLLOQUIAL, 
             'scientific': heideltime_standalone.DocumentType.SCIENTIFIC
         }
 
         OUTPUTS = {
-            'timeml': heideltime_standalone.OutputType.TIMEML,
+            'timeml': heideltime_standalone.OutputType.TIMEML, 
             'xmi': heideltime_standalone.OutputType.XMI
         }
 
@@ -69,14 +69,14 @@ class HeidelTimeWrapper():
         else:
             self.output_type = OUTPUTS[output]
 
-        self.heideltime = heideltime_standalone.HeidelTimeStandalone(self.language, self.doc_type, self.output_type, config)
+        self.heideltime = heideltime_standalone.HeidelTimeStandalone(self.language,  self.doc_type,  self.output_type,  config)
 
-    def convert_date(self, day, month, year):
+    def convert_date(self,  day,  month,  year):
         sdf = jpype.java.text.SimpleDateFormat('dd-M-yyyy hh:mm:ss')
         str_date = str(day)+'-'+str(month)+'-'+str(year)+' 00:00:00'
         return sdf.parse(str_date)
 
-    def parse(self, text, date_ref=None):
+    def parse(self,  text,  date_ref=None):
         """
         date_ref format must be YYYY-MM-DD or exception
         this may be guaranteed if dateCreated in the xml is YYYY-MM-DD
@@ -85,30 +85,179 @@ class HeidelTimeWrapper():
             document_creation_date = jpype.java.util.Date()
         else:
             # convert to Java.util.Date
-            document_creation_date = self.convert_date(date_ref.split('-')[2],date_ref.split('-')[1],date_ref.split('-')[0])
+            document_creation_date = self.convert_date(date_ref.split('-')[2], date_ref.split('-')[1], date_ref.split('-')[0])
 
         # the main juice...ensure that convertString param is set to True when starting the JVM or you'll get a java String here
-        return self.heideltime.process(text, document_creation_date)
+        return self.heideltime.process(text,  document_creation_date)
 
 class DateTimeFilterModel():
 
-    def __init__(self,modelfile=None,datafile=None):
+    def __init__(self, modelfile, datafile=None):
         """
         modelfile - path to the pickle file used as the filter
-        datafile - path to the training data file.
+        datafile - path to the training data file. #TODO
         """
 
-        self.articles=['a','an']
+        self.articles=['a', 'an']
 
         #load the random forest model
-        with open('/home/nitin/Desktop/amalgum/amalgum/lib/datetime/datetimefilter_final.pickle', 'rb') as f:
+        with open(modelfile,  'rb') as f:
             self.rf = pickle.load(f)
 
 
         # this is just a template and not the real feature set; this is used to build the real featureset
         # the postags are taken from the label encoder model that encodes the result of the pos tag ensembler
-        self.featuredict = {'obl':0,'obl:npmod':0,'obl:tmod':0,'nsubj':0,'nsubj:pass':0,'obj':0,'iobj':0,'csubj':0,'csubj:pass':0,'ccomp':0,'xcomp':0,'nummod':0,'acl':0,'amod':0,'appos':0,'acl:relcl':0,'det':0,'det:predet':0,'neg':0,'nmod':0,'case':0,'nmod:npmod':0,'nmod:tmod':0,'nmod:poss':0,'advcl':0,'advmod':0,'compound':0,'compound:prt':0,'flat':0,'fixed':0,'foreign':0,'goeswith':0,'list':0,'dislocated':0,'parataxis':0,'orphan':0,'reparandum':0,'vocative':0,'discourse':0,'expl':0,'aux':0,'aux:pass':0,'cop':0,'mark':0,'punct':0,'conj':0,'cc':0,'cc:preconj':0,'root':0,'dep':0,'$':0, "''":0, ',':0, '-LRB-':0, '-LSB-':0, '-RRB-':0, '-RSB-':0, '.':0 ,':':0, 'ADD':0, 'ADJ':0,'NP':0, 'ADP':0,'ADV':0, 'AFX':0, 'AUX':0, 'CC':0, 'CCONJ':0, 'CD':0, 'DET':0, 'DT':0, 'EX':0, 'FW':0, 'GW':0, 'HYPH':0, 'IN':0,'INTJ':0, 'JJ':0, 'JJR':0, 'JJS':0, 'LS':0, 'MD':0, 'NFP':0, 'NN':0, 'NNP':0, 'NNPS':0, 'NNS':0, 'NOUN':0,'NUM':0, 'PART':0, 'PDT':0, 'POS':0, 'PRON':0, 'PROPN':0, 'PRP':0, 'PRP$':0, 'PUNCT':0, 'RB':0, 'RBR':0,'RBS':0, 'RP':0, 'SYM':0, 'TO':0, 'UH':0, 'VB':0, 'VBD':0, 'VBG':0, 'VBN':0, 'VBP':0, 'VBZ':0, 'VERB':0,'WDT':0, 'WP':0, 'WP$':0, 'WRB':0, 'X':0, '``':0,'january':0,'february':0,'march':0,'april':0,'may':0,'june':0,'july':0,'august':0,'september':0,'october':0,'november':0,'december':0,'summer':0,'winter':0,'autumn':0,'spring':0,'christmas':0,'christmas_eve':0,'easter':0,'easter_sunday':0,'monday':0,'tuesday':0,'wednesday':0,'thursday':0,'friday':0,'saturday':0,'sunday':0,'start1_obl':0,'start1_obl:npmod':0,'start1_obl:tmod':0,'start1_nsubj':0,'start1_nsubj:pass':0,'start1_obj':0,'start1_iobj':0,'start1_csubj':0,'start1_csubj:pass':0,'start1_ccomp':0,'start1_xcomp':0,'start1_nummod':0,'start1_acl':0,'start1_amod':0,'start1_appos':0,'start1_acl:relcl':0,'start1_det':0,'start1_det:predet':0,'start1_neg':0,'start1_nmod':0,'start1_case':0,'start1_nmod:npmod':0,'start1_nmod:tmod':0,'start1_nmod:poss':0,'start1_advcl':0,'start1_advmod':0,'start1_compound':0,'start1_compound:prt':0,'start1_flat':0,'start1_fixed':0,'start1_foreign':0,'start1_goeswith':0,'start1_list':0,'start1_dislocated':0,'start1_parataxis':0,'start1_orphan':0,'start1_reparandum':0,'start1_vocative':0,'start1_discourse':0,'start1_expl':0,'start1_aux':0,'start1_aux:pass':0,'start1_cop':0,'start1_mark':0,'start1_conj':0,'start1_cc':0,'start1_cc:preconj':0,'start1_punct':0,'start1_root':0,'start1_dep':0,'start1_$':0, "start1_''":0, 'start1_,':0, 'start1_-LRB-':0, 'start1_-LSB-':0, 'start1_-RRB-':0, 'start1_-RSB-':0, 'start1_.':0 ,'start1_:':0, 'start1_ADD':0, 'start1_ADJ':0,'start1_NP':0, 'start1_ADP':0,'start1_ADV':0, 'start1_AFX':0, 'start1_AUX':0, 'start1_CC':0, 'start1_CCONJ':0, 'start1_CD':0, 'start1_DET':0, 'start1_DT':0, 'start1_EX':0, 'start1_FW':0, 'start1_GW':0, 'start1_HYPH':0, 'start1_IN':0,'start1_INTJ':0, 'start1_JJ':0, 'start1_JJR':0, 'start1_JJS':0, 'start1_LS':0, 'start1_MD':0, 'start1_NFP':0, 'start1_NN':0, 'start1_NNP':0, 'start1_NNPS':0, 'start1_NNS':0, 'start1_NOUN':0,'start1_NUM':0, 'start1_PART':0, 'start1_PDT':0, 'start1_POS':0, 'start1_PRON':0, 'start1_PROPN':0, 'start1_PRP':0, 'start1_PRP$':0, 'start1_PUNCT':0, 'start1_RB':0, 'start1_RBR':0,'start1_RBS':0, 'start1_RP':0, 'start1_SYM':0, 'start1_TO':0, 'start1_UH':0, 'start1_VB':0, 'start1_VBD':0, 'start1_VBG':0, 'start1_VBN':0, 'start1_VBP':0, 'start1_VBZ':0, 'start1_VERB':0,'start1_WDT':0, 'start1_WP':0, 'start1_WP$':0, 'start1_WRB':0, 'start1_X':0, 'start1_``':0,'end1_obl':0,'end1_obl:npmod':0,'end1_obl:tmod':0,'end1_nsubj':0,'end1_nsubj:pass':0,'end1_obj':0,'end1_iobj':0,'end1_csubj':0,'end1_csubj:pass':0,'end1_ccomp':0,'end1_xcomp':0,'end1_nummod':0,'end1_acl':0,'end1_amod':0,'end1_appos':0,'end1_acl:relcl':0,'end1_det':0,'end1_det:predet':0,'end1_neg':0,'end1_nmod':0,'end1_case':0,'end1_nmod:npmod':0,'end1_nmod:tmod':0,'end1_nmod:poss':0,'end1_advcl':0,'end1_advmod':0,'end1_compound':0,'end1_compound:prt':0,'end1_flat':0,'end1_fixed':0,'end1_foreign':0,'end1_goeswith':0,'end1_list':0,'end1_dislocated':0,'end1_parataxis':0,'end1_orphan':0,'end1_reparandum':0,'end1_vocative':0,'end1_discourse':0,'end1_expl':0,'end1_aux':0,'end1_aux:pass':0,'end1_cop':0,'end1_mark':0,'end1_punct':0,'end1_conj':0,'end1_cc':0,'end1_cc:preconj':0,'end1_root':0,'end1_dep':0,'end1_$':0, "end1_''":0, 'end1_,':0, 'end1_-LRB-':0, 'end1_-LSB-':0, 'end1_-RRB-':0, 'end1_-RSB-':0, 'end1_.':0 ,'end1_:':0, 'end1_ADD':0, 'end1_ADJ':0,'end1_NP':0, 'end1_ADP':0,'end1_ADV':0, 'end1_AFX':0, 'end1_AUX':0, 'end1_CC':0, 'end1_CCONJ':0, 'end1_CD':0, 'end1_DET':0, 'end1_DT':0, 'end1_EX':0, 'end1_FW':0, 'end1_GW':0, 'end1_HYPH':0, 'end1_IN':0,'end1_INTJ':0, 'end1_JJ':0, 'end1_JJR':0, 'end1_JJS':0, 'end1_LS':0, 'end1_MD':0, 'end1_NFP':0, 'end1_NN':0, 'end1_NNP':0, 'end1_NNPS':0, 'end1_NNS':0, 'end1_NOUN':0,'end1_NUM':0, 'end1_PART':0, 'end1_PDT':0, 'end1_POS':0, 'end1_PRON':0, 'end1_PROPN':0, 'end1_PRP':0, 'end1_PRP$':0, 'end1_PUNCT':0, 'end1_RB':0, 'end1_RBR':0,'end1_RBS':0, 'end1_RP':0, 'end1_SYM':0, 'end1_TO':0, 'end1_UH':0, 'end1_VB':0, 'end1_VBD':0, 'end1_VBG':0, 'end1_VBN':0, 'end1_VBP':0, 'end1_VBZ':0, 'end1_VERB':0,'end1_WDT':0, 'end1_WP':0, 'end1_WP$':0, 'end1_WRB':0, 'end1_X':0, 'end1_``':0,'end2_obl':0,'end2_obl:npmod':0,'end2_obl:tmod':0,'end2_nsubj':0,'end2_nsubj:pass':0,'end2_obj':0,'end2_iobj':0,'end2_csubj':0,'end2_csubj:pass':0,'end2_ccomp':0,'end2_xcomp':0,'end2_nummod':0,'end2_acl':0,'end2_amod':0,'end2_appos':0,'end2_acl:relcl':0,'end2_det':0,'end2_det:predet':0,'end2_neg':0,'end2_nmod':0,'end2_case':0,'end2_nmod:npmod':0,'end2_nmod:tmod':0,'end2_nmod:poss':0,'end2_advcl':0,'end2_advmod':0,'end2_compound':0,'end2_compound:prt':0,'end2_flat':0,'end2_fixed':0,'end2_foreign':0,'end2_goeswith':0,'end2_list':0,'end2_dislocated':0,'end2_parataxis':0,'end2_orphan':0,'end2_reparandum':0,'end2_vocative':0,'end2_discourse':0,'end2_expl':0,'end2_aux':0,'end2_aux:pass':0,'end2_cop':0,'end2_mark':0,'end2_punct':0,'end2_conj':0,'end2_cc':0,'end2_cc:preconj':0,'end2_root':0,'end2_dep':0,'end2_$':0, "end2_''":0, 'end2_,':0, 'end2_-LRB-':0, 'end2_-LSB-':0, 'end2_-RRB-':0, 'end2_-RSB-':0, 'end2_.':0 ,'end2_:':0, 'end2_ADD':0, 'end2_ADJ':0,'end2_NP':0, 'end2_ADP':0,'end2_ADV':0, 'end2_AFX':0, 'end2_AUX':0, 'end2_CC':0, 'end2_CCONJ':0, 'end2_CD':0, 'end2_DET':0, 'end2_DT':0, 'end2_EX':0, 'end2_FW':0, 'end2_GW':0, 'end2_HYPH':0, 'end2_IN':0,'end2_INTJ':0, 'end2_JJ':0, 'end2_JJR':0, 'end2_JJS':0, 'end2_LS':0, 'end2_MD':0, 'end2_NFP':0, 'end2_NN':0, 'end2_NNP':0, 'end2_NNPS':0, 'end2_NNS':0, 'end2_NOUN':0,'end2_NUM':0, 'end2_PART':0, 'end2_PDT':0, 'end2_POS':0, 'end2_PRON':0, 'end2_PROPN':0, 'end2_PRP':0,'end2_PP$':0,'end1_PP$':0,'start2_PP$':0,'start1_PP$':0,'end2_PP':0,'end1_PP':0,'start2_PP':0,'start1_PP':0, 'end2_PRP$':0, 'end2_PUNCT':0, 'end2_RB':0, 'end2_RBR':0,'end2_RBS':0, 'end2_RP':0, 'end2_SYM':0, 'end2_TO':0, 'end2_UH':0, 'end2_VB':0, 'end2_VBD':0, 'end2_VBG':0, 'end2_VBN':0, 'end2_VBP':0, 'end2_VBZ':0, 'end2_VERB':0,'end2_WDT':0, 'end2_WP':0, 'end2_WP$':0, 'end2_WRB':0, 'end2_X':0, 'end2_``':0,'start2_obl':0,'start2_obl:npmod':0,'start2_obl:tmod':0,'start2_nsubj':0,'start2_nsubj:pass':0,'start2_obj':0,'start2_iobj':0,'start2_csubj':0,'start2_csubj:pass':0,'start2_ccomp':0,'start2_xcomp':0,'start2_nummod':0,'start2_acl':0,'start2_amod':0,'start2_appos':0,'start2_acl:relcl':0,'start2_det':0,'start2_det:predet':0,'start2_neg':0,'start2_nmod':0,'start2_case':0,'start2_nmod:npmod':0,'start2_nmod:tmod':0,'start2_nmod:poss':0,'start2_advcl':0,'start2_advmod':0,'start2_compound':0,'start2_compound:prt':0,'start2_flat':0,'start2_fixed':0,'start2_foreign':0,'start2_goeswith':0,'start2_list':0,'start2_dislocated':0,'start2_parataxis':0,'start2_orphan':0,'start2_reparandum':0,'start2_vocative':0,'start2_discourse':0,'start2_expl':0,'start2_aux':0,'start2_aux:pass':0,'start2_cop':0,'start2_mark':0,'start2_punct':0,'start2_conj':0,'start2_cc':0,'start2_cc:preconj':0,'start2_root':0,'start2_dep':0,'start2_$':0, "start2_''":0, 'start2_,':0, 'start2_-LRB-':0, 'start2_-LSB-':0, 'start2_-RRB-':0, 'start2_-RSB-':0, 'start2_.':0 ,'start2_:':0, 'start2_ADD':0, 'start2_ADJ':0,'start2_NP':0, 'start2_ADP':0,'start2_ADV':0, 'start2_AFX':0, 'start2_AUX':0, 'start2_CC':0, 'start2_CCONJ':0, 'start2_CD':0, 'start2_DET':0, 'start2_DT':0, 'start2_EX':0, 'start2_FW':0, 'start2_GW':0, 'start2_HYPH':0, 'start2_IN':0,'start2_INTJ':0, 'start2_JJ':0, 'start2_JJR':0, 'start2_JJS':0, 'start2_LS':0, 'start2_MD':0, 'start2_NFP':0, 'start2_NN':0, 'start2_NNP':0, 'start2_NNPS':0, 'start2_NNS':0, 'start2_NOUN':0,'start2_NUM':0, 'start2_PART':0, 'start2_PDT':0, 'start2_POS':0, 'start2_PRON':0, 'start2_PROPN':0, 'start2_PRP':0, 'start2_PRP$':0, 'start2_PUNCT':0, 'start2_RB':0, 'start2_RBR':0,'start2_RBS':0, 'start2_RP':0, 'start2_SYM':0, 'start2_TO':0, 'start2_UH':0, 'start2_VB':0, 'start2_VBD':0, 'start2_VBG':0, 'start2_VBN':0, 'start2_VBP':0, 'start2_VBZ':0, 'start2_VERB':0,'start2_WDT':0, 'start2_WP':0, 'start2_WP$':0, 'start2_WRB':0, 'start2_X':0, 'start2_``':0,'day':0,'century':0,'millenia':0,'hour':0,'minute':0,'year':0,'second':0,'month':0,'start2_day':0,'start2_century':0,'start2_millenia':0,'start2_hour':0,'start2_minute':0,'start2_year':0,'start2_second':0,'start2_month':0,'start1_day':0,'start1_century':0,'start1_millenia':0,'start1_hour':0,'start1_minute':0,'start1_year':0,'start1_second':0,'start1_month':0,'end2_day':0,'end2_century':0,'end2_millenia':0,'end2_hour':0,'end2_minute':0,'end2_year':0,'end2_second':0,'end2_month':0,'end1_day':0,'end1_century':0,'end1_millenia':0,'end1_hour':0,'end1_minute':0,'end1_year':0,'end1_second':0,'end1_month':0,'start1_january':0,'start1_february':0,'start1_march':0,'start1_april':0,'start1_may':0,'start1_june':0,'start1_july':0,'start1_august':0,'start1_september':0,'start1_october':0,'start1_november':0,
-               'start1_december':0,'start1_summer':0,'start1_winter':0,'start1_autumn':0,'start1_spring':0,'start1_christmas':0,'start1_christmas_eve':0,'start1_easter':0,'start1_easter_sunday':0,'start1_monday':0,'start1_tuesday':0,'start1_wednesday':0,'start1_thursday':0,'start1_friday':0,'start1_saturday':0,'start1_sunday':0,'start2_january':0,'start2_february':0,'start2_march':0,'start2_april':0,'start2_may':0,'start2_june':0,'start2_july':0,'start2_august':0,'start2_september':0,'start2_october':0,'start2_november':0,'start2_december':0,'start2_summer':0,'start2_winter':0,'start2_autumn':0,'start2_spring':0,'start2_christmas':0,'start2_christmas_eve':0,'start2_easter':0,'start2_easter_sunday':0,'start2_monday':0,'start2_tuesday':0,'start2_wednesday':0,'start2_thursday':0,'start2_friday':0,'start2_saturday':0,'start2_sunday':0,'end2_january':0,'end2_february':0,'end2_march':0,'end2_april':0,'end2_may':0,'end2_june':0,'end2_july':0,'end2_august':0,'end2_september':0,'end2_october':0,'end2_november':0,'end2_december':0,'end2_summer':0,'end2_winter':0,'end2_autumn':0,'end2_spring':0,'end2_christmas':0,'end2_christmas_eve':0,'end2_easter':0,'end2_easter_sunday':0,'end2_monday':0,'end2_tuesday':0,'end2_wednesday':0,'end2_thursday':0,'end2_friday':0,'end2_saturday':0,'end2_sunday':0,'end1_january':0,'end1_february':0,'end1_march':0,'end1_april':0,'end1_may':0,'end1_june':0,'end1_july':0,'end1_august':0,'end1_september':0,'end1_october':0,'end1_november':0,'end1_december':0,'end1_summer':0,'end1_winter':0,'end1_autumn':0,'end1_spring':0,'end1_christmas':0,'end1_christmas_eve':0,'end1_easter':0,'end1_easter_sunday':0,'end1_monday':0,'end1_tuesday':0,'end1_wednesday':0,'end1_thursday':0,'end1_friday':0,'end1_saturday':0,'end1_sunday':0}
+        self.featuredict = {'obl': 0,  'obl: npmod': 0,  'obl: tmod': 0,  'nsubj': 0,  'nsubj: pass': 0,  'obj': 0, 
+                            'iobj': 0,  'csubj': 0,  'csubj: pass': 0,  'ccomp': 0,  'xcomp': 0,  'nummod': 0,  'acl': 0, 
+                            'amod': 0,  'appos': 0,  'acl: relcl': 0,  'det': 0,  'det: predet': 0,  'neg': 0,  'nmod': 0, 
+                            'case': 0,  'nmod: npmod': 0,  'nmod: tmod': 0,  'nmod: poss': 0,  'advcl': 0,  'advmod': 0, 
+                            'compound': 0,  'compound: prt': 0,  'flat': 0,  'fixed': 0,  'foreign': 0,  'goeswith': 0, 
+                            'list': 0,  'dislocated': 0,  'parataxis': 0,  'orphan': 0,  'reparandum': 0,  'vocative': 0, 
+                            'discourse': 0,  'expl': 0,  'aux': 0,  'aux: pass': 0,  'cop': 0,  'mark': 0,  'punct': 0, 
+                            'conj': 0,  'cc': 0,  'cc: preconj': 0,  'root': 0,  'dep': 0,  '$': 0,  "''": 0,  ', ': 0, 
+                            '-LRB-': 0,  '-LSB-': 0,  '-RRB-': 0,  '-RSB-': 0,  '.': 0,  ': ': 0,  'ADD': 0,  'ADJ': 0, 
+                            'NP': 0,  'ADP': 0,  'ADV': 0,  'AFX': 0,  'AUX': 0,  'CC': 0,  'CCONJ': 0,  'CD': 0,  'DET': 0, 
+                            'DT': 0,  'EX': 0,  'FW': 0,  'GW': 0,  'HYPH': 0,  'IN': 0,  'INTJ': 0,  'JJ': 0,  'JJR': 0, 
+                            'JJS': 0,  'LS': 0,  'MD': 0,  'NFP': 0,  'NN': 0,  'NNP': 0,  'NNPS': 0,  'NNS': 0,  'NOUN': 0, 
+                            'NUM': 0,  'PART': 0,  'PDT': 0,  'POS': 0,  'PRON': 0,  'PROPN': 0,  'PRP': 0,  'PRP$': 0, 
+                            'PUNCT': 0,  'RB': 0,  'RBR': 0,  'RBS': 0,  'RP': 0,  'SYM': 0,  'TO': 0,  'UH': 0,  'VB': 0, 
+                            'VBD': 0,  'VBG': 0,  'VBN': 0,  'VBP': 0,  'VBZ': 0,  'VERB': 0,  'WDT': 0,  'WP': 0,  'WP$': 0, 
+                            'WRB': 0,  'X': 0,  '``': 0,  'january': 0,  'february': 0,  'march': 0,  'april': 0,  'may': 0, 
+                            'june': 0,  'july': 0,  'august': 0,  'september': 0,  'october': 0,  'november': 0, 
+                            'december': 0,  'summer': 0,  'winter': 0,  'autumn': 0,  'spring': 0,  'christmas': 0, 
+                            'christmas_eve': 0,  'easter': 0,  'easter_sunday': 0,  'monday': 0,  'tuesday': 0, 
+                            'wednesday': 0,  'thursday': 0,  'friday': 0,  'saturday': 0,  'sunday': 0,  'start1_obl': 0, 
+                            'start1_obl: npmod': 0,  'start1_obl: tmod': 0,  'start1_nsubj': 0,  'start1_nsubj: pass': 0, 
+                            'start1_obj': 0,  'start1_iobj': 0,  'start1_csubj': 0,  'start1_csubj: pass': 0, 
+                            'start1_ccomp': 0,  'start1_xcomp': 0,  'start1_nummod': 0,  'start1_acl': 0,  'start1_amod': 0, 
+                            'start1_appos': 0,  'start1_acl: relcl': 0,  'start1_det': 0,  'start1_det: predet': 0, 
+                            'start1_neg': 0,  'start1_nmod': 0,  'start1_case': 0,  'start1_nmod: npmod': 0, 
+                            'start1_nmod: tmod': 0,  'start1_nmod: poss': 0,  'start1_advcl': 0,  'start1_advmod': 0, 
+                            'start1_compound': 0,  'start1_compound: prt': 0,  'start1_flat': 0,  'start1_fixed': 0, 
+                            'start1_foreign': 0,  'start1_goeswith': 0,  'start1_list': 0,  'start1_dislocated': 0, 
+                            'start1_parataxis': 0,  'start1_orphan': 0,  'start1_reparandum': 0,  'start1_vocative': 0, 
+                            'start1_discourse': 0,  'start1_expl': 0,  'start1_aux': 0,  'start1_aux: pass': 0, 
+                            'start1_cop': 0,  'start1_mark': 0,  'start1_conj': 0,  'start1_cc': 0, 
+                            'start1_cc: preconj': 0,  'start1_punct': 0,  'start1_root': 0,  'start1_dep': 0, 
+                            'start1_$': 0,  "start1_''": 0,  'start1_, ': 0,  'start1_-LRB-': 0,  'start1_-LSB-': 0, 
+                            'start1_-RRB-': 0,  'start1_-RSB-': 0,  'start1_.': 0,  'start1_: ': 0,  'start1_ADD': 0, 
+                            'start1_ADJ': 0,  'start1_NP': 0,  'start1_ADP': 0,  'start1_ADV': 0,  'start1_AFX': 0, 
+                            'start1_AUX': 0,  'start1_CC': 0,  'start1_CCONJ': 0,  'start1_CD': 0,  'start1_DET': 0, 
+                            'start1_DT': 0,  'start1_EX': 0,  'start1_FW': 0,  'start1_GW': 0,  'start1_HYPH': 0, 
+                            'start1_IN': 0,  'start1_INTJ': 0,  'start1_JJ': 0,  'start1_JJR': 0,  'start1_JJS': 0, 
+                            'start1_LS': 0,  'start1_MD': 0,  'start1_NFP': 0,  'start1_NN': 0,  'start1_NNP': 0, 
+                            'start1_NNPS': 0,  'start1_NNS': 0,  'start1_NOUN': 0,  'start1_NUM': 0,  'start1_PART': 0, 
+                            'start1_PDT': 0,  'start1_POS': 0,  'start1_PRON': 0,  'start1_PROPN': 0,  'start1_PRP': 0, 
+                            'start1_PRP$': 0,  'start1_PUNCT': 0,  'start1_RB': 0,  'start1_RBR': 0,  'start1_RBS': 0, 
+                            'start1_RP': 0,  'start1_SYM': 0,  'start1_TO': 0,  'start1_UH': 0,  'start1_VB': 0, 
+                            'start1_VBD': 0,  'start1_VBG': 0,  'start1_VBN': 0,  'start1_VBP': 0,  'start1_VBZ': 0, 
+                            'start1_VERB': 0,  'start1_WDT': 0,  'start1_WP': 0,  'start1_WP$': 0,  'start1_WRB': 0, 
+                            'start1_X': 0,  'start1_``': 0,  'end1_obl': 0,  'end1_obl: npmod': 0,  'end1_obl: tmod': 0, 
+                            'end1_nsubj': 0,  'end1_nsubj: pass': 0,  'end1_obj': 0,  'end1_iobj': 0,  'end1_csubj': 0, 
+                            'end1_csubj: pass': 0,  'end1_ccomp': 0,  'end1_xcomp': 0,  'end1_nummod': 0,  'end1_acl': 0, 
+                            'end1_amod': 0,  'end1_appos': 0,  'end1_acl: relcl': 0,  'end1_det': 0,  'end1_det: predet': 0, 
+                            'end1_neg': 0,  'end1_nmod': 0,  'end1_case': 0,  'end1_nmod: npmod': 0,  'end1_nmod: tmod': 0, 
+                            'end1_nmod: poss': 0,  'end1_advcl': 0,  'end1_advmod': 0,  'end1_compound': 0, 
+                            'end1_compound: prt': 0,  'end1_flat': 0,  'end1_fixed': 0,  'end1_foreign': 0, 
+                            'end1_goeswith': 0,  'end1_list': 0,  'end1_dislocated': 0,  'end1_parataxis': 0, 
+                            'end1_orphan': 0,  'end1_reparandum': 0,  'end1_vocative': 0,  'end1_discourse': 0, 
+                            'end1_expl': 0,  'end1_aux': 0,  'end1_aux: pass': 0,  'end1_cop': 0,  'end1_mark': 0, 
+                            'end1_punct': 0,  'end1_conj': 0,  'end1_cc': 0,  'end1_cc: preconj': 0,  'end1_root': 0, 
+                            'end1_dep': 0,  'end1_$': 0,  "end1_''": 0,  'end1_, ': 0,  'end1_-LRB-': 0,  'end1_-LSB-': 0, 
+                            'end1_-RRB-': 0,  'end1_-RSB-': 0,  'end1_.': 0,  'end1_: ': 0,  'end1_ADD': 0,  'end1_ADJ': 0, 
+                            'end1_NP': 0,  'end1_ADP': 0,  'end1_ADV': 0,  'end1_AFX': 0,  'end1_AUX': 0,  'end1_CC': 0, 
+                            'end1_CCONJ': 0,  'end1_CD': 0,  'end1_DET': 0,  'end1_DT': 0,  'end1_EX': 0,  'end1_FW': 0, 
+                            'end1_GW': 0,  'end1_HYPH': 0,  'end1_IN': 0,  'end1_INTJ': 0,  'end1_JJ': 0,  'end1_JJR': 0, 
+                            'end1_JJS': 0,  'end1_LS': 0,  'end1_MD': 0,  'end1_NFP': 0,  'end1_NN': 0,  'end1_NNP': 0, 
+                            'end1_NNPS': 0,  'end1_NNS': 0,  'end1_NOUN': 0,  'end1_NUM': 0,  'end1_PART': 0,  'end1_PDT': 0, 
+                            'end1_POS': 0,  'end1_PRON': 0,  'end1_PROPN': 0,  'end1_PRP': 0,  'end1_PRP$': 0, 
+                            'end1_PUNCT': 0,  'end1_RB': 0,  'end1_RBR': 0,  'end1_RBS': 0,  'end1_RP': 0,  'end1_SYM': 0, 
+                            'end1_TO': 0,  'end1_UH': 0,  'end1_VB': 0,  'end1_VBD': 0,  'end1_VBG': 0,  'end1_VBN': 0, 
+                            'end1_VBP': 0,  'end1_VBZ': 0,  'end1_VERB': 0,  'end1_WDT': 0,  'end1_WP': 0,  'end1_WP$': 0, 
+                            'end1_WRB': 0,  'end1_X': 0,  'end1_``': 0,  'end2_obl': 0,  'end2_obl: npmod': 0, 
+                            'end2_obl: tmod': 0,  'end2_nsubj': 0,  'end2_nsubj: pass': 0,  'end2_obj': 0,  'end2_iobj': 0, 
+                            'end2_csubj': 0,  'end2_csubj: pass': 0,  'end2_ccomp': 0,  'end2_xcomp': 0,  'end2_nummod': 0, 
+                            'end2_acl': 0,  'end2_amod': 0,  'end2_appos': 0,  'end2_acl: relcl': 0,  'end2_det': 0, 
+                            'end2_det: predet': 0,  'end2_neg': 0,  'end2_nmod': 0,  'end2_case': 0,  'end2_nmod: npmod': 0, 
+                            'end2_nmod: tmod': 0,  'end2_nmod: poss': 0,  'end2_advcl': 0,  'end2_advmod': 0, 
+                            'end2_compound': 0,  'end2_compound: prt': 0,  'end2_flat': 0,  'end2_fixed': 0, 
+                            'end2_foreign': 0,  'end2_goeswith': 0,  'end2_list': 0,  'end2_dislocated': 0, 
+                            'end2_parataxis': 0,  'end2_orphan': 0,  'end2_reparandum': 0,  'end2_vocative': 0, 
+                            'end2_discourse': 0,  'end2_expl': 0,  'end2_aux': 0,  'end2_aux: pass': 0,  'end2_cop': 0, 
+                            'end2_mark': 0,  'end2_punct': 0,  'end2_conj': 0,  'end2_cc': 0,  'end2_cc: preconj': 0, 
+                            'end2_root': 0,  'end2_dep': 0,  'end2_$': 0,  "end2_''": 0,  'end2_, ': 0,  'end2_-LRB-': 0, 
+                            'end2_-LSB-': 0,  'end2_-RRB-': 0,  'end2_-RSB-': 0,  'end2_.': 0,  'end2_: ': 0,  'end2_ADD': 0, 
+                            'end2_ADJ': 0,  'end2_NP': 0,  'end2_ADP': 0,  'end2_ADV': 0,  'end2_AFX': 0,  'end2_AUX': 0, 
+                            'end2_CC': 0,  'end2_CCONJ': 0,  'end2_CD': 0,  'end2_DET': 0,  'end2_DT': 0,  'end2_EX': 0, 
+                            'end2_FW': 0,  'end2_GW': 0,  'end2_HYPH': 0,  'end2_IN': 0,  'end2_INTJ': 0,  'end2_JJ': 0, 
+                            'end2_JJR': 0,  'end2_JJS': 0,  'end2_LS': 0,  'end2_MD': 0,  'end2_NFP': 0,  'end2_NN': 0, 
+                            'end2_NNP': 0,  'end2_NNPS': 0,  'end2_NNS': 0,  'end2_NOUN': 0,  'end2_NUM': 0,  'end2_PART': 0, 
+                            'end2_PDT': 0,  'end2_POS': 0,  'end2_PRON': 0,  'end2_PROPN': 0,  'end2_PRP': 0,  'end2_PP$': 0, 
+                            'end1_PP$': 0,  'start2_PP$': 0,  'start1_PP$': 0,  'end2_PP': 0,  'end1_PP': 0,  'start2_PP': 0, 
+                            'start1_PP': 0,  'end2_PRP$': 0,  'end2_PUNCT': 0,  'end2_RB': 0,  'end2_RBR': 0,  'end2_RBS': 0, 
+                            'end2_RP': 0,  'end2_SYM': 0,  'end2_TO': 0,  'end2_UH': 0,  'end2_VB': 0,  'end2_VBD': 0, 
+                            'end2_VBG': 0,  'end2_VBN': 0,  'end2_VBP': 0,  'end2_VBZ': 0,  'end2_VERB': 0,  'end2_WDT': 0, 
+                            'end2_WP': 0,  'end2_WP$': 0,  'end2_WRB': 0,  'end2_X': 0,  'end2_``': 0,  'start2_obl': 0, 
+                            'start2_obl: npmod': 0,  'start2_obl: tmod': 0,  'start2_nsubj': 0,  'start2_nsubj: pass': 0, 
+                            'start2_obj': 0,  'start2_iobj': 0,  'start2_csubj': 0,  'start2_csubj: pass': 0, 
+                            'start2_ccomp': 0,  'start2_xcomp': 0,  'start2_nummod': 0,  'start2_acl': 0,  'start2_amod': 0, 
+                            'start2_appos': 0,  'start2_acl: relcl': 0,  'start2_det': 0,  'start2_det: predet': 0, 
+                            'start2_neg': 0,  'start2_nmod': 0,  'start2_case': 0,  'start2_nmod: npmod': 0, 
+                            'start2_nmod: tmod': 0,  'start2_nmod: poss': 0,  'start2_advcl': 0,  'start2_advmod': 0, 
+                            'start2_compound': 0,  'start2_compound: prt': 0,  'start2_flat': 0,  'start2_fixed': 0, 
+                            'start2_foreign': 0,  'start2_goeswith': 0,  'start2_list': 0,  'start2_dislocated': 0, 
+                            'start2_parataxis': 0,  'start2_orphan': 0,  'start2_reparandum': 0,  'start2_vocative': 0, 
+                            'start2_discourse': 0,  'start2_expl': 0,  'start2_aux': 0,  'start2_aux: pass': 0, 
+                            'start2_cop': 0,  'start2_mark': 0,  'start2_punct': 0,  'start2_conj': 0,  'start2_cc': 0, 
+                            'start2_cc: preconj': 0,  'start2_root': 0,  'start2_dep': 0,  'start2_$': 0,  "start2_''": 0, 
+                            'start2_, ': 0,  'start2_-LRB-': 0,  'start2_-LSB-': 0,  'start2_-RRB-': 0,  'start2_-RSB-': 0, 
+                            'start2_.': 0,  'start2_: ': 0,  'start2_ADD': 0,  'start2_ADJ': 0,  'start2_NP': 0, 
+                            'start2_ADP': 0,  'start2_ADV': 0,  'start2_AFX': 0,  'start2_AUX': 0,  'start2_CC': 0, 
+                            'start2_CCONJ': 0,  'start2_CD': 0,  'start2_DET': 0,  'start2_DT': 0,  'start2_EX': 0, 
+                            'start2_FW': 0,  'start2_GW': 0,  'start2_HYPH': 0,  'start2_IN': 0,  'start2_INTJ': 0, 
+                            'start2_JJ': 0,  'start2_JJR': 0,  'start2_JJS': 0,  'start2_LS': 0,  'start2_MD': 0, 
+                            'start2_NFP': 0,  'start2_NN': 0,  'start2_NNP': 0,  'start2_NNPS': 0,  'start2_NNS': 0, 
+                            'start2_NOUN': 0,  'start2_NUM': 0,  'start2_PART': 0,  'start2_PDT': 0,  'start2_POS': 0, 
+                            'start2_PRON': 0,  'start2_PROPN': 0,  'start2_PRP': 0,  'start2_PRP$': 0,  'start2_PUNCT': 0, 
+                            'start2_RB': 0,  'start2_RBR': 0,  'start2_RBS': 0,  'start2_RP': 0,  'start2_SYM': 0, 
+                            'start2_TO': 0,  'start2_UH': 0,  'start2_VB': 0,  'start2_VBD': 0,  'start2_VBG': 0, 
+                            'start2_VBN': 0,  'start2_VBP': 0,  'start2_VBZ': 0,  'start2_VERB': 0,  'start2_WDT': 0, 
+                            'start2_WP': 0,  'start2_WP$': 0,  'start2_WRB': 0,  'start2_X': 0,  'start2_``': 0,  'day': 0, 
+                            'century': 0,  'millenia': 0,  'hour': 0,  'minute': 0,  'year': 0,  'second': 0,  'month': 0, 
+                            'start2_day': 0,  'start2_century': 0,  'start2_millenia': 0,  'start2_hour': 0, 
+                            'start2_minute': 0,  'start2_year': 0,  'start2_second': 0,  'start2_month': 0, 
+                            'start1_day': 0,  'start1_century': 0,  'start1_millenia': 0,  'start1_hour': 0, 
+                            'start1_minute': 0,  'start1_year': 0,  'start1_second': 0,  'start1_month': 0,  'end2_day': 0, 
+                            'end2_century': 0,  'end2_millenia': 0,  'end2_hour': 0,  'end2_minute': 0,  'end2_year': 0, 
+                            'end2_second': 0,  'end2_month': 0,  'end1_day': 0,  'end1_century': 0,  'end1_millenia': 0, 
+                            'end1_hour': 0,  'end1_minute': 0,  'end1_year': 0,  'end1_second': 0,  'end1_month': 0, 
+                            'start1_january': 0,  'start1_february': 0,  'start1_march': 0,  'start1_april': 0, 
+                            'start1_may': 0,  'start1_june': 0,  'start1_july': 0,  'start1_august': 0, 
+                            'start1_september': 0,  'start1_october': 0,  'start1_november': 0, 
+                            'start1_december': 0,  'start1_summer': 0,  'start1_winter': 0,  'start1_autumn': 0, 
+                            'start1_spring': 0,  'start1_christmas': 0,  'start1_christmas_eve': 0,  'start1_easter': 0, 
+                            'start1_easter_sunday': 0,  'start1_monday': 0,  'start1_tuesday': 0,  'start1_wednesday': 0, 
+                            'start1_thursday': 0,  'start1_friday': 0,  'start1_saturday': 0,  'start1_sunday': 0, 
+                            'start2_january': 0,  'start2_february': 0,  'start2_march': 0,  'start2_april': 0, 
+                            'start2_may': 0,  'start2_june': 0,  'start2_july': 0,  'start2_august': 0, 
+                            'start2_september': 0,  'start2_october': 0,  'start2_november': 0,  'start2_december': 0, 
+                            'start2_summer': 0,  'start2_winter': 0,  'start2_autumn': 0,  'start2_spring': 0, 
+                            'start2_christmas': 0,  'start2_christmas_eve': 0,  'start2_easter': 0, 
+                            'start2_easter_sunday': 0,  'start2_monday': 0,  'start2_tuesday': 0,  'start2_wednesday': 0, 
+                            'start2_thursday': 0,  'start2_friday': 0,  'start2_saturday': 0,  'start2_sunday': 0, 
+                            'end2_january': 0,  'end2_february': 0,  'end2_march': 0,  'end2_april': 0,  'end2_may': 0, 
+                            'end2_june': 0,  'end2_july': 0,  'end2_august': 0,  'end2_september': 0,  'end2_october': 0, 
+                            'end2_november': 0,  'end2_december': 0,  'end2_summer': 0,  'end2_winter': 0, 
+                            'end2_autumn': 0,  'end2_spring': 0,  'end2_christmas': 0,  'end2_christmas_eve': 0, 
+                            'end2_easter': 0,  'end2_easter_sunday': 0,  'end2_monday': 0,  'end2_tuesday': 0, 
+                            'end2_wednesday': 0,  'end2_thursday': 0,  'end2_friday': 0,  'end2_saturday': 0, 
+                            'end2_sunday': 0,  'end1_january': 0,  'end1_february': 0,  'end1_march': 0,  'end1_april': 0, 
+                            'end1_may': 0,  'end1_june': 0,  'end1_july': 0,  'end1_august': 0,  'end1_september': 0, 
+                            'end1_october': 0,  'end1_november': 0,  'end1_december': 0,  'end1_summer': 0, 
+                            'end1_winter': 0,  'end1_autumn': 0,  'end1_spring': 0,  'end1_christmas': 0, 
+                            'end1_christmas_eve': 0,  'end1_easter': 0,  'end1_easter_sunday': 0,  'end1_monday': 0, 
+                            'end1_tuesday': 0,  'end1_wednesday': 0,  'end1_thursday': 0,  'end1_friday': 0, 
+                            'end1_saturday': 0,  'end1_sunday': 0}
 
     def train(self):
         pass # TODO
@@ -116,21 +265,22 @@ class DateTimeFilterModel():
     def inference(self):
         pass
 
-    def build_featureset(self,sfull,stok,phrase,index,timextype,timexvalue,timexmod):
+    def build_featureset(self, sfull, stok, phrase, index, timextype, timexvalue, timexmod):
         """
         Builds a row of features for the date phrase from a template and adds some extra features
         sfull is the sentence with each token tagged with its corresponding feature
         stok is just the sentence made up of its english tokens
-        phrase is the date phrase we are going to classify
+        phrase is the date phrase we are going to classify as a valid Time Expression (or no)
+        timex type, value, mod are TIMEX3 attributes that HT has created for this phrase
         """
 
         # Otherwise the split() method wont work well and the indexes will be off
-        sfull = re.sub(' +',' ',sfull)
-        stok = re.sub(' +', ' ', stok)
-        phrase = re.sub(' +',' ',phrase)
+        sfull = re.sub(' +', ' ', sfull)
+        stok = re.sub(' +',  ' ',  stok)
+        phrase = re.sub(' +', ' ', phrase)
 
         features = sfull.split()
-        search = re.search(re.escape(phrase.lower()),stok.lower()) # this is not supposed to return None, generally
+        search = re.search(re.escape(phrase.lower()), stok.lower()) # this is not supposed to return None,  generally
 
         # Gets the start index of the phrase in the sentence
         if search.start() > 0:
@@ -145,8 +295,8 @@ class DateTimeFilterModel():
         fdict = self.featuredict.copy() # need to do deep copy from the template
         featurelist = fdict.keys()
 
-        # This will check features that are specific word tokens in the sentence, e.g January, Tuesday,
-        for i in range(startindex,endindex + 1,1):
+        # This will check features that are specific word tokens in the sentence,  e.g January,  Tuesday, 
+        for i in range(startindex, endindex + 1, 1):
             feats = features[i].split('/') # get the token word
             if str(feats[1]).lower() in featurelist:
                 fdict[str(feats[1]).lower()] += 1 # Increment if the word is in the feature list
@@ -155,7 +305,7 @@ class DateTimeFilterModel():
             if str(feats[7]) in fdict.keys():
                 fdict[str(feats[7])] += 1 # the UD tag
 
-
+        # Get the +2 and -2 token features
         if startindex > 0:
             feats = features[startindex - 1].split('/')  # get the token word
             if str(feats[1]).lower() in fdict.keys():
@@ -193,7 +343,7 @@ class DateTimeFilterModel():
                 fdict['end2_' + str(feats[7])] += 1
 
 
-        # and finally, dump out all the other interactions
+        # and finally,  dump out all the other interactions
         fdict['CD_nmod'] = int(fdict['CD']) * int(fdict['nmod'])
         fdict['CD_nmodtmod'] = int(fdict['CD']) * int(fdict['nmod:tmod'])
         fdict['CD_compound'] = int(fdict['CD']) * int(fdict['compound'])
@@ -247,39 +397,43 @@ class DateTimeFilterModel():
 
 
 class DateTimeRecognizer(NLPModule):
-    def __init__(self,heideltimeobj,datefilterobj,postaglabelencoderobj,decoding='ascii'):
+    def __init__(self, config, decoding='ascii'):
 
         super().__init__(config=None)
         self.decoding = decoding
+        self.binpath = config['BIN_PATH'] + 'datetime' + os.sep
+        self.htbin = self.binpath + 'heideltime-standalone' + os.sep
+        self.htfiltermodel = self.binpath + 'datetimefilter_final.pickle'
 
-        # Two HeidelTime instantiations, as HT treats doc categories differently
-        self.hw = HeidelTimeWrapper('english',doc='news')
-        self.hwnarr = HeidelTimeWrapper('english',doc='narratives')
+        # Two HeidelTime instantiations,  as HT treats doc categories differently
+        jar = "/home/nitin/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
+        self.hw = HeidelTimeWrapper('english', doc='news',jarpath=jar)
+        self.hwnarr = HeidelTimeWrapper('english', doc='narratives',jarpath=jar)
 
         # object for refining HT dates to better align to GUM standards
-        self.datefilter = datefilterobj
+        self.datefilter = DateTimeFilterModel(modelfile=self.htfiltermodel)
 
         # to extract TIMEX3 expressions from TimeML xml standard
         self.timex3regex = r'<TIMEX3.*?<\/TIMEX3>'
         self.timex3tagregex = r'(?<=\<)(.*?)(?=\>)'
 
         # TEI normalization rules
-        self.regexnonchars = r'[^0-9-PYSUWIFASP:]' # anything not a number or hyphen, or P or Y e.g P19Y or seasons
+        self.regexnonchars = r'[^0-9-PYSUWIFASP:]' # anything not a number or hyphen,  or P or Y e.g P19Y or seasons
         self.regexyyyymmdd = r'[0-9]{4}-[0-9]{2}-[0-9]{2}' # matches YYYY-MM-DD
-        self.regexmmdd = r'--[0-9]{2}-[0-9]{2}' #--mm-dd, unlikely to be found in TimeML
-        self.regexmm = r'--[0-9]{2}'  # matches --mm, unlikely
-        self.regexyyyymm= r'[0-9]{4}-[0-9]{2}'  # matches YYYY-MM, likely!
-        self.regexyyyy = r'[0-9]{4}'  # matches YYYY, likely!
+        self.regexmmdd = r'--[0-9]{2}-[0-9]{2}' #--mm-dd,  unlikely to be found in TimeML
+        self.regexmm = r'--[0-9]{2}'  # matches --mm,  unlikely
+        self.regexyyyymm= r'[0-9]{4}-[0-9]{2}'  # matches YYYY-MM,  likely!
+        self.regexyyyy = r'[0-9]{4}'  # matches YYYY,  likely!
         self.regexyyyy_yyyy = r'\b[0-9]{4}-[0-9]{4}\b' # matches year ranges e.g 2006-2007
-        self.regexyyyy_d = r'\b[0-9]{4}-[0-9]{1}\b' # a negative match, yyyy-i which comes up in soccer match descriptions (the second half)
+        self.regexyyyy_d = r'\b[0-9]{4}-[0-9]{1}\b' # a negative match,  yyyy-i which comes up in soccer match descriptions (the second half)
         self.regexyyyyss = r'\b[0-9]{4}-(SU|WI|FA|SP)\b' # yyyy_seasoncode eg 2014-SU
         self.regexcentury = r'^(0|1|2)[0-9]\b' #centuries e.g 18 for 18th century
         self.regexyearrange = r'\b(|1|2)[0-9]{2}\b' # where the timex3 value is like 198 for 'the 1980s'
         self.phraseyearrange = r'\b([0-9]{2}|[0-9]{4})s\b' # validates that the phrase itself is a year range 'the 1980s'
         self.regexduration = r'\bP([0-9]{2}|[0-9]{1})Y\b' # captures duration values
         self.regextimeformat = r'\b[0-9]{2}:[0-9]{2}\b' # matches time formats eg 20:00
-        self.seasons = {'SU':['--06','--09'],'WI':['--12','--03'],'FA':['--09','--12'],'SP':['--03','--06']} # taken from the Farmer's Almanac
-        self.gazettedates = {'spanish golden age':['from:1556','to:1659'],'easter':['notBefore:--03','notAfter:--05'],'easter sunday':['notBefore:--03','notAfter:--05'],'christmas':['when:--12-25'],'christmas eve':['when:--12-24'],'world war 2':['from:1939-09-01','to:1945-02-01'],'world war ii':['from:1939-09-01','to:1945-02-01'],'world war 1':['from:1914','to:1918'],'world war i':['from:1914','to:1918'],'the american revolution':['notBefore:1775','notAfter:1783'],'the american revolutionary war':['notBefore:1775','notAfter:1783'],'the civil war':['notBefore:1861','notAfter:1865'],'the american civil war':['notBefore:1861','notAfter:1865'],'the reconstruction era':['notBefore:1863','notAfter:1887']} # dates based on lookups of events
+        self.seasons = {'SU':['--06', '--09'], 'WI':['--12', '--03'], 'FA':['--09', '--12'], 'SP':['--03', '--06']} # taken from the Farmer's Almanac
+        self.gazettedates = {'spanish golden age':['from:1556', 'to:1659'], 'easter':['notBefore:--03', 'notAfter:--05'], 'easter sunday':['notBefore:--03', 'notAfter:--05'], 'christmas':['when:--12-25'], 'christmas eve':['when:--12-24'], 'world war 2':['from:1939-09-01', 'to:1945-02-01'], 'world war ii':['from:1939-09-01', 'to:1945-02-01'], 'world war 1':['from:1914', 'to:1918'], 'world war i':['from:1914', 'to:1918'], 'the american revolution':['notBefore:1775', 'notAfter:1783'], 'the american revolutionary war':['notBefore:1775', 'notAfter:1783'], 'the civil war':['notBefore:1861', 'notAfter:1865'], 'the american civil war':['notBefore:1861', 'notAfter:1865'], 'the reconstruction era':['notBefore:1863', 'notAfter:1887']} # dates based on lookups of events
 
         # helps check against impossible years relative to the dct
         self.prevsentencedate = None
@@ -287,25 +441,22 @@ class DateTimeRecognizer(NLPModule):
         # TODO: 'soft-wire' feature names from the label encoder for pos tagging instead of hard-wiring in the dictionary features
         # of the datetime filter model class
         #self.cd = '/'.join(os.path.abspath(__file__).split('/')[:-2])
-        #with open(self.cd + postaglabelencoderobj, "rb") as f:
+        #with open(self.cd + postaglabelencoderobj,  "rb") as f:
         #    le = pickle.load(f)
 
-    def requires(self):
-        pass
+    requires = (PipelineDep.POS_TAG, PipelineDep.PARSE)
+    provides = (PipelineDep.DATETIME)
 
-    def provides(self):
-        pass
-
-    def timex_to_tei(self,timextype,timexvalue,timexmod,phrase,dct=None):
+    def timex_to_tei(self, timextype, timexvalue, timexmod, phrase, dct):
         """
-        Params: the timex3 type, the timex3 val, timex3 mod attribute, the actual date phrase, and the document creation time
+        Params: the timex3 type,  the timex3 val,  timex3 mod attribute,  the actual date phrase,  and the document creation time
 
         Normalizes TIMEX3 values to TEI encodings
         Returns the tag type with attributes to build the date/time tag
         Also does some validations and makes some assumptions
         Add any fixes for normalization issues here
 
-        To skip conversion and the date/time phrase, return an empty dictionary
+        To skip conversion and the date/time phrase,  return an empty dictionary
         """
 
         # Helper - cleans the timex3 val
@@ -315,7 +466,7 @@ class DateTimeRecognizer(NLPModule):
             return text
 
         # Helper - screens impossible years
-        def check_year(text,phrase):
+        def check_year(text, phrase):
             """
             filters out impossible years in a date that have been marked years by mistake
             and if necessary rebuilds the timex3 val with just the month and day part
@@ -333,13 +484,13 @@ class DateTimeRecognizer(NLPModule):
             # check the year four way.
             textyear = text.split('-')[0]
             if prevsentyear is not None and prevsentyear == dctyear:
-                matches = re.findall(self.regexyyyy,phrase)
+                matches = re.findall(self.regexyyyy, phrase)
                 for match in matches:
                     if match == textyear: return text
                     else: return prevsentyear + '-' + '-'.join(text.split('-')[1:])
 
             elif abs(int(dctyear) - int(textyear)) > 100: # cant really be 100+ year diff between dct and the timex date
-                matches = re.findall(self.regexyyyy, phrase)
+                matches = re.findall(self.regexyyyy,  phrase)
                 for match in matches:
                     if match == textyear: return text
 
@@ -355,76 +506,76 @@ class DateTimeRecognizer(NLPModule):
         if timextype == "SET": # dont handle SETs in TEI as they cant be mapped to the TEI attributes
             return result
 
-        temp = re.sub(self.regexnonchars, '', timexvalue)
+        temp = re.sub(self.regexnonchars,  '',  timexvalue)
         temp = striphyphens(temp)
 
         # check for negative matches here and skip
-        if re.match(self.regexyyyy_d,temp): return result
+        if re.match(self.regexyyyy_d, temp): return result
 
-        #  TODO: gazetted dates, extract straight from the token as the date/time filter will remove these
-        for key, value in self.gazettedates.items():
+        #  TODO: gazetted dates,  extract straight from the token as the date/time filter will remove these
+        for key,  value in self.gazettedates.items():
             if key in phrase.lower().strip():
                 result['date'] = value
                 return result
 
-        # check for time TODO: revisit, Heideltime cant detect time values in raw tokens like 20:00, 08:30, etc
-        if re.search(self.regextimeformat,temp):
-            result['time'] = ['when:' + temp.replace(':','').replace('-','')]
+        # check for time TODO: revisit,  Heideltime cant detect time values in raw tokens like 20:00,  08:30,  etc
+        if re.search(self.regextimeformat, temp):
+            result['time'] = ['when:' + temp.replace(':', '').replace('-', '')]
             return result
 
         # mod MORE_THAN - will result in a date_notBefore:dct - timex3 duration val
-        if timexmod == "MORE_THAN" and re.search(self.regexduration,temp):
+        if timexmod == "MORE_THAN" and re.search(self.regexduration, temp):
             #e.g more than 20 years ago.
-            result['date'] = ['notBefore:' + str(int(dct.split('-')[0]) - int(temp.replace('P','').replace('Y',''))) + '-' + '-'.join(dct.split('-')[1:]) ]
+            result['date'] = ['notBefore:' + str(int(dct.split('-')[0]) - int(temp.replace('P', '').replace('Y', ''))) + '-' + '-'.join(dct.split('-')[1:]) ]
             return result
 
         # TIMEX3 centuries are two digit values. Convert to a date from_to
-        if re.search(self.regexcentury,temp):
+        if re.search(self.regexcentury, temp):
             if timexmod is None:
-                result['date'] =['from:' + temp + '00','to:' + temp + '99']
-            else: # TIMEX3 has START, MID, END so split it 3 ways
+                result['date'] =['from:' + temp + '00', 'to:' + temp + '99']
+            else: # TIMEX3 has START,  MID,  END so split it 3 ways
                 if timexmod == "START":
-                    result['date'] = ['from:' + temp + '00', 'to:' + temp + '33']
+                    result['date'] = ['from:' + temp + '00',  'to:' + temp + '33']
                 elif timexmod == "MID":
-                    result['date'] = ['from:' + temp + '33', 'to:' + temp + '66']
+                    result['date'] = ['from:' + temp + '33',  'to:' + temp + '66']
                 elif timexmod == "END":
-                    result['date'] = ['from:' + temp + '66', 'to:' + temp + '99']
+                    result['date'] = ['from:' + temp + '66',  'to:' + temp + '99']
             return result
 
-        # check for year ranges, e.g 1980s, 1990s
-        if re.search(self.phraseyearrange,phrase) and re.match(self.regexyearrange,temp):
-            result['date'] = ['from:' + str(temp) + '0','to:' + str(temp) + '9'  ]
+        # check for year ranges,  e.g 1980s,  1990s
+        if re.search(self.phraseyearrange, phrase) and re.match(self.regexyearrange, temp):
+            result['date'] = ['from:' + str(temp) + '0', 'to:' + str(temp) + '9'  ]
             return result
 
         #Check for year range specified in the phrase as yyyy-yyyy
-        if re.search(self.regexyyyy_yyyy,phrase):
+        if re.search(self.regexyyyy_yyyy, phrase):
             fromyear = phrase.split('-')[0]
             toyear = phrase.split('-')[1]
-            result['date'] = ['from:' + fromyear,'to:' + toyear]
+            result['date'] = ['from:' + fromyear, 'to:' + toyear]
             return result
 
-        # Check for -mm-dd, or --mm. This rarely happens based on the target folder samples
-        if re.match(self.regexmmdd, temp) \
-           or re.match(self.regexmm, temp):
+        # Check for -mm-dd,  or --mm. This rarely happens based on the target folder samples
+        if re.match(self.regexmmdd,  temp) \
+           or re.match(self.regexmm,  temp):
             result['date'] = ['when:' + temp]
             return result
 
 
         # Check if yyyy-mm-dd or yyyy-mm matches
-        if re.match(self.regexyyyymmdd, temp) \
-                or re.match(self.regexyyyymm, temp):
+        if re.match(self.regexyyyymmdd,  temp) \
+                or re.match(self.regexyyyymm,  temp):
 
             date = temp.split('-')
-            if date[0] not in phrase and phrase in temp: # this is a cricket score, likely
+            if date[0] not in phrase and phrase in temp: # this is a cricket score,  likely
                 return result
 
-            temp = check_year(temp, phrase)
+            temp = check_year(temp,  phrase)
 
-            if re.match(self.regexmm,temp): # too sparse, skip this
+            if re.match(self.regexmm, temp): # too sparse,  skip this
                 return result
 
-            # if the year turned out to be impossible, dont reset the previous date marker
-            if re.match(self.regexyyyymmdd,temp) or re.match(self.regexyyyymm,temp):
+            # if the year turned out to be impossible,  dont reset the previous date marker
+            if re.match(self.regexyyyymmdd, temp) or re.match(self.regexyyyymm, temp):
                 self.prevsentencedate = temp
 
             if int(date[1]) > 12: return result
@@ -435,9 +586,9 @@ class DateTimeRecognizer(NLPModule):
             return result
 
         # Seasons! the timex3 val is always YYYY-(SU|WI|FA|SP)
-        if re.match(self.regexyyyyss,temp):
-            season = check_year(temp,phrase)
-            if re.match(self.regexyyyyss,season):
+        if re.match(self.regexyyyyss, temp):
+            season = check_year(temp, phrase)
+            if re.match(self.regexyyyyss, season):
                 # require the season year to match dct year or something's off
                 seasonyear = temp.split('-')[0]
                 dctyear = dct.split('-')[0]
@@ -445,16 +596,16 @@ class DateTimeRecognizer(NLPModule):
 
                 season = temp.split('-')[-1]
                 if season != 'WI':
-                    result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--',''),'to:' + temp.split('-')[0] + '-' + self.seasons[season][1].replace('--','')]
+                    result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--', ''), 'to:' + temp.split('-')[0] + '-' + self.seasons[season][1].replace('--', '')]
                 else:
-                    result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--',''),'to:' + str(int(temp.split('-')[0]) + 1 )+ '-' + self.seasons[season][1].replace('--','')]
+                    result['date'] = ['from:' + temp.split('-')[0] + '-' + self.seasons[season][0].replace('--', ''), 'to:' + str(int(temp.split('-')[0]) + 1 )+ '-' + self.seasons[season][1].replace('--', '')]
 
             return result
 
 
         # Normal years
-        if re.match(self.regexyyyy,temp):
-            # if the year is way too far into the future, something's off
+        if re.match(self.regexyyyy, temp):
+            # if the year is way too far into the future,  something's off
             # will affect sci-fi genres mostly without a  better method
             if int(temp) > 2500: # 500 years
                 return result
@@ -467,27 +618,45 @@ class DateTimeRecognizer(NLPModule):
 
 
     def test_dependencies(self):
-        """
-        TODO: copy heideltime standalone and treetagger to the bin folder and Runs the test by trying to parse an example sentence
-        """
-        pass
 
-    def process_file(self,filename):
+        if not os.path.exists(self.htbin):
+            raise NLPDependencyException("Please configure the bin folder for the datetime module. This is bin/datetime/heideltime-standalone")
+
+        hasjar = False
+        for root,sub,files in os.walk(self.htbin):
+            if hasjar == True: break
+            for filename in files:
+                if filename == 'de.unihd.dbs.heideltime.standalone.jar':
+                    hasjar = True # we'll assume that all is present if jar is present
+                    break
+
+        if hasjar == False:
+            # download the standalone
+            try:
+                filename = wget.download(HEIDELTIME_STANDALONE,out=self.htbin)
+                tar = tarfile.open(filename, "r:gz")
+                tar.extractall(path=self.htbin)
+                tar.close()
+            except Exception as e:
+                raise NLPDependencyException("Errored downloading HeidelTime dependencies. Please check bin/dateime/heideltime-standalone")
+
+
+    def process_file(self, filename):
         """
         Method to process a single file
         :param filename: The conllu filename to parse
         :return: nada (writes new xml with date tags to the folder step)
         """
 
-        def add_datetime_tags(node,counter=0):
+        def add_datetime_tags(node, counter=0):
             """
-            Recursively builds the xml file in memory in place, and stamps the date xml on it
+            Recursively builds the xml file in memory in place,  and stamps the date xml on it
             the counter is an accumulator that keep tracks of how many sentences we have iterated over
 
-            the basic idea is to loop through each sentence with all its elements top down, and add the date/time phrases
-            sequentially from the top down. When a date element is added to the sentence, all the elements of the sentence
+            the basic idea is to loop through each sentence with all its elements top down,  and add the date/time phrases
+            sequentially from the top down. When a date element is added to the sentence,  all the elements of the sentence
             are rebuilt and re-ordered in place before the next element is added. Date elements are added either in an existing
-            element's text, or tail. In the event that the date phrase is not present in any element's text or tail, it is added to the
+            element's text,  or tail. In the event that the date phrase is not present in any element's text or tail,  it is added to the
             "s"'s text element.
 
             The key to the logic is that the sentence elements are rebuilt top to bottom for every new date element added to the sent
@@ -526,12 +695,12 @@ class DateTimeRecognizer(NLPModule):
                                     fulltext = [f.split('\t')[0] for f in fulltext ]
                                     fulltext = ' '.join(fulltext)
 
-                                    if phrase not in fulltext: # will always be exact match, not fuzzy
+                                    if phrase not in fulltext: # will always be exact match,  not fuzzy
                                         elements.append(n) # move to the next element
                                     else:
                                         # its in the text or the tail
-                                        attributes = self.timex_to_tei(timextype, timexvalue,timexmod,phrase,dateCreated) # normalization happens here
-                                        for key,value in attributes.items(): # loops only once
+                                        attributes = self.timex_to_tei(timextype,  timexvalue, timexmod, phrase, dateCreated) # normalization happens here
+                                        for key, value in attributes.items(): # loops only once
 
                                             text = n.text.split('\n')
                                             text = [f for f in text if f]
@@ -544,7 +713,7 @@ class DateTimeRecognizer(NLPModule):
                                             tail = ' '.join(tail)
 
                                             if phrase in text:
-                                                search = re.search(re.escape(phrase),text)
+                                                search = re.search(re.escape(phrase), text)
                                                 if search.start() > 0:
                                                     startindex = text[0:search.start()].count(' ')
                                                 else:
@@ -553,7 +722,7 @@ class DateTimeRecognizer(NLPModule):
                                                 splittext = n.text.split('\n')
 
                                             else:
-                                                search = re.search(re.escape(phrase), tail)
+                                                search = re.search(re.escape(phrase),  tail)
                                                 if search.start() > 0:
                                                     startindex = tail[0:search.start()].count(' ')
                                                 else:
@@ -582,7 +751,7 @@ class DateTimeRecognizer(NLPModule):
                                             # build the date element
                                             date = ET.Element(key)
                                             for attribs in value:
-                                                date.set(attribs.split(':')[0], attribs.split(':')[1])
+                                                date.set(attribs.split(':')[0],  attribs.split(':')[1])
 
                                             date.text = '\n' + '\n'.join(datetext) + '\n'
 
@@ -594,11 +763,11 @@ class DateTimeRecognizer(NLPModule):
                                             if phrase in text: # the date is nested in the text of the element and a child of the elem
                                                 n.append(date)
                                                 elements.append(n)
-                                            else: # the date is a new child of the sentence, immediately follows the element
+                                            else: # the date is a new child of the sentence,  immediately follows the element
                                                 elements.append(n)
                                                 elements.append(date)
 
-                                        if n not in elements: # if normalization rejects the phrase, add the existing element
+                                        if n not in elements: # if normalization rejects the phrase,  add the existing element
                                             elements.append(n)
                                         # mark processed
                                         processed = True
@@ -612,15 +781,15 @@ class DateTimeRecognizer(NLPModule):
                                     text = [f.split('\t')[0] for f in text]
                                     text = ' '.join(text)
 
-                                    attributes = self.timex_to_tei(timextype, timexvalue,timexmod,phrase,dateCreated) # normalization happens here
-                                    for key, value in attributes.items():  # loops only once
+                                    attributes = self.timex_to_tei(timextype,  timexvalue, timexmod, phrase, dateCreated) # normalization happens here
+                                    for key,  value in attributes.items():  # loops only once
 
-                                        search = re.search(re.escape(phrase), text)
+                                        search = re.search(re.escape(phrase),  text)
 
                                         # TODO: find a way to remove this None check.
-                                        # With this, some dates dont get tagged where there
+                                        # With this,  some dates dont get tagged where there
                                         # are multiple dates within a Nested element in the sentence
-                                        # these are pretty hard to add :), skipping for now as their number should be minimal
+                                        # these are pretty hard to add :),  skipping for now as their number should be minimal
                                         if search is not None:
                                             if search.start() > 0:
                                                 startindex = text[0:search.start()].count(' ')
@@ -644,7 +813,7 @@ class DateTimeRecognizer(NLPModule):
                                             # build the date element
                                             date = ET.Element(key)
                                             for attribs in value:
-                                                date.set(attribs.split(':')[0], attribs.split(':')[1])
+                                                date.set(attribs.split(':')[0],  attribs.split(':')[1])
 
                                             date.text = '\n' + '\n'.join(datetext) + '\n'
 
@@ -653,32 +822,32 @@ class DateTimeRecognizer(NLPModule):
                                             else:
                                                 date.tail = '\n' + '\n'.join(postdatetext) + '\n'
 
-                                            elements.insert(0,date)
+                                            elements.insert(0, date)
 
                                     dateindex += 1
 
                                 # now build the final sentence sequentially with all tags and date tags
                                 text = item.text
                                 tail = item.tail
-                                for i in range(0,len(elements)):
+                                for i in range(0, len(elements)):
                                     if elements[i] in item:
                                         item.remove(elements[i])
 
                                 item.text = text
-                                for i in range(0,len(elements)):
+                                for i in range(0, len(elements)):
                                     item.append(elements[i])
                                 item.tail = tail
 
-                counter = add_datetime_tags(item,counter) # don't remove the accumulator pattern
+                counter = add_datetime_tags(item, counter) # don't remove the accumulator pattern
 
             return counter
 
         # The POS tags and UD tags are in the conllu format..
-        conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml','.conllu')
+        conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml', '.conllu')
 
         # some xml files have an '&' character in them!!
         # forcibly convert to XML-friendly chars and keep them in the pipeline..
-        xmltext = open(filename,'r').read().replace('&','&amp;')
+        xmltext = open(filename, 'r').read().replace('&', '&amp;')
         xmltree = ET.fromstring(xmltext)
         root = xmltree
 
@@ -692,7 +861,7 @@ class DateTimeRecognizer(NLPModule):
 
         # build the sentences from the conllu file
         # sentence boundaries have multiple \n in between
-        with open(conllufile,'r') as r:
+        with open(conllufile, 'r') as r:
             sent = []
             senttok = []
             for line in r:
@@ -705,13 +874,13 @@ class DateTimeRecognizer(NLPModule):
                     senttok = []
                 else:
                     senttok.append(line.split('\t')[1])
-                    sent.append(line.replace('\t','/')) # changes the delimiter to a cleaner one
+                    sent.append(line.replace('\t', '/')) # changes the delimiter to a cleaner one
 
             sentences.append(sent)
             sentencestokens.append(senttok)
 
         # rollup
-        for i in range(0,len(sentencestokens)):
+        for i in range(0, len(sentencestokens)):
             sentencestokens[i] = str(' '.join(sentencestokens[i])).strip()
             sentences[i] = str(' '.join(sentences[i])).strip() # now inner delimited by '/
 
@@ -720,37 +889,37 @@ class DateTimeRecognizer(NLPModule):
 
         # the main course...
         if '_news_' in filename or '_interview_' in filename:
-            result = self.hw.parse(text,dateCreated)
+            result = self.hw.parse(text, dateCreated)
         else:
-            result = self.hwnarr.parse(text,dateCreated)
+            result = self.hwnarr.parse(text, dateCreated)
 
         # gets datetime expressions and timex3 attributes for said expression
         # for the whole document
-        with open('/home/nitin/Desktop/amalgum/amalgum/target/testdate/' + filename.split('/')[-1].replace('.xml','_timex3.xml'),'w') as p:
+        with open('/home/nitin/Desktop/amalgum/amalgum/target/testdate/' + filename.split('/')[-1].replace('.xml', '_timex3.xml'), 'w') as p:
             p.writelines(result)
-        dates,attribs = self.parse_timex3_xml(result)
+        dates, attribs = self.parse_timex3_xml(result)
 
         # build dataframe for second filter pass
         # custom random forest model that filters out all the False Positives generated by HT
         inferencedf = pd.DataFrame(columns=self.datefilter.featuredict.keys())
-        for i in range(0,len(dates)):
+        for i in range(0, len(dates)):
             if len(dates[i]) == 0: continue # nothing in the sentence
 
-            for j in range(0,len(dates[i])):
+            for j in range(0, len(dates[i])):
                 timextype = attribs[i][j][0][1] # assumes that the order is always type then value then mod
                 timexvalue = attribs[i][j][1][1]
                 if len(attribs[i][j]) > 2:
                     timexmod = attribs[i][j][2][1]
-                    timexmod = timexmod.replace('"','')
+                    timexmod = timexmod.replace('"', '')
                 else:
                     timexmod = None
 
-                f = self.datefilter.build_featureset(sentences[i],sentencestokens[i],dates[i][j],i,timextype,timexvalue,timexmod)
-                inferencedf = inferencedf.append(f,ignore_index=True)
+                f = self.datefilter.build_featureset(sentences[i], sentencestokens[i], dates[i][j], i, timextype, timexvalue, timexmod)
+                inferencedf = inferencedf.append(f, ignore_index=True)
 
         if len(inferencedf) != 0:
-            indexphrases = inferencedf[['sentence_index','start_index','phrase','timextype','timexvalue','timexmod']]
-            inferencedf.drop(columns=['sentence_index','start_index','phrase','timextype','timexvalue','timexmod'],axis=1,inplace=True)
+            indexphrases = inferencedf[['sentence_index', 'start_index', 'phrase', 'timextype', 'timexvalue', 'timexmod']]
+            inferencedf.drop(columns=['sentence_index', 'start_index', 'phrase', 'timextype', 'timexvalue', 'timexmod'], axis=1, inplace=True)
 
             # Filter the dates that dont pass GUM annotated standards..
             tpprobs = self.datefilter.rf.predict(inferencedf)
@@ -759,13 +928,13 @@ class DateTimeRecognizer(NLPModule):
 
 
             if indexphrases is not None and len(indexphrases) != 0: # only if we have dates..
-                indexphrases.sort_values(['sentence_index','start_index'],ascending=[True,True],inplace=True)
+                indexphrases.sort_values(['sentence_index', 'start_index'], ascending=[True, True], inplace=True)
 
                 # need to collapse the same phrase text in different places in the sentence
                 # guessing this doesnt happen too often so we can get away with it
-                indexphrases= indexphrases.groupby(by=['sentence_index','phrase']).head(1)
-                indexphrases['phrase'] = indexphrases.groupby(by=['sentence_index', 'start_index'])['phrase'].transform(lambda x: '-'.join(x))
-                indexphrases['timexvalue'] = indexphrases.groupby(by=['sentence_index', 'start_index'])['timexvalue'].transform(
+                indexphrases= indexphrases.groupby(by=['sentence_index', 'phrase']).head(1)
+                indexphrases['phrase'] = indexphrases.groupby(by=['sentence_index',  'start_index'])['phrase'].transform(lambda x: '-'.join(x))
+                indexphrases['timexvalue'] = indexphrases.groupby(by=['sentence_index',  'start_index'])['timexvalue'].transform(
                     lambda x: '-'.join(x))
                 indexphrases.drop_duplicates(inplace=True)
                 sentenceindices = set(indexphrases['sentence_index'].tolist())
@@ -778,11 +947,11 @@ class DateTimeRecognizer(NLPModule):
         tree = ET.ElementTree(root)
         return tree
 
-    # helper method, unused
-    def replace_xml_chars(self,text):
-        return text.replace('&', '&amp;').replace('>', '&gt;').replace('<', '&lt;').replace('"', '&quot;').replace("'",'&apos;')  # assumes these dont affect time recognition..
+    # helper method,  unused
+    def replace_xml_chars(self, text):
+        return text.replace('&',  '&amp;').replace('>',  '&gt;').replace('<',  '&lt;').replace('"',  '&quot;').replace("'", '&apos;')  # assumes these dont affect time recognition..
 
-    def extract_datetimephrases(self,sent):
+    def extract_datetimephrases(self, sent):
         """
         returns the timex3 captured expression and the timex attributes for the expression
         sentence by sentence
@@ -791,27 +960,27 @@ class DateTimeRecognizer(NLPModule):
         result = []
         attributes = []
 
-        matches = re.findall(self.timex3regex, sent)
+        matches = re.findall(self.timex3regex,  sent)
         for match in matches:
 
-            attrib = re.findall(self.timex3tagregex,match)
-            attrib = str(attrib[0]).replace('TIMEX3','') # there's only going to be one match ever
+            attrib = re.findall(self.timex3tagregex, match)
+            attrib = str(attrib[0]).replace('TIMEX3', '') # there's only going to be one match ever
             attrib = attrib.split()
             attrib = [attr.split('=') for attr in attrib]
-            # we only want the type and value and mod for now, fetch more if needed
+            # we only want the type and value and mod for now,  fetch more if needed
             attrib = [attr for attr in attrib if attr[0] == 'type' or attr[0] == 'value' or attr[0] == "mod"]
             attributes.append(attrib)
 
-            phrase = (re.sub(self.timex3tagregex, '', match))
-            phrase = phrase.replace('>', '').replace('<', '')
+            phrase = (re.sub(self.timex3tagregex,  '',  match))
+            phrase = phrase.replace('>',  '').replace('<',  '')
             result.append(phrase)
 
-        return result,attributes
+        return result, attributes
 
-    def parse_timex3_xml(self, xmltext):
+    def parse_timex3_xml(self,  xmltext):
         """
         Parses the TimeX3 file and returns hypotheses
-        maps the dates and attributes, to each sentence as a list of lists
+        maps the dates and attributes,  to each sentence as a list of lists
         :param xmltext: The xml file output with TIMEX3 tags created by the tool
         :return: list of list of dates and attributes for each sentence
         """
@@ -824,20 +993,20 @@ class DateTimeRecognizer(NLPModule):
         sorted_attribs = []
 
         for sent in xmltext:
-            dates,attributes = self.extract_datetimephrases(sent)
+            dates, attributes = self.extract_datetimephrases(sent)
             sorted_dates.append(dates)
             sorted_attribs.append(attributes)
 
-        return sorted_dates,sorted_attribs
+        return sorted_dates, sorted_attribs
 
-    def run(self, input_dir, output_dir):
+    def run(self,  input_dir,  output_dir):
 
         # Get list of all xml files to parse
         for file in glob(input_dir + '*.xml'):
             #file = '/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_voyage_doc008.xml'
             #print(file)
             treeobj = self.process_file(file)
-            treeobj.write(open(output_dir + file.split('/')[-1], 'w'), encoding='unicode', xml_declaration=True)
+            treeobj.write(open(output_dir + file.split('/')[-1],  'w'),  encoding='unicode',  xml_declaration=True)
             #break
 
 def main():
@@ -845,16 +1014,14 @@ def main():
     Testing only
     """
 
-    jar = "/home/nitin/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
+    BIN_DIR = '/home/nitin/Desktop/amalgum/amalgum/bin/'
 
-
-    hw = HeidelTimeWrapper('english',jarpath=jar)
-    dfilter = DateTimeFilterModel()
-    postagleobj = "/nlp_modules/pos-dependencies/all-encodings.pickle.dat"
-    dtr = DateTimeRecognizer(heideltimeobj=hw,datefilterobj=dfilter,postaglabelencoderobj=postagleobj)
+    config = {'BIN_PATH':BIN_DIR}
+    dtr = DateTimeRecognizer(config=config)
+    dtr.test_dependencies()
 
     start = time.time()
-    dtr.run(input_dir='/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/',output_dir='/home/nitin/Desktop/amalgum/amalgum/target/testdate/')
+    dtr.run(input_dir='/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/', output_dir='/home/nitin/Desktop/amalgum/amalgum/target/testdate/')
     print (time.time() - start)
 
 

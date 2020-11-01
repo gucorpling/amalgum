@@ -22,6 +22,8 @@ class PipelineDep(Enum):
     RST_OUT = "RST_OUT"  # output for rhetorical structure theory
     TSV_OUT = "TSV_OUT"  # coref/entity output
 
+    DATETIME = "DATETIME"
+
     def __str__(self):
         return self.value
 
