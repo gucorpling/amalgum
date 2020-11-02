@@ -154,7 +154,7 @@ def main():
             "flair_sent_splitter",
             "ensemble_tagger",
             "dep_parser",
-            "datetimerecognizer",
+            #"datetimerecognizer",
             "s_typer",
             "xrenner",
             "flair_edu_splitter",

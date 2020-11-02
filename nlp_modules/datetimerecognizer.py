@@ -12,8 +12,8 @@ import subprocess
 
 from nlp_modules.configuration import XML_ATTRIB_REFDATE, HEIDELTIME_STANDALONE, TREETAGGER_LINUX, TREETAGGER_EXEC,TREETAGGER_SCRIPTS,TREETAGGER_PARAMETER_FILES_BNC,TREETAGGER_PARAMETER_FILES_PENN, TREETAGGER_CHUNKER
 from nlp_modules.base import NLPModule,  PipelineDep, NLPDependencyException
-from glob import glob
 from datetime import datetime
+pd.options.mode.chained_assignment = None  # default='warn'
 
 class HeidelTimeWrapper():
 
@@ -405,10 +405,13 @@ class DateTimeRecognizer(NLPModule):
         self.htbin = self.binpath + 'datetime' + os.sep + 'heideltime-standalone' + os.sep
         self.ttgbin = self.binpath + config['TTG_PATH']
         self.htfiltermodel = self.binpath + 'datetime' + os.sep + 'datetimefilter_final.pickle' # stored in the github
-        self.htjarpath = None #will be set later
-        self.htconfigpropspath = None # will be set later
-        self.hw = None # instantiated later
-        self.hwnarr = None # instantiated later
+
+        if os.path.exists(self.htbin + 'heideltime-standalone' + os.sep + 'de.unihd.dbs.heideltime.standalone.jar'):
+            self.htjarpath = self.htbin + 'heideltime-standalone' + os.sep + 'de.unihd.dbs.heideltime.standalone.jar'
+            self.htconfigpropspath = self.htbin + 'heideltime-standalone' + os.sep + 'config.props'
+            self.hw = HeidelTimeWrapper('english', config=self.htconfigpropspath, doc='news', jarpath=self.htjarpath)
+            self.hwnarr = HeidelTimeWrapper('english', config=self.htconfigpropspath, doc='narratives',
+                                            jarpath=self.htjarpath)
 
         # object for refining HT dates to better align to GUM standards
         self.datefilter = DateTimeFilterModel(modelfile=self.htfiltermodel)
@@ -671,10 +674,7 @@ class DateTimeRecognizer(NLPModule):
                 set_ht_config_props()
 
             # set the ht variables here
-            self.htjarpath = self.htbin + 'heideltime-standalone' + os.sep + 'de.unihd.dbs.heideltime.standalone.jar'
-            self.htconfigpropspath = self.htbin + 'heideltime-standalone' + os.sep + 'config.props'
-            self.hw = HeidelTimeWrapper('english',config=self.htconfigpropspath,doc='news',jarpath=self.htjarpath)
-            self.hwnarr = HeidelTimeWrapper('english',config=self.htconfigpropspath,doc='narratives',jarpath=self.htjarpath)
+
 
             if hasttbin == False:
                 # Download the TreeTagger as a HT dependency
@@ -729,12 +729,7 @@ class DateTimeRecognizer(NLPModule):
             raise NLPDependencyException("Errored downloading HeidelTime dependencies. Please check bin/dateime/heideltime-standalone")
 
 
-    def process_file(self, filename,outputdir):
-        """
-        Method to process a single file
-        :param filename: The conllu filename to parse
-        :return: nada (writes new xml with date tags to the folder step)
-        """
+    def process_file(self, docdict):
 
         def add_datetime_tags(node, counter=0):
             """
@@ -931,12 +926,13 @@ class DateTimeRecognizer(NLPModule):
             return counter
 
         # The POS tags and UD tags are in the conllu format..
-        conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml', '.conllu')
+        #conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml', '.conllu')
 
         # some xml files have an '&' character in them!!
         # forcibly convert to XML-friendly chars and keep them in the pipeline..
-        xmltext = open(filename, 'r').read().replace('&', '&amp;')
-        xmltree = ET.fromstring(xmltext)
+        #xmltext = open(filename, 'r').read().replace('&', '&amp;')
+        xmltext = docdict['xml']
+        xmltree = ET.fromstring(xmltext.replace('&','&amp;'))
         root = xmltree
 
         if XML_ATTRIB_REFDATE  in root.attrib:
@@ -944,28 +940,31 @@ class DateTimeRecognizer(NLPModule):
         else:
             dateCreated = datetime.today().strftime('%Y-%m-%d')
 
+        filename = root.attrib['id']
+
         sentences = [] # to hold the list of sentences in the file built from everything
         sentencestokens = [] # holds sentences built from tokens only
 
         # build the sentences from the conllu file
         # sentence boundaries have multiple \n in between
-        with open(conllufile, 'r') as r:
-            sent = []
-            senttok = []
-            for line in r:
-                line = line.strip()
-                if line == '':
-                    if len(sent) == 0: continue # second newline
-                    sentences.append(sent)
-                    sentencestokens.append(senttok)
-                    sent = []
-                    senttok = []
-                else:
-                    senttok.append(line.split('\t')[1])
-                    sent.append(line.replace('\t', '/')) # changes the delimiter to a cleaner one
+        #with open(conllufile, 'r') as r:
+        conlludata = docdict['dep']
+        sent = []
+        senttok = []
+        for line in conlludata.split('\n'):
+            line = line.strip()
+            if line == '':
+                if len(sent) == 0: continue # second newline
+                sentences.append(sent)
+                sentencestokens.append(senttok)
+                sent = []
+                senttok = []
+            else:
+                senttok.append(line.split('\t')[1])
+                sent.append(line.replace('\t', '/')) # changes the delimiter to a cleaner one
 
-            sentences.append(sent)
-            sentencestokens.append(senttok)
+        sentences.append(sent)
+        sentencestokens.append(senttok)
 
         # rollup
         for i in range(0, len(sentencestokens)):
@@ -983,8 +982,8 @@ class DateTimeRecognizer(NLPModule):
 
         # gets datetime expressions and timex3 attributes for said expression
         # for the whole document
-        with open(outputdir + '/xml/' + filename.split('/')[-1].replace('.xml', '_timex3.xml'), 'w') as p:
-            p.writelines(result)
+        #with open(outputdir + '/xml/' + filename.split('/')[-1].replace('.xml', '_timex3.xml'), 'w') as p:
+        #    p.writelines(result)
         dates, attribs = self.parse_timex3_xml(result)
 
         # build dataframe for second filter pass
@@ -1027,13 +1026,12 @@ class DateTimeRecognizer(NLPModule):
                 indexphrases.drop_duplicates(inplace=True)
                 sentenceindices = set(indexphrases['sentence_index'].tolist())
 
-
                 # Build the xml document with the new date tags
                 _ = add_datetime_tags(root) # modify xml in place and add date tags
 
-        # write to disk
-        tree = ET.ElementTree(root)
-        return tree
+        xmlstring = ET.tostring(root,encoding='utf8',method='xml').decode()
+
+        return {'dep':conlludata,'xml':xmlstring}
 
     # helper method,  unused
     def replace_xml_chars(self, text):
@@ -1089,32 +1087,11 @@ class DateTimeRecognizer(NLPModule):
 
     def run(self,  input_dir,  output_dir):
 
-        # Get list of all xml files to parse
-        for file in glob(input_dir + '/xml/*.xml'):
-            #file = '/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_voyage_doc008.xml'
-            #print(file)
-            treeobj = self.process_file(file)
-            treeobj.write(open(output_dir + os.sep + 'xml' + os.sep + file.split('/')[-1],  'w'),  encoding='unicode',  xml_declaration=True)
-            #break
+        processing_function = self.process_file
+        self.process_files_multiformat(input_dir, output_dir, processing_function,multithreaded=True)
 
 def main():
-    """
-    Testing only
-    """
-
-    BIN_DIR = '/home/nitin/Desktop/amalgum/amalgum/bin/'
-    TTG_PATH = 'treetagger/bin/'
-
-    config = {'BIN_PATH':BIN_DIR,'TTG_PATH':TTG_PATH}
-    dtr = DateTimeRecognizer(config=config)
-    dtr.test_dependencies()
-
-    start = time.time()
-    dtr.run(input_dir='/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/', output_dir='/home/nitin/Desktop/amalgum/amalgum/target/testdate/')
-    print (time.time() - start)
-
-
+    pass
 
 if __name__ == "__main__":
-    # Testing only
     main()
