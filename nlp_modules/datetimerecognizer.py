@@ -7,8 +7,10 @@ import pandas as pd
 import os
 import wget
 import tarfile
+import shutil
+import subprocess
 
-from nlp_modules.configuration import XML_ATTRIB_REFDATE, HEIDELTIME_STANDALONE
+from nlp_modules.configuration import XML_ATTRIB_REFDATE, HEIDELTIME_STANDALONE, TREETAGGER_LINUX, TREETAGGER_EXEC,TREETAGGER_SCRIPTS,TREETAGGER_PARAMETER_FILES_BNC,TREETAGGER_PARAMETER_FILES_PENN, TREETAGGER_CHUNKER
 from nlp_modules.base import NLPModule,  PipelineDep, NLPDependencyException
 from glob import glob
 from datetime import datetime
@@ -34,30 +36,28 @@ class HeidelTimeWrapper():
         # constants
         LANGUAGES = {
             'english': heideltime_resources.Language.ENGLISH
-            #'german': heideltime_resources.Language.GERMAN, 
-            #'dutch': heideltime_resources.Language.DUTCH, 
-            #'italian': heideltime_resources.Language.ITALIAN, 
-            #'spanish': heideltime_resources.Language.SPANISH, 
-            #'arabic': heideltime_resources.Language.ARABIC, 
-            #'french': heideltime_resources.Language.FRENCH, 
-            #'chinese': heideltime_resources.Language.CHINESE, 
-            #'russian': heideltime_resources.Language.RUSSIAN, 
+            #'german': heideltime_resources.Language.GERMAN,
+            #'dutch': heideltime_resources.Language.DUTCH,
+            #'italian': heideltime_resources.Language.ITALIAN,
+            #'spanish': heideltime_resources.Language.SPANISH,
+            #'arabic': heideltime_resources.Language.ARABIC,
+            #'french': heideltime_resources.Language.FRENCH,
+            #'chinese': heideltime_resources.Language.CHINESE,
+            #'russian': heideltime_resources.Language.RUSSIAN,
             #'portuguese': heideltime_resources.Language.PORTUGUESE
         }
 
         DOCUMENTS = {
-            'narratives': heideltime_standalone.DocumentType.NARRATIVES, 
-            'news': heideltime_standalone.DocumentType.NEWS, 
-            'colloquial': heideltime_standalone.DocumentType.COLLOQUIAL, 
+            'narratives': heideltime_standalone.DocumentType.NARRATIVES,
+            'news': heideltime_standalone.DocumentType.NEWS,
+            'colloquial': heideltime_standalone.DocumentType.COLLOQUIAL,
             'scientific': heideltime_standalone.DocumentType.SCIENTIFIC
         }
 
         OUTPUTS = {
-            'timeml': heideltime_standalone.OutputType.TIMEML, 
+            'timeml': heideltime_standalone.OutputType.TIMEML,
             'xmi': heideltime_standalone.OutputType.XMI
         }
-
-        config = '/home/nitin/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/config.props'
 
         self.language = LANGUAGES[lang]
         if (doc is None):
@@ -107,157 +107,157 @@ class DateTimeFilterModel():
 
         # this is just a template and not the real feature set; this is used to build the real featureset
         # the postags are taken from the label encoder model that encodes the result of the pos tag ensembler
-        self.featuredict = {'obl': 0,  'obl: npmod': 0,  'obl: tmod': 0,  'nsubj': 0,  'nsubj: pass': 0,  'obj': 0, 
-                            'iobj': 0,  'csubj': 0,  'csubj: pass': 0,  'ccomp': 0,  'xcomp': 0,  'nummod': 0,  'acl': 0, 
-                            'amod': 0,  'appos': 0,  'acl: relcl': 0,  'det': 0,  'det: predet': 0,  'neg': 0,  'nmod': 0, 
-                            'case': 0,  'nmod: npmod': 0,  'nmod: tmod': 0,  'nmod: poss': 0,  'advcl': 0,  'advmod': 0, 
-                            'compound': 0,  'compound: prt': 0,  'flat': 0,  'fixed': 0,  'foreign': 0,  'goeswith': 0, 
-                            'list': 0,  'dislocated': 0,  'parataxis': 0,  'orphan': 0,  'reparandum': 0,  'vocative': 0, 
-                            'discourse': 0,  'expl': 0,  'aux': 0,  'aux: pass': 0,  'cop': 0,  'mark': 0,  'punct': 0, 
-                            'conj': 0,  'cc': 0,  'cc: preconj': 0,  'root': 0,  'dep': 0,  '$': 0,  "''": 0,  ', ': 0, 
-                            '-LRB-': 0,  '-LSB-': 0,  '-RRB-': 0,  '-RSB-': 0,  '.': 0,  ': ': 0,  'ADD': 0,  'ADJ': 0, 
-                            'NP': 0,  'ADP': 0,  'ADV': 0,  'AFX': 0,  'AUX': 0,  'CC': 0,  'CCONJ': 0,  'CD': 0,  'DET': 0, 
-                            'DT': 0,  'EX': 0,  'FW': 0,  'GW': 0,  'HYPH': 0,  'IN': 0,  'INTJ': 0,  'JJ': 0,  'JJR': 0, 
-                            'JJS': 0,  'LS': 0,  'MD': 0,  'NFP': 0,  'NN': 0,  'NNP': 0,  'NNPS': 0,  'NNS': 0,  'NOUN': 0, 
-                            'NUM': 0,  'PART': 0,  'PDT': 0,  'POS': 0,  'PRON': 0,  'PROPN': 0,  'PRP': 0,  'PRP$': 0, 
-                            'PUNCT': 0,  'RB': 0,  'RBR': 0,  'RBS': 0,  'RP': 0,  'SYM': 0,  'TO': 0,  'UH': 0,  'VB': 0, 
-                            'VBD': 0,  'VBG': 0,  'VBN': 0,  'VBP': 0,  'VBZ': 0,  'VERB': 0,  'WDT': 0,  'WP': 0,  'WP$': 0, 
-                            'WRB': 0,  'X': 0,  '``': 0,  'january': 0,  'february': 0,  'march': 0,  'april': 0,  'may': 0, 
-                            'june': 0,  'july': 0,  'august': 0,  'september': 0,  'october': 0,  'november': 0, 
-                            'december': 0,  'summer': 0,  'winter': 0,  'autumn': 0,  'spring': 0,  'christmas': 0, 
-                            'christmas_eve': 0,  'easter': 0,  'easter_sunday': 0,  'monday': 0,  'tuesday': 0, 
-                            'wednesday': 0,  'thursday': 0,  'friday': 0,  'saturday': 0,  'sunday': 0,  'start1_obl': 0, 
-                            'start1_obl: npmod': 0,  'start1_obl: tmod': 0,  'start1_nsubj': 0,  'start1_nsubj: pass': 0, 
-                            'start1_obj': 0,  'start1_iobj': 0,  'start1_csubj': 0,  'start1_csubj: pass': 0, 
-                            'start1_ccomp': 0,  'start1_xcomp': 0,  'start1_nummod': 0,  'start1_acl': 0,  'start1_amod': 0, 
-                            'start1_appos': 0,  'start1_acl: relcl': 0,  'start1_det': 0,  'start1_det: predet': 0, 
-                            'start1_neg': 0,  'start1_nmod': 0,  'start1_case': 0,  'start1_nmod: npmod': 0, 
-                            'start1_nmod: tmod': 0,  'start1_nmod: poss': 0,  'start1_advcl': 0,  'start1_advmod': 0, 
-                            'start1_compound': 0,  'start1_compound: prt': 0,  'start1_flat': 0,  'start1_fixed': 0, 
-                            'start1_foreign': 0,  'start1_goeswith': 0,  'start1_list': 0,  'start1_dislocated': 0, 
-                            'start1_parataxis': 0,  'start1_orphan': 0,  'start1_reparandum': 0,  'start1_vocative': 0, 
-                            'start1_discourse': 0,  'start1_expl': 0,  'start1_aux': 0,  'start1_aux: pass': 0, 
-                            'start1_cop': 0,  'start1_mark': 0,  'start1_conj': 0,  'start1_cc': 0, 
-                            'start1_cc: preconj': 0,  'start1_punct': 0,  'start1_root': 0,  'start1_dep': 0, 
-                            'start1_$': 0,  "start1_''": 0,  'start1_, ': 0,  'start1_-LRB-': 0,  'start1_-LSB-': 0, 
-                            'start1_-RRB-': 0,  'start1_-RSB-': 0,  'start1_.': 0,  'start1_: ': 0,  'start1_ADD': 0, 
-                            'start1_ADJ': 0,  'start1_NP': 0,  'start1_ADP': 0,  'start1_ADV': 0,  'start1_AFX': 0, 
-                            'start1_AUX': 0,  'start1_CC': 0,  'start1_CCONJ': 0,  'start1_CD': 0,  'start1_DET': 0, 
-                            'start1_DT': 0,  'start1_EX': 0,  'start1_FW': 0,  'start1_GW': 0,  'start1_HYPH': 0, 
-                            'start1_IN': 0,  'start1_INTJ': 0,  'start1_JJ': 0,  'start1_JJR': 0,  'start1_JJS': 0, 
-                            'start1_LS': 0,  'start1_MD': 0,  'start1_NFP': 0,  'start1_NN': 0,  'start1_NNP': 0, 
-                            'start1_NNPS': 0,  'start1_NNS': 0,  'start1_NOUN': 0,  'start1_NUM': 0,  'start1_PART': 0, 
-                            'start1_PDT': 0,  'start1_POS': 0,  'start1_PRON': 0,  'start1_PROPN': 0,  'start1_PRP': 0, 
-                            'start1_PRP$': 0,  'start1_PUNCT': 0,  'start1_RB': 0,  'start1_RBR': 0,  'start1_RBS': 0, 
-                            'start1_RP': 0,  'start1_SYM': 0,  'start1_TO': 0,  'start1_UH': 0,  'start1_VB': 0, 
-                            'start1_VBD': 0,  'start1_VBG': 0,  'start1_VBN': 0,  'start1_VBP': 0,  'start1_VBZ': 0, 
-                            'start1_VERB': 0,  'start1_WDT': 0,  'start1_WP': 0,  'start1_WP$': 0,  'start1_WRB': 0, 
-                            'start1_X': 0,  'start1_``': 0,  'end1_obl': 0,  'end1_obl: npmod': 0,  'end1_obl: tmod': 0, 
-                            'end1_nsubj': 0,  'end1_nsubj: pass': 0,  'end1_obj': 0,  'end1_iobj': 0,  'end1_csubj': 0, 
-                            'end1_csubj: pass': 0,  'end1_ccomp': 0,  'end1_xcomp': 0,  'end1_nummod': 0,  'end1_acl': 0, 
-                            'end1_amod': 0,  'end1_appos': 0,  'end1_acl: relcl': 0,  'end1_det': 0,  'end1_det: predet': 0, 
-                            'end1_neg': 0,  'end1_nmod': 0,  'end1_case': 0,  'end1_nmod: npmod': 0,  'end1_nmod: tmod': 0, 
-                            'end1_nmod: poss': 0,  'end1_advcl': 0,  'end1_advmod': 0,  'end1_compound': 0, 
-                            'end1_compound: prt': 0,  'end1_flat': 0,  'end1_fixed': 0,  'end1_foreign': 0, 
-                            'end1_goeswith': 0,  'end1_list': 0,  'end1_dislocated': 0,  'end1_parataxis': 0, 
-                            'end1_orphan': 0,  'end1_reparandum': 0,  'end1_vocative': 0,  'end1_discourse': 0, 
-                            'end1_expl': 0,  'end1_aux': 0,  'end1_aux: pass': 0,  'end1_cop': 0,  'end1_mark': 0, 
-                            'end1_punct': 0,  'end1_conj': 0,  'end1_cc': 0,  'end1_cc: preconj': 0,  'end1_root': 0, 
-                            'end1_dep': 0,  'end1_$': 0,  "end1_''": 0,  'end1_, ': 0,  'end1_-LRB-': 0,  'end1_-LSB-': 0, 
-                            'end1_-RRB-': 0,  'end1_-RSB-': 0,  'end1_.': 0,  'end1_: ': 0,  'end1_ADD': 0,  'end1_ADJ': 0, 
-                            'end1_NP': 0,  'end1_ADP': 0,  'end1_ADV': 0,  'end1_AFX': 0,  'end1_AUX': 0,  'end1_CC': 0, 
-                            'end1_CCONJ': 0,  'end1_CD': 0,  'end1_DET': 0,  'end1_DT': 0,  'end1_EX': 0,  'end1_FW': 0, 
-                            'end1_GW': 0,  'end1_HYPH': 0,  'end1_IN': 0,  'end1_INTJ': 0,  'end1_JJ': 0,  'end1_JJR': 0, 
-                            'end1_JJS': 0,  'end1_LS': 0,  'end1_MD': 0,  'end1_NFP': 0,  'end1_NN': 0,  'end1_NNP': 0, 
-                            'end1_NNPS': 0,  'end1_NNS': 0,  'end1_NOUN': 0,  'end1_NUM': 0,  'end1_PART': 0,  'end1_PDT': 0, 
-                            'end1_POS': 0,  'end1_PRON': 0,  'end1_PROPN': 0,  'end1_PRP': 0,  'end1_PRP$': 0, 
-                            'end1_PUNCT': 0,  'end1_RB': 0,  'end1_RBR': 0,  'end1_RBS': 0,  'end1_RP': 0,  'end1_SYM': 0, 
-                            'end1_TO': 0,  'end1_UH': 0,  'end1_VB': 0,  'end1_VBD': 0,  'end1_VBG': 0,  'end1_VBN': 0, 
-                            'end1_VBP': 0,  'end1_VBZ': 0,  'end1_VERB': 0,  'end1_WDT': 0,  'end1_WP': 0,  'end1_WP$': 0, 
-                            'end1_WRB': 0,  'end1_X': 0,  'end1_``': 0,  'end2_obl': 0,  'end2_obl: npmod': 0, 
-                            'end2_obl: tmod': 0,  'end2_nsubj': 0,  'end2_nsubj: pass': 0,  'end2_obj': 0,  'end2_iobj': 0, 
-                            'end2_csubj': 0,  'end2_csubj: pass': 0,  'end2_ccomp': 0,  'end2_xcomp': 0,  'end2_nummod': 0, 
-                            'end2_acl': 0,  'end2_amod': 0,  'end2_appos': 0,  'end2_acl: relcl': 0,  'end2_det': 0, 
-                            'end2_det: predet': 0,  'end2_neg': 0,  'end2_nmod': 0,  'end2_case': 0,  'end2_nmod: npmod': 0, 
-                            'end2_nmod: tmod': 0,  'end2_nmod: poss': 0,  'end2_advcl': 0,  'end2_advmod': 0, 
-                            'end2_compound': 0,  'end2_compound: prt': 0,  'end2_flat': 0,  'end2_fixed': 0, 
-                            'end2_foreign': 0,  'end2_goeswith': 0,  'end2_list': 0,  'end2_dislocated': 0, 
-                            'end2_parataxis': 0,  'end2_orphan': 0,  'end2_reparandum': 0,  'end2_vocative': 0, 
-                            'end2_discourse': 0,  'end2_expl': 0,  'end2_aux': 0,  'end2_aux: pass': 0,  'end2_cop': 0, 
-                            'end2_mark': 0,  'end2_punct': 0,  'end2_conj': 0,  'end2_cc': 0,  'end2_cc: preconj': 0, 
-                            'end2_root': 0,  'end2_dep': 0,  'end2_$': 0,  "end2_''": 0,  'end2_, ': 0,  'end2_-LRB-': 0, 
-                            'end2_-LSB-': 0,  'end2_-RRB-': 0,  'end2_-RSB-': 0,  'end2_.': 0,  'end2_: ': 0,  'end2_ADD': 0, 
-                            'end2_ADJ': 0,  'end2_NP': 0,  'end2_ADP': 0,  'end2_ADV': 0,  'end2_AFX': 0,  'end2_AUX': 0, 
-                            'end2_CC': 0,  'end2_CCONJ': 0,  'end2_CD': 0,  'end2_DET': 0,  'end2_DT': 0,  'end2_EX': 0, 
-                            'end2_FW': 0,  'end2_GW': 0,  'end2_HYPH': 0,  'end2_IN': 0,  'end2_INTJ': 0,  'end2_JJ': 0, 
-                            'end2_JJR': 0,  'end2_JJS': 0,  'end2_LS': 0,  'end2_MD': 0,  'end2_NFP': 0,  'end2_NN': 0, 
-                            'end2_NNP': 0,  'end2_NNPS': 0,  'end2_NNS': 0,  'end2_NOUN': 0,  'end2_NUM': 0,  'end2_PART': 0, 
-                            'end2_PDT': 0,  'end2_POS': 0,  'end2_PRON': 0,  'end2_PROPN': 0,  'end2_PRP': 0,  'end2_PP$': 0, 
-                            'end1_PP$': 0,  'start2_PP$': 0,  'start1_PP$': 0,  'end2_PP': 0,  'end1_PP': 0,  'start2_PP': 0, 
-                            'start1_PP': 0,  'end2_PRP$': 0,  'end2_PUNCT': 0,  'end2_RB': 0,  'end2_RBR': 0,  'end2_RBS': 0, 
-                            'end2_RP': 0,  'end2_SYM': 0,  'end2_TO': 0,  'end2_UH': 0,  'end2_VB': 0,  'end2_VBD': 0, 
-                            'end2_VBG': 0,  'end2_VBN': 0,  'end2_VBP': 0,  'end2_VBZ': 0,  'end2_VERB': 0,  'end2_WDT': 0, 
-                            'end2_WP': 0,  'end2_WP$': 0,  'end2_WRB': 0,  'end2_X': 0,  'end2_``': 0,  'start2_obl': 0, 
-                            'start2_obl: npmod': 0,  'start2_obl: tmod': 0,  'start2_nsubj': 0,  'start2_nsubj: pass': 0, 
-                            'start2_obj': 0,  'start2_iobj': 0,  'start2_csubj': 0,  'start2_csubj: pass': 0, 
-                            'start2_ccomp': 0,  'start2_xcomp': 0,  'start2_nummod': 0,  'start2_acl': 0,  'start2_amod': 0, 
-                            'start2_appos': 0,  'start2_acl: relcl': 0,  'start2_det': 0,  'start2_det: predet': 0, 
-                            'start2_neg': 0,  'start2_nmod': 0,  'start2_case': 0,  'start2_nmod: npmod': 0, 
-                            'start2_nmod: tmod': 0,  'start2_nmod: poss': 0,  'start2_advcl': 0,  'start2_advmod': 0, 
-                            'start2_compound': 0,  'start2_compound: prt': 0,  'start2_flat': 0,  'start2_fixed': 0, 
-                            'start2_foreign': 0,  'start2_goeswith': 0,  'start2_list': 0,  'start2_dislocated': 0, 
-                            'start2_parataxis': 0,  'start2_orphan': 0,  'start2_reparandum': 0,  'start2_vocative': 0, 
-                            'start2_discourse': 0,  'start2_expl': 0,  'start2_aux': 0,  'start2_aux: pass': 0, 
-                            'start2_cop': 0,  'start2_mark': 0,  'start2_punct': 0,  'start2_conj': 0,  'start2_cc': 0, 
-                            'start2_cc: preconj': 0,  'start2_root': 0,  'start2_dep': 0,  'start2_$': 0,  "start2_''": 0, 
-                            'start2_, ': 0,  'start2_-LRB-': 0,  'start2_-LSB-': 0,  'start2_-RRB-': 0,  'start2_-RSB-': 0, 
-                            'start2_.': 0,  'start2_: ': 0,  'start2_ADD': 0,  'start2_ADJ': 0,  'start2_NP': 0, 
-                            'start2_ADP': 0,  'start2_ADV': 0,  'start2_AFX': 0,  'start2_AUX': 0,  'start2_CC': 0, 
-                            'start2_CCONJ': 0,  'start2_CD': 0,  'start2_DET': 0,  'start2_DT': 0,  'start2_EX': 0, 
-                            'start2_FW': 0,  'start2_GW': 0,  'start2_HYPH': 0,  'start2_IN': 0,  'start2_INTJ': 0, 
-                            'start2_JJ': 0,  'start2_JJR': 0,  'start2_JJS': 0,  'start2_LS': 0,  'start2_MD': 0, 
-                            'start2_NFP': 0,  'start2_NN': 0,  'start2_NNP': 0,  'start2_NNPS': 0,  'start2_NNS': 0, 
-                            'start2_NOUN': 0,  'start2_NUM': 0,  'start2_PART': 0,  'start2_PDT': 0,  'start2_POS': 0, 
-                            'start2_PRON': 0,  'start2_PROPN': 0,  'start2_PRP': 0,  'start2_PRP$': 0,  'start2_PUNCT': 0, 
-                            'start2_RB': 0,  'start2_RBR': 0,  'start2_RBS': 0,  'start2_RP': 0,  'start2_SYM': 0, 
-                            'start2_TO': 0,  'start2_UH': 0,  'start2_VB': 0,  'start2_VBD': 0,  'start2_VBG': 0, 
-                            'start2_VBN': 0,  'start2_VBP': 0,  'start2_VBZ': 0,  'start2_VERB': 0,  'start2_WDT': 0, 
-                            'start2_WP': 0,  'start2_WP$': 0,  'start2_WRB': 0,  'start2_X': 0,  'start2_``': 0,  'day': 0, 
-                            'century': 0,  'millenia': 0,  'hour': 0,  'minute': 0,  'year': 0,  'second': 0,  'month': 0, 
-                            'start2_day': 0,  'start2_century': 0,  'start2_millenia': 0,  'start2_hour': 0, 
-                            'start2_minute': 0,  'start2_year': 0,  'start2_second': 0,  'start2_month': 0, 
-                            'start1_day': 0,  'start1_century': 0,  'start1_millenia': 0,  'start1_hour': 0, 
-                            'start1_minute': 0,  'start1_year': 0,  'start1_second': 0,  'start1_month': 0,  'end2_day': 0, 
-                            'end2_century': 0,  'end2_millenia': 0,  'end2_hour': 0,  'end2_minute': 0,  'end2_year': 0, 
-                            'end2_second': 0,  'end2_month': 0,  'end1_day': 0,  'end1_century': 0,  'end1_millenia': 0, 
-                            'end1_hour': 0,  'end1_minute': 0,  'end1_year': 0,  'end1_second': 0,  'end1_month': 0, 
-                            'start1_january': 0,  'start1_february': 0,  'start1_march': 0,  'start1_april': 0, 
-                            'start1_may': 0,  'start1_june': 0,  'start1_july': 0,  'start1_august': 0, 
-                            'start1_september': 0,  'start1_october': 0,  'start1_november': 0, 
-                            'start1_december': 0,  'start1_summer': 0,  'start1_winter': 0,  'start1_autumn': 0, 
-                            'start1_spring': 0,  'start1_christmas': 0,  'start1_christmas_eve': 0,  'start1_easter': 0, 
-                            'start1_easter_sunday': 0,  'start1_monday': 0,  'start1_tuesday': 0,  'start1_wednesday': 0, 
-                            'start1_thursday': 0,  'start1_friday': 0,  'start1_saturday': 0,  'start1_sunday': 0, 
-                            'start2_january': 0,  'start2_february': 0,  'start2_march': 0,  'start2_april': 0, 
-                            'start2_may': 0,  'start2_june': 0,  'start2_july': 0,  'start2_august': 0, 
-                            'start2_september': 0,  'start2_october': 0,  'start2_november': 0,  'start2_december': 0, 
-                            'start2_summer': 0,  'start2_winter': 0,  'start2_autumn': 0,  'start2_spring': 0, 
-                            'start2_christmas': 0,  'start2_christmas_eve': 0,  'start2_easter': 0, 
-                            'start2_easter_sunday': 0,  'start2_monday': 0,  'start2_tuesday': 0,  'start2_wednesday': 0, 
-                            'start2_thursday': 0,  'start2_friday': 0,  'start2_saturday': 0,  'start2_sunday': 0, 
-                            'end2_january': 0,  'end2_february': 0,  'end2_march': 0,  'end2_april': 0,  'end2_may': 0, 
-                            'end2_june': 0,  'end2_july': 0,  'end2_august': 0,  'end2_september': 0,  'end2_october': 0, 
-                            'end2_november': 0,  'end2_december': 0,  'end2_summer': 0,  'end2_winter': 0, 
-                            'end2_autumn': 0,  'end2_spring': 0,  'end2_christmas': 0,  'end2_christmas_eve': 0, 
-                            'end2_easter': 0,  'end2_easter_sunday': 0,  'end2_monday': 0,  'end2_tuesday': 0, 
-                            'end2_wednesday': 0,  'end2_thursday': 0,  'end2_friday': 0,  'end2_saturday': 0, 
-                            'end2_sunday': 0,  'end1_january': 0,  'end1_february': 0,  'end1_march': 0,  'end1_april': 0, 
-                            'end1_may': 0,  'end1_june': 0,  'end1_july': 0,  'end1_august': 0,  'end1_september': 0, 
-                            'end1_october': 0,  'end1_november': 0,  'end1_december': 0,  'end1_summer': 0, 
-                            'end1_winter': 0,  'end1_autumn': 0,  'end1_spring': 0,  'end1_christmas': 0, 
-                            'end1_christmas_eve': 0,  'end1_easter': 0,  'end1_easter_sunday': 0,  'end1_monday': 0, 
-                            'end1_tuesday': 0,  'end1_wednesday': 0,  'end1_thursday': 0,  'end1_friday': 0, 
-                            'end1_saturday': 0,  'end1_sunday': 0}
+        self.featuredict =  {'obl':0,  'obl:npmod':0,  'obl:tmod':0,  'nsubj':0,  'nsubj:pass':0,  'obj':0,
+                            'iobj':0,  'csubj':0,  'csubj:pass':0,  'ccomp':0,  'xcomp':0,  'nummod':0,  'acl':0,
+                            'amod':0,  'appos':0,  'acl:relcl':0,  'det':0,  'det:predet':0,  'neg':0,  'nmod':0,
+                            'case':0,  'nmod:npmod':0,  'nmod:tmod':0,  'nmod:poss':0,  'advcl':0,  'advmod':0,
+                            'compound':0,  'compound:prt':0,  'flat':0,  'fixed':0,  'foreign':0,  'goeswith':0,
+                            'list':0,  'dislocated':0,  'parataxis':0,  'orphan':0,  'reparandum':0,  'vocative':0,
+                            'discourse':0,  'expl':0,  'aux':0,  'aux:pass':0,  'cop':0,  'mark':0,  'punct':0,
+                            'conj':0,  'cc':0,  'cc:preconj':0,  'root':0,  'dep':0,  '$':0,  "''":0,  ', ':0,
+                            '-LRB-':0,  '-LSB-':0,  '-RRB-':0,  '-RSB-':0,  '.':0,  ':':0,  'ADD':0,  'ADJ':0,
+                            'NP':0,  'ADP':0,  'ADV':0,  'AFX':0,  'AUX':0,  'CC':0,  'CCONJ':0,  'CD':0,  'DET':0,
+                            'DT':0,  'EX':0,  'FW':0,  'GW':0,  'HYPH':0,  'IN':0,  'INTJ':0,  'JJ':0,  'JJR':0,
+                            'JJS':0,  'LS':0,  'MD':0,  'NFP':0,  'NN':0,  'NNP':0,  'NNPS':0,  'NNS':0,  'NOUN':0,
+                            'NUM':0,  'PART':0,  'PDT':0,  'POS':0,  'PRON':0,  'PROPN':0,  'PRP':0,  'PRP$':0,
+                            'PUNCT':0,  'RB':0,  'RBR':0,  'RBS':0,  'RP':0,  'SYM':0,  'TO':0,  'UH':0,  'VB':0,
+                            'VBD':0,  'VBG':0,  'VBN':0,  'VBP':0,  'VBZ':0,  'VERB':0,  'WDT':0,  'WP':0,  'WP$':0,
+                            'WRB':0,  'X':0,  '``':0,  'january':0,  'february':0,  'march':0,  'april':0,  'may':0,
+                            'june':0,  'july':0,  'august':0,  'september':0,  'october':0,  'november':0,
+                            'december':0,  'summer':0,  'winter':0,  'autumn':0,  'spring':0,  'christmas':0,
+                            'christmas_eve':0,  'easter':0,  'easter_sunday':0,  'monday':0,  'tuesday':0,
+                            'wednesday':0,  'thursday':0,  'friday':0,  'saturday':0,  'sunday':0,  'start1_obl':0,
+                            'start1_obl:npmod':0,  'start1_obl:tmod':0,  'start1_nsubj':0,  'start1_nsubj:pass':0,
+                            'start1_obj':0,  'start1_iobj':0,  'start1_csubj':0,  'start1_csubj:pass':0,
+                            'start1_ccomp':0,  'start1_xcomp':0,  'start1_nummod':0,  'start1_acl':0,  'start1_amod':0,
+                            'start1_appos':0,  'start1_acl:relcl':0,  'start1_det':0,  'start1_det:predet':0,
+                            'start1_neg':0,  'start1_nmod':0,  'start1_case':0,  'start1_nmod:npmod':0,
+                            'start1_nmod:tmod':0,  'start1_nmod:poss':0,  'start1_advcl':0,  'start1_advmod':0,
+                            'start1_compound':0,  'start1_compound:prt':0,  'start1_flat':0,  'start1_fixed':0,
+                            'start1_foreign':0,  'start1_goeswith':0,  'start1_list':0,  'start1_dislocated':0,
+                            'start1_parataxis':0,  'start1_orphan':0,  'start1_reparandum':0,  'start1_vocative':0,
+                            'start1_discourse':0,  'start1_expl':0,  'start1_aux':0,  'start1_aux:pass':0,
+                            'start1_cop':0,  'start1_mark':0,  'start1_conj':0,  'start1_cc':0,
+                            'start1_cc:preconj':0,  'start1_punct':0,  'start1_root':0,  'start1_dep':0,
+                            'start1_$':0,  "start1_''":0,  'start1_, ':0,  'start1_-LRB-':0,  'start1_-LSB-':0,
+                            'start1_-RRB-':0,  'start1_-RSB-':0,  'start1_.':0,  'start1_:':0,  'start1_ADD':0,
+                            'start1_ADJ':0,  'start1_NP':0,  'start1_ADP':0,  'start1_ADV':0,  'start1_AFX':0,
+                            'start1_AUX':0,  'start1_CC':0,  'start1_CCONJ':0,  'start1_CD':0,  'start1_DET':0,
+                            'start1_DT':0,  'start1_EX':0,  'start1_FW':0,  'start1_GW':0,  'start1_HYPH':0,
+                            'start1_IN':0,  'start1_INTJ':0,  'start1_JJ':0,  'start1_JJR':0,  'start1_JJS':0,
+                            'start1_LS':0,  'start1_MD':0,  'start1_NFP':0,  'start1_NN':0,  'start1_NNP':0,
+                            'start1_NNPS':0,  'start1_NNS':0,  'start1_NOUN':0,  'start1_NUM':0,  'start1_PART':0,
+                            'start1_PDT':0,  'start1_POS':0,  'start1_PRON':0,  'start1_PROPN':0,  'start1_PRP':0,
+                            'start1_PRP$':0,  'start1_PUNCT':0,  'start1_RB':0,  'start1_RBR':0,  'start1_RBS':0,
+                            'start1_RP':0,  'start1_SYM':0,  'start1_TO':0,  'start1_UH':0,  'start1_VB':0,
+                            'start1_VBD':0,  'start1_VBG':0,  'start1_VBN':0,  'start1_VBP':0,  'start1_VBZ':0,
+                            'start1_VERB':0,  'start1_WDT':0,  'start1_WP':0,  'start1_WP$':0,  'start1_WRB':0,
+                            'start1_X':0,  'start1_``':0,  'end1_obl':0,  'end1_obl:npmod':0,  'end1_obl:tmod':0,
+                            'end1_nsubj':0,  'end1_nsubj:pass':0,  'end1_obj':0,  'end1_iobj':0,  'end1_csubj':0,
+                            'end1_csubj:pass':0,  'end1_ccomp':0,  'end1_xcomp':0,  'end1_nummod':0,  'end1_acl':0,
+                            'end1_amod':0,  'end1_appos':0,  'end1_acl:relcl':0,  'end1_det':0,  'end1_det:predet':0,
+                            'end1_neg':0,  'end1_nmod':0,  'end1_case':0,  'end1_nmod:npmod':0,  'end1_nmod:tmod':0,
+                            'end1_nmod:poss':0,  'end1_advcl':0,  'end1_advmod':0,  'end1_compound':0,
+                            'end1_compound:prt':0,  'end1_flat':0,  'end1_fixed':0,  'end1_foreign':0,
+                            'end1_goeswith':0,  'end1_list':0,  'end1_dislocated':0,  'end1_parataxis':0,
+                            'end1_orphan':0,  'end1_reparandum':0,  'end1_vocative':0,  'end1_discourse':0,
+                            'end1_expl':0,  'end1_aux':0,  'end1_aux:pass':0,  'end1_cop':0,  'end1_mark':0,
+                            'end1_punct':0,  'end1_conj':0,  'end1_cc':0,  'end1_cc:preconj':0,  'end1_root':0,
+                            'end1_dep':0,  'end1_$':0,  "end1_''":0,  'end1_, ':0,  'end1_-LRB-':0,  'end1_-LSB-':0,
+                            'end1_-RRB-':0,  'end1_-RSB-':0,  'end1_.':0,  'end1_:':0,  'end1_ADD':0,  'end1_ADJ':0,
+                            'end1_NP':0,  'end1_ADP':0,  'end1_ADV':0,  'end1_AFX':0,  'end1_AUX':0,  'end1_CC':0,
+                            'end1_CCONJ':0,  'end1_CD':0,  'end1_DET':0,  'end1_DT':0,  'end1_EX':0,  'end1_FW':0,
+                            'end1_GW':0,  'end1_HYPH':0,  'end1_IN':0,  'end1_INTJ':0,  'end1_JJ':0,  'end1_JJR':0,
+                            'end1_JJS':0,  'end1_LS':0,  'end1_MD':0,  'end1_NFP':0,  'end1_NN':0,  'end1_NNP':0,
+                            'end1_NNPS':0,  'end1_NNS':0,  'end1_NOUN':0,  'end1_NUM':0,  'end1_PART':0,  'end1_PDT':0,
+                            'end1_POS':0,  'end1_PRON':0,  'end1_PROPN':0,  'end1_PRP':0,  'end1_PRP$':0,
+                            'end1_PUNCT':0,  'end1_RB':0,  'end1_RBR':0,  'end1_RBS':0,  'end1_RP':0,  'end1_SYM':0,
+                            'end1_TO':0,  'end1_UH':0,  'end1_VB':0,  'end1_VBD':0,  'end1_VBG':0,  'end1_VBN':0,
+                            'end1_VBP':0,  'end1_VBZ':0,  'end1_VERB':0,  'end1_WDT':0,  'end1_WP':0,  'end1_WP$':0,
+                            'end1_WRB':0,  'end1_X':0,  'end1_``':0,  'end2_obl':0,  'end2_obl:npmod':0,
+                            'end2_obl:tmod':0,  'end2_nsubj':0,  'end2_nsubj:pass':0,  'end2_obj':0,  'end2_iobj':0,
+                            'end2_csubj':0,  'end2_csubj:pass':0,  'end2_ccomp':0,  'end2_xcomp':0,  'end2_nummod':0,
+                            'end2_acl':0,  'end2_amod':0,  'end2_appos':0,  'end2_acl:relcl':0,  'end2_det':0,
+                            'end2_det:predet':0,  'end2_neg':0,  'end2_nmod':0,  'end2_case':0,  'end2_nmod:npmod':0,
+                            'end2_nmod:tmod':0,  'end2_nmod:poss':0,  'end2_advcl':0,  'end2_advmod':0,
+                            'end2_compound':0,  'end2_compound:prt':0,  'end2_flat':0,  'end2_fixed':0,
+                            'end2_foreign':0,  'end2_goeswith':0,  'end2_list':0,  'end2_dislocated':0,
+                            'end2_parataxis':0,  'end2_orphan':0,  'end2_reparandum':0,  'end2_vocative':0,
+                            'end2_discourse':0,  'end2_expl':0,  'end2_aux':0,  'end2_aux:pass':0,  'end2_cop':0,
+                            'end2_mark':0,  'end2_punct':0,  'end2_conj':0,  'end2_cc':0,  'end2_cc:preconj':0,
+                            'end2_root':0,  'end2_dep':0,  'end2_$':0,  "end2_''":0,  'end2_, ':0,  'end2_-LRB-':0,
+                            'end2_-LSB-':0,  'end2_-RRB-':0,  'end2_-RSB-':0,  'end2_.':0,  'end2_:':0,  'end2_ADD':0,
+                            'end2_ADJ':0,  'end2_NP':0,  'end2_ADP':0,  'end2_ADV':0,  'end2_AFX':0,  'end2_AUX':0,
+                            'end2_CC':0,  'end2_CCONJ':0,  'end2_CD':0,  'end2_DET':0,  'end2_DT':0,  'end2_EX':0,
+                            'end2_FW':0,  'end2_GW':0,  'end2_HYPH':0,  'end2_IN':0,  'end2_INTJ':0,  'end2_JJ':0,
+                            'end2_JJR':0,  'end2_JJS':0,  'end2_LS':0,  'end2_MD':0,  'end2_NFP':0,  'end2_NN':0,
+                            'end2_NNP':0,  'end2_NNPS':0,  'end2_NNS':0,  'end2_NOUN':0,  'end2_NUM':0,  'end2_PART':0,
+                            'end2_PDT':0,  'end2_POS':0,  'end2_PRON':0,  'end2_PROPN':0,  'end2_PRP':0,  'end2_PP$':0,
+                            'end1_PP$':0,  'start2_PP$':0,  'start1_PP$':0,  'end2_PP':0,  'end1_PP':0,  'start2_PP':0,
+                            'start1_PP':0,  'end2_PRP$':0,  'end2_PUNCT':0,  'end2_RB':0,  'end2_RBR':0,  'end2_RBS':0,
+                            'end2_RP':0,  'end2_SYM':0,  'end2_TO':0,  'end2_UH':0,  'end2_VB':0,  'end2_VBD':0,
+                            'end2_VBG':0,  'end2_VBN':0,  'end2_VBP':0,  'end2_VBZ':0,  'end2_VERB':0,  'end2_WDT':0,
+                            'end2_WP':0,  'end2_WP$':0,  'end2_WRB':0,  'end2_X':0,  'end2_``':0,  'start2_obl':0,
+                            'start2_obl:npmod':0,  'start2_obl:tmod':0,  'start2_nsubj':0,  'start2_nsubj:pass':0,
+                            'start2_obj':0,  'start2_iobj':0,  'start2_csubj':0,  'start2_csubj:pass':0,
+                            'start2_ccomp':0,  'start2_xcomp':0,  'start2_nummod':0,  'start2_acl':0,  'start2_amod':0,
+                            'start2_appos':0,  'start2_acl:relcl':0,  'start2_det':0,  'start2_det:predet':0,
+                            'start2_neg':0,  'start2_nmod':0,  'start2_case':0,  'start2_nmod:npmod':0,
+                            'start2_nmod:tmod':0,  'start2_nmod:poss':0,  'start2_advcl':0,  'start2_advmod':0,
+                            'start2_compound':0,  'start2_compound:prt':0,  'start2_flat':0,  'start2_fixed':0,
+                            'start2_foreign':0,  'start2_goeswith':0,  'start2_list':0,  'start2_dislocated':0,
+                            'start2_parataxis':0,  'start2_orphan':0,  'start2_reparandum':0,  'start2_vocative':0,
+                            'start2_discourse':0,  'start2_expl':0,  'start2_aux':0,  'start2_aux:pass':0,
+                            'start2_cop':0,  'start2_mark':0,  'start2_punct':0,  'start2_conj':0,  'start2_cc':0,
+                            'start2_cc:preconj':0,  'start2_root':0,  'start2_dep':0,  'start2_$':0,  "start2_''":0,
+                            'start2_, ':0,  'start2_-LRB-':0,  'start2_-LSB-':0,  'start2_-RRB-':0,  'start2_-RSB-':0,
+                            'start2_.':0,  'start2_:':0,  'start2_ADD':0,  'start2_ADJ':0,  'start2_NP':0,
+                            'start2_ADP':0,  'start2_ADV':0,  'start2_AFX':0,  'start2_AUX':0,  'start2_CC':0,
+                            'start2_CCONJ':0,  'start2_CD':0,  'start2_DET':0,  'start2_DT':0,  'start2_EX':0,
+                            'start2_FW':0,  'start2_GW':0,  'start2_HYPH':0,  'start2_IN':0,  'start2_INTJ':0,
+                            'start2_JJ':0,  'start2_JJR':0,  'start2_JJS':0,  'start2_LS':0,  'start2_MD':0,
+                            'start2_NFP':0,  'start2_NN':0,  'start2_NNP':0,  'start2_NNPS':0,  'start2_NNS':0,
+                            'start2_NOUN':0,  'start2_NUM':0,  'start2_PART':0,  'start2_PDT':0,  'start2_POS':0,
+                            'start2_PRON':0,  'start2_PROPN':0,  'start2_PRP':0,  'start2_PRP$':0,  'start2_PUNCT':0,
+                            'start2_RB':0,  'start2_RBR':0,  'start2_RBS':0,  'start2_RP':0,  'start2_SYM':0,
+                            'start2_TO':0,  'start2_UH':0,  'start2_VB':0,  'start2_VBD':0,  'start2_VBG':0,
+                            'start2_VBN':0,  'start2_VBP':0,  'start2_VBZ':0,  'start2_VERB':0,  'start2_WDT':0,
+                            'start2_WP':0,  'start2_WP$':0,  'start2_WRB':0,  'start2_X':0,  'start2_``':0,  'day':0,
+                            'century':0,  'millenia':0,  'hour':0,  'minute':0,  'year':0,  'second':0,  'month':0,
+                            'start2_day':0,  'start2_century':0,  'start2_millenia':0,  'start2_hour':0,
+                            'start2_minute':0,  'start2_year':0,  'start2_second':0,  'start2_month':0,
+                            'start1_day':0,  'start1_century':0,  'start1_millenia':0,  'start1_hour':0,
+                            'start1_minute':0,  'start1_year':0,  'start1_second':0,  'start1_month':0,  'end2_day':0,
+                            'end2_century':0,  'end2_millenia':0,  'end2_hour':0,  'end2_minute':0,  'end2_year':0,
+                            'end2_second':0,  'end2_month':0,  'end1_day':0,  'end1_century':0,  'end1_millenia':0,
+                            'end1_hour':0,  'end1_minute':0,  'end1_year':0,  'end1_second':0,  'end1_month':0,
+                            'start1_january':0,  'start1_february':0,  'start1_march':0,  'start1_april':0,
+                            'start1_may':0,  'start1_june':0,  'start1_july':0,  'start1_august':0,
+                            'start1_september':0,  'start1_october':0,  'start1_november':0,
+                            'start1_december':0,  'start1_summer':0,  'start1_winter':0,  'start1_autumn':0,
+                            'start1_spring':0,  'start1_christmas':0,  'start1_christmas_eve':0,  'start1_easter':0,
+                            'start1_easter_sunday':0,  'start1_monday':0,  'start1_tuesday':0,  'start1_wednesday':0,
+                            'start1_thursday':0,  'start1_friday':0,  'start1_saturday':0,  'start1_sunday':0,
+                            'start2_january':0,  'start2_february':0,  'start2_march':0,  'start2_april':0,
+                            'start2_may':0,  'start2_june':0,  'start2_july':0,  'start2_august':0,
+                            'start2_september':0,  'start2_october':0,  'start2_november':0,  'start2_december':0,
+                            'start2_summer':0,  'start2_winter':0,  'start2_autumn':0,  'start2_spring':0,
+                            'start2_christmas':0,  'start2_christmas_eve':0,  'start2_easter':0,
+                            'start2_easter_sunday':0,  'start2_monday':0,  'start2_tuesday':0,  'start2_wednesday':0,
+                            'start2_thursday':0,  'start2_friday':0,  'start2_saturday':0,  'start2_sunday':0,
+                            'end2_january':0,  'end2_february':0,  'end2_march':0,  'end2_april':0,  'end2_may':0,
+                            'end2_june':0,  'end2_july':0,  'end2_august':0,  'end2_september':0,  'end2_october':0,
+                            'end2_november':0,  'end2_december':0,  'end2_summer':0,  'end2_winter':0,
+                            'end2_autumn':0,  'end2_spring':0,  'end2_christmas':0,  'end2_christmas_eve':0,
+                            'end2_easter':0,  'end2_easter_sunday':0,  'end2_monday':0,  'end2_tuesday':0,
+                            'end2_wednesday':0,  'end2_thursday':0,  'end2_friday':0,  'end2_saturday':0,
+                            'end2_sunday':0,  'end1_january':0,  'end1_february':0,  'end1_march':0,  'end1_april':0,
+                            'end1_may':0,  'end1_june':0,  'end1_july':0,  'end1_august':0,  'end1_september':0,
+                            'end1_october':0,  'end1_november':0,  'end1_december':0,  'end1_summer':0,
+                            'end1_winter':0,  'end1_autumn':0,  'end1_spring':0,  'end1_christmas':0,
+                            'end1_christmas_eve':0,  'end1_easter':0,  'end1_easter_sunday':0,  'end1_monday':0,
+                            'end1_tuesday':0,  'end1_wednesday':0,  'end1_thursday':0,  'end1_friday':0,
+                            'end1_saturday':0,  'end1_sunday':0}
 
     def train(self):
         pass # TODO
@@ -291,11 +291,11 @@ class DateTimeFilterModel():
         endindex = startindex + len(phrase.split()) - 1
 
         # start building the features now that we have the indices of the phrase in the sentence
-        # Features are basically count vectors of the defined featureset in the template
+        # Features are basically manually built count vectors of the defined featureset in the template
         fdict = self.featuredict.copy() # need to do deep copy from the template
         featurelist = fdict.keys()
 
-        # This will check features that are specific word tokens in the sentence,  e.g January,  Tuesday, 
+        # This will check features that are specific word tokens in the sentence,  e.g January,  Tuesday,
         for i in range(startindex, endindex + 1, 1):
             feats = features[i].split('/') # get the token word
             if str(feats[1]).lower() in featurelist:
@@ -397,18 +397,18 @@ class DateTimeFilterModel():
 
 
 class DateTimeRecognizer(NLPModule):
-    def __init__(self, config, decoding='ascii'):
+    def __init__(self, config):
 
         super().__init__(config=None)
-        self.decoding = decoding
-        self.binpath = config['BIN_PATH'] + 'datetime' + os.sep
-        self.htbin = self.binpath + 'heideltime-standalone' + os.sep
-        self.htfiltermodel = self.binpath + 'datetimefilter_final.pickle'
-
-        # Two HeidelTime instantiations,  as HT treats doc categories differently
-        jar = "/home/nitin/Desktop/heideltime-standalone-2.2.1/heideltime-standalone/de.unihd.dbs.heideltime.standalone.jar"
-        self.hw = HeidelTimeWrapper('english', doc='news',jarpath=jar)
-        self.hwnarr = HeidelTimeWrapper('english', doc='narratives',jarpath=jar)
+        self.decoding = 'ascii'
+        self.binpath = config['BIN_DIR']
+        self.htbin = self.binpath + 'datetime' + os.sep + 'heideltime-standalone' + os.sep
+        self.ttgbin = self.binpath + config['TTG_PATH']
+        self.htfiltermodel = self.binpath + 'datetime' + os.sep + 'datetimefilter_final.pickle' # stored in the github
+        self.htjarpath = None #will be set later
+        self.htconfigpropspath = None # will be set later
+        self.hw = None # instantiated later
+        self.hwnarr = None # instantiated later
 
         # object for refining HT dates to better align to GUM standards
         self.datefilter = DateTimeFilterModel(modelfile=self.htfiltermodel)
@@ -445,7 +445,7 @@ class DateTimeRecognizer(NLPModule):
         #    le = pickle.load(f)
 
     requires = (PipelineDep.POS_TAG, PipelineDep.PARSE)
-    provides = (PipelineDep.DATETIME)
+    provides = (PipelineDep.DATETIME,)
 
     def timex_to_tei(self, timextype, timexvalue, timexmod, phrase, dct):
         """
@@ -612,36 +612,124 @@ class DateTimeRecognizer(NLPModule):
             result['date'] = ['when:' + temp]
             return result
 
-
-
         return result
 
 
     def test_dependencies(self):
 
-        if not os.path.exists(self.htbin):
-            raise NLPDependencyException("Please configure the bin folder for the datetime module. This is bin/datetime/heideltime-standalone")
+        def set_ht_config_props():
+            """
+            sets heideltime config to point to the tree tagger by manually editing the config.props
+            """
+            with open(self.htbin + 'heideltime-standalone' + os.sep + 'config.2.props', 'w') as c2:
+                with open(self.htbin + 'heideltime-standalone' + os.sep + 'config.props','r' ) as c:
+                    for line in c:
+                        if 'treeTaggerHome' in str(line):
+                            c2.write('treeTaggerHome = ' + self.ttgbin[:-1] + '\n')
+                        else:
+                            c2.write(line)
 
-        hasjar = False
+            os.remove(self.htbin + 'heideltime-standalone' + os.sep + 'config.props')
+            os.rename(self.htbin + 'heideltime-standalone' + os.sep + 'config.2.props',self.htbin + 'heideltime-standalone' + os.sep + 'config.props')
+
+        if not os.path.exists(self.htbin):
+            try:
+                os.mkdir(self.htbin)
+            except Exception as e:
+                raise NLPDependencyException("Errored while creating the HeidelTime standalone")
+        if not os.path.exists(self.ttgbin):
+            try:
+                os.mkdir(self.ttgbin)
+            except Exception as e:
+                raise NLPDependencyException("Errored while creating the Tree Tagger Home Directory")
+
+        hashtjar = False
+        hasttbin = False
+
         for root,sub,files in os.walk(self.htbin):
-            if hasjar == True: break
+            if hashtjar == True: break
             for filename in files:
                 if filename == 'de.unihd.dbs.heideltime.standalone.jar':
-                    hasjar = True # we'll assume that all is present if jar is present
+                    hashtjar = True # we'll assume that all is present if jar is present
                     break
 
-        if hasjar == False:
-            # download the standalone
-            try:
+        for root,sub,files in os.walk(self.ttgbin):
+            if hasttbin == True: break
+            for filename in files:
+                if filename == 'install-tagger.sh':
+                    hasttbin = True
+                    break
+
+        try:
+            if hashtjar == False:
+                # download the HT standalone
                 filename = wget.download(HEIDELTIME_STANDALONE,out=self.htbin)
                 tar = tarfile.open(filename, "r:gz")
                 tar.extractall(path=self.htbin)
                 tar.close()
-            except Exception as e:
-                raise NLPDependencyException("Errored downloading HeidelTime dependencies. Please check bin/dateime/heideltime-standalone")
+
+                set_ht_config_props()
+
+            # set the ht variables here
+            self.htjarpath = self.htbin + 'heideltime-standalone' + os.sep + 'de.unihd.dbs.heideltime.standalone.jar'
+            self.htconfigpropspath = self.htbin + 'heideltime-standalone' + os.sep + 'config.props'
+            self.hw = HeidelTimeWrapper('english',config=self.htconfigpropspath,doc='news',jarpath=self.htjarpath)
+            self.hwnarr = HeidelTimeWrapper('english',config=self.htconfigpropspath,doc='narratives',jarpath=self.htjarpath)
+
+            if hasttbin == False:
+                # Download the TreeTagger as a HT dependency
+                # TODO: fix for windows and mac. Setting up the Linux build below, could also dockerize and assume a default Linux distribution instead
+                # the extraction is commented out as the install-tagger.sh will do all the work.
+
+                # first the package
+                _ = wget.download(TREETAGGER_LINUX,out=self.ttgbin)
+                #tar = tarfile.open(filename,"r:gz")
+                #tar.extractall(path=self.ttgbin)
+                #tar.close()
+
+                # then the scripts
+                _ = wget.download(TREETAGGER_SCRIPTS,out=self.ttgbin)
+                #tar = tarfile.open(filename, "r:gz")
+                #tar.extractall(path=self.ttgbin)
+                #tar.close()
+
+                # then the parameter files
+                _ = wget.download(TREETAGGER_PARAMETER_FILES_PENN, out=self.ttgbin)
+                #with gzip.open(filename, 'rb') as gz:
+                #    filecontent = gz.read()
+                #    with open(filename.replace('.gz',''),'wb') as gout:
+                #        gout.write(filecontent)
+
+                _ = wget.download(TREETAGGER_PARAMETER_FILES_BNC, out=self.ttgbin)
+                #with gzip.open(filename, 'rb') as gz:
+                #    filecontent = gz.read()
+                #    with open(filename.replace('.gz',''),'wb') as gout:
+                #        gout.write(filecontent)
+
+                _ = wget.download(TREETAGGER_CHUNKER, out=self.ttgbin )
+                #with gzip.open(filename, 'rb') as gz:
+                #    filecontent = gz.read()
+                #    with open(filename.replace('.gz', ''), 'wb') as gout:
+                #        gout.write(filecontent)
+
+                # then the install file
+                filename = wget.download(TREETAGGER_EXEC,out=self.ttgbin)
+                filename = filename.split(os.sep)[-1]
+
+                # does the install
+                currdir = os.getcwd()
+                os.chdir(self.ttgbin)
+                subprocess.call(['sh',filename])
+                os.chdir(currdir)
+
+        except Exception as e:
+            # in case this errors, scrap the folder so next run is clean
+            shutil.rmtree(self.htbin)
+            shutil.rmtree(self.ttgbin)
+            raise NLPDependencyException("Errored downloading HeidelTime dependencies. Please check bin/dateime/heideltime-standalone")
 
 
-    def process_file(self, filename):
+    def process_file(self, filename,outputdir):
         """
         Method to process a single file
         :param filename: The conllu filename to parse
@@ -895,7 +983,7 @@ class DateTimeRecognizer(NLPModule):
 
         # gets datetime expressions and timex3 attributes for said expression
         # for the whole document
-        with open('/home/nitin/Desktop/amalgum/amalgum/target/testdate/' + filename.split('/')[-1].replace('.xml', '_timex3.xml'), 'w') as p:
+        with open(outputdir + '/xml/' + filename.split('/')[-1].replace('.xml', '_timex3.xml'), 'w') as p:
             p.writelines(result)
         dates, attribs = self.parse_timex3_xml(result)
 
@@ -1002,11 +1090,11 @@ class DateTimeRecognizer(NLPModule):
     def run(self,  input_dir,  output_dir):
 
         # Get list of all xml files to parse
-        for file in glob(input_dir + '*.xml'):
+        for file in glob(input_dir + '/xml/*.xml'):
             #file = '/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/autogum_voyage_doc008.xml'
             #print(file)
             treeobj = self.process_file(file)
-            treeobj.write(open(output_dir + file.split('/')[-1],  'w'),  encoding='unicode',  xml_declaration=True)
+            treeobj.write(open(output_dir + os.sep + 'xml' + os.sep + file.split('/')[-1],  'w'),  encoding='unicode',  xml_declaration=True)
             #break
 
 def main():
@@ -1015,8 +1103,9 @@ def main():
     """
 
     BIN_DIR = '/home/nitin/Desktop/amalgum/amalgum/bin/'
+    TTG_PATH = 'treetagger/bin/'
 
-    config = {'BIN_PATH':BIN_DIR}
+    config = {'BIN_PATH':BIN_DIR,'TTG_PATH':TTG_PATH}
     dtr = DateTimeRecognizer(config=config)
     dtr.test_dependencies()
 
@@ -1024,9 +1113,6 @@ def main():
     dtr.run(input_dir='/home/nitin/Desktop/amalgum/amalgum/target/04_DepParser/xml/', output_dir='/home/nitin/Desktop/amalgum/amalgum/target/testdate/')
     print (time.time() - start)
 
-
-
-    pass
 
 
 if __name__ == "__main__":
