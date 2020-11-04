@@ -2,7 +2,7 @@ import jpype
 import xml.etree.ElementTree as ET # this is fast!
 import re
 import pickle
-import time
+import platform
 import pandas as pd
 import os
 import wget
@@ -10,7 +10,10 @@ import tarfile
 import shutil
 import subprocess
 
-from nlp_modules.configuration import XML_ATTRIB_REFDATE, HEIDELTIME_STANDALONE, TREETAGGER_LINUX, TREETAGGER_EXEC,TREETAGGER_SCRIPTS,TREETAGGER_PARAMETER_FILES_BNC,TREETAGGER_PARAMETER_FILES_PENN, TREETAGGER_CHUNKER
+from nlp_modules.configuration import XML_ATTRIB_REFDATE, HEIDELTIME_STANDALONE, TREETAGGER_LINUX, \
+    TREETAGGER_EXEC,TREETAGGER_SCRIPTS,TREETAGGER_PARAMETER_FILES_BNC,TREETAGGER_PARAMETER_FILES_PENN, TREETAGGER_CHUNKER, \
+    TREETAGGER_MACOSX
+
 from nlp_modules.base import NLPModule,  PipelineDep, NLPDependencyException
 from datetime import datetime
 pd.options.mode.chained_assignment = None  # default='warn'
@@ -400,6 +403,9 @@ class DateTimeRecognizer(NLPModule):
     def __init__(self, config):
 
         super().__init__(config=None)
+
+        self.ostype = platform.system()
+
         self.decoding = 'ascii'
         self.binpath = config['BIN_DIR']
         self.htbin = self.binpath + 'datetime' + os.sep + 'heideltime-standalone' + os.sep
@@ -635,6 +641,16 @@ class DateTimeRecognizer(NLPModule):
             os.remove(self.htbin + 'heideltime-standalone' + os.sep + 'config.props')
             os.rename(self.htbin + 'heideltime-standalone' + os.sep + 'config.2.props',self.htbin + 'heideltime-standalone' + os.sep + 'config.props')
 
+        ostype = platform.system()
+
+        if ostype == 'Darwin':
+            ttgbinary = TREETAGGER_MACOSX
+
+        elif ostype == "Windows":
+            ttgbinary = ''
+        else:
+            ttgbinary = TREETAGGER_LINUX
+
         if not os.path.exists(self.htbin):
             try:
                 os.mkdir(self.htbin)
@@ -682,7 +698,7 @@ class DateTimeRecognizer(NLPModule):
                 # the extraction is commented out as the install-tagger.sh will do all the work.
 
                 # first the package
-                _ = wget.download(TREETAGGER_LINUX,out=self.ttgbin)
+                _ = wget.download(ttgbinary,out=self.ttgbin)
                 #tar = tarfile.open(filename,"r:gz")
                 #tar.extractall(path=self.ttgbin)
                 #tar.close()
@@ -1091,7 +1107,12 @@ class DateTimeRecognizer(NLPModule):
         self.process_files_multiformat(input_dir, output_dir, processing_function,multithreaded=True)
 
 def main():
-    pass
+
+    TTG_PATH = 'treetagger/bin'
+    BIN_DIR = '/Users/divyachittamuru/Desktop/amalgum/amalgum/bin/'
+    config = {'TTG_PATH':TTG_PATH,'BIN_DIR':BIN_DIR}
+    dtr = DateTimeRecognizer()
+    dtr.test_dependencies()
 
 if __name__ == "__main__":
     main()
