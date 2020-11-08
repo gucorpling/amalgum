@@ -1167,6 +1167,10 @@ class DateTimeRecognizer(NLPModule):
             r"\b[0-9]{4}-W[0-9]{2}-WE\b"
         )  # e.g 2014-W23-WE, weekend of week 23 of the year
 
+        self.regextimerange = (
+            r"--[0-9]{2}:[0-9]{2}---[0-9]{2}:[0-9]{2}\b"
+        )  # time ranges in timex3 are like --hh:mm---hh:mm
+
         self.seasons = {
             "SU": ["--06", "--09"],
             "WI": ["--12", "--03"],
@@ -1280,6 +1284,16 @@ class DateTimeRecognizer(NLPModule):
                 return result
 
             temp = re.sub(self.regexnonchars, "", timexvalue)
+
+            # capture time ranges before stripping the dashes
+            if re.match(self.regextimerange, temp):
+                temp = temp.split("-")
+                result["time"] = [
+                    "from:" + temp[2].replace(":", ""),
+                    "to:" + temp[5].replace(":", ""),
+                ]
+                return result
+
             temp = striphyphens(temp)
 
             # check for negative matches here and skip
@@ -2183,19 +2197,18 @@ def main():
 
     # Testing only
 
-    TTG_PATH = "treetagger/"
-    BIN_DIR = "bin/"
+    TTG_PATH = "treetagger/bin"
+    BIN_DIR = "/home/nitin/Desktop/amalgum/amalgum/bin/"
     config = {"TTG_PATH": TTG_PATH, "BIN_DIR": BIN_DIR}
     dtr = DateTimeRecognizer(config)
     dtr.test_dependencies()
     # filename = 'autogum_bio_doc165.xml' # has an interesting case, see "25 Mar-3 April 2002"
-    # filename = 'autogum_bio_doc575.xml' example of a week of year normalization from timex to tei
-    # filename = 'autogum_interview_doc029.xml' # an example of a weekend normalization
-    # news 208
+    # filename = 'autogum_bio_doc575.xml' #example of a week of year normalization from timex to tei
+    filename = "autogum_interview_doc029.xml"  # an example of a weekend normalization
+    # filename = 'autogum_voyage_doc429.xml'
 
-    filename = "autogum_interview_doc029.xml"
-    input_dir = "target/04_DepParser/"
-    output_dir = "target/testdate/"
+    input_dir = "/home/nitin/Desktop/amalgum/amalgum/target (copy)/04_DepParser"
+    output_dir = "/home/nitin/Desktop/amalgum/amalgum/target (copy)/testdate/"
     dtr.run_debug(filename, input_dir, output_dir)
 
 
