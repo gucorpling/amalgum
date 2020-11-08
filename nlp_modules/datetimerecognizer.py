@@ -1,5 +1,6 @@
 import jpype
-import xml.etree.ElementTree as ET  # this is fast!
+
+# import xml.etree.ElementTree as ET  # this is fast!
 import re
 import pickle
 import platform
@@ -12,7 +13,9 @@ import subprocess
 import gzip
 import zipfile  # for windows
 import glob
-
+from lxml import etree
+import io  # debugging only
+from datetime import datetime, timedelta
 
 from nlp_modules.configuration import (
     XML_ATTRIB_REFDATE,
@@ -1075,6 +1078,10 @@ class DateTimeRecognizer(NLPModule):
 
         self.ostype = platform.system()
 
+        self.parser = etree.XMLParser(
+            recover=True
+        )  # TODO handle invalid xml chars better
+
         self.decoding = "ascii"
         self.binpath = config["BIN_DIR"]
         self.htbin = (
@@ -1127,14 +1134,17 @@ class DateTimeRecognizer(NLPModule):
 
         # TEI normalization rules
         self.regexnonchars = (
-            r"[^0-9-PYSUWIFASP:]"
-        )  # anything not a number or hyphen,  or P or Y e.g P19Y or seasons
-        self.regexyyyymmdd = r"[0-9]{4}-[0-9]{2}-[0-9]{2}"  # matches YYYY-MM-DD
+            r"[^0-9-PYESUWIFASP:]"
+        )  # anything not a number or hyphen,  or P or Y or E e.g P19Y or WE or seasons
+        self.regexnonchars2 = (
+            r"[^0-9\-]"
+        )  # applied to certain types of expressions only
+        self.regexyyyymmdd = r"\b[0-9]{4}-[0-9]{2}-[0-9]{2}\b"  # matches YYYY-MM-DD
         self.regexmmdd = (
-            r"--[0-9]{2}-[0-9]{2}"
+            r"--[0-9]{2}-[0-9]{2}\b"
         )  # --mm-dd,  unlikely to be found in TimeML
-        self.regexmm = r"--[0-9]{2}"  # matches --mm,  unlikely
-        self.regexyyyymm = r"[0-9]{4}-[0-9]{2}"  # matches YYYY-MM,  likely!
+        self.regexmm = r"--[0-9]{2}\b"  # matches --mm,  unlikely
+        self.regexyyyymm = r"\b[0-9]{4}-[0-9]{2}\b"  # matches YYYY-MM,  likely!
         self.regexyyyy = r"[0-9]{4}"  # matches YYYY,  likely!
         self.regexyyyy_yyyy = (
             r"\b[0-9]{4}-[0-9]{4}\b"
@@ -1152,6 +1162,13 @@ class DateTimeRecognizer(NLPModule):
         )  # validates that the phrase itself is a year range 'the 1980s'
         self.regexduration = r"\bP([0-9]{2}|[0-9]{1})Y\b"  # captures duration values
         self.regextimeformat = r"\b[0-9]{2}:[0-9]{2}\b"  # matches time formats eg 20:00
+        self.regexweekformat = (
+            r"\b[0-9]{4}-W[0-9]{2}\b"
+        )  # matches weeks, e.g '2004-W01' which will be resolved to ranges
+        self.regexweekendweek = (
+            r"\b[0-9]{4}-W[0-9]{2}-WE\b"
+        )  # e.g 2014-W23-WE, weekend of week 23 of the year
+
         self.seasons = {
             "SU": ["--06", "--09"],
             "WI": ["--12", "--03"],
@@ -1266,6 +1283,31 @@ class DateTimeRecognizer(NLPModule):
         if re.match(self.regexyyyy_d, temp):
             return result
 
+        if re.match(self.regexweekendweek, temp):
+            val = temp.split("-")
+            week = "-".join(val[:2])
+            resolved = datetime.strptime(
+                week + "-1", "%Y-W%W-%w"
+            )  # monday is the first day of the week
+            fromdate = resolved + timedelta(days=5)
+            todate = resolved + timedelta(days=6)
+            result["date"] = [
+                "from:" + fromdate.strftime("%Y-%m-%d"),
+                "to:" + todate.strftime("%Y-%m-%d"),
+            ]
+            return result
+
+        if re.match(self.regexweekformat, temp):
+            resolved = datetime.strptime(
+                temp + "-1", "%Y-W%W-%w"
+            )  # Monday is the first day of the week
+            todate = resolved + timedelta(days=6)
+            result["date"] = [
+                "from:" + str(resolved.strftime("%Y-%m-%d")),
+                "to:" + str(todate.strftime("%Y-%m-%d")),
+            ]
+            return result
+
         #  TODO: gazetted dates,  extract straight from the token as the date/time filter will remove these otherwise
         for key, value in self.gazettedates.items():
             if key in phrase.lower().strip():
@@ -1311,10 +1353,18 @@ class DateTimeRecognizer(NLPModule):
             return result
 
         # Check for year range specified in the phrase as yyyy-yyyy
-        if re.search(self.regexyyyy_yyyy, phrase):
-            fromyear = phrase.split("-")[0]
-            toyear = phrase.split("-")[1]
-            result["date"] = ["from:" + fromyear, "to:" + toyear]
+        if re.search(self.regexyyyy_yyyy, phrase) or re.search(
+            self.regexyyyy_yyyy, temp
+        ):
+            if re.search(self.regexyyyy_yyyy, temp):
+                fromyear = temp.split("-")[0]
+                toyear = temp.split("-")[1]
+                result["date"] = ["from:" + fromyear, "to:" + toyear]
+            elif re.search(self.regexyyyy_yyyy, phrase):
+                fromyear = phrase.split("-")[0]
+                toyear = phrase.split("-")[1]
+                result["date"] = ["from:" + fromyear, "to:" + toyear]
+
             return result
 
         # Check for -mm-dd,  or --mm. This rarely happens based on the target folder samples
@@ -1325,6 +1375,8 @@ class DateTimeRecognizer(NLPModule):
         # Check if yyyy-mm-dd or yyyy-mm matches
         if re.match(self.regexyyyymmdd, temp) or re.match(self.regexyyyymm, temp):
 
+            # clean temp further to prevent certain expressions like :1994-09-01TNI 'the night of 1994 Sep 1st)
+            temp = re.sub(self.regexnonchars2, "", temp)
             date = temp.split("-")
             if (
                 date[0] not in phrase and phrase in temp
@@ -1389,7 +1441,7 @@ class DateTimeRecognizer(NLPModule):
         if re.match(self.regexyyyy, temp):
             # if the year is way too far into the future,  something's off
             # will affect sci-fi genres mostly without a  better method
-            if int(temp) > 2500:  # 500 years
+            if int(temp) > 2300:  # 300 years
                 return result
             result["date"] = ["when:" + temp]
             return result
@@ -1587,8 +1639,8 @@ class DateTimeRecognizer(NLPModule):
             Recursively builds the xml file in memory in place,  and stamps the date xml on it
             the counter is an accumulator that keep tracks of how many sentences we have iterated over
 
-            the basic idea is to loop through each sentence with all its elements top down,  and add the date/time phrases
-            sequentially from the top down. When a date element is added to the sentence,  all the elements of the sentence
+            the basic idea is to loop through each sentence with all its elements top down,  and add the date/time elements
+            sequentially from the top down. When a date/time element is added to the sentence,  all the elements of the sentence
             are rebuilt and re-ordered in place before the next element is added. Date elements are added either in an existing
             element's text,  or tail. In the event that the date phrase is not present in any element's text or tail,  it is added to the
             "s"'s text element.
@@ -1621,7 +1673,7 @@ class DateTimeRecognizer(NLPModule):
                                 for n in item:
                                     if processed == True:
                                         # the date has been processed.
-                                        # add all the other elements and rebuild the full sentence xml
+                                        # add all the other elements in the sentence and rebuild the full sentence xml
                                         # then move to the next date in the sentence
                                         elements.append(n)
                                         continue
@@ -1663,7 +1715,10 @@ class DateTimeRecognizer(NLPModule):
                                                 search = re.search(
                                                     re.escape(phrase), text
                                                 )
-                                                if search.start() > 0:
+                                                if (
+                                                    search is not None
+                                                    and search.start() > 0
+                                                ):
                                                     startindex = text[
                                                         0 : search.start()
                                                     ].count(" ")
@@ -1676,7 +1731,11 @@ class DateTimeRecognizer(NLPModule):
                                                 search = re.search(
                                                     re.escape(phrase), tail
                                                 )
-                                                if search.start() > 0:
+
+                                                if (
+                                                    search is not None
+                                                    and search.start() > 0
+                                                ):
                                                     startindex = tail[
                                                         0 : search.start()
                                                     ].count(" ")
@@ -1720,7 +1779,7 @@ class DateTimeRecognizer(NLPModule):
                                                     )
 
                                             # build the date element
-                                            date = ET.Element(key)
+                                            date = etree.Element(key)
                                             for attribs in value:
                                                 date.set(
                                                     attribs.split(":")[0],
@@ -1816,7 +1875,7 @@ class DateTimeRecognizer(NLPModule):
                                                 )
 
                                             # build the date element
-                                            date = ET.Element(key)
+                                            date = etree.Element(key)
                                             for attribs in value:
                                                 date.set(
                                                     attribs.split(":")[0],
@@ -1861,14 +1920,15 @@ class DateTimeRecognizer(NLPModule):
 
             return counter
 
-        # The POS tags and UD tags are in the conllu format..
-        # conllufile = '/'.join(filename.split('/')[0:-2]) + '/dep/' + filename.split('/')[-1].replace('.xml', '.conllu')
-
         # some xml files have an '&' character in them!!
         # forcibly convert to XML-friendly chars and keep them in the pipeline..
-        # xmltext = open(filename, 'r').read().replace('&', '&amp;')
         xmltext = docdict["xml"]
-        xmltree = ET.fromstring(xmltext.replace("&", "&amp;"))
+        xmltext = self.replace_xml_chars(
+            xmltext
+        )  # will replace invalid xml chars with xml-friendly equivalents, except for '>' and '<' and '"'.
+        xmltree = etree.fromstring(
+            xmltext, parser=self.parser
+        )  # TODO: this has recover=True turned on so probably bypasses XMLs with invalid chars. Only way around this is to scan the elements of the file once, and replace invalid chars manually.
         root = xmltree
 
         if XML_ATTRIB_REFDATE in root.attrib:
@@ -2000,7 +2060,6 @@ class DateTimeRecognizer(NLPModule):
                 )
 
                 # need to collapse the same phrase text in different places in the sentence
-                # guessing this doesnt happen too often so we can get away with it
                 indexphrases = indexphrases.groupby(
                     by=["sentence_index", "phrase"]
                 ).head(1)
@@ -2016,19 +2075,20 @@ class DateTimeRecognizer(NLPModule):
                 # Build the xml document with the new date tags
                 _ = add_datetime_tags(root)  # modify xml in place and add date tags
 
-        xmlstring = ET.tostring(root, encoding="utf8", method="xml").decode()
+        xmlstring = etree.tostring(
+            root, encoding="utf8", method="xml", xml_declaration=True
+        ).decode()
 
         return {"dep": conlludata, "xml": xmlstring}
 
-    # helper method,  unused
     def replace_xml_chars(self, text):
         return (
-            text.replace("&", "&amp;")
-            .replace(">", "&gt;")
-            .replace("<", "&lt;")
-            .replace('"', "&quot;")
+            text.replace("&", "&amp;").replace("&&amp;", "&amp;")
+            # .replace(">", "&gt;")
+            # .replace("<", "&lt;")
+            # .replace('"', "&quot;")
             .replace("'", "&apos;")
-        )  # assumes these dont affect time recognition..
+        )
 
     def extract_datetimephrases(self, sent):
         """
@@ -2091,14 +2151,43 @@ class DateTimeRecognizer(NLPModule):
             input_dir, output_dir, processing_function, multithreaded=True
         )
 
+    def run_debug(self, filename, input_dir, output_dir):
+        """
+        Use this for debugging a single file
+        """
+        depfile = input_dir + "/dep/" + filename.replace(".xml", ".conllu")
+        xmlfile = input_dir + "/xml/" + filename
+
+        content_dict = {}
+        with io.open(depfile, "r", encoding="utf8") as f:
+            content_dict["dep"] = f.read()
+        with io.open(xmlfile, "r", encoding="utf8") as f:
+            content_dict["xml"] = f.read()
+
+        content_dict["filename"] = filename
+        result = self.process_file(content_dict)
+        with open(output_dir + filename, "w") as o:
+            o.writelines(result["xml"])
+
 
 def main():
 
+    # Testing only
+
     TTG_PATH = "treetagger/bin/"
-    BIN_DIR = "<set full path of amalgum bin folder here>"
+    BIN_DIR = "bin/"
     config = {"TTG_PATH": TTG_PATH, "BIN_DIR": BIN_DIR}
     dtr = DateTimeRecognizer(config)
     dtr.test_dependencies()
+    # filename = 'autogum_bio_doc165.xml' # has an interesting case, see "25 Mar-3 April 2002"
+    # filename = 'autogum_bio_doc575.xml' example of a week of year normalization from timex to tei
+    # filename = 'autogum_interview_doc029.xml' # an example of a weekend normalization
+    # news 208
+
+    filename = "autogum_interview_doc029.xml"
+    input_dir = "target/04_DepParser/"
+    output_dir = "target/testdate/"
+    dtr.run_debug(filename, input_dir, output_dir)
 
 
 if __name__ == "__main__":
