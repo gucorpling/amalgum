@@ -2185,7 +2185,7 @@ def main():
 
     # Testing only
 
-    TTG_PATH = "treetagger/bin/"
+    TTG_PATH = "treetagger/"
     BIN_DIR = "bin/"
     config = {"TTG_PATH": TTG_PATH, "BIN_DIR": BIN_DIR}
     dtr = DateTimeRecognizer(config)

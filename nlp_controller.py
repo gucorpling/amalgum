@@ -25,7 +25,7 @@ from nlp_modules.datetimerecognizer import DateTimeRecognizer
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
 BIN_DIR = SCRIPT_DIR + "bin" + os.sep
-TTG_PATH = "treetagger" + os.sep + "bin" + os.sep
+TTG_PATH = "treetagger" + os.sep
 
 MODULES = {
     "tt_tokenizer": TreeTaggerTokenizer,
