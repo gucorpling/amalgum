@@ -1453,9 +1453,7 @@ class DateTimeRecognizer(NLPModule):
                 return result
 
         except Exception as e:
-            pass  # TODO: log
-        finally:
-            result = {}
+            result = {}  # TODO log
 
         return result
 
