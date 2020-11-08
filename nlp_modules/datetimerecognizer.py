@@ -1,6 +1,4 @@
 import jpype
-
-# import xml.etree.ElementTree as ET  # this is fast!
 import re
 import pickle
 import platform
@@ -1271,180 +1269,193 @@ class DateTimeRecognizer(NLPModule):
         # init
         result = {}
 
-        if (
-            timextype == "SET"
-        ):  # dont handle SETs in TEI as they cant be mapped to the TEI attributes
-            return result
+        # Wrapping this whole function around a big try-catch , to return an empty dictionary if the normalization fails
+        # so that the pipeline isnt broken but this date/time phrase is missed
+        # FYI the pipeline without exception handling was tested on all 4708 files in the out folder with success
+        try:
 
-        temp = re.sub(self.regexnonchars, "", timexvalue)
-        temp = striphyphens(temp)
-
-        # check for negative matches here and skip
-        if re.match(self.regexyyyy_d, temp):
-            return result
-
-        if re.match(self.regexweekendweek, temp):
-            val = temp.split("-")
-            week = "-".join(val[:2])
-            resolved = datetime.strptime(
-                week + "-1", "%Y-W%W-%w"
-            )  # monday is the first day of the week
-            fromdate = resolved + timedelta(days=5)
-            todate = resolved + timedelta(days=6)
-            result["date"] = [
-                "from:" + fromdate.strftime("%Y-%m-%d"),
-                "to:" + todate.strftime("%Y-%m-%d"),
-            ]
-            return result
-
-        if re.match(self.regexweekformat, temp):
-            resolved = datetime.strptime(
-                temp + "-1", "%Y-W%W-%w"
-            )  # Monday is the first day of the week
-            todate = resolved + timedelta(days=6)
-            result["date"] = [
-                "from:" + str(resolved.strftime("%Y-%m-%d")),
-                "to:" + str(todate.strftime("%Y-%m-%d")),
-            ]
-            return result
-
-        #  TODO: gazetted dates,  extract straight from the token as the date/time filter will remove these otherwise
-        for key, value in self.gazettedates.items():
-            if key in phrase.lower().strip():
-                result["date"] = value
-                return result
-
-        # check for time TODO: revisit,  Heideltime cant detect time values in raw tokens like 20:00,  08:30,  etc
-        if re.search(self.regextimeformat, temp):
-            result["time"] = ["when:" + temp.replace(":", "").replace("-", "")]
-            return result
-
-        # mod MORE_THAN - will result in a date_notBefore:dct - timex3 duration val
-        if timexmod == "MORE_THAN" and re.search(self.regexduration, temp):
-            # e.g more than 20 years ago.
-            result["date"] = [
-                "notBefore:"
-                + str(
-                    int(dct.split("-")[0]) - int(temp.replace("P", "").replace("Y", ""))
-                )
-                + "-"
-                + "-".join(dct.split("-")[1:])
-            ]
-            return result
-
-        # TIMEX3 centuries are two digit values. Convert to a date from_to
-        if re.search(self.regexcentury, temp):
-            if timexmod is None:
-                result["date"] = ["from:" + temp + "00", "to:" + temp + "99"]
-            else:  # TIMEX3 has START,  MID,  END so split it 3 ways
-                if timexmod == "START":
-                    result["date"] = ["from:" + temp + "00", "to:" + temp + "33"]
-                elif timexmod == "MID":
-                    result["date"] = ["from:" + temp + "33", "to:" + temp + "66"]
-                elif timexmod == "END":
-                    result["date"] = ["from:" + temp + "66", "to:" + temp + "99"]
-            return result
-
-        # check for year ranges,  e.g 1980s,  1990s
-        if re.search(self.phraseyearrange, phrase) and re.match(
-            self.regexyearrange, temp
-        ):
-            result["date"] = ["from:" + str(temp) + "0", "to:" + str(temp) + "9"]
-            return result
-
-        # Check for year range specified in the phrase as yyyy-yyyy
-        if re.search(self.regexyyyy_yyyy, phrase) or re.search(
-            self.regexyyyy_yyyy, temp
-        ):
-            if re.search(self.regexyyyy_yyyy, temp):
-                fromyear = temp.split("-")[0]
-                toyear = temp.split("-")[1]
-                result["date"] = ["from:" + fromyear, "to:" + toyear]
-            elif re.search(self.regexyyyy_yyyy, phrase):
-                fromyear = phrase.split("-")[0]
-                toyear = phrase.split("-")[1]
-                result["date"] = ["from:" + fromyear, "to:" + toyear]
-
-            return result
-
-        # Check for -mm-dd,  or --mm. This rarely happens based on the target folder samples
-        if re.match(self.regexmmdd, temp) or re.match(self.regexmm, temp):
-            result["date"] = ["when:" + temp]
-            return result
-
-        # Check if yyyy-mm-dd or yyyy-mm matches
-        if re.match(self.regexyyyymmdd, temp) or re.match(self.regexyyyymm, temp):
-
-            # clean temp further to prevent certain expressions like :1994-09-01TNI 'the night of 1994 Sep 1st)
-            temp = re.sub(self.regexnonchars2, "", temp)
-            date = temp.split("-")
             if (
-                date[0] not in phrase and phrase in temp
-            ):  # this is a cricket score,  likely
+                timextype == "SET"
+            ):  # dont handle SETs in TEI as they cant be mapped to the TEI attributes
                 return result
 
-            temp = check_year(temp, phrase)
+            temp = re.sub(self.regexnonchars, "", timexvalue)
+            temp = striphyphens(temp)
 
-            if re.match(self.regexmm, temp):  # too sparse,  skip this
+            # check for negative matches here and skip
+            if re.match(self.regexyyyy_d, temp):
                 return result
 
-            # if the year turned out to be impossible,  dont reset the previous date marker
+            if re.match(self.regexweekendweek, temp):
+                val = temp.split("-")
+                week = "-".join(val[:2])
+                resolved = datetime.strptime(
+                    week + "-1", "%Y-W%W-%w"
+                )  # monday is the first day of the week
+                fromdate = resolved + timedelta(days=5)
+                todate = resolved + timedelta(days=6)
+                result["date"] = [
+                    "from:" + fromdate.strftime("%Y-%m-%d"),
+                    "to:" + todate.strftime("%Y-%m-%d"),
+                ]
+                return result
+
+            if re.match(self.regexweekformat, temp):
+                resolved = datetime.strptime(
+                    temp + "-1", "%Y-W%W-%w"
+                )  # Monday is the first day of the week
+                todate = resolved + timedelta(days=6)
+                result["date"] = [
+                    "from:" + str(resolved.strftime("%Y-%m-%d")),
+                    "to:" + str(todate.strftime("%Y-%m-%d")),
+                ]
+                return result
+
+            #  TODO: gazetted dates,  extract straight from the token as the date/time filter will remove these otherwise
+            for key, value in self.gazettedates.items():
+                if key in phrase.lower().strip():
+                    result["date"] = value
+                    return result
+
+            # check for time TODO: revisit,  Heideltime cant detect time values in raw tokens like 20:00,  08:30,  etc
+            if re.search(self.regextimeformat, temp):
+                result["time"] = ["when:" + temp.replace(":", "").replace("-", "")]
+                return result
+
+            # mod MORE_THAN - will result in a date_notBefore:dct - timex3 duration val
+            if timexmod == "MORE_THAN" and re.search(self.regexduration, temp):
+                # e.g more than 20 years ago.
+                result["date"] = [
+                    "notBefore:"
+                    + str(
+                        int(dct.split("-")[0])
+                        - int(temp.replace("P", "").replace("Y", ""))
+                    )
+                    + "-"
+                    + "-".join(dct.split("-")[1:])
+                ]
+                return result
+
+            # TIMEX3 centuries are two digit values. Convert to a date from_to
+            if re.search(self.regexcentury, temp):
+                if timexmod is None:
+                    result["date"] = ["from:" + temp + "00", "to:" + temp + "99"]
+                else:  # TIMEX3 has START,  MID,  END so split it 3 ways
+                    if timexmod == "START":
+                        result["date"] = ["from:" + temp + "00", "to:" + temp + "33"]
+                    elif timexmod == "MID":
+                        result["date"] = ["from:" + temp + "33", "to:" + temp + "66"]
+                    elif timexmod == "END":
+                        result["date"] = ["from:" + temp + "66", "to:" + temp + "99"]
+                return result
+
+            # check for year ranges,  e.g 1980s,  1990s
+            if re.search(self.phraseyearrange, phrase) and re.match(
+                self.regexyearrange, temp
+            ):
+                result["date"] = ["from:" + str(temp) + "0", "to:" + str(temp) + "9"]
+                return result
+
+            # Check for year range specified in the phrase as yyyy-yyyy
+            if re.search(self.regexyyyy_yyyy, phrase) or re.search(
+                self.regexyyyy_yyyy, temp
+            ):
+                if re.search(self.regexyyyy_yyyy, temp):
+                    fromyear = temp.split("-")[0]
+                    toyear = temp.split("-")[1]
+                    result["date"] = ["from:" + fromyear, "to:" + toyear]
+                elif re.search(self.regexyyyy_yyyy, phrase):
+                    fromyear = phrase.split("-")[0]
+                    toyear = phrase.split("-")[1]
+                    result["date"] = ["from:" + fromyear, "to:" + toyear]
+
+                return result
+
+            # Check for -mm-dd,  or --mm. This rarely happens based on the target folder samples
+            if re.match(self.regexmmdd, temp) or re.match(self.regexmm, temp):
+                result["date"] = ["when:" + temp]
+                return result
+
+            # Check if yyyy-mm-dd or yyyy-mm matches
             if re.match(self.regexyyyymmdd, temp) or re.match(self.regexyyyymm, temp):
-                self.prevsentencedate = temp
 
-            if int(date[1]) > 12:
-                return result
-            if len(date) == 3:
-                if int(date[2]) > 31:
+                # clean temp further to prevent certain expressions like :1994-09-01TNI 'the night of 1994 Sep 1st)
+                temp = re.sub(self.regexnonchars2, "", temp)
+                date = temp.split("-")
+                if (
+                    date[0] not in phrase and phrase in temp
+                ):  # this is a cricket score,  likely
                     return result
 
-            result["date"] = ["when:" + temp]
-            return result
+                temp = check_year(temp, phrase)
 
-        # Seasons! the timex3 val is always YYYY-(SU|WI|FA|SP)
-        if re.match(self.regexyyyyss, temp):
-            season = check_year(temp, phrase)
-            if re.match(self.regexyyyyss, season):
-                # require the season year to match dct year or something's off
-                seasonyear = temp.split("-")[0]
-                dctyear = dct.split("-")[0]
-                if seasonyear != dctyear:
+                if re.match(self.regexmm, temp):  # too sparse,  skip this
                     return result
 
-                season = temp.split("-")[-1]
-                if season != "WI":
-                    result["date"] = [
-                        "from:"
-                        + temp.split("-")[0]
-                        + "-"
-                        + self.seasons[season][0].replace("--", ""),
-                        "to:"
-                        + temp.split("-")[0]
-                        + "-"
-                        + self.seasons[season][1].replace("--", ""),
-                    ]
-                else:
-                    result["date"] = [
-                        "from:"
-                        + temp.split("-")[0]
-                        + "-"
-                        + self.seasons[season][0].replace("--", ""),
-                        "to:"
-                        + str(int(temp.split("-")[0]) + 1)
-                        + "-"
-                        + self.seasons[season][1].replace("--", ""),
-                    ]
+                # if the year turned out to be impossible,  dont reset the previous date marker
+                if re.match(self.regexyyyymmdd, temp) or re.match(
+                    self.regexyyyymm, temp
+                ):
+                    self.prevsentencedate = temp
 
-            return result
+                if int(date[1]) > 12:
+                    return result
+                if len(date) == 3:
+                    if int(date[2]) > 31:
+                        return result
 
-        # Normal years
-        if re.match(self.regexyyyy, temp):
-            # if the year is way too far into the future,  something's off
-            # will affect sci-fi genres mostly without a  better method
-            if int(temp) > 2300:  # 300 years
+                result["date"] = ["when:" + temp]
                 return result
-            result["date"] = ["when:" + temp]
-            return result
+
+            # Seasons! the timex3 val is always YYYY-(SU|WI|FA|SP)
+            if re.match(self.regexyyyyss, temp):
+                season = check_year(temp, phrase)
+                if re.match(self.regexyyyyss, season):
+                    # require the season year to match dct year or something's off
+                    seasonyear = temp.split("-")[0]
+                    dctyear = dct.split("-")[0]
+                    if seasonyear != dctyear:
+                        return result
+
+                    season = temp.split("-")[-1]
+                    if season != "WI":
+                        result["date"] = [
+                            "from:"
+                            + temp.split("-")[0]
+                            + "-"
+                            + self.seasons[season][0].replace("--", ""),
+                            "to:"
+                            + temp.split("-")[0]
+                            + "-"
+                            + self.seasons[season][1].replace("--", ""),
+                        ]
+                    else:
+                        result["date"] = [
+                            "from:"
+                            + temp.split("-")[0]
+                            + "-"
+                            + self.seasons[season][0].replace("--", ""),
+                            "to:"
+                            + str(int(temp.split("-")[0]) + 1)
+                            + "-"
+                            + self.seasons[season][1].replace("--", ""),
+                        ]
+
+                return result
+
+            # Normal years
+            if re.match(self.regexyyyy, temp):
+                # if the year is way too far into the future,  something's off
+                # will affect sci-fi genres mostly without a  better method
+                if int(temp) > 2300:  # 300 years
+                    return result
+                result["date"] = ["when:" + temp]
+                return result
+
+        except Exception as e:
+            pass  # TODO: log
+        finally:
+            result = {}
 
         return result
 
