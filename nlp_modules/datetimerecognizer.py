@@ -931,7 +931,7 @@ class DateTimeFilterModel:
         Builds a row of features for the date phrase from a template and adds some extra features
         sfull is the sentence with each token tagged with its corresponding feature
         stok is just the sentence made up of its english tokens
-        phrase is the date phrase from HT that we are going to classify as a valid Time Expression (or no)
+        phrase is the date phrase from HT that we are going to classify as a valid Time Expression (or no) in the context of GUM
         timex type, value, mod are TIMEX3 attributes that HT has created for this phrase
         """
 
@@ -1076,9 +1076,9 @@ class DateTimeRecognizer(NLPModule):
 
         self.ostype = platform.system()
 
-        self.parser = etree.XMLParser(
-            recover=True
-        )  # TODO handle invalid xml chars better
+        # self.parser = etree.XMLParser(
+        #    recover=True
+        # )  # Unused
 
         self.decoding = "ascii"
         self.binpath = config["BIN_DIR"]
@@ -1130,6 +1130,9 @@ class DateTimeRecognizer(NLPModule):
         self.timex3regex = r"<TIMEX3.*?<\/TIMEX3>"
         self.timex3tagregex = r"(?<=\<)(.*?)(?=\>)"
 
+        # Cleans xml file manually by removing unfriendly chars and replacing them
+        self.regexxmltag = r"<.*>"
+
         # TEI normalization rules
         self.regexnonchars = (
             r"[^0-9-PYESUWIFASP:]"
@@ -1177,6 +1180,20 @@ class DateTimeRecognizer(NLPModule):
             "FA": ["--09", "--12"],
             "SP": ["--03", "--06"],
         }  # taken from the Farmer's Almanac
+        self.monthslist = [
+            "january",
+            "february",
+            "march",
+            "april",
+            "may",
+            "june",
+            "july",
+            "august",
+            "september",
+            "october",
+            "november",
+            "december",
+        ]
         self.gazettedates = {
             "spanish golden age": ["from:1556", "to:1659"],
             "easter": ["notBefore:--03", "notAfter:--05"],
@@ -1352,6 +1369,10 @@ class DateTimeRecognizer(NLPModule):
 
             # TIMEX3 centuries are two digit values. Convert to a date from_to
             if re.search(self.regexcentury, temp):
+                for month in self.monthslist:
+                    if month in phrase.lower():
+                        return result
+
                 if timexmod is None:
                     result["date"] = ["from:" + temp + "00", "to:" + temp + "99"]
                 else:  # TIMEX3 has START,  MID,  END so split it 3 ways
@@ -1657,6 +1678,38 @@ class DateTimeRecognizer(NLPModule):
             )
 
     def process_file(self, docdict):
+        def replace_xml_chars(text):
+            text = (
+                text.replace("&", "&amp;")
+                .replace("&amp;amp;", "&amp;")
+                .replace(">", "&gt;")
+                .replace("&amp;gt;", "&gt;")
+                .replace("<", "&lt;")
+                .replace("&amp;lt;", "&lt;")
+                .replace('"', "&quot;")
+                .replace("&amp;quot;", "&quot;")
+                .replace("'", "&apos;")
+                .replace("&amp;apos;", "&apos;")
+            )
+            return text
+
+        def clean_xml_text(xmltext):
+            """
+            goes through xmltext line by line and replaces chars with XML-friendly equivalents
+            """
+            result = []
+            for line in xmltext.split("\n"):
+                if not re.match(self.regexxmltag, line):
+                    result.append(replace_xml_chars(str(line)))
+                else:
+                    if line.startswith("<ref"):
+                        line = line.replace("&", "&amp;").replace("&amp;amp;", "&amp;")
+                    result.append(line)
+
+            result = "\n".join(result)
+
+            return result
+
         def add_datetime_tags(node, counter=0):
             """
             Recursively builds the xml file in memory in place,  and stamps the date xml on it
@@ -1943,15 +1996,13 @@ class DateTimeRecognizer(NLPModule):
 
             return counter
 
-        # some xml files have an '&' character in them!!
-        # forcibly convert to XML-friendly chars and keep them in the pipeline..
         xmltext = docdict["xml"]
-        xmltext = self.replace_xml_chars(
+        xmltext = clean_xml_text(
             xmltext
-        )  # will replace invalid xml chars with xml-friendly equivalents, except for '>' and '<' and '"'.
+        )  # forcibly convert to XML-friendly chars and keep them in the pipeline..
         xmltree = etree.fromstring(
-            xmltext, parser=self.parser
-        )  # TODO: this has recover=True turned on so probably bypasses XMLs with invalid chars. Only way around this is to scan the elements of the file once, and replace invalid chars manually.
+            xmltext  # , parser=self.parser
+        )  # If this passes, the XML clean was successful
         root = xmltree
 
         if XML_ATTRIB_REFDATE in root.attrib:
@@ -2104,15 +2155,6 @@ class DateTimeRecognizer(NLPModule):
 
         return {"dep": conlludata, "xml": xmlstring}
 
-    def replace_xml_chars(self, text):
-        return (
-            text.replace("&", "&amp;").replace("&&amp;", "&amp;")
-            # .replace(">", "&gt;")
-            # .replace("<", "&lt;")
-            # .replace('"', "&quot;")
-            .replace("'", "&apos;")
-        )
-
     def extract_datetimephrases(self, sent):
         """
         returns the timex3 captured expression and the timex attributes for the expression
@@ -2198,17 +2240,17 @@ def main():
     # Testing only
 
     TTG_PATH = "treetagger/bin"
-    BIN_DIR = "/home/nitin/Desktop/amalgum/amalgum/bin/"
+    BIN_DIR = "<full path to>/amalgum/amalgum/bin/"
     config = {"TTG_PATH": TTG_PATH, "BIN_DIR": BIN_DIR}
     dtr = DateTimeRecognizer(config)
     dtr.test_dependencies()
     # filename = 'autogum_bio_doc165.xml' # has an interesting case, see "25 Mar-3 April 2002"
     # filename = 'autogum_bio_doc575.xml' #example of a week of year normalization from timex to tei
-    filename = "autogum_interview_doc029.xml"  # an example of a weekend normalization
+    filename = "autogum_reddit_doc010.xml"  # an example of a weekend normalization
     # filename = 'autogum_voyage_doc429.xml'
 
-    input_dir = "/home/nitin/Desktop/amalgum/amalgum/target (copy)/04_DepParser"
-    output_dir = "/home/nitin/Desktop/amalgum/amalgum/target (copy)/testdate/"
+    input_dir = "<full path to>/amalgum/amalgum/target/04_DepParser"
+    output_dir = "<full path to>/amalgum/amalgum/target/testdate/"
     dtr.run_debug(filename, input_dir, output_dir)
 
 

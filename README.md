@@ -26,9 +26,10 @@ AMALGUM contains annotations for the following information:
 * [UD](https://universaldependencies.org/u/pos/) and [Extended PTB](https://corpling.uis.georgetown.edu/ptb_tags.html) part of speech tags
 * Lemmas
 * [UD](https://universaldependencies.org/u/dep/) dependency parses
-* (Non-)named entities 
+* (Non-)named entities
 * Coreference
 * Rhetorical structure theory
+* Date/Time annotations in TEI format
 
 These annotations are across four file formats: [GUM-style XML](https://github.com/amir-zeldes/gum), [CONLLU](https://universaldependencies.org/format.html), [WebAnno TSV](https://webanno.github.io/webanno/releases/3.4.5/docs/user-guide.html#sect_webannotsv), and [RS3](https://github.com/gucorpling/rst-xsd).
 
