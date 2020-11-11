@@ -1087,7 +1087,10 @@ class DateTimeRecognizer(NLPModule):
         )
         self.ttgbin = self.binpath + config["TTG_PATH"]
         self.htfiltermodel = (
-            self.binpath + "datetime" + os.sep + "datetimefilter_final.pickle"
+            self.binpath
+            + "datetime"
+            + os.sep
+            + "datetimefilter_sklearn_rf_0_22_1.pickle"
         )  # stored in the github
 
         if os.path.exists(
