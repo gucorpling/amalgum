@@ -53,19 +53,20 @@ class TreeTaggerTagger(NLPModule):
         ]
 
     def test_dependencies(self):
-        if not os.path.exists(self.TTG_PATH + "tree-tagger"):
+
+        if not os.path.exists(self.tagger_bin):
             sys.stderr.write(
-                "TreeTagger binary not available at " + self.TTG_PATH + "tree-tagger\n"
+                "TreeTagger binary not available at " + self.tagger_bin + "\n"
             )
             sys.stderr.write(
                 "Download TreeTagger binary from https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/\n"
             )
             sys.exit(1)
-        if not os.path.exists(self.TTG_PATH + "english.par"):
+        if not os.path.exists(self.english_par):
             sys.stderr.write(
                 "TreeTagger English parameter file not found at "
-                + self.TTG_PATH
-                + "english.par\n"
+                + self.english_par
+                + "\n"
             )
             sys.stderr.write(
                 "Download English PTB parameter file from https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english.par.gz\n"

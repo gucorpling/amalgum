@@ -216,5 +216,5 @@ class TreeTaggerTokenizer(NLPModule):
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
         self.process_files(
-            input_dir, output_dir, processing_function, multithreaded=False
+            input_dir, output_dir, processing_function, multithreaded=True
         )
