@@ -16,6 +16,8 @@ pip install -r requirements.txt
 
 3. Download `punkt`: `python -c "import nltk; nltk.download('punkt')"`
 
+4. *(For Windows platforms)*, Download and install the 64-bit JRE and setup the JAVA_HOME environment variable with the location of this JRE (typically in C:\Program Files\Java\<your jre folder>)
+
 ## NLP Pipeline
 Invoke nlp_controller.py on the tiny subset to ensure the pipeline is working properly:
 
@@ -26,11 +28,11 @@ python nlp_controller.py target -i out_tiny
 
 * Make a new file in [`nlp_modules`](https://github.com/gucorpling/amalgum/tree/master/nlp_modules)
 
-- Make a subclass of [`NLPModule`](https://github.com/gucorpling/amalgum/blob/master/nlp_modules/base.py#L29L250). 
+- Make a subclass of [`NLPModule`](https://github.com/gucorpling/amalgum/blob/master/nlp_modules/base.py#L29L250).
   - You will need to implement the methods
     - `__init__`, the constructor
     - `test_dependencies`, which should be used to download any static files (e.g. data, serialized models) that are required for your module's operation
-    - `run`, which is the method that the controller will use to invoke your module. 
+    - `run`, which is the method that the controller will use to invoke your module.
   - **In addition**, you will also need to use the class attributes `requires` and `provides` to declare what kinds of NLP processing your module will expect, and what kind of processing it will provide, respectively, expressed using [values of the `PipelineDep` enum](https://github.com/gucorpling/amalgum/blob/master/nlp_modules/base.py#L12L23). (For instance, [for a POS tagger, `requires = (PipelineDep.TOKENIZE,)`, and `provides = PipelineDep.POS_TAG`](https://github.com/gucorpling/amalgum/blob/master/nlp_modules/tt_tagger.py#L10).)
   - The remaining methods, `process_files` and `process_files_multiformat`, are convenience functions that you should consider using in your implementation of `run`.
   - See the [TreeTagger POS tagging module](https://github.com/gucorpling/amalgum/blob/master/nlp_modules/tt_tagger.py#L10) for a small example.

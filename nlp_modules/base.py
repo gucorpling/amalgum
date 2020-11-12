@@ -22,6 +22,8 @@ class PipelineDep(Enum):
     RST_OUT = "RST_OUT"  # output for rhetorical structure theory
     TSV_OUT = "TSV_OUT"  # coref/entity output
 
+    DATETIME = "DATETIME"
+
     def __str__(self):
         return self.value
 
@@ -38,7 +40,7 @@ class NLPModule(ABC):
     @property
     @abstractmethod
     def requires(self):
-        """Returns a tuple of PipelineDeps that must be provided before this step of the pipeline. 
+        """Returns a tuple of PipelineDeps that must be provided before this step of the pipeline.
         For instance, a POS tagger should return `(PipelineDep.TOKENIZE,)` here since it requires
         tokens to do its work."""
         return ()
@@ -47,7 +49,7 @@ class NLPModule(ABC):
     @abstractmethod
     def provides(self):
         """Returns a tuple of PipelineDeps that this module provides for downstream modules.
-        For instance, a POS tagger should return `(PipelineDep.POS_TAG,)` here since it provides 
+        For instance, a POS tagger should return `(PipelineDep.POS_TAG,)` here since it provides
         POS tags for any downstream modules that might need them (like a dependency parser)
         """
         return ()
@@ -88,7 +90,12 @@ class NLPModule(ABC):
         pass
 
     def process_files(
-        self, input_dir, output_dir, process_document_content, file_type="xml", multithreaded=False,
+        self,
+        input_dir,
+        output_dir,
+        process_document_content,
+        file_type="xml",
+        multithreaded=False,
     ):
         """
         Handles the most common case of iteration where processing can be handled with a function that is
@@ -120,7 +127,12 @@ class NLPModule(ABC):
             except Exception as e:
                 logging.error(f"Encountered an error while processing file {filepath}!")
                 raise e
-            with io.open(os.path.join(output_dir, file_type, filename), "w", encoding="utf8", newline="\n") as f:
+            with io.open(
+                os.path.join(output_dir, file_type, filename),
+                "w",
+                encoding="utf8",
+                newline="\n",
+            ) as f:
                 f.write(s)
 
             # This could lead to race conditions, but it doesn't really matter if
@@ -129,7 +141,9 @@ class NLPModule(ABC):
                 progress.update(1)
 
         if multithreaded:
-            list(pmap.pmap(partial(process_file, report_progress=True), sorted_filepaths))
+            list(
+                pmap.pmap(partial(process_file, report_progress=True), sorted_filepaths)
+            )
             progress.close()
         else:
             for filepath in tqdm(sorted_filepaths):
@@ -138,7 +152,9 @@ class NLPModule(ABC):
     # A map from the subdirectory name to the extension of the files that go in that dir.
     FILE_EXT_MAP = {"rst": "rs3", "dep": "conllu"}
 
-    def process_files_multiformat(self, input_dir, output_dir, process_document_content_dict, multithreaded=False):
+    def process_files_multiformat(
+        self, input_dir, output_dir, process_document_content_dict, multithreaded=False
+    ):
         """
         Like process_files, with one difference: the supplied function `process_document_content_dict` now
         (1) receives a dict of dir -> file contents, e.g. {'xml': '<text ...>...</text>', 'rst': '...', ...},
@@ -171,7 +187,9 @@ class NLPModule(ABC):
 
         # Use the first dir to derive filenames without filetypes
         base_dir = sorted(existing_input_dirs)[0]
-        filenames = sorted([filename.split(".")[0] for filename in os.listdir(base_dir)])
+        filenames = sorted(
+            [filename.split(".")[0] for filename in os.listdir(base_dir)]
+        )
 
         progress = tqdm(total=len(filenames))
 
@@ -179,17 +197,26 @@ class NLPModule(ABC):
             nonlocal progress
             # Refuse to proceed if every other directory doesn't also have a file with the same name
             if not all(
-                any(fname.startswith(filename) for fname in os.listdir(subdir)) for subdir in existing_input_dirs
+                any(fname.startswith(filename) for fname in os.listdir(subdir))
+                for subdir in existing_input_dirs
             ):
-                raise Exception(f"File {filename} does not exist in all of these directories: {existing_input_dirs}")
+                raise Exception(
+                    f"File {filename} does not exist in all of these directories: {existing_input_dirs}"
+                )
 
             # construct the content dict
             content_dict = {}
             content_dict["filename"] = filename
             for subdir in existing_input_dirs:
-                matching_files = [f for f in os.listdir(subdir) if f.startswith(filename)]
-                assert len(matching_files) > 0, f"Couldn't find {filename} in directory {subdir}"
-                assert len(matching_files) < 2, f"More than one file starting with {filename} in directory {subdir}"
+                matching_files = [
+                    f for f in os.listdir(subdir) if f.split(".")[0] == filename
+                ]
+                assert (
+                    len(matching_files) > 0
+                ), f"Couldn't find {filename} in directory {subdir}"
+                assert (
+                    len(matching_files) < 2
+                ), f"More than one file starting with {filename} in directory {subdir}"
 
                 filepath = os.path.join(subdir, matching_files[0])
                 with io.open(filepath, "r", encoding="utf8") as f:
@@ -208,7 +235,11 @@ class NLPModule(ABC):
                 if not os.path.exists(subdir_path):
                     os.makedirs(subdir_path)
 
-                file_ext = NLPModule.FILE_EXT_MAP[subdir] if subdir in NLPModule.FILE_EXT_MAP else subdir
+                file_ext = (
+                    NLPModule.FILE_EXT_MAP[subdir]
+                    if subdir in NLPModule.FILE_EXT_MAP
+                    else subdir
+                )
                 filepath = os.path.join(output_dir, subdir, filename + "." + file_ext)
                 with io.open(filepath, "w", encoding="utf8", newline="\n") as f:
                     f.write(content)

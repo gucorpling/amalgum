@@ -79,9 +79,50 @@ def postprocess_text(TTSGML):
 
 
 def escape_treetagger(tt_sgml):
+    def replace_xml_chars(text):
+        text = (
+            text.replace("&", "&amp;")
+            .replace("&amp;amp;", "&amp;")
+            .replace(">", "&gt;")
+            .replace("&amp;gt;", "&gt;")
+            .replace("<", "&lt;")
+            .replace("&amp;lt;", "&lt;")
+            .replace('"', "&quot;")
+            .replace("&amp;quot;", "&quot;")
+            .replace("'", "&apos;")
+            .replace("&amp;apos;", "&apos;")
+        )
+        return text
+
+    regexxmltag = r"<.*>"
+    regextitlestr = (
+        r"(?<=title=).*(?=shortTile)"
+    )  # if shortTile doesnt follow title, the cleaning process will break
+    regexreftarget = r'(?<=target=).*(?=">)'
     new_lines = []
     for line in tt_sgml.split("\n"):
-        # probably an element
+        if not re.match(regexxmltag, line):  # not an element
+            new_lines.append(replace_xml_chars(str(line)))
+        else:
+            if line.startswith("<ref"):  # refs have links with ampersands
+                match = re.search(regexreftarget, line)
+                if match is not None:
+                    matchtext = match.group(0).strip()[1:]
+                    matchtext = replace_xml_chars(matchtext)
+                    line = line.replace(match.group(0).strip(), '"' + matchtext)
+
+            elif line.startswith(
+                "<text"
+            ):  # the first tag. The problem here is usually with " present in the title text
+                match = re.search(regextitlestr, line)
+                if match is not None:
+                    matchtext = match.group(0).strip()[1:-1]
+                    matchtext = replace_xml_chars(matchtext)
+                    line = line.replace(match.group(0).strip(), '"' + matchtext + '"')
+
+            new_lines.append(line)
+
+        """
         if line.startswith("<") and line.endswith(">"):
             new_lines.append(line)
         else:
@@ -92,6 +133,7 @@ def escape_treetagger(tt_sgml):
                 .replace('"', "&quot;")
                 .replace("'", "&apos;")
             )
+        """
     return "\n".join(new_lines)
 
 
@@ -101,6 +143,8 @@ class TreeTaggerTokenizer(NLPModule):
 
     def __init__(self, config):
         self.LIB_DIR = config["LIB_DIR"]
+        self.regexxmltag = r"<.*>"
+        self.regexxmlunfriendly = r'[&"\'<>]'
 
     def test_dependencies(self):
         pass

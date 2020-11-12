@@ -20,11 +20,12 @@ from nlp_modules.s_typer import STyper
 from nlp_modules.xrenner_coreferencer import XrennerCoref
 from nlp_modules.flair_edu_segmenter import FlairEDUSplitter
 from nlp_modules.rst_parser import RSTParser
+from nlp_modules.datetimerecognizer import DateTimeRecognizer
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
 BIN_DIR = SCRIPT_DIR + "bin" + os.sep
-TT_PATH = BIN_DIR + "treetagger" + os.sep + "bin" + os.sep
+TTG_PATH = "treetagger" + os.sep
 
 MODULES = {
     "tt_tokenizer": TreeTaggerTokenizer,
@@ -34,9 +35,10 @@ MODULES = {
     "flair_sent_splitter": FlairSentSplitter,
     "s_typer": STyper,
     "dep_parser": DepParser,
+    "datetimerecognizer": DateTimeRecognizer,
     "xrenner": XrennerCoref,
     "flair_edu_splitter": FlairEDUSplitter,
-    "rst_parser": RSTParser,
+    "rst_parser": RSTParser
 }
 
 
@@ -44,7 +46,7 @@ class NLPController:
     def __init__(self, opts):
         logging.info("Initializing NLP Controller...")
         opts.update(
-            {"SCRIPT_DIR": SCRIPT_DIR, "LIB_DIR": LIB_DIR, "BIN_DIR": BIN_DIR, "TT_PATH": TT_PATH,}
+            {"SCRIPT_DIR": SCRIPT_DIR, "LIB_DIR": LIB_DIR, "BIN_DIR": BIN_DIR, "TTG_PATH": TTG_PATH}
         )
         self.opts = opts
 
@@ -152,10 +154,12 @@ def main():
             "flair_sent_splitter",
             "ensemble_tagger",
             "dep_parser",
+            "datetimerecognizer",
             "s_typer",
             "xrenner",
             "flair_edu_splitter",
-            "rst_parser",
+            "rst_parser"
+
         ],  # "ace_entities"
         help="NLP pipeline modules, included in the order they are specified.",
     )
