@@ -20,7 +20,7 @@ from nlp_modules.s_typer import STyper
 from nlp_modules.xrenner_coreferencer import XrennerCoref
 from nlp_modules.flair_edu_segmenter import FlairEDUSplitter
 from nlp_modules.rst_parser import RSTParser
-from nlp_modules.datetimerecognizer import DateTimeRecognizer
+from nlp_modules.datetime_recognizer import DateTimeRecognizer
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
@@ -35,7 +35,7 @@ MODULES = {
     "flair_sent_splitter": FlairSentSplitter,
     "s_typer": STyper,
     "dep_parser": DepParser,
-    "datetimerecognizer": DateTimeRecognizer,
+    "datetime_recognizer": DateTimeRecognizer,
     "xrenner": XrennerCoref,
     "flair_edu_splitter": FlairEDUSplitter,
     "rst_parser": RSTParser
@@ -154,7 +154,7 @@ def main():
             "flair_sent_splitter",
             "ensemble_tagger",
             "dep_parser",
-            "datetimerecognizer",
+            "datetime_recognizer",
             "s_typer",
             "xrenner",
             "flair_edu_splitter",
