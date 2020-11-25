@@ -296,7 +296,7 @@ class FlairSentSplitter(NLPModule):
                 span = wraparound[idx : idx + self.span_size]
             else:
                 span = wraparound[idx:]
-            sent = Sentence(" ".join(span))
+            sent = Sentence(" ".join(span), use_tokenizer=lambda x: x.split())
             spans.append(sent)
             for i in range(idx - self.stride_size, idx + self.span_size - self.stride_size):
                 # start, end, snum

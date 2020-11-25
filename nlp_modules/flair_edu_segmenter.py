@@ -165,7 +165,7 @@ class FlairEDUSplitter(NLPModule):
                 counter += 1
             for tok in post_context:
                 span.append(tok)
-            spans.append(Sentence(" ".join(span)))
+            spans.append(Sentence(" ".join(span), use_tokenizer=lambda x: x.split()))
 
         # Predict
         preds = self.model.predict(spans)
