@@ -25,12 +25,23 @@ class Sequencer:
 			sentence.clear_embeddings(also_clear_word_embeddings=also_clear_word_embeddings)
 
 	def predict_proba(self, sentences):
+		from flair import __version__
+		from flair.data import Sentence
+
 		# Sort sentences and keep order
 		sents = [(len(s.split()),i,s) for i, s in enumerate(sentences)]
 		sents.sort(key=lambda x:x[0], reverse=True)
+
 		sentences = [s[2] for s in sents]
 
+		major, minor = str(__version__).split(".")[0:2]
+		if int(major) > 0 or int(minor) > 4:
+			sentences = [Sentence(s, use_tokenizer=lambda q: q.split()) for s in sentences]
+
 		preds = self.tagger.predict(sentences)
+
+		if preds is None:  # Newer versions of flair have void predict method, use modified Sentence list
+			preds = sentences
 
 		# sort back
 		sents = [tuple(list(sents[i]) + [s]) for i, s in enumerate(preds)]
