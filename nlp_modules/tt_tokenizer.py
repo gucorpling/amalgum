@@ -1,5 +1,5 @@
 import logging
-import re
+import re, os, io
 from lib.whitespace_tokenize import tokenize as tt_tokenize
 from .base import NLPModule, PipelineDep
 from xml.dom import minidom
@@ -28,28 +28,30 @@ def postprocess_text(TTSGML):
     TTSGML = re.sub(r"([¥€\$])([0-9,.]+)\n", r"\1\n\2\n", TTSGML)
 
     # Ranges
-    TTSGML = re.sub(
-        r"(¥|\$|€)\n?([0-9.,]+)-([0-9.,]+\n)", r"\1\n\2\n-\n\3", TTSGML
-    )  # Currency
-    TTSGML = re.sub(
-        r"([12]?[0-9]:[0-5][0-9])(-)([12]?[0-9]:[0-5][0-9])\n", r"\1\n\2\n\3\n", TTSGML
-    )  # Time
+    TTSGML = re.sub(r"(¥|\$|€)\n?([0-9.,]+)-([0-9.,]+\n)", r"\1\n\2\n-\n\3", TTSGML)
+    TTSGML = re.sub(r"(¥|\$|€)\n?([0-9.,]+)-(¥|\$|€)([0-9.,]+\n)", r"\1\n\2\n-\n\3\n\4", TTSGML)
+
+    # Chemistry
+    TTSGML = re.sub(r"(≡[A-Za-z]+)\n([-–])\n([A-Za-z]+)\n([-–])\n([A-Za-z]+≡)",r'\1\2\3\4\5',TTSGML)
+
+    # Time
     TTSGML = re.sub(
         r"((?:sun|mon|tues?|wed|thu(?:rs)|fri|sat(?:ur)?)(?:day)?)-((?:sun|mon|tues?|wed|thu(?:rs)|fri|sat(?:ur)?)(?:day)?)\n",
         r"\1\n-\n\2\n",
         TTSGML,
         flags=re.IGNORECASE,
-    )  # Days
-    TTSGML = re.sub(
-        r"(Su|M|Tu|W|Th|Fr?|Sa)-(Su|M|Tu|W|Th|Fr?|Sa)\n", r"\1\n-\n\2\n", TTSGML
-    )  # Short days
+    )
+    TTSGML = re.sub(r"([12]?[0-9]:[0-5][0-9])(-)([12]?[0-9]:[0-5][0-9])\n", r"\1\n\2\n\3\n", TTSGML)
+
+    # Days
+    TTSGML = re.sub(r"(Su|M|Tu|W|Th|Fr?|Sa)-(Su|M|Tu|W|Th|Fr?|Sa)\n", r"\1\n-\n\2\n", TTSGML)  # Short days
 
     # Measurement symbols
     TTSGML = re.sub(r"\n(k?m)²\n", r"\n\1\n²\n", TTSGML)  # Squared
     TTSGML = re.sub(r"([0-9])°\n", r"\1\n°", TTSGML)  # Degree symbol
 
     # Latin abbreviations
-    TTSGML = TTSGML.replace(" i. e. ", " i.e. ").replace(" e. g. ", " e.g. ")
+    TTSGML = TTSGML.replace("\ni.\ne.\n", "\ni.e.\n").replace("\ne.\ng.\n", "\ne.g.\n")
 
     # Trailing periods in section headings like "1. Introduction", usually following an XML tag
     TTSGML = re.sub(r"^(\n[0-9]+)\n(\.\n)", r"\1\2", TTSGML)
@@ -61,9 +63,7 @@ def postprocess_text(TTSGML):
     # Find missing contraction spellings
     TTSGML = re.sub(r"\n([Ii]t)(s\nnot\n)", r"\n\1\n\2", TTSGML)
     TTSGML = TTSGML.replace("\nIve\n", "\nI\nve\n")
-    TTSGML = re.sub(
-        r"\n(did|do|was|were|would|should|had|must)nt\n", r"\n\1\nnt\n", TTSGML
-    )
+    TTSGML = re.sub(r"\n(did|do|was|were|would|should|had|must)nt\n", r"\n\1\nnt\n", TTSGML)
 
     # Fix grammar-dependant tokenizations
     TTSGML = re.sub(r"(\n[Ii]t)(s\n(?:" + VVN + ART + r")\n)", r"\1\n\2", TTSGML)
@@ -73,6 +73,9 @@ def postprocess_text(TTSGML):
 
     # Fix parentheses in tokens like parent(s)
     TTSGML = re.sub(r"\n(\w+)\(s\n\)\n", r"\n\1(s)\n", TTSGML)
+
+    # LS-like number broken from period right after tag
+    TTSGML = re.sub(r'^(\n?([0-9]+\.)+[0-9]+?)\n\.\n',r'\1.\n', TTSGML)
 
     fixed = TTSGML
     return fixed
@@ -218,3 +221,11 @@ class TreeTaggerTokenizer(NLPModule):
         self.process_files(
             input_dir, output_dir, processing_function, multithreaded=True
         )
+
+if __name__ == "__main__":
+    script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
+    lib = script_dir + ".." + os.sep + "lib" + os.sep
+    tok = TreeTaggerTokenizer({"LIB_DIR":lib})
+    data = io.open(script_dir + ".." + os.sep + "out_tiny_24" + os.sep + "amalgum_academic_leucine.xml").read()
+    tokenized = tok.tokenize(data)
+    print(tokenized)
