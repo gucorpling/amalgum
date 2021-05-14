@@ -1,3 +1,12 @@
+"""
+flair_pos_tagger.py
+
+This module trains flair sequence labelers to predict POS and deprel for OTHER modules.
+It is not the final amalgum POS tagger - it produces modules used by other modules,
+such as the ensemble tagger in pos_tagger.py
+"""
+
+
 from argparse import ArgumentParser
 from flair.data import Corpus, Sentence
 from flair.datasets import ColumnCorpus
