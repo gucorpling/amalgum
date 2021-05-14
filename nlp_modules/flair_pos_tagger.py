@@ -45,7 +45,7 @@ ud_test = ["GUM_interview_libertarian", "GUM_interview_hill",
 
 def make_gum_pos(tag="xpos", tag2=None, corpus="gum"):
     if corpus == "gum":
-        gum_target = GUM_ROOT + os.sep.join(["_build','target','dep','not-to-release'"]) + os.sep
+        gum_target = GUM_ROOT + os.sep.join(['_build','target','dep','not-to-release']) + os.sep
     else:
         gum_target = EWT_ROOT
     files = glob(gum_target + "*.conllu")
