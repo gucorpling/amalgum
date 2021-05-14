@@ -22,6 +22,10 @@ TREETAGGER_PARAMETER_FILES_BNC = (
 )
 TREETAGGER_CHUNKER = "https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/english-chunker.par.gz"
 
+# Location of clone of GUM and EWT repos (only needed for retraining tools)
+GUM_ROOT = ""
+EWT_ROOT = ""
+
 # leave it to the user to install the Perl interpreter for windows? (Date/Time TreeTagger binary dependency)
 # Tested on Windows 10, didn't need to install Perl
 # ACTIVEPERL_MSI = 'https://www.activestate.com/products/perl/downloads/thank-you/?dl=https://cli-msi.s3.amazonaws.com/ActivePerl-5.28.msi'
