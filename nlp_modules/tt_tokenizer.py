@@ -4,6 +4,16 @@ from lib.whitespace_tokenize import tokenize as tt_tokenize
 from .base import NLPModule, PipelineDep
 from xml.dom import minidom
 
+bad_period_followers = {"The", "You", "If", "This", "It", "In", "For", "Be", "When", "But", "As", "Here", "Even", "Just", "To", "Whatever",
+     "See", "Once", "Never", "Read", "Years", "We", "Man", "Seattle", "They", "Thats", "So", "Gonna", "Marked", "She",
+     "Given", "Prices", "Fort", "Shoes", "Bus", "Rakvere", "Santa", "Note", "Based", "Within", "Regional", "Intercity",
+     "Soon", "Then", "Avoid", "Enter", "Less", "Keep", "Put", "Speak", "Or", "Many", "Please", "And", "Embrace", "Have",
+     "Love", "What", "Touch", "Try", "After", "Use", "Choose", "Rather", "Make", "Mix", "Search", "Also", "Thus",
+     "Knowing", "Currency", "Write", "Although", "Glassware", "Heat", "Glass", "Cast", "Silicon", "Stainless",
+     "Getting", "Take", "Warli", "Always", "Ask", "Books", "Visiting", "Image"}
+bad_period_followers = "|".join(list(bad_period_followers))
+bad_period_followers = re.compile(r"([a-z]\.)(" + bad_period_followers + ")")
+
 
 def postprocess_text(TTSGML):
     # Likely verbal VVN, probably not an amod
@@ -26,6 +36,9 @@ def postprocess_text(TTSGML):
 
     # Currency
     TTSGML = re.sub(r"([¥€\$])([0-9,.]+)\n", r"\1\n\2\n", TTSGML)
+
+    # Common image credit error:
+    TTSGML = TTSGML.replace(".Image\n",".\nImage\n")
 
     # Ranges
     TTSGML = re.sub(r"(¥|\$|€)\n?([0-9.,]+)-([0-9.,]+\n)", r"\1\n\2\n-\n\3", TTSGML)
@@ -182,6 +195,9 @@ class TreeTaggerTokenizer(NLPModule):
         """
         # Separate en/em dashes
         xml_data = xml_data.replace("–", " – ").replace("—", " — ")
+
+        # Separate common period fusions
+        xml_data = bad_period_followers.sub(r'\1 \2',xml_data)
 
         abbreviations = self.LIB_DIR + "english-abbreviations"
         tokenized = tt_tokenize(xml_data, abbr=abbreviations)
