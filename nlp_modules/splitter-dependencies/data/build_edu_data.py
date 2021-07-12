@@ -85,7 +85,7 @@ for file_ in files:
         for line in sent.split("\n"):
             if "\t" in line:
                 fields = line.split("\t")
-                if "-" in fields[0]:
+                if "-" in fields[0] or "." in fields[0]:
                     continue
                 toks.append(fields[1])
                 conll_toks.append(fields[1])
