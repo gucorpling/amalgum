@@ -18,7 +18,7 @@ class DocReader(object):
         :type fmerge: string
         :param fmerge: merge file name
         """
-        if len(fmerge) > 100:
+        if len(fmerge) > 100 and not fmerge.endswith(".merge"):
             fin = fmerge.strip().split('\n')
         elif not isfile(fmerge):
             fin = fmerge.strip().split('\n')
