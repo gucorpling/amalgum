@@ -435,7 +435,7 @@ class FlairSentSplitter(NLPModule):
 
         return {
             "xml": lines,
-            "dep": "\n".join(tl.serialize() for tl in conllu_sentences),
+            "dep": "".join(tl.serialize() for tl in conllu_sentences),
         }
 
     def run(self, input_dir, output_dir):
