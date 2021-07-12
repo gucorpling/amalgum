@@ -4,6 +4,7 @@ from flair.embeddings import (
     StackedEmbeddings,
     FlairEmbeddings,
     CharacterEmbeddings,
+    TransformerWordEmbeddings
 )
 from flair.models import SequenceTagger
 import flair
@@ -102,15 +103,16 @@ class FlairEDUSplitter(NLPModule):
             # comment in this line to use character embeddings
             CharacterEmbeddings(),
             # comment in these lines to use flair embeddings
-            FlairEmbeddings("news-forward"),
-            FlairEmbeddings("news-backward"),
+            #FlairEmbeddings("news-forward"),
+            #FlairEmbeddings("news-backward"),
+            TransformerWordEmbeddings("google/electra-base-discriminator")
             # BertEmbeddings('distilbert-base-cased')
         ]
 
         embeddings: StackedEmbeddings = StackedEmbeddings(embeddings=embedding_types)
 
         tagger: SequenceTagger = SequenceTagger(
-            hidden_size=256, embeddings=embeddings, tag_dictionary=tag_dictionary, tag_type=tag_type, use_crf=True,
+            hidden_size=128, embeddings=embeddings, tag_dictionary=tag_dictionary, tag_type=tag_type, use_crf=False, use_rnn=True
         )
 
         trainer: ModelTrainer = ModelTrainer(tagger, corpus)
