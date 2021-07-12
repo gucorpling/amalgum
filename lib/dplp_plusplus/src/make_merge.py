@@ -8,7 +8,6 @@ import torch, flair
 
 script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 
-
 # Sentence classifier model to predict discourse functions
 class Sequencer:
 	def __init__(self, model_path=None):
@@ -55,13 +54,13 @@ class Sequencer:
 		return output
 
 
-def merge(rst, xml, dep, filename, seq=None, as_text=True):
-	flair.device = torch.device('cpu')
+def merge(rst, xml, dep, filename, seq=None, as_text=True, outdir=""):
+	#flair.device = torch.device('cpu')
 
 	if as_text:
-		rst_lines = rst
-		xml_lines = xml
-		dep_lines = dep
+		rst_lines = rst.split("\n")
+		xml_lines = xml.split("\n")
+		dep_lines = dep.split("\n")
 		format = "rs3"
 		if filename.count("_") == 2:
 			genre = filename.split("_")[1]
@@ -83,9 +82,6 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 	# if len(files) ==0:
 	# 	sys.stderr.write("No RST files found in " + paths["dis"] + "\nQuitting...")
 	# 	quit()
-
-	if seq is not None:
-		seq = Sequencer()
 
 	# for file_ in files:
 	# 	docname = re.sub(r'\.[^.]*','',os.path.basename(file_))
@@ -114,7 +110,7 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 	edus = []
 
 	counter = 0
-	for line in rst_lines.split("\n"):
+	for line in rst_lines:
 		if "<segment" in line and format == "rs3":
 			edu_num = re.search('id="([^"]+)"',line).group(1)
 			text = re.search(r'>(.*)<',line).group(1)
@@ -174,11 +170,13 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 	counter = 0
 	s_type = "other"
 	output_lines = ""
-	for line in dep_lines.split("\n"):
+	for line in dep_lines:
 		if "s_type" in line:
 			s_type = re.search(r'=\s*([^\n]+)',line).group(1)
 		elif "\t" in line:
 			fields = line.split("\t")
+			if "." in fields[0] or "-" in fields[0]:
+				continue
 			tokid, word, lemma, upos, xpos, morph, head, deprel, _, _ = fields
 			# Check if head is outside EDU to left or right
 			parent_dir = "NONE"
@@ -218,9 +216,12 @@ def merge(rst, xml, dep, filename, seq=None, as_text=True):
 			sent_num += 1
 			output.append("")
 
-	with io.open(filename + ".merge", 'w', encoding="utf8", newline="\n") as f:
+	with io.open(outdir + filename + ".merge", 'w', encoding="utf8", newline="\n") as f:
 		f.write("\n".join(output)+"\n")
 
 	output_lines = "\n".join(output)+"\n"
 
 	return output_lines
+
+
+#seq = Sequencer()

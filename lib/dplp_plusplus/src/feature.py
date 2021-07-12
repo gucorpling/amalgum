@@ -81,6 +81,8 @@ class FeatureGenerator(object):
         ## Distributional representation
         for feat in self.distributional_features():
             featlist.append(feat)
+        for feat in self.nucleus_features():
+            featlist.append(feat)
         ## Brown clusters
         if self.bcvocab is not None:
             if new:
