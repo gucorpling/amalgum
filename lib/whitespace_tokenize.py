@@ -33,7 +33,7 @@ FChar = r"""'\]}'`"),;:!?%‚„…†‡‰‹‘’“”•–—›'»」"""
 PClitic = ""
 
 # character sequences which have to be cut off at the end of a word
-FClitic = "['’′](s|re|ve|d|m|em|ll)|n['’′]t|(?<=\b(?:ca|wo))(nt)|(?<=\byou)(ll|re)|(?<=\bwa)(na)|(?<=\bgon)(na)"
+FClitic = r"['’′](s|re|ve|d|m|em|ll)|n['’′]t|(?<=\b(?:[Cc]a|[Ww]o))(nt)|(?<=\byou)(ll|re)|(?<=\b[Ww]an)(na)|(?<=\b[Gg]on)(na)"
 
 email = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
 url = r"https?://(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)"
