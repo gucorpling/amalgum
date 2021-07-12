@@ -2037,7 +2037,7 @@ class DateTimeRecognizer(NLPModule):
                 sentencestokens.append(senttok)
                 sent = []
                 senttok = []
-            else:
+            elif "\t" in line:
                 senttok.append(line.split("\t")[1])
                 sent.append(
                     line.replace("\t", "/")
