@@ -70,6 +70,8 @@ class RSTParser(NLPModule):
 
     def run(self, input_dir, output_dir):
 
+        import sys
+        sys.setrecursionlimit(3000)
         processing_function = self.parse
 
         # use process_files, inherited from NLPModule, to apply this function to all docs
