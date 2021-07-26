@@ -1,5 +1,7 @@
 # AMALGUM v0.2
 
+https://corpling.uis.georgetown.edu/gum/amalgum.html
+
 ## Download
 
 Latest data **without Reddit texts** is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and some additional data beyond the target size of 4M tokens [`amalgum_extra/`](https://github.com/gucorpling/amalgum/tree/master/amalgum_extra). (The `amalgum` directory contains around 500,000 tokens for each genre, while the extra directory contains some more data beyond the genre-balanced corpus.)
