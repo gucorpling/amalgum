@@ -37,6 +37,22 @@ These annotations are across four file formats: [GUM-style XML](https://github.c
 
 You can see samples of the data for `AMALGUM_news_khadr`: [xml](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/xml/AMALGUM_news_khadr.conllu), [conllu](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/dep/AMALGUM_news_khadr.conllu), [tsv](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/tsv/AMALGUM_news_khadr.tsv), [rs3](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/rst/AMALGUM_news_khadr.rs3)
 
+### Performance
+
+Current scores on the GUM corpus test set per task:
+
+| task | metric | performance |
+| ---- | ----- | ---------- |
+| tokenizer | F1 | 99.92 |
+| sentencer | Acc / F1 | 99.85 / 94.35 |
+| xpos | Acc | 98.16 |
+| dependencies | LAS/UAS* | 92.16 / 94.25 |
+| NNER | Micro F1 | 70.8 |
+| coreference | CoNLL F1 | 51.4 |
+| RST | S / N / R | 77.98 / 61.79 / 44.07 |
+
+* Parsing scores ignore punctuation attachment; punctuation is attached automatically via [udapi](https://udapi.github.io/).
+
 ### Further Information
 Please see [our paper](https://www.aclweb.org/anthology/2020.lrec-1.648.pdf).
 
