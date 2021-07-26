@@ -46,7 +46,7 @@ Current scores on the GUM corpus test set per task:
 | tokenizer | F1 | 99.92 |
 | sentencer | Acc / F1 | 99.85 / 94.35 |
 | xpos | Acc | 98.16 |
-| dependencies | LAS/UAS* | 92.16 / 94.25 |
+| dependencies | LAS / UAS* | 92.16 / 94.25 |
 | NNER | Micro F1 | 70.8 |
 | coreference | CoNLL F1 | 51.4 |
 | RST | S / N / R | 77.98 / 61.79 / 44.07 |
