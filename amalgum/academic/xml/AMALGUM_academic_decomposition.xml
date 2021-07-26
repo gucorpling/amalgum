@@ -1,0 +1,1035 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_decomposition" title="Integrated Predictor Based on Decomposition Mechanism for PM2.5 Long-Term Prediction" shortTitle="decomposition" author="Xuebo Jin, Nianxiang Yang, Xiaoyi Wang, Yuting Bai, Tingli Su, Jianlei Kong" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4533/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Distributed	NNP	distribute
+Decomposition	NNP	Decomposition
+Model	NNP	Model
+</s>
+</head>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+</s>
+<s type="frag">
+Model	NN	Model
+Framework	NN	Framework
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+model	NN	model
+has	VBZ	have
+three	CD	3
+parts	NNS	part
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+decomposition	NN	decomposition
+,	,	,
+prediction	NN	prediction
+,	,	,
+and	CC	and
+fusion	NN	fusion
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+decomposed	VBN	decompose
+node	NN	node
+,	,	,
+the	DT	the
+PM2.5	NNP	PM2.5
+data	NNS	datum
+are	VBP	be
+decomposed	VBN	decompose
+to	IN	to
+three	CD	3
+subsequences	NNS	subsequence
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+network	NN	network
+training	NN	training
+stage	NN	stage
+,	,	,
+each	DT	each
+component	NN	component
+is	VBZ	be
+trained	VBN	train
+separately	RB	separately
+to	TO	to
+obtain	VB	obtain
+different	JJ	different
+sub-predictors	NNS	sub-predictor
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+the	DT	the
+trend	NN	trend
+component	NN	component
+is	VBZ	be
+trained	VBN	train
+to	TO	to
+obtain	VB	obtain
+ARIMA	NNP	ARIMA
+model	NN	model
+,	,	,
+and	CC	and
+the	DT	the
+period	NN	period
+and	CC	and
+residual	JJ	residual
+components	NNS	component
+are	VBP	be
+trained	VBN	train
+to	TO	to
+obtain	VB	obtain
+two	CD	2
+GRUs	NNS	GRU
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+prediction	NN	prediction
+framework	NN	framework
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+prediction	NN	prediction
+stage	NN	stage
+,	,	,
+the	DT	the
+ARIMA	NNP	ARIMA
+model	NN	model
+is	VBZ	be
+used	VBN	use
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+prediction	NN	prediction
+of	IN	of
+the	DT	the
+trend	NN	trend
+component	NN	component
+,	,	,
+and	CC	and
+two	CD	2
+different	JJ	different
+GRUs	NNS	GRU
+are	VBP	be
+used	VBN	use
+to	TO	to
+predict	VB	predict
+the	DT	the
+period	NN	period
+and	CC	and
+residual	NN	residual
+components	NNS	component
+,	,	,
+respectively	RB	respectively
+,	,	,
+before	IN	before
+finally	RB	finally
+,	,	,
+all	RB	all
+the	DT	the
+predictions	NNS	prediction
+are	VBP	be
+added	VBN	add
+together	RB	together
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+final	JJ	final
+predicted	VBN	predict
+result	NN	result
+in	IN	in
+fusion	NN	fusion
+node	NN	node
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+Decomposition	NN	decomposition
+</s>
+</head>
+<p>
+<s type="imp">
+Assume	VB	assume
+that	IN	that
+PM2.5	NNP	PM2.5
+time-series	NN	time-sery
+data	NNS	datum
+has	VBZ	have
+<hi rend="italic">
+N	NN	N
+</hi>
+data	NNS	datum
+,	,	,
+which	WDT	which
+means	VBZ	mean
+<hi rend="italic">
+t	NN	t
+</hi>
+=	SYM	=
+1	CD	1
+,	,	,
+2	CD	2
+,	,	,
+…	:	…
+,	,	,
+<hi rend="italic">
+N	NNP	N
+</hi>
+.	.	.
+</s>
+<s type="frag">
+The	DT	the
+relation	NN	relation
+with	IN	with
+and	CC	and
+its	PRP$	its
+three	CD	3
+independent	JJ	independent
+components	NNS	component
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+trend	NN	trend
+,	,	,
+period	NN	period
+,	,	,
+and	CC	and
+residual	NN	residual
+)	-RRB-	)
+,	,	,
+as	IN	as
+shown	VBN	show
+in	IN	in
+Equation	NNP	Equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+(	:	(
+1	CD	1
+)	-RRB-	)
+where	WRB	where
+,	,	,
+,	,	,
+and	CC	and
+are	VBP	be
+the	DT	the
+trend	NN	trend
+component	NN	component
+,	,	,
+period	NN	period
+component	NN	component
+,	,	,
+and	CC	and
+residual	JJ	residual
+component	NN	component
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+we	PRP	we
+have	VBP	have
+to	TO	to
+obtain	VB	obtain
+these	DT	this
+three	CD	3
+components	NNS	component
+,	,	,
+,	,	,
+and	CC	and
+from	IN	from
+the	DT	the
+one	CD	one
+time-series	NN	time-sery
+data	NNS	datum
+,	,	,
+but	CC	but
+this	DT	this
+is	VBZ	be
+mathematically	RB	mathematically
+an	DT	a
+unsolvable	JJ	unsolvable
+equation	NN	equation
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Each	DT	each
+component	NN	component
+has	VBZ	have
+different	JJ	different
+frequency	NN	frequency
+bands	NNS	band
+,	,	,
+that	DT	that
+is	VBZ	be
+,	,	,
+the	DT	the
+trend	NN	trend
+and	CC	and
+period	NN	period
+component	NN	component
+are	VBP	be
+in	IN	in
+the	DT	the
+low	JJ	low
+and	CC	and
+middle	JJ	middle
+band	NN	band
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+used	VBD	use
+the	DT	the
+cycle	NN	cycle
+calculation	NN	calculation
+process	NN	process
+,	,	,
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="imp">
+,	,	,
+to	TO	to
+calculate	VB	calculate
+the	DT	the
+trend	NN	trend
+and	CC	and
+period	NN	period
+components	NNS	component
+until	IN	until
+these	DT	this
+two	CD	2
+components	NNS	component
+tended	VBD	tend
+to	TO	to
+be	VB	be
+stable	JJ	stable
+and	CC	and
+no	RB	no
+longer	RBR	long
+changed	VBN	change
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+start	VB	start
+the	DT	the
+loop	NN	loop
+operation	NN	operation
+,	,	,
+we	PRP	we
+assumed	VBD	assume
+=	SYM	=
+0	CD	0
+in	IN	in
+the	DT	the
+first	JJ	first
+loop	NN	loop
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+time	NN	time
+series	NN	series
+is	VBZ	be
+fitted	VBN	fit
+iteratively	RB	iteratively
+until	IN	until
+the	DT	the
+trend	NN	trend
+and	CC	and
+period	NN	period
+component	NN	component
+stabilize	VBP	stabilize
+,	,	,
+and	CC	and
+at	IN	at
+the	DT	the
+end	NN	end
+of	IN	of
+the	DT	the
+cycle	NN	cycle
+calculation	NN	calculation
+process	NN	process
+,	,	,
+the	DT	the
+trend	NN	trend
+component	NN	component
+and	CC	and
+period	NN	period
+component	NN	component
+are	VBP	be
+extracted	VBN	extract
+from	IN	from
+the	DT	the
+data	NNS	datum
+series	NN	series
+,	,	,
+and	CC	and
+the	DT	the
+residual	JJ	residual
+component	NN	component
+is	VBZ	be
+obtained	VBN	obtain
+by	IN	by
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+that	IN	that
+the	DT	the
+decomposition	NN	decomposition
+has	VBZ	have
+two	CD	2
+important	JJ	important
+steps	NNS	step
+:	:	:
+one	CD	one
+is	VBZ	be
+“	``	''
+Remove	VB	remove
+high	JJ	high
+frequencies	NNS	frequency
+”	''	''
+,	,	,
+and	CC	and
+the	DT	the
+other	JJ	other
+is	VBZ	be
+“	``	''
+Remove	VB	remove
+low	JJ	low
+frequencies	NNS	frequency
+”	''	''
+.	.	.
+</s>
+<s type="decl">
+Next	RB	next
+,	,	,
+we	PRP	we
+will	MD	will
+discuss	VB	discuss
+the	DT	the
+method	NN	method
+of	IN	of
+these	DT	this
+two	CD	2
+steps	NNS	step
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+To	TO	to
+remove	VB	remove
+the	DT	the
+high	JJ	high
+frequencies	NNS	frequency
+,	,	,
+we	PRP	we
+used	VBD	use
+the	DT	the
+locally	RB	locally
+weighted	VBN	weight
+scatterplot	NN	scatterplot
+smoothing	NN	smoothing
+(	-LRB-	(
+LOESS	NNP	Loess
+)	-RRB-	)
+smoother	JJR	smooth
+,	,	,
+which	WDT	which
+is	VBZ	be
+based	VBN	base
+on	IN	on
+fitting	VBG	fit
+a	DT	a
+weighted	VBN	weight
+polynomial	JJ	polynomial
+regression	NN	regression
+for	IN	for
+a	DT	a
+given	VBN	give
+time	NN	time
+of	IN	of
+observation	NN	observation
+,	,	,
+where	WRB	where
+weights	NNS	weight
+decrease	VBP	decrease
+with	IN	with
+distance	NN	distance
+from	IN	from
+the	DT	the
+nearest	JJS	near
+neighbor	NN	neighbor
+.	.	.
+</s>
+<s type="decl">
+LOESS	NNP	Loess
+is	VBZ	be
+a	DT	a
+combination	NN	combination
+of	IN	of
+the	DT	the
+local	JJ	local
+fitting	NN	fitting
+of	IN	of
+polynomials	NNS	polynomial
+and	CC	and
+iteratively	RB	iteratively
+weighted	VBN	weight
+least	JJ	least
+squares	NNS	square
+.	.	.
+</s>
+<s type="decl">
+At	IN	at
+each	DT	each
+point	NN	point
+<hi rend="italic">
+x	NN	x
+</hi>
+in	IN	in
+the	DT	the
+dataset	NN	dataset
+,	,	,
+a	DT	a
+linear	JJ	linear
+or	CC	or
+quadratic	JJ	quadratic
+polynomial	NN	polynomial
+is	VBZ	be
+fit	JJ	fit
+using	VBG	use
+the	DT	the
+weighted	VBN	weight
+least	NN	least
+squares	NNS	square
+,	,	,
+giving	VBG	give
+more	JJR	more
+weight	NN	weight
+to	IN	to
+points	NNS	point
+near	IN	near
+point	NN	point
+<hi rend="italic">
+x	NN	x
+</hi>
+that	WDT	that
+need	VBP	need
+to	TO	to
+be	VB	be
+smoothed	VBN	smooth
+and	CC	and
+less	JJR	less
+weight	NN	weight
+to	IN	to
+points	NNS	point
+further	RBR	far
+away	RB	away
+.	.	.
+</s>
+</p>
+<p>
+<s type="imp">
+Suppose	VB	suppose
+<hi rend="italic">
+x	NN	x
+</hi>
+is	VBZ	be
+the	DT	the
+point	NN	point
+to	TO	to
+be	VB	be
+smoothed	VBN	smooth
+,	,	,
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+data	NNS	datum
+points	NNS	point
+around	IN	around
+<hi rend="italic">
+x	NN	x
+</hi>
+to	TO	to
+be	VB	be
+smoothed	VBN	smooth
+,	,	,
+and	CC	and
+is	VBZ	be
+the	DT	the
+point	NN	point
+around	IN	around
+<hi rend="italic">
+x	NN	x
+</hi>
+within	IN	within
+the	DT	the
+width	NN	width
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+chose	VBD	choose
+a	DT	a
+Gaussian	JJ	Gaussian
+function	NN	function
+as	IN	as
+the	DT	the
+weighting	NN	weighting
+factor	NN	factor
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+a	DT	a
+constant	NN	constant
+to	TO	to
+be	VB	be
+set	VBN	set
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+always	RB	always
+set	VBN	set
+according	VBG	accord
+to	IN	to
+the	DT	the
+number	NN	number
+of	IN	of
+the	DT	the
+data	NNS	datum
+,	,	,
+and	CC	and
+for	IN	for
+PM2.5	NNP	PM2.5
+,	,	,
+which	WDT	which
+is	VBZ	be
+a	DT	a
+complex	JJ	complex
+nonlinear	JJ	nonlinear
+data	NN	datum
+,	,	,
+we	PRP	we
+suggest	VBP	suggest
+that	IN	that
+it	PRP	it
+is	VBZ	be
+set	VBN	set
+to	TO	to
+as	IN	as
+within	IN	within
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+value	NN	value
+of	IN	of
+the	DT	the
+regression	NN	regression
+function	NN	function
+for	IN	for
+the	DT	the
+point	NN	point
+is	VBZ	be
+then	RB	then
+obtained	VBN	obtain
+by	IN	by
+evaluating	VBG	evaluate
+the	DT	the
+local	JJ	local
+polynomial	NN	polynomial
+for	IN	for
+that	DT	that
+data	NN	datum
+point	NN	point
+.	.	.
+</s>
+<s type="decl">
+By	IN	by
+minimizing	VBG	minimize
+the	DT	the
+value	NN	value
+of	IN	of
+the	DT	the
+following	VBG	follow
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+to	TO	to
+find	VB	find
+the	DT	the
+parameter	NN	parameter
+,	,	,
+then	RB	then
+the	DT	the
+smoothed	VBN	smooth
+value	NN	value
+of	IN	of
+point	NN	point
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+and	CC	and
+the	DT	the
+LOESS	NNP	Loess
+fit	NN	fit
+is	VBZ	be
+complete	JJ	complete
+after	IN	after
+the	DT	the
+regression	NN	regression
+function	NN	function
+values	NNS	value
+have	VBP	have
+been	VBN	be
+computed	VBN	compute
+for	IN	for
+each	DT	each
+of	IN	of
+the	DT	the
+data	NNS	datum
+points	NNS	point
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+On	IN	on
+the	DT	the
+other	JJ	other
+hand	NN	hand
+,	,	,
+we	PRP	we
+used	VBD	use
+a	DT	a
+high-pass	JJ	high-pass
+filter	NN	filter
+with	IN	with
+cutoff	NN	cutoff
+frequency	NN	frequency
+to	TO	to
+remove	VB	remove
+low	JJ	low
+frequency	NN	frequency
+bands	NNS	band
+.	.	.
+</s>
+<s type="decl">
+Obviously	RB	obviously
+,	,	,
+it	PRP	it
+is	VBZ	be
+critical	JJ	critical
+to	TO	to
+ensure	VB	ensure
+that	IN	that
+the	DT	the
+loop	NN	loop
+converges	VBZ	converge
+to	IN	to
+the	DT	the
+trend	NN	trend
+component	NN	component
+and	CC	and
+the	DT	the
+period	NN	period
+component	NN	component
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+chose	VBD	choose
+the	DT	the
+so	RB	so
+called	VBN	call
+seasonal-trend	JJ	seasonal-trend
+decomposition	NN	decomposition
+procedure	NN	procedure
+based	VBN	base
+on	IN	on
+LOESS	NNP	Loess
+(	-LRB-	(
+STL	NNP	STL
+)	-RRB-	)
+to	TO	to
+achieve	VB	achieve
+the	DT	the
+loop	NN	loop
+convergence	NN	convergence
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+STL	NNP	STL
+method	NN	method
+can	MD	can
+adaptively	RB	adaptively
+adjust	VB	adjust
+parameters	NNS	parameter
+according	VBG	accord
+to	IN	to
+each	DT	each
+cycle	NN	cycle
+calculation	NN	calculation
+,	,	,
+so	RB	so
+it	PRP	it
+can	MD	can
+obtain	VB	obtain
+good	JJ	good
+performance	NN	performance
+in	IN	in
+ensuring	VBG	ensure
+convergence	NN	convergence
+,	,	,
+and	CC	and
+has	VBZ	have
+many	JJ	many
+applications	NNS	application
+in	IN	in
+data	NNS	datum
+decomposition	NN	decomposition
+.	.	.
+</s>
+<s type="decl">
+Here	RB	here
+,	,	,
+we	PRP	we
+have	VBP	have
+omitted	VBN	omit
+the	DT	the
+details	NNS	detail
+of	IN	of
+the	DT	the
+STL	NNP	STL
+in	IN	in
+order	NN	order
+to	TO	to
+focus	VB	focus
+our	PRP$	our
+work	NN	work
+(	-LRB-	(
+please	RB	please
+refer	VB	refer
+for	IN	for
+the	DT	the
+details	NNS	detail
+of	IN	of
+STL	NNP	STL
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.	CD	2.3.
+Autoregressive-Integrated	NNP	Autoregressive-Integrated
+Moving	NNP	move
+Average	NNP	Average
+(	-LRB-	(
+ARIMA	NNP	ARIMA
+)	-RRB-	)
+Model	NN	Model
+:	:	:
+Prediction	NN	Prediction
+Model	NN	Model
+for	IN	for
+Trend	NN	trend
+Component	NN	component
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+the	DT	the
+ARIMA	NNP	ARIMA
+model	NN	model
+was	VBD	be
+used	VBN	use
+and	CC	and
+applied	VBN	apply
+to	TO	to
+model	VB	model
+the	DT	the
+trend	NN	trend
+component	NN	component
+,	,	,
+by	IN	by
+which	WDT	which
+the	DT	the
+future	JJ	future
+value	NN	value
+of	IN	of
+is	VBZ	be
+to	TO	to
+be	VB	be
+predicted	VBN	predict
+based	VBN	base
+on	IN	on
+the	DT	the
+linear	JJ	linear
+modeling	NN	modeling
+function	NN	function
+of	IN	of
+the	DT	the
+past	JJ	past
+trend	NN	trend
+value	NN	value
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+a	DT	a
+consequence	NN	consequence
+,	,	,
+the	DT	the
+time-series	NN	time-sery
+data	NNS	datum
+that	WDT	that
+are	VBP	be
+fed	VBN	fead
+to	IN	to
+ARIMA	NNP	ARIMA
+should	MD	should
+be	VB	be
+linear	JJ	linear
+and	CC	and
+stationary	JJ	stationary
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+returns	VBZ	return
+the	DT	the
+dependent	JJ	dependent
+variable	NN	variable
+only	RB	only
+to	IN	to
+its	PRP$	its
+lag	NN	lag
+value	NN	value
+and	CC	and
+the	DT	the
+present	JJ	present
+and	CC	and
+lag	NN	lag
+values	NNS	value
+of	IN	of
+the	DT	the
+random	JJ	random
+error	NN	error
+term	NN	term
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+terms	NNS	term
+of	IN	of
+modeling	NN	modeling
+,	,	,
+it	PRP	it
+is	VBZ	be
+mainly	RB	mainly
+divided	VBN	divide
+into	IN	into
+four	CD	4
+steps	NNS	step
+as	IN	as
+follows	VBZ	follow
+:	:	:
+</s>
+</p>
+<p>
+<s type="frag">
+Step	NN	step
+1	CD	1
+:	:	:
+Import	VB	import
+the	DT	the
+raw	JJ	raw
+data	NN	datum
+sequence	NN	sequence
+to	TO	to
+be	VB	be
+predicted	VBN	predict
+;	:	;
+</s>
+</p>
+</text>

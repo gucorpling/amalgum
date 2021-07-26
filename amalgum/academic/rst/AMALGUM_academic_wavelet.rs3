@@ -1,0 +1,154 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Information Entropy of Sub-Band Image</segment>
+<segment id="2" parent="1002" relname="span">2.1. Application of the Discrete Wavelet Transform</segment>
+<segment id="3" parent="2" relname="restatement">( DWT )</segment>
+<segment id="4" parent="1004" relname="span">Wavelet transform is an effective tool</segment>
+<segment id="5" parent="4" relname="purpose">to combine time domain and frequency domain .</segment>
+<segment id="6" parent="1005" relname="joint">In most applications , discrete signals are used .</segment>
+<segment id="7" parent="1008" relname="span">Therefore , discrete wavelet transform</segment>
+<segment id="8" parent="7" relname="restatement">( DWT )</segment>
+<segment id="9" parent="1007" relname="same_unit">must be used instead of continuous wavelet transform .</segment>
+<segment id="10" parent="1005" relname="joint">Wavelet transform can decompose the signal by band-pass filter .</segment>
+<segment id="11" parent="1012" relname="span">The result of the band filtering operation will be two different signals ,</segment>
+<segment id="12" parent="1013" relname="joint">one will be related to the high frequency components</segment>
+<segment id="13" parent="1013" relname="joint">and the other related to the low frequency component of the original signal .</segment>
+<segment id="14" parent="1014" relname="span">To compute the DWT of an image of size ,</segment>
+<segment id="15" parent="1017" relname="span">it must identify the wavelet scale function</segment>
+<segment id="16" parent="1018" relname="span">to define the approximation coefficients and the wavelet function responsible for horizontal , vertical and diagonal coefficients</segment>
+<segment id="17" parent="1019" relname="span">following the equations below :</segment>
+<segment id="18" parent="17" relname="elaboration">( 1 )</segment>
+<segment id="19" parent="1017" relname="elaboration">( 2 )</segment>
+<segment id="20" parent="1021" relname="span">with :</segment>
+<segment id="21" parent="20" relname="elaboration">( 3 ) ( 4 )</segment>
+<segment id="22" parent="1022" relname="joint">where is the start resolution</segment>
+<segment id="23" parent="1022" relname="joint">and the scale parameter j is always greater or equal to .</segment>
+<segment id="24" parent="1005" relname="joint">In general , we choose and in order that and .</segment>
+<segment id="25" parent="1026" relname="background">2.2. Calculation of Information Entropy</segment>
+<segment id="26" parent="27" relname="circumstance">After an image is transformed by wavelet ,</segment>
+<segment id="27" parent="1026" relname="span">a series of sub-band images with different resolutions can be obtained .</segment>
+<segment id="28" parent="1029" relname="preparation">Figure 1</segment>
+<segment id="29" parent="1029" relname="span">shows the results of a Barbara image with a size of 512 × 512</segment>
+<segment id="30" parent="29" relname="elaboration">decomposed by two layers of wavelets .</segment>
+<segment id="31" parent="1031" relname="preparation">The upper leftmost part of each layer in</segment>
+<segment id="32" parent="1032" relname="preparation">Figure 1</segment>
+<segment id="33" parent="1032" relname="joint">is a low-frequency image ,</segment>
+<segment id="34" parent="1032" relname="joint">and the upper right , lower left , and upper right corners are the vertical high-frequency , horizontal high-frequency , and diagonal sub-band images , respectively .</segment>
+<segment id="35" parent="1032" relname="joint">The second layer decomposes the low-frequency image of the first layer into a low-frequency sub-band image ( upper left corner in</segment>
+<segment id="36" parent="37" relname="preparation">Figure 2</segment>
+<segment id="37" parent="1036" relname="span">) and a high-frequency sub-band image in the vertical , horizontal , and diagonal directions .</segment>
+<segment id="38" parent="1038" relname="span">Subsequently , the third layer wavelet transform repeats this process</segment>
+<segment id="39" parent="38" relname="purpose">to continue to decompose the low-frequency image of the second layer , and the like .</segment>
+<segment id="40" parent="41" relname="attribution">The above evaluation shows</segment>
+<segment id="41" parent="1040" relname="span">that the multiscale analysis of wavelet transform can efficiently describe the global and local information of the image .</segment>
+<segment id="42" parent="43" relname="concession">Generally , a low-frequency image reflects the global information of the entire image ,</segment>
+<segment id="43" parent="1042" relname="span">but a high-frequency sub-band image reflects the local details , such as edge , contour , and other image areas with mutations .</segment>
+<segment id="44" parent="1032" relname="joint">Therefore , this section calculates the corresponding information entropy of each wavelet sub-band image on the basis of the information of multiple directions .</segment>
+<segment id="45" parent="1045" relname="span">Then , each information entropy is used as the visual quality weight of the corresponding sub-band image</segment>
+<segment id="46" parent="45" relname="purpose">to describe the effects of different sub-band images on the quality of the entire image .</segment>
+<segment id="47" parent="1047" relname="span">The calculation process of information entropy is summarized as follows :</segment>
+<segment id="48" parent="1048" relname="joint">Distorted image I is imput ,</segment>
+<segment id="49" parent="1049" relname="span">and S-layer wavelet decomposition is performed for distorted image</segment>
+<segment id="50" parent="1050" relname="span">to obtain low-frequency , horizontal , vertical , and diagonal sub-band images ,</segment>
+<segment id="51" parent="50" relname="elaboration">denoted as , , , and , respectively .</segment>
+<segment id="52" parent="1053" relname="span">Then , each sub-band image is divided into image sub-blocks</segment>
+<segment id="53" parent="52" relname="elaboration">that do not overlap ,</segment>
+<segment id="54" parent="1052" relname="same_unit">and the information entropy of each sub-block is calculated .</segment>
+<segment id="55" parent="1054" relname="joint">Finally , the average information entropy of all sub-blocks is obtained</segment>
+<segment id="56" parent="1054" relname="joint">and used as the visual content weight of the cost function .</segment>
+<segment id="57" parent="1057" relname="span">The number of layers S of the wavelet decomposition is set to 1 .</segment>
+<segment id="58" parent="1059" relname="span">The information entropy of each sub-block is calculated as follows :</segment>
+<segment id="59" parent="58" relname="restatement">( 5 )</segment>
+<segment id="60" parent="1061" relname="span">where denotes the probability of wavelet coefficient</segment>
+<segment id="61" parent="60" relname="elaboration">appearing in the sub-block image ,</segment>
+<segment id="62" parent="1060" relname="joint">and .</segment>
+<segment id="63" parent="1063" relname="same_unit">represents the wavelet coefficients of the sub-block image ,</segment>
+<segment id="64" parent="1063" relname="same_unit">is the number of all wavelet coefficients of each sub-block image .</segment>
+<segment id="65" parent="1065" relname="preparation">Generally , information entropy reflects the intensity of image information to a certain extent .</segment>
+<segment id="66" parent="1067" relname="span">The larger the information entropy of an image ,</segment>
+<segment id="67" parent="66" relname="elaboration">the larger the amount of information ,</segment>
+<segment id="68" parent="1065" relname="joint">and the better the visual quality of the image .</segment>
+<segment id="69" parent="1069" relname="span">Moreover , the information entropy of the image includes rich structural information ,</segment>
+<segment id="70" parent="1070" relname="span">which can be used</segment>
+<segment id="71" parent="70" relname="purpose">to measure the sensitivity of the local image .</segment>
+<segment id="72" parent="1065" relname="joint">Therefore , people are inclined to evaluate the visual quality of images from areas with high acuity .</segment>
+<segment id="73" parent="74" relname="preparation">Figure 2</segment>
+<segment id="74" parent="1073" relname="span">presents the information entropy map of the low-frequency and three high-frequency sub-band images after the wavelet transform of Barbara image .</segment>
+<segment id="75" parent="1075" relname="preparation">Figure 2</segment>
+<segment id="76" parent="1076" relname="span">also shows the large amount of structural information and the distribution of the information entropy ,</segment>
+<segment id="77" parent="76" relname="elaboration">which is close to the image area of human visual perception .</segment>
+<segment id="78" parent="1077" relname="span">Therefore , the wavelet information entropy of the image can be used as the visual weight</segment>
+<segment id="79" parent="78" relname="purpose">to improve the subjective and objective consistencies of the image quality evaluation .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1003" relname="preparation"/>
+<group id="1003" type="span" parent="1001" relname="span"/>
+<group id="1004" type="span" parent="1005" relname="preparation"/>
+<group id="1005" type="multinuc" parent="1003" relname="span"/>
+<group id="1007" type="multinuc" parent="1005" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1011" type="span" parent="1005" relname="joint"/>
+<group id="1012" type="span" parent="1011" relname="span"/>
+<group id="1013" type="multinuc" parent="11" relname="elaboration"/>
+<group id="1014" type="span" parent="1012" relname="purpose"/>
+<group id="1015" type="multinuc" parent="14" relname="elaboration"/>
+<group id="1016" type="span" parent="1015" relname="same_unit"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="15" relname="purpose"/>
+<group id="1019" type="span" parent="16" relname="elaboration"/>
+<group id="1020" type="span" parent="1015" relname="same_unit"/>
+<group id="1021" type="span" parent="1020" relname="span"/>
+<group id="1022" type="multinuc" parent="1021" relname="elaboration"/>
+<group id="1025" type="span" parent="1005" relname="joint"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1028" type="span" parent="1005" relname="joint"/>
+<group id="1029" type="span" parent="1028" relname="span"/>
+<group id="1030" type="span" parent="1005" relname="joint"/>
+<group id="1031" type="span" parent="1030" relname="span"/>
+<group id="1032" type="multinuc" parent="1031" relname="span"/>
+<group id="1036" type="span" parent="1032" relname="joint"/>
+<group id="1038" type="span" parent="1032" relname="joint"/>
+<group id="1040" type="span" parent="1032" relname="joint"/>
+<group id="1042" type="span" parent="1032" relname="joint"/>
+<group id="1045" type="span" parent="1032" relname="joint"/>
+<group id="1047" type="span" parent="1032" relname="joint"/>
+<group id="1048" type="multinuc" parent="47" relname="elaboration"/>
+<group id="1049" type="span" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="49" relname="purpose"/>
+<group id="1051" type="multinuc" parent="1032" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="sequence"/>
+<group id="1053" type="span" parent="1052" relname="same_unit"/>
+<group id="1054" type="multinuc" parent="1051" relname="sequence"/>
+<group id="1057" type="span" parent="1054" relname="joint"/>
+<group id="1058" type="span" parent="57" relname="elaboration"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="multinuc" parent="1059" relname="elaboration"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1063" type="multinuc" parent="1054" relname="joint"/>
+<group id="1064" type="span" parent="1054" relname="joint"/>
+<group id="1065" type="multinuc" parent="1064" relname="span"/>
+<group id="1067" type="span" parent="1065" relname="joint"/>
+<group id="1069" type="span" parent="1065" relname="joint"/>
+<group id="1070" type="span" parent="69" relname="elaboration"/>
+<group id="1073" type="span" parent="1065" relname="joint"/>
+<group id="1074" type="span" parent="1065" relname="joint"/>
+<group id="1075" type="multinuc" parent="1074" relname="span"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="span" parent="1075" relname="joint"/>
+	</body>
+</rst>

@@ -1,0 +1,206 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Feature Extraction</segment>
+<segment id="2" parent="1002" relname="preparation">Feature extraction is one of the main steps</segment>
+<segment id="3" parent="1002" relname="joint">in analysing clinical data</segment>
+<segment id="4" parent="1002" relname="joint">and a primary key to success in any rule-based or machine learning phenotyping approach .</segment>
+<segment id="5" parent="1005" relname="span">Feature extraction can be defined as identifying a vector set</segment>
+<segment id="6" parent="1006" relname="span">that represents efficiently the content of information for a cohort</segment>
+<segment id="7" parent="6" relname="circumstance">while reducing the dimensionality space .</segment>
+<segment id="8" parent="1009" relname="span">Phenotyping systems extract discriminating features</segment>
+<segment id="9" parent="8" relname="purpose">to distinguish individuals with a specific condition</segment>
+<segment id="10" parent="1009" relname="elaboration">( disease ) .</segment>
+<segment id="11" parent="1002" relname="joint">Feature extraction can be simple and straightforward ,</segment>
+<segment id="12" parent="1002" relname="joint">such as when using code frequency as a feature .</segment>
+<segment id="13" parent="1013" relname="span">Additional features can be extracted</segment>
+<segment id="14" parent="13" relname="means">by applying some rules on the structured data fields , such as abnormal laboratory lipid levels or the number of visits .</segment>
+<segment id="15" parent="1015" relname="preparation">However , in case the previous techniques fail to increase the accuracy of the prediction systems ,</segment>
+<segment id="16" parent="1016" relname="span">NLP is usually applied</segment>
+<segment id="17" parent="16" relname="purpose">to extract more features from narrative text .</segment>
+<segment id="18" parent="1015" relname="joint">A summary of feature extraction methods is presented at the end of this section .</segment>
+<segment id="19" parent="1015" relname="joint">4.1.</segment>
+<segment id="20" parent="1015" relname="joint">Structured Feature Extraction</segment>
+<segment id="21" parent="1015" relname="joint">Many EHR structured fields are stored in coded format .</segment>
+<segment id="22" parent="1015" relname="joint">These fields vary across different institutions ’ datasets .</segment>
+<segment id="23" parent="1023" relname="span">‘ Diagnoses ’ , ‘ medication ’ , and ‘ procedure ’ fields are the most common types of data</segment>
+<segment id="24" parent="23" relname="elaboration">represented in code .</segment>
+<segment id="25" parent="1027" relname="purpose">To represent diagnoses ,</segment>
+<segment id="26" parent="1028" relname="span">the International Classification of Diseases Ninth Revision</segment>
+<segment id="27" parent="26" relname="restatement">( ICD-9 )</segment>
+<segment id="28" parent="1027" relname="same_unit">is usually used .</segment>
+<segment id="29" parent="1031" relname="span">In representing procedures , the Current Procedural Terminology</segment>
+<segment id="30" parent="29" relname="restatement">( CPT )</segment>
+<segment id="31" parent="1030" relname="same_unit">is mainly used</segment>
+<segment id="32" parent="1032" relname="span">while RxNorm is utilized</segment>
+<segment id="33" parent="32" relname="purpose">to code medication .</segment>
+<segment id="34" parent="1034" relname="span">Feature extraction</segment>
+<segment id="35" parent="1035" relname="joint">using coded data is available and easy to access</segment>
+<segment id="36" parent="1036" relname="span">and is usually conducted</segment>
+<segment id="37" parent="1037" relname="span">by selecting the code</segment>
+<segment id="38" parent="37" relname="elaboration">that most likely identifies a cohort with a particular disease .</segment>
+<segment id="39" parent="1039" relname="span">However ,</segment>
+<segment id="40" parent="1040" relname="joint">since coding in EHRs is usually for billing purposes ,</segment>
+<segment id="41" parent="1041" relname="span">it is not always sufficient</segment>
+<segment id="42" parent="41" relname="purpose">to support clinical research .</segment>
+<segment id="43" parent="1015" relname="joint">The accuracy of code extraction within an EHR depends on whether the code reflects the physician ’ opinion</segment>
+<segment id="44" parent="1015" relname="joint">and whether the physician was able to make a diagnosis correctly .</segment>
+<segment id="45" parent="1015" relname="joint">In both cases , often the code fields cannot be fully trusted .</segment>
+<segment id="46" parent="1047" relname="joint">Recently , extracting features from coded fields alone is rarely used ,</segment>
+<segment id="47" parent="1047" relname="joint">and some additional rules on other structured fields are needed .</segment>
+<segment id="48" parent="1048" relname="span">Additional features can be extracted</segment>
+<segment id="49" parent="1049" relname="span">by setting a logical constraint on the structured field data</segment>
+<segment id="50" parent="1050" relname="span">to derive informative features</segment>
+<segment id="51" parent="50" relname="elaboration">describing phenotype status .</segment>
+<segment id="52" parent="1052" relname="preparation">These features may take different datatypes such as real numbers , true/false or enumerated categories .</segment>
+<segment id="53" parent="1052" relname="joint">For example , the number of clinical visits , the number of prescriptions and frequency of ICD-9 code can be counted</segment>
+<segment id="54" parent="1052" relname="joint">and stored as real numbers .</segment>
+<segment id="55" parent="1055" relname="span">The existence of some values , such as medication code , prescription code and hospital admission , can be stored as Boolean values</segment>
+<segment id="56" parent="55" relname="restatement">( 0 , 1 ) .</segment>
+<segment id="57" parent="1057" relname="span">The enumerated categories data field can be divided into different subcategories such as ( low , median , and high )</segment>
+<segment id="58" parent="1060" relname="span">for laboratory results ,</segment>
+<segment id="59" parent="58" relname="evidence">( normal , and abnormal )</segment>
+<segment id="60" parent="1059" relname="same_unit">for blood pressure ,</segment>
+<segment id="61" parent="1061" relname="span">or classify patients into certain groups</segment>
+<segment id="62" parent="61" relname="elaboration">based on age .</segment>
+<segment id="63" parent="1063" relname="span">However , in some cases , using structured data alone results in poor predictability</segment>
+<segment id="64" parent="1064" relname="span">in capturing disease cases ,</segment>
+<segment id="65" parent="64" relname="result">making it necessary to look for more features in unstructured fields .</segment>
+<segment id="66" parent="1066" relname="preparation">4.2. Unstructured Feature Extraction</segment>
+<segment id="67" parent="1068" relname="concession">While structured data are available and easy to access ,</segment>
+<segment id="68" parent="1068" relname="span">there are limitations</segment>
+<segment id="69" parent="1069" relname="span">in using these data</segment>
+<segment id="70" parent="69" relname="purpose">to describe patients ’ phenotypes .</segment>
+<segment id="71" parent="1072" relname="span">Not all diagnoses and symptoms are coded</segment>
+<segment id="72" parent="71" relname="elaboration">and , therefore , they may offer a weak clue to the patient ’s status .</segment>
+<segment id="73" parent="1071" relname="joint">Unstructured , or free text EHRs , contain valuable information such as patient history and clinical opinion of this history .</segment>
+<segment id="74" parent="1074" relname="preparation">An analysis of these clinical notes could offer better information and description of the patient ’s status ;</segment>
+<segment id="75" parent="1075" relname="span">however , the manual review of these notes for large-scale projects is costly and highly time-consuming .</segment>
+<segment id="76" parent="1076" relname="span">To unlock and extract the hidden information from the narrative text efficiently and accurately ,</segment>
+<segment id="77" parent="76" relname="elaboration">NLP techniques are usually applied .</segment>
+<segment id="78" parent="1078" relname="span">NLP is a field of computer-based methods</segment>
+<segment id="79" parent="1079" relname="span">allowing computers to understand and process human</segment>
+<segment id="80" parent="79" relname="elaboration">( natural ) language .</segment>
+<segment id="81" parent="1081" relname="span">The ability</segment>
+<segment id="82" parent="1082" relname="joint">to extract critical components from these data</segment>
+<segment id="83" parent="1083" relname="span">and convert them into a structured format</segment>
+<segment id="84" parent="83" relname="elaboration">could provide great value for clinical research .</segment>
+<segment id="85" parent="1086" relname="span">Narrative text has been utilized</segment>
+<segment id="86" parent="85" relname="purpose">to supplement structured data</segment>
+<segment id="87" parent="1085" relname="same_unit">in recognizing particular phenotypes of patients .</segment>
+<segment id="88" parent="1088" relname="span">Recent developments in NLP techniques have shown an increasing promise</segment>
+<segment id="89" parent="88" relname="elaboration">in recognizing and extracting meaningful pieces of information from clinical narrative text .</segment>
+<segment id="90" parent="1091" relname="span">NLP techniques automate the processes</segment>
+<segment id="91" parent="90" relname="elaboration">required</segment>
+<segment id="92" parent="1092" relname="joint">to access the large amount of embedded information in EHRs</segment>
+<segment id="93" parent="1092" relname="joint">and consolidate the processes into a coherent structure .</segment>
+<segment id="94" parent="1094" relname="span">From an Information Extraction</segment>
+<segment id="95" parent="94" relname="elaboration">( IE ) perspective ,</segment>
+<segment id="96" parent="1097" relname="span">it is essential to pre-process the clinical text by some NLP techniques , such as tokenization , sentence detection , word sense disambiguation , part of speech tagging</segment>
+<segment id="97" parent="96" relname="restatement">( POS )</segment>
+<segment id="98" parent="1096" relname="joint">and parsing .</segment>
+<segment id="99" parent="1098" relname="joint">Higher-level NLP techniques , such as negation , temporality , and entity relations , are crucial for the precise interpretation of the extracted information .</segment>
+<segment id="100" parent="1100" relname="joint">Adoption of the previously mentioned techniques varies between reviewed systems</segment>
+<segment id="101" parent="1100" relname="joint">and some of these components can be or are omitted .</segment>
+<segment id="102" parent="1102" relname="preparation">For the task of EHR phenotyping , NLP is commonly applied in three different manners :</segment>
+<segment id="103" parent="1102" relname="span">bag of words , keywords search and concept extraction .</segment>
+<segment id="104" parent="103" relname="elaboration">Further details on these techniques are given in the following sections .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1005" type="span" parent="1002" relname="joint"/>
+<group id="1006" type="span" parent="5" relname="elaboration"/>
+<group id="1008" type="span" parent="1002" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="span"/>
+<group id="1013" type="span" parent="1002" relname="joint"/>
+<group id="1014" type="span" parent="1002" relname="joint"/>
+<group id="1015" type="multinuc" parent="1014" relname="span"/>
+<group id="1016" type="span" parent="1015" relname="joint"/>
+<group id="1023" type="span" parent="1015" relname="joint"/>
+<group id="1026" type="span" parent="1015" relname="joint"/>
+<group id="1027" type="multinuc" parent="1026" relname="span"/>
+<group id="1028" type="span" parent="1027" relname="same_unit"/>
+<group id="1029" type="span" parent="1015" relname="joint"/>
+<group id="1030" type="multinuc" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="1030" relname="same_unit"/>
+<group id="1032" type="span" parent="1030" relname="concession"/>
+<group id="1034" type="span" parent="1015" relname="joint"/>
+<group id="1035" type="multinuc" parent="34" relname="elaboration"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="36" relname="means"/>
+<group id="1039" type="span" parent="1015" relname="joint"/>
+<group id="1040" type="multinuc" parent="39" relname="cause"/>
+<group id="1041" type="span" parent="1040" relname="joint"/>
+<group id="1046" type="span" parent="1015" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="span"/>
+<group id="1048" type="span" parent="1047" relname="elaboration"/>
+<group id="1049" type="span" parent="48" relname="means"/>
+<group id="1050" type="span" parent="49" relname="purpose"/>
+<group id="1051" type="span" parent="1015" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="span"/>
+<group id="1055" type="span" parent="1052" relname="joint"/>
+<group id="1056" type="multinuc" parent="1052" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="contrast"/>
+<group id="1058" type="multinuc" parent="57" relname="purpose"/>
+<group id="1059" type="multinuc" parent="1058" relname="contrast"/>
+<group id="1060" type="span" parent="1059" relname="same_unit"/>
+<group id="1061" type="span" parent="1058" relname="contrast"/>
+<group id="1062" type="multinuc" parent="1056" relname="contrast"/>
+<group id="1063" type="span" parent="1062" relname="joint"/>
+<group id="1064" type="span" parent="63" relname="elaboration"/>
+<group id="1065" type="span" parent="1062" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="span"/>
+<group id="1069" type="span" parent="68" relname="elaboration"/>
+<group id="1070" type="multinuc" parent="1067" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1070" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="span" parent="1070" relname="joint"/>
+<group id="1074" type="span" parent="1073" relname="span"/>
+<group id="1075" type="span" parent="1077" relname="preparation"/>
+<group id="1076" type="span" parent="75" relname="purpose"/>
+<group id="1077" type="multinuc" parent="1074" relname="span"/>
+<group id="1078" type="span" parent="1077" relname="joint"/>
+<group id="1079" type="span" parent="78" relname="elaboration"/>
+<group id="1080" type="multinuc" parent="1077" relname="joint"/>
+<group id="1081" type="span" parent="1080" relname="joint"/>
+<group id="1082" type="multinuc" parent="81" relname="purpose"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="multinuc" parent="1080" relname="joint"/>
+<group id="1085" type="multinuc" parent="1084" relname="joint"/>
+<group id="1086" type="span" parent="1085" relname="same_unit"/>
+<group id="1087" type="multinuc" parent="1084" relname="joint"/>
+<group id="1088" type="span" parent="1087" relname="joint"/>
+<group id="1089" type="multinuc" parent="1087" relname="joint"/>
+<group id="1090" type="span" parent="1089" relname="joint"/>
+<group id="1091" type="span" parent="1090" relname="span"/>
+<group id="1092" type="multinuc" parent="1091" relname="purpose"/>
+<group id="1093" type="multinuc" parent="1089" relname="joint"/>
+<group id="1094" type="span" parent="1093" relname="joint"/>
+<group id="1095" type="multinuc" parent="1093" relname="joint"/>
+<group id="1096" type="multinuc" parent="1095" relname="joint"/>
+<group id="1097" type="span" parent="1096" relname="joint"/>
+<group id="1098" type="multinuc" parent="1095" relname="joint"/>
+<group id="1099" type="span" parent="1098" relname="joint"/>
+<group id="1100" type="multinuc" parent="1099" relname="span"/>
+<group id="1101" type="span" parent="1100" relname="elaboration"/>
+<group id="1102" type="span" parent="1101" relname="span"/>
+	</body>
+</rst>

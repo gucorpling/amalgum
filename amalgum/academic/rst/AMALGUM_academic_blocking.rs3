@@ -1,0 +1,203 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="justify" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. System Model</segment>
+<segment id="2" parent="1002" relname="preparation">2.1.</segment>
+<segment id="3" parent="1003" relname="preparation">Network Topology</segment>
+<segment id="4" parent="1004" relname="span">Consider a mmWave cellular network</segment>
+<segment id="5" parent="1005" relname="span">consisting of base stations , blockages , and a source transmitter ,</segment>
+<segment id="6" parent="5" relname="elaboration">which is a UE .</segment>
+<segment id="7" parent="1007" relname="joint">The UE attempts to connect to the N closest base stations ,</segment>
+<segment id="8" parent="1007" relname="joint">and therefore operates in a th order macrodiversity mode .</segment>
+<segment id="9" parent="1009" relname="span">The locations of the base stations are modeled as an infinite homogeneous PPP with density .</segment>
+<segment id="10" parent="1011" relname="attribution">We assume</segment>
+<segment id="11" parent="1011" relname="span">the centers of the blockages also form a homogeneous PPP with density ,</segment>
+<segment id="12" parent="11" relname="elaboration">independent from the base station process .</segment>
+<segment id="13" parent="1013" relname="preparation">Let indicate the source transmitter and its location .</segment>
+<segment id="14" parent="1015" relname="attribution">Due to the stationarity of the PPPs , and without loss of generality ,</segment>
+<segment id="15" parent="1016" relname="attribution">we can assume</segment>
+<segment id="16" parent="1016" relname="span">the coordinates are chosen</segment>
+<segment id="17" parent="16" relname="elaboration">such that the source transmitter is located at the origin ; i.e. , .</segment>
+<segment id="18" parent="1018" relname="span">In Section 6 , we will consider additional transmitters</segment>
+<segment id="19" parent="1019" relname="span">located in neighboring cells ,</segment>
+<segment id="20" parent="19" relname="elaboration">which act as interferers .</segment>
+<segment id="21" parent="1020" relname="joint">Let for i denote the base stations and their locations .</segment>
+<segment id="22" parent="1022" relname="preparation">Let be the distance from to .</segment>
+<segment id="23" parent="1022" relname="joint">Base stations are ordered according to their distances to such that .</segment>
+<segment id="24" parent="1024" relname="joint">The signal of the source transmitter is received at the closest N base stations ,</segment>
+<segment id="25" parent="1024" relname="joint">and hence , N is the number of connected to .</segment>
+<segment id="26" parent="1026" relname="span">For a PPP , a derivation of the distribution of is given in Appendix B ,</segment>
+<segment id="27" parent="1027" relname="span">which implies a methodology</segment>
+<segment id="28" parent="27" relname="purpose">for generating these distances within a simulation .</segment>
+<segment id="29" parent="1030" relname="preparation">Figure 1</segment>
+<segment id="30" parent="1030" relname="span">shows an example of second-order macrodiversity</segment>
+<segment id="31" parent="1031" relname="joint">( )</segment>
+<segment id="32" parent="1032" relname="span">cellular network</segment>
+<segment id="33" parent="32" relname="elaboration">where the user attempts to connect to its closest two base stations .</segment>
+<segment id="34" parent="1034" relname="contrast">The solid line indicates the link from the user to the base station is LOS ,</segment>
+<segment id="35" parent="1034" relname="contrast">while the dashed line indicates the link is NLOS .</segment>
+<segment id="36" parent="1035" relname="joint">The figure shows examples of two different blockage scenarios .</segment>
+<segment id="37" parent="1037" relname="preparation">In</segment>
+<segment id="38" parent="1038" relname="preparation">Figure 1</segment>
+<segment id="39" parent="1041" relname="span">a the closest base station</segment>
+<segment id="40" parent="39" relname="elaboration">( )</segment>
+<segment id="41" parent="1040" relname="same_unit">is LOS</segment>
+<segment id="42" parent="1042" relname="span">while is NLOS to the user ,</segment>
+<segment id="43" parent="42" relname="elaboration">in which case the blockage only blocks a single link .</segment>
+<segment id="44" parent="1044" relname="preparation">In</segment>
+<segment id="45" parent="46" relname="preparation">Figure 1</segment>
+<segment id="46" parent="1045" relname="span">b a single blockage blocks both links to and .</segment>
+<segment id="47" parent="1048" relname="span">The fact</segment>
+<segment id="48" parent="47" relname="elaboration">that sometimes a single blockage can block both links</segment>
+<segment id="49" parent="1047" relname="same_unit">is an illustration of the effect of correlated blocking .</segment>
+<segment id="50" parent="1049" relname="joint">2.2.</segment>
+<segment id="51" parent="1051" relname="preparation">Blockage Model</segment>
+<segment id="52" parent="1052" relname="span">As in , each blockage is a segment of length W .</segment>
+<segment id="53" parent="1053" relname="span">To capture the worst-case scenario ,</segment>
+<segment id="54" parent="53" relname="attribution">as shown in</segment>
+<segment id="55" parent="1056" relname="preparation">Figure 2</segment>
+<segment id="56" parent="1056" relname="span">a ,</segment>
+<segment id="57" parent="1058" relname="attribution">it is assumed</segment>
+<segment id="58" parent="1058" relname="span">that the line</segment>
+<segment id="59" parent="1059" relname="span">representing the blockage is perpendicular to the line</segment>
+<segment id="60" parent="59" relname="elaboration">that connects it to the transmitter .</segment>
+<segment id="61" parent="1064" relname="concession">Although W can itself be random as in ,</segment>
+<segment id="62" parent="63" relname="attribution">we assume here</segment>
+<segment id="63" parent="1064" relname="span">that all blockages have the same value of W .</segment>
+<segment id="64" parent="1063" relname="elaboration">In</segment>
+<segment id="65" parent="1066" relname="preparation">Figure 2</segment>
+<segment id="66" parent="1067" relname="span">a , the red stars indicate the blocked base stations ,</segment>
+<segment id="67" parent="66" relname="elaboration">which are located in the blue shaded region .</segment>
+<segment id="68" parent="1069" relname="condition">If a blockage cuts the path from to ,</segment>
+<segment id="69" parent="1069" relname="contrast">then the signal from is NLOS ,</segment>
+<segment id="70" parent="1069" relname="contrast">while otherwise it is LOS .</segment>
+<segment id="71" parent="1072" relname="attribution">Here , we assume</segment>
+<segment id="72" parent="1072" relname="span">that NLOS signals are completely blocked</segment>
+<segment id="73" parent="1073" relname="joint">while LOS signals experience exponential path-loss with a path-loss exponent ;</segment>
+<segment id="74" parent="1074" relname="span">i.e. , the power</segment>
+<segment id="75" parent="74" relname="elaboration">received by is proportional to .</segment>
+<segment id="76" parent="1076" relname="span">Each base station has a blockage region associated with it ,</segment>
+<segment id="77" parent="1077" relname="span">illustrated by the blue shaded rectangles</segment>
+<segment id="78" parent="77" relname="elaboration">shown in</segment>
+<segment id="79" parent="1079" relname="preparation">Figure 2</segment>
+<segment id="80" parent="1080" relname="span">b. We use to denote the blockage region</segment>
+<segment id="81" parent="80" relname="elaboration">associated with and its area ;</segment>
+<segment id="82" parent="1081" relname="joint">i.e. , is both a region and an area .</segment>
+<segment id="83" parent="1084" relname="condition">If the center of a blockage falls within ,</segment>
+<segment id="84" parent="1084" relname="span">then will be blocked</segment>
+<segment id="85" parent="84" relname="justify">since at least some part of the blockage will intersect the path between and .</segment>
+<segment id="86" parent="87" relname="condition">Because is a rectangle of length and width W ,</segment>
+<segment id="87" parent="1086" relname="span">it is clear that .</segment>
+<segment id="88" parent="1087" relname="joint">Unless and are exactly on opposite sides of the region ,</segment>
+<segment id="89" parent="1088" relname="joint">there will be an overlapping region v common to both and .</segment>
+<segment id="90" parent="1089" relname="joint">Because of the overlap ,</segment>
+<segment id="91" parent="1090" relname="same_unit">it is possible for a single blockage to simultaneously block both and</segment>
+<segment id="92" parent="93" relname="condition">if the blockage falls within region v ,</segment>
+<segment id="93" parent="1091" relname="span">which corresponds to correlated blocking .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="1003" relname="joint"/>
+<group id="1005" type="span" parent="4" relname="elaboration"/>
+<group id="1006" type="span" parent="1003" relname="joint"/>
+<group id="1007" type="multinuc" parent="1006" relname="span"/>
+<group id="1008" type="multinuc" parent="1007" relname="elaboration"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="span" parent="9" relname="elaboration"/>
+<group id="1011" type="span" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1008" relname="joint"/>
+<group id="1013" type="multinuc" parent="1012" relname="span"/>
+<group id="1014" type="span" parent="1013" relname="joint"/>
+<group id="1015" type="span" parent="1014" relname="span"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1017" type="multinuc" parent="1013" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="joint"/>
+<group id="1019" type="span" parent="18" relname="elaboration"/>
+<group id="1020" type="multinuc" parent="1017" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="multinuc" parent="1021" relname="span"/>
+<group id="1023" type="span" parent="1022" relname="joint"/>
+<group id="1024" type="multinuc" parent="1025" relname="preparation"/>
+<group id="1025" type="multinuc" parent="1023" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="joint"/>
+<group id="1027" type="span" parent="26" relname="elaboration"/>
+<group id="1028" type="multinuc" parent="1025" relname="joint"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="multinuc" parent="30" relname="elaboration"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="multinuc" parent="1028" relname="joint"/>
+<group id="1034" type="multinuc" parent="1033" relname="joint"/>
+<group id="1035" type="multinuc" parent="1033" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="1036" relname="span"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1039" type="multinuc" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="1039" relname="same_unit"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="span" parent="1039" relname="same_unit"/>
+<group id="1043" type="span" parent="1038" relname="joint"/>
+<group id="1044" type="multinuc" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1046" type="multinuc" parent="1044" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="same_unit"/>
+<group id="1049" type="multinuc" parent="1046" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="1050" relname="span"/>
+<group id="1052" type="span" parent="1054" relname="preparation"/>
+<group id="1053" type="span" parent="52" relname="purpose"/>
+<group id="1054" type="multinuc" parent="1051" relname="span"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="1055" relname="span"/>
+<group id="1057" type="span" parent="56" relname="elaboration"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="span" parent="58" relname="elaboration"/>
+<group id="1060" type="multinuc" parent="1054" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="span"/>
+<group id="1063" type="span" parent="1062" relname="span"/>
+<group id="1064" type="span" parent="1063" relname="span"/>
+<group id="1065" type="span" parent="1062" relname="elaboration"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="elaboration"/>
+<group id="1069" type="multinuc" parent="1068" relname="span"/>
+<group id="1070" type="multinuc" parent="1060" relname="joint"/>
+<group id="1071" type="span" parent="1070" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="span"/>
+<group id="1073" type="multinuc" parent="72" relname="concession"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="span" parent="1070" relname="joint"/>
+<group id="1076" type="span" parent="1078" relname="preparation"/>
+<group id="1077" type="span" parent="76" relname="elaboration"/>
+<group id="1078" type="span" parent="1075" relname="span"/>
+<group id="1079" type="span" parent="1078" relname="span"/>
+<group id="1080" type="span" parent="1081" relname="preparation"/>
+<group id="1081" type="multinuc" parent="1079" relname="span"/>
+<group id="1082" type="multinuc" parent="1081" relname="joint"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1085" type="multinuc" parent="1082" relname="joint"/>
+<group id="1086" type="span" parent="1085" relname="joint"/>
+<group id="1087" type="multinuc" parent="1085" relname="joint"/>
+<group id="1088" type="multinuc" parent="1087" relname="joint"/>
+<group id="1089" type="multinuc" parent="1088" relname="joint"/>
+<group id="1090" type="multinuc" parent="1089" relname="joint"/>
+<group id="1091" type="span" parent="1090" relname="same_unit"/>
+	</body>
+</rst>

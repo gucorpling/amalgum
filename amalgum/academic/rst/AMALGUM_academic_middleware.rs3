@@ -1,0 +1,129 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. Cloud-based Middleware Platform for Self-Adaptive IoT Collaboration Services</segment>
+<segment id="2" parent="3" relname="preparation">Figure 1</segment>
+<segment id="3" parent="1002" relname="span">shows the overview of a conceptual architecture of the proposed cloud-based middleware framework for the self-adaptive IoT based collaboration among multiple systems .</segment>
+<segment id="4" parent="1005" relname="span">Non-adaptive systems</segment>
+<segment id="5" parent="1006" relname="span">which run on PCs , tablets , or mobile phones and self-adaptive systems such as a robot or unmanned aerial vehicle</segment>
+<segment id="6" parent="5" relname="restatement">( UAV )</segment>
+<segment id="7" parent="1007" relname="span">can collaborate</segment>
+<segment id="8" parent="7" relname="purpose">to achieve a common service goal .</segment>
+<segment id="9" parent="1008" relname="joint">Besides , passive sensors or actuator devices with no separate control unit can also participate in the collaboration as well .</segment>
+<segment id="10" parent="1010" relname="contrast">The passive actuator may be embedded in and controlled by a single system ,</segment>
+<segment id="11" parent="1010" relname="contrast">or directly receives the commands of the IoT collaboration controller .</segment>
+<segment id="12" parent="1012" relname="preparation">This communication between various systems and devices is carried out through the Publish-Subscribe Communication Layer .</segment>
+<segment id="13" parent="1014" relname="circumstance">As is named ,</segment>
+<segment id="14" parent="1014" relname="span">this layer provides a high-performance scalable communication among a large number of IoT devices</segment>
+<segment id="15" parent="14" relname="elaboration">based on the publish-subscribe communication model .</segment>
+<segment id="16" parent="1016" relname="span">This layer delivers newly published data to consumers</segment>
+<segment id="17" parent="16" relname="elaboration">who subscribe from multiple but different subsets of sensing data simultaneously .</segment>
+<segment id="18" parent="1020" relname="span">Each MAPE cycle</segment>
+<segment id="19" parent="18" relname="elaboration">for controlling the collaboration of multiple systems and devices</segment>
+<segment id="20" parent="1019" relname="same_unit">is created into one VM in the cloud area .</segment>
+<segment id="21" parent="1021" relname="span">To construct a generic conceptual architecture ,</segment>
+<segment id="22" parent="1022" relname="span">we have designed to separate IoT service domain-dependent components from the core MAPE loop components ,</segment>
+<segment id="23" parent="22" relname="elaboration">which are domain-independent parts .</segment>
+<segment id="24" parent="1023" relname="joint">Each VM is divided into two layers .</segment>
+<segment id="25" parent="1025" relname="span">One is the MAPE Core Bundle Layer ,</segment>
+<segment id="26" parent="25" relname="elaboration">which implements the connectors between the four MAAPE components , the Publish-Subscribe Communication Layer , and the ParticipantRegistry .</segment>
+<segment id="27" parent="1027" relname="span">The other layer is the IoT Service Bundle Layer ,</segment>
+<segment id="28" parent="1028" relname="span">which consists of concrete MAPE components</segment>
+<segment id="29" parent="1029" relname="span">required</segment>
+<segment id="30" parent="29" relname="purpose">to control a specific IoT collaboration service .</segment>
+<segment id="31" parent="1031" relname="joint">The former layer is provided equally to developers , literally , as a middleware framework ,</segment>
+<segment id="32" parent="1033" relname="span">and the latter layer includes the components</segment>
+<segment id="33" parent="32" relname="elaboration">developed by IoT service developers</segment>
+<segment id="34" parent="1033" relname="attribution">according to the domain requirements .</segment>
+<segment id="35" parent="1035" relname="span">The components</segment>
+<segment id="36" parent="35" relname="elaboration">belonging to both layers are in the form of OSGi bundles .</segment>
+<segment id="37" parent="1038" relname="span">The IoT Service Launcher by itself works as one of the VMs</segment>
+<segment id="38" parent="1039" relname="span">created in the cloud area like other VMs</segment>
+<segment id="39" parent="38" relname="purpose">for implementing IoT collaboration services .</segment>
+<segment id="40" parent="1040" relname="span">To help developers easily manage the IoT Service Bundles ,</segment>
+<segment id="41" parent="40" relname="elaboration">we provide each operation of the IoT Service Launcher in the form of a cloud service .</segment>
+<segment id="42" parent="1042" relname="span">The developers can easily perform a series of tasks</segment>
+<segment id="43" parent="1043" relname="span">until the actual IoT service is launched ,</segment>
+<segment id="44" parent="43" relname="elaboration">including the creation/deletion/start/stop of each IoT collaboration service VM .</segment>
+<segment id="45" parent="1045" relname="span">The addition/removal of a specific service bundle can be done</segment>
+<segment id="46" parent="1046" relname="span">by using the cloud service</segment>
+<segment id="47" parent="46" relname="elaboration">provided by the IoT Service Launcher as well .</segment>
+<segment id="48" parent="1048" relname="span">The IoT Service Participant Manager provides an auto-registration mechanism of participant systems or devices</segment>
+<segment id="49" parent="48" relname="elaboration">collaborating in IoT collaboration .</segment>
+<segment id="50" parent="1051" relname="span">Whenever the devices or systems</segment>
+<segment id="51" parent="50" relname="elaboration">which can participate in an IoT collaboration</segment>
+<segment id="52" parent="1050" relname="same_unit">are power-on ,</segment>
+<segment id="53" parent="1052" relname="span">information of the participant is automatically registered to the Participant Registry .</segment>
+<segment id="54" parent="1053" relname="joint">The address of the IoT Service Participant Manager should be saved in the devices and systems before .</segment>
+<segment id="55" parent="1054" relname="span">The Adaptation Executor can look up a specific object among the registered systems and devices in the Participant Registry</segment>
+<segment id="56" parent="55" relname="purpose">as needed .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="elaboration"/>
+<group id="1004" type="multinuc" parent="1003" relname="joint"/>
+<group id="1005" type="span" parent="1004" relname="same_unit"/>
+<group id="1006" type="span" parent="4" relname="elaboration"/>
+<group id="1007" type="span" parent="1004" relname="same_unit"/>
+<group id="1008" type="multinuc" parent="1003" relname="joint"/>
+<group id="1009" type="multinuc" parent="1008" relname="joint"/>
+<group id="1010" type="multinuc" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1009" relname="joint"/>
+<group id="1012" type="span" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="1015" relname="preparation"/>
+<group id="1014" type="span" parent="1013" relname="span"/>
+<group id="1015" type="multinuc" parent="1012" relname="span"/>
+<group id="1016" type="span" parent="1015" relname="joint"/>
+<group id="1017" type="multinuc" parent="1015" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="joint"/>
+<group id="1019" type="multinuc" parent="1018" relname="span"/>
+<group id="1020" type="span" parent="1019" relname="same_unit"/>
+<group id="1021" type="span" parent="1019" relname="purpose"/>
+<group id="1022" type="span" parent="21" relname="elaboration"/>
+<group id="1023" type="multinuc" parent="1017" relname="joint"/>
+<group id="1024" type="multinuc" parent="1023" relname="joint"/>
+<group id="1025" type="span" parent="1024" relname="joint"/>
+<group id="1026" type="multinuc" parent="1024" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="joint"/>
+<group id="1028" type="span" parent="27" relname="elaboration"/>
+<group id="1029" type="span" parent="28" relname="elaboration"/>
+<group id="1030" type="span" parent="1026" relname="joint"/>
+<group id="1031" type="multinuc" parent="1030" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1034" type="multinuc" parent="1031" relname="elaboration"/>
+<group id="1035" type="span" parent="1034" relname="joint"/>
+<group id="1036" type="multinuc" parent="1034" relname="joint"/>
+<group id="1037" type="span" parent="1036" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="37" relname="elaboration"/>
+<group id="1040" type="span" parent="1038" relname="purpose"/>
+<group id="1041" type="span" parent="1036" relname="joint"/>
+<group id="1042" type="span" parent="1044" relname="preparation"/>
+<group id="1043" type="span" parent="42" relname="circumstance"/>
+<group id="1044" type="multinuc" parent="1041" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1046" type="span" parent="45" relname="means"/>
+<group id="1047" type="multinuc" parent="1044" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1047" relname="joint"/>
+<group id="1050" type="multinuc" parent="1052" relname="circumstance"/>
+<group id="1051" type="span" parent="1050" relname="same_unit"/>
+<group id="1052" type="span" parent="1049" relname="span"/>
+<group id="1053" type="multinuc" parent="53" relname="elaboration"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+	</body>
+</rst>

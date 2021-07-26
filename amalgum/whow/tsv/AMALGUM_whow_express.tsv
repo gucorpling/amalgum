@@ -1,0 +1,894 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Make an Elevator
+1-1	0-4	Make	_	_	_	_
+1-2	5-7	an	object[1]	new[1]	coref	2-1[2_1]
+1-3	8-16	Elevator	object[1]	new[1]	_	_
+
+#Text=an Express Elevator
+2-1	17-19	an	object[2]	giv[2]	_	_
+2-2	20-27	Express	object[2]	giv[2]	_	_
+2-3	28-36	Elevator	object[2]	giv[2]	_	_
+
+#Text=Say you 're on the first floor and your meeting is on the tenth .
+3-1	37-40	Say	_	_	_	_
+3-2	41-44	you	person	acc	ana	3-9
+3-3	45-48	're	_	_	_	_
+3-4	49-51	on	_	_	_	_
+3-5	52-55	the	place[4]	new[4]	coref	5-10[0_4]
+3-6	56-61	first	place[4]	new[4]	_	_
+3-7	62-67	floor	place[4]	new[4]	_	_
+3-8	68-71	and	_	_	_	_
+3-9	72-76	your	person|event[6]	giv|new[6]	ana|ana	4-1|4-12[0_6]
+3-10	77-84	meeting	event[6]	new[6]	_	_
+3-11	85-87	is	_	_	_	_
+3-12	88-90	on	_	_	_	_
+3-13	91-94	the	_	_	_	_
+3-14	95-100	tenth	_	_	_	_
+3-15	101-102	.	_	_	_	_
+
+#Text=You get in the elevator , but you do n't want it to stop because you 'll be late .
+4-1	103-106	You	person	giv	ana	4-8
+4-2	107-110	get	_	_	_	_
+4-3	111-113	in	_	_	_	_
+4-4	114-117	the	object[8]	new[8]	coref	12-5[33_8]
+4-5	118-126	elevator	object[8]	new[8]	_	_
+4-6	127-128	,	_	_	_	_
+4-7	129-132	but	_	_	_	_
+4-8	133-136	you	person	giv	ana	4-16
+4-9	137-139	do	_	_	_	_
+4-10	140-143	n't	_	_	_	_
+4-11	144-148	want	_	_	_	_
+4-12	149-151	it	event	giv	_	_
+4-13	152-154	to	_	_	_	_
+4-14	155-159	stop	_	_	_	_
+4-15	160-167	because	_	_	_	_
+4-16	168-171	you	person	giv	ana	5-8
+4-17	172-175	'll	_	_	_	_
+4-18	176-178	be	_	_	_	_
+4-19	179-183	late	_	_	_	_
+4-20	184-185	.	_	_	_	_
+
+#Text=Here are some hacks to help get you to floor faster .
+5-1	186-190	Here	_	_	_	_
+5-2	191-194	are	_	_	_	_
+5-3	195-199	some	abstract[12]	new[12]	_	_
+5-4	200-205	hacks	abstract[12]	new[12]	_	_
+5-5	206-208	to	abstract[12]	new[12]	_	_
+5-6	209-213	help	abstract[12]	new[12]	_	_
+5-7	214-217	get	abstract[12]	new[12]	_	_
+5-8	218-221	you	abstract[12]|person	new[12]|giv	ana	8-4
+5-9	222-224	to	abstract[12]	new[12]	_	_
+5-10	225-230	floor	abstract[12]|place	new[12]|giv	coref	8-4[20_0]
+5-11	231-237	faster	abstract[12]	new[12]	_	_
+5-12	238-239	.	_	_	_	_
+
+#Text=Steps
+6-1	240-245	Steps	abstract	new	_	_
+
+#Text=Using Button Codes and Other Methods
+7-1	246-251	Using	_	_	_	_
+7-2	252-258	Button	person|abstract[17]	new|new[17]	_	_
+7-3	259-264	Codes	abstract[17]	new[17]	_	_
+7-4	265-268	and	_	_	_	_
+7-5	269-274	Other	abstract[18]	new[18]	_	_
+7-6	275-282	Methods	abstract[18]	new[18]	_	_
+
+#Text=Press and hold your floor .
+8-1	283-288	Press	_	_	_	_
+8-2	289-292	and	_	_	_	_
+8-3	293-297	hold	_	_	_	_
+8-4	298-302	your	person|place[20]	giv|giv[20]	ana|coref	9-7|9-7[23_20]
+8-5	303-308	floor	place[20]	giv[20]	_	_
+8-6	309-310	.	_	_	_	_
+
+#Text=In some elevators , simply pressing your floor and holding it will do the trick .
+9-1	311-313	In	_	_	_	_
+9-2	314-318	some	place[21]	new[21]	coref	15-2[43_21]
+9-3	319-328	elevators	place[21]	new[21]	_	_
+9-4	329-330	,	_	_	_	_
+9-5	331-337	simply	_	_	_	_
+9-6	338-346	pressing	_	_	_	_
+9-7	347-351	your	person|place[23]	giv|giv[23]	ana|ana	9-11[0_23]|10-1
+9-8	352-357	floor	place[23]	giv[23]	_	_
+9-9	358-361	and	_	_	_	_
+9-10	362-369	holding	_	_	_	_
+9-11	370-372	it	place	giv	coref	10-11[29_0]
+9-12	373-377	will	_	_	_	_
+9-13	378-380	do	_	_	_	_
+9-14	381-384	the	event[25]	new[25]	coref	17-19[56_25]
+9-15	385-390	trick	event[25]	new[25]	_	_
+9-16	391-392	.	_	_	_	_
+
+#Text=You have to hold the button all the way to your floor .
+10-1	393-396	You	person	giv	ana	10-11
+10-2	397-401	have	_	_	_	_
+10-3	402-404	to	_	_	_	_
+10-4	405-409	hold	_	_	_	_
+10-5	410-413	the	object[27]	new[27]	coref	11-2[31_27]
+10-6	414-420	button	object[27]	new[27]	_	_
+10-7	421-424	all	_	_	_	_
+10-8	425-428	the	_	_	_	_
+10-9	429-432	way	_	_	_	_
+10-10	433-435	to	_	_	_	_
+10-11	436-440	your	person|place[29]	giv|giv[29]	ana|coref	12-2|14-12[42_29]
+10-12	441-446	floor	place[29]	giv[29]	_	_
+10-13	447-448	.	_	_	_	_
+
+#Text=Use the " Close Door " button .
+11-1	449-452	Use	_	_	_	_
+11-2	453-456	the	object[31]	giv[31]	coref	12-9[35_31]
+11-3	457-458	"	object[31]	giv[31]	_	_
+11-4	459-464	Close	object[31]	giv[31]	_	_
+11-5	465-469	Door	object|object[31]	new|giv[31]	coref	12-12
+11-6	470-471	"	object[31]	giv[31]	_	_
+11-7	472-478	button	object[31]	giv[31]	_	_
+11-8	479-480	.	_	_	_	_
+
+#Text=When you get on the elevator , press the " Close Door " button .
+12-1	481-485	When	_	_	_	_
+12-2	486-489	you	person	giv	ana	14-10
+12-3	490-493	get	_	_	_	_
+12-4	494-496	on	_	_	_	_
+12-5	497-500	the	object[33]	giv[33]	coref	27-10[0_33]
+12-6	501-509	elevator	object[33]	giv[33]	_	_
+12-7	510-511	,	_	_	_	_
+12-8	512-517	press	_	_	_	_
+12-9	518-521	the	object[35]	giv[35]	coref	13-3[36_35]
+12-10	522-523	"	object[35]	giv[35]	_	_
+12-11	524-529	Close	object[35]	giv[35]	_	_
+12-12	530-534	Door	object|object[35]	giv|giv[35]	coref	14-5[38_0]
+12-13	535-536	"	object[35]	giv[35]	_	_
+12-14	537-543	button	object[35]	giv[35]	_	_
+12-15	544-545	.	_	_	_	_
+
+#Text=Often , this button will be two triangles pointing in towards each other .
+13-1	546-551	Often	_	_	_	_
+13-2	552-553	,	_	_	_	_
+13-3	554-558	this	object[36]	giv[36]	coref	13-7[37_36]
+13-4	559-565	button	object[36]	giv[36]	_	_
+13-5	566-570	will	_	_	_	_
+13-6	571-573	be	_	_	_	_
+13-7	574-577	two	object[37]	giv[37]	coref	14-3[39_37]
+13-8	578-587	triangles	object[37]	giv[37]	_	_
+13-9	588-596	pointing	object[37]	giv[37]	_	_
+13-10	597-599	in	object[37]	giv[37]	_	_
+13-11	600-607	towards	object[37]	giv[37]	_	_
+13-12	608-612	each	object[37]	giv[37]	_	_
+13-13	613-618	other	object[37]	giv[37]	_	_
+13-14	619-620	.	_	_	_	_
+
+#Text=Continue holding the " Close Door " button as you push your floor .
+14-1	621-629	Continue	_	_	_	_
+14-2	630-637	holding	_	_	_	_
+14-3	638-641	the	object[39]	giv[39]	coref	17-4[53_39]
+14-4	642-643	"	object[39]	giv[39]	_	_
+14-5	644-649	Close	object[38]|object[39]	giv[38]|giv[39]	coref	17-7[0_38]
+14-6	650-654	Door	object[38]|object[39]	giv[38]|giv[39]	_	_
+14-7	655-656	"	object[39]	giv[39]	_	_
+14-8	657-663	button	object[39]	giv[39]	_	_
+14-9	664-666	as	_	_	_	_
+14-10	667-670	you	person	giv	ana	14-12
+14-11	671-675	push	_	_	_	_
+14-12	676-680	your	person|place[42]	giv|giv[42]	ana|coref	15-9|21-7[0_42]
+14-13	681-686	floor	place[42]	giv[42]	_	_
+14-14	687-688	.	_	_	_	_
+
+#Text=In some elevators , this combination will give you an express ride .
+15-1	689-691	In	_	_	_	_
+15-2	692-696	some	place[43]	giv[43]	coref	16-6[51_43]
+15-3	697-706	elevators	place[43]	giv[43]	_	_
+15-4	707-708	,	_	_	_	_
+15-5	709-713	this	abstract[44]	new[44]	coref	16-1[47_44]
+15-6	714-725	combination	abstract[44]	new[44]	_	_
+15-7	726-730	will	_	_	_	_
+15-8	731-735	give	_	_	_	_
+15-9	736-739	you	person	giv	ana	19-5
+15-10	740-742	an	event[46]	new[46]	coref	34-7[121_46]
+15-11	743-750	express	event[46]	new[46]	_	_
+15-12	751-755	ride	event[46]	new[46]	_	_
+15-13	756-757	.	_	_	_	_
+
+#Text=This combination often works on Otis , Desert , and Dover elevators .
+16-1	758-762	This	abstract[47]	giv[47]	_	_
+16-2	763-774	combination	abstract[47]	giv[47]	_	_
+16-3	775-780	often	_	_	_	_
+16-4	781-786	works	_	_	_	_
+16-5	787-789	on	_	_	_	_
+16-6	790-794	Otis	person|place[51]	new|giv[51]	coref	19-2[58_51]
+16-7	795-796	,	place[51]	giv[51]	_	_
+16-8	797-803	Desert	place|place[51]	new|giv[51]	_	_
+16-9	804-805	,	place[51]	giv[51]	_	_
+16-10	806-809	and	place[51]	giv[51]	_	_
+16-11	810-815	Dover	place|place[51]	new|giv[51]	_	_
+16-12	816-825	elevators	place[51]	giv[51]	_	_
+16-13	826-827	.	_	_	_	_
+
+#Text=Note that sometimes the " Close Door " button is just a placebo for impatient riders , so this trick may not work .
+17-1	828-832	Note	_	_	_	_
+17-2	833-837	that	_	_	_	_
+17-3	838-847	sometimes	_	_	_	_
+17-4	848-851	the	object[53]	giv[53]	coref	17-11[54_53]
+17-5	852-853	"	object[53]	giv[53]	_	_
+17-6	854-859	Close	object[53]	giv[53]	_	_
+17-7	860-864	Door	object|object[53]	giv|giv[53]	coref	24-8[76_0]
+17-8	865-866	"	object[53]	giv[53]	_	_
+17-9	867-873	button	object[53]	giv[53]	_	_
+17-10	874-876	is	_	_	_	_
+17-11	877-881	just	object[54]	giv[54]	coref	21-6[67_54]
+17-12	882-883	a	object[54]	giv[54]	_	_
+17-13	884-891	placebo	object[54]	giv[54]	_	_
+17-14	892-895	for	object[54]	giv[54]	_	_
+17-15	896-905	impatient	object[54]|person[55]	giv[54]|new[55]	_	_
+17-16	906-912	riders	object[54]|person[55]	giv[54]|new[55]	_	_
+17-17	913-914	,	_	_	_	_
+17-18	915-917	so	_	_	_	_
+17-19	918-922	this	event[56]	giv[56]	_	_
+17-20	923-928	trick	event[56]	giv[56]	_	_
+17-21	929-932	may	_	_	_	_
+17-22	933-936	not	_	_	_	_
+17-23	937-941	work	_	_	_	_
+17-24	942-943	.	_	_	_	_
+
+#Text=Cancel other highlighted floors .
+18-1	944-950	Cancel	_	_	_	_
+18-2	951-956	other	object[57]	new[57]	coref	19-8[60_57]
+18-3	957-968	highlighted	object[57]	new[57]	_	_
+18-4	969-975	floors	object[57]	new[57]	_	_
+18-5	976-977	.	_	_	_	_
+
+#Text=In some elevators , you can cancel floors that have already been pressed .
+19-1	978-980	In	_	_	_	_
+19-2	981-985	some	place[58]	giv[58]	coref	37-8[137_58]
+19-3	986-995	elevators	place[58]	giv[58]	_	_
+19-4	996-997	,	_	_	_	_
+19-5	998-1001	you	person	giv	ana	20-7
+19-6	1002-1005	can	_	_	_	_
+19-7	1006-1012	cancel	_	_	_	_
+19-8	1013-1019	floors	object[60]	giv[60]	coref	28-16[0_60]
+19-9	1020-1024	that	object[60]	giv[60]	_	_
+19-10	1025-1029	have	object[60]	giv[60]	_	_
+19-11	1030-1037	already	object[60]	giv[60]	_	_
+19-12	1038-1042	been	object[60]	giv[60]	_	_
+19-13	1043-1050	pressed	object[60]	giv[60]	_	_
+19-14	1051-1052	.	_	_	_	_
+
+#Text=Of course , if people see you do so , they will probably not be very happy .
+20-1	1053-1055	Of	_	_	_	_
+20-2	1056-1062	course	_	_	_	_
+20-3	1063-1064	,	_	_	_	_
+20-4	1065-1067	if	_	_	_	_
+20-5	1068-1074	people	person	new	ana	20-11
+20-6	1075-1078	see	_	_	_	_
+20-7	1079-1082	you	person	giv	ana	25-2
+20-8	1083-1085	do	_	_	_	_
+20-9	1086-1088	so	_	_	_	_
+20-10	1089-1090	,	_	_	_	_
+20-11	1091-1095	they	person	giv	ana	21-3
+20-12	1096-1100	will	_	_	_	_
+20-13	1101-1109	probably	_	_	_	_
+20-14	1110-1113	not	_	_	_	_
+20-15	1114-1116	be	_	_	_	_
+20-16	1117-1121	very	_	_	_	_
+20-17	1122-1127	happy	_	_	_	_
+20-18	1128-1129	.	_	_	_	_
+
+#Text=Or , they may press their floor button again .
+21-1	1130-1132	Or	_	_	_	_
+21-2	1133-1134	,	_	_	_	_
+21-3	1135-1139	they	person	giv	ana	21-6
+21-4	1140-1143	may	_	_	_	_
+21-5	1144-1149	press	_	_	_	_
+21-6	1150-1155	their	person|object[67]	giv|giv[67]	coref|coref	22-8[69_67]|26-1[82_0]
+21-7	1156-1161	floor	place|object[67]	giv|giv[67]	coref	24-15
+21-8	1162-1168	button	object[67]	giv[67]	_	_
+21-9	1169-1174	again	_	_	_	_
+21-10	1175-1176	.	_	_	_	_
+
+#Text=The simplest method is to double press the button , which works in Mitsubishi Electric .
+22-1	1177-1180	The	abstract[68]	new[68]	ana	23-10[0_68]
+22-2	1181-1189	simplest	abstract[68]	new[68]	_	_
+22-3	1190-1196	method	abstract[68]	new[68]	_	_
+22-4	1197-1199	is	_	_	_	_
+22-5	1200-1202	to	_	_	_	_
+22-6	1203-1209	double	_	_	_	_
+22-7	1210-1215	press	_	_	_	_
+22-8	1216-1219	the	object[69]	giv[69]	coref	24-6[77_69]
+22-9	1220-1226	button	object[69]	giv[69]	_	_
+22-10	1227-1228	,	object[69]	giv[69]	_	_
+22-11	1229-1234	which	object[69]	giv[69]	_	_
+22-12	1235-1240	works	object[69]	giv[69]	_	_
+22-13	1241-1243	in	object[69]	giv[69]	_	_
+22-14	1244-1254	Mitsubishi	object[69]|organization|person[71]	giv[69]|new|new[71]	ana	30-23[0_71]
+22-15	1255-1263	Electric	object[69]|person[71]	giv[69]|new[71]	_	_
+22-16	1264-1265	.	_	_	_	_
+
+#Text=In other brands , such as Fujitec , pressing it five times works .
+23-1	1266-1268	In	_	_	_	_
+23-2	1269-1274	other	organization[72]	new[72]	_	_
+23-3	1275-1281	brands	organization[72]	new[72]	_	_
+23-4	1282-1283	,	organization[72]	new[72]	_	_
+23-5	1284-1288	such	organization[72]	new[72]	_	_
+23-6	1289-1291	as	organization[72]	new[72]	_	_
+23-7	1292-1299	Fujitec	organization[72]|organization	new[72]|new	_	_
+23-8	1300-1301	,	_	_	_	_
+23-9	1302-1310	pressing	_	_	_	_
+23-10	1311-1313	it	abstract	giv	coref	24-1[75_0]
+23-11	1314-1318	five	_	_	_	_
+23-12	1319-1324	times	_	_	_	_
+23-13	1325-1330	works	_	_	_	_
+23-14	1331-1332	.	_	_	_	_
+
+#Text=Another method is to hold the " Open Door " button while pressing the floor button twice .
+24-1	1333-1340	Another	abstract[75]	giv[75]	_	_
+24-2	1341-1347	method	abstract[75]	giv[75]	_	_
+24-3	1348-1350	is	_	_	_	_
+24-4	1351-1353	to	_	_	_	_
+24-5	1354-1358	hold	_	_	_	_
+24-6	1359-1362	the	object[77]	giv[77]	coref	24-14[79_77]
+24-7	1363-1364	"	object[77]	giv[77]	_	_
+24-8	1365-1369	Open	object[76]|object[77]	giv[76]|giv[77]	coref	26-12[86_76]
+24-9	1370-1374	Door	object[76]|object[77]	giv[76]|giv[77]	_	_
+24-10	1375-1376	"	object[77]	giv[77]	_	_
+24-11	1377-1383	button	object[77]	giv[77]	_	_
+24-12	1384-1389	while	_	_	_	_
+24-13	1390-1398	pressing	_	_	_	_
+24-14	1399-1402	the	object[79]	giv[79]	_	_
+24-15	1403-1408	floor	place|object[79]	giv|giv[79]	_	_
+24-16	1409-1415	button	object[79]	giv[79]	_	_
+24-17	1416-1421	twice	_	_	_	_
+24-18	1422-1423	.	_	_	_	_
+
+#Text=Use your foot .
+25-1	1424-1427	Use	_	_	_	_
+25-2	1428-1432	your	person|object[81]	giv|new[81]	ana|coref	26-5|26-8[85_81]
+25-3	1433-1437	foot	object[81]	new[81]	_	_
+25-4	1438-1439	.	_	_	_	_
+
+#Text=Some people suggest that you can use your foot to keep the door from opening .
+26-1	1440-1444	Some	person[82]	giv[82]	_	_
+26-2	1445-1451	people	person[82]	giv[82]	_	_
+26-3	1452-1459	suggest	_	_	_	_
+26-4	1460-1464	that	_	_	_	_
+26-5	1465-1468	you	person	giv	ana	26-8
+26-6	1469-1472	can	_	_	_	_
+26-7	1473-1476	use	_	_	_	_
+26-8	1477-1481	your	person|object[85]	giv|giv[85]	ana|coref	27-3|27-3[88_85]
+26-9	1482-1486	foot	object[85]	giv[85]	_	_
+26-10	1487-1489	to	_	_	_	_
+26-11	1490-1494	keep	_	_	_	_
+26-12	1495-1498	the	object[86]	giv[86]	coref	27-9[91_86]
+26-13	1499-1503	door	object[86]	giv[86]	_	_
+26-14	1504-1508	from	_	_	_	_
+26-15	1509-1516	opening	_	_	_	_
+26-16	1517-1518	.	_	_	_	_
+
+#Text=Simply put your foot on the middle of the elevator door , covering the edges of the door .
+27-1	1519-1525	Simply	_	_	_	_
+27-2	1526-1529	put	_	_	_	_
+27-3	1530-1534	your	person|object[88]	giv|giv[88]	ana	28-7
+27-4	1535-1539	foot	object[88]	giv[88]	_	_
+27-5	1540-1542	on	_	_	_	_
+27-6	1543-1546	the	place[89]	new[89]	_	_
+27-7	1547-1553	middle	place[89]	new[89]	_	_
+27-8	1554-1556	of	place[89]	new[89]	_	_
+27-9	1557-1560	the	place[89]|object[91]	new[89]|giv[91]	coref	27-17[93_91]
+27-10	1561-1569	elevator	place[89]|object|object[91]	new[89]|giv|giv[91]	coref	30-18
+27-11	1570-1574	door	place[89]|object[91]	new[89]|giv[91]	_	_
+27-12	1575-1576	,	_	_	_	_
+27-13	1577-1585	covering	_	_	_	_
+27-14	1586-1589	the	object[92]	new[92]	_	_
+27-15	1590-1595	edges	object[92]	new[92]	_	_
+27-16	1596-1598	of	object[92]	new[92]	_	_
+27-17	1599-1602	the	object[92]|object[93]	new[92]|giv[93]	coref	28-11[98_93]
+27-18	1603-1607	door	object[92]|object[93]	new[92]|giv[93]	_	_
+27-19	1608-1609	.	_	_	_	_
+
+#Text=In theory , the sole of your shoe will keep the door from opening on floors .
+28-1	1610-1612	In	_	_	_	_
+28-2	1613-1619	theory	abstract	new	_	_
+28-3	1620-1621	,	_	_	_	_
+28-4	1622-1625	the	object[95]	new[95]	_	_
+28-5	1626-1630	sole	object[95]	new[95]	_	_
+28-6	1631-1633	of	object[95]	new[95]	_	_
+28-7	1634-1638	your	object[95]|person|object[97]	new[95]|giv|new[97]	ana	29-2
+28-8	1639-1643	shoe	object[95]|object[97]	new[95]|new[97]	_	_
+28-9	1644-1648	will	_	_	_	_
+28-10	1649-1653	keep	_	_	_	_
+28-11	1654-1657	the	object[98]	giv[98]	_	_
+28-12	1658-1662	door	object[98]	giv[98]	_	_
+28-13	1663-1667	from	_	_	_	_
+28-14	1668-1675	opening	_	_	_	_
+28-15	1676-1678	on	_	_	_	_
+28-16	1679-1685	floors	object	giv	_	_
+28-17	1686-1687	.	_	_	_	_
+
+#Text=Ask your building manager .
+29-1	1688-1691	Ask	_	_	_	_
+29-2	1692-1696	your	person|person[102]	giv|new[102]	ana|coref	30-2|30-6[106_102]
+29-3	1697-1705	building	place|person[102]	new|new[102]	coref	30-7
+29-4	1706-1713	manager	person[102]	new[102]	_	_
+29-5	1714-1715	.	_	_	_	_
+
+#Text=If you 're cozy with your building manager , you may be able to get the secret elevator code from him or her .
+30-1	1716-1718	If	_	_	_	_
+30-2	1719-1722	you	person	giv	ana	30-6
+30-3	1723-1726	're	_	_	_	_
+30-4	1727-1731	cozy	_	_	_	_
+30-5	1732-1736	with	_	_	_	_
+30-6	1737-1741	your	person|person[106]	giv|giv[106]	ana|ana	30-10|30-21[0_106]
+30-7	1742-1750	building	place|person[106]	giv|giv[106]	coref	35-1[125_0]
+30-8	1751-1758	manager	person[106]	giv[106]	_	_
+30-9	1759-1760	,	_	_	_	_
+30-10	1761-1764	you	person	giv	ana	31-3
+30-11	1765-1768	may	_	_	_	_
+30-12	1769-1771	be	_	_	_	_
+30-13	1772-1776	able	_	_	_	_
+30-14	1777-1779	to	_	_	_	_
+30-15	1780-1783	get	_	_	_	_
+30-16	1784-1787	the	abstract[109]	new[109]	ana	31-10[0_109]
+30-17	1788-1794	secret	abstract[109]	new[109]	_	_
+30-18	1795-1803	elevator	object|abstract[109]	giv|new[109]	coref	38-26[150_0]
+30-19	1804-1808	code	abstract[109]	new[109]	_	_
+30-20	1809-1813	from	_	_	_	_
+30-21	1814-1817	him	person	giv	coref	35-1[126_0]
+30-22	1818-1820	or	_	_	_	_
+30-23	1821-1824	her	person	giv	_	_
+30-24	1825-1826	.	_	_	_	_
+
+#Text=However , you may need to promise to use it only for good .
+31-1	1827-1834	However	_	_	_	_
+31-2	1835-1836	,	_	_	_	_
+31-3	1837-1840	you	person	giv	ana	34-6
+31-4	1841-1844	may	_	_	_	_
+31-5	1845-1849	need	_	_	_	_
+31-6	1850-1852	to	_	_	_	_
+31-7	1853-1860	promise	_	_	_	_
+31-8	1861-1863	to	_	_	_	_
+31-9	1864-1867	use	_	_	_	_
+31-10	1868-1870	it	abstract	giv	_	_
+31-11	1871-1875	only	_	_	_	_
+31-12	1876-1879	for	_	_	_	_
+31-13	1880-1884	good	_	_	_	_
+31-14	1885-1886	.	_	_	_	_
+
+#Text=Using the Master Key
+32-1	1887-1892	Using	_	_	_	_
+32-2	1893-1896	the	abstract[114]	new[114]	coref	33-6[117_114]
+32-3	1897-1903	Master	abstract[114]	new[114]	_	_
+32-4	1904-1907	Key	abstract[114]	new[114]	_	_
+
+#Text=Ask for a copy of the master key .
+33-1	1908-1911	Ask	_	_	_	_
+33-2	1912-1915	for	_	_	_	_
+33-3	1916-1917	a	object[115]	new[115]	_	_
+33-4	1918-1922	copy	object[115]	new[115]	_	_
+33-5	1923-1925	of	object[115]	new[115]	_	_
+33-6	1926-1929	the	object[115]|abstract[117]	new[115]|giv[117]	coref	34-1[119_117]
+33-7	1930-1936	master	object[115]|person|abstract[117]	new[115]|new|giv[117]	coref	34-2
+33-8	1937-1940	key	object[115]|abstract[117]	new[115]|giv[117]	_	_
+33-9	1941-1942	.	_	_	_	_
+
+#Text=The master key will give you an express ride if you have one .
+34-1	1943-1946	The	abstract[119]	giv[119]	coref	35-7[127_119]
+34-2	1947-1953	master	person|abstract[119]	giv|giv[119]	coref	40-2
+34-3	1954-1957	key	abstract[119]	giv[119]	_	_
+34-4	1958-1962	will	_	_	_	_
+34-5	1963-1967	give	_	_	_	_
+34-6	1968-1971	you	person	giv	ana	34-11
+34-7	1972-1974	an	event[121]	giv[121]	_	_
+34-8	1975-1982	express	event[121]	giv[121]	_	_
+34-9	1983-1987	ride	event[121]	giv[121]	_	_
+34-10	1988-1990	if	_	_	_	_
+34-11	1991-1994	you	person	giv	ana	35-1
+34-12	1995-1999	have	_	_	_	_
+34-13	2000-2003	one	object	new	ana	47-13
+34-14	2004-2005	.	_	_	_	_
+
+#Text=Your building 's manager should have a key , and if you have enough clout , you may be able to just ask for a copy of the key .
+35-1	2006-2010	Your	person|place[125]|person[126]	giv|giv[125]|giv[126]	ana|ana	35-12|38-18[0_126]
+35-2	2011-2019	building	place[125]|person[126]	giv[125]|giv[126]	_	_
+35-3	2020-2022	's	place[125]|person[126]	giv[125]|giv[126]	_	_
+35-4	2023-2030	manager	person[126]	giv[126]	_	_
+35-5	2031-2037	should	_	_	_	_
+35-6	2038-2042	have	_	_	_	_
+35-7	2043-2044	a	abstract[127]	giv[127]	coref	35-28[132_127]
+35-8	2045-2048	key	abstract[127]	giv[127]	_	_
+35-9	2049-2050	,	_	_	_	_
+35-10	2051-2054	and	_	_	_	_
+35-11	2055-2057	if	_	_	_	_
+35-12	2058-2061	you	person	giv	ana	35-17
+35-13	2062-2066	have	_	_	_	_
+35-14	2067-2073	enough	abstract[129]	new[129]	_	_
+35-15	2074-2079	clout	abstract[129]	new[129]	_	_
+35-16	2080-2081	,	_	_	_	_
+35-17	2082-2085	you	person	giv	ana	36-2
+35-18	2086-2089	may	_	_	_	_
+35-19	2090-2092	be	_	_	_	_
+35-20	2093-2097	able	_	_	_	_
+35-21	2098-2100	to	_	_	_	_
+35-22	2101-2105	just	_	_	_	_
+35-23	2106-2109	ask	_	_	_	_
+35-24	2110-2113	for	_	_	_	_
+35-25	2114-2115	a	object[131]	new[131]	_	_
+35-26	2116-2120	copy	object[131]	new[131]	_	_
+35-27	2121-2123	of	object[131]	new[131]	_	_
+35-28	2124-2127	the	object[131]|abstract[132]	new[131]|giv[132]	coref	38-25[151_132]
+35-29	2128-2131	key	object[131]|abstract[132]	new[131]|giv[132]	_	_
+35-30	2132-2133	.	_	_	_	_
+
+#Text=Ask your firefighter friends .
+36-1	2134-2137	Ask	_	_	_	_
+36-2	2138-2142	your	person|person[134]	giv|new[134]	ana	38-2
+36-3	2143-2154	firefighter	person[134]	new[134]	_	_
+36-4	2155-2162	friends	person[134]	new[134]	_	_
+36-5	2163-2164	.	_	_	_	_
+
+#Text=Firefighters have master keys that work on most elevators , as they need them in case of emergency .
+37-1	2165-2177	Firefighters	person	new	ana	37-12
+37-2	2178-2182	have	_	_	_	_
+37-3	2183-2189	master	object[136]	new[136]	ana	37-14[0_136]
+37-4	2190-2194	keys	object[136]	new[136]	_	_
+37-5	2195-2199	that	object[136]	new[136]	_	_
+37-6	2200-2204	work	object[136]	new[136]	_	_
+37-7	2205-2207	on	object[136]	new[136]	_	_
+37-8	2208-2212	most	object[136]|place[137]	new[136]|giv[137]	coref	44-14[0_137]
+37-9	2213-2222	elevators	object[136]|place[137]	new[136]|giv[137]	_	_
+37-10	2223-2224	,	_	_	_	_
+37-11	2225-2227	as	_	_	_	_
+37-12	2228-2232	they	person	giv	_	_
+37-13	2233-2237	need	_	_	_	_
+37-14	2238-2242	them	object	giv	coref	40-2[155_0]
+37-15	2243-2245	in	_	_	_	_
+37-16	2246-2250	case	abstract[140]	new[140]	_	_
+37-17	2251-2253	of	abstract[140]	new[140]	_	_
+37-18	2254-2263	emergency	abstract[140]|abstract	new[140]|new	_	_
+37-19	2264-2265	.	_	_	_	_
+
+#Text=If you know someone in the profession , you may be be able to convince him or her to give you a copy of the elevator 's key .
+38-1	2266-2268	If	_	_	_	_
+38-2	2269-2272	you	person	giv	ana	38-9
+38-3	2273-2277	know	_	_	_	_
+38-4	2278-2285	someone	person[143]	new[143]	ana	38-16[0_143]
+38-5	2286-2288	in	person[143]	new[143]	_	_
+38-6	2289-2292	the	person[143]|abstract[144]	new[143]|new[144]	_	_
+38-7	2293-2303	profession	person[143]|abstract[144]	new[143]|new[144]	_	_
+38-8	2304-2305	,	_	_	_	_
+38-9	2306-2309	you	person	giv	ana	38-21
+38-10	2310-2313	may	_	_	_	_
+38-11	2314-2316	be	_	_	_	_
+38-12	2317-2319	be	_	_	_	_
+38-13	2320-2324	able	_	_	_	_
+38-14	2325-2327	to	_	_	_	_
+38-15	2328-2336	convince	_	_	_	_
+38-16	2337-2340	him	person	giv	_	_
+38-17	2341-2343	or	_	_	_	_
+38-18	2344-2347	her	person	giv	_	_
+38-19	2348-2350	to	_	_	_	_
+38-20	2351-2355	give	_	_	_	_
+38-21	2356-2359	you	person	giv	ana	39-5
+38-22	2360-2361	a	object[149]	new[149]	_	_
+38-23	2362-2366	copy	object[149]	new[149]	_	_
+38-24	2367-2369	of	object[149]	new[149]	_	_
+38-25	2370-2373	the	object[149]|abstract[151]	new[149]|giv[151]	coref	41-6[159_151]
+38-26	2374-2382	elevator	object[149]|object[150]|abstract[151]	new[149]|giv[150]|giv[151]	coref	48-12[185_150]
+38-27	2383-2385	's	object[149]|object[150]|abstract[151]	new[149]|giv[150]|giv[151]	_	_
+38-28	2386-2389	key	object[149]|abstract[151]	new[149]|giv[151]	_	_
+38-29	2390-2391	.	_	_	_	_
+
+#Text=However , understand that your firefighter friend is likely to be reluctant .
+39-1	2392-2399	However	_	_	_	_
+39-2	2400-2401	,	_	_	_	_
+39-3	2402-2412	understand	_	_	_	_
+39-4	2413-2417	that	_	_	_	_
+39-5	2418-2422	your	person|person[153]	giv|new[153]	ana	41-10
+39-6	2423-2434	firefighter	person[153]	new[153]	_	_
+39-7	2435-2441	friend	person[153]	new[153]	_	_
+39-8	2442-2444	is	_	_	_	_
+39-9	2445-2451	likely	_	_	_	_
+39-10	2452-2454	to	_	_	_	_
+39-11	2455-2457	be	_	_	_	_
+39-12	2458-2467	reluctant	_	_	_	_
+39-13	2468-2469	.	_	_	_	_
+
+#Text=Putting master keys in the hands of the public can be dangerous and possibly even illegal .
+40-1	2470-2477	Putting	_	_	_	_
+40-2	2478-2484	master	person|object[155]	giv|giv[155]	coref	43-14[168_155]
+40-3	2485-2489	keys	object[155]	giv[155]	_	_
+40-4	2490-2492	in	_	_	_	_
+40-5	2493-2496	the	object[156]	new[156]	_	_
+40-6	2497-2502	hands	object[156]	new[156]	_	_
+40-7	2503-2505	of	object[156]	new[156]	_	_
+40-8	2506-2509	the	object[156]|person[157]	new[156]|new[157]	_	_
+40-9	2510-2516	public	object[156]|person[157]	new[156]|new[157]	_	_
+40-10	2517-2520	can	_	_	_	_
+40-11	2521-2523	be	_	_	_	_
+40-12	2524-2533	dangerous	_	_	_	_
+40-13	2534-2537	and	_	_	_	_
+40-14	2538-2546	possibly	_	_	_	_
+40-15	2547-2551	even	_	_	_	_
+40-16	2552-2559	illegal	_	_	_	_
+40-17	2560-2561	.	_	_	_	_
+
+#Text=Check the legality of having such a key in your area .
+41-1	2562-2567	Check	_	_	_	_
+41-2	2568-2571	the	abstract[158]	new[158]	_	_
+41-3	2572-2580	legality	abstract[158]	new[158]	_	_
+41-4	2581-2583	of	abstract[158]	new[158]	_	_
+41-5	2584-2590	having	abstract[158]	new[158]	_	_
+41-6	2591-2595	such	abstract[158]|abstract[159]	new[158]|giv[159]	coref	48-6[182_159]
+41-7	2596-2597	a	abstract[158]|abstract[159]	new[158]|giv[159]	_	_
+41-8	2598-2601	key	abstract[158]|abstract[159]	new[158]|giv[159]	_	_
+41-9	2602-2604	in	abstract[158]	new[158]	_	_
+41-10	2605-2609	your	abstract[158]|person|place[161]	new[158]|giv|new[161]	ana|coref	43-2|46-6[177_161]
+41-11	2610-2614	area	abstract[158]|place[161]	new[158]|new[161]	_	_
+41-12	2615-2616	.	_	_	_	_
+
+#Text=Check eBay .
+42-1	2617-2622	Check	_	_	_	_
+42-2	2623-2627	eBay	abstract	new	coref	43-12
+42-3	2628-2629	.	_	_	_	_
+
+#Text=If you fail in your quest , you can also check eBay for master keys .
+43-1	2630-2632	If	_	_	_	_
+43-2	2633-2636	you	person	giv	ana	43-5
+43-3	2637-2641	fail	_	_	_	_
+43-4	2642-2644	in	_	_	_	_
+43-5	2645-2649	your	person|event[165]	giv|new[165]	ana	43-8
+43-6	2650-2655	quest	event[165]	new[165]	_	_
+43-7	2656-2657	,	_	_	_	_
+43-8	2658-2661	you	person	giv	ana	44-1
+43-9	2662-2665	can	_	_	_	_
+43-10	2666-2670	also	_	_	_	_
+43-11	2671-2676	check	_	_	_	_
+43-12	2677-2681	eBay	abstract	giv	_	_
+43-13	2682-2685	for	_	_	_	_
+43-14	2686-2692	master	object[168]	giv[168]	coref	44-5[170_168]
+43-15	2693-2697	keys	object[168]	giv[168]	_	_
+43-16	2698-2699	.	_	_	_	_
+
+#Text=You can look for all-access keys that should work in a variety of elevators .
+44-1	2700-2703	You	person	giv	ana	47-9
+44-2	2704-2707	can	_	_	_	_
+44-3	2708-2712	look	_	_	_	_
+44-4	2713-2716	for	_	_	_	_
+44-5	2717-2727	all-access	object[170]	giv[170]	coref	46-2[0_170]
+44-6	2728-2732	keys	object[170]	giv[170]	_	_
+44-7	2733-2737	that	object[170]	giv[170]	_	_
+44-8	2738-2744	should	object[170]	giv[170]	_	_
+44-9	2745-2749	work	object[170]	giv[170]	_	_
+44-10	2750-2752	in	object[170]	giv[170]	_	_
+44-11	2753-2754	a	object[170]|abstract[171]	giv[170]|new[171]	_	_
+44-12	2755-2762	variety	object[170]|abstract[171]	giv[170]|new[171]	_	_
+44-13	2763-2765	of	object[170]|abstract[171]	giv[170]|new[171]	_	_
+44-14	2766-2775	elevators	object[170]|abstract[171]|place	giv[170]|new[171]|giv	coref	45-13
+44-15	2776-2777	.	_	_	_	_
+
+#Text=Most of these have four sides to work in multiple types of elevators .
+45-1	2778-2782	Most	_	_	_	_
+45-2	2783-2785	of	_	_	_	_
+45-3	2786-2791	these	_	_	_	_
+45-4	2792-2796	have	_	_	_	_
+45-5	2797-2801	four	object[173]	new[173]	_	_
+45-6	2802-2807	sides	object[173]	new[173]	_	_
+45-7	2808-2810	to	object[173]	new[173]	_	_
+45-8	2811-2815	work	object[173]	new[173]	_	_
+45-9	2816-2818	in	object[173]	new[173]	_	_
+45-10	2819-2827	multiple	object[173]|abstract[174]	new[173]|new[174]	_	_
+45-11	2828-2833	types	object[173]|abstract[174]	new[173]|new[174]	_	_
+45-12	2834-2836	of	object[173]|abstract[174]	new[173]|new[174]	_	_
+45-13	2837-2846	elevators	object[173]|abstract[174]|place	new[173]|new[174]|giv	_	_
+45-14	2847-2848	.	_	_	_	_
+
+#Text=Buying keys is somewhat of a legal gray area .
+46-1	2849-2855	Buying	_	_	_	_
+46-2	2856-2860	keys	object	giv	_	_
+46-3	2861-2863	is	_	_	_	_
+46-4	2864-2872	somewhat	_	_	_	_
+46-5	2873-2875	of	_	_	_	_
+46-6	2876-2877	a	place[177]	giv[177]	ana	47-5[0_177]
+46-7	2878-2883	legal	place[177]	giv[177]	_	_
+46-8	2884-2888	gray	place[177]	giv[177]	_	_
+46-9	2889-2893	area	place[177]	giv[177]	_	_
+46-10	2894-2895	.	_	_	_	_
+
+#Text=Check to see if it 's legal in your state before purchasing one .
+47-1	2896-2901	Check	_	_	_	_
+47-2	2902-2904	to	_	_	_	_
+47-3	2905-2908	see	_	_	_	_
+47-4	2909-2911	if	_	_	_	_
+47-5	2912-2914	it	place	giv	coref	47-9[180_0]
+47-6	2915-2917	's	_	_	_	_
+47-7	2918-2923	legal	_	_	_	_
+47-8	2924-2926	in	_	_	_	_
+47-9	2927-2931	your	person|place[180]	giv|giv[180]	ana	48-8
+47-10	2932-2937	state	place[180]	giv[180]	_	_
+47-11	2938-2944	before	_	_	_	_
+47-12	2945-2955	purchasing	_	_	_	_
+47-13	2956-2959	one	object	giv	coref	53-6[203_0]
+47-14	2960-2961	.	_	_	_	_
+
+#Text=However , to make sure the key you buy works on your elevator , you may need to do a little research .
+48-1	2962-2969	However	_	_	_	_
+48-2	2970-2971	,	_	_	_	_
+48-3	2972-2974	to	_	_	_	_
+48-4	2975-2979	make	_	_	_	_
+48-5	2980-2984	sure	_	_	_	_
+48-6	2985-2988	the	abstract[182]	giv[182]	coref	50-8[194_182]
+48-7	2989-2992	key	abstract[182]	giv[182]	_	_
+48-8	2993-2996	you	abstract[182]|person	giv[182]|giv	ana	48-12
+48-9	2997-3000	buy	abstract[182]	giv[182]	_	_
+48-10	3001-3006	works	_	_	_	_
+48-11	3007-3009	on	_	_	_	_
+48-12	3010-3014	your	person|object[185]	giv|giv[185]	ana|coref	48-15|49-8[191_185]
+48-13	3015-3023	elevator	object[185]	giv[185]	_	_
+48-14	3024-3025	,	_	_	_	_
+48-15	3026-3029	you	person	giv	ana	49-8
+48-16	3030-3033	may	_	_	_	_
+48-17	3034-3038	need	_	_	_	_
+48-18	3039-3041	to	_	_	_	_
+48-19	3042-3044	do	_	_	_	_
+48-20	3045-3046	a	abstract[187]	new[187]	_	_
+48-21	3047-3053	little	abstract[187]	new[187]	_	_
+48-22	3054-3062	research	abstract[187]	new[187]	_	_
+48-23	3063-3064	.	_	_	_	_
+
+#Text=Look at the make and model of your elevator , which is usually listed inside the elevator .
+49-1	3065-3069	Look	_	_	_	_
+49-2	3070-3072	at	_	_	_	_
+49-3	3073-3076	the	abstract[188]	new[188]	_	_
+49-4	3077-3081	make	abstract[188]	new[188]	_	_
+49-5	3082-3085	and	_	_	_	_
+49-6	3086-3091	model	abstract[189]	new[189]	_	_
+49-7	3092-3094	of	abstract[189]	new[189]	_	_
+49-8	3095-3099	your	abstract[189]|person|object[191]	new[189]|giv|giv[191]	coref|ana	49-16[192_191]|52-12
+49-9	3100-3108	elevator	abstract[189]|object[191]	new[189]|giv[191]	_	_
+49-10	3109-3110	,	abstract[189]	new[189]	_	_
+49-11	3111-3116	which	abstract[189]	new[189]	_	_
+49-12	3117-3119	is	abstract[189]	new[189]	_	_
+49-13	3120-3127	usually	abstract[189]	new[189]	_	_
+49-14	3128-3134	listed	abstract[189]	new[189]	_	_
+49-15	3135-3141	inside	abstract[189]	new[189]	_	_
+49-16	3142-3145	the	abstract[189]|object[192]	new[189]|giv[192]	coref	52-15[201_192]
+49-17	3146-3154	elevator	abstract[189]|object[192]	new[189]|giv[192]	_	_
+49-18	3155-3156	.	_	_	_	_
+
+#Text=Use that information to find out what kind of key it takes .
+50-1	3157-3160	Use	_	_	_	_
+50-2	3161-3165	that	abstract[193]	new[193]	ana	50-11[0_193]
+50-3	3166-3177	information	abstract[193]	new[193]	_	_
+50-4	3178-3180	to	_	_	_	_
+50-5	3181-3185	find	_	_	_	_
+50-6	3186-3189	out	_	_	_	_
+50-7	3190-3194	what	_	_	_	_
+50-8	3195-3199	kind	abstract[194]	giv[194]	coref	51-2[196_194]
+50-9	3200-3202	of	abstract[194]	giv[194]	_	_
+50-10	3203-3206	key	abstract[194]	giv[194]	_	_
+50-11	3207-3209	it	abstract	giv	_	_
+50-12	3210-3215	takes	_	_	_	_
+50-13	3216-3217	.	_	_	_	_
+
+#Text=Use the key .
+51-1	3218-3221	Use	_	_	_	_
+51-2	3222-3225	the	abstract[196]	giv[196]	coref	52-3[197_196]
+51-3	3226-3229	key	abstract[196]	giv[196]	_	_
+51-4	3230-3231	.	_	_	_	_
+
+#Text=To use the key , insert it in the keyhole when you get in the elevator .
+52-1	3232-3234	To	_	_	_	_
+52-2	3235-3238	use	_	_	_	_
+52-3	3239-3242	the	abstract[197]	giv[197]	ana	52-7[0_197]
+52-4	3243-3246	key	abstract[197]	giv[197]	_	_
+52-5	3247-3248	,	_	_	_	_
+52-6	3249-3255	insert	_	_	_	_
+52-7	3256-3258	it	abstract	giv	coref	54-2[205_0]
+52-8	3259-3261	in	_	_	_	_
+52-9	3262-3265	the	object[199]	new[199]	_	_
+52-10	3266-3273	keyhole	object[199]	new[199]	_	_
+52-11	3274-3278	when	_	_	_	_
+52-12	3279-3282	you	person	giv	ana	53-1
+52-13	3283-3286	get	_	_	_	_
+52-14	3287-3289	in	_	_	_	_
+52-15	3290-3293	the	object[201]	giv[201]	coref	57-9[212_201]
+52-16	3294-3302	elevator	object[201]	giv[201]	_	_
+52-17	3303-3304	.	_	_	_	_
+
+#Text=You may need to try more than one if it 's four-sided .
+53-1	3305-3308	You	person	giv	ana	55-5
+53-2	3309-3312	may	_	_	_	_
+53-3	3313-3317	need	_	_	_	_
+53-4	3318-3320	to	_	_	_	_
+53-5	3321-3324	try	_	_	_	_
+53-6	3325-3329	more	object[203]	giv[203]	ana	53-10[0_203]
+53-7	3330-3334	than	object[203]	giv[203]	_	_
+53-8	3335-3338	one	object[203]	giv[203]	_	_
+53-9	3339-3341	if	_	_	_	_
+53-10	3342-3344	it	object	giv	_	_
+53-11	3345-3347	's	_	_	_	_
+53-12	3348-3358	four-sided	_	_	_	_
+53-13	3359-3360	.	_	_	_	_
+
+#Text=Leave the key in .
+54-1	3361-3366	Leave	_	_	_	_
+54-2	3367-3370	the	abstract[205]	giv[205]	_	_
+54-3	3371-3374	key	abstract[205]	giv[205]	_	_
+54-4	3375-3377	in	_	_	_	_
+54-5	3378-3379	.	_	_	_	_
+
+#Text=Push the button of your floor to get an express ride .
+55-1	3380-3384	Push	_	_	_	_
+55-2	3385-3388	the	object[206]	new[206]	_	_
+55-3	3389-3395	button	object[206]	new[206]	_	_
+55-4	3396-3398	of	object[206]	new[206]	_	_
+55-5	3399-3403	your	object[206]|person|place[208]	new[206]|giv|new[208]	_	_
+55-6	3404-3409	floor	object[206]|place[208]	new[206]|new[208]	_	_
+55-7	3410-3412	to	_	_	_	_
+55-8	3413-3416	get	_	_	_	_
+55-9	3417-3419	an	event[209]	new[209]	_	_
+55-10	3420-3427	express	event[209]	new[209]	_	_
+55-11	3428-3432	ride	event[209]	new[209]	_	_
+55-12	3433-3434	.	_	_	_	_
+
+#Text=Warnings
+56-1	3435-3443	Warnings	abstract	new	_	_
+
+#Text=Realize that these hacks will not work on every elevator .
+57-1	3444-3451	Realize	_	_	_	_
+57-2	3452-3456	that	_	_	_	_
+57-3	3457-3462	these	abstract[211]	new[211]	coref	58-8[215_211]
+57-4	3463-3468	hacks	abstract[211]	new[211]	_	_
+57-5	3469-3473	will	_	_	_	_
+57-6	3474-3477	not	_	_	_	_
+57-7	3478-3482	work	_	_	_	_
+57-8	3483-3485	on	_	_	_	_
+57-9	3486-3491	every	object[212]	giv[212]	ana	58-15[0_212]
+57-10	3492-3500	elevator	object[212]	giv[212]	_	_
+57-11	3501-3502	.	_	_	_	_
+
+#Text=In fact , some people contend that the code hacks do not work at all .
+58-1	3503-3505	In	_	_	_	_
+58-2	3506-3510	fact	_	_	_	_
+58-3	3511-3512	,	_	_	_	_
+58-4	3513-3517	some	person[213]	new[213]	coref	59-15[220_213]
+58-5	3518-3524	people	person[213]	new[213]	_	_
+58-6	3525-3532	contend	_	_	_	_
+58-7	3533-3537	that	_	_	_	_
+58-8	3538-3541	the	abstract[215]	giv[215]	coref	59-2[217_215]
+58-9	3542-3546	code	abstract|abstract[215]	new|giv[215]	_	_
+58-10	3547-3552	hacks	abstract[215]	giv[215]	_	_
+58-11	3553-3555	do	_	_	_	_
+58-12	3556-3559	not	_	_	_	_
+58-13	3560-3564	work	_	_	_	_
+58-14	3565-3567	at	_	_	_	_
+58-15	3568-3571	all	object	giv	_	_
+58-16	3572-3573	.	_	_	_	_
+
+#Text=Use these hacks sparingly , especially in large office buildings , where there are busy people with places to be .
+59-1	3574-3577	Use	_	_	_	_
+59-2	3578-3583	these	abstract[217]	giv[217]	_	_
+59-3	3584-3589	hacks	abstract[217]	giv[217]	_	_
+59-4	3590-3599	sparingly	_	_	_	_
+59-5	3600-3601	,	_	_	_	_
+59-6	3602-3612	especially	place[219]	new[219]	_	_
+59-7	3613-3615	in	place[219]	new[219]	_	_
+59-8	3616-3621	large	place[219]	new[219]	_	_
+59-9	3622-3628	office	abstract|place[219]	new|new[219]	_	_
+59-10	3629-3638	buildings	place[219]	new[219]	_	_
+59-11	3639-3640	,	place[219]	new[219]	_	_
+59-12	3641-3646	where	place[219]	new[219]	_	_
+59-13	3647-3652	there	place[219]	new[219]	_	_
+59-14	3653-3656	are	place[219]	new[219]	_	_
+59-15	3657-3661	busy	place[219]|person[220]	new[219]|giv[220]	_	_
+59-16	3662-3668	people	place[219]|person[220]	new[219]|giv[220]	_	_
+59-17	3669-3673	with	place[219]|person[220]	new[219]|giv[220]	_	_
+59-18	3674-3680	places	place[219]|person[220]|place[221]	new[219]|giv[220]|new[221]	_	_
+59-19	3681-3683	to	place[219]|person[220]|place[221]	new[219]|giv[220]|new[221]	_	_
+59-20	3684-3686	be	place[219]|person[220]|place[221]	new[219]|giv[220]|new[221]	_	_
+59-21	3687-3688	.	_	_	_	_
+
+#Text=Quick Summary
+60-1	3689-3694	Quick	abstract[222]	new[222]	_	_
+60-2	3695-3702	Summary	abstract[222]	new[222]	_	_

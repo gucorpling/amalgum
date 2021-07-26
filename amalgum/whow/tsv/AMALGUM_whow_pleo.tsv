@@ -1,0 +1,873 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Get a PLEO
+1-1	0-3	Get	_	_	_	_
+1-2	4-5	a	person[1]	new[1]	_	_
+1-3	6-10	PLEO	person[1]	new[1]	_	_
+
+#Text=PLEO is a robotic dinosaur pet that resembles a one week-old Carmasaurus .
+2-1	11-15	PLEO	animal	new	coref	2-3[4_0]
+2-2	16-18	is	_	_	_	_
+2-3	19-20	a	animal[4]	giv[4]	coref	5-8[15_4]
+2-4	21-28	robotic	animal[4]	giv[4]	_	_
+2-5	29-37	dinosaur	animal|animal[4]	new|giv[4]	_	_
+2-6	38-41	pet	animal[4]	giv[4]	_	_
+2-7	42-46	that	animal[4]	giv[4]	_	_
+2-8	47-56	resembles	animal[4]	giv[4]	_	_
+2-9	57-58	a	animal[4]|abstract[6]	giv[4]|new[6]	ana	3-1[0_6]
+2-10	59-62	one	animal[4]|time[5]|abstract[6]	giv[4]|new[5]|new[6]	_	_
+2-11	63-71	week-old	animal[4]|time[5]|abstract[6]	giv[4]|new[5]|new[6]	_	_
+2-12	72-83	Carmasaurus	animal[4]|abstract[6]	giv[4]|new[6]	_	_
+2-13	84-85	.	_	_	_	_
+
+#Text=It was created by INNOLABS in 2005 .
+3-1	86-88	It	abstract	giv	ana	4-1
+3-2	89-92	was	_	_	_	_
+3-3	93-100	created	_	_	_	_
+3-4	101-103	by	_	_	_	_
+3-5	104-112	INNOLABS	organization	new	_	_
+3-6	113-115	in	_	_	_	_
+3-7	116-120	2005	time	new	_	_
+3-8	121-122	.	_	_	_	_
+
+#Text=It became a huge hit in Asia following its release .
+4-1	123-125	It	abstract	giv	ana	4-9
+4-2	126-132	became	_	_	_	_
+4-3	133-134	a	_	_	_	_
+4-4	135-139	huge	_	_	_	_
+4-5	140-143	hit	_	_	_	_
+4-6	144-146	in	_	_	_	_
+4-7	147-151	Asia	place	new	coref	30-5
+4-8	152-161	following	_	_	_	_
+4-9	162-165	its	abstract|event[13]	giv|new[13]	_	_
+4-10	166-173	release	event[13]	new[13]	_	_
+4-11	174-175	.	_	_	_	_
+
+#Text=If you 're American , and love this adorable pet , then you can obtain one and take good care of it , by following the guidance here .
+5-1	176-178	If	_	_	_	_
+5-2	179-182	you	person	acc	ana	5-13
+5-3	183-186	're	_	_	_	_
+5-4	187-195	American	_	_	_	_
+5-5	196-197	,	_	_	_	_
+5-6	198-201	and	_	_	_	_
+5-7	202-206	love	_	_	_	_
+5-8	207-211	this	animal[15]	giv[15]	coref	6-9[22_15]
+5-9	212-220	adorable	animal[15]	giv[15]	_	_
+5-10	221-224	pet	animal[15]	giv[15]	_	_
+5-11	225-226	,	_	_	_	_
+5-12	227-231	then	_	_	_	_
+5-13	232-235	you	person	giv	ana	10-5
+5-14	236-239	can	_	_	_	_
+5-15	240-246	obtain	_	_	_	_
+5-16	247-250	one	place	new	ana	5-22
+5-17	251-254	and	_	_	_	_
+5-18	255-259	take	_	_	_	_
+5-19	260-264	good	abstract[18]	new[18]	_	_
+5-20	265-269	care	abstract[18]	new[18]	_	_
+5-21	270-272	of	_	_	_	_
+5-22	273-275	it	place	giv	ana	13-11
+5-23	276-277	,	_	_	_	_
+5-24	278-280	by	_	_	_	_
+5-25	281-290	following	_	_	_	_
+5-26	291-294	the	abstract[20]	new[20]	_	_
+5-27	295-303	guidance	abstract[20]	new[20]	_	_
+5-28	304-308	here	_	_	_	_
+5-29	309-310	.	_	_	_	_
+
+#Text=Enjoy learning how to be a master for this lovable creature !
+6-1	311-316	Enjoy	_	_	_	_
+6-2	317-325	learning	_	_	_	_
+6-3	326-329	how	_	_	_	_
+6-4	330-332	to	_	_	_	_
+6-5	333-335	be	_	_	_	_
+6-6	336-337	a	person[21]	new[21]	_	_
+6-7	338-344	master	person[21]	new[21]	_	_
+6-8	345-348	for	person[21]	new[21]	_	_
+6-9	349-353	this	person[21]|animal[22]	new[21]|giv[22]	coref	8-2[24_22]
+6-10	354-361	lovable	person[21]|animal[22]	new[21]|giv[22]	_	_
+6-11	362-370	creature	person[21]|animal[22]	new[21]|giv[22]	_	_
+6-12	371-372	!	_	_	_	_
+
+#Text=Steps
+7-1	373-378	Steps	abstract	new	ana	12-10
+
+#Text=Purchasing a PLEO
+8-1	379-389	Purchasing	_	_	_	_
+8-2	390-391	a	animal[24]	giv[24]	coref	10-13[0_24]
+8-3	392-396	PLEO	animal[24]	giv[24]	_	_
+
+#Text=Find the website .
+9-1	397-401	Find	_	_	_	_
+9-2	402-405	the	abstract[25]	new[25]	coref	11-6[31_25]
+9-3	406-413	website	abstract[25]	new[25]	_	_
+9-4	414-415	.	_	_	_	_
+
+#Text=Go to pleoworld.com and you will see a lot of information about PLEO .
+10-1	416-418	Go	_	_	_	_
+10-2	419-421	to	_	_	_	_
+10-3	422-435	pleoworld.com	abstract	new	_	_
+10-4	436-439	and	_	_	_	_
+10-5	440-443	you	person	giv	ana	12-4
+10-6	444-448	will	_	_	_	_
+10-7	449-452	see	_	_	_	_
+10-8	453-454	a	abstract[28]	new[28]	_	_
+10-9	455-458	lot	abstract[28]	new[28]	_	_
+10-10	459-461	of	abstract[28]	new[28]	_	_
+10-11	462-473	information	abstract[28]	new[28]	_	_
+10-12	474-479	about	abstract[28]	new[28]	_	_
+10-13	480-484	PLEO	abstract[28]|animal	new[28]|giv	coref	11-7
+10-14	485-486	.	_	_	_	_
+
+#Text=However , be aware that the PLEO site may not currently carry the original style of PLEO .
+11-1	487-494	However	_	_	_	_
+11-2	495-496	,	_	_	_	_
+11-3	497-499	be	_	_	_	_
+11-4	500-505	aware	_	_	_	_
+11-5	506-510	that	_	_	_	_
+11-6	511-514	the	abstract[31]	giv[31]	coref	19-6[60_31]
+11-7	515-519	PLEO	animal|abstract[31]	giv|giv[31]	coref	11-17
+11-8	520-524	site	abstract[31]	giv[31]	_	_
+11-9	525-528	may	_	_	_	_
+11-10	529-532	not	_	_	_	_
+11-11	533-542	currently	_	_	_	_
+11-12	543-548	carry	_	_	_	_
+11-13	549-552	the	abstract[32]	new[32]	_	_
+11-14	553-561	original	abstract[32]	new[32]	_	_
+11-15	562-567	style	abstract[32]	new[32]	_	_
+11-16	568-570	of	abstract[32]	new[32]	_	_
+11-17	571-575	PLEO	abstract[32]|animal	new[32]|giv	coref	13-3[42_0]
+11-18	576-577	.	_	_	_	_
+
+#Text=If so , you may be able to find them on such sites as online traders/auction sites or large distributors of stuff .
+12-1	578-580	If	_	_	_	_
+12-2	581-583	so	_	_	_	_
+12-3	584-585	,	_	_	_	_
+12-4	586-589	you	person	giv	ana	16-6
+12-5	590-593	may	_	_	_	_
+12-6	594-596	be	_	_	_	_
+12-7	597-601	able	_	_	_	_
+12-8	602-604	to	_	_	_	_
+12-9	605-609	find	_	_	_	_
+12-10	610-614	them	abstract	giv	_	_
+12-11	615-617	on	_	_	_	_
+12-12	618-622	such	place[36]	new[36]	coref	12-15[38_36]
+12-13	623-628	sites	place[36]	new[36]	_	_
+12-14	629-631	as	place[36]	new[36]	_	_
+12-15	632-638	online	place[36]|place[38]|place[39]	new[36]|giv[38]|giv[39]	coref	12-15[39_38]
+12-16	639-654	traders/auction	place[36]|person|place[38]|place[39]	new[36]|new|giv[38]|giv[39]	_	_
+12-17	655-660	sites	place[36]|place[38]|place[39]	new[36]|giv[38]|giv[39]	_	_
+12-18	661-663	or	place[36]|place[39]	new[36]|giv[39]	_	_
+12-19	664-669	large	place[36]|place[39]|organization[40]	new[36]|giv[39]|new[40]	_	_
+12-20	670-682	distributors	place[36]|place[39]|organization[40]	new[36]|giv[39]|new[40]	_	_
+12-21	683-685	of	place[36]|place[39]|organization[40]	new[36]|giv[39]|new[40]	_	_
+12-22	686-691	stuff	place[36]|place[39]|organization[40]|object	new[36]|giv[39]|new[40]|new	_	_
+12-23	692-693	.	_	_	_	_
+
+#Text=If purchasing a used PLEO , do not to get one labeled : Heavily used .
+13-1	694-696	If	_	_	_	_
+13-2	697-707	purchasing	_	_	_	_
+13-3	708-709	a	animal[42]	giv[42]	coref	15-3[0_42]
+13-4	710-714	used	animal[42]	giv[42]	_	_
+13-5	715-719	PLEO	animal[42]	giv[42]	_	_
+13-6	720-721	,	_	_	_	_
+13-7	722-724	do	_	_	_	_
+13-8	725-728	not	_	_	_	_
+13-9	729-731	to	_	_	_	_
+13-10	732-735	get	_	_	_	_
+13-11	736-739	one	place	giv	coref	24-11[77_0]
+13-12	740-747	labeled	_	_	_	_
+13-13	748-749	:	_	_	_	_
+13-14	750-757	Heavily	_	_	_	_
+13-15	758-762	used	_	_	_	_
+13-16	763-764	.	_	_	_	_
+
+#Text=These products tend to be in bad shape , despite the pictures .
+14-1	765-770	These	object[44]	new[44]	_	_
+14-2	771-779	products	object[44]	new[44]	_	_
+14-3	780-784	tend	_	_	_	_
+14-4	785-787	to	_	_	_	_
+14-5	788-790	be	_	_	_	_
+14-6	791-793	in	_	_	_	_
+14-7	794-797	bad	abstract[45]	new[45]	_	_
+14-8	798-803	shape	abstract[45]	new[45]	_	_
+14-9	804-805	,	_	_	_	_
+14-10	806-813	despite	_	_	_	_
+14-11	814-817	the	abstract[46]	new[46]	_	_
+14-12	818-826	pictures	abstract[46]	new[46]	_	_
+14-13	827-828	.	_	_	_	_
+
+#Text=Note that PLEO has two main groups , PLEO original , and PLEOrb .
+15-1	829-833	Note	_	_	_	_
+15-2	834-838	that	_	_	_	_
+15-3	839-843	PLEO	animal	giv	appos	15-9
+15-4	844-847	has	_	_	_	_
+15-5	848-851	two	abstract[48]	new[48]	appos	15-13[0_48]
+15-6	852-856	main	abstract[48]	new[48]	_	_
+15-7	857-863	groups	abstract[48]	new[48]	_	_
+15-8	864-865	,	_	_	_	_
+15-9	866-870	PLEO	animal	giv	coref	17-1[56_0]
+15-10	871-879	original	_	_	_	_
+15-11	880-881	,	_	_	_	_
+15-12	882-885	and	_	_	_	_
+15-13	886-892	PLEOrb	abstract	giv	coref	16-1
+15-14	893-894	.	_	_	_	_
+
+#Text=PLEOrb is newer and if you want more features , then you should choose PLEOrb .
+16-1	895-901	PLEOrb	abstract	giv	coref	16-15
+16-2	902-904	is	_	_	_	_
+16-3	905-910	newer	_	_	_	_
+16-4	911-914	and	_	_	_	_
+16-5	915-917	if	_	_	_	_
+16-6	918-921	you	person	giv	ana	16-12
+16-7	922-926	want	_	_	_	_
+16-8	927-931	more	abstract[53]	new[53]	_	_
+16-9	932-940	features	abstract[53]	new[53]	_	_
+16-10	941-942	,	_	_	_	_
+16-11	943-947	then	_	_	_	_
+16-12	948-951	you	person	giv	ana	20-4
+16-13	952-958	should	_	_	_	_
+16-14	959-965	choose	_	_	_	_
+16-15	966-972	PLEOrb	abstract	giv	coref	19-11
+16-16	973-974	.	_	_	_	_
+
+#Text=PLEO original has less upgrades , but is cheaper .
+17-1	975-979	PLEO	animal[56]	giv[56]	coref	20-14[0_56]
+17-2	980-988	original	animal[56]	giv[56]	_	_
+17-3	989-992	has	_	_	_	_
+17-4	993-997	less	abstract[57]	new[57]	_	_
+17-5	998-1006	upgrades	abstract[57]	new[57]	_	_
+17-6	1007-1008	,	_	_	_	_
+17-7	1009-1012	but	_	_	_	_
+17-8	1013-1015	is	_	_	_	_
+17-9	1016-1023	cheaper	_	_	_	_
+17-10	1024-1025	.	_	_	_	_
+
+#Text=Find the tab .
+18-1	1026-1030	Find	_	_	_	_
+18-2	1031-1034	the	object[58]	new[58]	coref	19-3[59_58]
+18-3	1035-1038	tab	object[58]	new[58]	_	_
+18-4	1039-1040	.	_	_	_	_
+
+#Text=Look for the tab in the website labeled " Get PLEOrb Online " .
+19-1	1041-1045	Look	_	_	_	_
+19-2	1046-1049	for	_	_	_	_
+19-3	1050-1053	the	object[59]	giv[59]	ana	21-3[0_59]
+19-4	1054-1057	tab	object[59]	giv[59]	_	_
+19-5	1058-1060	in	object[59]	giv[59]	_	_
+19-6	1061-1064	the	object[59]|abstract[60]	giv[59]|giv[60]	_	_
+19-7	1065-1072	website	object[59]|abstract[60]	giv[59]|giv[60]	_	_
+19-8	1073-1080	labeled	object[59]	giv[59]	_	_
+19-9	1081-1082	"	object[59]	giv[59]	_	_
+19-10	1083-1086	Get	object[59]|person[61]	giv[59]|new[61]	_	_
+19-11	1087-1093	PLEOrb	object[59]|person[61]|abstract	giv[59]|new[61]|giv	coref	24-15
+19-12	1094-1100	Online	object[59]|person[61]	giv[59]|new[61]	_	_
+19-13	1101-1102	"	object[59]	giv[59]	_	_
+19-14	1103-1104	.	_	_	_	_
+
+#Text=Be sure that you 've read the description on the main screen about PLEO .
+20-1	1105-1107	Be	_	_	_	_
+20-2	1108-1112	sure	_	_	_	_
+20-3	1113-1117	that	_	_	_	_
+20-4	1118-1121	you	person	giv	ana	21-10
+20-5	1122-1125	've	_	_	_	_
+20-6	1126-1130	read	_	_	_	_
+20-7	1131-1134	the	abstract[64]	new[64]	_	_
+20-8	1135-1146	description	abstract[64]	new[64]	_	_
+20-9	1147-1149	on	_	_	_	_
+20-10	1150-1153	the	abstract[65]	new[65]	_	_
+20-11	1154-1158	main	abstract[65]	new[65]	_	_
+20-12	1159-1165	screen	abstract[65]	new[65]	_	_
+20-13	1166-1171	about	abstract[65]	new[65]	_	_
+20-14	1172-1176	PLEO	abstract[65]|animal	new[65]|giv	coref	27-4
+20-15	1177-1178	.	_	_	_	_
+
+#Text=From there it is pretty much laid out for you .
+21-1	1179-1183	From	_	_	_	_
+21-2	1184-1189	there	_	_	_	_
+21-3	1190-1192	it	object	giv	coref	23-1[71_0]
+21-4	1193-1195	is	_	_	_	_
+21-5	1196-1202	pretty	_	_	_	_
+21-6	1203-1207	much	_	_	_	_
+21-7	1208-1212	laid	_	_	_	_
+21-8	1213-1216	out	_	_	_	_
+21-9	1217-1220	for	_	_	_	_
+21-10	1221-1224	you	person	giv	ana	23-11
+21-11	1225-1226	.	_	_	_	_
+
+#Text=Make the purchase .
+22-1	1227-1231	Make	_	_	_	_
+22-2	1232-1235	the	event[69]	new[69]	_	_
+22-3	1236-1244	purchase	event[69]	new[69]	_	_
+22-4	1245-1246	.	_	_	_	_
+
+#Text=Once in the shopping tab , choose the best deal you want to offer cash for .
+23-1	1247-1251	Once	object[71]	giv[71]	_	_
+23-2	1252-1254	in	object[71]	giv[71]	_	_
+23-3	1255-1258	the	object[71]	giv[71]	_	_
+23-4	1259-1267	shopping	event|object[71]	new|giv[71]	_	_
+23-5	1268-1271	tab	object[71]	giv[71]	_	_
+23-6	1272-1273	,	_	_	_	_
+23-7	1274-1280	choose	_	_	_	_
+23-8	1281-1284	the	abstract[72]	new[72]	coref	24-6[76_72]
+23-9	1285-1289	best	abstract[72]	new[72]	_	_
+23-10	1290-1294	deal	abstract[72]	new[72]	_	_
+23-11	1295-1298	you	abstract[72]|person	new[72]|giv	ana	24-3
+23-12	1299-1303	want	abstract[72]	new[72]	_	_
+23-13	1304-1306	to	abstract[72]	new[72]	_	_
+23-14	1307-1312	offer	abstract[72]	new[72]	_	_
+23-15	1313-1317	cash	abstract[72]|object	new[72]|new	_	_
+23-16	1318-1321	for	_	_	_	_
+23-17	1322-1323	.	_	_	_	_
+
+#Text=( If you just want a regular deal , choose the one labeled ' PLEOrb Basic Pack ' ) .
+24-1	1324-1325	(	_	_	_	_
+24-2	1326-1328	If	_	_	_	_
+24-3	1329-1332	you	person	giv	ana	26-3
+24-4	1333-1337	just	_	_	_	_
+24-5	1338-1342	want	_	_	_	_
+24-6	1343-1344	a	abstract[76]	giv[76]	_	_
+24-7	1345-1352	regular	abstract[76]	giv[76]	_	_
+24-8	1353-1357	deal	abstract[76]	giv[76]	_	_
+24-9	1358-1359	,	_	_	_	_
+24-10	1360-1366	choose	_	_	_	_
+24-11	1367-1370	the	place[77]	giv[77]	coref	26-6[0_77]
+24-12	1371-1374	one	place[77]	giv[77]	_	_
+24-13	1375-1382	labeled	place[77]	giv[77]	_	_
+24-14	1383-1384	'	place[77]	giv[77]	_	_
+24-15	1385-1391	PLEOrb	place[77]|abstract|object[79]	giv[77]|giv|new[79]	coref	37-7
+24-16	1392-1397	Basic	place[77]|object[79]	giv[77]|new[79]	_	_
+24-17	1398-1402	Pack	place[77]|object[79]	giv[77]|new[79]	_	_
+24-18	1403-1404	'	place[77]	giv[77]	_	_
+24-19	1405-1406	)	_	_	_	_
+24-20	1407-1408	.	_	_	_	_
+
+#Text=Choose the desired color of eyes and skin .
+25-1	1409-1415	Choose	_	_	_	_
+25-2	1416-1419	the	abstract[80]	new[80]	_	_
+25-3	1420-1427	desired	abstract[80]	new[80]	_	_
+25-4	1428-1433	color	abstract[80]	new[80]	_	_
+25-5	1434-1436	of	abstract[80]	new[80]	_	_
+25-6	1437-1441	eyes	abstract[80]|object	new[80]|new	_	_
+25-7	1442-1445	and	abstract[80]	new[80]	_	_
+25-8	1446-1450	skin	abstract[80]|object	new[80]|new	_	_
+25-9	1451-1452	.	_	_	_	_
+
+#Text=Be sure you can afford one .
+26-1	1453-1455	Be	_	_	_	_
+26-2	1456-1460	sure	_	_	_	_
+26-3	1461-1464	you	person	giv	ana	29-18
+26-4	1465-1468	can	_	_	_	_
+26-5	1469-1475	afford	_	_	_	_
+26-6	1476-1479	one	place	giv	coref	29-18[94_0]
+26-7	1480-1481	.	_	_	_	_
+
+#Text=Both types of Pleo are in the hundreds of dollars .
+27-1	1482-1486	Both	place[85]	new[85]	_	_
+27-2	1487-1492	types	place[85]	new[85]	_	_
+27-3	1493-1495	of	place[85]	new[85]	_	_
+27-4	1496-1500	Pleo	place[85]|animal	new[85]|giv	coref	30-10[98_0]
+27-5	1501-1504	are	_	_	_	_
+27-6	1505-1507	in	_	_	_	_
+27-7	1508-1511	the	_	_	_	_
+27-8	1512-1520	hundreds	abstract[87]	new[87]	coref	29-4[91_87]
+27-9	1521-1523	of	abstract[87]	new[87]	_	_
+27-10	1524-1531	dollars	abstract[87]	new[87]	_	_
+27-11	1532-1533	.	_	_	_	_
+
+#Text=Allow for shipping time .
+28-1	1534-1539	Allow	_	_	_	_
+28-2	1540-1543	for	_	_	_	_
+28-3	1544-1552	shipping	abstract|time[89]	new|new[89]	coref	29-1
+28-4	1553-1557	time	time[89]	new[89]	_	_
+28-5	1558-1559	.	_	_	_	_
+
+#Text=Shipping usually costs a few dollars , and can take up to two weeks , depending on your location .
+29-1	1560-1568	Shipping	abstract	giv	_	_
+29-2	1569-1576	usually	_	_	_	_
+29-3	1577-1582	costs	_	_	_	_
+29-4	1583-1584	a	abstract[91]	giv[91]	_	_
+29-5	1585-1588	few	abstract[91]	giv[91]	_	_
+29-6	1589-1596	dollars	abstract[91]	giv[91]	_	_
+29-7	1597-1598	,	_	_	_	_
+29-8	1599-1602	and	_	_	_	_
+29-9	1603-1606	can	_	_	_	_
+29-10	1607-1611	take	_	_	_	_
+29-11	1612-1614	up	time[92]	new[92]	_	_
+29-12	1615-1617	to	time[92]	new[92]	_	_
+29-13	1618-1621	two	time[92]	new[92]	_	_
+29-14	1622-1627	weeks	time[92]	new[92]	_	_
+29-15	1628-1629	,	_	_	_	_
+29-16	1630-1639	depending	_	_	_	_
+29-17	1640-1642	on	_	_	_	_
+29-18	1643-1647	your	person|place[94]	giv|giv[94]	ana	30-2
+29-19	1648-1656	location	place[94]	giv[94]	_	_
+29-20	1657-1658	.	_	_	_	_
+
+#Text=If you live in Asia , you can buy a PLEO from any PLEO WORLD store locations .
+30-1	1659-1661	If	_	_	_	_
+30-2	1662-1665	you	person	giv	ana	30-7
+30-3	1666-1670	live	_	_	_	_
+30-4	1671-1673	in	_	_	_	_
+30-5	1674-1678	Asia	place	giv	_	_
+30-6	1679-1680	,	_	_	_	_
+30-7	1681-1684	you	person	giv	ana	31-2
+30-8	1685-1688	can	_	_	_	_
+30-9	1689-1692	buy	_	_	_	_
+30-10	1693-1694	a	animal[98]	giv[98]	coref	30-14[0_98]
+30-11	1695-1699	PLEO	animal[98]	giv[98]	_	_
+30-12	1700-1704	from	_	_	_	_
+30-13	1705-1708	any	place[102]	new[102]	_	_
+30-14	1709-1713	PLEO	animal|place[100]|place[102]	giv|new[100]|new[102]	coref	34-3[112_0]
+30-15	1714-1719	WORLD	place[100]|place[102]	new[100]|new[102]	_	_
+30-16	1720-1725	store	place|place[102]	new|new[102]	_	_
+30-17	1726-1735	locations	place[102]	new[102]	_	_
+30-18	1736-1737	.	_	_	_	_
+
+#Text=Enjoy your new pet !
+31-1	1738-1743	Enjoy	_	_	_	_
+31-2	1744-1748	your	person|person[104]	giv|new[104]	ana	32-9
+31-3	1749-1752	new	person[104]	new[104]	_	_
+31-4	1753-1756	pet	person[104]	new[104]	_	_
+31-5	1757-1758	!	_	_	_	_
+
+#Text=The best part of the process is unboxing your new friend .
+32-1	1759-1762	The	_	_	_	_
+32-2	1763-1767	best	_	_	_	_
+32-3	1768-1772	part	_	_	_	_
+32-4	1773-1775	of	_	_	_	_
+32-5	1776-1779	the	event[105]	new[105]	_	_
+32-6	1780-1787	process	event[105]	new[105]	_	_
+32-7	1788-1790	is	_	_	_	_
+32-8	1791-1799	unboxing	_	_	_	_
+32-9	1800-1804	your	person|person[107]	giv|new[107]	ana|ana	33-1[0_107]|34-3
+32-10	1805-1808	new	person[107]	new[107]	_	_
+32-11	1809-1815	friend	person[107]	new[107]	_	_
+32-12	1816-1817	.	_	_	_	_
+
+#Text=He/she is " Dormant " for now , but below are instructions to " wake him/her up " .
+33-1	1818-1824	He/she	person	giv	ana	33-16
+33-2	1825-1827	is	_	_	_	_
+33-3	1828-1829	"	_	_	_	_
+33-4	1830-1837	Dormant	_	_	_	_
+33-5	1838-1839	"	_	_	_	_
+33-6	1840-1843	for	_	_	_	_
+33-7	1844-1847	now	_	_	_	_
+33-8	1848-1849	,	_	_	_	_
+33-9	1850-1853	but	_	_	_	_
+33-10	1854-1859	below	_	_	_	_
+33-11	1860-1863	are	_	_	_	_
+33-12	1864-1876	instructions	abstract[109]	new[109]	coref	37-17[0_109]
+33-13	1877-1879	to	abstract[109]	new[109]	_	_
+33-14	1880-1881	"	abstract[109]	new[109]	_	_
+33-15	1882-1886	wake	abstract[109]	new[109]	_	_
+33-16	1887-1894	him/her	abstract[109]|person	new[109]|giv	coref	46-2[151_0]
+33-17	1895-1897	up	abstract[109]	new[109]	_	_
+33-18	1898-1899	"	abstract[109]	new[109]	_	_
+33-19	1900-1901	.	_	_	_	_
+
+#Text=Starting Up Your PLEO
+34-1	1902-1910	Starting	_	_	_	_
+34-2	1911-1913	Up	_	_	_	_
+34-3	1914-1918	Your	person|animal[112]	giv|giv[112]	coref|ana	35-2[0_112]|40-8
+34-4	1919-1923	PLEO	animal[112]	giv[112]	_	_
+
+#Text=Unbox PLEO .
+35-1	1924-1929	Unbox	_	_	_	_
+35-2	1930-1934	PLEO	animal	giv	ana	37-1
+35-3	1935-1936	.	_	_	_	_
+
+#Text=Open the box , and carefully take the assorted items out .
+36-1	1937-1941	Open	_	_	_	_
+36-2	1942-1945	the	object[114]	new[114]	coref	39-5[126_114]
+36-3	1946-1949	box	object[114]	new[114]	_	_
+36-4	1950-1951	,	_	_	_	_
+36-5	1952-1955	and	_	_	_	_
+36-6	1956-1965	carefully	_	_	_	_
+36-7	1966-1970	take	_	_	_	_
+36-8	1971-1974	the	object[115]	new[115]	coref	37-12[121_115]
+36-9	1975-1983	assorted	object[115]	new[115]	_	_
+36-10	1984-1989	items	object[115]	new[115]	_	_
+36-11	1990-1993	out	_	_	_	_
+36-12	1994-1995	.	_	_	_	_
+
+#Text=It should at least include ( PLEOrb ) one PLEO , a couple food items , instructions , and " cape " .
+37-1	1996-1998	It	animal	giv	coref	37-9[118_0]
+37-2	1999-2005	should	_	_	_	_
+37-3	2006-2008	at	_	_	_	_
+37-4	2009-2014	least	_	_	_	_
+37-5	2015-2022	include	_	_	_	_
+37-6	2023-2024	(	_	_	_	_
+37-7	2025-2031	PLEOrb	abstract	giv	_	_
+37-8	2032-2033	)	_	_	_	_
+37-9	2034-2037	one	animal[118]	giv[118]	coref	38-2[0_118]
+37-10	2038-2042	PLEO	animal[118]	giv[118]	_	_
+37-11	2043-2044	,	_	_	_	_
+37-12	2045-2046	a	object[121]	giv[121]	coref	43-8[142_121]
+37-13	2047-2053	couple	time|object[121]	new|giv[121]	_	_
+37-14	2054-2058	food	substance|object[121]	new|giv[121]	coref	49-3
+37-15	2059-2064	items	object[121]	giv[121]	_	_
+37-16	2065-2066	,	_	_	_	_
+37-17	2067-2079	instructions	abstract	giv	coref	39-18[130_0]
+37-18	2080-2081	,	_	_	_	_
+37-19	2082-2085	and	_	_	_	_
+37-20	2086-2087	"	_	_	_	_
+37-21	2088-2092	cape	object	new	_	_
+37-22	2093-2094	"	_	_	_	_
+37-23	2095-2096	.	_	_	_	_
+
+#Text=Turning PLEO on .
+38-1	2097-2104	Turning	_	_	_	_
+38-2	2105-2109	PLEO	animal	giv	coref	39-16
+38-3	2110-2112	on	_	_	_	_
+38-4	2113-2114	.	_	_	_	_
+
+#Text=Take the battery , the brown box ; and plug it in the tummy of PLEO ( the instructions should be more detailed ) .
+39-1	2115-2119	Take	_	_	_	_
+39-2	2120-2123	the	object[125]	new[125]	ana	39-11[0_125]
+39-3	2124-2131	battery	object[125]	new[125]	_	_
+39-4	2132-2133	,	_	_	_	_
+39-5	2134-2137	the	object[126]	giv[126]	_	_
+39-6	2138-2143	brown	object[126]	giv[126]	_	_
+39-7	2144-2147	box	object[126]	giv[126]	_	_
+39-8	2148-2149	;	_	_	_	_
+39-9	2150-2153	and	_	_	_	_
+39-10	2154-2158	plug	_	_	_	_
+39-11	2159-2161	it	object	giv	coref	40-5[132_0]
+39-12	2162-2164	in	_	_	_	_
+39-13	2165-2168	the	object[128]	new[128]	_	_
+39-14	2169-2174	tummy	object[128]	new[128]	_	_
+39-15	2175-2177	of	object[128]	new[128]	_	_
+39-16	2178-2182	PLEO	object[128]|animal	new[128]|giv	coref	41-4[136_0]
+39-17	2183-2184	(	_	_	_	_
+39-18	2185-2188	the	abstract[130]	giv[130]	coref	47-9[155_130]
+39-19	2189-2201	instructions	abstract[130]	giv[130]	_	_
+39-20	2202-2208	should	_	_	_	_
+39-21	2209-2211	be	_	_	_	_
+39-22	2212-2216	more	_	_	_	_
+39-23	2217-2225	detailed	_	_	_	_
+39-24	2226-2227	)	_	_	_	_
+39-25	2228-2229	.	_	_	_	_
+
+#Text=Close the flap of the battery and you will see a light flashing green or red .
+40-1	2230-2235	Close	_	_	_	_
+40-2	2236-2239	the	object[131]	new[131]	_	_
+40-3	2240-2244	flap	object[131]	new[131]	_	_
+40-4	2245-2247	of	object[131]	new[131]	_	_
+40-5	2248-2251	the	object[131]|object[132]	new[131]|giv[132]	coref	45-8[147_132]
+40-6	2252-2259	battery	object[131]|object[132]	new[131]|giv[132]	_	_
+40-7	2260-2263	and	_	_	_	_
+40-8	2264-2267	you	person	giv	ana	42-4
+40-9	2268-2272	will	_	_	_	_
+40-10	2273-2276	see	_	_	_	_
+40-11	2277-2278	a	abstract[134]	new[134]	_	_
+40-12	2279-2284	light	abstract[134]	new[134]	_	_
+40-13	2285-2293	flashing	abstract[134]	new[134]	_	_
+40-14	2294-2299	green	abstract[134]	new[134]	_	_
+40-15	2300-2302	or	abstract[134]	new[134]	_	_
+40-16	2303-2306	red	abstract[134]	new[134]	_	_
+40-17	2307-2308	.	_	_	_	_
+
+#Text=If green , Youre PLEO is ready to play .
+41-1	2309-2311	If	_	_	_	_
+41-2	2312-2317	green	_	_	_	_
+41-3	2318-2319	,	_	_	_	_
+41-4	2320-2325	Youre	person|animal[136]	new|giv[136]	coref	42-4[138_136]
+41-5	2326-2330	PLEO	animal[136]	giv[136]	_	_
+41-6	2331-2333	is	_	_	_	_
+41-7	2334-2339	ready	_	_	_	_
+41-8	2340-2342	to	_	_	_	_
+41-9	2343-2347	play	_	_	_	_
+41-10	2348-2349	.	_	_	_	_
+
+#Text=If red , your PLEO is sleepy and needs rest .
+42-1	2350-2352	If	_	_	_	_
+42-2	2353-2356	red	_	_	_	_
+42-3	2357-2358	,	_	_	_	_
+42-4	2359-2363	your	person|animal[138]	giv|giv[138]	coref|ana	43-1[140_138]|46-2
+42-5	2364-2368	PLEO	animal[138]	giv[138]	_	_
+42-6	2369-2371	is	_	_	_	_
+42-7	2372-2378	sleepy	_	_	_	_
+42-8	2379-2382	and	_	_	_	_
+42-9	2383-2388	needs	_	_	_	_
+42-10	2389-2393	rest	person	new	ana	44-2
+42-11	2394-2395	.	_	_	_	_
+
+#Text=PLEO original will have more slots for various items .
+43-1	2396-2400	PLEO	animal[140]	giv[140]	coref	47-7[0_140]
+43-2	2401-2409	original	animal[140]	giv[140]	_	_
+43-3	2410-2414	will	_	_	_	_
+43-4	2415-2419	have	_	_	_	_
+43-5	2420-2424	more	object[141]	new[141]	_	_
+43-6	2425-2430	slots	object[141]	new[141]	_	_
+43-7	2431-2434	for	object[141]	new[141]	_	_
+43-8	2435-2442	various	object[141]|object[142]	new[141]|giv[142]	coref	49-2[159_142]
+43-9	2443-2448	items	object[141]|object[142]	new[141]|giv[142]	_	_
+43-10	2449-2450	.	_	_	_	_
+
+#Text=If he is ready to play , let him/her get 10 seconds or less to " wake up " .
+44-1	2451-2453	If	_	_	_	_
+44-2	2454-2456	he	person	giv	ana	44-9
+44-3	2457-2459	is	_	_	_	_
+44-4	2460-2465	ready	_	_	_	_
+44-5	2466-2468	to	_	_	_	_
+44-6	2469-2473	play	_	_	_	_
+44-7	2474-2475	,	_	_	_	_
+44-8	2476-2479	let	_	_	_	_
+44-9	2480-2487	him/her	person	giv	ana	45-2
+44-10	2488-2491	get	_	_	_	_
+44-11	2492-2494	10	time[145]	new[145]	_	_
+44-12	2495-2502	seconds	time[145]	new[145]	_	_
+44-13	2503-2505	or	_	_	_	_
+44-14	2506-2510	less	_	_	_	_
+44-15	2511-2513	to	_	_	_	_
+44-16	2514-2515	"	_	_	_	_
+44-17	2516-2520	wake	_	_	_	_
+44-18	2521-2523	up	_	_	_	_
+44-19	2524-2525	"	_	_	_	_
+44-20	2526-2527	.	_	_	_	_
+
+#Text=If he is sleepy , take out the battery and put it on the charger .
+45-1	2528-2530	If	_	_	_	_
+45-2	2531-2533	he	person	giv	_	_
+45-3	2534-2536	is	_	_	_	_
+45-4	2537-2543	sleepy	_	_	_	_
+45-5	2544-2545	,	_	_	_	_
+45-6	2546-2550	take	_	_	_	_
+45-7	2551-2554	out	_	_	_	_
+45-8	2555-2558	the	object[147]	giv[147]	ana	45-12[0_147]
+45-9	2559-2566	battery	object[147]	giv[147]	_	_
+45-10	2567-2570	and	_	_	_	_
+45-11	2571-2574	put	_	_	_	_
+45-12	2575-2577	it	object	giv	_	_
+45-13	2578-2580	on	_	_	_	_
+45-14	2581-2584	the	object[149]	new[149]	_	_
+45-15	2585-2592	charger	object[149]	new[149]	_	_
+45-16	2593-2594	.	_	_	_	_
+
+#Text=Enjoy your new friend .
+46-1	2595-2600	Enjoy	_	_	_	_
+46-2	2601-2605	your	person|person[151]	giv|giv[151]	ana	47-2
+46-3	2606-2609	new	person[151]	giv[151]	_	_
+46-4	2610-2616	friend	person[151]	giv[151]	_	_
+46-5	2617-2618	.	_	_	_	_
+
+#Text=Now you can learn all about pleo in your instructions !
+47-1	2619-2622	Now	_	_	_	_
+47-2	2623-2626	you	person	giv	ana	47-9
+47-3	2627-2630	can	_	_	_	_
+47-4	2631-2636	learn	_	_	_	_
+47-5	2637-2640	all	_	_	_	_
+47-6	2641-2646	about	_	_	_	_
+47-7	2647-2651	pleo	animal	giv	coref	48-2[157_0]
+47-8	2652-2654	in	_	_	_	_
+47-9	2655-2659	your	person|abstract[155]	giv|giv[155]	ana	48-2
+47-10	2660-2672	instructions	abstract[155]	giv[155]	_	_
+47-11	2673-2674	!	_	_	_	_
+
+#Text=Feeding Your PLEO
+48-1	2675-2682	Feeding	_	_	_	_
+48-2	2683-2687	Your	person|animal[157]	giv|giv[157]	ana|ana	51-3[0_157]|55-6
+48-3	2688-2692	PLEO	animal[157]	giv[157]	_	_
+
+#Text=Find the food items .
+49-1	2693-2697	Find	_	_	_	_
+49-2	2698-2701	the	object[159]	giv[159]	coref	50-6[162_159]
+49-3	2702-2706	food	substance|object[159]	giv|giv[159]	coref	50-9
+49-4	2707-2712	items	object[159]	giv[159]	_	_
+49-5	2713-2714	.	_	_	_	_
+
+#Text=Each basic kit should contain a couple of food items .
+50-1	2715-2719	Each	abstract[160]	new[160]	ana	51-9[0_160]
+50-2	2720-2725	basic	abstract[160]	new[160]	_	_
+50-3	2726-2729	kit	abstract[160]	new[160]	_	_
+50-4	2730-2736	should	_	_	_	_
+50-5	2737-2744	contain	_	_	_	_
+50-6	2745-2746	a	object[162]	giv[162]	_	_
+50-7	2747-2753	couple	object[162]	giv[162]	_	_
+50-8	2754-2756	of	object[162]	giv[162]	_	_
+50-9	2757-2761	food	substance|object[162]	giv|giv[162]	coref	54-3[175_0]
+50-10	2762-2767	items	object[162]	giv[162]	_	_
+50-11	2768-2769	.	_	_	_	_
+
+#Text=To feed him any of these , brush it under PLEO 's chin to sense it .
+51-1	2770-2772	To	_	_	_	_
+51-2	2773-2777	feed	_	_	_	_
+51-3	2778-2781	him	animal	giv	coref	51-11[165_0]
+51-4	2782-2785	any	_	_	_	_
+51-5	2786-2788	of	_	_	_	_
+51-6	2789-2794	these	_	_	_	_
+51-7	2795-2796	,	_	_	_	_
+51-8	2797-2802	brush	_	_	_	_
+51-9	2803-2805	it	abstract	giv	ana	51-16
+51-10	2806-2811	under	_	_	_	_
+51-11	2812-2816	PLEO	animal[165]|object[166]	giv[165]|new[166]	ana	52-2[0_165]
+51-12	2817-2819	's	animal[165]|object[166]	giv[165]|new[166]	_	_
+51-13	2820-2824	chin	object[166]	new[166]	_	_
+51-14	2825-2827	to	_	_	_	_
+51-15	2828-2833	sense	_	_	_	_
+51-16	2834-2836	it	abstract	giv	ana	52-5
+51-17	2837-2838	.	_	_	_	_
+
+#Text=Then he will chew it .
+52-1	2839-2843	Then	_	_	_	_
+52-2	2844-2846	he	animal	giv	coref	53-7
+52-3	2847-2851	will	_	_	_	_
+52-4	2852-2856	chew	_	_	_	_
+52-5	2857-2859	it	abstract	giv	_	_
+52-6	2860-2861	.	_	_	_	_
+
+#Text=cycad ; a necessary nutrient for PLEO daily
+53-1	2862-2867	cycad	substance	new	_	_
+53-2	2868-2869	;	_	_	_	_
+53-3	2870-2871	a	substance[171]	new[171]	_	_
+53-4	2872-2881	necessary	substance[171]	new[171]	_	_
+53-5	2882-2890	nutrient	substance[171]	new[171]	_	_
+53-6	2891-2894	for	substance[171]	new[171]	_	_
+53-7	2895-2899	PLEO	substance[171]|animal|time[173]	new[171]|giv|new[173]	coref	54-7
+53-8	2900-2905	daily	substance[171]|time[173]	new[171]|new[173]	_	_
+
+#Text=conifer ; another important food for PLEO
+54-1	2906-2913	conifer	plant	new	_	_
+54-2	2914-2915	;	_	_	_	_
+54-3	2916-2923	another	substance[175]	giv[175]	coref	56-3[183_175]
+54-4	2924-2933	important	substance[175]	giv[175]	_	_
+54-5	2934-2938	food	substance[175]	giv[175]	_	_
+54-6	2939-2942	for	substance[175]	giv[175]	_	_
+54-7	2943-2947	PLEO	substance[175]|animal	giv[175]|giv	coref	55-6[180_0]
+
+#Text=coffee leaves ; will soothe your PLEO , but do n't overfeed it !
+55-1	2948-2954	coffee	substance|plant[178]	new|new[178]	_	_
+55-2	2955-2961	leaves	plant[178]	new[178]	_	_
+55-3	2962-2963	;	_	_	_	_
+55-4	2964-2968	will	_	_	_	_
+55-5	2969-2975	soothe	_	_	_	_
+55-6	2976-2980	your	person|animal[180]	giv|giv[180]	ana|ana	55-13[0_180]|56-5
+55-7	2981-2985	PLEO	animal[180]	giv[180]	_	_
+55-8	2986-2987	,	_	_	_	_
+55-9	2988-2991	but	_	_	_	_
+55-10	2992-2994	do	_	_	_	_
+55-11	2995-2998	n't	_	_	_	_
+55-12	2999-3007	overfeed	_	_	_	_
+55-13	3008-3010	it	animal	giv	coref	56-5[185_0]
+55-14	3011-3012	!	_	_	_	_
+
+#Text=mushrooms ; food for your PLEO 's health .
+56-1	3013-3022	mushrooms	plant	new	_	_
+56-2	3023-3024	;	_	_	_	_
+56-3	3025-3029	food	substance[183]	giv[183]	_	_
+56-4	3030-3033	for	substance[183]	giv[183]	_	_
+56-5	3034-3038	your	substance[183]|person|animal[185]|abstract[186]	giv[183]|giv|giv[185]|new[186]	ana|ana	57-8[0_185]|63-3
+56-6	3039-3043	PLEO	substance[183]|animal[185]|abstract[186]	giv[183]|giv[185]|new[186]	_	_
+56-7	3044-3046	's	substance[183]|animal[185]|abstract[186]	giv[183]|giv[185]|new[186]	_	_
+56-8	3047-3053	health	substance[183]|abstract[186]	giv[183]|new[186]	_	_
+56-9	3054-3055	.	_	_	_	_
+
+#Text=chilli peppers ; use them to recover him if tired .
+57-1	3056-3062	chilli	abstract|substance[188]	new|new[188]	ana	57-5[0_188]
+57-2	3063-3070	peppers	substance[188]	new[188]	_	_
+57-3	3071-3072	;	_	_	_	_
+57-4	3073-3076	use	_	_	_	_
+57-5	3077-3081	them	substance	giv	_	_
+57-6	3082-3084	to	_	_	_	_
+57-7	3085-3092	recover	_	_	_	_
+57-8	3093-3096	him	animal	giv	ana	58-4
+57-9	3097-3099	if	_	_	_	_
+57-10	3100-3105	tired	_	_	_	_
+57-11	3106-3107	.	_	_	_	_
+
+#Text=ice ; recover him if over hot .
+58-1	3108-3111	ice	substance	new	_	_
+58-2	3112-3113	;	_	_	_	_
+58-3	3114-3121	recover	_	_	_	_
+58-4	3122-3125	him	animal	giv	coref	63-3[204_0]
+58-5	3126-3128	if	_	_	_	_
+58-6	3129-3133	over	_	_	_	_
+58-7	3134-3137	hot	_	_	_	_
+58-8	3138-3139	.	_	_	_	_
+
+#Text=mint leaf ; cures sickness
+59-1	3140-3144	mint	organization|plant[194]	new|new[194]	_	_
+59-2	3145-3149	leaf	plant[194]	new[194]	_	_
+59-3	3150-3151	;	_	_	_	_
+59-4	3152-3157	cures	_	_	_	_
+59-5	3158-3166	sickness	abstract	new	_	_
+
+#Text=rock salt ; cures physical injury
+60-1	3167-3171	rock	substance|substance[197]	new|new[197]	_	_
+60-2	3172-3176	salt	substance[197]	new[197]	_	_
+60-3	3177-3178	;	_	_	_	_
+60-4	3179-3184	cures	_	_	_	_
+60-5	3185-3193	physical	event[198]	new[198]	_	_
+60-6	3194-3200	injury	event[198]	new[198]	_	_
+
+#Text=Do not overfeed the toy .
+61-1	3201-3203	Do	_	_	_	_
+61-2	3204-3207	not	_	_	_	_
+61-3	3208-3216	overfeed	_	_	_	_
+61-4	3217-3220	the	object[199]	new[199]	coref	62-10[201_199]
+61-5	3221-3224	toy	object[199]	new[199]	_	_
+61-6	3225-3226	.	_	_	_	_
+
+#Text=If any of these foods are used to overfeed the toy , it will sicken .
+62-1	3227-3229	If	_	_	_	_
+62-2	3230-3233	any	_	_	_	_
+62-3	3234-3236	of	_	_	_	_
+62-4	3237-3242	these	substance[200]	new[200]	_	_
+62-5	3243-3248	foods	substance[200]	new[200]	_	_
+62-6	3249-3252	are	_	_	_	_
+62-7	3253-3257	used	_	_	_	_
+62-8	3258-3260	to	_	_	_	_
+62-9	3261-3269	overfeed	_	_	_	_
+62-10	3270-3273	the	object[201]	giv[201]	ana	62-13[0_201]
+62-11	3274-3277	toy	object[201]	giv[201]	_	_
+62-12	3278-3279	,	_	_	_	_
+62-13	3280-3282	it	object	giv	_	_
+62-14	3283-3287	will	_	_	_	_
+62-15	3288-3294	sicken	_	_	_	_
+62-16	3295-3296	.	_	_	_	_
+
+#Text=Playing with Your PLEO
+63-1	3297-3304	Playing	_	_	_	_
+63-2	3305-3309	with	_	_	_	_
+63-3	3310-3314	Your	person|animal[204]	giv|giv[204]	ana|coref	64-4|64-4[206_204]
+63-4	3315-3319	PLEO	animal[204]	giv[204]	_	_
+
+#Text=Tow will give your PLEO a tug-of-war game .
+64-1	3320-3323	Tow	_	_	_	_
+64-2	3324-3328	will	_	_	_	_
+64-3	3329-3333	give	_	_	_	_
+64-4	3334-3338	your	person|animal[206]	giv|giv[206]	ana	67-2[0_206]
+64-5	3339-3343	PLEO	animal[206]	giv[206]	_	_
+64-6	3344-3345	a	event[208]	new[208]	ana	65-2[0_208]
+64-7	3346-3356	tug-of-war	object|event[208]	new|new[208]	_	_
+64-8	3357-3361	game	event[208]	new[208]	_	_
+64-9	3362-3363	.	_	_	_	_
+
+#Text=[ This needs to be clarified , feel free to edit . ]
+65-1	3364-3365	[	_	_	_	_
+65-2	3366-3370	This	event	giv	_	_
+65-3	3371-3376	needs	_	_	_	_
+65-4	3377-3379	to	_	_	_	_
+65-5	3380-3382	be	_	_	_	_
+65-6	3383-3392	clarified	_	_	_	_
+65-7	3393-3394	,	_	_	_	_
+65-8	3395-3399	feel	_	_	_	_
+65-9	3400-3404	free	_	_	_	_
+65-10	3405-3407	to	_	_	_	_
+65-11	3408-3412	edit	_	_	_	_
+65-12	3413-3414	.	_	_	_	_
+65-13	3415-3416	]	_	_	_	_
+
+#Text=Learning stones
+66-1	3417-3425	Learning	object[210]	new[210]	_	_
+66-2	3426-3432	stones	object[210]	new[210]	_	_
+
+#Text=teach him new trick .
+67-1	3433-3438	teach	_	_	_	_
+67-2	3439-3442	him	animal	giv	_	_
+67-3	3443-3446	new	abstract[212]	new[212]	_	_
+67-4	3447-3452	trick	abstract[212]	new[212]	_	_
+67-5	3453-3454	.	_	_	_	_

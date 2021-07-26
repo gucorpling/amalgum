@@ -1,0 +1,148 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1.</segment>
+<segment id="2" parent="1002" relname="preparation">Introduction</segment>
+<segment id="3" parent="1005" relname="span">One of the key technologies</segment>
+<segment id="4" parent="3" relname="elaboration">employed in 5G communication</segment>
+<segment id="5" parent="1005" relname="purpose">to realize high data rates of up to 10 Gbps</segment>
+<segment id="6" parent="1007" relname="span">is the massive multiple-input multiple output</segment>
+<segment id="7" parent="6" relname="restatement">( MIMO )</segment>
+<segment id="8" parent="1008" relname="span">system ,</segment>
+<segment id="9" parent="8" relname="elaboration">which benefits from the use of a large number of antennas .</segment>
+<segment id="10" parent="1010" relname="preparation">In a conventional fully digital precoding architecture for MIMO systems ,</segment>
+<segment id="11" parent="1013" relname="span">each RF chain is connected to a single antenna ,</segment>
+<segment id="12" parent="11" relname="elaboration">which is a challenge from the viewpoint of massive MIMO systems .</segment>
+<segment id="13" parent="1014" relname="span">Specifically , a large number of RF chains can increase power consumption substantially in fully digital MIMO systems .</segment>
+<segment id="14" parent="1016" relname="span">To resolve this problem , hybrid beamforming</segment>
+<segment id="15" parent="14" relname="restatement">( HBF )</segment>
+<segment id="16" parent="1017" relname="span">architectures ,</segment>
+<segment id="17" parent="16" relname="elaboration">which consist of analog and digital beamforming , have been proposed .</segment>
+<segment id="18" parent="1018" relname="span">Hybrid beamforming architectures can be classified into two types :</segment>
+<segment id="19" parent="1020" relname="span">fully connected hybrid beamforming</segment>
+<segment id="20" parent="19" relname="restatement">( FC-HBF )</segment>
+<segment id="21" parent="1021" relname="span">and partially connected hybrid beamforming</segment>
+<segment id="22" parent="21" relname="restatement">( PC-HBF ) .</segment>
+<segment id="23" parent="1024" relname="span">The number of required variable phase shifters</segment>
+<segment id="24" parent="23" relname="restatement">( VPS )</segment>
+<segment id="25" parent="1025" relname="span">in a fully connected architecture is ,</segment>
+<segment id="26" parent="1026" relname="joint">where is the number of antennas ,</segment>
+<segment id="27" parent="1026" relname="joint">and is the number of RF chains .</segment>
+<segment id="28" parent="1028" relname="span">According to , the power consumption of one VPS is 30 mW ,</segment>
+<segment id="29" parent="28" relname="elaboration">which can contribute significantly to the power consumption of a massive MIMO system in a collective manner .</segment>
+<segment id="30" parent="1010" relname="joint">To reduce total power consumption , the PC-HBF architecture has been considered .</segment>
+<segment id="31" parent="1031" relname="span">Compared with the FC-HBF architecture , the number of required phase shifters is reduced to in the PC-HBF architecture ,</segment>
+<segment id="32" parent="1032" relname="joint">which reduces hardware complexity</segment>
+<segment id="33" parent="1032" relname="joint">and lowers power consumption .</segment>
+<segment id="34" parent="1034" relname="span">Another advantage of the PC-HBF architecture is that it typically requires substantially lower computational complexity than the FC-HBF architecture</segment>
+<segment id="35" parent="34" relname="cause">because of the reduced number of signal processing paths .</segment>
+<segment id="36" parent="1036" relname="span">Furthermore , in the PC-HBF architecture , a single subarray can transmit a data stream ,</segment>
+<segment id="37" parent="1037" relname="span">which provides flexibility</segment>
+<segment id="38" parent="37" relname="circumstance">when choosing the beam direction .</segment>
+<segment id="39" parent="1040" relname="span">In , an infinite-resolution phase shifters and a switch network are used for PC-HBF ,</segment>
+<segment id="40" parent="39" relname="manner">whereas analog precoders are found through mutual information maximization in a multi-user MIMO system .</segment>
+<segment id="41" parent="1043" relname="span">In , the employment of phase over-samplers</segment>
+<segment id="42" parent="41" relname="restatement">( POSs )</segment>
+<segment id="43" parent="1042" relname="same_unit">and a switch network for analog precoding is introduced .</segment>
+<segment id="44" parent="1045" relname="span">In , the researchers also propose a PC-HBF scheme ,</segment>
+<segment id="45" parent="44" relname="elaboration">which employs POSs ,</segment>
+<segment id="46" parent="1044" relname="same_unit">but an evaluation of its performance is left for future work .</segment>
+<segment id="47" parent="1049" relname="attribution">In , the researchers demonstrate</segment>
+<segment id="48" parent="1049" relname="span">that CPSs and switches can be used for analog beamforming</segment>
+<segment id="49" parent="1050" relname="span">to reduce power consumption</segment>
+<segment id="50" parent="49" relname="cause">because a CPS consumes approximately less power than a VPS .</segment>
+<segment id="51" parent="1053" relname="attribution">Motivated by the low power consumption property of CPSs/switches and the relatively higher spectral efficiency of VPS-based HBF ,</segment>
+<segment id="52" parent="1053" relname="span">we propose a new PC-HBF architecture</segment>
+<segment id="53" parent="1054" relname="span">that employs both VPSs and CPSs</segment>
+<segment id="54" parent="53" relname="purpose">to harness the advantages of both types of phase shifters .</segment>
+<segment id="55" parent="1056" relname="span">The proposed architecture poses a combinatorial optimization problem</segment>
+<segment id="56" parent="1057" relname="span">that must be solved</segment>
+<segment id="57" parent="1058" relname="span">to allocate VPSs and CPSs to appropriate antennas</segment>
+<segment id="58" parent="57" relname="elaboration">such that the system sum-rate can be maximized .</segment>
+<segment id="59" parent="1038" relname="joint">We formulate a system sum-rate optimization problem for analog beamforming design .</segment>
+<segment id="60" parent="1060" relname="span">Exhaustive search can find the ideal solution to this combinatorial problem .</segment>
+<segment id="61" parent="1062" relname="span">However , given the excessively large number of combinations ,</segment>
+<segment id="62" parent="61" relname="elaboration">exhaustive search is impractical in the context of massive MIMO systems .</segment>
+<segment id="63" parent="1065" relname="attribution">To resolve this problem ,</segment>
+<segment id="64" parent="1065" relname="span">we propose a near-optimal greedy algorithm</segment>
+<segment id="65" parent="64" relname="elaboration">that optimizes the system sum-rate heuristically .</segment>
+<segment id="66" parent="1066" relname="joint">The remainder of this paper is organized as follows .</segment>
+<segment id="67" parent="1067" relname="span">Section 2 briefly describes the system model ,</segment>
+<segment id="68" parent="67" relname="circumstance">whereas the proposed architecture and the developed algorithm are discussed in Section 3 .</segment>
+<segment id="69" parent="1038" relname="joint">Section 4 describes simulation results .</segment>
+<segment id="70" parent="1038" relname="joint">Finally , our conclusions are given in Section 5 .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1004" relname="span"/>
+<group id="1006" type="multinuc" parent="1003" relname="same_unit"/>
+<group id="1007" type="span" parent="1006" relname="same_unit"/>
+<group id="1008" type="span" parent="1006" relname="same_unit"/>
+<group id="1009" type="span" parent="1002" relname="joint"/>
+<group id="1010" type="multinuc" parent="1009" relname="span"/>
+<group id="1011" type="span" parent="1010" relname="joint"/>
+<group id="1012" type="multinuc" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="1012" relname="sequence"/>
+<group id="1014" type="span" parent="1012" relname="sequence"/>
+<group id="1015" type="multinuc" parent="13" relname="purpose"/>
+<group id="1016" type="span" parent="1015" relname="same_unit"/>
+<group id="1017" type="span" parent="1015" relname="same_unit"/>
+<group id="1018" type="span" parent="1012" relname="elaboration"/>
+<group id="1019" type="multinuc" parent="18" relname="elaboration"/>
+<group id="1020" type="span" parent="1019" relname="same_unit"/>
+<group id="1021" type="span" parent="1019" relname="same_unit"/>
+<group id="1023" type="multinuc" parent="1010" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="same_unit"/>
+<group id="1025" type="span" parent="1023" relname="same_unit"/>
+<group id="1026" type="multinuc" parent="25" relname="elaboration"/>
+<group id="1028" type="span" parent="1010" relname="joint"/>
+<group id="1031" type="span" parent="1010" relname="joint"/>
+<group id="1032" type="multinuc" parent="31" relname="elaboration"/>
+<group id="1034" type="span" parent="1010" relname="joint"/>
+<group id="1035" type="span" parent="1010" relname="joint"/>
+<group id="1036" type="span" parent="1038" relname="preparation"/>
+<group id="1037" type="span" parent="36" relname="elaboration"/>
+<group id="1038" type="multinuc" parent="1035" relname="span"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="span"/>
+<group id="1041" type="span" parent="1040" relname="elaboration"/>
+<group id="1042" type="multinuc" parent="1041" relname="span"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="multinuc" parent="1042" relname="elaboration"/>
+<group id="1045" type="span" parent="1044" relname="same_unit"/>
+<group id="1048" type="span" parent="1038" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="48" relname="purpose"/>
+<group id="1052" type="span" parent="1038" relname="joint"/>
+<group id="1053" type="span" parent="1052" relname="span"/>
+<group id="1054" type="span" parent="52" relname="elaboration"/>
+<group id="1056" type="span" parent="1038" relname="joint"/>
+<group id="1057" type="span" parent="55" relname="elaboration"/>
+<group id="1058" type="span" parent="56" relname="purpose"/>
+<group id="1060" type="span" parent="1038" relname="joint"/>
+<group id="1061" type="multinuc" parent="60" relname="concession"/>
+<group id="1062" type="span" parent="1061" relname="joint"/>
+<group id="1063" type="multinuc" parent="1061" relname="joint"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="multinuc" parent="1063" relname="joint"/>
+<group id="1067" type="span" parent="1066" relname="joint"/>
+	</body>
+</rst>

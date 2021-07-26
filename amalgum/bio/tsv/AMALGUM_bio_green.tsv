@@ -1,0 +1,847 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Gary M. Green
+1-1	0-4	Gary	person[1]	new[1]	coref	2-1[2_1]
+1-2	5-7	M.	person[1]	new[1]	_	_
+1-3	8-13	Green	person[1]	new[1]	_	_
+
+#Text=Gary M. Green ( born 20th century ) is a musician , author , television host , gaming consultant and entrepreneur . [ 1 ] [ 2 ] [ 3 ]
+2-1	14-18	Gary	person[2]	giv[2]	coref	2-10[4_2]
+2-2	19-21	M.	person[2]	giv[2]	_	_
+2-3	22-27	Green	person[2]	giv[2]	_	_
+2-4	28-29	(	person[2]	giv[2]	_	_
+2-5	30-34	born	person[2]	giv[2]	_	_
+2-6	35-39	20th	person[2]|time[3]	giv[2]|new[3]	_	_
+2-7	40-47	century	person[2]|time[3]	giv[2]|new[3]	_	_
+2-8	48-49	)	person[2]	giv[2]	_	_
+2-9	50-52	is	_	_	_	_
+2-10	53-54	a	person[4]|person[5]	giv[4]|giv[5]	coref|coref	2-10[5_4]|5-1[0_5]
+2-11	55-63	musician	person[4]|person[5]	giv[4]|giv[5]	_	_
+2-12	64-65	,	person[5]	giv[5]	_	_
+2-13	66-72	author	person[5]|person	giv[5]|new	_	_
+2-14	73-74	,	person[5]	giv[5]	_	_
+2-15	75-85	television	person[5]|abstract|person[8]	giv[5]|new|new[8]	coref	3-21
+2-16	86-90	host	person[5]|person[8]	giv[5]|new[8]	_	_
+2-17	91-92	,	person[5]	giv[5]	_	_
+2-18	93-99	gaming	person[5]|abstract|person[10]	giv[5]|new|new[10]	_	_
+2-19	100-110	consultant	person[5]|person[10]	giv[5]|new[10]	_	_
+2-20	111-114	and	person[5]	giv[5]	_	_
+2-21	115-127	entrepreneur	person[5]|person	giv[5]|new	ana	3-1
+2-22	128-129	.	_	_	_	_
+2-23	130-131	[	_	_	_	_
+2-24	132-133	1	abstract	new	coref	34-47
+2-25	134-135	]	_	_	_	_
+2-26	136-137	[	_	_	_	_
+2-27	138-139	2	abstract	new	coref	30-23
+2-28	140-141	]	_	_	_	_
+2-29	142-143	[	_	_	_	_
+2-30	144-145	3	abstract	new	coref	3-12
+2-31	146-147	]	_	_	_	_
+
+#Text=He was vice president of marketing for The Trump Organization [ 3 ] [ 4 ] and appeared on the television reality game show The Apprentice . [ 5 ]
+3-1	148-150	He	person	giv	coref	3-3[16_0]
+3-2	151-154	was	_	_	_	_
+3-3	155-159	vice	person[16]	giv[16]	ana	4-1[0_16]
+3-4	160-169	president	person[16]	giv[16]	_	_
+3-5	170-172	of	person[16]	giv[16]	_	_
+3-6	173-182	marketing	person[16]|abstract[17]	giv[16]|new[17]	_	_
+3-7	183-186	for	person[16]|abstract[17]	giv[16]|new[17]	_	_
+3-8	187-190	The	person[16]|abstract[17]|organization[19]	giv[16]|new[17]|new[19]	coref	30-8[191_19]
+3-9	191-196	Trump	person[16]|abstract[17]|person|organization[19]	giv[16]|new[17]|new|new[19]	coref	19-6[118_0]
+3-10	197-209	Organization	person[16]|abstract[17]|organization[19]	giv[16]|new[17]|new[19]	_	_
+3-11	210-211	[	_	_	_	_
+3-12	212-213	3	abstract	giv	coref	12-28
+3-13	214-215	]	_	_	_	_
+3-14	216-217	[	_	_	_	_
+3-15	218-219	4	abstract	new	coref	5-19
+3-16	220-221	]	_	_	_	_
+3-17	222-225	and	_	_	_	_
+3-18	226-234	appeared	_	_	_	_
+3-19	235-237	on	_	_	_	_
+3-20	238-241	the	abstract[25]	new[25]	appos	3-25[26_25]
+3-21	242-252	television	abstract|abstract[25]	giv|new[25]	coref	4-7
+3-22	253-260	reality	event|abstract[24]|abstract[25]	new|new[24]|new[25]	_	_
+3-23	261-265	game	abstract[24]|abstract[25]	new[24]|new[25]	_	_
+3-24	266-270	show	abstract[25]	new[25]	_	_
+3-25	271-274	The	abstract[26]	giv[26]	_	_
+3-26	275-285	Apprentice	abstract[26]	giv[26]	_	_
+3-27	286-287	.	_	_	_	_
+3-28	288-289	[	_	_	_	_
+3-29	290-291	5	abstract	new	coref	4-18
+3-30	292-293	]	_	_	_	_
+
+#Text=He was also on the 2004 television special New Year 's Eve with Carson Daly . [ 5 ]
+4-1	294-296	He	person	giv	_	_
+4-2	297-300	was	_	_	_	_
+4-3	301-305	also	_	_	_	_
+4-4	306-308	on	_	_	_	_
+4-5	309-312	the	abstract[30]	new[30]	_	_
+4-6	313-317	2004	abstract[30]	new[30]	_	_
+4-7	318-328	television	abstract|abstract[30]	giv|new[30]	coref	7-11
+4-8	329-336	special	abstract[30]	new[30]	_	_
+4-9	337-340	New	event[31]	new[31]	_	_
+4-10	341-345	Year	event[31]	new[31]	_	_
+4-11	346-348	's	event[31]	new[31]	_	_
+4-12	349-352	Eve	event[31]	new[31]	_	_
+4-13	353-357	with	_	_	_	_
+4-14	358-364	Carson	person[32]	new[32]	ana	6-1[0_32]
+4-15	365-369	Daly	person[32]	new[32]	_	_
+4-16	370-371	.	_	_	_	_
+4-17	372-373	[	_	_	_	_
+4-18	374-375	5	abstract	giv	coref	14-20
+4-19	376-377	]	_	_	_	_
+
+#Text=Green was executive vice president of Synergy Gaming , and the public face of the company . [ 4 ]
+5-1	378-383	Green	person	giv	coref	5-3[36_0]
+5-2	384-387	was	_	_	_	_
+5-3	388-397	executive	person[36]|person[37]	giv[36]|giv[37]	coref|coref	5-3[37_36]|10-1[59_37]
+5-4	398-402	vice	abstract|person[36]|person[37]	new|giv[36]|giv[37]	_	_
+5-5	403-412	president	person[36]|person[37]	giv[36]|giv[37]	_	_
+5-6	413-415	of	person[36]|person[37]	giv[36]|giv[37]	_	_
+5-7	416-423	Synergy	person[36]|person[37]|person|organization[39]	giv[36]|giv[37]|new|new[39]	coref|coref	6-12[48_39]|35-1
+5-8	424-430	Gaming	person[36]|person[37]|organization[39]	giv[36]|giv[37]|new[39]	_	_
+5-9	431-432	,	person[37]	giv[37]	_	_
+5-10	433-436	and	person[37]	giv[37]	_	_
+5-11	437-440	the	person[37]|object[40]	giv[37]|new[40]	_	_
+5-12	441-447	public	person[37]|object[40]	giv[37]|new[40]	_	_
+5-13	448-452	face	person[37]|object[40]	giv[37]|new[40]	_	_
+5-14	453-455	of	person[37]|object[40]	giv[37]|new[40]	_	_
+5-15	456-459	the	person[37]|object[40]|organization[41]	giv[37]|new[40]|new[41]	coref	24-11[155_41]
+5-16	460-467	company	person[37]|object[40]|organization[41]	giv[37]|new[40]|new[41]	_	_
+5-17	468-469	.	_	_	_	_
+5-18	470-471	[	_	_	_	_
+5-19	472-473	4	abstract	giv	coref	20-27
+5-20	474-475	]	_	_	_	_
+
+#Text=He was the spokesman for four years , until 2017 for Ortiz Gaming . [ 6 ]
+6-1	476-478	He	person	giv	coref	6-3[44_0]
+6-2	479-482	was	_	_	_	_
+6-3	483-486	the	person[44]	giv[44]	ana	7-7[0_44]
+6-4	487-496	spokesman	person[44]	giv[44]	_	_
+6-5	497-500	for	person[44]	giv[44]	_	_
+6-6	501-505	four	person[44]|time[45]	giv[44]|new[45]	coref	37-4[277_45]
+6-7	506-511	years	person[44]|time[45]	giv[44]|new[45]	_	_
+6-8	512-513	,	person[44]	giv[44]	_	_
+6-9	514-519	until	person[44]	giv[44]	_	_
+6-10	520-524	2017	person[44]|time	giv[44]|new	_	_
+6-11	525-528	for	person[44]	giv[44]	_	_
+6-12	529-534	Ortiz	person[44]|person|organization[48]	giv[44]|new|giv[48]	coref|coref	31-8[0_48]|37-21
+6-13	535-541	Gaming	person[44]|organization[48]	giv[44]|giv[48]	_	_
+6-14	542-543	.	_	_	_	_
+6-15	544-545	[	_	_	_	_
+6-16	546-547	6	abstract	new	ana	7-3
+6-17	548-549	]	_	_	_	_
+
+#Text=In 2016 it was announced that he would host a television series called " Casino Rescue " . [ 7 ]
+7-1	550-552	In	_	_	_	_
+7-2	553-557	2016	time	new	_	_
+7-3	558-560	it	abstract	giv	coref	37-25
+7-4	561-564	was	_	_	_	_
+7-5	565-574	announced	_	_	_	_
+7-6	575-579	that	_	_	_	_
+7-7	580-582	he	person	giv	_	_
+7-8	583-588	would	_	_	_	_
+7-9	589-593	host	_	_	_	_
+7-10	594-595	a	abstract[54]	new[54]	_	_
+7-11	596-606	television	abstract|abstract[54]	giv|new[54]	_	_
+7-12	607-613	series	abstract[54]	new[54]	_	_
+7-13	614-620	called	abstract[54]	new[54]	_	_
+7-14	621-622	"	abstract[54]	new[54]	_	_
+7-15	623-629	Casino	abstract[54]|organization[55]	new[54]|new[55]	coref	20-17[0_55]
+7-16	630-636	Rescue	abstract[54]|organization[55]	new[54]|new[55]	_	_
+7-17	637-638	"	abstract[54]	new[54]	_	_
+7-18	639-640	.	_	_	_	_
+7-19	641-642	[	_	_	_	_
+7-20	643-644	7	abstract	new	_	_
+7-21	645-646	]	_	_	_	_
+
+#Text=Career
+8-1	647-653	Career	abstract	new	_	_
+
+#Text=Music
+9-1	654-659	Music	abstract	new	coref	14-4
+
+#Text=Gary Green
+10-1	660-664	Gary	person[59]	giv[59]	coref	12-1[0_59]
+10-2	665-670	Green	person[59]	giv[59]	_	_
+
+#Text=Charlotte NC
+11-1	671-680	Charlotte	place[60]	new[60]	_	_
+11-2	681-683	NC	place[60]	new[60]	_	_
+
+#Text=Green recorded three folk-music albums from 1977 to 1982 with Folkways Records , which worked with other folk artists including Woody Guthrie and Pete Seeger . [ 3 ] [ 8 ] [ 9 ]
+12-1	684-689	Green	person	giv	coref	14-1
+12-2	690-698	recorded	_	_	_	_
+12-3	699-704	three	abstract[62]	new[62]	_	_
+12-4	705-715	folk-music	abstract[62]	new[62]	_	_
+12-5	716-722	albums	abstract[62]	new[62]	_	_
+12-6	723-727	from	_	_	_	_
+12-7	728-732	1977	time	new	coref	39-11
+12-8	733-735	to	_	_	_	_
+12-9	736-740	1982	time	new	coref	41-11
+12-10	741-745	with	_	_	_	_
+12-11	746-754	Folkways	place|organization[66]	new|new[66]	coref	13-1
+12-12	755-762	Records	organization[66]	new[66]	_	_
+12-13	763-764	,	organization[66]	new[66]	_	_
+12-14	765-770	which	organization[66]	new[66]	_	_
+12-15	771-777	worked	organization[66]	new[66]	_	_
+12-16	778-782	with	organization[66]	new[66]	_	_
+12-17	783-788	other	organization[66]|person[67]	new[66]|new[67]	_	_
+12-18	789-793	folk	organization[66]|person[67]	new[66]|new[67]	_	_
+12-19	794-801	artists	organization[66]|person[67]	new[66]|new[67]	_	_
+12-20	802-811	including	organization[66]|person[67]	new[66]|new[67]	_	_
+12-21	812-817	Woody	organization[66]|person[67]|person[68]	new[66]|new[67]|new[68]	_	_
+12-22	818-825	Guthrie	organization[66]|person[67]|person[68]	new[66]|new[67]|new[68]	_	_
+12-23	826-829	and	organization[66]|person[67]	new[66]|new[67]	_	_
+12-24	830-834	Pete	organization[66]|person[67]|person[69]	new[66]|new[67]|new[69]	_	_
+12-25	835-841	Seeger	organization[66]|person[67]|person[69]	new[66]|new[67]|new[69]	_	_
+12-26	842-843	.	_	_	_	_
+12-27	844-845	[	_	_	_	_
+12-28	846-847	3	abstract	giv	coref	17-32
+12-29	848-849	]	_	_	_	_
+12-30	850-851	[	_	_	_	_
+12-31	852-853	8	abstract	new	coref	13-20
+12-32	854-855	]	_	_	_	_
+12-33	856-857	[	_	_	_	_
+12-34	858-859	9	abstract	new	coref	18-12
+12-35	860-861	]	_	_	_	_
+
+#Text=Folkways was later acquired by the Smithsonian Institution as part of the " Smithsonian Folkways " exhibition . [ 8 ]
+13-1	862-870	Folkways	place	giv	coref	13-14[76_0]
+13-2	871-874	was	_	_	_	_
+13-3	875-880	later	_	_	_	_
+13-4	881-889	acquired	_	_	_	_
+13-5	890-892	by	_	_	_	_
+13-6	893-896	the	organization[74]	new[74]	_	_
+13-7	897-908	Smithsonian	organization[74]	new[74]	_	_
+13-8	909-920	Institution	organization[74]	new[74]	_	_
+13-9	921-923	as	_	_	_	_
+13-10	924-928	part	_	_	_	_
+13-11	929-931	of	_	_	_	_
+13-12	932-935	the	event[77]	new[77]	_	_
+13-13	936-937	"	event[77]	new[77]	_	_
+13-14	938-949	Smithsonian	place|place[76]|event[77]	new|giv[76]|new[77]	_	_
+13-15	950-958	Folkways	place[76]|event[77]	giv[76]|new[77]	_	_
+13-16	959-960	"	event[77]	new[77]	_	_
+13-17	961-971	exhibition	event[77]	new[77]	_	_
+13-18	972-973	.	_	_	_	_
+13-19	974-975	[	_	_	_	_
+13-20	976-977	8	abstract	giv	_	_
+13-21	978-979	]	_	_	_	_
+
+#Text=Green also composed music for the crime drama film Fort Apache , The Bronx ( 1981 ) . [ 5 ]
+14-1	980-985	Green	person	giv	coref	17-5
+14-2	986-990	also	_	_	_	_
+14-3	991-999	composed	_	_	_	_
+14-4	1000-1005	music	abstract	giv	_	_
+14-5	1006-1009	for	_	_	_	_
+14-6	1010-1013	the	abstract[83]|person[84]	new[83]|new[84]	coref	15-1[88_83]
+14-7	1014-1019	crime	event|abstract[83]|person[84]	new|new[83]|new[84]	_	_
+14-8	1020-1025	drama	abstract|abstract[83]|person[84]	new|new[83]|new[84]	_	_
+14-9	1026-1030	film	abstract[83]|person[84]	new[83]|new[84]	_	_
+14-10	1031-1035	Fort	person[84]	new[84]	_	_
+14-11	1036-1042	Apache	person[84]	new[84]	_	_
+14-12	1043-1044	,	_	_	_	_
+14-13	1045-1048	The	place[85]	new[85]	coref	15-15[94_85]
+14-14	1049-1054	Bronx	place[85]	new[85]	_	_
+14-15	1055-1056	(	_	_	_	_
+14-16	1057-1061	1981	time	new	_	_
+14-17	1062-1063	)	_	_	_	_
+14-18	1064-1065	.	_	_	_	_
+14-19	1066-1067	[	_	_	_	_
+14-20	1068-1069	5	abstract	giv	_	_
+14-21	1070-1071	]	_	_	_	_
+
+#Text=The film , starring Paul Newman and Ed Asner , is about life in New York City 's South Bronx from the point of view of a police officer .
+15-1	1072-1075	The	abstract[88]	giv[88]	_	_
+15-2	1076-1080	film	abstract[88]	giv[88]	_	_
+15-3	1081-1082	,	abstract[88]	giv[88]	_	_
+15-4	1083-1091	starring	abstract[88]	giv[88]	_	_
+15-5	1092-1096	Paul	abstract[88]|person[89]	giv[88]|new[89]	_	_
+15-6	1097-1103	Newman	abstract[88]|person[89]	giv[88]|new[89]	_	_
+15-7	1104-1107	and	abstract[88]	giv[88]	_	_
+15-8	1108-1110	Ed	abstract[88]|person[90]	giv[88]|new[90]	_	_
+15-9	1111-1116	Asner	abstract[88]|person[90]	giv[88]|new[90]	_	_
+15-10	1117-1118	,	_	_	_	_
+15-11	1119-1121	is	_	_	_	_
+15-12	1122-1127	about	_	_	_	_
+15-13	1128-1132	life	abstract[91]	new[91]	coref	20-11[128_91]
+15-14	1133-1135	in	abstract[91]	new[91]	_	_
+15-15	1136-1139	New	abstract[91]|place[92]|place[94]	new[91]|new[92]|giv[94]	coref	28-10[176_92]
+15-16	1140-1144	York	abstract[91]|place[92]|place[94]	new[91]|new[92]|giv[94]	_	_
+15-17	1145-1149	City	abstract[91]|place[92]|place[94]	new[91]|new[92]|giv[94]	_	_
+15-18	1150-1152	's	abstract[91]|place[92]|place[94]	new[91]|new[92]|giv[94]	_	_
+15-19	1153-1158	South	abstract[91]|place|place[94]	new[91]|new|giv[94]	coref	23-13[145_0]
+15-20	1159-1164	Bronx	abstract[91]|place[94]	new[91]|giv[94]	_	_
+15-21	1165-1169	from	abstract[91]	new[91]	_	_
+15-22	1170-1173	the	abstract[91]|abstract[95]	new[91]|new[95]	_	_
+15-23	1174-1179	point	abstract[91]|abstract[95]	new[91]|new[95]	_	_
+15-24	1180-1182	of	abstract[91]|abstract[95]	new[91]|new[95]	_	_
+15-25	1183-1187	view	abstract[91]|abstract[95]|person[96]	new[91]|new[95]|new[96]	_	_
+15-26	1188-1190	of	abstract[91]|abstract[95]|person[96]	new[91]|new[95]|new[96]	_	_
+15-27	1191-1192	a	abstract[91]|abstract[95]|person[96]	new[91]|new[95]|new[96]	_	_
+15-28	1193-1199	police	abstract[91]|abstract[95]|person[96]	new[91]|new[95]|new[96]	_	_
+15-29	1200-1207	officer	abstract[91]|abstract[95]|person[96]	new[91]|new[95]|new[96]	_	_
+15-30	1208-1209	.	_	_	_	_
+
+#Text=Media
+16-1	1210-1215	Media	abstract	new	coref	17-28
+
+#Text=In the 1970s , Green was a journalist for The Gaston Gazette , a newspaper in Gastonia , North Carolina , which was later purchased by Halifax Media Group . [ 3 ] [ 10 ]
+17-1	1216-1218	In	_	_	_	_
+17-2	1219-1222	the	time[98]	new[98]	_	_
+17-3	1223-1228	1970s	time[98]	new[98]	_	_
+17-4	1229-1230	,	_	_	_	_
+17-5	1231-1236	Green	person	giv	coref	17-7[100_0]
+17-6	1237-1240	was	_	_	_	_
+17-7	1241-1242	a	person[100]	giv[100]	ana	18-1[0_100]
+17-8	1243-1253	journalist	person[100]	giv[100]	_	_
+17-9	1254-1257	for	person[100]	giv[100]	_	_
+17-10	1258-1261	The	person[100]|organization[101]	giv[100]|new[101]	appos	17-14[102_101]
+17-11	1262-1268	Gaston	person[100]|organization[101]	giv[100]|new[101]	_	_
+17-12	1269-1276	Gazette	person[100]|organization[101]	giv[100]|new[101]	_	_
+17-13	1277-1278	,	_	_	_	_
+17-14	1279-1280	a	organization[102]	giv[102]	_	_
+17-15	1281-1290	newspaper	organization[102]	giv[102]	_	_
+17-16	1291-1293	in	organization[102]	giv[102]	_	_
+17-17	1294-1302	Gastonia	organization[102]|place	giv[102]|new	_	_
+17-18	1303-1304	,	_	_	_	_
+17-19	1305-1310	North	place[104]	new[104]	_	_
+17-20	1311-1319	Carolina	place[104]	new[104]	_	_
+17-21	1320-1321	,	_	_	_	_
+17-22	1322-1327	which	_	_	_	_
+17-23	1328-1331	was	_	_	_	_
+17-24	1332-1337	later	_	_	_	_
+17-25	1338-1347	purchased	_	_	_	_
+17-26	1348-1350	by	_	_	_	_
+17-27	1351-1358	Halifax	place|organization[107]	new|new[107]	_	_
+17-28	1359-1364	Media	abstract|organization[107]	giv|new[107]	_	_
+17-29	1365-1370	Group	organization[107]	new[107]	_	_
+17-30	1371-1372	.	_	_	_	_
+17-31	1373-1374	[	_	_	_	_
+17-32	1375-1376	3	abstract	giv	coref	20-24
+17-33	1377-1378	]	_	_	_	_
+17-34	1379-1380	[	_	_	_	_
+17-35	1381-1383	10	abstract	new	_	_
+17-36	1384-1385	]	_	_	_	_
+
+#Text=He earned two Pulitzer Prize nominations for his writing . [ 9 ]
+18-1	1386-1388	He	person	giv	ana	18-8
+18-2	1389-1395	earned	_	_	_	_
+18-3	1396-1399	two	abstract[112]	new[112]	_	_
+18-4	1400-1408	Pulitzer	abstract[111]|abstract[112]	new[111]|new[112]	_	_
+18-5	1409-1414	Prize	abstract[111]|abstract[112]	new[111]|new[112]	_	_
+18-6	1415-1426	nominations	abstract[112]	new[112]	_	_
+18-7	1427-1430	for	_	_	_	_
+18-8	1431-1434	his	person|abstract[114]	giv|new[114]	ana	19-4
+18-9	1435-1442	writing	abstract[114]	new[114]	_	_
+18-10	1443-1444	.	_	_	_	_
+18-11	1445-1446	[	_	_	_	_
+18-12	1447-1448	9	abstract	giv	_	_
+18-13	1449-1450	]	_	_	_	_
+
+#Text=In 2010 , he wrote Marketing Donald Trump , a guide explaining how Green marketed Trump which can be applied to other marketing applications .
+19-1	1451-1453	In	_	_	_	_
+19-2	1454-1458	2010	time	new	_	_
+19-3	1459-1460	,	_	_	_	_
+19-4	1461-1463	he	person	giv	coref	19-14
+19-5	1464-1469	wrote	_	_	_	_
+19-6	1470-1479	Marketing	person[118]	giv[118]	coref	19-23[0_118]
+19-7	1480-1486	Donald	person[118]	giv[118]	_	_
+19-8	1487-1492	Trump	person[118]	giv[118]	_	_
+19-9	1493-1494	,	_	_	_	_
+19-10	1495-1496	a	abstract[119]	new[119]	_	_
+19-11	1497-1502	guide	abstract[119]	new[119]	_	_
+19-12	1503-1513	explaining	abstract[119]	new[119]	_	_
+19-13	1514-1517	how	abstract[119]	new[119]	_	_
+19-14	1518-1523	Green	abstract[119]|person	new[119]|giv	ana	20-4
+19-15	1524-1532	marketed	abstract[119]	new[119]	_	_
+19-16	1533-1538	Trump	abstract[119]|abstract	new[119]|new	_	_
+19-17	1539-1544	which	abstract[119]	new[119]	_	_
+19-18	1545-1548	can	abstract[119]	new[119]	_	_
+19-19	1549-1551	be	abstract[119]	new[119]	_	_
+19-20	1552-1559	applied	abstract[119]	new[119]	_	_
+19-21	1560-1562	to	abstract[119]	new[119]	_	_
+19-22	1563-1568	other	abstract[119]|abstract[123]	new[119]|new[123]	_	_
+19-23	1569-1578	marketing	abstract[119]|person|abstract[123]	new[119]|giv|new[123]	coref	30-9
+19-24	1579-1591	applications	abstract[119]|abstract[123]	new[119]|new[123]	_	_
+19-25	1592-1593	.	_	_	_	_
+
+#Text=In 2012 , he wrote Gambling Man , which details Green 's life as a modern-day casino boss through personal anecdotes . [ 3 ] [ 4 ] [ 11 ]
+20-1	1594-1596	In	_	_	_	_
+20-2	1597-1601	2012	time	new	_	_
+20-3	1602-1603	,	_	_	_	_
+20-4	1604-1606	he	person	giv	coref	20-11[127_0]
+20-5	1607-1612	wrote	_	_	_	_
+20-6	1613-1621	Gambling	place[126]	new[126]	_	_
+20-7	1622-1625	Man	place[126]	new[126]	_	_
+20-8	1626-1627	,	place[126]	new[126]	_	_
+20-9	1628-1633	which	place[126]	new[126]	_	_
+20-10	1634-1641	details	place[126]	new[126]	_	_
+20-11	1642-1647	Green	place[126]|person[127]|abstract[128]	new[126]|giv[127]|giv[128]	coref	22-6[0_127]
+20-12	1648-1650	's	place[126]|person[127]|abstract[128]	new[126]|giv[127]|giv[128]	_	_
+20-13	1651-1655	life	place[126]|abstract[128]	new[126]|giv[128]	_	_
+20-14	1656-1658	as	place[126]|abstract[128]	new[126]|giv[128]	_	_
+20-15	1659-1660	a	place[126]|abstract[128]|person[130]	new[126]|giv[128]|new[130]	_	_
+20-16	1661-1671	modern-day	place[126]|abstract[128]|person[130]	new[126]|giv[128]|new[130]	_	_
+20-17	1672-1678	casino	place[126]|abstract[128]|organization|person[130]	new[126]|giv[128]|giv|new[130]	coref	30-12[193_0]
+20-18	1679-1683	boss	place[126]|abstract[128]|person[130]	new[126]|giv[128]|new[130]	_	_
+20-19	1684-1691	through	place[126]	new[126]	_	_
+20-20	1692-1700	personal	place[126]|abstract[131]	new[126]|new[131]	_	_
+20-21	1701-1710	anecdotes	place[126]|abstract[131]	new[126]|new[131]	_	_
+20-22	1711-1712	.	_	_	_	_
+20-23	1713-1714	[	_	_	_	_
+20-24	1715-1716	3	abstract	giv	coref	30-26
+20-25	1717-1718	]	_	_	_	_
+20-26	1719-1720	[	_	_	_	_
+20-27	1721-1722	4	abstract	giv	coref	30-29
+20-28	1723-1724	]	_	_	_	_
+20-29	1725-1726	[	_	_	_	_
+20-30	1727-1729	11	abstract	new	_	_
+20-31	1730-1731	]	_	_	_	_
+
+#Text=Other activities
+21-1	1732-1737	Other	event[135]	new[135]	_	_
+21-2	1738-1748	activities	event[135]	new[135]	_	_
+
+#Text=In the early 1990s , Green purchased part of a Russian circus .
+22-1	1749-1751	In	_	_	_	_
+22-2	1752-1755	the	time[136]	new[136]	_	_
+22-3	1756-1761	early	time[136]	new[136]	_	_
+22-4	1762-1767	1990s	time[136]	new[136]	_	_
+22-5	1768-1769	,	_	_	_	_
+22-6	1770-1775	Green	person	giv	ana	23-1
+22-7	1776-1785	purchased	_	_	_	_
+22-8	1786-1790	part	_	_	_	_
+22-9	1791-1793	of	_	_	_	_
+22-10	1794-1795	a	organization[138]	new[138]	ana	23-3[0_138]
+22-11	1796-1803	Russian	organization[138]	new[138]	_	_
+22-12	1804-1810	circus	organization[138]	new[138]	_	_
+22-13	1811-1812	.	_	_	_	_
+
+#Text=He established it as a Euro Circus attraction at Myrtle Beach , South Carolina . [ 12 ] [ 13 ]
+23-1	1813-1815	He	person	giv	ana	24-2
+23-2	1816-1827	established	_	_	_	_
+23-3	1828-1830	it	organization	giv	coref	23-7
+23-4	1831-1833	as	_	_	_	_
+23-5	1834-1835	a	abstract[143]	new[143]	_	_
+23-6	1836-1840	Euro	person|abstract[143]	new|new[143]	_	_
+23-7	1841-1847	Circus	organization|abstract[143]	giv|new[143]	coref	24-4[149_0]
+23-8	1848-1858	attraction	abstract[143]	new[143]	_	_
+23-9	1859-1861	at	_	_	_	_
+23-10	1862-1868	Myrtle	person[144]	new[144]	_	_
+23-11	1869-1874	Beach	person[144]	new[144]	_	_
+23-12	1875-1876	,	person[144]	new[144]	_	_
+23-13	1877-1882	South	person[144]|place[145]	new[144]|giv[145]	_	_
+23-14	1883-1891	Carolina	person[144]|place[145]	new[144]|giv[145]	_	_
+23-15	1892-1893	.	_	_	_	_
+23-16	1894-1895	[	_	_	_	_
+23-17	1896-1898	12	abstract	new	coref	25-27
+23-18	1899-1900	]	_	_	_	_
+23-19	1901-1902	[	_	_	_	_
+23-20	1903-1905	13	abstract	new	_	_
+23-21	1906-1907	]	_	_	_	_
+
+#Text=After he sold the circus , he joined Smith-Gardner , a Florida catalog software company .
+24-1	1908-1913	After	_	_	_	_
+24-2	1914-1916	he	person	giv	ana	24-7
+24-3	1917-1921	sold	_	_	_	_
+24-4	1922-1925	the	organization[149]	giv[149]	_	_
+24-5	1926-1932	circus	organization[149]	giv[149]	_	_
+24-6	1933-1934	,	_	_	_	_
+24-7	1935-1937	he	person	giv	coref	25-4
+24-8	1938-1944	joined	_	_	_	_
+24-9	1945-1958	Smith-Gardner	person	new	coref	25-2
+24-10	1959-1960	,	_	_	_	_
+24-11	1961-1962	a	organization[155]	giv[155]	coref	25-15[161_155]
+24-12	1963-1970	Florida	place|organization[155]	new|giv[155]	coref	34-58
+24-13	1971-1978	catalog	object|abstract[154]|organization[155]	new|new[154]|giv[155]	coref	25-9[159_154]
+24-14	1979-1987	software	abstract[154]|organization[155]	new[154]|giv[155]	_	_
+24-15	1988-1995	company	organization[155]	giv[155]	_	_
+24-16	1996-1997	.	_	_	_	_
+
+#Text=At Smith-Gardner , Green aided in development of software to take orders online when the company changed their focus from telephone and mail orders . [ 12 ]
+25-1	1998-2000	At	_	_	_	_
+25-2	2001-2014	Smith-Gardner	person	giv	_	_
+25-3	2015-2016	,	_	_	_	_
+25-4	2017-2022	Green	person	giv	coref	27-1[169_0]
+25-5	2023-2028	aided	_	_	_	_
+25-6	2029-2031	in	_	_	_	_
+25-7	2032-2043	development	abstract[158]	new[158]	coref	33-12[0_158]
+25-8	2044-2046	of	abstract[158]	new[158]	_	_
+25-9	2047-2055	software	abstract[158]|abstract[159]	new[158]|giv[159]	_	_
+25-10	2056-2058	to	abstract[158]|abstract[159]	new[158]|giv[159]	_	_
+25-11	2059-2063	take	abstract[158]|abstract[159]	new[158]|giv[159]	_	_
+25-12	2064-2070	orders	abstract[158]|abstract[159]|abstract	new[158]|giv[159]|new	ana	25-18
+25-13	2071-2077	online	abstract[158]|abstract[159]	new[158]|giv[159]	_	_
+25-14	2078-2082	when	_	_	_	_
+25-15	2083-2086	the	organization[161]	giv[161]	coref	33-6[228_161]
+25-16	2087-2094	company	organization[161]	giv[161]	_	_
+25-17	2095-2102	changed	_	_	_	_
+25-18	2103-2108	their	abstract|abstract[163]	giv|new[163]	coref	25-21[166_0]
+25-19	2109-2114	focus	abstract[163]	new[163]	_	_
+25-20	2115-2119	from	_	_	_	_
+25-21	2120-2129	telephone	object|abstract[166]	new|giv[166]	_	_
+25-22	2130-2133	and	abstract[166]	giv[166]	_	_
+25-23	2134-2138	mail	abstract|abstract[166]	new|giv[166]	_	_
+25-24	2139-2145	orders	abstract[166]	giv[166]	_	_
+25-25	2146-2147	.	_	_	_	_
+25-26	2148-2149	[	_	_	_	_
+25-27	2150-2152	12	abstract	giv	_	_
+25-28	2153-2154	]	_	_	_	_
+
+#Text=Casinos
+26-1	2155-2162	Casinos	place	new	_	_
+
+#Text=Gary Green and Donald Trump
+27-1	2163-2167	Gary	person[169]|person[170]	giv[169]|giv[170]	coref|coref	27-1[170_169]|28-4[0_170]
+27-2	2168-2173	Green	person[169]|person[170]	giv[169]|giv[170]	_	_
+27-3	2174-2177	and	person[170]	giv[170]	_	_
+27-4	2178-2184	Donald	person[170]|person[171]	giv[170]|new[171]	_	_
+27-5	2185-2190	Trump	person[170]|person[171]	giv[170]|new[171]	_	_
+
+#Text=By 1979 , Green was working with casinos in Atlantic City , New Jersey . [ 14 ] [ 15 ] [ 16 ]
+28-1	2191-2193	By	_	_	_	_
+28-2	2194-2198	1979	time	new	_	_
+28-3	2199-2200	,	_	_	_	_
+28-4	2201-2206	Green	person	giv	ana	29-1
+28-5	2207-2210	was	_	_	_	_
+28-6	2211-2218	working	_	_	_	_
+28-7	2219-2223	with	_	_	_	_
+28-8	2224-2231	casinos	organization[174]	new[174]	_	_
+28-9	2232-2234	in	organization[174]	new[174]	_	_
+28-10	2235-2243	Atlantic	organization[174]|place|place[176]	new[174]|new|giv[176]	_	_
+28-11	2244-2248	City	organization[174]|place[176]	new[174]|giv[176]	_	_
+28-12	2249-2250	,	organization[174]|place[176]	new[174]|giv[176]	_	_
+28-13	2251-2254	New	organization[174]|place[176]|place[177]	new[174]|giv[176]|new[177]	_	_
+28-14	2255-2261	Jersey	organization[174]|place[176]|place[177]	new[174]|giv[176]|new[177]	_	_
+28-15	2262-2263	.	_	_	_	_
+28-16	2264-2265	[	_	_	_	_
+28-17	2266-2268	14	abstract	new	coref	31-18
+28-18	2269-2270	]	_	_	_	_
+28-19	2271-2272	[	_	_	_	_
+28-20	2273-2275	15	abstract	new	coref	34-18
+28-21	2276-2277	]	_	_	_	_
+28-22	2278-2279	[	_	_	_	_
+28-23	2280-2282	16	abstract	new	coref	32-17
+28-24	2283-2284	]	_	_	_	_
+
+#Text=He patented a casino-management system based on customer relationships . [ 17 ]
+29-1	2285-2287	He	person	giv	ana	30-1
+29-2	2288-2296	patented	_	_	_	_
+29-3	2297-2298	a	abstract[183]	new[183]	_	_
+29-4	2299-2316	casino-management	organization|abstract[183]	new|new[183]	_	_
+29-5	2317-2323	system	abstract[183]	new[183]	_	_
+29-6	2324-2329	based	abstract[183]	new[183]	_	_
+29-7	2330-2332	on	abstract[183]	new[183]	_	_
+29-8	2333-2341	customer	abstract[183]|person|abstract[185]	new[183]|new|new[185]	_	_
+29-9	2342-2355	relationships	abstract[183]|abstract[185]	new[183]|new[185]	_	_
+29-10	2356-2357	.	_	_	_	_
+29-11	2358-2359	[	_	_	_	_
+29-12	2360-2362	17	abstract	new	_	_
+29-13	2363-2364	]	_	_	_	_
+
+#Text=He was vice president of marketing for The Trump Organization and the Trump 29 Casino near Palm Springs , California . [ 2 ] [ 3 ] [ 4 ]
+30-1	2365-2367	He	person	giv	coref	30-3[188_0]
+30-2	2368-2371	was	_	_	_	_
+30-3	2372-2376	vice	person[188]	giv[188]	coref	31-1[0_188]
+30-4	2377-2386	president	person[188]	giv[188]	_	_
+30-5	2387-2389	of	person[188]	giv[188]	_	_
+30-6	2390-2399	marketing	person[188]|abstract[189]	giv[188]|new[189]	_	_
+30-7	2400-2403	for	person[188]|abstract[189]	giv[188]|new[189]	_	_
+30-8	2404-2407	The	person[188]|abstract[189]|organization[191]	giv[188]|new[189]|giv[191]	_	_
+30-9	2408-2413	Trump	person[188]|abstract[189]|person|organization[191]	giv[188]|new[189]|giv|giv[191]	coref	30-13
+30-10	2414-2426	Organization	person[188]|abstract[189]|organization[191]	giv[188]|new[189]|giv[191]	_	_
+30-11	2427-2430	and	person[188]|abstract[189]	giv[188]|new[189]	_	_
+30-12	2431-2434	the	person[188]|abstract[189]|organization[193]	giv[188]|new[189]|giv[193]	coref	32-6[214_193]
+30-13	2435-2440	Trump	person[188]|abstract[189]|person|organization[193]	giv[188]|new[189]|giv|giv[193]	coref	33-32[235_0]
+30-14	2441-2443	29	person[188]|abstract[189]|organization[193]	giv[188]|new[189]|giv[193]	_	_
+30-15	2444-2450	Casino	person[188]|abstract[189]|organization[193]	giv[188]|new[189]|giv[193]	_	_
+30-16	2451-2455	near	person[188]|abstract[189]|organization[193]	giv[188]|new[189]|giv[193]	_	_
+30-17	2456-2460	Palm	person[188]|abstract[189]|organization[193]|person|place[195]	giv[188]|new[189]|giv[193]|new|new[195]	_	_
+30-18	2461-2468	Springs	person[188]|abstract[189]|organization[193]|place[195]	giv[188]|new[189]|giv[193]|new[195]	_	_
+30-19	2469-2470	,	person[188]|abstract[189]|organization[193]|place[195]	giv[188]|new[189]|giv[193]|new[195]	_	_
+30-20	2471-2481	California	person[188]|abstract[189]|organization[193]|place[195]|place	giv[188]|new[189]|giv[193]|new[195]|new	_	_
+30-21	2482-2483	.	_	_	_	_
+30-22	2484-2485	[	_	_	_	_
+30-23	2486-2487	2	abstract	giv	coref	31-15
+30-24	2488-2489	]	_	_	_	_
+30-25	2490-2491	[	_	_	_	_
+30-26	2492-2493	3	abstract	giv	coref	36-12
+30-27	2494-2495	]	_	_	_	_
+30-28	2496-2497	[	_	_	_	_
+30-29	2498-2499	4	abstract	giv	coref	35-21
+30-30	2500-2501	]	_	_	_	_
+
+#Text=Green was named president of Absentee Shawnee Gaming Enterprises in July 2004 . [ 2 ] [ 14 ]
+31-1	2502-2507	Green	person	giv	ana	32-1
+31-2	2508-2511	was	_	_	_	_
+31-3	2512-2517	named	_	_	_	_
+31-4	2518-2527	president	person[201]	new[201]	coref	35-8[266_201]
+31-5	2528-2530	of	person[201]	new[201]	_	_
+31-6	2531-2539	Absentee	person[201]|person|organization[205]	new[201]|new|new[205]	ana	34-38[0_205]
+31-7	2540-2547	Shawnee	person[201]|place|organization[205]	new[201]|new|new[205]	_	_
+31-8	2548-2554	Gaming	person[201]|organization|organization[205]	new[201]|giv|new[205]	coref	35-1[262_0]
+31-9	2555-2566	Enterprises	person[201]|organization[205]	new[201]|new[205]	_	_
+31-10	2567-2569	in	_	_	_	_
+31-11	2570-2574	July	time[206]	new[206]	_	_
+31-12	2575-2579	2004	time[206]|time	new[206]|new	_	_
+31-13	2580-2581	.	_	_	_	_
+31-14	2582-2583	[	_	_	_	_
+31-15	2584-2585	2	abstract	giv	coref	33-22
+31-16	2586-2587	]	_	_	_	_
+31-17	2588-2589	[	_	_	_	_
+31-18	2590-2592	14	abstract	giv	_	_
+31-19	2593-2594	]	_	_	_	_
+
+#Text=He was general manager of the Thunderbird Wild Wild West Casino in Norman , Oklahoma [ 16 ] and oversaw construction of another casino in Oklahoma City . [ 18 ]
+32-1	2595-2597	He	person	giv	coref	32-3[211_0]
+32-2	2598-2601	was	_	_	_	_
+32-3	2602-2609	general	person[211]	giv[211]	coref	33-4[0_211]
+32-4	2610-2617	manager	person[211]	giv[211]	_	_
+32-5	2618-2620	of	person[211]	giv[211]	_	_
+32-6	2621-2624	the	person[211]|organization[214]	giv[211]|giv[214]	coref	32-23[219_214]
+32-7	2625-2636	Thunderbird	person[211]|person|organization[214]	giv[211]|new|giv[214]	_	_
+32-8	2637-2641	Wild	person[211]|person|organization[214]	giv[211]|new|giv[214]	_	_
+32-9	2642-2646	Wild	person[211]|organization[214]	giv[211]|giv[214]	_	_
+32-10	2647-2651	West	person[211]|organization[214]	giv[211]|giv[214]	_	_
+32-11	2652-2658	Casino	person[211]|organization[214]	giv[211]|giv[214]	_	_
+32-12	2659-2661	in	person[211]|organization[214]	giv[211]|giv[214]	_	_
+32-13	2662-2668	Norman	person[211]|organization[214]|place[215]	giv[211]|giv[214]|new[215]	_	_
+32-14	2669-2670	,	person[211]|organization[214]|place[215]	giv[211]|giv[214]|new[215]	_	_
+32-15	2671-2679	Oklahoma	person[211]|organization[214]|place[215]|place	giv[211]|giv[214]|new[215]|new	coref	32-26[220_0]
+32-16	2680-2681	[	_	_	_	_
+32-17	2682-2684	16	abstract	giv	coref	34-61
+32-18	2685-2686	]	_	_	_	_
+32-19	2687-2690	and	_	_	_	_
+32-20	2691-2698	oversaw	_	_	_	_
+32-21	2699-2711	construction	event[218]	new[218]	_	_
+32-22	2712-2714	of	event[218]	new[218]	_	_
+32-23	2715-2722	another	event[218]|organization[219]	new[218]|giv[219]	coref	33-9[0_219]
+32-24	2723-2729	casino	event[218]|organization[219]	new[218]|giv[219]	_	_
+32-25	2730-2732	in	event[218]|organization[219]	new[218]|giv[219]	_	_
+32-26	2733-2741	Oklahoma	event[218]|organization[219]|place[220]	new[218]|giv[219]|giv[220]	_	_
+32-27	2742-2746	City	event[218]|organization[219]|place[220]	new[218]|giv[219]|giv[220]	_	_
+32-28	2747-2748	.	_	_	_	_
+32-29	2749-2750	[	_	_	_	_
+32-30	2751-2753	18	abstract	new	coref	33-36
+32-31	2754-2755	]	_	_	_	_
+
+#Text=In 2005 , Green co-founded Las Vegas -based casino management and development company Southern Dutch Gaming with Frank Haas , [ 2 ] [ 19 ] who he worked with at Trump 29 . [ 18 ]
+33-1	2756-2758	In	_	_	_	_
+33-2	2759-2763	2005	time	new	_	_
+33-3	2764-2765	,	_	_	_	_
+33-4	2766-2771	Green	person	giv	ana	33-28
+33-5	2772-2782	co-founded	_	_	_	_
+33-6	2783-2786	Las	place[224]|organization[228]	new[224]|giv[228]	appos	33-14[230_228]
+33-7	2787-2792	Vegas	place[224]|organization[228]	new[224]|giv[228]	_	_
+33-8	2793-2799	-based	organization[228]	giv[228]	_	_
+33-9	2800-2806	casino	organization|organization[228]	giv|giv[228]	coref	34-6[241_0]
+33-10	2807-2817	management	abstract|organization[228]	new|giv[228]	_	_
+33-11	2818-2821	and	organization[228]	giv[228]	_	_
+33-12	2822-2833	development	abstract|organization[228]	giv|giv[228]	_	_
+33-13	2834-2841	company	organization[228]	giv[228]	_	_
+33-14	2842-2850	Southern	person[229]|organization[230]	new[229]|giv[230]	coref	35-17[269_230]
+33-15	2851-2856	Dutch	person[229]|organization[230]	new[229]|giv[230]	_	_
+33-16	2857-2863	Gaming	organization[230]	giv[230]	_	_
+33-17	2864-2868	with	_	_	_	_
+33-18	2869-2874	Frank	person[231]	new[231]	_	_
+33-19	2875-2879	Haas	person[231]	new[231]	_	_
+33-20	2880-2881	,	_	_	_	_
+33-21	2882-2883	[	_	_	_	_
+33-22	2884-2885	2	abstract	giv	_	_
+33-23	2886-2887	]	_	_	_	_
+33-24	2888-2889	[	_	_	_	_
+33-25	2890-2892	19	abstract	new	_	_
+33-26	2893-2894	]	_	_	_	_
+33-27	2895-2898	who	_	_	_	_
+33-28	2899-2901	he	person	giv	coref	34-1
+33-29	2902-2908	worked	_	_	_	_
+33-30	2909-2913	with	_	_	_	_
+33-31	2914-2916	at	_	_	_	_
+33-32	2917-2922	Trump	person[235]	giv[235]	_	_
+33-33	2923-2925	29	person[235]	giv[235]	_	_
+33-34	2926-2927	.	_	_	_	_
+33-35	2928-2929	[	_	_	_	_
+33-36	2930-2932	18	abstract	giv	_	_
+33-37	2933-2934	]	_	_	_	_
+
+#Text=Green was general manager of Glacier Peaks Casino in Browning , Montana , in 2006 , [ 15 ] [ 20 ] [ 21 ] [ 22 ] and was hired by the Ottawa Tribe to oversee their new Four Winds Casino that same year [ 1 ] and consulted for an Ottawa casino in Miami , Florida . [ 16 ]
+34-1	2935-2940	Green	person	giv	coref	34-3[238_0]
+34-2	2941-2944	was	_	_	_	_
+34-3	2945-2952	general	person[238]	giv[238]	coref	35-4[0_238]
+34-4	2953-2960	manager	person[238]	giv[238]	_	_
+34-5	2961-2963	of	person[238]	giv[238]	_	_
+34-6	2964-2971	Glacier	person[238]|person|object[240]|organization[241]	giv[238]|new|new[240]|giv[241]	coref	34-38[253_241]
+34-7	2972-2977	Peaks	person[238]|object[240]|organization[241]	giv[238]|new[240]|giv[241]	_	_
+34-8	2978-2984	Casino	person[238]|organization[241]	giv[238]|giv[241]	_	_
+34-9	2985-2987	in	person[238]|organization[241]	giv[238]|giv[241]	_	_
+34-10	2988-2996	Browning	person[238]|organization[241]|place[242]	giv[238]|giv[241]|new[242]	_	_
+34-11	2997-2998	,	person[238]|organization[241]|place[242]	giv[238]|giv[241]|new[242]	_	_
+34-12	2999-3006	Montana	person[238]|organization[241]|place[242]	giv[238]|giv[241]|new[242]	_	_
+34-13	3007-3008	,	person[238]	giv[238]	_	_
+34-14	3009-3011	in	person[238]	giv[238]	_	_
+34-15	3012-3016	2006	person[238]|time	giv[238]|new	_	_
+34-16	3017-3018	,	_	_	_	_
+34-17	3019-3020	[	_	_	_	_
+34-18	3021-3023	15	abstract	giv	_	_
+34-19	3024-3025	]	_	_	_	_
+34-20	3026-3027	[	_	_	_	_
+34-21	3028-3030	20	abstract	new	_	_
+34-22	3031-3032	]	_	_	_	_
+34-23	3033-3034	[	_	_	_	_
+34-24	3035-3037	21	abstract	new	_	_
+34-25	3038-3039	]	_	_	_	_
+34-26	3040-3041	[	_	_	_	_
+34-27	3042-3044	22	abstract	new	_	_
+34-28	3045-3046	]	_	_	_	_
+34-29	3047-3050	and	_	_	_	_
+34-30	3051-3054	was	_	_	_	_
+34-31	3055-3060	hired	_	_	_	_
+34-32	3061-3063	by	_	_	_	_
+34-33	3064-3067	the	organization[249]	new[249]	_	_
+34-34	3068-3074	Ottawa	place|organization[249]	new|new[249]	coref	34-53
+34-35	3075-3080	Tribe	organization[249]	new[249]	_	_
+34-36	3081-3083	to	_	_	_	_
+34-37	3084-3091	oversee	_	_	_	_
+34-38	3092-3097	their	organization|organization[253]	giv|giv[253]	coref	34-52[257_253]
+34-39	3098-3101	new	organization[253]	giv[253]	_	_
+34-40	3102-3106	Four	person|place[252]|organization[253]	new|new[252]|giv[253]	_	_
+34-41	3107-3112	Winds	place[252]|organization[253]	new[252]|giv[253]	_	_
+34-42	3113-3119	Casino	organization[253]	giv[253]	_	_
+34-43	3120-3124	that	organization[253]|time[254]	giv[253]|new[254]	_	_
+34-44	3125-3129	same	organization[253]|time[254]	giv[253]|new[254]	_	_
+34-45	3130-3134	year	organization[253]|time[254]	giv[253]|new[254]	_	_
+34-46	3135-3136	[	_	_	_	_
+34-47	3137-3138	1	abstract	giv	_	_
+34-48	3139-3140	]	_	_	_	_
+34-49	3141-3144	and	_	_	_	_
+34-50	3145-3154	consulted	_	_	_	_
+34-51	3155-3158	for	_	_	_	_
+34-52	3159-3161	an	organization[257]	giv[257]	coref	36-3[273_257]
+34-53	3162-3168	Ottawa	place|organization[257]	giv|giv[257]	_	_
+34-54	3169-3175	casino	organization[257]	giv[257]	_	_
+34-55	3176-3178	in	organization[257]	giv[257]	_	_
+34-56	3179-3184	Miami	organization[257]|place[258]	giv[257]|new[258]	_	_
+34-57	3185-3186	,	organization[257]|place[258]	giv[257]|new[258]	_	_
+34-58	3187-3194	Florida	organization[257]|place[258]|place	giv[257]|new[258]|giv	_	_
+34-59	3195-3196	.	_	_	_	_
+34-60	3197-3198	[	_	_	_	_
+34-61	3199-3201	16	abstract	giv	_	_
+34-62	3202-3203	]	_	_	_	_
+
+#Text=Synergy Gaming hired Green in 2009 as its executive vice president and official public face of the company . [ 4 ]
+35-1	3204-3211	Synergy	person|organization[262]	giv|giv[262]	ana	35-8[0_262]
+35-2	3212-3218	Gaming	organization[262]	giv[262]	_	_
+35-3	3219-3224	hired	_	_	_	_
+35-4	3225-3230	Green	person	giv	coref	35-8[267_0]
+35-5	3231-3233	in	_	_	_	_
+35-6	3234-3238	2009	time	new	_	_
+35-7	3239-3241	as	_	_	_	_
+35-8	3242-3245	its	organization|person[266]|person[267]	giv|giv[266]|giv[267]	ana|coref|coref	36-1[0_267]|37-18[282_266]|37-21[284_0]
+35-9	3246-3255	executive	person[266]|person[267]	giv[266]|giv[267]	_	_
+35-10	3256-3260	vice	person[266]|person[267]	giv[266]|giv[267]	_	_
+35-11	3261-3270	president	person[266]|person[267]	giv[266]|giv[267]	_	_
+35-12	3271-3274	and	person[267]	giv[267]	_	_
+35-13	3275-3283	official	person[267]|object[268]	giv[267]|new[268]	_	_
+35-14	3284-3290	public	person[267]|object[268]	giv[267]|new[268]	_	_
+35-15	3291-3295	face	person[267]|object[268]	giv[267]|new[268]	_	_
+35-16	3296-3298	of	person[267]|object[268]	giv[267]|new[268]	_	_
+35-17	3299-3302	the	person[267]|object[268]|organization[269]	giv[267]|new[268]|giv[269]	_	_
+35-18	3303-3310	company	person[267]|object[268]|organization[269]	giv[267]|new[268]|giv[269]	_	_
+35-19	3311-3312	.	_	_	_	_
+35-20	3313-3314	[	_	_	_	_
+35-21	3315-3316	4	abstract	giv	_	_
+35-22	3317-3318	]	_	_	_	_
+
+#Text=He purchased the former Gold Mine Casino in 2011 . [ 3 ]
+36-1	3319-3321	He	person	giv	coref	37-1
+36-2	3322-3331	purchased	_	_	_	_
+36-3	3332-3335	the	organization[273]	giv[273]	_	_
+36-4	3336-3342	former	organization[273]	giv[273]	_	_
+36-5	3343-3347	Gold	person|organization[273]	new|giv[273]	_	_
+36-6	3348-3352	Mine	organization[273]	giv[273]	_	_
+36-7	3353-3359	Casino	organization[273]	giv[273]	_	_
+36-8	3360-3362	in	_	_	_	_
+36-9	3363-3367	2011	time	new	_	_
+36-10	3368-3369	.	_	_	_	_
+36-11	3370-3371	[	_	_	_	_
+36-12	3372-3373	3	abstract	giv	_	_
+36-13	3374-3375	]	_	_	_	_
+
+#Text=Green served for four years as spokesman [ 23 ] [ 24 ] and senior consultant to the president for Ortiz Gaming . [ 6 ] [ 25 ]
+37-1	3376-3381	Green	person	giv	coref	39-1[288_0]
+37-2	3382-3388	served	_	_	_	_
+37-3	3389-3392	for	_	_	_	_
+37-4	3393-3397	four	time[277]	giv[277]	_	_
+37-5	3398-3403	years	time[277]	giv[277]	_	_
+37-6	3404-3406	as	_	_	_	_
+37-7	3407-3416	spokesman	person	new	_	_
+37-8	3417-3418	[	_	_	_	_
+37-9	3419-3421	23	abstract	new	_	_
+37-10	3422-3423	]	_	_	_	_
+37-11	3424-3425	[	_	_	_	_
+37-12	3426-3428	24	abstract	new	_	_
+37-13	3429-3430	]	_	_	_	_
+37-14	3431-3434	and	_	_	_	_
+37-15	3435-3441	senior	person[281]	new[281]	_	_
+37-16	3442-3452	consultant	person[281]	new[281]	_	_
+37-17	3453-3455	to	person[281]	new[281]	_	_
+37-18	3456-3459	the	person[281]|person[282]	new[281]|giv[282]	_	_
+37-19	3460-3469	president	person[281]|person[282]	new[281]|giv[282]	_	_
+37-20	3470-3473	for	person[281]	new[281]	_	_
+37-21	3474-3479	Ortiz	person[281]|person|organization[284]	new[281]|giv|giv[284]	_	_
+37-22	3480-3486	Gaming	person[281]|organization[284]	new[281]|giv[284]	_	_
+37-23	3487-3488	.	_	_	_	_
+37-24	3489-3490	[	_	_	_	_
+37-25	3491-3492	6	abstract	giv	_	_
+37-26	3493-3494	]	_	_	_	_
+37-27	3495-3496	[	_	_	_	_
+37-28	3497-3499	25	abstract	new	_	_
+37-29	3500-3501	]	_	_	_	_
+
+#Text=Discography
+38-1	3502-3513	Discography	abstract	new	_	_
+
+#Text=Gary Green , Vol. 1 : These Six Strings ( 1977 )
+39-1	3514-3518	Gary	person[288]	giv[288]	coref	40-1[292_288]
+39-2	3519-3524	Green	person[288]	giv[288]	_	_
+39-3	3525-3526	,	_	_	_	_
+39-4	3527-3531	Vol.	abstract[289]	new[289]	_	_
+39-5	3532-3533	1	abstract[289]	new[289]	_	_
+39-6	3534-3535	:	_	_	_	_
+39-7	3536-3541	These	abstract[290]	new[290]	_	_
+39-8	3542-3545	Six	abstract[290]	new[290]	_	_
+39-9	3546-3553	Strings	abstract[290]	new[290]	_	_
+39-10	3554-3555	(	abstract[290]	new[290]	_	_
+39-11	3556-3560	1977	abstract[290]|time	new[290]|giv	coref	40-9
+39-12	3561-3562	)	abstract[290]	new[290]	_	_
+
+#Text=Gary Green , Vol. 2 : Allegory ( 1977 )
+40-1	3563-3567	Gary	person[292]	giv[292]	coref	41-1[296_292]
+40-2	3568-3573	Green	person[292]	giv[292]	_	_
+40-3	3574-3575	,	_	_	_	_
+40-4	3576-3580	Vol.	abstract[293]	new[293]	appos	40-7[294_293]
+40-5	3581-3582	2	abstract[293]	new[293]	_	_
+40-6	3583-3584	:	_	_	_	_
+40-7	3585-3593	Allegory	abstract[294]	giv[294]	_	_
+40-8	3594-3595	(	abstract[294]	giv[294]	_	_
+40-9	3596-3600	1977	abstract[294]|time	giv[294]|giv	_	_
+40-10	3601-3602	)	abstract[294]	giv[294]	_	_
+
+#Text=Gary Green , Vol. 3 : Still at Large ( 1982 )
+41-1	3603-3607	Gary	person[296]	giv[296]	_	_
+41-2	3608-3613	Green	person[296]	giv[296]	_	_
+41-3	3614-3615	,	_	_	_	_
+41-4	3616-3620	Vol.	abstract[297]	new[297]	_	_
+41-5	3621-3622	3	abstract[297]	new[297]	_	_
+41-6	3623-3624	:	_	_	_	_
+41-7	3625-3630	Still	person[298]	new[298]	_	_
+41-8	3631-3633	at	person[298]	new[298]	_	_
+41-9	3634-3639	Large	person[298]	new[298]	_	_
+41-10	3640-3641	(	person[298]	new[298]	_	_
+41-11	3642-3646	1982	person[298]|time	new[298]|giv	_	_
+41-12	3647-3648	)	person[298]	new[298]	_	_

@@ -1,0 +1,956 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_satellite" title="Post-Disaster Building Database Updating Using Automated Deep Learning: An Integration of Pre-Disaster OpenStreetMap and Multi-Temporal Satellite Data" shortTitle="satellite" author="Saman Ghaffarian, Norman Kerle, Edoardo Pasolli, Jamal Jokar Arsanjani" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2072-4292/11/20/2427/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Materials	NNS	material
+and	CC	and
+Methods	NNS	method
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+we	PRP	we
+propose	VBP	propose
+a	DT	a
+framework	NN	framework
+for	IN	for
+updating	VBG	update
+the	DT	the
+building	NN	building
+database	NN	database
+after	IN	after
+a	DT	a
+disaster	NN	disaster
+through	IN	through
+an	DT	a
+automated	JJ	automated
+ResUnet-CRF	NNP	ResUnet-CRF
+,	,	,
+using	VBG	use
+outdated	JJ	outdated
+OSM	NNP	OSM
+building	NN	building
+data	NNS	datum
+and	CC	and
+multi-temporal	JJ	multi-temporal
+satellite	NN	satellite
+images	NNS	image
+(	:	(
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+approach	NN	approach
+consists	VBZ	consist
+of	IN	of
+four	CD	4
+main	JJ	main
+steps	NNS	step
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+Step	NN	step
+1	CD	1
+:	:	:
+Co-Registration	NN	Co-Registration
+of	IN	of
+OSM	NNP	OSM
+Data	NNS	data
+and	CC	and
+Satellite	NNP	Satellite
+Images	NNPS	image
+</s>
+</head>
+<p>
+<s type="decl">
+Since	IN	since
+the	DT	the
+aim	NN	aim
+of	IN	of
+this	DT	this
+study	NN	study
+was	VBD	be
+to	TO	to
+use	VB	use
+OSM	NNP	OSM
+building	NN	building
+data	NNS	datum
+as	IN	as
+a	DT	a
+mask	NN	mask
+to	TO	to
+extract	VB	extract
+building	NN	building
+training	NN	training
+samples	NNS	sample
+from	IN	from
+the	DT	the
+pre-disaster	JJ	pre-disaster
+image	NN	image
+</s>
+<s type="decl">
+for	IN	for
+a	DT	a
+CNN-based	JJ	CNN-based
+approach	NN	approach
+,	,	,
+we	PRP	we
+implemented	VBD	implement
+simple	JJ	simple
+preprocesses	NNS	preprocess
+to	TO	to
+create	VB	create
+accurate	JJ	accurate
+training	NN	training
+samples	NNS	sample
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+it	PRP	it
+was	VBD	be
+observed	VBN	observe
+that	IN	that
+the	DT	the
+shift	NN	shift
+on	IN	on
+the	DT	the
+building	NN	building
+footprints	NNS	footprint
+was	VBD	be
+not	RB	not
+systematic	JJ	systematic
+and	CC	and
+the	DT	the
+shift	NN	shift
+direction	NN	direction
+and	CC	and
+amount	NN	amount
+differs	VBZ	differ
+substantially	RB	substantially
+across	IN	across
+the	DT	the
+area	NN	area
+,	,	,
+initially	RB	initially
+the	DT	the
+downloaded	VBN	download
+OSM	NNP	OSM
+data	NNS	datum
+for	IN	for
+the	DT	the
+pre-disaster	JJ	pre-disaster
+time	NN	time
+were	VBD	be
+separated	VBN	separate
+into	IN	into
+five	CD	5
+sections/regions	NNS	sections/region
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+rubber	NN	rubber
+sheeting	NN	sheeting
+was	VBD	be
+implemented	VBN	implement
+in	IN	in
+ArcGIS	NNP	ArcGIS
+,	,	,
+which	WDT	which
+can	MD	can
+also	RB	also
+handle	VB	handle
+small	JJ	small
+geometric	JJ	geometric
+correction	NN	correction
+as	RB	as
+well	RB	well
+as	IN	as
+shifting	VBG	shift
+the	DT	the
+vector	NN	vector
+maps	NNS	map
+to	TO	to
+adjust	VB	adjust
+and	CC	and
+align	VB	align
+the	DT	the
+building	NN	building
+map	NN	map
+to	IN	to
+the	DT	the
+building	NN	building
+rooftops	NNS	rooftop
+in	IN	in
+the	DT	the
+pre-disaster	JJ	pre-disaster
+image	NN	image
+(	:	(
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+achieve	VB	achieve
+good	JJ	good
+results	NNS	result
+from	IN	from
+the	DT	the
+application	NN	application
+of	IN	of
+the	DT	the
+rubber	NN	rubber
+sheeting	NN	sheeting
+method	NN	method
+,	,	,
+five	CD	5
+geographically	RB	geographically
+well-distributed	JJ	well-distributed
+points	NNS	point
+within	IN	within
+each	DT	each
+region	NN	region
+of	IN	of
+interest	NN	interest
+were	VBD	be
+used	VBN	use
+so	IN	so
+that	IN	that
+the	DT	the
+points	NNS	point
+cover	VBP	cover
+at	IN	at
+least	JJS	least
+the	DT	the
+center	NN	center
+and	CC	and
+the	DT	the
+four	CD	4
+main	JJ	main
+directions	NNS	direction
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+the	DT	the
+post-disaster	JJ	post-disaster
+satellite	NN	satellite
+images	NNS	image
+were	VBD	be
+co-registered/rectified	VBN	co-registered/recy
+according	VBG	accord
+to	IN	to
+the	DT	the
+pre-disaster	JJ	pre-disaster
+image	NN	image
+using	VBG	use
+ArcGIS	NNP	ArcGIS
+by	IN	by
+selecting	VBG	select
+geo-rectification	JJ	geo-rectification
+points	NNS	point
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+</s>
+<s type="frag">
+Step	NN	step
+2	CD	2
+:	:	:
+Training	NN	Training
+Patch	NN	patch
+Generation	NN	generation
+from	IN	from
+the	DT	the
+Pre-Disaster	NNP	Pre-Disaster
+Image	NN	image
+</s>
+</head>
+<p>
+<s type="decl">
+Pre-processed	JJ	Pre-processed
+data	NNS	datum
+from	IN	from
+step	NN	step
+1	CD	1
+were	VBD	be
+used	VBN	use
+to	TO	to
+automatically	RB	automatically
+generate	VB	generate
+training	NN	training
+samples	NNS	sample
+from	IN	from
+the	DT	the
+pre-disaster	JJ	pre-disaster
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+Although	IN	although
+the	DT	the
+mismatch	NN	mismatch
+between	IN	between
+OSM	NNP	OSM
+building	NN	building
+footprints	NNS	footprint
+and	CC	and
+the	DT	the
+actual	JJ	actual
+buildings	NNS	building
+in	IN	in
+the	DT	the
+pre-disaster	JJ	pre-disaster
+images	NNS	image
+was	VBD	be
+mostly	RB	mostly
+corrected	VBN	correct
+for	IN	for
+in	IN	in
+step	NN	step
+1	CD	1
+,	,	,
+some	DT	some
+matching	NN	matching
+errors	NNS	error
+remained	VBD	remain
+.	.	.
+</s>
+<s type="sub">
+For	IN	for
+example	NN	example
+,	,	,
+in	IN	in
+the	DT	the
+case	NN	case
+where	WRB	where
+a	DT	a
+building	NN	building
+near	IN	near
+a	DT	a
+vegetated	JJ	vegetated
+area	NN	area
+has	VBZ	have
+a	DT	a
+mismatch	NN	mismatch
+,	,	,
+the	DT	the
+building	NN	building
+mask	NN	mask
+might	MD	might
+contain	VB	contain
+vegetation	NN	vegetation
+pixels	NNS	pixel
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+even	RB	even
+for	IN	for
+a	DT	a
+correct	JJ	correct
+match	NN	match
+of	IN	of
+building	NN	building
+and	CC	and
+OSM	NNP	OSM
+map	NN	map
+,	,	,
+some	DT	some
+non-building	JJ	non-building
+pixels	NNS	pixel
+might	MD	might
+end	VB	end
+up	RP	up
+inside	IN	inside
+the	DT	the
+training	NN	training
+samples	NNS	sample
+,	,	,
+e.g.	FW	e.g.
+,	,	,
+a	DT	a
+tree	NN	tree
+may	MD	may
+partially	RB	partially
+cover	VB	cover
+a	DT	a
+rooftop	NN	rooftop
+of	IN	of
+a	DT	a
+building	NN	building
+.	.	.
+</s>
+<s type="sub">
+This	DT	this
+might	MD	might
+also	RB	also
+occur	VB	occur
+where	WRB	where
+buildings	NNS	building
+are	VBP	be
+next	RB	next
+to	IN	to
+the	DT	the
+sea/water	NN	sea/water
+bodies	NNS	body
+,	,	,
+which	WDT	which
+may	MD	may
+lead	VB	lead
+to	IN	to
+the	DT	the
+inclusion	NN	inclusion
+of	IN	of
+water	NN	water
+pixels	NNS	pixel
+in	IN	in
+the	DT	the
+training	NN	training
+samples	NNS	sample
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+to	TO	to
+overcome	VB	overcome
+these	DT	this
+issues	NNS	issue
+,	,	,
+the	DT	the
+Normalized	NNP	normalize
+Difference	NNP	Difference
+Vegetation	NNP	Vegetation
+Index	NNP	Index
+(	-LRB-	(
+NDVI	NNP	NDVI
+)	-RRB-	)
+and	CC	and
+Normalized	NNP	normalize
+Difference	NNP	Difference
+Water	NNP	Water
+Index	NNP	Index
+(	-LRB-	(
+NDWI	NNP	NDWI
+)	-RRB-	)
+indices	NNS	indice
+were	VBD	be
+computed	VBN	compute
+for	IN	for
+the	DT	the
+pre-disaster	JJ	pre-disaster
+image	NN	image
+to	TO	to
+exclude	VB	exclude
+vegetated	VBN	vegetate
+areas	NNS	area
+,	,	,
+trees	NNS	tree
+,	,	,
+and	CC	and
+water	NN	water
+bodies	NNS	body
+from	IN	from
+the	DT	the
+building	NN	building
+mask	NN	mask
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+do	VB	do
+so	RB	so
+,	,	,
+NDVI	NNP	NDVI
+and	CC	and
+NDWI	NNP	NDWI
+masks	NNS	mask
+were	VBD	be
+computed	VBN	compute
+based	VBN	base
+on	IN	on
+pre-defined	JJ	pre-defined
+thresholds	NNS	threshold
+and	CC	and
+those	DT	this
+pixels	NNS	pixel
+falling	VBG	fall
+into	IN	into
+the	DT	the
+masks	NNS	mask
+were	VBD	be
+removed	VBN	remove
+from	IN	from
+the	DT	the
+building	NN	building
+training	NN	training
+class	NN	class
+.	.	.
+</s>
+<s type="decl">
+Training	NN	Training
+patches	NNS	patch
+with	IN	with
+a	DT	a
+height	NN	height
+and	CC	and
+width	NN	width
+of	IN	of
+512	CD	512
+pixels	NNS	pixel
+were	VBD	be
+extracted	VBN	extract
+from	IN	from
+the	DT	the
+entire	JJ	entire
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+in	IN	in
+order	NN	order
+to	TO	to
+increase	VB	increase
+the	DT	the
+training	NN	training
+samples	NNS	sample
+,	,	,
+more	JJR	more
+patches	NNS	patch
+were	VBD	be
+generated	VBN	generate
+from	IN	from
+the	DT	the
+same	JJ	same
+area	NN	area
+by	IN	by
+shifting	VBG	shift
+the	DT	the
+starting	NN	starting
+point	NN	point
+of	IN	of
+the	DT	the
+generation	NN	generation
+of	IN	of
+the	DT	the
+patches	NNS	patch
+by	IN	by
+100	CD	100
+pixels	NNS	pixel
+in	IN	in
+both	CC	both
+x	NN	x
+and	CC	and
+y	NN	y
+directions	NNS	direction
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+procedure	NN	procedure
+was	VBD	be
+conducted	VBN	conduct
+three	CD	3
+times	NNS	time
+to	TO	to
+obtain	VB	obtain
+different	JJ	different
+image	NN	image
+patches	NNS	patch
+from	IN	from
+the	DT	the
+same	JJ	same
+area	NN	area
+and	CC	and
+then	RB	then
+the	DT	the
+suitable	JJ	suitable
+training	NN	training
+samples	NNS	sample
+were	VBD	be
+selected	VBN	select
+from	IN	from
+those	DT	this
+to	TO	to
+train	VB	train
+the	DT	the
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+total	NN	total
+,	,	,
+780	CD	780
+image	NN	image
+patches	NNS	patch
+were	VBD	be
+selected	VBN	select
+to	TO	to
+be	VB	be
+used	VBN	use
+as	IN	as
+the	DT	the
+initial	JJ	initial
+training	NN	training
+sample	NN	sample
+set	NN	set
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+542	CD	542
+image	NN	image
+patches	NNS	patch
+were	VBD	be
+selected	VBN	select
+for	IN	for
+each	DT	each
+of	IN	of
+the	DT	the
+disaster	NN	disaster
+and	CC	and
+post-disaster	JJ	post-disaster
+images	NNS	image
+to	TO	to
+be	VB	be
+used	VBN	use
+for	IN	for
+fine-tuning	NN	fine-tuning
+of	IN	of
+the	DT	the
+model	NN	model
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.	CD	2.3.
+</s>
+<s type="multiple">
+Step	NN	step
+3	CD	3
+:	:	:
+Detecting	VBG	Detect
+Damaged	VBN	Damage
+and	CC	and
+Demolished	NNP	Demolished
+Buildings	NNS	building
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+OSM	NNP	OSM
+building	NN	building
+map	NN	map
+represents	VBZ	represent
+the	DT	the
+pre-disaster	JJ	pre-disaster
+time	NN	time
+;	:	;
+however	RB	however
+,	,	,
+since	IN	since
+some	DT	some
+buildings	NNS	building
+get	VBP	get
+damaged	VBN	damage
+during	IN	during
+the	DT	the
+disaster	NN	disaster
+and	CC	and
+are	VBP	be
+later	RB	late
+demolished	VBN	demolish
+,	,	,
+direct	JJ	direct
+use	NN	use
+of	IN	of
+those	DT	this
+maps	NNS	map
+for	IN	for
+the	DT	the
+training	NN	training
+area	NN	area
+selection	NN	selection
+from	IN	from
+post-disaster	JJ	post-disaster
+images	NNS	image
+will	MD	will
+lead	VB	lead
+to	IN	to
+inaccurate	JJ	inaccurate
+results	NNS	result
+as	IN	as
+rubble	NN	rubble
+and	CC	and
+damaged	JJ	damaged
+buildings	NNS	building
+are	VBP	be
+included	VBN	include
+.	.	.
+</s>
+<s type="sub">
+Hence	RB	hence
+,	,	,
+the	DT	the
+damaged	VBN	damage
+and	CC	and
+destroyed	VBN	destroy
+buildings	NNS	building
+should	MD	should
+be	VB	be
+excluded	VBN	exclude
+from	IN	from
+the	DT	the
+building	NN	building
+footprint	NN	footprint
+map	NN	map
+before	IN	before
+using	VBG	use
+them	PRP	they
+for	IN	for
+training	NN	training
+area	NN	area
+selection	NN	selection
+for	IN	for
+post-disaster	JJ	post-disaster
+time	NN	time
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+the	DT	the
+extraction	NN	extraction
+of	IN	of
+the	DT	the
+buildings	NNS	building
+will	MD	will
+be	VB	be
+based	VBN	base
+on	IN	on
+the	DT	the
+advanced	JJ	advanced
+proposed	VBN	propose
+deep	JJ	deep
+learning	NN	learning
+approach	NN	approach
+,	,	,
+a	DT	a
+simple	JJ	simple
+yet	CC	yet
+accurate	JJ	accurate
+method	NN	method
+was	VBD	be
+developed	VBN	develop
+only	RB	only
+for	IN	for
+the	DT	the
+identification	NN	identification
+of	IN	of
+the	DT	the
+intact	JJ	intact
+and	CC	and
+damaged	VBN	damage
+buildings	NNS	building
+from	IN	from
+the	DT	the
+provided	VBN	provide
+OSM	NNP	OSM
+building	NN	building
+map	NN	map
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Two	CD	2
+measurements	NNS	measurement
+based	VBN	base
+on	IN	on
+the	DT	the
+Histogram	NNP	Histogram
+of	IN	of
+the	DT	the
+Oriented	NNP	orient
+Gradients	NNPS	Gradient
+(	-LRB-	(
+HOG	NNP	HOG
+)	-RRB-	)
+and	CC	and
+the	DT	the
+edge	NN	edge
+detection	NN	detection
+results	NNS	result
+of	IN	of
+the	DT	the
+satellite	NN	satellite
+images	NNS	image
+,	,	,
+namely	RB	namely
+Variation-HOG	NNP	Variation-HOG
+(	-LRB-	(
+V-HOG	NNP	V-HOG
+)	-RRB-	)
+and	CC	and
+Edge	NNP	Edge
+Density	NNP	Density
+Index	NNP	Index
+(	-LRB-	(
+EDI	NNP	EDI
+)	-RRB-	)
+,	,	,
+were	VBD	be
+used	VBN	use
+to	TO	to
+conduct	VB	conduct
+the	DT	the
+change	NN	change
+detection	NN	detection
+between	IN	between
+the	DT	the
+pre-disaster	JJ	pre-disaster
+and	CC	and
+post-disaster	JJ	post-disaster
+satellite	NN	satellite
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+change	NN	change
+detection	NN	detection
+was	VBD	be
+performed	VBN	perform
+only	RB	only
+on	IN	on
+the	DT	the
+building	NN	building
+masks	NNS	mask
+of	IN	of
+the	DT	the
+images	NNS	image
+to	TO	to
+distinguish	VB	distinguish
+the	DT	the
+damaged/demolished	JJ	damaged/demolished
+and	CC	and
+intact	JJ	intact
+buildings	NNS	building
+in	IN	in
+the	DT	the
+post-disaster	JJ	post-disaster
+image	NN	image
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.1.	CD	2.3.1.
+Variation	NN	variation
+of	IN	of
+HOG	NNP	HOG
+(	-LRB-	(
+V-HOG	NNP	V-HOG
+)	-RRB-	)
+</s>
+</head>
+<p>
+<s type="decl">
+HOGs	NNS	hog
+provide	VBP	provide
+powerful	JJ	powerful
+features	NNS	feature
+for	IN	for
+image	NN	image
+representation	NN	representation
+,	,	,
+which	WDT	which
+are	VBP	be
+particularly	RB	particularly
+robust	JJ	robust
+for	IN	for
+image-based	JJ	image-based
+object	NN	object
+classification	NN	classification
+.	.	.
+</s>
+<s type="decl">
+They	PRP	they
+were	VBD	be
+initially	RB	initially
+developed	VBN	develop
+for	IN	for
+pedestrian	NN	pedestrian
+identification	NN	identification
+,	,	,
+however	RB	however
+they	PRP	they
+were	VBD	be
+then	RB	then
+found	VBN	find
+to	TO	to
+be	VB	be
+robust	JJ	robust
+features	NNS	feature
+in	IN	in
+different	JJ	different
+applications	NNS	application
+,	,	,
+including	VBG	include
+for	IN	for
+remote	JJ	remote
+sensing	NN	sensing
+data	NNS	datum
+and	CC	and
+for	IN	for
+image-based	JJ	image-based
+damage	NN	damage
+detection	NN	detection
+.	.	.
+</s>
+</p>
+</text>

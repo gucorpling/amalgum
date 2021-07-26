@@ -1,0 +1,127 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1.</segment>
+<segment id="2" parent="1002" relname="preparation">Introduction</segment>
+<segment id="3" parent="1003" relname="span">Inverse scattering problems often involve identifying the specific characteristics</segment>
+<segment id="4" parent="1004" relname="joint">( for example , location , geometry , or material properties )</segment>
+<segment id="5" parent="1004" relname="joint">of an unknown target from scattered or far-field data .</segment>
+<segment id="6" parent="1006" relname="preparation">Such problems are of great practical importance in fields such as mathematics , physics , engineering , and biomedical science .</segment>
+<segment id="7" parent="1007" relname="span">However , due to their inherent nonlinearity and ill-posedness ,</segment>
+<segment id="8" parent="7" relname="elaboration">they remain challenging .</segment>
+<segment id="9" parent="1006" relname="joint">Related work can be found in and references therein .</segment>
+<segment id="10" parent="1010" relname="joint">Attempts to address these types of problems have led to a search for fast and effective identification techniques ,</segment>
+<segment id="11" parent="1010" relname="joint">and various approaches have been developed .</segment>
+<segment id="12" parent="1015" relname="span">Those include the MUltiple SIgnal Classification</segment>
+<segment id="13" parent="12" relname="restatement">( MUSIC )</segment>
+<segment id="14" parent="1016" relname="span">algorithm</segment>
+<segment id="15" parent="14" relname="evidence">[ 11,12,13,14,15 ] ,</segment>
+<segment id="16" parent="1017" relname="span">the linear and direct sampling methods , and topological derivatives</segment>
+<segment id="17" parent="16" relname="evidence">[ 27,28,29,30,31 ] .</segment>
+<segment id="18" parent="1011" relname="joint">We also refer to various non-iterative imaging techniques .</segment>
+<segment id="19" parent="1020" relname="span">Kirchhoff and subspace migration are also well-known non-iterative techniques</segment>
+<segment id="20" parent="19" relname="purpose">for finding location/shape of unknown inhomogeneities ,</segment>
+<segment id="21" parent="1021" relname="span">and they have been applied to a variety of problems</segment>
+<segment id="22" parent="21" relname="elaboration">( see [ 38,39,40,41,42,43 ] , for instance ) .</segment>
+<segment id="23" parent="1025" relname="attribution">Several studies have confirmed</segment>
+<segment id="24" parent="1025" relname="span">that they are fast , stable , and effective methods</segment>
+<segment id="25" parent="24" relname="elaboration">for finding various kinds of defects without a priori information of unknown targets .</segment>
+<segment id="26" parent="1026" relname="joint">However , most of these researches was performed for homogeneous background media ,</segment>
+<segment id="27" parent="1027" relname="span">and further research is still needed on the imaging performance of Kirchhoff and subspace migrations</segment>
+<segment id="28" parent="1028" relname="contrast">when the unknown targets are surrounded by random scatterers</segment>
+<segment id="29" parent="1028" relname="contrast">or embedded in an inhomogeneous medium .</segment>
+<segment id="30" parent="1031" relname="attribution">Notice</segment>
+<segment id="31" parent="1031" relname="span">that for subspace migration , some studies have considered inverse scattering problems in random media , random scatterers , and mathematical theory</segment>
+<segment id="32" parent="31" relname="purpose">for detecting point-like scatterers with random noise .</segment>
+<segment id="33" parent="1029" relname="sequence">However , Kirchhoff migration-based imaging in random media and related mathematical theory has not been considered yet .</segment>
+<segment id="34" parent="1034" relname="span">In this paper , we consider Kirchhoff migration</segment>
+<segment id="35" parent="34" relname="purpose">for localizing small electromagnetic anomalies surrounded by small random scatterers .</segment>
+<segment id="36" parent="1036" relname="span">We carefully analyze its imaging functions</segment>
+<segment id="37" parent="36" relname="means">by discovering a relationship with the Bessel function of the first kind of order zero and one .</segment>
+<segment id="38" parent="1038" relname="joint">This enables us to discuss its various properties</segment>
+<segment id="39" parent="1038" relname="joint">and compare the imaging performance with subspace migration .</segment>
+<segment id="40" parent="1042" relname="span">The analysis is based on the structure of the singular vectors</segment>
+<segment id="41" parent="1043" relname="span">associated with non-zero singular values of so-called multi-static response</segment>
+<segment id="42" parent="41" relname="restatement">( MSR )</segment>
+<segment id="43" parent="1041" relname="same_unit">matrix</segment>
+<segment id="44" parent="1039" relname="joint">and asymptotic expansion formula in the presence of small electromagnetic defects .</segment>
+<segment id="45" parent="1045" relname="preparation">This paper is organized as follows :</segment>
+<segment id="46" parent="1046" relname="span">In Section 2 , we introduce the two-dimensional direct scattering problem and asymptotic expansion formula</segment>
+<segment id="47" parent="46" relname="elaboration">that holds in the presence of small inhomogeneities surrounded by random scatterers .</segment>
+<segment id="48" parent="1048" relname="span">In Section 3 , we introduce the imaging function of Kirchhoff migration and its mathematical structure</segment>
+<segment id="49" parent="48" relname="means">by establishing a relationship with Bessel function of order zero and one .</segment>
+<segment id="50" parent="1049" relname="sequence">On the basis of analyzed structure , we discuss its intrinsic properties for several cases of anomalies and random scatterers ,</segment>
+<segment id="51" parent="1049" relname="sequence">and compare the imaging performance with subspace migration .</segment>
+<segment id="52" parent="1052" relname="span">In Section 4 , we present some numerical simulation results</segment>
+<segment id="53" parent="52" relname="purpose">to support the analytical discussion .</segment>
+<segment id="54" parent="1054" relname="span">We apply various non-iterative techniques</segment>
+<segment id="55" parent="1055" relname="span">for imaging of several extended targets</segment>
+<segment id="56" parent="1056" relname="joint">completely hidden in an inhomogeneous medium</segment>
+<segment id="57" parent="1056" relname="joint">and discuss their imaging performances in Section 5 .</segment>
+<segment id="58" parent="1053" relname="sequence">Finally , we present our conclusion in Section 6 .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="multinuc" parent="3" relname="elaboration"/>
+<group id="1005" type="span" parent="1002" relname="joint"/>
+<group id="1006" type="multinuc" parent="1005" relname="span"/>
+<group id="1007" type="span" parent="1006" relname="joint"/>
+<group id="1009" type="span" parent="1006" relname="joint"/>
+<group id="1010" type="multinuc" parent="1011" relname="preparation"/>
+<group id="1011" type="multinuc" parent="1009" relname="span"/>
+<group id="1013" type="span" parent="1011" relname="joint"/>
+<group id="1014" type="multinuc" parent="1013" relname="span"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1016" type="span" parent="1014" relname="same_unit"/>
+<group id="1017" type="span" parent="1014" relname="elaboration"/>
+<group id="1020" type="span" parent="1011" relname="joint"/>
+<group id="1021" type="span" parent="1011" relname="joint"/>
+<group id="1023" type="span" parent="1011" relname="joint"/>
+<group id="1024" type="span" parent="1026" relname="concession"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="multinuc" parent="1023" relname="span"/>
+<group id="1027" type="span" parent="1026" relname="joint"/>
+<group id="1028" type="multinuc" parent="27" relname="circumstance"/>
+<group id="1029" type="multinuc" parent="1011" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="sequence"/>
+<group id="1031" type="span" parent="1030" relname="span"/>
+<group id="1033" type="multinuc" parent="1029" relname="sequence"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1036" type="span" parent="1033" relname="joint"/>
+<group id="1037" type="span" parent="1033" relname="joint"/>
+<group id="1038" type="multinuc" parent="1039" relname="preparation"/>
+<group id="1039" type="multinuc" parent="1037" relname="span"/>
+<group id="1041" type="multinuc" parent="1039" relname="joint"/>
+<group id="1042" type="span" parent="1041" relname="same_unit"/>
+<group id="1043" type="span" parent="40" relname="elaboration"/>
+<group id="1044" type="span" parent="1039" relname="joint"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="1047" relname="preparation"/>
+<group id="1047" type="multinuc" parent="1045" relname="span"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="multinuc" parent="1047" relname="joint"/>
+<group id="1051" type="multinuc" parent="1049" relname="sequence"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1051" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="sequence"/>
+<group id="1055" type="span" parent="54" relname="purpose"/>
+<group id="1056" type="multinuc" parent="55" relname="elaboration"/>
+	</body>
+</rst>

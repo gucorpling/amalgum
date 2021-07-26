@@ -1,0 +1,178 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4.</segment>
+<segment id="2" parent="1002" relname="preparation">Evaluation Setup</segment>
+<segment id="3" parent="1004" relname="span">In this section , we describe the benchmark dataset of the practical industrial process and the existing deep neural network approach</segment>
+<segment id="4" parent="3" relname="elaboration">that we used</segment>
+<segment id="5" parent="1004" relname="purpose">to compare our proposed method .</segment>
+<segment id="6" parent="1006" relname="preparation">4.1. Tennessee Eastman Challenge Problem</segment>
+<segment id="7" parent="1007" relname="span">We evaluate the performance of the proposed method for FDD on Tennessee Eastman Process</segment>
+<segment id="8" parent="7" relname="restatement">( TEP ) .</segment>
+<segment id="9" parent="1009" relname="span">TEP is a widely-used benchmark testbed</segment>
+<segment id="10" parent="9" relname="purpose">to investigate the large-scale control and FDD schemes of realistic chemical processes .</segment>
+<segment id="11" parent="1011" relname="preparation">The simulation data of TEP are highly nonlinear with strong coupling and dynamical behavior .</segment>
+<segment id="12" parent="1011" relname="joint">The simulation code and data are available for download in References , respectively .</segment>
+<segment id="13" parent="1014" relname="preparation">The main structure of the TEP simulator is described in</segment>
+<segment id="14" parent="1015" relname="preparation">Figure 3</segment>
+<segment id="15" parent="1015" relname="joint">.</segment>
+<segment id="16" parent="1016" relname="span">The TEP produces two products G and H from four reactants with additional byproduct F .</segment>
+<segment id="17" parent="1018" relname="span">The reactions are</segment>
+<segment id="18" parent="17" relname="elaboration">All chemical reactions are irreversible , exothermic and approximately first-order with respect to the reactant concentrations .</segment>
+<segment id="19" parent="1019" relname="joint">The reaction rates are a function of temperature through an Arrhenius expression .</segment>
+<segment id="20" parent="1022" relname="span">The reaction</segment>
+<segment id="21" parent="1023" relname="span">to produce G has a higher activation energy than the one</segment>
+<segment id="22" parent="1024" relname="span">producing H ,</segment>
+<segment id="23" parent="22" relname="result">thus resulting in more sensitivity to temperature .</segment>
+<segment id="24" parent="1025" relname="span">To model a practical industrial process ,</segment>
+<segment id="25" parent="1026" relname="span">the TEP simulator consists of five major units :</segment>
+<segment id="26" parent="25" relname="elaboration">reactor , condenser , compressor , separator and stripper .</segment>
+<segment id="27" parent="1028" relname="span">The gaseous reactants are fed into the reactor</segment>
+<segment id="28" parent="27" relname="elaboration">where liquid products are formed .</segment>
+<segment id="29" parent="1030" relname="joint">The product stream of the reactor is cooled through a condenser</segment>
+<segment id="30" parent="1030" relname="joint">and fed to a vapor-liquid separator .</segment>
+<segment id="31" parent="1031" relname="span">Non-condensed components are recycled back to the reactor via a compressor .</segment>
+<segment id="32" parent="1033" relname="span">Condensed components are moved to a product stripping column</segment>
+<segment id="33" parent="1034" relname="span">by stripping with feed stream number 4</segment>
+<segment id="34" parent="33" relname="purpose">to eliminate remaining reactants .</segment>
+<segment id="35" parent="1035" relname="joint">Products G and H are separated in a downstream refining section from the stripper base .</segment>
+<segment id="36" parent="1036" relname="span">The inert and byproducts are purged as vapor from the vapor-liquid separator .</segment>
+<segment id="37" parent="1038" relname="span">In TEP , we monitor a total of 52 variables</segment>
+<segment id="38" parent="37" relname="elaboration">including 41 measured variables and 11 manipulated variables .</segment>
+<segment id="39" parent="1040" relname="span">The modern industrial systems interact with multiple subcomponents</segment>
+<segment id="40" parent="39" relname="elaboration">where each component has several different failure modes .</segment>
+<segment id="41" parent="1041" relname="span">Furthermore , each failure mode typically has long-term dependencies along with short-term ones of time series data .</segment>
+<segment id="42" parent="1042" relname="same_unit">Besides normal data ,</segment>
+<segment id="43" parent="1043" relname="span">Table 1 describes 20 different types of faults</segment>
+<segment id="44" parent="43" relname="purpose">to evaluate various FDD methods .</segment>
+<segment id="45" parent="1046" relname="preparation">Figure 4</segment>
+<segment id="46" parent="1047" relname="span">shows the raw process variable deviations from their normal states</segment>
+<segment id="47" parent="46" relname="circumstance">when fault 02 is introduced at after the simulation started .</segment>
+<segment id="48" parent="1048" relname="span">We also show the normalized variables by the mean and standard deviation of each feature .</segment>
+<segment id="49" parent="1052" relname="span">Although the time-varying features of multivariate data are critical</segment>
+<segment id="50" parent="49" relname="purpose">to identify the types of faults ,</segment>
+<segment id="51" parent="1053" relname="span">the distinction between various types of faults is a challenging task</segment>
+<segment id="52" parent="51" relname="cause">due to the complex interaction among control processes .</segment>
+<segment id="53" parent="1051" relname="elaboration">In fact , the fault effect is considerably different for various process variables .</segment>
+<segment id="54" parent="1054" relname="same_unit">Furthermore ,</segment>
+<segment id="55" parent="1056" relname="concession">even if some variables are oscillating due to faults ,</segment>
+<segment id="56" parent="1057" relname="span">there is a significant delay</segment>
+<segment id="57" parent="56" relname="purpose">to recognize it</segment>
+<segment id="58" parent="1056" relname="same_unit">as shown in</segment>
+<segment id="59" parent="60" relname="preparation">Figure 4</segment>
+<segment id="60" parent="1059" relname="span">.</segment>
+<segment id="61" parent="1011" relname="joint">The combined autoencoder and LSTM network must mine the hidden features of time series data .</segment>
+<segment id="62" parent="1011" relname="joint">More detailed information of TEP is described in Reference .</segment>
+<segment id="63" parent="1011" relname="joint">The simulation starts to run in the normal state for .</segment>
+<segment id="64" parent="1011" relname="joint">The specific fault out of 20 different types is then injected</segment>
+<segment id="65" parent="1011" relname="joint">and it continues to run for .</segment>
+<segment id="66" parent="1011" relname="joint">Hence , the total simulation time is based on the recommendation of the TEP model .</segment>
+<segment id="67" parent="1011" relname="joint">Each simulation of the fault repeats 500 times with various initial states and random noise .</segment>
+<segment id="68" parent="1068" relname="span">We set the sampling time as ( 20 samples/h )</segment>
+<segment id="69" parent="68" relname="purpose">to support the fast fault detection and fault diagnosis .</segment>
+<segment id="70" parent="1069" relname="joint">We randomly select 80 % time series sample as training sets</segment>
+<segment id="71" parent="1069" relname="joint">and the remaining sample as testing sets .</segment>
+<segment id="72" parent="1072" relname="span">We only use the normal state samples without any faults</segment>
+<segment id="73" parent="1073" relname="span">to train the autoencoder for fault detection</segment>
+<segment id="74" parent="73" relname="elaboration">where anomalous and normal states correspond to positive and negative class , respectively .</segment>
+<segment id="75" parent="1075" relname="span">In addition , 20 % of the whole training set is used as the validation set</segment>
+<segment id="76" parent="75" relname="purpose">to optimize the decision threshold for the autoencoder .</segment>
+<segment id="77" parent="1077" relname="span">On the other hand , the time series samples with temporal features are used</segment>
+<segment id="78" parent="77" relname="purpose">to train the LSTM-based classifier .</segment>
+<segment id="79" parent="1078" relname="joint">In this training set , we remove the first of the normal state samples in each simulation .</segment>
+<segment id="80" parent="1078" relname="joint">Hence , each training set of the LSTM network consists with of normal data and of faulty state data .</segment>
+<segment id="81" parent="1081" relname="span">The fraction of the normal state samples prior to faults is used</segment>
+<segment id="82" parent="81" relname="purpose">to compensate the detection delay and the possible false positives of the autoencoder .</segment>
+<segment id="83" parent="1083" relname="span">The input sequence of the testing set for LSTM includes time series data before the first event of the fault detection ,</segment>
+<segment id="84" parent="83" relname="elaboration">captured by the autoencoder .</segment>
+<segment id="85" parent="1078" relname="joint">4.2. DCNN</segment>
+<segment id="86" parent="1086" relname="span">In previous research , a deep convolutional neural network</segment>
+<segment id="87" parent="86" relname="elaboration">( DCNN)-based approach achieves the best reported results in multivariate time series data from the simulated TEP dataset .</segment>
+<segment id="88" parent="1078" relname="joint">We compare the fault diagnosis performance of LSTM and DCNN-based approaches on the TEP dataset .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1002" relname="joint"/>
+<group id="1006" type="multinuc" parent="1005" relname="span"/>
+<group id="1007" type="span" parent="1006" relname="joint"/>
+<group id="1009" type="span" parent="1006" relname="joint"/>
+<group id="1010" type="span" parent="1006" relname="joint"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1013" type="span" parent="1011" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="span"/>
+<group id="1015" type="multinuc" parent="1014" relname="span"/>
+<group id="1016" type="span" parent="1015" relname="joint"/>
+<group id="1017" type="span" parent="16" relname="elaboration"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1019" type="multinuc" parent="1018" relname="evidence"/>
+<group id="1020" type="multinuc" parent="1019" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="span"/>
+<group id="1023" type="span" parent="20" relname="purpose"/>
+<group id="1024" type="span" parent="21" relname="elaboration"/>
+<group id="1025" type="span" parent="1022" relname="purpose"/>
+<group id="1026" type="span" parent="24" relname="elaboration"/>
+<group id="1027" type="multinuc" parent="1020" relname="joint"/>
+<group id="1028" type="span" parent="1027" relname="joint"/>
+<group id="1029" type="span" parent="1027" relname="joint"/>
+<group id="1030" type="multinuc" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="1030" relname="elaboration"/>
+<group id="1032" type="multinuc" parent="31" relname="elaboration"/>
+<group id="1033" type="span" parent="1032" relname="joint"/>
+<group id="1034" type="span" parent="32" relname="means"/>
+<group id="1035" type="multinuc" parent="1032" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="36" relname="elaboration"/>
+<group id="1038" type="span" parent="1039" relname="background"/>
+<group id="1039" type="span" parent="1037" relname="span"/>
+<group id="1040" type="span" parent="1039" relname="span"/>
+<group id="1041" type="span" parent="1040" relname="elaboration"/>
+<group id="1042" type="multinuc" parent="41" relname="elaboration"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1045" type="span" parent="1011" relname="joint"/>
+<group id="1046" type="multinuc" parent="1045" relname="span"/>
+<group id="1047" type="span" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1046" relname="joint"/>
+<group id="1049" type="span" parent="48" relname="elaboration"/>
+<group id="1050" type="span" parent="1054" relname="concession"/>
+<group id="1051" type="multinuc" parent="1050" relname="span"/>
+<group id="1052" type="span" parent="1051" relname="same_unit"/>
+<group id="1053" type="span" parent="1051" relname="same_unit"/>
+<group id="1054" type="multinuc" parent="1049" relname="span"/>
+<group id="1055" type="span" parent="1054" relname="same_unit"/>
+<group id="1056" type="multinuc" parent="1055" relname="span"/>
+<group id="1057" type="span" parent="1056" relname="same_unit"/>
+<group id="1059" type="span" parent="1011" relname="joint"/>
+<group id="1067" type="span" parent="1011" relname="joint"/>
+<group id="1068" type="span" parent="1069" relname="preparation"/>
+<group id="1069" type="multinuc" parent="1067" relname="span"/>
+<group id="1072" type="span" parent="1069" relname="joint"/>
+<group id="1073" type="span" parent="72" relname="purpose"/>
+<group id="1075" type="span" parent="1069" relname="joint"/>
+<group id="1076" type="multinuc" parent="1069" relname="joint"/>
+<group id="1077" type="span" parent="1076" relname="sequence"/>
+<group id="1078" type="multinuc" parent="1076" relname="sequence"/>
+<group id="1081" type="span" parent="1078" relname="joint"/>
+<group id="1083" type="span" parent="1078" relname="joint"/>
+<group id="1086" type="span" parent="1078" relname="joint"/>
+	</body>
+</rst>

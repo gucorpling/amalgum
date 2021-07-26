@@ -1,0 +1,989 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_fault" title="Fault Detection and Diagnosis Using Combined Autoencoder and Long Short-Term Memory Network" shortTitle="fault" author="Pangun Park, Piergiuseppe  Di Marco, Hyejeon Shin, Junseong Bang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4612/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	NNP	4.
+</s>
+<s type="frag">
+Evaluation	NN	evaluation
+Setup	NN	setup
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+we	PRP	we
+describe	VBP	describe
+the	DT	the
+benchmark	NN	benchmark
+dataset	NN	dataset
+of	IN	of
+the	DT	the
+practical	JJ	practical
+industrial	JJ	industrial
+process	NN	process
+and	CC	and
+the	DT	the
+existing	VBG	exist
+deep	JJ	deep
+neural	JJ	neural
+network	NN	network
+approach	NN	approach
+that	WDT	that
+we	PRP	we
+used	VBD	use
+to	TO	to
+compare	VB	compare
+our	PRP$	our
+proposed	VBN	propose
+method	NN	method
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+Tennessee	NNP	Tennessee
+Eastman	NNP	Eastman
+Challenge	NNP	challenge
+Problem	NN	Problem
+</s>
+</head>
+<p>
+<s type="decl">
+We	PRP	we
+evaluate	VBP	evaluate
+the	DT	the
+performance	NN	performance
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+for	IN	for
+FDD	NNP	FDD
+on	IN	on
+Tennessee	NNP	Tennessee
+Eastman	NNP	Eastman
+Process	NNP	process
+(	-LRB-	(
+TEP	NNP	TEP
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+TEP	NNP	TEP
+is	VBZ	be
+a	DT	a
+widely-used	RB	widely-used
+benchmark	NN	benchmark
+testbed	NN	testbed
+to	TO	to
+investigate	VB	investigate
+the	DT	the
+large-scale	JJ	large-scale
+control	NN	control
+and	CC	and
+FDD	NN	FDD
+schemes	NNS	scheme
+of	IN	of
+realistic	JJ	realistic
+chemical	JJ	chemical
+processes	NNS	process
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+simulation	NN	simulation
+data	NNS	datum
+of	IN	of
+TEP	NNP	TEP
+are	VBP	be
+highly	RB	highly
+nonlinear	JJ	nonlinear
+with	IN	with
+strong	JJ	strong
+coupling	NN	coupling
+and	CC	and
+dynamical	JJ	dynamical
+behavior	NN	behavior
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+simulation	NN	simulation
+code	NN	code
+and	CC	and
+data	NNS	datum
+are	VBP	be
+available	JJ	available
+for	IN	for
+download	NN	download
+in	IN	in
+References	NNPS	Reference
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+main	JJ	main
+structure	NN	structure
+of	IN	of
+the	DT	the
+TEP	NNP	TEP
+simulator	NN	simulator
+is	VBZ	be
+described	VBN	describe
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+TEP	NNP	TEP
+produces	VBZ	produce
+two	CD	2
+products	NNS	product
+<hi rend="italic">
+G	NN	G
+</hi>
+and	CC	and
+<hi rend="italic">
+H	NN	H
+</hi>
+from	IN	from
+four	CD	4
+reactants	NNS	reactant
+with	IN	with
+additional	JJ	additional
+byproduct	NN	byproduct
+<hi rend="italic">
+F	CD	F
+</hi>
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+reactions	NNS	reaction
+are	VBP	be
+</s>
+</p>
+<p>
+<s type="decl">
+All	DT	all
+chemical	JJ	chemical
+reactions	NNS	reaction
+are	VBP	be
+irreversible	JJ	irreversible
+,	,	,
+exothermic	JJ	exothermic
+and	CC	and
+approximately	RB	approximately
+first-order	JJ	first-order
+with	IN	with
+respect	NN	respect
+to	IN	to
+the	DT	the
+reactant	NN	reactant
+concentrations	NNS	concentration
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+reaction	NN	reaction
+rates	NNS	rate
+are	VBP	be
+a	DT	a
+function	NN	function
+of	IN	of
+temperature	NN	temperature
+through	IN	through
+an	DT	a
+Arrhenius	NNP	Arrhenius
+expression	NN	expression
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+reaction	NN	reaction
+to	TO	to
+produce	VB	produce
+<hi rend="italic">
+G	NN	G
+</hi>
+has	VBZ	have
+a	DT	a
+higher	JJR	high
+activation	NN	activation
+energy	NN	energy
+than	IN	than
+the	DT	the
+one	NN	one
+producing	VBG	produce
+<hi rend="italic">
+H	NN	H
+</hi>
+,	,	,
+thus	RB	thus
+resulting	VBG	result
+in	IN	in
+more	JJR	more
+sensitivity	NN	sensitivity
+to	IN	to
+temperature	NN	temperature
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+To	TO	to
+model	VB	model
+a	DT	a
+practical	JJ	practical
+industrial	JJ	industrial
+process	NN	process
+,	,	,
+the	DT	the
+TEP	NNP	TEP
+simulator	NN	simulator
+consists	VBZ	consist
+of	IN	of
+five	CD	5
+major	JJ	major
+units	NNS	unit
+:	:	:
+reactor	NN	reactor
+,	,	,
+condenser	NN	condenser
+,	,	,
+compressor	NN	compressor
+,	,	,
+separator	NN	separator
+and	CC	and
+stripper	NN	stripper
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+gaseous	JJ	gaseous
+reactants	NNS	reactant
+are	VBP	be
+fed	VBN	fead
+into	IN	into
+the	DT	the
+reactor	NN	reactor
+where	WRB	where
+liquid	NN	liquid
+products	NNS	product
+are	VBP	be
+formed	VBN	form
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+product	NN	product
+stream	NN	stream
+of	IN	of
+the	DT	the
+reactor	NN	reactor
+is	VBZ	be
+cooled	VBN	cool
+through	IN	through
+a	DT	a
+condenser	NN	condenser
+and	CC	and
+fed	VBN	fead
+to	IN	to
+a	DT	a
+vapor-liquid	JJ	vapor-liquid
+separator	NN	separator
+.	.	.
+</s>
+<s type="decl">
+Non-condensed	JJ	Non-condensed
+components	NNS	component
+are	VBP	be
+recycled	VBN	recycle
+back	RB	back
+to	IN	to
+the	DT	the
+reactor	NN	reactor
+via	IN	via
+a	DT	a
+compressor	NN	compressor
+.	.	.
+</s>
+<s type="decl">
+Condensed	VBN	condense
+components	NNS	component
+are	VBP	be
+moved	VBN	move
+to	IN	to
+a	DT	a
+product	NN	product
+stripping	NN	stripping
+column	NN	column
+by	IN	by
+stripping	VBG	strip
+with	IN	with
+feed	NN	feed
+stream	NN	stream
+number	NN	number
+4	CD	4
+to	TO	to
+eliminate	VB	eliminate
+remaining	VBG	remain
+reactants	NNS	reactant
+.	.	.
+</s>
+<s type="decl">
+Products	NNS	product
+<hi rend="italic">
+G	NNP	G
+</hi>
+and	CC	and
+<hi rend="italic">
+H	NN	H
+</hi>
+are	VBP	be
+separated	VBN	separate
+in	IN	in
+a	DT	a
+downstream	JJ	downstream
+refining	NN	refining
+section	NN	section
+from	IN	from
+the	DT	the
+stripper	NN	stripper
+base	NN	base
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+inert	JJ	inert
+and	CC	and
+byproducts	NNS	byproduct
+are	VBP	be
+purged	VBN	purge
+as	IN	as
+vapor	NN	vapor
+from	IN	from
+the	DT	the
+vapor-liquid	JJ	vapor-liquid
+separator	NN	separator
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+TEP	NNP	TEP
+,	,	,
+we	PRP	we
+monitor	VBP	monitor
+a	DT	a
+total	NN	total
+of	IN	of
+52	CD	52
+variables	NNS	variable
+including	VBG	include
+41	CD	41
+measured	VBN	measure
+variables	NNS	variable
+and	CC	and
+11	CD	11
+manipulated	VBN	manipulate
+variables	NNS	variable
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+modern	JJ	modern
+industrial	JJ	industrial
+systems	NNS	system
+interact	VBP	interact
+with	IN	with
+multiple	JJ	multiple
+subcomponents	NNS	subcomponent
+where	WRB	where
+each	DT	each
+component	NN	component
+has	VBZ	have
+several	JJ	several
+different	JJ	different
+failure	NN	failure
+modes	NNS	mode
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+each	DT	each
+failure	NN	failure
+mode	NN	mode
+typically	RB	typically
+has	VBZ	have
+long-term	JJ	long-term
+dependencies	NNS	dependency
+along	RB	along
+with	IN	with
+short-term	JJ	short-term
+ones	NNS	one
+of	IN	of
+time	NN	time
+series	NN	series
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Besides	IN	besides
+normal	JJ	normal
+data	NNS	datum
+,	,	,
+Table	NNP	Table
+1	CD	1
+describes	VBZ	describe
+20	CD	20
+different	JJ	different
+types	NNS	type
+of	IN	of
+faults	NNS	fault
+to	TO	to
+evaluate	VB	evaluate
+various	JJ	various
+FDD	NN	FDD
+methods	NNS	method
+.	.	.
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+raw	JJ	raw
+process	NN	process
+variable	NN	variable
+deviations	NNS	deviation
+from	IN	from
+their	PRP$	their
+normal	JJ	normal
+states	NNS	state
+when	WRB	when
+fault	NN	fault
+02	CD	02
+is	VBZ	be
+introduced	VBN	introduce
+at	IN	at
+after	IN	after
+the	DT	the
+simulation	NN	simulation
+started	VBD	start
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+also	RB	also
+show	VBP	show
+the	DT	the
+normalized	VBN	normalize
+variables	NNS	variable
+by	IN	by
+the	DT	the
+mean	NN	mean
+and	CC	and
+standard	JJ	standard
+deviation	NN	deviation
+of	IN	of
+each	DT	each
+feature	NN	feature
+.	.	.
+</s>
+<s type="decl">
+Although	IN	although
+the	DT	the
+time-varying	JJ	time-varying
+features	NNS	feature
+of	IN	of
+multivariate	JJ	multivariate
+data	NNS	datum
+are	VBP	be
+critical	JJ	critical
+to	TO	to
+identify	VB	identify
+the	DT	the
+types	NNS	type
+of	IN	of
+faults	NNS	fault
+,	,	,
+the	DT	the
+distinction	NN	distinction
+between	IN	between
+various	JJ	various
+types	NNS	type
+of	IN	of
+faults	NNS	fault
+is	VBZ	be
+a	DT	a
+challenging	JJ	challenging
+task	NN	task
+due	JJ	due
+to	IN	to
+the	DT	the
+complex	JJ	complex
+interaction	NN	interaction
+among	IN	among
+control	NN	control
+processes	NNS	process
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+fact	NN	fact
+,	,	,
+the	DT	the
+fault	NN	fault
+effect	NN	effect
+is	VBZ	be
+considerably	RB	considerably
+different	JJ	different
+for	IN	for
+various	JJ	various
+process	NN	process
+variables	NNS	variable
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+even	RB	even
+if	IN	if
+some	DT	some
+variables	NNS	variable
+are	VBP	be
+oscillating	VBG	oscillate
+due	JJ	due
+to	IN	to
+faults	NNS	fault
+,	,	,
+there	EX	there
+is	VBZ	be
+a	DT	a
+significant	JJ	significant
+delay	NN	delay
+to	TO	to
+recognize	VB	recognize
+it	PRP	it
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+combined	JJ	combined
+autoencoder	NN	autoencoder
+and	CC	and
+LSTM	NNP	LSTM
+network	NN	network
+must	MD	must
+mine	VB	mine
+the	DT	the
+hidden	JJ	hidden
+features	NNS	feature
+of	IN	of
+time	NN	time
+series	NN	series
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+More	RBR	more
+detailed	JJ	detailed
+information	NN	information
+of	IN	of
+TEP	NNP	TEP
+is	VBZ	be
+described	VBN	describe
+in	IN	in
+Reference	NNP	Reference
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+simulation	NN	simulation
+starts	VBZ	start
+to	TO	to
+run	VB	run
+in	IN	in
+the	DT	the
+normal	JJ	normal
+state	NN	state
+for	IN	for
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+specific	JJ	specific
+fault	NN	fault
+out	IN	out
+of	IN	of
+20	CD	20
+different	JJ	different
+types	NNS	type
+is	VBZ	be
+then	RB	then
+injected	VBN	inject
+and	CC	and
+it	PRP	it
+continues	VBZ	continue
+to	TO	to
+run	VB	run
+for	IN	for
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+the	DT	the
+total	JJ	total
+simulation	NN	simulation
+time	NN	time
+is	VBZ	be
+based	VBN	base
+on	IN	on
+the	DT	the
+recommendation	NN	recommendation
+of	IN	of
+the	DT	the
+TEP	NNP	TEP
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+Each	DT	each
+simulation	NN	simulation
+of	IN	of
+the	DT	the
+fault	NN	fault
+repeats	VBZ	repeat
+500	CD	500
+times	NNS	time
+with	IN	with
+various	JJ	various
+initial	JJ	initial
+states	NNS	state
+and	CC	and
+random	JJ	random
+noise	NN	noise
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+set	VBD	set
+the	DT	the
+sampling	NN	sampling
+time	NN	time
+as	IN	as
+(	-LRB-	(
+20	CD	20
+samples/h	NN	samples/h
+)	-RRB-	)
+to	TO	to
+support	VB	support
+the	DT	the
+fast	JJ	fast
+fault	NN	fault
+detection	NN	detection
+and	CC	and
+fault	NN	fault
+diagnosis	NN	diagnosis
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+randomly	RB	randomly
+select	VBP	select
+80	CD	80
+%	NN	%
+time	NN	time
+series	NN	series
+sample	NN	sample
+as	IN	as
+training	NN	training
+sets	NNS	set
+and	CC	and
+the	DT	the
+remaining	VBG	remain
+sample	NN	sample
+as	IN	as
+testing	NN	testing
+sets	NNS	set
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+only	RB	only
+use	VBP	use
+the	DT	the
+normal	JJ	normal
+state	NN	state
+samples	NNS	sample
+without	IN	without
+any	DT	any
+faults	NNS	fault
+to	TO	to
+train	VB	train
+the	DT	the
+autoencoder	NN	autoencoder
+for	IN	for
+fault	NN	fault
+detection	NN	detection
+where	WRB	where
+anomalous	JJ	anomalous
+and	CC	and
+normal	JJ	normal
+states	NNS	state
+correspond	VBP	correspond
+to	IN	to
+positive	JJ	positive
+and	CC	and
+negative	JJ	negative
+class	NN	class
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+20	CD	20
+%	NN	%
+of	IN	of
+the	DT	the
+whole	JJ	whole
+training	NN	training
+set	NN	set
+is	VBZ	be
+used	VBN	use
+as	IN	as
+the	DT	the
+validation	NN	validation
+set	NN	set
+to	TO	to
+optimize	VB	optimize
+the	DT	the
+decision	NN	decision
+threshold	NN	threshold
+for	IN	for
+the	DT	the
+autoencoder	NN	autoencoder
+.	.	.
+</s>
+<s type="decl">
+On	IN	on
+the	DT	the
+other	JJ	other
+hand	NN	hand
+,	,	,
+the	DT	the
+time	NN	time
+series	NN	series
+samples	NNS	sample
+with	IN	with
+temporal	JJ	temporal
+features	NNS	feature
+are	VBP	be
+used	VBN	use
+to	TO	to
+train	VB	train
+the	DT	the
+LSTM-based	NNP	LSTM-based
+classifier	NN	classifier
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+training	NN	training
+set	NN	set
+,	,	,
+we	PRP	we
+remove	VBP	remove
+the	DT	the
+first	JJ	first
+of	IN	of
+the	DT	the
+normal	JJ	normal
+state	NN	state
+samples	NNS	sample
+in	IN	in
+each	DT	each
+simulation	NN	simulation
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+each	DT	each
+training	NN	training
+set	NN	set
+of	IN	of
+the	DT	the
+LSTM	NNP	LSTM
+network	NN	network
+consists	VBZ	consist
+with	IN	with
+of	IN	of
+normal	JJ	normal
+data	NNS	datum
+and	CC	and
+of	IN	of
+faulty	JJ	faulty
+state	NN	state
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+fraction	NN	fraction
+of	IN	of
+the	DT	the
+normal	JJ	normal
+state	NN	state
+samples	NNS	sample
+prior	RB	prior
+to	IN	to
+faults	NNS	fault
+is	VBZ	be
+used	VBN	use
+to	TO	to
+compensate	VB	compensate
+the	DT	the
+detection	NN	detection
+delay	NN	delay
+and	CC	and
+the	DT	the
+possible	JJ	possible
+false	JJ	false
+positives	NNS	positive
+of	IN	of
+the	DT	the
+autoencoder	NN	autoencoder
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+input	NN	input
+sequence	NN	sequence
+of	IN	of
+the	DT	the
+testing	NN	testing
+set	NN	set
+for	IN	for
+LSTM	NNP	LSTM
+includes	VBZ	include
+time	NN	time
+series	NN	series
+data	NNS	datum
+before	IN	before
+the	DT	the
+first	JJ	first
+event	NN	event
+of	IN	of
+the	DT	the
+fault	NN	fault
+detection	NN	detection
+,	,	,
+captured	VBN	capture
+by	IN	by
+the	DT	the
+autoencoder	NN	autoencoder
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.2.	CD	4.2.
+DCNN	NNP	DCNN
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+previous	JJ	previous
+research	NN	research
+,	,	,
+a	DT	a
+deep	JJ	deep
+convolutional	JJ	convolutional
+neural	NN	neural
+network	NN	network
+(	-LRB-	(
+DCNN)-based	VBN	DCNN)-base
+approach	NN	approach
+achieves	VBZ	achieve
+the	DT	the
+best	JJS	good
+reported	VBN	report
+results	NNS	result
+in	IN	in
+multivariate	JJ	multivariate
+time	NN	time
+series	NN	series
+data	NNS	datum
+from	IN	from
+the	DT	the
+simulated	VBN	simulate
+TEP	NNP	TEP
+dataset	NN	dataset
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+compare	VBP	compare
+the	DT	the
+fault	NN	fault
+diagnosis	NN	diagnosis
+performance	NN	performance
+of	IN	of
+LSTM	NNP	LSTM
+and	CC	and
+DCNN-based	NNP	DVNN-base
+approaches	NNS	approach
+on	IN	on
+the	DT	the
+TEP	NNP	TEP
+dataset	NN	dataset
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,1148 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_fluctuating" title="Secured by Fluctuating Topology Using the Fluctuating Topology of MANETs to Secure Key Exchange" shortTitle="fluctuating" author="Ariel Stulman, Alan Stulman" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/10/1172/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Preliminaries	NNP	Preliminaries
+</s>
+</head>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+Threat	NNP	Threat
+Model	NN	Model
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+current	JJ	current
+work	NN	work
+places	VBZ	place
+no	DT	no
+limitations	NNS	limitation
+on	IN	on
+the	DT	the
+attacker	NN	attacker
+.	.	.
+</s>
+<s type="decl">
+Eavesdropping	NN	eavesdropping
+,	,	,
+injecting	VBG	inject
+data	NNS	datum
+into	IN	into
+the	DT	the
+communication	NN	communication
+stream	NN	stream
+or	CC	or
+stopping	VBG	stop
+the	DT	the
+stream	NN	stream
+itself	PRP	itself
+are	VBP	be
+feasible	JJ	feasible
+.	.	.
+</s>
+<s type="sub">
+Thus	RB	thus
+,	,	,
+for	IN	for
+every	DT	every
+route	NN	route
+under	IN	under
+her	PRP$	her
+control	NN	control
+,	,	,
+she	PRP	she
+can	MD	can
+drop	VB	drop
+packets	NNS	packet
+(	-LRB-	(
+dos	NNS	do
+)	-RRB-	)
+or	CC	or
+taint	VB	taint
+the	DT	the
+data	NNS	datum
+to	TO	to
+initiate	VB	initiate
+a	DT	a
+mitm	NN	mitm
+attack	NN	attack
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+allow	VBP	allow
+attackers	NNS	attacker
+to	TO	to
+collude	VB	collude
+,	,	,
+bringing	VBG	bring
+under	IN	under
+their	PRP$	their
+joint	JJ	joint
+control	NN	control
+multiple	JJ	multiple
+routes	NNS	route
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+simplicity	NN	simplicity
+’s	POS	's
+sake	NN	sake
+,	,	,
+we	PRP	we
+will	MD	will
+refer	VB	refer
+to	IN	to
+all	DT	all
+of	IN	of
+the	DT	the
+colluding	VBG	collude
+parties	NNS	party
+as	IN	as
+one	CD	one
+entity	NN	entity
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+Assumptions	NNS	assumption
+and	CC	and
+Definitions	NNS	Definition
+</s>
+</head>
+<p>
+<s type="decl">
+To	TO	to
+allow	VB	allow
+for	IN	for
+communication	NN	communication
+,	,	,
+the	DT	the
+only	JJ	only
+prior	JJ	prior
+knowledge	NN	knowledge
+assumed	VBN	assume
+is	VBZ	be
+the	DT	the
+address	NN	address
+of	IN	of
+both	DT	both
+parties	NNS	party
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+address	NN	address
+can	MD	can
+be	VB	be
+in	IN	in
+any	DT	any
+form	NN	form
+:	:	:
+ip	NN	ip
+address	NN	address
+,	,	,
+unique	JJ	unique
+imei	NN	imei
+embedded	VBN	embd
+in	IN	in
+the	DT	the
+device	NN	device
+,	,	,
+or	CC	or
+phone	NN	phone
+number	NN	number
+allocated	VBN	allocate
+to	IN	to
+the	DT	the
+smart	JJ	smart
+node	NN	node
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+avoid	VB	avoid
+collisions	NNS	collision
+,	,	,
+we	PRP	we
+assume	VBP	assume
+that	IN	that
+this	DT	this
+address	NN	address
+is	VBZ	be
+unique	JJ	unique
+and	CC	and
+cannot	MD	cannot
+be	VB	be
+spoofed	VBN	spoof
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+justify	VB	justify
+this	DT	this
+assumption	NN	assumption
+,	,	,
+we	PRP	we
+note	VBP	note
+that	IN	that
+spoofing	VBG	spoof
+an	DT	a
+address	NN	address
+only	RB	only
+influences	VBZ	influence
+some	DT	some
+of	IN	of
+the	DT	the
+routing	NN	routing
+tables	NNS	table
+;	:	;
+not	RB	not
+all	DT	all
+of	IN	of
+them	PRP	they
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+allows	VBZ	allow
+for	IN	for
+the	DT	the
+correct	JJ	correct
+delivery	NN	delivery
+of	IN	of
+packets	NNS	packet
+not	RB	not
+traveling	VBG	travel
+through	IN	through
+malicious	JJ	malicious
+nodes	NNS	node
+.	.	.
+</s>
+<s type="decl">
+Last	JJ	last
+,	,	,
+no	DT	no
+trusted	VBN	trust
+third	JJ	third
+party	NN	party
+(	-LRB-	(
+ttp	NN	ttp
+)	-RRB-	)
+is	VBZ	be
+available	JJ	available
+for	IN	for
+the	DT	the
+coordination	NN	coordination
+or	CC	or
+authentication	NN	authentication
+of	IN	of
+sender	NN	sender
+and	CC	and
+receiver	NN	receiver
+.	.	.
+</s>
+<s type="frag">
+<b>
+Definition	NN	Definition
+</b>
+<b>
+1.	CD	1.
+</b>
+</s>
+</p>
+<p>
+<s type="imp">
+<hi rend="italic">
+Let	VB	let
+be	VB	be
+a	DT	a
+topology	NN	topology
+graph	NN	graph
+of	IN	of
+a	DT	a
+</hi>
+manet	NN	manet
+<hi rend="italic">
+at	IN	at
+a	DT	a
+specific	JJ	specific
+time	NN	time
+,	,	,
+where	WRB	where
+are	VBP	be
+the	DT	the
+hosts	NNS	host
+in	IN	in
+the	DT	the
+network	NN	network
+,	,	,
+and	CC	and
+are	VBP	be
+the	DT	the
+bidirectional	JJ	bidirectional
+communication	NN	communication
+links	NNS	link
+between	IN	between
+these	DT	this
+hosts	NNS	host
+.	.	.
+</hi>
+</s>
+</p>
+<p>
+<hi rend="italic">
+<s type="imp">
+Let	VB	let
+be	VB	be
+a	DT	a
+noncyclic	JJ	noncyclic
+route	NN	route
+(	-LRB-	(
+)	-RRB-	)
+in	IN	in
+G	NNP	G
+,	,	,
+between	IN	between
+the	DT	the
+sender	NN	sender
+(	-LRB-	(
+)	-RRB-	)
+and	CC	and
+receiver	NN	receiver
+(	-LRB-	(
+)	-RRB-	)
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+denote	VB	denote
+the	DT	the
+length	NN	length
+of	IN	of
+the	DT	the
+path	NN	path
+.	.	.
+</s>
+</hi>
+</p>
+<p>
+<s type="imp">
+<hi rend="italic">
+Let	VB	let
+denote	VB	denote
+the	DT	the
+set	NN	set
+of	IN	of
+all	DT	all
+possible	JJ	possible
+such	JJ	such
+routes	NNS	route
+,	,	,
+the	DT	the
+size	NN	size
+of	IN	of
+,	,	,
+and	CC	and
+the	DT	the
+set	NN	set
+of	IN	of
+chosen	VBN	choose
+routes	NNS	route
+from	IN	from
+;	:	;
+implying	VBG	imply
+,	,	,
+.	.	.
+</hi>
+</s>
+</p>
+<p>
+<hi rend="italic">
+<s type="imp">
+Let	VB	let
+,	,	,
+such	JJ	such
+that	DT	that
+and	CC	and
+,	,	,
+,	,	,
+which	WDT	which
+is	VBZ	be
+under	IN	under
+the	DT	the
+attacker	NN	attacker
+’s	POS	's
+control	NN	control
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+equal	VB	equal
+the	DT	the
+size	NN	size
+of	IN	of
+A.	NNP	A.
+</s>
+</hi>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+essence	NN	essence
+,	,	,
+we	PRP	we
+define	VBP	define
+that	IN	that
+it	PRP	it
+suffices	VBZ	suffice
+for	IN	for
+one	CD	one
+host	NN	host
+,	,	,
+,	,	,
+to	TO	to
+come	VB	come
+under	IN	under
+the	DT	the
+attacker	NN	attacker
+’s	POS	's
+control	NN	control
+for	IN	for
+the	DT	the
+entire	JJ	entire
+route	NN	route
+,	,	,
+,	,	,
+to	TO	to
+be	VB	be
+tainted	VBN	taint
+.	.	.
+</s>
+<s type="frag">
+<b>
+Definition	NN	Definition
+</b>
+<b>
+2.	CD	2.
+</b>
+</s>
+</p>
+<p>
+<hi rend="italic">
+<s type="imp">
+Let	VB	let
+.	.	.
+</s>
+<s type="decl">
+That	DT	that
+is	VBZ	be
+,	,	,
+denoting	VBG	denote
+all	PDT	all
+the	DT	the
+paths	NNS	path
+not	RB	not
+under	IN	under
+the	DT	the
+attacker	NN	attacker
+’s	POS	's
+control	NN	control
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+be	VB	be
+the	DT	the
+size	NN	size
+of	IN	of
+F.	NNP	F.
+</s>
+</hi>
+</p>
+<p>
+<s type="decl">
+Based	VBN	base
+on	IN	on
+the	DT	the
+above	JJ	above
+definition	NN	definition
+,	,	,
+we	PRP	we
+assume	VBP	assume
+that	IN	that
+the	DT	the
+manet	NN	manet
+is	VBZ	be
+such	JJ	such
+that	IN	that
+,	,	,
+meaning	VBG	mean
+that	IN	that
+at	IN	at
+least	JJS	least
+one	CD	one
+route	NN	route
+between	IN	between
+the	DT	the
+sender	NN	sender
+and	CC	and
+receiver	NN	receiver
+is	VBZ	be
+not	RB	not
+under	IN	under
+the	DT	the
+attacker	NN	attacker
+’s	POS	's
+control	NN	control
+.	.	.
+</s>
+<s type="decl">
+That	IN	that
+the	DT	the
+attacker	NN	attacker
+has	VBZ	have
+not	RB	not
+taken	VBN	take
+over	RP	over
+the	DT	the
+entire	JJ	entire
+network	NN	network
+,	,	,
+for	IN	for
+which	WDT	which
+no	DT	no
+leap	NN	leap
+of	IN	of
+faith	NN	faith
+algorithms	NNS	algorithm
+can	MD	can
+succeed	VB	succeed
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.	CD	2.3.
+Simulation	NN	simulation
+Parameters	NNS	parameter
+</s>
+</head>
+<p>
+<s type="decl">
+Prior	RB	prior
+to	IN	to
+implementing	VBG	implement
+our	PRP$	our
+algorithm	NN	algorithm
+on	IN	on
+a	DT	a
+real-world	JJ	real-world
+manet	NN	manet
+application	NN	application
+(	-LRB-	(
+e.g.	FW	e.g.
+,	,	,
+Serval	NNP	Serval
+)	-RRB-	)
+,	,	,
+we	PRP	we
+ran	VBD	run
+multiple	JJ	multiple
+preliminary	JJ	preliminary
+simulations	NNS	simulation
+to	TO	to
+test	VB	test
+its	PRP$	its
+feasibility	NN	feasibility
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+we	PRP	we
+describe	VBP	describe
+our	PRP$	our
+simulation	NN	simulation
+model	NN	model
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.1.	CD	2.3.1.
+Random	JJ	Random
+Number	NN	number
+Generator	NN	generator
+</s>
+</head>
+<p>
+<s type="sub">
+All	DT	all
+simulations	NNS	simulation
+must	MD	must
+have	VB	have
+the	DT	the
+means	NN	means
+of	IN	of
+generating	VBG	generate
+random	JJ	random
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Of	IN	of
+the	DT	the
+many	JJ	many
+algorithms	NNS	algorithm
+available	JJ	available
+(	-LRB-	(
+e.g.	FW	e.g.
+,	,	,
+Mersenne	NNP	Mersenne
+Twister	NNP	twister
+)	-RRB-	)
+,	,	,
+we	PRP	we
+chose	VBD	choose
+the	DT	the
+combined	JJ	combined
+multiple	JJ	multiple
+recursive	JJ	recursive
+random	JJ	random
+number	NN	number
+generator	NN	generator
+(	-LRB-	(
+cmrg	NN	cmrg
+)	-RRB-	)
+algorithm	NN	algorithm
+,	,	,
+an	DT	a
+algorithm	NN	algorithm
+that	WDT	that
+passed	VBD	pass
+a	DT	a
+wide	JJ	wide
+range	NN	range
+of	IN	of
+empirical	JJ	empirical
+tests	NNS	test
+of	IN	of
+randomness	NN	randomness
+and	CC	and
+is	VBZ	be
+the	DT	the
+algorithm	NN	algorithm
+of	IN	of
+choice	NN	choice
+in	IN	in
+many	JJ	many
+simulation	NN	simulation
+software	NN	software
+(	-LRB-	(
+e.g.	FW	e.g.
+,	,	,
+Arena	NNP	Arena
+)	-RRB-	)
+.	.	.
+</s>
+<s type="sub">
+Of	IN	of
+course	NN	course
+,	,	,
+similar	JJ	similar
+results	NNS	result
+should	MD	should
+be	VB	be
+achieved	VBN	achieve
+using	VBG	use
+all	DT	all
+good	JJ	good
+random	JJ	random
+number	NN	number
+generators	NNS	generator
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.2.	CD	2.3.2.
+</s>
+<s type="frag">
+Mobility	NN	mobility
+Model	NN	Model
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+mobility	NN	mobility
+of	IN	of
+nodes	NNS	node
+in	IN	in
+the	DT	the
+real	JJ	real
+world	NN	world
+exhibits	VBZ	exhibit
+vastly	RB	vastly
+varying	VBG	vary
+behaviors	NNS	behavior
+.	.	.
+</s>
+<s type="decl">
+Some	DT	some
+walk	VBP	walk
+,	,	,
+others	NNS	other
+drive	VBP	drive
+.	.	.
+</s>
+<s type="decl">
+Some	DT	some
+move	VBP	move
+about	RB	about
+randomly	RB	randomly
+,	,	,
+others	NNS	other
+in	IN	in
+specific	JJ	specific
+formations	NNS	formation
+or	CC	or
+patterns	NNS	pattern
+.	.	.
+</s>
+<s type="decl">
+Each	DT	each
+of	IN	of
+these	DT	this
+have	VBP	have
+their	PRP$	their
+own	JJ	own
+characteristics	NNS	characteristic
+,	,	,
+and	CC	and
+must	MD	must
+be	VB	be
+modelled	VBN	model
+accordingly	RB	accordingly
+(	-LRB-	(
+for	IN	for
+a	DT	a
+survey	NN	survey
+see	VB	see
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Due	JJ	due
+to	IN	to
+its	PRP$	its
+prevalence	NN	prevalence
+(	-LRB-	(
+see	VB	see
+,	,	,
+e.g.	FW	e.g.
+,	,	,
+)	-RRB-	)
+,	,	,
+in	IN	in
+this	DT	this
+work	NN	work
+,	,	,
+all	DT	all
+simulations	NNS	simulation
+followed	VBD	follow
+a	DT	a
+random	JJ	random
+walk	NN	walk
+model	NN	model
+,	,	,
+which	WDT	which
+captures	VBZ	capture
+the	DT	the
+pattern	NN	pattern
+of	IN	of
+people	NNS	person
+in	IN	in
+open	JJ	open
+spaces	NNS	space
+or	CC	or
+recreational	JJ	recreational
+parks	NNS	park
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+leave	VBP	leave
+other	JJ	other
+models	NNS	model
+to	IN	to
+future	JJ	future
+research	NN	research
+.	.	.
+</s>
+</p>
+<head>
+<s type="ger">
+2.3.3.	CD	2.3.3.
+Routing	VBG	Route
+Algorithm	NN	algorithm
+</s>
+</head>
+<p>
+<s type="decl">
+Network	NN	network
+simulation	NN	simulation
+requires	VBZ	require
+that	IN	that
+one	PRP	one
+choose	VB	choose
+the	DT	the
+means	NNS	means
+by	IN	by
+which	WDT	which
+packets	NNS	packet
+are	VBP	be
+forwarded	VBN	forward
+on	IN	on
+the	DT	the
+path	NN	path
+to	IN	to
+the	DT	the
+destination	NN	destination
+.	.	.
+</s>
+<s type="decl">
+Being	VBG	be
+the	DT	the
+basis	NN	basis
+behind	IN	behind
+ospf	NN	ospf
+,	,	,
+implementation	NN	implementation
+of	IN	of
+the	DT	the
+Dijkstra	NNP	Dijkstra
+graph	NN	graph
+theory	NN	theory
+best	NN	best
+route	NN	route
+algorithm	NN	algorithm
+using	VBG	use
+standard	JJ	standard
+dynamic	JJ	dynamic
+programming	NN	programming
+techniques	NNS	technique
+,	,	,
+allows	VBZ	allow
+us	PRP	we
+to	TO	to
+find	VB	find
+the	DT	the
+optimal	JJ	optimal
+(	-LRB-	(
+shortest	JJS	short
+)	-RRB-	)
+route	NN	route
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+randomly	RB	randomly
+chose	VBD	choose
+between	IN	between
+multiple	JJ	multiple
+paths	NNS	path
+having	VBG	have
+similar	JJ	similar
+lengths	NNS	length
+,	,	,
+classifying	VBG	classify
+one	CD	one
+as	IN	as
+the	DT	the
+better	JJR	good
+of	IN	of
+the	DT	the
+bunch	NN	bunch
+.	.	.
+</s>
+<s type="decl">
+All	DT	all
+packets	NNS	packet
+were	VBD	be
+sent	VBN	send
+through	IN	through
+optimal	JJ	optimal
+paths	NNS	path
+when	WRB	when
+possible	JJ	possible
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.4.	CD	2.3.4.
+Attacker	NN	attacker
+Dispersion	NN	dispersion
+</s>
+</head>
+<p>
+<s type="decl">
+Attackers	NNS	attacker
+are	VBP	be
+randomly	RB	randomly
+placed	VBN	place
+on	IN	on
+the	DT	the
+graph	NN	graph
+,	,	,
+allowing	VBG	allow
+for	IN	for
+all	DT	all
+possible	JJ	possible
+attacker	NN	attacker
+dispersion	NN	dispersion
+scenarios	NNS	scenario
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+number	NN	number
+of	IN	of
+attackers	NNS	attacker
+are	VBP	be
+a	DT	a
+function	NN	function
+of	IN	of
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+population	NN	population
+,	,	,
+with	IN	with
+a	DT	a
+linear	JJ	linear
+increase	NN	increase
+in	IN	in
+the	DT	the
+population	NN	population
+entailing	VBG	entail
+a	DT	a
+similar	JJ	similar
+increase	NN	increase
+in	IN	in
+the	DT	the
+number	NN	number
+of	IN	of
+attackers	NNS	attacker
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+These	DT	this
+attackers	NNS	attacker
+are	VBP	be
+assumed	VBN	assume
+colluding	VBG	collude
+.	.	.
+</s>
+<s type="decl">
+Knowledge	NN	knowledge
+gleaned	VBN	glean
+by	IN	by
+one	CD	one
+attacker	NN	attacker
+(	-LRB-	(
+e.g.	FW	e.g.
+,	,	,
+intercept	NN	intercept
+of	IN	of
+a	DT	a
+micro-ke	JJ	micro-ke
+message	NN	message
+)	-RRB-	)
+and/or	NN	and/or
+spoofing	NN	spoofing
+requirements	NNS	requirement
+are	VBP	be
+instantly	RB	instantly
+shared	VBN	share
+with	IN	with
+all	DT	all
+others	NNS	other
+through	IN	through
+external	JJ	external
+means	NNS	means
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.5.	CD	2.3.5.
+</s>
+<s type="other">
+Simulation	NN	simulation
+Round	IN	round
+</s>
+</head>
+<p>
+<s type="decl">
+Each	DT	each
+round	NN	round
+was	VBD	be
+preset	VBN	preset
+with	IN	with
+a	DT	a
+specific	JJ	specific
+combination	NN	combination
+of	IN	of
+parameters	NNS	parameter
+that	WDT	that
+we	PRP	we
+are	VBP	be
+checking	VBG	check
+for	IN	for
+(	-LRB-	(
+see	VB	see
+Section	NN	section
+3.3	CD	3.3
+and	CC	and
+Section	NN	section
+4.2	CD	4.2
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Next	RB	next
+,	,	,
+we	PRP	we
+randomly	RB	randomly
+chose	VBD	choose
+some	DT	some
+of	IN	of
+the	DT	the
+nodes	NNS	node
+in	IN	in
+the	DT	the
+network	NN	network
+to	TO	to
+represent	VB	represent
+colluding	VBG	collude
+attackers	NNS	attacker
+;	:	;
+their	PRP$	their
+specific	JJ	specific
+number	NN	number
+a	DT	a
+function	NN	function
+of	IN	of
+predetermined	JJ	predetermined
+parameter	NN	parameter
+.	.	.
+</s>
+<s type="decl">
+Last	RB	last
+,	,	,
+assuming	VBG	assume
+there	EX	there
+is	VBZ	be
+a	DT	a
+connection	NN	connection
+between	IN	between
+sender	NN	sender
+and	CC	and
+receiver	NN	receiver
+,	,	,
+,	,	,
+we	PRP	we
+sprayed	VBD	spray
+the	DT	the
+<hi rend="italic">
+k	NN	k
+</hi>
+micro-ke	NN	micro-ke
+messages	NNS	message
+documenting	VBG	document
+whether	IN	whether
+all	DT	all
+,	,	,
+none	NN	none
+,	,	,
+or	CC	or
+some	DT	some
+of	IN	of
+the	DT	the
+messages	NNS	message
+were	VBD	be
+intercepted	VBN	intercept
+.	.	.
+</s>
+<s type="decl">
+Rounds	NNS	Round
+for	IN	for
+which	WDT	which
+,	,	,
+were	VBD	be
+discarded	VBN	discard
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+actual	JJ	actual
+spraying	NN	spraying
+algorithm	NN	algorithm
+was	VBD	be
+done	VBN	do
+using	VBG	use
+either	CC	either
+random	JJ	random
+message	NN	message
+spraying	NN	spraying
+or	CC	or
+even	RB	even
+message	NN	message
+spraying	VBG	spray
+algorithm	NN	algorithm
+(	-LRB-	(
+see	VB	see
+Section	NN	section
+3.2	CD	3.2
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Both	DT	both
+techniques	NNS	technique
+were	VBD	be
+executed	VBN	execute
+on	IN	on
+the	DT	the
+same	JJ	same
+network	NN	network
+graph	NN	graph
+so	IN	so
+we	PRP	we
+can	MD	can
+get	VB	get
+comparable	JJ	comparable
+results	NNS	result
+.	.	.
+</s>
+</p>
+</text>

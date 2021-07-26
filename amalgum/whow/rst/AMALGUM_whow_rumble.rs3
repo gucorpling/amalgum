@@ -1,0 +1,285 @@
+<rst>
+<header>
+	<relations>
+			<rel name="question" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">Hack a Rumble Robot</segment>
+<segment id="2" parent="1002" relname="question">Do you want to hack a Rumble Robot with an Arduino microcontroller ?</segment>
+<segment id="3" parent="1004" relname="span">Your robot will have the ability</segment>
+<segment id="4" parent="1005" relname="joint">to turn around</segment>
+<segment id="5" parent="1006" relname="span">and head in another direction</segment>
+<segment id="6" parent="5" relname="circumstance">when it senses an obstacle .</segment>
+<segment id="7" parent="1008" relname="contrast">You can use the code provided ,</segment>
+<segment id="8" parent="1009" relname="joint">or write your own</segment>
+<segment id="9" parent="1009" relname="joint">and see how your roving rumble bot responds .</segment>
+<segment id="10" parent="11" relname="condition">If you 're not used to tinkering with robots ,</segment>
+<segment id="11" parent="1011" relname="span">it 's an ambitious project ,</segment>
+<segment id="12" parent="1012" relname="span">but it 's well worth the trouble</segment>
+<segment id="13" parent="12" relname="purpose">to take it on .</segment>
+<segment id="14" parent="1015" relname="preparation">Steps</segment>
+<segment id="15" parent="1016" relname="span">Put some batteries in the robot</segment>
+<segment id="16" parent="15" relname="purpose">to see if it works .</segment>
+<segment id="17" parent="1015" relname="sequence">Typically , they take four AA batteries .</segment>
+<segment id="18" parent="1015" relname="sequence">On the back are some switches .</segment>
+<segment id="19" parent="1020" relname="span">There is " off/on " and also " A/B "</segment>
+<segment id="20" parent="19" relname="purpose">to determine which team the robot is on .</segment>
+<segment id="21" parent="1015" relname="sequence">Push the " on " switch .</segment>
+<segment id="22" parent="23" relname="condition">If the bot is working ,</segment>
+<segment id="23" parent="1023" relname="span">it should say its name .</segment>
+<segment id="24" parent="1015" relname="sequence">Put the cover and the batteries off to the side for now .</segment>
+<segment id="25" parent="1015" relname="sequence">Take the head off the robot .</segment>
+<segment id="26" parent="1028" relname="span">On the " neck " of the robot</segment>
+<segment id="27" parent="26" relname="elaboration">( between the head and body )</segment>
+<segment id="28" parent="1029" relname="span">there is a little screw</segment>
+<segment id="29" parent="28" relname="elaboration">that can be taken off with a small phillips head screwdriver .</segment>
+<segment id="30" parent="1015" relname="sequence">Put the screw aside .</segment>
+<segment id="31" parent="1033" relname="span">There is a small lip in the front of the head</segment>
+<segment id="32" parent="31" relname="elaboration">that is a little tricky ,</segment>
+<segment id="33" parent="1032" relname="contrast">but should come loose after a little light twisting and turning .</segment>
+<segment id="34" parent="1036" relname="span">Disconnect the cable from the motherboard</segment>
+<segment id="35" parent="34" relname="elaboration">that connects the head to the body .</segment>
+<segment id="36" parent="1037" relname="joint">Using a small screwdriver ,</segment>
+<segment id="37" parent="1038" relname="span">pry back the tabs</segment>
+<segment id="38" parent="1039" relname="joint">keeping the board down ,</segment>
+<segment id="39" parent="1039" relname="joint">and pop the board out .</segment>
+<segment id="40" parent="1042" relname="span">You should now have just the naked board .</segment>
+<segment id="41" parent="1044" relname="span">You should see the black micro processor</segment>
+<segment id="42" parent="41" relname="elaboration">that makes the bot move backward and forward .</segment>
+<segment id="43" parent="1044" relname="elaboration">This is what we 'll be hacking and wiring into .</segment>
+<segment id="44" parent="1045" relname="span">These are the pin outs on the board</segment>
+<segment id="45" parent="44" relname="elaboration">where you 'll need to connect new wires .</segment>
+<segment id="46" parent="1048" relname="span">The main pins</segment>
+<segment id="47" parent="1049" relname="span">we 're concerned with are the four</segment>
+<segment id="48" parent="47" relname="elaboration">that operate the drive motors .</segment>
+<segment id="49" parent="1050" relname="span">They are connected to the " H-Bridge "</segment>
+<segment id="50" parent="1051" relname="span">that will allow us to trigger the motors to rotate forward or reverse</segment>
+<segment id="51" parent="50" relname="means">by applying a positive voltage to one of two wires for each motor .</segment>
+<segment id="52" parent="1015" relname="sequence">There is one for forward and one for reverse on each motor .</segment>
+<segment id="53" parent="1054" relname="preparation">They are connected as follows :</segment>
+<segment id="54" parent="1054" relname="sequence">Pin 1.0 Left motor FORWARD</segment>
+<segment id="55" parent="1054" relname="sequence">Pin 1.1 Left motor REVERSE</segment>
+<segment id="56" parent="1054" relname="sequence">Pin 1.2 Right motor FORWARD</segment>
+<segment id="57" parent="1054" relname="sequence">Pin 1.3 Right motor REVERSE</segment>
+<segment id="58" parent="1059" relname="span">Solder the wires</segment>
+<segment id="59" parent="58" relname="elaboration">that will go out to the Arduino .</segment>
+<segment id="60" parent="1061" relname="span">In this photo</segment>
+<segment id="61" parent="1062" relname="span">we see the ground wire</segment>
+<segment id="62" parent="1064" relname="span">which is connected to the pin</segment>
+<segment id="63" parent="62" relname="elaboration">labeled in the photo on the white connector</segment>
+<segment id="64" parent="1063" relname="joint">and the other four wires soldered in place .</segment>
+<segment id="65" parent="1054" relname="sequence">Unscrew the upper body</segment>
+<segment id="66" parent="1054" relname="sequence">and pull it apart .</segment>
+<segment id="67" parent="1068" relname="span">Wire everything together</segment>
+<segment id="68" parent="67" relname="means">using this schematic .</segment>
+<segment id="69" parent="70" relname="attribution">The video demonstrates</segment>
+<segment id="70" parent="1070" relname="span">how everything is put together .</segment>
+<segment id="71" parent="1072" relname="span">Make your wires at least 5 " in length</segment>
+<segment id="72" parent="71" relname="purpose">to make it easier to mount everything up .</segment>
+<segment id="73" parent="1074" relname="span">The schematic</segment>
+<segment id="74" parent="75" relname="attribution">shown in this article assumes</segment>
+<segment id="75" parent="1075" relname="span">that there will be one sensor on the front of the bot .</segment>
+<segment id="76" parent="77" relname="attribution">The video below shows</segment>
+<segment id="77" parent="1077" relname="span">how you can make both the arms sense obstacles ,</segment>
+<segment id="78" parent="1080" relname="span">but this will require an extra bump switch</segment>
+<segment id="79" parent="78" relname="elaboration">( connected to Pin 3 and the ground wire )</segment>
+<segment id="80" parent="1079" relname="same_unit">as described in the video section .</segment>
+<segment id="81" parent="1054" relname="sequence">The code will also need to be changed accordingly .</segment>
+<segment id="82" parent="1085" relname="span">If you mount everything on top of the chassis</segment>
+<segment id="83" parent="82" relname="elaboration">where the head used to be</segment>
+<segment id="84" parent="1084" relname="joint">and mount the bump switch on the front ,</segment>
+<segment id="85" parent="1086" relname="joint">use a micro switch</segment>
+<segment id="86" parent="1086" relname="joint">and glue on some pieces of wire from a paper clip as whiskers .</segment>
+<segment id="87" parent="1054" relname="sequence">The whiskers on the switch should extend left and right the same width as the robot .</segment>
+<segment id="88" parent="1089" relname="span">Add one more whisker</segment>
+<segment id="89" parent="88" relname="elaboration">pointing down close to the floor .</segment>
+<segment id="90" parent="1091" relname="span">These will help the bot avoid anything</segment>
+<segment id="91" parent="90" relname="elaboration">that might not return an echo from the PING sensor .</segment>
+<segment id="92" parent="1093" relname="joint">Make sure the PING sensor points towards the front</segment>
+<segment id="93" parent="1093" relname="joint">and is at 90 degrees to the floor .</segment>
+<segment id="94" parent="1096" relname="span">The LED</segment>
+<segment id="95" parent="94" relname="elaboration">connected to pin 13 blinks each time</segment>
+<segment id="96" parent="1097" relname="joint">the PING scans</segment>
+<segment id="97" parent="1098" relname="span">and it can mounted anywhere</segment>
+<segment id="98" parent="97" relname="elaboration">you like .</segment>
+<segment id="99" parent="1100" relname="joint">The power switch is optional</segment>
+<segment id="100" parent="1100" relname="joint">and simply goes in line on the positive battery lead .</segment>
+<segment id="101" parent="1104" relname="circumstance">When connecting the motherboard to the microcontroller ,</segment>
+<segment id="102" parent="1104" relname="span">you may need to make a notch</segment>
+<segment id="103" parent="1105" relname="span">so that the wires do n't get pinched</segment>
+<segment id="104" parent="103" relname="circumstance">when you put the robot back together .</segment>
+<segment id="105" parent="1103" relname="elaboration">The battery can be held in place by a small piece of velcro or some EPS foam .</segment>
+<segment id="106" parent="1054" relname="sequence">Solder the negative lead of the 9-volt battery to the auxiliary battery input .</segment>
+<segment id="107" parent="1054" relname="sequence">Be sure to place the jumper onto " extension power " not " USB . "</segment>
+<segment id="108" parent="109" relname="condition">If you want to be able to use the " on/off " switch ,</segment>
+<segment id="109" parent="1109" relname="span">connect the white wire to the back of the switch .</segment>
+<segment id="110" parent="1111" relname="joint">The power should go to the switch ,</segment>
+<segment id="111" parent="1111" relname="joint">run back into the white wire ,</segment>
+<segment id="112" parent="1113" relname="span">and feed the Arduino power</segment>
+<segment id="113" parent="112" relname="circumstance">when you turn it on .</segment>
+<segment id="114" parent="1054" relname="sequence">The PING sensor can go anywhere on the front of the robot .</segment>
+<segment id="115" parent="1054" relname="sequence">In this example , the sensor has been glued into the faceplate of the robot .</segment>
+<segment id="116" parent="1054" relname="sequence">Cut out the " eye-holes " on the faceplate</segment>
+<segment id="117" parent="1118" relname="span">and then just add glue around the " eyes " of the sensor</segment>
+<segment id="118" parent="117" relname="purpose">to keep the plate sturdy .</segment>
+<segment id="119" parent="1120" relname="span">The ribbon cable</segment>
+<segment id="120" parent="1122" relname="span">that connected to the head of the robot has been stripped down to three leads</segment>
+<segment id="121" parent="120" relname="elaboration">( instead of the original four )</segment>
+<segment id="122" parent="1121" relname="joint">and soldered to the three leads on the PING sensor .</segment>
+<segment id="123" parent="1124" relname="span">The other end connects to the Arduino</segment>
+<segment id="124" parent="123" relname="elaboration">as specified in the schematic .</segment>
+<segment id="125" parent="1126" relname="joint">Solder the leads</segment>
+<segment id="126" parent="1126" relname="joint">and attach them to the Arduino board .</segment>
+<segment id="127" parent="1054" relname="sequence">Refer to the schematic once again for help .</segment>
+<segment id="128" parent="1054" relname="sequence">Put the robot back together .</segment>
+<segment id="129" parent="1054" relname="sequence">Upload the code .</segment>
+<segment id="130" parent="1054" relname="sequence">Connect the USB cable to your computer</segment>
+<segment id="131" parent="1054" relname="sequence">and plug the other end into the Arduino 's USB port .</segment>
+<segment id="132" parent="1133" relname="span">Set your robot on a riser</segment>
+<segment id="133" parent="1134" relname="joint">so the wheels do n't touch anything</segment>
+<segment id="134" parent="1134" relname="joint">and power up the Arduino .</segment>
+<segment id="135" parent="1136" relname="joint">Copy the code</segment>
+<segment id="136" parent="1136" relname="joint">and paste it into a new window in the Arduino software .</segment>
+<segment id="137" parent="1054" relname="sequence">Save the sketch as " rumblebot ping bump "</segment>
+<segment id="138" parent="1054" relname="sequence">and upload it .</segment>
+<segment id="139" parent="1054" relname="sequence">After it 's uploaded ,</segment>
+<segment id="140" parent="1054" relname="sequence">power down the Arduino ,</segment>
+<segment id="141" parent="1054" relname="sequence">disconnect the USB cable ,</segment>
+<segment id="142" parent="1144" relname="sequence">set the bot on the floor</segment>
+<segment id="143" parent="1144" relname="sequence">and power up the Arduino .</segment>
+<segment id="144" parent="1144" relname="elaboration">It should start to drive forward with the LED blinking .</segment>
+<segment id="145" parent="1147" relname="circumstance">As it gets within of an object ,</segment>
+<segment id="146" parent="1147" relname="joint">it should turn away</segment>
+<segment id="147" parent="1147" relname="joint">and keep driving forward .</segment>
+<segment id="148" parent="1054" relname="sequence">If it hits an object</segment>
+<segment id="149" parent="1054" relname="sequence">and triggers the bump switch ,</segment>
+<segment id="150" parent="1054" relname="sequence">it should stop ,</segment>
+<segment id="151" parent="1054" relname="sequence">reverse its direction</segment>
+<segment id="152" parent="1054" relname="sequence">and turn ,</segment>
+<segment id="153" parent="1054" relname="sequence">then proceed forward .</segment>
+<segment id="154" parent="1154" relname="preparation">Video</segment>
+<segment id="155" parent="1155" relname="span">Things</segment>
+<segment id="156" parent="155" relname="elaboration">You 'll Need</segment>
+<segment id="157" parent="1157" relname="preparation">Find a Rumble Robot on eBay , at a yard sale or a thrift store .</segment>
+<segment id="158" parent="1158" relname="preparation">Arduino micro controller</segment>
+<segment id="159" parent="1159" relname="preparation">A Parallax PING sensor</segment>
+<segment id="160" parent="1160" relname="preparation">An LED</segment>
+<segment id="161" parent="1161" relname="preparation">A micro switch</segment>
+<segment id="162" parent="1162" relname="preparation">A 100 ohm resistor</segment>
+<segment id="163" parent="1163" relname="span">Arduino software</segment>
+<segment id="164" parent="163" relname="elaboration">which you can download here</segment>
+<segment id="165" parent="1164" relname="span">You 'll also need coding ,</segment>
+<segment id="166" parent="165" relname="elaboration">which you can write yourself .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="1003" relname="span"/>
+<group id="1005" type="multinuc" parent="3" relname="purpose"/>
+<group id="1006" type="span" parent="1005" relname="joint"/>
+<group id="1007" type="span" parent="1004" relname="elaboration"/>
+<group id="1008" type="multinuc" parent="1007" relname="span"/>
+<group id="1009" type="multinuc" parent="1008" relname="contrast"/>
+<group id="1010" type="span" parent="1008" relname="elaboration"/>
+<group id="1011" type="span" parent="1012" relname="concession"/>
+<group id="1012" type="span" parent="1010" relname="span"/>
+<group id="1014" type="span" parent="1002" relname="joint"/>
+<group id="1015" type="multinuc" parent="1014" relname="span"/>
+<group id="1016" type="span" parent="1015" relname="sequence"/>
+<group id="1020" type="span" parent="1015" relname="sequence"/>
+<group id="1023" type="span" parent="1015" relname="sequence"/>
+<group id="1027" type="multinuc" parent="1015" relname="sequence"/>
+<group id="1028" type="span" parent="1027" relname="same_unit"/>
+<group id="1029" type="span" parent="1027" relname="same_unit"/>
+<group id="1032" type="multinuc" parent="1015" relname="sequence"/>
+<group id="1033" type="span" parent="1032" relname="contrast"/>
+<group id="1035" type="span" parent="1015" relname="sequence"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1037" type="multinuc" parent="1036" relname="means"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="multinuc" parent="37" relname="elaboration"/>
+<group id="1041" type="span" parent="1015" relname="sequence"/>
+<group id="1042" type="span" parent="1041" relname="span"/>
+<group id="1043" type="span" parent="40" relname="elaboration"/>
+<group id="1044" type="span" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1042" relname="elaboration"/>
+<group id="1047" type="span" parent="1015" relname="sequence"/>
+<group id="1048" type="span" parent="1047" relname="span"/>
+<group id="1049" type="span" parent="46" relname="elaboration"/>
+<group id="1050" type="span" parent="1048" relname="elaboration"/>
+<group id="1051" type="span" parent="49" relname="elaboration"/>
+<group id="1053" type="span" parent="1015" relname="sequence"/>
+<group id="1054" type="multinuc" parent="1053" relname="span"/>
+<group id="1059" type="span" parent="1054" relname="sequence"/>
+<group id="1061" type="span" parent="1054" relname="sequence"/>
+<group id="1062" type="span" parent="60" relname="elaboration"/>
+<group id="1063" type="multinuc" parent="61" relname="elaboration"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1068" type="span" parent="1054" relname="sequence"/>
+<group id="1070" type="span" parent="1054" relname="sequence"/>
+<group id="1072" type="span" parent="1054" relname="sequence"/>
+<group id="1074" type="span" parent="1054" relname="sequence"/>
+<group id="1075" type="span" parent="73" relname="elaboration"/>
+<group id="1077" type="span" parent="1054" relname="sequence"/>
+<group id="1079" type="multinuc" parent="1054" relname="sequence"/>
+<group id="1080" type="span" parent="1079" relname="same_unit"/>
+<group id="1083" type="span" parent="1054" relname="sequence"/>
+<group id="1084" type="multinuc" parent="1086" relname="condition"/>
+<group id="1085" type="span" parent="1084" relname="joint"/>
+<group id="1086" type="multinuc" parent="1083" relname="span"/>
+<group id="1089" type="span" parent="1054" relname="sequence"/>
+<group id="1091" type="span" parent="1054" relname="sequence"/>
+<group id="1093" type="multinuc" parent="1054" relname="sequence"/>
+<group id="1095" type="span" parent="1054" relname="sequence"/>
+<group id="1096" type="span" parent="1095" relname="span"/>
+<group id="1097" type="multinuc" parent="1096" relname="elaboration"/>
+<group id="1098" type="span" parent="1097" relname="joint"/>
+<group id="1100" type="multinuc" parent="1054" relname="sequence"/>
+<group id="1102" type="span" parent="1054" relname="sequence"/>
+<group id="1103" type="span" parent="1102" relname="span"/>
+<group id="1104" type="span" parent="1103" relname="span"/>
+<group id="1105" type="span" parent="102" relname="purpose"/>
+<group id="1109" type="span" parent="1054" relname="sequence"/>
+<group id="1111" type="multinuc" parent="1054" relname="sequence"/>
+<group id="1113" type="span" parent="1111" relname="joint"/>
+<group id="1118" type="span" parent="1054" relname="sequence"/>
+<group id="1120" type="span" parent="1054" relname="sequence"/>
+<group id="1121" type="multinuc" parent="119" relname="elaboration"/>
+<group id="1122" type="span" parent="1121" relname="joint"/>
+<group id="1124" type="span" parent="1054" relname="sequence"/>
+<group id="1126" type="multinuc" parent="1054" relname="sequence"/>
+<group id="1133" type="span" parent="1054" relname="sequence"/>
+<group id="1134" type="multinuc" parent="132" relname="result"/>
+<group id="1136" type="multinuc" parent="1054" relname="sequence"/>
+<group id="1143" type="span" parent="1054" relname="sequence"/>
+<group id="1144" type="multinuc" parent="1143" relname="span"/>
+<group id="1146" type="span" parent="1054" relname="sequence"/>
+<group id="1147" type="multinuc" parent="1146" relname="span"/>
+<group id="1153" type="span" parent="1002" relname="joint"/>
+<group id="1154" type="span" parent="1153" relname="span"/>
+<group id="1155" type="span" parent="1154" relname="span"/>
+<group id="1156" type="span" parent="1155" relname="elaboration"/>
+<group id="1157" type="span" parent="1156" relname="span"/>
+<group id="1158" type="span" parent="1157" relname="span"/>
+<group id="1159" type="span" parent="1158" relname="span"/>
+<group id="1160" type="span" parent="1159" relname="span"/>
+<group id="1161" type="span" parent="1160" relname="span"/>
+<group id="1162" type="multinuc" parent="1161" relname="span"/>
+<group id="1163" type="span" parent="1162" relname="joint"/>
+<group id="1164" type="span" parent="1162" relname="joint"/>
+	</body>
+</rst>

@@ -1,0 +1,734 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_waveform" title="waveformlidar: An R Package for Waveform LiDAR Processing and Analysis" shortTitle="waveform" author="Tan Zhou, Sorin Popescu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2072-4292/11/21/2552/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+1.	LS	1.
+Introduction	NN	introduction
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+advent	NN	advent
+of	IN	of
+Full	NNP	full
+Waveform	NNP	Waveform
+(	-LRB-	(
+FW	NNP	FW
+)	-RRB-	)
+LiDAR	NNP	LiDAR
+(	-LRB-	(
+Light	NNP	Light
+Detection	NNP	detection
+and	CC	and
+Ranging	NNP	Ranging
+)	-RRB-	)
+data	NNS	datum
+including	VBG	include
+airborne	JJ	airborne
+and	CC	and
+spaceborne	NN	spaceborne
+have	VBP	have
+enabled	VBN	enable
+new	JJ	new
+opportunities	NNS	opportunity
+for	IN	for
+vegetation	NN	vegetation
+structure	NN	structure
+characterization	NN	characterization
+at	IN	at
+a	DT	a
+range	NN	range
+of	IN	of
+scales	NNS	scale
+.	.	.
+</s>
+<s type="decl">
+Unlike	IN	unlike
+Discrete-return	NNP	Discrete-return
+(	-LRB-	(
+DR	NNP	DR
+)	-RRB-	)
+LiDAR	NN	lidar
+data	NNS	datum
+which	WDT	which
+only	RB	only
+store	VBP	store
+the	DT	the
+crest	NN	crest
+of	IN	of
+analog	NN	analog
+signal	NN	signal
+representing	VBG	represent
+discrete	JJ	discrete
+echo	NN	echo
+,	,	,
+FW	NNP	FW
+LiDAR	NNP	LiDAR
+data	NNS	datum
+can	MD	can
+store	VB	store
+the	DT	the
+entire	JJ	entire
+echo	NN	echo
+scattered	VBN	scatter
+from	IN	from
+illuminated	VBN	illuminate
+objects	NNS	object
+with	IN	with
+different	JJ	different
+temporal	JJ	temporal
+resolutions	NNS	resolution
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+advantage	NN	advantage
+provides	VBZ	provide
+more	JJR	more
+information	NN	information
+about	IN	about
+the	DT	the
+objects	NNS	object
+that	WDT	that
+the	DT	the
+pulse	NN	pulse
+interacts	VBZ	interact
+with	IN	with
+and	CC	and
+gives	VBZ	give
+users	NNS	user
+more	JJR	more
+flexibility	NN	flexibility
+to	TO	to
+interpret	VB	interpret
+information	NN	information
+inherent	JJ	inherent
+in	IN	in
+waveforms	NNS	waveform
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Multiple	JJ	Multiple
+approaches	NNS	approach
+such	JJ	such
+as	IN	as
+the	DT	the
+Gaussian	JJ	Gaussian
+decomposition	NN	decomposition
+and	CC	and
+deconvolution	NN	deconvolution
+have	VBP	have
+been	VBN	be
+developed	VBN	develop
+to	TO	to
+interpret	VB	interpret
+information	NN	information
+from	IN	from
+waveforms	NNS	waveform
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+complicated	JJ	complicated
+processing	NN	processing
+steps	NNS	step
+and	CC	and
+algorithms	NNS	algorithm
+hinder	VBP	hinder
+the	DT	the
+widespread	JJ	widespread
+use	NN	use
+of	IN	of
+Full	NNP	full
+Waveform	NNP	Waveform
+(	-LRB-	(
+FW	NNP	FW
+)	-RRB-	)
+LiDAR	NN	lidar
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+tackle	VB	tackle
+these	DT	this
+challenges	NNS	challenge
+,	,	,
+our	PRP$	our
+package	NN	package
+<hi rend="italic">
+waveformlidar	NN	waveformlidar
+</hi>
+proposed	VBD	propose
+several	JJ	several
+commonly	RB	commonly
+used	VBN	use
+approaches	NNS	approach
+and	CC	and
+functions	NNS	function
+to	TO	to
+conduct	VB	conduct
+waveform	NN	waveform
+processing	NN	processing
+and	CC	and
+analysis	NN	analysis
+such	JJ	such
+as	IN	as
+Gaussian	JJ	Gaussian
+decomposition	NN	decomposition
+and	CC	and
+deconvolution	NN	deconvolution
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+approaches	NNS	approach
+have	VBP	have
+been	VBN	be
+successfully	RB	successfully
+applied	VBN	apply
+to	TO	to
+extract	VB	extract
+physical	JJ	physical
+attributes	NNS	attribute
+of	IN	of
+vegetation	NN	vegetation
+such	JJ	such
+as	IN	as
+canopy	NN	canopy
+height	NN	height
+,	,	,
+stem	NN	stem
+volume	NN	volume
+,	,	,
+aboveground	JJ	aboveground
+biomass	NN	biomass
+and	CC	and
+tree	NN	tree
+species	NNS	species
+from	IN	from
+LiDAR	NNP	LiDAR
+waveforms	NNS	waveform
+.	.	.
+</s>
+<s type="decl">
+With	IN	with
+the	DT	the
+aid	NN	aid
+of	IN	of
+the	DT	the
+package	NN	package
+,	,	,
+these	DT	this
+approaches	NNS	approach
+can	MD	can
+be	VB	be
+easily	RB	easily
+implemented	VBN	implement
+in	IN	in
+the	DT	the
+R	NNP	R
+platform	NN	platform
+and	CC	and
+further	RBR	far
+relieve	VB	relieve
+users	NNS	user
+’	POS	's
+concerns	NNS	concern
+on	IN	on
+complicated	JJ	complicated
+FW	NN	FW
+processing	NN	processing
+steps	NNS	step
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Additionally	RB	additionally
+,	,	,
+currently	RB	currently
+available	JJ	available
+tools	NNS	tool
+are	VBP	be
+mainly	RB	mainly
+oriented	VBN	orient
+for	IN	for
+processing	VBG	process
+DR	NNP	DR
+LiDAR	NNP	LiDAR
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+There	EX	there
+is	VBZ	be
+a	DT	a
+lack	NN	lack
+of	IN	of
+handy	JJ	handy
+tools	NNS	tool
+that	WDT	that
+dedicated	VBN	dedicate
+to	IN	to
+FW	NNP	FW
+LiDAR	NNP	LiDAR
+data	NNS	datum
+,	,	,
+which	WDT	which
+precludes	VBZ	preclude
+users	NNS	user
+to	TO	to
+explore	VB	explore
+the	DT	the
+new	JJ	new
+or	CC	or
+potential	JJ	potential
+practices	NNS	practice
+of	IN	of
+FW	NNP	FW
+LiDAR	NNP	LiDAR
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+we	PRP	we
+developed	VBD	develop
+functions	NNS	function
+to	TO	to
+derive	VB	derive
+commonly	RB	commonly
+used	VBN	use
+waveform	NN	waveform
+metrics	NNS	metric
+such	JJ	such
+as	IN	as
+front	JJ	front
+slope	NN	slope
+and	CC	and
+waveform	NN	waveform
+distance	NN	distance
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+waveform	NN	waveform
+metrics	NNS	metric
+are	VBP	be
+different	JJ	different
+from	IN	from
+the	DT	the
+metrics	NNS	metric
+derived	VBN	derive
+from	IN	from
+waveform	NN	waveform
+decomposition	NN	decomposition
+in	IN	in
+terms	NNS	term
+of	IN	of
+the	DT	the
+information	NN	information
+they	PRP	they
+contained	VBD	contain
+.	.	.
+</s>
+<s type="sub">
+Thus	RB	thus
+,	,	,
+they	PRP	they
+can	MD	can
+be	VB	be
+complementary	JJ	complementary
+to	IN	to
+metrics	NNS	metric
+obtained	VBN	obtain
+from	IN	from
+decomposition	NN	decomposition
+,	,	,
+which	WDT	which
+enable	VBP	enable
+users	NNS	user
+to	TO	to
+make	VB	make
+the	DT	the
+most	JJS	most
+use	NN	use
+of	IN	of
+the	DT	the
+waveform	NN	waveform
+information	NN	information
+contained	VBN	contain
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Lastly	RB	lastly
+,	,	,
+the	DT	the
+package	NN	package
+also	RB	also
+proposed	VBD	propose
+a	DT	a
+new	JJ	new
+method	NN	method
+to	TO	to
+convert	VB	convert
+waveforms	NNS	waveform
+into	IN	into
+point	NN	point
+clouds	NNS	cloud
+with	IN	with
+hyper	NN	hyper
+point	NN	point
+density	NN	density
+(	-LRB-	(
+Hyper	NNP	Hyper
+Point	NNP	Point
+Cloud	NNP	Cloud
+,	,	,
+HPC	NNP	HPC
+)	-RRB-	)
+and	CC	and
+composite	JJ	composite
+waveforms	NNS	waveform
+after	IN	after
+implementing	VBG	implement
+waveform	NN	waveform
+voxelization	NN	voxelization
+steps	NNS	step
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+HPC	NNP	HPC
+is	VBZ	be
+an	DT	a
+alternative	JJ	alternative
+product	NN	product
+of	IN	of
+FW	NNP	FW
+LiDAR	NN	lidar
+data	NNS	datum
+,	,	,
+which	WDT	which
+not	RB	not
+only	RB	only
+can	MD	can
+preserve	VB	preserve
+information	NN	information
+embedded	VBN	embd
+in	IN	in
+original	JJ	original
+waveforms	NNS	waveform
+,	,	,
+also	RB	also
+offer	VBP	offer
+users	NNS	user
+a	DT	a
+convenient	JJ	convenient
+way	NN	way
+to	TO	to
+visualize	VB	visualize
+and	CC	and
+decode	VB	decode
+information	NN	information
+with	IN	with
+existing	VBG	exist
+LiDAR	JJ	LiDAR
+processing	NN	processing
+tools	NNS	tool
+such	JJ	such
+as	IN	as
+LAStools	NNP	LAStools
+and	CC	and
+FUSION	NNP	FUSION
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+not	RB	not
+every	DT	every
+waveform	NN	waveform
+signal	NN	signal
+is	VBZ	be
+useful	JJ	useful
+for	IN	for
+real-world	JJ	real-world
+applications	NNS	application
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+explore	VB	explore
+the	DT	the
+HPC	NNP	HPC
+’s	POS	's
+potential	JJ	potential
+usefulness	NN	usefulness
+,	,	,
+this	DT	this
+package	NN	package
+also	RB	also
+provides	VBZ	provide
+functions	NNS	function
+to	TO	to
+explore	VB	explore
+the	DT	the
+HPC	NNP	HPC
+in	IN	in
+2D	JJ	2D
+and	CC	and
+3D	JJ	3D
+spatial	JJ	spatial
+dimensions	NNS	dimension
+.	.	.
+</s>
+<s type="decl">
+Additionally	RB	additionally
+,	,	,
+we	PRP	we
+also	RB	also
+explore	VBP	explore
+the	DT	the
+methods	NNS	method
+to	TO	to
+convert	VB	convert
+original	JJ	original
+waveforms	NNS	waveform
+with	IN	with
+waveform	NN	waveform
+intensities	NNS	intensity
+distributing	VBG	distribute
+at	IN	at
+an	DT	a
+off-nadir	JJ	off-nadir
+angle	NN	angle
+into	IN	into
+composite	JJ	composite
+waveforms	NNS	waveform
+with	IN	with
+intensities	NNS	intensity
+distributing	VBG	distribute
+at	IN	at
+the	DT	the
+vertical	JJ	vertical
+direction	NN	direction
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+we	PRP	we
+conducted	VBD	conduct
+a	DT	a
+comparison	NN	comparison
+between	IN	between
+original	JJ	original
+waveforms	NNS	waveform
+and	CC	and
+composite	JJ	composite
+waveforms	NNS	waveform
+on	IN	on
+the	DT	the
+tree	NN	tree
+species	NN	species
+identification	NN	identification
+and	CC	and
+detailed	JJ	detailed
+information	NN	information
+can	MD	can
+be	VB	be
+found	VBN	find
+in	IN	in
+Zhou	NNP	Zhou
+et	FW	et
+al.	FW	al.
+.	.	.
+</s>
+<s type="decl">
+Notably	RB	notably
+,	,	,
+the	DT	the
+storage	NN	storage
+and	CC	and
+computation	NN	computation
+cost	NN	cost
+using	VBG	use
+the	DT	the
+composite	JJ	composite
+waveforms	NNS	waveform
+is	VBZ	be
+more	RBR	more
+expensive	JJ	expensive
+than	IN	than
+original	JJ	original
+waveforms	NNS	waveform
+,	,	,
+which	WDT	which
+requires	VBZ	require
+users	NNS	user
+to	TO	to
+conduct	VB	conduct
+an	DT	a
+assessment	NN	assessment
+of	IN	of
+the	DT	the
+marginal	JJ	marginal
+benefits	NNS	benefit
+obtained	VBN	obtain
+from	IN	from
+composite	JJ	composite
+waveforms	NNS	waveform
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Overall	RB	overall
+,	,	,
+the	DT	the
+purpose	NN	purpose
+of	IN	of
+this	DT	this
+article	NN	article
+is	VBZ	be
+to	TO	to
+provide	VB	provide
+an	DT	a
+overview	NN	overview
+of	IN	of
+the	DT	the
+<hi rend="italic">
+waveformlidar	NN	waveformlidar
+</hi>
+package	NN	package
+and	CC	and
+to	TO	to
+ensure	VB	ensure
+the	DT	the
+free	JJ	free
+availability	NN	availability
+and	CC	and
+usability	NN	usability
+of	IN	of
+methodologies	NNS	methodology
+including	VBG	include
+code	NN	code
+or	CC	or
+algorithms	NNS	algorithm
+from	IN	from
+our	PRP$	our
+previous	JJ	previous
+scholarly	JJ	scholarly
+publications	NNS	publication
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+first	RB	first
+introduce	VBP	introduce
+an	DT	a
+example	NN	example
+of	IN	of
+FW	NNP	FW
+LiDAR	NN	lidar
+data	NNS	datum
+and	CC	and
+corresponding	VBG	correspond
+ancillary	JJ	ancillary
+data	NNS	datum
+such	JJ	such
+as	IN	as
+outgoing	JJ	outgoing
+pulse	NN	pulse
+and	CC	and
+system	NN	system
+impulse	NN	impulse
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Next	RB	next
+,	,	,
+we	PRP	we
+begin	VBP	begin
+to	TO	to
+briefly	RB	briefly
+explain	VB	explain
+the	DT	the
+main	JJ	main
+algorithms	NNS	algorithm
+’	POS	's
+technical	JJ	technical
+principles	NNS	principle
+and	CC	and
+the	DT	the
+logic	NN	logic
+behind	IN	behind
+them	PRP	they
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+end	VBP	end
+by	IN	by
+discussing	VBG	discuss
+the	DT	the
+main	JJ	main
+functions	NNS	function
+such	JJ	such
+as	IN	as
+decomposition	NN	decomposition
+,	,	,
+deconvolution	NN	deconvolution
+and	CC	and
+the	DT	the
+HPC	NN	HPC
+in	IN	in
+the	DT	the
+practical	JJ	practical
+use	NN	use
+in	IN	in
+the	DT	the
+R	NN	R
+platform	NN	platform
+.	.	.
+</s>
+<s type="decl">
+Full	JJ	full
+tutorials	NNS	tutorial
+and	CC	and
+reports	NNS	report
+to	TO	to
+reproduce	VB	reproduce
+the	DT	the
+results	NNS	result
+from	IN	from
+these	DT	this
+examples	NNS	example
+are	VBP	be
+available	JJ	available
+in	IN	in
+the	DT	the
+supporting	VBG	support
+information	NN	information
+from	IN	from
+our	PRP$	our
+website	NN	website
+(	-LRB-	(
+<ref target="https://github.com/tankwin08/waveformlidar/vignettes">
+https://github.com/tankwin08/waveformlidar/vignettes	NNP	https://github.com/tankwin08/waveformlidar/vignettes
+</ref>
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+</text>

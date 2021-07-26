@@ -1,0 +1,133 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3.</segment>
+<segment id="2" parent="1002" relname="preparation">Intercept – Resend Emulation Attacks</segment>
+<segment id="3" parent="1003" relname="same_unit">The emulation attacks</segment>
+<segment id="4" parent="1004" relname="span">under consideration follow closely the general theoretical framework of Ref . ,</segment>
+<segment id="5" parent="4" relname="elaboration">which is summarized in</segment>
+<segment id="6" parent="7" relname="preparation">Figure 3</segment>
+<segment id="7" parent="1006" relname="span">.</segment>
+<segment id="8" parent="9" relname="attribution">We assume</segment>
+<segment id="9" parent="1008" relname="span">that the adversary does not have access to the preparation of the probe states , the actual PUK , the SLM , or the HD set-up .</segment>
+<segment id="10" parent="1011" relname="span">However , he has obtained somehow a copy of all the possible CRPs</segment>
+<segment id="11" parent="10" relname="elaboration">to be used in the authentication of the PUK ,</segment>
+<segment id="12" parent="1012" relname="span">and moreover he has obtained access to the incoming and outgoing SMFs ,</segment>
+<segment id="13" parent="12" relname="manner">without being detected .</segment>
+<segment id="14" parent="1014" relname="preparation">Hence ,</segment>
+<segment id="15" parent="1016" relname="condition">if the adversary were able to estimate exactly the probe state ,</segment>
+<segment id="16" parent="1016" relname="span">he would be able to impersonate successfully the holder of the PUK ,</segment>
+<segment id="17" parent="1017" relname="joint">by looking at the CRPs</segment>
+<segment id="18" parent="1018" relname="contrast">and by sending to the HD set-up the expected response state .</segment>
+<segment id="19" parent="1019" relname="span">However , quantum physics does not allow for perfect discrimination between non-orthogonal quantum states , or the measurement of non-communting quantum observables with arbitrary accuracy .</segment>
+<segment id="20" parent="1020" relname="span">As a result , it is inevitable for the adversary ’s intervention to introduce errors in the HD</segment>
+<segment id="21" parent="20" relname="elaboration">performed by the verifier .</segment>
+<segment id="22" parent="1014" relname="joint">Given that the probe states in the M queries are chosen at random and independently from a uniform distribution over the set ,</segment>
+<segment id="23" parent="1023" relname="span">from now on ,</segment>
+<segment id="24" parent="1024" relname="span">we can focus on one of the queries</segment>
+<segment id="25" parent="24" relname="elaboration">and let denote the incoming probe state .</segment>
+<segment id="26" parent="1026" relname="span">The adversary ’s task is to obtain an estimate of the integer k ,</segment>
+<segment id="27" parent="26" relname="elaboration">which determines fully the challenge and the expected response .</segment>
+<segment id="28" parent="1014" relname="joint">To this end , he performs a measurement on the incoming probe state ,</segment>
+<segment id="29" parent="1029" relname="span">and ,</segment>
+<segment id="30" parent="1030" relname="span">based on the outcome ,</segment>
+<segment id="31" parent="1031" relname="span">the adversary makes an educated guess about k ,</segment>
+<segment id="32" parent="31" relname="purpose">to be denoted by .</segment>
+<segment id="33" parent="1033" relname="span">For the reasons</segment>
+<segment id="34" parent="33" relname="elaboration">discussed above ,</segment>
+<segment id="35" parent="1035" relname="span">this guess may or may not be equal to the actual k</segment>
+<segment id="36" parent="35" relname="elaboration">used by the verifier ,</segment>
+<segment id="37" parent="1038" relname="span">and thus the adversary ’s intervention will affect the probability with which the verifier obtains an outcome in the expected bin .</segment>
+<segment id="38" parent="1039" relname="span">More precisely , instead of Equation ( 3 ) ,</segment>
+<segment id="39" parent="1040" relname="span">one has ( 4a )</segment>
+<segment id="40" parent="41" relname="condition">where and denote the -quadratures of the response field ,</segment>
+<segment id="41" parent="1041" relname="span">when the adversary deduces the correct and the wrong value of k .</segment>
+<segment id="42" parent="1042" relname="span">Both of them are given by Equation ( 2 ) for k and , respectively .</segment>
+<segment id="43" parent="1045" relname="circumstance">Given that the verifier samples from both quadratures at random and independently , after M queries ,</segment>
+<segment id="44" parent="1046" relname="span">the verifier will obtain an estimate of the average probability</segment>
+<segment id="45" parent="44" relname="restatement">( 4b )</segment>
+<segment id="46" parent="1046" relname="elaboration">where is given by Equation ( 4a )</segment>
+<segment id="47" parent="1043" relname="joint">and ( 5 ) is the probability for the adversary to make an error in his estimation of k .</segment>
+<segment id="48" parent="1049" relname="span">The probability takes into account all of the events</segment>
+<segment id="49" parent="48" relname="elaboration">irrespective of whether the adversary deduced the correct value of k or not .</segment>
+<segment id="50" parent="1050" relname="span">In the second equality of Equation ( 4b ) ,</segment>
+<segment id="51" parent="50" relname="elaboration">we have taken into account the uniform distribution of k over and of over .</segment>
+<segment id="52" parent="1052" relname="span">Moreover , we have used the fact</segment>
+<segment id="53" parent="1053" relname="span">that the state of the probe and the outcome of the adversary are independent of the quadrature</segment>
+<segment id="54" parent="53" relname="elaboration">to be measured by the verifier .</segment>
+<segment id="55" parent="1057" relname="span">A straightforward calculation shows</segment>
+<segment id="56" parent="55" relname="elaboration">that is always smaller than the corresponding expression in the absence of cheating</segment>
+<segment id="57" parent="1057" relname="evidence">[ which is given by Equation ( 3 ) ] ,</segment>
+<segment id="58" parent="1058" relname="span">and the difference</segment>
+<segment id="59" parent="58" relname="elaboration">( 6a ) basically quantifies the adversary ’s intervention .</segment>
+<segment id="60" parent="1059" relname="span">The adversary ’s intervention will be detected by the verifier</segment>
+<segment id="61" parent="1060" relname="span">when the observed deviations from exceed the statistical deviations</segment>
+<segment id="62" parent="61" relname="elaboration">i.e. , when ( 6b )</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1005" relname="preparation"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1002" relname="span"/>
+<group id="1006" type="span" parent="1007" relname="preparation"/>
+<group id="1007" type="multinuc" parent="1005" relname="span"/>
+<group id="1008" type="span" parent="1007" relname="contrast"/>
+<group id="1009" type="multinuc" parent="1007" relname="contrast"/>
+<group id="1011" type="span" parent="1009" relname="joint"/>
+<group id="1012" type="span" parent="1009" relname="joint"/>
+<group id="1013" type="span" parent="1009" relname="joint"/>
+<group id="1014" type="multinuc" parent="1013" relname="span"/>
+<group id="1015" type="span" parent="1014" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1017" type="multinuc" parent="16" relname="means"/>
+<group id="1018" type="multinuc" parent="1017" relname="joint"/>
+<group id="1019" type="span" parent="1018" relname="contrast"/>
+<group id="1020" type="span" parent="19" relname="result"/>
+<group id="1023" type="span" parent="1014" relname="joint"/>
+<group id="1024" type="span" parent="23" relname="elaboration"/>
+<group id="1026" type="span" parent="1014" relname="joint"/>
+<group id="1029" type="span" parent="1014" relname="joint"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1031" type="span" parent="30" relname="elaboration"/>
+<group id="1033" type="span" parent="1014" relname="joint"/>
+<group id="1035" type="span" parent="1014" relname="joint"/>
+<group id="1037" type="span" parent="1014" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="37" relname="concession"/>
+<group id="1040" type="span" parent="38" relname="elaboration"/>
+<group id="1041" type="span" parent="39" relname="circumstance"/>
+<group id="1042" type="span" parent="1038" relname="elaboration"/>
+<group id="1043" type="multinuc" parent="42" relname="elaboration"/>
+<group id="1044" type="span" parent="1043" relname="joint"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="1045" relname="span"/>
+<group id="1048" type="span" parent="1014" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="1049" relname="elaboration"/>
+<group id="1052" type="span" parent="1014" relname="joint"/>
+<group id="1053" type="span" parent="52" relname="elaboration"/>
+<group id="1056" type="span" parent="1014" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="span"/>
+<group id="1058" type="span" parent="1014" relname="joint"/>
+<group id="1059" type="span" parent="1014" relname="joint"/>
+<group id="1060" type="span" parent="60" relname="circumstance"/>
+	</body>
+</rst>

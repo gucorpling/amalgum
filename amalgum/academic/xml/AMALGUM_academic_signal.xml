@@ -1,0 +1,927 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_signal" title="Deep Learning Object-Impulse Detection for Enhancing Leakage Detection of a Boiler Tube Using Acoustic Emission Signal" shortTitle="signal" author="Bach  Phi Duong, Jaeyoung Kim, Cheol-Hong Kim, Jong-Myon Kim" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4368/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="ger">
+3.	LS	3.
+Impulse	NNP	Impulse
+Detection	NN	detection
+Methodology	NN	methodology
+Using	VBG	use
+Deep	JJ	Deep
+Learning	NN	learning
+</s>
+<s type="frag">
+Flexible	JJ	Flexible
+Boundary	NN	boundary
+Regression	NN	regression
+</s>
+</head>
+<p>
+<s type="sub">
+Since	IN	since
+the	DT	the
+time	NN	time
+lengths	NNS	length
+of	IN	of
+the	DT	the
+AE	NNP	AE
+impulse	NN	impulse
+signal	NN	signal
+excited	VBN	excite
+by	IN	by
+the	DT	the
+fuel	NN	fuel
+stream	NN	stream
+are	VBP	be
+variable	JJ	variable
+,	,	,
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+must	MD	must
+adapt	VB	adapt
+to	TO	to
+predict	VB	predict
+boundaries	NNS	boundary
+of	IN	of
+different	JJ	different
+sizes	NNS	size
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+research	NN	research
+introduces	VBZ	introduce
+the	DT	the
+DLFBR	NNP	DLFBR
+impulse	NN	impulse
+detection	NN	detection
+model	NN	model
+,	,	,
+which	WDT	which
+considers	VBZ	consider
+an	DT	a
+impulse	NN	impulse
+as	IN	as
+an	DT	a
+object	NN	object
+to	TO	to
+be	VB	be
+analyzed	VBN	analyze
+and	CC	and
+recognized	VBN	recognize
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+model	NN	model
+improves	VBZ	improve
+the	DT	the
+1D-CNN	NNP	1D-CNN
+to	TO	to
+adapt	VB	adapt
+for	IN	for
+hit	NN	hit
+detection	NN	detection
+in	IN	in
+the	DT	the
+AE	NNP	AE
+signal	NN	signal
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+research	NN	research
+reframes	VBZ	reframe
+hit	NN	hit
+detection	NN	detection
+as	IN	as
+a	DT	a
+straightforward	JJ	straightforward
+regression	NN	regression
+issue	NN	issue
+,	,	,
+directly	RB	directly
+from	IN	from
+the	DT	the
+AE	NNP	AE
+signal	NN	signal
+vector	NN	vector
+to	IN	to
+the	DT	the
+boundary	NN	boundary
+box	NN	box
+coordinates	NNS	coordinate
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+method	NN	method
+takes	VBZ	take
+an	DT	a
+AE	NN	AE
+signal	NN	signal
+as	IN	as
+the	DT	the
+input	NN	input
+,	,	,
+feeds	VBZ	feed
+it	PRP	it
+through	IN	through
+a	DT	a
+neural	JJ	neural
+network	NN	network
+structure	NN	structure
+that	WDT	that
+looks	VBZ	look
+similar	JJ	similar
+to	IN	to
+a	DT	a
+1D-CNN	NN	1D-CNN
+to	TO	to
+integrate	VB	integrate
+the	DT	the
+boundary	NN	boundary
+regression	NN	regression
+layer	NN	layer
+,	,	,
+and	CC	and
+receives	VBZ	receive
+a	DT	a
+vector	NN	vector
+of	IN	of
+box	NN	box
+coordinates	NNS	coordinate
+around	IN	around
+the	DT	the
+impulse	NN	impulse
+position	NN	position
+in	IN	in
+the	DT	the
+output	NN	output
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+basic	JJ	basic
+idea	NN	idea
+of	IN	of
+the	DT	the
+detection	NN	detection
+algorithm	NN	algorithm
+includes	VBZ	include
+two	CD	2
+steps	NNS	step
+:	:	:
+preprocessing	VBG	preprocess
+the	DT	the
+signal	NN	signal
+to	TO	to
+extract	VB	extract
+the	DT	the
+shape	NN	shape
+signal	NN	signal
+and	CC	and
+a	DT	a
+flexible	JJ	flexible
+boundary	NN	boundary
+detector	NN	detector
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+Preprocessing	NN	preprocessing
+</s>
+<s type="inf">
+to	TO	to
+Extract	VB	Extract
+the	DT	the
+Shape	NN	shape
+Signal	NN	signal
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+preprocessing	NN	preprocessing
+step	NN	step
+works	VBZ	work
+to	TO	to
+extract	VB	extract
+the	DT	the
+global	JJ	global
+shape	NN	shape
+of	IN	of
+the	DT	the
+impulse	NN	impulse
+at	IN	at
+the	DT	the
+macro-level	NN	macro-level
+,	,	,
+corresponding	VBG	correspond
+to	IN	to
+the	DT	the
+length	NN	length
+of	IN	of
+the	DT	the
+sampled	VBN	sample
+signal	NN	signal
+.	.	.
+</s>
+<s type="decl">
+Normally	RB	normally
+,	,	,
+the	DT	the
+concept	NN	concept
+of	IN	of
+object	NN	object
+detection	NN	detection
+is	VBZ	be
+used	VBN	use
+in	IN	in
+an	DT	a
+image	NN	image
+processing	NN	processing
+technique	NN	technique
+where	WRB	where
+the	DT	the
+object	NN	object
+is	VBZ	be
+smooth	JJ	smooth
+,	,	,
+continuous	JJ	continuous
+,	,	,
+and	CC	and
+mostly	RB	mostly
+homogenous	JJ	homogenous
+inside	IN	inside
+the	DT	the
+point	NN	point
+area	NN	area
+of	IN	of
+the	DT	the
+object	NN	object
+.	.	.
+</s>
+<s type="decl">
+With	IN	with
+this	DT	this
+condition	NN	condition
+,	,	,
+the	DT	the
+convolution	NN	convolution
+neural	JJ	neural
+network	NN	network
+considers	VBZ	consider
+the	DT	the
+boundary	NN	boundary
+of	IN	of
+an	DT	a
+object	NN	object
+to	TO	to
+be	VB	be
+composed	VBN	compose
+of	IN	of
+an	DT	a
+edge	NN	edge
+and	CC	and
+blob	NN	blob
+patterns	NNS	pattern
+,	,	,
+which	WDT	which
+have	VBP	have
+a	DT	a
+sudden	JJ	sudden
+change	NN	change
+between	IN	between
+their	PRP$	their
+different	JJ	different
+colors	NNS	color
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+the	DT	the
+AE	NNP	AE
+signal	NN	signal
+collected	VBN	collect
+from	IN	from
+the	DT	the
+leak	NN	leak
+detection	NN	detection
+testbed	NN	testbed
+always	RB	always
+includes	VBZ	include
+environmental	JJ	environmental
+noise	NN	noise
+and	CC	and
+contains	VBZ	contain
+many	JJ	many
+small	JJ	small
+troughs	NNS	trough
+and	CC	and
+peaks	NNS	peak
+.	.	.
+</s>
+<s type="sub">
+If	IN	if
+these	DT	this
+troughs	NNS	trough
+and	CC	and
+peaks	NNS	peak
+are	VBP	be
+smaller	JJR	small
+than	IN	than
+the	DT	the
+grid	NN	grid
+size	NN	size
+generated	VBN	generate
+by	IN	by
+the	DT	the
+deep	JJ	deep
+learning	NN	learning
+detector	NN	detector
+,	,	,
+the	DT	the
+object	NN	object
+detection	NN	detection
+algorithm	NN	algorithm
+cannot	MD	cannot
+give	VB	give
+a	DT	a
+satisfying	JJ	satisfying
+result	NN	result
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+mitigate	VB	mitigate
+the	DT	the
+undesired	JJ	undesired
+variations	NNS	variation
+and	CC	and
+unexpected	JJ	unexpected
+instantaneous	JJ	instantaneous
+frequency	NN	frequency
+values	NNS	value
+produced	VBN	produce
+by	IN	by
+the	DT	the
+remaining	VBG	remain
+amount	NN	amount
+of	IN	of
+small	JJ	small
+noise	NN	noise
+,	,	,
+the	DT	the
+preprocessing	NN	preprocessing
+step	NN	step
+helps	VBZ	help
+obtain	VB	obtain
+the	DT	the
+overall	JJ	overall
+shape	NN	shape
+of	IN	of
+the	DT	the
+signal	NN	signal
+with	IN	with
+little	JJ	little
+random	JJ	random
+noise	NN	noise
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="decl">
+presents	VBZ	present
+the	DT	the
+preprocessing	NN	preprocessing
+step	NN	step
+of	IN	of
+the	DT	the
+algorithm	NN	algorithm
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+first	JJ	first
+step	NN	step
+,	,	,
+the	DT	the
+AE	NNP	AE
+signal	NN	signal
+sample	NN	sample
+is	VBZ	be
+segmented	VBN	segment
+into	IN	into
+non-overlapping	JJ	non-overlapping
+frames	NNS	frame
+and	CC	and
+rectified	VBN	rectify
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+positive	JJ	positive
+part	NN	part
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+in	IN	in
+each	DT	each
+window	NN	window
+,	,	,
+the	DT	the
+root	NN	root
+means	NN	means
+square	NN	square
+(	-LRB-	(
+RMS	NNP	RMS
+)	-RRB-	)
+is	VBZ	be
+calculated	VBN	calculate
+to	TO	to
+form	VB	form
+the	DT	the
+lower	JJR	low
+rate	NN	rate
+RMS	NNP	RMS
+signal	NN	signal
+.	.	.
+</s>
+<s type="decl">
+Next	RB	next
+,	,	,
+the	DT	the
+lower	JJR	low
+rate	NN	rate
+signal	NN	signal
+is	VBZ	be
+expanded	VBN	expand
+to	IN	to
+its	PRP$	its
+original	JJ	original
+size	NN	size
+by	IN	by
+scaling	VBG	scale
+the	DT	the
+time	NN	time
+axis	NN	axis
+using	VBG	use
+cubic	JJ	cubic
+interpolation	NN	interpolation
+and	CC	and
+antialiasing	NN	antialiasing
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+cubic	NN	cubic
+interpolation	NN	interpolation
+method	NN	method
+performs	VBZ	perform
+piecewise	JJ	piecewise
+cubic	NN	cubic
+Hermite	NNP	Hermite
+interpolation	NN	interpolation
+based	VBN	base
+on	IN	on
+the	DT	the
+values	NNS	value
+at	IN	at
+neighboring	VBG	neighbor
+grid	NN	grid
+points	NNS	point
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+seeks	VBZ	seek
+to	TO	to
+match	VB	match
+only	RB	only
+the	DT	the
+first-order	JJ	first-order
+derivatives	NNS	derivative
+at	IN	at
+the	DT	the
+data	NNS	datum
+points	NNS	point
+with	IN	with
+those	DT	this
+in	IN	in
+the	DT	the
+intervals	NNS	interval
+before	IN	before
+and	CC	and
+after	IN	after
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+a	DT	a
+set	NN	set
+of	IN	of
+data	NNS	datum
+points	NNS	point
+,	,	,
+,	,	,
+the	DT	the
+cubic	NN	cubic
+Hermite	NNP	Hermite
+interpolant	NN	interpolant
+at	IN	at
+any	DT	any
+point	NN	point
+,	,	,
+with	IN	with
+,	,	,
+takes	VBZ	take
+the	DT	the
+form	NN	form
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+where	WRB	where
+</s>
+</p>
+<p>
+<s type="decl">
+An	DT	a
+instance	NN	instance
+based	VBN	base
+on	IN	on
+piecewise	JJ	piecewise
+cubic	NN	cubic
+Hermite	NN	hermite
+interpolation	NN	interpolation
+is	VBZ	be
+shape-preserving	VBG	shape-preserve
+piecewise	NN	piecewise
+cubic	NN	cubic
+,	,	,
+which	WDT	which
+preserves	VBZ	preserve
+the	DT	the
+shape	NN	shape
+of	IN	of
+the	DT	the
+data	NNS	datum
+since	IN	since
+the	DT	the
+resulting	VBG	result
+interpolated	JJ	interpolated
+function	NN	function
+has	VBZ	have
+a	DT	a
+continuous	JJ	continuous
+derivative	NN	derivative
+.	.	.
+</s>
+<s type="decl">
+Shape-preserving	VBG	shape-preserve
+piecewise	NN	piecewise
+cubic	JJ	cubic
+interpolation	NN	interpolation
+has	VBZ	have
+a	DT	a
+similar	JJ	similar
+formula	NN	formula
+to	IN	to
+that	DT	that
+of	IN	of
+piecewise	JJ	piecewise
+cubic	NN	cubic
+Hermite	NNP	Hermite
+interpolation	NN	interpolation
+,	,	,
+but	CC	but
+it	PRP	it
+differs	VBZ	differ
+in	IN	in
+the	DT	the
+component	NN	component
+of	IN	of
+the	DT	the
+first-order	JJ	first-order
+derivatives	NNS	derivative
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+output	NN	output
+vector	NN	vector
+value	NN	value
+is	VBZ	be
+a	DT	a
+weighted	VBN	weight
+average	NN	average
+of	IN	of
+points	NNS	point
+taken	VBN	take
+from	IN	from
+at	IN	at
+least	JJS	least
+the	DT	the
+nearest	JJS	near
+four	CD	4
+neighborhoods	NNS	neighborhood
+;	:	;
+this	DT	this
+interpolation	NN	interpolation
+ensures	VBZ	ensure
+that	IN	that
+the	DT	the
+value	NN	value
+of	IN	of
+the	DT	the
+interpolant	NN	interpolant
+is	VBZ	be
+located	VBN	locate
+within	IN	within
+a	DT	a
+range	NN	range
+of	IN	of
+local	JJ	local
+points	NNS	point
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.2.	CD	3.2.
+Impulse	NN	impulse
+Detection	NN	detection
+with	IN	with
+the	DT	the
+Deep	NNP	Deep
+Learning	NNP	learning
+Flexible	NNP	Flexible
+Boundary	NNP	Boundary
+Regression	NNP	Regression
+Detector	NN	detector
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+contrast	NN	contrast
+to	IN	to
+general	JJ	general
+CNNs	NNS	CNN
+,	,	,
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+employs	VBZ	employ
+a	DT	a
+one-dimensional	JJ	one-dimensional
+time-domain	NN	time-domain
+signal	NN	signal
+as	IN	as
+the	DT	the
+input	NN	input
+data	NNS	datum
+instead	RB	instead
+of	IN	of
+two-dimensional	JJ	two-dimensional
+pixels	NNS	pixel
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+one-dimensional	JJ	one-dimensional
+AE	NN	AE
+signal	NN	signal
+is	VBZ	be
+fed	VBN	fead
+into	IN	into
+the	DT	the
+first	JJ	first
+convolution	NN	convolution
+layer	NN	layer
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+detect	VB	detect
+an	DT	a
+object	NN	object
+,	,	,
+the	DT	the
+detector	NN	detector
+takes	VBZ	take
+the	DT	the
+feature	NN	feature
+for	IN	for
+that	DT	that
+object	NN	object
+and	CC	and
+assesses	VBZ	assess
+it	PRP	it
+at	IN	at
+various	JJ	various
+locations	NNS	location
+and	CC	and
+scales	NNS	scale
+in	IN	in
+the	DT	the
+sample	NN	sample
+signal	NN	signal
+.	.	.
+</s>
+<s type="decl">
+DLFBR	NNP	DLFBR
+observes	VBZ	observe
+the	DT	the
+entire	JJ	entire
+signal	NN	signal
+during	IN	during
+the	DT	the
+training	NN	training
+and	CC	and
+testing	NN	testing
+process	NN	process
+to	TO	to
+implicitly	RB	implicitly
+encode	VB	encode
+contextual	JJ	contextual
+information	NN	information
+about	IN	about
+the	DT	the
+type	NN	type
+of	IN	of
+object	NN	object
+as	RB	as
+well	RB	well
+as	IN	as
+its	PRP$	its
+position	NN	position
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+component	NN	component
+object	NN	object
+detector	NN	detector
+is	VBZ	be
+only	RB	only
+unified	JJ	unified
+into	IN	into
+an	DT	a
+end-to-end	JJ	end-to-end
+single	JJ	single
+neural	JJ	neural
+network	NN	network
+,	,	,
+which	WDT	which
+utilizes	VBZ	utilize
+features	NNS	feature
+from	IN	from
+the	DT	the
+entire	JJ	entire
+signal	NN	signal
+to	TO	to
+estimate	VB	estimate
+the	DT	the
+position	NN	position
+for	IN	for
+each	DT	each
+boundary	NN	boundary
+box	NN	box
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+reason	VB	reason
+globally	RB	globally
+about	IN	about
+the	DT	the
+full	JJ	full
+sample	NN	sample
+signal	NN	signal
+and	CC	and
+all	DT	all
+of	IN	of
+the	DT	the
+objects	NNS	object
+inside	IN	inside
+the	DT	the
+signal	NN	signal
+,	,	,
+DLFBR	NNP	DLFBR
+divides	VBZ	divide
+the	DT	the
+input	NN	input
+signal	NN	signal
+into	IN	into
+a	DT	a
+grid	NN	grid
+with	IN	with
+a	DT	a
+grid	NN	grid
+size	NN	size
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+center	NN	center
+of	IN	of
+an	DT	a
+object	NN	object
+drops	VBZ	drop
+into	IN	into
+a	DT	a
+cell	NN	cell
+in	IN	in
+the	DT	the
+grid	NN	grid
+,	,	,
+that	DT	that
+cell	NN	cell
+responds	VBZ	respond
+to	IN	to
+detecting	VBG	detect
+that	DT	that
+object	NN	object
+.	.	.
+</s>
+<s type="decl">
+From	IN	from
+the	DT	the
+generated	VBN	generate
+grid	NN	grid
+,	,	,
+each	DT	each
+grid	NN	grid
+cell	NN	cell
+regresses	VBZ	regress
+the	DT	the
+encircled	VBN	encircle
+box	NN	box
+and	CC	and
+the	DT	the
+confidence	NN	confidence
+score	NN	score
+for	IN	for
+each	DT	each
+box	NN	box
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+confidence	NN	confidence
+scores	NNS	score
+represent	VBP	represent
+how	WRB	how
+confident	JJ	confident
+the	DT	the
+network	NN	network
+is	VBZ	be
+that	IN	that
+the	DT	the
+box	NN	box
+contains	VBZ	contain
+an	DT	a
+object	NN	object
+,	,	,
+as	RB	as
+well	RB	well
+as	IN	as
+how	WRB	how
+accurate	JJ	accurate
+the	DT	the
+network	NN	network
+thinks	VBZ	think
+the	DT	the
+predicted	VBN	predict
+box	NN	box
+is	VBZ	be
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+confidence	NN	confidence
+is	VBZ	be
+specified	VBN	specify
+as	IN	as
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+</s>
+</p>
+</text>

@@ -1,0 +1,738 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Emily Stanley
+1-1	0-5	Emily	person[1]	new[1]	coref	2-1[2_1]
+1-2	6-13	Stanley	person[1]	new[1]	_	_
+
+#Text=Emily Stanley is an American professor of limnology at the University of Wisconsin – Madison .
+2-1	14-19	Emily	person[2]	giv[2]	coref	2-4[3_2]
+2-2	20-27	Stanley	person[2]	giv[2]	_	_
+2-3	28-30	is	_	_	_	_
+2-4	31-33	an	person[3]	giv[3]	ana	3-1[0_3]
+2-5	34-42	American	person[3]	giv[3]	_	_
+2-6	43-52	professor	person[3]	giv[3]	_	_
+2-7	53-55	of	person[3]	giv[3]	_	_
+2-8	56-65	limnology	person[3]|abstract[4]	giv[3]|new[4]	coref	11-14[0_4]
+2-9	66-68	at	person[3]|abstract[4]	giv[3]|new[4]	_	_
+2-10	69-72	the	person[3]|abstract[4]|organization[5]	giv[3]|new[4]|new[5]	_	_
+2-11	73-83	University	person[3]|abstract[4]|organization[5]	giv[3]|new[4]|new[5]	_	_
+2-12	84-86	of	person[3]|abstract[4]|organization[5]	giv[3]|new[4]|new[5]	_	_
+2-13	87-96	Wisconsin	person[3]|abstract[4]|organization[5]	giv[3]|new[4]|new[5]	_	_
+2-14	97-98	–	_	_	_	_
+2-15	99-106	Madison	place	new	_	_
+2-16	107-108	.	_	_	_	_
+
+#Text=She was named a 2018 Ecological Society of America Fellow and her research focuses on the ecology of freshwater ecosystems .
+3-1	109-112	She	person	giv	ana	3-12
+3-2	113-116	was	_	_	_	_
+3-3	117-122	named	_	_	_	_
+3-4	123-124	a	person[10]	new[10]	coref	27-1[211_10]
+3-5	125-129	2018	person[10]	new[10]	_	_
+3-6	130-140	Ecological	organization[8]|person[10]	new[8]|new[10]	coref	27-5[212_8]
+3-7	141-148	Society	organization[8]|person[10]	new[8]|new[10]	_	_
+3-8	149-151	of	organization[8]|person[10]	new[8]|new[10]	_	_
+3-9	152-159	America	organization[8]|place|person[10]	new[8]|new|new[10]	coref	29-9
+3-10	160-166	Fellow	person[10]	new[10]	_	_
+3-11	167-170	and	_	_	_	_
+3-12	171-174	her	person|abstract[12]	giv|new[12]	coref|coref	5-1[17_0]|9-3[0_12]
+3-13	175-183	research	abstract[12]	new[12]	_	_
+3-14	184-191	focuses	_	_	_	_
+3-15	192-194	on	_	_	_	_
+3-16	195-198	the	abstract[13]	new[13]	coref	13-11[99_13]
+3-17	199-206	ecology	abstract[13]	new[13]	_	_
+3-18	207-209	of	abstract[13]	new[13]	_	_
+3-19	210-220	freshwater	abstract[13]|abstract[14]	new[13]|new[14]	coref	15-17[0_14]
+3-20	221-231	ecosystems	abstract[13]|abstract[14]	new[13]|new[14]	_	_
+3-21	232-233	.	_	_	_	_
+
+#Text=Early life and education
+4-1	234-239	Early	abstract[15]	new[15]	_	_
+4-2	240-244	life	abstract[15]	new[15]	_	_
+4-3	245-248	and	_	_	_	_
+4-4	249-258	education	abstract	new	_	_
+
+#Text=Emily Stanley was born in Bethlehem , Pennsylvania to parents Frank and Elizabeth .
+5-1	259-264	Emily	person[17]	giv[17]	coref	7-1[28_17]
+5-2	265-272	Stanley	person[17]	giv[17]	_	_
+5-3	273-276	was	_	_	_	_
+5-4	277-281	born	_	_	_	_
+5-5	282-284	in	_	_	_	_
+5-6	285-294	Bethlehem	place[18]	new[18]	_	_
+5-7	295-296	,	place[18]	new[18]	_	_
+5-8	297-309	Pennsylvania	place[18]|place	new[18]|new	_	_
+5-9	310-312	to	_	_	_	_
+5-10	313-320	parents	person[20]	new[20]	ana	6-1[0_20]
+5-11	321-326	Frank	person[20]	new[20]	_	_
+5-12	327-330	and	_	_	_	_
+5-13	331-340	Elizabeth	person	new	coref	6-8
+5-14	341-342	.	_	_	_	_
+
+#Text=She has three siblings : Jonathan , Elizabeth , and James .
+6-1	343-346	She	person	giv	_	_
+6-2	347-350	has	_	_	_	_
+6-3	351-356	three	person[23]	new[23]	appos	6-6[0_23]
+6-4	357-365	siblings	person[23]	new[23]	_	_
+6-5	366-367	:	_	_	_	_
+6-6	368-376	Jonathan	person|person[25]	giv|giv[25]	appos|appos	6-6[25_0]|6-11[0_25]
+6-7	377-378	,	person[25]	giv[25]	_	_
+6-8	379-388	Elizabeth	person[25]|person	giv[25]|giv	_	_
+6-9	389-390	,	person[25]	giv[25]	_	_
+6-10	391-394	and	person[25]	giv[25]	_	_
+6-11	395-400	James	person[25]|person	giv[25]|giv	_	_
+6-12	401-402	.	_	_	_	_
+
+#Text=Emily Stanley received her B.S. in Biology at Yale University in 1984 , her M.S. in Biology at Southwest Texas State University in 1986 , and her Ph.D. in Zoology at Arizona State University in 1993 . [ 1 ]
+7-1	403-408	Emily	person[28]	giv[28]	ana	7-4[0_28]
+7-2	409-416	Stanley	person[28]	giv[28]	_	_
+7-3	417-425	received	_	_	_	_
+7-4	426-429	her	person|abstract[30]	giv|new[30]	ana	7-14
+7-5	430-434	B.S.	abstract[30]	new[30]	_	_
+7-6	435-437	in	abstract[30]	new[30]	_	_
+7-7	438-445	Biology	abstract[30]|abstract	new[30]|new	coref	7-17
+7-8	446-448	at	_	_	_	_
+7-9	449-453	Yale	organization[32]	new[32]	_	_
+7-10	454-464	University	organization[32]	new[32]	_	_
+7-11	465-467	in	_	_	_	_
+7-12	468-472	1984	time	new	_	_
+7-13	473-474	,	_	_	_	_
+7-14	475-478	her	person|person[35]	giv|new[35]	ana	7-27
+7-15	479-483	M.S.	person[35]	new[35]	_	_
+7-16	484-486	in	person[35]	new[35]	_	_
+7-17	487-494	Biology	person[35]|abstract	new[35]|giv	coref	11-18[88_0]
+7-18	495-497	at	person[35]	new[35]	_	_
+7-19	498-507	Southwest	person[35]|place|place[38]|organization[40]	new[35]|new|new[38]|new[40]	_	_
+7-20	508-513	Texas	person[35]|place[38]|organization[40]	new[35]|new[38]|new[40]	_	_
+7-21	514-519	State	person[35]|place|organization[40]	new[35]|new|new[40]	coref	7-33
+7-22	520-530	University	person[35]|organization[40]	new[35]|new[40]	_	_
+7-23	531-533	in	_	_	_	_
+7-24	534-538	1986	time	new	_	_
+7-25	539-540	,	_	_	_	_
+7-26	541-544	and	_	_	_	_
+7-27	545-548	her	person|abstract[43]	giv|new[43]	ana|coref	8-1|8-2[0_43]
+7-28	549-554	Ph.D.	abstract[43]	new[43]	_	_
+7-29	555-557	in	abstract[43]	new[43]	_	_
+7-30	558-565	Zoology	abstract[43]|abstract	new[43]|new	coref	10-33
+7-31	566-568	at	abstract[43]	new[43]	_	_
+7-32	569-576	Arizona	abstract[43]|place|organization[47]	new[43]|new|new[47]	coref|coref	8-18|8-18[60_47]
+7-33	577-582	State	abstract[43]|place|organization[47]	new[43]|giv|new[47]	coref	8-19
+7-34	583-593	University	abstract[43]|organization[47]	new[43]|new[47]	_	_
+7-35	594-596	in	_	_	_	_
+7-36	597-601	1993	time	new	_	_
+7-37	602-603	.	_	_	_	_
+7-38	604-605	[	_	_	_	_
+7-39	606-607	1	abstract	new	coref	12-12
+7-40	608-609	]	_	_	_	_
+
+#Text=Her Ph.D. advisor was Stuart Fisher , a Professor Emeritus at the School of Life Sciences at Arizona State University . [ 2 ]
+8-1	610-613	Her	person|person[52]	giv|new[52]	coref|ana	8-5[53_52]|10-3
+8-2	614-619	Ph.D.	abstract|person[52]	giv|new[52]	coref	14-2
+8-3	620-627	advisor	person[52]	new[52]	_	_
+8-4	628-631	was	_	_	_	_
+8-5	632-638	Stuart	person[53]	giv[53]	appos	8-8[54_53]
+8-6	639-645	Fisher	person[53]	giv[53]	_	_
+8-7	646-647	,	_	_	_	_
+8-8	648-649	a	person[54]	giv[54]	coref	10-25[73_54]
+8-9	650-659	Professor	person[54]	giv[54]	_	_
+8-10	660-668	Emeritus	person[54]	giv[54]	_	_
+8-11	669-671	at	person[54]	giv[54]	_	_
+8-12	672-675	the	person[54]|organization[55]	giv[54]|new[55]	_	_
+8-13	676-682	School	person[54]|organization[55]	giv[54]|new[55]	_	_
+8-14	683-685	of	person[54]|organization[55]	giv[54]|new[55]	_	_
+8-15	686-690	Life	person[54]|organization[55]|person|abstract[57]	giv[54]|new[55]|new|new[57]	_	_
+8-16	691-699	Sciences	person[54]|organization[55]|abstract[57]	giv[54]|new[55]|new[57]	_	_
+8-17	700-702	at	person[54]|organization[55]	giv[54]|new[55]	_	_
+8-18	703-710	Arizona	person[54]|organization[55]|place|organization[60]	giv[54]|new[55]|giv|giv[60]	coref	14-9
+8-19	711-716	State	person[54]|organization[55]|place|organization[60]	giv[54]|new[55]|giv|giv[60]	coref	10-29
+8-20	717-727	University	person[54]|organization[55]|organization[60]	giv[54]|new[55]|giv[60]	_	_
+8-21	728-729	.	_	_	_	_
+8-22	730-731	[	_	_	_	_
+8-23	732-733	2	abstract	new	_	_
+8-24	734-735	]	_	_	_	_
+
+#Text=Career and research
+9-1	736-742	Career	abstract	new	_	_
+9-2	743-746	and	_	_	_	_
+9-3	747-755	research	abstract	giv	coref	10-12
+
+#Text=After completing her Ph. D. , Stanley worked as a Post-Doctoral Research Assistant at the University of Alabama for two years , then was Associate Professor at Oklahoma State University in the zoology department for three years .
+10-1	756-761	After	_	_	_	_
+10-2	762-772	completing	_	_	_	_
+10-3	773-776	her	person|person[66]	giv|new[66]	coref	10-7
+10-4	777-780	Ph.	abstract|person[66]	new|new[66]	_	_
+10-5	781-783	D.	person[66]	new[66]	_	_
+10-6	784-785	,	_	_	_	_
+10-7	786-793	Stanley	person	giv	ana	11-3
+10-8	794-800	worked	_	_	_	_
+10-9	801-803	as	_	_	_	_
+10-10	804-805	a	person[69]	new[69]	_	_
+10-11	806-819	Post-Doctoral	person[69]	new[69]	_	_
+10-12	820-828	Research	abstract|person[69]	giv|new[69]	coref	13-1[94_0]
+10-13	829-838	Assistant	person[69]	new[69]	_	_
+10-14	839-841	at	_	_	_	_
+10-15	842-845	the	organization[70]	new[70]	_	_
+10-16	846-856	University	organization[70]	new[70]	_	_
+10-17	857-859	of	organization[70]	new[70]	_	_
+10-18	860-867	Alabama	organization[70]|place	new[70]|new	_	_
+10-19	868-871	for	_	_	_	_
+10-20	872-875	two	time[72]	new[72]	_	_
+10-21	876-881	years	time[72]	new[72]	_	_
+10-22	882-883	,	_	_	_	_
+10-23	884-888	then	_	_	_	_
+10-24	889-892	was	_	_	_	_
+10-25	893-902	Associate	person[73]	giv[73]	coref	12-8[91_73]
+10-26	903-912	Professor	person[73]	giv[73]	_	_
+10-27	913-915	at	person[73]	giv[73]	_	_
+10-28	916-924	Oklahoma	person[73]|place|organization[76]	giv[73]|new|new[76]	_	_
+10-29	925-930	State	person[73]|place|organization[76]	giv[73]|giv|new[76]	coref	35-1[261_0]
+10-30	931-941	University	person[73]|organization[76]	giv[73]|new[76]	_	_
+10-31	942-944	in	person[73]	giv[73]	_	_
+10-32	945-948	the	person[73]|organization[78]	giv[73]|new[78]	coref	11-16[86_78]
+10-33	949-956	zoology	person[73]|abstract|organization[78]	giv[73]|giv|new[78]	_	_
+10-34	957-967	department	person[73]|organization[78]	giv[73]|new[78]	_	_
+10-35	968-971	for	person[73]	giv[73]	_	_
+10-36	972-977	three	person[73]|time[79]	giv[73]|new[79]	_	_
+10-37	978-983	years	person[73]|time[79]	giv[73]|new[79]	_	_
+10-38	984-985	.	_	_	_	_
+
+#Text=In 1998 she became associate professor at the University of Wisconsin Center for Limnology and Department of Integrative Biology .
+11-1	986-988	In	_	_	_	_
+11-2	989-993	1998	time	new	_	_
+11-3	994-997	she	person	giv	ana	12-4
+11-4	998-1004	became	_	_	_	_
+11-5	1005-1014	associate	_	_	_	_
+11-6	1015-1024	professor	_	_	_	_
+11-7	1025-1027	at	_	_	_	_
+11-8	1028-1031	the	organization[84]	new[84]	_	_
+11-9	1032-1042	University	organization[82]|organization[84]	new[82]|new[84]	coref	22-3[179_82]
+11-10	1043-1045	of	organization[82]|organization[84]	new[82]|new[84]	_	_
+11-11	1046-1055	Wisconsin	organization[82]|place|organization[84]	new[82]|new|new[84]	coref	22-5
+11-12	1056-1062	Center	organization[84]	new[84]	_	_
+11-13	1063-1066	for	organization[84]	new[84]	_	_
+11-14	1067-1076	Limnology	organization[84]|abstract	new[84]|giv	coref	13-6
+11-15	1077-1080	and	_	_	_	_
+11-16	1081-1091	Department	organization[86]	giv[86]	_	_
+11-17	1092-1094	of	organization[86]	giv[86]	_	_
+11-18	1095-1106	Integrative	organization[86]|abstract|abstract[88]	giv[86]|new|giv[88]	_	_
+11-19	1107-1114	Biology	organization[86]|abstract[88]	giv[86]|giv[88]	_	_
+11-20	1115-1116	.	_	_	_	_
+
+#Text=In 2010 , she was promoted to Full Professor . [ 1 ]
+12-1	1117-1119	In	_	_	_	_
+12-2	1120-1124	2010	time	new	_	_
+12-3	1125-1126	,	_	_	_	_
+12-4	1127-1130	she	person	giv	coref	13-1[93_0]
+12-5	1131-1134	was	_	_	_	_
+12-6	1135-1143	promoted	_	_	_	_
+12-7	1144-1146	to	_	_	_	_
+12-8	1147-1151	Full	person[91]	giv[91]	_	_
+12-9	1152-1161	Professor	person[91]	giv[91]	_	_
+12-10	1162-1163	.	_	_	_	_
+12-11	1164-1165	[	_	_	_	_
+12-12	1166-1167	1	abstract	giv	_	_
+12-13	1168-1169	]	_	_	_	_
+
+#Text=Stanley 's research focuses on limnology , as well as river and stream ecosystem ecology .
+13-1	1170-1177	Stanley	person[93]|abstract[94]	giv[93]|giv[94]	ana|coref	14-1[0_93]|15-6[119_94]
+13-2	1178-1180	's	person[93]|abstract[94]	giv[93]|giv[94]	_	_
+13-3	1181-1189	research	abstract[94]	giv[94]	_	_
+13-4	1190-1197	focuses	_	_	_	_
+13-5	1198-1200	on	_	_	_	_
+13-6	1201-1210	limnology	abstract	giv	_	_
+13-7	1211-1212	,	_	_	_	_
+13-8	1213-1215	as	_	_	_	_
+13-9	1216-1220	well	_	_	_	_
+13-10	1221-1223	as	_	_	_	_
+13-11	1224-1229	river	place|abstract[99]	new|giv[99]	_	_
+13-12	1230-1233	and	abstract[99]	giv[99]	_	_
+13-13	1234-1240	stream	abstract|abstract[99]	new|giv[99]	coref	14-5[103_0]
+13-14	1241-1250	ecosystem	abstract|abstract[99]	new|giv[99]	coref	14-35[112_0]
+13-15	1251-1258	ecology	abstract[99]	giv[99]	_	_
+13-16	1259-1260	.	_	_	_	_
+
+#Text=Her Ph.D. thesis studied a stream in the Arizona Sonoran Desert to determine how the different parts of the streams dried during warmer months , and it was determined that when each part of the stream ecosystem shrinks and expands , the stream as a whole fluctuates in size . [ 3 ]
+14-1	1261-1264	Her	person|abstract[102]	giv|new[102]	ana	15-3
+14-2	1265-1270	Ph.D.	abstract|abstract[102]	giv|new[102]	_	_
+14-3	1271-1277	thesis	abstract[102]	new[102]	_	_
+14-4	1278-1285	studied	_	_	_	_
+14-5	1286-1287	a	abstract[103]	giv[103]	ana	14-27[0_103]
+14-6	1288-1294	stream	abstract[103]	giv[103]	_	_
+14-7	1295-1297	in	abstract[103]	giv[103]	_	_
+14-8	1298-1301	the	abstract[103]|place[106]	giv[103]|new[106]	_	_
+14-9	1302-1309	Arizona	abstract[103]|place|place[106]	giv[103]|giv|new[106]	_	_
+14-10	1310-1317	Sonoran	abstract[103]|place|place[106]	giv[103]|new|new[106]	_	_
+14-11	1318-1324	Desert	abstract[103]|place[106]	giv[103]|new[106]	_	_
+14-12	1325-1327	to	_	_	_	_
+14-13	1328-1337	determine	_	_	_	_
+14-14	1338-1341	how	_	_	_	_
+14-15	1342-1345	the	abstract[107]	new[107]	_	_
+14-16	1346-1355	different	abstract[107]	new[107]	_	_
+14-17	1356-1361	parts	abstract[107]	new[107]	_	_
+14-18	1362-1364	of	abstract[107]	new[107]	_	_
+14-19	1365-1368	the	abstract[107]|abstract[108]	new[107]|new[108]	coref	15-36[0_108]
+14-20	1369-1376	streams	abstract[107]|abstract[108]	new[107]|new[108]	_	_
+14-21	1377-1382	dried	_	_	_	_
+14-22	1383-1389	during	_	_	_	_
+14-23	1390-1396	warmer	time[109]	new[109]	_	_
+14-24	1397-1403	months	time[109]	new[109]	_	_
+14-25	1404-1405	,	_	_	_	_
+14-26	1406-1409	and	_	_	_	_
+14-27	1410-1412	it	abstract	giv	coref	14-36
+14-28	1413-1416	was	_	_	_	_
+14-29	1417-1427	determined	_	_	_	_
+14-30	1428-1432	that	_	_	_	_
+14-31	1433-1437	when	_	_	_	_
+14-32	1438-1442	each	_	_	_	_
+14-33	1443-1447	part	_	_	_	_
+14-34	1448-1450	of	_	_	_	_
+14-35	1451-1454	the	abstract[112]	giv[112]	coref	31-4[0_112]
+14-36	1455-1461	stream	abstract|abstract[112]	giv|giv[112]	coref	14-42[113_0]
+14-37	1462-1471	ecosystem	abstract[112]	giv[112]	_	_
+14-38	1472-1479	shrinks	_	_	_	_
+14-39	1480-1483	and	_	_	_	_
+14-40	1484-1491	expands	_	_	_	_
+14-41	1492-1493	,	_	_	_	_
+14-42	1494-1497	the	abstract[113]	giv[113]	coref	15-22[0_113]
+14-43	1498-1504	stream	abstract[113]	giv[113]	_	_
+14-44	1505-1507	as	abstract[113]	giv[113]	_	_
+14-45	1508-1509	a	abstract[113]|abstract[114]	giv[113]|new[114]	_	_
+14-46	1510-1515	whole	abstract[113]|abstract[114]	giv[113]|new[114]	_	_
+14-47	1516-1526	fluctuates	_	_	_	_
+14-48	1527-1529	in	_	_	_	_
+14-49	1530-1534	size	abstract	new	_	_
+14-50	1535-1536	.	_	_	_	_
+14-51	1537-1538	[	_	_	_	_
+14-52	1539-1540	3	abstract	new	coref	15-45
+14-53	1541-1542	]	_	_	_	_
+
+#Text=According to her paper , this research could help predict how drying patterns cause changes in ecosystems , and knowing that stream ecosystems change over space and time can also be used to predict how streams could change due to climate change . [ 3 ]
+15-1	1543-1552	According	_	_	_	_
+15-2	1553-1555	to	_	_	_	_
+15-3	1556-1559	her	person|abstract[118]	giv|new[118]	ana	16-4
+15-4	1560-1565	paper	abstract[118]	new[118]	_	_
+15-5	1566-1567	,	_	_	_	_
+15-6	1568-1572	this	abstract[119]	giv[119]	coref	16-1[131_119]
+15-7	1573-1581	research	abstract[119]	giv[119]	_	_
+15-8	1582-1587	could	_	_	_	_
+15-9	1588-1592	help	_	_	_	_
+15-10	1593-1600	predict	_	_	_	_
+15-11	1601-1604	how	_	_	_	_
+15-12	1605-1611	drying	abstract|abstract[121]	new|new[121]	_	_
+15-13	1612-1620	patterns	abstract[121]	new[121]	_	_
+15-14	1621-1626	cause	_	_	_	_
+15-15	1627-1634	changes	abstract[122]	new[122]	coref	18-1[147_122]
+15-16	1635-1637	in	abstract[122]	new[122]	_	_
+15-17	1638-1648	ecosystems	abstract[122]|abstract	new[122]|giv	coref	15-22[125_0]
+15-18	1649-1650	,	_	_	_	_
+15-19	1651-1654	and	_	_	_	_
+15-20	1655-1662	knowing	_	_	_	_
+15-21	1663-1667	that	_	_	_	_
+15-22	1668-1674	stream	abstract|abstract[125]	giv|giv[125]	coref	16-13[0_125]
+15-23	1675-1685	ecosystems	abstract[125]	giv[125]	_	_
+15-24	1686-1692	change	_	_	_	_
+15-25	1693-1697	over	_	_	_	_
+15-26	1698-1703	space	abstract	new	_	_
+15-27	1704-1707	and	_	_	_	_
+15-28	1708-1712	time	time	new	_	_
+15-29	1713-1716	can	_	_	_	_
+15-30	1717-1721	also	_	_	_	_
+15-31	1722-1724	be	_	_	_	_
+15-32	1725-1729	used	_	_	_	_
+15-33	1730-1732	to	_	_	_	_
+15-34	1733-1740	predict	_	_	_	_
+15-35	1741-1744	how	_	_	_	_
+15-36	1745-1752	streams	abstract	giv	coref	31-9
+15-37	1753-1758	could	_	_	_	_
+15-38	1759-1765	change	_	_	_	_
+15-39	1766-1769	due	_	_	_	_
+15-40	1770-1772	to	_	_	_	_
+15-41	1773-1780	climate	event[129]	new[129]	_	_
+15-42	1781-1787	change	event[129]	new[129]	_	_
+15-43	1788-1789	.	_	_	_	_
+15-44	1790-1791	[	_	_	_	_
+15-45	1792-1793	3	abstract	giv	coref	31-14
+15-46	1794-1795	]	_	_	_	_
+
+#Text=Other research of hers includes studying the effects of dam removal on ecosystems and predicting how best to manage the consequences . [ 4 ]
+16-1	1796-1801	Other	abstract[131]	giv[131]	coref	18-8[150_131]
+16-2	1802-1810	research	abstract[131]	giv[131]	_	_
+16-3	1811-1813	of	abstract[131]	giv[131]	_	_
+16-4	1814-1818	hers	abstract[131]|person	giv[131]|giv	ana	17-1
+16-5	1819-1827	includes	_	_	_	_
+16-6	1828-1836	studying	_	_	_	_
+16-7	1837-1840	the	abstract[133]	new[133]	_	_
+16-8	1841-1848	effects	abstract[133]	new[133]	_	_
+16-9	1849-1851	of	abstract[133]	new[133]	_	_
+16-10	1852-1855	dam	abstract[133]|substance|event[135]	new[133]|new|new[135]	coref|coref	34-11|34-11[254_135]
+16-11	1856-1863	removal	abstract[133]|event[135]	new[133]|new[135]	_	_
+16-12	1864-1866	on	abstract[133]	new[133]	_	_
+16-13	1867-1877	ecosystems	abstract[133]|abstract	new[133]|giv	coref	18-3[148_0]
+16-14	1878-1881	and	_	_	_	_
+16-15	1882-1892	predicting	_	_	_	_
+16-16	1893-1896	how	_	_	_	_
+16-17	1897-1901	best	_	_	_	_
+16-18	1902-1904	to	_	_	_	_
+16-19	1905-1911	manage	_	_	_	_
+16-20	1912-1915	the	abstract[137]	new[137]	_	_
+16-21	1916-1928	consequences	abstract[137]	new[137]	_	_
+16-22	1929-1930	.	_	_	_	_
+16-23	1931-1932	[	_	_	_	_
+16-24	1933-1934	4	abstract	new	coref	34-22
+16-25	1935-1936	]	_	_	_	_
+
+#Text=She has also researched how different factors such as hydrology , biochemistry , invasive species , and human land-use alter lakes and rivers .
+17-1	1937-1940	She	person	giv	ana	18-8
+17-2	1941-1944	has	_	_	_	_
+17-3	1945-1949	also	_	_	_	_
+17-4	1950-1960	researched	_	_	_	_
+17-5	1961-1964	how	_	_	_	_
+17-6	1965-1974	different	abstract[140]	new[140]	_	_
+17-7	1975-1982	factors	abstract[140]	new[140]	_	_
+17-8	1983-1987	such	abstract[140]	new[140]	_	_
+17-9	1988-1990	as	abstract[140]	new[140]	_	_
+17-10	1991-2000	hydrology	abstract[140]|abstract	new[140]|new	_	_
+17-11	2001-2002	,	abstract[140]	new[140]	_	_
+17-12	2003-2015	biochemistry	abstract[140]|abstract	new[140]|new	_	_
+17-13	2016-2017	,	abstract[140]	new[140]	_	_
+17-14	2018-2026	invasive	abstract[140]|animal[143]	new[140]|new[143]	_	_
+17-15	2027-2034	species	abstract[140]|animal[143]	new[140]|new[143]	_	_
+17-16	2035-2036	,	abstract[140]	new[140]	_	_
+17-17	2037-2040	and	abstract[140]	new[140]	_	_
+17-18	2041-2046	human	abstract[140]|place[144]	new[140]|new[144]	_	_
+17-19	2047-2055	land-use	abstract[140]|place[144]	new[140]|new[144]	_	_
+17-20	2056-2061	alter	_	_	_	_
+17-21	2062-2067	lakes	place	new	_	_
+17-22	2068-2071	and	_	_	_	_
+17-23	2072-2078	rivers	place	new	coref	19-14
+17-24	2079-2080	.	_	_	_	_
+
+#Text=Changes in freshwater ecosystems , according to her research , can affect services humans get from these ecosystems , such as drinking water . [ 5 ]
+18-1	2081-2088	Changes	abstract[147]	giv[147]	coref	35-12[265_147]
+18-2	2089-2091	in	abstract[147]	giv[147]	_	_
+18-3	2092-2102	freshwater	abstract[147]|abstract[148]	giv[147]|giv[148]	coref	18-17[153_148]
+18-4	2103-2113	ecosystems	abstract[147]|abstract[148]	giv[147]|giv[148]	_	_
+18-5	2114-2115	,	_	_	_	_
+18-6	2116-2125	according	_	_	_	_
+18-7	2126-2128	to	_	_	_	_
+18-8	2129-2132	her	person|abstract[150]	giv|giv[150]	coref	19-1[156_0]
+18-9	2133-2141	research	abstract[150]	giv[150]	_	_
+18-10	2142-2143	,	_	_	_	_
+18-11	2144-2147	can	_	_	_	_
+18-12	2148-2154	affect	_	_	_	_
+18-13	2155-2163	services	abstract[151]	new[151]	_	_
+18-14	2164-2170	humans	abstract[151]|person	new[151]|new	_	_
+18-15	2171-2174	get	abstract[151]	new[151]	_	_
+18-16	2175-2179	from	abstract[151]	new[151]	_	_
+18-17	2180-2185	these	abstract[151]|abstract[153]	new[151]|giv[153]	coref	19-24[163_153]
+18-18	2186-2196	ecosystems	abstract[151]|abstract[153]	new[151]|giv[153]	_	_
+18-19	2197-2198	,	abstract[151]	new[151]	_	_
+18-20	2199-2203	such	abstract[151]	new[151]	_	_
+18-21	2204-2206	as	abstract[151]	new[151]	_	_
+18-22	2207-2215	drinking	abstract[151]|substance[154]	new[151]|new[154]	coref	20-12[170_154]
+18-23	2216-2221	water	abstract[151]|substance[154]	new[151]|new[154]	_	_
+18-24	2222-2223	.	_	_	_	_
+18-25	2224-2225	[	_	_	_	_
+18-26	2226-2227	5	abstract	new	coref	35-28
+18-27	2228-2229	]	_	_	_	_
+
+#Text=Emily Stanley has also studied riparian zones , which are the areas between rivers and land , and how human impacts can change these ecosystems . [ 6 ]
+19-1	2230-2235	Emily	person[156]	giv[156]	ana	20-4[0_156]
+19-2	2236-2243	Stanley	person[156]	giv[156]	_	_
+19-3	2244-2247	has	_	_	_	_
+19-4	2248-2252	also	_	_	_	_
+19-5	2253-2260	studied	_	_	_	_
+19-6	2261-2269	riparian	place[157]	new[157]	coref	19-9[158_157]
+19-7	2270-2275	zones	place[157]	new[157]	_	_
+19-8	2276-2277	,	place[157]	new[157]	_	_
+19-9	2278-2283	which	place[157]|place[158]	new[157]|giv[158]	coref	20-7[167_158]
+19-10	2284-2287	are	place[157]|place[158]	new[157]|giv[158]	_	_
+19-11	2288-2291	the	place[157]|place[158]	new[157]|giv[158]	_	_
+19-12	2292-2297	areas	place[157]|place[158]	new[157]|giv[158]	_	_
+19-13	2298-2305	between	place[157]|place[158]	new[157]|giv[158]	_	_
+19-14	2306-2312	rivers	place[157]|place[158]|place|place[160]	new[157]|giv[158]|giv|giv[160]	coref|coref	19-14[160_0]|32-14[0_160]
+19-15	2313-2316	and	place[157]|place[158]|place[160]	new[157]|giv[158]|giv[160]	_	_
+19-16	2317-2321	land	place[157]|place[158]|place[160]|place	new[157]|giv[158]|giv[160]|new	_	_
+19-17	2322-2323	,	place[157]	new[157]	_	_
+19-18	2324-2327	and	place[157]	new[157]	_	_
+19-19	2328-2331	how	place[157]	new[157]	_	_
+19-20	2332-2337	human	place[157]|abstract[162]	new[157]|new[162]	coref	33-7[247_162]
+19-21	2338-2345	impacts	place[157]|abstract[162]	new[157]|new[162]	_	_
+19-22	2346-2349	can	place[157]	new[157]	_	_
+19-23	2350-2356	change	place[157]	new[157]	_	_
+19-24	2357-2362	these	place[157]|abstract[163]	new[157]|giv[163]	coref	35-6[264_163]
+19-25	2363-2373	ecosystems	place[157]|abstract[163]	new[157]|giv[163]	_	_
+19-26	2374-2375	.	_	_	_	_
+19-27	2376-2377	[	_	_	_	_
+19-28	2378-2379	6	abstract	new	coref	33-17
+19-29	2380-2381	]	_	_	_	_
+
+#Text=In addition , she has studied hyporheic zones , areas where surface water mixes with groundwater , and researched how water and nutrients are exchanged between the two . [ 7 ]
+20-1	2382-2384	In	_	_	_	_
+20-2	2385-2393	addition	_	_	_	_
+20-3	2394-2395	,	_	_	_	_
+20-4	2396-2399	she	person	giv	_	_
+20-5	2400-2403	has	_	_	_	_
+20-6	2404-2411	studied	_	_	_	_
+20-7	2412-2421	hyporheic	abstract|place[167]	new|giv[167]	appos|coref	20-10[168_167]|32-9
+20-8	2422-2427	zones	place[167]	giv[167]	_	_
+20-9	2428-2429	,	_	_	_	_
+20-10	2430-2435	areas	place[168]	giv[168]	_	_
+20-11	2436-2441	where	place[168]	giv[168]	_	_
+20-12	2442-2449	surface	place[168]|place|substance[170]	giv[168]|new|giv[170]	coref	20-21[0_170]
+20-13	2450-2455	water	place[168]|substance[170]	giv[168]|giv[170]	_	_
+20-14	2456-2461	mixes	place[168]	giv[168]	_	_
+20-15	2462-2466	with	place[168]	giv[168]	_	_
+20-16	2467-2478	groundwater	place[168]|substance	giv[168]|new	_	_
+20-17	2479-2480	,	_	_	_	_
+20-18	2481-2484	and	_	_	_	_
+20-19	2485-2495	researched	_	_	_	_
+20-20	2496-2499	how	_	_	_	_
+20-21	2500-2505	water	substance	giv	_	_
+20-22	2506-2509	and	_	_	_	_
+20-23	2510-2519	nutrients	substance	new	_	_
+20-24	2520-2523	are	_	_	_	_
+20-25	2524-2533	exchanged	_	_	_	_
+20-26	2534-2541	between	_	_	_	_
+20-27	2542-2545	the	abstract[174]	new[174]	_	_
+20-28	2546-2549	two	abstract[174]	new[174]	_	_
+20-29	2550-2551	.	_	_	_	_
+20-30	2552-2553	[	_	_	_	_
+20-31	2554-2555	7	abstract	new	coref	32-24
+20-32	2556-2557	]	_	_	_	_
+
+#Text=Awards and honors
+21-1	2558-2564	Awards	abstract	new	_	_
+21-2	2565-2568	and	_	_	_	_
+21-3	2569-2575	honors	abstract	new	_	_
+
+#Text=2003-2005 – University of Wisconsin Vilas Associate Award [ 8 ]
+22-1	2576-2585	2003-2005	time|abstract[182]	new|new[182]	coref	23-1[188_182]
+22-2	2586-2587	–	abstract[182]	new[182]	_	_
+22-3	2588-2598	University	organization[179]|abstract[182]	giv[179]|new[182]	coref	23-3[185_179]
+22-4	2599-2601	of	organization[179]|abstract[182]	giv[179]|new[182]	_	_
+22-5	2602-2611	Wisconsin	organization[179]|place|abstract[182]	giv[179]|giv|new[182]	coref	23-5
+22-6	2612-2617	Vilas	abstract[182]	new[182]	_	_
+22-7	2618-2627	Associate	person|abstract[182]	new|new[182]	coref	23-7
+22-8	2628-2633	Award	abstract[182]	new[182]	_	_
+22-9	2634-2635	[	_	_	_	_
+22-10	2636-2637	8	abstract	new	_	_
+22-11	2638-2639	]	_	_	_	_
+
+#Text=2003-2008 – University of Wisconsin Vilas Associate Award [ 9 ]
+23-1	2640-2649	2003-2008	time|abstract[188]	new|giv[188]	coref	25-1[201_188]
+23-2	2650-2651	–	abstract[188]	giv[188]	_	_
+23-3	2652-2662	University	organization[185]|abstract[188]	giv[185]|giv[188]	coref	25-3[196_185]
+23-4	2663-2665	of	organization[185]|abstract[188]	giv[185]|giv[188]	_	_
+23-5	2666-2675	Wisconsin	organization[185]|place|abstract[188]	giv[185]|giv|giv[188]	coref	25-5
+23-6	2676-2681	Vilas	abstract[188]	giv[188]	_	_
+23-7	2682-2691	Associate	person|abstract[188]	giv|giv[188]	_	_
+23-8	2692-2697	Award	abstract[188]	giv[188]	_	_
+23-9	2698-2699	[	_	_	_	_
+23-10	2700-2701	9	abstract	new	_	_
+23-11	2702-2703	]	_	_	_	_
+
+#Text=2006 – Aldo Leopold Leadership Program [ 10 ]
+24-1	2704-2708	2006	time|abstract[193]	new|new[193]	_	_
+24-2	2709-2710	–	abstract[193]	new[193]	_	_
+24-3	2711-2715	Aldo	person[191]|abstract[193]	new[191]|new[193]	_	_
+24-4	2716-2723	Leopold	person[191]|abstract[193]	new[191]|new[193]	_	_
+24-5	2724-2734	Leadership	abstract|abstract[193]	new|new[193]	_	_
+24-6	2735-2742	Program	abstract[193]	new[193]	_	_
+24-7	2743-2744	[	_	_	_	_
+24-8	2745-2747	10	abstract	new	_	_
+24-9	2748-2749	]	_	_	_	_
+
+#Text=2008 – University of Wisconsin Romnes Faculty Fellowship Award [ 11 ]
+25-1	2750-2754	2008	time|abstract[201]	new|giv[201]	coref	26-1[208_201]
+25-2	2755-2756	–	abstract[201]	giv[201]	_	_
+25-3	2757-2767	University	organization[196]|abstract[200]|abstract[201]	giv[196]|new[200]|giv[201]	coref	26-3[204_196]
+25-4	2768-2770	of	organization[196]|abstract[200]|abstract[201]	giv[196]|new[200]|giv[201]	_	_
+25-5	2771-2780	Wisconsin	organization[196]|place|abstract[200]|abstract[201]	giv[196]|giv|new[200]|giv[201]	coref	26-5
+25-6	2781-2787	Romnes	abstract|abstract[200]|abstract[201]	new|new[200]|giv[201]	_	_
+25-7	2788-2795	Faculty	person|abstract[200]|abstract[201]	new|new[200]|giv[201]	_	_
+25-8	2796-2806	Fellowship	abstract[200]|abstract[201]	new[200]|giv[201]	_	_
+25-9	2807-2812	Award	abstract[201]	giv[201]	_	_
+25-10	2813-2814	[	_	_	_	_
+25-11	2815-2817	11	abstract	new	_	_
+25-12	2818-2819	]	_	_	_	_
+
+#Text=2015 – University of Wisconsin Kellett Mid-Career Faculty Researcher Award [ 12 ]
+26-1	2820-2824	2015	time|abstract[208]	new|giv[208]	coref	28-1[218_208]
+26-2	2825-2826	–	abstract[208]	giv[208]	_	_
+26-3	2827-2837	University	organization[204]|person[207]|abstract[208]	giv[204]|new[207]|giv[208]	_	_
+26-4	2838-2840	of	organization[204]|person[207]|abstract[208]	giv[204]|new[207]|giv[208]	_	_
+26-5	2841-2850	Wisconsin	organization[204]|place|person[207]|abstract[208]	giv[204]|giv|new[207]|giv[208]	_	_
+26-6	2851-2858	Kellett	person[207]|abstract[208]	new[207]|giv[208]	_	_
+26-7	2859-2869	Mid-Career	abstract|person[207]|abstract[208]	new|new[207]|giv[208]	_	_
+26-8	2870-2877	Faculty	person[207]|abstract[208]	new[207]|giv[208]	_	_
+26-9	2878-2888	Researcher	person[207]|abstract[208]	new[207]|giv[208]	_	_
+26-10	2889-2894	Award	abstract[208]	giv[208]	_	_
+26-11	2895-2896	[	_	_	_	_
+26-12	2897-2899	12	abstract	new	_	_
+26-13	2900-2901	]	_	_	_	_
+
+#Text=2018 – Fellow of the Society for Freshwater Science [ 13 ]
+27-1	2902-2906	2018	time|person[211]	new|giv[211]	coref	28-1
+27-2	2907-2908	–	person[211]	giv[211]	_	_
+27-3	2909-2915	Fellow	person[211]	giv[211]	_	_
+27-4	2916-2918	of	person[211]	giv[211]	_	_
+27-5	2919-2922	the	person[211]|organization[212]	giv[211]|giv[212]	_	_
+27-6	2923-2930	Society	person[211]|organization[212]	giv[211]|giv[212]	_	_
+27-7	2931-2934	for	person[211]|organization[212]	giv[211]|giv[212]	_	_
+27-8	2935-2945	Freshwater	person[211]|organization[212]|abstract[213]	giv[211]|giv[212]|new[213]	_	_
+27-9	2946-2953	Science	person[211]|organization[212]|abstract[213]	giv[211]|giv[212]|new[213]	_	_
+27-10	2954-2955	[	_	_	_	_
+27-11	2956-2958	13	abstract	new	_	_
+27-12	2959-2960	]	_	_	_	_
+
+#Text=2018 – ASLO G. Evelyn Hutchinson Award [ 14 ]
+28-1	2961-2965	2018	time|abstract[218]	giv|giv[218]	coref	29-1
+28-2	2966-2967	–	abstract[218]	giv[218]	_	_
+28-3	2968-2972	ASLO	organization|abstract[218]	new|giv[218]	_	_
+28-4	2973-2975	G.	person[217]|abstract[218]	new[217]|giv[218]	_	_
+28-5	2976-2982	Evelyn	person[217]|abstract[218]	new[217]|giv[218]	_	_
+28-6	2983-2993	Hutchinson	person[217]|abstract[218]	new[217]|giv[218]	_	_
+28-7	2994-2999	Award	abstract[218]	giv[218]	_	_
+28-8	3000-3001	[	_	_	_	_
+28-9	3002-3004	14	abstract	new	_	_
+28-10	3005-3006	]	_	_	_	_
+
+#Text=2018 – Fellow of the Ecological Society of America [ 15 ]
+29-1	3007-3011	2018	time|person[221]	giv|new[221]	_	_
+29-2	3012-3013	–	person[221]	new[221]	_	_
+29-3	3014-3020	Fellow	person[221]	new[221]	_	_
+29-4	3021-3023	of	person[221]	new[221]	_	_
+29-5	3024-3027	the	person[221]|organization[222]	new[221]|new[222]	_	_
+29-6	3028-3038	Ecological	person[221]|organization[222]	new[221]|new[222]	_	_
+29-7	3039-3046	Society	person[221]|organization[222]	new[221]|new[222]	_	_
+29-8	3047-3049	of	person[221]|organization[222]	new[221]|new[222]	_	_
+29-9	3050-3057	America	person[221]|organization[222]|place	new[221]|new[222]|giv	_	_
+29-10	3058-3059	[	_	_	_	_
+29-11	3060-3062	15	abstract	new	_	_
+29-12	3063-3064	]	_	_	_	_
+
+#Text=Notable Publications
+30-1	3065-3072	Notable	organization[225]	new[225]	_	_
+30-2	3073-3085	Publications	organization[225]	new[225]	_	_
+
+#Text=1997 : " Ecosystem expansion and contraction in streams , " BioScience [ 3 ]
+31-1	3086-3090	1997	time|abstract[228]	new|new[228]	_	_
+31-2	3091-3092	:	abstract[228]	new[228]	_	_
+31-3	3093-3094	"	abstract[228]	new[228]	_	_
+31-4	3095-3104	Ecosystem	abstract|abstract[228]	giv|new[228]	_	_
+31-5	3105-3114	expansion	abstract[228]	new[228]	_	_
+31-6	3115-3118	and	_	_	_	_
+31-7	3119-3130	contraction	event[229]	new[229]	_	_
+31-8	3131-3133	in	event[229]	new[229]	_	_
+31-9	3134-3141	streams	event[229]|abstract	new[229]|giv	coref	32-12
+31-10	3142-3143	,	_	_	_	_
+31-11	3144-3145	"	_	_	_	_
+31-12	3146-3156	BioScience	abstract	new	_	_
+31-13	3157-3158	[	_	_	_	_
+31-14	3159-3160	3	abstract	giv	_	_
+31-15	3161-3162	]	_	_	_	_
+
+#Text=1998 : " The functional significance of the hyporheic zone in streams and rivers , " Annual Review of Ecology and Systematics [ 7 ]
+32-1	3163-3167	1998	_	_	_	_
+32-2	3168-3169	:	_	_	_	_
+32-3	3170-3171	"	_	_	_	_
+32-4	3172-3175	The	abstract[233]	new[233]	_	_
+32-5	3176-3186	functional	abstract[233]	new[233]	_	_
+32-6	3187-3199	significance	abstract[233]	new[233]	_	_
+32-7	3200-3202	of	abstract[233]	new[233]	_	_
+32-8	3203-3206	the	abstract[233]|place[235]	new[233]|new[235]	_	_
+32-9	3207-3216	hyporheic	abstract[233]|abstract|place[235]	new[233]|giv|new[235]	_	_
+32-10	3217-3221	zone	abstract[233]|place[235]	new[233]|new[235]	_	_
+32-11	3222-3224	in	abstract[233]|place[235]	new[233]|new[235]	_	_
+32-12	3225-3232	streams	abstract[233]|place[235]|abstract|abstract[237]	new[233]|new[235]|giv|giv[237]	coref	32-12[237_0]
+32-13	3233-3236	and	abstract[233]|place[235]|abstract[237]	new[233]|new[235]|giv[237]	_	_
+32-14	3237-3243	rivers	abstract[233]|place[235]|abstract[237]|place	new[233]|new[235]|giv[237]|giv	_	_
+32-15	3244-3245	,	_	_	_	_
+32-16	3246-3247	"	_	_	_	_
+32-17	3248-3254	Annual	organization[239]	new[239]	_	_
+32-18	3255-3261	Review	organization[239]	new[239]	_	_
+32-19	3262-3264	of	organization[239]	new[239]	_	_
+32-20	3265-3272	Ecology	organization[239]|abstract|abstract[241]	new[239]|new|new[241]	coref|coref	34-17|34-17[257_241]
+32-21	3273-3276	and	organization[239]|abstract[241]	new[239]|new[241]	_	_
+32-22	3277-3288	Systematics	organization[239]|abstract[241]|abstract	new[239]|new[241]|new	_	_
+32-23	3289-3290	[	_	_	_	_
+32-24	3291-3292	7	abstract	giv	_	_
+32-25	3293-3294	]	_	_	_	_
+
+#Text=2002 : " Landscape indicators of human impacts to riverine systems , " Aquatic Sciences [ 6 ]
+33-1	3295-3299	2002	time|organization[249]	new|new[249]	_	_
+33-2	3300-3301	:	organization[249]	new[249]	_	_
+33-3	3302-3303	"	organization[249]	new[249]	_	_
+33-4	3304-3313	Landscape	abstract|abstract[246]|organization[249]	new|new[246]|new[249]	_	_
+33-5	3314-3324	indicators	abstract[246]|organization[249]	new[246]|new[249]	_	_
+33-6	3325-3327	of	abstract[246]|organization[249]	new[246]|new[249]	_	_
+33-7	3328-3333	human	abstract[246]|abstract[247]|organization[249]	new[246]|giv[247]|new[249]	_	_
+33-8	3334-3341	impacts	abstract[246]|abstract[247]|organization[249]	new[246]|giv[247]|new[249]	_	_
+33-9	3342-3344	to	abstract[246]|abstract[247]|organization[249]	new[246]|giv[247]|new[249]	_	_
+33-10	3345-3353	riverine	abstract[246]|abstract[247]|place[248]|organization[249]	new[246]|giv[247]|new[248]|new[249]	_	_
+33-11	3354-3361	systems	abstract[246]|abstract[247]|place[248]|organization[249]	new[246]|giv[247]|new[248]|new[249]	_	_
+33-12	3362-3363	,	organization[249]	new[249]	_	_
+33-13	3364-3365	"	organization[249]	new[249]	_	_
+33-14	3366-3373	Aquatic	organization[249]	new[249]	_	_
+33-15	3374-3382	Sciences	organization[249]	new[249]	_	_
+33-16	3383-3384	[	_	_	_	_
+33-17	3385-3386	6	abstract	giv	_	_
+33-18	3387-3388	]	_	_	_	_
+
+#Text=2003 : " Trading off : the ecological effects of dam removal , " Frontiers in Ecology and the Environment [ 4 ]
+34-1	3389-3393	2003	time	new	_	_
+34-2	3394-3395	:	_	_	_	_
+34-3	3396-3397	"	_	_	_	_
+34-4	3398-3405	Trading	_	_	_	_
+34-5	3406-3409	off	_	_	_	_
+34-6	3410-3411	:	_	_	_	_
+34-7	3412-3415	the	abstract[252]	new[252]	_	_
+34-8	3416-3426	ecological	abstract[252]	new[252]	_	_
+34-9	3427-3434	effects	abstract[252]	new[252]	_	_
+34-10	3435-3437	of	abstract[252]	new[252]	_	_
+34-11	3438-3441	dam	abstract[252]|substance|event[254]	new[252]|giv|giv[254]	_	_
+34-12	3442-3449	removal	abstract[252]|event[254]	new[252]|giv[254]	_	_
+34-13	3450-3451	,	_	_	_	_
+34-14	3452-3453	"	_	_	_	_
+34-15	3454-3463	Frontiers	organization[255]	new[255]	_	_
+34-16	3464-3466	in	organization[255]	new[255]	_	_
+34-17	3467-3474	Ecology	organization[255]|abstract|abstract[257]	new[255]|giv|giv[257]	_	_
+34-18	3475-3478	and	organization[255]|abstract[257]	new[255]|giv[257]	_	_
+34-19	3479-3482	the	organization[255]|abstract[257]|abstract[258]	new[255]|giv[257]|new[258]	coref	35-24[0_258]
+34-20	3483-3494	Environment	organization[255]|abstract[257]|abstract[258]	new[255]|giv[257]|new[258]	_	_
+34-21	3495-3496	[	_	_	_	_
+34-22	3497-3498	4	abstract	giv	_	_
+34-23	3499-3500	]	_	_	_	_
+
+#Text=2011 : " State of the world 's freshwater ecosystems : physical , chemical , and biological changes , " Annual Review of Environment and Resources [ 5 ]
+35-1	3501-3505	2011	time|place[261]	new|giv[261]	_	_
+35-2	3506-3507	:	place[261]	giv[261]	_	_
+35-3	3508-3509	"	place[261]	giv[261]	_	_
+35-4	3510-3515	State	place[261]	giv[261]	_	_
+35-5	3516-3518	of	place[261]	giv[261]	_	_
+35-6	3519-3522	the	place[261]|abstract[264]	giv[261]|giv[264]	_	_
+35-7	3523-3528	world	place[261]|place[262]|abstract[264]	giv[261]|new[262]|giv[264]	_	_
+35-8	3529-3531	's	place[261]|place[262]|abstract[264]	giv[261]|new[262]|giv[264]	_	_
+35-9	3532-3542	freshwater	place[261]|place|abstract[264]	giv[261]|new|giv[264]	_	_
+35-10	3543-3553	ecosystems	place[261]|abstract[264]	giv[261]|giv[264]	_	_
+35-11	3554-3555	:	_	_	_	_
+35-12	3556-3564	physical	abstract[265]	giv[265]	_	_
+35-13	3565-3566	,	abstract[265]	giv[265]	_	_
+35-14	3567-3575	chemical	abstract[265]	giv[265]	_	_
+35-15	3576-3577	,	abstract[265]	giv[265]	_	_
+35-16	3578-3581	and	abstract[265]	giv[265]	_	_
+35-17	3582-3592	biological	abstract[265]	giv[265]	_	_
+35-18	3593-3600	changes	abstract[265]	giv[265]	_	_
+35-19	3601-3602	,	_	_	_	_
+35-20	3603-3604	"	_	_	_	_
+35-21	3605-3611	Annual	organization[266]	new[266]	_	_
+35-22	3612-3618	Review	organization[266]	new[266]	_	_
+35-23	3619-3621	of	organization[266]	new[266]	_	_
+35-24	3622-3633	Environment	organization[266]|abstract	new[266]|giv	_	_
+35-25	3634-3637	and	organization[266]	new[266]	_	_
+35-26	3638-3647	Resources	organization[266]|abstract	new[266]|new	_	_
+35-27	3648-3649	[	_	_	_	_
+35-28	3650-3651	5	abstract	giv	_	_
+35-29	3652-3653	]	_	_	_	_

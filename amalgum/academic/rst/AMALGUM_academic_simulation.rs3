@@ -1,0 +1,300 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. IRoNS Method</segment>
+<segment id="2" parent="1003" relname="span">The proposed method uses a workflow structure</segment>
+<segment id="3" parent="2" relname="purpose">to guide the study simulation development ,</segment>
+<segment id="4" parent="5" relname="attribution">dividing the study in three development stages :</segment>
+<segment id="5" parent="1004" relname="span">Problem definition , simulation framework , and experimentation .</segment>
+<segment id="6" parent="1007" relname="span">The last two stages can be further divided</segment>
+<segment id="7" parent="1008" relname="span">following a ‘ plan , execute and assess ’ methodology ,</segment>
+<segment id="8" parent="1009" relname="span">which leads to a final 10-steps procedure</segment>
+<segment id="9" parent="8" relname="elaboration">that is briefly described below (</segment>
+<segment id="10" parent="1011" relname="preparation">Figure 1</segment>
+<segment id="11" parent="1011" relname="joint">) .</segment>
+<segment id="12" parent="1013" relname="span">Problem Formulation</segment>
+<segment id="13" parent="12" relname="elaboration">( 1 ) :</segment>
+<segment id="14" parent="1014" relname="joint">The first part of the method is to state and define what kind of problem is going to be the object of study .</segment>
+<segment id="15" parent="1017" relname="span">In general , this initial part derives from an initial study or a demand</segment>
+<segment id="16" parent="15" relname="elaboration">that urges for a complex simulation for validation .</segment>
+<segment id="17" parent="1019" relname="span">Choosing Solutions</segment>
+<segment id="18" parent="17" relname="elaboration">( 2 ) :</segment>
+<segment id="19" parent="1022" relname="circumstance">After defining the problem ,</segment>
+<segment id="20" parent="1022" relname="span">it is necessary to choose the techniques</segment>
+<segment id="21" parent="20" relname="elaboration">that allow solving the problem ,</segment>
+<segment id="22" parent="1023" relname="span">i.e. , techniques</segment>
+<segment id="23" parent="1024" relname="span">that will be simulated</segment>
+<segment id="24" parent="1025" relname="span">to emulate and assess the situation</segment>
+<segment id="25" parent="24" relname="elaboration">referred in the problem study .</segment>
+<segment id="26" parent="27" relname="attribution">It is important to note</segment>
+<segment id="27" parent="1027" relname="span">that the IRoNS Method does not depend on any specific robotic or network techniques .</segment>
+<segment id="28" parent="1030" relname="span">System — Specifying</segment>
+<segment id="29" parent="28" relname="restatement">( Initial Documentation )</segment>
+<segment id="30" parent="1030" relname="elaboration">( 3 ) :</segment>
+<segment id="31" parent="1032" relname="span">Consists in organizing all the information</segment>
+<segment id="32" parent="31" relname="elaboration">decided so far ,</segment>
+<segment id="33" parent="1033" relname="joint">describing the concepts behind the chosen techniques</segment>
+<segment id="34" parent="1034" relname="span">and giving a special attention to creating an assumptions document ,</segment>
+<segment id="35" parent="34" relname="elaboration">which should be updated during the entire development cycle .</segment>
+<segment id="36" parent="1036" relname="span">Base Simulation — Planning</segment>
+<segment id="37" parent="36" relname="restatement">( 4 ) :</segment>
+<segment id="38" parent="1038" relname="span">The next step consists in planning the simulation framework</segment>
+<segment id="39" parent="38" relname="elaboration">( Base Simulation — BS ) ,</segment>
+<segment id="40" parent="1040" relname="span">which is also referred to as conceptual and communicative modelling .</segment>
+<segment id="41" parent="1041" relname="span">This modelling includes documentation procedures with different objectives :</segment>
+<segment id="42" parent="1043" relname="span">firstly as a visual documentation</segment>
+<segment id="43" parent="42" relname="purpose">to guide simulation implementation</segment>
+<segment id="44" parent="1042" relname="joint">and secondly as textual documentation for study reproducibility .</segment>
+<segment id="45" parent="1045" relname="span">The idea is to gather all necessary information about the simulation study and framework</segment>
+<segment id="46" parent="1046" relname="span">before starting the implementation ,</segment>
+<segment id="47" parent="46" relname="elaboration">including the system structure , expected interactions , simulator selection , desirable simulation characteristics , initial parameters values , and any other related information .</segment>
+<segment id="48" parent="1048" relname="preparation">The main documented topics are described in Section 3.1 .</segment>
+<segment id="49" parent="1050" relname="span">Base Simulation — Implementing</segment>
+<segment id="50" parent="49" relname="restatement">( 5 ) :</segment>
+<segment id="51" parent="52" relname="circumstance">after the documentation ,</segment>
+<segment id="52" parent="1051" relname="span">the focus now is implementing the simulation .</segment>
+<segment id="53" parent="1053" relname="span">In this case , we opted to continue extending a network simulator simulation with cooperative robotics features ,</segment>
+<segment id="54" parent="53" relname="elaboration">as shown in .</segment>
+<segment id="55" parent="1054" relname="joint">The OMNeT++/INET network simulator was selected for its modularity , graphical interface , community support , and easy code debug .</segment>
+<segment id="56" parent="1056" relname="span">Moreover , we did not observe significant performance differences between network simulators</segment>
+<segment id="57" parent="56" relname="elaboration">that could justify using another simulator .</segment>
+<segment id="58" parent="1059" relname="span">Base Simulation — Validating</segment>
+<segment id="59" parent="58" relname="restatement">( 6 ) :</segment>
+<segment id="60" parent="1060" relname="same_unit">The resulting simulation ,</segment>
+<segment id="61" parent="1061" relname="span">as referred a priori , is a candidate base simulation</segment>
+<segment id="62" parent="1062" relname="span">until it passes through a validation process ,</segment>
+<segment id="63" parent="64" relname="attribution">which verifies</segment>
+<segment id="64" parent="1063" relname="span">whether it keeps the main characteristics of a real system or of the original simulation .</segment>
+<segment id="65" parent="1066" relname="span">This part uses Verification , Validation , and Test</segment>
+<segment id="66" parent="65" relname="restatement">( VV&amp;T )</segment>
+<segment id="67" parent="1067" relname="span">techniques ,</segment>
+<segment id="68" parent="1068" relname="span">integrated with statistical analysis with confidence interval ,</segment>
+<segment id="69" parent="68" relname="elaboration">which is further detailed in Section 3.2 .</segment>
+<segment id="70" parent="1071" relname="span">Case-Study — Experimentation Design</segment>
+<segment id="71" parent="70" relname="elaboration">( Planning )</segment>
+<segment id="72" parent="1071" relname="restatement">( 7 ) :</segment>
+<segment id="73" parent="1074" relname="circumstance">Once the candidate simulation passes the validation process ,</segment>
+<segment id="74" parent="1074" relname="span">it becomes a Base Simulation</segment>
+<segment id="75" parent="74" relname="elaboration">that is ready for experimentation .</segment>
+<segment id="76" parent="1077" relname="span">However , it is necessary to plan case studies</segment>
+<segment id="77" parent="1079" relname="attribution">to make sure</segment>
+<segment id="78" parent="1079" relname="span">they are aligned with the objectives</segment>
+<segment id="79" parent="1080" relname="span">defined in the first step of the method ,</segment>
+<segment id="80" parent="79" relname="result">thus requiring an experimentation design .</segment>
+<segment id="81" parent="1081" relname="span">A suggestion of experimental design is presented in Section 3.3 .</segment>
+<segment id="82" parent="1083" relname="span">Case-Study — Experimenting</segment>
+<segment id="83" parent="82" relname="restatement">( 8 ) :</segment>
+<segment id="84" parent="1084" relname="span">This step consists in implementing the planned studies ,</segment>
+<segment id="85" parent="1085" relname="joint">executing simulations</segment>
+<segment id="86" parent="1085" relname="joint">and gathering experimental results .</segment>
+<segment id="87" parent="1087" relname="span">The main concern , here , is to enforce experimental rigor</segment>
+<segment id="88" parent="1088" relname="contrast">to avoid collecting incorrect data</segment>
+<segment id="89" parent="1088" relname="contrast">or producing incorrect behaviors .</segment>
+<segment id="90" parent="1090" relname="span">Case-Study — Data Analysis</segment>
+<segment id="91" parent="90" relname="restatement">( 9 ) :</segment>
+<segment id="92" parent="1094" relname="circumstance">Once data is collected ,</segment>
+<segment id="93" parent="1094" relname="joint">it must be analyzed</segment>
+<segment id="94" parent="1095" relname="joint">and converted from raw into useful information ,</segment>
+<segment id="95" parent="1095" relname="joint">also presenting it in an adequate form .</segment>
+<segment id="96" parent="1096" relname="span">Structuring these results</segment>
+<segment id="97" parent="1097" relname="same_unit">as defined in the experimentation design</segment>
+<segment id="98" parent="1098" relname="span">allows using statistical analysis with confidence intervals</segment>
+<segment id="99" parent="98" relname="purpose">to assess their significance .</segment>
+<segment id="100" parent="1101" relname="span">Detailed execution of this item for this type of simulation</segment>
+<segment id="101" parent="100" relname="elaboration">presented in Section 3.4 is the main contribution of this paper</segment>
+<segment id="102" parent="1102" relname="span">as the use of confidence intervals</segment>
+<segment id="103" parent="102" relname="elaboration">integrated with experimental design contribute to better results presentation and validation .</segment>
+<segment id="104" parent="1104" relname="span">Conclusion</segment>
+<segment id="105" parent="1106" relname="preparation">( 10 ) :</segment>
+<segment id="106" parent="1106" relname="span">The last step is to check</segment>
+<segment id="107" parent="1108" relname="span">if the obtained results are enough</segment>
+<segment id="108" parent="107" relname="purpose">to satisfy the study objectives ,</segment>
+<segment id="109" parent="1107" relname="span">answering the problem study .</segment>
+<segment id="110" parent="111" relname="condition">If results are deemed not good enough ,</segment>
+<segment id="111" parent="1110" relname="span">the method cycle should be iterated .</segment>
+<segment id="112" parent="1113" relname="span">The main objective of this method is to provide a systematic tool</segment>
+<segment id="113" parent="112" relname="purpose">to develop a simulation study in sequential steps ,</segment>
+<segment id="114" parent="1113" relname="circumstance">considering the particularities of this type of simulation , i.e. , the cross-domain complexity .</segment>
+<segment id="115" parent="1116" relname="background">Our main contribution lies in integrating techniques in four critical points ,</segment>
+<segment id="116" parent="1116" relname="span">namely for simulation planning , base simulation validation , case-study experimentation , and result analysis ,</segment>
+<segment id="117" parent="116" relname="elaboration">which we describe in the following subsections .</segment>
+<segment id="118" parent="1117" relname="joint">An example use-case is presented in the next section .</segment>
+<segment id="119" parent="1118" relname="joint">3.1.</segment>
+<segment id="120" parent="1119" relname="joint">Base Simulation — Planning</segment>
+<segment id="121" parent="1122" relname="attribution">Due to its impact in the entire process ,</segment>
+<segment id="122" parent="1122" relname="span">we consider this step a critical point ,</segment>
+<segment id="123" parent="1123" relname="span">consisting in preparing information</segment>
+<segment id="124" parent="1124" relname="joint">to simplify simulation implementation</segment>
+<segment id="125" parent="1124" relname="joint">and improve simulation reproducibility , a step also known as conceptual and communicative modelling .</segment>
+<segment id="126" parent="1127" relname="concession">This type of modelling is usually simple and easy to use ,</segment>
+<segment id="127" parent="1128" relname="span">but its complexity may grow quickly in the following three situations :</segment>
+<segment id="128" parent="127" relname="evidence">( 1 )</segment>
+<segment id="129" parent="1131" relname="span">If there are several developers</segment>
+<segment id="130" parent="129" relname="elaboration">working in the same implementation ;</segment>
+<segment id="131" parent="1131" relname="elaboration">( 2 )</segment>
+<segment id="132" parent="1133" relname="circumstance">when simulation is complex</segment>
+<segment id="133" parent="1133" relname="joint">and involves several views ;</segment>
+<segment id="134" parent="1133" relname="joint">and ( 3 ) in the case of poor team knowledge on the simulation topics .</segment>
+<segment id="135" parent="1135" relname="span">For integrated robotics and communication simulations , all three cases may be true ,</segment>
+<segment id="136" parent="135" relname="elaboration">requiring more details and explanations in the conceptual model .</segment>
+<segment id="137" parent="1136" relname="span">In practice , this implies a large and detailed documentation process</segment>
+<segment id="138" parent="1137" relname="span">that , yet , can be too complex</segment>
+<segment id="139" parent="1138" relname="contrast">to be used as guide in implementation</segment>
+<segment id="140" parent="1139" relname="span">or too simple</segment>
+<segment id="141" parent="140" relname="purpose">to help others understand the simulation topics .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1004" type="span" parent="1002" relname="same_unit"/>
+<group id="1006" type="span" parent="1001" relname="joint"/>
+<group id="1007" type="span" parent="1010" relname="background"/>
+<group id="1008" type="span" parent="6" relname="circumstance"/>
+<group id="1009" type="span" parent="7" relname="elaboration"/>
+<group id="1010" type="span" parent="1006" relname="span"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="joint"/>
+<group id="1013" type="span" parent="1014" relname="preparation"/>
+<group id="1014" type="multinuc" parent="1012" relname="span"/>
+<group id="1016" type="span" parent="1014" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="elaboration"/>
+<group id="1019" type="span" parent="1020" relname="preparation"/>
+<group id="1020" type="span" parent="1018" relname="span"/>
+<group id="1021" type="span" parent="1020" relname="span"/>
+<group id="1022" type="span" parent="1021" relname="span"/>
+<group id="1023" type="span" parent="1021" relname="elaboration"/>
+<group id="1024" type="span" parent="22" relname="elaboration"/>
+<group id="1025" type="span" parent="23" relname="purpose"/>
+<group id="1027" type="span" parent="1014" relname="joint"/>
+<group id="1028" type="span" parent="1014" relname="joint"/>
+<group id="1029" type="span" parent="1031" relname="preparation"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="1028" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="span"/>
+<group id="1033" type="multinuc" parent="1032" relname="elaboration"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="1001" relname="joint"/>
+<group id="1036" type="span" parent="1037" relname="preparation"/>
+<group id="1037" type="multinuc" parent="1035" relname="span"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1040" type="span" parent="1037" relname="joint"/>
+<group id="1041" type="span" parent="40" relname="elaboration"/>
+<group id="1042" type="multinuc" parent="41" relname="elaboration"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1037" relname="joint"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="45" relname="elaboration"/>
+<group id="1047" type="span" parent="1045" relname="elaboration"/>
+<group id="1048" type="span" parent="1047" relname="span"/>
+<group id="1049" type="multinuc" parent="1052" relname="background"/>
+<group id="1050" type="span" parent="1049" relname="same_unit"/>
+<group id="1051" type="span" parent="1049" relname="same_unit"/>
+<group id="1052" type="span" parent="1048" relname="span"/>
+<group id="1053" type="span" parent="1052" relname="span"/>
+<group id="1054" type="multinuc" parent="1053" relname="elaboration"/>
+<group id="1055" type="multinuc" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="1055" relname="joint"/>
+<group id="1057" type="multinuc" parent="1055" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="multinuc" parent="1059" relname="elaboration"/>
+<group id="1061" type="span" parent="1060" relname="same_unit"/>
+<group id="1062" type="span" parent="61" relname="circumstance"/>
+<group id="1063" type="span" parent="62" relname="elaboration"/>
+<group id="1064" type="multinuc" parent="1057" relname="joint"/>
+<group id="1065" type="multinuc" parent="1064" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="same_unit"/>
+<group id="1067" type="span" parent="1065" relname="same_unit"/>
+<group id="1068" type="span" parent="67" relname="elaboration"/>
+<group id="1069" type="span" parent="1064" relname="joint"/>
+<group id="1070" type="span" parent="1072" relname="preparation"/>
+<group id="1071" type="span" parent="1070" relname="span"/>
+<group id="1072" type="multinuc" parent="1069" relname="span"/>
+<group id="1073" type="span" parent="1072" relname="joint"/>
+<group id="1074" type="span" parent="1073" relname="span"/>
+<group id="1075" type="multinuc" parent="1072" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="span" parent="1076" relname="span"/>
+<group id="1078" type="span" parent="76" relname="purpose"/>
+<group id="1079" type="span" parent="1078" relname="span"/>
+<group id="1080" type="span" parent="78" relname="elaboration"/>
+<group id="1081" type="span" parent="1077" relname="elaboration"/>
+<group id="1082" type="span" parent="81" relname="elaboration"/>
+<group id="1083" type="span" parent="1082" relname="span"/>
+<group id="1084" type="span" parent="1083" relname="elaboration"/>
+<group id="1085" type="multinuc" parent="84" relname="elaboration"/>
+<group id="1086" type="multinuc" parent="1075" relname="joint"/>
+<group id="1087" type="span" parent="1086" relname="joint"/>
+<group id="1088" type="multinuc" parent="87" relname="purpose"/>
+<group id="1089" type="span" parent="1086" relname="joint"/>
+<group id="1090" type="span" parent="1091" relname="preparation"/>
+<group id="1091" type="multinuc" parent="1089" relname="span"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="span" parent="1092" relname="span"/>
+<group id="1094" type="multinuc" parent="1093" relname="span"/>
+<group id="1095" type="multinuc" parent="1094" relname="joint"/>
+<group id="1096" type="span" parent="1093" relname="elaboration"/>
+<group id="1097" type="multinuc" parent="96" relname="elaboration"/>
+<group id="1098" type="span" parent="1097" relname="same_unit"/>
+<group id="1099" type="multinuc" parent="1091" relname="joint"/>
+<group id="1100" type="multinuc" parent="1099" relname="joint"/>
+<group id="1101" type="span" parent="1100" relname="same_unit"/>
+<group id="1102" type="span" parent="1100" relname="same_unit"/>
+<group id="1103" type="multinuc" parent="1099" relname="joint"/>
+<group id="1104" type="span" parent="1103" relname="joint"/>
+<group id="1105" type="span" parent="104" relname="elaboration"/>
+<group id="1106" type="span" parent="1105" relname="span"/>
+<group id="1107" type="span" parent="106" relname="elaboration"/>
+<group id="1108" type="span" parent="109" relname="condition"/>
+<group id="1109" type="multinuc" parent="1103" relname="joint"/>
+<group id="1110" type="span" parent="1109" relname="joint"/>
+<group id="1111" type="multinuc" parent="1109" relname="joint"/>
+<group id="1112" type="span" parent="1111" relname="joint"/>
+<group id="1113" type="span" parent="1112" relname="span"/>
+<group id="1114" type="multinuc" parent="1111" relname="joint"/>
+<group id="1115" type="span" parent="1114" relname="sequence"/>
+<group id="1116" type="span" parent="1115" relname="span"/>
+<group id="1117" type="multinuc" parent="1114" relname="sequence"/>
+<group id="1118" type="multinuc" parent="1117" relname="joint"/>
+<group id="1119" type="multinuc" parent="1118" relname="joint"/>
+<group id="1120" type="multinuc" parent="1119" relname="joint"/>
+<group id="1121" type="span" parent="1120" relname="joint"/>
+<group id="1122" type="span" parent="1121" relname="span"/>
+<group id="1123" type="span" parent="122" relname="elaboration"/>
+<group id="1124" type="multinuc" parent="123" relname="purpose"/>
+<group id="1125" type="multinuc" parent="1120" relname="joint"/>
+<group id="1126" type="span" parent="1125" relname="joint"/>
+<group id="1127" type="multinuc" parent="1126" relname="span"/>
+<group id="1128" type="span" parent="1127" relname="same_unit"/>
+<group id="1129" type="multinuc" parent="1127" relname="same_unit"/>
+<group id="1130" type="span" parent="1129" relname="same_unit"/>
+<group id="1131" type="span" parent="1130" relname="span"/>
+<group id="1132" type="span" parent="1129" relname="same_unit"/>
+<group id="1133" type="multinuc" parent="1132" relname="span"/>
+<group id="1134" type="multinuc" parent="1125" relname="joint"/>
+<group id="1135" type="span" parent="1134" relname="joint"/>
+<group id="1136" type="span" parent="1134" relname="joint"/>
+<group id="1137" type="span" parent="137" relname="elaboration"/>
+<group id="1138" type="multinuc" parent="138" relname="purpose"/>
+<group id="1139" type="span" parent="1138" relname="contrast"/>
+	</body>
+</rst>

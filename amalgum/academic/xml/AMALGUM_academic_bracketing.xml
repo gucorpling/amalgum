@@ -1,0 +1,980 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_bracketing" title="Exposure Bracketing Techniques for Camera Document Image Enhancement" shortTitle="bracketing" author="Tao Liu, Hao Liu, Yingying Wu, Bo Yin, Zhiqiang Wei" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4529/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+HDR	NNP	HDR
+Document	NN	document
+Image	NN	image
+Generation	NN	generation
+</s>
+</head>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+Document	NN	document
+Image	NN	image
+Registration	NN	registration
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+image	NN	image
+registration	NN	registration
+problem	NN	problem
+has	VBZ	have
+been	VBN	be
+intensively	RB	intensively
+studied	VBN	study
+in	IN	in
+remote	JJ	remote
+sensing	NN	sensing
+images	NNS	image
+,	,	,
+medical	JJ	medical
+images	NNS	image
+,	,	,
+and	CC	and
+camera	NN	camera
+images	NNS	image
+and	CC	and
+very	RB	very
+rarely	RB	rarely
+,	,	,
+research	NN	research
+can	MD	can
+be	VB	be
+found	VBN	find
+for	IN	for
+document	NN	document
+image	NN	image
+registration	NN	registration
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+most	RBS	most
+popular	JJ	popular
+registration	NN	registration
+in	IN	in
+the	DT	the
+context	NN	context
+of	IN	of
+exposure	NN	exposure
+bracketing	NN	bracketing
+is	VBZ	be
+from	IN	from
+,	,	,
+where	WRB	where
+a	DT	a
+translational	JJ	translational
+geometric	JJ	geometric
+model	NN	model
+was	VBD	be
+employed	VBN	employ
+to	TO	to
+account	VB	account
+for	IN	for
+the	DT	the
+geometric	JJ	geometric
+disparity	NN	disparity
+between	IN	between
+two	CD	2
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+we	PRP	we
+found	VBD	find
+that	IN	that
+the	DT	the
+translational	JJ	translational
+model	NN	model
+is	VBZ	be
+not	RB	not
+suitable	JJ	suitable
+for	IN	for
+general	JJ	general
+camera	NN	camera
+document	NN	document
+images	NNS	image
+.	.	.
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+two	CD	2
+pseudo	NN	pseudo
+color	NN	color
+image	NN	image
+patches	NNS	patch
+that	WDT	that
+are	VBP	be
+composed	VBN	compose
+of	IN	of
+two	CD	2
+LDR	NNP	LDR
+images	NNS	image
+that	WDT	that
+are	VBP	be
+already	RB	already
+illustrated	VBN	illustrate
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+green	JJ	green
+band	NN	band
+and	CC	and
+blue	JJ	blue
+band	NN	band
+come	VBP	come
+from	IN	from
+the	DT	the
+corresponding	VBG	correspond
+bands	NNS	band
+in	IN	in
+the	DT	the
+well-exposed	JJ	well-exposed
+image	NN	image
+while	IN	while
+the	DT	the
+red	JJ	red
+band	NN	band
+is	VBZ	be
+from	IN	from
+the	DT	the
+corresponding	JJ	corresponding
+band	NN	band
+in	IN	in
+the	DT	the
+over-exposed	JJ	over-exposed
+image	NN	image
+.	.	.
+</s>
+<s type="sub">
+If	IN	if
+there	EX	there
+are	VBP	be
+no	DT	no
+geometric	JJ	geometric
+disparities	NNS	disparity
+between	IN	between
+these	DT	this
+two	CD	2
+images	NNS	image
+,	,	,
+the	DT	the
+foreground	NN	foreground
+(	-LRB-	(
+textual	JJ	textual
+part	NN	part
+)	-RRB-	)
+of	IN	of
+the	DT	the
+image	NN	image
+should	MD	should
+overlap	VB	overlap
+.	.	.
+</s>
+<s type="frag">
+In	RB	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="sub">
+,	,	,
+we	PRP	we
+can	MD	can
+clearly	RB	clearly
+see	VB	see
+that	IN	that
+geometric	JJ	geometric
+difference	NN	difference
+exists	VBZ	exist
+as	IN	as
+the	DT	the
+foreground	JJ	foreground
+texts	NNS	text
+do	VBP	do
+not	RB	not
+overlap	VB	overlap
+.	.	.
+</s>
+<s type="decl">
+On	IN	on
+top	NN	top
+of	IN	of
+it	PRP	it
+,	,	,
+we	PRP	we
+can	MD	can
+clearly	RB	clearly
+see	VB	see
+that	IN	that
+the	DT	the
+global	JJ	global
+translational	JJ	translational
+model	NN	model
+cannot	MD	cannot
+account	VB	account
+for	IN	for
+the	DT	the
+geometric	JJ	geometric
+disparity	NN	disparity
+between	IN	between
+these	DT	this
+two	CD	2
+images	NNS	image
+.	.	.
+</s>
+<s type="frag">
+For	IN	for
+example	NN	example
+,	,	,
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+a	DT	a
+is	VBZ	be
+the	DT	the
+left	JJ	left
+central	JJ	central
+image	NN	image
+patch	NN	patch
+and	CC	and
+we	PRP	we
+can	MD	can
+see	VB	see
+that	IN	that
+the	DT	the
+geometric	JJ	geometric
+difference	NN	difference
+between	IN	between
+the	DT	the
+well-exposed	JJ	well-exposed
+image	NN	image
+and	CC	and
+over-exposed	JJ	over-exposed
+image	NN	image
+in	IN	in
+this	DT	this
+region	NN	region
+is	VBZ	be
+around	RB	around
+10	CD	10
+pixels	NNS	pixel
+(	-LRB-	(
+half	NN	half
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+lowercase	JJ	lowercase
+letter	NN	letter
+“	``	''
+a	NN	a
+”	''	''
+)	-RRB-	)
+in	IN	in
+the	DT	the
+vertical	JJ	vertical
+direction	NN	direction
+.	.	.
+</s>
+<s type="other">
+However	RB	however
+,	,	,
+in	RB	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+b	RB	b
+,	,	,
+the	DT	the
+right	JJ	right
+central	JJ	central
+image	NN	image
+patch	NN	patch
+,	,	,
+we	PRP	we
+can	MD	can
+see	VB	see
+that	IN	that
+the	DT	the
+geometric	JJ	geometric
+difference	NN	difference
+between	IN	between
+the	DT	the
+well-exposed	JJ	well-exposed
+image	NN	image
+and	CC	and
+over-exposed	JJ	over-exposed
+image	NN	image
+in	IN	in
+this	DT	this
+region	NN	region
+is	VBZ	be
+around	RB	around
+20	CD	20
+pixels	NNS	pixel
+(	-LRB-	(
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+lowercase	JJ	lowercase
+letter	NN	letter
+“	``	''
+a	NN	a
+”	''	''
+)	-RRB-	)
+in	IN	in
+the	DT	the
+vertical	JJ	vertical
+direction	NN	direction
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+is	VBZ	be
+obvious	JJ	obvious
+evidence	NN	evidence
+that	IN	that
+the	DT	the
+geometric	JJ	geometric
+disparity	NN	disparity
+between	IN	between
+LDR	NNP	LDR
+images	NNS	image
+cannot	MD	cannot
+be	VB	be
+translational	JJ	translational
+and	CC	and
+that	IN	that
+it	PRP	it
+must	MD	must
+follow	VB	follow
+a	DT	a
+more	RBR	more
+complicated	JJ	complicated
+geometric	JJ	geometric
+model	NN	model
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Among	IN	among
+all	PDT	all
+the	DT	the
+geometric	JJ	geometric
+models	NNS	model
+,	,	,
+such	JJ	such
+as	IN	as
+the	DT	the
+affine	NN	affine
+model	NN	model
+,	,	,
+translational	JJ	translational
+model	NN	model
+,	,	,
+rotation	NN	rotation
+model	NN	model
+,	,	,
+and	CC	and
+so	RB	so
+on	RB	on
+,	,	,
+we	PRP	we
+ended	VBD	end
+up	RP	up
+selecting	VBG	select
+the	DT	the
+planar	JJ	planar
+homograph	NN	homograph
+model	NN	model
+to	TO	to
+represent	VB	represent
+the	DT	the
+geometric	JJ	geometric
+disparity	NN	disparity
+between	IN	between
+LDR	NNP	LDR
+images	NNS	image
+.	.	.
+</s>
+<s type="sub">
+Under	IN	under
+this	DT	this
+model	NN	model
+,	,	,
+points	NNS	point
+in	IN	in
+two	CD	2
+different	JJ	different
+images	NNS	image
+can	MD	can
+be	VB	be
+mapped	VBN	map
+as	IN	as
+:	:	:
+(	:	(
+1	CD	1
+)	-RRB-	)
+where	WRB	where
+points	NNS	point
+are	VBP	be
+represented	VBN	represent
+by	IN	by
+homogeneous	JJ	homogeneous
+coordinates	NNS	coordinate
+and	CC	and
+so	RB	so
+point	NN	point
+(	-LRB-	(
+<hi rend="italic">
+x	NN	x
+</hi>
+,	,	,
+<hi rend="italic">
+y	NN	y
+</hi>
+,	,	,
+<hi rend="italic">
+z	NN	z
+</hi>
+)	-RRB-	)
+is	VBZ	be
+the	DT	the
+same	JJ	same
+as	IN	as
+(	-LRB-	(
+<hi rend="italic">
+x	NN	x
+</hi>
+/	SYM	/
+<hi rend="italic">
+z	NN	z
+</hi>
+,	,	,
+<hi rend="italic">
+y	NN	y
+</hi>
+/	SYM	/
+<hi rend="italic">
+z	NN	z
+</hi>
+)	-RRB-	)
+in	IN	in
+the	DT	the
+inhomogeneous	JJ	inhomogeneous
+coordinate	NN	coordinate
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+selected	VBD	select
+this	DT	this
+model	NN	model
+because	IN	because
+during	IN	during
+the	DT	the
+bracketing	NN	bracketing
+stage	NN	stage
+,	,	,
+hand-shake	NN	hand-shake
+is	VBZ	be
+inevitably	RB	inevitably
+introduced	VBN	introduce
+,	,	,
+leading	VBG	lead
+to	IN	to
+different	JJ	different
+imaging	NN	imaging
+angles	NNS	angle
+for	IN	for
+the	DT	the
+same	JJ	same
+document	NN	document
+object	NN	object
+,	,	,
+and	CC	and
+the	DT	the
+planar	JJ	planar
+homograph	NN	homograph
+model	NN	model
+is	VBZ	be
+suitable	JJ	suitable
+for	IN	for
+the	DT	the
+situation	NN	situation
+where	WRB	where
+the	DT	the
+imaging	NN	imaging
+object	NN	object
+is	VBZ	be
+put	VBN	put
+on	IN	on
+a	DT	a
+planar	JJ	planar
+surface	NN	surface
+and	CC	and
+is	VBZ	be
+captured	VBN	capture
+from	IN	from
+different	JJ	different
+view-angles	NNS	view-angle
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+When	WRB	when
+the	DT	the
+planar	JJ	planar
+homograph	NN	homograph
+model	NN	model
+is	VBZ	be
+selected	VBN	select
+,	,	,
+we	PRP	we
+have	VBP	have
+to	TO	to
+estimate	VB	estimate
+this	DT	this
+model	NN	model
+’s	POS	's
+eight	CD	8
+parameters	NNS	parameter
+.	.	.
+</s>
+<s type="decl">
+Basically	RB	basically
+,	,	,
+there	EX	there
+are	VBP	be
+two	CD	2
+methods	NNS	method
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+first	JJ	first
+method	NN	method
+is	VBZ	be
+called	VBN	call
+the	DT	the
+area-based	JJ	area-based
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+Using	VBG	use
+this	DT	this
+method	NN	method
+to	TO	to
+estimate	VB	estimate
+the	DT	the
+planar	JJ	planar
+homograph	NN	homograph
+model	NN	model
+involves	VBZ	involve
+two	CD	2
+steps	NNS	step
+:	:	:
+</s>
+<s type="decl">
+in	IN	in
+the	DT	the
+first	JJ	first
+step	NN	step
+,	,	,
+a	DT	a
+moving	VBG	move
+window	NN	window
+is	VBZ	be
+defined	VBN	define
+in	IN	in
+the	DT	the
+reference	NN	reference
+image	NN	image
+and	CC	and
+the	DT	the
+image	NN	image
+patch	NN	patch
+within	IN	within
+the	DT	the
+window	NN	window
+is	VBZ	be
+regarded	VBN	regard
+as	IN	as
+the	DT	the
+template	NN	template
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+used	VBD	use
+the	DT	the
+template	NN	template
+to	TO	to
+search	VB	search
+for	IN	for
+a	DT	a
+corresponding	VBG	correspond
+image	NN	image
+patch	NN	patch
+in	IN	in
+the	DT	the
+sensed	VBN	sense
+image	NN	image
+(	-LRB-	(
+an	DT	a
+image	NN	image
+that	WDT	that
+was	VBD	be
+registered	VBN	register
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+centers	NNS	center
+of	IN	of
+matched	VBN	match
+image	NN	image
+templates	NNS	template
+are	VBP	be
+used	VBN	use
+as	IN	as
+control	NN	control
+points	NNS	point
+(	-LRB-	(
+CPs	NNS	CPs
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+There	EX	there
+are	VBP	be
+many	JJ	many
+ways	NNS	way
+of	IN	of
+finding	VBG	find
+a	DT	a
+matching	VBG	match
+template	NN	template
+,	,	,
+and	CC	and
+one	CD	one
+of	IN	of
+the	DT	the
+most	RBS	most
+popular	JJ	popular
+criteria	NNS	criterion
+is	VBZ	be
+cross	NN	cross
+correlation	NN	correlation
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+multiple	JJ	multiple
+CPs	NNS	CPs
+are	VBP	be
+generated	VBN	generate
+,	,	,
+we	PRP	we
+then	RB	then
+use	VBP	use
+these	DT	this
+CPs	NNS	CPs
+to	TO	to
+estimate	VB	estimate
+the	DT	the
+planar	JJ	planar
+homograph	NN	homograph
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+Area-based	JJ	Area-based
+methods	NNS	method
+,	,	,
+however	RB	however
+,	,	,
+are	VBP	be
+not	RB	not
+employed	VBN	employ
+due	JJ	due
+to	IN	to
+two	CD	2
+reasons	NNS	reason
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+</s>
+<s type="decl">
+the	DT	the
+first	JJ	first
+reason	NN	reason
+is	VBZ	be
+that	IN	that
+this	DT	this
+method	NN	method
+is	VBZ	be
+computationally	RB	computationally
+heavy	JJ	heavy
+as	IN	as
+it	PRP	it
+performs	VBZ	perform
+cross	NN	cross
+correlation	NN	correlation
+on	IN	on
+multiple	JJ	multiple
+image	NN	image
+patches	NNS	patch
+and	CC	and
+(	:	(
+2	CD	2
+)	-RRB-	)
+</s>
+<s type="decl">
+the	DT	the
+second	JJ	second
+reason	NN	reason
+is	VBZ	be
+that	IN	that
+image	NN	image
+patches	NNS	patch
+under	IN	under
+different	JJ	different
+exposure	NN	exposure
+levels	NNS	level
+may	MD	may
+display	VB	display
+extremely	RB	extremely
+different	JJ	different
+characteristics	NNS	characteristic
+,	,	,
+which	WDT	which
+may	MD	may
+fail	VB	fail
+cross	NN	cross
+the	DT	the
+correlation	NN	correlation
+method	NN	method
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+second	JJ	second
+method	NN	method
+to	TO	to
+estimate	VB	estimate
+the	DT	the
+planar	JJ	planar
+homograph	NN	homograph
+transformation	NN	transformation
+is	VBZ	be
+called	VBN	call
+the	DT	the
+feature-based	JJ	feature-based
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+Two	CD	2
+critical	JJ	critical
+steps	NNS	step
+in	IN	in
+feature-based	JJ	feature-based
+methods	NNS	method
+are	VBP	be
+feature	NN	feature
+extraction	NN	extraction
+and	CC	and
+feature	NN	feature
+matching	NN	matching
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+expect	VBP	expect
+that	IN	that
+the	DT	the
+extracted	VBN	extract
+features	NNS	feature
+will	MD	will
+be	VB	be
+consistent	JJ	consistent
+regardless	NN	regardless
+of	IN	of
+exposure	NN	exposure
+levels	NNS	level
+and	CC	and
+among	IN	among
+all	RB	all
+the	DT	the
+feature	NN	feature
+extraction	NN	extraction
+methods	NNS	method
+,	,	,
+we	PRP	we
+selected	VBD	select
+the	DT	the
+Scale-invariant	NNP	Scale-invariant
+Feature	NNP	Feature
+Transform	NN	transform
+(	-LRB-	(
+SIFT	NN	SIFT
+)	-RRB-	)
+method	NN	method
+because	IN	because
+it	PRP	it
+improves	VBZ	improve
+detection	NN	detection
+stability	NN	stability
+in	IN	in
+situations	NNS	situation
+of	IN	of
+illumination	NN	illumination
+changes	NNS	change
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+meantime	NN	meantime
+,	,	,
+it	PRP	it
+achieves	VBZ	achieve
+almost	RB	almost
+real-time	JJ	real-time
+performance	NN	performance
+and	CC	and
+the	DT	the
+features	NNS	feature
+that	WDT	that
+are	VBP	be
+detected	VBN	detect
+are	VBP	be
+highly	RB	highly
+distinctive	JJ	distinctive
+.	.	.
+</s>
+<s type="decl">
+SIFT	NN	SIFT
+does	VBZ	do
+not	RB	not
+only	RB	only
+define	VB	define
+the	DT	the
+position	NN	position
+of	IN	of
+detected	VBN	detect
+points	NNS	point
+,	,	,
+but	CC	but
+also	RB	also
+provides	VBZ	provide
+a	DT	a
+description	NN	description
+of	IN	of
+the	DT	the
+region	NN	region
+around	IN	around
+the	DT	the
+feature	NN	feature
+point	NN	point
+by	IN	by
+means	NNS	means
+of	IN	of
+a	DT	a
+descriptor	NN	descriptor
+,	,	,
+which	WDT	which
+is	VBZ	be
+then	RB	then
+used	VBN	use
+to	TO	to
+match	VB	match
+SIFT	NNP	SIFT
+feature	NN	feature
+points	NNS	point
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+we	PRP	we
+have	VBP	have
+used	VBN	use
+the	DT	the
+SIFT	NN	SIFT
+method	NN	method
+to	TO	to
+find	VB	find
+CP	NNP	CP
+pairs	NNS	pair
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+extracted	VBN	extract
+matched	VBN	match
+SIFT	NNP	SIFT
+features	NNS	feature
+for	IN	for
+two	CD	2
+LDR	NNP	LDR
+images	NNS	image
+.	.	.
+</s>
+</p>
+</text>

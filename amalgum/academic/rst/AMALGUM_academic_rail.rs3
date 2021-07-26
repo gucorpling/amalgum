@@ -1,0 +1,130 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4.</segment>
+<segment id="2" parent="1002" relname="preparation">Neighborhood Search Algorithm</segment>
+<segment id="3" parent="1005" relname="span">The problem</segment>
+<segment id="4" parent="3" relname="elaboration">dealt with in this paper</segment>
+<segment id="5" parent="1004" relname="same_unit">is NP-hard .</segment>
+<segment id="6" parent="1007" relname="span">It has high structural complexity , multiple constraints and large search space , etc.</segment>
+<segment id="7" parent="1008" relname="span">So a neighborhood search algorithm is developed</segment>
+<segment id="8" parent="7" relname="elaboration">based on a simulated annealing algorithm .</segment>
+<segment id="9" parent="1011" relname="span">A simulated annealing algorithm is a random optimization algorithm</segment>
+<segment id="10" parent="9" relname="elaboration">based on a Monte Carlo iterative solution strategy ,</segment>
+<segment id="11" parent="1012" relname="span">and has strong robustness , global convergence and wide adaptability ,</segment>
+<segment id="12" parent="11" relname="elaboration">which is suitable for solving the problem .</segment>
+<segment id="13" parent="14" relname="purpose">In order to obtain a variety of perturbation solutions in the iteration process ,</segment>
+<segment id="14" parent="1014" relname="span">four neighborhood transform operators are designed .</segment>
+<segment id="15" parent="1017" relname="span">The functions of these operators are as follows :</segment>
+<segment id="16" parent="15" relname="elaboration">adding a line randomly , deleting a line randomly ,</segment>
+<segment id="17" parent="1018" relname="joint">adding a section in a line randomly</segment>
+<segment id="18" parent="1019" relname="span">and deleting a section in a line randomly ,</segment>
+<segment id="19" parent="18" relname="attribution">as shown in</segment>
+<segment id="20" parent="21" relname="preparation">Figure 10</segment>
+<segment id="21" parent="1020" relname="span">,</segment>
+<segment id="22" parent="23" relname="preparation">Figure 11</segment>
+<segment id="23" parent="1022" relname="span">,</segment>
+<segment id="24" parent="1024" relname="joint">Figure 12</segment>
+<segment id="25" parent="1024" relname="joint">and</segment>
+<segment id="26" parent="27" relname="preparation">Figure 13</segment>
+<segment id="27" parent="1026" relname="span">.</segment>
+<segment id="28" parent="1025" relname="joint">Different neighborhood transform operators are executed according to a certain probability .</segment>
+<segment id="29" parent="1029" relname="span">Different types of perturbations are randomly applied to the current solution</segment>
+<segment id="30" parent="29" relname="purpose">to obtain new solution .</segment>
+<segment id="31" parent="1031" relname="span">Each operator can be executed independently or simultaneously ,</segment>
+<segment id="32" parent="1032" relname="contrast">for example , one line can be added</segment>
+<segment id="33" parent="1032" relname="contrast">while another line can be deleted at the same time .</segment>
+<segment id="34" parent="1035" relname="span">Let , and be the objective function values of the current solution , the new solution</segment>
+<segment id="35" parent="34" relname="elaboration">( perturbation solution )</segment>
+<segment id="36" parent="1034" relname="same_unit">and the optimal solution in the existing iteration process , respectively .</segment>
+<segment id="37" parent="1025" relname="joint">If , is accepted as the new current solution .</segment>
+<segment id="38" parent="1025" relname="joint">Otherwise , is accepted according to the Metropolis criterion .</segment>
+<segment id="39" parent="1040" relname="span">Metropolis criterion is that the algorithm allows the inferior solution to be accepted with a certain probability ,</segment>
+<segment id="40" parent="39" relname="purpose">so that the algorithm can jump out of the trap of the local optimum .</segment>
+<segment id="41" parent="1040" relname="elaboration">The acceptance probability in the criterion is calculated by Equation ( 46 ) .</segment>
+<segment id="42" parent="1042" relname="same_unit">As the temperature decreases ,</segment>
+<segment id="43" parent="1043" relname="span">the probability</segment>
+<segment id="44" parent="1045" relname="span">of accepting an inferior solution decreases gradually .</segment>
+<segment id="45" parent="44" relname="restatement">( 46 )</segment>
+<segment id="46" parent="1045" relname="elaboration">where is the current temperature .</segment>
+<segment id="47" parent="1047" relname="span">The algorithm is designed with the memory function of the optimal solution in the existing iteration process ,</segment>
+<segment id="48" parent="47" relname="elaboration">that is , to remember the ‘ best so far ’ state .</segment>
+<segment id="49" parent="1050" relname="circumstance">As the iteration proceeds ,</segment>
+<segment id="50" parent="1050" relname="span">the solution in the memory base is continuously updated</segment>
+<segment id="51" parent="50" relname="condition">until the algorithm converges .</segment>
+<segment id="52" parent="1025" relname="joint">Therefore , the objective value will approach the global optimum gradually in the iterative process .</segment>
+<segment id="53" parent="1053" relname="span">A solution has many kinds of changes after perturbation ,</segment>
+<segment id="54" parent="1054" relname="same_unit">so</segment>
+<segment id="55" parent="1056" relname="span">even if the current solution is perturbed into the solution</segment>
+<segment id="56" parent="55" relname="elaboration">that has appeared in previous iterations ,</segment>
+<segment id="57" parent="1057" relname="span">it will change in other directions</segment>
+<segment id="58" parent="1058" relname="span">when perturbed again ,</segment>
+<segment id="59" parent="58" relname="elaboration">which will not have a negative impact on the results .</segment>
+<segment id="60" parent="1059" relname="span">The overall flow of the algorithm is shown in</segment>
+<segment id="61" parent="62" relname="preparation">Figure 14</segment>
+<segment id="62" parent="1060" relname="span">.</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="multinuc" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="same_unit"/>
+<group id="1006" type="span" parent="1004" relname="elaboration"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="span" parent="6" relname="elaboration"/>
+<group id="1009" type="multinuc" parent="1007" relname="elaboration"/>
+<group id="1010" type="multinuc" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="joint"/>
+<group id="1012" type="span" parent="1010" relname="joint"/>
+<group id="1013" type="multinuc" parent="1009" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="joint"/>
+<group id="1015" type="multinuc" parent="1013" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="multinuc" parent="1017" relname="elaboration"/>
+<group id="1019" type="span" parent="1018" relname="joint"/>
+<group id="1020" type="span" parent="1015" relname="joint"/>
+<group id="1021" type="span" parent="1002" relname="joint"/>
+<group id="1022" type="span" parent="1023" relname="preparation"/>
+<group id="1023" type="span" parent="1021" relname="span"/>
+<group id="1024" type="multinuc" parent="1025" relname="preparation"/>
+<group id="1025" type="multinuc" parent="1023" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="joint"/>
+<group id="1029" type="span" parent="1025" relname="joint"/>
+<group id="1031" type="span" parent="1025" relname="joint"/>
+<group id="1032" type="multinuc" parent="31" relname="purpose"/>
+<group id="1034" type="multinuc" parent="1025" relname="joint"/>
+<group id="1035" type="span" parent="1034" relname="same_unit"/>
+<group id="1039" type="span" parent="1025" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="span"/>
+<group id="1042" type="multinuc" parent="1025" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="span" parent="43" relname="elaboration"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1047" type="span" parent="1025" relname="joint"/>
+<group id="1049" type="span" parent="1025" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1053" type="span" parent="1025" relname="joint"/>
+<group id="1054" type="multinuc" parent="53" relname="elaboration"/>
+<group id="1055" type="span" parent="1054" relname="same_unit"/>
+<group id="1056" type="span" parent="1057" relname="concession"/>
+<group id="1057" type="span" parent="1055" relname="span"/>
+<group id="1058" type="span" parent="57" relname="circumstance"/>
+<group id="1059" type="span" parent="1025" relname="joint"/>
+<group id="1060" type="span" parent="60" relname="elaboration"/>
+	</body>
+</rst>

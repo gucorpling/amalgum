@@ -1,0 +1,1015 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_sagittal" title="Artificial Intelligence for Automatic Measurement of Sagittal Vertical Axis Using ResUNet Framework" shortTitle="sagittal" author="Chi-Hung Weng, Chih-Li Wang, Yu-Jui Huang, Yu-Cheng Yeh, Chen-Ju Fu, Chao-Yuan Yeh, Tsung-Ting Tsai" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2077-0383/8/11/1826/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+1.	LS	1.
+Introduction	NN	introduction
+</s>
+</head>
+<p>
+<s type="decl">
+Adult	JJ	Adult
+spinal	JJ	spinal
+deformity	NN	deformity
+(	-LRB-	(
+ASD	NNP	ASD
+)	-RRB-	)
+is	VBZ	be
+a	DT	a
+broad	JJ	broad
+diagnosis	NN	diagnosis
+referring	VBG	refer
+to	IN	to
+stable	JJ	stable
+asymptomatic	JJ	asymptomatic
+curves	NNS	curve
+and	CC	and
+disabling	JJ	disabling
+deformities	NNS	deformity
+in	IN	in
+the	DT	the
+spine	NN	spine
+that	WDT	that
+contribute	VBP	contribute
+to	IN	to
+pain	NN	pain
+,	,	,
+weakness	NN	weakness
+,	,	,
+and	CC	and
+low	JJ	low
+health-related	JJ	health-related
+quality	NN	quality
+of	IN	of
+life	NN	life
+(	-LRB-	(
+HRQOL	NNP	Hrqol
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Although	IN	although
+ASD	NNP	ASD
+is	VBZ	be
+quite	RB	quite
+common	JJ	common
+,	,	,
+the	DT	the
+variation	NN	variation
+and	CC	and
+unique	JJ	unique
+pattern	NN	pattern
+of	IN	of
+each	DT	each
+spinal	JJ	spinal
+deformity	NN	deformity
+make	VBP	make
+reproducible	JJ	reproducible
+measurement	NN	measurement
+difficult	JJ	difficult
+.	.	.
+</s>
+<s type="decl">
+Previous	JJ	previous
+studies	NNS	study
+investigating	VBG	investigate
+the	DT	the
+correlation	NN	correlation
+between	IN	between
+radiographic	JJ	radiographic
+appearances	NNS	appearance
+and	CC	and
+clinical	JJ	clinical
+symptoms	NNS	symptom
+yielded	VBD	yield
+rather	RB	rather
+low	JJ	low
+predictive	JJ	predictive
+power	NN	power
+due	JJ	due
+to	IN	to
+highly	RB	highly
+variable	JJ	variable
+health	NN	health
+status	NN	status
+.	.	.
+</s>
+<s type="decl">
+Little	JJ	Little
+correlation	NN	correlation
+between	IN	between
+radiographic	JJ	radiographic
+assessment	NN	assessment
+and	CC	and
+questionnaire	NN	questionnaire
+scores	NNS	score
+was	VBD	be
+found	VBN	find
+for	IN	for
+adolescent	JJ	adolescent
+idiopathic	JJ	idiopathic
+scoliosis	NN	scoliosis
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+in	IN	in
+<date when="2005">
+2005	CD	2005
+</date>
+,	,	,
+Glassman	NNP	Glassman
+et	FW	et
+al.	FW	al.
+showed	VBD	show
+that	IN	that
+sagittal	JJ	sagittal
+plane	NN	plane
+balance	NN	balance
+is	VBZ	be
+the	DT	the
+most	RBS	most
+reliable	JJ	reliable
+predictor	NN	predictor
+of	IN	of
+clinical	JJ	clinical
+symptoms	NNS	symptom
+in	IN	in
+adults	NNS	adult
+with	IN	with
+spinal	JJ	spinal
+deformity	NN	deformity
+.	.	.
+</s>
+<s type="decl">
+Even	RB	even
+mild	JJ	mild
+positive	JJ	positive
+sagittal	JJ	sagittal
+balance	NN	balance
+results	VBZ	result
+in	IN	in
+destructive	JJ	destructive
+spinal	JJ	spinal
+deformity	NN	deformity
+,	,	,
+clinical	JJ	clinical
+symptoms	NNS	symptom
+of	IN	of
+which	WDT	which
+deteriorate	VBP	deteriorate
+linearly	RB	linearly
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+a	DT	a
+surgical	JJ	surgical
+plan	NN	plan
+for	IN	for
+restoring	VBG	restore
+sagittal	JJ	sagittal
+balance	NN	balance
+is	VBZ	be
+crucial	JJ	crucial
+in	IN	in
+all	DT	all
+spinal	JJ	spinal
+reconstructive	NN	reconstructive
+surgeries	NNS	surgery
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Parameters	NNS	parameter
+to	TO	to
+describe	VB	describe
+the	DT	the
+sagittal	JJ	sagittal
+alignment	NN	alignment
+of	IN	of
+the	DT	the
+spine	NN	spine
+include	VBP	include
+the	DT	the
+sagittal	JJ	sagittal
+vertical	JJ	vertical
+axis	NN	axis
+(	-LRB-	(
+SVA	NNP	SVA
+)	-RRB-	)
+,	,	,
+thoracic	JJ	thoracic
+kyphosis	NN	kyphosis
+,	,	,
+lumbar	NN	lumbar
+lordosis	NN	lordosis
+,	,	,
+pelvic	JJ	pelvic
+incidence	NN	incidence
+,	,	,
+pelvic	NN	pelvic
+tilt	NN	tilt
+,	,	,
+and	CC	and
+sacral	JJ	sacral
+slope	NN	slope
+.	.	.
+</s>
+<s type="decl">
+SVA	NNP	SVA
+,	,	,
+which	WDT	which
+is	VBZ	be
+the	DT	the
+most	RBS	most
+commonly	RB	commonly
+used	VBN	use
+measure	NN	measure
+of	IN	of
+the	DT	the
+sagittal	JJ	sagittal
+plane	NN	plane
+,	,	,
+is	VBZ	be
+obtained	VBN	obtain
+from	IN	from
+standing	VBG	stand
+lateral	JJ	lateral
+radiographs	NNS	radiograph
+and	CC	and
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+the	DT	the
+horizontal	JJ	horizontal
+distance	NN	distance
+between	IN	between
+two	CD	2
+landmarks	NNS	landmark
+:	:	:
+the	DT	the
+center	NN	center
+of	IN	of
+C7	NNP	C7
+vertebral	JJ	vertebral
+body	NN	body
+and	CC	and
+the	DT	the
+posterior	JJ	posterior
+superior	JJ	superior
+aspect	NN	aspect
+of	IN	of
+the	DT	the
+S1	NNP	S1
+vertebral	JJ	vertebral
+body	NN	body
+.	.	.
+</s>
+<s type="sub">
+According	VBG	accord
+to	IN	to
+Schwab	NNP	Schwab
+’s	POS	's
+classification	NN	classification
+based	VBN	base
+on	IN	on
+Jean	NNP	Jean
+Dubousset‘s	NNP	Duboussetós
+cone	NN	cone
+of	IN	of
+economy	NN	economy
+,	,	,
+the	DT	the
+realignment	NN	realignment
+of	IN	of
+the	DT	the
+spine	NN	spine
+should	MD	should
+aim	VB	aim
+to	TO	to
+meet	VB	meet
+the	DT	the
+criteria	NNS	criterion
+of	IN	of
+SVA	NNP	SVA
+&lt;	SYM	&lt;
+50	CD	50
+mm	NNS	millileter
+to	TO	to
+alleviate	VB	alleviate
+sensations	NNS	sensation
+of	IN	of
+falling	VBG	fall
+over	RP	over
+.	.	.
+</s>
+<s type="decl">
+Consequently	RB	consequently
+,	,	,
+formulating	VBG	formulate
+a	DT	a
+patient-specific	JJ	patient-specific
+surgical	JJ	surgical
+plan	NN	plan
+requires	VBZ	require
+SVA	NNP	SVA
+measurement	NN	measurement
+both	CC	both
+preoperatively	RB	preoperatively
+and	CC	and
+postoperatively	RB	postoperatively
+,	,	,
+using	VBG	use
+whole-spine	JJ	whole-spine
+lateral	JJ	lateral
+radiographs	NNS	radiograph
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+manual	JJ	manual
+SVA	NN	SVA
+estimation	NN	estimation
+on	IN	on
+radiographs	NNS	radiograph
+is	VBZ	be
+rather	RB	rather
+inconvenient	JJ	inconvenient
+due	JJ	due
+to	IN	to
+lack	NN	lack
+of	IN	of
+easy-to-use	JJ	easy-to-use
+tools	NNS	tool
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+solve	VB	solve
+this	DT	this
+issue	NN	issue
+,	,	,
+we	PRP	we
+propose	VBP	propose
+using	VBG	use
+deep-learning	JJ	deep-learning
+models	NNS	model
+for	IN	for
+fully	RB	fully
+automatic	JJ	automatic
+estimation	NN	estimation
+of	IN	of
+SVA	NNP	SVA
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+A	DT	a
+well-known	JJ	well-known
+family	NN	family
+of	IN	of
+deep-learning	JJ	deep-learning
+models	NNS	model
+is	VBZ	be
+the	DT	the
+convolutional	JJ	convolutional
+neural	NN	neural
+networks	NNS	network
+(	-LRB-	(
+CNNs	NNP	CNN
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+CNNs	NNS	CNN
+have	VBP	have
+drawn	VBN	draw
+considerable	JJ	considerable
+attention	NN	attention
+since	IN	since
+<date when="2012">
+2012	CD	2012
+</date>
+,	,	,
+as	IN	as
+they	PRP	they
+were	VBD	be
+found	VBN	find
+to	TO	to
+outperform	VB	outperform
+traditional	JJ	traditional
+image	NN	image
+processing	NN	processing
+algorithms	NNS	algorithm
+on	IN	on
+image	NN	image
+classification	NN	classification
+tasks	NNS	task
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+then	RB	then
+,	,	,
+CNNs	NNPS	CNN
+have	VBP	have
+been	VBN	be
+increasingly	RB	increasingly
+used	VBN	use
+for	IN	for
+medical	JJ	medical
+image	NN	image
+analysis	NN	analysis
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+CNN	NNP	CNN
+is	VBZ	be
+primarily	RB	primarily
+made	VBN	make
+of	IN	of
+stacked	VBN	stack
+convolution	NN	convolution
+layers	NNS	layer
+,	,	,
+which	WDT	which
+can	MD	can
+be	VB	be
+regarded	VBN	regard
+as	IN	as
+a	DT	a
+series	NN	series
+of	IN	of
+learnable	JJ	learnable
+feature	NN	feature
+extractors	NNS	extractor
+designed	VBN	design
+for	IN	for
+acquiring	VBG	acquire
+low-to-high-level	JJ	low-to-high-level
+features	NNS	feature
+of	IN	of
+an	DT	a
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+general	JJ	general
+,	,	,
+basic	JJ	basic
+image	NN	image
+features	NNS	feature
+,	,	,
+such	JJ	such
+as	IN	as
+blob	NN	blob
+of	IN	of
+colors	NNS	color
+or	CC	or
+edges	NNS	edge
+of	IN	of
+different	JJ	different
+orientations	NNS	orientation
+,	,	,
+are	VBP	be
+learnable	JJ	learnable
+by	IN	by
+the	DT	the
+shallow	JJ	shallow
+convolution	NN	convolution
+layers	NNS	layer
+.	.	.
+</s>
+<s type="decl">
+On	IN	on
+the	DT	the
+other	JJ	other
+hand	NN	hand
+,	,	,
+complex	JJ	complex
+image	NN	image
+features	NNS	feature
+,	,	,
+such	JJ	such
+as	IN	as
+appearances	NNS	appearance
+of	IN	of
+objects	NNS	object
+,	,	,
+are	VBP	be
+learnable	JJ	learnable
+by	IN	by
+the	DT	the
+deep	JJ	deep
+convolution	NN	convolution
+layers	NNS	layer
+.	.	.
+</s>
+<s type="sub">
+Therefore	RB	therefore
+,	,	,
+well-trained	JJ	well-trained
+convolution	NN	convolution
+layers	NNS	layer
+can	MD	can
+be	VB	be
+used	VBN	use
+to	TO	to
+extract	VB	extract
+informative	JJ	informative
+features	NNS	feature
+that	WDT	that
+are	VBP	be
+useful	JJ	useful
+for	IN	for
+landmark	NN	landmark
+localization	NN	localization
+or	CC	or
+other	JJ	other
+specific	JJ	specific
+tasks	NNS	task
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Automatic	JJ	automatic
+SVA	NNP	SVA
+estimation	NN	estimation
+can	MD	can
+generally	RB	generally
+be	VB	be
+regarded	VBN	regard
+as	IN	as
+the	DT	the
+task	NN	task
+of	IN	of
+landmark	NN	landmark
+localization	NN	localization
+,	,	,
+as	IN	as
+SVA	NNP	SVA
+was	VBD	be
+defined	VBN	define
+as	IN	as
+the	DT	the
+horizontal	JJ	horizontal
+difference	NN	difference
+between	IN	between
+two	CD	2
+anatomical	JJ	anatomical
+landmarks	NNS	landmark
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+study	NN	study
+,	,	,
+we	PRP	we
+investigated	VBD	investigate
+the	DT	the
+performance	NN	performance
+of	IN	of
+ResUNet	NNP	ResUNet
+for	IN	for
+automatic	JJ	automatic
+vertebrae	NN	vertebrae
+localization	NN	localization
+on	IN	on
+radiographs	NNS	radiograph
+.	.	.
+</s>
+<s type="decl">
+ResUNet	NNP	ResUNet
+is	VBZ	be
+a	DT	a
+variant	NN	variant
+of	IN	of
+CNN	NNP	CNN
+.	.	.
+</s>
+<s type="decl">
+Its	PRP$	its
+UNet-like	JJ	unet-like
+structure	NN	structure
+combines	VBZ	combine
+the	DT	the
+contextual	JJ	contextual
+information	NN	information
+produced	VBN	produce
+by	IN	by
+deep	JJ	deep
+layers	NNS	layer
+and	CC	and
+better	JJR	good
+location	NN	location
+information	NN	information
+produced	VBN	produce
+by	IN	by
+shallow	JJ	shallow
+layers	NNS	layer
+,	,	,
+allowing	VBG	allow
+better	JJR	good
+utilization	NN	utilization
+of	IN	of
+low-	JJ	low-
+and	CC	and
+high-level	JJ	high-level
+features	NNS	feature
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+the	DT	the
+encapsulated	VBN	encapsulate
+residual	JJ	residual
+blocks	NNS	block
+of	IN	of
+ResUNet	NNP	ResUNet
+enable	VBP	enable
+better	JJR	good
+flow	NN	flow
+of	IN	of
+information	NN	information
+and	CC	and
+can	MD	can
+avoid	VB	avoid
+performance	NN	performance
+deterioration	NN	deterioration
+as	IN	as
+the	DT	the
+network	NN	network
+goes	VBZ	go
+deeper	NN	deep
+.	.	.
+</s>
+<s type="decl">
+ResUNet	NNP	ResUNet
+has	VBZ	have
+been	VBN	be
+used	VBN	use
+for	IN	for
+cell	NN	cell
+segmentation	NN	segmentation
+from	IN	from
+biomedical	JJ	biomedical
+images	NNS	image
+and	CC	and
+road	NN	road
+extraction	NN	extraction
+from	IN	from
+satellite	NN	satellite
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+To	IN	to
+the	DT	the
+best	NN	best
+of	IN	of
+our	PRP$	our
+knowledge	NN	knowledge
+,	,	,
+our	PRP$	our
+study	NN	study
+is	VBZ	be
+the	DT	the
+first	JJ	first
+to	TO	to
+utilize	VB	utilize
+ResUNet	NNP	ResUNet
+for	IN	for
+anatomical	JJ	anatomical
+landmark	NN	landmark
+localization	NN	localization
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Some	DT	some
+previous	JJ	previous
+works	NNS	work
+use	VBP	use
+CNN	NNP	CNN
+for	IN	for
+vertebrae	NN	vertebrae
+segmentation	NN	segmentation
+or	CC	or
+localization	NN	localization
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+example	NN	example
+,	,	,
+for	IN	for
+3D	NNP	3D
+CT	NNP	CT
+and	CC	and
+MR	NNP	MR
+images	NNS	image
+,	,	,
+Lessmann	NNP	Lessmann
+et	FW	et
+al.	FW	al.
+used	VBD	use
+a	DT	a
+3D	NNP	3D
+UNet-like	NNP	UNet-like
+model	NN	model
+for	IN	for
+vertebrae	NN	vertebrae
+segmentation	NN	segmentation
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+Wimmer	NNP	Wimmer
+et	FW	et
+al.	FW	al.
+used	VBD	use
+3D	NNP	3D
+CNN	NNP	CNN
+for	IN	for
+vertebrae	NN	vertebrae
+localization	NN	localization
+.	.	.
+</s>
+<s type="decl">
+There	EX	there
+were	VBD	be
+also	RB	also
+studies	NNS	study
+on	IN	on
+radiographs	NNS	radiograph
+:	:	:
+for	IN	for
+biplanar	JJ	biplanar
+radiographs	NNS	radiograph
+,	,	,
+including	VBG	include
+A-P	NNP	A-P
+and	CC	and
+lateral	JJ	lateral
+view	NN	view
+,	,	,
+Gallbusera	NNP	Gallbusera
+et	FW	et
+al.	FW	al.
+used	VBD	use
+a	DT	a
+database	NN	database
+collected	VBN	collect
+using	VBG	use
+the	DT	the
+EOS™	NNP	EOS™
+imaging	NN	imaging
+system	NN	system
+and	CC	and
+trained	VBD	train
+CNN	NNP	CNN
+models	NNS	model
+for	IN	for
+each	DT	each
+of	IN	of
+the	DT	the
+landmarks	NNS	landmark
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+lateral	JJ	lateral
+spine	NN	spine
+radiographs	NNS	radiograph
+,	,	,
+Al	NNP	Al
+Arif	NNP	Arif
+et	NNP	et
+al.	FW	al.
+applied	VBD	apply
+a	DT	a
+UNet	NNP	UNet
+model	NN	model
+for	IN	for
+the	DT	the
+localization	NN	localization
+of	IN	of
+cervical	JJ	cervical
+vertebral	JJ	vertebral
+centers	NNS	center
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+study	NN	study
+,	,	,
+we	PRP	we
+applied	VBD	apply
+ResUNet	NNP	ResUNet
+on	IN	on
+plain	JJ	plain
+lateral	JJ	lateral
+spine	NN	spine
+radiographs	NNS	radiograph
+.	.	.
+</s>
+<s type="decl">
+Although	IN	although
+our	PRP$	our
+algorithm	NN	algorithm
+is	VBZ	be
+similar	JJ	similar
+to	IN	to
+the	DT	the
+one	NN	one
+in	IN	in
+,	,	,
+there	EX	there
+are	VBP	be
+some	DT	some
+major	JJ	major
+differences	NNS	difference
+.	.	.
+</s>
+<s type="multiple">
+First	RB	first
+,	,	,
+we	PRP	we
+did	VBD	do
+not	RB	not
+split	VB	split
+images	NNS	image
+into	IN	into
+patches	NNS	patch
+,	,	,
+as	IN	as
+patching	NN	patching
+leads	VBZ	lead
+to	IN	to
+extra	JJ	extra
+pre-	JJ	pre-
+and	CC	and
+post-processing	JJ	post-processing
+steps	NNS	step
+,	,	,
+and	CC	and
+the	DT	the
+correlation	NN	correlation
+between	IN	between
+landmarks	NNS	landmark
+of	IN	of
+different	JJ	different
+patches	NNS	patch
+will	MD	will
+be	VB	be
+ignored	VBN	ignore
+completely	RB	completely
+.	.	.
+</s>
+<s type="sub">
+However	RB	however
+,	,	,
+if	IN	if
+patching	NN	patching
+was	VBD	be
+not	RB	not
+performed	VBN	perform
+,	,	,
+the	DT	the
+large	JJ	large
+image	NN	image
+size	NN	size
+would	MD	would
+lead	VB	lead
+to	IN	to
+insufficient	JJ	insufficient
+amount	NN	amount
+of	IN	of
+RAM	NN	RAM
+on	IN	on
+GPU	NNP	GPU
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+alleviate	VB	alleviate
+this	DT	this
+issue	NN	issue
+,	,	,
+we	PRP	we
+used	VBD	use
+a	DT	a
+small	JJ	small
+batch	NN	batch
+size	NN	size
+(	-LRB-	(
+batch	NN	batch
+size	NN	size
+=	SYM	=
+2	CD	2
+)	-RRB-	)
+and	CC	and
+replaced	VBD	replace
+the	DT	the
+widely	RB	widely
+used	VBN	use
+batch	NN	batch
+normalization	NN	normalization
+with	IN	with
+the	DT	the
+group	NN	group
+normalization	NN	normalization
+in	IN	in
+our	PRP$	our
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+Group	NN	Group
+normalization	NN	normalization
+is	VBZ	be
+known	VBN	know
+to	TO	to
+perform	VB	perform
+well	RB	well
+even	RB	even
+when	WRB	when
+the	DT	the
+batch	NN	batch
+size	NN	size
+is	VBZ	be
+small	JJ	small
+,	,	,
+as	IN	as
+it	PRP	it
+does	VBZ	do
+not	RB	not
+perform	VB	perform
+normalization	NN	normalization
+along	IN	along
+the	DT	the
+batch	NN	batch
+axis	NN	axis
+.	.	.
+</s>
+<s type="decl">
+Secondly	RB	secondly
+,	,	,
+we	PRP	we
+let	VBP	let
+probability	NN	probability
+maps	NNS	map
+of	IN	of
+landmarks	NNS	landmark
+to	TO	to
+be	VB	be
+predicted	VBN	predict
+separately	RB	separately
+.	.	.
+</s>
+<s type="decl">
+Thus	RB	thus
+,	,	,
+predictions	NNS	prediction
+were	VBD	be
+not	RB	not
+on	IN	on
+the	DT	the
+same	JJ	same
+map	NN	map
+and	CC	and
+further	JJR	further
+post-processing	NN	post-processing
+steps	NNS	step
+involving	VBG	involve
+separation	NN	separation
+and	CC	and
+identification	NN	identification
+of	IN	of
+the	DT	the
+landmarks	NNS	landmark
+can	MD	can
+be	VB	be
+eliminated	VBN	eliminate
+.	.	.
+</s>
+</p>
+</text>

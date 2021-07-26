@@ -1,0 +1,207 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. OLSR Protocol</segment>
+<segment id="2" parent="1002" relname="preparation">The optimized link state routing protocol is one of the most used protocols in MANETs .</segment>
+<segment id="3" parent="1004" relname="span">It is part of the table-driven</segment>
+<segment id="4" parent="3" relname="elaboration">( proactive )</segment>
+<segment id="5" parent="1006" relname="span">routing protocols</segment>
+<segment id="6" parent="5" relname="elaboration">that build the routing tables</segment>
+<segment id="7" parent="1006" relname="means">by periodically exchanging topology control messages .</segment>
+<segment id="8" parent="1008" relname="span">The OLSR has adopted the MPR concept</segment>
+<segment id="9" parent="8" relname="purpose">to achieve good dissemination of TC messages .</segment>
+<segment id="10" parent="1010" relname="span">The MPR concept optimizes the overhead , firstly ,</segment>
+<segment id="11" parent="1011" relname="span">by selecting the minimum number of nodes</segment>
+<segment id="12" parent="11" relname="purpose">to act as forwarders of TC messages .</segment>
+<segment id="13" parent="1014" relname="span">Secondly , only links between MPRs and their selectors are shared</segment>
+<segment id="14" parent="13" relname="purpose">to reduce the size of TC messages .</segment>
+<segment id="15" parent="16" relname="preparation">Figure 2</segment>
+<segment id="16" parent="1016" relname="span">shows the principle of the MPR concept .</segment>
+<segment id="17" parent="1017" relname="span">We model the OLSR network as a unit disk graph ,</segment>
+<segment id="18" parent="1018" relname="joint">where V represents the set of nodes</segment>
+<segment id="19" parent="1018" relname="joint">and E the set of symmetric edges .</segment>
+<segment id="20" parent="1002" relname="joint">is the signal length of the node u .</segment>
+<segment id="21" parent="22" relname="attribution">For simplicity , we consider</segment>
+<segment id="22" parent="1021" relname="span">that signal range R is uniform for all nodes .</segment>
+<segment id="23" parent="1023" relname="span">Two nodes u and v form a symmetric link</segment>
+<segment id="24" parent="23" relname="condition">if and only if they are at distance .</segment>
+<segment id="25" parent="1025" relname="preparation">The OLSR protocol maintains regularly local information and global information in each node .</segment>
+<segment id="26" parent="1026" relname="preparation">Neighborhood information is broadcasted via HELLO messages by each node u in the network .</segment>
+<segment id="27" parent="1027" relname="joint">The HELLO messages are never forwarded</segment>
+<segment id="28" parent="1028" relname="span">and they serve to discover one-hop and two-hop neighbor sets</segment>
+<segment id="29" parent="28" relname="elaboration">denoted and , respectively .</segment>
+<segment id="30" parent="1030" relname="span">Every node elects from its neighbors a set of nodes</segment>
+<segment id="31" parent="1031" relname="span">to act as MPRs</segment>
+<segment id="32" parent="31" relname="purpose">to forward TC messages .</segment>
+<segment id="33" parent="1033" relname="joint">We denote the set of MPRs of a node u as</segment>
+<segment id="34" parent="1033" relname="joint">and the set of MPR selectors as .</segment>
+<segment id="35" parent="1035" relname="span">A node u updates its topology information information</segment>
+<segment id="36" parent="35" relname="elaboration">each time a HELLO or a TC message is received .</segment>
+<segment id="37" parent="1037" relname="span">The topology information on a node u is a directed subgraph of the graph G</segment>
+<segment id="38" parent="37" relname="elaboration">denoted .</segment>
+<segment id="39" parent="1040" relname="span">In this section , we describe the MPR concept of OLSR , especially the MPR selection and the default forwarding rules</segment>
+<segment id="40" parent="39" relname="restatement">( DFR )</segment>
+<segment id="41" parent="1039" relname="same_unit">of TC messages .</segment>
+<segment id="42" parent="1038" relname="joint">4.1.</segment>
+<segment id="43" parent="1043" relname="span">The MPR Computation of OLSR</segment>
+<segment id="44" parent="1045" relname="span">The OLSR exchanges HELLO messages on a regular interval</segment>
+<segment id="45" parent="44" relname="purpose">to sense links between nodes ,</segment>
+<segment id="46" parent="1046" relname="joint">to discover one-hop and two-hop neighbors</segment>
+<segment id="47" parent="1046" relname="joint">and to build a local topology .</segment>
+<segment id="48" parent="1048" relname="joint">HELLO messages are exchanged in broadcast manner</segment>
+<segment id="49" parent="1048" relname="joint">and they are never forwarded to other nodes .</segment>
+<segment id="50" parent="1049" relname="joint">A device informs , within the HELLO messages , its adjacent nodes about its links with other nodes .</segment>
+<segment id="51" parent="1049" relname="joint">The MPR set is computed every time a HELLO message is received .</segment>
+<segment id="52" parent="1052" relname="span">A node selects among its one-hop neighbors the minimum number of MPRs</segment>
+<segment id="53" parent="52" relname="purpose">to cover its two-hop neighbors .</segment>
+<segment id="54" parent="55" relname="circumstance">After the MPR computation is completed ,</segment>
+<segment id="55" parent="1054" relname="span">all the two-hop neighbors are covered .</segment>
+<segment id="56" parent="1055" relname="joint">The MPR collection should be as small as possible .</segment>
+<segment id="57" parent="1057" relname="span">The smaller the MPR collection is ,</segment>
+<segment id="58" parent="57" relname="elaboration">the lower the overhead would be .</segment>
+<segment id="59" parent="1059" relname="span">Let us consider the OLSR network</segment>
+<segment id="60" parent="59" relname="elaboration">presented in</segment>
+<segment id="61" parent="1062" relname="preparation">Figure 3</segment>
+<segment id="62" parent="1062" relname="joint">,</segment>
+<segment id="63" parent="1062" relname="joint">and .</segment>
+<segment id="64" parent="1065" relname="preparation">Figure 4</segment>
+<segment id="65" parent="1065" relname="span">presents the default MPR computation algorithm of original OLSR on the node x</segment>
+<segment id="66" parent="65" relname="elaboration">as described in .</segment>
+<segment id="67" parent="1067" relname="preparation">Input : , , ;</segment>
+<segment id="68" parent="1068" relname="span">Start with an MPR set</segment>
+<segment id="69" parent="68" relname="elaboration">made of all members of with willingness equal to WILL_ALWAYS ;</segment>
+<segment id="70" parent="1070" relname="span">calculate ,</segment>
+<segment id="71" parent="70" relname="elaboration">where . is defined as the number of nodes ;</segment>
+<segment id="72" parent="1073" relname="span">if , m is the only node</segment>
+<segment id="73" parent="72" relname="elaboration">that covers a node ;</segment>
+<segment id="74" parent="1074" relname="span">Remove from all reached nodes by m ;</segment>
+<segment id="75" parent="1076" relname="span">While there are nodes in</segment>
+<segment id="76" parent="75" relname="elaboration">which are not covered by at least one node in ;</segment>
+<segment id="77" parent="1077" relname="span">( a )</segment>
+<segment id="78" parent="77" relname="elaboration">Calculate for each .</segment>
+<segment id="79" parent="1081" relname="span">R(w ) is the number of nodes in</segment>
+<segment id="80" parent="1082" relname="joint">which are not yet covered by a node in</segment>
+<segment id="81" parent="1082" relname="joint">and are reachable through w ;</segment>
+<segment id="82" parent="1084" relname="span">( b )</segment>
+<segment id="83" parent="82" relname="condition">if w has the highest willingness with ;</segment>
+<segment id="84" parent="1083" relname="span">( c ) In case of multiple choice , , u has the maximum reachability .</segment>
+<segment id="85" parent="1085" relname="span">( d ) In case of multiple nodes</segment>
+<segment id="86" parent="1086" relname="span">providing the same amount of reachability , ,</segment>
+<segment id="87" parent="1087" relname="joint">where is greater ;</segment>
+<segment id="88" parent="1088" relname="span">Remove , the nodes</segment>
+<segment id="89" parent="88" relname="elaboration">which are now covered by nodes in .</segment>
+<segment id="90" parent="91" relname="attribution">According to the default MPR computation algorithm in</segment>
+<segment id="91" parent="1090" relname="span">Figure 4</segment>
+<segment id="92" parent="1092" relname="span">, x adds a and d to</segment>
+<segment id="93" parent="1093" relname="span">because they are the only nodes</segment>
+<segment id="94" parent="93" relname="elaboration">connected to e and i , respectively . , , , and .</segment>
+<segment id="95" parent="96" relname="concession">Both b and c have the same reachability .</segment>
+<segment id="96" parent="1095" relname="span">However , .</segment>
+<segment id="97" parent="1091" relname="joint">The node x will select node c as MPR</segment>
+<segment id="98" parent="1091" relname="joint">and all nodes in will be covered .</segment>
+<segment id="99" parent="1098" relname="span">This MPR set rises the broadcast zone</segment>
+<segment id="100" parent="1099" relname="span">because nodes c and d are close to each other</segment>
+<segment id="101" parent="100" relname="elaboration">which will increase the collision .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1003" relname="same_unit"/>
+<group id="1006" type="span" parent="1005" relname="span"/>
+<group id="1008" type="span" parent="1002" relname="joint"/>
+<group id="1010" type="span" parent="1002" relname="joint"/>
+<group id="1011" type="span" parent="10" relname="means"/>
+<group id="1013" type="span" parent="1002" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="span"/>
+<group id="1015" type="span" parent="1014" relname="elaboration"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1017" type="span" parent="1016" relname="elaboration"/>
+<group id="1018" type="multinuc" parent="17" relname="elaboration"/>
+<group id="1021" type="span" parent="1002" relname="joint"/>
+<group id="1022" type="span" parent="1002" relname="joint"/>
+<group id="1023" type="span" parent="1024" relname="preparation"/>
+<group id="1024" type="span" parent="1022" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="multinuc" parent="1029" relname="preparation"/>
+<group id="1028" type="span" parent="1027" relname="joint"/>
+<group id="1029" type="span" parent="1026" relname="span"/>
+<group id="1030" type="span" parent="1032" relname="preparation"/>
+<group id="1031" type="span" parent="30" relname="purpose"/>
+<group id="1032" type="span" parent="1029" relname="span"/>
+<group id="1033" type="multinuc" parent="1034" relname="preparation"/>
+<group id="1034" type="span" parent="1032" relname="span"/>
+<group id="1035" type="span" parent="1036" relname="preparation"/>
+<group id="1036" type="span" parent="1034" relname="span"/>
+<group id="1037" type="span" parent="1038" relname="preparation"/>
+<group id="1038" type="multinuc" parent="1036" relname="span"/>
+<group id="1039" type="multinuc" parent="1038" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="same_unit"/>
+<group id="1043" type="span" parent="1038" relname="joint"/>
+<group id="1044" type="span" parent="43" relname="elaboration"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="multinuc" parent="1045" relname="purpose"/>
+<group id="1047" type="span" parent="1038" relname="joint"/>
+<group id="1048" type="multinuc" parent="1049" relname="preparation"/>
+<group id="1049" type="multinuc" parent="1047" relname="span"/>
+<group id="1051" type="multinuc" parent="1049" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="sequence"/>
+<group id="1053" type="span" parent="1051" relname="sequence"/>
+<group id="1054" type="span" parent="1055" relname="preparation"/>
+<group id="1055" type="multinuc" parent="1053" relname="span"/>
+<group id="1057" type="span" parent="1055" relname="joint"/>
+<group id="1058" type="span" parent="1055" relname="joint"/>
+<group id="1059" type="span" parent="1060" relname="preparation"/>
+<group id="1060" type="span" parent="1058" relname="span"/>
+<group id="1061" type="span" parent="1063" relname="preparation"/>
+<group id="1062" type="multinuc" parent="1061" relname="span"/>
+<group id="1063" type="multinuc" parent="1060" relname="span"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1063" relname="joint"/>
+<group id="1067" type="multinuc" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1070" type="span" parent="1067" relname="joint"/>
+<group id="1072" type="span" parent="1067" relname="joint"/>
+<group id="1073" type="span" parent="1074" relname="condition"/>
+<group id="1074" type="span" parent="1072" relname="span"/>
+<group id="1075" type="span" parent="74" relname="elaboration"/>
+<group id="1076" type="span" parent="1077" relname="concession"/>
+<group id="1077" type="span" parent="1075" relname="span"/>
+<group id="1079" type="span" parent="1067" relname="joint"/>
+<group id="1080" type="span" parent="1079" relname="span"/>
+<group id="1081" type="span" parent="1080" relname="span"/>
+<group id="1082" type="multinuc" parent="79" relname="elaboration"/>
+<group id="1083" type="span" parent="1081" relname="restatement"/>
+<group id="1084" type="span" parent="84" relname="preparation"/>
+<group id="1085" type="span" parent="1080" relname="elaboration"/>
+<group id="1086" type="span" parent="85" relname="elaboration"/>
+<group id="1087" type="multinuc" parent="86" relname="elaboration"/>
+<group id="1088" type="span" parent="1087" relname="joint"/>
+<group id="1089" type="span" parent="1067" relname="joint"/>
+<group id="1090" type="span" parent="1091" relname="preparation"/>
+<group id="1091" type="multinuc" parent="1089" relname="span"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="span" parent="92" relname="cause"/>
+<group id="1095" type="span" parent="1091" relname="joint"/>
+<group id="1098" type="span" parent="1091" relname="joint"/>
+<group id="1099" type="span" parent="99" relname="cause"/>
+	</body>
+</rst>

@@ -1,0 +1,140 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Related Work</segment>
+<segment id="2" parent="1002" relname="preparation">2.1. Unsupervised Intrusion Detection Techniques</segment>
+<segment id="3" parent="1002" relname="joint">Intrusion detection mainly includes signature-based intrusion detection and anomaly-based intrusion detection .</segment>
+<segment id="4" parent="1002" relname="joint">In detail , signature-based intrusion detection is also known as rule-based intrusion detection .</segment>
+<segment id="5" parent="1005" relname="contrast">Signature-based intrusion detection has a high detection rate for known attacks ,</segment>
+<segment id="6" parent="1006" relname="span">but has no ability</segment>
+<segment id="7" parent="1007" relname="span">to detect attack behaviors</segment>
+<segment id="8" parent="7" relname="elaboration">that are not in the rule base .</segment>
+<segment id="9" parent="1002" relname="joint">Anomaly-based intrusion detection is also known as behavior-based intrusion detection .</segment>
+<segment id="10" parent="1010" relname="span">This algorithm has the ability</segment>
+<segment id="11" parent="10" relname="purpose">to detect unknown attack behavior .</segment>
+<segment id="12" parent="1012" relname="span">Feature extraction</segment>
+<segment id="13" parent="12" relname="elaboration">based on accurately preprocessed network packets in anomaly-based intrusion detection is the basis for good performance .</segment>
+<segment id="14" parent="1013" relname="joint">At present , it is easy to collect a large amount of unlabeled data in intrusion detection ,</segment>
+<segment id="15" parent="1013" relname="joint">and it is difficult to obtain a large amount of labeled data .</segment>
+<segment id="16" parent="1013" relname="joint">Therefore , an unsupervised algorithm for intrusion detection has been introduced .</segment>
+<segment id="17" parent="1017" relname="span">In recent years , there have been some studies</segment>
+<segment id="18" parent="17" relname="elaboration">based on unsupervised intrusion detection techniques .</segment>
+<segment id="19" parent="1019" relname="span">In 2007 , Liu et al. used a hierarchical PCA model</segment>
+<segment id="20" parent="19" relname="purpose">to detect intrusion behavior on the KDD99 dataset .</segment>
+<segment id="21" parent="1021" relname="span">In 2017 , Gouveia et al. used RBM</segment>
+<segment id="22" parent="21" relname="purpose">to detect intrusion behavior on the ISCX2012 dataset .</segment>
+<segment id="23" parent="1023" relname="span">In 2018 , Farahnakian et al. used Deep Auto-encoder</segment>
+<segment id="24" parent="23" relname="purpose">to detect intrusion behavior on the KDD99 dataset .</segment>
+<segment id="25" parent="1013" relname="joint">The common point of the above studies is that the preprocessing ignores the similarity between network packets .</segment>
+<segment id="26" parent="1013" relname="joint">Network packets with strong similarity relationship are closer in the similarity relation graph</segment>
+<segment id="27" parent="1013" relname="joint">and have similar local proximity embedding .</segment>
+<segment id="28" parent="1028" relname="span">The preprocessing algorithm in the above studies ignores the similarity relationship between network packets ,</segment>
+<segment id="29" parent="28" relname="elaboration">resulting in low accuracy of intrusion detection .</segment>
+<segment id="30" parent="1030" relname="span">Therefore , we introduce a graph representation leaning algorithm</segment>
+<segment id="31" parent="30" relname="purpose">to solve the above problem .</segment>
+<segment id="32" parent="1032" relname="span">The network packet is preprocessed</segment>
+<segment id="33" parent="32" relname="means">by using a graph representation leaning algorithm .</segment>
+<segment id="34" parent="1034" relname="span">In the proposed algorithm , the original features of the network packet are combined with the local proximity features</segment>
+<segment id="35" parent="34" relname="elaboration">describing the similarity relationship between the network packets as the input of the neural network .</segment>
+<segment id="36" parent="1036" relname="span">The proposed algorithm adds effective features</segment>
+<segment id="37" parent="36" relname="means">by considering the similarities between network packets .</segment>
+<segment id="38" parent="1038" relname="preparation">2.2. Graph Representation Learning</segment>
+<segment id="39" parent="1039" relname="preparation">Graph representation</segment>
+<segment id="40" parent="1039" relname="joint">leaning refers to the automatic extraction of proximity features of nodes in a graph .</segment>
+<segment id="41" parent="1041" relname="span">This algorithm has achieved effects in the application of approximate semantic classification of words , handwritten character classification and so on .</segment>
+<segment id="42" parent="41" relname="elaboration">The existing graph representation leaning algorithms are mainly the following , such as : Node2vec , Deepwalk , LINE .</segment>
+<segment id="43" parent="1043" relname="span">However , Deepwalk uses a simple unbiased random walk ,</segment>
+<segment id="44" parent="43" relname="elaboration">which does not control the direction of random walks .</segment>
+<segment id="45" parent="1045" relname="preparation">Therefore , Deepwalk is easy to sample into the higher-order proximity range ,</segment>
+<segment id="46" parent="1045" relname="joint">which makes it impossible to accurately describe the local proximity features of the current node ;</segment>
+<segment id="47" parent="1047" relname="span">LINE does not have the ability</segment>
+<segment id="48" parent="47" relname="purpose">to simultaneously sample first-order proximity and second-order proximity ,</segment>
+<segment id="49" parent="1049" relname="preparation">so the algorithm has limitations ;</segment>
+<segment id="50" parent="1050" relname="span">Node2vec uses a random walk</segment>
+<segment id="51" parent="1052" relname="span">based on breadth first search</segment>
+<segment id="52" parent="51" relname="restatement">( BFS )</segment>
+<segment id="53" parent="1054" relname="span">or depth first search</segment>
+<segment id="54" parent="53" relname="restatement">( DFS )</segment>
+<segment id="55" parent="1054" relname="purpose">to explore the neighbor of the node .</segment>
+<segment id="56" parent="1056" relname="span">However , random walks</segment>
+<segment id="57" parent="56" relname="elaboration">based on BFS or DFS are blind searches .</segment>
+<segment id="58" parent="1055" relname="joint">In other words , BFS lacks constraints on the range of random walks .</segment>
+<segment id="59" parent="1059" relname="span">Therefore , the random walk has the probability of sampling to the source node ’s higher-order proximity ,</segment>
+<segment id="60" parent="1060" relname="span">which makes it impossible to accurately extract the local proximity features of the source node</segment>
+<segment id="61" parent="60" relname="elaboration">that describe the similarity relationship between network packets .</segment>
+<segment id="62" parent="1055" relname="joint">Therefore , we propose a node2vec with penalty for unsupervised automatic preprocessing .</segment>
+<segment id="63" parent="1063" relname="span">The proposed algorithm limits the range of random walks</segment>
+<segment id="64" parent="63" relname="elaboration">so that the sampling of random walks only occurs within the low-proximity of the source node .</segment>
+<segment id="65" parent="1065" relname="span">Therefore , the algorithm has the ability</segment>
+<segment id="66" parent="1066" relname="span">to obtain local proximity features</segment>
+<segment id="67" parent="66" relname="elaboration">that accurately characterize the similarity of network packets .</segment>
+<segment id="68" parent="1069" relname="span">The literature</segment>
+<segment id="69" parent="68" relname="elaboration">that we surveyed</segment>
+<segment id="70" parent="1068" relname="same_unit">has not used the unsupervised automatic preprocessing of graph representation learning algorithm with penalty in the field of intrusion detection .</segment>
+<segment id="71" parent="1071" relname="span">In the proposed algorithm , the original features of the network packet are combined with the local proximity features</segment>
+<segment id="72" parent="71" relname="elaboration">describing the similarity relationship between the network packets as the input of the neural network .</segment>
+<segment id="73" parent="1072" relname="span">The proposed algorithm adds effective features</segment>
+<segment id="74" parent="73" relname="purpose">to get better intrusion detection performance .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1005" type="multinuc" parent="1002" relname="joint"/>
+<group id="1006" type="span" parent="1005" relname="contrast"/>
+<group id="1007" type="span" parent="6" relname="purpose"/>
+<group id="1010" type="span" parent="1002" relname="joint"/>
+<group id="1011" type="span" parent="1002" relname="joint"/>
+<group id="1012" type="span" parent="1013" relname="preparation"/>
+<group id="1013" type="multinuc" parent="1011" relname="span"/>
+<group id="1017" type="span" parent="1013" relname="joint"/>
+<group id="1019" type="span" parent="1013" relname="joint"/>
+<group id="1021" type="span" parent="1013" relname="joint"/>
+<group id="1023" type="span" parent="1013" relname="joint"/>
+<group id="1028" type="span" parent="1013" relname="joint"/>
+<group id="1030" type="span" parent="1013" relname="joint"/>
+<group id="1032" type="span" parent="1013" relname="joint"/>
+<group id="1034" type="span" parent="1013" relname="joint"/>
+<group id="1036" type="span" parent="1013" relname="joint"/>
+<group id="1037" type="span" parent="1013" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="span"/>
+<group id="1039" type="multinuc" parent="1038" relname="span"/>
+<group id="1040" type="span" parent="1039" relname="joint"/>
+<group id="1041" type="span" parent="1042" relname="background"/>
+<group id="1042" type="multinuc" parent="1040" relname="span"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1042" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="1045" relname="joint"/>
+<group id="1047" type="span" parent="1048" relname="preparation"/>
+<group id="1048" type="span" parent="1046" relname="span"/>
+<group id="1049" type="multinuc" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="1049" relname="contrast"/>
+<group id="1051" type="multinuc" parent="50" relname="elaboration"/>
+<group id="1052" type="span" parent="1051" relname="contrast"/>
+<group id="1053" type="span" parent="1051" relname="contrast"/>
+<group id="1054" type="span" parent="1053" relname="span"/>
+<group id="1055" type="multinuc" parent="1049" relname="contrast"/>
+<group id="1056" type="span" parent="1055" relname="joint"/>
+<group id="1059" type="span" parent="1055" relname="joint"/>
+<group id="1060" type="span" parent="59" relname="elaboration"/>
+<group id="1063" type="span" parent="1055" relname="joint"/>
+<group id="1065" type="span" parent="1055" relname="joint"/>
+<group id="1066" type="span" parent="65" relname="purpose"/>
+<group id="1068" type="multinuc" parent="1055" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="same_unit"/>
+<group id="1070" type="span" parent="1055" relname="joint"/>
+<group id="1071" type="span" parent="1070" relname="span"/>
+<group id="1072" type="span" parent="1071" relname="elaboration"/>
+	</body>
+</rst>

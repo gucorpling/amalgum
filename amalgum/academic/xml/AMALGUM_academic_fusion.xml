@@ -1,0 +1,915 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_fusion" title="Fault Classification Decision Fusion System Based on Combination Weights and an Improved Voting Method" shortTitle="fusion" author="Fanliang Zeng, Zuxin Li, Zhe Zhou, Shuxin Du" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2227-9717/7/11/783/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+</s>
+<s type="frag">
+The	DT	the
+Proposed	JJ	Proposed
+Method	NN	method
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+ensemble	NN	ensemble
+method	NN	method
+integrates	VBZ	integrate
+various	JJ	various
+fault	NN	fault
+classification	NN	classification
+methods	NNS	method
+to	TO	to
+improve	VB	improve
+the	DT	the
+fault	NN	fault
+classification	NN	classification
+capability	NN	capability
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+basic	JJ	basic
+ensemble	NN	ensemble
+method	NN	method
+includes	VBZ	include
+the	DT	the
+selection	NN	selection
+of	IN	of
+base	NN	base
+classifiers	NNS	classifyer
+and	CC	and
+the	DT	the
+determination	NN	determination
+of	IN	of
+fusion	NN	fusion
+strategies	NNS	strategy
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+study	NN	study
+,	,	,
+six	CD	6
+basic	JJ	basic
+classifiers	NNS	classifyer
+were	VBD	be
+selected	VBN	select
+:	:	:
+linear	JJ	linear
+discriminant	NN	discriminant
+analysis	NN	analysis
+(	-LRB-	(
+LDA	NNP	LDA
+)	-RRB-	)
+,	,	,
+K-nearest	NNP	K-nearest
+neighbor	NN	neighbor
+(	-LRB-	(
+KNN	NNP	KNN
+)	-RRB-	)
+,	,	,
+Bayesian	NNP	Bayesian
+classifier	NN	classifier
+(	-LRB-	(
+BN	NNP	BN
+)	-RRB-	)
+,	,	,
+random	JJ	random
+forest	NN	forest
+(	-LRB-	(
+RF	NNP	RF
+)	-RRB-	)
+,	,	,
+support	NN	support
+vector	NN	vector
+machine	NN	machine
+(	-LRB-	(
+SVM	NNP	SVM
+)	-RRB-	)
+and	CC	and
+the	DT	the
+BP	NNP	BP
+neural	JJ	neural
+network	NN	network
+(	-LRB-	(
+BP	NNP	BP
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Decision	NN	decision
+fusion	NN	fusion
+is	VBZ	be
+achieved	VBN	achieve
+by	IN	by
+the	DT	the
+CW	NNP	CW
+and	CC	and
+improved	VBN	improve
+voting	NN	voting
+methods	NNS	method
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+specific	JJ	specific
+framework	NN	framework
+of	IN	of
+our	PRP$	our
+proposed	VBN	propose
+fusion	NN	fusion
+system	NN	system
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+Selection	NN	selection
+of	IN	of
+Base	NNP	Base
+Classifiers	NNPS	Classifiers
+</s>
+</head>
+<p>
+<s type="decl">
+Considering	VBG	consider
+the	DT	the
+requirement	NN	requirement
+of	IN	of
+diversity	NN	diversity
+for	IN	for
+the	DT	the
+ensemble	NN	ensemble
+classification	NN	classification
+system	NN	system
+,	,	,
+we	PRP	we
+selected	VBD	select
+six	CD	6
+representative	JJ	representative
+classifiers	NNS	classifyer
+from	IN	from
+the	DT	the
+supervised	VBN	supervise
+category	NN	category
+.	.	.
+</s>
+<s type="decl">
+Among	IN	among
+them	PRP	they
+,	,	,
+LDA	NNP	LDA
+is	VBZ	be
+a	DT	a
+linear	JJ	linear
+classifier	NN	classifier
+,	,	,
+which	WDT	which
+is	VBZ	be
+suitable	JJ	suitable
+for	IN	for
+the	DT	the
+classification	NN	classification
+of	IN	of
+linear	JJ	linear
+separable	JJ	separable
+problems	NNS	problem
+.	.	.
+</s>
+<s type="decl">
+KNN	NNP	KNN
+is	VBZ	be
+a	DT	a
+simple	JJ	simple
+classifier	NN	classifier
+,	,	,
+which	WDT	which
+determines	VBZ	determine
+the	DT	the
+classification	NN	classification
+result	NN	result
+by	IN	by
+comparing	VBG	compare
+the	DT	the
+distance	NN	distance
+between	IN	between
+the	DT	the
+sample	NN	sample
+to	TO	to
+be	VB	be
+classified	VBN	classify
+and	CC	and
+all	DT	all
+training	NN	training
+samples	NNS	sample
+.	.	.
+</s>
+<s type="decl">
+BN	NNP	BN
+is	VBZ	be
+one	CD	one
+of	IN	of
+the	DT	the
+commonly	RB	commonly
+used	VBN	use
+classifiers	NNS	classifyer
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+has	VBZ	have
+an	DT	a
+advantage	NN	advantage
+in	IN	in
+terms	NNS	term
+of	IN	of
+classification	NN	classification
+speed	NN	speed
+and	CC	and
+is	VBZ	be
+suitable	JJ	suitable
+for	IN	for
+applications	NNS	application
+with	IN	with
+small-scale	JJ	small-scale
+samples	NNS	sample
+and	CC	and
+missing	JJ	miss
+values	NNS	value
+.	.	.
+</s>
+<s type="decl">
+RF	NNP	RF
+is	VBZ	be
+an	DT	a
+integrated	VBN	integrate
+classifier	NN	classifier
+based	VBN	base
+on	IN	on
+the	DT	the
+decision	NN	decision
+tree	NN	tree
+and	CC	and
+has	VBZ	have
+the	DT	the
+advantage	NN	advantage
+of	IN	of
+a	DT	a
+low	JJ	low
+computation	NN	computation
+cost	NN	cost
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+can	MD	can
+deal	VB	deal
+with	IN	with
+high-dimensional	JJ	high-dimensional
+samples	NNS	sample
+and	CC	and
+sample	NN	sample
+imbalance	NN	imbalance
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+typical	JJ	typical
+advantage	NN	advantage
+of	IN	of
+SVM	NNP	SVM
+is	VBZ	be
+that	IN	that
+it	PRP	it
+can	MD	can
+use	VB	use
+small	JJ	small
+samples	NNS	sample
+and	CC	and
+is	VBZ	be
+also	RB	also
+good	JJ	good
+for	IN	for
+nonlinear	JJ	nonlinear
+problems	NNS	problem
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+BP	NNP	BP
+neural	JJ	neural
+network	NN	network
+is	VBZ	be
+a	DT	a
+multi-layer	JJ	multi-layer
+feed-forward	NN	feed-forward
+neural	JJ	neural
+network	NN	network
+with	IN	with
+error	NN	error
+backpropagation	NN	backpropagation
+,	,	,
+which	WDT	which
+is	VBZ	be
+advantageous	JJ	advantageous
+for	IN	for
+dealing	VBG	deal
+with	IN	with
+nonlinear	JJ	nonlinear
+problems	NNS	problem
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.2.	CD	3.2.
+Classifier	NNP	Classifier
+Performance	NN	performance
+Evaluation	NN	evaluation
+</s>
+</head>
+<p>
+<s type="decl">
+To	TO	to
+measure	VB	measure
+the	DT	the
+classification	NN	classification
+performance	NN	performance
+,	,	,
+four	CD	4
+evaluation	NN	evaluation
+indicators	NNS	indicator
+were	VBD	be
+used	VBN	use
+:	:	:
+(	-LRB-	(
+21	CD	21
+)	-RRB-	)
+(	-LRB-	(
+22	CD	22
+)	-RRB-	)
+(	-LRB-	(
+23	CD	23
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+t	NN	t
+</hi>
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+fault	NN	fault
+classes	NNS	class
+.	.	.
+</s>
+<s type="decl">
+(	-LRB-	(
+24	CD	24
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+P	NN	P
+</hi>
+is	VBZ	be
+the	DT	the
+precision	NN	precision
+and	CC	and
+<hi rend="italic">
+R	NN	R
+</hi>
+is	VBZ	be
+the	DT	the
+recall	NN	recall
+rate	NN	rate
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+information	NN	information
+used	VBN	use
+to	TO	to
+calculate	VB	calculate
+these	DT	this
+performance	NN	performance
+evaluation	NN	evaluation
+indicators	NNS	indicator
+is	VBZ	be
+given	VBN	give
+by	IN	by
+the	DT	the
+confusion	NN	confusion
+matrix	NN	matrix
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+confusion	NN	confusion
+matrix	NN	matrix
+is	VBZ	be
+also	RB	also
+a	DT	a
+way	NN	way
+to	TO	to
+measure	VB	measure
+the	DT	the
+classifier	NN	classifier
+’s	POS	's
+performance	NN	performance
+,	,	,
+and	CC	and
+its	PRP$	its
+form	NN	form
+is	VBZ	be
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+25	CD	25
+)	-RRB-	)
+where	WRB	where
+represents	VBZ	represent
+the	DT	the
+percentage	NN	percentage
+of	IN	of
+cases	NNS	case
+where	WRB	where
+fault	NN	fault
+<hi rend="italic">
+i	PRP	I
+</hi>
+classified	VBD	classify
+as	IN	as
+fault	NN	fault
+<hi rend="italic">
+j	NN	j
+</hi>
+by	IN	by
+classifier	NN	classifier
+<hi rend="italic">
+k	CD	k
+</hi>
+.	.	.
+</s>
+<s type="decl">
+<hi rend="italic">
+c	MD	c
+</hi>
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+base	NN	base
+classifiers	NNS	classifyer
+,	,	,
+and	CC	and
+<hi rend="italic">
+t	NN	t
+</hi>
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+fault	NN	fault
+classes	NNS	class
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.3.	CD	3.3.
+Formatting	NN	formatting
+of	IN	of
+Mathematical	JJ	mathematical
+Components	NNS	component
+</s>
+</head>
+<p>
+<s type="decl">
+Voting	NN	voting
+is	VBZ	be
+a	DT	a
+simple	JJ	simple
+and	CC	and
+practical	JJ	practical
+decision-making	JJ	decision-making
+fusion	NN	fusion
+strategy	NN	strategy
+,	,	,
+but	CC	but
+its	PRP$	its
+fusion	NN	fusion
+results	NNS	result
+are	VBP	be
+often	RB	often
+unreasonable	JJ	unreasonable
+because	IN	because
+it	PRP	it
+ignores	VBZ	ignore
+the	DT	the
+performance	NN	performance
+differences	NNS	difference
+of	IN	of
+various	JJ	various
+methods	NNS	method
+.	.	.
+</s>
+<s type="sub">
+In	IN	in
+the	DT	the
+process	NN	process
+of	IN	of
+fusion	NN	fusion
+,	,	,
+the	DT	the
+method	NN	method
+with	IN	with
+excellent	JJ	excellent
+performance	NN	performance
+should	MD	should
+have	VB	have
+greater/more	JJR	greater/more
+influence	NN	influence
+on	IN	on
+the	DT	the
+voting	NN	voting
+results	NNS	result
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+paper	NN	paper
+proposes	VBZ	propose
+a	DT	a
+validity	NN	validity
+concept	NN	concept
+based	VBN	base
+on	IN	on
+the	DT	the
+confusion	NN	confusion
+matrix	NN	matrix
+to	TO	to
+improve	VB	improve
+the	DT	the
+voting	NN	voting
+method	NN	method
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+concept	NN	concept
+of	IN	of
+the	DT	the
+validity	NN	validity
+value	NN	value
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+26	CD	26
+)	-RRB-	)
+where	WRB	where
+represents	VBZ	represent
+the	DT	the
+validity	NN	validity
+of	IN	of
+classifier	NN	classifier
+<hi rend="italic">
+k	NN	k
+</hi>
+for	IN	for
+fault	NN	fault
+<hi rend="italic">
+j	CD	j
+</hi>
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+larger	JJR	large
+the	DT	the
+value	NN	value
+of	IN	of
+,	,	,
+the	DT	the
+higher	JJR	high
+the	DT	the
+credibility	NN	credibility
+of	IN	of
+the	DT	the
+result	NN	result
+when	WRB	when
+a	DT	a
+test	NN	test
+sample	NN	sample
+is	VBZ	be
+classified	VBN	classify
+as	IN	as
+fault	NN	fault
+<hi rend="italic">
+j	NN	j
+</hi>
+by	IN	by
+classifier	NN	classifier
+<hi rend="italic">
+k	CD	k
+</hi>
+.	.	.
+</s>
+<s type="sub">
+Additionally	RB	additionally
+,	,	,
+the	DT	the
+following	VBG	follow
+conditions	NNS	condition
+should	MD	should
+be	VB	be
+met	VBN	meet
+:	:	:
+(	-LRB-	(
+27	CD	27
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+improved	VBN	improve
+voting	NN	voting
+method	NN	method
+,	,	,
+the	DT	the
+voting	NN	voting
+result	NN	result
+is	VBZ	be
+determined	VBN	determine
+by	IN	by
+the	DT	the
+validity	NN	validity
+value	NN	value
+of	IN	of
+the	DT	the
+base	NN	base
+classifier	NN	classifier
+for	IN	for
+different	JJ	different
+faults	NNS	fault
+.	.	.
+</s>
+<s type="decl">
+Different	JJ	different
+from	IN	from
+the	DT	the
+conventional	JJ	conventional
+voting	NN	voting
+method	NN	method
+,	,	,
+the	DT	the
+fusion	NN	fusion
+results	NNS	result
+given	VBN	give
+by	IN	by
+the	DT	the
+improved	VBN	improve
+voting	NN	voting
+method	NN	method
+are	VBP	be
+no	RB	no
+longer	RBR	long
+crisp	JJ	crisp
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+either	CC	either
+0	CD	0
+or	CC	or
+1	CD	1
+)	-RRB-	)
+,	,	,
+but	CC	but
+they	PRP	they
+take	VBP	take
+values	NNS	value
+in	IN	in
+the	DT	the
+interval	NN	interval
+of	IN	of
+0	CD	0
+–	SYM	-
+1	CD	1
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+not	RB	not
+only	RB	only
+avoids	VBZ	avoid
+the	DT	the
+shortcomings	NNS	shortcoming
+of	IN	of
+the	DT	the
+original	JJ	original
+voting	NN	voting
+method	NN	method
+,	,	,
+which	WDT	which
+does	VBZ	do
+not	RB	not
+consider	VB	consider
+the	DT	the
+difference	NN	difference
+in	IN	in
+performance	NN	performance
+of	IN	of
+each	DT	each
+classifier	NN	classifier
+on	IN	on
+different	JJ	different
+faults	NNS	fault
+,	,	,
+but	CC	but
+also	RB	also
+enhances	VBZ	enhance
+the	DT	the
+impact	NN	impact
+of	IN	of
+the	DT	the
+classifiers	NNS	classifyer
+with	IN	with
+good	JJ	good
+performance	NN	performance
+in	IN	in
+terms	NNS	term
+of	IN	of
+voting	NN	voting
+results	NNS	result
+.	.	.
+</s>
+</p>
+<p>
+<s type="sub">
+A	DT	a
+validity	NN	validity
+matrix	NN	matrix
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+using	VBG	use
+the	DT	the
+improved	VBN	improve
+voting	NN	voting
+method	NN	method
+:	:	:
+(	-LRB-	(
+28	CD	28
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Combined	VBN	Combine
+with	IN	with
+the	DT	the
+combined	VBN	combine
+weights	NNS	weight
+,	,	,
+the	DT	the
+decision	NN	decision
+of	IN	of
+the	DT	the
+fusion	NN	fusion
+system	NN	system
+is	VBZ	be
+:	:	:
+(	-LRB-	(
+29	CD	29
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+the	DT	the
+maximum	JJ	maximum
+value	NN	value
+is	VBZ	be
+used	VBN	use
+as	IN	as
+the	DT	the
+fusion	NN	fusion
+decision	NN	decision
+:	:	:
+(	-LRB-	(
+30	CD	30
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+summary	NN	summary
+,	,	,
+the	DT	the
+proposed	VBN	propose
+decision	NN	decision
+fusion	NN	fusion
+system	NN	system
+uses	VBZ	use
+multiple	JJ	multiple
+performance	NN	performance
+evaluation	NN	evaluation
+indicators	NNS	indicator
+to	TO	to
+measure	VB	measure
+the	DT	the
+performance	NN	performance
+of	IN	of
+the	DT	the
+base	NN	base
+classifier	NN	classifier
+and	CC	and
+determine	VB	determine
+the	DT	the
+combined	VBN	combine
+weights	NNS	weight
+based	VBN	base
+on	IN	on
+AHP	NNP	AHP
+and	CC	and
+EW-TOPSIS	NNP	Ew-TOPSIS
+for	IN	for
+the	DT	the
+base	NN	base
+classifiers	NNS	classifyer
+under	IN	under
+these	DT	this
+indicators	NNS	indicator
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+an	DT	a
+improved	VBN	improve
+voting	NN	voting
+method	NN	method
+based	VBN	base
+on	IN	on
+validity	NN	validity
+was	VBD	be
+developed	VBN	develop
+to	TO	to
+improve	VB	improve
+the	DT	the
+effectiveness	NN	effectiveness
+of	IN	of
+decision	NN	decision
+fusion	NN	fusion
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+next	JJ	next
+section	NN	section
+,	,	,
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+is	VBZ	be
+verified	VBN	verify
+by	IN	by
+the	DT	the
+TE	NNP	TE
+process	NN	process
+.	.	.
+</s>
+</p>
+</text>

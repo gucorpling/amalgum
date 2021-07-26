@@ -1,0 +1,958 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_hevc" title="Detection of Transcoding from H.264/AVC to HEVC Based on CU and PU Partition Types" shortTitle="hevc" author="Zhenzhen Zhang, Changbo Liu, Zhaohong Li, Lifang Yu, Huanma Yan" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-8994/11/11/1343/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+CU	NN	CU
+and	CC	and
+PU	NN	PU
+Partition	NN	Partition
+Types	NNS	type
+Analysis	NN	analysis
+in	IN	in
+Singly	JJ	singly
+Compressed	VBN	compress
+HEVC	NNP	HEVC
+Videos	NNS	video
+and	CC	and
+AVC/HEVC	NNP	AVC/heVC
+Videos	NNS	video
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+AVC	NNP	AVC
+and	CC	and
+HEVC	NNP	HEVC
+encoding	NN	encoding
+process	NN	process
+,	,	,
+quantization	NN	quantization
+and	CC	and
+reconstruction	NN	reconstruction
+are	VBP	be
+basic	JJ	basic
+operations	NNS	operation
+,	,	,
+but	CC	but
+they	PRP	they
+will	MD	will
+introduce	VB	introduce
+irreversible	JJ	irreversible
+quantization	NN	quantization
+errors	NNS	error
+and	CC	and
+reconstruction	NN	reconstruction
+errors	NNS	error
+,	,	,
+which	WDT	which
+make	VBP	make
+the	DT	the
+decoded	VBN	decode
+video	NN	video
+different	JJ	different
+from	IN	from
+the	DT	the
+original	JJ	original
+one	CD	one
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+change	NN	change
+of	IN	of
+video	NN	video
+content	NN	content
+will	MD	will
+further	RBR	far
+affect	VB	affect
+the	DT	the
+CU	NNP	CU
+and	CC	and
+PU	NN	PU
+partition	NN	partition
+types	NNS	type
+and	CC	and
+makes	VBZ	make
+them	PRP	they
+different	JJ	different
+between	IN	between
+AVC/HEVC	NNP	AVC/heVC
+videos	NNS	video
+and	CC	and
+singly	RB	singly
+compressed	VBN	compress
+HEVC	NNP	HEVC
+videos	NNS	video
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+will	MD	will
+illustrate	VB	illustrate
+the	DT	the
+difference	NN	difference
+elaborately	RB	elaborately
+in	IN	in
+this	DT	this
+section	NN	section
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+</s>
+<s type="frag">
+Theoretical	JJ	theoretical
+Analysis	NN	analysis
+</s>
+</head>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+describes	VBZ	describe
+the	DT	the
+simplified	VBN	simplify
+block	NN	block
+diagram	NN	diagram
+of	IN	of
+AVC/HEVC	NNP	AVC/heVC
+transcoding	NN	transcoding
+.	.	.
+</s>
+<s type="decl">
+YUV	NNP	YUV
+video	NN	video
+is	VBZ	be
+a	DT	a
+kind	NN	kind
+of	IN	of
+uncompressed	JJ	uncompressed
+video	NN	video
+and	CC	and
+often	RB	often
+used	VBN	use
+as	IN	as
+test	NN	test
+example	NN	example
+of	IN	of
+video	NN	video
+encoders	NNS	encoder
+.	.	.
+</s>
+<s type="decl">
+Given	VBN	give
+a	DT	a
+YUV	NNP	YUV
+video	NN	video
+<hi rend="italic">
+<b>
+V	NN	V
+</b>
+</hi>
+,	,	,
+the	DT	the
+first	JJ	first
+step	NN	step
+is	VBZ	be
+to	TO	to
+encode	VB	encode
+<hi rend="italic">
+<b>
+V	NN	V
+</b>
+</hi>
+into	IN	into
+the	DT	the
+AVC	NNP	AVC
+bit	NN	bit
+stream	NN	stream
+with	IN	with
+bitrate	NN	bitrate
+.	.	.
+</s>
+<s type="frag">
+Then	RB	then
+will	MD	will
+be	VB	be
+decoded	VBN	decode
+to	IN	to
+YUV	NNP	YUV
+video	NN	video
+and	CC	and
+recompressed	VBN	recompress
+into	IN	into
+the	DT	the
+HEVC	NNP	HEVC
+bit	NN	bit
+stream	NN	stream
+with	IN	with
+bitrate	NN	bitrate
+.	.	.
+</s>
+<s type="imp">
+Please	UH	please
+note	VB	note
+two	CD	2
+points	NNS	point
+here	RB	here
+.	.	.
+</s>
+<s type="decl">
+One	CD	one
+is	VBZ	be
+that	IN	that
+the	DT	the
+reconstruction	NN	reconstruction
+module	NN	module
+in	IN	in
+the	DT	the
+encoding	NN	encoding
+process	NN	process
+is	VBZ	be
+equivalent	JJ	equivalent
+to	IN	to
+the	DT	the
+decoding	NN	decoding
+process	NN	process
+;	:	;
+thus	RB	thus
+we	PRP	we
+directly	RB	directly
+use	VBP	use
+the	DT	the
+reconstruction	NN	reconstruction
+module	NN	module
+to	TO	to
+represent	VB	represent
+the	DT	the
+decoder	NN	decoder
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="imp">
+to	TO	to
+save	VB	save
+space	NN	space
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+other	JJ	other
+one	CD	one
+is	VBZ	be
+that	IN	that
+only	RB	only
+HEVC	NNP	HEVC
+encoding	NN	encoding
+is	VBZ	be
+implemented	VBN	implement
+for	IN	for
+a	DT	a
+singly	RB	singly
+compressed	VBN	compress
+HEVC	NNP	HEVC
+video	NN	video
+.	.	.
+</s>
+<s type="decl">
+That	DT	that
+is	VBZ	be
+to	TO	to
+say	VB	say
+,	,	,
+for	IN	for
+a	DT	a
+singly	RB	singly
+compressed	VBN	compress
+HEVC	NNP	HEVC
+video	NN	video
+,	,	,
+the	DT	the
+input	NN	input
+video	NN	video
+is	VBZ	be
+the	DT	the
+uncompressed	JJ	uncompressed
+YUV	NNP	YUV
+video	NN	video
+<hi rend="italic">
+<b>
+V	NN	V
+</b>
+</hi>
+,	,	,
+not	RB	not
+its	PRP$	its
+decoded	VBN	decode
+version	NN	version
+.	.	.
+</s>
+</p>
+<p>
+<s type="frag">
+From	IN	from
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+,	,	,
+we	PRP	we
+can	MD	can
+see	VB	see
+that	IN	that
+CU	NN	CU
+and	CC	and
+PU	NN	PU
+partition	NN	partition
+types	NNS	type
+of	IN	of
+each	DT	each
+picture	NN	picture
+are	VBP	be
+determined	VBN	determine
+by	IN	by
+the	DT	the
+content	NN	content
+of	IN	of
+the	DT	the
+picture	NN	picture
+and	CC	and
+the	DT	the
+number	NN	number
+of	IN	of
+bits	NNS	bit
+allocated	VBN	allocate
+to	IN	to
+it	PRP	it
+by	IN	by
+the	DT	the
+rate	NN	rate
+control	NN	control
+module	NN	module
+.	.	.
+</s>
+<s type="imp">
+Here	RB	here
+,	,	,
+please	UH	please
+note	VB	note
+that	IN	that
+in	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+a	DT	a
+picture	NN	picture
+contains	VBZ	contain
+only	RB	only
+one	CD	one
+slice	NN	slice
+.	.	.
+</s>
+<s type="decl">
+Though	IN	though
+CU	NN	CU
+and	CC	and
+PU	NN	PU
+partition	NN	partition
+types	NNS	type
+in	IN	in
+I	NNP	I
+pictures	NNS	picture
+are	VBP	be
+different	JJ	different
+from	IN	from
+P	NNP	P
+pictures	NNS	picture
+,	,	,
+the	DT	the
+partition	NN	partition
+strategy	NN	strategy
+is	VBZ	be
+similar	JJ	similar
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+we	PRP	we
+take	VBP	take
+the	DT	the
+CU	NN	CU
+types	NNS	type
+in	IN	in
+P	NN	P
+pictures	NNS	picture
+as	IN	as
+an	DT	a
+example	NN	example
+to	TO	to
+analyze	VB	analyze
+the	DT	the
+difference	NN	difference
+between	IN	between
+AVC/HEVC	NNP	AVC/heVC
+videos	NNS	video
+and	CC	and
+singly	RB	singly
+compressed	VBN	compress
+HEVC	NNP	HEVC
+videos	NNS	video
+.	.	.
+</s>
+</p>
+<p>
+<s type="imp">
+Now	RB	now
+let	VB	let
+’s	PRP	we
+consider	VB	consider
+the	DT	the
+AVC/HEVC	NNP	AVC/heVC
+transcoding	NN	transcoding
+process	NN	process
+.	.	.
+</s>
+<s type="sub">
+Assume	VB	assume
+one	CD	one
+uncompressed	JJ	uncompressed
+video	NN	video
+sequence	NN	sequence
+<hi rend="italic">
+<b>
+V	NN	V
+</b>
+</hi>
+consists	VBZ	consist
+of	IN	of
+<hi rend="italic">
+N	CD	N
+</hi>
+P	NN	P
+pictures	NNS	picture
+and	CC	and
+is	VBZ	be
+expressed	VBN	express
+as	IN	as
+Equation	NNP	Equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+,	,	,
+where	WRB	where
+denotes	VBZ	denote
+the	DT	the
+<hi rend="italic">
+n	NN	n
+</hi>
+th	NN	there
+P	NN	P
+picture	NN	picture
+of	IN	of
+<hi rend="italic">
+<b>
+V	NN	V
+</b>
+</hi>
+,	,	,
+then	RB	then
+the	DT	the
+bit	NN	bit
+stream	NN	stream
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+implementing	VBG	implement
+the	DT	the
+prediction	NN	prediction
+,	,	,
+transform	NN	transform
+,	,	,
+quantization	NN	quantization
+,	,	,
+and	CC	and
+entropy	NN	entropy
+coding	NN	coding
+process	NN	process
+.	.	.
+</s>
+<s type="frag">
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+AVC	NNP	AVC
+encoding	NN	encoding
+process	NN	process
+,	,	,
+a	DT	a
+rate	NN	rate
+control	NN	control
+process	NN	process
+is	VBZ	be
+implemented	VBN	implement
+.	.	.
+</s>
+<s type="sub">
+Assume	VB	assume
+the	DT	the
+bit	NN	bit
+rate	NN	rate
+for	IN	for
+<hi rend="italic">
+<b>
+V	NN	V
+</b>
+</hi>
+is	VBZ	be
+<hi rend="italic">
+r	NN	reter
+</hi>
+,	,	,
+let	VB	let
+denote	VB	denote
+the	DT	the
+rate	NN	rate
+control	NN	control
+process	NN	process
+,	,	,
+then	RB	then
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+bits	NNS	bit
+allocated	VBN	allocate
+to	IN	to
+the	DT	the
+<hi rend="italic">
+n	NN	n
+</hi>
+th	NN	there
+P	NN	P
+picture	NN	picture
+can	MD	can
+be	VB	be
+represented	VBN	represent
+as	IN	as
+.	.	.
+</s>
+<s type="decl">
+After	IN	after
+that	DT	that
+,	,	,
+the	DT	the
+quantization	NN	quantization
+step	NN	step
+for	IN	for
+the	DT	the
+picture	NN	picture
+will	MD	will
+be	VB	be
+determined	VBN	determine
+according	VBG	accord
+to	IN	to
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+AVC	NNP	AVC
+standard	NN	standard
+adopts	VBZ	adopt
+macroblock	NN	macroblock
+as	IN	as
+the	DT	the
+basic	JJ	basic
+coding	NN	coding
+unit	NN	unit
+and	CC	and
+does	VBZ	do
+not	RB	not
+introduce	VB	introduce
+the	DT	the
+concept	NN	concept
+of	IN	of
+CU	NN	CU
+;	:	;
+hence	RB	hence
+,	,	,
+CU	NN	CU
+types	NNS	type
+do	VBP	do
+not	RB	not
+exist	VB	exist
+in	IN	in
+the	DT	the
+AVC	NNP	AVC
+encoding	NN	encoding
+process	NN	process
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+decoding	NN	decoding
+process	NN	process
+is	VBZ	be
+the	DT	the
+inverse	JJ	inverse
+process	NN	process
+of	IN	of
+encoding	NN	encoding
+.	.	.
+</s>
+<s type="sub">
+Let	VB	let
+stand	VB	stand
+for	IN	for
+the	DT	the
+prediction	NN	prediction
+signal	NN	signal
+of	IN	of
+,	,	,
+and	CC	and
+represent	VBP	represent
+discrete	JJ	discrete
+cosine	NN	cosine
+transform	NN	transform
+(	-LRB-	(
+DCT	NNP	DCT
+)	-RRB-	)
+and	CC	and
+inverse	JJ	inverse
+DCT	NN	DCT
+,	,	,
+respectively	RB	respectively
+,	,	,
+then	RB	then
+the	DT	the
+decoded	VBN	decode
+video	NN	video
+sequence	NN	sequence
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+Equations	NNPS	Equation
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+and	CC	and
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+,	,	,
+where	WRB	where
+means	VBZ	mean
+the	DT	the
+decoded	VBN	decode
+version	NN	version
+of	IN	of
+,	,	,
+represents	VBZ	represent
+the	DT	the
+rounding	NN	rounding
+operator	NN	operator
+,	,	,
+and	CC	and
+denote	VBP	denote
+the	DT	the
+irreversible	JJ	irreversible
+quantization	NN	quantization
+error	NN	error
+and	CC	and
+reconstruction	NN	reconstruction
+error	NN	error
+of	IN	of
+and	CC	and
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+quantization	NN	quantization
+error	NN	error
+means	VBZ	mean
+the	DT	the
+error	NN	error
+introduced	VBN	introduce
+in	IN	in
+the	DT	the
+quantization	NN	quantization
+process	NN	process
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+reconstruction	NN	reconstruction
+error	NN	error
+means	VBZ	mean
+the	DT	the
+rounding	NN	rounding
+error	NN	error
+and	CC	and
+truncation	NN	truncation
+error	NN	error
+generated	VBN	generate
+in	IN	in
+the	DT	the
+reconstruction	NN	reconstruction
+process	NN	process
+.	.	.
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+process	NN	process
+of	IN	of
+transcoding	VBG	transcod
+to	IN	to
+the	DT	the
+HEVC	NNP	HEVC
+bit	NN	bit
+stream	NN	stream
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+bits	NNS	bit
+are	VBP	be
+allocated	VBN	allocate
+to	IN	to
+the	DT	the
+<hi rend="italic">
+n	NN	n
+</hi>
+th	JJ	th
+P	NN	P
+picture	NN	picture
+according	VBG	accord
+to	IN	to
+Equation	NNP	Equation
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Here	RB	here
+we	PRP	we
+use	VBP	use
+rather	RB	rather
+than	IN	than
+to	TO	to
+represent	VB	represent
+the	DT	the
+rate	NN	rate
+control	NN	control
+process	NN	process
+because	IN	because
+the	DT	the
+bits	NNS	bit
+allocation	NN	allocation
+function	NN	function
+adopted	VBN	adopt
+in	IN	in
+HEVC	NNP	HEVC
+is	VBZ	be
+different	JJ	different
+from	IN	from
+the	DT	the
+AVC	NNP	AVC
+standard	NN	standard
+.	.	.
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Knowing	VBG	know
+the	DT	the
+number	NN	number
+of	IN	of
+bits	NNS	bit
+allocated	VBN	allocate
+to	IN	to
+the	DT	the
+<hi rend="italic">
+n	NN	n
+</hi>
+th	NN	there
+P	NN	P
+picture	NN	picture
+,	,	,
+the	DT	the
+type	NN	type
+of	IN	of
+the	DT	the
+<hi rend="italic">
+k	NN	k
+</hi>
+th	NN	there
+CU	NN	CU
+in	IN	in
+the	DT	the
+<hi rend="italic">
+n	NN	n
+</hi>
+th	NN	there
+P	NN	P
+picture	NN	picture
+can	MD	can
+be	VB	be
+written	VBN	write
+as	IN	as
+Equation	NNP	Equation
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+,	,	,
+where	WRB	where
+stands	VBZ	stand
+for	IN	for
+the	DT	the
+CU	NN	CU
+partition	NN	partition
+process	NN	process
+,	,	,
+and	CC	and
+denotes	VBZ	denote
+the	DT	the
+corresponding	JJ	corresponding
+prediction	NN	prediction
+signal	NN	signal
+of	IN	of
+.	.	.
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+For	IN	for
+a	DT	a
+singly	RB	singly
+compressed	VBN	compress
+HEVC	NNP	HEVC
+video	NN	video
+with	IN	with
+bitrate	NN	bitrate
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+bits	NNS	bit
+allocated	VBN	allocate
+to	IN	to
+the	DT	the
+<hi rend="italic">
+n	NN	n
+</hi>
+th	NN	there
+P	NN	P
+picture	NN	picture
+,	,	,
+and	CC	and
+the	DT	the
+CU	NNP	CU
+partition	NN	partition
+type	NN	type
+will	MD	will
+be	VB	be
+determined	VBN	determine
+by	IN	by
+Equations	NNPS	Equation
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+and	CC	and
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+.	.	.
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Eventually	RB	eventually
+,	,	,
+we	PRP	we
+can	MD	can
+get	VB	get
+the	DT	the
+difference	NN	difference
+of	IN	of
+CU	NN	CU
+partition	NN	partition
+types	NNS	type
+between	IN	between
+the	DT	the
+AVC/HEVC	NNP	AVC/heVC
+video	NN	video
+and	CC	and
+the	DT	the
+singly	RB	singly
+compressed	VBN	compress
+HEVC	NNP	HEVC
+video	NN	video
+according	VBG	accord
+to	IN	to
+Equation	NNP	Equation
+(	-LRB-	(
+8	CD	8
+)	-RRB-	)
+.	.	.
+</s>
+<s type="frag">
+(	-LRB-	(
+8	CD	8
+)	-RRB-	)
+</s>
+</p>
+</text>

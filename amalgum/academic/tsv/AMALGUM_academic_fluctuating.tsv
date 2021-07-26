@@ -1,0 +1,1073 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=2. Preliminaries
+1-1	0-2	2.	_	_	_	_
+1-2	3-16	Preliminaries	event	new	_	_
+
+#Text=2.1. Threat Model
+2-1	17-21	2.1.	_	_	_	_
+2-2	22-28	Threat	abstract|abstract[3]	new|new[3]	_	_
+2-3	29-34	Model	abstract[3]	new[3]	_	_
+
+#Text=The current work places no limitations on the attacker .
+3-1	35-38	The	abstract[4]	new[4]	_	_
+3-2	39-46	current	abstract[4]	new[4]	_	_
+3-3	47-51	work	abstract[4]	new[4]	_	_
+3-4	52-58	places	_	_	_	_
+3-5	59-61	no	abstract[5]	new[5]	_	_
+3-6	62-73	limitations	abstract[5]	new[5]	_	_
+3-7	74-76	on	abstract[5]	new[5]	_	_
+3-8	77-80	the	abstract[5]|person[6]	new[5]|new[6]	ana	5-7[0_6]
+3-9	81-89	attacker	abstract[5]|person[6]	new[5]|new[6]	_	_
+3-10	90-91	.	_	_	_	_
+
+#Text=Eavesdropping , injecting data into the communication stream or stopping the stream itself are feasible .
+4-1	92-105	Eavesdropping	abstract	new	_	_
+4-2	106-107	,	_	_	_	_
+4-3	108-117	injecting	_	_	_	_
+4-4	118-122	data	abstract	new	coref	5-19[18_0]
+4-5	123-127	into	_	_	_	_
+4-6	128-131	the	abstract[10]	new[10]	coref	4-11[11_10]
+4-7	132-145	communication	abstract|abstract[10]	new|new[10]	coref	9-4
+4-8	146-152	stream	abstract[10]	new[10]	_	_
+4-9	153-155	or	_	_	_	_
+4-10	156-164	stopping	_	_	_	_
+4-11	165-168	the	abstract[11]	giv[11]	_	_
+4-12	169-175	stream	abstract[11]	giv[11]	_	_
+4-13	176-182	itself	_	_	_	_
+4-14	183-186	are	_	_	_	_
+4-15	187-195	feasible	_	_	_	_
+4-16	196-197	.	_	_	_	_
+
+#Text=Thus , for every route under her control , she can drop packets ( dos ) or taint the data to initiate a mitm attack .
+5-1	198-202	Thus	_	_	_	_
+5-2	203-204	,	_	_	_	_
+5-3	205-208	for	_	_	_	_
+5-4	209-214	every	abstract[12]	new[12]	coref	17-3[74_12]
+5-5	215-220	route	abstract[12]	new[12]	_	_
+5-6	221-226	under	abstract[12]	new[12]	_	_
+5-7	227-230	her	abstract[12]|person|abstract[14]	new[12]|giv|new[14]	ana|coref	5-10|6-9[24_14]
+5-8	231-238	control	abstract[12]|abstract[14]	new[12]|new[14]	_	_
+5-9	239-240	,	_	_	_	_
+5-10	241-244	she	person	giv	coref	20-12[87_0]
+5-11	245-248	can	_	_	_	_
+5-12	249-253	drop	_	_	_	_
+5-13	254-261	packets	object	new	coref	13-8[55_0]
+5-14	262-263	(	_	_	_	_
+5-15	264-267	dos	abstract	new	_	_
+5-16	268-269	)	_	_	_	_
+5-17	270-272	or	_	_	_	_
+5-18	273-278	taint	_	_	_	_
+5-19	279-282	the	abstract[18]	giv[18]	_	_
+5-20	283-287	data	abstract[18]	giv[18]	_	_
+5-21	288-290	to	_	_	_	_
+5-22	291-299	initiate	_	_	_	_
+5-23	300-301	a	event[20]	new[20]	_	_
+5-24	302-306	mitm	abstract|event[20]	new|new[20]	_	_
+5-25	307-313	attack	event[20]	new[20]	_	_
+5-26	314-315	.	_	_	_	_
+
+#Text=We allow attackers to collude , bringing under their joint control multiple routes .
+6-1	316-318	We	person	acc	ana	7-6
+6-2	319-324	allow	_	_	_	_
+6-3	325-334	attackers	person	new	ana	6-9
+6-4	335-337	to	_	_	_	_
+6-5	338-345	collude	_	_	_	_
+6-6	346-347	,	_	_	_	_
+6-7	348-356	bringing	_	_	_	_
+6-8	357-362	under	_	_	_	_
+6-9	363-368	their	person|abstract[24]	giv|giv[24]	coref	20-11[88_24]
+6-10	369-374	joint	abstract[24]	giv[24]	_	_
+6-11	375-382	control	abstract[24]	giv[24]	_	_
+6-12	383-391	multiple	place[25]	new[25]	coref	19-6[82_25]
+6-13	392-398	routes	place[25]	new[25]	_	_
+6-14	399-400	.	_	_	_	_
+
+#Text=For simplicity ’s sake , we will refer to all of the colluding parties as one entity .
+7-1	401-404	For	_	_	_	_
+7-2	405-415	simplicity	abstract[26]|abstract[27]	new[26]|new[27]	_	_
+7-3	416-418	’s	abstract[26]|abstract[27]	new[26]|new[27]	_	_
+7-4	419-423	sake	abstract[27]	new[27]	_	_
+7-5	424-425	,	_	_	_	_
+7-6	426-428	we	person	giv	ana	11-5
+7-7	429-433	will	_	_	_	_
+7-8	434-439	refer	_	_	_	_
+7-9	440-442	to	_	_	_	_
+7-10	443-446	all	organization[29]	new[29]	coref	9-15[36_29]
+7-11	447-449	of	organization[29]	new[29]	_	_
+7-12	450-453	the	organization[29]	new[29]	_	_
+7-13	454-463	colluding	organization[29]	new[29]	_	_
+7-14	464-471	parties	organization[29]	new[29]	_	_
+7-15	472-474	as	_	_	_	_
+7-16	475-478	one	abstract[30]	new[30]	_	_
+7-17	479-485	entity	abstract[30]	new[30]	_	_
+7-18	486-487	.	_	_	_	_
+
+#Text=2.2. Assumptions and Definitions
+8-1	488-492	2.2.	_	_	_	_
+8-2	493-504	Assumptions	abstract	new	_	_
+8-3	505-508	and	_	_	_	_
+8-4	509-520	Definitions	abstract	new	_	_
+
+#Text=To allow for communication , the only prior knowledge assumed is the address of both parties .
+9-1	521-523	To	_	_	_	_
+9-2	524-529	allow	abstract[35]	giv[35]	coref|coref	9-2[35_34]|10-1[37_35]
+9-3	530-533	for	abstract[35]	giv[35]	_	_
+9-4	534-547	communication	abstract|abstract[35]	giv|giv[35]	coref	16-26
+9-5	548-549	,	abstract[35]	giv[35]	_	_
+9-6	550-553	the	abstract[34]|abstract[35]	new[34]|giv[35]	_	_
+9-7	554-558	only	abstract[34]|abstract[35]	new[34]|giv[35]	_	_
+9-8	559-564	prior	abstract[34]|abstract[35]	new[34]|giv[35]	_	_
+9-9	565-574	knowledge	abstract[34]|abstract[35]	new[34]|giv[35]	_	_
+9-10	575-582	assumed	abstract[34]|abstract[35]	new[34]|giv[35]	_	_
+9-11	583-585	is	abstract[35]	giv[35]	_	_
+9-12	586-589	the	abstract[35]	giv[35]	_	_
+9-13	590-597	address	abstract[35]	giv[35]	_	_
+9-14	598-600	of	abstract[35]	giv[35]	_	_
+9-15	601-605	both	abstract[35]|organization[36]	giv[35]|giv[36]	_	_
+9-16	606-613	parties	abstract[35]|organization[36]	giv[35]|giv[36]	_	_
+9-17	614-615	.	_	_	_	_
+
+#Text=This address can be in any form : ip address , unique imei embedded in the device , or phone number allocated to the smart node .
+10-1	616-620	This	abstract[37]	giv[37]	coref	11-8[45_37]
+10-2	621-628	address	abstract[37]	giv[37]	_	_
+10-3	629-632	can	_	_	_	_
+10-4	633-635	be	_	_	_	_
+10-5	636-638	in	_	_	_	_
+10-6	639-642	any	abstract[38]	new[38]	_	_
+10-7	643-647	form	abstract[38]	new[38]	_	_
+10-8	648-649	:	_	_	_	_
+10-9	650-652	ip	abstract	new	_	_
+10-10	653-660	address	_	_	_	_
+10-11	661-662	,	_	_	_	_
+10-12	663-669	unique	_	_	_	_
+10-13	670-674	imei	_	_	_	_
+10-14	675-683	embedded	_	_	_	_
+10-15	684-686	in	_	_	_	_
+10-16	687-690	the	object[40]	new[40]	_	_
+10-17	691-697	device	object[40]	new[40]	_	_
+10-18	698-699	,	_	_	_	_
+10-19	700-702	or	_	_	_	_
+10-20	703-708	phone	object	new	_	_
+10-21	709-715	number	_	_	_	_
+10-22	716-725	allocated	_	_	_	_
+10-23	726-728	to	_	_	_	_
+10-24	729-732	the	abstract[42]	new[42]	_	_
+10-25	733-738	smart	abstract[42]	new[42]	_	_
+10-26	739-743	node	abstract[42]	new[42]	_	_
+10-27	744-745	.	_	_	_	_
+
+#Text=To avoid collisions , we assume that this address is unique and cannot be spoofed .
+11-1	746-748	To	_	_	_	_
+11-2	749-754	avoid	_	_	_	_
+11-3	755-765	collisions	event	new	ana	12-14[49_0]
+11-4	766-767	,	_	_	_	_
+11-5	768-770	we	person	giv	ana	12-6
+11-6	771-777	assume	_	_	_	_
+11-7	778-782	that	_	_	_	_
+11-8	783-787	this	abstract[45]	giv[45]	coref	12-10[48_45]
+11-9	788-795	address	abstract[45]	giv[45]	_	_
+11-10	796-798	is	_	_	_	_
+11-11	799-805	unique	_	_	_	_
+11-12	806-809	and	_	_	_	_
+11-13	810-816	cannot	_	_	_	_
+11-14	817-819	be	_	_	_	_
+11-15	820-827	spoofed	_	_	_	_
+11-16	828-829	.	_	_	_	_
+
+#Text=To justify this assumption , we note that spoofing an address only influences some of the routing tables ; not all of them .
+12-1	830-832	To	_	_	_	_
+12-2	833-840	justify	_	_	_	_
+12-3	841-845	this	abstract[46]	new[46]	_	_
+12-4	846-856	assumption	abstract[46]	new[46]	_	_
+12-5	857-858	,	_	_	_	_
+12-6	859-861	we	person	giv	ana	22-4
+12-7	862-866	note	_	_	_	_
+12-8	867-871	that	_	_	_	_
+12-9	872-880	spoofing	_	_	_	_
+12-10	881-883	an	abstract[48]	giv[48]	ana	13-1[0_48]
+12-11	884-891	address	abstract[48]	giv[48]	_	_
+12-12	892-896	only	_	_	_	_
+12-13	897-907	influences	_	_	_	_
+12-14	908-912	some	event[49]	giv[49]	ana	12-23[0_49]
+12-15	913-915	of	event[49]	giv[49]	_	_
+12-16	916-919	the	event[49]|abstract[51]	giv[49]|new[51]	_	_
+12-17	920-927	routing	event[49]|abstract|abstract[51]	giv[49]|new|new[51]	_	_
+12-18	928-934	tables	event[49]|abstract[51]	giv[49]|new[51]	_	_
+12-19	935-936	;	_	_	_	_
+12-20	937-940	not	_	_	_	_
+12-21	941-944	all	_	_	_	_
+12-22	945-947	of	_	_	_	_
+12-23	948-952	them	event	giv	_	_
+12-24	953-954	.	_	_	_	_
+
+#Text=This allows for the correct delivery of packets not traveling through malicious nodes .
+13-1	955-959	This	abstract	giv	_	_
+13-2	960-966	allows	_	_	_	_
+13-3	967-970	for	_	_	_	_
+13-4	971-974	the	event[54]	new[54]	_	_
+13-5	975-982	correct	event[54]	new[54]	_	_
+13-6	983-991	delivery	event[54]	new[54]	_	_
+13-7	992-994	of	event[54]	new[54]	_	_
+13-8	995-1002	packets	event[54]|object[55]	new[54]|giv[55]	_	_
+13-9	1003-1006	not	event[54]|object[55]	new[54]|giv[55]	_	_
+13-10	1007-1016	traveling	event[54]|object[55]	new[54]|giv[55]	_	_
+13-11	1017-1024	through	event[54]|object[55]	new[54]|giv[55]	_	_
+13-12	1025-1034	malicious	event[54]|object[55]|abstract[56]	new[54]|giv[55]|new[56]	_	_
+13-13	1035-1040	nodes	event[54]|object[55]|abstract[56]	new[54]|giv[55]|new[56]	_	_
+13-14	1041-1042	.	_	_	_	_
+
+#Text=Last , no trusted third party ( ttp ) is available for the coordination or authentication of sender and receiver .
+14-1	1043-1047	Last	_	_	_	_
+14-2	1048-1049	,	_	_	_	_
+14-3	1050-1052	no	organization[57]	new[57]	_	_
+14-4	1053-1060	trusted	organization[57]	new[57]	_	_
+14-5	1061-1066	third	organization[57]	new[57]	_	_
+14-6	1067-1072	party	organization[57]	new[57]	_	_
+14-7	1073-1074	(	_	_	_	_
+14-8	1075-1078	ttp	abstract	new	_	_
+14-9	1079-1080	)	_	_	_	_
+14-10	1081-1083	is	_	_	_	_
+14-11	1084-1093	available	_	_	_	_
+14-12	1094-1097	for	_	_	_	_
+14-13	1098-1101	the	abstract[59]	new[59]	_	_
+14-14	1102-1114	coordination	abstract[59]	new[59]	_	_
+14-15	1115-1117	or	_	_	_	_
+14-16	1118-1132	authentication	abstract[60]	new[60]	_	_
+14-17	1133-1135	of	abstract[60]	new[60]	_	_
+14-18	1136-1142	sender	abstract[60]|abstract|abstract[62]	new[60]|new|new[62]	coref	17-12[77_62]
+14-19	1143-1146	and	abstract[60]|abstract[62]	new[60]|new[62]	_	_
+14-20	1147-1155	receiver	abstract[60]|abstract[62]|person	new[60]|new[62]|new	coref	17-17
+14-21	1156-1157	.	_	_	_	_
+
+#Text=Definition 1.
+15-1	1158-1168	Definition	abstract[64]	new[64]	coref	23-1[97_64]
+15-2	1169-1171	1.	abstract[64]	new[64]	_	_
+
+#Text=Let be a topology graph of a manet at a specific time , where are the hosts in the network , and are the bidirectional communication links between these hosts .
+16-1	1172-1175	Let	_	_	_	_
+16-2	1176-1178	be	_	_	_	_
+16-3	1179-1180	a	abstract[66]	new[66]	_	_
+16-4	1181-1189	topology	abstract|abstract[66]	new|new[66]	_	_
+16-5	1190-1195	graph	abstract[66]	new[66]	_	_
+16-6	1196-1198	of	abstract[66]	new[66]	_	_
+16-7	1199-1200	a	abstract[66]|abstract[67]	new[66]|new[67]	coref	27-10[105_67]
+16-8	1201-1206	manet	abstract[66]|abstract[67]	new[66]|new[67]	_	_
+16-9	1207-1209	at	abstract[66]	new[66]	_	_
+16-10	1210-1211	a	abstract[66]|time[68]	new[66]|new[68]	_	_
+16-11	1212-1220	specific	abstract[66]|time[68]	new[66]|new[68]	_	_
+16-12	1221-1225	time	abstract[66]|time[68]	new[66]|new[68]	_	_
+16-13	1226-1227	,	_	_	_	_
+16-14	1228-1233	where	_	_	_	_
+16-15	1234-1237	are	_	_	_	_
+16-16	1238-1241	the	person[69]	new[69]	coref	16-29[73_69]
+16-17	1242-1247	hosts	person[69]	new[69]	_	_
+16-18	1248-1250	in	person[69]	new[69]	_	_
+16-19	1251-1254	the	person[69]|abstract[70]	new[69]|new[70]	coref	28-8[113_70]
+16-20	1255-1262	network	person[69]|abstract[70]	new[69]|new[70]	_	_
+16-21	1263-1264	,	_	_	_	_
+16-22	1265-1268	and	_	_	_	_
+16-23	1269-1272	are	_	_	_	_
+16-24	1273-1276	the	abstract[72]	new[72]	_	_
+16-25	1277-1290	bidirectional	abstract[72]	new[72]	_	_
+16-26	1291-1304	communication	abstract|abstract[72]	giv|new[72]	_	_
+16-27	1305-1310	links	abstract[72]	new[72]	_	_
+16-28	1311-1318	between	abstract[72]	new[72]	_	_
+16-29	1319-1324	these	abstract[72]|person[73]	new[72]|giv[73]	_	_
+16-30	1325-1330	hosts	abstract[72]|person[73]	new[72]|giv[73]	_	_
+16-31	1331-1332	.	_	_	_	_
+
+#Text=Let be a noncyclic route ( ) in G , between the sender ( ) and receiver ( ) .
+17-1	1333-1336	Let	_	_	_	_
+17-2	1337-1339	be	_	_	_	_
+17-3	1340-1341	a	abstract[74]	giv[74]	coref	22-22[96_74]
+17-4	1342-1351	noncyclic	abstract[74]	giv[74]	_	_
+17-5	1352-1357	route	abstract[74]	giv[74]	_	_
+17-6	1358-1359	(	abstract[74]	giv[74]	_	_
+17-7	1360-1361	)	abstract[74]	giv[74]	_	_
+17-8	1362-1364	in	abstract[74]	giv[74]	_	_
+17-9	1365-1366	G	abstract[74]|abstract	giv[74]|new	_	_
+17-10	1367-1368	,	abstract[74]	giv[74]	_	_
+17-11	1369-1376	between	abstract[74]	giv[74]	_	_
+17-12	1377-1380	the	abstract[74]|person[76]|abstract[77]	giv[74]|new[76]|giv[77]	coref|coref	27-23[107_76]|27-23[108_77]
+17-13	1381-1387	sender	abstract[74]|person[76]|abstract[77]	giv[74]|new[76]|giv[77]	_	_
+17-14	1388-1389	(	abstract[74]|abstract[77]	giv[74]|giv[77]	_	_
+17-15	1390-1391	)	abstract[74]|abstract[77]	giv[74]|giv[77]	_	_
+17-16	1392-1395	and	abstract[74]|abstract[77]	giv[74]|giv[77]	_	_
+17-17	1396-1404	receiver	abstract[74]|abstract[77]|person	giv[74]|giv[77]|giv	coref	27-26
+17-18	1405-1406	(	_	_	_	_
+17-19	1407-1408	)	_	_	_	_
+17-20	1409-1410	.	_	_	_	_
+
+#Text=Let denote the length of the path .
+18-1	1411-1414	Let	_	_	_	_
+18-2	1415-1421	denote	_	_	_	_
+18-3	1422-1425	the	abstract[79]	new[79]	_	_
+18-4	1426-1432	length	abstract[79]	new[79]	_	_
+18-5	1433-1435	of	abstract[79]	new[79]	_	_
+18-6	1436-1439	the	abstract[79]|abstract[80]	new[79]|new[80]	_	_
+18-7	1440-1444	path	abstract[79]|abstract[80]	new[79]|new[80]	_	_
+18-8	1445-1446	.	_	_	_	_
+
+#Text=Let denote the set of all possible such routes , the size of , and the set of chosen routes from ; implying , .
+19-1	1447-1450	Let	_	_	_	_
+19-2	1451-1457	denote	_	_	_	_
+19-3	1458-1461	the	abstract[81]	new[81]	_	_
+19-4	1462-1465	set	abstract[81]	new[81]	_	_
+19-5	1466-1468	of	abstract[81]	new[81]	_	_
+19-6	1469-1472	all	abstract[81]|place[82]	new[81]|giv[82]	coref	19-19[85_82]
+19-7	1473-1481	possible	abstract[81]|place[82]	new[81]|giv[82]	_	_
+19-8	1482-1486	such	abstract[81]|place[82]	new[81]|giv[82]	_	_
+19-9	1487-1493	routes	abstract[81]|place[82]	new[81]|giv[82]	_	_
+19-10	1494-1495	,	_	_	_	_
+19-11	1496-1499	the	abstract[83]	new[83]	coref	21-3[89_83]
+19-12	1500-1504	size	abstract[83]	new[83]	_	_
+19-13	1505-1507	of	abstract[83]	new[83]	_	_
+19-14	1508-1509	,	_	_	_	_
+19-15	1510-1513	and	_	_	_	_
+19-16	1514-1517	the	abstract[84]	new[84]	ana	20-4[86_84]
+19-17	1518-1521	set	abstract[84]	new[84]	_	_
+19-18	1522-1524	of	abstract[84]	new[84]	_	_
+19-19	1525-1531	chosen	abstract[84]|place[85]	new[84]|giv[85]	_	_
+19-20	1532-1538	routes	abstract[84]|place[85]	new[84]|giv[85]	_	_
+19-21	1539-1543	from	abstract[84]	new[84]	_	_
+19-22	1544-1545	;	_	_	_	_
+19-23	1546-1554	implying	_	_	_	_
+19-24	1555-1556	,	_	_	_	_
+19-25	1557-1558	.	_	_	_	_
+
+#Text=Let , such that and , , which is under the attacker ’s control .
+20-1	1559-1562	Let	_	_	_	_
+20-2	1563-1564	,	_	_	_	_
+20-3	1565-1569	such	_	_	_	_
+20-4	1570-1574	that	abstract[86]	giv[86]	_	_
+20-5	1575-1578	and	abstract[86]	giv[86]	_	_
+20-6	1579-1580	,	abstract[86]	giv[86]	_	_
+20-7	1581-1582	,	abstract[86]	giv[86]	_	_
+20-8	1583-1588	which	abstract[86]	giv[86]	_	_
+20-9	1589-1591	is	abstract[86]	giv[86]	_	_
+20-10	1592-1597	under	abstract[86]	giv[86]	_	_
+20-11	1598-1601	the	abstract[86]|abstract[88]	giv[86]|giv[88]	coref	22-17[95_88]
+20-12	1602-1610	attacker	abstract[86]|person[87]|abstract[88]	giv[86]|giv[87]|giv[88]	coref	22-18[94_87]
+20-13	1611-1613	’s	abstract[86]|person[87]|abstract[88]	giv[86]|giv[87]|giv[88]	_	_
+20-14	1614-1621	control	abstract[86]|abstract[88]	giv[86]|giv[88]	_	_
+20-15	1622-1623	.	_	_	_	_
+
+#Text=Let equal the size of A.
+21-1	1624-1627	Let	_	_	_	_
+21-2	1628-1633	equal	_	_	_	_
+21-3	1634-1637	the	abstract[89]	giv[89]	ana	22-7[0_89]
+21-4	1638-1642	size	abstract[89]	giv[89]	_	_
+21-5	1643-1645	of	abstract[89]	giv[89]	_	_
+21-6	1646-1648	A.	abstract[89]|person	giv[89]|new	_	_
+
+#Text=In essence , we define that it suffices for one host , , to come under the attacker ’s control for the entire route , , to be tainted .
+22-1	1649-1651	In	_	_	_	_
+22-2	1652-1659	essence	_	_	_	_
+22-3	1660-1661	,	_	_	_	_
+22-4	1662-1664	we	person	giv	ana	27-7
+22-5	1665-1671	define	_	_	_	_
+22-6	1672-1676	that	_	_	_	_
+22-7	1677-1679	it	abstract	giv	_	_
+22-8	1680-1688	suffices	_	_	_	_
+22-9	1689-1692	for	_	_	_	_
+22-10	1693-1696	one	person[93]	new[93]	_	_
+22-11	1697-1701	host	person[93]	new[93]	_	_
+22-12	1702-1703	,	_	_	_	_
+22-13	1704-1705	,	_	_	_	_
+22-14	1706-1708	to	_	_	_	_
+22-15	1709-1713	come	_	_	_	_
+22-16	1714-1719	under	_	_	_	_
+22-17	1720-1723	the	abstract[95]	giv[95]	coref	25-10[100_95]
+22-18	1724-1732	attacker	person[94]|abstract[95]	giv[94]|giv[95]	coref	25-11[99_94]
+22-19	1733-1735	’s	person[94]|abstract[95]	giv[94]|giv[95]	_	_
+22-20	1736-1743	control	abstract[95]	giv[95]	_	_
+22-21	1744-1747	for	_	_	_	_
+22-22	1748-1751	the	abstract[96]	giv[96]	coref	27-19[106_96]
+22-23	1752-1758	entire	abstract[96]	giv[96]	_	_
+22-24	1759-1764	route	abstract[96]	giv[96]	_	_
+22-25	1765-1766	,	_	_	_	_
+22-26	1767-1768	,	_	_	_	_
+22-27	1769-1771	to	_	_	_	_
+22-28	1772-1774	be	_	_	_	_
+22-29	1775-1782	tainted	_	_	_	_
+22-30	1783-1784	.	_	_	_	_
+
+#Text=Definition 2.
+23-1	1785-1795	Definition	abstract[97]	giv[97]	coref	27-3[103_97]
+23-2	1796-1798	2.	abstract[97]	giv[97]	_	_
+
+#Text=Let .
+24-1	1799-1802	Let	_	_	_	_
+24-2	1803-1804	.	_	_	_	_
+
+#Text=That is , denoting all the paths not under the attacker ’s control .
+25-1	1805-1809	That	_	_	_	_
+25-2	1810-1812	is	_	_	_	_
+25-3	1813-1814	,	_	_	_	_
+25-4	1815-1823	denoting	_	_	_	_
+25-5	1824-1827	all	abstract[98]	new[98]	_	_
+25-6	1828-1831	the	abstract[98]	new[98]	_	_
+25-7	1832-1837	paths	abstract[98]	new[98]	_	_
+25-8	1838-1841	not	abstract[98]	new[98]	_	_
+25-9	1842-1847	under	abstract[98]	new[98]	_	_
+25-10	1848-1851	the	abstract[98]|abstract[100]	new[98]|giv[100]	coref	27-30[111_100]
+25-11	1852-1860	attacker	abstract[98]|person[99]|abstract[100]	new[98]|giv[99]|giv[100]	coref	27-31[110_99]
+25-12	1861-1863	’s	abstract[98]|person[99]|abstract[100]	new[98]|giv[99]|giv[100]	_	_
+25-13	1864-1871	control	abstract[98]|abstract[100]	new[98]|giv[100]	_	_
+25-14	1872-1873	.	_	_	_	_
+
+#Text=Let be the size of F.
+26-1	1874-1877	Let	_	_	_	_
+26-2	1878-1880	be	_	_	_	_
+26-3	1881-1884	the	abstract[101]	new[101]	_	_
+26-4	1885-1889	size	abstract[101]	new[101]	_	_
+26-5	1890-1892	of	abstract[101]	new[101]	_	_
+26-6	1893-1895	F.	abstract[101]|person	new[101]|new	_	_
+
+#Text=Based on the above definition , we assume that the manet is such that , meaning that at least one route between the sender and receiver is not under the attacker ’s control .
+27-1	1896-1901	Based	_	_	_	_
+27-2	1902-1904	on	_	_	_	_
+27-3	1905-1908	the	abstract[103]	giv[103]	_	_
+27-4	1909-1914	above	abstract[103]	giv[103]	_	_
+27-5	1915-1925	definition	abstract[103]	giv[103]	_	_
+27-6	1926-1927	,	_	_	_	_
+27-7	1928-1930	we	person	giv	ana	30-4
+27-8	1931-1937	assume	_	_	_	_
+27-9	1938-1942	that	_	_	_	_
+27-10	1943-1946	the	abstract[105]	giv[105]	_	_
+27-11	1947-1952	manet	abstract[105]	giv[105]	_	_
+27-12	1953-1955	is	_	_	_	_
+27-13	1956-1960	such	_	_	_	_
+27-14	1961-1965	that	_	_	_	_
+27-15	1966-1967	,	_	_	_	_
+27-16	1968-1975	meaning	_	_	_	_
+27-17	1976-1980	that	_	_	_	_
+27-18	1981-1983	at	_	_	_	_
+27-19	1984-1989	least	abstract[106]	giv[106]	coref	46-11[201_106]
+27-20	1990-1993	one	abstract[106]	giv[106]	_	_
+27-21	1994-1999	route	abstract[106]	giv[106]	_	_
+27-22	2000-2007	between	abstract[106]	giv[106]	_	_
+27-23	2008-2011	the	abstract[106]|person[107]|abstract[108]	giv[106]|giv[107]|giv[108]	coref	58-9[261_108]
+27-24	2012-2018	sender	abstract[106]|person[107]|abstract[108]	giv[106]|giv[107]|giv[108]	_	_
+27-25	2019-2022	and	abstract[106]|abstract[108]	giv[106]|giv[108]	_	_
+27-26	2023-2031	receiver	abstract[106]|abstract[108]|person	giv[106]|giv[108]|giv	_	_
+27-27	2032-2034	is	_	_	_	_
+27-28	2035-2038	not	_	_	_	_
+27-29	2039-2044	under	_	_	_	_
+27-30	2045-2048	the	abstract[111]	giv[111]	_	_
+27-31	2049-2057	attacker	person[110]|abstract[111]	giv[110]|giv[111]	coref	28-2[112_110]
+27-32	2058-2060	’s	person[110]|abstract[111]	giv[110]|giv[111]	_	_
+27-33	2061-2068	control	abstract[111]	giv[111]	_	_
+27-34	2069-2070	.	_	_	_	_
+
+#Text=That the attacker has not taken over the entire network , for which no leap of faith algorithms can succeed .
+28-1	2071-2075	That	_	_	_	_
+28-2	2076-2079	the	person[112]	giv[112]	_	_
+28-3	2080-2088	attacker	person[112]	giv[112]	_	_
+28-4	2089-2092	has	_	_	_	_
+28-5	2093-2096	not	_	_	_	_
+28-6	2097-2102	taken	_	_	_	_
+28-7	2103-2107	over	_	_	_	_
+28-8	2108-2111	the	abstract[113]	giv[113]	_	_
+28-9	2112-2118	entire	abstract[113]	giv[113]	_	_
+28-10	2119-2126	network	abstract[113]	giv[113]	_	_
+28-11	2127-2128	,	abstract[113]	giv[113]	_	_
+28-12	2129-2132	for	abstract[113]	giv[113]	_	_
+28-13	2133-2138	which	abstract[113]	giv[113]	_	_
+28-14	2139-2141	no	abstract[113]|abstract[114]|abstract[116]	giv[113]|new[114]|new[116]	coref	34-2[138_116]
+28-15	2142-2146	leap	abstract[113]|abstract[114]|abstract[116]	giv[113]|new[114]|new[116]	_	_
+28-16	2147-2149	of	abstract[113]|abstract[114]|abstract[116]	giv[113]|new[114]|new[116]	_	_
+28-17	2150-2155	faith	abstract[113]|abstract[114]|abstract|abstract[116]	giv[113]|new[114]|new|new[116]	_	_
+28-18	2156-2166	algorithms	abstract[113]|abstract[116]	giv[113]|new[116]	_	_
+28-19	2167-2170	can	abstract[113]	giv[113]	_	_
+28-20	2171-2178	succeed	abstract[113]	giv[113]	_	_
+28-21	2179-2180	.	_	_	_	_
+
+#Text=2.3. Simulation Parameters
+29-1	2181-2185	2.3.	_	_	_	_
+29-2	2186-2196	Simulation	abstract|abstract[118]	new|new[118]	coref	31-8
+29-3	2197-2207	Parameters	abstract[118]	new[118]	_	_
+
+#Text=Prior to implementing our algorithm on a real-world manet application ( e.g. , Serval ) , we ran multiple preliminary simulations to test its feasibility .
+30-1	2208-2213	Prior	_	_	_	_
+30-2	2214-2216	to	_	_	_	_
+30-3	2217-2229	implementing	_	_	_	_
+30-4	2230-2233	our	person|abstract[120]	giv|new[120]	ana|coref	30-17|34-15[144_120]
+30-5	2234-2243	algorithm	abstract[120]	new[120]	_	_
+30-6	2244-2246	on	_	_	_	_
+30-7	2247-2248	a	abstract[122]	new[122]	appos	30-12[123_122]
+30-8	2249-2259	real-world	abstract[122]	new[122]	_	_
+30-9	2260-2265	manet	person|abstract[122]	new|new[122]	_	_
+30-10	2266-2277	application	abstract[122]	new[122]	_	_
+30-11	2278-2279	(	_	_	_	_
+30-12	2280-2284	e.g.	abstract[123]	giv[123]	ana	30-24[0_123]
+30-13	2285-2286	,	abstract[123]	giv[123]	_	_
+30-14	2287-2293	Serval	abstract[123]	giv[123]	_	_
+30-15	2294-2295	)	_	_	_	_
+30-16	2296-2297	,	_	_	_	_
+30-17	2298-2300	we	person	giv	ana	31-5
+30-18	2301-2304	ran	_	_	_	_
+30-19	2305-2313	multiple	abstract[125]	new[125]	coref	33-1[135_125]
+30-20	2314-2325	preliminary	abstract[125]	new[125]	_	_
+30-21	2326-2337	simulations	abstract[125]	new[125]	_	_
+30-22	2338-2340	to	_	_	_	_
+30-23	2341-2345	test	_	_	_	_
+30-24	2346-2349	its	abstract|abstract[127]	giv|new[127]	_	_
+30-25	2350-2361	feasibility	abstract[127]	new[127]	_	_
+30-26	2362-2363	.	_	_	_	_
+
+#Text=In this section , we describe our simulation model .
+31-1	2364-2366	In	_	_	_	_
+31-2	2367-2371	this	abstract[128]	new[128]	_	_
+31-3	2372-2379	section	abstract[128]	new[128]	_	_
+31-4	2380-2381	,	_	_	_	_
+31-5	2382-2384	we	person	giv	ana	31-7
+31-6	2385-2393	describe	_	_	_	_
+31-7	2394-2397	our	person|abstract[132]	giv|new[132]	ana|coref	34-13|37-1[159_132]
+31-8	2398-2408	simulation	abstract|abstract[132]	giv|new[132]	coref	34-47
+31-9	2409-2414	model	abstract[132]	new[132]	_	_
+31-10	2415-2416	.	_	_	_	_
+
+#Text=2.3.1. Random Number Generator
+32-1	2417-2423	2.3.1.	_	_	_	_
+32-2	2424-2430	Random	abstract[133]|person[134]	new[133]|new[134]	coref|ana	34-19[141_133]|39-1[0_134]
+32-3	2431-2437	Number	abstract[133]|person[134]	new[133]|new[134]	_	_
+32-4	2438-2447	Generator	person[134]	new[134]	_	_
+
+#Text=All simulations must have the means of generating random data .
+33-1	2448-2451	All	abstract[135]	giv[135]	coref	42-16[177_135]
+33-2	2452-2463	simulations	abstract[135]	giv[135]	_	_
+33-3	2464-2468	must	_	_	_	_
+33-4	2469-2473	have	_	_	_	_
+33-5	2474-2477	the	abstract[136]	new[136]	_	_
+33-6	2478-2483	means	abstract[136]	new[136]	_	_
+33-7	2484-2486	of	abstract[136]	new[136]	_	_
+33-8	2487-2497	generating	abstract[136]	new[136]	_	_
+33-9	2498-2504	random	abstract[136]|abstract[137]	new[136]|new[137]	_	_
+33-10	2505-2509	data	abstract[136]|abstract[137]	new[136]|new[137]	_	_
+33-11	2510-2511	.	_	_	_	_
+
+#Text=Of the many algorithms available ( e.g. , Mersenne Twister ) , we chose the combined multiple recursive random number generator ( cmrg ) algorithm , an algorithm that passed a wide range of empirical tests of randomness and is the algorithm of choice in many simulation software ( e.g. , Arena ) .
+34-1	2512-2514	Of	_	_	_	_
+34-2	2515-2518	the	abstract[138]	giv[138]	_	_
+34-3	2519-2523	many	abstract[138]	giv[138]	_	_
+34-4	2524-2534	algorithms	abstract[138]	giv[138]	_	_
+34-5	2535-2544	available	abstract[138]	giv[138]	_	_
+34-6	2545-2546	(	_	_	_	_
+34-7	2547-2551	e.g.	_	_	_	_
+34-8	2552-2553	,	_	_	_	_
+34-9	2554-2562	Mersenne	person	new	_	_
+34-10	2563-2570	Twister	_	_	_	_
+34-11	2571-2572	)	_	_	_	_
+34-12	2573-2574	,	_	_	_	_
+34-13	2575-2577	we	person	giv	ana	43-1
+34-14	2578-2583	chose	_	_	_	_
+34-15	2584-2587	the	abstract[144]	giv[144]	appos	34-27[145_144]
+34-16	2588-2596	combined	abstract[144]	giv[144]	_	_
+34-17	2597-2605	multiple	abstract[142]|abstract[144]	new[142]|giv[144]	appos	34-23[0_142]
+34-18	2606-2615	recursive	abstract[142]|abstract[144]	new[142]|giv[144]	_	_
+34-19	2616-2622	random	abstract[141]|abstract[142]|abstract[144]	giv[141]|new[142]|giv[144]	coref	35-12[155_141]
+34-20	2623-2629	number	abstract[141]|abstract[142]|abstract[144]	giv[141]|new[142]|giv[144]	_	_
+34-21	2630-2639	generator	abstract[142]|abstract[144]	new[142]|giv[144]	_	_
+34-22	2640-2641	(	abstract[144]	giv[144]	_	_
+34-23	2642-2646	cmrg	abstract|abstract[144]	giv|giv[144]	_	_
+34-24	2647-2648	)	abstract[144]	giv[144]	_	_
+34-25	2649-2658	algorithm	abstract[144]	giv[144]	_	_
+34-26	2659-2660	,	_	_	_	_
+34-27	2661-2663	an	abstract[145]	giv[145]	coref	34-41[149_145]
+34-28	2664-2673	algorithm	abstract[145]	giv[145]	_	_
+34-29	2674-2678	that	abstract[145]	giv[145]	_	_
+34-30	2679-2685	passed	abstract[145]	giv[145]	_	_
+34-31	2686-2687	a	abstract[145]|abstract[146]	giv[145]|new[146]	_	_
+34-32	2688-2692	wide	abstract[145]|abstract[146]	giv[145]|new[146]	_	_
+34-33	2693-2698	range	abstract[145]|abstract[146]	giv[145]|new[146]	_	_
+34-34	2699-2701	of	abstract[145]|abstract[146]	giv[145]|new[146]	_	_
+34-35	2702-2711	empirical	abstract[145]|abstract[146]|abstract[147]	giv[145]|new[146]|new[147]	_	_
+34-36	2712-2717	tests	abstract[145]|abstract[146]|abstract[147]	giv[145]|new[146]|new[147]	_	_
+34-37	2718-2720	of	abstract[145]|abstract[146]|abstract[147]	giv[145]|new[146]|new[147]	_	_
+34-38	2721-2731	randomness	abstract[145]|abstract[146]|abstract[147]|abstract	giv[145]|new[146]|new[147]|new	_	_
+34-39	2732-2735	and	_	_	_	_
+34-40	2736-2738	is	_	_	_	_
+34-41	2739-2742	the	abstract[149]	giv[149]	coref	44-2[187_149]
+34-42	2743-2752	algorithm	abstract[149]	giv[149]	_	_
+34-43	2753-2755	of	abstract[149]	giv[149]	_	_
+34-44	2756-2762	choice	abstract[149]|abstract	giv[149]|new	_	_
+34-45	2763-2765	in	abstract[149]	giv[149]	_	_
+34-46	2766-2770	many	abstract[149]|abstract[152]	giv[149]|new[152]	_	_
+34-47	2771-2781	simulation	abstract[149]|abstract|abstract[152]	giv[149]|giv|new[152]	coref	45-1[189_0]
+34-48	2782-2790	software	abstract[149]|abstract[152]	giv[149]|new[152]	_	_
+34-49	2791-2792	(	_	_	_	_
+34-50	2793-2797	e.g.	place[153]	new[153]	_	_
+34-51	2798-2799	,	place[153]	new[153]	_	_
+34-52	2800-2805	Arena	place[153]	new[153]	_	_
+34-53	2806-2807	)	_	_	_	_
+34-54	2808-2809	.	_	_	_	_
+
+#Text=Of course , similar results should be achieved using all good random number generators .
+35-1	2810-2812	Of	_	_	_	_
+35-2	2813-2819	course	_	_	_	_
+35-3	2820-2821	,	_	_	_	_
+35-4	2822-2829	similar	abstract[154]	new[154]	_	_
+35-5	2830-2837	results	abstract[154]	new[154]	_	_
+35-6	2838-2844	should	_	_	_	_
+35-7	2845-2847	be	_	_	_	_
+35-8	2848-2856	achieved	_	_	_	_
+35-9	2857-2862	using	_	_	_	_
+35-10	2863-2866	all	abstract[156]	new[156]	_	_
+35-11	2867-2871	good	abstract[156]	new[156]	_	_
+35-12	2872-2878	random	abstract[155]|abstract[156]	giv[155]|new[156]	coref	51-1[221_155]
+35-13	2879-2885	number	abstract[155]|abstract[156]	giv[155]|new[156]	_	_
+35-14	2886-2896	generators	abstract[156]	new[156]	_	_
+35-15	2897-2898	.	_	_	_	_
+
+#Text=2.3.2.
+36-1	2899-2905	2.3.2.	abstract	new	_	_
+
+#Text=Mobility Model
+37-1	2906-2914	Mobility	organization|abstract[159]	new|giv[159]	coref	42-19[179_159]
+37-2	2915-2920	Model	abstract[159]	giv[159]	_	_
+
+#Text=The mobility of nodes in the real world exhibits vastly varying behaviors .
+38-1	2921-2924	The	abstract[160]	new[160]	_	_
+38-2	2925-2933	mobility	abstract[160]	new[160]	_	_
+38-3	2934-2936	of	abstract[160]	new[160]	_	_
+38-4	2937-2942	nodes	abstract[160]|abstract	new[160]|new	coref	57-8[252_0]
+38-5	2943-2945	in	abstract[160]	new[160]	_	_
+38-6	2946-2949	the	abstract[160]|abstract[162]	new[160]|new[162]	_	_
+38-7	2950-2954	real	abstract[160]|abstract[162]	new[160]|new[162]	_	_
+38-8	2955-2960	world	abstract[160]|abstract[162]	new[160]|new[162]	_	_
+38-9	2961-2969	exhibits	_	_	_	_
+38-10	2970-2976	vastly	abstract[163]	new[163]	_	_
+38-11	2977-2984	varying	abstract[163]	new[163]	_	_
+38-12	2985-2994	behaviors	abstract[163]	new[163]	_	_
+38-13	2995-2996	.	_	_	_	_
+
+#Text=Some walk , others drive .
+39-1	2997-3001	Some	person	giv	ana	40-1
+39-2	3002-3006	walk	_	_	_	_
+39-3	3007-3008	,	_	_	_	_
+39-4	3009-3015	others	person	new	coref	40-6
+39-5	3016-3021	drive	_	_	_	_
+39-6	3022-3023	.	_	_	_	_
+
+#Text=Some move about randomly , others in specific formations or patterns .
+40-1	3024-3028	Some	person	giv	ana	41-1[170_0]
+40-2	3029-3033	move	_	_	_	_
+40-3	3034-3039	about	_	_	_	_
+40-4	3040-3048	randomly	_	_	_	_
+40-5	3049-3050	,	_	_	_	_
+40-6	3051-3057	others	person	giv	coref	53-22[239_0]
+40-7	3058-3060	in	_	_	_	_
+40-8	3061-3069	specific	abstract[168]	new[168]	_	_
+40-9	3070-3080	formations	abstract[168]	new[168]	_	_
+40-10	3081-3083	or	_	_	_	_
+40-11	3084-3092	patterns	abstract	new	ana	41-5
+40-12	3093-3094	.	_	_	_	_
+
+#Text=Each of these have their own characteristics , and must be modelled accordingly ( for a survey see ) .
+41-1	3095-3099	Each	person[170]	giv[170]	_	_
+41-2	3100-3102	of	person[170]	giv[170]	_	_
+41-3	3103-3108	these	person[170]	giv[170]	_	_
+41-4	3109-3113	have	_	_	_	_
+41-5	3114-3119	their	abstract|abstract[172]	giv|new[172]	_	_
+41-6	3120-3123	own	abstract[172]	new[172]	_	_
+41-7	3124-3139	characteristics	abstract[172]	new[172]	_	_
+41-8	3140-3141	,	_	_	_	_
+41-9	3142-3145	and	_	_	_	_
+41-10	3146-3150	must	_	_	_	_
+41-11	3151-3153	be	_	_	_	_
+41-12	3154-3162	modelled	_	_	_	_
+41-13	3163-3174	accordingly	_	_	_	_
+41-14	3175-3176	(	_	_	_	_
+41-15	3177-3180	for	_	_	_	_
+41-16	3181-3182	a	abstract[173]	new[173]	ana	42-3[0_173]
+41-17	3183-3189	survey	abstract[173]	new[173]	_	_
+41-18	3190-3193	see	_	_	_	_
+41-19	3194-3195	)	_	_	_	_
+41-20	3196-3197	.	_	_	_	_
+
+#Text=Due to its prevalence ( see , e.g. , ) , in this work , all simulations followed a random walk model , which captures the pattern of people in open spaces or recreational parks .
+42-1	3198-3201	Due	_	_	_	_
+42-2	3202-3204	to	_	_	_	_
+42-3	3205-3208	its	abstract|abstract[175]	giv|new[175]	ana	45-5
+42-4	3209-3219	prevalence	abstract[175]	new[175]	_	_
+42-5	3220-3221	(	_	_	_	_
+42-6	3222-3225	see	_	_	_	_
+42-7	3226-3227	,	_	_	_	_
+42-8	3228-3232	e.g.	_	_	_	_
+42-9	3233-3234	,	_	_	_	_
+42-10	3235-3236	)	_	_	_	_
+42-11	3237-3238	,	_	_	_	_
+42-12	3239-3241	in	_	_	_	_
+42-13	3242-3246	this	abstract[176]	new[176]	_	_
+42-14	3247-3251	work	abstract[176]	new[176]	_	_
+42-15	3252-3253	,	_	_	_	_
+42-16	3254-3257	all	abstract[177]	giv[177]	_	_
+42-17	3258-3269	simulations	abstract[177]	giv[177]	_	_
+42-18	3270-3278	followed	_	_	_	_
+42-19	3279-3280	a	abstract[179]	giv[179]	_	_
+42-20	3281-3287	random	abstract[179]	giv[179]	_	_
+42-21	3288-3292	walk	event|abstract[179]	new|giv[179]	_	_
+42-22	3293-3298	model	abstract[179]	giv[179]	_	_
+42-23	3299-3300	,	abstract[179]	giv[179]	_	_
+42-24	3301-3306	which	abstract[179]	giv[179]	_	_
+42-25	3307-3315	captures	abstract[179]	giv[179]	_	_
+42-26	3316-3319	the	abstract[179]|abstract[180]	giv[179]|new[180]	_	_
+42-27	3320-3327	pattern	abstract[179]|abstract[180]	giv[179]|new[180]	_	_
+42-28	3328-3330	of	abstract[179]|abstract[180]	giv[179]|new[180]	_	_
+42-29	3331-3337	people	abstract[179]|abstract[180]|person[181]	giv[179]|new[180]|new[181]	_	_
+42-30	3338-3340	in	abstract[179]|abstract[180]|person[181]	giv[179]|new[180]|new[181]	_	_
+42-31	3341-3345	open	abstract[179]|abstract[180]|person[181]|place[182]	giv[179]|new[180]|new[181]|new[182]	_	_
+42-32	3346-3352	spaces	abstract[179]|abstract[180]|person[181]|place[182]	giv[179]|new[180]|new[181]|new[182]	_	_
+42-33	3353-3355	or	abstract[179]|abstract[180]|person[181]	giv[179]|new[180]|new[181]	_	_
+42-34	3356-3368	recreational	abstract[179]|abstract[180]|person[181]|place[183]	giv[179]|new[180]|new[181]|new[183]	_	_
+42-35	3369-3374	parks	abstract[179]|abstract[180]|person[181]|place[183]	giv[179]|new[180]|new[181]|new[183]	_	_
+42-36	3375-3376	.	_	_	_	_
+
+#Text=We leave other models to future research .
+43-1	3377-3379	We	person	giv	ana	46-23
+43-2	3380-3385	leave	_	_	_	_
+43-3	3386-3391	other	abstract[185]	new[185]	_	_
+43-4	3392-3398	models	abstract[185]	new[185]	_	_
+43-5	3399-3401	to	_	_	_	_
+43-6	3402-3408	future	abstract[186]	new[186]	_	_
+43-7	3409-3417	research	abstract[186]	new[186]	_	_
+43-8	3418-3419	.	_	_	_	_
+
+#Text=2.3.3. Routing Algorithm
+44-1	3420-3426	2.3.3.	_	_	_	_
+44-2	3427-3434	Routing	abstract[187]	giv[187]	coref	46-9[202_187]
+44-3	3435-3444	Algorithm	abstract[187]	giv[187]	_	_
+
+#Text=Network simulation requires that one choose the means by which packets are forwarded on the path to the destination .
+45-1	3445-3452	Network	person|abstract[189]	new|giv[189]	coref	55-1[0_189]
+45-2	3453-3463	simulation	abstract[189]	giv[189]	_	_
+45-3	3464-3472	requires	_	_	_	_
+45-4	3473-3477	that	_	_	_	_
+45-5	3478-3481	one	abstract	giv	ana	47-12
+45-6	3482-3488	choose	_	_	_	_
+45-7	3489-3492	the	abstract[191]	new[191]	coref	53-25[240_191]
+45-8	3493-3498	means	abstract[191]	new[191]	_	_
+45-9	3499-3501	by	abstract[191]	new[191]	_	_
+45-10	3502-3507	which	abstract[191]	new[191]	_	_
+45-11	3508-3515	packets	abstract[191]|abstract	new[191]|new	coref	48-1[212_0]
+45-12	3516-3519	are	abstract[191]	new[191]	_	_
+45-13	3520-3529	forwarded	abstract[191]	new[191]	_	_
+45-14	3530-3532	on	abstract[191]	new[191]	_	_
+45-15	3533-3536	the	abstract[191]|abstract[193]	new[191]|new[193]	_	_
+45-16	3537-3541	path	abstract[191]|abstract[193]	new[191]|new[193]	_	_
+45-17	3542-3544	to	abstract[191]|abstract[193]	new[191]|new[193]	_	_
+45-18	3545-3548	the	abstract[191]|abstract[193]|place[194]	new[191]|new[193]|new[194]	_	_
+45-19	3549-3560	destination	abstract[191]|abstract[193]|place[194]	new[191]|new[193]|new[194]	_	_
+45-20	3561-3562	.	_	_	_	_
+
+#Text=Being the basis behind ospf , implementation of the Dijkstra graph theory best route algorithm using standard dynamic programming techniques , allows us to find the optimal ( shortest ) route .
+46-1	3563-3568	Being	_	_	_	_
+46-2	3569-3572	the	abstract[195]	new[195]	_	_
+46-3	3573-3578	basis	abstract[195]	new[195]	_	_
+46-4	3579-3585	behind	abstract[195]	new[195]	_	_
+46-5	3586-3590	ospf	abstract[195]|abstract	new[195]|new	_	_
+46-6	3591-3592	,	_	_	_	_
+46-7	3593-3607	implementation	abstract[197]	new[197]	_	_
+46-8	3608-3610	of	abstract[197]	new[197]	_	_
+46-9	3611-3614	the	abstract[197]|abstract[202]	new[197]|giv[202]	coref	60-1[273_202]
+46-10	3615-3623	Dijkstra	abstract[197]|person|abstract[200]|abstract[202]	new[197]|new|new[200]|giv[202]	_	_
+46-11	3624-3629	graph	abstract[197]|object|abstract[200]|abstract[201]|abstract[202]	new[197]|new|new[200]|giv[201]|giv[202]	coref|coref	46-26[206_201]|50-6[217_0]
+46-12	3630-3636	theory	abstract[197]|abstract[200]|abstract[201]|abstract[202]	new[197]|new[200]|giv[201]|giv[202]	_	_
+46-13	3637-3641	best	abstract[197]|abstract[201]|abstract[202]	new[197]|giv[201]|giv[202]	_	_
+46-14	3642-3647	route	abstract[197]|abstract[201]|abstract[202]	new[197]|giv[201]|giv[202]	_	_
+46-15	3648-3657	algorithm	abstract[197]|abstract[202]	new[197]|giv[202]	_	_
+46-16	3658-3663	using	abstract[197]|abstract[202]	new[197]|giv[202]	_	_
+46-17	3664-3672	standard	abstract[197]|abstract[202]|abstract[204]	new[197]|giv[202]|new[204]	coref	61-1[279_204]
+46-18	3673-3680	dynamic	abstract[197]|abstract[202]|abstract[203]|abstract[204]	new[197]|giv[202]|new[203]|new[204]	_	_
+46-19	3681-3692	programming	abstract[197]|abstract[202]|abstract[203]|abstract[204]	new[197]|giv[202]|new[203]|new[204]	_	_
+46-20	3693-3703	techniques	abstract[197]|abstract[202]|abstract[204]	new[197]|giv[202]|new[204]	_	_
+46-21	3704-3705	,	_	_	_	_
+46-22	3706-3712	allows	_	_	_	_
+46-23	3713-3715	us	person	giv	ana	47-1
+46-24	3716-3718	to	_	_	_	_
+46-25	3719-3723	find	_	_	_	_
+46-26	3724-3727	the	abstract[206]	giv[206]	_	_
+46-27	3728-3735	optimal	abstract[206]	giv[206]	_	_
+46-28	3736-3737	(	abstract[206]	giv[206]	_	_
+46-29	3738-3746	shortest	abstract[206]	giv[206]	_	_
+46-30	3747-3748	)	abstract[206]	giv[206]	_	_
+46-31	3749-3754	route	abstract[206]	giv[206]	_	_
+46-32	3755-3756	.	_	_	_	_
+
+#Text=We randomly chose between multiple paths having similar lengths , classifying one as the better of the bunch .
+47-1	3757-3759	We	person	giv	ana	56-12
+47-2	3760-3768	randomly	_	_	_	_
+47-3	3769-3774	chose	_	_	_	_
+47-4	3775-3782	between	_	_	_	_
+47-5	3783-3791	multiple	abstract[208]	new[208]	coref	48-6[213_208]
+47-6	3792-3797	paths	abstract[208]	new[208]	_	_
+47-7	3798-3804	having	abstract[208]	new[208]	_	_
+47-8	3805-3812	similar	abstract[208]|abstract[209]	new[208]|new[209]	_	_
+47-9	3813-3820	lengths	abstract[208]|abstract[209]	new[208]|new[209]	_	_
+47-10	3821-3822	,	_	_	_	_
+47-11	3823-3834	classifying	_	_	_	_
+47-12	3835-3838	one	abstract	giv	_	_
+47-13	3839-3841	as	_	_	_	_
+47-14	3842-3845	the	_	_	_	_
+47-15	3846-3852	better	_	_	_	_
+47-16	3853-3855	of	_	_	_	_
+47-17	3856-3859	the	abstract[211]	new[211]	_	_
+47-18	3860-3865	bunch	abstract[211]	new[211]	_	_
+47-19	3866-3867	.	_	_	_	_
+
+#Text=All packets were sent through optimal paths when possible .
+48-1	3868-3871	All	abstract[212]	giv[212]	_	_
+48-2	3872-3879	packets	abstract[212]	giv[212]	_	_
+48-3	3880-3884	were	_	_	_	_
+48-4	3885-3889	sent	_	_	_	_
+48-5	3890-3897	through	_	_	_	_
+48-6	3898-3905	optimal	abstract[213]	giv[213]	_	_
+48-7	3906-3911	paths	abstract[213]	giv[213]	_	_
+48-8	3912-3916	when	_	_	_	_
+48-9	3917-3925	possible	_	_	_	_
+48-10	3926-3927	.	_	_	_	_
+
+#Text=2.3.4. Attacker Dispersion
+49-1	3928-3934	2.3.4.	_	_	_	_
+49-2	3935-3943	Attacker	person|abstract[215]	new|new[215]	coref|coref	50-13|50-13[219_215]
+49-3	3944-3954	Dispersion	abstract[215]	new[215]	_	_
+
+#Text=Attackers are randomly placed on the graph , allowing for all possible attacker dispersion scenarios .
+50-1	3955-3964	Attackers	person	new	coref	51-4
+50-2	3965-3968	are	_	_	_	_
+50-3	3969-3977	randomly	_	_	_	_
+50-4	3978-3984	placed	_	_	_	_
+50-5	3985-3987	on	_	_	_	_
+50-6	3988-3991	the	object[217]	giv[217]	coref	61-6[281_217]
+50-7	3992-3997	graph	object[217]	giv[217]	_	_
+50-8	3998-3999	,	_	_	_	_
+50-9	4000-4008	allowing	_	_	_	_
+50-10	4009-4012	for	_	_	_	_
+50-11	4013-4016	all	abstract[220]	new[220]	_	_
+50-12	4017-4025	possible	abstract[220]	new[220]	_	_
+50-13	4026-4034	attacker	person|abstract[219]|abstract[220]	giv|giv[219]|new[220]	coref	53-4[233_0]
+50-14	4035-4045	dispersion	abstract[219]|abstract[220]	giv[219]|new[220]	_	_
+50-15	4046-4055	scenarios	abstract[220]	new[220]	_	_
+50-16	4056-4057	.	_	_	_	_
+
+#Text=The number of attackers are a function of the size of the population , with a linear increase in the population entailing a similar increase in the number of attackers .
+51-1	4058-4061	The	abstract[221]	giv[221]	coref	51-6[223_221]
+51-2	4062-4068	number	abstract[221]	giv[221]	_	_
+51-3	4069-4071	of	abstract[221]	giv[221]	_	_
+51-4	4072-4081	attackers	abstract[221]|person	giv[221]|giv	coref	51-30
+51-5	4082-4085	are	_	_	_	_
+51-6	4086-4087	a	abstract[223]	giv[223]	coref	51-27[229_223]
+51-7	4088-4096	function	abstract[223]	giv[223]	_	_
+51-8	4097-4099	of	abstract[223]	giv[223]	_	_
+51-9	4100-4103	the	abstract[223]|abstract[224]	giv[223]|new[224]	_	_
+51-10	4104-4108	size	abstract[223]|abstract[224]	giv[223]|new[224]	_	_
+51-11	4109-4111	of	abstract[223]|abstract[224]	giv[223]|new[224]	_	_
+51-12	4112-4115	the	abstract[223]|abstract[224]|person[225]	giv[223]|new[224]|new[225]	coref	51-20[227_225]
+51-13	4116-4126	population	abstract[223]|abstract[224]|person[225]	giv[223]|new[224]|new[225]	_	_
+51-14	4127-4128	,	_	_	_	_
+51-15	4129-4133	with	_	_	_	_
+51-16	4134-4135	a	abstract[226]	new[226]	_	_
+51-17	4136-4142	linear	abstract[226]	new[226]	_	_
+51-18	4143-4151	increase	abstract[226]	new[226]	_	_
+51-19	4152-4154	in	abstract[226]	new[226]	_	_
+51-20	4155-4158	the	abstract[226]|person[227]	new[226]|giv[227]	_	_
+51-21	4159-4169	population	abstract[226]|person[227]	new[226]|giv[227]	_	_
+51-22	4170-4179	entailing	_	_	_	_
+51-23	4180-4181	a	event[228]	new[228]	_	_
+51-24	4182-4189	similar	event[228]	new[228]	_	_
+51-25	4190-4198	increase	event[228]	new[228]	_	_
+51-26	4199-4201	in	event[228]	new[228]	_	_
+51-27	4202-4205	the	event[228]|abstract[229]	new[228]|giv[229]	coref	57-18[256_229]
+51-28	4206-4212	number	event[228]|abstract[229]	new[228]|giv[229]	_	_
+51-29	4213-4215	of	event[228]|abstract[229]	new[228]|giv[229]	_	_
+51-30	4216-4225	attackers	event[228]|abstract[229]|person	new[228]|giv[229]|giv	coref	52-1[231_0]
+51-31	4226-4227	.	_	_	_	_
+
+#Text=These attackers are assumed colluding .
+52-1	4228-4233	These	person[231]	giv[231]	coref	57-15[254_231]
+52-2	4234-4243	attackers	person[231]	giv[231]	_	_
+52-3	4244-4247	are	_	_	_	_
+52-4	4248-4255	assumed	_	_	_	_
+52-5	4256-4265	colluding	_	_	_	_
+52-6	4266-4267	.	_	_	_	_
+
+#Text=Knowledge gleaned by one attacker ( e.g. , intercept of a micro-ke message ) and/or spoofing requirements are instantly shared with all others through external means .
+53-1	4268-4277	Knowledge	abstract[232]	new[232]	appos	53-7[234_232]
+53-2	4278-4285	gleaned	abstract[232]	new[232]	_	_
+53-3	4286-4288	by	abstract[232]	new[232]	_	_
+53-4	4289-4292	one	abstract[232]|person[233]	new[232]|giv[233]	_	_
+53-5	4293-4301	attacker	abstract[232]|person[233]	new[232]|giv[233]	_	_
+53-6	4302-4303	(	abstract[235]	giv[235]	appos|appos	53-6[235_234]|53-16[238_235]
+53-7	4304-4308	e.g.	abstract[234]|abstract[235]	giv[234]|giv[235]	_	_
+53-8	4309-4310	,	abstract[234]|abstract[235]	giv[234]|giv[235]	_	_
+53-9	4311-4320	intercept	abstract[234]|abstract[235]	giv[234]|giv[235]	_	_
+53-10	4321-4323	of	abstract[234]|abstract[235]	giv[234]|giv[235]	_	_
+53-11	4324-4325	a	abstract[234]|abstract[235]|abstract[236]	giv[234]|giv[235]|new[236]	coref	60-10[0_236]
+53-12	4326-4334	micro-ke	abstract[234]|abstract[235]|abstract[236]	giv[234]|giv[235]|new[236]	_	_
+53-13	4335-4342	message	abstract[234]|abstract[235]|abstract[236]	giv[234]|giv[235]|new[236]	_	_
+53-14	4343-4344	)	abstract[235]	giv[235]	_	_
+53-15	4345-4351	and/or	abstract[235]	giv[235]	_	_
+53-16	4352-4360	spoofing	abstract[235]|event|abstract[238]	giv[235]|new|giv[238]	_	_
+53-17	4361-4373	requirements	abstract[235]|abstract[238]	giv[235]|giv[238]	_	_
+53-18	4374-4377	are	_	_	_	_
+53-19	4378-4387	instantly	_	_	_	_
+53-20	4388-4394	shared	_	_	_	_
+53-21	4395-4399	with	_	_	_	_
+53-22	4400-4403	all	person[239]	giv[239]	_	_
+53-23	4404-4410	others	person[239]	giv[239]	_	_
+53-24	4411-4418	through	_	_	_	_
+53-25	4419-4427	external	abstract[240]	giv[240]	_	_
+53-26	4428-4433	means	abstract[240]	giv[240]	_	_
+53-27	4434-4435	.	_	_	_	_
+
+#Text=2.3.5.
+54-1	4436-4442	2.3.5.	abstract	new	_	_
+
+#Text=Simulation Round
+55-1	4443-4453	Simulation	abstract	giv	_	_
+55-2	4454-4459	Round	_	_	_	_
+
+#Text=Each round was preset with a specific combination of parameters that we are checking for ( see Section 3.3 and Section 4.2 ) .
+56-1	4460-4464	Each	event[243]	new[243]	_	_
+56-2	4465-4470	round	event[243]	new[243]	_	_
+56-3	4471-4474	was	_	_	_	_
+56-4	4475-4481	preset	_	_	_	_
+56-5	4482-4486	with	_	_	_	_
+56-6	4487-4488	a	abstract[244]	new[244]	_	_
+56-7	4489-4497	specific	abstract[244]	new[244]	_	_
+56-8	4498-4509	combination	abstract[244]	new[244]	_	_
+56-9	4510-4512	of	abstract[244]	new[244]	_	_
+56-10	4513-4523	parameters	abstract[244]|abstract[245]	new[244]|new[245]	_	_
+56-11	4524-4528	that	abstract[244]|abstract[245]	new[244]|new[245]	_	_
+56-12	4529-4531	we	abstract[244]|abstract[245]|person	new[244]|new[245]|giv	ana	57-3
+56-13	4532-4535	are	abstract[244]|abstract[245]	new[244]|new[245]	_	_
+56-14	4536-4544	checking	abstract[244]|abstract[245]	new[244]|new[245]	_	_
+56-15	4545-4548	for	_	_	_	_
+56-16	4549-4550	(	_	_	_	_
+56-17	4551-4554	see	_	_	_	_
+56-18	4555-4562	Section	abstract[247]|abstract[248]	new[247]|new[248]	ana	57-6[251_248]
+56-19	4563-4566	3.3	abstract[247]|abstract[248]	new[247]|new[248]	_	_
+56-20	4567-4570	and	abstract[248]	new[248]	_	_
+56-21	4571-4578	Section	abstract[248]|abstract[249]	new[248]|new[249]	_	_
+56-22	4579-4582	4.2	abstract[248]|abstract[249]	new[248]|new[249]	_	_
+56-23	4583-4584	)	_	_	_	_
+56-24	4585-4586	.	_	_	_	_
+
+#Text=Next , we randomly chose some of the nodes in the network to represent colluding attackers ; their specific number a function of predetermined parameter .
+57-1	4587-4591	Next	_	_	_	_
+57-2	4592-4593	,	_	_	_	_
+57-3	4594-4596	we	person	giv	ana	58-14
+57-4	4597-4605	randomly	_	_	_	_
+57-5	4606-4611	chose	_	_	_	_
+57-6	4612-4616	some	abstract[251]	giv[251]	_	_
+57-7	4617-4619	of	abstract[251]	giv[251]	_	_
+57-8	4620-4623	the	abstract[251]|abstract[252]	giv[251]|giv[252]	_	_
+57-9	4624-4629	nodes	abstract[251]|abstract[252]	giv[251]|giv[252]	_	_
+57-10	4630-4632	in	abstract[251]|abstract[252]	giv[251]|giv[252]	_	_
+57-11	4633-4636	the	abstract[251]|abstract[252]|abstract[253]	giv[251]|giv[252]|new[253]	coref	61-8[0_253]
+57-12	4637-4644	network	abstract[251]|abstract[252]|abstract[253]	giv[251]|giv[252]|new[253]	_	_
+57-13	4645-4647	to	_	_	_	_
+57-14	4648-4657	represent	_	_	_	_
+57-15	4658-4667	colluding	person[254]	giv[254]	ana	57-18[0_254]
+57-16	4668-4677	attackers	person[254]	giv[254]	_	_
+57-17	4678-4679	;	_	_	_	_
+57-18	4680-4685	their	person|abstract[256]	giv|giv[256]	_	_
+57-19	4686-4694	specific	abstract[256]	giv[256]	_	_
+57-20	4695-4701	number	abstract[256]	giv[256]	_	_
+57-21	4702-4703	a	abstract[257]	new[257]	_	_
+57-22	4704-4712	function	abstract[257]	new[257]	_	_
+57-23	4713-4715	of	abstract[257]	new[257]	_	_
+57-24	4716-4729	predetermined	abstract[257]|abstract[258]	new[257]|new[258]	_	_
+57-25	4730-4739	parameter	abstract[257]|abstract[258]	new[257]|new[258]	_	_
+57-26	4740-4741	.	_	_	_	_
+
+#Text=Last , assuming there is a connection between sender and receiver , , we sprayed the k micro-ke messages documenting whether all , none , or some of the messages were intercepted .
+58-1	4742-4746	Last	_	_	_	_
+58-2	4747-4748	,	_	_	_	_
+58-3	4749-4757	assuming	_	_	_	_
+58-4	4758-4763	there	_	_	_	_
+58-5	4764-4766	is	_	_	_	_
+58-6	4767-4768	a	abstract[259]	new[259]	ana	58-22[0_259]
+58-7	4769-4779	connection	abstract[259]	new[259]	_	_
+58-8	4780-4787	between	abstract[259]	new[259]	_	_
+58-9	4788-4794	sender	abstract[259]|abstract|abstract[261]	new[259]|new|giv[261]	_	_
+58-10	4795-4798	and	abstract[259]|abstract[261]	new[259]|giv[261]	_	_
+58-11	4799-4807	receiver	abstract[259]|abstract[261]|person	new[259]|giv[261]|new	_	_
+58-12	4808-4809	,	_	_	_	_
+58-13	4810-4811	,	_	_	_	_
+58-14	4812-4814	we	person	giv	ana	61-11
+58-15	4815-4822	sprayed	_	_	_	_
+58-16	4823-4826	the	abstract[266]	new[266]	ana	58-27[269_266]
+58-17	4827-4828	k	abstract|abstract[266]	new|new[266]	_	_
+58-18	4829-4837	micro-ke	abstract|abstract[266]	new|new[266]	_	_
+58-19	4838-4846	messages	abstract[266]	new[266]	_	_
+58-20	4847-4858	documenting	abstract[266]	new[266]	_	_
+58-21	4859-4866	whether	abstract[266]	new[266]	_	_
+58-22	4867-4870	all	abstract[266]|abstract	new[266]|giv	_	_
+58-23	4871-4872	,	abstract[266]	new[266]	_	_
+58-24	4873-4877	none	abstract[266]|event	new[266]|new	_	_
+58-25	4878-4879	,	abstract[266]	new[266]	_	_
+58-26	4880-4882	or	abstract[266]	new[266]	_	_
+58-27	4883-4887	some	abstract[266]|abstract[269]	new[266]|giv[269]	coref	58-29[270_269]
+58-28	4888-4890	of	abstract[266]|abstract[269]	new[266]|giv[269]	_	_
+58-29	4891-4894	the	abstract[266]|abstract[269]|abstract[270]	new[266]|giv[269]|giv[270]	_	_
+58-30	4895-4903	messages	abstract[266]|abstract[269]|abstract[270]	new[266]|giv[269]|giv[270]	_	_
+58-31	4904-4908	were	abstract[266]	new[266]	_	_
+58-32	4909-4920	intercepted	abstract[266]	new[266]	_	_
+58-33	4921-4922	.	_	_	_	_
+
+#Text=Rounds for which , were discarded .
+59-1	4923-4929	Rounds	object[271]	new[271]	_	_
+59-2	4930-4933	for	object[271]	new[271]	_	_
+59-3	4934-4939	which	object[271]	new[271]	_	_
+59-4	4940-4941	,	_	_	_	_
+59-5	4942-4946	were	_	_	_	_
+59-6	4947-4956	discarded	_	_	_	_
+59-7	4957-4958	.	_	_	_	_
+
+#Text=The actual spraying algorithm was done using either random message spraying or even message spraying algorithm ( see Section 3.2 ) .
+60-1	4959-4962	The	abstract[273]	giv[273]	coref	60-13[277_273]
+60-2	4963-4969	actual	abstract[273]	giv[273]	_	_
+60-3	4970-4978	spraying	abstract|abstract[273]	new|giv[273]	coref	60-8[275_0]
+60-4	4979-4988	algorithm	abstract[273]	giv[273]	_	_
+60-5	4989-4992	was	_	_	_	_
+60-6	4993-4997	done	_	_	_	_
+60-7	4998-5003	using	_	_	_	_
+60-8	5004-5010	either	abstract[275]	giv[275]	_	_
+60-9	5011-5017	random	abstract[275]	giv[275]	_	_
+60-10	5018-5025	message	abstract|abstract[275]	giv|giv[275]	coref	60-14
+60-11	5026-5034	spraying	abstract[275]	giv[275]	_	_
+60-12	5035-5037	or	_	_	_	_
+60-13	5038-5042	even	abstract[277]	giv[277]	_	_
+60-14	5043-5050	message	abstract|abstract[277]	giv|giv[277]	_	_
+60-15	5051-5059	spraying	abstract[277]	giv[277]	_	_
+60-16	5060-5069	algorithm	abstract[277]	giv[277]	_	_
+60-17	5070-5071	(	_	_	_	_
+60-18	5072-5075	see	_	_	_	_
+60-19	5076-5083	Section	abstract[278]	new[278]	_	_
+60-20	5084-5087	3.2	abstract[278]	new[278]	_	_
+60-21	5088-5089	)	_	_	_	_
+60-22	5090-5091	.	_	_	_	_
+
+#Text=Both techniques were executed on the same network graph so we can get comparable results .
+61-1	5092-5096	Both	abstract[279]	giv[279]	_	_
+61-2	5097-5107	techniques	abstract[279]	giv[279]	_	_
+61-3	5108-5112	were	_	_	_	_
+61-4	5113-5121	executed	_	_	_	_
+61-5	5122-5124	on	_	_	_	_
+61-6	5125-5128	the	object[281]	giv[281]	_	_
+61-7	5129-5133	same	object[281]	giv[281]	_	_
+61-8	5134-5141	network	abstract|object[281]	giv|giv[281]	_	_
+61-9	5142-5147	graph	object[281]	giv[281]	_	_
+61-10	5148-5150	so	_	_	_	_
+61-11	5151-5153	we	person	giv	_	_
+61-12	5154-5157	can	_	_	_	_
+61-13	5158-5161	get	_	_	_	_
+61-14	5162-5172	comparable	abstract[283]	new[283]	_	_
+61-15	5173-5180	results	abstract[283]	new[283]	_	_
+61-16	5181-5182	.	_	_	_	_

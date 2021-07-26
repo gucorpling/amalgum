@@ -1,0 +1,924 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_localization" title="Hard Decision-Based Cooperative Localization for Wireless Sensor Networks" shortTitle="localization" author="Zhaoyang Wang, Xuebo Jin, Xiaoyi Wang, Jiping Xu, Yuting Bai" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4665/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+Cooperative	NNP	cooperative
+Localization	NN	localization
+</s>
+</head>
+<p>
+<s type="decl">
+For	IN	for
+range-free	JJ	range-free
+localization	NN	localization
+,	,	,
+a	DT	a
+large	JJ	large
+deviation	NN	deviation
+of	IN	of
+distance	NN	distance
+estimation	NN	estimation
+and	CC	and
+position	NN	position
+estimation	NN	estimation
+may	MD	may
+often	RB	often
+happen	VB	happen
+,	,	,
+due	JJ	due
+to	IN	to
+scarce	JJ	scarce
+information	NN	information
+and	CC	and
+difficult	JJ	difficult
+communication	NN	communication
+environment	NN	environment
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+unwelcome	JJ	unwelcome
+estimations	NNS	estimation
+are	VBP	be
+called	VBN	call
+outliers	NNS	outlier
+.	.	.
+</s>
+<s type="sub">
+Especially	RB	especially
+in	IN	in
+cooperative	JJ	cooperative
+localization	NN	localization
+,	,	,
+outliers	NNS	outlier
+may	MD	may
+lead	VB	lead
+to	IN	to
+the	DT	the
+failure	NN	failure
+of	IN	of
+whole	JJ	whole
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+alleviate	VB	alleviate
+the	DT	the
+effect	NN	effect
+of	IN	of
+the	DT	the
+outliers	NNS	outlier
+,	,	,
+we	PRP	we
+propose	VBP	propose
+a	DT	a
+cooperative	JJ	cooperative
+localization	NN	localization
+method	NN	method
+with	IN	with
+outlier	JJ	outly
+constraints	NNS	constraint
+.	.	.
+</s>
+<s type="decl">
+Outlier	NN	outlier
+constraints	NNS	constraint
+are	VBP	be
+divided	VBN	divide
+into	IN	into
+distance	NN	distance
+constraints	NNS	constraint
+and	CC	and
+position	NN	position
+constraints	NNS	constraint
+,	,	,
+which	WDT	which
+both	DT	both
+rely	VBP	rely
+on	IN	on
+neighboring	VBG	neighbor
+anchors	NNS	anchor
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+estimated	VBN	estimate
+distance	NN	distance
+and	CC	and
+position	NN	position
+will	MD	will
+not	RB	not
+exceed	VB	exceed
+the	DT	the
+communication	NN	communication
+range	NN	range
+of	IN	of
+neighboring	JJ	neighboring
+anchors	NNS	anchor
+for	IN	for
+both	DT	both
+distance	NN	distance
+constraints	NNS	constraint
+and	CC	and
+position	NN	position
+constraints	NNS	constraint
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+constraints	NNS	constraint
+are	VBP	be
+represented	VBN	represent
+by	IN	by
+the	DT	the
+parameters	NNS	parameter
+and	CC	and
+,	,	,
+which	WDT	which
+condition	VBP	condition
+the	DT	the
+cooperative	JJ	cooperative
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+cooperative	JJ	cooperative
+method	NN	method
+introduces	VBZ	introduce
+message	NN	message
+passing	NN	passing
+and	CC	and
+updates	VBZ	update
+the	DT	the
+estimated	VBN	estimate
+position	NN	position
+through	IN	through
+the	DT	the
+variational	JJ	variational
+message	NN	message
+passing	VBG	pass
+rule	NN	rule
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+final	JJ	final
+localization	NN	localization
+result	NN	result
+depends	VBZ	depend
+on	IN	on
+confidence	NN	confidence
+of	IN	of
+the	DT	the
+agent	NN	agent
+to	TO	to
+be	VB	be
+located	VBN	locate
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+Outlier	JJ	Outlier
+Constraints	NNS	constraint
+</s>
+</head>
+<p>
+<s type="decl">
+For	IN	for
+range-based	JJ	range-based
+localization	NN	localization
+,	,	,
+the	DT	the
+estimated	VBN	estimate
+distances	NNS	distance
+are	VBP	be
+relatively	RB	relatively
+accurate	JJ	accurate
+,	,	,
+so	RB	so
+that	IN	that
+the	DT	the
+localization	NN	localization
+of	IN	of
+agents	NNS	agent
+is	VBZ	be
+quite	RB	quite
+precise	JJ	precise
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+range-free	JJ	range-free
+localization	NN	localization
+,	,	,
+in	IN	in
+our	PRP$	our
+paper	NN	paper
+,	,	,
+the	DT	the
+accuracy	NN	accuracy
+fails	VBZ	fail
+to	TO	to
+meet	VB	meet
+the	DT	the
+requirement	NN	requirement
+of	IN	of
+cooperative	JJ	cooperative
+localization	NN	localization
+for	IN	for
+both	CC	both
+node	NN	node
+distance	NN	distance
+and	CC	and
+node	NN	node
+position	NN	position
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+outlier	NN	outlier
+distance	NN	distance
+and	CC	and
+position	NN	position
+are	VBP	be
+regarded	VBN	regard
+as	IN	as
+key	JJ	key
+information	NN	information
+of	IN	of
+a	DT	a
+virtual	JJ	virtual
+anchor	NN	anchor
+,	,	,
+this	DT	this
+will	MD	will
+cause	VB	cause
+a	DT	a
+large	JJ	large
+derivation	NN	derivation
+in	IN	in
+the	DT	the
+subsequent	JJ	subsequent
+iteration	NN	iteration
+,	,	,
+leading	VBG	lead
+,	,	,
+finally	RB	finally
+,	,	,
+to	IN	to
+disruption	NN	disruption
+of	IN	of
+the	DT	the
+whole	JJ	whole
+network	NN	network
+and	CC	and
+localization	NN	localization
+failure	NN	failure
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+avoid	VB	avoid
+this	DT	this
+problem	NN	problem
+,	,	,
+we	PRP	we
+propose	VBP	propose
+the	DT	the
+outlier	NN	outlier
+constraint	NN	constraint
+method	NN	method
+,	,	,
+which	WDT	which
+includes	VBZ	include
+position	NN	position
+constraint	NN	constraint
+and	CC	and
+distance	NN	distance
+constraint	NN	constraint
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+inevitable	JJ	inevitable
+to	TO	to
+have	VB	have
+low	JJ	low
+accuracy	NN	accuracy
+of	IN	of
+distance	NN	distance
+estimation	NN	estimation
+with	IN	with
+the	DT	the
+multi-hop	JJ	multi-hop
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+outlier	JJ	outly
+distance	NN	distance
+has	VBZ	have
+a	DT	a
+negative	JJ	negative
+effect	NN	effect
+on	IN	on
+cooperative	JJ	cooperative
+localization	NN	localization
+,	,	,
+so	RB	so
+it	PRP	it
+is	VBZ	be
+better	JJR	good
+to	TO	to
+exclude	VB	exclude
+the	DT	the
+outlier	JJ	outly
+distances	NNS	distance
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+outlier	JJ	outly
+distance	NN	distance
+is	VBZ	be
+excluded	VBN	exclude
+by	IN	by
+constraints	NNS	constraint
+from	IN	from
+anchors	NNS	anchor
+,	,	,
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="frag">
+and	CC	and
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+6	CD	6
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+distance	NN	distance
+between	IN	between
+agent	NN	agent
+and	CC	and
+anchor	NN	anchor
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+6	CD	6
+</s>
+</figure>
+<s type="other">
+shows	VBZ	show
+the	DT	the
+distance	NN	distance
+between	IN	between
+agents	NNS	agent
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+the	DT	the
+distance	NN	distance
+between	IN	between
+agent	NN	agent
+and	CC	and
+anchor	NN	anchor
+,	,	,
+the	DT	the
+outlier	JJ	outly
+constraint	NN	constraint
+is	VBZ	be
+(	-LRB-	(
+14	CD	14
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+estimated	VBN	estimate
+distance	NN	distance
+according	VBG	accord
+to	IN	to
+Section	NNP	Section
+2	CD	2
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+neighboring	VBG	neighbor
+anchors	NNS	anchor
+within	IN	within
+communication	NN	communication
+range	NN	range
+of	IN	of
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+true	JJ	true
+distance	NN	distance
+between	IN	between
+anchor	NN	anchor
+and	CC	and
+any	DT	any
+anchor	NN	anchor
+in	IN	in
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+we	PRP	we
+propose	VBP	propose
+a	DT	a
+constraint	NN	constraint
+function	NN	function
+as	IN	as
+(	-LRB-	(
+15	CD	15
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+For	IN	for
+the	DT	the
+distance	NN	distance
+between	IN	between
+agents	NNS	agent
+,	,	,
+the	DT	the
+outlier	NN	outlier
+constraint	NN	constraint
+is	VBZ	be
+(	-LRB-	(
+16	CD	16
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+estimated	VBN	estimate
+distance	NN	distance
+according	VBG	accord
+to	IN	to
+Section	NNP	Section
+2	CD	2
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+neighboring	VBG	neighbor
+anchors	NNS	anchor
+within	IN	within
+communication	NN	communication
+range	NN	range
+of	IN	of
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+neighboring	JJ	neighboring
+anchors	NNS	anchor
+within	IN	within
+communication	NN	communication
+range	NN	range
+of	IN	of
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+real	JJ	real
+distance	NN	distance
+between	IN	between
+any	DT	any
+anchor	NN	anchor
+in	IN	in
+and	CC	and
+any	DT	any
+anchor	NN	anchor
+in	IN	in
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+we	PRP	we
+propose	VBP	propose
+the	DT	the
+constraint	NN	constraint
+function	NN	function
+(	-LRB-	(
+17	CD	17
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+a	DT	a
+cooperative	JJ	cooperative
+network	NN	network
+,	,	,
+the	DT	the
+outlier	JJ	outly
+position	NN	position
+of	IN	of
+the	DT	the
+agent	NN	agent
+also	RB	also
+has	VBZ	have
+a	DT	a
+negative	JJ	negative
+effect	NN	effect
+on	IN	on
+cooperative	JJ	cooperative
+localization	NN	localization
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+better	JJR	good
+to	TO	to
+exclude	VB	exclude
+these	DT	this
+outlier	JJ	outly
+positions	NNS	position
+through	IN	through
+neighboring	VBG	neighbor
+anchors	NNS	anchor
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+network	NN	network
+,	,	,
+agents	NNS	agent
+can	MD	can
+communicate	VB	communicate
+with	IN	with
+all	DT	all
+nodes	NNS	node
+that	WDT	that
+are	VBP	be
+in	IN	in
+their	PRP$	their
+communication	NN	communication
+range	NN	range
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+distance	NN	distance
+between	IN	between
+the	DT	the
+agent	NN	agent
+and	CC	and
+its	PRP$	its
+neighboring	JJ	neighboring
+anchor	NN	anchor
+is	VBZ	be
+lower	JJR	low
+than	IN	than
+the	DT	the
+communication	NN	communication
+range	NN	range
+:	:	:
+(	-LRB-	(
+18	CD	18
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+estimated	VBN	estimate
+position	NN	position
+of	IN	of
+agent	NN	agent
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+neighboring	JJ	neighboring
+anchors	NNS	anchor
+within	IN	within
+communication	NN	communication
+range	NN	range
+of	IN	of
+,	,	,
+denotes	VBZ	denote
+position	NN	position
+of	IN	of
+any	DT	any
+anchor	NN	anchor
+in	IN	in
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+we	PRP	we
+propose	VBP	propose
+the	DT	the
+constraint	NN	constraint
+function	NN	function
+(	-LRB-	(
+19	CD	19
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+Euclidean	NNP	Euclidean
+norm	NN	norm
+of	IN	of
+estimated	VBN	estimate
+position	NN	position
+and	CC	and
+true	JJ	true
+position	NN	position
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.2.	CD	3.2.
+Cooperative	JJ	cooperative
+Localization	NN	localization
+</s>
+</head>
+<p>
+<s type="decl">
+Thanks	NNS	thanks
+to	IN	to
+the	DT	the
+locally	RB	locally
+factorized	VBN	factorize
+structure	NN	structure
+of	IN	of
+the	DT	the
+joint	JJ	joint
+likelihood	NN	likelihood
+function	NN	function
+,	,	,
+the	DT	the
+cooperative	JJ	cooperative
+localization	NN	localization
+problem	NN	problem
+can	MD	can
+be	VB	be
+addressed	VBN	address
+under	IN	under
+the	DT	the
+framework	NN	framework
+of	IN	of
+factor	NN	factor
+graph	NN	graph
+.	.	.
+</s>
+<s type="decl">
+Inference	NN	inference
+and	CC	and
+estimation	NN	estimation
+tasks	NNS	task
+are	VBP	be
+typically	RB	typically
+carried	VBN	carry
+out	RP	out
+on	IN	on
+a	DT	a
+factor	NN	factor
+graph	NN	graph
+by	IN	by
+message	NN	message
+passing	VBG	pass
+between	IN	between
+variable	JJ	variable
+nodes	NNS	node
+and	CC	and
+factor	NN	factor
+nodes	NNS	node
+.	.	.
+</s>
+<s type="decl">
+Existing	VBG	exist
+methods	NNS	method
+do	VBP	do
+not	RB	not
+consider	VB	consider
+the	DT	the
+outlier	NN	outlier
+variable	NN	variable
+nodes	NNS	node
+and	CC	and
+factor	NN	factor
+,	,	,
+which	WDT	which
+indicates	VBZ	indicate
+that	IN	that
+cooperative	JJ	cooperative
+localization	NN	localization
+is	VBZ	be
+not	RB	not
+suitable	JJ	suitable
+for	IN	for
+a	DT	a
+range-free	JJ	range-free
+situation	NN	situation
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+cooperative	JJ	cooperative
+phase	NN	phase
+,	,	,
+we	PRP	we
+explore	VBP	explore
+a	DT	a
+hard	JJ	hard
+decision-based	JJ	decision-based
+cooperative	JJ	cooperative
+way	NN	way
+for	IN	for
+a	DT	a
+range-free	JJ	range-free
+situation	NN	situation
+applying	VBG	apply
+outlier	JJ	outly
+constraints	NNS	constraint
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+assume	VBP	assume
+that	IN	that
+the	DT	the
+sensor	NN	sensor
+node	NN	node
+acquires	VBZ	acquire
+a	DT	a
+noisy	JJ	noisy
+measurement	NN	measurement
+and	CC	and
+that	DT	that
+,	,	,
+which	WDT	which
+is	VBZ	be
+the	DT	the
+estimated	VBN	estimate
+distance	NN	distance
+from	IN	from
+the	DT	the
+sensor	NN	sensor
+node	NN	node
+(	-LRB-	(
+can	MD	can
+be	VB	be
+either	CC	either
+an	DT	a
+agent	NN	agent
+or	CC	or
+an	DT	a
+anchor	NN	anchor
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+we	PRP	we
+have	VBP	have
+(	:	(
+20	CD	20
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+measurement	NN	measurement
+noise	NN	noise
+.	.	.
+</s>
+<s type="decl">
+Without	IN	without
+loss	NN	loss
+of	IN	of
+generality	NN	generality
+,	,	,
+we	PRP	we
+assume	VBP	assume
+that	IN	that
+measurement	NN	measurement
+noise	NN	noise
+obeys	VBZ	obey
+a	DT	a
+Gaussian	JJ	Gaussian
+distribution	NN	distribution
+,	,	,
+so	RB	so
+;	:	;
+is	VBZ	be
+the	DT	the
+standard	JJ	standard
+deviation	NN	deviation
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+probability	NN	probability
+density	NN	density
+function	NN	function
+of	IN	of
+node	NN	node
+distance	NN	distance
+is	VBZ	be
+(	-LRB-	(
+21	CD	21
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+define	VBP	define
+and	CC	and
+assume	VBP	assume
+that	IN	that
+the	DT	the
+relative	JJ	relative
+positions	NNS	position
+are	VBP	be
+conditionally	RB	conditionally
+independent	JJ	independent
+and	CC	and
+only	RB	only
+depend	VBP	depend
+on	IN	on
+the	DT	the
+two	CD	2
+nodes	NNS	node
+involved	VBN	involve
+:	:	:
+(	-LRB-	(
+22	CD	22
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+the	DT	the
+position	NN	position
+set	NN	set
+of	IN	of
+all	DT	all
+nodes	NNS	node
+,	,	,
+and	CC	and
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+the	DT	the
+distance	NN	distance
+set	NN	set
+of	IN	of
+all	DT	all
+nodes	NNS	node
+.	.	.
+</s>
+</p>
+</text>

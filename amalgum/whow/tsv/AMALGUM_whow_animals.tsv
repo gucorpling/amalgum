@@ -1,0 +1,709 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Transport Animals
+1-1	0-9	Transport	event[1]	new[1]	_	_
+1-2	10-17	Animals	event[1]|animal	new[1]|new	coref	2-4
+
+#Text=Transporting or moving animals can be worrisome and even stressful to most animals .
+2-1	18-30	Transporting	_	_	_	_
+2-2	31-33	or	_	_	_	_
+2-3	34-40	moving	_	_	_	_
+2-4	41-48	animals	animal	giv	coref	2-12[4_0]
+2-5	49-52	can	_	_	_	_
+2-6	53-55	be	_	_	_	_
+2-7	56-65	worrisome	_	_	_	_
+2-8	66-69	and	_	_	_	_
+2-9	70-74	even	_	_	_	_
+2-10	75-84	stressful	_	_	_	_
+2-11	85-87	to	_	_	_	_
+2-12	88-92	most	animal[4]	giv[4]	ana	3-16[0_4]
+2-13	93-100	animals	animal[4]	giv[4]	_	_
+2-14	101-102	.	_	_	_	_
+
+#Text=By following these steps for your pets , they will be much calmer , and some may even enjoy the ride !
+3-1	103-105	By	_	_	_	_
+3-2	106-115	following	_	_	_	_
+3-3	116-121	these	event[5]	new[5]	_	_
+3-4	122-127	steps	event[5]	new[5]	_	_
+3-5	128-131	for	_	_	_	_
+3-6	132-136	your	person|animal[7]	acc|new[7]	ana|ana	3-9[0_7]|18-2
+3-7	137-141	pets	animal[7]	new[7]	_	_
+3-8	142-143	,	_	_	_	_
+3-9	144-148	they	animal	giv	_	_
+3-10	149-153	will	_	_	_	_
+3-11	154-156	be	_	_	_	_
+3-12	157-161	much	_	_	_	_
+3-13	162-168	calmer	_	_	_	_
+3-14	169-170	,	_	_	_	_
+3-15	171-174	and	_	_	_	_
+3-16	175-179	some	animal	giv	coref	11-2[31_0]
+3-17	180-183	may	_	_	_	_
+3-18	184-188	even	_	_	_	_
+3-19	189-194	enjoy	_	_	_	_
+3-20	195-198	the	event[10]	new[10]	_	_
+3-21	199-203	ride	event[10]	new[10]	_	_
+3-22	204-205	!	_	_	_	_
+
+#Text=Steps
+4-1	206-211	Steps	abstract	new	_	_
+
+#Text=Horses and Cows
+5-1	212-218	Horses	object|person[13]	new|new[13]	ana	14-7[0_13]
+5-2	219-222	and	person[13]	new[13]	_	_
+5-3	223-227	Cows	person[13]|animal	new[13]|new	_	_
+
+#Text=Obtain a horse or livestock trailer .
+6-1	228-234	Obtain	_	_	_	_
+6-2	235-236	a	object[15]	new[15]	_	_
+6-3	237-242	horse	object[15]	new[15]	_	_
+6-4	243-245	or	_	_	_	_
+6-5	246-255	livestock	animal|object[17]	new|new[17]	ana|coref	7-1[0_17]|8-5[23_0]
+6-6	256-263	trailer	object[17]	new[17]	_	_
+6-7	264-265	.	_	_	_	_
+
+#Text=This can be quite expensive , so instead of buying a new one , purchase a used trailer and save money .
+7-1	266-270	This	object	giv	coref	7-16[20_0]
+7-2	271-274	can	_	_	_	_
+7-3	275-277	be	_	_	_	_
+7-4	278-283	quite	_	_	_	_
+7-5	284-293	expensive	_	_	_	_
+7-6	294-295	,	_	_	_	_
+7-7	296-298	so	_	_	_	_
+7-8	299-306	instead	_	_	_	_
+7-9	307-309	of	_	_	_	_
+7-10	310-316	buying	_	_	_	_
+7-11	317-318	a	object[19]	new[19]	_	_
+7-12	319-322	new	object[19]	new[19]	_	_
+7-13	323-326	one	object[19]	new[19]	_	_
+7-14	327-328	,	_	_	_	_
+7-15	329-337	purchase	_	_	_	_
+7-16	338-339	a	object[20]	giv[20]	coref	11-5[32_20]
+7-17	340-344	used	object[20]	giv[20]	_	_
+7-18	345-352	trailer	object[20]	giv[20]	_	_
+7-19	353-356	and	_	_	_	_
+7-20	357-361	save	_	_	_	_
+7-21	362-367	money	abstract	new	ana	9-3
+7-22	368-369	.	_	_	_	_
+
+#Text=Put a halter on the animal .
+8-1	370-373	Put	_	_	_	_
+8-2	374-375	a	object[22]	new[22]	coref	9-12[26_22]
+8-3	376-382	halter	object[22]	new[22]	_	_
+8-4	383-385	on	_	_	_	_
+8-5	386-389	the	animal[23]	giv[23]	coref	9-19[28_23]
+8-6	390-396	animal	animal[23]	giv[23]	_	_
+8-7	397-398	.	_	_	_	_
+
+#Text=To do this , take the hole in the end of the halter and slide it over the animal 's nose .
+9-1	399-401	To	_	_	_	_
+9-2	402-404	do	_	_	_	_
+9-3	405-409	this	abstract	giv	ana	9-16
+9-4	410-411	,	_	_	_	_
+9-5	412-416	take	_	_	_	_
+9-6	417-420	the	object[25]	new[25]	_	_
+9-7	421-425	hole	object[25]	new[25]	_	_
+9-8	426-428	in	object[25]	new[25]	_	_
+9-9	429-432	the	object[25]	new[25]	_	_
+9-10	433-436	end	object[25]	new[25]	_	_
+9-11	437-439	of	object[25]	new[25]	_	_
+9-12	440-443	the	object[25]|object[26]	new[25]|giv[26]	_	_
+9-13	444-450	halter	object[25]|object[26]	new[25]|giv[26]	_	_
+9-14	451-454	and	_	_	_	_
+9-15	455-460	slide	_	_	_	_
+9-16	461-463	it	abstract	giv	_	_
+9-17	464-468	over	_	_	_	_
+9-18	469-472	the	object[29]	new[29]	_	_
+9-19	473-479	animal	animal[28]|object[29]	giv[28]|new[29]	_	_
+9-20	480-482	's	animal[28]|object[29]	giv[28]|new[29]	_	_
+9-21	483-487	nose	object[29]	new[29]	_	_
+9-22	488-489	.	_	_	_	_
+
+#Text=Fasten the strap .
+10-1	490-496	Fasten	_	_	_	_
+10-2	497-500	the	object[30]	new[30]	_	_
+10-3	501-506	strap	object[30]	new[30]	_	_
+10-4	507-508	.	_	_	_	_
+
+#Text=Lead the animals into the trailer one at a time .
+11-1	509-513	Lead	_	_	_	_
+11-2	514-517	the	animal[31]	giv[31]	ana	13-1[0_31]
+11-3	518-525	animals	animal[31]	giv[31]	_	_
+11-4	526-530	into	_	_	_	_
+11-5	531-534	the	object[32]	giv[32]	coref	14-3[40_32]
+11-6	535-542	trailer	object[32]	giv[32]	_	_
+11-7	543-546	one	time[33]	new[33]	_	_
+11-8	547-549	at	time[33]	new[33]	_	_
+11-9	550-551	a	time[33]	new[33]	_	_
+11-10	552-556	time	time[33]	new[33]	_	_
+11-11	557-558	.	_	_	_	_
+
+#Text=Pull on the lead , do n't be shy with it .
+12-1	559-563	Pull	_	_	_	_
+12-2	564-566	on	_	_	_	_
+12-3	567-570	the	abstract[34]	new[34]	ana	12-11[0_34]
+12-4	571-575	lead	abstract[34]	new[34]	_	_
+12-5	576-577	,	_	_	_	_
+12-6	578-580	do	_	_	_	_
+12-7	581-584	n't	_	_	_	_
+12-8	585-587	be	_	_	_	_
+12-9	588-591	shy	_	_	_	_
+12-10	592-596	with	_	_	_	_
+12-11	597-599	it	abstract	giv	_	_
+12-12	600-601	.	_	_	_	_
+
+#Text=These are large animals and halters will not hurt or choke them .
+13-1	602-607	These	animal	giv	coref	13-3[37_0]
+13-2	608-611	are	_	_	_	_
+13-3	612-617	large	animal[37]	giv[37]	ana	13-12[0_37]
+13-4	618-625	animals	animal[37]	giv[37]	_	_
+13-5	626-629	and	_	_	_	_
+13-6	630-637	halters	object	new	_	_
+13-7	638-642	will	_	_	_	_
+13-8	643-646	not	_	_	_	_
+13-9	647-651	hurt	_	_	_	_
+13-10	652-654	or	_	_	_	_
+13-11	655-660	choke	_	_	_	_
+13-12	661-665	them	animal	giv	_	_
+13-13	666-667	.	_	_	_	_
+
+#Text=Stand in the trailer and if they do not come into the trailer , tempt them with grain .
+14-1	668-673	Stand	_	_	_	_
+14-2	674-676	in	_	_	_	_
+14-3	677-680	the	object[40]	giv[40]	coref	14-12[42_40]
+14-4	681-688	trailer	object[40]	giv[40]	_	_
+14-5	689-692	and	_	_	_	_
+14-6	693-695	if	_	_	_	_
+14-7	696-700	they	person	giv	ana	14-16
+14-8	701-703	do	_	_	_	_
+14-9	704-707	not	_	_	_	_
+14-10	708-712	come	_	_	_	_
+14-11	713-717	into	_	_	_	_
+14-12	718-721	the	object[42]	giv[42]	_	_
+14-13	722-729	trailer	object[42]	giv[42]	_	_
+14-14	730-731	,	_	_	_	_
+14-15	732-737	tempt	_	_	_	_
+14-16	738-742	them	person	giv	ana	15-2
+14-17	743-747	with	_	_	_	_
+14-18	748-753	grain	substance	new	_	_
+14-19	754-755	.	_	_	_	_
+
+#Text=Tie them in using a quick release knot .
+15-1	756-759	Tie	_	_	_	_
+15-2	760-764	them	person	giv	_	_
+15-3	765-767	in	_	_	_	_
+15-4	768-773	using	_	_	_	_
+15-5	774-775	a	object[47]	new[47]	_	_
+15-6	776-781	quick	event[46]|object[47]	new[46]|new[47]	_	_
+15-7	782-789	release	event[46]|object[47]	new[46]|new[47]	_	_
+15-8	790-794	knot	object[47]	new[47]	_	_
+15-9	795-796	.	_	_	_	_
+
+#Text=Dogs and Cats
+16-1	797-801	Dogs	person	new	ana	24-18
+16-2	802-805	and	_	_	_	_
+16-3	806-810	Cats	_	_	_	_
+
+#Text=Put the dog or cat in a crate or kennel designed for cats and dogs .
+17-1	811-814	Put	_	_	_	_
+17-2	815-818	the	animal[49]	new[49]	coref	18-7[57_49]
+17-3	819-822	dog	animal[49]	new[49]	_	_
+17-4	823-825	or	_	_	_	_
+17-5	826-829	cat	animal	new	coref	28-7
+17-6	830-832	in	_	_	_	_
+17-7	833-834	a	place[51]	new[51]	coref	27-2[97_51]
+17-8	835-840	crate	place[51]	new[51]	_	_
+17-9	841-843	or	_	_	_	_
+17-10	844-850	kennel	place[52]	new[52]	_	_
+17-11	851-859	designed	place[52]	new[52]	_	_
+17-12	860-863	for	place[52]	new[52]	_	_
+17-13	864-868	cats	place[52]|animal	new[52]|new	_	_
+17-14	869-872	and	place[52]	new[52]	_	_
+17-15	873-877	dogs	place[52]|animal	new[52]|new	_	_
+17-16	878-879	.	_	_	_	_
+
+#Text=If you have a car , a dog can be placed inside the car in a seat belt harness .
+18-1	880-882	If	_	_	_	_
+18-2	883-886	you	person	giv	ana	20-13
+18-3	887-891	have	_	_	_	_
+18-4	892-893	a	object[56]	new[56]	coref	18-13[58_56]
+18-5	894-897	car	object[56]	new[56]	_	_
+18-6	898-899	,	_	_	_	_
+18-7	900-901	a	animal[57]	giv[57]	coref	28-5[0_57]
+18-8	902-905	dog	animal[57]	giv[57]	_	_
+18-9	906-909	can	_	_	_	_
+18-10	910-912	be	_	_	_	_
+18-11	913-919	placed	_	_	_	_
+18-12	920-926	inside	_	_	_	_
+18-13	927-930	the	object[58]	giv[58]	coref	23-14[80_58]
+18-14	931-934	car	object[58]	giv[58]	_	_
+18-15	935-937	in	_	_	_	_
+18-16	938-939	a	object[61]	new[61]	_	_
+18-17	940-944	seat	object|object[60]|object[61]	new|new[60]|new[61]	_	_
+18-18	945-949	belt	object[60]|object[61]	new[60]|new[61]	_	_
+18-19	950-957	harness	object[61]	new[61]	_	_
+18-20	958-959	.	_	_	_	_
+
+#Text=Carry the cage to the back of the truck or utility vehicle .
+19-1	960-965	Carry	_	_	_	_
+19-2	966-969	the	object[62]	new[62]	coref	20-3[66_62]
+19-3	970-974	cage	object[62]	new[62]	_	_
+19-4	975-977	to	_	_	_	_
+19-5	978-981	the	object[63]	new[63]	_	_
+19-6	982-986	back	object[63]	new[63]	_	_
+19-7	987-989	of	object[63]	new[63]	_	_
+19-8	990-993	the	object[63]|object[64]	new[63]|new[64]	coref	23-17[0_64]
+19-9	994-999	truck	object[63]|object[64]	new[63]|new[64]	_	_
+19-10	1000-1002	or	object[63]	new[63]	_	_
+19-11	1003-1010	utility	object[63]|object[65]	new[63]|new[65]	coref	22-5[73_65]
+19-12	1011-1018	vehicle	object[63]|object[65]	new[63]|new[65]	_	_
+19-13	1019-1020	.	_	_	_	_
+
+#Text=Make sure the cage is secure and will not slide around during your trip .
+20-1	1021-1025	Make	_	_	_	_
+20-2	1026-1030	sure	_	_	_	_
+20-3	1031-1034	the	object[66]	giv[66]	coref	22-2[72_66]
+20-4	1035-1039	cage	object[66]	giv[66]	_	_
+20-5	1040-1042	is	_	_	_	_
+20-6	1043-1049	secure	_	_	_	_
+20-7	1050-1053	and	_	_	_	_
+20-8	1054-1058	will	_	_	_	_
+20-9	1059-1062	not	_	_	_	_
+20-10	1063-1068	slide	_	_	_	_
+20-11	1069-1075	around	_	_	_	_
+20-12	1076-1082	during	_	_	_	_
+20-13	1083-1087	your	person|event[68]	giv|new[68]	ana|coref	23-14|24-11[86_68]
+20-14	1088-1092	trip	event[68]	new[68]	_	_
+20-15	1093-1094	.	_	_	_	_
+
+#Text=Small Animals , Birds , and Reptiles
+21-1	1095-1100	Small	animal[69]	new[69]	_	_
+21-2	1101-1108	Animals	animal[69]	new[69]	_	_
+21-3	1109-1110	,	_	_	_	_
+21-4	1111-1116	Birds	animal	new	_	_
+21-5	1117-1118	,	_	_	_	_
+21-6	1119-1122	and	_	_	_	_
+21-7	1123-1131	Reptiles	animal	new	ana	23-3
+
+#Text=Place the cage into the vehicle .
+22-1	1132-1137	Place	_	_	_	_
+22-2	1138-1141	the	object[72]	giv[72]	coref	23-5[76_72]
+22-3	1142-1146	cage	object[72]	giv[72]	_	_
+22-4	1147-1151	into	_	_	_	_
+22-5	1152-1155	the	object[73]	giv[73]	coref	23-14[81_73]
+22-6	1156-1163	vehicle	object[73]	giv[73]	_	_
+22-7	1164-1165	.	_	_	_	_
+
+#Text=Just leave them in their cage and put it in the back of your car or truck .
+23-1	1166-1170	Just	_	_	_	_
+23-2	1171-1176	leave	_	_	_	_
+23-3	1177-1181	them	animal	giv	ana	23-5
+23-4	1182-1184	in	_	_	_	_
+23-5	1185-1190	their	animal|object[76]	giv|giv[76]	ana|ana	23-9[0_76]|24-4
+23-6	1191-1195	cage	object[76]	giv[76]	_	_
+23-7	1196-1199	and	_	_	_	_
+23-8	1200-1203	put	_	_	_	_
+23-9	1204-1206	it	object	giv	_	_
+23-10	1207-1209	in	_	_	_	_
+23-11	1210-1213	the	place[78]	new[78]	_	_
+23-12	1214-1218	back	place[78]	new[78]	_	_
+23-13	1219-1221	of	place[78]	new[78]	_	_
+23-14	1222-1226	your	place[78]|person|object[80]|object[81]	new[78]|giv|giv[80]|giv[81]	ana|coref|coref	24-11|26-17[0_80]|35-8[115_81]
+23-15	1227-1230	car	place[78]|object[80]|object[81]	new[78]|giv[80]|giv[81]	_	_
+23-16	1231-1233	or	place[78]|object[81]	new[78]|giv[81]	_	_
+23-17	1234-1239	truck	place[78]|object[81]|object	new[78]|giv[81]|giv	_	_
+23-18	1240-1241	.	_	_	_	_
+
+#Text=Make sure that their cages will not slide around during your trip , as this will frighten them .
+24-1	1242-1246	Make	_	_	_	_
+24-2	1247-1251	sure	_	_	_	_
+24-3	1252-1256	that	_	_	_	_
+24-4	1257-1262	their	animal|place[84]	giv|new[84]	_	_
+24-5	1263-1268	cages	place[84]	new[84]	_	_
+24-6	1269-1273	will	_	_	_	_
+24-7	1274-1277	not	_	_	_	_
+24-8	1278-1283	slide	_	_	_	_
+24-9	1284-1290	around	_	_	_	_
+24-10	1291-1297	during	_	_	_	_
+24-11	1298-1302	your	person|event[86]	giv|giv[86]	ana|ana	24-15[0_86]|28-2
+24-12	1303-1307	trip	event[86]	giv[86]	_	_
+24-13	1308-1309	,	_	_	_	_
+24-14	1310-1312	as	_	_	_	_
+24-15	1313-1317	this	event	giv	_	_
+24-16	1318-1322	will	_	_	_	_
+24-17	1323-1331	frighten	_	_	_	_
+24-18	1332-1336	them	person	giv	_	_
+24-19	1337-1338	.	_	_	_	_
+
+#Text=Use a box .
+25-1	1339-1342	Use	_	_	_	_
+25-2	1343-1344	a	object[89]	new[89]	coref	26-2[90_89]
+25-3	1345-1348	box	object[89]	new[89]	_	_
+25-4	1349-1350	.	_	_	_	_
+
+#Text=Line the box with shavings and some food and place the pet in there for the car ride .
+26-1	1351-1355	Line	_	_	_	_
+26-2	1356-1359	the	object[90]	giv[90]	_	_
+26-3	1360-1363	box	object[90]	giv[90]	_	_
+26-4	1364-1368	with	_	_	_	_
+26-5	1369-1377	shavings	object|person[92]	new|new[92]	ana	29-3[0_92]
+26-6	1378-1381	and	person[92]	new[92]	_	_
+26-7	1382-1386	some	person[92]|substance[93]	new[92]|new[93]	_	_
+26-8	1387-1391	food	person[92]|substance[93]	new[92]|new[93]	_	_
+26-9	1392-1395	and	_	_	_	_
+26-10	1396-1401	place	_	_	_	_
+26-11	1402-1405	the	animal[94]	new[94]	_	_
+26-12	1406-1409	pet	animal[94]	new[94]	_	_
+26-13	1410-1412	in	_	_	_	_
+26-14	1413-1418	there	_	_	_	_
+26-15	1419-1422	for	_	_	_	_
+26-16	1423-1426	the	event[96]	new[96]	_	_
+26-17	1427-1430	car	object|event[96]	giv|new[96]	_	_
+26-18	1431-1435	ride	event[96]	new[96]	_	_
+26-19	1436-1437	.	_	_	_	_
+
+#Text=Use a crate .
+27-1	1438-1441	Use	_	_	_	_
+27-2	1442-1443	a	place[97]	giv[97]	coref	28-4[101_97]
+27-3	1444-1449	crate	place[97]	giv[97]	_	_
+27-4	1450-1451	.	_	_	_	_
+
+#Text=If you have a dog or cat crate , that will also work .
+28-1	1452-1454	If	_	_	_	_
+28-2	1455-1458	you	person	giv	ana	33-6
+28-3	1459-1463	have	_	_	_	_
+28-4	1464-1465	a	place[101]	giv[101]	ana	28-10[0_101]
+28-5	1466-1469	dog	animal|place[101]	giv|giv[101]	coref	43-4
+28-6	1470-1472	or	place[101]	giv[101]	_	_
+28-7	1473-1476	cat	animal|place[101]	giv|giv[101]	_	_
+28-8	1477-1482	crate	place[101]	giv[101]	_	_
+28-9	1483-1484	,	_	_	_	_
+28-10	1485-1489	that	place	giv	_	_
+28-11	1490-1494	will	_	_	_	_
+28-12	1495-1499	also	_	_	_	_
+28-13	1500-1504	work	_	_	_	_
+28-14	1505-1506	.	_	_	_	_
+
+#Text=Make sure they ca n't slip out .
+29-1	1507-1511	Make	_	_	_	_
+29-2	1512-1516	sure	_	_	_	_
+29-3	1517-1521	they	person	giv	_	_
+29-4	1522-1524	ca	_	_	_	_
+29-5	1525-1528	n't	_	_	_	_
+29-6	1529-1533	slip	_	_	_	_
+29-7	1534-1537	out	_	_	_	_
+29-8	1538-1539	.	_	_	_	_
+
+#Text=Fish
+30-1	1540-1544	Fish	animal	new	coref	31-2
+
+#Text=Place fish in bowls .
+31-1	1545-1550	Place	_	_	_	_
+31-2	1551-1555	fish	animal	giv	coref	33-11[111_0]
+31-3	1556-1558	in	_	_	_	_
+31-4	1559-1564	bowls	object	new	ana	32-2[107_0]
+31-5	1565-1566	.	_	_	_	_
+
+#Text=Pour some of the water out carefully :
+32-1	1567-1571	Pour	_	_	_	_
+32-2	1572-1576	some	object[107]	giv[107]	_	_
+32-3	1577-1579	of	object[107]	giv[107]	_	_
+32-4	1580-1583	the	object[107]|substance[108]	giv[107]|new[108]	ana	33-3[0_108]
+32-5	1584-1589	water	object[107]|substance[108]	giv[107]|new[108]	_	_
+32-6	1590-1593	out	_	_	_	_
+32-7	1594-1603	carefully	_	_	_	_
+32-8	1604-1605	:	_	_	_	_
+
+#Text=when doing this make sure you do not dump out the fish .
+33-1	1606-1610	when	_	_	_	_
+33-2	1611-1616	doing	_	_	_	_
+33-3	1617-1621	this	substance	giv	coref	38-10
+33-4	1622-1626	make	_	_	_	_
+33-5	1627-1631	sure	_	_	_	_
+33-6	1632-1635	you	person	giv	ana	39-1
+33-7	1636-1638	do	_	_	_	_
+33-8	1639-1642	not	_	_	_	_
+33-9	1643-1647	dump	_	_	_	_
+33-10	1648-1651	out	_	_	_	_
+33-11	1652-1655	the	animal[111]	giv[111]	coref	37-2[0_111]
+33-12	1656-1660	fish	animal[111]	giv[111]	_	_
+33-13	1661-1662	.	_	_	_	_
+
+#Text=There should be about half the amount there was before .
+34-1	1663-1668	There	_	_	_	_
+34-2	1669-1675	should	_	_	_	_
+34-3	1676-1678	be	_	_	_	_
+34-4	1679-1684	about	abstract[112]	new[112]	_	_
+34-5	1685-1689	half	abstract[112]	new[112]	_	_
+34-6	1690-1693	the	abstract[112]	new[112]	_	_
+34-7	1694-1700	amount	abstract[112]	new[112]	_	_
+34-8	1701-1706	there	abstract[112]	new[112]	_	_
+34-9	1707-1710	was	abstract[112]	new[112]	_	_
+34-10	1711-1717	before	abstract[112]	new[112]	_	_
+34-11	1718-1719	.	_	_	_	_
+
+#Text=Put the bowl on the floor of the vehicle where the passengers ' feet go .
+35-1	1720-1723	Put	_	_	_	_
+35-2	1724-1727	the	object[113]	new[113]	_	_
+35-3	1728-1732	bowl	object[113]	new[113]	_	_
+35-4	1733-1735	on	_	_	_	_
+35-5	1736-1739	the	place[114]	new[114]	_	_
+35-6	1740-1745	floor	place[114]	new[114]	_	_
+35-7	1746-1748	of	place[114]	new[114]	_	_
+35-8	1749-1752	the	place[114]|object[115]	new[114]|giv[115]	_	_
+35-9	1753-1760	vehicle	place[114]|object[115]	new[114]|giv[115]	_	_
+35-10	1761-1766	where	_	_	_	_
+35-11	1767-1770	the	object[117]	new[117]	_	_
+35-12	1771-1781	passengers	person[116]|object[117]	new[116]|new[117]	_	_
+35-13	1782-1783	'	person[116]|object[117]	new[116]|new[117]	_	_
+35-14	1784-1788	feet	object[117]	new[117]	_	_
+35-15	1789-1791	go	_	_	_	_
+35-16	1792-1793	.	_	_	_	_
+
+#Text=Drive carefully and avoid large bumps .
+36-1	1794-1799	Drive	_	_	_	_
+36-2	1800-1809	carefully	_	_	_	_
+36-3	1810-1813	and	_	_	_	_
+36-4	1814-1819	avoid	_	_	_	_
+36-5	1820-1825	large	object[118]	new[118]	coref	52-10[178_118]
+36-6	1826-1831	bumps	object[118]	new[118]	_	_
+36-7	1832-1833	.	_	_	_	_
+
+#Text=Transport fish in bags .
+37-1	1834-1843	Transport	_	_	_	_
+37-2	1844-1848	fish	animal	giv	coref	38-2[121_0]
+37-3	1849-1851	in	_	_	_	_
+37-4	1852-1856	bags	object	new	coref	38-5[122_0]
+37-5	1857-1858	.	_	_	_	_
+
+#Text=Put the fish in bags that are half-filled with water , blow air into the bags and tie a knot at the top .
+38-1	1859-1862	Put	_	_	_	_
+38-2	1863-1866	the	animal[121]	giv[121]	coref	39-5[129_121]
+38-3	1867-1871	fish	animal[121]	giv[121]	_	_
+38-4	1872-1874	in	_	_	_	_
+38-5	1875-1879	bags	object[122]	giv[122]	coref	38-15[125_122]
+38-6	1880-1884	that	object[122]	giv[122]	_	_
+38-7	1885-1888	are	object[122]	giv[122]	_	_
+38-8	1889-1900	half-filled	object[122]	giv[122]	_	_
+38-9	1901-1905	with	object[122]	giv[122]	_	_
+38-10	1906-1911	water	object[122]|substance	giv[122]|giv	coref	39-12[131_0]
+38-11	1912-1913	,	_	_	_	_
+38-12	1914-1918	blow	_	_	_	_
+38-13	1919-1922	air	substance	new	coref	53-13[184_0]
+38-14	1923-1927	into	_	_	_	_
+38-15	1928-1931	the	object[125]	giv[125]	coref	53-1[181_125]
+38-16	1932-1936	bags	object[125]	giv[125]	_	_
+38-17	1937-1940	and	_	_	_	_
+38-18	1941-1944	tie	_	_	_	_
+38-19	1945-1946	a	object[126]	new[126]	_	_
+38-20	1947-1951	knot	object[126]	new[126]	_	_
+38-21	1952-1954	at	_	_	_	_
+38-22	1955-1958	the	plant[127]	new[127]	_	_
+38-23	1959-1962	top	plant[127]	new[127]	_	_
+38-24	1963-1964	.	_	_	_	_
+
+#Text=You can also keep the fish in the tank and dump some water out or you can get a large tupperware container and put water and the fish in it .
+39-1	1965-1968	You	person	giv	ana	39-16
+39-2	1969-1972	can	_	_	_	_
+39-3	1973-1977	also	_	_	_	_
+39-4	1978-1982	keep	_	_	_	_
+39-5	1983-1986	the	animal[129]	giv[129]	coref	39-27[136_129]
+39-6	1987-1991	fish	animal[129]	giv[129]	_	_
+39-7	1992-1994	in	_	_	_	_
+39-8	1995-1998	the	place[130]	new[130]	_	_
+39-9	1999-2003	tank	place[130]	new[130]	_	_
+39-10	2004-2007	and	_	_	_	_
+39-11	2008-2012	dump	_	_	_	_
+39-12	2013-2017	some	substance[131]	giv[131]	coref	39-25[0_131]
+39-13	2018-2023	water	substance[131]	giv[131]	_	_
+39-14	2024-2027	out	_	_	_	_
+39-15	2028-2030	or	_	_	_	_
+39-16	2031-2034	you	person	giv	ana	42-2
+39-17	2035-2038	can	_	_	_	_
+39-18	2039-2042	get	_	_	_	_
+39-19	2043-2044	a	object[134]	new[134]	ana	39-30[0_134]
+39-20	2045-2050	large	object[134]	new[134]	_	_
+39-21	2051-2061	tupperware	organization|object[134]	new|new[134]	_	_
+39-22	2062-2071	container	object[134]	new[134]	_	_
+39-23	2072-2075	and	_	_	_	_
+39-24	2076-2079	put	_	_	_	_
+39-25	2080-2085	water	substance	giv	coref	53-3[182_0]
+39-26	2086-2089	and	_	_	_	_
+39-27	2090-2093	the	animal[136]	giv[136]	coref	53-5[0_136]
+39-28	2094-2098	fish	animal[136]	giv[136]	_	_
+39-29	2099-2101	in	_	_	_	_
+39-30	2102-2104	it	object	giv	_	_
+39-31	2105-2106	.	_	_	_	_
+
+#Text=Goats , Sheep , and Medium Livestock
+40-1	2107-2112	Goats	animal|object[139]	new|new[139]	ana|coref	42-9[0_139]|50-2[172_0]
+40-2	2113-2114	,	object[139]	new[139]	_	_
+40-3	2115-2120	Sheep	object[139]|person	new[139]|new	_	_
+40-4	2121-2122	,	object[139]	new[139]	_	_
+40-5	2123-2126	and	object[139]	new[139]	_	_
+40-6	2127-2133	Medium	object[139]|animal[141]	new[139]|new[141]	coref	41-2[0_141]
+40-7	2134-2143	Livestock	object[139]|animal[141]	new[139]|new[141]	_	_
+
+#Text=Use livestock trailers .
+41-1	2144-2147	Use	_	_	_	_
+41-2	2148-2157	livestock	animal|object[143]	giv|new[143]	coref	42-5
+41-3	2158-2166	trailers	object[143]	new[143]	_	_
+41-4	2167-2168	.	_	_	_	_
+
+#Text=If you have a livestock trailer , let them go in there or put halters and collars on them and tie them up in there .
+42-1	2169-2171	If	_	_	_	_
+42-2	2172-2175	you	person	giv	ana	44-1
+42-3	2176-2180	have	_	_	_	_
+42-4	2181-2182	a	object[146]	new[146]	coref	49-2[170_146]
+42-5	2183-2192	livestock	animal|object[146]	giv|new[146]	coref	45-3
+42-6	2193-2200	trailer	object[146]	new[146]	_	_
+42-7	2201-2202	,	_	_	_	_
+42-8	2203-2206	let	_	_	_	_
+42-9	2207-2211	them	object	giv	ana	42-19
+42-10	2212-2214	go	_	_	_	_
+42-11	2215-2217	in	_	_	_	_
+42-12	2218-2223	there	_	_	_	_
+42-13	2224-2226	or	_	_	_	_
+42-14	2227-2230	put	_	_	_	_
+42-15	2231-2238	halters	object	new	_	_
+42-16	2239-2242	and	_	_	_	_
+42-17	2243-2250	collars	object	new	_	_
+42-18	2251-2253	on	_	_	_	_
+42-19	2254-2258	them	object	giv	ana	42-22
+42-20	2259-2262	and	_	_	_	_
+42-21	2263-2266	tie	_	_	_	_
+42-22	2267-2271	them	object	giv	_	_
+42-23	2272-2274	up	_	_	_	_
+42-24	2275-2277	in	_	_	_	_
+42-25	2278-2283	there	_	_	_	_
+42-26	2284-2285	.	_	_	_	_
+
+#Text=Use extra large dog kennels .
+43-1	2286-2289	Use	_	_	_	_
+43-2	2290-2295	extra	place[153]	new[153]	_	_
+43-3	2296-2301	large	place[153]	new[153]	_	_
+43-4	2302-2305	dog	animal|place[153]	giv|new[153]	coref	44-10
+43-5	2306-2313	kennels	place[153]	new[153]	_	_
+43-6	2314-2315	.	_	_	_	_
+
+#Text=You may also put one goat per extra large dog kennel .
+44-1	2316-2319	You	person	giv	ana	48-6
+44-2	2320-2323	may	_	_	_	_
+44-3	2324-2328	also	_	_	_	_
+44-4	2329-2332	put	_	_	_	_
+44-5	2333-2336	one	animal[155]	new[155]	coref	48-6[167_155]
+44-6	2337-2341	goat	animal[155]	new[155]	_	_
+44-7	2342-2345	per	_	_	_	_
+44-8	2346-2351	extra	place[157]	new[157]	coref	46-2[162_157]
+44-9	2352-2357	large	place[157]	new[157]	_	_
+44-10	2358-2361	dog	animal|place[157]	giv|new[157]	coref	46-3
+44-11	2362-2368	kennel	place[157]	new[157]	_	_
+44-12	2369-2370	.	_	_	_	_
+
+#Text=Chickens and Livestock Birds
+45-1	2371-2379	Chickens	animal|abstract[160]	new|new[160]	_	_
+45-2	2380-2383	and	abstract[160]	new[160]	_	_
+45-3	2384-2393	Livestock	animal|abstract[160]	giv|new[160]	coref	49-3
+45-4	2394-2399	Birds	abstract[160]	new[160]	_	_
+
+#Text=Use a dog kennel or cage .
+46-1	2400-2403	Use	_	_	_	_
+46-2	2404-2405	a	place[162]	giv[162]	_	_
+46-3	2406-2409	dog	animal|place[162]	giv|giv[162]	_	_
+46-4	2410-2416	kennel	place[162]	giv[162]	_	_
+46-5	2417-2419	or	_	_	_	_
+46-6	2420-2424	cage	place	new	ana	48-1
+46-7	2425-2426	.	_	_	_	_
+
+#Text=Tips
+47-1	2427-2431	Tips	abstract	new	_	_
+
+#Text=It is best to hold your small animal while traveling .
+48-1	2432-2434	It	place	giv	_	_
+48-2	2435-2437	is	_	_	_	_
+48-3	2438-2442	best	_	_	_	_
+48-4	2443-2445	to	_	_	_	_
+48-5	2446-2450	hold	_	_	_	_
+48-6	2451-2455	your	person|animal[167]	giv|giv[167]	ana	49-2
+48-7	2456-2461	small	animal[167]	giv[167]	_	_
+48-8	2462-2468	animal	animal[167]	giv[167]	_	_
+48-9	2469-2474	while	_	_	_	_
+48-10	2475-2484	traveling	_	_	_	_
+48-11	2485-2486	.	_	_	_	_
+
+#Text=Line your livestock trailer with shavings .
+49-1	2487-2491	Line	_	_	_	_
+49-2	2492-2496	your	person|object[170]	giv|giv[170]	ana	52-4
+49-3	2497-2506	livestock	animal|object[170]	giv|giv[170]	_	_
+49-4	2507-2514	trailer	object[170]	giv[170]	_	_
+49-5	2515-2519	with	_	_	_	_
+49-6	2520-2528	shavings	object	new	_	_
+49-7	2529-2530	.	_	_	_	_
+
+#Text=Feed the animals grain and treats while traveling ; it will calm them .
+50-1	2531-2535	Feed	_	_	_	_
+50-2	2536-2539	the	animal[172]	giv[172]	ana	50-13[0_172]
+50-3	2540-2547	animals	animal[172]	giv[172]	_	_
+50-4	2548-2553	grain	substance	new	ana	50-10
+50-5	2554-2557	and	_	_	_	_
+50-6	2558-2564	treats	_	_	_	_
+50-7	2565-2570	while	_	_	_	_
+50-8	2571-2580	traveling	_	_	_	_
+50-9	2581-2582	;	_	_	_	_
+50-10	2583-2585	it	substance	giv	_	_
+50-11	2586-2590	will	_	_	_	_
+50-12	2591-2595	calm	_	_	_	_
+50-13	2596-2600	them	animal	giv	_	_
+50-14	2601-2602	.	_	_	_	_
+
+#Text=Warnings
+51-1	2603-2611	Warnings	abstract	new	_	_
+
+#Text=Be careful when you are driving , and avoid large bumps or potholes !
+52-1	2612-2614	Be	_	_	_	_
+52-2	2615-2622	careful	_	_	_	_
+52-3	2623-2627	when	_	_	_	_
+52-4	2628-2631	you	person	giv	_	_
+52-5	2632-2635	are	_	_	_	_
+52-6	2636-2643	driving	_	_	_	_
+52-7	2644-2645	,	_	_	_	_
+52-8	2646-2649	and	_	_	_	_
+52-9	2650-2655	avoid	_	_	_	_
+52-10	2656-2661	large	object[178]|object[179]	giv[178]|giv[179]	coref	52-10[179_178]
+52-11	2662-2667	bumps	object[178]|object[179]	giv[178]|giv[179]	_	_
+52-12	2668-2670	or	object[179]	giv[179]	_	_
+52-13	2671-2679	potholes	object[179]|place	giv[179]|new	_	_
+52-14	2680-2681	!	_	_	_	_
+
+#Text=Bags of water containing fish will only last so long , as the air may run out .
+53-1	2682-2686	Bags	object[181]	giv[181]	_	_
+53-2	2687-2689	of	object[181]	giv[181]	_	_
+53-3	2690-2695	water	object[181]|substance[182]	giv[181]|giv[182]	_	_
+53-4	2696-2706	containing	object[181]|substance[182]	giv[181]|giv[182]	_	_
+53-5	2707-2711	fish	object[181]|substance[182]|animal	giv[181]|giv[182]|giv	_	_
+53-6	2712-2716	will	_	_	_	_
+53-7	2717-2721	only	_	_	_	_
+53-8	2722-2726	last	_	_	_	_
+53-9	2727-2729	so	_	_	_	_
+53-10	2730-2734	long	_	_	_	_
+53-11	2735-2736	,	_	_	_	_
+53-12	2737-2739	as	_	_	_	_
+53-13	2740-2743	the	substance[184]	giv[184]	_	_
+53-14	2744-2747	air	substance[184]	giv[184]	_	_
+53-15	2748-2751	may	_	_	_	_
+53-16	2752-2755	run	_	_	_	_
+53-17	2756-2759	out	_	_	_	_
+53-18	2760-2761	.	_	_	_	_
+
+#Text=Try to avoid long unnecessary trips with pets .
+54-1	2762-2765	Try	_	_	_	_
+54-2	2766-2768	to	_	_	_	_
+54-3	2769-2774	avoid	_	_	_	_
+54-4	2775-2779	long	event[185]	new[185]	_	_
+54-5	2780-2791	unnecessary	event[185]	new[185]	_	_
+54-6	2792-2797	trips	event[185]	new[185]	_	_
+54-7	2798-2802	with	event[185]	new[185]	_	_
+54-8	2803-2807	pets	event[185]|animal	new[185]|new	_	_
+54-9	2808-2809	.	_	_	_	_

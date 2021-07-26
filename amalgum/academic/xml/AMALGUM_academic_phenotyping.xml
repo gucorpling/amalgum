@@ -1,0 +1,1001 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_phenotyping" title="A Review of Automatic Phenotyping Approaches using Electronic Health Records" shortTitle="phenotyping" author="Hadeel Alzoubi, Raid Alzubi, Naeem Ramzan, Daune West, Tawfik Al-Hadhrami, Mamoun Alazab" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/11/1235/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+Feature	NNP	Feature
+Extraction	NN	extraction
+</s>
+</head>
+<p>
+<s type="decl">
+Feature	NN	feature
+extraction	NN	extraction
+is	VBZ	be
+one	CD	one
+of	IN	of
+the	DT	the
+main	JJ	main
+steps	NNS	step
+in	IN	in
+analysing	VBG	analyse
+clinical	JJ	clinical
+data	NNS	datum
+and	CC	and
+a	DT	a
+primary	JJ	primary
+key	NN	key
+to	IN	to
+success	NN	success
+in	IN	in
+any	DT	any
+rule-based	JJ	rule-based
+or	CC	or
+machine	NN	machine
+learning	NN	learning
+phenotyping	NN	phenotyping
+approach	NN	approach
+.	.	.
+</s>
+<s type="sub">
+Feature	NN	feature
+extraction	NN	extraction
+can	MD	can
+be	VB	be
+defined	VBN	define
+as	IN	as
+identifying	VBG	identify
+a	DT	a
+vector	NN	vector
+set	NN	set
+that	WDT	that
+represents	VBZ	represent
+efficiently	RB	efficiently
+the	DT	the
+content	NN	content
+of	IN	of
+information	NN	information
+for	IN	for
+a	DT	a
+cohort	NN	cohort
+while	IN	while
+reducing	VBG	reduce
+the	DT	the
+dimensionality	NN	dimensionality
+space	NN	space
+.	.	.
+</s>
+<s type="decl">
+Phenotyping	NN	phenotyping
+systems	NNS	system
+extract	VBP	extract
+discriminating	JJ	discriminating
+features	NNS	feature
+to	TO	to
+distinguish	VB	distinguish
+individuals	NNS	individual
+with	IN	with
+a	DT	a
+specific	JJ	specific
+condition	NN	condition
+(	-LRB-	(
+disease	NN	disease
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Feature	NN	feature
+extraction	NN	extraction
+can	MD	can
+be	VB	be
+simple	JJ	simple
+and	CC	and
+straightforward	JJ	straightforward
+,	,	,
+such	JJ	such
+as	IN	as
+when	WRB	when
+using	VBG	use
+code	NN	code
+frequency	NN	frequency
+as	IN	as
+a	DT	a
+feature	NN	feature
+.	.	.
+</s>
+<s type="sub">
+Additional	JJ	additional
+features	NNS	feature
+can	MD	can
+be	VB	be
+extracted	VBN	extract
+by	IN	by
+applying	VBG	apply
+some	DT	some
+rules	NNS	rule
+on	IN	on
+the	DT	the
+structured	VBN	structure
+data	NNS	datum
+fields	NNS	field
+,	,	,
+such	JJ	such
+as	IN	as
+abnormal	JJ	abnormal
+laboratory	NN	laboratory
+lipid	NN	lipid
+levels	NNS	level
+or	CC	or
+the	DT	the
+number	NN	number
+of	IN	of
+visits	NNS	visit
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+in	IN	in
+case	NN	case
+the	DT	the
+previous	JJ	previous
+techniques	NNS	technique
+fail	VBP	fail
+to	TO	to
+increase	VB	increase
+the	DT	the
+accuracy	NN	accuracy
+of	IN	of
+the	DT	the
+prediction	NN	prediction
+systems	NNS	system
+,	,	,
+NLP	NNP	NLP
+is	VBZ	be
+usually	RB	usually
+applied	VBN	apply
+to	TO	to
+extract	VB	extract
+more	JJR	more
+features	NNS	feature
+from	IN	from
+narrative	JJ	narrative
+text	NN	text
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+summary	NN	summary
+of	IN	of
+feature	NN	feature
+extraction	NN	extraction
+methods	NNS	method
+is	VBZ	be
+presented	VBN	present
+at	IN	at
+the	DT	the
+end	NN	end
+of	IN	of
+this	DT	this
+section	NN	section
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+</s>
+<s type="frag">
+Structured	JJ	Structured
+Feature	NNP	Feature
+Extraction	NN	extraction
+</s>
+</head>
+<p>
+<s type="decl">
+Many	JJ	many
+EHR	NNP	EHR
+structured	JJ	structured
+fields	NNS	field
+are	VBP	be
+stored	VBN	store
+in	IN	in
+coded	VBN	code
+format	NN	format
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+fields	NNS	field
+vary	VBP	vary
+across	IN	across
+different	JJ	different
+institutions	NNS	institution
+’	POS	's
+datasets	NNS	dataset
+.	.	.
+</s>
+<s type="decl">
+‘	``	'
+Diagnoses	NNS	diagnose
+’	''	'
+,	,	,
+‘	``	'
+medication	NN	medication
+’	''	'
+,	,	,
+and	CC	and
+‘	``	'
+procedure	NN	procedure
+’	''	'
+fields	NNS	field
+are	VBP	be
+the	DT	the
+most	RBS	most
+common	JJ	common
+types	NNS	type
+of	IN	of
+data	NNS	datum
+represented	VBN	represent
+in	IN	in
+code	NN	code
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+represent	VB	represent
+diagnoses	NNS	diagnose
+,	,	,
+the	DT	the
+International	NNP	International
+Classification	NNP	Classification
+of	IN	of
+Diseases	NNPS	Diseases
+Ninth	NNP	Ninth
+Revision	NNP	Revision
+(	-LRB-	(
+ICD-9	NNP	ICD-9
+)	-RRB-	)
+is	VBZ	be
+usually	RB	usually
+used	VBN	use
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+representing	VBG	represent
+procedures	NNS	procedure
+,	,	,
+the	DT	the
+Current	NNP	Current
+Procedural	NNP	Procedural
+Terminology	NNP	Terminology
+(	-LRB-	(
+CPT	NNP	CPT
+)	-RRB-	)
+is	VBZ	be
+mainly	RB	mainly
+used	VBN	use
+while	IN	while
+RxNorm	NNP	RxNorm
+is	VBZ	be
+utilized	VBN	utilize
+to	TO	to
+code	VB	code
+medication	NN	medication
+.	.	.
+</s>
+<s type="decl">
+Feature	NN	feature
+extraction	NN	extraction
+using	VBG	use
+coded	VBN	code
+data	NN	datum
+is	VBZ	be
+available	JJ	available
+and	CC	and
+easy	JJ	easy
+to	TO	to
+access	VB	access
+and	CC	and
+is	VBZ	be
+usually	RB	usually
+conducted	VBN	conduct
+by	IN	by
+selecting	VBG	select
+the	DT	the
+code	NN	code
+that	WDT	that
+most	RBS	most
+likely	RB	likely
+identifies	VBZ	identify
+a	DT	a
+cohort	NN	cohort
+with	IN	with
+a	DT	a
+particular	JJ	particular
+disease	NN	disease
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+since	IN	since
+coding	VBG	code
+in	IN	in
+EHRs	NNS	ehr
+is	VBZ	be
+usually	RB	usually
+for	IN	for
+billing	NN	billing
+purposes	NNS	purpose
+,	,	,
+it	PRP	it
+is	VBZ	be
+not	RB	not
+always	RB	always
+sufficient	JJ	sufficient
+to	TO	to
+support	VB	support
+clinical	JJ	clinical
+research	NN	research
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+accuracy	NN	accuracy
+of	IN	of
+code	NN	code
+extraction	NN	extraction
+within	IN	within
+an	DT	a
+EHR	NNP	EHR
+depends	VBZ	depend
+on	IN	on
+whether	IN	whether
+the	DT	the
+code	NN	code
+reflects	VBZ	reflect
+the	DT	the
+physician	NN	physician
+’	POS	's
+opinion	NN	opinion
+and	CC	and
+whether	IN	whether
+the	DT	the
+physician	NN	physician
+was	VBD	be
+able	JJ	able
+to	TO	to
+make	VB	make
+a	DT	a
+diagnosis	NN	diagnosis
+correctly	RB	correctly
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+both	DT	both
+cases	NNS	case
+,	,	,
+often	RB	often
+the	DT	the
+code	NN	code
+fields	NNS	field
+cannot	MD	cannot
+be	VB	be
+fully	RB	fully
+trusted	VBN	trust
+.	.	.
+</s>
+<s type="decl">
+Recently	RB	recently
+,	,	,
+extracting	VBG	extract
+features	NNS	feature
+from	IN	from
+coded	VBN	code
+fields	NNS	field
+alone	RB	alone
+is	VBZ	be
+rarely	RB	rarely
+used	VBN	use
+,	,	,
+and	CC	and
+some	DT	some
+additional	JJ	additional
+rules	NNS	rule
+on	IN	on
+other	JJ	other
+structured	JJ	structured
+fields	NNS	field
+are	VBP	be
+needed	VBN	need
+.	.	.
+</s>
+<s type="sub">
+Additional	JJ	additional
+features	NNS	feature
+can	MD	can
+be	VB	be
+extracted	VBN	extract
+by	IN	by
+setting	VBG	set
+a	DT	a
+logical	JJ	logical
+constraint	NN	constraint
+on	IN	on
+the	DT	the
+structured	VBN	structure
+field	NN	field
+data	NNS	datum
+to	TO	to
+derive	VB	derive
+informative	JJ	informative
+features	NNS	feature
+describing	VBG	describe
+phenotype	NN	phenotype
+status	NN	status
+.	.	.
+</s>
+<s type="sub">
+These	DT	this
+features	NNS	feature
+may	MD	may
+take	VB	take
+different	JJ	different
+datatypes	NNS	datatype
+such	JJ	such
+as	IN	as
+real	JJ	real
+numbers	NNS	number
+,	,	,
+true/false	JJ	true/false
+or	CC	or
+enumerated	VBN	enumerate
+categories	NNS	category
+.	.	.
+</s>
+<s type="sub">
+For	IN	for
+example	NN	example
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+clinical	JJ	clinical
+visits	NNS	visit
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+prescriptions	NNS	prescription
+and	CC	and
+frequency	NN	frequency
+of	IN	of
+ICD-9	NN	ICD-9
+code	NN	code
+can	MD	can
+be	VB	be
+counted	VBN	count
+and	CC	and
+stored	VBN	store
+as	IN	as
+real	JJ	real
+numbers	NNS	number
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+existence	NN	existence
+of	IN	of
+some	DT	some
+values	NNS	value
+,	,	,
+such	JJ	such
+as	IN	as
+medication	NN	medication
+code	NN	code
+,	,	,
+prescription	NN	prescription
+code	NN	code
+and	CC	and
+hospital	NN	hospital
+admission	NN	admission
+,	,	,
+can	MD	can
+be	VB	be
+stored	VBN	store
+as	IN	as
+Boolean	JJ	Boolean
+values	NNS	value
+(	-LRB-	(
+0	CD	0
+,	,	,
+1	CD	1
+)	-RRB-	)
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+enumerated	VBN	enumerate
+categories	NNS	category
+data	NN	datum
+field	NN	field
+can	MD	can
+be	VB	be
+divided	VBN	divide
+into	IN	into
+different	JJ	different
+subcategories	NNS	subcategory
+such	JJ	such
+as	IN	as
+(	-LRB-	(
+low	JJ	low
+,	,	,
+median	NN	median
+,	,	,
+and	CC	and
+high	JJ	high
+)	-RRB-	)
+for	IN	for
+laboratory	NN	laboratory
+results	NNS	result
+,	,	,
+(	-LRB-	(
+normal	JJ	normal
+,	,	,
+and	CC	and
+abnormal	JJ	abnormal
+)	-RRB-	)
+for	IN	for
+blood	NN	blood
+pressure	NN	pressure
+,	,	,
+or	CC	or
+classify	VB	classify
+patients	NNS	patient
+into	IN	into
+certain	JJ	certain
+groups	NNS	group
+based	VBN	base
+on	IN	on
+age	NN	age
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+in	IN	in
+some	DT	some
+cases	NNS	case
+,	,	,
+using	VBG	use
+structured	VBN	structure
+data	NNS	datum
+alone	RB	alone
+results	VBZ	result
+in	IN	in
+poor	JJ	poor
+predictability	NN	predictability
+in	IN	in
+capturing	VBG	capture
+disease	NN	disease
+cases	NNS	case
+,	,	,
+making	VBG	make
+it	PRP	it
+necessary	JJ	necessary
+to	TO	to
+look	VB	look
+for	IN	for
+more	JJR	more
+features	NNS	feature
+in	IN	in
+unstructured	JJ	unstructured
+fields	NNS	field
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.2.	CD	4.2.
+Unstructured	JJ	Unstructured
+Feature	NN	feature
+Extraction	NN	extraction
+</s>
+</head>
+<p>
+<s type="decl">
+While	IN	while
+structured	JJ	structured
+data	NNS	datum
+are	VBP	be
+available	JJ	available
+and	CC	and
+easy	JJ	easy
+to	TO	to
+access	VB	access
+,	,	,
+there	EX	there
+are	VBP	be
+limitations	NNS	limitation
+in	IN	in
+using	VBG	use
+these	DT	this
+data	NNS	datum
+to	TO	to
+describe	VB	describe
+patients	NNS	patient
+’	POS	's
+phenotypes	NNS	phenotype
+.	.	.
+</s>
+<s type="decl">
+Not	RB	not
+all	DT	all
+diagnoses	NNS	diagnose
+and	CC	and
+symptoms	NNS	symptom
+are	VBP	be
+coded	VBN	code
+and	CC	and
+,	,	,
+therefore	RB	therefore
+,	,	,
+they	PRP	they
+may	MD	may
+offer	VB	offer
+a	DT	a
+weak	JJ	weak
+clue	NN	clue
+to	IN	to
+the	DT	the
+patient	NN	patient
+’s	POS	's
+status	NN	status
+.	.	.
+</s>
+<s type="decl">
+Unstructured	JJ	Unstructured
+,	,	,
+or	CC	or
+free	JJ	free
+text	NN	text
+EHRs	NNS	ehr
+,	,	,
+contain	VBP	contain
+valuable	JJ	valuable
+information	NN	information
+such	JJ	such
+as	IN	as
+patient	JJ	patient
+history	NN	history
+and	CC	and
+clinical	JJ	clinical
+opinion	NN	opinion
+of	IN	of
+this	DT	this
+history	NN	history
+.	.	.
+</s>
+<s type="decl">
+An	DT	a
+analysis	NN	analysis
+of	IN	of
+these	DT	this
+clinical	JJ	clinical
+notes	NNS	note
+could	MD	could
+offer	VB	offer
+better	JJR	good
+information	NN	information
+and	CC	and
+description	NN	description
+of	IN	of
+the	DT	the
+patient	NN	patient
+’s	POS	's
+status	NN	status
+;	:	;
+however	RB	however
+,	,	,
+the	DT	the
+manual	JJ	manual
+review	NN	review
+of	IN	of
+these	DT	this
+notes	NNS	note
+for	IN	for
+large-scale	JJ	large-scale
+projects	NNS	project
+is	VBZ	be
+costly	JJ	costly
+and	CC	and
+highly	RB	highly
+time-consuming	JJ	time-consuming
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+unlock	VB	unlock
+and	CC	and
+extract	VB	extract
+the	DT	the
+hidden	VBN	hide
+information	NN	information
+from	IN	from
+the	DT	the
+narrative	JJ	narrative
+text	NN	text
+efficiently	RB	efficiently
+and	CC	and
+accurately	RB	accurately
+,	,	,
+NLP	NNP	NLP
+techniques	NNS	technique
+are	VBP	be
+usually	RB	usually
+applied	VBN	apply
+.	.	.
+</s>
+<s type="decl">
+NLP	NNP	NLP
+is	VBZ	be
+a	DT	a
+field	NN	field
+of	IN	of
+computer-based	JJ	computer-based
+methods	NNS	method
+allowing	VBG	allow
+computers	NNS	computer
+to	TO	to
+understand	VB	understand
+and	CC	and
+process	VB	process
+human	JJ	human
+(	-LRB-	(
+natural	JJ	natural
+)	-RRB-	)
+language	NN	language
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+ability	NN	ability
+to	TO	to
+extract	VB	extract
+critical	JJ	critical
+components	NNS	component
+from	IN	from
+these	DT	this
+data	NNS	datum
+and	CC	and
+convert	VB	convert
+them	PRP	they
+into	IN	into
+a	DT	a
+structured	VBN	structure
+format	NN	format
+could	MD	could
+provide	VB	provide
+great	JJ	great
+value	NN	value
+for	IN	for
+clinical	JJ	clinical
+research	NN	research
+.	.	.
+</s>
+<s type="decl">
+Narrative	JJ	narrative
+text	NN	text
+has	VBZ	have
+been	VBN	be
+utilized	VBN	utilize
+to	TO	to
+supplement	VB	supplement
+structured	VBN	structure
+data	NNS	datum
+in	IN	in
+recognizing	VBG	recognize
+particular	JJ	particular
+phenotypes	NNS	phenotype
+of	IN	of
+patients	NNS	patient
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Recent	JJ	Recent
+developments	NNS	development
+in	IN	in
+NLP	NNP	NLP
+techniques	NNS	technique
+have	VBP	have
+shown	VBN	show
+an	DT	a
+increasing	VBG	increase
+promise	NN	promise
+in	IN	in
+recognizing	VBG	recognize
+and	CC	and
+extracting	VBG	extract
+meaningful	JJ	meaningful
+pieces	NNS	piece
+of	IN	of
+information	NN	information
+from	IN	from
+clinical	JJ	clinical
+narrative	JJ	narrative
+text	NN	text
+.	.	.
+</s>
+<s type="decl">
+NLP	NNP	NLP
+techniques	NNS	technique
+automate	VBP	automate
+the	DT	the
+processes	NNS	process
+required	VBN	require
+to	TO	to
+access	VB	access
+the	DT	the
+large	JJ	large
+amount	NN	amount
+of	IN	of
+embedded	VBN	embd
+information	NN	information
+in	IN	in
+EHRs	NNS	ehr
+and	CC	and
+consolidate	VBP	consolidate
+the	DT	the
+processes	NNS	process
+into	IN	into
+a	DT	a
+coherent	JJ	coherent
+structure	NN	structure
+.	.	.
+</s>
+<s type="decl">
+From	IN	from
+an	DT	a
+Information	NNP	Information
+Extraction	NN	extraction
+(	-LRB-	(
+IE	NNP	Ie
+)	-RRB-	)
+perspective	NN	perspective
+,	,	,
+it	PRP	it
+is	VBZ	be
+essential	JJ	essential
+to	TO	to
+pre-process	VB	pre-process
+the	DT	the
+clinical	JJ	clinical
+text	NN	text
+by	IN	by
+some	DT	some
+NLP	NNP	NLP
+techniques	NNS	technique
+,	,	,
+such	JJ	such
+as	IN	as
+tokenization	NN	tokenization
+,	,	,
+sentence	NN	sentence
+detection	NN	detection
+,	,	,
+word	NN	word
+sense	NN	sense
+disambiguation	NN	disambiguation
+,	,	,
+part	NN	part
+of	IN	of
+speech	NN	speech
+tagging	NN	tagging
+(	-LRB-	(
+POS	NNP	POS
+)	-RRB-	)
+and	CC	and
+parsing	NN	parsing
+.	.	.
+</s>
+<s type="decl">
+Higher-level	JJ	Higher-level
+NLP	NNP	NLP
+techniques	NNS	technique
+,	,	,
+such	JJ	such
+as	IN	as
+negation	NN	negation
+,	,	,
+temporality	NN	temporality
+,	,	,
+and	CC	and
+entity	NN	entity
+relations	NNS	relation
+,	,	,
+are	VBP	be
+crucial	JJ	crucial
+for	IN	for
+the	DT	the
+precise	JJ	precise
+interpretation	NN	interpretation
+of	IN	of
+the	DT	the
+extracted	VBN	extract
+information	NN	information
+.	.	.
+</s>
+<s type="decl">
+Adoption	NN	adoption
+of	IN	of
+the	DT	the
+previously	RB	previously
+mentioned	VBN	mention
+techniques	NNS	technique
+varies	VBZ	vary
+between	IN	between
+reviewed	VBN	review
+systems	NNS	system
+and	CC	and
+some	DT	some
+of	IN	of
+these	DT	this
+components	NNS	component
+can	MD	can
+be	VB	be
+or	CC	or
+are	VBP	be
+omitted	VBN	omit
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+the	DT	the
+task	NN	task
+of	IN	of
+EHR	NNP	EHR
+phenotyping	NN	phenotyping
+,	,	,
+NLP	NNP	NLP
+is	VBZ	be
+commonly	RB	commonly
+applied	VBN	apply
+in	IN	in
+three	CD	3
+different	JJ	different
+manners	NNS	manner
+:	:	:
+bag	NN	bag
+of	IN	of
+words	NNS	word
+,	,	,
+keywords	NNS	keyword
+search	NN	search
+and	CC	and
+concept	NN	concept
+extraction	NN	extraction
+.	.	.
+</s>
+<s type="decl">
+Further	JJR	further
+details	NNS	detail
+on	IN	on
+these	DT	this
+techniques	NNS	technique
+are	VBP	be
+given	VBN	give
+in	IN	in
+the	DT	the
+following	VBG	follow
+sections	NNS	section
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,790 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Drive an Air Bag Equipped Car
+1-1	0-5	Drive	_	_	_	_
+1-2	6-8	an	object[2]	new[2]	_	_
+1-3	9-12	Air	person[1]|object[2]	new[1]|new[2]	_	_
+1-4	13-16	Bag	person[1]|object[2]	new[1]|new[2]	_	_
+1-5	17-25	Equipped	object[2]	new[2]	_	_
+1-6	26-29	Car	object[2]	new[2]	_	_
+
+#Text=Beginning in the 1980s , vehicle manufacturers started installing air bags in vehicle steering wheels .
+2-1	30-39	Beginning	_	_	_	_
+2-2	40-42	in	_	_	_	_
+2-3	43-46	the	time[3]	new[3]	_	_
+2-4	47-52	1980s	time[3]	new[3]	_	_
+2-5	53-54	,	_	_	_	_
+2-6	55-62	vehicle	object|organization[5]	new|new[5]	coref	2-13
+2-7	63-76	manufacturers	organization[5]	new[5]	_	_
+2-8	77-84	started	_	_	_	_
+2-9	85-95	installing	_	_	_	_
+2-10	96-99	air	object[6]	new[6]	coref	3-12[13_6]
+2-11	100-104	bags	object[6]	new[6]	_	_
+2-12	105-107	in	_	_	_	_
+2-13	108-115	vehicle	object|object[9]	giv|new[9]	_	_
+2-14	116-124	steering	abstract|object[9]	new|new[9]	_	_
+2-15	125-131	wheels	object[9]	new[9]	_	_
+2-16	132-133	.	_	_	_	_
+
+#Text=By 1998 , passenger vehicles were required to be equipped with dual air bags , while in 2001 , the National Highway Transportation Safety Administration ( NHTSA ) required that all new light trucks have dual air bags , one for the driver and one installed in the dashboard for the passenger .
+3-1	134-136	By	_	_	_	_
+3-2	137-141	1998	time	new	_	_
+3-3	142-143	,	_	_	_	_
+3-4	144-153	passenger	person|object[12]	new|new[12]	coref|coref	3-51[26_0]|4-8[28_12]
+3-5	154-162	vehicles	object[12]	new[12]	_	_
+3-6	163-167	were	_	_	_	_
+3-7	168-176	required	_	_	_	_
+3-8	177-179	to	_	_	_	_
+3-9	180-182	be	_	_	_	_
+3-10	183-191	equipped	_	_	_	_
+3-11	192-196	with	_	_	_	_
+3-12	197-201	dual	object[13]	giv[13]	coref	3-36[21_13]
+3-13	202-205	air	object[13]	giv[13]	_	_
+3-14	206-210	bags	object[13]	giv[13]	_	_
+3-15	211-212	,	_	_	_	_
+3-16	213-218	while	_	_	_	_
+3-17	219-221	in	_	_	_	_
+3-18	222-226	2001	time	new	_	_
+3-19	227-228	,	_	_	_	_
+3-20	229-232	the	organization[18]	new[18]	appos	3-27[0_18]
+3-21	233-241	National	organization[18]	new[18]	_	_
+3-22	242-249	Highway	person|organization[18]	new|new[18]	_	_
+3-23	250-264	Transportation	organization|organization[18]	new|new[18]	_	_
+3-24	265-271	Safety	abstract|organization[18]	new|new[18]	_	_
+3-25	272-286	Administration	organization[18]	new[18]	_	_
+3-26	287-288	(	_	_	_	_
+3-27	289-294	NHTSA	organization	giv	_	_
+3-28	295-296	)	_	_	_	_
+3-29	297-305	required	_	_	_	_
+3-30	306-310	that	_	_	_	_
+3-31	311-314	all	object[20]	new[20]	_	_
+3-32	315-318	new	object[20]	new[20]	_	_
+3-33	319-324	light	object[20]	new[20]	_	_
+3-34	325-331	trucks	object[20]	new[20]	_	_
+3-35	332-336	have	_	_	_	_
+3-36	337-341	dual	object[21]	giv[21]	appos	3-40[22_21]
+3-37	342-345	air	object[21]	giv[21]	_	_
+3-38	346-350	bags	object[21]	giv[21]	_	_
+3-39	351-352	,	_	_	_	_
+3-40	353-356	one	object[22]	giv[22]	appos	3-45[24_22]
+3-41	357-360	for	object[22]	giv[22]	_	_
+3-42	361-364	the	object[22]|person[23]	giv[22]|new[23]	coref	7-15[50_23]
+3-43	365-371	driver	object[22]|person[23]	giv[22]|new[23]	_	_
+3-44	372-375	and	_	_	_	_
+3-45	376-379	one	object[24]	giv[24]	coref	4-1[27_24]
+3-46	380-389	installed	object[24]	giv[24]	_	_
+3-47	390-392	in	object[24]	giv[24]	_	_
+3-48	393-396	the	object[24]|object[25]	giv[24]|new[25]	_	_
+3-49	397-406	dashboard	object[24]|object[25]	giv[24]|new[25]	_	_
+3-50	407-410	for	object[24]	giv[24]	_	_
+3-51	411-414	the	object[24]|person[26]	giv[24]|giv[26]	coref	22-7[0_26]
+3-52	415-424	passenger	object[24]|person[26]	giv[24]|giv[26]	_	_
+3-53	425-426	.	_	_	_	_
+
+#Text=Air bags are also located in the vehicle 's frame just above each door .
+4-1	427-430	Air	object[27]	giv[27]	coref	7-1[46_27]
+4-2	431-435	bags	object[27]	giv[27]	_	_
+4-3	436-439	are	_	_	_	_
+4-4	440-444	also	_	_	_	_
+4-5	445-452	located	_	_	_	_
+4-6	453-455	in	_	_	_	_
+4-7	456-459	the	object[29]	new[29]	_	_
+4-8	460-467	vehicle	object[28]|object[29]	giv[28]|new[29]	_	_
+4-9	468-470	's	object[28]|object[29]	giv[28]|new[29]	_	_
+4-10	471-476	frame	object[29]	new[29]	_	_
+4-11	477-481	just	object[30]	new[30]	_	_
+4-12	482-487	above	object[30]	new[30]	_	_
+4-13	488-492	each	object[30]	new[30]	_	_
+4-14	493-497	door	object[30]	new[30]	_	_
+4-15	498-499	.	_	_	_	_
+
+#Text=The force of an accidental collision trips an Airbag sensor , which activates a sodium azide fuse .
+5-1	500-503	The	abstract[31]	new[31]	_	_
+5-2	504-509	force	abstract[31]	new[31]	_	_
+5-3	510-512	of	abstract[31]	new[31]	_	_
+5-4	513-515	an	abstract[31]|event[32]	new[31]|new[32]	coref	10-7[57_32]
+5-5	516-526	accidental	abstract[31]|event[32]	new[31]|new[32]	_	_
+5-6	527-536	collision	abstract[31]|event[32]	new[31]|new[32]	_	_
+5-7	537-542	trips	_	_	_	_
+5-8	543-545	an	object[34]	new[34]	coref	14-5[85_34]
+5-9	546-552	Airbag	object|object[34]	new|new[34]	coref	6-9[40_0]
+5-10	553-559	sensor	object[34]	new[34]	_	_
+5-11	560-561	,	object[34]	new[34]	_	_
+5-12	562-567	which	object[34]	new[34]	_	_
+5-13	568-577	activates	object[34]	new[34]	_	_
+5-14	578-579	a	object[34]|object[37]	new[34]|new[37]	coref	6-2[38_37]
+5-15	580-586	sodium	object[34]|substance|animal[36]|object[37]	new[34]|new|new[36]|new[37]	_	_
+5-16	587-592	azide	object[34]|animal[36]|object[37]	new[34]|new[36]|new[37]	_	_
+5-17	593-597	fuse	object[34]|object[37]	new[34]|new[37]	_	_
+5-18	598-599	.	_	_	_	_
+
+#Text=As the fuse is activated , it triggers the Airbag to deploy at a speed of 200 kilometers per hour ( 124 miles per hour ) .
+6-1	600-602	As	_	_	_	_
+6-2	603-606	the	object[38]	giv[38]	ana	6-7[0_38]
+6-3	607-611	fuse	object[38]	giv[38]	_	_
+6-4	612-614	is	_	_	_	_
+6-5	615-624	activated	_	_	_	_
+6-6	625-626	,	_	_	_	_
+6-7	627-629	it	object	giv	coref	14-15[88_0]
+6-8	630-638	triggers	_	_	_	_
+6-9	639-642	the	object[40]	giv[40]	coref	10-3[56_40]
+6-10	643-649	Airbag	object[40]	giv[40]	_	_
+6-11	650-652	to	_	_	_	_
+6-12	653-659	deploy	_	_	_	_
+6-13	660-662	at	_	_	_	_
+6-14	663-664	a	abstract[41]	new[41]	_	_
+6-15	665-670	speed	abstract[41]	new[41]	_	_
+6-16	671-673	of	abstract[41]	new[41]	_	_
+6-17	674-677	200	abstract[41]|abstract[42]	new[41]|new[42]	_	_
+6-18	678-688	kilometers	abstract[41]|abstract[42]	new[41]|new[42]	_	_
+6-19	689-692	per	abstract[41]|abstract[42]	new[41]|new[42]	_	_
+6-20	693-697	hour	abstract[41]|abstract[42]|time	new[41]|new[42]|new	coref	6-25
+6-21	698-699	(	_	_	_	_
+6-22	700-703	124	abstract[44]	new[44]	_	_
+6-23	704-709	miles	abstract[44]	new[44]	_	_
+6-24	710-713	per	abstract[44]	new[44]	_	_
+6-25	714-718	hour	abstract[44]|time	new[44]|giv	_	_
+6-26	719-720	)	_	_	_	_
+6-27	721-722	.	_	_	_	_
+
+#Text=Air bags deploy quickly , increasing the risk of injury or potential death if the driver is positioned too closely to the steering wheel .
+7-1	723-726	Air	object[46]	giv[46]	coref	18-1[103_46]
+7-2	727-731	bags	object[46]	giv[46]	_	_
+7-3	732-738	deploy	_	_	_	_
+7-4	739-746	quickly	_	_	_	_
+7-5	747-748	,	_	_	_	_
+7-6	749-759	increasing	_	_	_	_
+7-7	760-763	the	abstract[47]	new[47]	_	_
+7-8	764-768	risk	abstract[47]	new[47]	_	_
+7-9	769-771	of	abstract[47]	new[47]	_	_
+7-10	772-778	injury	abstract[47]|event	new[47]|new	_	_
+7-11	779-781	or	abstract[47]	new[47]	_	_
+7-12	782-791	potential	abstract[47]|event[49]	new[47]|new[49]	_	_
+7-13	792-797	death	abstract[47]|event[49]	new[47]|new[49]	_	_
+7-14	798-800	if	_	_	_	_
+7-15	801-804	the	person[50]	giv[50]	coref	20-3[111_50]
+7-16	805-811	driver	person[50]	giv[50]	_	_
+7-17	812-814	is	_	_	_	_
+7-18	815-825	positioned	_	_	_	_
+7-19	826-829	too	_	_	_	_
+7-20	830-837	closely	_	_	_	_
+7-21	838-840	to	_	_	_	_
+7-22	841-844	the	object[51]	new[51]	coref	26-5[157_51]
+7-23	845-853	steering	object[51]	new[51]	_	_
+7-24	854-859	wheel	object[51]	new[51]	_	_
+7-25	860-861	.	_	_	_	_
+
+#Text=Because of this , drivers need to learn how to drive an air-bag equipped car .
+8-1	862-869	Because	_	_	_	_
+8-2	870-872	of	_	_	_	_
+8-3	873-877	this	_	_	_	_
+8-4	878-879	,	_	_	_	_
+8-5	880-887	drivers	person	new	_	_
+8-6	888-892	need	_	_	_	_
+8-7	893-895	to	_	_	_	_
+8-8	896-901	learn	_	_	_	_
+8-9	902-905	how	_	_	_	_
+8-10	906-908	to	_	_	_	_
+8-11	909-914	drive	_	_	_	_
+8-12	915-917	an	object[54]	new[54]	coref	11-25[64_54]
+8-13	918-925	air-bag	object|object[54]	new|new[54]	coref	26-6
+8-14	926-934	equipped	object[54]	new[54]	_	_
+8-15	935-938	car	object[54]	new[54]	_	_
+8-16	939-940	.	_	_	_	_
+
+#Text=Steps
+9-1	941-946	Steps	abstract	new	_	_
+
+#Text=Understand how an Airbag works during a collision .
+10-1	947-957	Understand	_	_	_	_
+10-2	958-961	how	_	_	_	_
+10-3	962-964	an	object[56]	giv[56]	coref	11-16[62_56]
+10-4	965-971	Airbag	object[56]	giv[56]	_	_
+10-5	972-977	works	_	_	_	_
+10-6	978-984	during	_	_	_	_
+10-7	985-986	a	event[57]	giv[57]	coref	13-20[80_57]
+10-8	987-996	collision	event[57]	giv[57]	_	_
+10-9	997-998	.	_	_	_	_
+
+#Text=The letters " S.R.S. " stand for " supplementary restraint system , " which means the Airbag is intended to be used along with your car 's seat belts .
+11-1	999-1002	The	abstract[58]	new[58]	appos	11-4[0_58]
+11-2	1003-1010	letters	abstract[58]	new[58]	_	_
+11-3	1011-1012	"	_	_	_	_
+11-4	1013-1019	S.R.S.	abstract	giv	_	_
+11-5	1020-1021	"	_	_	_	_
+11-6	1022-1027	stand	_	_	_	_
+11-7	1028-1031	for	_	_	_	_
+11-8	1032-1033	"	abstract[61]	new[61]	_	_
+11-9	1034-1047	supplementary	abstract[61]	new[61]	_	_
+11-10	1048-1057	restraint	abstract|abstract[61]	new|new[61]	coref	12-7
+11-11	1058-1064	system	abstract[61]	new[61]	_	_
+11-12	1065-1066	,	abstract[61]	new[61]	_	_
+11-13	1067-1068	"	abstract[61]	new[61]	_	_
+11-14	1069-1074	which	abstract[61]	new[61]	_	_
+11-15	1075-1080	means	abstract[61]	new[61]	_	_
+11-16	1081-1084	the	abstract[61]|object[62]	new[61]|giv[62]	coref	13-23[81_62]
+11-17	1085-1091	Airbag	abstract[61]|object[62]	new[61]|giv[62]	_	_
+11-18	1092-1094	is	abstract[61]	new[61]	_	_
+11-19	1095-1103	intended	abstract[61]	new[61]	_	_
+11-20	1104-1106	to	abstract[61]	new[61]	_	_
+11-21	1107-1109	be	abstract[61]	new[61]	_	_
+11-22	1110-1114	used	abstract[61]	new[61]	_	_
+11-23	1115-1120	along	abstract[61]	new[61]	_	_
+11-24	1121-1125	with	_	_	_	_
+11-25	1126-1130	your	person|object[64]|object[66]	acc|giv[64]|new[66]	ana|coref|coref	12-1|12-1[69_66]|13-5[77_64]
+11-26	1131-1134	car	object[64]|object[66]	giv[64]|new[66]	_	_
+11-27	1135-1137	's	object[64]|object[66]	giv[64]|new[66]	_	_
+11-28	1138-1142	seat	object|object[66]	new|new[66]	coref	12-2
+11-29	1143-1148	belts	object[66]	new[66]	_	_
+11-30	1149-1150	.	_	_	_	_
+
+#Text=Your seat belts are the primary restraint system protecting you in an accident .
+12-1	1151-1155	Your	person|object[69]	giv|giv[69]	coref|ana	12-5[71_69]|12-10
+12-2	1156-1160	seat	object|object[69]	giv|giv[69]	coref	13-2
+12-3	1161-1166	belts	object[69]	giv[69]	_	_
+12-4	1167-1170	are	_	_	_	_
+12-5	1171-1174	the	object[71]	giv[71]	coref	13-1[75_71]
+12-6	1175-1182	primary	object[71]	giv[71]	_	_
+12-7	1183-1192	restraint	abstract|object[71]	giv|giv[71]	_	_
+12-8	1193-1199	system	object[71]	giv[71]	_	_
+12-9	1200-1210	protecting	object[71]	giv[71]	_	_
+12-10	1211-1214	you	object[71]|person	giv[71]|giv	ana	13-5
+12-11	1215-1217	in	object[71]	giv[71]	_	_
+12-12	1218-1220	an	object[71]|event[73]	giv[71]|new[73]	_	_
+12-13	1221-1229	accident	object[71]|event[73]	giv[71]|new[73]	_	_
+12-14	1230-1231	.	_	_	_	_
+
+#Text=The seat belts in your car help keep you positioned safely so that , if you are involved in a collision , the Airbag wo n't injure you when it deploys .
+13-1	1232-1235	The	object[75]	giv[75]	_	_
+13-2	1236-1240	seat	object|object[75]	giv|giv[75]	coref	20-2[112_0]
+13-3	1241-1246	belts	object[75]	giv[75]	_	_
+13-4	1247-1249	in	object[75]	giv[75]	_	_
+13-5	1250-1254	your	object[75]|person|object[77]	giv[75]|giv|giv[77]	ana|ana	13-9|13-30[0_77]
+13-6	1255-1258	car	object[75]|object[77]	giv[75]|giv[77]	_	_
+13-7	1259-1263	help	_	_	_	_
+13-8	1264-1268	keep	_	_	_	_
+13-9	1269-1272	you	person	giv	ana	13-16
+13-10	1273-1283	positioned	_	_	_	_
+13-11	1284-1290	safely	_	_	_	_
+13-12	1291-1293	so	_	_	_	_
+13-13	1294-1298	that	_	_	_	_
+13-14	1299-1300	,	_	_	_	_
+13-15	1301-1303	if	_	_	_	_
+13-16	1304-1307	you	person	giv	ana	13-28
+13-17	1308-1311	are	_	_	_	_
+13-18	1312-1320	involved	_	_	_	_
+13-19	1321-1323	in	_	_	_	_
+13-20	1324-1325	a	event[80]	giv[80]	coref	14-2[84_80]
+13-21	1326-1335	collision	event[80]	giv[80]	_	_
+13-22	1336-1337	,	_	_	_	_
+13-23	1338-1341	the	object[81]	giv[81]	coref	14-11[87_81]
+13-24	1342-1348	Airbag	object[81]	giv[81]	_	_
+13-25	1349-1351	wo	_	_	_	_
+13-26	1352-1355	n't	_	_	_	_
+13-27	1356-1362	injure	_	_	_	_
+13-28	1363-1366	you	person	giv	ana	17-2
+13-29	1367-1371	when	_	_	_	_
+13-30	1372-1374	it	object	giv	coref	14-8[86_0]
+13-31	1375-1382	deploys	_	_	_	_
+13-32	1383-1384	.	_	_	_	_
+
+#Text=During a collision , a sensor in the vehicle signals the Airbag to ignite a fuse .
+14-1	1385-1391	During	_	_	_	_
+14-2	1392-1393	a	event[84]	giv[84]	coref	16-7[94_84]
+14-3	1394-1403	collision	event[84]	giv[84]	_	_
+14-4	1404-1405	,	_	_	_	_
+14-5	1406-1407	a	object[85]	giv[85]	_	_
+14-6	1408-1414	sensor	object[85]	giv[85]	_	_
+14-7	1415-1417	in	object[85]	giv[85]	_	_
+14-8	1418-1421	the	object[85]|object[86]	giv[85]|giv[86]	coref	17-6[101_86]
+14-9	1422-1429	vehicle	object[85]|object[86]	giv[85]|giv[86]	_	_
+14-10	1430-1437	signals	_	_	_	_
+14-11	1438-1441	the	object[87]	giv[87]	coref	16-1[92_87]
+14-12	1442-1448	Airbag	object[87]	giv[87]	_	_
+14-13	1449-1451	to	_	_	_	_
+14-14	1452-1458	ignite	_	_	_	_
+14-15	1459-1460	a	object[88]	giv[88]	coref	15-1[89_88]
+14-16	1461-1465	fuse	object[88]	giv[88]	_	_
+14-17	1466-1467	.	_	_	_	_
+
+#Text=This fuse explodes and produces nitrogen gas .
+15-1	1468-1472	This	object[89]	giv[89]	_	_
+15-2	1473-1477	fuse	object[89]	giv[89]	_	_
+15-3	1478-1486	explodes	_	_	_	_
+15-4	1487-1490	and	_	_	_	_
+15-5	1491-1499	produces	_	_	_	_
+15-6	1500-1508	nitrogen	substance|substance[91]	new|new[91]	_	_
+15-7	1509-1512	gas	substance[91]	new[91]	_	_
+15-8	1513-1514	.	_	_	_	_
+
+#Text=The airbag deploys 50 milliseconds after a collision severe enough to warrant Airbag protection .
+16-1	1515-1518	The	object[92]	giv[92]	coref	16-13[0_92]
+16-2	1519-1525	airbag	object[92]	giv[92]	_	_
+16-3	1526-1533	deploys	_	_	_	_
+16-4	1534-1536	50	abstract[93]	new[93]	_	_
+16-5	1537-1549	milliseconds	abstract[93]	new[93]	_	_
+16-6	1550-1555	after	_	_	_	_
+16-7	1556-1557	a	event[94]	giv[94]	coref	22-23[130_94]
+16-8	1558-1567	collision	event[94]	giv[94]	_	_
+16-9	1568-1574	severe	event[94]	giv[94]	_	_
+16-10	1575-1581	enough	event[94]	giv[94]	_	_
+16-11	1582-1584	to	_	_	_	_
+16-12	1585-1592	warrant	_	_	_	_
+16-13	1593-1599	Airbag	object|abstract[96]	giv|new[96]	coref	20-13[113_0]
+16-14	1600-1610	protection	abstract[96]	new[96]	_	_
+16-15	1611-1612	.	_	_	_	_
+
+#Text=Position yourself and your children safely in your car .
+17-1	1613-1621	Position	_	_	_	_
+17-2	1622-1630	yourself	person	giv	ana	17-4
+17-3	1631-1634	and	_	_	_	_
+17-4	1635-1639	your	person|person[99]	giv|new[99]	ana|coref	17-8|19-3[108_99]
+17-5	1640-1648	children	person[99]	new[99]	_	_
+17-6	1649-1655	safely	object[101]	giv[101]	coref	18-5[105_101]
+17-7	1656-1658	in	object[101]	giv[101]	_	_
+17-8	1659-1663	your	person|object[101]	giv|giv[101]	ana	18-5
+17-9	1664-1667	car	object[101]	giv[101]	_	_
+17-10	1668-1669	.	_	_	_	_
+
+#Text=The air bags in your car inflate very quickly .
+18-1	1670-1673	The	object[103]	giv[103]	coref	29-2[175_103]
+18-2	1674-1677	air	substance|object[103]	new|giv[103]	_	_
+18-3	1678-1682	bags	object[103]	giv[103]	_	_
+18-4	1683-1685	in	object[103]	giv[103]	_	_
+18-5	1686-1690	your	object[103]|person|object[105]	giv[103]|giv|giv[105]	ana|coref	19-1|23-5[0_105]
+18-6	1691-1694	car	object[103]|object[105]	giv[103]|giv[105]	_	_
+18-7	1695-1702	inflate	_	_	_	_
+18-8	1703-1707	very	_	_	_	_
+18-9	1708-1715	quickly	_	_	_	_
+18-10	1716-1717	.	_	_	_	_
+
+#Text=You or your children could be seriously injured or killed if you 're sitting too close to an Airbag. .
+19-1	1718-1721	You	person	giv	ana	19-3
+19-2	1722-1724	or	_	_	_	_
+19-3	1725-1729	your	person|person[108]	giv|giv[108]	ana|coref	19-12|24-9[0_108]
+19-4	1730-1738	children	person[108]	giv[108]	_	_
+19-5	1739-1744	could	_	_	_	_
+19-6	1745-1747	be	_	_	_	_
+19-7	1748-1757	seriously	_	_	_	_
+19-8	1758-1765	injured	_	_	_	_
+19-9	1766-1768	or	_	_	_	_
+19-10	1769-1775	killed	_	_	_	_
+19-11	1776-1778	if	_	_	_	_
+19-12	1779-1782	you	person	giv	ana	20-17
+19-13	1783-1786	're	_	_	_	_
+19-14	1787-1794	sitting	_	_	_	_
+19-15	1795-1798	too	_	_	_	_
+19-16	1799-1804	close	_	_	_	_
+19-17	1805-1807	to	_	_	_	_
+19-18	1808-1810	an	object[110]	new[110]	_	_
+19-19	1811-1818	Airbag.	object[110]	new[110]	_	_
+19-20	1819-1820	.	_	_	_	_
+
+#Text=Push the driver 's seat back far enough so that , if the Airbag deploys , you are n't injured by the force of deployment .
+20-1	1821-1825	Push	_	_	_	_
+20-2	1826-1829	the	object[112]	giv[112]	coref	22-5[126_112]
+20-3	1830-1836	driver	person[111]|object[112]	giv[111]|giv[112]	_	_
+20-4	1837-1839	's	person[111]|object[112]	giv[111]|giv[112]	_	_
+20-5	1840-1844	seat	object[112]	giv[112]	_	_
+20-6	1845-1849	back	_	_	_	_
+20-7	1850-1853	far	_	_	_	_
+20-8	1854-1860	enough	_	_	_	_
+20-9	1861-1863	so	_	_	_	_
+20-10	1864-1868	that	_	_	_	_
+20-11	1869-1870	,	_	_	_	_
+20-12	1871-1873	if	_	_	_	_
+20-13	1874-1877	the	object[113]	giv[113]	coref	21-17[122_113]
+20-14	1878-1884	Airbag	object[113]	giv[113]	_	_
+20-15	1885-1892	deploys	_	_	_	_
+20-16	1893-1894	,	_	_	_	_
+20-17	1895-1898	you	person	giv	ana	21-1
+20-18	1899-1902	are	_	_	_	_
+20-19	1903-1906	n't	_	_	_	_
+20-20	1907-1914	injured	_	_	_	_
+20-21	1915-1917	by	_	_	_	_
+20-22	1918-1921	the	abstract[115]	new[115]	_	_
+20-23	1922-1927	force	abstract[115]	new[115]	_	_
+20-24	1928-1930	of	abstract[115]	new[115]	_	_
+20-25	1931-1941	deployment	abstract[115]|event	new[115]|new	coref	22-19[129_0]
+20-26	1942-1943	.	_	_	_	_
+
+#Text=You should have at least 10 inches ( 25.4 cm ) of space between you and the airbag if it deploys .
+21-1	1944-1947	You	person	giv	ana	21-15
+21-2	1948-1954	should	_	_	_	_
+21-3	1955-1959	have	_	_	_	_
+21-4	1960-1962	at	_	_	_	_
+21-5	1963-1968	least	abstract[118]	new[118]	_	_
+21-6	1969-1971	10	abstract[118]	new[118]	_	_
+21-7	1972-1978	inches	abstract[118]	new[118]	_	_
+21-8	1979-1980	(	_	_	_	_
+21-9	1981-1985	25.4	abstract[119]	new[119]	_	_
+21-10	1986-1988	cm	abstract[119]	new[119]	_	_
+21-11	1989-1990	)	_	_	_	_
+21-12	1991-1993	of	_	_	_	_
+21-13	1994-1999	space	place[120]	new[120]	_	_
+21-14	2000-2007	between	place[120]	new[120]	_	_
+21-15	2008-2011	you	place[120]|person	new[120]|giv	ana	24-6
+21-16	2012-2015	and	place[120]	new[120]	_	_
+21-17	2016-2019	the	place[120]|object[122]	new[120]|giv[122]	ana	21-20[0_122]
+21-18	2020-2026	airbag	place[120]|object[122]	new[120]|giv[122]	_	_
+21-19	2027-2029	if	_	_	_	_
+21-20	2030-2032	it	object	giv	coref	23-24[140_0]
+21-21	2033-2040	deploys	_	_	_	_
+21-22	2041-2042	.	_	_	_	_
+
+#Text=Ask passengers to push the front passenger seat back far enough so they wo n't be injured by the airbags deployment during a collision .
+22-1	2043-2046	Ask	_	_	_	_
+22-2	2047-2057	passengers	person	new	ana	22-13
+22-3	2058-2060	to	_	_	_	_
+22-4	2061-2065	push	_	_	_	_
+22-5	2066-2069	the	object[126]	giv[126]	coref	23-2[133_126]
+22-6	2070-2075	front	object[126]	giv[126]	_	_
+22-7	2076-2085	passenger	person|object[126]	giv|giv[126]	_	_
+22-8	2086-2090	seat	object[126]	giv[126]	_	_
+22-9	2091-2095	back	_	_	_	_
+22-10	2096-2099	far	_	_	_	_
+22-11	2100-2106	enough	_	_	_	_
+22-12	2107-2109	so	_	_	_	_
+22-13	2110-2114	they	person	giv	_	_
+22-14	2115-2117	wo	_	_	_	_
+22-15	2118-2121	n't	_	_	_	_
+22-16	2122-2124	be	_	_	_	_
+22-17	2125-2132	injured	_	_	_	_
+22-18	2133-2135	by	_	_	_	_
+22-19	2136-2139	the	event[129]	giv[129]	coref	28-19[173_129]
+22-20	2140-2147	airbags	object|event[129]	new|giv[129]	_	_
+22-21	2148-2158	deployment	event[129]	giv[129]	_	_
+22-22	2159-2165	during	_	_	_	_
+22-23	2166-2167	a	event[130]	giv[130]	coref	23-30[142_130]
+22-24	2168-2177	collision	event[130]	giv[130]	_	_
+22-25	2178-2179	.	_	_	_	_
+
+#Text=Place a rear-facing infant car seat in the center rear set so the baby in the car seat is at a distance from the Airbag and the force of a potential collision .
+23-1	2180-2185	Place	_	_	_	_
+23-2	2186-2187	a	object[133]	giv[133]	coref	23-16[138_133]
+23-3	2188-2199	rear-facing	object[133]	giv[133]	_	_
+23-4	2200-2206	infant	person|object[133]	new|giv[133]	_	_
+23-5	2207-2210	car	object|object[133]	giv|giv[133]	coref	23-17
+23-6	2211-2215	seat	object[133]	giv[133]	_	_
+23-7	2216-2218	in	_	_	_	_
+23-8	2219-2222	the	object[135]	new[135]	_	_
+23-9	2223-2229	center	object[135]	new[135]	_	_
+23-10	2230-2234	rear	object|object[135]	new|new[135]	_	_
+23-11	2235-2238	set	object[135]	new[135]	_	_
+23-12	2239-2241	so	_	_	_	_
+23-13	2242-2245	the	person[136]	new[136]	_	_
+23-14	2246-2250	baby	person[136]	new[136]	_	_
+23-15	2251-2253	in	person[136]	new[136]	_	_
+23-16	2254-2257	the	person[136]|object[138]	new[136]|giv[138]	_	_
+23-17	2258-2261	car	person[136]|object|object[138]	new[136]|giv|giv[138]	coref	28-2[167_0]
+23-18	2262-2266	seat	person[136]|object[138]	new[136]|giv[138]	_	_
+23-19	2267-2269	is	_	_	_	_
+23-20	2270-2272	at	_	_	_	_
+23-21	2273-2274	a	abstract[139]	new[139]	_	_
+23-22	2275-2283	distance	abstract[139]	new[139]	_	_
+23-23	2284-2288	from	abstract[139]	new[139]	_	_
+23-24	2289-2292	the	abstract[139]|object[140]	new[139]|giv[140]	coref	25-7[153_140]
+23-25	2293-2299	Airbag	abstract[139]|object[140]	new[139]|giv[140]	_	_
+23-26	2300-2303	and	abstract[139]	new[139]	_	_
+23-27	2304-2307	the	abstract[139]|abstract[141]	new[139]|new[141]	_	_
+23-28	2308-2313	force	abstract[139]|abstract[141]	new[139]|new[141]	_	_
+23-29	2314-2316	of	abstract[139]|abstract[141]	new[139]|new[141]	_	_
+23-30	2317-2318	a	abstract[139]|abstract[141]|event[142]	new[139]|new[141]|giv[142]	coref	28-13[171_142]
+23-31	2319-2328	potential	abstract[139]|abstract[141]|event[142]	new[139]|new[141]|giv[142]	_	_
+23-32	2329-2338	collision	abstract[139]|abstract[141]|event[142]	new[139]|new[141]|giv[142]	_	_
+23-33	2339-2340	.	_	_	_	_
+
+#Text=Depending on the laws in your state , children may be required to ride in the back seat until they reach a certain age or height .
+24-1	2341-2350	Depending	_	_	_	_
+24-2	2351-2353	on	_	_	_	_
+24-3	2354-2357	the	abstract[143]	new[143]	_	_
+24-4	2358-2362	laws	abstract[143]	new[143]	_	_
+24-5	2363-2365	in	abstract[143]	new[143]	_	_
+24-6	2366-2370	your	abstract[143]|person|place[145]	new[143]|giv|new[145]	ana	27-2
+24-7	2371-2376	state	abstract[143]|place[145]	new[143]|new[145]	_	_
+24-8	2377-2378	,	_	_	_	_
+24-9	2379-2387	children	person	giv	ana	24-20
+24-10	2388-2391	may	_	_	_	_
+24-11	2392-2394	be	_	_	_	_
+24-12	2395-2403	required	_	_	_	_
+24-13	2404-2406	to	_	_	_	_
+24-14	2407-2411	ride	_	_	_	_
+24-15	2412-2414	in	_	_	_	_
+24-16	2415-2418	the	object[147]	new[147]	_	_
+24-17	2419-2423	back	object[147]	new[147]	_	_
+24-18	2424-2428	seat	object[147]	new[147]	_	_
+24-19	2429-2434	until	_	_	_	_
+24-20	2435-2439	they	person	giv	ana	25-3
+24-21	2440-2445	reach	_	_	_	_
+24-22	2446-2447	a	abstract[149]	new[149]	_	_
+24-23	2448-2455	certain	abstract[149]	new[149]	_	_
+24-24	2456-2459	age	abstract[149]	new[149]	_	_
+24-25	2460-2462	or	_	_	_	_
+24-26	2463-2469	height	abstract	new	_	_
+24-27	2470-2471	.	_	_	_	_
+
+#Text=Because of their small size , a deploying Airbag can potentially kill a child .
+25-1	2472-2479	Because	_	_	_	_
+25-2	2480-2482	of	_	_	_	_
+25-3	2483-2488	their	person|abstract[152]	giv|new[152]	_	_
+25-4	2489-2494	small	abstract[152]	new[152]	_	_
+25-5	2495-2499	size	abstract[152]	new[152]	_	_
+25-6	2500-2501	,	_	_	_	_
+25-7	2502-2503	a	object[153]	giv[153]	coref	27-24[165_153]
+25-8	2504-2513	deploying	object[153]	giv[153]	_	_
+25-9	2514-2520	Airbag	object[153]	giv[153]	_	_
+25-10	2521-2524	can	_	_	_	_
+25-11	2525-2536	potentially	_	_	_	_
+25-12	2537-2541	kill	_	_	_	_
+25-13	2542-2543	a	person[154]	new[154]	_	_
+25-14	2544-2549	child	person[154]	new[154]	_	_
+25-15	2550-2551	.	_	_	_	_
+
+#Text=Learn how to handle an air-bag equipped steering wheel .
+26-1	2552-2557	Learn	_	_	_	_
+26-2	2558-2561	how	_	_	_	_
+26-3	2562-2564	to	_	_	_	_
+26-4	2565-2571	handle	_	_	_	_
+26-5	2572-2574	an	object[157]	giv[157]	coref	27-5[160_157]
+26-6	2575-2582	air-bag	object|object[157]	giv|giv[157]	_	_
+26-7	2583-2591	equipped	object[157]	giv[157]	_	_
+26-8	2592-2600	steering	object|object[157]	new|giv[157]	_	_
+26-9	2601-2606	wheel	object[157]	giv[157]	_	_
+26-10	2607-2608	.	_	_	_	_
+
+#Text=Put your hands on the steering wheel in the 3 o'clock and 9 o'clock positions so you protect yourself from broken bones if the Airbag deploys .
+27-1	2609-2612	Put	_	_	_	_
+27-2	2613-2617	your	person|object[159]	giv|new[159]	ana	27-17
+27-3	2618-2623	hands	object[159]	new[159]	_	_
+27-4	2624-2626	on	_	_	_	_
+27-5	2627-2630	the	object[160]	giv[160]	_	_
+27-6	2631-2639	steering	object[160]	giv[160]	_	_
+27-7	2640-2645	wheel	object[160]	giv[160]	_	_
+27-8	2646-2648	in	_	_	_	_
+27-9	2649-2652	the	abstract[161]	new[161]	_	_
+27-10	2653-2654	3	abstract[161]	new[161]	_	_
+27-11	2655-2662	o'clock	abstract[161]	new[161]	_	_
+27-12	2663-2666	and	abstract[161]	new[161]	_	_
+27-13	2667-2668	9	abstract[161]	new[161]	_	_
+27-14	2669-2676	o'clock	abstract[161]	new[161]	_	_
+27-15	2677-2686	positions	abstract[161]	new[161]	_	_
+27-16	2687-2689	so	_	_	_	_
+27-17	2690-2693	you	person	giv	ana	27-19
+27-18	2694-2701	protect	_	_	_	_
+27-19	2702-2710	yourself	person	giv	ana	28-2
+27-20	2711-2715	from	_	_	_	_
+27-21	2716-2722	broken	object[164]	new[164]	_	_
+27-22	2723-2728	bones	object[164]	new[164]	_	_
+27-23	2729-2731	if	_	_	_	_
+27-24	2732-2735	the	object[165]	giv[165]	coref	28-19[0_165]
+27-25	2736-2742	Airbag	object[165]	giv[165]	_	_
+27-26	2743-2750	deploys	_	_	_	_
+27-27	2751-2752	.	_	_	_	_
+
+#Text=Tow your car to a repair shop once it has been in a collision strong enough to cause Airbag deployment .
+28-1	2753-2756	Tow	_	_	_	_
+28-2	2757-2761	your	person|object[167]	giv|giv[167]	ana|ana	28-9[0_167]|29-2
+28-3	2762-2765	car	object[167]	giv[167]	_	_
+28-4	2766-2768	to	_	_	_	_
+28-5	2769-2770	a	place[169]	new[169]	_	_
+28-6	2771-2777	repair	abstract|place[169]	new|new[169]	_	_
+28-7	2778-2782	shop	place[169]	new[169]	_	_
+28-8	2783-2787	once	_	_	_	_
+28-9	2788-2790	it	object	giv	coref	29-10[177_0]
+28-10	2791-2794	has	_	_	_	_
+28-11	2795-2799	been	_	_	_	_
+28-12	2800-2802	in	_	_	_	_
+28-13	2803-2804	a	event[171]	giv[171]	coref	32-10[0_171]
+28-14	2805-2814	collision	event[171]	giv[171]	_	_
+28-15	2815-2821	strong	event[171]	giv[171]	_	_
+28-16	2822-2828	enough	event[171]	giv[171]	_	_
+28-17	2829-2831	to	_	_	_	_
+28-18	2832-2837	cause	_	_	_	_
+28-19	2838-2844	Airbag	object|event[173]	giv|giv[173]	coref|coref	33-15[197_0]|34-7[198_173]
+28-20	2845-2855	deployment	event[173]	giv[173]	_	_
+28-21	2856-2857	.	_	_	_	_
+
+#Text=If your air bags have unexpectedly deployed , pull your car to the side of the road as soon as you safely can .
+29-1	2858-2860	If	_	_	_	_
+29-2	2861-2865	your	person|object[175]	giv|giv[175]	ana|coref	29-10|30-18[188_175]
+29-3	2866-2869	air	object[175]	giv[175]	_	_
+29-4	2870-2874	bags	object[175]	giv[175]	_	_
+29-5	2875-2879	have	_	_	_	_
+29-6	2880-2892	unexpectedly	_	_	_	_
+29-7	2893-2901	deployed	_	_	_	_
+29-8	2902-2903	,	_	_	_	_
+29-9	2904-2908	pull	_	_	_	_
+29-10	2909-2913	your	person|object[177]	giv|giv[177]	ana|coref	29-21|30-4[183_177]
+29-11	2914-2917	car	object[177]	giv[177]	_	_
+29-12	2918-2920	to	_	_	_	_
+29-13	2921-2924	the	place[178]	new[178]	_	_
+29-14	2925-2929	side	place[178]	new[178]	_	_
+29-15	2930-2932	of	place[178]	new[178]	_	_
+29-16	2933-2936	the	place[178]|place[179]	new[178]|new[179]	_	_
+29-17	2937-2941	road	place[178]|place[179]	new[178]|new[179]	_	_
+29-18	2942-2944	as	_	_	_	_
+29-19	2945-2949	soon	_	_	_	_
+29-20	2950-2952	as	_	_	_	_
+29-21	2953-2956	you	person	giv	ana	30-4
+29-22	2957-2963	safely	_	_	_	_
+29-23	2964-2967	can	_	_	_	_
+29-24	2968-2969	.	_	_	_	_
+
+#Text=Schedule maintenance for your car as soon as you can if you get a recall notice regarding faulty air bags .
+30-1	2970-2978	Schedule	_	_	_	_
+30-2	2979-2990	maintenance	abstract[181]	new[181]	_	_
+30-3	2991-2994	for	abstract[181]	new[181]	_	_
+30-4	2995-2999	your	abstract[181]|person|object[183]	new[181]|giv|giv[183]	ana|coref	30-9|34-13[201_183]
+30-5	3000-3003	car	abstract[181]|object[183]	new[181]|giv[183]	_	_
+30-6	3004-3006	as	_	_	_	_
+30-7	3007-3011	soon	_	_	_	_
+30-8	3012-3014	as	_	_	_	_
+30-9	3015-3018	you	person	giv	ana	30-12
+30-10	3019-3022	can	_	_	_	_
+30-11	3023-3025	if	_	_	_	_
+30-12	3026-3029	you	person	giv	ana	33-5
+30-13	3030-3033	get	_	_	_	_
+30-14	3034-3035	a	abstract[187]	new[187]	_	_
+30-15	3036-3042	recall	abstract|abstract[187]	new|new[187]	_	_
+30-16	3043-3049	notice	abstract[187]	new[187]	_	_
+30-17	3050-3059	regarding	abstract[187]	new[187]	_	_
+30-18	3060-3066	faulty	abstract[187]|object[188]	new[187]|giv[188]	coref	32-1[190_188]
+30-19	3067-3070	air	abstract[187]|object[188]	new[187]|giv[188]	_	_
+30-20	3071-3075	bags	abstract[187]|object[188]	new[187]|giv[188]	_	_
+30-21	3076-3077	.	_	_	_	_
+
+#Text=Tips
+31-1	3078-3082	Tips	abstract	new	_	_
+
+#Text=Air bags may not deploy for every type of collision .
+32-1	3083-3086	Air	object[190]	giv[190]	coref	34-21[202_190]
+32-2	3087-3091	bags	object[190]	giv[190]	_	_
+32-3	3092-3095	may	_	_	_	_
+32-4	3096-3099	not	_	_	_	_
+32-5	3100-3106	deploy	_	_	_	_
+32-6	3107-3110	for	_	_	_	_
+32-7	3111-3116	every	abstract[191]	new[191]	_	_
+32-8	3117-3121	type	abstract[191]	new[191]	_	_
+32-9	3122-3124	of	abstract[191]	new[191]	_	_
+32-10	3125-3134	collision	abstract[191]|event	new[191]|giv	coref	33-12
+32-11	3135-3136	.	_	_	_	_
+
+#Text=Factors such as what you collide with and the angle of collision influence whether the Airbag will deploy .
+33-1	3137-3144	Factors	abstract[193]	new[193]	_	_
+33-2	3145-3149	such	abstract[193]	new[193]	_	_
+33-3	3150-3152	as	abstract[193]	new[193]	_	_
+33-4	3153-3157	what	abstract[193]	new[193]	_	_
+33-5	3158-3161	you	abstract[193]|person	new[193]|giv	ana	34-11
+33-6	3162-3169	collide	abstract[193]	new[193]	_	_
+33-7	3170-3174	with	abstract[193]	new[193]	_	_
+33-8	3175-3178	and	abstract[193]	new[193]	_	_
+33-9	3179-3182	the	abstract[193]|abstract[195]	new[193]|new[195]	_	_
+33-10	3183-3188	angle	abstract[193]|abstract[195]	new[193]|new[195]	_	_
+33-11	3189-3191	of	abstract[193]|abstract[195]	new[193]|new[195]	_	_
+33-12	3192-3201	collision	abstract[193]|abstract[195]|event	new[193]|new[195]|giv	_	_
+33-13	3202-3211	influence	_	_	_	_
+33-14	3212-3219	whether	_	_	_	_
+33-15	3220-3223	the	object[197]	giv[197]	coref	38-9[0_197]
+33-16	3224-3230	Airbag	object[197]	giv[197]	_	_
+33-17	3231-3235	will	_	_	_	_
+33-18	3236-3242	deploy	_	_	_	_
+33-19	3243-3244	.	_	_	_	_
+
+#Text=There is no way to avoid an unexpected deployment unless you know your car has been recalled due to of faulty air bags .
+34-1	3245-3250	There	_	_	_	_
+34-2	3251-3253	is	_	_	_	_
+34-3	3254-3256	no	_	_	_	_
+34-4	3257-3260	way	_	_	_	_
+34-5	3261-3263	to	_	_	_	_
+34-6	3264-3269	avoid	_	_	_	_
+34-7	3270-3272	an	event[198]	giv[198]	_	_
+34-8	3273-3283	unexpected	event[198]	giv[198]	_	_
+34-9	3284-3294	deployment	event[198]	giv[198]	_	_
+34-10	3295-3301	unless	_	_	_	_
+34-11	3302-3305	you	person	giv	ana	34-13
+34-12	3306-3310	know	_	_	_	_
+34-13	3311-3315	your	person|object[201]	giv|giv[201]	ana|coref	35-1|37-4[208_201]
+34-14	3316-3319	car	object[201]	giv[201]	_	_
+34-15	3320-3323	has	_	_	_	_
+34-16	3324-3328	been	_	_	_	_
+34-17	3329-3337	recalled	_	_	_	_
+34-18	3338-3341	due	_	_	_	_
+34-19	3342-3344	to	_	_	_	_
+34-20	3345-3347	of	_	_	_	_
+34-21	3348-3354	faulty	object[202]	giv[202]	coref	35-5[204_202]
+34-22	3355-3358	air	object[202]	giv[202]	_	_
+34-23	3359-3363	bags	object[202]	giv[202]	_	_
+34-24	3364-3365	.	_	_	_	_
+
+#Text=You cannot safely test air bags to see if they are faulty .
+35-1	3366-3369	You	person	giv	ana	37-4
+35-2	3370-3376	cannot	_	_	_	_
+35-3	3377-3383	safely	_	_	_	_
+35-4	3384-3388	test	_	_	_	_
+35-5	3389-3392	air	object[204]	giv[204]	ana	35-10[0_204]
+35-6	3393-3397	bags	object[204]	giv[204]	_	_
+35-7	3398-3400	to	_	_	_	_
+35-8	3401-3404	see	_	_	_	_
+35-9	3405-3407	if	_	_	_	_
+35-10	3408-3412	they	object	giv	coref	37-7[209_0]
+35-11	3413-3416	are	_	_	_	_
+35-12	3417-3423	faulty	_	_	_	_
+35-13	3424-3425	.	_	_	_	_
+
+#Text=Warnings
+36-1	3426-3434	Warnings	abstract	new	_	_
+
+#Text=Do not drive your car once the air bags have deployed .
+37-1	3435-3437	Do	_	_	_	_
+37-2	3438-3441	not	_	_	_	_
+37-3	3442-3447	drive	_	_	_	_
+37-4	3448-3452	your	person|object[208]	giv|giv[208]	ana|coref	39-10|39-10[216_208]
+37-5	3453-3456	car	object[208]	giv[208]	_	_
+37-6	3457-3461	once	_	_	_	_
+37-7	3462-3465	the	object[209]	giv[209]	coref	38-5[210_209]
+37-8	3466-3469	air	object[209]	giv[209]	_	_
+37-9	3470-3474	bags	object[209]	giv[209]	_	_
+37-10	3475-3479	have	_	_	_	_
+37-11	3480-3488	deployed	_	_	_	_
+37-12	3489-3490	.	_	_	_	_
+
+#Text=Do not tamper with the air bags or Airbag covers .
+38-1	3491-3493	Do	_	_	_	_
+38-2	3494-3497	not	_	_	_	_
+38-3	3498-3504	tamper	_	_	_	_
+38-4	3505-3509	with	_	_	_	_
+38-5	3510-3513	the	object[210]|object[211]	giv[210]|giv[211]	coref|coref	38-5[211_210]|39-6[214_211]
+38-6	3514-3517	air	object[210]|object[211]	giv[210]|giv[211]	_	_
+38-7	3518-3522	bags	object[210]|object[211]	giv[210]|giv[211]	_	_
+38-8	3523-3525	or	object[211]	giv[211]	_	_
+38-9	3526-3532	Airbag	object[211]|object|object[213]	giv[211]|giv|new[213]	_	_
+38-10	3533-3539	covers	object[211]|object[213]	giv[211]|new[213]	_	_
+38-11	3540-3541	.	_	_	_	_
+
+#Text=Do not attempt to disable the air bags in your car .
+39-1	3542-3544	Do	_	_	_	_
+39-2	3545-3548	not	_	_	_	_
+39-3	3549-3556	attempt	_	_	_	_
+39-4	3557-3559	to	_	_	_	_
+39-5	3560-3567	disable	event	new	coref|none	40-4[218_0]|39-5[0_218]
+39-6	3568-3571	the	object[214]	giv[214]	coref	40-7[219_214]
+39-7	3572-3575	air	object[214]	giv[214]	_	_
+39-8	3576-3580	bags	object[214]	giv[214]	_	_
+39-9	3581-3583	in	_	_	_	_
+39-10	3584-3588	your	person|object[216]	giv|giv[216]	_	_
+39-11	3589-3592	car	object[216]	giv[216]	_	_
+39-12	3593-3594	.	_	_	_	_
+
+#Text=Federal law prohibits the disabling of air bags .
+40-1	3595-3602	Federal	abstract[217]	new[217]	_	_
+40-2	3603-3606	law	abstract[217]	new[217]	_	_
+40-3	3607-3616	prohibits	_	_	_	_
+40-4	3617-3620	the	event[218]	new[218]	_	_
+40-5	3621-3630	disabling	event[218]	new[218]	_	_
+40-6	3631-3633	of	event[218]	new[218]	_	_
+40-7	3634-3637	air	event[218]|object[219]	new[218]|giv[219]	_	_
+40-8	3638-3642	bags	event[218]|object[219]	new[218]|giv[219]	_	_
+40-9	3643-3644	.	_	_	_	_

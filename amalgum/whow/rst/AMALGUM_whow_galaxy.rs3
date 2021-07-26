@@ -1,0 +1,140 @@
+<rst>
+<header>
+	<relations>
+			<rel name="means" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="purpose" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">Measure the Distance to a Galaxy</segment>
+<segment id="2" parent="1002" relname="span">With the advent of internet access to scientific papers and research , plus some know-how of relativity ,</segment>
+<segment id="3" parent="1003" relname="span">it is now remarkably easy to measure , with significant accuracy , the distance to spiral galaxies</segment>
+<segment id="4" parent="3" relname="manner">without using luminosity or red shift .</segment>
+<segment id="5" parent="1005" relname="preparation">Steps</segment>
+<segment id="6" parent="1006" relname="span">Find a clear digital photograph of the galaxy</segment>
+<segment id="7" parent="1007" relname="span">whose distance</segment>
+<segment id="8" parent="7" relname="elaboration">you wish to measure .</segment>
+<segment id="9" parent="1005" relname="joint">These are available on the NED or MAST DSS websites .</segment>
+<segment id="10" parent="1010" relname="joint">Save the photo as a negative</segment>
+<segment id="11" parent="1010" relname="joint">and print it on a printer .</segment>
+<segment id="12" parent="1012" relname="span">Although this can be done on a computer screen</segment>
+<segment id="13" parent="12" relname="means">using Gimp .</segment>
+<segment id="14" parent="1013" relname="joint">Draw a line along the major axis of the galaxy .</segment>
+<segment id="15" parent="1015" relname="span">The spiral galaxy will have spiral arms</segment>
+<segment id="16" parent="1016" relname="span">which will cross the line</segment>
+<segment id="17" parent="16" relname="elaboration">you have drawn at regular intervals .</segment>
+<segment id="18" parent="1018" relname="span">Make a measure of the distance between these intervals .</segment>
+<segment id="19" parent="1019" relname="joint">You may use a ruler on a printed out photo</segment>
+<segment id="20" parent="1020" relname="contrast">and take an average ,</segment>
+<segment id="21" parent="1021" relname="contrast">or use the measuring device in Gimp ,</segment>
+<segment id="22" parent="1022" relname="span">or use MATLAB</segment>
+<segment id="23" parent="1023" relname="joint">to extract the pixels along the major axis</segment>
+<segment id="24" parent="1024" relname="span">and apply a fast Fourier transform onto the extracted set of pixels</segment>
+<segment id="25" parent="24" relname="condition">if you are a geek .</segment>
+<segment id="26" parent="1026" relname="span">Find the particular width in arc minutes of the photograph ,</segment>
+<segment id="27" parent="1027" relname="span">which you will have used</segment>
+<segment id="28" parent="27" relname="circumstance">when selecting it from NED or MAST DSS .</segment>
+<segment id="29" parent="1029" relname="contrast">The photo will also have its width given in pixels .</segment>
+<segment id="30" parent="1030" relname="same_unit">Or ,</segment>
+<segment id="31" parent="32" relname="condition">if you have used a ruler ,</segment>
+<segment id="32" parent="1031" relname="span">you can measure the width of the photo in inches or centimeters .</segment>
+<segment id="33" parent="1032" relname="joint">The purpose of this is to convert the measured interval length between spiral arms along the major axis of the galaxy into arc minutes .</segment>
+<segment id="34" parent="1033" relname="joint">It is important to measure , or determine , this interval in arc minutes .</segment>
+<segment id="35" parent="1034" relname="joint">And with a little algebra , this is very easy to do .</segment>
+<segment id="36" parent="1036" relname="span">You do not have to be a geek</segment>
+<segment id="37" parent="36" relname="purpose">to do it .</segment>
+<segment id="38" parent="1038" relname="preparation">Find out how fast the galaxy is spinning .</segment>
+<segment id="39" parent="1039" relname="joint">Luckily , a vast number of galaxies have had their rotation speeds measured</segment>
+<segment id="40" parent="1039" relname="joint">and these can be found online .</segment>
+<segment id="41" parent="1041" relname="joint">Look for galactic rotation profiles or rotation curves</segment>
+<segment id="42" parent="1041" relname="joint">and find one for your galaxy .</segment>
+<segment id="43" parent="1044" relname="span">There is a way</segment>
+<segment id="44" parent="1045" relname="span">to find out how fast a galaxy is spinning</segment>
+<segment id="45" parent="44" relname="means">using line widths ,</segment>
+<segment id="46" parent="1043" relname="span">but that is not covered here .</segment>
+<segment id="47" parent="48" relname="circumstance">When and if you find your galaxy 's rotation profile ,</segment>
+<segment id="48" parent="1047" relname="span">it will be a graph of rotation velocity vs radial distance from the centre of the galaxy .</segment>
+<segment id="49" parent="1050" relname="span">The velocity of rotation will flatten out to some maximum velocity , almost always given in Kilometers per second</segment>
+<segment id="50" parent="49" relname="restatement">( kps ) .</segment>
+<segment id="51" parent="1051" relname="span">You will need to measure this maximum rotational velocity</segment>
+<segment id="52" parent="51" relname="manner">as best you can in kps .</segment>
+<segment id="53" parent="1053" relname="span">Ignore every thing about dark matter ;</segment>
+<segment id="54" parent="53" relname="elaboration">it is completely irrelevant .</segment>
+<segment id="55" parent="1054" relname="joint">Multiply the interval measure in arc minutes times the maximum velocity of rotation measure in kps .</segment>
+<segment id="56" parent="1055" relname="joint">Divide 3.12E9 by the result .</segment>
+<segment id="57" parent="1057" relname="sequence">That is the distance to the galaxy in parsecs .</segment>
+<segment id="58" parent="59" relname="condition">If you multiply that distance by 3.26 ,</segment>
+<segment id="59" parent="1058" relname="span">that is the distance in light years .</segment>
+<segment id="60" parent="1057" relname="background">Video</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="2" relname="elaboration"/>
+<group id="1004" type="span" parent="1001" relname="joint"/>
+<group id="1005" type="multinuc" parent="1004" relname="span"/>
+<group id="1006" type="span" parent="1005" relname="joint"/>
+<group id="1007" type="span" parent="6" relname="elaboration"/>
+<group id="1009" type="span" parent="1005" relname="joint"/>
+<group id="1010" type="multinuc" parent="1009" relname="span"/>
+<group id="1011" type="multinuc" parent="1010" relname="concession"/>
+<group id="1012" type="span" parent="1011" relname="joint"/>
+<group id="1013" type="multinuc" parent="1011" relname="joint"/>
+<group id="1014" type="multinuc" parent="1013" relname="joint"/>
+<group id="1015" type="span" parent="1014" relname="joint"/>
+<group id="1016" type="span" parent="15" relname="elaboration"/>
+<group id="1017" type="multinuc" parent="1014" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="joint"/>
+<group id="1019" type="multinuc" parent="18" relname="elaboration"/>
+<group id="1020" type="multinuc" parent="1019" relname="joint"/>
+<group id="1021" type="multinuc" parent="1020" relname="contrast"/>
+<group id="1022" type="span" parent="1021" relname="contrast"/>
+<group id="1023" type="multinuc" parent="22" relname="purpose"/>
+<group id="1024" type="span" parent="1023" relname="joint"/>
+<group id="1025" type="multinuc" parent="1017" relname="joint"/>
+<group id="1026" type="span" parent="1025" relname="joint"/>
+<group id="1027" type="span" parent="26" relname="elaboration"/>
+<group id="1028" type="multinuc" parent="1025" relname="joint"/>
+<group id="1029" type="multinuc" parent="1028" relname="joint"/>
+<group id="1030" type="multinuc" parent="1029" relname="contrast"/>
+<group id="1031" type="span" parent="1030" relname="same_unit"/>
+<group id="1032" type="multinuc" parent="1028" relname="joint"/>
+<group id="1033" type="multinuc" parent="1032" relname="joint"/>
+<group id="1034" type="multinuc" parent="1033" relname="joint"/>
+<group id="1035" type="multinuc" parent="1034" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="1035" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1039" type="multinuc" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="1038" relname="joint"/>
+<group id="1041" type="multinuc" parent="1040" relname="joint"/>
+<group id="1042" type="multinuc" parent="1040" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="46" relname="concession"/>
+<group id="1045" type="span" parent="43" relname="purpose"/>
+<group id="1046" type="multinuc" parent="1042" relname="joint"/>
+<group id="1047" type="span" parent="1046" relname="joint"/>
+<group id="1048" type="multinuc" parent="1046" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="span" parent="1050" relname="elaboration"/>
+<group id="1052" type="multinuc" parent="1048" relname="joint"/>
+<group id="1053" type="span" parent="1052" relname="sequence"/>
+<group id="1054" type="multinuc" parent="1052" relname="sequence"/>
+<group id="1055" type="multinuc" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="1055" relname="joint"/>
+<group id="1057" type="multinuc" parent="1056" relname="span"/>
+<group id="1058" type="span" parent="1057" relname="sequence"/>
+	</body>
+</rst>

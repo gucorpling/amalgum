@@ -1,0 +1,763 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Do a Messier Marathon
+1-1	0-2	Do	_	_	_	_
+1-2	3-4	a	event[1]	new[1]	coref	2-1[3_1]
+1-3	5-12	Messier	event[1]	new[1]	_	_
+1-4	13-21	Marathon	event[1]	new[1]	_	_
+
+#Text=A Messier Marathon is a stargazing session in which you try to spot all one hundred and ten Messier objects in one night .
+2-1	22-23	A	event[3]	giv[3]	coref	2-5[5_3]
+2-2	24-31	Messier	person|event[3]	new|giv[3]	coref	2-19
+2-3	32-40	Marathon	event[3]	giv[3]	_	_
+2-4	41-43	is	_	_	_	_
+2-5	44-45	a	event[5]	giv[5]	ana	3-2[0_5]
+2-6	46-56	stargazing	event|event[5]	new|giv[5]	coref	3-12
+2-7	57-64	session	event[5]	giv[5]	_	_
+2-8	65-67	in	event[5]	giv[5]	_	_
+2-9	68-73	which	event[5]	giv[5]	_	_
+2-10	74-77	you	event[5]|person	giv[5]|acc	ana	5-2
+2-11	78-81	try	event[5]	giv[5]	_	_
+2-12	82-84	to	event[5]	giv[5]	_	_
+2-13	85-89	spot	event[5]	giv[5]	_	_
+2-14	90-93	all	event[5]|object[8]	giv[5]|new[8]	coref	10-3[37_8]
+2-15	94-97	one	event[5]|object[8]	giv[5]|new[8]	_	_
+2-16	98-105	hundred	event[5]|object[8]	giv[5]|new[8]	_	_
+2-17	106-109	and	event[5]|object[8]	giv[5]|new[8]	_	_
+2-18	110-113	ten	event[5]|object[8]	giv[5]|new[8]	_	_
+2-19	114-121	Messier	event[5]|person|object[8]	giv[5]|giv|new[8]	coref	6-3
+2-20	122-129	objects	event[5]|object[8]	giv[5]|new[8]	_	_
+2-21	130-132	in	_	_	_	_
+2-22	133-136	one	time[9]	new[9]	coref	10-7[38_9]
+2-23	137-142	night	time[9]	new[9]	_	_
+2-24	143-144	.	_	_	_	_
+
+#Text=Although it is difficult , it is possible , with some stargazing organisations offering certificates to those who complete the marathon .
+3-1	145-153	Although	_	_	_	_
+3-2	154-156	it	event	giv	ana	3-6
+3-3	157-159	is	_	_	_	_
+3-4	160-169	difficult	_	_	_	_
+3-5	170-171	,	_	_	_	_
+3-6	172-174	it	event	giv	coref	3-20[16_0]
+3-7	175-177	is	_	_	_	_
+3-8	178-186	possible	_	_	_	_
+3-9	187-188	,	_	_	_	_
+3-10	189-193	with	_	_	_	_
+3-11	194-198	some	organization[13]	new[13]	_	_
+3-12	199-209	stargazing	event|organization[13]	giv|new[13]	_	_
+3-13	210-223	organisations	organization[13]	new[13]	_	_
+3-14	224-232	offering	_	_	_	_
+3-15	233-245	certificates	object	new	_	_
+3-16	246-248	to	_	_	_	_
+3-17	249-254	those	person[15]	acc[15]	_	_
+3-18	255-258	who	person[15]	acc[15]	_	_
+3-19	259-267	complete	person[15]	acc[15]	_	_
+3-20	268-271	the	person[15]|event[16]	acc[15]|giv[16]	_	_
+3-21	272-280	marathon	person[15]|event[16]	acc[15]|giv[16]	_	_
+3-22	281-282	.	_	_	_	_
+
+#Text=Steps
+4-1	283-288	Steps	abstract	new	_	_
+
+#Text=Check your latitude .
+5-1	289-294	Check	_	_	_	_
+5-2	295-299	your	person|abstract[19]	giv|new[19]	ana|coref	6-14|6-20[26_19]
+5-3	300-308	latitude	abstract[19]	new[19]	_	_
+5-4	309-310	.	_	_	_	_
+
+#Text=The northernmost Messier object is at almost 70 degrees declination , meaning that you have to be north of 20 degrees south latitude .
+6-1	311-314	The	object[21]	new[21]	coref	24-4[91_21]
+6-2	315-327	northernmost	object[21]	new[21]	_	_
+6-3	328-335	Messier	person|object[21]	giv|new[21]	coref	29-23
+6-4	336-342	object	object[21]	new[21]	_	_
+6-5	343-345	is	_	_	_	_
+6-6	346-348	at	_	_	_	_
+6-7	349-355	almost	abstract[22]|abstract[23]	new[22]|new[23]	coref	7-5[28_23]
+6-8	356-358	70	abstract[22]|abstract[23]	new[22]|new[23]	_	_
+6-9	359-366	degrees	abstract[22]|abstract[23]	new[22]|new[23]	_	_
+6-10	367-378	declination	abstract[23]	new[23]	_	_
+6-11	379-380	,	abstract[23]	new[23]	_	_
+6-12	381-388	meaning	abstract[23]	new[23]	_	_
+6-13	389-393	that	abstract[23]	new[23]	_	_
+6-14	394-397	you	abstract[23]|person	new[23]|giv	ana	7-10
+6-15	398-402	have	abstract[23]	new[23]	_	_
+6-16	403-405	to	abstract[23]	new[23]	_	_
+6-17	406-408	be	abstract[23]	new[23]	_	_
+6-18	409-414	north	abstract[23]	new[23]	_	_
+6-19	415-417	of	abstract[23]	new[23]	_	_
+6-20	418-420	20	abstract[23]|abstract[25]|abstract[26]	new[23]|new[25]|giv[26]	coref	7-5[27_25]
+6-21	421-428	degrees	abstract[23]|abstract[25]|abstract[26]	new[23]|new[25]|giv[26]	_	_
+6-22	429-434	south	abstract[23]|abstract[26]	new[23]|giv[26]	_	_
+6-23	435-443	latitude	abstract[23]|abstract[26]	new[23]|giv[26]	_	_
+6-24	444-445	.	_	_	_	_
+
+#Text=The southernmost is at -35 degrees declination , so you have to be south of 55 degrees north latitude .
+7-1	446-449	The	_	_	_	_
+7-2	450-462	southernmost	_	_	_	_
+7-3	463-465	is	_	_	_	_
+7-4	466-468	at	_	_	_	_
+7-5	469-472	-35	abstract[27]|abstract[28]	giv[27]|giv[28]	_	_
+7-6	473-480	degrees	abstract[27]|abstract[28]	giv[27]|giv[28]	_	_
+7-7	481-492	declination	abstract[28]	giv[28]	_	_
+7-8	493-494	,	_	_	_	_
+7-9	495-497	so	_	_	_	_
+7-10	498-501	you	person	giv	ana	10-10
+7-11	502-506	have	_	_	_	_
+7-12	507-509	to	_	_	_	_
+7-13	510-512	be	_	_	_	_
+7-14	513-518	south	_	_	_	_
+7-15	519-521	of	_	_	_	_
+7-16	522-524	55	abstract[30]|abstract[31]	new[30]|new[31]	_	_
+7-17	525-532	degrees	abstract[30]|abstract[31]	new[30]|new[31]	_	_
+7-18	533-538	north	abstract[31]	new[31]	_	_
+7-19	539-547	latitude	abstract[31]	new[31]	_	_
+7-20	548-549	.	_	_	_	_
+
+#Text=The best point is around 25 degrees north latitude .
+8-1	550-553	The	abstract[32]	new[32]	coref	8-5[34_32]
+8-2	554-558	best	abstract[32]	new[32]	_	_
+8-3	559-564	point	abstract[32]	new[32]	_	_
+8-4	565-567	is	_	_	_	_
+8-5	568-574	around	abstract[33]|abstract[34]	new[33]|giv[34]	_	_
+8-6	575-577	25	abstract[33]|abstract[34]	new[33]|giv[34]	_	_
+8-7	578-585	degrees	abstract[33]|abstract[34]	new[33]|giv[34]	_	_
+8-8	586-591	north	abstract[34]	giv[34]	_	_
+8-9	592-600	latitude	abstract[34]	giv[34]	_	_
+8-10	601-602	.	_	_	_	_
+
+#Text=Find an appropriate time of year .
+9-1	603-607	Find	_	_	_	_
+9-2	608-610	an	time[35]	new[35]	_	_
+9-3	611-622	appropriate	time[35]	new[35]	_	_
+9-4	623-627	time	time[35]	new[35]	_	_
+9-5	628-630	of	time[35]	new[35]	_	_
+9-6	631-635	year	time[35]|time	new[35]|new	coref	28-22[106_0]
+9-7	636-637	.	_	_	_	_
+
+#Text=To see all the objects in one night , you have to pick a night around the spring equinox .
+10-1	638-640	To	_	_	_	_
+10-2	641-644	see	_	_	_	_
+10-3	645-648	all	object[37]	giv[37]	coref	12-6[47_37]
+10-4	649-652	the	object[37]	giv[37]	_	_
+10-5	653-660	objects	object[37]	giv[37]	_	_
+10-6	661-663	in	_	_	_	_
+10-7	664-667	one	time[38]	giv[38]	coref	10-14[40_38]
+10-8	668-673	night	time[38]	giv[38]	_	_
+10-9	674-675	,	_	_	_	_
+10-10	676-679	you	person	giv	ana	14-5
+10-11	680-684	have	_	_	_	_
+10-12	685-687	to	_	_	_	_
+10-13	688-692	pick	_	_	_	_
+10-14	693-694	a	time[40]	giv[40]	coref	11-2[43_40]
+10-15	695-700	night	time[40]	giv[40]	_	_
+10-16	701-707	around	time[40]	giv[40]	_	_
+10-17	708-711	the	time[40]|time[42]	giv[40]|new[42]	coref	29-12[110_42]
+10-18	712-718	spring	time[40]|time|time[42]	giv[40]|new|new[42]	_	_
+10-19	719-726	equinox	time[40]|time[42]	giv[40]|new[42]	_	_
+10-20	727-728	.	_	_	_	_
+
+#Text=Pick a night where there is a new moon if possible , or a thin crescent if not .
+11-1	729-733	Pick	_	_	_	_
+11-2	734-735	a	time[43]	giv[43]	coref	12-12[48_43]
+11-3	736-741	night	time[43]	giv[43]	_	_
+11-4	742-747	where	time[43]	giv[43]	_	_
+11-5	748-753	there	time[43]	giv[43]	_	_
+11-6	754-756	is	time[43]	giv[43]	_	_
+11-7	757-758	a	time[43]|object[44]	giv[43]|new[44]	_	_
+11-8	759-762	new	time[43]|object[44]	giv[43]|new[44]	_	_
+11-9	763-767	moon	time[43]|object[44]	giv[43]|new[44]	_	_
+11-10	768-770	if	time[43]	giv[43]	_	_
+11-11	771-779	possible	time[43]	giv[43]	_	_
+11-12	780-781	,	time[43]	giv[43]	_	_
+11-13	782-784	or	time[43]	giv[43]	_	_
+11-14	785-786	a	time[43]|place[45]	giv[43]|new[45]	_	_
+11-15	787-791	thin	time[43]|place[45]	giv[43]|new[45]	_	_
+11-16	792-800	crescent	time[43]|place[45]	giv[43]|new[45]	_	_
+11-17	801-803	if	_	_	_	_
+11-18	804-807	not	_	_	_	_
+11-19	808-809	.	_	_	_	_
+
+#Text=Search for the times that the Messier objects will appear on that night .
+12-1	810-816	Search	_	_	_	_
+12-2	817-820	for	_	_	_	_
+12-3	821-824	the	time[46]	new[46]	_	_
+12-4	825-830	times	time[46]	new[46]	_	_
+12-5	831-835	that	time[46]	new[46]	_	_
+12-6	836-839	the	time[46]|object[47]	new[46]|giv[47]	coref	17-18[67_47]
+12-7	840-847	Messier	time[46]|object[47]	new[46]|giv[47]	_	_
+12-8	848-855	objects	time[46]|object[47]	new[46]|giv[47]	_	_
+12-9	856-860	will	time[46]	new[46]	_	_
+12-10	861-867	appear	time[46]	new[46]	_	_
+12-11	868-870	on	time[46]	new[46]	_	_
+12-12	871-875	that	time[46]|time[48]	new[46]|giv[48]	coref	25-21[98_48]
+12-13	876-881	night	time[46]|time[48]	new[46]|giv[48]	_	_
+12-14	882-883	.	_	_	_	_
+
+#Text=Create an observation plan .
+13-1	884-890	Create	_	_	_	_
+13-2	891-893	an	abstract[50]	new[50]	coref	32-22[123_50]
+13-3	894-905	observation	abstract|abstract[50]	new|new[50]	_	_
+13-4	906-910	plan	abstract[50]	new[50]	_	_
+13-5	911-912	.	_	_	_	_
+
+#Text=Basically , what order you will look at them in , and how long you will spend on each one .
+14-1	913-922	Basically	abstract[51]	new[51]	_	_
+14-2	923-924	,	abstract[51]	new[51]	_	_
+14-3	925-929	what	abstract[51]	new[51]	_	_
+14-4	930-935	order	abstract[51]	new[51]	_	_
+14-5	936-939	you	abstract[51]|person	new[51]|giv	ana	14-15
+14-6	940-944	will	abstract[51]	new[51]	_	_
+14-7	945-949	look	abstract[51]	new[51]	_	_
+14-8	950-952	at	abstract[51]	new[51]	_	_
+14-9	953-957	them	abstract[51]|person	new[51]|acc	_	_
+14-10	958-960	in	abstract[51]	new[51]	_	_
+14-11	961-962	,	_	_	_	_
+14-12	963-966	and	_	_	_	_
+14-13	967-970	how	_	_	_	_
+14-14	971-975	long	_	_	_	_
+14-15	976-979	you	person	giv	ana	15-1
+14-16	980-984	will	_	_	_	_
+14-17	985-990	spend	_	_	_	_
+14-18	991-993	on	_	_	_	_
+14-19	994-998	each	abstract[55]	new[55]	coref	29-10[109_55]
+14-20	999-1002	one	abstract[55]	new[55]	_	_
+14-21	1003-1004	.	_	_	_	_
+
+#Text=You 'll want to start with the ones that are only in the sky for a few minutes after the sun has set , and finish with the ones that rise a couple of minutes before the sun .
+15-1	1005-1008	You	person	giv	ana	17-1
+15-2	1009-1012	'll	_	_	_	_
+15-3	1013-1017	want	_	_	_	_
+15-4	1018-1020	to	_	_	_	_
+15-5	1021-1026	start	_	_	_	_
+15-6	1027-1031	with	_	_	_	_
+15-7	1032-1035	the	object[57]	new[57]	coref	15-28[61_57]
+15-8	1036-1040	ones	object[57]	new[57]	_	_
+15-9	1041-1045	that	object[57]|place[58]	new[57]|new[58]	_	_
+15-10	1046-1049	are	object[57]|place[58]	new[57]|new[58]	_	_
+15-11	1050-1054	only	object[57]|place[58]	new[57]|new[58]	_	_
+15-12	1055-1057	in	object[57]|place[58]	new[57]|new[58]	_	_
+15-13	1058-1061	the	object[57]|place[58]	new[57]|new[58]	_	_
+15-14	1062-1065	sky	object[57]|place[58]	new[57]|new[58]	_	_
+15-15	1066-1069	for	object[57]|place[58]	new[57]|new[58]	_	_
+15-16	1070-1071	a	object[57]|place[58]|time[59]	new[57]|new[58]|new[59]	_	_
+15-17	1072-1075	few	object[57]|place[58]|time[59]	new[57]|new[58]|new[59]	_	_
+15-18	1076-1083	minutes	object[57]|place[58]|time[59]	new[57]|new[58]|new[59]	_	_
+15-19	1084-1089	after	object[57]|place[58]|time[59]	new[57]|new[58]|new[59]	_	_
+15-20	1090-1093	the	object[57]|place[58]|time[59]|object[60]	new[57]|new[58]|new[59]|new[60]	coref	15-37[62_60]
+15-21	1094-1097	sun	object[57]|place[58]|time[59]|object[60]	new[57]|new[58]|new[59]|new[60]	_	_
+15-22	1098-1101	has	object[57]|place[58]|time[59]	new[57]|new[58]|new[59]	_	_
+15-23	1102-1105	set	object[57]|place[58]|time[59]	new[57]|new[58]|new[59]	_	_
+15-24	1106-1107	,	_	_	_	_
+15-25	1108-1111	and	_	_	_	_
+15-26	1112-1118	finish	_	_	_	_
+15-27	1119-1123	with	_	_	_	_
+15-28	1124-1127	the	object[61]	giv[61]	_	_
+15-29	1128-1132	ones	object[61]	giv[61]	_	_
+15-30	1133-1137	that	object[61]	giv[61]	_	_
+15-31	1138-1142	rise	object[61]	giv[61]	_	_
+15-32	1143-1144	a	object[61]	giv[61]	_	_
+15-33	1145-1151	couple	object[61]	giv[61]	_	_
+15-34	1152-1154	of	object[61]	giv[61]	_	_
+15-35	1155-1162	minutes	object[61]	giv[61]	_	_
+15-36	1163-1169	before	object[61]	giv[61]	_	_
+15-37	1170-1173	the	object[61]|object[62]	giv[61]|giv[62]	coref	20-11[77_62]
+15-38	1174-1177	sun	object[61]|object[62]	giv[61]|giv[62]	_	_
+15-39	1178-1179	.	_	_	_	_
+
+#Text=Find a dark site .
+16-1	1180-1184	Find	_	_	_	_
+16-2	1185-1186	a	place[63]	new[63]	coref	19-3[73_63]
+16-3	1187-1191	dark	place[63]	new[63]	_	_
+16-4	1192-1196	site	place[63]	new[63]	_	_
+16-5	1197-1198	.	_	_	_	_
+
+#Text=You 'll want somewhere away from cities , and you 'll want somewhere elevated , so that objects on the horizon do n't block your view .
+17-1	1199-1202	You	person	giv	ana	17-10
+17-2	1203-1206	'll	_	_	_	_
+17-3	1207-1211	want	_	_	_	_
+17-4	1212-1221	somewhere	_	_	_	_
+17-5	1222-1226	away	_	_	_	_
+17-6	1227-1231	from	_	_	_	_
+17-7	1232-1238	cities	place	new	_	_
+17-8	1239-1240	,	_	_	_	_
+17-9	1241-1244	and	_	_	_	_
+17-10	1245-1248	you	person	giv	ana	17-25
+17-11	1249-1252	'll	_	_	_	_
+17-12	1253-1257	want	_	_	_	_
+17-13	1258-1267	somewhere	_	_	_	_
+17-14	1268-1276	elevated	_	_	_	_
+17-15	1277-1278	,	_	_	_	_
+17-16	1279-1281	so	_	_	_	_
+17-17	1282-1286	that	_	_	_	_
+17-18	1287-1294	objects	object[67]	giv[67]	coref	20-6[76_67]
+17-19	1295-1297	on	object[67]	giv[67]	_	_
+17-20	1298-1301	the	object[67]|abstract[68]	giv[67]|new[68]	_	_
+17-21	1302-1309	horizon	object[67]|abstract[68]	giv[67]|new[68]	_	_
+17-22	1310-1312	do	_	_	_	_
+17-23	1313-1316	n't	_	_	_	_
+17-24	1317-1322	block	_	_	_	_
+17-25	1323-1327	your	person|abstract[70]	giv|new[70]	ana	20-1
+17-26	1328-1332	view	abstract[70]	new[70]	_	_
+17-27	1333-1334	.	_	_	_	_
+
+#Text=The top of a big hill would be pretty good .
+18-1	1335-1338	The	place[71]	new[71]	_	_
+18-2	1339-1342	top	place[71]	new[71]	_	_
+18-3	1343-1345	of	place[71]	new[71]	_	_
+18-4	1346-1347	a	place[71]|place[72]	new[71]|new[72]	_	_
+18-5	1348-1351	big	place[71]|place[72]	new[71]|new[72]	_	_
+18-6	1352-1356	hill	place[71]|place[72]	new[71]|new[72]	_	_
+18-7	1357-1362	would	_	_	_	_
+18-8	1363-1365	be	_	_	_	_
+18-9	1366-1372	pretty	_	_	_	_
+18-10	1373-1377	good	_	_	_	_
+18-11	1378-1379	.	_	_	_	_
+
+#Text=Get to the dark site and get set up before sunset .
+19-1	1380-1383	Get	_	_	_	_
+19-2	1384-1386	to	_	_	_	_
+19-3	1387-1390	the	place[73]	giv[73]	_	_
+19-4	1391-1395	dark	place[73]	giv[73]	_	_
+19-5	1396-1400	site	place[73]	giv[73]	_	_
+19-6	1401-1404	and	_	_	_	_
+19-7	1405-1408	get	_	_	_	_
+19-8	1409-1412	set	_	_	_	_
+19-9	1413-1415	up	_	_	_	_
+19-10	1416-1422	before	_	_	_	_
+19-11	1423-1429	sunset	time	new	coref	21-12
+19-12	1430-1431	.	_	_	_	_
+
+#Text=You 'll be looking for the objects as soon as the sun sets , so you do n't want to be faffing around with your telescope in the dark .
+20-1	1432-1435	You	person	giv	ana	20-16
+20-2	1436-1439	'll	_	_	_	_
+20-3	1440-1442	be	_	_	_	_
+20-4	1443-1450	looking	_	_	_	_
+20-5	1451-1454	for	_	_	_	_
+20-6	1455-1458	the	object[76]	giv[76]	coref	37-1[134_76]
+20-7	1459-1466	objects	object[76]	giv[76]	_	_
+20-8	1467-1469	as	_	_	_	_
+20-9	1470-1474	soon	_	_	_	_
+20-10	1475-1477	as	_	_	_	_
+20-11	1478-1481	the	object[77]	giv[77]	coref	34-6[125_77]
+20-12	1482-1485	sun	object[77]	giv[77]	_	_
+20-13	1486-1490	sets	_	_	_	_
+20-14	1491-1492	,	_	_	_	_
+20-15	1493-1495	so	_	_	_	_
+20-16	1496-1499	you	person	giv	ana	20-25
+20-17	1500-1502	do	_	_	_	_
+20-18	1503-1506	n't	_	_	_	_
+20-19	1507-1511	want	_	_	_	_
+20-20	1512-1514	to	_	_	_	_
+20-21	1515-1517	be	_	_	_	_
+20-22	1518-1525	faffing	_	_	_	_
+20-23	1526-1532	around	_	_	_	_
+20-24	1533-1537	with	_	_	_	_
+20-25	1538-1542	your	person|object[80]	giv|new[80]	coref|ana	22-2[83_80]|23-4
+20-26	1543-1552	telescope	object[80]	new[80]	_	_
+20-27	1553-1555	in	_	_	_	_
+20-28	1556-1559	the	abstract[81]	new[81]	_	_
+20-29	1560-1564	dark	abstract[81]	new[81]	_	_
+20-30	1565-1566	.	_	_	_	_
+
+#Text=Get there early , get set up , then relax until sunset .
+21-1	1567-1570	Get	_	_	_	_
+21-2	1571-1576	there	_	_	_	_
+21-3	1577-1582	early	_	_	_	_
+21-4	1583-1584	,	_	_	_	_
+21-5	1585-1588	get	_	_	_	_
+21-6	1589-1592	set	_	_	_	_
+21-7	1593-1595	up	_	_	_	_
+21-8	1596-1597	,	_	_	_	_
+21-9	1598-1602	then	_	_	_	_
+21-10	1603-1608	relax	_	_	_	_
+21-11	1609-1614	until	_	_	_	_
+21-12	1615-1621	sunset	time	giv	_	_
+21-13	1622-1623	.	_	_	_	_
+
+#Text=Get a computerised telescope ( optional ) .
+22-1	1624-1627	Get	_	_	_	_
+22-2	1628-1629	a	object[83]	giv[83]	coref	23-21[88_83]
+22-3	1630-1642	computerised	object[83]	giv[83]	_	_
+22-4	1643-1652	telescope	object[83]	giv[83]	_	_
+22-5	1653-1654	(	_	_	_	_
+22-6	1655-1663	optional	_	_	_	_
+22-7	1664-1665	)	_	_	_	_
+22-8	1666-1667	.	_	_	_	_
+
+#Text=That way , you do n't have to swivel it around yourself : just enter the next target and let the telescope do the work .
+23-1	1668-1672	That	abstract[84]	new[84]	ana	23-10[0_84]
+23-2	1673-1676	way	abstract[84]	new[84]	_	_
+23-3	1677-1678	,	_	_	_	_
+23-4	1679-1682	you	person	giv	ana	25-14
+23-5	1683-1685	do	_	_	_	_
+23-6	1686-1689	n't	_	_	_	_
+23-7	1690-1694	have	_	_	_	_
+23-8	1695-1697	to	_	_	_	_
+23-9	1698-1704	swivel	_	_	_	_
+23-10	1705-1707	it	abstract	giv	_	_
+23-11	1708-1714	around	_	_	_	_
+23-12	1715-1723	yourself	_	_	_	_
+23-13	1724-1725	:	_	_	_	_
+23-14	1726-1730	just	_	_	_	_
+23-15	1731-1736	enter	_	_	_	_
+23-16	1737-1740	the	abstract[87]	new[87]	_	_
+23-17	1741-1745	next	abstract[87]	new[87]	_	_
+23-18	1746-1752	target	abstract[87]	new[87]	_	_
+23-19	1753-1756	and	_	_	_	_
+23-20	1757-1760	let	_	_	_	_
+23-21	1761-1764	the	object[88]	giv[88]	coref	35-17[132_88]
+23-22	1765-1774	telescope	object[88]	giv[88]	_	_
+23-23	1775-1777	do	_	_	_	_
+23-24	1778-1781	the	abstract[89]	new[89]	_	_
+23-25	1782-1786	work	abstract[89]	new[89]	_	_
+23-26	1787-1788	.	_	_	_	_
+
+#Text=Take photos of each object , if desired .
+24-1	1789-1793	Take	_	_	_	_
+24-2	1794-1800	photos	object[90]	new[90]	_	_
+24-3	1801-1803	of	object[90]	new[90]	_	_
+24-4	1804-1808	each	object[90]|object[91]	new[90]|giv[91]	_	_
+24-5	1809-1815	object	object[90]|object[91]	new[90]|giv[91]	_	_
+24-6	1816-1817	,	_	_	_	_
+24-7	1818-1820	if	_	_	_	_
+24-8	1821-1828	desired	_	_	_	_
+24-9	1829-1830	.	_	_	_	_
+
+#Text=Use a camera that will time and date each photo , so that you have proof that you did it all in one night .
+25-1	1831-1834	Use	_	_	_	_
+25-2	1835-1836	a	object[92]	new[92]	_	_
+25-3	1837-1843	camera	object[92]	new[92]	_	_
+25-4	1844-1848	that	object[92]	new[92]	_	_
+25-5	1849-1853	will	object[92]	new[92]	_	_
+25-6	1854-1858	time	object[92]	new[92]	_	_
+25-7	1859-1862	and	object[92]	new[92]	_	_
+25-8	1863-1867	date	object[92]	new[92]	_	_
+25-9	1868-1872	each	object[92]|object[93]	new[92]|new[93]	ana	25-20[0_93]
+25-10	1873-1878	photo	object[92]|object[93]	new[92]|new[93]	_	_
+25-11	1879-1880	,	_	_	_	_
+25-12	1881-1883	so	_	_	_	_
+25-13	1884-1888	that	_	_	_	_
+25-14	1889-1892	you	person	giv	ana	25-18
+25-15	1893-1897	have	_	_	_	_
+25-16	1898-1903	proof	event[95]	new[95]	ana	28-10[0_95]
+25-17	1904-1908	that	event[95]	new[95]	_	_
+25-18	1909-1912	you	event[95]|person	new[95]|giv	ana	27-5
+25-19	1913-1916	did	event[95]	new[95]	_	_
+25-20	1917-1919	it	event[95]|object	new[95]|giv	_	_
+25-21	1920-1923	all	event[95]|time[98]	new[95]|giv[98]	coref	32-17[121_98]
+25-22	1924-1926	in	event[95]|time[98]	new[95]|giv[98]	_	_
+25-23	1927-1930	one	event[95]|time[98]	new[95]|giv[98]	_	_
+25-24	1931-1936	night	event[95]|time[98]	new[95]|giv[98]	_	_
+25-25	1937-1938	.	_	_	_	_
+
+#Text=Tips
+26-1	1939-1943	Tips	abstract	new	_	_
+
+#Text=Do n't panic if you miss one .
+27-1	1944-1946	Do	_	_	_	_
+27-2	1947-1950	n't	_	_	_	_
+27-3	1951-1956	panic	_	_	_	_
+27-4	1957-1959	if	_	_	_	_
+27-5	1960-1963	you	person	giv	ana	28-1
+27-6	1964-1968	miss	_	_	_	_
+27-7	1969-1972	one	person	new	_	_
+27-8	1973-1974	.	_	_	_	_
+
+#Text=You 'll usually be able to come back to it , and if you miss it , hey , there 's always next year .
+28-1	1975-1978	You	person	giv	ana	28-14
+28-2	1979-1982	'll	_	_	_	_
+28-3	1983-1990	usually	_	_	_	_
+28-4	1991-1993	be	_	_	_	_
+28-5	1994-1998	able	_	_	_	_
+28-6	1999-2001	to	_	_	_	_
+28-7	2002-2006	come	_	_	_	_
+28-8	2007-2011	back	_	_	_	_
+28-9	2012-2014	to	_	_	_	_
+28-10	2015-2017	it	event	giv	ana	28-16
+28-11	2018-2019	,	_	_	_	_
+28-12	2020-2023	and	_	_	_	_
+28-13	2024-2026	if	_	_	_	_
+28-14	2027-2030	you	person	giv	ana	29-19
+28-15	2031-2035	miss	_	_	_	_
+28-16	2036-2038	it	event	giv	_	_
+28-17	2039-2040	,	_	_	_	_
+28-18	2041-2044	hey	_	_	_	_
+28-19	2045-2046	,	_	_	_	_
+28-20	2047-2052	there	_	_	_	_
+28-21	2053-2055	's	_	_	_	_
+28-22	2056-2062	always	time[106]	giv[106]	coref	29-7[108_106]
+28-23	2063-2067	next	time[106]	giv[106]	_	_
+28-24	2068-2072	year	time[106]	giv[106]	_	_
+28-25	2073-2074	.	_	_	_	_
+
+#Text=Sometimes there 's two nights in one year , one before the equinox and one after , where you can do a Messier marathon .
+29-1	2075-2084	Sometimes	_	_	_	_
+29-2	2085-2090	there	_	_	_	_
+29-3	2091-2093	's	_	_	_	_
+29-4	2094-2097	two	time[107]	new[107]	coref	31-3[116_107]
+29-5	2098-2104	nights	time[107]	new[107]	_	_
+29-6	2105-2107	in	time[107]	new[107]	_	_
+29-7	2108-2111	one	time[107]|time[108]	new[107]|giv[108]	_	_
+29-8	2112-2116	year	time[107]|time[108]	new[107]|giv[108]	_	_
+29-9	2117-2118	,	_	_	_	_
+29-10	2119-2122	one	abstract[109]	giv[109]	coref	29-15[111_109]
+29-11	2123-2129	before	abstract[109]	giv[109]	_	_
+29-12	2130-2133	the	abstract[109]|time[110]	giv[109]|giv[110]	_	_
+29-13	2134-2141	equinox	abstract[109]|time[110]	giv[109]|giv[110]	_	_
+29-14	2142-2145	and	_	_	_	_
+29-15	2146-2149	one	abstract[111]	giv[111]	_	_
+29-16	2150-2155	after	abstract[111]	giv[111]	_	_
+29-17	2156-2157	,	_	_	_	_
+29-18	2158-2163	where	_	_	_	_
+29-19	2164-2167	you	person	giv	ana	32-1
+29-20	2168-2171	can	_	_	_	_
+29-21	2172-2174	do	_	_	_	_
+29-22	2175-2176	a	event[114]	new[114]	_	_
+29-23	2177-2184	Messier	person|event[114]	giv|new[114]	coref	39-7[143_0]
+29-24	2185-2193	marathon	event[114]	new[114]	_	_
+29-25	2194-2195	.	_	_	_	_
+
+#Text=In that case :
+30-1	2196-2198	In	_	_	_	_
+30-2	2199-2203	that	abstract[115]	new[115]	_	_
+30-3	2204-2208	case	abstract[115]	new[115]	_	_
+30-4	2209-2210	:	_	_	_	_
+
+#Text=prepare for both nights :
+31-1	2211-2218	prepare	_	_	_	_
+31-2	2219-2222	for	_	_	_	_
+31-3	2223-2227	both	time[116]	giv[116]	_	_
+31-4	2228-2234	nights	time[116]	giv[116]	_	_
+31-5	2235-2236	:	_	_	_	_
+
+#Text=you can use the first as a practise run , and if it 's cloudy on one night you 'll have a plan for the other .
+32-1	2237-2240	you	person	giv	ana	32-19
+32-2	2241-2244	can	_	_	_	_
+32-3	2245-2248	use	_	_	_	_
+32-4	2249-2252	the	_	_	_	_
+32-5	2253-2258	first	_	_	_	_
+32-6	2259-2261	as	_	_	_	_
+32-7	2262-2263	a	event[119]	new[119]	ana	32-13[0_119]
+32-8	2264-2272	practise	abstract|event[119]	new|new[119]	_	_
+32-9	2273-2276	run	event[119]	new[119]	_	_
+32-10	2277-2278	,	_	_	_	_
+32-11	2279-2282	and	_	_	_	_
+32-12	2283-2285	if	_	_	_	_
+32-13	2286-2288	it	event	giv	_	_
+32-14	2289-2291	's	_	_	_	_
+32-15	2292-2298	cloudy	_	_	_	_
+32-16	2299-2301	on	_	_	_	_
+32-17	2302-2305	one	time[121]	giv[121]	_	_
+32-18	2306-2311	night	time[121]	giv[121]	_	_
+32-19	2312-2315	you	person	giv	ana	35-2
+32-20	2316-2319	'll	_	_	_	_
+32-21	2320-2324	have	_	_	_	_
+32-22	2325-2326	a	abstract[123]	giv[123]	_	_
+32-23	2327-2331	plan	abstract[123]	giv[123]	_	_
+32-24	2332-2335	for	abstract[123]	giv[123]	_	_
+32-25	2336-2339	the	abstract[123]	giv[123]	_	_
+32-26	2340-2345	other	abstract[123]	giv[123]	_	_
+32-27	2346-2347	.	_	_	_	_
+
+#Text=Warnings
+33-1	2348-2356	Warnings	abstract	new	_	_
+
+#Text=Do not start stargazing before the sun has set , and stop as soon as it comes up .
+34-1	2357-2359	Do	_	_	_	_
+34-2	2360-2363	not	_	_	_	_
+34-3	2364-2369	start	_	_	_	_
+34-4	2370-2380	stargazing	_	_	_	_
+34-5	2381-2387	before	_	_	_	_
+34-6	2388-2391	the	object[125]	giv[125]	ana	34-16[0_125]
+34-7	2392-2395	sun	object[125]	giv[125]	_	_
+34-8	2396-2399	has	_	_	_	_
+34-9	2400-2403	set	_	_	_	_
+34-10	2404-2405	,	_	_	_	_
+34-11	2406-2409	and	_	_	_	_
+34-12	2410-2414	stop	_	_	_	_
+34-13	2415-2417	as	_	_	_	_
+34-14	2418-2422	soon	_	_	_	_
+34-15	2423-2425	as	_	_	_	_
+34-16	2426-2428	it	object	giv	coref	35-14[130_0]
+34-17	2429-2434	comes	_	_	_	_
+34-18	2435-2437	up	_	_	_	_
+34-19	2438-2439	.	_	_	_	_
+
+#Text=If you do n't , you run the risk of accidentally looking at the sun through your telescope - which will make you go blind .
+35-1	2440-2442	If	_	_	_	_
+35-2	2443-2446	you	person	giv	ana	35-6
+35-3	2447-2449	do	_	_	_	_
+35-4	2450-2453	n't	_	_	_	_
+35-5	2454-2455	,	_	_	_	_
+35-6	2456-2459	you	person	giv	ana	35-17
+35-7	2460-2463	run	_	_	_	_
+35-8	2464-2467	the	abstract[129]	new[129]	_	_
+35-9	2468-2472	risk	abstract[129]	new[129]	_	_
+35-10	2473-2475	of	abstract[129]	new[129]	_	_
+35-11	2476-2488	accidentally	abstract[129]	new[129]	_	_
+35-12	2489-2496	looking	abstract[129]	new[129]	_	_
+35-13	2497-2499	at	abstract[129]	new[129]	_	_
+35-14	2500-2503	the	abstract[129]|object[130]	new[129]|giv[130]	_	_
+35-15	2504-2507	sun	abstract[129]|object[130]	new[129]|giv[130]	_	_
+35-16	2508-2515	through	abstract[129]	new[129]	_	_
+35-17	2516-2520	your	abstract[129]|person|object[132]	new[129]|giv|giv[132]	ana|coref	35-23|38-6[138_132]
+35-18	2521-2530	telescope	abstract[129]|object[132]	new[129]|giv[132]	_	_
+35-19	2531-2532	-	abstract[129]	new[129]	_	_
+35-20	2533-2538	which	abstract[129]	new[129]	_	_
+35-21	2539-2543	will	abstract[129]	new[129]	_	_
+35-22	2544-2548	make	abstract[129]	new[129]	_	_
+35-23	2549-2552	you	abstract[129]|person	new[129]|giv	ana	38-2
+35-24	2553-2555	go	abstract[129]	new[129]	_	_
+35-25	2556-2561	blind	abstract[129]	new[129]	_	_
+35-26	2562-2563	.	_	_	_	_
+
+#Text=Do n't expect too much .
+36-1	2564-2566	Do	_	_	_	_
+36-2	2567-2570	n't	_	_	_	_
+36-3	2571-2577	expect	_	_	_	_
+36-4	2578-2581	too	_	_	_	_
+36-5	2582-2586	much	_	_	_	_
+36-6	2587-2588	.	_	_	_	_
+
+#Text=Astronomical objects always look better in photographs .
+37-1	2589-2601	Astronomical	object[134]	giv[134]	coref	39-2[142_134]
+37-2	2602-2609	objects	object[134]	giv[134]	_	_
+37-3	2610-2616	always	_	_	_	_
+37-4	2617-2621	look	_	_	_	_
+37-5	2622-2628	better	_	_	_	_
+37-6	2629-2631	in	_	_	_	_
+37-7	2632-2643	photographs	object	new	_	_
+37-8	2644-2645	.	_	_	_	_
+
+#Text=If you 're just using a simple stargazing telescope , you wo n't see very many details beyond a bunch of grey fuzzy patches .
+38-1	2646-2648	If	_	_	_	_
+38-2	2649-2652	you	person	giv	ana	38-11
+38-3	2653-2656	're	_	_	_	_
+38-4	2657-2661	just	_	_	_	_
+38-5	2662-2667	using	_	_	_	_
+38-6	2668-2669	a	object[138]	giv[138]	_	_
+38-7	2670-2676	simple	object[138]	giv[138]	_	_
+38-8	2677-2687	stargazing	event|object[138]	new|giv[138]	_	_
+38-9	2688-2697	telescope	object[138]	giv[138]	_	_
+38-10	2698-2699	,	_	_	_	_
+38-11	2700-2703	you	person	giv	ana	41-3
+38-12	2704-2706	wo	_	_	_	_
+38-13	2707-2710	n't	_	_	_	_
+38-14	2711-2714	see	_	_	_	_
+38-15	2715-2719	very	abstract[140]	new[140]	_	_
+38-16	2720-2724	many	abstract[140]	new[140]	_	_
+38-17	2725-2732	details	abstract[140]	new[140]	_	_
+38-18	2733-2739	beyond	_	_	_	_
+38-19	2740-2741	a	object[141]	new[141]	_	_
+38-20	2742-2747	bunch	object[141]	new[141]	_	_
+38-21	2748-2750	of	object[141]	new[141]	_	_
+38-22	2751-2755	grey	object[141]	new[141]	_	_
+38-23	2756-2761	fuzzy	object[141]	new[141]	_	_
+38-24	2762-2769	patches	object[141]	new[141]	_	_
+38-25	2770-2771	.	_	_	_	_
+
+#Text=Not all of the objects in Messier 's catalogue are deep-sky objects .
+39-1	2772-2775	Not	_	_	_	_
+39-2	2776-2779	all	object[142]	giv[142]	coref	39-11[145_142]
+39-3	2780-2782	of	object[142]	giv[142]	_	_
+39-4	2783-2786	the	object[142]	giv[142]	_	_
+39-5	2787-2794	objects	object[142]	giv[142]	_	_
+39-6	2795-2797	in	object[142]	giv[142]	_	_
+39-7	2798-2805	Messier	object[142]|person[143]|object[144]	giv[142]|giv[143]|new[144]	_	_
+39-8	2806-2808	's	object[142]|person[143]|object[144]	giv[142]|giv[143]|new[144]	_	_
+39-9	2809-2818	catalogue	object[142]|object[144]	giv[142]|new[144]	_	_
+39-10	2819-2822	are	_	_	_	_
+39-11	2823-2831	deep-sky	object[145]	giv[145]	_	_
+39-12	2832-2839	objects	object[145]	giv[145]	_	_
+39-13	2840-2841	.	_	_	_	_
+
+#Text=M40 is a double star , and M73 is an asterism - a pattern of unrelated stars .
+40-1	2842-2845	M40	object	new	coref	40-3[147_0]
+40-2	2846-2848	is	_	_	_	_
+40-3	2849-2850	a	object[147]|object[148]	giv[147]|giv[148]	coref|coref	40-3[148_147]|44-5[0_148]
+40-4	2851-2857	double	object[147]|object[148]	giv[147]|giv[148]	_	_
+40-5	2858-2862	star	object[147]|object[148]	giv[147]|giv[148]	_	_
+40-6	2863-2864	,	object[148]	giv[148]	_	_
+40-7	2865-2868	and	object[148]	giv[148]	_	_
+40-8	2869-2872	M73	object[148]|abstract	giv[148]|new	coref	40-10[150_0]
+40-9	2873-2875	is	object[148]	giv[148]	_	_
+40-10	2876-2878	an	object[148]|abstract[150]	giv[148]|giv[150]	appos	40-13[151_150]
+40-11	2879-2887	asterism	object[148]|abstract[150]	giv[148]|giv[150]	_	_
+40-12	2888-2889	-	_	_	_	_
+40-13	2890-2891	a	abstract[151]	giv[151]	coref	44-7[0_151]
+40-14	2892-2899	pattern	abstract[151]	giv[151]	_	_
+40-15	2900-2902	of	abstract[151]	giv[151]	_	_
+40-16	2903-2912	unrelated	abstract[151]|object[152]	giv[151]|new[152]	_	_
+40-17	2913-2918	stars	abstract[151]|object[152]	giv[151]|new[152]	_	_
+40-18	2919-2920	.	_	_	_	_
+
+#Text=However , you can still find both of these .
+41-1	2921-2928	However	_	_	_	_
+41-2	2929-2930	,	_	_	_	_
+41-3	2931-2934	you	person	giv	ana	44-15
+41-4	2935-2938	can	_	_	_	_
+41-5	2939-2944	still	_	_	_	_
+41-6	2945-2949	find	_	_	_	_
+41-7	2950-2954	both	_	_	_	_
+41-8	2955-2957	of	_	_	_	_
+41-9	2958-2963	these	_	_	_	_
+41-10	2964-2965	.	_	_	_	_
+
+#Text=Watch out for M102 , though - it has n't been unambiguously identified .
+42-1	2966-2971	Watch	_	_	_	_
+42-2	2972-2975	out	_	_	_	_
+42-3	2976-2979	for	_	_	_	_
+42-4	2980-2984	M102	abstract	new	ana	42-8
+42-5	2985-2986	,	_	_	_	_
+42-6	2987-2993	though	_	_	_	_
+42-7	2994-2995	-	_	_	_	_
+42-8	2996-2998	it	abstract	giv	ana	43-5
+42-9	2999-3002	has	_	_	_	_
+42-10	3003-3006	n't	_	_	_	_
+42-11	3007-3011	been	_	_	_	_
+42-12	3012-3025	unambiguously	_	_	_	_
+42-13	3026-3036	identified	_	_	_	_
+42-14	3037-3038	.	_	_	_	_
+
+#Text=Most people agree that it is either a repeat of M101 , or NGC 5866 .
+43-1	3039-3043	Most	person[156]	new[156]	_	_
+43-2	3044-3050	people	person[156]	new[156]	_	_
+43-3	3051-3056	agree	_	_	_	_
+43-4	3057-3061	that	_	_	_	_
+43-5	3062-3064	it	abstract	giv	coref	43-7[158_0]
+43-6	3065-3067	is	_	_	_	_
+43-7	3068-3074	either	abstract[158]	giv[158]	coref	44-9[0_158]
+43-8	3075-3076	a	abstract[158]	giv[158]	_	_
+43-9	3077-3083	repeat	abstract[158]	giv[158]	_	_
+43-10	3084-3086	of	abstract[158]	giv[158]	_	_
+43-11	3087-3091	M101	abstract[158]|abstract	giv[158]|new	_	_
+43-12	3092-3093	,	abstract[158]	giv[158]	_	_
+43-13	3094-3096	or	abstract[158]	giv[158]	_	_
+43-14	3097-3100	NGC	abstract[158]|abstract[160]	giv[158]|new[160]	_	_
+43-15	3101-3105	5866	abstract[158]|abstract[160]	giv[158]|new[160]	_	_
+43-16	3106-3107	.	_	_	_	_
+
+#Text=Feel free to give M40 , M73 and M102 a miss , especially if you are pushed for time .
+44-1	3108-3112	Feel	_	_	_	_
+44-2	3113-3117	free	_	_	_	_
+44-3	3118-3120	to	_	_	_	_
+44-4	3121-3125	give	_	_	_	_
+44-5	3126-3129	M40	object	giv	_	_
+44-6	3130-3131	,	_	_	_	_
+44-7	3132-3135	M73	abstract	giv	_	_
+44-8	3136-3139	and	_	_	_	_
+44-9	3140-3144	M102	abstract	giv	_	_
+44-10	3145-3146	a	event[164]	new[164]	_	_
+44-11	3147-3151	miss	event[164]	new[164]	_	_
+44-12	3152-3153	,	_	_	_	_
+44-13	3154-3164	especially	_	_	_	_
+44-14	3165-3167	if	_	_	_	_
+44-15	3168-3171	you	person	giv	_	_
+44-16	3172-3175	are	_	_	_	_
+44-17	3176-3182	pushed	_	_	_	_
+44-18	3183-3186	for	_	_	_	_
+44-19	3187-3191	time	time	new	_	_
+44-20	3192-3193	.	_	_	_	_

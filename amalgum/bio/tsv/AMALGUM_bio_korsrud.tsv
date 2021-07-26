@@ -1,0 +1,847 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=John Korsrud
+1-1	0-4	John	person[1]	new[1]	coref	2-1[2_1]
+1-2	5-12	Korsrud	person[1]	new[1]	_	_
+
+#Text=John Korsrud is a Canadian composer and jazz trumpeter .
+2-1	13-17	John	person[2]	giv[2]	coref	2-4[3_2]
+2-2	18-25	Korsrud	person[2]	giv[2]	_	_
+2-3	26-28	is	_	_	_	_
+2-4	29-30	a	person[3]|person[4]	giv[3]|giv[4]	coref|coref	2-4[4_3]|5-2[13_4]
+2-5	31-39	Canadian	person[3]|person[4]	giv[3]|giv[4]	_	_
+2-6	40-48	composer	person[3]|person[4]	giv[3]|giv[4]	_	_
+2-7	49-52	and	person[4]	giv[4]	_	_
+2-8	53-57	jazz	person[4]|person[5]	giv[4]|new[5]	_	_
+2-9	58-67	trumpeter	person[4]|person[5]	giv[4]|new[5]	_	_
+2-10	68-69	.	_	_	_	_
+
+#Text=Life
+3-1	70-74	Life	abstract	new	_	_
+
+#Text=Korsrud ( b. 1963 ) , who lives in Vancouver , British Columbia , Canada
+4-1	75-82	Korsrud	person[7]	new[7]	coref	6-1[0_7]
+4-2	83-84	(	person[7]	new[7]	_	_
+4-3	85-87	b.	person[7]	new[7]	_	_
+4-4	88-92	1963	person[7]|time	new[7]|new	_	_
+4-5	93-94	)	person[7]	new[7]	_	_
+4-6	95-96	,	person[7]	new[7]	_	_
+4-7	97-100	who	person[7]	new[7]	_	_
+4-8	101-106	lives	person[7]	new[7]	_	_
+4-9	107-109	in	person[7]	new[7]	_	_
+4-10	110-119	Vancouver	person[7]|place	new[7]|new	coref	7-7
+4-11	120-121	,	_	_	_	_
+4-12	122-129	British	person|place[11]	new|new[11]	_	_
+4-13	130-138	Columbia	place[11]	new[11]	_	_
+4-14	139-140	,	place[11]	new[11]	_	_
+4-15	141-147	Canada	place[11]|place	new[11]|new	coref	9-25
+
+#Text=is a composer and leads the 18-piece Hard Rubber Orchestra .
+5-1	148-150	is	_	_	_	_
+5-2	151-152	a	person[13]	giv[13]	coref	23-1[169_13]
+5-3	153-161	composer	person[13]	giv[13]	_	_
+5-4	162-165	and	_	_	_	_
+5-5	166-171	leads	_	_	_	_
+5-6	172-175	the	organization[15]	new[15]	coref	7-6[25_15]
+5-7	176-184	18-piece	organization[15]	new[15]	_	_
+5-8	185-189	Hard	person[14]|organization[15]	new[14]|new[15]	coref	9-13[56_14]
+5-9	190-196	Rubber	person[14]|organization[15]	new[14]|new[15]	_	_
+5-10	197-206	Orchestra	organization[15]	new[15]	_	_
+5-11	207-208	.	_	_	_	_
+
+#Text=Korsrud studied composition with Louis Andriessen at the Royal Conservatory in Amsterdam .
+6-1	209-216	Korsrud	person	giv	coref	7-1
+6-2	217-224	studied	_	_	_	_
+6-3	225-236	composition	abstract	new	_	_
+6-4	237-241	with	_	_	_	_
+6-5	242-247	Louis	person[18]	new[18]	_	_
+6-6	248-258	Andriessen	person[18]	new[18]	_	_
+6-7	259-261	at	_	_	_	_
+6-8	262-265	the	organization[19]	new[19]	_	_
+6-9	266-271	Royal	organization[19]	new[19]	_	_
+6-10	272-284	Conservatory	organization[19]	new[19]	_	_
+6-11	285-287	in	organization[19]	new[19]	_	_
+6-12	288-297	Amsterdam	organization[19]|place	new[19]|new	_	_
+6-13	298-299	.	_	_	_	_
+
+#Text=Korsrud has received commissions from the Vancouver Symphony Orchestra , the American Composers Orchestra , The CBC Radio Orchestra , and Dutch ensembles such as Ensemble LOOS , the Tetzepi Bigtet , the Zapp String Quartet , De Ereprijs , among others .
+7-1	300-307	Korsrud	person	giv	coref	8-1
+7-2	308-311	has	_	_	_	_
+7-3	312-320	received	_	_	_	_
+7-4	321-332	commissions	abstract[22]	new[22]	_	_
+7-5	333-337	from	abstract[22]	new[22]	_	_
+7-6	338-341	the	abstract[22]|organization[25]	new[22]|giv[25]	coref	7-11[27_25]
+7-7	342-351	Vancouver	abstract[22]|place|organization[25]	new[22]|giv|giv[25]	_	_
+7-8	352-360	Symphony	abstract[22]|person|organization[25]	new[22]|new|giv[25]	coref	17-7[152_0]
+7-9	361-370	Orchestra	abstract[22]|organization[25]	new[22]|giv[25]	_	_
+7-10	371-372	,	abstract[22]	new[22]	_	_
+7-11	373-376	the	abstract[22]|organization[27]	new[22]|giv[27]	coref	7-16[30_27]
+7-12	377-385	American	abstract[22]|person[26]|organization[27]	new[22]|new[26]|giv[27]	coref	8-23[0_26]
+7-13	386-395	Composers	abstract[22]|person[26]|organization[27]	new[22]|new[26]|giv[27]	_	_
+7-14	396-405	Orchestra	abstract[22]|organization[27]	new[22]|giv[27]	_	_
+7-15	406-407	,	abstract[22]	new[22]	_	_
+7-16	408-411	The	abstract[22]|organization[30]	new[22]|giv[30]	coref	8-21[50_30]
+7-17	412-415	CBC	abstract[22]|organization|organization[29]|organization[30]	new[22]|new|new[29]|giv[30]	coref	13-1[106_0]
+7-18	416-421	Radio	abstract[22]|organization[29]|organization[30]	new[22]|new[29]|giv[30]	_	_
+7-19	422-431	Orchestra	abstract[22]|organization[30]	new[22]|giv[30]	_	_
+7-20	432-433	,	abstract[22]	new[22]	_	_
+7-21	434-437	and	abstract[22]	new[22]	_	_
+7-22	438-443	Dutch	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-23	444-453	ensembles	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-24	454-458	such	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-25	459-461	as	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-26	462-470	Ensemble	abstract[22]|organization[31]|organization[32]	new[22]|new[31]|new[32]	coref	9-7[55_32]
+7-27	471-475	LOOS	abstract[22]|organization[31]|organization[32]	new[22]|new[31]|new[32]	_	_
+7-28	476-477	,	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-29	478-481	the	abstract[22]|organization[31]|object[34]	new[22]|new[31]|new[34]	_	_
+7-30	482-489	Tetzepi	abstract[22]|organization[31]|person|object[34]	new[22]|new[31]|new|new[34]	_	_
+7-31	490-496	Bigtet	abstract[22]|organization[31]|object[34]	new[22]|new[31]|new[34]	_	_
+7-32	497-498	,	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-33	499-502	the	abstract[22]|organization[31]|organization[37]	new[22]|new[31]|new[37]	_	_
+7-34	503-507	Zapp	abstract[22]|organization[31]|person|organization[37]	new[22]|new[31]|new|new[37]	_	_
+7-35	508-514	String	abstract[22]|organization[31]|person|organization[37]	new[22]|new[31]|new|new[37]	_	_
+7-36	515-522	Quartet	abstract[22]|organization[31]|organization[37]	new[22]|new[31]|new[37]	_	_
+7-37	523-524	,	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-38	525-527	De	abstract[22]|organization[31]|person[38]	new[22]|new[31]|new[38]	_	_
+7-39	528-536	Ereprijs	abstract[22]|organization[31]|person[38]	new[22]|new[31]|new[38]	_	_
+7-40	537-538	,	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-41	539-544	among	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-42	545-551	others	abstract[22]|organization[31]	new[22]|new[31]	_	_
+7-43	552-553	.	_	_	_	_
+
+#Text=Korsrud performed on his own trumpet concerto , Come to the Dark Side at Carnegie Hall in 2010 with by The American Composers Orchestra .
+8-1	554-561	Korsrud	person	giv	ana	8-4
+8-2	562-571	performed	_	_	_	_
+8-3	572-574	on	_	_	_	_
+8-4	575-578	his	person|abstract[42]	giv|new[42]	ana	9-4
+8-5	579-582	own	abstract[42]	new[42]	_	_
+8-6	583-590	trumpet	object|abstract[42]	new|new[42]	_	_
+8-7	591-599	concerto	abstract[42]	new[42]	_	_
+8-8	600-601	,	abstract[42]	new[42]	_	_
+8-9	602-606	Come	abstract[42]|person[43]	new[42]|new[43]	_	_
+8-10	607-609	to	abstract[42]|person[43]	new[42]|new[43]	_	_
+8-11	610-613	the	abstract[42]|person[43]|abstract[45]	new[42]|new[43]|new[45]	coref	45-4[237_45]
+8-12	614-618	Dark	abstract[42]|person[43]|person|abstract[45]	new[42]|new[43]|new|new[45]	coref	45-5
+8-13	619-623	Side	abstract[42]|person[43]|abstract[45]	new[42]|new[43]|new[45]	_	_
+8-14	624-626	at	abstract[42]|person[43]	new[42]|new[43]	_	_
+8-15	627-635	Carnegie	abstract[42]|person[43]|person|place[47]	new[42]|new[43]|new|new[47]	_	_
+8-16	636-640	Hall	abstract[42]|person[43]|place[47]	new[42]|new[43]|new[47]	_	_
+8-17	641-643	in	abstract[42]|person[43]	new[42]|new[43]	_	_
+8-18	644-648	2010	abstract[42]|person[43]|time	new[42]|new[43]|new	coref	12-33
+8-19	649-653	with	_	_	_	_
+8-20	654-656	by	_	_	_	_
+8-21	657-660	The	organization[50]	giv[50]	coref	17-11[154_50]
+8-22	661-669	American	organization[50]	giv[50]	_	_
+8-23	670-679	Composers	person|organization[50]	giv|giv[50]	coref	10-11[68_0]
+8-24	680-689	Orchestra	organization[50]	giv[50]	_	_
+8-25	690-691	.	_	_	_	_
+
+#Text=Since 1990 , he has led the 18-piece new music/ jazz ensemble Hard Rubber Orchestra , with which has appeared in Europe and across Canada , recorded three albums , and in 2005 won the Alcan Arts Award .
+9-1	692-697	Since	_	_	_	_
+9-2	698-702	1990	time	new	_	_
+9-3	703-704	,	_	_	_	_
+9-4	705-707	he	person	giv	coref	11-1
+9-5	708-711	has	_	_	_	_
+9-6	712-715	led	_	_	_	_
+9-7	716-719	the	organization[55]	giv[55]	appos	9-13[57_55]
+9-8	720-728	18-piece	organization[55]	giv[55]	_	_
+9-9	729-732	new	organization[55]	giv[55]	_	_
+9-10	733-739	music/	abstract|organization[55]	new|giv[55]	_	_
+9-11	740-744	jazz	abstract|organization[55]	new|giv[55]	_	_
+9-12	745-753	ensemble	organization[55]	giv[55]	_	_
+9-13	754-758	Hard	person[56]|organization[57]	giv[56]|giv[57]	coref|coref	10-2[65_56]|10-1[66_57]
+9-14	759-765	Rubber	person[56]|organization[57]	giv[56]|giv[57]	_	_
+9-15	766-775	Orchestra	organization[57]	giv[57]	_	_
+9-16	776-777	,	_	_	_	_
+9-17	778-782	with	_	_	_	_
+9-18	783-788	which	_	_	_	_
+9-19	789-792	has	_	_	_	_
+9-20	793-801	appeared	_	_	_	_
+9-21	802-804	in	_	_	_	_
+9-22	805-811	Europe	place	new	_	_
+9-23	812-815	and	_	_	_	_
+9-24	816-822	across	_	_	_	_
+9-25	823-829	Canada	place	giv	_	_
+9-26	830-831	,	_	_	_	_
+9-27	832-840	recorded	_	_	_	_
+9-28	841-846	three	abstract[60]	new[60]	_	_
+9-29	847-853	albums	abstract[60]	new[60]	_	_
+9-30	854-855	,	_	_	_	_
+9-31	856-859	and	_	_	_	_
+9-32	860-862	in	_	_	_	_
+9-33	863-867	2005	time	new	coref	12-39
+9-34	868-871	won	_	_	_	_
+9-35	872-875	the	abstract[64]	new[64]	coref	14-3[114_64]
+9-36	876-881	Alcan	organization|abstract[63]|abstract[64]	new|new[63]|new[64]	_	_
+9-37	882-886	Arts	abstract[63]|abstract[64]	new[63]|new[64]	_	_
+9-38	887-892	Award	abstract[64]	new[64]	_	_
+9-39	893-894	.	_	_	_	_
+
+#Text=The Hard Rubber Orchestra has commissioned over 50 works from composers such as Kenny Wheeler , Darcy James Argue , Brad Turner , Scott Good , Linda Bouchard , Rene Lussier and many others .
+10-1	895-898	The	organization[66]	giv[66]	coref	11-19[81_66]
+10-2	899-903	Hard	person[65]|organization[66]	giv[65]|giv[66]	coref	19-1[156_65]
+10-3	904-910	Rubber	person[65]|organization[66]	giv[65]|giv[66]	_	_
+10-4	911-920	Orchestra	organization[66]	giv[66]	_	_
+10-5	921-924	has	_	_	_	_
+10-6	925-937	commissioned	_	_	_	_
+10-7	938-942	over	abstract[67]	new[67]	_	_
+10-8	943-945	50	abstract[67]	new[67]	_	_
+10-9	946-951	works	abstract[67]	new[67]	_	_
+10-10	952-956	from	abstract[67]	new[67]	_	_
+10-11	957-966	composers	abstract[67]|person[68]	new[67]|giv[68]	coref	17-12[153_68]
+10-12	967-971	such	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-13	972-974	as	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-14	975-980	Kenny	abstract[67]|person[68]|person[69]	new[67]|giv[68]|new[69]	_	_
+10-15	981-988	Wheeler	abstract[67]|person[68]|person[69]	new[67]|giv[68]|new[69]	_	_
+10-16	989-990	,	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-17	991-996	Darcy	abstract[67]|person[68]|person[70]	new[67]|giv[68]|new[70]	_	_
+10-18	997-1002	James	abstract[67]|person[68]|person[70]	new[67]|giv[68]|new[70]	_	_
+10-19	1003-1008	Argue	abstract[67]|person[68]|person[70]	new[67]|giv[68]|new[70]	_	_
+10-20	1009-1010	,	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-21	1011-1015	Brad	abstract[67]|person[68]|person[71]	new[67]|giv[68]|new[71]	_	_
+10-22	1016-1022	Turner	abstract[67]|person[68]|person[71]	new[67]|giv[68]|new[71]	_	_
+10-23	1023-1024	,	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-24	1025-1030	Scott	abstract[67]|person[68]|person[72]	new[67]|giv[68]|new[72]	_	_
+10-25	1031-1035	Good	abstract[67]|person[68]|person[72]	new[67]|giv[68]|new[72]	_	_
+10-26	1036-1037	,	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-27	1038-1043	Linda	abstract[67]|person[68]|person[73]	new[67]|giv[68]|new[73]	_	_
+10-28	1044-1052	Bouchard	abstract[67]|person[68]|person[73]	new[67]|giv[68]|new[73]	_	_
+10-29	1053-1054	,	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-30	1055-1059	Rene	abstract[67]|person[68]|person[74]	new[67]|giv[68]|new[74]	_	_
+10-31	1060-1067	Lussier	abstract[67]|person[68]|person[74]	new[67]|giv[68]|new[74]	_	_
+10-32	1068-1071	and	abstract[67]|person[68]	new[67]|giv[68]	_	_
+10-33	1072-1076	many	abstract[67]|person[68]|person[75]	new[67]|giv[68]|new[75]	_	_
+10-34	1077-1083	others	abstract[67]|person[68]|person[75]	new[67]|giv[68]|new[75]	_	_
+10-35	1084-1085	.	_	_	_	_
+
+#Text=Korsrud also leads the 20-piece Salsa/Latin-Jazz-Orchestra Orquestra Goma Dura , from which an album has appeared , and the 14-piece drum'n'bass ensemble The Drum & Light Orchestra .
+11-1	1086-1093	Korsrud	person	giv	coref	12-1
+11-2	1094-1098	also	_	_	_	_
+11-3	1099-1104	leads	_	_	_	_
+11-4	1105-1108	the	abstract[77]|organization[78]	new[77]|new[78]	coref	20-1[160_78]
+11-5	1109-1117	20-piece	abstract[77]|organization[78]	new[77]|new[78]	_	_
+11-6	1118-1144	Salsa/Latin-Jazz-Orchestra	abstract[77]|organization[78]	new[77]|new[78]	_	_
+11-7	1145-1154	Orquestra	organization[78]	new[78]	_	_
+11-8	1155-1159	Goma	person	new	_	_
+11-9	1160-1164	Dura	_	_	_	_
+11-10	1165-1166	,	_	_	_	_
+11-11	1167-1171	from	_	_	_	_
+11-12	1172-1177	which	_	_	_	_
+11-13	1178-1180	an	abstract[80]	new[80]	_	_
+11-14	1181-1186	album	abstract[80]	new[80]	_	_
+11-15	1187-1190	has	_	_	_	_
+11-16	1191-1199	appeared	_	_	_	_
+11-17	1200-1201	,	_	_	_	_
+11-18	1202-1205	and	_	_	_	_
+11-19	1206-1209	the	organization[81]	giv[81]	appos	11-23[84_81]
+11-20	1210-1218	14-piece	organization[81]	giv[81]	_	_
+11-21	1219-1230	drum'n'bass	organization[81]	giv[81]	_	_
+11-22	1231-1239	ensemble	organization[81]	giv[81]	_	_
+11-23	1240-1243	The	organization[84]	giv[84]	coref	19-1[157_84]
+11-24	1244-1248	Drum	person|organization[84]	new|giv[84]	coref	29-1
+11-25	1249-1250	&	object[83]|organization[84]	new[83]|giv[84]	coref	12-45[102_83]
+11-26	1251-1256	Light	object[83]|organization[84]	new[83]|giv[84]	_	_
+11-27	1257-1266	Orchestra	organization[84]	giv[84]	_	_
+11-28	1267-1268	.	_	_	_	_
+
+#Text=Korsrud has also created large multimedia projects like The Elvis Cantatas ( 1994 , 1996 ) , The Ice Age : The World 's First New Music Ice Show ( 2000 , 2010 ) , and Enter/Exit ( 2005 ) , and The Drum & Light Festival ( 2008 – 10 ) .
+12-1	1269-1276	Korsrud	person	giv	coref	16-1
+12-2	1277-1280	has	_	_	_	_
+12-3	1281-1285	also	_	_	_	_
+12-4	1286-1293	created	_	_	_	_
+12-5	1294-1299	large	abstract[87]	new[87]	coref	24-1[175_87]
+12-6	1300-1310	multimedia	abstract|abstract[87]	new|new[87]	coref	24-1
+12-7	1311-1319	projects	abstract[87]	new[87]	_	_
+12-8	1320-1324	like	abstract[87]	new[87]	_	_
+12-9	1325-1328	The	abstract[87]|abstract[89]|abstract[90]	new[87]|new[89]|new[90]	coref	26-1[179_90]
+12-10	1329-1334	Elvis	abstract[87]|person|abstract[89]|abstract[90]	new[87]|new|new[89]|new[90]	coref	13-8
+12-11	1335-1343	Cantatas	abstract[87]|abstract[89]|abstract[90]	new[87]|new[89]|new[90]	_	_
+12-12	1344-1345	(	abstract[87]|abstract[89]|abstract[90]	new[87]|new[89]|new[90]	_	_
+12-13	1346-1350	1994	abstract[87]|abstract[89]|abstract[90]|time[91]	new[87]|new[89]|new[90]|new[91]	coref	26-5[0_91]
+12-14	1351-1352	,	abstract[87]|abstract[89]|abstract[90]|time[91]	new[87]|new[89]|new[90]|new[91]	_	_
+12-15	1353-1357	1996	abstract[87]|abstract[89]|abstract[90]|time[91]|time	new[87]|new[89]|new[90]|new[91]|new	coref	26-7
+12-16	1358-1359	)	abstract[87]|abstract[89]|abstract[90]	new[87]|new[89]|new[90]	_	_
+12-17	1360-1361	,	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-18	1362-1365	The	abstract[87]|abstract[90]|abstract[94]	new[87]|new[90]|new[94]	coref	15-13[0_94]
+12-19	1366-1369	Ice	abstract[87]|abstract[90]|person|abstract[94]	new[87]|new[90]|new|new[94]	coref	27-2
+12-20	1370-1373	Age	abstract[87]|abstract[90]|abstract[94]	new[87]|new[90]|new[94]	_	_
+12-21	1374-1375	:	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-22	1376-1379	The	abstract[87]|abstract[90]|time[97]	new[87]|new[90]|new[97]	coref	27-5[186_97]
+12-23	1380-1385	World	abstract[87]|abstract[90]|organization[95]|time[97]	new[87]|new[90]|new[95]|new[97]	coref	27-6[184_95]
+12-24	1386-1388	's	abstract[87]|abstract[90]|organization[95]|time[97]	new[87]|new[90]|new[95]|new[97]	_	_
+12-25	1389-1394	First	abstract[87]|abstract[90]|time[97]	new[87]|new[90]|new[97]	_	_
+12-26	1395-1398	New	abstract[87]|abstract[90]|abstract[96]|time[97]	new[87]|new[90]|new[96]|new[97]	coref	14-12[118_96]
+12-27	1399-1404	Music	abstract[87]|abstract[90]|abstract[96]|time[97]	new[87]|new[90]|new[96]|new[97]	_	_
+12-28	1405-1408	Ice	abstract[87]|abstract[90]|time[97]	new[87]|new[90]|new[97]	_	_
+12-29	1409-1413	Show	abstract[87]|abstract[90]|time[97]	new[87]|new[90]|new[97]	_	_
+12-30	1414-1415	(	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-31	1416-1420	2000	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-32	1421-1422	,	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-33	1423-1427	2010	abstract[87]|abstract[90]|time	new[87]|new[90]|giv	coref	29-10
+12-34	1428-1429	)	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-35	1430-1431	,	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-36	1432-1435	and	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-37	1436-1446	Enter/Exit	abstract[87]|abstract[90]|abstract[99]	new[87]|new[90]|new[99]	_	_
+12-38	1447-1448	(	abstract[87]|abstract[90]|abstract[99]	new[87]|new[90]|new[99]	_	_
+12-39	1449-1453	2005	abstract[87]|abstract[90]|abstract[99]|time	new[87]|new[90]|new[99]|giv	coref	22-7
+12-40	1454-1455	)	abstract[87]|abstract[90]|abstract[99]	new[87]|new[90]|new[99]	_	_
+12-41	1456-1457	,	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-42	1458-1461	and	abstract[87]|abstract[90]	new[87]|new[90]	_	_
+12-43	1462-1465	The	abstract[87]|abstract[90]|object[101]|time[103]	new[87]|new[90]|new[101]|new[103]	coref	29-1[192_103]
+12-44	1466-1470	Drum	abstract[87]|abstract[90]|object[101]|time[103]	new[87]|new[90]|new[101]|new[103]	_	_
+12-45	1471-1472	&	abstract[87]|abstract[90]|object[102]|time[103]	new[87]|new[90]|giv[102]|new[103]	coref	29-2[191_102]
+12-46	1473-1478	Light	abstract[87]|abstract[90]|object[102]|time[103]	new[87]|new[90]|giv[102]|new[103]	_	_
+12-47	1479-1487	Festival	abstract[87]|abstract[90]|time[103]	new[87]|new[90]|new[103]	_	_
+12-48	1488-1489	(	abstract[87]|abstract[90]|time[103]	new[87]|new[90]|new[103]	_	_
+12-49	1490-1494	2008	abstract[87]|abstract[90]|time[103]|time[104]	new[87]|new[90]|new[103]|new[104]	_	_
+12-50	1495-1496	–	abstract[87]|abstract[90]|time[103]|time[104]	new[87]|new[90]|new[103]|new[104]	_	_
+12-51	1497-1499	10	abstract[87]|abstract[90]|time[103]|time[104]|time	new[87]|new[90]|new[103]|new[104]|new	_	_
+12-52	1500-1501	)	abstract[87]|abstract[90]|time[103]	new[87]|new[90]|new[103]	_	_
+12-53	1502-1503	.	_	_	_	_
+
+#Text=The CBC produced a 70-minute version of Elvis Cantata , entitled Cantata for the King .
+13-1	1504-1507	The	organization[106]	giv[106]	_	_
+13-2	1508-1511	CBC	organization[106]	giv[106]	_	_
+13-3	1512-1520	produced	_	_	_	_
+13-4	1521-1522	a	abstract[107]	new[107]	_	_
+13-5	1523-1532	70-minute	abstract[107]	new[107]	_	_
+13-6	1533-1540	version	abstract[107]	new[107]	_	_
+13-7	1541-1543	of	abstract[107]	new[107]	_	_
+13-8	1544-1549	Elvis	abstract[107]|person|abstract[109]	new[107]|giv|new[109]	coref|coref	13-12[110_109]|26-2
+13-9	1550-1557	Cantata	abstract[107]|abstract[109]	new[107]|new[109]	_	_
+13-10	1558-1559	,	_	_	_	_
+13-11	1560-1568	entitled	_	_	_	_
+13-12	1569-1576	Cantata	abstract[110]	giv[110]	_	_
+13-13	1577-1580	for	abstract[110]	giv[110]	_	_
+13-14	1581-1584	the	abstract[110]|person[111]	giv[110]|new[111]	ana	14-1[0_111]
+13-15	1585-1589	King	abstract[110]|person[111]	giv[110]|new[111]	_	_
+13-16	1590-1591	.	_	_	_	_
+
+#Text=He won the Leo Award and the Golden Sheaf Award for the music to the film Heroines ( 2002 ) , and was nominated for the Gemini Award .
+14-1	1592-1594	He	person	giv	ana	15-1
+14-2	1595-1598	won	_	_	_	_
+14-3	1599-1602	the	abstract[114]	giv[114]	coref	14-7[117_114]
+14-4	1603-1606	Leo	person|abstract[114]	new|giv[114]	coref	15-4
+14-5	1607-1612	Award	abstract[114]	giv[114]	_	_
+14-6	1613-1616	and	_	_	_	_
+14-7	1617-1620	the	abstract[117]	giv[117]	coref	14-26[123_117]
+14-8	1621-1627	Golden	person|plant[116]|abstract[117]	new|new[116]|giv[117]	_	_
+14-9	1628-1633	Sheaf	plant[116]|abstract[117]	new[116]|giv[117]	_	_
+14-10	1634-1639	Award	abstract[117]	giv[117]	_	_
+14-11	1640-1643	for	abstract[117]	giv[117]	_	_
+14-12	1644-1647	the	abstract[117]|abstract[118]	giv[117]|giv[118]	coref	15-7[128_118]
+14-13	1648-1653	music	abstract[117]|abstract[118]	giv[117]|giv[118]	_	_
+14-14	1654-1656	to	abstract[117]|abstract[118]	giv[117]|giv[118]	_	_
+14-15	1657-1660	the	abstract[117]|abstract[118]|abstract[120]	giv[117]|giv[118]|new[120]	_	_
+14-16	1661-1665	film	abstract[117]|abstract[118]|abstract|abstract[120]	giv[117]|giv[118]|new|new[120]	coref	15-8
+14-17	1666-1674	Heroines	abstract[117]|abstract[118]|abstract[120]	giv[117]|giv[118]|new[120]	_	_
+14-18	1675-1676	(	abstract[117]|abstract[118]|abstract[120]	giv[117]|giv[118]|new[120]	_	_
+14-19	1677-1681	2002	abstract[117]|abstract[118]|abstract[120]|time	giv[117]|giv[118]|new[120]|new	_	_
+14-20	1682-1683	)	abstract[117]|abstract[118]|abstract[120]	giv[117]|giv[118]|new[120]	_	_
+14-21	1684-1685	,	_	_	_	_
+14-22	1686-1689	and	_	_	_	_
+14-23	1690-1693	was	_	_	_	_
+14-24	1694-1703	nominated	_	_	_	_
+14-25	1704-1707	for	_	_	_	_
+14-26	1708-1711	the	abstract[123]	giv[123]	coref	15-3[126_123]
+14-27	1712-1718	Gemini	person|abstract[123]	new|giv[123]	_	_
+14-28	1719-1724	Award	abstract[123]	giv[123]	_	_
+14-29	1725-1726	.	_	_	_	_
+
+#Text=He won another Leo Award for the film music to Prisoners of Age .
+15-1	1727-1729	He	person	giv	_	_
+15-2	1730-1733	won	_	_	_	_
+15-3	1734-1741	another	abstract[126]	giv[126]	coref	16-6[135_126]
+15-4	1742-1745	Leo	person|abstract[126]	giv|giv[126]	_	_
+15-5	1746-1751	Award	abstract[126]	giv[126]	_	_
+15-6	1752-1755	for	_	_	_	_
+15-7	1756-1759	the	abstract[128]	giv[128]	coref	16-28[0_128]
+15-8	1760-1764	film	abstract|abstract[128]	giv|giv[128]	_	_
+15-9	1765-1770	music	abstract[128]	giv[128]	_	_
+15-10	1771-1773	to	abstract[128]	giv[128]	_	_
+15-11	1774-1783	Prisoners	abstract[128]|person[129]	giv[128]|new[129]	_	_
+15-12	1784-1786	of	abstract[128]|person[129]	giv[128]|new[129]	_	_
+15-13	1787-1790	Age	abstract[128]|person[129]|abstract	giv[128]|new[129]|giv	coref	27-1[183_0]
+15-14	1791-1792	.	_	_	_	_
+
+#Text=Korsrud is the recipient of the Canada Council 's " Victor Martyn Lynch-Staunton Award " ( 2015 ) , the City of Vancouver Mayor 's Award for Music ( 2012 ) , The Canada Council 's Joseph S. Stauffer Prize ( 2001 ) , and a fellowship from the Italian Civitella Ranieri Foundation ( 2003 ) .
+16-1	1793-1800	Korsrud	person	giv	coref	16-3[132_0]
+16-2	1801-1803	is	_	_	_	_
+16-3	1804-1807	the	person[132]	giv[132]	coref	17-1[0_132]
+16-4	1808-1817	recipient	person[132]	giv[132]	_	_
+16-5	1818-1820	of	person[132]	giv[132]	_	_
+16-6	1821-1824	the	person[132]|abstract[135]	giv[132]|giv[135]	coref	16-20[138_135]
+16-7	1825-1831	Canada	person[132]|organization[133]|abstract[135]	giv[132]|new[133]|giv[135]	coref	16-34[141_133]
+16-8	1832-1839	Council	person[132]|organization[133]|abstract[135]	giv[132]|new[133]|giv[135]	_	_
+16-9	1840-1842	's	person[132]|organization[133]|abstract[135]	giv[132]|new[133]|giv[135]	_	_
+16-10	1843-1844	"	person[132]|abstract[135]	giv[132]|giv[135]	_	_
+16-11	1845-1851	Victor	person[132]|person[134]|abstract[135]	giv[132]|new[134]|giv[135]	_	_
+16-12	1852-1858	Martyn	person[132]|person[134]|abstract[135]	giv[132]|new[134]|giv[135]	_	_
+16-13	1859-1873	Lynch-Staunton	person[132]|person[134]|abstract[135]	giv[132]|new[134]|giv[135]	_	_
+16-14	1874-1879	Award	person[132]|abstract[135]	giv[132]|giv[135]	_	_
+16-15	1880-1881	"	person[132]|abstract[135]	giv[132]|giv[135]	_	_
+16-16	1882-1883	(	person[132]|abstract[135]	giv[132]|giv[135]	_	_
+16-17	1884-1888	2015	person[132]|abstract[135]|time	giv[132]|giv[135]|new	_	_
+16-18	1889-1890	)	person[132]|abstract[135]	giv[132]|giv[135]	_	_
+16-19	1891-1892	,	person[132]	giv[132]	_	_
+16-20	1893-1896	the	person[132]|abstract[138]	giv[132]|giv[138]	_	_
+16-21	1897-1901	City	person[132]|person[137]|abstract[138]	giv[132]|giv[137]|giv[138]	_	_
+16-22	1902-1904	of	person[132]|person[137]|abstract[138]	giv[132]|giv[137]|giv[138]	_	_
+16-23	1905-1914	Vancouver	person[132]|person[137]|abstract[138]	giv[132]|giv[137]|giv[138]	_	_
+16-24	1915-1920	Mayor	person[132]|person[137]|abstract[138]	giv[132]|giv[137]|giv[138]	_	_
+16-25	1921-1923	's	person[132]|person[137]|abstract[138]	giv[132]|giv[137]|giv[138]	_	_
+16-26	1924-1929	Award	person[132]|abstract[138]	giv[132]|giv[138]	_	_
+16-27	1930-1933	for	person[132]|abstract[138]	giv[132]|giv[138]	_	_
+16-28	1934-1939	Music	person[132]|abstract[138]|abstract	giv[132]|giv[138]|giv	coref	27-9[185_0]
+16-29	1940-1941	(	person[132]|abstract[138]	giv[132]|giv[138]	_	_
+16-30	1942-1946	2012	person[132]|abstract[138]|time	giv[132]|giv[138]|new	coref	46-6
+16-31	1947-1948	)	person[132]|abstract[138]	giv[132]|giv[138]	_	_
+16-32	1949-1950	,	person[132]	giv[132]	_	_
+16-33	1951-1954	The	person[132]|abstract[144]	giv[132]|new[144]	_	_
+16-34	1955-1961	Canada	person[132]|organization[141]|abstract[144]	giv[132]|giv[141]|new[144]	_	_
+16-35	1962-1969	Council	person[132]|organization[141]|abstract[144]	giv[132]|giv[141]|new[144]	_	_
+16-36	1970-1972	's	person[132]|organization[141]|abstract[144]	giv[132]|giv[141]|new[144]	_	_
+16-37	1973-1979	Joseph	person[132]|person[142]|abstract[144]	giv[132]|new[142]|new[144]	_	_
+16-38	1980-1982	S.	person[132]|person[142]|abstract[144]	giv[132]|new[142]|new[144]	_	_
+16-39	1983-1991	Stauffer	person[132]|person|abstract[144]	giv[132]|new|new[144]	_	_
+16-40	1992-1997	Prize	person[132]|abstract[144]	giv[132]|new[144]	_	_
+16-41	1998-1999	(	person[132]|abstract[144]	giv[132]|new[144]	_	_
+16-42	2000-2004	2001	person[132]|abstract[144]|time	giv[132]|new[144]|new	coref	21-8
+16-43	2005-2006	)	person[132]|abstract[144]	giv[132]|new[144]	_	_
+16-44	2007-2008	,	person[132]	giv[132]	_	_
+16-45	2009-2012	and	person[132]	giv[132]	_	_
+16-46	2013-2014	a	person[132]|abstract[146]	giv[132]|new[146]	_	_
+16-47	2015-2025	fellowship	person[132]|abstract[146]	giv[132]|new[146]	_	_
+16-48	2026-2030	from	person[132]|abstract[146]	giv[132]|new[146]	_	_
+16-49	2031-2034	the	person[132]|abstract[146]|organization[148]	giv[132]|new[146]|new[148]	_	_
+16-50	2035-2042	Italian	person[132]|abstract[146]|organization[148]	giv[132]|new[146]|new[148]	_	_
+16-51	2043-2052	Civitella	person[132]|abstract[146]|organization|organization[148]	giv[132]|new[146]|new|new[148]	_	_
+16-52	2053-2060	Ranieri	person[132]|abstract[146]|organization[148]	giv[132]|new[146]|new[148]	_	_
+16-53	2061-2071	Foundation	person[132]|abstract[146]|organization[148]	giv[132]|new[146]|new[148]	_	_
+16-54	2072-2073	(	person[132]|abstract[146]	giv[132]|new[146]	_	_
+16-55	2074-2078	2003	person[132]|abstract[146]|time	giv[132]|new[146]|new	coref	38-5
+16-56	2079-2080	)	person[132]|abstract[146]	giv[132]|new[146]	_	_
+16-57	2081-2082	.	_	_	_	_
+
+#Text=Korsrud has performed as soloist with The Vancouver Symphony and The American Composers Orchestra .
+17-1	2083-2090	Korsrud	person	giv	_	_
+17-2	2091-2094	has	_	_	_	_
+17-3	2095-2104	performed	_	_	_	_
+17-4	2105-2107	as	_	_	_	_
+17-5	2108-2115	soloist	person	new	_	_
+17-6	2116-2120	with	_	_	_	_
+17-7	2121-2124	The	person[152]	giv[152]	_	_
+17-8	2125-2134	Vancouver	person[152]	giv[152]	_	_
+17-9	2135-2143	Symphony	person[152]	giv[152]	_	_
+17-10	2144-2147	and	_	_	_	_
+17-11	2148-2151	The	organization[154]	giv[154]	_	_
+17-12	2152-2160	American	person[153]|organization[154]	giv[153]|giv[154]	_	_
+17-13	2161-2170	Composers	person[153]|organization[154]	giv[153]|giv[154]	_	_
+17-14	2171-2180	Orchestra	organization[154]	giv[154]	_	_
+17-15	2181-2182	.	_	_	_	_
+
+#Text=Discography
+18-1	2183-2194	Discography	abstract	new	_	_
+
+#Text=Hard Rubber Orchestra : Cruel Yet Fair , 1997
+19-1	2195-2199	Hard	person[156]|organization[157]	giv[156]|giv[157]	coref|coref	21-1[163_156]|21-1[164_157]
+19-2	2200-2206	Rubber	person[156]|organization[157]	giv[156]|giv[157]	_	_
+19-3	2207-2216	Orchestra	organization[157]	giv[157]	_	_
+19-4	2217-2218	:	_	_	_	_
+19-5	2219-2224	Cruel	person	new	_	_
+19-6	2225-2228	Yet	_	_	_	_
+19-7	2229-2233	Fair	_	_	_	_
+19-8	2234-2235	,	_	_	_	_
+19-9	2236-2240	1997	time	new	_	_
+
+#Text=Orquestra Goma Dura : Live , 2000
+20-1	2241-2250	Orquestra	organization[160]	giv[160]	_	_
+20-2	2251-2255	Goma	organization[160]	giv[160]	_	_
+20-3	2256-2260	Dura	organization[160]	giv[160]	_	_
+20-4	2261-2262	:	_	_	_	_
+20-5	2263-2267	Live	organization	new	_	_
+20-6	2268-2269	,	_	_	_	_
+20-7	2270-2274	2000	time	new	_	_
+
+#Text=Hard Rubber Orchestra : Rub Harder , 2001
+21-1	2275-2279	Hard	person[163]|organization[164]	giv[163]|giv[164]	coref|coref	23-4[170_163]|23-1[171_164]
+21-2	2280-2286	Rubber	person[163]|organization[164]	giv[163]|giv[164]	_	_
+21-3	2287-2296	Orchestra	organization[164]	giv[164]	_	_
+21-4	2297-2298	:	_	_	_	_
+21-5	2299-2302	Rub	_	_	_	_
+21-6	2303-2309	Harder	_	_	_	_
+21-7	2310-2311	,	_	_	_	_
+21-8	2312-2316	2001	time	giv	_	_
+
+#Text=Odd Jobs , Assorted Climaxes , 2005
+22-1	2317-2320	Odd	person[166]	new[166]	_	_
+22-2	2321-2325	Jobs	person[166]	new[166]	_	_
+22-3	2326-2327	,	_	_	_	_
+22-4	2328-2336	Assorted	abstract[167]	new[167]	_	_
+22-5	2337-2345	Climaxes	abstract[167]	new[167]	_	_
+22-6	2346-2347	,	abstract[167]	new[167]	_	_
+22-7	2348-2352	2005	abstract[167]|time	new[167]|giv	coref	28-3
+
+#Text=John Korsrud 's Hard Rubber Orchestra : Crush , 2015
+23-1	2353-2357	John	person[169]|organization[171]	giv[169]|giv[171]	coref	31-3[203_171]
+23-2	2358-2365	Korsrud	person[169]|organization[171]	giv[169]|giv[171]	_	_
+23-3	2366-2368	's	person[169]|organization[171]	giv[169]|giv[171]	_	_
+23-4	2369-2373	Hard	person[170]|organization[171]	giv[170]|giv[171]	_	_
+23-5	2374-2380	Rubber	person[170]|organization[171]	giv[170]|giv[171]	_	_
+23-6	2381-2390	Orchestra	organization[171]	giv[171]	_	_
+23-7	2391-2392	:	_	_	_	_
+23-8	2393-2398	Crush	time[172]	new[172]	appos	23-10[0_172]
+23-9	2399-2400	,	time[172]	new[172]	_	_
+23-10	2401-2405	2015	time[172]|time	new[172]|giv	_	_
+
+#Text=Multimedia projects
+24-1	2406-2416	Multimedia	abstract|abstract[175]	giv|giv[175]	_	_
+24-2	2417-2425	projects	abstract[175]	giv[175]	_	_
+
+#Text=Solstice , 1991
+25-1	2426-2434	Solstice	time[176]	new[176]	appos	25-3[0_176]
+25-2	2435-2436	,	time[176]	new[176]	_	_
+25-3	2437-2441	1991	time[176]|time	new[176]|giv	_	_
+
+#Text=The Elvis Cantatas , 1994 , 1996
+26-1	2442-2445	The	abstract[179]	giv[179]	_	_
+26-2	2446-2451	Elvis	person|abstract[179]	giv|giv[179]	_	_
+26-3	2452-2460	Cantatas	abstract[179]	giv[179]	_	_
+26-4	2461-2462	,	abstract[179]	giv[179]	_	_
+26-5	2463-2467	1994	abstract[179]|time	giv[179]|giv	coref	32-4
+26-6	2468-2469	,	abstract[179]	giv[179]	_	_
+26-7	2470-2474	1996	abstract[179]|time	giv[179]|giv	_	_
+
+#Text=The Ice Age : The World 's First New Music Ice Show , 2000
+27-1	2475-2478	The	abstract[183]	giv[183]	coref	30-1[197_183]
+27-2	2479-2482	Ice	person|abstract[183]	giv|giv[183]	coref	30-3
+27-3	2483-2486	Age	abstract[183]	giv[183]	_	_
+27-4	2487-2488	:	_	_	_	_
+27-5	2489-2492	The	time[186]	giv[186]	appos	27-14[0_186]
+27-6	2493-2498	World	organization[184]|time[186]	giv[184]|giv[186]	_	_
+27-7	2499-2501	's	organization[184]|time[186]	giv[184]|giv[186]	_	_
+27-8	2502-2507	First	time[186]	giv[186]	_	_
+27-9	2508-2511	New	abstract[185]|time[186]	giv[185]|giv[186]	coref	30-6[198_185]
+27-10	2512-2517	Music	abstract[185]|time[186]	giv[185]|giv[186]	_	_
+27-11	2518-2521	Ice	time[186]	giv[186]	_	_
+27-12	2522-2526	Show	time[186]	giv[186]	_	_
+27-13	2527-2528	,	time[186]	giv[186]	_	_
+27-14	2529-2533	2000	time[186]|time	giv[186]|giv	coref	30-6[199_0]
+
+#Text=Enter/Exit , 2005
+28-1	2534-2544	Enter/Exit	abstract[188]	new[188]	_	_
+28-2	2545-2546	,	abstract[188]	new[188]	_	_
+28-3	2547-2551	2005	abstract[188]|time	new[188]|giv	coref	64-4
+
+#Text=Drum & Light Festival , 2008 , 2009 ( 2010 )
+29-1	2552-2556	Drum	person|time[192]	giv|giv[192]	appos	29-6[0_192]
+29-2	2557-2558	&	object[191]|time[192]	giv[191]|giv[192]	_	_
+29-3	2559-2564	Light	object[191]|time[192]	giv[191]|giv[192]	_	_
+29-4	2565-2573	Festival	time[192]	giv[192]	_	_
+29-5	2574-2575	,	time[192]	giv[192]	_	_
+29-6	2576-2580	2008	time[192]|time	giv[192]|giv	appos	29-8
+29-7	2581-2582	,	time[192]	giv[192]	_	_
+29-8	2583-2587	2009	time[192]|time	giv[192]|giv	_	_
+29-9	2588-2589	(	_	_	_	_
+29-10	2590-2594	2010	time	giv	_	_
+29-11	2595-2596	)	_	_	_	_
+
+#Text=The New Ice Age : New Music Ice Show , 2010
+30-1	2597-2600	The	abstract[197]	giv[197]	coref	63-3[0_197]
+30-2	2601-2604	New	abstract[197]	giv[197]	_	_
+30-3	2605-2608	Ice	person|abstract[197]	giv|giv[197]	coref	65-3
+30-4	2609-2612	Age	abstract[197]	giv[197]	_	_
+30-5	2613-2614	:	_	_	_	_
+30-6	2615-2618	New	abstract[198]|time[199]	giv[198]|giv[199]	appos	30-11[0_199]
+30-7	2619-2624	Music	abstract[198]|time[199]	giv[198]|giv[199]	_	_
+30-8	2625-2628	Ice	time[199]	giv[199]	_	_
+30-9	2629-2633	Show	time[199]	giv[199]	_	_
+30-10	2634-2635	,	time[199]	giv[199]	_	_
+30-11	2636-2640	2010	time[199]|time	giv[199]|giv	coref	35-7
+
+#Text=Compositions for Chamber/ Orchestra
+31-1	2641-2653	Compositions	abstract[201]	new[201]	coref	48-1[245_201]
+31-2	2654-2657	for	abstract[201]	new[201]	_	_
+31-3	2658-2666	Chamber/	abstract[201]|abstract|organization[203]	new[201]|new|giv[203]	coref	35-4[213_203]
+31-4	2667-2676	Orchestra	abstract[201]|organization[203]	new[201]|giv[203]	_	_
+
+#Text=Stark Raving , 1994
+32-1	2677-2682	Stark	person	new	_	_
+32-2	2683-2689	Raving	_	_	_	_
+32-3	2690-2691	,	_	_	_	_
+32-4	2692-2696	1994	time	giv	_	_
+
+#Text=Zippy Pinhead , 1995
+33-1	2697-2702	Zippy	time[206]	new[206]	appos	33-4[0_206]
+33-2	2703-2710	Pinhead	time[206]	new[206]	_	_
+33-3	2711-2712	,	time[206]	new[206]	_	_
+33-4	2713-2717	1995	time[206]|time	new[206]|giv	_	_
+
+#Text=Glurp , 1997
+34-1	2718-2723	Glurp	time[208]	new[208]	appos	34-3[0_208]
+34-2	2724-2725	,	time[208]	new[208]	_	_
+34-3	2726-2730	1997	time[208]|time	new[208]|giv	_	_
+
+#Text=VAP DIST for symphony orchestra , 2000
+35-1	2731-2734	VAP	organization|person[211]	new|new[211]	_	_
+35-2	2735-2739	DIST	person[211]	new[211]	_	_
+35-3	2740-2743	for	person[211]	new[211]	_	_
+35-4	2744-2752	symphony	person[211]|abstract|organization[213]	new[211]|new|giv[213]	coref|coref	37-5|37-5[219_213]
+35-5	2753-2762	orchestra	person[211]|organization[213]	new[211]|giv[213]	_	_
+35-6	2763-2764	,	person[211]	new[211]	_	_
+35-7	2765-2769	2000	person[211]|time	new[211]|giv	coref	45-12
+
+#Text=Lather , 2002
+36-1	2770-2776	Lather	time[215]	new[215]	appos	36-3[0_215]
+36-2	2777-2778	,	time[215]	new[215]	_	_
+36-3	2779-2783	2002	time[215]|time	new[215]|giv	coref	37-8
+
+#Text=In a Flash for symphony orchestra , 2002
+37-1	2784-2786	In	_	_	_	_
+37-2	2787-2788	a	abstract[217]	new[217]	_	_
+37-3	2789-2794	Flash	abstract[217]	new[217]	_	_
+37-4	2795-2798	for	abstract[217]	new[217]	_	_
+37-5	2799-2807	symphony	abstract[217]|abstract|organization[219]	new[217]|giv|giv[219]	coref|coref	41-4[230_219]|45-9
+37-6	2808-2817	orchestra	abstract[217]|organization[219]	new[217]|giv[219]	_	_
+37-7	2818-2819	,	abstract[217]|organization[219]	new[217]|giv[219]	_	_
+37-8	2820-2824	2002	abstract[217]|organization[219]|time	new[217]|giv[219]|giv	coref	61-3
+
+#Text=Non Me Domabis , 2003
+38-1	2825-2828	Non	person[221]	new[221]	_	_
+38-2	2829-2831	Me	person[221]	new[221]	_	_
+38-3	2832-2839	Domabis	person[221]	new[221]	_	_
+38-4	2840-2841	,	person[221]	new[221]	_	_
+38-5	2842-2846	2003	person[221]|time	new[221]|giv	coref	39-5
+
+#Text=Gershwin & Fire , 2003
+39-1	2847-2855	Gershwin	person	new	_	_
+39-2	2856-2857	&	person[224]	new[224]	_	_
+39-3	2858-2862	Fire	person[224]	new[224]	_	_
+39-4	2863-2864	,	person[224]	new[224]	_	_
+39-5	2865-2869	2003	person[224]|time	new[224]|giv	coref	57-1
+
+#Text=The Shadow of Your Smile , 2005
+40-1	2870-2873	The	object[226]	new[226]	_	_
+40-2	2874-2880	Shadow	object[226]	new[226]	_	_
+40-3	2881-2883	of	object[226]	new[226]	_	_
+40-4	2884-2888	Your	object[226]|person|event[228]	new[226]|acc|new[228]	_	_
+40-5	2889-2894	Smile	object[226]|event[228]	new[226]|new[228]	_	_
+40-6	2895-2896	,	object[226]	new[226]	_	_
+40-7	2897-2901	2005	object[226]	new[226]	_	_
+
+#Text=Wood Eye for symphony orchestra , 2006
+41-1	2902-2906	Wood	person[229]	new[229]	_	_
+41-2	2907-2910	Eye	person[229]	new[229]	_	_
+41-3	2911-2914	for	person[229]	new[229]	_	_
+41-4	2915-2923	symphony	person[229]|organization[230]	new[229]|giv[230]	coref	45-9[239_230]
+41-5	2924-2933	orchestra	person[229]|organization[230]	new[229]|giv[230]	_	_
+41-6	2934-2935	,	person[229]|organization[230]	new[229]|giv[230]	_	_
+41-7	2936-2940	2006	person[229]|organization[230]|time	new[229]|giv[230]|new	_	_
+
+#Text=Liquid , 2006
+42-1	2941-2947	Liquid	time[232]	new[232]	appos	42-3[0_232]
+42-2	2948-2949	,	time[232]	new[232]	_	_
+42-3	2950-2954	2006	time[232]|time	new[232]|giv	coref	66-7
+
+#Text=Woosh , 2007
+43-1	2955-2960	Woosh	time[234]	new[234]	appos	43-3[0_234]
+43-2	2961-2962	,	time[234]	new[234]	_	_
+43-3	2963-2967	2007	time[234]|time	new[234]|giv	coref	67-4
+
+#Text=Solid , 2007
+44-1	2968-2973	Solid	_	_	_	_
+44-2	2974-2975	,	_	_	_	_
+44-3	2976-2980	2007	_	_	_	_
+
+#Text=" Come to the Dark Side " for symphony orchestra , 2010
+45-1	2981-2982	"	_	_	_	_
+45-2	2983-2987	Come	_	_	_	_
+45-3	2988-2990	to	_	_	_	_
+45-4	2991-2994	the	abstract[237]	giv[237]	_	_
+45-5	2995-2999	Dark	person|abstract[237]	giv|giv[237]	coref	64-1[277_0]
+45-6	3000-3004	Side	abstract[237]	giv[237]	_	_
+45-7	3005-3006	"	_	_	_	_
+45-8	3007-3010	for	_	_	_	_
+45-9	3011-3019	symphony	abstract|organization[239]	giv|giv[239]	coref	48-4[247_239]
+45-10	3020-3029	orchestra	organization[239]	giv[239]	_	_
+45-11	3030-3031	,	organization[239]	giv[239]	_	_
+45-12	3032-3036	2010	organization[239]|time	giv[239]|giv	_	_
+
+#Text=" Talking Wave " , 2012
+46-1	3037-3038	"	person[241]	new[241]	_	_
+46-2	3039-3046	Talking	person[241]	new[241]	_	_
+46-3	3047-3051	Wave	person[241]	new[241]	_	_
+46-4	3052-3053	"	person[241]	new[241]	_	_
+46-5	3054-3055	,	person[241]	new[241]	_	_
+46-6	3056-3060	2012	person[241]|time	new[241]|giv	_	_
+
+#Text=" Round Midnight " , 2013
+47-1	3061-3062	"	time[243]	new[243]	_	_
+47-2	3063-3068	Round	time[243]	new[243]	_	_
+47-3	3069-3077	Midnight	time[243]	new[243]	_	_
+47-4	3078-3079	"	time[243]	new[243]	_	_
+47-5	3080-3081	,	time[243]	new[243]	_	_
+47-6	3082-3086	2013	time[243]|time	new[243]|new	_	_
+
+#Text=Selected Compositions for Jazz Orchestra
+48-1	3087-3095	Selected	abstract[245]	giv[245]	_	_
+48-2	3096-3108	Compositions	abstract[245]	giv[245]	_	_
+48-3	3109-3112	for	abstract[245]	giv[245]	_	_
+48-4	3113-3117	Jazz	abstract[245]|organization|organization[247]	giv[245]|new|giv[247]	_	_
+48-5	3118-3127	Orchestra	abstract[245]|organization[247]	giv[245]|giv[247]	_	_
+
+#Text=Fun for the Whole Family , 1990
+49-1	3128-3131	Fun	abstract[248]	new[248]	_	_
+49-2	3132-3135	for	abstract[248]	new[248]	_	_
+49-3	3136-3139	the	abstract[248]|object[249]	new[248]|new[249]	_	_
+49-4	3140-3145	Whole	abstract[248]|object[249]	new[248]|new[249]	_	_
+49-5	3146-3152	Family	abstract[248]|object[249]	new[248]|new[249]	_	_
+49-6	3153-3154	,	abstract[248]	new[248]	_	_
+49-7	3155-3159	1990	abstract[248]	new[248]	_	_
+
+#Text=Danse Russe , 1990
+50-1	3160-3165	Danse	abstract[250]	new[250]	_	_
+50-2	3166-3171	Russe	abstract[250]	new[250]	_	_
+50-3	3172-3173	,	abstract[250]	new[250]	_	_
+50-4	3174-3178	1990	abstract[250]|time	new[250]|new	coref	51-6
+
+#Text=Ballad for Dave Liebman , 1990
+51-1	3179-3185	Ballad	abstract[252]	new[252]	_	_
+51-2	3186-3189	for	abstract[252]	new[252]	_	_
+51-3	3190-3194	Dave	abstract[252]|person[253]	new[252]|new[253]	_	_
+51-4	3195-3202	Liebman	abstract[252]|person[253]	new[252]|new[253]	_	_
+51-5	3203-3204	,	abstract[252]|person[253]	new[252]|new[253]	_	_
+51-6	3205-3209	1990	abstract[252]|person[253]|time	new[252]|new[253]|giv	_	_
+
+#Text=Irk , 1992
+52-1	3210-3213	Irk	time[255]	new[255]	appos	52-3[0_255]
+52-2	3214-3215	,	time[255]	new[255]	_	_
+52-3	3216-3220	1992	time[255]|time	new[255]|giv	_	_
+
+#Text=Iguana , 1995
+53-1	3221-3227	Iguana	time[257]	new[257]	appos	53-3[0_257]
+53-2	3228-3229	,	time[257]	new[257]	_	_
+53-3	3230-3234	1995	time[257]|time	new[257]|giv	coref	54-5
+
+#Text=Cruel Yet Fair , 1995
+54-1	3235-3240	Cruel	_	_	_	_
+54-2	3241-3244	Yet	_	_	_	_
+54-3	3245-3249	Fair	_	_	_	_
+54-4	3250-3251	,	_	_	_	_
+54-5	3252-3256	1995	time	giv	coref	55-5
+
+#Text=Scratching the Surface , 1995
+55-1	3257-3267	Scratching	_	_	_	_
+55-2	3268-3271	the	place[260]	new[260]	_	_
+55-3	3272-3279	Surface	place[260]	new[260]	_	_
+55-4	3280-3281	,	_	_	_	_
+55-5	3282-3286	1995	time	giv	_	_
+
+#Text=Crush
+56-1	3287-3292	Crush	person	new	_	_
+
+#Text=2003
+57-1	3293-3297	2003	time	giv	_	_
+
+#Text=Lowest Tide 2005
+58-1	3298-3304	Lowest	organization[264]	new[264]	_	_
+58-2	3305-3309	Tide	organization[264]	new[264]	_	_
+58-3	3310-3314	2005	organization[264]	new[264]	_	_
+
+#Text=Songs from The Nunnery 2018
+59-1	3315-3320	Songs	abstract[265]	new[265]	_	_
+59-2	3321-3325	from	abstract[265]	new[265]	_	_
+59-3	3326-3329	The	abstract[265]|abstract[266]	new[265]|new[266]	_	_
+59-4	3330-3337	Nunnery	abstract[265]|abstract[266]	new[265]|new[266]	_	_
+59-5	3338-3342	2018	abstract[265]|time	new[265]|new	_	_
+
+#Text=Film scores
+60-1	3343-3347	Film	abstract|abstract[269]	new|new[269]	_	_
+60-2	3348-3354	scores	abstract[269]	new[269]	_	_
+
+#Text=Heroines , 2002
+61-1	3355-3363	Heroines	person[270]	new[270]	_	_
+61-2	3364-3365	,	person[270]	new[270]	_	_
+61-3	3366-3370	2002	person[270]|time	new[270]|giv	_	_
+
+#Text=Drawing Out the Demons , 2004
+62-1	3371-3378	Drawing	_	_	_	_
+62-2	3379-3382	Out	_	_	_	_
+62-3	3383-3386	the	person[272]	new[272]	_	_
+62-4	3387-3393	Demons	person[272]	new[272]	_	_
+62-5	3394-3395	,	_	_	_	_
+62-6	3396-3400	2004	time	new	coref	63-5
+
+#Text=Prisoners of Age , 2004
+63-1	3401-3410	Prisoners	person[274]	new[274]	_	_
+63-2	3411-3413	of	person[274]	new[274]	_	_
+63-3	3414-3417	Age	person[274]|abstract	new[274]|giv	_	_
+63-4	3418-3419	,	person[274]	new[274]	_	_
+63-5	3420-3424	2004	person[274]|time	new[274]|giv	_	_
+
+#Text=Dark Pines , 2005
+64-1	3425-3429	Dark	person[277]	giv[277]	_	_
+64-2	3430-3435	Pines	person[277]	giv[277]	_	_
+64-3	3436-3437	,	person[277]	giv[277]	_	_
+64-4	3438-3442	2005	person[277]|time	giv[277]|giv	coref	65-5
+
+#Text=Lottery on Ice , 2005
+65-1	3443-3450	Lottery	object[279]	new[279]	_	_
+65-2	3451-3453	on	object[279]	new[279]	_	_
+65-3	3454-3457	Ice	object[279]|person	new[279]|giv	_	_
+65-4	3458-3459	,	object[279]	new[279]	_	_
+65-5	3460-3464	2005	object[279]|time	new[279]|giv	_	_
+
+#Text=( Post ) Modern Times , 2006
+66-1	3465-3466	(	organization[282]	new[282]	_	_
+66-2	3467-3471	Post	organization[282]	new[282]	_	_
+66-3	3472-3473	)	organization[282]	new[282]	_	_
+66-4	3474-3480	Modern	organization[282]	new[282]	_	_
+66-5	3481-3486	Times	organization[282]	new[282]	_	_
+66-6	3487-3488	,	organization[282]	new[282]	_	_
+66-7	3489-3493	2006	organization[282]|time	new[282]|giv	_	_
+
+#Text=Fatherhood Dreams , 2007
+67-1	3494-3504	Fatherhood	person|organization[285]	new|new[285]	_	_
+67-2	3505-3511	Dreams	organization[285]	new[285]	_	_
+67-3	3512-3513	,	organization[285]	new[285]	_	_
+67-4	3514-3518	2007	organization[285]|time	new[285]|giv	_	_
+
+#Text=As Slow as Possible , 2008
+68-1	3519-3521	As	_	_	_	_
+68-2	3522-3526	Slow	_	_	_	_
+68-3	3527-3529	as	_	_	_	_
+68-4	3530-3538	Possible	_	_	_	_
+68-5	3539-3540	,	_	_	_	_
+68-6	3541-3545	2008	_	_	_	_
+
+#Text=Miss Landmine , 2009
+69-1	3546-3550	Miss	place[287]	new[287]	_	_
+69-2	3551-3559	Landmine	place[287]|time[288]	new[287]|new[288]	appos	69-4[0_288]
+69-3	3560-3561	,	place[287]|time[288]	new[287]|new[288]	_	_
+69-4	3562-3566	2009	place[287]|time[288]|time	new[287]|new[288]|giv	_	_
+
+#Text=Some Kind of Love , 2014
+70-1	3567-3571	Some	_	_	_	_
+70-2	3572-3576	Kind	abstract[290]	new[290]	_	_
+70-3	3577-3579	of	abstract[290]	new[290]	_	_
+70-4	3580-3584	Love	abstract[290]	new[290]	_	_
+70-5	3585-3586	,	_	_	_	_
+70-6	3587-3591	2014	time	new	_	_
+
+#Text=Compositions for Video Games
+71-1	3592-3604	Compositions	abstract[292]	new[292]	_	_
+71-2	3605-3608	for	abstract[292]	new[292]	_	_
+71-3	3609-3614	Video	abstract[292]|event[293]	new[292]|new[293]	_	_
+71-4	3615-3620	Games	abstract[292]|event[293]	new[292]|new[293]	_	_
+
+#Text=Mario 's Time Machine , 1994
+72-1	3621-3626	Mario	person[294]|time[295]	new[294]|new[295]	appos	72-6[0_295]
+72-2	3627-3629	's	person[294]|time[295]	new[294]|new[295]	_	_
+72-3	3630-3634	Time	time[295]	new[295]	_	_
+72-4	3635-3642	Machine	time[295]	new[295]	_	_
+72-5	3643-3644	,	time[295]	new[295]	_	_
+72-6	3645-3649	1994	time[295]|time	new[295]|giv	_	_

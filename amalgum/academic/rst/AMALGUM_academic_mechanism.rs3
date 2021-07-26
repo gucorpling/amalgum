@@ -1,0 +1,194 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1003" relname="span">Unmanned Surface vehicles</segment>
+<segment id="3" parent="2" relname="elaboration">( USVs ) ,</segment>
+<segment id="4" parent="1004" relname="same_unit">also known as autonomous surface crafts ,</segment>
+<segment id="5" parent="1004" relname="same_unit">have attracted worldwide attention in commercial , scientific and military fields recently .</segment>
+<segment id="6" parent="1001" relname="joint">USVs have the advantages of low operation and maintenance costs , reduced casualty risk , and good maneuverability and deployability for different operating conditions .</segment>
+<segment id="7" parent="1008" relname="span">With the aid of effective and reliable navigation equipment , such as global positioning systems</segment>
+<segment id="8" parent="7" relname="elaboration">( GPS ) ,</segment>
+<segment id="9" parent="1009" relname="joint">wireless communication units , and various types of sensors ,</segment>
+<segment id="10" parent="1010" relname="span">USVs can be employed cost-efficiently for a variety of applications ,</segment>
+<segment id="11" parent="10" relname="elaboration">including underwater surveying , pollutant tracking , acoustic navigation , marine rescue , and obstacle detection .</segment>
+<segment id="12" parent="1013" relname="concession">Although rapid progress of corresponding techniques for USV systems have been achieved in recent times ,</segment>
+<segment id="13" parent="1013" relname="span">it is still challenging</segment>
+<segment id="14" parent="1014" relname="span">in promoting the level of USV autonomy</segment>
+<segment id="15" parent="14" relname="condition">when faced with complex or hazardous environments .</segment>
+<segment id="16" parent="1018" relname="span">Key issues , including hull hydrodynamics , communication techniques , and navigation , guidance and control</segment>
+<segment id="17" parent="16" relname="restatement">( NGC )</segment>
+<segment id="18" parent="1017" relname="same_unit">strategies ,</segment>
+<segment id="19" parent="1016" relname="same_unit">require further developments .</segment>
+<segment id="20" parent="1020" relname="span">As a vital component of USV guidance systems , path planning is of critical importance</segment>
+<segment id="21" parent="20" relname="elaboration">in designing and updating feasible and optimal trajectories for the control system on basis of navigation information , mission demands , and environmental conditions .</segment>
+<segment id="22" parent="1001" relname="joint">Its effectiveness not only determines the autonomy of unmanned vehicles ,</segment>
+<segment id="23" parent="1001" relname="joint">but also affects the reliability and efficiency of mission execution .</segment>
+<segment id="24" parent="1001" relname="joint">From the literature , plenty of intelligent techniques have been employed in the USV path planner .</segment>
+<segment id="25" parent="1025" relname="span">Meanwhile , it is a research hot pot</segment>
+<segment id="26" parent="1026" relname="span">to propose an algorithm</segment>
+<segment id="27" parent="26" relname="elaboration">having fast convergence speed , admirable robustness , low computation consumption , and satisfactory route planning .</segment>
+<segment id="28" parent="1029" relname="span">The USV path planning problem is normally formulated as a travelling salesman problem</segment>
+<segment id="29" parent="28" relname="restatement">( TSP ) ,</segment>
+<segment id="30" parent="1029" relname="elaboration">which is a typical combinatorial optimization problem .</segment>
+<segment id="31" parent="1032" relname="span">The specific description is to find a shortest loop</segment>
+<segment id="32" parent="31" relname="elaboration">that passes through all target cities</segment>
+<segment id="33" parent="1032" relname="manner">without repetition .</segment>
+<segment id="34" parent="1034" relname="same_unit">However ,</segment>
+<segment id="35" parent="1036" relname="circumstance">when a USV performs multi-objective tasks in a complex marine environment ,</segment>
+<segment id="36" parent="1036" relname="span">the number of possible paths increases exponentially with the increase of target points ’ number ,</segment>
+<segment id="37" parent="36" relname="elaboration">resulting in the so-called “ exponential explosion ” .</segment>
+<segment id="38" parent="1033" relname="joint">In this circumstance , traditional algorithms , such as the exhaustive method and branch-and-bound algorithm , are unable to find the optimal solution within reasonable time cost .</segment>
+<segment id="39" parent="1039" relname="span">Hence , it is vital to develop efficient and feasible heuristic algorithms instead of traditional methods</segment>
+<segment id="40" parent="39" relname="purpose">to solve this kind of problem ,</segment>
+<segment id="41" parent="1042" relname="concession">although the optimality , accuracy , and completeness becomes sacrificed for running speed to some degree .</segment>
+<segment id="42" parent="1043" relname="span">Commonly used heuristic algorithms include elephant search algorithm</segment>
+<segment id="43" parent="42" relname="elaboration">( ESA ) ,</segment>
+<segment id="44" parent="1045" relname="span">genetic algorithm</segment>
+<segment id="45" parent="44" relname="elaboration">( GA ) ,</segment>
+<segment id="46" parent="1047" relname="span">particle swam optimization</segment>
+<segment id="47" parent="46" relname="elaboration">( PSO ) ,</segment>
+<segment id="48" parent="1049" relname="span">firefly algorithm</segment>
+<segment id="49" parent="48" relname="elaboration">( FA ) ,</segment>
+<segment id="50" parent="1051" relname="span">grey wolf optimizer</segment>
+<segment id="51" parent="50" relname="elaboration">( GWO ) ,</segment>
+<segment id="52" parent="1050" relname="same_unit">and so on .</segment>
+<segment id="53" parent="1052" relname="sequence">However , the conventional type of each method has its inherent limitation .</segment>
+<segment id="54" parent="1055" relname="attribution">For instance , it is known</segment>
+<segment id="55" parent="1055" relname="span">that the ESA provides a random and improper replacement for an elephant with the worst fitness ,</segment>
+<segment id="56" parent="55" relname="elaboration">which is likely to result in the deterioration of search space .</segment>
+<segment id="57" parent="1053" relname="joint">The conventional GA has inherent issues of slow convergence speed , poor capability of local search and easy occurrence of premature convergence .</segment>
+<segment id="58" parent="1058" relname="span">In other words , the loss of population diversity is likely to appear during the implementation of GA ,</segment>
+<segment id="59" parent="1059" relname="joint">making individual genes tend to be same</segment>
+<segment id="60" parent="1059" relname="joint">and terminating the search at local optimum .</segment>
+<segment id="61" parent="1061" relname="span">Additionally , the use of a real-number code also generates repetitive genes during crossover operations ,</segment>
+<segment id="62" parent="61" relname="elaboration">which affects convergence speed greatly .</segment>
+<segment id="63" parent="1053" relname="joint">For the PSO , the lack of a balanced mechanism would lead to the loss of population diversity</segment>
+<segment id="64" parent="1053" relname="joint">and finally being trapped into the local optimum .</segment>
+<segment id="65" parent="1066" relname="joint">In addition , the FA only considers the distance and maximum attractive force between two fireflies ,</segment>
+<segment id="66" parent="1066" relname="joint">and has intrinsic shortcomings of poor search capability during early iterations and severe oscillations around the optimal solution during later iterations .</segment>
+<segment id="67" parent="1068" relname="span">In terms of the GWO , the search mechanism</segment>
+<segment id="68" parent="67" relname="elaboration">of judging distance from prey would lead to a slow convergence speed for later iterations .</segment>
+<segment id="69" parent="1069" relname="span">Nowadays , it has become a tendency to combine two or more algorithms ,</segment>
+<segment id="70" parent="1071" relname="span">making full use of their respective advantages</segment>
+<segment id="71" parent="70" relname="purpose">to enhance the algorithm effectiveness .</segment>
+<segment id="72" parent="1072" relname="span">Inspired by the combination strategy ,</segment>
+<segment id="73" parent="1073" relname="span">this work optimizes the conventional PSO method</segment>
+<segment id="74" parent="1074" relname="span">by introducing a greedy mechanism</segment>
+<segment id="75" parent="1075" relname="joint">to generate partial particles</segment>
+<segment id="76" parent="1076" relname="span">and 2-opt operation</segment>
+<segment id="77" parent="76" relname="purpose">to eliminate path-crossing phenomena .</segment>
+<segment id="78" parent="1078" relname="span">Comparative study with some state-of-the-art algorithms is conducted</segment>
+<segment id="79" parent="78" relname="purpose">to verify the effectiveness and reliability of the improved method in terms of solution quality , algorithm robustness , and computing efficiency .</segment>
+<segment id="80" parent="1080" relname="span">Then the improved algorithm is adopted</segment>
+<segment id="81" parent="1081" relname="span">to generate a feasible closed trajectory for a self-developed USV</segment>
+<segment id="82" parent="81" relname="purpose">to follow in real marine environments .</segment>
+<segment id="83" parent="84" relname="attribution">It is worth noting</segment>
+<segment id="84" parent="1083" relname="span">that this work has certain connections and essential differences with our two recently published works .</segment>
+<segment id="85" parent="1085" relname="span">In the first work , we optimized GA by multi-domain inversion for the purpose</segment>
+<segment id="86" parent="85" relname="elaboration">of increasing the number of offsprings .</segment>
+<segment id="87" parent="1087" relname="span">The inspiration comes from the biological theory foundation ,</segment>
+<segment id="88" parent="1088" relname="span">where the number of offsprings needs to be larger than the number of parents</segment>
+<segment id="89" parent="1089" relname="joint">so as to prevent species extinction</segment>
+<segment id="90" parent="1089" relname="joint">and maintain species diversity in the process of biological evolution .</segment>
+<segment id="91" parent="1091" relname="span">In the other work , we optimized PSO</segment>
+<segment id="92" parent="1092" relname="joint">by iteratively adjusting the control parameters of the PSO algorithm , such as inertia weight and acceleration coefficients ,</segment>
+<segment id="93" parent="1092" relname="joint">and introducing merit-based selection and uncertain mutation .</segment>
+<segment id="94" parent="1094" relname="concession">The optimization is from the point of view of global searching .</segment>
+<segment id="95" parent="1094" relname="joint">However , in this work , we start form the inspiration of the combination strategy of several intelligent algorithms</segment>
+<segment id="96" parent="1095" relname="span">and introduce the greedy mechanism and 2-opt operation</segment>
+<segment id="97" parent="96" relname="purpose">in order to optimize the local search of PSO .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1004" type="multinuc" parent="1002" relname="same_unit"/>
+<group id="1007" type="multinuc" parent="1001" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1009" type="multinuc" parent="1007" relname="same_unit"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1012" type="span" parent="1001" relname="joint"/>
+<group id="1013" type="span" parent="1012" relname="span"/>
+<group id="1014" type="span" parent="13" relname="circumstance"/>
+<group id="1016" type="multinuc" parent="1001" relname="joint"/>
+<group id="1017" type="multinuc" parent="1016" relname="same_unit"/>
+<group id="1018" type="span" parent="1017" relname="same_unit"/>
+<group id="1020" type="span" parent="1001" relname="joint"/>
+<group id="1025" type="span" parent="1001" relname="joint"/>
+<group id="1026" type="span" parent="25" relname="purpose"/>
+<group id="1027" type="span" parent="1001" relname="joint"/>
+<group id="1028" type="span" parent="1030" relname="preparation"/>
+<group id="1029" type="span" parent="1028" relname="span"/>
+<group id="1030" type="span" parent="1027" relname="span"/>
+<group id="1031" type="span" parent="1033" relname="concession"/>
+<group id="1032" type="span" parent="1031" relname="span"/>
+<group id="1033" type="multinuc" parent="1030" relname="span"/>
+<group id="1034" type="multinuc" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="1034" relname="same_unit"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1038" type="span" parent="1033" relname="joint"/>
+<group id="1039" type="span" parent="1040" relname="preparation"/>
+<group id="1040" type="span" parent="1038" relname="span"/>
+<group id="1041" type="span" parent="1052" relname="concession"/>
+<group id="1042" type="multinuc" parent="1041" relname="span"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="multinuc" parent="1042" relname="same_unit"/>
+<group id="1045" type="span" parent="1044" relname="same_unit"/>
+<group id="1046" type="multinuc" parent="1044" relname="same_unit"/>
+<group id="1047" type="span" parent="1046" relname="same_unit"/>
+<group id="1048" type="multinuc" parent="1046" relname="same_unit"/>
+<group id="1049" type="span" parent="1048" relname="same_unit"/>
+<group id="1050" type="multinuc" parent="1048" relname="same_unit"/>
+<group id="1051" type="span" parent="1050" relname="same_unit"/>
+<group id="1052" type="multinuc" parent="1040" relname="span"/>
+<group id="1053" type="multinuc" parent="1052" relname="sequence"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+<group id="1055" type="span" parent="1054" relname="span"/>
+<group id="1058" type="span" parent="1053" relname="joint"/>
+<group id="1059" type="multinuc" parent="58" relname="elaboration"/>
+<group id="1061" type="span" parent="1053" relname="joint"/>
+<group id="1065" type="span" parent="1053" relname="joint"/>
+<group id="1066" type="multinuc" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="elaboration"/>
+<group id="1068" type="span" parent="1067" relname="span"/>
+<group id="1069" type="span" parent="1068" relname="concession"/>
+<group id="1070" type="span" parent="69" relname="elaboration"/>
+<group id="1071" type="span" parent="1070" relname="span"/>
+<group id="1072" type="span" parent="1071" relname="elaboration"/>
+<group id="1073" type="span" parent="72" relname="elaboration"/>
+<group id="1074" type="span" parent="73" relname="means"/>
+<group id="1075" type="multinuc" parent="74" relname="purpose"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="multinuc" parent="1053" relname="joint"/>
+<group id="1078" type="span" parent="1077" relname="sequence"/>
+<group id="1079" type="multinuc" parent="1077" relname="sequence"/>
+<group id="1080" type="span" parent="1079" relname="joint"/>
+<group id="1081" type="span" parent="80" relname="purpose"/>
+<group id="1083" type="span" parent="1079" relname="joint"/>
+<group id="1085" type="span" parent="1079" relname="joint"/>
+<group id="1087" type="span" parent="1079" relname="joint"/>
+<group id="1088" type="span" parent="87" relname="elaboration"/>
+<group id="1089" type="multinuc" parent="88" relname="purpose"/>
+<group id="1091" type="span" parent="1079" relname="joint"/>
+<group id="1092" type="multinuc" parent="91" relname="means"/>
+<group id="1093" type="span" parent="1079" relname="joint"/>
+<group id="1094" type="multinuc" parent="1093" relname="span"/>
+<group id="1095" type="span" parent="1094" relname="joint"/>
+	</body>
+</rst>

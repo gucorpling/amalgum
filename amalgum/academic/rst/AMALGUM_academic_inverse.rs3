@@ -1,0 +1,175 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">6. Conclusions</segment>
+<segment id="2" parent="1002" relname="preparation">Based on the DH model ,</segment>
+<segment id="3" parent="1003" relname="span">this study proposed a universal algorithm</segment>
+<segment id="4" parent="3" relname="purpose">for finding an inverse kinematics closed-form solution .</segment>
+<segment id="5" parent="1005" relname="span">This algorithm divided the inverse kinematics problem</segment>
+<segment id="6" parent="1006" relname="span">related to robots with a closed-form solution into three sub-problems</segment>
+<segment id="7" parent="6" relname="elaboration">assuming that the algebraic equation had a formula solution .</segment>
+<segment id="8" parent="1008" relname="span">The solvability conditions for the three types of sub-problems were analyzed</segment>
+<segment id="9" parent="8" relname="purpose">to derive a formula solution .</segment>
+<segment id="10" parent="11" relname="condition">If a serial robot can be described with these three types of sub-problems ,</segment>
+<segment id="11" parent="1011" relname="span">the robot will definitely have a closed-form solution .</segment>
+<segment id="12" parent="1014" relname="span">Meanwhile , the formula solution</segment>
+<segment id="13" parent="12" relname="elaboration">based on such a problem</segment>
+<segment id="14" parent="1013" relname="same_unit">could quickly solve for all the joint angles .</segment>
+<segment id="15" parent="1016" relname="joint">This method was not only applicable to six-DOF robots with a closed-form solution</segment>
+<segment id="16" parent="1016" relname="joint">but also to low-DOF robots with the same solution form .</segment>
+<segment id="17" parent="1019" relname="span">In addition , establishing an algorithm</segment>
+<segment id="18" parent="17" relname="elaboration">based on the DH model provides a concise and efficient tool</segment>
+<segment id="19" parent="1018" relname="same_unit">for selecting sub-problems and a real-time inverse kinematics solution for the motion controller of a serial robot .</segment>
+<segment id="20" parent="1020" relname="span">To verify the correctness and real-time performance of the algorithm ,</segment>
+<segment id="21" parent="20" relname="elaboration">we presented four experimental designs .</segment>
+<segment id="22" parent="1022" relname="span">The first three experiments were conducted on MATLAB with a series of robot</segment>
+<segment id="23" parent="22" relname="purpose">to verify the completeness , universality , and continuity of this algorithm .</segment>
+<segment id="24" parent="1024" relname="span">In the first experiment , the completeness of the algorithm was verified .</segment>
+<segment id="25" parent="1026" relname="span">The experiment used a low-degree-of-freedom robot with closed inverse solutions</segment>
+<segment id="26" parent="27" relname="attribution">to prove</segment>
+<segment id="27" parent="1027" relname="span">that the algorithm could solve its closed inverse solution ,</segment>
+<segment id="28" parent="1028" relname="span">and the algorithm would be terminated for the robot without closed inverse solutions</segment>
+<segment id="29" parent="28" relname="purpose">to avoid infinite loop .</segment>
+<segment id="30" parent="1030" relname="span">This was used</segment>
+<segment id="31" parent="30" relname="purpose">to prove the completeness of the algorithm .</segment>
+<segment id="32" parent="1033" relname="attribution">In the second experiment , two uncommon robots were constructed</segment>
+<segment id="33" parent="34" relname="concession">through using some basic problems ,</segment>
+<segment id="34" parent="1033" relname="span">but the closed inverse solution could still be solved .</segment>
+<segment id="35" parent="1036" relname="attribution">Therefore , it could be known</segment>
+<segment id="36" parent="1036" relname="span">that the closed inverse solution of the series robots</segment>
+<segment id="37" parent="36" relname="elaboration">constructed by basic problems could be solved .</segment>
+<segment id="38" parent="1039" relname="span">Meanwhile , for these robots</segment>
+<segment id="39" parent="38" relname="elaboration">whose structure was not changed</segment>
+<segment id="40" parent="1040" relname="same_unit">but the link parameter was changed ,</segment>
+<segment id="41" parent="1041" relname="span">the closed inverse solution of them could also be solved correctly ,</segment>
+<segment id="42" parent="1043" relname="attribution">which indicates</segment>
+<segment id="43" parent="1043" relname="span">that the algorithm had certain versatility</segment>
+<segment id="44" parent="43" relname="elaboration">in solving the closed inverse solution problem .</segment>
+<segment id="45" parent="1023" relname="joint">In the third experiment , the common Puma560 robot was used as the experimental object .</segment>
+<segment id="46" parent="1023" relname="joint">In the experiment , a spatial curve was planned .</segment>
+<segment id="47" parent="1023" relname="joint">The correct joint angle sequence was obtained</segment>
+<segment id="48" parent="1048" relname="span">and the changes of the joint angle curve were continuously without jumping</segment>
+<segment id="49" parent="48" relname="circumstance">after been inversely solved by the algorithm .</segment>
+<segment id="50" parent="51" relname="attribution">Which indicates</segment>
+<segment id="51" parent="1050" relname="span">that the algorithm could guarantee the continuity of its mapping on the inverse solution problem .</segment>
+<segment id="52" parent="1053" relname="span">The fourth experiment was conducted on a six-DOF robotic platform</segment>
+<segment id="53" parent="52" relname="elaboration">built</segment>
+<segment id="54" parent="1054" relname="span">using a Beckhoff-C6920 controller and an RGM motor</segment>
+<segment id="55" parent="1055" relname="span">to verify the real-time performance of the algorithm</segment>
+<segment id="56" parent="55" relname="means">using the above hardware platform .</segment>
+<segment id="57" parent="1023" relname="joint">The spatial and joint positions were computed with a close-loop cycle of 2 ms</segment>
+<segment id="58" parent="1023" relname="joint">and were transmitted to the motor via CanOpen .</segment>
+<segment id="59" parent="1059" relname="span">The results demonstrated the ability of the algorithm</segment>
+<segment id="60" parent="1060" relname="joint">to solve the three sub-problems within a specified cycle</segment>
+<segment id="61" parent="1060" relname="joint">and to compute the appropriate joint angles .</segment>
+<segment id="62" parent="1061" relname="joint">Moreover , the curve was continuous .</segment>
+<segment id="63" parent="1063" relname="span">This paper used a completely new approach</segment>
+<segment id="64" parent="63" relname="purpose">to study the inverse kinematics of serial robots .</segment>
+<segment id="65" parent="1064" relname="joint">In this study , the conditions for the existence of the closed-form inverse kinematic solution of a serial robot were completed</segment>
+<segment id="66" parent="1066" relname="span">and the basic theory of robotics was perfected .</segment>
+<segment id="67" parent="1067" relname="span">Based on this method , a general closed-form inverse kinematics algorithm</segment>
+<segment id="68" parent="1068" relname="span">based on the DH model was implemented ,</segment>
+<segment id="69" parent="68" relname="elaboration">which had not been done in previous studies .</segment>
+<segment id="70" parent="1070" relname="span">Importantly , this method is a general-purpose algorithm</segment>
+<segment id="71" parent="70" relname="elaboration">that can be used in industrial fields in real time .</segment>
+<segment id="72" parent="1071" relname="joint">This increases the versatility of the universal serial robot motion controller .</segment>
+<segment id="73" parent="1073" relname="preparation">However , the algorithm still has shortcomings .</segment>
+<segment id="74" parent="1073" relname="joint">First , the algorithm only targets serial robots</segment>
+<segment id="75" parent="1075" relname="span">and the moving joints are not included in the solution model .</segment>
+<segment id="76" parent="1076" relname="span">This limits the scope of application of the algorithm ,</segment>
+<segment id="77" parent="76" relname="cause">due to its inability to solve the cases of SCARA robots or other parallel robots .</segment>
+<segment id="78" parent="1078" relname="span">In addition , the algorithm cannot solve the problem</segment>
+<segment id="79" parent="1080" relname="circumstance">when the robot passes through a singular point ;</segment>
+<segment id="80" parent="1080" relname="span">singular points are avoided via restrictions</segment>
+<segment id="81" parent="80" relname="elaboration">implemented in the software .</segment>
+<segment id="82" parent="1081" relname="span">Moreover ,</segment>
+<segment id="83" parent="1082" relname="joint">because the algorithm is a purely analytical method ,</segment>
+<segment id="84" parent="1083" relname="span">it is difficult to combine with other numerical methods</segment>
+<segment id="85" parent="84" relname="purpose">to solve the problem of singular points .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1004" relname="preparation"/>
+<group id="1004" type="multinuc" parent="1002" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="5" relname="elaboration"/>
+<group id="1008" type="span" parent="1004" relname="joint"/>
+<group id="1011" type="span" parent="1004" relname="joint"/>
+<group id="1012" type="span" parent="1004" relname="joint"/>
+<group id="1013" type="multinuc" parent="1012" relname="span"/>
+<group id="1014" type="span" parent="1013" relname="same_unit"/>
+<group id="1015" type="multinuc" parent="1013" relname="evidence"/>
+<group id="1016" type="multinuc" parent="1015" relname="joint"/>
+<group id="1017" type="span" parent="1015" relname="joint"/>
+<group id="1018" type="multinuc" parent="1017" relname="span"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1020" type="span" parent="1018" relname="purpose"/>
+<group id="1021" type="span" parent="1004" relname="joint"/>
+<group id="1022" type="span" parent="1023" relname="preparation"/>
+<group id="1023" type="multinuc" parent="1021" relname="span"/>
+<group id="1024" type="span" parent="1023" relname="joint"/>
+<group id="1025" type="multinuc" parent="24" relname="elaboration"/>
+<group id="1026" type="span" parent="1025" relname="joint"/>
+<group id="1027" type="span" parent="25" relname="purpose"/>
+<group id="1028" type="span" parent="1025" relname="joint"/>
+<group id="1030" type="span" parent="1023" relname="joint"/>
+<group id="1032" type="span" parent="1023" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1035" type="span" parent="1023" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1038" type="multinuc" parent="1023" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="contrast"/>
+<group id="1040" type="multinuc" parent="1038" relname="contrast"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="span" parent="41" relname="elaboration"/>
+<group id="1043" type="span" parent="1042" relname="span"/>
+<group id="1048" type="span" parent="1023" relname="joint"/>
+<group id="1050" type="span" parent="1023" relname="joint"/>
+<group id="1052" type="multinuc" parent="1023" relname="joint"/>
+<group id="1053" type="span" parent="1052" relname="same_unit"/>
+<group id="1054" type="span" parent="1052" relname="same_unit"/>
+<group id="1055" type="span" parent="54" relname="purpose"/>
+<group id="1058" type="span" parent="1023" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="multinuc" parent="59" relname="purpose"/>
+<group id="1061" type="multinuc" parent="1059" relname="elaboration"/>
+<group id="1062" type="multinuc" parent="1061" relname="joint"/>
+<group id="1063" type="span" parent="1062" relname="joint"/>
+<group id="1064" type="multinuc" parent="1062" relname="joint"/>
+<group id="1065" type="multinuc" parent="1064" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="span" parent="66" relname="elaboration"/>
+<group id="1068" type="span" parent="67" relname="elaboration"/>
+<group id="1069" type="multinuc" parent="1065" relname="joint"/>
+<group id="1070" type="span" parent="1069" relname="joint"/>
+<group id="1071" type="multinuc" parent="1069" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="multinuc" parent="1072" relname="span"/>
+<group id="1074" type="multinuc" parent="1073" relname="joint"/>
+<group id="1075" type="span" parent="1074" relname="joint"/>
+<group id="1076" type="span" parent="75" relname="elaboration"/>
+<group id="1077" type="multinuc" parent="1074" relname="joint"/>
+<group id="1078" type="span" parent="1077" relname="joint"/>
+<group id="1079" type="span" parent="78" relname="elaboration"/>
+<group id="1080" type="span" parent="1079" relname="span"/>
+<group id="1081" type="span" parent="1077" relname="joint"/>
+<group id="1082" type="multinuc" parent="82" relname="cause"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+	</body>
+</rst>

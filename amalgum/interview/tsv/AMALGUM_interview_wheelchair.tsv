@@ -1,0 +1,592 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=What is the nature of your disability ?
+1-1	0-4	What	_	_	_	_
+1-2	5-7	is	_	_	_	_
+1-3	8-11	the	abstract[1]	new[1]	_	_
+1-4	12-18	nature	abstract[1]	new[1]	_	_
+1-5	19-21	of	abstract[1]	new[1]	_	_
+1-6	22-26	your	abstract[1]|person|abstract[3]	new[1]|acc|new[3]	ana	2-2
+1-7	27-37	disability	abstract[1]|abstract[3]	new[1]|new[3]	_	_
+1-8	38-39	?	_	_	_	_
+
+#Text=Do you use a wheelchair for most daily activities ?
+2-1	40-42	Do	_	_	_	_
+2-2	43-46	you	person	giv	ana	3-1
+2-3	47-50	use	_	_	_	_
+2-4	51-52	a	object[5]	new[5]	coref	4-6[15_5]
+2-5	53-63	wheelchair	object[5]	new[5]	_	_
+2-6	64-67	for	_	_	_	_
+2-7	68-72	most	event[6]	new[6]	_	_
+2-8	73-78	daily	event[6]	new[6]	_	_
+2-9	79-89	activities	event[6]	new[6]	_	_
+2-10	90-91	?	_	_	_	_
+
+#Text=I am a T4 Paraplegic , due to a motorcycle accident in 1993 .
+3-1	92-93	I	person	giv	coref	3-3[9_0]
+3-2	94-96	am	_	_	_	_
+3-3	97-98	a	person[9]	giv[9]	ana	4-2[0_9]
+3-4	99-101	T4	organization|person[9]	new|giv[9]	_	_
+3-5	102-112	Paraplegic	person[9]	giv[9]	_	_
+3-6	113-114	,	person[9]	giv[9]	_	_
+3-7	115-118	due	person[9]	giv[9]	_	_
+3-8	119-121	to	person[9]	giv[9]	_	_
+3-9	122-123	a	person[9]|event[11]	giv[9]|new[11]	_	_
+3-10	124-134	motorcycle	person[9]|object|event[11]	giv[9]|new|new[11]	_	_
+3-11	135-143	accident	person[9]|event[11]	giv[9]|new[11]	_	_
+3-12	144-146	in	person[9]|event[11]	giv[9]|new[11]	_	_
+3-13	147-151	1993	person[9]|event[11]|time	giv[9]|new[11]|new	_	_
+3-14	152-153	.	_	_	_	_
+
+#Text=Yes I am dependent on my wheelchair for mobility .
+4-1	154-157	Yes	_	_	_	_
+4-2	158-159	I	person	giv	ana	4-6
+4-3	160-162	am	_	_	_	_
+4-4	163-172	dependent	_	_	_	_
+4-5	173-175	on	_	_	_	_
+4-6	176-178	my	person|object[15]	giv|giv[15]	ana|coref	5-7|10-4[0_15]
+4-7	179-189	wheelchair	object[15]	giv[15]	_	_
+4-8	190-193	for	_	_	_	_
+4-9	194-202	mobility	abstract	new	_	_
+4-10	203-204	.	_	_	_	_
+
+#Text=How does being a parent impact your ability to compete at elite levels ?
+5-1	205-208	How	_	_	_	_
+5-2	209-213	does	_	_	_	_
+5-3	214-219	being	_	_	_	_
+5-4	220-221	a	person[17]	new[17]	_	_
+5-5	222-228	parent	person[17]	new[17]	_	_
+5-6	229-235	impact	_	_	_	_
+5-7	236-240	your	person|abstract[19]	giv|new[19]	ana|ana	6-1|7-6[0_19]
+5-8	241-248	ability	abstract[19]	new[19]	_	_
+5-9	249-251	to	abstract[19]	new[19]	_	_
+5-10	252-259	compete	abstract[19]	new[19]	_	_
+5-11	260-262	at	abstract[19]	new[19]	_	_
+5-12	263-268	elite	abstract[19]|abstract[20]	new[19]|new[20]	coref	7-12[25_20]
+5-13	269-275	levels	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+5-14	276-277	?	_	_	_	_
+
+#Text=I am married and have three children .
+6-1	278-279	I	person	giv	ana	7-22
+6-2	280-282	am	_	_	_	_
+6-3	283-290	married	_	_	_	_
+6-4	291-294	and	_	_	_	_
+6-5	295-299	have	_	_	_	_
+6-6	300-305	three	person[22]	new[22]	coref	9-8[36_22]
+6-7	306-314	children	person[22]	new[22]	_	_
+6-8	315-316	.	_	_	_	_
+
+#Text=Having a family does make it a harder to compete at elite levels , not only being away traveling , when I am home I am on the ice training a lot .
+7-1	317-323	Having	_	_	_	_
+7-2	324-325	a	person[23]	new[23]	coref	8-7[31_23]
+7-3	326-332	family	person[23]	new[23]	_	_
+7-4	333-337	does	_	_	_	_
+7-5	338-342	make	_	_	_	_
+7-6	343-345	it	abstract	giv	_	_
+7-7	346-347	a	_	_	_	_
+7-8	348-354	harder	_	_	_	_
+7-9	355-357	to	_	_	_	_
+7-10	358-365	compete	_	_	_	_
+7-11	366-368	at	_	_	_	_
+7-12	369-374	elite	abstract[25]	giv[25]	_	_
+7-13	375-381	levels	abstract[25]	giv[25]	_	_
+7-14	382-383	,	_	_	_	_
+7-15	384-387	not	_	_	_	_
+7-16	388-392	only	_	_	_	_
+7-17	393-398	being	_	_	_	_
+7-18	399-403	away	place[28]	new[28]	ana	9-2[0_28]
+7-19	404-413	traveling	place[28]	new[28]	_	_
+7-20	414-415	,	place[28]	new[28]	_	_
+7-21	416-420	when	place[28]	new[28]	_	_
+7-22	421-422	I	person|place[28]	giv|new[28]	ana	7-25
+7-23	423-425	am	place[28]	new[28]	_	_
+7-24	426-430	home	place[28]	new[28]	_	_
+7-25	431-432	I	person|place[28]	giv|new[28]	ana	8-7
+7-26	433-435	am	place[28]	new[28]	_	_
+7-27	436-438	on	place[28]	new[28]	_	_
+7-28	439-442	the	place[28]	new[28]	_	_
+7-29	443-446	ice	place[28]	new[28]	_	_
+7-30	447-455	training	place[28]	new[28]	_	_
+7-31	456-457	a	place[28]	new[28]	_	_
+7-32	458-461	lot	place[28]	new[28]	_	_
+7-33	462-463	.	_	_	_	_
+
+#Text=But thanks to the support from my family I have been able to do so .
+8-1	464-467	But	_	_	_	_
+8-2	468-474	thanks	_	_	_	_
+8-3	475-477	to	_	_	_	_
+8-4	478-481	the	abstract[29]	new[29]	coref	19-8[93_29]
+8-5	482-489	support	abstract[29]	new[29]	_	_
+8-6	490-494	from	abstract[29]	new[29]	_	_
+8-7	495-497	my	abstract[29]|person|person[31]	new[29]|giv|giv[31]	ana	8-9
+8-8	498-504	family	abstract[29]|person[31]	new[29]|giv[31]	_	_
+8-9	505-506	I	person	giv	ana	9-8
+8-10	507-511	have	_	_	_	_
+8-11	512-516	been	_	_	_	_
+8-12	517-521	able	_	_	_	_
+8-13	522-524	to	_	_	_	_
+8-14	525-527	do	_	_	_	_
+8-15	528-530	so	_	_	_	_
+8-16	531-532	.	_	_	_	_
+
+#Text=Hopefully it has a positive impact on my children , showing them you can achieve anything you put your mind to .
+9-1	533-542	Hopefully	_	_	_	_
+9-2	543-545	it	place	giv	_	_
+9-3	546-549	has	_	_	_	_
+9-4	550-551	a	abstract[34]	new[34]	_	_
+9-5	552-560	positive	abstract[34]	new[34]	_	_
+9-6	561-567	impact	abstract[34]	new[34]	_	_
+9-7	568-570	on	abstract[34]	new[34]	_	_
+9-8	571-573	my	abstract[34]|person|person[36]	new[34]|giv|giv[36]	ana|ana	9-12[0_36]|9-13
+9-9	574-582	children	abstract[34]|person[36]	new[34]|giv[36]	_	_
+9-10	583-584	,	_	_	_	_
+9-11	585-592	showing	_	_	_	_
+9-12	593-597	them	person	giv	_	_
+9-13	598-601	you	person	giv	ana	9-17
+9-14	602-605	can	_	_	_	_
+9-15	606-613	achieve	_	_	_	_
+9-16	614-622	anything	abstract[39]	new[39]	_	_
+9-17	623-626	you	abstract[39]|person	new[39]|giv	ana	9-19
+9-18	627-630	put	abstract[39]	new[39]	_	_
+9-19	631-635	your	abstract[39]|person|abstract[42]	new[39]|giv|new[42]	ana	12-7
+9-20	636-640	mind	abstract[39]|abstract[42]	new[39]|new[42]	_	_
+9-21	641-643	to	abstract[39]	new[39]	_	_
+9-22	644-645	.	_	_	_	_
+
+#Text=Does participating in wheelchair curling cost a lot money ?
+10-1	646-650	Does	_	_	_	_
+10-2	651-664	participating	_	_	_	_
+10-3	665-667	in	_	_	_	_
+10-4	668-678	wheelchair	object|abstract[44]	giv|new[44]	coref|coref	12-9[49_0]|16-15[0_44]
+10-5	679-686	curling	abstract[44]	new[44]	_	_
+10-6	687-691	cost	_	_	_	_
+10-7	692-693	a	object[45]	new[45]	ana	11-2[0_45]
+10-8	694-697	lot	object[45]	new[45]	_	_
+10-9	698-703	money	object[45]	new[45]	_	_
+10-10	704-705	?	_	_	_	_
+
+#Text=Well that depends !
+11-1	706-710	Well	_	_	_	_
+11-2	711-715	that	object	giv	ana	12-12[50_0]
+11-3	716-723	depends	_	_	_	_
+11-4	724-725	!	_	_	_	_
+
+#Text=At a recreational level , if you have a wheelchair already all you need is a delivery stick which is about $ 60.00 and to join a club which has dues usually 300.00 to 500.00 per year .
+12-1	726-728	At	_	_	_	_
+12-2	729-730	a	abstract[47]	new[47]	coref	13-4[59_47]
+12-3	731-743	recreational	abstract[47]	new[47]	_	_
+12-4	744-749	level	abstract[47]	new[47]	_	_
+12-5	750-751	,	_	_	_	_
+12-6	752-754	if	_	_	_	_
+12-7	755-758	you	person	giv	ana	12-13
+12-8	759-763	have	_	_	_	_
+12-9	764-765	a	object[49]	giv[49]	coref	28-17[0_49]
+12-10	766-776	wheelchair	object[49]	giv[49]	_	_
+12-11	777-784	already	_	_	_	_
+12-12	785-788	all	object[50]	giv[50]	coref	12-16[53_50]
+12-13	789-792	you	object[50]|person	giv[50]|giv	ana	14-3
+12-14	793-797	need	object[50]	giv[50]	_	_
+12-15	798-800	is	_	_	_	_
+12-16	801-802	a	object[53]	giv[53]	coref	29-24[138_53]
+12-17	803-811	delivery	abstract|object[53]	new|giv[53]	coref	29-25
+12-18	812-817	stick	object[53]	giv[53]	_	_
+12-19	818-823	which	object[53]	giv[53]	_	_
+12-20	824-826	is	object[53]	giv[53]	_	_
+12-21	827-832	about	object[53]	giv[53]	_	_
+12-22	833-834	$	object[53]	giv[53]	_	_
+12-23	835-840	60.00	object[53]	giv[53]	_	_
+12-24	841-844	and	_	_	_	_
+12-25	845-847	to	_	_	_	_
+12-26	848-852	join	_	_	_	_
+12-27	853-854	a	organization[54]	new[54]	coref	16-13[72_54]
+12-28	855-859	club	organization[54]	new[54]	_	_
+12-29	860-865	which	organization[54]	new[54]	_	_
+12-30	866-869	has	organization[54]	new[54]	_	_
+12-31	870-874	dues	organization[54]|abstract	new[54]|new	_	_
+12-32	875-882	usually	organization[54]|object[56]	new[54]|new[56]	_	_
+12-33	883-889	300.00	organization[54]|object[56]	new[54]|new[56]	_	_
+12-34	890-892	to	organization[54]|object[56]	new[54]|new[56]	_	_
+12-35	893-899	500.00	organization[54]|object[56]|abstract	new[54]|new[56]|new	_	_
+12-36	900-903	per	organization[54]|object[56]	new[54]|new[56]	_	_
+12-37	904-908	year	organization[54]|object[56]|time	new[54]|new[56]|new	_	_
+12-38	909-910	.	_	_	_	_
+
+#Text=To compete at the highest level , there is travel and lodging involved which can get quite expensive .
+13-1	911-913	To	_	_	_	_
+13-2	914-921	compete	_	_	_	_
+13-3	922-924	at	_	_	_	_
+13-4	925-928	the	abstract[59]	giv[59]	coref	14-8[63_59]
+13-5	929-936	highest	abstract[59]	giv[59]	_	_
+13-6	937-942	level	abstract[59]	giv[59]	_	_
+13-7	943-944	,	_	_	_	_
+13-8	945-950	there	_	_	_	_
+13-9	951-953	is	_	_	_	_
+13-10	954-960	travel	abstract	new	_	_
+13-11	961-964	and	_	_	_	_
+13-12	965-972	lodging	place[61]	new[61]	_	_
+13-13	973-981	involved	place[61]	new[61]	_	_
+13-14	982-987	which	place[61]	new[61]	_	_
+13-15	988-991	can	place[61]	new[61]	_	_
+13-16	992-995	get	place[61]	new[61]	_	_
+13-17	996-1001	quite	place[61]	new[61]	_	_
+13-18	1002-1011	expensive	place[61]	new[61]	_	_
+13-19	1012-1013	.	_	_	_	_
+
+#Text=How do you afford to compete at the highest level ?
+14-1	1014-1017	How	_	_	_	_
+14-2	1018-1020	do	_	_	_	_
+14-3	1021-1024	you	person	giv	ana	15-2
+14-4	1025-1031	afford	_	_	_	_
+14-5	1032-1034	to	_	_	_	_
+14-6	1035-1042	compete	_	_	_	_
+14-7	1043-1045	at	_	_	_	_
+14-8	1046-1049	the	abstract[63]	giv[63]	coref	19-18[95_63]
+14-9	1050-1057	highest	abstract[63]	giv[63]	_	_
+14-10	1058-1063	level	abstract[63]	giv[63]	_	_
+14-11	1064-1065	?	_	_	_	_
+
+#Text=Do you have any sponsorship deals ?
+15-1	1066-1068	Do	_	_	_	_
+15-2	1069-1072	you	person	giv	ana	16-6
+15-3	1073-1077	have	_	_	_	_
+15-4	1078-1081	any	abstract[66]	new[66]	coref	18-3[85_66]
+15-5	1082-1093	sponsorship	abstract|abstract[66]	new|new[66]	coref	18-4
+15-6	1094-1099	deals	abstract[66]	new[66]	_	_
+15-7	1100-1101	?	_	_	_	_
+
+#Text=Getting started was tough , I got help through the members of cape cod curling club and a grant from Challenged Athletes Foundation ( CAF ) and some out of my pocket .
+16-1	1102-1109	Getting	_	_	_	_
+16-2	1110-1117	started	_	_	_	_
+16-3	1118-1121	was	_	_	_	_
+16-4	1122-1127	tough	_	_	_	_
+16-5	1128-1129	,	_	_	_	_
+16-6	1130-1131	I	person	giv	ana	16-31
+16-7	1132-1135	got	_	_	_	_
+16-8	1136-1140	help	abstract	new	_	_
+16-9	1141-1148	through	_	_	_	_
+16-10	1149-1152	the	person[69]	new[69]	_	_
+16-11	1153-1160	members	person[69]	new[69]	_	_
+16-12	1161-1163	of	person[69]	new[69]	_	_
+16-13	1164-1168	cape	person[69]|object[70]|organization[72]	new[69]|new[70]|giv[72]	_	_
+16-14	1169-1172	cod	person[69]|object[70]|organization[72]	new[69]|new[70]|giv[72]	_	_
+16-15	1173-1180	curling	person[69]|abstract|organization[72]	new[69]|giv|giv[72]	coref	24-5
+16-16	1181-1185	club	person[69]|organization[72]	new[69]|giv[72]	_	_
+16-17	1186-1189	and	_	_	_	_
+16-18	1190-1191	a	abstract[73]	new[73]	_	_
+16-19	1192-1197	grant	abstract[73]	new[73]	_	_
+16-20	1198-1202	from	abstract[73]	new[73]	_	_
+16-21	1203-1213	Challenged	abstract[73]|person[74]|organization[75]	new[73]|new[74]|new[75]	appos	16-25[0_75]
+16-22	1214-1222	Athletes	abstract[73]|person[74]|organization[75]	new[73]|new[74]|new[75]	_	_
+16-23	1223-1233	Foundation	abstract[73]|organization[75]	new[73]|new[75]	_	_
+16-24	1234-1235	(	_	_	_	_
+16-25	1236-1239	CAF	organization	giv	_	_
+16-26	1240-1241	)	_	_	_	_
+16-27	1242-1245	and	_	_	_	_
+16-28	1246-1250	some	_	_	_	_
+16-29	1251-1254	out	_	_	_	_
+16-30	1255-1257	of	_	_	_	_
+16-31	1258-1260	my	person|object[78]	giv|new[78]	ana	17-3
+16-32	1261-1267	pocket	object[78]	new[78]	_	_
+16-33	1268-1269	.	_	_	_	_
+
+#Text=But once I made the National team there is funding to help with expenses .
+17-1	1270-1273	But	_	_	_	_
+17-2	1274-1278	once	_	_	_	_
+17-3	1279-1280	I	person	giv	ana	18-1
+17-4	1281-1285	made	_	_	_	_
+17-5	1286-1289	the	organization[80]	new[80]	coref	31-19[154_80]
+17-6	1290-1298	National	organization[80]	new[80]	_	_
+17-7	1299-1303	team	organization[80]	new[80]	_	_
+17-8	1304-1309	there	_	_	_	_
+17-9	1310-1312	is	_	_	_	_
+17-10	1313-1320	funding	abstract[81]	new[81]	coref	20-2[0_81]
+17-11	1321-1323	to	abstract[81]	new[81]	_	_
+17-12	1324-1328	help	abstract[81]	new[81]	_	_
+17-13	1329-1333	with	abstract[81]	new[81]	_	_
+17-14	1334-1342	expenses	abstract[81]|abstract	new[81]|new	_	_
+17-15	1343-1344	.	_	_	_	_
+
+#Text=I have no sponsorship deals at the moment , but I am open to negotiation !
+18-1	1345-1346	I	person	giv	ana	18-11
+18-2	1347-1351	have	_	_	_	_
+18-3	1352-1354	no	abstract[85]	giv[85]	_	_
+18-4	1355-1366	sponsorship	abstract|abstract[85]	giv|giv[85]	_	_
+18-5	1367-1372	deals	abstract[85]	giv[85]	_	_
+18-6	1373-1375	at	_	_	_	_
+18-7	1376-1379	the	time[86]	new[86]	_	_
+18-8	1380-1386	moment	time[86]	new[86]	_	_
+18-9	1387-1388	,	_	_	_	_
+18-10	1389-1392	but	_	_	_	_
+18-11	1393-1394	I	person	giv	ana	19-2
+18-12	1395-1397	am	_	_	_	_
+18-13	1398-1402	open	_	_	_	_
+18-14	1403-1405	to	_	_	_	_
+18-15	1406-1417	negotiation	event	new	_	_
+18-16	1418-1419	!	_	_	_	_
+
+#Text=Do you think USA Paralympic competitors get enough financial support to enable the country to compete at the highest level ?
+19-1	1420-1422	Do	_	_	_	_
+19-2	1423-1426	you	person	giv	ana	22-4
+19-3	1427-1432	think	_	_	_	_
+19-4	1433-1436	USA	place|person[92]	new|new[92]	ana	28-4[0_92]
+19-5	1437-1447	Paralympic	organization|person[92]	new|new[92]	_	_
+19-6	1448-1459	competitors	person[92]	new[92]	_	_
+19-7	1460-1463	get	_	_	_	_
+19-8	1464-1470	enough	abstract[93]	giv[93]	_	_
+19-9	1471-1480	financial	abstract[93]	giv[93]	_	_
+19-10	1481-1488	support	abstract[93]	giv[93]	_	_
+19-11	1489-1491	to	_	_	_	_
+19-12	1492-1498	enable	_	_	_	_
+19-13	1499-1502	the	place[94]	new[94]	_	_
+19-14	1503-1510	country	place[94]	new[94]	_	_
+19-15	1511-1513	to	_	_	_	_
+19-16	1514-1521	compete	_	_	_	_
+19-17	1522-1524	at	_	_	_	_
+19-18	1525-1528	the	abstract[95]	giv[95]	coref	21-17[103_95]
+19-19	1529-1536	highest	abstract[95]	giv[95]	_	_
+19-20	1537-1542	level	abstract[95]	giv[95]	_	_
+19-21	1543-1544	?	_	_	_	_
+
+#Text=Is funding equitable in the United States across sports and competitor visibility ?
+20-1	1545-1547	Is	_	_	_	_
+20-2	1548-1555	funding	abstract	giv	coref	21-5
+20-3	1556-1565	equitable	_	_	_	_
+20-4	1566-1568	in	_	_	_	_
+20-5	1569-1572	the	place[97]	new[97]	_	_
+20-6	1573-1579	United	place[97]	new[97]	_	_
+20-7	1580-1586	States	place[97]	new[97]	_	_
+20-8	1587-1593	across	_	_	_	_
+20-9	1594-1600	sports	abstract	new	coref	23-3[106_0]
+20-10	1601-1604	and	_	_	_	_
+20-11	1605-1615	competitor	person|abstract[100]	new|new[100]	_	_
+20-12	1616-1626	visibility	abstract[100]	new[100]	_	_
+20-13	1627-1628	?	_	_	_	_
+
+#Text=No , there is funding , but not nearly enough for an athlete to compete at the highest level .
+21-1	1629-1631	No	_	_	_	_
+21-2	1632-1633	,	_	_	_	_
+21-3	1634-1639	there	_	_	_	_
+21-4	1640-1642	is	_	_	_	_
+21-5	1643-1650	funding	abstract	giv	coref	23-10[107_0]
+21-6	1651-1652	,	_	_	_	_
+21-7	1653-1656	but	_	_	_	_
+21-8	1657-1660	not	_	_	_	_
+21-9	1661-1667	nearly	_	_	_	_
+21-10	1668-1674	enough	_	_	_	_
+21-11	1675-1678	for	_	_	_	_
+21-12	1679-1681	an	person[102]	new[102]	_	_
+21-13	1682-1689	athlete	person[102]	new[102]	_	_
+21-14	1690-1692	to	_	_	_	_
+21-15	1693-1700	compete	_	_	_	_
+21-16	1701-1703	at	_	_	_	_
+21-17	1704-1707	the	abstract[103]	giv[103]	_	_
+21-18	1708-1715	highest	abstract[103]	giv[103]	_	_
+21-19	1716-1721	level	abstract[103]	giv[103]	_	_
+21-20	1722-1723	.	_	_	_	_
+
+#Text=Not from what I hear .
+22-1	1724-1727	Not	_	_	_	_
+22-2	1728-1732	from	_	_	_	_
+22-3	1733-1737	what	_	_	_	_
+22-4	1738-1739	I	person	giv	ana	23-1
+22-5	1740-1744	hear	_	_	_	_
+22-6	1745-1746	.	_	_	_	_
+
+#Text=I believe the higher viewed sports get a lot more funding .
+23-1	1747-1748	I	person	giv	ana	24-1
+23-2	1749-1756	believe	_	_	_	_
+23-3	1757-1760	the	abstract[106]	giv[106]	_	_
+23-4	1761-1767	higher	abstract[106]	giv[106]	_	_
+23-5	1768-1774	viewed	abstract[106]	giv[106]	_	_
+23-6	1775-1781	sports	abstract[106]	giv[106]	_	_
+23-7	1782-1785	get	_	_	_	_
+23-8	1786-1787	a	_	_	_	_
+23-9	1788-1791	lot	_	_	_	_
+23-10	1792-1796	more	abstract[107]	giv[107]	coref	24-10[0_107]
+23-11	1797-1804	funding	abstract[107]	giv[107]	_	_
+23-12	1805-1806	.	_	_	_	_
+
+#Text=I have been told curling is at bottom for funding .
+24-1	1807-1808	I	person	giv	ana	25-3
+24-2	1809-1813	have	_	_	_	_
+24-3	1814-1818	been	_	_	_	_
+24-4	1819-1823	told	_	_	_	_
+24-5	1824-1831	curling	abstract	giv	coref	28-17[129_0]
+24-6	1832-1834	is	_	_	_	_
+24-7	1835-1837	at	_	_	_	_
+24-8	1838-1844	bottom	_	_	_	_
+24-9	1845-1848	for	_	_	_	_
+24-10	1849-1856	funding	abstract	giv	_	_
+24-11	1857-1858	.	_	_	_	_
+
+#Text=What are your thoughts on the classification system and processes for your sport ?
+25-1	1859-1863	What	_	_	_	_
+25-2	1864-1867	are	_	_	_	_
+25-3	1868-1872	your	person|abstract[112]	giv|new[112]	ana	25-12
+25-4	1873-1881	thoughts	abstract[112]	new[112]	_	_
+25-5	1882-1884	on	abstract[112]	new[112]	_	_
+25-6	1885-1888	the	abstract[112]|abstract[114]	new[112]|new[114]	coref	27-8[123_114]
+25-7	1889-1903	classification	abstract[112]|abstract|abstract[114]	new[112]|new|new[114]	coref	27-9
+25-8	1904-1910	system	abstract[112]|abstract[114]	new[112]|new[114]	_	_
+25-9	1911-1914	and	abstract[112]	new[112]	_	_
+25-10	1915-1924	processes	abstract[112]|abstract[115]	new[112]|new[115]	_	_
+25-11	1925-1928	for	abstract[112]|abstract[115]	new[112]|new[115]	_	_
+25-12	1929-1933	your	abstract[112]|abstract[115]|person|abstract[117]	new[112]|new[115]|giv|new[117]	ana|ana	26-2|26-14[0_117]
+25-13	1934-1939	sport	abstract[112]|abstract[115]|abstract[117]	new[112]|new[115]|new[117]	_	_
+25-14	1940-1941	?	_	_	_	_
+
+#Text=Do you know of anyone who has been impacted as a result of it ?
+26-1	1942-1944	Do	_	_	_	_
+26-2	1945-1948	you	person	giv	ana	27-1
+26-3	1949-1953	know	_	_	_	_
+26-4	1954-1956	of	_	_	_	_
+26-5	1957-1963	anyone	person[119]	new[119]	_	_
+26-6	1964-1967	who	person[119]	new[119]	_	_
+26-7	1968-1971	has	person[119]	new[119]	_	_
+26-8	1972-1976	been	person[119]	new[119]	_	_
+26-9	1977-1985	impacted	person[119]	new[119]	_	_
+26-10	1986-1988	as	person[119]	new[119]	_	_
+26-11	1989-1990	a	person[119]	new[119]	_	_
+26-12	1991-1997	result	person[119]	new[119]	_	_
+26-13	1998-2000	of	person[119]	new[119]	_	_
+26-14	2001-2003	it	person[119]|abstract	new[119]|giv	_	_
+26-15	2004-2005	?	_	_	_	_
+
+#Text=I am not really clear on how the classification system works .
+27-1	2006-2007	I	person	giv	ana	28-1
+27-2	2008-2010	am	_	_	_	_
+27-3	2011-2014	not	_	_	_	_
+27-4	2015-2021	really	_	_	_	_
+27-5	2022-2027	clear	_	_	_	_
+27-6	2028-2030	on	_	_	_	_
+27-7	2031-2034	how	_	_	_	_
+27-8	2035-2038	the	abstract[123]	giv[123]	ana	28-7[0_123]
+27-9	2039-2053	classification	abstract|abstract[123]	giv|giv[123]	_	_
+27-10	2054-2060	system	abstract[123]	giv[123]	_	_
+27-11	2061-2066	works	_	_	_	_
+27-12	2067-2068	.	_	_	_	_
+
+#Text=I feel that they should make it as equal as possible for everyone who competes in wheelchair curling .
+28-1	2069-2070	I	person	giv	ana	30-1
+28-2	2071-2075	feel	_	_	_	_
+28-3	2076-2080	that	_	_	_	_
+28-4	2081-2085	they	person	giv	ana	29-14
+28-5	2086-2092	should	_	_	_	_
+28-6	2093-2097	make	_	_	_	_
+28-7	2098-2100	it	abstract	giv	_	_
+28-8	2101-2103	as	_	_	_	_
+28-9	2104-2109	equal	_	_	_	_
+28-10	2110-2112	as	_	_	_	_
+28-11	2113-2121	possible	_	_	_	_
+28-12	2122-2125	for	_	_	_	_
+28-13	2126-2134	everyone	person[127]	new[127]	coref	29-1[0_127]
+28-14	2135-2138	who	person[127]	new[127]	_	_
+28-15	2139-2147	competes	person[127]	new[127]	_	_
+28-16	2148-2150	in	person[127]	new[127]	_	_
+28-17	2151-2161	wheelchair	person[127]|object|abstract[129]	new[127]|giv|giv[129]	coref|coref	29-20[136_0]|31-15[0_129]
+28-18	2162-2169	curling	person[127]|abstract[129]	new[127]|giv[129]	_	_
+28-19	2170-2171	.	_	_	_	_
+
+#Text=Everyone one has different disabilities and different situations , but as long as they are delivering the stone from a stationary wheelchair with a delivery stick from the same position it should be equal .
+29-1	2172-2180	Everyone	person	giv	_	_
+29-2	2181-2184	one	person	new	_	_
+29-3	2185-2188	has	_	_	_	_
+29-4	2189-2198	different	abstract[132]	new[132]	_	_
+29-5	2199-2211	disabilities	abstract[132]	new[132]	_	_
+29-6	2212-2215	and	_	_	_	_
+29-7	2216-2225	different	abstract[133]	new[133]	_	_
+29-8	2226-2236	situations	abstract[133]	new[133]	_	_
+29-9	2237-2238	,	_	_	_	_
+29-10	2239-2242	but	_	_	_	_
+29-11	2243-2245	as	_	_	_	_
+29-12	2246-2250	long	_	_	_	_
+29-13	2251-2253	as	_	_	_	_
+29-14	2254-2258	they	person	giv	_	_
+29-15	2259-2262	are	_	_	_	_
+29-16	2263-2273	delivering	_	_	_	_
+29-17	2274-2277	the	object[135]	new[135]	_	_
+29-18	2278-2283	stone	object[135]	new[135]	_	_
+29-19	2284-2288	from	_	_	_	_
+29-20	2289-2290	a	object[136]	giv[136]	coref	30-13[145_136]
+29-21	2291-2301	stationary	object[136]	giv[136]	_	_
+29-22	2302-2312	wheelchair	object[136]	giv[136]	_	_
+29-23	2313-2317	with	object[136]	giv[136]	_	_
+29-24	2318-2319	a	object[136]|object[138]	giv[136]|giv[138]	_	_
+29-25	2320-2328	delivery	object[136]|abstract|object[138]	giv[136]|giv|giv[138]	_	_
+29-26	2329-2334	stick	object[136]|object[138]	giv[136]|giv[138]	_	_
+29-27	2335-2339	from	_	_	_	_
+29-28	2340-2343	the	abstract[139]	new[139]	ana	29-31[0_139]
+29-29	2344-2348	same	abstract[139]	new[139]	_	_
+29-30	2349-2357	position	abstract[139]	new[139]	_	_
+29-31	2358-2360	it	abstract	giv	_	_
+29-32	2361-2367	should	_	_	_	_
+29-33	2368-2370	be	_	_	_	_
+29-34	2371-2376	equal	_	_	_	_
+29-35	2377-2378	.	_	_	_	_
+
+#Text=I know of a young man from state of Washington who uses a wheelchair most of the time but is able to walk and has mobility , that he probably would not qualify for the national team. .
+30-1	2379-2380	I	person	giv	ana	31-2
+30-2	2381-2385	know	_	_	_	_
+30-3	2386-2388	of	_	_	_	_
+30-4	2389-2390	a	person[142]	new[142]	ana	30-29[0_142]
+30-5	2391-2396	young	person[142]	new[142]	_	_
+30-6	2397-2400	man	person[142]	new[142]	_	_
+30-7	2401-2405	from	person[142]	new[142]	_	_
+30-8	2406-2411	state	person[142]|place[143]	new[142]|new[143]	_	_
+30-9	2412-2414	of	person[142]|place[143]	new[142]|new[143]	_	_
+30-10	2415-2425	Washington	person[142]|place[143]|person	new[142]|new[143]|new	_	_
+30-11	2426-2429	who	person[142]	new[142]	_	_
+30-12	2430-2434	uses	person[142]	new[142]	_	_
+30-13	2435-2436	a	person[142]|object[145]	new[142]|giv[145]	coref	31-11[152_145]
+30-14	2437-2447	wheelchair	person[142]|object[145]	new[142]|giv[145]	_	_
+30-15	2448-2452	most	person[142]	new[142]	_	_
+30-16	2453-2455	of	person[142]	new[142]	_	_
+30-17	2456-2459	the	person[142]	new[142]	_	_
+30-18	2460-2464	time	person[142]	new[142]	_	_
+30-19	2465-2468	but	person[142]	new[142]	_	_
+30-20	2469-2471	is	person[142]	new[142]	_	_
+30-21	2472-2476	able	person[142]	new[142]	_	_
+30-22	2477-2479	to	person[142]	new[142]	_	_
+30-23	2480-2484	walk	person[142]	new[142]	_	_
+30-24	2485-2488	and	person[142]	new[142]	_	_
+30-25	2489-2492	has	person[142]	new[142]	_	_
+30-26	2493-2501	mobility	person[142]|abstract	new[142]|new	_	_
+30-27	2502-2503	,	_	_	_	_
+30-28	2504-2508	that	_	_	_	_
+30-29	2509-2511	he	person	giv	coref	31-5[150_0]
+30-30	2512-2520	probably	_	_	_	_
+30-31	2521-2526	would	_	_	_	_
+30-32	2527-2530	not	_	_	_	_
+30-33	2531-2538	qualify	_	_	_	_
+30-34	2539-2542	for	_	_	_	_
+30-35	2543-2546	the	organization[148]	new[148]	_	_
+30-36	2547-2555	national	organization[148]	new[148]	_	_
+30-37	2556-2561	team.	organization[148]	new[148]	_	_
+30-38	2562-2563	.	_	_	_	_
+
+#Text=Yet I know of a man in Canada that uses a wheelchair only for curling and competes on the National team .
+31-1	2564-2567	Yet	_	_	_	_
+31-2	2568-2569	I	person	giv	_	_
+31-3	2570-2574	know	_	_	_	_
+31-4	2575-2577	of	_	_	_	_
+31-5	2578-2579	a	person[150]	giv[150]	_	_
+31-6	2580-2583	man	person[150]	giv[150]	_	_
+31-7	2584-2586	in	person[150]	giv[150]	_	_
+31-8	2587-2593	Canada	person[150]|place	giv[150]|new	_	_
+31-9	2594-2598	that	person[150]	giv[150]	_	_
+31-10	2599-2603	uses	person[150]	giv[150]	_	_
+31-11	2604-2605	a	person[150]|object[152]	giv[150]|giv[152]	_	_
+31-12	2606-2616	wheelchair	person[150]|object[152]	giv[150]|giv[152]	_	_
+31-13	2617-2621	only	person[150]	giv[150]	_	_
+31-14	2622-2625	for	person[150]	giv[150]	_	_
+31-15	2626-2633	curling	person[150]|abstract	giv[150]|giv	_	_
+31-16	2634-2637	and	person[150]	giv[150]	_	_
+31-17	2638-2646	competes	person[150]	giv[150]	_	_
+31-18	2647-2649	on	_	_	_	_
+31-19	2650-2653	the	organization[154]	giv[154]	_	_
+31-20	2654-2662	National	organization[154]	giv[154]	_	_
+31-21	2663-2667	team	organization[154]	giv[154]	_	_
+31-22	2668-2669	.	_	_	_	_

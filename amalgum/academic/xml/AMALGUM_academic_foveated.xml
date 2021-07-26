@@ -1,0 +1,927 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_foveated" title="Non-Rigid Multi-Modal 3D Medical Image Registration Based on Foveated Modality Independent Neighborhood Descriptor" shortTitle="foveated" author="Feng Yang, Mingyue Ding, Xuming Zhang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4675/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Methods	NNS	method
+</s>
+</head>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+</s>
+<s type="frag">
+The	DT	the
+Framework	NNP	Framework
+of	IN	of
+the	DT	the
+FMIND	NNP	FMIND
+Based	VBN	base
+Image	NN	image
+Registration	NN	registration
+Method	NN	method
+</s>
+</head>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+flowchart	NN	flowchart
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+image	NN	image
+registration	NN	registration
+based	VBN	base
+on	IN	on
+the	DT	the
+FMIND	NNP	FMIND
+.	.	.
+</s>
+<s type="decl">
+Firstly	RB	firstly
+,	,	,
+the	DT	the
+FMIND	NNP	FMIND
+is	VBZ	be
+constructed	VBN	construct
+based	VBN	base
+on	IN	on
+the	DT	the
+foveated	JJ	foveated
+nonlocal	JJ	nonlocal
+self-similarity	NN	self-similarity
+and	CC	and
+it	PRP	it
+is	VBZ	be
+applied	VBN	apply
+to	IN	to
+the	DT	the
+reference	NN	reference
+image	NN	image
+<hi rend="italic">
+IR	NNP	Ir
+</hi>
+and	CC	and
+the	DT	the
+float	NN	float
+image	NN	image
+<hi rend="italic">
+IF	NNP	if
+</hi>
+to	TO	to
+produce	VB	produce
+the	DT	the
+corresponding	JJ	corresponding
+structural	JJ	structural
+representations	NNS	representation
+FMIND	NNP	FMIND
+(	-LRB-	(
+<hi rend="italic">
+IR	NNP	Ir
+</hi>
+)	-RRB-	)
+and	CC	and
+FMIND	NNP	FMIND
+(	-LRB-	(
+<hi rend="italic">
+IF	NNP	if
+</hi>
+)	-RRB-	)
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Afterwards	RB	afterwards
+,	,	,
+the	DT	the
+objective	JJ	objective
+function	NN	function
+,	,	,
+i.e.	FW	i.e.
+,	,	,
+the	DT	the
+energy	NN	energy
+function	NN	function
+,	,	,
+is	VBZ	be
+established	VBN	establish
+based	VBN	base
+on	IN	on
+the	DT	the
+free-from	JJ	free-from
+deformation	NN	deformation
+(	-LRB-	(
+FFD	NNP	FFD
+)	-RRB-	)
+model	NN	model
+and	CC	and
+the	DT	the
+similarity	NN	similarity
+measure	NN	measure
+defined	VBN	define
+as	IN	as
+the	DT	the
+sum	NN	sum
+of	IN	of
+absolute	JJ	absolute
+differences	NNS	difference
+(	-LRB-	(
+SAD	NNP	SAD
+)	-RRB-	)
+between	IN	between
+FMIND(	NNP	FMIND(
+<hi rend="italic">
+IR	NNP	Ir
+</hi>
+)	-RRB-	)
+and	CC	and
+FMIND(	NNP	FMIND(
+<hi rend="italic">
+IF	NNP	if
+</hi>
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+the	DT	the
+FMIND	NNP	FMIND
+based	VBN	base
+spatial	JJ	spatial
+constraint	NN	constraint
+is	VBZ	be
+introduced	VBN	introduce
+to	TO	to
+produce	VB	produce
+the	DT	the
+mask	NN	mask
+image	NN	image
+for	IN	for
+the	DT	the
+MRF	NNP	MRF
+discrete	JJ	discrete
+optimization	NN	optimization
+.	.	.
+</s>
+<s type="decl">
+During	IN	during
+the	DT	the
+iterative	JJ	iterative
+optimization	NN	optimization
+,	,	,
+the	DT	the
+deformation	NN	deformation
+vector	NN	vector
+,	,	,
+which	WDT	which
+is	VBZ	be
+a	DT	a
+vector	NN	vector
+of	IN	of
+parameters	NNS	parameter
+defining	VBG	define
+the	DT	the
+deformation	NN	deformation
+field	NN	field
+,	,	,
+is	VBZ	be
+produced	VBN	produce
+at	IN	at
+each	DT	each
+iteration	NN	iteration
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+final	JJ	final
+optimal	JJ	optimal
+deformation	NN	deformation
+vector	NN	vector
+<hi rend="italic">
+T	NN	T
+</hi>
+’	SYM	's
+will	MD	will
+be	VB	be
+obtained	VBN	obtain
+once	IN	once
+the	DT	the
+optimization	NN	optimization
+procedure	NN	procedure
+is	VBZ	be
+terminated	VBN	terminate
+,	,	,
+and	CC	and
+it	PRP	it
+is	VBZ	be
+utilized	VBN	utilize
+to	TO	to
+produce	VB	produce
+the	DT	the
+registration	NN	registration
+result	NN	result
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+</s>
+<s type="frag">
+The	DT	the
+Foveated	NNP	Foveated
+Modality	NNP	Modality
+Independent	NNP	Independent
+Neighborhood	NNP	Neighborhood
+Descriptor	NNP	Descriptor
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+FMIND	NNP	FMIND
+is	VBZ	be
+presented	VBN	present
+based	VBN	base
+on	IN	on
+the	DT	the
+characteristics	NNS	characteristic
+of	IN	of
+human	JJ	human
+visual	JJ	visual
+system	NN	system
+(	-LRB-	(
+HVS	NNP	HVS
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+HVS	NNP	HVS
+,	,	,
+the	DT	the
+distribution	NN	distribution
+of	IN	of
+cone	NN	cone
+cells	NNS	cell
+is	VBZ	be
+uneven	JJ	uneven
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+foveation	NN	foveation
+has	VBZ	have
+the	DT	the
+highest	JJS	high
+density	NN	density
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+foveation	NN	foveation
+is	VBZ	be
+taken	VBN	take
+as	IN	as
+the	DT	the
+center	NN	center
+,	,	,
+the	DT	the
+cell	NN	cell
+density	NN	density
+will	MD	will
+fall	VB	fall
+fast	RB	fast
+when	WRB	when
+it	PRP	it
+is	VBZ	be
+extended	VBN	extend
+around	RB	around
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+optic	JJ	optic
+nerve	NN	nerve
+cells	NNS	cell
+have	VBP	have
+similar	JJ	similar
+characteristics	NNS	characteristic
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+when	WRB	when
+we	PRP	we
+watch	VBP	watch
+a	DT	a
+point	NN	point
+in	IN	in
+an	DT	a
+image	NN	image
+,	,	,
+this	DT	this
+point	NN	point
+will	MD	will
+have	VB	have
+the	DT	the
+highest	JJS	high
+sensitivity	NN	sensitivity
+and	CC	and
+the	DT	the
+sensitivity	NN	sensitivity
+will	MD	will
+drop	VB	drop
+with	IN	with
+the	DT	the
+increasing	VBG	increase
+distance	NN	distance
+to	IN	to
+the	DT	the
+point	NN	point
+.	.	.
+</s>
+<s type="decl">
+Inspired	VBN	inspire
+by	IN	by
+the	DT	the
+characteristics	NNS	characteristic
+of	IN	of
+the	DT	the
+HVS	NNP	HVS
+,	,	,
+Alessandro	NNP	Alessandro
+Foi	NNP	Foi
+et	FW	et
+al.	FW	al.
+have	VBP	have
+proposed	VBN	propose
+calculating	VBG	calculate
+the	DT	the
+patch	NN	patch
+similarity	NN	similarity
+based	VBN	base
+on	IN	on
+the	DT	the
+Euclidean	JJ	Euclidean
+distance	NN	distance
+between	IN	between
+the	DT	the
+the	DT	the
+foveated	VBN	foveat
+patches	NNS	patch
+,	,	,
+defined	VBN	define
+as	IN	as
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+denote	VBP	denote
+the	DT	the
+foveated	VBN	foveat
+patches	NNS	patch
+that	WDT	that
+were	VBD	be
+obtained	VBN	obtain
+by	IN	by
+foveating	VBG	foveat
+the	DT	the
+image	NN	image
+at	IN	at
+the	DT	the
+two	CD	2
+fixation	NN	fixation
+points	NNS	point
+and	CC	and
+.	.	.
+</s>
+<s type="decl">
+By	IN	by
+applying	VBG	apply
+the	DT	the
+foveation	NN	foveation
+operator	NN	operator
+to	IN	to
+the	DT	the
+image	NN	image
+<hi rend="italic">
+I	CD	I
+</hi>
+,	,	,
+the	DT	the
+foveated	NN	foveated
+patch	NN	patch
+is	VBZ	be
+produced	VBN	produce
+as	IN	as
+:	:	:
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+where	WRB	where
+denotes	VBZ	denote
+the	DT	the
+location	NN	location
+of	IN	of
+any	DT	any
+pixel	NN	pixel
+in	IN	in
+the	DT	the
+foveated	JJ	foveated
+image	NN	image
+patch	NN	patch
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+,	,	,
+the	DT	the
+designed	VBN	design
+foveation	NN	foveation
+operators	NNS	operator
+mainly	RB	mainly
+include	VBP	include
+the	DT	the
+isotropic	JJ	isotropic
+and	CC	and
+anisotropic	JJ	anisotropic
+foveation	NN	foveation
+operators	NNS	operator
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+the	DT	the
+latter	NN	latter
+has	VBZ	have
+more	JJR	more
+advantages	NNS	advantage
+than	IN	than
+the	DT	the
+former	JJ	former
+in	IN	in
+describing	VBG	describe
+the	DT	the
+image	NN	image
+edges	NNS	edge
+and	CC	and
+textures	NNS	texture
+,	,	,
+it	PRP	it
+will	MD	will
+be	VB	be
+used	VBN	use
+as	IN	as
+the	DT	the
+foveation	NN	foveation
+operator	NN	operator
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+operator	NN	operator
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+:	:	:
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+where	WRB	where
+denotes	VBZ	denote
+the	DT	the
+blur	NN	blur
+kernel	NN	kernel
+and	CC	and
+it	PRP	it
+is	VBZ	be
+mainly	RB	mainly
+structured	VBN	structure
+by	IN	by
+the	DT	the
+elliptical	JJ	elliptical
+Gaussian	NN	Gaussian
+probability	NN	probability
+density	NN	density
+function	NN	function
+(	-LRB-	(
+PDF	NNP	PDF
+)	-RRB-	)
+,	,	,
+determines	VBZ	determine
+the	DT	the
+elongation	NN	elongation
+of	IN	of
+the	DT	the
+Gaussian	NNP	Gaussian
+PDF	NNP	PDF
+,	,	,
+and	CC	and
+denotes	VBZ	denote
+the	DT	the
+angular	JJ	angular
+offset	NN	offset
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+blur	NN	blur
+kernel	NN	kernel
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+:	:	:
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+where	WRB	where
+,	,	,
+,	,	,
+denote	VBP	denote
+the	DT	the
+elliptical	JJ	elliptical
+Gaussian	NNP	Gaussian
+PDF	NNP	PDF
+with	IN	with
+the	DT	the
+standard	JJ	standard
+deviation	NN	deviation
+of	IN	of
+and	CC	and
+<hi rend="italic">
+u	NN	u
+</hi>
++	SYM	+
+determines	VBZ	determine
+the	DT	the
+orientation	NN	orientation
+of	IN	of
+the	DT	the
+axes	NNS	ax
+of	IN	of
+the	DT	the
+elliptical	JJ	elliptical
+Gaussian	NNP	Gaussian
+PDF	NNP	PDF
+.	.	.
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+gives	VBZ	give
+an	DT	a
+example	NN	example
+of	IN	of
+two	CD	2
+anisotropic	JJ	anisotropic
+foveation	NN	foveation
+operators	NNS	operator
+,	,	,
+where	WRB	where
+is	VBZ	be
+a	DT	a
+7	CD	7
+×	SYM	×
+7	CD	7
+foveated	VBN	foveat
+patch	NN	patch
+,	,	,
+,	,	,
+and	CC	and
+the	DT	the
+different	JJ	different
+kernel	NN	kernel
+elongation	NN	elongation
+parameters	NNS	parameter
+and	CC	and
+are	VBP	be
+used	VBN	use
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Clearly	RB	clearly
+,	,	,
+this	DT	this
+radial	JJ	radial
+design	NN	design
+of	IN	of
+these	DT	this
+anisotropic	JJ	anisotropic
+foveation	NN	foveation
+operators	NNS	operator
+is	VBZ	be
+consistent	JJ	consistent
+with	IN	with
+HVS	NNP	HVS
+features	NNS	feature
+,	,	,
+which	WDT	which
+thereby	RB	thereby
+leads	VBZ	lead
+to	IN	to
+the	DT	the
+effective	JJ	effective
+structural	JJ	structural
+representation	NN	representation
+of	IN	of
+images	NNS	image
+for	IN	for
+the	DT	the
+FMIND	NNP	FMIND
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+will	MD	will
+propose	VB	propose
+the	DT	the
+FMIND	NNP	FMIND
+based	VBN	base
+on	IN	on
+the	DT	the
+foveated	VBN	foveat
+nonlocal	JJ	nonlocal
+self-similarity	NN	self-similarity
+between	IN	between
+different	JJ	different
+image	NN	image
+patches	NNS	patch
+in	IN	in
+the	DT	the
+same	JJ	same
+image	NN	image
+borrowing	VBG	borrow
+the	DT	the
+idea	NN	idea
+of	IN	of
+self-similarity	NN	self-similarity
+in	IN	in
+the	DT	the
+non-local	JJ	non-local
+means	NNS	means
+denoising	VBG	denoise
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+FMIND	NNP	FMIND
+is	VBZ	be
+expressed	VBN	express
+as	IN	as
+:	:	:
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+where	WRB	where
+denotes	VBZ	denote
+a	DT	a
+search	NN	search
+window	NN	window
+centered	VBN	center
+at	IN	at
+<hi rend="italic">
+x	NN	x
+</hi>
+,	,	,
+denotes	VBZ	denote
+the	DT	the
+distance	NN	distance
+between	IN	between
+the	DT	the
+foveated	JJ	foveated
+image	NN	image
+patches	NNS	patch
+and	CC	and
+;	:	;
+<hi rend="italic">
+n	NN	n
+</hi>
+is	VBZ	be
+a	DT	a
+normalization	NN	normalization
+constant	NN	constant
+to	TO	to
+ensure	VB	ensure
+that	IN	that
+the	DT	the
+maximum	NN	maximum
+of	IN	of
+is	VBZ	be
+1	CD	1
+;	:	;
+denotes	VBZ	denote
+the	DT	the
+variance	NN	variance
+of	IN	of
+the	DT	the
+foveated	NN	foveated
+image	NN	image
+patch	NN	patch
+centered	VBN	center
+at	IN	at
+<hi rend="italic">
+x	NN	x
+</hi>
+in	IN	in
+the	DT	the
+image	NN	image
+<hi rend="italic">
+I	CD	I
+</hi>
+,	,	,
+and	CC	and
+it	PRP	it
+controls	VBZ	control
+the	DT	the
+attenuation	NN	attenuation
+degree	NN	degree
+of	IN	of
+this	DT	this
+function	NN	function
+in	IN	in
+Equation	NNP	Equation
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+variance	NN	variance
+is	VBZ	be
+estimated	VBN	estimate
+as	IN	as
+the	DT	the
+mean	NN	mean
+of	IN	of
+foveated	VBN	foveat
+distances	NNS	distance
+for	IN	for
+all	PDT	all
+the	DT	the
+pixels	NNS	pixel
+in	IN	in
+the	DT	the
+foveated	NN	foveated
+patch	NN	patch
+.	.	.
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+where	WRB	where
+||	RB	||
+denotes	VBZ	denote
+the	DT	the
+number	NN	number
+of	IN	of
+pixels	NNS	pixel
+in	IN	in
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+structural	JJ	structural
+information	NN	information
+around	IN	around
+the	DT	the
+pixel	NN	pixel
+<hi rend="italic">
+x	NN	x
+</hi>
+in	IN	in
+the	DT	the
+image	NN	image
+<hi rend="italic">
+I	CD	I
+</hi>
+will	MD	will
+be	VB	be
+described	VBN	describe
+by	IN	by
+one-dimensional	JJ	one-dimensional
+vector	NN	vector
+of	IN	of
+size	NN	size
+,	,	,
+where	WRB	where
+|	NN	|
+<hi rend="italic">
+R	NN	R
+</hi>
+|	UH	|
+denotes	VBZ	denote
+the	DT	the
+number	NN	number
+of	IN	of
+pixels	NNS	pixel
+in	IN	in
+the	DT	the
+search	NN	search
+window	NN	window
+<hi rend="italic">
+R	NN	R
+</hi>
+by	IN	by
+means	NNS	means
+of	IN	of
+the	DT	the
+FMIND	NNP	FMIND
+.	.	.
+</s>
+<s type="decl">
+After	IN	after
+obtaining	VBG	obtain
+the	DT	the
+FMIND	NN	fmind
+for	IN	for
+the	DT	the
+reference	NN	reference
+and	CC	and
+float	NN	float
+images	NNS	image
+,	,	,
+the	DT	the
+similarity	NN	similarity
+metric	NN	metric
+between	IN	between
+two	CD	2
+pixels	NNS	pixel
+at	IN	at
+the	DT	the
+same	JJ	same
+position	NN	position
+<hi rend="italic">
+x	NN	x
+</hi>
+in	IN	in
+the	DT	the
+images	NNS	image
+<hi rend="italic">
+I	CD	I
+</hi>
+and	CC	and
+<hi rend="italic">
+J	NNP	J
+</hi>
+can	MD	can
+be	VB	be
+expressed	VBN	express
+as	IN	as
+the	DT	the
+mean	JJ	mean
+SAD	NN	SAD
+between	IN	between
+and	CC	and
+of	IN	of
+pixels	NNS	pixel
+in	IN	in
+<hi rend="italic">
+R	NNP	R
+</hi>
+.	.	.
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+R	NNP	R
+</hi>
+takes	VBZ	take
+a	DT	a
+six-neighborhood	NN	six-neighborhood
+in	IN	in
+this	DT	this
+paper	NN	paper
+.	.	.
+</s>
+</p>
+</text>

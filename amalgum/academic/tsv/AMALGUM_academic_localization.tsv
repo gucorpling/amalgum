@@ -1,0 +1,889 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=3. Cooperative Localization
+1-1	0-2	3.	_	_	_	_
+1-2	3-14	Cooperative	abstract[1]	new[1]	coref	2-2[2_1]
+1-3	15-27	Localization	abstract[1]	new[1]	_	_
+
+#Text=For range-free localization , a large deviation of distance estimation and position estimation may often happen , due to scarce information and difficult communication environment .
+2-1	28-31	For	_	_	_	_
+2-2	32-42	range-free	abstract[2]	giv[2]	coref	4-3[13_2]
+2-3	43-55	localization	abstract[2]	giv[2]	_	_
+2-4	56-57	,	_	_	_	_
+2-5	58-59	a	abstract[3]	new[3]	_	_
+2-6	60-65	large	abstract[3]	new[3]	_	_
+2-7	66-75	deviation	abstract[3]	new[3]	_	_
+2-8	76-78	of	abstract[3]	new[3]	_	_
+2-9	79-87	distance	abstract[3]|abstract|abstract[5]	new[3]|new|new[5]	coref	6-6
+2-10	88-98	estimation	abstract[3]|abstract[5]	new[3]|new[5]	_	_
+2-11	99-102	and	abstract[3]	new[3]	_	_
+2-12	103-111	position	abstract[3]|abstract|abstract[7]	new[3]|new|new[7]	coref|coref	6-9|16-9[94_7]
+2-13	112-122	estimation	abstract[3]|abstract[7]	new[3]|new[7]	_	_
+2-14	123-126	may	_	_	_	_
+2-15	127-132	often	_	_	_	_
+2-16	133-139	happen	_	_	_	_
+2-17	140-141	,	_	_	_	_
+2-18	142-145	due	_	_	_	_
+2-19	146-148	to	_	_	_	_
+2-20	149-155	scarce	abstract[8]	new[8]	coref	14-10[74_8]
+2-21	156-167	information	abstract[8]	new[8]	_	_
+2-22	168-171	and	_	_	_	_
+2-23	172-181	difficult	abstract[10]	new[10]	_	_
+2-24	182-195	communication	abstract|abstract[10]	new|new[10]	coref	7-10
+2-25	196-207	environment	abstract[10]	new[10]	_	_
+2-26	208-209	.	_	_	_	_
+
+#Text=These unwelcome estimations are called outliers .
+3-1	210-215	These	abstract[11]	new[11]	_	_
+3-2	216-225	unwelcome	abstract[11]	new[11]	_	_
+3-3	226-237	estimations	abstract[11]	new[11]	_	_
+3-4	238-241	are	_	_	_	_
+3-5	242-248	called	_	_	_	_
+3-6	249-257	outliers	abstract	new	coref	4-6
+3-7	258-259	.	_	_	_	_
+
+#Text=Especially in cooperative localization , outliers may lead to the failure of whole network .
+4-1	260-270	Especially	_	_	_	_
+4-2	271-273	in	_	_	_	_
+4-3	274-285	cooperative	abstract[13]	giv[13]	coref	5-13[0_13]
+4-4	286-298	localization	abstract[13]	giv[13]	_	_
+4-5	299-300	,	_	_	_	_
+4-6	301-309	outliers	abstract	giv	coref	5-6[18_0]
+4-7	310-313	may	_	_	_	_
+4-8	314-318	lead	_	_	_	_
+4-9	319-321	to	_	_	_	_
+4-10	322-325	the	event[15]	new[15]	coref	14-39[82_15]
+4-11	326-333	failure	event[15]	new[15]	_	_
+4-12	334-336	of	event[15]	new[15]	_	_
+4-13	337-342	whole	event[15]|abstract[16]	new[15]|new[16]	coref	14-35[80_16]
+4-14	343-350	network	event[15]|abstract[16]	new[15]|new[16]	_	_
+4-15	351-352	.	_	_	_	_
+
+#Text=To alleviate the effect of the outliers , we propose a cooperative localization method with outlier constraints .
+5-1	353-355	To	_	_	_	_
+5-2	356-365	alleviate	_	_	_	_
+5-3	366-369	the	abstract[17]	new[17]	coref	17-5[97_17]
+5-4	370-376	effect	abstract[17]	new[17]	_	_
+5-5	377-379	of	abstract[17]	new[17]	_	_
+5-6	380-383	the	abstract[17]|abstract[18]	new[17]|giv[18]	_	_
+5-7	384-392	outliers	abstract[17]|abstract[18]	new[17]|giv[18]	_	_
+5-8	393-394	,	_	_	_	_
+5-9	395-397	we	person	acc	ana	13-6
+5-10	398-405	propose	_	_	_	_
+5-11	406-407	a	abstract[21]	new[21]	coref	8-12[44_21]
+5-12	408-419	cooperative	abstract[21]	new[21]	_	_
+5-13	420-432	localization	abstract|abstract[21]	giv|new[21]	coref	10-3
+5-14	433-439	method	abstract[21]	new[21]	_	_
+5-15	440-444	with	abstract[21]	new[21]	_	_
+5-16	445-452	outlier	abstract[21]|abstract[22]	new[21]|new[22]	coref	6-1[24_22]
+5-17	453-464	constraints	abstract[21]|abstract[22]	new[21]|new[22]	_	_
+5-18	465-466	.	_	_	_	_
+
+#Text=Outlier constraints are divided into distance constraints and position constraints , which both rely on neighboring anchors .
+6-1	467-474	Outlier	abstract|abstract[24]	new|giv[24]	coref	6-6[26_24]
+6-2	475-486	constraints	abstract[24]	giv[24]	_	_
+6-3	487-490	are	_	_	_	_
+6-4	491-498	divided	_	_	_	_
+6-5	499-503	into	_	_	_	_
+6-6	504-512	distance	abstract|abstract[26]|abstract[27]	giv|giv[26]|giv[27]	coref|coref|coref	6-6[27_26]|6-9[29_27]|7-1[31_0]
+6-7	513-524	constraints	abstract[26]|abstract[27]	giv[26]|giv[27]	_	_
+6-8	525-528	and	abstract[27]	giv[27]	_	_
+6-9	529-537	position	abstract[27]|abstract|abstract[29]	giv[27]|giv|giv[29]	coref|coref	7-5|7-16[38_29]
+6-10	538-549	constraints	abstract[27]|abstract[29]	giv[27]|giv[29]	_	_
+6-11	550-551	,	abstract[27]|abstract[29]	giv[27]|giv[29]	_	_
+6-12	552-557	which	abstract[27]|abstract[29]	giv[27]|giv[29]	_	_
+6-13	558-562	both	abstract[27]|abstract[29]	giv[27]|giv[29]	_	_
+6-14	563-567	rely	abstract[27]|abstract[29]	giv[27]|giv[29]	_	_
+6-15	568-570	on	abstract[27]|abstract[29]	giv[27]|giv[29]	_	_
+6-16	571-582	neighboring	abstract[27]|abstract[29]|object[30]	giv[27]|giv[29]|new[30]	coref	7-13[36_30]
+6-17	583-590	anchors	abstract[27]|abstract[29]|object[30]	giv[27]|giv[29]|new[30]	_	_
+6-18	591-592	.	_	_	_	_
+
+#Text=The estimated distance and position will not exceed the communication range of neighboring anchors for both distance constraints and position constraints .
+7-1	593-596	The	abstract[31]|abstract[32]	giv[31]|new[32]	coref|coref	7-17[0_31]|13-20[68_32]
+7-2	597-606	estimated	abstract[31]|abstract[32]	giv[31]|new[32]	_	_
+7-3	607-615	distance	abstract[31]|abstract[32]	giv[31]|new[32]	_	_
+7-4	616-619	and	abstract[32]	new[32]	_	_
+7-5	620-628	position	abstract[32]|abstract	new[32]|giv	coref	7-20
+7-6	629-633	will	_	_	_	_
+7-7	634-637	not	_	_	_	_
+7-8	638-644	exceed	_	_	_	_
+7-9	645-648	the	abstract[35]	new[35]	coref	27-31[123_35]
+7-10	649-662	communication	abstract|abstract[35]	giv|new[35]	coref	27-31
+7-11	663-668	range	abstract[35]	new[35]	_	_
+7-12	669-671	of	abstract[35]	new[35]	_	_
+7-13	672-683	neighboring	abstract[35]|object[36]	new[35]|giv[36]	coref	18-9[0_36]
+7-14	684-691	anchors	abstract[35]|object[36]	new[35]|giv[36]	_	_
+7-15	692-695	for	_	_	_	_
+7-16	696-700	both	abstract[38]|abstract[39]	giv[38]|giv[39]	coref|coref	7-16[39_38]|7-20[41_39]
+7-17	701-709	distance	abstract|abstract[38]|abstract[39]	giv|giv[38]|giv[39]	coref	13-20[67_0]
+7-18	710-721	constraints	abstract[38]|abstract[39]	giv[38]|giv[39]	_	_
+7-19	722-725	and	abstract[39]	giv[39]	_	_
+7-20	726-734	position	abstract[39]|abstract|abstract[41]	giv[39]|giv|giv[41]	coref|coref	8-1[42_41]|9-9[48_0]
+7-21	735-746	constraints	abstract[39]|abstract[41]	giv[39]|giv[41]	_	_
+7-22	747-748	.	_	_	_	_
+
+#Text=These constraints are represented by the parameters and , which condition the cooperative method .
+8-1	749-754	These	abstract[42]	giv[42]	coref	11-2[55_42]
+8-2	755-766	constraints	abstract[42]	giv[42]	_	_
+8-3	767-770	are	_	_	_	_
+8-4	771-782	represented	_	_	_	_
+8-5	783-785	by	_	_	_	_
+8-6	786-789	the	abstract[43]	new[43]	_	_
+8-7	790-800	parameters	abstract[43]	new[43]	_	_
+8-8	801-804	and	abstract[43]	new[43]	_	_
+8-9	805-806	,	abstract[43]	new[43]	_	_
+8-10	807-812	which	abstract[43]	new[43]	_	_
+8-11	813-822	condition	abstract[43]	new[43]	_	_
+8-12	823-826	the	abstract[43]|abstract[44]	new[43]|giv[44]	coref	9-1[45_44]
+8-13	827-838	cooperative	abstract[43]|abstract[44]	new[43]|giv[44]	_	_
+8-14	839-845	method	abstract[43]|abstract[44]	new[43]|giv[44]	_	_
+8-15	846-847	.	_	_	_	_
+
+#Text=The cooperative method introduces message passing and updates the estimated position through the variational message passing rule .
+9-1	848-851	The	abstract[45]	giv[45]	coref	15-8[86_45]
+9-2	852-863	cooperative	abstract[45]	giv[45]	_	_
+9-3	864-870	method	abstract[45]	giv[45]	_	_
+9-4	871-881	introduces	_	_	_	_
+9-5	882-889	message	abstract|event[47]	new|new[47]	coref	9-15
+9-6	890-897	passing	event[47]	new[47]	_	_
+9-7	898-901	and	_	_	_	_
+9-8	902-909	updates	_	_	_	_
+9-9	910-913	the	abstract[48]	giv[48]	coref	13-24[70_48]
+9-10	914-923	estimated	abstract[48]	giv[48]	_	_
+9-11	924-932	position	abstract[48]	giv[48]	_	_
+9-12	933-940	through	_	_	_	_
+9-13	941-944	the	abstract[50]	new[50]	_	_
+9-14	945-956	variational	abstract[50]	new[50]	_	_
+9-15	957-964	message	abstract|abstract[50]	giv|new[50]	_	_
+9-16	965-972	passing	abstract[50]	new[50]	_	_
+9-17	973-977	rule	abstract[50]	new[50]	_	_
+9-18	978-979	.	_	_	_	_
+
+#Text=The final localization result depends on confidence of the agent to be located .
+10-1	980-983	The	abstract[52]	new[52]	_	_
+10-2	984-989	final	abstract[52]	new[52]	_	_
+10-3	990-1002	localization	abstract|abstract[52]	giv|new[52]	coref	12-2[56_0]
+10-4	1003-1009	result	abstract[52]	new[52]	_	_
+10-5	1010-1017	depends	_	_	_	_
+10-6	1018-1020	on	_	_	_	_
+10-7	1021-1031	confidence	abstract[53]	new[53]	_	_
+10-8	1032-1034	of	abstract[53]	new[53]	_	_
+10-9	1035-1038	the	abstract[53]|person[54]	new[53]|new[54]	coref	24-5[0_54]
+10-10	1039-1044	agent	abstract[53]|person[54]	new[53]|new[54]	_	_
+10-11	1045-1047	to	abstract[53]|person[54]	new[53]|new[54]	_	_
+10-12	1048-1050	be	abstract[53]|person[54]	new[53]|new[54]	_	_
+10-13	1051-1058	located	abstract[53]|person[54]	new[53]|new[54]	_	_
+10-14	1059-1060	.	_	_	_	_
+
+#Text=3.1. Outlier Constraints
+11-1	1061-1065	3.1.	_	_	_	_
+11-2	1066-1073	Outlier	abstract[55]	giv[55]	coref	18-7[102_55]
+11-3	1074-1085	Constraints	abstract[55]	giv[55]	_	_
+
+#Text=For range-based localization , the estimated distances are relatively accurate , so that the localization of agents is quite precise .
+12-1	1086-1089	For	_	_	_	_
+12-2	1090-1101	range-based	abstract[56]	giv[56]	coref	12-14[58_56]
+12-3	1102-1114	localization	abstract[56]	giv[56]	_	_
+12-4	1115-1116	,	_	_	_	_
+12-5	1117-1120	the	abstract[57]	new[57]	coref	17-18[100_57]
+12-6	1121-1130	estimated	abstract[57]	new[57]	_	_
+12-7	1131-1140	distances	abstract[57]	new[57]	_	_
+12-8	1141-1144	are	_	_	_	_
+12-9	1145-1155	relatively	_	_	_	_
+12-10	1156-1164	accurate	_	_	_	_
+12-11	1165-1166	,	_	_	_	_
+12-12	1167-1169	so	_	_	_	_
+12-13	1170-1174	that	_	_	_	_
+12-14	1175-1178	the	abstract[58]	giv[58]	coref	13-2[60_58]
+12-15	1179-1191	localization	abstract[58]	giv[58]	_	_
+12-16	1192-1194	of	abstract[58]	giv[58]	_	_
+12-17	1195-1201	agents	abstract[58]|person	giv[58]|new	coref	26-5
+12-18	1202-1204	is	_	_	_	_
+12-19	1205-1210	quite	_	_	_	_
+12-20	1211-1218	precise	_	_	_	_
+12-21	1219-1220	.	_	_	_	_
+
+#Text=For range-free localization , in our paper , the accuracy fails to meet the requirement of cooperative localization for both node distance and node position .
+13-1	1221-1224	For	_	_	_	_
+13-2	1225-1235	range-free	abstract[60]	giv[60]	coref	13-17[65_60]
+13-3	1236-1248	localization	abstract[60]	giv[60]	_	_
+13-4	1249-1250	,	_	_	_	_
+13-5	1251-1253	in	_	_	_	_
+13-6	1254-1257	our	person|abstract[62]	giv|new[62]	ana	15-6
+13-7	1258-1263	paper	abstract[62]	new[62]	_	_
+13-8	1264-1265	,	_	_	_	_
+13-9	1266-1269	the	abstract[63]	new[63]	coref	16-6[92_63]
+13-10	1270-1278	accuracy	abstract[63]	new[63]	_	_
+13-11	1279-1284	fails	_	_	_	_
+13-12	1285-1287	to	_	_	_	_
+13-13	1288-1292	meet	_	_	_	_
+13-14	1293-1296	the	abstract[64]	new[64]	_	_
+13-15	1297-1308	requirement	abstract[64]	new[64]	_	_
+13-16	1309-1311	of	abstract[64]	new[64]	_	_
+13-17	1312-1323	cooperative	abstract[64]|abstract[65]	new[64]|giv[65]	coref	14-39[0_65]
+13-18	1324-1336	localization	abstract[64]|abstract[65]	new[64]|giv[65]	_	_
+13-19	1337-1340	for	abstract[64]|abstract[65]	new[64]|giv[65]	_	_
+13-20	1341-1345	both	abstract[64]|abstract[65]|abstract[67]|abstract[68]	new[64]|giv[65]|giv[67]|giv[68]	coref|coref	14-2[71_67]|14-2[72_68]
+13-21	1346-1350	node	abstract[64]|abstract[65]|abstract|abstract[67]|abstract[68]	new[64]|giv[65]|new|giv[67]|giv[68]	coref	13-24
+13-22	1351-1359	distance	abstract[64]|abstract[65]|abstract[67]|abstract[68]	new[64]|giv[65]|giv[67]|giv[68]	_	_
+13-23	1360-1363	and	abstract[64]|abstract[65]|abstract[68]	new[64]|giv[65]|giv[68]	_	_
+13-24	1364-1368	node	abstract[64]|abstract[65]|abstract[68]|abstract|abstract[70]	new[64]|giv[65]|giv[68]|giv|giv[70]	coref	14-6[0_70]
+13-25	1369-1377	position	abstract[64]|abstract[65]|abstract[68]|abstract[70]	new[64]|giv[65]|giv[68]|giv[70]	_	_
+13-26	1378-1379	.	_	_	_	_
+
+#Text=If the outlier distance and position are regarded as key information of a virtual anchor , this will cause a large derivation in the subsequent iteration , leading , finally , to disruption of the whole network and localization failure .
+14-1	1380-1382	If	_	_	_	_
+14-2	1383-1386	the	abstract[71]|abstract[72]	giv[71]|giv[72]	coref	15-18[0_71]
+14-3	1387-1394	outlier	abstract[71]|abstract[72]	giv[71]|giv[72]	_	_
+14-4	1395-1403	distance	abstract[71]|abstract[72]	giv[71]|giv[72]	_	_
+14-5	1404-1407	and	abstract[72]	giv[72]	_	_
+14-6	1408-1416	position	abstract[72]|abstract	giv[72]|giv	coref	15-15
+14-7	1417-1420	are	_	_	_	_
+14-8	1421-1429	regarded	_	_	_	_
+14-9	1430-1432	as	_	_	_	_
+14-10	1433-1436	key	abstract[74]	giv[74]	_	_
+14-11	1437-1448	information	abstract[74]	giv[74]	_	_
+14-12	1449-1451	of	abstract[74]	giv[74]	_	_
+14-13	1452-1453	a	abstract[74]|object[75]	giv[74]|new[75]	ana	14-17[0_75]
+14-14	1454-1461	virtual	abstract[74]|object[75]	giv[74]|new[75]	_	_
+14-15	1462-1468	anchor	abstract[74]|object[75]	giv[74]|new[75]	_	_
+14-16	1469-1470	,	_	_	_	_
+14-17	1471-1475	this	object	giv	coref	24-7
+14-18	1476-1480	will	_	_	_	_
+14-19	1481-1486	cause	_	_	_	_
+14-20	1487-1488	a	abstract[77]	new[77]	_	_
+14-21	1489-1494	large	abstract[77]	new[77]	_	_
+14-22	1495-1505	derivation	abstract[77]	new[77]	_	_
+14-23	1506-1508	in	_	_	_	_
+14-24	1509-1512	the	abstract[78]	new[78]	_	_
+14-25	1513-1523	subsequent	abstract[78]	new[78]	_	_
+14-26	1524-1533	iteration	abstract[78]	new[78]	_	_
+14-27	1534-1535	,	_	_	_	_
+14-28	1536-1543	leading	_	_	_	_
+14-29	1544-1545	,	_	_	_	_
+14-30	1546-1553	finally	_	_	_	_
+14-31	1554-1555	,	_	_	_	_
+14-32	1556-1558	to	_	_	_	_
+14-33	1559-1569	disruption	event[79]	new[79]	_	_
+14-34	1570-1572	of	event[79]	new[79]	_	_
+14-35	1573-1576	the	event[79]|abstract[80]	new[79]|giv[80]	coref	31-2[150_80]
+14-36	1577-1582	whole	event[79]|abstract[80]	new[79]|giv[80]	_	_
+14-37	1583-1590	network	event[79]|abstract[80]	new[79]|giv[80]	_	_
+14-38	1591-1594	and	event[79]	new[79]	_	_
+14-39	1595-1607	localization	event[79]|abstract|event[82]	new[79]|giv|giv[82]	coref	17-9[98_0]
+14-40	1608-1615	failure	event[79]|event[82]	new[79]|giv[82]	_	_
+14-41	1616-1617	.	_	_	_	_
+
+#Text=To avoid this problem , we propose the outlier constraint method , which includes position constraint and distance constraint .
+15-1	1618-1620	To	_	_	_	_
+15-2	1621-1626	avoid	_	_	_	_
+15-3	1627-1631	this	abstract[83]	new[83]	_	_
+15-4	1632-1639	problem	abstract[83]	new[83]	_	_
+15-5	1640-1641	,	_	_	_	_
+15-6	1642-1644	we	person	giv	ana	28-3
+15-7	1645-1652	propose	_	_	_	_
+15-8	1653-1656	the	abstract[86]	giv[86]	coref	16-12[95_86]
+15-9	1657-1664	outlier	abstract[86]	giv[86]	_	_
+15-10	1665-1675	constraint	abstract|abstract[86]	new|giv[86]	coref	15-15[88_0]
+15-11	1676-1682	method	abstract[86]	giv[86]	_	_
+15-12	1683-1684	,	abstract[86]	giv[86]	_	_
+15-13	1685-1690	which	abstract[86]	giv[86]	_	_
+15-14	1691-1699	includes	abstract[86]	giv[86]	_	_
+15-15	1700-1708	position	abstract[86]|abstract|abstract[88]	giv[86]|giv|giv[88]	coref|coref	15-18[90_88]|31-6[151_0]
+15-16	1709-1719	constraint	abstract[86]|abstract[88]	giv[86]|giv[88]	_	_
+15-17	1720-1723	and	abstract[86]	giv[86]	_	_
+15-18	1724-1732	distance	abstract[86]|abstract|abstract[90]	giv[86]|giv|giv[90]	ana|coref	16-1[0_90]|16-9
+15-19	1733-1743	constraint	abstract[86]|abstract[90]	giv[86]|giv[90]	_	_
+15-20	1744-1745	.	_	_	_	_
+
+#Text=It is inevitable to have low accuracy of distance estimation with the multi-hop method .
+16-1	1746-1748	It	abstract	giv	coref	27-9[118_0]
+16-2	1749-1751	is	_	_	_	_
+16-3	1752-1762	inevitable	_	_	_	_
+16-4	1763-1765	to	_	_	_	_
+16-5	1766-1770	have	_	_	_	_
+16-6	1771-1774	low	abstract[92]	giv[92]	_	_
+16-7	1775-1783	accuracy	abstract[92]	giv[92]	_	_
+16-8	1784-1786	of	abstract[92]	giv[92]	_	_
+16-9	1787-1795	distance	abstract[92]|abstract|abstract[94]	giv[92]|giv|giv[94]	coref	17-1[96_0]
+16-10	1796-1806	estimation	abstract[92]|abstract[94]	giv[92]|giv[94]	_	_
+16-11	1807-1811	with	_	_	_	_
+16-12	1812-1815	the	abstract[95]	giv[95]	_	_
+16-13	1816-1825	multi-hop	abstract[95]	giv[95]	_	_
+16-14	1826-1832	method	abstract[95]	giv[95]	_	_
+16-15	1833-1834	.	_	_	_	_
+
+#Text=The outlier distance has a negative effect on cooperative localization , so it is better to exclude the outlier distances .
+17-1	1835-1838	The	abstract[96]	giv[96]	coref	18-1[101_96]
+17-2	1839-1846	outlier	abstract[96]	giv[96]	_	_
+17-3	1847-1855	distance	abstract[96]	giv[96]	_	_
+17-4	1856-1859	has	_	_	_	_
+17-5	1860-1861	a	abstract[97]	giv[97]	coref	31-14[153_97]
+17-6	1862-1870	negative	abstract[97]	giv[97]	_	_
+17-7	1871-1877	effect	abstract[97]	giv[97]	_	_
+17-8	1878-1880	on	abstract[97]	giv[97]	_	_
+17-9	1881-1892	cooperative	abstract[97]|abstract[98]	giv[97]|giv[98]	ana	17-13[0_98]
+17-10	1893-1905	localization	abstract[97]|abstract[98]	giv[97]|giv[98]	_	_
+17-11	1906-1907	,	_	_	_	_
+17-12	1908-1910	so	_	_	_	_
+17-13	1911-1913	it	abstract	giv	coref	31-18[154_0]
+17-14	1914-1916	is	_	_	_	_
+17-15	1917-1923	better	_	_	_	_
+17-16	1924-1926	to	_	_	_	_
+17-17	1927-1934	exclude	_	_	_	_
+17-18	1935-1938	the	abstract[100]	giv[100]	_	_
+17-19	1939-1946	outlier	abstract[100]	giv[100]	_	_
+17-20	1947-1956	distances	abstract[100]	giv[100]	_	_
+17-21	1957-1958	.	_	_	_	_
+
+#Text=The outlier distance is excluded by constraints from anchors , as shown in
+18-1	1959-1962	The	abstract[101]	giv[101]	coref	24-2[107_101]
+18-2	1963-1970	outlier	abstract[101]	giv[101]	_	_
+18-3	1971-1979	distance	abstract[101]	giv[101]	_	_
+18-4	1980-1982	is	_	_	_	_
+18-5	1983-1991	excluded	_	_	_	_
+18-6	1992-1994	by	_	_	_	_
+18-7	1995-2006	constraints	abstract[102]	giv[102]	_	_
+18-8	2007-2011	from	abstract[102]	giv[102]	_	_
+18-9	2012-2019	anchors	abstract[102]|object	giv[102]|giv	coref	27-27[121_0]
+18-10	2020-2021	,	_	_	_	_
+18-11	2022-2024	as	_	_	_	_
+18-12	2025-2030	shown	_	_	_	_
+18-13	2031-2033	in	_	_	_	_
+
+#Text=Figure 5
+19-1	2034-2040	Figure	abstract[104]	new[104]	coref	23-1[106_104]
+19-2	2041-2042	5	abstract[104]	new[104]	_	_
+
+#Text=and
+20-1	2043-2046	and	_	_	_	_
+
+#Text=Figure 6
+21-1	2047-2053	Figure	abstract[105]	new[105]	coref	25-1[111_105]
+21-2	2054-2055	6	abstract[105]	new[105]	_	_
+
+#Text=.
+22-1	2056-2057	.	_	_	_	_
+
+#Text=Figure 5
+23-1	2058-2064	Figure	abstract[106]	giv[106]	_	_
+23-2	2065-2066	5	abstract[106]	giv[106]	_	_
+
+#Text=shows the distance between agent and anchor .
+24-1	2067-2072	shows	_	_	_	_
+24-2	2073-2076	the	abstract[107]	giv[107]	coref	26-2[112_107]
+24-3	2077-2085	distance	abstract[107]	giv[107]	_	_
+24-4	2086-2093	between	abstract[107]	giv[107]	_	_
+24-5	2094-2099	agent	abstract[107]|person|person[109]	giv[107]|giv|new[109]	coref|coref	27-5|27-5[116_109]
+24-6	2100-2103	and	abstract[107]|person[109]	giv[107]|new[109]	_	_
+24-7	2104-2110	anchor	abstract[107]|person[109]|object	giv[107]|new[109]|giv	coref	27-7
+24-8	2111-2112	.	_	_	_	_
+
+#Text=Figure 6
+25-1	2113-2119	Figure	abstract[111]	giv[111]	_	_
+25-2	2120-2121	6	abstract[111]	giv[111]	_	_
+
+#Text=shows the distance between agents .
+26-1	2122-2127	shows	_	_	_	_
+26-2	2128-2131	the	abstract[112]	giv[112]	coref	27-2[114_112]
+26-3	2132-2140	distance	abstract[112]	giv[112]	_	_
+26-4	2141-2148	between	abstract[112]	giv[112]	_	_
+26-5	2149-2155	agents	abstract[112]|person	giv[112]|giv	coref	29-5
+26-6	2156-2157	.	_	_	_	_
+
+#Text=For the distance between agent and anchor , the outlier constraint is ( 14 ) where is the estimated distance according to Section 2 , denotes the neighboring anchors within communication range of , denotes the true distance between anchor and any anchor in .
+27-1	2158-2161	For	_	_	_	_
+27-2	2162-2165	the	abstract[114]	giv[114]	_	_
+27-3	2166-2174	distance	abstract[114]	giv[114]	_	_
+27-4	2175-2182	between	abstract[114]	giv[114]	_	_
+27-5	2183-2188	agent	abstract[114]|person|person[116]	giv[114]|giv|giv[116]	coref|coref	31-10[152_0]|34-5[166_116]
+27-6	2189-2192	and	abstract[114]|person[116]	giv[114]|giv[116]	_	_
+27-7	2193-2199	anchor	abstract[114]|person[116]|object	giv[114]|giv[116]|giv	coref	27-40
+27-8	2200-2201	,	_	_	_	_
+27-9	2202-2205	the	abstract[118]	giv[118]	coref	27-18[119_118]
+27-10	2206-2213	outlier	abstract[118]	giv[118]	_	_
+27-11	2214-2224	constraint	abstract[118]	giv[118]	_	_
+27-12	2225-2227	is	abstract[118]	giv[118]	_	_
+27-13	2228-2229	(	abstract[118]	giv[118]	_	_
+27-14	2230-2232	14	abstract[118]	giv[118]	_	_
+27-15	2233-2234	)	abstract[118]	giv[118]	_	_
+27-16	2235-2240	where	_	_	_	_
+27-17	2241-2243	is	_	_	_	_
+27-18	2244-2247	the	abstract[119]	giv[119]	coref	27-36[124_119]
+27-19	2248-2257	estimated	abstract[119]	giv[119]	_	_
+27-20	2258-2266	distance	abstract[119]	giv[119]	_	_
+27-21	2267-2276	according	abstract[119]	giv[119]	_	_
+27-22	2277-2279	to	abstract[119]	giv[119]	_	_
+27-23	2280-2287	Section	abstract[119]|abstract[120]	giv[119]|new[120]	coref	29-21[136_120]
+27-24	2288-2289	2	abstract[119]|abstract[120]	giv[119]|new[120]	_	_
+27-25	2290-2291	,	_	_	_	_
+27-26	2292-2299	denotes	_	_	_	_
+27-27	2300-2303	the	object[121]	giv[121]	coref	29-25[137_121]
+27-28	2304-2315	neighboring	object[121]	giv[121]	_	_
+27-29	2316-2323	anchors	object[121]	giv[121]	_	_
+27-30	2324-2330	within	object[121]	giv[121]	_	_
+27-31	2331-2344	communication	object[121]|abstract|abstract[123]	giv[121]|giv|giv[123]	coref|coref	29-29|29-29[139_123]
+27-32	2345-2350	range	object[121]|abstract[123]	giv[121]|giv[123]	_	_
+27-33	2351-2353	of	object[121]|abstract[123]	giv[121]|giv[123]	_	_
+27-34	2354-2355	,	_	_	_	_
+27-35	2356-2363	denotes	_	_	_	_
+27-36	2364-2367	the	abstract[124]	giv[124]	coref	28-6[0_124]
+27-37	2368-2372	true	abstract[124]	giv[124]	_	_
+27-38	2373-2381	distance	abstract[124]	giv[124]	_	_
+27-39	2382-2389	between	abstract[124]	giv[124]	_	_
+27-40	2390-2396	anchor	abstract[124]|object|abstract[126]	giv[124]|giv|new[126]	coref|coref	27-42[127_0]|29-47[145_126]
+27-41	2397-2400	and	abstract[124]|abstract[126]	giv[124]|new[126]	_	_
+27-42	2401-2404	any	abstract[124]|abstract[126]|object[127]	giv[124]|new[126]|giv[127]	coref	29-47[144_127]
+27-43	2405-2411	anchor	abstract[124]|abstract[126]|object[127]	giv[124]|new[126]|giv[127]	_	_
+27-44	2412-2414	in	abstract[124]|abstract[126]|object[127]	giv[124]|new[126]|giv[127]	_	_
+27-45	2415-2416	.	_	_	_	_
+
+#Text=Hence , we propose a constraint function as ( 15 )
+28-1	2417-2422	Hence	_	_	_	_
+28-2	2423-2424	,	_	_	_	_
+28-3	2425-2427	we	person	giv	ana	30-3
+28-4	2428-2435	propose	_	_	_	_
+28-5	2436-2437	a	abstract[130]	new[130]	coref	30-5[149_130]
+28-6	2438-2448	constraint	abstract|abstract[130]	giv|new[130]	coref	29-2[131_0]
+28-7	2449-2457	function	abstract[130]	new[130]	_	_
+28-8	2458-2460	as	_	_	_	_
+28-9	2461-2462	(	_	_	_	_
+28-10	2463-2465	15	_	_	_	_
+28-11	2466-2467	)	_	_	_	_
+
+#Text=For the distance between agents , the outlier constraint is ( 16 ) where is the estimated distance according to Section 2 , denotes the neighboring anchors within communication range of , denotes the neighboring anchors within communication range of , denotes the real distance between any anchor in and any anchor in .
+29-1	2468-2471	For	_	_	_	_
+29-2	2472-2475	the	abstract[131]|abstract[134]	giv[131]|giv[134]	coref|coref	29-2[134_131]|29-16[135_134]
+29-3	2476-2484	distance	abstract[131]|abstract[134]	giv[131]|giv[134]	_	_
+29-4	2485-2492	between	abstract[131]|abstract[134]	giv[131]|giv[134]	_	_
+29-5	2493-2499	agents	abstract[131]|person|abstract[134]	giv[131]|giv|giv[134]	coref	33-5
+29-6	2500-2501	,	abstract[134]	giv[134]	_	_
+29-7	2502-2505	the	abstract[134]	giv[134]	_	_
+29-8	2506-2513	outlier	person|abstract[134]	new|giv[134]	_	_
+29-9	2514-2524	constraint	abstract[134]	giv[134]	_	_
+29-10	2525-2527	is	_	_	_	_
+29-11	2528-2529	(	_	_	_	_
+29-12	2530-2532	16	_	_	_	_
+29-13	2533-2534	)	_	_	_	_
+29-14	2535-2540	where	_	_	_	_
+29-15	2541-2543	is	_	_	_	_
+29-16	2544-2547	the	abstract[135]	giv[135]	coref	29-43[143_135]
+29-17	2548-2557	estimated	abstract[135]	giv[135]	_	_
+29-18	2558-2566	distance	abstract[135]	giv[135]	_	_
+29-19	2567-2576	according	abstract[135]	giv[135]	_	_
+29-20	2577-2579	to	abstract[135]	giv[135]	_	_
+29-21	2580-2587	Section	abstract[135]|abstract[136]	giv[135]|giv[136]	_	_
+29-22	2588-2589	2	abstract[135]|abstract[136]	giv[135]|giv[136]	_	_
+29-23	2590-2591	,	_	_	_	_
+29-24	2592-2599	denotes	_	_	_	_
+29-25	2600-2603	the	object[137]	giv[137]	coref	29-34[140_137]
+29-26	2604-2615	neighboring	object[137]	giv[137]	_	_
+29-27	2616-2623	anchors	object[137]	giv[137]	_	_
+29-28	2624-2630	within	object[137]	giv[137]	_	_
+29-29	2631-2644	communication	object[137]|abstract|abstract[139]	giv[137]|giv|giv[139]	coref|coref	29-38|29-38[142_139]
+29-30	2645-2650	range	object[137]|abstract[139]	giv[137]|giv[139]	_	_
+29-31	2651-2653	of	object[137]|abstract[139]	giv[137]|giv[139]	_	_
+29-32	2654-2655	,	_	_	_	_
+29-33	2656-2663	denotes	_	_	_	_
+29-34	2664-2667	the	object[140]	giv[140]	coref	32-10[157_140]
+29-35	2668-2679	neighboring	object[140]	giv[140]	_	_
+29-36	2680-2687	anchors	object[140]	giv[140]	_	_
+29-37	2688-2694	within	object[140]	giv[140]	_	_
+29-38	2695-2708	communication	object[140]|abstract|abstract[142]	giv[140]|giv|giv[142]	coref|coref	33-15|33-14[163_142]
+29-39	2709-2714	range	object[140]|abstract[142]	giv[140]|giv[142]	_	_
+29-40	2715-2717	of	object[140]|abstract[142]	giv[140]|giv[142]	_	_
+29-41	2718-2719	,	_	_	_	_
+29-42	2720-2727	denotes	_	_	_	_
+29-43	2728-2731	the	abstract[143]	giv[143]	coref	30-6[0_143]
+29-44	2732-2736	real	abstract[143]	giv[143]	_	_
+29-45	2737-2745	distance	abstract[143]	giv[143]	_	_
+29-46	2746-2753	between	abstract[143]	giv[143]	_	_
+29-47	2754-2757	any	abstract[143]|object[144]|abstract[145]	giv[143]|giv[144]|giv[145]	coref	29-51[146_144]
+29-48	2758-2764	anchor	abstract[143]|object[144]|abstract[145]	giv[143]|giv[144]|giv[145]	_	_
+29-49	2765-2767	in	abstract[143]|object[144]|abstract[145]	giv[143]|giv[144]|giv[145]	_	_
+29-50	2768-2771	and	abstract[143]|abstract[145]	giv[143]|giv[145]	_	_
+29-51	2772-2775	any	abstract[143]|abstract[145]|object[146]	giv[143]|giv[145]|giv[146]	coref	34-8[168_146]
+29-52	2776-2782	anchor	abstract[143]|abstract[145]|object[146]	giv[143]|giv[145]|giv[146]	_	_
+29-53	2783-2785	in	abstract[143]|abstract[145]|object[146]	giv[143]|giv[145]|giv[146]	_	_
+29-54	2786-2787	.	_	_	_	_
+
+#Text=Hence , we propose the constraint function ( 17 )
+30-1	2788-2793	Hence	_	_	_	_
+30-2	2794-2795	,	_	_	_	_
+30-3	2796-2798	we	person	giv	ana	35-3
+30-4	2799-2806	propose	_	_	_	_
+30-5	2807-2810	the	abstract[149]	giv[149]	coref	35-5[180_149]
+30-6	2811-2821	constraint	abstract|abstract[149]	giv|giv[149]	coref	34-3[164_0]
+30-7	2822-2830	function	abstract[149]	giv[149]	_	_
+30-8	2831-2832	(	_	_	_	_
+30-9	2833-2835	17	_	_	_	_
+30-10	2836-2837	)	_	_	_	_
+
+#Text=In a cooperative network , the outlier position of the agent also has a negative effect on cooperative localization .
+31-1	2838-2840	In	_	_	_	_
+31-2	2841-2842	a	abstract[150]	giv[150]	coref	33-2[158_150]
+31-3	2843-2854	cooperative	abstract[150]	giv[150]	_	_
+31-4	2855-2862	network	abstract[150]	giv[150]	_	_
+31-5	2863-2864	,	_	_	_	_
+31-6	2865-2868	the	abstract[151]	giv[151]	_	_
+31-7	2869-2876	outlier	abstract[151]	giv[151]	_	_
+31-8	2877-2885	position	abstract[151]	giv[151]	_	_
+31-9	2886-2888	of	abstract[151]	giv[151]	_	_
+31-10	2889-2892	the	abstract[151]|person[152]	giv[151]|giv[152]	coref	34-5[165_152]
+31-11	2893-2898	agent	abstract[151]|person[152]	giv[151]|giv[152]	_	_
+31-12	2899-2903	also	_	_	_	_
+31-13	2904-2907	has	_	_	_	_
+31-14	2908-2909	a	abstract[153]	giv[153]	_	_
+31-15	2910-2918	negative	abstract[153]	giv[153]	_	_
+31-16	2919-2925	effect	abstract[153]	giv[153]	_	_
+31-17	2926-2928	on	abstract[153]	giv[153]	_	_
+31-18	2929-2940	cooperative	abstract[153]|abstract[154]	giv[153]|giv[154]	ana	32-1[0_154]
+31-19	2941-2953	localization	abstract[153]|abstract[154]	giv[153]|giv[154]	_	_
+31-20	2954-2955	.	_	_	_	_
+
+#Text=It is better to exclude these outlier positions through neighboring anchors .
+32-1	2956-2958	It	abstract	giv	ana	34-8
+32-2	2959-2961	is	_	_	_	_
+32-3	2962-2968	better	_	_	_	_
+32-4	2969-2971	to	_	_	_	_
+32-5	2972-2979	exclude	_	_	_	_
+32-6	2980-2985	these	abstract[156]	new[156]	coref	45-6[244_156]
+32-7	2986-2993	outlier	abstract[156]	new[156]	_	_
+32-8	2994-3003	positions	abstract[156]	new[156]	_	_
+32-9	3004-3011	through	_	_	_	_
+32-10	3012-3023	neighboring	object[157]	giv[157]	coref	34-30[173_157]
+32-11	3024-3031	anchors	object[157]	giv[157]	_	_
+32-12	3032-3033	.	_	_	_	_
+
+#Text=In the network , agents can communicate with all nodes that are in their communication range .
+33-1	3034-3036	In	_	_	_	_
+33-2	3037-3040	the	abstract[158]	giv[158]	_	_
+33-3	3041-3048	network	abstract[158]	giv[158]	_	_
+33-4	3049-3050	,	_	_	_	_
+33-5	3051-3057	agents	person	giv	ana	33-14
+33-6	3058-3061	can	_	_	_	_
+33-7	3062-3073	communicate	_	_	_	_
+33-8	3074-3078	with	_	_	_	_
+33-9	3079-3082	all	abstract[160]	new[160]	coref	38-17[201_160]
+33-10	3083-3088	nodes	abstract[160]	new[160]	_	_
+33-11	3089-3093	that	abstract[160]	new[160]	_	_
+33-12	3094-3097	are	abstract[160]	new[160]	_	_
+33-13	3098-3100	in	abstract[160]	new[160]	_	_
+33-14	3101-3106	their	abstract[160]|person|abstract[163]	new[160]|giv|giv[163]	coref	34-14[170_163]
+33-15	3107-3120	communication	abstract[160]|abstract|abstract[163]	new[160]|giv|giv[163]	coref	34-15
+33-16	3121-3126	range	abstract[160]|abstract[163]	new[160]|giv[163]	_	_
+33-17	3127-3128	.	_	_	_	_
+
+#Text=Therefore , distance between the agent and its neighboring anchor is lower than the communication range : ( 18 ) where is the estimated position of agent , denotes the neighboring anchors within communication range of , denotes position of any anchor in .
+34-1	3129-3138	Therefore	_	_	_	_
+34-2	3139-3140	,	_	_	_	_
+34-3	3141-3149	distance	abstract[164]	giv[164]	coref	35-6[0_164]
+34-4	3150-3157	between	abstract[164]	giv[164]	_	_
+34-5	3158-3161	the	abstract[164]|person[165]|person[166]	giv[164]|giv[165]|giv[166]	coref|coref	34-27[0_165]|41-26[225_166]
+34-6	3162-3167	agent	abstract[164]|person[165]|person[166]	giv[164]|giv[165]|giv[166]	_	_
+34-7	3168-3171	and	abstract[164]|person[166]	giv[164]|giv[166]	_	_
+34-8	3172-3175	its	abstract[164]|person[166]|abstract|object[168]	giv[164]|giv[166]|giv|giv[168]	coref|coref	34-41[177_168]|36-2[186_0]
+34-9	3176-3187	neighboring	abstract[164]|person[166]|object[168]	giv[164]|giv[166]|giv[168]	_	_
+34-10	3188-3194	anchor	abstract[164]|person[166]|object[168]	giv[164]|giv[166]|giv[168]	_	_
+34-11	3195-3197	is	_	_	_	_
+34-12	3198-3203	lower	_	_	_	_
+34-13	3204-3208	than	_	_	_	_
+34-14	3209-3212	the	abstract[170]	giv[170]	coref	34-34[175_170]
+34-15	3213-3226	communication	abstract|abstract[170]	giv|giv[170]	coref	34-34
+34-16	3227-3232	range	abstract[170]	giv[170]	_	_
+34-17	3233-3234	:	_	_	_	_
+34-18	3235-3236	(	_	_	_	_
+34-19	3237-3239	18	_	_	_	_
+34-20	3240-3241	)	_	_	_	_
+34-21	3242-3247	where	_	_	_	_
+34-22	3248-3250	is	_	_	_	_
+34-23	3251-3254	the	abstract[171]	new[171]	_	_
+34-24	3255-3264	estimated	abstract[171]	new[171]	_	_
+34-25	3265-3273	position	abstract[171]	new[171]	_	_
+34-26	3274-3276	of	abstract[171]	new[171]	_	_
+34-27	3277-3282	agent	abstract[171]|person	new[171]|giv	coref	41-26[224_0]
+34-28	3283-3284	,	_	_	_	_
+34-29	3285-3292	denotes	_	_	_	_
+34-30	3293-3296	the	object[173]	giv[173]	_	_
+34-31	3297-3308	neighboring	object[173]	giv[173]	_	_
+34-32	3309-3316	anchors	object[173]	giv[173]	_	_
+34-33	3317-3323	within	object[173]	giv[173]	_	_
+34-34	3324-3337	communication	object[173]|abstract|abstract[175]	giv[173]|giv|giv[175]	_	_
+34-35	3338-3343	range	object[173]|abstract[175]	giv[173]|giv[175]	_	_
+34-36	3344-3346	of	object[173]|abstract[175]	giv[173]|giv[175]	_	_
+34-37	3347-3348	,	_	_	_	_
+34-38	3349-3356	denotes	_	_	_	_
+34-39	3357-3365	position	abstract[176]	new[176]	coref	35-20[185_176]
+34-40	3366-3368	of	abstract[176]	new[176]	_	_
+34-41	3369-3372	any	abstract[176]|object[177]	new[176]|giv[177]	coref	41-30[226_177]
+34-42	3373-3379	anchor	abstract[176]|object[177]	new[176]|giv[177]	_	_
+34-43	3380-3382	in	abstract[176]|object[177]	new[176]|giv[177]	_	_
+34-44	3383-3384	.	_	_	_	_
+
+#Text=Hence , we propose the constraint function ( 19 ) where is the Euclidean norm of estimated position and true position .
+35-1	3385-3390	Hence	_	_	_	_
+35-2	3391-3392	,	_	_	_	_
+35-3	3393-3395	we	person	giv	ana	40-6
+35-4	3396-3403	propose	_	_	_	_
+35-5	3404-3407	the	abstract[180]	giv[180]	coref	37-8[189_180]
+35-6	3408-3418	constraint	abstract|abstract[180]	giv|giv[180]	coref	41-16[221_0]
+35-7	3419-3427	function	abstract[180]	giv[180]	_	_
+35-8	3428-3429	(	abstract[180]	giv[180]	_	_
+35-9	3430-3432	19	abstract[180]|abstract	giv[180]|new	_	_
+35-10	3433-3434	)	abstract[180]	giv[180]	_	_
+35-11	3435-3440	where	abstract[180]|abstract[183]	giv[180]|new[183]	_	_
+35-12	3441-3443	is	abstract[180]|abstract[183]	giv[180]|new[183]	_	_
+35-13	3444-3447	the	abstract[180]|abstract[183]	giv[180]|new[183]	_	_
+35-14	3448-3457	Euclidean	abstract[180]|abstract|abstract[183]	giv[180]|new|new[183]	_	_
+35-15	3458-3462	norm	abstract[180]|abstract[183]	giv[180]|new[183]	_	_
+35-16	3463-3465	of	abstract[180]|abstract[183]	giv[180]|new[183]	_	_
+35-17	3466-3475	estimated	abstract[180]|abstract[183]|abstract[184]	giv[180]|new[183]|new[184]	_	_
+35-18	3476-3484	position	abstract[180]|abstract[183]|abstract[184]	giv[180]|new[183]|new[184]	_	_
+35-19	3485-3488	and	abstract[180]|abstract[183]	giv[180]|new[183]	_	_
+35-20	3489-3493	true	abstract[180]|abstract[183]|abstract[185]	giv[180]|new[183]|giv[185]	coref	45-29[0_185]
+35-21	3494-3502	position	abstract[180]|abstract[183]|abstract[185]	giv[180]|new[183]|giv[185]	_	_
+35-22	3503-3504	.	_	_	_	_
+
+#Text=3.2. Cooperative Localization
+36-1	3505-3509	3.2.	_	_	_	_
+36-2	3510-3521	Cooperative	abstract[186]	giv[186]	coref	37-15[0_186]
+36-3	3522-3534	Localization	abstract[186]	giv[186]	_	_
+
+#Text=Thanks to the locally factorized structure of the joint likelihood function , the cooperative localization problem can be addressed under the framework of factor graph .
+37-1	3535-3541	Thanks	_	_	_	_
+37-2	3542-3544	to	_	_	_	_
+37-3	3545-3548	the	abstract[187]	new[187]	_	_
+37-4	3549-3556	locally	abstract[187]	new[187]	_	_
+37-5	3557-3567	factorized	abstract[187]	new[187]	_	_
+37-6	3568-3577	structure	abstract[187]	new[187]	_	_
+37-7	3578-3580	of	abstract[187]	new[187]	_	_
+37-8	3581-3584	the	abstract[187]|abstract[189]	new[187]|giv[189]	coref	44-1[239_189]
+37-9	3585-3590	joint	abstract[187]|abstract[189]	new[187]|giv[189]	_	_
+37-10	3591-3601	likelihood	abstract[187]|abstract|abstract[189]	new[187]|new|giv[189]	_	_
+37-11	3602-3610	function	abstract[187]|abstract[189]	new[187]|giv[189]	_	_
+37-12	3611-3612	,	_	_	_	_
+37-13	3613-3616	the	abstract[191]	new[191]	_	_
+37-14	3617-3628	cooperative	abstract[191]	new[191]	_	_
+37-15	3629-3641	localization	abstract|abstract[191]	giv|new[191]	coref	39-16[210_0]
+37-16	3642-3649	problem	abstract[191]	new[191]	_	_
+37-17	3650-3653	can	_	_	_	_
+37-18	3654-3656	be	_	_	_	_
+37-19	3657-3666	addressed	_	_	_	_
+37-20	3667-3672	under	_	_	_	_
+37-21	3673-3676	the	abstract[192]	new[192]	_	_
+37-22	3677-3686	framework	abstract[192]	new[192]	_	_
+37-23	3687-3689	of	abstract[192]	new[192]	_	_
+37-24	3690-3696	factor	abstract[192]|abstract|abstract[194]	new[192]|new|new[194]	coref|coref	38-11|38-10[199_194]
+37-25	3697-3702	graph	abstract[192]|abstract[194]	new[192]|new[194]	_	_
+37-26	3703-3704	.	_	_	_	_
+
+#Text=Inference and estimation tasks are typically carried out on a factor graph by message passing between variable nodes and factor nodes .
+38-1	3705-3714	Inference	abstract	new	_	_
+38-2	3715-3718	and	_	_	_	_
+38-3	3719-3729	estimation	abstract	new	_	_
+38-4	3730-3735	tasks	abstract	new	_	_
+38-5	3736-3739	are	_	_	_	_
+38-6	3740-3749	typically	_	_	_	_
+38-7	3750-3757	carried	_	_	_	_
+38-8	3758-3761	out	_	_	_	_
+38-9	3762-3764	on	_	_	_	_
+38-10	3765-3766	a	abstract[199]	giv[199]	_	_
+38-11	3767-3773	factor	abstract|abstract[199]	giv|giv[199]	coref	38-20
+38-12	3774-3779	graph	abstract[199]	giv[199]	_	_
+38-13	3780-3782	by	_	_	_	_
+38-14	3783-3790	message	abstract	new	_	_
+38-15	3791-3798	passing	_	_	_	_
+38-16	3799-3806	between	_	_	_	_
+38-17	3807-3815	variable	abstract[201]|abstract[202]	giv[201]|giv[202]	coref|coref	38-17[202_201]|38-20[204_202]
+38-18	3816-3821	nodes	abstract[201]|abstract[202]	giv[201]|giv[202]	_	_
+38-19	3822-3825	and	abstract[202]	giv[202]	_	_
+38-20	3826-3832	factor	abstract[202]|abstract|abstract[204]	giv[202]|giv|giv[204]	coref|coref	39-6[207_204]|39-11[209_0]
+38-21	3833-3838	nodes	abstract[202]|abstract[204]	giv[202]|giv[204]	_	_
+38-22	3839-3840	.	_	_	_	_
+
+#Text=Existing methods do not consider the outlier variable nodes and factor , which indicates that cooperative localization is not suitable for a range-free situation .
+39-1	3841-3849	Existing	abstract[205]	new[205]	_	_
+39-2	3850-3857	methods	abstract[205]	new[205]	_	_
+39-3	3858-3860	do	_	_	_	_
+39-4	3861-3864	not	_	_	_	_
+39-5	3865-3873	consider	_	_	_	_
+39-6	3874-3877	the	abstract[207]|abstract[208]	giv[207]|giv[208]	coref|coref	39-6[208_207]|45-16[245_208]
+39-7	3878-3885	outlier	abstract[206]|abstract[207]|abstract[208]	new[206]|giv[207]|giv[208]	_	_
+39-8	3886-3894	variable	abstract[206]|abstract[207]|abstract[208]	new[206]|giv[207]|giv[208]	_	_
+39-9	3895-3900	nodes	abstract[207]|abstract[208]	giv[207]|giv[208]	_	_
+39-10	3901-3904	and	abstract[208]	giv[208]	_	_
+39-11	3905-3911	factor	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-12	3912-3913	,	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-13	3914-3919	which	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-14	3920-3929	indicates	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-15	3930-3934	that	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-16	3935-3946	cooperative	abstract[208]|abstract[209]|abstract[210]	giv[208]|giv[209]|giv[210]	_	_
+39-17	3947-3959	localization	abstract[208]|abstract[209]|abstract[210]	giv[208]|giv[209]|giv[210]	_	_
+39-18	3960-3962	is	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-19	3963-3966	not	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-20	3967-3975	suitable	abstract[208]|abstract[209]	giv[208]|giv[209]	_	_
+39-21	3976-3979	for	_	_	_	_
+39-22	3980-3981	a	abstract[211]	new[211]	coref	40-14[215_211]
+39-23	3982-3992	range-free	abstract[211]	new[211]	_	_
+39-24	3993-4002	situation	abstract[211]	new[211]	_	_
+39-25	4003-4004	.	_	_	_	_
+
+#Text=In the cooperative phase , we explore a hard decision-based cooperative way for a range-free situation applying outlier constraints .
+40-1	4005-4007	In	_	_	_	_
+40-2	4008-4011	the	abstract[212]	new[212]	_	_
+40-3	4012-4023	cooperative	abstract[212]	new[212]	_	_
+40-4	4024-4029	phase	abstract[212]	new[212]	_	_
+40-5	4030-4031	,	_	_	_	_
+40-6	4032-4034	we	person	giv	ana	41-1
+40-7	4035-4042	explore	_	_	_	_
+40-8	4043-4044	a	abstract[214]	new[214]	_	_
+40-9	4045-4049	hard	abstract[214]	new[214]	_	_
+40-10	4050-4064	decision-based	abstract[214]	new[214]	_	_
+40-11	4065-4076	cooperative	abstract[214]	new[214]	_	_
+40-12	4077-4080	way	abstract[214]	new[214]	_	_
+40-13	4081-4084	for	abstract[214]	new[214]	_	_
+40-14	4085-4086	a	abstract[214]|abstract[215]	new[214]|giv[215]	ana	41-12[0_215]
+40-15	4087-4097	range-free	abstract[214]|abstract[215]	new[214]|giv[215]	_	_
+40-16	4098-4107	situation	abstract[214]|abstract[215]	new[214]|giv[215]	_	_
+40-17	4108-4116	applying	abstract[214]|abstract[215]	new[214]|giv[215]	_	_
+40-18	4117-4124	outlier	abstract[214]|abstract[215]|abstract[216]	new[214]|giv[215]|new[216]	_	_
+40-19	4125-4136	constraints	abstract[214]|abstract[215]|abstract[216]	new[214]|giv[215]|new[216]	_	_
+40-20	4137-4138	.	_	_	_	_
+
+#Text=We assume that the sensor node acquires a noisy measurement and that , which is the estimated distance from the sensor node ( can be either an agent or an anchor ) .
+41-1	4139-4141	We	person	giv	ana	42-3
+41-2	4142-4148	assume	_	_	_	_
+41-3	4149-4153	that	_	_	_	_
+41-4	4154-4157	the	person[218]	new[218]	_	_
+41-5	4158-4164	sensor	person[218]	new[218]	_	_
+41-6	4165-4169	node	person[218]	new[218]	_	_
+41-7	4170-4178	acquires	_	_	_	_
+41-8	4179-4180	a	abstract[219]	new[219]	coref	42-11[0_219]
+41-9	4181-4186	noisy	abstract[219]	new[219]	_	_
+41-10	4187-4198	measurement	abstract[219]	new[219]	_	_
+41-11	4199-4202	and	_	_	_	_
+41-12	4203-4207	that	abstract	giv	_	_
+41-13	4208-4209	,	_	_	_	_
+41-14	4210-4215	which	_	_	_	_
+41-15	4216-4218	is	_	_	_	_
+41-16	4219-4222	the	abstract[221]	giv[221]	coref	44-6[241_221]
+41-17	4223-4232	estimated	abstract[221]	giv[221]	_	_
+41-18	4233-4241	distance	abstract[221]	giv[221]	_	_
+41-19	4242-4246	from	abstract[221]	giv[221]	_	_
+41-20	4247-4250	the	abstract[221]|abstract[223]	giv[221]|new[223]	coref	44-6[0_223]
+41-21	4251-4257	sensor	abstract[221]|person|abstract[223]	giv[221]|giv|new[223]	_	_
+41-22	4258-4262	node	abstract[221]|abstract[223]	giv[221]|new[223]	_	_
+41-23	4263-4264	(	_	_	_	_
+41-24	4265-4268	can	_	_	_	_
+41-25	4269-4271	be	_	_	_	_
+41-26	4272-4278	either	person[224]|person[225]	giv[224]|giv[225]	_	_
+41-27	4279-4281	an	person[224]|person[225]	giv[224]|giv[225]	_	_
+41-28	4282-4287	agent	person[224]|person[225]	giv[224]|giv[225]	_	_
+41-29	4288-4290	or	person[225]	giv[225]	_	_
+41-30	4291-4293	an	person[225]|object[226]	giv[225]|giv[226]	_	_
+41-31	4294-4300	anchor	person[225]|object[226]	giv[225]|giv[226]	_	_
+41-32	4301-4302	)	_	_	_	_
+41-33	4303-4304	.	_	_	_	_
+
+#Text=Then , we have ( 20 ) where is the measurement noise .
+42-1	4305-4309	Then	_	_	_	_
+42-2	4310-4311	,	_	_	_	_
+42-3	4312-4314	we	person	giv	ana	43-6
+42-4	4315-4319	have	_	_	_	_
+42-5	4320-4321	(	_	_	_	_
+42-6	4322-4324	20	_	_	_	_
+42-7	4325-4326	)	_	_	_	_
+42-8	4327-4332	where	_	_	_	_
+42-9	4333-4335	is	_	_	_	_
+42-10	4336-4339	the	abstract[229]	new[229]	coref	43-9[234_229]
+42-11	4340-4351	measurement	abstract|abstract[229]	giv|new[229]	coref	43-9
+42-12	4352-4357	noise	abstract[229]	new[229]	_	_
+42-13	4358-4359	.	_	_	_	_
+
+#Text=Without loss of generality , we assume that measurement noise obeys a Gaussian distribution , so ; is the standard deviation .
+43-1	4360-4367	Without	_	_	_	_
+43-2	4368-4372	loss	abstract[230]	new[230]	_	_
+43-3	4373-4375	of	abstract[230]	new[230]	_	_
+43-4	4376-4386	generality	abstract[230]|abstract	new[230]|new	_	_
+43-5	4387-4388	,	_	_	_	_
+43-6	4389-4391	we	person	giv	ana	45-1
+43-7	4392-4398	assume	_	_	_	_
+43-8	4399-4403	that	_	_	_	_
+43-9	4404-4415	measurement	abstract|abstract[234]	giv|giv[234]	_	_
+43-10	4416-4421	noise	abstract[234]	giv[234]	_	_
+43-11	4422-4427	obeys	_	_	_	_
+43-12	4428-4429	a	abstract[235]	new[235]	_	_
+43-13	4430-4438	Gaussian	abstract[235]	new[235]	_	_
+43-14	4439-4451	distribution	abstract[235]	new[235]	_	_
+43-15	4452-4453	,	_	_	_	_
+43-16	4454-4456	so	_	_	_	_
+43-17	4457-4458	;	_	_	_	_
+43-18	4459-4461	is	_	_	_	_
+43-19	4462-4465	the	abstract[236]	new[236]	_	_
+43-20	4466-4474	standard	abstract[236]	new[236]	_	_
+43-21	4475-4484	deviation	abstract[236]	new[236]	_	_
+43-22	4485-4486	.	_	_	_	_
+
+#Text=The probability density function of node distance is ( 21 )
+44-1	4487-4490	The	abstract[239]	giv[239]	_	_
+44-2	4491-4502	probability	abstract|abstract[238]|abstract[239]	new|new[238]|giv[239]	_	_
+44-3	4503-4510	density	abstract[238]|abstract[239]	new[238]|giv[239]	_	_
+44-4	4511-4519	function	abstract[239]	giv[239]	_	_
+44-5	4520-4522	of	abstract[239]	giv[239]	_	_
+44-6	4523-4527	node	abstract[239]|abstract|abstract[241]	giv[239]|giv|giv[241]	coref	45-40[0_241]
+44-7	4528-4536	distance	abstract[239]|abstract[241]	giv[239]|giv[241]	_	_
+44-8	4537-4539	is	_	_	_	_
+44-9	4540-4541	(	_	_	_	_
+44-10	4542-4544	21	abstract	new	_	_
+44-11	4545-4546	)	_	_	_	_
+
+#Text=We define and assume that the relative positions are conditionally independent and only depend on the two nodes involved : ( 22 ) where is defined as the position set of all nodes , and is defined as the distance set of all nodes .
+45-1	4547-4549	We	person	giv	_	_
+45-2	4550-4556	define	_	_	_	_
+45-3	4557-4560	and	_	_	_	_
+45-4	4561-4567	assume	_	_	_	_
+45-5	4568-4572	that	_	_	_	_
+45-6	4573-4576	the	abstract[244]	giv[244]	_	_
+45-7	4577-4585	relative	abstract[244]	giv[244]	_	_
+45-8	4586-4595	positions	abstract[244]	giv[244]	_	_
+45-9	4596-4599	are	_	_	_	_
+45-10	4600-4613	conditionally	_	_	_	_
+45-11	4614-4625	independent	_	_	_	_
+45-12	4626-4629	and	_	_	_	_
+45-13	4630-4634	only	_	_	_	_
+45-14	4635-4641	depend	_	_	_	_
+45-15	4642-4644	on	_	_	_	_
+45-16	4645-4648	the	abstract[245]	giv[245]	coref	45-32[248_245]
+45-17	4649-4652	two	abstract[245]	giv[245]	_	_
+45-18	4653-4658	nodes	abstract[245]	giv[245]	_	_
+45-19	4659-4667	involved	abstract[245]	giv[245]	_	_
+45-20	4668-4669	:	abstract[245]	giv[245]	_	_
+45-21	4670-4671	(	abstract[245]	giv[245]	_	_
+45-22	4672-4674	22	abstract[245]	giv[245]	_	_
+45-23	4675-4676	)	abstract[245]	giv[245]	_	_
+45-24	4677-4682	where	abstract[245]	giv[245]	_	_
+45-25	4683-4685	is	abstract[245]	giv[245]	_	_
+45-26	4686-4693	defined	abstract[245]	giv[245]	_	_
+45-27	4694-4696	as	abstract[245]	giv[245]	_	_
+45-28	4697-4700	the	abstract[245]|abstract[247]	giv[245]|new[247]	_	_
+45-29	4701-4709	position	abstract[245]|abstract|abstract[247]	giv[245]|giv|new[247]	_	_
+45-30	4710-4713	set	abstract[245]|abstract[247]	giv[245]|new[247]	_	_
+45-31	4714-4716	of	abstract[245]|abstract[247]	giv[245]|new[247]	_	_
+45-32	4717-4720	all	abstract[245]|abstract[247]|abstract[248]	giv[245]|new[247]|giv[248]	coref	45-43[251_248]
+45-33	4721-4726	nodes	abstract[245]|abstract[247]|abstract[248]	giv[245]|new[247]|giv[248]	_	_
+45-34	4727-4728	,	abstract[245]	giv[245]	_	_
+45-35	4729-4732	and	abstract[245]	giv[245]	_	_
+45-36	4733-4735	is	abstract[245]	giv[245]	_	_
+45-37	4736-4743	defined	abstract[245]	giv[245]	_	_
+45-38	4744-4746	as	_	_	_	_
+45-39	4747-4750	the	abstract[250]	new[250]	_	_
+45-40	4751-4759	distance	abstract|abstract[250]	giv|new[250]	_	_
+45-41	4760-4763	set	abstract[250]	new[250]	_	_
+45-42	4764-4766	of	abstract[250]	new[250]	_	_
+45-43	4767-4770	all	abstract[250]|abstract[251]	new[250]|giv[251]	_	_
+45-44	4771-4776	nodes	abstract[250]|abstract[251]	new[250]|giv[251]	_	_
+45-45	4777-4778	.	_	_	_	_

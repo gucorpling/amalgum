@@ -1,0 +1,716 @@
+# s_type = frag
+# newdoc id = AMALGUM_academic_beamforming
+# sent_id = AMALGUM_academic_beamforming-1
+# text = 1. Introduction
+1	1.	1.	X	LS	_	2	dep	2:dep	Discourse=preparation:1->10
+2	Introduction	introduction	NOUN	NN	Number=Sing	0	root	0:root	Entity=(abstract-1)
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-2
+# text = The fifth-generation ( 5G ) millimeter-wave ( mm-Wave ) frequency range , also referred to as the frequency range 2 ( FR2 ) , includes the band between 24.25 and 52.6 GHz .
+1	The	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Discourse=background:2->10|Entity=(abstract-2
+2	fifth-generation	fifth-generation	NOUN	NN	Number=Sing	11	compound	11:compound	_
+3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:3->2
+4	5G	5G	NUM	CD	NumForm=Word|NumType=Card	6	appos	6:appos	Entity=(abstract-3)
+5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
+6	millimeter-wave	millimeter-wave	NOUN	NN	Number=Sing	11	compound	11:compound	Discourse=same_unit:4->2|Entity=(object-4)
+7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=restatement:5->4
+8	mm-Wave	mm-Wave	NOUN	NN	Number=Sing	6	appos	6:appos	Entity=(abstract-3)
+9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
+10	frequency	frequency	NOUN	NN	Number=Sing	11	compound	11:compound	Discourse=same_unit:6->4|Entity=(place-5)
+11	range	range	NOUN	NN	Number=Sing	25	nsubj	25:nsubj	_
+12	,	,	PUNCT	,	_	14	punct	14:punct	_
+13	also	also	ADV	RB	_	14	advmod	14:advmod	Discourse=joint:7->6
+14	referred	refer	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	_
+15	to	to	ADP	IN	_	14	obl	14:obl	_
+16	as	as	ADP	IN	_	19	case	19:case	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(abstract-2
+18	frequency	frequency	NOUN	NN	Number=Sing	19	compound	19:compound	Entity=(place-5)
+19	range	range	NOUN	NN	Number=Sing	14	obl	14:obl:as	_
+20	2	2	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	Entity=abstract-2)abstract-2)
+21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=elaboration:8->7
+22	FR2	FR2	PROPN	NNP	Number=Sing	19	appos	19:appos	Entity=(abstract-2)
+23	)	)	PUNCT	-RRB-	_	22	punct	22:punct	_
+24	,	,	PUNCT	,	_	11	punct	11:punct	_
+25	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=same_unit:9->7
+26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(abstract-6
+27	band	band	NOUN	NN	Number=Sing	25	obj	25:obj	_
+28	between	between	ADP	IN	_	32	case	32:case	_
+29	24.25	24.25	NUM	CD	NumForm=Digit|NumType=Card	32	nummod	32:nummod	Entity=(abstract-7
+30	and	and	CCONJ	CC	_	31	cc	31:cc	_
+31	52.6	52.6	NUM	CD	NumForm=Digit|NumType=Card	29	conj	29:conj:and|32:nummod	_
+32	GHz	GHz	NOUN	NN	Number=Sing	27	nmod	27:nmod:between	Entity=abstract-6)abstract-7)
+33	.	.	PUNCT	.	_	25	punct	25:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-3
+# text = For the 5G mm-Wave wireless applications , beamforming antenna system is essentially needed to cope with high free-space path loss , severe multi-path fading , and possible interference management for improving signal-to-noise ratio .
+1	For	for	ADP	IN	_	6	case	6:case	Discourse=ROOT:10
+2	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(abstract-8
+3	5G	5G	PROPN	NNP	Number=Sing	6	compound	6:compound	_
+4	mm-Wave	mm-Wave	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(abstract-3)
+5	wireless	wireless	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(object-9)
+6	applications	application	NOUN	NNS	Number=Plur	13	obl	13:obl:for	Entity=abstract-8)
+7	,	,	PUNCT	,	_	6	punct	6:punct	_
+8	beamforming	beamform	VERB	VBG	VerbForm=Ger	10	amod	10:amod	Entity=(abstract-10
+9	antenna	antenna	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(object-11)
+10	system	system	NOUN	NN	Number=Sing	13	nsubj:pass	13:nsubj:pass|15:nsubj:xsubj	Entity=abstract-10)
+11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	aux:pass	13:aux:pass	_
+12	essentially	essentially	ADV	RB	Degree=Pos	13	advmod	13:advmod	_
+13	needed	need	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+14	to	to	PART	TO	_	15	mark	15:mark	Discourse=purpose:11->10
+15	cope	cope	VERB	VB	VerbForm=Inf	13	xcomp	13:xcomp	_
+16	with	with	ADP	IN	_	20	case	20:case	_
+17	high	high	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(abstract-12
+18	free-space	free-space	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
+19	path	path	NOUN	NN	Number=Sing	20	compound	20:compound	Entity=(abstract-13)
+20	loss	loss	NOUN	NN	Number=Sing	15	obl	15:obl:with	Entity=abstract-12)
+21	,	,	PUNCT	,	_	24	punct	24:punct	_
+22	severe	severe	ADJ	JJ	Degree=Pos	24	amod	24:amod	Entity=(event-14
+23	multi-path	multi-path	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
+24	fading	fading	NOUN	NN	Number=Sing	20	conj	15:obl:with|20:conj:and	Entity=event-14)
+25	,	,	PUNCT	,	_	29	punct	29:punct	_
+26	and	and	CCONJ	CC	_	29	cc	29:cc	_
+27	possible	possible	ADJ	JJ	Degree=Pos	29	amod	29:amod	Entity=(organization-15
+28	interference	interference	NOUN	NN	Number=Sing	29	compound	29:compound	Entity=(abstract-16)
+29	management	management	NOUN	NN	Number=Sing	20	conj	15:obl:with|20:conj:and	_
+30	for	for	SCONJ	IN	_	31	mark	31:mark	Discourse=purpose:12->11
+31	improving	improve	VERB	VBG	VerbForm=Ger	29	acl	29:acl:for	_
+32	signal-to-noise	signal-to-noise	ADJ	JJ	Degree=Pos	33	amod	33:amod	Entity=(abstract-17
+33	ratio	ratio	NOUN	NN	Number=Sing	31	obj	31:obj	Entity=organization-15)abstract-17)
+34	.	.	PUNCT	.	_	13	punct	13:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-4
+# text = Two approaches are possible for the beamforming system realization .
+1	Two	2	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=preparation:13->14|Entity=(abstract-18
+2	approaches	approach	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=abstract-18)
+3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+4	possible	possible	ADJ	JJ	Degree=Pos	0	root	0:root	_
+5	for	for	ADP	IN	_	9	case	9:case	_
+6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(abstract-19
+7	beamforming	beamforming	NOUN	NN	Number=Sing	8	compound	8:compound	Entity=(abstract-10(abstract-20)
+8	system	system	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=abstract-10)
+9	realization	realization	NOUN	NN	Number=Sing	4	obl	4:obl:for	Entity=abstract-19)
+10	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-5
+# text = The first approach is phased-array beamforming system .
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:14->10|Entity=(abstract-21
+2	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	3	amod	3:amod	_
+3	approach	approach	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=abstract-21)
+4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
+5	phased-array	phased-array	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(abstract-21
+6	beamforming	beamforming	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(abstract-20)
+7	system	system	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-21)
+8	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-6
+# text = It can provide continuously any-directional beam-steering capability , but requires sophisticated beamforming circuitry comprising precise phase shifters , variable gain blocks , and switches , thus it inevitably elevates the system implementation cost and complexity .
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj|10:nsubj	Discourse=concession:15->16|Entity=(abstract-21)
+2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux	_
+3	provide	provide	VERB	VB	VerbForm=Inf	0	root	0:root	_
+4	continuously	continuously	ADV	RB	Degree=Pos	5	advmod	5:advmod	Entity=(abstract-22
+5	any-directional	any-directional	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+6	beam-steering	beam-steering	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(abstract-23)
+7	capability	capability	NOUN	NN	Number=Sing	3	obj	3:obj	Entity=abstract-22)
+8	,	,	PUNCT	,	_	10	punct	10:punct	_
+9	but	but	CCONJ	CC	_	10	cc	10:cc	Discourse=elaboration:16->14
+10	requires	require	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	conj	3:conj:but	_
+11	sophisticated	sophisticated	ADJ	JJ	Degree=Pos	13	amod	13:amod	Entity=(abstract-24
+12	beamforming	beamforming	NOUN	NN	Number=Sing	13	compound	13:compound	Entity=(abstract-20)
+13	circuitry	circuitry	NOUN	NN	Number=Sing	10	obj	10:obj	_
+14	comprising	comprise	VERB	VBG	VerbForm=Ger	13	acl	13:acl	Discourse=elaboration:17->16
+15	precise	precise	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(event-25
+16	phase	phase	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=(abstract-26)
+17	shifters	shifter	NOUN	NNS	Number=Plur	14	obj	14:obj	Entity=event-25)
+18	,	,	PUNCT	,	_	21	punct	21:punct	_
+19	variable	variable	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(object-27(abstract-28
+20	gain	gain	NOUN	NN	Number=Sing	21	compound	21:compound	Entity=abstract-28)
+21	blocks	block	NOUN	NNS	Number=Plur	17	conj	14:obj|17:conj:and	Entity=object-27)
+22	,	,	PUNCT	,	_	24	punct	24:punct	_
+23	and	and	CCONJ	CC	_	24	cc	24:cc	_
+24	switches	switch	NOUN	NNS	Number=Plur	17	conj	14:obj|17:conj:and	Entity=abstract-24)(object-29)
+25	,	,	PUNCT	,	_	29	punct	29:punct	_
+26	thus	thus	ADV	RB	_	29	advmod	29:advmod	Discourse=result:18->16
+27	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	29	nsubj	29:nsubj	Entity=(abstract-21)
+28	inevitably	inevitably	ADV	RB	Degree=Pos	29	advmod	29:advmod	_
+29	elevates	elevate	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
+30	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Entity=(abstract-30(abstract-31
+31	system	system	NOUN	NN	Number=Sing	33	compound	33:compound	Entity=(abstract-21)
+32	implementation	implementation	NOUN	NN	Number=Sing	33	compound	33:compound	Entity=(abstract-32)
+33	cost	cost	NOUN	NN	Number=Sing	29	obj	29:obj	Entity=abstract-31)
+34	and	and	CCONJ	CC	_	35	cc	35:cc	_
+35	complexity	complexity	NOUN	NN	Number=Sing	33	conj	29:obj|33:conj:and	Entity=abstract-30)(abstract-33)
+36	.	.	PUNCT	.	_	3	punct	3:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-7
+# text = On the other hand , switched beamforming antenna system can provide discontinuous discrete-directional beam-steering capability , but with much less hardware complexity and easier producibility .
+1	On	on	ADP	IN	_	4	case	4:case	Discourse=joint:19->14
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
+3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
+4	hand	hand	NOUN	NN	Number=Sing	11	obl	11:obl:on	_
+5	,	,	PUNCT	,	_	4	punct	4:punct	_
+6	switched	switch	VERB	VBN	Tense=Past|VerbForm=Part	9	amod	9:amod	Entity=(abstract-21
+7	beamforming	beamforming	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=(abstract-20)
+8	antenna	antenna	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=(object-11)
+9	system	system	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	Entity=abstract-21)
+10	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
+11	provide	provide	VERB	VB	VerbForm=Inf	0	root	0:root	_
+12	discontinuous	discontinuous	ADJ	JJ	Degree=Pos	15	amod	15:amod	Entity=(abstract-22
+13	discrete-directional	discrete-directional	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
+14	beam-steering	beam-steering	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(abstract-23)
+15	capability	capability	NOUN	NN	Number=Sing	11	obj	11:obj	Entity=abstract-22)
+16	,	,	PUNCT	,	_	22	punct	22:punct	_
+17	but	but	CCONJ	CC	_	22	cc	22:cc	Discourse=contrast:20->19
+18	with	with	ADP	IN	_	22	case	22:case	_
+19	much	much	ADV	RB	Degree=Pos	20	advmod	20:advmod	Entity=(abstract-33
+20	less	less	ADJ	JJR	Degree=Cmp	22	amod	22:amod	_
+21	hardware	hardware	NOUN	NN	Number=Sing	22	compound	22:compound	Entity=(abstract-34)
+22	complexity	complexity	NOUN	NN	Number=Sing	15	conj	11:obj|15:conj:but	Entity=abstract-33)
+23	and	and	CCONJ	CC	_	25	cc	25:cc	_
+24	easier	easy	ADJ	JJR	Degree=Cmp	25	amod	25:amod	Entity=(abstract-35
+25	producibility	producibility	NOUN	NN	Number=Sing	22	conj	15:conj|22:conj:and	Entity=abstract-35)
+26	.	.	PUNCT	.	_	11	punct	11:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-8
+# text = Thus , the switched beamforming antenna system is more preferred when precise and continuous beam steering function is not necessarily required , whereas implementation cost and producibility are of more importance .
+1	Thus	thus	ADV	RB	_	10	advmod	10:advmod	Discourse=sequence:21->19
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(abstract-21
+4	switched	switch	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
+5	beamforming	beamforming	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(abstract-20)
+6	antenna	antenna	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(object-11)
+7	system	system	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	Entity=abstract-21)
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux:pass	10:aux:pass	_
+9	more	more	ADV	RBR	Degree=Cmp	10	advmod	10:advmod	_
+10	preferred	prefer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+11	when	when	SCONJ	WRB	PronType=Int	21	mark	21:mark	Discourse=circumstance:22->23
+12	precise	precise	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(abstract-36
+13	and	and	CCONJ	CC	_	14	cc	14:cc	_
+14	continuous	continuous	ADJ	JJ	Degree=Pos	12	conj	12:conj:and|17:amod	_
+15	beam	beam	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(abstract-37(abstract-38)
+16	steering	steering	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=abstract-37)
+17	function	function	NOUN	NN	Number=Sing	21	nsubj:pass	21:nsubj:pass	Entity=abstract-36)
+18	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	21	aux:pass	21:aux:pass	_
+19	not	not	ADV	RB	Polarity=Neg	21	advmod	21:advmod	_
+20	necessarily	necessarily	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
+21	required	require	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	advcl	10:advcl:when	_
+22	,	,	PUNCT	,	_	31	punct	31:punct	_
+23	whereas	whereas	SCONJ	IN	_	31	mark	31:mark	Discourse=same_unit:23->21
+24	implementation	implementation	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(abstract-30(abstract-31(abstract-32)
+25	cost	cost	NOUN	NN	Number=Sing	31	nsubj	31:nsubj	Entity=abstract-31)
+26	and	and	CCONJ	CC	_	27	cc	27:cc	_
+27	producibility	producibility	NOUN	NN	Number=Sing	25	conj	25:conj:and|31:nsubj	Entity=abstract-30)(abstract-35)
+28	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	31	cop	31:cop	_
+29	of	of	ADP	IN	_	31	case	31:case	_
+30	more	more	ADJ	JJR	Degree=Cmp	31	amod	31:amod	Entity=(abstract-39
+31	importance	importance	NOUN	NN	Number=Sing	10	advcl	10:advcl:whereas	Entity=abstract-39)
+32	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-9
+# text = Passive beamforming matrices such as Blass matrix , Nolen matrix , and Butler matrix are generally adopted for the switched beamforming antenna system .
+1	Passive	Passive	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=joint:24->21|Entity=(abstract-40
+2	beamforming	beamforming	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(abstract-20)
+3	matrices	matrice	NOUN	NNS	Number=Plur	17	nsubj:pass	17:nsubj:pass	_
+4	such	such	ADJ	JJ	Degree=Pos	7	case	7:case	_
+5	as	as	ADP	IN	_	4	fixed	4:fixed	_
+6	Blass	Blass	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(abstract-41(abstract-42(person-43)
+7	matrix	matrix	NOUN	NN	Number=Sing	3	nmod	3:nmod:such_as	Entity=abstract-42)
+8	,	,	PUNCT	,	_	10	punct	10:punct	_
+9	Nolen	Nolen	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(abstract-44(person-45)
+10	matrix	matrix	NOUN	NN	Number=Sing	7	conj	3:nmod:such_as|7:conj:and	Entity=abstract-44)
+11	,	,	PUNCT	,	_	14	punct	14:punct	_
+12	and	and	CCONJ	CC	_	14	cc	14:cc	_
+13	Butler	Butler	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(abstract-46(place-47)
+14	matrix	matrix	NOUN	NN	Number=Sing	7	conj	3:nmod:such_as|7:conj:and	Entity=abstract-40)abstract-41)abstract-46)
+15	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
+16	generally	generally	ADV	RB	Degree=Pos	17	advmod	17:advmod	_
+17	adopted	adopt	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+18	for	for	ADP	IN	_	23	case	23:case	_
+19	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(abstract-21
+20	switched	switch	VERB	VBN	Tense=Past|VerbForm=Part	23	amod	23:amod	_
+21	beamforming	beamforming	NOUN	NN	Number=Sing	23	compound	23:compound	Entity=(abstract-20)
+22	antenna	antenna	NOUN	NN	Number=Sing	23	compound	23:compound	Entity=(object-11)
+23	system	system	NOUN	NN	Number=Sing	17	obl	17:obl:for	Entity=abstract-21)
+24	.	.	PUNCT	.	_	17	punct	17:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-10
+# text = Among them , the Butler matrix is more widely used due to its wideband characteristic and simple structure .
+1	Among	among	ADP	IN	_	2	case	2:case	Discourse=joint:25->21
+2	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	10	obl	10:obl:among	Entity=(abstract-41)
+3	,	,	PUNCT	,	_	2	punct	2:punct	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(abstract-46
+5	Butler	Butler	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-47)
+6	matrix	matrix	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	Entity=abstract-46)
+7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux:pass	10:aux:pass	_
+8	more	more	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
+9	widely	widely	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
+10	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+11	due	due	ADJ	JJ	Degree=Pos	15	case	15:case	_
+12	to	to	ADP	IN	_	11	fixed	11:fixed	_
+13	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	Entity=(abstract-46)
+14	wideband	wideband	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
+15	characteristic	characteristic	ADJ	JJ	Degree=Pos	10	obl	10:obl:due_to	_
+16	and	and	CCONJ	CC	_	18	cc	18:cc	_
+17	simple	simple	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(abstract-48
+18	structure	structure	NOUN	NN	Number=Sing	15	conj	10:obl:due_to|15:conj:and	Entity=abstract-48)
+19	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-11
+# text = When realizing a Butler matrix based switched beamforming antenna system , the Butler matrix usually occupies a much larger area than the antenna array elements .
+1	When	when	SCONJ	WRB	PronType=Int	2	mark	2:mark	Discourse=circumstance:26->27
+2	realizing	realize	VERB	VBG	VerbForm=Ger	16	advcl	16:advcl:when	_
+3	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(abstract-21
+4	Butler	Butler	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(abstract-46(place-47)
+5	matrix	matrix	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=abstract-46)
+6	based	base	VERB	VBN	Tense=Past|VerbForm=Part	10	amod	10:amod	_
+7	switched	switch	VERB	VBN	Tense=Past|VerbForm=Part	10	amod	10:amod	_
+8	beamforming	beamforming	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(abstract-20)
+9	antenna	antenna	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(object-11)
+10	system	system	NOUN	NN	Number=Sing	2	obj	2:obj	Entity=abstract-21)
+11	,	,	PUNCT	,	_	2	punct	2:punct	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Discourse=joint:27->21|Entity=(abstract-46
+13	Butler	Butler	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(place-47)
+14	matrix	matrix	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	Entity=abstract-46)
+15	usually	usually	ADV	RB	Degree=Pos	16	advmod	16:advmod	_
+16	occupies	occupy	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+17	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	Entity=(place-49
+18	much	much	ADV	RB	Degree=Pos	19	advmod	19:advmod	_
+19	larger	large	ADJ	JJR	Degree=Cmp	20	amod	20:amod	_
+20	area	area	NOUN	NN	Number=Sing	16	obj	16:obj	_
+21	than	than	ADP	IN	_	25	case	25:case	_
+22	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(object-50
+23	antenna	antenna	NOUN	NN	Number=Sing	24	compound	24:compound	Entity=(object-51(object-11)
+24	array	array	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=object-51)
+25	elements	element	NOUN	NNS	Number=Plur	20	nmod	20:nmod:than	Entity=place-49)object-50)
+26	.	.	PUNCT	.	_	16	punct	16:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-12
+# text = Thus , minimizing the Butler matrix size is more critical for the overall form factor minimization .
+1	Thus	thus	ADV	RB	_	10	advmod	10:advmod	Discourse=joint:28->21
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	minimizing	minimize	VERB	VBG	VerbForm=Ger	10	csubj	10:csubj	_
+4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(abstract-52
+5	Butler	Butler	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(abstract-46(place-47)
+6	matrix	matrix	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=abstract-46)
+7	size	size	NOUN	NN	Number=Sing	3	obj	3:obj	Entity=abstract-52)
+8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
+9	more	more	ADV	RBR	Degree=Cmp	10	advmod	10:advmod	_
+10	critical	critical	ADJ	JJ	Degree=Pos	0	root	0:root	_
+11	for	for	ADP	IN	_	16	case	16:case	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(abstract-53
+13	overall	overall	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
+14	form	form	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(abstract-54(abstract-55)
+15	factor	factor	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=abstract-54)
+16	minimization	minimization	NOUN	NN	Number=Sing	10	obl	10:obl:for	Entity=abstract-53)
+17	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-13
+# text = Many previous works have been reported focusing on the miniaturization of the Butler matrix .
+1	Many	many	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=joint:29->21|Entity=(abstract-56
+2	previous	previous	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	works	work	NOUN	NNS	Number=Plur	6	nsubj:pass	6:nsubj:pass	Entity=abstract-56)
+4	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
+5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	aux:pass	6:aux:pass	_
+6	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7	focusing	focus	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl	Discourse=elaboration:30->29
+8	on	on	ADP	IN	_	10	case	10:case	_
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(abstract-57
+10	miniaturization	miniaturization	NOUN	NN	Number=Sing	7	obl	7:obl:on	_
+11	of	of	ADP	IN	_	14	case	14:case	_
+12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(abstract-46
+13	Butler	Butler	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(place-47)
+14	matrix	matrix	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	Entity=abstract-57)abstract-46)
+15	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-14
+# text = The previous techniques can be categorized into a single-layer substrate based design and a multi-layer substrate based design .
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:31->21|Entity=(abstract-58
+2	previous	previous	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+3	techniques	technique	NOUN	NNS	Number=Plur	6	nsubj:pass	6:nsubj:pass	Entity=abstract-58)
+4	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
+5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
+6	categorized	categorize	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7	into	into	ADP	IN	_	12	case	12:case	_
+8	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	Entity=(abstract-59
+9	single-layer	single-layer	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
+10	substrate	substrate	NOUN	NN	Number=Sing	11	compound	11:compound	Entity=(object-60)
+11	based	base	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	12:amod	_
+12	design	design	NOUN	NN	Number=Sing	6	obl	6:obl:into	Entity=abstract-59)
+13	and	and	CCONJ	CC	_	18	cc	18:cc	_
+14	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(abstract-61
+15	multi-layer	multi-layer	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
+16	substrate	substrate	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=(object-60)
+17	based	base	VERB	VBN	Tense=Past|VerbForm=Part	18	amod	18:amod	_
+18	design	design	NOUN	NN	Number=Sing	12	conj	6:obl:into|12:conj:and	Entity=abstract-61)
+19	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-15
+# text = For the single-layer substrate designs , several techniques , such as a higher characteristic impedance transmission line based design , a directional coupler employing lumped components , and an artificial transmission line employing quasi-lumped elements and discontinuities structure , were effective for the miniaturization .
+1	For	for	ADP	IN	_	5	case	5:case	Discourse=elaboration:32->31
+2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(abstract-62
+3	single-layer	single-layer	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+4	substrate	substrate	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(object-60)
+5	designs	design	NOUN	NNS	Number=Plur	41	obl	41:obl:for	Entity=abstract-62)
+6	,	,	PUNCT	,	_	5	punct	5:punct	_
+7	several	several	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(abstract-58
+8	techniques	technique	NOUN	NNS	Number=Plur	41	nsubj	41:nsubj	_
+9	,	,	PUNCT	,	_	19	punct	19:punct	_
+10	such	such	ADJ	JJ	Degree=Pos	19	case	19:case	_
+11	as	as	ADP	IN	_	10	fixed	10:fixed	_
+12	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	Entity=(abstract-61
+13	higher	high	ADJ	JJR	Degree=Cmp	15	amod	15:amod	Entity=(abstract-63
+14	characteristic	characteristic	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
+15	impedance	impedance	NOUN	NN	Number=Sing	19	compound	19:compound	Entity=abstract-63)
+16	transmission	transmission	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=(object-64(abstract-65)
+17	line	line	NOUN	NN	Number=Sing	19	compound	19:compound	Entity=object-64)
+18	based	base	VERB	VBN	Tense=Past|VerbForm=Part	19	amod	19:amod	_
+19	design	design	NOUN	NN	Number=Sing	8	nmod	8:nmod:such_as	Entity=abstract-61)
+20	,	,	PUNCT	,	_	23	punct	23:punct	_
+21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	Entity=(object-66
+22	directional	directional	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
+23	coupler	coupler	NOUN	NN	Number=Sing	19	conj	8:nmod:such_as|19:conj:and	_
+24	employing	employ	VERB	VBG	VerbForm=Ger	23	acl	23:acl	Discourse=elaboration:33->32
+25	lumped	lump	VERB	VBN	Tense=Past|VerbForm=Part	26	amod	26:amod	Entity=(object-67
+26	components	component	NOUN	NNS	Number=Plur	24	obj	24:obj	Entity=object-66)object-67)
+27	,	,	PUNCT	,	_	32	punct	32:punct	_
+28	and	and	CCONJ	CC	_	32	cc	32:cc	_
+29	an	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	Entity=(object-64
+30	artificial	artificial	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+31	transmission	transmission	NOUN	NN	Number=Sing	32	compound	32:compound	Entity=(abstract-65)
+32	line	line	NOUN	NN	Number=Sing	19	conj	8:nmod:such_as|19:conj:and	_
+33	employing	employ	VERB	VBG	VerbForm=Ger	32	acl	32:acl	Discourse=elaboration:34->33
+34	quasi-lumped	quasi-lumped	ADJ	JJ	Degree=Pos	35	amod	35:amod	Entity=(object-50(object-50
+35	elements	element	NOUN	NNS	Number=Plur	33	obj	33:obj	Entity=object-50)
+36	and	and	CCONJ	CC	_	38	cc	38:cc	_
+37	discontinuities	discontinuity	NOUN	NNS	Number=Plur	38	compound	38:compound	Entity=(abstract-48(abstract-68)
+38	structure	structure	NOUN	NN	Number=Sing	35	conj	33:obj|35:conj:and	Entity=abstract-58)object-64)object-50)abstract-48)
+39	,	,	PUNCT	,	_	8	punct	8:punct	_
+40	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	41	cop	41:cop	Discourse=same_unit:35->32
+41	effective	effective	ADJ	JJ	Degree=Pos	0	root	0:root	_
+42	for	for	ADP	IN	_	44	case	44:case	_
+43	the	the	DET	DT	Definite=Def|PronType=Art	44	det	44:det	Entity=(abstract-57
+44	miniaturization	miniaturization	NOUN	NN	Number=Sing	41	obl	41:obl:for	Entity=abstract-57)
+45	.	.	PUNCT	.	_	41	punct	41:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-16
+# text = Nevertheless , since the Butler matrix and the antenna elements were put on the same plane , the spurious radiation leaking from the Butler matrix toward the antenna was a serious issue because it adversely affected the total radiation pattern .
+1	Nevertheless	nevertheless	ADV	RB	Degree=Pos	32	advmod	32:advmod	Discourse=joint:36->21
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	since	since	SCONJ	IN	_	12	mark	12:mark	Discourse=circumstance:37->38
+4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(abstract-46
+5	Butler	Butler	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-47)
+6	matrix	matrix	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass	Entity=abstract-46)
+7	and	and	CCONJ	CC	_	10	cc	10:cc	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(object-50
+9	antenna	antenna	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(object-11)
+10	elements	element	NOUN	NNS	Number=Plur	6	conj	6:conj:and|12:nsubj:pass	Entity=object-50)
+11	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	12:aux:pass	_
+12	put	put	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	32	advcl	32:advcl:since	_
+13	on	on	ADP	IN	_	16	case	16:case	_
+14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(object-69
+15	same	same	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
+16	plane	plane	NOUN	NN	Number=Sing	12	obl	12:obl:on	Entity=object-69)
+17	,	,	PUNCT	,	_	12	punct	12:punct	_
+18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Discourse=same_unit:38->36|Entity=(abstract-70
+19	spurious	spurious	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
+20	radiation	radiation	NOUN	NN	Number=Sing	32	nsubj	32:nsubj	_
+21	leaking	leak	VERB	VBG	VerbForm=Ger	20	acl	20:acl	Discourse=elaboration:39->38
+22	from	from	ADP	IN	_	25	case	25:case	_
+23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(abstract-46
+24	Butler	Butler	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(place-47)
+25	matrix	matrix	NOUN	NN	Number=Sing	21	obl	21:obl:from	Entity=abstract-46)
+26	toward	toward	ADP	IN	_	28	case	28:case	_
+27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(object-11
+28	antenna	antenna	NOUN	NN	Number=Sing	21	obl	21:obl:toward	Entity=abstract-70)object-11)
+29	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	cop	32:cop	_
+30	a	a	DET	DT	Definite=Ind|PronType=Art	32	det	32:det	Entity=(abstract-70
+31	serious	serious	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
+32	issue	issue	NOUN	NN	Number=Sing	0	root	0:root	_
+33	because	because	SCONJ	IN	_	36	mark	36:mark	Discourse=cause:40->39
+34	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	36	nsubj	36:nsubj	Entity=(abstract-70)
+35	adversely	adversely	ADV	RB	Degree=Pos	36	advmod	36:advmod	_
+36	affected	affect	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	acl	32:acl:because	_
+37	the	the	DET	DT	Definite=Def|PronType=Art	40	det	40:det	Entity=(abstract-71
+38	total	total	ADJ	JJ	Degree=Pos	40	amod	40:amod	_
+39	radiation	radiation	NOUN	NN	Number=Sing	40	compound	40:compound	Entity=(abstract-70)
+40	pattern	pattern	NOUN	NN	Number=Sing	36	obj	36:obj	Entity=abstract-70)abstract-71)
+41	.	.	PUNCT	.	_	32	punct	32:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-17
+# text = The multi-layer substrate design approach can alleviate the spurious radiation issue more effectively because the Butler matrix and the antenna elements are placed in different layers .
+1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Discourse=joint:41->21|Entity=(abstract-21
+2	multi-layer	multi-layer	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
+3	substrate	substrate	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(abstract-61(object-60)
+4	design	design	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=abstract-61)
+5	approach	approach	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=abstract-21)
+6	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
+7	alleviate	alleviate	VERB	VB	VerbForm=Inf	0	root	0:root	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(abstract-72
+9	spurious	spurious	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
+10	radiation	radiation	NOUN	NN	Number=Sing	11	compound	11:compound	Entity=(abstract-70)
+11	issue	issue	NOUN	NN	Number=Sing	7	obj	7:obj	Entity=abstract-72)
+12	more	more	ADV	RBR	Degree=Cmp	13	advmod	13:advmod	_
+13	effectively	effectively	ADV	RB	Degree=Pos	7	advmod	7:advmod	_
+14	because	because	SCONJ	IN	_	23	mark	23:mark	Discourse=cause:42->41
+15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(abstract-46
+16	Butler	Butler	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-47)
+17	matrix	matrix	NOUN	NN	Number=Sing	23	nsubj:pass	23:nsubj:pass	Entity=abstract-46)
+18	and	and	CCONJ	CC	_	21	cc	21:cc	_
+19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(object-50
+20	antenna	antenna	NOUN	NN	Number=Sing	21	compound	21:compound	Entity=(object-11)
+21	elements	element	NOUN	NNS	Number=Plur	17	conj	17:conj:and|23:nsubj:pass	Entity=object-50)
+22	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	23	aux:pass	23:aux:pass	_
+23	placed	place	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	advcl	7:advcl:because	_
+24	in	in	ADP	IN	_	26	case	26:case	_
+25	different	different	ADJ	JJ	Degree=Pos	26	amod	26:amod	Entity=(abstract-73
+26	layers	layer	NOUN	NNS	Number=Plur	23	obl	23:obl:in	Entity=abstract-73)
+27	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-18
+# text = In addition , such previous multi-layer designs have employed further miniaturization techniques , such as the suspended stripline , dual transmission line structure in a multi-layer structure , forward-wave directional coupler , modularized multi-folded structure , slot-directional hybrid coupler , and dual-layer substrate integrated waveguide ( SIW ) based crossover elimination structure .
+1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:43->21
+2	addition	addition	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
+3	,	,	PUNCT	,	_	2	punct	2:punct	_
+4	such	such	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(abstract-62
+5	previous	previous	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+6	multi-layer	multi-layer	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+7	designs	design	NOUN	NNS	Number=Plur	9	nsubj	9:nsubj	Entity=abstract-62)
+8	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
+9	employed	employ	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
+10	further	further	ADJ	JJR	Degree=Cmp	12	amod	12:amod	Entity=(abstract-58
+11	miniaturization	miniaturization	NOUN	NN	Number=Sing	12	compound	12:compound	_
+12	techniques	technique	NOUN	NNS	Number=Plur	9	obj	9:obj	_
+13	,	,	PUNCT	,	_	18	punct	18:punct	_
+14	such	such	ADJ	JJ	Degree=Pos	18	case	18:case	_
+15	as	as	ADP	IN	_	14	fixed	14:fixed	_
+16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(object-74
+17	suspended	suspend	VERB	VBN	Tense=Past|VerbForm=Part	18	amod	18:amod	_
+18	stripline	stripline	NOUN	NN	Number=Sing	12	nmod	12:nmod:such_as	Entity=object-74)
+19	,	,	PUNCT	,	_	23	punct	23:punct	_
+20	dual	dual	ADJ	JJ	Degree=Pos	23	amod	23:amod	Entity=(abstract-48
+21	transmission	transmission	NOUN	NN	Number=Sing	22	compound	22:compound	Entity=(object-64(abstract-65)
+22	line	line	NOUN	NN	Number=Sing	23	compound	23:compound	Entity=object-64)
+23	structure	structure	NOUN	NN	Number=Sing	18	conj	12:nmod:such_as|18:conj:and	_
+24	in	in	ADP	IN	_	27	case	27:case	_
+25	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	Entity=(abstract-48
+26	multi-layer	multi-layer	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
+27	structure	structure	NOUN	NN	Number=Sing	23	nmod	23:nmod:in	Entity=abstract-48)abstract-48)
+28	,	,	PUNCT	,	_	31	punct	31:punct	_
+29	forward-wave	forward-wave	ADJ	JJ	Degree=Pos	31	amod	31:amod	Entity=(object-66
+30	directional	directional	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
+31	coupler	coupler	NOUN	NN	Number=Sing	18	conj	12:nmod:such_as|18:conj:and	Entity=object-66)
+32	,	,	PUNCT	,	_	35	punct	35:punct	_
+33	modularized	modularize	VERB	VBN	Tense=Past|VerbForm=Part	35	amod	35:amod	Entity=(abstract-48
+34	multi-folded	multi-fold	VERB	VBN	Tense=Past|VerbForm=Part	35	amod	35:amod	_
+35	structure	structure	NOUN	NN	Number=Sing	18	conj	12:nmod:such_as|18:conj:and	Entity=abstract-48)
+36	,	,	PUNCT	,	_	39	punct	39:punct	_
+37	slot-directional	slot-directional	NOUN	NN	Number=Sing	39	compound	39:compound	Entity=(object-66
+38	hybrid	hybrid	NOUN	NN	Number=Sing	39	compound	39:compound	Entity=(abstract-75)
+39	coupler	coupler	NOUN	NN	Number=Sing	18	conj	12:nmod:such_as|18:conj:and	Entity=object-66)
+40	,	,	PUNCT	,	_	52	punct	52:punct	_
+41	and	and	CCONJ	CC	_	52	cc	52:cc	_
+42	dual-layer	dual-layer	NOUN	NN	Number=Sing	45	compound	45:compound	Entity=(abstract-48(abstract-76
+43	substrate	substrate	NOUN	NN	Number=Sing	45	compound	45:compound	Entity=(object-60)
+44	integrated	integrate	VERB	VBN	Tense=Past|VerbForm=Part	45	amod	45:amod	_
+45	waveguide	waveguide	NOUN	NN	Number=Sing	52	compound	52:compound	Entity=abstract-76)
+46	(	(	PUNCT	-LRB-	_	47	punct	47:punct	Discourse=restatement:44->43
+47	SIW	SIW	PROPN	NNP	Number=Sing	45	appos	45:appos	Entity=(abstract-76)
+48	)	)	PUNCT	-RRB-	_	47	punct	47:punct	_
+49	based	base	VERB	VBN	Tense=Past|VerbForm=Part	52	amod	52:amod	Discourse=elaboration:45->43
+50	crossover	crossover	NOUN	NN	Number=Sing	51	compound	51:compound	Entity=(abstract-77(abstract-78)
+51	elimination	elimination	NOUN	NN	Number=Sing	52	compound	52:compound	Entity=abstract-77)
+52	structure	structure	NOUN	NN	Number=Sing	18	conj	12:nmod:such_as|18:conj:and	Entity=abstract-58)abstract-48)
+53	.	.	PUNCT	.	_	9	punct	9:punct	_
+
+# s_type = sub
+# sent_id = AMALGUM_academic_beamforming-19
+# text = Yet , it should be noted that those miniaturization techniques inevitably lead to higher implementation cost and less producibility .
+1	Yet	yet	ADV	RB	_	6	advmod	6:advmod	Discourse=attribution:46->47
+2	,	,	PUNCT	,	_	1	punct	1:punct	_
+3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass	Entity=(abstract-48)
+4	should	should	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
+5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
+6	noted	note	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+7	that	that	SCONJ	IN	_	12	mark	12:mark	Discourse=joint:47->21
+8	those	this	DET	DT	Number=Plur|PronType=Dem	10	det	10:det	Entity=(abstract-58
+9	miniaturization	miniaturization	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(abstract-57)
+10	techniques	technique	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	Entity=abstract-58)
+11	inevitably	inevitably	ADV	RB	Degree=Pos	12	advmod	12:advmod	_
+12	lead	lead	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	csubj:pass	6:csubj:pass	_
+13	to	to	ADP	IN	_	16	case	16:case	_
+14	higher	high	ADJ	JJR	Degree=Cmp	16	amod	16:amod	Entity=(abstract-30(abstract-31
+15	implementation	implementation	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(abstract-32)
+16	cost	cost	NOUN	NN	Number=Sing	12	obl	12:obl:to	Entity=abstract-31)
+17	and	and	CCONJ	CC	_	19	cc	19:cc	_
+18	less	less	ADJ	JJR	Degree=Cmp	19	amod	19:amod	Entity=(abstract-35
+19	producibility	producibility	NOUN	NN	Number=Sing	16	conj	12:obl:to|16:conj:and	Entity=abstract-30)abstract-35)
+20	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-20
+# text = It is also interesting to note , that those previous works have utilized only the same-property homogenous substrates for the multiple layers .
+1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	Discourse=concession:48->49|Entity=(abstract-35)
+2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
+3	also	also	ADV	RB	_	4	advmod	4:advmod	_
+4	interesting	interesting	ADJ	JJ	Degree=Pos	0	root	0:root	_
+5	to	to	PART	TO	_	6	mark	6:mark	_
+6	note	note	VERB	VB	VerbForm=Inf	4	csubj	4:csubj	_
+7	,	,	PUNCT	,	_	13	punct	13:punct	_
+8	that	that	SCONJ	IN	_	13	mark	13:mark	Discourse=joint:49->21
+9	those	this	DET	DT	Number=Plur|PronType=Dem	11	det	11:det	Entity=(abstract-56
+10	previous	previous	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
+11	works	work	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	Entity=abstract-56)
+12	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	13	aux	13:aux	_
+13	utilized	utilize	VERB	VBN	Tense=Past|VerbForm=Part	4	csubj	4:csubj	_
+14	only	only	ADV	RB	_	18	advmod	18:advmod	Entity=(object-79
+15	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
+16	same-property	same-property	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
+17	homogenous	homogenous	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
+18	substrates	substrate	NOUN	NNS	Number=Plur	13	obj	13:obj	_
+19	for	for	ADP	IN	_	22	case	22:case	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(abstract-73
+21	multiple	multiple	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
+22	layers	layer	NOUN	NNS	Number=Plur	18	nmod	18:nmod:for	Entity=object-79)abstract-73)
+23	.	.	PUNCT	.	_	4	punct	4:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-21
+# text = In this work , we propose to adopt a two-layer hybrid stackup substrate for realizing a 28-GHz band Butler matrix based switched beamforming antenna system .
+1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:50->21
+2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(abstract-80
+3	work	work	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=abstract-80)
+4	,	,	PUNCT	,	_	3	punct	3:punct	_
+5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj|8:nsubj:xsubj	Entity=(person-81)
+6	propose	propose	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+7	to	to	PART	TO	_	8	mark	8:mark	_
+8	adopt	adopt	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
+9	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(object-60
+10	two-layer	two-layer	NOUN	NN	Number=Sing	13	compound	13:compound	_
+11	hybrid	hybrid	NOUN	NN	Number=Sing	13	compound	13:compound	_
+12	stackup	stackup	NOUN	NN	Number=Sing	13	compound	13:compound	Entity=(abstract-82)
+13	substrate	substrate	NOUN	NN	Number=Sing	8	obj	8:obj	Entity=object-60)
+14	for	for	SCONJ	IN	_	15	mark	15:mark	Discourse=purpose:51->50
+15	realizing	realize	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl:for	_
+16	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	Entity=(abstract-21
+17	28-GHz	28-GHz	NOUN	NN	Number=Sing	18	compound	18:compound	Entity=(abstract-6
+18	band	band	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=abstract-6)
+19	Butler	Butler	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(abstract-46(place-47)
+20	matrix	matrix	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=abstract-46)
+21	based	base	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
+22	switched	switch	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
+23	beamforming	beamforming	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(abstract-20)
+24	antenna	antenna	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(object-11)
+25	system	system	NOUN	NN	Number=Sing	15	obj	15:obj	Entity=abstract-21)
+26	.	.	PUNCT	.	_	6	punct	6:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-22
+# text = The hybrid two-layer stackup substrate is composed of two dissimilar layers with each layer having optimal electrical properties for the Butler matrix and the antenna elements .
+1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Discourse=joint:52->21|Entity=(object-60
+2	hybrid	hybrid	NOUN	NN	Number=Sing	5	compound	5:compound	_
+3	two-layer	two-layer	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(abstract-82
+4	stackup	stackup	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=abstract-82)
+5	substrate	substrate	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass	Entity=object-60)
+6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux:pass	7:aux:pass	_
+7	composed	compose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+8	of	of	ADP	IN	_	11	case	11:case	_
+9	two	2	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	Entity=(abstract-73
+10	dissimilar	dissimilar	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
+11	layers	layer	NOUN	NNS	Number=Plur	7	obl	7:obl:of	_
+12	with	with	SCONJ	IN	_	15	mark	15:mark	Discourse=elaboration:53->52
+13	each	each	DET	DT	_	14	det	14:det	Entity=(abstract-83
+14	layer	layer	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	Entity=abstract-83)
+15	having	have	VERB	VBG	VerbForm=Ger	11	acl	11:acl:with	_
+16	optimal	optimal	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(abstract-84
+17	electrical	electrical	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
+18	properties	property	NOUN	NNS	Number=Plur	15	obj	15:obj	_
+19	for	for	ADP	IN	_	22	case	22:case	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(abstract-46
+21	Butler	Butler	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-47)
+22	matrix	matrix	NOUN	NN	Number=Sing	18	nmod	18:nmod:for	Entity=abstract-46)
+23	and	and	CCONJ	CC	_	26	cc	26:cc	_
+24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(object-50
+25	antenna	antenna	NOUN	NN	Number=Sing	26	compound	26:compound	Entity=(object-11)
+26	elements	element	NOUN	NNS	Number=Plur	22	conj	18:nmod:for|22:conj:and	Entity=abstract-73)abstract-84)object-50)
+27	.	.	PUNCT	.	_	7	punct	7:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-23
+# text = Such hybrid stackup substrate based design approach was also found to be effective for performance and reliability improvement in the high-frequency serial-link applications .
+1	Such	such	DET	JJ	Degree=Pos	7	det	7:det	Discourse=elaboration:54->52|Entity=(abstract-21
+2	hybrid	hybrid	NOUN	NN	Number=Sing	5	compound	5:compound	_
+3	stackup	stackup	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(abstract-82)
+4	substrate	substrate	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(object-60)
+5	based	base	VERB	VBN	Tense=Past|VerbForm=Part	7	amod	7:amod	_
+6	design	design	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(abstract-61)
+7	approach	approach	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass|13:nsubj:xsubj	Entity=abstract-21)
+8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
+9	also	also	ADV	RB	_	10	advmod	10:advmod	_
+10	found	find	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+11	to	to	PART	TO	_	13	mark	13:mark	_
+12	be	be	AUX	VB	VerbForm=Inf	13	cop	13:cop	_
+13	effective	effective	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	_
+14	for	for	ADP	IN	_	18	case	18:case	_
+15	performance	performance	NOUN	NN	Number=Sing	18	compound	18:compound	Entity=(abstract-85(abstract-86)
+16	and	and	CCONJ	CC	_	17	cc	17:cc	_
+17	reliability	reliability	NOUN	NN	Number=Sing	15	conj	15:conj:and|18:compound	Entity=(abstract-87)
+18	improvement	improvement	NOUN	NN	Number=Sing	13	obl	13:obl:for	_
+19	in	in	ADP	IN	_	23	case	23:case	_
+20	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(abstract-8
+21	high-frequency	high-frequency	NOUN	NN	Number=Sing	23	compound	23:compound	_
+22	serial-link	serial-link	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
+23	applications	application	NOUN	NNS	Number=Plur	18	nmod	18:nmod:in	Entity=abstract-85)abstract-8)
+24	.	.	PUNCT	.	_	10	punct	10:punct	_
+
+# s_type = decl
+# sent_id = AMALGUM_academic_beamforming-24
+# text = This work is carried out to achieve the overall size miniaturization and the spurious radiation reduction in a Butler matrix based switched beamforming antenna system for 28-GHz mm-Wave 5G radio applications .
+1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	Discourse=elaboration:55->52|Entity=(abstract-80
+2	work	work	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|7:nsubj:xsubj	Entity=abstract-80)
+3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
+4	carried	carry	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	out	out	ADP	RP	_	4	compound:prt	4:compound:prt	_
+6	to	to	PART	TO	_	7	mark	7:mark	Discourse=purpose:56->55
+7	achieve	achieve	VERB	VB	VerbForm=Inf	4	xcomp	4:xcomp	_
+8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(abstract-57
+9	overall	overall	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
+10	size	size	NOUN	NN	Number=Sing	11	compound	11:compound	Entity=(abstract-52)
+11	miniaturization	miniaturization	NOUN	NN	Number=Sing	7	obj	7:obj	Entity=abstract-57)
+12	and	and	CCONJ	CC	_	16	cc	16:cc	_
+13	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(abstract-88
+14	spurious	spurious	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
+15	radiation	radiation	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(abstract-72)
+16	reduction	reduction	NOUN	NN	Number=Sing	11	conj	7:obj|11:conj:and	Entity=abstract-88)
+17	in	in	ADP	IN	_	25	case	25:case	_
+18	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	Entity=(abstract-21
+19	Butler	Butler	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(place-47)
+20	matrix	matrix	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(abstract-46)
+21	based	base	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
+22	switched	switch	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
+23	beamforming	beamforming	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(abstract-20)
+24	antenna	antenna	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(object-11)
+25	system	system	NOUN	NN	Number=Sing	7	obl	7:obl:in	_
+26	for	for	ADP	IN	_	31	case	31:case	_
+27	28-GHz	28-GHz	NOUN	NN	Number=Sing	28	compound	28:compound	Entity=(abstract-8(object-89
+28	mm-Wave	mm-Wave	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=object-89)
+29	5G	5G	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(abstract-90(abstract-91)
+30	radio	radio	NOUN	NN	Number=Sing	31	compound	31:compound	Entity=abstract-90)
+31	applications	application	NOUN	NNS	Number=Plur	25	nmod	25:nmod:for	Entity=abstract-21)abstract-8)
+32	.	.	PUNCT	.	_	4	punct	4:punct	_
+

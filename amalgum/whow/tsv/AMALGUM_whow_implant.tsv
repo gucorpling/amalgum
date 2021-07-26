@@ -1,0 +1,691 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Choose a Dental Implant Surgeon
+1-1	0-6	Choose	_	_	_	_
+1-2	7-8	a	person[2]	new[2]	_	_
+1-3	9-15	Dental	object[1]|person[2]	new[1]|new[2]	coref	8-18[0_1]
+1-4	16-23	Implant	object[1]|person[2]	new[1]|new[2]	_	_
+1-5	24-31	Surgeon	person[2]	new[2]	_	_
+
+#Text=Getting dental implants requires precision reconstructive surgery .
+2-1	32-39	Getting	_	_	_	_
+2-2	40-46	dental	object[3]	new[3]	coref	16-12[0_3]
+2-3	47-55	implants	object[3]	new[3]	_	_
+2-4	56-64	requires	abstract	new	coref|none	8-23[32_0]|2-4[0_32]
+2-5	65-74	precision	event[4]	new[4]	coref	20-1[98_4]
+2-6	75-89	reconstructive	event[4]	new[4]	_	_
+2-7	90-97	surgery	event[4]	new[4]	_	_
+2-8	98-99	.	_	_	_	_
+
+#Text=You do n’t just want anyone operating on your mouth ; you want an expert .
+3-1	100-103	You	person	acc	ana	3-9
+3-2	104-106	do	_	_	_	_
+3-3	107-110	n’t	_	_	_	_
+3-4	111-115	just	_	_	_	_
+3-5	116-120	want	_	_	_	_
+3-6	121-127	anyone	person[6]	new[6]	_	_
+3-7	128-137	operating	person[6]	new[6]	_	_
+3-8	138-140	on	person[6]	new[6]	_	_
+3-9	141-145	your	person[6]|person|object[8]	new[6]|giv|new[8]	ana	3-12
+3-10	146-151	mouth	person[6]|object[8]	new[6]|new[8]	_	_
+3-11	152-153	;	_	_	_	_
+3-12	154-157	you	person	giv	ana	4-5
+3-13	158-162	want	_	_	_	_
+3-14	163-165	an	person[10]	new[10]	_	_
+3-15	166-172	expert	person[10]	new[10]	_	_
+3-16	173-174	.	_	_	_	_
+
+#Text=So , how do you find the right dentist for the job ?
+4-1	175-177	So	_	_	_	_
+4-2	178-179	,	_	_	_	_
+4-3	180-183	how	_	_	_	_
+4-4	184-186	do	_	_	_	_
+4-5	187-190	you	person	giv	ana	8-6
+4-6	191-195	find	_	_	_	_
+4-7	196-199	the	person[12]	new[12]	coref	10-1[41_12]
+4-8	200-205	right	person[12]	new[12]	_	_
+4-9	206-213	dentist	person[12]	new[12]	_	_
+4-10	214-217	for	person[12]	new[12]	_	_
+4-11	218-221	the	person[12]|abstract[13]	new[12]|new[13]	_	_
+4-12	222-225	job	person[12]|abstract[13]	new[12]|new[13]	_	_
+4-13	226-227	?	_	_	_	_
+
+#Text=The best surgeons will have the perfect combination of credentials , facilities and reputation .
+5-1	228-231	The	person[14]	new[14]	coref	9-21[40_14]
+5-2	232-236	best	person[14]	new[14]	_	_
+5-3	237-245	surgeons	person[14]	new[14]	_	_
+5-4	246-250	will	_	_	_	_
+5-5	251-255	have	_	_	_	_
+5-6	256-259	the	abstract[15]	new[15]	_	_
+5-7	260-267	perfect	abstract[15]	new[15]	_	_
+5-8	268-279	combination	abstract[15]	new[15]	_	_
+5-9	280-282	of	abstract[15]	new[15]	_	_
+5-10	283-294	credentials	abstract[15]|abstract	new[15]|new	_	_
+5-11	295-296	,	abstract[15]	new[15]	_	_
+5-12	297-307	facilities	abstract[15]|place	new[15]|new	_	_
+5-13	308-311	and	abstract[15]	new[15]	_	_
+5-14	312-322	reputation	abstract[15]|abstract	new[15]|new	coref	25-2[122_0]
+5-15	323-324	.	_	_	_	_
+
+#Text=Steps
+6-1	325-330	Steps	abstract	new	_	_
+
+#Text=Check for AAID Certification .
+7-1	331-336	Check	_	_	_	_
+7-2	337-340	for	_	_	_	_
+7-3	341-345	AAID	abstract|abstract[21]	new|new[21]	coref|coref	8-13|8-13[30_21]
+7-4	346-359	Certification	abstract[21]	new[21]	_	_
+7-5	360-361	.	_	_	_	_
+
+#Text=The simplest way to narrow your list of dentists is to use AAID ( American Academy of Implant Dentistry ) certification as your first requirement .
+8-1	362-365	The	abstract[22]	new[22]	_	_
+8-2	366-374	simplest	abstract[22]	new[22]	_	_
+8-3	375-378	way	abstract[22]	new[22]	_	_
+8-4	379-381	to	abstract[22]	new[22]	_	_
+8-5	382-388	narrow	abstract[22]	new[22]	_	_
+8-6	389-393	your	abstract[22]|person|abstract[24]	new[22]|giv|new[24]	ana	8-23
+8-7	394-398	list	abstract[22]|abstract[24]	new[22]|new[24]	_	_
+8-8	399-401	of	abstract[22]|abstract[24]	new[22]|new[24]	_	_
+8-9	402-410	dentists	abstract[22]|abstract[24]|person	new[22]|new[24]|new	coref	9-6[34_0]
+8-10	411-413	is	_	_	_	_
+8-11	414-416	to	_	_	_	_
+8-12	417-420	use	_	_	_	_
+8-13	421-425	AAID	abstract|abstract[30]	giv|giv[30]	coref	9-10[35_30]
+8-14	426-427	(	abstract[30]	giv[30]	_	_
+8-15	428-436	American	organization[27]|abstract[30]	new[27]|giv[30]	_	_
+8-16	437-444	Academy	organization[27]|abstract[30]	new[27]|giv[30]	_	_
+8-17	445-447	of	organization[27]|abstract[30]	new[27]|giv[30]	_	_
+8-18	448-455	Implant	organization[27]|object|abstract[29]|abstract[30]	new[27]|giv|new[29]|giv[30]	coref|coref	11-19|11-19[50_29]
+8-19	456-465	Dentistry	organization[27]|abstract[29]|abstract[30]	new[27]|new[29]|giv[30]	_	_
+8-20	466-467	)	abstract[30]	giv[30]	_	_
+8-21	468-481	certification	abstract[30]	giv[30]	_	_
+8-22	482-484	as	_	_	_	_
+8-23	485-489	your	person|abstract[32]	giv|new[32]	ana	11-9
+8-24	490-495	first	abstract[32]	new[32]	_	_
+8-25	496-507	requirement	abstract[32]	new[32]	_	_
+8-26	508-509	.	_	_	_	_
+
+#Text=There are several types of dentists who might have this certification , including general dentists , periodon'tists , prosthodon'tists and oral surgeons .
+9-1	510-515	There	_	_	_	_
+9-2	516-519	are	_	_	_	_
+9-3	520-527	several	place[33]	new[33]	_	_
+9-4	528-533	types	place[33]	new[33]	_	_
+9-5	534-536	of	place[33]	new[33]	_	_
+9-6	537-545	dentists	place[33]|person[34]	new[33]|giv[34]	coref	9-14[36_34]
+9-7	546-549	who	place[33]|person[34]	new[33]|giv[34]	_	_
+9-8	550-555	might	place[33]|person[34]	new[33]|giv[34]	_	_
+9-9	556-560	have	place[33]|person[34]	new[33]|giv[34]	_	_
+9-10	561-565	this	place[33]|person[34]|abstract[35]	new[33]|giv[34]|giv[35]	coref	10-12[0_35]
+9-11	566-579	certification	place[33]|person[34]|abstract[35]	new[33]|giv[34]|giv[35]	_	_
+9-12	580-581	,	place[33]	new[33]	_	_
+9-13	582-591	including	place[33]	new[33]	_	_
+9-14	592-599	general	place[33]|person[36]|person[37]	new[33]|giv[36]|giv[37]	coref|coref	9-14[37_36]|14-7[63_37]
+9-15	600-608	dentists	place[33]|person[36]|person[37]	new[33]|giv[36]|giv[37]	_	_
+9-16	609-610	,	place[33]|person[37]	new[33]|giv[37]	_	_
+9-17	611-625	periodon'tists	place[33]|person[37]|animal	new[33]|giv[37]|new	_	_
+9-18	626-627	,	place[33]|person[37]	new[33]|giv[37]	_	_
+9-19	628-644	prosthodon'tists	place[33]|person[37]|person	new[33]|giv[37]|new	_	_
+9-20	645-648	and	place[33]|person[37]	new[33]|giv[37]	_	_
+9-21	649-653	oral	place[33]|person[37]|person[40]	new[33]|giv[37]|giv[40]	ana	11-4[0_40]
+9-22	654-662	surgeons	place[33]|person[37]|person[40]	new[33]|giv[37]|giv[40]	_	_
+9-23	663-664	.	_	_	_	_
+
+#Text=Any dentist who performs surgical and/or restorative procedures could potentially acquire certification .
+10-1	665-668	Any	person[41]	giv[41]	coref	17-2[83_41]
+10-2	669-676	dentist	person[41]	giv[41]	_	_
+10-3	677-680	who	person[41]	giv[41]	_	_
+10-4	681-689	performs	person[41]	giv[41]	_	_
+10-5	690-698	surgical	person[41]|abstract[42]	giv[41]|new[42]	coref	19-1[95_42]
+10-6	699-705	and/or	person[41]|abstract[42]	giv[41]|new[42]	_	_
+10-7	706-717	restorative	person[41]|abstract[42]	giv[41]|new[42]	_	_
+10-8	718-728	procedures	person[41]|abstract[42]	giv[41]|new[42]	_	_
+10-9	729-734	could	_	_	_	_
+10-10	735-746	potentially	_	_	_	_
+10-11	747-754	acquire	_	_	_	_
+10-12	755-768	certification	abstract	giv	_	_
+10-13	769-770	.	_	_	_	_
+
+#Text=And , if they hold that certificate , you know that they are competent in all phases of implant dentistry , have at least five years of experience , are actively involved in leadership roles and have completed at least 400 hours of continuing education .
+11-1	771-774	And	_	_	_	_
+11-2	775-776	,	_	_	_	_
+11-3	777-779	if	_	_	_	_
+11-4	780-784	they	person	giv	ana	11-12
+11-5	785-789	hold	_	_	_	_
+11-6	790-794	that	abstract[45]	new[45]	_	_
+11-7	795-806	certificate	abstract[45]	new[45]	_	_
+11-8	807-808	,	_	_	_	_
+11-9	809-812	you	person	giv	ana	17-13
+11-10	813-817	know	_	_	_	_
+11-11	818-822	that	_	_	_	_
+11-12	823-827	they	person	giv	_	_
+11-13	828-831	are	_	_	_	_
+11-14	832-841	competent	_	_	_	_
+11-15	842-844	in	_	_	_	_
+11-16	845-848	all	abstract[48]	new[48]	_	_
+11-17	849-855	phases	abstract[48]	new[48]	_	_
+11-18	856-858	of	abstract[48]	new[48]	_	_
+11-19	859-866	implant	abstract[48]|object|abstract[50]	new[48]|giv|giv[50]	coref|coref	14-7|31-1[145_50]
+11-20	867-876	dentistry	abstract[48]|abstract[50]	new[48]|giv[50]	_	_
+11-21	877-878	,	_	_	_	_
+11-22	879-883	have	_	_	_	_
+11-23	884-886	at	_	_	_	_
+11-24	887-892	least	time[51]	new[51]	_	_
+11-25	893-897	five	time[51]	new[51]	_	_
+11-26	898-903	years	time[51]	new[51]	_	_
+11-27	904-906	of	time[51]	new[51]	_	_
+11-28	907-917	experience	time[51]|abstract	new[51]|new	coref	27-11[133_0]
+11-29	918-919	,	_	_	_	_
+11-30	920-923	are	_	_	_	_
+11-31	924-932	actively	_	_	_	_
+11-32	933-941	involved	_	_	_	_
+11-33	942-944	in	_	_	_	_
+11-34	945-955	leadership	abstract|abstract[54]	new|new[54]	_	_
+11-35	956-961	roles	abstract[54]	new[54]	_	_
+11-36	962-965	and	_	_	_	_
+11-37	966-970	have	_	_	_	_
+11-38	971-980	completed	_	_	_	_
+11-39	981-983	at	_	_	_	_
+11-40	984-989	least	time[55]	new[55]	_	_
+11-41	990-993	400	time[55]	new[55]	_	_
+11-42	994-999	hours	time[55]	new[55]	_	_
+11-43	1000-1002	of	time[55]	new[55]	_	_
+11-44	1003-1013	continuing	time[55]|place[56]	new[55]|new[56]	ana	12-1[0_56]
+11-45	1014-1023	education	time[55]|place[56]	new[55]|new[56]	_	_
+11-46	1024-1025	.	_	_	_	_
+
+#Text=It ’s a great place to start !
+12-1	1026-1028	It	place	giv	coref	12-3[58_0]
+12-2	1029-1031	’s	_	_	_	_
+12-3	1032-1033	a	place[58]	giv[58]	_	_
+12-4	1034-1039	great	place[58]	giv[58]	_	_
+12-5	1040-1045	place	place[58]	giv[58]	_	_
+12-6	1046-1048	to	place[58]	giv[58]	_	_
+12-7	1049-1054	start	place[58]	giv[58]	_	_
+12-8	1055-1056	!	_	_	_	_
+
+#Text=Inquire About In-Office Technology .
+13-1	1057-1064	Inquire	_	_	_	_
+13-2	1065-1070	About	_	_	_	_
+13-3	1071-1080	In-Office	abstract[59]	new[59]	coref	14-3[61_59]
+13-4	1081-1091	Technology	abstract[59]	new[59]	_	_
+13-5	1092-1093	.	_	_	_	_
+
+#Text=Advancements in dental technology have given implant dentists incredible tools to work with ; but , not all offices are state-of-the-art .
+14-1	1094-1106	Advancements	abstract[60]	new[60]	_	_
+14-2	1107-1109	in	abstract[60]	new[60]	_	_
+14-3	1110-1116	dental	abstract[60]|abstract[61]	new[60]|giv[61]	coref	17-8[85_61]
+14-4	1117-1127	technology	abstract[60]|abstract[61]	new[60]|giv[61]	_	_
+14-5	1128-1132	have	_	_	_	_
+14-6	1133-1138	given	_	_	_	_
+14-7	1139-1146	implant	object|person[63]	giv|giv[63]	coref|coref	16-3[0_63]|31-1
+14-8	1147-1155	dentists	person[63]	giv[63]	_	_
+14-9	1156-1166	incredible	object[64]	new[64]	_	_
+14-10	1167-1172	tools	object[64]	new[64]	_	_
+14-11	1173-1175	to	object[64]	new[64]	_	_
+14-12	1176-1180	work	object[64]	new[64]	_	_
+14-13	1181-1185	with	object[64]	new[64]	_	_
+14-14	1186-1187	;	_	_	_	_
+14-15	1188-1191	but	_	_	_	_
+14-16	1192-1193	,	_	_	_	_
+14-17	1194-1197	not	_	_	_	_
+14-18	1198-1201	all	place[65]	new[65]	_	_
+14-19	1202-1209	offices	place[65]	new[65]	_	_
+14-20	1210-1213	are	_	_	_	_
+14-21	1214-1230	state-of-the-art	_	_	_	_
+14-22	1231-1232	.	_	_	_	_
+
+#Text=The Cone Beam CT , for example , is a 3D imaging device that can provide views of soft tissue , bone , muscle , and blood vessels , without sacrificing clarity .
+15-1	1233-1236	The	object[67]	new[67]	coref	15-10[70_67]
+15-2	1237-1241	Cone	person[66]|object[67]	new[66]|new[67]	_	_
+15-3	1242-1246	Beam	person[66]|object[67]	new[66]|new[67]	_	_
+15-4	1247-1249	CT	object[67]	new[67]	_	_
+15-5	1250-1251	,	_	_	_	_
+15-6	1252-1255	for	_	_	_	_
+15-7	1256-1263	example	_	_	_	_
+15-8	1264-1265	,	_	_	_	_
+15-9	1266-1268	is	_	_	_	_
+15-10	1269-1270	a	object[70]	giv[70]	_	_
+15-11	1271-1273	3D	abstract|object[70]	new|giv[70]	_	_
+15-12	1274-1281	imaging	abstract|object[70]	new|giv[70]	_	_
+15-13	1282-1288	device	object[70]	giv[70]	_	_
+15-14	1289-1293	that	object[70]	giv[70]	_	_
+15-15	1294-1297	can	object[70]	giv[70]	_	_
+15-16	1298-1305	provide	object[70]	giv[70]	_	_
+15-17	1306-1311	views	object[70]|abstract[71]	giv[70]|new[71]	_	_
+15-18	1312-1314	of	object[70]|abstract[71]	giv[70]|new[71]	_	_
+15-19	1315-1319	soft	object[70]|abstract[71]|object[72]	giv[70]|new[71]|new[72]	_	_
+15-20	1320-1326	tissue	object[70]|abstract[71]|object[72]	giv[70]|new[71]|new[72]	_	_
+15-21	1327-1328	,	object[70]|abstract[71]	giv[70]|new[71]	_	_
+15-22	1329-1333	bone	object[70]|abstract[71]|object	giv[70]|new[71]|new	_	_
+15-23	1334-1335	,	object[70]|abstract[71]	giv[70]|new[71]	_	_
+15-24	1336-1342	muscle	object[70]|abstract[71]|object	giv[70]|new[71]|new	_	_
+15-25	1343-1344	,	object[70]|abstract[71]	giv[70]|new[71]	_	_
+15-26	1345-1348	and	object[70]|abstract[71]	giv[70]|new[71]	_	_
+15-27	1349-1354	blood	object[70]|abstract[71]|substance|object[76]	giv[70]|new[71]|new|new[76]	_	_
+15-28	1355-1362	vessels	object[70]|abstract[71]|object[76]	giv[70]|new[71]|new[76]	_	_
+15-29	1363-1364	,	_	_	_	_
+15-30	1365-1372	without	_	_	_	_
+15-31	1373-1384	sacrificing	_	_	_	_
+15-32	1385-1392	clarity	abstract	new	ana	16-1
+15-33	1393-1394	.	_	_	_	_
+
+#Text=This allows dentists to plan treatment properly , and safely place implants with incredible precision .
+16-1	1395-1399	This	abstract	giv	_	_
+16-2	1400-1406	allows	_	_	_	_
+16-3	1407-1415	dentists	person	giv	coref	22-2[104_0]
+16-4	1416-1418	to	_	_	_	_
+16-5	1419-1423	plan	_	_	_	_
+16-6	1424-1433	treatment	event	new	_	_
+16-7	1434-1442	properly	_	_	_	_
+16-8	1443-1444	,	_	_	_	_
+16-9	1445-1448	and	_	_	_	_
+16-10	1449-1455	safely	_	_	_	_
+16-11	1456-1461	place	_	_	_	_
+16-12	1462-1470	implants	object	giv	coref	27-13[134_0]
+16-13	1471-1475	with	_	_	_	_
+16-14	1476-1486	incredible	abstract[82]	new[82]	_	_
+16-15	1487-1496	precision	abstract[82]	new[82]	_	_
+16-16	1497-1498	.	_	_	_	_
+
+#Text=Choosing a dentist with in-office access to this technology and others minimizes your risk , while maximizing your convenience .
+17-1	1499-1507	Choosing	_	_	_	_
+17-2	1508-1509	a	person[83]	giv[83]	coref	26-7[125_83]
+17-3	1510-1517	dentist	person[83]	giv[83]	_	_
+17-4	1518-1522	with	person[83]	giv[83]	_	_
+17-5	1523-1532	in-office	person[83]|abstract[84]	giv[83]|new[84]	_	_
+17-6	1533-1539	access	person[83]|abstract[84]	giv[83]|new[84]	_	_
+17-7	1540-1542	to	person[83]|abstract[84]	giv[83]|new[84]	_	_
+17-8	1543-1547	this	person[83]|abstract[84]|abstract[85]	giv[83]|new[84]|giv[85]	_	_
+17-9	1548-1558	technology	person[83]|abstract[84]|abstract[85]	giv[83]|new[84]|giv[85]	_	_
+17-10	1559-1562	and	person[83]|abstract[84]	giv[83]|new[84]	_	_
+17-11	1563-1569	others	person[83]|abstract[84]|person	giv[83]|new[84]|new	ana	18-4
+17-12	1570-1579	minimizes	_	_	_	_
+17-13	1580-1584	your	person|abstract[88]	giv|new[88]	ana	17-18
+17-14	1585-1589	risk	abstract[88]	new[88]	_	_
+17-15	1590-1591	,	_	_	_	_
+17-16	1592-1597	while	_	_	_	_
+17-17	1598-1608	maximizing	_	_	_	_
+17-18	1609-1613	your	person|abstract[90]	giv|new[90]	ana	22-2
+17-19	1614-1625	convenience	abstract[90]	new[90]	_	_
+17-20	1626-1627	.	_	_	_	_
+
+#Text=Find Out If They Have an In-House Surgical Suite .
+18-1	1628-1632	Find	_	_	_	_
+18-2	1633-1636	Out	_	_	_	_
+18-3	1637-1639	If	_	_	_	_
+18-4	1640-1644	They	person	giv	_	_
+18-5	1645-1649	Have	_	_	_	_
+18-6	1650-1652	an	abstract[94]	new[94]	_	_
+18-7	1653-1661	In-House	place|abstract[94]	new|new[94]	_	_
+18-8	1662-1670	Surgical	substance|abstract[94]	new|new[94]	_	_
+18-9	1671-1676	Suite	abstract[94]	new[94]	_	_
+18-10	1677-1678	.	_	_	_	_
+
+#Text=Some dental procedures require multiple visits to the office .
+19-1	1679-1683	Some	abstract[95]	giv[95]	ana	21-1[0_95]
+19-2	1684-1690	dental	abstract[95]	giv[95]	_	_
+19-3	1691-1701	procedures	abstract[95]	giv[95]	_	_
+19-4	1702-1709	require	_	_	_	_
+19-5	1710-1718	multiple	event[96]	new[96]	coref	22-17[107_96]
+19-6	1719-1725	visits	event[96]	new[96]	_	_
+19-7	1726-1728	to	event[96]	new[96]	_	_
+19-8	1729-1732	the	event[96]|place[97]	new[96]|new[97]	_	_
+19-9	1733-1739	office	event[96]|place[97]	new[96]|new[97]	_	_
+19-10	1740-1741	.	_	_	_	_
+
+#Text=The actual surgery may even take place off-site at a hospital or other surgical facility .
+20-1	1742-1745	The	event[98]	giv[98]	coref	24-2[113_98]
+20-2	1746-1752	actual	event[98]	giv[98]	_	_
+20-3	1753-1760	surgery	event[98]	giv[98]	_	_
+20-4	1761-1764	may	_	_	_	_
+20-5	1765-1769	even	_	_	_	_
+20-6	1770-1774	take	_	_	_	_
+20-7	1775-1780	place	_	_	_	_
+20-8	1781-1789	off-site	_	_	_	_
+20-9	1790-1792	at	_	_	_	_
+20-10	1793-1794	a	place[99]	new[99]	_	_
+20-11	1795-1803	hospital	place[99]	new[99]	_	_
+20-12	1804-1806	or	_	_	_	_
+20-13	1807-1812	other	place[100]	new[100]	_	_
+20-14	1813-1821	surgical	place[100]	new[100]	_	_
+20-15	1822-1830	facility	place[100]	new[100]	_	_
+20-16	1831-1832	.	_	_	_	_
+
+#Text=These are things to consider carefully .
+21-1	1833-1838	These	abstract	giv	coref	21-3[102_0]
+21-2	1839-1842	are	_	_	_	_
+21-3	1843-1849	things	abstract[102]	giv[102]	_	_
+21-4	1850-1852	to	abstract[102]	giv[102]	_	_
+21-5	1853-1861	consider	abstract[102]	giv[102]	_	_
+21-6	1862-1871	carefully	abstract[102]	giv[102]	_	_
+21-7	1872-1873	.	_	_	_	_
+
+#Text=Ask your candidate dentists not only what the “ turn-around time ” is , but how many visits to expect and where you might have to go .
+22-1	1874-1877	Ask	_	_	_	_
+22-2	1878-1882	your	person|person[104]	giv|giv[104]	ana|coref	22-23|31-10[147_104]
+22-3	1883-1892	candidate	person[104]	giv[104]	_	_
+22-4	1893-1901	dentists	person[104]	giv[104]	_	_
+22-5	1902-1905	not	_	_	_	_
+22-6	1906-1910	only	_	_	_	_
+22-7	1911-1915	what	_	_	_	_
+22-8	1916-1919	the	time[106]	new[106]	ana	23-1[0_106]
+22-9	1920-1921	“	time[106]	new[106]	_	_
+22-10	1922-1933	turn-around	place|time[106]	new|new[106]	_	_
+22-11	1934-1938	time	time[106]	new[106]	_	_
+22-12	1939-1940	”	time[106]	new[106]	_	_
+22-13	1941-1943	is	_	_	_	_
+22-14	1944-1945	,	_	_	_	_
+22-15	1946-1949	but	_	_	_	_
+22-16	1950-1953	how	_	_	_	_
+22-17	1954-1958	many	event[107]	giv[107]	_	_
+22-18	1959-1965	visits	event[107]	giv[107]	_	_
+22-19	1966-1968	to	event[107]	giv[107]	_	_
+22-20	1969-1975	expect	event[107]	giv[107]	_	_
+22-21	1976-1979	and	_	_	_	_
+22-22	1980-1985	where	_	_	_	_
+22-23	1986-1989	you	person	giv	ana	24-2
+22-24	1990-1995	might	_	_	_	_
+22-25	1996-2000	have	_	_	_	_
+22-26	2001-2003	to	_	_	_	_
+22-27	2004-2006	go	_	_	_	_
+22-28	2007-2008	.	_	_	_	_
+
+#Text=Some will have a surgical suite in-house , which tends to make the process quicker and more convenient overall .
+23-1	2009-2013	Some	time	giv	_	_
+23-2	2014-2018	will	_	_	_	_
+23-3	2019-2023	have	_	_	_	_
+23-4	2024-2025	a	place[110]	new[110]	_	_
+23-5	2026-2034	surgical	place[110]	new[110]	_	_
+23-6	2035-2040	suite	place[110]	new[110]	_	_
+23-7	2041-2049	in-house	place[110]	new[110]	_	_
+23-8	2050-2051	,	place[110]	new[110]	_	_
+23-9	2052-2057	which	place[110]	new[110]	_	_
+23-10	2058-2063	tends	place[110]	new[110]	_	_
+23-11	2064-2066	to	place[110]	new[110]	_	_
+23-12	2067-2071	make	place[110]	new[110]	_	_
+23-13	2072-2075	the	place[110]|event[111]	new[110]|new[111]	_	_
+23-14	2076-2083	process	place[110]|event[111]	new[110]|new[111]	_	_
+23-15	2084-2091	quicker	place[110]	new[110]	_	_
+23-16	2092-2095	and	place[110]	new[110]	_	_
+23-17	2096-2100	more	place[110]	new[110]	_	_
+23-18	2101-2111	convenient	place[110]	new[110]	_	_
+23-19	2112-2119	overall	place[110]	new[110]	_	_
+23-20	2120-2121	.	_	_	_	_
+
+#Text=If your surgery will be performed with IV sedation , you will want to find out if your doctor is certified to perform IV sedation , or if other doctors will be involved .
+24-1	2122-2124	If	_	_	_	_
+24-2	2125-2129	your	person|event[113]	giv|giv[113]	ana|coref	24-11|26-20[129_113]
+24-3	2130-2137	surgery	event[113]	giv[113]	_	_
+24-4	2138-2142	will	_	_	_	_
+24-5	2143-2145	be	_	_	_	_
+24-6	2146-2155	performed	_	_	_	_
+24-7	2156-2160	with	_	_	_	_
+24-8	2161-2163	IV	abstract[114]	new[114]	coref	24-24[119_114]
+24-9	2164-2172	sedation	abstract[114]	new[114]	_	_
+24-10	2173-2174	,	_	_	_	_
+24-11	2175-2178	you	person	giv	ana	24-18
+24-12	2179-2183	will	_	_	_	_
+24-13	2184-2188	want	_	_	_	_
+24-14	2189-2191	to	_	_	_	_
+24-15	2192-2196	find	_	_	_	_
+24-16	2197-2200	out	_	_	_	_
+24-17	2201-2203	if	_	_	_	_
+24-18	2204-2208	your	person|person[117]	giv|new[117]	ana|ana	26-3|26-16[0_117]
+24-19	2209-2215	doctor	person[117]	new[117]	_	_
+24-20	2216-2218	is	_	_	_	_
+24-21	2219-2228	certified	_	_	_	_
+24-22	2229-2231	to	_	_	_	_
+24-23	2232-2239	perform	_	_	_	_
+24-24	2240-2242	IV	person|abstract[119]	new|giv[119]	_	_
+24-25	2243-2251	sedation	abstract[119]	giv[119]	_	_
+24-26	2252-2253	,	_	_	_	_
+24-27	2254-2256	or	_	_	_	_
+24-28	2257-2259	if	_	_	_	_
+24-29	2260-2265	other	person[120]	new[120]	ana	25-2[0_120]
+24-30	2266-2273	doctors	person[120]	new[120]	_	_
+24-31	2274-2278	will	_	_	_	_
+24-32	2279-2281	be	_	_	_	_
+24-33	2282-2290	involved	_	_	_	_
+24-34	2291-2292	.	_	_	_	_
+
+#Text=Research Their Reputation .
+25-1	2293-2301	Research	_	_	_	_
+25-2	2302-2307	Their	person|abstract[122]	giv|giv[122]	ana	27-8
+25-3	2308-2318	Reputation	abstract[122]	giv[122]	_	_
+25-4	2319-2320	.	_	_	_	_
+
+#Text=Just because you “ know ” your current dentist , does n’t mean he or she is right for your reconstructive surgery .
+26-1	2321-2325	Just	_	_	_	_
+26-2	2326-2333	because	_	_	_	_
+26-3	2334-2337	you	person	giv	ana	26-7
+26-4	2338-2339	“	_	_	_	_
+26-5	2340-2344	know	_	_	_	_
+26-6	2345-2346	”	_	_	_	_
+26-7	2347-2351	your	person|person[125]	giv|giv[125]	ana|ana	26-14[0_125]|26-20
+26-8	2352-2359	current	person[125]	giv[125]	_	_
+26-9	2360-2367	dentist	person[125]	giv[125]	_	_
+26-10	2368-2369	,	_	_	_	_
+26-11	2370-2374	does	_	_	_	_
+26-12	2375-2378	n’t	_	_	_	_
+26-13	2379-2383	mean	_	_	_	_
+26-14	2384-2386	he	person	giv	coref	39-4[171_0]
+26-15	2387-2389	or	_	_	_	_
+26-16	2390-2393	she	person	giv	coref	37-9[166_0]
+26-17	2394-2396	is	_	_	_	_
+26-18	2397-2402	right	_	_	_	_
+26-19	2403-2406	for	_	_	_	_
+26-20	2407-2411	your	person|event[129]	giv|giv[129]	ana	27-19
+26-21	2412-2426	reconstructive	event[129]	giv[129]	_	_
+26-22	2427-2434	surgery	event[129]	giv[129]	_	_
+26-23	2435-2436	.	_	_	_	_
+
+#Text=There is no harm in asking about their credentials or experience in dental implants , after all , you did n’t need to know until now .
+27-1	2437-2442	There	_	_	_	_
+27-2	2443-2445	is	_	_	_	_
+27-3	2446-2448	no	abstract[130]	new[130]	ana	27-17[0_130]
+27-4	2449-2453	harm	abstract[130]	new[130]	_	_
+27-5	2454-2456	in	abstract[130]	new[130]	_	_
+27-6	2457-2463	asking	abstract[130]	new[130]	_	_
+27-7	2464-2469	about	abstract[130]	new[130]	_	_
+27-8	2470-2475	their	abstract[130]|person|abstract[132]	new[130]|giv|new[132]	ana	28-3
+27-9	2476-2487	credentials	abstract[130]|abstract[132]	new[130]|new[132]	_	_
+27-10	2488-2490	or	abstract[130]	new[130]	_	_
+27-11	2491-2501	experience	abstract[130]|abstract[133]	new[130]|giv[133]	coref	35-10[161_133]
+27-12	2502-2504	in	abstract[130]|abstract[133]	new[130]|giv[133]	_	_
+27-13	2505-2511	dental	abstract[130]|abstract[133]|object[134]	new[130]|giv[133]|giv[134]	coref	30-6[0_134]
+27-14	2512-2520	implants	abstract[130]|abstract[133]|object[134]	new[130]|giv[133]|giv[134]	_	_
+27-15	2521-2522	,	abstract[130]	new[130]	_	_
+27-16	2523-2528	after	abstract[130]	new[130]	_	_
+27-17	2529-2532	all	abstract[130]|abstract	new[130]|giv	_	_
+27-18	2533-2534	,	abstract[130]	new[130]	_	_
+27-19	2535-2538	you	abstract[130]|person	new[130]|giv	ana	35-4
+27-20	2539-2542	did	abstract[130]	new[130]	_	_
+27-21	2543-2546	n’t	abstract[130]	new[130]	_	_
+27-22	2547-2551	need	abstract[130]	new[130]	_	_
+27-23	2552-2554	to	abstract[130]	new[130]	_	_
+27-24	2555-2559	know	abstract[130]	new[130]	_	_
+27-25	2560-2565	until	_	_	_	_
+27-26	2566-2569	now	_	_	_	_
+27-27	2570-2571	.	_	_	_	_
+
+#Text=Ask about their success rate .
+28-1	2572-2575	Ask	_	_	_	_
+28-2	2576-2581	about	_	_	_	_
+28-3	2582-2587	their	person|abstract[139]	giv|new[139]	ana	30-2
+28-4	2588-2595	success	abstract|abstract[139]	new|new[139]	_	_
+28-5	2596-2600	rate	abstract[139]	new[139]	_	_
+28-6	2601-2602	.	_	_	_	_
+
+#Text=Ask to see before and after photos .
+29-1	2603-2606	Ask	_	_	_	_
+29-2	2607-2609	to	_	_	_	_
+29-3	2610-2613	see	_	_	_	_
+29-4	2614-2620	before	object[140]	new[140]	_	_
+29-5	2621-2624	and	object[140]	new[140]	_	_
+29-6	2625-2630	after	object[140]	new[140]	_	_
+29-7	2631-2637	photos	object[140]	new[140]	_	_
+29-8	2638-2639	.	_	_	_	_
+
+#Text=If they do n’t do implants , ask for a referral .
+30-1	2640-2642	If	_	_	_	_
+30-2	2643-2647	they	person	giv	_	_
+30-3	2648-2650	do	_	_	_	_
+30-4	2651-2654	n’t	_	_	_	_
+30-5	2655-2657	do	_	_	_	_
+30-6	2658-2666	implants	object	giv	_	_
+30-7	2667-2668	,	_	_	_	_
+30-8	2669-2672	ask	_	_	_	_
+30-9	2673-2676	for	_	_	_	_
+30-10	2677-2678	a	person[143]	new[143]	_	_
+30-11	2679-2687	referral	person[143]	new[143]	_	_
+30-12	2688-2689	.	_	_	_	_
+
+#Text=Implant dentistry is a very competitive specialty , and most dentists expect these types of inquiries .
+31-1	2690-2697	Implant	object|abstract[145]	giv|giv[145]	coref|coref	31-4[146_145]|32-11[151_0]
+31-2	2698-2707	dentistry	abstract[145]	giv[145]	_	_
+31-3	2708-2710	is	_	_	_	_
+31-4	2711-2712	a	abstract[146]	giv[146]	_	_
+31-5	2713-2717	very	abstract[146]	giv[146]	_	_
+31-6	2718-2729	competitive	abstract[146]	giv[146]	_	_
+31-7	2730-2739	specialty	abstract[146]	giv[146]	_	_
+31-8	2740-2741	,	_	_	_	_
+31-9	2742-2745	and	_	_	_	_
+31-10	2746-2750	most	person[147]	giv[147]	_	_
+31-11	2751-2759	dentists	person[147]	giv[147]	_	_
+31-12	2760-2766	expect	_	_	_	_
+31-13	2767-2772	these	abstract[148]	new[148]	_	_
+31-14	2773-2778	types	abstract[148]	new[148]	_	_
+31-15	2779-2781	of	abstract[148]	new[148]	_	_
+31-16	2782-2791	inquiries	abstract[148]	new[148]	_	_
+31-17	2792-2793	.	_	_	_	_
+
+#Text=Use the Internet to dig up some reviews from other dental implant patients .
+32-1	2794-2797	Use	_	_	_	_
+32-2	2798-2801	the	abstract[149]	new[149]	_	_
+32-3	2802-2810	Internet	abstract[149]	new[149]	_	_
+32-4	2811-2813	to	_	_	_	_
+32-5	2814-2817	dig	_	_	_	_
+32-6	2818-2820	up	_	_	_	_
+32-7	2821-2825	some	abstract[150]	new[150]	_	_
+32-8	2826-2833	reviews	abstract[150]	new[150]	_	_
+32-9	2834-2838	from	abstract[150]	new[150]	_	_
+32-10	2839-2844	other	abstract[150]|person[152]	new[150]|new[152]	_	_
+32-11	2845-2851	dental	abstract[150]|object[151]|person[152]	new[150]|giv[151]|new[152]	coref	35-11[0_151]
+32-12	2852-2859	implant	abstract[150]|object[151]|person[152]	new[150]|giv[151]|new[152]	_	_
+32-13	2860-2868	patients	abstract[150]|person[152]	new[150]|new[152]	_	_
+32-14	2869-2870	.	_	_	_	_
+
+#Text=Just be careful to look at the big picture , as a single review ( good or bad ) may not paint the most accurate picture .
+33-1	2871-2875	Just	_	_	_	_
+33-2	2876-2878	be	_	_	_	_
+33-3	2879-2886	careful	_	_	_	_
+33-4	2887-2889	to	_	_	_	_
+33-5	2890-2894	look	_	_	_	_
+33-6	2895-2897	at	_	_	_	_
+33-7	2898-2901	the	abstract[153]	new[153]	coref	33-23[155_153]
+33-8	2902-2905	big	abstract[153]	new[153]	_	_
+33-9	2906-2913	picture	abstract[153]	new[153]	_	_
+33-10	2914-2915	,	_	_	_	_
+33-11	2916-2918	as	_	_	_	_
+33-12	2919-2920	a	abstract[154]	new[154]	_	_
+33-13	2921-2927	single	abstract[154]	new[154]	_	_
+33-14	2928-2934	review	abstract[154]	new[154]	_	_
+33-15	2935-2936	(	abstract[154]	new[154]	_	_
+33-16	2937-2941	good	abstract[154]	new[154]	_	_
+33-17	2942-2944	or	abstract[154]	new[154]	_	_
+33-18	2945-2948	bad	abstract[154]	new[154]	_	_
+33-19	2949-2950	)	abstract[154]	new[154]	_	_
+33-20	2951-2954	may	_	_	_	_
+33-21	2955-2958	not	_	_	_	_
+33-22	2959-2964	paint	_	_	_	_
+33-23	2965-2968	the	abstract[155]	giv[155]	_	_
+33-24	2969-2973	most	abstract[155]	giv[155]	_	_
+33-25	2974-2982	accurate	abstract[155]	giv[155]	_	_
+33-26	2983-2990	picture	abstract[155]	giv[155]	_	_
+33-27	2991-2992	.	_	_	_	_
+
+#Text=And , of course , ask around .
+34-1	2993-2996	And	_	_	_	_
+34-2	2997-2998	,	_	_	_	_
+34-3	2999-3001	of	_	_	_	_
+34-4	3002-3008	course	_	_	_	_
+34-5	3009-3010	,	_	_	_	_
+34-6	3011-3014	ask	_	_	_	_
+34-7	3015-3021	around	_	_	_	_
+34-8	3022-3023	.	_	_	_	_
+
+#Text=More people in your circle of acquaintances may have dental implant experience than you think !
+35-1	3024-3028	More	person[156]	new[156]	_	_
+35-2	3029-3035	people	person[156]	new[156]	_	_
+35-3	3036-3038	in	person[156]	new[156]	_	_
+35-4	3039-3043	your	person[156]|person|abstract[158]	new[156]|giv|new[158]	ana	35-14
+35-5	3044-3050	circle	person[156]|abstract[158]	new[156]|new[158]	_	_
+35-6	3051-3053	of	person[156]|abstract[158]	new[156]|new[158]	_	_
+35-7	3054-3067	acquaintances	person[156]|abstract[158]|person	new[156]|new[158]|new	_	_
+35-8	3068-3071	may	_	_	_	_
+35-9	3072-3076	have	_	_	_	_
+35-10	3077-3083	dental	abstract[161]	giv[161]	_	_
+35-11	3084-3091	implant	object|abstract[161]	giv|giv[161]	_	_
+35-12	3092-3102	experience	abstract[161]	giv[161]	_	_
+35-13	3103-3107	than	_	_	_	_
+35-14	3108-3111	you	person	giv	_	_
+35-15	3112-3117	think	_	_	_	_
+35-16	3118-3119	!	_	_	_	_
+
+#Text=Tips
+36-1	3120-3124	Tips	abstract	new	_	_
+
+#Text=At the end of the day , choosing any doctor will go beyond a checklist of “ must haves ” and “ nice to haves ” .
+37-1	3125-3127	At	_	_	_	_
+37-2	3128-3131	the	time[164]	new[164]	_	_
+37-3	3132-3135	end	time[164]	new[164]	_	_
+37-4	3136-3138	of	time[164]	new[164]	_	_
+37-5	3139-3142	the	time[164]|time[165]	new[164]|new[165]	_	_
+37-6	3143-3146	day	time[164]|time[165]	new[164]|new[165]	_	_
+37-7	3147-3148	,	_	_	_	_
+37-8	3149-3157	choosing	_	_	_	_
+37-9	3158-3161	any	person[166]	giv[166]	_	_
+37-10	3162-3168	doctor	person[166]	giv[166]	_	_
+37-11	3169-3173	will	_	_	_	_
+37-12	3174-3176	go	_	_	_	_
+37-13	3177-3183	beyond	_	_	_	_
+37-14	3184-3185	a	abstract[167]	new[167]	_	_
+37-15	3186-3195	checklist	abstract[167]	new[167]	_	_
+37-16	3196-3198	of	abstract[167]	new[167]	_	_
+37-17	3199-3200	“	abstract[167]	new[167]	_	_
+37-18	3201-3205	must	abstract[167]|event[168]	new[167]|new[168]	_	_
+37-19	3206-3211	haves	abstract[167]|event[168]	new[167]|new[168]	_	_
+37-20	3212-3213	”	abstract[167]	new[167]	_	_
+37-21	3214-3217	and	abstract[167]	new[167]	_	_
+37-22	3218-3219	“	abstract[167]	new[167]	_	_
+37-23	3220-3224	nice	abstract[167]	new[167]	_	_
+37-24	3225-3227	to	abstract[167]	new[167]	_	_
+37-25	3228-3233	haves	abstract[167]	new[167]	_	_
+37-26	3234-3235	”	abstract[167]	new[167]	_	_
+37-27	3236-3237	.	_	_	_	_
+
+#Text=Talk to the staff and meet the surgeon .
+38-1	3238-3242	Talk	_	_	_	_
+38-2	3243-3245	to	_	_	_	_
+38-3	3246-3249	the	person[169]	new[169]	_	_
+38-4	3250-3255	staff	person[169]	new[169]	_	_
+38-5	3256-3259	and	_	_	_	_
+38-6	3260-3264	meet	_	_	_	_
+38-7	3265-3268	the	person[170]	new[170]	_	_
+38-8	3269-3276	surgeon	person[170]	new[170]	_	_
+38-9	3277-3278	.	_	_	_	_
+
+#Text=Being comfortable with the dentist is important , too .
+39-1	3279-3284	Being	_	_	_	_
+39-2	3285-3296	comfortable	_	_	_	_
+39-3	3297-3301	with	_	_	_	_
+39-4	3302-3305	the	person[171]	giv[171]	_	_
+39-5	3306-3313	dentist	person[171]	giv[171]	_	_
+39-6	3314-3316	is	_	_	_	_
+39-7	3317-3326	important	_	_	_	_
+39-8	3327-3328	,	_	_	_	_
+39-9	3329-3332	too	_	_	_	_
+39-10	3333-3334	.	_	_	_	_

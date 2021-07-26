@@ -1,0 +1,1206 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Calculate Accident Incident Rate
+1-1	0-9	Calculate	_	_	_	_
+1-2	10-18	Accident	abstract|event[2]|abstract[3]	new|new[2]|new[3]	_	_
+1-3	19-27	Incident	event[2]|abstract[3]	new[2]|new[3]	_	_
+1-4	28-32	Rate	abstract[3]	new[3]	_	_
+
+#Text=The Occupational Safety and Health Administration ( OSHA ) is a regulatory agency of the federal government that ensures , as much as possible , that American workers operate in a safe working environment .
+2-1	33-36	The	organization[4]	new[4]	appos	2-8[0_4]
+2-2	37-49	Occupational	organization[4]	new[4]	_	_
+2-3	50-56	Safety	organization[4]	new[4]	_	_
+2-4	57-60	and	organization[4]	new[4]	_	_
+2-5	61-67	Health	organization[4]	new[4]	_	_
+2-6	68-82	Administration	organization[4]	new[4]	_	_
+2-7	83-84	(	_	_	_	_
+2-8	85-89	OSHA	organization	giv	coref	2-11[6_0]
+2-9	90-91	)	_	_	_	_
+2-10	92-94	is	_	_	_	_
+2-11	95-96	a	organization[6]	giv[6]	coref	3-1[11_6]
+2-12	97-107	regulatory	organization[6]	giv[6]	_	_
+2-13	108-114	agency	organization[6]	giv[6]	_	_
+2-14	115-117	of	organization[6]	giv[6]	_	_
+2-15	118-121	the	organization[6]|organization[7]	giv[6]|new[7]	coref	18-1[76_7]
+2-16	122-129	federal	organization[6]|organization[7]	giv[6]|new[7]	_	_
+2-17	130-140	government	organization[6]|organization[7]	giv[6]|new[7]	_	_
+2-18	141-145	that	organization[6]	giv[6]	_	_
+2-19	146-153	ensures	organization[6]	giv[6]	_	_
+2-20	154-155	,	organization[6]	giv[6]	_	_
+2-21	156-158	as	organization[6]	giv[6]	_	_
+2-22	159-163	much	organization[6]	giv[6]	_	_
+2-23	164-166	as	organization[6]	giv[6]	_	_
+2-24	167-175	possible	organization[6]	giv[6]	_	_
+2-25	176-177	,	organization[6]	giv[6]	_	_
+2-26	178-182	that	organization[6]	giv[6]	_	_
+2-27	183-191	American	organization[6]|person[8]	giv[6]|new[8]	_	_
+2-28	192-199	workers	organization[6]|person[8]	giv[6]|new[8]	_	_
+2-29	200-207	operate	organization[6]	giv[6]	_	_
+2-30	208-210	in	_	_	_	_
+2-31	211-212	a	abstract[10]	new[10]	_	_
+2-32	213-217	safe	abstract[10]	new[10]	_	_
+2-33	218-225	working	event|abstract[10]	new|new[10]	_	_
+2-34	226-237	environment	abstract[10]	new[10]	_	_
+2-35	238-239	.	_	_	_	_
+
+#Text=The organization requires certain businesses to report their statistics concerning accidents , injuries and other incidents that occur while on the job .
+3-1	240-243	The	organization[11]	giv[11]	coref	4-8[0_11]
+3-2	244-256	organization	organization[11]	giv[11]	_	_
+3-3	257-265	requires	_	_	_	_
+3-4	266-273	certain	organization[12]	new[12]	ana	3-8[0_12]
+3-5	274-284	businesses	organization[12]	new[12]	_	_
+3-6	285-287	to	_	_	_	_
+3-7	288-294	report	_	_	_	_
+3-8	295-300	their	organization|abstract[14]	giv|new[14]	coref|coref	18-9[78_14]|18-14[80_0]
+3-9	301-311	statistics	abstract[14]	new[14]	_	_
+3-10	312-322	concerning	abstract[14]	new[14]	_	_
+3-11	323-332	accidents	abstract[14]|abstract	new[14]|new	coref	4-1
+3-12	333-334	,	abstract[14]	new[14]	_	_
+3-13	335-343	injuries	abstract[14]|event	new[14]|new	_	_
+3-14	344-347	and	abstract[14]	new[14]	_	_
+3-15	348-353	other	abstract[14]|event[17]	new[14]|new[17]	coref	4-3[0_17]
+3-16	354-363	incidents	abstract[14]|event[17]	new[14]|new[17]	_	_
+3-17	364-368	that	abstract[14]|event[17]	new[14]|new[17]	_	_
+3-18	369-374	occur	abstract[14]|event[17]	new[14]|new[17]	_	_
+3-19	375-380	while	_	_	_	_
+3-20	381-383	on	_	_	_	_
+3-21	384-387	the	abstract[18]	new[18]	_	_
+3-22	388-391	job	abstract[18]	new[18]	_	_
+3-23	392-393	.	_	_	_	_
+
+#Text=Accidents and incidents are logged on an OSHA 300 form that is usually tracked on a spreadsheet .
+4-1	394-403	Accidents	abstract|abstract[20]	giv|new[20]	coref	36-2[184_20]
+4-2	404-407	and	abstract[20]	new[20]	_	_
+4-3	408-417	incidents	abstract[20]|event	new[20]|giv	coref	6-7
+4-4	418-421	are	_	_	_	_
+4-5	422-428	logged	_	_	_	_
+4-6	429-431	on	_	_	_	_
+4-7	432-434	an	abstract[23]	new[23]	_	_
+4-8	435-439	OSHA	organization|abstract[23]	giv|new[23]	coref	6-9
+4-9	440-443	300	abstract[23]	new[23]	_	_
+4-10	444-448	form	abstract[23]	new[23]	_	_
+4-11	449-453	that	abstract[23]	new[23]	_	_
+4-12	454-456	is	abstract[23]	new[23]	_	_
+4-13	457-464	usually	abstract[23]	new[23]	_	_
+4-14	465-472	tracked	abstract[23]	new[23]	_	_
+4-15	473-475	on	abstract[23]	new[23]	_	_
+4-16	476-477	a	abstract[23]|abstract[24]	new[23]|new[24]	_	_
+4-17	478-489	spreadsheet	abstract[23]|abstract[24]	new[23]|new[24]	_	_
+4-18	490-491	.	_	_	_	_
+
+#Text=Steps
+5-1	492-497	Steps	abstract	new	_	_
+
+#Text=Determining If Your Business Must Report Incidents to OSHA
+6-1	498-509	Determining	_	_	_	_
+6-2	510-512	If	_	_	_	_
+6-3	513-517	Your	person|abstract[27]	acc|new[27]	ana|coref	7-7|10-1[45_27]
+6-4	518-526	Business	abstract[27]	new[27]	_	_
+6-5	527-531	Must	_	_	_	_
+6-6	532-538	Report	_	_	_	_
+6-7	539-548	Incidents	event	giv	coref	8-25
+6-8	549-551	to	_	_	_	_
+6-9	552-556	OSHA	organization	giv	coref	8-27
+
+#Text=Count the number of employees in your company .
+7-1	557-562	Count	_	_	_	_
+7-2	563-566	the	abstract[30]	new[30]	_	_
+7-3	567-573	number	abstract[30]	new[30]	_	_
+7-4	574-576	of	abstract[30]	new[30]	_	_
+7-5	577-586	employees	abstract[30]|person[31]	new[30]|new[31]	coref	8-5[36_31]
+7-6	587-589	in	abstract[30]|person[31]	new[30]|new[31]	_	_
+7-7	590-594	your	abstract[30]|person[31]|person|organization[33]	new[30]|new[31]|giv|new[33]	ana|coref	8-2|8-2[35_33]
+7-8	595-602	company	abstract[30]|person[31]|organization[33]	new[30]|new[31]|new[33]	_	_
+7-9	603-604	.	_	_	_	_
+
+#Text=If your company had 10 or fewer employees at all times during the previous calendar year , then you do not need to report incidents to OSHA .
+8-1	605-607	If	_	_	_	_
+8-2	608-612	your	person|organization[35]	giv|giv[35]	ana	8-19
+8-3	613-620	company	organization[35]	giv[35]	_	_
+8-4	621-624	had	_	_	_	_
+8-5	625-627	10	person[36]	giv[36]	_	_
+8-6	628-630	or	person[36]	giv[36]	_	_
+8-7	631-636	fewer	person[36]	giv[36]	_	_
+8-8	637-646	employees	person[36]	giv[36]	_	_
+8-9	647-649	at	_	_	_	_
+8-10	650-653	all	time[37]	new[37]	_	_
+8-11	654-659	times	time[37]	new[37]	_	_
+8-12	660-666	during	_	_	_	_
+8-13	667-670	the	time[39]	new[39]	_	_
+8-14	671-679	previous	time[39]	new[39]	_	_
+8-15	680-688	calendar	abstract|time[39]	new|new[39]	_	_
+8-16	689-693	year	time[39]	new[39]	_	_
+8-17	694-695	,	_	_	_	_
+8-18	696-700	then	_	_	_	_
+8-19	701-704	you	person	giv	ana	9-2
+8-20	705-707	do	_	_	_	_
+8-21	708-711	not	_	_	_	_
+8-22	712-716	need	_	_	_	_
+8-23	717-719	to	_	_	_	_
+8-24	720-726	report	_	_	_	_
+8-25	727-736	incidents	event	giv	coref	11-12
+8-26	737-739	to	_	_	_	_
+8-27	740-744	OSHA	organization	giv	coref	11-14
+8-28	745-746	.	_	_	_	_
+
+#Text=Determine your industry .
+9-1	747-756	Determine	_	_	_	_
+9-2	757-761	your	person|abstract[44]	giv|new[44]	coref|ana	10-6[46_44]|11-2
+9-3	762-770	industry	abstract[44]	new[44]	_	_
+9-4	771-772	.	_	_	_	_
+
+#Text=Every business is part of a particular industry or sector .
+10-1	773-778	Every	abstract[45]	giv[45]	coref	13-9[63_45]
+10-2	779-787	business	abstract[45]	giv[45]	_	_
+10-3	788-790	is	_	_	_	_
+10-4	791-795	part	_	_	_	_
+10-5	796-798	of	_	_	_	_
+10-6	799-800	a	abstract[46]	giv[46]	coref	11-20[53_46]
+10-7	801-811	particular	abstract[46]	giv[46]	_	_
+10-8	812-820	industry	abstract[46]	giv[46]	_	_
+10-9	821-823	or	_	_	_	_
+10-10	824-830	sector	abstract	new	_	_
+10-11	831-832	.	_	_	_	_
+
+#Text=Before you can determine whether or not you need to report incidents to OSHA , you need to understand what industry you 're part of .
+11-1	833-839	Before	_	_	_	_
+11-2	840-843	you	person	giv	ana	11-8
+11-3	844-847	can	_	_	_	_
+11-4	848-857	determine	_	_	_	_
+11-5	858-865	whether	_	_	_	_
+11-6	866-868	or	_	_	_	_
+11-7	869-872	not	_	_	_	_
+11-8	873-876	you	person	giv	ana	11-16
+11-9	877-881	need	_	_	_	_
+11-10	882-884	to	_	_	_	_
+11-11	885-891	report	_	_	_	_
+11-12	892-901	incidents	event	giv	coref	27-7
+11-13	902-904	to	_	_	_	_
+11-14	905-909	OSHA	organization	giv	coref	21-1
+11-15	910-911	,	_	_	_	_
+11-16	912-915	you	person	giv	ana	11-22
+11-17	916-920	need	_	_	_	_
+11-18	921-923	to	_	_	_	_
+11-19	924-934	understand	_	_	_	_
+11-20	935-939	what	abstract[53]	giv[53]	_	_
+11-21	940-948	industry	abstract[53]	giv[53]	_	_
+11-22	949-952	you	person	giv	ana	13-9
+11-23	953-956	're	_	_	_	_
+11-24	957-961	part	_	_	_	_
+11-25	962-964	of	_	_	_	_
+11-26	965-966	.	_	_	_	_
+
+#Text=Industries are usually defined by broad categories like " Construction , " " IT Services , " " Food Service , " etc.
+12-1	967-977	Industries	organization	new	coref	21-4
+12-2	978-981	are	_	_	_	_
+12-3	982-989	usually	_	_	_	_
+12-4	990-997	defined	_	_	_	_
+12-5	998-1000	by	_	_	_	_
+12-6	1001-1006	broad	abstract[56]	new[56]	_	_
+12-7	1007-1017	categories	abstract[56]	new[56]	_	_
+12-8	1018-1022	like	abstract[56]	new[56]	_	_
+12-9	1023-1024	"	abstract[56]	new[56]	_	_
+12-10	1025-1037	Construction	abstract[56]|abstract	new[56]|new	_	_
+12-11	1038-1039	,	abstract[56]	new[56]	_	_
+12-12	1040-1041	"	abstract[56]	new[56]	_	_
+12-13	1042-1043	"	abstract[56]	new[56]	_	_
+12-14	1044-1046	IT	abstract[56]|organization[58]	new[56]|new[58]	_	_
+12-15	1047-1055	Services	abstract[56]|organization[58]	new[56]|new[58]	_	_
+12-16	1056-1057	,	abstract[56]	new[56]	_	_
+12-17	1058-1059	"	abstract[56]	new[56]	_	_
+12-18	1060-1061	"	abstract[56]	new[56]	_	_
+12-19	1062-1066	Food	abstract[56]|abstract[59]	new[56]|new[59]	_	_
+12-20	1067-1074	Service	abstract[56]|abstract[59]	new[56]|new[59]	_	_
+12-21	1075-1076	,	abstract[56]	new[56]	_	_
+12-22	1077-1078	"	abstract[56]	new[56]	_	_
+12-23	1079-1083	etc.	abstract[56]	new[56]	_	_
+
+#Text=Pick a keyword or two that best describes your business .
+13-1	1084-1088	Pick	_	_	_	_
+13-2	1089-1090	a	abstract[60]	new[60]	coref	20-2[85_60]
+13-3	1091-1098	keyword	abstract[60]	new[60]	_	_
+13-4	1099-1101	or	_	_	_	_
+13-5	1102-1105	two	abstract[61]	new[61]	_	_
+13-6	1106-1110	that	abstract[61]	new[61]	_	_
+13-7	1111-1115	best	abstract[61]	new[61]	_	_
+13-8	1116-1125	describes	abstract[61]	new[61]	_	_
+13-9	1126-1130	your	abstract[61]|person|abstract[63]	new[61]|giv|giv[63]	ana|ana	14-1|14-4[0_63]
+13-10	1131-1139	business	abstract[61]|abstract[63]	new[61]|giv[63]	_	_
+13-11	1140-1141	.	_	_	_	_
+
+#Text=You 'll need that for the next step .
+14-1	1142-1145	You	person	giv	ana	15-5
+14-2	1146-1149	'll	_	_	_	_
+14-3	1150-1154	need	_	_	_	_
+14-4	1155-1159	that	abstract	giv	coref	15-5[69_0]
+14-5	1160-1163	for	_	_	_	_
+14-6	1164-1167	the	event[66]	new[66]	coref	29-2[141_66]
+14-7	1168-1172	next	event[66]	new[66]	_	_
+14-8	1173-1177	step	event[66]	new[66]	_	_
+14-9	1178-1179	.	_	_	_	_
+
+#Text=Get the NAICS for your business .
+15-1	1180-1183	Get	_	_	_	_
+15-2	1184-1187	the	abstract[67]	new[67]	coref	16-1[70_67]
+15-3	1188-1193	NAICS	abstract[67]	new[67]	_	_
+15-4	1194-1197	for	_	_	_	_
+15-5	1198-1202	your	person|abstract[69]	giv|giv[69]	coref|ana	17-11[75_69]|20-6
+15-6	1203-1211	business	abstract[69]	giv[69]	_	_
+15-7	1212-1213	.	_	_	_	_
+
+#Text=The NAICS is the North American Industry Classification .
+16-1	1214-1217	The	abstract[70]	giv[70]	coref	16-4[72_70]
+16-2	1218-1223	NAICS	abstract[70]	giv[70]	_	_
+16-3	1224-1226	is	_	_	_	_
+16-4	1227-1230	the	abstract[72]	giv[72]	ana	17-1[0_72]
+16-5	1231-1236	North	abstract[72]	giv[72]	_	_
+16-6	1237-1245	American	abstract[72]	giv[72]	_	_
+16-7	1246-1254	Industry	abstract|abstract[72]	new|giv[72]	coref	32-9
+16-8	1255-1269	Classification	abstract[72]	giv[72]	_	_
+16-9	1270-1271	.	_	_	_	_
+
+#Text=It 's a 6-digit code that 's used to classify a business .
+17-1	1272-1274	It	abstract	giv	coref	17-3[74_0]
+17-2	1275-1277	's	_	_	_	_
+17-3	1278-1279	a	abstract[74]	giv[74]	coref	18-5[77_74]
+17-4	1280-1287	6-digit	abstract[74]	giv[74]	_	_
+17-5	1288-1292	code	abstract[74]	giv[74]	_	_
+17-6	1293-1297	that	abstract[74]	giv[74]	_	_
+17-7	1298-1300	's	abstract[74]	giv[74]	_	_
+17-8	1301-1305	used	abstract[74]	giv[74]	_	_
+17-9	1306-1308	to	abstract[74]	giv[74]	_	_
+17-10	1309-1317	classify	abstract[74]	giv[74]	_	_
+17-11	1318-1319	a	abstract[74]|abstract[75]	giv[74]|giv[75]	coref	20-6[87_75]
+17-12	1320-1328	business	abstract[74]|abstract[75]	giv[74]|giv[75]	_	_
+17-13	1329-1330	.	_	_	_	_
+
+#Text=The federal government uses the code to maintain statistics about the types of businesses that exist in the United States .
+18-1	1331-1334	The	organization[76]	giv[76]	coref	35-33[0_76]
+18-2	1335-1342	federal	organization[76]	giv[76]	_	_
+18-3	1343-1353	government	organization[76]	giv[76]	_	_
+18-4	1354-1358	uses	_	_	_	_
+18-5	1359-1362	the	abstract[77]	giv[77]	coref	19-3[0_77]
+18-6	1363-1367	code	abstract[77]	giv[77]	_	_
+18-7	1368-1370	to	_	_	_	_
+18-8	1371-1379	maintain	_	_	_	_
+18-9	1380-1390	statistics	abstract[78]	giv[78]	coref	35-27[177_78]
+18-10	1391-1396	about	abstract[78]	giv[78]	_	_
+18-11	1397-1400	the	abstract[78]|abstract[79]	giv[78]|new[79]	_	_
+18-12	1401-1406	types	abstract[78]|abstract[79]	giv[78]|new[79]	_	_
+18-13	1407-1409	of	abstract[78]|abstract[79]	giv[78]|new[79]	_	_
+18-14	1410-1420	businesses	abstract[78]|abstract[79]|organization[80]	giv[78]|new[79]|giv[80]	coref	23-14[0_80]
+18-15	1421-1425	that	abstract[78]|abstract[79]|organization[80]	giv[78]|new[79]|giv[80]	_	_
+18-16	1426-1431	exist	abstract[78]|abstract[79]|organization[80]	giv[78]|new[79]|giv[80]	_	_
+18-17	1432-1434	in	abstract[78]|abstract[79]|organization[80]	giv[78]|new[79]|giv[80]	_	_
+18-18	1435-1438	the	abstract[78]|abstract[79]|organization[80]|place[81]	giv[78]|new[79]|giv[80]|new[81]	_	_
+18-19	1439-1445	United	abstract[78]|abstract[79]|organization[80]|place[81]	giv[78]|new[79]|giv[80]|new[81]	_	_
+18-20	1446-1452	States	abstract[78]|abstract[79]|organization[80]|place[81]	giv[78]|new[79]|giv[80]|new[81]	_	_
+18-21	1453-1454	.	_	_	_	_
+
+#Text=Visit the NAICS search site .
+19-1	1455-1460	Visit	_	_	_	_
+19-2	1461-1464	the	abstract[84]	new[84]	coref	31-1[153_84]
+19-3	1465-1470	NAICS	abstract|abstract[84]	giv|new[84]	coref	20-29
+19-4	1471-1477	search	event|abstract[84]	new|new[84]	coref	21-22[100_0]
+19-5	1478-1482	site	abstract[84]	new[84]	_	_
+19-6	1483-1484	.	_	_	_	_
+
+#Text=Enter a keyword that describes your business in the field in the upper , right-hand corner of the screen , just above the button that reads " 2007 NAICS Search " .
+20-1	1485-1490	Enter	_	_	_	_
+20-2	1491-1492	a	abstract[85]	giv[85]	_	_
+20-3	1493-1500	keyword	abstract[85]	giv[85]	_	_
+20-4	1501-1505	that	abstract[85]	giv[85]	_	_
+20-5	1506-1515	describes	abstract[85]	giv[85]	_	_
+20-6	1516-1520	your	abstract[85]|person|abstract[87]	giv[85]|giv|giv[87]	ana|coref	21-13|24-8[113_87]
+20-7	1521-1529	business	abstract[85]|abstract[87]	giv[85]|giv[87]	_	_
+20-8	1530-1532	in	abstract[85]	giv[85]	_	_
+20-9	1533-1536	the	abstract[85]|abstract[88]	giv[85]|new[88]	coref	25-17[120_88]
+20-10	1537-1542	field	abstract[85]|abstract[88]	giv[85]|new[88]	_	_
+20-11	1543-1545	in	abstract[85]|abstract[88]	giv[85]|new[88]	_	_
+20-12	1546-1549	the	abstract[85]|abstract[88]|place[89]	giv[85]|new[88]|new[89]	_	_
+20-13	1550-1555	upper	abstract[85]|abstract[88]|place[89]	giv[85]|new[88]|new[89]	_	_
+20-14	1556-1557	,	abstract[85]|abstract[88]|place[89]	giv[85]|new[88]|new[89]	_	_
+20-15	1558-1568	right-hand	abstract[85]|abstract[88]|place[89]	giv[85]|new[88]|new[89]	_	_
+20-16	1569-1575	corner	abstract[85]|abstract[88]|place[89]	giv[85]|new[88]|new[89]	_	_
+20-17	1576-1578	of	abstract[85]|abstract[88]|place[89]	giv[85]|new[88]|new[89]	_	_
+20-18	1579-1582	the	abstract[85]|abstract[88]|place[89]|object[90]	giv[85]|new[88]|new[89]|new[90]	_	_
+20-19	1583-1589	screen	abstract[85]|abstract[88]|place[89]|object[90]	giv[85]|new[88]|new[89]|new[90]	_	_
+20-20	1590-1591	,	_	_	_	_
+20-21	1592-1596	just	object[91]	new[91]	coref	22-2[103_91]
+20-22	1597-1602	above	object[91]	new[91]	_	_
+20-23	1603-1606	the	object[91]	new[91]	_	_
+20-24	1607-1613	button	object[91]	new[91]	_	_
+20-25	1614-1618	that	object[91]	new[91]	_	_
+20-26	1619-1624	reads	object[91]	new[91]	_	_
+20-27	1625-1626	"	object[91]	new[91]	_	_
+20-28	1627-1631	2007	object[91]|abstract[93]	new[91]|new[93]	coref	21-18[99_93]
+20-29	1632-1637	NAICS	object[91]|abstract|abstract[93]	new[91]|giv|new[93]	coref	21-9
+20-30	1638-1644	Search	object[91]|abstract[93]	new[91]|new[93]	_	_
+20-31	1645-1646	"	object[91]	new[91]	_	_
+20-32	1647-1648	.	_	_	_	_
+
+#Text=OSHA still classifies industries based on the older NAICS codes , so you 'll need to use that search instead of the newer , 2012 search .
+21-1	1649-1653	OSHA	organization	giv	coref	27-9
+21-2	1654-1659	still	_	_	_	_
+21-3	1660-1670	classifies	_	_	_	_
+21-4	1671-1681	industries	organization	giv	coref	31-5[154_0]
+21-5	1682-1687	based	_	_	_	_
+21-6	1688-1690	on	_	_	_	_
+21-7	1691-1694	the	abstract[97]	new[97]	coref	23-11[107_97]
+21-8	1695-1700	older	abstract[97]	new[97]	_	_
+21-9	1701-1706	NAICS	abstract|abstract[97]	giv|new[97]	coref	22-5
+21-10	1707-1712	codes	abstract[97]	new[97]	_	_
+21-11	1713-1714	,	_	_	_	_
+21-12	1715-1717	so	_	_	_	_
+21-13	1718-1721	you	person	giv	ana	24-8
+21-14	1722-1725	'll	_	_	_	_
+21-15	1726-1730	need	_	_	_	_
+21-16	1731-1733	to	_	_	_	_
+21-17	1734-1737	use	_	_	_	_
+21-18	1738-1742	that	abstract[99]	giv[99]	coref	22-4[102_99]
+21-19	1743-1749	search	abstract[99]	giv[99]	_	_
+21-20	1750-1757	instead	_	_	_	_
+21-21	1758-1760	of	_	_	_	_
+21-22	1761-1764	the	event[100]	giv[100]	_	_
+21-23	1765-1770	newer	event[100]	giv[100]	_	_
+21-24	1771-1772	,	event[100]	giv[100]	_	_
+21-25	1773-1777	2012	event[100]	giv[100]	_	_
+21-26	1778-1784	search	event[100]	giv[100]	_	_
+21-27	1785-1786	.	_	_	_	_
+
+#Text=Click the " 2007 NAICS Search " button .
+22-1	1787-1792	Click	_	_	_	_
+22-2	1793-1796	the	object[103]	giv[103]	_	_
+22-3	1797-1798	"	object[103]	giv[103]	_	_
+22-4	1799-1803	2007	abstract[102]|object[103]	giv[102]|giv[103]	coref	25-18[0_102]
+22-5	1804-1809	NAICS	abstract|abstract[102]|object[103]	giv|giv[102]|giv[103]	coref	23-11
+22-6	1810-1816	Search	abstract[102]|object[103]	giv[102]|giv[103]	_	_
+22-7	1817-1818	"	object[103]	giv[103]	_	_
+22-8	1819-1825	button	object[103]	giv[103]	_	_
+22-9	1826-1827	.	_	_	_	_
+
+#Text=The new page that appears will be a list of NAICS codes and businesses .
+23-1	1828-1831	The	place[104]	new[104]	coref	28-2[136_104]
+23-2	1832-1835	new	place[104]	new[104]	_	_
+23-3	1836-1840	page	place[104]	new[104]	_	_
+23-4	1841-1845	that	place[104]	new[104]	_	_
+23-5	1846-1853	appears	place[104]	new[104]	_	_
+23-6	1854-1858	will	_	_	_	_
+23-7	1859-1861	be	_	_	_	_
+23-8	1862-1863	a	abstract[105]	new[105]	_	_
+23-9	1864-1868	list	abstract[105]	new[105]	_	_
+23-10	1869-1871	of	abstract[105]	new[105]	_	_
+23-11	1872-1877	NAICS	abstract[105]|abstract|abstract[107]|abstract[108]	new[105]|giv|giv[107]|giv[108]	coref|coref|coref	23-11[108_107]|24-3|25-27[123_108]
+23-12	1878-1883	codes	abstract[105]|abstract[107]|abstract[108]	new[105]|giv[107]|giv[108]	_	_
+23-13	1884-1887	and	abstract[105]|abstract[108]	new[105]|giv[108]	_	_
+23-14	1888-1898	businesses	abstract[105]|abstract[108]|organization	new[105]|giv[108]|giv	_	_
+23-15	1899-1900	.	_	_	_	_
+
+#Text=Select the NAICS code that best describes your business .
+24-1	1901-1907	Select	_	_	_	_
+24-2	1908-1911	the	abstract[111]	giv[111]	coref|coref	24-2[111_0]|25-32[125_111]
+24-3	1912-1917	NAICS	abstract|abstract[111]	giv|giv[111]	_	_
+24-4	1918-1922	code	abstract[111]	giv[111]	_	_
+24-5	1923-1927	that	abstract[111]	giv[111]	_	_
+24-6	1928-1932	best	abstract[111]	giv[111]	_	_
+24-7	1933-1942	describes	abstract[111]	giv[111]	_	_
+24-8	1943-1947	your	abstract[111]|person|abstract[113]	giv[111]|giv|giv[113]	ana|coref	25-5|25-5[115_113]
+24-9	1948-1956	business	abstract[111]|abstract[113]	giv[111]|giv[113]	_	_
+24-10	1957-1958	.	_	_	_	_
+
+#Text=For example , if your business is a restaurant and you put " restaurant " in the search field , you 'll see a variety of codes with descriptions that include the word " restaurant . "
+25-1	1959-1962	For	_	_	_	_
+25-2	1963-1970	example	_	_	_	_
+25-3	1971-1972	,	_	_	_	_
+25-4	1973-1975	if	_	_	_	_
+25-5	1976-1980	your	person|abstract[115]	giv|giv[115]	coref|ana	25-8[116_115]|25-11
+25-6	1981-1989	business	abstract[115]	giv[115]	_	_
+25-7	1990-1992	is	_	_	_	_
+25-8	1993-1994	a	abstract[116]	giv[116]	coref	25-14[0_116]
+25-9	1995-2005	restaurant	abstract[116]	giv[116]	_	_
+25-10	2006-2009	and	_	_	_	_
+25-11	2010-2013	you	person	giv	ana	25-21
+25-12	2014-2017	put	_	_	_	_
+25-13	2018-2019	"	_	_	_	_
+25-14	2020-2030	restaurant	abstract	giv	appos	25-35
+25-15	2031-2032	"	_	_	_	_
+25-16	2033-2035	in	_	_	_	_
+25-17	2036-2039	the	abstract[120]	giv[120]	_	_
+25-18	2040-2046	search	abstract|abstract[120]	giv|giv[120]	_	_
+25-19	2047-2052	field	abstract[120]	giv[120]	_	_
+25-20	2053-2054	,	_	_	_	_
+25-21	2055-2058	you	person	giv	ana	27-3
+25-22	2059-2062	'll	_	_	_	_
+25-23	2063-2066	see	_	_	_	_
+25-24	2067-2068	a	abstract[122]	new[122]	_	_
+25-25	2069-2076	variety	abstract[122]	new[122]	_	_
+25-26	2077-2079	of	abstract[122]	new[122]	_	_
+25-27	2080-2085	codes	abstract[122]|abstract[123]	new[122]|giv[123]	_	_
+25-28	2086-2090	with	abstract[122]|abstract[123]	new[122]|giv[123]	_	_
+25-29	2091-2103	descriptions	abstract[122]|abstract[123]|abstract[124]	new[122]|giv[123]|new[124]	_	_
+25-30	2104-2108	that	abstract[122]|abstract[123]|abstract[124]	new[122]|giv[123]|new[124]	_	_
+25-31	2109-2116	include	abstract[122]|abstract[123]|abstract[124]	new[122]|giv[123]|new[124]	_	_
+25-32	2117-2120	the	abstract[122]|abstract[123]|abstract[124]|abstract[125]	new[122]|giv[123]|new[124]|giv[125]	coref	26-3[127_125]
+25-33	2121-2125	word	abstract[122]|abstract[123]|abstract[124]|abstract[125]	new[122]|giv[123]|new[124]|giv[125]	_	_
+25-34	2126-2127	"	_	_	_	_
+25-35	2128-2138	restaurant	abstract	giv	coref	27-3[131_0]
+25-36	2139-2140	.	_	_	_	_
+25-37	2141-2142	"	_	_	_	_
+
+#Text=However , the code 722110 is used to classify full service restaurants .
+26-1	2143-2150	However	_	_	_	_
+26-2	2151-2152	,	_	_	_	_
+26-3	2153-2156	the	abstract[127]	giv[127]	coref	27-11[134_127]
+26-4	2157-2161	code	abstract[127]	giv[127]	_	_
+26-5	2162-2168	722110	abstract	new	coref	30-8
+26-6	2169-2171	is	_	_	_	_
+26-7	2172-2176	used	_	_	_	_
+26-8	2177-2179	to	_	_	_	_
+26-9	2180-2188	classify	_	_	_	_
+26-10	2189-2193	full	place[129]	new[129]	coref	34-14[167_129]
+26-11	2194-2201	service	place[129]	new[129]	_	_
+26-12	2202-2213	restaurants	place[129]	new[129]	_	_
+26-13	2214-2215	.	_	_	_	_
+
+#Text=Determine if your business must report incidents to OSHA using the NAICS .
+27-1	2216-2225	Determine	_	_	_	_
+27-2	2226-2228	if	_	_	_	_
+27-3	2229-2233	your	person|abstract[131]	giv|giv[131]	coref|ana	28-13[0_131]|29-5
+27-4	2234-2242	business	abstract[131]	giv[131]	_	_
+27-5	2243-2247	must	_	_	_	_
+27-6	2248-2254	report	_	_	_	_
+27-7	2255-2264	incidents	event	giv	coref	34-21
+27-8	2265-2267	to	_	_	_	_
+27-9	2268-2272	OSHA	organization	giv	coref	28-2[135_0]
+27-10	2273-2278	using	_	_	_	_
+27-11	2279-2282	the	abstract[134]	giv[134]	coref	28-16[140_134]
+27-12	2283-2288	NAICS	abstract[134]	giv[134]	_	_
+27-13	2289-2290	.	_	_	_	_
+
+#Text=Visit OSHA 's website to get the list of exempt types of business based on the NAICS .
+28-1	2291-2296	Visit	_	_	_	_
+28-2	2297-2301	OSHA	organization[135]|place[136]	giv[135]|giv[136]	coref	31-2[0_135]
+28-3	2302-2304	's	organization[135]|place[136]	giv[135]|giv[136]	_	_
+28-4	2305-2312	website	place[136]	giv[136]	_	_
+28-5	2313-2315	to	_	_	_	_
+28-6	2316-2319	get	_	_	_	_
+28-7	2320-2323	the	abstract[137]	new[137]	_	_
+28-8	2324-2328	list	abstract[137]	new[137]	_	_
+28-9	2329-2331	of	abstract[137]	new[137]	_	_
+28-10	2332-2338	exempt	abstract[137]|place[138]	new[137]|new[138]	_	_
+28-11	2339-2344	types	abstract[137]|place[138]	new[137]|new[138]	_	_
+28-12	2345-2347	of	abstract[137]|place[138]	new[137]|new[138]	_	_
+28-13	2348-2356	business	abstract[137]|place[138]|abstract	new[137]|new[138]|giv	coref	33-7[163_0]
+28-14	2357-2362	based	abstract[137]|place[138]	new[137]|new[138]	_	_
+28-15	2363-2365	on	abstract[137]|place[138]	new[137]|new[138]	_	_
+28-16	2366-2369	the	abstract[137]|place[138]|abstract[140]	new[137]|new[138]|giv[140]	coref	30-17[151_140]
+28-17	2370-2375	NAICS	abstract[137]|place[138]|abstract[140]	new[137]|new[138]|giv[140]	_	_
+28-18	2376-2377	.	_	_	_	_
+
+#Text=For this step , you 'll only need the first four digits of your NAICS .
+29-1	2378-2381	For	_	_	_	_
+29-2	2382-2386	this	event[141]	giv[141]	coref	48-10[256_141]
+29-3	2387-2391	step	event[141]	giv[141]	_	_
+29-4	2392-2393	,	_	_	_	_
+29-5	2394-2397	you	person	giv	ana	29-14
+29-6	2398-2401	'll	_	_	_	_
+29-7	2402-2406	only	_	_	_	_
+29-8	2407-2411	need	_	_	_	_
+29-9	2412-2415	the	abstract[143]	new[143]	_	_
+29-10	2416-2421	first	abstract[143]	new[143]	_	_
+29-11	2422-2426	four	abstract[143]	new[143]	_	_
+29-12	2427-2433	digits	abstract[143]	new[143]	_	_
+29-13	2434-2436	of	abstract[143]	new[143]	_	_
+29-14	2437-2441	your	abstract[143]|person|abstract[145]	new[143]|giv|new[145]	ana|coref	30-5|30-5[147_145]
+29-15	2442-2447	NAICS	abstract[143]|abstract[145]	new[143]|new[145]	_	_
+29-16	2448-2449	.	_	_	_	_
+
+#Text=For example , if your NAICS is 722110 , you only need the 7221 portion of the code .
+30-1	2450-2453	For	_	_	_	_
+30-2	2454-2461	example	_	_	_	_
+30-3	2462-2463	,	_	_	_	_
+30-4	2464-2466	if	_	_	_	_
+30-5	2467-2471	your	person|abstract[147]	giv|giv[147]	ana	30-10
+30-6	2472-2477	NAICS	abstract[147]	giv[147]	_	_
+30-7	2478-2480	is	_	_	_	_
+30-8	2481-2487	722110	abstract	giv	_	_
+30-9	2488-2489	,	_	_	_	_
+30-10	2490-2493	you	person	giv	ana	32-5
+30-11	2494-2498	only	_	_	_	_
+30-12	2499-2503	need	_	_	_	_
+30-13	2504-2507	the	abstract[150]	new[150]	_	_
+30-14	2508-2512	7221	abstract[150]	new[150]	_	_
+30-15	2513-2520	portion	abstract[150]	new[150]	_	_
+30-16	2521-2523	of	abstract[150]	new[150]	_	_
+30-17	2524-2527	the	abstract[150]|abstract[151]	new[150]|giv[151]	coref	31-8[0_151]
+30-18	2528-2532	code	abstract[150]|abstract[151]	new[150]|giv[151]	_	_
+30-19	2533-2534	.	_	_	_	_
+
+#Text=The OSHA website lists exempt industries by NAICS , sorted in ascending numerical order .
+31-1	2535-2538	The	abstract[153]	giv[153]	_	_
+31-2	2539-2543	OSHA	organization|abstract[153]	giv|giv[153]	coref	34-23
+31-3	2544-2551	website	abstract[153]	giv[153]	_	_
+31-4	2552-2557	lists	_	_	_	_
+31-5	2558-2564	exempt	organization[154]	giv[154]	_	_
+31-6	2565-2575	industries	organization[154]	giv[154]	_	_
+31-7	2576-2578	by	_	_	_	_
+31-8	2579-2584	NAICS	abstract	giv	coref	32-8[160_0]
+31-9	2585-2586	,	_	_	_	_
+31-10	2587-2593	sorted	_	_	_	_
+31-11	2594-2596	in	_	_	_	_
+31-12	2597-2606	ascending	abstract[156]	new[156]	_	_
+31-13	2607-2616	numerical	abstract[156]	new[156]	_	_
+31-14	2617-2622	order	abstract[156]	new[156]	_	_
+31-15	2623-2624	.	_	_	_	_
+
+#Text=Just scroll down until you see where your industry code would be located .
+32-1	2625-2629	Just	_	_	_	_
+32-2	2630-2636	scroll	_	_	_	_
+32-3	2637-2641	down	_	_	_	_
+32-4	2642-2647	until	_	_	_	_
+32-5	2648-2651	you	person	giv	ana	32-8
+32-6	2652-2655	see	_	_	_	_
+32-7	2656-2661	where	_	_	_	_
+32-8	2662-2666	your	person|abstract[160]	giv|giv[160]	ana|ana	33-2[0_160]|33-7
+32-9	2667-2675	industry	abstract|abstract[160]	giv|giv[160]	_	_
+32-10	2676-2680	code	abstract[160]	giv[160]	_	_
+32-11	2681-2686	would	_	_	_	_
+32-12	2687-2689	be	_	_	_	_
+32-13	2690-2697	located	_	_	_	_
+32-14	2698-2699	.	_	_	_	_
+
+#Text=If it 's there , then your business is exempt .
+33-1	2700-2702	If	_	_	_	_
+33-2	2703-2705	it	abstract	giv	_	_
+33-3	2706-2708	's	_	_	_	_
+33-4	2709-2714	there	_	_	_	_
+33-5	2715-2716	,	_	_	_	_
+33-6	2717-2721	then	_	_	_	_
+33-7	2722-2726	your	person|abstract[163]	giv|giv[163]	ana	34-5
+33-8	2727-2735	business	abstract[163]	giv[163]	_	_
+33-9	2736-2738	is	_	_	_	_
+33-10	2739-2745	exempt	_	_	_	_
+33-11	2746-2747	.	_	_	_	_
+
+#Text=In this case , you can see that 7221 is listed and therefore full-service restaurants do not need to report incidents to OSHA .
+34-1	2748-2750	In	_	_	_	_
+34-2	2751-2755	this	abstract[164]	new[164]	_	_
+34-3	2756-2760	case	abstract[164]	new[164]	_	_
+34-4	2761-2762	,	_	_	_	_
+34-5	2763-2766	you	person	giv	ana	35-5
+34-6	2767-2770	can	_	_	_	_
+34-7	2771-2774	see	_	_	_	_
+34-8	2775-2779	that	_	_	_	_
+34-9	2780-2784	7221	abstract	new	_	_
+34-10	2785-2787	is	_	_	_	_
+34-11	2788-2794	listed	_	_	_	_
+34-12	2795-2798	and	_	_	_	_
+34-13	2799-2808	therefore	_	_	_	_
+34-14	2809-2821	full-service	place[167]	giv[167]	_	_
+34-15	2822-2833	restaurants	place[167]	giv[167]	_	_
+34-16	2834-2836	do	_	_	_	_
+34-17	2837-2840	not	_	_	_	_
+34-18	2841-2845	need	_	_	_	_
+34-19	2846-2848	to	_	_	_	_
+34-20	2849-2855	report	_	_	_	_
+34-21	2856-2865	incidents	event	giv	coref	35-11
+34-22	2866-2868	to	_	_	_	_
+34-23	2869-2873	OSHA	organization	giv	coref	35-13
+34-24	2874-2875	.	_	_	_	_
+
+#Text=Keep in mind , you will still need to report incidents to OSHA if you 're requested to do so by OSHA , the Bureau of Labor Statistics , or any other government organization operating under the authority of OSHA .
+35-1	2876-2880	Keep	_	_	_	_
+35-2	2881-2883	in	_	_	_	_
+35-3	2884-2888	mind	_	_	_	_
+35-4	2889-2890	,	_	_	_	_
+35-5	2891-2894	you	person	giv	ana	35-15
+35-6	2895-2899	will	_	_	_	_
+35-7	2900-2905	still	_	_	_	_
+35-8	2906-2910	need	_	_	_	_
+35-9	2911-2913	to	_	_	_	_
+35-10	2914-2920	report	_	_	_	_
+35-11	2921-2930	incidents	event	giv	coref	38-5
+35-12	2931-2933	to	_	_	_	_
+35-13	2934-2938	OSHA	organization	giv	coref	35-22
+35-14	2939-2941	if	_	_	_	_
+35-15	2942-2945	you	person	giv	ana	42-7
+35-16	2946-2949	're	_	_	_	_
+35-17	2950-2959	requested	_	_	_	_
+35-18	2960-2962	to	_	_	_	_
+35-19	2963-2965	do	_	_	_	_
+35-20	2966-2968	so	_	_	_	_
+35-21	2969-2971	by	_	_	_	_
+35-22	2972-2976	OSHA	organization	giv	coref	35-40
+35-23	2977-2978	,	_	_	_	_
+35-24	2979-2982	the	organization[175]	new[175]	_	_
+35-25	2983-2989	Bureau	organization[175]	new[175]	_	_
+35-26	2990-2992	of	organization[175]	new[175]	_	_
+35-27	2993-2998	Labor	organization[175]|abstract|abstract[177]	new[175]|new|giv[177]	coref	38-36
+35-28	2999-3009	Statistics	organization[175]|abstract[177]	new[175]|giv[177]	_	_
+35-29	3010-3011	,	_	_	_	_
+35-30	3012-3014	or	_	_	_	_
+35-31	3015-3018	any	organization[179]	new[179]	_	_
+35-32	3019-3024	other	organization[179]	new[179]	_	_
+35-33	3025-3035	government	organization|organization[179]	giv|new[179]	_	_
+35-34	3036-3048	organization	organization[179]	new[179]	_	_
+35-35	3049-3058	operating	organization[179]	new[179]	_	_
+35-36	3059-3064	under	organization[179]	new[179]	_	_
+35-37	3065-3068	the	organization[179]|abstract[180]	new[179]|new[180]	_	_
+35-38	3069-3078	authority	organization[179]|abstract[180]	new[179]|new[180]	_	_
+35-39	3079-3081	of	organization[179]|abstract[180]	new[179]|new[180]	_	_
+35-40	3082-3086	OSHA	organization[179]|abstract[180]|organization	new[179]|new[180]|giv	coref	40-31
+35-41	3087-3088	.	_	_	_	_
+
+#Text=Calculating Employee Accidents and Injuries
+36-1	3089-3100	Calculating	_	_	_	_
+36-2	3101-3109	Employee	person|abstract[183]|abstract[184]	new|new[183]|giv[184]	coref	38-35
+36-3	3110-3119	Accidents	abstract[183]|abstract[184]	new[183]|giv[184]	_	_
+36-4	3120-3123	and	abstract[184]	giv[184]	_	_
+36-5	3124-3132	Injuries	abstract[184]|abstract	giv[184]|new	_	_
+
+#Text=Understand the formula for calculating accidents .
+37-1	3133-3143	Understand	_	_	_	_
+37-2	3144-3147	the	abstract[186]	new[186]	coref	38-1[188_186]
+37-3	3148-3155	formula	abstract[186]	new[186]	_	_
+37-4	3156-3159	for	abstract[186]	new[186]	_	_
+37-5	3160-3171	calculating	abstract[186]	new[186]	_	_
+37-6	3172-3181	accidents	abstract[186]|event	new[186]|new	coref	38-10[191_0]
+37-7	3182-3183	.	_	_	_	_
+
+#Text=The formula for calculating incidents is the number of recorded accidents in that year multiplied by 200,000 ( to standardize the accident rate for 100 employees ) and then divided by the number of employee labor hours worked .
+38-1	3184-3187	The	abstract[188]	giv[188]	coref	38-7[190_188]
+38-2	3188-3195	formula	abstract[188]	giv[188]	_	_
+38-3	3196-3199	for	abstract[188]	giv[188]	_	_
+38-4	3200-3211	calculating	abstract[188]	giv[188]	_	_
+38-5	3212-3221	incidents	abstract[188]|event	giv[188]|giv	coref	40-40[217_0]
+38-6	3222-3224	is	_	_	_	_
+38-7	3225-3228	the	abstract[190]	giv[190]	coref	39-2[201_190]
+38-8	3229-3235	number	abstract[190]	giv[190]	_	_
+38-9	3236-3238	of	abstract[190]	giv[190]	_	_
+38-10	3239-3247	recorded	abstract[190]|event[191]	giv[190]|giv[191]	coref	41-5[0_191]
+38-11	3248-3257	accidents	abstract[190]|event[191]	giv[190]|giv[191]	_	_
+38-12	3258-3260	in	abstract[190]|event[191]	giv[190]|giv[191]	_	_
+38-13	3261-3265	that	abstract[190]|event[191]|time[192]	giv[190]|giv[191]|new[192]	coref	40-28[213_192]
+38-14	3266-3270	year	abstract[190]|event[191]|time[192]	giv[190]|giv[191]|new[192]	_	_
+38-15	3271-3281	multiplied	abstract[190]	giv[190]	_	_
+38-16	3282-3284	by	abstract[190]	giv[190]	_	_
+38-17	3285-3292	200,000	abstract[190]|abstract	giv[190]|new	coref	40-1[206_0]
+38-18	3293-3294	(	abstract[190]	giv[190]	_	_
+38-19	3295-3297	to	abstract[190]	giv[190]	_	_
+38-20	3298-3309	standardize	abstract[190]	giv[190]	_	_
+38-21	3310-3313	the	abstract[190]|abstract[195]	giv[190]|new[195]	coref	40-33[216_195]
+38-22	3314-3322	accident	abstract[190]|event|abstract[195]	giv[190]|new|new[195]	coref	39-8
+38-23	3323-3327	rate	abstract[190]|abstract[195]	giv[190]|new[195]	_	_
+38-24	3328-3331	for	abstract[190]|abstract[195]	giv[190]|new[195]	_	_
+38-25	3332-3335	100	abstract[190]|abstract[195]|person[196]	giv[190]|new[195]|new[196]	coref	40-14[209_196]
+38-26	3336-3345	employees	abstract[190]|abstract[195]|person[196]	giv[190]|new[195]|new[196]	_	_
+38-27	3346-3347	)	abstract[190]	giv[190]	_	_
+38-28	3348-3351	and	abstract[190]	giv[190]	_	_
+38-29	3352-3356	then	abstract[190]	giv[190]	_	_
+38-30	3357-3364	divided	abstract[190]	giv[190]	_	_
+38-31	3365-3367	by	_	_	_	_
+38-32	3368-3371	the	abstract[197]	new[197]	_	_
+38-33	3372-3378	number	abstract[197]	new[197]	_	_
+38-34	3379-3381	of	abstract[197]	new[197]	_	_
+38-35	3382-3390	employee	abstract[197]|person|time[200]	new[197]|giv|new[200]	coref	39-13[205_200]
+38-36	3391-3396	labor	abstract[197]|abstract|time[200]	new[197]|giv|new[200]	_	_
+38-37	3397-3402	hours	abstract[197]|time[200]	new[197]|new[200]	_	_
+38-38	3403-3409	worked	abstract[197]|time[200]	new[197]|new[200]	_	_
+38-39	3410-3411	.	_	_	_	_
+
+#Text=So the formula , again , is accident rate=(number of accidents*200,000)/number of hours worked .
+39-1	3412-3414	So	_	_	_	_
+39-2	3415-3418	the	abstract[201]	giv[201]	coref	39-8[203_201]
+39-3	3419-3426	formula	abstract[201]	giv[201]	_	_
+39-4	3427-3428	,	_	_	_	_
+39-5	3429-3434	again	_	_	_	_
+39-6	3435-3436	,	_	_	_	_
+39-7	3437-3439	is	_	_	_	_
+39-8	3440-3448	accident	event|abstract[203]	giv|giv[203]	coref|coref	40-4[207_203]|40-34
+39-9	3449-3461	rate=(number	abstract[203]	giv[203]	_	_
+39-10	3462-3464	of	abstract[203]	giv[203]	_	_
+39-11	3465-3490	accidents*200,000)/number	abstract[203]|event[204]	giv[203]|new[204]	_	_
+39-12	3491-3493	of	abstract[203]|event[204]	giv[203]|new[204]	_	_
+39-13	3494-3499	hours	abstract[203]|event[204]|time[205]	giv[203]|new[204]|giv[205]	coref	40-8[208_205]
+39-14	3500-3506	worked	abstract[203]|event[204]|time[205]	giv[203]|new[204]|giv[205]	_	_
+39-15	3507-3508	.	_	_	_	_
+
+#Text=The 200,000 in this formula represents how many hours would be worked by 100 employees , each putting in 40 hours per week over 50 weeks in a year ; OSHA requires the accident rate to be expressed as incidents per 100 employees with maximum straight-time hours .
+40-1	3509-3512	The	abstract[206]	giv[206]	coref	51-8[0_206]
+40-2	3513-3520	200,000	abstract[206]	giv[206]	_	_
+40-3	3521-3523	in	abstract[206]	giv[206]	_	_
+40-4	3524-3528	this	abstract[206]|abstract[207]	giv[206]|giv[207]	_	_
+40-5	3529-3536	formula	abstract[206]|abstract[207]	giv[206]|giv[207]	_	_
+40-6	3537-3547	represents	_	_	_	_
+40-7	3548-3551	how	_	_	_	_
+40-8	3552-3556	many	time[208]	giv[208]	coref	40-20[210_208]
+40-9	3557-3562	hours	time[208]	giv[208]	_	_
+40-10	3563-3568	would	_	_	_	_
+40-11	3569-3571	be	_	_	_	_
+40-12	3572-3578	worked	_	_	_	_
+40-13	3579-3581	by	_	_	_	_
+40-14	3582-3585	100	person[209]	giv[209]	coref	40-42[218_209]
+40-15	3586-3595	employees	person[209]	giv[209]	_	_
+40-16	3596-3597	,	person[209]	giv[209]	_	_
+40-17	3598-3602	each	person[209]	giv[209]	_	_
+40-18	3603-3610	putting	person[209]	giv[209]	_	_
+40-19	3611-3613	in	person[209]	giv[209]	_	_
+40-20	3614-3616	40	person[209]|time[210]	giv[209]|giv[210]	coref	40-45[219_210]
+40-21	3617-3622	hours	person[209]|time[210]	giv[209]|giv[210]	_	_
+40-22	3623-3626	per	person[209]|time[210]	giv[209]|giv[210]	_	_
+40-23	3627-3631	week	person[209]|time[210]|time	giv[209]|giv[210]|new	_	_
+40-24	3632-3636	over	person[209]	giv[209]	_	_
+40-25	3637-3639	50	person[209]|time[212]	giv[209]|new[212]	_	_
+40-26	3640-3645	weeks	person[209]|time[212]	giv[209]|new[212]	_	_
+40-27	3646-3648	in	person[209]|time[212]	giv[209]|new[212]	_	_
+40-28	3649-3650	a	person[209]|time[212]|time[213]	giv[209]|new[212]|giv[213]	coref	46-9[247_213]
+40-29	3651-3655	year	person[209]|time[212]|time[213]	giv[209]|new[212]|giv[213]	_	_
+40-30	3656-3657	;	_	_	_	_
+40-31	3658-3662	OSHA	organization	giv	coref	41-11
+40-32	3663-3671	requires	_	_	_	_
+40-33	3672-3675	the	abstract[216]	giv[216]	coref	45-3[241_216]
+40-34	3676-3684	accident	event|abstract[216]	giv|giv[216]	_	_
+40-35	3685-3689	rate	abstract[216]	giv[216]	_	_
+40-36	3690-3692	to	abstract[216]	giv[216]	_	_
+40-37	3693-3695	be	abstract[216]	giv[216]	_	_
+40-38	3696-3705	expressed	abstract[216]	giv[216]	_	_
+40-39	3706-3708	as	_	_	_	_
+40-40	3709-3718	incidents	event[217]	giv[217]	coref	41-7[223_217]
+40-41	3719-3722	per	event[217]	giv[217]	_	_
+40-42	3723-3726	100	event[217]|person[218]	giv[217]|giv[218]	coref	47-8[251_218]
+40-43	3727-3736	employees	event[217]|person[218]	giv[217]|giv[218]	_	_
+40-44	3737-3741	with	event[217]	giv[217]	_	_
+40-45	3742-3749	maximum	event[217]|time[219]	giv[217]|giv[219]	coref	47-5[250_219]
+40-46	3750-3763	straight-time	event[217]|time[219]	giv[217]|giv[219]	_	_
+40-47	3764-3769	hours	event[217]|time[219]	giv[217]|giv[219]	_	_
+40-48	3770-3771	.	_	_	_	_
+
+#Text=Pull the number of accidents and recordable incidents from the OSHA 300 log .
+41-1	3772-3776	Pull	_	_	_	_
+41-2	3777-3780	the	abstract[220]	new[220]	_	_
+41-3	3781-3787	number	abstract[220]	new[220]	_	_
+41-4	3788-3790	of	abstract[220]	new[220]	_	_
+41-5	3791-3800	accidents	abstract[220]|event|event[222]	new[220]|giv|giv[222]	coref	41-5[222_0]
+41-6	3801-3804	and	abstract[220]|event[222]	new[220]|giv[222]	_	_
+41-7	3805-3815	recordable	abstract[220]|event[222]|event[223]	new[220]|giv[222]|giv[223]	coref	43-10[0_223]
+41-8	3816-3825	incidents	abstract[220]|event[222]|event[223]	new[220]|giv[222]|giv[223]	_	_
+41-9	3826-3830	from	_	_	_	_
+41-10	3831-3834	the	abstract[225]	new[225]	coref	42-1[227_225]
+41-11	3835-3839	OSHA	organization|abstract[225]	giv|new[225]	coref	42-2
+41-12	3840-3843	300	abstract[225]	new[225]	_	_
+41-13	3844-3847	log	abstract[225]	new[225]	_	_
+41-14	3848-3849	.	_	_	_	_
+
+#Text=The OSHA 300 log is what you use to record workplace injuries .
+42-1	3850-3853	The	abstract[227]	giv[227]	coref	43-2[231_227]
+42-2	3854-3858	OSHA	organization|abstract[227]	giv|giv[227]	coref	45-12
+42-3	3859-3862	300	abstract[227]	giv[227]	_	_
+42-4	3863-3866	log	abstract[227]	giv[227]	_	_
+42-5	3867-3869	is	_	_	_	_
+42-6	3870-3874	what	_	_	_	_
+42-7	3875-3878	you	person	giv	ana	43-8
+42-8	3879-3882	use	_	_	_	_
+42-9	3883-3885	to	_	_	_	_
+42-10	3886-3892	record	_	_	_	_
+42-11	3893-3902	workplace	place|event[230]	new|new[230]	_	_
+42-12	3903-3911	injuries	event[230]	new[230]	_	_
+42-13	3912-3913	.	_	_	_	_
+
+#Text=In that log is a table where you record incidents .
+43-1	3914-3916	In	_	_	_	_
+43-2	3917-3921	that	abstract[231]	giv[231]	_	_
+43-3	3922-3925	log	abstract[231]	giv[231]	_	_
+43-4	3926-3928	is	_	_	_	_
+43-5	3929-3930	a	object[232]	new[232]	coref	44-13[238_232]
+43-6	3931-3936	table	object[232]	new[232]	_	_
+43-7	3937-3942	where	object[232]	new[232]	_	_
+43-8	3943-3946	you	object[232]|person	new[232]|giv	ana	44-8
+43-9	3947-3953	record	object[232]	new[232]	_	_
+43-10	3954-3963	incidents	object[232]|event	new[232]|giv	coref	44-20[240_0]
+43-11	3964-3965	.	_	_	_	_
+
+#Text=Simply count the number of lines that you 've filled out in that table to determine the number of recordable incidents .
+44-1	3966-3972	Simply	_	_	_	_
+44-2	3973-3978	count	_	_	_	_
+44-3	3979-3982	the	abstract[235]	new[235]	_	_
+44-4	3983-3989	number	abstract[235]	new[235]	_	_
+44-5	3990-3992	of	abstract[235]	new[235]	_	_
+44-6	3993-3998	lines	abstract[235]|object[236]	new[235]|new[236]	_	_
+44-7	3999-4003	that	abstract[235]|object[236]	new[235]|new[236]	_	_
+44-8	4004-4007	you	abstract[235]|object[236]|person	new[235]|new[236]|giv	ana	46-3
+44-9	4008-4011	've	abstract[235]|object[236]	new[235]|new[236]	_	_
+44-10	4012-4018	filled	abstract[235]|object[236]	new[235]|new[236]	_	_
+44-11	4019-4022	out	abstract[235]|object[236]	new[235]|new[236]	_	_
+44-12	4023-4025	in	abstract[235]|object[236]	new[235]|new[236]	_	_
+44-13	4026-4030	that	abstract[235]|object[236]|object[238]	new[235]|new[236]|giv[238]	_	_
+44-14	4031-4036	table	abstract[235]|object[236]|object[238]	new[235]|new[236]|giv[238]	_	_
+44-15	4037-4039	to	_	_	_	_
+44-16	4040-4049	determine	_	_	_	_
+44-17	4050-4053	the	abstract[239]	new[239]	coref	51-2[275_239]
+44-18	4054-4060	number	abstract[239]	new[239]	_	_
+44-19	4061-4063	of	abstract[239]	new[239]	_	_
+44-20	4064-4074	recordable	abstract[239]|event[240]	new[239]|giv[240]	coref	51-5[276_240]
+44-21	4075-4084	incidents	abstract[239]|event[240]	new[239]|giv[240]	_	_
+44-22	4085-4086	.	_	_	_	_
+
+#Text=Remember , the rate is calculated on an annual basis for OSHA compliance .
+45-1	4087-4095	Remember	_	_	_	_
+45-2	4096-4097	,	_	_	_	_
+45-3	4098-4101	the	abstract[241]	giv[241]	coref	46-14[248_241]
+45-4	4102-4106	rate	abstract[241]	giv[241]	_	_
+45-5	4107-4109	is	_	_	_	_
+45-6	4110-4120	calculated	_	_	_	_
+45-7	4121-4123	on	_	_	_	_
+45-8	4124-4126	an	abstract[242]	new[242]	_	_
+45-9	4127-4133	annual	abstract[242]	new[242]	_	_
+45-10	4134-4139	basis	abstract[242]	new[242]	_	_
+45-11	4140-4143	for	abstract[242]	new[242]	_	_
+45-12	4144-4148	OSHA	abstract[242]|organization|abstract[244]	new[242]|giv|new[244]	_	_
+45-13	4149-4159	compliance	abstract[242]|abstract[244]	new[242]|new[244]	_	_
+45-14	4160-4161	.	_	_	_	_
+
+#Text=So , you 'll be reviewing data from the previous year to get the rate .
+46-1	4162-4164	So	_	_	_	_
+46-2	4165-4166	,	_	_	_	_
+46-3	4167-4170	you	person	giv	ana	48-1
+46-4	4171-4174	'll	_	_	_	_
+46-5	4175-4177	be	_	_	_	_
+46-6	4178-4187	reviewing	_	_	_	_
+46-7	4188-4192	data	abstract[246]	new[246]	coref	48-6[255_246]
+46-8	4193-4197	from	abstract[246]	new[246]	_	_
+46-9	4198-4201	the	abstract[246]|time[247]	new[246]|giv[247]	coref	47-11[252_247]
+46-10	4202-4210	previous	abstract[246]|time[247]	new[246]|giv[247]	_	_
+46-11	4211-4215	year	abstract[246]|time[247]	new[246]|giv[247]	_	_
+46-12	4216-4218	to	_	_	_	_
+46-13	4219-4222	get	_	_	_	_
+46-14	4223-4226	the	abstract[248]	giv[248]	coref	57-2[300_248]
+46-15	4227-4231	rate	abstract[248]	giv[248]	_	_
+46-16	4232-4233	.	_	_	_	_
+
+#Text=Total the number of hours worked by all employees during the year in question .
+47-1	4234-4239	Total	_	_	_	_
+47-2	4240-4243	the	abstract[249]	new[249]	_	_
+47-3	4244-4250	number	abstract[249]	new[249]	_	_
+47-4	4251-4253	of	abstract[249]	new[249]	_	_
+47-5	4254-4259	hours	abstract[249]|time[250]	new[249]|giv[250]	coref	49-13[260_250]
+47-6	4260-4266	worked	abstract[249]|time[250]	new[249]|giv[250]	_	_
+47-7	4267-4269	by	abstract[249]|time[250]	new[249]|giv[250]	_	_
+47-8	4270-4273	all	abstract[249]|time[250]|person[251]	new[249]|giv[250]|giv[251]	_	_
+47-9	4274-4283	employees	abstract[249]|time[250]|person[251]	new[249]|giv[250]|giv[251]	_	_
+47-10	4284-4290	during	abstract[249]|time[250]	new[249]|giv[250]	_	_
+47-11	4291-4294	the	abstract[249]|time[250]|time[252]	new[249]|giv[250]|giv[252]	coref	49-16[261_252]
+47-12	4295-4299	year	abstract[249]|time[250]|time[252]	new[249]|giv[250]|giv[252]	_	_
+47-13	4300-4302	in	abstract[249]|time[250]|time[252]	new[249]|giv[250]|giv[252]	_	_
+47-14	4303-4311	question	abstract[249]|time[250]|time[252]	new[249]|giv[250]|giv[252]	_	_
+47-15	4312-4313	.	_	_	_	_
+
+#Text=You 'll need to pull some payroll data for this step .
+48-1	4314-4317	You	person	giv	ana	49-5
+48-2	4318-4321	'll	_	_	_	_
+48-3	4322-4326	need	_	_	_	_
+48-4	4327-4329	to	_	_	_	_
+48-5	4330-4334	pull	_	_	_	_
+48-6	4335-4339	some	abstract[255]	giv[255]	_	_
+48-7	4340-4347	payroll	person|abstract[255]	new|giv[255]	_	_
+48-8	4348-4352	data	abstract[255]	giv[255]	_	_
+48-9	4353-4356	for	_	_	_	_
+48-10	4357-4361	this	event[256]	giv[256]	_	_
+48-11	4362-4366	step	event[256]	giv[256]	_	_
+48-12	4367-4368	.	_	_	_	_
+
+#Text=For example , if you have 20 employees and they each worked 2,000 hours during the year , then the total number of hours worked is 20 x 2,000 or 40,000 .
+49-1	4369-4372	For	_	_	_	_
+49-2	4373-4380	example	_	_	_	_
+49-3	4381-4382	,	_	_	_	_
+49-4	4383-4385	if	_	_	_	_
+49-5	4386-4389	you	person	giv	ana	52-5
+49-6	4390-4394	have	_	_	_	_
+49-7	4395-4397	20	person[258]	new[258]	ana	49-10[259_258]
+49-8	4398-4407	employees	person[258]	new[258]	_	_
+49-9	4408-4411	and	_	_	_	_
+49-10	4412-4416	they	person[259]	giv[259]	ana	58-15[0_259]
+49-11	4417-4421	each	person[259]	giv[259]	_	_
+49-12	4422-4428	worked	_	_	_	_
+49-13	4429-4434	2,000	time[260]	giv[260]	coref	49-24[263_260]
+49-14	4435-4440	hours	time[260]	giv[260]	_	_
+49-15	4441-4447	during	_	_	_	_
+49-16	4448-4451	the	time[261]	giv[261]	coref	55-16[294_261]
+49-17	4452-4456	year	time[261]	giv[261]	_	_
+49-18	4457-4458	,	_	_	_	_
+49-19	4459-4463	then	_	_	_	_
+49-20	4464-4467	the	abstract[262]	new[262]	coref	53-6[284_262]
+49-21	4468-4473	total	abstract[262]	new[262]	_	_
+49-22	4474-4480	number	abstract[262]	new[262]	_	_
+49-23	4481-4483	of	abstract[262]	new[262]	_	_
+49-24	4484-4489	hours	abstract[262]|time[263]	new[262]|giv[263]	coref	50-5[0_263]
+49-25	4490-4496	worked	abstract[262]|time[263]	new[262]|giv[263]	_	_
+49-26	4497-4499	is	_	_	_	_
+49-27	4500-4502	20	abstract[264]	new[264]	coref	61-27[0_264]
+49-28	4503-4504	x	abstract[264]	new[264]	_	_
+49-29	4505-4510	2,000	abstract[264]|abstract	new[264]|new	_	_
+49-30	4511-4513	or	abstract[264]	new[264]	_	_
+49-31	4514-4520	40,000	abstract[264]|abstract	new[264]|new	_	_
+49-32	4521-4522	.	_	_	_	_
+
+#Text=The total number of hours will include overtime hours , but does not include vacation , paid sick leave or holiday pay .
+50-1	4523-4526	The	abstract[267]	new[267]	_	_
+50-2	4527-4532	total	abstract[267]	new[267]	_	_
+50-3	4533-4539	number	abstract[267]	new[267]	_	_
+50-4	4540-4542	of	abstract[267]	new[267]	_	_
+50-5	4543-4548	hours	abstract[267]|time	new[267]|giv	coref	50-8[270_0]
+50-6	4549-4553	will	_	_	_	_
+50-7	4554-4561	include	_	_	_	_
+50-8	4562-4570	overtime	time|time[270]	new|giv[270]	coref	53-10[285_270]
+50-9	4571-4576	hours	time[270]	giv[270]	_	_
+50-10	4577-4578	,	_	_	_	_
+50-11	4579-4582	but	_	_	_	_
+50-12	4583-4587	does	_	_	_	_
+50-13	4588-4591	not	_	_	_	_
+50-14	4592-4599	include	_	_	_	_
+50-15	4600-4608	vacation	event	new	_	_
+50-16	4609-4610	,	_	_	_	_
+50-17	4611-4615	paid	event[272]	new[272]	_	_
+50-18	4616-4620	sick	event[272]	new[272]	_	_
+50-19	4621-4626	leave	event[272]	new[272]	_	_
+50-20	4627-4629	or	_	_	_	_
+50-21	4630-4637	holiday	time|abstract[274]	new|new[274]	_	_
+50-22	4638-4641	pay	abstract[274]	new[274]	_	_
+50-23	4642-4643	.	_	_	_	_
+
+#Text=Multiply the number of recordable incidents by 200,000 .
+51-1	4644-4652	Multiply	_	_	_	_
+51-2	4653-4656	the	abstract[275]	giv[275]	coref	52-11[280_275]
+51-3	4657-4663	number	abstract[275]	giv[275]	_	_
+51-4	4664-4666	of	abstract[275]	giv[275]	_	_
+51-5	4667-4677	recordable	abstract[275]|event[276]	giv[275]|giv[276]	coref	52-7[279_276]
+51-6	4678-4687	incidents	abstract[275]|event[276]	giv[275]|giv[276]	_	_
+51-7	4688-4690	by	_	_	_	_
+51-8	4691-4698	200,000	abstract	giv	_	_
+51-9	4699-4700	.	_	_	_	_
+
+#Text=For example , if you recorded 2 incidents , then the number is 2*200,000 or 400,000 .
+52-1	4701-4704	For	_	_	_	_
+52-2	4705-4712	example	_	_	_	_
+52-3	4713-4714	,	_	_	_	_
+52-4	4715-4717	if	_	_	_	_
+52-5	4718-4721	you	person	giv	ana	55-5
+52-6	4722-4730	recorded	_	_	_	_
+52-7	4731-4732	2	event[279]	giv[279]	coref	60-2[313_279]
+52-8	4733-4742	incidents	event[279]	giv[279]	_	_
+52-9	4743-4744	,	_	_	_	_
+52-10	4745-4749	then	_	_	_	_
+52-11	4750-4753	the	abstract[280]	giv[280]	_	_
+52-12	4754-4760	number	abstract[280]	giv[280]	_	_
+52-13	4761-4763	is	_	_	_	_
+52-14	4764-4773	2*200,000	abstract	new	_	_
+52-15	4774-4776	or	_	_	_	_
+52-16	4777-4784	400,000	abstract	new	_	_
+52-17	4785-4786	.	_	_	_	_
+
+#Text=Divide by the result by the total number of hours worked .
+53-1	4787-4793	Divide	_	_	_	_
+53-2	4794-4796	by	_	_	_	_
+53-3	4797-4800	the	abstract[283]	new[283]	_	_
+53-4	4801-4807	result	abstract[283]	new[283]	_	_
+53-5	4808-4810	by	_	_	_	_
+53-6	4811-4814	the	abstract[284]	giv[284]	coref	54-2[286_284]
+53-7	4815-4820	total	abstract[284]	giv[284]	_	_
+53-8	4821-4827	number	abstract[284]	giv[284]	_	_
+53-9	4828-4830	of	abstract[284]	giv[284]	_	_
+53-10	4831-4836	hours	abstract[284]|time[285]	giv[284]|giv[285]	coref	55-12[293_285]
+53-11	4837-4843	worked	abstract[284]|time[285]	giv[284]|giv[285]	_	_
+53-12	4844-4845	.	_	_	_	_
+
+#Text=Take the number from Step 3 and divide it by the number from Step 2 .
+54-1	4846-4850	Take	_	_	_	_
+54-2	4851-4854	the	abstract[286]	giv[286]	coref	54-11[289_286]
+54-3	4855-4861	number	abstract[286]	giv[286]	_	_
+54-4	4862-4866	from	abstract[286]	giv[286]	_	_
+54-5	4867-4871	Step	abstract[286]|abstract[287]	giv[286]|new[287]	ana	54-9[0_287]
+54-6	4872-4873	3	abstract[286]|abstract[287]	giv[286]|new[287]	_	_
+54-7	4874-4877	and	_	_	_	_
+54-8	4878-4884	divide	_	_	_	_
+54-9	4885-4887	it	abstract	giv	_	_
+54-10	4888-4890	by	_	_	_	_
+54-11	4891-4894	the	abstract[289]	giv[289]	_	_
+54-12	4895-4901	number	abstract[289]	giv[289]	_	_
+54-13	4902-4906	from	abstract[289]	giv[289]	_	_
+54-14	4907-4911	Step	abstract[289]|abstract[290]	giv[289]|new[290]	_	_
+54-15	4912-4913	2	abstract[289]|abstract[290]	giv[289]|new[290]	_	_
+54-16	4914-4915	.	_	_	_	_
+
+#Text=For example , if you had 1 recordable incident out of 10,000 hours worked in a year .
+55-1	4916-4919	For	_	_	_	_
+55-2	4920-4927	example	_	_	_	_
+55-3	4928-4929	,	_	_	_	_
+55-4	4930-4932	if	_	_	_	_
+55-5	4933-4936	you	person	giv	ana	56-1
+55-6	4937-4940	had	_	_	_	_
+55-7	4941-4942	1	event[292]	new[292]	coref	57-5[0_292]
+55-8	4943-4953	recordable	event[292]	new[292]	_	_
+55-9	4954-4962	incident	event[292]	new[292]	_	_
+55-10	4963-4966	out	event[292]	new[292]	_	_
+55-11	4967-4969	of	event[292]	new[292]	_	_
+55-12	4970-4976	10,000	event[292]|time[293]	new[292]|giv[293]	coref	59-9[310_293]
+55-13	4977-4982	hours	event[292]|time[293]	new[292]|giv[293]	_	_
+55-14	4983-4989	worked	event[292]|time[293]	new[292]|giv[293]	_	_
+55-15	4990-4992	in	event[292]|time[293]	new[292]|giv[293]	_	_
+55-16	4993-4994	a	event[292]|time[293]|time[294]	new[292]|giv[293]|giv[294]	coref	62-17[335_294]
+55-17	4995-4999	year	event[292]|time[293]|time[294]	new[292]|giv[293]|giv[294]	_	_
+55-18	5000-5001	.	_	_	_	_
+
+#Text=Your calculation would be 1*200,000 / 10,000 .
+56-1	5002-5006	Your	person|abstract[296]	giv|new[296]	ana|coref	59-2|59-2[308_296]
+56-2	5007-5018	calculation	abstract[296]	new[296]	_	_
+56-3	5019-5024	would	_	_	_	_
+56-4	5025-5027	be	_	_	_	_
+56-5	5028-5037	1*200,000	abstract	new	_	_
+56-6	5038-5039	/	_	_	_	_
+56-7	5040-5046	10,000	abstract	new	_	_
+56-8	5047-5048	.	_	_	_	_
+
+#Text=Prepare the monthly average incident rate .
+57-1	5049-5056	Prepare	_	_	_	_
+57-2	5057-5060	the	abstract[300]	giv[300]	coref	58-6[303_300]
+57-3	5061-5068	monthly	abstract[300]	giv[300]	_	_
+57-4	5069-5076	average	abstract[300]	giv[300]	_	_
+57-5	5077-5085	incident	event|abstract[300]	giv|giv[300]	coref	58-7
+57-6	5086-5090	rate	abstract[300]	giv[300]	_	_
+57-7	5091-5092	.	_	_	_	_
+
+#Text=Many businesses like to track the incident rate as a monthly figure to assist them in meeting annual and quarterly goals .
+58-1	5093-5097	Many	organization[301]	new[301]	_	_
+58-2	5098-5108	businesses	organization[301]	new[301]	_	_
+58-3	5109-5113	like	_	_	_	_
+58-4	5114-5116	to	_	_	_	_
+58-5	5117-5122	track	_	_	_	_
+58-6	5123-5126	the	abstract[303]	giv[303]	coref	60-13[318_303]
+58-7	5127-5135	incident	event|abstract[303]	giv|giv[303]	coref	60-14
+58-8	5136-5140	rate	abstract[303]	giv[303]	_	_
+58-9	5141-5143	as	_	_	_	_
+58-10	5144-5145	a	abstract[304]	new[304]	_	_
+58-11	5146-5153	monthly	abstract[304]	new[304]	_	_
+58-12	5154-5160	figure	abstract[304]	new[304]	_	_
+58-13	5161-5163	to	_	_	_	_
+58-14	5164-5170	assist	_	_	_	_
+58-15	5171-5175	them	person	giv	coref	59-13[311_0]
+58-16	5176-5178	in	_	_	_	_
+58-17	5179-5186	meeting	_	_	_	_
+58-18	5187-5193	annual	abstract[306]	new[306]	_	_
+58-19	5194-5197	and	abstract[306]	new[306]	_	_
+58-20	5198-5207	quarterly	abstract[306]	new[306]	_	_
+58-21	5208-5213	goals	abstract[306]	new[306]	_	_
+58-22	5214-5215	.	_	_	_	_
+
+#Text=Adjust your calculation for each month to reflect the hours worked by all employees for only that month .
+59-1	5216-5222	Adjust	_	_	_	_
+59-2	5223-5227	your	person|abstract[308]	giv|giv[308]	ana	61-5
+59-3	5228-5239	calculation	abstract[308]	giv[308]	_	_
+59-4	5240-5243	for	abstract[308]	giv[308]	_	_
+59-5	5244-5248	each	abstract[308]|time[309]	giv[308]|new[309]	coref	59-16[312_309]
+59-6	5249-5254	month	abstract[308]|time[309]	giv[308]|new[309]	_	_
+59-7	5255-5257	to	_	_	_	_
+59-8	5258-5265	reflect	_	_	_	_
+59-9	5266-5269	the	time[310]	giv[310]	coref	60-5[315_310]
+59-10	5270-5275	hours	time[310]	giv[310]	_	_
+59-11	5276-5282	worked	time[310]	giv[310]	_	_
+59-12	5283-5285	by	time[310]	giv[310]	_	_
+59-13	5286-5289	all	time[310]|person[311]	giv[310]|giv[311]	coref	62-15[0_311]
+59-14	5290-5299	employees	time[310]|person[311]	giv[310]|giv[311]	_	_
+59-15	5300-5303	for	time[310]	giv[310]	_	_
+59-16	5304-5308	only	time[310]|time[312]	giv[310]|giv[312]	coref	60-8[316_312]
+59-17	5309-5313	that	time[310]|time[312]	giv[310]|giv[312]	_	_
+59-18	5314-5319	month	time[310]|time[312]	giv[310]|giv[312]	_	_
+59-19	5320-5321	.	_	_	_	_
+
+#Text=Add the incidents and hours worked from each month and then calculate the incident rate on the totals .
+60-1	5322-5325	Add	_	_	_	_
+60-2	5326-5329	the	event[313]|event[314]	giv[313]|giv[314]	coref	60-2[314_313]
+60-3	5330-5339	incidents	event[313]|event[314]	giv[313]|giv[314]	_	_
+60-4	5340-5343	and	event[314]	giv[314]	_	_
+60-5	5344-5349	hours	event[314]|time[315]	giv[314]|giv[315]	coref	61-11[323_315]
+60-6	5350-5356	worked	event[314]|time[315]	giv[314]|giv[315]	_	_
+60-7	5357-5361	from	event[314]|time[315]	giv[314]|giv[315]	_	_
+60-8	5362-5366	each	event[314]|time[315]|time[316]	giv[314]|giv[315]|giv[316]	_	_
+60-9	5367-5372	month	event[314]|time[315]|time[316]	giv[314]|giv[315]|giv[316]	_	_
+60-10	5373-5376	and	_	_	_	_
+60-11	5377-5381	then	_	_	_	_
+60-12	5382-5391	calculate	_	_	_	_
+60-13	5392-5395	the	abstract[318]	giv[318]	coref	61-16[327_318]
+60-14	5396-5404	incident	event|abstract[318]	giv|giv[318]	coref	61-7[322_0]
+60-15	5405-5409	rate	abstract[318]	giv[318]	_	_
+60-16	5410-5412	on	_	_	_	_
+60-17	5413-5416	the	abstract[319]	new[319]	_	_
+60-18	5417-5423	totals	abstract[319]	new[319]	_	_
+60-19	5424-5425	.	_	_	_	_
+
+#Text=For instance , if you had 1 January incident over 10,000 hours worked , then your January average incident rate would be ( 1*200,000)/10,000 , or 20 .
+61-1	5426-5429	For	_	_	_	_
+61-2	5430-5438	instance	_	_	_	_
+61-3	5439-5440	,	_	_	_	_
+61-4	5441-5443	if	_	_	_	_
+61-5	5444-5447	you	person	giv	ana	61-16
+61-6	5448-5451	had	_	_	_	_
+61-7	5452-5453	1	time[321]|event[322]	new[321]|giv[322]	coref	61-19[0_322]
+61-8	5454-5461	January	time[321]|event[322]	new[321]|giv[322]	_	_
+61-9	5462-5470	incident	event[322]	giv[322]	_	_
+61-10	5471-5475	over	event[322]	giv[322]	_	_
+61-11	5476-5482	10,000	event[322]|time[323]	giv[322]|giv[323]	_	_
+61-12	5483-5488	hours	event[322]|time[323]	giv[322]|giv[323]	_	_
+61-13	5489-5495	worked	event[322]|time[323]	giv[322]|giv[323]	_	_
+61-14	5496-5497	,	_	_	_	_
+61-15	5498-5502	then	_	_	_	_
+61-16	5503-5507	your	person|abstract[327]	giv|giv[327]	ana|coref	62-6|62-23[338_327]
+61-17	5508-5515	January	person|abstract[327]	new|giv[327]	_	_
+61-18	5516-5523	average	abstract[327]	giv[327]	_	_
+61-19	5524-5532	incident	event|abstract[327]	giv|giv[327]	_	_
+61-20	5533-5537	rate	abstract[327]	giv[327]	_	_
+61-21	5538-5543	would	_	_	_	_
+61-22	5544-5546	be	_	_	_	_
+61-23	5547-5548	(	_	_	_	_
+61-24	5549-5566	1*200,000)/10,000	abstract	new	_	_
+61-25	5567-5568	,	_	_	_	_
+61-26	5569-5571	or	_	_	_	_
+61-27	5572-5574	20	abstract	giv	_	_
+61-28	5575-5576	.	_	_	_	_
+
+#Text=For another example , if you had eight accidents over 400,000 hours worked by employees in a year , you would calculate the accident rate as ( 8*200,000)/400,000 , or 4 .
+62-1	5577-5580	For	_	_	_	_
+62-2	5581-5588	another	abstract[330]	new[330]	_	_
+62-3	5589-5596	example	abstract[330]	new[330]	_	_
+62-4	5597-5598	,	_	_	_	_
+62-5	5599-5601	if	_	_	_	_
+62-6	5602-5605	you	person	giv	ana	62-20
+62-7	5606-5609	had	_	_	_	_
+62-8	5610-5615	eight	event[332]	new[332]	_	_
+62-9	5616-5625	accidents	event[332]	new[332]	_	_
+62-10	5626-5630	over	event[332]	new[332]	_	_
+62-11	5631-5638	400,000	event[332]|time[333]	new[332]|new[333]	_	_
+62-12	5639-5644	hours	event[332]|time[333]	new[332]|new[333]	_	_
+62-13	5645-5651	worked	event[332]|time[333]	new[332]|new[333]	_	_
+62-14	5652-5654	by	event[332]|time[333]	new[332]|new[333]	_	_
+62-15	5655-5664	employees	event[332]|time[333]|person	new[332]|new[333]|giv	_	_
+62-16	5665-5667	in	event[332]|time[333]	new[332]|new[333]	_	_
+62-17	5668-5669	a	event[332]|time[333]|time[335]	new[332]|new[333]|giv[335]	_	_
+62-18	5670-5674	year	event[332]|time[333]|time[335]	new[332]|new[333]|giv[335]	_	_
+62-19	5675-5676	,	_	_	_	_
+62-20	5677-5680	you	person	giv	_	_
+62-21	5681-5686	would	_	_	_	_
+62-22	5687-5696	calculate	_	_	_	_
+62-23	5697-5700	the	abstract[338]	giv[338]	_	_
+62-24	5701-5709	accident	event|abstract[338]	new|giv[338]	_	_
+62-25	5710-5714	rate	abstract[338]	giv[338]	_	_
+62-26	5715-5717	as	_	_	_	_
+62-27	5718-5719	(	_	_	_	_
+62-28	5720-5738	8*200,000)/400,000	abstract	new	_	_
+62-29	5739-5740	,	_	_	_	_
+62-30	5741-5743	or	_	_	_	_
+62-31	5744-5745	4	abstract	new	_	_
+62-32	5746-5747	.	_	_	_	_
+
+#Text=Quick Summary
+63-1	5748-5753	Quick	abstract[341]	new[341]	_	_
+63-2	5754-5761	Summary	abstract[341]	new[341]	_	_

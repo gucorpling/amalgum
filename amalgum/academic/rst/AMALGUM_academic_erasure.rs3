@@ -1,0 +1,152 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1002" relname="span">With the rapid development of virtual reality technology , mixed reality technology , and human – computer interaction technology ,</segment>
+<segment id="3" parent="1004" relname="span">an increasing number of businesses are working from various angles</segment>
+<segment id="4" parent="3" relname="purpose">to realize erasure animations in mixed reality</segment>
+<segment id="5" parent="1004" relname="purpose">so that their users ’ participations can be improved .</segment>
+<segment id="6" parent="1006" relname="preparation">Some examples are Fruit Ninja and The Swords .</segment>
+<segment id="7" parent="1006" relname="joint">In these systems , limits exist in the number of face-to-face participants and the unnatural interactive devices .</segment>
+<segment id="8" parent="1007" relname="joint">How to realize rich somatosensory interactive erasure animations for a large group of face-to-face participants by some popular interactive devices has great influence on the participations .</segment>
+<segment id="9" parent="1009" relname="span">The technologies of image matting and interactive erasing are working</segment>
+<segment id="10" parent="9" relname="purpose">to develop users ’ participations in erasure animations .</segment>
+<segment id="11" parent="1012" relname="span">Existing image matting methods are mainly used for two-dimensional</segment>
+<segment id="12" parent="11" relname="elaboration">( 2D )</segment>
+<segment id="13" parent="1013" relname="sequence">scenes</segment>
+<segment id="14" parent="1013" relname="sequence">and their mask images and background images are all 2D data .</segment>
+<segment id="15" parent="1015" relname="span">They do not support customizations of three-dimensional</segment>
+<segment id="16" parent="15" relname="elaboration">( 3D ) scenes .</segment>
+<segment id="17" parent="1018" relname="span">Some 3D simulation software systems , such as Unity3D and Unreal Engine 4 , use their powerful shader functions</segment>
+<segment id="18" parent="17" relname="attribution">to perform texture transparency blending on the image</segment>
+<segment id="19" parent="1019" relname="joint">which contains the information of erasure shapes and background scenes ,</segment>
+<segment id="20" parent="1019" relname="joint">and thus reveal the scenes .</segment>
+<segment id="21" parent="1020" relname="joint">The erasure can be performed in every position .</segment>
+<segment id="22" parent="1022" relname="span">However , the visualization of multiple erasure actions simultaneously requires to create and load multiple shaders ,</segment>
+<segment id="23" parent="22" relname="elaboration">which is very time-consuming .</segment>
+<segment id="24" parent="1023" relname="joint">Therefore , they are not suitable for a larger number of participants .</segment>
+<segment id="25" parent="1024" relname="joint">In the field of interactive erasing technology , some sensor-based , and vision-based gesture recognition methods are used for interactions , for example , virtual reality glasses , Kinect , cameras .</segment>
+<segment id="26" parent="1025" relname="joint">Some of them are not easy in implementation</segment>
+<segment id="27" parent="1027" relname="span">and some of them suffer from serious occlusion of a larger number participants .</segment>
+<segment id="28" parent="1029" relname="attribution">To tackle the aforementioned challenges ,</segment>
+<segment id="29" parent="1029" relname="span">we design a system</segment>
+<segment id="30" parent="1030" relname="span">to realize interactive and personalized erasure animations</segment>
+<segment id="31" parent="30" relname="means">by using mobile terminals , a shared display terminal and a database server .</segment>
+<segment id="32" parent="1033" relname="preparation">The system is implemented by a data preprocessing module and an interactive erasure animation module (</segment>
+<segment id="33" parent="1034" relname="preparation">Figure 1</segment>
+<segment id="34" parent="1035" relname="preparation">) .</segment>
+<segment id="35" parent="1036" relname="span">The data preprocessing module is mainly responsible for preprocessing the input erasure shape data ,</segment>
+<segment id="36" parent="35" relname="elaboration">including cleaning the personalized shape data and semantic standardizations .</segment>
+<segment id="37" parent="1038" relname="span">The interactive erasure animation module consists of three parts :</segment>
+<segment id="38" parent="37" relname="elaboration">shaking mobile terminals , visualization of the erasure animations in the shared display terminal , and dynamic and personalized data editing in the database server .</segment>
+<segment id="39" parent="1040" relname="joint">In our system , users shake their mobile terminals continuously and simultaneously with their hands ,</segment>
+<segment id="40" parent="1041" relname="joint">and their valid shaking data are captured</segment>
+<segment id="41" parent="1041" relname="joint">and saved in the database server .</segment>
+<segment id="42" parent="1042" relname="joint">Then the shared display terminal accesses the database server</segment>
+<segment id="43" parent="1043" relname="span">and shows visualizations of real-time erasure animations</segment>
+<segment id="44" parent="43" relname="attribution">according to the data .</segment>
+<segment id="45" parent="46" relname="attribution">Note</segment>
+<segment id="46" parent="1045" relname="span">that the system can only show a continuous animation for many shakings :</segment>
+<segment id="47" parent="1047" relname="same_unit">one valid shaking occurs</segment>
+<segment id="48" parent="49" relname="circumstance">when a user shakes his mobile terminal ,</segment>
+<segment id="49" parent="1048" relname="span">then the shared display shows an erasure shape ;</segment>
+<segment id="50" parent="1051" relname="span">another valid shaking occurs</segment>
+<segment id="51" parent="50" relname="circumstance">when another user shakes his mobile terminal ,</segment>
+<segment id="52" parent="1052" relname="joint">then the shared display shows two erasure shapes ;</segment>
+<segment id="53" parent="1053" relname="sequence">more valid shakings occur</segment>
+<segment id="54" parent="1053" relname="sequence">and then the shared display shows more erasure shapes .</segment>
+<segment id="55" parent="1055" relname="preparation">The main contributions of our system are as follows :</segment>
+<segment id="56" parent="1056" relname="span">We introduce a novel interactive erasure animation system</segment>
+<segment id="57" parent="1057" relname="span">based on a shared display terminal and mobile terminals</segment>
+<segment id="58" parent="57" relname="elaboration">( mobile phone/tablet computer ) ,</segment>
+<segment id="59" parent="1058" relname="joint">the implementation of which is very easy for a larger number of participants .</segment>
+<segment id="60" parent="1060" relname="joint">In our system , the shared display terminal can respond to a larger number of shaking actions from participants in real time</segment>
+<segment id="61" parent="1061" relname="span">and show an immersive and somatosensory erasure animation ,</segment>
+<segment id="62" parent="1062" relname="span">the erasure shapes</segment>
+<segment id="63" parent="1063" relname="span">which are highly consistent with the participants ’ shaking actions</segment>
+<segment id="64" parent="63" relname="elaboration">( position , travel distance , angle , etc. ) .</segment>
+<segment id="65" parent="1064" relname="span">Our system supports real-time personalized erasure animations .</segment>
+<segment id="66" parent="1065" relname="joint">The erasure shape , mask data , scene data , and so on can be customized on our backend management platform .</segment>
+<segment id="67" parent="1066" relname="joint">The scale , rotation , and translation of each shape are personalized</segment>
+<segment id="68" parent="1066" relname="joint">and determined by the corresponding shaking action .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="2" relname="elaboration"/>
+<group id="1004" type="span" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1002" relname="elaboration"/>
+<group id="1006" type="multinuc" parent="1005" relname="span"/>
+<group id="1007" type="multinuc" parent="1006" relname="joint"/>
+<group id="1008" type="multinuc" parent="1007" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="multinuc" parent="1008" relname="joint"/>
+<group id="1011" type="multinuc" parent="1010" relname="joint"/>
+<group id="1012" type="span" parent="1011" relname="same_unit"/>
+<group id="1013" type="multinuc" parent="1011" relname="same_unit"/>
+<group id="1014" type="multinuc" parent="1010" relname="joint"/>
+<group id="1015" type="span" parent="1014" relname="joint"/>
+<group id="1016" type="multinuc" parent="1014" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1019" type="multinuc" parent="1018" relname="elaboration"/>
+<group id="1020" type="multinuc" parent="1016" relname="joint"/>
+<group id="1021" type="multinuc" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="joint"/>
+<group id="1023" type="multinuc" parent="1021" relname="joint"/>
+<group id="1024" type="multinuc" parent="1023" relname="joint"/>
+<group id="1025" type="multinuc" parent="1024" relname="joint"/>
+<group id="1026" type="multinuc" parent="1025" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="joint"/>
+<group id="1028" type="span" parent="27" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="span"/>
+<group id="1030" type="span" parent="29" relname="purpose"/>
+<group id="1031" type="multinuc" parent="1026" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="span"/>
+<group id="1035" type="span" parent="1034" relname="span"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1037" type="multinuc" parent="1036" relname="elaboration"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="multinuc" parent="1037" relname="joint"/>
+<group id="1040" type="multinuc" parent="1039" relname="sequence"/>
+<group id="1041" type="multinuc" parent="1040" relname="joint"/>
+<group id="1042" type="multinuc" parent="1039" relname="sequence"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1031" relname="joint"/>
+<group id="1045" type="span" parent="1046" relname="preparation"/>
+<group id="1046" type="multinuc" parent="1044" relname="span"/>
+<group id="1047" type="multinuc" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="same_unit"/>
+<group id="1049" type="multinuc" parent="1046" relname="joint"/>
+<group id="1050" type="multinuc" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="1050" relname="sequence"/>
+<group id="1052" type="multinuc" parent="1050" relname="sequence"/>
+<group id="1053" type="multinuc" parent="1052" relname="joint"/>
+<group id="1054" type="span" parent="1049" relname="joint"/>
+<group id="1055" type="span" parent="1054" relname="span"/>
+<group id="1056" type="span" parent="1058" relname="preparation"/>
+<group id="1057" type="span" parent="56" relname="elaboration"/>
+<group id="1058" type="multinuc" parent="1055" relname="span"/>
+<group id="1059" type="multinuc" parent="1058" relname="joint"/>
+<group id="1060" type="multinuc" parent="1059" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1062" type="span" parent="61" relname="elaboration"/>
+<group id="1063" type="span" parent="62" relname="elaboration"/>
+<group id="1064" type="span" parent="1059" relname="joint"/>
+<group id="1065" type="multinuc" parent="65" relname="elaboration"/>
+<group id="1066" type="multinuc" parent="1065" relname="joint"/>
+	</body>
+</rst>

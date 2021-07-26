@@ -1,0 +1,848 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_consumption" title="Development of an Improved Model to Predict Building Thermal Energy Consumption by Utilizing Feature Selection" shortTitle="consumption" author="Jihoon Jang, Joosang Lee, Eunjo Son, Kyungyong Park, Gahee Kim, Jee  Hang Lee, Seung-Bok Leigh" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/21/4187/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+1.	LS	1.
+Introduction	NN	introduction
+</s>
+</head>
+<head>
+<s type="frag">
+1.1.	CD	1.1.
+Background	NN	background
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+emission	NN	emission
+of	IN	of
+greenhouse	NN	greenhouse
+gas	NN	gas
+(	-LRB-	(
+GHG	NNP	GHG
+)	-RRB-	)
+has	VBZ	have
+steeply	RB	steeply
+increased	VBN	increase
+by	IN	by
+approximately	RB	approximately
+82.5	CD	82.5
+%	NN	%
+since	IN	since
+<date when="1979">
+1979	CD	1979
+</date>
+,	,	,
+which	WDT	which
+has	VBZ	have
+been	VBN	be
+a	DT	a
+major	JJ	major
+contributor	NN	contributor
+to	IN	to
+climate	NN	climate
+change	NN	change
+globally	RB	globally
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+gives	VBZ	give
+rise	NN	rise
+to	IN	to
+considerable	JJ	considerable
+global	JJ	global
+efforts	NNS	effort
+to	TO	to
+reduce	VB	reduce
+its	PRP$	its
+emissions	NNS	emission
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+a	DT	a
+part	NN	part
+of	IN	of
+it	PRP	it
+,	,	,
+South	NNP	South
+Korea	NNP	Korea
+announced	VBD	announce
+a	DT	a
+target	NN	target
+of	IN	of
+reducing	VBG	reduce
+GHG	NNP	GHG
+emissions	NNS	emission
+by	IN	by
+37	CD	37
+%	NN	%
+compared	VBN	compare
+to	IN	to
+Business	NNP	Business
+As	IN	as
+Usual	NNP	Usual
+(	-LRB-	(
+BAU	NNP	BAU
+)	-RRB-	)
+by	IN	by
+<date when="2030">
+2030	CD	2030
+</date>
+in	IN	in
+the	DT	the
+Paris	NNP	Paris
+Agreement	NNP	Agreement
+of	IN	of
+the	DT	the
+Intergovernmental	NNP	Intergovernmental
+Panel	NNP	Panel
+on	IN	on
+Climate	NNP	Climate
+Change	NNP	Change
+(	-LRB-	(
+IPCC	NNP	IPCC
+)	-RRB-	)
+in	IN	in
+<date when="2016">
+2016	CD	2016
+</date>
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Humans	NNS	human
+,	,	,
+who	WP	who
+are	VBP	be
+mostly	RB	mostly
+responsible	JJ	responsible
+for	IN	for
+GHG	NNP	GHG
+emissions	NNS	emission
+,	,	,
+spend	VBP	spend
+approximately	RB	approximately
+90	CD	90
+%	NN	%
+of	IN	of
+the	DT	the
+daytime	NN	daytime
+in	IN	in
+buildings	NNS	building
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+estimated	VBN	estimate
+GHG	NNP	GHG
+emissions	NNS	emission
+from	IN	from
+buildings	NNS	building
+are	VBP	be
+as	RB	as
+high	JJ	high
+as	IN	as
+20	CD	20
+%	NN	%
+of	IN	of
+the	DT	the
+total	JJ	total
+emissions	NNS	emission
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+many	JJ	many
+studies	NNS	study
+have	VBP	have
+been	VBN	be
+conducted	VBN	conduct
+to	TO	to
+reduce	VB	reduce
+energy	NN	energy
+consumption	NN	consumption
+in	IN	in
+buildings	NNS	building
+in	IN	in
+an	DT	a
+effort	NN	effort
+to	TO	to
+reduce	VB	reduce
+GHG	NNP	GHG
+emissions	NNS	emission
+from	IN	from
+buildings	NNS	building
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+application	NN	application
+of	IN	of
+renewable	JJ	renewable
+energy	NN	energy
+to	IN	to
+buildings	NNS	building
+has	VBZ	have
+increased	VBN	increase
+recently	RB	recently
+in	IN	in
+an	DT	a
+effort	NN	effort
+to	TO	to
+reduce	VB	reduce
+the	DT	the
+energy	NN	energy
+consumption	NN	consumption
+of	IN	of
+buildings	NNS	building
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+properly	RB	properly
+distribute	VB	distribute
+the	DT	the
+supply	NN	supply
+of	IN	of
+renewable	JJ	renewable
+energy	NN	energy
+sources	NNS	source
+,	,	,
+it	PRP	it
+is	VBZ	be
+necessary	JJ	necessary
+to	TO	to
+accurately	RB	accurately
+predict	VB	predict
+the	DT	the
+energy	NN	energy
+consumption	NN	consumption
+of	IN	of
+each	DT	each
+building	NN	building
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+particular	JJ	particular
+,	,	,
+from	IN	from
+a	DT	a
+building	NN	building
+life-cycle	NN	life-cycle
+perspective	NN	perspective
+,	,	,
+the	DT	the
+energy	NN	energy
+consumed	VBN	consume
+in	IN	in
+the	DT	the
+operation	NN	operation
+stage	NN	stage
+of	IN	of
+a	DT	a
+building	NN	building
+amounts	VBZ	amount
+to	IN	to
+approximately	RB	approximately
+70	CD	70
+–	SYM	-
+90	CD	90
+%	NN	%
+of	IN	of
+the	DT	the
+total	JJ	total
+energy	NN	energy
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+it	PRP	it
+is	VBZ	be
+essential	JJ	essential
+to	TO	to
+accurately	RB	accurately
+predict	VB	predict
+the	DT	the
+energy	NN	energy
+consumption	NN	consumption
+of	IN	of
+buildings	NNS	building
+for	IN	for
+their	PRP$	their
+efficient	JJ	efficient
+operation	NN	operation
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+1.2.	CD	1.2.
+Literature	NNP	Literature
+Review	NNP	review
+(	-LRB-	(
+Analysis	NN	analysis
+of	IN	of
+Previous	NNP	previous
+Studies	NNS	Study
+)	-RRB-	)
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+previous	JJ	previous
+studies	NNS	study
+were	VBD	be
+reviewed	VBN	review
+to	TO	to
+introduce	VB	introduce
+(	NN	(
+i	CD	I
+)	-RRB-	)
+the	DT	the
+necessity	NN	necessity
+of	IN	of
+predicting	VBG	predict
+building	NN	building
+energy	NN	energy
+consumption	NN	consumption
+,	,	,
+(	:	(
+ii	CD	ii
+)	-RRB-	)
+a	DT	a
+comparative	JJ	comparative
+analysis	NN	analysis
+of	IN	of
+energy	NN	energy
+prediction	NN	prediction
+methods	NNS	method
+,	,	,
+and	CC	and
+(	:	(
+iii	CD	iii
+)	-RRB-	)
+the	DT	the
+advantages	NNS	advantage
+of	IN	of
+feature	NN	feature
+selection	NN	selection
+.	.	.
+</s>
+<s type="decl">
+Based	VBN	base
+on	IN	on
+these	DT	this
+,	,	,
+the	DT	the
+optimal	JJ	optimal
+modeling	NN	modeling
+strategy	NN	strategy
+for	IN	for
+predicting	VBG	predict
+building	NN	building
+energy	NN	energy
+consumption	NN	consumption
+was	VBD	be
+developed	VBN	develop
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Linda	NNP	Linda
+et	FW	et
+al.	FW	al.
+showed	VBD	show
+that	IN	that
+energy	NN	energy
+distribution	NN	distribution
+systems	NNS	system
+can	MD	can
+be	VB	be
+planned	VBN	plan
+by	IN	by
+predicting	VBG	predict
+heat	NN	heat
+and	CC	and
+electricity	NN	electricity
+demand	NN	demand
+.	.	.
+</s>
+<s type="decl">
+They	PRP	they
+created	VBD	create
+regression	NN	regression
+analysis	NN	analysis
+models	NNS	model
+for	IN	for
+buildings	NNS	building
+using	VBG	use
+the	DT	the
+heat	NN	heat
+and	CC	and
+electricity	NN	electricity
+consumptions	NNS	consumption
+measured	VBN	measure
+every	DT	every
+hour	NN	hour
+and	CC	and
+predicted	VBD	predict
+the	DT	the
+heat	NN	heat
+and	CC	and
+electricity	NN	electricity
+loads	NNS	load
+as	RB	as
+well	RB	well
+as	IN	as
+the	DT	the
+annual	JJ	annual
+energy	NN	energy
+demand	NN	demand
+in	IN	in
+a	DT	a
+specific	JJ	specific
+area	NN	area
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+a	DT	a
+result	NN	result
+,	,	,
+they	PRP	they
+optimized	VBD	optimize
+a	DT	a
+system	NN	system
+for	IN	for
+energy	NN	energy
+distribution	NN	distribution
+to	IN	to
+buildings	NNS	building
+.	.	.
+</s>
+<s type="decl">
+Yudong	NNP	Yudong
+Ma	NNP	Ma
+et	FW	et
+al.	FW	al.
+conducted	VBD	conduct
+research	NN	research
+on	IN	on
+energy	NN	energy
+reduction	NN	reduction
+in	IN	in
+buildings	NNS	building
+using	VBG	use
+an	DT	a
+energy	NN	energy
+demand	NN	demand
+prediction	NN	prediction
+.	.	.
+</s>
+<s type="decl">
+They	PRP	they
+constructed	VBD	construct
+a	DT	a
+system	NN	system
+optimized	VBN	optimize
+for	IN	for
+storing	VBG	store
+the	DT	the
+heat	NN	heat
+source	NN	source
+generated	VBN	generate
+from	IN	from
+a	DT	a
+cooling	NN	cooling
+system	NN	system
+and	CC	and
+a	DT	a
+prediction	NN	prediction
+control	NN	control
+system	NN	system
+for	IN	for
+preventing	VBG	prevent
+the	DT	the
+overproduction	NN	overproduction
+of	IN	of
+heat	NN	heat
+sources	NNS	source
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+simulation	NN	simulation
+results	NNS	result
+showed	VBD	show
+that	IN	that
+an	DT	a
+energy-saving	JJ	energy-saving
+effect	NN	effect
+of	IN	of
+up	IN	up
+to	IN	to
+24.5	CD	24.5
+%	NN	%
+can	MD	can
+be	VB	be
+achieved	VBN	achieve
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+district	NN	district
+heating	NN	heating
+system	NN	system
+efficiently	RB	efficiently
+provides	VBZ	provide
+heat	NN	heat
+sources	NNS	source
+using	VBG	use
+a	DT	a
+centralized	JJ	centralized
+supply	NN	supply
+of	IN	of
+cold	JJ	cold
+and	CC	and
+hot	JJ	hot
+water	NN	water
+used	VBN	use
+in	IN	in
+local	JJ	local
+facilities	NNS	facility
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+it	PRP	it
+is	VBZ	be
+possible	JJ	possible
+to	TO	to
+determine	VB	determine
+an	DT	a
+optimal	JJ	optimal
+operation	NN	operation
+plan	NN	plan
+before	IN	before
+using	VBG	use
+chillers	NNS	chiller
+and	CC	and
+boilers	NNS	boiler
+if	IN	if
+their	PRP$	their
+loads	NNS	load
+can	MD	can
+be	VB	be
+accurately	RB	accurately
+predicted	VBN	predict
+.	.	.
+</s>
+<s type="decl">
+M.	NNP	M.
+Sakawa	NNP	Sakawa
+et	FW	et
+al.	NN	al.
+predicted	VBD	predict
+the	DT	the
+load	NN	load
+using	VBG	use
+an	DT	a
+artificial	JJ	artificial
+neural	JJ	neural
+network	NN	network
+(	-LRB-	(
+ANN	NNP	ANN
+)	-RRB-	)
+for	IN	for
+efficient	JJ	efficient
+district	NN	district
+cooling	NN	cooling
+and	CC	and
+heating	NN	heating
+operation	NN	operation
+.	.	.
+</s>
+<s type="decl">
+Kody	NNP	Kody
+M.	NNP	M.
+Powell	NNP	Powell
+et	FW	et
+al.	NNS	al.
+conducted	VBD	conduct
+research	NN	research
+on	IN	on
+the	DT	the
+energy	NN	energy
+reduction	NN	reduction
+of	IN	of
+heating	NN	heating
+,	,	,
+ventilation	NN	ventilation
+and	CC	and
+air	NN	air
+conditioning	NN	conditioning
+(	-LRB-	(
+HVAC	NNP	HVAC
+)	-RRB-	)
+using	VBG	use
+a	DT	a
+building	NN	building
+energy	NN	energy
+consumption	NN	consumption
+prediction	NN	prediction
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+They	PRP	they
+presented	VBD	present
+an	DT	a
+efficient	JJ	efficient
+method	NN	method
+of	IN	of
+coping	VBG	cope
+with	IN	with
+the	DT	the
+peak	NN	peak
+load	NN	load
+by	IN	by
+controlling	VBG	control
+the	DT	the
+thermal	JJ	thermal
+storage	NN	storage
+system	NN	system
+.	.	.
+</s>
+<s type="decl">
+Samuel	NNP	Samuel
+et	NNP	et
+al.	NNP	al.
+conducted	VBD	conduct
+a	DT	a
+study	NN	study
+to	TO	to
+predict	VB	predict
+the	DT	the
+heating	NN	heating
+load	NN	load
+in	IN	in
+a	DT	a
+district	NN	district
+heating	NN	heating
+system	NN	system
+by	IN	by
+applying	VBG	apply
+four	CD	4
+types	NNS	type
+of	IN	of
+machine	NN	machine
+learning	NN	learning
+.	.	.
+</s>
+<s type="decl">
+They	PRP	they
+used	VBD	use
+district	NN	district
+heating	NN	heating
+data	NNS	datum
+collected	VBN	collect
+from	IN	from
+10	CD	10
+residential	JJ	residential
+and	CC	and
+commercial	JJ	commercial
+buildings	NNS	building
+located	VBN	locate
+in	IN	in
+Skellefteå	NNP	Skellefteå
+,	,	,
+Sweden	NNP	Sweden
+,	,	,
+and	CC	and
+using	VBG	use
+machine	NN	machine
+learning	NN	learning
+techniques	NNS	technique
+,	,	,
+namely	RB	namely
+,	,	,
+support	NN	support
+vector	NN	vector
+machine	NN	machine
+(	-LRB-	(
+SVM	NNP	SVM
+)	-RRB-	)
+,	,	,
+forward	JJ	forward
+backpropagation	NN	backpropagation
+neural	JJ	neural
+network	NN	network
+(	-LRB-	(
+FFNN	NNP	FFNN
+)	-RRB-	)
+,	,	,
+multilinear	NN	multilinear
+regression	NN	regression
+(	-LRB-	(
+MLR	NNP	MLR
+)	-RRB-	)
+,	,	,
+regression	NN	regression
+.	.	.
+</s>
+<s type="decl">
+Prediction	NN	Prediction
+of	IN	of
+energy	NN	energy
+consumption	NN	consumption
+shows	VBZ	show
+that	IN	that
+it	PRP	it
+is	VBZ	be
+a	DT	a
+key	JJ	key
+step	NN	step
+towards	IN	towards
+the	DT	the
+realization	NN	realization
+of	IN	of
+optimized	VBN	optimize
+energy	NN	energy
+production	NN	production
+,	,	,
+distribution	NN	distribution
+,	,	,
+and	CC	and
+consumption	NN	consumption
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+improve	VB	improve
+present	JJ	present
+and	CC	and
+future	JJ	future
+energy	NN	energy
+supplies	NNS	supply
+,	,	,
+predicting	VBG	predict
+energy	NN	energy
+demands	NNS	demand
+is	VBZ	be
+an	DT	a
+essential	JJ	essential
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+the	DT	the
+lack	NN	lack
+of	IN	of
+accurate	JJ	accurate
+and	CC	and
+comprehensive	JJ	comprehensive
+data	NNS	datum
+sets	NNS	set
+to	TO	to
+predict	VB	predict
+future	JJ	future
+demand	NN	demand
+is	VBZ	be
+one	CD	one
+of	IN	of
+the	DT	the
+big	JJ	big
+problems	NNS	problem
+in	IN	in
+developing	VBG	develop
+economies	NNS	economy
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+Sasan	NNP	Sasan
+et	NNP	et
+al.	NNP	al.
+proposed	VBD	propose
+an	DT	a
+ensemble	NN	ensemble
+hybrid	NN	hybrid
+forecasting	NN	forecasting
+model	NN	model
+as	IN	as
+a	DT	a
+solution	NN	solution
+for	IN	for
+predicting	VBG	predict
+energy	NN	energy
+consumption	NN	consumption
+while	IN	while
+dealing	VBG	deal
+with	IN	with
+the	DT	the
+shortage	NN	shortage
+of	IN	of
+data	NNS	datum
+sets	NNS	set
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+studies	NNS	study
+controlled	VBD	control
+the	DT	the
+production	NN	production
+and	CC	and
+operation	NN	operation
+of	IN	of
+heat	NN	heat
+sources	NNS	source
+by	IN	by
+predicting	VBG	predict
+the	DT	the
+building	NN	building
+energy	NN	energy
+consumption	NN	consumption
+and	CC	and
+the	DT	the
+induced	VBN	induce
+energy	NN	energy
+reduction	NN	reduction
+.	.	.
+</s>
+<s type="decl">
+They	PRP	they
+also	RB	also
+prevented	VBD	prevent
+the	DT	the
+overproduction	NN	overproduction
+of	IN	of
+heat	NN	heat
+sources	NNS	source
+through	IN	through
+the	DT	the
+energy	NN	energy
+consumption	NN	consumption
+prediction	NN	prediction
+.	.	.
+</s>
+</p>
+</text>

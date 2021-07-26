@@ -1,0 +1,931 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Disassemble , Transport , and Reassemble a PC
+1-1	0-11	Disassemble	_	_	_	_
+1-2	12-13	,	_	_	_	_
+1-3	14-23	Transport	event	new	ana	2-3
+1-4	24-25	,	_	_	_	_
+1-5	26-29	and	_	_	_	_
+1-6	30-40	Reassemble	_	_	_	_
+1-7	41-42	a	object[2]	new[2]	_	_
+1-8	43-45	PC	object[2]	new[2]	_	_
+
+#Text=Moving in itself can be an overwhelming endeavor ...
+2-1	46-52	Moving	_	_	_	_
+2-2	53-55	in	_	_	_	_
+2-3	56-62	itself	event	giv	_	_
+2-4	63-66	can	_	_	_	_
+2-5	67-69	be	_	_	_	_
+2-6	70-72	an	place[4]	new[4]	_	_
+2-7	73-85	overwhelming	place[4]	new[4]	_	_
+2-8	86-94	endeavor	place[4]	new[4]	_	_
+2-9	95-98	...	_	_	_	_
+
+#Text=add a home computer to the mix and things can get frustrating .
+3-1	99-102	add	_	_	_	_
+3-2	103-104	a	object[6]	new[6]	coref	5-2[10_6]
+3-3	105-109	home	place|object[6]	new|new[6]	_	_
+3-4	110-118	computer	object[6]	new[6]	_	_
+3-5	119-121	to	_	_	_	_
+3-6	122-125	the	abstract[7]	new[7]	_	_
+3-7	126-129	mix	abstract[7]	new[7]	_	_
+3-8	130-133	and	_	_	_	_
+3-9	134-140	things	abstract	new	_	_
+3-10	141-144	can	_	_	_	_
+3-11	145-148	get	_	_	_	_
+3-12	149-160	frustrating	_	_	_	_
+3-13	161-162	.	_	_	_	_
+
+#Text=Steps
+4-1	163-168	Steps	abstract	new	_	_
+
+#Text=Turn the computer off , including all power strips .
+5-1	169-173	Turn	_	_	_	_
+5-2	174-177	the	object[10]	giv[10]	coref	6-2[14_10]
+5-3	178-186	computer	object[10]	giv[10]	_	_
+5-4	187-190	off	_	_	_	_
+5-5	191-192	,	_	_	_	_
+5-6	193-202	including	_	_	_	_
+5-7	203-206	all	object[12]	new[12]	_	_
+5-8	207-212	power	abstract|object[12]	new|new[12]	coref	6-29
+5-9	213-219	strips	object[12]	new[12]	_	_
+5-10	220-221	.	_	_	_	_
+
+#Text=Shut your computer down first from software ( Start Menu->Shut Down , or issue " halt " from a root terminal in Linux ) , turn off the power strip , and unplug it from the wall .
+6-1	222-226	Shut	_	_	_	_
+6-2	227-231	your	person|object[14]	acc|giv[14]	ana|coref	7-2|17-21[78_14]
+6-3	232-240	computer	object[14]	giv[14]	_	_
+6-4	241-245	down	_	_	_	_
+6-5	246-251	first	_	_	_	_
+6-6	252-256	from	_	_	_	_
+6-7	257-265	software	abstract	new	_	_
+6-8	266-267	(	_	_	_	_
+6-9	268-273	Start	person|abstract[17]	new|new[17]	_	_
+6-10	274-284	Menu->Shut	abstract[17]	new[17]	_	_
+6-11	285-289	Down	abstract[17]	new[17]	_	_
+6-12	290-291	,	_	_	_	_
+6-13	292-294	or	_	_	_	_
+6-14	295-300	issue	_	_	_	_
+6-15	301-302	"	_	_	_	_
+6-16	303-307	halt	event	new	ana	6-34
+6-17	308-309	"	_	_	_	_
+6-18	310-314	from	_	_	_	_
+6-19	315-316	a	object[20]	new[20]	_	_
+6-20	317-321	root	object|object[20]	new|new[20]	_	_
+6-21	322-330	terminal	object[20]	new[20]	_	_
+6-22	331-333	in	object[20]	new[20]	_	_
+6-23	334-339	Linux	object[20]|abstract	new[20]|new	_	_
+6-24	340-341	)	_	_	_	_
+6-25	342-343	,	_	_	_	_
+6-26	344-348	turn	_	_	_	_
+6-27	349-352	off	_	_	_	_
+6-28	353-356	the	object[23]	new[23]	coref	15-12[67_23]
+6-29	357-362	power	abstract|object[23]	giv|new[23]	coref	7-6
+6-30	363-368	strip	object[23]	new[23]	_	_
+6-31	369-370	,	_	_	_	_
+6-32	371-374	and	_	_	_	_
+6-33	375-381	unplug	_	_	_	_
+6-34	382-384	it	event	giv	_	_
+6-35	385-389	from	_	_	_	_
+6-36	390-393	the	object[25]	new[25]	coref	22-22[111_25]
+6-37	394-398	wall	object[25]	new[25]	_	_
+6-38	399-400	.	_	_	_	_
+
+#Text=If you have an uninterruptible power supply , disconnect that too .
+7-1	401-403	If	_	_	_	_
+7-2	404-407	you	person	giv	ana	8-2
+7-3	408-412	have	_	_	_	_
+7-4	413-415	an	object[28]	new[28]	ana	7-10[0_28]
+7-5	416-431	uninterruptible	object[28]	new[28]	_	_
+7-6	432-437	power	abstract|object[28]	giv|new[28]	coref	8-16
+7-7	438-444	supply	object[28]	new[28]	_	_
+7-8	445-446	,	_	_	_	_
+7-9	447-457	disconnect	_	_	_	_
+7-10	458-462	that	object	giv	_	_
+7-11	463-466	too	_	_	_	_
+7-12	467-468	.	_	_	_	_
+
+#Text=When you 're done , there should be no connect between your hardware and any power source .
+8-1	469-473	When	_	_	_	_
+8-2	474-477	you	person|abstract[31]	giv|new[31]	ana	8-12
+8-3	478-481	're	abstract[31]	new[31]	_	_
+8-4	482-486	done	abstract[31]	new[31]	_	_
+8-5	487-488	,	abstract[31]	new[31]	_	_
+8-6	489-494	there	abstract[31]	new[31]	_	_
+8-7	495-501	should	abstract[31]	new[31]	_	_
+8-8	502-504	be	abstract[31]	new[31]	_	_
+8-9	505-507	no	abstract[31]	new[31]	_	_
+8-10	508-515	connect	abstract[31]	new[31]	_	_
+8-11	516-523	between	abstract[31]	new[31]	_	_
+8-12	524-528	your	abstract[31]|person|object[33]	new[31]|giv|new[33]	ana	9-13
+8-13	529-537	hardware	abstract[31]|object[33]	new[31]|new[33]	_	_
+8-14	538-541	and	abstract[31]	new[31]	_	_
+8-15	542-545	any	abstract[31]|abstract[35]	new[31]|new[35]	_	_
+8-16	546-551	power	abstract[31]|abstract|abstract[35]	new[31]|giv|new[35]	coref	9-17
+8-17	552-558	source	abstract[31]|abstract[35]	new[31]|new[35]	_	_
+8-18	559-560	.	_	_	_	_
+
+#Text=Most towers have a small light somewhere that will go off when you have disconnected its power cable .
+9-1	561-565	Most	object[36]	new[36]	_	_
+9-2	566-572	towers	object[36]	new[36]	_	_
+9-3	573-577	have	_	_	_	_
+9-4	578-579	a	object[37]	new[37]	ana	9-16[0_37]
+9-5	580-585	small	object[37]	new[37]	_	_
+9-6	586-591	light	object[37]	new[37]	_	_
+9-7	592-601	somewhere	object[37]	new[37]	_	_
+9-8	602-606	that	object[37]	new[37]	_	_
+9-9	607-611	will	object[37]	new[37]	_	_
+9-10	612-614	go	object[37]	new[37]	_	_
+9-11	615-618	off	object[37]	new[37]	_	_
+9-12	619-623	when	_	_	_	_
+9-13	624-627	you	person	giv	ana	13-5
+9-14	628-632	have	_	_	_	_
+9-15	633-645	disconnected	_	_	_	_
+9-16	646-649	its	object|object[41]	giv|new[41]	ana	10-1[0_41]
+9-17	650-655	power	abstract|object[41]	giv|new[41]	coref	10-16
+9-18	656-661	cable	object[41]	new[41]	_	_
+9-19	662-663	.	_	_	_	_
+
+#Text=This is an important step because some ports can be damaged by unplugging them while power remains .
+10-1	664-668	This	object	giv	coref	10-3[43_0]
+10-2	669-671	is	_	_	_	_
+10-3	672-674	an	object[43]	giv[43]	coref	12-15[53_43]
+10-4	675-684	important	object[43]	giv[43]	_	_
+10-5	685-689	step	object[43]	giv[43]	_	_
+10-6	690-697	because	object[43]	giv[43]	_	_
+10-7	698-702	some	object[43]|object[44]	giv[43]|new[44]	ana	10-14[0_44]
+10-8	703-708	ports	object[43]|object[44]	giv[43]|new[44]	_	_
+10-9	709-712	can	object[43]	giv[43]	_	_
+10-10	713-715	be	object[43]	giv[43]	_	_
+10-11	716-723	damaged	object[43]	giv[43]	_	_
+10-12	724-726	by	_	_	_	_
+10-13	727-737	unplugging	_	_	_	_
+10-14	738-742	them	object	giv	coref	11-13[50_0]
+10-15	743-748	while	_	_	_	_
+10-16	749-754	power	abstract	giv	coref	22-19
+10-17	755-762	remains	_	_	_	_
+10-18	763-764	.	_	_	_	_
+
+#Text=Make a diagram of the cabling between parts , and draw out the ports on each .
+11-1	765-769	Make	_	_	_	_
+11-2	770-771	a	abstract[47]	new[47]	coref	22-5[106_47]
+11-3	772-779	diagram	abstract[47]	new[47]	_	_
+11-4	780-782	of	abstract[47]	new[47]	_	_
+11-5	783-786	the	abstract[47]|object[48]	new[47]|new[48]	coref	22-6[0_48]
+11-6	787-794	cabling	abstract[47]|object[48]	new[47]|new[48]	_	_
+11-7	795-802	between	abstract[47]|object[48]	new[47]|new[48]	_	_
+11-8	803-808	parts	abstract[47]|object[48]|object	new[47]|new[48]|new	_	_
+11-9	809-810	,	_	_	_	_
+11-10	811-814	and	_	_	_	_
+11-11	815-819	draw	_	_	_	_
+11-12	820-823	out	_	_	_	_
+11-13	824-827	the	object[50]	giv[50]	_	_
+11-14	828-833	ports	object[50]	giv[50]	_	_
+11-15	834-836	on	object[50]	giv[50]	_	_
+11-16	837-841	each	object[50]	giv[50]	_	_
+11-17	842-843	.	_	_	_	_
+
+#Text=The point here is not photorealism but rather to know later that there 's a cable from the second port over on the monitor to the second port down on the tower .
+12-1	844-847	The	abstract[51]	new[51]	_	_
+12-2	848-853	point	abstract[51]	new[51]	_	_
+12-3	854-858	here	_	_	_	_
+12-4	859-861	is	_	_	_	_
+12-5	862-865	not	_	_	_	_
+12-6	866-878	photorealism	abstract	new	_	_
+12-7	879-882	but	_	_	_	_
+12-8	883-889	rather	_	_	_	_
+12-9	890-892	to	_	_	_	_
+12-10	893-897	know	_	_	_	_
+12-11	898-903	later	_	_	_	_
+12-12	904-908	that	_	_	_	_
+12-13	909-914	there	_	_	_	_
+12-14	915-917	's	_	_	_	_
+12-15	918-919	a	object[53]	giv[53]	coref	15-8[66_53]
+12-16	920-925	cable	object[53]	giv[53]	_	_
+12-17	926-930	from	object[53]	giv[53]	_	_
+12-18	931-934	the	object[53]|object[54]	giv[53]|new[54]	coref	19-16[85_54]
+12-19	935-941	second	object[53]|object[54]	giv[53]|new[54]	_	_
+12-20	942-946	port	object[53]|object[54]	giv[53]|new[54]	_	_
+12-21	947-951	over	object[53]|object[54]	giv[53]|new[54]	_	_
+12-22	952-954	on	object[53]|object[54]	giv[53]|new[54]	_	_
+12-23	955-958	the	object[53]|object[54]|object[55]	giv[53]|new[54]|new[55]	ana	13-3[58_55]
+12-24	959-966	monitor	object[53]|object[54]|object[55]	giv[53]|new[54]|new[55]	_	_
+12-25	967-969	to	object[53]	giv[53]	_	_
+12-26	970-973	the	object[53]|place[56]	giv[53]|new[56]	_	_
+12-27	974-980	second	object[53]|place[56]	giv[53]|new[56]	_	_
+12-28	981-985	port	object[53]|place[56]	giv[53]|new[56]	_	_
+12-29	986-990	down	object[53]|place[56]	giv[53]|new[56]	_	_
+12-30	991-993	on	object[53]|place[56]	giv[53]|new[56]	_	_
+12-31	994-997	the	object[53]|place[56]|place[57]	giv[53]|new[56]|new[57]	coref	22-34[116_57]
+12-32	998-1003	tower	object[53]|place[56]|place[57]	giv[53]|new[56]|new[57]	_	_
+12-33	1004-1005	.	_	_	_	_
+
+#Text=So trace each of your cables , figure out what it plugs into , and where .
+13-1	1006-1008	So	_	_	_	_
+13-2	1009-1014	trace	_	_	_	_
+13-3	1015-1019	each	object[58]	giv[58]	ana	13-11[0_58]
+13-4	1020-1022	of	object[58]	giv[58]	_	_
+13-5	1023-1027	your	object[58]|person|object[60]	giv[58]|giv|new[60]	ana|coref	14-2|14-2[63_60]
+13-6	1028-1034	cables	object[58]|object[60]	giv[58]|new[60]	_	_
+13-7	1035-1036	,	_	_	_	_
+13-8	1037-1043	figure	_	_	_	_
+13-9	1044-1047	out	_	_	_	_
+13-10	1048-1052	what	_	_	_	_
+13-11	1053-1055	it	object	giv	coref	23-24
+13-12	1056-1061	plugs	_	_	_	_
+13-13	1062-1066	into	_	_	_	_
+13-14	1067-1068	,	_	_	_	_
+13-15	1069-1072	and	_	_	_	_
+13-16	1073-1078	where	_	_	_	_
+13-17	1079-1080	.	_	_	_	_
+
+#Text=Label your cables .
+14-1	1081-1086	Label	_	_	_	_
+14-2	1087-1091	your	person|object[63]	giv|giv[63]	coref|ana	17-1[72_63]|17-10
+14-3	1092-1098	cables	object[63]	giv[63]	_	_
+14-4	1099-1100	.	_	_	_	_
+
+#Text=I like to wrap masking tape around the cable so that a big long strip hangs off , and then double that over to make a tag .
+15-1	1101-1102	I	person	acc	_	_
+15-2	1103-1107	like	_	_	_	_
+15-3	1108-1110	to	_	_	_	_
+15-4	1111-1115	wrap	_	_	_	_
+15-5	1116-1123	masking	object[65]	new[65]	_	_
+15-6	1124-1128	tape	object[65]	new[65]	_	_
+15-7	1129-1135	around	_	_	_	_
+15-8	1136-1139	the	object[66]	giv[66]	coref	16-6[71_66]
+15-9	1140-1145	cable	object[66]	giv[66]	_	_
+15-10	1146-1148	so	_	_	_	_
+15-11	1149-1153	that	_	_	_	_
+15-12	1154-1155	a	object[67]	giv[67]	ana	15-22[0_67]
+15-13	1156-1159	big	object[67]	giv[67]	_	_
+15-14	1160-1164	long	object[67]	giv[67]	_	_
+15-15	1165-1170	strip	object[67]	giv[67]	_	_
+15-16	1171-1176	hangs	_	_	_	_
+15-17	1177-1180	off	_	_	_	_
+15-18	1181-1182	,	_	_	_	_
+15-19	1183-1186	and	_	_	_	_
+15-20	1187-1191	then	_	_	_	_
+15-21	1192-1198	double	_	_	_	_
+15-22	1199-1203	that	object	giv	coref	22-25[113_0]
+15-23	1204-1208	over	_	_	_	_
+15-24	1209-1211	to	_	_	_	_
+15-25	1212-1216	make	_	_	_	_
+15-26	1217-1218	a	object[69]	new[69]	_	_
+15-27	1219-1222	tag	object[69]	new[69]	_	_
+15-28	1223-1224	.	_	_	_	_
+
+#Text=Label where each end of the cable goes .
+16-1	1225-1230	Label	_	_	_	_
+16-2	1231-1236	where	_	_	_	_
+16-3	1237-1241	each	abstract[70]	new[70]	coref	17-17[77_70]
+16-4	1242-1245	end	abstract[70]	new[70]	_	_
+16-5	1246-1248	of	abstract[70]	new[70]	_	_
+16-6	1249-1252	the	abstract[70]|object[71]	new[70]|giv[71]	coref	17-10[76_71]
+16-7	1253-1258	cable	abstract[70]|object[71]	new[70]|giv[71]	_	_
+16-8	1259-1263	goes	_	_	_	_
+16-9	1264-1265	.	_	_	_	_
+
+#Text=Some cables cannot be reversed ( for example , your camera 's USB cable probably has a big end for the computer and a smaller end for the camera ) .
+17-1	1266-1270	Some	object[72]	giv[72]	coref	18-2[81_72]
+17-2	1271-1277	cables	object[72]	giv[72]	_	_
+17-3	1278-1284	cannot	_	_	_	_
+17-4	1285-1287	be	_	_	_	_
+17-5	1288-1296	reversed	_	_	_	_
+17-6	1297-1298	(	_	_	_	_
+17-7	1299-1302	for	_	_	_	_
+17-8	1303-1310	example	_	_	_	_
+17-9	1311-1312	,	_	_	_	_
+17-10	1313-1317	your	person|object[74]|object[76]	giv|new[74]|giv[76]	coref|coref|ana	17-28[80_74]|19-11[84_76]|22-2
+17-11	1318-1324	camera	object[74]|object[76]	new[74]|giv[76]	_	_
+17-12	1325-1327	's	object[74]|object[76]	new[74]|giv[76]	_	_
+17-13	1328-1331	USB	object|object[76]	new|giv[76]	_	_
+17-14	1332-1337	cable	object[76]	giv[76]	_	_
+17-15	1338-1346	probably	_	_	_	_
+17-16	1347-1350	has	_	_	_	_
+17-17	1351-1352	a	abstract[77]	giv[77]	coref	17-24[79_77]
+17-18	1353-1356	big	abstract[77]	giv[77]	_	_
+17-19	1357-1360	end	abstract[77]	giv[77]	_	_
+17-20	1361-1364	for	abstract[77]	giv[77]	_	_
+17-21	1365-1368	the	abstract[77]|object[78]	giv[77]|giv[78]	coref	29-20[157_78]
+17-22	1369-1377	computer	abstract[77]|object[78]	giv[77]|giv[78]	_	_
+17-23	1378-1381	and	_	_	_	_
+17-24	1382-1383	a	abstract[79]	giv[79]	coref	20-31[96_79]
+17-25	1384-1391	smaller	abstract[79]	giv[79]	_	_
+17-26	1392-1395	end	abstract[79]	giv[79]	_	_
+17-27	1396-1399	for	abstract[79]	giv[79]	_	_
+17-28	1400-1403	the	abstract[79]|object[80]	giv[79]|giv[80]	_	_
+17-29	1404-1410	camera	abstract[79]|object[80]	giv[79]|giv[80]	_	_
+17-30	1411-1412	)	_	_	_	_
+17-31	1413-1414	.	_	_	_	_
+
+#Text=Unplug all the cables .
+18-1	1415-1421	Unplug	_	_	_	_
+18-2	1422-1425	all	object[81]	giv[81]	ana	19-5[0_81]
+18-3	1426-1429	the	object[81]	giv[81]	_	_
+18-4	1430-1436	cables	object[81]	giv[81]	_	_
+18-5	1437-1438	.	_	_	_	_
+
+#Text=If possible , unplug them at both ends ; if a cable is wrenched in a detachable port during shipping , the port might be ruined .
+19-1	1439-1441	If	_	_	_	_
+19-2	1442-1450	possible	_	_	_	_
+19-3	1451-1452	,	_	_	_	_
+19-4	1453-1459	unplug	_	_	_	_
+19-5	1460-1464	them	object	giv	ana	20-3
+19-6	1465-1467	at	_	_	_	_
+19-7	1468-1472	both	place[83]	new[83]	_	_
+19-8	1473-1477	ends	place[83]	new[83]	_	_
+19-9	1478-1479	;	_	_	_	_
+19-10	1480-1482	if	_	_	_	_
+19-11	1483-1484	a	object[84]	giv[84]	coref	22-17[110_84]
+19-12	1485-1490	cable	object[84]	giv[84]	_	_
+19-13	1491-1493	is	_	_	_	_
+19-14	1494-1502	wrenched	_	_	_	_
+19-15	1503-1505	in	_	_	_	_
+19-16	1506-1507	a	object[85]	giv[85]	coref	19-22[87_85]
+19-17	1508-1518	detachable	object[85]	giv[85]	_	_
+19-18	1519-1523	port	object[85]	giv[85]	_	_
+19-19	1524-1530	during	_	_	_	_
+19-20	1531-1539	shipping	event	new	_	_
+19-21	1540-1541	,	_	_	_	_
+19-22	1542-1545	the	object[87]	giv[87]	_	_
+19-23	1546-1550	port	object[87]	giv[87]	_	_
+19-24	1551-1556	might	_	_	_	_
+19-25	1557-1559	be	_	_	_	_
+19-26	1560-1566	ruined	_	_	_	_
+19-27	1567-1568	.	_	_	_	_
+
+#Text=Either loop them in figure-eights secured with a zip or twist tie in the middle , or in a circle as if around an invisible spool , secured by wrapping one end in a spiral around the curve of the loop .
+20-1	1569-1575	Either	_	_	_	_
+20-2	1576-1580	loop	_	_	_	_
+20-3	1581-1585	them	object	giv	coref	21-2[100_0]
+20-4	1586-1588	in	_	_	_	_
+20-5	1589-1602	figure-eights	abstract[89]	new[89]	_	_
+20-6	1603-1610	secured	abstract[89]	new[89]	_	_
+20-7	1611-1615	with	abstract[89]	new[89]	_	_
+20-8	1616-1617	a	abstract[89]|object[90]	new[89]|new[90]	_	_
+20-9	1618-1621	zip	abstract[89]|object[90]	new[89]|new[90]	_	_
+20-10	1622-1624	or	abstract[89]	new[89]	_	_
+20-11	1625-1630	twist	abstract[89]|abstract|object[92]	new[89]|new|new[92]	_	_
+20-12	1631-1634	tie	abstract[89]|object[92]	new[89]|new[92]	_	_
+20-13	1635-1637	in	abstract[89]|object[92]	new[89]|new[92]	_	_
+20-14	1638-1641	the	abstract[89]|object[92]|organization[93]	new[89]|new[92]|new[93]	_	_
+20-15	1642-1648	middle	abstract[89]|object[92]|organization[93]	new[89]|new[92]|new[93]	_	_
+20-16	1649-1650	,	_	_	_	_
+20-17	1651-1653	or	_	_	_	_
+20-18	1654-1656	in	_	_	_	_
+20-19	1657-1658	a	abstract[94]	new[94]	_	_
+20-20	1659-1665	circle	abstract[94]	new[94]	_	_
+20-21	1666-1668	as	abstract[94]	new[94]	_	_
+20-22	1669-1671	if	abstract[94]	new[94]	_	_
+20-23	1672-1678	around	abstract[94]	new[94]	_	_
+20-24	1679-1681	an	abstract[94]|object[95]	new[94]|new[95]	_	_
+20-25	1682-1691	invisible	abstract[94]|object[95]	new[94]|new[95]	_	_
+20-26	1692-1697	spool	abstract[94]|object[95]	new[94]|new[95]	_	_
+20-27	1698-1699	,	abstract[94]	new[94]	_	_
+20-28	1700-1707	secured	abstract[94]	new[94]	_	_
+20-29	1708-1710	by	_	_	_	_
+20-30	1711-1719	wrapping	_	_	_	_
+20-31	1720-1723	one	abstract[96]	giv[96]	coref	31-11[162_96]
+20-32	1724-1727	end	abstract[96]	giv[96]	_	_
+20-33	1728-1730	in	_	_	_	_
+20-34	1731-1732	a	object[97]	new[97]	_	_
+20-35	1733-1739	spiral	object[97]	new[97]	_	_
+20-36	1740-1746	around	_	_	_	_
+20-37	1747-1750	the	abstract[98]	new[98]	_	_
+20-38	1751-1756	curve	abstract[98]	new[98]	_	_
+20-39	1757-1759	of	abstract[98]	new[98]	_	_
+20-40	1760-1763	the	abstract[98]|object[99]	new[98]|new[99]	_	_
+20-41	1764-1768	loop	abstract[98]|object[99]	new[98]|new[99]	_	_
+20-42	1769-1770	.	_	_	_	_
+
+#Text=Tape the cables to their peripherals .
+21-1	1771-1775	Tape	_	_	_	_
+21-2	1776-1779	the	object[100]	giv[100]	coref	24-1[130_100]
+21-3	1780-1786	cables	object[100]	giv[100]	_	_
+21-4	1787-1789	to	_	_	_	_
+21-5	1790-1795	their	person|object[102]	acc|new[102]	coref|ana	23-17[122_102]|23-36
+21-6	1796-1807	peripherals	object[102]	new[102]	_	_
+21-7	1808-1809	.	_	_	_	_
+
+#Text=If you look at your cabling diagram , you 'll notice that just about everything has a three-pronged power cable into the wall or power strip , and an odder-looking data cable into the tower .
+22-1	1810-1812	If	_	_	_	_
+22-2	1813-1816	you	person	giv	ana	22-5
+22-3	1817-1821	look	_	_	_	_
+22-4	1822-1824	at	_	_	_	_
+22-5	1825-1829	your	person|abstract[106]	giv|giv[106]	ana	22-9
+22-6	1830-1837	cabling	object|abstract[106]	giv|giv[106]	_	_
+22-7	1838-1845	diagram	abstract[106]	giv[106]	_	_
+22-8	1846-1847	,	_	_	_	_
+22-9	1848-1851	you	person	giv	ana	26-2
+22-10	1852-1855	'll	_	_	_	_
+22-11	1856-1862	notice	_	_	_	_
+22-12	1863-1867	that	_	_	_	_
+22-13	1868-1872	just	_	_	_	_
+22-14	1873-1878	about	_	_	_	_
+22-15	1879-1889	everything	object	new	coref	23-9[119_0]
+22-16	1890-1893	has	_	_	_	_
+22-17	1894-1895	a	object[110]	giv[110]	coref	22-29[115_110]
+22-18	1896-1909	three-pronged	object[110]	giv[110]	_	_
+22-19	1910-1915	power	abstract|object[110]	giv|giv[110]	coref	22-25
+22-20	1916-1921	cable	object[110]	giv[110]	_	_
+22-21	1922-1926	into	object[110]	giv[110]	_	_
+22-22	1927-1930	the	object[110]|object[111]	giv[110]|giv[111]	_	_
+22-23	1931-1935	wall	object[110]|object[111]	giv[110]|giv[111]	_	_
+22-24	1936-1938	or	object[110]	giv[110]	_	_
+22-25	1939-1944	power	object[110]|abstract|object[113]	giv[110]|giv|giv[113]	coref	32-15
+22-26	1945-1950	strip	object[110]|object[113]	giv[110]|giv[113]	_	_
+22-27	1951-1952	,	_	_	_	_
+22-28	1953-1956	and	_	_	_	_
+22-29	1957-1959	an	object[115]	giv[115]	coref	23-30[125_115]
+22-30	1960-1973	odder-looking	object[115]	giv[115]	_	_
+22-31	1974-1978	data	abstract|object[115]	new|giv[115]	_	_
+22-32	1979-1984	cable	object[115]	giv[115]	_	_
+22-33	1985-1989	into	object[115]	giv[115]	_	_
+22-34	1990-1993	the	object[115]|place[116]	giv[115]|giv[116]	coref	23-2[117_116]
+22-35	1994-1999	tower	object[115]|place[116]	giv[115]|giv[116]	_	_
+22-36	2000-2001	.	_	_	_	_
+
+#Text=So the tower is at the center and everything else is at the periphery , hence the name peripherals to refer collectively to monitor , keyboard , etc. Taping each cable to its peripheral prevents them from getting lost or mixed up .
+23-1	2002-2004	So	_	_	_	_
+23-2	2005-2008	the	place[117]	giv[117]	coref	27-7[136_117]
+23-3	2009-2014	tower	place[117]	giv[117]	_	_
+23-4	2015-2017	is	_	_	_	_
+23-5	2018-2020	at	_	_	_	_
+23-6	2021-2024	the	place[118]	new[118]	_	_
+23-7	2025-2031	center	place[118]	new[118]	_	_
+23-8	2032-2035	and	_	_	_	_
+23-9	2036-2046	everything	object[119]	giv[119]	coref	25-2[0_119]
+23-10	2047-2051	else	object[119]	giv[119]	_	_
+23-11	2052-2054	is	_	_	_	_
+23-12	2055-2057	at	_	_	_	_
+23-13	2058-2061	the	place[120]	new[120]	_	_
+23-14	2062-2071	periphery	place[120]	new[120]	_	_
+23-15	2072-2073	,	_	_	_	_
+23-16	2074-2079	hence	_	_	_	_
+23-17	2080-2083	the	abstract[121]|object[122]	new[121]|giv[122]	coref	36-14[182_122]
+23-18	2084-2088	name	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-19	2089-2100	peripherals	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-20	2101-2103	to	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-21	2104-2109	refer	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-22	2110-2122	collectively	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-23	2123-2125	to	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-24	2126-2133	monitor	abstract[121]|object[122]|object	new[121]|giv[122]|giv	coref	27-25[141_0]
+23-25	2134-2135	,	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-26	2136-2144	keyboard	abstract[121]|object[122]|object	new[121]|giv[122]|new	coref	39-28
+23-27	2145-2146	,	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-28	2147-2151	etc.	abstract[121]|object[122]	new[121]|giv[122]	_	_
+23-29	2152-2158	Taping	_	_	_	_
+23-30	2159-2163	each	object[125]	giv[125]	ana	23-33[0_125]
+23-31	2164-2169	cable	object[125]	giv[125]	_	_
+23-32	2170-2172	to	_	_	_	_
+23-33	2173-2176	its	object|object[127]	giv|new[127]	_	_
+23-34	2177-2187	peripheral	object[127]	new[127]	_	_
+23-35	2188-2196	prevents	_	_	_	_
+23-36	2197-2201	them	person	giv	_	_
+23-37	2202-2206	from	_	_	_	_
+23-38	2207-2214	getting	_	_	_	_
+23-39	2215-2219	lost	_	_	_	_
+23-40	2220-2222	or	_	_	_	_
+23-41	2223-2228	mixed	_	_	_	_
+23-42	2229-2231	up	_	_	_	_
+23-43	2232-2233	.	_	_	_	_
+
+#Text=Power cables in particular can look alike .
+24-1	2234-2239	Power	person|object[130]	new|giv[130]	coref	31-8[0_130]
+24-2	2240-2246	cables	object[130]	giv[130]	_	_
+24-3	2247-2249	in	object[130]	giv[130]	_	_
+24-4	2250-2260	particular	object[130]	giv[130]	_	_
+24-5	2261-2264	can	_	_	_	_
+24-6	2265-2269	look	_	_	_	_
+24-7	2270-2275	alike	_	_	_	_
+24-8	2276-2277	.	_	_	_	_
+
+#Text=Move everything over .
+25-1	2278-2282	Move	_	_	_	_
+25-2	2283-2293	everything	object	giv	ana	26-5[133_0]
+25-3	2294-2298	over	_	_	_	_
+25-4	2299-2300	.	_	_	_	_
+
+#Text=If you can get it all driven to the destination , make sure everything is secured .
+26-1	2301-2303	If	_	_	_	_
+26-2	2304-2307	you	person	giv	ana	28-2
+26-3	2308-2311	can	_	_	_	_
+26-4	2312-2315	get	_	_	_	_
+26-5	2316-2318	it	object[133]	giv[133]	coref	26-14[0_133]
+26-6	2319-2322	all	object[133]	giv[133]	_	_
+26-7	2323-2329	driven	_	_	_	_
+26-8	2330-2332	to	_	_	_	_
+26-9	2333-2336	the	place[134]	new[134]	_	_
+26-10	2337-2348	destination	place[134]	new[134]	_	_
+26-11	2349-2350	,	_	_	_	_
+26-12	2351-2355	make	_	_	_	_
+26-13	2356-2360	sure	_	_	_	_
+26-14	2361-2371	everything	object	giv	_	_
+26-15	2372-2374	is	_	_	_	_
+26-16	2375-2382	secured	_	_	_	_
+26-17	2383-2384	.	_	_	_	_
+
+#Text=At the very least , wedge the tower in the passenger-side footwell rather than letting it rattle around in the trunk , and put the monitor in a box so nothing stabs into the screen .
+27-1	2385-2387	At	_	_	_	_
+27-2	2388-2391	the	_	_	_	_
+27-3	2392-2396	very	_	_	_	_
+27-4	2397-2402	least	_	_	_	_
+27-5	2403-2404	,	_	_	_	_
+27-6	2405-2410	wedge	_	_	_	_
+27-7	2411-2414	the	place[136]	giv[136]	ana	27-16[0_136]
+27-8	2415-2420	tower	place[136]	giv[136]	_	_
+27-9	2421-2423	in	_	_	_	_
+27-10	2424-2427	the	object[138]	new[138]	_	_
+27-11	2428-2442	passenger-side	abstract|object[138]	new|new[138]	_	_
+27-12	2443-2451	footwell	object[138]	new[138]	_	_
+27-13	2452-2458	rather	_	_	_	_
+27-14	2459-2463	than	_	_	_	_
+27-15	2464-2471	letting	_	_	_	_
+27-16	2472-2474	it	place	giv	coref	36-7
+27-17	2475-2481	rattle	_	_	_	_
+27-18	2482-2488	around	_	_	_	_
+27-19	2489-2491	in	_	_	_	_
+27-20	2492-2495	the	object[140]	new[140]	_	_
+27-21	2496-2501	trunk	object[140]	new[140]	_	_
+27-22	2502-2503	,	_	_	_	_
+27-23	2504-2507	and	_	_	_	_
+27-24	2508-2511	put	_	_	_	_
+27-25	2512-2515	the	object[141]	giv[141]	coref	36-3[179_141]
+27-26	2516-2523	monitor	object[141]	giv[141]	_	_
+27-27	2524-2526	in	_	_	_	_
+27-28	2527-2528	a	object[142]	new[142]	_	_
+27-29	2529-2532	box	object[142]	new[142]	_	_
+27-30	2533-2535	so	_	_	_	_
+27-31	2536-2543	nothing	object	new	ana	28-6
+27-32	2544-2549	stabs	_	_	_	_
+27-33	2550-2554	into	_	_	_	_
+27-34	2555-2558	the	object[144]	new[144]	_	_
+27-35	2559-2565	screen	object[144]	new[144]	_	_
+27-36	2566-2567	.	_	_	_	_
+
+#Text=If you need to ship it , consult your shipper of choice about appropriate packing protocol .
+28-1	2568-2570	If	_	_	_	_
+28-2	2571-2574	you	person	giv	ana	28-9
+28-3	2575-2579	need	_	_	_	_
+28-4	2580-2582	to	_	_	_	_
+28-5	2583-2587	ship	_	_	_	_
+28-6	2588-2590	it	object	giv	_	_
+28-7	2591-2592	,	_	_	_	_
+28-8	2593-2600	consult	_	_	_	_
+28-9	2601-2605	your	person|object[148]	giv|new[148]	ana	29-1
+28-10	2606-2613	shipper	object[148]	new[148]	_	_
+28-11	2614-2616	of	object[148]	new[148]	_	_
+28-12	2617-2623	choice	object[148]	new[148]	_	_
+28-13	2624-2629	about	_	_	_	_
+28-14	2630-2641	appropriate	abstract[150]	new[150]	_	_
+28-15	2642-2649	packing	abstract|abstract[150]	new|new[150]	_	_
+28-16	2650-2658	protocol	abstract[150]	new[150]	_	_
+28-17	2659-2660	.	_	_	_	_
+
+#Text=Your own homebrew methods may be either subpar , or unacceptable for insurance purposes ( and if you ship a computer , you need insurance ) .
+29-1	2661-2665	Your	person|abstract[153]	giv|new[153]	ana	29-18
+29-2	2666-2669	own	abstract[153]	new[153]	_	_
+29-3	2670-2678	homebrew	abstract|abstract[153]	new|new[153]	_	_
+29-4	2679-2686	methods	abstract[153]	new[153]	_	_
+29-5	2687-2690	may	_	_	_	_
+29-6	2691-2693	be	_	_	_	_
+29-7	2694-2700	either	_	_	_	_
+29-8	2701-2707	subpar	_	_	_	_
+29-9	2708-2709	,	_	_	_	_
+29-10	2710-2712	or	_	_	_	_
+29-11	2713-2725	unacceptable	_	_	_	_
+29-12	2726-2729	for	_	_	_	_
+29-13	2730-2739	insurance	abstract|abstract[155]	new|new[155]	coref	29-25
+29-14	2740-2748	purposes	abstract[155]	new[155]	_	_
+29-15	2749-2750	(	_	_	_	_
+29-16	2751-2754	and	_	_	_	_
+29-17	2755-2757	if	_	_	_	_
+29-18	2758-2761	you	person	giv	ana	29-23
+29-19	2762-2766	ship	_	_	_	_
+29-20	2767-2768	a	object[157]	giv[157]	coref	38-16[0_157]
+29-21	2769-2777	computer	object[157]	giv[157]	_	_
+29-22	2778-2779	,	_	_	_	_
+29-23	2780-2783	you	person	giv	ana	36-4
+29-24	2784-2788	need	_	_	_	_
+29-25	2789-2798	insurance	abstract	giv	_	_
+29-26	2799-2800	)	_	_	_	_
+29-27	2801-2802	.	_	_	_	_
+
+#Text=Reverse the disassembly .
+30-1	2803-2810	Reverse	_	_	_	_
+30-2	2811-2814	the	event[160]	new[160]	_	_
+30-3	2815-2826	disassembly	event[160]	new[160]	_	_
+30-4	2827-2828	.	_	_	_	_
+
+#Text=The very cautious will want to plug cables in at the less expensive end first .
+31-1	2829-2832	The	_	_	_	_
+31-2	2833-2837	very	_	_	_	_
+31-3	2838-2846	cautious	_	_	_	_
+31-4	2847-2851	will	_	_	_	_
+31-5	2852-2856	want	_	_	_	_
+31-6	2857-2859	to	_	_	_	_
+31-7	2860-2864	plug	_	_	_	_
+31-8	2865-2871	cables	object	giv	coref	34-3[176_0]
+31-9	2872-2874	in	_	_	_	_
+31-10	2875-2877	at	_	_	_	_
+31-11	2878-2881	the	abstract[162]	giv[162]	coref	32-9[164_162]
+31-12	2882-2886	less	abstract[162]	giv[162]	_	_
+31-13	2887-2896	expensive	abstract[162]	giv[162]	_	_
+31-14	2897-2900	end	abstract[162]	giv[162]	_	_
+31-15	2901-2906	first	_	_	_	_
+31-16	2907-2908	.	_	_	_	_
+
+#Text=Once in a blue moon , even when neither end is connected to a power source , a spark will jump , and when that happens it could burn stuff out .
+32-1	2909-2913	Once	_	_	_	_
+32-2	2914-2916	in	_	_	_	_
+32-3	2917-2918	a	place[163]	new[163]	ana	33-15[0_163]
+32-4	2919-2923	blue	place[163]	new[163]	_	_
+32-5	2924-2928	moon	place[163]	new[163]	_	_
+32-6	2929-2930	,	_	_	_	_
+32-7	2931-2935	even	_	_	_	_
+32-8	2936-2940	when	_	_	_	_
+32-9	2941-2948	neither	abstract[164]	giv[164]	coref	33-4[171_164]
+32-10	2949-2952	end	abstract[164]	giv[164]	_	_
+32-11	2953-2955	is	_	_	_	_
+32-12	2956-2965	connected	_	_	_	_
+32-13	2966-2968	to	_	_	_	_
+32-14	2969-2970	a	object[166]	new[166]	_	_
+32-15	2971-2976	power	abstract|object[166]	giv|new[166]	coref	34-4
+32-16	2977-2983	source	object[166]	new[166]	_	_
+32-17	2984-2985	,	_	_	_	_
+32-18	2986-2987	a	object[167]	new[167]	ana	32-25[0_167]
+32-19	2988-2993	spark	object[167]	new[167]	_	_
+32-20	2994-2998	will	_	_	_	_
+32-21	2999-3003	jump	_	_	_	_
+32-22	3004-3005	,	_	_	_	_
+32-23	3006-3009	and	_	_	_	_
+32-24	3010-3014	when	_	_	_	_
+32-25	3015-3019	that	object	giv	ana	32-27
+32-26	3020-3027	happens	_	_	_	_
+32-27	3028-3030	it	object	giv	_	_
+32-28	3031-3036	could	_	_	_	_
+32-29	3037-3041	burn	_	_	_	_
+32-30	3042-3047	stuff	substance	new	_	_
+32-31	3048-3051	out	_	_	_	_
+32-32	3052-3053	.	_	_	_	_
+
+#Text=Besides which , the less expensive end is almost always the peripheral , so this also means only one trip under the desk .
+33-1	3054-3061	Besides	_	_	_	_
+33-2	3062-3067	which	_	_	_	_
+33-3	3068-3069	,	_	_	_	_
+33-4	3070-3073	the	abstract[171]	giv[171]	_	_
+33-5	3074-3078	less	abstract[171]	giv[171]	_	_
+33-6	3079-3088	expensive	abstract[171]	giv[171]	_	_
+33-7	3089-3092	end	abstract[171]	giv[171]	_	_
+33-8	3093-3095	is	_	_	_	_
+33-9	3096-3102	almost	_	_	_	_
+33-10	3103-3109	always	_	_	_	_
+33-11	3110-3113	the	_	_	_	_
+33-12	3114-3124	peripheral	_	_	_	_
+33-13	3125-3126	,	_	_	_	_
+33-14	3127-3129	so	_	_	_	_
+33-15	3130-3134	this	place	giv	_	_
+33-16	3135-3139	also	_	_	_	_
+33-17	3140-3145	means	_	_	_	_
+33-18	3146-3150	only	event[173]	new[173]	_	_
+33-19	3151-3154	one	event[173]	new[173]	_	_
+33-20	3155-3159	trip	event[173]	new[173]	_	_
+33-21	3160-3165	under	event[173]	new[173]	_	_
+33-22	3166-3169	the	event[173]|object[174]	new[173]|new[174]	_	_
+33-23	3170-3174	desk	event[173]|object[174]	new[173]|new[174]	_	_
+33-24	3175-3176	.	_	_	_	_
+
+#Text=Plug in the power cables .
+34-1	3177-3181	Plug	_	_	_	_
+34-2	3182-3184	in	_	_	_	_
+34-3	3185-3188	the	object[176]	giv[176]	_	_
+34-4	3189-3194	power	abstract|object[176]	giv|giv[176]	coref	35-3
+34-5	3195-3201	cables	object[176]	giv[176]	_	_
+34-6	3202-3203	.	_	_	_	_
+
+#Text=Always leave power to last .
+35-1	3204-3210	Always	_	_	_	_
+35-2	3211-3216	leave	_	_	_	_
+35-3	3217-3222	power	abstract	giv	_	_
+35-4	3223-3225	to	_	_	_	_
+35-5	3226-3230	last	_	_	_	_
+35-6	3231-3232	.	_	_	_	_
+
+#Text=Note that only your monitor and tower should plug into the UPS -- -additional peripherals will reduce its discharge time dramatically .
+36-1	3233-3237	Note	_	_	_	_
+36-2	3238-3242	that	_	_	_	_
+36-3	3243-3247	only	object[179]	giv[179]	ana	36-18[0_179]
+36-4	3248-3252	your	person|object[179]	giv|giv[179]	ana	39-15
+36-5	3253-3260	monitor	object[179]	giv[179]	_	_
+36-6	3261-3264	and	_	_	_	_
+36-7	3265-3270	tower	place	giv	_	_
+36-8	3271-3277	should	_	_	_	_
+36-9	3278-3282	plug	_	_	_	_
+36-10	3283-3287	into	_	_	_	_
+36-11	3288-3291	the	organization[181]	new[181]	_	_
+36-12	3292-3295	UPS	organization[181]	new[181]	_	_
+36-13	3296-3298	--	_	_	_	_
+36-14	3299-3310	-additional	object[182]	giv[182]	_	_
+36-15	3311-3322	peripherals	object[182]	giv[182]	_	_
+36-16	3323-3327	will	_	_	_	_
+36-17	3328-3334	reduce	_	_	_	_
+36-18	3335-3338	its	object|time[185]	giv|new[185]	coref	45-2[219_0]
+36-19	3339-3348	discharge	abstract|time[185]	new|new[185]	_	_
+36-20	3349-3353	time	time[185]	new[185]	_	_
+36-21	3354-3366	dramatically	_	_	_	_
+36-22	3367-3368	.	_	_	_	_
+
+#Text=Tips
+37-1	3369-3373	Tips	abstract	new	_	_
+
+#Text=Most jack plugs are now color-coded along with the outlet on the back of the computer hard drive .
+38-1	3374-3378	Most	object[188]	new[188]	_	_
+38-2	3379-3383	jack	object|object[188]	new|new[188]	_	_
+38-3	3384-3389	plugs	object[188]	new[188]	_	_
+38-4	3390-3393	are	_	_	_	_
+38-5	3394-3397	now	_	_	_	_
+38-6	3398-3409	color-coded	_	_	_	_
+38-7	3410-3415	along	object[189]	new[189]	coref	39-21[198_189]
+38-8	3416-3420	with	object[189]	new[189]	_	_
+38-9	3421-3424	the	object[189]	new[189]	_	_
+38-10	3425-3431	outlet	object[189]	new[189]	_	_
+38-11	3432-3434	on	object[189]	new[189]	_	_
+38-12	3435-3438	the	object[189]|place[190]	new[189]|new[190]	_	_
+38-13	3439-3443	back	object[189]|place[190]	new[189]|new[190]	_	_
+38-14	3444-3446	of	object[189]|place[190]	new[189]|new[190]	_	_
+38-15	3447-3450	the	object[189]|place[190]|object[192]	new[189]|new[190]|new[192]	ana	39-2[0_192]
+38-16	3451-3459	computer	object[189]|place[190]|object|object[192]	new[189]|new[190]|giv|new[192]	coref	42-8[207_0]
+38-17	3460-3464	hard	object[189]|place[190]|object[192]	new[189]|new[190]|new[192]	_	_
+38-18	3465-3470	drive	object[189]|place[190]|object[192]	new[189]|new[190]|new[192]	_	_
+38-19	3471-3472	.	_	_	_	_
+
+#Text=If it is n't , however , a small picture on the back of your hard drive should indicate whether the outlet belongs to the mouse , keyboard , etc.
+39-1	3473-3475	If	_	_	_	_
+39-2	3476-3478	it	object	giv	coref	39-15[197_0]
+39-3	3479-3481	is	_	_	_	_
+39-4	3482-3485	n't	_	_	_	_
+39-5	3486-3487	,	_	_	_	_
+39-6	3488-3495	however	_	_	_	_
+39-7	3496-3497	,	_	_	_	_
+39-8	3498-3499	a	abstract[194]	new[194]	_	_
+39-9	3500-3505	small	abstract[194]	new[194]	_	_
+39-10	3506-3513	picture	abstract[194]	new[194]	_	_
+39-11	3514-3516	on	abstract[194]	new[194]	_	_
+39-12	3517-3520	the	abstract[194]|object[195]	new[194]|new[195]	_	_
+39-13	3521-3525	back	abstract[194]|object[195]	new[194]|new[195]	_	_
+39-14	3526-3528	of	abstract[194]|object[195]	new[194]|new[195]	_	_
+39-15	3529-3533	your	abstract[194]|object[195]|person|object[197]	new[194]|new[195]|giv|giv[197]	ana	47-1
+39-16	3534-3538	hard	abstract[194]|object[195]|object[197]	new[194]|new[195]|giv[197]	_	_
+39-17	3539-3544	drive	abstract[194]|object[195]|object[197]	new[194]|new[195]|giv[197]	_	_
+39-18	3545-3551	should	_	_	_	_
+39-19	3552-3560	indicate	_	_	_	_
+39-20	3561-3568	whether	_	_	_	_
+39-21	3569-3572	the	object[198]	giv[198]	_	_
+39-22	3573-3579	outlet	object[198]	giv[198]	_	_
+39-23	3580-3587	belongs	_	_	_	_
+39-24	3588-3590	to	_	_	_	_
+39-25	3591-3594	the	object[199]	new[199]	_	_
+39-26	3595-3600	mouse	object[199]	new[199]	_	_
+39-27	3601-3602	,	_	_	_	_
+39-28	3603-3611	keyboard	object	giv	_	_
+39-29	3612-3613	,	_	_	_	_
+39-30	3614-3618	etc.	_	_	_	_
+
+#Text=Using a variety of multicolored marking pens will make the task of re-assembling quick and easy .
+40-1	3619-3624	Using	_	_	_	_
+40-2	3625-3626	a	abstract[201]	new[201]	_	_
+40-3	3627-3634	variety	abstract[201]	new[201]	_	_
+40-4	3635-3637	of	abstract[201]	new[201]	_	_
+40-5	3638-3650	multicolored	abstract[201]|object[203]	new[201]|new[203]	_	_
+40-6	3651-3658	marking	abstract[201]|abstract|object[203]	new[201]|new|new[203]	coref	53-4
+40-7	3659-3663	pens	abstract[201]|object[203]	new[201]|new[203]	_	_
+40-8	3664-3668	will	_	_	_	_
+40-9	3669-3673	make	_	_	_	_
+40-10	3674-3677	the	abstract[204]	new[204]	_	_
+40-11	3678-3682	task	abstract[204]	new[204]	_	_
+40-12	3683-3685	of	abstract[204]	new[204]	_	_
+40-13	3686-3699	re-assembling	abstract[204]	new[204]	_	_
+40-14	3700-3705	quick	abstract[204]	new[204]	_	_
+40-15	3706-3709	and	abstract[204]	new[204]	_	_
+40-16	3710-3714	easy	abstract[204]	new[204]	_	_
+40-17	3715-3716	.	_	_	_	_
+
+#Text=Warnings
+41-1	3717-3725	Warnings	abstract	new	_	_
+
+#Text=Be sure to use care when moving the computer not to disrupt components inside the unit .
+42-1	3726-3728	Be	_	_	_	_
+42-2	3729-3733	sure	_	_	_	_
+42-3	3734-3736	to	_	_	_	_
+42-4	3737-3740	use	_	_	_	_
+42-5	3741-3745	care	abstract	new	_	_
+42-6	3746-3750	when	_	_	_	_
+42-7	3751-3757	moving	_	_	_	_
+42-8	3758-3761	the	object[207]	giv[207]	coref	43-2[210_207]
+42-9	3762-3770	computer	object[207]	giv[207]	_	_
+42-10	3771-3774	not	_	_	_	_
+42-11	3775-3777	to	_	_	_	_
+42-12	3778-3785	disrupt	_	_	_	_
+42-13	3786-3796	components	object[208]	new[208]	coref	44-8[0_208]
+42-14	3797-3803	inside	object[208]	new[208]	_	_
+42-15	3804-3807	the	object[208]|place[209]	new[208]|new[209]	_	_
+42-16	3808-3812	unit	object[208]|place[209]	new[208]|new[209]	_	_
+42-17	3813-3814	.	_	_	_	_
+
+#Text=Handling a computer involves electrical equipment .
+43-1	3815-3823	Handling	_	_	_	_
+43-2	3824-3825	a	object[210]	giv[210]	coref	45-3[0_210]
+43-3	3826-3834	computer	object[210]	giv[210]	_	_
+43-4	3835-3843	involves	_	_	_	_
+43-5	3844-3854	electrical	object[211]	new[211]	_	_
+43-6	3855-3864	equipment	object[211]	new[211]	_	_
+43-7	3865-3866	.	_	_	_	_
+
+#Text=Always use caution with electrical outlets , components , and cords to reduce the risk of electrical shock .
+44-1	3867-3873	Always	_	_	_	_
+44-2	3874-3877	use	_	_	_	_
+44-3	3878-3885	caution	abstract	new	_	_
+44-4	3886-3890	with	_	_	_	_
+44-5	3891-3901	electrical	object[213]	new[213]	_	_
+44-6	3902-3909	outlets	object[213]	new[213]	_	_
+44-7	3910-3911	,	_	_	_	_
+44-8	3912-3922	components	object	giv	_	_
+44-9	3923-3924	,	_	_	_	_
+44-10	3925-3928	and	_	_	_	_
+44-11	3929-3934	cords	object	new	_	_
+44-12	3935-3937	to	_	_	_	_
+44-13	3938-3944	reduce	_	_	_	_
+44-14	3945-3948	the	abstract[216]	new[216]	_	_
+44-15	3949-3953	risk	abstract[216]	new[216]	_	_
+44-16	3954-3956	of	abstract[216]	new[216]	_	_
+44-17	3957-3967	electrical	abstract[216]|event[217]	new[216]|new[217]	_	_
+44-18	3968-3973	shock	abstract[216]|event[217]	new[216]|new[217]	_	_
+44-19	3974-3975	.	_	_	_	_
+
+#Text=Moving a computer monitor requires heavy lifting .
+45-1	3976-3982	Moving	_	_	_	_
+45-2	3983-3984	a	object[219]	giv[219]	_	_
+45-3	3985-3993	computer	object|object[219]	giv|giv[219]	_	_
+45-4	3994-4001	monitor	object[219]	giv[219]	_	_
+45-5	4002-4010	requires	_	_	_	_
+45-6	4011-4016	heavy	event[220]	new[220]	_	_
+45-7	4017-4024	lifting	event[220]	new[220]	_	_
+45-8	4025-4026	.	_	_	_	_
+
+#Text=Things
+46-1	4027-4033	Things	object	new	_	_
+
+#Text=You 'll Need
+47-1	4034-4037	You	person	giv	_	_
+47-2	4038-4041	'll	_	_	_	_
+47-3	4042-4046	Need	_	_	_	_
+
+#Text=A laundry basket or a suitable sized plastic tub/bin
+48-1	4047-4048	A	object[224]	new[224]	_	_
+48-2	4049-4056	laundry	object|object[224]	new|new[224]	_	_
+48-3	4057-4063	basket	object[224]	new[224]	_	_
+48-4	4064-4066	or	_	_	_	_
+48-5	4067-4068	a	object[226]	new[226]	_	_
+48-6	4069-4077	suitable	object[226]	new[226]	_	_
+48-7	4078-4083	sized	object[226]	new[226]	_	_
+48-8	4084-4091	plastic	substance|object[226]	new|new[226]	_	_
+48-9	4092-4099	tub/bin	object[226]	new[226]	_	_
+
+#Text=Zip-ties or Large Twist-ties
+49-1	4100-4108	Zip-ties	abstract	new	_	_
+49-2	4109-4111	or	_	_	_	_
+49-3	4112-4117	Large	abstract[228]	new[228]	_	_
+49-4	4118-4128	Twist-ties	abstract[228]	new[228]	_	_
+
+#Text=Small shoe box or plastic tub
+50-1	4129-4134	Small	object[230]	new[230]	_	_
+50-2	4135-4139	shoe	object|object[230]	new|new[230]	_	_
+50-3	4140-4143	box	object[230]	new[230]	_	_
+50-4	4144-4146	or	_	_	_	_
+50-5	4147-4154	plastic	object[231]	new[231]	_	_
+50-6	4155-4158	tub	object[231]	new[231]	_	_
+
+#Text=Blanket , bubble wrap , or other cushioning
+51-1	4159-4166	Blanket	object	new	_	_
+51-2	4167-4168	,	_	_	_	_
+51-3	4169-4175	bubble	object[233]	new[233]	_	_
+51-4	4176-4180	wrap	object[233]	new[233]	_	_
+51-5	4181-4182	,	_	_	_	_
+51-6	4183-4185	or	_	_	_	_
+51-7	4186-4191	other	abstract[234]	new[234]	_	_
+51-8	4192-4202	cushioning	abstract[234]	new[234]	_	_
+
+#Text=Packaging Tape
+52-1	4203-4212	Packaging	abstract|object[236]	new|new[236]	_	_
+52-2	4213-4217	Tape	object[236]	new[236]	_	_
+
+#Text=Sharpie or other marking pen
+53-1	4218-4225	Sharpie	object	new	_	_
+53-2	4226-4228	or	_	_	_	_
+53-3	4229-4234	other	object[239]	new[239]	_	_
+53-4	4235-4242	marking	abstract|object[239]	giv|new[239]	_	_
+53-5	4243-4246	pen	object[239]	new[239]	_	_

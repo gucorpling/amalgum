@@ -1,0 +1,878 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_angular" title="An Empirical Assessment of Angular Dependency for RedEdge-M in Sloped Terrain Viticulture" shortTitle="angular" author="Chizhang Gong, Henning Buddenbaum, Rebecca Retzlaff, Thomas Udelhoven" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2072-4292/11/21/2561/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+1.	LS	1.
+Introduction	NN	introduction
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+concept	NN	concept
+of	IN	of
+precision	NN	precision
+viticulture	NN	viticulture
+has	VBZ	have
+rapidly	RB	rapidly
+developed	VBN	develop
+and	CC	and
+extended	VBN	extend
+to	IN	to
+a	DT	a
+variety	NN	variety
+of	IN	of
+unmanned	JJ	unmanned
+aerial	JJ	aerial
+vehicle	NN	vehicle
+(	-LRB-	(
+UAV	FW	UAV
+)	-RRB-	)
+applications	NNS	application
+in	IN	in
+recent	JJ	recent
+years	NNS	year
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+include	VBP	include
+digital	JJ	digital
+3D	NN	3D
+vineyard	NN	vineyard
+structure	NN	structure
+reconstruction	NN	reconstruction
+from	IN	from
+UAV	NNP	UAV
+imagery	NN	imagery
+for	IN	for
+precise	JJ	precise
+row	NN	row
+monitoring	NN	monitoring
+and	CC	and
+crop	NN	crop
+status	NN	status
+quantification	NN	quantification
+,	,	,
+such	JJ	such
+as	IN	as
+evaluating	VBG	evaluate
+growth	NN	growth
+conditions	NNS	condition
+with	IN	with
+hyperspectral	JJ	hyperspectral
+sensors	NNS	sensor
+,	,	,
+RGB	NN	RGB
+,	,	,
+multispectral	JJ	multispectral
+,	,	,
+thermal	JJ	thermal
+sensors	NNS	sensor
+combined	VBN	combine
+together	RB	together
+,	,	,
+and	CC	and
+utilizing	VBG	utilize
+machine-learning	JJ	machine-learning
+techniques	NNS	technique
+for	IN	for
+multispectral	JJ	multispectral
+sensors	NNS	sensor
+to	TO	to
+schedule	VB	schedule
+the	DT	the
+irrigation	NN	irrigation
+.	.	.
+</s>
+<s type="decl">
+All	DT	all
+of	IN	of
+the	DT	the
+mentioned	VBN	mention
+quantification	NN	quantification
+works	NNS	work
+have	VBP	have
+used	VBN	use
+optical	JJ	optical
+sensors	NNS	sensor
+,	,	,
+which	WDT	which
+heavily	RB	heavily
+rely	VBP	rely
+upon	IN	upon
+the	DT	the
+accurate	JJ	accurate
+derivation	NN	derivation
+of	IN	of
+canopy	NN	canopy
+reflectance	NN	reflectance
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+viticulture	NN	viticulture
+,	,	,
+this	DT	this
+demand	NN	demand
+faces	VBZ	face
+two	CD	2
+unique	JJ	unique
+geometric	JJ	geometric
+problems	NNS	problem
+.	.	.
+</s>
+<s type="decl">
+First	RB	first
+,	,	,
+the	DT	the
+canopy	NN	canopy
+converges	VBZ	converge
+to	IN	to
+a	DT	a
+narrower	JJR	narrow
+shape	NN	shape
+after	IN	after
+pruning	NN	pruning
+,	,	,
+limiting	VBG	limit
+the	DT	the
+retrievable	JJ	retrievable
+information	NN	information
+from	IN	from
+nadir	NN	nadir
+orthophotos	NNS	orthophoto
+.	.	.
+</s>
+<s type="decl">
+Second	RB	second
+,	,	,
+although	IN	although
+the	DT	the
+former	JJ	former
+problem	NN	problem
+can	MD	can
+be	VB	be
+improved	VBN	improve
+by	IN	by
+tilting	VBG	tilt
+the	DT	the
+camera	NN	camera
+’s	POS	's
+view	NN	view
+angle	NN	angle
+to	TO	to
+observe	VB	observe
+the	DT	the
+side	NN	side
+of	IN	of
+the	DT	the
+canopies	NNS	canopy
+,	,	,
+the	DT	the
+enlarged	VBN	enlarge
+sun-target-sensor	NN	sun-target-sensor
+angle	NN	angle
+in	IN	in
+the	DT	the
+sloped	JJ	sloped
+areas	NNS	area
+will	MD	will
+further	RBR	far
+interfere	VB	interfere
+with	IN	with
+the	DT	the
+target	NN	target
+reflectance	NN	reflectance
+anisotropy	NN	anisotropy
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+resulting	VBG	result
+consequences	NNS	consequence
+have	VBP	have
+been	VBN	be
+demonstrated	VBN	demonstrate
+in	IN	in
+other	JJ	other
+scenarios	NNS	scenario
+.	.	.
+</s>
+<s type="decl">
+One	CD	one
+study	NN	study
+on	IN	on
+wheat	NN	wheat
+showed	VBD	show
+that	IN	that
+SCOPE-modeled	JJ	SCOPE-modeled
+directional	JJ	directional
+reflectance	NN	reflectance
+was	VBD	be
+largely	RB	largely
+different	JJ	different
+from	IN	from
+the	DT	the
+UAV	NNP	UAV
+hyperspectral	NN	hyperspectral
+spectrometer	NN	spectrometer
+measurement	NN	measurement
+in	IN	in
+low-tilt	JJ	low-tilt
+angles	NNS	angle
+.	.	.
+</s>
+<s type="decl">
+Another	DT	another
+hyperspectral	JJ	hyperspectral
+study	NN	study
+highlighted	VBD	highlight
+the	DT	the
+influence	NN	influence
+of	IN	of
+viewing	VBG	view
+geometry	NN	geometry
+on	IN	on
+the	DT	the
+Normalized	VBN	normalize
+Differential	NNP	Differential
+Vegetation	NNP	Vegetation
+Index	NNP	Index
+(	-LRB-	(
+NDVI	NNP	NDVI
+)	-RRB-	)
+values	NNS	value
+,	,	,
+demanding	VBG	demand
+the	DT	the
+necessary	JJ	necessary
+compensation	NN	compensation
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+angular	JJ	angular
+reflectance	NN	reflectance
+dependency	NN	dependency
+has	VBZ	have
+been	VBN	be
+intensively	RB	intensively
+studied	VBN	study
+within	IN	within
+the	DT	the
+framework	NN	framework
+of	IN	of
+the	DT	the
+bidirectional	JJ	bidirectional
+reflectance	NN	reflectance
+distribution	NN	distribution
+function	NN	function
+(	-LRB-	(
+BRDF	NNP	BRDF
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+vegetation	NN	vegetation
+canopies	NNS	canopy
+,	,	,
+the	DT	the
+anisotropic	JJ	anisotropic
+reflectance	NN	reflectance
+can	MD	can
+be	VB	be
+dependent	JJ	dependent
+on	IN	on
+the	DT	the
+canopy	NN	canopy
+structure	NN	structure
+(	-LRB-	(
+surface	NN	surface
+curvature	NN	curvature
+,	,	,
+leaf	NN	leaf
+layers	NNS	layer
+,	,	,
+shadow	NN	shadow
+proportion	NN	proportion
+,	,	,
+leaf	NN	leaf
+orientations	NNS	orientation
+,	,	,
+etc.	FW	etc.
+)	-RRB-	)
+and	CC	and
+visible	JJ	visible
+background	NN	background
+at	IN	at
+different	JJ	different
+view	NN	view
+geometries	NNS	geometry
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+has	VBZ	have
+resulted	VBN	result
+in	IN	in
+a	DT	a
+series	NN	series
+of	IN	of
+modeling	NN	modeling
+tools	NNS	tool
+.	.	.
+</s>
+<s type="decl">
+One	CD	one
+of	IN	of
+the	DT	the
+commonly	RB	commonly
+used	VBN	use
+models	NNS	model
+was	VBD	be
+described	VBN	describe
+by	IN	by
+Walthall	NNP	Walthall
+et	FW	et
+al.	FW	al.
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+was	VBD	be
+then	RB	then
+improved	VBN	improve
+in	IN	in
+a	DT	a
+detailed	JJ	detailed
+layout	NN	layout
+in	IN	in
+Nilson	NNP	Nilson
+and	CC	and
+Kuusk	NNP	Kuusk
+’s	POS	's
+work	NN	work
+,	,	,
+which	WDT	which
+was	VBD	be
+illustrated	VBN	illustrate
+by	IN	by
+Beisl	NNP	Beisl
+et	FW	et
+al.	FW	al.
+.	.	.
+</s>
+<s type="decl">
+Another	DT	another
+commonly	RB	commonly
+used	VBN	use
+model	NN	model
+was	VBD	be
+proposed	VBN	propose
+by	IN	by
+Rahman	NNP	Rahman
+et	NNP	et
+al.	FW	al.
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+models	NNS	model
+have	VBP	have
+been	VBN	be
+used	VBN	use
+to	TO	to
+semi-empirically	RB	semi-empirically
+establish	VB	establish
+the	DT	the
+relation	NN	relation
+between	IN	between
+canopy	NN	canopy
+directional	JJ	directional
+reflectance	NN	reflectance
+and	CC	and
+geometry	NN	geometry
+.	.	.
+</s>
+<s type="sub">
+Further	NN	far
+modeling	NN	modeling
+with	IN	with
+BRDF	NNP	BRDF
+simulation	NN	simulation
+tools	NNS	tool
+,	,	,
+such	JJ	such
+as	IN	as
+PROSAIL	NNP	Prosail
+,	,	,
+can	MD	can
+also	RB	also
+be	VB	be
+found	VBN	find
+in	IN	in
+application	NN	application
+reviews	NNS	review
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Early	JJ	early
+works	NNS	work
+have	VBP	have
+used	VBN	use
+ground	NN	ground
+goniometers	NNS	goniometer
+to	TO	to
+study	VB	study
+the	DT	the
+angular	JJ	angular
+reflectance	NN	reflectance
+dependency	NN	dependency
+.	.	.
+</s>
+<s type="decl">
+But	CC	but
+by	IN	by
+paralleling	VBG	parallel
+the	DT	the
+goniometer	NN	goniometer
+measured	VBN	measure
+ground	NN	ground
+truth	NN	truth
+and	CC	and
+UAV	NNP	UAV
+measurements	NNS	measurement
+,	,	,
+studies	NNS	study
+have	VBP	have
+already	RB	already
+shown	VBN	show
+that	IN	that
+the	DT	the
+UAV-mounted	JJ	UAV-mounted
+cameras	NNS	camera
+can	MD	can
+obtain	VB	obtain
+bidirectional	JJ	bidirectional
+reflectance	NN	reflectance
+factors	NNS	factor
+without	IN	without
+ground	NN	ground
+measurements	NNS	measurement
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+example	NN	example
+,	,	,
+a	DT	a
+correspondence	NN	correspondence
+was	VBD	be
+found	VBN	find
+between	IN	between
+goniometer	NN	goniometer
+and	CC	and
+UAV	NNP	UAV
+commercial	JJ	commercial
+camera	NN	camera
+on	IN	on
+a	DT	a
+smooth	JJ	smooth
+snow	NN	snow
+surface	NN	surface
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+low	JJ	low
+standard	JJ	standard
+deviation	NN	deviation
+between	IN	between
+goniometer	NN	goniometer
+and	CC	and
+UAV	NNP	UAV
+directional	JJ	directional
+reflectance	NN	reflectance
+on	IN	on
+reference	NN	reference
+panels	NNS	panel
+was	VBD	be
+found	VBN	find
+in	IN	in
+another	DT	another
+study	NN	study
+.	.	.
+</s>
+<s type="decl">
+By	IN	by
+involving	VBG	involve
+a	DT	a
+sun	NN	sun
+sensor	NN	sensor
+,	,	,
+UAV	NNP	UAV
+directional	JJ	directional
+reflectance	NN	reflectance
+can	MD	can
+also	RB	also
+be	VB	be
+derived	VBN	derive
+without	IN	without
+a	DT	a
+reference	NN	reference
+panel	NN	panel
+.	.	.
+</s>
+<s type="decl">
+Such	NNP	such
+a	DT	a
+method	NN	method
+was	VBD	be
+tested	VBN	test
+and	CC	and
+evaluated	VBN	evaluate
+in	IN	in
+a	DT	a
+very	RB	very
+recent	JJ	recent
+work	NN	work
+,	,	,
+where	WRB	where
+high	JJ	high
+correlation	NN	correlation
+coefficients	NNS	coefficient
+were	VBD	be
+found	VBN	find
+between	IN	between
+UAV	NNP	UAV
+measurement	NN	measurement
+and	CC	and
+literature	NN	literature
+goniometer	NN	goniometer
+values	NNS	value
+on	IN	on
+a	DT	a
+spectralon	NN	spectralon
+white	JJ	white
+reference	NN	reference
+panel	NN	panel
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+A	DT	a
+range	NN	range
+of	IN	of
+dedicated	VBN	dedicate
+UAV	NNP	UAV
+reflectance	NN	reflectance
+anisotropy	NN	anisotropy
+studies	NNS	study
+have	VBP	have
+been	VBN	be
+conducted	VBN	conduct
+on	IN	on
+different	JJ	different
+types	NNS	type
+of	IN	of
+vegetation	NN	vegetation
+.	.	.
+</s>
+<s type="decl">
+Aside	RB	aside
+from	IN	from
+the	DT	the
+wheat	NN	wheat
+study	NN	study
+mentioned	VBN	mention
+before	RB	before
+,	,	,
+another	DT	another
+hyperspectral	JJ	hyperspectral
+study	NN	study
+on	IN	on
+wheat	NN	wheat
+and	CC	and
+barley	NN	barley
+found	VBD	find
+that	IN	that
+the	DT	the
+scattering	NN	scattering
+parameter	NN	parameter
+in	IN	in
+the	DT	the
+Rahman	NNP	Rahman
+–	:	-
+Pinty	NNP	Pinty
+–	:	-
+Verstraete	NNP	Verstraete
+model	NN	model
+differed	VBD	differ
+by	IN	by
+the	DT	the
+crop	NN	crop
+heading	NN	heading
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+also	RB	also
+found	VBD	find
+a	DT	a
+strong	JJ	strong
+backscattering	NN	backscattering
+reduction	NN	reduction
+in	IN	in
+potato	NN	potato
+after	IN	after
+the	DT	the
+full	JJ	full
+coverage	NN	coverage
+of	IN	of
+canopies	NNS	canopy
+,	,	,
+indicating	VBG	indicate
+the	DT	the
+potential	NN	potential
+of	IN	of
+crop-growth	NN	crop-growth
+stage	NN	stage
+monitoring	NN	monitoring
+by	IN	by
+angular	JJ	angular
+observation	NN	observation
+.	.	.
+</s>
+<s type="decl">
+Taking	VBG	take
+the	DT	the
+bidirectional	JJ	bidirectional
+effect	NN	effect
+into	IN	into
+consideration	NN	consideration
+,	,	,
+the	DT	the
+radiometric	JJ	radiometric
+correction	NN	correction
+via	IN	via
+geometric	JJ	geometric
+block	NN	block
+adjustment	NN	adjustment
+method	NN	method
+was	VBD	be
+developed	VBN	develop
+to	TO	to
+significantly	RB	significantly
+improve	VB	improve
+the	DT	the
+uniformity	NN	uniformity
+of	IN	of
+spectral	JJ	spectral
+mosaics	NNS	mosaic
+.	.	.
+</s>
+<s type="decl">
+Another	DT	another
+assessment	NN	assessment
+study	NN	study
+of	IN	of
+BRDF	NNP	BRDF
+in	IN	in
+UAV	NNP	UAV
+near-infrared	VBN	near-infrar
+(	-LRB-	(
+NIR	NNP	NIR
+)	-RRB-	)
+imagery	NN	imagery
+has	VBZ	have
+illustrated	VBN	illustrate
+the	DT	the
+compensation	NN	compensation
+method	NN	method
+for	IN	for
+angular	JJ	angular
+radiometric	JJ	radiometric
+disturbances	NNS	disturbance
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+As	IN	as
+part	NN	part
+of	IN	of
+a	DT	a
+UAV-monitoring	NN	UAV-monitoring
+project	NN	project
+on	IN	on
+a	DT	a
+sloped	VBN	slop
+vineyard	NN	vineyard
+,	,	,
+this	DT	this
+paper	NN	paper
+focuses	VBZ	focus
+on	IN	on
+delivering	VBG	deliver
+a	DT	a
+feasible	JJ	feasible
+approach	NN	approach
+to	IN	to
+sample	NN	sample
+,	,	,
+model	NN	model
+,	,	,
+and	CC	and
+correct	VB	correct
+the	DT	the
+angular	JJ	angular
+dependency	NN	dependency
+for	IN	for
+the	DT	the
+vine	NN	vine
+canopy	NN	canopy
+reflectance	NN	reflectance
+from	IN	from
+UAV	NNP	UAV
+imagery	NN	imagery
+without	IN	without
+field	NN	field
+measurements	NNS	measurement
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+study	NN	study
+,	,	,
+the	DT	the
+UAV	NNP	UAV
+carried	VBD	carry
+a	DT	a
+tilted	VBN	tilt
+RedEdge-M	NNP	RedEdge-M
+sensor	NN	sensor
+to	TO	to
+take	VB	take
+the	DT	the
+images	NNS	image
+from	IN	from
+a	DT	a
+sloped	VBN	slop
+vineyard	NN	vineyard
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+reflectance	NN	reflectance
+anisotropy	NN	anisotropy
+was	VBD	be
+studied	VBN	study
+on	IN	on
+these	DT	this
+images	NNS	image
+by	IN	by
+combining	VBG	combine
+the	DT	the
+RedEdge	NNP	RedEdge
+Python	NNP	Python
+package	NN	package
+and	CC	and
+the	DT	the
+3D-reconstruction	NN	3D-reconstruction
+software	NN	software
+Agisoft©	NNP	Agisoft©
+Metashape	NNP	Metashape
+applications	NNS	application
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+both	CC	both
+the	DT	the
+corrected	VBN	correct
+and	CC	and
+uncorrected	JJ	uncorrected
+reflectance	NN	reflectance
+images	NNS	image
+of	IN	of
+the	DT	the
+red	JJ	red
+and	CC	and
+NIR	NNP	NIR
+bands	NNS	band
+were	VBD	be
+used	VBN	use
+to	TO	to
+compute	VB	compute
+their	PRP$	their
+side-view	NN	side-view
+orthomosaics	NNS	orthomosaic
+and	CC	and
+corresponding	VBG	correspond
+NDVI	NNP	NDVI
+maps	NNS	map
+from	IN	from
+different	JJ	different
+directions	NNS	direction
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+goal	NN	goal
+of	IN	of
+this	DT	this
+study	NN	study
+is	VBZ	be
+to	TO	to
+deliver	VB	deliver
+a	DT	a
+3D	NN	3D
+NDVI	NNP	NDVI
+surface	NN	surface
+that	WDT	that
+is	VBZ	be
+independent	JJ	independent
+of	IN	of
+the	DT	the
+angular	JJ	angular
+effects	NNS	effect
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+hypothesis	NN	hypothesis
+is	VBZ	be
+that	IN	that
+the	DT	the
+corrected	VBN	correct
+NDVI	NNP	NDVI
+values	NNS	value
+from	IN	from
+different	JJ	different
+views	NNS	view
+should	MD	should
+be	VB	be
+significantly	RB	significantly
+lower	JJR	low
+than	IN	than
+the	DT	the
+uncorrected	JJ	uncorrected
+ones	NNS	one
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,1281 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_whow_matlab" title="Create a Robot Model in MATLAB" shortTitle="matlab" type="whow" dateCollected="2019-11-06" dateCreated="2018-10-14" dateModified="2019-06-24" sourceURL="https://www.wikihow.com/Create-a-Robot-Model-in-MATLAB" speakerList="none" speakerCount="0">
+<head>
+<s type="imp">
+Create	VB	create
+a	DT	a
+Robot	NNP	Robot
+Model	NNP	Model
+</s>
+<s type="frag">
+in	IN	in
+MATLAB	NNP	Matlab
+</s>
+</head>
+<p>
+<s type="decl">
+You	PRP	you
+can	MD	can
+model	VB	model
+your	PRP$	your
+robot	NN	robot
+in	IN	in
+MATLAB	NNP	Matlab
+using	VBG	use
+the	DT	the
+robotics	NNS	robotics
+toolbox	NN	toolbox
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+article	NN	article
+will	MD	will
+help	VB	help
+you	PRP	you
+understand	VB	understand
+the	DT	the
+basic	JJ	basic
+process	NN	process
+and	CC	and
+commands	NNS	command
+used	VBN	use
+.	.	.
+</s>
+<s type="decl">
+All	PDT	all
+the	DT	the
+code	NN	code
+in	IN	in
+this	DT	this
+tutorial	NN	tutorial
+can	MD	can
+be	VB	be
+copied	VBN	copy
+and	CC	and
+pasted	VBN	past
+into	IN	into
+MATLAB	NNP	Matlab
+and	CC	and
+the	DT	the
+appropriate	JJ	appropriate
+places	NNS	place
+changed	VBN	change
+to	TO	to
+match	VB	match
+your	PRP$	your
+data	NNS	datum
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+Steps	NNS	step
+</s>
+</head>
+<head>
+<s type="ger">
+Preparing	VBG	prepare
+</s>
+</head>
+<list type="ordered">
+<item>
+<s type="imp">
+Understand	VB	understand
+the	DT	the
+terminology	NN	terminology
+you	PRP	you
+'ll	MD	will
+need	VB	need
+to	TO	to
+know	VB	know
+:	:	:
+</s>
+<list type="unordered">
+<item>
+<s type="frag">
+Tool	NN	tool
+:	:	:
+</s>
+<s type="decl">
+This	DT	this
+is	VBZ	be
+the	DT	the
+end	NN	end
+of	IN	of
+the	DT	the
+robot	NN	robot
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+tool	NN	tool
+would	MD	would
+equivalent	JJ	equivalent
+to	IN	to
+your	PRP$	your
+hand	NN	hand
+on	IN	on
+your	PRP$	your
+arm	NN	arm
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+Base	NN	Base
+:	:	:
+This	DT	this
+is	VBZ	be
+the	DT	the
+beginning	NN	beginning
+of	IN	of
+the	DT	the
+robot	NN	robot
+.	.	.
+</s>
+<s type="imp">
+Think	VB	think
+of	IN	of
+how	WRB	how
+your	PRP$	your
+shoulder	NN	shoulder
+is	VBZ	be
+the	DT	the
+base	NN	base
+of	IN	of
+your	PRP$	your
+arm	NN	arm
+.	.	.
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Learn	VB	learn
+what	WP	what
+DH	NNP	DH
+parameters	NNS	parameter
+are	VBP	be
+.	.	.
+</s>
+<s type="decl">
+DH	NNP	DH
+parameters	NNS	parameter
+are	VBP	be
+like	IN	like
+the	DT	the
+dimensions	NNS	dimension
+of	IN	of
+the	DT	the
+robot	NN	robot
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+Familiarize	VB	familiarize
+yourself	PRP	yourself
+with	IN	with
+MATLAB	NNP	Matlab
+,	,	,
+specifically	RB	specifically
+with	IN	with
+matrices	NNS	matrice
+and	CC	and
+vectors	NNS	vector
+.	.	.
+</s>
+<list type="unordered">
+<item>
+<s type="decl">
+If	IN	if
+you	PRP	you
+need	VBP	need
+a	DT	a
+refresher	NN	refresher
+,	,	,
+Chapter	NNP	Chapter
+2	CD	2
+of	IN	of
+the	DT	the
+MATLAB	NNP	Matlab
+Primer	NNP	Primer
+contains	VBZ	contain
+information	NN	information
+on	IN	on
+matrices	NNS	matrice
+.	.	.
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Read	VB	read
+through	IN	through
+the	DT	the
+Robotics	NNP	Robotics
+Toolbox	NNP	Toolbox
+for	IN	for
+MATLAB	NNP	Matlab
+.	.	.
+</s>
+<list type="unordered">
+<item>
+<s type="frag">
+Specifically	RB	specifically
+,	,	,
+the	DT	the
+Prismatic	NNP	Prismatic
+.	.	.
+</s>
+<s type="other">
+Prismatic	JJ	Prismatic
+,	,	,
+Revolute	JJ	revolute
+.	.	.
+</s>
+<s type="intj">
+Revolute	JJ	revolute
+,	,	,
+SerialLink	NNP	SerialLink
+.	.	.
+</s>
+<s type="decl">
+plot	NN	plot
+,	,	,
+and	CC	and
+SerialLink	NNP	SerialLink
+.	.	.
+fkine	NN	fkine
+commands	NNS	command
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Install	VB	install
+the	DT	the
+Robotics	NNP	Robotics
+Toolbox	NNP	Toolbox
+.	.	.
+</s>
+</item>
+</list>
+<head>
+<s type="ger">
+Collecting	VBG	collect
+Robot	NNP	Robot
+Data	NNP	data
+</s>
+</head>
+<list type="ordered">
+<item>
+<s type="imp">
+Determine	VB	determine
+the	DT	the
+types	NNS	type
+of	IN	of
+joints	NNS	joint
+that	WDT	that
+are	VBP	be
+in	IN	in
+your	PRP$	your
+robot	NN	robot
+.	.	.
+</s>
+<list type="unordered">
+<item>
+<s type="decl">
+Prismatic	JJ	Prismatic
+joints	NNS	joint
+are	VBP	be
+ones	NNS	one
+that	WDT	that
+actuate	VBP	actuate
+in	IN	in
+and	CC	and
+out	RB	out
+.	.	.
+</s>
+<s type="decl">
+Examples	NNS	example
+are	VBP	be
+shocks	NNS	shock
+or	CC	or
+pistons	NNS	piston
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+Revolute	JJ	revolute
+joints	NNS	joint
+are	VBP	be
+ones	NNS	one
+that	WDT	that
+rotate	VBP	rotate
+.	.	.
+</s>
+<s type="frag">
+For	IN	for
+example	NN	example
+,	,	,
+any	DT	any
+kind	NN	kind
+of	IN	of
+hinge	NN	hinge
+.	.	.
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Determine	VB	determine
+the	DT	the
+limits	NNS	limit
+for	IN	for
+each	DT	each
+joint	NN	joint
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+is	VBZ	be
+the	DT	the
+range	NN	range
+for	IN	for
+which	WDT	which
+each	DT	each
+joint	NN	joint
+can	MD	can
+slide	VB	slide
+or	CC	or
+rotate	VB	rotate
+through	IN	through
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+Create	VB	create
+a	DT	a
+table	NN	table
+that	WDT	that
+contains	VBZ	contain
+the	DT	the
+DH	NNP	DH
+parameters	NNS	parameter
+for	IN	for
+each	DT	each
+joint	NN	joint
+.	.	.
+</s>
+<figure rend="Robot_Data_Collection_New.png">
+</figure>
+</item>
+</list>
+<head>
+<s type="ger">
+Creating	VBG	create
+the	DT	the
+Robot	NNP	Robot
+Model	NNP	Model
+</s>
+</head>
+<list type="ordered">
+<item>
+<s type="imp">
+Create	VB	create
+each	DT	each
+joint	NN	joint
+in	IN	in
+the	DT	the
+MATLAB	NNP	Matlab
+command	NN	command
+window	NN	window
+.	.	.
+</s>
+<figure>
+<ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_Step_4.png">
+<s type="frag">
+Image	NN	image
+:	:	:
+How	WRB	how
+to	TO	to
+create	VB	create
+a	DT	a
+robot	NN	robot
+model	NN	model
+in	IN	in
+MATLAB	NNP	Matlab
+Step	NNP	step
+4	CD	4
+.	.	.
+</s>
+<s type="frag">
+png	NNP	Png
+</s>
+</ref>
+</figure>
+<list type="unordered">
+<item>
+<s type="imp">
+Call	VB	call
+this	DT	this
+code	NN	code
+if	IN	if
+your	PRP$	your
+joint	NN	joint
+is	VBZ	be
+prismatic	JJ	prismatic
+:	:	:
+</s>
+</item>
+<item>
+<s type="imp">
+Call	VB	call
+this	DT	this
+code	NN	code
+if	IN	if
+your	PRP$	your
+joint	NN	joint
+is	VBZ	be
+revolute	JJ	revolute
+:	:	:
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Repeat	VB	repeat
+the	DT	the
+last	JJ	last
+step	NN	step
+for	IN	for
+each	DT	each
+joint	NN	joint
+.	.	.
+</s>
+<figure>
+<ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_5.png">
+<s type="frag">
+Image	NN	image
+:	:	:
+How	WRB	how
+to	TO	to
+create	VB	create
+a	DT	a
+robot	NN	robot
+model	NN	model
+in	IN	in
+MATLAB	NNP	Matlab
+step	NN	step
+5	CD	5
+.	.	.
+</s>
+<s type="frag">
+png	NN	png
+</s>
+</ref>
+</figure>
+</item>
+<list type="unordered">
+<item>
+<s type="sub">
+For	IN	for
+example	NN	example
+,	,	,
+the	DT	the
+second	JJ	second
+joint	NN	joint
+should	MD	should
+start	VB	start
+off	RP	off
+with	IN	with
+L(2)=Revolute/Prismatic(	NNP	L(2)=Revolute/Prismatic(
+...	:	…
+)	-RRB-	)
+</s>
+</item>
+<item>
+<s type="sub">
+The	DT	the
+third	JJ	third
+joint	NN	joint
+should	MD	should
+be	VB	be
+L(3)=Revolute/Prismatic(	NNS	L(3)=Revolute/Prismatic(
+...	:	…
+)	-RRB-	)
+</s>
+</item>
+<item>
+<s type="sub">
+The	DT	the
+last	JJ	last
+joint	NN	joint
+should	MD	should
+be	VB	be
+L(last	NN	l(last
+joint	JJ	joint
+number)=Revolute/Prismatic(	NN	number)=Revolute/Prismatic(
+...	:	…
+)	-RRB-	)
+</s>
+</item>
+</list>
+<item>
+<s type="imp">
+Call	VB	call
+the	DT	the
+following	VBG	follow
+command	NN	command
+,	,	,
+where	WRB	where
+"	``	''
+your	PRP$	your
+robots	NNS	robot
+name	NN	name
+"	''	''
+is	VBZ	be
+the	DT	the
+identifier	NN	identifier
+that	WDT	that
+you	PRP	you
+want	VBP	want
+for	IN	for
+your	PRP$	your
+robot	NN	robot
+.	.	.
+</s>
+<figure>
+<ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_6.png">
+<s type="frag">
+Image	NN	image
+:	:	:
+</s>
+<s type="inf">
+How	WRB	how
+to	TO	to
+create	VB	create
+a	DT	a
+robot	NN	robot
+model	NN	model
+in	IN	in
+MATLAB	NNP	Matlab
+</s>
+<s type="frag">
+step	NN	step
+6	CD	6
+.	.	.
+png	NN	png
+</s>
+</ref>
+</figure>
+</item>
+<item>
+<s type="imp">
+Add	VB	add
+an	DT	a
+external	JJ	external
+reference	NN	reference
+frame	NN	frame
+to	IN	to
+your	PRP$	your
+robot	NN	robot
+by	IN	by
+calling	VBG	call
+the	DT	the
+following	VBG	follow
+command	NN	command
+,	,	,
+where	WRB	where
+T	NN	T
+is	VBZ	be
+a	DT	a
+4x4	NN	4x4
+matrix	NN	matrix
+between	IN	between
+the	DT	the
+external	JJ	external
+reference	NN	reference
+frame	NN	frame
+and	CC	and
+the	DT	the
+first	JJ	first
+reference	NN	reference
+frame	NN	frame
+of	IN	of
+your	PRP$	your
+robot	NN	robot
+.	.	.
+</s>
+<figure>
+<ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_7.png">
+<s type="frag">
+Image	NN	image
+:	:	:
+How	WRB	how
+to	TO	to
+create	VB	create
+a	DT	a
+robot	NN	robot
+model	NN	model
+in	IN	in
+MATLAB	NNP	Matlab
+</s>
+<s type="frag">
+step	NN	step
+7	CD	7
+.	.	.
+png	NN	png
+</s>
+</ref>
+</figure>
+<list type="unordered">
+<item>
+<s type="imp">
+Call	VB	call
+the	DT	the
+following	VBG	follow
+instead	RB	instead
+,	,	,
+if	IN	if
+your	PRP$	your
+external	JJ	external
+reference	NN	reference
+frame	NN	frame
+is	VBZ	be
+only	RB	only
+translated	VBN	translate
+with	IN	with
+respect	NN	respect
+to	IN	to
+first	JJ	first
+robot	NN	robot
+frame	NN	frame
+:	:	:
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Add	VB	add
+a	DT	a
+tool	NN	tool
+to	IN	to
+the	DT	the
+robot	NN	robot
+by	IN	by
+calling	VBG	call
+the	DT	the
+following	VBG	follow
+command	NN	command
+,	,	,
+where	WRB	where
+S	NNPS	S
+is	VBZ	be
+a	DT	a
+4x4	NN	4x4
+matrix	NN	matrix
+that	WDT	that
+relates	VBZ	relate
+the	DT	the
+tool	NN	tool
+tip	NN	tip
+frame	NN	frame
+to	IN	to
+the	DT	the
+last	JJ	last
+robot	NN	robot
+joint	JJ	joint
+frame	NN	frame
+.	.	.
+</s>
+<figure>
+<s type="frag">
+<ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_8.png">
+Image	NN	image
+:	:	:
+How	WRB	how
+to	TO	to
+create	VB	create
+a	DT	a
+robot	NN	robot
+model	NN	model
+in	IN	in
+MATLAB	NNP	Matlab
+step	NN	step
+8	CD	8
+.	.	.
+png	NN	png
+</ref>
+</s>
+</figure>
+<list type="unordered">
+<item>
+<s type="imp">
+Call	VB	call
+the	DT	the
+following	VBG	follow
+command	NN	command
+instead	RB	instead
+,	,	,
+if	IN	if
+your	PRP$	your
+tool	NN	tool
+tip	NN	tip
+is	VBZ	be
+only	RB	only
+translated	VBN	translate
+from	IN	from
+the	DT	the
+last	JJ	last
+robot	NN	robot
+joint	JJ	joint
+frame	NN	frame
+.	.	.
+</s>
+</item>
+</list>
+</item>
+<item>
+<s type="imp">
+Plot	VB	plot
+the	DT	the
+robot	NN	robot
+by	IN	by
+calling	VBG	call
+this	DT	this
+command	NN	command
+:	:	:
+</s>
+<figure>
+<s type="frag">
+<ref target="https://www.wikihow.com/wiki/Special:FilePath/How_to_create_a_robot_model_in_MATLAB_step_9.png">
+Image	NN	image
+:	:	:
+How	WRB	how
+to	TO	to
+create	VB	create
+a	DT	a
+robot	NN	robot
+model	NN	model
+in	IN	in
+MATLAB	NNP	Matlab
+step	NN	step
+9	CD	9
+.	.	.
+png	NN	png
+</ref>
+</s>
+</figure>
+<list type="unordered">
+<item>
+<s type="decl">
+Usually	RB	usually
+you	PRP	you
+will	MD	will
+set	VB	set
+all	PDT	all
+the	DT	the
+joint	JJ	joint
+angles	NNS	angle
+to	IN	to
+zero	NN	zero
+.	.	.
+</s>
+</item>
+<item>
+<s type="sub">
+If	IN	if
+the	DT	the
+robot	NN	robot
+is	VBZ	be
+not	RB	not
+all	RB	all
+on	IN	on
+the	DT	the
+screen	NN	screen
+or	CC	or
+there	EX	there
+is	VBZ	be
+too	RB	too
+much	JJ	much
+empty	JJ	empty
+space	NN	space
+,	,	,
+you	PRP	you
+can	MD	can
+use	VB	use
+the	DT	the
+option	NN	option
+of	IN	of
+'	``	'
+workspace	NN	workspace
+'	''	'
+to	TO	to
+change	VB	change
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+plot	NN	plot
+in	IN	in
+each	DT	each
+direction	NN	direction
+from	IN	from
+the	DT	the
+origin	NN	origin
+.	.	.
+</s>
+<s type="imp">
+When	WRB	when
+calling	VBG	call
+the	DT	the
+plot	NN	plot
+command	NN	command
+,	,	,
+add	VB	add
+this	DT	this
+to	IN	to
+the	DT	the
+inside	NN	inside
+of	IN	of
+the	DT	the
+parenthesis	NN	parenthesis
+of	IN	of
+the	DT	the
+plot	NN	plot
+command	NN	command
+:	:	:
+</s>
+</item>
+<item>
+<s type="decl">
+You	PRP	you
+will	MD	will
+have	VB	have
+to	TO	to
+play	VB	play
+around	RB	around
+with	IN	with
+these	DT	this
+values	NNS	value
+until	IN	until
+the	DT	the
+whole	JJ	whole
+robot	NN	robot
+fits	VBZ	fit
+in	IN	in
+the	DT	the
+plot	NN	plot
+.	.	.
+</s>
+</item>
+</list>
+</item>
+</list>
+<head>
+<s type="ger">
+Verifying	VBG	verify
+the	DT	the
+Model	NN	Model
+</s>
+</head>
+<list type="ordered">
+<s type="imp">
+Predict	VB	predict
+what	WP	what
+the	DT	the
+X	NNP	X
+,	,	,
+Y	NNP	Y
+,	,	,
+and	CC	and
+Z	NN	Z
+distances	NNS	distance
+will	MD	will
+be	VB	be
+from	IN	from
+your	PRP$	your
+tool	NN	tool
+to	IN	to
+your	PRP$	your
+external	JJ	external
+reference	NN	reference
+frame	NN	frame
+.	.	.
+</s>
+<s type="imp">
+Do	VB	do
+this	DT	this
+by	IN	by
+calling	VBG	call
+:	:	:
+</s>
+<figure rend="Step_10_Final Edit.png">
+</figure>
+<list type="unordered">
+<item>
+<s type="decl">
+A	DT	a
+4x4	NN	4x4
+matrix	NN	matrix
+is	VBZ	be
+returned	VBN	return
+that	WDT	that
+relates	VBZ	relate
+the	DT	the
+tool	NN	tool
+tip	NN	tip
+frame	NN	frame
+in	IN	in
+reference	NN	reference
+to	IN	to
+the	DT	the
+external	JJ	external
+reference	NN	reference
+frame	NN	frame
+.	.	.
+</s>
+</item>
+</list>
+<item>
+<s type="imp">
+Check	VB	check
+the	DT	the
+results	NNS	result
+by	IN	by
+getting	VBG	get
+a	DT	a
+rough	JJ	rough
+measurement	NN	measurement
+of	IN	of
+the	DT	the
+actual	JJ	actual
+robot	NN	robot
+distances	NNS	distance
+from	IN	from
+the	DT	the
+reference	NN	reference
+frame	NN	frame
+.	.	.
+</s>
+<figure>
+</figure>
+</item>
+<list type="unordered">
+<item>
+<s type="decl">
+If	IN	if
+you	PRP	you
+do	VBP	do
+n't	RB	not
+have	VB	have
+the	DT	the
+actual	JJ	actual
+robot	NN	robot
+or	CC	or
+it	PRP	it
+is	VBZ	be
+not	RB	not
+built	VBN	build
+.	.	.
+</s>
+<s type="imp">
+Sketch	VB	sketch
+the	DT	the
+robot	NN	robot
+and	CC	and
+then	RB	then
+calculate	VB	calculate
+how	WRB	how
+far	RB	far
+the	DT	the
+end	NN	end
+of	IN	of
+the	DT	the
+tool	NN	tool
+should	MD	should
+be	VB	be
+from	IN	from
+the	DT	the
+base	NN	base
+frame	NN	frame
+.	.	.
+</s>
+</item>
+</list>
+</list>
+<head>
+<s type="frag">
+Tips	NNS	tip
+</s>
+</head>
+<list type="unordered">
+<item>
+<s type="imp">
+If	IN	if
+the	DT	the
+robot	NN	robot
+model	NN	model
+does	VBZ	do
+not	RB	not
+have	VB	have
+the	DT	the
+same	JJ	same
+number	NN	number
+of	IN	of
+joints	NNS	joint
+than	IN	than
+it	PRP	it
+should	MD	should
+,	,	,
+make	VB	make
+sure	JJ	sure
+that	IN	that
+you	PRP	you
+are	VBP	be
+n't	RB	not
+overwriting	VBG	overwrite
+joints	NNS	joint
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+first	JJ	first
+joint	NN	joint
+should	MD	should
+be	VB	be
+L(1)=	FW	L(1)=
+...	:	…
+,	,	,
+the	DT	the
+second	JJ	second
+joint	NN	joint
+should	MD	should
+be	VB	be
+L(2)=	NNP	L(2)=
+...	:	…
+,	,	,
+L(3)=	NN	L(3)=
+...	:	…
+,	,	,
+L(	NNP	L(
+...	:	…
+)=	-RRB-	)=
+...	:	…
+,	,	,
+the	DT	the
+last	JJ	last
+joint	NN	joint
+should	MD	should
+be	VB	be
+L(last	NN	l(last
+joint	NN	joint
+number	NN	number
+)	-RRB-	)
+when	WRB	when
+created	VBN	create
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+If	IN	if
+the	DT	the
+values	NNS	value
+of	IN	of
+your	PRP$	your
+actual	JJ	actual
+robot	NN	robot
+are	VBP	be
+far	RB	far
+off	RB	off
+,	,	,
+take	VBP	take
+a	DT	a
+look	NN	look
+at	IN	at
+your	PRP$	your
+DH	NN	DH
+parameters	NNS	parameter
+and	CC	and
+make	VB	make
+sure	JJ	sure
+that	IN	that
+you	PRP	you
+follow	VBP	follow
+the	DT	the
+proper	JJ	proper
+procedure	NN	procedure
+for	IN	for
+defining	VBG	define
+robot	NN	robot
+parameters	NNS	parameter
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+Make	VB	make
+sure	JJ	sure
+to	TO	to
+convert	VB	convert
+all	JJ	all
+your	PRP$	your
+measurements	NNS	measurement
+to	IN	to
+meters	NNS	meter
+and	CC	and
+Radians	NNPS	Radian
+.	.	.
+</s>
+<s type="decl">
+Otherwise	RB	otherwise
+,	,	,
+your	PRP$	your
+model	NN	model
+will	MD	will
+not	RB	not
+behave	VB	behave
+like	IN	like
+your	PRP$	your
+actual	JJ	actual
+robot	NN	robot
+and	CC	and
+could	MD	could
+cause	VB	cause
+issues	NNS	issue
+when	WRB	when
+the	DT	the
+real	JJ	real
+thing	NN	thing
+is	VBZ	be
+built	VBN	build
+.	.	.
+</s>
+</item>
+</list>
+<head>
+<s type="frag">
+Warnings	NNS	warning
+</s>
+</head>
+<list type="unordered">
+<item>
+<s type="ger">
+When	WRB	when
+building	VBG	build
+a	DT	a
+program	NN	program
+to	TO	to
+move	VB	move
+the	DT	the
+robot	NN	robot
+.	.	.
+</s>
+<s type="imp">
+Make	VB	make
+sure	JJ	sure
+to	TO	to
+check	VB	check
+the	DT	the
+angle/distance	NN	angle/distance
+it	PRP	it
+is	VBZ	be
+supposed	VBN	suppose
+to	TO	to
+move	VB	move
+against	IN	against
+the	DT	the
+limits	NNS	limit
+that	WDT	that
+were	VBD	be
+set	VBN	set
+earlier	RBR	early
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+ensures	VBZ	ensure
+that	IN	that
+the	DT	the
+robot	NN	robot
+model	NN	model
+behaves	VBZ	behave
+like	IN	like
+the	DT	the
+actual	JJ	actual
+robot	NN	robot
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+Make	VB	make
+sure	JJ	sure
+that	IN	that
+you	PRP	you
+accurately	RB	accurately
+measure	VBP	measure
+the	DT	the
+limits	NNS	limit
+and	CC	and
+DH	NNP	DH
+parameters	NNS	parameter
+.	.	.
+</s>
+<s type="sub">
+If	IN	if
+this	DT	this
+is	VBZ	be
+done	VBN	do
+incorrectly	RB	incorrectly
+,	,	,
+the	DT	the
+actual	JJ	actual
+robot	NN	robot
+may	MD	may
+not	RB	not
+behave	VB	behave
+the	DT	the
+way	NN	way
+you	PRP	you
+expect	VBP	expect
+.	.	.
+</s>
+<s type="sub">
+This	DT	this
+could	MD	could
+pose	VB	pose
+serious	JJ	serious
+risks	NNS	risk
+for	IN	for
+injury	NN	injury
+,	,	,
+especially	RB	especially
+if	IN	if
+the	DT	the
+robot	NN	robot
+reaches	VBZ	reach
+the	DT	the
+hardware	NN	hardware
+limits	NNS	limit
+and	CC	and
+tries	VBZ	try
+to	TO	to
+continue	VB	continue
+.	.	.
+</s>
+</item>
+</list>
+</text>

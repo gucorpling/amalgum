@@ -1,0 +1,177 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. Results</segment>
+<segment id="2" parent="1002" relname="preparation">3.1. On Benchmark Data</segment>
+<segment id="3" parent="1004" relname="purpose">In order to show the effectiveness of the proposed embedding procedure ,</segment>
+<segment id="4" parent="1005" relname="span">both of the classification strategies</segment>
+<segment id="5" parent="4" relname="elaboration">( -SVM and -SVM )</segment>
+<segment id="6" parent="1004" relname="same_unit">have been considered .</segment>
+<segment id="7" parent="1007" relname="span">The genetic algorithm has been configured as follows :</segment>
+<segment id="8" parent="1008" relname="same_unit">100 individuals per 100 generations with a strict early-stop criterion</segment>
+<segment id="9" parent="1010" relname="condition">if the average fitness function over rd of the total number of generations is less than or equal to ,</segment>
+<segment id="10" parent="1010" relname="span">the elitism is set to 10 % of the population ,</segment>
+<segment id="11" parent="1011" relname="span">the selection follows the roulette wheel heuristic ,</segment>
+<segment id="12" parent="1012" relname="joint">the crossover operator generates new offsprings in a scattered fashion</segment>
+<segment id="13" parent="1013" relname="sequence">and the mutation acts in a flip-the-bit fashion for boolean genes</segment>
+<segment id="14" parent="1014" relname="span">and adds to real-valued genes a random number</segment>
+<segment id="15" parent="1015" relname="span">extracted from a zero-mean Gaussian distribution</segment>
+<segment id="16" parent="1016" relname="span">whose variance shrinks</segment>
+<segment id="17" parent="16" relname="concession">as generations go by .</segment>
+<segment id="18" parent="1002" relname="joint">The upper and lower bounds for SVMs hyperparameters are by definition , ,</segment>
+<segment id="19" parent="1002" relname="joint">and has entries in range .</segment>
+<segment id="20" parent="1020" relname="span">Two classification systems have been used as competitors :</segment>
+<segment id="21" parent="1021" relname="span">The Weighted Jaccard Kernel .</segment>
+<segment id="22" parent="1022" relname="span">Originally proposed in Ref . ,</segment>
+<segment id="23" parent="1025" relname="span">the Weighted Jaccard Kernel</segment>
+<segment id="24" parent="23" relname="elaboration">( WJK )</segment>
+<segment id="25" parent="1024" relname="same_unit">is an hypergraph kernel</segment>
+<segment id="26" parent="1024" relname="elaboration">working on the top of the simplicial complexes from the underlying graphs .</segment>
+<segment id="27" parent="28" relname="circumstance">As a proper kernel function ,</segment>
+<segment id="28" parent="1028" relname="span">WJK performs an implicit embedding procedure towards a possibly infinite-dimensional Hilbert space .</segment>
+<segment id="29" parent="1029" relname="span">In synthesis , the WJK between two simplicial complexes , say and , is evaluated as follows :</segment>
+<segment id="30" parent="1031" relname="span">after considering the ’ simplices-of-node-labels ’</segment>
+<segment id="31" parent="30" relname="antithesis">rather than the ’ simplices-of-nodes ’</segment>
+<segment id="32" parent="1033" relname="circumstance">as described in Section 2.2.1 ,</segment>
+<segment id="33" parent="1033" relname="span">the set of unique simplices</segment>
+<segment id="34" parent="33" relname="elaboration">belonging to either or is considered .</segment>
+<segment id="35" parent="1035" relname="span">Then , and are transformed in two vectors , say and ,</segment>
+<segment id="36" parent="35" relname="means">by counting the occurrences of simplices in the unique set within the two simplicial complexes .</segment>
+<segment id="37" parent="1036" relname="joint">Finally , .</segment>
+<segment id="38" parent="1039" relname="span">The kernel matrix</segment>
+<segment id="39" parent="38" relname="elaboration">obtained</segment>
+<segment id="40" parent="1040" relname="same_unit">by evaluating the pairwise weighted Jaccard similarity between any two pairs of simplicial complexes in the available dataset</segment>
+<segment id="41" parent="1040" relname="same_unit">is finally fed to a -SVM .</segment>
+<segment id="42" parent="1036" relname="joint">GRALG .</segment>
+<segment id="43" parent="1036" relname="joint">Originally proposed in Ref .</segment>
+<segment id="44" parent="1036" relname="joint">and later used in Refs .</segment>
+<segment id="45" parent="1036" relname="joint">for image classification , GRALG is a Granular Computing-based classification system for graphs .</segment>
+<segment id="46" parent="47" relname="concession">Despite the fact that it considers network motifs rather than simplices ,</segment>
+<segment id="47" parent="1046" relname="span">it is still based on the same embedding procedure by means of symbolic histograms .</segment>
+<segment id="48" parent="1036" relname="joint">In synthesis , GRALG extracts network motifs from the training data</segment>
+<segment id="49" parent="1049" relname="span">and runs a clustering procedure on such subgraphs</segment>
+<segment id="50" parent="1050" relname="span">by using a graph edit distance as the core</segment>
+<segment id="51" parent="50" relname="elaboration">( dis)similarity measure .</segment>
+<segment id="52" parent="1054" relname="span">The medoids</segment>
+<segment id="53" parent="52" relname="restatement">( MinSODs )</segment>
+<segment id="54" parent="1053" relname="same_unit">of these clusters form the alphabet</segment>
+<segment id="55" parent="1052" relname="same_unit">on top of which the embedding space is built .</segment>
+<segment id="56" parent="1056" relname="span">Two genetic algorithms take care</segment>
+<segment id="57" parent="56" relname="elaboration">of tuning the alphabet synthesis and the feature selection procedure , respectively .</segment>
+<segment id="58" parent="1058" relname="span">GRALG , however , suffers from an heavy computational burden</segment>
+<segment id="59" parent="58" relname="elaboration">which may become unfeasible for large datasets .</segment>
+<segment id="60" parent="1061" relname="span">In order to overcome this problem , the random walk-based variant</segment>
+<segment id="61" parent="60" relname="elaboration">proposed in Ref .</segment>
+<segment id="62" parent="1060" relname="same_unit">has been used .</segment>
+<segment id="63" parent="1063" relname="span">Thirty datasets</segment>
+<segment id="64" parent="1064" relname="span">freely available from Ref .</segment>
+<segment id="65" parent="1066" relname="attribution">have been considered for testing ,</segment>
+<segment id="66" parent="1066" relname="span">all of which well suit the classification problem at hand</segment>
+<segment id="67" parent="66" relname="elaboration">being labelled on nodes with categorical attributes .</segment>
+<segment id="68" parent="1069" relname="span">Each dataset has been split into a training set</segment>
+<segment id="69" parent="68" relname="elaboration">( )</segment>
+<segment id="70" parent="1070" relname="span">and test set</segment>
+<segment id="71" parent="1071" relname="same_unit">( )</segment>
+<segment id="72" parent="1072" relname="span">in a stratified manner</segment>
+<segment id="73" parent="72" relname="purpose">in order to preserve ground-truth labels distribution across the two splits .</segment>
+<segment id="74" parent="1073" relname="joint">Validation data have been taken from the training set via 5-fold cross-validation .</segment>
+<segment id="75" parent="1075" relname="span">For the proposed embedding procedure and WJK , the Clique complex has been used</segment>
+<segment id="76" parent="75" relname="cause">since the underlying 1-skeleton is already available from the considered datasets .</segment>
+<segment id="77" parent="1073" relname="joint">For GRALG , the maximum motifs size has been set to 5</segment>
+<segment id="78" parent="1078" relname="same_unit">and ,</segment>
+<segment id="79" parent="1078" relname="same_unit">following Ref . , a subsampling rate of has been performed on the training set .</segment>
+<segment id="80" parent="1080" relname="preparation">Alongside GRALG and WJK , the accuracy of the dummy classifier is also included :</segment>
+<segment id="81" parent="1080" relname="joint">the latter serves as a baseline solution</segment>
+<segment id="82" parent="1082" relname="span">and quantifies the performance</segment>
+<segment id="83" parent="82" relname="elaboration">obtained by a purely random decision rule .</segment>
+<segment id="84" parent="1084" relname="span">Indeed , the dummy classifier outputs a given label , say with a probability</segment>
+<segment id="85" parent="84" relname="elaboration">related to the relative frequency of amongst the training patterns</segment>
+<segment id="86" parent="1085" relname="span">and , by definition , does not consider the information</segment>
+<segment id="87" parent="1087" relname="span">carried out by the pattern descriptions</segment>
+<segment id="88" parent="87" relname="elaboration">( input domain )</segment>
+<segment id="89" parent="1086" relname="same_unit">in training data .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="multinuc" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="same_unit"/>
+<group id="1007" type="span" parent="1002" relname="joint"/>
+<group id="1008" type="multinuc" parent="7" relname="elaboration"/>
+<group id="1009" type="span" parent="1008" relname="same_unit"/>
+<group id="1010" type="span" parent="1009" relname="span"/>
+<group id="1011" type="span" parent="10" relname="elaboration"/>
+<group id="1012" type="multinuc" parent="11" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1012" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="sequence"/>
+<group id="1015" type="span" parent="14" relname="elaboration"/>
+<group id="1016" type="span" parent="15" relname="elaboration"/>
+<group id="1020" type="span" parent="1002" relname="joint"/>
+<group id="1021" type="span" parent="20" relname="elaboration"/>
+<group id="1022" type="span" parent="21" relname="elaboration"/>
+<group id="1023" type="span" parent="22" relname="elaboration"/>
+<group id="1024" type="multinuc" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="same_unit"/>
+<group id="1026" type="multinuc" parent="1002" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="sequence"/>
+<group id="1028" type="span" parent="1027" relname="span"/>
+<group id="1029" type="span" parent="1028" relname="elaboration"/>
+<group id="1030" type="multinuc" parent="29" relname="circumstance"/>
+<group id="1031" type="span" parent="1030" relname="same_unit"/>
+<group id="1032" type="span" parent="1030" relname="same_unit"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1035" type="span" parent="1026" relname="sequence"/>
+<group id="1036" type="multinuc" parent="1026" relname="sequence"/>
+<group id="1038" type="span" parent="1036" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="span"/>
+<group id="1040" type="multinuc" parent="1039" relname="means"/>
+<group id="1046" type="span" parent="1036" relname="joint"/>
+<group id="1049" type="span" parent="1036" relname="joint"/>
+<group id="1050" type="span" parent="49" relname="means"/>
+<group id="1052" type="multinuc" parent="1036" relname="joint"/>
+<group id="1053" type="multinuc" parent="1052" relname="same_unit"/>
+<group id="1054" type="span" parent="1053" relname="same_unit"/>
+<group id="1055" type="span" parent="1036" relname="joint"/>
+<group id="1056" type="span" parent="1057" relname="preparation"/>
+<group id="1057" type="multinuc" parent="1055" relname="span"/>
+<group id="1058" type="span" parent="1057" relname="joint"/>
+<group id="1060" type="multinuc" parent="1057" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="same_unit"/>
+<group id="1063" type="span" parent="1057" relname="joint"/>
+<group id="1064" type="span" parent="63" relname="elaboration"/>
+<group id="1065" type="span" parent="64" relname="elaboration"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="multinuc" parent="1057" relname="joint"/>
+<group id="1069" type="span" parent="1067" relname="sequence"/>
+<group id="1070" type="span" parent="1067" relname="sequence"/>
+<group id="1071" type="multinuc" parent="70" relname="elaboration"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="multinuc" parent="1067" relname="sequence"/>
+<group id="1075" type="span" parent="1073" relname="joint"/>
+<group id="1078" type="multinuc" parent="1073" relname="joint"/>
+<group id="1079" type="span" parent="1073" relname="joint"/>
+<group id="1080" type="multinuc" parent="1079" relname="span"/>
+<group id="1082" type="span" parent="1080" relname="joint"/>
+<group id="1084" type="span" parent="1080" relname="joint"/>
+<group id="1085" type="span" parent="1080" relname="joint"/>
+<group id="1086" type="multinuc" parent="86" relname="elaboration"/>
+<group id="1087" type="span" parent="1086" relname="same_unit"/>
+	</body>
+</rst>

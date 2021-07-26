@@ -1,0 +1,177 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Magnetic-Map-Matching-Aided Pedestrian Dead Reckoning</segment>
+<segment id="2" parent="1004" relname="attribution">In Section 3 , it is verified</segment>
+<segment id="3" parent="1004" relname="joint">that the number of outliers is reduced ,</segment>
+<segment id="4" parent="1005" relname="span">and the magnetic-map-matching accuracy is improved</segment>
+<segment id="5" parent="4" relname="means">by employing multiple magnetic sensors and proposed mitigation techniques .</segment>
+<segment id="6" parent="1006" relname="span">This section describes combining PDR and magnetic map matching .</segment>
+<segment id="7" parent="1007" relname="span">By integrating them ,</segment>
+<segment id="8" parent="1009" relname="attribution">it is expected</segment>
+<segment id="9" parent="1009" relname="span">that the positioning accuracy will be improved</segment>
+<segment id="10" parent="9" relname="concession">even when a magnetic map does not cover all the areas .</segment>
+<segment id="11" parent="1013" relname="span">In this study , map-matching-aided pedestrian dead reckoning</segment>
+<segment id="12" parent="11" relname="restatement">( MAPDR )</segment>
+<segment id="13" parent="1012" relname="same_unit">was constructed .</segment>
+<segment id="14" parent="1014" relname="span">To estimate and compensate for the navigation errors ,</segment>
+<segment id="15" parent="14" relname="elaboration">a 15th-order EKF is used .</segment>
+<segment id="16" parent="1017" relname="span">The error state vector is given by the following equation :</segment>
+<segment id="17" parent="16" relname="restatement">( 23 )</segment>
+<segment id="18" parent="1018" relname="span">where , , and are the position error , velocity error , and attitude error in the North-East-Down</segment>
+<segment id="19" parent="18" relname="elaboration">( NED ) coordinate system , respectively .</segment>
+<segment id="20" parent="1019" relname="span">The gyro bias and acceleration bias are and , respectively .</segment>
+<segment id="21" parent="1021" relname="span">Since the navigation sensors</segment>
+<segment id="22" parent="21" relname="elaboration">used in a PDR cannot measure the earth rate ,</segment>
+<segment id="23" parent="1025" relname="span">the error models , including the position error , can be simplified as follows :</segment>
+<segment id="24" parent="23" relname="restatement">( 24 )</segment>
+<segment id="25" parent="1025" relname="restatement">( 25 )</segment>
+<segment id="26" parent="1024" relname="restatement">( 26 )</segment>
+<segment id="27" parent="1027" relname="joint">where is a rotation matrix from the body frame to NED frame ,</segment>
+<segment id="28" parent="1028" relname="span">and is a skew-symmetric matrix</segment>
+<segment id="29" parent="1029" relname="span">corresponding to input acceleration</segment>
+<segment id="30" parent="1030" relname="span">which is defined as follows :</segment>
+<segment id="31" parent="30" relname="restatement">( 27 )</segment>
+<segment id="32" parent="1033" relname="span">Thus , the 15th-order state-space-error model can be expressed as follows :</segment>
+<segment id="33" parent="32" relname="restatement">( 28 )</segment>
+<segment id="34" parent="1034" relname="joint">where is the input noise vector ,</segment>
+<segment id="35" parent="1034" relname="joint">and is an identity matrix .</segment>
+<segment id="36" parent="1036" relname="span">The biases of the accelerometer and gyroscope sensors are assumed to be a first-order Markov process , with a large time constant</segment>
+<segment id="37" parent="36" relname="purpose">to compensate the slowly varying bias drift over time .</segment>
+<segment id="38" parent="1037" relname="joint">Thus , and are set to be very small in this model .</segment>
+<segment id="39" parent="1039" relname="span">In addition to the position measurements from magnetic map matching ,</segment>
+<segment id="40" parent="1040" relname="span">the heading information</segment>
+<segment id="41" parent="1042" relname="span">using the magnetic sensor</segment>
+<segment id="42" parent="41" relname="elaboration">mounted on the waist</segment>
+<segment id="43" parent="1043" relname="span">is utilized as a measurement</segment>
+<segment id="44" parent="43" relname="elaboration">for preventing the divergence of the yaw angle .</segment>
+<segment id="45" parent="1045" relname="span">While ZUPT is performed repeatedly in a stance phase ,</segment>
+<segment id="46" parent="1046" relname="span">the magnetic heading update and position update are carried out once in the stance phase</segment>
+<segment id="47" parent="46" relname="cause">because they are relatively less accurate than the zero velocity measurements .</segment>
+<segment id="48" parent="1048" relname="preparation">Therefore , two measurement models are required .</segment>
+<segment id="49" parent="1049" relname="span">One is for the position and heading measurement update at the time</segment>
+<segment id="50" parent="1050" relname="span">when the stance phase starts ,</segment>
+<segment id="51" parent="1051" relname="span">which is defined as follows :</segment>
+<segment id="52" parent="51" relname="restatement">( 29 )</segment>
+<segment id="53" parent="1053" relname="joint">In this case , the measurement becomes where is obtained by importance sampling and magnetic map matching ,</segment>
+<segment id="54" parent="1054" relname="span">and is a heading measurement</segment>
+<segment id="55" parent="54" relname="elaboration">obtained from the waist-mounted magnetic sensor .</segment>
+<segment id="56" parent="1056" relname="same_unit">The measurement covariance matrix , for the measurements noise , ,</segment>
+<segment id="57" parent="1057" relname="span">is composed of ,</segment>
+<segment id="58" parent="1058" relname="span">which is automatically calculated by the importance sampling and ,</segment>
+<segment id="59" parent="58" relname="elaboration">which represents the variance of the heading measurement .</segment>
+<segment id="60" parent="61" relname="concession">Although the magnetic field around the waist is less distorted ,</segment>
+<segment id="61" parent="1060" relname="span">the heading information is not sufficiently accurate .</segment>
+<segment id="62" parent="1062" relname="span">Moreover , the position measurement can be used for the EKF ,</segment>
+<segment id="63" parent="62" relname="elaboration">so that is set to a slightly large value .</segment>
+<segment id="64" parent="1064" relname="span">The other measurement model is for ZUPT during the stance phase ,</segment>
+<segment id="65" parent="1066" relname="span">which is expressed as follows :</segment>
+<segment id="66" parent="65" relname="restatement">( 30 )</segment>
+<segment id="67" parent="1067" relname="span">where is the measured noise vector</segment>
+<segment id="68" parent="67" relname="elaboration">modeled as white Gaussian noise with covariance , .</segment>
+<segment id="69" parent="1068" relname="span">The velocity measurement is , the and velocity measurement noise</segment>
+<segment id="70" parent="1070" relname="span">covariance is usually small</segment>
+<segment id="71" parent="70" relname="circumstance">when the stance phase can be detected perfectly .</segment>
+<segment id="72" parent="73" relname="preparation">Figure 7</segment>
+<segment id="73" parent="1072" relname="span">shows a block diagram of the proposed MAPDR algorithm .</segment>
+<segment id="74" parent="1074" relname="preparation">The MAPDR algorithm is roughly divided into three parts :</segment>
+<segment id="75" parent="1074" relname="joint">an inertial navigation algorithm , a magnetic-field map-matching with outlier mitigation and importance sampling , and an extended Kalman filter .</segment>
+<segment id="76" parent="1076" relname="span">Basically , attitude , velocity , and position are obtained through an inertial navigation process</segment>
+<segment id="77" parent="76" relname="elaboration">based on the quaternion .</segment>
+<segment id="78" parent="1077" relname="span">The heading measurements from the magnetic sensor , the position measurement from the magnetic map matching , and the ZUPT are used for the EKF</segment>
+<segment id="79" parent="78" relname="purpose">to correct navigation and sensor bias errors .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1010" relname="background"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="multinuc" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="1003" relname="elaboration"/>
+<group id="1007" type="span" parent="6" relname="means"/>
+<group id="1008" type="span" parent="7" relname="elaboration"/>
+<group id="1009" type="span" parent="1008" relname="span"/>
+<group id="1010" type="multinuc" parent="1001" relname="span"/>
+<group id="1011" type="span" parent="1010" relname="joint"/>
+<group id="1012" type="multinuc" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="1012" relname="same_unit"/>
+<group id="1014" type="span" parent="1012" relname="purpose"/>
+<group id="1016" type="span" parent="1010" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="elaboration"/>
+<group id="1019" type="span" parent="1010" relname="joint"/>
+<group id="1020" type="multinuc" parent="20" relname="circumstance"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1020" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="span"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="multinuc" parent="1023" relname="elaboration"/>
+<group id="1027" type="multinuc" parent="1026" relname="joint"/>
+<group id="1028" type="span" parent="1027" relname="joint"/>
+<group id="1029" type="span" parent="28" relname="elaboration"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1031" type="multinuc" parent="1026" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1034" type="multinuc" parent="1033" relname="elaboration"/>
+<group id="1035" type="multinuc" parent="1031" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="1035" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="span" parent="39" relname="elaboration"/>
+<group id="1041" type="multinuc" parent="40" relname="means"/>
+<group id="1042" type="span" parent="1041" relname="same_unit"/>
+<group id="1043" type="span" parent="1041" relname="same_unit"/>
+<group id="1044" type="multinuc" parent="1038" relname="joint"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1046" type="span" parent="45" relname="elaboration"/>
+<group id="1047" type="span" parent="1044" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="span"/>
+<group id="1049" type="span" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="49" relname="circumstance"/>
+<group id="1051" type="span" parent="50" relname="elaboration"/>
+<group id="1052" type="multinuc" parent="1048" relname="joint"/>
+<group id="1053" type="multinuc" parent="1052" relname="sequence"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+<group id="1055" type="multinuc" parent="1052" relname="sequence"/>
+<group id="1056" type="multinuc" parent="1055" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="same_unit"/>
+<group id="1058" type="span" parent="57" relname="elaboration"/>
+<group id="1059" type="multinuc" parent="1055" relname="joint"/>
+<group id="1060" type="span" parent="1059" relname="joint"/>
+<group id="1061" type="multinuc" parent="1059" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="joint"/>
+<group id="1063" type="multinuc" parent="1061" relname="joint"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1065" type="span" parent="64" relname="elaboration"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="elaboration"/>
+<group id="1068" type="span" parent="1063" relname="joint"/>
+<group id="1069" type="multinuc" parent="69" relname="elaboration"/>
+<group id="1070" type="span" parent="1069" relname="joint"/>
+<group id="1071" type="multinuc" parent="1069" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="span" parent="1071" relname="joint"/>
+<group id="1074" type="multinuc" parent="1073" relname="span"/>
+<group id="1075" type="multinuc" parent="1074" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="sequence"/>
+<group id="1077" type="span" parent="1075" relname="sequence"/>
+	</body>
+</rst>

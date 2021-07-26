@@ -1,0 +1,213 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Governing Equations</segment>
+<segment id="2" parent="1002" relname="preparation">Let be the spatial domain at time ,</segment>
+<segment id="3" parent="1003" relname="preparation">with denoting the i -th cartesian coordinate .</segment>
+<segment id="4" parent="1009" relname="span">Using the Einstein summation convention , the governing equations for three-dimensional unsteady flow with variable density</segment>
+<segment id="5" parent="4" relname="elaboration">( due , e.g. , to temperature variations )</segment>
+<segment id="6" parent="1008" relname="same_unit">can be written as follows</segment>
+<segment id="7" parent="1008" relname="restatement">( 1 )</segment>
+<segment id="8" parent="1007" relname="restatement">( 2 )</segment>
+<segment id="9" parent="1006" relname="restatement">( 3 )</segment>
+<segment id="10" parent="1011" relname="span">where is the fluid density , the i -th component of the velocity vector , the total energy per unit mass</segment>
+<segment id="11" parent="1012" relname="span">( with the specific internal energy per unit mass ,</segment>
+<segment id="12" parent="11" relname="elaboration">assuming a calorically perfect fluid ) ,</segment>
+<segment id="13" parent="1013" relname="same_unit">p the pressure ,</segment>
+<segment id="14" parent="1014" relname="joint">T the absolute temperature , the i -th component of the acceleration of gravity ,</segment>
+<segment id="15" parent="1014" relname="joint">and k the thermal conductivity .</segment>
+<segment id="16" parent="1017" relname="span">In the above equations represent the deviatoric stress components</segment>
+<segment id="17" parent="16" relname="restatement">( 4 )</segment>
+<segment id="18" parent="1017" relname="elaboration">where is the dynamic viscosity and the Kronecker delta .</segment>
+<segment id="19" parent="1019" relname="span">In non-isothermal flows</segment>
+<segment id="20" parent="1020" relname="joint">where the density variations are small</segment>
+<segment id="21" parent="22" relname="condition">but the flow is driven by buoyancy forces , such as in natural or mixed convection problems ,</segment>
+<segment id="22" parent="1021" relname="span">one may simplify the equations by means of the Boussinesq approximation .</segment>
+<segment id="23" parent="1024" relname="attribution">This approximation assumes</segment>
+<segment id="24" parent="1024" relname="span">that variations in density have no effect on the flow field</segment>
+<segment id="25" parent="24" relname="elaboration">other than to give rise to buoyancy forces .</segment>
+<segment id="26" parent="1027" relname="span">In this case , the continuity and momentum equations take the simplified form</segment>
+<segment id="27" parent="26" relname="restatement">( 5 )</segment>
+<segment id="28" parent="1028" relname="span">( 6 )</segment>
+<segment id="29" parent="28" relname="elaboration">where is the reference fluid density , the reference temperature , and the thermal expansion coefficient .</segment>
+<segment id="30" parent="1030" relname="span">In the Boussinesq approximation , the energy equation is often simplified</segment>
+<segment id="31" parent="30" relname="means">by also ignoring the density variations .</segment>
+<segment id="32" parent="1031" relname="joint">However , in this work , the energy equation will be kept in its general form , without any further simplification .</segment>
+<segment id="33" parent="1034" relname="span">The reason for this approach is to minimize the approximation error</segment>
+<segment id="34" parent="1035" relname="span">when computing the temperature field in a fluid</segment>
+<segment id="35" parent="34" relname="elaboration">that undergoes tiny variations of density ,</segment>
+<segment id="36" parent="1036" relname="span">and to give a unified treatment to the energy equation</segment>
+<segment id="37" parent="1037" relname="span">independently of the way</segment>
+<segment id="38" parent="37" relname="elaboration">density is computed .</segment>
+<segment id="39" parent="1041" relname="span">In the range of Reynolds number</segment>
+<segment id="40" parent="39" relname="elaboration">considered here ,</segment>
+<segment id="41" parent="1040" relname="same_unit">the different treatments of the energy equation , and the assumption of constant specific heats , do not make a significant difference .</segment>
+<segment id="42" parent="1042" relname="same_unit">Leaving the general form allows validating the implementation of the energy equation</segment>
+<segment id="43" parent="44" relname="concession">when the Boussinesq approximation is used in the Navier – Stokes equations</segment>
+<segment id="44" parent="1043" relname="span">but not in the energy equation .</segment>
+<segment id="45" parent="1044" relname="joint">Let be the characteristic length , the characteristic velocity , the characteristic residence time of the problem , the reference density , the reference dynamic viscosity , and the reference thermal conductivity .</segment>
+<segment id="46" parent="1048" relname="span">With these scales , the following dimensionless variables can be introduced</segment>
+<segment id="47" parent="46" relname="restatement">( 7 )</segment>
+<segment id="48" parent="1048" relname="elaboration">where represents a convenient pressure datum ,</segment>
+<segment id="49" parent="1046" relname="joint">and is the acceleration of gravity .</segment>
+<segment id="50" parent="1050" relname="span">The asterisk will be dropped in the following for simplicity ,</segment>
+<segment id="51" parent="50" relname="purpose">so that all variables will be assumed to be non-dimensional .</segment>
+<segment id="52" parent="1056" relname="span">Thus , the general governing Equations</segment>
+<segment id="53" parent="52" relname="elaboration">( 1 ) – ( 3 )</segment>
+<segment id="54" parent="1055" relname="same_unit">can be rewritten as follows</segment>
+<segment id="55" parent="1055" relname="restatement">( 8 )</segment>
+<segment id="56" parent="1054" relname="restatement">( 9 ) ( 10 )</segment>
+<segment id="57" parent="1058" relname="joint">where is the Reynolds number , is the Froude number ,</segment>
+<segment id="58" parent="1058" relname="joint">and is the Prandtl number ,</segment>
+<segment id="59" parent="1059" relname="span">defined in terms of the specific heat at constant pressure ,</segment>
+<segment id="60" parent="59" relname="elaboration">assumed here to be constant .</segment>
+<segment id="61" parent="1062" relname="attribution">Note</segment>
+<segment id="62" parent="1062" relname="span">that for liquids both specific heats are equal ,</segment>
+<segment id="63" parent="1063" relname="span">whereas for gases , where is the gas constant ,</segment>
+<segment id="64" parent="1064" relname="span">defined as the ratio between the universal gas constant and the molecular mass of the gas W</segment>
+<segment id="65" parent="64" relname="elaboration">that is constant for gases of uniform composition .</segment>
+<segment id="66" parent="1067" relname="span">Under the Boussinesq approximation , it is convenient to define the normalized dimensionless temperature</segment>
+<segment id="67" parent="66" relname="elaboration">( 11 ) in terms of the reference temperature and a characteristic temperature</segment>
+<segment id="68" parent="1068" relname="span">( e.g. , that of a hot or cold wall ,</segment>
+<segment id="69" parent="1069" relname="span">thereby the subscript w )</segment>
+<segment id="70" parent="69" relname="elaboration">that determines the characteristic temperature difference of the problem , .</segment>
+<segment id="71" parent="1072" relname="same_unit">In this case , the momentum conservation Equation ( 6 ) and the energy conservation Equation ( 3 )</segment>
+<segment id="72" parent="1073" relname="span">can be rewritten as follows ,</segment>
+<segment id="73" parent="72" relname="elaboration">where the asterisks are dropped again</segment>
+<segment id="74" parent="1076" relname="span">so that all variables are non-dimensional</segment>
+<segment id="75" parent="74" relname="restatement">( 12 )</segment>
+<segment id="76" parent="1076" relname="restatement">( 13 )</segment>
+<segment id="77" parent="1077" relname="span">while the continuity Equation ( 5 ) remains unchanged ,</segment>
+<segment id="78" parent="77" relname="elaboration">implying the divergence-free nature of the velocity field .</segment>
+<segment id="79" parent="1079" relname="span">The simplified form of the continuity equation has been used , in particular ,</segment>
+<segment id="80" parent="1081" relname="span">to rewrite the convective term in the energy Equation</segment>
+<segment id="81" parent="80" relname="restatement">( 13 )</segment>
+<segment id="82" parent="1081" relname="elaboration">including the velocity into the spatial derivative .</segment>
+<segment id="83" parent="1084" relname="attribution">Note that ,</segment>
+<segment id="84" parent="1085" relname="attribution">following standard practice ,</segment>
+<segment id="85" parent="1086" relname="attribution">in the momentum conservation Equation ( 12 )</segment>
+<segment id="86" parent="1086" relname="span">the dimensionless density has been assumed to be constant</segment>
+<segment id="87" parent="1087" relname="span">( )</segment>
+<segment id="88" parent="1088" relname="span">except in the buoyancy term ,</segment>
+<segment id="89" parent="1090" relname="span">which is written in terms of the Grashof number</segment>
+<segment id="90" parent="89" relname="restatement">( 14 )</segment>
+<segment id="91" parent="1092" relname="span">and the normalized dimensionless temperature ,</segment>
+<segment id="92" parent="91" relname="elaboration">given by ( 11 ) in terms of the dimensionless temperature T</segment>
+<segment id="93" parent="1092" relname="elaboration">computed from ( 13 ) .</segment>
+<segment id="94" parent="1093" relname="span">Finally ,</segment>
+<segment id="95" parent="1094" relname="joint">to be well posed ,</segment>
+<segment id="96" parent="1095" relname="span">the mathematical problem also requires appropriate boundary conditions and a set of initial conditions for all the variables</segment>
+<segment id="97" parent="96" relname="purpose">to be solved .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="span"/>
+<group id="1004" type="multinuc" parent="1003" relname="joint"/>
+<group id="1005" type="span" parent="1004" relname="same_unit"/>
+<group id="1006" type="span" parent="1005" relname="span"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="multinuc" parent="1007" relname="span"/>
+<group id="1009" type="span" parent="1008" relname="same_unit"/>
+<group id="1010" type="span" parent="1004" relname="same_unit"/>
+<group id="1011" type="span" parent="1013" relname="circumstance"/>
+<group id="1012" type="span" parent="10" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1010" relname="span"/>
+<group id="1014" type="multinuc" parent="1013" relname="same_unit"/>
+<group id="1016" type="span" parent="1003" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1019" type="span" parent="1003" relname="joint"/>
+<group id="1020" type="multinuc" parent="19" relname="elaboration"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1003" relname="joint"/>
+<group id="1023" type="span" parent="1025" relname="background"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1022" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1028" type="span" parent="1027" relname="elaboration"/>
+<group id="1029" type="multinuc" parent="1026" relname="elaboration"/>
+<group id="1030" type="span" parent="1029" relname="contrast"/>
+<group id="1031" type="multinuc" parent="1029" relname="contrast"/>
+<group id="1032" type="multinuc" parent="1031" relname="joint"/>
+<group id="1033" type="multinuc" parent="1032" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="33" relname="circumstance"/>
+<group id="1036" type="span" parent="1033" relname="joint"/>
+<group id="1037" type="span" parent="36" relname="elaboration"/>
+<group id="1038" type="multinuc" parent="1032" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="1039" relname="span"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="multinuc" parent="1040" relname="elaboration"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="multinuc" parent="1038" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="joint"/>
+<group id="1046" type="multinuc" parent="1045" relname="joint"/>
+<group id="1047" type="span" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="span"/>
+<group id="1049" type="multinuc" parent="1045" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="multinuc" parent="1049" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="span" parent="1052" relname="span"/>
+<group id="1054" type="span" parent="1053" relname="span"/>
+<group id="1055" type="multinuc" parent="1054" relname="span"/>
+<group id="1056" type="span" parent="1055" relname="same_unit"/>
+<group id="1057" type="span" parent="1053" relname="elaboration"/>
+<group id="1058" type="multinuc" parent="1057" relname="span"/>
+<group id="1059" type="span" parent="1058" relname="elaboration"/>
+<group id="1060" type="multinuc" parent="1051" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="span"/>
+<group id="1063" type="span" parent="62" relname="elaboration"/>
+<group id="1064" type="span" parent="63" relname="elaboration"/>
+<group id="1065" type="multinuc" parent="1060" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="span" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="elaboration"/>
+<group id="1069" type="span" parent="68" relname="result"/>
+<group id="1070" type="multinuc" parent="1065" relname="joint"/>
+<group id="1071" type="span" parent="1070" relname="joint"/>
+<group id="1072" type="multinuc" parent="1071" relname="span"/>
+<group id="1073" type="span" parent="1072" relname="same_unit"/>
+<group id="1074" type="multinuc" parent="1072" relname="purpose"/>
+<group id="1075" type="span" parent="1074" relname="same_unit"/>
+<group id="1076" type="span" parent="1075" relname="span"/>
+<group id="1077" type="span" parent="1074" relname="same_unit"/>
+<group id="1078" type="multinuc" parent="1070" relname="joint"/>
+<group id="1079" type="span" parent="1078" relname="joint"/>
+<group id="1080" type="span" parent="79" relname="purpose"/>
+<group id="1081" type="span" parent="1080" relname="span"/>
+<group id="1082" type="multinuc" parent="1078" relname="joint"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1085" type="span" parent="1084" relname="span"/>
+<group id="1086" type="span" parent="1085" relname="span"/>
+<group id="1087" type="span" parent="86" relname="elaboration"/>
+<group id="1088" type="span" parent="87" relname="concession"/>
+<group id="1089" type="multinuc" parent="88" relname="elaboration"/>
+<group id="1090" type="span" parent="1089" relname="same_unit"/>
+<group id="1091" type="span" parent="1089" relname="same_unit"/>
+<group id="1092" type="span" parent="1091" relname="span"/>
+<group id="1093" type="span" parent="1082" relname="joint"/>
+<group id="1094" type="multinuc" parent="94" relname="purpose"/>
+<group id="1095" type="span" parent="1094" relname="joint"/>
+	</body>
+</rst>

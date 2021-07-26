@@ -1,0 +1,816 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_algorithm" title="A Graph Representation Learning Algorithm for Low-Order Proximity Feature Extraction to Enhance Unsupervised IDS Preprocessing" shortTitle="algorithm" author="Yiran Hao, Yiqiang Sheng, Jinlin Wang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4473/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Related	JJ	related
+Work	NNP	Work
+</s>
+</head>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+Unsupervised	JJ	unsupervised
+Intrusion	NN	intrusion
+Detection	NN	detection
+Techniques	NNS	technique
+</s>
+</head>
+<p>
+<s type="decl">
+Intrusion	NN	intrusion
+detection	NN	detection
+mainly	RB	mainly
+includes	VBZ	include
+signature-based	JJ	signature-based
+intrusion	NN	intrusion
+detection	NN	detection
+and	CC	and
+anomaly-based	JJ	anomaly-based
+intrusion	NN	intrusion
+detection	NN	detection
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+detail	NN	detail
+,	,	,
+signature-based	JJ	signature-based
+intrusion	NN	intrusion
+detection	NN	detection
+is	VBZ	be
+also	RB	also
+known	VBN	know
+as	IN	as
+rule-based	JJ	rule-based
+intrusion	NN	intrusion
+detection	NN	detection
+.	.	.
+</s>
+<s type="decl">
+Signature-based	JJ	Signature-based
+intrusion	NN	intrusion
+detection	NN	detection
+has	VBZ	have
+a	DT	a
+high	JJ	high
+detection	NN	detection
+rate	NN	rate
+for	IN	for
+known	VBN	know
+attacks	NNS	attack
+,	,	,
+but	CC	but
+has	VBZ	have
+no	DT	no
+ability	NN	ability
+to	TO	to
+detect	VB	detect
+attack	NN	attack
+behaviors	NNS	behavior
+that	WDT	that
+are	VBP	be
+not	RB	not
+in	IN	in
+the	DT	the
+rule	NN	rule
+base	NN	base
+.	.	.
+</s>
+<s type="decl">
+Anomaly-based	JJ	Anomaly-based
+intrusion	NN	intrusion
+detection	NN	detection
+is	VBZ	be
+also	RB	also
+known	VBN	know
+as	IN	as
+behavior-based	JJ	behavior-based
+intrusion	NN	intrusion
+detection	NN	detection
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+algorithm	NN	algorithm
+has	VBZ	have
+the	DT	the
+ability	NN	ability
+to	TO	to
+detect	VB	detect
+unknown	JJ	unknown
+attack	NN	attack
+behavior	NN	behavior
+.	.	.
+</s>
+<s type="decl">
+Feature	NN	feature
+extraction	NN	extraction
+based	VBN	base
+on	IN	on
+accurately	RB	accurately
+preprocessed	VBN	preprocess
+network	NN	network
+packets	NNS	packet
+in	IN	in
+anomaly-based	JJ	anomaly-based
+intrusion	NN	intrusion
+detection	NN	detection
+is	VBZ	be
+the	DT	the
+basis	NN	basis
+for	IN	for
+good	JJ	good
+performance	NN	performance
+.	.	.
+</s>
+<s type="decl">
+At	IN	at
+present	NN	present
+,	,	,
+it	PRP	it
+is	VBZ	be
+easy	JJ	easy
+to	TO	to
+collect	VB	collect
+a	DT	a
+large	JJ	large
+amount	NN	amount
+of	IN	of
+unlabeled	JJ	unlabeled
+data	NNS	datum
+in	IN	in
+intrusion	NN	intrusion
+detection	NN	detection
+,	,	,
+and	CC	and
+it	PRP	it
+is	VBZ	be
+difficult	JJ	difficult
+to	TO	to
+obtain	VB	obtain
+a	DT	a
+large	JJ	large
+amount	NN	amount
+of	IN	of
+labeled	VBN	label
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+an	DT	a
+unsupervised	JJ	unsupervised
+algorithm	NN	algorithm
+for	IN	for
+intrusion	NN	intrusion
+detection	NN	detection
+has	VBZ	have
+been	VBN	be
+introduced	VBN	introduce
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+recent	JJ	recent
+years	NNS	year
+,	,	,
+there	EX	there
+have	VBP	have
+been	VBN	be
+some	DT	some
+studies	NNS	study
+based	VBN	base
+on	IN	on
+unsupervised	JJ	unsupervised
+intrusion	NN	intrusion
+detection	NN	detection
+techniques	NNS	technique
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+<date when="2007">
+2007	CD	2007
+</date>
+,	,	,
+Liu	NNP	Liu
+et	FW	et
+al.	NNP	al.
+used	VBD	use
+a	DT	a
+hierarchical	JJ	hierarchical
+PCA	NN	PCA
+model	NN	model
+to	TO	to
+detect	VB	detect
+intrusion	NN	intrusion
+behavior	NN	behavior
+on	IN	on
+the	DT	the
+KDD99	NNP	KDD99
+dataset	NN	dataset
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+<date when="2017">
+2017	CD	2017
+</date>
+,	,	,
+Gouveia	NNP	Gouveia
+et	NNP	et
+al.	FW	al.
+used	VBD	use
+RBM	NNP	RBM
+to	TO	to
+detect	VB	detect
+intrusion	NN	intrusion
+behavior	NN	behavior
+on	IN	on
+the	DT	the
+ISCX2012	NNP	ISCX2012
+dataset	NN	dataset
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+<date when="2018">
+2018	CD	2018
+</date>
+,	,	,
+Farahnakian	NNP	Farahnakian
+et	FW	et
+al.	FW	al.
+used	VBD	use
+Deep	NNP	Deep
+Auto-encoder	NNP	Auto-encoder
+to	TO	to
+detect	VB	detect
+intrusion	NN	intrusion
+behavior	NN	behavior
+on	IN	on
+the	DT	the
+KDD99	NNP	KDD99
+dataset	NN	dataset
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+common	JJ	common
+point	NN	point
+of	IN	of
+the	DT	the
+above	JJ	above
+studies	NNS	study
+is	VBZ	be
+that	IN	that
+the	DT	the
+preprocessing	NN	preprocessing
+ignores	VBZ	ignore
+the	DT	the
+similarity	NN	similarity
+between	IN	between
+network	NN	network
+packets	NNS	packet
+.	.	.
+</s>
+<s type="decl">
+Network	NN	network
+packets	NNS	packet
+with	IN	with
+strong	JJ	strong
+similarity	NN	similarity
+relationship	NN	relationship
+are	VBP	be
+closer	JJR	close
+in	IN	in
+the	DT	the
+similarity	NN	similarity
+relation	NN	relation
+graph	NN	graph
+and	CC	and
+have	VBP	have
+similar	JJ	similar
+local	JJ	local
+proximity	NN	proximity
+embedding	NN	embedding
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+preprocessing	NN	preprocessing
+algorithm	NN	algorithm
+in	IN	in
+the	DT	the
+above	JJ	above
+studies	NNS	study
+ignores	VBZ	ignore
+the	DT	the
+similarity	NN	similarity
+relationship	NN	relationship
+between	IN	between
+network	NN	network
+packets	NNS	packet
+,	,	,
+resulting	VBG	result
+in	IN	in
+low	JJ	low
+accuracy	NN	accuracy
+of	IN	of
+intrusion	NN	intrusion
+detection	NN	detection
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+we	PRP	we
+introduce	VBP	introduce
+a	DT	a
+graph	NN	graph
+representation	NN	representation
+leaning	VBG	lean
+algorithm	NN	algorithm
+to	TO	to
+solve	VB	solve
+the	DT	the
+above	JJ	above
+problem	NN	problem
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+network	NN	network
+packet	NN	packet
+is	VBZ	be
+preprocessed	VBN	preprocess
+by	IN	by
+using	VBG	use
+a	DT	a
+graph	NN	graph
+representation	NN	representation
+leaning	NN	leaning
+algorithm	NN	algorithm
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+proposed	VBN	propose
+algorithm	NN	algorithm
+,	,	,
+the	DT	the
+original	JJ	original
+features	NNS	feature
+of	IN	of
+the	DT	the
+network	NN	network
+packet	NN	packet
+are	VBP	be
+combined	VBN	combine
+with	IN	with
+the	DT	the
+local	JJ	local
+proximity	NN	proximity
+features	NNS	feature
+describing	VBG	describe
+the	DT	the
+similarity	NN	similarity
+relationship	NN	relationship
+between	IN	between
+the	DT	the
+network	NN	network
+packets	NNS	packet
+as	IN	as
+the	DT	the
+input	NN	input
+of	IN	of
+the	DT	the
+neural	JJ	neural
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+algorithm	NN	algorithm
+adds	VBZ	add
+effective	JJ	effective
+features	NNS	feature
+by	IN	by
+considering	VBG	consider
+the	DT	the
+similarities	NNS	similarity
+between	IN	between
+network	NN	network
+packets	NNS	packet
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+Graph	NNP	Graph
+Representation	NN	representation
+Learning	NN	learning
+</s>
+</head>
+<p>
+<s type="frag">
+Graph	NN	graph
+representation	NN	representation
+</s>
+<s type="decl">
+leaning	NN	leaning
+refers	VBZ	refer
+to	IN	to
+the	DT	the
+automatic	JJ	automatic
+extraction	NN	extraction
+of	IN	of
+proximity	NN	proximity
+features	NNS	feature
+of	IN	of
+nodes	NNS	node
+in	IN	in
+a	DT	a
+graph	NN	graph
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+algorithm	NN	algorithm
+has	VBZ	have
+achieved	VBN	achieve
+effects	NNS	effect
+in	IN	in
+the	DT	the
+application	NN	application
+of	IN	of
+approximate	JJ	approximate
+semantic	JJ	semantic
+classification	NN	classification
+of	IN	of
+words	NNS	word
+,	,	,
+handwritten	JJ	handwritten
+character	NN	character
+classification	NN	classification
+and	CC	and
+so	RB	so
+on	RB	on
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+existing	VBG	exist
+graph	NN	graph
+representation	NN	representation
+leaning	NN	leaning
+algorithms	NNS	algorithm
+are	VBP	be
+mainly	RB	mainly
+the	DT	the
+following	VBG	follow
+,	,	,
+such	JJ	such
+as	IN	as
+:	:	:
+Node2vec	NNP	Node2vec
+,	,	,
+Deepwalk	NNP	Deepwalk
+,	,	,
+LINE	NNP	LINE
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+Deepwalk	NNP	Deepwalk
+uses	VBZ	use
+a	DT	a
+simple	JJ	simple
+unbiased	JJ	unbiased
+random	JJ	random
+walk	NN	walk
+,	,	,
+which	WDT	which
+does	VBZ	do
+not	RB	not
+control	VB	control
+the	DT	the
+direction	NN	direction
+of	IN	of
+random	JJ	random
+walks	NNS	walk
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+Deepwalk	NNP	Deepwalk
+is	VBZ	be
+easy	JJ	easy
+to	TO	to
+sample	VB	sample
+into	IN	into
+the	DT	the
+higher-order	NN	higher-order
+proximity	NN	proximity
+range	NN	range
+,	,	,
+which	WDT	which
+makes	VBZ	make
+it	PRP	it
+impossible	JJ	impossible
+to	TO	to
+accurately	RB	accurately
+describe	VB	describe
+the	DT	the
+local	JJ	local
+proximity	NN	proximity
+features	NNS	feature
+of	IN	of
+the	DT	the
+current	JJ	current
+node	NN	node
+;	:	;
+LINE	NNP	LINE
+does	VBZ	do
+not	RB	not
+have	VB	have
+the	DT	the
+ability	NN	ability
+to	TO	to
+simultaneously	RB	simultaneously
+sample	VB	sample
+first-order	NN	first-order
+proximity	NN	proximity
+and	CC	and
+second-order	NN	second-order
+proximity	NN	proximity
+,	,	,
+so	RB	so
+the	DT	the
+algorithm	NN	algorithm
+has	VBZ	have
+limitations	NNS	limitation
+;	:	;
+Node2vec	NNP	Node2vec
+uses	VBZ	use
+a	DT	a
+random	JJ	random
+walk	NN	walk
+based	VBN	base
+on	IN	on
+breadth	NN	breadth
+first	JJ	first
+search	NN	search
+(	-LRB-	(
+BFS	NNP	BFS
+)	-RRB-	)
+or	CC	or
+depth	NN	depth
+first	JJ	first
+search	NN	search
+(	-LRB-	(
+DFS	NNP	DFS
+)	-RRB-	)
+to	TO	to
+explore	VB	explore
+the	DT	the
+neighbor	NN	neighbor
+of	IN	of
+the	DT	the
+node	NN	node
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+random	JJ	random
+walks	NNS	walk
+based	VBN	base
+on	IN	on
+BFS	NNP	BFS
+or	CC	or
+DFS	NNP	DFS
+are	VBP	be
+blind	JJ	blind
+searches	NNS	search
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+other	JJ	other
+words	NNS	word
+,	,	,
+BFS	NNP	BFS
+lacks	VBZ	lack
+constraints	NNS	constraint
+on	IN	on
+the	DT	the
+range	NN	range
+of	IN	of
+random	JJ	random
+walks	NNS	walk
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+the	DT	the
+random	JJ	random
+walk	NN	walk
+has	VBZ	have
+the	DT	the
+probability	NN	probability
+of	IN	of
+sampling	VBG	sample
+to	IN	to
+the	DT	the
+source	NN	source
+node	NN	node
+’s	POS	's
+higher-order	JJR	higher-order
+proximity	NN	proximity
+,	,	,
+which	WDT	which
+makes	VBZ	make
+it	PRP	it
+impossible	JJ	impossible
+to	TO	to
+accurately	RB	accurately
+extract	VB	extract
+the	DT	the
+local	JJ	local
+proximity	NN	proximity
+features	NNS	feature
+of	IN	of
+the	DT	the
+source	NN	source
+node	NN	node
+that	WDT	that
+describe	VBP	describe
+the	DT	the
+similarity	NN	similarity
+relationship	NN	relationship
+between	IN	between
+network	NN	network
+packets	NNS	packet
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+we	PRP	we
+propose	VBP	propose
+a	DT	a
+node2vec	NN	node2vec
+with	IN	with
+penalty	NN	penalty
+for	IN	for
+unsupervised	JJ	unsupervised
+automatic	JJ	automatic
+preprocessing	NN	preprocessing
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+algorithm	NN	algorithm
+limits	VBZ	limit
+the	DT	the
+range	NN	range
+of	IN	of
+random	JJ	random
+walks	NNS	walk
+so	IN	so
+that	IN	that
+the	DT	the
+sampling	NN	sampling
+of	IN	of
+random	JJ	random
+walks	NNS	walk
+only	RB	only
+occurs	VBZ	occur
+within	IN	within
+the	DT	the
+low-proximity	NN	low-proximity
+of	IN	of
+the	DT	the
+source	NN	source
+node	NN	node
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+the	DT	the
+algorithm	NN	algorithm
+has	VBZ	have
+the	DT	the
+ability	NN	ability
+to	TO	to
+obtain	VB	obtain
+local	JJ	local
+proximity	NN	proximity
+features	NNS	feature
+that	WDT	that
+accurately	RB	accurately
+characterize	VBP	characterize
+the	DT	the
+similarity	NN	similarity
+of	IN	of
+network	NN	network
+packets	NNS	packet
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+literature	NN	literature
+that	WDT	that
+we	PRP	we
+surveyed	VBD	survey
+has	VBZ	have
+not	RB	not
+used	VBN	use
+the	DT	the
+unsupervised	JJ	unsupervised
+automatic	JJ	automatic
+preprocessing	NN	preprocessing
+of	IN	of
+graph	NN	graph
+representation	NN	representation
+learning	NN	learning
+algorithm	NN	algorithm
+with	IN	with
+penalty	NN	penalty
+in	IN	in
+the	DT	the
+field	NN	field
+of	IN	of
+intrusion	NN	intrusion
+detection	NN	detection
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+proposed	VBN	propose
+algorithm	NN	algorithm
+,	,	,
+the	DT	the
+original	JJ	original
+features	NNS	feature
+of	IN	of
+the	DT	the
+network	NN	network
+packet	NN	packet
+are	VBP	be
+combined	VBN	combine
+with	IN	with
+the	DT	the
+local	JJ	local
+proximity	NN	proximity
+features	NNS	feature
+describing	VBG	describe
+the	DT	the
+similarity	NN	similarity
+relationship	NN	relationship
+between	IN	between
+the	DT	the
+network	NN	network
+packets	NNS	packet
+as	IN	as
+the	DT	the
+input	NN	input
+of	IN	of
+the	DT	the
+neural	JJ	neural
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+algorithm	NN	algorithm
+adds	VBZ	add
+effective	JJ	effective
+features	NNS	feature
+to	TO	to
+get	VB	get
+better	JJR	good
+intrusion	NN	intrusion
+detection	NN	detection
+performance	NN	performance
+.	.	.
+</s>
+</p>
+</text>

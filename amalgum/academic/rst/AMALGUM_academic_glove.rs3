@@ -1,0 +1,193 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Related Works</segment>
+<segment id="2" parent="1001" relname="span">In this section , we put our focus on the relevant introduction of the two mainstream camera-based works , i.e. , appearance-based methods and model-based methods .</segment>
+<segment id="3" parent="1003" relname="preparation">We also briefly introduce some multi-model methods .</segment>
+<segment id="4" parent="1003" relname="joint">Dipietro et al. have done elaborate research for all kinds of data gloves and relevant applications .</segment>
+<segment id="5" parent="1004" relname="joint">We refer the readers to for a detailed review of glove-based works .</segment>
+<segment id="6" parent="1005" relname="joint">2.1. Appearance-Based Methods</segment>
+<segment id="7" parent="1008" relname="span">Appearance-based methods train a classifier or a regressor</segment>
+<segment id="8" parent="7" relname="purpose">to map image features to hand poses .</segment>
+<segment id="9" parent="1008" relname="elaboration">Nearest neighbor search and decision trees are widely used in early works .</segment>
+<segment id="10" parent="1010" relname="span">In recent years , convolutional neural network</segment>
+<segment id="11" parent="1011" relname="span">( CNN)-based discriminative methods are state-of-the-art</segment>
+<segment id="12" parent="11" relname="elaboration">which estimate 3D joint positions directly from depth images .</segment>
+<segment id="13" parent="1013" relname="span">Besides , kinematics and geometric constraints are considered</segment>
+<segment id="14" parent="1014" relname="span">to avoid joint estimations</segment>
+<segment id="15" parent="14" relname="elaboration">violating kinematic constraints .</segment>
+<segment id="16" parent="1016" relname="span">Malik et al. embedded a novel hand pose and shape layer inside CNN</segment>
+<segment id="17" parent="1017" relname="joint">to produce not only 3D joint positions</segment>
+<segment id="18" parent="1017" relname="joint">but also hand mesh information .</segment>
+<segment id="19" parent="1019" relname="joint">For a more comprehensive analysis and investigation of the state-of-the-art along-with future challenges ,</segment>
+<segment id="20" parent="1019" relname="joint">we refer the readers to .</segment>
+<segment id="21" parent="1021" relname="span">The biggest limitation of appearance-based methods is the training data .</segment>
+<segment id="22" parent="1022" relname="span">Existing benchmarks are not perfect enough</segment>
+<segment id="23" parent="22" relname="purpose">to ensure well generalize to unseen hand shapes .</segment>
+<segment id="24" parent="1025" relname="span">We refer to for a detailed analysis of the drawbacks of existing data-sets .</segment>
+<segment id="25" parent="1027" relname="attribution">Considering this limitation ,</segment>
+<segment id="26" parent="1027" relname="span">our system follows the model-based approaches</segment>
+<segment id="27" parent="26" relname="elaboration">that do not rely on massive data-sets .</segment>
+<segment id="28" parent="1028" relname="joint">2.2.</segment>
+<segment id="29" parent="1029" relname="span">Model-Based Methods</segment>
+<segment id="30" parent="1031" relname="concession">Despite the considerable advance in learning-based hand tracking ,</segment>
+<segment id="31" parent="1032" relname="span">systems</segment>
+<segment id="32" parent="31" relname="elaboration">that employ generative models of explicit hand kinematics and surface geometry</segment>
+<segment id="33" parent="1033" relname="span">and fit these models to depth data</segment>
+<segment id="34" parent="1034" relname="span">using local optimization</segment>
+<segment id="35" parent="34" relname="elaboration">have produced the most compelling results .</segment>
+<segment id="36" parent="1036" relname="span">The most common problems for model-based methods are a good enough initialization point , an expressive enough hand model and a discriminative object function</segment>
+<segment id="37" parent="36" relname="elaboration">that minimizes the error between the 3D hand model and the observed data .</segment>
+<segment id="38" parent="1038" relname="preparation">2.2.1. Initialization</segment>
+<segment id="39" parent="1039" relname="span">A good enough Initialization has been proven critical to the robustness ,</segment>
+<segment id="40" parent="39" relname="elaboration">which enables faster converge and better resistant to local optima .</segment>
+<segment id="41" parent="1040" relname="joint">There exist many initialization methods .</segment>
+<segment id="42" parent="1042" relname="span">Some works were initialized by the fingertip detection .</segment>
+<segment id="43" parent="42" relname="elaboration">Besides , Tagliasacchi et al. and Tkach et al. also detected a color wristband as a first alignment .</segment>
+<segment id="44" parent="1044" relname="span">The use of simple geometric heuristics for initialization can sometimes be impractical for those gestures</segment>
+<segment id="45" parent="44" relname="elaboration">which contain occlusions or difficult hand orientations .</segment>
+<segment id="46" parent="1045" relname="joint">For this reason , most of the previous studies concentrated on exploiting the given image data with the train-based methods .</segment>
+<segment id="47" parent="1046" relname="joint">Taylor et al. generated candidate ’s hand poses quickly by a retrieval forest .</segment>
+<segment id="48" parent="1048" relname="span">Taylor et al. trained a decision forest classifier on a synthetic training set</segment>
+<segment id="49" parent="48" relname="purpose">to generate an initial pose estimate .</segment>
+<segment id="50" parent="1050" relname="preparation">Sanchez-Riera et al. trained a convolutional neural network for initialization with 243,000 tuples of images .</segment>
+<segment id="51" parent="1051" relname="preparation">Sharp et al. inferred a hierarchical distribution over hand pose with a layered discriminative model .</segment>
+<segment id="52" parent="1051" relname="span">However , initialization errors often occur due to imperfect training data-sets ,</segment>
+<segment id="53" parent="1052" relname="joint">mentioned in Section 2.1 ,</segment>
+<segment id="54" parent="1053" relname="joint">which may cause tracking failure .</segment>
+<segment id="55" parent="1054" relname="joint">In our system , it is more reliable and robust to provide an approximate initialization by a simple data glove .</segment>
+<segment id="56" parent="1056" relname="preparation">2.2.2. Hand Model</segment>
+<segment id="57" parent="1060" relname="span">The human hand model serves as the medium of computation and the presentation of algorithm results .</segment>
+<segment id="58" parent="1061" relname="joint">A detailed and accurate generative model tends to deepen the good local minima</segment>
+<segment id="59" parent="1061" relname="joint">and widen their basins of convergence .</segment>
+<segment id="60" parent="1062" relname="span">Many hand models have been proposed ,</segment>
+<segment id="61" parent="60" relname="elaboration">see</segment>
+<segment id="62" parent="63" relname="preparation">Figure 1</segment>
+<segment id="63" parent="1063" relname="span">.</segment>
+<segment id="64" parent="1065" relname="span">Early works used the capsule mode</segment>
+<segment id="65" parent="66" relname="preparation">made by two basic geometric primitives :</segment>
+<segment id="66" parent="1066" relname="span">a sphere and a cylinder .</segment>
+<segment id="67" parent="1067" relname="span">Qian et al. built the hand model</segment>
+<segment id="68" parent="67" relname="means">using a number of spheres .</segment>
+<segment id="69" parent="1068" relname="joint">Melax et al. used a union of convex bodies for hand tracking .</segment>
+<segment id="70" parent="1069" relname="joint">Sridhar et al. modeled the volumetric extent of the hand as a 3D sum of an-isotropic Gaussian model .</segment>
+<segment id="71" parent="1071" relname="joint">These approaches can model a broad spectrum of hand shape variations</segment>
+<segment id="72" parent="1071" relname="joint">and enable fast evaluation of distances and a high degree of computational parallelism .</segment>
+<segment id="73" parent="1073" relname="span">However , they only roughly approximate hand shape</segment>
+<segment id="74" parent="73" relname="concession">even if Tkach et al. proposed the use of sphere-meshes as a novel geometric representation .</segment>
+<segment id="75" parent="1076" relname="span">An alternative is a triangulated mesh model with linear blend skinning</segment>
+<segment id="76" parent="75" relname="restatement">( LBS )</segment>
+<segment id="77" parent="1077" relname="joint">that is more realistic</segment>
+<segment id="78" parent="1077" relname="joint">and fits image data better .</segment>
+<segment id="79" parent="1080" relname="joint">But these triangulated meshes cost more computational effort</segment>
+<segment id="80" parent="1080" relname="joint">and are hard to deal with the collision .</segment>
+<segment id="81" parent="1079" relname="joint">There also exist some implicit templates except these explicit models .</segment>
+<segment id="82" parent="1082" relname="joint">Schmidt et al. voxelized each shape-primitive</segment>
+<segment id="83" parent="1082" relname="joint">and computed a signed distance function for the local coordinate frame .</segment>
+<segment id="84" parent="1084" relname="span">Taylor et al. constructed the hand as an articulated signed distance function</segment>
+<segment id="85" parent="84" relname="elaboration">that allows fast calculation of the distance to the hand surface .</segment>
+<segment id="86" parent="1085" relname="joint">To explain the input data better</segment>
+<segment id="87" parent="1086" relname="span">and explicitly visualize the tracking result ,</segment>
+<segment id="88" parent="87" relname="elaboration">our system uses an expressive triangular mesh hand model .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="2" relname="elaboration"/>
+<group id="1003" type="multinuc" parent="1002" relname="span"/>
+<group id="1004" type="multinuc" parent="1003" relname="joint"/>
+<group id="1005" type="multinuc" parent="1004" relname="joint"/>
+<group id="1006" type="multinuc" parent="1005" relname="joint"/>
+<group id="1007" type="span" parent="1006" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="span"/>
+<group id="1009" type="multinuc" parent="1006" relname="joint"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="10" relname="elaboration"/>
+<group id="1012" type="multinuc" parent="1009" relname="joint"/>
+<group id="1013" type="span" parent="1012" relname="joint"/>
+<group id="1014" type="span" parent="13" relname="purpose"/>
+<group id="1015" type="multinuc" parent="1012" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="joint"/>
+<group id="1017" type="multinuc" parent="16" relname="purpose"/>
+<group id="1018" type="multinuc" parent="1015" relname="joint"/>
+<group id="1019" type="multinuc" parent="1018" relname="joint"/>
+<group id="1020" type="multinuc" parent="1018" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="21" relname="elaboration"/>
+<group id="1023" type="multinuc" parent="1020" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="joint"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="24" relname="elaboration"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1028" type="multinuc" parent="1025" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1031" type="multinuc" parent="1030" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="span" parent="1031" relname="joint"/>
+<group id="1034" type="span" parent="33" relname="means"/>
+<group id="1035" type="multinuc" parent="1023" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="1035" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="1038" relname="joint"/>
+<group id="1041" type="multinuc" parent="1040" relname="joint"/>
+<group id="1042" type="span" parent="1041" relname="joint"/>
+<group id="1043" type="multinuc" parent="1041" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="joint"/>
+<group id="1045" type="multinuc" parent="1043" relname="joint"/>
+<group id="1046" type="multinuc" parent="1045" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1047" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="span" parent="1050" relname="span"/>
+<group id="1052" type="multinuc" parent="52" relname="elaboration"/>
+<group id="1053" type="multinuc" parent="1052" relname="joint"/>
+<group id="1054" type="multinuc" parent="1053" relname="joint"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="multinuc" parent="1055" relname="span"/>
+<group id="1057" type="span" parent="1056" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="span" parent="1059" relname="span"/>
+<group id="1061" type="multinuc" parent="57" relname="elaboration"/>
+<group id="1062" type="span" parent="1060" relname="elaboration"/>
+<group id="1063" type="span" parent="1059" relname="background"/>
+<group id="1064" type="multinuc" parent="1058" relname="elaboration"/>
+<group id="1065" type="span" parent="1064" relname="joint"/>
+<group id="1066" type="span" parent="64" relname="elaboration"/>
+<group id="1067" type="span" parent="1064" relname="joint"/>
+<group id="1068" type="multinuc" parent="1056" relname="joint"/>
+<group id="1069" type="multinuc" parent="1068" relname="joint"/>
+<group id="1070" type="multinuc" parent="1069" relname="joint"/>
+<group id="1071" type="multinuc" parent="1070" relname="contrast"/>
+<group id="1072" type="multinuc" parent="1070" relname="contrast"/>
+<group id="1073" type="span" parent="1072" relname="joint"/>
+<group id="1074" type="multinuc" parent="1072" relname="joint"/>
+<group id="1075" type="span" parent="1074" relname="contrast"/>
+<group id="1076" type="span" parent="1075" relname="span"/>
+<group id="1077" type="multinuc" parent="1076" relname="elaboration"/>
+<group id="1078" type="multinuc" parent="1074" relname="contrast"/>
+<group id="1079" type="multinuc" parent="1078" relname="joint"/>
+<group id="1080" type="multinuc" parent="1079" relname="joint"/>
+<group id="1081" type="multinuc" parent="1078" relname="joint"/>
+<group id="1082" type="multinuc" parent="1081" relname="joint"/>
+<group id="1083" type="span" parent="1081" relname="joint"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1085" type="multinuc" parent="1084" relname="purpose"/>
+<group id="1086" type="span" parent="1085" relname="joint"/>
+	</body>
+</rst>

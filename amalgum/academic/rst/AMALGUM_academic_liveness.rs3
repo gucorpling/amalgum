@@ -1,0 +1,189 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2.</segment>
+<segment id="2" parent="1002" relname="preparation">Related Works</segment>
+<segment id="3" parent="1003" relname="span">Face recognition has gradually become an important encryption and decryption method</segment>
+<segment id="4" parent="3" relname="cause">because of its rapidity , effectiveness , and user friendliness .</segment>
+<segment id="5" parent="1004" relname="joint">However , the security issues of face recognition technology are becoming increasingly prominent .</segment>
+<segment id="6" parent="1005" relname="sequence">Therefore , liveness detection has become an important part for reliable authentication systems .</segment>
+<segment id="7" parent="1007" relname="span">With the development of the Internet ,</segment>
+<segment id="8" parent="1008" relname="joint">criminals collect user face images from the Internet</segment>
+<segment id="9" parent="1009" relname="span">and produce fake faces</segment>
+<segment id="10" parent="9" relname="purpose">to attack an authentication system .</segment>
+<segment id="11" parent="1011" relname="preparation">Ref .</segment>
+<segment id="12" parent="1012" relname="span">passed the authentication of six commercial face recognition systems , namely , Face Unlock , Facelock Pro , Visidon , Veriface , Luxand Blink , and FastAccess ,</segment>
+<segment id="13" parent="12" relname="means">by using photos of valid users .</segment>
+<segment id="14" parent="1015" relname="span">Common spoof faces include photos</segment>
+<segment id="15" parent="14" relname="elaboration">( print ) ,</segment>
+<segment id="16" parent="1017" relname="span">videos</segment>
+<segment id="17" parent="16" relname="elaboration">( replay ) ,</segment>
+<segment id="18" parent="1016" relname="same_unit">masks , and synthetic 3D face models .</segment>
+<segment id="19" parent="1020" relname="span">Among them , photos and videos are 2D fake faces</segment>
+<segment id="20" parent="19" relname="elaboration">that are less expensive for spoof attacks</segment>
+<segment id="21" parent="1011" relname="joint">and are the two most popular forms of deception .</segment>
+<segment id="22" parent="1022" relname="span">Therefore , it is urgent to introduce liveness detection into identity authentication systems</segment>
+<segment id="23" parent="22" relname="purpose">to improve the practicality and safety of face recognition .</segment>
+<segment id="24" parent="1025" relname="span">Liveness detection methods can obtain different classification systems</segment>
+<segment id="25" parent="24" relname="elaboration">depending on different classification criteria .</segment>
+<segment id="26" parent="1011" relname="joint">According to their application forms , current mainstream liveness detection methods are divided into interactive and noninteractive categories .</segment>
+<segment id="27" parent="1027" relname="span">Interactive detection methods use action instructions</segment>
+<segment id="28" parent="1028" relname="joint">to interact with users</segment>
+<segment id="29" parent="1029" relname="span">and require users to cooperate</segment>
+<segment id="30" parent="29" relname="purpose">to complete certain actions .</segment>
+<segment id="31" parent="1032" relname="joint">The noninteractive method does not need user interactions</segment>
+<segment id="32" parent="1032" relname="joint">and automatically completes the detection task .</segment>
+<segment id="33" parent="1034" relname="attribution">According to the extraction methods of face features ,</segment>
+<segment id="34" parent="1034" relname="span">these methods can be divided into two categories :</segment>
+<segment id="35" parent="1035" relname="span">manual feature extraction and automatic feature extraction</segment>
+<segment id="36" parent="35" relname="means">using a deep learning network .</segment>
+<segment id="37" parent="1011" relname="joint">Common liveness detection methods are mainly based on texture , life information , different sensors , and deep features .</segment>
+<segment id="38" parent="1040" relname="contrast">Live faces have complex 3D structures ,</segment>
+<segment id="39" parent="1040" relname="contrast">while photo and video attacks are 2D planar structures .</segment>
+<segment id="40" parent="1040" relname="elaboration">Different light reflections of surfaces from the 3D and 2D structures will exhibit differences in bright and dark areas of facial colors .</segment>
+<segment id="41" parent="1042" relname="span">Texture-based methods mainly use these differences as clues</segment>
+<segment id="42" parent="41" relname="purpose">to classify live and fake faces .</segment>
+<segment id="43" parent="1044" relname="span">The detection method</segment>
+<segment id="44" parent="1045" relname="joint">based on texture is implemented using Local Binary Pattern(LBP )</segment>
+<segment id="45" parent="1045" relname="joint">and improved LBP algorithms .</segment>
+<segment id="46" parent="1047" relname="joint">This method has a low computational complexity</segment>
+<segment id="47" parent="48" relname="concession">and is easy to implement ,</segment>
+<segment id="48" parent="1048" relname="span">but it is greatly influenced by hardware conditions .</segment>
+<segment id="49" parent="1050" relname="span">The accuracy of the algorithm decreases</segment>
+<segment id="50" parent="49" relname="circumstance">when the image quality is low .</segment>
+<segment id="51" parent="1052" relname="span">The method</segment>
+<segment id="52" parent="1053" relname="span">based on life features</segment>
+<segment id="53" parent="1054" relname="span">uses vital signs , such as heartbeat , blood flow , blinking , and involuntary micromotion of facial muscles ,</segment>
+<segment id="54" parent="53" relname="purpose">to classify live and fake faces .</segment>
+<segment id="55" parent="1055" relname="sequence">Under the constraint conditions , this method has a high detection accuracy</segment>
+<segment id="56" parent="1057" relname="condition">if life features can be extracted stably ;</segment>
+<segment id="57" parent="1057" relname="sequence">however , this method requires face video as the input</segment>
+<segment id="58" parent="1058" relname="sequence">and needs a large amount of computation .</segment>
+<segment id="59" parent="1059" relname="span">Even more unfortunately , the simulated micromotion of fake faces can also attack this method .</segment>
+<segment id="60" parent="1063" relname="span">The method</segment>
+<segment id="61" parent="60" relname="elaboration">based on different sensors</segment>
+<segment id="62" parent="1062" relname="same_unit">adopts different image acquisition systems , such as a multispectral camera , an infrared camera , a deep camera , and a light field camera ,</segment>
+<segment id="63" parent="1062" relname="purpose">to capture corresponding types of human face images for liveness detection .</segment>
+<segment id="64" parent="1065" relname="concession">The overall recognition accuracy of this method is high ,</segment>
+<segment id="65" parent="1065" relname="sequence">but this method needs to add new hardware</segment>
+<segment id="66" parent="1067" relname="span">and , thus , increases the system cost .</segment>
+<segment id="67" parent="1069" relname="span">The methods</segment>
+<segment id="68" parent="67" relname="elaboration">based on deep features</segment>
+<segment id="69" parent="1070" relname="span">involve training of the initial CNN</segment>
+<segment id="70" parent="1071" relname="span">to extract depth features</segment>
+<segment id="71" parent="70" relname="elaboration">followed by classification .</segment>
+<segment id="72" parent="1074" relname="span">These methods use pretrained ResNet-50 , VGG , and other models</segment>
+<segment id="73" parent="72" relname="purpose">to extract features</segment>
+<segment id="74" parent="1075" relname="span">and 3D convolution</segment>
+<segment id="75" parent="74" relname="purpose">to extract spatiotemporal deep features .</segment>
+<segment id="76" parent="1078" relname="circumstance">Given that deep learning can extract high-level abstract features of human faces autonomously ,</segment>
+<segment id="77" parent="1078" relname="span">noninteractive liveness detection</segment>
+<segment id="78" parent="77" relname="elaboration">using deep learning is a future development trend .</segment>
+<segment id="79" parent="1080" relname="span">With the gradual popularization of face recognition systems and the decrease in the price of hardware ,</segment>
+<segment id="80" parent="1081" relname="span">it is necessary and worthy</segment>
+<segment id="81" parent="1082" relname="span">by adding image acquisition equipment into some important face authentication systems</segment>
+<segment id="82" parent="81" relname="purpose">to improve the security and reliability of them .</segment>
+<segment id="83" parent="1084" relname="span">Liveness detection of faces</segment>
+<segment id="84" parent="83" relname="elaboration">using real depth information is not commonly used in biometrics technology and the literature .</segment>
+<segment id="85" parent="1085" relname="joint">All publicly available datasets such as CASIA , NUAA , and PRINT-ATTACK DB are designed for 2D spoofing prevention ,</segment>
+<segment id="86" parent="1085" relname="joint">and no depth data are included in these datasets .</segment>
+<segment id="87" parent="1086" relname="span">Therefore , we adopted a Kinect camera</segment>
+<segment id="88" parent="1088" relname="span">acquiring real infrared radiation</segment>
+<segment id="89" parent="88" relname="restatement">( IR )</segment>
+<segment id="90" parent="1089" relname="span">images</segment>
+<segment id="91" parent="90" relname="purpose">for liveness detection .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1004" relname="preparation"/>
+<group id="1004" type="multinuc" parent="1002" relname="span"/>
+<group id="1005" type="multinuc" parent="1004" relname="joint"/>
+<group id="1007" type="span" parent="1005" relname="sequence"/>
+<group id="1008" type="multinuc" parent="7" relname="elaboration"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="span" parent="1005" relname="sequence"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="joint"/>
+<group id="1014" type="multinuc" parent="1011" relname="joint"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1016" type="multinuc" parent="1014" relname="same_unit"/>
+<group id="1017" type="span" parent="1016" relname="same_unit"/>
+<group id="1020" type="span" parent="1011" relname="joint"/>
+<group id="1022" type="span" parent="1011" relname="joint"/>
+<group id="1025" type="span" parent="1011" relname="joint"/>
+<group id="1027" type="span" parent="1011" relname="joint"/>
+<group id="1028" type="multinuc" parent="27" relname="purpose"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1031" type="span" parent="1011" relname="joint"/>
+<group id="1032" type="multinuc" parent="1031" relname="span"/>
+<group id="1033" type="span" parent="1032" relname="elaboration"/>
+<group id="1034" type="span" parent="1033" relname="span"/>
+<group id="1035" type="span" parent="34" relname="elaboration"/>
+<group id="1038" type="multinuc" parent="1011" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="sequence"/>
+<group id="1040" type="multinuc" parent="1039" relname="span"/>
+<group id="1042" type="span" parent="1038" relname="sequence"/>
+<group id="1044" type="span" parent="1038" relname="sequence"/>
+<group id="1045" type="multinuc" parent="43" relname="elaboration"/>
+<group id="1047" type="multinuc" parent="1038" relname="sequence"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1038" relname="sequence"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="multinuc" parent="1050" relname="elaboration"/>
+<group id="1052" type="span" parent="1051" relname="sequence"/>
+<group id="1053" type="span" parent="51" relname="elaboration"/>
+<group id="1054" type="span" parent="52" relname="elaboration"/>
+<group id="1055" type="multinuc" parent="1051" relname="sequence"/>
+<group id="1056" type="span" parent="1055" relname="sequence"/>
+<group id="1057" type="multinuc" parent="1056" relname="span"/>
+<group id="1058" type="multinuc" parent="1057" relname="sequence"/>
+<group id="1059" type="span" parent="1058" relname="sequence"/>
+<group id="1060" type="multinuc" parent="59" relname="elaboration"/>
+<group id="1061" type="span" parent="1060" relname="sequence"/>
+<group id="1062" type="multinuc" parent="1061" relname="span"/>
+<group id="1063" type="span" parent="1062" relname="same_unit"/>
+<group id="1064" type="span" parent="1060" relname="sequence"/>
+<group id="1065" type="multinuc" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1065" relname="sequence"/>
+<group id="1067" type="span" parent="1066" relname="span"/>
+<group id="1068" type="multinuc" parent="66" relname="elaboration"/>
+<group id="1069" type="span" parent="1068" relname="same_unit"/>
+<group id="1070" type="span" parent="1068" relname="same_unit"/>
+<group id="1071" type="span" parent="69" relname="purpose"/>
+<group id="1072" type="multinuc" parent="1067" relname="elaboration"/>
+<group id="1073" type="multinuc" parent="1072" relname="sequence"/>
+<group id="1074" type="span" parent="1073" relname="same_unit"/>
+<group id="1075" type="span" parent="1073" relname="same_unit"/>
+<group id="1076" type="multinuc" parent="1072" relname="sequence"/>
+<group id="1077" type="span" parent="1076" relname="sequence"/>
+<group id="1078" type="span" parent="1077" relname="span"/>
+<group id="1079" type="span" parent="1076" relname="sequence"/>
+<group id="1080" type="span" parent="1079" relname="span"/>
+<group id="1081" type="span" parent="79" relname="elaboration"/>
+<group id="1082" type="span" parent="80" relname="means"/>
+<group id="1083" type="span" parent="1080" relname="elaboration"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1085" type="multinuc" parent="1084" relname="elaboration"/>
+<group id="1086" type="span" parent="1011" relname="joint"/>
+<group id="1087" type="multinuc" parent="87" relname="elaboration"/>
+<group id="1088" type="span" parent="1087" relname="same_unit"/>
+<group id="1089" type="span" parent="1087" relname="same_unit"/>
+	</body>
+</rst>

@@ -1,0 +1,741 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_navigation" title="Magnetic-Map-Matching-Aided Pedestrian Navigation Using Outlier Mitigation Based on Multiple Sensors and Roughness Weighting" shortTitle="navigation" author="Yong  Hun Kim, Min  Jun Choi, Eung  Ju Kim, Jin  Woo Song" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4782/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+Magnetic-Map-Matching-Aided	JJ	Magnetic-Map-Matching-Aided
+Pedestrian	NN	Pedestrian
+Dead	NNP	Dead
+Reckoning	NN	reckoning
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+Section	NN	section
+3	CD	3
+,	,	,
+it	PRP	it
+is	VBZ	be
+verified	VBN	verify
+that	IN	that
+the	DT	the
+number	NN	number
+of	IN	of
+outliers	NNS	outlier
+is	VBZ	be
+reduced	VBN	reduce
+,	,	,
+and	CC	and
+the	DT	the
+magnetic-map-matching	JJ	magnetic-map-matching
+accuracy	NN	accuracy
+is	VBZ	be
+improved	VBN	improve
+by	IN	by
+employing	VBG	employ
+multiple	JJ	multiple
+magnetic	JJ	magnetic
+sensors	NNS	sensor
+and	CC	and
+proposed	VBN	propose
+mitigation	NN	mitigation
+techniques	NNS	technique
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+section	NN	section
+describes	VBZ	describe
+combining	VBG	combine
+PDR	NNP	PDR
+and	CC	and
+magnetic	JJ	magnetic
+map	NN	map
+matching	NN	matching
+.	.	.
+</s>
+<s type="decl">
+By	IN	by
+integrating	VBG	integrate
+them	PRP	they
+,	,	,
+it	PRP	it
+is	VBZ	be
+expected	VBN	expect
+that	IN	that
+the	DT	the
+positioning	NN	positioning
+accuracy	NN	accuracy
+will	MD	will
+be	VB	be
+improved	VBN	improve
+even	RB	even
+when	WRB	when
+a	DT	a
+magnetic	JJ	magnetic
+map	NN	map
+does	VBZ	do
+not	RB	not
+cover	VB	cover
+all	PDT	all
+the	DT	the
+areas	NNS	area
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+study	NN	study
+,	,	,
+map-matching-aided	JJ	map-matching-aided
+pedestrian	NN	pedestrian
+dead	NN	dead
+reckoning	NN	reckoning
+(	-LRB-	(
+MAPDR	NNP	MAPDR
+)	-RRB-	)
+was	VBD	be
+constructed	VBN	construct
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+estimate	VB	estimate
+and	CC	and
+compensate	VB	compensate
+for	IN	for
+the	DT	the
+navigation	NN	navigation
+errors	NNS	error
+,	,	,
+a	DT	a
+15th-order	NN	15th-order
+EKF	NNP	EKF
+is	VBZ	be
+used	VBN	use
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+error	NN	error
+state	NN	state
+vector	NN	vector
+is	VBZ	be
+given	VBN	give
+by	IN	by
+the	DT	the
+following	VBG	follow
+equation	NN	equation
+:	:	:
+(	-LRB-	(
+23	CD	23
+)	-RRB-	)
+where	WRB	where
+,	,	,
+,	,	,
+and	CC	and
+are	VBP	be
+the	DT	the
+position	NN	position
+error	NN	error
+,	,	,
+velocity	NN	velocity
+error	NN	error
+,	,	,
+and	CC	and
+attitude	NN	attitude
+error	NN	error
+in	IN	in
+the	DT	the
+North-East-Down	NNP	North-East-Down
+(	-LRB-	(
+NED	NNP	NED
+)	-RRB-	)
+coordinate	NN	coordinate
+system	NN	system
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+gyro	NN	gyro
+bias	NN	bias
+and	CC	and
+acceleration	NN	acceleration
+bias	NN	bias
+are	VBP	be
+and	CC	and
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="sub">
+Since	IN	since
+the	DT	the
+navigation	NN	navigation
+sensors	NNS	sensor
+used	VBN	use
+in	IN	in
+a	DT	a
+PDR	NNP	PDR
+cannot	MD	cannot
+measure	VB	measure
+the	DT	the
+earth	NN	earth
+rate	NN	rate
+,	,	,
+the	DT	the
+error	NN	error
+models	NNS	model
+,	,	,
+including	VBG	include
+the	DT	the
+position	NN	position
+error	NN	error
+,	,	,
+can	MD	can
+be	VB	be
+simplified	VBN	simplify
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+24	CD	24
+)	-RRB-	)
+(	-LRB-	(
+25	CD	25
+)	-RRB-	)
+(	-LRB-	(
+26	CD	26
+)	-RRB-	)
+</s>
+<s type="decl">
+where	WRB	where
+is	VBZ	be
+a	DT	a
+rotation	NN	rotation
+matrix	NN	matrix
+from	IN	from
+the	DT	the
+body	NN	body
+frame	NN	frame
+to	IN	to
+NED	NNP	NED
+frame	NN	frame
+,	,	,
+and	CC	and
+is	VBZ	be
+a	DT	a
+skew-symmetric	JJ	skew-symmetric
+matrix	NN	matrix
+corresponding	VBG	correspond
+to	IN	to
+input	NN	input
+acceleration	NN	acceleration
+which	WDT	which
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+27	CD	27
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Thus	RB	thus
+,	,	,
+the	DT	the
+15th-order	NN	15th-order
+state-space-error	NN	state-space-error
+model	NN	model
+can	MD	can
+be	VB	be
+expressed	VBN	express
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+28	CD	28
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+input	NN	input
+noise	NN	noise
+vector	NN	vector
+,	,	,
+and	CC	and
+is	VBZ	be
+an	DT	a
+identity	NN	identity
+matrix	NN	matrix
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+biases	NNS	biase
+of	IN	of
+the	DT	the
+accelerometer	NN	accelerometer
+and	CC	and
+gyroscope	NN	gyroscope
+sensors	NNS	sensor
+are	VBP	be
+assumed	VBN	assume
+to	TO	to
+be	VB	be
+a	DT	a
+first-order	JJ	first-order
+Markov	NN	markov
+process	NN	process
+,	,	,
+with	IN	with
+a	DT	a
+large	JJ	large
+time	NN	time
+constant	NN	constant
+to	TO	to
+compensate	VB	compensate
+the	DT	the
+slowly	RB	slowly
+varying	VBG	vary
+bias	NN	bias
+drift	NN	drift
+over	IN	over
+time	NN	time
+.	.	.
+</s>
+<s type="decl">
+Thus	RB	thus
+,	,	,
+and	CC	and
+are	VBP	be
+set	VBN	set
+to	TO	to
+be	VB	be
+very	RB	very
+small	JJ	small
+in	IN	in
+this	DT	this
+model	NN	model
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+to	IN	to
+the	DT	the
+position	NN	position
+measurements	NNS	measurement
+from	IN	from
+magnetic	JJ	magnetic
+map	NN	map
+matching	NN	matching
+,	,	,
+the	DT	the
+heading	NN	heading
+information	NN	information
+using	VBG	use
+the	DT	the
+magnetic	JJ	magnetic
+sensor	NN	sensor
+mounted	VBN	mount
+on	IN	on
+the	DT	the
+waist	NN	waist
+is	VBZ	be
+utilized	VBN	utilize
+as	IN	as
+a	DT	a
+measurement	NN	measurement
+for	IN	for
+preventing	VBG	prevent
+the	DT	the
+divergence	NN	divergence
+of	IN	of
+the	DT	the
+yaw	NN	yaw
+angle	NN	angle
+.	.	.
+</s>
+<s type="decl">
+While	IN	while
+ZUPT	NNP	ZUPT
+is	VBZ	be
+performed	VBN	perform
+repeatedly	RB	repeatedly
+in	IN	in
+a	DT	a
+stance	NN	stance
+phase	NN	phase
+,	,	,
+the	DT	the
+magnetic	JJ	magnetic
+heading	NN	heading
+update	NN	update
+and	CC	and
+position	NN	position
+update	NN	update
+are	VBP	be
+carried	VBN	carry
+out	RP	out
+once	RB	once
+in	IN	in
+the	DT	the
+stance	NN	stance
+phase	NN	phase
+because	IN	because
+they	PRP	they
+are	VBP	be
+relatively	RB	relatively
+less	RBR	less
+accurate	JJ	accurate
+than	IN	than
+the	DT	the
+zero	JJ	zero
+velocity	NN	velocity
+measurements	NNS	measurement
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+two	CD	2
+measurement	NN	measurement
+models	NNS	model
+are	VBP	be
+required	VBN	require
+.	.	.
+</s>
+<s type="decl">
+One	CD	one
+is	VBZ	be
+for	IN	for
+the	DT	the
+position	NN	position
+and	CC	and
+heading	NN	heading
+measurement	NN	measurement
+update	NN	update
+at	IN	at
+the	DT	the
+time	NN	time
+when	WRB	when
+the	DT	the
+stance	NN	stance
+phase	NN	phase
+starts	VBZ	start
+,	,	,
+which	WDT	which
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+29	CD	29
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+case	NN	case
+,	,	,
+the	DT	the
+measurement	NN	measurement
+becomes	VBZ	become
+where	WRB	where
+is	VBZ	be
+obtained	VBN	obtain
+by	IN	by
+importance	NN	importance
+sampling	NN	sampling
+and	CC	and
+magnetic	JJ	magnetic
+map	NN	map
+matching	NN	matching
+,	,	,
+and	CC	and
+is	VBZ	be
+a	DT	a
+heading	NN	heading
+measurement	NN	measurement
+obtained	VBN	obtain
+from	IN	from
+the	DT	the
+waist-mounted	JJ	waist-mounted
+magnetic	JJ	magnetic
+sensor	NN	sensor
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+measurement	NN	measurement
+covariance	NN	covariance
+matrix	NN	matrix
+,	,	,
+for	IN	for
+the	DT	the
+measurements	NNS	measurement
+noise	NN	noise
+,	,	,
+,	,	,
+is	VBZ	be
+composed	VBN	compose
+of	IN	of
+,	,	,
+which	WDT	which
+is	VBZ	be
+automatically	RB	automatically
+calculated	VBN	calculate
+by	IN	by
+the	DT	the
+importance	NN	importance
+sampling	NN	sampling
+and	CC	and
+,	,	,
+which	WDT	which
+represents	VBZ	represent
+the	DT	the
+variance	NN	variance
+of	IN	of
+the	DT	the
+heading	NN	heading
+measurement	NN	measurement
+.	.	.
+</s>
+<s type="decl">
+Although	IN	although
+the	DT	the
+magnetic	JJ	magnetic
+field	NN	field
+around	IN	around
+the	DT	the
+waist	NN	waist
+is	VBZ	be
+less	RBR	less
+distorted	JJ	distorted
+,	,	,
+the	DT	the
+heading	NN	heading
+information	NN	information
+is	VBZ	be
+not	RB	not
+sufficiently	RB	sufficiently
+accurate	JJ	accurate
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+the	DT	the
+position	NN	position
+measurement	NN	measurement
+can	MD	can
+be	VB	be
+used	VBN	use
+for	IN	for
+the	DT	the
+EKF	NNP	EKF
+,	,	,
+so	RB	so
+that	DT	that
+is	VBZ	be
+set	VBN	set
+to	IN	to
+a	DT	a
+slightly	RB	slightly
+large	JJ	large
+value	NN	value
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+other	JJ	other
+measurement	NN	measurement
+model	NN	model
+is	VBZ	be
+for	IN	for
+ZUPT	NNP	ZUPT
+during	IN	during
+the	DT	the
+stance	NN	stance
+phase	NN	phase
+,	,	,
+which	WDT	which
+is	VBZ	be
+expressed	VBN	express
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+30	CD	30
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+measured	VBN	measure
+noise	NN	noise
+vector	NN	vector
+modeled	VBN	model
+as	IN	as
+white	JJ	white
+Gaussian	JJ	Gaussian
+noise	NN	noise
+with	IN	with
+covariance	NN	covariance
+,	,	,
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+velocity	NN	velocity
+measurement	NN	measurement
+is	VBZ	be
+,	,	,
+the	DT	the
+and	CC	and
+velocity	NN	velocity
+measurement	NN	measurement
+noise	NN	noise
+</s>
+<s type="decl">
+covariance	NN	covariance
+is	VBZ	be
+usually	RB	usually
+small	JJ	small
+when	WRB	when
+the	DT	the
+stance	NN	stance
+phase	NN	phase
+can	MD	can
+be	VB	be
+detected	VBN	detect
+perfectly	RB	perfectly
+.	.	.
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+7	CD	7
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+a	DT	a
+block	NN	block
+diagram	NN	diagram
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+MAPDR	NNP	MAPDR
+algorithm	NN	algorithm
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+MAPDR	NNP	MAPDR
+algorithm	NN	algorithm
+is	VBZ	be
+roughly	RB	roughly
+divided	VBN	divide
+into	IN	into
+three	CD	3
+parts	NNS	part
+:	:	:
+an	DT	a
+inertial	JJ	inertial
+navigation	NN	navigation
+algorithm	NN	algorithm
+,	,	,
+a	DT	a
+magnetic-field	JJ	magnetic-field
+map-matching	NN	map-matching
+with	IN	with
+outlier	JJ	outly
+mitigation	NN	mitigation
+and	CC	and
+importance	NN	importance
+sampling	NN	sampling
+,	,	,
+and	CC	and
+an	DT	a
+extended	VBN	extend
+Kalman	NNP	Kalman
+filter	NN	filter
+.	.	.
+</s>
+<s type="decl">
+Basically	RB	basically
+,	,	,
+attitude	NN	attitude
+,	,	,
+velocity	NN	velocity
+,	,	,
+and	CC	and
+position	NN	position
+are	VBP	be
+obtained	VBN	obtain
+through	IN	through
+an	DT	a
+inertial	JJ	inertial
+navigation	NN	navigation
+process	NN	process
+based	VBN	base
+on	IN	on
+the	DT	the
+quaternion	NN	quaternion
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+heading	NN	heading
+measurements	NNS	measurement
+from	IN	from
+the	DT	the
+magnetic	JJ	magnetic
+sensor	NN	sensor
+,	,	,
+the	DT	the
+position	NN	position
+measurement	NN	measurement
+from	IN	from
+the	DT	the
+magnetic	JJ	magnetic
+map	NN	map
+matching	NN	matching
+,	,	,
+and	CC	and
+the	DT	the
+ZUPT	NNP	ZUPT
+are	VBP	be
+used	VBN	use
+for	IN	for
+the	DT	the
+EKF	NNP	EKF
+to	TO	to
+correct	VB	correct
+navigation	NN	navigation
+and	CC	and
+sensor	NN	sensor
+bias	NN	bias
+errors	NNS	error
+.	.	.
+</s>
+</p>
+</text>

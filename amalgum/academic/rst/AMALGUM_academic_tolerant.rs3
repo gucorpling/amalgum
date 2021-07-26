@@ -1,0 +1,209 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Aircraft Engine Descriptions and Modeling</segment>
+<segment id="2" parent="1002" relname="preparation">2.1. Engine Descriptions</segment>
+<segment id="3" parent="1003" relname="span">A high bypass twin spool mixing-exhaust turbofan engine was studied in this paper ,</segment>
+<segment id="4" parent="3" relname="elaboration">of which the schematic description is shown in</segment>
+<segment id="5" parent="1005" relname="preparation">Figure 2</segment>
+<segment id="6" parent="1005" relname="joint">.</segment>
+<segment id="7" parent="1005" relname="joint">The airflow was supplied by a single inlet .</segment>
+<segment id="8" parent="1005" relname="joint">Airflow passed through the fan</segment>
+<segment id="9" parent="1009" relname="span">and separated into two streams</segment>
+<segment id="10" parent="1010" relname="span">—</segment>
+<segment id="11" parent="1011" relname="joint">one passed through engine core path ,</segment>
+<segment id="12" parent="1011" relname="joint">and the other passed through the bypass duct .</segment>
+<segment id="13" parent="1005" relname="joint">Fuel was injected in the combustor</segment>
+<segment id="14" parent="1014" relname="span">and burned</segment>
+<segment id="15" parent="1015" relname="span">to produce the hot gas</segment>
+<segment id="16" parent="15" relname="purpose">to drive the turbines .</segment>
+<segment id="17" parent="1019" relname="span">The fan and low pressure compressor</segment>
+<segment id="18" parent="17" relname="elaboration">( LPC )</segment>
+<segment id="19" parent="1018" relname="same_unit">were driven by a low pressure turbine</segment>
+<segment id="20" parent="1018" relname="elaboration">( LPT ) ,</segment>
+<segment id="21" parent="1023" relname="span">whereas the high pressure compressor</segment>
+<segment id="22" parent="21" relname="elaboration">( HPC ) was driven by a high pressure turbine</segment>
+<segment id="23" parent="1023" relname="restatement">( HPT ) .</segment>
+<segment id="24" parent="1024" relname="span">The airflow left through the nozzle .</segment>
+<segment id="25" parent="1027" relname="span">The notations</segment>
+<segment id="26" parent="25" relname="elaboration">used in this paper and their descriptions</segment>
+<segment id="27" parent="1026" relname="same_unit">are shown in Table 1 .</segment>
+<segment id="28" parent="1028" relname="joint">Mechanical system dynamics due to rotating inertias constituted the most important contribution to engine transient behavior .</segment>
+<segment id="29" parent="1030" relname="span">Thus , rotating dynamics were the most important dynamics</segment>
+<segment id="30" parent="29" relname="purpose">to be considered .</segment>
+<segment id="31" parent="1031" relname="joint">In light of this , the state vector was chosen as .</segment>
+<segment id="32" parent="1033" relname="span">Newton ’s law for rotating masses was applied to each shaft as</segment>
+<segment id="33" parent="32" relname="elaboration">( 1 )</segment>
+<segment id="34" parent="1034" relname="span">where f 1 and f 2 are the net torques</segment>
+<segment id="35" parent="34" relname="elaboration">delivered by LPT and HPT .</segment>
+<segment id="36" parent="1005" relname="joint">is the control input</segment>
+<segment id="37" parent="1037" relname="span">and v denotes the external parameters</segment>
+<segment id="38" parent="37" relname="elaboration">( flight condition ) .</segment>
+<segment id="39" parent="1040" relname="circumstance">Considering air flow mass , power , and momentum conservation laws ,</segment>
+<segment id="40" parent="1040" relname="span">a general gas turbine simulation was designed</segment>
+<segment id="41" parent="40" relname="means">using the concept in .</segment>
+<segment id="42" parent="1042" relname="span">The engine design operation data and characteristic maps of rotating components such as fan , compressor , HPT , and LPT were loaded to the general simulation</segment>
+<segment id="43" parent="42" relname="purpose">for obtaining a certain turbofan engine model .</segment>
+<segment id="44" parent="1044" relname="span">The nonlinear model</segment>
+<segment id="45" parent="1045" relname="span">representing a turbofan engine was given by ( 2 )</segment>
+<segment id="46" parent="45" relname="elaboration">where is the output .</segment>
+<segment id="47" parent="1048" relname="span">In the engine</segment>
+<segment id="48" parent="47" relname="elaboration">involved in this paper , the available sensors were The function</segment>
+<segment id="49" parent="1047" relname="joint">and are , respectively , the engine process and measurement expressions .</segment>
+<segment id="50" parent="1049" relname="joint">The engine was coded with C language</segment>
+<segment id="51" parent="1052" relname="span">and packaged by Dynamic Link Library</segment>
+<segment id="52" parent="51" relname="restatement">( DLL )</segment>
+<segment id="53" parent="1054" relname="span">for simulation in Matlab</segment>
+<segment id="54" parent="53" relname="elaboration">( 2016a , MathWorks , Natick , MA , USA )</segment>
+<segment id="55" parent="1053" relname="same_unit">environment .</segment>
+<segment id="56" parent="1057" relname="span">Taylor approximation was applied to the engine model Equation ( 2 ) at the equilibrium point</segment>
+<segment id="57" parent="56" relname="elaboration">( , ) ,</segment>
+<segment id="58" parent="1059" relname="span">and retaining constant and first-order terms yielded the following state variable model</segment>
+<segment id="59" parent="58" relname="restatement">( SVM ) :</segment>
+<segment id="60" parent="1059" relname="elaboration">( 3 )</segment>
+<segment id="61" parent="1061" relname="span">Equation ( 3 ) can be further depicted as ( 4 )</segment>
+<segment id="62" parent="61" relname="elaboration">where , , , and are the system matrices with appropriate dimensions , and , , and .</segment>
+<segment id="63" parent="1062" relname="joint">For simplicity , the sign “ ” in Equation ( 4 ) was omitted in the following deductions .</segment>
+<segment id="64" parent="1064" relname="same_unit">In addition , the quantities of different variables in Equation ( 4 )</segment>
+<segment id="65" parent="1064" relname="same_unit">were far away from each other .</segment>
+<segment id="66" parent="1066" relname="span">For instance , the normal physical quantity of at the design point was about 15,012 r/min ,</segment>
+<segment id="67" parent="66" relname="elaboration">whereas the normal physical value of fuel flow at the design point was around 0.3606 kg/s .</segment>
+<segment id="68" parent="1062" relname="joint">The large difference in the magnitudes of various model variables would lead to large difference of matrix singular values in the SVM ,</segment>
+<segment id="69" parent="1062" relname="joint">and it produced a big condition number of the system matrix .</segment>
+<segment id="70" parent="1070" relname="span">The larger the condition number was ,</segment>
+<segment id="71" parent="70" relname="elaboration">the harder it was to compute a matrix inverse .</segment>
+<segment id="72" parent="1062" relname="joint">Hence , physical operating parameters in the in-flight model were performed by parameter normalization ,</segment>
+<segment id="73" parent="1073" relname="preparation">details referred in .</segment>
+<segment id="74" parent="1073" relname="joint">2.2.</segment>
+<segment id="75" parent="1075" relname="preparation">Hybrid Fitting Method for Linearization</segment>
+<segment id="76" parent="1075" relname="joint">The system matrices played an important role in the steady and transient performance of the SVM .</segment>
+<segment id="77" parent="1078" relname="span">There are commonly two ways</segment>
+<segment id="78" parent="77" relname="purpose">to compute the system matrices ,</segment>
+<segment id="79" parent="1077" relname="same_unit">these being partial derivative method and fitting method .</segment>
+<segment id="80" parent="1081" relname="span">In the former method , partial derivative in the element of system matrices is computed</segment>
+<segment id="81" parent="80" relname="means">by perturbing one state variable ,</segment>
+<segment id="82" parent="1075" relname="joint">and other state variables remain unchanged .</segment>
+<segment id="83" parent="1084" relname="attribution">However , in practice it is merely impossible</segment>
+<segment id="84" parent="1084" relname="same_unit">that only one state changes</segment>
+<segment id="85" parent="1086" relname="concession">while another remains unchanged by engine nature ;</segment>
+<segment id="86" parent="1086" relname="span">thus , models</segment>
+<segment id="87" parent="86" relname="elaboration">solved by partial derivative method lack accuracy , especially during dynamic process .</segment>
+<segment id="88" parent="1089" relname="span">The fitting method generates the system matrices ’ elements with the object function of least square errors between the component-level model</segment>
+<segment id="89" parent="88" relname="restatement">( CLM )</segment>
+<segment id="90" parent="1075" relname="joint">and model responses to step inputs .</segment>
+<segment id="91" parent="1091" relname="span">Choosing the perturbing amplitude and direction relies on the experiences</segment>
+<segment id="92" parent="1092" relname="span">—</segment>
+<segment id="93" parent="92" relname="elaboration">they closely affect to the SVM modeling accuracy .</segment>
+<segment id="94" parent="1094" relname="joint">In addition , the curve part of step response data mainly depicts the system dynamics ,</segment>
+<segment id="95" parent="1094" relname="joint">and the remainder of the data shows the system steady behavior .</segment>
+<segment id="96" parent="1096" relname="span">Because the different part is processed in the same way ,</segment>
+<segment id="97" parent="96" relname="elaboration">it is thus hard to address the steady and transient performance of the SVM at the same time .</segment>
+<segment id="98" parent="1097" relname="joint">In this paper , a hybrid fitting method was developed from the combination of partial perturbing and fitting methods .</segment>
+<segment id="99" parent="1099" relname="preparation">The matrices and were related to the transient stage ,</segment>
+<segment id="100" parent="1099" relname="span">whereas the matrices and related to steady stage of step response .</segment>
+<segment id="101" parent="1101" relname="joint">The initials of matrices and were obtained by the partial perturbing method ,</segment>
+<segment id="102" parent="1102" relname="span">and steady-state component was used</segment>
+<segment id="103" parent="102" relname="purpose">to compute the initials of matrices and .</segment>
+<segment id="104" parent="1104" relname="span">The initials of matrices and were directly computed from the steady terminal values of one-control-variable step response by algebraic operation .</segment>
+<segment id="105" parent="1105" relname="sequence">The initials of these system matrices were acquired from the above implementations ,</segment>
+<segment id="106" parent="1106" relname="span">and then the fitting method was employed</segment>
+<segment id="107" parent="1107" relname="span">to obtain the optimal system matrices ,</segment>
+<segment id="108" parent="107" relname="elaboration">which follow the least square errors .</segment>
+<segment id="109" parent="1103" relname="joint">The detailed procedure of the hybrid fitting approach is given as follows :</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1004" relname="preparation"/>
+<group id="1004" type="span" parent="1002" relname="span"/>
+<group id="1005" type="multinuc" parent="1004" relname="span"/>
+<group id="1009" type="span" parent="1005" relname="joint"/>
+<group id="1010" type="span" parent="9" relname="elaboration"/>
+<group id="1011" type="multinuc" parent="10" relname="elaboration"/>
+<group id="1014" type="span" parent="1005" relname="joint"/>
+<group id="1015" type="span" parent="14" relname="purpose"/>
+<group id="1017" type="span" parent="1005" relname="joint"/>
+<group id="1018" type="multinuc" parent="1017" relname="span"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1022" type="span" parent="1005" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="span"/>
+<group id="1024" type="span" parent="1005" relname="joint"/>
+<group id="1025" type="span" parent="24" relname="elaboration"/>
+<group id="1026" type="multinuc" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="1026" relname="same_unit"/>
+<group id="1028" type="multinuc" parent="1026" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="multinuc" parent="1030" relname="elaboration"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="elaboration"/>
+<group id="1037" type="span" parent="1005" relname="joint"/>
+<group id="1039" type="span" parent="1005" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="span"/>
+<group id="1042" type="span" parent="1005" relname="joint"/>
+<group id="1043" type="span" parent="1005" relname="joint"/>
+<group id="1044" type="span" parent="1046" relname="preparation"/>
+<group id="1045" type="span" parent="44" relname="elaboration"/>
+<group id="1046" type="span" parent="1043" relname="span"/>
+<group id="1047" type="multinuc" parent="1049" relname="preparation"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="multinuc" parent="1046" relname="span"/>
+<group id="1051" type="multinuc" parent="1049" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="same_unit"/>
+<group id="1053" type="multinuc" parent="1051" relname="same_unit"/>
+<group id="1054" type="span" parent="1053" relname="same_unit"/>
+<group id="1057" type="span" parent="1049" relname="joint"/>
+<group id="1058" type="span" parent="1049" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="span" parent="1049" relname="joint"/>
+<group id="1061" type="span" parent="1062" relname="preparation"/>
+<group id="1062" type="multinuc" parent="1060" relname="span"/>
+<group id="1064" type="multinuc" parent="1062" relname="joint"/>
+<group id="1066" type="span" parent="1062" relname="joint"/>
+<group id="1070" type="span" parent="1062" relname="joint"/>
+<group id="1072" type="span" parent="1062" relname="joint"/>
+<group id="1073" type="multinuc" parent="1072" relname="span"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="multinuc" parent="1074" relname="span"/>
+<group id="1077" type="multinuc" parent="1075" relname="joint"/>
+<group id="1078" type="span" parent="1077" relname="same_unit"/>
+<group id="1081" type="span" parent="1075" relname="joint"/>
+<group id="1083" type="span" parent="1075" relname="joint"/>
+<group id="1084" type="multinuc" parent="1083" relname="span"/>
+<group id="1085" type="span" parent="1084" relname="same_unit"/>
+<group id="1086" type="span" parent="1085" relname="span"/>
+<group id="1089" type="span" parent="1075" relname="joint"/>
+<group id="1091" type="span" parent="1075" relname="joint"/>
+<group id="1092" type="span" parent="91" relname="elaboration"/>
+<group id="1093" type="span" parent="1075" relname="joint"/>
+<group id="1094" type="multinuc" parent="1093" relname="span"/>
+<group id="1095" type="multinuc" parent="1094" relname="cause"/>
+<group id="1096" type="span" parent="1095" relname="joint"/>
+<group id="1097" type="multinuc" parent="1095" relname="joint"/>
+<group id="1098" type="span" parent="1097" relname="joint"/>
+<group id="1099" type="span" parent="1098" relname="span"/>
+<group id="1100" type="multinuc" parent="100" relname="elaboration"/>
+<group id="1101" type="multinuc" parent="1100" relname="joint"/>
+<group id="1102" type="span" parent="1101" relname="joint"/>
+<group id="1103" type="multinuc" parent="1100" relname="joint"/>
+<group id="1104" type="span" parent="1103" relname="joint"/>
+<group id="1105" type="multinuc" parent="104" relname="elaboration"/>
+<group id="1106" type="span" parent="1105" relname="sequence"/>
+<group id="1107" type="span" parent="106" relname="purpose"/>
+	</body>
+</rst>

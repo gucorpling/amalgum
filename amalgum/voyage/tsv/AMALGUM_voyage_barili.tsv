@@ -1,0 +1,715 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Požarevac
+1-1	0-9	Požarevac	place	new	coref	2-1
+
+#Text=Požarevac is a city in Central Serbia .
+2-1	10-19	Požarevac	place	giv	coref	2-3[3_0]
+2-2	20-22	is	_	_	_	_
+2-3	23-24	a	place[3]	giv[3]	ana	3-1[0_3]
+2-4	25-29	city	place[3]	giv[3]	_	_
+2-5	30-32	in	place[3]	giv[3]	_	_
+2-6	33-40	Central	place[3]|place|place[5]	giv[3]|new|new[5]	_	_
+2-7	41-47	Serbia	place[3]|place[5]	giv[3]|new[5]	_	_
+2-8	48-49	.	_	_	_	_
+
+#Text=It is about 75 km away from Serbian capital , Belgrade .
+3-1	50-52	It	place	giv	coref	3-3[7_0]
+3-2	53-55	is	_	_	_	_
+3-3	56-61	about	place[7]	giv[7]	coref	5-9[0_7]
+3-4	62-64	75	place[7]	giv[7]	_	_
+3-5	65-67	km	place[7]	giv[7]	_	_
+3-6	68-72	away	place[7]	giv[7]	_	_
+3-7	73-77	from	place[7]	giv[7]	_	_
+3-8	78-85	Serbian	place[7]|place[8]	giv[7]|new[8]	coref	22-13[59_8]
+3-9	86-93	capital	place[7]|place[8]	giv[7]|new[8]	_	_
+3-10	94-95	,	_	_	_	_
+3-11	96-104	Belgrade	place	new	coref	5-1
+3-12	105-106	.	_	_	_	_
+
+#Text=By plane
+4-1	107-109	By	_	_	_	_
+4-2	110-115	plane	object	new	_	_
+
+#Text=Belgrade International Airport is about 100km away from Požarevac .
+5-1	116-124	Belgrade	place|place[12]	giv|new[12]	coref	6-14
+5-2	125-138	International	place[12]	new[12]	_	_
+5-3	139-146	Airport	place[12]	new[12]	_	_
+5-4	147-149	is	_	_	_	_
+5-5	150-155	about	_	_	_	_
+5-6	156-161	100km	_	_	_	_
+5-7	162-166	away	_	_	_	_
+5-8	167-171	from	_	_	_	_
+5-9	172-181	Požarevac	place	giv	coref	6-4
+5-10	182-183	.	_	_	_	_
+
+#Text=You can reach Požarevac by rented car , taxi or by bus from Belgrade bus station .
+6-1	184-187	You	person	acc	ana	10-11
+6-2	188-191	can	_	_	_	_
+6-3	192-197	reach	_	_	_	_
+6-4	198-207	Požarevac	place	giv	coref	17-3[46_0]
+6-5	208-210	by	_	_	_	_
+6-6	211-217	rented	object[16]	new[16]	coref	10-14[31_16]
+6-7	218-221	car	object[16]	new[16]	_	_
+6-8	222-223	,	_	_	_	_
+6-9	224-228	taxi	object	new	_	_
+6-10	229-231	or	_	_	_	_
+6-11	232-234	by	_	_	_	_
+6-12	235-238	bus	object[18]	new[18]	coref	6-15[0_18]
+6-13	239-243	from	object[18]	new[18]	_	_
+6-14	244-252	Belgrade	object[18]|place|place[21]	new[18]|giv|new[21]	coref	8-2
+6-15	253-256	bus	object[18]|object|place[21]	new[18]|giv|new[21]	coref	7-2
+6-16	257-264	station	object[18]|place[21]	new[18]|new[21]	_	_
+6-17	265-266	.	_	_	_	_
+
+#Text=By bus
+7-1	267-269	By	_	_	_	_
+7-2	270-273	bus	object	giv	coref	8-7
+
+#Text=From Belgrade there is a regular bus transport every hour .
+8-1	274-278	From	_	_	_	_
+8-2	279-287	Belgrade	place	giv	_	_
+8-3	288-293	there	_	_	_	_
+8-4	294-296	is	_	_	_	_
+8-5	297-298	a	event[25]	new[25]	coref	10-6[28_25]
+8-6	299-306	regular	event[25]	new[25]	_	_
+8-7	307-310	bus	object|event[25]	giv|new[25]	_	_
+8-8	311-320	transport	event[25]	new[25]	_	_
+8-9	321-326	every	event[25]|time[26]	new[25]|new[26]	_	_
+8-10	327-331	hour	event[25]|time[26]	new[25]|new[26]	_	_
+8-11	332-333	.	_	_	_	_
+
+#Text=Get around
+9-1	334-337	Get	_	_	_	_
+9-2	338-344	around	_	_	_	_
+
+#Text=The most popular way for local transport is taxi or you can rent a car .
+10-1	345-348	The	object[27]	new[27]	coref	10-9[0_27]
+10-2	349-353	most	object[27]	new[27]	_	_
+10-3	354-361	popular	object[27]	new[27]	_	_
+10-4	362-365	way	object[27]	new[27]	_	_
+10-5	366-369	for	object[27]	new[27]	_	_
+10-6	370-375	local	object[27]|event[28]	new[27]|giv[28]	_	_
+10-7	376-385	transport	object[27]|event[28]	new[27]|giv[28]	_	_
+10-8	386-388	is	_	_	_	_
+10-9	389-393	taxi	object	giv	_	_
+10-10	394-396	or	_	_	_	_
+10-11	397-400	you	person	giv	_	_
+10-12	401-404	can	_	_	_	_
+10-13	405-409	rent	_	_	_	_
+10-14	410-411	a	object[31]	giv[31]	_	_
+10-15	412-415	car	object[31]	giv[31]	_	_
+10-16	416-417	.	_	_	_	_
+
+#Text=Enjoy in cheap driving .
+11-1	418-423	Enjoy	_	_	_	_
+11-2	424-426	in	_	_	_	_
+11-3	427-432	cheap	event[32]	new[32]	_	_
+11-4	433-440	driving	event[32]	new[32]	_	_
+11-5	441-442	.	_	_	_	_
+
+#Text=See
+12-1	443-446	See	_	_	_	_
+
+#Text=Gallery ' Milena Pavlović - Barili ' .
+13-1	447-454	Gallery	place	new	_	_
+13-2	455-456	'	_	_	_	_
+13-3	457-463	Milena	person[34]	new[34]	_	_
+13-4	464-472	Pavlović	person[34]	new[34]	_	_
+13-5	473-474	-	person[34]	new[34]	_	_
+13-6	475-481	Barili	person[34]	new[34]	_	_
+13-7	482-483	'	_	_	_	_
+13-8	484-485	.	_	_	_	_
+
+#Text=Barili 's paintings collected from all over the world .
+14-1	486-492	Barili	person[35]|object[36]	new[35]|new[36]	coref	15-1[0_35]
+14-2	493-495	's	person[35]|object[36]	new[35]|new[36]	_	_
+14-3	496-505	paintings	object[36]	new[36]	_	_
+14-4	506-515	collected	_	_	_	_
+14-5	516-520	from	_	_	_	_
+14-6	521-524	all	place[37]	new[37]	coref	15-10[41_37]
+14-7	525-529	over	place[37]	new[37]	_	_
+14-8	530-533	the	place[37]	new[37]	_	_
+14-9	534-539	world	place[37]	new[37]	_	_
+14-10	540-541	.	_	_	_	_
+
+#Text=Barili was one of the well known painters in the world in 19th century .
+15-1	542-548	Barili	person	giv	_	_
+15-2	549-552	was	_	_	_	_
+15-3	553-556	one	person[39]	new[39]	_	_
+15-4	557-559	of	person[39]	new[39]	_	_
+15-5	560-563	the	person[39]|person[40]	new[39]|new[40]	ana	17-9[0_40]
+15-6	564-568	well	person[39]|person[40]	new[39]|new[40]	_	_
+15-7	569-574	known	person[39]|person[40]	new[39]|new[40]	_	_
+15-8	575-583	painters	person[39]|person[40]	new[39]|new[40]	_	_
+15-9	584-586	in	person[39]|person[40]	new[39]|new[40]	_	_
+15-10	587-590	the	person[39]|person[40]|place[41]	new[39]|new[40]|giv[41]	_	_
+15-11	591-596	world	person[39]|person[40]|place[41]	new[39]|new[40]|giv[41]	_	_
+15-12	597-599	in	person[39]	new[39]	_	_
+15-13	600-604	19th	person[39]|time[42]	new[39]|new[42]	_	_
+15-14	605-612	century	person[39]|time[42]	new[39]|new[42]	_	_
+15-15	613-614	.	_	_	_	_
+
+#Text=Požarevac 's Museum .
+16-1	615-624	Požarevac	person[43]|place[44]	new[43]|new[44]	_	_
+16-2	625-627	's	person[43]|place[44]	new[43]|new[44]	_	_
+16-3	628-634	Museum	place[44]	new[44]	_	_
+16-4	635-636	.	_	_	_	_
+
+#Text=Artifacts from Požarevac 's history , many of them dating from the Roman Empire .
+17-1	637-646	Artifacts	object[45]	new[45]	_	_
+17-2	647-651	from	object[45]	new[45]	_	_
+17-3	652-661	Požarevac	object[45]|place[46]|abstract[47]	new[45]|giv[46]|new[47]	coref	19-7[0_46]
+17-4	662-664	's	object[45]|place[46]|abstract[47]	new[45]|giv[46]|new[47]	_	_
+17-5	665-672	history	object[45]|abstract[47]	new[45]|new[47]	_	_
+17-6	673-674	,	object[45]	new[45]	_	_
+17-7	675-679	many	object[45]	new[45]	_	_
+17-8	680-682	of	object[45]	new[45]	_	_
+17-9	683-687	them	object[45]|person	new[45]|giv	_	_
+17-10	688-694	dating	object[45]	new[45]	_	_
+17-11	695-699	from	object[45]	new[45]	_	_
+17-12	700-703	the	object[45]|place[49]	new[45]|new[49]	_	_
+17-13	704-709	Roman	object[45]|place[49]	new[45]|new[49]	_	_
+17-14	710-716	Empire	object[45]|place[49]	new[45]|new[49]	_	_
+17-15	717-718	.	_	_	_	_
+
+#Text=Čačalica .
+18-1	719-727	Čačalica	_	_	_	_
+18-2	728-729	.	_	_	_	_
+
+#Text=Small park on the edge of Požarevac .
+19-1	730-735	Small	place[50]	new[50]	coref	30-5[100_50]
+19-2	736-740	park	place[50]	new[50]	_	_
+19-3	741-743	on	place[50]	new[50]	_	_
+19-4	744-747	the	place[50]|place[51]	new[50]|new[51]	_	_
+19-5	748-752	edge	place[50]|place[51]	new[50]|new[51]	_	_
+19-6	753-755	of	place[50]|place[51]	new[50]|new[51]	_	_
+19-7	756-765	Požarevac	place[50]|place[51]|place	new[50]|new[51]|giv	coref	22-1[57_0]
+19-8	766-767	.	_	_	_	_
+
+#Text=Many exotic plants and birds can be seen here .
+20-1	768-772	Many	plant[53]	new[53]	_	_
+20-2	773-779	exotic	plant[53]	new[53]	_	_
+20-3	780-786	plants	plant[53]	new[53]	_	_
+20-4	787-790	and	_	_	_	_
+20-5	791-796	birds	animal	new	_	_
+20-6	797-800	can	_	_	_	_
+20-7	801-803	be	_	_	_	_
+20-8	804-808	seen	_	_	_	_
+20-9	809-813	here	_	_	_	_
+20-10	814-815	.	_	_	_	_
+
+#Text=Viminacium ( 12 km away ) .
+21-1	816-826	Viminacium	place	new	coref	24-1
+21-2	827-828	(	_	_	_	_
+21-3	829-831	12	abstract[56]	new[56]	_	_
+21-4	832-834	km	abstract[56]	new[56]	_	_
+21-5	835-839	away	abstract[56]	new[56]	_	_
+21-6	840-841	)	_	_	_	_
+21-7	842-843	.	_	_	_	_
+
+#Text=An ancient Roman city and military camp , which used to be the capital of Moesia Superior province , on the Roman road Via Militaris .
+22-1	844-846	An	place[57]	giv[57]	coref	28-3[0_57]
+22-2	847-854	ancient	place[57]	giv[57]	_	_
+22-3	855-860	Roman	place[57]	giv[57]	_	_
+22-4	861-865	city	place[57]	giv[57]	_	_
+22-5	866-869	and	_	_	_	_
+22-6	870-878	military	place[58]	new[58]	ana	23-2[0_58]
+22-7	879-883	camp	place[58]	new[58]	_	_
+22-8	884-885	,	place[58]	new[58]	_	_
+22-9	886-891	which	place[58]	new[58]	_	_
+22-10	892-896	used	place[58]	new[58]	_	_
+22-11	897-899	to	place[58]	new[58]	_	_
+22-12	900-902	be	place[58]	new[58]	_	_
+22-13	903-906	the	place[58]|place[59]	new[58]|giv[59]	_	_
+22-14	907-914	capital	place[58]|place[59]	new[58]|giv[59]	_	_
+22-15	915-917	of	place[58]|place[59]	new[58]|giv[59]	_	_
+22-16	918-924	Moesia	place[58]|place[59]|place|place[61]	new[58]|giv[59]|new|new[61]	_	_
+22-17	925-933	Superior	place[58]|place[59]|place[61]	new[58]|giv[59]|new[61]	_	_
+22-18	934-942	province	place[58]|place[59]|place[61]	new[58]|giv[59]|new[61]	_	_
+22-19	943-944	,	place[58]	new[58]	_	_
+22-20	945-947	on	place[58]	new[58]	_	_
+22-21	948-951	the	place[58]|place[62]	new[58]|new[62]	_	_
+22-22	952-957	Roman	place[58]|place[62]	new[58]|new[62]	_	_
+22-23	958-962	road	place[58]|place[62]	new[58]|new[62]	_	_
+22-24	963-966	Via	place[58]|place[62]|person	new[58]|new[62]|new	_	_
+22-25	967-976	Militaris	place[58]|place[62]|place	new[58]|new[62]|new	_	_
+22-26	977-978	.	_	_	_	_
+
+#Text=At its peak , it is believed to have had 40,000 inhabitants , making it one of the biggest cities of that time .
+23-1	979-981	At	_	_	_	_
+23-2	982-985	its	place|time[66]	giv|new[66]	ana|coref	23-5|23-22[72_66]
+23-3	986-990	peak	time[66]	new[66]	_	_
+23-4	991-992	,	_	_	_	_
+23-5	993-995	it	place	giv	ana	23-15
+23-6	996-998	is	_	_	_	_
+23-7	999-1007	believed	_	_	_	_
+23-8	1008-1010	to	_	_	_	_
+23-9	1011-1015	have	_	_	_	_
+23-10	1016-1019	had	_	_	_	_
+23-11	1020-1026	40,000	person[68]	new[68]	_	_
+23-12	1027-1038	inhabitants	person[68]	new[68]	_	_
+23-13	1039-1040	,	_	_	_	_
+23-14	1041-1047	making	_	_	_	_
+23-15	1048-1050	it	place	giv	_	_
+23-16	1051-1054	one	place[70]	new[70]	_	_
+23-17	1055-1057	of	place[70]	new[70]	_	_
+23-18	1058-1061	the	place[70]|place[71]	new[70]|new[71]	_	_
+23-19	1062-1069	biggest	place[70]|place[71]	new[70]|new[71]	_	_
+23-20	1070-1076	cities	place[70]|place[71]	new[70]|new[71]	_	_
+23-21	1077-1079	of	place[70]|place[71]	new[70]|new[71]	_	_
+23-22	1080-1084	that	place[70]|place[71]|time[72]	new[70]|new[71]|giv[72]	_	_
+23-23	1085-1089	time	place[70]|place[71]|time[72]	new[70]|new[71]|giv[72]	_	_
+23-24	1090-1091	.	_	_	_	_
+
+#Text=Viminacium was devastated by Huns in the 5th century , later rebuilt by Justinian , and completely destroyed with the arrival of Slavs in the 6th century .
+24-1	1092-1102	Viminacium	place	giv	_	_
+24-2	1103-1106	was	_	_	_	_
+24-3	1107-1117	devastated	_	_	_	_
+24-4	1118-1120	by	_	_	_	_
+24-5	1121-1125	Huns	place	new	_	_
+24-6	1126-1128	in	_	_	_	_
+24-7	1129-1132	the	time[75]	new[75]	_	_
+24-8	1133-1136	5th	time[75]	new[75]	_	_
+24-9	1137-1144	century	time[75]	new[75]	_	_
+24-10	1145-1146	,	_	_	_	_
+24-11	1147-1152	later	_	_	_	_
+24-12	1153-1160	rebuilt	_	_	_	_
+24-13	1161-1163	by	_	_	_	_
+24-14	1164-1173	Justinian	person	new	_	_
+24-15	1174-1175	,	_	_	_	_
+24-16	1176-1179	and	_	_	_	_
+24-17	1180-1190	completely	_	_	_	_
+24-18	1191-1200	destroyed	_	_	_	_
+24-19	1201-1205	with	_	_	_	_
+24-20	1206-1209	the	event[77]	new[77]	_	_
+24-21	1210-1217	arrival	event[77]	new[77]	_	_
+24-22	1218-1220	of	event[77]	new[77]	_	_
+24-23	1221-1226	Slavs	event[77]|person	new[77]|new	_	_
+24-24	1227-1229	in	_	_	_	_
+24-25	1230-1233	the	time[79]	new[79]	_	_
+24-26	1234-1237	6th	time[79]	new[79]	_	_
+24-27	1238-1245	century	time[79]	new[79]	_	_
+24-28	1246-1247	.	_	_	_	_
+
+#Text=Today , the archaeological site occupies a total of 450 hectares ; as of 2018 , only 3 to 4 % of the site have been explored .
+25-1	1248-1253	Today	_	_	_	_
+25-2	1254-1255	,	_	_	_	_
+25-3	1256-1259	the	place[80]	new[80]	coref	25-23[84_80]
+25-4	1260-1274	archaeological	place[80]	new[80]	_	_
+25-5	1275-1279	site	place[80]	new[80]	_	_
+25-6	1280-1288	occupies	_	_	_	_
+25-7	1289-1290	a	event[81]	new[81]	_	_
+25-8	1291-1296	total	event[81]	new[81]	_	_
+25-9	1297-1299	of	event[81]	new[81]	_	_
+25-10	1300-1303	450	event[81]	new[81]	_	_
+25-11	1304-1312	hectares	event[81]	new[81]	_	_
+25-12	1313-1314	;	_	_	_	_
+25-13	1315-1317	as	_	_	_	_
+25-14	1318-1320	of	_	_	_	_
+25-15	1321-1325	2018	time	new	_	_
+25-16	1326-1327	,	_	_	_	_
+25-17	1328-1332	only	abstract[83]	new[83]	_	_
+25-18	1333-1334	3	abstract[83]	new[83]	_	_
+25-19	1335-1337	to	abstract[83]	new[83]	_	_
+25-20	1338-1339	4	abstract[83]	new[83]	_	_
+25-21	1340-1341	%	abstract[83]	new[83]	_	_
+25-22	1342-1344	of	abstract[83]	new[83]	_	_
+25-23	1345-1348	the	abstract[83]|place[84]	new[83]|giv[84]	_	_
+25-24	1349-1353	site	abstract[83]|place[84]	new[83]|giv[84]	_	_
+25-25	1354-1358	have	_	_	_	_
+25-26	1359-1363	been	_	_	_	_
+25-27	1364-1372	explored	_	_	_	_
+25-28	1373-1374	.	_	_	_	_
+
+#Text=In 2019 , excavations revealed a well preserved 1.78 m tall skeleton buried with a 92 cm long iron sword .
+26-1	1375-1377	In	_	_	_	_
+26-2	1378-1382	2019	time	new	_	_
+26-3	1383-1384	,	_	_	_	_
+26-4	1385-1396	excavations	event	new	_	_
+26-5	1397-1405	revealed	_	_	_	_
+26-6	1406-1407	a	object[88]	new[88]	_	_
+26-7	1408-1412	well	object[88]	new[88]	_	_
+26-8	1413-1422	preserved	object[88]	new[88]	_	_
+26-9	1423-1427	1.78	abstract[87]|object[88]	new[87]|new[88]	_	_
+26-10	1428-1429	m	abstract[87]|object[88]	new[87]|new[88]	_	_
+26-11	1430-1434	tall	object[88]	new[88]	_	_
+26-12	1435-1443	skeleton	object[88]	new[88]	_	_
+26-13	1444-1450	buried	object[88]	new[88]	_	_
+26-14	1451-1455	with	object[88]	new[88]	_	_
+26-15	1456-1457	a	object[88]|object[91]	new[88]|new[91]	_	_
+26-16	1458-1460	92	object[88]|abstract[89]|object[91]	new[88]|new[89]|new[91]	_	_
+26-17	1461-1463	cm	object[88]|abstract[89]|object[91]	new[88]|new[89]|new[91]	_	_
+26-18	1464-1468	long	object[88]|object[91]	new[88]|new[91]	_	_
+26-19	1469-1473	iron	object[88]|object|object[91]	new[88]|new|new[91]	_	_
+26-20	1474-1479	sword	object[88]|object[91]	new[88]|new[91]	_	_
+26-21	1480-1481	.	_	_	_	_
+
+#Text=Do
+27-1	1482-1484	Do	_	_	_	_
+
+#Text=Nightlife in Požarevac is very vibrant .
+28-1	1485-1494	Nightlife	abstract[92]	new[92]	_	_
+28-2	1495-1497	in	abstract[92]	new[92]	_	_
+28-3	1498-1507	Požarevac	abstract[92]|place	new[92]|giv	ana	29-1[94_0]
+28-4	1508-1510	is	_	_	_	_
+28-5	1511-1515	very	_	_	_	_
+28-6	1516-1523	vibrant	_	_	_	_
+28-7	1524-1525	.	_	_	_	_
+
+#Text=Some of the most popular discoteques are Madona and Rolex .
+29-1	1526-1530	Some	place[94]	giv[94]	coref	29-8[0_94]
+29-2	1531-1533	of	place[94]	giv[94]	_	_
+29-3	1534-1537	the	place[94]|abstract[95]	giv[94]|new[95]	_	_
+29-4	1538-1542	most	place[94]|abstract[95]	giv[94]|new[95]	_	_
+29-5	1543-1550	popular	place[94]|abstract[95]	giv[94]|new[95]	_	_
+29-6	1551-1562	discoteques	place[94]|abstract[95]	giv[94]|new[95]	_	_
+29-7	1563-1566	are	_	_	_	_
+29-8	1567-1573	Madona	place|place[97]	giv|giv[97]	coref|coref	29-8[97_0]|35-4[0_97]
+29-9	1574-1577	and	place[97]	giv[97]	_	_
+29-10	1578-1583	Rolex	place[97]|abstract	giv[97]|new	_	_
+29-11	1584-1585	.	_	_	_	_
+
+#Text=Arrange a picnic on National Park ' Čačalica ' , five minutes drive from downtown .
+30-1	1586-1593	Arrange	_	_	_	_
+30-2	1594-1595	a	event[99]	new[99]	_	_
+30-3	1596-1602	picnic	event[99]	new[99]	_	_
+30-4	1603-1605	on	_	_	_	_
+30-5	1606-1614	National	place[100]	giv[100]	_	_
+30-6	1615-1619	Park	place[100]	giv[100]	_	_
+30-7	1620-1621	'	_	_	_	_
+30-8	1622-1630	Čačalica	place	new	_	_
+30-9	1631-1632	'	_	_	_	_
+30-10	1633-1634	,	_	_	_	_
+30-11	1635-1639	five	time[102]|event[103]	new[102]|new[103]	coref	63-6[167_102]
+30-12	1640-1647	minutes	time[102]|event[103]	new[102]|new[103]	_	_
+30-13	1648-1653	drive	event[103]	new[103]	_	_
+30-14	1654-1658	from	event[103]	new[103]	_	_
+30-15	1659-1667	downtown	event[103]|place	new[103]|new	coref	41-4
+30-16	1668-1669	.	_	_	_	_
+
+#Text=Eat
+31-1	1670-1673	Eat	_	_	_	_
+
+#Text=Elite .
+32-1	1674-1679	Elite	_	_	_	_
+32-2	1680-1681	.	_	_	_	_
+
+#Text=Delicious Serbian cuisine
+33-1	1682-1691	Delicious	abstract[105]	new[105]	coref	42-2[130_105]
+33-2	1692-1699	Serbian	abstract[105]	new[105]	_	_
+33-3	1700-1707	cuisine	abstract[105]	new[105]	_	_
+
+#Text=Oaza ( On the road to Silver lake . ) .
+34-1	1708-1712	Oaza	place	new	_	_
+34-2	1713-1714	(	_	_	_	_
+34-3	1715-1717	On	_	_	_	_
+34-4	1718-1721	the	_	_	_	_
+34-5	1722-1726	road	_	_	_	_
+34-6	1727-1729	to	_	_	_	_
+34-7	1730-1736	Silver	place[107]	new[107]	_	_
+34-8	1737-1741	lake	place[107]	new[107]	_	_
+34-9	1742-1743	.	_	_	_	_
+34-10	1744-1745	)	_	_	_	_
+34-11	1746-1747	.	_	_	_	_
+
+#Text=Popular restaurant in Požarevac , serving Italian , French and Serbian cuisine
+35-1	1748-1755	Popular	place[108]	new[108]	coref	37-4[114_108]
+35-2	1756-1766	restaurant	place[108]	new[108]	_	_
+35-3	1767-1769	in	place[108]	new[108]	_	_
+35-4	1770-1779	Požarevac	place[108]|place	new[108]|giv	coref	37-16
+35-5	1780-1781	,	place[108]	new[108]	_	_
+35-6	1782-1789	serving	place[108]	new[108]	_	_
+35-7	1790-1797	Italian	place[108]|abstract[110]	new[108]|new[110]	coref	37-1[113_110]
+35-8	1798-1799	,	place[108]|abstract[110]	new[108]|new[110]	_	_
+35-9	1800-1806	French	place[108]|abstract[110]	new[108]|new[110]	_	_
+35-10	1807-1810	and	place[108]|abstract[110]	new[108]|new[110]	_	_
+35-11	1811-1818	Serbian	place[108]|abstract[110]	new[108]|new[110]	_	_
+35-12	1819-1826	cuisine	place[108]|abstract[110]	new[108]|new[110]	_	_
+
+#Text=Kod Đure , Draže Markovića .
+36-1	1827-1830	Kod	place[111]	new[111]	_	_
+36-2	1831-1835	Đure	place[111]	new[111]	_	_
+36-3	1836-1837	,	place[111]	new[111]	_	_
+36-4	1838-1843	Draže	place[111]|person[112]	new[111]|new[112]	_	_
+36-5	1844-1853	Markovića	place[111]|person[112]	new[111]|new[112]	_	_
+36-6	1854-1855	.	_	_	_	_
+
+#Text=National cuisine , quite and peaceful restaurant located in one of the oldest streets in Požarevac .
+37-1	1856-1864	National	abstract[113]	giv[113]	_	_
+37-2	1865-1872	cuisine	abstract[113]	giv[113]	_	_
+37-3	1873-1874	,	_	_	_	_
+37-4	1875-1880	quite	place[114]	giv[114]	coref	39-1[120_114]
+37-5	1881-1884	and	place[114]	giv[114]	_	_
+37-6	1885-1893	peaceful	place[114]	giv[114]	_	_
+37-7	1894-1904	restaurant	place[114]	giv[114]	_	_
+37-8	1905-1912	located	place[114]	giv[114]	_	_
+37-9	1913-1915	in	place[114]	giv[114]	_	_
+37-10	1916-1919	one	place[114]|place[115]	giv[114]|new[115]	_	_
+37-11	1920-1922	of	place[114]|place[115]	giv[114]|new[115]	_	_
+37-12	1923-1926	the	place[114]|place[115]|place[116]	giv[114]|new[115]|new[116]	_	_
+37-13	1927-1933	oldest	place[114]|place[115]|place[116]	giv[114]|new[115]|new[116]	_	_
+37-14	1934-1941	streets	place[114]|place[115]|place[116]	giv[114]|new[115]|new[116]	_	_
+37-15	1942-1944	in	place[114]|place[115]|place[116]	giv[114]|new[115]|new[116]	_	_
+37-16	1945-1954	Požarevac	place[114]|place[115]|place[116]|place	giv[114]|new[115]|new[116]|giv	coref	63-10
+37-17	1955-1956	.	_	_	_	_
+
+#Text=Zabela , Zabelski put .
+38-1	1957-1963	Zabela	person	new	_	_
+38-2	1964-1965	,	_	_	_	_
+38-3	1966-1974	Zabelski	person	new	_	_
+38-4	1975-1978	put	_	_	_	_
+38-5	1979-1980	.	_	_	_	_
+
+#Text=Very interesting restaurant where you will be served by prisoners from local prison .
+39-1	1981-1985	Very	place[120]	giv[120]	coref	58-3[0_120]
+39-2	1986-1997	interesting	place[120]	giv[120]	_	_
+39-3	1998-2008	restaurant	place[120]	giv[120]	_	_
+39-4	2009-2014	where	place[120]	giv[120]	_	_
+39-5	2015-2018	you	place[120]|person	giv[120]|acc	ana	40-12
+39-6	2019-2023	will	place[120]	giv[120]	_	_
+39-7	2024-2026	be	place[120]	giv[120]	_	_
+39-8	2027-2033	served	place[120]	giv[120]	_	_
+39-9	2034-2036	by	place[120]	giv[120]	_	_
+39-10	2037-2046	prisoners	place[120]|person[122]	giv[120]|new[122]	ana	40-7[0_122]
+39-11	2047-2051	from	place[120]|person[122]	giv[120]|new[122]	_	_
+39-12	2052-2057	local	place[120]|person[122]|place[123]	giv[120]|new[122]|new[123]	ana	40-19[0_123]
+39-13	2058-2064	prison	place[120]|person[122]|place[123]	giv[120]|new[122]|new[123]	_	_
+39-14	2065-2066	.	_	_	_	_
+
+#Text=But do n't be afraid , they are not dangerous , you will be safe and will enjoy it .
+40-1	2067-2070	But	_	_	_	_
+40-2	2071-2073	do	_	_	_	_
+40-3	2074-2077	n't	_	_	_	_
+40-4	2078-2080	be	_	_	_	_
+40-5	2081-2087	afraid	_	_	_	_
+40-6	2088-2089	,	_	_	_	_
+40-7	2090-2094	they	person	giv	_	_
+40-8	2095-2098	are	_	_	_	_
+40-9	2099-2102	not	_	_	_	_
+40-10	2103-2112	dangerous	_	_	_	_
+40-11	2113-2114	,	_	_	_	_
+40-12	2115-2118	you	person	giv	_	_
+40-13	2119-2123	will	_	_	_	_
+40-14	2124-2126	be	_	_	_	_
+40-15	2127-2131	safe	_	_	_	_
+40-16	2132-2135	and	_	_	_	_
+40-17	2136-2140	will	_	_	_	_
+40-18	2141-2146	enjoy	_	_	_	_
+40-19	2147-2149	it	place	giv	_	_
+40-20	2150-2151	.	_	_	_	_
+
+#Text=Club Inn ( Downtown ) .
+41-1	2152-2156	Club	person|place[128]	new|new[128]	_	_
+41-2	2157-2160	Inn	place[128]	new[128]	_	_
+41-3	2161-2162	(	place[128]	new[128]	_	_
+41-4	2163-2171	Downtown	place[128]|place	new[128]|giv	coref	45-4
+41-5	2172-2173	)	place[128]	new[128]	_	_
+41-6	2174-2175	.	_	_	_	_
+
+#Text=Serves Serbian and international cuisine .
+42-1	2176-2182	Serves	_	_	_	_
+42-2	2183-2190	Serbian	abstract[130]	giv[130]	_	_
+42-3	2191-2194	and	abstract[130]	giv[130]	_	_
+42-4	2195-2208	international	abstract[130]	giv[130]	_	_
+42-5	2209-2216	cuisine	abstract[130]	giv[130]	_	_
+42-6	2217-2218	.	_	_	_	_
+
+#Text=All of these restaurants serves delicious meals at affordable prices - from 10 - 25€ ( meal and one drink ) .
+43-1	2219-2222	All	place[131]	new[131]	_	_
+43-2	2223-2225	of	place[131]	new[131]	_	_
+43-3	2226-2231	these	place[131]	new[131]	_	_
+43-4	2232-2243	restaurants	place[131]	new[131]	_	_
+43-5	2244-2250	serves	_	_	_	_
+43-6	2251-2260	delicious	object[132]	new[132]	_	_
+43-7	2261-2266	meals	object[132]	new[132]	_	_
+43-8	2267-2269	at	_	_	_	_
+43-9	2270-2280	affordable	abstract[133]	new[133]	_	_
+43-10	2281-2287	prices	abstract[133]	new[133]	_	_
+43-11	2288-2289	-	_	_	_	_
+43-12	2290-2294	from	_	_	_	_
+43-13	2295-2297	10	abstract[134]	new[134]	_	_
+43-14	2298-2299	-	abstract[134]	new[134]	_	_
+43-15	2300-2303	25€	abstract[134]|abstract	new[134]|new	_	_
+43-16	2304-2305	(	_	_	_	_
+43-17	2306-2310	meal	object	new	_	_
+43-18	2311-2314	and	_	_	_	_
+43-19	2315-2318	one	substance[137]	new[137]	_	_
+43-20	2319-2324	drink	substance[137]	new[137]	_	_
+43-21	2325-2326	)	_	_	_	_
+43-22	2327-2328	.	_	_	_	_
+
+#Text=Drink
+44-1	2329-2334	Drink	_	_	_	_
+
+#Text=Radio Cafe ( Downtown ) .
+45-1	2335-2340	Radio	person[138]	new[138]	_	_
+45-2	2341-2345	Cafe	person[138]	new[138]	_	_
+45-3	2346-2347	(	person[138]	new[138]	_	_
+45-4	2348-2356	Downtown	person[138]|place	new[138]|giv	_	_
+45-5	2357-2358	)	person[138]	new[138]	_	_
+45-6	2359-2360	.	_	_	_	_
+
+#Text=Movie themed cafe .
+46-1	2361-2366	Movie	place[140]	new[140]	_	_
+46-2	2367-2373	themed	place[140]	new[140]	_	_
+46-3	2374-2378	cafe	place[140]	new[140]	_	_
+46-4	2379-2380	.	_	_	_	_
+
+#Text=Cvetić .
+47-1	2381-2387	Cvetić	person	new	_	_
+47-2	2388-2389	.	_	_	_	_
+
+#Text=One of the most popular cafes for locals .
+48-1	2390-2393	One	place[142]	new[142]	_	_
+48-2	2394-2396	of	place[142]	new[142]	_	_
+48-3	2397-2400	the	place[142]|place[143]	new[142]|new[143]	_	_
+48-4	2401-2405	most	place[142]|place[143]	new[142]|new[143]	_	_
+48-5	2406-2413	popular	place[142]|place[143]	new[142]|new[143]	_	_
+48-6	2414-2419	cafes	place[142]|place[143]	new[142]|new[143]	_	_
+48-7	2420-2423	for	place[142]|place[143]	new[142]|new[143]	_	_
+48-8	2424-2430	locals	place[142]|place[143]|person	new[142]|new[143]|new	_	_
+48-9	2431-2432	.	_	_	_	_
+
+#Text=Casper .
+49-1	2433-2439	Casper	person	new	_	_
+49-2	2440-2441	.	_	_	_	_
+
+#Text=Rustique .
+50-1	2442-2450	Rustique	abstract	new	_	_
+50-2	2451-2452	.	_	_	_	_
+
+#Text=Lavirint .
+51-1	2453-2461	Lavirint	object	new	_	_
+51-2	2462-2463	.	_	_	_	_
+
+#Text=Grad .
+52-1	2464-2468	Grad	person	new	_	_
+52-2	2469-2470	.	_	_	_	_
+
+#Text=Kuća .
+53-1	2471-2475	Kuća	person	new	_	_
+53-2	2476-2477	.	_	_	_	_
+
+#Text=Hombre .
+54-1	2478-2484	Hombre	abstract	new	_	_
+54-2	2485-2486	.	_	_	_	_
+
+#Text=Sleep
+55-1	2487-2492	Sleep	person	new	_	_
+
+#Text=Boem ( Hotel Boem ) , ☏ +381 12-213 - 210 .
+56-1	2493-2497	Boem	place	new	_	_
+56-2	2498-2499	(	_	_	_	_
+56-3	2500-2505	Hotel	place[153]	new[153]	coref	58-1[0_153]
+56-4	2506-2510	Boem	place[153]	new[153]	_	_
+56-5	2511-2512	)	_	_	_	_
+56-6	2513-2514	,	_	_	_	_
+56-7	2515-2516	☏	_	_	_	_
+56-8	2517-2521	+381	_	_	_	_
+56-9	2522-2528	12-213	_	_	_	_
+56-10	2529-2530	-	_	_	_	_
+56-11	2531-2534	210	_	_	_	_
+56-12	2535-2536	.	_	_	_	_
+
+#Text=Check-in : 8AM-11PM , check-out : 8AM-11P .
+57-1	2537-2545	Check-in	person	new	_	_
+57-2	2546-2547	:	_	_	_	_
+57-3	2548-2556	8AM-11PM	abstract	new	_	_
+57-4	2557-2558	,	_	_	_	_
+57-5	2559-2568	check-out	event[156]	new[156]	_	_
+57-6	2569-2570	:	event[156]	new[156]	_	_
+57-7	2571-2578	8AM-11P	event[156]	new[156]	_	_
+57-8	2579-2580	.	_	_	_	_
+
+#Text=Hotel and restaurant .
+58-1	2581-2586	Hotel	place	giv	coref	61-1[162_0]
+58-2	2587-2590	and	_	_	_	_
+58-3	2591-2601	restaurant	place	giv	_	_
+58-4	2602-2603	.	_	_	_	_
+
+#Text=€ 22 .
+59-1	2604-2605	€	_	_	_	_
+59-2	2606-2608	22	_	_	_	_
+59-3	2609-2610	.	_	_	_	_
+
+#Text=Dunav , Lenjinova 3 ( Downtown ) .
+60-1	2611-2616	Dunav	place[159]	new[159]	_	_
+60-2	2617-2618	,	place[159]	new[159]	_	_
+60-3	2619-2628	Lenjinova	place[159]|place[160]	new[159]|new[160]	_	_
+60-4	2629-2630	3	place[159]|place[160]	new[159]|new[160]	_	_
+60-5	2631-2632	(	_	_	_	_
+60-6	2633-2641	Downtown	_	_	_	_
+60-7	2642-2643	)	_	_	_	_
+60-8	2644-2645	.	_	_	_	_
+
+#Text=2 star hotel near the most frequent street .
+61-1	2646-2647	2	person[161]|place[162]	new[161]|giv[162]	coref	63-1[166_162]
+61-2	2648-2652	star	person[161]|place[162]	new[161]|giv[162]	_	_
+61-3	2653-2658	hotel	place[162]	giv[162]	_	_
+61-4	2659-2663	near	place[162]	giv[162]	_	_
+61-5	2664-2667	the	place[162]|place[163]	giv[162]|new[163]	_	_
+61-6	2668-2672	most	place[162]|place[163]	giv[162]|new[163]	_	_
+61-7	2673-2681	frequent	place[162]|place[163]	giv[162]|new[163]	_	_
+61-8	2682-2688	street	place[162]|place[163]	giv[162]|new[163]	_	_
+61-9	2689-2690	.	_	_	_	_
+
+#Text=Ljubičevska noć ( Beogradski put ) .
+62-1	2691-2702	Ljubičevska	person[164]	new[164]	_	_
+62-2	2703-2706	noć	person[164]	new[164]	_	_
+62-3	2707-2708	(	_	_	_	_
+62-4	2709-2719	Beogradski	object	new	_	_
+62-5	2720-2723	put	_	_	_	_
+62-6	2724-2725	)	_	_	_	_
+62-7	2726-2727	.	_	_	_	_
+
+#Text=Quite and peaceful hotel , five minutes drive from Požarevac .
+63-1	2728-2733	Quite	place[166]	giv[166]	coref	64-1[170_166]
+63-2	2734-2737	and	place[166]	giv[166]	_	_
+63-3	2738-2746	peaceful	place[166]	giv[166]	_	_
+63-4	2747-2752	hotel	place[166]	giv[166]	_	_
+63-5	2753-2754	,	_	_	_	_
+63-6	2755-2759	five	time[167]|event[168]	giv[167]|new[168]	_	_
+63-7	2760-2767	minutes	time[167]|event[168]	giv[167]|new[168]	_	_
+63-8	2768-2773	drive	event[168]	new[168]	_	_
+63-9	2774-2778	from	event[168]	new[168]	_	_
+63-10	2779-2788	Požarevac	event[168]|place	new[168]|giv	_	_
+63-11	2789-2790	.	_	_	_	_
+
+#Text=Hotel Srerbno jezero ( Srebrno jezero , near Silver lake ) .
+64-1	2791-2796	Hotel	place[170]	giv[170]	_	_
+64-2	2797-2804	Srerbno	place[170]	giv[170]	_	_
+64-3	2805-2811	jezero	place[170]	giv[170]	_	_
+64-4	2812-2813	(	_	_	_	_
+64-5	2814-2821	Srebrno	place[171]	new[171]	_	_
+64-6	2822-2828	jezero	place[171]	new[171]	_	_
+64-7	2829-2830	,	place[171]	new[171]	_	_
+64-8	2831-2835	near	place[171]	new[171]	_	_
+64-9	2836-2842	Silver	place[171]|person|place[173]	new[171]|new|new[173]	_	_
+64-10	2843-2847	lake	place[171]|place[173]	new[171]|new[173]	_	_
+64-11	2848-2849	)	_	_	_	_
+64-12	2850-2851	.	_	_	_	_
+
+#Text=Peaceful and quite place during the non summer months .
+65-1	2852-2860	Peaceful	_	_	_	_
+65-2	2861-2864	and	_	_	_	_
+65-3	2865-2870	quite	_	_	_	_
+65-4	2871-2876	place	_	_	_	_
+65-5	2877-2883	during	_	_	_	_
+65-6	2884-2887	the	time[175]	new[175]	_	_
+65-7	2888-2891	non	time[175]	new[175]	_	_
+65-8	2892-2898	summer	time|time[175]	new|new[175]	coref	66-5
+65-9	2899-2905	months	time[175]	new[175]	_	_
+65-10	2906-2907	.	_	_	_	_
+
+#Text=Very busy during the summer season .
+66-1	2908-2912	Very	_	_	_	_
+66-2	2913-2917	busy	_	_	_	_
+66-3	2918-2924	during	_	_	_	_
+66-4	2925-2928	the	time[177]	new[177]	_	_
+66-5	2929-2935	summer	time|time[177]	giv|new[177]	_	_
+66-6	2936-2942	season	time[177]	new[177]	_	_
+66-7	2943-2944	.	_	_	_	_

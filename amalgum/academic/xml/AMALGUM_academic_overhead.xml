@@ -1,0 +1,957 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_overhead" title="Hybrid Zoning Algorithm to Optimize Overhead in Smart Mobile Communication" shortTitle="overhead" author="Mohammed Souidi, Ahmed Habbani, Halim Berradi" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2224-2708/8/4/53/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+OLSR	NNP	OLSR
+Protocol	NN	protocol
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+optimized	VBN	optimize
+link	NN	link
+state	NN	state
+routing	VBG	rout
+protocol	NN	protocol
+is	VBZ	be
+one	CD	one
+of	IN	of
+the	DT	the
+most	RBS	most
+used	VBN	use
+protocols	NNS	protocol
+in	IN	in
+MANETs	NNP	Manets
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+part	NN	part
+of	IN	of
+the	DT	the
+table-driven	JJ	table-driven
+(	-LRB-	(
+proactive	JJ	proactive
+)	-RRB-	)
+routing	NN	routing
+protocols	NNS	protocol
+that	WDT	that
+build	VBP	build
+the	DT	the
+routing	NN	routing
+tables	NNS	table
+by	IN	by
+periodically	RB	periodically
+exchanging	VBG	exchange
+topology	NN	topology
+control	NN	control
+messages	NNS	message
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+OLSR	NNP	OLSR
+has	VBZ	have
+adopted	VBN	adopt
+the	DT	the
+MPR	NNP	MPR
+concept	NN	concept
+to	TO	to
+achieve	VB	achieve
+good	JJ	good
+dissemination	NN	dissemination
+of	IN	of
+TC	NNP	TC
+messages	NNS	message
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+MPR	NNP	MPR
+concept	NN	concept
+optimizes	VBZ	optimize
+the	DT	the
+overhead	NN	overhead
+,	,	,
+firstly	RB	firstly
+,	,	,
+by	IN	by
+selecting	VBG	select
+the	DT	the
+minimum	JJ	minimum
+number	NN	number
+of	IN	of
+nodes	NNS	node
+to	TO	to
+act	VB	act
+as	IN	as
+forwarders	NNS	forwarder
+of	IN	of
+TC	NNP	TC
+messages	NNS	message
+.	.	.
+</s>
+<s type="decl">
+Secondly	RB	secondly
+,	,	,
+only	RB	only
+links	NNS	link
+between	IN	between
+MPRs	NNS	MPR
+and	CC	and
+their	PRP$	their
+selectors	NNS	selector
+are	VBP	be
+shared	VBN	share
+to	TO	to
+reduce	VB	reduce
+the	DT	the
+size	NN	size
+of	IN	of
+TC	NN	TC
+messages	NNS	message
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+principle	NN	principle
+of	IN	of
+the	DT	the
+MPR	NNP	MPR
+concept	NN	concept
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+model	VBP	model
+the	DT	the
+OLSR	NNP	OLSR
+network	NN	network
+as	IN	as
+a	DT	a
+unit	NN	unit
+disk	NN	disk
+graph	NN	graph
+,	,	,
+where	WRB	where
+<hi rend="italic">
+V	NNP	V
+</hi>
+represents	VBZ	represent
+the	DT	the
+set	NN	set
+of	IN	of
+nodes	NNS	node
+and	CC	and
+<hi rend="italic">
+E	NN	E
+</hi>
+the	DT	the
+set	NN	set
+of	IN	of
+symmetric	JJ	symmetric
+edges	NNS	edge
+.	.	.
+</s>
+<s type="decl">
+is	VBZ	be
+the	DT	the
+signal	NN	signal
+length	NN	length
+of	IN	of
+the	DT	the
+node	NN	node
+<hi rend="italic">
+u	NN	u
+</hi>
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+simplicity	NN	simplicity
+,	,	,
+we	PRP	we
+consider	VBP	consider
+that	IN	that
+signal	NN	signal
+range	NN	range
+<hi rend="italic">
+R	NNP	R
+</hi>
+is	VBZ	be
+uniform	JJ	uniform
+for	IN	for
+all	DT	all
+nodes	NNS	node
+.	.	.
+</s>
+<s type="decl">
+Two	CD	2
+nodes	NNS	node
+<hi rend="italic">
+u	NN	u
+</hi>
+and	CC	and
+<hi rend="italic">
+v	NN	v
+</hi>
+form	VBP	form
+a	DT	a
+symmetric	JJ	symmetric
+link	NN	link
+if	IN	if
+and	CC	and
+only	RB	only
+if	IN	if
+they	PRP	they
+are	VBP	be
+at	IN	at
+distance	NN	distance
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+OLSR	NNP	OLSR
+protocol	NN	protocol
+maintains	VBZ	maintain
+regularly	RB	regularly
+local	JJ	local
+information	NN	information
+and	CC	and
+global	JJ	global
+information	NN	information
+in	IN	in
+each	DT	each
+node	NN	node
+.	.	.
+</s>
+<s type="decl">
+Neighborhood	NN	Neighborhood
+information	NN	information
+is	VBZ	be
+broadcasted	VBN	broadcast
+via	IN	via
+HELLO	NNP	HELLO
+messages	NNS	message
+by	IN	by
+each	DT	each
+node	NN	node
+<hi rend="italic">
+u	NN	u
+</hi>
+in	IN	in
+the	DT	the
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+HELLO	NNP	HELLO
+messages	NNS	message
+are	VBP	be
+never	RB	never
+forwarded	VBN	forward
+and	CC	and
+they	PRP	they
+serve	VBP	serve
+to	TO	to
+discover	VB	discover
+one-hop	JJ	one-hop
+and	CC	and
+two-hop	JJ	two-hop
+neighbor	NN	neighbor
+sets	NNS	set
+denoted	VBN	denote
+and	CC	and
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Every	DT	every
+node	NN	node
+elects	VBZ	elect
+from	IN	from
+its	PRP$	its
+neighbors	NNS	neighbor
+a	DT	a
+set	NN	set
+of	IN	of
+nodes	NNS	node
+to	TO	to
+act	VB	act
+as	IN	as
+MPRs	NNS	MPR
+to	TO	to
+forward	VB	forward
+TC	NNP	TC
+messages	NNS	message
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+denote	VBP	denote
+the	DT	the
+set	NN	set
+of	IN	of
+MPRs	NNS	MPR
+of	IN	of
+a	DT	a
+node	NN	node
+<hi rend="italic">
+u	NN	u
+</hi>
+as	IN	as
+and	CC	and
+the	DT	the
+set	NN	set
+of	IN	of
+MPR	NNP	MPR
+selectors	NNS	selector
+as	IN	as
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+node	NN	node
+<hi rend="italic">
+u	NN	u
+</hi>
+updates	VBZ	update
+its	PRP$	its
+topology	NN	topology
+information	NN	information
+information	NN	information
+each	DT	each
+time	NN	time
+a	DT	a
+HELLO	NNP	HELLO
+or	CC	or
+a	DT	a
+TC	NNP	TC
+message	NN	message
+is	VBZ	be
+received	VBN	receive
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+topology	NN	topology
+information	NN	information
+on	IN	on
+a	DT	a
+node	NN	node
+<hi rend="italic">
+u	NN	u
+</hi>
+is	VBZ	be
+a	DT	a
+directed	VBN	direct
+subgraph	NN	subgraph
+of	IN	of
+the	DT	the
+graph	NN	graph
+<hi rend="italic">
+G	NN	G
+</hi>
+denoted	VBN	denote
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+we	PRP	we
+describe	VBP	describe
+the	DT	the
+MPR	NNP	MPR
+concept	NN	concept
+of	IN	of
+OLSR	NNP	OLSR
+,	,	,
+especially	RB	especially
+the	DT	the
+MPR	NNP	MPR
+selection	NN	selection
+and	CC	and
+the	DT	the
+default	JJ	default
+forwarding	NN	forwarding
+rules	NNS	rule
+(	-LRB-	(
+DFR	NNP	DFR
+)	-RRB-	)
+of	IN	of
+TC	NNP	TC
+messages	NNS	message
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+</s>
+<s type="frag">
+The	DT	the
+MPR	NNP	MPR
+Computation	NNP	Computation
+of	IN	of
+OLSR	NNP	OLSR
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+OLSR	NNP	OLSR
+exchanges	VBZ	exchange
+HELLO	NNP	HELLO
+messages	NNS	message
+on	IN	on
+a	DT	a
+regular	JJ	regular
+interval	NN	interval
+to	TO	to
+sense	VB	sense
+links	NNS	link
+between	IN	between
+nodes	NNS	node
+,	,	,
+to	TO	to
+discover	VB	discover
+one-hop	JJ	one-hop
+and	CC	and
+two-hop	JJ	two-hop
+neighbors	NNS	neighbor
+and	CC	and
+to	TO	to
+build	VB	build
+a	DT	a
+local	JJ	local
+topology	NN	topology
+.	.	.
+</s>
+<s type="decl">
+HELLO	NNP	HELLO
+messages	NNS	message
+are	VBP	be
+exchanged	VBN	exchange
+in	IN	in
+broadcast	VBN	broadcast
+manner	NN	manner
+and	CC	and
+they	PRP	they
+are	VBP	be
+never	RB	never
+forwarded	VBN	forward
+to	IN	to
+other	JJ	other
+nodes	NNS	node
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+device	NN	device
+informs	VBZ	inform
+,	,	,
+within	IN	within
+the	DT	the
+HELLO	NNP	HELLO
+messages	NNS	message
+,	,	,
+its	PRP$	its
+adjacent	JJ	adjacent
+nodes	NNS	node
+about	IN	about
+its	PRP$	its
+links	NNS	link
+with	IN	with
+other	JJ	other
+nodes	NNS	node
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+MPR	NNP	MPR
+set	NN	set
+is	VBZ	be
+computed	VBN	compute
+every	DT	every
+time	NN	time
+a	DT	a
+HELLO	NNP	HELLO
+message	NN	message
+is	VBZ	be
+received	VBN	receive
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+node	NN	node
+selects	VBZ	select
+among	IN	among
+its	PRP$	its
+one-hop	NN	one-hop
+neighbors	NNS	neighbor
+the	DT	the
+minimum	JJ	minimum
+number	NN	number
+of	IN	of
+MPRs	NNS	MPR
+to	TO	to
+cover	VB	cover
+its	PRP$	its
+two-hop	JJ	two-hop
+neighbors	NNS	neighbor
+.	.	.
+</s>
+<s type="decl">
+After	IN	after
+the	DT	the
+MPR	NNP	MPR
+computation	NN	computation
+is	VBZ	be
+completed	VBN	complete
+,	,	,
+all	PDT	all
+the	DT	the
+two-hop	JJ	two-hop
+neighbors	NNS	neighbor
+are	VBP	be
+covered	VBN	cover
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+MPR	NNP	MPR
+collection	NN	collection
+should	MD	should
+be	VB	be
+as	RB	as
+small	JJ	small
+as	IN	as
+possible	JJ	possible
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+smaller	JJR	small
+the	DT	the
+MPR	NNP	MPR
+collection	NN	collection
+is	VBZ	be
+,	,	,
+the	DT	the
+lower	JJR	low
+the	DT	the
+overhead	NN	overhead
+would	MD	would
+be	VB	be
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+us	PRP	we
+consider	VB	consider
+the	DT	the
+OLSR	NNP	OLSR
+network	NN	network
+presented	VBN	present
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="other">
+,	,	,
+and	CC	and
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+presents	VBZ	present
+the	DT	the
+default	JJ	default
+MPR	JJ	MPR
+computation	NN	computation
+algorithm	NN	algorithm
+of	IN	of
+original	JJ	original
+OLSR	NN	OLSR
+on	IN	on
+the	DT	the
+node	NN	node
+<hi rend="italic">
+x	NN	x
+</hi>
+as	IN	as
+described	VBN	describe
+in	IN	in
+.	.	.
+</s>
+<list>
+<item>
+<s type="frag">
+Input	NN	input
+:	:	:
+,	,	,
+,	,	,
+;	:	;
+</s>
+</item>
+<item>
+<s type="imp">
+Start	VB	start
+with	IN	with
+an	DT	a
+MPR	NNP	MPR
+set	NN	set
+made	VBN	make
+of	IN	of
+all	DT	all
+members	NNS	member
+of	IN	of
+with	IN	with
+willingness	NN	willingness
+equal	JJ	equal
+to	IN	to
+WILL_ALWAYS	NNP	Willoalway
+;	:	;
+</s>
+</item>
+<item>
+<s type="imp">
+calculate	VB	calculate
+,	,	,
+where	WRB	where
+.	.	.
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+the	DT	the
+number	NN	number
+of	IN	of
+nodes	NNS	node
+;	:	;
+</s>
+</item>
+<item>
+<s type="decl">
+if	IN	if
+,	,	,
+<hi rend="italic">
+m	NN	meter
+</hi>
+is	VBZ	be
+the	DT	the
+only	JJ	only
+node	NN	node
+that	WDT	that
+covers	VBZ	cover
+a	DT	a
+node	NN	node
+;	:	;
+</s>
+</item>
+<item>
+<s type="imp">
+Remove	VB	remove
+from	IN	from
+all	DT	all
+reached	VBN	reach
+nodes	NNS	node
+by	IN	by
+<hi rend="italic">
+m	NN	meter
+</hi>
+;	:	;
+</s>
+</item>
+<item>
+<s type="decl">
+While	IN	while
+there	EX	there
+are	VBP	be
+nodes	NNS	node
+in	IN	in
+which	WDT	which
+are	VBP	be
+not	RB	not
+covered	VBN	cover
+by	IN	by
+at	IN	at
+least	JJS	least
+one	CD	one
+node	NN	node
+in	IN	in
+;	:	;
+</s>
+</item>
+</list>
+</p>
+<p>
+<list>
+<item>
+<s type="imp">
+(	:	(
+a	FW	a
+)	-RRB-	)
+Calculate	VB	calculate
+for	IN	for
+each	DT	each
+.	.	.
+</s>
+<s type="decl">
+R(w	NNP	R(w
+)	-RRB-	)
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+nodes	NNS	node
+in	IN	in
+which	WDT	which
+are	VBP	be
+not	RB	not
+yet	RB	yet
+covered	VBN	cover
+by	IN	by
+a	DT	a
+node	NN	node
+in	IN	in
+and	CC	and
+are	VBP	be
+reachable	JJ	reachable
+through	IN	through
+<hi rend="italic">
+w	JJ	w
+</hi>
+;	:	;
+</s>
+</item>
+<item>
+<s type="decl">
+(	:	(
+b	CD	b
+)	-RRB-	)
+if	IN	if
+<hi rend="italic">
+w	NNP	w
+</hi>
+has	VBZ	have
+the	DT	the
+highest	JJS	high
+willingness	NN	willingness
+with	IN	with
+;	:	;
+</s>
+</item>
+<item>
+<s type="decl">
+(	:	(
+c	FW	c
+)	-RRB-	)
+In	IN	in
+case	NN	case
+of	IN	of
+multiple	JJ	multiple
+choice	NN	choice
+,	,	,
+,	,	,
+<hi rend="italic">
+u	NN	u
+</hi>
+has	VBZ	have
+the	DT	the
+maximum	JJ	maximum
+reachability	NN	reachability
+.	.	.
+</s>
+</item>
+<item>
+<s type="imp">
+(	:	(
+d	CD	would
+)	-RRB-	)
+In	IN	in
+case	NN	case
+of	IN	of
+multiple	JJ	multiple
+nodes	NNS	node
+providing	VBG	provide
+the	DT	the
+same	JJ	same
+amount	NN	amount
+of	IN	of
+reachability	NN	reachability
+,	,	,
+,	,	,
+where	WRB	where
+is	VBZ	be
+greater	JJR	great
+;	:	;
+Remove	VB	remove
+,	,	,
+the	DT	the
+nodes	NNS	node
+which	WDT	which
+are	VBP	be
+now	RB	now
+covered	VBN	cover
+by	IN	by
+nodes	NNS	node
+in	IN	in
+.	.	.
+</s>
+</item>
+</list>
+</p>
+<p>
+<s type="frag">
+According	VBG	accord
+to	IN	to
+the	DT	the
+default	JJ	default
+MPR	JJ	MPR
+computation	NN	computation
+algorithm	NN	algorithm
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+,	,	,
+<hi rend="italic">
+x	NN	x
+</hi>
+adds	VBZ	add
+<hi rend="italic">
+a	DT	a
+</hi>
+and	CC	and
+<hi rend="italic">
+d	NN	would
+</hi>
+to	IN	to
+because	IN	because
+they	PRP	they
+are	VBP	be
+the	DT	the
+only	JJ	only
+nodes	NNS	node
+connected	VBN	connect
+to	IN	to
+<hi rend="italic">
+e	NN	e
+</hi>
+and	CC	and
+<hi rend="italic">
+i	PRP	I
+</hi>
+,	,	,
+respectively	RB	respectively
+.	.	.
+,	,	,
+,	,	,
+,	,	,
+and	CC	and
+.	.	.
+</s>
+<s type="decl">
+Both	DT	both
+<hi rend="italic">
+b	NN	b
+</hi>
+and	CC	and
+<hi rend="italic">
+c	NN	c
+</hi>
+have	VBP	have
+the	DT	the
+same	JJ	same
+reachability	NN	reachability
+.	.	.
+</s>
+<s type="frag">
+However	RB	however
+,	,	,
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+node	NN	node
+<hi rend="italic">
+x	NN	x
+</hi>
+will	MD	will
+select	VB	select
+node	NN	node
+<hi rend="italic">
+c	NN	c
+</hi>
+as	IN	as
+MPR	NN	MPR
+and	CC	and
+all	DT	all
+nodes	NNS	node
+in	IN	in
+will	MD	will
+be	VB	be
+covered	VBN	cover
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+MPR	NNP	MPR
+set	NN	set
+rises	VBZ	rise
+the	DT	the
+broadcast	NN	broadcast
+zone	NN	zone
+because	IN	because
+nodes	NNS	node
+<hi rend="italic">
+c	NN	c
+</hi>
+and	CC	and
+<hi rend="italic">
+d	RB	would
+</hi>
+are	VBP	be
+close	JJ	close
+to	IN	to
+each	DT	each
+other	JJ	other
+which	WDT	which
+will	MD	will
+increase	VB	increase
+the	DT	the
+collision	NN	collision
+.	.	.
+</s>
+</p>
+</text>
