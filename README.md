@@ -1,5 +1,7 @@
 # AMALGUM v0.2
 
+https://corpling.uis.georgetown.edu/gum/amalgum.html
+
 ## Download
 
 Latest data **without Reddit texts** is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and some additional data beyond the target size of 4M tokens [`amalgum_extra/`](https://github.com/gucorpling/amalgum/tree/master/amalgum_extra). (The `amalgum` directory contains around 500,000 tokens for each genre, while the extra directory contains some more data beyond the genre-balanced corpus.)
@@ -35,7 +37,7 @@ AMALGUM contains annotations for the following information:
 
 These annotations are across four file formats: [GUM-style XML](https://github.com/amir-zeldes/gum), [CONLLU](https://universaldependencies.org/format.html), [WebAnno TSV](https://webanno.github.io/webanno/releases/3.4.5/docs/user-guide.html#sect_webannotsv), and [RS3](https://github.com/gucorpling/rst-xsd).
 
-You can see samples of the data for `AMALGUM_news_khadr`: [xml](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/xml/AMALGUM_news_khadr.conllu), [conllu](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/dep/AMALGUM_news_khadr.conllu), [tsv](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/tsv/AMALGUM_news_khadr.tsv), [rs3](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/rst/AMALGUM_news_khadr.rs3)
+You can see samples of the data for `AMALGUM_news_khadr`: [xml](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/xml/AMALGUM_news_khadr.xml), [conllu](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/dep/AMALGUM_news_khadr.conllu), [tsv](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/tsv/AMALGUM_news_khadr.tsv), [rs3](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/rst/AMALGUM_news_khadr.rs3)
 
 ### Performance
 
