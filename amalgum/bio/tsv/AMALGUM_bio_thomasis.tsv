@@ -1,0 +1,645 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Tony De Thomasis
+1-1	0-4	Tony	person[1]	new[1]	_	_
+1-2	5-7	De	person[1]	new[1]	_	_
+1-3	8-16	Thomasis	person[1]	new[1]	_	_
+
+#Text=Anthony De Thomasis is an Italian-born Canadian businessman , financial management advisor , and president of De Thomas Wealth Management .
+2-1	17-24	Anthony	person[2]	new[2]	coref	2-5[3_2]
+2-2	25-27	De	person[2]	new[2]	_	_
+2-3	28-36	Thomasis	person[2]	new[2]	_	_
+2-4	37-39	is	_	_	_	_
+2-5	40-42	an	person[3]|person[4]	giv[3]|giv[4]	coref|coref	2-5[4_3]|2-17[7_4]
+2-6	43-55	Italian-born	person[3]|person[4]	giv[3]|giv[4]	_	_
+2-7	56-64	Canadian	person[3]|person[4]	giv[3]|giv[4]	_	_
+2-8	65-76	businessman	person[3]|person[4]	giv[3]|giv[4]	_	_
+2-9	77-78	,	person[4]	giv[4]	_	_
+2-10	79-88	financial	person[4]|person[5]	giv[4]|new[5]	_	_
+2-11	89-99	management	person[4]|person[5]	giv[4]|new[5]	_	_
+2-12	100-107	advisor	person[4]|person[5]	giv[4]|new[5]	_	_
+2-13	108-109	,	person[4]	giv[4]	_	_
+2-14	110-113	and	person[4]	giv[4]	_	_
+2-15	114-123	president	person[4]|person[6]	giv[4]|new[6]	ana	3-1[0_6]
+2-16	124-126	of	person[4]|person[6]	giv[4]|new[6]	_	_
+2-17	127-129	De	person[4]|person[6]|person[7]|organization[9]	giv[4]|new[6]|giv[7]|new[9]	coref|coref	4-1[19_7]|12-19[83_9]
+2-18	130-136	Thomas	person[4]|person[6]|person[7]|organization[9]	giv[4]|new[6]|giv[7]|new[9]	_	_
+2-19	137-143	Wealth	person[4]|person[6]|abstract|organization[9]	giv[4]|new[6]|new|new[9]	coref	11-8
+2-20	144-154	Management	person[4]|person[6]|organization[9]	giv[4]|new[6]|new[9]	_	_
+2-21	155-156	.	_	_	_	_
+
+#Text=He currently serves as the Director of Soccer Operations for Canada MetroStars in the Major Arena Soccer League .
+3-1	157-159	He	person	giv	ana	4-13
+3-2	160-169	currently	_	_	_	_
+3-3	170-176	serves	_	_	_	_
+3-4	177-179	as	_	_	_	_
+3-5	180-183	the	person[11]	new[11]	coref	11-25[0_11]
+3-6	184-192	Director	person[11]	new[11]	_	_
+3-7	193-195	of	person[11]	new[11]	_	_
+3-8	196-202	Soccer	person[11]|person|organization[13]	new[11]|new|new[13]	coref|coref	3-17|26-9[212_13]
+3-9	203-213	Operations	person[11]|organization[13]	new[11]|new[13]	_	_
+3-10	214-217	for	person[11]|organization[13]	new[11]|new[13]	_	_
+3-11	218-224	Canada	person[11]|organization[13]|place|organization[15]	new[11]|new[13]|new|new[15]	coref|coref	10-5|26-12[214_15]
+3-12	225-235	MetroStars	person[11]|organization[13]|organization[15]	new[11]|new[13]|new[15]	_	_
+3-13	236-238	in	person[11]|organization[13]|organization[15]	new[11]|new[13]|new[15]	_	_
+3-14	239-242	the	person[11]|organization[13]|organization[15]|organization[18]	new[11]|new[13]|new[15]|new[18]	coref	4-20[28_18]
+3-15	243-248	Major	person[11]|organization[13]|organization[15]|organization[18]	new[11]|new[13]|new[15]|new[18]	_	_
+3-16	249-254	Arena	person[11]|organization[13]|organization[15]|place|organization[18]	new[11]|new[13]|new[15]|new|new[18]	coref	26-17
+3-17	255-261	Soccer	person[11]|organization[13]|organization[15]|person|organization[18]	new[11]|new[13]|new[15]|giv|new[18]	coref	4-22[27_0]
+3-18	262-268	League	person[11]|organization[13]|organization[15]|organization[18]	new[11]|new[13]|new[15]|new[18]	_	_
+3-19	269-270	.	_	_	_	_
+
+#Text=De Thomasis also ventured into the business side of soccer , where he purchased the York Region Shooters of the Canadian Professional Soccer League .
+4-1	271-273	De	person[19]	giv[19]	coref	9-1[53_19]
+4-2	274-282	Thomasis	person[19]	giv[19]	_	_
+4-3	283-287	also	_	_	_	_
+4-4	288-296	ventured	_	_	_	_
+4-5	297-301	into	_	_	_	_
+4-6	302-305	the	abstract[21]	new[21]	_	_
+4-7	306-314	business	abstract|abstract[21]	new|new[21]	coref	8-1
+4-8	315-319	side	abstract[21]	new[21]	_	_
+4-9	320-322	of	abstract[21]	new[21]	_	_
+4-10	323-329	soccer	abstract[21]|abstract	new[21]|new	coref	15-1
+4-11	330-331	,	_	_	_	_
+4-12	332-337	where	_	_	_	_
+4-13	338-340	he	person	giv	ana	5-1
+4-14	341-350	purchased	_	_	_	_
+4-15	351-354	the	place[26]	new[26]	coref	17-9[0_26]
+4-16	355-359	York	place|place[26]	new|new[26]	coref	10-9
+4-17	360-366	Region	place|place[26]	new|new[26]	coref	17-8
+4-18	367-375	Shooters	place[26]	new[26]	_	_
+4-19	376-378	of	place[26]	new[26]	_	_
+4-20	379-382	the	place[26]|organization[28]	new[26]|giv[28]	coref	5-10[32_28]
+4-21	383-391	Canadian	place[26]|organization[28]	new[26]|giv[28]	_	_
+4-22	392-404	Professional	place[26]|person[27]|organization[28]	new[26]|giv[27]|giv[28]	coref	17-15[0_27]
+4-23	405-411	Soccer	place[26]|person[27]|organization[28]	new[26]|giv[27]|giv[28]	_	_
+4-24	412-418	League	place[26]|organization[28]	new[26]|giv[28]	_	_
+4-25	419-420	.	_	_	_	_
+
+#Text=He eventually solidified the franchise into a powerhouse within the league .
+5-1	421-423	He	person	giv	ana	6-1
+5-2	424-434	eventually	_	_	_	_
+5-3	435-445	solidified	_	_	_	_
+5-4	446-449	the	organization[30]	new[30]	coref	17-6[121_30]
+5-5	450-459	franchise	organization[30]	new[30]	_	_
+5-6	460-464	into	_	_	_	_
+5-7	465-466	a	abstract[31]	new[31]	_	_
+5-8	467-477	powerhouse	abstract[31]	new[31]	_	_
+5-9	478-484	within	abstract[31]	new[31]	_	_
+5-10	485-488	the	abstract[31]|organization[32]	new[31]|giv[32]	coref	17-12[123_32]
+5-11	489-495	league	abstract[31]|organization[32]	new[31]|giv[32]	_	_
+5-12	496-497	.	_	_	_	_
+
+#Text=He also managed the team for several seasons , and achieved significant results by winning the CSL Championship in 2006 , and 2017 .
+6-1	498-500	He	person	giv	ana	7-4
+6-2	501-505	also	_	_	_	_
+6-3	506-513	managed	_	_	_	_
+6-4	514-517	the	organization[34]	new[34]	coref	7-9[44_34]
+6-5	518-522	team	organization[34]	new[34]	_	_
+6-6	523-526	for	_	_	_	_
+6-7	527-534	several	time[35]	new[35]	coref	19-11[142_35]
+6-8	535-542	seasons	time[35]	new[35]	_	_
+6-9	543-544	,	_	_	_	_
+6-10	545-548	and	_	_	_	_
+6-11	549-557	achieved	_	_	_	_
+6-12	558-569	significant	abstract[36]	new[36]	_	_
+6-13	570-577	results	abstract[36]	new[36]	_	_
+6-14	578-580	by	_	_	_	_
+6-15	581-588	winning	_	_	_	_
+6-16	589-592	the	event[38]	new[38]	coref	19-8[0_38]
+6-17	593-596	CSL	organization|event[38]	new|new[38]	coref	21-8
+6-18	597-609	Championship	event[38]	new[38]	_	_
+6-19	610-612	in	_	_	_	_
+6-20	613-617	2006	time	new	coref	21-30
+6-21	618-619	,	_	_	_	_
+6-22	620-623	and	_	_	_	_
+6-23	624-628	2017	time	new	coref	24-2
+6-24	629-630	.	_	_	_	_
+
+#Text=In 2018 , he briefly was associated with Filipe Bento 's organization Unionville Milliken SC , and placed the team into League1 Ontario .
+7-1	631-633	In	_	_	_	_
+7-2	634-638	2018	time	new	coref	25-2
+7-3	639-640	,	_	_	_	_
+7-4	641-643	he	person	giv	_	_
+7-5	644-651	briefly	_	_	_	_
+7-6	652-655	was	_	_	_	_
+7-7	656-666	associated	_	_	_	_
+7-8	667-671	with	_	_	_	_
+7-9	672-678	Filipe	person[43]|organization[44]	new[43]|giv[44]	appos|coref	7-13[47_44]|25-9[201_43]
+7-10	679-684	Bento	person[43]|organization[44]	new[43]|giv[44]	_	_
+7-11	685-687	's	person[43]|organization[44]	new[43]|giv[44]	_	_
+7-12	688-700	organization	organization[44]	giv[44]	_	_
+7-13	701-711	Unionville	place|organization[47]	new|giv[47]	coref|coref	7-19[48_47]|25-15
+7-14	712-720	Milliken	person|organization[47]	new|giv[47]	coref	25-16
+7-15	721-723	SC	organization[47]	giv[47]	_	_
+7-16	724-725	,	_	_	_	_
+7-17	726-729	and	_	_	_	_
+7-18	730-736	placed	_	_	_	_
+7-19	737-740	the	organization[48]	giv[48]	coref	13-27[96_48]
+7-20	741-745	team	organization[48]	giv[48]	_	_
+7-21	746-750	into	_	_	_	_
+7-22	751-758	League1	organization	new	coref	25-19
+7-23	759-766	Ontario	place	new	coref	25-19[206_0]
+7-24	767-768	.	_	_	_	_
+
+#Text=Business career
+8-1	769-777	Business	abstract|abstract[52]	giv|new[52]	coref	15-1[110_52]
+8-2	778-784	career	abstract[52]	new[52]	_	_
+
+#Text=De Thomasis was born in Abbateggio in the Province of Pescara . [ 1 ]
+9-1	785-787	De	person[53]	giv[53]	ana	10-1[0_53]
+9-2	788-796	Thomasis	person[53]	giv[53]	_	_
+9-3	797-800	was	_	_	_	_
+9-4	801-805	born	_	_	_	_
+9-5	806-808	in	_	_	_	_
+9-6	809-819	Abbateggio	place	new	_	_
+9-7	820-822	in	_	_	_	_
+9-8	823-826	the	place[55]	new[55]	_	_
+9-9	827-835	Province	place[55]	new[55]	_	_
+9-10	836-838	of	place[55]	new[55]	_	_
+9-11	839-846	Pescara	place[55]|place	new[55]|new	_	_
+9-12	847-848	.	_	_	_	_
+9-13	849-850	[	_	_	_	_
+9-14	851-852	1	abstract	new	_	_
+9-15	853-854	]	_	_	_	_
+
+#Text=He later emigrated to Canada and graduated from York University in 1976 with honors in Mathematics and Science .
+10-1	855-857	He	person	giv	ana	11-3
+10-2	858-863	later	_	_	_	_
+10-3	864-873	emigrated	_	_	_	_
+10-4	874-876	to	_	_	_	_
+10-5	877-883	Canada	place	giv	coref	13-33
+10-6	884-887	and	_	_	_	_
+10-7	888-897	graduated	_	_	_	_
+10-8	898-902	from	_	_	_	_
+10-9	903-907	York	place|organization[61]	giv|new[61]	coref	17-7
+10-10	908-918	University	organization[61]	new[61]	_	_
+10-11	919-921	in	_	_	_	_
+10-12	922-926	1976	time	new	_	_
+10-13	927-931	with	_	_	_	_
+10-14	932-938	honors	abstract[63]	new[63]	_	_
+10-15	939-941	in	abstract[63]	new[63]	_	_
+10-16	942-953	Mathematics	abstract[63]|abstract	new[63]|new	_	_
+10-17	954-957	and	abstract[63]	new[63]	_	_
+10-18	958-965	Science	abstract[63]|abstract	new[63]|new	_	_
+10-19	966-967	.	_	_	_	_
+
+#Text=Upon graduation he began working in the wealth management field with various independent firms in the capacity of an adviser , manager , and director . [ 2 ]
+11-1	968-972	Upon	_	_	_	_
+11-2	973-983	graduation	event	new	_	_
+11-3	984-986	he	person	giv	ana	12-8
+11-4	987-992	began	_	_	_	_
+11-5	993-1000	working	_	_	_	_
+11-6	1001-1003	in	_	_	_	_
+11-7	1004-1007	the	abstract[70]	new[70]	_	_
+11-8	1008-1014	wealth	abstract|person[69]|abstract[70]	giv|giv[69]|new[70]	coref	12-21
+11-9	1015-1025	management	person[69]|abstract[70]	giv[69]|new[70]	_	_
+11-10	1026-1031	field	abstract[70]	new[70]	_	_
+11-11	1032-1036	with	_	_	_	_
+11-12	1037-1044	various	organization[71]	new[71]	_	_
+11-13	1045-1056	independent	organization[71]	new[71]	_	_
+11-14	1057-1062	firms	organization[71]	new[71]	_	_
+11-15	1063-1065	in	_	_	_	_
+11-16	1066-1069	the	abstract[72]	new[72]	_	_
+11-17	1070-1078	capacity	abstract[72]	new[72]	_	_
+11-18	1079-1081	of	abstract[72]	new[72]	_	_
+11-19	1082-1084	an	abstract[72]|person[73]	new[72]|new[73]	_	_
+11-20	1085-1092	adviser	abstract[72]|person[73]	new[72]|new[73]	_	_
+11-21	1093-1094	,	abstract[72]	new[72]	_	_
+11-22	1095-1102	manager	abstract[72]|person	new[72]|new	coref	28-1
+11-23	1103-1104	,	abstract[72]	new[72]	_	_
+11-24	1105-1108	and	abstract[72]	new[72]	_	_
+11-25	1109-1117	director	abstract[72]|person	new[72]|giv	_	_
+11-26	1118-1119	.	_	_	_	_
+11-27	1120-1121	[	_	_	_	_
+11-28	1122-1123	2	abstract	new	coref	30-4
+11-29	1124-1125	]	_	_	_	_
+
+#Text=In 1987 , along with six advisers he formed De Thomas Financial Corp , and later was renamed De Thomas Wealth Management . [ 3 ] [ 4 ]
+12-1	1126-1128	In	_	_	_	_
+12-2	1129-1133	1987	time	new	_	_
+12-3	1134-1135	,	_	_	_	_
+12-4	1136-1141	along	_	_	_	_
+12-5	1142-1146	with	_	_	_	_
+12-6	1147-1150	six	person[78]	new[78]	ana	13-4[87_78]
+12-7	1151-1159	advisers	person[78]	new[78]	_	_
+12-8	1160-1162	he	person	giv	coref	12-19[81_0]
+12-9	1163-1169	formed	_	_	_	_
+12-10	1170-1172	De	organization[80]	new[80]	coref	13-7[88_80]
+12-11	1173-1179	Thomas	organization[80]	new[80]	_	_
+12-12	1180-1189	Financial	organization[80]	new[80]	_	_
+12-13	1190-1194	Corp	organization[80]	new[80]	_	_
+12-14	1195-1196	,	_	_	_	_
+12-15	1197-1200	and	_	_	_	_
+12-16	1201-1206	later	_	_	_	_
+12-17	1207-1210	was	_	_	_	_
+12-18	1211-1218	renamed	_	_	_	_
+12-19	1219-1221	De	person[81]|organization[83]	giv[81]|giv[83]	ana	14-4[0_81]
+12-20	1222-1228	Thomas	person[81]|organization[83]	giv[81]|giv[83]	_	_
+12-21	1229-1235	Wealth	abstract|organization[83]	giv|giv[83]	_	_
+12-22	1236-1246	Management	organization[83]	giv[83]	_	_
+12-23	1247-1248	.	_	_	_	_
+12-24	1249-1250	[	_	_	_	_
+12-25	1251-1252	3	abstract	new	_	_
+12-26	1253-1254	]	_	_	_	_
+12-27	1255-1256	[	_	_	_	_
+12-28	1257-1258	4	abstract	new	_	_
+12-29	1259-1260	]	_	_	_	_
+
+#Text=In 2013 , some of the firm 's financial advice was chastised in a report conducted by the Ombudsman for Banking Services and Investments , but the Investment Industry Regulatory Organization of Canada found no fault in the firm 's actions . [ 5 ] [ 6 ]
+13-1	1261-1263	In	_	_	_	_
+13-2	1264-1268	2013	time	new	_	_
+13-3	1269-1270	,	_	_	_	_
+13-4	1271-1275	some	person[87]	giv[87]	_	_
+13-5	1276-1278	of	person[87]	giv[87]	_	_
+13-6	1279-1282	the	person[87]|abstract[89]	giv[87]|new[89]	_	_
+13-7	1283-1287	firm	person[87]|organization[88]|abstract[89]	giv[87]|giv[88]|new[89]	coref	13-39[99_88]
+13-8	1288-1290	's	person[87]|organization[88]|abstract[89]	giv[87]|giv[88]|new[89]	_	_
+13-9	1291-1300	financial	person[87]|abstract[89]	giv[87]|new[89]	_	_
+13-10	1301-1307	advice	person[87]|abstract[89]	giv[87]|new[89]	_	_
+13-11	1308-1311	was	_	_	_	_
+13-12	1312-1321	chastised	_	_	_	_
+13-13	1322-1324	in	_	_	_	_
+13-14	1325-1326	a	abstract[90]	new[90]	_	_
+13-15	1327-1333	report	abstract[90]	new[90]	_	_
+13-16	1334-1343	conducted	abstract[90]	new[90]	_	_
+13-17	1344-1346	by	abstract[90]	new[90]	_	_
+13-18	1347-1350	the	abstract[90]|organization[91]	new[90]|new[91]	_	_
+13-19	1351-1360	Ombudsman	abstract[90]|organization[91]	new[90]|new[91]	_	_
+13-20	1361-1364	for	abstract[90]|organization[91]	new[90]|new[91]	_	_
+13-21	1365-1372	Banking	abstract[90]|organization[91]|organization[92]	new[90]|new[91]|new[92]	_	_
+13-22	1373-1381	Services	abstract[90]|organization[91]|organization[92]	new[90]|new[91]|new[92]	_	_
+13-23	1382-1385	and	abstract[90]|organization[91]	new[90]|new[91]	_	_
+13-24	1386-1397	Investments	abstract[90]|organization[91]|abstract	new[90]|new[91]|new	_	_
+13-25	1398-1399	,	_	_	_	_
+13-26	1400-1403	but	_	_	_	_
+13-27	1404-1407	the	organization[96]	giv[96]	coref	25-15[204_96]
+13-28	1408-1418	Investment	abstract|organization[95]|organization[96]	new|new[95]|giv[96]	_	_
+13-29	1419-1427	Industry	organization[95]|organization[96]	new[95]|giv[96]	_	_
+13-30	1428-1438	Regulatory	organization[96]	giv[96]	_	_
+13-31	1439-1451	Organization	organization[96]	giv[96]	_	_
+13-32	1452-1454	of	organization[96]	giv[96]	_	_
+13-33	1455-1461	Canada	organization[96]|place	giv[96]|giv	coref	14-14
+13-34	1462-1467	found	_	_	_	_
+13-35	1468-1470	no	abstract[98]	new[98]	_	_
+13-36	1471-1476	fault	abstract[98]	new[98]	_	_
+13-37	1477-1479	in	abstract[98]	new[98]	_	_
+13-38	1480-1483	the	abstract[98]|event[100]	new[98]|new[100]	_	_
+13-39	1484-1488	firm	abstract[98]|organization[99]|event[100]	new[98]|giv[99]|new[100]	_	_
+13-40	1489-1491	's	abstract[98]|organization[99]|event[100]	new[98]|giv[99]|new[100]	_	_
+13-41	1492-1499	actions	abstract[98]|event[100]	new[98]|new[100]	_	_
+13-42	1500-1501	.	_	_	_	_
+13-43	1502-1503	[	_	_	_	_
+13-44	1504-1505	5	abstract	new	_	_
+13-45	1506-1507	]	_	_	_	_
+13-46	1508-1509	[	_	_	_	_
+13-47	1510-1511	6	abstract	new	_	_
+13-48	1512-1513	]	_	_	_	_
+
+#Text=In 2016 , he was listed in the Top 50 financial advisers in Canada . [ 7 ] [ 8 ]
+14-1	1514-1516	In	_	_	_	_
+14-2	1517-1521	2016	time	new	_	_
+14-3	1522-1523	,	_	_	_	_
+14-4	1524-1526	he	person	giv	coref	16-1[111_0]
+14-5	1527-1530	was	_	_	_	_
+14-6	1531-1537	listed	_	_	_	_
+14-7	1538-1540	in	_	_	_	_
+14-8	1541-1544	the	person[105]	new[105]	_	_
+14-9	1545-1548	Top	person[105]	new[105]	_	_
+14-10	1549-1551	50	person[105]	new[105]	_	_
+14-11	1552-1561	financial	person[105]	new[105]	_	_
+14-12	1562-1570	advisers	person[105]	new[105]	_	_
+14-13	1571-1573	in	person[105]	new[105]	_	_
+14-14	1574-1580	Canada	person[105]|place	new[105]|giv	coref	18-14[133_0]
+14-15	1581-1582	.	_	_	_	_
+14-16	1583-1584	[	_	_	_	_
+14-17	1585-1586	7	abstract	new	_	_
+14-18	1587-1588	]	_	_	_	_
+14-19	1589-1590	[	_	_	_	_
+14-20	1591-1592	8	abstract	new	_	_
+14-21	1593-1594	]	_	_	_	_
+
+#Text=Soccer career
+15-1	1595-1601	Soccer	abstract|abstract[110]	giv|giv[110]	coref	16-7
+15-2	1602-1608	career	abstract[110]	giv[110]	_	_
+
+#Text=De Thomasis initially became involved in soccer by coaching at the youth level . [ 9 ]
+16-1	1609-1611	De	person[111]	giv[111]	ana	17-4[0_111]
+16-2	1612-1620	Thomasis	person[111]	giv[111]	_	_
+16-3	1621-1630	initially	_	_	_	_
+16-4	1631-1637	became	_	_	_	_
+16-5	1638-1646	involved	_	_	_	_
+16-6	1647-1649	in	_	_	_	_
+16-7	1650-1656	soccer	abstract	giv	_	_
+16-8	1657-1659	by	_	_	_	_
+16-9	1660-1668	coaching	_	_	_	_
+16-10	1669-1671	at	_	_	_	_
+16-11	1672-1675	the	abstract[114]	new[114]	_	_
+16-12	1676-1681	youth	person|abstract[114]	new|new[114]	_	_
+16-13	1682-1687	level	abstract[114]	new[114]	_	_
+16-14	1688-1689	.	_	_	_	_
+16-15	1690-1691	[	_	_	_	_
+16-16	1692-1693	9	abstract	new	_	_
+16-17	1694-1695	]	_	_	_	_
+
+#Text=In 2002 , he purchased the York Region Shooters franchise in the Canadian Professional Soccer League from Frank Bisceglia . [ 10 ]
+17-1	1696-1698	In	_	_	_	_
+17-2	1699-1703	2002	time	new	_	_
+17-3	1704-1705	,	_	_	_	_
+17-4	1706-1708	he	person	giv	coref	18-19[134_0]
+17-5	1709-1718	purchased	_	_	_	_
+17-6	1719-1722	the	organization[121]	giv[121]	_	_
+17-7	1723-1727	York	place|organization[121]	giv|giv[121]	coref	18-15
+17-8	1728-1734	Region	place|organization[121]	giv|giv[121]	coref	18-15[132_0]
+17-9	1735-1743	Shooters	place|organization[121]	giv|giv[121]	coref	18-4[127_0]
+17-10	1744-1753	franchise	organization[121]	giv[121]	_	_
+17-11	1754-1756	in	_	_	_	_
+17-12	1757-1760	the	organization[123]	giv[123]	coref	22-23[172_123]
+17-13	1761-1769	Canadian	organization[123]	giv[123]	_	_
+17-14	1770-1782	Professional	organization[123]	giv[123]	_	_
+17-15	1783-1789	Soccer	person|organization[123]	giv|giv[123]	coref	26-9
+17-16	1790-1796	League	organization[123]	giv[123]	_	_
+17-17	1797-1801	from	_	_	_	_
+17-18	1802-1807	Frank	person[124]	new[124]	_	_
+17-19	1808-1817	Bisceglia	person[124]	new[124]	_	_
+17-20	1818-1819	.	_	_	_	_
+17-21	1820-1821	[	_	_	_	_
+17-22	1822-1824	10	abstract	new	_	_
+17-23	1825-1826	]	_	_	_	_
+
+#Text=The following season the Shooters merged with the Vaughan Sun Devils to unify the York Region territory with De Thomasis becoming the principal owner . [ 11 ]
+18-1	1827-1830	The	time[126]	new[126]	coref	22-2[165_126]
+18-2	1831-1840	following	time[126]	new[126]	_	_
+18-3	1841-1847	season	time[126]	new[126]	_	_
+18-4	1848-1851	the	place[127]	giv[127]	_	_
+18-5	1852-1860	Shooters	place[127]	giv[127]	_	_
+18-6	1861-1867	merged	_	_	_	_
+18-7	1868-1872	with	_	_	_	_
+18-8	1873-1876	the	organization[130]	new[130]	_	_
+18-9	1877-1884	Vaughan	place|organization[130]	new|new[130]	coref	19-4
+18-10	1885-1888	Sun	person|organization[130]	new|new[130]	_	_
+18-11	1889-1895	Devils	organization[130]	new[130]	_	_
+18-12	1896-1898	to	_	_	_	_
+18-13	1899-1904	unify	_	_	_	_
+18-14	1905-1908	the	place[133]	giv[133]	coref	26-12[0_133]
+18-15	1909-1913	York	place|place[132]|place[133]	giv|giv[132]|giv[133]	coref|coref	24-6|24-6[193_132]
+18-16	1914-1920	Region	place[132]|place[133]	giv[132]|giv[133]	_	_
+18-17	1921-1930	territory	place[133]	giv[133]	_	_
+18-18	1931-1935	with	_	_	_	_
+18-19	1936-1938	De	person[134]	giv[134]	coref	22-4[166_134]
+18-20	1939-1947	Thomasis	person[134]	giv[134]	_	_
+18-21	1948-1956	becoming	_	_	_	_
+18-22	1957-1960	the	person[135]	new[135]	ana	20-4[0_135]
+18-23	1961-1970	principal	person[135]	new[135]	_	_
+18-24	1971-1976	owner	person[135]	new[135]	_	_
+18-25	1977-1978	.	_	_	_	_
+18-26	1979-1980	[	_	_	_	_
+18-27	1981-1983	11	abstract	new	_	_
+18-28	1984-1985	]	_	_	_	_
+
+#Text=After the acquisition Vaughan reached the CPSL Championship final in four consecutive seasons , and clinched their first piece of silverware the Eastern Conference title in 2005 .
+19-1	1986-1991	After	_	_	_	_
+19-2	1992-1995	the	event[137]	new[137]	_	_
+19-3	1996-2007	acquisition	event[137]	new[137]	_	_
+19-4	2008-2015	Vaughan	place	giv	_	_
+19-5	2016-2023	reached	_	_	_	_
+19-6	2024-2027	the	event[141]	new[141]	_	_
+19-7	2028-2032	CPSL	organization|event[141]	new|new[141]	coref	20-8
+19-8	2033-2045	Championship	event|event[141]	giv|new[141]	coref	22-16
+19-9	2046-2051	final	event[141]	new[141]	_	_
+19-10	2052-2054	in	_	_	_	_
+19-11	2055-2059	four	time[142]	giv[142]	ana	19-17[0_142]
+19-12	2060-2071	consecutive	time[142]	giv[142]	_	_
+19-13	2072-2079	seasons	time[142]	giv[142]	_	_
+19-14	2080-2081	,	_	_	_	_
+19-15	2082-2085	and	_	_	_	_
+19-16	2086-2094	clinched	_	_	_	_
+19-17	2095-2100	their	time|abstract[144]	giv|new[144]	_	_
+19-18	2101-2106	first	abstract[144]	new[144]	_	_
+19-19	2107-2112	piece	abstract[144]	new[144]	_	_
+19-20	2113-2115	of	abstract[144]	new[144]	_	_
+19-21	2116-2126	silverware	abstract[144]|abstract	new[144]|new	_	_
+19-22	2127-2130	the	event[147]	new[147]	coref	22-13[171_147]
+19-23	2131-2138	Eastern	organization[146]|event[147]	new[146]|new[147]	_	_
+19-24	2139-2149	Conference	organization[146]|event[147]	new[146]|new[147]	_	_
+19-25	2150-2155	title	event[147]	new[147]	_	_
+19-26	2156-2158	in	_	_	_	_
+19-27	2159-2163	2005	time	new	coref	20-2
+19-28	2164-2165	.	_	_	_	_
+
+#Text=In 2005 , he was awarded the CPSL Commissioner 's Award . [ 12 ]
+20-1	2166-2168	In	_	_	_	_
+20-2	2169-2173	2005	time	giv	_	_
+20-3	2174-2175	,	_	_	_	_
+20-4	2176-2178	he	person	giv	_	_
+20-5	2179-2182	was	_	_	_	_
+20-6	2183-2190	awarded	_	_	_	_
+20-7	2191-2194	the	abstract[153]	new[153]	coref	22-26[175_153]
+20-8	2195-2199	CPSL	organization|person[152]|abstract[153]	giv|new[152]|new[153]	coref	21-8[157_152]
+20-9	2200-2212	Commissioner	person[152]|abstract[153]	new[152]|new[153]	_	_
+20-10	2213-2215	's	person[152]|abstract[153]	new[152]|new[153]	_	_
+20-11	2216-2221	Award	abstract[153]	new[153]	_	_
+20-12	2222-2223	.	_	_	_	_
+20-13	2224-2225	[	_	_	_	_
+20-14	2226-2228	12	abstract	new	_	_
+20-15	2229-2230	]	_	_	_	_
+
+#Text=As part of the reforms conducted by CSL Commissioner Cary Kaplan the Vaughan Shooters became inaugural members of the International Division , and were renamed the Italia Shooters in 2006 . [ 13 ]
+21-1	2231-2233	As	_	_	_	_
+21-2	2234-2238	part	_	_	_	_
+21-3	2239-2241	of	_	_	_	_
+21-4	2242-2245	the	abstract[155]	new[155]	_	_
+21-5	2246-2253	reforms	abstract[155]	new[155]	_	_
+21-6	2254-2263	conducted	abstract[155]	new[155]	_	_
+21-7	2264-2266	by	abstract[155]	new[155]	_	_
+21-8	2267-2270	CSL	abstract[155]|organization|person[157]	new[155]|giv|giv[157]	coref	30-1
+21-9	2271-2283	Commissioner	abstract[155]|person[157]	new[155]|giv[157]	_	_
+21-10	2284-2288	Cary	abstract[155]|person[157]	new[155]|giv[157]	_	_
+21-11	2289-2295	Kaplan	abstract[155]|person[157]	new[155]|giv[157]	_	_
+21-12	2296-2299	the	place[159]	giv[159]	coref|coref	21-12[159_0]|21-26[162_159]
+21-13	2300-2307	Vaughan	place|place[159]	new|giv[159]	_	_
+21-14	2308-2316	Shooters	place[159]	giv[159]	_	_
+21-15	2317-2323	became	_	_	_	_
+21-16	2324-2333	inaugural	_	_	_	_
+21-17	2334-2341	members	_	_	_	_
+21-18	2342-2344	of	_	_	_	_
+21-19	2345-2348	the	organization[160]	new[160]	_	_
+21-20	2349-2362	International	organization[160]	new[160]	_	_
+21-21	2363-2371	Division	organization[160]	new[160]	_	_
+21-22	2372-2373	,	_	_	_	_
+21-23	2374-2377	and	_	_	_	_
+21-24	2378-2382	were	_	_	_	_
+21-25	2383-2390	renamed	_	_	_	_
+21-26	2391-2394	the	place[162]	giv[162]	coref	29-1[223_162]
+21-27	2395-2401	Italia	person|place[162]	new|giv[162]	_	_
+21-28	2402-2410	Shooters	place[162]	giv[162]	_	_
+21-29	2411-2413	in	_	_	_	_
+21-30	2414-2418	2006	time	giv	coref	30-7[227_0]
+21-31	2419-2420	.	_	_	_	_
+21-32	2421-2422	[	_	_	_	_
+21-33	2423-2425	13	abstract	new	_	_
+21-34	2426-2427	]	_	_	_	_
+
+#Text=Throughout the season De Thomasis undertook the coaching duties , and claimed the organizations first championship title , and was recognized by the league with the Coach of the Year Award . [ 14 ] [ 15 ] [ 16 ]
+22-1	2428-2438	Throughout	_	_	_	_
+22-2	2439-2442	the	time[165]	giv[165]	_	_
+22-3	2443-2449	season	time[165]	giv[165]	_	_
+22-4	2450-2452	De	person[166]	giv[166]	ana	23-4[0_166]
+22-5	2453-2461	Thomasis	person[166]	giv[166]	_	_
+22-6	2462-2471	undertook	_	_	_	_
+22-7	2472-2475	the	abstract[168]	new[168]	_	_
+22-8	2476-2484	coaching	abstract|abstract[168]	new|new[168]	_	_
+22-9	2485-2491	duties	abstract[168]	new[168]	_	_
+22-10	2492-2493	,	_	_	_	_
+22-11	2494-2497	and	_	_	_	_
+22-12	2498-2505	claimed	_	_	_	_
+22-13	2506-2509	the	event[171]	giv[171]	_	_
+22-14	2510-2523	organizations	organization|event[171]	new|giv[171]	ana	24-9
+22-15	2524-2529	first	event[171]	giv[171]	_	_
+22-16	2530-2542	championship	event|event[171]	giv|giv[171]	coref	24-11
+22-17	2543-2548	title	event[171]	giv[171]	_	_
+22-18	2549-2550	,	_	_	_	_
+22-19	2551-2554	and	_	_	_	_
+22-20	2555-2558	was	_	_	_	_
+22-21	2559-2569	recognized	_	_	_	_
+22-22	2570-2572	by	_	_	_	_
+22-23	2573-2576	the	organization[172]	giv[172]	coref	23-20[188_172]
+22-24	2577-2583	league	organization[172]	giv[172]	_	_
+22-25	2584-2588	with	_	_	_	_
+22-26	2589-2592	the	person[173]|abstract[175]	new[173]|giv[175]	coref	23-6[183_175]
+22-27	2593-2598	Coach	person[173]|abstract[175]	new[173]|giv[175]	_	_
+22-28	2599-2601	of	person[173]|abstract[175]	new[173]|giv[175]	_	_
+22-29	2602-2605	the	person[173]|time[174]|abstract[175]	new[173]|new[174]|giv[175]	_	_
+22-30	2606-2610	Year	person[173]|time[174]|abstract[175]	new[173]|new[174]|giv[175]	_	_
+22-31	2611-2616	Award	abstract[175]	giv[175]	_	_
+22-32	2617-2618	.	_	_	_	_
+22-33	2619-2620	[	_	_	_	_
+22-34	2621-2623	14	abstract	new	_	_
+22-35	2624-2625	]	_	_	_	_
+22-36	2626-2627	[	_	_	_	_
+22-37	2628-2630	15	abstract	new	_	_
+22-38	2631-2632	]	_	_	_	_
+22-39	2633-2634	[	_	_	_	_
+22-40	2635-2637	16	abstract	new	_	_
+22-41	2638-2639	]	_	_	_	_
+
+#Text=In 2010 , he received the Harry Gauss Memorial Award for his continual allegiance , commitment and support to the league . [ 17 ]
+23-1	2640-2642	In	_	_	_	_
+23-2	2643-2647	2010	time	new	_	_
+23-3	2648-2649	,	_	_	_	_
+23-4	2650-2652	he	person	giv	ana	23-12
+23-5	2653-2661	received	_	_	_	_
+23-6	2662-2665	the	abstract[183]	giv[183]	_	_
+23-7	2666-2671	Harry	person[181]|abstract[183]	new[181]|giv[183]	_	_
+23-8	2672-2677	Gauss	person[181]|abstract[183]	new[181]|giv[183]	_	_
+23-9	2678-2686	Memorial	place|abstract[183]	new|giv[183]	_	_
+23-10	2687-2692	Award	abstract[183]	giv[183]	_	_
+23-11	2693-2696	for	_	_	_	_
+23-12	2697-2700	his	person|abstract[185]	giv|new[185]	ana	24-4
+23-13	2701-2710	continual	abstract[185]	new[185]	_	_
+23-14	2711-2721	allegiance	abstract[185]	new[185]	_	_
+23-15	2722-2723	,	_	_	_	_
+23-16	2724-2734	commitment	abstract	new	_	_
+23-17	2735-2738	and	_	_	_	_
+23-18	2739-2746	support	abstract[187]	new[187]	_	_
+23-19	2747-2749	to	abstract[187]	new[187]	_	_
+23-20	2750-2753	the	abstract[187]|organization[188]	new[187]|giv[188]	coref	26-15[217_188]
+23-21	2754-2760	league	abstract[187]|organization[188]	new[187]|giv[188]	_	_
+23-22	2761-2762	.	_	_	_	_
+23-23	2763-2764	[	_	_	_	_
+23-24	2765-2767	17	abstract	new	_	_
+23-25	2768-2769	]	_	_	_	_
+
+#Text=In 2017 , he managed York Region to their second championship title . [ 18 ]
+24-1	2770-2772	In	_	_	_	_
+24-2	2773-2777	2017	time	giv	coref	30-9
+24-3	2778-2779	,	_	_	_	_
+24-4	2780-2782	he	person	giv	ana	25-4
+24-5	2783-2790	managed	_	_	_	_
+24-6	2791-2795	York	place|place[193]	giv|giv[193]	coref	29-1[222_193]
+24-7	2796-2802	Region	place[193]	giv[193]	_	_
+24-8	2803-2805	to	_	_	_	_
+24-9	2806-2811	their	organization|event[196]	giv|new[196]	_	_
+24-10	2812-2818	second	event[196]	new[196]	_	_
+24-11	2819-2831	championship	event|event[196]	giv|new[196]	coref	30-1[225_0]
+24-12	2832-2837	title	event[196]	new[196]	_	_
+24-13	2838-2839	.	_	_	_	_
+24-14	2840-2841	[	_	_	_	_
+24-15	2842-2844	18	abstract	new	_	_
+24-16	2845-2846	]	_	_	_	_
+
+#Text=In 2018 , he formed a partnership with former player Filipe Bento to launch Unionville Milliken SC in League1 Ontario . [ 19 ]
+25-1	2847-2849	In	_	_	_	_
+25-2	2850-2854	2018	time	giv	_	_
+25-3	2855-2856	,	_	_	_	_
+25-4	2857-2859	he	person	giv	ana	26-4
+25-5	2860-2866	formed	_	_	_	_
+25-6	2867-2868	a	organization[200]	new[200]	_	_
+25-7	2869-2880	partnership	organization[200]	new[200]	_	_
+25-8	2881-2885	with	organization[200]	new[200]	_	_
+25-9	2886-2892	former	organization[200]|person[201]	new[200]|giv[201]	_	_
+25-10	2893-2899	player	organization[200]|person[201]	new[200]|giv[201]	_	_
+25-11	2900-2906	Filipe	organization[200]|person[201]	new[200]|giv[201]	_	_
+25-12	2907-2912	Bento	organization[200]|person[201]	new[200]|giv[201]	_	_
+25-13	2913-2915	to	_	_	_	_
+25-14	2916-2922	launch	_	_	_	_
+25-15	2923-2933	Unionville	place|organization[204]	giv|giv[204]	_	_
+25-16	2934-2942	Milliken	person|organization[204]	giv|giv[204]	_	_
+25-17	2943-2945	SC	organization[204]	giv[204]	_	_
+25-18	2946-2948	in	_	_	_	_
+25-19	2949-2956	League1	organization|place[206]	giv|giv[206]	_	_
+25-20	2957-2964	Ontario	place[206]	giv[206]	_	_
+25-21	2965-2966	.	_	_	_	_
+25-22	2967-2968	[	_	_	_	_
+25-23	2969-2971	19	abstract	new	_	_
+25-24	2972-2973	]	_	_	_	_
+
+#Text=In 2019 , he was named Director of Soccer Operations for Canada MetroStars in the Major Arena Soccer League . [ 20 ]
+26-1	2974-2976	In	_	_	_	_
+26-2	2977-2981	2019	time	new	_	_
+26-3	2982-2983	,	_	_	_	_
+26-4	2984-2986	he	person	giv	_	_
+26-5	2987-2990	was	_	_	_	_
+26-6	2991-2996	named	_	_	_	_
+26-7	2997-3005	Director	person[210]	new[210]	_	_
+26-8	3006-3008	of	person[210]	new[210]	_	_
+26-9	3009-3015	Soccer	person[210]|person|organization[212]	new[210]|giv|giv[212]	coref	26-17[216_0]
+26-10	3016-3026	Operations	person[210]|organization[212]	new[210]|giv[212]	_	_
+26-11	3027-3030	for	person[210]|organization[212]	new[210]|giv[212]	_	_
+26-12	3031-3037	Canada	person[210]|organization[212]|place|organization[214]	new[210]|giv[212]|giv|giv[214]	_	_
+26-13	3038-3048	MetroStars	person[210]|organization[212]|organization[214]	new[210]|giv[212]|giv[214]	_	_
+26-14	3049-3051	in	person[210]|organization[212]|organization[214]	new[210]|giv[212]|giv[214]	_	_
+26-15	3052-3055	the	person[210]|organization[212]|organization[214]|organization[217]	new[210]|giv[212]|giv[214]|giv[217]	_	_
+26-16	3056-3061	Major	person[210]|organization[212]|organization[214]|organization[217]	new[210]|giv[212]|giv[214]|giv[217]	_	_
+26-17	3062-3067	Arena	person[210]|organization[212]|organization[214]|place|person[216]|organization[217]	new[210]|giv[212]|giv[214]|giv|giv[216]|giv[217]	_	_
+26-18	3068-3074	Soccer	person[210]|organization[212]|organization[214]|person[216]|organization[217]	new[210]|giv[212]|giv[214]|giv[216]|giv[217]	_	_
+26-19	3075-3081	League	person[210]|organization[212]|organization[214]|organization[217]	new[210]|giv[212]|giv[214]|giv[217]	_	_
+26-20	3082-3083	.	_	_	_	_
+26-21	3084-3085	[	_	_	_	_
+26-22	3086-3088	20	abstract	new	_	_
+26-23	3089-3090	]	_	_	_	_
+
+#Text=Honours
+27-1	3091-3098	Honours	abstract	new	_	_
+
+#Text=Manager
+28-1	3099-3106	Manager	person	giv	_	_
+
+#Text=Italia/York Region Shooters
+29-1	3107-3118	Italia/York	place|place[222]|place[223]	new|giv[222]|giv[223]	_	_
+29-2	3119-3125	Region	place[222]|place[223]	giv[222]|giv[223]	_	_
+29-3	3126-3134	Shooters	place[223]	giv[223]	_	_
+
+#Text=CSL Championship ( 2 ) : 2006 , 2017
+30-1	3135-3138	CSL	organization|event[225]	giv|giv[225]	_	_
+30-2	3139-3151	Championship	event[225]	giv[225]	_	_
+30-3	3152-3153	(	event[225]	giv[225]	_	_
+30-4	3154-3155	2	event[225]|abstract	giv[225]|giv	_	_
+30-5	3156-3157	)	event[225]	giv[225]	_	_
+30-6	3158-3159	:	event[225]	giv[225]	_	_
+30-7	3160-3164	2006	event[225]|time[227]	giv[225]|giv[227]	_	_
+30-8	3165-3166	,	event[225]|time[227]	giv[225]|giv[227]	_	_
+30-9	3167-3171	2017	event[225]|time[227]|time	giv[225]|giv[227]|giv	_	_

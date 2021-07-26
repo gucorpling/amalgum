@@ -1,0 +1,136 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Simulation Results and Discussion</segment>
+<segment id="2" parent="1001" relname="span">In this section , the performance of the proposed scheme is investigated against several non-ideal channel conditions such as frequency offset , phase offset , timing offset , varying symbol number as well as different Doppler shifts .</segment>
+<segment id="3" parent="1003" relname="preparation">An analytical comparison is also provided with previously proposed different learning-based modulation classifiers .</segment>
+<segment id="4" parent="1004" relname="preparation">4.1. Dataset</segment>
+<segment id="5" parent="1004" relname="joint">In this paper , the following modulation schemes were considered .</segment>
+<segment id="6" parent="1006" relname="span">The transmitted bit-stream was generated randomly</segment>
+<segment id="7" parent="8" relname="attribution">to ensure</segment>
+<segment id="8" parent="1007" relname="span">each has equal probability .</segment>
+<segment id="9" parent="1009" relname="span">The received signal was pre-processed at the receiver end</segment>
+<segment id="10" parent="9" relname="purpose">to obtain a complex based-band signal .</segment>
+<segment id="11" parent="1013" relname="span">The In-Phase-Quadrature</segment>
+<segment id="12" parent="11" relname="restatement">( I-Q )</segment>
+<segment id="13" parent="1012" relname="same_unit">samples of the received signal</segment>
+<segment id="14" parent="1014" relname="joint">were sampled simultaneously to a frame of length N. They are combined later in a 2 X N matrix</segment>
+<segment id="15" parent="1014" relname="joint">and input to CNN for feature extraction .</segment>
+<segment id="16" parent="1016" relname="contrast">In this study , the value of N is 2048</segment>
+<segment id="17" parent="1016" relname="contrast">but some experiments are performed with N = 1024 , 512 .</segment>
+<segment id="18" parent="1018" relname="span">This is done</segment>
+<segment id="19" parent="18" relname="means">by varying the number of symbols in the frame .</segment>
+<segment id="20" parent="1019" relname="joint">A segment has the same results as that of a full observation .</segment>
+<segment id="21" parent="1022" relname="span">In this way , the proposed classifier would be independent of N. The range of AWGN noise with signal-to-noise ratio</segment>
+<segment id="22" parent="21" relname="restatement">( SNR )</segment>
+<segment id="23" parent="1021" relname="same_unit">= −8 dB to +8 dB in the dataset .</segment>
+<segment id="24" parent="1024" relname="span">For each modulation scheme and SNR values , 10,000 realizations of the received signal are generated</segment>
+<segment id="25" parent="1025" relname="span">according to the model</segment>
+<segment id="26" parent="25" relname="elaboration">described in Section 2 .</segment>
+<segment id="27" parent="1026" relname="joint">The rest of the parameters are summarized in Table 1 in detail .</segment>
+<segment id="28" parent="1028" relname="preparation">4.2. Training and Validation Performance</segment>
+<segment id="29" parent="1029" relname="span">In the following experiment , the proposed classifier NSVM ,</segment>
+<segment id="30" parent="1030" relname="joint">which is a hybrid combination of CNN and SVM is trained</segment>
+<segment id="31" parent="1031" relname="span">and validated</segment>
+<segment id="32" parent="31" relname="means">by using offline deployment .</segment>
+<segment id="33" parent="1032" relname="joint">In order to analyze the performance , the accuracy and loss curves of training and cross-validation are plotted in</segment>
+<segment id="34" parent="1034" relname="preparation">Figure 5</segment>
+<segment id="35" parent="1034" relname="joint">.</segment>
+<segment id="36" parent="1036" relname="joint">Similar experiments are performed with a traditional CNN model with the softmax classifier in its last layer ,</segment>
+<segment id="37" parent="1036" relname="joint">and the results are plotted in</segment>
+<segment id="38" parent="39" relname="preparation">Figure 6</segment>
+<segment id="39" parent="1038" relname="span">.</segment>
+<segment id="40" parent="1041" relname="span">The CNN settings</segment>
+<segment id="41" parent="40" relname="elaboration">used here are the same in both cases ,</segment>
+<segment id="42" parent="1040" relname="same_unit">as shown in</segment>
+<segment id="43" parent="1044" relname="preparation">Figure 4</segment>
+<segment id="44" parent="1045" relname="condition">,</segment>
+<segment id="45" parent="1046" relname="attribution">expect</segment>
+<segment id="46" parent="1046" relname="joint">one is trained with Gaussian SVM</segment>
+<segment id="47" parent="1046" relname="joint">and the other one is trained with softmax as the decision classifier .</segment>
+<segment id="48" parent="1048" relname="span">The performance of NSVM is better than the traditional CNN model</segment>
+<segment id="49" parent="48" relname="circumstance">as the accuracy and loss converges to their minima and maxima quickly .</segment>
+<segment id="50" parent="1051" relname="attribution">Along with that , these results show</segment>
+<segment id="51" parent="1051" relname="span">that it smoothens</segment>
+<segment id="52" parent="1052" relname="span">as training progresses ,</segment>
+<segment id="53" parent="52" relname="elaboration">which shows the effectiveness of the proposed scheme .</segment>
+<segment id="54" parent="1054" relname="concession">This also reduces the cost of training for the proposed model .</segment>
+<segment id="55" parent="1055" relname="span">However , in the case of CNN with softmax , the classifier performance is hardly stable and satisfactory ,</segment>
+<segment id="56" parent="55" relname="attribution">as can be seen in</segment>
+<segment id="57" parent="58" relname="preparation">Figure 6</segment>
+<segment id="58" parent="1056" relname="span">.</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="2" relname="elaboration"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="multinuc" parent="1003" relname="span"/>
+<group id="1005" type="multinuc" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="1005" relname="joint"/>
+<group id="1007" type="span" parent="6" relname="purpose"/>
+<group id="1008" type="multinuc" parent="1005" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="multinuc" parent="1008" relname="joint"/>
+<group id="1011" type="multinuc" parent="1010" relname="joint"/>
+<group id="1012" type="multinuc" parent="1011" relname="same_unit"/>
+<group id="1013" type="span" parent="1012" relname="same_unit"/>
+<group id="1014" type="multinuc" parent="1011" relname="same_unit"/>
+<group id="1015" type="multinuc" parent="1010" relname="joint"/>
+<group id="1016" type="multinuc" parent="1015" relname="joint"/>
+<group id="1017" type="multinuc" parent="1015" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="joint"/>
+<group id="1019" type="multinuc" parent="1017" relname="joint"/>
+<group id="1020" type="multinuc" parent="1019" relname="joint"/>
+<group id="1021" type="multinuc" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="same_unit"/>
+<group id="1023" type="multinuc" parent="1020" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="joint"/>
+<group id="1025" type="span" parent="24" relname="attribution"/>
+<group id="1026" type="multinuc" parent="1023" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="joint"/>
+<group id="1028" type="multinuc" parent="1027" relname="span"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="multinuc" parent="29" relname="elaboration"/>
+<group id="1031" type="span" parent="1030" relname="joint"/>
+<group id="1032" type="multinuc" parent="1028" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="joint"/>
+<group id="1034" type="multinuc" parent="1033" relname="span"/>
+<group id="1035" type="multinuc" parent="1034" relname="joint"/>
+<group id="1036" type="multinuc" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="1035" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="span" parent="1037" relname="joint"/>
+<group id="1040" type="multinuc" parent="1042" relname="preparation"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="multinuc" parent="1039" relname="span"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="multinuc" parent="1045" relname="span"/>
+<group id="1047" type="multinuc" parent="1042" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="multinuc" parent="1047" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="1050" relname="span"/>
+<group id="1052" type="span" parent="51" relname="circumstance"/>
+<group id="1053" type="span" parent="1049" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="span"/>
+<group id="1055" type="span" parent="1054" relname="span"/>
+<group id="1056" type="span" parent="1055" relname="background"/>
+	</body>
+</rst>

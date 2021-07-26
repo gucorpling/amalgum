@@ -1,0 +1,215 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Materials and Methods</segment>
+<segment id="2" parent="1003" relname="span">The method</segment>
+<segment id="3" parent="1004" relname="span">proposed in this paper will seek to exploit the correlations between distinct currency crosses</segment>
+<segment id="4" parent="3" relname="purpose">in order to predict the medium-term trend of ones of them .</segment>
+<segment id="5" parent="1007" relname="span">To this end , the authors will describe below a pipeline</segment>
+<segment id="6" parent="5" relname="elaboration">that is based on the use of set of cross-currency exchanges</segment>
+<segment id="7" parent="1007" relname="elaboration">characterizing an arbitrage opportunity in the Forex market .</segment>
+<segment id="8" parent="1009" relname="span">As introduced in the first section ,</segment>
+<segment id="9" parent="1010" relname="span">an arbitrage takes advantage of differences in the price of single currency</segment>
+<segment id="10" parent="9" relname="elaboration">related to short-time misalignments between the traded currency with the related ones .</segment>
+<segment id="11" parent="1012" relname="span">A typical example of arbitrage is the so-called triangular arbitrage</segment>
+<segment id="12" parent="1013" relname="span">referred to three currencies</segment>
+<segment id="13" parent="12" relname="elaboration">of which one is obtainable from the combination of the prices of the other two crosses .</segment>
+<segment id="14" parent="1015" relname="span">In this article , we will refer to the EUR/USD , GBP/USD , and EUR/GBP crosses .</segment>
+<segment id="15" parent="1016" relname="joint">A similar approach can be extended to any other trio of related currencies .</segment>
+<segment id="16" parent="1017" relname="span">The currency</segment>
+<segment id="17" parent="16" relname="elaboration">on which to execute trading operations is EUR/USD .</segment>
+<segment id="18" parent="1020" relname="span">The price of the EUR/USD cross for arbitrage purposes in the currency market must always be obtainable from the other two pairs EUR/GBP and GBP/USD by the relationship</segment>
+<segment id="19" parent="18" relname="elaboration">( 1 )</segment>
+<segment id="20" parent="1022" relname="span">In Equation ( 1 ) ,</segment>
+<segment id="21" parent="20" relname="elaboration">we have denoted with px(tk ) the price of the currency .</segment>
+<segment id="22" parent="1023" relname="span">Therefore , in a financially balanced market ,</segment>
+<segment id="23" parent="1024" relname="joint">so that an investor cannot take advantage of arbitrage conditions</segment>
+<segment id="24" parent="1025" relname="span">and consequently obtain a systematic gain ,</segment>
+<segment id="25" parent="1026" relname="same_unit">Equation ( 1 )</segment>
+<segment id="26" parent="1027" relname="span">must always be verified ,</segment>
+<segment id="27" parent="26" relname="elaboration">i.e. , there must be a very precise temporal correlation between specific currency crosses .</segment>
+<segment id="28" parent="1028" relname="span">In reality , small short-term misalignments are always found in the Forex markets</segment>
+<segment id="29" parent="1029" relname="span">and these are often excellent trading opportunities for financial robot advisors</segment>
+<segment id="30" parent="1030" relname="span">who automatically execute many operations ,</segment>
+<segment id="31" parent="30" relname="elaboration">taking advantage of these short-time market misalignments .</segment>
+<segment id="32" parent="1033" relname="span">The author is investigating the design and use of specific hand-crafted features</segment>
+<segment id="33" parent="32" relname="elaboration">( which the author has already used in the medical field )</segment>
+<segment id="34" parent="1034" relname="span">extracted from the chart of currency time-series</segment>
+<segment id="35" parent="1035" relname="span">and which would seem to early indicate the possible misalignments between the cross currency prices</segment>
+<segment id="36" parent="35" relname="elaboration">from which are extracted .</segment>
+<segment id="37" parent="1038" relname="span">For the reasons</segment>
+<segment id="38" parent="37" relname="elaboration">mentioned above ,</segment>
+<segment id="39" parent="1040" relname="span">the author has designed a pipeline</segment>
+<segment id="40" parent="1041" relname="span">which ,</segment>
+<segment id="41" parent="40" relname="purpose">to determine the medium-term trend of a given currency ,</segment>
+<segment id="42" parent="1039" relname="same_unit">analyzes the correlations between the related currencies in the context of a triangular arbitrage .</segment>
+<segment id="43" parent="1043" relname="same_unit">In the specific case ,</segment>
+<segment id="44" parent="1045" relname="concession">without losing generalization ,</segment>
+<segment id="45" parent="1045" relname="span">the author will refer to the EUR/USD currency as that</segment>
+<segment id="46" parent="1046" relname="sequence">on which to execute financial trading operations</segment>
+<segment id="47" parent="1047" relname="span">and to the EUR/GBP and GBP/USD currencies</segment>
+<segment id="48" parent="47" relname="purpose">to determine the data set for a possible triangular arbitrage .</segment>
+<segment id="49" parent="1001" relname="joint">Similar considerations can be extended to any other set of currencies with the same financial characteristics .</segment>
+<segment id="50" parent="51" relname="preparation">Having established this necessary premise ,</segment>
+<segment id="51" parent="1050" relname="span">the author will describe the proposed pipeline below .</segment>
+<segment id="52" parent="1052" relname="preparation">Figure 2</segment>
+<segment id="53" parent="1053" relname="span">below shows the block diagram of the algorithmic pipeline</segment>
+<segment id="54" parent="53" relname="elaboration">that is intended to be described in this paper :</segment>
+<segment id="55" parent="1055" relname="span">The following paragraphs will illustrate each of the blocks</segment>
+<segment id="56" parent="1056" relname="span">present in the complete diagram of the proposed pipeline</segment>
+<segment id="57" parent="56" relname="elaboration">and shown in</segment>
+<segment id="58" parent="59" relname="preparation">Figure 2</segment>
+<segment id="59" parent="1058" relname="span">.</segment>
+<segment id="60" parent="1061" relname="attribution">2.1.</segment>
+<segment id="61" parent="1061" relname="span">Data Pre-Processing Block</segment>
+<segment id="62" parent="1062" relname="span">The objective of this block is to pre-process the data of the incoming financial time-series .</segment>
+<segment id="63" parent="1063" relname="span">Specifically , in this block the data of the incoming time-series will be normalized in the range</segment>
+<segment id="64" parent="63" relname="evidence">[ 0 , 1 ] .</segment>
+<segment id="65" parent="1066" relname="preparation">Figure 3</segment>
+<segment id="66" parent="1066" relname="span">shows an example of normalized financial time-series</segment>
+<segment id="67" parent="1067" relname="span">relating to the three cross currency</segment>
+<segment id="68" parent="67" relname="elaboration">analyzed in this paper .</segment>
+<segment id="69" parent="1069" relname="span">In this way , whatever the pricing of the cross currency</segment>
+<segment id="70" parent="1071" relname="attribution">entering our system ,</segment>
+<segment id="71" parent="1072" relname="span">the pipeline will always process data in the range</segment>
+<segment id="72" parent="71" relname="evidence">[ 0 , 1 ] ,</segment>
+<segment id="73" parent="1071" relname="same_unit">greatly improving the stability of the proposed algorithm .</segment>
+<segment id="74" parent="1074" relname="span">In order to train and validate the proposed pipeline ,</segment>
+<segment id="75" parent="74" relname="elaboration">the author has organized a proper dataset of financial pricing data .</segment>
+<segment id="76" parent="1077" relname="span">Specifically , historical financial data</segment>
+<segment id="77" parent="76" relname="elaboration">( with 99.9 % accuracy ) of EUR/USD , GBP/USD , EUR/GBP for the years 2004 – 2018 have been collected .</segment>
+<segment id="78" parent="1078" relname="span">Again , with reference to the aforementioned time period ,</segment>
+<segment id="79" parent="1080" relname="span">for each cross currency the historical data</segment>
+<segment id="80" parent="1081" relname="span">referring to the opening and closing prices , higher and lower in addition to the time of each quotation</segment>
+<segment id="81" parent="80" relname="elaboration">( CET time )</segment>
+<segment id="82" parent="1079" relname="same_unit">have been collected .</segment>
+<segment id="83" parent="1083" relname="span">This dataset has been properly divided</segment>
+<segment id="84" parent="1084" relname="span">in order to organize a set of data</segment>
+<segment id="85" parent="84" relname="elaboration">that can be used for the training phase of the proposed system and the remaining for the testing and validation session .</segment>
+<segment id="86" parent="1086" relname="preparation">Specifically , such training simulations and annual validation have been performed ,</segment>
+<segment id="87" parent="1087" relname="preparation">dividing the dataset as follows :</segment>
+<segment id="88" parent="1089" relname="span">70 % of the mentioned dataset was used</segment>
+<segment id="89" parent="88" relname="purpose">to train the pipeline ,</segment>
+<segment id="90" parent="1090" relname="span">while the remaining 30 % was used</segment>
+<segment id="91" parent="90" relname="purpose">to validate and test the proposed method .</segment>
+<segment id="92" parent="1092" relname="span">Both the training set and the validation ones has been analyzed</segment>
+<segment id="93" parent="1093" relname="span">as to understand</segment>
+<segment id="94" parent="1096" relname="span">if the possible trends</segment>
+<segment id="95" parent="94" relname="elaboration">( LONG , SHORT , NULL )</segment>
+<segment id="96" parent="1095" relname="same_unit">were equally represented in both datasets</segment>
+<segment id="97" parent="1095" relname="purpose">in order to avoid overfitting issues for the deep learning system .</segment>
+<segment id="98" parent="1099" relname="span">The financial data</segment>
+<segment id="99" parent="98" relname="elaboration">thus organized</segment>
+<segment id="100" parent="1100" relname="span">are therefore presented as input to the pre-processing system</segment>
+<segment id="101" parent="100" relname="elaboration">described in this section</segment>
+<segment id="102" parent="1098" relname="elaboration">whose output will be further processed by the next deep learning block .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="2" relname="elaboration"/>
+<group id="1005" type="span" parent="1003" relname="elaboration"/>
+<group id="1006" type="span" parent="1005" relname="span"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="span" parent="1006" relname="elaboration"/>
+<group id="1009" type="span" parent="1008" relname="span"/>
+<group id="1010" type="span" parent="8" relname="elaboration"/>
+<group id="1011" type="span" parent="1009" relname="elaboration"/>
+<group id="1012" type="span" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="11" relname="elaboration"/>
+<group id="1014" type="span" parent="1012" relname="elaboration"/>
+<group id="1015" type="span" parent="1014" relname="span"/>
+<group id="1016" type="multinuc" parent="14" relname="elaboration"/>
+<group id="1017" type="span" parent="1016" relname="joint"/>
+<group id="1018" type="span" parent="1015" relname="elaboration"/>
+<group id="1019" type="span" parent="1018" relname="span"/>
+<group id="1020" type="span" parent="1019" relname="span"/>
+<group id="1021" type="span" parent="1020" relname="elaboration"/>
+<group id="1022" type="span" parent="1021" relname="span"/>
+<group id="1023" type="span" parent="1022" relname="elaboration"/>
+<group id="1024" type="multinuc" parent="22" relname="purpose"/>
+<group id="1025" type="span" parent="1024" relname="joint"/>
+<group id="1026" type="multinuc" parent="24" relname="elaboration"/>
+<group id="1027" type="span" parent="1026" relname="same_unit"/>
+<group id="1028" type="span" parent="1019" relname="elaboration"/>
+<group id="1029" type="span" parent="28" relname="elaboration"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1032" type="span" parent="1001" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="elaboration"/>
+<group id="1035" type="span" parent="34" relname="elaboration"/>
+<group id="1037" type="multinuc" parent="1001" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="same_unit"/>
+<group id="1039" type="multinuc" parent="1037" relname="same_unit"/>
+<group id="1040" type="span" parent="1039" relname="same_unit"/>
+<group id="1041" type="span" parent="39" relname="elaboration"/>
+<group id="1043" type="multinuc" parent="1001" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="same_unit"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="multinuc" parent="45" relname="elaboration"/>
+<group id="1047" type="span" parent="1046" relname="sequence"/>
+<group id="1050" type="span" parent="1001" relname="joint"/>
+<group id="1051" type="span" parent="1001" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="span"/>
+<group id="1053" type="span" parent="1054" relname="preparation"/>
+<group id="1054" type="multinuc" parent="1052" relname="span"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="55" relname="elaboration"/>
+<group id="1058" type="span" parent="1054" relname="joint"/>
+<group id="1060" type="span" parent="1054" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="span"/>
+<group id="1062" type="span" parent="61" relname="elaboration"/>
+<group id="1063" type="span" parent="62" relname="elaboration"/>
+<group id="1064" type="span" parent="1054" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="66" relname="elaboration"/>
+<group id="1068" type="span" parent="1065" relname="concession"/>
+<group id="1069" type="span" parent="1068" relname="span"/>
+<group id="1070" type="span" parent="69" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1070" relname="span"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="multinuc" parent="1069" relname="purpose"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="multinuc" parent="1073" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="span" parent="1078" relname="preparation"/>
+<group id="1078" type="span" parent="1076" relname="span"/>
+<group id="1079" type="multinuc" parent="78" relname="purpose"/>
+<group id="1080" type="span" parent="1079" relname="same_unit"/>
+<group id="1081" type="span" parent="79" relname="elaboration"/>
+<group id="1082" type="multinuc" parent="1075" relname="joint"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="83" relname="purpose"/>
+<group id="1085" type="span" parent="1082" relname="joint"/>
+<group id="1086" type="span" parent="1085" relname="span"/>
+<group id="1087" type="multinuc" parent="1086" relname="span"/>
+<group id="1088" type="multinuc" parent="1087" relname="joint"/>
+<group id="1089" type="span" parent="1088" relname="contrast"/>
+<group id="1090" type="span" parent="1088" relname="contrast"/>
+<group id="1091" type="multinuc" parent="1087" relname="joint"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="span" parent="92" relname="elaboration"/>
+<group id="1094" type="span" parent="93" relname="condition"/>
+<group id="1095" type="multinuc" parent="1094" relname="span"/>
+<group id="1096" type="span" parent="1095" relname="same_unit"/>
+<group id="1097" type="span" parent="1091" relname="joint"/>
+<group id="1098" type="multinuc" parent="1097" relname="span"/>
+<group id="1099" type="span" parent="1098" relname="same_unit"/>
+<group id="1100" type="span" parent="1098" relname="same_unit"/>
+	</body>
+</rst>

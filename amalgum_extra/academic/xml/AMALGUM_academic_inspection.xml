@@ -1,0 +1,928 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_inspection" title="Intelligent Image-Based Railway Inspection System Using Deep Learning-Based Object Detection and Weber Contrast-Based Image Comparison" shortTitle="inspection" author="Jinbeum Jang, Minwoo Shin, Sohee Lim, Jonggook Park, Joungyeon Kim, Joonki Paik" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/21/4738/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+Facility	NNP	Facility
+Inspection	NN	inspection
+Algorithm	NN	algorithm
+</s>
+</head>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+Overview	NN	overview
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+system	NN	system
+automatically	RB	automatically
+inspects	VBZ	inspect
+structural	JJ	structural
+defects	NNS	defect
+of	IN	of
+railway	NN	railway
+environment	NN	environment
+.	.	.
+</s>
+<s type="decl">
+Most	JJS	most
+facilities	NNS	facility
+installed	VBN	install
+in	IN	in
+the	DT	the
+tunnel	NN	tunnel
+,	,	,
+such	JJ	such
+as	IN	as
+overhead	JJ	overhead
+rigid	JJ	rigid
+conductors	NNS	conductor
+,	,	,
+are	VBP	be
+used	VBN	use
+to	TO	to
+supply	VB	supply
+electric	JJ	electric
+power	NN	power
+into	IN	into
+the	DT	the
+train	NN	train
+through	IN	through
+its	PRP$	its
+pantograph	NN	pantograph
+.	.	.
+</s>
+<s type="decl">
+Conventional	JJ	Conventional
+inspection	NN	inspection
+systems	NNS	system
+detect	VBP	detect
+all	DT	all
+candidates	NNS	candidate
+of	IN	of
+wears	NNS	wear
+and	CC	and
+cracks	NNS	crack
+using	VBG	use
+single	JJ	single
+image-based	JJ	image-based
+processing	NN	processing
+methods	NNS	method
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+conventional	JJ	conventional
+image	NN	image
+processing-based	JJ	processing-based
+approach	NN	approach
+provides	VBZ	provide
+an	DT	a
+acceptable	JJ	acceptable
+detection	NN	detection
+accuracy	NN	accuracy
+for	IN	for
+a	DT	a
+small	JJ	small
+FoV	NN	FoV
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+it	PRP	it
+is	VBZ	be
+difficult	JJ	difficult
+to	TO	to
+distinguish	VB	distinguish
+whether	IN	whether
+detected	VBN	detect
+region	NN	region
+is	VBZ	be
+a	DT	a
+real	JJ	real
+defect	NN	defect
+or	CC	or
+not	RB	not
+if	IN	if
+the	DT	the
+image	NN	image
+contains	VBZ	contain
+complicated	JJ	complicated
+frequency	NN	frequency
+components	NNS	component
+or	CC	or
+complex	JJ	complex
+background	NN	background
+.	.	.
+</s>
+<s type="sub">
+Moreover	RB	moreover
+,	,	,
+single	JJ	single
+image-based	JJ	image-based
+systems	NNS	system
+cannot	MD	cannot
+detect	VB	detect
+defects	NNS	defect
+caused	VBN	cause
+by	IN	by
+structure	NN	structure
+’s	POS	's
+shape	NN	shape
+deformation	NN	deformation
+and	CC	and
+loss	NN	loss
+of	IN	of
+components	NNS	component
+</s>
+<s type="decl">
+since	IN	since
+most	JJS	most
+overhead	JJ	overhead
+lines	NNS	line
+and	CC	and
+supporters	NNS	supporter
+consist	VBP	consist
+of	IN	of
+durable	JJ	durable
+metal	NN	metal
+materials	NNS	material
+unlike	IN	unlike
+tunnel	NN	tunnel
+walls	NNS	wall
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+To	TO	to
+solve	VB	solve
+these	DT	this
+problems	NNS	problem
+,	,	,
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+inspects	VBZ	inspect
+structures	NNS	structure
+and	CC	and
+facilities	NNS	facility
+related	JJ	related
+with	IN	with
+overhead	JJ	overhead
+lines	NNS	line
+using	VBG	use
+a	DT	a
+pair	NN	pair
+of	IN	of
+images	NNS	image
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+image	NN	image
+sets	NNS	set
+are	VBP	be
+acquired	VBN	acquire
+using	VBG	use
+the	DT	the
+line	NN	line
+scan	NN	scan
+camera	NN	camera
+at	IN	at
+the	DT	the
+same	JJ	same
+spots	NNS	spot
+but	CC	but
+at	IN	at
+different	JJ	different
+times	NNS	time
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+assume	VBP	assume
+that	IN	that
+the	DT	the
+reference	NN	reference
+image	NN	image
+set	NN	set
+is	VBZ	be
+acquired	VBN	acquire
+before	IN	before
+the	DT	the
+target	NN	target
+image	NN	image
+set	NN	set
+,	,	,
+and	CC	and
+they	PRP	they
+have	VBP	have
+no	DT	no
+defects	NNS	defect
+such	JJ	such
+as	IN	as
+deformation	NN	deformation
+and	CC	and
+loss	NN	loss
+based	VBN	base
+on	IN	on
+human	JJ	human
+inspection	NN	inspection
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+target	NN	target
+image	NN	image
+set	NN	set
+is	VBZ	be
+the	DT	the
+one	NN	one
+to	TO	to
+be	VB	be
+inspected	VBN	inspect
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+main	JJ	main
+objective	NN	objective
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+is	VBZ	be
+to	TO	to
+detect	VB	detect
+deformed	VBN	deform
+regions	NNS	region
+for	IN	for
+maintenance	NN	maintenance
+of	IN	of
+overhead	JJ	overhead
+conductors	NNS	conductor
+by	IN	by
+comparing	VBG	compare
+two	CD	2
+images	NNS	image
+acquired	VBN	acquire
+at	IN	at
+different	JJ	different
+times	NNS	time
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+exclude	VBP	exclude
+cracks	NNS	crack
+on	IN	on
+the	DT	the
+tunnel	NN	tunnel
+wall	NN	wall
+as	IN	as
+inspect	NN	inspect
+subject	NN	subject
+in	IN	in
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+since	IN	since
+they	PRP	they
+are	VBP	be
+simply	RB	simply
+extracted	VBN	extract
+by	IN	by
+single	JJ	single
+image-based	JJ	image-based
+inspection	NN	inspection
+systems	NNS	system
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+system	NN	system
+consists	VBZ	consist
+of	IN	of
+three	CD	3
+functional	JJ	functional
+steps	NNS	step
+:	:	:
+(	:	(
+i	CD	I
+)	-RRB-	)
+image	NN	image
+reconstruction	NN	reconstruction
+using	VBG	use
+registration	NN	registration
+based	VBN	base
+on	IN	on
+phase	NN	phase
+correlation	NN	correlation
+and	CC	and
+image	NN	image
+composition	NN	composition
+,	,	,
+(	-LRB-	(
+ii	CD	ii
+)	-RRB-	)
+facility	NN	facility
+detection	NN	detection
+using	VBG	use
+deep	JJ	deep
+learning-based	NN	learning-based
+object	NN	object
+detection	NN	detection
+,	,	,
+and	CC	and
+(	:	(
+iii	CD	iii
+)	-RRB-	)
+facility	NN	facility
+inspection	NN	inspection
+using	VBG	use
+image	NN	image
+comparison	NN	comparison
+approach	NN	approach
+based	VBN	base
+on	IN	on
+Weber	NNP	Weber
+contrast	NN	contrast
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+we	PRP	we
+describe	VBP	describe
+each	DT	each
+step	NN	step
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+in	IN	in
+the	DT	the
+following	VBG	follow
+subsections	NNS	subsection
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.2.	CD	3.2.
+Image	NN	image
+Reconstruction	NN	Reconstruction
+</s>
+</head>
+<p>
+<s type="decl">
+Given	VBN	give
+a	DT	a
+pair	NN	pair
+of	IN	of
+reference	NN	reference
+and	CC	and
+target	NN	target
+images	NNS	image
+,	,	,
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+first	RB	first
+reconstructs	VBZ	reconstruct
+each	DT	each
+image	NN	image
+.	.	.
+</s>
+<s type="other">
+As	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="decl">
+,	,	,
+positions	NNS	position
+between	IN	between
+corresponding	VBG	correspond
+facilities	NNS	facility
+in	IN	in
+the	DT	the
+same	JJ	same
+driving	NN	driving
+section	NN	section
+are	VBP	be
+not	RB	not
+initially	RB	initially
+aligned	VBN	align
+because	IN	because
+of	IN	of
+various	JJ	various
+problems	NNS	problem
+such	JJ	such
+as	IN	as
+different	JJ	different
+speed	NN	speed
+and	CC	and
+jittering	NN	jittering
+of	IN	of
+the	DT	the
+camera	NN	camera
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+some	DT	some
+parts	NNS	part
+of	IN	of
+facilities	NNS	facility
+are	VBP	be
+often	RB	often
+divided	VBN	divide
+into	IN	into
+two	CD	2
+neighboring	JJ	neighboring
+frames	NNS	frame
+in	IN	in
+the	DT	the
+image	NN	image
+acquisition	NN	acquisition
+process	NN	process
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+proposed	VBN	propose
+system	NN	system
+registers	VBZ	register
+two	CD	2
+images	NNS	image
+using	VBG	use
+phase	NN	phase
+correlation	NN	correlation
+.	.	.
+</s>
+<s type="decl">
+More	RBR	more
+specifically	RB	specifically
+,	,	,
+disparity	NN	disparity
+or	CC	or
+motion	NN	motion
+vector	NN	vector
+between	IN	between
+two	CD	2
+images	NNS	image
+is	VBZ	be
+estimated	VBN	estimate
+by	IN	by
+computing	VBG	compute
+correlation	NN	correlation
+in	IN	in
+the	DT	the
+frequency	NN	frequency
+domain	NN	domain
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+more	RBR	more
+efficient	JJ	efficient
+to	TO	to
+coarsely	RB	coarsely
+register	VB	register
+two	CD	2
+large-scale	JJ	large-scale
+images	NNS	image
+than	IN	than
+spatial	JJ	spatial
+domain-based	JJ	domain-based
+motion	NN	motion
+estimation	NN	estimation
+methods	NNS	method
+because	IN	because
+of	IN	of
+simple	JJ	simple
+multiplication	NN	multiplication
+of	IN	of
+fast	JJ	fast
+Fourier	NNP	Fourier
+transformation	NN	transformation
+(	-LRB-	(
+FFT	NNP	FFT
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+motion	NN	motion
+vector	NN	vector
+obtained	VBN	obtain
+by	IN	by
+maximizing	VBG	maximize
+the	DT	the
+phase	NN	phase
+correlation	NN	correlation
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+(	:	(
+1	CD	1
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+respectively	RB	respectively
+represent	VBP	represent
+the	DT	the
+<hi rend="italic">
+i	NNP	I
+</hi>
+-th	JJ	-th
+frame	NN	frame
+acquired	VBN	acquire
+without	IN	without
+temporal	JJ	temporal
+synchronization	NN	synchronization
+,	,	,
+and	CC	and
+and	CC	and
+the	DT	the
+Fourier	NNP	foury
+and	CC	and
+its	PRP$	its
+inverse	JJ	inverse
+transformation	NN	transformation
+operations	NNS	operation
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Superscript	NN	superscript
+‘	SYM	'
+*	NN	*
+’	''	'
+indicates	VBZ	indicate
+the	DT	the
+conjugate	NN	conjugate
+of	IN	of
+a	DT	a
+complex	JJ	complex
+number	NN	number
+and	CC	and
+‘	SYM	'
+·	NN	·
+’	''	'
+a	DT	a
+pixel-by-pixel	JJ	pixel-by-pixel
+multiplication	NN	multiplication
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+,	,	,
+we	PRP	we
+translate	VBP	translate
+by	IN	by
+the	DT	the
+horizontal	JJ	horizontal
+motion	NN	motion
+value	NN	value
+to	TO	to
+prevent	VB	prevent
+deformation	NN	deformation
+of	IN	of
+in	IN	in
+which	WDT	which
+we	PRP	we
+should	MD	should
+inspect	VB	inspect
+facilities	NNS	facility
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+positions	NNS	position
+of	IN	of
+facilities	NNS	facility
+are	VBP	be
+coarsely	RB	coarsely
+aligned	VBN	align
+by	IN	by
+translating	VBG	translate
+using	VBG	use
+phase	NN	phase
+correlation	NN	correlation
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="frag">
+a.	NNP	a.
+</s>
+</p>
+<p>
+<s type="decl">
+Once	RB	once
+is	VBZ	be
+translated	VBN	translate
+,	,	,
+we	PRP	we
+lose	VBP	lose
+the	DT	the
+left	JJ	left
+and	CC	and
+right	JJ	right
+parts	NNS	part
+of	IN	of
+the	DT	the
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+we	PRP	we
+obtain	VBP	obtain
+the	DT	the
+negative	JJ	negative
+motion	NN	motion
+value	NN	value
+,	,	,
+the	DT	the
+translated	VBN	translate
+version	NN	version
+of	IN	of
+has	VBZ	have
+an	DT	a
+empty	JJ	empty
+space	NN	space
+in	IN	in
+the	DT	the
+left-side	JJ	left-side
+region	NN	region
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+right-side	JJ	right-side
+region	NN	region
+with	IN	with
+the	DT	the
+intensity	NN	intensity
+values	NNS	value
+is	VBZ	be
+naturally	RB	naturally
+lost	VBN	lose
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="frag">
+a.	NNP	a.
+</s>
+<s type="decl">
+To	TO	to
+fill	VB	fill
+the	DT	the
+empty	JJ	empty
+space	NN	space
+,	,	,
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+reconstructs	VBZ	reconstruct
+the	DT	the
+image	NN	image
+by	IN	by
+attaching	VBG	attach
+some	DT	some
+parts	NNS	part
+of	IN	of
+the	DT	the
+neighboring	JJ	neighboring
+frame	NN	frame
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+a	NN	a
+,	,	,
+b.	CD	bear
+We	PRP	we
+then	RB	then
+respectively	RB	respectively
+generate	VBP	generate
+the	DT	the
+final	JJ	final
+reconstructed	VBN	reconstruct
+images	NNS	image
+and	CC	and
+by	IN	by
+attaching	VBG	attach
+appropriate	JJ	appropriate
+regions	NNS	region
+of	IN	of
+the	DT	the
+neighboring	VBG	neighbor
+images	NNS	image
+onto	IN	onto
+and	CC	and
+since	IN	since
+the	DT	the
+left-side	JJ	left-side
+facility	NN	facility
+of	IN	of
+is	VBZ	be
+sometimes	RB	sometimes
+lost	VBN	lose
+in	IN	in
+the	DT	the
+image	NN	image
+acquisition	NN	acquisition
+process	NN	process
+.	.	.
+</s>
+<s type="sub">
+Although	IN	although
+some	DT	some
+regions	NNS	region
+are	VBP	be
+duplicated	VBN	duplicate
+,	,	,
+we	PRP	we
+can	MD	can
+prevent	VB	prevent
+from	IN	from
+skipping	VBG	skip
+the	DT	the
+inspection	NN	inspection
+of	IN	of
+the	DT	the
+regions	NNS	region
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+lost	VBN	lose
+region	NN	region
+in	IN	in
+is	VBZ	be
+used	VBN	use
+when	WRB	when
+reconstructing	VBG	reconstruct
+neighbor	NN	neighbor
+frames	NNS	frame
+at	IN	at
+the	DT	the
+previous	JJ	previous
+or	CC	or
+next	JJ	next
+inspection	NN	inspection
+stage	NN	stage
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.3.	CD	3.3.
+</s>
+<s type="frag">
+Facility	NNP	Facility
+Detection	NN	detection
+Using	VBG	use
+Convolutional	NNP	Convolutional
+Neural	NNP	Neural
+Network	NNP	Network
+</s>
+</head>
+<p>
+<s type="sub">
+To	TO	to
+automatically	RB	automatically
+inspect	VB	inspect
+railway	NN	railway
+facilities	NNS	facility
+,	,	,
+we	PRP	we
+should	MD	should
+find	VB	find
+out	RP	out
+their	PRP$	their
+positions	NNS	position
+and	CC	and
+classify	VB	classify
+types	NNS	type
+of	IN	of
+them	PRP	they
+since	IN	since
+each	DT	each
+type	NN	type
+has	VBZ	have
+different	JJ	different
+risk	NN	risk
+management	NN	management
+standard	NN	standard
+for	IN	for
+a	DT	a
+deformed	JJ	deformed
+area	NN	area
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+simple	JJ	simple
+approach	NN	approach
+is	VBZ	be
+to	TO	to
+define	VB	define
+absolute	JJ	absolute
+positions	NNS	position
+of	IN	of
+all	DT	all
+facilities	NNS	facility
+in	IN	in
+advance	NN	advance
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+it	PRP	it
+is	VBZ	be
+inefficient	JJ	inefficient
+since	IN	since
+we	PRP	we
+should	MD	should
+change	VB	change
+the	DT	the
+facility	NN	facility
+positions	NNS	position
+whenever	WRB	whenever
+the	DT	the
+reference	NN	reference
+image	NN	image
+set	NN	set
+is	VBZ	be
+replaced	VBN	replace
+by	IN	by
+new	JJ	new
+ones	NNS	one
+.	.	.
+</s>
+</p>
+</text>

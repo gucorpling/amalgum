@@ -1,0 +1,883 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_adder" title="Hardware Optimized and Error Reduced Approximate Adder" shortTitle="adder" author="Padmanabhan Balasubramanian, Douglas  L. Maskell" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/11/1212/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+Accurate	JJ	Accurate
+and	CC	and
+Approximate	JJ	Approximate
+Adders	NNPS	Adders
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+architecture	NN	architecture
+of	IN	of
+an	DT	a
+N-bit	NN	n-bit
+accurate	JJ	accurate
+adder	NN	adder
+and	CC	and
+the	DT	the
+generic	JJ	generic
+architectures	NNS	architecture
+of	IN	of
+N-bit	NNP	N-bit
+approximate	JJ	approximate
+adders	NNS	adder
+are	VBP	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+the	DT	the
+approximate	JJ	approximate
+adders	NNS	adder
+,	,	,
+we	PRP	we
+define	VBP	define
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+least	JJS	least
+significant	JJ	significant
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+to	TO	to
+be	VB	be
+K-bits	CD	k-bit
+,	,	,
+and	CC	and
+hence	RB	hence
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+more	RBR	more
+significant	JJ	significant
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+will	MD	will
+be	VB	be
+(	-LRB-	(
+N	CD	N
+–	:	-
+K)-bits	CD	ko-bit
+.	.	.
+</s>
+<s type="decl">
+A	NN	A
+and	CC	and
+B	NN	B
+represent	VBP	represent
+the	DT	the
+adder	NN	adder
+inputs	NNS	input
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+,	,	,
+while	IN	while
+SUM	NN	SUM
+denotes	VBZ	denote
+the	DT	the
+sum	NN	sum
+output	NN	output
+,	,	,
+which	WDT	which
+includes	VBZ	include
+a	DT	a
+carry	NN	carry
+overflow	NN	overflow
+bit	NN	bit
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+subscripts	NNS	subscript
+associated	VBN	associate
+with	IN	with
+the	DT	the
+adder	NN	adder
+inputs	NNS	input
+and	CC	and
+outputs	NNS	output
+denote	VBP	denote
+the	DT	the
+corresponding	JJ	corresponding
+bit	NN	bit
+positions	NNS	position
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+(	-LRB-	(
+N	NNP	N
+–	SYM	-
+K	CD	K
+)	-RRB-	)
+sum	NN	sum
+bits	NNS	bit
+of	IN	of
+the	DT	the
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+are	VBP	be
+combined	VBN	combine
+with	IN	with
+the	DT	the
+K	CD	K
+sum	NN	sum
+bits	NNS	bit
+of	IN	of
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+to	TO	to
+produce	VB	produce
+the	DT	the
+N	NN	N
+sum	NN	sum
+bits	NNS	bit
+of	IN	of
+approximate	JJ	approximate
+adders	NNS	adder
+,	,	,
+which	WDT	which
+includes	VBZ	include
+the	DT	the
+carry	NN	carry
+overflow	NN	overflow
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+shall	MD	shall
+use	VB	use
+some	DT	some
+legends	NNS	legend
+for	IN	for
+the	DT	the
+approximate	JJ	approximate
+adders	NNS	adder
+for	IN	for
+the	DT	the
+ease	NN	ease
+of	IN	of
+referencing	VBG	reference
+;	:	;
+some	DT	some
+of	IN	of
+the	DT	the
+legends	NNS	legend
+are	VBP	be
+defined	VBN	define
+by	IN	by
+the	DT	the
+authors	NNS	author
+in	IN	in
+their	PRP$	their
+respective	JJ	respective
+works	NNS	work
+while	IN	while
+the	DT	the
+remaining	NN	remaining
+are	VBP	be
+defined	VBN	define
+by	IN	by
+us	PRP	we
+in	IN	in
+this	DT	this
+work	NN	work
+for	IN	for
+referencing	NN	referencing
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+accurate	JJ	accurate
+adder	NN	adder
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="intj">
+a.	RB	a.
+</s>
+<s type="decl">
+The	DT	the
+approximate	JJ	approximate
+adder	NN	adder
+of	IN	of
+Reference	NNP	Reference
+,	,	,
+called	VBN	call
+the	DT	the
+lower-part	NN	lower-part
+OR	CC	OR
+adder	NN	adder
+(	-LRB-	(
+LOA	NNP	LOA
+)	-RRB-	)
+,	,	,
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+b.	NNP	bear
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+LOA	NNP	LOA
+,	,	,
+the	DT	the
+K	CD	K
+input	NN	input
+bit-pairs	NNS	bit-pair
+of	IN	of
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+are	VBP	be
+respectively	RB	respectively
+OR-ed	VBN	or-
+to	TO	to
+produce	VB	produce
+the	DT	the
+K	CD	K
+sum	NN	sum
+bits	NNS	bit
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+most	RBS	most
+significant	JJ	significant
+bit-pair	NN	bit-pair
+of	IN	of
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+viz.	NN	viz.
+AK	NNP	AK
+–	SYM	-
+1	CD	1
+and	CC	and
+BK	NNP	BK
+–	SYM	-
+1	CD	1
+is	VBZ	be
+alone	RB	alone
+AND-ed	VBN	and-
+and	CC	and
+given	VBN	give
+as	IN	as
+the	DT	the
+carry	NN	carry
+input	NN	input
+for	IN	for
+the	DT	the
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+approximate	JJ	approximate
+adder	NN	adder
+of	IN	of
+Reference	NN	reference
+shall	MD	shall
+be	VB	be
+referred	VBN	refer
+to	IN	to
+as	IN	as
+LOAWA	NNP	Loawa
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+LOA	NNP	LOA
+without	IN	without
+the	DT	the
+2-input	NN	2-input
+AND	CC	and
+function	NN	function
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+LOAWA	NNP	Loawa
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+c	NN	c
+,	,	,
+which	WDT	which
+is	VBZ	be
+nearly	RB	nearly
+identical	JJ	identical
+to	IN	to
+LOA	NNP	LOA
+of	IN	of
+Reference	NNP	Reference
+;	:	;
+the	DT	the
+only	JJ	only
+exception	NN	exception
+being	VBG	be
+that	IN	that
+the	DT	the
+carry	NN	carry
+input	NN	input
+of	IN	of
+the	DT	the
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+is	VBZ	be
+set	VBN	set
+to	IN	to
+a	DT	a
+constant	JJ	constant
+0	CD	0
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+approximate	JJ	approximate
+adder	NN	adder
+of	IN	of
+,	,	,
+which	WDT	which
+uses	VBZ	use
+the	DT	the
+type	NN	type
+5	CD	5
+approximate	JJ	approximate
+full	JJ	full
+adder	NN	adder
+for	IN	for
+realizing	VBG	realize
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+d.	FW	die
+This	DT	this
+approximate	JJ	approximate
+adder	NN	adder
+shall	MD	shall
+be	VB	be
+referred	VBN	refer
+to	IN	to
+as	IN	as
+APPROX5	NNP	APPROX5
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+sum	NN	sum
+bits	NNS	bit
+of	IN	of
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+are	VBP	be
+the	DT	the
+same	JJ	same
+as	IN	as
+one	CD	one
+set	NN	set
+of	IN	of
+the	DT	the
+corresponding	JJ	corresponding
+input	NN	input
+bits	NNS	bit
+,	,	,
+i.e.	FW	i.e.
+,	,	,
+SUM	NNP	SUM
+<hi rend="italic">
+i	PRP	I
+</hi>
+=	SYM	=
+B	NN	B
+<hi rend="italic">
+i	NN	i
+</hi>
+,	,	,
+where	WRB	where
+<hi rend="italic">
+i	NN	i
+</hi>
+denotes	VBZ	denote
+a	DT	a
+bit	NN	bit
+position	NN	position
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+carry	NN	carry
+input	NN	input
+for	IN	for
+the	DT	the
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+is	VBZ	be
+a	DT	a
+most	RBS	most
+significant	JJ	significant
+input	NN	input
+bit	NN	bit
+belonging	VBG	belong
+to	IN	to
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+viz.	NN	viz.
+AK	NNP	AK
+–	SYM	-
+1	CD	1
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+hardware-efficient	JJ	hardware-efficient
+approximate	JJ	approximate
+adder	NN	adder
+presented	VBN	present
+in	IN	in
+Reference	NN	reference
+shall	MD	shall
+be	VB	be
+called	VBN	call
+HEAA	NNP	HEAA
+,	,	,
+which	WDT	which
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+e.	NN	e.
+We	PRP	we
+observe	VBP	observe
+that	IN	that
+HEAA	NNP	HEAA
+consumes	VBZ	consume
+less	JJR	less
+FPGA	NNP	FPGA
+resources	NNS	resource
+compared	VBN	compare
+to	IN	to
+the	DT	the
+accurate	JJ	accurate
+FPGA	NNP	FPGA
+adder	NN	adder
+and	CC	and
+consumes	VBZ	consume
+either	CC	either
+the	DT	the
+same	JJ	same
+FPGA	NNP	FPGA
+resources	NNS	resource
+as	IN	as
+that	DT	that
+of	IN	of
+some	DT	some
+approximate	JJ	approximate
+adders	NNS	adder
+or	CC	or
+more	JJR	more
+FPGA	NNP	FPGA
+resources	NNS	resource
+in	IN	in
+comparison	NN	comparison
+with	IN	with
+other	JJ	other
+approximate	JJ	approximate
+adders	NNS	adder
+.	.	.
+</s>
+<s type="decl">
+HEAA	NNP	HEAA
+is	VBZ	be
+almost	RB	almost
+structurally	RB	structurally
+similar	JJ	similar
+to	IN	to
+LOA	NNP	LOA
+;	:	;
+however	RB	however
+,	,	,
+there	EX	there
+exists	VBZ	exist
+a	DT	a
+difference	NN	difference
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+2-to-1	JJ	2-to-1
+multiplexer	NN	multiplexer
+(	-LRB-	(
+MUX21	NN	MUX21
+)	-RRB-	)
+is	VBZ	be
+used	VBN	use
+in	IN	in
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+in	IN	in
+addition	NN	addition
+to	IN	to
+the	DT	the
+2-input	NN	2-input
+OR	CC	OR
+functions	NNS	function
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+OR-ed	NN	or-ed
+output	NN	output
+of	IN	of
+the	DT	the
+most	RBS	most
+significant	JJ	significant
+input	NN	input
+bit-pair	NN	bit-pair
+in	IN	in
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+is	VBZ	be
+given	VBN	give
+to	IN	to
+the	DT	the
+0-input	NN	0-input
+of	IN	of
+MUX21	NNP	MUX21
+,	,	,
+and	CC	and
+a	DT	a
+constant	JJ	constant
+0	CD	0
+is	VBZ	be
+given	VBN	give
+to	IN	to
+the	DT	the
+1-input	NN	1-input
+of	IN	of
+MUX21	NNP	MUX21
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+AND	NN	and
+of	IN	of
+the	DT	the
+most	JJS	most
+significant	JJ	significant
+input	NN	input
+bit-pair	NN	bit-pair
+corresponding	VBG	correspond
+to	IN	to
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+serves	VBZ	serve
+as	IN	as
+the	DT	the
+select	JJ	select
+input	NN	input
+of	IN	of
+MUX21	NN	MUX21
+,	,	,
+besides	IN	besides
+serving	VBG	serve
+as	IN	as
+the	DT	the
+carry	NN	carry
+input	NN	input
+for	IN	for
+the	DT	the
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+An	DT	a
+optimized	VBN	optimize
+version	NN	version
+of	IN	of
+LOA	NNP	LOA
+presented	VBN	present
+in	IN	in
+Reference	NNP	Reference
+,	,	,
+called	VBN	call
+OLOCA	NNP	OLOCA
+,	,	,
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+f.	NNP	F.
+OLOCA	NNP	OLOCA
+is	VBZ	be
+in	IN	in
+fact	NN	fact
+a	DT	a
+slight	JJ	slight
+modification	NN	modification
+of	IN	of
+LOA	NNP	LOA
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+accurate	JJ	accurate
+sub-adder	NN	sub-adder
+and	CC	and
+the	DT	the
+sum	NN	sum
+output	NN	output
+bits	NNS	bit
+corresponding	VBG	correspond
+to	IN	to
+the	DT	the
+two	CD	2
+most	JJS	most
+significant	JJ	significant
+bit	NN	bit
+positions	NNS	position
+in	IN	in
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+of	IN	of
+OLOCA	NNP	OLOCA
+are	VBP	be
+the	DT	the
+same	JJ	same
+as	IN	as
+that	DT	that
+of	IN	of
+LOA	NNP	LOA
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+the	DT	the
+remaining	JJ	remain
+(	-LRB-	(
+K	NNP	K
+–	SYM	-
+2	CD	2
+)	-RRB-	)
+less	RBR	less
+significant	JJ	significant
+sum	NN	sum
+output	NN	output
+bits	NNS	bit
+in	IN	in
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+of	IN	of
+OLOCA	NNP	OLOCA
+are	VBP	be
+tied	VBN	tie
+to	IN	to
+a	DT	a
+constant	JJ	constant
+1	CD	1
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+LOA	NNP	LOA
+,	,	,
+however	RB	however
+,	,	,
+all	PDT	all
+the	DT	the
+K	CD	K
+sum	NN	sum
+output	NN	output
+bits	NNS	bit
+are	VBP	be
+produced	VBN	produce
+by	IN	by
+OR-ing	VBG	or-
+the	DT	the
+respective	JJ	respective
+input	NN	input
+bit-pairs	NNS	bit-pair
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+constant	JJ	constant
+1	CD	1
+for	IN	for
+the	DT	the
+(	-LRB-	(
+K	CD	K
+–	SYM	-
+2	CD	2
+)	-RRB-	)
+sum	NN	sum
+bits	NNS	bit
+in	IN	in
+OLOCA	NNP	OLOCA
+implies	VBZ	imply
+the	DT	the
+elimination	NN	elimination
+of	IN	of
+look-up	NN	look-up
+tables	NNS	table
+(	-LRB-	(
+LUTs	NNS	LUT
+)	-RRB-	)
+and	CC	and
+flip-flops	NNS	flip-flop
+(	-LRB-	(
+FFs	NNP	FFs
+)	-RRB-	)
+for	IN	for
+realizing	VBG	realize
+those	DT	this
+bits	NNS	bit
+of	IN	of
+the	DT	the
+inaccurate	JJ	inaccurate
+sub-adder	NN	sub-adder
+for	IN	for
+a	DT	a
+FPGA-based	JJ	fpga-based
+implementation	NN	implementation
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+OLOCA	NNP	OLOCA
+is	VBZ	be
+likely	JJ	likely
+to	TO	to
+consume	VB	consume
+less	JJR	less
+FPGA	NNP	FPGA
+resources	NNS	resource
+compared	VBN	compare
+to	IN	to
+the	DT	the
+accurate	JJ	accurate
+FPGA	NNP	FPGA
+adder	NN	adder
+,	,	,
+LOA	NNP	LOA
+,	,	,
+LOAWA	NNP	Loawa
+,	,	,
+APPROX5	NNP	APPROX5
+,	,	,
+and	CC	and
+HEAA	NNP	HEAA
+,	,	,
+which	WDT	which
+is	VBZ	be
+substantiated	VBN	substantiate
+by	IN	by
+the	DT	the
+simulation	NN	simulation
+results	NNS	result
+given	VBN	give
+in	IN	in
+the	DT	the
+next	JJ	next
+section	NN	section
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,581 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Jones Phillips : Can you tell where you went to school at ?
+1-1	0-5	Jones	person[1]	new[1]	_	_
+1-2	6-14	Phillips	person[1]	new[1]	_	_
+1-3	15-16	:	_	_	_	_
+1-4	17-20	Can	_	_	_	_
+1-5	21-24	you	person	acc	ana	1-8
+1-6	25-29	tell	_	_	_	_
+1-7	30-35	where	_	_	_	_
+1-8	36-39	you	person	giv	ana	2-1
+1-9	40-44	went	_	_	_	_
+1-10	45-47	to	_	_	_	_
+1-11	48-54	school	organization	new	coref	2-6
+1-12	55-57	at	_	_	_	_
+1-13	58-59	?	_	_	_	_
+
+#Text=I went through the Carmel school system .
+2-1	60-61	I	person	giv	ana	3-2
+2-2	62-66	went	_	_	_	_
+2-3	67-74	through	_	_	_	_
+2-4	75-78	the	abstract[8]	new[8]	_	_
+2-5	79-85	Carmel	person|abstract[8]	new|new[8]	_	_
+2-6	86-92	school	organization|abstract[8]	giv|new[8]	coref	3-7[13_0]
+2-7	93-99	system	abstract[8]	new[8]	_	_
+2-8	100-101	.	_	_	_	_
+
+#Text=And I ’m a graduate of Carmel High School — in 1988 .
+3-1	102-105	And	_	_	_	_
+3-2	106-107	I	person	giv	coref	3-4[10_0]
+3-3	108-110	’m	_	_	_	_
+3-4	111-112	a	person[10]	giv[10]	ana	4-3[0_10]
+3-5	113-121	graduate	person[10]	giv[10]	_	_
+3-6	122-124	of	person[10]	giv[10]	_	_
+3-7	125-131	Carmel	person[10]|place|organization[13]	giv[10]|new|giv[13]	coref	11-9[50_13]
+3-8	132-136	High	person[10]|person|organization[13]	giv[10]|new|giv[13]	coref	15-15
+3-9	137-143	School	person[10]|organization[13]	giv[10]|giv[13]	_	_
+3-10	144-145	—	person[10]	giv[10]	_	_
+3-11	146-148	in	person[10]	giv[10]	_	_
+3-12	149-153	1988	person[10]|time	giv[10]|new	coref	22-2[98_0]
+3-13	154-155	.	_	_	_	_
+
+#Text=And then I went on to college at Indiana University .
+4-1	156-159	And	_	_	_	_
+4-2	160-164	then	_	_	_	_
+4-3	165-166	I	person	giv	ana	8-1
+4-4	167-171	went	_	_	_	_
+4-5	172-174	on	_	_	_	_
+4-6	175-177	to	_	_	_	_
+4-7	178-185	college	organization	new	_	_
+4-8	186-188	at	_	_	_	_
+4-9	189-196	Indiana	organization[17]	new[17]	coref	5-7[19_17]
+4-10	197-207	University	organization[17]	new[17]	_	_
+4-11	208-209	.	_	_	_	_
+
+#Text=And ultimately received four degrees from Indiana University .
+5-1	210-213	And	_	_	_	_
+5-2	214-224	ultimately	_	_	_	_
+5-3	225-233	received	_	_	_	_
+5-4	234-238	four	abstract[18]	new[18]	coref	7-2[21_18]
+5-5	239-246	degrees	abstract[18]	new[18]	_	_
+5-6	247-251	from	_	_	_	_
+5-7	252-259	Indiana	organization[19]	giv[19]	coref	11-10[49_19]
+5-8	260-270	University	organization[19]	giv[19]	_	_
+5-9	271-272	.	_	_	_	_
+
+#Text=Tew :
+6-1	273-276	Tew	person	new	_	_
+6-2	277-278	:	_	_	_	_
+
+#Text=And those degrees are in ... ?
+7-1	279-282	And	_	_	_	_
+7-2	283-288	those	abstract[21]	giv[21]	_	_
+7-3	289-296	degrees	abstract[21]	giv[21]	_	_
+7-4	297-300	are	_	_	_	_
+7-5	301-303	in	_	_	_	_
+7-6	304-307	...	_	_	_	_
+7-7	308-309	?	_	_	_	_
+
+#Text=I have a Bachelor of Arts degree in speech communications with minors in Spanish , biology , and an emphasis in chemistry .
+8-1	310-311	I	person	giv	ana	9-1
+8-2	312-316	have	_	_	_	_
+8-3	317-318	a	abstract[25]	new[25]	coref	11-5[48_25]
+8-4	319-327	Bachelor	abstract[23]|abstract[25]	new[23]|new[25]	_	_
+8-5	328-330	of	abstract[23]|abstract[25]	new[23]|new[25]	_	_
+8-6	331-335	Arts	abstract[23]|abstract|abstract[25]	new[23]|new|new[25]	_	_
+8-7	336-342	degree	abstract[25]	new[25]	_	_
+8-8	343-345	in	abstract[25]	new[25]	_	_
+8-9	346-352	speech	abstract[25]|abstract|abstract[27]	new[25]|new|new[27]	_	_
+8-10	353-367	communications	abstract[25]|abstract[27]	new[25]|new[27]	_	_
+8-11	368-372	with	abstract[25]	new[25]	_	_
+8-12	373-379	minors	abstract[25]|abstract[28]	new[25]|new[28]	_	_
+8-13	380-382	in	abstract[25]|abstract[28]	new[25]|new[28]	_	_
+8-14	383-390	Spanish	abstract[25]|abstract[28]|abstract	new[25]|new[28]|new	_	_
+8-15	391-392	,	abstract[25]|abstract[28]	new[25]|new[28]	_	_
+8-16	393-400	biology	abstract[25]|abstract[28]|abstract	new[25]|new[28]|new	_	_
+8-17	401-402	,	abstract[25]|abstract[28]	new[25]|new[28]	_	_
+8-18	403-406	and	abstract[25]|abstract[28]	new[25]|new[28]	_	_
+8-19	407-409	an	abstract[25]|abstract[28]|abstract[31]	new[25]|new[28]|new[31]	coref	9-9[36_31]
+8-20	410-418	emphasis	abstract[25]|abstract[28]|abstract[31]	new[25]|new[28]|new[31]	_	_
+8-21	419-421	in	abstract[25]|abstract[28]|abstract[31]	new[25]|new[28]|new[31]	_	_
+8-22	422-431	chemistry	abstract[25]|abstract[28]|abstract[31]|abstract	new[25]|new[28]|new[31]|new	_	_
+8-23	432-433	.	_	_	_	_
+
+#Text=I have a Masters in Public Affairs with an emphasis in international relations — or comparative international relations — and public finance .
+9-1	434-435	I	person	giv	ana	10-1
+9-2	436-440	have	_	_	_	_
+9-3	441-442	a	abstract[34]	new[34]	coref	10-3[41_34]
+9-4	443-450	Masters	abstract[34]	new[34]	_	_
+9-5	451-453	in	abstract[34]	new[34]	_	_
+9-6	454-460	Public	abstract[34]|abstract[35]	new[34]|new[35]	coref	19-13[88_35]
+9-7	461-468	Affairs	abstract[34]|abstract[35]	new[34]|new[35]	_	_
+9-8	469-473	with	abstract[34]	new[34]	_	_
+9-9	474-476	an	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-10	477-485	emphasis	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-11	486-488	in	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-12	489-502	international	abstract[34]|abstract[36]|abstract[37]	new[34]|giv[36]|new[37]	_	_
+9-13	503-512	relations	abstract[34]|abstract[36]|abstract[37]	new[34]|giv[36]|new[37]	_	_
+9-14	513-514	—	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-15	515-517	or	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-16	518-529	comparative	abstract[34]|abstract[36]|abstract[38]	new[34]|giv[36]|new[38]	coref	25-9[127_38]
+9-17	530-543	international	abstract[34]|abstract[36]|abstract[38]	new[34]|giv[36]|new[38]	_	_
+9-18	544-553	relations	abstract[34]|abstract[36]|abstract[38]	new[34]|giv[36]|new[38]	_	_
+9-19	554-555	—	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-20	556-559	and	abstract[34]|abstract[36]	new[34]|giv[36]	_	_
+9-21	560-566	public	abstract[34]|abstract[36]|abstract[39]	new[34]|giv[36]|new[39]	_	_
+9-22	567-574	finance	abstract[34]|abstract[36]|abstract[39]	new[34]|giv[36]|new[39]	_	_
+9-23	575-576	.	_	_	_	_
+
+#Text=I have a Masters of Science in Environmental Science , focused on applied ecology .
+10-1	577-578	I	person	giv	ana	11-3
+10-2	579-583	have	_	_	_	_
+10-3	584-585	a	abstract[41]	giv[41]	_	_
+10-4	586-593	Masters	abstract[41]	giv[41]	_	_
+10-5	594-596	of	abstract[41]	giv[41]	_	_
+10-6	597-604	Science	abstract[41]|organization[42]	giv[41]|new[42]	coref	10-8[43_42]
+10-7	605-607	in	abstract[41]|organization[42]	giv[41]|new[42]	_	_
+10-8	608-621	Environmental	abstract[41]|organization[42]|organization[43]	giv[41]|new[42]|giv[43]	_	_
+10-9	622-629	Science	abstract[41]|organization[42]|organization[43]	giv[41]|new[42]|giv[43]	_	_
+10-10	630-631	,	_	_	_	_
+10-11	632-639	focused	_	_	_	_
+10-12	640-642	on	_	_	_	_
+10-13	643-650	applied	abstract[44]	new[44]	_	_
+10-14	651-658	ecology	abstract[44]	new[44]	_	_
+10-15	659-660	.	_	_	_	_
+
+#Text=And then I have my law degree at the Indiana University School of Law at Indianapolis .
+11-1	661-664	And	_	_	_	_
+11-2	665-669	then	_	_	_	_
+11-3	670-671	I	person	giv	ana	11-5
+11-4	672-676	have	_	_	_	_
+11-5	677-679	my	person|abstract[48]	giv|giv[48]	ana	12-3
+11-6	680-683	law	abstract|abstract[48]	new|giv[48]	_	_
+11-7	684-690	degree	abstract[48]	giv[48]	_	_
+11-8	691-693	at	_	_	_	_
+11-9	694-697	the	organization[50]	giv[50]	coref	15-8[66_50]
+11-10	698-705	Indiana	organization[49]|organization[50]	giv[49]|giv[50]	coref	18-20[82_49]
+11-11	706-716	University	organization[49]|organization[50]	giv[49]|giv[50]	_	_
+11-12	717-723	School	organization[50]	giv[50]	_	_
+11-13	724-726	of	organization[50]	giv[50]	_	_
+11-14	727-730	Law	organization[50]|person	giv[50]|new	_	_
+11-15	731-733	at	organization[50]	giv[50]	_	_
+11-16	734-746	Indianapolis	organization[50]|place	giv[50]|new	_	_
+11-17	747-748	.	_	_	_	_
+
+#Text=And lastly I want to know , how did you become interested in politics ?
+12-1	749-752	And	_	_	_	_
+12-2	753-759	lastly	_	_	_	_
+12-3	760-761	I	person	giv	ana	12-10
+12-4	762-766	want	_	_	_	_
+12-5	767-769	to	_	_	_	_
+12-6	770-774	know	_	_	_	_
+12-7	775-776	,	_	_	_	_
+12-8	777-780	how	_	_	_	_
+12-9	781-784	did	_	_	_	_
+12-10	785-788	you	person	giv	ana	13-1
+12-11	789-795	become	_	_	_	_
+12-12	796-806	interested	_	_	_	_
+12-13	807-809	in	_	_	_	_
+12-14	810-818	politics	abstract	new	coref	13-8
+12-15	819-820	?	_	_	_	_
+
+#Text=I kind of backed my way into politics .
+13-1	821-822	I	person	giv	ana	13-5
+13-2	823-827	kind	_	_	_	_
+13-3	828-830	of	_	_	_	_
+13-4	831-837	backed	_	_	_	_
+13-5	838-840	my	person|abstract[58]	giv|new[58]	ana	14-1
+13-6	841-844	way	abstract[58]	new[58]	_	_
+13-7	845-849	into	_	_	_	_
+13-8	850-858	politics	abstract	giv	coref	17-9
+13-9	859-860	.	_	_	_	_
+
+#Text=I had served as a page for Indiana State Senator Dan Burton .
+14-1	861-862	I	person	giv	ana	15-2
+14-2	863-866	had	_	_	_	_
+14-3	867-873	served	_	_	_	_
+14-4	874-876	as	_	_	_	_
+14-5	877-878	a	person[61]	new[61]	_	_
+14-6	879-883	page	person[61]	new[61]	_	_
+14-7	884-887	for	person[61]	new[61]	_	_
+14-8	888-895	Indiana	person[61]|person[62]	new[61]|new[62]	coref	26-2[131_62]
+14-9	896-901	State	person[61]|person[62]	new[61]|new[62]	_	_
+14-10	902-909	Senator	person[61]|person[62]	new[61]|new[62]	_	_
+14-11	910-913	Dan	person[61]|person[62]	new[61]|new[62]	_	_
+14-12	914-920	Burton	person[61]|person[62]	new[61]|new[62]	_	_
+14-13	921-922	.	_	_	_	_
+
+#Text=And my mom and dad went to high school with Congressman Burton at Shortridge High School .
+15-1	923-926	And	_	_	_	_
+15-2	927-929	my	person|person[64]	giv|new[64]	ana	17-2
+15-3	930-933	mom	person[64]	new[64]	_	_
+15-4	934-937	and	_	_	_	_
+15-5	938-941	dad	person	new	_	_
+15-6	942-946	went	_	_	_	_
+15-7	947-949	to	_	_	_	_
+15-8	950-954	high	organization[66]	giv[66]	coref	15-14[70_66]
+15-9	955-961	school	organization[66]	giv[66]	_	_
+15-10	962-966	with	_	_	_	_
+15-11	967-978	Congressman	person[67]	new[67]	coref	22-10[100_67]
+15-12	979-985	Burton	person[67]	new[67]	_	_
+15-13	986-988	at	_	_	_	_
+15-14	989-999	Shortridge	person|organization[70]	new|giv[70]	_	_
+15-15	1000-1004	High	person|organization[70]	giv|giv[70]	coref	30-10
+15-16	1005-1011	School	organization[70]	giv[70]	_	_
+15-17	1012-1013	.	_	_	_	_
+
+#Text=We had a family friendly connection there .
+16-1	1014-1016	We	person	acc	ana	23-2
+16-2	1017-1020	had	_	_	_	_
+16-3	1021-1022	a	abstract[73]	new[73]	_	_
+16-4	1023-1029	family	person|abstract[73]	new|new[73]	coref	27-7[136_0]
+16-5	1030-1038	friendly	abstract[73]	new[73]	_	_
+16-6	1039-1049	connection	abstract[73]	new[73]	_	_
+16-7	1050-1055	there	_	_	_	_
+16-8	1056-1057	.	_	_	_	_
+
+#Text=But I really did n't grow up in politics .
+17-1	1058-1061	But	_	_	_	_
+17-2	1062-1063	I	person	giv	ana	18-1
+17-3	1064-1070	really	_	_	_	_
+17-4	1071-1074	did	_	_	_	_
+17-5	1075-1078	n't	_	_	_	_
+17-6	1079-1083	grow	_	_	_	_
+17-7	1084-1086	up	_	_	_	_
+17-8	1087-1089	in	_	_	_	_
+17-9	1090-1098	politics	abstract	giv	coref	20-8
+17-10	1099-1100	.	_	_	_	_
+
+#Text=I did n't serve in student government — except one little stint when I was a graduate student at Indiana University .
+18-1	1101-1102	I	person	giv	ana	18-14
+18-2	1103-1106	did	_	_	_	_
+18-3	1107-1110	n't	_	_	_	_
+18-4	1111-1116	serve	_	_	_	_
+18-5	1117-1119	in	_	_	_	_
+18-6	1120-1127	student	person|organization[78]	new|new[78]	coref|coref	18-14[81_0]|24-19[0_78]
+18-7	1128-1138	government	organization[78]	new[78]	_	_
+18-8	1139-1140	—	_	_	_	_
+18-9	1141-1147	except	_	_	_	_
+18-10	1148-1151	one	event[79]	new[79]	coref	19-3[85_79]
+18-11	1152-1158	little	event[79]	new[79]	_	_
+18-12	1159-1164	stint	event[79]	new[79]	_	_
+18-13	1165-1169	when	event[79]	new[79]	_	_
+18-14	1170-1171	I	event[79]|person|person[81]	new[79]|giv|giv[81]	ana	19-1
+18-15	1172-1175	was	event[79]|person[81]	new[79]|giv[81]	_	_
+18-16	1176-1177	a	event[79]|person[81]	new[79]|giv[81]	_	_
+18-17	1178-1186	graduate	event[79]|person[81]	new[79]|giv[81]	_	_
+18-18	1187-1194	student	event[79]|person[81]	new[79]|giv[81]	_	_
+18-19	1195-1197	at	event[79]|person[81]	new[79]|giv[81]	_	_
+18-20	1198-1205	Indiana	event[79]|person[81]|organization[82]	new[79]|giv[81]|giv[82]	_	_
+18-21	1206-1216	University	event[79]|person[81]|organization[82]	new[79]|giv[81]|giv[82]	_	_
+18-22	1217-1218	.	_	_	_	_
+
+#Text=I served one summer stint as a representative from the School of Public and Environmental Affairs .
+19-1	1219-1220	I	person	giv	ana	20-2
+19-2	1221-1227	served	_	_	_	_
+19-3	1228-1231	one	event[85]	giv[85]	_	_
+19-4	1232-1238	summer	time|event[85]	new|giv[85]	_	_
+19-5	1239-1244	stint	event[85]	giv[85]	_	_
+19-6	1245-1247	as	_	_	_	_
+19-7	1248-1249	a	person[86]	new[86]	_	_
+19-8	1250-1264	representative	person[86]	new[86]	_	_
+19-9	1265-1269	from	person[86]	new[86]	_	_
+19-10	1270-1273	the	person[86]|organization[87]	new[86]|new[87]	coref	21-9[92_87]
+19-11	1274-1280	School	person[86]|organization[87]	new[86]|new[87]	_	_
+19-12	1281-1283	of	person[86]|organization[87]	new[86]|new[87]	_	_
+19-13	1284-1290	Public	person[86]|organization[87]|abstract[88]	new[86]|new[87]|giv[88]	_	_
+19-14	1291-1294	and	person[86]|organization[87]|abstract[88]	new[86]|new[87]|giv[88]	_	_
+19-15	1295-1308	Environmental	person[86]|organization[87]|abstract[88]	new[86]|new[87]|giv[88]	_	_
+19-16	1309-1316	Affairs	person[86]|organization[87]|abstract[88]	new[86]|new[87]|giv[88]	_	_
+19-17	1317-1318	.	_	_	_	_
+
+#Text=But I really was n't involved in politics .
+20-1	1319-1322	But	_	_	_	_
+20-2	1323-1324	I	person	giv	ana	21-2
+20-3	1325-1331	really	_	_	_	_
+20-4	1332-1335	was	_	_	_	_
+20-5	1336-1339	n't	_	_	_	_
+20-6	1340-1348	involved	_	_	_	_
+20-7	1349-1351	in	_	_	_	_
+20-8	1352-1360	politics	abstract	giv	_	_
+20-9	1361-1362	.	_	_	_	_
+
+#Text=After I was getting ready to graduate from graduate school , I had planned to go to work for State Farm Insurance as a bond analyst .
+21-1	1363-1368	After	_	_	_	_
+21-2	1369-1370	I	person	giv	ana	21-12
+21-3	1371-1374	was	_	_	_	_
+21-4	1375-1382	getting	_	_	_	_
+21-5	1383-1388	ready	_	_	_	_
+21-6	1389-1391	to	_	_	_	_
+21-7	1392-1400	graduate	_	_	_	_
+21-8	1401-1405	from	_	_	_	_
+21-9	1406-1414	graduate	organization[92]	giv[92]	coref	30-9[152_92]
+21-10	1415-1421	school	organization[92]	giv[92]	_	_
+21-11	1422-1423	,	_	_	_	_
+21-12	1424-1425	I	person	giv	ana	22-5
+21-13	1426-1429	had	_	_	_	_
+21-14	1430-1437	planned	_	_	_	_
+21-15	1438-1440	to	_	_	_	_
+21-16	1441-1443	go	_	_	_	_
+21-17	1444-1446	to	_	_	_	_
+21-18	1447-1451	work	_	_	_	_
+21-19	1452-1455	for	_	_	_	_
+21-20	1456-1461	State	organization[94]|organization[95]	new[94]|new[95]	_	_
+21-21	1462-1466	Farm	organization[94]|organization[95]	new[94]|new[95]	_	_
+21-22	1467-1476	Insurance	organization[95]	new[95]	_	_
+21-23	1477-1479	as	_	_	_	_
+21-24	1480-1481	a	person[97]	new[97]	_	_
+21-25	1482-1486	bond	abstract|person[97]	new|new[97]	_	_
+21-26	1487-1494	analyst	person[97]	new[97]	_	_
+21-27	1495-1496	.	_	_	_	_
+
+#Text=About that time , I had made contact with Congressman Burton , who was going to become the first Republican chairman , to chair a Congressional committee in over 60[ ? ] years from Indiana .
+22-1	1497-1502	About	_	_	_	_
+22-2	1503-1507	that	time[98]	giv[98]	_	_
+22-3	1508-1512	time	time[98]	giv[98]	_	_
+22-4	1513-1514	,	_	_	_	_
+22-5	1515-1516	I	person	giv	ana	23-15
+22-6	1517-1520	had	_	_	_	_
+22-7	1521-1525	made	_	_	_	_
+22-8	1526-1533	contact	_	_	_	_
+22-9	1534-1538	with	_	_	_	_
+22-10	1539-1550	Congressman	person[100]	giv[100]	ana	23-20[0_100]
+22-11	1551-1557	Burton	person[100]	giv[100]	_	_
+22-12	1558-1559	,	person[100]	giv[100]	_	_
+22-13	1560-1563	who	person[100]	giv[100]	_	_
+22-14	1564-1567	was	person[100]	giv[100]	_	_
+22-15	1568-1573	going	person[100]	giv[100]	_	_
+22-16	1574-1576	to	person[100]	giv[100]	_	_
+22-17	1577-1583	become	person[100]	giv[100]	_	_
+22-18	1584-1587	the	person[100]	giv[100]	_	_
+22-19	1588-1593	first	person[100]	giv[100]	_	_
+22-20	1594-1604	Republican	person[100]	giv[100]	_	_
+22-21	1605-1613	chairman	person[100]	giv[100]	_	_
+22-22	1614-1615	,	person[100]	giv[100]	_	_
+22-23	1616-1618	to	person[100]	giv[100]	_	_
+22-24	1619-1624	chair	person[100]	giv[100]	_	_
+22-25	1625-1626	a	person[100]|organization[101]	giv[100]|new[101]	coref	24-15[118_101]
+22-26	1627-1640	Congressional	person[100]|organization[101]	giv[100]|new[101]	_	_
+22-27	1641-1650	committee	person[100]|organization[101]	giv[100]|new[101]	_	_
+22-28	1651-1653	in	_	_	_	_
+22-29	1654-1658	over	time[102]	new[102]	_	_
+22-30	1659-1662	60[	time[102]	new[102]	_	_
+22-31	1663-1664	?	time[102]	new[102]	_	_
+22-32	1665-1666	]	time[102]	new[102]	_	_
+22-33	1667-1672	years	time[102]	new[102]	_	_
+22-34	1673-1677	from	time[102]	new[102]	_	_
+22-35	1678-1685	Indiana	time[102]|place	new[102]|new	ana	23-8
+22-36	1686-1687	.	_	_	_	_
+
+#Text=And we got to talking and eventually that led to a job offer for me to come and join him on his personal and professional staff out in Washington D.C. working on Capitol Hill .
+23-1	1688-1691	And	_	_	_	_
+23-2	1692-1694	we	person	giv	ana	27-1
+23-3	1695-1698	got	_	_	_	_
+23-4	1699-1701	to	_	_	_	_
+23-5	1702-1709	talking	_	_	_	_
+23-6	1710-1713	and	_	_	_	_
+23-7	1714-1724	eventually	_	_	_	_
+23-8	1725-1729	that	place	giv	coref	27-15
+23-9	1730-1733	led	_	_	_	_
+23-10	1734-1736	to	_	_	_	_
+23-11	1737-1738	a	event[107]	new[107]	_	_
+23-12	1739-1742	job	abstract|event[107]	new|new[107]	_	_
+23-13	1743-1748	offer	event[107]	new[107]	_	_
+23-14	1749-1752	for	event[107]	new[107]	_	_
+23-15	1753-1755	me	event[107]|person	new[107]|giv	ana	24-2
+23-16	1756-1758	to	event[107]	new[107]	_	_
+23-17	1759-1763	come	event[107]	new[107]	_	_
+23-18	1764-1767	and	event[107]	new[107]	_	_
+23-19	1768-1772	join	event[107]	new[107]	_	_
+23-20	1773-1776	him	event[107]|person	new[107]|giv	ana	23-22
+23-21	1777-1779	on	_	_	_	_
+23-22	1780-1783	his	person|person[111]	giv|new[111]	coref|coref	24-11[116_111]|25-20[129_0]
+23-23	1784-1792	personal	person[111]	new[111]	_	_
+23-24	1793-1796	and	person[111]	new[111]	_	_
+23-25	1797-1809	professional	person[111]	new[111]	_	_
+23-26	1810-1815	staff	person[111]	new[111]	_	_
+23-27	1816-1819	out	person[111]	new[111]	_	_
+23-28	1820-1822	in	person[111]	new[111]	_	_
+23-29	1823-1833	Washington	person[111]|place[112]	new[111]|new[112]	_	_
+23-30	1834-1838	D.C.	person[111]|place[112]	new[111]|new[112]	_	_
+23-31	1839-1846	working	person[111]|place[112]	new[111]|new[112]	_	_
+23-32	1847-1849	on	person[111]|place[112]	new[111]|new[112]	_	_
+23-33	1850-1857	Capitol	person[111]|place[112]|organization[113]	new[111]|new[112]|new[113]	_	_
+23-34	1858-1862	Hill	person[111]|place[112]|organization[113]	new[111]|new[112]|new[113]	_	_
+23-35	1863-1864	.	_	_	_	_
+
+#Text=So I worked out of the personal office and then the professional staff of the House Committee on Government Reform , primarily focusing on Drug War policy .
+24-1	1865-1867	So	_	_	_	_
+24-2	1868-1869	I	person	giv	ana	25-1
+24-3	1870-1876	worked	_	_	_	_
+24-4	1877-1880	out	_	_	_	_
+24-5	1881-1883	of	_	_	_	_
+24-6	1884-1887	the	place[115]	new[115]	_	_
+24-7	1888-1896	personal	place[115]	new[115]	_	_
+24-8	1897-1903	office	place[115]	new[115]	_	_
+24-9	1904-1907	and	_	_	_	_
+24-10	1908-1912	then	_	_	_	_
+24-11	1913-1916	the	person[116]	giv[116]	_	_
+24-12	1917-1929	professional	person[116]	giv[116]	_	_
+24-13	1930-1935	staff	person[116]	giv[116]	_	_
+24-14	1936-1938	of	person[116]	giv[116]	_	_
+24-15	1939-1942	the	person[116]|organization[118]	giv[116]|giv[118]	coref	25-7[128_118]
+24-16	1943-1948	House	person[116]|organization|organization[118]	giv[116]|new|giv[118]	coref	25-8
+24-17	1949-1958	Committee	person[116]|organization[118]	giv[116]|giv[118]	_	_
+24-18	1959-1961	on	person[116]|organization[118]	giv[116]|giv[118]	_	_
+24-19	1962-1972	Government	person[116]|organization[118]|organization|abstract[120]	giv[116]|giv[118]|giv|new[120]	_	_
+24-20	1973-1979	Reform	person[116]|organization[118]|abstract[120]	giv[116]|giv[118]|new[120]	_	_
+24-21	1980-1981	,	_	_	_	_
+24-22	1982-1991	primarily	_	_	_	_
+24-23	1992-2000	focusing	_	_	_	_
+24-24	2001-2003	on	_	_	_	_
+24-25	2004-2008	Drug	substance|event[122]|abstract[123]	new|new[122]|new[123]	_	_
+24-26	2009-2012	War	event[122]|abstract[123]	new[122]|new[123]	_	_
+24-27	2013-2019	policy	abstract[123]	new[123]	_	_
+24-28	2020-2021	.	_	_	_	_
+
+#Text=I also did some work with the House International Relations Committee , which at the time was chaired by Congressman Ben Gillman from New York .
+25-1	2022-2023	I	person	giv	ana	26-5
+25-2	2024-2028	also	_	_	_	_
+25-3	2029-2032	did	_	_	_	_
+25-4	2033-2037	some	abstract[125]	new[125]	coref	27-10[138_125]
+25-5	2038-2042	work	abstract[125]	new[125]	_	_
+25-6	2043-2047	with	_	_	_	_
+25-7	2048-2051	the	organization[128]	giv[128]	_	_
+25-8	2052-2057	House	organization|organization[128]	giv|giv[128]	_	_
+25-9	2058-2071	International	abstract[127]|organization[128]	giv[127]|giv[128]	_	_
+25-10	2072-2081	Relations	abstract[127]|organization[128]	giv[127]|giv[128]	_	_
+25-11	2082-2091	Committee	organization[128]	giv[128]	_	_
+25-12	2092-2093	,	organization[128]	giv[128]	_	_
+25-13	2094-2099	which	organization[128]	giv[128]	_	_
+25-14	2100-2102	at	organization[128]	giv[128]	_	_
+25-15	2103-2106	the	organization[128]	giv[128]	_	_
+25-16	2107-2111	time	organization[128]	giv[128]	_	_
+25-17	2112-2115	was	organization[128]	giv[128]	_	_
+25-18	2116-2123	chaired	organization[128]	giv[128]	_	_
+25-19	2124-2126	by	organization[128]	giv[128]	_	_
+25-20	2127-2138	Congressman	organization[128]|person[129]	giv[128]|giv[129]	_	_
+25-21	2139-2142	Ben	organization[128]|person[129]	giv[128]|giv[129]	_	_
+25-22	2143-2150	Gillman	organization[128]|person[129]	giv[128]|giv[129]	_	_
+25-23	2151-2155	from	organization[128]|person[129]	giv[128]|giv[129]	_	_
+25-24	2156-2159	New	organization[128]|person[129]|place[130]	giv[128]|giv[129]|new[130]	_	_
+25-25	2160-2164	York	organization[128]|person[129]|place[130]	giv[128]|giv[129]|new[130]	_	_
+25-26	2165-2166	.	_	_	_	_
+
+#Text=Hello Senator Delph , I ’m Sara Behnke .
+26-1	2167-2172	Hello	_	_	_	_
+26-2	2173-2180	Senator	person[131]	giv[131]	_	_
+26-3	2181-2186	Delph	person[131]	giv[131]	_	_
+26-4	2187-2188	,	_	_	_	_
+26-5	2189-2190	I	person	giv	coref	26-7[133_0]
+26-6	2191-2193	’m	_	_	_	_
+26-7	2194-2198	Sara	person[133]	giv[133]	ana	27-7[0_133]
+26-8	2199-2205	Behnke	person[133]	giv[133]	_	_
+26-9	2206-2207	.	_	_	_	_
+
+#Text=We were wanting to know about your family and your work outside of the Indiana Senate .
+27-1	2208-2210	We	person	giv	_	_
+27-2	2211-2215	were	_	_	_	_
+27-3	2216-2223	wanting	_	_	_	_
+27-4	2224-2226	to	_	_	_	_
+27-5	2227-2231	know	_	_	_	_
+27-6	2232-2237	about	_	_	_	_
+27-7	2238-2242	your	person|person[136]	giv|giv[136]	ana|coref	27-10|28-1[142_136]
+27-8	2243-2249	family	person[136]	giv[136]	_	_
+27-9	2250-2253	and	_	_	_	_
+27-10	2254-2258	your	person|abstract[138]	giv|giv[138]	ana	28-1
+27-11	2259-2263	work	abstract[138]	giv[138]	_	_
+27-12	2264-2271	outside	abstract[138]	giv[138]	_	_
+27-13	2272-2274	of	abstract[138]	giv[138]	_	_
+27-14	2275-2278	the	abstract[138]|organization[140]	giv[138]|new[140]	_	_
+27-15	2279-2286	Indiana	abstract[138]|place|organization[140]	giv[138]|giv|new[140]	_	_
+27-16	2287-2293	Senate	abstract[138]|organization[140]	giv[138]|new[140]	_	_
+27-17	2294-2295	.	_	_	_	_
+
+#Text=My family is : My wife is Beth .
+28-1	2296-2298	My	person|person[142]	giv|giv[142]	ana	28-5
+28-2	2299-2305	family	person[142]	giv[142]	_	_
+28-3	2306-2308	is	_	_	_	_
+28-4	2309-2310	:	_	_	_	_
+28-5	2311-2313	My	person|person[144]	giv|new[144]	coref|ana	28-8[0_144]|32-1
+28-6	2314-2318	wife	person[144]	new[144]	_	_
+28-7	2319-2321	is	_	_	_	_
+28-8	2322-2326	Beth	person	giv	ana	29-1
+28-9	2327-2328	.	_	_	_	_
+
+#Text=She is from Zionsville .
+29-1	2329-2332	She	person	giv	ana	30-1
+29-2	2333-2335	is	_	_	_	_
+29-3	2336-2340	from	_	_	_	_
+29-4	2341-2351	Zionsville	place	new	coref	30-5
+29-5	2352-2353	.	_	_	_	_
+
+#Text=She grew up in Zionsville and graduated from Zionsville High School .
+30-1	2354-2357	She	person	giv	ana	31-1
+30-2	2358-2362	grew	_	_	_	_
+30-3	2363-2365	up	_	_	_	_
+30-4	2366-2368	in	_	_	_	_
+30-5	2369-2379	Zionsville	place	giv	coref	30-9
+30-6	2380-2383	and	_	_	_	_
+30-7	2384-2393	graduated	_	_	_	_
+30-8	2394-2398	from	_	_	_	_
+30-9	2399-2409	Zionsville	place|organization[152]	giv|giv[152]	_	_
+30-10	2410-2414	High	person|organization[152]	giv|giv[152]	_	_
+30-11	2415-2421	School	organization[152]	giv[152]	_	_
+30-12	2422-2423	.	_	_	_	_
+
+#Text=She is the daughter of Russ and Nancy Frankel and has one brother , who is younger , named Matthew .
+31-1	2424-2427	She	person	giv	coref	31-3[154_0]
+31-2	2428-2430	is	_	_	_	_
+31-3	2431-2434	the	person[154]	giv[154]	_	_
+31-4	2435-2443	daughter	person[154]	giv[154]	_	_
+31-5	2444-2446	of	person[154]	giv[154]	_	_
+31-6	2447-2451	Russ	person[154]|person	giv[154]|new	_	_
+31-7	2452-2455	and	person[154]	giv[154]	_	_
+31-8	2456-2461	Nancy	person[154]|person	giv[154]|new	_	_
+31-9	2462-2469	Frankel	person[154]	giv[154]	_	_
+31-10	2470-2473	and	_	_	_	_
+31-11	2474-2477	has	_	_	_	_
+31-12	2478-2481	one	person[157]	new[157]	_	_
+31-13	2482-2489	brother	person[157]	new[157]	_	_
+31-14	2490-2491	,	person[157]	new[157]	_	_
+31-15	2492-2495	who	person[157]	new[157]	_	_
+31-16	2496-2498	is	person[157]	new[157]	_	_
+31-17	2499-2506	younger	person[157]	new[157]	_	_
+31-18	2507-2508	,	person[157]	new[157]	_	_
+31-19	2509-2514	named	person[157]	new[157]	_	_
+31-20	2515-2522	Matthew	person[157]|person	new[157]|new	_	_
+31-21	2523-2524	.	_	_	_	_
+
+#Text=My in-laws are now constituents of mine , which is nice because my mother-in-law could put my yard sign in her yard without confusing her neighbors .
+32-1	2525-2527	My	person|person[160]	giv|new[160]	coref|ana	32-4[161_160]|32-7
+32-2	2528-2535	in-laws	person[160]	new[160]	_	_
+32-3	2536-2539	are	_	_	_	_
+32-4	2540-2543	now	person[161]	giv[161]	_	_
+32-5	2544-2556	constituents	person[161]	giv[161]	_	_
+32-6	2557-2559	of	person[161]	giv[161]	_	_
+32-7	2560-2564	mine	person[161]|person	giv[161]|giv	ana	32-13
+32-8	2565-2566	,	person[161]	giv[161]	_	_
+32-9	2567-2572	which	person[161]	giv[161]	_	_
+32-10	2573-2575	is	person[161]	giv[161]	_	_
+32-11	2576-2580	nice	person[161]	giv[161]	_	_
+32-12	2581-2588	because	_	_	_	_
+32-13	2589-2591	my	person|person[164]	giv|new[164]	ana|ana	32-17|32-21[0_164]
+32-14	2592-2605	mother-in-law	person[164]	new[164]	_	_
+32-15	2606-2611	could	_	_	_	_
+32-16	2612-2615	put	_	_	_	_
+32-17	2616-2618	my	person|object[167]	giv|new[167]	_	_
+32-18	2619-2623	yard	place|object[167]	new|new[167]	coref	32-21[169_0]
+32-19	2624-2628	sign	object[167]	new[167]	_	_
+32-20	2629-2631	in	_	_	_	_
+32-21	2632-2635	her	person|place[169]	giv|giv[169]	ana	32-25
+32-22	2636-2640	yard	place[169]	giv[169]	_	_
+32-23	2641-2648	without	_	_	_	_
+32-24	2649-2658	confusing	_	_	_	_
+32-25	2659-2662	her	person|person[171]	giv|new[171]	_	_
+32-26	2663-2672	neighbors	person[171]	new[171]	_	_
+32-27	2673-2674	.	_	_	_	_

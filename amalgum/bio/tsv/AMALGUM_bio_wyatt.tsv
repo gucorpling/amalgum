@@ -1,0 +1,912 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Philip J. Wyatt
+1-1	0-6	Philip	person[1]	new[1]	coref	2-1[2_1]
+1-2	7-9	J.	person[1]	new[1]	_	_
+1-3	10-15	Wyatt	person[1]	new[1]	_	_
+
+#Text=Philip J. Wyatt is the founder and CEO of Wyatt Technology , located in Santa Barbara , California .
+2-1	16-22	Philip	person[2]	giv[2]	coref	2-5[3_2]
+2-2	23-25	J.	person[2]	giv[2]	_	_
+2-3	26-31	Wyatt	person[2]	giv[2]	_	_
+2-4	32-34	is	_	_	_	_
+2-5	35-38	the	person[3]|person[4]	giv[3]|giv[4]	coref|coref	2-5[4_3]|2-10[0_4]
+2-6	39-46	founder	person[3]|person[4]	giv[3]|giv[4]	_	_
+2-7	47-50	and	person[4]	giv[4]	_	_
+2-8	51-54	CEO	person[4]|person[5]	giv[4]|new[5]	_	_
+2-9	55-57	of	person[4]|person[5]	giv[4]|new[5]	_	_
+2-10	58-63	Wyatt	person[4]|person[5]|person|organization[7]	giv[4]|new[5]|giv|new[7]	coref|coref	5-1|17-4[126_7]
+2-11	64-74	Technology	person[4]|person[5]|organization[7]	giv[4]|new[5]|new[7]	_	_
+2-12	75-76	,	person[4]|person[5]|organization[7]	giv[4]|new[5]|new[7]	_	_
+2-13	77-84	located	person[4]|person[5]|organization[7]	giv[4]|new[5]|new[7]	_	_
+2-14	85-87	in	person[4]|person[5]|organization[7]	giv[4]|new[5]|new[7]	_	_
+2-15	88-93	Santa	person[4]|person[5]|organization[7]|person[8]	giv[4]|new[5]|new[7]|new[8]	ana	3-1[0_8]
+2-16	94-101	Barbara	person[4]|person[5]|organization[7]|person[8]	giv[4]|new[5]|new[7]|new[8]	_	_
+2-17	102-103	,	person[4]|person[5]|organization[7]|person[8]	giv[4]|new[5]|new[7]|new[8]	_	_
+2-18	104-114	California	person[4]|person[5]|organization[7]|person[8]|place	giv[4]|new[5]|new[7]|new[8]|new	coref	11-23
+2-19	115-116	.	_	_	_	_
+
+#Text=He is known for contributions to laser light scattering , more specifically the physics of the inverse scattering problem and for commercializing analytical methods and instruments involving laser light scattering , which are widely used in academia , industry , and government .
+3-1	117-119	He	person	giv	coref	11-20[85_0]
+3-2	120-122	is	_	_	_	_
+3-3	123-128	known	_	_	_	_
+3-4	129-132	for	_	_	_	_
+3-5	133-146	contributions	abstract[11]	new[11]	appos	3-11[15_11]
+3-6	147-149	to	abstract[11]	new[11]	_	_
+3-7	150-155	laser	abstract[11]|person|abstract[14]	new[11]|new|new[14]	coref|coref	3-17[16_14]|3-28
+3-8	156-161	light	abstract[11]|object|abstract[14]	new[11]|new|new[14]	coref	3-28[22_0]
+3-9	162-172	scattering	abstract[11]|abstract[14]	new[11]|new[14]	_	_
+3-10	173-174	,	_	_	_	_
+3-11	175-179	more	abstract[15]	giv[15]	_	_
+3-12	180-192	specifically	abstract[15]	giv[15]	_	_
+3-13	193-196	the	abstract[15]	giv[15]	_	_
+3-14	197-204	physics	abstract[15]	giv[15]	_	_
+3-15	205-207	of	abstract[15]	giv[15]	_	_
+3-16	208-211	the	abstract[15]|abstract[17]	giv[15]|new[17]	coref	6-30[53_17]
+3-17	212-219	inverse	abstract[15]|abstract[16]|abstract[17]	giv[15]|giv[16]|new[17]	coref	3-28[23_16]
+3-18	220-230	scattering	abstract[15]|abstract[16]|abstract[17]	giv[15]|giv[16]|new[17]	_	_
+3-19	231-238	problem	abstract[15]|abstract[17]	giv[15]|new[17]	_	_
+3-20	239-242	and	_	_	_	_
+3-21	243-246	for	_	_	_	_
+3-22	247-262	commercializing	_	_	_	_
+3-23	263-273	analytical	abstract[18]|abstract[19]	new[18]|new[19]	coref	36-40[263_19]
+3-24	274-281	methods	abstract[18]|abstract[19]	new[18]|new[19]	_	_
+3-25	282-285	and	abstract[19]	new[19]	_	_
+3-26	286-297	instruments	abstract[19]|abstract[20]	new[19]|new[20]	coref	13-4[98_20]
+3-27	298-307	involving	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-28	308-313	laser	abstract[19]|abstract[20]|person|object[22]|abstract[23]	new[19]|new[20]|giv|giv[22]|giv[23]	coref|coref|coref	6-32[0_23]|16-17[0_22]|20-1
+3-29	314-319	light	abstract[19]|abstract[20]|object[22]|abstract[23]	new[19]|new[20]|giv[22]|giv[23]	_	_
+3-30	320-330	scattering	abstract[19]|abstract[20]|abstract[23]	new[19]|new[20]|giv[23]	_	_
+3-31	331-332	,	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-32	333-338	which	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-33	339-342	are	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-34	343-349	widely	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-35	350-354	used	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-36	355-357	in	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-37	358-366	academia	abstract[19]|abstract[20]|abstract	new[19]|new[20]|new	_	_
+3-38	367-368	,	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-39	369-377	industry	abstract[19]|abstract[20]|organization	new[19]|new[20]|new	coref	18-12[140_0]
+3-40	378-379	,	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-41	380-383	and	abstract[19]|abstract[20]	new[19]|new[20]	_	_
+3-42	384-394	government	abstract[19]|abstract[20]|organization	new[19]|new[20]|new	coref	21-1[156_0]
+3-43	395-396	.	_	_	_	_
+
+#Text=Early life and education
+4-1	397-402	Early	abstract[27]	new[27]	_	_
+4-2	403-407	life	abstract[27]	new[27]	_	_
+4-3	408-411	and	_	_	_	_
+4-4	412-421	education	abstract	new	_	_
+
+#Text=Wyatt did undergraduate work at the University of Chicago , ( B.A. , 1952 ; B. Sc . , 1954 ) , and Christ 's College , Cambridge .
+5-1	422-427	Wyatt	person	giv	ana	6-1
+5-2	428-431	did	_	_	_	_
+5-3	432-445	undergraduate	abstract[30]	new[30]	coref	7-1[56_30]
+5-4	446-450	work	abstract[30]	new[30]	_	_
+5-5	451-453	at	_	_	_	_
+5-6	454-457	the	organization[31]	new[31]	_	_
+5-7	458-468	University	organization[31]	new[31]	_	_
+5-8	469-471	of	organization[31]	new[31]	_	_
+5-9	472-479	Chicago	organization[31]	new[31]	_	_
+5-10	480-481	,	_	_	_	_
+5-11	482-483	(	_	_	_	_
+5-12	484-488	B.A.	_	_	_	_
+5-13	489-490	,	_	_	_	_
+5-14	491-495	1952	time	new	_	_
+5-15	496-497	;	_	_	_	_
+5-16	498-500	B.	person	new	_	_
+5-17	501-503	Sc	_	_	_	_
+5-18	504-505	.	_	_	_	_
+5-19	506-507	,	_	_	_	_
+5-20	508-512	1954	time	new	_	_
+5-21	513-514	)	_	_	_	_
+5-22	515-516	,	_	_	_	_
+5-23	517-520	and	_	_	_	_
+5-24	521-527	Christ	person[35]|organization[36]	new[35]|new[36]	coref	34-10[243_36]
+5-25	528-530	's	person[35]|organization[36]	new[35]|new[36]	_	_
+5-26	531-538	College	organization[36]	new[36]	_	_
+5-27	539-540	,	organization[36]	new[36]	_	_
+5-28	541-550	Cambridge	organization[36]|place	new[36]|new	_	_
+5-29	551-552	.	_	_	_	_
+
+#Text=He received his M.S. from the University of Illinois in 1956 [ 1 ] and his Ph.D. from Florida State University in 1959 , where he first worked on the inverse scattering problem .
+6-1	553-555	He	person	giv	ana	6-3
+6-2	556-564	received	_	_	_	_
+6-3	565-568	his	person|person[40]	giv|new[40]	ana	6-16
+6-4	569-573	M.S.	person[40]	new[40]	_	_
+6-5	574-578	from	_	_	_	_
+6-6	579-582	the	organization[41]	new[41]	_	_
+6-7	583-593	University	organization[41]	new[41]	_	_
+6-8	594-596	of	organization[41]	new[41]	_	_
+6-9	597-605	Illinois	organization[41]|place	new[41]|new	_	_
+6-10	606-608	in	_	_	_	_
+6-11	609-613	1956	time	new	_	_
+6-12	614-615	[	_	_	_	_
+6-13	616-617	1	abstract	new	coref	7-21
+6-14	618-619	]	_	_	_	_
+6-15	620-623	and	_	_	_	_
+6-16	624-627	his	person|abstract[46]	giv|new[46]	ana|coref	6-26|7-2[0_46]
+6-17	628-633	Ph.D.	abstract[46]	new[46]	_	_
+6-18	634-638	from	abstract[46]	new[46]	_	_
+6-19	639-646	Florida	abstract[46]|place|organization[49]	new[46]|new|new[49]	coref|coref	37-15|37-15[275_49]
+6-20	647-652	State	abstract[46]|place|organization[49]	new[46]|new|new[49]	coref	37-16
+6-21	653-663	University	abstract[46]|organization[49]	new[46]|new[49]	_	_
+6-22	664-666	in	abstract[46]	new[46]	_	_
+6-23	667-671	1959	abstract[46]|time	new[46]|new	_	_
+6-24	672-673	,	abstract[46]	new[46]	_	_
+6-25	674-679	where	abstract[46]	new[46]	_	_
+6-26	680-682	he	abstract[46]|person	new[46]|giv	ana	7-1
+6-27	683-688	first	abstract[46]	new[46]	_	_
+6-28	689-695	worked	abstract[46]	new[46]	_	_
+6-29	696-698	on	abstract[46]	new[46]	_	_
+6-30	699-702	the	abstract[46]|abstract[53]	new[46]|giv[53]	coref	13-12[100_53]
+6-31	703-710	inverse	abstract[46]|abstract[53]	new[46]|giv[53]	_	_
+6-32	711-721	scattering	abstract[46]|abstract|abstract[53]	new[46]|giv|giv[53]	coref	7-13[59_0]
+6-33	722-729	problem	abstract[46]|abstract[53]	new[46]|giv[53]	_	_
+6-34	730-731	.	_	_	_	_
+
+#Text=His Ph.D. work involved the development of a non‑local nuclear model of the scattering of neutrons by nuclei . [ 1 ]
+7-1	732-735	His	person|abstract[56]	giv|giv[56]	ana|coref	8-1|21-6[157_56]
+7-2	736-741	Ph.D.	abstract|abstract[56]	giv|giv[56]	_	_
+7-3	742-746	work	abstract[56]	giv[56]	_	_
+7-4	747-755	involved	_	_	_	_
+7-5	756-759	the	event[57]	new[57]	_	_
+7-6	760-771	development	event[57]	new[57]	_	_
+7-7	772-774	of	event[57]	new[57]	_	_
+7-8	775-776	a	event[57]|abstract[58]	new[57]|new[58]	_	_
+7-9	777-786	non‑local	event[57]|abstract[58]	new[57]|new[58]	_	_
+7-10	787-794	nuclear	event[57]|abstract[58]	new[57]|new[58]	_	_
+7-11	795-800	model	event[57]|abstract[58]	new[57]|new[58]	_	_
+7-12	801-803	of	event[57]|abstract[58]	new[57]|new[58]	_	_
+7-13	804-807	the	event[57]|abstract[58]|abstract[59]	new[57]|new[58]|giv[59]	coref	13-14[0_59]
+7-14	808-818	scattering	event[57]|abstract[58]|abstract[59]	new[57]|new[58]|giv[59]	_	_
+7-15	819-821	of	event[57]|abstract[58]|abstract[59]	new[57]|new[58]|giv[59]	_	_
+7-16	822-830	neutrons	event[57]|abstract[58]|abstract[59]|substance	new[57]|new[58]|giv[59]|new	_	_
+7-17	831-833	by	event[57]|abstract[58]|abstract[59]	new[57]|new[58]|giv[59]	_	_
+7-18	834-840	nuclei	event[57]|abstract[58]|abstract[59]|object	new[57]|new[58]|giv[59]|new	_	_
+7-19	841-842	.	_	_	_	_
+7-20	843-844	[	_	_	_	_
+7-21	845-846	1	abstract	giv	coref	18-20
+7-22	847-848	]	_	_	_	_
+
+#Text=He was nominated by the National Academy of Sciences in 1965 as one of sixteen possible candidates for the first Scientist-Astronaut Selection Program in the United States . [ 2 ] [ 3 ]
+8-1	849-851	He	person	giv	coref	10-6
+8-2	852-855	was	_	_	_	_
+8-3	856-865	nominated	_	_	_	_
+8-4	866-868	by	_	_	_	_
+8-5	869-872	the	organization[64]	new[64]	_	_
+8-6	873-881	National	organization[64]	new[64]	_	_
+8-7	882-889	Academy	organization[64]	new[64]	_	_
+8-8	890-892	of	organization[64]	new[64]	_	_
+8-9	893-901	Sciences	organization[64]	new[64]	_	_
+8-10	902-904	in	_	_	_	_
+8-11	905-909	1965	time	new	_	_
+8-12	910-912	as	_	_	_	_
+8-13	913-916	one	person[66]	new[66]	_	_
+8-14	917-919	of	person[66]	new[66]	_	_
+8-15	920-927	sixteen	person[66]|person[67]	new[66]|new[67]	ana	14-1[0_67]
+8-16	928-936	possible	person[66]|person[67]	new[66]|new[67]	_	_
+8-17	937-947	candidates	person[66]|person[67]	new[66]|new[67]	_	_
+8-18	948-951	for	person[66]|person[67]	new[66]|new[67]	_	_
+8-19	952-955	the	person[66]|person[67]|abstract[70]	new[66]|new[67]|new[70]	_	_
+8-20	956-961	first	person[66]|person[67]|abstract[70]	new[66]|new[67]|new[70]	_	_
+8-21	962-981	Scientist-Astronaut	person[66]|person[67]|object|abstract[69]|abstract[70]	new[66]|new[67]|new|new[69]|new[70]	_	_
+8-22	982-991	Selection	person[66]|person[67]|abstract[69]|abstract[70]	new[66]|new[67]|new[69]|new[70]	_	_
+8-23	992-999	Program	person[66]|person[67]|abstract[70]	new[66]|new[67]|new[70]	_	_
+8-24	1000-1002	in	person[66]|person[67]|abstract[70]	new[66]|new[67]|new[70]	_	_
+8-25	1003-1006	the	person[66]|person[67]|abstract[70]|place[71]	new[66]|new[67]|new[70]|new[71]	_	_
+8-26	1007-1013	United	person[66]|person[67]|abstract[70]|place[71]	new[66]|new[67]|new[70]|new[71]	_	_
+8-27	1014-1020	States	person[66]|person[67]|abstract[70]|place[71]	new[66]|new[67]|new[70]|new[71]	_	_
+8-28	1021-1022	.	_	_	_	_
+8-29	1023-1024	[	_	_	_	_
+8-30	1025-1026	2	abstract	new	coref	11-32
+8-31	1027-1028	]	_	_	_	_
+8-32	1029-1030	[	_	_	_	_
+8-33	1031-1032	3	abstract	new	coref	34-17
+8-34	1033-1034	]	_	_	_	_
+
+#Text=Career
+9-1	1035-1041	Career	abstract	new	_	_
+
+#Text=As a graduate student , Wyatt worked at Los Alamos National Laboratory .
+10-1	1042-1044	As	_	_	_	_
+10-2	1045-1046	a	person[75]	new[75]	_	_
+10-3	1047-1055	graduate	person[75]	new[75]	_	_
+10-4	1056-1063	student	person[75]	new[75]	_	_
+10-5	1064-1065	,	_	_	_	_
+10-6	1066-1071	Wyatt	person	giv	ana	11-5
+10-7	1072-1078	worked	_	_	_	_
+10-8	1079-1081	at	_	_	_	_
+10-9	1082-1085	Los	organization[77]	new[77]	_	_
+10-10	1086-1092	Alamos	organization[77]	new[77]	_	_
+10-11	1093-1101	National	organization[77]	new[77]	_	_
+10-12	1102-1112	Laboratory	organization[77]	new[77]	_	_
+10-13	1113-1114	.	_	_	_	_
+
+#Text=During the 1960s , he worked for the Aeronutronic division of Ford Motor Company , General Research Corporation in Santa Barbara , California , and the defense contractor EG&G . [ 2 ]
+11-1	1115-1121	During	_	_	_	_
+11-2	1122-1125	the	time[78]	new[78]	_	_
+11-3	1126-1131	1960s	time[78]	new[78]	_	_
+11-4	1132-1133	,	_	_	_	_
+11-5	1134-1136	he	person	giv	coref	12-1
+11-6	1137-1143	worked	_	_	_	_
+11-7	1144-1147	for	_	_	_	_
+11-8	1148-1151	the	organization[81]	new[81]	_	_
+11-9	1152-1164	Aeronutronic	abstract|organization[81]	new|new[81]	_	_
+11-10	1165-1173	division	organization[81]	new[81]	_	_
+11-11	1174-1176	of	organization[81]	new[81]	_	_
+11-12	1177-1181	Ford	organization[81]|organization[82]	new[81]|new[82]	coref	12-3[93_82]
+11-13	1182-1187	Motor	organization[81]|organization[82]	new[81]|new[82]	_	_
+11-14	1188-1195	Company	organization[81]|organization[82]	new[81]|new[82]	_	_
+11-15	1196-1197	,	_	_	_	_
+11-16	1198-1205	General	organization[84]	new[84]	coref	17-4[127_84]
+11-17	1206-1214	Research	organization|organization[84]	new|new[84]	_	_
+11-18	1215-1226	Corporation	organization[84]	new[84]	_	_
+11-19	1227-1229	in	organization[84]	new[84]	_	_
+11-20	1230-1235	Santa	organization[84]|person[85]	new[84]|giv[85]	_	_
+11-21	1236-1243	Barbara	organization[84]|person[85]	new[84]|giv[85]	_	_
+11-22	1244-1245	,	organization[84]|person[85]	new[84]|giv[85]	_	_
+11-23	1246-1256	California	organization[84]|person[85]|place	new[84]|giv[85]|giv	_	_
+11-24	1257-1258	,	_	_	_	_
+11-25	1259-1262	and	_	_	_	_
+11-26	1263-1266	the	organization[88]|organization[89]	new[88]|new[89]	_	_
+11-27	1267-1274	defense	abstract|organization[88]|organization[89]	new|new[88]|new[89]	_	_
+11-28	1275-1285	contractor	organization[88]|organization[89]	new[88]|new[89]	_	_
+11-29	1286-1290	EG&G	organization[89]	new[89]	_	_
+11-30	1291-1292	.	_	_	_	_
+11-31	1293-1294	[	_	_	_	_
+11-32	1295-1296	2	abstract	giv	coref	37-20
+11-33	1297-1298	]	_	_	_	_
+
+#Text=Wyatt founded his first company , Science Spectrum , Inc. , in 1968 .
+12-1	1299-1304	Wyatt	person	giv	ana	12-3
+12-2	1305-1312	founded	_	_	_	_
+12-3	1313-1316	his	person|organization[93]	giv|giv[93]	appos|coref	12-7[95_93]|16-11
+12-4	1317-1322	first	organization[93]	giv[93]	_	_
+12-5	1323-1330	company	organization[93]	giv[93]	_	_
+12-6	1331-1332	,	_	_	_	_
+12-7	1333-1340	Science	organization|organization[95]	new|giv[95]	coref|coref	13-1[97_95]|33-15[233_0]
+12-8	1341-1349	Spectrum	organization[95]	giv[95]	_	_
+12-9	1350-1351	,	organization[95]	giv[95]	_	_
+12-10	1352-1356	Inc.	organization[95]	giv[95]	_	_
+12-11	1357-1358	,	_	_	_	_
+12-12	1359-1361	in	_	_	_	_
+12-13	1362-1366	1968	time	new	_	_
+12-14	1367-1368	.	_	_	_	_
+
+#Text=The company developed several instruments that could be used to study the inverse scattering problem .
+13-1	1369-1372	The	organization[97]	giv[97]	coref	16-6[112_97]
+13-2	1373-1380	company	organization[97]	giv[97]	_	_
+13-3	1381-1390	developed	_	_	_	_
+13-4	1391-1398	several	abstract[98]	giv[98]	coref	15-1[108_98]
+13-5	1399-1410	instruments	abstract[98]	giv[98]	_	_
+13-6	1411-1415	that	abstract[98]	giv[98]	_	_
+13-7	1416-1421	could	abstract[98]	giv[98]	_	_
+13-8	1422-1424	be	abstract[98]	giv[98]	_	_
+13-9	1425-1429	used	abstract[98]	giv[98]	_	_
+13-10	1430-1432	to	abstract[98]	giv[98]	_	_
+13-11	1433-1438	study	abstract[98]	giv[98]	_	_
+13-12	1439-1442	the	abstract[98]|abstract[100]	giv[98]|giv[100]	_	_
+13-13	1443-1450	inverse	abstract[98]|abstract[100]	giv[98]|giv[100]	_	_
+13-14	1451-1461	scattering	abstract[98]|abstract|abstract[100]	giv[98]|giv|giv[100]	coref	16-16[117_0]
+13-15	1462-1469	problem	abstract[98]|abstract[100]	giv[98]|giv[100]	_	_
+13-16	1470-1471	.	_	_	_	_
+
+#Text=They applied light-scattering techniques to the detection of biological weapons and the monitoring of food quality .
+14-1	1472-1476	They	person	giv	_	_
+14-2	1477-1484	applied	_	_	_	_
+14-3	1485-1501	light-scattering	abstract[102]	new[102]	_	_
+14-4	1502-1512	techniques	abstract[102]	new[102]	_	_
+14-5	1513-1515	to	_	_	_	_
+14-6	1516-1519	the	abstract[103]	new[103]	_	_
+14-7	1520-1529	detection	abstract[103]	new[103]	_	_
+14-8	1530-1532	of	abstract[103]	new[103]	_	_
+14-9	1533-1543	biological	abstract[103]|object[104]	new[103]|new[104]	_	_
+14-10	1544-1551	weapons	abstract[103]|object[104]	new[103]|new[104]	_	_
+14-11	1552-1555	and	abstract[103]	new[103]	_	_
+14-12	1556-1559	the	abstract[103]|event[105]	new[103]|new[105]	_	_
+14-13	1560-1570	monitoring	abstract[103]|event[105]	new[103]|new[105]	_	_
+14-14	1571-1573	of	abstract[103]|event[105]	new[103]|new[105]	_	_
+14-15	1574-1578	food	abstract[103]|event[105]|substance|abstract[107]	new[103]|new[105]|new|new[107]	_	_
+14-16	1579-1586	quality	abstract[103]|event[105]|abstract[107]	new[103]|new[105]|new[107]	_	_
+14-17	1587-1588	.	_	_	_	_
+
+#Text=These early instruments used a traditional single detector to scan a range of scattering angles .
+15-1	1589-1594	These	abstract[108]	giv[108]	coref	17-11[128_108]
+15-2	1595-1600	early	abstract[108]	giv[108]	_	_
+15-3	1601-1612	instruments	abstract[108]	giv[108]	_	_
+15-4	1613-1617	used	_	_	_	_
+15-5	1618-1619	a	object[109]	new[109]	_	_
+15-6	1620-1631	traditional	object[109]	new[109]	_	_
+15-7	1632-1638	single	object[109]	new[109]	_	_
+15-8	1639-1647	detector	object[109]	new[109]	_	_
+15-9	1648-1650	to	_	_	_	_
+15-10	1651-1655	scan	_	_	_	_
+15-11	1656-1657	a	_	_	_	_
+15-12	1658-1663	range	_	_	_	_
+15-13	1664-1666	of	_	_	_	_
+15-14	1667-1677	scattering	abstract[110]	new[110]	_	_
+15-15	1678-1684	angles	abstract[110]	new[110]	_	_
+15-16	1685-1686	.	_	_	_	_
+
+#Text=Shortly before the closure of the company in 1982 , Wyatt developed an instrument for multi-angle light scattering ( MALS ) in which a glass capillary containing a sample was surrounded by an array of detectors . [ 4 ]
+16-1	1687-1694	Shortly	event[111]	new[111]	_	_
+16-2	1695-1701	before	event[111]	new[111]	_	_
+16-3	1702-1705	the	event[111]	new[111]	_	_
+16-4	1706-1713	closure	event[111]	new[111]	_	_
+16-5	1714-1716	of	event[111]	new[111]	_	_
+16-6	1717-1720	the	event[111]|organization[112]	new[111]|giv[112]	coref	27-7[200_112]
+16-7	1721-1728	company	event[111]|organization[112]	new[111]|giv[112]	_	_
+16-8	1729-1731	in	event[111]	new[111]	_	_
+16-9	1732-1736	1982	event[111]|time	new[111]|new	_	_
+16-10	1737-1738	,	_	_	_	_
+16-11	1739-1744	Wyatt	person	giv	coref	17-1
+16-12	1745-1754	developed	_	_	_	_
+16-13	1755-1757	an	object[115]	new[115]	_	_
+16-14	1758-1768	instrument	object[115]	new[115]	_	_
+16-15	1769-1772	for	object[115]	new[115]	_	_
+16-16	1773-1784	multi-angle	object[115]|abstract[117]	new[115]|giv[117]	appos	16-20[0_117]
+16-17	1785-1790	light	object[115]|object|abstract[117]	new[115]|giv|giv[117]	coref	17-15
+16-18	1791-1801	scattering	object[115]|abstract[117]	new[115]|giv[117]	_	_
+16-19	1802-1803	(	object[115]	new[115]	_	_
+16-20	1804-1808	MALS	object[115]|abstract	new[115]|giv	coref	17-15[130_0]
+16-21	1809-1810	)	object[115]	new[115]	_	_
+16-22	1811-1813	in	object[115]	new[115]	_	_
+16-23	1814-1819	which	object[115]	new[115]	_	_
+16-24	1820-1821	a	object[115]|object[120]	new[115]|new[120]	_	_
+16-25	1822-1827	glass	object[115]|object|object[120]	new[115]|new|new[120]	_	_
+16-26	1828-1837	capillary	object[115]|object[120]	new[115]|new[120]	_	_
+16-27	1838-1848	containing	object[115]|object[120]	new[115]|new[120]	_	_
+16-28	1849-1850	a	object[115]|object[120]|object[121]	new[115]|new[120]|new[121]	_	_
+16-29	1851-1857	sample	object[115]|object[120]|object[121]	new[115]|new[120]|new[121]	_	_
+16-30	1858-1861	was	object[115]	new[115]	_	_
+16-31	1862-1872	surrounded	object[115]	new[115]	_	_
+16-32	1873-1875	by	object[115]	new[115]	_	_
+16-33	1876-1878	an	object[115]	new[115]	_	_
+16-34	1879-1884	array	object[115]	new[115]	_	_
+16-35	1885-1887	of	object[115]	new[115]	_	_
+16-36	1888-1897	detectors	object[115]|object	new[115]|new	_	_
+16-37	1898-1899	.	_	_	_	_
+16-38	1900-1901	[	_	_	_	_
+16-39	1902-1903	4	abstract	new	coref	20-15
+16-40	1904-1905	]	_	_	_	_
+
+#Text=Wyatt then founded Wyatt Technology Corporation to develop and sell laser‑based scientific instruments for light scattering and particle size measurement .
+17-1	1906-1911	Wyatt	person	giv	coref	17-4
+17-2	1912-1916	then	_	_	_	_
+17-3	1917-1924	founded	_	_	_	_
+17-4	1925-1930	Wyatt	person|organization[126]|organization[127]	giv|giv[126]|giv[127]	ana	18-1
+17-5	1931-1941	Technology	organization[126]|organization[127]	giv[126]|giv[127]	_	_
+17-6	1942-1953	Corporation	organization[127]	giv[127]	_	_
+17-7	1954-1956	to	_	_	_	_
+17-8	1957-1964	develop	_	_	_	_
+17-9	1965-1968	and	_	_	_	_
+17-10	1969-1973	sell	_	_	_	_
+17-11	1974-1985	laser‑based	abstract[128]	giv[128]	coref	18-1[136_128]
+17-12	1986-1996	scientific	abstract[128]	giv[128]	_	_
+17-13	1997-2008	instruments	abstract[128]	giv[128]	_	_
+17-14	2009-2012	for	abstract[128]	giv[128]	_	_
+17-15	2013-2018	light	abstract[128]|object|abstract[130]|abstract[131]	giv[128]|giv|giv[130]|new[131]	coref|coref|coref	31-13|31-12[215_130]|31-12[216_131]
+17-16	2019-2029	scattering	abstract[128]|abstract[130]|abstract[131]	giv[128]|giv[130]|new[131]	_	_
+17-17	2030-2033	and	abstract[128]|abstract[131]	giv[128]|new[131]	_	_
+17-18	2034-2042	particle	abstract[128]|abstract[131]|abstract|abstract[133]|abstract[134]	giv[128]|new[131]|new|new[133]|new[134]	coref	20-2
+17-19	2043-2047	size	abstract[128]|abstract[131]|abstract[133]|abstract[134]	giv[128]|new[131]|new[133]|new[134]	_	_
+17-20	2048-2059	measurement	abstract[128]|abstract[131]|abstract[134]	giv[128]|new[131]|new[134]	_	_
+17-21	2060-2061	.	_	_	_	_
+
+#Text=His instruments are used worldwide by universities , government agencies , the biotech industry and pharmaceutical companies . [ 1 ] [ 5 ]
+18-1	2062-2065	His	person|abstract[136]	giv|giv[136]	coref|coref	19-1[144_0]|19-1[145_136]
+18-2	2066-2077	instruments	abstract[136]	giv[136]	_	_
+18-3	2078-2081	are	_	_	_	_
+18-4	2082-2086	used	_	_	_	_
+18-5	2087-2096	worldwide	_	_	_	_
+18-6	2097-2099	by	_	_	_	_
+18-7	2100-2112	universities	organization	new	_	_
+18-8	2113-2114	,	_	_	_	_
+18-9	2115-2125	government	organization[138]	new[138]	_	_
+18-10	2126-2134	agencies	organization[138]	new[138]	_	_
+18-11	2135-2136	,	_	_	_	_
+18-12	2137-2140	the	organization[140]	giv[140]	_	_
+18-13	2141-2148	biotech	abstract|organization[140]	new|giv[140]	_	_
+18-14	2149-2157	industry	organization[140]	giv[140]	_	_
+18-15	2158-2161	and	_	_	_	_
+18-16	2162-2176	pharmaceutical	organization[141]	new[141]	coref	22-10[171_141]
+18-17	2177-2186	companies	organization[141]	new[141]	_	_
+18-18	2187-2188	.	_	_	_	_
+18-19	2189-2190	[	_	_	_	_
+18-20	2191-2192	1	abstract	giv	coref	21-18
+18-21	2193-2194	]	_	_	_	_
+18-22	2195-2196	[	_	_	_	_
+18-23	2197-2198	5	abstract	new	coref	20-18
+18-24	2199-2200	]	_	_	_	_
+
+#Text=Wyatt 's instruments are used in a wide variety of fields .
+19-1	2201-2206	Wyatt	person[144]|abstract[145]	giv[144]|giv[145]	coref|coref	22-1[167_144]|22-1[168_145]
+19-2	2207-2209	's	person[144]|abstract[145]	giv[144]|giv[145]	_	_
+19-3	2210-2221	instruments	abstract[145]	giv[145]	_	_
+19-4	2222-2225	are	_	_	_	_
+19-5	2226-2230	used	_	_	_	_
+19-6	2231-2233	in	_	_	_	_
+19-7	2234-2235	a	abstract[146]	new[146]	_	_
+19-8	2236-2240	wide	abstract[146]	new[146]	_	_
+19-9	2241-2248	variety	abstract[146]	new[146]	_	_
+19-10	2249-2251	of	abstract[146]	new[146]	_	_
+19-11	2252-2258	fields	abstract[146]|abstract	new[146]|new	_	_
+19-12	2259-2260	.	_	_	_	_
+
+#Text=Laser particle analysis has been applied to wine and to cleaning products . [ 4 ] [ 5 ]
+20-1	2261-2266	Laser	person|abstract[150]	giv|new[150]	coref|coref	22-7[170_150]|31-12
+20-2	2267-2275	particle	abstract|abstract[150]	giv|new[150]	_	_
+20-3	2276-2284	analysis	abstract[150]	new[150]	_	_
+20-4	2285-2288	has	_	_	_	_
+20-5	2289-2293	been	_	_	_	_
+20-6	2294-2301	applied	_	_	_	_
+20-7	2302-2304	to	_	_	_	_
+20-8	2305-2309	wine	substance	new	_	_
+20-9	2310-2313	and	_	_	_	_
+20-10	2314-2316	to	_	_	_	_
+20-11	2317-2325	cleaning	abstract|abstract[153]	new|new[153]	_	_
+20-12	2326-2334	products	abstract[153]	new[153]	_	_
+20-13	2335-2336	.	_	_	_	_
+20-14	2337-2338	[	_	_	_	_
+20-15	2339-2340	4	abstract	giv	coref	21-30
+20-16	2341-2342	]	_	_	_	_
+20-17	2343-2344	[	_	_	_	_
+20-18	2345-2346	5	abstract	giv	coref	22-17
+20-19	2347-2348	]	_	_	_	_
+
+#Text=The U.S. Government has supported work on the identification of bioterrorism threats such as airborne bacteria [ 1 ] and metabolic poisons or carcinogens in drinking water . [ 4 ]
+21-1	2349-2352	The	organization[156]	giv[156]	_	_
+21-2	2353-2357	U.S.	organization[156]	giv[156]	_	_
+21-3	2358-2368	Government	organization[156]	giv[156]	_	_
+21-4	2369-2372	has	_	_	_	_
+21-5	2373-2382	supported	_	_	_	_
+21-6	2383-2387	work	abstract[157]	giv[157]	_	_
+21-7	2388-2390	on	abstract[157]	giv[157]	_	_
+21-8	2391-2394	the	abstract[157]|abstract[158]	giv[157]|new[158]	_	_
+21-9	2395-2409	identification	abstract[157]|abstract[158]	giv[157]|new[158]	_	_
+21-10	2410-2412	of	abstract[157]|abstract[158]	giv[157]|new[158]	_	_
+21-11	2413-2425	bioterrorism	abstract[157]|abstract[158]|abstract|abstract[160]	giv[157]|new[158]|new|new[160]	_	_
+21-12	2426-2433	threats	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-13	2434-2438	such	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-14	2439-2441	as	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-15	2442-2450	airborne	abstract[157]|abstract[158]|abstract[160]|animal[161]	giv[157]|new[158]|new[160]|new[161]	_	_
+21-16	2451-2459	bacteria	abstract[157]|abstract[158]|abstract[160]|animal[161]	giv[157]|new[158]|new[160]|new[161]	_	_
+21-17	2460-2461	[	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-18	2462-2463	1	abstract[157]|abstract[158]|abstract[160]|abstract	giv[157]|new[158]|new[160]|giv	coref	23-28
+21-19	2464-2465	]	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-20	2466-2469	and	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-21	2470-2479	metabolic	abstract[157]|abstract[158]|abstract[160]|substance[163]	giv[157]|new[158]|new[160]|new[163]	_	_
+21-22	2480-2487	poisons	abstract[157]|abstract[158]|abstract[160]|substance[163]	giv[157]|new[158]|new[160]|new[163]	_	_
+21-23	2488-2490	or	abstract[157]|abstract[158]|abstract[160]	giv[157]|new[158]|new[160]	_	_
+21-24	2491-2502	carcinogens	abstract[157]|abstract[158]|abstract[160]|substance[164]	giv[157]|new[158]|new[160]|new[164]	_	_
+21-25	2503-2505	in	abstract[157]|abstract[158]|abstract[160]|substance[164]	giv[157]|new[158]|new[160]|new[164]	_	_
+21-26	2506-2514	drinking	abstract[157]|abstract[158]|abstract[160]|substance[164]|substance[165]	giv[157]|new[158]|new[160]|new[164]|new[165]	_	_
+21-27	2515-2520	water	abstract[157]|abstract[158]|abstract[160]|substance[164]|substance[165]	giv[157]|new[158]|new[160]|new[164]|new[165]	_	_
+21-28	2521-2522	.	_	_	_	_
+21-29	2523-2524	[	_	_	_	_
+21-30	2525-2526	4	abstract	giv	_	_
+21-31	2527-2528	]	_	_	_	_
+
+#Text=Wyatt 's instruments are used for protein analysis by biopharmaceutical companies such as Amgen . [ 5 ]
+22-1	2529-2534	Wyatt	person[167]|abstract[168]	giv[167]|giv[168]	coref	29-1[206_167]
+22-2	2535-2537	's	person[167]|abstract[168]	giv[167]|giv[168]	_	_
+22-3	2538-2549	instruments	abstract[168]	giv[168]	_	_
+22-4	2550-2553	are	_	_	_	_
+22-5	2554-2558	used	_	_	_	_
+22-6	2559-2562	for	_	_	_	_
+22-7	2563-2570	protein	substance|abstract[170]	new|giv[170]	_	_
+22-8	2571-2579	analysis	abstract[170]	giv[170]	_	_
+22-9	2580-2582	by	_	_	_	_
+22-10	2583-2600	biopharmaceutical	organization[171]	giv[171]	ana	23-1[0_171]
+22-11	2601-2610	companies	organization[171]	giv[171]	_	_
+22-12	2611-2615	such	organization[171]	giv[171]	_	_
+22-13	2616-2618	as	organization[171]	giv[171]	_	_
+22-14	2619-2624	Amgen	organization[171]|organization	giv[171]|new	_	_
+22-15	2625-2626	.	_	_	_	_
+22-16	2627-2628	[	_	_	_	_
+22-17	2629-2630	5	abstract	giv	coref	24-14
+22-18	2631-2632	]	_	_	_	_
+
+#Text=They are used for detection of drug and pesticide residues in meat , and monitoring for possible toxicity of AZT and antineoplastic drugs in patients . [ 1 ]
+23-1	2633-2637	They	organization	giv	_	_
+23-2	2638-2641	are	_	_	_	_
+23-3	2642-2646	used	_	_	_	_
+23-4	2647-2650	for	_	_	_	_
+23-5	2651-2660	detection	abstract[175]	new[175]	_	_
+23-6	2661-2663	of	abstract[175]	new[175]	_	_
+23-7	2664-2668	drug	abstract[175]|substance|substance[178]	new[175]|new|new[178]	_	_
+23-8	2669-2672	and	abstract[175]|substance[178]	new[175]|new[178]	_	_
+23-9	2673-2682	pesticide	abstract[175]|event|substance[178]	new[175]|new|new[178]	_	_
+23-10	2683-2691	residues	abstract[175]|substance[178]	new[175]|new[178]	_	_
+23-11	2692-2694	in	abstract[175]|substance[178]	new[175]|new[178]	_	_
+23-12	2695-2699	meat	abstract[175]|substance[178]|substance	new[175]|new[178]|new	_	_
+23-13	2700-2701	,	_	_	_	_
+23-14	2702-2705	and	_	_	_	_
+23-15	2706-2716	monitoring	_	_	_	_
+23-16	2717-2720	for	_	_	_	_
+23-17	2721-2729	possible	abstract[180]	new[180]	_	_
+23-18	2730-2738	toxicity	abstract[180]	new[180]	_	_
+23-19	2739-2741	of	abstract[180]	new[180]	_	_
+23-20	2742-2745	AZT	abstract[180]|object	new[180]|new	_	_
+23-21	2746-2749	and	abstract[180]	new[180]	_	_
+23-22	2750-2764	antineoplastic	abstract[180]|substance[182]	new[180]|new[182]	_	_
+23-23	2765-2770	drugs	abstract[180]|substance[182]	new[180]|new[182]	_	_
+23-24	2771-2773	in	abstract[180]	new[180]	_	_
+23-25	2774-2782	patients	abstract[180]|person	new[180]|new	ana	24-8
+23-26	2783-2784	.	_	_	_	_
+23-27	2785-2786	[	_	_	_	_
+23-28	2787-2788	1	abstract	giv	coref	25-22
+23-29	2789-2790	]	_	_	_	_
+
+#Text=Nobel prize winner Robert H. Grubbs uses them to study polymers . [ 5 ]
+24-1	2791-2796	Nobel	object[185]|person[186]	new[185]|new[186]	_	_
+24-2	2797-2802	prize	object[185]|person[186]	new[185]|new[186]	_	_
+24-3	2803-2809	winner	person[186]	new[186]	_	_
+24-4	2810-2816	Robert	person[186]	new[186]	_	_
+24-5	2817-2819	H.	person[186]	new[186]	_	_
+24-6	2820-2826	Grubbs	person[186]	new[186]	_	_
+24-7	2827-2831	uses	_	_	_	_
+24-8	2832-2836	them	person	giv	ana	25-1
+24-9	2837-2839	to	_	_	_	_
+24-10	2840-2845	study	_	_	_	_
+24-11	2846-2854	polymers	substance	new	_	_
+24-12	2855-2856	.	_	_	_	_
+24-13	2857-2858	[	_	_	_	_
+24-14	2859-2860	5	abstract	giv	_	_
+24-15	2861-2862	]	_	_	_	_
+
+#Text=They are also used to monitor smog and fly ash , and identify effective antibiotics to counter bacterial infections . [ 1 ]
+25-1	2863-2867	They	person	giv	_	_
+25-2	2868-2871	are	_	_	_	_
+25-3	2872-2876	also	_	_	_	_
+25-4	2877-2881	used	_	_	_	_
+25-5	2882-2884	to	_	_	_	_
+25-6	2885-2892	monitor	_	_	_	_
+25-7	2893-2897	smog	substance	new	_	_
+25-8	2898-2901	and	_	_	_	_
+25-9	2902-2905	fly	animal|substance[193]	new|new[193]	_	_
+25-10	2906-2909	ash	substance[193]	new[193]	_	_
+25-11	2910-2911	,	_	_	_	_
+25-12	2912-2915	and	_	_	_	_
+25-13	2916-2924	identify	_	_	_	_
+25-14	2925-2934	effective	substance[194]	new[194]	_	_
+25-15	2935-2946	antibiotics	substance[194]	new[194]	_	_
+25-16	2947-2949	to	substance[194]	new[194]	_	_
+25-17	2950-2957	counter	substance[194]	new[194]	_	_
+25-18	2958-2967	bacterial	substance[194]|abstract[195]	new[194]|new[195]	_	_
+25-19	2968-2978	infections	substance[194]|abstract[195]	new[194]|new[195]	_	_
+25-20	2979-2980	.	_	_	_	_
+25-21	2981-2982	[	_	_	_	_
+25-22	2983-2984	1	abstract	giv	coref	29-5
+25-23	2985-2986	]	_	_	_	_
+
+#Text=“ Get into a market that is just on the verge of developing .
+26-1	2987-2988	“	_	_	_	_
+26-2	2989-2992	Get	_	_	_	_
+26-3	2993-2997	into	_	_	_	_
+26-4	2998-2999	a	place[197]	new[197]	_	_
+26-5	3000-3006	market	place[197]	new[197]	_	_
+26-6	3007-3011	that	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-7	3012-3014	is	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-8	3015-3019	just	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-9	3020-3022	on	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-10	3023-3026	the	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-11	3027-3032	verge	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-12	3033-3035	of	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-13	3036-3046	developing	place[197]|abstract[198]	new[197]|new[198]	_	_
+26-14	3047-3048	.	_	_	_	_
+
+#Text=If you ’re too early , the company fails .
+27-1	3049-3051	If	_	_	_	_
+27-2	3052-3055	you	person	acc	ana	28-2
+27-3	3056-3059	’re	_	_	_	_
+27-4	3060-3063	too	_	_	_	_
+27-5	3064-3069	early	_	_	_	_
+27-6	3070-3071	,	_	_	_	_
+27-7	3072-3075	the	organization[200]	giv[200]	_	_
+27-8	3076-3083	company	organization[200]	giv[200]	_	_
+27-9	3084-3089	fails	_	_	_	_
+27-10	3090-3091	.	_	_	_	_
+
+#Text=If you ’re a little too late , the competitors will eat you alive because they have much better resources . ”
+28-1	3092-3094	If	_	_	_	_
+28-2	3095-3098	you	person	giv	ana	28-13
+28-3	3099-3102	’re	_	_	_	_
+28-4	3103-3104	a	_	_	_	_
+28-5	3105-3111	little	_	_	_	_
+28-6	3112-3115	too	_	_	_	_
+28-7	3116-3120	late	_	_	_	_
+28-8	3121-3122	,	_	_	_	_
+28-9	3123-3126	the	person[202]	new[202]	ana	28-16[0_202]
+28-10	3127-3138	competitors	person[202]	new[202]	_	_
+28-11	3139-3143	will	_	_	_	_
+28-12	3144-3147	eat	_	_	_	_
+28-13	3148-3151	you	person	giv	_	_
+28-14	3152-3157	alive	_	_	_	_
+28-15	3158-3165	because	_	_	_	_
+28-16	3166-3170	they	person	giv	_	_
+28-17	3171-3175	have	_	_	_	_
+28-18	3176-3180	much	abstract[205]	new[205]	_	_
+28-19	3181-3187	better	abstract[205]	new[205]	_	_
+28-20	3188-3197	resources	abstract[205]	new[205]	_	_
+28-21	3198-3199	.	_	_	_	_
+28-22	3200-3201	”	_	_	_	_
+
+#Text=Philip J. Wyatt [ 1 ]
+29-1	3202-3208	Philip	person[206]	giv[206]	coref	30-1[0_206]
+29-2	3209-3211	J.	person[206]	giv[206]	_	_
+29-3	3212-3217	Wyatt	person[206]	giv[206]	_	_
+29-4	3218-3219	[	_	_	_	_
+29-5	3220-3221	1	abstract	giv	coref	32-21
+29-6	3222-3223	]	_	_	_	_
+
+#Text=Wyatt has published over seventy publications , including books .
+30-1	3224-3229	Wyatt	person	giv	ana	31-1
+30-2	3230-3233	has	_	_	_	_
+30-3	3234-3243	published	_	_	_	_
+30-4	3244-3248	over	abstract[209]	new[209]	_	_
+30-5	3249-3256	seventy	abstract[209]	new[209]	_	_
+30-6	3257-3269	publications	abstract[209]	new[209]	_	_
+30-7	3270-3271	,	abstract[209]	new[209]	_	_
+30-8	3272-3281	including	abstract[209]	new[209]	_	_
+30-9	3282-3287	books	abstract[209]|abstract	new[209]|new	_	_
+30-10	3288-3289	.	_	_	_	_
+
+#Text=He has at least ninety domestic and foreign patents related to laser light scattering and other technologies . [ 6 ]
+31-1	3290-3292	He	person	giv	coref	32-1
+31-2	3293-3296	has	_	_	_	_
+31-3	3297-3299	at	_	_	_	_
+31-4	3300-3305	least	abstract[212]	new[212]	_	_
+31-5	3306-3312	ninety	abstract[212]	new[212]	_	_
+31-6	3313-3321	domestic	abstract[212]	new[212]	_	_
+31-7	3322-3325	and	abstract[212]	new[212]	_	_
+31-8	3326-3333	foreign	abstract[212]	new[212]	_	_
+31-9	3334-3341	patents	abstract[212]	new[212]	_	_
+31-10	3342-3349	related	abstract[212]	new[212]	_	_
+31-11	3350-3352	to	abstract[212]	new[212]	_	_
+31-12	3353-3358	laser	abstract[212]|person|abstract[215]|abstract[216]	new[212]|giv|giv[215]|giv[216]	coref|coref	36-24[254_215]|36-31
+31-13	3359-3364	light	abstract[212]|object|abstract[215]|abstract[216]	new[212]|giv|giv[215]|giv[216]	coref	36-31[259_0]
+31-14	3365-3375	scattering	abstract[212]|abstract[215]|abstract[216]	new[212]|giv[215]|giv[216]	_	_
+31-15	3376-3379	and	abstract[212]|abstract[216]	new[212]|giv[216]	_	_
+31-16	3380-3385	other	abstract[212]|abstract[216]|abstract[217]	new[212]|giv[216]|new[217]	_	_
+31-17	3386-3398	technologies	abstract[212]|abstract[216]|abstract[217]	new[212]|giv[216]|new[217]	_	_
+31-18	3399-3400	.	_	_	_	_
+31-19	3401-3402	[	_	_	_	_
+31-20	3403-3404	6	abstract	new	_	_
+31-21	3405-3406	]	_	_	_	_
+
+#Text=Wyatt served as the 2012-2013 Chair of the American Physical Society 's Forum on Industrial and Applied Physics . [ 1 ]
+32-1	3407-3412	Wyatt	person	giv	ana	33-1
+32-2	3413-3419	served	_	_	_	_
+32-3	3420-3422	as	_	_	_	_
+32-4	3423-3426	the	person[220]	new[220]	_	_
+32-5	3427-3436	2012-2013	person[220]	new[220]	_	_
+32-6	3437-3442	Chair	person[220]	new[220]	_	_
+32-7	3443-3445	of	person[220]	new[220]	_	_
+32-8	3446-3449	the	person[220]|organization[223]	new[220]|new[223]	_	_
+32-9	3450-3458	American	person[220]|organization[222]|organization[223]	new[220]|new[222]|new[223]	coref	33-9[229_222]
+32-10	3459-3467	Physical	person[220]|substance|organization[222]|organization[223]	new[220]|new|new[222]|new[223]	coref	33-10
+32-11	3468-3475	Society	person[220]|organization[222]|organization[223]	new[220]|new[222]|new[223]	_	_
+32-12	3476-3478	's	person[220]|organization[222]|organization[223]	new[220]|new[222]|new[223]	_	_
+32-13	3479-3484	Forum	person[220]|organization[223]	new[220]|new[223]	_	_
+32-14	3485-3487	on	person[220]|organization[223]	new[220]|new[223]	_	_
+32-15	3488-3498	Industrial	person[220]|organization[223]|abstract[224]	new[220]|new[223]|new[224]	coref	36-9[0_224]
+32-16	3499-3502	and	person[220]|organization[223]|abstract[224]	new[220]|new[223]|new[224]	_	_
+32-17	3503-3510	Applied	person[220]|organization[223]|abstract[224]	new[220]|new[223]|new[224]	_	_
+32-18	3511-3518	Physics	person[220]|organization[223]|abstract[224]	new[220]|new[223]|new[224]	_	_
+32-19	3519-3520	.	_	_	_	_
+32-20	3521-3522	[	_	_	_	_
+32-21	3523-3524	1	abstract	giv	coref	36-49
+32-22	3525-3526	]	_	_	_	_
+
+#Text=He is the 2016-2017 Vice Chair of the American Physical Society ’s Group on Instrument and Measurement Science , from which he will succeed to the position of chair . [ 7 ]
+33-1	3527-3529	He	person	giv	coref	33-3[227_0]
+33-2	3530-3532	is	_	_	_	_
+33-3	3533-3536	the	person[227]	giv[227]	ana	33-22[0_227]
+33-4	3537-3546	2016-2017	person[227]	giv[227]	_	_
+33-5	3547-3551	Vice	person[227]	giv[227]	_	_
+33-6	3552-3557	Chair	person[227]	giv[227]	_	_
+33-7	3558-3560	of	person[227]	giv[227]	_	_
+33-8	3561-3564	the	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-9	3565-3573	American	person[227]|organization[229]|organization[230]	giv[227]|giv[229]|new[230]	_	_
+33-10	3574-3582	Physical	person[227]|substance|organization[229]|organization[230]	giv[227]|giv|giv[229]|new[230]	coref	36-13
+33-11	3583-3590	Society	person[227]|organization[229]|organization[230]	giv[227]|giv[229]|new[230]	_	_
+33-12	3591-3593	’s	person[227]|organization[229]|organization[230]	giv[227]|giv[229]|new[230]	_	_
+33-13	3594-3599	Group	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-14	3600-3602	on	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-15	3603-3613	Instrument	person[227]|organization[230]|abstract|organization[233]	giv[227]|new[230]|new|giv[233]	coref	43-9[0_233]
+33-16	3614-3617	and	person[227]|organization[230]|organization[233]	giv[227]|new[230]|giv[233]	_	_
+33-17	3618-3629	Measurement	person[227]|organization[230]|event|organization[233]	giv[227]|new[230]|new|giv[233]	_	_
+33-18	3630-3637	Science	person[227]|organization[230]|organization[233]	giv[227]|new[230]|giv[233]	_	_
+33-19	3638-3639	,	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-20	3640-3644	from	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-21	3645-3650	which	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-22	3651-3653	he	person[227]|organization[230]|person	giv[227]|new[230]|giv	coref	34-1
+33-23	3654-3658	will	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-24	3659-3666	succeed	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-25	3667-3669	to	person[227]|organization[230]	giv[227]|new[230]	_	_
+33-26	3670-3673	the	person[227]|organization[230]|abstract[235]	giv[227]|new[230]|new[235]	_	_
+33-27	3674-3682	position	person[227]|organization[230]|abstract[235]	giv[227]|new[230]|new[235]	_	_
+33-28	3683-3685	of	person[227]|organization[230]|abstract[235]	giv[227]|new[230]|new[235]	_	_
+33-29	3686-3691	chair	person[227]|organization[230]|abstract[235]|abstract	giv[227]|new[230]|new[235]|new	_	_
+33-30	3692-3693	.	_	_	_	_
+33-31	3694-3695	[	_	_	_	_
+33-32	3696-3697	7	abstract	new	_	_
+33-33	3698-3699	]	_	_	_	_
+
+#Text=Wyatt also serves on the board of directors of the Santa Barbara City College . [ 3 ]
+34-1	3700-3705	Wyatt	person	giv	_	_
+34-2	3706-3710	also	_	_	_	_
+34-3	3711-3717	serves	_	_	_	_
+34-4	3718-3720	on	_	_	_	_
+34-5	3721-3724	the	organization[239]	new[239]	_	_
+34-6	3725-3730	board	organization[239]	new[239]	_	_
+34-7	3731-3733	of	organization[239]	new[239]	_	_
+34-8	3734-3743	directors	organization[239]|person	new[239]|new	_	_
+34-9	3744-3746	of	organization[239]	new[239]	_	_
+34-10	3747-3750	the	organization[239]|organization[243]	new[239]|giv[243]	coref	37-9[270_243]
+34-11	3751-3756	Santa	organization[239]|place[241]|organization[243]	new[239]|new[241]|giv[243]	_	_
+34-12	3757-3764	Barbara	organization[239]|place[241]|organization[243]	new[239]|new[241]|giv[243]	_	_
+34-13	3765-3769	City	organization[239]|person|organization[243]	new[239]|new|giv[243]	_	_
+34-14	3770-3777	College	organization[239]|organization[243]	new[239]|giv[243]	_	_
+34-15	3778-3779	.	_	_	_	_
+34-16	3780-3781	[	_	_	_	_
+34-17	3782-3783	3	abstract	giv	_	_
+34-18	3784-3785	]	_	_	_	_
+
+#Text=Awards and honors
+35-1	3786-3792	Awards	abstract	new	_	_
+35-2	3793-3796	and	_	_	_	_
+35-3	3797-3803	honors	abstract	new	_	_
+
+#Text=2009 , Inaugural Prize for Industrial Applications of Physics from the American Physical Society “ for pioneering developments in the physics of the inverse scattering problem : new application of laser light scattering and the successful sustained commercialization of new related analytical methods and instrumentation . ” [ 1 ] [ 8 ]
+36-1	3804-3808	2009	_	_	_	_
+36-2	3809-3810	,	_	_	_	_
+36-3	3811-3820	Inaugural	abstract[247]	new[247]	_	_
+36-4	3821-3826	Prize	abstract[247]	new[247]	_	_
+36-5	3827-3830	for	abstract[247]	new[247]	_	_
+36-6	3831-3841	Industrial	abstract[247]|abstract[248]	new[247]|new[248]	_	_
+36-7	3842-3854	Applications	abstract[247]|abstract[248]	new[247]|new[248]	_	_
+36-8	3855-3857	of	abstract[247]|abstract[248]	new[247]|new[248]	_	_
+36-9	3858-3865	Physics	abstract[247]|abstract[248]|abstract	new[247]|new[248]|giv	coref	36-20[253_0]
+36-10	3866-3870	from	abstract[247]	new[247]	_	_
+36-11	3871-3874	the	abstract[247]|organization[251]	new[247]|new[251]	coref	38-3[279_251]
+36-12	3875-3883	American	abstract[247]|organization[251]	new[247]|new[251]	_	_
+36-13	3884-3892	Physical	abstract[247]|substance|organization[251]	new[247]|giv|new[251]	coref	38-4
+36-14	3893-3900	Society	abstract[247]|organization[251]	new[247]|new[251]	_	_
+36-15	3901-3902	“	abstract[247]	new[247]	_	_
+36-16	3903-3906	for	abstract[247]	new[247]	_	_
+36-17	3907-3917	pioneering	abstract[247]|abstract[252]	new[247]|new[252]	appos	36-28[256_252]
+36-18	3918-3930	developments	abstract[247]|abstract[252]	new[247]|new[252]	_	_
+36-19	3931-3933	in	abstract[247]|abstract[252]	new[247]|new[252]	_	_
+36-20	3934-3937	the	abstract[247]|abstract[252]|abstract[253]	new[247]|new[252]|giv[253]	_	_
+36-21	3938-3945	physics	abstract[247]|abstract[252]|abstract[253]	new[247]|new[252]|giv[253]	_	_
+36-22	3946-3948	of	abstract[247]|abstract[252]|abstract[253]	new[247]|new[252]|giv[253]	_	_
+36-23	3949-3952	the	abstract[247]|abstract[252]|abstract[253]|abstract[255]	new[247]|new[252]|giv[253]|new[255]	_	_
+36-24	3953-3960	inverse	abstract[247]|abstract[252]|abstract[253]|abstract[254]|abstract[255]	new[247]|new[252]|giv[253]|giv[254]|new[255]	coref	36-31[260_254]
+36-25	3961-3971	scattering	abstract[247]|abstract[252]|abstract[253]|abstract[254]|abstract[255]	new[247]|new[252]|giv[253]|giv[254]|new[255]	_	_
+36-26	3972-3979	problem	abstract[247]|abstract[252]|abstract[253]|abstract[255]	new[247]|new[252]|giv[253]|new[255]	_	_
+36-27	3980-3981	:	_	_	_	_
+36-28	3982-3985	new	abstract[256]|abstract[257]	giv[256]|giv[257]	appos|appos	36-28[257_256]|36-35[261_257]
+36-29	3986-3997	application	abstract[256]|abstract[257]	giv[256]|giv[257]	_	_
+36-30	3998-4000	of	abstract[256]|abstract[257]	giv[256]|giv[257]	_	_
+36-31	4001-4006	laser	abstract[256]|abstract[257]|person|object[259]|abstract[260]	giv[256]|giv[257]|giv|giv[259]|giv[260]	_	_
+36-32	4007-4012	light	abstract[256]|abstract[257]|object[259]|abstract[260]	giv[256]|giv[257]|giv[259]|giv[260]	_	_
+36-33	4013-4023	scattering	abstract[256]|abstract[257]|abstract[260]	giv[256]|giv[257]|giv[260]	_	_
+36-34	4024-4027	and	abstract[257]	giv[257]	_	_
+36-35	4028-4031	the	abstract[257]|abstract[261]	giv[257]|giv[261]	_	_
+36-36	4032-4042	successful	abstract[257]|abstract[261]	giv[257]|giv[261]	_	_
+36-37	4043-4052	sustained	abstract[257]|abstract[261]	giv[257]|giv[261]	_	_
+36-38	4053-4070	commercialization	abstract[257]|abstract[261]	giv[257]|giv[261]	_	_
+36-39	4071-4073	of	abstract[257]|abstract[261]	giv[257]|giv[261]	_	_
+36-40	4074-4077	new	abstract[257]|abstract[261]|abstract[262]|abstract[263]	giv[257]|giv[261]|new[262]|giv[263]	_	_
+36-41	4078-4085	related	abstract[257]|abstract[261]|abstract[262]|abstract[263]	giv[257]|giv[261]|new[262]|giv[263]	_	_
+36-42	4086-4096	analytical	abstract[257]|abstract[261]|abstract[262]|abstract[263]	giv[257]|giv[261]|new[262]|giv[263]	_	_
+36-43	4097-4104	methods	abstract[257]|abstract[261]|abstract[262]|abstract[263]	giv[257]|giv[261]|new[262]|giv[263]	_	_
+36-44	4105-4108	and	abstract[257]|abstract[261]|abstract[263]	giv[257]|giv[261]|giv[263]	_	_
+36-45	4109-4124	instrumentation	abstract[257]|abstract[261]|abstract[263]|abstract	giv[257]|giv[261]|giv[263]|new	_	_
+36-46	4125-4126	.	_	_	_	_
+36-47	4127-4128	”	_	_	_	_
+36-48	4129-4130	[	_	_	_	_
+36-49	4131-4132	1	abstract	giv	_	_
+36-50	4133-4134	]	_	_	_	_
+36-51	4135-4136	[	_	_	_	_
+36-52	4137-4138	8	abstract	new	_	_
+36-53	4139-4140	]	_	_	_	_
+
+#Text=2003 , " Graduate of Distinction " , College of Arts and Sciences , Florida State University . [ 2 ]
+37-1	4141-4145	2003	time|person[268]	new|new[268]	_	_
+37-2	4146-4147	,	person[268]	new[268]	_	_
+37-3	4148-4149	"	person[268]	new[268]	_	_
+37-4	4150-4158	Graduate	person[268]	new[268]	_	_
+37-5	4159-4161	of	person[268]	new[268]	_	_
+37-6	4162-4173	Distinction	person[268]|abstract	new[268]|new	_	_
+37-7	4174-4175	"	person[268]	new[268]	_	_
+37-8	4176-4177	,	_	_	_	_
+37-9	4178-4185	College	organization[270]	giv[270]	_	_
+37-10	4186-4188	of	organization[270]	giv[270]	_	_
+37-11	4189-4193	Arts	organization[270]|abstract	giv[270]|new	_	_
+37-12	4194-4197	and	organization[270]	giv[270]	_	_
+37-13	4198-4206	Sciences	organization[270]|person	giv[270]|new	_	_
+37-14	4207-4208	,	_	_	_	_
+37-15	4209-4216	Florida	place|organization[275]	giv|giv[275]	_	_
+37-16	4217-4222	State	place|organization[275]	giv|giv[275]	_	_
+37-17	4223-4233	University	organization[275]	giv[275]	_	_
+37-18	4234-4235	.	_	_	_	_
+37-19	4236-4237	[	_	_	_	_
+37-20	4238-4239	2	abstract	giv	coref	38-7
+37-21	4240-4241	]	_	_	_	_
+
+#Text=Fellow , American Physical Society [ 2 ]
+38-1	4242-4248	Fellow	person	new	coref	39-1
+38-2	4249-4250	,	_	_	_	_
+38-3	4251-4259	American	organization[279]	giv[279]	coref	39-3[282_279]
+38-4	4260-4268	Physical	substance|organization[279]	giv|giv[279]	_	_
+38-5	4269-4276	Society	organization[279]	giv[279]	_	_
+38-6	4277-4278	[	_	_	_	_
+38-7	4279-4280	2	abstract	giv	coref	39-8
+38-8	4281-4282	]	_	_	_	_
+
+#Text=Fellow , Optical Society of America [ 2 ]
+39-1	4283-4289	Fellow	person	giv	coref	43-1
+39-2	4290-4291	,	_	_	_	_
+39-3	4292-4299	Optical	organization[282]	giv[282]	coref	40-3[287_282]
+39-4	4300-4307	Society	organization[282]	giv[282]	_	_
+39-5	4308-4310	of	organization[282]	giv[282]	_	_
+39-6	4311-4318	America	organization[282]|place	giv[282]|new	_	_
+39-7	4319-4320	[	_	_	_	_
+39-8	4321-4322	2	abstract	giv	coref	40-7
+39-9	4323-4324	]	_	_	_	_
+
+#Text=Member , American Chemical Society [ 2 ]
+40-1	4325-4331	Member	person	new	coref	41-1
+40-2	4332-4333	,	_	_	_	_
+40-3	4334-4342	American	organization[287]	giv[287]	coref	41-3[290_287]
+40-4	4343-4351	Chemical	person|organization[287]	new|giv[287]	_	_
+40-5	4352-4359	Society	organization[287]	giv[287]	_	_
+40-6	4360-4361	[	_	_	_	_
+40-7	4362-4363	2	abstract	giv	coref	41-8
+40-8	4364-4365	]	_	_	_	_
+
+#Text=Member , American Society for Microbiology [ 2 ]
+41-1	4366-4372	Member	person	giv	coref	42-1
+41-2	4373-4374	,	_	_	_	_
+41-3	4375-4383	American	organization[290]	giv[290]	_	_
+41-4	4384-4391	Society	organization[290]	giv[290]	_	_
+41-5	4392-4395	for	organization[290]	giv[290]	_	_
+41-6	4396-4408	Microbiology	organization[290]|abstract	giv[290]|new	_	_
+41-7	4409-4410	[	_	_	_	_
+41-8	4411-4412	2	abstract	giv	coref	42-9
+41-9	4413-4414	]	_	_	_	_
+
+#Text=Member , American Association of Pharmaceutical Scientists [ 2 ]
+42-1	4415-4421	Member	person	giv	_	_
+42-2	4422-4423	,	_	_	_	_
+42-3	4424-4432	American	organization[294]	new[294]	coref	43-3[298_294]
+42-4	4433-4444	Association	organization[294]	new[294]	_	_
+42-5	4445-4447	of	organization[294]	new[294]	_	_
+42-6	4448-4462	Pharmaceutical	organization[294]|person[295]	new[294]|new[295]	_	_
+42-7	4463-4473	Scientists	organization[294]|person[295]	new[294]|new[295]	_	_
+42-8	4474-4475	[	_	_	_	_
+42-9	4476-4477	2	abstract	giv	coref	43-14
+42-10	4478-4479	]	_	_	_	_
+
+#Text=Fellow , American Association for the Advancement of Science ( AAAS ) [ 2 ]
+43-1	4480-4486	Fellow	person	giv	_	_
+43-2	4487-4488	,	_	_	_	_
+43-3	4489-4497	American	organization[298]	giv[298]	_	_
+43-4	4498-4509	Association	organization[298]	giv[298]	_	_
+43-5	4510-4513	for	organization[298]	giv[298]	_	_
+43-6	4514-4517	the	organization[298]|event[299]	giv[298]|new[299]	_	_
+43-7	4518-4529	Advancement	organization[298]|event[299]	giv[298]|new[299]	_	_
+43-8	4530-4532	of	organization[298]|event[299]	giv[298]|new[299]	_	_
+43-9	4533-4540	Science	organization[298]|event[299]|organization	giv[298]|new[299]|giv	appos	43-11
+43-10	4541-4542	(	_	_	_	_
+43-11	4543-4547	AAAS	organization	giv	_	_
+43-12	4548-4549	)	_	_	_	_
+43-13	4550-4551	[	_	_	_	_
+43-14	4552-4553	2	abstract	giv	_	_
+43-15	4554-4555	]	_	_	_	_

@@ -1,0 +1,270 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1003" relname="span">Many applications in the real world , such as system identification , regression , and online kernel learning</segment>
+<segment id="3" parent="2" relname="elaboration">( OKL ) ,</segment>
+<segment id="4" parent="1002" relname="same_unit">require complex nonlinear models .</segment>
+<segment id="5" parent="1005" relname="span">The kernel method</segment>
+<segment id="6" parent="1006" relname="span">using a Mercer kernel has attracted interests</segment>
+<segment id="7" parent="1007" relname="span">in tackling these complex nonlinear applications ,</segment>
+<segment id="8" parent="1008" relname="span">which transforms nonlinear applications into linear ones in the reproducing kernel Hilbert space</segment>
+<segment id="9" parent="8" relname="restatement">( RKHS ) .</segment>
+<segment id="10" parent="1012" relname="background">Developed in RKHS ,</segment>
+<segment id="11" parent="1013" relname="span">a kernel adaptive filter</segment>
+<segment id="12" parent="11" relname="restatement">( KAF )</segment>
+<segment id="13" parent="1012" relname="same_unit">is the most celebrated subfield of OKL algorithms .</segment>
+<segment id="14" parent="1015" relname="span">Using the simplest stochastic gradient descent</segment>
+<segment id="15" parent="14" relname="elaboration">( SGD ) method for learning ,</segment>
+<segment id="16" parent="1018" relname="span">KAFs</segment>
+<segment id="17" parent="16" relname="elaboration">including the kernel least mean square</segment>
+<segment id="18" parent="1019" relname="span">( KLMS ) algorithm , kernel affine projection algorithm</segment>
+<segment id="19" parent="18" relname="elaboration">( KAPA ) ,</segment>
+<segment id="20" parent="1021" relname="span">and kernel recursive least squares</segment>
+<segment id="21" parent="20" relname="elaboration">( KRLS ) algorithm</segment>
+<segment id="22" parent="1020" relname="same_unit">have been proposed .</segment>
+<segment id="23" parent="1026" relname="span">However , allocating a new kernel unit as a radial basis function</segment>
+<segment id="24" parent="23" relname="restatement">( RBF )</segment>
+<segment id="25" parent="1025" relname="same_unit">center</segment>
+<segment id="26" parent="1027" relname="span">with the coming of new data ,</segment>
+<segment id="27" parent="1029" relname="span">the linearly growing structure</segment>
+<segment id="28" parent="27" relname="elaboration">( called “ dictionary ” hereafter )</segment>
+<segment id="29" parent="1028" relname="same_unit">will increase the computational and memory requirements in KAFs .</segment>
+<segment id="30" parent="1024" relname="purpose">To curb the growth of the dictionary , two categories are chosen for sparsification .</segment>
+<segment id="31" parent="1032" relname="span">The first category accepts only informative data as new dictionary centers</segment>
+<segment id="32" parent="1033" relname="span">by using a threshold ,</segment>
+<segment id="33" parent="1035" relname="span">including the surprise criterion</segment>
+<segment id="34" parent="33" relname="elaboration">( SC ) , the coherence criterion</segment>
+<segment id="35" parent="1035" relname="elaboration">( CC ) ,</segment>
+<segment id="36" parent="1036" relname="span">and the vector quantization</segment>
+<segment id="37" parent="36" relname="restatement">( VQ ) .</segment>
+<segment id="38" parent="1001" relname="joint">However , these methods cannot fully address the growing problem</segment>
+<segment id="39" parent="1001" relname="joint">and still introduce additional time consumption at each iteration .</segment>
+<segment id="40" parent="1042" relname="span">The fixed points methods as the second category ,</segment>
+<segment id="41" parent="40" relname="elaboration">including the fixed-budget</segment>
+<segment id="42" parent="1042" relname="elaboration">( FB ) , the sliding window</segment>
+<segment id="43" parent="1041" relname="elaboration">( SW ) ,</segment>
+<segment id="44" parent="1045" relname="span">and the kernel approximation methods</segment>
+<segment id="45" parent="1046" relname="span">( e.g. , the Nystrm method and random Fourier features</segment>
+<segment id="46" parent="45" relname="elaboration">( RFFs ) method ) ,</segment>
+<segment id="47" parent="1047" relname="span">are used</segment>
+<segment id="48" parent="47" relname="purpose">to overcome the sublinearly growing problem .</segment>
+<segment id="49" parent="1049" relname="span">However , the FB method and the SW method cannot guarantee a good performance in specific environments with a small amount of time .</segment>
+<segment id="50" parent="1050" relname="span">Compared with the Nystrm method , RFFs are drawn from a distribution</segment>
+<segment id="51" parent="50" relname="elaboration">that is randomly independent from the training data .</segment>
+<segment id="52" parent="1052" relname="span">Due to a data-independent vector representation ,</segment>
+<segment id="53" parent="52" relname="elaboration">RFFs can provide a good solution to non-stationary circumstances .</segment>
+<segment id="54" parent="1056" relname="span">On the basis of RFFs , random Fourier mapping</segment>
+<segment id="55" parent="54" relname="restatement">( RFM )</segment>
+<segment id="56" parent="1055" relname="same_unit">is proposed</segment>
+<segment id="57" parent="1058" relname="span">by mapping input data into a finite-dimensional random Fourier features space</segment>
+<segment id="58" parent="57" relname="restatement">( RFFS )</segment>
+<segment id="59" parent="1058" relname="means">using a randomized feature kernel ’s Fourier transform in a fixed network structure .</segment>
+<segment id="60" parent="1060" relname="joint">The RFM alleviates the computational and storage burdens of KAFs ,</segment>
+<segment id="61" parent="1060" relname="joint">and ensures a satisfactory performance under non-stationary conditions .</segment>
+<segment id="62" parent="1064" relname="span">The examples</segment>
+<segment id="63" parent="62" relname="elaboration">for developing KAFs with RFM</segment>
+<segment id="64" parent="1065" relname="span">are the random Fourier features kernel least mean square</segment>
+<segment id="65" parent="64" relname="restatement">( RFFKLMS )</segment>
+<segment id="66" parent="1066" relname="joint">algorithm ,</segment>
+<segment id="67" parent="1068" relname="span">random Fourier features maximum correntropy</segment>
+<segment id="68" parent="67" relname="elaboration">( RFFMC ) algorithm ,</segment>
+<segment id="69" parent="1070" relname="span">and random Fourier features conjugate gradient</segment>
+<segment id="70" parent="69" relname="restatement">( RFFCG )</segment>
+<segment id="71" parent="1069" relname="same_unit">algorithm .</segment>
+<segment id="72" parent="1072" relname="joint">For the loss function ,</segment>
+<segment id="73" parent="1074" relname="span">due to their simplicity , smoothness , and mathematical tractability , the second-order statistical measures</segment>
+<segment id="74" parent="1076" relname="span">( e.g. , minimum mean square error</segment>
+<segment id="75" parent="74" relname="restatement">( MMSE )</segment>
+<segment id="76" parent="1075" relname="joint">and least squares )</segment>
+<segment id="77" parent="1073" relname="same_unit">are widely utilized in KAFs .</segment>
+<segment id="78" parent="1079" relname="span">However , KAFs</segment>
+<segment id="79" parent="1081" relname="span">based on the second-order statistical measures are sensitive to non-Gaussian noises</segment>
+<segment id="80" parent="79" relname="elaboration">including the sub-Gaussian and super-Gaussian noises ,</segment>
+<segment id="81" parent="1083" relname="attribution">which means</segment>
+<segment id="82" parent="1083" relname="span">that their performance may be seriously degraded</segment>
+<segment id="83" parent="82" relname="condition">if the training data are contaminated by outliers .</segment>
+<segment id="84" parent="1084" relname="span">To handle this issue , robust statistical measures have therefore gained more attention ,</segment>
+<segment id="85" parent="84" relname="elaboration">among which the lower-order error measure and the higher-lower error measure are two typical examples .</segment>
+<segment id="86" parent="1086" relname="span">However , the higher-order error measure is not suitable for the mixture of Gaussian and super-Gaussian noises</segment>
+<segment id="87" parent="1087" relname="same_unit">( Laplace , -stable , etc. )</segment>
+<segment id="88" parent="1087" relname="same_unit">with poor stability and astringency ,</segment>
+<segment id="89" parent="1089" relname="span">and the lower-order measure of error is usually more desirable in these noise environments with slow convergence rate .</segment>
+<segment id="90" parent="1093" relname="span">Recently , the information theoretic learning</segment>
+<segment id="91" parent="90" relname="restatement">( ITL )</segment>
+<segment id="92" parent="1092" relname="same_unit">similarity measures , such as the maximum correntropy criterion</segment>
+<segment id="93" parent="1092" relname="restatement">( MCC )</segment>
+<segment id="94" parent="1095" relname="span">and minimum error entropy criterion</segment>
+<segment id="95" parent="94" relname="elaboration">( MEE ) ,</segment>
+<segment id="96" parent="1096" relname="span">have been introduced</segment>
+<segment id="97" parent="96" relname="purpose">to implement robust KAFs .</segment>
+<segment id="98" parent="1097" relname="joint">The ITL similarity measures have been shown to have a strong robustness against non-Gaussian noises at the expense of increasing computational burden in training processing .</segment>
+<segment id="99" parent="1101" relname="span">In addition , minimizing the logarithmic moments of the error ,</segment>
+<segment id="100" parent="1102" relname="span">the logarithmic error measure</segment>
+<segment id="101" parent="1104" relname="span">— including the Cauchy loss</segment>
+<segment id="102" parent="101" relname="restatement">( CL )</segment>
+<segment id="103" parent="1104" relname="elaboration">with low computational complexity —</segment>
+<segment id="104" parent="1100" relname="same_unit">is an appropriate measure of optimality .</segment>
+<segment id="105" parent="1106" relname="span">Using the Cauchy loss</segment>
+<segment id="106" parent="105" relname="purpose">to penalize the noise term ,</segment>
+<segment id="107" parent="1109" relname="span">some algorithms</segment>
+<segment id="108" parent="107" relname="elaboration">based on the minimum Cauchy loss</segment>
+<segment id="109" parent="1109" relname="elaboration">( MCL ) criterion</segment>
+<segment id="110" parent="1110" relname="span">are efficient</segment>
+<segment id="111" parent="110" relname="purpose">for combating non-Gaussian noises , especially for heavy-tailed - stable noises .</segment>
+<segment id="112" parent="1112" relname="span">From the aspect of the optimization method , the stochastic gradient descent</segment>
+<segment id="113" parent="1113" relname="span">( SGD)-based algorithms cannot find the minimum</segment>
+<segment id="114" parent="113" relname="means">using the negative gradient in some loss functions .</segment>
+<segment id="115" parent="1115" relname="preparation">Toward this end , recursive-based algorithms address these issues at the cost of increasing computational cost .</segment>
+<segment id="116" parent="1116" relname="joint">In comparison with the SGD method and recursive method ,</segment>
+<segment id="117" parent="1118" relname="span">the conjugate gradient</segment>
+<segment id="118" parent="117" relname="restatement">( CG )</segment>
+<segment id="119" parent="1117" relname="same_unit">method and Newton ’s method as developments of SGD have become alternative optimization methods in KAFs .</segment>
+<segment id="120" parent="1120" relname="span">The inverse of matrix of Newton ’s method increases the computation</segment>
+<segment id="121" parent="120" relname="elaboration">and causes the divergence of algorithms in some cases .</segment>
+<segment id="122" parent="1122" relname="joint">However , the CG method gives a trade-off between convergence rate and computational complexity without the inverse computation ,</segment>
+<segment id="123" parent="1123" relname="span">and has been successfully applied in various fields ,</segment>
+<segment id="124" parent="123" relname="elaboration">including compressed sensing , neural networks , and large-scale optimization .</segment>
+<segment id="125" parent="1126" relname="span">In addition , the kernel conjugate gradient</segment>
+<segment id="126" parent="125" relname="restatement">( KCG )</segment>
+<segment id="127" parent="1125" relname="same_unit">method is proposed for adaptive filtering .</segment>
+<segment id="128" parent="1127" relname="joint">KCG with low computational and space requirements can produce a better solution than KLMS ,</segment>
+<segment id="129" parent="1127" relname="joint">and has comparable accuracy to KRLS .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1005" type="span" parent="1001" relname="joint"/>
+<group id="1006" type="span" parent="5" relname="elaboration"/>
+<group id="1007" type="span" parent="6" relname="circumstance"/>
+<group id="1008" type="span" parent="7" relname="elaboration"/>
+<group id="1010" type="span" parent="1001" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="span"/>
+<group id="1012" type="multinuc" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="1012" relname="same_unit"/>
+<group id="1014" type="multinuc" parent="1011" relname="means"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1016" type="multinuc" parent="1014" relname="same_unit"/>
+<group id="1017" type="span" parent="1016" relname="joint"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1019" type="span" parent="1018" relname="elaboration"/>
+<group id="1020" type="multinuc" parent="1016" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="same_unit"/>
+<group id="1023" type="span" parent="1001" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="multinuc" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="same_unit"/>
+<group id="1027" type="span" parent="1025" relname="elaboration"/>
+<group id="1028" type="multinuc" parent="26" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="same_unit"/>
+<group id="1031" type="multinuc" parent="1001" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="same_unit"/>
+<group id="1033" type="span" parent="31" relname="means"/>
+<group id="1034" type="span" parent="32" relname="elaboration"/>
+<group id="1035" type="span" parent="1034" relname="span"/>
+<group id="1036" type="span" parent="1031" relname="same_unit"/>
+<group id="1040" type="span" parent="1001" relname="joint"/>
+<group id="1041" type="span" parent="1040" relname="span"/>
+<group id="1042" type="span" parent="1041" relname="span"/>
+<group id="1043" type="span" parent="1001" relname="joint"/>
+<group id="1044" type="multinuc" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="same_unit"/>
+<group id="1046" type="span" parent="44" relname="elaboration"/>
+<group id="1047" type="span" parent="1044" relname="same_unit"/>
+<group id="1048" type="multinuc" parent="1044" relname="elaboration"/>
+<group id="1049" type="span" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="49" relname="elaboration"/>
+<group id="1051" type="multinuc" parent="1048" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1051" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+<group id="1055" type="multinuc" parent="1054" relname="span"/>
+<group id="1056" type="span" parent="1055" relname="same_unit"/>
+<group id="1057" type="span" parent="1055" relname="means"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="multinuc" parent="1053" relname="joint"/>
+<group id="1060" type="multinuc" parent="1059" relname="joint"/>
+<group id="1061" type="multinuc" parent="1059" relname="joint"/>
+<group id="1062" type="multinuc" parent="1061" relname="joint"/>
+<group id="1063" type="multinuc" parent="1062" relname="same_unit"/>
+<group id="1064" type="span" parent="1063" relname="same_unit"/>
+<group id="1065" type="span" parent="1063" relname="same_unit"/>
+<group id="1066" type="multinuc" parent="1062" relname="same_unit"/>
+<group id="1067" type="multinuc" parent="1066" relname="joint"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1069" type="multinuc" parent="1067" relname="joint"/>
+<group id="1070" type="span" parent="1069" relname="same_unit"/>
+<group id="1071" type="multinuc" parent="1061" relname="joint"/>
+<group id="1072" type="multinuc" parent="1071" relname="contrast"/>
+<group id="1073" type="multinuc" parent="1072" relname="joint"/>
+<group id="1074" type="span" parent="1073" relname="same_unit"/>
+<group id="1075" type="multinuc" parent="73" relname="elaboration"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="multinuc" parent="1071" relname="contrast"/>
+<group id="1078" type="span" parent="1077" relname="joint"/>
+<group id="1079" type="span" parent="1078" relname="span"/>
+<group id="1080" type="span" parent="78" relname="elaboration"/>
+<group id="1081" type="span" parent="1080" relname="span"/>
+<group id="1082" type="span" parent="1081" relname="elaboration"/>
+<group id="1083" type="span" parent="1082" relname="span"/>
+<group id="1084" type="span" parent="1079" relname="purpose"/>
+<group id="1085" type="multinuc" parent="1077" relname="joint"/>
+<group id="1086" type="span" parent="1085" relname="joint"/>
+<group id="1087" type="multinuc" parent="86" relname="elaboration"/>
+<group id="1088" type="multinuc" parent="1085" relname="joint"/>
+<group id="1089" type="span" parent="1088" relname="joint"/>
+<group id="1090" type="multinuc" parent="89" relname="elaboration"/>
+<group id="1091" type="span" parent="1090" relname="same_unit"/>
+<group id="1092" type="multinuc" parent="1091" relname="span"/>
+<group id="1093" type="span" parent="1092" relname="same_unit"/>
+<group id="1094" type="multinuc" parent="1090" relname="same_unit"/>
+<group id="1095" type="span" parent="1094" relname="same_unit"/>
+<group id="1096" type="span" parent="1094" relname="same_unit"/>
+<group id="1097" type="multinuc" parent="1088" relname="joint"/>
+<group id="1098" type="multinuc" parent="1097" relname="joint"/>
+<group id="1099" type="span" parent="1098" relname="joint"/>
+<group id="1100" type="multinuc" parent="1099" relname="span"/>
+<group id="1101" type="span" parent="1100" relname="same_unit"/>
+<group id="1102" type="span" parent="99" relname="elaboration"/>
+<group id="1103" type="span" parent="100" relname="elaboration"/>
+<group id="1104" type="span" parent="1103" relname="span"/>
+<group id="1105" type="multinuc" parent="1100" relname="means"/>
+<group id="1106" type="span" parent="1105" relname="same_unit"/>
+<group id="1107" type="multinuc" parent="1105" relname="same_unit"/>
+<group id="1108" type="span" parent="1107" relname="same_unit"/>
+<group id="1109" type="span" parent="1108" relname="span"/>
+<group id="1110" type="span" parent="1107" relname="same_unit"/>
+<group id="1111" type="multinuc" parent="1098" relname="joint"/>
+<group id="1112" type="span" parent="1111" relname="joint"/>
+<group id="1113" type="span" parent="112" relname="elaboration"/>
+<group id="1114" type="span" parent="1111" relname="joint"/>
+<group id="1115" type="multinuc" parent="1114" relname="span"/>
+<group id="1116" type="multinuc" parent="1115" relname="joint"/>
+<group id="1117" type="multinuc" parent="1116" relname="joint"/>
+<group id="1118" type="span" parent="1117" relname="same_unit"/>
+<group id="1119" type="multinuc" parent="1115" relname="joint"/>
+<group id="1120" type="span" parent="1119" relname="contrast"/>
+<group id="1121" type="multinuc" parent="1119" relname="contrast"/>
+<group id="1122" type="multinuc" parent="1121" relname="joint"/>
+<group id="1123" type="span" parent="1122" relname="joint"/>
+<group id="1124" type="multinuc" parent="1121" relname="joint"/>
+<group id="1125" type="multinuc" parent="1124" relname="joint"/>
+<group id="1126" type="span" parent="1125" relname="same_unit"/>
+<group id="1127" type="multinuc" parent="1124" relname="joint"/>
+	</body>
+</rst>

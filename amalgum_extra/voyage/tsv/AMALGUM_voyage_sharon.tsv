@@ -1,0 +1,1017 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Sharon ( Massachusetts )
+1-1	0-6	Sharon	person	new	coref	2-1
+1-2	7-8	(	_	_	_	_
+1-3	9-22	Massachusetts	place	new	coref	2-6
+1-4	23-24	)	_	_	_	_
+
+#Text=Sharon is a town in Massachusetts .
+2-1	25-31	Sharon	person	giv	coref	2-3[4_0]
+2-2	32-34	is	_	_	_	_
+2-3	35-36	a	person[4]	giv[4]	coref	7-1[20_4]
+2-4	37-41	town	person[4]	giv[4]	_	_
+2-5	42-44	in	person[4]	giv[4]	_	_
+2-6	45-58	Massachusetts	person[4]|place	giv[4]|giv	coref	46-3
+2-7	59-60	.	_	_	_	_
+
+#Text=By plane
+3-1	61-63	By	_	_	_	_
+3-2	64-69	plane	object	new	_	_
+
+#Text=T.F. Green Airport in Warwick ( Rhode Island ) and Logan International Airport in Boston .
+4-1	70-74	T.F.	person[7]|place[8]	new[7]|new[8]	coref	4-11[13_8]
+4-2	75-80	Green	person[7]|place[8]	new[7]|new[8]	_	_
+4-3	81-88	Airport	place[8]	new[8]	_	_
+4-4	89-91	in	place[8]	new[8]	_	_
+4-5	92-99	Warwick	place[8]|place	new[8]|new	_	_
+4-6	100-101	(	_	_	_	_
+4-7	102-107	Rhode	person	new	_	_
+4-8	108-114	Island	place	new	_	_
+4-9	115-116	)	_	_	_	_
+4-10	117-120	and	_	_	_	_
+4-11	121-126	Logan	place|place[13]	new|giv[13]	_	_
+4-12	127-140	International	place[13]	giv[13]	_	_
+4-13	141-148	Airport	place[13]	giv[13]	_	_
+4-14	149-151	in	place[13]	giv[13]	_	_
+4-15	152-158	Boston	place[13]|place	giv[13]|new	_	_
+4-16	159-160	.	_	_	_	_
+
+#Text=By train
+5-1	161-163	By	_	_	_	_
+5-2	164-169	train	object	new	_	_
+
+#Text=The local regional rail system is the MBTA Commuter Rail .
+6-1	170-173	The	object[17]	new[17]	coref	6-7[19_17]
+6-2	174-179	local	object[17]	new[17]	_	_
+6-3	180-188	regional	object[17]	new[17]	_	_
+6-4	189-193	rail	object|object[17]	new|new[17]	_	_
+6-5	194-200	system	object[17]	new[17]	_	_
+6-6	201-203	is	_	_	_	_
+6-7	204-207	the	object[19]	giv[19]	coref	9-8[33_19]
+6-8	208-212	MBTA	organization|object[19]	new|giv[19]	_	_
+6-9	213-221	Commuter	object[19]	giv[19]	_	_
+6-10	222-226	Rail	object[19]	giv[19]	_	_
+6-11	227-228	.	_	_	_	_
+
+#Text=Sharon 's stop lies between Mansfield and Stoughton and is part of the Providence/Stoughton line .
+7-1	229-235	Sharon	person[20]|place[21]	giv[20]|new[21]	coref	8-13[0_20]
+7-2	236-238	's	person[20]|place[21]	giv[20]|new[21]	_	_
+7-3	239-243	stop	place[21]	new[21]	_	_
+7-4	244-248	lies	_	_	_	_
+7-5	249-256	between	_	_	_	_
+7-6	257-266	Mansfield	place	new	_	_
+7-7	267-270	and	_	_	_	_
+7-8	271-280	Stoughton	_	_	_	_
+7-9	281-284	and	_	_	_	_
+7-10	285-287	is	_	_	_	_
+7-11	288-292	part	_	_	_	_
+7-12	293-295	of	_	_	_	_
+7-13	296-299	the	place[24]	new[24]	_	_
+7-14	300-320	Providence/Stoughton	place|place[24]	new|new[24]	_	_
+7-15	321-325	line	place[24]	new[24]	_	_
+7-16	326-327	.	_	_	_	_
+
+#Text=Located on 1 Upland Road down the street from the center of town .
+8-1	328-335	Located	_	_	_	_
+8-2	336-338	on	_	_	_	_
+8-3	339-340	1	place[26]	new[26]	_	_
+8-4	341-347	Upland	place|place[26]	new|new[26]	_	_
+8-5	348-352	Road	place[26]	new[26]	_	_
+8-6	353-357	down	_	_	_	_
+8-7	358-361	the	place[27]	new[27]	coref	11-6[38_27]
+8-8	362-368	street	place[27]	new[27]	_	_
+8-9	369-373	from	place[27]	new[27]	_	_
+8-10	374-377	the	place[27]|place[28]	new[27]|new[28]	coref	23-3[96_28]
+8-11	378-384	center	place[27]|place[28]	new[27]|new[28]	_	_
+8-12	385-387	of	place[27]|place[28]	new[27]|new[28]	_	_
+8-13	388-392	town	place[27]|place[28]|person	new[27]|new[28]|giv	coref	11-15
+8-14	393-394	.	_	_	_	_
+
+#Text=If you are coming from Providence , the Commuter rail is significantly cheaper ( $ 7.75 versus $ 16 ) .
+9-1	395-397	If	_	_	_	_
+9-2	398-401	you	person	acc	ana	18-22
+9-3	402-405	are	_	_	_	_
+9-4	406-412	coming	_	_	_	_
+9-5	413-417	from	_	_	_	_
+9-6	418-428	Providence	place	new	coref	36-13
+9-7	429-430	,	_	_	_	_
+9-8	431-434	the	object[33]	giv[33]	_	_
+9-9	435-443	Commuter	object|object[33]	new|giv[33]	_	_
+9-10	444-448	rail	object[33]	giv[33]	_	_
+9-11	449-451	is	_	_	_	_
+9-12	452-465	significantly	_	_	_	_
+9-13	466-473	cheaper	_	_	_	_
+9-14	474-475	(	_	_	_	_
+9-15	476-477	$	_	_	_	_
+9-16	478-482	7.75	_	_	_	_
+9-17	483-489	versus	_	_	_	_
+9-18	490-491	$	_	_	_	_
+9-19	492-494	16	_	_	_	_
+9-20	495-496	)	_	_	_	_
+9-21	497-498	.	_	_	_	_
+
+#Text=See
+10-1	499-502	See	_	_	_	_
+
+#Text=Statue of Deborah Sampson , 11 North Main Street ( located in front of Sharon Public Library ) .
+11-1	503-509	Statue	place[34]	new[34]	_	_
+11-2	510-512	of	place[34]	new[34]	_	_
+11-3	513-520	Deborah	place[34]|person[35]	new[34]|new[35]	coref	12-3[42_35]
+11-4	521-528	Sampson	place[34]|person[35]	new[34]|new[35]	_	_
+11-5	529-530	,	_	_	_	_
+11-6	531-533	11	place[38]	giv[38]	coref	15-10[51_38]
+11-7	534-539	North	place|place[38]	new|giv[38]	_	_
+11-8	540-544	Main	person|place[38]	new|giv[38]	coref	48-8
+11-9	545-551	Street	place[38]	giv[38]	_	_
+11-10	552-553	(	place[38]	giv[38]	_	_
+11-11	554-561	located	place[38]	giv[38]	_	_
+11-12	562-564	in	place[38]	giv[38]	_	_
+11-13	565-570	front	place[38]	giv[38]	_	_
+11-14	571-573	of	place[38]	giv[38]	_	_
+11-15	574-580	Sharon	place[38]|person|place[40]	giv[38]|giv|new[40]	coref	15-19
+11-16	581-587	Public	place[38]|place[40]	giv[38]|new[40]	_	_
+11-17	588-595	Library	place[38]|place[40]	giv[38]|new[40]	_	_
+11-18	596-597	)	place[38]	giv[38]	_	_
+11-19	598-599	.	_	_	_	_
+
+#Text=Home of Deborah Sampson .
+12-1	600-604	Home	place[41]	new[41]	_	_
+12-2	605-607	of	place[41]	new[41]	_	_
+12-3	608-615	Deborah	place[41]|person[42]	new[41]|giv[42]	_	_
+12-4	616-623	Sampson	place[41]|person[42]	new[41]|giv[42]	_	_
+12-5	624-625	.	_	_	_	_
+
+#Text=an American heroine who impersonated a man in order to serve in the Continental Army during the American Revolutionary War .
+13-1	626-628	an	person[43]	new[43]	_	_
+13-2	629-637	American	person[43]	new[43]	_	_
+13-3	638-645	heroine	person[43]	new[43]	_	_
+13-4	646-649	who	person[43]	new[43]	_	_
+13-5	650-662	impersonated	person[43]	new[43]	_	_
+13-6	663-664	a	person[43]|person[44]	new[43]|new[44]	_	_
+13-7	665-668	man	person[43]|person[44]	new[43]|new[44]	_	_
+13-8	669-671	in	_	_	_	_
+13-9	672-677	order	_	_	_	_
+13-10	678-680	to	_	_	_	_
+13-11	681-686	serve	_	_	_	_
+13-12	687-689	in	_	_	_	_
+13-13	690-693	the	organization[45]	new[45]	_	_
+13-14	694-705	Continental	organization[45]	new[45]	_	_
+13-15	706-710	Army	organization[45]	new[45]	_	_
+13-16	711-717	during	_	_	_	_
+13-17	718-721	the	event[46]	new[46]	_	_
+13-18	722-730	American	event[46]	new[46]	_	_
+13-19	731-744	Revolutionary	event[46]	new[46]	_	_
+13-20	745-748	War	event[46]	new[46]	_	_
+13-21	749-750	.	_	_	_	_
+
+#Text=Eat
+14-1	751-754	Eat	_	_	_	_
+
+#Text=Alice ’s Mandarin Taste , Will be found on 37 Pond Street ( located in the Center of Sharon , walking distance from the High School and Pizzagando . ) , ☏ +1 781-784- 7377 .
+15-1	755-760	Alice	person[47]|abstract[49]	new[47]|new[49]	coref|coref	18-6[68_47]|19-1[76_49]
+15-2	761-763	’s	person[47]|abstract[49]	new[47]|new[49]	_	_
+15-3	764-772	Mandarin	person|abstract[49]	new|new[49]	coref	19-1
+15-4	773-778	Taste	abstract[49]	new[49]	_	_
+15-5	779-780	,	_	_	_	_
+15-6	781-785	Will	_	_	_	_
+15-7	786-788	be	_	_	_	_
+15-8	789-794	found	_	_	_	_
+15-9	795-797	on	_	_	_	_
+15-10	798-800	37	place[51]	giv[51]	appos	15-21[54_51]
+15-11	801-805	Pond	person|place[51]	new|giv[51]	coref	45-2
+15-12	806-812	Street	place[51]	giv[51]	_	_
+15-13	813-814	(	place[51]	giv[51]	_	_
+15-14	815-822	located	place[51]	giv[51]	_	_
+15-15	823-825	in	place[51]	giv[51]	_	_
+15-16	826-829	the	place[51]|place[52]	giv[51]|new[52]	coref	33-8[152_52]
+15-17	830-836	Center	place[51]|place[52]	giv[51]|new[52]	_	_
+15-18	837-839	of	place[51]|place[52]	giv[51]|new[52]	_	_
+15-19	840-846	Sharon	place[51]|place[52]|person	giv[51]|new[52]|giv	coref	23-6
+15-20	847-848	,	_	_	_	_
+15-21	849-856	walking	place[54]	giv[54]	_	_
+15-22	857-865	distance	place[54]	giv[54]	_	_
+15-23	866-870	from	place[54]	giv[54]	_	_
+15-24	871-874	the	place[54]|place[55]|place[56]	giv[54]|new[55]|new[56]	coref|coref	36-3[173_55]|36-3[174_56]
+15-25	875-879	High	place[54]|place[55]|place[56]	giv[54]|new[55]|new[56]	_	_
+15-26	880-886	School	place[54]|place[55]|place[56]	giv[54]|new[55]|new[56]	_	_
+15-27	887-890	and	place[54]|place[56]	giv[54]|new[56]	_	_
+15-28	891-901	Pizzagando	place[54]|place[56]|place	giv[54]|new[56]|new	coref	41-1
+15-29	902-903	.	_	_	_	_
+15-30	904-905	)	_	_	_	_
+15-31	906-907	,	_	_	_	_
+15-32	908-909	☏	_	_	_	_
+15-33	910-912	+1	_	_	_	_
+15-34	913-921	781-784-	_	_	_	_
+15-35	922-926	7377	_	_	_	_
+15-36	927-928	.	_	_	_	_
+
+#Text=Open 364 days a year ( only closed on Thanksgiving ) .
+16-1	929-933	Open	_	_	_	_
+16-2	934-937	364	time[58]	new[58]	_	_
+16-3	938-942	days	time[58]	new[58]	_	_
+16-4	943-944	a	time[58]|time[59]	new[58]|new[59]	_	_
+16-5	945-949	year	time[58]|time[59]	new[58]|new[59]	_	_
+16-6	950-951	(	_	_	_	_
+16-7	952-956	only	_	_	_	_
+16-8	957-963	closed	_	_	_	_
+16-9	964-966	on	_	_	_	_
+16-10	967-979	Thanksgiving	time	new	_	_
+16-11	980-981	)	_	_	_	_
+16-12	982-983	.	_	_	_	_
+
+#Text=is an Szechuan and Mandarin Cuisine restaurant with a soothing atmosphere and intricate menu selection .
+17-1	984-986	is	_	_	_	_
+17-2	987-989	an	place[63]	new[63]	_	_
+17-3	990-998	Szechuan	place|place[63]	new|new[63]	_	_
+17-4	999-1002	and	place[63]	new[63]	_	_
+17-5	1003-1011	Mandarin	place[63]	new[63]	_	_
+17-6	1012-1019	Cuisine	abstract|place[63]	new|new[63]	coref	22-16[94_0]
+17-7	1020-1030	restaurant	place[63]	new[63]	_	_
+17-8	1031-1035	with	place[63]	new[63]	_	_
+17-9	1036-1037	a	place[63]|abstract[64]|abstract[65]	new[63]|new[64]|new[65]	coref|coref	34-9[158_64]|34-9[159_65]
+17-10	1038-1046	soothing	place[63]|abstract[64]|abstract[65]	new[63]|new[64]|new[65]	_	_
+17-11	1047-1057	atmosphere	place[63]|abstract[64]|abstract[65]	new[63]|new[64]|new[65]	_	_
+17-12	1058-1061	and	place[63]|abstract[65]	new[63]|new[65]	_	_
+17-13	1062-1071	intricate	place[63]|abstract[65]|abstract[67]	new[63]|new[65]|new[67]	_	_
+17-14	1072-1076	menu	place[63]|abstract[65]|abstract|abstract[67]	new[63]|new[65]|new|new[67]	coref	22-2[90_0]
+17-15	1077-1086	selection	place[63]|abstract[65]|abstract[67]	new[63]|new[65]|new[67]	_	_
+17-16	1087-1088	.	_	_	_	_
+
+#Text=Sometimes referred to as “ Alice ’s ” by the locals for short ; Alice is likely to be working when you go there and is the main benefactor to achieving the friendly environment as she is very talkative .
+18-1	1089-1098	Sometimes	_	_	_	_
+18-2	1099-1107	referred	_	_	_	_
+18-3	1108-1110	to	_	_	_	_
+18-4	1111-1113	as	_	_	_	_
+18-5	1114-1115	“	_	_	_	_
+18-6	1116-1121	Alice	person[68]	giv[68]	coref	18-15[0_68]
+18-7	1122-1124	’s	person[68]	giv[68]	_	_
+18-8	1125-1126	”	_	_	_	_
+18-9	1127-1129	by	_	_	_	_
+18-10	1130-1133	the	person[69]	new[69]	coref	28-11[0_69]
+18-11	1134-1140	locals	person[69]	new[69]	_	_
+18-12	1141-1144	for	_	_	_	_
+18-13	1145-1150	short	_	_	_	_
+18-14	1151-1152	;	_	_	_	_
+18-15	1153-1158	Alice	person	giv	_	_
+18-16	1159-1161	is	_	_	_	_
+18-17	1162-1168	likely	_	_	_	_
+18-18	1169-1171	to	_	_	_	_
+18-19	1172-1174	be	_	_	_	_
+18-20	1175-1182	working	_	_	_	_
+18-21	1183-1187	when	_	_	_	_
+18-22	1188-1191	you	person	giv	_	_
+18-23	1192-1194	go	_	_	_	_
+18-24	1195-1200	there	_	_	_	_
+18-25	1201-1204	and	_	_	_	_
+18-26	1205-1207	is	_	_	_	_
+18-27	1208-1211	the	person[72]	new[72]	ana	18-36[0_72]
+18-28	1212-1216	main	person[72]	new[72]	_	_
+18-29	1217-1227	benefactor	person[72]	new[72]	_	_
+18-30	1228-1230	to	person[72]	new[72]	_	_
+18-31	1231-1240	achieving	person[72]	new[72]	_	_
+18-32	1241-1244	the	person[72]|abstract[73]	new[72]|new[73]	_	_
+18-33	1245-1253	friendly	person[72]|abstract[73]	new[72]|new[73]	_	_
+18-34	1254-1265	environment	person[72]|abstract[73]	new[72]|new[73]	_	_
+18-35	1266-1268	as	_	_	_	_
+18-36	1269-1272	she	person	giv	_	_
+18-37	1273-1275	is	_	_	_	_
+18-38	1276-1280	very	_	_	_	_
+18-39	1281-1290	talkative	_	_	_	_
+18-40	1291-1292	.	_	_	_	_
+
+#Text=Mandarin Taste has been open for over two decades and has been voted number one for quality food and unparalleled customer service .
+19-1	1293-1301	Mandarin	person|abstract[76]	giv|giv[76]	_	_
+19-2	1302-1307	Taste	abstract[76]	giv[76]	_	_
+19-3	1308-1311	has	_	_	_	_
+19-4	1312-1316	been	_	_	_	_
+19-5	1317-1321	open	_	_	_	_
+19-6	1322-1325	for	_	_	_	_
+19-7	1326-1330	over	time[77]	new[77]	_	_
+19-8	1331-1334	two	time[77]	new[77]	_	_
+19-9	1335-1342	decades	time[77]	new[77]	_	_
+19-10	1343-1346	and	_	_	_	_
+19-11	1347-1350	has	_	_	_	_
+19-12	1351-1355	been	_	_	_	_
+19-13	1356-1361	voted	_	_	_	_
+19-14	1362-1368	number	abstract[78]	new[78]	_	_
+19-15	1369-1372	one	abstract[78]	new[78]	_	_
+19-16	1373-1376	for	_	_	_	_
+19-17	1377-1384	quality	substance[79]	new[79]	coref	20-6[84_79]
+19-18	1385-1389	food	substance[79]	new[79]	_	_
+19-19	1390-1393	and	_	_	_	_
+19-20	1394-1406	unparalleled	abstract[80]	new[80]	coref	23-16[100_80]
+19-21	1407-1415	customer	abstract[80]	new[80]	_	_
+19-22	1416-1423	service	abstract[80]	new[80]	_	_
+19-23	1424-1425	.	_	_	_	_
+
+#Text=Coriander Bistro is known for it ’s Indian and Nepali food .
+20-1	1426-1435	Coriander	person|organization[82]	new|new[82]	ana|coref	20-6[0_82]|21-8
+20-2	1436-1442	Bistro	organization[82]	new[82]	_	_
+20-3	1443-1445	is	_	_	_	_
+20-4	1446-1451	known	_	_	_	_
+20-5	1452-1455	for	_	_	_	_
+20-6	1456-1458	it	organization|substance[84]	giv|giv[84]	_	_
+20-7	1459-1461	’s	substance[84]	giv[84]	_	_
+20-8	1462-1468	Indian	substance[84]	giv[84]	_	_
+20-9	1469-1472	and	substance[84]	giv[84]	_	_
+20-10	1473-1479	Nepali	substance[84]	giv[84]	_	_
+20-11	1480-1484	food	substance[84]	giv[84]	_	_
+20-12	1485-1486	.	_	_	_	_
+
+#Text=A bit on the pricey side , Coriander is an exotic restaurant best suited for adults seeking foreign foods .
+21-1	1487-1488	A	_	_	_	_
+21-2	1489-1492	bit	_	_	_	_
+21-3	1493-1495	on	_	_	_	_
+21-4	1496-1499	the	abstract[85]	new[85]	_	_
+21-5	1500-1506	pricey	abstract[85]	new[85]	_	_
+21-6	1507-1511	side	abstract[85]	new[85]	_	_
+21-7	1512-1513	,	_	_	_	_
+21-8	1514-1523	Coriander	person	giv	coref	21-10[87_0]
+21-9	1524-1526	is	_	_	_	_
+21-10	1527-1529	an	person[87]	giv[87]	coref	22-12[0_87]
+21-11	1530-1536	exotic	person[87]	giv[87]	_	_
+21-12	1537-1547	restaurant	person[87]	giv[87]	_	_
+21-13	1548-1552	best	person[87]	giv[87]	_	_
+21-14	1553-1559	suited	person[87]	giv[87]	_	_
+21-15	1560-1563	for	person[87]	giv[87]	_	_
+21-16	1564-1570	adults	person[87]|person[88]	giv[87]|new[88]	coref	35-18[0_88]
+21-17	1571-1578	seeking	person[87]|person[88]	giv[87]|new[88]	_	_
+21-18	1579-1586	foreign	person[87]|person[88]|substance[89]	giv[87]|new[88]|new[89]	_	_
+21-19	1587-1592	foods	person[87]|person[88]|substance[89]	giv[87]|new[88]|new[89]	_	_
+21-20	1593-1594	.	_	_	_	_
+
+#Text=With a large menu full of hard to pronounce dishes , Coriander features some of the finest Indian and Nepali cuisine to be had in the area .
+22-1	1595-1599	With	_	_	_	_
+22-2	1600-1601	a	abstract[90]	giv[90]	coref	23-12[99_90]
+22-3	1602-1607	large	abstract[90]	giv[90]	_	_
+22-4	1608-1612	menu	abstract[90]	giv[90]	_	_
+22-5	1613-1617	full	abstract[90]	giv[90]	_	_
+22-6	1618-1620	of	_	_	_	_
+22-7	1621-1625	hard	object[91]	new[91]	ana	22-14[93_91]
+22-8	1626-1628	to	object[91]	new[91]	_	_
+22-9	1629-1638	pronounce	object[91]	new[91]	_	_
+22-10	1639-1645	dishes	object[91]	new[91]	_	_
+22-11	1646-1647	,	_	_	_	_
+22-12	1648-1657	Coriander	person	giv	_	_
+22-13	1658-1666	features	_	_	_	_
+22-14	1667-1671	some	object[93]	giv[93]	_	_
+22-15	1672-1674	of	object[93]	giv[93]	_	_
+22-16	1675-1678	the	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-17	1679-1685	finest	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-18	1686-1692	Indian	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-19	1693-1696	and	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-20	1697-1703	Nepali	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-21	1704-1711	cuisine	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-22	1712-1714	to	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-23	1715-1717	be	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-24	1718-1721	had	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-25	1722-1724	in	object[93]|abstract[94]	giv[93]|giv[94]	_	_
+22-26	1725-1728	the	object[93]|abstract[94]|place[95]	giv[93]|giv[94]|new[95]	coref	30-16[140_95]
+22-27	1729-1733	area	object[93]|abstract[94]|place[95]	giv[93]|giv[94]|new[95]	_	_
+22-28	1734-1735	.	_	_	_	_
+
+#Text=Located in the center of town , Coriander Bistro thrives with a unique menu and excellent customer service .
+23-1	1736-1743	Located	_	_	_	_
+23-2	1744-1746	in	_	_	_	_
+23-3	1747-1750	the	place[96]	giv[96]	_	_
+23-4	1751-1757	center	place[96]	giv[96]	_	_
+23-5	1758-1760	of	place[96]	giv[96]	_	_
+23-6	1761-1765	town	place[96]|person	giv[96]|giv	coref	26-15
+23-7	1766-1767	,	_	_	_	_
+23-8	1768-1777	Coriander	person[98]	new[98]	_	_
+23-9	1778-1784	Bistro	person[98]	new[98]	_	_
+23-10	1785-1792	thrives	_	_	_	_
+23-11	1793-1797	with	_	_	_	_
+23-12	1798-1799	a	abstract[99]	giv[99]	coref	34-13[160_99]
+23-13	1800-1806	unique	abstract[99]	giv[99]	_	_
+23-14	1807-1811	menu	abstract[99]	giv[99]	_	_
+23-15	1812-1815	and	_	_	_	_
+23-16	1816-1825	excellent	abstract[100]	giv[100]	coref	38-20[191_100]
+23-17	1826-1834	customer	abstract[100]	giv[100]	_	_
+23-18	1835-1842	service	abstract[100]	giv[100]	_	_
+23-19	1843-1844	.	_	_	_	_
+
+#Text=The address is 5 Post Office Square .
+24-1	1845-1848	The	place[101]	new[101]	coref	24-4[104_101]
+24-2	1849-1856	address	place[101]	new[101]	_	_
+24-3	1857-1859	is	_	_	_	_
+24-4	1860-1861	5	place[104]	giv[104]	coref	39-1[196_104]
+24-5	1862-1866	Post	person|organization[103]|place[104]	new|new[103]|giv[104]	coref|coref	39-2|39-2[195_103]
+24-6	1867-1873	Office	organization[103]|place[104]	new[103]|giv[104]	_	_
+24-7	1874-1880	Square	place[104]	giv[104]	_	_
+24-8	1881-1882	.	_	_	_	_
+
+#Text=781-784-2300.
+25-1	1883-1896	781-784-2300.	person	new	_	_
+
+#Text=Crescent Ridge Dairy ( Cridge ) is the most popular ice cream shop in town during the Summer and Spring seasons .
+26-1	1897-1905	Crescent	abstract|place[107]|place[108]	new|new[107]|new[108]	coref|coref|coref	26-8[111_108]|27-9|27-9[118_107]
+26-2	1906-1911	Ridge	place[107]|place[108]	new[107]|new[108]	_	_
+26-3	1912-1917	Dairy	place[108]	new[108]	_	_
+26-4	1918-1919	(	_	_	_	_
+26-5	1920-1926	Cridge	place	new	coref	28-6
+26-6	1927-1928	)	_	_	_	_
+26-7	1929-1931	is	_	_	_	_
+26-8	1932-1935	the	place[111]	giv[111]	coref	34-16[162_111]
+26-9	1936-1940	most	place[111]	giv[111]	_	_
+26-10	1941-1948	popular	place[111]	giv[111]	_	_
+26-11	1949-1952	ice	place[110]|place[111]	new[110]|giv[111]	coref	28-13[122_110]
+26-12	1953-1958	cream	place[110]|place[111]	new[110]|giv[111]	_	_
+26-13	1959-1963	shop	place[111]	giv[111]	_	_
+26-14	1964-1966	in	place[111]	giv[111]	_	_
+26-15	1967-1971	town	place[111]|person	giv[111]|giv	coref	30-14
+26-16	1972-1978	during	place[111]	giv[111]	_	_
+26-17	1979-1982	the	place[111]|time[114]	giv[111]|new[114]	coref	29-30[135_114]
+26-18	1983-1989	Summer	place[111]|person|time[114]	giv[111]|new|new[114]	_	_
+26-19	1990-1993	and	place[111]|time[114]	giv[111]|new[114]	_	_
+26-20	1994-2000	Spring	place[111]|time[114]	giv[111]|new[114]	_	_
+26-21	2001-2008	seasons	place[111]|time[114]	giv[111]|new[114]	_	_
+26-22	2009-2010	.	_	_	_	_
+
+#Text=Customers enjoy the weather and dine outside as Crescent Ridge features multiple windows to order from .
+27-1	2011-2020	Customers	person	new	coref	30-34[146_0]
+27-2	2021-2026	enjoy	_	_	_	_
+27-3	2027-2030	the	abstract[116]	new[116]	coref	29-19[131_116]
+27-4	2031-2038	weather	abstract[116]	new[116]	_	_
+27-5	2039-2042	and	_	_	_	_
+27-6	2043-2047	dine	_	_	_	_
+27-7	2048-2055	outside	_	_	_	_
+27-8	2056-2058	as	_	_	_	_
+27-9	2059-2067	Crescent	abstract|place[118]	giv|giv[118]	_	_
+27-10	2068-2073	Ridge	place[118]	giv[118]	_	_
+27-11	2074-2082	features	_	_	_	_
+27-12	2083-2091	multiple	object[119]	new[119]	_	_
+27-13	2092-2099	windows	object[119]	new[119]	_	_
+27-14	2100-2102	to	object[119]	new[119]	_	_
+27-15	2103-2108	order	object[119]	new[119]	_	_
+27-16	2109-2113	from	object[119]	new[119]	_	_
+27-17	2114-2115	.	_	_	_	_
+
+#Text=Often referred to as “ Cridge ” for short by locals , the ice cream and milkshakes are second to none .
+28-1	2116-2121	Often	_	_	_	_
+28-2	2122-2130	referred	_	_	_	_
+28-3	2131-2133	to	_	_	_	_
+28-4	2134-2136	as	_	_	_	_
+28-5	2137-2138	“	_	_	_	_
+28-6	2139-2145	Cridge	place	giv	coref	30-20
+28-7	2146-2147	”	_	_	_	_
+28-8	2148-2151	for	_	_	_	_
+28-9	2152-2157	short	_	_	_	_
+28-10	2158-2160	by	_	_	_	_
+28-11	2161-2167	locals	person	giv	coref	30-12[138_0]
+28-12	2168-2169	,	_	_	_	_
+28-13	2170-2173	the	place[122]	giv[122]	_	_
+28-14	2174-2177	ice	place[122]	giv[122]	_	_
+28-15	2178-2183	cream	place[122]	giv[122]	_	_
+28-16	2184-2187	and	_	_	_	_
+28-17	2188-2198	milkshakes	substance	new	_	_
+28-18	2199-2202	are	_	_	_	_
+28-19	2203-2209	second	_	_	_	_
+28-20	2210-2212	to	_	_	_	_
+28-21	2213-2217	none	event	new	_	_
+28-22	2218-2219	.	_	_	_	_
+
+#Text=The large parking lot is frequently filled by townies , little league teams , and go byers during the warm weather and is seemingly is a desolate wasteland during the Winter and Fall seasons .
+29-1	2220-2223	The	place[126]	new[126]	_	_
+29-2	2224-2229	large	place[126]	new[126]	_	_
+29-3	2230-2237	parking	event|place[126]	new|new[126]	_	_
+29-4	2238-2241	lot	place[126]	new[126]	_	_
+29-5	2242-2244	is	_	_	_	_
+29-6	2245-2255	frequently	_	_	_	_
+29-7	2256-2262	filled	_	_	_	_
+29-8	2263-2265	by	_	_	_	_
+29-9	2266-2273	townies	place	new	_	_
+29-10	2274-2275	,	_	_	_	_
+29-11	2276-2282	little	organization[128]|organization[129]	new[128]|new[129]	_	_
+29-12	2283-2289	league	organization[128]|organization[129]	new[128]|new[129]	_	_
+29-13	2290-2295	teams	organization[129]	new[129]	_	_
+29-14	2296-2297	,	_	_	_	_
+29-15	2298-2301	and	_	_	_	_
+29-16	2302-2304	go	person[130]	new[130]	_	_
+29-17	2305-2310	byers	person[130]	new[130]	_	_
+29-18	2311-2317	during	_	_	_	_
+29-19	2318-2321	the	abstract[131]	giv[131]	_	_
+29-20	2322-2326	warm	abstract[131]	giv[131]	_	_
+29-21	2327-2334	weather	abstract[131]	giv[131]	_	_
+29-22	2335-2338	and	_	_	_	_
+29-23	2339-2341	is	_	_	_	_
+29-24	2342-2351	seemingly	_	_	_	_
+29-25	2352-2354	is	_	_	_	_
+29-26	2355-2356	a	place[132]	new[132]	_	_
+29-27	2357-2365	desolate	place[132]	new[132]	_	_
+29-28	2366-2375	wasteland	place[132]	new[132]	_	_
+29-29	2376-2382	during	place[132]	new[132]	_	_
+29-30	2383-2386	the	place[132]|person[133]|time[135]	new[132]|new[133]|giv[135]	_	_
+29-31	2387-2393	Winter	place[132]|person[133]|time[135]	new[132]|new[133]|giv[135]	_	_
+29-32	2394-2397	and	place[132]|time[135]	new[132]|giv[135]	_	_
+29-33	2398-2402	Fall	place[132]|person|time[135]	new[132]|new|giv[135]	_	_
+29-34	2403-2410	seasons	place[132]|time[135]	new[132]|giv[135]	_	_
+29-35	2411-2412	.	_	_	_	_
+
+#Text=With domestic dairy products being served and delivered year round to locals about town , the large field behind Cridge is where the cows roam free and are often a tourist attraction for it ’s customers .
+30-1	2413-2417	With	_	_	_	_
+30-2	2418-2426	domestic	abstract[136]	new[136]	_	_
+30-3	2427-2432	dairy	abstract[136]	new[136]	_	_
+30-4	2433-2441	products	abstract[136]	new[136]	_	_
+30-5	2442-2447	being	_	_	_	_
+30-6	2448-2454	served	_	_	_	_
+30-7	2455-2458	and	_	_	_	_
+30-8	2459-2468	delivered	_	_	_	_
+30-9	2469-2473	year	time	new	_	_
+30-10	2474-2479	round	_	_	_	_
+30-11	2480-2482	to	_	_	_	_
+30-12	2483-2489	locals	person[138]	giv[138]	coref	42-16[206_138]
+30-13	2490-2495	about	person[138]	giv[138]	_	_
+30-14	2496-2500	town	person[138]|person	giv[138]|giv	coref	33-11
+30-15	2501-2502	,	_	_	_	_
+30-16	2503-2506	the	place[140]	giv[140]	ana	30-34[0_140]
+30-17	2507-2512	large	place[140]	giv[140]	_	_
+30-18	2513-2518	field	place[140]	giv[140]	_	_
+30-19	2519-2525	behind	place[140]	giv[140]	_	_
+30-20	2526-2532	Cridge	place[140]|place	giv[140]|giv	_	_
+30-21	2533-2535	is	_	_	_	_
+30-22	2536-2541	where	_	_	_	_
+30-23	2542-2545	the	animal[142]	new[142]	_	_
+30-24	2546-2550	cows	animal[142]	new[142]	_	_
+30-25	2551-2555	roam	_	_	_	_
+30-26	2556-2560	free	_	_	_	_
+30-27	2561-2564	and	_	_	_	_
+30-28	2565-2568	are	_	_	_	_
+30-29	2569-2574	often	object[144]	new[144]	_	_
+30-30	2575-2576	a	object[144]	new[144]	_	_
+30-31	2577-2584	tourist	person|object[144]	new|new[144]	_	_
+30-32	2585-2595	attraction	object[144]	new[144]	_	_
+30-33	2596-2599	for	object[144]	new[144]	_	_
+30-34	2600-2602	it	object[144]|place|person[146]	new[144]|giv|giv[146]	coref	35-5[166_0]
+30-35	2603-2605	’s	object[144]|person[146]	new[144]|giv[146]	_	_
+30-36	2606-2615	customers	object[144]|person[146]	new[144]|giv[146]	_	_
+30-37	2616-2617	.	_	_	_	_
+
+#Text=355 Bay Road .
+31-1	2618-2621	355	place[148]	new[148]	_	_
+31-2	2622-2625	Bay	place|place[148]	new|new[148]	_	_
+31-3	2626-2630	Road	place[148]	new[148]	_	_
+31-4	2631-2632	.	_	_	_	_
+
+#Text=781-784-5892.
+32-1	2633-2646	781-784-5892.	person	new	_	_
+
+#Text=French Memories is a cafe located in the center of Sharon .
+33-1	2647-2653	French	place[150]	new[150]	coref	33-4[151_150]
+33-2	2654-2662	Memories	place[150]	new[150]	_	_
+33-3	2663-2665	is	_	_	_	_
+33-4	2666-2667	a	place[151]	giv[151]	coref	34-6[157_151]
+33-5	2668-2672	cafe	place[151]	giv[151]	_	_
+33-6	2673-2680	located	place[151]	giv[151]	_	_
+33-7	2681-2683	in	place[151]	giv[151]	_	_
+33-8	2684-2687	the	place[151]|place[152]	giv[151]|giv[152]	coref	41-6[199_152]
+33-9	2688-2694	center	place[151]|place[152]	giv[151]|giv[152]	_	_
+33-10	2695-2697	of	place[151]|place[152]	giv[151]|giv[152]	_	_
+33-11	2698-2704	Sharon	place[151]|place[152]|person	giv[151]|giv[152]|giv	coref	36-4
+33-12	2705-2706	.	_	_	_	_
+
+#Text=Formerly a Starbucks Cafe , French Memories features the serene atmosphere and upscale menu of a typical independent coffee shop .
+34-1	2707-2715	Formerly	place[155]	new[155]	_	_
+34-2	2716-2717	a	place[155]	new[155]	_	_
+34-3	2718-2727	Starbucks	place|place[155]	new|new[155]	_	_
+34-4	2728-2732	Cafe	place[155]	new[155]	_	_
+34-5	2733-2734	,	_	_	_	_
+34-6	2735-2741	French	abstract|place[157]	new|giv[157]	coref|coref	35-12|35-12[168_157]
+34-7	2742-2750	Memories	place[157]	giv[157]	_	_
+34-8	2751-2759	features	_	_	_	_
+34-9	2760-2763	the	abstract[158]|abstract[159]	giv[158]|giv[159]	coref	38-24[0_158]
+34-10	2764-2770	serene	abstract[158]|abstract[159]	giv[158]|giv[159]	_	_
+34-11	2771-2781	atmosphere	abstract[158]|abstract[159]	giv[158]|giv[159]	_	_
+34-12	2782-2785	and	abstract[159]	giv[159]	_	_
+34-13	2786-2793	upscale	abstract[159]|abstract[160]	giv[159]|giv[160]	coref	44-2[214_160]
+34-14	2794-2798	menu	abstract[159]|abstract[160]	giv[159]|giv[160]	_	_
+34-15	2799-2801	of	abstract[159]|abstract[160]	giv[159]|giv[160]	_	_
+34-16	2802-2803	a	abstract[159]|abstract[160]|place[162]	giv[159]|giv[160]|giv[162]	_	_
+34-17	2804-2811	typical	abstract[159]|abstract[160]|place[162]	giv[159]|giv[160]|giv[162]	_	_
+34-18	2812-2823	independent	abstract[159]|abstract[160]|place[162]	giv[159]|giv[160]|giv[162]	_	_
+34-19	2824-2830	coffee	abstract[159]|abstract[160]|substance|place[162]	giv[159]|giv[160]|new|giv[162]	coref	38-6
+34-20	2831-2835	shop	abstract[159]|abstract[160]|place[162]	giv[159]|giv[160]|giv[162]	_	_
+34-21	2836-2837	.	_	_	_	_
+
+#Text=Offering free wifi and a comfortable work or study area , French Memories serves many students and adults alike .
+35-1	2838-2846	Offering	_	_	_	_
+35-2	2847-2851	free	abstract[163]	new[163]	_	_
+35-3	2852-2856	wifi	abstract[163]	new[163]	_	_
+35-4	2857-2860	and	_	_	_	_
+35-5	2861-2862	a	place[166]	giv[166]	_	_
+35-6	2863-2874	comfortable	place[166]	giv[166]	_	_
+35-7	2875-2879	work	abstract|place[166]	new|giv[166]	_	_
+35-8	2880-2882	or	place[166]	giv[166]	_	_
+35-9	2883-2888	study	abstract|place[166]	new|giv[166]	_	_
+35-10	2889-2893	area	place[166]	giv[166]	_	_
+35-11	2894-2895	,	_	_	_	_
+35-12	2896-2902	French	abstract|place[168]	giv|giv[168]	coref	37-1[181_168]
+35-13	2903-2911	Memories	place[168]	giv[168]	_	_
+35-14	2912-2918	serves	_	_	_	_
+35-15	2919-2923	many	person[169]	new[169]	_	_
+35-16	2924-2932	students	person[169]	new[169]	_	_
+35-17	2933-2936	and	_	_	_	_
+35-18	2937-2943	adults	person	giv	_	_
+35-19	2944-2949	alike	_	_	_	_
+35-20	2950-2951	.	_	_	_	_
+
+#Text=Halfway between the Sharon High School and Sharon Train Station ( Stoughton Providence Line ) , a diverse group of people can be found on a typical weekday .
+36-1	2952-2959	Halfway	_	_	_	_
+36-2	2960-2967	between	_	_	_	_
+36-3	2968-2971	the	place[173]|place[174]	giv[173]|giv[174]	coref	43-9[213_173]
+36-4	2972-2978	Sharon	person|place[173]|place[174]	giv|giv[173]|giv[174]	coref	41-9
+36-5	2979-2983	High	person|place[173]|place[174]	new|giv[173]|giv[174]	coref	43-10
+36-6	2984-2990	School	place[173]|place[174]	giv[173]|giv[174]	_	_
+36-7	2991-2994	and	place[174]	giv[174]	_	_
+36-8	2995-3001	Sharon	place[174]|place[175]	giv[174]|new[175]	_	_
+36-9	3002-3007	Train	place[174]|place[175]	giv[174]|new[175]	_	_
+36-10	3008-3015	Station	place[174]|place[175]	giv[174]|new[175]	_	_
+36-11	3016-3017	(	_	_	_	_
+36-12	3018-3027	Stoughton	place	new	coref	55-24
+36-13	3028-3038	Providence	place	giv	_	_
+36-14	3039-3043	Line	_	_	_	_
+36-15	3044-3045	)	_	_	_	_
+36-16	3046-3047	,	_	_	_	_
+36-17	3048-3049	a	person[178]	new[178]	_	_
+36-18	3050-3057	diverse	person[178]	new[178]	_	_
+36-19	3058-3063	group	person[178]	new[178]	_	_
+36-20	3064-3066	of	person[178]	new[178]	_	_
+36-21	3067-3073	people	person[178]|person	new[178]|new	_	_
+36-22	3074-3077	can	_	_	_	_
+36-23	3078-3080	be	_	_	_	_
+36-24	3081-3086	found	_	_	_	_
+36-25	3087-3089	on	_	_	_	_
+36-26	3090-3091	a	time[180]	new[180]	_	_
+36-27	3092-3099	typical	time[180]	new[180]	_	_
+36-28	3100-3107	weekday	time[180]	new[180]	_	_
+36-29	3108-3109	.	_	_	_	_
+
+#Text=French Memories also is a small venue for local artists to perform at Open Mic ceremonies .
+37-1	3110-3116	French	place[181]	giv[181]	coref	37-5[182_181]
+37-2	3117-3125	Memories	place[181]	giv[181]	_	_
+37-3	3126-3130	also	_	_	_	_
+37-4	3131-3133	is	_	_	_	_
+37-5	3134-3135	a	place[182]	giv[182]	coref	38-1[186_182]
+37-6	3136-3141	small	place[182]	giv[182]	_	_
+37-7	3142-3147	venue	place[182]	giv[182]	_	_
+37-8	3148-3151	for	place[182]	giv[182]	_	_
+37-9	3152-3157	local	place[182]|person[183]	giv[182]|new[183]	_	_
+37-10	3158-3165	artists	place[182]|person[183]	giv[182]|new[183]	_	_
+37-11	3166-3168	to	place[182]	giv[182]	_	_
+37-12	3169-3176	perform	place[182]	giv[182]	_	_
+37-13	3177-3179	at	place[182]	giv[182]	_	_
+37-14	3180-3184	Open	place[182]|object[184]|event[185]	giv[182]|new[184]|new[185]	_	_
+37-15	3185-3188	Mic	place[182]|object[184]|event[185]	giv[182]|new[184]|new[185]	_	_
+37-16	3189-3199	ceremonies	place[182]|event[185]	giv[182]|new[185]	_	_
+37-17	3200-3201	.	_	_	_	_
+
+#Text=French Memories has been serving coffee and pastries for several years now and will continue to thrive due to its phenomenal service and atmosphere .
+38-1	3202-3208	French	place[186]	giv[186]	_	_
+38-2	3209-3217	Memories	place[186]	giv[186]	_	_
+38-3	3218-3221	has	_	_	_	_
+38-4	3222-3226	been	_	_	_	_
+38-5	3227-3234	serving	_	_	_	_
+38-6	3235-3241	coffee	substance	giv	ana	38-20
+38-7	3242-3245	and	_	_	_	_
+38-8	3246-3254	pastries	organization	new	_	_
+38-9	3255-3258	for	_	_	_	_
+38-10	3259-3266	several	time[189]	new[189]	_	_
+38-11	3267-3272	years	time[189]	new[189]	_	_
+38-12	3273-3276	now	_	_	_	_
+38-13	3277-3280	and	_	_	_	_
+38-14	3281-3285	will	_	_	_	_
+38-15	3286-3294	continue	_	_	_	_
+38-16	3295-3297	to	_	_	_	_
+38-17	3298-3304	thrive	_	_	_	_
+38-18	3305-3308	due	_	_	_	_
+38-19	3309-3311	to	_	_	_	_
+38-20	3312-3315	its	substance|abstract[191]|abstract[192]	giv|giv[191]|new[192]	coref|coref	57-14[284_191]|57-14[285_192]
+38-21	3316-3326	phenomenal	abstract[191]|abstract[192]	giv[191]|new[192]	_	_
+38-22	3327-3334	service	abstract[191]|abstract[192]	giv[191]|new[192]	_	_
+38-23	3335-3338	and	abstract[192]	new[192]	_	_
+38-24	3339-3349	atmosphere	abstract[192]|abstract	new[192]|giv	_	_
+38-25	3350-3351	.	_	_	_	_
+
+#Text=5 Post Office Square .
+39-1	3352-3353	5	place[196]	giv[196]	_	_
+39-2	3354-3358	Post	person|organization[195]|place[196]	giv|giv[195]|giv[196]	coref	61-6[293_0]
+39-3	3359-3365	Office	organization[195]|place[196]	giv[195]|giv[196]	_	_
+39-4	3366-3372	Square	place[196]	giv[196]	_	_
+39-5	3373-3374	.	_	_	_	_
+
+#Text=81-784-0900.
+40-1	3375-3387	81-784-0900.	person	new	_	_
+
+#Text=Pizzagando is conveniently located in the center of Sharon .
+41-1	3388-3398	Pizzagando	place	giv	coref	42-8
+41-2	3399-3401	is	_	_	_	_
+41-3	3402-3414	conveniently	_	_	_	_
+41-4	3415-3422	located	_	_	_	_
+41-5	3423-3425	in	_	_	_	_
+41-6	3426-3429	the	place[199]	giv[199]	_	_
+41-7	3430-3436	center	place[199]	giv[199]	_	_
+41-8	3437-3439	of	place[199]	giv[199]	_	_
+41-9	3440-3446	Sharon	place[199]|person	giv[199]|giv	coref	42-6
+41-10	3447-3448	.	_	_	_	_
+
+#Text=Having an excellent reputation throughout town , Pizzagando offers a wide variety of foods to many locals of Sharon and surrounding towns .
+42-1	3449-3455	Having	_	_	_	_
+42-2	3456-3458	an	abstract[201]	new[201]	_	_
+42-3	3459-3468	excellent	abstract[201]	new[201]	_	_
+42-4	3469-3479	reputation	abstract[201]	new[201]	_	_
+42-5	3480-3490	throughout	abstract[201]	new[201]	_	_
+42-6	3491-3495	town	abstract[201]|person	new[201]|giv	coref	42-19
+42-7	3496-3497	,	_	_	_	_
+42-8	3498-3508	Pizzagando	place	giv	coref	43-1
+42-9	3509-3515	offers	_	_	_	_
+42-10	3516-3517	a	abstract[204]	new[204]	_	_
+42-11	3518-3522	wide	abstract[204]	new[204]	_	_
+42-12	3523-3530	variety	abstract[204]	new[204]	_	_
+42-13	3531-3533	of	abstract[204]	new[204]	_	_
+42-14	3534-3539	foods	abstract[204]|substance	new[204]|new	_	_
+42-15	3540-3542	to	_	_	_	_
+42-16	3543-3547	many	person[206]	giv[206]	_	_
+42-17	3548-3554	locals	person[206]	giv[206]	_	_
+42-18	3555-3557	of	person[206]	giv[206]	_	_
+42-19	3558-3564	Sharon	person[206]|person	giv[206]|giv	coref	43-9
+42-20	3565-3568	and	person[206]	giv[206]	_	_
+42-21	3569-3580	surrounding	person[206]|place[208]	giv[206]|new[208]	_	_
+42-22	3581-3586	towns	person[206]|place[208]	giv[206]|new[208]	_	_
+42-23	3587-3588	.	_	_	_	_
+
+#Text=Pizzagando can be found down the street from Sharon High School .
+43-1	3589-3599	Pizzagando	place	giv	coref	44-16
+43-2	3600-3603	can	_	_	_	_
+43-3	3604-3606	be	_	_	_	_
+43-4	3607-3612	found	_	_	_	_
+43-5	3613-3617	down	_	_	_	_
+43-6	3618-3621	the	place[210]	new[210]	coref	45-1[223_210]
+43-7	3622-3628	street	place[210]	new[210]	_	_
+43-8	3629-3633	from	_	_	_	_
+43-9	3634-3640	Sharon	person|place[213]	giv|giv[213]	coref	44-21[219_0]
+43-10	3641-3645	High	person|place[213]	giv|giv[213]	_	_
+43-11	3646-3652	School	place[213]	giv[213]	_	_
+43-12	3653-3654	.	_	_	_	_
+
+#Text=With an extensive menu , an array of dishes , and a convenient location , Pizzagando has asserted itself as Sharon ’s main pizza joint .
+44-1	3655-3659	With	_	_	_	_
+44-2	3660-3662	an	abstract[214]	giv[214]	coref	55-2[268_214]
+44-3	3663-3672	extensive	abstract[214]	giv[214]	_	_
+44-4	3673-3677	menu	abstract[214]	giv[214]	_	_
+44-5	3678-3679	,	_	_	_	_
+44-6	3680-3682	an	_	_	_	_
+44-7	3683-3688	array	_	_	_	_
+44-8	3689-3691	of	_	_	_	_
+44-9	3692-3698	dishes	object	new	_	_
+44-10	3699-3700	,	_	_	_	_
+44-11	3701-3704	and	_	_	_	_
+44-12	3705-3706	a	place[216]	new[216]	_	_
+44-13	3707-3717	convenient	place[216]	new[216]	_	_
+44-14	3718-3726	location	place[216]	new[216]	_	_
+44-15	3727-3728	,	_	_	_	_
+44-16	3729-3739	Pizzagando	place	giv	ana	44-19
+44-17	3740-3743	has	_	_	_	_
+44-18	3744-3752	asserted	_	_	_	_
+44-19	3753-3759	itself	place	giv	coref	49-2
+44-20	3760-3762	as	_	_	_	_
+44-21	3763-3769	Sharon	person[219]|abstract[221]	giv[219]|new[221]	coref	46-1[224_219]
+44-22	3770-3772	’s	person[219]|abstract[221]	giv[219]|new[221]	_	_
+44-23	3773-3777	main	abstract[221]	new[221]	_	_
+44-24	3778-3783	pizza	substance|abstract[221]	new|new[221]	coref	48-1
+44-25	3784-3789	joint	abstract[221]	new[221]	_	_
+44-26	3790-3791	.	_	_	_	_
+
+#Text=1 Pond Street
+45-1	3792-3793	1	place[223]	giv[223]	coref	48-6[231_223]
+45-2	3794-3798	Pond	person|place[223]	giv|giv[223]	_	_
+45-3	3799-3805	Street	place[223]	giv[223]	_	_
+
+#Text=Sharon , Massachusetts 02067 .
+46-1	3806-3812	Sharon	person[224]	giv[224]	coref	53-11[0_224]
+46-2	3813-3814	,	person[224]	giv[224]	_	_
+46-3	3815-3828	Massachusetts	person[224]|place	giv[224]|giv	_	_
+46-4	3829-3834	02067	person[224]	giv[224]	_	_
+46-5	3835-3836	.	_	_	_	_
+
+#Text=781-784-8161.
+47-1	3837-3850	781-784-8161.	person	new	_	_
+
+#Text=Pizza Market , located at 376 South Main Street , is a premiere pizza and Greek cuisine walk in restaurant .
+48-1	3851-3856	Pizza	substance|place[228]	giv|new[228]	coref|coref	48-13[232_0]|48-12[235_228]
+48-2	3857-3863	Market	place[228]	new[228]	_	_
+48-3	3864-3865	,	place[228]	new[228]	_	_
+48-4	3866-3873	located	place[228]	new[228]	_	_
+48-5	3874-3876	at	place[228]	new[228]	_	_
+48-6	3877-3880	376	place[228]|place[231]	new[228]|giv[231]	coref	58-1[288_231]
+48-7	3881-3886	South	place[228]|person|place[231]	new[228]|new|giv[231]	coref	58-2
+48-8	3887-3891	Main	place[228]|person|place[231]	new[228]|giv|giv[231]	_	_
+48-9	3892-3898	Street	place[228]|place[231]	new[228]|giv[231]	_	_
+48-10	3899-3900	,	_	_	_	_
+48-11	3901-3903	is	_	_	_	_
+48-12	3904-3905	a	place[235]	giv[235]	ana	49-4[0_235]
+48-13	3906-3914	premiere	substance[232]|place[235]	giv[232]|giv[235]	coref	49-9[0_232]
+48-14	3915-3920	pizza	substance[232]|place[235]	giv[232]|giv[235]	_	_
+48-15	3921-3924	and	place[235]	giv[235]	_	_
+48-16	3925-3930	Greek	abstract[233]|event[234]|place[235]	new[233]|new[234]|giv[235]	_	_
+48-17	3931-3938	cuisine	abstract[233]|event[234]|place[235]	new[233]|new[234]|giv[235]	_	_
+48-18	3939-3943	walk	event[234]|place[235]	new[234]|giv[235]	_	_
+48-19	3944-3946	in	event[234]|place[235]	new[234]|giv[235]	_	_
+48-20	3947-3957	restaurant	place[235]	giv[235]	_	_
+48-21	3958-3959	.	_	_	_	_
+
+#Text=Though Pizzagando is it ’s main competitor , Pizza Market offers a unique selection of specialty pizzas and subs .
+49-1	3960-3966	Though	_	_	_	_
+49-2	3967-3977	Pizzagando	place	giv	coref	49-4[238_0]
+49-3	3978-3980	is	_	_	_	_
+49-4	3981-3983	it	place|place[238]	giv|giv[238]	coref|coref	49-9[240_0]|50-9[246_238]
+49-5	3984-3986	’s	place[238]	giv[238]	_	_
+49-6	3987-3991	main	place[238]	giv[238]	_	_
+49-7	3992-4002	competitor	place[238]	giv[238]	_	_
+49-8	4003-4004	,	_	_	_	_
+49-9	4005-4010	Pizza	substance|place[240]	giv|giv[240]	coref|coref	51-7|51-7[254_240]
+49-10	4011-4017	Market	place[240]	giv[240]	_	_
+49-11	4018-4024	offers	_	_	_	_
+49-12	4025-4026	a	abstract[241]	new[241]	_	_
+49-13	4027-4033	unique	abstract[241]	new[241]	_	_
+49-14	4034-4043	selection	abstract[241]	new[241]	_	_
+49-15	4044-4046	of	abstract[241]	new[241]	_	_
+49-16	4047-4056	specialty	abstract[241]|object[242]	new[241]|new[242]	_	_
+49-17	4057-4063	pizzas	abstract[241]|object[242]	new[241]|new[242]	_	_
+49-18	4064-4067	and	abstract[241]	new[241]	_	_
+49-19	4068-4072	subs	abstract[241]|object	new[241]|new	_	_
+49-20	4073-4074	.	_	_	_	_
+
+#Text=Perhaps the main reason why it thrives despite Pizzagando ’s success is it ’s location on the opposite end of town .
+50-1	4075-4082	Perhaps	_	_	_	_
+50-2	4083-4086	the	place[244]	new[244]	ana	50-6[0_244]
+50-3	4087-4091	main	place[244]	new[244]	_	_
+50-4	4092-4098	reason	place[244]	new[244]	_	_
+50-5	4099-4102	why	place[244]	new[244]	_	_
+50-6	4103-4105	it	place[244]|place	new[244]|giv	ana	50-13
+50-7	4106-4113	thrives	place[244]	new[244]	_	_
+50-8	4114-4121	despite	place[244]	new[244]	_	_
+50-9	4122-4132	Pizzagando	place[244]|place[246]|abstract[247]	new[244]|giv[246]|new[247]	_	_
+50-10	4133-4135	’s	place[244]|place[246]|abstract[247]	new[244]|giv[246]|new[247]	_	_
+50-11	4136-4143	success	place[244]|abstract[247]	new[244]|new[247]	_	_
+50-12	4144-4146	is	_	_	_	_
+50-13	4147-4149	it	place|place[249]	giv|giv[249]	coref	50-13[249_0]
+50-14	4150-4152	’s	place[249]	giv[249]	_	_
+50-15	4153-4161	location	place[249]	giv[249]	_	_
+50-16	4162-4164	on	place[249]	giv[249]	_	_
+50-17	4165-4168	the	place[249]|place[250]	giv[249]|new[250]	_	_
+50-18	4169-4177	opposite	place[249]|place[250]	giv[249]|new[250]	_	_
+50-19	4178-4181	end	place[249]|place[250]	giv[249]|new[250]	_	_
+50-20	4182-4184	of	place[249]|place[250]	giv[249]|new[250]	_	_
+50-21	4185-4189	town	place[249]|place[250]|place	giv[249]|new[250]|new	_	_
+50-22	4190-4191	.	_	_	_	_
+
+#Text=Run by a Greek family , Pizza Market is a friendly environment and hang out spot for local kids .
+51-1	4192-4195	Run	place[255]|place[256]	giv[255]|giv[256]	coref|coref|coref	51-1[255_254]|51-1[256_255]|54-11[267_256]
+51-2	4196-4198	by	place[255]|place[256]	giv[255]|giv[256]	_	_
+51-3	4199-4200	a	person[252]|place[255]|place[256]	new[252]|giv[255]|giv[256]	_	_
+51-4	4201-4206	Greek	person[252]|place[255]|place[256]	new[252]|giv[255]|giv[256]	_	_
+51-5	4207-4213	family	person[252]|place[255]|place[256]	new[252]|giv[255]|giv[256]	_	_
+51-6	4214-4215	,	place[255]|place[256]	giv[255]|giv[256]	_	_
+51-7	4216-4221	Pizza	substance|place[254]|place[255]|place[256]	giv|giv[254]|giv[255]|giv[256]	coref	54-11
+51-8	4222-4228	Market	place[254]|place[255]|place[256]	giv[254]|giv[255]|giv[256]	_	_
+51-9	4229-4231	is	place[255]|place[256]	giv[255]|giv[256]	_	_
+51-10	4232-4233	a	place[255]|place[256]	giv[255]|giv[256]	_	_
+51-11	4234-4242	friendly	place[255]|place[256]	giv[255]|giv[256]	_	_
+51-12	4243-4254	environment	place[255]|place[256]	giv[255]|giv[256]	_	_
+51-13	4255-4258	and	place[256]	giv[256]	_	_
+51-14	4259-4263	hang	place[256]|place[257]	giv[256]|new[257]	_	_
+51-15	4264-4267	out	place[256]|place[257]	giv[256]|new[257]	_	_
+51-16	4268-4272	spot	place[256]|place[257]	giv[256]|new[257]	_	_
+51-17	4273-4276	for	place[256]|place[257]	giv[256]|new[257]	_	_
+51-18	4277-4282	local	place[256]|place[257]|person[258]	giv[256]|new[257]|new[258]	_	_
+51-19	4283-4287	kids	place[256]|place[257]|person[258]	giv[256]|new[257]|new[258]	_	_
+51-20	4288-4289	.	_	_	_	_
+
+#Text=781-784-2229.
+52-1	4290-4303	781-784-2229.	person	new	_	_
+
+#Text=Sichuan Gourmet has ostensibly become the premiere Chinese restaurant of Sharon .
+53-1	4304-4311	Sichuan	place|object[261]	new|new[261]	coref|coref	55-11|55-11[272_261]
+53-2	4312-4319	Gourmet	object[261]	new[261]	_	_
+53-3	4320-4323	has	_	_	_	_
+53-4	4324-4334	ostensibly	_	_	_	_
+53-5	4335-4341	become	_	_	_	_
+53-6	4342-4345	the	_	_	_	_
+53-7	4346-4354	premiere	_	_	_	_
+53-8	4355-4362	Chinese	_	_	_	_
+53-9	4363-4373	restaurant	_	_	_	_
+53-10	4374-4376	of	_	_	_	_
+53-11	4377-4383	Sharon	person	giv	_	_
+53-12	4384-4385	.	_	_	_	_
+
+#Text=Located in the Heights Plaza a few doors down from Pizza Market .
+54-1	4386-4393	Located	_	_	_	_
+54-2	4394-4396	in	_	_	_	_
+54-3	4397-4400	the	place[264]	new[264]	_	_
+54-4	4401-4408	Heights	place|place[264]	new|new[264]	_	_
+54-5	4409-4414	Plaza	place[264]	new[264]	_	_
+54-6	4415-4416	a	place[265]	new[265]	_	_
+54-7	4417-4420	few	place[265]	new[265]	_	_
+54-8	4421-4426	doors	place[265]	new[265]	_	_
+54-9	4427-4431	down	_	_	_	_
+54-10	4432-4436	from	_	_	_	_
+54-11	4437-4442	Pizza	substance|place[267]	giv|giv[267]	coref	56-1[277_267]
+54-12	4443-4449	Market	place[267]	giv[267]	_	_
+54-13	4450-4451	.	_	_	_	_
+
+#Text=Offering a suitable menu for any Chinese food seeker , Sichuan Gourmet contends with the Chinatown about ten minutes down the road in Stoughton .
+55-1	4452-4460	Offering	_	_	_	_
+55-2	4461-4462	a	abstract[268]	giv[268]	coref	57-19[286_268]
+55-3	4463-4471	suitable	abstract[268]	giv[268]	_	_
+55-4	4472-4476	menu	abstract[268]	giv[268]	_	_
+55-5	4477-4480	for	abstract[268]	giv[268]	_	_
+55-6	4481-4484	any	abstract[268]|person[270]	giv[268]|new[270]	_	_
+55-7	4485-4492	Chinese	abstract[268]|substance[269]|person[270]	giv[268]|new[269]|new[270]	_	_
+55-8	4493-4497	food	abstract[268]|substance[269]|person[270]	giv[268]|new[269]|new[270]	_	_
+55-9	4498-4504	seeker	abstract[268]|person[270]	giv[268]|new[270]	_	_
+55-10	4505-4506	,	_	_	_	_
+55-11	4507-4514	Sichuan	place|object[272]	giv|giv[272]	coref|coref	57-1|57-1[281_272]
+55-12	4515-4522	Gourmet	object[272]	giv[272]	_	_
+55-13	4523-4531	contends	_	_	_	_
+55-14	4532-4536	with	_	_	_	_
+55-15	4537-4540	the	place[273]	new[273]	_	_
+55-16	4541-4550	Chinatown	place[273]	new[273]	_	_
+55-17	4551-4556	about	place[273]|time[274]|place[275]	new[273]|new[274]|new[275]	_	_
+55-18	4557-4560	ten	place[273]|time[274]|place[275]	new[273]|new[274]|new[275]	_	_
+55-19	4561-4568	minutes	place[273]|time[274]|place[275]	new[273]|new[274]|new[275]	_	_
+55-20	4569-4573	down	place[273]|place[275]	new[273]|new[275]	_	_
+55-21	4574-4577	the	place[273]|place[275]	new[273]|new[275]	_	_
+55-22	4578-4582	road	place[273]|place[275]	new[273]|new[275]	_	_
+55-23	4583-4585	in	place[273]|place[275]	new[273]|new[275]	_	_
+55-24	4586-4595	Stoughton	place[273]|place[275]|place	new[273]|new[275]|giv	_	_
+55-25	4596-4597	.	_	_	_	_
+
+#Text=A fairly new restaurant means a recently remodeled and refurnished dining area .
+56-1	4598-4599	A	place[277]	giv[277]	_	_
+56-2	4600-4606	fairly	place[277]	giv[277]	_	_
+56-3	4607-4610	new	place[277]	giv[277]	_	_
+56-4	4611-4621	restaurant	place[277]	giv[277]	_	_
+56-5	4622-4627	means	_	_	_	_
+56-6	4628-4629	a	place[279]	new[279]	_	_
+56-7	4630-4638	recently	place[279]	new[279]	_	_
+56-8	4639-4648	remodeled	place[279]	new[279]	_	_
+56-9	4649-4652	and	place[279]	new[279]	_	_
+56-10	4653-4664	refurnished	place[279]	new[279]	_	_
+56-11	4665-4671	dining	place|place[279]	new|new[279]	_	_
+56-12	4672-4676	area	place[279]	new[279]	_	_
+56-13	4677-4678	.	_	_	_	_
+
+#Text=Sichuan Gourmet is likely to stick around for years to come due to its excellent customer service and appetizing menu .
+57-1	4679-4686	Sichuan	place|object[281]	giv|giv[281]	ana	57-14[0_281]
+57-2	4687-4694	Gourmet	object[281]	giv[281]	_	_
+57-3	4695-4697	is	_	_	_	_
+57-4	4698-4704	likely	_	_	_	_
+57-5	4705-4707	to	_	_	_	_
+57-6	4708-4713	stick	_	_	_	_
+57-7	4714-4720	around	_	_	_	_
+57-8	4721-4724	for	_	_	_	_
+57-9	4725-4730	years	_	_	_	_
+57-10	4731-4733	to	_	_	_	_
+57-11	4734-4738	come	_	_	_	_
+57-12	4739-4742	due	_	_	_	_
+57-13	4743-4745	to	_	_	_	_
+57-14	4746-4749	its	object|abstract[284]|abstract[285]	giv|giv[284]|giv[285]	_	_
+57-15	4750-4759	excellent	abstract[284]|abstract[285]	giv[284]|giv[285]	_	_
+57-16	4760-4768	customer	person|abstract[284]|abstract[285]	new|giv[284]|giv[285]	_	_
+57-17	4769-4776	service	abstract[284]|abstract[285]	giv[284]|giv[285]	_	_
+57-18	4777-4780	and	abstract[285]	giv[285]	_	_
+57-19	4781-4791	appetizing	abstract[285]|abstract[286]	giv[285]|giv[286]	_	_
+57-20	4792-4796	menu	abstract[285]|abstract[286]	giv[285]|giv[286]	_	_
+57-21	4797-4798	.	_	_	_	_
+
+#Text=338 South Main Street .
+58-1	4799-4802	338	place[288]	giv[288]	_	_
+58-2	4803-4808	South	person|place[288]	giv|giv[288]	_	_
+58-3	4809-4813	Main	place[288]	giv[288]	_	_
+58-4	4814-4820	Street	place[288]	giv[288]	_	_
+58-5	4821-4822	.	_	_	_	_
+
+#Text=781-784-6698.
+59-1	4823-4836	781-784-6698.	person	new	_	_
+
+#Text=Sleep
+60-1	4837-4842	Sleep	person	new	_	_
+
+#Text=Holiday Inn Express , 395 Old Post Rd , ☏ +1781 784-1000 .
+61-1	4843-4850	Holiday	person[291]|object[292]	new[291]|new[292]	_	_
+61-2	4851-4854	Inn	person[291]|object[292]	new[291]|new[292]	_	_
+61-3	4855-4862	Express	object[292]	new[292]	_	_
+61-4	4863-4864	,	_	_	_	_
+61-5	4865-4868	395	place[294]	new[294]	_	_
+61-6	4869-4872	Old	person[293]|place[294]	giv[293]|new[294]	_	_
+61-7	4873-4877	Post	person[293]|place[294]	giv[293]|new[294]	_	_
+61-8	4878-4880	Rd	place[294]	new[294]	_	_
+61-9	4881-4882	,	_	_	_	_
+61-10	4883-4884	☏	abstract[295]	new[295]	_	_
+61-11	4885-4890	+1781	abstract[295]	new[295]	_	_
+61-12	4891-4899	784-1000	abstract[295]	new[295]	_	_
+61-13	4900-4901	.	_	_	_	_

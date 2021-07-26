@@ -1,0 +1,718 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Become a Veterinary Specialist in Sonora , Arizona
+1-1	0-6	Become	_	_	_	_
+1-2	7-8	a	person[1]	new[1]	ana	11-10[59_1]
+1-3	9-19	Veterinary	person[1]	new[1]	_	_
+1-4	20-30	Specialist	person[1]	new[1]	_	_
+1-5	31-33	in	_	_	_	_
+1-6	34-40	Sonora	place[2]	new[2]	coref	5-25[29_2]
+1-7	41-42	,	place[2]	new[2]	_	_
+1-8	43-50	Arizona	place[2]|place	new[2]|new	coref	5-27
+
+#Text=Veterinarians are the doctors responsible for the diagnosis , treatment , and care of all types of animals .
+2-1	51-64	Veterinarians	person	new	coref	2-3[5_0]
+2-2	65-68	are	_	_	_	_
+2-3	69-72	the	person[5]	giv[5]	ana	3-3[0_5]
+2-4	73-80	doctors	person[5]	giv[5]	_	_
+2-5	81-92	responsible	person[5]	giv[5]	_	_
+2-6	93-96	for	person[5]	giv[5]	_	_
+2-7	97-100	the	person[5]|abstract[6]	giv[5]|new[6]	_	_
+2-8	101-110	diagnosis	person[5]|abstract[6]	giv[5]|new[6]	_	_
+2-9	111-112	,	person[5]	giv[5]	_	_
+2-10	113-122	treatment	person[5]|event	giv[5]|new	coref	9-18[48_0]
+2-11	123-124	,	person[5]	giv[5]	_	_
+2-12	125-128	and	person[5]	giv[5]	_	_
+2-13	129-133	care	person[5]|abstract[8]	giv[5]|new[8]	coref	4-12[20_8]
+2-14	134-136	of	person[5]|abstract[8]	giv[5]|new[8]	_	_
+2-15	137-140	all	person[5]|abstract[8]|animal[9]	giv[5]|new[8]|new[9]	_	_
+2-16	141-146	types	person[5]|abstract[8]|animal[9]	giv[5]|new[8]|new[9]	_	_
+2-17	147-149	of	person[5]|abstract[8]|animal[9]	giv[5]|new[8]|new[9]	_	_
+2-18	150-157	animals	person[5]|abstract[8]|animal[9]|animal	giv[5]|new[8]|new[9]|new	coref	8-23
+2-19	158-159	.	_	_	_	_
+
+#Text=After receiving their undergraduate degree , veterinarians then complete 4 years of veterinary school .
+3-1	160-165	After	_	_	_	_
+3-2	166-175	receiving	_	_	_	_
+3-3	176-181	their	person|abstract[12]	giv|new[12]	coref|coref	3-7|10-6[53_12]
+3-4	182-195	undergraduate	abstract[12]	new[12]	_	_
+3-5	196-202	degree	abstract[12]	new[12]	_	_
+3-6	203-204	,	_	_	_	_
+3-7	205-218	veterinarians	person	giv	_	_
+3-8	219-223	then	_	_	_	_
+3-9	224-232	complete	_	_	_	_
+3-10	233-234	4	time[14]	new[14]	_	_
+3-11	235-240	years	time[14]	new[14]	_	_
+3-12	241-243	of	time[14]	new[14]	_	_
+3-13	244-254	veterinary	time[14]|person|organization[16]	new[14]|new|new[16]	coref|coref	8-1[35_16]|11-27
+3-14	255-261	school	time[14]|organization[16]	new[14]|new[16]	_	_
+3-15	262-263	.	_	_	_	_
+
+#Text=Veterinary specialists are those who specialize in a certain type of animal care such as surgery , emergency medicine , or oncology .
+4-1	264-274	Veterinary	abstract[17]	new[17]	coref	20-4[126_17]
+4-2	275-286	specialists	abstract[17]	new[17]	_	_
+4-3	287-290	are	_	_	_	_
+4-4	291-296	those	_	_	_	_
+4-5	297-300	who	_	_	_	_
+4-6	301-311	specialize	_	_	_	_
+4-7	312-314	in	_	_	_	_
+4-8	315-316	a	abstract[18]	new[18]	_	_
+4-9	317-324	certain	abstract[18]	new[18]	_	_
+4-10	325-329	type	abstract[18]	new[18]	_	_
+4-11	330-332	of	abstract[18]	new[18]	_	_
+4-12	333-339	animal	abstract[18]|animal|abstract[20]	new[18]|new|giv[20]	coref|coref	9-4|9-14[47_20]
+4-13	340-344	care	abstract[18]|abstract[20]	new[18]|giv[20]	_	_
+4-14	345-349	such	abstract[18]|abstract[20]	new[18]|giv[20]	_	_
+4-15	350-352	as	abstract[18]|abstract[20]	new[18]|giv[20]	_	_
+4-16	353-360	surgery	abstract[18]|abstract[20]|abstract	new[18]|giv[20]|new	coref	22-14
+4-17	361-362	,	abstract[18]|abstract[20]	new[18]|giv[20]	_	_
+4-18	363-372	emergency	abstract[18]|abstract[20]|abstract|abstract[23]	new[18]|giv[20]|new|new[23]	coref	17-10[110_23]
+4-19	373-381	medicine	abstract[18]|abstract[20]|abstract[23]	new[18]|giv[20]|new[23]	_	_
+4-20	382-383	,	abstract[18]|abstract[20]	new[18]|giv[20]	_	_
+4-21	384-386	or	abstract[18]|abstract[20]	new[18]|giv[20]	_	_
+4-22	387-395	oncology	abstract[18]|abstract[20]|abstract	new[18]|giv[20]|new	coref	22-20
+4-23	396-397	.	_	_	_	_
+
+#Text=Although you can find work in numerous locations all over the world , read on to learn how to become a veterinary specialist in Sonora , Arizona .
+5-1	398-406	Although	_	_	_	_
+5-2	407-410	you	person	acc	ana	7-5
+5-3	411-414	can	_	_	_	_
+5-4	415-419	find	_	_	_	_
+5-5	420-424	work	abstract	new	_	_
+5-6	425-427	in	_	_	_	_
+5-7	428-436	numerous	place[27]	new[27]	_	_
+5-8	437-446	locations	place[27]	new[27]	_	_
+5-9	447-450	all	place[27]|place[28]	new[27]|new[28]	_	_
+5-10	451-455	over	place[27]|place[28]	new[27]|new[28]	_	_
+5-11	456-459	the	place[27]|place[28]	new[27]|new[28]	_	_
+5-12	460-465	world	place[27]|place[28]	new[27]|new[28]	_	_
+5-13	466-467	,	_	_	_	_
+5-14	468-472	read	_	_	_	_
+5-15	473-475	on	_	_	_	_
+5-16	476-478	to	_	_	_	_
+5-17	479-484	learn	_	_	_	_
+5-18	485-488	how	_	_	_	_
+5-19	489-491	to	_	_	_	_
+5-20	492-498	become	_	_	_	_
+5-21	499-500	a	_	_	_	_
+5-22	501-511	veterinary	_	_	_	_
+5-23	512-522	specialist	_	_	_	_
+5-24	523-525	in	_	_	_	_
+5-25	526-532	Sonora	place[29]	giv[29]	coref	7-12[33_29]
+5-26	533-534	,	place[29]	giv[29]	_	_
+5-27	535-542	Arizona	place[29]|place	giv[29]|giv	coref	7-14
+5-28	543-544	.	_	_	_	_
+
+#Text=Steps
+6-1	545-550	Steps	abstract	new	_	_
+
+#Text=Begin preparing early if you wish to become a veterinarian in Sonora , Arizona .
+7-1	551-556	Begin	_	_	_	_
+7-2	557-566	preparing	_	_	_	_
+7-3	567-572	early	_	_	_	_
+7-4	573-575	if	_	_	_	_
+7-5	576-579	you	person	giv	ana	9-30
+7-6	580-584	wish	_	_	_	_
+7-7	585-587	to	_	_	_	_
+7-8	588-594	become	_	_	_	_
+7-9	595-596	a	_	_	_	_
+7-10	597-609	veterinarian	_	_	_	_
+7-11	610-612	in	_	_	_	_
+7-12	613-619	Sonora	place[33]	giv[33]	coref	20-3[0_33]
+7-13	620-621	,	place[33]	giv[33]	_	_
+7-14	622-629	Arizona	place[33]|place	giv[33]|giv	coref	14-7
+7-15	630-631	.	_	_	_	_
+
+#Text=High school students should achieve high grades , high test scores , and try to work or volunteer in some capacity with animals .
+8-1	632-636	High	organization[35]|person[36]	giv[35]|new[36]	coref|coref	11-27[63_35]|19-5[121_36]
+8-2	637-643	school	organization[35]|person[36]	giv[35]|new[36]	_	_
+8-3	644-652	students	person[36]	new[36]	_	_
+8-4	653-659	should	_	_	_	_
+8-5	660-667	achieve	_	_	_	_
+8-6	668-672	high	abstract[37]|abstract[38]	new[37]|new[38]	coref|coref	10-11[54_37]|10-11[55_38]
+8-7	673-679	grades	abstract[37]|abstract[38]	new[37]|new[38]	_	_
+8-8	680-681	,	abstract[38]	new[38]	_	_
+8-9	682-686	high	abstract[38]|abstract[39]	new[38]|new[39]	coref	15-27[97_39]
+8-10	687-691	test	abstract[38]|abstract[39]	new[38]|new[39]	_	_
+8-11	692-698	scores	abstract[38]|abstract[39]	new[38]|new[39]	_	_
+8-12	699-700	,	_	_	_	_
+8-13	701-704	and	_	_	_	_
+8-14	705-708	try	_	_	_	_
+8-15	709-711	to	_	_	_	_
+8-16	712-716	work	_	_	_	_
+8-17	717-719	or	_	_	_	_
+8-18	720-729	volunteer	_	_	_	_
+8-19	730-732	in	_	_	_	_
+8-20	733-737	some	abstract[40]	new[40]	_	_
+8-21	738-746	capacity	abstract[40]	new[40]	_	_
+8-22	747-751	with	_	_	_	_
+8-23	752-759	animals	animal	giv	coref	23-8[143_0]
+8-24	760-761	.	_	_	_	_
+
+#Text=Working at an animal clinic is an ideal way to gain experience with animal care , watch medical treatment , and to determine if the job is really what you want to do .
+9-1	762-769	Working	_	_	_	_
+9-2	770-772	at	_	_	_	_
+9-3	773-775	an	place[43]	new[43]	_	_
+9-4	776-782	animal	animal|place[43]	giv|new[43]	coref	9-14
+9-5	783-789	clinic	place[43]	new[43]	_	_
+9-6	790-792	is	_	_	_	_
+9-7	793-795	an	abstract[44]	new[44]	_	_
+9-8	796-801	ideal	abstract[44]	new[44]	_	_
+9-9	802-805	way	abstract[44]	new[44]	_	_
+9-10	806-808	to	abstract[44]	new[44]	_	_
+9-11	809-813	gain	abstract[44]	new[44]	_	_
+9-12	814-824	experience	abstract[44]|abstract[45]	new[44]|new[45]	coref	18-13[115_45]
+9-13	825-829	with	abstract[44]|abstract[45]	new[44]|new[45]	_	_
+9-14	830-836	animal	abstract[44]|abstract[45]|animal|abstract[47]	new[44]|new[45]|giv|giv[47]	coref	11-38
+9-15	837-841	care	abstract[44]|abstract[45]|abstract[47]	new[44]|new[45]|giv[47]	_	_
+9-16	842-843	,	abstract[44]	new[44]	_	_
+9-17	844-849	watch	abstract[44]	new[44]	_	_
+9-18	850-857	medical	abstract[44]|event[48]	new[44]|giv[48]	_	_
+9-19	858-867	treatment	abstract[44]|event[48]	new[44]|giv[48]	_	_
+9-20	868-869	,	abstract[44]	new[44]	_	_
+9-21	870-873	and	abstract[44]	new[44]	_	_
+9-22	874-876	to	abstract[44]	new[44]	_	_
+9-23	877-886	determine	abstract[44]	new[44]	_	_
+9-24	887-889	if	abstract[44]	new[44]	_	_
+9-25	890-893	the	abstract[44]|abstract[49]	new[44]|new[49]	_	_
+9-26	894-897	job	abstract[44]|abstract[49]	new[44]|new[49]	_	_
+9-27	898-900	is	abstract[44]	new[44]	_	_
+9-28	901-907	really	abstract[44]	new[44]	_	_
+9-29	908-912	what	abstract[44]	new[44]	_	_
+9-30	913-916	you	abstract[44]|person	new[44]|giv	ana	11-3
+9-31	917-921	want	abstract[44]	new[44]	_	_
+9-32	922-924	to	abstract[44]	new[44]	_	_
+9-33	925-927	do	abstract[44]	new[44]	_	_
+9-34	928-929	.	_	_	_	_
+
+#Text=Graduate from a university with a bachelor 's degree , preferably with high grades and top honors .
+10-1	930-938	Graduate	_	_	_	_
+10-2	939-943	from	_	_	_	_
+10-3	944-945	a	organization[51]	new[51]	_	_
+10-4	946-956	university	organization[51]	new[51]	_	_
+10-5	957-961	with	_	_	_	_
+10-6	962-963	a	abstract[53]	giv[53]	coref	15-21[95_53]
+10-7	964-972	bachelor	abstract[52]|abstract[53]	new[52]|giv[53]	_	_
+10-8	973-975	's	abstract[52]|abstract[53]	new[52]|giv[53]	_	_
+10-9	976-982	degree	abstract[53]	giv[53]	_	_
+10-10	983-984	,	_	_	_	_
+10-11	985-995	preferably	abstract[54]|abstract[55]	giv[54]|giv[55]	_	_
+10-12	996-1000	with	abstract[54]|abstract[55]	giv[54]|giv[55]	_	_
+10-13	1001-1005	high	abstract[54]|abstract[55]	giv[54]|giv[55]	_	_
+10-14	1006-1012	grades	abstract[54]|abstract[55]	giv[54]|giv[55]	_	_
+10-15	1013-1016	and	abstract[55]	giv[55]	_	_
+10-16	1017-1020	top	abstract[55]|abstract[56]	giv[55]|new[56]	_	_
+10-17	1021-1027	honors	abstract[55]|abstract[56]	giv[55]|new[56]	_	_
+10-18	1028-1029	.	_	_	_	_
+
+#Text=Although technically you may graduate in any discipline , those who have degrees in any of the following may have a competitive edge when applying to veterinary school : biology , chemistry , zoology , biochemistry , animal biology , and other similar hard sciences .
+11-1	1030-1038	Although	_	_	_	_
+11-2	1039-1050	technically	_	_	_	_
+11-3	1051-1054	you	person	giv	ana	12-11
+11-4	1055-1058	may	_	_	_	_
+11-5	1059-1067	graduate	_	_	_	_
+11-6	1068-1070	in	_	_	_	_
+11-7	1071-1074	any	abstract[58]	new[58]	_	_
+11-8	1075-1085	discipline	abstract[58]	new[58]	_	_
+11-9	1086-1087	,	_	_	_	_
+11-10	1088-1093	those	person[59]	giv[59]	_	_
+11-11	1094-1097	who	person[59]	giv[59]	_	_
+11-12	1098-1102	have	person[59]	giv[59]	_	_
+11-13	1103-1110	degrees	person[59]|abstract[60]	giv[59]|new[60]	_	_
+11-14	1111-1113	in	person[59]|abstract[60]	giv[59]|new[60]	_	_
+11-15	1114-1117	any	person[59]|abstract[60]	giv[59]|new[60]	_	_
+11-16	1118-1120	of	person[59]|abstract[60]	giv[59]|new[60]	_	_
+11-17	1121-1124	the	person[59]|abstract[60]	giv[59]|new[60]	_	_
+11-18	1125-1134	following	person[59]|abstract[60]	giv[59]|new[60]	_	_
+11-19	1135-1138	may	_	_	_	_
+11-20	1139-1143	have	_	_	_	_
+11-21	1144-1145	a	abstract[61]	new[61]	appos	11-30[0_61]
+11-22	1146-1157	competitive	abstract[61]	new[61]	_	_
+11-23	1158-1162	edge	abstract[61]	new[61]	_	_
+11-24	1163-1167	when	_	_	_	_
+11-25	1168-1176	applying	_	_	_	_
+11-26	1177-1179	to	_	_	_	_
+11-27	1180-1190	veterinary	person|organization[63]	giv|giv[63]	coref|coref	12-3|12-3[73_63]
+11-28	1191-1197	school	organization[63]	giv[63]	_	_
+11-29	1198-1199	:	_	_	_	_
+11-30	1200-1207	biology	abstract|abstract[65]	giv|giv[65]	appos|appos	11-30[65_0]|11-32[0_65]
+11-31	1208-1209	,	abstract[65]	giv[65]	_	_
+11-32	1210-1219	chemistry	abstract[65]|abstract	giv[65]|giv	appos	11-34
+11-33	1220-1221	,	abstract[65]	giv[65]	_	_
+11-34	1222-1229	zoology	abstract[65]|abstract	giv[65]|giv	appos	11-36
+11-35	1230-1231	,	abstract[65]	giv[65]	_	_
+11-36	1232-1244	biochemistry	abstract[65]|abstract	giv[65]|giv	appos	11-38[70_0]
+11-37	1245-1246	,	abstract[65]	giv[65]	_	_
+11-38	1247-1253	animal	abstract[65]|animal|abstract[70]	giv[65]|giv|giv[70]	appos	11-42[71_70]
+11-39	1254-1261	biology	abstract[65]|abstract[70]	giv[65]|giv[70]	_	_
+11-40	1262-1263	,	abstract[65]	giv[65]	_	_
+11-41	1264-1267	and	abstract[65]	giv[65]	_	_
+11-42	1268-1273	other	abstract[65]|abstract[71]	giv[65]|giv[71]	_	_
+11-43	1274-1281	similar	abstract[65]|abstract[71]	giv[65]|giv[71]	_	_
+11-44	1282-1286	hard	abstract[65]|abstract[71]	giv[65]|giv[71]	_	_
+11-45	1287-1295	sciences	abstract[65]|abstract[71]	giv[65]|giv[71]	_	_
+11-46	1296-1297	.	_	_	_	_
+
+#Text=Apply to veterinary school either after graduation or while in your final year of undergraduate school .
+12-1	1298-1303	Apply	_	_	_	_
+12-2	1304-1306	to	_	_	_	_
+12-3	1307-1317	veterinary	person|organization[73]	giv|giv[73]	coref|coref	12-15[77_73]|13-19
+12-4	1318-1324	school	organization[73]	giv[73]	_	_
+12-5	1325-1331	either	event[74]	new[74]	_	_
+12-6	1332-1337	after	event[74]	new[74]	_	_
+12-7	1338-1348	graduation	event[74]	new[74]	_	_
+12-8	1349-1351	or	_	_	_	_
+12-9	1352-1357	while	_	_	_	_
+12-10	1358-1360	in	_	_	_	_
+12-11	1361-1365	your	person|time[76]	giv|new[76]	ana	14-10
+12-12	1366-1371	final	time[76]	new[76]	_	_
+12-13	1372-1376	year	time[76]	new[76]	_	_
+12-14	1377-1379	of	time[76]	new[76]	_	_
+12-15	1380-1393	undergraduate	time[76]|organization[77]	new[76]|giv[77]	coref	14-16[88_77]
+12-16	1394-1400	school	time[76]|organization[77]	new[76]|giv[77]	_	_
+12-17	1401-1402	.	_	_	_	_
+
+#Text=There are 28 veterinary colleges in the United States that meet the standards set forth by the American Veterinary Medical Association ( AVMA ) .
+13-1	1403-1408	There	_	_	_	_
+13-2	1409-1412	are	_	_	_	_
+13-3	1413-1415	28	organization[78]	new[78]	_	_
+13-4	1416-1426	veterinary	organization[78]	new[78]	_	_
+13-5	1427-1435	colleges	organization[78]	new[78]	_	_
+13-6	1436-1438	in	organization[78]	new[78]	_	_
+13-7	1439-1442	the	organization[78]|place[79]	new[78]|new[79]	_	_
+13-8	1443-1449	United	organization[78]|place[79]	new[78]|new[79]	_	_
+13-9	1450-1456	States	organization[78]|place[79]	new[78]|new[79]	_	_
+13-10	1457-1461	that	organization[78]	new[78]	_	_
+13-11	1462-1466	meet	organization[78]	new[78]	_	_
+13-12	1467-1470	the	organization[78]|abstract[80]	new[78]|new[80]	_	_
+13-13	1471-1480	standards	organization[78]|abstract[80]	new[78]|new[80]	_	_
+13-14	1481-1484	set	organization[78]|abstract[80]	new[78]|new[80]	_	_
+13-15	1485-1490	forth	organization[78]|abstract[80]	new[78]|new[80]	_	_
+13-16	1491-1493	by	organization[78]|abstract[80]	new[78]|new[80]	_	_
+13-17	1494-1497	the	organization[78]|abstract[80]|organization[82]	new[78]|new[80]|new[82]	appos	13-23[0_82]
+13-18	1498-1506	American	organization[78]|abstract[80]|organization[82]	new[78]|new[80]|new[82]	_	_
+13-19	1507-1517	Veterinary	organization[78]|abstract[80]|person|organization[82]	new[78]|new[80]|giv|new[82]	coref	20-4
+13-20	1518-1525	Medical	organization[78]|abstract[80]|organization[82]	new[78]|new[80]|new[82]	_	_
+13-21	1526-1537	Association	organization[78]|abstract[80]|organization[82]	new[78]|new[80]|new[82]	_	_
+13-22	1538-1539	(	_	_	_	_
+13-23	1540-1544	AVMA	organization	giv	coref	27-1[164_0]
+13-24	1545-1546	)	_	_	_	_
+13-25	1547-1548	.	_	_	_	_
+
+#Text=There are no veterinary schools in Arizona , so you must be prepared to attend a school in another state .
+14-1	1549-1554	There	_	_	_	_
+14-2	1555-1558	are	_	_	_	_
+14-3	1559-1561	no	organization[85]	new[85]	coref	15-4[91_85]
+14-4	1562-1572	veterinary	abstract|organization[85]	new|new[85]	coref	15-4
+14-5	1573-1580	schools	organization[85]	new[85]	_	_
+14-6	1581-1583	in	_	_	_	_
+14-7	1584-1591	Arizona	place	giv	coref	20-19
+14-8	1592-1593	,	_	_	_	_
+14-9	1594-1596	so	_	_	_	_
+14-10	1597-1600	you	person	giv	ana	15-7
+14-11	1601-1605	must	_	_	_	_
+14-12	1606-1608	be	_	_	_	_
+14-13	1609-1617	prepared	_	_	_	_
+14-14	1618-1620	to	_	_	_	_
+14-15	1621-1627	attend	_	_	_	_
+14-16	1628-1629	a	organization[88]	giv[88]	coref	16-1[101_88]
+14-17	1630-1636	school	organization[88]	giv[88]	_	_
+14-18	1637-1639	in	organization[88]	giv[88]	_	_
+14-19	1640-1647	another	organization[88]|place[89]	giv[88]|new[89]	coref	28-7[0_89]
+14-20	1648-1653	state	organization[88]|place[89]	giv[88]|new[89]	_	_
+14-21	1654-1655	.	_	_	_	_
+
+#Text=When applying to veterinary schools , you must have taken all prerequisite classes , which are usually completed while earning your undergraduate degree , and submit test scores , which include the GRE , VCAT , or MCAT .
+15-1	1656-1660	When	_	_	_	_
+15-2	1661-1669	applying	_	_	_	_
+15-3	1670-1672	to	_	_	_	_
+15-4	1673-1683	veterinary	abstract|organization[91]	giv|giv[91]	coref	19-1[119_91]
+15-5	1684-1691	schools	organization[91]	giv[91]	_	_
+15-6	1692-1693	,	_	_	_	_
+15-7	1694-1697	you	person	giv	ana	15-21
+15-8	1698-1702	must	_	_	_	_
+15-9	1703-1707	have	_	_	_	_
+15-10	1708-1713	taken	_	_	_	_
+15-11	1714-1717	all	abstract[93]	new[93]	_	_
+15-12	1718-1730	prerequisite	abstract[93]	new[93]	_	_
+15-13	1731-1738	classes	abstract[93]	new[93]	_	_
+15-14	1739-1740	,	abstract[93]	new[93]	_	_
+15-15	1741-1746	which	abstract[93]	new[93]	_	_
+15-16	1747-1750	are	abstract[93]	new[93]	_	_
+15-17	1751-1758	usually	abstract[93]	new[93]	_	_
+15-18	1759-1768	completed	abstract[93]	new[93]	_	_
+15-19	1769-1774	while	_	_	_	_
+15-20	1775-1782	earning	_	_	_	_
+15-21	1783-1787	your	person|abstract[95]	giv|giv[95]	ana	16-8
+15-22	1788-1801	undergraduate	abstract[95]	giv[95]	_	_
+15-23	1802-1808	degree	abstract[95]	giv[95]	_	_
+15-24	1809-1810	,	_	_	_	_
+15-25	1811-1814	and	_	_	_	_
+15-26	1815-1821	submit	_	_	_	_
+15-27	1822-1826	test	abstract|abstract[97]	new|giv[97]	coref	30-13[182_0]
+15-28	1827-1833	scores	abstract[97]	giv[97]	_	_
+15-29	1834-1835	,	abstract[97]	giv[97]	_	_
+15-30	1836-1841	which	abstract[97]	giv[97]	_	_
+15-31	1842-1849	include	abstract[97]	giv[97]	_	_
+15-32	1850-1853	the	abstract[97]|abstract[98]	giv[97]|new[98]	_	_
+15-33	1854-1857	GRE	abstract[97]|abstract[98]	giv[97]|new[98]	_	_
+15-34	1858-1859	,	abstract[97]	giv[97]	_	_
+15-35	1860-1864	VCAT	abstract[97]|abstract	giv[97]|new	_	_
+15-36	1865-1866	,	abstract[97]	giv[97]	_	_
+15-37	1867-1869	or	abstract[97]	giv[97]	_	_
+15-38	1870-1874	MCAT	abstract[97]|abstract	giv[97]|new	_	_
+15-39	1875-1876	.	_	_	_	_
+
+#Text=Every school has different requirements , so you must make sure you fulfill the requirements before you apply .
+16-1	1877-1882	Every	organization[101]	giv[101]	coref	32-16[191_101]
+16-2	1883-1889	school	organization[101]	giv[101]	_	_
+16-3	1890-1893	has	_	_	_	_
+16-4	1894-1903	different	abstract[102]	new[102]	coref	16-14[105_102]
+16-5	1904-1916	requirements	abstract[102]	new[102]	_	_
+16-6	1917-1918	,	_	_	_	_
+16-7	1919-1921	so	_	_	_	_
+16-8	1922-1925	you	person	giv	ana	16-12
+16-9	1926-1930	must	_	_	_	_
+16-10	1931-1935	make	_	_	_	_
+16-11	1936-1940	sure	_	_	_	_
+16-12	1941-1944	you	person	giv	ana	16-17
+16-13	1945-1952	fulfill	_	_	_	_
+16-14	1953-1956	the	abstract[105]	giv[105]	coref	34-7[198_105]
+16-15	1957-1969	requirements	abstract[105]	giv[105]	_	_
+16-16	1970-1976	before	_	_	_	_
+16-17	1977-1980	you	person	giv	ana	17-7
+16-18	1981-1986	apply	_	_	_	_
+16-19	1987-1988	.	_	_	_	_
+
+#Text=Apply for an internship upon receiving your Doctor of Veterinary Medicine ( DVM ) .
+17-1	1989-1994	Apply	_	_	_	_
+17-2	1995-1998	for	_	_	_	_
+17-3	1999-2001	an	event[107]	new[107]	coref	21-4[0_107]
+17-4	2002-2012	internship	event[107]	new[107]	_	_
+17-5	2013-2017	upon	_	_	_	_
+17-6	2018-2027	receiving	_	_	_	_
+17-7	2028-2032	your	person|abstract[109]	giv|new[109]	appos|ana	17-13[0_109]|18-8
+17-8	2033-2039	Doctor	abstract[109]	new[109]	_	_
+17-9	2040-2042	of	abstract[109]	new[109]	_	_
+17-10	2043-2053	Veterinary	abstract[109]|abstract[110]	new[109]|giv[110]	coref	22-23[0_110]
+17-11	2054-2062	Medicine	abstract[109]|abstract[110]	new[109]|giv[110]	_	_
+17-12	2063-2064	(	_	_	_	_
+17-13	2065-2068	DVM	abstract	giv	_	_
+17-14	2069-2070	)	_	_	_	_
+17-15	2071-2072	.	_	_	_	_
+
+#Text=Interns are typically paid very little but you gain valuable knowledge and experience that can help you secure employment in the future .
+18-1	2073-2080	Interns	person	new	coref	22-1
+18-2	2081-2084	are	_	_	_	_
+18-3	2085-2094	typically	_	_	_	_
+18-4	2095-2099	paid	_	_	_	_
+18-5	2100-2104	very	_	_	_	_
+18-6	2105-2111	little	_	_	_	_
+18-7	2112-2115	but	_	_	_	_
+18-8	2116-2119	you	person	giv	ana	18-17
+18-9	2120-2124	gain	_	_	_	_
+18-10	2125-2133	valuable	abstract[114]	new[114]	_	_
+18-11	2134-2143	knowledge	abstract[114]	new[114]	_	_
+18-12	2144-2147	and	_	_	_	_
+18-13	2148-2158	experience	abstract[115]	giv[115]	coref	32-8[189_115]
+18-14	2159-2163	that	abstract[115]	giv[115]	_	_
+18-15	2164-2167	can	abstract[115]	giv[115]	_	_
+18-16	2168-2172	help	abstract[115]	giv[115]	_	_
+18-17	2173-2176	you	abstract[115]|person	giv[115]|giv	ana	20-11
+18-18	2177-2183	secure	abstract[115]	giv[115]	_	_
+18-19	2184-2194	employment	abstract[115]|abstract	giv[115]|new	_	_
+18-20	2195-2197	in	_	_	_	_
+18-21	2198-2201	the	time[118]	new[118]	_	_
+18-22	2202-2208	future	time[118]	new[118]	_	_
+18-23	2209-2210	.	_	_	_	_
+
+#Text=Many schools begin preparing their students for internships before they graduate .
+19-1	2211-2215	Many	organization[119]	giv[119]	ana	19-5[0_119]
+19-2	2216-2223	schools	organization[119]	giv[119]	_	_
+19-3	2224-2229	begin	_	_	_	_
+19-4	2230-2239	preparing	_	_	_	_
+19-5	2240-2245	their	organization|person[121]	giv|giv[121]	ana	19-10[0_121]
+19-6	2246-2254	students	person[121]	giv[121]	_	_
+19-7	2255-2258	for	_	_	_	_
+19-8	2259-2270	internships	abstract	new	_	_
+19-9	2271-2277	before	_	_	_	_
+19-10	2278-2282	they	person	giv	_	_
+19-11	2283-2291	graduate	_	_	_	_
+19-12	2292-2293	.	_	_	_	_
+
+#Text=Contact the Sonora Veterinary Specialists group , which may help you become a veterinary specialist in Sonora , Arizona .
+20-1	2294-2301	Contact	_	_	_	_
+20-2	2302-2305	the	organization[127]	new[127]	_	_
+20-3	2306-2312	Sonora	place|organization[127]	giv|new[127]	coref	20-17[129_0]
+20-4	2313-2323	Veterinary	person|abstract[126]|organization[127]	giv|giv[126]|new[127]	coref	28-8
+20-5	2324-2335	Specialists	abstract[126]|organization[127]	giv[126]|new[127]	_	_
+20-6	2336-2341	group	organization[127]	new[127]	_	_
+20-7	2342-2343	,	organization[127]	new[127]	_	_
+20-8	2344-2349	which	organization[127]	new[127]	_	_
+20-9	2350-2353	may	organization[127]	new[127]	_	_
+20-10	2354-2358	help	organization[127]	new[127]	_	_
+20-11	2359-2362	you	organization[127]|person	new[127]|giv	ana	26-8
+20-12	2363-2369	become	organization[127]	new[127]	_	_
+20-13	2370-2371	a	organization[127]	new[127]	_	_
+20-14	2372-2382	veterinary	organization[127]	new[127]	_	_
+20-15	2383-2393	specialist	organization[127]	new[127]	_	_
+20-16	2394-2396	in	organization[127]	new[127]	_	_
+20-17	2397-2403	Sonora	organization[127]|place[129]	new[127]|giv[129]	_	_
+20-18	2404-2405	,	organization[127]|place[129]	new[127]|giv[129]	_	_
+20-19	2406-2413	Arizona	organization[127]|place[129]|place	new[127]|giv[129]|giv	ana	21-3
+20-20	2414-2415	.	_	_	_	_
+
+#Text=Inquire about its internship program .
+21-1	2416-2423	Inquire	_	_	_	_
+21-2	2424-2429	about	_	_	_	_
+21-3	2430-2433	its	place|abstract[133]	giv|new[133]	coref|coref	24-2[149_133]|28-6
+21-4	2434-2444	internship	event|abstract[133]	giv|new[133]	coref	25-12[155_0]
+21-5	2445-2452	program	abstract[133]	new[133]	_	_
+21-6	2453-2454	.	_	_	_	_
+
+#Text=Interns will spend 12 months working the various veterinary specialties , such as surgery , neurology , dermatology , oncology , and medicine .
+22-1	2455-2462	Interns	person	giv	_	_
+22-2	2463-2467	will	_	_	_	_
+22-3	2468-2473	spend	_	_	_	_
+22-4	2474-2476	12	time[135]	new[135]	coref	25-5[153_135]
+22-5	2477-2483	months	time[135]	new[135]	_	_
+22-6	2484-2491	working	_	_	_	_
+22-7	2492-2495	the	abstract[136]	new[136]	coref	27-5[165_136]
+22-8	2496-2503	various	abstract[136]	new[136]	_	_
+22-9	2504-2514	veterinary	abstract[136]	new[136]	_	_
+22-10	2515-2526	specialties	abstract[136]	new[136]	_	_
+22-11	2527-2528	,	abstract[136]	new[136]	_	_
+22-12	2529-2533	such	abstract[136]	new[136]	_	_
+22-13	2534-2536	as	abstract[136]	new[136]	_	_
+22-14	2537-2544	surgery	abstract[136]|abstract	new[136]|giv	_	_
+22-15	2545-2546	,	abstract[136]	new[136]	_	_
+22-16	2547-2556	neurology	abstract[136]|abstract	new[136]|new	_	_
+22-17	2557-2558	,	abstract[136]	new[136]	_	_
+22-18	2559-2570	dermatology	abstract[136]|abstract	new[136]|new	_	_
+22-19	2571-2572	,	abstract[136]	new[136]	_	_
+22-20	2573-2581	oncology	abstract[136]|abstract	new[136]|giv	_	_
+22-21	2582-2583	,	abstract[136]	new[136]	_	_
+22-22	2584-2587	and	abstract[136]	new[136]	_	_
+22-23	2588-2596	medicine	abstract[136]|abstract	new[136]|giv	coref	28-6[171_0]
+22-24	2597-2598	.	_	_	_	_
+
+#Text=There are also opportunities to work with exotic animals at the Southwest Wildlife Rehabilitation Center .
+23-1	2599-2604	There	_	_	_	_
+23-2	2605-2608	are	_	_	_	_
+23-3	2609-2613	also	_	_	_	_
+23-4	2614-2627	opportunities	abstract[142]	new[142]	_	_
+23-5	2628-2630	to	abstract[142]	new[142]	_	_
+23-6	2631-2635	work	abstract[142]	new[142]	_	_
+23-7	2636-2640	with	abstract[142]	new[142]	_	_
+23-8	2641-2647	exotic	abstract[142]|animal[143]	new[142]|giv[143]	_	_
+23-9	2648-2655	animals	abstract[142]|animal[143]	new[142]|giv[143]	_	_
+23-10	2656-2658	at	abstract[142]	new[142]	_	_
+23-11	2659-2662	the	abstract[142]|place[147]	new[142]|new[147]	_	_
+23-12	2663-2672	Southwest	abstract[142]|place|place[147]	new[142]|new|new[147]	_	_
+23-13	2673-2681	Wildlife	abstract[142]|animal|place[147]	new[142]|new|new[147]	_	_
+23-14	2682-2696	Rehabilitation	abstract[142]|abstract|place[147]	new[142]|new|new[147]	_	_
+23-15	2697-2703	Center	abstract[142]|place[147]	new[142]|new[147]	_	_
+23-16	2704-2705	.	_	_	_	_
+
+#Text=Enter a residency program .
+24-1	2706-2711	Enter	_	_	_	_
+24-2	2712-2713	a	abstract[149]	giv[149]	ana	25-1[0_149]
+24-3	2714-2723	residency	event|abstract[149]	new|giv[149]	_	_
+24-4	2724-2731	program	abstract[149]	giv[149]	_	_
+24-5	2732-2733	.	_	_	_	_
+
+#Text=This is one of the first training periods for veterinarians after an internship .
+25-1	2734-2738	This	abstract	giv	_	_
+25-2	2739-2741	is	_	_	_	_
+25-3	2742-2745	one	event[151]	new[151]	_	_
+25-4	2746-2748	of	event[151]	new[151]	_	_
+25-5	2749-2752	the	event[151]|time[153]	new[151]|giv[153]	_	_
+25-6	2753-2758	first	event[151]|time[153]	new[151]|giv[153]	_	_
+25-7	2759-2767	training	event[151]|abstract|time[153]	new[151]|new|giv[153]	coref	26-16[159_0]
+25-8	2768-2775	periods	event[151]|time[153]	new[151]|giv[153]	_	_
+25-9	2776-2779	for	event[151]|time[153]	new[151]|giv[153]	_	_
+25-10	2780-2793	veterinarians	event[151]|time[153]|person	new[151]|giv[153]|new	_	_
+25-11	2794-2799	after	event[151]|time[153]	new[151]|giv[153]	_	_
+25-12	2800-2802	an	event[151]|time[153]|event[155]	new[151]|giv[153]|giv[155]	_	_
+25-13	2803-2813	internship	event[151]|time[153]|event[155]	new[151]|giv[153]|giv[155]	_	_
+25-14	2814-2815	.	_	_	_	_
+
+#Text=To become board-certified in a specialty , you must complete 3 to 4 years of training in your specialty and then pass the board exams .
+26-1	2816-2818	To	_	_	_	_
+26-2	2819-2825	become	_	_	_	_
+26-3	2826-2841	board-certified	_	_	_	_
+26-4	2842-2844	in	_	_	_	_
+26-5	2845-2846	a	abstract[156]	new[156]	coref	26-18[161_156]
+26-6	2847-2856	specialty	abstract[156]	new[156]	_	_
+26-7	2857-2858	,	_	_	_	_
+26-8	2859-2862	you	person	giv	ana	26-18
+26-9	2863-2867	must	_	_	_	_
+26-10	2868-2876	complete	_	_	_	_
+26-11	2877-2878	3	time[158]	new[158]	_	_
+26-12	2879-2881	to	time[158]	new[158]	_	_
+26-13	2882-2883	4	time[158]	new[158]	_	_
+26-14	2884-2889	years	time[158]	new[158]	_	_
+26-15	2890-2892	of	time[158]	new[158]	_	_
+26-16	2893-2901	training	time[158]|abstract[159]	new[158]|giv[159]	_	_
+26-17	2902-2904	in	time[158]|abstract[159]	new[158]|giv[159]	_	_
+26-18	2905-2909	your	time[158]|abstract[159]|person|abstract[161]	new[158]|giv[159]|giv|giv[161]	ana	28-2
+26-19	2910-2919	specialty	time[158]|abstract[159]|abstract[161]	new[158]|giv[159]|giv[161]	_	_
+26-20	2920-2923	and	_	_	_	_
+26-21	2924-2928	then	_	_	_	_
+26-22	2929-2933	pass	_	_	_	_
+26-23	2934-2937	the	abstract[163]	new[163]	_	_
+26-24	2938-2943	board	organization|abstract[163]	new|new[163]	coref	28-5[173_0]
+26-25	2944-2949	exams	abstract[163]	new[163]	_	_
+26-26	2950-2951	.	_	_	_	_
+
+#Text=The AVMA currently has 39 recognized specialties .
+27-1	2952-2955	The	organization[164]	giv[164]	coref	35-3[200_164]
+27-2	2956-2960	AVMA	organization[164]	giv[164]	_	_
+27-3	2961-2970	currently	_	_	_	_
+27-4	2971-2974	has	_	_	_	_
+27-5	2975-2977	39	abstract[165]	giv[165]	_	_
+27-6	2978-2988	recognized	abstract[165]	giv[165]	_	_
+27-7	2989-3000	specialties	abstract[165]	giv[165]	_	_
+27-8	3001-3002	.	_	_	_	_
+
+#Text=Get your license by the Arizona State Veterinary Medicine Examination Board .
+28-1	3003-3006	Get	_	_	_	_
+28-2	3007-3011	your	person|abstract[167]	giv|new[167]	ana	29-8
+28-3	3012-3019	license	abstract[167]	new[167]	_	_
+28-4	3020-3022	by	_	_	_	_
+28-5	3023-3026	the	organization[173]	giv[173]	coref	35-6[202_173]
+28-6	3027-3034	Arizona	place|abstract[171]|organization[173]	giv|giv[171]|giv[173]	coref|coref	29-6|30-26[185_171]
+28-7	3035-3040	State	place|abstract[171]|organization[173]	giv|giv[171]|giv[173]	coref	29-15[176_0]
+28-8	3041-3051	Veterinary	person|abstract[171]|organization[173]	giv|giv[171]|giv[173]	coref	30-9
+28-9	3052-3060	Medicine	abstract[171]|organization[173]	giv[171]|giv[173]	_	_
+28-10	3061-3072	Examination	organization|organization[173]	new|giv[173]	_	_
+28-11	3073-3078	Board	organization[173]	giv[173]	_	_
+28-12	3079-3080	.	_	_	_	_
+
+#Text=To become a veterinarian in Arizona , you must be licensed to practice in the state .
+29-1	3081-3083	To	_	_	_	_
+29-2	3084-3090	become	_	_	_	_
+29-3	3091-3092	a	_	_	_	_
+29-4	3093-3105	veterinarian	_	_	_	_
+29-5	3106-3108	in	_	_	_	_
+29-6	3109-3116	Arizona	place	giv	coref	34-16
+29-7	3117-3118	,	_	_	_	_
+29-8	3119-3122	you	person	giv	ana	30-1
+29-9	3123-3127	must	_	_	_	_
+29-10	3128-3130	be	_	_	_	_
+29-11	3131-3139	licensed	_	_	_	_
+29-12	3140-3142	to	_	_	_	_
+29-13	3143-3151	practice	_	_	_	_
+29-14	3152-3154	in	_	_	_	_
+29-15	3155-3158	the	place[176]	giv[176]	_	_
+29-16	3159-3164	state	place[176]	giv[176]	_	_
+29-17	3165-3166	.	_	_	_	_
+
+#Text=You must also pass the national North American Veterinary Licensing Exam , which is a multiple-choice test with 360 questions that cover all aspects of veterinary medicine .
+30-1	3167-3170	You	person	giv	ana	32-5
+30-2	3171-3175	must	_	_	_	_
+30-3	3176-3180	also	_	_	_	_
+30-4	3181-3185	pass	_	_	_	_
+30-5	3186-3189	the	abstract[181]	new[181]	_	_
+30-6	3190-3198	national	abstract[181]	new[181]	_	_
+30-7	3199-3204	North	person|abstract[181]	new|new[181]	_	_
+30-8	3205-3213	American	abstract[181]	new[181]	_	_
+30-9	3214-3224	Veterinary	person|abstract[181]	giv|new[181]	coref	32-16
+30-10	3225-3234	Licensing	abstract|abstract[181]	new|new[181]	_	_
+30-11	3235-3239	Exam	abstract[181]	new[181]	_	_
+30-12	3240-3241	,	abstract[181]	new[181]	_	_
+30-13	3242-3247	which	abstract[181]|abstract[182]	new[181]|giv[182]	_	_
+30-14	3248-3250	is	abstract[181]|abstract[182]	new[181]|giv[182]	_	_
+30-15	3251-3252	a	abstract[181]|abstract[182]	new[181]|giv[182]	_	_
+30-16	3253-3268	multiple-choice	abstract[181]|abstract[182]	new[181]|giv[182]	_	_
+30-17	3269-3273	test	abstract[181]|abstract[182]	new[181]|giv[182]	_	_
+30-18	3274-3278	with	abstract[181]|abstract[182]	new[181]|giv[182]	_	_
+30-19	3279-3282	360	abstract[181]|abstract[182]|abstract[183]	new[181]|giv[182]|new[183]	_	_
+30-20	3283-3292	questions	abstract[181]|abstract[182]|abstract[183]	new[181]|giv[182]|new[183]	_	_
+30-21	3293-3297	that	abstract[181]|abstract[182]|abstract[183]	new[181]|giv[182]|new[183]	_	_
+30-22	3298-3303	cover	abstract[181]|abstract[182]|abstract[183]	new[181]|giv[182]|new[183]	_	_
+30-23	3304-3307	all	abstract[181]|abstract[182]|abstract[183]|abstract[184]	new[181]|giv[182]|new[183]|new[184]	_	_
+30-24	3308-3315	aspects	abstract[181]|abstract[182]|abstract[183]|abstract[184]	new[181]|giv[182]|new[183]|new[184]	_	_
+30-25	3316-3318	of	abstract[181]|abstract[182]|abstract[183]|abstract[184]	new[181]|giv[182]|new[183]|new[184]	_	_
+30-26	3319-3329	veterinary	abstract[181]|abstract[182]|abstract[183]|abstract[184]|abstract[185]	new[181]|giv[182]|new[183]|new[184]|giv[185]	_	_
+30-27	3330-3338	medicine	abstract[181]|abstract[182]|abstract[183]|abstract[184]|abstract[185]	new[181]|giv[182]|new[183]|new[184]|giv[185]	_	_
+30-28	3339-3340	.	_	_	_	_
+
+#Text=Tips
+31-1	3341-3345	Tips	abstract	new	_	_
+
+#Text=As a student , you should gain as much experience as possible before and during veterinary school to have a competitive edge over your competition .
+32-1	3346-3348	As	_	_	_	_
+32-2	3349-3350	a	person[187]	new[187]	_	_
+32-3	3351-3358	student	person[187]	new[187]	_	_
+32-4	3359-3360	,	_	_	_	_
+32-5	3361-3364	you	person	giv	ana	32-24
+32-6	3365-3371	should	_	_	_	_
+32-7	3372-3376	gain	_	_	_	_
+32-8	3377-3379	as	abstract[189]	giv[189]	_	_
+32-9	3380-3384	much	abstract[189]	giv[189]	_	_
+32-10	3385-3395	experience	abstract[189]	giv[189]	_	_
+32-11	3396-3398	as	abstract[189]	giv[189]	_	_
+32-12	3399-3407	possible	abstract[189]	giv[189]	_	_
+32-13	3408-3414	before	_	_	_	_
+32-14	3415-3418	and	_	_	_	_
+32-15	3419-3425	during	_	_	_	_
+32-16	3426-3436	veterinary	person|organization[191]	giv|giv[191]	coref	35-9
+32-17	3437-3443	school	organization[191]	giv[191]	_	_
+32-18	3444-3446	to	_	_	_	_
+32-19	3447-3451	have	_	_	_	_
+32-20	3452-3453	a	abstract[192]	new[192]	_	_
+32-21	3454-3465	competitive	abstract[192]	new[192]	_	_
+32-22	3466-3470	edge	abstract[192]	new[192]	_	_
+32-23	3471-3475	over	abstract[192]	new[192]	_	_
+32-24	3476-3480	your	abstract[192]|person|abstract[194]	new[192]|giv|new[194]	ana	34-1
+32-25	3481-3492	competition	abstract[192]|abstract[194]	new[192]|new[194]	_	_
+32-26	3493-3494	.	_	_	_	_
+
+#Text=Warnings
+33-1	3495-3503	Warnings	abstract	new	_	_
+
+#Text=You must make sure you have all of the requirements before becoming a vet in Arizona .
+34-1	3504-3507	You	person	giv	ana	34-5
+34-2	3508-3512	must	_	_	_	_
+34-3	3513-3517	make	_	_	_	_
+34-4	3518-3522	sure	_	_	_	_
+34-5	3523-3526	you	person	giv	_	_
+34-6	3527-3531	have	_	_	_	_
+34-7	3532-3535	all	abstract[198]	giv[198]	_	_
+34-8	3536-3538	of	abstract[198]	giv[198]	_	_
+34-9	3539-3542	the	abstract[198]	giv[198]	_	_
+34-10	3543-3555	requirements	abstract[198]	giv[198]	_	_
+34-11	3556-3562	before	_	_	_	_
+34-12	3563-3571	becoming	_	_	_	_
+34-13	3572-3573	a	_	_	_	_
+34-14	3574-3577	vet	_	_	_	_
+34-15	3578-3580	in	_	_	_	_
+34-16	3581-3588	Arizona	place	giv	_	_
+34-17	3589-3590	.	_	_	_	_
+
+#Text=Check with the AVMA and the Arizona State Veterinary Board frequently to make sure that the specifics have not changed .
+35-1	3591-3596	Check	_	_	_	_
+35-2	3597-3601	with	_	_	_	_
+35-3	3602-3605	the	organization[200]	giv[200]	_	_
+35-4	3606-3610	AVMA	organization[200]	giv[200]	_	_
+35-5	3611-3614	and	_	_	_	_
+35-6	3615-3618	the	organization[202]	giv[202]	_	_
+35-7	3619-3626	Arizona	organization[202]	giv[202]	_	_
+35-8	3627-3632	State	organization[202]	giv[202]	_	_
+35-9	3633-3643	Veterinary	person|organization[202]	giv|giv[202]	_	_
+35-10	3644-3649	Board	organization[202]	giv[202]	_	_
+35-11	3650-3660	frequently	_	_	_	_
+35-12	3661-3663	to	_	_	_	_
+35-13	3664-3668	make	_	_	_	_
+35-14	3669-3673	sure	_	_	_	_
+35-15	3674-3678	that	_	_	_	_
+35-16	3679-3682	the	abstract[203]	new[203]	_	_
+35-17	3683-3692	specifics	abstract[203]	new[203]	_	_
+35-18	3693-3697	have	_	_	_	_
+35-19	3698-3701	not	_	_	_	_
+35-20	3702-3709	changed	_	_	_	_
+35-21	3710-3711	.	_	_	_	_

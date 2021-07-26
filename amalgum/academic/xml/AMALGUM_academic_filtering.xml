@@ -1,0 +1,1023 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_filtering" title="A SINS/DVL Integrated Positioning System through Filtering Gain Compensation Adaptive Filtering" shortTitle="filtering" author="Xiaozhen Yan, Yipeng Yang, Qinghua Luo, Yunsai Chen, Cong Hu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/20/4576/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+SINS/DVL	NNP	SINS/DVL
+Integrated	NNP	integrate
+Positioning	NN	positioning
+System	NN	system
+Based	VBN	base
+on	IN	on
+a	DT	a
+Filtering	NN	filtering
+Gain	NN	gain
+Compensation	NN	compensation
+Adaptive	NNP	Adaptive
+Kalman	NNP	Kalman
+Filter	NN	filter
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+we	PRP	we
+first	RB	first
+illustrate	VBP	illustrate
+the	DT	the
+framework	NN	framework
+for	IN	for
+the	DT	the
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+navigation	NN	navigation
+system	NN	system
+based	VBN	base
+on	IN	on
+a	DT	a
+filtering	NN	filtering
+gain	NN	gain
+compensation	NN	compensation
+adaptive	JJ	adaptive
+Kalman	NNP	Kalman
+filter	NN	filter
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+we	PRP	we
+describe	VBP	describe
+each	DT	each
+sub-module	NN	sub-module
+and	CC	and
+its	PRP$	its
+implementation	NN	implementation
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+</s>
+<s type="frag">
+Framework	NN	Framework
+for	IN	for
+the	DT	the
+SINS/DVL	NNP	SINS/DVL
+Integrated	NNP	integrate
+Positioning	NNP	Positioning
+System	NNP	system
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+framework	NN	framework
+for	IN	for
+the	DT	the
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+positioning	NN	positioning
+system	NN	system
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+composed	VBN	compose
+of	IN	of
+three	CD	3
+sub-systems	NNS	sub-system
+:	:	:
+the	DT	the
+<hi rend="italic">
+Strapdown	NNP	Strapdown
+Inertial	NNP	Inertial
+Navigation	NNP	Navigation
+Subsystem	NNP	Subsystem
+and	CC	and
+Error	NNP	Error
+Analysis	NNP	Analysis
+</hi>
+sub-module	NN	sub-module
+,	,	,
+the	DT	the
+<hi rend="italic">
+Doppler	NNP	Doppler
+Velocity	NNP	Velocity
+Log	NNP	Log
+Subsystem	NNP	Subsystem
+and	CC	and
+Error	NNP	Error
+Analysis	NNP	Analysis
+</hi>
+sub-module	NN	sub-module
+,	,	,
+and	CC	and
+the	DT	the
+<hi rend="italic">
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+filter	NN	filter
+</hi>
+sub-module	NN	sub-module
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+<hi rend="italic">
+Strapdown	NNP	Strapdown
+Inertial	NNP	Inertial
+Navigation	NNP	Navigation
+system	NN	system
+and	CC	and
+Error	NNP	Error
+Analysis	NNP	Analysis
+</hi>
+sub-module	NN	sub-module
+provides	VBZ	provide
+pure	JJ	pure
+inertial	JJ	inertial
+positioning	NN	positioning
+results	NNS	result
+to	IN	to
+the	DT	the
+SINS/DVL	NNP	SINS/DVL
+filter	NN	filter
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+inertial	JJ	inertial
+navigation	NN	navigation
+system	NN	system
+error	NN	error
+is	VBZ	be
+used	VBN	use
+to	TO	to
+estimate	VB	estimate
+the	DT	the
+navigation	NN	navigation
+parameters	NNS	parameter
+in	IN	in
+the	DT	the
+mechanical	JJ	mechanical
+programming	NN	programming
+of	IN	of
+the	DT	the
+inertial	JJ	inertial
+navigation	NN	navigation
+system	NN	system
+as	IN	as
+feedback	NN	feedback
+correction	NN	correction
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+practical	JJ	practical
+applications	NNS	application
+,	,	,
+feedback	NN	feedback
+correction	NN	correction
+is	VBZ	be
+generally	RB	generally
+used	VBN	use
+;	:	;
+however	RB	however
+,	,	,
+Kalman	NNP	Kalman
+filtering	NN	filtering
+takes	VBZ	take
+time	NN	time
+to	TO	to
+stabilize	VB	stabilize
+,	,	,
+and	CC	and
+the	DT	the
+error	NN	error
+is	VBZ	be
+very	RB	very
+large	JJ	large
+at	IN	at
+first	JJ	first
+,	,	,
+which	WDT	which
+leads	VBZ	lead
+to	IN	to
+a	DT	a
+decrease	NN	decrease
+in	IN	in
+system	NN	system
+accuracy	NN	accuracy
+and	CC	and
+is	VBZ	be
+not	RB	not
+suitable	JJ	suitable
+for	IN	for
+feedback	NN	feedback
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+address	VB	address
+these	DT	this
+issues	NNS	issue
+,	,	,
+we	PRP	we
+use	VBP	use
+a	DT	a
+combination	NN	combination
+of	IN	of
+output	NN	output
+correction	NN	correction
+and	CC	and
+feedback	NN	feedback
+correction	NN	correction
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+<hi rend="italic">
+Doppler	NNP	Doppler
+Velocity	NNP	Velocity
+Log	NNP	Log
+Subsystem	NNP	Subsystem
+and	CC	and
+Error	NNP	Error
+Analysis	NNP	Analysis
+</hi>
+sub-module	NN	sub-module
+provides	VBZ	provide
+high-precision	JJ	high-precision
+velocity	NN	velocity
+information	NN	information
+and	CC	and
+performs	VBZ	perform
+an	DT	a
+error	NN	error
+analysis	NN	analysis
+in	IN	in
+DVL	NNP	DVL
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+system	NN	system
+,	,	,
+we	PRP	we
+utilized	VBD	utilize
+the	DT	the
+difference	NN	difference
+in	IN	in
+value	NN	value
+between	IN	between
+the	DT	the
+solution	NN	solution
+velocity	NN	velocity
+of	IN	of
+the	DT	the
+strap	NN	strap
+down	NN	down
+inertial	JJ	inertial
+navigation	NN	navigation
+system	NN	system
+and	CC	and
+the	DT	the
+velocity	NN	velocity
+of	IN	of
+the	DT	the
+Doppler	NNP	Doppler
+velocity	NN	velocity
+log	NN	log
+as	IN	as
+the	DT	the
+observation	NN	observation
+of	IN	of
+the	DT	the
+SINS/DVL	NNP	SINS/DVL
+filter	NN	filter
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+<hi rend="italic">
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+filter	NN	filter
+</hi>
+sub-module	NN	sub-module
+is	VBZ	be
+the	DT	the
+positioning	NN	positioning
+information	NN	information
+fusion	NN	fusion
+center	NN	center
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+composed	VBN	compose
+of	IN	of
+a	DT	a
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+navigation	NN	navigation
+error	NN	error
+model	NN	model
+and	CC	and
+filtering	NN	filtering
+gain	NN	gain
+compensation-based	NN	compensation-based
+adaptive	JJ	adaptive
+filtering	NN	filtering
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+navigation	NN	navigation
+error	NN	error
+model	NN	model
+constructs	VBZ	construct
+the	DT	the
+system	NN	system
+state	NN	state
+variable	NN	variable
+,	,	,
+the	DT	the
+system	NN	system
+state	NN	state
+equation	NN	equation
+,	,	,
+and	CC	and
+the	DT	the
+system	NN	system
+measurement	NN	measurement
+equation	NN	equation
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+filtering	NN	filtering
+gain	NN	gain
+compensation-based	NN	compensation-based
+adaptive	JJ	adaptive
+filter	NN	filter
+performs	VBZ	perform
+data	NN	datum
+fusion	NN	fusion
+and	CC	and
+filtering	NN	filtering
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+an	DT	a
+organic	JJ	organic
+combination	NN	combination
+of	IN	of
+an	DT	a
+adaptive	JJ	adaptive
+filtering	NN	filtering
+and	CC	and
+a	DT	a
+strong	JJ	strong
+tracking	NN	tracking
+Kalman	NNP	Kalman
+filtering	NN	filtering
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+combine	VBP	combine
+the	DT	the
+inverse-free	JJ	inverse-free
+matrix	NN	matrix
+with	IN	with
+the	DT	the
+improved	VBN	improve
+adaptive	JJ	adaptive
+filter	NN	filter
+,	,	,
+so	RB	so
+a	DT	a
+high	JJ	high
+positioning	NN	positioning
+accuracy	NN	accuracy
+with	IN	with
+stability	NN	stability
+and	CC	and
+efficiency	NN	efficiency
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+SINS/DVL	NNP	SINS/DVL
+integrated	VBN	integrate
+positioning	NN	positioning
+system	NN	system
+is	VBZ	be
+suitable	JJ	suitable
+for	IN	for
+a	DT	a
+remote	JJ	remote
+AUV	NNP	AUV
+underwater	JJ	underwater
+navigation	NN	navigation
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+we	PRP	we
+describe	VBP	describe
+the	DT	the
+system	NN	system
+’s	POS	's
+dynamic	JJ	dynamic
+characteristics	NNS	characteristic
+and	CC	and
+measurement	NN	measurement
+equations	NNS	equation
+,	,	,
+we	PRP	we
+divide	VBP	divide
+the	DT	the
+integrated	VBN	integrate
+navigation	NN	navigation
+filtering	NN	filtering
+methods	NNS	method
+into	IN	into
+direct	JJ	direct
+and	CC	and
+indirect	JJ	indirect
+methods	NNS	method
+.	.	.
+</s>
+<s type="decl">
+Compared	VBN	compare
+with	IN	with
+the	DT	the
+direct	JJ	direct
+method	NN	method
+,	,	,
+the	DT	the
+indirect	JJ	indirect
+method	NN	method
+has	VBZ	have
+the	DT	the
+characteristics	NNS	characteristic
+of	IN	of
+relatively	RB	relatively
+high	JJ	high
+complexity	NN	complexity
+and	CC	and
+higher	JJR	high
+accuracy	NN	accuracy
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+use	VBP	use
+the	DT	the
+indirect	JJ	indirect
+filtering	NN	filtering
+to	TO	to
+obtain	VB	obtain
+higher	JJR	high
+accuracy	NN	accuracy
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+indirect	JJ	indirect
+filtering	NN	filtering
+has	VBZ	have
+output	NN	output
+correction	NN	correction
+and	CC	and
+feedback	NN	feedback
+correction	NN	correction
+.	.	.
+</s>
+<s type="decl">
+Regarding	VBG	regard
+the	DT	the
+output	NN	output
+correction	NN	correction
+,	,	,
+we	PRP	we
+use	VBP	use
+the	DT	the
+inertial	JJ	inertial
+navigation	NN	navigation
+system	NN	system
+’s	POS	's
+error	NN	error
+estimation	NN	estimation
+to	TO	to
+correct	VB	correct
+the	DT	the
+navigation	NN	navigation
+parameters	NNS	parameter
+of	IN	of
+the	DT	the
+inertial	JJ	inertial
+navigation	NN	navigation
+system	NN	system
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.2.	CD	3.2.
+Strapdown	NNP	Strapdown
+Inertial	NNP	Inertial
+Navigation	NN	navigation
+Subsystem	NN	subsystem
+and	CC	and
+Error	NNP	Error
+Analysis	NN	analysis
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+strap	NN	strap
+down	RB	down
+inertial	JJ	inertial
+navigation	NN	navigation
+system	NN	system
+consists	VBZ	consist
+of	IN	of
+a	DT	a
+three-axis	NN	three-axi
+accelerometer	NN	accelerometer
+assembly	NN	assembly
+and	CC	and
+three	CD	3
+orthogonal	JJ	orthogonal
+rate	NN	rate
+gyros	NNS	gyro
+.	.	.
+</s>
+<s type="decl">
+Without	IN	without
+a	DT	a
+solid	JJ	solid
+platform	NN	platform
+,	,	,
+both	CC	both
+the	DT	the
+accelerometer	NN	accelerometer
+and	CC	and
+the	DT	the
+inertial	JJ	inertial
+gyros	NNS	gyro
+are	VBP	be
+mounted	VBN	mount
+on	IN	on
+the	DT	the
+target	NN	target
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+cost	NN	cost
+is	VBZ	be
+lower	JJR	low
+,	,	,
+the	DT	the
+structure	NN	structure
+is	VBZ	be
+simpler	JJR	simple
+,	,	,
+and	CC	and
+the	DT	the
+space	NN	space
+utilization	NN	utilization
+rate	NN	rate
+is	VBZ	be
+higher	JJR	high
+;	:	;
+however	RB	however
+,	,	,
+the	DT	the
+calculation	NN	calculation
+process	NN	process
+is	VBZ	be
+more	RBR	more
+complicated	JJ	complicated
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+aid	VB	aid
+in	IN	in
+computing	NN	computing
+,	,	,
+another	DT	another
+important	JJ	important
+part	NN	part
+of	IN	of
+the	DT	the
+Strapdown	NNP	Strapdown
+Inertial	NNP	Inertial
+Navigation	NNP	Navigation
+System	NNP	system
+is	VBZ	be
+its	PRP$	its
+computer	NN	computer
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+During	IN	during
+the	DT	the
+movement	NN	movement
+of	IN	of
+the	DT	the
+target	NN	target
+,	,	,
+the	DT	the
+installed	VBN	install
+gyroscope	NN	gyroscope
+obtains	VBZ	obtain
+the	DT	the
+angular	JJ	angular
+velocity	NN	velocity
+of	IN	of
+the	DT	the
+aircraft	NN	aircraft
+relative	NN	relative
+to	IN	to
+the	DT	the
+inertial	JJ	inertial
+reference	NN	reference
+frame	NN	frame
+.	.	.
+</s>
+<s type="decl">
+Taking	VBG	take
+this	DT	this
+into	IN	into
+account	NN	account
+,	,	,
+the	DT	the
+transformation	NN	transformation
+matrix	NN	matrix
+of	IN	of
+the	DT	the
+coordinate	NN	coordinate
+system	NN	system
+that	WDT	that
+corresponds	VBZ	correspond
+to	IN	to
+the	DT	the
+target	NN	target
+coordinate	NN	coordinate
+system	NN	system
+can	MD	can
+be	VB	be
+calculated	VBN	calculate
+in	IN	in
+order	NN	order
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+three-axis	NN	three-axi
+accelerometer	NN	accelerometer
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+acceleration	NN	acceleration
+variable	NN	variable
+is	VBZ	be
+fed	VBN	fead
+back	RB	back
+into	IN	into
+the	DT	the
+positioning	NN	positioning
+coordinate	NN	coordinate
+system	NN	system
+,	,	,
+and	CC	and
+the	DT	the
+specific	JJ	specific
+navigation	NN	navigation
+information	NN	information
+is	VBZ	be
+obtained	VBN	obtain
+through	IN	through
+the	DT	the
+final	JJ	final
+operation	NN	operation
+of	IN	of
+the	DT	the
+computer	NN	computer
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+During	IN	during
+the	DT	the
+navigation	NN	navigation
+process	NN	process
+,	,	,
+an	DT	a
+underwater	JJ	underwater
+vehicle	NN	vehicle
+is	VBZ	be
+equipped	VBN	equip
+with	IN	with
+an	DT	a
+accelerometer	NN	accelerometer
+and	CC	and
+a	DT	a
+gyroscope	NN	gyroscope
+in	IN	in
+the	DT	the
+northeast	JJ	northeast
+direction	NN	direction
+of	IN	of
+the	DT	the
+navigation	NN	navigation
+coordinate	NN	coordinate
+system	NN	system
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+the	DT	the
+acceleration	NN	acceleration
+of	IN	of
+the	DT	the
+carrier	NN	carrier
+in	IN	in
+the	DT	the
+north	NN	north
+direction	NN	direction
+be	VB	be
+<hi rend="italic">
+an	DT	a
+</hi>
+.	.	.
+</s>
+<s type="decl">
+Similarly	RB	similarly
+,	,	,
+the	DT	the
+east	NN	east
+acceleration	NN	acceleration
+and	CC	and
+the	DT	the
+vertical	JJ	vertical
+acceleration	NN	acceleration
+are	VBP	be
+recorded	VBN	record
+as	IN	as
+<hi rend="italic">
+ae	NN	ae
+</hi>
+and	CC	and
+<hi rend="italic">
+au	NN	au
+</hi>
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+With	IN	with
+the	DT	the
+passage	NN	passage
+of	IN	of
+time	NN	time
+,	,	,
+the	DT	the
+acceleration	NN	acceleration
+is	VBZ	be
+integrated	VBN	integrate
+with	IN	with
+time	NN	time
+,	,	,
+and	CC	and
+the	DT	the
+velocity	NN	velocity
+components	NNS	component
+in	IN	in
+the	DT	the
+three	CD	3
+directions	NNS	direction
+of	IN	of
+the	DT	the
+aircraft	NN	aircraft
+can	MD	can
+be	VB	be
+calculated	VBN	calculate
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="sub">
+In	IN	in
+the	DT	the
+same	JJ	same
+way	NN	way
+,	,	,
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+latitude	NN	latitude
+,	,	,
+longitude	NN	longitude
+,	,	,
+and	CC	and
+depth	NN	depth
+of	IN	of
+the	DT	the
+aircraft	NN	aircraft
+on	IN	on
+the	DT	the
+earth	NN	earth
+,	,	,
+we	PRP	we
+can	MD	can
+also	RB	also
+obtain	VB	obtain
+Equation	NNP	Equation
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+from	IN	from
+Equation	NNP	Equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+:	:	:
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+where	WRB	where
+,	,	,
+and	CC	and
+are	VBP	be
+the	DT	the
+initial	JJ	initial
+positions	NNS	position
+of	IN	of
+the	DT	the
+warp	NN	warp
+,	,	,
+weft	NN	weft
+,	,	,
+and	CC	and
+depth	NN	depth
+of	IN	of
+the	DT	the
+aircraft	NN	aircraft
+,	,	,
+respectively	RB	respectively
+,	,	,
+and	CC	and
+,	,	,
+and	CC	and
+are	VBP	be
+the	DT	the
+rates	NNS	rate
+of	IN	of
+change	NN	change
+of	IN	of
+the	DT	the
+warp	NN	warp
+,	,	,
+latitude	NN	latitude
+,	,	,
+and	CC	and
+depth	NN	depth
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+speed	NN	speed
+can	MD	can
+be	VB	be
+tracked	VBN	track
+in	IN	in
+real	JJ	real
+time	NN	time
+by	IN	by
+the	DT	the
+SINS/DVL	NNP	SINS/DVL
+combined	VBN	combine
+positioning	NN	positioning
+system	NN	system
+,	,	,
+so	RB	so
+the	DT	the
+rate	NN	rate
+of	IN	of
+change	NN	change
+of	IN	of
+warp	NN	warp
+,	,	,
+latitude	NN	latitude
+,	,	,
+and	CC	and
+depth	NN	depth
+can	MD	can
+be	VB	be
+extrapolated	VBN	extrapolate
+from	IN	from
+speed	NN	speed
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+formula	NN	formula
+,	,	,
+in	IN	in
+order	NN	order
+to	TO	to
+simplify	VB	simplify
+the	DT	the
+calculation	NN	calculation
+,	,	,
+we	PRP	we
+approximate	VBP	approximate
+the	DT	the
+Earth	NNP	Earth
+as	IN	as
+a	DT	a
+sphere	NN	sphere
+with	IN	with
+radius	NN	radius
+<hi rend="italic">
+R	NN	R
+</hi>
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+<hi rend="italic">
+M	NNP	M
+</hi>
+=	SYM	=
+<hi rend="italic">
+N	NN	N
+</hi>
+=	SYM	=
+<hi rend="italic">
+R	NN	R
+</hi>
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,1160 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_angle" title="Angle Tracking Observer with Improved Accuracy for Resolver-to-Digital Conversion" shortTitle="angle" author="Haoye Qin, Zhong Wu" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-8994/11/11/1347/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Principles	NNS	Principle
+of	IN	of
+Resolver-to-Digital	NNP	Resolver-to-Digital
+Conversion	NN	conversion
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+we	PRP	we
+first	RB	first
+introduce	VBP	introduce
+the	DT	the
+basic	JJ	basic
+principle	NN	principle
+of	IN	of
+the	DT	the
+resolver	NN	resolver
+and	CC	and
+its	PRP$	its
+subsequent	JJ	subsequent
+demodulation	NN	demodulation
+methods	NNS	method
+,	,	,
+and	CC	and
+then	RB	then
+several	JJ	several
+previous	JJ	previous
+RDC	NNP	RDC
+solutions	NNS	solution
+are	VBP	be
+presented	VBN	present
+and	CC	and
+evaluated	VBN	evaluate
+for	IN	for
+their	PRP$	their
+advantages	NNS	advantage
+and	CC	and
+drawbacks	NNS	drawback
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+</s>
+<s type="frag">
+Principle	NN	Principle
+of	IN	of
+Resolver	NN	resolver
+</s>
+</head>
+<p>
+<s type="decl">
+A	DT	a
+resolver	NN	resolver
+is	VBZ	be
+a	DT	a
+position	NN	position
+sensor	NN	sensor
+comprising	VBG	comprise
+of	IN	of
+a	DT	a
+stator	NN	stator
+and	CC	and
+a	DT	a
+rotor	NN	rotor
+,	,	,
+which	WDT	which
+is	VBZ	be
+connected	VBN	connect
+to	IN	to
+the	DT	the
+shaft	NN	shaft
+of	IN	of
+the	DT	the
+motor	NN	motor
+for	IN	for
+detecting	VBG	detect
+its	PRP$	its
+angular	JJ	angular
+position	NN	position
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+stator	NN	stator
+portion	NN	portion
+houses	VBZ	house
+three	CD	3
+windings	NNS	winding
+,	,	,
+namely	RB	namely
+one	CD	one
+excitation	NN	excitation
+winding	VBG	wind
+and	CC	and
+two	CD	2
+output	NN	output
+windings	NNS	winding
+(	-LRB-	(
+sine	NN	sine
+and	CC	and
+cosine	NN	cosine
+windings	NNS	winding
+)	-RRB-	)
+,	,	,
+of	IN	of
+which	WDT	which
+the	DT	the
+voltage	NN	voltage
+output	NN	output
+amplitudes	NNS	amplitude
+are	VBP	be
+orthogonally	RB	orthogonally
+symmetric	JJ	symmetric
+,	,	,
+specifically	RB	specifically
+,	,	,
+sinusoidally	RB	sinusoidally
+and	CC	and
+cosinusoidally	RB	cosinusoidally
+related	JJ	related
+to	IN	to
+the	DT	the
+shaft	NN	shaft
+angle	NN	angle
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+excitation	NN	excitation
+winding	NN	winding
+is	VBZ	be
+responsible	JJ	responsible
+for	IN	for
+inducing	VBG	induce
+voltage	NN	voltage
+in	IN	in
+the	DT	the
+rotator	NN	rotator
+windings	NNS	winding
+through	IN	through
+electromagnetic	JJ	electromagnetic
+induction	NN	induction
+.	.	.
+</s>
+<s type="decl">
+With	IN	with
+the	DT	the
+shaft	NN	shaft
+angle	NN	angle
+changing	VBG	change
+,	,	,
+amplitudes	NNS	amplitude
+of	IN	of
+the	DT	the
+two-phase	JJ	two-phase
+voltages	NNS	voltage
+from	IN	from
+sine	NN	sine
+and	CC	and
+cosine	NN	cosine
+output	NN	output
+windings	NNS	winding
+are	VBP	be
+measured	VBN	measure
+and	CC	and
+employed	VBN	employ
+to	TO	to
+determine	VB	determine
+relative	JJ	relative
+position	NN	position
+between	IN	between
+the	DT	the
+stator	NN	stator
+and	CC	and
+rotor	NN	rotor
+.	.	.
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+illustrates	VBZ	illustrate
+the	DT	the
+configuration	NN	configuration
+of	IN	of
+a	DT	a
+resolver	NN	resolver
+and	CC	and
+subsequent	JJ	subsequent
+software-based	JJ	software-based
+RDC	NNP	RDC
+scheme	NN	scheme
+,	,	,
+which	WDT	which
+serves	VBZ	serve
+as	IN	as
+an	DT	a
+integrated	VBN	integrate
+position	NN	position
+estimation	NN	estimation
+system	NN	system
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+excitation	NN	excitation
+windings	NNS	winding
+are	VBP	be
+usually	RB	usually
+applied	VBN	apply
+with	IN	with
+a	DT	a
+sinusoidal	JJ	sinusoidal
+reference	NN	reference
+voltage	NN	voltage
+of	IN	of
+constant	JJ	constant
+amplitude	NN	amplitude
+and	CC	and
+high	JJ	high
+frequency	NN	frequency
+,	,	,
+expressed	VBN	express
+as	IN	as
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+A	NN	A
+</hi>
+is	VBZ	be
+the	DT	the
+amplitude	NN	amplitude
+of	IN	of
+the	DT	the
+reference	NN	reference
+voltage	NN	voltage
+and	CC	and
+<hi rend="italic">
+ω	NN	ω
+</hi>
+<hi rend="italic">
+ref	NN	ref
+</hi>
+is	VBZ	be
+the	DT	the
+angular	JJ	angular
+frequency	NN	frequency
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+When	WRB	when
+the	DT	the
+rotor	NN	rotor
+rotates	VBZ	rotate
+,	,	,
+the	DT	the
+output	NN	output
+windings	NNS	winding
+will	MD	will
+generate	VB	generate
+amplitude-modulated	JJ	amplitude-modulated
+pair	NN	pair
+signals	NNS	signal
+as	IN	as
+:	:	:
+(	:	(
+2	CD	2
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+K	NN	K
+</hi>
+is	VBZ	be
+the	DT	the
+effective	JJ	effective
+transformation	NN	transformation
+ratio	NN	ratio
+of	IN	of
+the	DT	the
+resolver	NN	resolver
+and	CC	and
+<hi rend="italic">
+θ	NN	θ
+</hi>
+represents	VBZ	represent
+the	DT	the
+angular	JJ	angular
+position	NN	position
+of	IN	of
+the	DT	the
+rotor	NN	rotor
+with	IN	with
+respect	NN	respect
+to	IN	to
+the	DT	the
+stator	NN	stator
+winding	NN	winding
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+two	CD	2
+modulated	VBN	modulate
+signals	NNS	signal
+<hi rend="italic">
+u	NN	u
+</hi>
+1(	:	1(
+<hi rend="italic">
+θ	CD	θ
+</hi>
+,	,	,
+<hi rend="italic">
+t	IN	t
+</hi>
+)	-RRB-	)
+and	CC	and
+<hi rend="italic">
+u	NN	u
+</hi>
+2(	CD	2(
+<hi rend="italic">
+θ	CD	θ
+</hi>
+,	,	,
+<hi rend="italic">
+t	NN	t
+</hi>
+)	-RRB-	)
+have	VBP	have
+the	DT	the
+form	NN	form
+of	IN	of
+sinusoidal	JJ	sinusoidal
+and	CC	and
+cosinusoidal	JJ	cosinusoidal
+envelopes	NNS	envelope
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+envelope	NN	envelope
+detection	NN	detection
+is	VBZ	be
+necessary	JJ	necessary
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+needed	VBN	need
+signal	NN	signal
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+practice	NN	practice
+,	,	,
+there	EX	there
+are	VBP	be
+always	RB	always
+disturbances	NNS	disturbance
+from	IN	from
+imperfect	JJ	imperfect
+characteristics	NNS	characteristic
+,	,	,
+namely	RB	namely
+the	DT	the
+amplitude	NN	amplitude
+imbalances	NNS	imbalance
+,	,	,
+DC	NNP	DC
+offsets	NNS	offset
+and	CC	and
+imperfect	JJ	imperfect
+quadrature	NN	quadrature
+,	,	,
+which	WDT	which
+arise	VBP	arise
+from	IN	from
+eccentric	JJ	eccentric
+rotor	NN	rotor
+,	,	,
+unequal	JJ	unequal
+winding	NN	winding
+and	CC	and
+non-orthogonal	JJ	non-orthogonal
+symmetry	NN	symmetry
+of	IN	of
+the	DT	the
+windings	NNS	winding
+.	.	.
+</s>
+<s type="sub">
+Hence	RB	hence
+,	,	,
+the	DT	the
+signal	NN	signal
+after	IN	after
+envelope	NN	envelope
+detection	NN	detection
+can	MD	can
+be	VB	be
+expressed	VBN	express
+in	IN	in
+the	DT	the
+form	NN	form
+:	:	:
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+are	VBP	be
+the	DT	the
+offsets	NNS	offset
+,	,	,
+and	CC	and
+represents	VBZ	represent
+the	DT	the
+imperfect	JJ	imperfect
+quadrature	NN	quadrature
+.	.	.
+</s>
+<s type="decl">
+Preprocessing	VBG	preprocess
+methods	NNS	method
+(	-LRB-	(
+noise	NN	noise
+reduction	NN	reduction
+,	,	,
+calibration	NN	calibration
+and	CC	and
+correction	NN	correction
+)	-RRB-	)
+are	VBP	be
+carried	VBN	carry
+out	RP	out
+to	TO	to
+result	VB	result
+in	IN	in
+:	:	:
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+u	NN	u
+</hi>
+sin	NN	sin
+and	CC	and
+<hi rend="italic">
+u	NN	u
+</hi>
+cos	NN	co
+are	VBP	be
+two	CD	2
+ortho-symmetric	JJ	ortho-symmetric
+signals	NNS	signal
+,	,	,
+whose	WP$	whose
+trigonometric	JJ	trigonometric
+features	NNS	feature
+aid	VBP	aid
+in	IN	in
+subsequent	JJ	subsequent
+demodulation	NN	demodulation
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+the	DT	the
+angular	JJ	angular
+position	NN	position
+<hi rend="italic">
+θ	NN	θ
+</hi>
+and	CC	and
+velocity	NN	velocity
+are	VBP	be
+calculated	VBN	calculate
+through	IN	through
+suitable	JJ	suitable
+demodulation	NN	demodulation
+algorithms	NNS	algorithm
+(	-LRB-	(
+for	IN	for
+example	NN	example
+,	,	,
+phase-locked	JJ	phase-locked
+loop	NN	loop
+and	CC	and
+arctangent	NN	arctangent
+algorithms	NNS	algorithm
+)	-RRB-	)
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+estimation	NN	estimation
+speed	NN	speed
+and	CC	and
+position	NN	position
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+As	IN	as
+is	VBZ	be
+demonstrated	VBN	demonstrate
+in	IN	in
+the	DT	the
+resolver	NN	resolver
+’s	POS	's
+principle	NN	principle
+,	,	,
+the	DT	the
+orthogonal	JJ	orthogonal
+symmetry	NN	symmetry
+of	IN	of
+alignment	NN	alignment
+of	IN	of
+two	CD	2
+output	NN	output
+windings	NNS	winding
+results	VBZ	result
+in	IN	in
+the	DT	the
+orthogonal	JJ	orthogonal
+symmetry	NN	symmetry
+of	IN	of
+both	DT	both
+envelope	NN	envelope
+signals	NNS	signal
+and	CC	and
+post-envelope-detection	JJ	post-envelope-detection
+signals	NNS	signal
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+</s>
+<s type="frag">
+Classical	JJ	Classical
+Resolver-to-Digital	NNP	Resolver-to-Digital
+Conversion	NNP	conversion
+</s>
+</head>
+<head>
+<s type="frag">
+2.2.1.	CD	2.2.1.
+Arctangent	NNP	Arctangent
+Method	NN	method
+</s>
+</head>
+<p>
+<s type="decl">
+A	DT	a
+straightforward	JJ	straightforward
+method	NN	method
+is	VBZ	be
+to	TO	to
+obtain	VB	obtain
+the	DT	the
+angular	JJ	angular
+position	NN	position
+<hi rend="italic">
+θ	NN	θ
+</hi>
+is	VBZ	be
+through	IN	through
+arctangent	JJ	arctangent
+operation	NN	operation
+of	IN	of
+<hi rend="italic">
+u	NN	u
+</hi>
+sin	NN	sin
+and	CC	and
+<hi rend="italic">
+u	NN	u
+</hi>
+cos	NN	co
+,	,	,
+given	VBN	give
+by	IN	by
+:	:	:
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+As	IN	as
+is	VBZ	be
+clearly	RB	clearly
+indicated	VBN	indicate
+by	IN	by
+Equation	NNP	Equation
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+,	,	,
+the	DT	the
+arctangent	NN	arctangent
+method	NN	method
+suffers	VBZ	suffer
+from	IN	from
+its	PRP$	its
+highly	RB	highly
+nonlinear	JJ	nonlinear
+arctangent	NN	arctangent
+operation	NN	operation
+and	CC	and
+is	VBZ	be
+limited	VBN	limit
+to	IN	to
+application	NN	application
+on	IN	on
+low-speed	JJ	low-speed
+estimation	NN	estimation
+.	.	.
+</s>
+<s type="decl">
+Also	RB	also
+,	,	,
+with	IN	with
+a	DT	a
+nonlinear	JJ	nonlinear
+feature	NN	feature
+,	,	,
+there	EX	there
+needs	VBZ	need
+to	TO	to
+be	VB	be
+a	DT	a
+look-up	NN	look-up
+table	NN	table
+for	IN	for
+the	DT	the
+arctangent	NN	arctangent
+calculation	NN	calculation
+,	,	,
+which	WDT	which
+increases	VBZ	increase
+the	DT	the
+software	NN	software
+loads	NNS	load
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.2.	CD	2.2.2.
+</s>
+<s type="frag">
+Conventional	JJ	Conventional
+PLL-Based	NNP	PLL-Based
+ATO	NNP	ATO
+</s>
+</head>
+<p>
+<s type="other">
+As	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+,	,	,
+the	DT	the
+conventional	JJ	conventional
+ATO	NNP	ATO
+method	NN	method
+tracks	VBZ	track
+angular	JJ	angular
+position	NN	position
+based	VBN	base
+on	IN	on
+PLL	NNP	PLL
+technique	NN	technique
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+a	DT	a
+is	VBZ	be
+the	DT	the
+actual	JJ	actual
+form	NN	form
+of	IN	of
+the	DT	the
+ATO	NNP	ATO
+,	,	,
+where	WRB	where
+<hi rend="italic">
+kI	NNP	kI
+</hi>
+and	CC	and
+<hi rend="italic">
+kP	NNP	kP
+</hi>
+are	VBP	be
+the	DT	the
+coefficients	NNS	coefficient
+for	IN	for
+the	DT	the
+integral	JJ	integral
+and	CC	and
+proportional	JJ	proportional
+terms	NNS	term
+,	,	,
+respectively	RB	respectively
+,	,	,
+and	CC	and
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+b	MD	b
+shows	VBZ	show
+the	DT	the
+linearized	JJ	linearized
+structure	NN	structure
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+estimated	VBN	estimate
+angular	JJ	angular
+position	NN	position
+is	VBZ	be
+transformed	VBN	transform
+through	IN	through
+trigonometric	JJ	trigonometric
+function	NN	function
+and	CC	and
+multiplied	VBN	multiply
+by	IN	by
+the	DT	the
+demodulated	VBN	demodulate
+signals	NNS	signal
+.	.	.
+</s>
+<s type="decl">
+By	IN	by
+utilizing	VBG	utilize
+the	DT	the
+feature	NN	feature
+of	IN	of
+orthogonal	JJ	orthogonal
+symmetry	NN	symmetry
+in	IN	in
+the	DT	the
+resolver	NN	resolver
+signals	NNS	signal
+in	IN	in
+Equation	NNP	Equation
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+,	,	,
+the	DT	the
+phase	NN	phase
+error	NN	error
+can	MD	can
+be	VB	be
+derived	VBN	derive
+from	IN	from
+the	DT	the
+phase	NN	phase
+detector	NN	detector
+(	-LRB-	(
+PD	NN	PD
+)	-RRB-	)
+,	,	,
+expressed	VBN	express
+as	IN	as
+:	:	:
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+When	WRB	when
+the	DT	the
+ATO	NNP	ATO
+functions	VBZ	function
+properly	RB	properly
+,	,	,
+the	DT	the
+position	NN	position
+error	NN	error
+is	VBZ	be
+small	JJ	small
+enough	RB	enough
+,	,	,
+that	DT	that
+is	VBZ	be
+,	,	,
+,	,	,
+so	RB	so
+the	DT	the
+input	NN	input
+error	NN	error
+signal	NN	signal
+can	MD	can
+be	VB	be
+expressed	VBN	express
+as	IN	as
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+linearization	NN	linearization
+of	IN	of
+the	DT	the
+ATO	NNP	ATO
+can	MD	can
+be	VB	be
+implemented	VBN	implement
+,	,	,
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+b	RB	b
+,	,	,
+and	CC	and
+the	DT	the
+closed	VBN	close
+loop	NN	loop
+transfer	NN	transfer
+function	NN	function
+is	VBZ	be
+derived	VBN	derive
+as	IN	as
+:	:	:
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+conventional	JJ	conventional
+ATO	NNP	ATO
+is	VBZ	be
+a	DT	a
+representative	JJ	representative
+closed-loop	JJ	closed-loop
+estimation	NN	estimation
+system	NN	system
+which	WDT	which
+overcomes	VBZ	overcome
+noise	NN	noise
+and	CC	and
+track	VBP	track
+the	DT	the
+input	NN	input
+signal	NN	signal
+with	IN	with
+a	DT	a
+relatively	RB	relatively
+high	JJ	high
+precision	NN	precision
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+linearized	JJ	linearized
+structure	NN	structure
+of	IN	of
+the	DT	the
+ATO	NNP	ATO
+belongs	VBZ	belong
+to	IN	to
+a	DT	a
+type-II	NN	type-II
+system	NN	system
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.3.	CD	2.2.3.
+</s>
+<s type="other">
+Compensated	VBN	compensate
+Type-III	NNP	Type-III
+ATO	NNP	ATO
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+,	,	,
+an	DT	a
+acceleration-compensated	JJ	acceleration-compensated
+ATO	NNP	ATO
+was	VBD	be
+proposed	VBN	propose
+by	IN	by
+employing	VBG	employ
+the	DT	the
+estimated	VBN	estimate
+speed	NN	speed
+to	TO	to
+generate	VB	generate
+a	DT	a
+compensation	NN	compensation
+module	NN	module
+for	IN	for
+the	DT	the
+position	NN	position
+error	NN	error
+,	,	,
+comprising	VBG	comprise
+a	DT	a
+differentiator	NN	differentiator
+and	CC	and
+a	DT	a
+first-order	NN	first-order
+low-pass	JJ	low-pass
+filter	NN	filter
+,	,	,
+which	WDT	which
+finally	RB	finally
+makes	VBZ	make
+this	DT	this
+ATO	NNP	ATO
+a	DT	a
+type-III	JJ	type-III
+system	NN	system
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+actual	JJ	actual
+scheme	NN	scheme
+of	IN	of
+this	DT	this
+method	NN	method
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="decl">
+and	CC	and
+a	DT	a
+linearized	JJ	linearized
+structure	NN	structure
+of	IN	of
+this	DT	this
+ATO	NNP	ATO
+is	VBZ	be
+analogous	JJ	analogous
+to	IN	to
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+b.	NNP	bear
+</s>
+<s type="frag">
+Compared	VBN	compare
+with	IN	with
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+,	,	,
+there	EX	there
+is	VBZ	be
+a	DT	a
+third	JJ	third
+parameter	NN	parameter
+<hi rend="italic">
+T	NN	T
+</hi>
+representing	VBG	represent
+the	DT	the
+time	NN	time
+constant	NN	constant
+of	IN	of
+the	DT	the
+low-pass	JJ	low-pass
+filter	NN	filter
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+linearized	VBN	linearize
+closed-loop	JJ	closed-loop
+transfer	NN	transfer
+function	NN	function
+can	MD	can
+be	VB	be
+denoted	VBN	denote
+as	IN	as
+:	:	:
+(	-LRB-	(
+8	CD	8
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+This	DT	this
+compensated	VBN	compensate
+type-III	NNP	type-III
+ATO	NNP	ATO
+has	VBZ	have
+the	DT	the
+basic	JJ	basic
+structure	NN	structure
+inherited	VBN	inherit
+from	IN	from
+the	DT	the
+conventional	JJ	conventional
+ATO	NNP	ATO
+but	CC	but
+resolves	VBZ	resolve
+the	DT	the
+steady-error	NN	steady-error
+of	IN	of
+estimating	VBG	estimate
+constant	JJ	constant
+acceleration	NN	acceleration
+signal	NN	signal
+(	-LRB-	(
+<hi rend="italic">
+θ	NN	θ
+</hi>
+=	SYM	=
+<hi rend="italic">
+α	NN	α
+</hi>
+<hi rend="italic">
+t	NN	t
+</hi>
+2	CD	2
+)	-RRB-	)
+with	IN	with
+a	DT	a
+time-saving	JJ	time-saving
+and	CC	and
+simple	JJ	simple
+technique	NN	technique
+of	IN	of
+adding	VBG	add
+a	DT	a
+compensation	NN	compensation
+module	NN	module
+,	,	,
+which	WDT	which
+achieves	VBZ	achieve
+a	DT	a
+higher	JJR	high
+precision	NN	precision
+in	IN	in
+tracking	VBG	track
+the	DT	the
+position	NN	position
+of	IN	of
+an	DT	a
+accelerating	VBG	accelerate
+motor	NN	motor
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+this	DT	this
+method	NN	method
+fails	VBZ	fail
+to	TO	to
+eliminate	VB	eliminate
+steady-state	JJ	steady-state
+error	NN	error
+resulting	VBG	result
+from	IN	from
+a	DT	a
+first-	JJ	first-
+or	CC	or
+higher-order	JJR	higher-order
+acceleration	NN	acceleration
+signal	NN	signal
+.	.	.
+</s>
+</p>
+</text>

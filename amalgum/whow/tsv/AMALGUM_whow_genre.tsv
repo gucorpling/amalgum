@@ -1,0 +1,1351 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Determine the Genre of a Book
+1-1	0-9	Determine	_	_	_	_
+1-2	10-13	the	abstract[1]	new[1]	coref	3-16[15_1]
+1-3	14-19	Genre	abstract[1]	new[1]	_	_
+1-4	20-22	of	abstract[1]	new[1]	_	_
+1-5	23-24	a	abstract[1]|object[2]	new[1]|new[2]	coref	3-10[13_2]
+1-6	25-29	Book	abstract[1]|object[2]	new[1]|new[2]	_	_
+
+#Text=When a reader looks for a new author to read , he or she usually browses books in genres they enjoy .
+2-1	30-34	When	_	_	_	_
+2-2	35-36	a	person[3]	new[3]	ana	2-14[0_3]
+2-3	37-43	reader	person[3]	new[3]	_	_
+2-4	44-49	looks	_	_	_	_
+2-5	50-53	for	_	_	_	_
+2-6	54-55	a	person[4]	new[4]	ana	2-12[0_4]
+2-7	56-59	new	person[4]	new[4]	_	_
+2-8	60-66	author	person[4]	new[4]	_	_
+2-9	67-69	to	person[4]	new[4]	_	_
+2-10	70-74	read	person[4]	new[4]	_	_
+2-11	75-76	,	_	_	_	_
+2-12	77-79	he	person	giv	_	_
+2-13	80-82	or	_	_	_	_
+2-14	83-86	she	person	giv	_	_
+2-15	87-94	usually	_	_	_	_
+2-16	95-102	browses	_	_	_	_
+2-17	103-108	books	object[7]	new[7]	coref	12-3[43_7]
+2-18	109-111	in	object[7]	new[7]	_	_
+2-19	112-118	genres	object[7]|abstract[8]	new[7]|new[8]	coref	8-2[23_8]
+2-20	119-123	they	object[7]|abstract[8]|person	new[7]|new[8]|acc	_	_
+2-21	124-129	enjoy	object[7]|abstract[8]	new[7]|new[8]	_	_
+2-22	130-131	.	_	_	_	_
+
+#Text=Whether you 're describing your own work or shelving a book at a library , the right genre will help readers find what they seek .
+3-1	132-139	Whether	_	_	_	_
+3-2	140-143	you	person	acc	ana	3-5
+3-3	144-147	're	_	_	_	_
+3-4	148-158	describing	_	_	_	_
+3-5	159-163	your	person|abstract[12]	giv|new[12]	coref|ana	8-5[24_12]|9-8
+3-6	164-167	own	abstract[12]	new[12]	_	_
+3-7	168-172	work	abstract[12]	new[12]	_	_
+3-8	173-175	or	_	_	_	_
+3-9	176-184	shelving	_	_	_	_
+3-10	185-186	a	object[13]	giv[13]	coref	6-1[20_13]
+3-11	187-191	book	object[13]	giv[13]	_	_
+3-12	192-194	at	_	_	_	_
+3-13	195-196	a	place[14]	new[14]	_	_
+3-14	197-204	library	place[14]	new[14]	_	_
+3-15	205-206	,	_	_	_	_
+3-16	207-210	the	abstract[15]	giv[15]	coref	7-2[0_15]
+3-17	211-216	right	abstract[15]	giv[15]	_	_
+3-18	217-222	genre	abstract[15]	giv[15]	_	_
+3-19	223-227	will	_	_	_	_
+3-20	228-232	help	_	_	_	_
+3-21	233-240	readers	person	new	ana	3-24
+3-22	241-245	find	_	_	_	_
+3-23	246-250	what	_	_	_	_
+3-24	251-255	they	person	giv	_	_
+3-25	256-260	seek	_	_	_	_
+3-26	261-262	.	_	_	_	_
+
+#Text=Steps
+4-1	263-268	Steps	abstract	new	_	_
+
+#Text=Marketing
+5-1	269-278	Marketing	person	new	_	_
+
+#Text=a Book
+6-1	279-280	a	object[20]	giv[20]	coref	9-2[25_20]
+6-2	281-285	Book	object[20]	giv[20]	_	_
+
+#Text=with Genre Descriptions
+7-1	286-290	with	_	_	_	_
+7-2	291-296	Genre	abstract|abstract[22]	giv|new[22]	coref	11-16
+7-3	297-309	Descriptions	abstract[22]	new[22]	_	_
+
+#Text=List possible genres for the work .
+8-1	310-314	List	_	_	_	_
+8-2	315-323	possible	abstract[23]	giv[23]	coref	9-17[29_23]
+8-3	324-330	genres	abstract[23]	giv[23]	_	_
+8-4	331-334	for	abstract[23]	giv[23]	_	_
+8-5	335-338	the	abstract[23]|abstract[24]	giv[23]|giv[24]	ana	9-11[0_24]
+8-6	339-343	work	abstract[23]|abstract[24]	giv[23]|giv[24]	_	_
+8-7	344-345	.	_	_	_	_
+
+#Text=Assuming the book is already complete , you can narrow it down to a subset of possible genres .
+9-1	346-354	Assuming	_	_	_	_
+9-2	355-358	the	object[25]	giv[25]	coref	10-7[31_25]
+9-3	359-363	book	object[25]	giv[25]	_	_
+9-4	364-366	is	_	_	_	_
+9-5	367-374	already	_	_	_	_
+9-6	375-383	complete	_	_	_	_
+9-7	384-385	,	_	_	_	_
+9-8	386-389	you	person	giv	ana	10-15
+9-9	390-393	can	_	_	_	_
+9-10	394-400	narrow	_	_	_	_
+9-11	401-403	it	abstract	giv	_	_
+9-12	404-408	down	_	_	_	_
+9-13	409-411	to	_	_	_	_
+9-14	412-413	a	abstract[28]	new[28]	_	_
+9-15	414-420	subset	abstract[28]	new[28]	_	_
+9-16	421-423	of	abstract[28]	new[28]	_	_
+9-17	424-432	possible	abstract[28]|abstract[29]	new[28]|giv[29]	coref	13-11[47_29]
+9-18	433-439	genres	abstract[28]|abstract[29]	new[28]|giv[29]	_	_
+9-19	440-441	.	_	_	_	_
+
+#Text=List anything that could plausibly describe a part of the book , even if you think that " romance " or " action " are relatively minor components .
+10-1	442-446	List	_	_	_	_
+10-2	447-455	anything	abstract[30]	new[30]	_	_
+10-3	456-460	that	abstract[30]	new[30]	_	_
+10-4	461-466	could	abstract[30]	new[30]	_	_
+10-5	467-476	plausibly	abstract[30]	new[30]	_	_
+10-6	477-485	describe	abstract[30]	new[30]	_	_
+10-7	486-487	a	abstract[30]|object[31]	new[30]|giv[31]	coref	11-8[37_31]
+10-8	488-492	part	abstract[30]|object[31]	new[30]|giv[31]	_	_
+10-9	493-495	of	abstract[30]|object[31]	new[30]|giv[31]	_	_
+10-10	496-499	the	abstract[30]|object[31]	new[30]|giv[31]	_	_
+10-11	500-504	book	abstract[30]|object[31]	new[30]|giv[31]	_	_
+10-12	505-506	,	_	_	_	_
+10-13	507-511	even	_	_	_	_
+10-14	512-514	if	_	_	_	_
+10-15	515-518	you	person	giv	ana	11-2
+10-16	519-524	think	_	_	_	_
+10-17	525-529	that	_	_	_	_
+10-18	530-531	"	_	_	_	_
+10-19	532-539	romance	abstract	new	_	_
+10-20	540-541	"	_	_	_	_
+10-21	542-544	or	_	_	_	_
+10-22	545-546	"	_	_	_	_
+10-23	547-553	action	abstract	new	coref	10-26[35_0]
+10-24	554-555	"	_	_	_	_
+10-25	556-559	are	_	_	_	_
+10-26	560-570	relatively	abstract[35]	giv[35]	_	_
+10-27	571-576	minor	abstract[35]	giv[35]	_	_
+10-28	577-587	components	abstract[35]	giv[35]	_	_
+10-29	588-589	.	_	_	_	_
+
+#Text=If you 're not trying to market a book , or you need help with genre definitions , skip down to the next section .
+11-1	590-592	If	_	_	_	_
+11-2	593-596	you	person	giv	ana	11-12
+11-3	597-600	're	_	_	_	_
+11-4	601-604	not	_	_	_	_
+11-5	605-611	trying	_	_	_	_
+11-6	612-614	to	_	_	_	_
+11-7	615-621	market	_	_	_	_
+11-8	622-623	a	object[37]	giv[37]	coref	13-24[50_37]
+11-9	624-628	book	object[37]	giv[37]	_	_
+11-10	629-630	,	_	_	_	_
+11-11	631-633	or	_	_	_	_
+11-12	634-637	you	person	giv	ana	13-2
+11-13	638-642	need	_	_	_	_
+11-14	643-647	help	abstract[39]	new[39]	_	_
+11-15	648-652	with	abstract[39]	new[39]	_	_
+11-16	653-658	genre	abstract[39]|abstract|abstract[41]	new[39]|giv|new[41]	coref	14-8[53_0]
+11-17	659-670	definitions	abstract[39]|abstract[41]	new[39]|new[41]	_	_
+11-18	671-672	,	_	_	_	_
+11-19	673-677	skip	_	_	_	_
+11-20	678-682	down	_	_	_	_
+11-21	683-685	to	_	_	_	_
+11-22	686-689	the	abstract[42]	new[42]	_	_
+11-23	690-694	next	abstract[42]	new[42]	_	_
+11-24	695-702	section	abstract[42]	new[42]	_	_
+11-25	703-704	.	_	_	_	_
+
+#Text=Look up similar books online .
+12-1	705-709	Look	_	_	_	_
+12-2	710-712	up	_	_	_	_
+12-3	713-720	similar	object[43]	giv[43]	coref	15-6[59_43]
+12-4	721-726	books	object[43]	giv[43]	_	_
+12-5	727-733	online	_	_	_	_
+12-6	734-735	.	_	_	_	_
+
+#Text=If you do n't feel confident about your list of possible genres , look up works you 've read that are similar to the book you 're marketing .
+13-1	736-738	If	_	_	_	_
+13-2	739-742	you	person	giv	ana	13-8
+13-3	743-745	do	_	_	_	_
+13-4	746-749	n't	_	_	_	_
+13-5	750-754	feel	_	_	_	_
+13-6	755-764	confident	_	_	_	_
+13-7	765-770	about	_	_	_	_
+13-8	771-775	your	person|abstract[46]	giv|new[46]	ana|coref	13-17|22-2[90_46]
+13-9	776-780	list	abstract[46]	new[46]	_	_
+13-10	781-783	of	abstract[46]	new[46]	_	_
+13-11	784-792	possible	abstract[46]|abstract[47]	new[46]|giv[47]	coref	16-2[65_47]
+13-12	793-799	genres	abstract[46]|abstract[47]	new[46]|giv[47]	_	_
+13-13	800-801	,	_	_	_	_
+13-14	802-806	look	_	_	_	_
+13-15	807-809	up	_	_	_	_
+13-16	810-815	works	abstract[48]	new[48]	ana	14-4[0_48]
+13-17	816-819	you	abstract[48]|person	new[48]|giv	ana	13-26
+13-18	820-823	've	abstract[48]	new[48]	_	_
+13-19	824-828	read	abstract[48]	new[48]	_	_
+13-20	829-833	that	abstract[48]	new[48]	_	_
+13-21	834-837	are	abstract[48]	new[48]	_	_
+13-22	838-845	similar	abstract[48]	new[48]	_	_
+13-23	846-848	to	abstract[48]	new[48]	_	_
+13-24	849-852	the	abstract[48]|object[50]	new[48]|giv[50]	coref	14-14[56_50]
+13-25	853-857	book	abstract[48]|object[50]	new[48]|giv[50]	_	_
+13-26	858-861	you	abstract[48]|object[50]|person	new[48]|giv[50]|giv	ana	14-14
+13-27	862-865	're	abstract[48]|object[50]	new[48]|giv[50]	_	_
+13-28	866-875	marketing	abstract[48]|object[50]	new[48]|giv[50]	_	_
+13-29	876-877	.	_	_	_	_
+
+#Text=If several of them are listed under the same genre , chances are your book will fit under that category as well .
+14-1	878-880	If	_	_	_	_
+14-2	881-888	several	_	_	_	_
+14-3	889-891	of	_	_	_	_
+14-4	892-896	them	abstract	giv	_	_
+14-5	897-900	are	_	_	_	_
+14-6	901-907	listed	_	_	_	_
+14-7	908-913	under	_	_	_	_
+14-8	914-917	the	abstract[53]	giv[53]	coref	19-2[77_53]
+14-9	918-922	same	abstract[53]	giv[53]	_	_
+14-10	923-928	genre	abstract[53]	giv[53]	_	_
+14-11	929-930	,	_	_	_	_
+14-12	931-938	chances	abstract	new	_	_
+14-13	939-942	are	_	_	_	_
+14-14	943-947	your	person|object[56]	giv|giv[56]	ana|coref	15-16|15-16[62_56]
+14-15	948-952	book	object[56]	giv[56]	_	_
+14-16	953-957	will	_	_	_	_
+14-17	958-961	fit	_	_	_	_
+14-18	962-967	under	_	_	_	_
+14-19	968-972	that	abstract[57]	new[57]	ana	15-4[58_57]
+14-20	973-981	category	abstract[57]	new[57]	_	_
+14-21	982-984	as	_	_	_	_
+14-22	985-989	well	_	_	_	_
+14-23	990-991	.	_	_	_	_
+
+#Text=Conversely , if none of the books under " mystery " sound remotely similar to your book , it 's probably a bad fit .
+15-1	992-1002	Conversely	_	_	_	_
+15-2	1003-1004	,	_	_	_	_
+15-3	1005-1007	if	_	_	_	_
+15-4	1008-1012	none	abstract[58]	giv[58]	ana	15-19[0_58]
+15-5	1013-1015	of	abstract[58]	giv[58]	_	_
+15-6	1016-1019	the	abstract[58]|object[59]	giv[58]|giv[59]	coref	20-2[82_59]
+15-7	1020-1025	books	abstract[58]|object[59]	giv[58]|giv[59]	_	_
+15-8	1026-1031	under	abstract[58]|object[59]	giv[58]|giv[59]	_	_
+15-9	1032-1033	"	abstract[58]|object[59]	giv[58]|giv[59]	_	_
+15-10	1034-1041	mystery	abstract[58]|object[59]|abstract	giv[58]|giv[59]|new	_	_
+15-11	1042-1043	"	abstract[58]|object[59]	giv[58]|giv[59]	_	_
+15-12	1044-1049	sound	_	_	_	_
+15-13	1050-1058	remotely	_	_	_	_
+15-14	1059-1066	similar	_	_	_	_
+15-15	1067-1069	to	_	_	_	_
+15-16	1070-1074	your	person|object[62]	giv|giv[62]	ana	21-10
+15-17	1075-1079	book	object[62]	giv[62]	_	_
+15-18	1080-1081	,	_	_	_	_
+15-19	1082-1084	it	abstract	giv	coref	15-21[64_0]
+15-20	1085-1087	's	_	_	_	_
+15-21	1088-1096	probably	abstract[64]	giv[64]	_	_
+15-22	1097-1098	a	abstract[64]	giv[64]	_	_
+15-23	1099-1102	bad	abstract[64]	giv[64]	_	_
+15-24	1103-1106	fit	abstract[64]	giv[64]	_	_
+15-25	1107-1108	.	_	_	_	_
+
+#Text=Track these genres on Amazon .
+16-1	1109-1114	Track	_	_	_	_
+16-2	1115-1120	these	abstract[65]	giv[65]	coref	26-19[115_65]
+16-3	1121-1127	genres	abstract[65]	giv[65]	_	_
+16-4	1128-1130	on	_	_	_	_
+16-5	1131-1137	Amazon	organization	new	coref	17-6
+16-6	1138-1139	.	_	_	_	_
+
+#Text=Most fiction is sold through Amazon , so its top seller lists provide important information .
+17-1	1140-1144	Most	abstract[67]	new[67]	_	_
+17-2	1145-1152	fiction	abstract[67]	new[67]	_	_
+17-3	1153-1155	is	_	_	_	_
+17-4	1156-1160	sold	_	_	_	_
+17-5	1161-1168	through	_	_	_	_
+17-6	1169-1175	Amazon	organization	giv	ana	17-9
+17-7	1176-1177	,	_	_	_	_
+17-8	1178-1180	so	_	_	_	_
+17-9	1181-1184	its	organization|abstract[71]	giv|new[71]	coref	19-6[79_71]
+17-10	1185-1188	top	person[70]|abstract[71]	new[70]|new[71]	coref	19-7[78_70]
+17-11	1189-1195	seller	person[70]|abstract[71]	new[70]|new[71]	_	_
+17-12	1196-1201	lists	abstract[71]	new[71]	_	_
+17-13	1202-1209	provide	_	_	_	_
+17-14	1210-1219	important	abstract[72]	new[72]	coref	28-8[124_72]
+17-15	1220-1231	information	abstract[72]	new[72]	_	_
+17-16	1232-1233	.	_	_	_	_
+
+#Text=Although publishers conduct more complex analysis , anyone can conduct one test quickly :
+18-1	1234-1242	Although	_	_	_	_
+18-2	1243-1253	publishers	person	new	_	_
+18-3	1254-1261	conduct	_	_	_	_
+18-4	1262-1266	more	abstract[74]	new[74]	_	_
+18-5	1267-1274	complex	abstract[74]	new[74]	_	_
+18-6	1275-1283	analysis	abstract[74]	new[74]	_	_
+18-7	1284-1285	,	_	_	_	_
+18-8	1286-1292	anyone	person	new	_	_
+18-9	1293-1296	can	_	_	_	_
+18-10	1297-1304	conduct	_	_	_	_
+18-11	1305-1308	one	abstract[76]	new[76]	_	_
+18-12	1309-1313	test	abstract[76]	new[76]	_	_
+18-13	1314-1321	quickly	_	_	_	_
+18-14	1322-1323	:	_	_	_	_
+
+#Text=For each genre , compare the top seller lists each week for several weeks .
+19-1	1324-1327	For	_	_	_	_
+19-2	1328-1332	each	abstract[77]	giv[77]	coref	20-15[85_77]
+19-3	1333-1338	genre	abstract[77]	giv[77]	_	_
+19-4	1339-1340	,	_	_	_	_
+19-5	1341-1348	compare	_	_	_	_
+19-6	1349-1352	the	abstract[79]	giv[79]	_	_
+19-7	1353-1356	top	person[78]|abstract[79]	giv[78]|giv[79]	_	_
+19-8	1357-1363	seller	person[78]|abstract[79]	giv[78]|giv[79]	_	_
+19-9	1364-1369	lists	abstract[79]	giv[79]	_	_
+19-10	1370-1374	each	time[80]	new[80]	_	_
+19-11	1375-1379	week	time[80]	new[80]	_	_
+19-12	1380-1383	for	_	_	_	_
+19-13	1384-1391	several	time[81]	new[81]	_	_
+19-14	1392-1397	weeks	time[81]	new[81]	_	_
+19-15	1398-1399	.	_	_	_	_
+
+#Text=If the same books stay in the top 10 for a long time , the genre is slow moving .
+20-1	1400-1402	If	_	_	_	_
+20-2	1403-1406	the	object[82]	giv[82]	_	_
+20-3	1407-1411	same	object[82]	giv[82]	_	_
+20-4	1412-1417	books	object[82]	giv[82]	_	_
+20-5	1418-1422	stay	_	_	_	_
+20-6	1423-1425	in	_	_	_	_
+20-7	1426-1429	the	abstract[83]	new[83]	_	_
+20-8	1430-1433	top	abstract[83]	new[83]	_	_
+20-9	1434-1436	10	abstract[83]	new[83]	_	_
+20-10	1437-1440	for	_	_	_	_
+20-11	1441-1442	a	time[84]	new[84]	_	_
+20-12	1443-1447	long	time[84]	new[84]	_	_
+20-13	1448-1452	time	time[84]	new[84]	_	_
+20-14	1453-1454	,	_	_	_	_
+20-15	1455-1458	the	abstract[85]	giv[85]	ana	21-1[0_85]
+20-16	1459-1464	genre	abstract[85]	giv[85]	_	_
+20-17	1465-1467	is	_	_	_	_
+20-18	1468-1472	slow	_	_	_	_
+20-19	1473-1479	moving	_	_	_	_
+20-20	1480-1481	.	_	_	_	_
+
+#Text=This usually means there 's less competition , but you 'll be fighting for a smaller readership .
+21-1	1482-1486	This	abstract	giv	coref	22-7[91_0]
+21-2	1487-1494	usually	_	_	_	_
+21-3	1495-1500	means	_	_	_	_
+21-4	1501-1506	there	_	_	_	_
+21-5	1507-1509	's	_	_	_	_
+21-6	1510-1514	less	abstract[87]	new[87]	_	_
+21-7	1515-1526	competition	abstract[87]	new[87]	_	_
+21-8	1527-1528	,	_	_	_	_
+21-9	1529-1532	but	_	_	_	_
+21-10	1533-1536	you	person	giv	ana	26-13
+21-11	1537-1540	'll	_	_	_	_
+21-12	1541-1543	be	_	_	_	_
+21-13	1544-1552	fighting	_	_	_	_
+21-14	1553-1556	for	_	_	_	_
+21-15	1557-1558	a	person[89]	new[89]	_	_
+21-16	1559-1566	smaller	person[89]	new[89]	_	_
+21-17	1567-1577	readership	person[89]	new[89]	_	_
+21-18	1578-1579	.	_	_	_	_
+
+#Text=If the list changes rapidly , that genre is fast moving .
+22-1	1580-1582	If	_	_	_	_
+22-2	1583-1586	the	abstract[90]	giv[90]	coref	31-17[140_90]
+22-3	1587-1591	list	abstract[90]	giv[90]	_	_
+22-4	1592-1599	changes	_	_	_	_
+22-5	1600-1607	rapidly	_	_	_	_
+22-6	1608-1609	,	_	_	_	_
+22-7	1610-1614	that	abstract[91]	giv[91]	ana	23-1[0_91]
+22-8	1615-1620	genre	abstract[91]	giv[91]	_	_
+22-9	1621-1623	is	_	_	_	_
+22-10	1624-1628	fast	_	_	_	_
+22-11	1629-1635	moving	_	_	_	_
+22-12	1636-1637	.	_	_	_	_
+
+#Text=It will take more effort to compete , but the rewards ( potential sales ) are higher .
+23-1	1638-1640	It	abstract	giv	coref	24-2
+23-2	1641-1645	will	_	_	_	_
+23-3	1646-1650	take	_	_	_	_
+23-4	1651-1655	more	abstract[93]	new[93]	_	_
+23-5	1656-1662	effort	abstract[93]	new[93]	_	_
+23-6	1663-1665	to	abstract[93]	new[93]	_	_
+23-7	1666-1673	compete	abstract[93]	new[93]	_	_
+23-8	1674-1675	,	_	_	_	_
+23-9	1676-1679	but	_	_	_	_
+23-10	1680-1683	the	abstract[94]	new[94]	_	_
+23-11	1684-1691	rewards	abstract[94]	new[94]	_	_
+23-12	1692-1693	(	_	_	_	_
+23-13	1694-1703	potential	event[95]	new[95]	_	_
+23-14	1704-1709	sales	event[95]	new[95]	_	_
+23-15	1710-1711	)	_	_	_	_
+23-16	1712-1715	are	_	_	_	_
+23-17	1716-1722	higher	_	_	_	_
+23-18	1723-1724	.	_	_	_	_
+
+#Text=Compare genre advertising fees .
+24-1	1725-1732	Compare	_	_	_	_
+24-2	1733-1738	genre	abstract|abstract[98]	giv|new[98]	bridge|coref	24-3|25-12[104_98]
+24-3	1739-1750	advertising	abstract|abstract[98]	giv|new[98]	coref	25-8
+24-4	1751-1755	fees	abstract[98]	new[98]	_	_
+24-5	1756-1757	.	_	_	_	_
+
+#Text=A roundabout but effective way to compare genre success is through advertising fees .
+25-1	1758-1759	A	abstract[100]	new[100]	_	_
+25-2	1760-1770	roundabout	abstract|abstract[100]	new|new[100]	_	_
+25-3	1771-1774	but	abstract[100]	new[100]	_	_
+25-4	1775-1784	effective	abstract[100]	new[100]	_	_
+25-5	1785-1788	way	abstract[100]	new[100]	_	_
+25-6	1789-1791	to	abstract[100]	new[100]	_	_
+25-7	1792-1799	compare	abstract[100]	new[100]	_	_
+25-8	1800-1805	genre	abstract[100]|abstract|abstract[102]	new[100]|giv|new[102]	bridge	25-12
+25-9	1806-1813	success	abstract[100]|abstract[102]	new[100]|new[102]	_	_
+25-10	1814-1816	is	_	_	_	_
+25-11	1817-1824	through	_	_	_	_
+25-12	1825-1836	advertising	abstract|abstract[104]	giv|giv[104]	bridge	26-6
+25-13	1837-1841	fees	abstract[104]	giv[104]	_	_
+25-14	1842-1843	.	_	_	_	_
+
+#Text=Web pages such as BookBub advertising prices and Kindle Nation sponsorship tell you how much various sites value different genres .
+26-1	1844-1847	Web	person|abstract[106]	new|new[106]	_	_
+26-2	1848-1853	pages	abstract[106]	new[106]	_	_
+26-3	1854-1858	such	abstract[106]	new[106]	_	_
+26-4	1859-1861	as	abstract[106]	new[106]	_	_
+26-5	1862-1869	BookBub	abstract[106]|abstract|abstract[109]	new[106]|new|new[109]	coref	28-1[121_0]
+26-6	1870-1881	advertising	abstract[106]|abstract|abstract[109]	new[106]|giv|new[109]	bridge	28-16
+26-7	1882-1888	prices	abstract[106]|abstract[109]	new[106]|new[109]	_	_
+26-8	1889-1892	and	abstract[106]	new[106]	_	_
+26-9	1893-1899	Kindle	abstract[106]|person|abstract[112]	new[106]|new|new[112]	_	_
+26-10	1900-1906	Nation	abstract[106]|person|abstract[112]	new[106]|new|new[112]	_	_
+26-11	1907-1918	sponsorship	abstract[106]|abstract[112]	new[106]|new[112]	_	_
+26-12	1919-1923	tell	_	_	_	_
+26-13	1924-1927	you	person	giv	ana	28-7
+26-14	1928-1931	how	_	_	_	_
+26-15	1932-1936	much	_	_	_	_
+26-16	1937-1944	various	organization[114]	new[114]	_	_
+26-17	1945-1950	sites	organization[114]	new[114]	_	_
+26-18	1951-1956	value	_	_	_	_
+26-19	1957-1966	different	abstract[115]	giv[115]	coref	27-1[116_115]
+26-20	1967-1973	genres	abstract[115]	giv[115]	_	_
+26-21	1974-1975	.	_	_	_	_
+
+#Text=Genres with higher costs tend to have more competition , but larger readership for those who rise above the rest .
+27-1	1976-1982	Genres	abstract[116]	giv[116]	coref	34-1[150_116]
+27-2	1983-1987	with	abstract[116]	giv[116]	_	_
+27-3	1988-1994	higher	abstract[116]|abstract[117]	giv[116]|new[117]	_	_
+27-4	1995-2000	costs	abstract[116]|abstract[117]	giv[116]|new[117]	_	_
+27-5	2001-2005	tend	_	_	_	_
+27-6	2006-2008	to	_	_	_	_
+27-7	2009-2013	have	_	_	_	_
+27-8	2014-2018	more	abstract[118]	new[118]	_	_
+27-9	2019-2030	competition	abstract[118]	new[118]	_	_
+27-10	2031-2032	,	_	_	_	_
+27-11	2033-2036	but	_	_	_	_
+27-12	2037-2043	larger	person[119]	new[119]	_	_
+27-13	2044-2054	readership	person[119]	new[119]	_	_
+27-14	2055-2058	for	person[119]	new[119]	_	_
+27-15	2059-2064	those	person[119]	new[119]	_	_
+27-16	2065-2068	who	person[119]	new[119]	_	_
+27-17	2069-2073	rise	person[119]	new[119]	_	_
+27-18	2074-2079	above	person[119]	new[119]	_	_
+27-19	2080-2083	the	person[119]|abstract[120]	new[119]|new[120]	_	_
+27-20	2084-2088	rest	person[119]|abstract[120]	new[119]|new[120]	_	_
+27-21	2089-2090	.	_	_	_	_
+
+#Text=BookBub 's stats in particular give you excellent information if you plan to pay for advertising .
+28-1	2091-2098	BookBub	abstract[121]|abstract[122]	giv[121]|new[122]	_	_
+28-2	2099-2101	's	abstract[121]|abstract[122]	giv[121]|new[122]	_	_
+28-3	2102-2107	stats	abstract[122]	new[122]	_	_
+28-4	2108-2110	in	abstract[122]	new[122]	_	_
+28-5	2111-2121	particular	abstract[122]	new[122]	_	_
+28-6	2122-2126	give	_	_	_	_
+28-7	2127-2130	you	person	giv	ana	28-11
+28-8	2131-2140	excellent	abstract[124]	giv[124]	coref	31-3[138_124]
+28-9	2141-2152	information	abstract[124]	giv[124]	_	_
+28-10	2153-2155	if	_	_	_	_
+28-11	2156-2159	you	person	giv	ana	29-27
+28-12	2160-2164	plan	_	_	_	_
+28-13	2165-2167	to	_	_	_	_
+28-14	2168-2171	pay	_	_	_	_
+28-15	2172-2175	for	_	_	_	_
+28-16	2176-2187	advertising	abstract	giv	coref	29-20[132_0]
+28-17	2188-2189	.	_	_	_	_
+
+#Text=Compare the cost of a featured deal and the effect of the deal ( additional downloads/sales ) to see which genre gives the best bang for your buck .
+29-1	2190-2197	Compare	_	_	_	_
+29-2	2198-2201	the	abstract[127]	new[127]	_	_
+29-3	2202-2206	cost	abstract[127]	new[127]	_	_
+29-4	2207-2209	of	abstract[127]	new[127]	_	_
+29-5	2210-2211	a	abstract[127]|abstract[128]	new[127]|new[128]	coref	29-12[130_128]
+29-6	2212-2220	featured	abstract[127]|abstract[128]	new[127]|new[128]	_	_
+29-7	2221-2225	deal	abstract[127]|abstract[128]	new[127]|new[128]	_	_
+29-8	2226-2229	and	_	_	_	_
+29-9	2230-2233	the	abstract[129]	new[129]	appos	29-15[131_129]
+29-10	2234-2240	effect	abstract[129]	new[129]	_	_
+29-11	2241-2243	of	abstract[129]	new[129]	_	_
+29-12	2244-2247	the	abstract[129]|abstract[130]	new[129]|giv[130]	_	_
+29-13	2248-2252	deal	abstract[129]|abstract[130]	new[129]|giv[130]	_	_
+29-14	2253-2254	(	_	_	_	_
+29-15	2255-2265	additional	abstract[131]	giv[131]	_	_
+29-16	2266-2281	downloads/sales	abstract[131]	giv[131]	_	_
+29-17	2282-2283	)	_	_	_	_
+29-18	2284-2286	to	_	_	_	_
+29-19	2287-2290	see	_	_	_	_
+29-20	2291-2296	which	abstract[132]	giv[132]	coref	37-14[170_132]
+29-21	2297-2302	genre	abstract[132]	giv[132]	_	_
+29-22	2303-2308	gives	_	_	_	_
+29-23	2309-2312	the	abstract[133]	new[133]	_	_
+29-24	2313-2317	best	abstract[133]	new[133]	_	_
+29-25	2318-2322	bang	abstract[133]	new[133]	_	_
+29-26	2323-2326	for	abstract[133]	new[133]	_	_
+29-27	2327-2331	your	abstract[133]|person|abstract[135]	new[133]|giv|new[135]	ana	31-1
+29-28	2332-2336	buck	abstract[133]|abstract[135]	new[133]|new[135]	_	_
+29-29	2337-2338	.	_	_	_	_
+
+#Text=Ask for input .
+30-1	2339-2342	Ask	_	_	_	_
+30-2	2343-2346	for	_	_	_	_
+30-3	2347-2352	input	abstract	new	coref	32-13[147_0]
+30-4	2353-2354	.	_	_	_	_
+
+#Text=You have some more information now , and may be able to narrow it down to a smaller list .
+31-1	2355-2358	You	person	giv	ana	36-2
+31-2	2359-2363	have	_	_	_	_
+31-3	2364-2368	some	abstract[138]	giv[138]	ana	31-14[0_138]
+31-4	2369-2373	more	abstract[138]	giv[138]	_	_
+31-5	2374-2385	information	abstract[138]	giv[138]	_	_
+31-6	2386-2389	now	_	_	_	_
+31-7	2390-2391	,	_	_	_	_
+31-8	2392-2395	and	_	_	_	_
+31-9	2396-2399	may	_	_	_	_
+31-10	2400-2402	be	_	_	_	_
+31-11	2403-2407	able	_	_	_	_
+31-12	2408-2410	to	_	_	_	_
+31-13	2411-2417	narrow	_	_	_	_
+31-14	2418-2420	it	abstract	giv	_	_
+31-15	2421-2425	down	_	_	_	_
+31-16	2426-2428	to	_	_	_	_
+31-17	2429-2430	a	abstract[140]	giv[140]	_	_
+31-18	2431-2438	smaller	abstract[140]	giv[140]	_	_
+31-19	2439-2443	list	abstract[140]	giv[140]	_	_
+31-20	2444-2445	.	_	_	_	_
+
+#Text=Ask an editor , publisher , agent , or close friend for their input on the decision .
+32-1	2446-2449	Ask	_	_	_	_
+32-2	2450-2452	an	person[141]|person[142]	new[141]|new[142]	ana	32-13[0_142]
+32-3	2453-2459	editor	person[141]|person[142]	new[141]|new[142]	_	_
+32-4	2460-2461	,	person[142]	new[142]	_	_
+32-5	2462-2471	publisher	person[142]|person	new[142]|new	_	_
+32-6	2472-2473	,	person[142]	new[142]	_	_
+32-7	2474-2479	agent	person[142]|person	new[142]|new	_	_
+32-8	2480-2481	,	person[142]	new[142]	_	_
+32-9	2482-2484	or	person[142]	new[142]	_	_
+32-10	2485-2490	close	person[142]|person[145]	new[142]|new[145]	_	_
+32-11	2491-2497	friend	person[142]|person[145]	new[142]|new[145]	_	_
+32-12	2498-2501	for	_	_	_	_
+32-13	2502-2507	their	person|abstract[147]	giv|giv[147]	_	_
+32-14	2508-2513	input	abstract[147]	giv[147]	_	_
+32-15	2514-2516	on	abstract[147]	giv[147]	_	_
+32-16	2517-2520	the	abstract[147]|event[148]	giv[147]|new[148]	_	_
+32-17	2521-2529	decision	abstract[147]|event[148]	giv[147]|new[148]	_	_
+32-18	2530-2531	.	_	_	_	_
+
+#Text=Consider the target audience .
+33-1	2532-2540	Consider	_	_	_	_
+33-2	2541-2544	the	person[149]	new[149]	coref	36-11[163_149]
+33-3	2545-2551	target	person[149]	new[149]	_	_
+33-4	2552-2560	audience	person[149]	new[149]	_	_
+33-5	2561-2562	.	_	_	_	_
+
+#Text=Different genres have audiences with different demographics .
+34-1	2563-2572	Different	abstract[150]	giv[150]	coref	36-6[0_150]
+34-2	2573-2579	genres	abstract[150]	giv[150]	_	_
+34-3	2580-2584	have	_	_	_	_
+34-4	2585-2594	audiences	person[151]	new[151]	_	_
+34-5	2595-2599	with	person[151]	new[151]	_	_
+34-6	2600-2609	different	person[151]|abstract[152]	new[151]|new[152]	_	_
+34-7	2610-2622	demographics	person[151]|abstract[152]	new[151]|new[152]	_	_
+34-8	2623-2624	.	_	_	_	_
+
+#Text=Most readers will assume a romance novel is written for adults , while fantasy novels are more attractive to young adults .
+35-1	2625-2629	Most	person[153]	new[153]	coref	44-10[197_153]
+35-2	2630-2637	readers	person[153]	new[153]	_	_
+35-3	2638-2642	will	_	_	_	_
+35-4	2643-2649	assume	_	_	_	_
+35-5	2650-2651	a	abstract[155]	new[155]	_	_
+35-6	2652-2659	romance	abstract|abstract[155]	new|new[155]	coref	47-1
+35-7	2660-2665	novel	abstract[155]	new[155]	_	_
+35-8	2666-2668	is	_	_	_	_
+35-9	2669-2676	written	_	_	_	_
+35-10	2677-2680	for	_	_	_	_
+35-11	2681-2687	adults	person	new	coref	35-20[159_0]
+35-12	2688-2689	,	_	_	_	_
+35-13	2690-2695	while	_	_	_	_
+35-14	2696-2703	fantasy	abstract|abstract[158]	new|new[158]	_	_
+35-15	2704-2710	novels	abstract[158]	new[158]	_	_
+35-16	2711-2714	are	_	_	_	_
+35-17	2715-2719	more	_	_	_	_
+35-18	2720-2730	attractive	_	_	_	_
+35-19	2731-2733	to	_	_	_	_
+35-20	2734-2739	young	person[159]	giv[159]	_	_
+35-21	2740-2746	adults	person[159]	giv[159]	_	_
+35-22	2747-2748	.	_	_	_	_
+
+#Text=When you 're deciding between genres , choose one with a main audience you think will enjoy the book .
+36-1	2749-2753	When	_	_	_	_
+36-2	2754-2757	you	person	giv	ana	36-14
+36-3	2758-2761	're	_	_	_	_
+36-4	2762-2770	deciding	_	_	_	_
+36-5	2771-2778	between	_	_	_	_
+36-6	2779-2785	genres	abstract	giv	coref	39-2[176_0]
+36-7	2786-2787	,	_	_	_	_
+36-8	2788-2794	choose	_	_	_	_
+36-9	2795-2798	one	abstract[162]	new[162]	_	_
+36-10	2799-2803	with	abstract[162]	new[162]	_	_
+36-11	2804-2805	a	abstract[162]|person[163]	new[162]|giv[163]	coref	37-2[167_163]
+36-12	2806-2810	main	abstract[162]|person[163]	new[162]|giv[163]	_	_
+36-13	2811-2819	audience	abstract[162]|person[163]	new[162]|giv[163]	_	_
+36-14	2820-2823	you	abstract[162]|person[163]|person	new[162]|giv[163]|giv	ana	37-2
+36-15	2824-2829	think	abstract[162]|person[163]	new[162]|giv[163]	_	_
+36-16	2830-2834	will	abstract[162]|person[163]	new[162]|giv[163]	_	_
+36-17	2835-2840	enjoy	abstract[162]|person[163]	new[162]|giv[163]	_	_
+36-18	2841-2844	the	abstract[162]|person[163]|object[165]	new[162]|giv[163]|new[165]	coref	37-10[168_165]
+36-19	2845-2849	book	abstract[162]|person[163]|object[165]	new[162]|giv[163]|new[165]	_	_
+36-20	2850-2851	.	_	_	_	_
+
+#Text=If your target audience is not the same as a typical book in your genre 's , clarify with an additional description .
+37-1	2852-2854	If	_	_	_	_
+37-2	2855-2859	your	person|person[167]	giv|giv[167]	ana	37-14
+37-3	2860-2866	target	person[167]	giv[167]	_	_
+37-4	2867-2875	audience	person[167]	giv[167]	_	_
+37-5	2876-2878	is	_	_	_	_
+37-6	2879-2882	not	_	_	_	_
+37-7	2883-2886	the	_	_	_	_
+37-8	2887-2891	same	_	_	_	_
+37-9	2892-2894	as	_	_	_	_
+37-10	2895-2896	a	object[168]	giv[168]	coref	40-13[180_168]
+37-11	2897-2904	typical	object[168]	giv[168]	_	_
+37-12	2905-2909	book	object[168]	giv[168]	_	_
+37-13	2910-2912	in	object[168]	giv[168]	_	_
+37-14	2913-2917	your	object[168]|person|abstract[170]	giv[168]|giv|giv[170]	ana|coref	40-4|40-7[179_170]
+37-15	2918-2923	genre	object[168]|abstract[170]	giv[168]|giv[170]	_	_
+37-16	2924-2926	's	object[168]|abstract[170]	giv[168]|giv[170]	_	_
+37-17	2927-2928	,	_	_	_	_
+37-18	2929-2936	clarify	_	_	_	_
+37-19	2937-2941	with	_	_	_	_
+37-20	2942-2944	an	abstract[171]	new[171]	_	_
+37-21	2945-2955	additional	abstract[171]	new[171]	_	_
+37-22	2956-2967	description	abstract[171]	new[171]	_	_
+37-23	2968-2969	.	_	_	_	_
+
+#Text=For example , write " Young Adult Mystery " or " Literary Science Fiction . "
+38-1	2970-2973	For	_	_	_	_
+38-2	2974-2981	example	_	_	_	_
+38-3	2982-2983	,	_	_	_	_
+38-4	2984-2989	write	_	_	_	_
+38-5	2990-2991	"	_	_	_	_
+38-6	2992-2997	Young	object[172]|abstract[173]	new[172]|new[173]	coref	46-8[0_173]
+38-7	2998-3003	Adult	object[172]|abstract[173]	new[172]|new[173]	_	_
+38-8	3004-3011	Mystery	abstract[173]	new[173]	_	_
+38-9	3012-3013	"	_	_	_	_
+38-10	3014-3016	or	_	_	_	_
+38-11	3017-3018	"	_	_	_	_
+38-12	3019-3027	Literary	abstract[175]	new[175]	coref	41-20[187_175]
+38-13	3028-3035	Science	organization|abstract[175]	new|new[175]	_	_
+38-14	3036-3043	Fiction	abstract[175]	new[175]	_	_
+38-15	3044-3045	.	_	_	_	_
+38-16	3046-3047	"	_	_	_	_
+
+#Text=Choose two or three genres if reasonable .
+39-1	3048-3054	Choose	_	_	_	_
+39-2	3055-3058	two	abstract[176]	giv[176]	coref	41-12[184_176]
+39-3	3059-3061	or	abstract[176]	giv[176]	_	_
+39-4	3062-3067	three	abstract[176]	giv[176]	_	_
+39-5	3068-3074	genres	abstract[176]	giv[176]	_	_
+39-6	3075-3077	if	_	_	_	_
+39-7	3078-3088	reasonable	_	_	_	_
+39-8	3089-3090	.	_	_	_	_
+
+#Text=Most websites allow you to pick more than one genre to describe a book .
+40-1	3091-3095	Most	organization[177]	new[177]	_	_
+40-2	3096-3104	websites	organization[177]	new[177]	_	_
+40-3	3105-3110	allow	_	_	_	_
+40-4	3111-3114	you	person	giv	ana	41-7
+40-5	3115-3117	to	_	_	_	_
+40-6	3118-3122	pick	_	_	_	_
+40-7	3123-3127	more	abstract[179]	giv[179]	coref	42-2[0_179]
+40-8	3128-3132	than	abstract[179]	giv[179]	_	_
+40-9	3133-3136	one	abstract[179]	giv[179]	_	_
+40-10	3137-3142	genre	abstract[179]	giv[179]	_	_
+40-11	3143-3145	to	_	_	_	_
+40-12	3146-3154	describe	_	_	_	_
+40-13	3155-3156	a	object[180]	giv[180]	ana	41-1[0_180]
+40-14	3157-3161	book	object[180]	giv[180]	_	_
+40-15	3162-3163	.	_	_	_	_
+
+#Text=It 's often best to allow your book to compete in multiple genres or subgenres , such as " Science Fiction Horror " or " War Thriller . "
+41-1	3164-3166	It	object	giv	coref	41-7[183_0]
+41-2	3167-3169	's	_	_	_	_
+41-3	3170-3175	often	_	_	_	_
+41-4	3176-3180	best	_	_	_	_
+41-5	3181-3183	to	_	_	_	_
+41-6	3184-3189	allow	_	_	_	_
+41-7	3190-3194	your	person|object[183]	giv|giv[183]	coref	57-16[248_183]
+41-8	3195-3199	book	object[183]	giv[183]	_	_
+41-9	3200-3202	to	_	_	_	_
+41-10	3203-3210	compete	_	_	_	_
+41-11	3211-3213	in	_	_	_	_
+41-12	3214-3222	multiple	abstract[184]|abstract[185]	giv[184]|giv[185]	coref|coref	41-12[185_184]|43-2[194_185]
+41-13	3223-3229	genres	abstract[184]|abstract[185]	giv[184]|giv[185]	_	_
+41-14	3230-3232	or	abstract[185]	giv[185]	_	_
+41-15	3233-3242	subgenres	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-16	3243-3244	,	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-17	3245-3249	such	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-18	3250-3252	as	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-19	3253-3254	"	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-20	3255-3262	Science	abstract[185]|abstract[186]|abstract[187]|abstract[188]	giv[185]|new[186]|giv[187]|new[188]	coref	43-4[193_187]
+41-21	3263-3270	Fiction	abstract[185]|abstract[186]|abstract[187]|abstract[188]	giv[185]|new[186]|giv[187]|new[188]	_	_
+41-22	3271-3277	Horror	abstract[185]|abstract[186]|abstract[188]	giv[185]|new[186]|new[188]	_	_
+41-23	3278-3279	"	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-24	3280-3282	or	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-25	3283-3284	"	abstract[185]|abstract[186]	giv[185]|new[186]	_	_
+41-26	3285-3288	War	abstract[185]|abstract[186]|event|abstract[190]	giv[185]|new[186]|new|new[190]	_	_
+41-27	3289-3297	Thriller	abstract[185]|abstract[186]|abstract[190]	giv[185]|new[186]|new[190]	_	_
+41-28	3298-3299	.	_	_	_	_
+41-29	3300-3301	"	_	_	_	_
+
+#Text=Understanding Genre Definitions
+42-1	3302-3315	Understanding	_	_	_	_
+42-2	3316-3321	Genre	abstract|abstract[192]	giv|new[192]	coref	44-1
+42-3	3322-3333	Definitions	abstract[192]	new[192]	_	_
+
+#Text=Learn the main realist fiction genres .
+43-1	3334-3339	Learn	_	_	_	_
+43-2	3340-3343	the	abstract[194]	giv[194]	coref	45-5[203_194]
+43-3	3344-3348	main	abstract[194]	giv[194]	_	_
+43-4	3349-3356	realist	abstract[193]|abstract[194]	giv[193]|giv[194]	coref	44-7[0_193]
+43-5	3357-3364	fiction	abstract[193]|abstract[194]	giv[193]|giv[194]	_	_
+43-6	3365-3371	genres	abstract[194]	giv[194]	_	_
+43-7	3372-3373	.	_	_	_	_
+
+#Text=Genre is probably most important for fiction , as many readers use it to discover works they may enjoy .
+44-1	3374-3379	Genre	abstract	giv	coref	53-15[236_0]
+44-2	3380-3382	is	_	_	_	_
+44-3	3383-3391	probably	_	_	_	_
+44-4	3392-3396	most	_	_	_	_
+44-5	3397-3406	important	_	_	_	_
+44-6	3407-3410	for	_	_	_	_
+44-7	3411-3418	fiction	abstract	giv	ana	44-13
+44-8	3419-3420	,	_	_	_	_
+44-9	3421-3423	as	_	_	_	_
+44-10	3424-3428	many	person[197]	giv[197]	ana	44-17[0_197]
+44-11	3429-3436	readers	person[197]	giv[197]	_	_
+44-12	3437-3440	use	_	_	_	_
+44-13	3441-3443	it	abstract	giv	coref	45-6
+44-14	3444-3446	to	_	_	_	_
+44-15	3447-3455	discover	_	_	_	_
+44-16	3456-3461	works	abstract[199]	new[199]	_	_
+44-17	3462-3466	they	abstract[199]|person	new[199]|giv	_	_
+44-18	3467-3470	may	abstract[199]	new[199]	_	_
+44-19	3471-3476	enjoy	abstract[199]	new[199]	_	_
+44-20	3477-3478	.	_	_	_	_
+
+#Text=We 'll start with realist fiction genres , or stories that are imaginary but theoretically possible :
+45-1	3479-3481	We	person	acc	_	_
+45-2	3482-3485	'll	_	_	_	_
+45-3	3486-3491	start	_	_	_	_
+45-4	3492-3496	with	_	_	_	_
+45-5	3497-3504	realist	abstract[203]|abstract[204]	giv[203]|giv[204]	coref|coref	45-5[204_203]|48-9[214_204]
+45-6	3505-3512	fiction	abstract|abstract[203]|abstract[204]	giv|giv[203]|giv[204]	coref	48-12[216_0]
+45-7	3513-3519	genres	abstract[203]|abstract[204]	giv[203]|giv[204]	_	_
+45-8	3520-3521	,	abstract[204]	giv[204]	_	_
+45-9	3522-3524	or	abstract[204]	giv[204]	_	_
+45-10	3525-3532	stories	abstract[204]|abstract[205]	giv[204]|new[205]	coref	55-1[238_205]
+45-11	3533-3537	that	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+45-12	3538-3541	are	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+45-13	3542-3551	imaginary	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+45-14	3552-3555	but	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+45-15	3556-3569	theoretically	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+45-16	3570-3578	possible	abstract[204]|abstract[205]	giv[204]|new[205]	_	_
+45-17	3579-3580	:	_	_	_	_
+
+#Text=Crime has many overlapping subcategories , including mystery , suspense , and the action-oriented thrillers .
+46-1	3581-3586	Crime	abstract	new	_	_
+46-2	3587-3590	has	_	_	_	_
+46-3	3591-3595	many	abstract[207]	new[207]	coref	56-1[242_207]
+46-4	3596-3607	overlapping	abstract[207]	new[207]	_	_
+46-5	3608-3621	subcategories	abstract[207]	new[207]	_	_
+46-6	3622-3623	,	abstract[207]	new[207]	_	_
+46-7	3624-3633	including	abstract[207]	new[207]	_	_
+46-8	3634-3641	mystery	abstract[207]|abstract	new[207]|giv	_	_
+46-9	3642-3643	,	abstract[207]	new[207]	_	_
+46-10	3644-3652	suspense	abstract[207]|abstract	new[207]|new	_	_
+46-11	3653-3654	,	abstract[207]	new[207]	_	_
+46-12	3655-3658	and	abstract[207]	new[207]	_	_
+46-13	3659-3662	the	abstract[207]|abstract[210]	new[207]|new[210]	_	_
+46-14	3663-3678	action-oriented	abstract[207]|abstract[210]	new[207]|new[210]	_	_
+46-15	3679-3688	thrillers	abstract[207]|abstract[210]	new[207]|new[210]	_	_
+46-16	3689-3690	.	_	_	_	_
+
+#Text=Romance focuses primarily on a love story , and may or may not be erotic as well .
+47-1	3691-3698	Romance	abstract	giv	_	_
+47-2	3699-3706	focuses	_	_	_	_
+47-3	3707-3716	primarily	_	_	_	_
+47-4	3717-3719	on	_	_	_	_
+47-5	3720-3721	a	abstract[212]	new[212]	ana	48-1[0_212]
+47-6	3722-3726	love	abstract[212]	new[212]	_	_
+47-7	3727-3732	story	abstract[212]	new[212]	_	_
+47-8	3733-3734	,	_	_	_	_
+47-9	3735-3738	and	_	_	_	_
+47-10	3739-3742	may	_	_	_	_
+47-11	3743-3745	or	_	_	_	_
+47-12	3746-3749	may	_	_	_	_
+47-13	3750-3753	not	_	_	_	_
+47-14	3754-3756	be	_	_	_	_
+47-15	3757-3763	erotic	_	_	_	_
+47-16	3764-3766	as	_	_	_	_
+47-17	3767-3771	well	_	_	_	_
+47-18	3772-3773	.	_	_	_	_
+
+#Text=This can stand alone or be combined with other genres , usually historical or paranormal fiction .
+48-1	3774-3778	This	abstract	giv	_	_
+48-2	3779-3782	can	_	_	_	_
+48-3	3783-3788	stand	_	_	_	_
+48-4	3789-3794	alone	_	_	_	_
+48-5	3795-3797	or	_	_	_	_
+48-6	3798-3800	be	_	_	_	_
+48-7	3801-3809	combined	_	_	_	_
+48-8	3810-3814	with	_	_	_	_
+48-9	3815-3820	other	abstract[214]|abstract[215]	giv[214]|giv[215]	coref	48-9[215_214]
+48-10	3821-3827	genres	abstract[214]|abstract[215]	giv[214]|giv[215]	_	_
+48-11	3828-3829	,	abstract[215]	giv[215]	_	_
+48-12	3830-3837	usually	abstract[215]|abstract[216]	giv[215]|giv[216]	coref	49-1[217_216]
+48-13	3838-3848	historical	abstract[215]|abstract[216]	giv[215]|giv[216]	_	_
+48-14	3849-3851	or	abstract[215]|abstract[216]	giv[215]|giv[216]	_	_
+48-15	3852-3862	paranormal	abstract[215]|abstract[216]	giv[215]|giv[216]	_	_
+48-16	3863-3870	fiction	abstract[215]|abstract[216]	giv[215]|giv[216]	_	_
+48-17	3871-3872	.	_	_	_	_
+
+#Text=Historical fiction can be set at any point in the past .
+49-1	3873-3883	Historical	abstract[217]	giv[217]	ana	50-4[0_217]
+49-2	3884-3891	fiction	abstract[217]	giv[217]	_	_
+49-3	3892-3895	can	_	_	_	_
+49-4	3896-3898	be	_	_	_	_
+49-5	3899-3902	set	_	_	_	_
+49-6	3903-3905	at	_	_	_	_
+49-7	3906-3909	any	time[218]	new[218]	_	_
+49-8	3910-3915	point	time[218]	new[218]	_	_
+49-9	3916-3918	in	time[218]	new[218]	_	_
+49-10	3919-3922	the	time[218]|time[219]	new[218]|new[219]	coref	55-14[0_219]
+49-11	3923-3927	past	time[218]|time[219]	new[218]|new[219]	_	_
+49-12	3928-3929	.	_	_	_	_
+
+#Text=Large libraries categorize it further by specific times and places .
+50-1	3930-3935	Large	organization[220]	new[220]	coref	70-1[297_220]
+50-2	3936-3945	libraries	organization[220]	new[220]	_	_
+50-3	3946-3956	categorize	_	_	_	_
+50-4	3957-3959	it	abstract	giv	coref	53-6[234_0]
+50-5	3960-3967	further	_	_	_	_
+50-6	3968-3970	by	_	_	_	_
+50-7	3971-3979	specific	time[222]	new[222]	_	_
+50-8	3980-3985	times	time[222]	new[222]	_	_
+50-9	3986-3989	and	_	_	_	_
+50-10	3990-3996	places	place	new	_	_
+50-11	3997-3998	.	_	_	_	_
+
+#Text=The Western is a popular subgenre with its own tropes .
+51-1	3999-4002	The	_	_	_	_
+51-2	4003-4010	Western	_	_	_	_
+51-3	4011-4013	is	_	_	_	_
+51-4	4014-4015	a	abstract[224]	new[224]	ana	51-8[0_224]
+51-5	4016-4023	popular	abstract[224]	new[224]	_	_
+51-6	4024-4032	subgenre	abstract[224]	new[224]	_	_
+51-7	4033-4037	with	abstract[224]	new[224]	_	_
+51-8	4038-4041	its	abstract[224]|abstract|abstract[226]	new[224]|giv|new[226]	_	_
+51-9	4042-4045	own	abstract[224]|abstract[226]	new[224]|new[226]	_	_
+51-10	4046-4052	tropes	abstract[224]|abstract[226]	new[224]|new[226]	_	_
+51-11	4053-4054	.	_	_	_	_
+
+#Text=Action or adventure describe fast-paced tales of danger and exploration .
+52-1	4055-4061	Action	person	new	_	_
+52-2	4062-4064	or	_	_	_	_
+52-3	4065-4074	adventure	event	new	_	_
+52-4	4075-4083	describe	_	_	_	_
+52-5	4084-4094	fast-paced	abstract[229]	new[229]	_	_
+52-6	4095-4100	tales	abstract[229]	new[229]	_	_
+52-7	4101-4103	of	abstract[229]	new[229]	_	_
+52-8	4104-4110	danger	abstract[229]|abstract	new[229]|new	_	_
+52-9	4111-4114	and	abstract[229]	new[229]	_	_
+52-10	4115-4126	exploration	abstract[229]|event	new[229]|new	ana	53-1
+52-11	4127-4128	.	_	_	_	_
+
+#Text=It often includes elements from non-realistic fiction , but this is n't fundamental to the genre .
+53-1	4129-4131	It	event	giv	ana	53-10
+53-2	4132-4137	often	_	_	_	_
+53-3	4138-4146	includes	_	_	_	_
+53-4	4147-4155	elements	abstract[233]	new[233]	coref	60-3[260_233]
+53-5	4156-4160	from	abstract[233]	new[233]	_	_
+53-6	4161-4174	non-realistic	abstract[233]|abstract[234]	new[233]|giv[234]	coref	54-2[237_234]
+53-7	4175-4182	fiction	abstract[233]|abstract[234]	new[233]|giv[234]	_	_
+53-8	4183-4184	,	_	_	_	_
+53-9	4185-4188	but	_	_	_	_
+53-10	4189-4193	this	event	giv	_	_
+53-11	4194-4196	is	_	_	_	_
+53-12	4197-4200	n't	_	_	_	_
+53-13	4201-4212	fundamental	_	_	_	_
+53-14	4213-4215	to	_	_	_	_
+53-15	4216-4219	the	abstract[236]	giv[236]	coref	67-1[288_236]
+53-16	4220-4225	genre	abstract[236]	giv[236]	_	_
+53-17	4226-4227	.	_	_	_	_
+
+#Text=Categorize speculative fiction .
+54-1	4228-4238	Categorize	_	_	_	_
+54-2	4239-4250	speculative	abstract[237]	giv[237]	coref	58-1[251_237]
+54-3	4251-4258	fiction	abstract[237]	giv[237]	_	_
+54-4	4259-4260	.	_	_	_	_
+
+#Text=These stories could not happen in the real world in the present or past .
+55-1	4261-4266	These	abstract[238]	giv[238]	_	_
+55-2	4267-4274	stories	abstract[238]	giv[238]	_	_
+55-3	4275-4280	could	_	_	_	_
+55-4	4281-4284	not	_	_	_	_
+55-5	4285-4291	happen	_	_	_	_
+55-6	4292-4294	in	_	_	_	_
+55-7	4295-4298	the	abstract[239]	new[239]	coref	65-8[273_239]
+55-8	4299-4303	real	abstract[239]	new[239]	_	_
+55-9	4304-4309	world	abstract[239]	new[239]	_	_
+55-10	4310-4312	in	_	_	_	_
+55-11	4313-4316	the	time[240]	new[240]	_	_
+55-12	4317-4324	present	time[240]	new[240]	_	_
+55-13	4325-4327	or	_	_	_	_
+55-14	4328-4332	past	time	giv	_	_
+55-15	4333-4334	.	_	_	_	_
+
+#Text=The exact sub-categories are difficult to define , as there is a huge amount of overlap and experimentation .
+56-1	4335-4338	The	abstract[242]	giv[242]	_	_
+56-2	4339-4344	exact	abstract[242]	giv[242]	_	_
+56-3	4345-4359	sub-categories	abstract[242]	giv[242]	_	_
+56-4	4360-4363	are	_	_	_	_
+56-5	4364-4373	difficult	_	_	_	_
+56-6	4374-4376	to	_	_	_	_
+56-7	4377-4383	define	_	_	_	_
+56-8	4384-4385	,	_	_	_	_
+56-9	4386-4388	as	_	_	_	_
+56-10	4389-4394	there	_	_	_	_
+56-11	4395-4397	is	_	_	_	_
+56-12	4398-4399	a	abstract[243]	new[243]	_	_
+56-13	4400-4404	huge	abstract[243]	new[243]	_	_
+56-14	4405-4411	amount	abstract[243]	new[243]	_	_
+56-15	4412-4414	of	abstract[243]	new[243]	_	_
+56-16	4415-4422	overlap	abstract[243]|abstract|abstract[245]	new[243]|new|new[245]	ana	57-4[0_245]
+56-17	4423-4426	and	abstract[243]|abstract[245]	new[243]|new[245]	_	_
+56-18	4427-4442	experimentation	abstract[243]|abstract[245]|abstract	new[243]|new[245]|new	_	_
+56-19	4443-4444	.	_	_	_	_
+
+#Text=Here 's how they 're most commonly arranged , but do n't be surprised if one book could fit into two or three of the following :
+57-1	4445-4449	Here	_	_	_	_
+57-2	4450-4452	's	_	_	_	_
+57-3	4453-4456	how	_	_	_	_
+57-4	4457-4461	they	abstract	giv	_	_
+57-5	4462-4465	're	_	_	_	_
+57-6	4466-4470	most	_	_	_	_
+57-7	4471-4479	commonly	_	_	_	_
+57-8	4480-4488	arranged	_	_	_	_
+57-9	4489-4490	,	_	_	_	_
+57-10	4491-4494	but	_	_	_	_
+57-11	4495-4497	do	_	_	_	_
+57-12	4498-4501	n't	_	_	_	_
+57-13	4502-4504	be	_	_	_	_
+57-14	4505-4514	surprised	_	_	_	_
+57-15	4515-4517	if	_	_	_	_
+57-16	4518-4521	one	object[248]	giv[248]	coref	65-1[271_248]
+57-17	4522-4526	book	object[248]	giv[248]	_	_
+57-18	4527-4532	could	_	_	_	_
+57-19	4533-4536	fit	_	_	_	_
+57-20	4537-4541	into	_	_	_	_
+57-21	4542-4545	two	abstract	new	_	_
+57-22	4546-4548	or	_	_	_	_
+57-23	4549-4554	three	abstract[250]	new[250]	_	_
+57-24	4555-4557	of	abstract[250]	new[250]	_	_
+57-25	4558-4561	the	abstract[250]	new[250]	_	_
+57-26	4562-4571	following	abstract[250]	new[250]	_	_
+57-27	4572-4573	:	_	_	_	_
+
+#Text=Science fiction tends to focus more on ideas than plot .
+58-1	4574-4581	Science	abstract[251]	giv[251]	coref	63-5[266_251]
+58-2	4582-4589	fiction	abstract[251]	giv[251]	_	_
+58-3	4590-4595	tends	_	_	_	_
+58-4	4596-4598	to	_	_	_	_
+58-5	4599-4604	focus	_	_	_	_
+58-6	4605-4609	more	_	_	_	_
+58-7	4610-4612	on	_	_	_	_
+58-8	4613-4618	ideas	abstract	new	_	_
+58-9	4619-4623	than	_	_	_	_
+58-10	4624-4628	plot	abstract	new	ana	59-1
+58-11	4629-4630	.	_	_	_	_
+
+#Text=It 's often set in the future or in space , and attributes unusual phenomena to science ( which may or may not be plausible ) .
+59-1	4631-4633	It	abstract	giv	coref	76-15
+59-2	4634-4636	's	_	_	_	_
+59-3	4637-4642	often	_	_	_	_
+59-4	4643-4646	set	_	_	_	_
+59-5	4647-4649	in	_	_	_	_
+59-6	4650-4653	the	time[255]	new[255]	_	_
+59-7	4654-4660	future	time[255]	new[255]	_	_
+59-8	4661-4663	or	_	_	_	_
+59-9	4664-4666	in	_	_	_	_
+59-10	4667-4672	space	place	new	_	_
+59-11	4673-4674	,	_	_	_	_
+59-12	4675-4678	and	_	_	_	_
+59-13	4679-4689	attributes	_	_	_	_
+59-14	4690-4697	unusual	abstract[257]	new[257]	_	_
+59-15	4698-4707	phenomena	abstract[257]	new[257]	_	_
+59-16	4708-4710	to	_	_	_	_
+59-17	4711-4718	science	abstract	new	coref	60-11
+59-18	4719-4720	(	_	_	_	_
+59-19	4721-4726	which	_	_	_	_
+59-20	4727-4730	may	_	_	_	_
+59-21	4731-4733	or	_	_	_	_
+59-22	4734-4737	may	_	_	_	_
+59-23	4738-4741	not	_	_	_	_
+59-24	4742-4744	be	_	_	_	_
+59-25	4745-4754	plausible	_	_	_	_
+59-26	4755-4756	)	_	_	_	_
+59-27	4757-4758	.	_	_	_	_
+
+#Text=Fantasy includes magical or supernatural elements beyond the understanding of science .
+60-1	4759-4766	Fantasy	abstract	new	_	_
+60-2	4767-4775	includes	_	_	_	_
+60-3	4776-4783	magical	abstract[260]	giv[260]	coref	76-7[324_260]
+60-4	4784-4786	or	abstract[260]	giv[260]	_	_
+60-5	4787-4799	supernatural	abstract[260]	giv[260]	_	_
+60-6	4800-4808	elements	abstract[260]	giv[260]	_	_
+60-7	4809-4815	beyond	abstract[260]	giv[260]	_	_
+60-8	4816-4819	the	abstract[260]|abstract[261]	giv[260]|new[261]	_	_
+60-9	4820-4833	understanding	abstract[260]|abstract[261]	giv[260]|new[261]	_	_
+60-10	4834-4836	of	abstract[260]|abstract[261]	giv[260]|new[261]	_	_
+60-11	4837-4844	science	abstract[260]|abstract[261]|abstract	giv[260]|new[261]|giv	ana	61-1
+60-12	4845-4846	.	_	_	_	_
+
+#Text=It tends to be plot-driven .
+61-1	4847-4849	It	abstract	giv	_	_
+61-2	4850-4855	tends	_	_	_	_
+61-3	4856-4858	to	_	_	_	_
+61-4	4859-4861	be	_	_	_	_
+61-5	4862-4873	plot-driven	_	_	_	_
+61-6	4874-4875	.	_	_	_	_
+
+#Text=Horror seeks to terrify the reader .
+62-1	4876-4882	Horror	abstract	new	coref	63-12[268_0]
+62-2	4883-4888	seeks	_	_	_	_
+62-3	4889-4891	to	_	_	_	_
+62-4	4892-4899	terrify	_	_	_	_
+62-5	4900-4903	the	person[265]	new[265]	_	_
+62-6	4904-4910	reader	person[265]	new[265]	_	_
+62-7	4911-4912	.	_	_	_	_
+
+#Text=While usually grouped in speculative fiction , there are examples of realist horror as well .
+63-1	4913-4918	While	_	_	_	_
+63-2	4919-4926	usually	_	_	_	_
+63-3	4927-4934	grouped	_	_	_	_
+63-4	4935-4937	in	_	_	_	_
+63-5	4938-4949	speculative	abstract[266]	giv[266]	coref	75-2[320_266]
+63-6	4950-4957	fiction	abstract[266]	giv[266]	_	_
+63-7	4958-4959	,	_	_	_	_
+63-8	4960-4965	there	_	_	_	_
+63-9	4966-4969	are	_	_	_	_
+63-10	4970-4978	examples	abstract[267]	new[267]	_	_
+63-11	4979-4981	of	abstract[267]	new[267]	_	_
+63-12	4982-4989	realist	abstract[267]|abstract[268]	new[267]|giv[268]	_	_
+63-13	4990-4996	horror	abstract[267]|abstract[268]	new[267]|giv[268]	_	_
+63-14	4997-4999	as	_	_	_	_
+63-15	5000-5004	well	_	_	_	_
+63-16	5005-5006	.	_	_	_	_
+
+#Text=Shelve nonfiction by subject .
+64-1	5007-5013	Shelve	_	_	_	_
+64-2	5014-5024	nonfiction	abstract	new	_	_
+64-3	5025-5027	by	_	_	_	_
+64-4	5028-5035	subject	abstract	new	_	_
+64-5	5036-5037	.	_	_	_	_
+
+#Text=Any book that covers a topic in the real world is nonfiction , from chemistry textbooks to a collection of political speeches .
+65-1	5038-5041	Any	object[271]	giv[271]	coref	65-12[0_271]
+65-2	5042-5046	book	object[271]	giv[271]	_	_
+65-3	5047-5051	that	object[271]	giv[271]	_	_
+65-4	5052-5058	covers	object[271]	giv[271]	_	_
+65-5	5059-5060	a	object[271]|abstract[272]	giv[271]|new[272]	coref	66-9[281_272]
+65-6	5061-5066	topic	object[271]|abstract[272]	giv[271]|new[272]	_	_
+65-7	5067-5069	in	object[271]|abstract[272]	giv[271]|new[272]	_	_
+65-8	5070-5073	the	object[271]|abstract[272]|abstract[273]	giv[271]|new[272]|giv[273]	_	_
+65-9	5074-5078	real	object[271]|abstract[272]|abstract[273]	giv[271]|new[272]|giv[273]	_	_
+65-10	5079-5084	world	object[271]|abstract[272]|abstract[273]	giv[271]|new[272]|giv[273]	_	_
+65-11	5085-5087	is	_	_	_	_
+65-12	5088-5098	nonfiction	object	giv	coref	67-3
+65-13	5099-5100	,	_	_	_	_
+65-14	5101-5105	from	_	_	_	_
+65-15	5106-5115	chemistry	abstract|abstract[276]	new|new[276]	ana	66-5[0_276]
+65-16	5116-5125	textbooks	abstract[276]	new[276]	_	_
+65-17	5126-5128	to	abstract[276]	new[276]	_	_
+65-18	5129-5130	a	abstract[276]|abstract[277]	new[276]|new[277]	_	_
+65-19	5131-5141	collection	abstract[276]|abstract[277]	new[276]|new[277]	_	_
+65-20	5142-5144	of	abstract[276]|abstract[277]	new[276]|new[277]	_	_
+65-21	5145-5154	political	abstract[276]|abstract[277]|event[278]	new[276]|new[277]|new[278]	_	_
+65-22	5155-5163	speeches	abstract[276]|abstract[277]|event[278]	new[276]|new[277]|new[278]	_	_
+65-23	5164-5165	.	_	_	_	_
+
+#Text=You can refer to them just by describing the specific topic , or shelve them in a library with the Dewey Decimal System .
+66-1	5166-5169	You	person	acc	ana	71-11
+66-2	5170-5173	can	_	_	_	_
+66-3	5174-5179	refer	_	_	_	_
+66-4	5180-5182	to	_	_	_	_
+66-5	5183-5187	them	abstract	giv	ana	66-15
+66-6	5188-5192	just	_	_	_	_
+66-7	5193-5195	by	_	_	_	_
+66-8	5196-5206	describing	_	_	_	_
+66-9	5207-5210	the	abstract[281]	giv[281]	_	_
+66-10	5211-5219	specific	abstract[281]	giv[281]	_	_
+66-11	5220-5225	topic	abstract[281]	giv[281]	_	_
+66-12	5226-5227	,	_	_	_	_
+66-13	5228-5230	or	_	_	_	_
+66-14	5231-5237	shelve	_	_	_	_
+66-15	5238-5242	them	abstract	giv	_	_
+66-16	5243-5245	in	_	_	_	_
+66-17	5246-5247	a	abstract[283]	new[283]	_	_
+66-18	5248-5255	library	abstract[283]	new[283]	_	_
+66-19	5256-5260	with	abstract[283]	new[283]	_	_
+66-20	5261-5264	the	abstract[283]|abstract[286]	new[283]|new[286]	_	_
+66-21	5265-5270	Dewey	abstract[283]|person|organization[285]|abstract[286]	new[283]|new|new[285]|new[286]	_	_
+66-22	5271-5278	Decimal	abstract[283]|organization[285]|abstract[286]	new[283]|new[285]|new[286]	_	_
+66-23	5279-5285	System	abstract[283]|abstract[286]	new[283]|new[286]	_	_
+66-24	5286-5287	.	_	_	_	_
+
+#Text=One popular nonfiction genre is the biography , which describes a historical figure 's life .
+67-1	5288-5291	One	abstract[288]	giv[288]	coref	67-6[289_288]
+67-2	5292-5299	popular	abstract[288]	giv[288]	_	_
+67-3	5300-5310	nonfiction	object|abstract[288]	giv|giv[288]	coref	78-10[337_0]
+67-4	5311-5316	genre	abstract[288]	giv[288]	_	_
+67-5	5317-5319	is	_	_	_	_
+67-6	5320-5323	the	abstract[289]	giv[289]	coref	71-4[305_289]
+67-7	5324-5333	biography	abstract[289]	giv[289]	_	_
+67-8	5334-5335	,	abstract[289]	giv[289]	_	_
+67-9	5336-5341	which	abstract[289]	giv[289]	_	_
+67-10	5342-5351	describes	abstract[289]	giv[289]	_	_
+67-11	5352-5353	a	abstract[289]|abstract[291]	giv[289]|new[291]	ana	68-8[0_291]
+67-12	5354-5364	historical	abstract[289]|person[290]|abstract[291]	giv[289]|new[290]|new[291]	_	_
+67-13	5365-5371	figure	abstract[289]|person[290]|abstract[291]	giv[289]|new[290]|new[291]	_	_
+67-14	5372-5374	's	abstract[289]|person[290]|abstract[291]	giv[289]|new[290]|new[291]	_	_
+67-15	5375-5379	life	abstract[289]|abstract[291]	giv[289]|new[291]	_	_
+67-16	5380-5381	.	_	_	_	_
+
+#Text=If written by the subject , call it an autobiography .
+68-1	5382-5384	If	_	_	_	_
+68-2	5385-5392	written	_	_	_	_
+68-3	5393-5395	by	_	_	_	_
+68-4	5396-5399	the	person[292]	new[292]	_	_
+68-5	5400-5407	subject	person[292]	new[292]	_	_
+68-6	5408-5409	,	_	_	_	_
+68-7	5410-5414	call	_	_	_	_
+68-8	5415-5417	it	abstract	giv	_	_
+68-9	5418-5420	an	abstract[294]	new[294]	ana	71-1[0_294]
+68-10	5421-5434	autobiography	abstract[294]	new[294]	_	_
+68-11	5435-5436	.	_	_	_	_
+
+#Text=Understand age descriptions .
+69-1	5437-5447	Understand	_	_	_	_
+69-2	5448-5451	age	abstract|abstract[296]	new|new[296]	coref	71-23
+69-3	5452-5464	descriptions	abstract[296]	new[296]	_	_
+69-4	5465-5466	.	_	_	_	_
+
+#Text=Many libraries and bookstores have " young adult " or " children " sections with no other labels .
+70-1	5467-5471	Many	organization[297]|organization[298]	giv[297]|giv[298]	coref	70-1[298_297]
+70-2	5472-5481	libraries	organization[297]|organization[298]	giv[297]|giv[298]	_	_
+70-3	5482-5485	and	organization[298]	giv[298]	_	_
+70-4	5486-5496	bookstores	organization[298]|organization	giv[298]|new	_	_
+70-5	5497-5501	have	_	_	_	_
+70-6	5502-5503	"	plant[302]	new[302]	_	_
+70-7	5504-5509	young	object[300]|plant[302]	new[300]|new[302]	_	_
+70-8	5510-5515	adult	object[300]|plant[302]	new[300]|new[302]	_	_
+70-9	5516-5517	"	plant[302]	new[302]	_	_
+70-10	5518-5520	or	plant[302]	new[302]	_	_
+70-11	5521-5522	"	plant[302]	new[302]	_	_
+70-12	5523-5531	children	person|plant[302]	new|new[302]	_	_
+70-13	5532-5533	"	plant[302]	new[302]	_	_
+70-14	5534-5542	sections	plant[302]	new[302]	_	_
+70-15	5543-5547	with	plant[302]	new[302]	_	_
+70-16	5548-5550	no	plant[302]|abstract[303]	new[302]|new[303]	_	_
+70-17	5551-5556	other	plant[302]|abstract[303]	new[302]|new[303]	_	_
+70-18	5557-5563	labels	plant[302]|abstract[303]	new[302]|new[303]	_	_
+70-19	5564-5565	.	_	_	_	_
+
+#Text=This is n't technically a genre , but it tells you the subject matter and writing is appealing and appropriate for that age group .
+71-1	5566-5570	This	abstract	giv	ana	71-9
+71-2	5571-5573	is	_	_	_	_
+71-3	5574-5577	n't	_	_	_	_
+71-4	5578-5589	technically	abstract[305]	giv[305]	coref	75-10[0_305]
+71-5	5590-5591	a	abstract[305]	giv[305]	_	_
+71-6	5592-5597	genre	abstract[305]	giv[305]	_	_
+71-7	5598-5599	,	_	_	_	_
+71-8	5600-5603	but	_	_	_	_
+71-9	5604-5606	it	abstract	giv	_	_
+71-10	5607-5612	tells	_	_	_	_
+71-11	5613-5616	you	person	giv	_	_
+71-12	5617-5620	the	abstract[308]	new[308]	_	_
+71-13	5621-5628	subject	abstract[308]	new[308]	_	_
+71-14	5629-5635	matter	abstract[308]	new[308]	_	_
+71-15	5636-5639	and	_	_	_	_
+71-16	5640-5647	writing	abstract	new	coref	76-13
+71-17	5648-5650	is	_	_	_	_
+71-18	5651-5660	appealing	_	_	_	_
+71-19	5661-5664	and	_	_	_	_
+71-20	5665-5676	appropriate	_	_	_	_
+71-21	5677-5680	for	_	_	_	_
+71-22	5681-5685	that	person[311]	new[311]	_	_
+71-23	5686-5689	age	abstract|person[311]	giv|new[311]	coref	72-3
+71-24	5690-5695	group	person[311]	new[311]	_	_
+71-25	5696-5697	.	_	_	_	_
+
+#Text=Coming of age novels describe the transition from childhood to adulthood .
+72-1	5698-5704	Coming	abstract[313]	new[313]	ana	73-1[0_313]
+72-2	5705-5707	of	abstract[313]	new[313]	_	_
+72-3	5708-5711	age	abstract|abstract[313]	giv|new[313]	_	_
+72-4	5712-5718	novels	abstract[313]	new[313]	_	_
+72-5	5719-5727	describe	_	_	_	_
+72-6	5728-5731	the	event[314]	new[314]	_	_
+72-7	5732-5742	transition	event[314]	new[314]	_	_
+72-8	5743-5747	from	event[314]	new[314]	_	_
+72-9	5748-5757	childhood	event[314]|time	new[314]|new	_	_
+72-10	5758-5760	to	event[314]	new[314]	_	_
+72-11	5761-5770	adulthood	event[314]|abstract	new[314]|new	_	_
+72-12	5771-5772	.	_	_	_	_
+
+#Text=They 're often aimed at young adults , but not always .
+73-1	5773-5777	They	abstract	giv	_	_
+73-2	5778-5781	're	_	_	_	_
+73-3	5782-5787	often	_	_	_	_
+73-4	5788-5793	aimed	_	_	_	_
+73-5	5794-5796	at	_	_	_	_
+73-6	5797-5802	young	person[318]	new[318]	ana	77-4[0_318]
+73-7	5803-5809	adults	person[318]	new[318]	_	_
+73-8	5810-5811	,	_	_	_	_
+73-9	5812-5815	but	_	_	_	_
+73-10	5816-5819	not	_	_	_	_
+73-11	5820-5826	always	_	_	_	_
+73-12	5827-5828	.	_	_	_	_
+
+#Text=Tips
+74-1	5829-5833	Tips	abstract	new	_	_
+
+#Text=" Literary fiction " is generally considered separate from genre fiction .
+75-1	5834-5835	"	_	_	_	_
+75-2	5836-5844	Literary	abstract[320]	giv[320]	coref	75-10[322_320]
+75-3	5845-5852	fiction	abstract[320]	giv[320]	_	_
+75-4	5853-5854	"	_	_	_	_
+75-5	5855-5857	is	_	_	_	_
+75-6	5858-5867	generally	_	_	_	_
+75-7	5868-5878	considered	_	_	_	_
+75-8	5879-5887	separate	_	_	_	_
+75-9	5888-5892	from	_	_	_	_
+75-10	5893-5898	genre	abstract|abstract[322]	giv|giv[322]	ana|coref	76-1[0_322]|77-25[334_0]
+75-11	5899-5906	fiction	abstract[322]	giv[322]	_	_
+75-12	5907-5908	.	_	_	_	_
+
+#Text=It tends to focus more on thematic elements and high quality of writing than plot .
+76-1	5909-5911	It	abstract	giv	_	_
+76-2	5912-5917	tends	_	_	_	_
+76-3	5918-5920	to	_	_	_	_
+76-4	5921-5926	focus	_	_	_	_
+76-5	5927-5931	more	_	_	_	_
+76-6	5932-5934	on	_	_	_	_
+76-7	5935-5943	thematic	abstract[324]|abstract[325]	giv[324]|giv[325]	coref	76-7[325_324]
+76-8	5944-5952	elements	abstract[324]|abstract[325]	giv[324]|giv[325]	_	_
+76-9	5953-5956	and	abstract[325]	giv[325]	_	_
+76-10	5957-5961	high	abstract[325]|abstract[326]	giv[325]|new[326]	_	_
+76-11	5962-5969	quality	abstract[325]|abstract[326]	giv[325]|new[326]	_	_
+76-12	5970-5972	of	abstract[325]|abstract[326]	giv[325]|new[326]	_	_
+76-13	5973-5980	writing	abstract[325]|abstract[326]|abstract	giv[325]|new[326]|giv	_	_
+76-14	5981-5985	than	_	_	_	_
+76-15	5986-5990	plot	abstract	giv	_	_
+76-16	5991-5992	.	_	_	_	_
+
+#Text=In practice ( some argue ) , this label tends to be given to critics ' favorites , even if it could fit into a genre .
+77-1	5993-5995	In	_	_	_	_
+77-2	5996-6004	practice	_	_	_	_
+77-3	6005-6006	(	_	_	_	_
+77-4	6007-6011	some	person	giv	ana	78-2
+77-5	6012-6017	argue	_	_	_	_
+77-6	6018-6019	)	_	_	_	_
+77-7	6020-6021	,	_	_	_	_
+77-8	6022-6026	this	abstract[330]	new[330]	ana	77-21[0_330]
+77-9	6027-6032	label	abstract[330]	new[330]	_	_
+77-10	6033-6038	tends	_	_	_	_
+77-11	6039-6041	to	_	_	_	_
+77-12	6042-6044	be	_	_	_	_
+77-13	6045-6050	given	_	_	_	_
+77-14	6051-6053	to	_	_	_	_
+77-15	6054-6061	critics	person[331]|person[332]	new[331]|new[332]	_	_
+77-16	6062-6063	'	person[331]|person[332]	new[331]|new[332]	_	_
+77-17	6064-6073	favorites	person[332]	new[332]	_	_
+77-18	6074-6075	,	_	_	_	_
+77-19	6076-6080	even	_	_	_	_
+77-20	6081-6083	if	_	_	_	_
+77-21	6084-6086	it	abstract	giv	_	_
+77-22	6087-6092	could	_	_	_	_
+77-23	6093-6096	fit	_	_	_	_
+77-24	6097-6101	into	_	_	_	_
+77-25	6102-6103	a	abstract[334]	giv[334]	_	_
+77-26	6104-6109	genre	abstract[334]	giv[334]	_	_
+77-27	6110-6111	.	_	_	_	_
+
+#Text=If you 're trying to determine the genre of an existing book , read the blurbs on the back cover , dust jacket , or inside near the front .
+78-1	6112-6114	If	_	_	_	_
+78-2	6115-6118	you	person	giv	_	_
+78-3	6119-6122	're	_	_	_	_
+78-4	6123-6129	trying	_	_	_	_
+78-5	6130-6132	to	_	_	_	_
+78-6	6133-6142	determine	_	_	_	_
+78-7	6143-6146	the	abstract[336]	new[336]	_	_
+78-8	6147-6152	genre	abstract[336]	new[336]	_	_
+78-9	6153-6155	of	abstract[336]	new[336]	_	_
+78-10	6156-6158	an	abstract[336]|object[337]	new[336]|giv[337]	_	_
+78-11	6159-6167	existing	abstract[336]|object[337]	new[336]|giv[337]	_	_
+78-12	6168-6172	book	abstract[336]|object[337]	new[336]|giv[337]	_	_
+78-13	6173-6174	,	_	_	_	_
+78-14	6175-6179	read	_	_	_	_
+78-15	6180-6183	the	abstract[338]	new[338]	_	_
+78-16	6184-6190	blurbs	abstract[338]	new[338]	_	_
+78-17	6191-6193	on	abstract[338]	new[338]	_	_
+78-18	6194-6197	the	abstract[338]|object[339]	new[338]|new[339]	_	_
+78-19	6198-6202	back	abstract[338]|object[339]	new[338]|new[339]	_	_
+78-20	6203-6208	cover	abstract[338]|object[339]	new[338]|new[339]	_	_
+78-21	6209-6210	,	abstract[338]	new[338]	_	_
+78-22	6211-6215	dust	abstract[338]|object|object[341]	new[338]|new|new[341]	_	_
+78-23	6216-6222	jacket	abstract[338]|object[341]	new[338]|new[341]	_	_
+78-24	6223-6224	,	abstract[338]	new[338]	_	_
+78-25	6225-6227	or	abstract[338]	new[338]	_	_
+78-26	6228-6234	inside	abstract[338]	new[338]	_	_
+78-27	6235-6239	near	abstract[338]	new[338]	_	_
+78-28	6240-6243	the	abstract[338]|place[342]	new[338]|new[342]	_	_
+78-29	6244-6249	front	abstract[338]|place[342]	new[338]|new[342]	_	_
+78-30	6250-6251	.	_	_	_	_
+
+#Text=The copyright page often includes categorization information as well .
+79-1	6252-6255	The	abstract[344]	new[344]	_	_
+79-2	6256-6265	copyright	abstract|abstract[344]	new|new[344]	_	_
+79-3	6266-6270	page	abstract[344]	new[344]	_	_
+79-4	6271-6276	often	_	_	_	_
+79-5	6277-6285	includes	_	_	_	_
+79-6	6286-6300	categorization	abstract|abstract[346]	new|new[346]	_	_
+79-7	6301-6312	information	abstract[346]	new[346]	_	_
+79-8	6313-6315	as	_	_	_	_
+79-9	6316-6320	well	_	_	_	_
+79-10	6321-6322	.	_	_	_	_

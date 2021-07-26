@@ -1,0 +1,717 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_hardware" title="On the Stability of a Hardware Compensation Mechanism for Embedded Energy Harvesting Emulators" shortTitle="hardware" author="Valerio Freschi, Emanuele Lattanzi" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2073-431X/8/4/78/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+System	NN	system
+Architecture	NN	Architecture
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+reference	NN	reference
+system	NN	system
+covered	VBN	cover
+by	IN	by
+this	DT	this
+study	NN	study
+is	VBZ	be
+the	DT	the
+energy	NN	energy
+harvesting	NN	harvesting
+embedded	VBN	embd
+emulator	NN	emulator
+presented	VBN	present
+in	IN	in
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+emulator	NN	emulator
+controls	VBZ	control
+the	DT	the
+voltage	NN	voltage
+and	CC	and
+the	DT	the
+current	NN	current
+supplied	VBN	supply
+to	IN	to
+the	DT	the
+powered	VBN	power
+device	NN	device
+by	IN	by
+real-time	NN	real-time
+computing	VBG	compute
+a	DT	a
+mathematical	JJ	mathematical
+model	NN	model
+representing	VBG	represent
+the	DT	the
+emulated	VBN	emulate
+energy	NN	energy
+harvester	NN	harvester
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+emulator	NN	emulator
+architecture	NN	architecture
+is	VBZ	be
+based	VBN	base
+on	IN	on
+a	DT	a
+MCU	NNP	MCU
+equipped	VBN	equip
+with	IN	with
+analog-to-digital	JJ	analog-to-digital
+(	-LRB-	(
+ADC	NNP	ADC
+)	-RRB-	)
+and	CC	and
+digital-to-analog	JJ	digital-to-analog
+(	-LRB-	(
+DAC	NNP	DAC
+)	-RRB-	)
+converter	NN	converter
+channels	NNS	channel
+which	WDT	which
+allow	VBP	allow
+it	PRP	it
+to	TO	to
+sense	VB	sense
+and	CC	and
+to	TO	to
+react	VB	react
+as	IN	as
+a	DT	a
+real	JJ	real
+energy	NN	energy
+source	NN	source
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+particular	JJ	particular
+,	,	,
+the	DT	the
+main	JJ	main
+idea	NN	idea
+on	IN	on
+which	WDT	which
+the	DT	the
+system	NN	system
+is	VBZ	be
+based	VBN	base
+,	,	,
+is	VBZ	be
+to	TO	to
+continuously	RB	continuously
+measure	VB	measure
+the	DT	the
+current	NN	current
+supplied	VBN	supply
+to	IN	to
+the	DT	the
+load	NN	load
+,	,	,
+by	IN	by
+means	NNS	means
+of	IN	of
+an	DT	a
+ADC	NN	ADC
+,	,	,
+and	CC	and
+immediately	RB	immediately
+impose	VB	impose
+the	DT	the
+right	JJ	right
+voltage	NN	voltage
+output	NN	output
+to	IN	to
+the	DT	the
+load	NN	load
+using	VBG	use
+a	DT	a
+DAC	NNP	DAC
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+value	NN	value
+of	IN	of
+the	DT	the
+voltage	NN	voltage
+to	TO	to
+be	VB	be
+generated	VBN	generate
+is	VBZ	be
+obtained	VBN	obtain
+by	IN	by
+solving	VBG	solve
+the	DT	the
+mathematical	JJ	mathematical
+model	NN	model
+of	IN	of
+the	DT	the
+emulated	VBN	emulate
+source	NN	source
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+better	RBR	well
+understand	VB	understand
+the	DT	the
+operation	NN	operation
+of	IN	of
+the	DT	the
+emulator	NN	emulator
+,	,	,
+we	PRP	we
+report	VBP	report
+,	,	,
+in	RB	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+,	,	,
+the	DT	the
+basic	JJ	basic
+schematic	NN	schematic
+of	IN	of
+the	DT	the
+interface	NN	interface
+between	IN	between
+the	DT	the
+electric	JJ	electric
+load	NN	load
+(	-LRB-	(
+the	DT	the
+device	NN	device
+to	TO	to
+be	VB	be
+powered	VBN	power
+)	-RRB-	)
+and	CC	and
+the	DT	the
+MCU	NNP	MCU
+in	IN	in
+charge	NN	charge
+of	IN	of
+controlling	VBG	control
+the	DT	the
+emulation	NN	emulation
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+load	NN	load
+,	,	,
+which	WDT	which
+can	MD	can
+be	VB	be
+a	DT	a
+low-power	JJ	low-power
+device	NN	device
+such	JJ	such
+as	IN	as
+a	DT	a
+sensor	NN	sensor
+network	NN	network
+mote	NN	mote
+,	,	,
+is	VBZ	be
+represented	VBN	represent
+in	IN	in
+the	DT	the
+circuit	NN	circuit
+by	IN	by
+a	DT	a
+dashed	JJ	dashed
+rectangle	NN	rectangle
+containing	VBG	contain
+the	DT	the
+impedance	NN	impedance
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+emulator	NN	emulator
+MCU	NNP	MCU
+controls	VBZ	control
+the	DT	the
+supply	NN	supply
+voltage	NN	voltage
+by	IN	by
+means	NNS	means
+of	IN	of
+the	DT	the
+channel	NN	channel
+coupled	VBN	couple
+to	IN	to
+the	DT	the
+load	NN	load
+through	IN	through
+two	CD	2
+cascade	NN	cascade
+blocks	NNS	block
+that	WDT	that
+make	VBP	make
+use	NN	use
+of	IN	of
+the	DT	the
+operational	JJ	operational
+amplifiers	NNS	amplifyer
+and	CC	and
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+first	JJ	first
+amplifier	NN	amplifier
+block	NN	block
+which	WDT	which
+contains	VBZ	contain
+,	,	,
+,	,	,
+and	CC	and
+,	,	,
+is	VBZ	be
+used	VBN	use
+to	TO	to
+boost	VB	boost
+the	DT	the
+output	NN	output
+of	IN	of
+the	DT	the
+DAC	NNP	DAC
+of	IN	of
+the	DT	the
+MCU	NNP	MCU
+into	IN	into
+a	DT	a
+voltage	NN	voltage
+range	NN	range
+suitable	JJ	suitable
+for	IN	for
+the	DT	the
+load	NN	load
+device	NN	device
+characteristics	NNS	characteristic
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+second	JJ	second
+block	NN	block
+is	VBZ	be
+composed	VBN	compose
+of	IN	of
+operational	JJ	operational
+amplifier	NN	amplifier
+in	IN	in
+voltage	NN	voltage
+follower	NN	follower
+configuration	NN	configuration
+,	,	,
+in	IN	in
+order	NN	order
+to	TO	to
+provide	VB	provide
+the	DT	the
+required	VBN	require
+decoupling	NN	decoupling
+between	IN	between
+the	DT	the
+DAC	NNP	DAC
+output	NN	output
+circuit	NN	circuit
+and	CC	and
+the	DT	the
+load	NN	load
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+current	NN	current
+drawn	VBN	draw
+by	IN	by
+the	DT	the
+load	NN	load
+(	-LRB-	(
+)	-RRB-	)
+is	VBZ	be
+a	DT	a
+function	NN	function
+of	IN	of
+the	DT	the
+supply	NN	supply
+voltage	NN	voltage
+(	-LRB-	(
+)	-RRB-	)
+and	CC	and
+of	IN	of
+the	DT	the
+load	NN	load
+impedance	NN	impedance
+,	,	,
+and	CC	and
+it	PRP	it
+is	VBZ	be
+indirectly	RB	indirectly
+measured	VBN	measure
+by	IN	by
+estimating	VBG	estimate
+the	DT	the
+voltage	NN	voltage
+drop	NN	drop
+across	IN	across
+the	DT	the
+resistor	NN	resistor
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+resistor	NN	resistor
+is	VBZ	be
+placed	VBN	place
+between	IN	between
+the	DT	the
+load	NN	load
+and	CC	and
+the	DT	the
+ground	NN	ground
+and	CC	and
+is	VBZ	be
+used	VBN	use
+by	IN	by
+the	DT	the
+MCU	NNP	MCU
+as	IN	as
+an	DT	a
+input	NN	input
+of	IN	of
+the	DT	the
+mathematical	JJ	mathematical
+model	NN	model
+describing	VBG	describe
+the	DT	the
+energy	NN	energy
+harvester	NN	harvester
+,	,	,
+in	IN	in
+order	NN	order
+to	TO	to
+calculate	VB	calculate
+the	DT	the
+right	JJ	right
+value	NN	value
+of	IN	of
+the	DT	the
+voltage	NN	voltage
+to	TO	to
+be	VB	be
+supplied	VBN	supply
+to	IN	to
+the	DT	the
+powered	VBN	power
+device	NN	device
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+An	DT	a
+amplifier	NN	amplifier
+stage	NN	stage
+,	,	,
+composed	VBN	compose
+of	IN	of
+,	,	,
+,	,	,
+and	CC	and
+,	,	,
+amplifies	VBZ	amplify
+the	DT	the
+voltage	NN	voltage
+in	IN	in
+order	NN	order
+to	TO	to
+match	VB	match
+the	DT	the
+ADC	NNP	ADC
+working	VBG	work
+conditions	NNS	condition
+before	IN	before
+carrying	VBG	carry
+it	PRP	it
+to	IN	to
+the	DT	the
+channel	NN	channel
+which	WDT	which
+performs	VBZ	perform
+the	DT	the
+digital	JJ	digital
+conversion	NN	conversion
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+second	JJ	second
+ADC	NNP	ADC
+channel	NN	channel
+,	,	,
+namely	RB	namely
+,	,	,
+is	VBZ	be
+used	VBN	use
+to	TO	to
+monitor	VB	monitor
+the	DT	the
+value	NN	value
+at	IN	at
+the	DT	the
+output	NN	output
+of	IN	of
+the	DT	the
+voltage	NN	voltage
+buffer	NN	buffer
+for	IN	for
+debugging	NN	debugging
+purposes	NNS	purpose
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+sensing	NN	sensing
+resistor	NN	resistor
+introduces	VBZ	introduce
+a	DT	a
+reduction	NN	reduction
+on	IN	on
+the	DT	the
+voltage	NN	voltage
+supplied	VBN	supply
+to	IN	to
+the	DT	the
+load	NN	load
+with	IN	with
+respect	NN	respect
+to	IN	to
+the	DT	the
+nominal	JJ	nominal
+value	NN	value
+imposed	VBN	impose
+by	IN	by
+the	DT	the
+emulator	NN	emulator
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+the	DT	the
+amplified	VBN	amplify
+DAC	NNP	DAC
+signal	NN	signal
+)	-RRB-	)
+according	VBG	accord
+to	IN	to
+the	DT	the
+EH	NNP	EH
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+hardware	NN	hardware
+compensation	NN	compensation
+mechanism	NN	mechanism
+,	,	,
+based	VBN	base
+on	IN	on
+an	DT	a
+analog	NN	analog
+circuit	NN	circuit
+,	,	,
+boosts	VBZ	boost
+the	DT	the
+voltage	NN	voltage
+set	VBN	set
+by	IN	by
+the	DT	the
+DAC	NNP	DAC
+channel	NN	channel
+of	IN	of
+the	DT	the
+MCU	NNP	MCU
+by	IN	by
+a	DT	a
+quantity	NN	quantity
+equal	JJ	equal
+to	IN	to
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+hardware	NN	hardware
+based	VBN	base
+mechanism	NN	mechanism
+dynamically	RB	dynamically
+and	CC	and
+automatically	RB	automatically
+counterbalances	VBZ	counterbalance
+the	DT	the
+voltage	NN	voltage
+drop	NN	drop
+caused	VBN	cause
+by	IN	by
+the	DT	the
+sensing	VBG	sense
+resistor	NN	resistor
+,	,	,
+with	IN	with
+beneficial	JJ	beneficial
+effects	NNS	effect
+in	IN	in
+terms	NNS	term
+of	IN	of
+reactiveness	NN	reactiveness
+of	IN	of
+the	DT	the
+emulation	NN	emulation
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+reports	VBZ	report
+the	DT	the
+schematic	JJ	schematic
+diagram	NN	diagram
+of	IN	of
+the	DT	the
+emulator	NN	emulator
+encompassing	VBG	encompass
+the	DT	the
+hardware	NN	hardware
+compensation	NN	compensation
+components	NNS	component
+(	-LRB-	(
+enclosed	VBN	enclose
+within	IN	within
+a	DT	a
+shaded	VBN	shade
+polygon	NN	polygon
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+compensation	NN	compensation
+stage	NN	stage
+is	VBZ	be
+built	VBN	build
+around	IN	around
+an	DT	a
+operational	JJ	operational
+amplifier	NN	amplifier
+(	-LRB-	(
+)	-RRB-	)
+working	VBG	work
+as	IN	as
+voltage	NN	voltage
+follower	NN	follower
+and	CC	and
+an	DT	a
+operational	JJ	operational
+amplifier	NN	amplifier
+(	-LRB-	(
+)	-RRB-	)
+in	IN	in
+summing	VBG	sum
+configuration	NN	configuration
+(	-LRB-	(
+with	IN	with
+resistors	NNS	resistor
+,	,	,
+,	,	,
+,	,	,
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+voltage	NN	voltage
+follower	NN	follower
+decouples	VBZ	decouple
+the	DT	the
+sensing	VBG	sense
+resistor	NN	resistor
+from	IN	from
+the	DT	the
+adder	NN	adder
+which	WDT	which
+sums	VBZ	sum
+the	DT	the
+voltage	NN	voltage
+value	NN	value
+to	IN	to
+the	DT	the
+voltage	NN	voltage
+output	NN	output
+set	VBN	set
+by	IN	by
+the	DT	the
+DAC	NNP	DAC
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+sum	NN	sum
+between	IN	between
+the	DT	the
+voltage	NN	voltage
+signal	NN	signal
+from	IN	from
+the	DT	the
+DAC	NNP	DAC
+channel	NN	channel
+and	CC	and
+the	DT	the
+voltage	NN	voltage
+signal	NN	signal
+across	IN	across
+the	DT	the
+sensing	NN	sensing
+resistor	NN	resistor
+is	VBZ	be
+finally	RB	finally
+buffered	VBN	buffer
+thanks	NNS	thanks
+to	IN	to
+the	DT	the
+voltage	NN	voltage
+follower	NN	follower
+based	VBN	base
+on	IN	on
+.	.	.
+</s>
+</p>
+</text>

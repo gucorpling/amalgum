@@ -1,0 +1,879 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Cook Without Teflon
+1-1	0-4	Cook	_	_	_	_
+1-2	5-12	Without	_	_	_	_
+1-3	13-19	Teflon	abstract	new	coref	2-1
+
+#Text=Teflon is a registered trademark and brand name of the DuPont company for products made from fluorine-containing polymers ( fluoropolymers ) .
+2-1	20-26	Teflon	abstract	giv	coref	2-3[3_0]
+2-2	27-29	is	_	_	_	_
+2-3	30-31	a	abstract[3]|abstract[4]	giv[3]|giv[4]	coref|coref	2-3[4_3]|16-10[0_4]
+2-4	32-42	registered	abstract[3]|abstract[4]	giv[3]|giv[4]	_	_
+2-5	43-52	trademark	abstract[3]|abstract[4]	giv[3]|giv[4]	_	_
+2-6	53-56	and	abstract[4]	giv[4]	_	_
+2-7	57-62	brand	abstract[4]|abstract[5]	giv[4]|new[5]	_	_
+2-8	63-67	name	abstract[4]|abstract[5]	giv[4]|new[5]	_	_
+2-9	68-70	of	abstract[4]|abstract[5]	giv[4]|new[5]	_	_
+2-10	71-74	the	abstract[4]|abstract[5]|organization[7]	giv[4]|new[5]|new[7]	_	_
+2-11	75-81	DuPont	abstract[4]|abstract[5]|person|organization[7]	giv[4]|new[5]|new|new[7]	_	_
+2-12	82-89	company	abstract[4]|abstract[5]|organization[7]	giv[4]|new[5]|new[7]	_	_
+2-13	90-93	for	abstract[4]|abstract[5]	giv[4]|new[5]	_	_
+2-14	94-102	products	abstract[4]|abstract[5]|object[8]	giv[4]|new[5]|new[8]	coref	4-1[15_8]
+2-15	103-107	made	abstract[4]|abstract[5]|object[8]	giv[4]|new[5]|new[8]	_	_
+2-16	108-112	from	abstract[4]|abstract[5]|object[8]	giv[4]|new[5]|new[8]	_	_
+2-17	113-132	fluorine-containing	abstract[4]|abstract[5]|object[8]|substance[9]	giv[4]|new[5]|new[8]|new[9]	appos	2-20[0_9]
+2-18	133-141	polymers	abstract[4]|abstract[5]|object[8]|substance[9]	giv[4]|new[5]|new[8]|new[9]	_	_
+2-19	142-143	(	_	_	_	_
+2-20	144-158	fluoropolymers	substance	giv	coref	6-11
+2-21	159-160	)	_	_	_	_
+2-22	161-162	.	_	_	_	_
+
+#Text=Other companies also use similar coatings for their non-stick cookware .
+3-1	163-168	Other	organization[11]	new[11]	ana	5-8[0_11]
+3-2	169-178	companies	organization[11]	new[11]	_	_
+3-3	179-183	also	_	_	_	_
+3-4	184-187	use	_	_	_	_
+3-5	188-195	similar	object[12]	new[12]	ana	3-8[0_12]
+3-6	196-204	coatings	object[12]	new[12]	_	_
+3-7	205-208	for	_	_	_	_
+3-8	209-214	their	object|object[14]	giv|new[14]	coref	15-17[72_14]
+3-9	215-224	non-stick	object[14]	new[14]	_	_
+3-10	225-233	cookware	object[14]	new[14]	_	_
+3-11	234-235	.	_	_	_	_
+
+#Text=These products are created using chemicals that are known to be toxic .
+4-1	236-241	These	object[15]	giv[15]	_	_
+4-2	242-250	products	object[15]	giv[15]	_	_
+4-3	251-254	are	_	_	_	_
+4-4	255-262	created	_	_	_	_
+4-5	263-268	using	_	_	_	_
+4-6	269-278	chemicals	substance[16]	new[16]	coref	5-12[0_16]
+4-7	279-283	that	substance[16]	new[16]	_	_
+4-8	284-287	are	substance[16]	new[16]	_	_
+4-9	288-293	known	substance[16]	new[16]	_	_
+4-10	294-296	to	substance[16]	new[16]	_	_
+4-11	297-299	be	substance[16]	new[16]	_	_
+4-12	300-305	toxic	substance[16]	new[16]	_	_
+4-13	306-307	.	_	_	_	_
+
+#Text=Although the manufacturers will tell you that they do not release chemicals " under normal conditions " , even they admit that overheating can cause these dangerous chemicals to gas off .
+5-1	308-316	Although	_	_	_	_
+5-2	317-320	the	person[17]	new[17]	ana	5-20[0_17]
+5-3	321-334	manufacturers	person[17]	new[17]	_	_
+5-4	335-339	will	_	_	_	_
+5-5	340-344	tell	_	_	_	_
+5-6	345-348	you	person	acc	ana	7-8
+5-7	349-353	that	_	_	_	_
+5-8	354-358	they	organization	giv	_	_
+5-9	359-361	do	_	_	_	_
+5-10	362-365	not	_	_	_	_
+5-11	366-373	release	_	_	_	_
+5-12	374-383	chemicals	substance	giv	coref	5-26[24_0]
+5-13	384-385	"	_	_	_	_
+5-14	386-391	under	_	_	_	_
+5-15	392-398	normal	abstract[21]	new[21]	_	_
+5-16	399-409	conditions	abstract[21]	new[21]	_	_
+5-17	410-411	"	_	_	_	_
+5-18	412-413	,	_	_	_	_
+5-19	414-418	even	_	_	_	_
+5-20	419-423	they	person	giv	_	_
+5-21	424-429	admit	_	_	_	_
+5-22	430-434	that	_	_	_	_
+5-23	435-446	overheating	event	new	ana	6-15
+5-24	447-450	can	_	_	_	_
+5-25	451-456	cause	_	_	_	_
+5-26	457-462	these	substance[24]	giv[24]	coref	7-19[38_24]
+5-27	463-472	dangerous	substance[24]	giv[24]	_	_
+5-28	473-482	chemicals	substance[24]	giv[24]	_	_
+5-29	483-485	to	_	_	_	_
+5-30	486-489	gas	_	_	_	_
+5-31	490-493	off	_	_	_	_
+5-32	494-495	.	_	_	_	_
+
+#Text=At this time there are no studies that prove that fluoropolymers are dangerous , that is not a guarantee of their safety .
+6-1	496-498	At	_	_	_	_
+6-2	499-503	this	_	_	_	_
+6-3	504-508	time	_	_	_	_
+6-4	509-514	there	_	_	_	_
+6-5	515-518	are	_	_	_	_
+6-6	519-521	no	abstract[25]	new[25]	ana	6-21[0_25]
+6-7	522-529	studies	abstract[25]	new[25]	_	_
+6-8	530-534	that	abstract[25]	new[25]	_	_
+6-9	535-540	prove	abstract[25]	new[25]	_	_
+6-10	541-545	that	abstract[25]	new[25]	_	_
+6-11	546-560	fluoropolymers	abstract[25]|substance	new[25]|giv	coref	9-6
+6-12	561-564	are	abstract[25]	new[25]	_	_
+6-13	565-574	dangerous	abstract[25]	new[25]	_	_
+6-14	575-576	,	_	_	_	_
+6-15	577-581	that	event	giv	_	_
+6-16	582-584	is	_	_	_	_
+6-17	585-588	not	_	_	_	_
+6-18	589-590	a	abstract[28]	new[28]	_	_
+6-19	591-600	guarantee	abstract[28]	new[28]	_	_
+6-20	601-603	of	abstract[28]	new[28]	_	_
+6-21	604-609	their	abstract[28]|abstract|abstract[30]	new[28]|giv|new[30]	coref	10-2[43_0]
+6-22	610-616	safety	abstract[28]|abstract[30]	new[28]|new[30]	_	_
+6-23	617-618	.	_	_	_	_
+
+#Text=By following the advice in this article you can at least reduce your families risk of exposure to these chemicals .
+7-1	619-621	By	_	_	_	_
+7-2	622-631	following	_	_	_	_
+7-3	632-635	the	abstract[31]	new[31]	_	_
+7-4	636-642	advice	abstract[31]	new[31]	_	_
+7-5	643-645	in	abstract[31]	new[31]	_	_
+7-6	646-650	this	abstract[31]|abstract[32]	new[31]|new[32]	_	_
+7-7	651-658	article	abstract[31]|abstract[32]	new[31]|new[32]	_	_
+7-8	659-662	you	person	giv	ana	7-13
+7-9	663-666	can	_	_	_	_
+7-10	667-669	at	_	_	_	_
+7-11	670-675	least	_	_	_	_
+7-12	676-682	reduce	_	_	_	_
+7-13	683-687	your	person|abstract[36]	giv|new[36]	coref|ana	10-8[45_36]|11-5
+7-14	688-696	families	person|abstract[36]	new|new[36]	_	_
+7-15	697-701	risk	abstract[36]	new[36]	_	_
+7-16	702-704	of	abstract[36]	new[36]	_	_
+7-17	705-713	exposure	abstract[36]|abstract[37]	new[36]|new[37]	_	_
+7-18	714-716	to	abstract[36]|abstract[37]	new[36]|new[37]	_	_
+7-19	717-722	these	abstract[36]|abstract[37]|substance[38]	new[36]|new[37]|giv[38]	coref	10-29[0_38]
+7-20	723-732	chemicals	abstract[36]|abstract[37]|substance[38]	new[36]|new[37]|giv[38]	_	_
+7-21	733-734	.	_	_	_	_
+
+#Text=Steps
+8-1	735-740	Steps	abstract	new	_	_
+
+#Text=Research the possible effects of fluoropolymers , and make an educated decision .
+9-1	741-749	Research	_	_	_	_
+9-2	750-753	the	abstract[40]	new[40]	coref	10-34[52_40]
+9-3	754-762	possible	abstract[40]	new[40]	_	_
+9-4	763-770	effects	abstract[40]	new[40]	_	_
+9-5	771-773	of	abstract[40]	new[40]	_	_
+9-6	774-788	fluoropolymers	abstract[40]|substance	new[40]|giv	_	_
+9-7	789-790	,	_	_	_	_
+9-8	791-794	and	_	_	_	_
+9-9	795-799	make	_	_	_	_
+9-10	800-802	an	event[42]	new[42]	_	_
+9-11	803-811	educated	event[42]	new[42]	_	_
+9-12	812-820	decision	event[42]	new[42]	_	_
+9-13	821-822	.	_	_	_	_
+
+#Text=Although studies to date do not indicate a measurable risk , there are broader studies that show that the combination of many small doses of a variety of chemicals can combine to have serious health effects .
+10-1	823-831	Although	_	_	_	_
+10-2	832-839	studies	abstract[43]	giv[43]	coref	10-14[46_43]
+10-3	840-842	to	abstract[43]	giv[43]	_	_
+10-4	843-847	date	abstract[43]|time	giv[43]|new	_	_
+10-5	848-850	do	_	_	_	_
+10-6	851-854	not	_	_	_	_
+10-7	855-863	indicate	_	_	_	_
+10-8	864-865	a	abstract[45]	giv[45]	coref	11-13[56_45]
+10-9	866-876	measurable	abstract[45]	giv[45]	_	_
+10-10	877-881	risk	abstract[45]	giv[45]	_	_
+10-11	882-883	,	_	_	_	_
+10-12	884-889	there	_	_	_	_
+10-13	890-893	are	_	_	_	_
+10-14	894-901	broader	abstract[46]	giv[46]	_	_
+10-15	902-909	studies	abstract[46]	giv[46]	_	_
+10-16	910-914	that	abstract[46]	giv[46]	_	_
+10-17	915-919	show	abstract[46]	giv[46]	_	_
+10-18	920-924	that	abstract[46]	giv[46]	_	_
+10-19	925-928	the	abstract[46]|abstract[47]	giv[46]|new[47]	_	_
+10-20	929-940	combination	abstract[46]|abstract[47]	giv[46]|new[47]	_	_
+10-21	941-943	of	abstract[46]|abstract[47]	giv[46]|new[47]	_	_
+10-22	944-948	many	abstract[46]|abstract[47]|substance[48]	giv[46]|new[47]|new[48]	_	_
+10-23	949-954	small	abstract[46]|abstract[47]|substance[48]	giv[46]|new[47]|new[48]	_	_
+10-24	955-960	doses	abstract[46]|abstract[47]|substance[48]	giv[46]|new[47]|new[48]	_	_
+10-25	961-963	of	abstract[46]|abstract[47]|substance[48]	giv[46]|new[47]|new[48]	_	_
+10-26	964-965	a	abstract[46]|abstract[47]|substance[48]|abstract[49]	giv[46]|new[47]|new[48]|new[49]	ana	11-1[0_49]
+10-27	966-973	variety	abstract[46]|abstract[47]|substance[48]|abstract[49]	giv[46]|new[47]|new[48]|new[49]	_	_
+10-28	974-976	of	abstract[46]|abstract[47]|substance[48]|abstract[49]	giv[46]|new[47]|new[48]|new[49]	_	_
+10-29	977-986	chemicals	abstract[46]|abstract[47]|substance[48]|abstract[49]|substance	giv[46]|new[47]|new[48]|new[49]|giv	_	_
+10-30	987-990	can	abstract[46]	giv[46]	_	_
+10-31	991-998	combine	abstract[46]	giv[46]	_	_
+10-32	999-1001	to	abstract[46]	giv[46]	_	_
+10-33	1002-1006	have	abstract[46]	giv[46]	_	_
+10-34	1007-1014	serious	abstract[46]|abstract[52]	giv[46]|giv[52]	_	_
+10-35	1015-1021	health	abstract[46]|abstract|abstract[52]	giv[46]|new|giv[52]	coref	11-16[59_0]
+10-36	1022-1029	effects	abstract[46]|abstract[52]	giv[46]|giv[52]	_	_
+10-37	1030-1031	.	_	_	_	_
+
+#Text=It is up to you to decide whether you need to take the risk with your family 's health .
+11-1	1032-1034	It	abstract	giv	_	_
+11-2	1035-1037	is	_	_	_	_
+11-3	1038-1040	up	_	_	_	_
+11-4	1041-1043	to	_	_	_	_
+11-5	1044-1047	you	person	giv	ana	11-9
+11-6	1048-1050	to	_	_	_	_
+11-7	1051-1057	decide	_	_	_	_
+11-8	1058-1065	whether	_	_	_	_
+11-9	1066-1069	you	person	giv	ana	11-16
+11-10	1070-1074	need	_	_	_	_
+11-11	1075-1077	to	_	_	_	_
+11-12	1078-1082	take	_	_	_	_
+11-13	1083-1086	the	abstract[56]	giv[56]	_	_
+11-14	1087-1091	risk	abstract[56]	giv[56]	_	_
+11-15	1092-1096	with	abstract[56]	giv[56]	_	_
+11-16	1097-1101	your	abstract[56]|person|person[58]|abstract[59]	giv[56]|giv|new[58]|giv[59]	ana|coref	15-2|26-26[120_58]
+11-17	1102-1108	family	abstract[56]|person[58]|abstract[59]	giv[56]|new[58]|giv[59]	_	_
+11-18	1109-1111	's	abstract[56]|person[58]|abstract[59]	giv[56]|new[58]|giv[59]	_	_
+11-19	1112-1118	health	abstract[56]|abstract[59]	giv[56]|giv[59]	_	_
+11-20	1119-1120	.	_	_	_	_
+
+#Text=Use oven-proof glassware .
+12-1	1121-1124	Use	_	_	_	_
+12-2	1125-1135	oven-proof	abstract[60]	new[60]	coref	13-1[0_60]
+12-3	1136-1145	glassware	abstract[60]	new[60]	_	_
+12-4	1146-1147	.	_	_	_	_
+
+#Text=Glassware is a safe natural alternative for use in the oven .
+13-1	1148-1157	Glassware	abstract	giv	coref	13-3[62_0]
+13-2	1158-1160	is	_	_	_	_
+13-3	1161-1162	a	abstract[62]	giv[62]	coref	30-1[0_62]
+13-4	1163-1167	safe	abstract[62]	giv[62]	_	_
+13-5	1168-1175	natural	abstract[62]	giv[62]	_	_
+13-6	1176-1187	alternative	abstract[62]	giv[62]	_	_
+13-7	1188-1191	for	abstract[62]	giv[62]	_	_
+13-8	1192-1195	use	abstract[62]|abstract[63]	giv[62]|new[63]	coref	16-12[79_63]
+13-9	1196-1198	in	abstract[62]|abstract[63]	giv[62]|new[63]	_	_
+13-10	1199-1202	the	abstract[62]|abstract[63]|object[64]	giv[62]|new[63]|new[64]	coref	33-9[151_64]
+13-11	1203-1207	oven	abstract[62]|abstract[63]|object[64]	giv[62]|new[63]|new[64]	_	_
+13-12	1208-1209	.	_	_	_	_
+
+#Text=Heat resistant glass can be used for baking and roasting .
+14-1	1210-1214	Heat	substance[65]	new[65]	coref	15-18[0_65]
+14-2	1215-1224	resistant	substance[65]	new[65]	_	_
+14-3	1225-1230	glass	substance[65]	new[65]	_	_
+14-4	1231-1234	can	_	_	_	_
+14-5	1235-1237	be	_	_	_	_
+14-6	1238-1242	used	_	_	_	_
+14-7	1243-1246	for	_	_	_	_
+14-8	1247-1253	baking	person	new	_	_
+14-9	1254-1257	and	_	_	_	_
+14-10	1258-1266	roasting	abstract	new	_	_
+14-11	1267-1268	.	_	_	_	_
+
+#Text=Whether you are cooking up a loaf of bread or roasting a chicken , there is excellent glass cookware to meet your needs .
+15-1	1269-1276	Whether	_	_	_	_
+15-2	1277-1280	you	person	giv	ana	15-22
+15-3	1281-1284	are	_	_	_	_
+15-4	1285-1292	cooking	_	_	_	_
+15-5	1293-1295	up	_	_	_	_
+15-6	1296-1297	a	object[69]	new[69]	_	_
+15-7	1298-1302	loaf	object[69]	new[69]	_	_
+15-8	1303-1305	of	object[69]	new[69]	_	_
+15-9	1306-1311	bread	object[69]	new[69]	_	_
+15-10	1312-1314	or	_	_	_	_
+15-11	1315-1323	roasting	_	_	_	_
+15-12	1324-1325	a	animal[70]	new[70]	_	_
+15-13	1326-1333	chicken	animal[70]	new[70]	_	_
+15-14	1334-1335	,	_	_	_	_
+15-15	1336-1341	there	_	_	_	_
+15-16	1342-1344	is	_	_	_	_
+15-17	1345-1354	excellent	object[72]	giv[72]	coref	22-1[103_72]
+15-18	1355-1360	glass	substance|object[72]	giv|giv[72]	coref	16-1
+15-19	1361-1369	cookware	object[72]	giv[72]	_	_
+15-20	1370-1372	to	object[72]	giv[72]	_	_
+15-21	1373-1377	meet	object[72]	giv[72]	_	_
+15-22	1378-1382	your	object[72]|person|abstract[74]	giv[72]|giv|new[74]	ana	26-2
+15-23	1383-1388	needs	object[72]|abstract[74]	giv[72]|new[74]	_	_
+15-24	1389-1390	.	_	_	_	_
+
+#Text=Glass is in practical terms as non stick as Teflon under normal use .
+16-1	1391-1396	Glass	substance	giv	_	_
+16-2	1397-1399	is	_	_	_	_
+16-3	1400-1402	in	_	_	_	_
+16-4	1403-1412	practical	abstract[76]	new[76]	_	_
+16-5	1413-1418	terms	abstract[76]	new[76]	_	_
+16-6	1419-1421	as	abstract[76]	new[76]	_	_
+16-7	1422-1425	non	abstract[76]|object[77]	new[76]|new[77]	_	_
+16-8	1426-1431	stick	abstract[76]|object[77]	new[76]|new[77]	_	_
+16-9	1432-1434	as	abstract[76]|object[77]	new[76]|new[77]	_	_
+16-10	1435-1441	Teflon	abstract[76]|object[77]|abstract	new[76]|new[77]|giv	_	_
+16-11	1442-1447	under	abstract[76]|object[77]	new[76]|new[77]	_	_
+16-12	1448-1454	normal	abstract[76]|object[77]|abstract[79]	new[76]|new[77]|giv[79]	coref	18-25[86_79]
+16-13	1455-1458	use	abstract[76]|object[77]|abstract[79]	new[76]|new[77]|giv[79]	_	_
+16-14	1459-1460	.	_	_	_	_
+
+#Text=Use a cast iron pan for frying .
+17-1	1461-1464	Use	_	_	_	_
+17-2	1465-1466	a	object[81]	new[81]	coref	26-5[114_81]
+17-3	1467-1471	cast	substance[80]|object[81]	new[80]|new[81]	coref	18-1[84_80]
+17-4	1472-1476	iron	substance[80]|object[81]	new[80]|new[81]	_	_
+17-5	1477-1480	pan	object[81]	new[81]	_	_
+17-6	1481-1484	for	_	_	_	_
+17-7	1485-1491	frying	abstract	new	_	_
+17-8	1492-1493	.	_	_	_	_
+
+#Text=Cast iron , when used properly builds up a natural " patina " which is not only non-stick , but also fairly resistant to the use of metal implements .
+18-1	1494-1498	Cast	person|substance[84]	new|giv[84]	coref	20-2[94_84]
+18-2	1499-1503	iron	substance[84]	giv[84]	_	_
+18-3	1504-1505	,	_	_	_	_
+18-4	1506-1510	when	_	_	_	_
+18-5	1511-1515	used	_	_	_	_
+18-6	1516-1524	properly	_	_	_	_
+18-7	1525-1531	builds	_	_	_	_
+18-8	1532-1534	up	_	_	_	_
+18-9	1535-1536	a	place[85]	new[85]	coref	20-13[97_85]
+18-10	1537-1544	natural	place[85]	new[85]	_	_
+18-11	1545-1546	"	place[85]	new[85]	_	_
+18-12	1547-1553	patina	place[85]	new[85]	_	_
+18-13	1554-1555	"	place[85]	new[85]	_	_
+18-14	1556-1561	which	place[85]	new[85]	_	_
+18-15	1562-1564	is	place[85]	new[85]	_	_
+18-16	1565-1568	not	place[85]	new[85]	_	_
+18-17	1569-1573	only	place[85]	new[85]	_	_
+18-18	1574-1583	non-stick	place[85]	new[85]	_	_
+18-19	1584-1585	,	place[85]	new[85]	_	_
+18-20	1586-1589	but	place[85]	new[85]	_	_
+18-21	1590-1594	also	place[85]	new[85]	_	_
+18-22	1595-1601	fairly	place[85]	new[85]	_	_
+18-23	1602-1611	resistant	place[85]	new[85]	_	_
+18-24	1612-1614	to	_	_	_	_
+18-25	1615-1618	the	abstract[86]	giv[86]	_	_
+18-26	1619-1622	use	abstract[86]	giv[86]	_	_
+18-27	1623-1625	of	abstract[86]	giv[86]	_	_
+18-28	1626-1631	metal	abstract[86]|substance|object[88]	giv[86]|new|new[88]	_	_
+18-29	1632-1642	implements	abstract[86]|object[88]	giv[86]|new[88]	_	_
+18-30	1643-1644	.	_	_	_	_
+
+#Text=Use a steel wok for Asian foods ( stir-fries , curries , etc ) .
+19-1	1645-1648	Use	_	_	_	_
+19-2	1649-1650	a	object[90]	new[90]	coref	20-5[96_90]
+19-3	1651-1656	steel	substance|object[90]	new|new[90]	coref	20-6
+19-4	1657-1660	wok	object[90]	new[90]	_	_
+19-5	1661-1664	for	_	_	_	_
+19-6	1665-1670	Asian	substance[91]	new[91]	appos	19-9[0_91]
+19-7	1671-1676	foods	substance[91]	new[91]	_	_
+19-8	1677-1678	(	_	_	_	_
+19-9	1679-1689	stir-fries	substance	giv	appos	19-11
+19-10	1690-1691	,	_	_	_	_
+19-11	1692-1699	curries	substance	giv	_	_
+19-12	1700-1701	,	_	_	_	_
+19-13	1702-1705	etc	_	_	_	_
+19-14	1706-1707	)	_	_	_	_
+19-15	1708-1709	.	_	_	_	_
+
+#Text=Like cast iron , a steel wok when used properly builds up a natural " patina " .
+20-1	1710-1714	Like	_	_	_	_
+20-2	1715-1719	cast	substance[94]	giv[94]	coref	28-3[125_94]
+20-3	1720-1724	iron	substance[94]	giv[94]	_	_
+20-4	1725-1726	,	_	_	_	_
+20-5	1727-1728	a	object[96]	giv[96]	_	_
+20-6	1729-1734	steel	substance|object[96]	giv|giv[96]	coref	24-6[107_0]
+20-7	1735-1738	wok	object[96]	giv[96]	_	_
+20-8	1739-1743	when	object[96]	giv[96]	_	_
+20-9	1744-1748	used	object[96]	giv[96]	_	_
+20-10	1749-1757	properly	_	_	_	_
+20-11	1758-1764	builds	_	_	_	_
+20-12	1765-1767	up	_	_	_	_
+20-13	1768-1769	a	place[97]	giv[97]	coref	37-6[167_97]
+20-14	1770-1777	natural	place[97]	giv[97]	_	_
+20-15	1778-1779	"	place[97]	giv[97]	_	_
+20-16	1780-1786	patina	place[97]	giv[97]	_	_
+20-17	1787-1788	"	place[97]	giv[97]	_	_
+20-18	1789-1790	.	_	_	_	_
+
+#Text=Use silicone for baking cakes , muffins and pies .
+21-1	1791-1794	Use	_	_	_	_
+21-2	1795-1803	silicone	substance	new	coref	31-2
+21-3	1804-1807	for	_	_	_	_
+21-4	1808-1814	baking	_	_	_	_
+21-5	1815-1820	cakes	object	new	_	_
+21-6	1821-1822	,	_	_	_	_
+21-7	1823-1830	muffins	substance	new	_	_
+21-8	1831-1834	and	_	_	_	_
+21-9	1835-1839	pies	substance	new	_	_
+21-10	1840-1841	.	_	_	_	_
+
+#Text=Silicon cookware is something fairly new .
+22-1	1842-1849	Silicon	object|object[103]	new|giv[103]	coref	22-4[104_103]
+22-2	1850-1858	cookware	object[103]	giv[103]	_	_
+22-3	1859-1861	is	_	_	_	_
+22-4	1862-1871	something	object[104]	giv[104]	ana	23-1[0_104]
+22-5	1872-1878	fairly	object[104]	giv[104]	_	_
+22-6	1879-1882	new	object[104]	giv[104]	_	_
+22-7	1883-1884	.	_	_	_	_
+
+#Text=It is a non-chemical product and virtually non-stick .
+23-1	1885-1887	It	object	giv	coref	23-3[106_0]
+23-2	1888-1890	is	_	_	_	_
+23-3	1891-1892	a	object[106]	giv[106]	coref	30-11[138_106]
+23-4	1893-1905	non-chemical	object[106]	giv[106]	_	_
+23-5	1906-1913	product	object[106]	giv[106]	_	_
+23-6	1914-1917	and	_	_	_	_
+23-7	1918-1927	virtually	_	_	_	_
+23-8	1928-1937	non-stick	_	_	_	_
+23-9	1938-1939	.	_	_	_	_
+
+#Text=If in doubt , use stainless steel pots and pans .
+24-1	1940-1942	If	_	_	_	_
+24-2	1943-1945	in	_	_	_	_
+24-3	1946-1951	doubt	_	_	_	_
+24-4	1952-1953	,	_	_	_	_
+24-5	1954-1957	use	_	_	_	_
+24-6	1958-1967	stainless	substance[107]|object[108]|object[109]	giv[107]|new[108]|new[109]	coref|coref|coref	25-1[111_107]|40-2[184_108]|40-2[185_109]
+24-7	1968-1973	steel	substance[107]|object[108]|object[109]	giv[107]|new[108]|new[109]	_	_
+24-8	1974-1978	pots	object[108]|object[109]	new[108]|new[109]	_	_
+24-9	1979-1982	and	object[109]	new[109]	_	_
+24-10	1983-1987	pans	object[109]|object	new[109]|new	coref	28-2[126_0]
+24-11	1988-1989	.	_	_	_	_
+
+#Text=Stainless steel can be close to non-stick unless overheated .
+25-1	1990-1999	Stainless	substance[111]	giv[111]	coref	40-3[183_111]
+25-2	2000-2005	steel	substance[111]	giv[111]	_	_
+25-3	2006-2009	can	_	_	_	_
+25-4	2010-2012	be	_	_	_	_
+25-5	2013-2018	close	_	_	_	_
+25-6	2019-2021	to	_	_	_	_
+25-7	2022-2031	non-stick	object	new	_	_
+25-8	2032-2038	unless	_	_	_	_
+25-9	2039-2049	overheated	_	_	_	_
+25-10	2050-2051	.	_	_	_	_
+
+#Text=If you do scorch the pan you 're going to have some scrubbing to do , but a bit of scrubbing is better than gassing your family with nasty fluorine compounds !
+26-1	2052-2054	If	_	_	_	_
+26-2	2055-2058	you	person	giv	ana	26-7
+26-3	2059-2061	do	_	_	_	_
+26-4	2062-2068	scorch	_	_	_	_
+26-5	2069-2072	the	object[114]	giv[114]	coref	31-14[143_114]
+26-6	2073-2076	pan	object[114]	giv[114]	_	_
+26-7	2077-2080	you	person	giv	ana	26-26
+26-8	2081-2084	're	_	_	_	_
+26-9	2085-2090	going	_	_	_	_
+26-10	2091-2093	to	_	_	_	_
+26-11	2094-2098	have	_	_	_	_
+26-12	2099-2103	some	event[116]	new[116]	coref	26-21[0_116]
+26-13	2104-2113	scrubbing	event[116]	new[116]	_	_
+26-14	2114-2116	to	event[116]	new[116]	_	_
+26-15	2117-2119	do	event[116]	new[116]	_	_
+26-16	2120-2121	,	_	_	_	_
+26-17	2122-2125	but	_	_	_	_
+26-18	2126-2127	a	abstract[117]	new[117]	_	_
+26-19	2128-2131	bit	abstract[117]	new[117]	_	_
+26-20	2132-2134	of	abstract[117]	new[117]	_	_
+26-21	2135-2144	scrubbing	abstract[117]|event	new[117]|giv	_	_
+26-22	2145-2147	is	_	_	_	_
+26-23	2148-2154	better	_	_	_	_
+26-24	2155-2159	than	_	_	_	_
+26-25	2160-2167	gassing	_	_	_	_
+26-26	2168-2172	your	person|person[120]	giv|giv[120]	ana	28-2
+26-27	2173-2179	family	person[120]	giv[120]	_	_
+26-28	2180-2184	with	_	_	_	_
+26-29	2185-2190	nasty	substance[122]	new[122]	_	_
+26-30	2191-2199	fluorine	substance|substance[122]	new|new[122]	coref	39-12
+26-31	2200-2209	compounds	substance[122]	new[122]	_	_
+26-32	2210-2211	!	_	_	_	_
+
+#Text=Tips
+27-1	2212-2216	Tips	abstract	new	_	_
+
+#Text=Clean your cast iron pans using a nylon dish-brush and no soap .
+28-1	2217-2222	Clean	_	_	_	_
+28-2	2223-2227	your	person|object[126]	giv|giv[126]	ana|coref	30-9|32-1[147_126]
+28-3	2228-2232	cast	substance[125]|object[126]	giv[125]|giv[126]	coref	36-9[163_125]
+28-4	2233-2237	iron	substance[125]|object[126]	giv[125]|giv[126]	_	_
+28-5	2238-2242	pans	object[126]	giv[126]	_	_
+28-6	2243-2248	using	_	_	_	_
+28-7	2249-2250	a	object[127]	new[127]	_	_
+28-8	2251-2256	nylon	object[127]	new[127]	_	_
+28-9	2257-2267	dish-brush	object[127]	new[127]	_	_
+28-10	2268-2271	and	_	_	_	_
+28-11	2272-2274	no	substance[128]	new[128]	coref	36-14[0_128]
+28-12	2275-2279	soap	substance[128]	new[128]	_	_
+28-13	2280-2281	.	_	_	_	_
+
+#Text=Scrub away any food scraps , and then stick them back on the flame ( or element ) for a minute to evaporate any water .
+29-1	2282-2287	Scrub	_	_	_	_
+29-2	2288-2292	away	_	_	_	_
+29-3	2293-2296	any	object[130]	new[130]	ana	29-10[0_130]
+29-4	2297-2301	food	substance|object[130]	new|new[130]	_	_
+29-5	2302-2308	scraps	object[130]	new[130]	_	_
+29-6	2309-2310	,	_	_	_	_
+29-7	2311-2314	and	_	_	_	_
+29-8	2315-2319	then	_	_	_	_
+29-9	2320-2325	stick	_	_	_	_
+29-10	2326-2330	them	object	giv	_	_
+29-11	2331-2335	back	_	_	_	_
+29-12	2336-2338	on	_	_	_	_
+29-13	2339-2342	the	object[132]	new[132]	_	_
+29-14	2343-2348	flame	object[132]	new[132]	_	_
+29-15	2349-2350	(	_	_	_	_
+29-16	2351-2353	or	_	_	_	_
+29-17	2354-2361	element	abstract	new	ana	30-15
+29-18	2362-2363	)	_	_	_	_
+29-19	2364-2367	for	_	_	_	_
+29-20	2368-2369	a	time[134]	new[134]	_	_
+29-21	2370-2376	minute	time[134]	new[134]	_	_
+29-22	2377-2379	to	_	_	_	_
+29-23	2380-2389	evaporate	_	_	_	_
+29-24	2390-2393	any	substance[135]	new[135]	_	_
+29-25	2394-2399	water	substance[135]	new[135]	_	_
+29-26	2400-2401	.	_	_	_	_
+
+#Text=Glassware usually cleans up easily , but if you get something really baked on it will much easier to clean after soaking overnight .
+30-1	2402-2411	Glassware	abstract	giv	_	_
+30-2	2412-2419	usually	_	_	_	_
+30-3	2420-2426	cleans	_	_	_	_
+30-4	2427-2429	up	_	_	_	_
+30-5	2430-2436	easily	_	_	_	_
+30-6	2437-2438	,	_	_	_	_
+30-7	2439-2442	but	_	_	_	_
+30-8	2443-2445	if	_	_	_	_
+30-9	2446-2449	you	person	giv	ana	34-2
+30-10	2450-2453	get	_	_	_	_
+30-11	2454-2463	something	object[138]	giv[138]	_	_
+30-12	2464-2470	really	object[138]	giv[138]	_	_
+30-13	2471-2476	baked	object[138]	giv[138]	_	_
+30-14	2477-2479	on	object[138]	giv[138]	_	_
+30-15	2480-2482	it	abstract	giv	coref	36-18
+30-16	2483-2487	will	_	_	_	_
+30-17	2488-2492	much	_	_	_	_
+30-18	2493-2499	easier	_	_	_	_
+30-19	2500-2502	to	_	_	_	_
+30-20	2503-2508	clean	_	_	_	_
+30-21	2509-2514	after	_	_	_	_
+30-22	2515-2522	soaking	_	_	_	_
+30-23	2523-2532	overnight	_	_	_	_
+30-24	2533-2534	.	_	_	_	_
+
+#Text=Although silicone is reasonably non-stick , it is a good idea to grease the pan or tray with a little butter - just to be sure .
+31-1	2535-2543	Although	_	_	_	_
+31-2	2544-2552	silicone	substance	giv	ana	31-7
+31-3	2553-2555	is	_	_	_	_
+31-4	2556-2566	reasonably	_	_	_	_
+31-5	2567-2576	non-stick	_	_	_	_
+31-6	2577-2578	,	_	_	_	_
+31-7	2579-2581	it	substance	giv	coref	32-1
+31-8	2582-2584	is	_	_	_	_
+31-9	2585-2586	a	event[142]	new[142]	_	_
+31-10	2587-2591	good	event[142]	new[142]	_	_
+31-11	2592-2596	idea	event[142]	new[142]	_	_
+31-12	2597-2599	to	_	_	_	_
+31-13	2600-2606	grease	_	_	_	_
+31-14	2607-2610	the	object[143]	giv[143]	coref	46-20[216_143]
+31-15	2611-2614	pan	object[143]	giv[143]	_	_
+31-16	2615-2617	or	_	_	_	_
+31-17	2618-2622	tray	object	new	_	_
+31-18	2623-2627	with	_	_	_	_
+31-19	2628-2629	a	substance[145]	new[145]	_	_
+31-20	2630-2636	little	substance[145]	new[145]	_	_
+31-21	2637-2643	butter	substance[145]	new[145]	_	_
+31-22	2644-2645	-	_	_	_	_
+31-23	2646-2650	just	_	_	_	_
+31-24	2651-2653	to	_	_	_	_
+31-25	2654-2656	be	_	_	_	_
+31-26	2657-2661	sure	_	_	_	_
+31-27	2662-2663	.	_	_	_	_
+
+#Text=Silicone pans and trays are floppy !
+32-1	2664-2672	Silicone	substance|object[147]|object[148]	giv|giv[147]|giv[148]	coref|coref	32-1[148_147]|40-7[0_148]
+32-2	2673-2677	pans	object[147]|object[148]	giv[147]|giv[148]	_	_
+32-3	2678-2681	and	object[148]	giv[148]	_	_
+32-4	2682-2687	trays	object[148]|object	giv[148]|new	_	_
+32-5	2688-2691	are	_	_	_	_
+32-6	2692-2698	floppy	_	_	_	_
+32-7	2699-2700	!	_	_	_	_
+
+#Text=Use two hands when moving to and from the oven .
+33-1	2701-2704	Use	_	_	_	_
+33-2	2705-2708	two	object[150]	new[150]	_	_
+33-3	2709-2714	hands	object[150]	new[150]	_	_
+33-4	2715-2719	when	_	_	_	_
+33-5	2720-2726	moving	_	_	_	_
+33-6	2727-2729	to	_	_	_	_
+33-7	2730-2733	and	_	_	_	_
+33-8	2734-2738	from	_	_	_	_
+33-9	2739-2742	the	object[151]	giv[151]	_	_
+33-10	2743-2747	oven	object[151]	giv[151]	_	_
+33-11	2748-2749	.	_	_	_	_
+
+#Text=If you do a lot of Asian cooking , you might want two woks .
+34-1	2750-2752	If	_	_	_	_
+34-2	2753-2756	you	person	giv	ana	34-10
+34-3	2757-2759	do	_	_	_	_
+34-4	2760-2761	a	abstract[153]	new[153]	_	_
+34-5	2762-2765	lot	abstract[153]	new[153]	_	_
+34-6	2766-2768	of	abstract[153]	new[153]	_	_
+34-7	2769-2774	Asian	abstract[153]	new[153]	_	_
+34-8	2775-2782	cooking	abstract[153]	new[153]	_	_
+34-9	2783-2784	,	_	_	_	_
+34-10	2785-2788	you	person	giv	ana	38-16
+34-11	2789-2794	might	_	_	_	_
+34-12	2795-2799	want	_	_	_	_
+34-13	2800-2803	two	object[155]	new[155]	ana	36-6[0_155]
+34-14	2804-2808	woks	object[155]	new[155]	_	_
+34-15	2809-2810	.	_	_	_	_
+
+#Text=One for wet ( e.g. Thai curry ) and one for dry ( e.g. Stir fry ) .
+35-1	2811-2814	One	_	_	_	_
+35-2	2815-2818	for	_	_	_	_
+35-3	2819-2822	wet	_	_	_	_
+35-4	2823-2824	(	_	_	_	_
+35-5	2825-2829	e.g.	substance[156]	new[156]	coref	38-21[172_156]
+35-6	2830-2834	Thai	substance[156]	new[156]	_	_
+35-7	2835-2840	curry	substance[156]	new[156]	_	_
+35-8	2841-2842	)	_	_	_	_
+35-9	2843-2846	and	_	_	_	_
+35-10	2847-2850	one	person[157]	new[157]	appos	35-14[159_157]
+35-11	2851-2854	for	person[157]	new[157]	_	_
+35-12	2855-2858	dry	person[157]	new[157]	_	_
+35-13	2859-2860	(	_	_	_	_
+35-14	2861-2865	e.g.	person[159]	giv[159]	_	_
+35-15	2866-2870	Stir	abstract|person[159]	new|giv[159]	_	_
+35-16	2871-2874	fry	person[159]	giv[159]	_	_
+35-17	2875-2876	)	_	_	_	_
+35-18	2877-2878	.	_	_	_	_
+
+#Text=In both cases , treat them similarly to cast iron ( clean without soap and dry on element ) .
+36-1	2879-2881	In	_	_	_	_
+36-2	2882-2886	both	abstract[160]	new[160]	_	_
+36-3	2887-2892	cases	abstract[160]	new[160]	_	_
+36-4	2893-2894	,	_	_	_	_
+36-5	2895-2900	treat	_	_	_	_
+36-6	2901-2905	them	object	giv	_	_
+36-7	2906-2915	similarly	_	_	_	_
+36-8	2916-2918	to	_	_	_	_
+36-9	2919-2923	cast	abstract|substance[163]	new|giv[163]	coref|coref	42-1[191_163]|44-16
+36-10	2924-2928	iron	substance[163]	giv[163]	_	_
+36-11	2929-2930	(	_	_	_	_
+36-12	2931-2936	clean	_	_	_	_
+36-13	2937-2944	without	_	_	_	_
+36-14	2945-2949	soap	substance	giv	_	_
+36-15	2950-2953	and	_	_	_	_
+36-16	2954-2957	dry	_	_	_	_
+36-17	2958-2960	on	_	_	_	_
+36-18	2961-2968	element	abstract	giv	ana	37-9
+36-19	2969-2970	)	_	_	_	_
+36-20	2971-2972	.	_	_	_	_
+
+#Text=They will also build up a patina - this is good !
+37-1	2973-2977	They	person	acc	_	_
+37-2	2978-2982	will	_	_	_	_
+37-3	2983-2987	also	_	_	_	_
+37-4	2988-2993	build	_	_	_	_
+37-5	2994-2996	up	_	_	_	_
+37-6	2997-2998	a	place[167]	giv[167]	coref	42-10[193_167]
+37-7	2999-3005	patina	place[167]	giv[167]	_	_
+37-8	3006-3007	-	_	_	_	_
+37-9	3008-3012	this	abstract	giv	_	_
+37-10	3013-3015	is	_	_	_	_
+37-11	3016-3020	good	_	_	_	_
+37-12	3021-3022	!	_	_	_	_
+
+#Text=The dry one will usually end up blacker ( even better ) , but if you then use it for a wet curry or soup you might get black bits in your meal .
+38-1	3023-3026	The	object[169]	new[169]	ana	38-19[0_169]
+38-2	3027-3030	dry	object[169]	new[169]	_	_
+38-3	3031-3034	one	object[169]	new[169]	_	_
+38-4	3035-3039	will	_	_	_	_
+38-5	3040-3047	usually	_	_	_	_
+38-6	3048-3051	end	_	_	_	_
+38-7	3052-3054	up	_	_	_	_
+38-8	3055-3062	blacker	_	_	_	_
+38-9	3063-3064	(	_	_	_	_
+38-10	3065-3069	even	_	_	_	_
+38-11	3070-3076	better	_	_	_	_
+38-12	3077-3078	)	_	_	_	_
+38-13	3079-3080	,	_	_	_	_
+38-14	3081-3084	but	_	_	_	_
+38-15	3085-3087	if	_	_	_	_
+38-16	3088-3091	you	person	giv	ana	38-26
+38-17	3092-3096	then	_	_	_	_
+38-18	3097-3100	use	_	_	_	_
+38-19	3101-3103	it	object	giv	_	_
+38-20	3104-3107	for	_	_	_	_
+38-21	3108-3109	a	substance[172]	giv[172]	_	_
+38-22	3110-3113	wet	substance[172]	giv[172]	_	_
+38-23	3114-3119	curry	substance[172]	giv[172]	_	_
+38-24	3120-3122	or	_	_	_	_
+38-25	3123-3127	soup	substance	new	ana	39-4
+38-26	3128-3131	you	person	giv	ana	38-32
+38-27	3132-3137	might	_	_	_	_
+38-28	3138-3141	get	_	_	_	_
+38-29	3142-3147	black	object[175]	new[175]	_	_
+38-30	3148-3152	bits	object[175]	new[175]	_	_
+38-31	3153-3155	in	_	_	_	_
+38-32	3156-3160	your	person|object[177]	giv|new[177]	ana	44-2
+38-33	3161-3165	meal	object[177]	new[177]	_	_
+38-34	3166-3167	.	_	_	_	_
+
+#Text=Still at least it 's just carbon and not some nasty fluorine compound !
+39-1	3168-3173	Still	_	_	_	_
+39-2	3174-3176	at	_	_	_	_
+39-3	3177-3182	least	_	_	_	_
+39-4	3183-3185	it	substance	giv	coref	39-6[179_0]
+39-5	3186-3188	's	_	_	_	_
+39-6	3189-3193	just	substance[179]|substance[180]	giv[179]|giv[180]	coref	39-6[180_179]
+39-7	3194-3200	carbon	substance[179]|substance[180]	giv[179]|giv[180]	_	_
+39-8	3201-3204	and	substance[180]	giv[180]	_	_
+39-9	3205-3208	not	substance[180]	giv[180]	_	_
+39-10	3209-3213	some	substance[180]|substance[182]	giv[180]|new[182]	_	_
+39-11	3214-3219	nasty	substance[180]|substance[182]	giv[180]|new[182]	_	_
+39-12	3220-3228	fluorine	substance[180]|substance|substance[182]	giv[180]|giv|new[182]	_	_
+39-13	3229-3237	compound	substance[180]|substance[182]	giv[180]|new[182]	_	_
+39-14	3238-3239	!	_	_	_	_
+
+#Text=Soak scorched stainless steel pots and pans , and then clean using baking soda ( and a lot of elbow grease ) .
+40-1	3240-3244	Soak	_	_	_	_
+40-2	3245-3253	scorched	object[184]|object[185]	giv[184]|giv[185]	_	_
+40-3	3254-3263	stainless	substance[183]|object[184]|object[185]	giv[183]|giv[184]|giv[185]	_	_
+40-4	3264-3269	steel	substance[183]|object[184]|object[185]	giv[183]|giv[184]|giv[185]	_	_
+40-5	3270-3274	pots	object[184]|object[185]	giv[184]|giv[185]	_	_
+40-6	3275-3278	and	object[185]	giv[185]	_	_
+40-7	3279-3283	pans	object[185]|object	giv[185]|giv	coref	42-1[192_0]
+40-8	3284-3285	,	_	_	_	_
+40-9	3286-3289	and	_	_	_	_
+40-10	3290-3294	then	_	_	_	_
+40-11	3295-3300	clean	_	_	_	_
+40-12	3301-3306	using	_	_	_	_
+40-13	3307-3313	baking	substance[187]	new[187]	_	_
+40-14	3314-3318	soda	substance[187]	new[187]	_	_
+40-15	3319-3320	(	_	_	_	_
+40-16	3321-3324	and	_	_	_	_
+40-17	3325-3326	a	substance[189]	new[189]	_	_
+40-18	3327-3330	lot	substance[189]	new[189]	_	_
+40-19	3331-3333	of	substance[189]	new[189]	_	_
+40-20	3334-3339	elbow	object|substance[189]	new|new[189]	_	_
+40-21	3340-3346	grease	substance[189]	new[189]	_	_
+40-22	3347-3348	)	_	_	_	_
+40-23	3349-3350	.	_	_	_	_
+
+#Text=Warnings
+41-1	3351-3359	Warnings	abstract	new	_	_
+
+#Text=Cast iron pans that have not yet built up a patina can leach small amounts of iron into acidic foods like tomato sauces .
+42-1	3360-3364	Cast	substance[191]|object[192]	giv[191]|giv[192]	coref	42-17[0_191]
+42-2	3365-3369	iron	substance[191]|object[192]	giv[191]|giv[192]	_	_
+42-3	3370-3374	pans	object[192]	giv[192]	_	_
+42-4	3375-3379	that	object[192]	giv[192]	_	_
+42-5	3380-3384	have	object[192]	giv[192]	_	_
+42-6	3385-3388	not	object[192]	giv[192]	_	_
+42-7	3389-3392	yet	object[192]	giv[192]	_	_
+42-8	3393-3398	built	object[192]	giv[192]	_	_
+42-9	3399-3401	up	object[192]	giv[192]	_	_
+42-10	3402-3403	a	object[192]|place[193]	giv[192]|giv[193]	_	_
+42-11	3404-3410	patina	object[192]|place[193]	giv[192]|giv[193]	_	_
+42-12	3411-3414	can	_	_	_	_
+42-13	3415-3420	leach	_	_	_	_
+42-14	3421-3426	small	substance[194]	new[194]	_	_
+42-15	3427-3434	amounts	substance[194]	new[194]	_	_
+42-16	3435-3437	of	substance[194]	new[194]	_	_
+42-17	3438-3442	iron	substance[194]|substance	new[194]|giv	coref	43-11[203_0]
+42-18	3443-3447	into	_	_	_	_
+42-19	3448-3454	acidic	substance[196]	new[196]	_	_
+42-20	3455-3460	foods	substance[196]	new[196]	_	_
+42-21	3461-3465	like	substance[196]	new[196]	_	_
+42-22	3466-3472	tomato	substance[196]|object|substance[198]	new[196]|new|new[198]	_	_
+42-23	3473-3479	sauces	substance[196]|substance[198]	new[196]|new[198]	_	_
+42-24	3480-3481	.	_	_	_	_
+
+#Text=Iron is a vital nutrient , but for some people excess iron can be a problem .
+43-1	3482-3486	Iron	substance	new	coref	43-3[200_0]
+43-2	3487-3489	is	_	_	_	_
+43-3	3490-3491	a	substance[200]|substance[201]	giv[200]|giv[201]	coref	43-3[201_200]
+43-4	3492-3497	vital	substance[200]|substance[201]	giv[200]|giv[201]	_	_
+43-5	3498-3506	nutrient	substance[200]|substance[201]	giv[200]|giv[201]	_	_
+43-6	3507-3508	,	substance[201]	giv[201]	_	_
+43-7	3509-3512	but	substance[201]	giv[201]	_	_
+43-8	3513-3516	for	substance[201]	giv[201]	_	_
+43-9	3517-3521	some	substance[201]|person[202]	giv[201]|new[202]	_	_
+43-10	3522-3528	people	substance[201]|person[202]	giv[201]|new[202]	_	_
+43-11	3529-3535	excess	substance[201]|substance[203]	giv[201]|giv[203]	coref	43-15[204_203]
+43-12	3536-3540	iron	substance[201]|substance[203]	giv[201]|giv[203]	_	_
+43-13	3541-3544	can	substance[201]	giv[201]	_	_
+43-14	3545-3547	be	substance[201]	giv[201]	_	_
+43-15	3548-3549	a	substance[201]|substance[204]	giv[201]|giv[204]	coref	44-16[210_204]
+43-16	3550-3557	problem	substance[201]|substance[204]	giv[201]|giv[204]	_	_
+43-17	3558-3559	.	_	_	_	_
+
+#Text=If you suffer from haemochromatosis or similar conditions you may want to avoid cooking in cast iron .
+44-1	3560-3562	If	_	_	_	_
+44-2	3563-3566	you	person	giv	ana	44-9
+44-3	3567-3573	suffer	_	_	_	_
+44-4	3574-3578	from	_	_	_	_
+44-5	3579-3595	haemochromatosis	abstract	new	_	_
+44-6	3596-3598	or	_	_	_	_
+44-7	3599-3606	similar	abstract[207]	new[207]	_	_
+44-8	3607-3617	conditions	abstract[207]	new[207]	_	_
+44-9	3618-3621	you	person	giv	ana	45-7
+44-10	3622-3625	may	_	_	_	_
+44-11	3626-3630	want	_	_	_	_
+44-12	3631-3633	to	_	_	_	_
+44-13	3634-3639	avoid	_	_	_	_
+44-14	3640-3647	cooking	_	_	_	_
+44-15	3648-3650	in	_	_	_	_
+44-16	3651-3655	cast	abstract|substance[210]	giv|giv[210]	_	_
+44-17	3656-3660	iron	substance[210]	giv[210]	_	_
+44-18	3661-3662	.	_	_	_	_
+
+#Text=If in doubt , check with your physician .
+45-1	3663-3665	If	_	_	_	_
+45-2	3666-3668	in	_	_	_	_
+45-3	3669-3674	doubt	_	_	_	_
+45-4	3675-3676	,	_	_	_	_
+45-5	3677-3682	check	_	_	_	_
+45-6	3683-3687	with	_	_	_	_
+45-7	3688-3692	your	person|person[212]	giv|new[212]	ana	46-2
+45-8	3693-3702	physician	person[212]	new[212]	_	_
+45-9	3703-3704	.	_	_	_	_
+
+#Text=If you have a pet bird , and continue to use Teflon , be extra careful not to overheat the pan .
+46-1	3705-3707	If	_	_	_	_
+46-2	3708-3711	you	person	giv	_	_
+46-3	3712-3716	have	_	_	_	_
+46-4	3717-3718	a	animal[214]	new[214]	coref	47-12[219_214]
+46-5	3719-3722	pet	animal[214]	new[214]	_	_
+46-6	3723-3727	bird	animal[214]	new[214]	_	_
+46-7	3728-3729	,	_	_	_	_
+46-8	3730-3733	and	_	_	_	_
+46-9	3734-3742	continue	_	_	_	_
+46-10	3743-3745	to	_	_	_	_
+46-11	3746-3749	use	_	_	_	_
+46-12	3750-3756	Teflon	object	new	_	_
+46-13	3757-3758	,	_	_	_	_
+46-14	3759-3761	be	_	_	_	_
+46-15	3762-3767	extra	_	_	_	_
+46-16	3768-3775	careful	_	_	_	_
+46-17	3776-3779	not	_	_	_	_
+46-18	3780-3782	to	_	_	_	_
+46-19	3783-3791	overheat	_	_	_	_
+46-20	3792-3795	the	object[216]	giv[216]	_	_
+46-21	3796-3799	pan	object[216]	giv[216]	_	_
+46-22	3800-3801	.	_	_	_	_
+
+#Text=Even small doses of the chemicals that gas off will kill a bird .
+47-1	3802-3806	Even	substance[217]	new[217]	_	_
+47-2	3807-3812	small	substance[217]	new[217]	_	_
+47-3	3813-3818	doses	substance[217]	new[217]	_	_
+47-4	3819-3821	of	substance[217]	new[217]	_	_
+47-5	3822-3825	the	substance[217]|substance[218]	new[217]|new[218]	_	_
+47-6	3826-3835	chemicals	substance[217]|substance[218]	new[217]|new[218]	_	_
+47-7	3836-3840	that	substance[217]|substance[218]	new[217]|new[218]	_	_
+47-8	3841-3844	gas	substance[217]|substance[218]	new[217]|new[218]	_	_
+47-9	3845-3848	off	substance[217]|substance[218]	new[217]|new[218]	_	_
+47-10	3849-3853	will	_	_	_	_
+47-11	3854-3858	kill	_	_	_	_
+47-12	3859-3860	a	animal[219]	giv[219]	ana	48-3[0_219]
+47-13	3861-3865	bird	animal[219]	giv[219]	_	_
+47-14	3866-3867	.	_	_	_	_
+
+#Text=( Consider this , and the reason why miners used to take a canary with them ) .
+48-1	3868-3869	(	_	_	_	_
+48-2	3870-3878	Consider	_	_	_	_
+48-3	3879-3883	this	animal	giv	_	_
+48-4	3884-3885	,	_	_	_	_
+48-5	3886-3889	and	_	_	_	_
+48-6	3890-3893	the	abstract[221]	new[221]	_	_
+48-7	3894-3900	reason	abstract[221]	new[221]	_	_
+48-8	3901-3904	why	abstract[221]	new[221]	_	_
+48-9	3905-3911	miners	abstract[221]|person	new[221]|new	ana	48-16
+48-10	3912-3916	used	abstract[221]	new[221]	_	_
+48-11	3917-3919	to	abstract[221]	new[221]	_	_
+48-12	3920-3924	take	abstract[221]	new[221]	_	_
+48-13	3925-3926	a	abstract[221]|animal[223]	new[221]|new[223]	_	_
+48-14	3927-3933	canary	abstract[221]|animal[223]	new[221]|new[223]	_	_
+48-15	3934-3938	with	_	_	_	_
+48-16	3939-3943	them	person	giv	_	_
+48-17	3944-3945	)	_	_	_	_
+48-18	3946-3947	.	_	_	_	_

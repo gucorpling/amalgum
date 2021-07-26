@@ -1,0 +1,186 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1002" relname="preparation">Currently in industry , fault detection and identification of causes and consequences of failures are performed by operators .</segment>
+<segment id="3" parent="1004" relname="condition">If any of these tasks are not performed correctly ,</segment>
+<segment id="4" parent="5" relname="preparation">adverse effects can occur , such as :</segment>
+<segment id="5" parent="1004" relname="span">reduction of product quality , process safety and lifetime of machinery .</segment>
+<segment id="6" parent="1007" relname="span">In this scenario , condition-based maintenance helps reduce unplanned downtime and maintenance costs .</segment>
+<segment id="7" parent="8" relname="condition">Since the induction motor is widely used in industries ,</segment>
+<segment id="8" parent="1009" relname="span">fault detection in induction motors becomes an indispensable tool in condition-based maintenance .</segment>
+<segment id="9" parent="1010" relname="span">According to statistical evidence , most induction motor failures occur in bearings</segment>
+<segment id="10" parent="9" relname="elaboration">( 40 % to 90 % of large to small machines ) .</segment>
+<segment id="11" parent="1011" relname="joint">Of all the techniques for diagnosis and detection of roller bearing failures ,</segment>
+<segment id="12" parent="1011" relname="joint">the most common is vibration analysis .</segment>
+<segment id="13" parent="1014" relname="span">Recently , stator current-based bearing failure detection has been shown to have relevant results with the advantage</segment>
+<segment id="14" parent="13" relname="elaboration">of being non-invasive and without the need for special sensors ,</segment>
+<segment id="15" parent="1013" relname="same_unit">significantly reducing maintenance costs .</segment>
+<segment id="16" parent="1016" relname="span">The identification and fault diagnosis must be able to provide alert signals</segment>
+<segment id="17" parent="16" relname="circumstance">when the fault is still incipient .</segment>
+<segment id="18" parent="1019" relname="span">Thus , still at an early stage , a maintenance action should be taken</segment>
+<segment id="19" parent="18" relname="purpose">to avoid fault evolution and catastrophic failure ,</segment>
+<segment id="20" parent="1005" relname="joint">avoiding also unnecessary costs from unscheduled repairs and shutdowns .</segment>
+<segment id="21" parent="1021" relname="preparation">Bearing failures are classified as distributed or localized .</segment>
+<segment id="22" parent="1022" relname="span">In the first kind , the deterioration occurs in a generalized way ,</segment>
+<segment id="23" parent="1024" relname="span">producing a vibration</segment>
+<segment id="24" parent="23" relname="elaboration">that , in the frequency domain , does not present a spectral component at a certain frequency</segment>
+<segment id="25" parent="1023" relname="same_unit">but an increase in a broad frequency band .</segment>
+<segment id="26" parent="1026" relname="preparation">Consequently , its detection becomes more difficult .</segment>
+<segment id="27" parent="1027" relname="same_unit">The second kind , the localized one ,</segment>
+<segment id="28" parent="1029" relname="span">is the one</segment>
+<segment id="29" parent="28" relname="elaboration">addressed in this work</segment>
+<segment id="30" parent="1030" relname="span">and its produced vibration is associated with certain frequencies</segment>
+<segment id="31" parent="1031" relname="span">that depend on the affected bearing element</segment>
+<segment id="32" parent="31" relname="elaboration">( outter race , inner race , ball and cage ) .</segment>
+<segment id="33" parent="1034" relname="attribution">It should be noted</segment>
+<segment id="34" parent="1034" relname="span">that a localized fault can spread to other bearing components</segment>
+<segment id="35" parent="34" relname="circumstance">as the level of degradation becomes more pronounced .</segment>
+<segment id="36" parent="1037" relname="span">The traditional monitoring method , vibration analysis , requires the installation of accelerometers or speed sensors</segment>
+<segment id="37" parent="36" relname="elaboration">that require accurate positioning ,</segment>
+<segment id="38" parent="1037" relname="result">making this analysis costly , complex , and invasive .</segment>
+<segment id="39" parent="1040" relname="span">So , the investments in the motor current signature analysis</segment>
+<segment id="40" parent="39" relname="restatement">( MCSA )</segment>
+<segment id="41" parent="1039" relname="same_unit">in the detection of roller bearing failures are justified .</segment>
+<segment id="42" parent="1041" relname="span">This technique has become an attractive alternative</segment>
+<segment id="43" parent="1042" relname="joint">because it is more accessible , simple</segment>
+<segment id="44" parent="1043" relname="contrast">and it does not even require the physical access to the motor itself .</segment>
+<segment id="45" parent="1045" relname="span">However , the MCSA technique presents a great difficulty in an accurate diagnosis of localized roller bearing faults</segment>
+<segment id="46" parent="1046" relname="span">due to issues such as : the low energy of the fault related spectral components and the close presence of high energy spectral components</segment>
+<segment id="47" parent="46" relname="elaboration">related to the power supply or to other mechanical sources .</segment>
+<segment id="48" parent="1048" relname="span">When the localized fault is in the early stage ,</segment>
+<segment id="49" parent="1049" relname="span">the energy</segment>
+<segment id="50" parent="1050" relname="span">associated to the generated impacts is not strong enough</segment>
+<segment id="51" parent="50" relname="purpose">to be detected directly in the acquired vibration signal .</segment>
+<segment id="52" parent="1052" relname="span">Therefore , according to Salomon , the energy is even lower in the stator current ,</segment>
+<segment id="53" parent="52" relname="cause">because the effects of this impact are obtained indirectly as a variation of torque .</segment>
+<segment id="54" parent="1054" relname="span">The motor RMS current can be understood as an image of motor torque :</segment>
+<segment id="55" parent="1055" relname="span">more motor torque implies more RMS current ;</segment>
+<segment id="56" parent="55" relname="elaboration">less motor torque implies less RMS current .</segment>
+<segment id="57" parent="1056" relname="joint">So , periodic variations in the motor torque due to specific faults will cause periodic variations in RMS current and , consequently , amplitude modulation of the instantaneous current in specific frequencies .</segment>
+<segment id="58" parent="1058" relname="span">Another challenge</segment>
+<segment id="59" parent="58" relname="elaboration">presented by localized bearing faults for both , vibration analysis and MCSA , is the variation of the element fault frequencies .</segment>
+<segment id="60" parent="1060" relname="preparation">Roller bearing manufacturers provide the nominal fault frequencies for each of the elements in a roller bearing :</segment>
+<segment id="61" parent="1060" relname="joint">BPFO — Ball Pass Frequency in the Outer Race ;</segment>
+<segment id="62" parent="1061" relname="joint">BPFI — Ball Pass Frequency in the Inner Race ;</segment>
+<segment id="63" parent="1062" relname="joint">BSF — Ball Spin Frequency ;</segment>
+<segment id="64" parent="1063" relname="joint">FTF — Frame Train Frequency .</segment>
+<segment id="65" parent="1065" relname="joint">Those frequencies depend on the bearing geometrical characteristics ,</segment>
+<segment id="66" parent="1066" relname="span">and can present an error from external factors such as :</segment>
+<segment id="67" parent="1067" relname="span">geometric variations</segment>
+<segment id="68" parent="67" relname="elaboration">imposed by the failure itself , incorrect bearing installation , cage locking , improper lubrication and ball slip , for instance .</segment>
+<segment id="69" parent="1069" relname="span">Thus , care must be taken</segment>
+<segment id="70" parent="1070" relname="span">to avoid the analysis of spectral components</segment>
+<segment id="71" parent="70" relname="elaboration">not related to the defect .</segment>
+<segment id="72" parent="1072" relname="span">In MCSA , this is a more critical concern ,</segment>
+<segment id="73" parent="1073" relname="span">since it is not uncommon to have high energy supply frequency harmonics near the bearing fault frequencies ,</segment>
+<segment id="74" parent="1074" relname="span">which can demand a very high-resolution spectrum</segment>
+<segment id="75" parent="74" relname="purpose">to distinguish spectral components of diverse nature .</segment>
+<segment id="76" parent="1076" relname="span">In order to correctly identify , in the current spectrum , the correct localized fault frequencies of roller bearings ,</segment>
+<segment id="77" parent="76" relname="elaboration">this paper proposes the use of the envelope analysis of vibration signal as a first step .</segment>
+<segment id="78" parent="1077" relname="joint">The envelope analysis is successfully used for decades in the detection of incipient roller bearing faults .</segment>
+<segment id="79" parent="1079" relname="span">In this technique , the vibration signal is bandpass filtered in a frequency range</segment>
+<segment id="80" parent="1080" relname="span">corresponding to the mechanical resonance of the system ,</segment>
+<segment id="81" parent="1081" relname="span">which tends to amplify the impacts</segment>
+<segment id="82" parent="81" relname="elaboration">produced by a localized fault in any element of the roller bearing .</segment>
+<segment id="83" parent="1083" relname="span">The filtered signal is then amplitude demodulated using the Hilbert transform ,</segment>
+<segment id="84" parent="83" relname="elaboration">which results in the amplitude envelope of the mechanical resonance region .</segment>
+<segment id="85" parent="1084" relname="span">The envelope spectrum is then obtained by the Fourier transform .</segment>
+<segment id="86" parent="85" relname="elaboration">This spectrum presents the localized fault frequencies with great sensitivity .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1005" relname="background"/>
+<group id="1004" type="span" parent="1003" relname="span"/>
+<group id="1005" type="multinuc" parent="1002" relname="span"/>
+<group id="1006" type="span" parent="1005" relname="joint"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="multinuc" parent="6" relname="elaboration"/>
+<group id="1009" type="span" parent="1008" relname="joint"/>
+<group id="1010" type="span" parent="1008" relname="joint"/>
+<group id="1011" type="multinuc" parent="1007" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1005" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="same_unit"/>
+<group id="1016" type="span" parent="1005" relname="joint"/>
+<group id="1019" type="span" parent="1005" relname="joint"/>
+<group id="1020" type="span" parent="1005" relname="joint"/>
+<group id="1021" type="multinuc" parent="1020" relname="span"/>
+<group id="1022" type="span" parent="1021" relname="joint"/>
+<group id="1023" type="multinuc" parent="22" relname="result"/>
+<group id="1024" type="span" parent="1023" relname="same_unit"/>
+<group id="1025" type="span" parent="1021" relname="joint"/>
+<group id="1026" type="multinuc" parent="1025" relname="span"/>
+<group id="1027" type="multinuc" parent="1026" relname="joint"/>
+<group id="1028" type="multinuc" parent="1027" relname="same_unit"/>
+<group id="1029" type="span" parent="1028" relname="same_unit"/>
+<group id="1030" type="span" parent="1028" relname="same_unit"/>
+<group id="1031" type="span" parent="30" relname="elaboration"/>
+<group id="1033" type="span" parent="1026" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="span"/>
+<group id="1036" type="span" parent="1026" relname="joint"/>
+<group id="1037" type="span" parent="1036" relname="span"/>
+<group id="1039" type="multinuc" parent="1026" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="same_unit"/>
+<group id="1041" type="span" parent="1026" relname="joint"/>
+<group id="1042" type="multinuc" parent="42" relname="cause"/>
+<group id="1043" type="multinuc" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="contrast"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="45" relname="elaboration"/>
+<group id="1047" type="multinuc" parent="1045" relname="circumstance"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="48" relname="elaboration"/>
+<group id="1050" type="span" parent="49" relname="elaboration"/>
+<group id="1051" type="multinuc" parent="1047" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="sequence"/>
+<group id="1053" type="multinuc" parent="1051" relname="sequence"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+<group id="1055" type="span" parent="54" relname="elaboration"/>
+<group id="1056" type="multinuc" parent="1053" relname="joint"/>
+<group id="1057" type="multinuc" parent="1056" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="joint"/>
+<group id="1059" type="span" parent="1057" relname="joint"/>
+<group id="1060" type="multinuc" parent="1059" relname="span"/>
+<group id="1061" type="multinuc" parent="1060" relname="joint"/>
+<group id="1062" type="multinuc" parent="1061" relname="joint"/>
+<group id="1063" type="multinuc" parent="1062" relname="joint"/>
+<group id="1064" type="multinuc" parent="1063" relname="joint"/>
+<group id="1065" type="multinuc" parent="1064" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="span" parent="66" relname="elaboration"/>
+<group id="1068" type="multinuc" parent="1064" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="joint"/>
+<group id="1070" type="span" parent="69" relname="purpose"/>
+<group id="1071" type="multinuc" parent="1068" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="span" parent="72" relname="cause"/>
+<group id="1074" type="span" parent="73" relname="elaboration"/>
+<group id="1075" type="multinuc" parent="1071" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="multinuc" parent="1075" relname="joint"/>
+<group id="1078" type="multinuc" parent="1077" relname="joint"/>
+<group id="1079" type="span" parent="1078" relname="joint"/>
+<group id="1080" type="span" parent="79" relname="elaboration"/>
+<group id="1081" type="span" parent="80" relname="elaboration"/>
+<group id="1082" type="multinuc" parent="1078" relname="joint"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="1082" relname="joint"/>
+	</body>
+</rst>

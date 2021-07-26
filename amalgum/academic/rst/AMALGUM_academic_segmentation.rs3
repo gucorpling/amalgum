@@ -1,0 +1,250 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">6. Results and Discussion</segment>
+<segment id="2" parent="1001" relname="span">The results of the evaluation experiments with our algorithm are presented in Table 5 .</segment>
+<segment id="3" parent="1003" relname="same_unit">The variant without the limit of n-grams per input segment</segment>
+<segment id="4" parent="1004" relname="span">produces unbalanced results</segment>
+<segment id="5" parent="4" relname="elaboration">( especially on SYOS ) , with relatively low Precision .</segment>
+<segment id="6" parent="7" relname="circumstance">After setting the limit to 2 ,</segment>
+<segment id="7" parent="1006" relname="span">Precision improves at the cost of a drop in Recall .</segment>
+<segment id="8" parent="1008" relname="contrast">The F-score is better for SYOS ,</segment>
+<segment id="9" parent="1008" relname="contrast">while on AKJ there is a very slight drop .</segment>
+<segment id="10" parent="1009" relname="joint">Table 6 shows the results of experiments with the Stupid Backoff model .</segment>
+<segment id="11" parent="12" relname="circumstance">When no backoff factor is applied ,</segment>
+<segment id="12" parent="1011" relname="span">results for both test sets are similar to those from the MiNgMatch Segmenter without the limit of n-grams per input segment .</segment>
+<segment id="13" parent="1013" relname="same_unit">Setting the backoff factor to an appropriate value</segment>
+<segment id="14" parent="1014" relname="span">allows for significant improvement in Precision and F-score</segment>
+<segment id="15" parent="14" relname="elaboration">( and in some cases also small improvements in Recall ) .</segment>
+<segment id="16" parent="1018" relname="span">For the F-score , it is better to set a low backoff factor</segment>
+<segment id="17" parent="16" relname="restatement">( e.g. , 0.09 )</segment>
+<segment id="18" parent="1017" relname="same_unit">for 1-grams only ,</segment>
+<segment id="19" parent="1019" relname="span">than to set it to a fixed value for all backoff steps</segment>
+<segment id="20" parent="1020" relname="joint">( e.g. , 0.4 ,</segment>
+<segment id="21" parent="1020" relname="joint">as Brants et al. did ) .</segment>
+<segment id="22" parent="1023" relname="concession">A backoff factor of 0.4 gives significant improvement in Precision with higher order n-gram models ,</segment>
+<segment id="23" parent="1023" relname="joint">but at the same time Recall drops drastically</segment>
+<segment id="24" parent="1023" relname="joint">and overall performance deteriorates .</segment>
+<segment id="25" parent="1026" relname="span">For models with an n-gram order of 3 or higher , the backoff factor has a bigger impact on the results</segment>
+<segment id="26" parent="1027" relname="span">than further increasing the order of n-grams</segment>
+<segment id="27" parent="26" relname="elaboration">included in the model .</segment>
+<segment id="28" parent="1029" relname="span">A comparison with the results</segment>
+<segment id="29" parent="28" relname="elaboration">yielded by MiNgMatch shows</segment>
+<segment id="30" parent="1030" relname="span">that setting the limit of n-grams per input segment is more effective than Stupid Backoff as a method</segment>
+<segment id="31" parent="1031" relname="span">for improving precision of the segmentation process</segment>
+<segment id="32" parent="1032" relname="span">—</segment>
+<segment id="33" parent="32" relname="elaboration">it leads to a much smaller drop in Recall .</segment>
+<segment id="34" parent="1035" relname="span">The results of the experiment with models</segment>
+<segment id="35" parent="34" relname="elaboration">employing modified Kneser-Ney smoothing are shown in Table 7 .</segment>
+<segment id="36" parent="1035" relname="elaboration">They achieve higher Precision than both the other types of n-gram models .</segment>
+<segment id="37" parent="1036" relname="joint">Nevertheless , due to very low Recall , the overall results are low .</segment>
+<segment id="38" parent="1038" relname="span">The results</segment>
+<segment id="39" parent="38" relname="elaboration">obtained by the Universal Segmenter are presented in Table 8 .</segment>
+<segment id="40" parent="1041" relname="span">The default model</segment>
+<segment id="41" parent="40" relname="concession">( regardless of what kind of character representations are used</segment>
+<segment id="42" parent="1043" relname="span">—</segment>
+<segment id="43" parent="42" relname="elaboration">conventional character embeddings or concatenated n-gram vectors )</segment>
+<segment id="44" parent="1044" relname="span">learns from the training data</segment>
+<segment id="45" parent="1046" relname="span">that the first and the last character of a word</segment>
+<segment id="46" parent="45" relname="elaboration">( corresponding to B , E and S tags )</segment>
+<segment id="47" parent="1045" relname="same_unit">are always adjacent either to the boundary of a space-delimited segment or to a punctuation mark .</segment>
+<segment id="48" parent="1049" relname="span">As a result , the model separates punctuation from alpha-numeric strings</segment>
+<segment id="49" parent="48" relname="elaboration">found in the input ,</segment>
+<segment id="50" parent="1048" relname="contrast">but never applies further segmentation to them .</segment>
+<segment id="51" parent="1051" relname="contrast">US-ISP models are better</segment>
+<segment id="52" parent="1052" relname="span">but still notably worse than lexical n-gram models</segment>
+<segment id="53" parent="52" relname="elaboration">( especially on SYOS ) .</segment>
+<segment id="54" parent="1055" relname="circumstance">Unlike with default settings ,</segment>
+<segment id="55" parent="1056" relname="span">the model</segment>
+<segment id="56" parent="55" relname="elaboration">trained on data without whitespaces</segment>
+<segment id="57" parent="1055" relname="same_unit">learns to predict word boundaries within strings of alpha-numeric characters .</segment>
+<segment id="58" parent="1058" relname="same_unit">However ,</segment>
+<segment id="59" parent="1060" relname="span">when presented with test data</segment>
+<segment id="60" parent="59" relname="elaboration">including spaces ,</segment>
+<segment id="61" parent="1061" relname="span">they impede the segmentation process</segment>
+<segment id="62" parent="61" relname="antithesis">rather than supporting it .</segment>
+<segment id="63" parent="1063" relname="same_unit">As shown in Table 9 ,</segment>
+<segment id="64" parent="1065" relname="span">if we only take into account the word boundaries</segment>
+<segment id="65" parent="64" relname="elaboration">not already indicated in the raw test set ,</segment>
+<segment id="66" parent="1066" relname="span">the model makes more correct predictions in data</segment>
+<segment id="67" parent="66" relname="elaboration">where the whitespaces have all been removed .</segment>
+<segment id="68" parent="1068" relname="span">Models with multi-word tokens achieve significantly higher results .</segment>
+<segment id="69" parent="1069" relname="span">Precision of the US-MWTs model is on par with the segmenter</segment>
+<segment id="70" parent="1070" relname="span">applying Kneser-Ney smoothing ,</segment>
+<segment id="71" parent="70" relname="circumstance">while maintaining relatively high Recall .</segment>
+<segment id="72" parent="1071" relname="contrast">It yields lower Recall than the model with randomly generated multi-word tokens ,</segment>
+<segment id="73" parent="1073" relname="span">but the F-score is higher</segment>
+<segment id="74" parent="73" relname="cause">due to better Precision .</segment>
+<segment id="75" parent="1074" relname="joint">With the exception of the US-ISP model on SYOS , all variants of the neural segmenter achieved the best performance with concatenated 9-gram vectors .</segment>
+<segment id="76" parent="1077" relname="span">This contrasts with the results</segment>
+<segment id="77" parent="76" relname="elaboration">reported by Shao et al. for Chinese ,</segment>
+<segment id="78" parent="1077" relname="elaboration">where in most cases there was no further improvement beyond 3-grams .</segment>
+<segment id="79" parent="1079" relname="span">This behavior is a consequence of differences between writing systems :</segment>
+<segment id="80" parent="1081" relname="span">words in Chinese are on average composed of less characters</segment>
+<segment id="81" parent="80" relname="antithesis">than in languages</segment>
+<segment id="82" parent="1081" relname="means">using alphabetic scripts .</segment>
+<segment id="83" parent="1084" relname="attribution">Due to a much bigger character set size ,</segment>
+<segment id="84" parent="1084" relname="span">hanzi characters are also more informative to word segmentation ,</segment>
+<segment id="85" parent="1085" relname="span">hence better performance with models</segment>
+<segment id="86" parent="85" relname="means">using shorter context .</segment>
+<segment id="87" parent="1086" relname="joint">6.1.</segment>
+<segment id="88" parent="1088" relname="preparation">General Observations</segment>
+<segment id="89" parent="1090" relname="span">Due to data sparsity , n-gram coverage in the test set</segment>
+<segment id="90" parent="1091" relname="span">( the fraction of n-grams in the test data</segment>
+<segment id="91" parent="90" relname="elaboration">that can be found in the training set )</segment>
+<segment id="92" parent="1092" relname="span">is low</segment>
+<segment id="93" parent="92" relname="elaboration">( see Table 10 ) .</segment>
+<segment id="94" parent="1095" relname="attribution">It means</segment>
+<segment id="95" parent="96" relname="concession">that many multi-word tokens from the test set are known to n-gram models as separate unigrams ,</segment>
+<segment id="96" parent="1095" relname="span">but not in the form of a single n-gram .</segment>
+<segment id="97" parent="1098" relname="span">The Stupid Backoff model with a backoff factor for unigrams</segment>
+<segment id="98" parent="1099" relname="span">set to a moderate value</segment>
+<segment id="99" parent="98" relname="elaboration">( such as 0.09 )</segment>
+<segment id="100" parent="1097" relname="same_unit">is able to segment such strings correctly .</segment>
+<segment id="101" parent="1101" relname="span">However , it also erroneously segments some OoV single-word tokens</segment>
+<segment id="102" parent="1102" relname="span">whose surface forms happen to be interpretable as a sequence of concatenated in-vocabulary unigrams ,</segment>
+<segment id="103" parent="102" relname="result">resulting in lower Precision .</segment>
+<segment id="104" parent="1104" relname="span">On the other hand , models</segment>
+<segment id="105" parent="1105" relname="span">assigning low scores to unigrams</segment>
+<segment id="106" parent="1106" relname="span">( such as a 4- or 5-gram model with the Stupid Backoff and backoff factor set</segment>
+<segment id="107" parent="106" relname="elaboration">as suggested by Brants et al. ,</segment>
+<segment id="108" parent="1109" relname="span">and in particular the model</segment>
+<segment id="109" parent="108" relname="elaboration">applying modified Kneser-Ney smoothing )</segment>
+<segment id="110" parent="1108" relname="same_unit">are better</segment>
+<segment id="111" parent="1111" relname="span">at handling OoV words</segment>
+<segment id="112" parent="111" relname="elaboration">( see Table 11 ) ,</segment>
+<segment id="113" parent="1112" relname="span">but as a result of probability multiplication , in many cases they score unseen multi-word segments higher than a sequence of unigrams into which the given segment should be divided ,</segment>
+<segment id="114" parent="113" relname="result">hence yielding lower Recall .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="2" relname="elaboration"/>
+<group id="1003" type="multinuc" parent="1005" relname="preparation"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1002" relname="span"/>
+<group id="1006" type="span" parent="1007" relname="preparation"/>
+<group id="1007" type="multinuc" parent="1005" relname="span"/>
+<group id="1008" type="multinuc" parent="1007" relname="joint"/>
+<group id="1009" type="multinuc" parent="1007" relname="joint"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="span"/>
+<group id="1012" type="multinuc" parent="1011" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1012" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="same_unit"/>
+<group id="1015" type="multinuc" parent="1012" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="joint"/>
+<group id="1017" type="multinuc" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="same_unit"/>
+<group id="1019" type="span" parent="1017" relname="antithesis"/>
+<group id="1020" type="multinuc" parent="19" relname="elaboration"/>
+<group id="1021" type="multinuc" parent="1015" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="joint"/>
+<group id="1023" type="multinuc" parent="1022" relname="span"/>
+<group id="1024" type="multinuc" parent="1021" relname="joint"/>
+<group id="1025" type="span" parent="1024" relname="joint"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="25" relname="antithesis"/>
+<group id="1028" type="span" parent="1026" relname="elaboration"/>
+<group id="1029" type="span" parent="1030" relname="attribution"/>
+<group id="1030" type="span" parent="1028" relname="span"/>
+<group id="1031" type="span" parent="30" relname="purpose"/>
+<group id="1032" type="span" parent="31" relname="elaboration"/>
+<group id="1033" type="multinuc" parent="1024" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="span" parent="1034" relname="span"/>
+<group id="1036" type="multinuc" parent="1033" relname="joint"/>
+<group id="1037" type="multinuc" parent="1036" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="multinuc" parent="1037" relname="joint"/>
+<group id="1040" type="multinuc" parent="1039" relname="joint"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="multinuc" parent="1040" relname="same_unit"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="span" parent="1042" relname="same_unit"/>
+<group id="1045" type="multinuc" parent="44" relname="elaboration"/>
+<group id="1046" type="span" parent="1045" relname="same_unit"/>
+<group id="1047" type="multinuc" parent="1039" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="contrast"/>
+<group id="1050" type="multinuc" parent="1047" relname="joint"/>
+<group id="1051" type="multinuc" parent="1050" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="contrast"/>
+<group id="1053" type="multinuc" parent="1050" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="contrast"/>
+<group id="1055" type="multinuc" parent="1054" relname="span"/>
+<group id="1056" type="span" parent="1055" relname="same_unit"/>
+<group id="1057" type="multinuc" parent="1053" relname="contrast"/>
+<group id="1058" type="multinuc" parent="1057" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="same_unit"/>
+<group id="1060" type="span" parent="1061" relname="circumstance"/>
+<group id="1061" type="span" parent="1059" relname="span"/>
+<group id="1062" type="multinuc" parent="1057" relname="joint"/>
+<group id="1063" type="multinuc" parent="1062" relname="joint"/>
+<group id="1064" type="span" parent="1063" relname="same_unit"/>
+<group id="1065" type="span" parent="1066" relname="condition"/>
+<group id="1066" type="span" parent="1064" relname="span"/>
+<group id="1067" type="multinuc" parent="1062" relname="joint"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1069" type="span" parent="68" relname="elaboration"/>
+<group id="1070" type="span" parent="69" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1067" relname="joint"/>
+<group id="1072" type="multinuc" parent="1071" relname="contrast"/>
+<group id="1073" type="span" parent="1072" relname="joint"/>
+<group id="1074" type="multinuc" parent="1072" relname="joint"/>
+<group id="1075" type="multinuc" parent="1074" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="span" parent="1076" relname="span"/>
+<group id="1078" type="multinuc" parent="1075" relname="joint"/>
+<group id="1079" type="span" parent="1078" relname="joint"/>
+<group id="1080" type="span" parent="79" relname="elaboration"/>
+<group id="1081" type="span" parent="1080" relname="span"/>
+<group id="1082" type="multinuc" parent="1078" relname="joint"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1085" type="span" parent="84" relname="elaboration"/>
+<group id="1086" type="multinuc" parent="1082" relname="joint"/>
+<group id="1087" type="span" parent="1086" relname="joint"/>
+<group id="1088" type="multinuc" parent="1087" relname="span"/>
+<group id="1089" type="multinuc" parent="1088" relname="joint"/>
+<group id="1090" type="span" parent="1089" relname="same_unit"/>
+<group id="1091" type="span" parent="89" relname="elaboration"/>
+<group id="1092" type="span" parent="1089" relname="same_unit"/>
+<group id="1093" type="span" parent="1088" relname="joint"/>
+<group id="1094" type="span" parent="1093" relname="span"/>
+<group id="1095" type="span" parent="1094" relname="span"/>
+<group id="1096" type="multinuc" parent="1094" relname="elaboration"/>
+<group id="1097" type="multinuc" parent="1096" relname="joint"/>
+<group id="1098" type="span" parent="1097" relname="same_unit"/>
+<group id="1099" type="span" parent="97" relname="elaboration"/>
+<group id="1100" type="multinuc" parent="1096" relname="joint"/>
+<group id="1101" type="span" parent="1100" relname="joint"/>
+<group id="1102" type="span" parent="101" relname="elaboration"/>
+<group id="1103" type="multinuc" parent="1100" relname="joint"/>
+<group id="1104" type="span" parent="1103" relname="joint"/>
+<group id="1105" type="span" parent="104" relname="elaboration"/>
+<group id="1106" type="span" parent="105" relname="elaboration"/>
+<group id="1107" type="multinuc" parent="1103" relname="joint"/>
+<group id="1108" type="multinuc" parent="1107" relname="same_unit"/>
+<group id="1109" type="span" parent="1108" relname="same_unit"/>
+<group id="1110" type="multinuc" parent="1107" relname="same_unit"/>
+<group id="1111" type="span" parent="1110" relname="joint"/>
+<group id="1112" type="span" parent="1110" relname="joint"/>
+	</body>
+</rst>

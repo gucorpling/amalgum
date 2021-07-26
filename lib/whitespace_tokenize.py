@@ -24,7 +24,7 @@ from html import unescape
 PY3 = sys.version_info[0] > 2
 
 # characters which have to be cut off at the beginning of a word
-PChar = r"""[¿¡{(`"‚„†‡‹‘’“”•'–—›«「"""
+PChar = r"""[¿¡{(`"‚„†‡‹‘’“”•'–—›«「°"""
 
 # characters which have to be cut off at the end of a word
 FChar = r"""'\]}'`"),;:!?%‚„…†‡‰‹‘’“”•–—›'»」"""
@@ -33,7 +33,14 @@ FChar = r"""'\]}'`"),;:!?%‚„…†‡‰‹‘’“”•–—›'»」"""
 PClitic = ""
 
 # character sequences which have to be cut off at the end of a word
-FClitic = "['’](s|re|ve|d|m|em|ll)|n['’]t|(?<=\b(?:ca|wo))(nt)|(?<=\byou)(ll|re)|(?<=\bwa)(na)|(?<=\bgon)(na)"
+FClitic = r"['’′](s|re|ve|d|m|em|ll)|n['’′]t|(?<=\b(?:[Cc]a|[Ww]o))(nt)|(?<=\byou)(ll|re)|(?<=\b[Ww]an)(na)|(?<=\b[Gg]on)(na)"
+
+email = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+url = r"https?://(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)"
+acro = r"([A-Z]\.([A-Z]\.)+)"
+short_url = r"[-a-zA-Z0-9]{2,256}\.(com|org|edu|co|io|net)"
+phone = r"(?:\(?\+?[0-9]+\)?-)+[0-9]+"
+blocks = [email, url, acro, short_url, phone]
 
 
 def tokenize(text, abbr=None, add_sents=False):
@@ -95,18 +102,11 @@ def tokenize(text, abbr=None, add_sents=False):
             else:
                 # unescape entities
                 unit = unescape(unit)
-                email = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
-                url = r"https?://(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&/=]*)"
-                acro = r"([A-Z]\.([A-Z]\.)+)"
-                short_url = r"[-a-zA-Z0-9]{2,256}\.(com|org|edu|co|io|net)"
 
                 # insert missing blanks after punctuation if not an abbreviation
                 if (
                     unit not in Token
-                    and re.search(email, unit) is None
-                    and re.search(url, unit) is None
-                    and re.search(acro, unit) is None
-                    and re.search(short_url, unit) is None
+                    and all([re.search(pat,unit) is None for pat in blocks])
                 ):
                     unit = " " + unit + " "
                     unit = re.sub(r"\.\.\.", " ... ", unit)
@@ -162,11 +162,8 @@ def tokenize(text, abbr=None, add_sents=False):
                         output += subunit + "\n" + suffix
                         continue
 
-                    # e-mail addresses
-                    if (
-                        re.search(email, subunit) is not None
-                        or re.search(url, subunit) is not None
-                    ):
+                    # Previously this part only covered email and long url, now all blocks are included
+                    if any([re.search(pat,subunit) is not None for pat in blocks]):
                         output += subunit + "\n" + suffix
                         continue
 

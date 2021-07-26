@@ -1,0 +1,1086 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_harmony" title="An Efficient Representation Using Harmony Search for Solving the Virtual Machine Consolidation" shortTitle="harmony" author="MinJun Kim, JuneSeok Hong, Wooju Kim" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2071-1050/11/21/6030/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	MD	4.
+Proposed	VBN	propose
+Grouping	NN	grouping
+</s>
+<s type="frag">
+Harmony	NNP	Harmony
+Search	NNP	Search
+for	IN	for
+Virtual	JJ	virtual
+Machine	NNP	Machine
+Consolidation	NNP	Consolidation
+</s>
+</head>
+<p>
+<s type="decl">
+This	DT	this
+section	NN	section
+described	VBD	describe
+the	DT	the
+detailed	JJ	detailed
+procedures	NNS	procedure
+of	IN	of
+harmony	NN	harmony
+search	NN	search
+(	-LRB-	(
+HS	NNP	HS
+)	-RRB-	)
+and	CC	and
+grouping	VBG	group
+harmony	NN	harmony
+search	NN	search
+(	-LRB-	(
+GHS	NNP	GHS
+)	-RRB-	)
+,	,	,
+one	CD	one
+of	IN	of
+the	DT	the
+metaheuristic	JJ	metaheuristic
+techniques	NNS	technique
+used	VBN	use
+to	TO	to
+solve	VB	solve
+VMC	NNP	VMC
+,	,	,
+and	CC	and
+the	DT	the
+contents	NNS	content
+of	IN	of
+the	DT	the
+operators	NNS	operator
+designed	VBN	design
+to	TO	to
+efficiently	RB	efficiently
+solve	VB	solve
+VMC	NNP	VMC
+problems	NNS	problem
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+</s>
+<s type="frag">
+Overview	NN	overview
+of	IN	of
+Harmony	NNP	Harmony
+Search	NNP	Search
+</s>
+</head>
+<p>
+<s type="decl">
+HS	NNP	HS
+is	VBZ	be
+an	DT	a
+optimization	NN	optimization
+algorithm	NN	algorithm
+that	WDT	that
+was	VBD	be
+created	VBN	create
+based	VBN	base
+on	IN	on
+the	DT	the
+observation	NN	observation
+that	IN	that
+better	JJR	good
+chords	NNS	chord
+are	VBP	be
+produced	VBN	produce
+by	IN	by
+repeated	VBN	repeat
+practice	NN	practice
+in	IN	in
+improvisation	NN	improvisation
+of	IN	of
+jazz	NN	jazz
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+refers	VBZ	refer
+to	IN	to
+a	DT	a
+series	NN	series
+of	IN	of
+processes	NNS	process
+that	IN	that
+the	DT	the
+most	RBS	most
+beautiful	JJ	beautiful
+chords	NNS	chord
+(	-LRB-	(
+global	JJ	global
+optimum	NN	optimum
+)	-RRB-	)
+can	MD	can
+be	VB	be
+made	VBN	make
+through	IN	through
+repetitive	JJ	repetitive
+practice	NN	practice
+(	-LRB-	(
+iteration	NN	iteration
+)	-RRB-	)
+when	WRB	when
+played	VBN	play
+by	IN	by
+a	DT	a
+variety	NN	variety
+of	IN	of
+instruments	NNS	instrument
+.	.	.
+</s>
+</p>
+<p>
+<s type="frag">
+In	IN	in
+the	DT	the
+case	NN	case
+of	IN	of
+GA	NNP	GA
+,	,	,
+inspired	VBN	inspire
+by	IN	by
+population	NN	population
+genetics	NNS	genetics
+</s>
+<s type="decl">
+inspired	VBN	inspire
+by	IN	by
+population	NN	population
+genetics	NN	genetics
+,	,	,
+generates	VBZ	generate
+new	JJ	new
+genes	NNS	gene
+from	IN	from
+two	CD	2
+genes	NNS	gene
+,	,	,
+but	CC	but
+HS	NNP	HS
+generates	VBZ	generate
+new	JJ	new
+solution	NN	solution
+from	IN	from
+multiple	JJ	multiple
+solution	NN	solution
+,	,	,
+which	WDT	which
+has	VBZ	have
+a	DT	a
+high	JJ	high
+probability	NN	probability
+of	IN	of
+searching	VBG	search
+for	IN	for
+global	JJ	global
+optimal	JJ	optimal
+.	.	.
+</s>
+<s type="decl">
+Compared	VBN	compare
+to	IN	to
+SA	NNP	SA
+and	CC	and
+TS	NNS	TS
+,	,	,
+which	WDT	which
+are	VBP	be
+typical	JJ	typical
+single	JJ	single
+solution	NN	solution
+based	VBN	base
+metaheuristics	NNS	metaheuristics
+,	,	,
+population	NN	population
+based	VBN	base
+HS	NNP	HS
+has	VBZ	have
+a	DT	a
+high	JJ	high
+global	JJ	global
+search	NN	search
+capability	NN	capability
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+case	NN	case
+of	IN	of
+SA	NNP	SA
+and	CC	and
+TS	NNPS	TS
+,	,	,
+it	PRP	it
+is	VBZ	be
+possible	JJ	possible
+to	TO	to
+drive	VB	drive
+a	DT	a
+good	JJ	good
+quality	NN	quality
+through	IN	through
+a	DT	a
+mechanism	NN	mechanism
+that	WDT	that
+probabilistically	RB	probabilistically
+adopts	VBZ	adopt
+a	DT	a
+bad	JJ	bad
+solution	NN	solution
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+HS	NNP	HS
+generates	VBZ	generate
+a	DT	a
+new	JJ	new
+solution	NN	solution
+,	,	,
+it	PRP	it
+adopts	VBZ	adopt
+a	DT	a
+quality	NN	quality
+solution	NN	solution
+within	IN	within
+the	DT	the
+population	NN	population
+and	CC	and
+searches	VBZ	search
+for	IN	for
+an	DT	a
+optimal	JJ	optimal
+solution	NN	solution
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+HS	NNP	HS
+consists	VBZ	consist
+of	IN	of
+three	CD	3
+operators	NNS	operator
+in	IN	in
+total	NN	total
+:	:	:
+memory	NN	memory
+considering	VBG	consider
+,	,	,
+pitch	NN	pitch
+adjusting	VBG	adjust
+,	,	,
+and	CC	and
+random	JJ	random
+playing	NN	playing
+.	.	.
+</s>
+<s type="decl">
+Each	DT	each
+operator	NN	operator
+determines	VBZ	determine
+the	DT	the
+frequency	NN	frequency
+of	IN	of
+operation	NN	operation
+based	VBN	base
+on	IN	on
+predefined	VBN	predefine
+parameter	NN	parameter
+values	NNS	value
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+pseudo	NN	pseudo
+code	NN	code
+of	IN	of
+HS	NNP	HS
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+Table	NNP	Table
+1	CD	1
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+HS	NNP	HS
+generates	VBZ	generate
+one	CD	one
+solution	NN	solution
+(	-LRB-	(
+HM	NNP	HM
+,	,	,
+harmony	NN	harmony
+memory	NN	memory
+)	-RRB-	)
+per	IN	per
+iteration	NN	iteration
+(	-LRB-	(
+line	NN	line
+5	CD	5
+–	SYM	-
+17	CD	17
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+New	NNP	New
+Harmony	NNP	Harmony
+x	NNP	x
+’	''	's
+is	VBZ	be
+generated	VBN	generate
+through	IN	through
+memory	NN	memory
+considering	VBG	consider
+,	,	,
+pitch	NN	pitch
+adjusting	VBG	adjust
+,	,	,
+and	CC	and
+random	JJ	random
+playing	NN	playing
+operators	NNS	operator
+by	IN	by
+increasing	VBG	increase
+the	DT	the
+index	NN	index
+(	-LRB-	(
+line	NN	line
+6	CD	6
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+operator	NN	operator
+of	IN	of
+HS	NNP	HS
+generates	VBZ	generate
+the	DT	the
+first	JJ	first
+random	JJ	random
+number	NN	number
+(	-LRB-	(
+line	NN	line
+7	CD	7
+)	-RRB-	)
+to	TO	to
+determine	VB	determine
+whether	IN	whether
+to	TO	to
+calculate	VB	calculate
+the	DT	the
+memory	NN	memory
+considering	VBG	consider
+(	-LRB-	(
+line	NN	line
+8	CD	8
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+first	JJ	first
+random	JJ	random
+number	NN	number
+is	VBZ	be
+smaller	JJR	small
+than	IN	than
+the	DT	the
+predefined	JJ	predefined
+harmony	NN	harmony
+memory	NN	memory
+considering	VBG	consider
+rate	NN	rate
+(	-LRB-	(
+HMCR	NNP	HMCR
+)	-RRB-	)
+,	,	,
+memory	NN	memory
+considering	VBG	consider
+is	VBZ	be
+executed	VBN	execute
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+first	JJ	first
+random	JJ	random
+number	NN	number
+is	VBZ	be
+larger	JJR	large
+than	IN	than
+HMCR	NNP	HMCR
+,	,	,
+random	JJ	random
+playing	NN	playing
+is	VBZ	be
+executed	VBN	execute
+(	-LRB-	(
+line	NN	line
+13	CD	13
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Random	JJ	Random
+playing	NN	playing
+is	VBZ	be
+a	DT	a
+method	NN	method
+of	IN	of
+adopting	VBG	adopt
+the	DT	the
+value	NN	value
+of	IN	of
+one	CD	one
+of	IN	of
+the	DT	the
+feasible	JJ	feasible
+solution	NN	solution
+groups	NNS	group
+.	.	.
+</s>
+<s type="decl">
+Memory	NN	memory
+considering	VBG	consider
+adopts	VBZ	adopt
+the	DT	the
+value	NN	value
+of	IN	of
+one	CD	one
+of	IN	of
+several	JJ	several
+solutions	NNS	solution
+of	IN	of
+harmony	NN	harmony
+memory	NN	memory
+size	NN	size
+(	-LRB-	(
+HMS	NNP	HMS
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+the	DT	the
+solution	NN	solution
+is	VBZ	be
+generated	VBN	generate
+through	IN	through
+memory	NN	memory
+considering	VBG	consider
+,	,	,
+the	DT	the
+operation	NN	operation
+for	IN	for
+pitch	NN	pitch
+adjusting	NN	adjusting
+is	VBZ	be
+determined	VBN	determine
+by	IN	by
+generating	VBG	generate
+a	DT	a
+second	JJ	second
+random	JJ	random
+number	NN	number
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+second	JJ	second
+random	JJ	random
+number	NN	number
+is	VBZ	be
+smaller	JJR	small
+than	IN	than
+the	DT	the
+predefined	VBN	predefine
+pitch	NN	pitch
+adjusting	VBG	adjust
+rate	NN	rate
+(	-LRB-	(
+PAR	NNP	PAR
+)	-RRB-	)
+,	,	,
+pitch	NN	pitch
+adjusting	VBG	adjust
+is	VBZ	be
+executed	VBN	execute
+(	-LRB-	(
+line	NN	line
+10	CD	10
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Pitch	NN	Pitch
+adjusting	VBG	adjust
+means	VBZ	mean
+the	DT	the
+neighboring	JJ	neighboring
+value	NN	value
+of	IN	of
+the	DT	the
+solution	NN	solution
+generated	VBN	generate
+by	IN	by
+memory	NN	memory
+considering	VBG	consider
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+target	NN	target
+value	NN	value
+is	VBZ	be
+calculated	VBN	calculate
+once	IN	once
+x	NN	x
+’	SYM	's
+is	VBZ	be
+generated	VBN	generate
+,	,	,
+and	CC	and
+if	IN	if
+it	PRP	it
+has	VBZ	have
+a	DT	a
+better	JJR	good
+value	NN	value
+than	IN	than
+the	DT	the
+target	NN	target
+value	NN	value
+of	IN	of
+the	DT	the
+worst	JJS	bad
+HM	NN	HM
+in	IN	in
+the	DT	the
+HMS	NNP	HMS
+,	,	,
+the	DT	the
+solution	NN	solution
+is	VBZ	be
+replaced	VBN	replace
+with	IN	with
+new	JJ	new
+harmony	NN	harmony
+(	-LRB-	(
+line	NN	line
+16	CD	16
+–	SYM	-
+17	CD	17
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+HS	NNP	HS
+repeats	VBZ	repeat
+the	DT	the
+above	JJ	above
+process	NN	process
+until	IN	until
+the	DT	the
+end	NN	end
+condition	NN	condition
+is	VBZ	be
+met	VBN	meet
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.2.	CD	4.2.
+Grouping	NNP	Grouping
+Representation	NN	representation
+for	IN	for
+Virtual	JJ	virtual
+Machine	NN	machine
+Consolidation	NN	consolidation
+</s>
+</head>
+<p>
+<s type="decl">
+Harmony	NNP	Harmony
+search	NN	search
+is	VBZ	be
+population-based	JJ	population-based
+metaheuristics	NN	metaheuristics
+that	WDT	that
+generate	VBP	generate
+new	JJ	new
+HMs	NNS	hM
+by	IN	by
+combining	VBG	combine
+multiple	JJ	multiple
+HMs	NNS	hM
+and	CC	and
+has	VBZ	have
+the	DT	the
+advantage	NN	advantage
+of	IN	of
+having	VBG	have
+a	DT	a
+high	JJ	high
+degree	NN	degree
+of	IN	of
+diversification	NN	diversification
+;	:	;
+however	RB	however
+,	,	,
+as	IN	as
+a	DT	a
+result	NN	result
+of	IN	of
+controlling	VBG	control
+a	DT	a
+large	JJ	large
+number	NN	number
+of	IN	of
+HMs	NNS	hM
+,	,	,
+there	EX	there
+is	VBZ	be
+a	DT	a
+disadvantage	NN	disadvantage
+that	IN	that
+computation	NN	computation
+times	NNS	time
+increase	VBP	increase
+compared	VBN	compare
+to	IN	to
+single	JJ	single
+solution	NN	solution
+metaheuristics	NNS	metaheuristics
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+the	DT	the
+size	NN	size
+of	IN	of
+the	DT	the
+node	NN	node
+grows	VBZ	grow
+,	,	,
+the	DT	the
+HMS	NNP	HMS
+also	RB	also
+needs	VBZ	need
+to	TO	to
+grow	VB	grow
+to	TO	to
+increase	VB	increase
+the	DT	the
+efficiency	NN	efficiency
+of	IN	of
+searching	VBG	search
+for	IN	for
+a	DT	a
+solution	NN	solution
+,	,	,
+so	RB	so
+the	DT	the
+problem	NN	problem
+occurs	VBZ	occur
+when	WRB	when
+handling	VBG	handle
+a	DT	a
+large-scale	JJ	large-scale
+problem	NN	problem
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+solve	VB	solve
+this	DT	this
+problem	NN	problem
+,	,	,
+we	PRP	we
+adopted	VBD	adopt
+grouping	NN	grouping
+representation	NN	representation
+in	IN	in
+this	DT	this
+study	NN	study
+for	IN	for
+the	DT	the
+efficient	JJ	efficient
+design	NN	design
+of	IN	of
+algorithms	NNS	algorithm
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+VMC	NNP	VMC
+belongs	VBZ	belong
+to	IN	to
+grouping	VBG	group
+problems	NNS	problem
+,	,	,
+and	CC	and
+the	DT	the
+ordering	NN	ordering
+of	IN	of
+objects	NNS	object
+within	IN	within
+a	DT	a
+group	NN	group
+is	VBZ	be
+meaningless	JJ	meaningless
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+other	JJ	other
+words	NNS	word
+,	,	,
+the	DT	the
+combination	NN	combination
+of	IN	of
+VMs	NNS	VM
+located	VBN	locate
+in	IN	in
+the	DT	the
+PM	NNP	PM
+is	VBZ	be
+important	JJ	important
+,	,	,
+not	RB	not
+the	DT	the
+order	NN	order
+in	IN	in
+the	DT	the
+group	NN	group
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+it	PRP	it
+also	RB	also
+deals	VBZ	deal
+with	IN	with
+virtualization	NN	virtualization
+environments	NNS	environment
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+PMs	NNS	PM
+is	VBZ	be
+basically	RB	basically
+smaller	JJR	small
+than	IN	than
+the	DT	the
+number	NN	number
+of	IN	of
+VMs	NNS	VM
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+there	EX	there
+are	VBP	be
+multiple	JJ	multiple
+VMs	NNS	VM
+in	IN	in
+one	CD	one
+PM	NN	PM
+,	,	,
+if	IN	if
+the	DT	the
+problem	NN	problem
+size	NN	size
+is	VBZ	be
+adjusted	VBN	adjust
+,	,	,
+the	DT	the
+increase	NN	increase
+in	IN	in
+VM	NN	VM
+is	VBZ	be
+higher	JJR	high
+than	IN	than
+the	DT	the
+increase	NN	increase
+in	IN	in
+PM	NN	PM
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+the	DT	the
+solution	NN	solution
+is	VBZ	be
+encoded	VBN	encode
+in	IN	in
+the	DT	the
+permutation	NN	permutation
+form	NN	form
+of	IN	of
+the	DT	the
+VM	NN	VM
+,	,	,
+the	DT	the
+length	NN	length
+of	IN	of
+the	DT	the
+solution	NN	solution
+also	RB	also
+increases	VBZ	increase
+as	IN	as
+the	DT	the
+number	NN	number
+of	IN	of
+VMs	NNS	VM
+increases	VBZ	increase
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+method	NN	method
+is	VBZ	be
+inefficient	JJ	inefficient
+when	WRB	when
+searching	VBG	search
+for	IN	for
+a	DT	a
+solution	NN	solution
+as	IN	as
+the	DT	the
+solution	NN	solution
+space	NN	space
+is	VBZ	be
+increased	VBN	increase
+with	IN	with
+many	JJ	many
+duplicate	JJ	duplicate
+solution	NN	solution
+representations	NNS	representation
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+PM-oriented	VBN	pM-orient
+representation	NN	representation
+is	VBZ	be
+more	RBR	more
+efficient	JJ	efficient
+than	IN	than
+VM-oriented	VBN	vM-orient
+solution	NN	solution
+representation	NN	representation
+.	.	.
+</s>
+<s type="decl">
+Falkenauer	NNP	Falkenauer
+proposed	VBD	propose
+a	DT	a
+one-gene-for-one-group	JJ	one-gene-for-one-group
+method	NN	method
+for	IN	for
+one	CD	one
+solution	NN	solution
+grouping	NN	grouping
+problem	NN	problem
+.	.	.
+</s>
+<s type="decl">
+With	IN	with
+this	DT	this
+in	IN	in
+mind	NN	mind
+,	,	,
+this	DT	this
+study	NN	study
+represented	VBD	represent
+PM	NNP	PM
+and	CC	and
+VM	NN	VM
+information	NN	information
+based	VBN	base
+on	IN	on
+groups	NNS	group
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+index	NN	index
+of	IN	of
+each	DT	each
+array	NN	array
+indicates	VBZ	indicate
+the	DT	the
+index	NN	index
+of	IN	of
+PM	NNP	PM
+,	,	,
+and	CC	and
+the	DT	the
+value	NN	value
+of	IN	of
+each	DT	each
+array	NN	array
+indicates	VBZ	indicate
+the	DT	the
+index	NN	index
+of	IN	of
+VM	NNP	VM
+located	VBN	locate
+in	IN	in
+the	DT	the
+corresponding	JJ	corresponding
+PM	NN	PM
+,	,	,
+which	WDT	which
+is	VBZ	be
+controlled	VBN	control
+in	IN	in
+the	DT	the
+form	NN	form
+of	IN	of
+a	DT	a
+list	NN	list
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.3.	CD	4.3.
+Pitch	NN	Pitch
+Adjustments	NNS	adjustment
+for	IN	for
+Virtual	JJ	virtual
+Machine	NN	machine
+Consolidation	NN	consolidation
+</s>
+</head>
+<p>
+<s type="decl">
+HS	NNP	HS
+consists	VBZ	consist
+of	IN	of
+three	CD	3
+operators	NNS	operator
+—	:	—
+memory	NN	memory
+considering	VBG	consider
+,	,	,
+pitch	NN	pitch
+adjustment	NN	adjustment
+,	,	,
+and	CC	and
+randomization	NN	randomization
+.	.	.
+</s>
+<s type="decl">
+Among	IN	among
+them	PRP	they
+,	,	,
+the	DT	the
+operator	NN	operator
+that	WDT	that
+directly	RB	directly
+changes	VBZ	change
+the	DT	the
+new	JJ	new
+HM	NNP	HM
+is	VBZ	be
+pitch	NN	pitch
+adjustment	NN	adjustment
+.	.	.
+</s>
+<s type="decl">
+VMC	NNP	VMC
+has	VBZ	have
+to	TO	to
+decide	VB	decide
+the	DT	the
+source	NN	source
+PM	NN	PM
+selection	NN	selection
+,	,	,
+VM	NN	VM
+selection	NN	selection
+,	,	,
+and	CC	and
+destination	NN	destination
+PM	NN	PM
+selection	NN	selection
+as	IN	as
+a	DT	a
+problem	NN	problem
+of	IN	of
+migrating	VBG	migrate
+VM	NN	VM
+located	VBN	locate
+in	IN	in
+one	CD	one
+PM	NN	PM
+to	IN	to
+another	DT	another
+PM	NN	PM
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+pitch	NN	pitch
+adjustment	NN	adjustment
+operator	NN	operator
+changes	VBZ	change
+the	DT	the
+solution	NN	solution
+by	IN	by
+determining	VBG	determine
+the	DT	the
+above	JJ	above
+three	CD	3
+factors	NNS	factor
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+criteria	NNS	criterion
+for	IN	for
+determining	VBG	determine
+each	DT	each
+problem	NN	problem
+are	VBP	be
+as	IN	as
+follows	VBZ	follow
+.	.	.
+</s>
+</p>
+</text>

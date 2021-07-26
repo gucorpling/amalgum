@@ -1,0 +1,580 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Use Autostick
+1-1	0-3	Use	_	_	_	_
+1-2	4-13	Autostick	object	new	_	_
+
+#Text=So you bought a car with an auto-stick ( manually-controllable automatic transmission ) function , and you 're wondering how to use it .
+2-1	14-16	So	_	_	_	_
+2-2	17-20	you	person	acc	ana	2-17
+2-3	21-27	bought	_	_	_	_
+2-4	28-29	a	object[3]	new[3]	ana	2-23[0_3]
+2-5	30-33	car	object[3]	new[3]	_	_
+2-6	34-38	with	_	_	_	_
+2-7	39-41	an	abstract[6]	new[6]	_	_
+2-8	42-52	auto-stick	object|abstract[6]	new|new[6]	_	_
+2-9	53-54	(	abstract[6]	new[6]	_	_
+2-10	55-76	manually-controllable	object[5]|abstract[6]	new[5]|new[6]	coref	11-2[37_5]
+2-11	77-86	automatic	object[5]|abstract[6]	new[5]|new[6]	_	_
+2-12	87-99	transmission	object[5]|abstract[6]	new[5]|new[6]	_	_
+2-13	100-101	)	abstract[6]	new[6]	_	_
+2-14	102-110	function	abstract[6]	new[6]	_	_
+2-15	111-112	,	_	_	_	_
+2-16	113-116	and	_	_	_	_
+2-17	117-120	you	person	giv	ana	5-3
+2-18	121-124	're	_	_	_	_
+2-19	125-134	wondering	_	_	_	_
+2-20	135-138	how	_	_	_	_
+2-21	139-141	to	_	_	_	_
+2-22	142-145	use	_	_	_	_
+2-23	146-148	it	object	giv	coref	5-3[12_0]
+2-24	149-150	.	_	_	_	_
+
+#Text=Well , pay attention .
+3-1	151-155	Well	_	_	_	_
+3-2	156-157	,	_	_	_	_
+3-3	158-161	pay	_	_	_	_
+3-4	162-171	attention	event	new	_	_
+3-5	172-173	.	_	_	_	_
+
+#Text=Steps
+4-1	174-179	Steps	abstract	new	_	_
+
+#Text=Get into your car and adjust mirrors and seats .
+5-1	180-183	Get	_	_	_	_
+5-2	184-188	into	_	_	_	_
+5-3	189-193	your	person|object[12]	giv|giv[12]	coref|ana	6-2[15_12]|10-4
+5-4	194-197	car	object[12]	giv[12]	_	_
+5-5	198-201	and	_	_	_	_
+5-6	202-208	adjust	_	_	_	_
+5-7	209-216	mirrors	object	new	_	_
+5-8	217-220	and	_	_	_	_
+5-9	221-226	seats	object	new	_	_
+5-10	227-228	.	_	_	_	_
+
+#Text=Start the car and find a nice long empty stretch of road for trying this out .
+6-1	229-234	Start	_	_	_	_
+6-2	235-238	the	object[15]	giv[15]	ana	6-15[0_15]
+6-3	239-242	car	object[15]	giv[15]	_	_
+6-4	243-246	and	_	_	_	_
+6-5	247-251	find	_	_	_	_
+6-6	252-253	a	_	_	_	_
+6-7	254-258	nice	_	_	_	_
+6-8	259-263	long	_	_	_	_
+6-9	264-269	empty	_	_	_	_
+6-10	270-277	stretch	_	_	_	_
+6-11	278-280	of	_	_	_	_
+6-12	281-285	road	place	new	_	_
+6-13	286-289	for	_	_	_	_
+6-14	290-296	trying	_	_	_	_
+6-15	297-301	this	object	giv	coref	7-2[18_0]
+6-16	302-305	out	_	_	_	_
+6-17	306-307	.	_	_	_	_
+
+#Text=Put the car into first gear ( or the sport/auto-stick gear ) .
+7-1	308-311	Put	_	_	_	_
+7-2	312-315	the	object[18]	giv[18]	coref	9-18[31_18]
+7-3	316-319	car	object[18]	giv[18]	_	_
+7-4	320-324	into	_	_	_	_
+7-5	325-330	first	abstract[19]|person[20]	new[19]|new[20]	ana	12-6[0_20]
+7-6	331-335	gear	abstract[19]|person[20]	new[19]|new[20]	_	_
+7-7	336-337	(	person[20]	new[20]	_	_
+7-8	338-340	or	person[20]	new[20]	_	_
+7-9	341-344	the	person[20]|object[22]	new[20]|new[22]	_	_
+7-10	345-361	sport/auto-stick	person[20]|abstract|object[22]	new[20]|new|new[22]	_	_
+7-11	362-366	gear	person[20]|object[22]	new[20]|new[22]	_	_
+7-12	367-368	)	person[20]	new[20]	_	_
+7-13	369-370	.	_	_	_	_
+
+#Text=Step on the gas and reach desired RPM ( ~3500 or so for general use ; higher , toward but not past the red line for high performance in appropriate conditions , not when learning ) before shifting .
+8-1	371-375	Step	_	_	_	_
+8-2	376-378	on	_	_	_	_
+8-3	379-382	the	substance[23]	new[23]	coref	22-10[89_23]
+8-4	383-386	gas	substance[23]	new[23]	_	_
+8-5	387-390	and	_	_	_	_
+8-6	391-396	reach	_	_	_	_
+8-7	397-404	desired	abstract[24]	new[24]	coref	10-10[33_24]
+8-8	405-408	RPM	abstract[24]	new[24]	_	_
+8-9	409-410	(	_	_	_	_
+8-10	411-416	~3500	_	_	_	_
+8-11	417-419	or	_	_	_	_
+8-12	420-422	so	_	_	_	_
+8-13	423-426	for	_	_	_	_
+8-14	427-434	general	abstract[25]	new[25]	_	_
+8-15	435-438	use	abstract[25]	new[25]	_	_
+8-16	439-440	;	_	_	_	_
+8-17	441-447	higher	_	_	_	_
+8-18	448-449	,	_	_	_	_
+8-19	450-456	toward	_	_	_	_
+8-20	457-460	but	_	_	_	_
+8-21	461-464	not	_	_	_	_
+8-22	465-469	past	_	_	_	_
+8-23	470-473	the	abstract[26]	new[26]	_	_
+8-24	474-477	red	abstract[26]	new[26]	_	_
+8-25	478-482	line	abstract[26]	new[26]	_	_
+8-26	483-486	for	_	_	_	_
+8-27	487-491	high	event[27]	new[27]	_	_
+8-28	492-503	performance	event[27]	new[27]	_	_
+8-29	504-506	in	event[27]	new[27]	_	_
+8-30	507-518	appropriate	event[27]|abstract[28]	new[27]|new[28]	coref	28-30[117_28]
+8-31	519-529	conditions	event[27]|abstract[28]	new[27]|new[28]	_	_
+8-32	530-531	,	_	_	_	_
+8-33	532-535	not	_	_	_	_
+8-34	536-540	when	_	_	_	_
+8-35	541-549	learning	_	_	_	_
+8-36	550-551	)	_	_	_	_
+8-37	552-558	before	_	_	_	_
+8-38	559-567	shifting	_	_	_	_
+8-39	568-569	.	_	_	_	_
+
+#Text=Shift up either hitting the shifter to the right , or hitting it up ( depends on the vehicle ) .
+9-1	570-575	Shift	_	_	_	_
+9-2	576-578	up	_	_	_	_
+9-3	579-585	either	_	_	_	_
+9-4	586-593	hitting	_	_	_	_
+9-5	594-597	the	object[29]	new[29]	ana	9-13[0_29]
+9-6	598-605	shifter	object[29]	new[29]	_	_
+9-7	606-608	to	_	_	_	_
+9-8	609-612	the	_	_	_	_
+9-9	613-618	right	_	_	_	_
+9-10	619-620	,	_	_	_	_
+9-11	621-623	or	_	_	_	_
+9-12	624-631	hitting	_	_	_	_
+9-13	632-634	it	object	giv	coref	10-19[34_0]
+9-14	635-637	up	_	_	_	_
+9-15	638-639	(	_	_	_	_
+9-16	640-647	depends	_	_	_	_
+9-17	648-650	on	_	_	_	_
+9-18	651-654	the	object[31]	giv[31]	coref	16-12[62_31]
+9-19	655-662	vehicle	object[31]	giv[31]	_	_
+9-20	663-664	)	_	_	_	_
+9-21	665-666	.	_	_	_	_
+
+#Text=Shift down when you are decelerating and get to low RPM , ~1500 or so , by tapping the shifter in the other direction .
+10-1	667-672	Shift	_	_	_	_
+10-2	673-677	down	_	_	_	_
+10-3	678-682	when	_	_	_	_
+10-4	683-686	you	person	giv	ana	12-29
+10-5	687-690	are	_	_	_	_
+10-6	691-703	decelerating	_	_	_	_
+10-7	704-707	and	_	_	_	_
+10-8	708-711	get	_	_	_	_
+10-9	712-714	to	_	_	_	_
+10-10	715-718	low	abstract[33]	giv[33]	coref	12-12[40_33]
+10-11	719-722	RPM	abstract[33]	giv[33]	_	_
+10-12	723-724	,	_	_	_	_
+10-13	725-730	~1500	_	_	_	_
+10-14	731-733	or	_	_	_	_
+10-15	734-736	so	_	_	_	_
+10-16	737-738	,	_	_	_	_
+10-17	739-741	by	_	_	_	_
+10-18	742-749	tapping	_	_	_	_
+10-19	750-753	the	object[34]	giv[34]	coref	12-17[0_34]
+10-20	754-761	shifter	object[34]	giv[34]	_	_
+10-21	762-764	in	_	_	_	_
+10-22	765-768	the	abstract[35]	new[35]	_	_
+10-23	769-774	other	abstract[35]	new[35]	_	_
+10-24	775-784	direction	abstract[35]	new[35]	_	_
+10-25	785-786	.	_	_	_	_
+
+#Text=( An auto stick transmission normally does not need to be put in neutral , just first , when stopped . )
+11-1	787-788	(	_	_	_	_
+11-2	789-791	An	object[37]	giv[37]	coref	18-1[67_37]
+11-3	792-796	auto	object[36]|object[37]	new[36]|giv[37]	_	_
+11-4	797-802	stick	object[36]|object[37]	new[36]|giv[37]	_	_
+11-5	803-815	transmission	object[37]	giv[37]	_	_
+11-6	816-824	normally	_	_	_	_
+11-7	825-829	does	_	_	_	_
+11-8	830-833	not	_	_	_	_
+11-9	834-838	need	_	_	_	_
+11-10	839-841	to	_	_	_	_
+11-11	842-844	be	_	_	_	_
+11-12	845-848	put	_	_	_	_
+11-13	849-851	in	_	_	_	_
+11-14	852-859	neutral	_	_	_	_
+11-15	860-861	,	_	_	_	_
+11-16	862-866	just	_	_	_	_
+11-17	867-872	first	_	_	_	_
+11-18	873-874	,	_	_	_	_
+11-19	875-879	when	_	_	_	_
+11-20	880-887	stopped	_	_	_	_
+11-21	888-889	.	_	_	_	_
+11-22	890-891	)	_	_	_	_
+
+#Text=Many cars will shift on their own rather than go to a too-high RPM and break something or go to a too-low RPM and stall , but unless you have confirmed that yours will , watch ( and when you 're accustomed , listen for ) the RPM and shift accordingly .
+12-1	892-896	Many	object[38]	new[38]	coref	21-1[82_38]
+12-2	897-901	cars	object[38]	new[38]	_	_
+12-3	902-906	will	_	_	_	_
+12-4	907-912	shift	_	_	_	_
+12-5	913-915	on	_	_	_	_
+12-6	916-921	their	person	giv	_	_
+12-7	922-925	own	_	_	_	_
+12-8	926-932	rather	_	_	_	_
+12-9	933-937	than	_	_	_	_
+12-10	938-940	go	_	_	_	_
+12-11	941-943	to	_	_	_	_
+12-12	944-945	a	abstract[40]	giv[40]	coref	12-21[42_40]
+12-13	946-954	too-high	abstract[40]	giv[40]	_	_
+12-14	955-958	RPM	abstract[40]	giv[40]	_	_
+12-15	959-962	and	_	_	_	_
+12-16	963-968	break	_	_	_	_
+12-17	969-978	something	object	giv	_	_
+12-18	979-981	or	_	_	_	_
+12-19	982-984	go	_	_	_	_
+12-20	985-987	to	_	_	_	_
+12-21	988-989	a	abstract[42]	giv[42]	coref	12-47[46_42]
+12-22	990-997	too-low	abstract[42]	giv[42]	_	_
+12-23	998-1001	RPM	abstract[42]	giv[42]	_	_
+12-24	1002-1005	and	_	_	_	_
+12-25	1006-1011	stall	_	_	_	_
+12-26	1012-1013	,	_	_	_	_
+12-27	1014-1017	but	_	_	_	_
+12-28	1018-1024	unless	_	_	_	_
+12-29	1025-1028	you	person	giv	ana	12-33
+12-30	1029-1033	have	_	_	_	_
+12-31	1034-1043	confirmed	_	_	_	_
+12-32	1044-1048	that	_	_	_	_
+12-33	1049-1054	yours	person	giv	ana	12-40
+12-34	1055-1059	will	_	_	_	_
+12-35	1060-1061	,	_	_	_	_
+12-36	1062-1067	watch	_	_	_	_
+12-37	1068-1069	(	_	_	_	_
+12-38	1070-1073	and	_	_	_	_
+12-39	1074-1078	when	_	_	_	_
+12-40	1079-1082	you	person	giv	ana	13-2
+12-41	1083-1086	're	_	_	_	_
+12-42	1087-1097	accustomed	_	_	_	_
+12-43	1098-1099	,	_	_	_	_
+12-44	1100-1106	listen	_	_	_	_
+12-45	1107-1110	for	_	_	_	_
+12-46	1111-1112	)	_	_	_	_
+12-47	1113-1116	the	abstract[46]	giv[46]	coref	14-21[59_46]
+12-48	1117-1120	RPM	abstract[46]	giv[46]	_	_
+12-49	1121-1124	and	_	_	_	_
+12-50	1125-1130	shift	_	_	_	_
+12-51	1131-1142	accordingly	_	_	_	_
+12-52	1143-1144	.	_	_	_	_
+
+#Text=When you are comfortable with the system , you could race with it in an appropriate time and place .
+13-1	1145-1149	When	_	_	_	_
+13-2	1150-1153	you	person	giv	ana	13-9
+13-3	1154-1157	are	_	_	_	_
+13-4	1158-1169	comfortable	_	_	_	_
+13-5	1170-1174	with	_	_	_	_
+13-6	1175-1178	the	abstract[48]	new[48]	ana	13-13[0_48]
+13-7	1179-1185	system	abstract[48]	new[48]	_	_
+13-8	1186-1187	,	_	_	_	_
+13-9	1188-1191	you	person	giv	ana	14-19
+13-10	1192-1197	could	_	_	_	_
+13-11	1198-1202	race	_	_	_	_
+13-12	1203-1207	with	_	_	_	_
+13-13	1208-1210	it	abstract	giv	_	_
+13-14	1211-1213	in	_	_	_	_
+13-15	1214-1216	an	time[51]	new[51]	_	_
+13-16	1217-1228	appropriate	time[51]	new[51]	_	_
+13-17	1229-1233	time	time[51]	new[51]	_	_
+13-18	1234-1237	and	_	_	_	_
+13-19	1238-1243	place	place	new	_	_
+13-20	1244-1245	.	_	_	_	_
+
+#Text=One user has suggested as a racing technique " Stand on the brake and floor the accelerator until you reach ~ 5000 RPM .
+14-1	1246-1249	One	person[53]	new[53]	_	_
+14-2	1250-1254	user	person[53]	new[53]	_	_
+14-3	1255-1258	has	_	_	_	_
+14-4	1259-1268	suggested	_	_	_	_
+14-5	1269-1271	as	_	_	_	_
+14-6	1272-1273	a	abstract[55]	new[55]	_	_
+14-7	1274-1280	racing	event|abstract[55]	new|new[55]	_	_
+14-8	1281-1290	technique	abstract[55]	new[55]	_	_
+14-9	1291-1292	"	_	_	_	_
+14-10	1293-1298	Stand	_	_	_	_
+14-11	1299-1301	on	_	_	_	_
+14-12	1302-1305	the	object[56]	new[56]	coref	15-2[0_56]
+14-13	1306-1311	brake	object[56]	new[56]	_	_
+14-14	1312-1315	and	_	_	_	_
+14-15	1316-1321	floor	_	_	_	_
+14-16	1322-1325	the	object[57]	new[57]	_	_
+14-17	1326-1337	accelerator	object[57]	new[57]	_	_
+14-18	1338-1343	until	_	_	_	_
+14-19	1344-1347	you	person	giv	ana	20-7
+14-20	1348-1353	reach	_	_	_	_
+14-21	1354-1355	~	abstract[59]	giv[59]	coref	20-19[78_59]
+14-22	1356-1360	5000	abstract[59]	giv[59]	_	_
+14-23	1361-1364	RPM	abstract[59]	giv[59]	_	_
+14-24	1365-1366	.	_	_	_	_
+
+#Text=Release brake ! "
+15-1	1367-1374	Release	_	_	_	_
+15-2	1375-1380	brake	object	giv	_	_
+15-3	1381-1382	!	_	_	_	_
+15-4	1383-1384	"	_	_	_	_
+
+#Text=which might be similar to " dropping the clutch " in a manual car .
+16-1	1385-1390	which	_	_	_	_
+16-2	1391-1396	might	_	_	_	_
+16-3	1397-1399	be	_	_	_	_
+16-4	1400-1407	similar	_	_	_	_
+16-5	1408-1410	to	_	_	_	_
+16-6	1411-1412	"	_	_	_	_
+16-7	1413-1421	dropping	_	_	_	_
+16-8	1422-1425	the	object[61]	new[61]	_	_
+16-9	1426-1432	clutch	object[61]	new[61]	_	_
+16-10	1433-1434	"	_	_	_	_
+16-11	1435-1437	in	_	_	_	_
+16-12	1438-1439	a	object[62]	giv[62]	coref	17-7[64_62]
+16-13	1440-1446	manual	object[62]	giv[62]	_	_
+16-14	1447-1450	car	object[62]	giv[62]	_	_
+16-15	1451-1452	.	_	_	_	_
+
+#Text=Such techniques are very hard on the car .
+17-1	1453-1457	Such	abstract[63]	new[63]	_	_
+17-2	1458-1468	techniques	abstract[63]	new[63]	_	_
+17-3	1469-1472	are	_	_	_	_
+17-4	1473-1477	very	_	_	_	_
+17-5	1478-1482	hard	_	_	_	_
+17-6	1483-1485	on	_	_	_	_
+17-7	1486-1489	the	object[64]	giv[64]	coref	20-13[75_64]
+17-8	1490-1493	car	object[64]	giv[64]	_	_
+17-9	1494-1495	.	_	_	_	_
+
+#Text=An auto shift transmission is nice for driving in mountains because it is so easy to downshift for engine braking .
+18-1	1496-1498	An	object[67]	giv[67]	ana	18-12[0_67]
+18-2	1499-1503	auto	object|abstract[66]|object[67]	new|new[66]|giv[67]	coref	24-2[95_66]
+18-3	1504-1509	shift	abstract[66]|object[67]	new[66]|giv[67]	_	_
+18-4	1510-1522	transmission	object[67]	giv[67]	_	_
+18-5	1523-1525	is	_	_	_	_
+18-6	1526-1530	nice	_	_	_	_
+18-7	1531-1534	for	_	_	_	_
+18-8	1535-1542	driving	_	_	_	_
+18-9	1543-1545	in	_	_	_	_
+18-10	1546-1555	mountains	place	new	_	_
+18-11	1556-1563	because	_	_	_	_
+18-12	1564-1566	it	object	giv	coref	20-2
+18-13	1567-1569	is	_	_	_	_
+18-14	1570-1572	so	_	_	_	_
+18-15	1573-1577	easy	_	_	_	_
+18-16	1578-1580	to	_	_	_	_
+18-17	1581-1590	downshift	_	_	_	_
+18-18	1591-1594	for	_	_	_	_
+18-19	1595-1601	engine	abstract[70]	new[70]	_	_
+18-20	1602-1609	braking	abstract[70]	new[70]	_	_
+18-21	1610-1611	.	_	_	_	_
+
+#Text=Tips
+19-1	1612-1616	Tips	abstract	new	_	_
+
+#Text=since transmission shifts are more noticeable you can usually just listen to the car and when it reaches the peak RPM you 'll be able to hear , that 's the best time to shift .
+20-1	1617-1622	since	_	_	_	_
+20-2	1623-1635	transmission	object|event[73]	giv|new[73]	coref	23-19[94_0]
+20-3	1636-1642	shifts	event[73]	new[73]	_	_
+20-4	1643-1646	are	_	_	_	_
+20-5	1647-1651	more	_	_	_	_
+20-6	1652-1662	noticeable	_	_	_	_
+20-7	1663-1666	you	person	giv	ana	20-22
+20-8	1667-1670	can	_	_	_	_
+20-9	1671-1678	usually	_	_	_	_
+20-10	1679-1683	just	_	_	_	_
+20-11	1684-1690	listen	_	_	_	_
+20-12	1691-1693	to	_	_	_	_
+20-13	1694-1697	the	object[75]	giv[75]	ana	20-17[0_75]
+20-14	1698-1701	car	object[75]	giv[75]	_	_
+20-15	1702-1705	and	_	_	_	_
+20-16	1706-1710	when	_	_	_	_
+20-17	1711-1713	it	object	giv	ana	20-29
+20-18	1714-1721	reaches	_	_	_	_
+20-19	1722-1725	the	abstract[78]	giv[78]	coref	21-11[85_78]
+20-20	1726-1730	peak	abstract|abstract[78]	new|giv[78]	_	_
+20-21	1731-1734	RPM	abstract[78]	giv[78]	_	_
+20-22	1735-1738	you	person	giv	ana	22-7
+20-23	1739-1742	'll	_	_	_	_
+20-24	1743-1745	be	_	_	_	_
+20-25	1746-1750	able	_	_	_	_
+20-26	1751-1753	to	_	_	_	_
+20-27	1754-1758	hear	_	_	_	_
+20-28	1759-1760	,	_	_	_	_
+20-29	1761-1765	that	object	giv	coref	20-31[81_0]
+20-30	1766-1768	's	_	_	_	_
+20-31	1769-1772	the	object[81]	giv[81]	coref	21-8[83_81]
+20-32	1773-1777	best	object[81]	giv[81]	_	_
+20-33	1778-1782	time	object[81]	giv[81]	_	_
+20-34	1783-1785	to	object[81]	giv[81]	_	_
+20-35	1786-1791	shift	object[81]	giv[81]	_	_
+20-36	1792-1793	.	_	_	_	_
+
+#Text=No two cars drive the same , each car has it 's own optimal RPM
+21-1	1794-1796	No	object[82]	giv[82]	coref	23-20[0_82]
+21-2	1797-1800	two	object[82]	giv[82]	_	_
+21-3	1801-1805	cars	object[82]	giv[82]	_	_
+21-4	1806-1811	drive	_	_	_	_
+21-5	1812-1815	the	_	_	_	_
+21-6	1816-1820	same	_	_	_	_
+21-7	1821-1822	,	_	_	_	_
+21-8	1823-1827	each	object[83]	giv[83]	ana	21-11[0_83]
+21-9	1828-1831	car	object[83]	giv[83]	_	_
+21-10	1832-1835	has	_	_	_	_
+21-11	1836-1838	it	object|abstract[85]	giv|giv[85]	coref|coref	23-13[91_85]|25-15[102_0]
+21-12	1839-1841	's	abstract[85]	giv[85]	_	_
+21-13	1842-1845	own	abstract[85]	giv[85]	_	_
+21-14	1846-1853	optimal	abstract[85]	giv[85]	_	_
+21-15	1854-1857	RPM	abstract[85]	giv[85]	_	_
+
+#Text=get a feel for it before you start stomping the gas .
+22-1	1858-1861	get	_	_	_	_
+22-2	1862-1863	a	abstract[86]	new[86]	ana	22-5[0_86]
+22-3	1864-1868	feel	abstract[86]	new[86]	_	_
+22-4	1869-1872	for	abstract[86]	new[86]	_	_
+22-5	1873-1875	it	abstract[86]|abstract	new[86]|giv	_	_
+22-6	1876-1882	before	_	_	_	_
+22-7	1883-1886	you	person	giv	ana	23-5
+22-8	1887-1892	start	_	_	_	_
+22-9	1893-1901	stomping	_	_	_	_
+22-10	1902-1905	the	substance[89]	giv[89]	_	_
+22-11	1906-1909	gas	substance[89]	giv[89]	_	_
+22-12	1910-1911	.	_	_	_	_
+
+#Text=most of the time you 're going to want to shift at 3000 RPM to avoid stress on the cars transmission
+23-1	1912-1916	most	_	_	_	_
+23-2	1917-1919	of	_	_	_	_
+23-3	1920-1923	the	_	_	_	_
+23-4	1924-1928	time	_	_	_	_
+23-5	1929-1932	you	person	giv	ana	24-5
+23-6	1933-1936	're	_	_	_	_
+23-7	1937-1942	going	_	_	_	_
+23-8	1943-1945	to	_	_	_	_
+23-9	1946-1950	want	_	_	_	_
+23-10	1951-1953	to	_	_	_	_
+23-11	1954-1959	shift	_	_	_	_
+23-12	1960-1962	at	_	_	_	_
+23-13	1963-1967	3000	abstract[91]	giv[91]	coref	24-10[97_91]
+23-14	1968-1971	RPM	abstract[91]	giv[91]	_	_
+23-15	1972-1974	to	_	_	_	_
+23-16	1975-1980	avoid	_	_	_	_
+23-17	1981-1987	stress	abstract[92]	new[92]	_	_
+23-18	1988-1990	on	abstract[92]	new[92]	_	_
+23-19	1991-1994	the	abstract[92]|object[94]	new[92]|giv[94]	coref	27-11[109_94]
+23-20	1995-1999	cars	abstract[92]|object|object[94]	new[92]|giv|giv[94]	coref	27-12
+23-21	2000-2012	transmission	abstract[92]|object[94]	new[92]|giv[94]	_	_
+
+#Text=for an ideal shift you 're going to want 4000 RPM or even higher if you 're racing
+24-1	2013-2016	for	_	_	_	_
+24-2	2017-2019	an	abstract[95]	giv[95]	_	_
+24-3	2020-2025	ideal	abstract[95]	giv[95]	_	_
+24-4	2026-2031	shift	abstract[95]	giv[95]	_	_
+24-5	2032-2035	you	person	giv	ana	24-16
+24-6	2036-2039	're	_	_	_	_
+24-7	2040-2045	going	_	_	_	_
+24-8	2046-2048	to	_	_	_	_
+24-9	2049-2053	want	_	_	_	_
+24-10	2054-2058	4000	abstract[97]	giv[97]	_	_
+24-11	2059-2062	RPM	abstract[97]	giv[97]	_	_
+24-12	2063-2065	or	_	_	_	_
+24-13	2066-2070	even	_	_	_	_
+24-14	2071-2077	higher	_	_	_	_
+24-15	2078-2080	if	_	_	_	_
+24-16	2081-2084	you	person	giv	ana	25-15
+24-17	2085-2088	're	_	_	_	_
+24-18	2089-2095	racing	_	_	_	_
+
+#Text=Do n't be afraid to ask somebody about how to use this feature on your car .
+25-1	2096-2098	Do	_	_	_	_
+25-2	2099-2102	n't	_	_	_	_
+25-3	2103-2105	be	_	_	_	_
+25-4	2106-2112	afraid	_	_	_	_
+25-5	2113-2115	to	_	_	_	_
+25-6	2116-2119	ask	_	_	_	_
+25-7	2120-2128	somebody	person	new	_	_
+25-8	2129-2134	about	_	_	_	_
+25-9	2135-2138	how	_	_	_	_
+25-10	2139-2141	to	_	_	_	_
+25-11	2142-2145	use	_	_	_	_
+25-12	2146-2150	this	abstract[100]	new[100]	_	_
+25-13	2151-2158	feature	abstract[100]	new[100]	_	_
+25-14	2159-2161	on	_	_	_	_
+25-15	2162-2166	your	person|object[102]	giv|giv[102]	coref|ana	27-5[0_102]|27-11
+25-16	2167-2170	car	object[102]	giv[102]	_	_
+25-17	2171-2172	.	_	_	_	_
+
+#Text=Warnings
+26-1	2173-2181	Warnings	abstract	new	_	_
+
+#Text=Failure to shift on time could cause major damage to your cars transmission so be careful
+27-1	2182-2189	Failure	abstract[104]	new[104]	_	_
+27-2	2190-2192	to	abstract[104]	new[104]	_	_
+27-3	2193-2198	shift	abstract[104]	new[104]	_	_
+27-4	2199-2201	on	abstract[104]	new[104]	_	_
+27-5	2202-2206	time	abstract[104]|object	new[104]|giv	coref	29-6[118_0]
+27-6	2207-2212	could	_	_	_	_
+27-7	2213-2218	cause	_	_	_	_
+27-8	2219-2224	major	abstract[106]	new[106]	_	_
+27-9	2225-2231	damage	abstract[106]	new[106]	_	_
+27-10	2232-2234	to	abstract[106]	new[106]	_	_
+27-11	2235-2239	your	abstract[106]|person|object[109]	new[106]|giv|giv[109]	ana	28-7
+27-12	2240-2244	cars	abstract[106]|object|object[109]	new[106]|giv|giv[109]	_	_
+27-13	2245-2257	transmission	abstract[106]|object[109]	new[106]|giv[109]	_	_
+27-14	2258-2260	so	_	_	_	_
+27-15	2261-2263	be	_	_	_	_
+27-16	2264-2271	careful	_	_	_	_
+
+#Text=always keep in mind that sometimes you will exceed the speed limit posted on the road so keep in mind that there may be police/children , pets , or weather conditions
+28-1	2272-2278	always	_	_	_	_
+28-2	2279-2283	keep	_	_	_	_
+28-3	2284-2286	in	_	_	_	_
+28-4	2287-2291	mind	_	_	_	_
+28-5	2292-2296	that	_	_	_	_
+28-6	2297-2306	sometimes	_	_	_	_
+28-7	2307-2310	you	person	giv	ana	30-1
+28-8	2311-2315	will	_	_	_	_
+28-9	2316-2322	exceed	_	_	_	_
+28-10	2323-2326	the	abstract[112]	new[112]	_	_
+28-11	2327-2332	speed	abstract|abstract[112]	new|new[112]	_	_
+28-12	2333-2338	limit	abstract[112]	new[112]	_	_
+28-13	2339-2345	posted	abstract[112]	new[112]	_	_
+28-14	2346-2348	on	abstract[112]	new[112]	_	_
+28-15	2349-2352	the	abstract[112]|place[113]	new[112]|new[113]	_	_
+28-16	2353-2357	road	abstract[112]|place[113]	new[112]|new[113]	_	_
+28-17	2358-2360	so	_	_	_	_
+28-18	2361-2365	keep	_	_	_	_
+28-19	2366-2368	in	_	_	_	_
+28-20	2369-2373	mind	_	_	_	_
+28-21	2374-2378	that	_	_	_	_
+28-22	2379-2384	there	_	_	_	_
+28-23	2385-2388	may	_	_	_	_
+28-24	2389-2391	be	_	_	_	_
+28-25	2392-2407	police/children	organization	new	_	_
+28-26	2408-2409	,	_	_	_	_
+28-27	2410-2414	pets	animal	new	_	_
+28-28	2415-2416	,	_	_	_	_
+28-29	2417-2419	or	_	_	_	_
+28-30	2420-2427	weather	abstract|abstract[117]	new|giv[117]	_	_
+28-31	2428-2438	conditions	abstract[117]	giv[117]	_	_
+
+#Text=always be careful when operating a motor vehicle
+29-1	2439-2445	always	_	_	_	_
+29-2	2446-2448	be	_	_	_	_
+29-3	2449-2456	careful	_	_	_	_
+29-4	2457-2461	when	_	_	_	_
+29-5	2462-2471	operating	_	_	_	_
+29-6	2472-2473	a	object[118]	giv[118]	coref	30-1[120_118]
+29-7	2474-2479	motor	object[118]	giv[118]	_	_
+29-8	2480-2487	vehicle	object[118]	giv[118]	_	_
+
+#Text=your car will be traveling at high speeds so take all precautions when using this function
+30-1	2488-2492	your	person|object[120]	giv|giv[120]	_	_
+30-2	2493-2496	car	object[120]	giv[120]	_	_
+30-3	2497-2501	will	_	_	_	_
+30-4	2502-2504	be	_	_	_	_
+30-5	2505-2514	traveling	_	_	_	_
+30-6	2515-2517	at	_	_	_	_
+30-7	2518-2522	high	abstract[121]	new[121]	_	_
+30-8	2523-2529	speeds	abstract[121]	new[121]	_	_
+30-9	2530-2532	so	_	_	_	_
+30-10	2533-2537	take	_	_	_	_
+30-11	2538-2541	all	abstract[122]	new[122]	_	_
+30-12	2542-2553	precautions	abstract[122]	new[122]	_	_
+30-13	2554-2558	when	_	_	_	_
+30-14	2559-2564	using	_	_	_	_
+30-15	2565-2569	this	abstract[123]	new[123]	_	_
+30-16	2570-2578	function	abstract[123]	new[123]	_	_

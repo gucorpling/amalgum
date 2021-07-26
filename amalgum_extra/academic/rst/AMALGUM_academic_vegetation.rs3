@@ -1,0 +1,137 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">5. Discussion</segment>
+<segment id="2" parent="1002" relname="preparation">5.1. Strengths and Limitations of the Framework</segment>
+<segment id="3" parent="1002" relname="joint">Timeseries products present different temporal scales components , such as seasonal variations , long-term and short-term fluctuations .</segment>
+<segment id="4" parent="1004" relname="span">Their high temporal resolution offers the opportunity</segment>
+<segment id="5" parent="4" relname="purpose">to define time profiles of vegetation dynamics .</segment>
+<segment id="6" parent="1007" relname="span">Although many methods have been developed</segment>
+<segment id="7" parent="6" relname="purpose">to explore vegetation dynamics at a global or regional scale ,</segment>
+<segment id="8" parent="1008" relname="span">quantitative methods</segment>
+<segment id="9" parent="8" relname="elaboration">that could automatically address where , when and how vegetation change are still lacking .</segment>
+<segment id="10" parent="1010" relname="span">Trajectory-based change detection is an inevitable choice</segment>
+<segment id="11" parent="1011" relname="span">to do this work</segment>
+<segment id="12" parent="11" relname="means">by constructing a ‘ curve ’ or profile of full temporal records for each pixel .</segment>
+<segment id="13" parent="1013" relname="preparation">Nowadays , the method has been successfully applied in forest-related change analyses , land use classification , and cropland variations .</segment>
+<segment id="14" parent="1015" relname="span">The framework</segment>
+<segment id="15" parent="14" relname="elaboration">we proposed in our study</segment>
+<segment id="16" parent="1014" relname="same_unit">is a trajectory-based change detection method .</segment>
+<segment id="17" parent="1017" relname="span">It has several desirable properties</segment>
+<segment id="18" parent="17" relname="elaboration">compared with other fashionable methods .</segment>
+<segment id="19" parent="1018" relname="span">Firstly , unlike the widely used trend analyses</segment>
+<segment id="20" parent="1020" relname="attribution">which hypothesize</segment>
+<segment id="21" parent="1020" relname="joint">that ecosystems/vegetation always change linearly in a direction ,</segment>
+<segment id="22" parent="1021" relname="joint">our framework could detect the non-linear change patterns in vegetation .</segment>
+<segment id="23" parent="1022" relname="joint">All patterns in the framework can be interpreted from unambiguous biophysical standpoints .</segment>
+<segment id="24" parent="1024" relname="span">Secondly , unlike DBEST and BFAST , our framework automatically generalizes processes of vegetation gradual changes into different patterns</segment>
+<segment id="25" parent="24" relname="elaboration">without setting any parameters .</segment>
+<segment id="26" parent="1025" relname="joint">Furthermore , the patterns between different pixels or areas could be compared easily .</segment>
+<segment id="27" parent="1028" relname="concession">Although DBEST and BFAST could also track vegetation gradual change by a piecewise linear model on the pixel scale ,</segment>
+<segment id="28" parent="1028" relname="span">the number of breakpoints must be set by users</segment>
+<segment id="29" parent="28" relname="circumstance">when the method was extended to the regional scale .</segment>
+<segment id="30" parent="1030" relname="span">For example , de Jong detected the short-term greening or browning periods within long-term timeseries</segment>
+<segment id="31" parent="1031" relname="span">by dividing the trend component in BFAST into four segments</segment>
+<segment id="32" parent="31" relname="elaboration">which were separated by three breakpoints .</segment>
+<segment id="33" parent="1032" relname="joint">Then , the duration of the significant greening and browning segments , the magnitude of change in NDVI , and the abrupt changes could be compared between pixels subsequently .</segment>
+<segment id="34" parent="1035" relname="span">Lastly , trajectory-based change detection only functions</segment>
+<segment id="35" parent="34" relname="circumstance">when the process of vegetation change matches well with the hypothesized trajectory .</segment>
+<segment id="36" parent="1034" relname="joint">Temporal trajectories of vegetation changes in different pixels may be different .</segment>
+<segment id="37" parent="1037" relname="span">Therefore , many mathematical models are needed</segment>
+<segment id="38" parent="37" relname="purpose">to fit the trajectories .</segment>
+<segment id="39" parent="1039" relname="span">However , just a logistic model is used</segment>
+<segment id="40" parent="39" relname="purpose">to simulate all the non-linear monotonic patterns in our framework .</segment>
+<segment id="41" parent="1040" relname="joint">Drawbacks of our framework are obvious .</segment>
+<segment id="42" parent="1041" relname="joint">Firstly , only four monotonic patterns and eight types are presented .</segment>
+<segment id="43" parent="1044" relname="preparation">All the patterns are associated with only one disturbance event within the timescales of the observation period (</segment>
+<segment id="44" parent="1045" relname="preparation">Figure 4</segment>
+<segment id="45" parent="1045" relname="span">) .</segment>
+<segment id="46" parent="1046" relname="span">Generally , changes in vegetation are complicated and difficult to be generalized by a single function .</segment>
+<segment id="47" parent="1049" relname="span">Therefore , patterns</segment>
+<segment id="48" parent="47" relname="elaboration">that are composed of the general categories in our framework ,</segment>
+<segment id="49" parent="1050" relname="span">or patterns</segment>
+<segment id="50" parent="49" relname="elaboration">that vegetation gradual changes were stalled or reverse by abrupt events ,</segment>
+<segment id="51" parent="1047" relname="same_unit">were not discussed in this study .</segment>
+<segment id="52" parent="1052" relname="span">New models</segment>
+<segment id="53" parent="52" relname="elaboration">that could detect both the monotonic and the non-monotonic patterns are needed to be induced in future .</segment>
+<segment id="54" parent="1054" relname="span">Secondly , the smoothed treatment</segment>
+<segment id="55" parent="1055" relname="span">implemented on the NDVI timeseries makes the framework unsuitable</segment>
+<segment id="56" parent="55" relname="purpose">to detect subtle changes or abrupt changes .</segment>
+<segment id="57" parent="1057" relname="span">However , it makes the framework unspecific to the MODIS timeseries products</segment>
+<segment id="58" parent="57" relname="elaboration">which do not suffer from the problem of data discontinuity .</segment>
+<segment id="59" parent="1059" relname="span">The data discontinuities</segment>
+<segment id="60" parent="1060" relname="span">which may be caused by changes in different sensors , orbital drift in the satellite overpass times , variations in sun-sensor-viewer geometry or differences in the atmospheric conditions</segment>
+<segment id="61" parent="60" relname="elaboration">( i.e. , water vapour content , aerosols )</segment>
+<segment id="62" parent="1058" relname="same_unit">are common in other timeseries products , such as datasets from AVHRR , Landsat and VEGETATION .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1004" type="span" parent="1002" relname="joint"/>
+<group id="1006" type="span" parent="1002" relname="joint"/>
+<group id="1007" type="span" parent="1008" relname="concession"/>
+<group id="1008" type="span" parent="1006" relname="span"/>
+<group id="1010" type="span" parent="1002" relname="joint"/>
+<group id="1011" type="span" parent="10" relname="purpose"/>
+<group id="1012" type="span" parent="1002" relname="joint"/>
+<group id="1013" type="multinuc" parent="1012" relname="span"/>
+<group id="1014" type="multinuc" parent="1013" relname="joint"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1017" type="span" parent="1013" relname="joint"/>
+<group id="1018" type="span" parent="1013" relname="joint"/>
+<group id="1019" type="span" parent="19" relname="elaboration"/>
+<group id="1020" type="multinuc" parent="1019" relname="span"/>
+<group id="1021" type="multinuc" parent="1020" relname="joint"/>
+<group id="1022" type="multinuc" parent="1021" relname="joint"/>
+<group id="1023" type="multinuc" parent="1022" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="joint"/>
+<group id="1025" type="multinuc" parent="1023" relname="joint"/>
+<group id="1026" type="span" parent="1025" relname="joint"/>
+<group id="1027" type="span" parent="1029" relname="preparation"/>
+<group id="1028" type="span" parent="1027" relname="span"/>
+<group id="1029" type="multinuc" parent="1026" relname="span"/>
+<group id="1030" type="span" parent="1029" relname="joint"/>
+<group id="1031" type="span" parent="30" relname="means"/>
+<group id="1032" type="multinuc" parent="1029" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="joint"/>
+<group id="1034" type="multinuc" parent="1036" relname="preparation"/>
+<group id="1035" type="span" parent="1034" relname="joint"/>
+<group id="1036" type="multinuc" parent="1033" relname="span"/>
+<group id="1037" type="span" parent="1036" relname="contrast"/>
+<group id="1038" type="multinuc" parent="1036" relname="contrast"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="1038" relname="joint"/>
+<group id="1041" type="multinuc" parent="1040" relname="joint"/>
+<group id="1042" type="multinuc" parent="1041" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="45" relname="elaboration"/>
+<group id="1047" type="multinuc" parent="46" relname="elaboration"/>
+<group id="1048" type="multinuc" parent="1047" relname="same_unit"/>
+<group id="1049" type="span" parent="1048" relname="same_unit"/>
+<group id="1050" type="span" parent="1048" relname="same_unit"/>
+<group id="1051" type="multinuc" parent="1042" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1051" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="contrast"/>
+<group id="1055" type="span" parent="54" relname="elaboration"/>
+<group id="1056" type="multinuc" parent="1053" relname="contrast"/>
+<group id="1057" type="span" parent="1056" relname="joint"/>
+<group id="1058" type="multinuc" parent="1056" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="same_unit"/>
+<group id="1060" type="span" parent="59" relname="elaboration"/>
+	</body>
+</rst>

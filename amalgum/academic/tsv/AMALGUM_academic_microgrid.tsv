@@ -1,0 +1,896 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=4. Power Flow and Switched Reactor
+1-1	0-2	4.	_	_	_	_
+1-2	3-8	Power	abstract[1]	new[1]	coref	2-6[8_1]
+1-3	9-13	Flow	abstract[1]	new[1]	_	_
+1-4	14-17	and	_	_	_	_
+1-5	18-26	Switched	_	_	_	_
+1-6	27-34	Reactor	abstract	new	_	_
+
+#Text=4.1. Voltage Source Inverter and Grid Interactive Power Flow
+2-1	35-39	4.1.	_	_	_	_
+2-2	40-47	Voltage	person|abstract[4]|abstract[5]	new|new[4]|new[5]	coref	3-2[0_5]
+2-3	48-54	Source	abstract[4]|abstract[5]	new[4]|new[5]	_	_
+2-4	55-63	Inverter	abstract[5]	new[5]	_	_
+2-5	64-67	and	_	_	_	_
+2-6	68-72	Grid	abstract|abstract[8]	new|giv[8]	coref|coref	3-3|4-3[19_8]
+2-7	73-84	Interactive	abstract[8]	giv[8]	_	_
+2-8	85-90	Power	person|abstract[8]	new|giv[8]	_	_
+2-9	91-95	Flow	abstract[8]	giv[8]	_	_
+
+#Text=In inverter grid supporting mode , there is power interaction with host grid which involves power exchange .
+3-1	96-98	In	_	_	_	_
+3-2	99-107	inverter	abstract|abstract[11]	giv|new[11]	coref	7-7[32_0]
+3-3	108-112	grid	abstract|abstract[11]	giv|new[11]	coref	3-12[15_0]
+3-4	113-123	supporting	abstract[11]	new[11]	_	_
+3-5	124-128	mode	abstract[11]	new[11]	_	_
+3-6	129-130	,	_	_	_	_
+3-7	131-136	there	_	_	_	_
+3-8	137-139	is	_	_	_	_
+3-9	140-145	power	abstract|event[13]	new|new[13]	coref	3-16
+3-10	146-157	interaction	event[13]	new[13]	_	_
+3-11	158-162	with	event[13]	new[13]	_	_
+3-12	163-167	host	event[13]|person|abstract[15]	new[13]|new|giv[15]	coref|coref	4-12|4-11[23_15]
+3-13	168-172	grid	event[13]|abstract[15]	new[13]|giv[15]	_	_
+3-14	173-178	which	event[13]	new[13]	_	_
+3-15	179-187	involves	event[13]	new[13]	_	_
+3-16	188-193	power	event[13]|abstract|event[17]	new[13]|giv|new[17]	coref|coref	4-3|17-26[96_17]
+3-17	194-202	exchange	event[13]|event[17]	new[13]|new[17]	_	_
+3-18	203-204	.	_	_	_	_
+
+#Text=The equivalent power flow diagram between the inverter-based microgrid and the host grid is shown in
+4-1	205-208	The	abstract[20]	new[20]	_	_
+4-2	209-219	equivalent	abstract[20]	new[20]	_	_
+4-3	220-225	power	abstract|abstract[19]|abstract[20]	giv|giv[19]|new[20]	coref	17-10[90_0]
+4-4	226-230	flow	abstract[19]|abstract[20]	giv[19]|new[20]	_	_
+4-5	231-238	diagram	abstract[20]	new[20]	_	_
+4-6	239-246	between	abstract[20]	new[20]	_	_
+4-7	247-250	the	abstract[20]|abstract[21]	new[20]|new[21]	coref	17-1[88_21]
+4-8	251-265	inverter-based	abstract[20]|abstract[21]	new[20]|new[21]	_	_
+4-9	266-275	microgrid	abstract[20]|abstract[21]	new[20]|new[21]	_	_
+4-10	276-279	and	abstract[20]	new[20]	_	_
+4-11	280-283	the	abstract[20]|abstract[23]	new[20]|giv[23]	coref	6-12[0_23]
+4-12	284-288	host	abstract[20]|person|abstract[23]	new[20]|giv|giv[23]	coref	11-32
+4-13	289-293	grid	abstract[20]|abstract[23]	new[20]|giv[23]	_	_
+4-14	294-296	is	_	_	_	_
+4-15	297-302	shown	_	_	_	_
+4-16	303-305	in	_	_	_	_
+
+#Text=Figure 6
+5-1	306-312	Figure	abstract[24]	new[24]	_	_
+5-2	313-314	6	abstract[24]	new[24]	_	_
+
+#Text=, where vi signifies the VSI voltage and vg represents the grid voltage .
+6-1	315-316	,	_	_	_	_
+6-2	317-322	where	_	_	_	_
+6-3	323-325	vi	abstract	new	_	_
+6-4	326-335	signifies	_	_	_	_
+6-5	336-339	the	abstract[27]	new[27]	coref	6-11[30_27]
+6-6	340-343	VSI	abstract|abstract[27]	new|new[27]	coref	9-14[48_0]
+6-7	344-351	voltage	abstract[27]	new[27]	_	_
+6-8	352-355	and	_	_	_	_
+6-9	356-358	vg	abstract	new	_	_
+6-10	359-369	represents	_	_	_	_
+6-11	370-373	the	abstract[30]	giv[30]	coref	13-21[0_30]
+6-12	374-378	grid	abstract|abstract[30]	giv|giv[30]	coref	7-20
+6-13	379-386	voltage	abstract[30]	giv[30]	_	_
+6-14	387-388	.	_	_	_	_
+
+#Text=Similarly , the inherent impedances of the inverter and its filter circuit are lumped together as Zi while the grid impedance is represented as Zg .
+7-1	389-398	Similarly	_	_	_	_
+7-2	399-400	,	_	_	_	_
+7-3	401-404	the	abstract[31]	new[31]	coref	9-1[45_31]
+7-4	405-413	inherent	abstract[31]	new[31]	_	_
+7-5	414-424	impedances	abstract[31]	new[31]	_	_
+7-6	425-427	of	abstract[31]	new[31]	_	_
+7-7	428-431	the	abstract[31]|abstract[32]	new[31]|giv[32]	ana	7-10[0_32]
+7-8	432-440	inverter	abstract[31]|abstract[32]	new[31]|giv[32]	_	_
+7-9	441-444	and	abstract[31]	new[31]	_	_
+7-10	445-448	its	abstract[31]|abstract|object[35]	new[31]|giv|new[35]	coref	10-4
+7-11	449-455	filter	abstract[31]|object|object[35]	new[31]|new|new[35]	_	_
+7-12	456-463	circuit	abstract[31]|object[35]	new[31]|new[35]	_	_
+7-13	464-467	are	_	_	_	_
+7-14	468-474	lumped	_	_	_	_
+7-15	475-483	together	_	_	_	_
+7-16	484-486	as	_	_	_	_
+7-17	487-489	Zi	abstract	new	_	_
+7-18	490-495	while	_	_	_	_
+7-19	496-499	the	abstract[38]	new[38]	coref	8-5[0_38]
+7-20	500-504	grid	abstract|abstract[38]	giv|new[38]	coref	10-19
+7-21	505-514	impedance	abstract[38]	new[38]	_	_
+7-22	515-517	is	_	_	_	_
+7-23	518-529	represented	_	_	_	_
+7-24	530-532	as	_	_	_	_
+7-25	533-535	Zg	abstract	new	_	_
+7-26	536-537	.	_	_	_	_
+
+#Text=The load current and impedance are signified by IL and ZL .
+8-1	538-541	The	abstract[41]	new[41]	coref	13-11[75_41]
+8-2	542-546	load	abstract|abstract[41]	new|new[41]	coref	22-19
+8-3	547-554	current	abstract[41]	new[41]	_	_
+8-4	555-558	and	_	_	_	_
+8-5	559-568	impedance	abstract	giv	coref	10-3[50_0]
+8-6	569-572	are	_	_	_	_
+8-7	573-582	signified	_	_	_	_
+8-8	583-585	by	_	_	_	_
+8-9	586-588	IL	abstract	new	_	_
+8-10	589-592	and	_	_	_	_
+8-11	593-595	ZL	abstract	new	_	_
+8-12	596-597	.	_	_	_	_
+
+#Text=These aforementioned impedances are typically inductive owing to the significant output inductance of the VSI .
+9-1	598-603	These	abstract[45]	giv[45]	_	_
+9-2	604-618	aforementioned	abstract[45]	giv[45]	_	_
+9-3	619-629	impedances	abstract[45]	giv[45]	_	_
+9-4	630-633	are	_	_	_	_
+9-5	634-643	typically	_	_	_	_
+9-6	644-653	inductive	_	_	_	_
+9-7	654-659	owing	_	_	_	_
+9-8	660-662	to	_	_	_	_
+9-9	663-666	the	abstract[47]	new[47]	coref	16-1[84_47]
+9-10	667-678	significant	abstract[47]	new[47]	_	_
+9-11	679-685	output	abstract|abstract[47]	new|new[47]	_	_
+9-12	686-696	inductance	abstract[47]	new[47]	_	_
+9-13	697-699	of	abstract[47]	new[47]	_	_
+9-14	700-703	the	abstract[47]|abstract[48]	new[47]|giv[48]	coref	22-1[111_48]
+9-15	704-707	VSI	abstract[47]|abstract[48]	new[47]|giv[48]	_	_
+9-16	708-709	.	_	_	_	_
+
+#Text=Nevertheless , this inverter impedance can be greatly influenced by the type of control strategy employed , and grid impedance is highly resistive in low-voltage distribution feeder lines .
+10-1	710-722	Nevertheless	_	_	_	_
+10-2	723-724	,	_	_	_	_
+10-3	725-729	this	abstract[50]	giv[50]	coref	10-19[55_50]
+10-4	730-738	inverter	abstract|abstract[50]	giv|giv[50]	_	_
+10-5	739-748	impedance	abstract[50]	giv[50]	_	_
+10-6	749-752	can	_	_	_	_
+10-7	753-755	be	_	_	_	_
+10-8	756-763	greatly	_	_	_	_
+10-9	764-774	influenced	_	_	_	_
+10-10	775-777	by	_	_	_	_
+10-11	778-781	the	abstract[51]	new[51]	_	_
+10-12	782-786	type	abstract[51]	new[51]	_	_
+10-13	787-789	of	abstract[51]	new[51]	_	_
+10-14	790-797	control	abstract[51]|abstract|abstract[53]	new[51]|new|new[53]	coref	23-6
+10-15	798-806	strategy	abstract[51]|abstract[53]	new[51]|new[53]	_	_
+10-16	807-815	employed	abstract[51]|abstract[53]	new[51]|new[53]	_	_
+10-17	816-817	,	_	_	_	_
+10-18	818-821	and	_	_	_	_
+10-19	822-826	grid	abstract|abstract[55]	giv|giv[55]	coref|coref	11-3[59_55]|11-12[63_0]
+10-20	827-836	impedance	abstract[55]	giv[55]	_	_
+10-21	837-839	is	_	_	_	_
+10-22	840-846	highly	_	_	_	_
+10-23	847-856	resistive	_	_	_	_
+10-24	857-859	in	_	_	_	_
+10-25	860-871	low-voltage	object[58]	new[58]	_	_
+10-26	872-884	distribution	abstract|object[58]	new|new[58]	_	_
+10-27	885-891	feeder	object|object[58]	new|new[58]	_	_
+10-28	892-897	lines	object[58]	new[58]	_	_
+10-29	898-899	.	_	_	_	_
+
+#Text=Similarly , the impedance ( resistance and inductive reactance ) of the grid is significantly present and taken into consideration in microgrids located at a long distance away far from the host grid .
+11-1	900-909	Similarly	_	_	_	_
+11-2	910-911	,	_	_	_	_
+11-3	912-915	the	abstract[59]	giv[59]	appos	11-6[0_59]
+11-4	916-925	impedance	abstract[59]	giv[59]	_	_
+11-5	926-927	(	_	_	_	_
+11-6	928-938	resistance	abstract|abstract[61]	giv|giv[61]	appos|appos	11-6[61_0]|11-8[62_61]
+11-7	939-942	and	abstract[61]	giv[61]	_	_
+11-8	943-952	inductive	abstract[61]|abstract[62]	giv[61]|giv[62]	coref	12-8[70_62]
+11-9	953-962	reactance	abstract[61]|abstract[62]	giv[61]|giv[62]	_	_
+11-10	963-964	)	_	_	_	_
+11-11	965-967	of	_	_	_	_
+11-12	968-971	the	abstract[63]	giv[63]	coref	11-31[67_63]
+11-13	972-976	grid	abstract[63]	giv[63]	_	_
+11-14	977-979	is	_	_	_	_
+11-15	980-993	significantly	_	_	_	_
+11-16	994-1001	present	_	_	_	_
+11-17	1002-1005	and	_	_	_	_
+11-18	1006-1011	taken	_	_	_	_
+11-19	1012-1016	into	_	_	_	_
+11-20	1017-1030	consideration	_	_	_	_
+11-21	1031-1033	in	_	_	_	_
+11-22	1034-1044	microgrids	abstract[64]	new[64]	_	_
+11-23	1045-1052	located	abstract[64]	new[64]	_	_
+11-24	1053-1055	at	abstract[64]	new[64]	_	_
+11-25	1056-1057	a	abstract[64]|abstract[65]	new[64]|new[65]	_	_
+11-26	1058-1062	long	abstract[64]|abstract[65]	new[64]|new[65]	_	_
+11-27	1063-1071	distance	abstract[64]|abstract[65]	new[64]|new[65]	_	_
+11-28	1072-1076	away	abstract[64]	new[64]	_	_
+11-29	1077-1080	far	abstract[64]	new[64]	_	_
+11-30	1081-1085	from	abstract[64]	new[64]	_	_
+11-31	1086-1089	the	abstract[64]|abstract[67]	new[64]|giv[67]	coref	12-12[71_67]
+11-32	1090-1094	host	abstract[64]|person|abstract[67]	new[64]|giv|giv[67]	coref	25-36
+11-33	1095-1099	grid	abstract[64]|abstract[67]	new[64]|giv[67]	_	_
+11-34	1100-1101	.	_	_	_	_
+
+#Text=Consequently , this work put into consideration the line impedance of the grid .
+12-1	1102-1114	Consequently	_	_	_	_
+12-2	1115-1116	,	_	_	_	_
+12-3	1117-1121	this	abstract[68]	new[68]	coref	18-2[99_68]
+12-4	1122-1126	work	abstract[68]	new[68]	_	_
+12-5	1127-1130	put	_	_	_	_
+12-6	1131-1135	into	_	_	_	_
+12-7	1136-1149	consideration	_	_	_	_
+12-8	1150-1153	the	abstract[70]	giv[70]	coref	22-22[120_70]
+12-9	1154-1158	line	abstract|abstract[70]	new|giv[70]	_	_
+12-10	1159-1168	impedance	abstract[70]	giv[70]	_	_
+12-11	1169-1171	of	abstract[70]	giv[70]	_	_
+12-12	1172-1175	the	abstract[70]|abstract[71]	giv[70]|giv[71]	coref	13-8[0_71]
+12-13	1176-1180	grid	abstract[70]|abstract[71]	giv[70]|giv[71]	_	_
+12-14	1181-1182	.	_	_	_	_
+
+#Text=In line with the stipulation of the grid codes , only reactive current is injected all through the period of voltage sag .
+13-1	1183-1185	In	_	_	_	_
+13-2	1186-1190	line	_	_	_	_
+13-3	1191-1195	with	_	_	_	_
+13-4	1196-1199	the	abstract[72]	new[72]	_	_
+13-5	1200-1211	stipulation	abstract[72]	new[72]	_	_
+13-6	1212-1214	of	abstract[72]	new[72]	_	_
+13-7	1215-1218	the	abstract[72]|abstract[74]	new[72]|new[74]	_	_
+13-8	1219-1223	grid	abstract[72]|abstract|abstract[74]	new[72]|giv|new[74]	coref	14-13
+13-9	1224-1229	codes	abstract[72]|abstract[74]	new[72]|new[74]	_	_
+13-10	1230-1231	,	_	_	_	_
+13-11	1232-1236	only	abstract[75]	giv[75]	_	_
+13-12	1237-1245	reactive	abstract[75]	giv[75]	_	_
+13-13	1246-1253	current	abstract[75]	giv[75]	_	_
+13-14	1254-1256	is	_	_	_	_
+13-15	1257-1265	injected	_	_	_	_
+13-16	1266-1269	all	time[76]	new[76]	_	_
+13-17	1270-1277	through	time[76]	new[76]	_	_
+13-18	1278-1281	the	time[76]	new[76]	_	_
+13-19	1282-1288	period	time[76]	new[76]	_	_
+13-20	1289-1291	of	time[76]	new[76]	_	_
+13-21	1292-1299	voltage	time[76]|abstract|abstract[78]	new[76]|giv|new[78]	coref|coref	14-3[79_0]|23-15[0_78]
+13-22	1300-1303	sag	time[76]|abstract[78]	new[76]|new[78]	_	_
+13-23	1304-1305	.	_	_	_	_
+
+#Text=Consequently , the resulting compensating voltage is relatively in phase with the grid voltage .
+14-1	1306-1318	Consequently	_	_	_	_
+14-2	1319-1320	,	_	_	_	_
+14-3	1321-1324	the	abstract[79]	giv[79]	coref	14-12[82_79]
+14-4	1325-1334	resulting	abstract[79]	giv[79]	_	_
+14-5	1335-1347	compensating	abstract[79]	giv[79]	_	_
+14-6	1348-1355	voltage	abstract[79]	giv[79]	_	_
+14-7	1356-1358	is	_	_	_	_
+14-8	1359-1369	relatively	abstract[80]	new[80]	coref	32-24[0_80]
+14-9	1370-1372	in	abstract[80]	new[80]	_	_
+14-10	1373-1378	phase	abstract[80]	new[80]	_	_
+14-11	1379-1383	with	abstract[80]	new[80]	_	_
+14-12	1384-1387	the	abstract[80]|abstract[82]	new[80]|giv[82]	coref	18-20[103_82]
+14-13	1388-1392	grid	abstract[80]|abstract|abstract[82]	new[80]|giv|giv[82]	coref	17-31[98_0]
+14-14	1393-1400	voltage	abstract[80]|abstract[82]	new[80]|giv[82]	_	_
+14-15	1401-1402	.	_	_	_	_
+
+#Text=4.2.
+15-1	1403-1407	4.2.	abstract	new	_	_
+
+#Text=Switched Inductance : Sizing and Switching
+16-1	1408-1416	Switched	abstract[84]	giv[84]	coref	27-3[155_84]
+16-2	1417-1427	Inductance	abstract[84]	giv[84]	_	_
+16-3	1428-1429	:	_	_	_	_
+16-4	1430-1436	Sizing	abstract|abstract[86]	new|new[86]	coref|coref	29-1[171_0]|29-1[172_86]
+16-5	1437-1440	and	abstract[86]	new[86]	_	_
+16-6	1441-1450	Switching	abstract[86]|abstract	new[86]|new	_	_
+
+#Text=A microgrid is to ensure required uninterrupted supply of quality power to the local sensitive loads besides fulfilling FRT requirement of reactive power support in the event of disturbance on the main grid .
+17-1	1451-1452	A	abstract[88]	giv[88]	coref	18-15[102_88]
+17-2	1453-1462	microgrid	abstract[88]	giv[88]	_	_
+17-3	1463-1465	is	_	_	_	_
+17-4	1466-1468	to	_	_	_	_
+17-5	1469-1475	ensure	_	_	_	_
+17-6	1476-1484	required	abstract[89]	new[89]	_	_
+17-7	1485-1498	uninterrupted	abstract[89]	new[89]	_	_
+17-8	1499-1505	supply	abstract[89]	new[89]	_	_
+17-9	1506-1508	of	abstract[89]	new[89]	_	_
+17-10	1509-1516	quality	abstract[89]|abstract[90]	new[89]|giv[90]	coref	17-23[0_90]
+17-11	1517-1522	power	abstract[89]|abstract[90]	new[89]|giv[90]	_	_
+17-12	1523-1525	to	abstract[89]|abstract[90]	new[89]|giv[90]	_	_
+17-13	1526-1529	the	abstract[89]|abstract[90]|abstract[91]	new[89]|giv[90]|new[91]	_	_
+17-14	1530-1535	local	abstract[89]|abstract[90]|abstract[91]	new[89]|giv[90]|new[91]	_	_
+17-15	1536-1545	sensitive	abstract[89]|abstract[90]|abstract[91]	new[89]|giv[90]|new[91]	_	_
+17-16	1546-1551	loads	abstract[89]|abstract[90]|abstract[91]	new[89]|giv[90]|new[91]	_	_
+17-17	1552-1559	besides	_	_	_	_
+17-18	1560-1570	fulfilling	_	_	_	_
+17-19	1571-1574	FRT	abstract|abstract[93]	new|new[93]	coref	21-5[108_93]
+17-20	1575-1586	requirement	abstract[93]	new[93]	_	_
+17-21	1587-1589	of	abstract[93]	new[93]	_	_
+17-22	1590-1598	reactive	abstract[93]|abstract[95]	new[93]|new[95]	_	_
+17-23	1599-1604	power	abstract[93]|abstract|abstract[95]	new[93]|giv|new[95]	coref	21-11
+17-24	1605-1612	support	abstract[93]|abstract[95]	new[93]|new[95]	_	_
+17-25	1613-1615	in	_	_	_	_
+17-26	1616-1619	the	event[96]	giv[96]	_	_
+17-27	1620-1625	event	event[96]	giv[96]	_	_
+17-28	1626-1628	of	event[96]	giv[96]	_	_
+17-29	1629-1640	disturbance	event[96]|event[97]	giv[96]|new[97]	coref	27-18[160_97]
+17-30	1641-1643	on	event[96]|event[97]	giv[96]|new[97]	_	_
+17-31	1644-1647	the	event[96]|event[97]|abstract[98]	giv[96]|new[97]|giv[98]	ana	18-5[0_98]
+17-32	1648-1652	main	event[96]|event[97]|abstract[98]	giv[96]|new[97]|giv[98]	_	_
+17-33	1653-1657	grid	event[96]|event[97]|abstract[98]	giv[96]|new[97]|giv[98]	_	_
+17-34	1658-1659	.	_	_	_	_
+
+#Text=In this work , this is ensured by ascertaining that all the sections in the microgrid are supplied with a constant voltage at a regular frequency .
+18-1	1660-1662	In	_	_	_	_
+18-2	1663-1667	this	abstract[99]	giv[99]	coref	33-6[204_99]
+18-3	1668-1672	work	abstract[99]	giv[99]	_	_
+18-4	1673-1674	,	_	_	_	_
+18-5	1675-1679	this	abstract	giv	coref	22-13[115_0]
+18-6	1680-1682	is	_	_	_	_
+18-7	1683-1690	ensured	_	_	_	_
+18-8	1691-1693	by	_	_	_	_
+18-9	1694-1706	ascertaining	_	_	_	_
+18-10	1707-1711	that	_	_	_	_
+18-11	1712-1715	all	object[101]	new[101]	_	_
+18-12	1716-1719	the	object[101]	new[101]	_	_
+18-13	1720-1728	sections	object[101]	new[101]	_	_
+18-14	1729-1731	in	object[101]	new[101]	_	_
+18-15	1732-1735	the	object[101]|abstract[102]	new[101]|giv[102]	coref	22-18[0_102]
+18-16	1736-1745	microgrid	object[101]|abstract[102]	new[101]|giv[102]	_	_
+18-17	1746-1749	are	_	_	_	_
+18-18	1750-1758	supplied	_	_	_	_
+18-19	1759-1763	with	_	_	_	_
+18-20	1764-1765	a	abstract[103]	giv[103]	coref	23-14[0_103]
+18-21	1766-1774	constant	abstract[103]	giv[103]	_	_
+18-22	1775-1782	voltage	abstract[103]	giv[103]	_	_
+18-23	1783-1785	at	_	_	_	_
+18-24	1786-1787	a	abstract[104]	new[104]	_	_
+18-25	1788-1795	regular	abstract[104]	new[104]	_	_
+18-26	1796-1805	frequency	abstract[104]	new[104]	_	_
+18-27	1806-1807	.	_	_	_	_
+
+#Text=The proposed scheme in
+19-1	1808-1811	The	abstract[105]	new[105]	coref	24-6[131_105]
+19-2	1812-1820	proposed	abstract[105]	new[105]	_	_
+19-3	1821-1827	scheme	abstract[105]	new[105]	_	_
+19-4	1828-1830	in	abstract[105]	new[105]	_	_
+
+#Text=Figure 5
+20-1	1831-1837	Figure	abstract[106]	new[106]	_	_
+20-2	1838-1839	5	abstract[106]	new[106]	_	_
+
+#Text=shows the implementation of this requirement through an additional reactive power injection .
+21-1	1840-1845	shows	_	_	_	_
+21-2	1846-1849	the	event[107]	new[107]	_	_
+21-3	1850-1864	implementation	event[107]	new[107]	_	_
+21-4	1865-1867	of	event[107]	new[107]	_	_
+21-5	1868-1872	this	event[107]|abstract[108]	new[107]|giv[108]	_	_
+21-6	1873-1884	requirement	event[107]|abstract[108]	new[107]|giv[108]	_	_
+21-7	1885-1892	through	_	_	_	_
+21-8	1893-1895	an	event[110]	new[110]	_	_
+21-9	1896-1906	additional	event[110]	new[110]	_	_
+21-10	1907-1915	reactive	event[110]	new[110]	_	_
+21-11	1916-1921	power	abstract|event[110]	giv|new[110]	coref	22-9[113_0]
+21-12	1922-1931	injection	event[110]	new[110]	_	_
+21-13	1932-1933	.	_	_	_	_
+
+#Text=The VSI injects a significantly high amount of reactive power in supporting the utility grid and sustain microgrid load voltages since the grid impedance is usually low .
+22-1	1934-1937	The	abstract[111]	giv[111]	_	_
+22-2	1938-1941	VSI	abstract[111]	giv[111]	_	_
+22-3	1942-1949	injects	_	_	_	_
+22-4	1950-1951	a	abstract[112]	new[112]	_	_
+22-5	1952-1965	significantly	abstract[112]	new[112]	_	_
+22-6	1966-1970	high	abstract[112]	new[112]	_	_
+22-7	1971-1977	amount	abstract[112]	new[112]	_	_
+22-8	1978-1980	of	abstract[112]	new[112]	_	_
+22-9	1981-1989	reactive	abstract[112]|abstract[113]	new[112]|giv[113]	coref	25-32[0_113]
+22-10	1990-1995	power	abstract[112]|abstract[113]	new[112]|giv[113]	_	_
+22-11	1996-1998	in	_	_	_	_
+22-12	1999-2009	supporting	_	_	_	_
+22-13	2010-2013	the	abstract[115]	giv[115]	coref	22-23[0_115]
+22-14	2014-2021	utility	abstract|abstract[115]	new|giv[115]	_	_
+22-15	2022-2026	grid	abstract[115]	giv[115]	_	_
+22-16	2027-2030	and	_	_	_	_
+22-17	2031-2038	sustain	_	_	_	_
+22-18	2039-2048	microgrid	abstract|abstract[118]	giv|new[118]	coref	25-25
+22-19	2049-2053	load	abstract|abstract[118]	giv|new[118]	coref	32-15
+22-20	2054-2062	voltages	abstract[118]	new[118]	_	_
+22-21	2063-2068	since	_	_	_	_
+22-22	2069-2072	the	abstract[120]	giv[120]	coref	27-23[162_120]
+22-23	2073-2077	grid	abstract|abstract[120]	giv|giv[120]	coref	25-9[136_0]
+22-24	2078-2087	impedance	abstract[120]	giv[120]	_	_
+22-25	2088-2090	is	_	_	_	_
+22-26	2091-2098	usually	_	_	_	_
+22-27	2099-2102	low	_	_	_	_
+22-28	2103-2104	.	_	_	_	_
+
+#Text=However , the aforementioned secondary control based LVRT schemes are significantly limited in voltage sag compensation .
+23-1	2105-2112	However	_	_	_	_
+23-2	2113-2114	,	_	_	_	_
+23-3	2115-2118	the	abstract[123]	new[123]	_	_
+23-4	2119-2133	aforementioned	abstract[123]	new[123]	_	_
+23-5	2134-2143	secondary	abstract[123]	new[123]	_	_
+23-6	2144-2151	control	abstract|abstract[123]	giv|new[123]	coref	24-13[133_0]
+23-7	2152-2157	based	abstract[123]	new[123]	_	_
+23-8	2158-2162	LVRT	abstract|abstract[123]	new|new[123]	_	_
+23-9	2163-2170	schemes	abstract[123]	new[123]	_	_
+23-10	2171-2174	are	_	_	_	_
+23-11	2175-2188	significantly	_	_	_	_
+23-12	2189-2196	limited	_	_	_	_
+23-13	2197-2199	in	_	_	_	_
+23-14	2200-2207	voltage	abstract|abstract[126]	giv|new[126]	coref	24-8
+23-15	2208-2211	sag	abstract|abstract[126]	giv|new[126]	coref	31-13[189_0]
+23-16	2212-2224	compensation	abstract[126]	new[126]	_	_
+23-17	2225-2226	.	_	_	_	_
+
+#Text=To tackle this problem , a PCC voltage moderation scheme based on PI control using the DSC positive and negative is introduced .
+24-1	2227-2229	To	_	_	_	_
+24-2	2230-2236	tackle	_	_	_	_
+24-3	2237-2241	this	abstract[127]	new[127]	_	_
+24-4	2242-2249	problem	abstract[127]	new[127]	_	_
+24-5	2250-2251	,	_	_	_	_
+24-6	2252-2253	a	abstract[131]	giv[131]	_	_
+24-7	2254-2257	PCC	abstract|abstract[131]	new|giv[131]	coref	26-15[154_0]
+24-8	2258-2265	voltage	abstract|abstract[130]|abstract[131]	giv|new[130]|giv[131]	coref	25-19[141_0]
+24-9	2266-2276	moderation	abstract[130]|abstract[131]	new[130]|giv[131]	_	_
+24-10	2277-2283	scheme	abstract[131]	giv[131]	_	_
+24-11	2284-2289	based	abstract[131]	giv[131]	_	_
+24-12	2290-2292	on	abstract[131]	giv[131]	_	_
+24-13	2293-2295	PI	abstract[131]|abstract|abstract[133]	giv[131]|new|giv[133]	coref	25-13[138_133]
+24-14	2296-2303	control	abstract[131]|abstract[133]	giv[131]|giv[133]	_	_
+24-15	2304-2309	using	abstract[131]|abstract[133]	giv[131]|giv[133]	_	_
+24-16	2310-2313	the	abstract[131]|abstract[133]|abstract[134]	giv[131]|giv[133]|new[134]	_	_
+24-17	2314-2317	DSC	abstract[131]|abstract[133]|abstract[134]	giv[131]|giv[133]|new[134]	_	_
+24-18	2318-2326	positive	abstract[131]|abstract[133]	giv[131]|giv[133]	_	_
+24-19	2327-2330	and	abstract[131]|abstract[133]	giv[131]|giv[133]	_	_
+24-20	2331-2339	negative	abstract[131]|abstract[133]|object	giv[131]|giv[133]|new	_	_
+24-21	2340-2342	is	_	_	_	_
+24-22	2343-2353	introduced	_	_	_	_
+24-23	2354-2355	.	_	_	_	_
+
+#Text=Furthermore , under a strong ( stiff ) main grid connection , independent control of the point of common coupling voltage and by extension microgrid voltage is not sufficient for good power quality since the host grid imposes the voltage .
+25-1	2356-2367	Furthermore	_	_	_	_
+25-2	2368-2369	,	_	_	_	_
+25-3	2370-2375	under	_	_	_	_
+25-4	2376-2377	a	abstract[137]	new[137]	_	_
+25-5	2378-2384	strong	abstract[137]	new[137]	_	_
+25-6	2385-2386	(	abstract[137]	new[137]	_	_
+25-7	2387-2392	stiff	abstract[137]	new[137]	_	_
+25-8	2393-2394	)	abstract[137]	new[137]	_	_
+25-9	2395-2399	main	abstract[136]|abstract[137]	giv[136]|new[137]	coref	25-35[148_136]
+25-10	2400-2404	grid	abstract[136]|abstract[137]	giv[136]|new[137]	_	_
+25-11	2405-2415	connection	abstract[137]	new[137]	_	_
+25-12	2416-2417	,	_	_	_	_
+25-13	2418-2429	independent	abstract[138]	giv[138]	_	_
+25-14	2430-2437	control	abstract[138]	giv[138]	_	_
+25-15	2438-2440	of	abstract[138]	giv[138]	_	_
+25-16	2441-2444	the	abstract[138]|place[139]	giv[138]|new[139]	_	_
+25-17	2445-2450	point	abstract[138]|place[139]	giv[138]|new[139]	_	_
+25-18	2451-2453	of	abstract[138]|place[139]	giv[138]|new[139]	_	_
+25-19	2454-2460	common	abstract[138]|place[139]|abstract[141]	giv[138]|new[139]|giv[141]	coref	25-24[144_141]
+25-20	2461-2469	coupling	abstract[138]|place[139]|object|abstract[141]	giv[138]|new[139]|new|giv[141]	_	_
+25-21	2470-2477	voltage	abstract[138]|place[139]|abstract[141]	giv[138]|new[139]|giv[141]	_	_
+25-22	2478-2481	and	abstract[138]	giv[138]	_	_
+25-23	2482-2484	by	abstract[138]	giv[138]	_	_
+25-24	2485-2494	extension	abstract[138]|abstract|abstract[144]	giv[138]|new|giv[144]	coref	25-39[149_144]
+25-25	2495-2504	microgrid	abstract[138]|abstract|abstract[144]	giv[138]|giv|giv[144]	coref	27-30
+25-26	2505-2512	voltage	abstract[138]|abstract[144]	giv[138]|giv[144]	_	_
+25-27	2513-2515	is	_	_	_	_
+25-28	2516-2519	not	_	_	_	_
+25-29	2520-2530	sufficient	_	_	_	_
+25-30	2531-2534	for	_	_	_	_
+25-31	2535-2539	good	abstract[146]	new[146]	_	_
+25-32	2540-2545	power	abstract|abstract[146]	giv|new[146]	coref	32-4[192_0]
+25-33	2546-2553	quality	abstract[146]	new[146]	_	_
+25-34	2554-2559	since	_	_	_	_
+25-35	2560-2563	the	abstract[148]	giv[148]	coref	27-36[0_148]
+25-36	2564-2568	host	person|abstract[148]	giv|giv[148]	coref	27-35
+25-37	2569-2573	grid	abstract[148]	giv[148]	_	_
+25-38	2574-2581	imposes	_	_	_	_
+25-39	2582-2585	the	abstract[149]	giv[149]	coref	26-12[153_149]
+25-40	2586-2593	voltage	abstract[149]	giv[149]	_	_
+25-41	2594-2595	.	_	_	_	_
+
+#Text=Thus , control strategies may not be able to effectively restore the network voltage especially at the PCC .
+26-1	2596-2600	Thus	_	_	_	_
+26-2	2601-2602	,	_	_	_	_
+26-3	2603-2610	control	person|abstract[151]	new|new[151]	_	_
+26-4	2611-2621	strategies	abstract[151]	new[151]	_	_
+26-5	2622-2625	may	_	_	_	_
+26-6	2626-2629	not	_	_	_	_
+26-7	2630-2632	be	_	_	_	_
+26-8	2633-2637	able	_	_	_	_
+26-9	2638-2640	to	_	_	_	_
+26-10	2641-2652	effectively	_	_	_	_
+26-11	2653-2660	restore	_	_	_	_
+26-12	2661-2664	the	abstract[153]	giv[153]	coref	27-19[0_153]
+26-13	2665-2672	network	abstract|abstract[153]	new|giv[153]	coref	27-14[158_0]
+26-14	2673-2680	voltage	abstract[153]	giv[153]	_	_
+26-15	2681-2691	especially	abstract[154]	giv[154]	coref	27-11[157_154]
+26-16	2692-2694	at	abstract[154]	giv[154]	_	_
+26-17	2695-2698	the	abstract[154]	giv[154]	_	_
+26-18	2699-2702	PCC	abstract[154]	giv[154]	_	_
+26-19	2703-2704	.	_	_	_	_
+
+#Text=Hence , a switched inductance is inserted in series at the PCC to the main network during a voltage disturbance to increase the network impedance to independently regulate the microgrid voltage irrespective of the host grid condition .
+27-1	2705-2710	Hence	_	_	_	_
+27-2	2711-2712	,	_	_	_	_
+27-3	2713-2714	a	abstract[155]	giv[155]	coref	29-7[174_155]
+27-4	2715-2723	switched	abstract[155]	giv[155]	_	_
+27-5	2724-2734	inductance	abstract[155]	giv[155]	_	_
+27-6	2735-2737	is	_	_	_	_
+27-7	2738-2746	inserted	_	_	_	_
+27-8	2747-2749	in	_	_	_	_
+27-9	2750-2756	series	abstract	new	coref	35-7
+27-10	2757-2759	at	_	_	_	_
+27-11	2760-2763	the	abstract[157]	giv[157]	coref	28-5[0_157]
+27-12	2764-2767	PCC	abstract[157]	giv[157]	_	_
+27-13	2768-2770	to	_	_	_	_
+27-14	2771-2774	the	abstract[158]	giv[158]	coref	27-24[0_158]
+27-15	2775-2779	main	abstract[158]	giv[158]	_	_
+27-16	2780-2787	network	abstract[158]	giv[158]	_	_
+27-17	2788-2794	during	_	_	_	_
+27-18	2795-2796	a	event[160]	giv[160]	coref	29-15[179_160]
+27-19	2797-2804	voltage	abstract|event[160]	giv|giv[160]	coref	27-29[164_0]
+27-20	2805-2816	disturbance	event[160]	giv[160]	_	_
+27-21	2817-2819	to	_	_	_	_
+27-22	2820-2828	increase	_	_	_	_
+27-23	2829-2832	the	abstract[162]	giv[162]	_	_
+27-24	2833-2840	network	abstract|abstract[162]	giv|giv[162]	_	_
+27-25	2841-2850	impedance	abstract[162]	giv[162]	_	_
+27-26	2851-2853	to	_	_	_	_
+27-27	2854-2867	independently	_	_	_	_
+27-28	2868-2876	regulate	_	_	_	_
+27-29	2877-2880	the	abstract[164]	giv[164]	coref	28-4[169_164]
+27-30	2881-2890	microgrid	abstract|abstract[164]	giv|giv[164]	coref	29-11
+27-31	2891-2898	voltage	abstract[164]	giv[164]	_	_
+27-32	2899-2911	irrespective	_	_	_	_
+27-33	2912-2914	of	_	_	_	_
+27-34	2915-2918	the	abstract[167]	new[167]	_	_
+27-35	2919-2923	host	person|abstract[167]	giv|new[167]	coref	29-16
+27-36	2924-2928	grid	abstract|abstract[167]	giv|new[167]	coref	29-17
+27-37	2929-2938	condition	abstract[167]	new[167]	_	_
+27-38	2939-2940	.	_	_	_	_
+
+#Text=Thus , sustaining the PCC voltage at the rated magnitude .
+28-1	2941-2945	Thus	_	_	_	_
+28-2	2946-2947	,	_	_	_	_
+28-3	2948-2958	sustaining	_	_	_	_
+28-4	2959-2962	the	abstract[169]	giv[169]	coref	29-10[176_169]
+28-5	2963-2966	PCC	abstract|abstract[169]	giv|giv[169]	coref	30-21
+28-6	2967-2974	voltage	abstract[169]	giv[169]	_	_
+28-7	2975-2977	at	_	_	_	_
+28-8	2978-2981	the	abstract[170]	new[170]	_	_
+28-9	2982-2987	rated	abstract[170]	new[170]	_	_
+28-10	2988-2997	magnitude	abstract[170]	new[170]	_	_
+28-11	2998-2999	.	_	_	_	_
+
+#Text=The appropriate sizing and switching of this inductance ensure sustained microgrid voltage irrespective of a host grid disturbance .
+29-1	3000-3003	The	abstract[171]|abstract[172]	giv[171]|giv[172]	_	_
+29-2	3004-3015	appropriate	abstract[171]|abstract[172]	giv[171]|giv[172]	_	_
+29-3	3016-3022	sizing	abstract[171]|abstract[172]	giv[171]|giv[172]	_	_
+29-4	3023-3026	and	abstract[172]	giv[172]	_	_
+29-5	3027-3036	switching	abstract[172]|event[173]	giv[172]|new[173]	_	_
+29-6	3037-3039	of	abstract[172]|event[173]	giv[172]|new[173]	_	_
+29-7	3040-3044	this	abstract[172]|event[173]|abstract[174]	giv[172]|new[173]|giv[174]	coref	30-2[0_174]
+29-8	3045-3055	inductance	abstract[172]|event[173]|abstract[174]	giv[172]|new[173]|giv[174]	_	_
+29-9	3056-3062	ensure	_	_	_	_
+29-10	3063-3072	sustained	abstract[176]	giv[176]	coref	30-9[182_176]
+29-11	3073-3082	microgrid	abstract|abstract[176]	giv|giv[176]	coref	32-4
+29-12	3083-3090	voltage	abstract[176]	giv[176]	_	_
+29-13	3091-3103	irrespective	_	_	_	_
+29-14	3104-3106	of	_	_	_	_
+29-15	3107-3108	a	event[179]	giv[179]	ana	31-1[0_179]
+29-16	3109-3113	host	person|event[179]	giv|giv[179]	coref	35-30
+29-17	3114-3118	grid	abstract|event[179]	giv|giv[179]	coref	32-31
+29-18	3119-3130	disturbance	event[179]	giv[179]	_	_
+29-19	3131-3132	.	_	_	_	_
+
+#Text=The inductance size is estimated in relation to the voltage sag in the worst-case scenario which must be compensated at PCC .
+30-1	3133-3136	The	abstract[181]	new[181]	coref	34-22[220_181]
+30-2	3137-3147	inductance	abstract|abstract[181]	giv|new[181]	coref	31-10[187_0]
+30-3	3148-3152	size	abstract[181]	new[181]	_	_
+30-4	3153-3155	is	_	_	_	_
+30-5	3156-3165	estimated	_	_	_	_
+30-6	3166-3168	in	_	_	_	_
+30-7	3169-3177	relation	_	_	_	_
+30-8	3178-3180	to	_	_	_	_
+30-9	3181-3184	the	abstract[182]	giv[182]	coref	31-13[0_182]
+30-10	3185-3192	voltage	abstract[182]	giv[182]	_	_
+30-11	3193-3196	sag	abstract[182]	giv[182]	_	_
+30-12	3197-3199	in	abstract[182]	giv[182]	_	_
+30-13	3200-3203	the	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-14	3204-3214	worst-case	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-15	3215-3223	scenario	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-16	3224-3229	which	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-17	3230-3234	must	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-18	3235-3237	be	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-19	3238-3249	compensated	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-20	3250-3252	at	abstract[182]|abstract[183]	giv[182]|new[183]	_	_
+30-21	3253-3256	PCC	abstract[182]|abstract[183]|abstract	giv[182]|new[183]|giv	_	_
+30-22	3257-3258	.	_	_	_	_
+
+#Text=It also depends on the expected current flow through the inductance under voltage sag .
+31-1	3259-3261	It	event	giv	coref	32-31[202_0]
+31-2	3262-3266	also	_	_	_	_
+31-3	3267-3274	depends	_	_	_	_
+31-4	3275-3277	on	_	_	_	_
+31-5	3278-3281	the	abstract[186]	new[186]	coref	32-18[195_186]
+31-6	3282-3290	expected	abstract[186]	new[186]	_	_
+31-7	3291-3298	current	abstract[186]	new[186]	_	_
+31-8	3299-3303	flow	abstract[186]	new[186]	_	_
+31-9	3304-3311	through	abstract[186]	new[186]	_	_
+31-10	3312-3315	the	abstract[186]|abstract[187]	new[186]|giv[187]	coref	32-28[200_187]
+31-11	3316-3326	inductance	abstract[186]|abstract[187]	new[186]|giv[187]	_	_
+31-12	3327-3332	under	abstract[186]	new[186]	_	_
+31-13	3333-3340	voltage	abstract[186]|abstract|abstract[189]	new[186]|giv|giv[189]	coref	38-5[236_0]
+31-14	3341-3344	sag	abstract[186]|abstract[189]	new[186]|giv[189]	_	_
+31-15	3345-3346	.	_	_	_	_
+
+#Text=The balance between microgrid generated power ( active and reactive ) and the local load consumption determines the current flow ( magnitude and phase angle ) through the inductance during grid disturbance .
+32-1	3347-3350	The	abstract[190]	new[190]	_	_
+32-2	3351-3358	balance	abstract[190]	new[190]	_	_
+32-3	3359-3366	between	abstract[190]	new[190]	_	_
+32-4	3367-3376	microgrid	abstract[190]|abstract|abstract[192]	new[190]|giv|giv[192]	coref|coref	33-16|33-14[208_192]
+32-5	3377-3386	generated	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-6	3387-3392	power	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-7	3393-3394	(	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-8	3395-3401	active	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-9	3402-3405	and	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-10	3406-3414	reactive	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-11	3415-3416	)	abstract[190]|abstract[192]	new[190]|giv[192]	_	_
+32-12	3417-3420	and	abstract[190]	new[190]	_	_
+32-13	3421-3424	the	abstract[190]|abstract[194]	new[190]|new[194]	_	_
+32-14	3425-3430	local	abstract[190]|abstract[194]	new[190]|new[194]	_	_
+32-15	3431-3435	load	abstract[190]|abstract|abstract[194]	new[190]|giv|new[194]	coref	33-26
+32-16	3436-3447	consumption	abstract[190]|abstract[194]	new[190]|new[194]	_	_
+32-17	3448-3458	determines	_	_	_	_
+32-18	3459-3462	the	abstract[195]	giv[195]	appos	32-22[0_195]
+32-19	3463-3470	current	abstract[195]	giv[195]	_	_
+32-20	3471-3475	flow	abstract[195]	giv[195]	_	_
+32-21	3476-3477	(	_	_	_	_
+32-22	3478-3487	magnitude	abstract|abstract[197]	giv|giv[197]	appos|appos	32-22[197_0]|32-24[199_197]
+32-23	3488-3491	and	abstract[197]	giv[197]	_	_
+32-24	3492-3497	phase	abstract[197]|abstract|abstract[199]	giv[197]|giv|giv[199]	coref|coref	33-33[212_199]|38-6
+32-25	3498-3503	angle	abstract[197]|abstract[199]	giv[197]|giv[199]	_	_
+32-26	3504-3505	)	_	_	_	_
+32-27	3506-3513	through	_	_	_	_
+32-28	3514-3517	the	abstract[200]	giv[200]	coref	34-23[0_200]
+32-29	3518-3528	inductance	abstract[200]	giv[200]	_	_
+32-30	3529-3535	during	abstract[200]	giv[200]	_	_
+32-31	3536-3540	grid	abstract[200]|abstract|event[202]	giv[200]|giv|giv[202]	coref	33-11
+32-32	3541-3552	disturbance	abstract[200]|event[202]	giv[200]|giv[202]	_	_
+32-33	3553-3554	.	_	_	_	_
+
+#Text=In the proposed strategy of this work , during the grid fault , the total microgrid generated active power is commensurate with the rated local load capacity to limit the amplitude of the current flow into the main grid .
+33-1	3555-3557	In	_	_	_	_
+33-2	3558-3561	the	abstract[203]	new[203]	_	_
+33-3	3562-3570	proposed	abstract[203]	new[203]	_	_
+33-4	3571-3579	strategy	abstract[203]	new[203]	_	_
+33-5	3580-3582	of	abstract[203]	new[203]	_	_
+33-6	3583-3587	this	abstract[203]|abstract[204]	new[203]|giv[204]	_	_
+33-7	3588-3592	work	abstract[203]|abstract[204]	new[203]|giv[204]	_	_
+33-8	3593-3594	,	_	_	_	_
+33-9	3595-3601	during	_	_	_	_
+33-10	3602-3605	the	event[206]	new[206]	_	_
+33-11	3606-3610	grid	abstract|event[206]	giv|new[206]	coref	33-37[213_0]
+33-12	3611-3616	fault	event[206]	new[206]	_	_
+33-13	3617-3618	,	_	_	_	_
+33-14	3619-3622	the	abstract[208]	giv[208]	coref	34-3[214_208]
+33-15	3623-3628	total	abstract[208]	giv[208]	_	_
+33-16	3629-3638	microgrid	abstract|abstract[208]	giv|giv[208]	coref	38-18[242_0]
+33-17	3639-3648	generated	abstract[208]	giv[208]	_	_
+33-18	3649-3655	active	abstract[208]	giv[208]	_	_
+33-19	3656-3661	power	abstract[208]	giv[208]	_	_
+33-20	3662-3664	is	_	_	_	_
+33-21	3665-3677	commensurate	_	_	_	_
+33-22	3678-3682	with	_	_	_	_
+33-23	3683-3686	the	abstract[210]	new[210]	_	_
+33-24	3687-3692	rated	abstract[210]	new[210]	_	_
+33-25	3693-3698	local	abstract[210]	new[210]	_	_
+33-26	3699-3703	load	abstract|abstract[210]	giv|new[210]	coref	34-17
+33-27	3704-3712	capacity	abstract[210]	new[210]	_	_
+33-28	3713-3715	to	_	_	_	_
+33-29	3716-3721	limit	_	_	_	_
+33-30	3722-3725	the	abstract[211]	new[211]	_	_
+33-31	3726-3735	amplitude	abstract[211]	new[211]	_	_
+33-32	3736-3738	of	abstract[211]	new[211]	_	_
+33-33	3739-3742	the	abstract[211]|abstract[212]	new[211]|giv[212]	coref	39-12[245_212]
+33-34	3743-3750	current	abstract[211]|abstract[212]	new[211]|giv[212]	_	_
+33-35	3751-3755	flow	abstract[211]|abstract[212]	new[211]|giv[212]	_	_
+33-36	3756-3760	into	abstract[211]|abstract[212]	new[211]|giv[212]	_	_
+33-37	3761-3764	the	abstract[211]|abstract[212]|abstract[213]	new[211]|giv[212]|giv[213]	coref	34-11[215_213]
+33-38	3765-3769	main	abstract[211]|abstract[212]|abstract[213]	new[211]|giv[212]|giv[213]	_	_
+33-39	3770-3774	grid	abstract[211]|abstract[212]|abstract[213]	new[211]|giv[212]|giv[213]	_	_
+33-40	3775-3776	.	_	_	_	_
+
+#Text=However , excess active power may still be supplied to the main grid due to varying load demand and this affects the inductance size .
+34-1	3777-3784	However	_	_	_	_
+34-2	3785-3786	,	_	_	_	_
+34-3	3787-3793	excess	abstract[214]	giv[214]	coref	35-19[227_214]
+34-4	3794-3800	active	abstract[214]	giv[214]	_	_
+34-5	3801-3806	power	abstract[214]	giv[214]	_	_
+34-6	3807-3810	may	_	_	_	_
+34-7	3811-3816	still	_	_	_	_
+34-8	3817-3819	be	_	_	_	_
+34-9	3820-3828	supplied	_	_	_	_
+34-10	3829-3831	to	_	_	_	_
+34-11	3832-3835	the	abstract[215]	giv[215]	coref	35-29[229_215]
+34-12	3836-3840	main	abstract[215]	giv[215]	_	_
+34-13	3841-3845	grid	abstract[215]	giv[215]	_	_
+34-14	3846-3849	due	_	_	_	_
+34-15	3850-3852	to	_	_	_	_
+34-16	3853-3860	varying	abstract[217]	new[217]	ana	34-20[0_217]
+34-17	3861-3865	load	abstract|abstract[217]	giv|new[217]	coref	35-11
+34-18	3866-3872	demand	abstract[217]	new[217]	_	_
+34-19	3873-3876	and	_	_	_	_
+34-20	3877-3881	this	abstract	giv	coref	35-10[225_0]
+34-21	3882-3889	affects	_	_	_	_
+34-22	3890-3893	the	abstract[220]	giv[220]	_	_
+34-23	3894-3904	inductance	abstract|abstract[220]	giv|giv[220]	coref	35-6[223_0]
+34-24	3905-3909	size	abstract[220]	giv[220]	_	_
+34-25	3910-3911	.	_	_	_	_
+
+#Text=To estimate required value for the series inductance , the load demand is assumed to be zero and the rated load power is assumed generated and supplied to the host grid .
+35-1	3912-3914	To	_	_	_	_
+35-2	3915-3923	estimate	_	_	_	_
+35-3	3924-3932	required	abstract[221]	new[221]	coref	41-3[249_221]
+35-4	3933-3938	value	abstract[221]	new[221]	_	_
+35-5	3939-3942	for	abstract[221]	new[221]	_	_
+35-6	3943-3946	the	abstract[221]|abstract[223]	new[221]|giv[223]	coref	41-6[251_223]
+35-7	3947-3953	series	abstract[221]|abstract|abstract[223]	new[221]|giv|giv[223]	coref	41-7
+35-8	3954-3964	inductance	abstract[221]|abstract[223]	new[221]|giv[223]	_	_
+35-9	3965-3966	,	_	_	_	_
+35-10	3967-3970	the	abstract[225]	giv[225]	_	_
+35-11	3971-3975	load	abstract|abstract[225]	giv|giv[225]	coref	35-21
+35-12	3976-3982	demand	abstract[225]	giv[225]	_	_
+35-13	3983-3985	is	_	_	_	_
+35-14	3986-3993	assumed	_	_	_	_
+35-15	3994-3996	to	_	_	_	_
+35-16	3997-3999	be	_	_	_	_
+35-17	4000-4004	zero	_	_	_	_
+35-18	4005-4008	and	_	_	_	_
+35-19	4009-4012	the	abstract[227]	giv[227]	_	_
+35-20	4013-4018	rated	abstract[227]	giv[227]	_	_
+35-21	4019-4023	load	abstract|abstract[227]	giv|giv[227]	_	_
+35-22	4024-4029	power	abstract[227]	giv[227]	_	_
+35-23	4030-4032	is	_	_	_	_
+35-24	4033-4040	assumed	_	_	_	_
+35-25	4041-4050	generated	_	_	_	_
+35-26	4051-4054	and	_	_	_	_
+35-27	4055-4063	supplied	_	_	_	_
+35-28	4064-4066	to	_	_	_	_
+35-29	4067-4070	the	abstract[229]	giv[229]	coref	38-9[238_229]
+35-30	4071-4075	host	person|abstract[229]	giv|giv[229]	coref	38-10
+35-31	4076-4080	grid	abstract[229]	giv[229]	_	_
+35-32	4081-4082	.	_	_	_	_
+
+#Text=The phasor diagram of this estimation is presented in
+36-1	4083-4086	The	abstract[231]	new[231]	_	_
+36-2	4087-4093	phasor	abstract|abstract[231]	new|new[231]	_	_
+36-3	4094-4101	diagram	abstract[231]	new[231]	_	_
+36-4	4102-4104	of	abstract[231]	new[231]	_	_
+36-5	4105-4109	this	abstract[231]|abstract[232]	new[231]|new[232]	_	_
+36-6	4110-4120	estimation	abstract[231]|abstract[232]	new[231]|new[232]	_	_
+36-7	4121-4123	is	_	_	_	_
+36-8	4124-4133	presented	_	_	_	_
+36-9	4134-4136	in	_	_	_	_
+
+#Text=Figure 7
+37-1	4137-4143	Figure	abstract[233]	new[233]	_	_
+37-2	4144-4145	7	abstract[233]	new[233]	_	_
+
+#Text=, where Vg represents the phase voltage of the host grid , Vmg represents phase voltage within the microgrid .
+38-1	4146-4147	,	_	_	_	_
+38-2	4148-4153	where	_	_	_	_
+38-3	4154-4156	Vg	abstract	new	_	_
+38-4	4157-4167	represents	_	_	_	_
+38-5	4168-4171	the	abstract[236]	giv[236]	coref	38-15[241_236]
+38-6	4172-4177	phase	abstract|abstract[236]	giv|giv[236]	coref	38-15
+38-7	4178-4185	voltage	abstract[236]	giv[236]	_	_
+38-8	4186-4188	of	abstract[236]	giv[236]	_	_
+38-9	4189-4192	the	abstract[236]|abstract[238]	giv[236]|giv[238]	_	_
+38-10	4193-4197	host	abstract[236]|person|abstract[238]	giv[236]|giv|giv[238]	_	_
+38-11	4198-4202	grid	abstract[236]|abstract[238]	giv[236]|giv[238]	_	_
+38-12	4203-4204	,	_	_	_	_
+38-13	4205-4208	Vmg	abstract	new	_	_
+38-14	4209-4219	represents	_	_	_	_
+38-15	4220-4225	phase	abstract|abstract[241]	giv|giv[241]	coref|coref	40-1[248_241]|43-7[261_0]
+38-16	4226-4233	voltage	abstract[241]	giv[241]	_	_
+38-17	4234-4240	within	abstract[241]	giv[241]	_	_
+38-18	4241-4244	the	abstract[241]|abstract[242]	giv[241]|giv[242]	_	_
+38-19	4245-4254	microgrid	abstract[241]|abstract[242]	giv[241]|giv[242]	_	_
+38-20	4255-4256	.	_	_	_	_
+
+#Text=Similarly , Xn signifies needed switched inductive reactance while In signifies current flow across Xn .
+39-1	4257-4266	Similarly	_	_	_	_
+39-2	4267-4268	,	_	_	_	_
+39-3	4269-4271	Xn	abstract	new	coref	39-15
+39-4	4272-4281	signifies	_	_	_	_
+39-5	4282-4288	needed	abstract[244]	new[244]	_	_
+39-6	4289-4297	switched	abstract[244]	new[244]	_	_
+39-7	4298-4307	inductive	abstract[244]	new[244]	_	_
+39-8	4308-4317	reactance	abstract[244]	new[244]	_	_
+39-9	4318-4323	while	_	_	_	_
+39-10	4324-4326	In	_	_	_	_
+39-11	4327-4336	signifies	_	_	_	_
+39-12	4337-4344	current	abstract[245]	giv[245]	coref	43-19[0_245]
+39-13	4345-4349	flow	abstract[245]	giv[245]	_	_
+39-14	4350-4356	across	abstract[245]	giv[245]	_	_
+39-15	4357-4359	Xn	abstract[245]|abstract	giv[245]|giv	coref	41-19[253_0]
+39-16	4360-4361	.	_	_	_	_
+
+#Text=The inverter voltage is therefore given by ( 19 )
+40-1	4362-4365	The	abstract[248]	giv[248]	_	_
+40-2	4366-4374	inverter	object|abstract[248]	new|giv[248]	coref	43-2
+40-3	4375-4382	voltage	abstract[248]	giv[248]	_	_
+40-4	4383-4385	is	_	_	_	_
+40-5	4386-4395	therefore	_	_	_	_
+40-6	4396-4401	given	_	_	_	_
+40-7	4402-4404	by	_	_	_	_
+40-8	4405-4406	(	_	_	_	_
+40-9	4407-4409	19	_	_	_	_
+40-10	4410-4411	)	_	_	_	_
+
+#Text=Consequently , the value of the series inductance is determined by solving the quadratic equation generated by making the Xn the subject of the formula in Equation ( 18 ) .
+41-1	4412-4424	Consequently	_	_	_	_
+41-2	4425-4426	,	_	_	_	_
+41-3	4427-4430	the	abstract[249]	giv[249]	_	_
+41-4	4431-4436	value	abstract[249]	giv[249]	_	_
+41-5	4437-4439	of	abstract[249]	giv[249]	_	_
+41-6	4440-4443	the	abstract[249]|abstract[251]	giv[249]|giv[251]	coref	43-13[263_251]
+41-7	4444-4450	series	abstract[249]|abstract|abstract[251]	giv[249]|giv|giv[251]	_	_
+41-8	4451-4461	inductance	abstract[249]|abstract[251]	giv[249]|giv[251]	_	_
+41-9	4462-4464	is	_	_	_	_
+41-10	4465-4475	determined	_	_	_	_
+41-11	4476-4478	by	_	_	_	_
+41-12	4479-4486	solving	_	_	_	_
+41-13	4487-4490	the	abstract[252]	new[252]	coref	41-27[255_252]
+41-14	4491-4500	quadratic	abstract[252]	new[252]	_	_
+41-15	4501-4509	equation	abstract[252]	new[252]	_	_
+41-16	4510-4519	generated	abstract[252]	new[252]	_	_
+41-17	4520-4522	by	_	_	_	_
+41-18	4523-4529	making	_	_	_	_
+41-19	4530-4533	the	abstract[253]	giv[253]	_	_
+41-20	4534-4536	Xn	abstract[253]	giv[253]	_	_
+41-21	4537-4540	the	_	_	_	_
+41-22	4541-4548	subject	_	_	_	_
+41-23	4549-4551	of	_	_	_	_
+41-24	4552-4555	the	abstract[254]	new[254]	_	_
+41-25	4556-4563	formula	abstract[254]	new[254]	_	_
+41-26	4564-4566	in	abstract[254]	new[254]	_	_
+41-27	4567-4575	Equation	abstract[254]|abstract[255]	new[254]|giv[255]	ana	42-1[0_255]
+41-28	4576-4577	(	abstract[254]|abstract[255]	new[254]|giv[255]	_	_
+41-29	4578-4580	18	abstract[254]|abstract[255]|abstract	new[254]|giv[255]|new	_	_
+41-30	4581-4582	)	abstract[254]|abstract[255]	new[254]|giv[255]	_	_
+41-31	4583-4584	.	_	_	_	_
+
+#Text=It is therefore given as ( 20 )
+42-1	4585-4587	It	abstract	giv	_	_
+42-2	4588-4590	is	_	_	_	_
+42-3	4591-4600	therefore	_	_	_	_
+42-4	4601-4606	given	_	_	_	_
+42-5	4607-4609	as	_	_	_	_
+42-6	4610-4611	(	_	_	_	_
+42-7	4612-4614	20	_	_	_	_
+42-8	4615-4616	)	_	_	_	_
+
+#Text=The inverter current Ii is in phase with the current flowing through the switched inductance Xn , hence angle θ is calculated from ( 21 )
+43-1	4617-4620	The	abstract[259]	new[259]	_	_
+43-2	4621-4629	inverter	object|abstract[259]	giv|new[259]	_	_
+43-3	4630-4637	current	abstract[259]	new[259]	_	_
+43-4	4638-4640	Ii	abstract[259]|abstract	new[259]|new	_	_
+43-5	4641-4643	is	_	_	_	_
+43-6	4644-4646	in	_	_	_	_
+43-7	4647-4652	phase	abstract[261]	giv[261]	_	_
+43-8	4653-4657	with	abstract[261]	giv[261]	_	_
+43-9	4658-4661	the	abstract[261]|abstract[262]	giv[261]|new[262]	_	_
+43-10	4662-4669	current	abstract[261]|abstract[262]	giv[261]|new[262]	_	_
+43-11	4670-4677	flowing	abstract[261]|abstract[262]	giv[261]|new[262]	_	_
+43-12	4678-4685	through	abstract[261]|abstract[262]	giv[261]|new[262]	_	_
+43-13	4686-4689	the	abstract[261]|abstract[262]|abstract[263]	giv[261]|new[262]|giv[263]	_	_
+43-14	4690-4698	switched	abstract[261]|abstract[262]|abstract[263]	giv[261]|new[262]|giv[263]	_	_
+43-15	4699-4709	inductance	abstract[261]|abstract[262]|abstract[263]	giv[261]|new[262]|giv[263]	_	_
+43-16	4710-4712	Xn	abstract[261]|abstract[262]|abstract[263]	giv[261]|new[262]|giv[263]	_	_
+43-17	4713-4714	,	_	_	_	_
+43-18	4715-4720	hence	_	_	_	_
+43-19	4721-4726	angle	abstract	giv	_	_
+43-20	4727-4728	θ	abstract	new	_	_
+43-21	4729-4731	is	_	_	_	_
+43-22	4732-4742	calculated	_	_	_	_
+43-23	4743-4747	from	_	_	_	_
+43-24	4748-4749	(	_	_	_	_
+43-25	4750-4752	21	_	_	_	_
+43-26	4753-4754	)	_	_	_	_

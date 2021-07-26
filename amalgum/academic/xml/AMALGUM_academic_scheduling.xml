@@ -1,0 +1,719 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_scheduling" title="A Reinforcement Learning Method for a Hybrid Flow-Shop Scheduling Problem" shortTitle="scheduling" author="Wei Han, Fang Guo, Xichao Su" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1999-4893/12/11/222/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+Description	NN	description
+of	IN	of
+the	DT	the
+Hybrid	NNP	hybrid
+Flow-Shop	NN	Flow-Shop
+Scheduling	NN	scheduling
+Problem	NN	Problem
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+HFSP	NNP	HFSP
+is	VBZ	be
+introduced	VBN	introduce
+,	,	,
+and	CC	and
+its	PRP$	its
+standard	JJ	standard
+model	NN	model
+is	VBZ	be
+established	VBN	establish
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+A	DT	a
+typical	JJ	typical
+HFSP	NNP	HFSP
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+,	,	,
+there	EX	there
+are	VBP	be
+S	CD	S
+stages	NNS	stage
+in	IN	in
+total	NN	total
+in	IN	in
+the	DT	the
+process	NN	process
+of	IN	of
+HFSP	NNP	HFSP
+,	,	,
+and	CC	and
+<hi rend="italic">
+m	SYM	meter
+</hi>
+1	CD	1
+,	,	,
+<hi rend="italic">
+m	RB	meter
+</hi>
+2	CD	2
+,	,	,
+…	CD	…
+,	,	,
+<hi rend="italic">
+m	NN	meter
+</hi>
+S	NNS	S
+machines	NNS	machine
+are	VBP	be
+included	VBN	include
+in	IN	in
+each	DT	each
+stage	NN	stage
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Every	DT	every
+workpiece	NN	workpiece
+must	MD	must
+be	VB	be
+worked	VBN	work
+in	IN	in
+all	DT	all
+stages	NNS	stage
+in	IN	in
+a	DT	a
+certain	JJ	certain
+order	NN	order
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+each	DT	each
+stage	NN	stage
+,	,	,
+however	RB	however
+,	,	,
+any	DT	any
+one	CD	one
+machine	NN	machine
+can	MD	can
+be	VB	be
+selected	VBN	select
+for	IN	for
+each	DT	each
+workpiece	NN	workpiece
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+instance	NN	instance
+,	,	,
+the	DT	the
+sequence	NN	sequence
+[	-LRB-	[
+<hi rend="italic">
+start	NN	start
+</hi>
+,	,	,
+<hi rend="italic">
+M	NNP	M
+</hi>
+12	CD	12
+,	,	,
+<hi rend="italic">
+M	NNP	M
+</hi>
+24	CD	24
+,	,	,
+…	CD	…
+,	,	,
+<hi rend="italic">
+M	NN	M
+</hi>
+<hi rend="italic">
+S	NNPS	S
+</hi>
+3	CD	3
+,	,	,
+stop	VB	stop
+]	-RRB-	]
+can	MD	can
+be	VB	be
+one	CD	one
+of	IN	of
+an	DT	a
+order	NN	order
+of	IN	of
+a	DT	a
+workpiece	NN	workpiece
+being	VBG	be
+machined	VBN	machine
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+HFSP	NNP	HFSP
+,	,	,
+several	JJ	several
+assumptions	NNS	assumption
+are	VBP	be
+usually	RB	usually
+made	VBN	make
+as	IN	as
+follows	VBZ	follow
+:	:	:
+</s>
+<s type="sub">
+first	RB	first
+,	,	,
+once	IN	once
+a	DT	a
+workpiece	NN	workpiece
+starts	VBZ	start
+to	TO	to
+be	VB	be
+worked	VBN	work
+,	,	,
+it	PRP	it
+cannot	MD	cannot
+be	VB	be
+interrupted	VBN	interrupt
+;	:	;
+</s>
+<s type="decl">
+second	RB	second
+,	,	,
+a	DT	a
+machine	NN	machine
+can	MD	can
+only	RB	only
+process	VB	process
+one	CD	one
+workpiece	NN	workpiece
+at	IN	at
+a	DT	a
+time	NN	time
+;	:	;
+</s>
+<s type="decl">
+third	RB	third
+,	,	,
+a	DT	a
+workpiece	NN	workpiece
+can	MD	can
+only	RB	only
+be	VB	be
+processed	VBN	process
+on	IN	on
+one	CD	one
+machine	NN	machine
+at	IN	at
+a	DT	a
+time	NN	time
+;	:	;
+</s>
+<s type="decl">
+fourth	RB	fourth
+,	,	,
+workpieces	NNS	workpiece
+can	MD	can
+be	VB	be
+machined	VBN	machine
+on	IN	on
+any	DT	any
+machine	NN	machine
+at	IN	at
+each	DT	each
+stage	NN	stage
+;	:	;
+</s>
+<s type="decl">
+fifth	RB	fifth
+,	,	,
+there	EX	there
+is	VBZ	be
+unlimited	JJ	unlimited
+storage	NN	storage
+capacity	NN	capacity
+between	IN	between
+any	DT	any
+two	CD	2
+stages	NNS	stage
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+a	DT	a
+workpiece	NN	workpiece
+can	MD	can
+wait	VB	wait
+for	IN	for
+any	DT	any
+time	NN	time
+between	IN	between
+the	DT	the
+two	CD	2
+processes	NNS	process
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+HFSP	NNP	HFSP
+is	VBZ	be
+divided	VBN	divide
+into	IN	into
+the	DT	the
+determined	VBN	determine
+initial	JJ	initial
+sequence	NN	sequence
+HFSP	NNP	HFSP
+and	CC	and
+the	DT	the
+non-determined	JJ	non-determined
+initial	JJ	initial
+sequence	NN	sequence
+HFSP	NNP	HFSP
+in	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+according	VBG	accord
+to	IN	to
+whether	IN	whether
+the	DT	the
+initial	JJ	initial
+sequence	NN	sequence
+of	IN	of
+the	DT	the
+workpiece	NN	workpiece
+is	VBZ	be
+deterministic	JJ	deterministic
+or	CC	or
+not	RB	not
+.	.	.
+</s>
+<s type="decl">
+Knowing	VBG	know
+the	DT	the
+processing	NN	processing
+time	NN	time
+in	IN	in
+each	DT	each
+stage	NN	stage
+of	IN	of
+the	DT	the
+workpiece	NN	workpiece
+on	IN	on
+each	DT	each
+machine	NN	machine
+,	,	,
+the	DT	the
+purpose	NN	purpose
+of	IN	of
+HFSP	NNP	HFSP
+is	VBZ	be
+to	TO	to
+determine	VB	determine
+the	DT	the
+distribution	NN	distribution
+of	IN	of
+each	DT	each
+workpiece	NN	workpiece
+on	IN	on
+the	DT	the
+machines	NNS	machine
+at	IN	at
+each	DT	each
+stage	NN	stage
+to	TO	to
+minimize	VB	minimize
+the	DT	the
+maximum	JJ	maximum
+completion	NN	completion
+time	NN	time
+for	IN	for
+the	DT	the
+former	JJ	former
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+the	DT	the
+latter	JJ	latter
+,	,	,
+the	DT	the
+ordering	NN	ordering
+of	IN	of
+all	DT	all
+workpieces	NNS	workpiece
+is	VBZ	be
+necessary	JJ	necessary
+to	TO	to
+define	VB	define
+additionally	RB	additionally
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+(	-LRB-	(
+=	SYM	=
+1	CD	1
+,	,	,
+2	CD	2
+,	,	,
+…	:	…
+,	,	,
+<hi rend="italic">
+n	NN	n
+</hi>
+)	-RRB-	)
+indicates	VBZ	indicate
+the	DT	the
+workpieces	NNS	workpiece
+needed	VBN	need
+to	TO	to
+be	VB	be
+worked	VBN	work
+,	,	,
+in	IN	in
+which	WDT	which
+<hi rend="italic">
+n	NN	n
+</hi>
+is	VBZ	be
+the	DT	the
+total	JJ	total
+number	NN	number
+of	IN	of
+workpieces	NNS	workpiece
+.	.	.
+</s>
+<s type="decl">
+(	-LRB-	(
+=	SYM	=
+1	CD	1
+,	,	,
+2	CD	2
+,	,	,
+…	:	…
+,	,	,
+<hi rend="italic">
+S	NNP	S
+</hi>
+)	-RRB-	)
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+machines	NNS	machine
+in	IN	in
+each	DT	each
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+is	VBZ	be
+the	DT	the
+machining	NN	machining
+time	NN	time
+of	IN	of
+the	DT	the
+workpiece	NN	workpiece
+at	IN	at
+stage	NN	stage
+,	,	,
+machine	NN	machine
+.	.	.
+</s>
+<s type="decl">
+is	VBZ	be
+the	DT	the
+time	NN	time
+cost	NN	cost
+on	IN	on
+the	DT	the
+way	NN	way
+from	IN	from
+stage	NN	stage
+to	IN	to
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+is	VBZ	be
+the	DT	the
+arrival	NN	arrival
+time	NN	time
+of	IN	of
+workpiece	NN	workpiece
+at	IN	at
+stage	NN	stage
+,	,	,
+machine	NN	machine
+.	.	.
+</s>
+<s type="decl">
+Correspondingly	RB	correspondingly
+,	,	,
+and	CC	and
+indicate	VBP	indicate
+the	DT	the
+starting	NN	starting
+and	CC	and
+ending	VBG	end
+times	NNS	time
+of	IN	of
+workpiece	NN	workpiece
+which	WDT	which
+is	VBZ	be
+machined	VBN	machine
+at	IN	at
+stage	NN	stage
+,	,	,
+machine	NN	machine
+.	.	.
+</s>
+<s type="imp">
+and	CC	and
+reveal	VB	reveal
+the	DT	the
+time	NN	time
+when	WRB	when
+the	DT	the
+machine	NN	machine
+at	IN	at
+stage	NN	stage
+starts	VBZ	start
+to	TO	to
+work	VB	work
+and	CC	and
+stops	VBZ	stop
+working	VBG	work
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+standard	JJ	standard
+mathematical	JJ	mathematical
+model	NN	model
+of	IN	of
+HFSP	NNP	HFSP
+is	VBZ	be
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+where	WRB	where
+if	IN	if
+workpiece	NN	workpiece
+is	VBZ	be
+worked	VBN	work
+at	IN	at
+stage	NN	stage
+,	,	,
+machine	NN	machine
+,	,	,
+else	RB	else
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+if	IN	if
+workpiece	NN	workpiece
+is	VBZ	be
+the	DT	the
+first	JJ	first
+one	CD	one
+machined	VBN	machine
+at	IN	at
+stage	NN	stage
+,	,	,
+machine	NN	machine
+and	CC	and
+without	IN	without
+interruption	NN	interruption
+.	.	.
+</s>
+<s type="decl">
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+if	IN	if
+workpiece	NN	workpiece
+is	VBZ	be
+worked	VBN	work
+at	IN	at
+stage	NN	stage
+,	,	,
+machine	NN	machine
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Equation	NN	equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+is	VBZ	be
+the	DT	the
+objective	JJ	objective
+function	NN	function
+,	,	,
+minimizing	VBG	minimize
+the	DT	the
+maximum	JJ	maximum
+ending	VBG	end
+time	NN	time
+of	IN	of
+all	DT	all
+workpieces	NNS	workpiece
+in	IN	in
+the	DT	the
+last	JJ	last
+stage	NN	stage
+S.	NNP	S.
+</s>
+<s type="decl">
+Equation	NN	equation
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+ensures	VBZ	ensure
+that	IN	that
+there	EX	there
+is	VBZ	be
+only	RB	only
+one	CD	one
+workpiece	NN	workpiece
+at	IN	at
+any	DT	any
+machine	NN	machine
+in	IN	in
+any	DT	any
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+Equation	NN	equation
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+clears	VBZ	clear
+the	DT	the
+time	NN	time
+limitation	NN	limitation
+of	IN	of
+arrival	NN	arrival
+and	CC	and
+start	NN	start
+.	.	.
+</s>
+<s type="decl">
+Equation	NN	equation
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+shows	VBZ	show
+the	DT	the
+relationship	NN	relationship
+between	IN	between
+the	DT	the
+completion	NN	completion
+time	NN	time
+and	CC	and
+the	DT	the
+start	NN	start
+time	NN	time
+of	IN	of
+the	DT	the
+process	NN	process
+at	IN	at
+the	DT	the
+same	JJ	same
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+Equation	NN	equation
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+calculates	VBZ	calculate
+the	DT	the
+arrival	NN	arrival
+time	NN	time
+on	IN	on
+the	DT	the
+next	JJ	next
+stage	NN	stage
+utilizing	VBG	utilize
+the	DT	the
+end	NN	end
+time	NN	time
+of	IN	of
+the	DT	the
+previous	JJ	previous
+stage	NN	stage
+.	.	.
+</s>
+<s type="decl">
+Equations	NNS	equation
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+and	CC	and
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+reveal	VBP	reveal
+the	DT	the
+time	NN	time
+when	WRB	when
+the	DT	the
+machine	NN	machine
+at	IN	at
+stage	NN	stage
+starts	VBZ	start
+to	TO	to
+work	VB	work
+and	CC	and
+stops	VBZ	stop
+working	VBG	work
+.	.	.
+</s>
+</p>
+</text>

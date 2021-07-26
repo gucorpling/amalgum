@@ -1,0 +1,194 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4.</segment>
+<segment id="2" parent="1002" relname="preparation">Optimal Tracking Control</segment>
+<segment id="3" parent="1003" relname="span">A general scalar nonnegative attitude penalty function is utilized</segment>
+<segment id="4" parent="3" relname="purpose">to formulate an optimal feedback control for the spacecraft tracking problem .</segment>
+<segment id="5" parent="1005" relname="span">This new variable yields identical performance index values ,</segment>
+<segment id="6" parent="1006" relname="span">regardless of the attitude variables</segment>
+<segment id="7" parent="6" relname="elaboration">selected .</segment>
+<segment id="8" parent="1009" relname="span">The general final finite-time optimal control formulating is given</segment>
+<segment id="9" parent="1011" relname="span">by minimizing the following performance index :</segment>
+<segment id="10" parent="9" relname="restatement">( 79 )</segment>
+<segment id="11" parent="1012" relname="span">which is subject to ,</segment>
+<segment id="12" parent="11" relname="elaboration">where is the angular velocity error ,</segment>
+<segment id="13" parent="1013" relname="joint">is an arbitrary attitude representation of the attitude error ,</segment>
+<segment id="14" parent="1014" relname="span">and the penalty functions are ( using and ) :</segment>
+<segment id="15" parent="14" relname="restatement">( 80 )</segment>
+<segment id="16" parent="1017" relname="joint">The weights and are scalars ,</segment>
+<segment id="17" parent="1017" relname="joint">and the weights , , and R are matrices .</segment>
+<segment id="18" parent="1018" relname="span">The is the spacecraft error dynamics .</segment>
+<segment id="19" parent="1019" relname="span">The scalar function is a general nonnegative attitude penalty function .</segment>
+<segment id="20" parent="1021" relname="span">The function is chosen</segment>
+<segment id="21" parent="1022" relname="span">to produce the same cost for a given physical orientation :</segment>
+<segment id="22" parent="21" relname="restatement">( 81 )</segment>
+<segment id="23" parent="1023" relname="span">when using exact nonlinear attitude error kinematics ,</segment>
+<segment id="24" parent="23" relname="elaboration">the orientation will work for large angles ; .</segment>
+<segment id="25" parent="1004" relname="joint">Therefore , the function is bounded for all possible rotations .</segment>
+<segment id="26" parent="1004" relname="joint">Thus , the attitude cost reaches its highest value at the maximum rotation angle .</segment>
+<segment id="27" parent="1004" relname="joint">Defining the attitude cost function in terms of the DCM makes it universally valid for arbitrary choice of attitude coordinates .</segment>
+<segment id="28" parent="1004" relname="joint">It can be simply parameterized by any other attitude coordinate .</segment>
+<segment id="29" parent="1004" relname="joint">The universal quadratic penalty function for arbitrary attitude error representations is given in Table 3 .</segment>
+<segment id="30" parent="1030" relname="span">This penalty function returns the same cost for a given physical attitude ,</segment>
+<segment id="31" parent="30" relname="result">thereby eliminating the dependency of the optimal control solution on the choice of the attitude coordinate .</segment>
+<segment id="32" parent="1032" relname="span">4.1. Reference Angular Velocity</segment>
+<segment id="33" parent="32" relname="elaboration">Defined in the Body Attitude Frame</segment>
+<segment id="34" parent="1033" relname="joint">The reference and current angular velocities are expressed in the same coordinate frames ; i.e. , .</segment>
+<segment id="35" parent="1036" relname="attribution">It can be shown</segment>
+<segment id="36" parent="1036" relname="span">that the general expression of the attitude error kinematics of this set can be given as follows :</segment>
+<segment id="37" parent="36" relname="elaboration">( 82 ) with initial state .</segment>
+<segment id="38" parent="1038" relname="preparation">The Hamiltonian H for this system of equations is defined , for the given optimal control problem in Equations ( 79 ) and ( 80 ) ,</segment>
+<segment id="39" parent="1040" relname="span">as follows :</segment>
+<segment id="40" parent="39" relname="restatement">( 83 )</segment>
+<segment id="41" parent="1040" relname="elaboration">where and are the co-state variables for the angular velocity error and the attitude error , respectively .</segment>
+<segment id="42" parent="1038" relname="joint">Invoking the standard necessary condition for optimality ,</segment>
+<segment id="43" parent="1043" relname="span">the co-state differential equations are given by the following :</segment>
+<segment id="44" parent="43" relname="restatement">( 84 )</segment>
+<segment id="45" parent="1045" relname="span">The two co-state differential equations are integrated backward in time with given terminal values and .</segment>
+<segment id="46" parent="1047" relname="span">The optimal control is given by the first-order necessary conditions for an extremum , ,</segment>
+<segment id="47" parent="46" relname="elaboration">leading to .</segment>
+<segment id="48" parent="1049" relname="span">4.2. Reference Angular Velocity</segment>
+<segment id="49" parent="48" relname="elaboration">Defined in the Reference Attitude Frame</segment>
+<segment id="50" parent="1050" relname="span">The reference and current angular velocities are expressed in different coordinate frames , i.e. , .</segment>
+<segment id="51" parent="50" relname="elaboration">Therefore , this definition explicitly computes the angular velocity error in the current body frame .</segment>
+<segment id="52" parent="1052" relname="preparation">As an important result of this set ,</segment>
+<segment id="53" parent="1052" relname="joint">the expressions of the attitude error kinematics follow the attitude kinematics equation for any given attitude representation choice .</segment>
+<segment id="54" parent="1054" relname="span">Therefore , the general expression of the attitude error kinematics of this set can be given as follows :</segment>
+<segment id="55" parent="54" relname="elaboration">( 85 ) with initial state .</segment>
+<segment id="56" parent="1056" relname="span">The Hamiltonian H for this system of equations is as follows :</segment>
+<segment id="57" parent="56" relname="restatement">( 86 )</segment>
+<segment id="58" parent="1058" relname="span">Invoking the standard necessary condition for optimality ,</segment>
+<segment id="59" parent="1059" relname="span">the co-state differential equations are given by the following :</segment>
+<segment id="60" parent="59" relname="restatement">( 87 )</segment>
+<segment id="61" parent="1061" relname="span">The optimal control is given by the first-order necessary conditions for an extremum , ,</segment>
+<segment id="62" parent="61" relname="elaboration">leading to .</segment>
+<segment id="63" parent="1064" relname="attribution">Note</segment>
+<segment id="64" parent="1064" relname="same_unit">the last term in the ( ) expression</segment>
+<segment id="65" parent="1065" relname="span">involves calculating the partial derivative of the angular velocity error kinematic , ,</segment>
+<segment id="66" parent="65" relname="elaboration">which obviously leads to difficult math .</segment>
+<segment id="67" parent="1067" relname="span">This step is also required</segment>
+<segment id="68" parent="67" relname="circumstance">when performing coordinate mapping between the DCM into other attitude parameters .</segment>
+<segment id="69" parent="1069" relname="preparation">4.3. Numerical Simulation</segment>
+<segment id="70" parent="1070" relname="span">This section presents simulation results of a fixed final-time and final-state open-loop optimal control solution for the spacecraft tracking problem .</segment>
+<segment id="71" parent="70" relname="elaboration">Modified Rodrigues parameters are used for the attitude motion .</segment>
+<segment id="72" parent="1069" relname="joint">The initial and final state variable conditions for this example are given in Table 4 .</segment>
+<segment id="73" parent="1069" relname="joint">The spacecraft moment of inertia tensor is given in Table 5 .</segment>
+<segment id="74" parent="1073" relname="contrast">For simplicity , the weighting matrices are , , , and .</segment>
+<segment id="75" parent="1075" relname="span">However , one can sweep those penalties</segment>
+<segment id="76" parent="75" relname="purpose">to obtain different solutions sets .</segment>
+<segment id="77" parent="1077" relname="span">This example stands to solve the open-loop optimal control problem for the spacecraft tracking problem</segment>
+<segment id="78" parent="77" relname="means">using arbitrary attitude representation .</segment>
+<segment id="79" parent="1079" relname="span">We consider the universal performance index</segment>
+<segment id="80" parent="79" relname="elaboration">given in Table 3 .</segment>
+<segment id="81" parent="1082" relname="span">The state and co-state differential equations are solved in a Boundary Value Problem</segment>
+<segment id="82" parent="81" relname="restatement">( BVP )</segment>
+<segment id="83" parent="1083" relname="span">framework</segment>
+<segment id="84" parent="1084" relname="span">using a shooting method</segment>
+<segment id="85" parent="84" relname="restatement">( MATLAB fsolve ) .</segment>
+<segment id="86" parent="1074" relname="joint">The optimal open-loop solution is shown in</segment>
+<segment id="87" parent="1087" relname="preparation">Figure 5</segment>
+<segment id="88" parent="1087" relname="joint">.</segment>
+<segment id="89" parent="1089" relname="preparation">The time history of the optimal trajectory and control is shown in</segment>
+<segment id="90" parent="1090" relname="preparation">Figure 5</segment>
+<segment id="91" parent="1091" relname="preparation">a for MRPs representation .</segment>
+<segment id="92" parent="1092" relname="span">The trajectory is controlled</segment>
+<segment id="93" parent="1093" relname="joint">to drive the spacecraft for a given initial state error ,</segment>
+<segment id="94" parent="1093" relname="joint">and , to rest at zero attitude error after 25 seconds .</segment>
+<segment id="95" parent="1096" relname="attribution">It is noted</segment>
+<segment id="96" parent="1097" relname="span">that the optimal open-loop solution</segment>
+<segment id="97" parent="96" relname="elaboration">obtained for various attitude representation produces the same angular displacement and total cost ,</segment>
+<segment id="98" parent="1096" relname="same_unit">as given in</segment>
+<segment id="99" parent="100" relname="preparation">Figure 5</segment>
+<segment id="100" parent="1098" relname="span">b.</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1004" relname="preparation"/>
+<group id="1004" type="multinuc" parent="1002" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="5" relname="concession"/>
+<group id="1008" type="multinuc" parent="1004" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="same_unit"/>
+<group id="1010" type="span" parent="8" relname="means"/>
+<group id="1011" type="span" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1008" relname="same_unit"/>
+<group id="1014" type="span" parent="1013" relname="joint"/>
+<group id="1016" type="span" parent="1004" relname="joint"/>
+<group id="1017" type="multinuc" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="elaboration"/>
+<group id="1019" type="span" parent="18" relname="elaboration"/>
+<group id="1020" type="span" parent="19" relname="elaboration"/>
+<group id="1021" type="span" parent="1020" relname="span"/>
+<group id="1022" type="span" parent="20" relname="purpose"/>
+<group id="1023" type="span" parent="1021" relname="circumstance"/>
+<group id="1030" type="span" parent="1004" relname="joint"/>
+<group id="1031" type="span" parent="1004" relname="joint"/>
+<group id="1032" type="span" parent="1033" relname="preparation"/>
+<group id="1033" type="multinuc" parent="1031" relname="span"/>
+<group id="1035" type="span" parent="1033" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1033" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="span" parent="1039" relname="span"/>
+<group id="1043" type="span" parent="1038" relname="joint"/>
+<group id="1045" type="span" parent="1038" relname="joint"/>
+<group id="1046" type="span" parent="45" relname="elaboration"/>
+<group id="1047" type="span" parent="1046" relname="span"/>
+<group id="1048" type="span" parent="1047" relname="elaboration"/>
+<group id="1049" type="span" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="1049" relname="elaboration"/>
+<group id="1051" type="span" parent="1038" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="span"/>
+<group id="1054" type="span" parent="1052" relname="joint"/>
+<group id="1056" type="span" parent="1052" relname="joint"/>
+<group id="1058" type="span" parent="1052" relname="joint"/>
+<group id="1059" type="span" parent="58" relname="elaboration"/>
+<group id="1061" type="span" parent="1052" relname="joint"/>
+<group id="1063" type="span" parent="1052" relname="joint"/>
+<group id="1064" type="multinuc" parent="1063" relname="span"/>
+<group id="1065" type="span" parent="1064" relname="same_unit"/>
+<group id="1067" type="span" parent="1052" relname="joint"/>
+<group id="1068" type="span" parent="1052" relname="joint"/>
+<group id="1069" type="multinuc" parent="1068" relname="span"/>
+<group id="1070" type="span" parent="1069" relname="joint"/>
+<group id="1073" type="multinuc" parent="1069" relname="joint"/>
+<group id="1074" type="multinuc" parent="1073" relname="contrast"/>
+<group id="1075" type="span" parent="1074" relname="joint"/>
+<group id="1077" type="span" parent="1074" relname="joint"/>
+<group id="1079" type="span" parent="1074" relname="joint"/>
+<group id="1081" type="multinuc" parent="1074" relname="joint"/>
+<group id="1082" type="span" parent="1081" relname="same_unit"/>
+<group id="1083" type="span" parent="1081" relname="same_unit"/>
+<group id="1084" type="span" parent="83" relname="means"/>
+<group id="1086" type="span" parent="1074" relname="joint"/>
+<group id="1087" type="multinuc" parent="1086" relname="span"/>
+<group id="1088" type="span" parent="1087" relname="joint"/>
+<group id="1089" type="span" parent="1088" relname="span"/>
+<group id="1090" type="span" parent="1089" relname="span"/>
+<group id="1091" type="multinuc" parent="1090" relname="span"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="multinuc" parent="92" relname="purpose"/>
+<group id="1095" type="span" parent="1091" relname="joint"/>
+<group id="1096" type="multinuc" parent="1095" relname="span"/>
+<group id="1097" type="span" parent="1096" relname="same_unit"/>
+<group id="1098" type="span" parent="1091" relname="joint"/>
+	</body>
+</rst>

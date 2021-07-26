@@ -1,0 +1,634 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Bob Broadhurst
+1-1	0-3	Bob	person[1]	new[1]	_	_
+1-2	4-14	Broadhurst	person[1]	new[1]	_	_
+
+#Text=Cmdr Bob Broadhurst
+2-1	15-19	Cmdr	organization[2]	new[2]	_	_
+2-2	20-23	Bob	organization[2]	new[2]	_	_
+2-3	24-34	Broadhurst	organization[2]	new[2]	_	_
+
+#Text=Commander Robert James Broadhurst OBE QPM was the 2012 Olympics Gold Command for the Metropolitan Police Service . [ 1 ]
+3-1	35-44	Commander	person[3]	new[3]	coref	3-8[5_3]
+3-2	45-51	Robert	person[3]	new[3]	_	_
+3-3	52-57	James	person[3]	new[3]	_	_
+3-4	58-68	Broadhurst	person[3]	new[3]	_	_
+3-5	69-72	OBE	person[3]	new[3]	_	_
+3-6	73-76	QPM	person[3]	new[3]	_	_
+3-7	77-80	was	_	_	_	_
+3-8	81-84	the	person[5]	giv[5]	ana	4-1[0_5]
+3-9	85-89	2012	event[4]|person[5]	new[4]|giv[5]	coref	17-22[104_4]
+3-10	90-98	Olympics	event[4]|person[5]	new[4]|giv[5]	_	_
+3-11	99-103	Gold	person[5]	giv[5]	_	_
+3-12	104-111	Command	person[5]	giv[5]	_	_
+3-13	112-115	for	person[5]	giv[5]	_	_
+3-14	116-119	the	person[5]|organization[7]	giv[5]|new[7]	coref	4-14[16_7]
+3-15	120-132	Metropolitan	person[5]|organization[6]|organization[7]	giv[5]|new[6]|new[7]	coref	4-16[15_6]
+3-16	133-139	Police	person[5]|organization[6]|organization[7]	giv[5]|new[6]|new[7]	_	_
+3-17	140-147	Service	person[5]|organization[7]	giv[5]|new[7]	_	_
+3-18	148-149	.	_	_	_	_
+3-19	150-151	[	_	_	_	_
+3-20	152-153	1	abstract	new	_	_
+3-21	154-155	]	_	_	_	_
+
+#Text=He was formerly Commander for Public Order and Pan London Operational Support of London 's Metropolitan Police Service .
+4-1	156-158	He	person	giv	coref	4-3[10_0]
+4-2	159-162	was	_	_	_	_
+4-3	163-171	formerly	person[10]	giv[10]	coref	6-1[0_10]
+4-4	172-181	Commander	person[10]	giv[10]	_	_
+4-5	182-185	for	person[10]	giv[10]	_	_
+4-6	186-192	Public	person[10]|abstract[11]	giv[10]|new[11]	coref	14-7[0_11]
+4-7	193-198	Order	person[10]|abstract[11]	giv[10]|new[11]	_	_
+4-8	199-202	and	person[10]	giv[10]	_	_
+4-9	203-206	Pan	person[10]|person[12]|abstract[13]	giv[10]|new[12]|new[13]	coref	9-11[44_12]
+4-10	207-213	London	person[10]|person[12]|abstract[13]	giv[10]|new[12]|new[13]	_	_
+4-11	214-225	Operational	person[10]|abstract[13]	giv[10]|new[13]	_	_
+4-12	226-233	Support	person[10]|abstract[13]	giv[10]|new[13]	_	_
+4-13	234-236	of	person[10]|abstract[13]	giv[10]|new[13]	_	_
+4-14	237-243	London	person[10]|abstract[13]|place[14]|organization[16]	giv[10]|new[13]|new[14]|giv[16]	coref|coref	6-5[21_16]|6-15[25_14]
+4-15	244-246	's	person[10]|abstract[13]|place[14]|organization[16]	giv[10]|new[13]|new[14]|giv[16]	_	_
+4-16	247-259	Metropolitan	person[10]|abstract[13]|organization[15]|organization[16]	giv[10]|new[13]|giv[15]|giv[16]	coref	5-1[0_15]
+4-17	260-266	Police	person[10]|abstract[13]|organization[15]|organization[16]	giv[10]|new[13]|giv[15]|giv[16]	_	_
+4-18	267-274	Service	person[10]|abstract[13]|organization[16]	giv[10]|new[13]|giv[16]	_	_
+4-19	275-276	.	_	_	_	_
+
+#Text=Police career
+5-1	277-283	Police	organization|abstract[18]	giv|new[18]	coref	6-6[20_0]
+5-2	284-290	career	abstract[18]	new[18]	_	_
+
+#Text=Broadhurst has served with the Metropolitan Police Service for 32 years in uniform , primarily in South-East London .
+6-1	291-301	Broadhurst	person	giv	ana	7-1
+6-2	302-305	has	_	_	_	_
+6-3	306-312	served	_	_	_	_
+6-4	313-317	with	_	_	_	_
+6-5	318-321	the	organization[21]	giv[21]	_	_
+6-6	322-334	Metropolitan	organization[20]|organization[21]	giv[20]|giv[21]	coref	21-15[0_20]
+6-7	335-341	Police	organization[20]|organization[21]	giv[20]|giv[21]	_	_
+6-8	342-349	Service	organization[21]	giv[21]	_	_
+6-9	350-353	for	_	_	_	_
+6-10	354-356	32	time[22]	new[22]	_	_
+6-11	357-362	years	time[22]	new[22]	_	_
+6-12	363-365	in	_	_	_	_
+6-13	366-373	uniform	abstract	new	_	_
+6-14	374-375	,	_	_	_	_
+6-15	376-385	primarily	place[25]	giv[25]	coref	17-11[0_25]
+6-16	386-388	in	place[25]	giv[25]	_	_
+6-17	389-399	South-East	place|place[25]	new|giv[25]	_	_
+6-18	400-406	London	place[25]	giv[25]	_	_
+6-19	407-408	.	_	_	_	_
+
+#Text=He was , for four years , Sutton Borough Commander and Lambeth deputy Borough Commander for a year .
+7-1	409-411	He	person	giv	coref	7-5[28_0]
+7-2	412-415	was	_	_	_	_
+7-3	416-417	,	_	_	_	_
+7-4	418-421	for	_	_	_	_
+7-5	422-426	four	time[27]|person[28]|person[29]	new[27]|giv[28]|giv[29]	coref|coref|coref	7-5[29_28]|7-12[31_29]|8-2[33_27]
+7-6	427-432	years	time[27]|person[28]|person[29]	new[27]|giv[28]|giv[29]	_	_
+7-7	433-434	,	person[28]|person[29]	giv[28]|giv[29]	_	_
+7-8	435-441	Sutton	person[28]|person[29]	giv[28]|giv[29]	_	_
+7-9	442-449	Borough	person[28]|person[29]	giv[28]|giv[29]	_	_
+7-10	450-459	Commander	person[28]|person[29]	giv[28]|giv[29]	_	_
+7-11	460-463	and	person[29]	giv[29]	_	_
+7-12	464-471	Lambeth	person[29]|place|person[31]	giv[29]|new|giv[31]	ana	8-4[0_31]
+7-13	472-478	deputy	person[29]|person[31]	giv[29]|giv[31]	_	_
+7-14	479-486	Borough	person[29]|person[31]	giv[29]|giv[31]	_	_
+7-15	487-496	Commander	person[29]|person[31]	giv[29]|giv[31]	_	_
+7-16	497-500	for	person[29]|person[31]	giv[29]|giv[31]	_	_
+7-17	501-502	a	person[29]|person[31]|time[32]	giv[29]|giv[31]|new[32]	_	_
+7-18	503-507	year	person[29]|person[31]|time[32]	giv[29]|giv[31]|new[32]	_	_
+7-19	508-509	.	_	_	_	_
+
+#Text=For four years he was the Link Commander for South East London , with responsibility overall for all eight Boroughs in that area .
+8-1	510-513	For	_	_	_	_
+8-2	514-518	four	time[33]	giv[33]	_	_
+8-3	519-524	years	time[33]	giv[33]	_	_
+8-4	525-527	he	person	giv	coref	8-6[35_0]
+8-5	528-531	was	_	_	_	_
+8-6	532-535	the	person[35]	giv[35]	ana	9-4[0_35]
+8-7	536-540	Link	person[35]	giv[35]	_	_
+8-8	541-550	Commander	person[35]	giv[35]	_	_
+8-9	551-554	for	person[35]	giv[35]	_	_
+8-10	555-560	South	person[35]|person[36]	giv[35]|new[36]	_	_
+8-11	561-565	East	person[35]|person[36]	giv[35]|new[36]	_	_
+8-12	566-572	London	person[35]|person[36]	giv[35]|new[36]	_	_
+8-13	573-574	,	person[35]	giv[35]	_	_
+8-14	575-579	with	person[35]	giv[35]	_	_
+8-15	580-594	responsibility	person[35]|abstract[37]	giv[35]|new[37]	_	_
+8-16	595-602	overall	person[35]|abstract[37]	giv[35]|new[37]	_	_
+8-17	603-606	for	person[35]|abstract[37]	giv[35]|new[37]	_	_
+8-18	607-610	all	person[35]|abstract[37]|place[38]	giv[35]|new[37]|new[38]	_	_
+8-19	611-616	eight	person[35]|abstract[37]|place[38]	giv[35]|new[37]|new[38]	_	_
+8-20	617-625	Boroughs	person[35]|abstract[37]|place[38]	giv[35]|new[37]|new[38]	_	_
+8-21	626-628	in	person[35]|abstract[37]|place[38]	giv[35]|new[37]|new[38]	_	_
+8-22	629-633	that	person[35]|abstract[37]|place[38]|place[39]	giv[35]|new[37]|new[38]|new[39]	_	_
+8-23	634-638	area	person[35]|abstract[37]|place[38]|place[39]	giv[35]|new[37]|new[38]|new[39]	_	_
+8-24	639-640	.	_	_	_	_
+
+#Text=In July 2006 he was appointed Commander Public Order and Pan London Operational Support .
+9-1	641-643	In	_	_	_	_
+9-2	644-648	July	time[40]	new[40]	_	_
+9-3	649-653	2006	time[40]|time	new[40]|new	_	_
+9-4	654-656	he	person	giv	coref	9-7[43_0]
+9-5	657-660	was	_	_	_	_
+9-6	661-670	appointed	_	_	_	_
+9-7	671-680	Commander	person[43]	giv[43]	ana	10-1[0_43]
+9-8	681-687	Public	person[43]	giv[43]	_	_
+9-9	688-693	Order	person[43]	giv[43]	_	_
+9-10	694-697	and	person[43]	giv[43]	_	_
+9-11	698-701	Pan	person[43]|person[44]	giv[43]|giv[44]	_	_
+9-12	702-708	London	person[43]|person[44]	giv[43]|giv[44]	_	_
+9-13	709-720	Operational	person[43]	giv[43]	_	_
+9-14	721-728	Support	person[43]	giv[43]	_	_
+9-15	729-730	.	_	_	_	_
+
+#Text=He has experience as a hostage negotiator , during the Stansted Airport Afghan Airlines hi-jack he was the Negotiator Team Leader .
+10-1	731-733	He	person	giv	ana	10-16
+10-2	734-737	has	_	_	_	_
+10-3	738-748	experience	abstract[46]	new[46]	_	_
+10-4	749-751	as	abstract[46]	new[46]	_	_
+10-5	752-753	a	abstract[46]|person[48]	new[46]|new[48]	coref	13-16[0_48]
+10-6	754-761	hostage	abstract[46]|abstract|person[48]	new[46]|new|new[48]	_	_
+10-7	762-772	negotiator	abstract[46]|person[48]	new[46]|new[48]	_	_
+10-8	773-774	,	_	_	_	_
+10-9	775-781	during	_	_	_	_
+10-10	782-785	the	time[52]	new[52]	_	_
+10-11	786-794	Stansted	person|place[50]|time[52]	new|new[50]|new[52]	_	_
+10-12	795-802	Airport	place[50]|time[52]	new[50]|new[52]	_	_
+10-13	803-809	Afghan	organization[51]|time[52]	new[51]|new[52]	_	_
+10-14	810-818	Airlines	organization[51]|time[52]	new[51]|new[52]	_	_
+10-15	819-826	hi-jack	time[52]	new[52]	_	_
+10-16	827-829	he	person	giv	coref	10-18[55_0]
+10-17	830-833	was	_	_	_	_
+10-18	834-837	the	person[55]	giv[55]	coref	21-9[0_55]
+10-19	838-848	Negotiator	person[55]	giv[55]	_	_
+10-20	849-853	Team	organization|person[55]	new|giv[55]	coref	27-2[163_0]
+10-21	854-860	Leader	person[55]	giv[55]	_	_
+10-22	861-862	.	_	_	_	_
+
+#Text=At the longest siege in the UK , the Hackney Siege , which ended with the death of Eli Hall , [ 2 ]
+11-1	863-865	At	_	_	_	_
+11-2	866-869	the	event[56]	new[56]	appos	11-9[59_56]
+11-3	870-877	longest	event[56]	new[56]	_	_
+11-4	878-883	siege	event[56]	new[56]	_	_
+11-5	884-886	in	event[56]	new[56]	_	_
+11-6	887-890	the	event[56]|place[57]	new[56]|new[57]	_	_
+11-7	891-893	UK	event[56]|place[57]	new[56]|new[57]	_	_
+11-8	894-895	,	_	_	_	_
+11-9	896-899	the	event[59]	giv[59]	_	_
+11-10	900-907	Hackney	person|event[59]	new|giv[59]	_	_
+11-11	908-913	Siege	event[59]	giv[59]	_	_
+11-12	914-915	,	event[59]	giv[59]	_	_
+11-13	916-921	which	event[59]	giv[59]	_	_
+11-14	922-927	ended	event[59]	giv[59]	_	_
+11-15	928-932	with	event[59]	giv[59]	_	_
+11-16	933-936	the	event[59]|event[60]	giv[59]|new[60]	_	_
+11-17	937-942	death	event[59]|event[60]	giv[59]|new[60]	_	_
+11-18	943-945	of	event[59]|event[60]	giv[59]|new[60]	_	_
+11-19	946-949	Eli	event[59]|event[60]|person[61]	giv[59]|new[60]|new[61]	ana	12-1[0_61]
+11-20	950-954	Hall	event[59]|event[60]|person[61]	giv[59]|new[60]|new[61]	_	_
+11-21	955-956	,	_	_	_	_
+11-22	957-958	[	_	_	_	_
+11-23	959-960	2	abstract	new	_	_
+11-24	961-962	]	_	_	_	_
+
+#Text=he was the Gold Commander -operational chief officer , .
+12-1	963-965	he	person	giv	coref	12-3[64_0]
+12-2	966-969	was	_	_	_	_
+12-3	970-973	the	person[64]	giv[64]	appos	12-6[65_64]
+12-4	974-978	Gold	person[64]	giv[64]	_	_
+12-5	979-988	Commander	person[64]	giv[64]	_	_
+12-6	989-1001	-operational	person[65]	giv[65]	ana	13-1[0_65]
+12-7	1002-1007	chief	person[65]	giv[65]	_	_
+12-8	1008-1015	officer	person[65]	giv[65]	_	_
+12-9	1016-1017	,	_	_	_	_
+12-10	1018-1019	.	_	_	_	_
+
+#Text=He speaks at National Siege Management courses , and has contributed to the FBI Crisis Negotiator Course at the United States FBI Academy .
+13-1	1020-1022	He	person	giv	ana	14-3
+13-2	1023-1029	speaks	_	_	_	_
+13-3	1030-1032	at	_	_	_	_
+13-4	1033-1041	National	place[69]	new[69]	_	_
+13-5	1042-1047	Siege	event|organization[68]|place[69]	new|new[68]|new[69]	_	_
+13-6	1048-1058	Management	organization[68]|place[69]	new[68]|new[69]	_	_
+13-7	1059-1066	courses	place[69]	new[69]	_	_
+13-8	1067-1068	,	_	_	_	_
+13-9	1069-1072	and	_	_	_	_
+13-10	1073-1076	has	_	_	_	_
+13-11	1077-1088	contributed	_	_	_	_
+13-12	1089-1091	to	_	_	_	_
+13-13	1092-1095	the	abstract[73]	new[73]	_	_
+13-14	1096-1099	FBI	organization|abstract[73]	new|new[73]	coref	13-22
+13-15	1100-1106	Crisis	person|abstract[73]	new|new[73]	_	_
+13-16	1107-1117	Negotiator	person|abstract[73]	giv|new[73]	_	_
+13-17	1118-1124	Course	abstract[73]	new[73]	_	_
+13-18	1125-1127	at	abstract[73]	new[73]	_	_
+13-19	1128-1131	the	abstract[73]|organization[76]	new[73]|new[76]	_	_
+13-20	1132-1138	United	abstract[73]|place[74]|organization[76]	new[73]|new[74]|new[76]	_	_
+13-21	1139-1145	States	abstract[73]|place[74]|organization[76]	new[73]|new[74]|new[76]	_	_
+13-22	1146-1149	FBI	abstract[73]|organization|organization[76]	new[73]|giv|new[76]	_	_
+13-23	1150-1157	Academy	abstract[73]|organization[76]	new[73]|new[76]	_	_
+13-24	1158-1159	.	_	_	_	_
+
+#Text=Since 1990 he has commanded public order events , including many large-scale demonstrations .
+14-1	1160-1165	Since	_	_	_	_
+14-2	1166-1170	1990	time	new	_	_
+14-3	1171-1173	he	person	giv	ana	15-1
+14-4	1174-1177	has	_	_	_	_
+14-5	1178-1187	commanded	_	_	_	_
+14-6	1188-1194	public	event[80]	new[80]	coref	15-3[83_80]
+14-7	1195-1200	order	abstract|event[80]	giv|new[80]	coref	22-6[127_0]
+14-8	1201-1207	events	event[80]	new[80]	_	_
+14-9	1208-1209	,	event[80]	new[80]	_	_
+14-10	1210-1219	including	event[80]	new[80]	_	_
+14-11	1220-1224	many	event[80]|event[81]	new[80]|new[81]	_	_
+14-12	1225-1236	large-scale	event[80]|event[81]	new[80]|new[81]	_	_
+14-13	1237-1251	demonstrations	event[80]|event[81]	new[80]|new[81]	_	_
+14-14	1252-1253	.	_	_	_	_
+
+#Text=He commands ceremonial events such as the State Opening of Parliament , and Trooping the Colour .
+15-1	1254-1256	He	person	giv	coref	16-16[95_0]
+15-2	1257-1265	commands	_	_	_	_
+15-3	1266-1276	ceremonial	event[83]	giv[83]	_	_
+15-4	1277-1283	events	event[83]	giv[83]	_	_
+15-5	1284-1288	such	event[83]	giv[83]	_	_
+15-6	1289-1291	as	event[83]	giv[83]	_	_
+15-7	1292-1295	the	event[83]|event[85]	giv[83]|new[85]	_	_
+15-8	1296-1301	State	event[83]|organization|event[85]	giv[83]|new|new[85]	_	_
+15-9	1302-1309	Opening	event[83]|event[85]	giv[83]|new[85]	_	_
+15-10	1310-1312	of	event[83]|event[85]	giv[83]|new[85]	_	_
+15-11	1313-1323	Parliament	event[83]|event[85]|place	giv[83]|new[85]|new	_	_
+15-12	1324-1325	,	_	_	_	_
+15-13	1326-1329	and	_	_	_	_
+15-14	1330-1338	Trooping	_	_	_	_
+15-15	1339-1342	the	abstract[87]	new[87]	_	_
+15-16	1343-1349	Colour	abstract[87]	new[87]	_	_
+15-17	1350-1351	.	_	_	_	_
+
+#Text=At the wedding of the Prince of Wales and the Duchess of Cornwall he was the Gold Commander .
+16-1	1352-1354	At	_	_	_	_
+16-2	1355-1358	the	event[88]	new[88]	_	_
+16-3	1359-1366	wedding	event[88]	new[88]	_	_
+16-4	1367-1369	of	event[88]	new[88]	_	_
+16-5	1370-1373	the	event[88]|person[89]|person[90]	new[88]|new[89]|new[90]	ana	29-4[0_90]
+16-6	1374-1380	Prince	event[88]|person[89]|person[90]	new[88]|new[89]|new[90]	_	_
+16-7	1381-1383	of	event[88]|person[89]|person[90]	new[88]|new[89]|new[90]	_	_
+16-8	1384-1389	Wales	event[88]|person[89]|person[90]|place	new[88]|new[89]|new[90]|new	_	_
+16-9	1390-1393	and	event[88]|person[90]	new[88]|new[90]	_	_
+16-10	1394-1397	the	event[88]|person[90]|person[92]	new[88]|new[90]|new[92]	ana	16-14[0_92]
+16-11	1398-1405	Duchess	event[88]|person[90]|person[92]	new[88]|new[90]|new[92]	_	_
+16-12	1406-1408	of	event[88]|person[90]|person[92]	new[88]|new[90]|new[92]	_	_
+16-13	1409-1417	Cornwall	event[88]|person[90]|person[92]|place	new[88]|new[90]|new[92]|new	_	_
+16-14	1418-1420	he	person	giv	ana	17-3
+16-15	1421-1424	was	_	_	_	_
+16-16	1425-1428	the	person[95]	giv[95]	coref	22-4[126_95]
+16-17	1429-1433	Gold	person[95]	giv[95]	_	_
+16-18	1434-1443	Commander	person[95]	giv[95]	_	_
+16-19	1444-1445	.	_	_	_	_
+
+#Text=In 2007 he was in charge of policing for the London leg of the Tour de France and for the 2008 Summer Olympics torch relay .
+17-1	1446-1448	In	_	_	_	_
+17-2	1449-1453	2007	time	new	_	_
+17-3	1454-1456	he	person	giv	ana	18-1
+17-4	1457-1460	was	_	_	_	_
+17-5	1461-1463	in	_	_	_	_
+17-6	1464-1470	charge	_	_	_	_
+17-7	1471-1473	of	_	_	_	_
+17-8	1474-1482	policing	event[98]	new[98]	coref	22-23[134_98]
+17-9	1483-1486	for	event[98]	new[98]	_	_
+17-10	1487-1490	the	event[98]|event[100]	new[98]|new[100]	_	_
+17-11	1491-1497	London	event[98]|place|event[100]	new[98]|giv|new[100]	coref	19-11
+17-12	1498-1501	leg	event[98]|event[100]	new[98]|new[100]	_	_
+17-13	1502-1504	of	event[98]|event[100]	new[98]|new[100]	_	_
+17-14	1505-1508	the	event[98]|event[100]|event[101]	new[98]|new[100]|new[101]	_	_
+17-15	1509-1513	Tour	event[98]|event[100]|event[101]	new[98]|new[100]|new[101]	_	_
+17-16	1514-1516	de	event[98]|event[100]|event[101]|place[102]	new[98]|new[100]|new[101]|new[102]	_	_
+17-17	1517-1523	France	event[98]|event[100]|event[101]|place[102]	new[98]|new[100]|new[101]|new[102]	_	_
+17-18	1524-1527	and	_	_	_	_
+17-19	1528-1531	for	_	_	_	_
+17-20	1532-1535	the	event[106]	new[106]	_	_
+17-21	1536-1540	2008	event[106]	new[106]	_	_
+17-22	1541-1547	Summer	person|event[104]|event[106]	new|giv[104]|new[106]	coref	18-7[109_104]
+17-23	1548-1556	Olympics	event[104]|event[106]	giv[104]|new[106]	_	_
+17-24	1557-1562	torch	object|event[106]	new|new[106]	_	_
+17-25	1563-1568	relay	event[106]	new[106]	_	_
+17-26	1569-1570	.	_	_	_	_
+
+#Text=He is leading operational planning for the 2012 Olympics .
+18-1	1571-1573	He	person	giv	ana	19-1
+18-2	1574-1576	is	_	_	_	_
+18-3	1577-1584	leading	_	_	_	_
+18-4	1585-1596	operational	abstract[108]	new[108]	_	_
+18-5	1597-1605	planning	abstract[108]	new[108]	_	_
+18-6	1606-1609	for	abstract[108]	new[108]	_	_
+18-7	1610-1613	the	abstract[108]|event[109]	new[108]|giv[109]	coref	22-28[135_109]
+18-8	1614-1618	2012	abstract[108]|event[109]	new[108]|giv[109]	_	_
+18-9	1619-1627	Olympics	abstract[108]|event[109]	new[108]|giv[109]	_	_
+18-10	1628-1629	.	_	_	_	_
+
+#Text=He was involved in policing the 2009 Gaza Protests in London . [ 3 ]
+19-1	1630-1632	He	person	giv	_	_
+19-2	1633-1636	was	_	_	_	_
+19-3	1637-1645	involved	_	_	_	_
+19-4	1646-1648	in	_	_	_	_
+19-5	1649-1657	policing	_	_	_	_
+19-6	1658-1661	the	event[112]	new[112]	coref	23-1[139_112]
+19-7	1662-1666	2009	event[112]	new[112]	_	_
+19-8	1667-1671	Gaza	place|event[112]	new|new[112]	_	_
+19-9	1672-1680	Protests	event[112]	new[112]	_	_
+19-10	1681-1683	in	event[112]	new[112]	_	_
+19-11	1684-1690	London	event[112]|place	new[112]|giv	coref	24-17
+19-12	1691-1692	.	_	_	_	_
+19-13	1693-1694	[	_	_	_	_
+19-14	1695-1696	3	abstract	new	_	_
+19-15	1697-1698	]	_	_	_	_
+
+#Text=Honours
+20-1	1699-1706	Honours	abstract	new	coref	21-6
+
+#Text=In the 2005 Queens Birthday Honours list , Broadhurst was awarded the Queen 's Police Medal . [ 4 ]
+21-1	1707-1709	In	_	_	_	_
+21-2	1710-1713	the	abstract[119]	new[119]	_	_
+21-3	1714-1718	2005	abstract[119]	new[119]	_	_
+21-4	1719-1725	Queens	place|abstract[119]	new|new[119]	_	_
+21-5	1726-1734	Birthday	event|abstract[119]	new|new[119]	coref	22-18
+21-6	1735-1742	Honours	abstract|abstract[119]	giv|new[119]	coref	22-16[131_0]
+21-7	1743-1747	list	abstract[119]	new[119]	_	_
+21-8	1748-1749	,	_	_	_	_
+21-9	1750-1760	Broadhurst	person	giv	ana	22-1
+21-10	1761-1764	was	_	_	_	_
+21-11	1765-1772	awarded	_	_	_	_
+21-12	1773-1776	the	object[123]	new[123]	_	_
+21-13	1777-1782	Queen	person[121]|object[123]	new[121]|new[123]	_	_
+21-14	1783-1785	's	person[121]|object[123]	new[121]|new[123]	_	_
+21-15	1786-1792	Police	organization|object[123]	giv|new[123]	coref	27-9[166_0]
+21-16	1793-1798	Medal	object[123]	new[123]	_	_
+21-17	1799-1800	.	_	_	_	_
+21-18	1801-1802	[	_	_	_	_
+21-19	1803-1804	4	abstract	new	_	_
+21-20	1805-1806	]	_	_	_	_
+
+#Text=He was appointed Officer of the Order of the British Empire ( OBE ) in the 2013 Birthday Honours for services to the public order policing of the Olympics . [ 5 ] [ 6 ]
+22-1	1807-1809	He	person	giv	ana	24-1
+22-2	1810-1813	was	_	_	_	_
+22-3	1814-1823	appointed	_	_	_	_
+22-4	1824-1831	Officer	person[126]	giv[126]	coref	24-7[0_126]
+22-5	1832-1834	of	person[126]	giv[126]	_	_
+22-6	1835-1838	the	person[126]|abstract[127]	giv[126]|giv[127]	coref	22-24[133_127]
+22-7	1839-1844	Order	person[126]|abstract[127]	giv[126]|giv[127]	_	_
+22-8	1845-1847	of	person[126]|abstract[127]	giv[126]|giv[127]	_	_
+22-9	1848-1851	the	person[126]|abstract[127]|place[128]	giv[126]|giv[127]|new[128]	_	_
+22-10	1852-1859	British	person[126]|abstract[127]|place[128]	giv[126]|giv[127]|new[128]	_	_
+22-11	1860-1866	Empire	person[126]|abstract[127]|place[128]	giv[126]|giv[127]|new[128]	_	_
+22-12	1867-1868	(	_	_	_	_
+22-13	1869-1872	OBE	abstract	new	_	_
+22-14	1873-1874	)	_	_	_	_
+22-15	1875-1877	in	_	_	_	_
+22-16	1878-1881	the	abstract[131]	giv[131]	_	_
+22-17	1882-1886	2013	abstract[131]	giv[131]	_	_
+22-18	1887-1895	Birthday	event|abstract[131]	giv|giv[131]	_	_
+22-19	1896-1903	Honours	abstract[131]	giv[131]	_	_
+22-20	1904-1907	for	_	_	_	_
+22-21	1908-1916	services	abstract[132]	new[132]	_	_
+22-22	1917-1919	to	abstract[132]	new[132]	_	_
+22-23	1920-1923	the	abstract[132]|event[134]	new[132]|giv[134]	_	_
+22-24	1924-1930	public	abstract[132]|abstract[133]|event[134]	new[132]|giv[133]|giv[134]	_	_
+22-25	1931-1936	order	abstract[132]|abstract[133]|event[134]	new[132]|giv[133]|giv[134]	_	_
+22-26	1937-1945	policing	abstract[132]|event[134]	new[132]|giv[134]	_	_
+22-27	1946-1948	of	abstract[132]|event[134]	new[132]|giv[134]	_	_
+22-28	1949-1952	the	abstract[132]|event[134]|event[135]	new[132]|giv[134]|giv[135]	_	_
+22-29	1953-1961	Olympics	abstract[132]|event[134]|event[135]	new[132]|giv[134]|giv[135]	_	_
+22-30	1962-1963	.	_	_	_	_
+22-31	1964-1965	[	_	_	_	_
+22-32	1966-1967	5	abstract	new	_	_
+22-33	1968-1969	]	_	_	_	_
+22-34	1970-1971	[	_	_	_	_
+22-35	1972-1973	6	abstract	new	_	_
+22-36	1974-1975	]	_	_	_	_
+
+#Text=G20 protests
+23-1	1976-1979	G20	place|event[139]	new|giv[139]	coref	28-14[182_0]
+23-2	1980-1988	protests	event[139]	giv[139]	_	_
+
+#Text=He was in overall charge ( Gold ) of Operation Glencoe , during the 2009 G-20 London summit protests .
+24-1	1989-1991	He	person	giv	coref	31-6
+24-2	1992-1995	was	_	_	_	_
+24-3	1996-1998	in	_	_	_	_
+24-4	1999-2006	overall	abstract[141]	new[141]	_	_
+24-5	2007-2013	charge	abstract[141]	new[141]	_	_
+24-6	2014-2015	(	_	_	_	_
+24-7	2016-2020	Gold	person	giv	ana	25-4
+24-8	2021-2022	)	_	_	_	_
+24-9	2023-2025	of	_	_	_	_
+24-10	2026-2035	Operation	event[143]	new[143]	coref	26-23[160_143]
+24-11	2036-2043	Glencoe	event[143]	new[143]	_	_
+24-12	2044-2045	,	_	_	_	_
+24-13	2046-2052	during	_	_	_	_
+24-14	2053-2056	the	event[147]	new[147]	_	_
+24-15	2057-2061	2009	event[147]	new[147]	_	_
+24-16	2062-2066	G-20	place|event[147]	new|new[147]	_	_
+24-17	2067-2073	London	place|event[147]	giv|new[147]	coref	25-15
+24-18	2074-2080	summit	event|event[147]	new|new[147]	coref	27-33[174_0]
+24-19	2081-2089	protests	event[147]	new[147]	_	_
+24-20	2090-2091	.	_	_	_	_
+
+#Text=On 9 April he said " The eyes of the world were focused on London .
+25-1	2092-2094	On	_	_	_	_
+25-2	2095-2096	9	time[148]	new[148]	coref	31-41[0_148]
+25-3	2097-2102	April	time[148]|abstract	new[148]|new	ana	26-2
+25-4	2103-2105	he	person	giv	ana	27-2
+25-5	2106-2110	said	_	_	_	_
+25-6	2111-2112	"	_	_	_	_
+25-7	2113-2116	The	object[151]	new[151]	_	_
+25-8	2117-2121	eyes	object[151]	new[151]	_	_
+25-9	2122-2124	of	object[151]	new[151]	_	_
+25-10	2125-2128	the	object[151]|place[152]	new[151]|new[152]	_	_
+25-11	2129-2134	world	object[151]|place[152]	new[151]|new[152]	_	_
+25-12	2135-2139	were	_	_	_	_
+25-13	2140-2147	focused	_	_	_	_
+25-14	2148-2150	on	_	_	_	_
+25-15	2151-2157	London	place	giv	_	_
+25-16	2158-2159	.	_	_	_	_
+
+#Text=While it was extremely hard work , I am happy with the way the day progressed , as the overall mood of the event was good . " [ 7 ]
+26-1	2160-2165	While	_	_	_	_
+26-2	2166-2168	it	abstract	giv	coref	26-4[155_0]
+26-3	2169-2172	was	_	_	_	_
+26-4	2173-2182	extremely	abstract[155]	giv[155]	_	_
+26-5	2183-2187	hard	abstract[155]	giv[155]	_	_
+26-6	2188-2192	work	abstract[155]	giv[155]	_	_
+26-7	2193-2194	,	_	_	_	_
+26-8	2195-2196	I	person	acc	_	_
+26-9	2197-2199	am	_	_	_	_
+26-10	2200-2205	happy	_	_	_	_
+26-11	2206-2210	with	_	_	_	_
+26-12	2211-2214	the	abstract[157]	new[157]	_	_
+26-13	2215-2218	way	abstract[157]	new[157]	_	_
+26-14	2219-2222	the	abstract[157]|time[158]	new[157]|new[158]	_	_
+26-15	2223-2226	day	abstract[157]|time[158]	new[157]|new[158]	_	_
+26-16	2227-2237	progressed	abstract[157]	new[157]	_	_
+26-17	2238-2239	,	_	_	_	_
+26-18	2240-2242	as	_	_	_	_
+26-19	2243-2246	the	abstract[159]	new[159]	_	_
+26-20	2247-2254	overall	abstract[159]	new[159]	_	_
+26-21	2255-2259	mood	abstract[159]	new[159]	_	_
+26-22	2260-2262	of	abstract[159]	new[159]	_	_
+26-23	2263-2266	the	abstract[159]|event[160]	new[159]|giv[160]	_	_
+26-24	2267-2272	event	abstract[159]|event[160]	new[159]|giv[160]	_	_
+26-25	2273-2276	was	_	_	_	_
+26-26	2277-2281	good	_	_	_	_
+26-27	2282-2283	.	_	_	_	_
+26-28	2284-2285	"	_	_	_	_
+26-29	2286-2287	[	_	_	_	_
+26-30	2288-2289	7	abstract	new	_	_
+26-31	2290-2291	]	_	_	_	_
+
+#Text=With his team he faces questioning by the Metropolitan Police Authority about the death of Ian Tomlinson , and also face questions about whether the stark warnings of violence he gave before the summit fuelled confrontation . [ 8 ]
+27-1	2292-2296	With	_	_	_	_
+27-2	2297-2300	his	person|organization[163]	giv|giv[163]	ana	27-4
+27-3	2301-2305	team	organization[163]	giv[163]	_	_
+27-4	2306-2308	he	person	giv	ana	27-30
+27-5	2309-2314	faces	_	_	_	_
+27-6	2315-2326	questioning	event[165]	new[165]	_	_
+27-7	2327-2329	by	event[165]	new[165]	_	_
+27-8	2330-2333	the	event[165]|organization[167]	new[165]|new[167]	_	_
+27-9	2334-2346	Metropolitan	event[165]|organization[166]|organization[167]	new[165]|giv[166]|new[167]	coref	29-8[0_166]
+27-10	2347-2353	Police	event[165]|organization[166]|organization[167]	new[165]|giv[166]|new[167]	_	_
+27-11	2354-2363	Authority	event[165]|organization[167]	new[165]|new[167]	_	_
+27-12	2364-2369	about	_	_	_	_
+27-13	2370-2373	the	event[168]	new[168]	_	_
+27-14	2374-2379	death	event[168]	new[168]	_	_
+27-15	2380-2382	of	event[168]	new[168]	_	_
+27-16	2383-2386	Ian	event[168]|person[169]	new[168]|new[169]	_	_
+27-17	2387-2396	Tomlinson	event[168]|person[169]	new[168]|new[169]	_	_
+27-18	2397-2398	,	_	_	_	_
+27-19	2399-2402	and	_	_	_	_
+27-20	2403-2407	also	_	_	_	_
+27-21	2408-2412	face	_	_	_	_
+27-22	2413-2422	questions	abstract	new	_	_
+27-23	2423-2428	about	_	_	_	_
+27-24	2429-2436	whether	_	_	_	_
+27-25	2437-2440	the	abstract[171]	new[171]	_	_
+27-26	2441-2446	stark	abstract[171]	new[171]	_	_
+27-27	2447-2455	warnings	abstract[171]	new[171]	_	_
+27-28	2456-2458	of	abstract[171]	new[171]	_	_
+27-29	2459-2467	violence	abstract[171]|abstract	new[171]|new	_	_
+27-30	2468-2470	he	abstract[171]|person	new[171]|giv	ana	28-1
+27-31	2471-2475	gave	abstract[171]	new[171]	_	_
+27-32	2476-2482	before	abstract[171]	new[171]	_	_
+27-33	2483-2486	the	abstract[171]|event[174]	new[171]|giv[174]	_	_
+27-34	2487-2493	summit	abstract[171]|event[174]	new[171]|giv[174]	_	_
+27-35	2494-2501	fuelled	_	_	_	_
+27-36	2502-2515	confrontation	event	new	_	_
+27-37	2516-2517	.	_	_	_	_
+27-38	2518-2519	[	_	_	_	_
+27-39	2520-2521	8	abstract	new	_	_
+27-40	2522-2523	]	_	_	_	_
+
+#Text=He was accused of misleading MP 's in a Select Committee report on the G20 .
+28-1	2524-2526	He	person	giv	ana	29-1
+28-2	2527-2530	was	_	_	_	_
+28-3	2531-2538	accused	_	_	_	_
+28-4	2539-2541	of	_	_	_	_
+28-5	2542-2552	misleading	_	_	_	_
+28-6	2553-2555	MP	person[178]	new[178]	coref	29-13[187_178]
+28-7	2556-2558	's	person[178]	new[178]	_	_
+28-8	2559-2561	in	_	_	_	_
+28-9	2562-2563	a	abstract[181]	new[181]	_	_
+28-10	2564-2570	Select	person|abstract[181]	new|new[181]	_	_
+28-11	2571-2580	Committee	organization|abstract[181]	new|new[181]	_	_
+28-12	2581-2587	report	abstract[181]	new[181]	_	_
+28-13	2588-2590	on	abstract[181]	new[181]	_	_
+28-14	2591-2594	the	abstract[181]|place[182]	new[181]|giv[182]	_	_
+28-15	2595-2598	G20	abstract[181]|place[182]	new[181]|giv[182]	_	_
+28-16	2599-2600	.	_	_	_	_
+
+#Text=He incorrectly informed them that no undercover police officers were operating after an MP raised concerns about the use of agent provocateurs .
+29-1	2601-2603	He	person	giv	_	_
+29-2	2604-2615	incorrectly	_	_	_	_
+29-3	2616-2624	informed	_	_	_	_
+29-4	2625-2629	them	person	giv	_	_
+29-5	2630-2634	that	_	_	_	_
+29-6	2635-2637	no	person[186]	new[186]	coref	30-6[192_186]
+29-7	2638-2648	undercover	person[186]	new[186]	_	_
+29-8	2649-2655	police	organization|person[186]	giv|new[186]	_	_
+29-9	2656-2664	officers	person[186]	new[186]	_	_
+29-10	2665-2669	were	_	_	_	_
+29-11	2670-2679	operating	_	_	_	_
+29-12	2680-2685	after	_	_	_	_
+29-13	2686-2688	an	person[187]	giv[187]	_	_
+29-14	2689-2691	MP	person[187]	giv[187]	_	_
+29-15	2692-2698	raised	_	_	_	_
+29-16	2699-2707	concerns	abstract[188]	new[188]	_	_
+29-17	2708-2713	about	abstract[188]	new[188]	_	_
+29-18	2714-2717	the	abstract[188]|event[189]	new[188]|new[189]	ana	30-2[0_189]
+29-19	2718-2721	use	abstract[188]|event[189]	new[188]|new[189]	_	_
+29-20	2722-2724	of	abstract[188]|event[189]	new[188]|new[189]	_	_
+29-21	2725-2730	agent	abstract[188]|event[189]|person[190]	new[188]|new[189]|new[190]	_	_
+29-22	2731-2743	provocateurs	abstract[188]|event[189]|person[190]	new[188]|new[189]|new[190]	_	_
+29-23	2744-2745	.	_	_	_	_
+
+#Text=Later it was revealed that 25 undercover officers were deployed and were mixing with demonstrators .
+30-1	2746-2751	Later	_	_	_	_
+30-2	2752-2754	it	event	giv	ana	31-2
+30-3	2755-2758	was	_	_	_	_
+30-4	2759-2767	revealed	_	_	_	_
+30-5	2768-2772	that	_	_	_	_
+30-6	2773-2775	25	person[192]	giv[192]	coref	31-12[197_192]
+30-7	2776-2786	undercover	person[192]	giv[192]	_	_
+30-8	2787-2795	officers	person[192]	giv[192]	_	_
+30-9	2796-2800	were	_	_	_	_
+30-10	2801-2809	deployed	_	_	_	_
+30-11	2810-2813	and	_	_	_	_
+30-12	2814-2818	were	_	_	_	_
+30-13	2819-2825	mixing	_	_	_	_
+30-14	2826-2830	with	_	_	_	_
+30-15	2831-2844	demonstrators	person	new	_	_
+30-16	2845-2846	.	_	_	_	_
+
+#Text=Once this was revealed , Broadhurst claimed that the deployment of undercover officers was unknown to him , and that the plainclothes officers ( some of whom were filmed with extended batons ) were " evidence gatherers " . [ 9 ]
+31-1	2847-2851	Once	_	_	_	_
+31-2	2852-2856	this	event	giv	_	_
+31-3	2857-2860	was	_	_	_	_
+31-4	2861-2869	revealed	_	_	_	_
+31-5	2870-2871	,	_	_	_	_
+31-6	2872-2882	Broadhurst	person	giv	ana	31-17
+31-7	2883-2890	claimed	_	_	_	_
+31-8	2891-2895	that	_	_	_	_
+31-9	2896-2899	the	event[196]	new[196]	_	_
+31-10	2900-2910	deployment	event[196]	new[196]	_	_
+31-11	2911-2913	of	event[196]	new[196]	_	_
+31-12	2914-2924	undercover	event[196]|person[197]	new[196]|giv[197]	coref	31-21[199_197]
+31-13	2925-2933	officers	event[196]|person[197]	new[196]|giv[197]	_	_
+31-14	2934-2937	was	_	_	_	_
+31-15	2938-2945	unknown	_	_	_	_
+31-16	2946-2948	to	_	_	_	_
+31-17	2949-2952	him	person	giv	_	_
+31-18	2953-2954	,	_	_	_	_
+31-19	2955-2958	and	_	_	_	_
+31-20	2959-2963	that	_	_	_	_
+31-21	2964-2967	the	person[199]	giv[199]	coref	31-36[202_199]
+31-22	2968-2980	plainclothes	person[199]	giv[199]	_	_
+31-23	2981-2989	officers	person[199]	giv[199]	_	_
+31-24	2990-2991	(	person[199]	giv[199]	_	_
+31-25	2992-2996	some	person[199]	giv[199]	_	_
+31-26	2997-2999	of	person[199]	giv[199]	_	_
+31-27	3000-3004	whom	person[199]	giv[199]	_	_
+31-28	3005-3009	were	person[199]	giv[199]	_	_
+31-29	3010-3016	filmed	person[199]	giv[199]	_	_
+31-30	3017-3021	with	person[199]	giv[199]	_	_
+31-31	3022-3030	extended	person[199]|object[200]	giv[199]|new[200]	_	_
+31-32	3031-3037	batons	person[199]|object[200]	giv[199]|new[200]	_	_
+31-33	3038-3039	)	person[199]	giv[199]	_	_
+31-34	3040-3044	were	_	_	_	_
+31-35	3045-3046	"	_	_	_	_
+31-36	3047-3055	evidence	abstract|person[202]	new|giv[202]	_	_
+31-37	3056-3065	gatherers	person[202]	giv[202]	_	_
+31-38	3066-3067	"	_	_	_	_
+31-39	3068-3069	.	_	_	_	_
+31-40	3070-3071	[	_	_	_	_
+31-41	3072-3073	9	time	giv	_	_
+31-42	3074-3075	]	_	_	_	_

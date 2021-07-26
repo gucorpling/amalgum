@@ -1,0 +1,106 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Mathematical Model of the CSC System</segment>
+<segment id="2" parent="1002" relname="preparation">Schematic of the CSC system for the aircraft DC MG is shown in</segment>
+<segment id="3" parent="4" relname="preparation">Figure 2</segment>
+<segment id="4" parent="1003" relname="span">.</segment>
+<segment id="5" parent="1005" relname="span">Power source</segment>
+<segment id="6" parent="5" relname="elaboration">connected to the input side of CSC could be the variable frequency main generators or the auxiliary power units .</segment>
+<segment id="7" parent="1007" relname="span">The input LC filter</segment>
+<segment id="8" parent="7" relname="elaboration">constituted by the inductor L fi and the capacitor C fi attenuates high-frequency harmonics in input currents of CSC .</segment>
+<segment id="9" parent="1002" relname="joint">In practice , part or all of the filter inductance can be provided by the armature inductance of generators .</segment>
+<segment id="10" parent="1002" relname="joint">CSC consists of six switches with reverse blocking capability .</segment>
+<segment id="11" parent="12" relname="condition">If bidirectional power flow is required ,</segment>
+<segment id="12" parent="1011" relname="span">each switch can be composed of two transistors in common-source connection .</segment>
+<segment id="13" parent="1015" relname="span">Otherwise , one transistor and one diode in series could serve as each switch</segment>
+<segment id="14" parent="13" relname="condition">if unidirectional power flow is sufficient .</segment>
+<segment id="15" parent="1017" relname="span">One freewheeling diode can be installed at the output side of CSC</segment>
+<segment id="16" parent="15" relname="purpose">to reduce the conduction loss ,</segment>
+<segment id="17" parent="1016" relname="contrast">yet negative output voltage will be unavailable .</segment>
+<segment id="18" parent="1019" relname="span">An LC filter</segment>
+<segment id="19" parent="1020" relname="span">composed of the inductor L fo and capacitor C fo is installed at the output of CSC</segment>
+<segment id="20" parent="19" relname="purpose">to provide smooth load voltage .</segment>
+<segment id="21" parent="1019" relname="attribution">According to</segment>
+<segment id="22" parent="1023" relname="preparation">Figure 2</segment>
+<segment id="23" parent="1024" relname="span">, continuous model of the input circuit of CSC can be expressed in the state-space form :</segment>
+<segment id="24" parent="23" relname="evidence">( 1 )</segment>
+<segment id="25" parent="1026" relname="span">where u s and i s are the vectors</segment>
+<segment id="26" parent="25" relname="evidence">representing source voltages and currents respectively ;</segment>
+<segment id="27" parent="1027" relname="span">u i and i i are the vectors</segment>
+<segment id="28" parent="1028" relname="joint">representing input voltages and currents of CSC respectively</segment>
+<segment id="29" parent="1029" relname="span">and matrices A i and B i are expressed as :</segment>
+<segment id="30" parent="1030" relname="span">( 2 )</segment>
+<segment id="31" parent="30" relname="elaboration">where R fi is the parasitic resistance of the filter inductor L fi .</segment>
+<segment id="32" parent="1034" relname="span">For simplifying the derivation of prediction models for the output DBPC , differential equations rather than the state-space equation are adopted</segment>
+<segment id="33" parent="32" relname="purpose">to model the output circuit :</segment>
+<segment id="34" parent="1034" relname="evidence">( 3 ) ( 4 )</segment>
+<segment id="35" parent="1035" relname="joint">where u o and i o are the output voltage and current of CSC respectively ;</segment>
+<segment id="36" parent="1036" relname="joint">u L and i L are the load voltage and current respectively</segment>
+<segment id="37" parent="1036" relname="joint">and R fo is the parasitic resistance of the inductor L fo .</segment>
+<segment id="38" parent="1038" relname="preparation">By controlling switches of CSC ,</segment>
+<segment id="39" parent="1039" relname="span">appropriate input current vector i i and output voltage u o can be generated</segment>
+<segment id="40" parent="39" relname="purpose">to obtain desired source current vector i s , output current i o and load voltage u L.</segment>
+<segment id="41" parent="42" relname="attribution">According to the principle of CSC , there are nine valid switching states in total ,</segment>
+<segment id="42" parent="1041" relname="span">as listed in Table 1 .</segment>
+<segment id="43" parent="1043" relname="background">The first six states generate active i i and non-zero u o.</segment>
+<segment id="44" parent="1044" relname="span">In Table 1 , uxy denotes the input line – line voltage between phase x and phase y ,</segment>
+<segment id="45" parent="1045" relname="span">where x , y ∈</segment>
+<segment id="46" parent="45" relname="elaboration">{ A , B , C } .</segment>
+<segment id="47" parent="1046" relname="same_unit">The last three states generate zero i i and u o.</segment>
+<segment id="48" parent="49" relname="condition">If a freewheeling diode is adopted ,</segment>
+<segment id="49" parent="1047" relname="span">these zero states can be replaced by the on-state of the freewheeling diode .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1005" type="span" parent="1002" relname="joint"/>
+<group id="1007" type="span" parent="1002" relname="joint"/>
+<group id="1011" type="span" parent="1002" relname="joint"/>
+<group id="1013" type="span" parent="1002" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="span"/>
+<group id="1015" type="span" parent="1014" relname="span"/>
+<group id="1016" type="multinuc" parent="1015" relname="elaboration"/>
+<group id="1017" type="span" parent="1016" relname="contrast"/>
+<group id="1018" type="span" parent="1014" relname="background"/>
+<group id="1019" type="span" parent="1018" relname="span"/>
+<group id="1020" type="span" parent="18" relname="elaboration"/>
+<group id="1022" type="span" parent="1002" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="span"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="elaboration"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="1026" relname="elaboration"/>
+<group id="1028" type="multinuc" parent="27" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1032" type="span" parent="1002" relname="joint"/>
+<group id="1033" type="span" parent="1032" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="span"/>
+<group id="1035" type="multinuc" parent="1033" relname="elaboration"/>
+<group id="1036" type="multinuc" parent="1035" relname="joint"/>
+<group id="1037" type="span" parent="1002" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1041" type="span" parent="1038" relname="joint"/>
+<group id="1042" type="span" parent="1038" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="span"/>
+<group id="1044" type="span" parent="1046" relname="background"/>
+<group id="1045" type="span" parent="44" relname="elaboration"/>
+<group id="1046" type="multinuc" parent="1043" relname="span"/>
+<group id="1047" type="span" parent="1046" relname="same_unit"/>
+	</body>
+</rst>

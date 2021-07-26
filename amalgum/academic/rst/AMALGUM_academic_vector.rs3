@@ -1,0 +1,202 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Methods</segment>
+<segment id="2" parent="1002" relname="preparation">2.1. Materials and Experimental Setup</segment>
+<segment id="3" parent="1004" relname="concession">The analysis of APT network attack packets is not new technology ,</segment>
+<segment id="4" parent="1004" relname="joint">but it has become an essential part of network administrators and information security</segment>
+<segment id="5" parent="1005" relname="span">and is used</segment>
+<segment id="6" parent="5" relname="purpose">to analyze regular activities .</segment>
+<segment id="7" parent="1006" relname="joint">In the past , it usually applied to the analysis of network behavior or debugging of the network environment .</segment>
+<segment id="8" parent="1008" relname="span">In the current network milieu ,</segment>
+<segment id="9" parent="10" relname="circumstance">where information security incidents are frequent ,</segment>
+<segment id="10" parent="1009" relname="span">this investigation has become regular and essential .</segment>
+<segment id="11" parent="1012" relname="span">Side recording of network packets from a target host can provide information about events</segment>
+<segment id="12" parent="1013" relname="span">that enables even more information</segment>
+<segment id="13" parent="12" relname="purpose">to be obtained through analysis .</segment>
+<segment id="14" parent="1014" relname="same_unit">Therefore ,</segment>
+<segment id="15" parent="1016" relname="span">while facing current popular APT attacks</segment>
+<segment id="16" parent="15" relname="elaboration">hidden behind communication behavior , and even in the communication content ,</segment>
+<segment id="17" parent="1017" relname="span">it is possible to obtain key information</segment>
+<segment id="18" parent="17" relname="means">by using network packet analysis technology .</segment>
+<segment id="19" parent="1019" relname="span">In this study , a comparison has been made between the correct rate of APT network attack detection</segment>
+<segment id="20" parent="1021" relname="attribution">using the NSL-KDD data sets and PCA dimensionality reduction technology and four machine learning classification algorithms :</segment>
+<segment id="21" parent="1021" relname="span">SVM , naive Bayes , decision tree , and the multi-layer perceptron neural network</segment>
+<segment id="22" parent="21" relname="restatement">( MLP ) .</segment>
+<segment id="23" parent="1024" relname="span">Most relevant work has been done</segment>
+<segment id="24" parent="1026" relname="span">using the “ WEKA Spreadsheet to ARFF ” service</segment>
+<segment id="25" parent="1027" relname="span">to convert the NSL-KDD data set format from files with the csv extension to ARFF extension format</segment>
+<segment id="26" parent="25" relname="elaboration">( including “ training data set</segment>
+<segment id="27" parent="1026" relname="restatement">( KDDTrain+ ) ”</segment>
+<segment id="28" parent="1029" relname="span">and “ test data set</segment>
+<segment id="29" parent="28" relname="restatement">( KDDTest+ ) ”</segment>
+<segment id="30" parent="1029" relname="elaboration">( https://github.com/jmnwong/NSL-KDD-Dataset ) is the reference URL .</segment>
+<segment id="31" parent="1031" relname="same_unit">Because the data has different ranges ,</segment>
+<segment id="32" parent="1032" relname="span">preprocessing needed to be done</segment>
+<segment id="33" parent="32" relname="purpose">to round up all the features .</segment>
+<segment id="34" parent="1034" relname="span">Two type classifiers were used ,</segment>
+<segment id="35" parent="34" relname="elaboration">normal , and anomaly .</segment>
+<segment id="36" parent="1036" relname="span">The PCA algorithm was then used</segment>
+<segment id="37" parent="36" relname="purpose">to reduce the size of the classified data set .</segment>
+<segment id="38" parent="1038" relname="joint">Finally , the pre-processed training and test data sets were grouped</segment>
+<segment id="39" parent="1039" relname="joint">and tested ,</segment>
+<segment id="40" parent="1039" relname="joint">and experiments with the four classification algorithms were carried out .</segment>
+<segment id="41" parent="1041" relname="joint">These were SVM , naive Bayes , decision tree , and MLP</segment>
+<segment id="42" parent="1042" relname="span">and they were used</segment>
+<segment id="43" parent="1043" relname="joint">to train and test the data</segment>
+<segment id="44" parent="1043" relname="joint">and compare and analyze the results .</segment>
+<segment id="45" parent="1045" relname="span">Each record had data with 41 different feature attributes</segment>
+<segment id="46" parent="45" relname="elaboration">presenting the content of the network packets .</segment>
+<segment id="47" parent="1046" relname="joint">There were four categories of anomalous attack</segment>
+<segment id="48" parent="1048" relname="joint">DoS , Probe , R2L , and U2R</segment>
+<segment id="49" parent="1048" relname="joint">and the definitions are shown in Table 1 .</segment>
+<segment id="50" parent="1049" relname="joint">2.2.</segment>
+<segment id="51" parent="1051" relname="preparation">Method of Signal Dimension Reduction</segment>
+<segment id="52" parent="1052" relname="span">PCA is a statistical technique</segment>
+<segment id="53" parent="52" relname="elaboration">that transforms a set of possible correlation variables to a set of linearly uncorrelated variables by orthogonal transformation .</segment>
+<segment id="54" parent="1053" relname="joint">The transformed set of variables is the principal component .</segment>
+<segment id="55" parent="1055" relname="sequence">A set of related features in high-dimensional data is converted to a smaller subset</segment>
+<segment id="56" parent="1055" relname="sequence">and named as principal component .</segment>
+<segment id="57" parent="1057" relname="span">High-dimensional data can be transformed to low-order dimension data</segment>
+<segment id="58" parent="57" relname="elaboration">( ) .</segment>
+<segment id="59" parent="1059" relname="span">PCA does this transformation</segment>
+<segment id="60" parent="1060" relname="joint">by finding a feature vector ,</segment>
+<segment id="61" parent="1061" relname="span">and projecting the dimension data onto that feature vector</segment>
+<segment id="62" parent="61" relname="purpose">to minimize the overall projection error .</segment>
+<segment id="63" parent="1063" relname="joint">PCA can preserve around 0.9 variance of the original data set</segment>
+<segment id="64" parent="1063" relname="joint">and significantly reduce the number of features as well as the dimensions .</segment>
+<segment id="65" parent="1066" relname="span">The original high-dimensional data set is projected onto a smaller subspace</segment>
+<segment id="66" parent="1067" relname="span">while preserving most of the information</segment>
+<segment id="67" parent="66" relname="elaboration">contained in the original data set .</segment>
+<segment id="68" parent="1068" relname="same_unit">Assuming , and , the random dimension with the mean ( )</segment>
+<segment id="69" parent="1069" relname="span">inputs the data</segment>
+<segment id="70" parent="1070" relname="span">recording its definition as ( 1 )</segment>
+<segment id="71" parent="70" relname="elaboration">( 1 )</segment>
+<segment id="72" parent="1072" relname="span">The definition f the covariance matrix of is ( 2 ) :</segment>
+<segment id="73" parent="72" relname="elaboration">( 2 )</segment>
+<segment id="74" parent="1074" relname="span">PCA solves the eigenvalues problem of Covariance matrix ( 3 )</segment>
+<segment id="75" parent="1076" relname="same_unit">In Equation ( 3 ) ,</segment>
+<segment id="76" parent="1077" relname="joint">is the eigenvalue</segment>
+<segment id="77" parent="1077" relname="joint">and is the corresponding eigenvector .</segment>
+<segment id="78" parent="1080" relname="span">To represent the data record with a low-dimensional vector ,</segment>
+<segment id="79" parent="1081" relname="span">only pieces of eigenvector</segment>
+<segment id="80" parent="79" relname="elaboration">( named as the principal direction )</segment>
+<segment id="81" parent="1079" relname="same_unit">are needed ,</segment>
+<segment id="82" parent="1083" relname="span">corresponding to pieces of the largest eigenvalue</segment>
+<segment id="83" parent="82" relname="elaboration">( ) ,</segment>
+<segment id="84" parent="1082" relname="joint">and the variance of the projection of the input data in the principal direction is greater than the variance in any other direction .</segment>
+<segment id="85" parent="1085" relname="contrast">Hence parameter is the approximate precision of the pieces of the largest eigenvector ,</segment>
+<segment id="86" parent="1087" relname="span">so the following relationship</segment>
+<segment id="87" parent="86" relname="restatement">( 4 ) is obtained</segment>
+<segment id="88" parent="1087" relname="restatement">( 4 )</segment>
+<segment id="89" parent="1088" relname="joint">The purpose of PCA is to maximize internal information</segment>
+<segment id="90" parent="1089" relname="joint">and increase calculation speed after dimension reduction ,</segment>
+<segment id="91" parent="1089" relname="joint">and to evaluate the importance of the direction by the size of the data variance in the projection direction .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="multinuc" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="multinuc" parent="1003" relname="elaboration"/>
+<group id="1007" type="multinuc" parent="1006" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="joint"/>
+<group id="1009" type="span" parent="8" relname="elaboration"/>
+<group id="1010" type="multinuc" parent="1007" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="joint"/>
+<group id="1012" type="span" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="11" relname="elaboration"/>
+<group id="1014" type="multinuc" parent="1012" relname="elaboration"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1016" type="span" parent="1017" relname="concession"/>
+<group id="1017" type="span" parent="1015" relname="span"/>
+<group id="1018" type="multinuc" parent="1010" relname="joint"/>
+<group id="1019" type="span" parent="1018" relname="joint"/>
+<group id="1020" type="span" parent="19" relname="elaboration"/>
+<group id="1021" type="span" parent="1020" relname="span"/>
+<group id="1022" type="span" parent="1018" relname="joint"/>
+<group id="1023" type="multinuc" parent="1022" relname="span"/>
+<group id="1024" type="span" parent="1023" relname="joint"/>
+<group id="1025" type="span" parent="23" relname="elaboration"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="24" relname="purpose"/>
+<group id="1028" type="span" parent="1023" relname="joint"/>
+<group id="1029" type="span" parent="1028" relname="span"/>
+<group id="1030" type="multinuc" parent="1023" relname="cause"/>
+<group id="1031" type="multinuc" parent="1030" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="same_unit"/>
+<group id="1033" type="multinuc" parent="1030" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="multinuc" parent="1033" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="1035" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="joint"/>
+<group id="1039" type="multinuc" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="1037" relname="joint"/>
+<group id="1041" type="multinuc" parent="1040" relname="joint"/>
+<group id="1042" type="span" parent="1041" relname="joint"/>
+<group id="1043" type="multinuc" parent="42" relname="purpose"/>
+<group id="1044" type="multinuc" parent="1040" relname="joint"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1046" type="multinuc" parent="1044" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="joint"/>
+<group id="1049" type="multinuc" parent="1047" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="multinuc" parent="1050" relname="span"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1051" relname="joint"/>
+<group id="1054" type="multinuc" parent="1053" relname="joint"/>
+<group id="1055" type="multinuc" parent="1054" relname="joint"/>
+<group id="1056" type="multinuc" parent="1054" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="joint"/>
+<group id="1058" type="multinuc" parent="1056" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="joint"/>
+<group id="1060" type="multinuc" parent="59" relname="means"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1062" type="multinuc" parent="1058" relname="joint"/>
+<group id="1063" type="multinuc" parent="1062" relname="joint"/>
+<group id="1064" type="multinuc" parent="1062" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="65" relname="circumstance"/>
+<group id="1068" type="multinuc" parent="1066" relname="elaboration"/>
+<group id="1069" type="span" parent="1068" relname="same_unit"/>
+<group id="1070" type="span" parent="69" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1064" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="joint"/>
+<group id="1073" type="multinuc" parent="1071" relname="joint"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="span" parent="74" relname="elaboration"/>
+<group id="1076" type="multinuc" parent="1075" relname="span"/>
+<group id="1077" type="multinuc" parent="1076" relname="same_unit"/>
+<group id="1078" type="span" parent="1076" relname="purpose"/>
+<group id="1079" type="multinuc" parent="1078" relname="span"/>
+<group id="1080" type="span" parent="1079" relname="same_unit"/>
+<group id="1081" type="span" parent="78" relname="elaboration"/>
+<group id="1082" type="multinuc" parent="1079" relname="elaboration"/>
+<group id="1083" type="span" parent="1082" relname="joint"/>
+<group id="1084" type="span" parent="1073" relname="joint"/>
+<group id="1085" type="multinuc" parent="1088" relname="concession"/>
+<group id="1086" type="span" parent="1085" relname="contrast"/>
+<group id="1087" type="span" parent="1086" relname="span"/>
+<group id="1088" type="multinuc" parent="1084" relname="span"/>
+<group id="1089" type="multinuc" parent="1088" relname="joint"/>
+	</body>
+</rst>

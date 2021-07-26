@@ -1,0 +1,1004 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_gradient" title="Adaptive Natural Gradient Method for Learning of Stochastic Neural Networks in Mini-Batch Mode" shortTitle="gradient" author="Hyeyoung Park, Kwanyong Lee" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/21/4568/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Gradient	NNP	Gradient
+Descent	NNP	Descent
+Learning	NN	learning
+of	IN	of
+Stochastic	NNP	Stochastic
+Neural	NNP	Neural
+Networks	NNPS	Network
+</s>
+</head>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+Stochastic	JJ	Stochastic
+Neural	NNP	Neural
+Networks	NNPS	Network
+</s>
+</head>
+<p>
+<s type="imp">
+Since	IN	since
+the	DT	the
+natural	JJ	natural
+gradient	NN	gradient
+is	VBZ	be
+derived	VBN	derive
+from	IN	from
+stochastic	JJ	stochastic
+neural	JJ	neural
+network	NN	network
+models	NNS	model
+,	,	,
+let	VB	let
+us	PRP	we
+start	VB	start
+from	IN	from
+the	DT	the
+brief	JJ	brief
+description	NN	description
+of	IN	of
+the	DT	the
+two	CD	2
+popular	JJ	popular
+stochastic	JJ	stochastic
+models	NNS	model
+.	.	.
+</s>
+<s type="multiple">
+Although	IN	although
+typical	JJ	typical
+neural	JJ	neural
+networks	NNS	network
+,	,	,
+including	VBG	include
+deep	JJ	deep
+networks	NNS	network
+,	,	,
+are	VBP	be
+defined	VBN	define
+as	IN	as
+deterministic	JJ	deterministic
+input-output	JJ	input-output
+mapping	NN	mapping
+functions	NNS	function
+of	IN	of
+input	NN	input
+,	,	,
+output	NN	output
+,	,	,
+and	CC	and
+parameter	NN	parameter
+,	,	,
+the	DT	the
+observed	VBN	observe
+data	NNS	datum
+for	IN	for
+training	VBG	train
+the	DT	the
+networks	NNS	network
+always	RB	always
+have	VBP	have
+inevitable	JJ	inevitable
+noises	NNS	noise
+and	CC	and
+thus	RB	thus
+the	DT	the
+input-output	JJ	input-output
+relation	NN	relation
+can	MD	can
+be	VB	be
+described	VBN	describe
+in	IN	in
+the	DT	the
+stochastic	JJ	stochastic
+manner	NN	manner
+.	.	.
+</s>
+<s type="sub">
+In	IN	in
+other	JJ	other
+words	NNS	word
+,	,	,
+the	DT	the
+observed	VBN	observe
+output	NN	output
+can	MD	can
+be	VB	be
+regarded	VBN	regard
+as	IN	as
+a	DT	a
+random	JJ	random
+vector	NN	vector
+that	WDT	that
+is	VBZ	be
+dependent	JJ	dependent
+on	IN	on
+the	DT	the
+deterministic	JJ	deterministic
+function	NN	function
+and	CC	and
+some	DT	some
+additional	JJ	additional
+stochastic	JJ	stochastic
+process	NN	process
+that	WDT	that
+is	VBZ	be
+described	VBN	describe
+by	IN	by
+the	DT	the
+conditional	JJ	conditional
+probability	NN	probability
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Then	RB	then
+the	DT	the
+goal	NN	goal
+of	IN	of
+learning	NN	learning
+is	VBZ	be
+to	TO	to
+find	VB	find
+an	DT	a
+optimal	JJ	optimal
+value	NN	value
+of	IN	of
+parameter	NN	parameter
+that	WDT	that
+minimizes	VBZ	minimize
+the	DT	the
+loss	NN	loss
+function	NN	function
+defined	VBN	define
+as	IN	as
+negative	JJ	negative
+log	NN	log
+likelihood	NN	likelihood
+of	IN	of
+given	VBN	give
+input-output	JJ	input-output
+sample	NN	sample
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+loss	NN	loss
+function	NN	function
+can	MD	can
+then	RB	then
+be	VB	be
+written	VBN	write
+as	IN	as
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+and	CC	and
+the	DT	the
+optimal	JJ	optimal
+parameter	NN	parameter
+is	VBZ	be
+described	VBN	describe
+as	IN	as
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="imp">
+Note	VB	note
+that	IN	that
+the	DT	the
+last	JJ	last
+term	NN	term
+in	IN	in
+equation	NN	equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+is	VBZ	be
+independent	JJ	independent
+of	IN	of
+parameter	NN	parameter
+and	CC	and
+can	MD	can
+be	VB	be
+ignored	VBN	ignore
+in	IN	in
+the	DT	the
+objective	JJ	objective
+function	NN	function
+for	IN	for
+optimization	NN	optimization
+.	.	.
+</s>
+</p>
+<p>
+<s type="sub">
+Based	VBN	base
+on	IN	on
+the	DT	the
+general	JJ	general
+definition	NN	definition
+,	,	,
+the	DT	the
+conventional	JJ	conventional
+neural	JJ	neural
+networks	NNS	network
+can	MD	can
+be	VB	be
+regarded	VBN	regard
+as	IN	as
+a	DT	a
+special	JJ	special
+case	NN	case
+with	IN	with
+a	DT	a
+specific	JJ	specific
+conditional	JJ	conditional
+probability	NN	probability
+distribution	NN	distribution
+,	,	,
+.	.	.
+</s>
+<s type="imp">
+For	IN	for
+example	NN	example
+,	,	,
+consider	VB	consider
+that	IN	that
+the	DT	the
+output	NN	output
+is	VBZ	be
+observed	VBN	observe
+with	IN	with
+additive	NN	additive
+noise	NN	noise
+to	IN	to
+the	DT	the
+deterministic	JJ	deterministic
+neural	JJ	neural
+networks	NNS	network
+function	NN	function
+such	JJ	such
+as	IN	as
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+a	DT	a
+random	JJ	random
+noise	NN	noise
+vector	NN	vector
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+we	PRP	we
+assume	VBP	assume
+that	IN	that
+the	DT	the
+random	JJ	random
+vector	NN	vector
+is	VBZ	be
+subject	JJ	subject
+to	IN	to
+the	DT	the
+standard	JJ	standard
+Gaussian	JJ	Gaussian
+distribution	NN	distribution
+,	,	,
+its	PRP$	its
+probability	NN	probability
+density	NN	density
+is	VBZ	be
+defined	VBN	define
+as	IN	as
+the	DT	the
+normal	JJ	normal
+distribution	NN	distribution
+function	NN	function
+,	,	,
+and	CC	and
+its	PRP$	its
+loss	NN	loss
+function	NN	function
+becomes	VBZ	become
+the	DT	the
+well-known	JJ	well-known
+squared	VBN	square
+error	NN	error
+function	NN	function
+,	,	,
+which	WDT	which
+can	MD	can
+be	VB	be
+written	VBN	write
+as	IN	as
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+the	DT	the
+stochastic	JJ	stochastic
+neural	JJ	neural
+network	NN	network
+model	NN	model
+with	IN	with
+additive	NN	additive
+Gaussian	NN	Gaussian
+noise	NN	noise
+is	VBZ	be
+equivalent	JJ	equivalent
+to	IN	to
+the	DT	the
+typical	JJ	typical
+neural	JJ	neural
+network	NN	network
+model	NN	model
+trained	VBN	train
+with	IN	with
+squared	VBN	square
+error	NN	error
+function	NN	function
+,	,	,
+which	WDT	which
+is	VBZ	be
+widely	RB	widely
+used	VBN	use
+for	IN	for
+regression	NN	regression
+task	NN	task
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+On	IN	on
+the	DT	the
+other	JJ	other
+hand	NN	hand
+,	,	,
+in	IN	in
+case	NN	case
+that	IN	that
+the	DT	the
+output	NN	output
+is	VBZ	be
+a	DT	a
+binary	JJ	binary
+vector	NN	vector
+,	,	,
+the	DT	the
+corresponding	VBG	correspond
+probability	NN	probability
+distribution	NN	distribution
+can	MD	can
+be	VB	be
+defined	VBN	define
+by	IN	by
+using	VBG	use
+a	DT	a
+logistic	JJ	logistic
+model	NN	model
+,	,	,
+such	JJ	such
+as	IN	as
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+are	VBP	be
+the	DT	the
+<hi rend="italic">
+i	JJ	I
+</hi>
+-th	JJ	-th
+component	NN	component
+of	IN	of
+<hi rend="italic">
+L	NN	L
+</hi>
+-dimensional	JJ	-dimensional
+vector	NN	vector
+and	CC	and
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+the	DT	the
+typical	JJ	typical
+problems	NNS	problem
+with	IN	with
+binary	JJ	binary
+target	NN	target
+output	NN	output
+vector	NN	vector
+is	VBZ	be
+pattern	NN	pattern
+classification	NN	classification
+,	,	,
+the	DT	the
+logistic	JJ	logistic
+model	NN	model
+is	VBZ	be
+appropriate	JJ	appropriate
+for	IN	for
+<hi rend="italic">
+L	NN	L
+</hi>
+-class	NN	-class
+classification	NN	classification
+tasks	NNS	task
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+corresponding	JJ	corresponding
+loss	NN	loss
+function	NN	function
+of	IN	of
+the	DT	the
+logistic	JJ	logistic
+model	NN	model
+is	VBZ	be
+obtained	VBN	obtain
+by	IN	by
+taking	VBG	take
+negative	JJ	negative
+log	NN	log
+likelihood	NN	likelihood
+of	IN	of
+Equation	NNP	Equation
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+,	,	,
+which	WDT	which
+can	MD	can
+be	VB	be
+written	VBN	write
+as	IN	as
+,	,	,
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Noting	VBG	note
+that	IN	that
+this	DT	this
+is	VBZ	be
+the	DT	the
+well-known	JJ	well-known
+cross-entropy	NN	cross-entropy
+error	NN	error
+,	,	,
+we	PRP	we
+can	MD	can
+say	VB	say
+that	IN	that
+the	DT	the
+logistic	JJ	logistic
+regression	NN	regression
+model	NN	model
+is	VBZ	be
+equivalent	JJ	equivalent
+to	IN	to
+the	DT	the
+typical	JJ	typical
+neural	JJ	neural
+networks	NNS	network
+with	IN	with
+cross-entropy	NN	cross-entropy
+error	NN	error
+,	,	,
+which	WDT	which
+is	VBZ	be
+widely	RB	widely
+used	VBN	use
+for	IN	for
+classification	NN	classification
+task	NN	task
+.	.	.
+</s>
+</p>
+<p>
+<s type="sub">
+Likewise	RB	likewise
+,	,	,
+by	IN	by
+defining	VBG	define
+a	DT	a
+proper	JJ	proper
+stochastic	JJ	stochastic
+model	NN	model
+,	,	,
+we	PRP	we
+can	MD	can
+derive	VB	derive
+various	JJ	various
+types	NNS	type
+of	IN	of
+neural	JJ	neural
+network	NN	network
+models	NNS	model
+,	,	,
+which	WDT	which
+can	MD	can
+explain	VB	explain
+the	DT	the
+given	VBN	give
+task	NN	task
+more	RBR	more
+adequately	RB	adequately
+and	CC	and
+get	VB	get
+a	DT	a
+new	JJ	new
+insight	NN	insight
+to	TO	to
+solve	VB	solve
+many	JJ	many
+unresolved	JJ	unresolved
+problems	NNS	problem
+in	IN	in
+the	DT	the
+field	NN	field
+of	IN	of
+neural	JJ	neural
+network	NN	network
+learning	NN	learning
+.	.	.
+</s>
+<s type="decl">
+Natural	JJ	natural
+gradient	NN	gradient
+is	VBZ	be
+also	RB	also
+derived	VBN	derive
+from	IN	from
+a	DT	a
+new	JJ	new
+metric	NN	metric
+for	IN	for
+the	DT	the
+space	NN	space
+of	IN	of
+probability	NN	probability
+density	NN	density
+function	NN	function
+of	IN	of
+stochastic	JJ	stochastic
+neural	JJ	neural
+networks	NNS	network
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+we	PRP	we
+present	VBP	present
+explicit	JJ	explicit
+algorithms	NNS	algorithm
+of	IN	of
+adaptive	JJ	adaptive
+natural	JJ	natural
+gradient	NN	gradient
+learning	NN	learning
+method	NN	method
+for	IN	for
+two	CD	2
+representative	JJ	representative
+stochastic	JJ	stochastic
+neural	JJ	neural
+network	NN	network
+models	NNS	model
+:	:	:
+The	DT	the
+additive	NN	additive
+Gaussian	NN	Gaussian
+noise	NN	noise
+model	NN	model
+and	CC	and
+the	DT	the
+logistic	JJ	logistic
+regression	NN	regression
+model	NN	model
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+</s>
+<s type="frag">
+Gradient	NN	gradient
+Descent	NN	descent
+Learning	NN	learning
+</s>
+</head>
+<p>
+<s type="decl">
+Once	RB	once
+a	DT	a
+specific	JJ	specific
+model	NN	model
+of	IN	of
+stochastic	JJ	stochastic
+neural	JJ	neural
+networks	NNS	network
+and	CC	and
+its	PRP$	its
+corresponding	JJ	corresponding
+loss	NN	loss
+function	NN	function
+are	VBP	be
+determined	VBN	determine
+,	,	,
+the	DT	the
+weight	NN	weight
+parameters	NNS	parameter
+are	VBP	be
+optimized	VBN	optimize
+by	IN	by
+gradient	NN	gradient
+descent	NN	descent
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+well-known	JJ	well-known
+error-backpropagation	NN	error-backpropagation
+algorithm	NN	algorithm
+is	VBZ	be
+the	DT	the
+standard	JJ	standard
+type	NN	type
+of	IN	of
+gradient	NN	gradient
+descent	NN	descent
+learning	NN	learning
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+There	EX	there
+have	VBP	have
+been	VBN	be
+numerous	JJ	numerous
+variations	NNS	variation
+of	IN	of
+the	DT	the
+standard	JJ	standard
+gradient	NN	gradient
+descent	NN	descent
+method	NN	method
+,	,	,
+including	VBG	include
+second-order	NN	second-order
+methods	NNS	method
+,	,	,
+momentum	NN	momentum
+method	NN	method
+,	,	,
+and	CC	and
+adaptive	JJ	adaptive
+learning	NN	learning
+rate	NN	rate
+methods	NNS	method
+.	.	.
+</s>
+<s type="decl">
+Since	IN	since
+the	DT	the
+natural	JJ	natural
+gradient	NN	gradient
+learning	NN	learning
+method	NN	method
+is	VBZ	be
+also	RB	also
+based	VBN	base
+on	IN	on
+the	DT	the
+gradient	NN	gradient
+descent	NN	descent
+method	NN	method
+,	,	,
+we	PRP	we
+describe	VBP	describe
+the	DT	the
+basic	JJ	basic
+formula	NN	formula
+of	IN	of
+gradient	NN	gradient
+descent	NN	descent
+learning	NN	learning
+and	CC	and
+its	PRP$	its
+online	JJ	online
+version	NN	version
+that	WDT	that
+is	VBZ	be
+called	VBN	call
+stochastic	JJ	stochastic
+gradient	NN	gradient
+descent	NN	descent
+method	NN	method
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+When	WRB	when
+a	DT	a
+set	NN	set
+of	IN	of
+training	NN	training
+data	NNS	datum
+is	VBZ	be
+given	VBN	give
+,	,	,
+a	DT	a
+neural	JJ	neural
+network	NN	network
+is	VBZ	be
+trained	VBN	train
+in	IN	in
+order	NN	order
+to	TO	to
+find	VB	find
+an	DT	a
+input-output	JJ	input-output
+mapping	NN	mapping
+that	WDT	that
+is	VBZ	be
+specified	VBN	specify
+with	IN	with
+weight	NN	weight
+parameter	NN	parameter
+vector	NN	vector
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+error	NN	error
+of	IN	of
+neural	JJ	neural
+network	NN	network
+for	IN	for
+the	DT	the
+whole	JJ	whole
+data	NN	datum
+set	NN	set
+can	MD	can
+then	RB	then
+be	VB	be
+defined	VBN	define
+by	IN	by
+using	VBG	use
+a	DT	a
+loss	NN	loss
+function	NN	function
+such	JJ	such
+as	IN	as
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+and	CC	and
+the	DT	the
+goal	NN	goal
+of	IN	of
+learning	NN	learning
+is	VBZ	be
+to	TO	to
+get	VB	get
+the	DT	the
+optimal	JJ	optimal
+minimizing	NN	minimizing
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+achieve	VB	achieve
+the	DT	the
+goal	NN	goal
+,	,	,
+the	DT	the
+weight	NN	weight
+parameter	NN	parameter
+is	VBZ	be
+updated	VBN	update
+starting	VBG	start
+from	IN	from
+the	DT	the
+current	JJ	current
+position	NN	position
+,	,	,
+according	VBG	accord
+to	IN	to
+the	DT	the
+opposite	JJ	opposite
+direction	NN	direction
+of	IN	of
+the	DT	the
+gradient	NN	gradient
+of	IN	of
+,	,	,
+which	WDT	which
+can	MD	can
+be	VB	be
+written	VBN	write
+as	IN	as
+(	-LRB-	(
+8	CD	8
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+This	DT	this
+update	NN	update
+rule	NN	rule
+is	VBZ	be
+called	VBN	call
+batch	NN	batch
+learning	NN	learning
+mode	NN	mode
+,	,	,
+meaning	VBG	mean
+that	IN	that
+an	DT	a
+update	NN	update
+is	VBZ	be
+done	VBN	do
+for	IN	for
+the	DT	the
+whole	JJ	whole
+batch	NN	batch
+set	NN	set
+.	.	.
+</s>
+<s type="decl">
+Theoretically	RB	theoretically
+,	,	,
+the	DT	the
+batch	NN	batch
+mode	NN	mode
+learning	NN	learning
+gives	VBZ	give
+the	DT	the
+steepest	JJS	steep
+descent	NN	descent
+direction	NN	direction
+of	IN	of
+at	IN	at
+the	DT	the
+current	JJ	current
+position	NN	position
+of	IN	of
+,	,	,
+but	CC	but
+it	PRP	it
+has	VBZ	have
+two	CD	2
+practical	JJ	practical
+drawbacks	NNS	drawback
+.	.	.
+</s>
+<s type="decl">
+First	RB	first
+,	,	,
+it	PRP	it
+is	VBZ	be
+too	RB	too
+stable	JJ	stable
+to	TO	to
+be	VB	be
+easily	RB	easily
+trapped	VBN	trap
+in	IN	in
+undesirable	JJ	undesirable
+local	JJ	local
+minima	NNS	minima
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+addition	NN	addition
+,	,	,
+when	WRB	when
+the	DT	the
+number	NN	number
+of	IN	of
+data	NNS	datum
+is	VBZ	be
+large	JJ	large
+,	,	,
+it	PRP	it
+needs	VBZ	need
+large	JJ	large
+amounts	NNS	amount
+of	IN	of
+computation	NN	computation
+for	IN	for
+just	RB	just
+a	DT	a
+single	JJ	single
+update	NN	update
+,	,	,
+making	VBG	make
+the	DT	the
+learning	NN	learning
+process	NN	process
+slow	JJ	slow
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+To	TO	to
+overcome	VB	overcome
+this	DT	this
+practical	JJ	practical
+inefficiency	NN	inefficiency
+,	,	,
+online	JJ	online
+stochastic	JJ	stochastic
+gradient	NN	gradient
+decent	JJ	decent
+learning	NN	learning
+is	VBZ	be
+proposed	VBN	propose
+,	,	,
+in	IN	in
+which	WDT	which
+parameters	NNS	parameter
+are	VBP	be
+updated	VBN	update
+for	IN	for
+each	DT	each
+data	NNS	datum
+sample	NN	sample
+by	IN	by
+using	VBG	use
+gradient	NN	gradient
+of	IN	of
+loss	NN	loss
+function	NN	function
+defined	VBN	define
+with	IN	with
+a	DT	a
+single	JJ	single
+data	NN	datum
+pair	NN	pair
+,	,	,
+such	JJ	such
+as	IN	as
+(	-LRB-	(
+9	CD	9
+)	-RRB-	)
+</s>
+</p>
+</text>

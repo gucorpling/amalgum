@@ -1,0 +1,731 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Store Food to Prevent Food Poisoning
+1-1	0-5	Store	place[1]	new[1]	_	_
+1-2	6-10	Food	place[1]|substance	new[1]|new	coref	1-5
+1-3	11-13	to	_	_	_	_
+1-4	14-21	Prevent	_	_	_	_
+1-5	22-26	Food	substance|abstract[4]	giv|new[4]	coref|coref	2-1|2-1[6_4]
+1-6	27-36	Poisoning	abstract[4]	new[4]	_	_
+
+#Text=Food poisoning occurs when the food you eat has become contaminated , often due to improper preparation and handling of the food .
+2-1	37-41	Food	substance|abstract[6]	giv|giv[6]	coref|coref	2-5[7_0]|3-4[14_6]
+2-2	42-51	poisoning	abstract[6]	giv[6]	_	_
+2-3	52-58	occurs	_	_	_	_
+2-4	59-63	when	_	_	_	_
+2-5	64-67	the	substance[7]	giv[7]	coref	2-21[11_7]
+2-6	68-72	food	substance[7]	giv[7]	_	_
+2-7	73-76	you	substance[7]|person	giv[7]|acc	ana	3-1
+2-8	77-80	eat	substance[7]	giv[7]	_	_
+2-9	81-84	has	_	_	_	_
+2-10	85-91	become	_	_	_	_
+2-11	92-104	contaminated	_	_	_	_
+2-12	105-106	,	_	_	_	_
+2-13	107-112	often	event[9]	new[9]	_	_
+2-14	113-116	due	event[9]	new[9]	_	_
+2-15	117-119	to	event[9]	new[9]	_	_
+2-16	120-128	improper	event[9]	new[9]	_	_
+2-17	129-140	preparation	event[9]	new[9]	_	_
+2-18	141-144	and	_	_	_	_
+2-19	145-153	handling	abstract[10]	new[10]	_	_
+2-20	154-156	of	abstract[10]	new[10]	_	_
+2-21	157-160	the	abstract[10]|substance[11]	new[10]|giv[11]	coref	3-4[0_11]
+2-22	161-165	food	abstract[10]|substance[11]	new[10]|giv[11]	_	_
+2-23	166-167	.	_	_	_	_
+
+#Text=You can experience food poisoning from eating food long after its expiration date , or from eating food that has not been cooked thoroughly , such as chicken and other meats .
+3-1	168-171	You	person	giv	ana	4-16
+3-2	172-175	can	_	_	_	_
+3-3	176-186	experience	_	_	_	_
+3-4	187-191	food	substance|abstract[14]	giv|giv[14]	coref|ana	3-8|3-11[0_14]
+3-5	192-201	poisoning	abstract[14]	giv[14]	_	_
+3-6	202-206	from	_	_	_	_
+3-7	207-213	eating	_	_	_	_
+3-8	214-218	food	substance	giv	coref	3-18[19_0]
+3-9	219-223	long	time[18]	new[18]	coref	23-15[148_18]
+3-10	224-229	after	time[18]	new[18]	_	_
+3-11	230-233	its	abstract|time[18]	giv|new[18]	coref	4-8[26_0]
+3-12	234-244	expiration	abstract|time[18]	new|new[18]	coref	23-16
+3-13	245-249	date	time[18]	new[18]	_	_
+3-14	250-251	,	_	_	_	_
+3-15	252-254	or	_	_	_	_
+3-16	255-259	from	_	_	_	_
+3-17	260-266	eating	_	_	_	_
+3-18	267-271	food	substance[19]	giv[19]	coref	4-8[0_19]
+3-19	272-276	that	substance[19]	giv[19]	_	_
+3-20	277-280	has	substance[19]	giv[19]	_	_
+3-21	281-284	not	substance[19]	giv[19]	_	_
+3-22	285-289	been	substance[19]	giv[19]	_	_
+3-23	290-296	cooked	substance[19]	giv[19]	_	_
+3-24	297-307	thoroughly	substance[19]	giv[19]	_	_
+3-25	308-309	,	substance[19]	giv[19]	_	_
+3-26	310-314	such	substance[19]	giv[19]	_	_
+3-27	315-317	as	substance[19]	giv[19]	_	_
+3-28	318-325	chicken	substance[19]|animal|abstract[21]	giv[19]|new|new[21]	coref|coref	19-14|19-14[124_21]
+3-29	326-329	and	substance[19]|abstract[21]	giv[19]|new[21]	_	_
+3-30	330-335	other	substance[19]|abstract[21]|substance[22]	giv[19]|new[21]|new[22]	_	_
+3-31	336-341	meats	substance[19]|abstract[21]|substance[22]	giv[19]|new[21]|new[22]	_	_
+3-32	342-343	.	_	_	_	_
+
+#Text=One of the major ways to prevent food poisoning is to store food properly in your home and refrigerator after you have purchased it and even after you have generated leftovers .
+4-1	344-347	One	object[23]	new[23]	_	_
+4-2	348-350	of	object[23]	new[23]	_	_
+4-3	351-354	the	object[23]|abstract[24]	new[23]|new[24]	_	_
+4-4	355-360	major	object[23]|abstract[24]	new[23]|new[24]	_	_
+4-5	361-365	ways	object[23]|abstract[24]	new[23]|new[24]	_	_
+4-6	366-368	to	object[23]|abstract[24]	new[23]|new[24]	_	_
+4-7	369-376	prevent	object[23]|abstract[24]	new[23]|new[24]	_	_
+4-8	377-381	food	object[23]|abstract[24]|substance|abstract[26]	new[23]|new[24]|giv|giv[26]	coref|ana	4-13|4-24[0_26]
+4-9	382-391	poisoning	object[23]|abstract[24]|abstract[26]	new[23]|new[24]|giv[26]	_	_
+4-10	392-394	is	_	_	_	_
+4-11	395-397	to	_	_	_	_
+4-12	398-403	store	_	_	_	_
+4-13	404-408	food	substance	giv	coref	5-12
+4-14	409-417	properly	_	_	_	_
+4-15	418-420	in	_	_	_	_
+4-16	421-425	your	person|place[29]	giv|new[29]	ana	4-21
+4-17	426-430	home	place[29]	new[29]	_	_
+4-18	431-434	and	_	_	_	_
+4-19	435-447	refrigerator	object	new	coref	7-5[46_0]
+4-20	448-453	after	_	_	_	_
+4-21	454-457	you	person	giv	ana	4-28
+4-22	458-462	have	_	_	_	_
+4-23	463-472	purchased	_	_	_	_
+4-24	473-475	it	abstract	giv	coref	5-21[42_0]
+4-25	476-479	and	_	_	_	_
+4-26	480-484	even	_	_	_	_
+4-27	485-490	after	_	_	_	_
+4-28	491-494	you	person	giv	ana	5-8
+4-29	495-499	have	_	_	_	_
+4-30	500-509	generated	_	_	_	_
+4-31	510-519	leftovers	organization	new	coref	9-2[62_0]
+4-32	520-521	.	_	_	_	_
+
+#Text=Continue reading this article to learn how you can properly store food to prevent you or your family from experiencing food poisoning .
+5-1	522-530	Continue	_	_	_	_
+5-2	531-538	reading	_	_	_	_
+5-3	539-543	this	abstract[35]	new[35]	_	_
+5-4	544-551	article	abstract[35]	new[35]	_	_
+5-5	552-554	to	_	_	_	_
+5-6	555-560	learn	_	_	_	_
+5-7	561-564	how	_	_	_	_
+5-8	565-568	you	person	giv	ana	5-15
+5-9	569-572	can	_	_	_	_
+5-10	573-581	properly	_	_	_	_
+5-11	582-587	store	_	_	_	_
+5-12	588-592	food	substance	giv	coref	5-21
+5-13	593-595	to	_	_	_	_
+5-14	596-603	prevent	_	_	_	_
+5-15	604-607	you	person	giv	ana	5-17
+5-16	608-610	or	_	_	_	_
+5-17	611-615	your	person|person[40]	giv|new[40]	ana	7-5
+5-18	616-622	family	person[40]	new[40]	_	_
+5-19	623-627	from	_	_	_	_
+5-20	628-640	experiencing	_	_	_	_
+5-21	641-645	food	substance|abstract[42]	giv|giv[42]	coref	8-11[55_0]
+5-22	646-655	poisoning	abstract[42]	giv[42]	_	_
+5-23	656-657	.	_	_	_	_
+
+#Text=Steps
+6-1	658-663	Steps	abstract	new	_	_
+
+#Text=Keep the temperature of your refrigerator below 41 degrees Fahrenheit ( 5 degrees Celsius ) .
+7-1	664-668	Keep	_	_	_	_
+7-2	669-672	the	abstract[44]	new[44]	coref	10-17[67_44]
+7-3	673-684	temperature	abstract[44]	new[44]	_	_
+7-4	685-687	of	abstract[44]	new[44]	_	_
+7-5	688-692	your	abstract[44]|person|object[46]	new[44]|giv|giv[46]	ana|coref	8-11|10-9[65_46]
+7-6	693-705	refrigerator	abstract[44]|object[46]	new[44]|giv[46]	_	_
+7-7	706-711	below	_	_	_	_
+7-8	712-714	41	abstract[47]	new[47]	coref	8-21[58_47]
+7-9	715-722	degrees	abstract[47]	new[47]	_	_
+7-10	723-733	Fahrenheit	abstract[47]|person	new[47]|new	_	_
+7-11	734-735	(	_	_	_	_
+7-12	736-737	5	abstract[49]	new[49]	coref	8-27[59_49]
+7-13	738-745	degrees	abstract[49]	new[49]	_	_
+7-14	746-753	Celsius	abstract[49]|person	new[49]|new	coref	8-31
+7-15	754-755	)	_	_	_	_
+7-16	756-757	.	_	_	_	_
+
+#Text=Temperatures below this level will help maintain the freshness of your food ; especially since bacteria thrives in temperatures between 41 and 140 degrees Fahrenheit ( 5 and 60 degrees Celsius ) .
+8-1	758-770	Temperatures	abstract[51]	new[51]	coref	8-19[57_51]
+8-2	771-776	below	abstract[51]	new[51]	_	_
+8-3	777-781	this	abstract[51]|abstract[52]	new[51]|new[52]	_	_
+8-4	782-787	level	abstract[51]|abstract[52]	new[51]|new[52]	_	_
+8-5	788-792	will	_	_	_	_
+8-6	793-797	help	_	_	_	_
+8-7	798-806	maintain	_	_	_	_
+8-8	807-810	the	abstract[53]	new[53]	_	_
+8-9	811-820	freshness	abstract[53]	new[53]	_	_
+8-10	821-823	of	abstract[53]	new[53]	_	_
+8-11	824-828	your	abstract[53]|person|substance[55]	new[53]|giv|giv[55]	ana|coref	9-2|10-4[64_55]
+8-12	829-833	food	abstract[53]|substance[55]	new[53]|giv[55]	_	_
+8-13	834-835	;	_	_	_	_
+8-14	836-846	especially	_	_	_	_
+8-15	847-852	since	_	_	_	_
+8-16	853-861	bacteria	animal	new	coref	10-37
+8-17	862-869	thrives	_	_	_	_
+8-18	870-872	in	_	_	_	_
+8-19	873-885	temperatures	abstract[57]	giv[57]	_	_
+8-20	886-893	between	abstract[57]	giv[57]	_	_
+8-21	894-896	41	abstract[57]|abstract[58]	giv[57]|giv[58]	_	_
+8-22	897-900	and	abstract[57]|abstract[58]	giv[57]|giv[58]	_	_
+8-23	901-904	140	abstract[57]|abstract[58]	giv[57]|giv[58]	_	_
+8-24	905-912	degrees	abstract[57]|abstract[58]	giv[57]|giv[58]	_	_
+8-25	913-923	Fahrenheit	abstract[57]|abstract[58]	giv[57]|giv[58]	_	_
+8-26	924-925	(	_	_	_	_
+8-27	926-927	5	abstract[59]	giv[59]	_	_
+8-28	928-931	and	abstract[59]	giv[59]	_	_
+8-29	932-934	60	abstract[59]	giv[59]	_	_
+8-30	935-942	degrees	abstract[59]	giv[59]	_	_
+8-31	943-950	Celsius	abstract[59]|person	giv[59]|giv	_	_
+8-32	951-952	)	_	_	_	_
+8-33	953-954	.	_	_	_	_
+
+#Text=Allow your leftovers to cool completely before refrigerating .
+9-1	955-960	Allow	_	_	_	_
+9-2	961-965	your	person|organization[62]	giv|giv[62]	ana|coref	10-2|11-2[76_62]
+9-3	966-975	leftovers	organization[62]	giv[62]	_	_
+9-4	976-978	to	_	_	_	_
+9-5	979-983	cool	_	_	_	_
+9-6	984-994	completely	_	_	_	_
+9-7	995-1001	before	_	_	_	_
+9-8	1002-1015	refrigerating	_	_	_	_
+9-9	1016-1017	.	_	_	_	_
+
+#Text=If you place warm or hot food in the refrigerator , not only can it increase the temperature of your refrigerator , but the steam and condensation captured in the container will encourage the growth of bacteria .
+10-1	1018-1020	If	_	_	_	_
+10-2	1021-1024	you	person	giv	ana	10-20
+10-3	1025-1030	place	_	_	_	_
+10-4	1031-1035	warm	substance[64]	giv[64]	coref	11-22[81_64]
+10-5	1036-1038	or	substance[64]	giv[64]	_	_
+10-6	1039-1042	hot	substance[64]	giv[64]	_	_
+10-7	1043-1047	food	substance[64]	giv[64]	_	_
+10-8	1048-1050	in	_	_	_	_
+10-9	1051-1054	the	object[65]	giv[65]	ana	10-15[0_65]
+10-10	1055-1067	refrigerator	object[65]	giv[65]	_	_
+10-11	1068-1069	,	_	_	_	_
+10-12	1070-1073	not	_	_	_	_
+10-13	1074-1078	only	_	_	_	_
+10-14	1079-1082	can	_	_	_	_
+10-15	1083-1085	it	object	giv	coref	10-20[69_0]
+10-16	1086-1094	increase	_	_	_	_
+10-17	1095-1098	the	abstract[67]	giv[67]	_	_
+10-18	1099-1110	temperature	abstract[67]	giv[67]	_	_
+10-19	1111-1113	of	abstract[67]	giv[67]	_	_
+10-20	1114-1118	your	abstract[67]|person|object[69]	giv[67]|giv|giv[69]	ana|coref	11-2|11-30[83_69]
+10-21	1119-1131	refrigerator	abstract[67]|object[69]	giv[67]|giv[69]	_	_
+10-22	1132-1133	,	_	_	_	_
+10-23	1134-1137	but	_	_	_	_
+10-24	1138-1141	the	substance[70]	new[70]	_	_
+10-25	1142-1147	steam	substance[70]	new[70]	_	_
+10-26	1148-1151	and	_	_	_	_
+10-27	1152-1164	condensation	substance[71]	new[71]	coref	28-5[0_71]
+10-28	1165-1173	captured	substance[71]	new[71]	_	_
+10-29	1174-1176	in	substance[71]	new[71]	_	_
+10-30	1177-1180	the	substance[71]|object[72]	new[71]|new[72]	_	_
+10-31	1181-1190	container	substance[71]|object[72]	new[71]|new[72]	_	_
+10-32	1191-1195	will	_	_	_	_
+10-33	1196-1205	encourage	_	_	_	_
+10-34	1206-1209	the	abstract[73]	new[73]	_	_
+10-35	1210-1216	growth	abstract[73]	new[73]	_	_
+10-36	1217-1219	of	abstract[73]	new[73]	_	_
+10-37	1220-1228	bacteria	abstract[73]|animal	new[73]|giv	coref	19-5
+10-38	1229-1230	.	_	_	_	_
+
+#Text=If your leftovers are unlikely to cool within 90 minutes , place your leftovers in small , shallow containers to cool the food faster before placing the containers in the refrigerator .
+11-1	1231-1233	If	_	_	_	_
+11-2	1234-1238	your	person|organization[76]	giv|giv[76]	ana|coref	11-13|11-13[79_76]
+11-3	1239-1248	leftovers	organization[76]	giv[76]	_	_
+11-4	1249-1252	are	_	_	_	_
+11-5	1253-1261	unlikely	_	_	_	_
+11-6	1262-1264	to	_	_	_	_
+11-7	1265-1269	cool	_	_	_	_
+11-8	1270-1276	within	_	_	_	_
+11-9	1277-1279	90	time[77]	new[77]	_	_
+11-10	1280-1287	minutes	time[77]	new[77]	_	_
+11-11	1288-1289	,	_	_	_	_
+11-12	1290-1295	place	_	_	_	_
+11-13	1296-1300	your	person|organization[79]	giv|giv[79]	ana	12-1
+11-14	1301-1310	leftovers	organization[79]	giv[79]	_	_
+11-15	1311-1313	in	_	_	_	_
+11-16	1314-1319	small	object[80]	new[80]	coref	11-27[82_80]
+11-17	1320-1321	,	object[80]	new[80]	_	_
+11-18	1322-1329	shallow	object[80]	new[80]	_	_
+11-19	1330-1340	containers	object[80]	new[80]	_	_
+11-20	1341-1343	to	_	_	_	_
+11-21	1344-1348	cool	_	_	_	_
+11-22	1349-1352	the	substance[81]	giv[81]	coref	12-17[89_81]
+11-23	1353-1357	food	substance[81]	giv[81]	_	_
+11-24	1358-1364	faster	_	_	_	_
+11-25	1365-1371	before	_	_	_	_
+11-26	1372-1379	placing	_	_	_	_
+11-27	1380-1383	the	object[82]	giv[82]	ana	12-5[0_82]
+11-28	1384-1394	containers	object[82]	giv[82]	_	_
+11-29	1395-1397	in	_	_	_	_
+11-30	1398-1401	the	object[83]	giv[83]	coref	15-9[103_83]
+11-31	1402-1414	refrigerator	object[83]	giv[83]	_	_
+11-32	1415-1416	.	_	_	_	_
+
+#Text=You can also elevate them on a trivet with feet to allow air to circulate underneath the hot food .
+12-1	1417-1420	You	person	giv	ana	15-3
+12-2	1421-1424	can	_	_	_	_
+12-3	1425-1429	also	_	_	_	_
+12-4	1430-1437	elevate	_	_	_	_
+12-5	1438-1442	them	object	giv	coref	13-6
+12-6	1443-1445	on	_	_	_	_
+12-7	1446-1447	a	object[86]	new[86]	_	_
+12-8	1448-1454	trivet	object[86]	new[86]	_	_
+12-9	1455-1459	with	object[86]	new[86]	_	_
+12-10	1460-1464	feet	object[86]|object	new[86]|new	_	_
+12-11	1465-1467	to	_	_	_	_
+12-12	1468-1473	allow	_	_	_	_
+12-13	1474-1477	air	substance	new	_	_
+12-14	1478-1480	to	_	_	_	_
+12-15	1481-1490	circulate	_	_	_	_
+12-16	1491-1501	underneath	_	_	_	_
+12-17	1502-1505	the	substance[89]	giv[89]	coref	14-18[98_89]
+12-18	1506-1509	hot	substance[89]	giv[89]	_	_
+12-19	1510-1514	food	substance[89]	giv[89]	_	_
+12-20	1515-1516	.	_	_	_	_
+
+#Text=Transfer leftover canned goods to containers .
+13-1	1517-1525	Transfer	_	_	_	_
+13-2	1526-1534	leftover	object|object[91]	new|new[91]	coref	14-2[93_91]
+13-3	1535-1541	canned	object[91]	new[91]	_	_
+13-4	1542-1547	goods	object[91]	new[91]	_	_
+13-5	1548-1550	to	_	_	_	_
+13-6	1551-1561	containers	object	giv	coref	17-4[114_0]
+13-7	1562-1563	.	_	_	_	_
+
+#Text=After canned goods have been opened , they can transfer metal properties from the tin over to the remaining food inside , causing contamination .
+14-1	1564-1569	After	_	_	_	_
+14-2	1570-1576	canned	object[93]	giv[93]	ana	14-8[0_93]
+14-3	1577-1582	goods	object[93]	giv[93]	_	_
+14-4	1583-1587	have	_	_	_	_
+14-5	1588-1592	been	_	_	_	_
+14-6	1593-1599	opened	_	_	_	_
+14-7	1600-1601	,	_	_	_	_
+14-8	1602-1606	they	object	giv	_	_
+14-9	1607-1610	can	_	_	_	_
+14-10	1611-1619	transfer	_	_	_	_
+14-11	1620-1625	metal	substance|abstract[96]	new|new[96]	coref	33-6[197_96]
+14-12	1626-1636	properties	abstract[96]	new[96]	_	_
+14-13	1637-1641	from	abstract[96]	new[96]	_	_
+14-14	1642-1645	the	abstract[96]|substance[97]	new[96]|new[97]	_	_
+14-15	1646-1649	tin	abstract[96]|substance[97]	new[96]|new[97]	_	_
+14-16	1650-1654	over	_	_	_	_
+14-17	1655-1657	to	_	_	_	_
+14-18	1658-1661	the	substance[98]	giv[98]	coref	16-4[106_98]
+14-19	1662-1671	remaining	substance[98]	giv[98]	_	_
+14-20	1672-1676	food	substance[98]	giv[98]	_	_
+14-21	1677-1683	inside	substance[98]	giv[98]	_	_
+14-22	1684-1685	,	_	_	_	_
+14-23	1686-1693	causing	_	_	_	_
+14-24	1694-1707	contamination	abstract	new	coref	16-18[110_0]
+14-25	1708-1709	.	_	_	_	_
+
+#Text=Cover all your foods before placing them in the refrigerator .
+15-1	1710-1715	Cover	_	_	_	_
+15-2	1716-1719	all	substance[101]	new[101]	ana	15-7[0_101]
+15-3	1720-1724	your	person|substance[101]	giv|new[101]	ana	16-4
+15-4	1725-1730	foods	substance[101]	new[101]	_	_
+15-5	1731-1737	before	_	_	_	_
+15-6	1738-1745	placing	_	_	_	_
+15-7	1746-1750	them	substance	giv	coref	19-9[122_0]
+15-8	1751-1753	in	_	_	_	_
+15-9	1754-1757	the	object[103]	giv[103]	ana	16-1[0_103]
+15-10	1758-1770	refrigerator	object[103]	giv[103]	_	_
+15-11	1771-1772	.	_	_	_	_
+
+#Text=This will prevent your food from being exposed to juices , liquids , and other forms of contamination that may come into contact with uncovered food .
+16-1	1773-1777	This	object	giv	coref	20-17[132_0]
+16-2	1778-1782	will	_	_	_	_
+16-3	1783-1790	prevent	_	_	_	_
+16-4	1791-1795	your	person|substance[106]	giv|giv[106]	coref|ana	16-25[111_106]|19-20
+16-5	1796-1800	food	substance[106]	giv[106]	_	_
+16-6	1801-1805	from	_	_	_	_
+16-7	1806-1811	being	_	_	_	_
+16-8	1812-1819	exposed	_	_	_	_
+16-9	1820-1822	to	_	_	_	_
+16-10	1823-1829	juices	substance	new	coref	21-25[140_0]
+16-11	1830-1831	,	_	_	_	_
+16-12	1832-1839	liquids	substance	new	_	_
+16-13	1840-1841	,	_	_	_	_
+16-14	1842-1845	and	_	_	_	_
+16-15	1846-1851	other	substance[109]	new[109]	_	_
+16-16	1852-1857	forms	substance[109]	new[109]	_	_
+16-17	1858-1860	of	substance[109]	new[109]	_	_
+16-18	1861-1874	contamination	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-19	1875-1879	that	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-20	1880-1883	may	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-21	1884-1888	come	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-22	1889-1893	into	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-23	1894-1901	contact	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-24	1902-1906	with	substance[109]|abstract[110]	new[109]|giv[110]	_	_
+16-25	1907-1916	uncovered	substance[109]|abstract[110]|substance[111]	new[109]|giv[110]|giv[111]	coref	17-5[0_111]
+16-26	1917-1921	food	substance[109]|abstract[110]|substance[111]	new[109]|giv[110]|giv[111]	_	_
+16-27	1922-1923	.	_	_	_	_
+
+#Text=Place lids on all food containers or cover bowls with aluminum foil or plastic wrap .
+17-1	1924-1929	Place	_	_	_	_
+17-2	1930-1934	lids	object	new	_	_
+17-3	1935-1937	on	_	_	_	_
+17-4	1938-1941	all	object[114]	giv[114]	coref	36-1[206_114]
+17-5	1942-1946	food	substance|object[114]	giv|giv[114]	coref	18-2[118_0]
+17-6	1947-1957	containers	object[114]	giv[114]	_	_
+17-7	1958-1960	or	_	_	_	_
+17-8	1961-1966	cover	_	_	_	_
+17-9	1967-1972	bowls	object	new	_	_
+17-10	1973-1977	with	_	_	_	_
+17-11	1978-1986	aluminum	object[116]	new[116]	_	_
+17-12	1987-1991	foil	object[116]	new[116]	_	_
+17-13	1992-1994	or	_	_	_	_
+17-14	1995-2002	plastic	object[117]	new[117]	ana	19-1[0_117]
+17-15	2003-2007	wrap	object[117]	new[117]	_	_
+17-16	2008-2009	.	_	_	_	_
+
+#Text=Store raw food away from cooked food .
+18-1	2010-2015	Store	_	_	_	_
+18-2	2016-2019	raw	substance[118]	giv[118]	coref	18-6[119_118]
+18-3	2020-2024	food	substance[118]	giv[118]	_	_
+18-4	2025-2029	away	_	_	_	_
+18-5	2030-2034	from	_	_	_	_
+18-6	2035-2041	cooked	substance[119]	giv[119]	coref	20-8[130_119]
+18-7	2042-2046	food	substance[119]	giv[119]	_	_
+18-8	2047-2048	.	_	_	_	_
+
+#Text=This will help prevent bacteria from spreading between raw foods , such as chicken and meat , over to your cooked foods .
+19-1	2049-2053	This	object	giv	coref	37-1[207_0]
+19-2	2054-2058	will	_	_	_	_
+19-3	2059-2063	help	_	_	_	_
+19-4	2064-2071	prevent	_	_	_	_
+19-5	2072-2080	bacteria	animal	giv	coref	23-29
+19-6	2081-2085	from	_	_	_	_
+19-7	2086-2095	spreading	_	_	_	_
+19-8	2096-2103	between	_	_	_	_
+19-9	2104-2107	raw	substance[122]	giv[122]	coref	19-20[127_122]
+19-10	2108-2113	foods	substance[122]	giv[122]	_	_
+19-11	2114-2115	,	substance[122]	giv[122]	_	_
+19-12	2116-2120	such	substance[122]	giv[122]	_	_
+19-13	2121-2123	as	substance[122]	giv[122]	_	_
+19-14	2124-2131	chicken	substance[122]|animal|abstract[124]	giv[122]|giv|giv[124]	_	_
+19-15	2132-2135	and	substance[122]|abstract[124]	giv[122]|giv[124]	_	_
+19-16	2136-2140	meat	substance[122]|abstract[124]|substance	giv[122]|giv[124]|new	_	_
+19-17	2141-2142	,	_	_	_	_
+19-18	2143-2147	over	_	_	_	_
+19-19	2148-2150	to	_	_	_	_
+19-20	2151-2155	your	person|substance[127]	giv|giv[127]	ana|coref	20-8|21-31[142_127]
+19-21	2156-2162	cooked	substance[127]	giv[127]	_	_
+19-22	2163-2168	foods	substance[127]	giv[127]	_	_
+19-23	2169-2170	.	_	_	_	_
+
+#Text=Do n't make a habit of storing your food ' where it will fit ' in the refrigerator .
+20-1	2171-2173	Do	_	_	_	_
+20-2	2174-2177	n't	_	_	_	_
+20-3	2178-2182	make	_	_	_	_
+20-4	2183-2184	a	object[128]	new[128]	ana	20-12[0_128]
+20-5	2185-2190	habit	object[128]	new[128]	_	_
+20-6	2191-2193	of	object[128]	new[128]	_	_
+20-7	2194-2201	storing	object[128]	new[128]	_	_
+20-8	2202-2206	your	object[128]|person|substance[130]	new[128]|giv|giv[130]	ana	21-2
+20-9	2207-2211	food	object[128]|substance[130]	new[128]|giv[130]	_	_
+20-10	2212-2213	'	object[128]	new[128]	_	_
+20-11	2214-2219	where	object[128]	new[128]	_	_
+20-12	2220-2222	it	object[128]|object	new[128]|giv	_	_
+20-13	2223-2227	will	object[128]	new[128]	_	_
+20-14	2228-2231	fit	object[128]	new[128]	_	_
+20-15	2232-2233	'	object[128]	new[128]	_	_
+20-16	2234-2236	in	object[128]	new[128]	_	_
+20-17	2237-2240	the	object[128]|object[132]	new[128]|giv[132]	coref	21-21[139_132]
+20-18	2241-2253	refrigerator	object[128]|object[132]	new[128]|giv[132]	_	_
+20-19	2254-2255	.	_	_	_	_
+
+#Text=Place your raw food on a plate or in a bowl , then store it on the bottom shelf of the refrigerator to prevent any stray juices from dripping onto your other foods .
+21-1	2256-2261	Place	_	_	_	_
+21-2	2262-2266	your	person|substance[134]	giv|new[134]	ana|ana	21-15[0_134]|21-31
+21-3	2267-2270	raw	substance[134]	new[134]	_	_
+21-4	2271-2275	food	substance[134]	new[134]	_	_
+21-5	2276-2278	on	_	_	_	_
+21-6	2279-2280	a	object[135]	new[135]	_	_
+21-7	2281-2286	plate	object[135]	new[135]	_	_
+21-8	2287-2289	or	_	_	_	_
+21-9	2290-2292	in	_	_	_	_
+21-10	2293-2294	a	object[136]	new[136]	_	_
+21-11	2295-2299	bowl	object[136]	new[136]	_	_
+21-12	2300-2301	,	_	_	_	_
+21-13	2302-2306	then	_	_	_	_
+21-14	2307-2312	store	_	_	_	_
+21-15	2313-2315	it	substance	giv	coref	23-6[145_0]
+21-16	2316-2318	on	_	_	_	_
+21-17	2319-2322	the	object[138]	new[138]	_	_
+21-18	2323-2329	bottom	object[138]	new[138]	_	_
+21-19	2330-2335	shelf	object[138]	new[138]	_	_
+21-20	2336-2338	of	object[138]	new[138]	_	_
+21-21	2339-2342	the	object[138]|object[139]	new[138]|giv[139]	coref	28-2[170_139]
+21-22	2343-2355	refrigerator	object[138]|object[139]	new[138]|giv[139]	_	_
+21-23	2356-2358	to	_	_	_	_
+21-24	2359-2366	prevent	_	_	_	_
+21-25	2367-2370	any	substance[140]	giv[140]	_	_
+21-26	2371-2376	stray	substance[140]	giv[140]	_	_
+21-27	2377-2383	juices	substance[140]	giv[140]	_	_
+21-28	2384-2388	from	_	_	_	_
+21-29	2389-2397	dripping	_	_	_	_
+21-30	2398-2402	onto	_	_	_	_
+21-31	2403-2407	your	person|substance[142]	giv|giv[142]	coref|ana	22-3[143_142]|23-2
+21-32	2408-2413	other	substance[142]	giv[142]	_	_
+21-33	2414-2419	foods	substance[142]	giv[142]	_	_
+21-34	2420-2421	.	_	_	_	_
+
+#Text=Dispose of old or expired foods immediately .
+22-1	2422-2429	Dispose	_	_	_	_
+22-2	2430-2432	of	_	_	_	_
+22-3	2433-2436	old	substance[143]	giv[143]	coref	29-6[178_143]
+22-4	2437-2439	or	substance[143]	giv[143]	_	_
+22-5	2440-2447	expired	substance[143]	giv[143]	_	_
+22-6	2448-2453	foods	substance[143]	giv[143]	_	_
+22-7	2454-2465	immediately	_	_	_	_
+22-8	2466-2467	.	_	_	_	_
+
+#Text=If you continue to store food that is rotten , moldy , or past its expiration date , it may not only be contaminated , but may transfer bacteria to nearby items .
+23-1	2468-2470	If	_	_	_	_
+23-2	2471-2474	you	person	giv	ana	24-4
+23-3	2475-2483	continue	_	_	_	_
+23-4	2484-2486	to	_	_	_	_
+23-5	2487-2492	store	_	_	_	_
+23-6	2493-2497	food	substance[145]	giv[145]	ana	23-15[0_145]
+23-7	2498-2502	that	substance[145]	giv[145]	_	_
+23-8	2503-2505	is	substance[145]	giv[145]	_	_
+23-9	2506-2512	rotten	substance[145]	giv[145]	_	_
+23-10	2513-2514	,	substance[145]	giv[145]	_	_
+23-11	2515-2520	moldy	substance[145]	giv[145]	_	_
+23-12	2521-2522	,	substance[145]	giv[145]	_	_
+23-13	2523-2525	or	substance[145]	giv[145]	_	_
+23-14	2526-2530	past	substance[145]	giv[145]	_	_
+23-15	2531-2534	its	substance[145]|substance|time[148]	giv[145]|giv|giv[148]	ana|coref	23-19|24-7[155_148]
+23-16	2535-2545	expiration	substance[145]|abstract|time[148]	giv[145]|giv|giv[148]	_	_
+23-17	2546-2550	date	substance[145]|time[148]	giv[145]|giv[148]	_	_
+23-18	2551-2552	,	_	_	_	_
+23-19	2553-2555	it	substance	giv	coref	24-4[153_0]
+23-20	2556-2559	may	_	_	_	_
+23-21	2560-2563	not	_	_	_	_
+23-22	2564-2568	only	_	_	_	_
+23-23	2569-2571	be	_	_	_	_
+23-24	2572-2584	contaminated	_	_	_	_
+23-25	2585-2586	,	_	_	_	_
+23-26	2587-2590	but	_	_	_	_
+23-27	2591-2594	may	_	_	_	_
+23-28	2595-2603	transfer	_	_	_	_
+23-29	2604-2612	bacteria	animal	giv	coref	29-22[184_0]
+23-30	2613-2615	to	_	_	_	_
+23-31	2616-2622	nearby	object[151]	new[151]	_	_
+23-32	2623-2628	items	object[151]	new[151]	_	_
+23-33	2629-2630	.	_	_	_	_
+
+#Text=Eat or prepare your food by the " Use by " date printed on the packaging .
+24-1	2631-2634	Eat	_	_	_	_
+24-2	2635-2637	or	_	_	_	_
+24-3	2638-2645	prepare	_	_	_	_
+24-4	2646-2650	your	person|substance[153]	giv|giv[153]	ana|coref	25-2|25-3[0_153]
+24-5	2651-2655	food	substance[153]	giv[153]	_	_
+24-6	2656-2658	by	_	_	_	_
+24-7	2659-2662	the	time[155]	giv[155]	coref	25-6[160_155]
+24-8	2663-2664	"	time[155]	giv[155]	_	_
+24-9	2665-2668	Use	abstract[154]|time[155]	new[154]|giv[155]	_	_
+24-10	2669-2671	by	abstract[154]|time[155]	new[154]|giv[155]	_	_
+24-11	2672-2673	"	time[155]	giv[155]	_	_
+24-12	2674-2678	date	time[155]	giv[155]	_	_
+24-13	2679-2686	printed	time[155]	giv[155]	_	_
+24-14	2687-2689	on	time[155]	giv[155]	_	_
+24-15	2690-2693	the	time[155]|object[156]	giv[155]|new[156]	coref	25-2[159_156]
+24-16	2694-2703	packaging	time[155]|object[156]	giv[155]|new[156]	_	_
+24-17	2704-2705	.	_	_	_	_
+
+#Text=If your food packaging indicates a " Best by " date , you may store the food longer ; however , it may not retain its quality in terms of taste .
+25-1	2706-2708	If	_	_	_	_
+25-2	2709-2713	your	person|object[159]	giv|giv[159]	ana|ana	25-13|25-22[0_159]
+25-3	2714-2718	food	substance|object[159]	giv|giv[159]	coref	25-16[162_0]
+25-4	2719-2728	packaging	object[159]	giv[159]	_	_
+25-5	2729-2738	indicates	_	_	_	_
+25-6	2739-2740	a	time[160]	giv[160]	_	_
+25-7	2741-2742	"	time[160]	giv[160]	_	_
+25-8	2743-2747	Best	time[160]	giv[160]	_	_
+25-9	2748-2750	by	time[160]	giv[160]	_	_
+25-10	2751-2752	"	time[160]	giv[160]	_	_
+25-11	2753-2757	date	time[160]	giv[160]	_	_
+25-12	2758-2759	,	_	_	_	_
+25-13	2760-2763	you	person	giv	ana	28-2
+25-14	2764-2767	may	_	_	_	_
+25-15	2768-2773	store	_	_	_	_
+25-16	2774-2777	the	substance[162]	giv[162]	ana	25-26[0_162]
+25-17	2778-2782	food	substance[162]	giv[162]	_	_
+25-18	2783-2789	longer	_	_	_	_
+25-19	2790-2791	;	_	_	_	_
+25-20	2792-2799	however	_	_	_	_
+25-21	2800-2801	,	_	_	_	_
+25-22	2802-2804	it	object	giv	_	_
+25-23	2805-2808	may	_	_	_	_
+25-24	2809-2812	not	_	_	_	_
+25-25	2813-2819	retain	_	_	_	_
+25-26	2820-2823	its	substance|abstract[165]	giv|new[165]	coref	30-2[187_0]
+25-27	2824-2831	quality	abstract[165]	new[165]	_	_
+25-28	2832-2834	in	_	_	_	_
+25-29	2835-2840	terms	_	_	_	_
+25-30	2841-2843	of	_	_	_	_
+25-31	2844-2849	taste	abstract	new	_	_
+25-32	2850-2851	.	_	_	_	_
+
+#Text=Video
+26-1	2852-2857	Video	abstract	new	_	_
+
+#Text=Tips
+27-1	2858-2862	Tips	abstract	new	_	_
+
+#Text=If your refrigerator has condensation or visible spills inside it , clean your fridge .
+28-1	2863-2865	If	_	_	_	_
+28-2	2866-2870	your	person|object[170]	giv|giv[170]	ana|ana	28-10[0_170]|28-13
+28-3	2871-2883	refrigerator	object[170]	giv[170]	_	_
+28-4	2884-2887	has	_	_	_	_
+28-5	2888-2900	condensation	substance	giv	_	_
+28-6	2901-2903	or	_	_	_	_
+28-7	2904-2911	visible	substance[172]	new[172]	_	_
+28-8	2912-2918	spills	substance[172]	new[172]	_	_
+28-9	2919-2925	inside	substance[172]	new[172]	_	_
+28-10	2926-2928	it	substance[172]|object	new[172]|giv	coref	28-13[175_0]
+28-11	2929-2930	,	_	_	_	_
+28-12	2931-2936	clean	_	_	_	_
+28-13	2937-2941	your	person|object[175]	giv|giv[175]	ana	29-14
+28-14	2942-2948	fridge	object[175]	giv[175]	_	_
+28-15	2949-2950	.	_	_	_	_
+
+#Text=When grocery shopping , store hot foods away from the cold foods in your shopping cart to prevent the growth of bacteria in the cold foods , and to prevent the hot foods from cooling off too quickly .
+29-1	2951-2955	When	_	_	_	_
+29-2	2956-2963	grocery	abstract|event[177]	new|new[177]	coref	29-15[0_177]
+29-3	2964-2972	shopping	event[177]	new[177]	_	_
+29-4	2973-2974	,	_	_	_	_
+29-5	2975-2980	store	_	_	_	_
+29-6	2981-2984	hot	substance[178]	giv[178]	coref	29-10[179_178]
+29-7	2985-2990	foods	substance[178]	giv[178]	_	_
+29-8	2991-2995	away	_	_	_	_
+29-9	2996-3000	from	_	_	_	_
+29-10	3001-3004	the	substance[179]	giv[179]	coref	29-24[185_179]
+29-11	3005-3009	cold	substance[179]	giv[179]	_	_
+29-12	3010-3015	foods	substance[179]	giv[179]	_	_
+29-13	3016-3018	in	substance[179]	giv[179]	_	_
+29-14	3019-3023	your	substance[179]|person|object[182]	giv[179]|giv|new[182]	ana	35-1
+29-15	3024-3032	shopping	substance[179]|event|object[182]	giv[179]|giv|new[182]	_	_
+29-16	3033-3037	cart	substance[179]|object[182]	giv[179]|new[182]	_	_
+29-17	3038-3040	to	_	_	_	_
+29-18	3041-3048	prevent	_	_	_	_
+29-19	3049-3052	the	abstract[183]	new[183]	_	_
+29-20	3053-3059	growth	abstract[183]	new[183]	_	_
+29-21	3060-3062	of	abstract[183]	new[183]	_	_
+29-22	3063-3071	bacteria	abstract[183]|animal[184]	new[183]|giv[184]	coref	33-13[0_184]
+29-23	3072-3074	in	abstract[183]|animal[184]	new[183]|giv[184]	_	_
+29-24	3075-3078	the	abstract[183]|animal[184]|substance[185]	new[183]|giv[184]|giv[185]	_	_
+29-25	3079-3083	cold	abstract[183]|animal[184]|substance[185]	new[183]|giv[184]|giv[185]	_	_
+29-26	3084-3089	foods	abstract[183]|animal[184]|substance[185]	new[183]|giv[184]|giv[185]	_	_
+29-27	3090-3091	,	_	_	_	_
+29-28	3092-3095	and	_	_	_	_
+29-29	3096-3098	to	_	_	_	_
+29-30	3099-3106	prevent	_	_	_	_
+29-31	3107-3110	the	substance[186]	new[186]	coref	33-1[195_186]
+29-32	3111-3114	hot	substance[186]	new[186]	_	_
+29-33	3115-3120	foods	substance[186]	new[186]	_	_
+29-34	3121-3125	from	_	_	_	_
+29-35	3126-3133	cooling	_	_	_	_
+29-36	3134-3137	off	_	_	_	_
+29-37	3138-3141	too	_	_	_	_
+29-38	3142-3149	quickly	_	_	_	_
+29-39	3150-3151	.	_	_	_	_
+
+#Text=Buy food which needs to be refrigerated or frozen last .
+30-1	3152-3155	Buy	_	_	_	_
+30-2	3156-3160	food	substance[187]	giv[187]	coref	36-2[0_187]
+30-3	3161-3166	which	substance[187]	giv[187]	_	_
+30-4	3167-3172	needs	substance[187]	giv[187]	_	_
+30-5	3173-3175	to	substance[187]	giv[187]	_	_
+30-6	3176-3178	be	substance[187]	giv[187]	_	_
+30-7	3179-3191	refrigerated	substance[187]	giv[187]	_	_
+30-8	3192-3194	or	substance[187]	giv[187]	_	_
+30-9	3195-3201	frozen	substance[187]	giv[187]	_	_
+30-10	3202-3206	last	substance[187]	giv[187]	_	_
+30-11	3207-3208	.	_	_	_	_
+
+#Text=Warnings
+31-1	3209-3217	Warnings	abstract	new	_	_
+
+#Text=Never leave raw or cooked meats , fish , eggs , and poultry in room temperature for more than 2 hours .
+32-1	3218-3223	Never	_	_	_	_
+32-2	3224-3229	leave	_	_	_	_
+32-3	3230-3233	raw	substance[189]	new[189]	_	_
+32-4	3234-3236	or	substance[189]	new[189]	_	_
+32-5	3237-3243	cooked	substance[189]	new[189]	_	_
+32-6	3244-3249	meats	substance[189]	new[189]	_	_
+32-7	3250-3251	,	_	_	_	_
+32-8	3252-3256	fish	animal	new	_	_
+32-9	3257-3258	,	_	_	_	_
+32-10	3259-3263	eggs	object	new	_	_
+32-11	3264-3265	,	_	_	_	_
+32-12	3266-3269	and	_	_	_	_
+32-13	3270-3277	poultry	animal	new	_	_
+32-14	3278-3280	in	_	_	_	_
+32-15	3281-3285	room	abstract[193]	new[193]	coref	33-19[201_193]
+32-16	3286-3297	temperature	abstract[193]	new[193]	_	_
+32-17	3298-3301	for	_	_	_	_
+32-18	3302-3306	more	time[194]	new[194]	coref	33-22[202_194]
+32-19	3307-3311	than	time[194]	new[194]	_	_
+32-20	3312-3313	2	time[194]	new[194]	_	_
+32-21	3314-3319	hours	time[194]	new[194]	_	_
+32-22	3320-3321	.	_	_	_	_
+
+#Text=These foods contain nutrients and properties that will support the growth of bacteria if they are left in room temperature for over 2 hours .
+33-1	3322-3327	These	substance[195]	giv[195]	_	_
+33-2	3328-3333	foods	substance[195]	giv[195]	_	_
+33-3	3334-3341	contain	_	_	_	_
+33-4	3342-3351	nutrients	substance	new	_	_
+33-5	3352-3355	and	_	_	_	_
+33-6	3356-3366	properties	abstract[197]	giv[197]	ana	33-15[0_197]
+33-7	3367-3371	that	abstract[197]	giv[197]	_	_
+33-8	3372-3376	will	abstract[197]	giv[197]	_	_
+33-9	3377-3384	support	abstract[197]	giv[197]	_	_
+33-10	3385-3388	the	abstract[197]|event[198]	giv[197]|new[198]	_	_
+33-11	3389-3395	growth	abstract[197]|event[198]	giv[197]|new[198]	_	_
+33-12	3396-3398	of	abstract[197]|event[198]	giv[197]|new[198]	_	_
+33-13	3399-3407	bacteria	abstract[197]|event[198]|animal	giv[197]|new[198]|giv	_	_
+33-14	3408-3410	if	_	_	_	_
+33-15	3411-3415	they	abstract	giv	_	_
+33-16	3416-3419	are	_	_	_	_
+33-17	3420-3424	left	_	_	_	_
+33-18	3425-3427	in	_	_	_	_
+33-19	3428-3432	room	abstract[201]	giv[201]	_	_
+33-20	3433-3444	temperature	abstract[201]	giv[201]	_	_
+33-21	3445-3448	for	_	_	_	_
+33-22	3449-3453	over	time[202]	giv[202]	_	_
+33-23	3454-3455	2	time[202]	giv[202]	_	_
+33-24	3456-3461	hours	time[202]	giv[202]	_	_
+33-25	3462-3463	.	_	_	_	_
+
+#Text=Things
+34-1	3464-3470	Things	object	new	_	_
+
+#Text=You 'll Need
+35-1	3471-3474	You	person	giv	_	_
+35-2	3475-3478	'll	_	_	_	_
+35-3	3479-3483	Need	_	_	_	_
+
+#Text=Small food containers
+36-1	3484-3489	Small	object[206]	giv[206]	_	_
+36-2	3490-3494	food	substance|object[206]	giv|giv[206]	_	_
+36-3	3495-3505	containers	object[206]	giv[206]	_	_
+
+#Text=Plastic wrap
+37-1	3506-3513	Plastic	object[207]	giv[207]	_	_
+37-2	3514-3518	wrap	object[207]	giv[207]	_	_
+
+#Text=Aluminum foil
+38-1	3519-3527	Aluminum	object[208]	new[208]	_	_
+38-2	3528-3532	foil	object[208]	new[208]	_	_

@@ -1,0 +1,142 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Numerical Procedure</segment>
+<segment id="2" parent="1002" relname="preparation">4.1. Computational Domain</segment>
+<segment id="3" parent="1004" relname="span">The computational domain</segment>
+<segment id="4" parent="3" relname="elaboration">illustrated in</segment>
+<segment id="5" parent="1006" relname="preparation">Figure 2</segment>
+<segment id="6" parent="1006" relname="span">is an exact replica of the experimental setup ,</segment>
+<segment id="7" parent="1008" relname="span">comprising the solid subdomain parts</segment>
+<segment id="8" parent="7" relname="elaboration">( the engine , the exhaust manifolds , and the enclosure ) ,</segment>
+<segment id="9" parent="1010" relname="span">and the fluid subdomain</segment>
+<segment id="10" parent="9" relname="elaboration">( the volume under the enclosure , as well as the surrounding containment area ) ,</segment>
+<segment id="11" parent="1011" relname="joint">making it possible to employ the most suitable models for the fluid and solid parts , respectively ,</segment>
+<segment id="12" parent="1011" relname="joint">and to establish a direct coupling between these models .</segment>
+<segment id="13" parent="1002" relname="joint">In this manner , the physics of the system can be capured with sufficient accuracy at lower computational costs .</segment>
+<segment id="14" parent="1002" relname="joint">4.2. 1D</segment>
+<segment id="15" parent="1016" relname="preparation">Model of Transient Heat Transfer in Engine Solids</segment>
+<segment id="16" parent="1016" relname="span">The 1D thermal model of heat transfer in the engine solids is used</segment>
+<segment id="17" parent="16" relname="elaboration">where the simplified engine and the exhaust manifolds are represented by lumped thermal masses .</segment>
+<segment id="18" parent="1019" relname="span">The concept of lumped thermal masses is based on the assumption</segment>
+<segment id="19" parent="1020" relname="span">that temperature variations within a solid ,</segment>
+<segment id="20" parent="19" relname="elaboration">participating in heat transfer with a surrounding medium ,</segment>
+<segment id="21" parent="1021" relname="span">can be neglected</segment>
+<segment id="22" parent="21" relname="manner">as compared to the temperature difference between the solid and the fluid .</segment>
+<segment id="23" parent="1024" relname="attribution">Previous experimental and numerical results have shown</segment>
+<segment id="24" parent="1024" relname="span">that this approach is valid for the exhaust manifolds and for all engine surfaces except the right and left engine walls ,</segment>
+<segment id="25" parent="24" relname="elaboration">see Merati et al. and Chen et al. for more details .</segment>
+<segment id="26" parent="1027" relname="span">A good example of solids</segment>
+<segment id="27" parent="26" relname="elaboration">which can be accurately modeled</segment>
+<segment id="28" parent="1029" relname="same_unit">using a single lumped thermal mass</segment>
+<segment id="29" parent="1029" relname="same_unit">are the exhaust manifolds ,</segment>
+<segment id="30" parent="1028" relname="same_unit">for which experimental observations confirmed negligible internal temperature differences and uniform temperature distribution on their surfaces .</segment>
+<segment id="31" parent="1002" relname="joint">The surfaces of the left and right engine walls , on the other hand , exhibit significant temperature gradients due to high radiative heat flux from the adjacent exhaust manifolds .</segment>
+<segment id="32" parent="1032" relname="span">Therefore , each of the engine side walls is represented by a network of 55 interfaced lumped thermal masses</segment>
+<segment id="33" parent="1033" relname="span">to provide sufficient spatial discretization</segment>
+<segment id="34" parent="33" relname="purpose">to accurately capture the temperature distribution .</segment>
+<segment id="35" parent="1037" relname="span">The specific topography and dimensions of the thermal masses</segment>
+<segment id="36" parent="35" relname="elaboration">comprising this network</segment>
+<segment id="37" parent="1036" relname="same_unit">are chosen</segment>
+<segment id="38" parent="1038" relname="joint">so that their centers coincide with the locations of the thermocouples from the experiment ,</segment>
+<segment id="39" parent="1038" relname="joint">as illustrated in</segment>
+<segment id="40" parent="41" relname="preparation">Figure 3</segment>
+<segment id="41" parent="1040" relname="span">.</segment>
+<segment id="42" parent="1042" relname="span">The actual materials</segment>
+<segment id="43" parent="1043" relname="span">used</segment>
+<segment id="44" parent="1044" relname="same_unit">to build the parts of the experimental setup and their exact masses</segment>
+<segment id="45" parent="1045" relname="span">are used</segment>
+<segment id="46" parent="45" relname="purpose">to model the lumped thermal masses .</segment>
+<segment id="47" parent="1047" relname="span">The variations of thermal conductivity and specific heat with temperature are accounted for .</segment>
+<segment id="48" parent="1049" relname="joint">All relevant details are provided in Table 2 and Table 3 , respectively .</segment>
+<segment id="49" parent="1051" relname="attribution">It should be noted</segment>
+<segment id="50" parent="1051" relname="span">that each row of interfaced thermal masses in the network</segment>
+<segment id="51" parent="50" relname="elaboration">representing the engine side wall corresponds to one row of adjacent sectors of the physical wall from top to bottom .</segment>
+<segment id="52" parent="1053" relname="attribution">4.3.</segment>
+<segment id="53" parent="1053" relname="span">3D CFD Numerical Solver for the Fluid Flow and Heat Transfer</segment>
+<segment id="54" parent="1054" relname="joint">The governing equations of the fluid flow are numerically solved in STAR-CCM+</segment>
+<segment id="55" parent="1054" relname="joint">and a polyhedral computational mesh with a total cell count of 25 million is generated from the CAD model of the enclosure and the containment area .</segment>
+<segment id="56" parent="1056" relname="span">The average spatial discretization varies within the limits of 2 and 120 mm</segment>
+<segment id="57" parent="56" relname="elaboration">depending on the location .</segment>
+<segment id="58" parent="1058" relname="span">Denser mesh is used in the vicinity of the exhaust manifolds and in the upper part of the enclosure</segment>
+<segment id="59" parent="58" relname="purpose">to more accurately resolve the temperature gradients and the buoyancy-driven flow field .</segment>
+<segment id="60" parent="1061" relname="span">The maximum cell size is 3 mm for all the surfaces</segment>
+<segment id="61" parent="60" relname="elaboration">located above the exhaust manifolds .</segment>
+<segment id="62" parent="1062" relname="span">The thickness of the first prismatic layer on the surfaces is approximately 0.3 mm ,</segment>
+<segment id="63" parent="62" relname="elaboration">which results in maximum values of close to unity .</segment>
+<segment id="64" parent="1064" relname="preparation">Figure 4</segment>
+<segment id="65" parent="1064" relname="span">illustrates the computational grid at the central section plane through the fluid domain .</segment>
+<segment id="66" parent="1066" relname="span">The boundary conditions for the 3D CFD model are the temperatures of the exhaust manifolds , the engine walls and the containment walls</segment>
+<segment id="67" parent="66" relname="elaboration">as obtained from stable measurement readings in the experiment .</segment>
+<segment id="68" parent="1067" relname="joint">A no-slip boundary condition is applied on all walls .</segment>
+<segment id="69" parent="1068" relname="span">An initially quiescent flow field with a uniform temperature of 30 C is considered .</segment>
+<segment id="70" parent="1069" relname="span">A second-order spatial discretization scheme is used with a coupled implicit solver</segment>
+<segment id="71" parent="70" relname="purpose">to compute the flow and temperature fields .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1003" relname="same_unit"/>
+<group id="1006" type="span" parent="1005" relname="span"/>
+<group id="1007" type="multinuc" parent="6" relname="elaboration"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1009" type="multinuc" parent="1007" relname="same_unit"/>
+<group id="1010" type="span" parent="1009" relname="same_unit"/>
+<group id="1011" type="multinuc" parent="1009" relname="same_unit"/>
+<group id="1015" type="span" parent="1002" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1018" type="multinuc" parent="1002" relname="joint"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1020" type="span" parent="18" relname="elaboration"/>
+<group id="1021" type="span" parent="1018" relname="same_unit"/>
+<group id="1023" type="span" parent="1002" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1026" type="span" parent="1002" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1028" type="multinuc" parent="1027" relname="means"/>
+<group id="1029" type="multinuc" parent="1028" relname="same_unit"/>
+<group id="1032" type="span" parent="1002" relname="joint"/>
+<group id="1033" type="span" parent="32" relname="purpose"/>
+<group id="1035" type="span" parent="1002" relname="joint"/>
+<group id="1036" type="multinuc" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1036" relname="same_unit"/>
+<group id="1038" type="multinuc" parent="1036" relname="purpose"/>
+<group id="1040" type="span" parent="1002" relname="joint"/>
+<group id="1042" type="span" parent="1002" relname="joint"/>
+<group id="1043" type="span" parent="42" relname="elaboration"/>
+<group id="1044" type="multinuc" parent="43" relname="purpose"/>
+<group id="1045" type="span" parent="1044" relname="same_unit"/>
+<group id="1047" type="span" parent="1002" relname="joint"/>
+<group id="1048" type="span" parent="47" relname="elaboration"/>
+<group id="1049" type="multinuc" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="1050" relname="span"/>
+<group id="1052" type="span" parent="1049" relname="elaboration"/>
+<group id="1053" type="span" parent="1052" relname="span"/>
+<group id="1054" type="multinuc" parent="53" relname="elaboration"/>
+<group id="1056" type="span" parent="1002" relname="joint"/>
+<group id="1058" type="span" parent="1002" relname="joint"/>
+<group id="1060" type="span" parent="1002" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="span"/>
+<group id="1062" type="span" parent="1061" relname="elaboration"/>
+<group id="1063" type="span" parent="1002" relname="joint"/>
+<group id="1064" type="span" parent="1063" relname="span"/>
+<group id="1065" type="multinuc" parent="65" relname="elaboration"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="multinuc" parent="1065" relname="joint"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1069" type="span" parent="69" relname="elaboration"/>
+	</body>
+</rst>

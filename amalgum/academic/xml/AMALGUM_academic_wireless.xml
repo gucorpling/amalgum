@@ -1,0 +1,554 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_wireless" title="Automatic Wireless Signal Classification: A Neural-Induced Support Vector Machine-Based Approach" shortTitle="wireless" author="Arfan  Haider Wahla, Lan Chen, Yali Wang, Rong Chen" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2078-2489/10/11/338/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+Simulation	NN	simulation
+Results	NNS	result
+and	CC	and
+Discussion	NN	discussion
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+section	NN	section
+,	,	,
+the	DT	the
+performance	NN	performance
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+scheme	NN	scheme
+is	VBZ	be
+investigated	VBN	investigate
+against	IN	against
+several	JJ	several
+non-ideal	JJ	non-ideal
+channel	NN	channel
+conditions	NNS	condition
+such	JJ	such
+as	IN	as
+frequency	NN	frequency
+offset	NN	offset
+,	,	,
+phase	NN	phase
+offset	NN	offset
+,	,	,
+timing	NN	timing
+offset	NN	offset
+,	,	,
+varying	VBG	vary
+symbol	NN	symbol
+number	NN	number
+as	RB	as
+well	RB	well
+as	IN	as
+different	JJ	different
+Doppler	NN	doppler
+shifts	NNS	shift
+.	.	.
+</s>
+<s type="decl">
+An	DT	a
+analytical	JJ	analytical
+comparison	NN	comparison
+is	VBZ	be
+also	RB	also
+provided	VBN	provide
+with	IN	with
+previously	RB	previously
+proposed	VBN	propose
+different	JJ	different
+learning-based	JJ	learning-based
+modulation	NN	modulation
+classifiers	NNS	classifyer
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+Dataset	NNP	Dataset
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+the	DT	the
+following	VBG	follow
+modulation	NN	modulation
+schemes	NNS	scheme
+were	VBD	be
+considered	VBN	consider
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+transmitted	VBN	transmitt
+bit-stream	NN	bit-stream
+was	VBD	be
+generated	VBN	generate
+randomly	RB	randomly
+to	TO	to
+ensure	VB	ensure
+each	DT	each
+has	VBZ	have
+equal	JJ	equal
+probability	NN	probability
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+received	VBN	receive
+signal	NN	signal
+was	VBD	be
+pre-processed	VBN	pre-process
+at	IN	at
+the	DT	the
+receiver	NN	receiver
+end	NN	end
+to	TO	to
+obtain	VB	obtain
+a	DT	a
+complex	JJ	complex
+based-band	VBN	based-band
+signal	NN	signal
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+In-Phase-Quadrature	NNP	In-Phase-Quadrature
+(	-LRB-	(
+I-Q	NNP	I
+)	-RRB-	)
+samples	NNS	sample
+of	IN	of
+the	DT	the
+received	VBN	receive
+signal	NN	signal
+were	VBD	be
+sampled	VBN	sample
+simultaneously	RB	simultaneously
+to	IN	to
+a	DT	a
+frame	NN	frame
+of	IN	of
+length	NN	length
+N.	NNP	N.
+They	PRP	they
+are	VBP	be
+combined	VBN	combine
+later	RBR	late
+in	IN	in
+a	DT	a
+2	CD	2
+X	NN	X
+N	NN	N
+matrix	NN	matrix
+and	CC	and
+input	NN	input
+to	IN	to
+CNN	NNP	CNN
+for	IN	for
+feature	NN	feature
+extraction	NN	extraction
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+study	NN	study
+,	,	,
+the	DT	the
+value	NN	value
+of	IN	of
+<hi rend="italic">
+N	NNP	N
+</hi>
+is	VBZ	be
+<date when="2048">
+2048	CD	2048
+</date>
+but	CC	but
+some	DT	some
+experiments	NNS	experiment
+are	VBP	be
+performed	VBN	perform
+with	IN	with
+<hi rend="italic">
+N	NNP	N
+</hi>
+=	SYM	=
+<date when="1024">
+1024	CD	1024
+</date>
+,	,	,
+512	CD	512
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+is	VBZ	be
+done	VBN	do
+by	IN	by
+varying	VBG	vary
+the	DT	the
+number	NN	number
+of	IN	of
+symbols	NNS	symbol
+in	IN	in
+the	DT	the
+frame	NN	frame
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+segment	NN	segment
+has	VBZ	have
+the	DT	the
+same	JJ	same
+results	NNS	result
+as	IN	as
+that	DT	that
+of	IN	of
+a	DT	a
+full	JJ	full
+observation	NN	observation
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+way	NN	way
+,	,	,
+the	DT	the
+proposed	VBN	propose
+classifier	NN	classifier
+would	MD	would
+be	VB	be
+independent	JJ	independent
+of	IN	of
+N.	NN	N.
+The	DT	the
+range	NN	range
+of	IN	of
+AWGN	NNP	AWGN
+noise	NN	noise
+with	IN	with
+signal-to-noise	NN	signal-to-noise
+ratio	NN	ratio
+(	-LRB-	(
+SNR	NN	SNR
+)	-RRB-	)
+=	SYM	=
+−8	NN	−8
+dB	NN	dB
+to	IN	to
++8	CD	+8
+dB	NN	dB
+in	IN	in
+the	DT	the
+dataset	NN	dataset
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+each	DT	each
+modulation	NN	modulation
+scheme	NN	scheme
+and	CC	and
+SNR	NN	SNR
+values	NNS	value
+,	,	,
+10,000	CD	10000
+realizations	NNS	realization
+of	IN	of
+the	DT	the
+received	VBN	receive
+signal	NN	signal
+are	VBP	be
+generated	VBN	generate
+according	VBG	accord
+to	IN	to
+the	DT	the
+model	NN	model
+described	VBN	describe
+in	IN	in
+Section	NNP	Section
+2	CD	2
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+rest	NN	rest
+of	IN	of
+the	DT	the
+parameters	NNS	parameter
+are	VBP	be
+summarized	VBN	summarize
+in	IN	in
+Table	NNP	Table
+1	CD	1
+in	IN	in
+detail	NN	detail
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.2.	CD	4.2.
+Training	NN	Training
+and	CC	and
+Validation	NN	validation
+Performance	NN	performance
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+the	DT	the
+following	VBG	follow
+experiment	NN	experiment
+,	,	,
+the	DT	the
+proposed	VBN	propose
+classifier	NN	classifier
+NSVM	NNP	NSVM
+,	,	,
+which	WDT	which
+is	VBZ	be
+a	DT	a
+hybrid	JJ	hybrid
+combination	NN	combination
+of	IN	of
+CNN	NNP	CNN
+and	CC	and
+SVM	NNP	SVM
+is	VBZ	be
+trained	VBN	train
+and	CC	and
+validated	VBN	validate
+by	IN	by
+using	VBG	use
+offline	JJ	offline
+deployment	NN	deployment
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+analyze	VB	analyze
+the	DT	the
+performance	NN	performance
+,	,	,
+the	DT	the
+accuracy	NN	accuracy
+and	CC	and
+loss	NN	loss
+curves	NNS	curve
+of	IN	of
+training	NN	training
+and	CC	and
+cross-validation	NN	cross-validation
+are	VBP	be
+plotted	VBN	plot
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+Similar	JJ	Similar
+experiments	NNS	experiment
+are	VBP	be
+performed	VBN	perform
+with	IN	with
+a	DT	a
+traditional	JJ	traditional
+CNN	NNP	CNN
+model	NN	model
+with	IN	with
+the	DT	the
+softmax	NN	softmax
+classifier	NN	classifier
+in	IN	in
+its	PRP$	its
+last	JJ	last
+layer	NN	layer
+,	,	,
+and	CC	and
+the	DT	the
+results	NNS	result
+are	VBP	be
+plotted	VBN	plot
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+6	CD	6
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+CNN	NNP	CNN
+settings	NNS	setting
+used	VBN	use
+here	RB	here
+are	VBP	be
+the	DT	the
+same	JJ	same
+in	IN	in
+both	DT	both
+cases	NNS	case
+,	,	,
+as	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+4	CD	4
+</s>
+</figure>
+<s type="decl">
+,	,	,
+expect	VBP	expect
+one	CD	one
+is	VBZ	be
+trained	VBN	train
+with	IN	with
+Gaussian	NNP	Gaussian
+SVM	NNP	SVM
+and	CC	and
+the	DT	the
+other	JJ	other
+one	NN	one
+is	VBZ	be
+trained	VBN	train
+with	IN	with
+softmax	NN	softmax
+as	IN	as
+the	DT	the
+decision	NN	decision
+classifier	NN	classifier
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+performance	NN	performance
+of	IN	of
+NSVM	NNP	NSVM
+is	VBZ	be
+better	JJR	good
+than	IN	than
+the	DT	the
+traditional	JJ	traditional
+CNN	NNP	CNN
+model	NN	model
+as	IN	as
+the	DT	the
+accuracy	NN	accuracy
+and	CC	and
+loss	NN	loss
+converges	VBZ	converge
+to	IN	to
+their	PRP$	their
+minima	NNS	minima
+and	CC	and
+maxima	NNS	maxima
+quickly	RB	quickly
+.	.	.
+</s>
+<s type="decl">
+Along	RB	along
+with	IN	with
+that	DT	that
+,	,	,
+these	DT	this
+results	NNS	result
+show	VBP	show
+that	IN	that
+it	PRP	it
+smoothens	VBZ	smoothen
+as	IN	as
+training	NN	training
+progresses	VBZ	progress
+,	,	,
+which	WDT	which
+shows	VBZ	show
+the	DT	the
+effectiveness	NN	effectiveness
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+scheme	NN	scheme
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+also	RB	also
+reduces	VBZ	reduce
+the	DT	the
+cost	NN	cost
+of	IN	of
+training	NN	training
+for	IN	for
+the	DT	the
+proposed	VBN	propose
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+in	IN	in
+the	DT	the
+case	NN	case
+of	IN	of
+CNN	NNP	CNN
+with	IN	with
+softmax	NN	softmax
+,	,	,
+the	DT	the
+classifier	NN	classifier
+performance	NN	performance
+is	VBZ	be
+hardly	RB	hardly
+stable	JJ	stable
+and	CC	and
+satisfactory	JJ	satisfactory
+,	,	,
+as	IN	as
+can	MD	can
+be	VB	be
+seen	VBN	see
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+6	CD	6
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+</p>
+</text>

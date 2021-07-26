@@ -1,0 +1,121 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1003" relname="span">The fifth-generation</segment>
+<segment id="3" parent="2" relname="restatement">( 5G )</segment>
+<segment id="4" parent="1005" relname="span">millimeter-wave</segment>
+<segment id="5" parent="4" relname="restatement">( mm-Wave )</segment>
+<segment id="6" parent="1006" relname="joint">frequency range ,</segment>
+<segment id="7" parent="1008" relname="span">also referred to as the frequency range 2</segment>
+<segment id="8" parent="7" relname="elaboration">( FR2 ) ,</segment>
+<segment id="9" parent="1007" relname="same_unit">includes the band between 24.25 and 52.6 GHz .</segment>
+<segment id="10" parent="1010" relname="span">For the 5G mm-Wave wireless applications , beamforming antenna system is essentially needed</segment>
+<segment id="11" parent="1011" relname="span">to cope with high free-space path loss , severe multi-path fading , and possible interference management</segment>
+<segment id="12" parent="11" relname="purpose">for improving signal-to-noise ratio .</segment>
+<segment id="13" parent="1013" relname="preparation">Two approaches are possible for the beamforming system realization .</segment>
+<segment id="14" parent="1014" relname="span">The first approach is phased-array beamforming system .</segment>
+<segment id="15" parent="1016" relname="concession">It can provide continuously any-directional beam-steering capability ,</segment>
+<segment id="16" parent="1017" relname="span">but requires sophisticated beamforming circuitry</segment>
+<segment id="17" parent="16" relname="elaboration">comprising precise phase shifters , variable gain blocks , and switches ,</segment>
+<segment id="18" parent="1017" relname="result">thus it inevitably elevates the system implementation cost and complexity .</segment>
+<segment id="19" parent="1019" relname="contrast">On the other hand , switched beamforming antenna system can provide discontinuous discrete-directional beam-steering capability ,</segment>
+<segment id="20" parent="1019" relname="contrast">but with much less hardware complexity and easier producibility .</segment>
+<segment id="21" parent="1021" relname="same_unit">Thus , the switched beamforming antenna system is more preferred</segment>
+<segment id="22" parent="23" relname="circumstance">when precise and continuous beam steering function is not necessarily required ,</segment>
+<segment id="23" parent="1022" relname="span">whereas implementation cost and producibility are of more importance .</segment>
+<segment id="24" parent="1020" relname="joint">Passive beamforming matrices such as Blass matrix , Nolen matrix , and Butler matrix are generally adopted for the switched beamforming antenna system .</segment>
+<segment id="25" parent="1020" relname="joint">Among them , the Butler matrix is more widely used due to its wideband characteristic and simple structure .</segment>
+<segment id="26" parent="27" relname="circumstance">When realizing a Butler matrix based switched beamforming antenna system ,</segment>
+<segment id="27" parent="1026" relname="span">the Butler matrix usually occupies a much larger area than the antenna array elements .</segment>
+<segment id="28" parent="1020" relname="joint">Thus , minimizing the Butler matrix size is more critical for the overall form factor minimization .</segment>
+<segment id="29" parent="1029" relname="span">Many previous works have been reported</segment>
+<segment id="30" parent="29" relname="elaboration">focusing on the miniaturization of the Butler matrix .</segment>
+<segment id="31" parent="1031" relname="span">The previous techniques can be categorized into a single-layer substrate based design and a multi-layer substrate based design .</segment>
+<segment id="32" parent="1033" relname="span">For the single-layer substrate designs , several techniques , such as a higher characteristic impedance transmission line based design , a directional coupler</segment>
+<segment id="33" parent="1034" relname="span">employing lumped components , and an artificial transmission line</segment>
+<segment id="34" parent="33" relname="elaboration">employing quasi-lumped elements and discontinuities structure ,</segment>
+<segment id="35" parent="1032" relname="same_unit">were effective for the miniaturization .</segment>
+<segment id="36" parent="1036" relname="same_unit">Nevertheless ,</segment>
+<segment id="37" parent="1038" relname="circumstance">since the Butler matrix and the antenna elements were put on the same plane ,</segment>
+<segment id="38" parent="1038" relname="span">the spurious radiation</segment>
+<segment id="39" parent="1039" relname="span">leaking from the Butler matrix toward the antenna was a serious issue</segment>
+<segment id="40" parent="39" relname="cause">because it adversely affected the total radiation pattern .</segment>
+<segment id="41" parent="1041" relname="span">The multi-layer substrate design approach can alleviate the spurious radiation issue more effectively</segment>
+<segment id="42" parent="41" relname="cause">because the Butler matrix and the antenna elements are placed in different layers .</segment>
+<segment id="43" parent="1044" relname="span">In addition , such previous multi-layer designs have employed further miniaturization techniques , such as the suspended stripline , dual transmission line structure in a multi-layer structure , forward-wave directional coupler , modularized multi-folded structure , slot-directional hybrid coupler , and dual-layer substrate integrated waveguide</segment>
+<segment id="44" parent="43" relname="restatement">( SIW )</segment>
+<segment id="45" parent="1044" relname="elaboration">based crossover elimination structure .</segment>
+<segment id="46" parent="47" relname="attribution">Yet , it should be noted</segment>
+<segment id="47" parent="1046" relname="span">that those miniaturization techniques inevitably lead to higher implementation cost and less producibility .</segment>
+<segment id="48" parent="49" relname="concession">It is also interesting to note ,</segment>
+<segment id="49" parent="1048" relname="span">that those previous works have utilized only the same-property homogenous substrates for the multiple layers .</segment>
+<segment id="50" parent="1050" relname="span">In this work , we propose to adopt a two-layer hybrid stackup substrate</segment>
+<segment id="51" parent="50" relname="purpose">for realizing a 28-GHz band Butler matrix based switched beamforming antenna system .</segment>
+<segment id="52" parent="1053" relname="span">The hybrid two-layer stackup substrate is composed of two dissimilar layers</segment>
+<segment id="53" parent="52" relname="elaboration">with each layer having optimal electrical properties for the Butler matrix and the antenna elements .</segment>
+<segment id="54" parent="1053" relname="elaboration">Such hybrid stackup substrate based design approach was also found to be effective for performance and reliability improvement in the high-frequency serial-link applications .</segment>
+<segment id="55" parent="1054" relname="span">This work is carried out</segment>
+<segment id="56" parent="55" relname="purpose">to achieve the overall size miniaturization and the spurious radiation reduction in a Butler matrix based switched beamforming antenna system for 28-GHz mm-Wave 5G radio applications .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1009" relname="background"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1004" type="multinuc" parent="1002" relname="same_unit"/>
+<group id="1005" type="span" parent="1004" relname="same_unit"/>
+<group id="1006" type="multinuc" parent="1004" relname="same_unit"/>
+<group id="1007" type="multinuc" parent="1006" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1009" type="multinuc" parent="1001" relname="span"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="10" relname="purpose"/>
+<group id="1012" type="span" parent="1009" relname="joint"/>
+<group id="1013" type="multinuc" parent="1012" relname="span"/>
+<group id="1014" type="span" parent="1013" relname="joint"/>
+<group id="1015" type="span" parent="14" relname="elaboration"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="multinuc" parent="1013" relname="joint"/>
+<group id="1019" type="multinuc" parent="1018" relname="sequence"/>
+<group id="1020" type="multinuc" parent="1018" relname="sequence"/>
+<group id="1021" type="multinuc" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="same_unit"/>
+<group id="1026" type="span" parent="1020" relname="joint"/>
+<group id="1029" type="span" parent="1020" relname="joint"/>
+<group id="1031" type="span" parent="1020" relname="joint"/>
+<group id="1032" type="multinuc" parent="31" relname="elaboration"/>
+<group id="1033" type="span" parent="1032" relname="same_unit"/>
+<group id="1034" type="span" parent="32" relname="elaboration"/>
+<group id="1036" type="multinuc" parent="1020" relname="joint"/>
+<group id="1037" type="span" parent="1036" relname="same_unit"/>
+<group id="1038" type="span" parent="1037" relname="span"/>
+<group id="1039" type="span" parent="38" relname="elaboration"/>
+<group id="1041" type="span" parent="1020" relname="joint"/>
+<group id="1043" type="span" parent="1020" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="span"/>
+<group id="1046" type="span" parent="1020" relname="joint"/>
+<group id="1048" type="span" parent="1020" relname="joint"/>
+<group id="1050" type="span" parent="1020" relname="joint"/>
+<group id="1051" type="span" parent="1020" relname="joint"/>
+<group id="1052" type="span" parent="1051" relname="span"/>
+<group id="1053" type="span" parent="1052" relname="span"/>
+<group id="1054" type="span" parent="1052" relname="elaboration"/>
+	</body>
+</rst>

@@ -1,0 +1,184 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="result" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. Results and Discussion</segment>
+<segment id="2" parent="1002" relname="preparation">3.1. Supervised Classification of Hyperspectral Pixels at the Ground Canopy Scale</segment>
+<segment id="3" parent="1004" relname="span">One approach</segment>
+<segment id="4" parent="1005" relname="span">used</segment>
+<segment id="5" parent="4" relname="purpose">to analyze hyperspectral data on the field scale</segment>
+<segment id="6" parent="1006" relname="span">is the pixel-wise classification into usual pixel</segment>
+<segment id="7" parent="1007" relname="joint">( background , straw , healthy leaf tissue )</segment>
+<segment id="8" parent="1007" relname="joint">and in disease specific symptoms .</segment>
+<segment id="9" parent="1009" relname="joint">In the field experiment 2018 , YR had a significant disease severity</segment>
+<segment id="10" parent="1009" relname="joint">and classifiers for this disease were derived .</segment>
+<segment id="11" parent="1011" relname="preparation">The use of 16 VIs reached a reasonable but not competitive performance .</segment>
+<segment id="12" parent="1013" relname="attribution">However , it has to be noted</segment>
+<segment id="13" parent="1013" relname="span">that we compared 161 features to 16 ,</segment>
+<segment id="14" parent="13" relname="elaboration">meaning a significant reduction in dimensionality .</segment>
+<segment id="15" parent="1016" relname="span">The results can be integrated in a later discussion of the various feature sets</segment>
+<segment id="16" parent="15" relname="elaboration">obtained by feature selection .</segment>
+<segment id="17" parent="1017" relname="joint">Based on these results ,</segment>
+<segment id="18" parent="1019" relname="span">SVM SNV</segment>
+<segment id="19" parent="18" relname="elaboration">( Table 1 )</segment>
+<segment id="20" parent="1018" relname="same_unit">was selected as most appropriate approach .</segment>
+<segment id="21" parent="1021" relname="preparation">A visual comparison of the SAM results and the SVM SNV result is shown in</segment>
+<segment id="22" parent="23" relname="preparation">Figure 5</segment>
+<segment id="23" parent="1022" relname="span">.</segment>
+<segment id="24" parent="1024" relname="preparation">Significant differences were apparent .</segment>
+<segment id="25" parent="1025" relname="span">The SVM detected many more senescent leaves , e.g. , all leaves from the lower leaf levels ,</segment>
+<segment id="26" parent="25" relname="result">whereas the SAM assigned these to the background or the healthy leaves .</segment>
+<segment id="27" parent="1027" relname="span">The SVM was more sensitive for ear detection ,</segment>
+<segment id="28" parent="1028" relname="span">which caused major problems in the SAM image ,</segment>
+<segment id="29" parent="28" relname="elaboration">where they were partly assigned to YR .</segment>
+<segment id="30" parent="1030" relname="concession">Overall , both approaches were sensitive to YR ,</segment>
+<segment id="31" parent="1031" relname="preparation">but the SVM was much more accurate in the very bright image parts as well as the darker background parts ,</segment>
+<segment id="32" parent="1033" relname="concession">while the class YR was overrepresented in the SAM classification .</segment>
+<segment id="33" parent="1033" relname="joint">The visually most significant aspect was the large number of blue pixels in the visualization of the SVM result .</segment>
+<segment id="34" parent="1035" relname="joint">YR disease was present at all leaf levels</segment>
+<segment id="35" parent="1035" relname="joint">and led to early senescence in lower leaf levels .</segment>
+<segment id="36" parent="1037" relname="span">The classification models were validated via two approaches :</segment>
+<segment id="37" parent="1038" relname="span">( 1 ) pixel-wise classification of the hold-out test data set</segment>
+<segment id="38" parent="37" relname="elaboration">consisting of manually annotated pixels of new images of separate plots ,</segment>
+<segment id="39" parent="1039" relname="span">and ( 2 ) prediction of pixel classes of all images</segment>
+<segment id="40" parent="1040" relname="joint">obtained on a respective day</segment>
+<segment id="41" parent="1041" relname="span">and comparing the total % disease class from all plant pixels to the visual assessment</segment>
+<segment id="42" parent="41" relname="elaboration">done by the expert (</segment>
+<segment id="43" parent="44" relname="attribution">Figure 6</segment>
+<segment id="44" parent="1043" relname="span">) .</segment>
+<segment id="45" parent="1046" relname="span">Approach 1 resulted in a confusion matrix</segment>
+<segment id="46" parent="45" relname="elaboration">allowing the calculation of multiple performance measures such as the overall accuracy , the sensitivity , and the recall ,</segment>
+<segment id="47" parent="1046" relname="elaboration">whereas Approach 2 provided the R²value , correlation coefficient , and a regression plot .</segment>
+<segment id="48" parent="1031" relname="joint">Table 1 shows the overall accuracy and the F1 score for the different classification methods .</segment>
+<segment id="49" parent="1050" relname="preparation">Presumably , due to light reflections and transmission or a deviating weighting of the different canopy levels ,</segment>
+<segment id="50" parent="1051" relname="span">the SVM prediction overestimated the ratio of diseased pixels .</segment>
+<segment id="51" parent="50" relname="purpose">To compensate for this , a linear regression model was applied .</segment>
+<segment id="52" parent="1053" relname="span">However , deviations between the predicted disease severity and the visual assessment could have various reasons ,</segment>
+<segment id="53" parent="1055" relname="span">e.g. , the section of the plot</segment>
+<segment id="54" parent="53" relname="elaboration">observed by the sensor did not represent the true status</segment>
+<segment id="55" parent="1055" relname="elaboration">that was evaluated by the visual assessment .</segment>
+<segment id="56" parent="1057" relname="span">The viewing angle produced a variable composition of different leafs and leaf layers in the field of view of the human and the sensors .</segment>
+<segment id="57" parent="1058" relname="joint">Furthermore , the visibility of the lower leaf levels was low for imaging system from the top ,</segment>
+<segment id="58" parent="1059" relname="span">and more accurate</segment>
+<segment id="59" parent="58" relname="condition">if the human rater could go deep into the crop stand for individual leaf disease rating .</segment>
+<segment id="60" parent="1062" relname="attribution">Further points are</segment>
+<segment id="61" parent="1062" relname="span">that the visual assessment produced a single value</segment>
+<segment id="62" parent="61" relname="elaboration">averaging the affected leaf area .</segment>
+<segment id="63" parent="1064" relname="span">From repeated disease assessments with multiple experts , different deviations have been observed</segment>
+<segment id="64" parent="63" relname="elaboration">depending on the literature .</segment>
+<segment id="65" parent="1066" relname="span">The method of disease detection is subjective to the individuals</segment>
+<segment id="66" parent="65" relname="elaboration">performing the assessment .</segment>
+<segment id="67" parent="1067" relname="span">Another prime factor for deviations and classification inaccuracies is the biological heterogeneity .</segment>
+<segment id="68" parent="1068" relname="span">This has to be considered as highly dynamic within one field , one plot , and one location , and even on different leaf layers and single leaves .</segment>
+<segment id="69" parent="1071" relname="span">The biological heterogeneity can be affected by many factors , e.g. , the leaf color and status , stem elongation</segment>
+<segment id="70" parent="69" relname="elaboration">( distance of leaf layers ) ,</segment>
+<segment id="71" parent="1070" relname="same_unit">the density of the canopy , and other biological growth processes .</segment>
+<segment id="72" parent="1073" relname="span">3.2. Evaluation of Hyperspectral UAV Observations</segment>
+<segment id="73" parent="72" relname="means">Using a Filter-System Hyperspectral Camera</segment>
+<segment id="74" parent="75" relname="attribution">To characterize the reflectance characteristics of the field plots ,</segment>
+<segment id="75" parent="1075" relname="span">the spectra of the central 4 × 2 m of each plot were averaged .</segment>
+<segment id="76" parent="1076" relname="joint">Intra-plot variations were neglected .</segment>
+<segment id="77" parent="1077" relname="span">Multiple traits were predicted with reasonable accuracy</segment>
+<segment id="78" parent="77" relname="elaboration">based on SVM and SVR analysis of the 55 recorded bands from 500 – 900 nm .</segment>
+<segment id="79" parent="1079" relname="span">Table 2 shows the obtained performance parameters</segment>
+<segment id="80" parent="79" relname="elaboration">based on a SNV representation and the integration of all 55 bands .</segment>
+<segment id="81" parent="1081" relname="preparation">Using the SVR approach , a prediction of the disease severity in percent was possible with reasonable accuracy (</segment>
+<segment id="82" parent="1081" relname="joint">Figure 7</segment>
+<segment id="83" parent="1081" relname="joint">) .</segment>
+<segment id="84" parent="1083" relname="span">The interpretation of this result has to take into account</segment>
+<segment id="85" parent="1084" relname="span">that a value from the visual assessment might not represent the average plot value</segment>
+<segment id="86" parent="1085" relname="joint">because diseases may occur at zoned locations in the plot ,</segment>
+<segment id="87" parent="1085" relname="joint">and assessment locations may or may not be in these spots .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="3" relname="elaboration"/>
+<group id="1006" type="span" parent="1003" relname="same_unit"/>
+<group id="1007" type="multinuc" parent="6" relname="elaboration"/>
+<group id="1008" type="span" parent="1002" relname="joint"/>
+<group id="1009" type="multinuc" parent="1010" relname="preparation"/>
+<group id="1010" type="span" parent="1008" relname="span"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="joint"/>
+<group id="1013" type="span" parent="1012" relname="span"/>
+<group id="1015" type="span" parent="1011" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1017" type="multinuc" parent="1016" relname="elaboration"/>
+<group id="1018" type="multinuc" parent="1017" relname="joint"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1020" type="span" parent="1011" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="span"/>
+<group id="1022" type="span" parent="1023" relname="preparation"/>
+<group id="1023" type="span" parent="1021" relname="span"/>
+<group id="1024" type="multinuc" parent="1023" relname="span"/>
+<group id="1025" type="span" parent="1024" relname="joint"/>
+<group id="1027" type="span" parent="1024" relname="joint"/>
+<group id="1028" type="span" parent="27" relname="elaboration"/>
+<group id="1029" type="span" parent="1024" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="multinuc" parent="1030" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="joint"/>
+<group id="1033" type="multinuc" parent="1032" relname="span"/>
+<group id="1034" type="span" parent="1033" relname="joint"/>
+<group id="1035" type="multinuc" parent="1034" relname="span"/>
+<group id="1036" type="multinuc" parent="1035" relname="elaboration"/>
+<group id="1037" type="span" parent="1036" relname="joint"/>
+<group id="1038" type="span" parent="36" relname="elaboration"/>
+<group id="1039" type="span" parent="1036" relname="joint"/>
+<group id="1040" type="multinuc" parent="39" relname="elaboration"/>
+<group id="1041" type="span" parent="1040" relname="joint"/>
+<group id="1043" type="span" parent="1031" relname="joint"/>
+<group id="1045" type="span" parent="1031" relname="joint"/>
+<group id="1046" type="span" parent="1045" relname="span"/>
+<group id="1049" type="span" parent="1031" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="span" parent="1052" relname="concession"/>
+<group id="1052" type="multinuc" parent="1050" relname="span"/>
+<group id="1053" type="span" parent="1052" relname="joint"/>
+<group id="1054" type="span" parent="52" relname="elaboration"/>
+<group id="1055" type="span" parent="1054" relname="span"/>
+<group id="1056" type="span" parent="1052" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="span"/>
+<group id="1058" type="multinuc" parent="56" relname="elaboration"/>
+<group id="1059" type="span" parent="1058" relname="joint"/>
+<group id="1060" type="span" parent="1057" relname="elaboration"/>
+<group id="1061" type="span" parent="1060" relname="span"/>
+<group id="1062" type="span" parent="1061" relname="span"/>
+<group id="1063" type="multinuc" parent="1061" relname="elaboration"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1065" type="span" parent="1063" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="elaboration"/>
+<group id="1068" type="span" parent="67" relname="elaboration"/>
+<group id="1069" type="multinuc" parent="68" relname="elaboration"/>
+<group id="1070" type="multinuc" parent="1069" relname="joint"/>
+<group id="1071" type="span" parent="1070" relname="same_unit"/>
+<group id="1072" type="span" parent="1069" relname="joint"/>
+<group id="1073" type="span" parent="1072" relname="span"/>
+<group id="1074" type="span" parent="1073" relname="purpose"/>
+<group id="1075" type="span" parent="1074" relname="span"/>
+<group id="1076" type="multinuc" parent="1075" relname="elaboration"/>
+<group id="1077" type="span" parent="1076" relname="joint"/>
+<group id="1079" type="span" parent="1031" relname="joint"/>
+<group id="1080" type="span" parent="1031" relname="joint"/>
+<group id="1081" type="multinuc" parent="1080" relname="span"/>
+<group id="1083" type="span" parent="1081" relname="joint"/>
+<group id="1084" type="span" parent="84" relname="elaboration"/>
+<group id="1085" type="multinuc" parent="85" relname="cause"/>
+	</body>
+</rst>

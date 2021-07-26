@@ -1,0 +1,231 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Indoor Localization Framework and Strategies</segment>
+<segment id="2" parent="1002" relname="preparation">2.1. System Architecture and Path-Loss Propagation Model</segment>
+<segment id="3" parent="1003" relname="span">Zigbee is a low-cost wireless communication technology</segment>
+<segment id="4" parent="1004" relname="span">based on the IEEE 802.15.4 standard ,</segment>
+<segment id="5" parent="1005" relname="span">which is often used</segment>
+<segment id="6" parent="5" relname="purpose">to create personal area networks .</segment>
+<segment id="7" parent="8" relname="attribution">Due to its low power consumption and secure networking capabilities ,</segment>
+<segment id="8" parent="1007" relname="span">it is often preferable for wireless control and monitoring in smart-building technologies .</segment>
+<segment id="9" parent="1010" relname="span">In this study , we use XBee embedded modules with the Zigbee protocol</segment>
+<segment id="10" parent="1011" relname="span">to create four transmitters</segment>
+<segment id="11" parent="10" relname="elaboration">that are placed at preassigned positions ,</segment>
+<segment id="12" parent="1012" relname="span">and one receiver</segment>
+<segment id="13" parent="1013" relname="span">which is the target node</segment>
+<segment id="14" parent="13" relname="purpose">to be localized .</segment>
+<segment id="15" parent="1002" relname="joint">In order to introduce mobility to the target node</segment>
+<segment id="16" parent="1016" relname="same_unit">and to verify the proposed indoor localization strategies ,</segment>
+<segment id="17" parent="1017" relname="span">NSBot2 ,</segment>
+<segment id="18" parent="1019" relname="span">which is a nonholonomic wheeled mobile robot was built with ATMega microcontrollers</segment>
+<segment id="19" parent="18" relname="elaboration">connected to the target node</segment>
+<segment id="20" parent="1018" relname="same_unit">as shown in</segment>
+<segment id="21" parent="1021" relname="preparation">Figure 1</segment>
+<segment id="22" parent="1021" relname="joint">.</segment>
+<segment id="23" parent="1023" relname="span">With regard to control mechanism ,</segment>
+<segment id="24" parent="1024" relname="span">NSbot2 was preprogrammed with closed-loop cascade control</segment>
+<segment id="25" parent="24" relname="elaboration">where its motion was constrained to constant translational and rotational velocities .</segment>
+<segment id="26" parent="1027" relname="concession">This technique does not just allow the robot to travel along various types of planned path ,</segment>
+<segment id="27" parent="1027" relname="span">but it also enables each experiment with a specific path</segment>
+<segment id="28" parent="27" relname="elaboration">to be repeated with minimal variations .</segment>
+<segment id="29" parent="1030" relname="span">The basic idea for indoor localization with RSSI is that the target node</segment>
+<segment id="30" parent="29" relname="purpose">to be localized stays at a fixed coordinate ,</segment>
+<segment id="31" parent="1021" relname="joint">and the RSSI from different anchor nodes with known positions are measured .</segment>
+<segment id="32" parent="1032" relname="span">RSSI values can be converted into distances</segment>
+<segment id="33" parent="1033" relname="span">using a path-loss model ,</segment>
+<segment id="34" parent="1034" relname="span">which are then used with the triangulation , multilateration , or trilateration method</segment>
+<segment id="35" parent="34" relname="purpose">to estimate the position of the target node .</segment>
+<segment id="36" parent="1036" relname="span">One of the most commonly used path-loss propagation models in a WSN is the log-distance function .</segment>
+<segment id="37" parent="1040" relname="span">Via this model , the value of RSSI ,</segment>
+<segment id="38" parent="37" relname="restatement">( in dBm )</segment>
+<segment id="39" parent="1039" relname="same_unit">can be theoretically expressed as follows :</segment>
+<segment id="40" parent="1042" relname="span">( 1 )</segment>
+<segment id="41" parent="40" relname="elaboration">where d ( in m ) is the distance between transmitter</segment>
+<segment id="42" parent="1042" relname="restatement">( anchor node )</segment>
+<segment id="43" parent="1046" relname="span">and receiver</segment>
+<segment id="44" parent="43" relname="elaboration">( target node ) ,</segment>
+<segment id="45" parent="1045" relname="same_unit">is the free space reference distance ,</segment>
+<segment id="46" parent="1045" relname="evidence">typically 1 m ,</segment>
+<segment id="47" parent="1047" relname="joint">is the path-loss exponent coefficient ,</segment>
+<segment id="48" parent="1048" relname="span">and is the RSSI value</segment>
+<segment id="49" parent="1049" relname="span">when the transmitter and the receiver are 1 m apart ,</segment>
+<segment id="50" parent="49" relname="elaboration">which in this case is found to be dBm .</segment>
+<segment id="51" parent="1021" relname="joint">The theoretical value for with some calibrations is 1.8 .</segment>
+<segment id="52" parent="1052" relname="span">From Equation ( 1 ) ,</segment>
+<segment id="53" parent="1053" relname="span">the distance d can be simply retrieved with :</segment>
+<segment id="54" parent="53" relname="elaboration">( 2 )</segment>
+<segment id="55" parent="1055" relname="same_unit">In real situations ,</segment>
+<segment id="56" parent="57" relname="circumstance">when the target node is continuously moving ,</segment>
+<segment id="57" parent="1056" relname="span">the effects of noise from multipath propagation , signal occlusions , and diffractions can be undesirably amplified .</segment>
+<segment id="58" parent="1058" relname="span">Hence , the theoretical RSSI-distance relation in Equation ( 1 ) may no longer be sufficient</segment>
+<segment id="59" parent="58" relname="purpose">to predict the actual path-loss model .</segment>
+<segment id="60" parent="1060" relname="preparation">In order to estimate the real distance for a continuously moving node</segment>
+<segment id="61" parent="1061" relname="same_unit">more accurately , sampled data for are collected</segment>
+<segment id="62" parent="1063" relname="circumstance">when the transmitter is placed at a fixed coordinate ,</segment>
+<segment id="63" parent="1063" relname="span">and the receiver ,</segment>
+<segment id="64" parent="63" relname="elaboration">named Node M , is moved at a speed of approximately 20 cm/s from cm until cm .</segment>
+<segment id="65" parent="1065" relname="preparation">This is illustrated in</segment>
+<segment id="66" parent="67" relname="preparation">Figure 2</segment>
+<segment id="67" parent="1066" relname="span">.</segment>
+<segment id="68" parent="1069" relname="span">A curve-fitting method is then utilized</segment>
+<segment id="69" parent="68" relname="purpose">to generate an improved path-loss propagation model , , as follows :</segment>
+<segment id="70" parent="1070" relname="span">( 3 )</segment>
+<segment id="71" parent="70" relname="elaboration">where ;</segment>
+<segment id="72" parent="1067" relname="joint">and n is the number of sampled data .</segment>
+<segment id="73" parent="1073" relname="preparation">2.2. RSSI-Based Localization</segment>
+<segment id="74" parent="1074" relname="span">In this work , four transmitters were configured as anchor nodes</segment>
+<segment id="75" parent="1075" relname="joint">( Anchors A , B , C , and D ) ;</segment>
+<segment id="76" parent="1075" relname="joint">hence , four distance values can be obtained at each time instance from the path-loss propagation model .</segment>
+<segment id="77" parent="1077" relname="span">They are also placed at points</segment>
+<segment id="78" parent="1078" relname="span">where any three of them are always noncollinear ,</segment>
+<segment id="79" parent="78" relname="elaboration">which ensures the feasibility of the trilateration method at each time instance .</segment>
+<segment id="80" parent="1073" relname="joint">Consider as the unknown coordinate of the mobile node ,</segment>
+<segment id="81" parent="1081" relname="span">and with be the first three coordinates from three different anchor nodes</segment>
+<segment id="82" parent="81" relname="elaboration">received by the mobile node .</segment>
+<segment id="83" parent="1083" relname="joint">Let be the estimated distance from Node M to ,</segment>
+<segment id="84" parent="1084" relname="span">and ( 4 )</segment>
+<segment id="85" parent="84" relname="elaboration">where ( 5 )</segment>
+<segment id="86" parent="1086" relname="preparation">The coordinate of the mobile node can then be retrieved via Cramer ’s rule</segment>
+<segment id="87" parent="1087" relname="span">as follows :</segment>
+<segment id="88" parent="87" relname="evidence">( 6 )</segment>
+<segment id="89" parent="1089" relname="attribution">2.3. Odometry</segment>
+<segment id="90" parent="1090" relname="span">Odometry is a process</segment>
+<segment id="91" parent="90" relname="elaboration">of estimating the position change of a mobile robot on the basis of data from motion sensors .</segment>
+<segment id="92" parent="1092" relname="span">For this research , the encoders on both wheels of the mobile robot were used</segment>
+<segment id="93" parent="1093" relname="span">to estimate the path</segment>
+<segment id="94" parent="93" relname="elaboration">taken as well as the heading direction .</segment>
+<segment id="95" parent="1096" relname="preparation">Figure 3</segment>
+<segment id="96" parent="1096" relname="joint">illustrates the robot ’s position with respect to two different frames ,</segment>
+<segment id="97" parent="1096" relname="joint">namely and .</segment>
+<segment id="98" parent="99" relname="concession">denotes the world coordinate system ,</segment>
+<segment id="99" parent="1099" relname="span">whereas represents the robot-attached frame .</segment>
+<segment id="100" parent="1102" relname="span">The robot ’s translational velocity , v , and rotational velocity , , can be written as follows :</segment>
+<segment id="101" parent="100" relname="restatement">( 7 )</segment>
+<segment id="102" parent="1102" relname="restatement">( 8 )</segment>
+<segment id="103" parent="1103" relname="span">where r is the radius of the wheel ,</segment>
+<segment id="104" parent="1104" relname="joint">D is the azimuth length between wheels ,</segment>
+<segment id="105" parent="1104" relname="joint">and and represent the angular velocities of the right and left wheels respectively .</segment>
+<segment id="106" parent="1106" relname="preparation">Let be the center of the robot ,</segment>
+<segment id="107" parent="1108" relname="span">be the current coordinate</segment>
+<segment id="108" parent="107" relname="elaboration">based on the plane ,</segment>
+<segment id="109" parent="1110" relname="span">be the current coordinate</segment>
+<segment id="110" parent="109" relname="elaboration">based on the plane ,</segment>
+<segment id="111" parent="1109" relname="joint">and be the robot ’s heading angle with respect to the X axis .</segment>
+<segment id="112" parent="1113" relname="span">The relation between , , and can be written as :</segment>
+<segment id="113" parent="112" relname="restatement">( 9 )</segment>
+<segment id="114" parent="1113" relname="elaboration">where ( 10 )</segment>
+<segment id="115" parent="1114" relname="span">The movement of the robot can be decomposed into linear velocities with respect to the X and Y axes , i.e. , and ,</segment>
+<segment id="116" parent="1115" relname="span">which have a relation with linear and angular velocities as follows :</segment>
+<segment id="117" parent="116" relname="restatement">( 11 )</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="joint"/>
+<group id="1004" type="span" parent="3" relname="elaboration"/>
+<group id="1005" type="span" parent="4" relname="elaboration"/>
+<group id="1007" type="span" parent="1002" relname="joint"/>
+<group id="1009" type="multinuc" parent="1002" relname="joint"/>
+<group id="1010" type="span" parent="1009" relname="same_unit"/>
+<group id="1011" type="span" parent="9" relname="purpose"/>
+<group id="1012" type="span" parent="1009" relname="same_unit"/>
+<group id="1013" type="span" parent="12" relname="elaboration"/>
+<group id="1016" type="multinuc" parent="1002" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="same_unit"/>
+<group id="1018" type="multinuc" parent="17" relname="elaboration"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1020" type="span" parent="1002" relname="joint"/>
+<group id="1021" type="multinuc" parent="1020" relname="span"/>
+<group id="1023" type="span" parent="1021" relname="joint"/>
+<group id="1024" type="span" parent="23" relname="elaboration"/>
+<group id="1026" type="span" parent="1021" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="span"/>
+<group id="1030" type="span" parent="1021" relname="joint"/>
+<group id="1032" type="span" parent="1021" relname="joint"/>
+<group id="1033" type="span" parent="32" relname="means"/>
+<group id="1034" type="span" parent="33" relname="elaboration"/>
+<group id="1036" type="span" parent="1021" relname="joint"/>
+<group id="1037" type="multinuc" parent="36" relname="elaboration"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="multinuc" parent="1038" relname="span"/>
+<group id="1040" type="span" parent="1039" relname="same_unit"/>
+<group id="1041" type="span" parent="1039" relname="evidence"/>
+<group id="1042" type="span" parent="1041" relname="span"/>
+<group id="1043" type="multinuc" parent="1037" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="same_unit"/>
+<group id="1045" type="multinuc" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="1045" relname="same_unit"/>
+<group id="1047" type="multinuc" parent="1043" relname="same_unit"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="48" relname="circumstance"/>
+<group id="1052" type="span" parent="1021" relname="joint"/>
+<group id="1053" type="span" parent="52" relname="elaboration"/>
+<group id="1055" type="multinuc" parent="1021" relname="joint"/>
+<group id="1056" type="span" parent="1055" relname="same_unit"/>
+<group id="1058" type="span" parent="1021" relname="joint"/>
+<group id="1059" type="span" parent="1021" relname="joint"/>
+<group id="1060" type="multinuc" parent="1059" relname="span"/>
+<group id="1061" type="multinuc" parent="1060" relname="sequence"/>
+<group id="1062" type="span" parent="1061" relname="same_unit"/>
+<group id="1063" type="span" parent="1062" relname="span"/>
+<group id="1064" type="span" parent="1060" relname="sequence"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1067" relname="preparation"/>
+<group id="1067" type="multinuc" parent="1065" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="span"/>
+<group id="1070" type="span" parent="1069" relname="elaboration"/>
+<group id="1072" type="span" parent="1067" relname="joint"/>
+<group id="1073" type="multinuc" parent="1072" relname="span"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="multinuc" parent="74" relname="elaboration"/>
+<group id="1077" type="span" parent="1073" relname="joint"/>
+<group id="1078" type="span" parent="77" relname="elaboration"/>
+<group id="1081" type="span" parent="1073" relname="joint"/>
+<group id="1082" type="span" parent="1073" relname="joint"/>
+<group id="1083" type="multinuc" parent="1085" relname="preparation"/>
+<group id="1084" type="span" parent="1083" relname="joint"/>
+<group id="1085" type="span" parent="1082" relname="span"/>
+<group id="1086" type="span" parent="1085" relname="span"/>
+<group id="1087" type="span" parent="1088" relname="preparation"/>
+<group id="1088" type="span" parent="1086" relname="span"/>
+<group id="1089" type="multinuc" parent="1088" relname="span"/>
+<group id="1090" type="span" parent="1089" relname="joint"/>
+<group id="1092" type="span" parent="1089" relname="joint"/>
+<group id="1093" type="span" parent="92" relname="purpose"/>
+<group id="1095" type="span" parent="1089" relname="joint"/>
+<group id="1096" type="multinuc" parent="1095" relname="span"/>
+<group id="1098" type="span" parent="1089" relname="joint"/>
+<group id="1099" type="span" parent="1098" relname="span"/>
+<group id="1100" type="span" parent="1099" relname="elaboration"/>
+<group id="1101" type="span" parent="1100" relname="span"/>
+<group id="1102" type="span" parent="1101" relname="span"/>
+<group id="1103" type="span" parent="1101" relname="elaboration"/>
+<group id="1104" type="multinuc" parent="103" relname="elaboration"/>
+<group id="1105" type="span" parent="1089" relname="joint"/>
+<group id="1106" type="multinuc" parent="1105" relname="span"/>
+<group id="1107" type="multinuc" parent="1106" relname="joint"/>
+<group id="1108" type="span" parent="1107" relname="same_unit"/>
+<group id="1109" type="multinuc" parent="1107" relname="same_unit"/>
+<group id="1110" type="span" parent="1109" relname="joint"/>
+<group id="1112" type="span" parent="1106" relname="joint"/>
+<group id="1113" type="span" parent="1112" relname="span"/>
+<group id="1114" type="span" parent="1106" relname="joint"/>
+<group id="1115" type="span" parent="115" relname="elaboration"/>
+	</body>
+</rst>

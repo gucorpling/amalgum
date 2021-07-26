@@ -10,6 +10,7 @@ import io, re, os, sys
 
 PY3 = sys.version_info[0] > 2
 
+script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 
 def parse(pm, doc):
     """ Parse one document using the given parsing model
@@ -71,7 +72,7 @@ def write_rs3(docname,doc,pred_rst):
         return output
 
 
-def evalparser(fmerge, report=False,
+def evalparser_multifile(path, report=False,
                bcvocab=None, draw=True,
                withdp=False, fdpvocab=None, fprojmat=None):
     """ Test the parsing performance
@@ -87,7 +88,66 @@ def evalparser(fmerge, report=False,
     print('Load parsing model ...')
     pm = ParsingModel(withdp=withdp,
         fdpvocab=fdpvocab, fprojmat=fprojmat)
-    pm.loadmodel("lib/dplp_plusplus/models/parsing-model.pickle.gz")
+    pm.loadmodel(script_dir + "../models/parsing-model.pickle.gz")
+    # ----------------------------------------
+    # Evaluation
+    met = Metrics(levels=['span','nuclearity','relation'])
+    # ----------------------------------------
+    # Read all files from the given path
+    doclist = [joinpath(path, fname) for fname in listdir(path) if fname.endswith('.merge')]
+    for fmerge in doclist:
+    # ----------------------------------------
+    # Read *.merge file
+        dr = DocReader()
+        doc = dr.read(fmerge)
+    # ----------------------------------------
+    # Parsing
+        pred_rst = pm.sr_parse(doc, bcvocab)
+        # Generate rs3 XML
+        docname = "tmp.merge"
+        # docname = os.path.basename(fmerge).replace(".merge","")
+        write_rs3(docname,doc,pred_rst)
+        if draw:
+            strtree = pred_rst.parse()
+            drawrst(strtree, fmerge.replace(".merge",".ps"))
+
+        # Get brackets from parsing results
+        pred_brackets = pred_rst.bracketing()
+        fbrackets = fmerge.replace('.merge', '.brackets')
+        #     # Write brackets into file
+        #     writebrackets(fbrackets, pred_brackets)
+        #     # ----------------------------------------
+        # Evaluate with gold RST tree
+        if report:
+            fdis = fmerge.replace('.merge', '.dis')
+            gold_rst = RSTTree(fdis, fmerge)
+            gold_rst.build()
+            gold_brackets = gold_rst.bracketing()
+            met.eval(gold_rst, pred_rst)
+
+    if report:
+        met.report()
+
+
+def evalparser(fmerge, report=False,
+               bcvocab=None, draw=True,
+               withdp=False, fdpvocab=None, fprojmat=None,
+               pm=None):
+    """ Test the parsing performance
+
+    :type path: string
+    :param path: path to the evaluation data
+
+    :type report: boolean
+    :param report: whether to report (calculate) the f1 score
+    """
+    # ----------------------------------------
+    # Load the parsing model
+    if pm is None:
+        print('Load parsing model ...')
+        pm = ParsingModel(withdp=withdp,
+            fdpvocab=fdpvocab, fprojmat=fprojmat)
+        pm.loadmodel("lib/dplp_plusplus/models/parsing-model.pickle.gz")
     # ----------------------------------------
     # Evaluation
     met = Metrics(levels=['span','nuclearity','relation'])

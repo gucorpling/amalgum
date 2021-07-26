@@ -1,0 +1,585 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Fatehpur Sikri
+1-1	0-8	Fatehpur	person[1]	new[1]	_	_
+1-2	9-14	Sikri	person[1]	new[1]	_	_
+
+#Text=Fatehpur Sikri is in the Doab region of Uttar Pradesh , India .
+2-1	15-23	Fatehpur	place[2]	new[2]	coref	5-3[14_2]
+2-2	24-29	Sikri	place[2]	new[2]	_	_
+2-3	30-32	is	_	_	_	_
+2-4	33-35	in	_	_	_	_
+2-5	36-39	the	place[4]	new[4]	_	_
+2-6	40-44	Doab	place|place[4]	new|new[4]	_	_
+2-7	45-51	region	place[4]	new[4]	_	_
+2-8	52-54	of	place[4]	new[4]	_	_
+2-9	55-60	Uttar	place[4]|person|place[6]	new[4]|new|new[6]	_	_
+2-10	61-68	Pradesh	place[4]|place[6]	new[4]|new[6]	_	_
+2-11	69-70	,	place[4]|place[6]	new[4]|new[6]	_	_
+2-12	71-76	India	place[4]|place[6]|place	new[4]|new[6]|new	ana	3-7
+2-13	77-78	.	_	_	_	_
+
+#Text=About 40km away from Agra , it is one of India 's UNESCO World Heritage Sites .
+3-1	79-84	About	_	_	_	_
+3-2	85-89	40km	_	_	_	_
+3-3	90-94	away	_	_	_	_
+3-4	95-99	from	_	_	_	_
+3-5	100-104	Agra	person	new	coref	6-5
+3-6	105-106	,	_	_	_	_
+3-7	107-109	it	place	giv	coref	3-11[11_0]
+3-8	110-112	is	_	_	_	_
+3-9	113-116	one	place[10]	new[10]	_	_
+3-10	117-119	of	place[10]	new[10]	_	_
+3-11	120-125	India	place[10]|place[11]|place[13]	new[10]|giv[11]|new[13]	_	_
+3-12	126-128	's	place[10]|place[11]|place[13]	new[10]|giv[11]|new[13]	_	_
+3-13	129-135	UNESCO	place[10]|place[13]	new[10]|new[13]	_	_
+3-14	136-141	World	place[10]|organization[12]|place[13]	new[10]|new[12]|new[13]	coref	6-17[29_12]
+3-15	142-150	Heritage	place[10]|organization[12]|place[13]	new[10]|new[12]|new[13]	_	_
+3-16	151-156	Sites	place[10]|place[13]	new[10]|new[13]	_	_
+3-17	157-158	.	_	_	_	_
+
+#Text=Understand
+4-1	159-169	Understand	_	_	_	_
+
+#Text=Literally meaning the city of victory , Fatehpur Sikri was founded by Mughal Emperor Akbar in 1571 and served as the capital from its founding to 1585 .
+5-1	170-179	Literally	_	_	_	_
+5-2	180-187	meaning	_	_	_	_
+5-3	188-191	the	place[14]	giv[14]	coref	5-8[0_14]
+5-4	192-196	city	place[14]	giv[14]	_	_
+5-5	197-199	of	place[14]	giv[14]	_	_
+5-6	200-207	victory	place[14]|abstract	giv[14]|new	_	_
+5-7	208-209	,	_	_	_	_
+5-8	210-218	Fatehpur	place	giv	coref	6-12[28_0]
+5-9	219-224	Sikri	place	new	coref	8-9[36_0]
+5-10	225-228	was	_	_	_	_
+5-11	229-236	founded	_	_	_	_
+5-12	237-239	by	_	_	_	_
+5-13	240-246	Mughal	person[18]	new[18]	coref	12-12[0_18]
+5-14	247-254	Emperor	person[18]	new[18]	_	_
+5-15	255-260	Akbar	_	_	_	_
+5-16	261-263	in	_	_	_	_
+5-17	264-268	1571	time	new	_	_
+5-18	269-272	and	_	_	_	_
+5-19	273-279	served	_	_	_	_
+5-20	280-282	as	_	_	_	_
+5-21	283-286	the	place[20]	new[20]	ana	5-24[0_20]
+5-22	287-294	capital	place[20]	new[20]	_	_
+5-23	295-299	from	_	_	_	_
+5-24	300-303	its	place|event[22]	giv|new[22]	_	_
+5-25	304-312	founding	event[22]	new[22]	_	_
+5-26	313-315	to	_	_	_	_
+5-27	316-320	1585	time	new	_	_
+5-28	321-322	.	_	_	_	_
+
+#Text=Often lumped together with Agra on tourist tours and trails , Fatehpur Sikri is a UNESCO World Heritage Site in its own right .
+6-1	323-328	Often	place[30]	giv[30]	coref|ana	6-1[30_28]|6-21[0_30]
+6-2	329-335	lumped	place[30]	giv[30]	_	_
+6-3	336-344	together	place[30]	giv[30]	_	_
+6-4	345-349	with	place[30]	giv[30]	_	_
+6-5	350-354	Agra	person|place[30]	giv|giv[30]	coref	8-7
+6-6	355-357	on	place[30]	giv[30]	_	_
+6-7	358-365	tourist	object|event[26]|place[30]	new|new[26]|giv[30]	_	_
+6-8	366-371	tours	event[26]|place[30]	new[26]|giv[30]	_	_
+6-9	372-375	and	place[30]	giv[30]	_	_
+6-10	376-382	trails	place|place[30]	new|giv[30]	_	_
+6-11	383-384	,	place[30]	giv[30]	_	_
+6-12	385-393	Fatehpur	place[28]|place[30]	giv[28]|giv[30]	_	_
+6-13	394-399	Sikri	place[28]|place[30]	giv[28]|giv[30]	_	_
+6-14	400-402	is	place[30]	giv[30]	_	_
+6-15	403-404	a	place[30]	giv[30]	_	_
+6-16	405-411	UNESCO	place[30]	giv[30]	_	_
+6-17	412-417	World	organization[29]|place[30]	giv[29]|giv[30]	_	_
+6-18	418-426	Heritage	organization[29]|place[30]	giv[29]|giv[30]	_	_
+6-19	427-431	Site	place[30]	giv[30]	_	_
+6-20	432-434	in	place[30]	giv[30]	_	_
+6-21	435-438	its	place[30]|place|abstract[32]	giv[30]|giv|new[32]	coref	8-10
+6-22	439-442	own	place[30]|abstract[32]	giv[30]|new[32]	_	_
+6-23	443-448	right	place[30]|abstract[32]	giv[30]|new[32]	_	_
+6-24	449-450	.	_	_	_	_
+
+#Text=Get in
+7-1	451-454	Get	_	_	_	_
+7-2	455-457	in	_	_	_	_
+
+#Text=While the closest airport is in Agra , the Fatehpur Sikri has its own railway station , a kilometre from the city centre .
+8-1	458-463	While	_	_	_	_
+8-2	464-467	the	place[33]	new[33]	_	_
+8-3	468-475	closest	place[33]	new[33]	_	_
+8-4	476-483	airport	place[33]	new[33]	_	_
+8-5	484-486	is	_	_	_	_
+8-6	487-489	in	_	_	_	_
+8-7	490-494	Agra	person	giv	coref	9-14
+8-8	495-496	,	_	_	_	_
+8-9	497-500	the	place[36]	giv[36]	ana	8-13[0_36]
+8-10	501-509	Fatehpur	place|place[36]	giv|giv[36]	coref	35-3
+8-11	510-515	Sikri	place[36]	giv[36]	_	_
+8-12	516-519	has	_	_	_	_
+8-13	520-523	its	place|place[39]	giv|new[39]	_	_
+8-14	524-527	own	place[39]	new[39]	_	_
+8-15	528-535	railway	object|place[39]	new|new[39]	_	_
+8-16	536-543	station	place[39]	new[39]	_	_
+8-17	544-545	,	_	_	_	_
+8-18	546-547	a	abstract[40]	new[40]	_	_
+8-19	548-557	kilometre	abstract[40]	new[40]	_	_
+8-20	558-562	from	abstract[40]	new[40]	_	_
+8-21	563-566	the	abstract[40]|place[41]	new[40]|new[41]	_	_
+8-22	567-571	city	abstract[40]|place[41]	new[40]|new[41]	_	_
+8-23	572-578	centre	abstract[40]|place[41]	new[40]|new[41]	_	_
+8-24	579-580	.	_	_	_	_
+
+#Text=By road and in typical traffic , it is a 50-minute drive from Agra .
+9-1	581-583	By	_	_	_	_
+9-2	584-588	road	place	new	_	_
+9-3	589-592	and	_	_	_	_
+9-4	593-595	in	_	_	_	_
+9-5	596-603	typical	event[43]	new[43]	ana	9-8[0_43]
+9-6	604-611	traffic	event[43]	new[43]	_	_
+9-7	612-613	,	_	_	_	_
+9-8	614-616	it	event	giv	coref	9-10[45_0]
+9-9	617-619	is	_	_	_	_
+9-10	620-621	a	event[45]	giv[45]	_	_
+9-11	622-631	50-minute	event[45]	giv[45]	_	_
+9-12	632-637	drive	event[45]	giv[45]	_	_
+9-13	638-642	from	event[45]	giv[45]	_	_
+9-14	643-647	Agra	event[45]|person	giv[45]|giv	_	_
+9-15	648-649	.	_	_	_	_
+
+#Text=See
+10-1	650-653	See	_	_	_	_
+
+#Text=Buland Darwaza .
+11-1	654-660	Buland	person[47]	new[47]	coref	39-4[0_47]
+11-2	661-668	Darwaza	person[47]	new[47]	_	_
+11-3	669-670	.	_	_	_	_
+
+#Text=This grand gate was built to commemorate the military triumphs of Mughal emperor Akbar in Gujarat .
+12-1	671-675	This	object[48]	new[48]	_	_
+12-2	676-681	grand	object[48]	new[48]	_	_
+12-3	682-686	gate	object[48]	new[48]	_	_
+12-4	687-690	was	_	_	_	_
+12-5	691-696	built	_	_	_	_
+12-6	697-699	to	_	_	_	_
+12-7	700-711	commemorate	_	_	_	_
+12-8	712-715	the	event[49]	new[49]	_	_
+12-9	716-724	military	event[49]	new[49]	_	_
+12-10	725-733	triumphs	event[49]	new[49]	_	_
+12-11	734-736	of	event[49]	new[49]	_	_
+12-12	737-743	Mughal	event[49]|person	new[49]|giv	coref	15-11[61_0]
+12-13	744-751	emperor	event[49]|person	new[49]|new	_	_
+12-14	752-757	Akbar	event[49]	new[49]	_	_
+12-15	758-760	in	event[49]	new[49]	_	_
+12-16	761-768	Gujarat	event[49]|place	new[49]|new	_	_
+12-17	769-770	.	_	_	_	_
+
+#Text=Jama Masjid ( Friday Mosque ) .
+13-1	771-775	Jama	person[53]	new[53]	_	_
+13-2	776-782	Masjid	person[53]	new[53]	_	_
+13-3	783-784	(	_	_	_	_
+13-4	785-791	Friday	person|place[55]	new|new[55]	_	_
+13-5	792-798	Mosque	place[55]	new[55]	_	_
+13-6	799-800	)	_	_	_	_
+13-7	801-802	.	_	_	_	_
+
+#Text=Tomb of Salim Chishti , Dadupura .
+14-1	803-807	Tomb	place[56]	new[56]	_	_
+14-2	808-810	of	place[56]	new[56]	_	_
+14-3	811-816	Salim	place[56]|person[57]	new[56]|new[57]	coref	15-1[59_57]
+14-4	817-824	Chishti	place[56]|person[57]	new[56]|new[57]	_	_
+14-5	825-826	,	_	_	_	_
+14-6	827-835	Dadupura	place	new	coref	29-9
+14-7	836-837	.	_	_	_	_
+
+#Text=Salim Chishti was a Sufi saint , dearly respected by Emperor Akbar .
+15-1	838-843	Salim	person[59]	giv[59]	coref	15-4[60_59]
+15-2	844-851	Chishti	person[59]	giv[59]	_	_
+15-3	852-855	was	_	_	_	_
+15-4	856-857	a	person[60]	giv[60]	coref	16-7[0_60]
+15-5	858-862	Sufi	person[60]	giv[60]	_	_
+15-6	863-868	saint	person[60]	giv[60]	_	_
+15-7	869-870	,	person[60]	giv[60]	_	_
+15-8	871-877	dearly	person[60]	giv[60]	_	_
+15-9	878-887	respected	person[60]	giv[60]	_	_
+15-10	888-890	by	person[60]	giv[60]	_	_
+15-11	891-898	Emperor	person[60]|person[61]	giv[60]|giv[61]	coref	16-4[62_61]
+15-12	899-904	Akbar	person[60]|person[61]	giv[60]|giv[61]	_	_
+15-13	905-906	.	_	_	_	_
+
+#Text=In fact , the emperor held Salim in such great esteem that he named his son Salim ( who would later be known as the Mughal emperor Jahangir ) in honour of the saint .
+16-1	907-909	In	_	_	_	_
+16-2	910-914	fact	_	_	_	_
+16-3	915-916	,	_	_	_	_
+16-4	917-920	the	person[62]	giv[62]	ana	16-13[0_62]
+16-5	921-928	emperor	person[62]	giv[62]	_	_
+16-6	929-933	held	_	_	_	_
+16-7	934-939	Salim	person	giv	coref	16-17[68_0]
+16-8	940-942	in	_	_	_	_
+16-9	943-947	such	abstract[64]	new[64]	_	_
+16-10	948-953	great	abstract[64]	new[64]	_	_
+16-11	954-960	esteem	abstract[64]	new[64]	_	_
+16-12	961-965	that	_	_	_	_
+16-13	966-968	he	person	giv	ana	16-15
+16-14	969-974	named	_	_	_	_
+16-15	975-978	his	person|person[67]	giv|new[67]	coref	16-25[69_0]
+16-16	979-982	son	person[67]	new[67]	_	_
+16-17	983-988	Salim	person[68]	giv[68]	coref	16-33[72_68]
+16-18	989-990	(	person[68]	giv[68]	_	_
+16-19	991-994	who	person[68]	giv[68]	_	_
+16-20	995-1000	would	person[68]	giv[68]	_	_
+16-21	1001-1006	later	person[68]	giv[68]	_	_
+16-22	1007-1009	be	person[68]	giv[68]	_	_
+16-23	1010-1015	known	person[68]	giv[68]	_	_
+16-24	1016-1018	as	person[68]	giv[68]	_	_
+16-25	1019-1022	the	person[68]|person[69]	giv[68]|giv[69]	coref	28-1[0_69]
+16-26	1023-1029	Mughal	person[68]|person[69]	giv[68]|giv[69]	_	_
+16-27	1030-1037	emperor	person[68]|person[69]	giv[68]|giv[69]	_	_
+16-28	1038-1046	Jahangir	person[68]|person	giv[68]|new	_	_
+16-29	1047-1048	)	person[68]	giv[68]	_	_
+16-30	1049-1051	in	_	_	_	_
+16-31	1052-1058	honour	abstract[71]	new[71]	_	_
+16-32	1059-1061	of	abstract[71]	new[71]	_	_
+16-33	1062-1065	the	abstract[71]|person[72]	new[71]|giv[72]	coref	17-5[74_72]
+16-34	1066-1071	saint	abstract[71]|person[72]	new[71]|giv[72]	_	_
+16-35	1072-1073	.	_	_	_	_
+
+#Text=The mausoleum built for Salim Chishti in 1580 and 1581 is considered to be one of the greatest examples of Mughal architecture .
+17-1	1074-1077	The	object[73]	new[73]	_	_
+17-2	1078-1087	mausoleum	object[73]	new[73]	_	_
+17-3	1088-1093	built	object[73]	new[73]	_	_
+17-4	1094-1097	for	object[73]	new[73]	_	_
+17-5	1098-1103	Salim	object[73]|person[74]	new[73]|giv[74]	_	_
+17-6	1104-1111	Chishti	object[73]|person[74]	new[73]|giv[74]	_	_
+17-7	1112-1114	in	object[73]	new[73]	_	_
+17-8	1115-1119	1580	object[73]|time	new[73]|new	_	_
+17-9	1120-1123	and	object[73]	new[73]	_	_
+17-10	1124-1128	1581	object[73]|time	new[73]|new	_	_
+17-11	1129-1131	is	_	_	_	_
+17-12	1132-1142	considered	_	_	_	_
+17-13	1143-1145	to	_	_	_	_
+17-14	1146-1148	be	_	_	_	_
+17-15	1149-1152	one	place[77]	new[77]	_	_
+17-16	1153-1155	of	place[77]	new[77]	_	_
+17-17	1156-1159	the	place[77]|abstract[78]	new[77]|new[78]	_	_
+17-18	1160-1168	greatest	place[77]|abstract[78]	new[77]|new[78]	_	_
+17-19	1169-1177	examples	place[77]|abstract[78]	new[77]|new[78]	_	_
+17-20	1178-1180	of	place[77]|abstract[78]	new[77]|new[78]	_	_
+17-21	1181-1187	Mughal	place[77]|abstract[78]|abstract[79]	new[77]|new[78]|new[79]	_	_
+17-22	1188-1200	architecture	place[77]|abstract[78]|abstract[79]	new[77]|new[78]|new[79]	_	_
+17-23	1201-1202	.	_	_	_	_
+
+#Text=Ibadat Khana .
+18-1	1203-1209	Ibadat	person[80]	new[80]	_	_
+18-2	1210-1215	Khana	person[80]	new[80]	_	_
+18-3	1216-1217	.	_	_	_	_
+
+#Text=Panch Mahal .
+19-1	1218-1223	Panch	person[81]	new[81]	_	_
+19-2	1224-1229	Mahal	person[81]	new[81]	_	_
+19-3	1230-1231	.	_	_	_	_
+
+#Text=Naubat Khana ( Drum House ) .
+20-1	1232-1238	Naubat	person[82]	new[82]	_	_
+20-2	1239-1244	Khana	person[82]	new[82]	_	_
+20-3	1245-1246	(	_	_	_	_
+20-4	1247-1251	Drum	person|organization[84]	new|new[84]	_	_
+20-5	1252-1257	House	organization[84]	new[84]	_	_
+20-6	1258-1259	)	_	_	_	_
+20-7	1260-1261	.	_	_	_	_
+
+#Text=Anup Talao ( Peerless pool ) .
+21-1	1262-1266	Anup	person[85]	new[85]	_	_
+21-2	1267-1272	Talao	person[85]	new[85]	_	_
+21-3	1273-1274	(	_	_	_	_
+21-4	1275-1283	Peerless	place[86]	new[86]	coref	22-17[0_86]
+21-5	1284-1288	pool	place[86]	new[86]	_	_
+21-6	1289-1290	)	_	_	_	_
+21-7	1291-1292	.	_	_	_	_
+
+#Text=The red sandstone architectural symmetry of the walls and bridges that crisscross the artificial lake or pool is beautiful but the water nowadays is polluted and dirty .
+22-1	1293-1296	The	abstract[88]	new[88]	_	_
+22-2	1297-1300	red	substance[87]|abstract[88]	new[87]|new[88]	_	_
+22-3	1301-1310	sandstone	substance[87]|abstract[88]	new[87]|new[88]	_	_
+22-4	1311-1324	architectural	abstract[88]	new[88]	_	_
+22-5	1325-1333	symmetry	abstract[88]	new[88]	_	_
+22-6	1334-1336	of	abstract[88]	new[88]	_	_
+22-7	1337-1340	the	abstract[88]|object[89]	new[88]|new[89]	_	_
+22-8	1341-1346	walls	abstract[88]|object[89]	new[88]|new[89]	_	_
+22-9	1347-1350	and	abstract[88]	new[88]	_	_
+22-10	1351-1358	bridges	abstract[88]|object[90]	new[88]|new[90]	_	_
+22-11	1359-1363	that	abstract[88]|object[90]	new[88]|new[90]	_	_
+22-12	1364-1374	crisscross	abstract[88]|object[90]	new[88]|new[90]	_	_
+22-13	1375-1378	the	abstract[88]|object[90]|place[91]	new[88]|new[90]|new[91]	_	_
+22-14	1379-1389	artificial	abstract[88]|object[90]|place[91]	new[88]|new[90]|new[91]	_	_
+22-15	1390-1394	lake	abstract[88]|object[90]|place[91]	new[88]|new[90]|new[91]	_	_
+22-16	1395-1397	or	abstract[88]|object[90]	new[88]|new[90]	_	_
+22-17	1398-1402	pool	abstract[88]|object[90]|place	new[88]|new[90]|giv	_	_
+22-18	1403-1405	is	_	_	_	_
+22-19	1406-1415	beautiful	_	_	_	_
+22-20	1416-1419	but	_	_	_	_
+22-21	1420-1423	the	substance[93]	new[93]	_	_
+22-22	1424-1429	water	substance[93]	new[93]	_	_
+22-23	1430-1438	nowadays	_	_	_	_
+22-24	1439-1441	is	_	_	_	_
+22-25	1442-1450	polluted	_	_	_	_
+22-26	1451-1454	and	_	_	_	_
+22-27	1455-1460	dirty	_	_	_	_
+22-28	1461-1462	.	_	_	_	_
+
+#Text=Samosa Mahal .
+23-1	1463-1469	Samosa	person	new	_	_
+23-2	1470-1475	Mahal	_	_	_	_
+23-3	1476-1477	.	_	_	_	_
+
+#Text=The funny name of the palace ( samosa referring to the pyramidal shaped dumplings in Indian cuisine ) is because the it does , in fact , resemble a samosa !
+24-1	1478-1481	The	abstract[95]	new[95]	appos	24-8[0_95]
+24-2	1482-1487	funny	abstract[95]	new[95]	_	_
+24-3	1488-1492	name	abstract[95]	new[95]	_	_
+24-4	1493-1495	of	abstract[95]	new[95]	_	_
+24-5	1496-1499	the	abstract[95]|place[96]	new[95]|new[96]	ana	24-21[100_96]
+24-6	1500-1506	palace	abstract[95]|place[96]	new[95]|new[96]	_	_
+24-7	1507-1508	(	_	_	_	_
+24-8	1509-1515	samosa	abstract	giv	coref	24-29[101_0]
+24-9	1516-1525	referring	_	_	_	_
+24-10	1526-1528	to	_	_	_	_
+24-11	1529-1532	the	substance[98]	new[98]	_	_
+24-12	1533-1542	pyramidal	substance[98]	new[98]	_	_
+24-13	1543-1549	shaped	substance[98]	new[98]	_	_
+24-14	1550-1559	dumplings	substance[98]	new[98]	_	_
+24-15	1560-1562	in	substance[98]	new[98]	_	_
+24-16	1563-1569	Indian	substance[98]|abstract[99]	new[98]|new[99]	_	_
+24-17	1570-1577	cuisine	substance[98]|abstract[99]	new[98]|new[99]	_	_
+24-18	1578-1579	)	_	_	_	_
+24-19	1580-1582	is	_	_	_	_
+24-20	1583-1590	because	_	_	_	_
+24-21	1591-1594	the	place[100]	giv[100]	ana	25-1[0_100]
+24-22	1595-1597	it	place[100]	giv[100]	_	_
+24-23	1598-1602	does	_	_	_	_
+24-24	1603-1604	,	_	_	_	_
+24-25	1605-1607	in	_	_	_	_
+24-26	1608-1612	fact	_	_	_	_
+24-27	1613-1614	,	_	_	_	_
+24-28	1615-1623	resemble	_	_	_	_
+24-29	1624-1625	a	abstract[101]	giv[101]	_	_
+24-30	1626-1632	samosa	abstract[101]	giv[101]	_	_
+24-31	1633-1634	!	_	_	_	_
+
+#Text=It is clean and well maintained though be wary of the guides in the palace , who can be pushy and touty .
+25-1	1635-1637	It	place	giv	coref	25-14[104_0]
+25-2	1638-1640	is	_	_	_	_
+25-3	1641-1646	clean	_	_	_	_
+25-4	1647-1650	and	_	_	_	_
+25-5	1651-1655	well	_	_	_	_
+25-6	1656-1666	maintained	_	_	_	_
+25-7	1667-1673	though	_	_	_	_
+25-8	1674-1676	be	_	_	_	_
+25-9	1677-1681	wary	_	_	_	_
+25-10	1682-1684	of	_	_	_	_
+25-11	1685-1688	the	person[103]	new[103]	_	_
+25-12	1689-1695	guides	person[103]	new[103]	_	_
+25-13	1696-1698	in	person[103]	new[103]	_	_
+25-14	1699-1702	the	person[103]|place[104]	new[103]|giv[104]	coref	29-4[118_104]
+25-15	1703-1709	palace	person[103]|place[104]	new[103]|giv[104]	_	_
+25-16	1710-1711	,	person[103]	new[103]	_	_
+25-17	1712-1715	who	person[103]	new[103]	_	_
+25-18	1716-1719	can	person[103]	new[103]	_	_
+25-19	1720-1722	be	person[103]	new[103]	_	_
+25-20	1723-1728	pushy	person[103]	new[103]	_	_
+25-21	1729-1732	and	person[103]	new[103]	_	_
+25-22	1733-1738	touty	person[103]	new[103]	_	_
+25-23	1739-1740	.	_	_	_	_
+
+#Text=Hiran Minar .
+26-1	1741-1746	Hiran	person[105]	new[105]	coref	28-15[0_105]
+26-2	1747-1752	Minar	person[105]	new[105]	_	_
+26-3	1753-1754	.	_	_	_	_
+
+#Text=A high , circular tower covered in spikes that look like elephant tusks .
+27-1	1755-1756	A	place[106]	new[106]	ana	28-7[0_106]
+27-2	1757-1761	high	place[106]	new[106]	_	_
+27-3	1762-1763	,	place[106]	new[106]	_	_
+27-4	1764-1772	circular	place[106]	new[106]	_	_
+27-5	1773-1778	tower	place[106]	new[106]	_	_
+27-6	1779-1786	covered	place[106]	new[106]	_	_
+27-7	1787-1789	in	place[106]	new[106]	_	_
+27-8	1790-1796	spikes	place[106]|object[107]	new[106]|new[107]	_	_
+27-9	1797-1801	that	place[106]|object[107]	new[106]|new[107]	_	_
+27-10	1802-1806	look	place[106]|object[107]	new[106]|new[107]	_	_
+27-11	1807-1811	like	place[106]|object[107]	new[106]|new[107]	_	_
+27-12	1812-1820	elephant	place[106]|object[107]|animal|object[109]	new[106]|new[107]|new|new[109]	coref	28-11[114_0]
+27-13	1821-1826	tusks	place[106]|object[107]|object[109]	new[106]|new[107]|new[109]	_	_
+27-14	1827-1828	.	_	_	_	_
+
+#Text=Akbar is said to have built it in remembrance of his beloved elephant , Hiran .
+28-1	1829-1834	Akbar	person	giv	ana	28-11
+28-2	1835-1837	is	_	_	_	_
+28-3	1838-1842	said	_	_	_	_
+28-4	1843-1845	to	_	_	_	_
+28-5	1846-1850	have	_	_	_	_
+28-6	1851-1856	built	_	_	_	_
+28-7	1857-1859	it	place	giv	_	_
+28-8	1860-1862	in	_	_	_	_
+28-9	1863-1874	remembrance	abstract[112]	new[112]	_	_
+28-10	1875-1877	of	abstract[112]	new[112]	_	_
+28-11	1878-1881	his	abstract[112]|person|animal[114]	new[112]|giv|giv[114]	coref	30-7[122_0]
+28-12	1882-1889	beloved	abstract[112]|animal[114]	new[112]|giv[114]	_	_
+28-13	1890-1898	elephant	abstract[112]|animal[114]	new[112]|giv[114]	_	_
+28-14	1899-1900	,	_	_	_	_
+28-15	1901-1906	Hiran	person	giv	_	_
+28-16	1907-1908	.	_	_	_	_
+
+#Text=Birbal Bhawan ( Birbal 's Palace ) , Dadupura .
+29-1	1909-1915	Birbal	person[116]	new[116]	coref	29-4[117_116]
+29-2	1916-1922	Bhawan	person[116]	new[116]	_	_
+29-3	1923-1924	(	_	_	_	_
+29-4	1925-1931	Birbal	person[117]|place[118]	giv[117]|giv[118]	coref|coref	30-1[0_117]|31-7[129_118]
+29-5	1932-1934	's	person[117]|place[118]	giv[117]|giv[118]	_	_
+29-6	1935-1941	Palace	place[118]	giv[118]	_	_
+29-7	1942-1943	)	_	_	_	_
+29-8	1944-1945	,	_	_	_	_
+29-9	1946-1954	Dadupura	place	giv	coref	33-9
+29-10	1955-1956	.	_	_	_	_
+
+#Text=Birbal was a Hindu courtier of Akbar , who ended up becoming one of Akbar 's closest and most trusted military advisors .
+30-1	1957-1963	Birbal	person	giv	coref	30-3[121_0]
+30-2	1964-1967	was	_	_	_	_
+30-3	1968-1969	a	person[121]	giv[121]	coref	31-10[0_121]
+30-4	1970-1975	Hindu	person[121]	giv[121]	_	_
+30-5	1976-1984	courtier	person[121]	giv[121]	_	_
+30-6	1985-1987	of	person[121]	giv[121]	_	_
+30-7	1988-1993	Akbar	person[121]|person[122]	giv[121]|giv[122]	coref	30-15[124_122]
+30-8	1994-1995	,	person[121]|person[122]	giv[121]|giv[122]	_	_
+30-9	1996-1999	who	person[121]|person[122]	giv[121]|giv[122]	_	_
+30-10	2000-2005	ended	person[121]|person[122]	giv[121]|giv[122]	_	_
+30-11	2006-2008	up	person[121]|person[122]	giv[121]|giv[122]	_	_
+30-12	2009-2017	becoming	person[121]|person[122]	giv[121]|giv[122]	_	_
+30-13	2018-2021	one	person[121]|person[122]|person[123]	giv[121]|giv[122]|new[123]	_	_
+30-14	2022-2024	of	person[121]|person[122]|person[123]	giv[121]|giv[122]|new[123]	_	_
+30-15	2025-2030	Akbar	person[121]|person[122]|person[123]|person[124]|person[125]	giv[121]|giv[122]|new[123]|giv[124]|new[125]	_	_
+30-16	2031-2033	's	person[121]|person[122]|person[123]|person[124]|person[125]	giv[121]|giv[122]|new[123]|giv[124]|new[125]	_	_
+30-17	2034-2041	closest	person[121]|person[122]|person[123]|person[125]	giv[121]|giv[122]|new[123]|new[125]	_	_
+30-18	2042-2045	and	person[121]|person[122]|person[123]|person[125]	giv[121]|giv[122]|new[123]|new[125]	_	_
+30-19	2046-2050	most	person[121]|person[122]|person[123]|person[125]	giv[121]|giv[122]|new[123]|new[125]	_	_
+30-20	2051-2058	trusted	person[121]|person[122]|person[123]|person[125]	giv[121]|giv[122]|new[123]|new[125]	_	_
+30-21	2059-2067	military	person[121]|person[122]|person[123]|person[125]	giv[121]|giv[122]|new[123]|new[125]	_	_
+30-22	2068-2076	advisors	person[121]|person[122]|person[123]|person[125]	giv[121]|giv[122]|new[123]|new[125]	_	_
+30-23	2077-2078	.	_	_	_	_
+
+#Text=The stone carvings and interior of the palace where Birbal lived are magnificent .
+31-1	2079-2082	The	object[127]	new[127]	_	_
+31-2	2083-2088	stone	object|object[127]	new|new[127]	_	_
+31-3	2089-2097	carvings	object[127]	new[127]	_	_
+31-4	2098-2101	and	_	_	_	_
+31-5	2102-2110	interior	abstract[128]	new[128]	_	_
+31-6	2111-2113	of	abstract[128]	new[128]	_	_
+31-7	2114-2117	the	abstract[128]|place[129]	new[128]|giv[129]	_	_
+31-8	2118-2124	palace	abstract[128]|place[129]	new[128]|giv[129]	_	_
+31-9	2125-2130	where	abstract[128]|place[129]	new[128]|giv[129]	_	_
+31-10	2131-2137	Birbal	abstract[128]|place[129]|person	new[128]|giv[129]|giv	_	_
+31-11	2138-2143	lived	abstract[128]|place[129]	new[128]|giv[129]	_	_
+31-12	2144-2147	are	_	_	_	_
+31-13	2148-2159	magnificent	_	_	_	_
+31-14	2160-2161	.	_	_	_	_
+
+#Text=Eat
+32-1	2162-2165	Eat	_	_	_	_
+
+#Text=Jodha Restaurant , Hotel Goverdhan , Shahcoolie , Dadupura , ☏ +919997702459 .
+33-1	2166-2171	Jodha	person|place[132]	new|new[132]	_	_
+33-2	2172-2182	Restaurant	place[132]	new[132]	_	_
+33-3	2183-2184	,	_	_	_	_
+33-4	2185-2190	Hotel	place[133]	new[133]	coref	39-1[149_133]
+33-5	2191-2200	Goverdhan	place[133]	new[133]	_	_
+33-6	2201-2202	,	place[133]	new[133]	_	_
+33-7	2203-2213	Shahcoolie	place[133]	new[133]	_	_
+33-8	2214-2215	,	_	_	_	_
+33-9	2216-2224	Dadupura	place	giv	_	_
+33-10	2225-2226	,	_	_	_	_
+33-11	2227-2228	☏	_	_	_	_
+33-12	2229-2242	+919997702459	_	_	_	_
+33-13	2243-2244	.	_	_	_	_
+
+#Text=North Indian vegetarian and vegan food in a casual setting .
+34-1	2245-2250	North	substance[135]	new[135]	coref	36-1[143_135]
+34-2	2251-2257	Indian	substance[135]	new[135]	_	_
+34-3	2258-2268	vegetarian	substance[135]	new[135]	_	_
+34-4	2269-2272	and	substance[135]	new[135]	_	_
+34-5	2273-2278	vegan	substance[135]	new[135]	_	_
+34-6	2279-2283	food	substance[135]	new[135]	_	_
+34-7	2284-2286	in	substance[135]	new[135]	_	_
+34-8	2287-2288	a	substance[135]|place[136]	new[135]|new[136]	_	_
+34-9	2289-2295	casual	substance[135]|place[136]	new[135]|new[136]	_	_
+34-10	2296-2303	setting	substance[135]|place[136]	new[135]|new[136]	_	_
+34-11	2304-2305	.	_	_	_	_
+
+#Text=Sher-e-Punjab , Fatehpur Sikri Bypass Crossing , ☏ +919837226765 .
+35-1	2306-2319	Sher-e-Punjab	person	new	_	_
+35-2	2320-2321	,	_	_	_	_
+35-3	2322-2330	Fatehpur	place|place[139]|place[141]	giv|giv[139]|new[141]	coref|coref	35-3[139_0]|39-4[152_141]
+35-4	2331-2336	Sikri	place[139]|place[141]	giv[139]|new[141]	_	_
+35-5	2337-2343	Bypass	object|place[141]	new|new[141]	_	_
+35-6	2344-2352	Crossing	place[141]	new[141]	_	_
+35-7	2353-2354	,	_	_	_	_
+35-8	2355-2356	☏	abstract[142]	new[142]	_	_
+35-9	2357-2370	+919837226765	abstract[142]	new[142]	_	_
+35-10	2371-2372	.	_	_	_	_
+
+#Text=Punjabi and other North Indian food with non-vegetarian and vegetarian options .
+36-1	2373-2380	Punjabi	substance[143]	giv[143]	_	_
+36-2	2381-2384	and	substance[143]	giv[143]	_	_
+36-3	2385-2390	other	substance[143]	giv[143]	_	_
+36-4	2391-2396	North	substance[143]	giv[143]	_	_
+36-5	2397-2403	Indian	substance[143]	giv[143]	_	_
+36-6	2404-2408	food	substance[143]	giv[143]	_	_
+36-7	2409-2413	with	substance[143]	giv[143]	_	_
+36-8	2414-2428	non-vegetarian	substance[143]|abstract[144]	giv[143]|new[144]	_	_
+36-9	2429-2432	and	substance[143]|abstract[144]	giv[143]|new[144]	_	_
+36-10	2433-2443	vegetarian	substance[143]|abstract[144]	giv[143]|new[144]	_	_
+36-11	2444-2451	options	substance[143]|abstract[144]	giv[143]|new[144]	_	_
+36-12	2452-2453	.	_	_	_	_
+
+#Text=The meals are hearty and feel satisfying after a long day of sightseeing .
+37-1	2454-2457	The	event[145]	new[145]	_	_
+37-2	2458-2463	meals	event[145]	new[145]	_	_
+37-3	2464-2467	are	_	_	_	_
+37-4	2468-2474	hearty	_	_	_	_
+37-5	2475-2478	and	_	_	_	_
+37-6	2479-2483	feel	_	_	_	_
+37-7	2484-2494	satisfying	_	_	_	_
+37-8	2495-2500	after	_	_	_	_
+37-9	2501-2502	a	time[146]	new[146]	_	_
+37-10	2503-2507	long	time[146]	new[146]	_	_
+37-11	2508-2511	day	time[146]	new[146]	_	_
+37-12	2512-2514	of	time[146]	new[146]	_	_
+37-13	2515-2526	sightseeing	time[146]|event	new[146]|new	_	_
+37-14	2527-2528	.	_	_	_	_
+
+#Text=Sleep
+38-1	2529-2534	Sleep	person	new	_	_
+
+#Text=Hotel Vrindavan , Buland Gate Crossing , ☏ +919412516664 , ✉ contactus@hotelvrindavanfts.com .
+39-1	2535-2540	Hotel	place[149]	giv[149]	coref	40-1[155_149]
+39-2	2541-2550	Vrindavan	place[149]	giv[149]	_	_
+39-3	2551-2552	,	_	_	_	_
+39-4	2553-2559	Buland	person|place[152]	giv|giv[152]	_	_
+39-5	2560-2564	Gate	person|place[152]	new|giv[152]	_	_
+39-6	2565-2573	Crossing	place[152]	giv[152]	_	_
+39-7	2574-2575	,	_	_	_	_
+39-8	2576-2577	☏	_	_	_	_
+39-9	2578-2591	+919412516664	object	new	_	_
+39-10	2592-2593	,	_	_	_	_
+39-11	2594-2595	✉	_	_	_	_
+39-12	2596-2627	contactus@hotelvrindavanfts.com	abstract	new	_	_
+39-13	2628-2629	.	_	_	_	_
+
+#Text=Hotel with basic amenities . ₹950 – ₹1450 .
+40-1	2630-2635	Hotel	place[155]	giv[155]	_	_
+40-2	2636-2640	with	place[155]	giv[155]	_	_
+40-3	2641-2646	basic	place[155]|abstract[156]	giv[155]|new[156]	_	_
+40-4	2647-2656	amenities	place[155]|abstract[156]	giv[155]|new[156]	_	_
+40-5	2657-2658	.	place[155]	giv[155]	_	_
+40-6	2659-2663	₹950	place[155]	giv[155]	_	_
+40-7	2664-2665	–	place[155]	giv[155]	_	_
+40-8	2666-2671	₹1450	place[155]|abstract	giv[155]|new	_	_
+40-9	2672-2673	.	_	_	_	_

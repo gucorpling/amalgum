@@ -1,0 +1,977 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_lstm" title="Deep LSTM with Reinforcement Learning Layer for Financial Trend Prediction in FX High Frequency Trading Systems" shortTitle="lstm" author="Francesco Rundo" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4460/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Materials	NNS	material
+and	CC	and
+Methods	NNS	method
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+method	NN	method
+proposed	VBN	propose
+in	IN	in
+this	DT	this
+paper	NN	paper
+will	MD	will
+seek	VB	seek
+to	TO	to
+exploit	VB	exploit
+the	DT	the
+correlations	NNS	correlation
+between	IN	between
+distinct	JJ	distinct
+currency	NN	currency
+crosses	NNS	cross
+in	IN	in
+order	NN	order
+to	TO	to
+predict	VB	predict
+the	DT	the
+medium-term	JJ	medium-term
+trend	NN	trend
+of	IN	of
+ones	NNS	one
+of	IN	of
+them	PRP	they
+.	.	.
+</s>
+<s type="decl">
+To	IN	to
+this	DT	this
+end	NN	end
+,	,	,
+the	DT	the
+authors	NNS	author
+will	MD	will
+describe	VB	describe
+below	IN	below
+a	DT	a
+pipeline	NN	pipeline
+that	WDT	that
+is	VBZ	be
+based	VBN	base
+on	IN	on
+the	DT	the
+use	NN	use
+of	IN	of
+set	NN	set
+of	IN	of
+cross-currency	NN	cross-currency
+exchanges	NNS	exchange
+characterizing	VBG	characterize
+an	DT	a
+arbitrage	NN	arbitrage
+opportunity	NN	opportunity
+in	IN	in
+the	DT	the
+Forex	NNP	Forex
+market	NN	market
+.	.	.
+</s>
+<s type="decl">
+As	IN	as
+introduced	VBN	introduce
+in	IN	in
+the	DT	the
+first	JJ	first
+section	NN	section
+,	,	,
+an	DT	a
+arbitrage	NN	arbitrage
+takes	VBZ	take
+advantage	NN	advantage
+of	IN	of
+differences	NNS	difference
+in	IN	in
+the	DT	the
+price	NN	price
+of	IN	of
+single	JJ	single
+currency	NN	currency
+related	VBN	relate
+to	IN	to
+short-time	JJ	short-time
+misalignments	NNS	misalignment
+between	IN	between
+the	DT	the
+traded	VBN	trade
+currency	NN	currency
+with	IN	with
+the	DT	the
+related	JJ	related
+ones	NNS	one
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+typical	JJ	typical
+example	NN	example
+of	IN	of
+arbitrage	NN	arbitrage
+is	VBZ	be
+the	DT	the
+so-called	JJ	so-called
+triangular	JJ	triangular
+arbitrage	NN	arbitrage
+referred	VBN	refer
+to	IN	to
+three	CD	3
+currencies	NNS	currency
+of	IN	of
+which	WDT	which
+one	CD	one
+is	VBZ	be
+obtainable	JJ	obtainable
+from	IN	from
+the	DT	the
+combination	NN	combination
+of	IN	of
+the	DT	the
+prices	NNS	price
+of	IN	of
+the	DT	the
+other	JJ	other
+two	CD	2
+crosses	NNS	cross
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+article	NN	article
+,	,	,
+we	PRP	we
+will	MD	will
+refer	VB	refer
+to	IN	to
+the	DT	the
+EUR/USD	NNP	Eur/USD
+,	,	,
+GBP/USD	NNP	GbprusD
+,	,	,
+and	CC	and
+EUR/GBP	NNP	Eur/GBP
+crosses	NNS	cross
+.	.	.
+</s>
+<s type="decl">
+A	DT	a
+similar	JJ	similar
+approach	NN	approach
+can	MD	can
+be	VB	be
+extended	VBN	extend
+to	IN	to
+any	DT	any
+other	JJ	other
+trio	NN	trio
+of	IN	of
+related	JJ	related
+currencies	NNS	currency
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+currency	NN	currency
+on	IN	on
+which	WDT	which
+to	TO	to
+execute	VB	execute
+trading	NN	trading
+operations	NNS	operation
+is	VBZ	be
+EUR/USD	NNP	Eur/USD
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+price	NN	price
+of	IN	of
+the	DT	the
+EUR/USD	NNP	Eur/USD
+cross	NN	cross
+for	IN	for
+arbitrage	NN	arbitrage
+purposes	NNS	purpose
+in	IN	in
+the	DT	the
+currency	NN	currency
+market	NN	market
+must	MD	must
+always	RB	always
+be	VB	be
+obtainable	JJ	obtainable
+from	IN	from
+the	DT	the
+other	JJ	other
+two	CD	2
+pairs	NNS	pair
+EUR/GBP	NNP	Eur/GBP
+and	CC	and
+GBP/USD	NNP	GbprusD
+by	IN	by
+the	DT	the
+relationship	NN	relationship
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+Equation	NNP	Equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+,	,	,
+we	PRP	we
+have	VBP	have
+denoted	VBN	denote
+with	IN	with
+<hi rend="italic">
+<b>
+px(tk	NN	px(tk
+)	-RRB-	)
+</b>
+</hi>
+the	DT	the
+price	NN	price
+of	IN	of
+the	DT	the
+currency	NN	currency
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+in	IN	in
+a	DT	a
+financially	RB	financially
+balanced	VBN	balance
+market	NN	market
+,	,	,
+so	IN	so
+that	IN	that
+an	DT	a
+investor	NN	investor
+cannot	MD	cannot
+take	VB	take
+advantage	NN	advantage
+of	IN	of
+arbitrage	NN	arbitrage
+conditions	NNS	condition
+and	CC	and
+consequently	RB	consequently
+obtain	VB	obtain
+a	DT	a
+systematic	JJ	systematic
+gain	NN	gain
+,	,	,
+Equation	NN	equation
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+must	MD	must
+always	RB	always
+be	VB	be
+verified	VBN	verify
+,	,	,
+i.e.	FW	i.e.
+,	,	,
+there	EX	there
+must	MD	must
+be	VB	be
+a	DT	a
+very	RB	very
+precise	JJ	precise
+temporal	JJ	temporal
+correlation	NN	correlation
+between	IN	between
+specific	JJ	specific
+currency	NN	currency
+crosses	NNS	cross
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+reality	NN	reality
+,	,	,
+small	JJ	small
+short-term	JJ	short-term
+misalignments	NNS	misalignment
+are	VBP	be
+always	RB	always
+found	VBN	find
+in	IN	in
+the	DT	the
+Forex	NNP	Forex
+markets	NNS	market
+and	CC	and
+these	DT	this
+are	VBP	be
+often	RB	often
+excellent	JJ	excellent
+trading	NN	trading
+opportunities	NNS	opportunity
+for	IN	for
+financial	JJ	financial
+robot	NN	robot
+advisors	NNS	advisor
+who	WP	who
+automatically	RB	automatically
+execute	VBP	execute
+many	JJ	many
+operations	NNS	operation
+,	,	,
+taking	VBG	take
+advantage	NN	advantage
+of	IN	of
+these	DT	this
+short-time	JJ	short-time
+market	NN	market
+misalignments	NNS	misalignment
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+author	NN	author
+is	VBZ	be
+investigating	VBG	investigate
+the	DT	the
+design	NN	design
+and	CC	and
+use	NN	use
+of	IN	of
+specific	JJ	specific
+hand-crafted	JJ	hand-crafted
+features	NNS	feature
+(	-LRB-	(
+which	WDT	which
+the	DT	the
+author	NN	author
+has	VBZ	have
+already	RB	already
+used	VBN	use
+in	IN	in
+the	DT	the
+medical	JJ	medical
+field	NN	field
+)	-RRB-	)
+extracted	VBN	extract
+from	IN	from
+the	DT	the
+chart	NN	chart
+of	IN	of
+currency	NN	currency
+time-series	NNS	time-sery
+and	CC	and
+which	WDT	which
+would	MD	would
+seem	VB	seem
+to	TO	to
+early	RB	early
+indicate	VB	indicate
+the	DT	the
+possible	JJ	possible
+misalignments	NNS	misalignment
+between	IN	between
+the	DT	the
+cross	NN	cross
+currency	NN	currency
+prices	NNS	price
+from	IN	from
+which	WDT	which
+are	VBP	be
+extracted	VBN	extract
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+For	IN	for
+the	DT	the
+reasons	NNS	reason
+mentioned	VBN	mention
+above	RB	above
+,	,	,
+the	DT	the
+author	NN	author
+has	VBZ	have
+designed	VBN	design
+a	DT	a
+pipeline	NN	pipeline
+which	WDT	which
+,	,	,
+to	TO	to
+determine	VB	determine
+the	DT	the
+medium-term	JJ	medium-term
+trend	NN	trend
+of	IN	of
+a	DT	a
+given	VBN	give
+currency	NN	currency
+,	,	,
+analyzes	VBZ	analyze
+the	DT	the
+correlations	NNS	correlation
+between	IN	between
+the	DT	the
+related	JJ	related
+currencies	NNS	currency
+in	IN	in
+the	DT	the
+context	NN	context
+of	IN	of
+a	DT	a
+triangular	JJ	triangular
+arbitrage	NN	arbitrage
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+specific	JJ	specific
+case	NN	case
+,	,	,
+without	IN	without
+losing	VBG	lose
+generalization	NN	generalization
+,	,	,
+the	DT	the
+author	NN	author
+will	MD	will
+refer	VB	refer
+to	IN	to
+the	DT	the
+EUR/USD	NNP	Eur/USD
+currency	NN	currency
+as	IN	as
+that	DT	that
+on	IN	on
+which	WDT	which
+to	TO	to
+execute	VB	execute
+financial	JJ	financial
+trading	NN	trading
+operations	NNS	operation
+and	CC	and
+to	IN	to
+the	DT	the
+EUR/GBP	NNP	Eur/GBP
+and	CC	and
+GBP/USD	NNP	GbprusD
+currencies	NNS	currency
+to	TO	to
+determine	VB	determine
+the	DT	the
+data	NNS	datum
+set	NN	set
+for	IN	for
+a	DT	a
+possible	JJ	possible
+triangular	JJ	triangular
+arbitrage	NN	arbitrage
+.	.	.
+</s>
+<s type="decl">
+Similar	JJ	Similar
+considerations	NNS	consideration
+can	MD	can
+be	VB	be
+extended	VBN	extend
+to	IN	to
+any	DT	any
+other	JJ	other
+set	NN	set
+of	IN	of
+currencies	NNS	currency
+with	IN	with
+the	DT	the
+same	JJ	same
+financial	JJ	financial
+characteristics	NNS	characteristic
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Having	VBG	have
+established	VBN	establish
+this	DT	this
+necessary	JJ	necessary
+premise	NN	premise
+,	,	,
+the	DT	the
+author	NN	author
+will	MD	will
+describe	VB	describe
+the	DT	the
+proposed	VBN	propose
+pipeline	NN	pipeline
+below	RB	below
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+below	RB	below
+shows	VBZ	show
+the	DT	the
+block	NN	block
+diagram	NN	diagram
+of	IN	of
+the	DT	the
+algorithmic	JJ	algorithmic
+pipeline	NN	pipeline
+that	WDT	that
+is	VBZ	be
+intended	VBN	intend
+to	TO	to
+be	VB	be
+described	VBN	describe
+in	IN	in
+this	DT	this
+paper	NN	paper
+:	:	:
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+following	VBG	follow
+paragraphs	NNS	paragraph
+will	MD	will
+illustrate	VB	illustrate
+each	DT	each
+of	IN	of
+the	DT	the
+blocks	NNS	block
+present	JJ	present
+in	IN	in
+the	DT	the
+complete	JJ	complete
+diagram	NN	diagram
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+pipeline	NN	pipeline
+and	CC	and
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+</s>
+<s type="frag">
+Data	NNP	data
+Pre-Processing	NN	Pre-Processing
+Block	NN	Block
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+objective	NN	objective
+of	IN	of
+this	DT	this
+block	NN	block
+is	VBZ	be
+to	TO	to
+pre-process	VB	pre-process
+the	DT	the
+data	NNS	datum
+of	IN	of
+the	DT	the
+incoming	JJ	incoming
+financial	JJ	financial
+time-series	NNS	time-sery
+.	.	.
+</s>
+<s type="decl">
+Specifically	RB	specifically
+,	,	,
+in	IN	in
+this	DT	this
+block	NN	block
+the	DT	the
+data	NNS	datum
+of	IN	of
+the	DT	the
+incoming	JJ	incoming
+time-series	NNS	time-sery
+will	MD	will
+be	VB	be
+normalized	VBN	normalize
+in	IN	in
+the	DT	the
+range	NN	range
+[	-LRB-	[
+0	CD	0
+,	,	,
+1	CD	1
+]	-RRB-	]
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+3	CD	3
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+an	DT	a
+example	NN	example
+of	IN	of
+normalized	VBN	normalize
+financial	JJ	financial
+time-series	NNS	time-sery
+relating	VBG	relate
+to	IN	to
+the	DT	the
+three	CD	3
+cross	NN	cross
+currency	NN	currency
+analyzed	VBN	analyze
+in	IN	in
+this	DT	this
+paper	NN	paper
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+way	NN	way
+,	,	,
+whatever	WDT	whatever
+the	DT	the
+pricing	NN	pricing
+of	IN	of
+the	DT	the
+cross	NN	cross
+currency	NN	currency
+entering	VBG	enter
+our	PRP$	our
+system	NN	system
+,	,	,
+the	DT	the
+pipeline	NN	pipeline
+will	MD	will
+always	RB	always
+process	VB	process
+data	NNS	datum
+in	IN	in
+the	DT	the
+range	NN	range
+[	-LRB-	[
+0	CD	0
+,	,	,
+1	CD	1
+]	-RRB-	]
+,	,	,
+greatly	RB	greatly
+improving	VBG	improve
+the	DT	the
+stability	NN	stability
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+algorithm	NN	algorithm
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+train	VB	train
+and	CC	and
+validate	VB	validate
+the	DT	the
+proposed	VBN	propose
+pipeline	NN	pipeline
+,	,	,
+the	DT	the
+author	NN	author
+has	VBZ	have
+organized	VBN	organize
+a	DT	a
+proper	JJ	proper
+dataset	NN	dataset
+of	IN	of
+financial	JJ	financial
+pricing	NN	pricing
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Specifically	RB	specifically
+,	,	,
+historical	JJ	historical
+financial	JJ	financial
+data	NNS	datum
+(	-LRB-	(
+with	IN	with
+99.9	CD	99.9
+%	NN	%
+accuracy	NN	accuracy
+)	-RRB-	)
+of	IN	of
+EUR/USD	NNP	Eur/USD
+,	,	,
+GBP/USD	NNP	GbprusD
+,	,	,
+EUR/GBP	NNP	Eur/GBP
+for	IN	for
+the	DT	the
+years	NNS	year
+<date when="2004">
+2004	CD	2004
+</date>
+–	SYM	-
+<date when="2018">
+2018	CD	2018
+</date>
+have	VBP	have
+been	VBN	be
+collected	VBN	collect
+.	.	.
+</s>
+<s type="decl">
+Again	RB	again
+,	,	,
+with	IN	with
+reference	NN	reference
+to	IN	to
+the	DT	the
+aforementioned	JJ	aforementioned
+time	NN	time
+period	NN	period
+,	,	,
+for	IN	for
+each	DT	each
+cross	NN	cross
+currency	NN	currency
+the	DT	the
+historical	JJ	historical
+data	NNS	datum
+referring	VBG	refer
+to	IN	to
+the	DT	the
+opening	NN	opening
+and	CC	and
+closing	NN	closing
+prices	NNS	price
+,	,	,
+higher	JJR	high
+and	CC	and
+lower	JJR	low
+in	IN	in
+addition	NN	addition
+to	IN	to
+the	DT	the
+time	NN	time
+of	IN	of
+each	DT	each
+quotation	NN	quotation
+(	-LRB-	(
+CET	NNP	CET
+time	NN	time
+)	-RRB-	)
+have	VBP	have
+been	VBN	be
+collected	VBN	collect
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+dataset	NN	dataset
+has	VBZ	have
+been	VBN	be
+properly	RB	properly
+divided	VBN	divide
+in	IN	in
+order	NN	order
+to	TO	to
+organize	VB	organize
+a	DT	a
+set	NN	set
+of	IN	of
+data	NNS	datum
+that	WDT	that
+can	MD	can
+be	VB	be
+used	VBN	use
+for	IN	for
+the	DT	the
+training	NN	training
+phase	NN	phase
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+system	NN	system
+and	CC	and
+the	DT	the
+remaining	NN	remaining
+for	IN	for
+the	DT	the
+testing	NN	testing
+and	CC	and
+validation	NN	validation
+session	NN	session
+.	.	.
+</s>
+<s type="decl">
+Specifically	RB	specifically
+,	,	,
+such	JJ	such
+training	NN	training
+simulations	NNS	simulation
+and	CC	and
+annual	JJ	annual
+validation	NN	validation
+have	VBP	have
+been	VBN	be
+performed	VBN	perform
+,	,	,
+dividing	VBG	divide
+the	DT	the
+dataset	NN	dataset
+as	IN	as
+follows	VBZ	follow
+:	:	:
+</s>
+<s type="decl">
+70	CD	70
+%	NN	%
+of	IN	of
+the	DT	the
+mentioned	VBN	mention
+dataset	NN	dataset
+was	VBD	be
+used	VBN	use
+to	TO	to
+train	VB	train
+the	DT	the
+pipeline	NN	pipeline
+,	,	,
+while	IN	while
+the	DT	the
+remaining	VBG	remain
+30	CD	30
+%	NN	%
+was	VBD	be
+used	VBN	use
+to	TO	to
+validate	VB	validate
+and	CC	and
+test	VB	test
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+Both	CC	both
+the	DT	the
+training	NN	training
+set	NN	set
+and	CC	and
+the	DT	the
+validation	NN	validation
+ones	NNS	one
+has	VBZ	have
+been	VBN	be
+analyzed	VBN	analyze
+as	IN	as
+to	TO	to
+understand	VB	understand
+if	IN	if
+the	DT	the
+possible	JJ	possible
+trends	NNS	trend
+(	-LRB-	(
+LONG	JJ	long
+,	,	,
+SHORT	JJ	Short
+,	,	,
+NULL	NNP	NULL
+)	-RRB-	)
+were	VBD	be
+equally	RB	equally
+represented	VBN	represent
+in	IN	in
+both	DT	both
+datasets	NNS	dataset
+in	IN	in
+order	NN	order
+to	TO	to
+avoid	VB	avoid
+overfitting	VBG	overfit
+issues	NNS	issue
+for	IN	for
+the	DT	the
+deep	JJ	deep
+learning	NN	learning
+system	NN	system
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+financial	JJ	financial
+data	NNS	datum
+thus	RB	thus
+organized	VBN	organize
+are	VBP	be
+therefore	RB	therefore
+presented	VBN	present
+as	IN	as
+input	NN	input
+to	IN	to
+the	DT	the
+pre-processing	NN	pre-processing
+system	NN	system
+described	VBN	describe
+in	IN	in
+this	DT	this
+section	NN	section
+whose	WP$	whose
+output	NN	output
+will	MD	will
+be	VB	be
+further	RBR	far
+processed	VBN	process
+by	IN	by
+the	DT	the
+next	JJ	next
+deep	JJ	deep
+learning	NN	learning
+block	NN	block
+.	.	.
+</s>
+</p>
+</text>

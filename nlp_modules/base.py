@@ -1,5 +1,5 @@
 import logging
-import os
+import os, io, sys, requests, shutil
 from abc import ABC, abstractmethod
 from enum import Enum
 from glob import glob
@@ -22,6 +22,8 @@ class PipelineDep(Enum):
     RST_OUT = "RST_OUT"  # output for rhetorical structure theory
     TSV_OUT = "TSV_OUT"  # coref/entity output
 
+    DATETIME = "DATETIME"
+
     def __str__(self):
         return self.value
 
@@ -38,7 +40,7 @@ class NLPModule(ABC):
     @property
     @abstractmethod
     def requires(self):
-        """Returns a tuple of PipelineDeps that must be provided before this step of the pipeline. 
+        """Returns a tuple of PipelineDeps that must be provided before this step of the pipeline.
         For instance, a POS tagger should return `(PipelineDep.TOKENIZE,)` here since it requires
         tokens to do its work."""
         return ()
@@ -47,7 +49,7 @@ class NLPModule(ABC):
     @abstractmethod
     def provides(self):
         """Returns a tuple of PipelineDeps that this module provides for downstream modules.
-        For instance, a POS tagger should return `(PipelineDep.POS_TAG,)` here since it provides 
+        For instance, a POS tagger should return `(PipelineDep.POS_TAG,)` here since it provides
         POS tags for any downstream modules that might need them (like a dependency parser)
         """
         return ()
@@ -118,14 +120,19 @@ class NLPModule(ABC):
             nonlocal progress
 
             filename = filepath.split(os.sep)[-1]
-            with open(filepath, "r") as f:
+            with io.open(filepath, "r", encoding="utf8") as f:
                 s = f.read()
             try:
                 s = process_document_content(s)
             except Exception as e:
                 logging.error(f"Encountered an error while processing file {filepath}!")
                 raise e
-            with open(os.path.join(output_dir, file_type, filename), "w") as f:
+            with io.open(
+                os.path.join(output_dir, file_type, filename),
+                "w",
+                encoding="utf8",
+                newline="\n",
+            ) as f:
                 f.write(s)
 
             # This could lead to race conditions, but it doesn't really matter if
@@ -202,7 +209,7 @@ class NLPModule(ABC):
             content_dict["filename"] = filename
             for subdir in existing_input_dirs:
                 matching_files = [
-                    f for f in os.listdir(subdir) if f.startswith(filename)
+                    f for f in os.listdir(subdir) if f.split(".")[0] == filename
                 ]
                 assert (
                     len(matching_files) > 0
@@ -212,7 +219,7 @@ class NLPModule(ABC):
                 ), f"More than one file starting with {filename} in directory {subdir}"
 
                 filepath = os.path.join(subdir, matching_files[0])
-                with open(filepath, "r") as f:
+                with io.open(filepath, "r", encoding="utf8") as f:
                     content_dict[subdir.split(os.sep)[-1]] = f.read()
 
             # run the processing function
@@ -234,7 +241,7 @@ class NLPModule(ABC):
                     else subdir
                 )
                 filepath = os.path.join(output_dir, subdir, filename + "." + file_ext)
-                with open(filepath, "w") as f:
+                with io.open(filepath, "w", encoding="utf8", newline="\n") as f:
                     f.write(content)
 
             # This could lead to race conditions, but it doesn't really matter if
@@ -248,6 +255,33 @@ class NLPModule(ABC):
         else:
             for filename in tqdm(filenames):
                 process_filename(filename)
+
+    @staticmethod
+    def download_file(model, local_path, subfolder=None):
+        server = "corpling.uis.georgetown.edu"
+        resource = [server, "amir", "download", "amalgum"]
+        if subfolder is not None:
+            resource.append(subfolder)
+        resource.append(model)
+        resource = "/".join(resource)
+        url = "https://" + resource
+        if not local_path.endswith(model):
+            if not local_path.endswith(os.sep):
+                local_path += os.sep
+            local_path += model
+        try:
+            sys.stderr.write("o Downloading model from " + url + "...\n")
+            with requests.get(url, stream=True) as r:
+                write_dir = os.sep.join(local_path.split(os.sep)[:-1])
+                if not os.path.exists(write_dir):
+                    os.makedirs(write_dir)
+                with io.open(local_path, "wb") as f:
+                    shutil.copyfileobj(r.raw, f)
+            sys.stderr.write("o Download successful\n")
+        except Exception as e:
+            sys.stderr.write("\n! Could not download model from " + url + "\n")
+            sys.stderr.write(str(e))
+            raise NLPDependencyException()
 
 
 class NLPDependencyException(Exception):

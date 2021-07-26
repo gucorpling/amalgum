@@ -1,0 +1,657 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Interview with Sue Gardner of the Wikimedia Foundation
+1-1	0-9	Interview	event[1]	new[1]	coref	8-1[0_1]
+1-2	10-14	with	event[1]	new[1]	_	_
+1-3	15-18	Sue	event[1]|person[2]	new[1]|new[2]	coref	5-4[18_2]
+1-4	19-26	Gardner	event[1]|person[2]	new[1]|new[2]	_	_
+1-5	27-29	of	event[1]|person[2]	new[1]|new[2]	_	_
+1-6	30-33	the	event[1]|person[2]|organization[3]	new[1]|new[2]|new[3]	coref	2-4[5_3]
+1-7	34-43	Wikimedia	event[1]|person[2]|organization[3]	new[1]|new[2]|new[3]	_	_
+1-8	44-54	Foundation	event[1]|person[2]|organization[3]	new[1]|new[2]|new[3]	_	_
+
+#Text=This article mentions the Wikimedia Foundation , one of its projects , or people related to it .
+2-1	55-59	This	abstract[4]	new[4]	_	_
+2-2	60-67	article	abstract[4]	new[4]	_	_
+2-3	68-76	mentions	_	_	_	_
+2-4	77-80	the	organization[5]	giv[5]	ana	2-10[0_5]
+2-5	81-90	Wikimedia	organization[5]	giv[5]	_	_
+2-6	91-101	Foundation	organization[5]	giv[5]	_	_
+2-7	102-103	,	_	_	_	_
+2-8	104-107	one	place[6]	new[6]	_	_
+2-9	108-110	of	place[6]	new[6]	_	_
+2-10	111-114	its	place[6]|organization|abstract[8]	new[6]|giv|new[8]	ana|coref	2-17|5-20[23_8]
+2-11	115-123	projects	place[6]|abstract[8]	new[6]|new[8]	_	_
+2-12	124-125	,	_	_	_	_
+2-13	126-128	or	_	_	_	_
+2-14	129-135	people	person[9]	new[9]	_	_
+2-15	136-143	related	person[9]	new[9]	_	_
+2-16	144-146	to	person[9]	new[9]	_	_
+2-17	147-149	it	person[9]|organization	new[9]|giv	coref	3-6[13_0]
+2-18	150-151	.	_	_	_	_
+
+#Text=Wikinews is a project of the Wikimedia Foundation .
+3-1	152-160	Wikinews	organization	new	coref	3-3[12_0]
+3-2	161-163	is	_	_	_	_
+3-3	164-165	a	organization[12]	giv[12]	coref	5-14[21_12]
+3-4	166-173	project	organization[12]	giv[12]	_	_
+3-5	174-176	of	organization[12]	giv[12]	_	_
+3-6	177-180	the	organization[12]|organization[13]	giv[12]|giv[13]	coref	5-10[20_13]
+3-7	181-190	Wikimedia	organization[12]|organization[13]	giv[12]|giv[13]	_	_
+3-8	191-201	Foundation	organization[12]|organization[13]	giv[12]|giv[13]	_	_
+3-9	202-203	.	_	_	_	_
+
+#Text=Wednesday , October 24 , 2007
+4-1	204-213	Wednesday	time	new	appos	4-3[15_0]
+4-2	214-215	,	_	_	_	_
+4-3	216-223	October	time[15]	giv[15]	_	_
+4-4	224-226	24	time[15]	giv[15]	_	_
+4-5	227-228	,	time[15]	giv[15]	_	_
+4-6	229-233	2007	time[15]|time	giv[15]|new	_	_
+
+#Text=Wikinews reporters interviewed Sue Gardner , an employee of the Wikimedia Foundation , the project that runs Wikipedia and several other projects , including Wikinews .
+5-1	234-242	Wikinews	person[17]	new[17]	_	_
+5-2	243-252	reporters	person[17]	new[17]	_	_
+5-3	253-264	interviewed	_	_	_	_
+5-4	265-268	Sue	person[18]	giv[18]	appos	5-7[19_18]
+5-5	269-276	Gardner	person[18]	giv[18]	_	_
+5-6	277-278	,	_	_	_	_
+5-7	279-281	an	person[19]	giv[19]	ana	6-6[0_19]
+5-8	282-290	employee	person[19]	giv[19]	_	_
+5-9	291-293	of	person[19]	giv[19]	_	_
+5-10	294-297	the	person[19]|organization[20]	giv[19]|giv[20]	coref	9-13[41_20]
+5-11	298-307	Wikimedia	person[19]|organization[20]	giv[19]|giv[20]	_	_
+5-12	308-318	Foundation	person[19]|organization[20]	giv[19]|giv[20]	_	_
+5-13	319-320	,	_	_	_	_
+5-14	321-324	the	organization[21]	giv[21]	coref	5-25[0_21]
+5-15	325-332	project	organization[21]	giv[21]	_	_
+5-16	333-337	that	organization[21]	giv[21]	_	_
+5-17	338-342	runs	organization[21]	giv[21]	_	_
+5-18	343-352	Wikipedia	organization[21]|organization	giv[21]|new	_	_
+5-19	353-356	and	organization[21]	giv[21]	_	_
+5-20	357-364	several	organization[21]|abstract[23]	giv[21]|giv[23]	_	_
+5-21	365-370	other	organization[21]|abstract[23]	giv[21]|giv[23]	_	_
+5-22	371-379	projects	organization[21]|abstract[23]	giv[21]|giv[23]	_	_
+5-23	380-381	,	organization[21]|abstract[23]	giv[21]|giv[23]	_	_
+5-24	382-391	including	organization[21]|abstract[23]	giv[21]|giv[23]	_	_
+5-25	392-400	Wikinews	organization[21]|abstract[23]|organization	giv[21]|giv[23]|giv	coref	32-4
+5-26	401-402	.	_	_	_	_
+
+#Text=Before coming to Wikimedia , she ran CBC . CA , the website of Canada 's national public broadcaster .
+6-1	403-409	Before	_	_	_	_
+6-2	410-416	coming	_	_	_	_
+6-3	417-419	to	_	_	_	_
+6-4	420-429	Wikimedia	organization	new	_	_
+6-5	430-431	,	_	_	_	_
+6-6	432-435	she	person	giv	ana	7-1
+6-7	436-439	ran	_	_	_	_
+6-8	440-443	CBC	organization[27]	new[27]	coref	14-7[57_27]
+6-9	444-445	.	organization[27]	new[27]	_	_
+6-10	446-448	CA	organization[27]|organization	new[27]|new	coref	15-8
+6-11	449-450	,	_	_	_	_
+6-12	451-454	the	abstract[29]	new[29]	_	_
+6-13	455-462	website	abstract[29]	new[29]	_	_
+6-14	463-465	of	abstract[29]	new[29]	_	_
+6-15	466-472	Canada	abstract[29]|place[30]|organization[31]	new[29]|new[30]|new[31]	coref|coref	19-6[74_31]|19-17[0_30]
+6-16	473-475	's	abstract[29]|place[30]|organization[31]	new[29]|new[30]|new[31]	_	_
+6-17	476-484	national	abstract[29]|organization[31]	new[29]|new[31]	_	_
+6-18	485-491	public	abstract[29]|organization[31]	new[29]|new[31]	_	_
+6-19	492-503	broadcaster	abstract[29]|organization[31]	new[29]|new[31]	_	_
+6-20	504-505	.	_	_	_	_
+
+#Text=She was also a radio and television journalist for 10 years .
+7-1	506-509	She	person	giv	coref	7-4[35_0]
+7-2	510-513	was	_	_	_	_
+7-3	514-518	also	_	_	_	_
+7-4	519-520	a	person[35]	giv[35]	_	_
+7-5	521-526	radio	organization|person[35]	new|giv[35]	_	_
+7-6	527-530	and	person[35]	giv[35]	_	_
+7-7	531-541	television	abstract|person[35]	new|giv[35]	_	_
+7-8	542-552	journalist	person[35]	giv[35]	_	_
+7-9	553-556	for	person[35]	giv[35]	_	_
+7-10	557-559	10	person[35]|time[36]	giv[35]|new[36]	_	_
+7-11	560-565	years	person[35]|time[36]	giv[35]|new[36]	_	_
+7-12	566-567	.	_	_	_	_
+
+#Text=Interview
+8-1	568-577	Interview	event	giv	_	_
+
+#Text=Matt : Hi Sue , could you explain what you do for the Wikimedia Foundation ?
+9-1	578-582	Matt	person	new	_	_
+9-2	583-584	:	_	_	_	_
+9-3	585-587	Hi	_	_	_	_
+9-4	588-591	Sue	_	_	_	_
+9-5	592-593	,	_	_	_	_
+9-6	594-599	could	_	_	_	_
+9-7	600-603	you	person	acc	ana	9-10
+9-8	604-611	explain	_	_	_	_
+9-9	612-616	what	_	_	_	_
+9-10	617-620	you	person	giv	ana	14-3
+9-11	621-623	do	_	_	_	_
+9-12	624-627	for	_	_	_	_
+9-13	628-631	the	organization[41]	giv[41]	coref	12-8[47_41]
+9-14	632-641	Wikimedia	organization[41]	giv[41]	_	_
+9-15	642-652	Foundation	organization[41]	giv[41]	_	_
+9-16	653-654	?	_	_	_	_
+
+#Text=Sure .
+10-1	655-659	Sure	_	_	_	_
+10-2	660-661	.	_	_	_	_
+
+#Text=I am a consultant & special advisor to the board .
+11-1	662-663	I	person	acc	coref	11-3[43_0]
+11-2	664-666	am	_	_	_	_
+11-3	667-668	a	person[43]|person[44]	giv[43]|giv[44]	coref|ana	11-3[44_43]|12-3[0_44]
+11-4	669-679	consultant	person[43]|person[44]	giv[43]|giv[44]	_	_
+11-5	680-681	&	person[44]|person[45]	giv[44]|new[45]	_	_
+11-6	682-689	special	person[44]|person[45]	giv[44]|new[45]	_	_
+11-7	690-697	advisor	person[44]|person[45]	giv[44]|new[45]	_	_
+11-8	698-700	to	person[44]|person[45]	giv[44]|new[45]	_	_
+11-9	701-704	the	person[44]|person[45]	giv[44]|new[45]	_	_
+11-10	705-710	board	person[44]|person[45]	giv[44]|new[45]	_	_
+11-11	711-712	.	_	_	_	_
+
+#Text=Essentially , I am here to help the organization professionalize and improve .
+12-1	713-724	Essentially	_	_	_	_
+12-2	725-726	,	_	_	_	_
+12-3	727-728	I	person	giv	ana	13-17
+12-4	729-731	am	_	_	_	_
+12-5	732-736	here	_	_	_	_
+12-6	737-739	to	_	_	_	_
+12-7	740-744	help	_	_	_	_
+12-8	745-748	the	organization[47]	giv[47]	ana	13-1[0_47]
+12-9	749-761	organization	organization[47]	giv[47]	_	_
+12-10	762-777	professionalize	_	_	_	_
+12-11	778-781	and	_	_	_	_
+12-12	782-789	improve	_	_	_	_
+12-13	790-791	.	_	_	_	_
+
+#Text=It 's a young organization with a lot of normal ' young-organization ' challenges — and I am here to help fix them .
+13-1	792-794	It	organization	giv	coref	13-3[49_0]
+13-2	795-797	's	_	_	_	_
+13-3	798-799	a	organization[49]	giv[49]	coref	21-8[91_49]
+13-4	800-805	young	organization[49]	giv[49]	_	_
+13-5	806-818	organization	organization[49]	giv[49]	_	_
+13-6	819-823	with	organization[49]	giv[49]	_	_
+13-7	824-825	a	organization[49]|abstract[51]	giv[49]|new[51]	ana	13-23[0_51]
+13-8	826-829	lot	organization[49]|abstract[51]	giv[49]|new[51]	_	_
+13-9	830-832	of	organization[49]|abstract[51]	giv[49]|new[51]	_	_
+13-10	833-839	normal	organization[49]|abstract[51]	giv[49]|new[51]	_	_
+13-11	840-841	'	organization[49]|abstract[51]	giv[49]|new[51]	_	_
+13-12	842-860	young-organization	organization[49]|organization|abstract[51]	giv[49]|new|new[51]	_	_
+13-13	861-862	'	organization[49]|abstract[51]	giv[49]|new[51]	_	_
+13-14	863-873	challenges	organization[49]|abstract[51]	giv[49]|new[51]	_	_
+13-15	874-875	—	_	_	_	_
+13-16	876-879	and	_	_	_	_
+13-17	880-881	I	person	giv	ana	17-4
+13-18	882-884	am	_	_	_	_
+13-19	885-889	here	_	_	_	_
+13-20	890-892	to	_	_	_	_
+13-21	893-897	help	_	_	_	_
+13-22	898-901	fix	_	_	_	_
+13-23	902-906	them	abstract	giv	_	_
+13-24	907-908	.	_	_	_	_
+
+#Text=What was your job position for cbc . ca , and what did you work on while you were there ?
+14-1	909-913	What	_	_	_	_
+14-2	914-917	was	_	_	_	_
+14-3	918-922	your	person|abstract[56]	giv|new[56]	ana	14-14
+14-4	923-926	job	abstract|abstract[56]	new|new[56]	coref	24-20[99_0]
+14-5	927-935	position	abstract[56]	new[56]	_	_
+14-6	936-939	for	abstract[56]	new[56]	_	_
+14-7	940-943	cbc	abstract[56]|organization[57]	new[56]|giv[57]	coref	15-6[0_57]
+14-8	944-945	.	abstract[56]|organization[57]	new[56]|giv[57]	_	_
+14-9	946-948	ca	abstract[56]|organization[57]|person	new[56]|giv[57]|new	_	_
+14-10	949-950	,	_	_	_	_
+14-11	951-954	and	_	_	_	_
+14-12	955-959	what	_	_	_	_
+14-13	960-963	did	_	_	_	_
+14-14	964-967	you	person	giv	ana	14-18
+14-15	968-972	work	_	_	_	_
+14-16	973-975	on	_	_	_	_
+14-17	976-981	while	_	_	_	_
+14-18	982-985	you	person	giv	ana	15-1
+14-19	986-990	were	_	_	_	_
+14-20	991-996	there	_	_	_	_
+14-21	997-998	?	_	_	_	_
+
+#Text=I was senior director of CBC . CA .
+15-1	999-1000	I	person	giv	coref	15-3[62_0]
+15-2	1001-1004	was	_	_	_	_
+15-3	1005-1011	senior	person[62]	giv[62]	ana	16-4[0_62]
+15-4	1012-1020	director	person[62]	giv[62]	_	_
+15-5	1021-1023	of	person[62]	giv[62]	_	_
+15-6	1024-1027	CBC	person[62]|organization	giv[62]|giv	coref	20-1
+15-7	1028-1029	.	_	_	_	_
+15-8	1030-1032	CA	organization	giv	ana	16-2
+15-9	1033-1034	.	_	_	_	_
+
+#Text=( That means I ran it . )
+16-1	1035-1036	(	_	_	_	_
+16-2	1037-1041	That	organization	giv	ana	16-6
+16-3	1042-1047	means	_	_	_	_
+16-4	1048-1049	I	person	giv	ana	17-2
+16-5	1050-1053	ran	_	_	_	_
+16-6	1054-1056	it	organization	giv	ana	17-11
+16-7	1057-1058	.	_	_	_	_
+16-8	1059-1060	)	_	_	_	_
+
+#Text=Do you want me to explain a little about what it is ?
+17-1	1061-1063	Do	_	_	_	_
+17-2	1064-1067	you	person	giv	ana	21-3
+17-3	1068-1072	want	_	_	_	_
+17-4	1073-1075	me	person	giv	ana	24-1
+17-5	1076-1078	to	_	_	_	_
+17-6	1079-1086	explain	_	_	_	_
+17-7	1087-1088	a	_	_	_	_
+17-8	1089-1095	little	_	_	_	_
+17-9	1096-1101	about	_	_	_	_
+17-10	1102-1106	what	_	_	_	_
+17-11	1107-1109	it	organization	giv	ana	19-1
+17-12	1110-1112	is	_	_	_	_
+17-13	1113-1114	?	_	_	_	_
+
+#Text=Dodge : Please do
+18-1	1115-1120	Dodge	person	new	_	_
+18-2	1121-1122	:	_	_	_	_
+18-3	1123-1129	Please	_	_	_	_
+18-4	1130-1132	do	_	_	_	_
+
+#Text=It 's the website of the Canadian public broadcaster , the only national public broadcaster in Canada and the equivalent to the BBC , the Australian Broadcasting Corporation , the French pubcaster . etc.
+19-1	1133-1135	It	organization	giv	coref	19-3[73_0]
+19-2	1136-1138	's	_	_	_	_
+19-3	1139-1142	the	organization[73]	giv[73]	coref	20-11[0_73]
+19-4	1143-1150	website	organization[73]	giv[73]	_	_
+19-5	1151-1153	of	organization[73]	giv[73]	_	_
+19-6	1154-1157	the	organization[73]|organization[74]	giv[73]|giv[74]	appos	19-11[75_74]
+19-7	1158-1166	Canadian	organization[73]|organization[74]	giv[73]|giv[74]	_	_
+19-8	1167-1173	public	organization[73]|organization[74]	giv[73]|giv[74]	_	_
+19-9	1174-1185	broadcaster	organization[73]|organization[74]	giv[73]|giv[74]	_	_
+19-10	1186-1187	,	_	_	_	_
+19-11	1188-1191	the	organization[75]|organization[76]	giv[75]|giv[76]	appos	19-11[76_75]
+19-12	1192-1196	only	organization[75]|organization[76]	giv[75]|giv[76]	_	_
+19-13	1197-1205	national	organization[75]|organization[76]	giv[75]|giv[76]	_	_
+19-14	1206-1212	public	organization[75]|organization[76]	giv[75]|giv[76]	_	_
+19-15	1213-1224	broadcaster	organization[75]|organization[76]	giv[75]|giv[76]	_	_
+19-16	1225-1227	in	organization[75]|organization[76]	giv[75]|giv[76]	_	_
+19-17	1228-1234	Canada	organization[75]|organization[76]|place	giv[75]|giv[76]|giv	_	_
+19-18	1235-1238	and	organization[76]	giv[76]	_	_
+19-19	1239-1242	the	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+19-20	1243-1253	equivalent	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+19-21	1254-1256	to	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+19-22	1257-1260	the	organization[76]|abstract[78]|organization[79]	giv[76]|new[78]|new[79]	coref	39-18[176_79]
+19-23	1261-1264	BBC	organization[76]|abstract[78]|organization[79]	giv[76]|new[78]|new[79]	_	_
+19-24	1265-1266	,	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+19-25	1267-1270	the	organization[76]|abstract[78]|organization[80]	giv[76]|new[78]|new[80]	_	_
+19-26	1271-1281	Australian	organization[76]|abstract[78]|organization[80]	giv[76]|new[78]|new[80]	_	_
+19-27	1282-1294	Broadcasting	organization[76]|abstract[78]|organization[80]	giv[76]|new[78]|new[80]	_	_
+19-28	1295-1306	Corporation	organization[76]|abstract[78]|organization[80]	giv[76]|new[78]|new[80]	_	_
+19-29	1307-1308	,	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+19-30	1309-1312	the	organization[76]|abstract[78]|place[81]	giv[76]|new[78]|new[81]	_	_
+19-31	1313-1319	French	organization[76]|abstract[78]|place[81]	giv[76]|new[78]|new[81]	_	_
+19-32	1320-1329	pubcaster	organization[76]|abstract[78]|place[81]	giv[76]|new[78]|new[81]	_	_
+19-33	1330-1331	.	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+19-34	1332-1336	etc.	organization[76]|abstract[78]	giv[76]|new[78]	_	_
+
+#Text=CBC is mainly a news organization , and CBC . CA is mainly a news website .
+20-1	1337-1340	CBC	organization	giv	coref	20-3[84_0]
+20-2	1341-1343	is	_	_	_	_
+20-3	1344-1350	mainly	organization[84]|organization[85]	giv[84]|giv[85]	coref|coref	20-3[85_84]|20-9[86_85]
+20-4	1351-1352	a	organization[84]|organization[85]	giv[84]|giv[85]	_	_
+20-5	1353-1357	news	abstract|organization[84]|organization[85]	new|giv[84]|giv[85]	coref	20-15
+20-6	1358-1370	organization	organization[84]|organization[85]	giv[84]|giv[85]	_	_
+20-7	1371-1372	,	organization[85]	giv[85]	_	_
+20-8	1373-1376	and	organization[85]	giv[85]	_	_
+20-9	1377-1380	CBC	organization[85]|organization[86]	giv[85]|giv[86]	coref	20-13[89_86]
+20-10	1381-1382	.	organization[85]|organization[86]	giv[85]|giv[86]	_	_
+20-11	1383-1385	CA	organization[85]|organization[86]|organization	giv[85]|giv[86]|giv	_	_
+20-12	1386-1388	is	organization[85]	giv[85]	_	_
+20-13	1389-1395	mainly	organization[85]|organization[89]	giv[85]|giv[89]	coref	25-20[110_89]
+20-14	1396-1397	a	organization[85]|organization[89]	giv[85]|giv[89]	_	_
+20-15	1398-1402	news	organization[85]|abstract|organization[89]	giv[85]|giv|giv[89]	_	_
+20-16	1403-1410	website	organization[85]|organization[89]	giv[85]|giv[89]	_	_
+20-17	1411-1412	.	_	_	_	_
+
+#Text=How did you come to work for the Wikimedia Foundation ?
+21-1	1413-1416	How	_	_	_	_
+21-2	1417-1420	did	_	_	_	_
+21-3	1421-1424	you	person	giv	ana	22-2
+21-4	1425-1429	come	_	_	_	_
+21-5	1430-1432	to	_	_	_	_
+21-6	1433-1437	work	_	_	_	_
+21-7	1438-1441	for	_	_	_	_
+21-8	1442-1445	the	organization[91]	giv[91]	coref	24-7[95_91]
+21-9	1446-1455	Wikimedia	organization[91]	giv[91]	_	_
+21-10	1456-1466	Foundation	organization[91]	giv[91]	_	_
+21-11	1467-1468	?	_	_	_	_
+
+#Text=Were you asked to join by someone ?
+22-1	1469-1473	Were	_	_	_	_
+22-2	1474-1477	you	person	giv	ana	31-7
+22-3	1478-1483	asked	_	_	_	_
+22-4	1484-1486	to	_	_	_	_
+22-5	1487-1491	join	_	_	_	_
+22-6	1492-1494	by	_	_	_	_
+22-7	1495-1502	someone	person	new	_	_
+22-8	1503-1504	?	_	_	_	_
+
+#Text=And if so , who ?
+23-1	1505-1508	And	_	_	_	_
+23-2	1509-1511	if	_	_	_	_
+23-3	1512-1514	so	_	_	_	_
+23-4	1515-1516	,	_	_	_	_
+23-5	1517-1520	who	_	_	_	_
+23-6	1521-1522	?	_	_	_	_
+
+#Text=I actually first got interested in the Wikimedia Foundation in a serious way , when I saw it do such a good job on the Virginia Tech story .
+24-1	1523-1524	I	person	giv	ana	24-16
+24-2	1525-1533	actually	_	_	_	_
+24-3	1534-1539	first	_	_	_	_
+24-4	1540-1543	got	_	_	_	_
+24-5	1544-1554	interested	_	_	_	_
+24-6	1555-1557	in	_	_	_	_
+24-7	1558-1561	the	organization[95]	giv[95]	_	_
+24-8	1562-1571	Wikimedia	organization[95]	giv[95]	_	_
+24-9	1572-1582	Foundation	organization[95]	giv[95]	_	_
+24-10	1583-1585	in	_	_	_	_
+24-11	1586-1587	a	abstract[96]	new[96]	ana	24-18[0_96]
+24-12	1588-1595	serious	abstract[96]	new[96]	_	_
+24-13	1596-1599	way	abstract[96]	new[96]	_	_
+24-14	1600-1601	,	_	_	_	_
+24-15	1602-1606	when	_	_	_	_
+24-16	1607-1608	I	person	giv	ana	25-10
+24-17	1609-1612	saw	_	_	_	_
+24-18	1613-1615	it	abstract	giv	_	_
+24-19	1616-1618	do	_	_	_	_
+24-20	1619-1623	such	abstract[99]	giv[99]	_	_
+24-21	1624-1625	a	abstract[99]	giv[99]	_	_
+24-22	1626-1630	good	abstract[99]	giv[99]	_	_
+24-23	1631-1634	job	abstract[99]	giv[99]	_	_
+24-24	1635-1637	on	_	_	_	_
+24-25	1638-1641	the	abstract[102]	new[102]	coref	25-13[107_102]
+24-26	1642-1650	Virginia	place|abstract[101]|abstract[102]	new|new[101]|new[102]	coref	25-6[104_101]
+24-27	1651-1655	Tech	abstract[101]|abstract[102]	new[101]|new[102]	_	_
+24-28	1656-1661	story	abstract[102]	new[102]	_	_
+24-29	1662-1663	.	_	_	_	_
+
+#Text=On the morning of the Virginia Tech massacre , I was following the story on Wikipedia/Wikinews , and reading the talk page .
+25-1	1664-1666	On	_	_	_	_
+25-2	1667-1670	the	time[103]	new[103]	_	_
+25-3	1671-1678	morning	time[103]	new[103]	_	_
+25-4	1679-1681	of	time[103]	new[103]	_	_
+25-5	1682-1685	the	time[103]|event[105]	new[103]|new[105]	_	_
+25-6	1686-1694	Virginia	time[103]|abstract[104]|event[105]	new[103]|giv[104]|new[105]	_	_
+25-7	1695-1699	Tech	time[103]|abstract[104]|event[105]	new[103]|giv[104]|new[105]	_	_
+25-8	1700-1708	massacre	time[103]|event[105]	new[103]|new[105]	_	_
+25-9	1709-1710	,	_	_	_	_
+25-10	1711-1712	I	person	giv	ana	27-1
+25-11	1713-1716	was	_	_	_	_
+25-12	1717-1726	following	_	_	_	_
+25-13	1727-1730	the	abstract[107]	giv[107]	_	_
+25-14	1731-1736	story	abstract[107]	giv[107]	_	_
+25-15	1737-1739	on	_	_	_	_
+25-16	1740-1758	Wikipedia/Wikinews	organization	new	_	_
+25-17	1759-1760	,	_	_	_	_
+25-18	1761-1764	and	_	_	_	_
+25-19	1765-1772	reading	_	_	_	_
+25-20	1773-1776	the	organization[110]	giv[110]	ana	26-2[0_110]
+25-21	1777-1781	talk	organization|organization[110]	new|giv[110]	_	_
+25-22	1782-1786	page	organization[110]	giv[110]	_	_
+25-23	1787-1788	.	_	_	_	_
+
+#Text=And it was a really excellent level of conversation that was being had there .
+26-1	1789-1792	And	_	_	_	_
+26-2	1793-1795	it	organization	giv	coref	26-4[112_0]
+26-3	1796-1799	was	_	_	_	_
+26-4	1800-1801	a	organization[112]	giv[112]	coref	28-9[117_112]
+26-5	1802-1808	really	organization[112]	giv[112]	_	_
+26-6	1809-1818	excellent	organization[112]	giv[112]	_	_
+26-7	1819-1824	level	organization[112]	giv[112]	_	_
+26-8	1825-1827	of	organization[112]	giv[112]	_	_
+26-9	1828-1840	conversation	organization[112]|abstract	giv[112]|new	_	_
+26-10	1841-1845	that	organization[112]	giv[112]	_	_
+26-11	1846-1849	was	organization[112]	giv[112]	_	_
+26-12	1850-1855	being	organization[112]	giv[112]	_	_
+26-13	1856-1859	had	organization[112]	giv[112]	_	_
+26-14	1860-1865	there	organization[112]	giv[112]	_	_
+26-15	1866-1867	.	_	_	_	_
+
+#Text=I was really seriously impressed .
+27-1	1868-1869	I	person	giv	ana	28-2
+27-2	1870-1873	was	_	_	_	_
+27-3	1874-1880	really	_	_	_	_
+27-4	1881-1890	seriously	_	_	_	_
+27-5	1891-1900	impressed	_	_	_	_
+27-6	1901-1902	.	_	_	_	_
+
+#Text=So I started doing a little reading about the organization , which resulted in me talking with Brad Patrick [ then General Counsel to the Board of Trustees ] and then Florence [ Nibart-Devouard , Chair of the Board ] .
+28-1	1903-1905	So	_	_	_	_
+28-2	1906-1907	I	person	giv	ana	28-15
+28-3	1908-1915	started	_	_	_	_
+28-4	1916-1921	doing	_	_	_	_
+28-5	1922-1923	a	event[116]	new[116]	_	_
+28-6	1924-1930	little	event[116]	new[116]	_	_
+28-7	1931-1938	reading	event[116]	new[116]	_	_
+28-8	1939-1944	about	event[116]	new[116]	_	_
+28-9	1945-1948	the	event[116]|organization[117]	new[116]|giv[117]	coref	31-10[132_117]
+28-10	1949-1961	organization	event[116]|organization[117]	new[116]|giv[117]	_	_
+28-11	1962-1963	,	event[116]	new[116]	_	_
+28-12	1964-1969	which	event[116]	new[116]	_	_
+28-13	1970-1978	resulted	event[116]	new[116]	_	_
+28-14	1979-1981	in	event[116]	new[116]	_	_
+28-15	1982-1984	me	event[116]|person	new[116]|giv	ana	29-4
+28-16	1985-1992	talking	event[116]	new[116]	_	_
+28-17	1993-1997	with	_	_	_	_
+28-18	1998-2002	Brad	person[119]	new[119]	_	_
+28-19	2003-2010	Patrick	person[119]	new[119]	_	_
+28-20	2011-2012	[	_	_	_	_
+28-21	2013-2017	then	_	_	_	_
+28-22	2018-2025	General	abstract[120]	new[120]	_	_
+28-23	2026-2033	Counsel	abstract[120]	new[120]	_	_
+28-24	2034-2036	to	abstract[120]	new[120]	_	_
+28-25	2037-2040	the	abstract[120]|organization[121]	new[120]|new[121]	coref	28-38[126_121]
+28-26	2041-2046	Board	abstract[120]|organization[121]	new[120]|new[121]	_	_
+28-27	2047-2049	of	abstract[120]|organization[121]	new[120]|new[121]	_	_
+28-28	2050-2058	Trustees	abstract[120]|organization[121]|person	new[120]|new[121]|new	_	_
+28-29	2059-2060	]	_	_	_	_
+28-30	2061-2064	and	_	_	_	_
+28-31	2065-2069	then	_	_	_	_
+28-32	2070-2078	Florence	person	new	appos	28-36[125_0]
+28-33	2079-2080	[	_	_	_	_
+28-34	2081-2096	Nibart-Devouard	person	new	_	_
+28-35	2097-2098	,	_	_	_	_
+28-36	2099-2104	Chair	person[125]	giv[125]	_	_
+28-37	2105-2107	of	person[125]	giv[125]	_	_
+28-38	2108-2111	the	person[125]|organization[126]	giv[125]|giv[126]	_	_
+28-39	2112-2117	Board	person[125]|organization[126]	giv[125]|giv[126]	_	_
+28-40	2118-2119	]	_	_	_	_
+28-41	2120-2121	.	_	_	_	_
+
+#Text=Which resulted in me coming here .
+29-1	2122-2127	Which	_	_	_	_
+29-2	2128-2136	resulted	_	_	_	_
+29-3	2137-2139	in	_	_	_	_
+29-4	2140-2142	me	person	giv	_	_
+29-5	2143-2149	coming	_	_	_	_
+29-6	2150-2154	here	_	_	_	_
+29-7	2155-2156	.	_	_	_	_
+
+#Text=Brian :
+30-1	2157-2162	Brian	person	new	coref	39-2
+30-2	2163-2164	:	_	_	_	_
+
+#Text=In joining WMF was there anything you brought from CBC . ca 's policies that you feel have influenced your contributions to the foundation ?
+31-1	2165-2167	In	_	_	_	_
+31-2	2168-2175	joining	_	_	_	_
+31-3	2176-2179	WMF	organization	new	_	_
+31-4	2180-2183	was	_	_	_	_
+31-5	2184-2189	there	_	_	_	_
+31-6	2190-2198	anything	abstract[130]	new[130]	_	_
+31-7	2199-2202	you	abstract[130]|person	new[130]|giv	ana	31-16
+31-8	2203-2210	brought	abstract[130]	new[130]	_	_
+31-9	2211-2215	from	abstract[130]	new[130]	_	_
+31-10	2216-2219	CBC	abstract[130]|organization[132]|abstract[133]	new[130]|giv[132]|new[133]	coref|coref	33-4[144_133]|35-1[0_132]
+31-11	2220-2221	.	abstract[130]|organization[132]|abstract[133]	new[130]|giv[132]|new[133]	_	_
+31-12	2222-2224	ca	abstract[130]|organization[132]|abstract[133]	new[130]|giv[132]|new[133]	_	_
+31-13	2225-2227	's	abstract[130]|organization[132]|abstract[133]	new[130]|giv[132]|new[133]	_	_
+31-14	2228-2236	policies	abstract[130]|abstract[133]	new[130]|new[133]	_	_
+31-15	2237-2241	that	abstract[130]|abstract[133]	new[130]|new[133]	_	_
+31-16	2242-2245	you	abstract[130]|abstract[133]|person	new[130]|new[133]|giv	ana	31-20
+31-17	2246-2250	feel	abstract[130]|abstract[133]	new[130]|new[133]	_	_
+31-18	2251-2255	have	abstract[130]|abstract[133]	new[130]|new[133]	_	_
+31-19	2256-2266	influenced	abstract[130]|abstract[133]	new[130]|new[133]	_	_
+31-20	2267-2271	your	abstract[130]|abstract[133]|person|abstract[136]	new[130]|new[133]|giv|new[136]	ana	32-2
+31-21	2272-2285	contributions	abstract[130]|abstract[133]|abstract[136]	new[130]|new[133]|new[136]	_	_
+31-22	2286-2288	to	abstract[130]|abstract[133]|abstract[136]	new[130]|new[133]|new[136]	_	_
+31-23	2289-2292	the	abstract[130]|abstract[133]|abstract[136]|organization[137]	new[130]|new[133]|new[136]|new[137]	_	_
+31-24	2293-2303	foundation	abstract[130]|abstract[133]|abstract[136]|organization[137]	new[130]|new[133]|new[136]|new[137]	_	_
+31-25	2304-2305	?	_	_	_	_
+
+#Text=Can you give Wikinews any tips ?
+32-1	2306-2309	Can	_	_	_	_
+32-2	2310-2313	you	person	giv	ana	33-1
+32-3	2314-2318	give	_	_	_	_
+32-4	2319-2327	Wikinews	organization	giv	coref	38-14
+32-5	2328-2331	any	abstract[140]	new[140]	ana	33-4[0_140]
+32-6	2332-2336	tips	abstract[140]	new[140]	_	_
+32-7	2337-2338	?	_	_	_	_
+
+#Text=I am assuming their similar balance/neutrality policies as the BBC 's
+33-1	2339-2340	I	person	giv	ana	34-3
+33-2	2341-2343	am	_	_	_	_
+33-3	2344-2352	assuming	_	_	_	_
+33-4	2353-2358	their	abstract|abstract[144]	giv|giv[144]	coref	37-4[164_144]
+33-5	2359-2366	similar	abstract[144]	giv[144]	_	_
+33-6	2367-2385	balance/neutrality	abstract|abstract[144]	new|giv[144]	_	_
+33-7	2386-2394	policies	abstract[144]	giv[144]	_	_
+33-8	2395-2397	as	abstract[144]	giv[144]	_	_
+33-9	2398-2401	the	abstract[144]	giv[144]	_	_
+33-10	2402-2405	BBC	abstract[144]|organization[145]	giv[144]|new[145]	_	_
+33-11	2406-2408	's	abstract[144]|organization[145]	giv[144]|new[145]	_	_
+
+#Text=Yes , I think so .
+34-1	2409-2412	Yes	_	_	_	_
+34-2	2413-2414	,	_	_	_	_
+34-3	2415-2416	I	person	giv	ana	36-1
+34-4	2417-2422	think	_	_	_	_
+34-5	2423-2425	so	_	_	_	_
+34-6	2426-2427	.	_	_	_	_
+
+#Text=CBC is an extremely thoughtful , intentional , deliberate organization .
+35-1	2428-2431	CBC	organization	giv	coref	35-3[148_0]
+35-2	2432-2434	is	_	_	_	_
+35-3	2435-2437	an	organization[148]	giv[148]	ana	36-5[0_148]
+35-4	2438-2447	extremely	organization[148]	giv[148]	_	_
+35-5	2448-2458	thoughtful	organization[148]	giv[148]	_	_
+35-6	2459-2460	,	organization[148]	giv[148]	_	_
+35-7	2461-2472	intentional	organization[148]	giv[148]	_	_
+35-8	2473-2474	,	organization[148]	giv[148]	_	_
+35-9	2475-2485	deliberate	organization[148]	giv[148]	_	_
+35-10	2486-2498	organization	organization[148]	giv[148]	_	_
+35-11	2499-2500	.	_	_	_	_
+
+#Text=I have borrowed from it liberally thus far — our code of conduct owes something to the CBC 's , as does our travel policy , travel approvals policy , reimbursement policy etc.
+36-1	2501-2502	I	person	giv	ana	38-7
+36-2	2503-2507	have	_	_	_	_
+36-3	2508-2516	borrowed	_	_	_	_
+36-4	2517-2521	from	_	_	_	_
+36-5	2522-2524	it	organization	giv	coref	36-15
+36-6	2525-2534	liberally	_	_	_	_
+36-7	2535-2539	thus	_	_	_	_
+36-8	2540-2543	far	_	_	_	_
+36-9	2544-2545	—	_	_	_	_
+36-10	2546-2549	our	person|abstract[152]	acc|new[152]	ana	36-23
+36-11	2550-2554	code	abstract[152]	new[152]	_	_
+36-12	2555-2557	of	abstract[152]	new[152]	_	_
+36-13	2558-2565	conduct	abstract[152]|abstract	new[152]|new	_	_
+36-14	2566-2570	owes	_	_	_	_
+36-15	2571-2580	something	organization	giv	coref	36-17[155_0]
+36-16	2581-2583	to	_	_	_	_
+36-17	2584-2587	the	organization[155]	giv[155]	coref	37-23[165_155]
+36-18	2588-2591	CBC	organization[155]	giv[155]	_	_
+36-19	2592-2594	's	organization[155]	giv[155]	_	_
+36-20	2595-2596	,	_	_	_	_
+36-21	2597-2599	as	_	_	_	_
+36-22	2600-2604	does	_	_	_	_
+36-23	2605-2608	our	person|abstract[158]	giv|new[158]	_	_
+36-24	2609-2615	travel	abstract|abstract[158]	new|new[158]	coref	36-27
+36-25	2616-2622	policy	abstract[158]	new[158]	_	_
+36-26	2623-2624	,	_	_	_	_
+36-27	2625-2631	travel	abstract|abstract[161]	giv|new[161]	_	_
+36-28	2632-2641	approvals	abstract|abstract[161]	new|new[161]	_	_
+36-29	2642-2648	policy	abstract[161]	new[161]	_	_
+36-30	2649-2650	,	_	_	_	_
+36-31	2651-2664	reimbursement	abstract|abstract[163]	new|new[163]	coref	38-4[166_163]
+36-32	2665-2671	policy	abstract[163]	new[163]	_	_
+36-33	2672-2676	etc.	_	_	_	_
+
+#Text=So there are a lot of new policies here ( and there will be more ) that have been heavily influenced by the CBC .
+37-1	2677-2679	So	_	_	_	_
+37-2	2680-2685	there	_	_	_	_
+37-3	2686-2689	are	_	_	_	_
+37-4	2690-2691	a	abstract[164]	giv[164]	coref	39-8[174_164]
+37-5	2692-2695	lot	abstract[164]	giv[164]	_	_
+37-6	2696-2698	of	abstract[164]	giv[164]	_	_
+37-7	2699-2702	new	abstract[164]	giv[164]	_	_
+37-8	2703-2711	policies	abstract[164]	giv[164]	_	_
+37-9	2712-2716	here	abstract[164]	giv[164]	_	_
+37-10	2717-2718	(	abstract[164]	giv[164]	_	_
+37-11	2719-2722	and	abstract[164]	giv[164]	_	_
+37-12	2723-2728	there	abstract[164]	giv[164]	_	_
+37-13	2729-2733	will	abstract[164]	giv[164]	_	_
+37-14	2734-2736	be	abstract[164]	giv[164]	_	_
+37-15	2737-2741	more	abstract[164]	giv[164]	_	_
+37-16	2742-2743	)	abstract[164]	giv[164]	_	_
+37-17	2744-2748	that	abstract[164]	giv[164]	_	_
+37-18	2749-2753	have	abstract[164]	giv[164]	_	_
+37-19	2754-2758	been	abstract[164]	giv[164]	_	_
+37-20	2759-2766	heavily	abstract[164]	giv[164]	_	_
+37-21	2767-2777	influenced	abstract[164]	giv[164]	_	_
+37-22	2778-2780	by	abstract[164]	giv[164]	_	_
+37-23	2781-2784	the	abstract[164]|organization[165]	giv[164]|giv[165]	coref	39-8[173_165]
+37-24	2785-2788	CBC	abstract[164]|organization[165]	giv[164]|giv[165]	_	_
+37-25	2789-2790	.	_	_	_	_
+
+#Text=In terms of journalistic policy , I have had no influence on how Wikinews handles things .
+38-1	2791-2793	In	_	_	_	_
+38-2	2794-2799	terms	_	_	_	_
+38-3	2800-2802	of	_	_	_	_
+38-4	2803-2815	journalistic	abstract[166]	giv[166]	_	_
+38-5	2816-2822	policy	abstract[166]	giv[166]	_	_
+38-6	2823-2824	,	_	_	_	_
+38-7	2825-2826	I	person	giv	ana	39-4
+38-8	2827-2831	have	_	_	_	_
+38-9	2832-2835	had	_	_	_	_
+38-10	2836-2838	no	abstract[168]	new[168]	ana	39-16[175_168]
+38-11	2839-2848	influence	abstract[168]	new[168]	_	_
+38-12	2849-2851	on	abstract[168]	new[168]	_	_
+38-13	2852-2855	how	abstract[168]	new[168]	_	_
+38-14	2856-2864	Wikinews	abstract[168]|organization	new[168]|giv	_	_
+38-15	2865-2872	handles	abstract[168]	new[168]	_	_
+38-16	2873-2879	things	abstract[168]|abstract	new[168]|new	_	_
+38-17	2880-2881	.	_	_	_	_
+
+#Text=And Brian , you are correct that CBC 's editorial policies are very similar to those of the BBC .
+39-1	2882-2885	And	_	_	_	_
+39-2	2886-2891	Brian	person	giv	_	_
+39-3	2892-2893	,	_	_	_	_
+39-4	2894-2897	you	person	giv	_	_
+39-5	2898-2901	are	_	_	_	_
+39-6	2902-2909	correct	_	_	_	_
+39-7	2910-2914	that	_	_	_	_
+39-8	2915-2918	CBC	organization[173]|abstract[174]	giv[173]|giv[174]	_	_
+39-9	2919-2921	's	organization[173]|abstract[174]	giv[173]|giv[174]	_	_
+39-10	2922-2931	editorial	abstract[174]	giv[174]	_	_
+39-11	2932-2940	policies	abstract[174]	giv[174]	_	_
+39-12	2941-2944	are	_	_	_	_
+39-13	2945-2949	very	_	_	_	_
+39-14	2950-2957	similar	_	_	_	_
+39-15	2958-2960	to	_	_	_	_
+39-16	2961-2966	those	abstract[175]	giv[175]	_	_
+39-17	2967-2969	of	abstract[175]	giv[175]	_	_
+39-18	2970-2973	the	abstract[175]|organization[176]	giv[175]|giv[176]	_	_
+39-19	2974-2977	BBC	abstract[175]|organization[176]	giv[175]|giv[176]	_	_
+39-20	2978-2979	.	_	_	_	_

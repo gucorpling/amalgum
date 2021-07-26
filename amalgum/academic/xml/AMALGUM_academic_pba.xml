@@ -1,0 +1,963 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_pba" title="Outdoor Scene Understanding Based on Multi-Scale PBA Image Features and Point Cloud Features" shortTitle="pba" author="Yisha Liu, Yufeng Gu, Fei Yan, Yan Zhuang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/20/4546/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+3.	LS	3.
+Laser	NNP	Laser
+Point	NNP	Point
+Clouds	NNPS	Cloud
+Classification	NN	classification
+Using	VBG	use
+Multi-Scale	NNP	multi-scale
+PBA	NN	PBA
+Image	NN	image
+Features	NNS	feature
+and	CC	and
+Point	NN	Point
+Cloud	NNP	Cloud
+Features	NNS	feature
+</s>
+</head>
+<p>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+important	JJ	important
+to	TO	to
+select	VB	select
+the	DT	the
+neighborhood	NN	neighborhood
+range	NN	range
+of	IN	of
+the	DT	the
+laser	NN	laser
+points	NNS	point
+in	IN	in
+the	DT	the
+feature	NN	feature
+extraction	NN	extraction
+step	NN	step
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+our	PRP$	our
+work	NN	work
+,	,	,
+the	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+is	VBZ	be
+adopted	VBN	adopt
+to	TO	to
+extract	VB	extract
+the	DT	the
+texture	NN	texture
+features	NNS	feature
+of	IN	of
+PBA	NNP	PBA
+images	NNS	image
+on	IN	on
+multiple	JJ	multiple
+scales	NNS	scale
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+point	NN	point
+cloud	NN	cloud
+pyramid	NN	pyramid
+model	NN	model
+is	VBZ	be
+then	RB	then
+used	VBN	use
+to	TO	to
+extract	VB	extract
+the	DT	the
+local	JJ	local
+features	NNS	feature
+of	IN	of
+the	DT	the
+3D	NN	3D
+point	NN	point
+cloud	NN	cloud
+on	IN	on
+multiple	JJ	multiple
+scales	NNS	scale
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.1.	CD	3.1.
+Multi-Scale	NNP	multi-scale
+PBA	NNP	PBA
+</s>
+<s type="frag">
+Image	NN	image
+Feature	NNP	Feature
+Extraction	NN	extraction
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+our	PRP$	our
+work	NN	work
+,	,	,
+feature	NN	feature
+extraction	NN	extraction
+is	VBZ	be
+accomplished	VBN	accomplish
+in	IN	in
+2D	JJ	2D
+gray	JJ	gray
+images	NNS	image
+on	IN	on
+multiple	JJ	multiple
+scales	NNS	scale
+.	.	.
+</s>
+<s type="decl">
+When	WRB	when
+the	DT	the
+scale	NN	scale
+is	VBZ	be
+large	JJ	large
+,	,	,
+the	DT	the
+computational	JJ	computational
+cost	NN	cost
+is	VBZ	be
+very	RB	very
+high	JJ	high
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+the	DT	the
+PBA	NNP	PBA
+image	NN	image
+is	VBZ	be
+downsampled	VBN	downsample
+by	IN	by
+using	VBG	use
+the	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+for	IN	for
+PBA	NNP	PBA
+images	NNS	image
+is	VBZ	be
+given	VBN	give
+in	RP	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+8	CD	8
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+should	MD	should
+be	VB	be
+noted	VBN	note
+that	IN	that
+the	DT	the
+image	NN	image
+in	IN	in
+each	DT	each
+layer	NN	layer
+of	IN	of
+the	DT	the
+pyramid	NN	pyramid
+model	NN	model
+is	VBZ	be
+generated	VBN	generate
+directly	RB	directly
+from	IN	from
+the	DT	the
+3D	JJ	3D
+laser	NN	laser
+point	NN	point
+cloud	NN	cloud
+,	,	,
+rather	RB	rather
+than	IN	than
+from	IN	from
+the	DT	the
+downsampling	NN	downsampling
+of	IN	of
+the	DT	the
+original	JJ	original
+image	NN	image
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Local	NNP	local
+Binary	NNP	Binary
+Pattern	NNP	Pattern
+(	-LRB-	(
+LBP	NNP	LBP
+)	-RRB-	)
+is	VBZ	be
+a	DT	a
+kind	NN	kind
+of	IN	of
+image	NN	image
+texture	NN	texture
+feature	NN	feature
+,	,	,
+which	WDT	which
+is	VBZ	be
+extracted	VBN	extract
+from	IN	from
+multi-resolution	JJ	multi-resolution
+PBA	NNP	PBA
+images	NNS	image
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+the	DT	the
+classic	JJ	classic
+LBP	NNP	LBP
+feature	NN	feature
+,	,	,
+eight	CD	8
+fixed	VBN	fix
+neighborhood	NN	neighborhood
+pixels	NNS	pixel
+are	VBP	be
+selected	VBN	select
+(	-LRB-	(
+see	VB	see
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+9	CD	9
+</s>
+</figure>
+<s type="frag">
+a	FW	a
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+extract	VB	extract
+multi-scale	JJ	multi-scale
+texture	NN	texture
+features	VBZ	feature
+an	DT	a
+improved	VBN	improve
+neighborhood	NN	neighborhood
+selection	NN	selection
+method	NN	method
+is	VBZ	be
+adopted	VBN	adopt
+for	IN	for
+LBP	NNP	LBP
+feature	NN	feature
+extraction	NN	extraction
+in	IN	in
+our	PRP$	our
+work	NN	work
+,	,	,
+in	IN	in
+which	WDT	which
+a	DT	a
+circular	JJ	circular
+neighborhood	NN	neighborhood
+is	VBZ	be
+selected	VBN	select
+with	IN	with
+variable	JJ	variable
+radius	NN	radius
+<hi rend="italic">
+r	NN	reter
+</hi>
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+pixel	NN	pixel
+coordinate	NN	coordinate
+of	IN	of
+the	DT	the
+neighborhood	NN	neighborhood
+points	NNS	point
+(	-LRB-	(
+<hi rend="italic">
+xp	NNP	xp
+</hi>
+,	,	,
+<hi rend="italic">
+yp	NN	yp
+</hi>
+)	-RRB-	)
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+where	WRB	where
+(	-LRB-	(
+<hi rend="italic">
+xc	RB	xc
+</hi>
+,	,	,
+<hi rend="italic">
+yc	NN	Yc
+</hi>
+)	-RRB-	)
+is	VBZ	be
+the	DT	the
+pixel	NN	pixel
+coordinate	NN	coordinate
+of	IN	of
+the	DT	the
+center	NN	center
+pixel	NN	pixel
+.	.	.
+</s>
+<s type="other">
+As	IN	as
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+9	CD	9
+</s>
+</figure>
+<s type="decl">
+a	RB	a
+,	,	,
+b	NN	b
+,	,	,
+<hi rend="italic">
+r	NN	reter
+</hi>
+is	VBZ	be
+selected	VBN	select
+as	IN	as
+1	CD	1
+and	CC	and
+2	CD	2
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+</p>
+<p>
+<s type="sub">
+Reduce	VB	reduce
+the	DT	the
+original	JJ	original
+256-level	NN	256-level
+gray	JJ	gray
+PBA	NNP	PBA
+image	NN	image
+to	IN	to
+3-level	CD	3-level
+and	CC	and
+the	DT	the
+pixel	NN	pixel
+gray	JJ	gray
+value	NN	value
+<hi rend="italic">
+Gnew	NN	gnew
+</hi>
+of	IN	of
+the	DT	the
+simplified	VBN	simplify
+3-level	JJ	3-level
+image	NN	image
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+as	IN	as
+follows	RB	follow
+:	:	:
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+where	WRB	where
+<hi rend="italic">
+Gold	NNP	Gold
+</hi>
+is	VBZ	be
+the	DT	the
+pixel	NN	pixel
+gray	JJ	gray
+value	NN	value
+of	IN	of
+the	DT	the
+original	JJ	original
+PBA	NNP	PBA
+image	NN	image
+.	.	.
+</s>
+</p>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+10	CD	10
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+an	DT	a
+example	NN	example
+of	IN	of
+the	DT	the
+simplified	VBN	simplify
+3-level	NN	3-level
+PBA	NNP	PBA
+image	NN	image
+(	-LRB-	(
+black-0	NN	black-0
+;	:	;
+gray-127	NN	gray-127
+;	:	;
+white-255	NN	white-255
+)	-RRB-	)
+,	,	,
+and	CC	and
+four	CD	4
+categories	NNS	category
+of	IN	of
+typical	JJ	typical
+local	JJ	local
+scenes	NNS	scene
+also	RB	also
+show	VBP	show
+distinct	JJ	distinct
+texture	NN	texture
+features	NNS	feature
+,	,	,
+which	WDT	which
+are	VBP	be
+artificial	JJ	artificial
+ground	NN	ground
+(	-LRB-	(
+top	JJ	top
+left	NN	left
+)	-RRB-	)
+,	,	,
+natural	JJ	natural
+ground	NN	ground
+(	-LRB-	(
+bottom	NN	bottom
+left	JJ	left
+)	-RRB-	)
+,	,	,
+buildings	NNS	building
+(	-LRB-	(
+top	JJ	top
+right	NN	right
+)	-RRB-	)
+,	,	,
+and	CC	and
+vegetation	NN	vegetation
+(	-LRB-	(
+bottom	NN	bottom
+right	NN	right
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+When	WRB	when
+feature	NN	feature
+extraction	NN	extraction
+in	IN	in
+different	JJ	different
+layers	NNS	layer
+of	IN	of
+the	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+for	IN	for
+the	DT	the
+PBA	NNP	PBA
+images	NNS	image
+is	VBZ	be
+completed	VBN	complete
+,	,	,
+these	DT	this
+features	NNS	feature
+in	IN	in
+different	JJ	different
+layers	NNS	layer
+need	VBP	need
+to	TO	to
+be	VB	be
+fused	VBN	fuse
+.	.	.
+</s>
+<s type="decl">
+Starting	VBG	Start
+from	IN	from
+the	DT	the
+top	JJ	top
+layer	NN	layer
+image	NN	image
+of	IN	of
+the	DT	the
+pyramid	NN	pyramid
+,	,	,
+the	DT	the
+image	NN	image
+features	NNS	feature
+are	VBP	be
+upsampled	VBN	upsample
+,	,	,
+and	CC	and
+then	RB	then
+superimposed	VBN	superimpose
+with	IN	with
+the	DT	the
+image	NN	image
+features	NNS	feature
+of	IN	of
+the	DT	the
+next	JJ	next
+layer	NN	layer
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+two	CD	2
+steps	NNS	step
+are	VBP	be
+repeated	VBN	repeat
+until	IN	until
+the	DT	the
+features	NNS	feature
+in	IN	in
+all	DT	all
+layers	NNS	layer
+are	VBP	be
+superimposed	VBN	superimpose
+on	IN	on
+the	DT	the
+image	NN	image
+at	IN	at
+the	DT	the
+bottom	JJ	bottom
+layer	NN	layer
+of	IN	of
+the	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+summary	NN	summary
+,	,	,
+the	DT	the
+(	-LRB-	(
+<hi rend="italic">
+P	NNP	P
+</hi>
++	SYM	+
+1	CD	1
+)	-RRB-	)
+layer	NN	layer
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+of	IN	of
+PBA	NNP	PBA
+images	NNS	image
+is	VBZ	be
+built	VBN	build
+from	IN	from
+the	DT	the
+original	JJ	original
+laser	NN	laser
+point	NN	point
+cloud	NN	cloud
+,	,	,
+and	CC	and
+each	DT	each
+layer	NN	layer
+of	IN	of
+PBA	NNP	PBA
+images	NNS	image
+is	VBZ	be
+converted	VBN	convert
+to	IN	to
+a	DT	a
+3-level	NN	3-level
+gray	JJ	gray
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+LBP	NNP	LBP
+features	NNS	feature
+are	VBP	be
+then	RB	then
+extracted	VBN	extract
+in	IN	in
+each	DT	each
+image	NN	image
+pixel	NN	pixel
+on	IN	on
+<hi rend="italic">
+m	NN	meter
+</hi>
+scales	NNS	scale
+.	.	.
+</s>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+the	DT	the
+features	NNS	feature
+in	IN	in
+different	JJ	different
+layers	NNS	layer
+are	VBP	be
+superimposed	VBN	superimpose
+together	RB	together
+from	IN	from
+the	DT	the
+top	JJ	top
+layer	NN	layer
+to	IN	to
+the	DT	the
+bottom	NN	bottom
+layer	NN	layer
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+there	EX	there
+are	VBP	be
+<hi rend="italic">
+m	CD	meter
+</hi>
+×	NNS	×
+(	-LRB-	(
+<hi rend="italic">
+P	NN	P
+</hi>
++	SYM	+
+1	CD	1
+)	-RRB-	)
+image	NN	image
+features	NNS	feature
+for	IN	for
+every	DT	every
+pixel	NN	pixel
+in	IN	in
+the	DT	the
+original	JJ	original
+PBA	NNP	PBA
+image	NN	image
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+3.2.	CD	3.2.
+Multi-Scale	NNP	multi-scale
+Point	NN	Point
+Cloud	NN	cloud
+Feature	NN	feature
+Extraction	NN	extraction
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+our	PRP$	our
+work	NN	work
+,	,	,
+features	NNS	feature
+are	VBP	be
+extracted	VBN	extract
+from	IN	from
+3D	JJ	3D
+laser	NN	laser
+point	NN	point
+clouds	NNS	cloud
+on	IN	on
+multiple	JJ	multiple
+scales	NNS	scale
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+when	WRB	when
+the	DT	the
+neighborhood	NN	neighborhood
+radius	NN	radius
+is	VBZ	be
+expanded	VBN	expand
+at	IN	at
+a	DT	a
+linear	JJ	linear
+rate	NN	rate
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+neighborhood	NN	neighborhood
+points	NNS	point
+of	IN	of
+a	DT	a
+laser	NN	laser
+point	NN	point
+is	VBZ	be
+approximately	RB	approximately
+increased	VBN	increase
+at	IN	at
+a	DT	a
+cubic	JJ	cubic
+speed	NN	speed
+,	,	,
+which	WDT	which
+greatly	RB	greatly
+increases	VBZ	increase
+the	DT	the
+computational	JJ	computational
+burden	NN	burden
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+solve	VB	solve
+this	DT	this
+problem	NN	problem
+,	,	,
+the	DT	the
+point	NN	point
+cloud	NN	cloud
+pyramid	NN	pyramid
+model	NN	model
+is	VBZ	be
+derived	VBN	derive
+which	WDT	which
+is	VBZ	be
+inspired	VBN	inspire
+by	IN	by
+the	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+in	IN	in
+image	NN	image
+processing	NN	processing
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Similar	JJ	Similar
+to	IN	to
+the	DT	the
+image	NN	image
+pyramid	NN	pyramid
+model	NN	model
+,	,	,
+the	DT	the
+downsampling	NN	downsampling
+algorithm	NN	algorithm
+is	VBZ	be
+utilized	VBN	utilize
+for	IN	for
+the	DT	the
+original	JJ	original
+point	NN	point
+clouds	NNS	cloud
+to	TO	to
+build	VB	build
+the	DT	the
+point	NN	point
+cloud	NN	cloud
+pyramid	NN	pyramid
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+voxel	NN	voxel
+model	NN	model
+is	VBZ	be
+used	VBN	use
+to	TO	to
+divide	VB	divide
+the	DT	the
+laser	NN	laser
+point	NN	point
+cloud	NN	cloud
+to	TO	to
+be	VB	be
+downsampled	VBN	downsample
+into	IN	into
+different	JJ	different
+3D	NN	3D
+grids	NNS	grid
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+the	DT	the
+center	NN	center
+of	IN	of
+gravity	NN	gravity
+of	IN	of
+the	DT	the
+laser	NN	laser
+points	NNS	point
+in	IN	in
+each	DT	each
+voxel	NN	voxel
+(	-LRB-	(
+3D	NN	3D
+grid	NN	grid
+)	-RRB-	)
+is	VBZ	be
+calculated	VBN	calculate
+to	TO	to
+represent	VB	represent
+all	PDT	all
+the	DT	the
+points	NNS	point
+in	IN	in
+the	DT	the
+voxel	NN	voxel
+.	.	.
+</s>
+<s type="decl">
+An	DT	a
+illustration	NN	illustration
+of	IN	of
+the	DT	the
+point	NN	point
+cloud	NN	cloud
+pyramid	NN	pyramid
+model	NN	model
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+11	CD	11
+</s>
+</figure>
+<s type="decl">
+,	,	,
+in	IN	in
+which	WDT	which
+the	DT	the
+bottom	JJ	bottom
+layer	NN	layer
+is	VBZ	be
+the	DT	the
+original	JJ	original
+laser	NN	laser
+point	NN	point
+cloud	NN	cloud
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+a	DT	a
+fixed	JJ	fixed
+number	NN	number
+of	IN	of
+laser	NN	laser
+points	NNS	point
+are	VBP	be
+selected	VBN	select
+as	IN	as
+neighborhood	NN	neighborhood
+points	NNS	point
+in	IN	in
+different	JJ	different
+layers	NNS	layer
+of	IN	of
+the	DT	the
+point	NN	point
+cloud	NN	cloud
+pyramid	NN	pyramid
+model	NN	model
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+After	IN	after
+determining	VBG	determine
+the	DT	the
+neighborhood	NN	neighborhood
+range	NN	range
+of	IN	of
+each	DT	each
+laser	NN	laser
+point	NN	point
+,	,	,
+feature	NN	feature
+extraction	NN	extraction
+will	MD	will
+be	VB	be
+performed	VBN	perform
+which	WDT	which
+includes	VBZ	include
+statistical	JJ	statistical
+features	NNS	feature
+,	,	,
+geometric	JJ	geometric
+morphological	JJ	morphological
+features	NNS	feature
+,	,	,
+and	CC	and
+histogram	NN	histogram
+features	NNS	feature
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_planar" title="Effective Planar Cluster Detection in Point Clouds Using Histogram-Driven Kd-Like Partition and Shifted Mahalanobis Distance Based Regression" shortTitle="planar" author="Jakub Walczak, Tadeusz Poreda, Adam Wojciechowski" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2072-4292/11/21/2465/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+Methodology	NN	methodology
+</s>
+</head>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+Datasets	NNS	dataset
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+notion	NN	notion
+of	IN	of
+a	DT	a
+<hi rend="italic">
+benchmark	NN	benchmark
+dataset	NN	dataset
+</hi>
+for	IN	for
+planes	NNS	plane
+detection	NN	detection
+task	NN	task
+is	VBZ	be
+not	RB	not
+well	RB	well
+established	VBN	establish
+in	IN	in
+the	DT	the
+literature	NN	literature
+.	.	.
+</s>
+<s type="decl">
+Almost	RB	almost
+every	DT	every
+reported	VBN	report
+method	NN	method
+used	VBD	use
+a	DT	a
+different	JJ	different
+dataset	NN	dataset
+,	,	,
+including	VBG	include
+artificially	RB	artificially
+generated	VBN	generate
+ones	NNS	one
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+and	CC	and
+,	,	,
+S3DIS	NNP	S3DIS
+dataset	NN	dataset
+was	VBD	be
+used	VBN	use
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+it	PRP	it
+contains	VBZ	contain
+points	NNS	point
+labelled	VBN	label
+with	IN	with
+respect	NN	respect
+to	IN	to
+objects	NNS	object
+’	POS	's
+adherence	NN	adherence
+(	-LRB-	(
+i.e.	FW	i.e.
+,	,	,
+a	DT	a
+chair	NN	chair
+,	,	,
+a	DT	a
+table	NN	table
+,	,	,
+a	DT	a
+lamp	NN	lamp
+)	-RRB-	)
+rather	RB	rather
+than	IN	than
+the	DT	the
+individual	JJ	individual
+planes	NNS	plane
+.	.	.
+</s>
+<s type="decl">
+On	IN	on
+the	DT	the
+other	JJ	other
+hand	NN	hand
+,	,	,
+Li	NNP	Li
+et	FW	et
+al.	FW	al.
+made	VBD	make
+use	NN	use
+of	IN	of
+a	DT	a
+laser	NN	laser
+scan	NN	scan
+(	-LRB-	(
+Room-1	NNP	Room-1
+)	-RRB-	)
+from	IN	from
+Rooms	NNPS	Rooms
+UZH	NNP	UZH
+Irchel	NNP	Irchel
+dataset	NN	dataset
+,	,	,
+in	IN	in
+spite	NN	spite
+of	IN	of
+the	DT	the
+fact	NN	fact
+that	IN	that
+it	PRP	it
+does	VBZ	do
+not	RB	not
+contain	VB	contain
+any	DT	any
+labelled	VBN	label
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+S3DIS	NNP	S3DIS
+dataset	NN	dataset
+shows	VBZ	show
+much	RB	much
+sparser	JJR	sparse
+point	NN	point
+clouds	NNS	cloud
+density	NN	density
+than	IN	than
+in	IN	in
+the	DT	the
+case	NN	case
+of	IN	of
+rooms	NNS	room
+from	IN	from
+UZH	NNP	UZH
+Irchel	NNP	Irchel
+dataset	NN	dataset
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+datasets	NNS	dataset
+differ	VBP	differ
+significantly	RB	significantly
+in	IN	in
+terms	NNS	term
+of	IN	of
+accuracy	NN	accuracy
+,	,	,
+noise	NN	noise
+,	,	,
+scan	NN	scan
+shadows	NNS	shadow
+,	,	,
+cardinality	NN	cardinality
+,	,	,
+and	CC	and
+scene	NN	scene
+complexity	NN	complexity
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+it	PRP	it
+was	VBD	be
+decided	VBN	decide
+to	TO	to
+use	VB	use
+representatives	NNS	representative
+from	IN	from
+both	DT	both
+of	IN	of
+them	PRP	they
+to	TO	to
+verify	VB	verify
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+on	IN	on
+point	NN	point
+clouds	NNS	cloud
+of	IN	of
+varying	VBG	vary
+nature	NN	nature
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+present	JJ	present
+study	NN	study
+uses	VBZ	use
+point	NN	point
+clouds	NNS	cloud
+of	IN	of
+the	DT	the
+S3DIS	NNP	S3DIS
+dataset	NN	dataset
+and	CC	and
+the	DT	the
+Room-1	NNP	Room-1
+point	NN	point
+set	NN	set
+used	VBN	use
+by	IN	by
+Li	NNP	Li
+et	FW	et
+al.	FW	al.
+(	-LRB-	(
+Table	NNP	Table
+2	CD	2
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Because	IN	because
+for	IN	for
+the	DT	the
+Room-1	NNP	Room-1
+dataset	NN	dataset
+no	DT	no
+ground	NN	ground
+truth	NN	truth
+segmentation	NN	segmentation
+was	VBD	be
+provided	VBN	provide
+,	,	,
+it	PRP	it
+was	VBD	be
+labelled	VBN	label
+manually	RB	manually
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+ground	NN	ground
+truth	NN	truth
+segmentation	NN	segmentation
+of	IN	of
+the	DT	the
+S3DIS	NNP	S3DIS
+dataset	NN	dataset
+,	,	,
+in	IN	in
+turn	NN	turn
+,	,	,
+was	VBD	be
+manually	RB	manually
+modified	VBN	modify
+to	TO	to
+represent	VB	represent
+individual	JJ	individual
+planes	NNS	plane
+.	.	.
+</s>
+<s type="decl">
+An	DT	a
+example	NN	example
+of	IN	of
+six	CD	6
+point	NN	point
+clouds	NNS	cloud
+from	IN	from
+S3DIS	NNP	S3DIS
+and	CC	and
+Room-1	NNP	Room-1
+datasets	NNS	dataset
+are	VBP	be
+presented	VBN	present
+in	IN	in
+Table	NNP	Table
+2	CD	2
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.2.	CD	4.2.
+</s>
+<s type="frag">
+Experiments	NNS	experiment
+</s>
+</head>
+<p>
+<s type="decl">
+Experiments	NNS	experiment
+were	VBD	be
+conducted	VBN	conduct
+in	IN	in
+two	CD	2
+stages	NNS	stage
+.	.	.
+</s>
+<s type="decl">
+At	IN	at
+first	RB	first
+,	,	,
+the	DT	the
+space	NN	space
+partition	NN	partition
+methods	NNS	method
+:	:	:
+PCP	NNP	PCP
+,	,	,
+octree	NN	octree
+,	,	,
+kd-tree	NN	kd-tree
+,	,	,
+VCCS	NNP	VCCS
+,	,	,
+and	CC	and
+the	DT	the
+proposed	VBN	propose
+hd-kd-tree	NN	hd-kd-tree
+were	VBD	be
+examined	VBN	examine
+.	.	.
+</s>
+<s type="decl">
+Secondly	RB	secondly
+,	,	,
+planar	JJ	planar
+clusters	NNS	cluster
+detection	NN	detection
+was	VBD	be
+assessed	VBN	assess
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+For	IN	for
+the	DT	the
+space	NN	space
+partition	NN	partition
+juxtaposition	NN	juxtaposition
+,	,	,
+four	CD	4
+values	NNS	value
+were	VBD	be
+presented	VBN	present
+:	:	:
+the	DT	the
+division	NN	division
+tree	NN	tree
+spreadness	NN	spreadness
+(	-LRB-	(
+number	NN	number
+of	IN	of
+all	DT	all
+nodes	NNS	node
+in	IN	in
+division	NN	division
+tree	NN	tree
+)	-RRB-	)
+,	,	,
+the	DT	the
+final	JJ	final
+number	NN	number
+of	IN	of
+groups	NNS	group
+,	,	,
+the	DT	the
+number	NN	number
+of	IN	of
+points	NNS	point
+,	,	,
+which	WDT	which
+remains	VBZ	remain
+after	IN	after
+the	DT	the
+partition	NN	partition
+process	NN	process
+was	VBD	be
+accomplished	VBN	accomplish
+,	,	,
+and	CC	and
+the	DT	the
+partition	NN	partition
+time	NN	time
+.	.	.
+</s>
+<s type="decl">
+All	DT	all
+space	NN	space
+partition	NN	partition
+methods	NNS	method
+were	VBD	be
+tested	VBN	test
+on	IN	on
+the	DT	the
+S3DIS	NNP	S3DIS
+dataset	NN	dataset
+with	IN	with
+the	DT	the
+same	JJ	same
+setup	NN	setup
+(	-LRB-	(
+Table	NNP	Table
+3	CD	3
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+A	DT	a
+decision	NN	decision
+to	TO	to
+use	VB	use
+quality	NN	quality
+measures	NNS	measure
+applied	VBN	apply
+by	IN	by
+Dong	NNP	Dong
+et	NNP	et
+al.	FW	al.
+and	CC	and
+Li	NNP	Li
+et	FW	et
+al.	FW	al.
+for	IN	for
+planar	JJ	planar
+cluster	NN	cluster
+detection	NN	detection
+was	VBD	be
+made	VBN	make
+to	TO	to
+clearly	RB	clearly
+demonstrate	VB	demonstrate
+the	DT	the
+superiority	NN	superiority
+of	IN	of
+the	DT	the
+proposed	VBN	propose
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+ordinary	JJ	ordinary
+plane	NN	plane
+precision	NN	precision
+(	-LRB-	(
+Equation	NNP	Equation
+(	-LRB-	(
+12	CD	12
+)	-RRB-	)
+)	-RRB-	)
+,	,	,
+plane	NN	plane
+recall	NN	recall
+(	-LRB-	(
+Equation	NNP	Equation
+(	-LRB-	(
+13	CD	13
+)	-RRB-	)
+)	-RRB-	)
+and	CC	and
+over-	NN	over-
+as	RB	as
+well	RB	well
+as	IN	as
+under-	JJ	under-
+segmentation	NN	segmentation
+rates	NNS	rate
+(	-LRB-	(
+Equations	NNS	equation
+(	-LRB-	(
+14	CD	14
+)	-RRB-	)
+and	CC	and
+eqrefeq	NN	eqrefeq
+:	:	:
+usr	NN	usr
+)	-RRB-	)
+were	VBD	be
+used	VBN	use
+as	IN	as
+the	DT	the
+validity	NN	validity
+measures	NNS	measure
+of	IN	of
+the	DT	the
+entire	JJ	entire
+procedure	NN	procedure
+.	.	.
+(	-LRB-	(
+12	CD	12
+)	-RRB-	)
+(	-LRB-	(
+13	CD	13
+)	-RRB-	)
+where	WRB	where
+stands	VBZ	stand
+for	IN	for
+a	DT	a
+number	NN	number
+of	IN	of
+correctly	RB	correctly
+segmented	VBN	segment
+planar	JJ	planar
+clusters	NNS	cluster
+(	-LRB-	(
+with	IN	with
+maximum	JJ	maximum
+overlapping	VBG	overlappe
+strategy	NN	strategy
+,	,	,
+80	CD	80
+%	NN	%
+)	-RRB-	)
+,	,	,
+represents	VBZ	represent
+the	DT	the
+total	JJ	total
+number	NN	number
+of	IN	of
+planar	JJ	planar
+clusters	NNS	cluster
+obtained	VBN	obtain
+as	IN	as
+the	DT	the
+algorithm	NN	algorithm
+output	NN	output
+,	,	,
+and	CC	and
+is	VBZ	be
+a	DT	a
+number	NN	number
+of	IN	of
+ground	NN	ground
+truth	NN	truth
+planar	JJ	planar
+clusters	NNS	cluster
+.	.	.
+(	-LRB-	(
+14	CD	14
+)	-RRB-	)
+(	-LRB-	(
+15	CD	15
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+a	DT	a
+number	NN	number
+of	IN	of
+resulting	VBG	result
+planar	JJ	planar
+clusters	NNS	cluster
+that	WDT	that
+overlap	VBP	overlap
+the	DT	the
+multiple	JJ	multiple
+ground	NN	ground
+truth	NN	truth
+planar	NN	planar
+clusters	NNS	cluster
+.	.	.
+</s>
+<s type="decl">
+,	,	,
+in	IN	in
+turn	NN	turn
+,	,	,
+is	VBZ	be
+a	DT	a
+number	NN	number
+of	IN	of
+ground	NN	ground
+truth	NN	truth
+planar	JJ	planar
+clusters	NNS	cluster
+overlapping	VBG	overlappe
+more	RBR	more
+than	IN	than
+one	CD	one
+resulting	VBG	result
+planar	JJ	planar
+cluster	NN	cluster
+.	.	.
+</s>
+</p>
+</text>

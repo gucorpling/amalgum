@@ -1,0 +1,224 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1002" relname="preparation">Many real-world signals including physiological signals are irregular in some aspects .</segment>
+<segment id="3" parent="1003" relname="contrast">They are neither purely periodic</segment>
+<segment id="4" parent="1003" relname="contrast">nor can they be expressed by an analytic formula .</segment>
+<segment id="5" parent="1007" relname="span">The inherent irregularities imply the uncertainty during the evolution of the underlying process</segment>
+<segment id="6" parent="5" relname="elaboration">from which the signals are observed .</segment>
+<segment id="7" parent="1008" relname="joint">The uncertainty enables information transfer</segment>
+<segment id="8" parent="1008" relname="joint">but also limits the predictability of those signals .</segment>
+<segment id="9" parent="1009" relname="same_unit">The unpredictability of signal in time domain</segment>
+<segment id="10" parent="1009" relname="same_unit">makes researchers have to toil in frequency domain .</segment>
+<segment id="11" parent="1012" relname="span">Fourier transform</segment>
+<segment id="12" parent="11" relname="restatement">( FT )</segment>
+<segment id="13" parent="1014" relname="span">bridges signals in original space</segment>
+<segment id="14" parent="13" relname="restatement">( time domain )</segment>
+<segment id="15" parent="1016" relname="span">with their representations in dual space</segment>
+<segment id="16" parent="15" relname="elaboration">( frequency domain )</segment>
+<segment id="17" parent="1018" relname="span">by decomposing a signal</segment>
+<segment id="18" parent="17" relname="elaboration">satisfying some weak constraints into infinitely many periodic components ,</segment>
+<segment id="19" parent="1018" relname="elaboration">which has numerous applications in signal processing .</segment>
+<segment id="20" parent="1021" relname="span">For most of the real-world applications , finite samples</segment>
+<segment id="21" parent="1022" relname="span">drawn</segment>
+<segment id="22" parent="21" relname="elaboration">( usually evenly spaced )</segment>
+<segment id="23" parent="1023" relname="same_unit">from a continuous random process</segment>
+<segment id="24" parent="1024" relname="contrast">cannot give us full information about the process ’ evolution</segment>
+<segment id="25" parent="1024" relname="contrast">but only a discrete depiction .</segment>
+<segment id="26" parent="1027" relname="span">FT was adapted into discrete Fourier transform</segment>
+<segment id="27" parent="26" relname="restatement">( DFT )</segment>
+<segment id="28" parent="1026" relname="same_unit">for such scenarios .</segment>
+<segment id="29" parent="1030" relname="span">Moreover , line spectrum</segment>
+<segment id="30" parent="1031" relname="span">wherein the total energy of the signal distributes on only few frequency components is rarely encountered among physiological signals</segment>
+<segment id="31" parent="30" relname="cause">due to the inherent irregularities therein .</segment>
+<segment id="32" parent="1032" relname="span">To characterize the irregularity of digital signals in frequency domain ,</segment>
+<segment id="33" parent="32" relname="elaboration">spectral entropy is introduced analogous to the Shannon entropy in information theory .</segment>
+<segment id="34" parent="1033" relname="sequence">The estimations on the frequency grid are firstly divided by the total power ,</segment>
+<segment id="35" parent="1035" relname="span">and then , a list of proxies in the form of probabilities</segment>
+<segment id="36" parent="35" relname="elaboration">whose sum is 1 is obtained .</segment>
+<segment id="37" parent="1038" relname="span">Then , the Shannon entropy formula ,</segment>
+<segment id="38" parent="37" relname="elaboration">which is the negative sum of probability-weighted log probabilities ,</segment>
+<segment id="39" parent="1039" relname="span">map those proxies into a quantity</segment>
+<segment id="40" parent="39" relname="elaboration">representing the irregularity of energy distribution on frequency domain .</segment>
+<segment id="41" parent="1040" relname="joint">Under this perspective , a flat spectrum has maximal spectral entropy ,</segment>
+<segment id="42" parent="1042" relname="span">and the spectrum of a single frequency signal has minimal spectral entropy ,</segment>
+<segment id="43" parent="42" relname="elaboration">which is zero .</segment>
+<segment id="44" parent="1044" relname="span">Spectral entropy has been applied in diverse areas ,</segment>
+<segment id="45" parent="44" relname="elaboration">including endpoint detection in speech segmentation and spectrum sensing in cognitive radio .</segment>
+<segment id="46" parent="1046" relname="span">Moreover , it has also served as the base of a famous inductive bias , maximum entropy ,</segment>
+<segment id="47" parent="1047" relname="span">which is widely adopted for spectrum estimation of some kinds of physiological signals like electroencephalogram</segment>
+<segment id="48" parent="47" relname="restatement">( EEG ) .</segment>
+<segment id="49" parent="1049" relname="joint">Although spectral entropy is well-defined</segment>
+<segment id="50" parent="1051" relname="span">and can be computed efficiently by Fast Fourier Transform</segment>
+<segment id="51" parent="50" relname="elaboration">( FFT ) ,</segment>
+<segment id="52" parent="1052" relname="span">it is difficult to relate spectral entropy with other interpretable properties of interest of original signal ,</segment>
+<segment id="53" parent="1054" relname="span">especially when taking no account of the overwhelming endorsement from its counterpart</segment>
+<segment id="54" parent="53" relname="elaboration">( information entropy ) ,</segment>
+<segment id="55" parent="1055" relname="span">which is the foundational concept in information theory</segment>
+<segment id="56" parent="55" relname="elaboration">which quantifies the uncertainty .</segment>
+<segment id="57" parent="1058" relname="attribution">Furthermore , it is apparent</segment>
+<segment id="58" parent="1058" relname="span">that the spectral entropy ignored the order information</segment>
+<segment id="59" parent="58" relname="elaboration">since the power estimations are arranged on the frequency grid with intrinsic partial order structure .</segment>
+<segment id="60" parent="61" relname="concession">Any permutations of these values on the grid yields a same spectral entropy ,</segment>
+<segment id="61" parent="1060" relname="span">but obviously , the representations of those signals in time domain can look very different .</segment>
+<segment id="62" parent="1063" relname="span">The motivation</segment>
+<segment id="63" parent="1064" relname="span">to incorporate the order information</segment>
+<segment id="64" parent="63" relname="elaboration">carried by the power spectrum</segment>
+<segment id="65" parent="1062" relname="same_unit">is guided by the following belief .</segment>
+<segment id="66" parent="1068" relname="span">The normal operations of any system</segment>
+<segment id="67" parent="66" relname="elaboration">( biological/electromechanical , etc. )</segment>
+<segment id="68" parent="1067" relname="same_unit">are impossible</segment>
+<segment id="69" parent="1067" relname="manner">without the proper processing of information through some physical/chemical process .</segment>
+<segment id="70" parent="1069" relname="joint">It could be the signaling between different modules within the system or the communications between the system as a whole and the external environment .</segment>
+<segment id="71" parent="1072" relname="span">Information transfers</segment>
+<segment id="72" parent="71" relname="elaboration">happening in those scenarios</segment>
+<segment id="73" parent="1071" relname="same_unit">are accomplished with the help of carrier signals of particular forms with nontrivial structures in their spectra .</segment>
+<segment id="74" parent="1073" relname="joint">Moreover , only limited frequency precision of the control and recognition of those signals is practical for real systems .</segment>
+<segment id="75" parent="1075" relname="span">Therefore , it is unreasonable for well-designed artificial systems or natural systems</segment>
+<segment id="76" parent="1076" relname="span">that have gone through long-term evolution</segment>
+<segment id="77" parent="1077" relname="span">to arrange the internal signals</segment>
+<segment id="78" parent="77" relname="elaboration">responsible for different functions close with each other in frequency domain within a certain time window .</segment>
+<segment id="79" parent="1079" relname="joint">Otherwise , the efficient transfer of information could be degraded ,</segment>
+<segment id="80" parent="1079" relname="joint">and frequency divided multiplex in modern communication systems can be considered as a living example of this belief .</segment>
+<segment id="81" parent="1081" relname="same_unit">Therefore ,</segment>
+<segment id="82" parent="1083" relname="span">if we use power estimations on the frequency grid as proxies of the intensities of activities</segment>
+<segment id="83" parent="82" relname="elaboration">corresponding to those frequencies ,</segment>
+<segment id="84" parent="1085" relname="attribution">it seems reasonable to infer</segment>
+<segment id="85" parent="1085" relname="span">that the energy</segment>
+<segment id="86" parent="85" relname="elaboration">distributed on neighboring rather than remote frequency grids is more likely caused by the very same function .</segment>
+<segment id="87" parent="1088" relname="span">The alpha band activities</segment>
+<segment id="88" parent="87" relname="restatement">( 8 – 13 Hz )</segment>
+<segment id="89" parent="1088" relname="elaboration">which can be interrupted by visual perception tasks in human ’s EEG is one of the examples .</segment>
+<segment id="90" parent="1089" relname="joint">To sum up ,</segment>
+<segment id="91" parent="1090" relname="span">we want to develop a metric</segment>
+<segment id="92" parent="1091" relname="joint">to characterize the aforementioned structural irregularities of the power spectra ,</segment>
+<segment id="93" parent="1093" relname="preparation">that is , how the frequency components of different intensities in a spectrum close to each other</segment>
+<segment id="94" parent="1094" relname="span">instead of what is captured in spectral entropy ,</segment>
+<segment id="95" parent="1095" relname="span">which is how the intensities of frequency components are distributed</segment>
+<segment id="96" parent="95" relname="concession">no matter their locations in frequency domain .</segment>
+<segment id="97" parent="1097" relname="span">It was supposed to assign a larger value to a signal</segment>
+<segment id="98" parent="1098" relname="span">wherein the frequency components</segment>
+<segment id="99" parent="1099" relname="span">having similar intensities are distributed far apart from ,</segment>
+<segment id="100" parent="99" relname="antithesis">rather than close to , each other .</segment>
+<segment id="101" parent="1102" relname="span">In addition , the similarities of intensities can be reflected</segment>
+<segment id="102" parent="101" relname="elaboration">( partially and heuristically )</segment>
+<segment id="103" parent="1101" relname="same_unit">by the relative order of power estimates on discrete frequency grid .</segment>
+<segment id="104" parent="1103" relname="joint">That is why the order information in the spectrum can shed new light on the structure aspects of signal</segment>
+<segment id="105" parent="1103" relname="joint">and how the order information is incorporated into our analysis .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="joint"/>
+<group id="1005" type="span" parent="1002" relname="joint"/>
+<group id="1006" type="span" parent="1005" relname="span"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="multinuc" parent="1007" relname="elaboration"/>
+<group id="1009" type="multinuc" parent="1006" relname="elaboration"/>
+<group id="1011" type="multinuc" parent="1002" relname="joint"/>
+<group id="1012" type="span" parent="1011" relname="same_unit"/>
+<group id="1013" type="multinuc" parent="1011" relname="same_unit"/>
+<group id="1014" type="span" parent="1013" relname="same_unit"/>
+<group id="1015" type="span" parent="1013" relname="same_unit"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1017" type="span" parent="1016" relname="means"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1020" type="multinuc" parent="1002" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="same_unit"/>
+<group id="1022" type="span" parent="20" relname="elaboration"/>
+<group id="1023" type="multinuc" parent="1020" relname="same_unit"/>
+<group id="1024" type="multinuc" parent="1023" relname="same_unit"/>
+<group id="1026" type="multinuc" parent="1002" relname="joint"/>
+<group id="1027" type="span" parent="1026" relname="same_unit"/>
+<group id="1029" type="span" parent="1002" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="29" relname="elaboration"/>
+<group id="1032" type="span" parent="1030" relname="purpose"/>
+<group id="1033" type="multinuc" parent="1002" relname="joint"/>
+<group id="1035" type="span" parent="1033" relname="sequence"/>
+<group id="1037" type="multinuc" parent="1033" relname="sequence"/>
+<group id="1038" type="span" parent="1037" relname="same_unit"/>
+<group id="1039" type="span" parent="1037" relname="same_unit"/>
+<group id="1040" type="multinuc" parent="1033" relname="sequence"/>
+<group id="1042" type="span" parent="1040" relname="joint"/>
+<group id="1044" type="span" parent="1040" relname="joint"/>
+<group id="1045" type="span" parent="1040" relname="joint"/>
+<group id="1046" type="span" parent="1045" relname="span"/>
+<group id="1047" type="span" parent="46" relname="elaboration"/>
+<group id="1048" type="multinuc" parent="1046" relname="concession"/>
+<group id="1049" type="multinuc" parent="1048" relname="joint"/>
+<group id="1050" type="multinuc" parent="1049" relname="joint"/>
+<group id="1051" type="span" parent="1050" relname="same_unit"/>
+<group id="1052" type="span" parent="1050" relname="same_unit"/>
+<group id="1053" type="span" parent="52" relname="circumstance"/>
+<group id="1054" type="span" parent="1053" relname="span"/>
+<group id="1055" type="span" parent="1054" relname="elaboration"/>
+<group id="1056" type="multinuc" parent="1048" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="multinuc" parent="1056" relname="joint"/>
+<group id="1060" type="span" parent="1059" relname="joint"/>
+<group id="1061" type="multinuc" parent="1059" relname="joint"/>
+<group id="1062" type="multinuc" parent="1061" relname="joint"/>
+<group id="1063" type="span" parent="1062" relname="same_unit"/>
+<group id="1064" type="span" parent="62" relname="purpose"/>
+<group id="1065" type="multinuc" parent="1061" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="multinuc" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="same_unit"/>
+<group id="1069" type="multinuc" parent="1065" relname="joint"/>
+<group id="1070" type="multinuc" parent="1069" relname="joint"/>
+<group id="1071" type="multinuc" parent="1070" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="multinuc" parent="1070" relname="joint"/>
+<group id="1074" type="multinuc" parent="1073" relname="joint"/>
+<group id="1075" type="span" parent="1074" relname="joint"/>
+<group id="1076" type="span" parent="75" relname="elaboration"/>
+<group id="1077" type="span" parent="76" relname="purpose"/>
+<group id="1078" type="multinuc" parent="1074" relname="joint"/>
+<group id="1079" type="multinuc" parent="1078" relname="joint"/>
+<group id="1080" type="multinuc" parent="1078" relname="joint"/>
+<group id="1081" type="multinuc" parent="1080" relname="joint"/>
+<group id="1082" type="span" parent="1081" relname="same_unit"/>
+<group id="1083" type="span" parent="1084" relname="condition"/>
+<group id="1084" type="span" parent="1082" relname="span"/>
+<group id="1085" type="span" parent="1084" relname="span"/>
+<group id="1086" type="span" parent="1080" relname="joint"/>
+<group id="1087" type="span" parent="1086" relname="span"/>
+<group id="1088" type="span" parent="1087" relname="span"/>
+<group id="1089" type="multinuc" parent="1087" relname="purpose"/>
+<group id="1090" type="span" parent="1089" relname="joint"/>
+<group id="1091" type="multinuc" parent="91" relname="purpose"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="span" parent="1092" relname="span"/>
+<group id="1094" type="span" parent="1093" relname="span"/>
+<group id="1095" type="span" parent="94" relname="elaboration"/>
+<group id="1096" type="multinuc" parent="1094" relname="elaboration"/>
+<group id="1097" type="span" parent="1096" relname="joint"/>
+<group id="1098" type="span" parent="97" relname="elaboration"/>
+<group id="1099" type="span" parent="98" relname="elaboration"/>
+<group id="1100" type="span" parent="1096" relname="joint"/>
+<group id="1101" type="multinuc" parent="1100" relname="span"/>
+<group id="1102" type="span" parent="1101" relname="same_unit"/>
+<group id="1103" type="multinuc" parent="1101" relname="elaboration"/>
+	</body>
+</rst>

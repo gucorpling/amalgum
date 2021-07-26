@@ -1,0 +1,948 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Own a Dog
+1-1	0-3	Own	_	_	_	_
+1-2	4-5	a	animal[1]	new[1]	_	_
+1-3	6-9	Dog	animal[1]	new[1]	_	_
+
+#Text=Okay , so you read all the interesting and important facts about your dog 's breed or maybe you have n't , but either way , you 're still clueless on what to do to provide for a dog .
+2-1	10-14	Okay	_	_	_	_
+2-2	15-16	,	_	_	_	_
+2-3	17-19	so	_	_	_	_
+2-4	20-23	you	person	acc	ana	2-13
+2-5	24-28	read	_	_	_	_
+2-6	29-32	all	abstract[3]	new[3]	_	_
+2-7	33-36	the	abstract[3]	new[3]	_	_
+2-8	37-48	interesting	abstract[3]	new[3]	_	_
+2-9	49-52	and	abstract[3]	new[3]	_	_
+2-10	53-62	important	abstract[3]	new[3]	_	_
+2-11	63-68	facts	abstract[3]	new[3]	_	_
+2-12	69-74	about	abstract[3]	new[3]	_	_
+2-13	75-79	your	abstract[3]|person|animal[5]|animal[6]	new[3]|giv|new[5]|new[6]	ana|coref	2-19|2-38[10_5]
+2-14	80-83	dog	abstract[3]|animal[5]|animal[6]	new[3]|new[5]|new[6]	_	_
+2-15	84-86	's	abstract[3]|animal[5]|animal[6]	new[3]|new[5]|new[6]	_	_
+2-16	87-92	breed	abstract[3]|animal[6]	new[3]|new[6]	_	_
+2-17	93-95	or	_	_	_	_
+2-18	96-101	maybe	_	_	_	_
+2-19	102-105	you	person	giv	ana	2-27
+2-20	106-110	have	_	_	_	_
+2-21	111-114	n't	_	_	_	_
+2-22	115-116	,	_	_	_	_
+2-23	117-120	but	_	_	_	_
+2-24	121-127	either	abstract[8]	new[8]	_	_
+2-25	128-131	way	abstract[8]	new[8]	_	_
+2-26	132-133	,	_	_	_	_
+2-27	134-137	you	person	giv	ana	3-1
+2-28	138-141	're	_	_	_	_
+2-29	142-147	still	_	_	_	_
+2-30	148-156	clueless	_	_	_	_
+2-31	157-159	on	_	_	_	_
+2-32	160-164	what	_	_	_	_
+2-33	165-167	to	_	_	_	_
+2-34	168-170	do	_	_	_	_
+2-35	171-173	to	_	_	_	_
+2-36	174-181	provide	_	_	_	_
+2-37	182-185	for	_	_	_	_
+2-38	186-187	a	animal[10]	giv[10]	coref	6-2[16_10]
+2-39	188-191	dog	animal[10]	giv[10]	_	_
+2-40	192-193	.	_	_	_	_
+
+#Text=You do n't want Fido to live unhappily , right ?
+3-1	194-197	You	person	giv	ana	6-2
+3-2	198-200	do	_	_	_	_
+3-3	201-204	n't	_	_	_	_
+3-4	205-209	want	_	_	_	_
+3-5	210-214	Fido	person	new	ana	10-20
+3-6	215-217	to	_	_	_	_
+3-7	218-222	live	_	_	_	_
+3-8	223-232	unhappily	_	_	_	_
+3-9	233-234	,	_	_	_	_
+3-10	235-240	right	_	_	_	_
+3-11	241-242	?	_	_	_	_
+
+#Text=Here are the basic steps !
+4-1	243-247	Here	_	_	_	_
+4-2	248-251	are	_	_	_	_
+4-3	252-255	the	abstract[13]	new[13]	coref	5-1[0_13]
+4-4	256-261	basic	abstract[13]	new[13]	_	_
+4-5	262-267	steps	abstract[13]	new[13]	_	_
+4-6	268-269	!	_	_	_	_
+
+#Text=Steps
+5-1	270-275	Steps	abstract	giv	_	_
+
+#Text=Give your dog a name .
+6-1	276-280	Give	_	_	_	_
+6-2	281-285	your	person|animal[16]	giv|giv[16]	ana|coref	7-7|10-5[38_16]
+6-3	286-289	dog	animal[16]	giv[16]	_	_
+6-4	290-291	a	object[17]	new[17]	ana	7-1[0_17]
+6-5	292-296	name	object[17]	new[17]	_	_
+6-6	297-298	.	_	_	_	_
+
+#Text=This is something that will affect your pet for life .
+7-1	299-303	This	object	giv	coref	7-3[19_0]
+7-2	304-306	is	_	_	_	_
+7-3	307-316	something	object[19]	giv[19]	coref	8-9[26_19]
+7-4	317-321	that	object[19]	giv[19]	_	_
+7-5	322-326	will	object[19]	giv[19]	_	_
+7-6	327-333	affect	object[19]	giv[19]	_	_
+7-7	334-338	your	object[19]|person|animal[21]	giv[19]|giv|new[21]	ana|coref	8-11|27-4[114_21]
+7-8	339-342	pet	object[19]|animal[21]	giv[19]|new[21]	_	_
+7-9	343-346	for	object[19]	giv[19]	_	_
+7-10	347-351	life	object[19]|abstract	giv[19]|new	ana	8-4
+7-11	352-353	.	_	_	_	_
+
+#Text=Do n't name it something too long or something that you do n't like .
+8-1	354-356	Do	_	_	_	_
+8-2	357-360	n't	_	_	_	_
+8-3	361-365	name	_	_	_	_
+8-4	366-368	it	abstract	giv	_	_
+8-5	369-378	something	person[24]|person[25]	new[24]|new[25]	ana|ana	9-4[0_24]|12-15[0_25]
+8-6	379-382	too	person[24]|person[25]	new[24]|new[25]	_	_
+8-7	383-387	long	person[24]|person[25]	new[24]|new[25]	_	_
+8-8	388-390	or	person[25]	new[25]	_	_
+8-9	391-400	something	person[25]|object[26]	new[25]|giv[26]	coref	10-8[39_26]
+8-10	401-405	that	person[25]|object[26]	new[25]|giv[26]	_	_
+8-11	406-409	you	person[25]|object[26]|person	new[25]|giv[26]|giv	ana	9-8
+8-12	410-412	do	person[25]|object[26]	new[25]|giv[26]	_	_
+8-13	413-416	n't	person[25]|object[26]	new[25]|giv[26]	_	_
+8-14	417-421	like	person[25]|object[26]	new[25]|giv[26]	_	_
+8-15	422-423	.	_	_	_	_
+
+#Text=Do n't name her Kitty just because your sister made you for revenge on not getting a family cat !
+9-1	424-426	Do	_	_	_	_
+9-2	427-430	n't	_	_	_	_
+9-3	431-435	name	_	_	_	_
+9-4	436-439	her	person|person[29]	giv|new[29]	_	_
+9-5	440-445	Kitty	person[29]	new[29]	_	_
+9-6	446-450	just	_	_	_	_
+9-7	451-458	because	_	_	_	_
+9-8	459-463	your	person|person[31]	giv|new[31]	ana|ana	9-11|10-22[0_31]
+9-9	464-470	sister	person[31]	new[31]	_	_
+9-10	471-475	made	_	_	_	_
+9-11	476-479	you	person	giv	ana	10-5
+9-12	480-483	for	_	_	_	_
+9-13	484-491	revenge	abstract[33]	new[33]	ana	10-1[0_33]
+9-14	492-494	on	abstract[33]	new[33]	_	_
+9-15	495-498	not	abstract[33]	new[33]	_	_
+9-16	499-506	getting	abstract[33]	new[33]	_	_
+9-17	507-508	a	abstract[33]|animal[35]	new[33]|new[35]	_	_
+9-18	509-515	family	abstract[33]|person|animal[35]	new[33]|new|new[35]	_	_
+9-19	516-519	cat	abstract[33]|animal[35]	new[33]|new[35]	_	_
+9-20	520-521	!	_	_	_	_
+
+#Text=It 's important that your dog has a nice name for tags and a word to respond to when he or she gets lost .
+10-1	522-524	It	abstract	giv	_	_
+10-2	525-527	's	_	_	_	_
+10-3	528-537	important	_	_	_	_
+10-4	538-542	that	_	_	_	_
+10-5	543-547	your	person|animal[38]	giv|giv[38]	ana|coref	11-5|11-5[47_38]
+10-6	548-551	dog	animal[38]	giv[38]	_	_
+10-7	552-555	has	_	_	_	_
+10-8	556-557	a	object[39]|abstract[40]	giv[39]|new[40]	coref|coref	22-3[92_39]|39-7[172_40]
+10-9	558-562	nice	object[39]|abstract[40]	giv[39]|new[40]	_	_
+10-10	563-567	name	object[39]|abstract[40]	giv[39]|new[40]	_	_
+10-11	568-571	for	object[39]|abstract[40]	giv[39]|new[40]	_	_
+10-12	572-576	tags	object[39]|abstract[40]|object	giv[39]|new[40]|new	_	_
+10-13	577-580	and	abstract[40]	new[40]	_	_
+10-14	581-582	a	abstract[40]|abstract[42]	new[40]|new[42]	_	_
+10-15	583-587	word	abstract[40]|abstract[42]	new[40]|new[42]	_	_
+10-16	588-590	to	abstract[40]|abstract[42]	new[40]|new[42]	_	_
+10-17	591-598	respond	abstract[40]|abstract[42]	new[40]|new[42]	_	_
+10-18	599-601	to	abstract[40]|abstract[42]	new[40]|new[42]	_	_
+10-19	602-606	when	_	_	_	_
+10-20	607-609	he	person	giv	_	_
+10-21	610-612	or	_	_	_	_
+10-22	613-616	she	person	giv	_	_
+10-23	617-621	gets	_	_	_	_
+10-24	622-626	lost	_	_	_	_
+10-25	627-628	.	_	_	_	_
+
+#Text=Designate an area for your dog to sleep .
+11-1	629-638	Designate	_	_	_	_
+11-2	639-641	an	place[45]	new[45]	_	_
+11-3	642-646	area	place[45]	new[45]	_	_
+11-4	647-650	for	place[45]	new[45]	_	_
+11-5	651-655	your	place[45]|person|animal[47]	new[45]|giv|giv[47]	coref|ana	13-6[0_47]|13-9
+11-6	656-659	dog	place[45]|animal[47]	new[45]|giv[47]	_	_
+11-7	660-662	to	place[45]	new[45]	_	_
+11-8	663-668	sleep	place[45]	new[45]	_	_
+11-9	669-670	.	_	_	_	_
+
+#Text=The first night must always be prepared with one simple question : Where do they sleep ?
+12-1	671-674	The	time[48]	new[48]	coref	28-18[0_48]
+12-2	675-680	first	time[48]	new[48]	_	_
+12-3	681-686	night	time[48]	new[48]	_	_
+12-4	687-691	must	_	_	_	_
+12-5	692-698	always	_	_	_	_
+12-6	699-701	be	_	_	_	_
+12-7	702-710	prepared	_	_	_	_
+12-8	711-715	with	_	_	_	_
+12-9	716-719	one	abstract[49]	new[49]	_	_
+12-10	720-726	simple	abstract[49]	new[49]	_	_
+12-11	727-735	question	abstract[49]	new[49]	_	_
+12-12	736-737	:	_	_	_	_
+12-13	738-743	Where	_	_	_	_
+12-14	744-746	do	_	_	_	_
+12-15	747-751	they	person	giv	ana	13-2
+12-16	752-757	sleep	_	_	_	_
+12-17	758-759	?	_	_	_	_
+
+#Text=Will they sleep in a dog bed in your room or in the garage ?
+13-1	760-764	Will	_	_	_	_
+13-2	765-769	they	person	giv	ana	15-20
+13-3	770-775	sleep	_	_	_	_
+13-4	776-778	in	_	_	_	_
+13-5	779-780	a	place[53]	new[53]	_	_
+13-6	781-784	dog	animal|place[53]	giv|new[53]	coref	20-3[81_0]
+13-7	785-788	bed	place[53]	new[53]	_	_
+13-8	789-791	in	place[53]	new[53]	_	_
+13-9	792-796	your	place[53]|person|place[55]	new[53]|giv|new[55]	ana	17-6
+13-10	797-801	room	place[53]|place[55]	new[53]|new[55]	_	_
+13-11	802-804	or	_	_	_	_
+13-12	805-807	in	_	_	_	_
+13-13	808-811	the	place[56]	new[56]	_	_
+13-14	812-818	garage	place[56]	new[56]	_	_
+13-15	819-820	?	_	_	_	_
+
+#Text=Or maybe the backyard ?
+14-1	821-823	Or	_	_	_	_
+14-2	824-829	maybe	event[57]	new[57]	ana	15-2[0_57]
+14-3	830-833	the	event[57]	new[57]	_	_
+14-4	834-842	backyard	event[57]	new[57]	_	_
+14-5	843-844	?	_	_	_	_
+
+#Text=Wherever it may be , make sure it 's warm during the winter and cool during the summer so they can sleep comfortably .
+15-1	845-853	Wherever	_	_	_	_
+15-2	854-856	it	event	giv	ana	15-8
+15-3	857-860	may	_	_	_	_
+15-4	861-863	be	_	_	_	_
+15-5	864-865	,	_	_	_	_
+15-6	866-870	make	_	_	_	_
+15-7	871-875	sure	_	_	_	_
+15-8	876-878	it	event	giv	ana	16-2
+15-9	879-881	's	_	_	_	_
+15-10	882-886	warm	_	_	_	_
+15-11	887-893	during	_	_	_	_
+15-12	894-897	the	time[60]	new[60]	_	_
+15-13	898-904	winter	time[60]	new[60]	_	_
+15-14	905-908	and	_	_	_	_
+15-15	909-913	cool	_	_	_	_
+15-16	914-920	during	_	_	_	_
+15-17	921-924	the	time[61]	new[61]	_	_
+15-18	925-931	summer	time[61]	new[61]	_	_
+15-19	932-934	so	_	_	_	_
+15-20	935-939	they	person	giv	_	_
+15-21	940-943	can	_	_	_	_
+15-22	944-949	sleep	_	_	_	_
+15-23	950-961	comfortably	_	_	_	_
+15-24	962-963	.	_	_	_	_
+
+#Text=Make it protected from possible dangers and the possibility of escaping .
+16-1	964-968	Make	_	_	_	_
+16-2	969-971	it	event	giv	coref	21-8[88_0]
+16-3	972-981	protected	_	_	_	_
+16-4	982-986	from	_	_	_	_
+16-5	987-995	possible	abstract[64]	new[64]	_	_
+16-6	996-1003	dangers	abstract[64]	new[64]	_	_
+16-7	1004-1007	and	_	_	_	_
+16-8	1008-1011	the	abstract[65]	new[65]	_	_
+16-9	1012-1023	possibility	abstract[65]	new[65]	_	_
+16-10	1024-1026	of	abstract[65]	new[65]	_	_
+16-11	1027-1035	escaping	abstract[65]	new[65]	_	_
+16-12	1036-1037	.	_	_	_	_
+
+#Text=Pick a dog food for your friendly friend !
+17-1	1038-1042	Pick	_	_	_	_
+17-2	1043-1044	a	substance[66]	new[66]	ana	18-6[0_66]
+17-3	1045-1048	dog	substance[66]	new[66]	_	_
+17-4	1049-1053	food	substance[66]	new[66]	_	_
+17-5	1054-1057	for	_	_	_	_
+17-6	1058-1062	your	person|person[68]	giv|new[68]	ana	20-3
+17-7	1063-1071	friendly	person[68]	new[68]	_	_
+17-8	1072-1078	friend	person[68]	new[68]	_	_
+17-9	1079-1080	!	_	_	_	_
+
+#Text=Make sure not to feed it chicken and leftovers as a daily meal .
+18-1	1081-1085	Make	_	_	_	_
+18-2	1086-1090	sure	_	_	_	_
+18-3	1091-1094	not	_	_	_	_
+18-4	1095-1097	to	_	_	_	_
+18-5	1098-1102	feed	_	_	_	_
+18-6	1103-1105	it	substance	giv	_	_
+18-7	1106-1113	chicken	animal	new	_	_
+18-8	1114-1117	and	_	_	_	_
+18-9	1118-1127	leftovers	organization	new	ana	19-1
+18-10	1128-1130	as	_	_	_	_
+18-11	1131-1132	a	object[72]	new[72]	_	_
+18-12	1133-1138	daily	object[72]	new[72]	_	_
+18-13	1139-1143	meal	object[72]	new[72]	_	_
+18-14	1144-1145	.	_	_	_	_
+
+#Text=They are unhealthy and can lead to obesity or diabetes , and we do n't want unnecessary vet bills to pile up .
+19-1	1146-1150	They	organization	giv	_	_
+19-2	1151-1154	are	_	_	_	_
+19-3	1155-1164	unhealthy	_	_	_	_
+19-4	1165-1168	and	_	_	_	_
+19-5	1169-1172	can	_	_	_	_
+19-6	1173-1177	lead	_	_	_	_
+19-7	1178-1180	to	_	_	_	_
+19-8	1181-1188	obesity	abstract|person[75]	new|new[75]	ana	22-1[0_75]
+19-9	1189-1191	or	person[75]	new[75]	_	_
+19-10	1192-1200	diabetes	person[75]|abstract	new[75]|new	_	_
+19-11	1201-1202	,	_	_	_	_
+19-12	1203-1206	and	_	_	_	_
+19-13	1207-1209	we	person	acc	_	_
+19-14	1210-1212	do	_	_	_	_
+19-15	1213-1216	n't	_	_	_	_
+19-16	1217-1221	want	_	_	_	_
+19-17	1222-1233	unnecessary	object[79]	new[79]	_	_
+19-18	1234-1237	vet	person|object[79]	new|new[79]	_	_
+19-19	1238-1243	bills	object[79]	new[79]	_	_
+19-20	1244-1246	to	_	_	_	_
+19-21	1247-1251	pile	_	_	_	_
+19-22	1252-1254	up	_	_	_	_
+19-23	1255-1256	.	_	_	_	_
+
+#Text=Make sure your dog has a source of water available at all time .
+20-1	1257-1261	Make	_	_	_	_
+20-2	1262-1266	sure	_	_	_	_
+20-3	1267-1271	your	person|animal[81]	giv|giv[81]	ana|coref	21-8|25-17[102_81]
+20-4	1272-1275	dog	animal[81]	giv[81]	_	_
+20-5	1276-1279	has	_	_	_	_
+20-6	1280-1281	a	object[82]	new[82]	_	_
+20-7	1282-1288	source	object[82]	new[82]	_	_
+20-8	1289-1291	of	object[82]	new[82]	_	_
+20-9	1292-1297	water	object[82]|substance[83]	new[82]|new[83]	coref	21-3[0_83]
+20-10	1298-1307	available	object[82]|substance[83]	new[82]|new[83]	_	_
+20-11	1308-1310	at	_	_	_	_
+20-12	1311-1314	all	time[84]	new[84]	_	_
+20-13	1315-1319	time	time[84]	new[84]	_	_
+20-14	1320-1321	.	_	_	_	_
+
+#Text=Put two water bowls available : In your backyard and in your house .
+21-1	1322-1325	Put	_	_	_	_
+21-2	1326-1329	two	object[86]	new[86]	_	_
+21-3	1330-1335	water	substance|object[86]	giv|new[86]	coref	24-7[96_0]
+21-4	1336-1341	bowls	object[86]	new[86]	_	_
+21-5	1342-1351	available	object[86]	new[86]	_	_
+21-6	1352-1353	:	_	_	_	_
+21-7	1354-1356	In	_	_	_	_
+21-8	1357-1361	your	person|event[88]	giv|giv[88]	ana	21-12
+21-9	1362-1370	backyard	event[88]	giv[88]	_	_
+21-10	1371-1374	and	_	_	_	_
+21-11	1375-1377	in	_	_	_	_
+21-12	1378-1382	your	person|place[90]	giv|new[90]	ana	25-17
+21-13	1383-1388	house	place[90]	new[90]	_	_
+21-14	1389-1390	.	_	_	_	_
+
+#Text=They need something to drink out of .
+22-1	1391-1395	They	person	giv	ana	36-2
+22-2	1396-1400	need	_	_	_	_
+22-3	1401-1410	something	object[92]	giv[92]	_	_
+22-4	1411-1413	to	object[92]	giv[92]	_	_
+22-5	1414-1419	drink	object[92]	giv[92]	_	_
+22-6	1420-1423	out	object[92]	giv[92]	_	_
+22-7	1424-1426	of	object[92]	giv[92]	_	_
+22-8	1427-1428	.	_	_	_	_
+
+#Text=Pick a specific spot to place the bowl .
+23-1	1429-1433	Pick	_	_	_	_
+23-2	1434-1435	a	place[93]	new[93]	coref	25-7[98_93]
+23-3	1436-1444	specific	place[93]	new[93]	_	_
+23-4	1445-1449	spot	place[93]	new[93]	_	_
+23-5	1450-1452	to	place[93]	new[93]	_	_
+23-6	1453-1458	place	place[93]	new[93]	_	_
+23-7	1459-1462	the	place[93]|object[94]	new[93]|new[94]	ana	24-3[0_94]
+23-8	1463-1467	bowl	place[93]|object[94]	new[93]|new[94]	_	_
+23-9	1468-1469	.	_	_	_	_
+
+#Text=Make sure it is refilled with fresh , cool water daily .
+24-1	1470-1474	Make	_	_	_	_
+24-2	1475-1479	sure	_	_	_	_
+24-3	1480-1482	it	object	giv	coref	25-4[97_0]
+24-4	1483-1485	is	_	_	_	_
+24-5	1486-1494	refilled	_	_	_	_
+24-6	1495-1499	with	_	_	_	_
+24-7	1500-1505	fresh	substance[96]	giv[96]	ana	26-15[0_96]
+24-8	1506-1507	,	substance[96]	giv[96]	_	_
+24-9	1508-1512	cool	substance[96]	giv[96]	_	_
+24-10	1513-1518	water	substance[96]	giv[96]	_	_
+24-11	1519-1524	daily	_	_	_	_
+24-12	1525-1526	.	_	_	_	_
+
+#Text=Do n't move the bowl to a new spot everyday , that can cause confusion to your dog .
+25-1	1527-1529	Do	_	_	_	_
+25-2	1530-1533	n't	_	_	_	_
+25-3	1534-1538	move	_	_	_	_
+25-4	1539-1542	the	object[97]	giv[97]	ana	25-12[0_97]
+25-5	1543-1547	bowl	object[97]	giv[97]	_	_
+25-6	1548-1550	to	_	_	_	_
+25-7	1551-1552	a	place[98]	giv[98]	coref	26-9[106_98]
+25-8	1553-1556	new	place[98]	giv[98]	_	_
+25-9	1557-1561	spot	place[98]	giv[98]	_	_
+25-10	1562-1570	everyday	_	_	_	_
+25-11	1571-1572	,	_	_	_	_
+25-12	1573-1577	that	object	giv	coref	26-5[105_0]
+25-13	1578-1581	can	_	_	_	_
+25-14	1582-1587	cause	_	_	_	_
+25-15	1588-1597	confusion	abstract	new	_	_
+25-16	1598-1600	to	_	_	_	_
+25-17	1601-1605	your	person|animal[102]	giv|giv[102]	ana|coref	26-2|26-2[104_102]
+25-18	1606-1609	dog	animal[102]	giv[102]	_	_
+25-19	1610-1611	.	_	_	_	_
+
+#Text=If your dog knows the bowl is in one spot , he 'll know it 's there for him when he needs it .
+26-1	1612-1614	If	_	_	_	_
+26-2	1615-1619	your	person|animal[104]	giv|giv[104]	ana|ana	26-12[0_104]|27-4
+26-3	1620-1623	dog	animal[104]	giv[104]	_	_
+26-4	1624-1629	knows	_	_	_	_
+26-5	1630-1633	the	object[105]	giv[105]	_	_
+26-6	1634-1638	bowl	object[105]	giv[105]	_	_
+26-7	1639-1641	is	_	_	_	_
+26-8	1642-1644	in	_	_	_	_
+26-9	1645-1648	one	place[106]	giv[106]	_	_
+26-10	1649-1653	spot	place[106]	giv[106]	_	_
+26-11	1654-1655	,	_	_	_	_
+26-12	1656-1658	he	animal	giv	ana	26-19
+26-13	1659-1662	'll	_	_	_	_
+26-14	1663-1667	know	_	_	_	_
+26-15	1668-1670	it	substance	giv	ana	26-23
+26-16	1671-1673	's	_	_	_	_
+26-17	1674-1679	there	_	_	_	_
+26-18	1680-1683	for	_	_	_	_
+26-19	1684-1687	him	animal	giv	ana	26-21
+26-20	1688-1692	when	_	_	_	_
+26-21	1693-1695	he	animal	giv	coref	29-10[128_0]
+26-22	1696-1701	needs	_	_	_	_
+26-23	1702-1704	it	substance	giv	_	_
+26-24	1705-1706	.	_	_	_	_
+
+#Text=Provide playtime for your pet .
+27-1	1707-1714	Provide	_	_	_	_
+27-2	1715-1723	playtime	event	new	coref	28-11
+27-3	1724-1727	for	_	_	_	_
+27-4	1728-1732	your	person|animal[114]	giv|giv[114]	ana|coref	28-3|37-4[0_114]
+27-5	1733-1736	pet	animal[114]	giv[114]	_	_
+27-6	1737-1738	.	_	_	_	_
+
+#Text=Each day you should designate at least one hour of playtime , let it be day or night , rain or shine .
+28-1	1739-1743	Each	time[115]	new[115]	_	_
+28-2	1744-1747	day	time[115]	new[115]	_	_
+28-3	1748-1751	you	person	giv	ana	29-10
+28-4	1752-1758	should	_	_	_	_
+28-5	1759-1768	designate	_	_	_	_
+28-6	1769-1771	at	_	_	_	_
+28-7	1772-1777	least	time[117]	new[117]	ana	28-14[0_117]
+28-8	1778-1781	one	time[117]	new[117]	_	_
+28-9	1782-1786	hour	time[117]	new[117]	_	_
+28-10	1787-1789	of	time[117]	new[117]	_	_
+28-11	1790-1798	playtime	time[117]|event	new[117]|giv	coref	33-3
+28-12	1799-1800	,	_	_	_	_
+28-13	1801-1804	let	_	_	_	_
+28-14	1805-1807	it	time	giv	coref	28-16
+28-15	1808-1810	be	_	_	_	_
+28-16	1811-1814	day	time|time[121]	giv|giv[121]	coref|coref	28-16[121_0]|33-10[148_121]
+28-17	1815-1817	or	time[121]	giv[121]	_	_
+28-18	1818-1823	night	time[121]|time	giv[121]|giv	_	_
+28-19	1824-1825	,	time[121]	giv[121]	_	_
+28-20	1826-1830	rain	time[121]|event	giv[121]|new	_	_
+28-21	1831-1833	or	time[121]	giv[121]	_	_
+28-22	1834-1839	shine	time[121]	giv[121]	_	_
+28-23	1840-1841	.	_	_	_	_
+
+#Text=Exercise can mean many things considering the size of your dog .
+29-1	1842-1850	Exercise	abstract	new	_	_
+29-2	1851-1854	can	_	_	_	_
+29-3	1855-1859	mean	_	_	_	_
+29-4	1860-1864	many	abstract[125]	new[125]	_	_
+29-5	1865-1871	things	abstract[125]	new[125]	_	_
+29-6	1872-1883	considering	abstract[125]	new[125]	_	_
+29-7	1884-1887	the	abstract[125]|abstract[126]	new[125]|new[126]	_	_
+29-8	1888-1892	size	abstract[125]|abstract[126]	new[125]|new[126]	_	_
+29-9	1893-1895	of	abstract[125]|abstract[126]	new[125]|new[126]	_	_
+29-10	1896-1900	your	abstract[125]|abstract[126]|person|animal[128]	new[125]|new[126]|giv|giv[128]	coref|ana	30-1[129_128]|33-5
+29-11	1901-1904	dog	abstract[125]|abstract[126]|animal[128]	new[125]|new[126]|giv[128]	_	_
+29-12	1905-1906	.	_	_	_	_
+
+#Text=A medium sized dog could do just fine with a 20 minute walk and some throw toys .
+30-1	1907-1908	A	animal[129]	giv[129]	coref	31-1[134_129]
+30-2	1909-1915	medium	animal[129]	giv[129]	_	_
+30-3	1916-1921	sized	animal[129]	giv[129]	_	_
+30-4	1922-1925	dog	animal[129]	giv[129]	_	_
+30-5	1926-1931	could	_	_	_	_
+30-6	1932-1934	do	_	_	_	_
+30-7	1935-1939	just	_	_	_	_
+30-8	1940-1944	fine	_	_	_	_
+30-9	1945-1949	with	_	_	_	_
+30-10	1950-1951	a	event[131]	new[131]	coref	31-15[138_131]
+30-11	1952-1954	20	time[130]|event[131]	new[130]|new[131]	_	_
+30-12	1955-1961	minute	time[130]|event[131]	new[130]|new[131]	_	_
+30-13	1962-1966	walk	event[131]	new[131]	_	_
+30-14	1967-1970	and	_	_	_	_
+30-15	1971-1975	some	object[133]	new[133]	coref	32-17[144_133]
+30-16	1976-1981	throw	event|object[133]	new|new[133]	_	_
+30-17	1982-1986	toys	object[133]	new[133]	_	_
+30-18	1987-1988	.	_	_	_	_
+
+#Text=A small dog could be happy with a 30 minute game of fetch and a short walk .
+31-1	1989-1990	A	animal[134]	giv[134]	_	_
+31-2	1991-1996	small	animal[134]	giv[134]	_	_
+31-3	1997-2000	dog	animal[134]	giv[134]	_	_
+31-4	2001-2006	could	_	_	_	_
+31-5	2007-2009	be	_	_	_	_
+31-6	2010-2015	happy	_	_	_	_
+31-7	2016-2020	with	_	_	_	_
+31-8	2021-2022	a	event[136]	new[136]	_	_
+31-9	2023-2025	30	time[135]|event[136]	new[135]|new[136]	_	_
+31-10	2026-2032	minute	time[135]|event[136]	new[135]|new[136]	_	_
+31-11	2033-2037	game	event[136]	new[136]	_	_
+31-12	2038-2040	of	event[136]	new[136]	_	_
+31-13	2041-2046	fetch	event[136]|abstract	new[136]|new	coref	32-14
+31-14	2047-2050	and	_	_	_	_
+31-15	2051-2052	a	event[138]	giv[138]	_	_
+31-16	2053-2058	short	event[138]	giv[138]	_	_
+31-17	2059-2063	walk	event[138]	giv[138]	_	_
+31-18	2064-2065	.	_	_	_	_
+
+#Text=A large dog will probably need a long walk , a game of fetch , and some chew toys .
+32-1	2066-2067	A	animal[139]	new[139]	coref	33-5[147_139]
+32-2	2068-2073	large	animal[139]	new[139]	_	_
+32-3	2074-2077	dog	animal[139]	new[139]	_	_
+32-4	2078-2082	will	_	_	_	_
+32-5	2083-2091	probably	_	_	_	_
+32-6	2092-2096	need	_	_	_	_
+32-7	2097-2098	a	event[140]	new[140]	_	_
+32-8	2099-2103	long	event[140]	new[140]	_	_
+32-9	2104-2108	walk	event[140]	new[140]	_	_
+32-10	2109-2110	,	_	_	_	_
+32-11	2111-2112	a	event[141]	new[141]	_	_
+32-12	2113-2117	game	event[141]	new[141]	_	_
+32-13	2118-2120	of	event[141]	new[141]	_	_
+32-14	2121-2126	fetch	event[141]|abstract	new[141]|giv	_	_
+32-15	2127-2128	,	_	_	_	_
+32-16	2129-2132	and	_	_	_	_
+32-17	2133-2137	some	object[144]	giv[144]	_	_
+32-18	2138-2142	chew	person|object[144]	new|giv[144]	_	_
+32-19	2143-2147	toys	object[144]	giv[144]	_	_
+32-20	2148-2149	.	_	_	_	_
+
+#Text=Please provide playtime for your dog at least once a day .
+33-1	2150-2156	Please	_	_	_	_
+33-2	2157-2164	provide	_	_	_	_
+33-3	2165-2173	playtime	event	giv	ana	35-1
+33-4	2174-2177	for	_	_	_	_
+33-5	2178-2182	your	person|animal[147]	giv|giv[147]	ana|coref	35-4|35-4[151_147]
+33-6	2183-2186	dog	animal[147]	giv[147]	_	_
+33-7	2187-2189	at	_	_	_	_
+33-8	2190-2195	least	_	_	_	_
+33-9	2196-2200	once	_	_	_	_
+33-10	2201-2202	a	time[148]	giv[148]	_	_
+33-11	2203-2206	day	time[148]	giv[148]	_	_
+33-12	2207-2208	.	_	_	_	_
+
+#Text=Do n't forget or be too lazy .
+34-1	2209-2211	Do	_	_	_	_
+34-2	2212-2215	n't	_	_	_	_
+34-3	2216-2222	forget	_	_	_	_
+34-4	2223-2225	or	_	_	_	_
+34-5	2226-2228	be	_	_	_	_
+34-6	2229-2232	too	_	_	_	_
+34-7	2233-2237	lazy	_	_	_	_
+34-8	2238-2239	.	_	_	_	_
+
+#Text=It only makes your dog unhappy .
+35-1	2240-2242	It	event	giv	_	_
+35-2	2243-2247	only	_	_	_	_
+35-3	2248-2253	makes	_	_	_	_
+35-4	2254-2258	your	person|animal[151]	giv|giv[151]	ana|coref	37-2|37-16[163_151]
+35-5	2259-2262	dog	animal[151]	giv[151]	_	_
+35-6	2263-2270	unhappy	_	_	_	_
+35-7	2271-2272	.	_	_	_	_
+
+#Text=Give them a collar and tags .
+36-1	2273-2277	Give	_	_	_	_
+36-2	2278-2282	them	person	giv	_	_
+36-3	2283-2284	a	object[153]|object[154]	new[153]|new[154]	coref|coref	38-4[165_153]|38-4[166_154]
+36-4	2285-2291	collar	object[153]|object[154]	new[153]|new[154]	_	_
+36-5	2292-2295	and	object[154]	new[154]	_	_
+36-6	2296-2300	tags	object[154]|abstract	new[154]|new	coref	37-13[161_0]
+36-7	2301-2302	.	_	_	_	_
+
+#Text=At your local pet store there should be a machine that provides pet tags for your dog .
+37-1	2303-2305	At	_	_	_	_
+37-2	2306-2310	your	person|place[158]	giv|new[158]	ana	37-16
+37-3	2311-2316	local	place[158]	new[158]	_	_
+37-4	2317-2320	pet	animal|place[158]	giv|new[158]	coref	37-13
+37-5	2321-2326	store	place[158]	new[158]	_	_
+37-6	2327-2332	there	_	_	_	_
+37-7	2333-2339	should	_	_	_	_
+37-8	2340-2342	be	_	_	_	_
+37-9	2343-2344	a	object[159]	new[159]	_	_
+37-10	2345-2352	machine	object[159]	new[159]	_	_
+37-11	2353-2357	that	object[159]	new[159]	_	_
+37-12	2358-2366	provides	object[159]	new[159]	_	_
+37-13	2367-2370	pet	object[159]|animal|abstract[161]	new[159]|giv|giv[161]	coref	38-7[167_161]
+37-14	2371-2375	tags	object[159]|abstract[161]	new[159]|giv[161]	_	_
+37-15	2376-2379	for	object[159]	new[159]	_	_
+37-16	2380-2384	your	object[159]|person|animal[163]	new[159]|giv|giv[163]	coref|ana	39-8[170_163]|40-2
+37-17	2385-2388	dog	object[159]|animal[163]	new[159]|giv[163]	_	_
+37-18	2389-2390	.	_	_	_	_
+
+#Text=All dogs need a collar and tags to go on it .
+38-1	2391-2394	All	person[164]	new[164]	coref	42-1[0_164]
+38-2	2395-2399	dogs	person[164]	new[164]	_	_
+38-3	2400-2404	need	_	_	_	_
+38-4	2405-2406	a	object[165]|object[166]	giv[165]|giv[166]	ana	38-11[0_165]
+38-5	2407-2413	collar	object[165]|object[166]	giv[165]|giv[166]	_	_
+38-6	2414-2417	and	object[166]	giv[166]	_	_
+38-7	2418-2422	tags	object[166]|abstract[167]	giv[166]|giv[167]	coref	42-14[195_167]
+38-8	2423-2425	to	object[166]|abstract[167]	giv[166]|giv[167]	_	_
+38-9	2426-2428	go	object[166]|abstract[167]	giv[166]|giv[167]	_	_
+38-10	2429-2431	on	object[166]|abstract[167]	giv[166]|giv[167]	_	_
+38-11	2432-2434	it	object[166]|abstract[167]|object	giv[166]|giv[167]|giv	_	_
+38-12	2435-2436	.	_	_	_	_
+
+#Text=All the tag should say is the dog 's name and an email or phone number to call if they are lost .
+39-1	2437-2440	All	_	_	_	_
+39-2	2441-2444	the	abstract[169]	new[169]	_	_
+39-3	2445-2448	tag	abstract[169]	new[169]	_	_
+39-4	2449-2455	should	_	_	_	_
+39-5	2456-2459	say	_	_	_	_
+39-6	2460-2462	is	_	_	_	_
+39-7	2463-2466	the	abstract[171]|abstract[172]	new[171]|giv[172]	_	_
+39-8	2467-2470	dog	animal[170]|abstract[171]|abstract[172]	giv[170]|new[171]|giv[172]	coref	41-4[183_170]
+39-9	2471-2473	's	animal[170]|abstract[171]|abstract[172]	giv[170]|new[171]|giv[172]	_	_
+39-10	2474-2478	name	abstract[171]|abstract[172]	new[171]|giv[172]	_	_
+39-11	2479-2482	and	abstract[172]	giv[172]	_	_
+39-12	2483-2485	an	abstract[172]|abstract[173]|person[174]	giv[172]|new[173]|new[174]	ana	39-20[0_174]
+39-13	2486-2491	email	abstract[172]|abstract[173]|person[174]	giv[172]|new[173]|new[174]	_	_
+39-14	2492-2494	or	abstract[172]|person[174]	giv[172]|new[174]	_	_
+39-15	2495-2500	phone	abstract[172]|person[174]|object|abstract[176]	giv[172]|new[174]|new|new[176]	_	_
+39-16	2501-2507	number	abstract[172]|person[174]|abstract[176]	giv[172]|new[174]|new[176]	_	_
+39-17	2508-2510	to	abstract[172]|person[174]|abstract[176]	giv[172]|new[174]|new[176]	_	_
+39-18	2511-2515	call	abstract[172]|person[174]|abstract[176]	giv[172]|new[174]|new[176]	_	_
+39-19	2516-2518	if	_	_	_	_
+39-20	2519-2523	they	person	giv	ana	41-23
+39-21	2524-2527	are	_	_	_	_
+39-22	2528-2532	lost	_	_	_	_
+39-23	2533-2534	.	_	_	_	_
+
+#Text=If you think this step is not important , do your research !
+40-1	2535-2537	If	_	_	_	_
+40-2	2538-2541	you	person	giv	ana	40-11
+40-3	2542-2547	think	_	_	_	_
+40-4	2548-2552	this	abstract[179]	new[179]	_	_
+40-5	2553-2557	step	abstract[179]	new[179]	_	_
+40-6	2558-2560	is	_	_	_	_
+40-7	2561-2564	not	_	_	_	_
+40-8	2565-2574	important	_	_	_	_
+40-9	2575-2576	,	_	_	_	_
+40-10	2577-2579	do	_	_	_	_
+40-11	2580-2584	your	person|abstract[181]	giv|new[181]	ana	41-4
+40-12	2585-2593	research	abstract[181]	new[181]	_	_
+40-13	2594-2595	!	_	_	_	_
+
+#Text=As smart as your dog might seem to be , curiosity can overcome the voice in your dog 's head that tells them " No , do n't do it " .
+41-1	2596-2598	As	_	_	_	_
+41-2	2599-2604	smart	_	_	_	_
+41-3	2605-2607	as	_	_	_	_
+41-4	2608-2612	your	person|animal[183]	giv|giv[183]	ana|coref	41-17|41-17[187_183]
+41-5	2613-2616	dog	animal[183]	giv[183]	_	_
+41-6	2617-2622	might	_	_	_	_
+41-7	2623-2627	seem	_	_	_	_
+41-8	2628-2630	to	_	_	_	_
+41-9	2631-2633	be	_	_	_	_
+41-10	2634-2635	,	_	_	_	_
+41-11	2636-2645	curiosity	abstract	new	_	_
+41-12	2646-2649	can	_	_	_	_
+41-13	2650-2658	overcome	_	_	_	_
+41-14	2659-2662	the	abstract[185]	new[185]	ana	41-30[0_185]
+41-15	2663-2668	voice	abstract[185]	new[185]	_	_
+41-16	2669-2671	in	abstract[185]	new[185]	_	_
+41-17	2672-2676	your	abstract[185]|person|animal[187]|object[188]	new[185]|giv|giv[187]|new[188]	ana|coref	43-1|52-1[231_187]
+41-18	2677-2680	dog	abstract[185]|animal[187]|object[188]	new[185]|giv[187]|new[188]	_	_
+41-19	2681-2683	's	abstract[185]|animal[187]|object[188]	new[185]|giv[187]|new[188]	_	_
+41-20	2684-2688	head	abstract[185]|object[188]	new[185]|new[188]	_	_
+41-21	2689-2693	that	abstract[185]	new[185]	_	_
+41-22	2694-2699	tells	abstract[185]	new[185]	_	_
+41-23	2700-2704	them	abstract[185]|person	new[185]|giv	ana	42-9
+41-24	2705-2706	"	abstract[185]	new[185]	_	_
+41-25	2707-2709	No	abstract[185]	new[185]	_	_
+41-26	2710-2711	,	abstract[185]	new[185]	_	_
+41-27	2712-2714	do	abstract[185]	new[185]	_	_
+41-28	2715-2718	n't	abstract[185]	new[185]	_	_
+41-29	2719-2721	do	abstract[185]	new[185]	_	_
+41-30	2722-2724	it	abstract[185]|abstract	new[185]|giv	_	_
+41-31	2725-2726	"	abstract[185]	new[185]	_	_
+41-32	2727-2728	.	_	_	_	_
+
+#Text=Dogs will get loose at some point in their life , and with no tags there is no one to figure out who their owner is .
+42-1	2729-2733	Dogs	person	giv	coref	43-5[200_0]
+42-2	2734-2738	will	_	_	_	_
+42-3	2739-2742	get	_	_	_	_
+42-4	2743-2748	loose	_	_	_	_
+42-5	2749-2751	at	_	_	_	_
+42-6	2752-2756	some	time[192]	new[192]	_	_
+42-7	2757-2762	point	time[192]	new[192]	_	_
+42-8	2763-2765	in	time[192]	new[192]	_	_
+42-9	2766-2771	their	time[192]|person|abstract[194]	new[192]|giv|new[194]	ana|coref	42-24|56-7[250_194]
+42-10	2772-2776	life	time[192]|abstract[194]	new[192]|new[194]	_	_
+42-11	2777-2778	,	_	_	_	_
+42-12	2779-2782	and	_	_	_	_
+42-13	2783-2787	with	_	_	_	_
+42-14	2788-2790	no	abstract[195]	giv[195]	coref	43-14[0_195]
+42-15	2791-2795	tags	abstract[195]	giv[195]	_	_
+42-16	2796-2801	there	_	_	_	_
+42-17	2802-2804	is	_	_	_	_
+42-18	2805-2807	no	_	_	_	_
+42-19	2808-2811	one	_	_	_	_
+42-20	2812-2814	to	_	_	_	_
+42-21	2815-2821	figure	_	_	_	_
+42-22	2822-2825	out	_	_	_	_
+42-23	2826-2829	who	_	_	_	_
+42-24	2830-2835	their	person|person[197]	giv|new[197]	ana	44-21
+42-25	2836-2841	owner	person[197]	new[197]	_	_
+42-26	2842-2844	is	_	_	_	_
+42-27	2845-2846	.	_	_	_	_
+
+#Text=You will be saving your dogs physical and mental wellness by getting them tags .
+43-1	2847-2850	You	person	giv	ana	43-5
+43-2	2851-2855	will	_	_	_	_
+43-3	2856-2858	be	_	_	_	_
+43-4	2859-2865	saving	_	_	_	_
+43-5	2866-2870	your	person|person[200]|abstract[201]	giv|giv[200]|new[201]	ana|ana|ana	43-13[0_200]|44-13[0_201]|47-2
+43-6	2871-2875	dogs	person[200]|abstract[201]	giv[200]|new[201]	_	_
+43-7	2876-2884	physical	abstract[201]	new[201]	_	_
+43-8	2885-2888	and	abstract[201]	new[201]	_	_
+43-9	2889-2895	mental	abstract[201]	new[201]	_	_
+43-10	2896-2904	wellness	abstract[201]	new[201]	_	_
+43-11	2905-2907	by	_	_	_	_
+43-12	2908-2915	getting	_	_	_	_
+43-13	2916-2920	them	person	giv	coref	53-1
+43-14	2921-2925	tags	abstract	giv	coref	45-2[210_0]
+43-15	2926-2927	.	_	_	_	_
+
+#Text=Microchips cannot be seen and plenty of people do n't look for it or get the stray scanned for one- they only look for what 's visible .
+44-1	2928-2938	Microchips	object	new	_	_
+44-2	2939-2945	cannot	_	_	_	_
+44-3	2946-2948	be	_	_	_	_
+44-4	2949-2953	seen	_	_	_	_
+44-5	2954-2957	and	_	_	_	_
+44-6	2958-2964	plenty	place[205]	new[205]	_	_
+44-7	2965-2967	of	place[205]	new[205]	_	_
+44-8	2968-2974	people	place[205]|abstract	new[205]|new	_	_
+44-9	2975-2977	do	_	_	_	_
+44-10	2978-2981	n't	_	_	_	_
+44-11	2982-2986	look	_	_	_	_
+44-12	2987-2990	for	_	_	_	_
+44-13	2991-2993	it	abstract	giv	_	_
+44-14	2994-2996	or	_	_	_	_
+44-15	2997-3000	get	_	_	_	_
+44-16	3001-3004	the	object[208]	new[208]	_	_
+44-17	3005-3010	stray	object[208]	new[208]	_	_
+44-18	3011-3018	scanned	_	_	_	_
+44-19	3019-3022	for	_	_	_	_
+44-20	3023-3027	one-	_	_	_	_
+44-21	3028-3032	they	person	giv	ana	49-2
+44-22	3033-3037	only	_	_	_	_
+44-23	3038-3042	look	_	_	_	_
+44-24	3043-3046	for	_	_	_	_
+44-25	3047-3051	what	_	_	_	_
+44-26	3052-3054	's	_	_	_	_
+44-27	3055-3062	visible	_	_	_	_
+44-28	3063-3064	.	_	_	_	_
+
+#Text=So the tags are extremely important and should be taken care of right away .
+45-1	3065-3067	So	_	_	_	_
+45-2	3068-3071	the	abstract[210]	giv[210]	_	_
+45-3	3072-3076	tags	abstract[210]	giv[210]	_	_
+45-4	3077-3080	are	_	_	_	_
+45-5	3081-3090	extremely	_	_	_	_
+45-6	3091-3100	important	_	_	_	_
+45-7	3101-3104	and	_	_	_	_
+45-8	3105-3111	should	_	_	_	_
+45-9	3112-3114	be	_	_	_	_
+45-10	3115-3120	taken	_	_	_	_
+45-11	3121-3125	care	_	_	_	_
+45-12	3126-3128	of	_	_	_	_
+45-13	3129-3134	right	_	_	_	_
+45-14	3135-3139	away	_	_	_	_
+45-15	3140-3141	.	_	_	_	_
+
+#Text=Vet checkups .
+46-1	3142-3145	Vet	object|event[212]	new|new[212]	_	_
+46-2	3146-3154	checkups	event[212]	new[212]	_	_
+46-3	3155-3156	.	_	_	_	_
+
+#Text=If you ca n't afford a monthly checkup , at least do it every so often .
+47-1	3157-3159	If	_	_	_	_
+47-2	3160-3163	you	person	giv	ana	48-10
+47-3	3164-3166	ca	_	_	_	_
+47-4	3167-3170	n't	_	_	_	_
+47-5	3171-3177	afford	_	_	_	_
+47-6	3178-3179	a	event[214]	new[214]	ana	47-13[0_214]
+47-7	3180-3187	monthly	event[214]	new[214]	_	_
+47-8	3188-3195	checkup	event[214]	new[214]	_	_
+47-9	3196-3197	,	_	_	_	_
+47-10	3198-3200	at	_	_	_	_
+47-11	3201-3206	least	_	_	_	_
+47-12	3207-3209	do	_	_	_	_
+47-13	3210-3212	it	event	giv	ana	48-3
+47-14	3213-3218	every	_	_	_	_
+47-15	3219-3221	so	_	_	_	_
+47-16	3222-3227	often	_	_	_	_
+47-17	3228-3229	.	_	_	_	_
+
+#Text=Even if it 's just once , make sure you can do it .
+48-1	3230-3234	Even	_	_	_	_
+48-2	3235-3237	if	_	_	_	_
+48-3	3238-3240	it	event	giv	ana	48-13
+48-4	3241-3243	's	_	_	_	_
+48-5	3244-3248	just	_	_	_	_
+48-6	3249-3253	once	_	_	_	_
+48-7	3254-3255	,	_	_	_	_
+48-8	3256-3260	make	_	_	_	_
+48-9	3261-3265	sure	_	_	_	_
+48-10	3266-3269	you	person	giv	ana	50-2
+48-11	3270-3273	can	_	_	_	_
+48-12	3274-3276	do	_	_	_	_
+48-13	3277-3279	it	event	giv	_	_
+48-14	3280-3281	.	_	_	_	_
+
+#Text=Give them their shots and make sure they are healthy .
+49-1	3282-3286	Give	_	_	_	_
+49-2	3287-3291	them	person	giv	ana	49-3
+49-3	3292-3297	their	person|object[221]	giv|new[221]	ana	49-8
+49-4	3298-3303	shots	object[221]	new[221]	_	_
+49-5	3304-3307	and	_	_	_	_
+49-6	3308-3312	make	_	_	_	_
+49-7	3313-3317	sure	_	_	_	_
+49-8	3318-3322	they	person	giv	_	_
+49-9	3323-3326	are	_	_	_	_
+49-10	3327-3334	healthy	_	_	_	_
+49-11	3335-3336	.	_	_	_	_
+
+#Text=If you see any signs of illness , report to a vet immediately to make sure your furry friend is not in pain !
+50-1	3337-3339	If	_	_	_	_
+50-2	3340-3343	you	person	giv	ana	50-17
+50-3	3344-3347	see	_	_	_	_
+50-4	3348-3351	any	abstract[224]	new[224]	_	_
+50-5	3352-3357	signs	abstract[224]	new[224]	_	_
+50-6	3358-3360	of	abstract[224]	new[224]	_	_
+50-7	3361-3368	illness	abstract[224]|abstract	new[224]|new	_	_
+50-8	3369-3370	,	_	_	_	_
+50-9	3371-3377	report	_	_	_	_
+50-10	3378-3380	to	_	_	_	_
+50-11	3381-3382	a	person[226]	new[226]	_	_
+50-12	3383-3386	vet	person[226]	new[226]	_	_
+50-13	3387-3398	immediately	person[226]	new[226]	_	_
+50-14	3399-3401	to	_	_	_	_
+50-15	3402-3406	make	_	_	_	_
+50-16	3407-3411	sure	_	_	_	_
+50-17	3412-3416	your	person|person[228]	giv|new[228]	ana|coref	52-10|56-16[256_228]
+50-18	3417-3422	furry	person[228]	new[228]	_	_
+50-19	3423-3429	friend	person[228]	new[228]	_	_
+50-20	3430-3432	is	_	_	_	_
+50-21	3433-3436	not	_	_	_	_
+50-22	3437-3439	in	_	_	_	_
+50-23	3440-3444	pain	abstract	new	_	_
+50-24	3445-3446	!	_	_	_	_
+
+#Text=Warnings
+51-1	3447-3455	Warnings	abstract	new	ana	52-12
+
+#Text=No dog is born aggressive but depended on how you treat them they can become angry and possibly bite
+52-1	3456-3458	No	animal[231]	giv[231]	coref	54-2[0_231]
+52-2	3459-3462	dog	animal[231]	giv[231]	_	_
+52-3	3463-3465	is	_	_	_	_
+52-4	3466-3470	born	_	_	_	_
+52-5	3471-3481	aggressive	_	_	_	_
+52-6	3482-3485	but	_	_	_	_
+52-7	3486-3494	depended	_	_	_	_
+52-8	3495-3497	on	_	_	_	_
+52-9	3498-3501	how	_	_	_	_
+52-10	3502-3505	you	person	giv	ana	53-14
+52-11	3506-3511	treat	_	_	_	_
+52-12	3512-3516	them	abstract	giv	ana	52-13
+52-13	3517-3521	they	abstract	giv	_	_
+52-14	3522-3525	can	_	_	_	_
+52-15	3526-3532	become	_	_	_	_
+52-16	3533-3538	angry	_	_	_	_
+52-17	3539-3542	and	_	_	_	_
+52-18	3543-3551	possibly	_	_	_	_
+52-19	3552-3556	bite	_	_	_	_
+
+#Text=Dogs will die eventually so remember to enjoy the short amount of time you have with them !
+53-1	3557-3561	Dogs	person	giv	ana	53-17
+53-2	3562-3566	will	_	_	_	_
+53-3	3567-3570	die	_	_	_	_
+53-4	3571-3581	eventually	_	_	_	_
+53-5	3582-3584	so	_	_	_	_
+53-6	3585-3593	remember	_	_	_	_
+53-7	3594-3596	to	_	_	_	_
+53-8	3597-3602	enjoy	_	_	_	_
+53-9	3603-3606	the	abstract[236]	new[236]	_	_
+53-10	3607-3612	short	abstract[236]	new[236]	_	_
+53-11	3613-3619	amount	abstract[236]	new[236]	_	_
+53-12	3620-3622	of	abstract[236]	new[236]	_	_
+53-13	3623-3627	time	abstract[236]|time[237]	new[236]|new[237]	_	_
+53-14	3628-3631	you	abstract[236]|time[237]|person	new[236]|new[237]|giv	ana	54-9
+53-15	3632-3636	have	abstract[236]|time[237]	new[236]|new[237]	_	_
+53-16	3637-3641	with	abstract[236]|time[237]	new[236]|new[237]	_	_
+53-17	3642-3646	them	abstract[236]|time[237]|person	new[236]|new[237]|giv	ana	55-1
+53-18	3647-3648	!	_	_	_	_
+
+#Text=Some dog foods can have harmful ingredients to your dog .
+54-1	3649-3653	Some	substance[241]	new[241]	_	_
+54-2	3654-3657	dog	animal|substance[241]	giv|new[241]	coref	54-9[244_0]
+54-3	3658-3663	foods	substance[241]	new[241]	_	_
+54-4	3664-3667	can	_	_	_	_
+54-5	3668-3672	have	_	_	_	_
+54-6	3673-3680	harmful	substance[242]	new[242]	ana	55-5[0_242]
+54-7	3681-3692	ingredients	substance[242]	new[242]	_	_
+54-8	3693-3695	to	_	_	_	_
+54-9	3696-3700	your	person|animal[244]	giv|giv[244]	ana	55-2
+54-10	3701-3704	dog	animal[244]	giv[244]	_	_
+54-11	3705-3706	.	_	_	_	_
+
+#Text=These you should avoid these where possible
+55-1	3707-3712	These	person	giv	ana	56-1
+55-2	3713-3716	you	person	giv	ana	56-7
+55-3	3717-3723	should	_	_	_	_
+55-4	3724-3729	avoid	_	_	_	_
+55-5	3730-3735	these	substance	giv	_	_
+55-6	3736-3741	where	_	_	_	_
+55-7	3742-3750	possible	_	_	_	_
+
+#Text=They might be only part of your life but you are their whole life , their only friend .
+56-1	3751-3755	They	person	giv	ana	56-12
+56-2	3756-3761	might	_	_	_	_
+56-3	3762-3764	be	_	_	_	_
+56-4	3765-3769	only	_	_	_	_
+56-5	3770-3774	part	_	_	_	_
+56-6	3775-3777	of	_	_	_	_
+56-7	3778-3782	your	person|abstract[250]	giv|giv[250]	ana	56-10
+56-8	3783-3787	life	abstract[250]	giv[250]	_	_
+56-9	3788-3791	but	_	_	_	_
+56-10	3792-3795	you	person	giv	coref	56-12[253_0]
+56-11	3796-3799	are	_	_	_	_
+56-12	3800-3805	their	person|person[253]|person[254]	giv|giv[253]|giv[254]	coref|ana	56-12[254_253]|56-16
+56-13	3806-3811	whole	person[253]|person[254]	giv[253]|giv[254]	_	_
+56-14	3812-3816	life	person[253]|person[254]	giv[253]|giv[254]	_	_
+56-15	3817-3818	,	person[254]	giv[254]	_	_
+56-16	3819-3824	their	person[254]|person|person[256]	giv[254]|giv|giv[256]	ana	57-5
+56-17	3825-3829	only	person[254]|person[256]	giv[254]|giv[256]	_	_
+56-18	3830-3836	friend	person[254]|person[256]	giv[254]|giv[256]	_	_
+56-19	3837-3838	.	_	_	_	_
+
+#Text=Just be kind to them !
+57-1	3839-3843	Just	_	_	_	_
+57-2	3844-3846	be	_	_	_	_
+57-3	3847-3851	kind	_	_	_	_
+57-4	3852-3854	to	_	_	_	_
+57-5	3855-3859	them	person	giv	_	_
+57-6	3860-3861	!	_	_	_	_

@@ -1,0 +1,208 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1002" relname="span">Even though deep learning solutions tend to outperform the other supervised learning techniques</segment>
+<segment id="3" parent="1004" relname="circumstance">when trained on large amounts of data ,</segment>
+<segment id="4" parent="1004" relname="same_unit">applying them effectively in presence of few labeled data</segment>
+<segment id="5" parent="1004" relname="same_unit">is nowadays an open issue .</segment>
+<segment id="6" parent="1008" relname="span">Most of the existing works are devoted to finding the best network for applications</segment>
+<segment id="7" parent="6" relname="elaboration">for which huge datasets exist ,</segment>
+<segment id="8" parent="1010" relname="span">but few attention is given to specific real-setting problems</segment>
+<segment id="9" parent="8" relname="elaboration">where training data are hard to obtain</segment>
+<segment id="10" parent="1009" relname="joint">and therefore out-of-the-box networks may be impossible to be trained .</segment>
+<segment id="11" parent="1012" relname="span">Nonetheless , in recent years , many regularization techniques have been proposed</segment>
+<segment id="12" parent="1013" relname="span">to tackle the problem of overfitting , from data augmentation to early stopping and dropout ,</segment>
+<segment id="13" parent="12" relname="elaboration">besides the traditional weight decay .</segment>
+<segment id="14" parent="1016" relname="span">These techniques</segment>
+<segment id="15" parent="14" relname="elaboration">used together could help</segment>
+<segment id="16" parent="1015" relname="same_unit">in applying deep learning techniques in the presence of small datasets .</segment>
+<segment id="17" parent="1017" relname="span">In addition to these techniques ,</segment>
+<segment id="18" parent="17" relname="elaboration">fusion with another strong classifier may be considered .</segment>
+<segment id="19" parent="1019" relname="span">Simultaneously , a criticism</segment>
+<segment id="20" parent="1020" relname="span">that is often made of deep learning methods is the fact</segment>
+<segment id="21" parent="20" relname="elaboration">that they act like “ black-boxes ” ,</segment>
+<segment id="22" parent="1022" relname="span">making it hard for their users to interpret the obtained results .</segment>
+<segment id="23" parent="1024" relname="span">This limitation is highly relevant</segment>
+<segment id="24" parent="1025" relname="span">when learning from small amounts of data ,</segment>
+<segment id="25" parent="24" relname="elaboration">where a measure of model uncertainty would be particularly important .</segment>
+<segment id="26" parent="1028" relname="span">To this extent Bayesian Neural Networks</segment>
+<segment id="27" parent="26" relname="elaboration">( BNNs , Bayesian NNs )</segment>
+<segment id="28" parent="1027" relname="same_unit">offer a probabilistic interpretation of deep learning models</segment>
+<segment id="29" parent="1029" relname="span">by inferring distributions over the models ’ weights ,</segment>
+<segment id="30" parent="31" relname="concession">allowing to measure model uncertainty ,</segment>
+<segment id="31" parent="1030" relname="span">but they are usually practically limited .</segment>
+<segment id="32" parent="1032" relname="span">Recently , an ensemble-based method</segment>
+<segment id="33" parent="1034" relname="span">relying on the use of dropout at inference time has been proposed in</segment>
+<segment id="34" parent="33" relname="elaboration">( Monte Carlo dropout ) ,</segment>
+<segment id="35" parent="1036" relname="span">allowing to obtain several realizations</segment>
+<segment id="36" parent="35" relname="elaboration">sampled from the same network with randomly dropped-out units at test time ,</segment>
+<segment id="37" parent="1036" relname="elaboration">from which a confidence measure on the prediction can be derived .</segment>
+<segment id="38" parent="1038" relname="span">Following this line of work , we intend to investigate the use of deep learning techniques in presence of small training datasets for specific applications</segment>
+<segment id="39" parent="38" relname="elaboration">( in our case high-density crowd pedestrian detection ) .</segment>
+<segment id="40" parent="1041" relname="span">A solution</segment>
+<segment id="41" parent="40" relname="elaboration">proposed for instance by in the case of hyperspectral data</segment>
+<segment id="42" parent="1042" relname="span">is to reduce the number of weight parameters</segment>
+<segment id="43" parent="1044" relname="span">required</segment>
+<segment id="44" parent="43" relname="purpose">to train the model</segment>
+<segment id="45" parent="1045" relname="span">by considering some constraints</segment>
+<segment id="46" parent="45" relname="elaboration">related to the physical interpretation of the weights .</segment>
+<segment id="47" parent="1048" relname="span">In this work , the type of the data</segment>
+<segment id="48" parent="47" relname="elaboration">( grayscale images )</segment>
+<segment id="49" parent="1047" relname="same_unit">is not suitable for such prior constraints ,</segment>
+<segment id="50" parent="1050" relname="span">we propose the use of an ensemble method</segment>
+<segment id="51" parent="50" relname="elaboration">that is justified according to two different reasons .</segment>
+<segment id="52" parent="1052" relname="span">Firstly , it acts as another regularization technique</segment>
+<segment id="53" parent="52" relname="purpose">to mitigate the risk of overfitting ;</segment>
+<segment id="54" parent="1053" relname="span">secondly , it allows us to measure the model confidence about each prediction .</segment>
+<segment id="55" parent="1056" relname="span">To this extent , we propose to work in the context of the Belief Function Theory</segment>
+<segment id="56" parent="55" relname="restatement">( BFT )</segment>
+<segment id="57" parent="1056" relname="purpose">to better leverage the classifier ’s unique properties .</segment>
+<segment id="58" parent="1058" relname="span">The evidential framework is indeed able to naturally model the concept of imprecision in addition to the uncertainty value</segment>
+<segment id="59" parent="58" relname="elaboration">provided by the classifiers .</segment>
+<segment id="60" parent="1061" relname="span">We thus propose an evidential Multiple Classifier System</segment>
+<segment id="61" parent="60" relname="elaboration">( MCS ) ,</segment>
+<segment id="62" parent="1061" relname="elaboration">which is in turn composed by two ensembles of classifiers .</segment>
+<segment id="63" parent="1063" relname="span">The first one ,</segment>
+<segment id="64" parent="1065" relname="span">called CNN-ensemble , is an ensemble of convolutional neural networks</segment>
+<segment id="65" parent="64" relname="restatement">( CNNs )</segment>
+<segment id="66" parent="1066" relname="span">derived</segment>
+<segment id="67" parent="66" relname="means">using the Monte Carlo dropout technique .</segment>
+<segment id="68" parent="1069" relname="span">The second one ,</segment>
+<segment id="69" parent="1070" relname="span">called SVM-ensemble , is an ensemble of Support Vector Machine</segment>
+<segment id="70" parent="69" relname="restatement">( SVM )</segment>
+<segment id="71" parent="1072" relname="span">classifiers</segment>
+<segment id="72" parent="1073" relname="span">trained with different descriptors in an active learning</segment>
+<segment id="73" parent="72" relname="elaboration">( AL )</segment>
+<segment id="74" parent="1074" relname="span">Query-by-Committee fashion</segment>
+<segment id="75" parent="74" relname="elaboration">previously proposed in .</segment>
+<segment id="76" parent="1076" relname="span">Specifically ,</segment>
+<segment id="77" parent="1077" relname="span">starting from a single sensor input , i.e. , an image lattice ,</segment>
+<segment id="78" parent="1078" relname="span">we derive two different ensembles</segment>
+<segment id="79" parent="78" relname="elaboration">based on complementary classifiers .</segment>
+<segment id="80" parent="1080" relname="span">These two ensembles are then considered as different information sources , like virtual sensors .</segment>
+<segment id="81" parent="1081" relname="span">We apply the proposed Evidential MCS to the difficult application of high-density crowd pedestrian detection for multiple reasons .</segment>
+<segment id="82" parent="1082" relname="span">Indeed ,</segment>
+<segment id="83" parent="1084" relname="span">although in the last years , many efforts have been devoted</segment>
+<segment id="84" parent="83" relname="purpose">to improve the performance of pedestrian detection ,</segment>
+<segment id="85" parent="1085" relname="span">baseline methods cannot be always applied in crowded contexts</segment>
+<segment id="86" parent="1086" relname="span">because of scarce labeled data , and intrinsic differences with respect to the sparse case</segment>
+<segment id="87" parent="86" relname="elaboration">which may be cause of imprecision in the final detection results .</segment>
+<segment id="88" parent="1087" relname="joint">Pedestrian detection by itself is noticeably one of the most challenging categories of object detection .</segment>
+<segment id="89" parent="1089" relname="span">There exists indeed a large variability in the local and global pedestrians ’ appearance ,</segment>
+<segment id="90" parent="1090" relname="span">due to the variety of possible body shapes , or different styles and types of clothes and accessories</segment>
+<segment id="91" parent="90" relname="elaboration">which may alter the silhouettes of the individuals .</segment>
+<segment id="92" parent="1091" relname="span">Besides , in real-world scenarios several people can occupy the same region ,</segment>
+<segment id="93" parent="1092" relname="joint">partially occluding each other ,</segment>
+<segment id="94" parent="1093" relname="span">and this phenomenon becomes more prevalent</segment>
+<segment id="95" parent="94" relname="circumstance">as the crowd density increases .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1005" relname="background"/>
+<group id="1003" type="span" parent="2" relname="elaboration"/>
+<group id="1004" type="multinuc" parent="1003" relname="span"/>
+<group id="1005" type="multinuc" parent="1001" relname="span"/>
+<group id="1006" type="span" parent="1005" relname="joint"/>
+<group id="1007" type="multinuc" parent="1006" relname="span"/>
+<group id="1008" type="span" parent="1007" relname="contrast"/>
+<group id="1009" type="multinuc" parent="1007" relname="contrast"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1007" relname="elaboration"/>
+<group id="1012" type="span" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="11" relname="purpose"/>
+<group id="1014" type="span" parent="1012" relname="elaboration"/>
+<group id="1015" type="multinuc" parent="1014" relname="span"/>
+<group id="1016" type="span" parent="1015" relname="same_unit"/>
+<group id="1017" type="span" parent="1015" relname="elaboration"/>
+<group id="1018" type="span" parent="1005" relname="joint"/>
+<group id="1019" type="span" parent="1021" relname="preparation"/>
+<group id="1020" type="span" parent="19" relname="elaboration"/>
+<group id="1021" type="multinuc" parent="1018" relname="span"/>
+<group id="1022" type="span" parent="1021" relname="joint"/>
+<group id="1023" type="span" parent="22" relname="elaboration"/>
+<group id="1024" type="span" parent="1026" relname="background"/>
+<group id="1025" type="span" parent="23" relname="circumstance"/>
+<group id="1026" type="span" parent="1023" relname="span"/>
+<group id="1027" type="multinuc" parent="1026" relname="span"/>
+<group id="1028" type="span" parent="1027" relname="same_unit"/>
+<group id="1029" type="span" parent="1027" relname="means"/>
+<group id="1030" type="span" parent="29" relname="elaboration"/>
+<group id="1032" type="span" parent="1021" relname="joint"/>
+<group id="1033" type="span" parent="32" relname="elaboration"/>
+<group id="1034" type="span" parent="1033" relname="span"/>
+<group id="1035" type="span" parent="1034" relname="elaboration"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1021" relname="joint"/>
+<group id="1038" type="span" parent="1039" relname="preparation"/>
+<group id="1039" type="multinuc" parent="1037" relname="span"/>
+<group id="1040" type="multinuc" parent="1039" relname="joint"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="span" parent="1040" relname="same_unit"/>
+<group id="1043" type="span" parent="42" relname="elaboration"/>
+<group id="1044" type="span" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="means"/>
+<group id="1046" type="span" parent="1039" relname="joint"/>
+<group id="1047" type="multinuc" parent="1049" relname="preparation"/>
+<group id="1048" type="span" parent="1047" relname="same_unit"/>
+<group id="1049" type="span" parent="1046" relname="span"/>
+<group id="1050" type="span" parent="1051" relname="preparation"/>
+<group id="1051" type="multinuc" parent="1049" relname="span"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="span" parent="1051" relname="joint"/>
+<group id="1054" type="multinuc" parent="54" relname="elaboration"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="span" parent="1055" relname="span"/>
+<group id="1057" type="multinuc" parent="1054" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="joint"/>
+<group id="1059" type="multinuc" parent="1057" relname="joint"/>
+<group id="1060" type="span" parent="1059" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="span"/>
+<group id="1062" type="multinuc" parent="1059" relname="joint"/>
+<group id="1063" type="span" parent="1062" relname="joint"/>
+<group id="1064" type="multinuc" parent="63" relname="elaboration"/>
+<group id="1065" type="span" parent="1064" relname="same_unit"/>
+<group id="1066" type="span" parent="1064" relname="same_unit"/>
+<group id="1067" type="multinuc" parent="1062" relname="joint"/>
+<group id="1068" type="multinuc" parent="1067" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="same_unit"/>
+<group id="1070" type="span" parent="68" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1068" relname="same_unit"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="span" parent="71" relname="elaboration"/>
+<group id="1074" type="span" parent="1071" relname="same_unit"/>
+<group id="1075" type="multinuc" parent="1067" relname="joint"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="span" parent="76" relname="elaboration"/>
+<group id="1078" type="span" parent="77" relname="elaboration"/>
+<group id="1079" type="multinuc" parent="1075" relname="joint"/>
+<group id="1080" type="span" parent="1079" relname="joint"/>
+<group id="1081" type="span" parent="80" relname="elaboration"/>
+<group id="1082" type="span" parent="81" relname="elaboration"/>
+<group id="1083" type="multinuc" parent="82" relname="concession"/>
+<group id="1084" type="span" parent="1083" relname="same_unit"/>
+<group id="1085" type="span" parent="1083" relname="same_unit"/>
+<group id="1086" type="span" parent="85" relname="cause"/>
+<group id="1087" type="multinuc" parent="1079" relname="joint"/>
+<group id="1088" type="span" parent="1087" relname="joint"/>
+<group id="1089" type="span" parent="1088" relname="span"/>
+<group id="1090" type="span" parent="89" relname="cause"/>
+<group id="1091" type="span" parent="1089" relname="elaboration"/>
+<group id="1092" type="multinuc" parent="92" relname="elaboration"/>
+<group id="1093" type="span" parent="1092" relname="joint"/>
+	</body>
+</rst>

@@ -1,0 +1,989 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_boredom" title="An Exploration of Machine Learning Methods for Robust Boredom Classification Using EEG and GSR Data" shortTitle="boredom" author="Jungryul Seo, Teemu  H. Laine, Kyung-Ah Sohn" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1424-8220/19/20/4561/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Background	NN	background
+</s>
+</head>
+<p>
+<s type="decl">
+Emotion	NN	emotion
+detection	NN	detection
+based	VBN	base
+on	IN	on
+physiological	JJ	physiological
+data	NNS	datum
+are	VBP	be
+a	DT	a
+vibrant	JJ	vibrant
+research	NN	research
+field	NN	field
+that	WDT	that
+has	VBZ	have
+produced	VBN	produce
+a	DT	a
+large	JJ	large
+body	NN	body
+of	IN	of
+studies	NNS	study
+focusing	VBG	focus
+on	IN	on
+different	JJ	different
+emotions	NNS	emotion
+and	CC	and
+analysis	NN	analysis
+approaches	NNS	approach
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+section	NN	section
+provides	VBZ	provide
+an	DT	a
+overview	NN	overview
+of	IN	of
+the	DT	the
+previous	JJ	previous
+physiology-based	JJ	physiology-based
+emotion	NN	emotion
+detection	NN	detection
+research	NN	research
+relevant	JJ	relevant
+to	IN	to
+our	PRP$	our
+study	NN	study
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+our	PRP$	our
+literature	NN	literature
+review	NN	review
+,	,	,
+we	PRP	we
+searched	VBD	search
+previous	JJ	previous
+studies	NNS	study
+in	IN	in
+Google	NNP	Google
+Scholar	NNP	Scholar
+with	IN	with
+searching	VBG	search
+keywords	NNS	keyword
+of	IN	of
+“	``	''
+Emotion	NN	emotion
+”	''	''
+,	,	,
+“	``	''
+Boredom	NNP	Boredom
+”	''	''
+,	,	,
+“	``	''
+Classification	NN	classification
+”	''	''
+,	,	,
+“	``	''
+Physiology	NN	physiology
+”	''	''
+,	,	,
+and	CC	and
+“	``	''
+Sensor	NN	sensor
+”	''	''
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+did	VBD	do
+not	RB	not
+set	VB	set
+limitations	NNS	limitation
+on	IN	on
+the	DT	the
+publication	NN	publication
+year	NN	year
+or	CC	or
+forum	NN	forum
+;	:	;
+however	RB	however
+,	,	,
+we	PRP	we
+excluded	VBD	exclude
+studies	NNS	study
+that	WDT	that
+classified	VBD	classify
+emotions	NNS	emotion
+solely	RB	solely
+by	IN	by
+interviews	NNS	interview
+or	CC	or
+surveys	NNS	survey
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Several	JJ	several
+AC	NNP	AC
+studies	NNS	study
+focusing	VBG	focus
+on	IN	on
+emotion	NN	emotion
+classification	NN	classification
+from	IN	from
+physiological	JJ	physiological
+data	NNS	datum
+referred	VBD	refer
+to	IN	to
+Russell	NNP	Russell
+’s	POS	's
+Circumplex	NNP	Circumplex
+model	NN	model
+(	:	(
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="imp">
+)	-RRB-	)
+to	TO	to
+explain	VB	explain
+the	DT	the
+target	NN	target
+emotion	NN	emotion
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+model	NN	model
+categorizes	VBZ	categorize
+emotions	NNS	emotion
+into	IN	into
+four	CD	4
+groups	NNS	group
+by	IN	by
+the	DT	the
+dimensions	NNS	dimension
+of	IN	of
+valance	NN	valance
+and	CC	and
+arousal	NN	arousal
+.	.	.
+</s>
+<s type="decl">
+According	VBG	accord
+to	IN	to
+the	DT	the
+model	NN	model
+,	,	,
+boredom	NN	boredom
+is	VBZ	be
+categorized	VBN	categorize
+into	IN	into
+the	DT	the
+low-valence	JJ	low-valence
+low-arousal	JJ	low-arousal
+group	NN	group
+(	-LRB-	(
+red	JJ	red
+box	NN	box
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Despite	IN	despite
+the	DT	the
+simplicity	NN	simplicity
+of	IN	of
+the	DT	the
+way	NN	way
+in	IN	in
+which	WDT	which
+the	DT	the
+Circumplex	NNP	Circumplex
+model	NN	model
+assigns	VBZ	assign
+boredom	NN	boredom
+to	IN	to
+the	DT	the
+third	JJ	third
+quadrant	NN	quadrant
+,	,	,
+boredom	NN	boredom
+is	VBZ	be
+considered	VBN	consider
+a	DT	a
+complex	JJ	complex
+emotion	NN	emotion
+as	IN	as
+various	JJ	various
+studies	NNS	study
+have	VBP	have
+defined	VBN	define
+it	PRP	it
+differently	RB	differently
+.	.	.
+</s>
+<s type="decl">
+Vogel-Walcutt	NNP	Vogel-Walcutt
+et	FW	et
+al.	FW	al.
+’	SYM	's
+s	NNS	be
+literature	NN	literature
+review	NN	review
+resulted	VBD	result
+in	IN	in
+37	CD	37
+definitions	NNS	definition
+of	IN	of
+boredom	NN	boredom
+,	,	,
+and	CC	and
+concluded	VBD	conclude
+that	IN	that
+“	``	''
+boredom	NN	boredom
+occurs	VBZ	occur
+when	WRB	when
+an	DT	a
+individual	NN	individual
+experiences	VBZ	experience
+both	CC	both
+the	DT	the
+neurological	JJ	neurological
+state	NN	state
+of	IN	of
+low	JJ	low
+arousal	NN	arousal
+and	CC	and
+the	DT	the
+psychological	JJ	psychological
+state	NN	state
+of	IN	of
+dissatisfaction	NN	dissatisfaction
+,	,	,
+frustration	NN	frustration
+,	,	,
+or	CC	or
+disinterest	NN	disinterest
+in	IN	in
+response	NN	response
+to	IN	to
+the	DT	the
+low	JJ	low
+arousal	NN	arousal
+.	.	.
+”	''	''
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+conclusions	NNS	conclusion
+of	IN	of
+Russell	NNP	Russell
+’s	POS	's
+model	NN	model
+and	CC	and
+Vogel-Walcutt	NNP	Vogel-Walcutt
+et	FW	et
+al.	FW	al.
+’	SYM	's
+s	NNS	be
+definition	NN	definition
+are	VBP	be
+thus	RB	thus
+similar	JJ	similar
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+contrast	NN	contrast
+,	,	,
+the	DT	the
+range	NN	range
+of	IN	of
+boredom	NN	boredom
+in	IN	in
+Eastwood	NNP	Eastwood
+et	FW	et
+al.	FW	al.
+’	SYM	's
+s	NNS	be
+definition	NN	definition
+is	VBZ	be
+wider	JJR	wide
+than	IN	than
+that	DT	that
+of	IN	of
+Russell	NNP	Russell
+’s	POS	's
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+According	VBG	accord
+to	IN	to
+their	PRP$	their
+study	NN	study
+,	,	,
+people	NNS	person
+who	WP	who
+are	VBP	be
+in	IN	in
+a	DT	a
+low-valence	JJ	low-valence
+state	NN	state
+can	MD	can
+feel	VB	feel
+boredom	NN	boredom
+regardless	RB	regardless
+of	IN	of
+the	DT	the
+level	NN	level
+of	IN	of
+arousal	NN	arousal
+.	.	.
+</s>
+<s type="decl">
+Considering	VBG	consider
+these	DT	this
+studies	NNS	study
+,	,	,
+we	PRP	we
+conclude	VBP	conclude
+that	IN	that
+a	DT	a
+universally	RB	universally
+accepted	VBN	accept
+definition	NN	definition
+of	IN	of
+boredom	NN	boredom
+does	VBZ	do
+not	RB	not
+exist	VB	exist
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Some	DT	some
+previous	JJ	previous
+studies	NNS	study
+regarding	VBG	regard
+boredom	NN	boredom
+categorized	VBD	categorize
+it	PRP	it
+as	IN	as
+a	DT	a
+trait	NN	trait
+,	,	,
+while	IN	while
+others	NNS	other
+handled	VBD	handle
+it	PRP	it
+as	IN	as
+a	DT	a
+state	NN	state
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+meaning	NN	meaning
+of	IN	of
+trait	NN	trait
+in	IN	in
+boredom-related	JJ	boredom-related
+studies	NNS	study
+is	VBZ	be
+the	DT	the
+proneness	NN	proneness
+of	IN	of
+an	DT	a
+individual	NN	individual
+to	TO	to
+become	VB	become
+bored	JJ	bored
+,	,	,
+thus	RB	thus
+there	EX	there
+is	VBZ	be
+a	DT	a
+difference	NN	difference
+between	IN	between
+easily	RB	easily
+becoming	VBG	become
+bored	JJ	bored
+,	,	,
+and	CC	and
+being	VBG	be
+able	JJ	able
+to	TO	to
+resist	VB	resist
+boredom	NN	boredom
+.	.	.
+</s>
+<s type="decl">
+Conversely	RB	conversely
+,	,	,
+the	DT	the
+meaning	NN	meaning
+of	IN	of
+a	DT	a
+state	NN	state
+is	VBZ	be
+the	DT	the
+current	JJ	current
+state	NN	state
+of	IN	of
+boredom	NN	boredom
+that	WDT	that
+the	DT	the
+person	NN	person
+is	VBZ	be
+experiencing	VBG	experience
+.	.	.
+</s>
+<s type="decl">
+Fahlman	NNP	Fahlman
+et	FW	et
+al.	FW	al.
+handled	VBD	handle
+boredom	NN	boredom
+as	IN	as
+a	DT	a
+trait	NN	trait
+,	,	,
+while	IN	while
+Eastwood	NNP	Eastwood
+et	FW	et
+al.	FW	al.
+and	CC	and
+Kim	NNP	Kim
+et	FW	et
+al.	FW	al.
+treated	VBD	treat
+it	PRP	it
+as	IN	as
+a	DT	a
+state	NN	state
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+study	NN	study
+,	,	,
+we	PRP	we
+approach	VBP	approach
+boredom	NN	boredom
+as	IN	as
+a	DT	a
+state	NN	state
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+reason	NN	reason
+for	IN	for
+this	DT	this
+is	VBZ	be
+that	IN	that
+we	PRP	we
+hypothesize	VBP	hypothesize
+that	IN	that
+,	,	,
+when	WRB	when
+a	DT	a
+person	NN	person
+feels	VBZ	feel
+bored	JJ	bored
+,	,	,
+changes	NNS	change
+in	IN	in
+their	PRP$	their
+physiological	JJ	physiological
+signals	NNS	signal
+can	MD	can
+be	VB	be
+identified	VBN	identify
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Our	PRP$	our
+literature	NN	literature
+review	NN	review
+identified	VBD	identify
+nine	CD	9
+studies	NNS	study
+on	IN	on
+boredom	NN	boredom
+classification	NN	classification
+from	IN	from
+physiological	JJ	physiological
+data	NNS	datum
+sources	NNS	source
+as	IN	as
+listed	VBN	list
+in	IN	in
+Table	NNP	Table
+1	CD	1
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+reveals	VBZ	reveal
+that	IN	that
+seven	CD	7
+studies	NNS	study
+used	VBD	use
+more	JJR	more
+than	IN	than
+one	CD	one
+data	NN	datum
+source	NN	source
+;	:	;
+this	DT	this
+approach	NN	approach
+of	IN	of
+sensor	NN	sensor
+fusion	NN	fusion
+is	VBZ	be
+a	DT	a
+common	JJ	common
+technique	NN	technique
+to	TO	to
+increase	VB	increase
+the	DT	the
+detection	NN	detection
+accuracy	NN	accuracy
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+median	JJ	median
+number	NN	number
+of	IN	of
+participants	NNS	participant
+in	IN	in
+these	DT	this
+studies	NNS	study
+was	VBD	be
+21	CD	21
+,	,	,
+which	WDT	which
+is	VBZ	be
+relatively	RB	relatively
+small	JJ	small
+compared	VBN	compare
+to	IN	to
+other	JJ	other
+cases	NNS	case
+where	WRB	where
+machine	NN	machine
+learning	NN	learning
+methods	NNS	method
+are	VBP	be
+typically	RB	typically
+applied	VBN	apply
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+individual	JJ	individual
+source	NN	source
+perspective	NN	perspective
+,	,	,
+EEG	NNP	EEG
+was	VBD	be
+used	VBN	use
+by	IN	by
+three	CD	3
+studies	NNS	study
+,	,	,
+and	CC	and
+GSR	NNP	GSR
+was	VBD	be
+utilized	VBN	utilize
+by	IN	by
+four	CD	4
+studies	NNS	study
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+to	IN	to
+the	DT	the
+best	NN	best
+of	IN	of
+our	PRP$	our
+knowledge	NN	knowledge
+,	,	,
+no	DT	no
+previous	JJ	previous
+study	NN	study
+has	VBZ	have
+used	VBN	use
+both	CC	both
+EEG	NNP	EEG
+and	CC	and
+GSR	NNP	GSR
+data	NNS	datum
+for	IN	for
+classifying	VBG	classify
+boredom	NN	boredom
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Sanei	NNP	Sanei
+and	CC	and
+Chambers	NNP	Chambers
+and	CC	and
+Ashwal	NNP	Ashwal
+and	CC	and
+Rust	NNP	Rust
+showed	VBD	show
+that	IN	that
+EEG	NNP	EEG
+data	NNS	datum
+correlates	VBZ	correlate
+with	IN	with
+emotion	NN	emotion
+states	NNS	state
+of	IN	of
+humans	NNS	human
+.	.	.
+</s>
+<s type="sub">
+Furthermore	RB	furthermore
+,	,	,
+GSR	NNP	GSR
+is	VBZ	be
+related	VBN	relate
+to	IN	to
+the	DT	the
+autonomic	JJ	autonomic
+nervous	JJ	nervous
+system	NN	system
+,	,	,
+which	WDT	which
+is	VBZ	be
+also	RB	also
+known	VBN	know
+to	TO	to
+correlate	VB	correlate
+with	IN	with
+emotion	NN	emotion
+states	NNS	state
+,	,	,
+thus	RB	thus
+GSR	NNP	GSR
+can	MD	can
+be	VB	be
+utilized	VBN	utilize
+as	IN	as
+a	DT	a
+potential	JJ	potential
+source	NN	source
+for	IN	for
+emotion	NN	emotion
+classification	NN	classification
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+physiological	JJ	physiological
+perspective	NN	perspective
+,	,	,
+EEG	NNP	EEG
+data	NNS	datum
+are	VBP	be
+captured	VBN	capture
+from	IN	from
+the	DT	the
+activity	NN	activity
+of	IN	of
+the	DT	the
+brain	NN	brain
+,	,	,
+which	WDT	which
+belongs	VBZ	belong
+to	IN	to
+the	DT	the
+nervous	JJ	nervous
+system	NN	system
+together	RB	together
+with	IN	with
+GSR	NNP	GSR
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+the	DT	the
+analysis	NN	analysis
+on	IN	on
+the	DT	the
+characteristics	NNS	characteristic
+of	IN	of
+boredom	NN	boredom
+conducted	VBN	conduct
+by	IN	by
+Bench	NNP	Bench
+and	CC	and
+Lench	NNP	Lench
+suggested	VBD	suggest
+that	IN	that
+boredom	NN	boredom
+should	MD	should
+be	VB	be
+associated	VBN	associate
+with	IN	with
+the	DT	the
+increased	VBN	increase
+autonomic	JJ	autonomic
+nervous	JJ	nervous
+system	NN	system
+activity	NN	activity
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+linkage	NN	linkage
+implies	VBZ	imply
+that	IN	that
+a	DT	a
+correlation	NN	correlation
+may	MD	may
+exist	VB	exist
+between	IN	between
+boredom	NN	boredom
+,	,	,
+EEG	NNP	EEG
+and	CC	and
+GSR	NNP	GSR
+,	,	,
+but	CC	but
+so	RB	so
+far	RB	far
+it	PRP	it
+has	VBZ	have
+not	RB	not
+been	VBN	be
+investigated	VBN	investigate
+in	IN	in
+previous	JJ	previous
+studies	NNS	study
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Table	NNP	Table
+2	CD	2
+presents	VBZ	present
+the	DT	the
+methods	NNS	method
+and	CC	and
+the	DT	the
+accuracy	NN	accuracy
+results	NNS	result
+of	IN	of
+the	DT	the
+previous	JJ	previous
+studies	NNS	study
+that	WDT	that
+classified	VBD	classify
+boredom	NN	boredom
+using	VBG	use
+physiological	JJ	physiological
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Mandryk	NNP	Mandryk
+and	CC	and
+Atkins	NNP	Atkins
+,	,	,
+D’Mello	NNP	D’Mello
+et	FW	et
+al.	FW	al.
+,	,	,
+Giakoumis	NNP	Giakoumis
+et	FW	et
+al.	FW	al.
+,	,	,
+and	CC	and
+Kim	NNP	Kim
+et	FW	et
+al.	FW	al.
+focused	VBD	focus
+on	IN	on
+finding	VBG	find
+correlations	NNS	correlation
+between	IN	between
+boredom	NN	boredom
+and	CC	and
+physiological	JJ	physiological
+data	NNS	datum
+using	VBG	use
+statistical	JJ	statistical
+approaches	NNS	approach
+,	,	,
+thus	RB	thus
+they	PRP	they
+did	VBD	do
+not	RB	not
+generate	VB	generate
+classification	NN	classification
+models	NNS	model
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+other	JJ	other
+reviewed	VBD	review
+boredom	NN	boredom
+classification	NN	classification
+studies	NNS	study
+built	VBD	build
+classification	NN	classification
+models	NNS	model
+using	VBG	use
+machine	NN	machine
+learning	NN	learning
+algorithms	NNS	algorithm
+and	CC	and
+measured	VBD	measure
+the	DT	the
+performance	NN	performance
+of	IN	of
+the	DT	the
+models	NNS	model
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+these	DT	this
+studies	NNS	study
+did	VBD	do
+not	RB	not
+address	VB	address
+the	DT	the
+issue	NN	issue
+of	IN	of
+overfitting	VBG	overfit
+carefully	RB	carefully
+,	,	,
+making	VBG	make
+it	PRP	it
+difficult	JJ	difficult
+to	TO	to
+guarantee	VB	guarantee
+the	DT	the
+robustness	NN	robustness
+of	IN	of
+the	DT	the
+results	NNS	result
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+many	JJ	many
+previous	JJ	previous
+studies	NNS	study
+lacked	VBD	lack
+the	DT	the
+discussion	NN	discussion
+on	IN	on
+the	DT	the
+choice	NN	choice
+of	IN	of
+the	DT	the
+classification	NN	classification
+algorithms	NNS	algorithm
+and	CC	and
+only	RB	only
+considered	VBD	consider
+a	DT	a
+few	JJ	few
+limited	JJ	limited
+algorithms	NNS	algorithm
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+it	PRP	it
+is	VBZ	be
+necessary	JJ	necessary
+to	TO	to
+consider	VB	consider
+the	DT	the
+potential	NN	potential
+of	IN	of
+a	DT	a
+wider	JJR	wide
+range	NN	range
+of	IN	of
+classification	NN	classification
+algorithms	NNS	algorithm
+to	TO	to
+classify	VB	classify
+boredom	NN	boredom
+.	.	.
+</s>
+<s type="decl">
+Considering	VBG	consider
+these	DT	this
+facts	NNS	fact
+and	CC	and
+shortcomings	NNS	shortcoming
+of	IN	of
+previous	JJ	previous
+studies	NNS	study
+,	,	,
+our	PRP$	our
+study	NN	study
+aims	VBZ	aim
+to	TO	to
+produce	VB	produce
+reliable	JJ	reliable
+performance	NN	performance
+results	NNS	result
+based	VBN	base
+on	IN	on
+more	RBR	more
+diverse	JJ	diverse
+machine	NN	machine
+learning	NN	learning
+methods	NNS	method
+.	.	.
+</s>
+</p>
+</text>

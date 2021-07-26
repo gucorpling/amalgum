@@ -1,0 +1,961 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=2. Proposed Method
+1-1	0-2	2.	_	_	_	_
+1-2	3-11	Proposed	abstract[1]	new[1]	_	_
+1-3	12-18	Method	abstract[1]	new[1]	_	_
+
+#Text=EFPN is our proposed object detection network .
+2-1	19-23	EFPN	abstract	new	coref	2-3[6_0]
+2-2	24-26	is	_	_	_	_
+2-3	27-30	our	person|abstract[6]	acc|giv[6]	ana|ana	3-1[0_6]|6-9
+2-4	31-39	proposed	abstract[6]	giv[6]	_	_
+2-5	40-46	object	abstract|abstract[5]|abstract[6]	new|new[5]|giv[6]	coref	9-5[39_5]
+2-6	47-56	detection	abstract[5]|abstract[6]	new[5]|giv[6]	_	_
+2-7	57-64	network	abstract[6]	giv[6]	_	_
+2-8	65-66	.	_	_	_	_
+
+#Text=Its architecture is shown in
+3-1	67-70	Its	abstract|abstract[8]	giv|new[8]	coref	8-9[32_0]
+3-2	71-83	architecture	abstract[8]	new[8]	_	_
+3-3	84-86	is	_	_	_	_
+3-4	87-92	shown	_	_	_	_
+3-5	93-95	in	_	_	_	_
+
+#Text=Figure 1
+4-1	96-102	Figure	abstract[9]	new[9]	_	_
+4-2	103-104	1	abstract[9]	new[9]	_	_
+
+#Text=.
+5-1	105-106	.	_	_	_	_
+
+#Text=Firstly , in enhanced feature extraction subnet , we generate pyramid features in the same way as FPN .
+6-1	107-114	Firstly	_	_	_	_
+6-2	115-116	,	_	_	_	_
+6-3	117-119	in	_	_	_	_
+6-4	120-128	enhanced	abstract[12]	new[12]	coref	8-4[29_12]
+6-5	129-136	feature	abstract|abstract[11]|abstract[12]	new|new[11]|new[12]	coref|coref	7-17|8-6[0_11]
+6-6	137-147	extraction	abstract[11]|abstract[12]	new[11]|new[12]	_	_
+6-7	148-154	subnet	abstract[12]	new[12]	_	_
+6-8	155-156	,	_	_	_	_
+6-9	157-159	we	person	giv	ana	7-9
+6-10	160-168	generate	_	_	_	_
+6-11	169-176	pyramid	object|abstract[15]	new|new[15]	coref|coref	7-1[18_15]|7-4
+6-12	177-185	features	abstract[15]	new[15]	_	_
+6-13	186-188	in	_	_	_	_
+6-14	189-192	the	abstract[16]	new[16]	_	_
+6-15	193-197	same	abstract[16]	new[16]	_	_
+6-16	198-201	way	abstract[16]	new[16]	_	_
+6-17	202-204	as	abstract[16]	new[16]	_	_
+6-18	205-208	FPN	abstract[16]|abstract	new[16]|new	coref	13-3
+6-19	209-210	.	_	_	_	_
+
+#Text=Features in each pyramid level are weighted by our proposed FWM , and a new enhanced feature pyramid is reconstructed as the input for the following procedure .
+7-1	211-219	Features	abstract[18]	giv[18]	coref	10-4[48_18]
+7-2	220-222	in	abstract[18]	giv[18]	_	_
+7-3	223-227	each	abstract[18]|abstract[20]	giv[18]|new[20]	coref	14-17[69_20]
+7-4	228-235	pyramid	abstract[18]|object|abstract[20]	giv[18]|giv|new[20]	coref	7-14[24_0]
+7-5	236-241	level	abstract[18]|abstract[20]	giv[18]|new[20]	_	_
+7-6	242-245	are	_	_	_	_
+7-7	246-254	weighted	_	_	_	_
+7-8	255-257	by	_	_	_	_
+7-9	258-261	our	person|abstract[22]	giv|new[22]	ana|coref	19-1|20-5[0_22]
+7-10	262-270	proposed	abstract[22]	new[22]	_	_
+7-11	271-274	FWM	abstract[22]	new[22]	_	_
+7-12	275-276	,	_	_	_	_
+7-13	277-280	and	_	_	_	_
+7-14	281-282	a	object[24]	giv[24]	coref	14-19[0_24]
+7-15	283-286	new	object[24]	giv[24]	_	_
+7-16	287-295	enhanced	object[24]	giv[24]	_	_
+7-17	296-303	feature	abstract|object[24]	giv|giv[24]	coref	8-27
+7-18	304-311	pyramid	object[24]	giv[24]	_	_
+7-19	312-314	is	_	_	_	_
+7-20	315-328	reconstructed	_	_	_	_
+7-21	329-331	as	_	_	_	_
+7-22	332-335	the	abstract[25]	new[25]	_	_
+7-23	336-341	input	abstract[25]	new[25]	_	_
+7-24	342-345	for	abstract[25]	new[25]	_	_
+7-25	346-349	the	abstract[25]|abstract[26]	new[25]|new[26]	_	_
+7-26	350-359	following	abstract[25]|abstract[26]	new[25]|new[26]	_	_
+7-27	360-369	procedure	abstract[25]|abstract[26]	new[25]|new[26]	_	_
+7-28	370-371	.	_	_	_	_
+
+#Text=Secondly , in the proposal extraction subnet , Region Proposal Network ( RPN ) is used to generate anchors of various shapes on the enhanced pyramidal feature map .
+8-1	372-380	Secondly	_	_	_	_
+8-2	381-382	,	_	_	_	_
+8-3	383-385	in	_	_	_	_
+8-4	386-389	the	abstract[29]	giv[29]	coref	9-4[40_29]
+8-5	390-398	proposal	abstract|abstract[29]	new|giv[29]	coref	8-10
+8-6	399-409	extraction	abstract|abstract[29]	giv|giv[29]	coref	12-1[56_0]
+8-7	410-416	subnet	abstract[29]	giv[29]	_	_
+8-8	417-418	,	_	_	_	_
+8-9	419-425	Region	place|abstract[32]	new|giv[32]	appos	8-13[0_32]
+8-10	426-434	Proposal	abstract|abstract[32]	giv|giv[32]	_	_
+8-11	435-442	Network	abstract[32]	giv[32]	_	_
+8-12	443-444	(	_	_	_	_
+8-13	445-448	RPN	abstract	giv	coref	56-2
+8-14	449-450	)	_	_	_	_
+8-15	451-453	is	_	_	_	_
+8-16	454-458	used	_	_	_	_
+8-17	459-461	to	_	_	_	_
+8-18	462-470	generate	_	_	_	_
+8-19	471-478	anchors	object[34]	new[34]	_	_
+8-20	479-481	of	object[34]	new[34]	_	_
+8-21	482-489	various	object[34]|abstract[35]	new[34]|new[35]	_	_
+8-22	490-496	shapes	object[34]|abstract[35]	new[34]|new[35]	_	_
+8-23	497-499	on	_	_	_	_
+8-24	500-503	the	abstract[37]	new[37]	_	_
+8-25	504-512	enhanced	abstract[37]	new[37]	_	_
+8-26	513-522	pyramidal	abstract[37]	new[37]	_	_
+8-27	523-530	feature	abstract|abstract[37]	giv|new[37]	coref	9-14[42_0]
+8-28	531-534	map	abstract[37]	new[37]	_	_
+8-29	535-536	.	_	_	_	_
+
+#Text=Thirdly , in adaptive parallel detection subnet , ACE is applied to extract the feature of ceRoI and RoI for each foreground RoI .
+9-1	537-544	Thirdly	_	_	_	_
+9-2	545-546	,	_	_	_	_
+9-3	547-549	in	_	_	_	_
+9-4	550-558	adaptive	abstract[40]	giv[40]	_	_
+9-5	559-567	parallel	person|abstract[39]|abstract[40]	new|giv[39]|giv[40]	coref	10-21[0_39]
+9-6	568-577	detection	abstract[39]|abstract[40]	giv[39]|giv[40]	_	_
+9-7	578-584	subnet	abstract[40]	giv[40]	_	_
+9-8	585-586	,	_	_	_	_
+9-9	587-590	ACE	abstract	new	_	_
+9-10	591-593	is	_	_	_	_
+9-11	594-601	applied	_	_	_	_
+9-12	602-604	to	_	_	_	_
+9-13	605-612	extract	_	_	_	_
+9-14	613-616	the	abstract[42]	giv[42]	coref	12-2[0_42]
+9-15	617-624	feature	abstract[42]	giv[42]	_	_
+9-16	625-627	of	abstract[42]	giv[42]	_	_
+9-17	628-633	ceRoI	abstract[42]|abstract	giv[42]|new	_	_
+9-18	634-637	and	abstract[42]	giv[42]	_	_
+9-19	638-641	RoI	abstract[42]|abstract	giv[42]|new	coref	9-21[45_0]
+9-20	642-645	for	_	_	_	_
+9-21	646-650	each	abstract[45]	giv[45]	coref	10-4[0_45]
+9-22	651-661	foreground	abstract[45]	giv[45]	_	_
+9-23	662-665	RoI	abstract[45]	giv[45]	_	_
+9-24	666-667	.	_	_	_	_
+
+#Text=Two kinds of RoI features are , respectively , fed into PDB to predict classification and regression as the final detection results .
+10-1	668-671	Two	abstract[46]	new[46]	_	_
+10-2	672-677	kinds	abstract[46]	new[46]	_	_
+10-3	678-680	of	abstract[46]	new[46]	_	_
+10-4	681-684	RoI	abstract[46]|abstract|abstract[48]	new[46]|giv|giv[48]	coref	18-25[86_48]
+10-5	685-693	features	abstract[46]|abstract[48]	new[46]|giv[48]	_	_
+10-6	694-697	are	_	_	_	_
+10-7	698-699	,	_	_	_	_
+10-8	700-712	respectively	_	_	_	_
+10-9	713-714	,	_	_	_	_
+10-10	715-718	fed	_	_	_	_
+10-11	719-723	into	_	_	_	_
+10-12	724-727	PDB	abstract	new	_	_
+10-13	728-730	to	_	_	_	_
+10-14	731-738	predict	_	_	_	_
+10-15	739-753	classification	abstract	new	_	_
+10-16	754-757	and	_	_	_	_
+10-17	758-768	regression	abstract	new	_	_
+10-18	769-771	as	_	_	_	_
+10-19	772-775	the	abstract[53]	new[53]	_	_
+10-20	776-781	final	abstract[53]	new[53]	_	_
+10-21	782-791	detection	abstract|abstract[53]	giv|new[53]	coref	19-14[93_0]
+10-22	792-799	results	abstract[53]	new[53]	_	_
+10-23	800-801	.	_	_	_	_
+
+#Text=2.1.
+11-1	802-806	2.1.	abstract	new	_	_
+
+#Text=Enhanced Feature Extraction Subnet
+12-1	807-815	Enhanced	abstract[56]|person[57]	giv[56]|new[57]	_	_
+12-2	816-823	Feature	abstract|abstract[56]|person[57]	giv|giv[56]|new[57]	coref	14-7
+12-3	824-834	Extraction	abstract[56]|person[57]	giv[56]|new[57]	_	_
+12-4	835-841	Subnet	person[57]	new[57]	_	_
+
+#Text=Generally , FPN first builds the bottom-up layers by the feedforward computation of backbone ConvNet .
+13-1	842-851	Generally	_	_	_	_
+13-2	852-853	,	_	_	_	_
+13-3	854-857	FPN	abstract	giv	coref	14-3
+13-4	858-863	first	_	_	_	_
+13-5	864-870	builds	_	_	_	_
+13-6	871-874	the	abstract[59]	new[59]	_	_
+13-7	875-884	bottom-up	abstract[59]	new[59]	_	_
+13-8	885-891	layers	abstract[59]	new[59]	_	_
+13-9	892-894	by	_	_	_	_
+13-10	895-898	the	abstract[60]	new[60]	_	_
+13-11	899-910	feedforward	abstract[60]	new[60]	_	_
+13-12	911-922	computation	abstract[60]	new[60]	_	_
+13-13	923-925	of	abstract[60]	new[60]	_	_
+13-14	926-934	backbone	abstract[60]|abstract|abstract[62]	new[60]|new|new[62]	_	_
+13-15	935-942	ConvNet	abstract[60]|abstract[62]	new[60]|new[62]	_	_
+13-16	943-944	.	_	_	_	_
+
+#Text=Then , FPN constructs each top-down feature maps by element-wised adding the top-down feature maps of the last pyramid level with the bottom-up feature maps of the same pyramid level , which is shown in t
+14-1	945-949	Then	_	_	_	_
+14-2	950-951	,	_	_	_	_
+14-3	952-955	FPN	abstract	giv	coref	17-9
+14-4	956-966	constructs	_	_	_	_
+14-5	967-971	each	abstract[65]	new[65]	coref	14-12[67_65]
+14-6	972-980	top-down	abstract[65]	new[65]	_	_
+14-7	981-988	feature	abstract|abstract[65]	giv|new[65]	coref	14-14
+14-8	989-993	maps	abstract[65]	new[65]	_	_
+14-9	994-996	by	_	_	_	_
+14-10	997-1010	element-wised	_	_	_	_
+14-11	1011-1017	adding	_	_	_	_
+14-12	1018-1021	the	abstract[67]	giv[67]	coref	17-4[78_67]
+14-13	1022-1030	top-down	abstract[67]	giv[67]	_	_
+14-14	1031-1038	feature	abstract|abstract[67]	giv|giv[67]	coref	14-24
+14-15	1039-1043	maps	abstract[67]	giv[67]	_	_
+14-16	1044-1046	of	abstract[67]	giv[67]	_	_
+14-17	1047-1050	the	abstract[67]|abstract[69]	giv[67]|giv[69]	coref	14-27[73_69]
+14-18	1051-1055	last	abstract[67]|abstract[69]	giv[67]|giv[69]	_	_
+14-19	1056-1063	pyramid	abstract[67]|object|abstract[69]	giv[67]|giv|giv[69]	coref	14-29
+14-20	1064-1069	level	abstract[67]|abstract[69]	giv[67]|giv[69]	_	_
+14-21	1070-1074	with	abstract[67]	giv[67]	_	_
+14-22	1075-1078	the	abstract[67]|abstract[71]	giv[67]|new[71]	_	_
+14-23	1079-1088	bottom-up	abstract[67]|abstract[71]	giv[67]|new[71]	_	_
+14-24	1089-1096	feature	abstract[67]|abstract|abstract[71]	giv[67]|giv|new[71]	coref	17-5
+14-25	1097-1101	maps	abstract[67]|abstract[71]	giv[67]|new[71]	_	_
+14-26	1102-1104	of	abstract[67]|abstract[71]	giv[67]|new[71]	_	_
+14-27	1105-1108	the	abstract[67]|abstract[71]|abstract[73]	giv[67]|new[71]|giv[73]	coref	24-13[107_73]
+14-28	1109-1113	same	abstract[67]|abstract[71]|abstract[73]	giv[67]|new[71]|giv[73]	_	_
+14-29	1114-1121	pyramid	abstract[67]|abstract[71]|object|abstract[73]	giv[67]|new[71]|giv|giv[73]	coref	19-15
+14-30	1122-1127	level	abstract[67]|abstract[71]|abstract[73]	giv[67]|new[71]|giv[73]	_	_
+14-31	1128-1129	,	abstract[67]	giv[67]	_	_
+14-32	1130-1135	which	abstract[67]	giv[67]	_	_
+14-33	1136-1138	is	abstract[67]	giv[67]	_	_
+14-34	1139-1144	shown	abstract[67]	giv[67]	_	_
+14-35	1145-1147	in	abstract[67]	giv[67]	_	_
+14-36	1148-1149	t	abstract[67]|abstract	giv[67]|new	_	_
+
+#Text=Figure 2
+15-1	1150-1156	Figure	abstract[75]	new[75]	coref	22-1[100_75]
+15-2	1157-1158	2	abstract[75]	new[75]	_	_
+
+#Text=( left ) .
+16-1	1159-1160	(	_	_	_	_
+16-2	1161-1165	left	_	_	_	_
+16-3	1166-1167	)	_	_	_	_
+16-4	1168-1169	.	_	_	_	_
+
+#Text=The set of pyramidal feature maps built by FPN is .
+17-1	1170-1173	The	abstract[76]	new[76]	_	_
+17-2	1174-1177	set	abstract[76]	new[76]	_	_
+17-3	1178-1180	of	abstract[76]	new[76]	_	_
+17-4	1181-1190	pyramidal	abstract[76]|abstract[78]	new[76]|giv[78]	coref	18-8[82_78]
+17-5	1191-1198	feature	abstract[76]|abstract|abstract[78]	new[76]|giv|giv[78]	coref	18-10
+17-6	1199-1203	maps	abstract[76]|abstract[78]	new[76]|giv[78]	_	_
+17-7	1204-1209	built	abstract[76]|abstract[78]	new[76]|giv[78]	_	_
+17-8	1210-1212	by	abstract[76]|abstract[78]	new[76]|giv[78]	_	_
+17-9	1213-1216	FPN	abstract[76]|abstract[78]|abstract	new[76]|giv[78]|giv	ana	18-16
+17-10	1217-1219	is	_	_	_	_
+17-11	1220-1221	.	_	_	_	_
+
+#Text=Despite such a careful design for generating refined merged feature maps for different levels , it is not strong enough for the information of spatial and channel features to different scaled objects .
+18-1	1222-1229	Despite	_	_	_	_
+18-2	1230-1234	such	abstract[80]	new[80]	coref	29-1[151_80]
+18-3	1235-1236	a	abstract[80]	new[80]	_	_
+18-4	1237-1244	careful	abstract[80]	new[80]	_	_
+18-5	1245-1251	design	abstract[80]	new[80]	_	_
+18-6	1252-1255	for	abstract[80]	new[80]	_	_
+18-7	1256-1266	generating	abstract[80]	new[80]	_	_
+18-8	1267-1274	refined	abstract[80]|abstract[82]	new[80]|giv[82]	coref	19-9[90_82]
+18-9	1275-1281	merged	abstract[80]|abstract[82]	new[80]|giv[82]	_	_
+18-10	1282-1289	feature	abstract[80]|abstract|abstract[82]	new[80]|giv|giv[82]	coref	19-10
+18-11	1290-1294	maps	abstract[80]|abstract[82]	new[80]|giv[82]	_	_
+18-12	1295-1298	for	abstract[80]|abstract[82]	new[80]|giv[82]	_	_
+18-13	1299-1308	different	abstract[80]|abstract[82]|abstract[83]	new[80]|giv[82]|new[83]	_	_
+18-14	1309-1315	levels	abstract[80]|abstract[82]|abstract[83]	new[80]|giv[82]|new[83]	_	_
+18-15	1316-1317	,	_	_	_	_
+18-16	1318-1320	it	abstract	giv	coref	35-16
+18-17	1321-1323	is	_	_	_	_
+18-18	1324-1327	not	_	_	_	_
+18-19	1328-1334	strong	_	_	_	_
+18-20	1335-1341	enough	_	_	_	_
+18-21	1342-1345	for	_	_	_	_
+18-22	1346-1349	the	abstract[85]	new[85]	coref	34-12[0_85]
+18-23	1350-1361	information	abstract[85]	new[85]	_	_
+18-24	1362-1364	of	abstract[85]	new[85]	_	_
+18-25	1365-1372	spatial	abstract[85]|abstract[86]	new[85]|giv[86]	coref	24-31[113_86]
+18-26	1373-1376	and	abstract[85]|abstract[86]	new[85]|giv[86]	_	_
+18-27	1377-1384	channel	abstract[85]|abstract[86]	new[85]|giv[86]	_	_
+18-28	1385-1393	features	abstract[85]|abstract[86]	new[85]|giv[86]	_	_
+18-29	1394-1396	to	abstract[85]	new[85]	_	_
+18-30	1397-1406	different	abstract[85]|object[87]	new[85]|new[87]	_	_
+18-31	1407-1413	scaled	abstract[85]|object[87]	new[85]|new[87]	_	_
+18-32	1414-1421	objects	abstract[85]|object[87]	new[85]|new[87]	_	_
+18-33	1422-1423	.	_	_	_	_
+
+#Text=We hypothesize that both spatial-wise and channel-wise recalibrating merged feature maps can encourage current pyramid layer detection .
+19-1	1424-1426	We	person	giv	ana	20-3
+19-2	1427-1438	hypothesize	_	_	_	_
+19-3	1439-1443	that	_	_	_	_
+19-4	1444-1448	both	_	_	_	_
+19-5	1449-1461	spatial-wise	_	_	_	_
+19-6	1462-1465	and	_	_	_	_
+19-7	1466-1478	channel-wise	_	_	_	_
+19-8	1479-1492	recalibrating	_	_	_	_
+19-9	1493-1499	merged	abstract[90]	giv[90]	coref	24-9[105_90]
+19-10	1500-1507	feature	abstract|abstract[90]	giv|giv[90]	coref	20-8[97_0]
+19-11	1508-1512	maps	abstract[90]	giv[90]	_	_
+19-12	1513-1516	can	_	_	_	_
+19-13	1517-1526	encourage	_	_	_	_
+19-14	1527-1534	current	abstract[93]	giv[93]	_	_
+19-15	1535-1542	pyramid	object|abstract[92]|abstract[93]	giv|new[92]|giv[93]	coref|coref	20-9|39-32[204_92]
+19-16	1543-1548	layer	abstract[92]|abstract[93]	new[92]|giv[93]	_	_
+19-17	1549-1558	detection	abstract[93]	giv[93]	_	_
+19-18	1559-1560	.	_	_	_	_
+
+#Text=Hence , we propose FWM to enhance the pyramid feature .
+20-1	1561-1566	Hence	_	_	_	_
+20-2	1567-1568	,	_	_	_	_
+20-3	1569-1571	we	person	giv	ana	38-5
+20-4	1572-1579	propose	_	_	_	_
+20-5	1580-1583	FWM	abstract	giv	coref	21-4
+20-6	1584-1586	to	_	_	_	_
+20-7	1587-1594	enhance	_	_	_	_
+20-8	1595-1598	the	abstract[97]	giv[97]	coref	24-6[0_97]
+20-9	1599-1606	pyramid	object|abstract[97]	giv|giv[97]	coref	24-14
+20-10	1607-1614	feature	abstract[97]	giv[97]	_	_
+20-11	1615-1616	.	_	_	_	_
+
+#Text=The structure of FWM is shown in
+21-1	1617-1620	The	abstract[98]	new[98]	coref	25-10[117_98]
+21-2	1621-1630	structure	abstract[98]	new[98]	_	_
+21-3	1631-1633	of	abstract[98]	new[98]	_	_
+21-4	1634-1637	FWM	abstract[98]|abstract	new[98]|giv	coref	24-1
+21-5	1638-1640	is	_	_	_	_
+21-6	1641-1646	shown	_	_	_	_
+21-7	1647-1649	in	_	_	_	_
+
+#Text=Figure 2
+22-1	1650-1656	Figure	abstract[100]	giv[100]	_	_
+22-2	1657-1658	2	abstract[100]	giv[100]	_	_
+
+#Text=( right ) .
+23-1	1659-1660	(	_	_	_	_
+23-2	1661-1666	right	_	_	_	_
+23-3	1667-1668	)	_	_	_	_
+23-4	1669-1670	.	_	_	_	_
+
+#Text=FWM starts by modeling the feature dependency of the feature maps in each pyramid level , and further learns the feature importance vector to recalibrate the feature maps to emphasize the useful features .
+24-1	1671-1674	FWM	abstract	giv	coref	25-3[114_0]
+24-2	1675-1681	starts	_	_	_	_
+24-3	1682-1684	by	_	_	_	_
+24-4	1685-1693	modeling	_	_	_	_
+24-5	1694-1697	the	abstract[103]	new[103]	_	_
+24-6	1698-1705	feature	abstract|abstract[103]	giv|new[103]	coref	24-10
+24-7	1706-1716	dependency	abstract[103]	new[103]	_	_
+24-8	1717-1719	of	abstract[103]	new[103]	_	_
+24-9	1720-1723	the	abstract[103]|abstract[105]	new[103]|giv[105]	coref	24-26[112_105]
+24-10	1724-1731	feature	abstract[103]|abstract|abstract[105]	new[103]|giv|giv[105]	coref	24-21
+24-11	1732-1736	maps	abstract[103]|abstract[105]	new[103]|giv[105]	_	_
+24-12	1737-1739	in	abstract[103]|abstract[105]	new[103]|giv[105]	_	_
+24-13	1740-1744	each	abstract[103]|abstract[105]|abstract[107]	new[103]|giv[105]|giv[107]	coref	25-5[116_107]
+24-14	1745-1752	pyramid	abstract[103]|abstract[105]|object|abstract[107]	new[103]|giv[105]|giv|giv[107]	coref	25-6
+24-15	1753-1758	level	abstract[103]|abstract[105]|abstract[107]	new[103]|giv[105]|giv[107]	_	_
+24-16	1759-1760	,	_	_	_	_
+24-17	1761-1764	and	_	_	_	_
+24-18	1765-1772	further	_	_	_	_
+24-19	1773-1779	learns	_	_	_	_
+24-20	1780-1783	the	abstract[110]	new[110]	coref	27-5[141_110]
+24-21	1784-1791	feature	abstract|abstract[109]|abstract[110]	giv|new[109]|new[110]	coref|coref	24-27|27-6[140_109]
+24-22	1792-1802	importance	abstract[109]|abstract[110]	new[109]|new[110]	_	_
+24-23	1803-1809	vector	abstract[110]	new[110]	_	_
+24-24	1810-1812	to	_	_	_	_
+24-25	1813-1824	recalibrate	_	_	_	_
+24-26	1825-1828	the	abstract[112]	giv[112]	coref	28-3[146_112]
+24-27	1829-1836	feature	abstract|abstract[112]	giv|giv[112]	coref	25-24
+24-28	1837-1841	maps	abstract[112]	giv[112]	_	_
+24-29	1842-1844	to	_	_	_	_
+24-30	1845-1854	emphasize	_	_	_	_
+24-31	1855-1858	the	abstract[113]	giv[113]	coref	32-5[160_113]
+24-32	1859-1865	useful	abstract[113]	giv[113]	_	_
+24-33	1866-1874	features	abstract[113]	giv[113]	_	_
+24-34	1875-1876	.	_	_	_	_
+
+#Text=Specially , FWM in each pyramid level is in the same structure but has different learnable weights , which results in different calculated feature weights .
+25-1	1877-1886	Specially	_	_	_	_
+25-2	1887-1888	,	_	_	_	_
+25-3	1889-1892	FWM	abstract[114]	giv[114]	coref	26-1[121_114]
+25-4	1893-1895	in	abstract[114]	giv[114]	_	_
+25-5	1896-1900	each	abstract[114]|abstract[116]	giv[114]|giv[116]	coref	32-9[163_116]
+25-6	1901-1908	pyramid	abstract[114]|object|abstract[116]	giv[114]|giv|giv[116]	coref	32-10
+25-7	1909-1914	level	abstract[114]|abstract[116]	giv[114]|giv[116]	_	_
+25-8	1915-1917	is	_	_	_	_
+25-9	1918-1920	in	_	_	_	_
+25-10	1921-1924	the	abstract[117]	giv[117]	_	_
+25-11	1925-1929	same	abstract[117]	giv[117]	_	_
+25-12	1930-1939	structure	abstract[117]	giv[117]	_	_
+25-13	1940-1943	but	_	_	_	_
+25-14	1944-1947	has	_	_	_	_
+25-15	1948-1957	different	abstract[118]	new[118]	coref	25-22[120_118]
+25-16	1958-1967	learnable	abstract[118]	new[118]	_	_
+25-17	1968-1975	weights	abstract[118]	new[118]	_	_
+25-18	1976-1977	,	abstract[118]	new[118]	_	_
+25-19	1978-1983	which	abstract[118]	new[118]	_	_
+25-20	1984-1991	results	abstract[118]	new[118]	_	_
+25-21	1992-1994	in	abstract[118]	new[118]	_	_
+25-22	1995-2004	different	abstract[118]|abstract[120]	new[118]|giv[120]	_	_
+25-23	2005-2015	calculated	abstract[118]|abstract[120]	new[118]|giv[120]	_	_
+25-24	2016-2023	feature	abstract[118]|abstract|abstract[120]	new[118]|giv|giv[120]	coref	26-16
+25-25	2024-2031	weights	abstract[118]|abstract[120]	new[118]|giv[120]	_	_
+25-26	2032-2033	.	_	_	_	_
+
+#Text=Each FWM consists of three sub-modules : Feature Channel Weight Module ( FCWM ) , Feature Spatial Weight Module ( FSWM ) and Feature Channel Spatial Weight Module ( FCSWM ) .
+26-1	2034-2038	Each	abstract[121]	giv[121]	_	_
+26-2	2039-2042	FWM	abstract[121]	giv[121]	_	_
+26-3	2043-2051	consists	_	_	_	_
+26-4	2052-2054	of	_	_	_	_
+26-5	2055-2060	three	abstract[122]	new[122]	appos	26-16[130_122]
+26-6	2061-2072	sub-modules	abstract[122]	new[122]	_	_
+26-7	2073-2074	:	_	_	_	_
+26-8	2075-2082	Feature	abstract[123]|place[125]	new[123]|new[125]	coref|coref	26-25[0_123]|31-2[157_125]
+26-9	2083-2090	Channel	abstract[123]|place[125]	new[123]|new[125]	_	_
+26-10	2091-2097	Weight	person|place[125]	new|new[125]	_	_
+26-11	2098-2104	Module	place[125]	new[125]	_	_
+26-12	2105-2106	(	_	_	_	_
+26-13	2107-2111	FCWM	abstract	new	coref	27-1
+26-14	2112-2113	)	_	_	_	_
+26-15	2114-2115	,	_	_	_	_
+26-16	2116-2123	Feature	abstract|abstract[130]	giv|giv[130]	appos|coref	26-21[0_130]|26-24
+26-17	2124-2131	Spatial	abstract|abstract[129]|abstract[130]	new|new[129]|giv[130]	coref	26-24[134_129]
+26-18	2132-2138	Weight	abstract[129]|abstract[130]	new[129]|giv[130]	_	_
+26-19	2139-2145	Module	abstract[130]	giv[130]	_	_
+26-20	2146-2147	(	_	_	_	_
+26-21	2148-2152	FSWM	abstract	giv	appos	26-24[135_0]
+26-22	2153-2154	)	_	_	_	_
+26-23	2155-2158	and	_	_	_	_
+26-24	2159-2166	Feature	abstract|abstract[134]|abstract[135]	giv|giv[134]|giv[135]	appos|coref|coref	26-30[0_135]|27-6|31-2[156_134]
+26-25	2167-2174	Channel	abstract|abstract[134]|abstract[135]	giv|giv[134]|giv[135]	coref	27-10
+26-26	2175-2182	Spatial	abstract[134]|abstract[135]	giv[134]|giv[135]	_	_
+26-27	2183-2189	Weight	abstract[134]|abstract[135]	giv[134]|giv[135]	_	_
+26-28	2190-2196	Module	abstract[135]	giv[135]	_	_
+26-29	2197-2198	(	_	_	_	_
+26-30	2199-2204	FCSWM	abstract	giv	coref	27-3
+26-31	2205-2206	)	_	_	_	_
+26-32	2207-2208	.	_	_	_	_
+
+#Text=FCWM and FSWM calculate the feature importance vector along channel and spatial location .
+27-1	2209-2213	FCWM	abstract	giv	coref	28-9
+27-2	2214-2217	and	_	_	_	_
+27-3	2218-2222	FSWM	abstract	giv	coref	28-1
+27-4	2223-2232	calculate	_	_	_	_
+27-5	2233-2236	the	abstract[141]	giv[141]	coref	42-7[211_141]
+27-6	2237-2244	feature	abstract|abstract[140]|abstract[141]	giv|giv[140]|giv[141]	coref|coref	28-6|39-20[201_140]
+27-7	2245-2255	importance	abstract[140]|abstract[141]	giv[140]|giv[141]	_	_
+27-8	2256-2262	vector	abstract[141]	giv[141]	_	_
+27-9	2263-2268	along	abstract[141]	giv[141]	_	_
+27-10	2269-2276	channel	abstract[141]|abstract	giv[141]|giv	coref	31-2
+27-11	2277-2280	and	abstract[141]	giv[141]	_	_
+27-12	2281-2288	spatial	abstract[141]|abstract[143]	giv[141]|new[143]	coref	46-13[228_143]
+27-13	2289-2297	location	abstract[141]|abstract[143]	giv[141]|new[143]	_	_
+27-14	2298-2299	.	_	_	_	_
+
+#Text=FCSWM combines the recalibrated weighted feature maps after FCWM and FSWM as the new pyramidal feature maps .
+28-1	2300-2305	FCSWM	abstract	giv	coref	28-11
+28-2	2306-2314	combines	_	_	_	_
+28-3	2315-2318	the	abstract[146]	giv[146]	coref	28-13[150_146]
+28-4	2319-2331	recalibrated	abstract[146]	giv[146]	_	_
+28-5	2332-2340	weighted	abstract[146]	giv[146]	_	_
+28-6	2341-2348	feature	abstract|abstract[146]	giv|giv[146]	coref	28-16
+28-7	2349-2353	maps	abstract[146]	giv[146]	_	_
+28-8	2354-2359	after	abstract[146]	giv[146]	_	_
+28-9	2360-2364	FCWM	abstract[146]|abstract	giv[146]|giv	coref	31-6
+28-10	2365-2368	and	abstract[146]	giv[146]	_	_
+28-11	2369-2373	FSWM	abstract[146]|abstract	giv[146]|giv	coref	45-1[222_0]
+28-12	2374-2376	as	_	_	_	_
+28-13	2377-2380	the	abstract[150]	giv[150]	coref	34-15[177_150]
+28-14	2381-2384	new	abstract[150]	giv[150]	_	_
+28-15	2385-2394	pyramidal	abstract[150]	giv[150]	_	_
+28-16	2395-2402	feature	abstract|abstract[150]	giv|giv[150]	coref	34-15
+28-17	2403-2407	maps	abstract[150]	giv[150]	_	_
+28-18	2408-2409	.	_	_	_	_
+
+#Text=The detailed design of the three submodules are described in the following subsections .
+29-1	2410-2413	The	abstract[151]	giv[151]	_	_
+29-2	2414-2422	detailed	abstract[151]	giv[151]	_	_
+29-3	2423-2429	design	abstract[151]	giv[151]	_	_
+29-4	2430-2432	of	abstract[151]	giv[151]	_	_
+29-5	2433-2436	the	abstract[151]|abstract[152]	giv[151]|new[152]	_	_
+29-6	2437-2442	three	abstract[151]|abstract[152]	giv[151]|new[152]	_	_
+29-7	2443-2453	submodules	abstract[151]|abstract[152]	giv[151]|new[152]	_	_
+29-8	2454-2457	are	_	_	_	_
+29-9	2458-2467	described	_	_	_	_
+29-10	2468-2470	in	_	_	_	_
+29-11	2471-2474	the	abstract[153]	new[153]	_	_
+29-12	2475-2484	following	abstract[153]	new[153]	_	_
+29-13	2485-2496	subsections	abstract[153]	new[153]	_	_
+29-14	2497-2498	.	_	_	_	_
+
+#Text=2.1.1.
+30-1	2499-2505	2.1.1.	abstract	new	_	_
+
+#Text=Feature Channel Weight Module ( FCWM )
+31-1	2506-2513	Feature	_	_	_	_
+31-2	2514-2521	Channel	abstract|abstract[156]|place[157]	giv|giv[156]|giv[157]	coref|coref	32-7[161_0]|45-1[221_156]
+31-3	2522-2528	Weight	abstract[156]|place[157]	giv[156]|giv[157]	_	_
+31-4	2529-2535	Module	place[157]	giv[157]	_	_
+31-5	2536-2537	(	_	_	_	_
+31-6	2538-2542	FCWM	abstract	giv	coref	32-1
+31-7	2543-2544	)	_	_	_	_
+
+#Text=FCWM focuses on enhancing features along channel of each pyramid level .
+32-1	2545-2549	FCWM	abstract	giv	coref	33-1
+32-2	2550-2557	focuses	_	_	_	_
+32-3	2558-2560	on	_	_	_	_
+32-4	2561-2570	enhancing	_	_	_	_
+32-5	2571-2579	features	abstract[160]	giv[160]	coref	33-8[0_160]
+32-6	2580-2585	along	abstract[160]	giv[160]	_	_
+32-7	2586-2593	channel	abstract[160]|abstract[161]	giv[160]|giv[161]	coref	33-10[0_161]
+32-8	2594-2596	of	abstract[160]|abstract[161]	giv[160]|giv[161]	_	_
+32-9	2597-2601	each	abstract[160]|abstract[161]|abstract[163]	giv[160]|giv[161]|giv[163]	coref	34-18[179_163]
+32-10	2602-2609	pyramid	abstract[160]|abstract[161]|object|abstract[163]	giv[160]|giv[161]|giv|giv[163]	coref	34-19
+32-11	2610-2615	level	abstract[160]|abstract[161]|abstract[163]	giv[160]|giv[161]|giv[163]	_	_
+32-12	2616-2617	.	_	_	_	_
+
+#Text=FCWM first explicitly models the dependency of features along channel and learns a channel specific descriptor through the squeeze-and-excitation method .
+33-1	2618-2622	FCWM	abstract	giv	coref	46-6
+33-2	2623-2628	first	_	_	_	_
+33-3	2629-2639	explicitly	_	_	_	_
+33-4	2640-2646	models	_	_	_	_
+33-5	2647-2650	the	abstract[165]	new[165]	_	_
+33-6	2651-2661	dependency	abstract[165]	new[165]	_	_
+33-7	2662-2664	of	abstract[165]	new[165]	_	_
+33-8	2665-2673	features	abstract[165]|abstract	new[165]|giv	coref	46-10[227_0]
+33-9	2674-2679	along	abstract[165]	new[165]	_	_
+33-10	2680-2687	channel	abstract[165]|abstract	new[165]|giv	coref	33-14
+33-11	2688-2691	and	_	_	_	_
+33-12	2692-2698	learns	_	_	_	_
+33-13	2699-2700	a	abstract[169]	new[169]	_	_
+33-14	2701-2708	channel	abstract|abstract[169]	giv|new[169]	coref	37-4
+33-15	2709-2717	specific	abstract[169]	new[169]	_	_
+33-16	2718-2728	descriptor	abstract[169]	new[169]	_	_
+33-17	2729-2736	through	_	_	_	_
+33-18	2737-2740	the	abstract[171]	new[171]	ana	34-3[0_171]
+33-19	2741-2763	squeeze-and-excitation	place|abstract[171]	new|new[171]	_	_
+33-20	2764-2770	method	abstract[171]	new[171]	_	_
+33-21	2771-2772	.	_	_	_	_
+
+#Text=Then , it emphasizes the useful channels for more efficient global information expression of feature maps in each pyramid level .
+34-1	2773-2777	Then	_	_	_	_
+34-2	2778-2779	,	_	_	_	_
+34-3	2780-2782	it	abstract	giv	_	_
+34-4	2783-2793	emphasizes	_	_	_	_
+34-5	2794-2797	the	abstract[173]	new[173]	_	_
+34-6	2798-2804	useful	abstract[173]	new[173]	_	_
+34-7	2805-2813	channels	abstract[173]	new[173]	_	_
+34-8	2814-2817	for	abstract[173]	new[173]	_	_
+34-9	2818-2822	more	abstract[173]|abstract[175]	new[173]|new[175]	_	_
+34-10	2823-2832	efficient	abstract[173]|abstract[175]	new[173]|new[175]	_	_
+34-11	2833-2839	global	abstract[173]|abstract[175]	new[173]|new[175]	_	_
+34-12	2840-2851	information	abstract[173]|abstract|abstract[175]	new[173]|giv|new[175]	_	_
+34-13	2852-2862	expression	abstract[173]|abstract[175]	new[173]|new[175]	_	_
+34-14	2863-2865	of	abstract[173]|abstract[175]	new[173]|new[175]	_	_
+34-15	2866-2873	feature	abstract[173]|abstract[175]|abstract|abstract[177]	new[173]|new[175]|giv|giv[177]	coref|coref	35-3|35-2[181_177]
+34-16	2874-2878	maps	abstract[173]|abstract[175]|abstract[177]	new[173]|new[175]|giv[177]	_	_
+34-17	2879-2881	in	abstract[173]|abstract[175]|abstract[177]	new[173]|new[175]|giv[177]	_	_
+34-18	2882-2886	each	abstract[173]|abstract[175]|abstract[177]|abstract[179]	new[173]|new[175]|giv[177]|giv[179]	coref	35-6[183_179]
+34-19	2887-2894	pyramid	abstract[173]|abstract[175]|abstract[177]|object|abstract[179]	new[173]|new[175]|giv[177]|giv|giv[179]	coref	35-8
+34-20	2895-2900	level	abstract[173]|abstract[175]|abstract[177]|abstract[179]	new[173]|new[175]|giv[177]|giv[179]	_	_
+34-21	2901-2902	.	_	_	_	_
+
+#Text=Suppose the feature maps in n th pyramid level is , which is generated by FPN .
+35-1	2903-2910	Suppose	_	_	_	_
+35-2	2911-2914	the	abstract[181]	giv[181]	coref	55-2[270_181]
+35-3	2915-2922	feature	abstract|abstract[181]	giv|giv[181]	coref	37-1[188_0]
+35-4	2923-2927	maps	abstract[181]	giv[181]	_	_
+35-5	2928-2930	in	abstract[181]	giv[181]	_	_
+35-6	2931-2932	n	abstract[181]|abstract[183]	giv[181]|giv[183]	coref	46-16[230_183]
+35-7	2933-2935	th	abstract[181]|abstract[183]	giv[181]|giv[183]	_	_
+35-8	2936-2943	pyramid	abstract[181]|object|abstract[183]	giv[181]|giv|giv[183]	coref	43-15
+35-9	2944-2949	level	abstract[181]|abstract[183]	giv[181]|giv[183]	_	_
+35-10	2950-2952	is	_	_	_	_
+35-11	2953-2954	,	_	_	_	_
+35-12	2955-2960	which	_	_	_	_
+35-13	2961-2963	is	_	_	_	_
+35-14	2964-2973	generated	_	_	_	_
+35-15	2974-2976	by	_	_	_	_
+35-16	2977-2980	FPN	abstract	giv	_	_
+35-17	2981-2982	.	_	_	_	_
+
+#Text=and are the spatial height and width of , respectively .
+36-1	2983-2986	and	_	_	_	_
+36-2	2987-2990	are	_	_	_	_
+36-3	2991-2994	the	abstract[185]	new[185]	_	_
+36-4	2995-3002	spatial	abstract[185]	new[185]	_	_
+36-5	3003-3009	height	abstract[185]	new[185]	_	_
+36-6	3010-3013	and	_	_	_	_
+36-7	3014-3019	width	abstract[186]	new[186]	_	_
+36-8	3020-3022	of	abstract[186]	new[186]	_	_
+36-9	3023-3024	,	abstract[186]	new[186]	_	_
+36-10	3025-3037	respectively	abstract[186]	new[186]	_	_
+36-11	3038-3039	.	_	_	_	_
+
+#Text=The i th channel feature is .
+37-1	3040-3043	The	abstract[188]	giv[188]	coref	39-20[0_188]
+37-2	3044-3045	i	abstract[188]	giv[188]	_	_
+37-3	3046-3048	th	abstract[188]	giv[188]	_	_
+37-4	3049-3056	channel	abstract|abstract[188]	giv|giv[188]	coref	47-8
+37-5	3057-3064	feature	abstract[188]	giv[188]	_	_
+37-6	3065-3067	is	_	_	_	_
+37-7	3068-3069	.	_	_	_	_
+
+#Text=At the beginning , we do global average pooling on to get the global distribution response : ( 1 )
+38-1	3070-3072	At	_	_	_	_
+38-2	3073-3076	the	event[189]	new[189]	_	_
+38-3	3077-3086	beginning	event[189]	new[189]	_	_
+38-4	3087-3088	,	_	_	_	_
+38-5	3089-3091	we	person	giv	ana	39-1
+38-6	3092-3094	do	_	_	_	_
+38-7	3095-3101	global	abstract[191]|abstract[192]	new[191]|new[192]	_	_
+38-8	3102-3109	average	abstract[191]|abstract[192]	new[191]|new[192]	_	_
+38-9	3110-3117	pooling	abstract[192]	new[192]	_	_
+38-10	3118-3120	on	_	_	_	_
+38-11	3121-3123	to	_	_	_	_
+38-12	3124-3127	get	_	_	_	_
+38-13	3128-3131	the	abstract[194]	new[194]	_	_
+38-14	3132-3138	global	abstract[193]|abstract[194]	new[193]|new[194]	coref	39-14[198_193]
+38-15	3139-3151	distribution	abstract[193]|abstract[194]	new[193]|new[194]	_	_
+38-16	3152-3160	response	abstract[194]	new[194]	_	_
+38-17	3161-3162	:	_	_	_	_
+38-18	3163-3164	(	_	_	_	_
+38-19	3165-3166	1	_	_	_	_
+38-20	3167-3168	)	_	_	_	_
+
+#Text=We use two fully connected layers to map the non-linear correlation between all global distribution responses and obtain the feature importance vectors : ( 2 ) where is the weight of the first fully connected layer .
+39-1	3169-3171	We	person	giv	ana	42-3
+39-2	3172-3175	use	_	_	_	_
+39-3	3176-3179	two	abstract[196]	new[196]	_	_
+39-4	3180-3185	fully	abstract[196]	new[196]	_	_
+39-5	3186-3195	connected	abstract[196]	new[196]	_	_
+39-6	3196-3202	layers	abstract[196]	new[196]	_	_
+39-7	3203-3205	to	_	_	_	_
+39-8	3206-3209	map	_	_	_	_
+39-9	3210-3213	the	abstract[197]	new[197]	_	_
+39-10	3214-3224	non-linear	abstract[197]	new[197]	_	_
+39-11	3225-3236	correlation	abstract[197]	new[197]	_	_
+39-12	3237-3244	between	abstract[197]	new[197]	_	_
+39-13	3245-3248	all	abstract[197]|abstract[199]	new[197]|new[199]	_	_
+39-14	3249-3255	global	abstract[197]|abstract[198]|abstract[199]	new[197]|giv[198]|new[199]	_	_
+39-15	3256-3268	distribution	abstract[197]|abstract[198]|abstract[199]	new[197]|giv[198]|new[199]	_	_
+39-16	3269-3278	responses	abstract[197]|abstract[199]	new[197]|new[199]	_	_
+39-17	3279-3282	and	_	_	_	_
+39-18	3283-3289	obtain	_	_	_	_
+39-19	3290-3293	the	abstract[202]	new[202]	_	_
+39-20	3294-3301	feature	abstract|abstract[201]|abstract[202]	giv|giv[201]|new[202]	coref|coref	43-8[216_0]|48-19[0_201]
+39-21	3302-3312	importance	abstract[201]|abstract[202]	giv[201]|new[202]	_	_
+39-22	3313-3320	vectors	abstract[202]	new[202]	_	_
+39-23	3321-3322	:	abstract[202]	new[202]	_	_
+39-24	3323-3324	(	abstract[202]	new[202]	_	_
+39-25	3325-3326	2	abstract[202]	new[202]	_	_
+39-26	3327-3328	)	abstract[202]	new[202]	_	_
+39-27	3329-3334	where	abstract[202]|abstract[203]	new[202]|new[203]	_	_
+39-28	3335-3337	is	abstract[202]|abstract[203]	new[202]|new[203]	_	_
+39-29	3338-3341	the	abstract[202]|abstract[203]	new[202]|new[203]	_	_
+39-30	3342-3348	weight	abstract[202]|abstract[203]	new[202]|new[203]	_	_
+39-31	3349-3351	of	abstract[202]|abstract[203]	new[202]|new[203]	_	_
+39-32	3352-3355	the	abstract[202]|abstract[203]|abstract[204]	new[202]|new[203]|giv[204]	_	_
+39-33	3356-3361	first	abstract[202]|abstract[203]|abstract[204]	new[202]|new[203]|giv[204]	_	_
+39-34	3362-3367	fully	abstract[202]|abstract[203]|abstract[204]	new[202]|new[203]|giv[204]	_	_
+39-35	3368-3377	connected	abstract[202]|abstract[203]|abstract[204]	new[202]|new[203]|giv[204]	_	_
+39-36	3378-3383	layer	abstract[202]|abstract[203]|abstract[204]	new[202]|new[203]|giv[204]	_	_
+39-37	3384-3385	.	_	_	_	_
+
+#Text=is the weight of the second fully connected layer .
+40-1	3386-3388	is	_	_	_	_
+40-2	3389-3392	the	abstract[205]	new[205]	coref	42-8[0_205]
+40-3	3393-3399	weight	abstract[205]	new[205]	_	_
+40-4	3400-3402	of	abstract[205]	new[205]	_	_
+40-5	3403-3406	the	abstract[205]|abstract[206]	new[205]|new[206]	_	_
+40-6	3407-3413	second	abstract[205]|abstract[206]	new[205]|new[206]	_	_
+40-7	3414-3419	fully	abstract[205]|abstract[206]	new[205]|new[206]	_	_
+40-8	3420-3429	connected	abstract[205]|abstract[206]	new[205]|new[206]	_	_
+40-9	3430-3435	layer	abstract[205]|abstract[206]	new[205]|new[206]	_	_
+40-10	3436-3437	.	_	_	_	_
+
+#Text=represents the ReLU function .
+41-1	3438-3448	represents	_	_	_	_
+41-2	3449-3452	the	abstract[208]	new[208]	coref	42-16[213_208]
+41-3	3453-3457	ReLU	abstract|abstract[208]	new|new[208]	_	_
+41-4	3458-3466	function	abstract[208]	new[208]	_	_
+41-5	3467-3468	.	_	_	_	_
+
+#Text=Then , we normalize to as a weight vector : ( 3 ) where represents Sigmoid function .
+42-1	3469-3473	Then	_	_	_	_
+42-2	3474-3475	,	_	_	_	_
+42-3	3476-3478	we	person	giv	ana	43-3
+42-4	3479-3488	normalize	_	_	_	_
+42-5	3489-3491	to	_	_	_	_
+42-6	3492-3494	as	_	_	_	_
+42-7	3495-3496	a	abstract[211]	giv[211]	coref	48-17[245_211]
+42-8	3497-3503	weight	abstract|abstract[211]	giv|giv[211]	coref	43-5[215_0]
+42-9	3504-3510	vector	abstract[211]	giv[211]	_	_
+42-10	3511-3512	:	abstract[211]	giv[211]	_	_
+42-11	3513-3514	(	abstract[211]	giv[211]	_	_
+42-12	3515-3516	3	abstract[211]	giv[211]	_	_
+42-13	3517-3518	)	abstract[211]	giv[211]	_	_
+42-14	3519-3524	where	abstract[211]	giv[211]	_	_
+42-15	3525-3535	represents	abstract[211]	giv[211]	_	_
+42-16	3536-3543	Sigmoid	abstract[211]|object|abstract[213]	giv[211]|new|giv[213]	coref|coref	49-15|49-15[253_213]
+42-17	3544-3552	function	abstract[211]|abstract[213]	giv[211]|giv[213]	_	_
+42-18	3553-3554	.	_	_	_	_
+
+#Text=Finally , we assign the weight to the original feature and get the new pyramid feature after channel-wised recalibration : ( 4 )
+43-1	3555-3562	Finally	_	_	_	_
+43-2	3563-3564	,	_	_	_	_
+43-3	3565-3567	we	person	giv	ana	47-1
+43-4	3568-3574	assign	_	_	_	_
+43-5	3575-3578	the	abstract[215]	giv[215]	coref	48-25[248_215]
+43-6	3579-3585	weight	abstract[215]	giv[215]	_	_
+43-7	3586-3588	to	_	_	_	_
+43-8	3589-3592	the	abstract[216]	giv[216]	coref	43-13[218_216]
+43-9	3593-3601	original	abstract[216]	giv[216]	_	_
+43-10	3602-3609	feature	abstract[216]	giv[216]	_	_
+43-11	3610-3613	and	_	_	_	_
+43-12	3614-3617	get	_	_	_	_
+43-13	3618-3621	the	abstract[218]	giv[218]	coref	47-12[0_218]
+43-14	3622-3625	new	abstract[218]	giv[218]	_	_
+43-15	3626-3633	pyramid	object|abstract[218]	giv|giv[218]	coref	46-17
+43-16	3634-3641	feature	abstract[218]	giv[218]	_	_
+43-17	3642-3647	after	_	_	_	_
+43-18	3648-3661	channel-wised	event[219]	new[219]	_	_
+43-19	3662-3675	recalibration	event[219]	new[219]	_	_
+43-20	3676-3677	:	_	_	_	_
+43-21	3678-3679	(	_	_	_	_
+43-22	3680-3681	4	_	_	_	_
+43-23	3682-3683	)	_	_	_	_
+
+#Text=2.1.2.
+44-1	3684-3690	2.1.2.	abstract	new	_	_
+
+#Text=Feature Spatial Weight Module ( FSWM )
+45-1	3691-3698	Feature	abstract[221]|abstract[222]	giv[221]|giv[222]	coref|coref	45-6[0_222]|52-1[259_221]
+45-2	3699-3706	Spatial	abstract[221]|abstract[222]	giv[221]|giv[222]	_	_
+45-3	3707-3713	Weight	abstract[221]|abstract[222]	giv[221]|giv[222]	_	_
+45-4	3714-3720	Module	abstract[222]	giv[222]	_	_
+45-5	3721-3722	(	_	_	_	_
+45-6	3723-3727	FSWM	abstract	giv	coref	46-8
+45-7	3728-3729	)	_	_	_	_
+
+#Text=Similar to the design of FCWM , FSWM enhances the features along spatial location of each pyramid level , which emphasizes the effective pixels and depresses the ineffective or low-effect pixels .
+46-1	3730-3737	Similar	_	_	_	_
+46-2	3738-3740	to	_	_	_	_
+46-3	3741-3744	the	abstract[224]	new[224]	_	_
+46-4	3745-3751	design	abstract[224]	new[224]	_	_
+46-5	3752-3754	of	abstract[224]	new[224]	_	_
+46-6	3755-3759	FCWM	abstract[224]|abstract	new[224]|giv	coref	53-8
+46-7	3760-3761	,	_	_	_	_
+46-8	3762-3766	FSWM	abstract	giv	coref	52-1[260_0]
+46-9	3767-3775	enhances	_	_	_	_
+46-10	3776-3779	the	abstract[227]	giv[227]	coref	47-7[236_227]
+46-11	3780-3788	features	abstract[227]	giv[227]	_	_
+46-12	3789-3794	along	abstract[227]	giv[227]	_	_
+46-13	3795-3802	spatial	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-14	3803-3811	location	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-15	3812-3814	of	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-16	3815-3819	each	abstract[227]|abstract[228]|abstract[230]	giv[227]|giv[228]|giv[230]	_	_
+46-17	3820-3827	pyramid	abstract[227]|abstract[228]|object|abstract[230]	giv[227]|giv[228]|giv|giv[230]	coref	56-9
+46-18	3828-3833	level	abstract[227]|abstract[228]|abstract[230]	giv[227]|giv[228]|giv[230]	_	_
+46-19	3834-3835	,	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-20	3836-3841	which	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-21	3842-3852	emphasizes	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-22	3853-3856	the	abstract[227]|abstract[228]|abstract[231]	giv[227]|giv[228]|new[231]	_	_
+46-23	3857-3866	effective	abstract[227]|abstract[228]|abstract[231]	giv[227]|giv[228]|new[231]	_	_
+46-24	3867-3873	pixels	abstract[227]|abstract[228]|abstract[231]	giv[227]|giv[228]|new[231]	_	_
+46-25	3874-3877	and	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-26	3878-3887	depresses	abstract[227]|abstract[228]	giv[227]|giv[228]	_	_
+46-27	3888-3891	the	abstract[227]|abstract[228]|abstract[232]	giv[227]|giv[228]|new[232]	_	_
+46-28	3892-3903	ineffective	abstract[227]|abstract[228]|abstract[232]	giv[227]|giv[228]|new[232]	_	_
+46-29	3904-3906	or	abstract[227]|abstract[228]|abstract[232]	giv[227]|giv[228]|new[232]	_	_
+46-30	3907-3917	low-effect	abstract[227]|abstract[228]|abstract[232]	giv[227]|giv[228]|new[232]	_	_
+46-31	3918-3924	pixels	abstract[227]|abstract[228]|abstract[232]	giv[227]|giv[228]|new[232]	_	_
+46-32	3925-3926	.	_	_	_	_
+
+#Text=We define as the clipping of all channel features at each feature point of .
+47-1	3927-3929	We	person	giv	ana	48-3
+47-2	3930-3936	define	_	_	_	_
+47-3	3937-3939	as	_	_	_	_
+47-4	3940-3943	the	abstract[234]	new[234]	_	_
+47-5	3944-3952	clipping	abstract[234]	new[234]	_	_
+47-6	3953-3955	of	abstract[234]	new[234]	_	_
+47-7	3956-3959	all	abstract[234]|abstract[236]	new[234]|giv[236]	coref	48-5[240_236]
+47-8	3960-3967	channel	abstract[234]|abstract|abstract[236]	new[234]|giv|giv[236]	coref	52-2
+47-9	3968-3976	features	abstract[234]|abstract[236]	new[234]|giv[236]	_	_
+47-10	3977-3979	at	_	_	_	_
+47-11	3980-3984	each	abstract[238]	new[238]	coref	48-9[241_238]
+47-12	3985-3992	feature	abstract|abstract[238]	giv|new[238]	coref	50-14[256_0]
+47-13	3993-3998	point	abstract[238]	new[238]	_	_
+47-14	3999-4001	of	abstract[238]	new[238]	_	_
+47-15	4002-4003	.	_	_	_	_
+
+#Text=First , we integrate all the features of each point through a convolution operation to get the spatial importance vector : ( 5 ) where is the convolution kernel weight .
+48-1	4004-4009	First	_	_	_	_
+48-2	4010-4011	,	_	_	_	_
+48-3	4012-4014	we	person	giv	ana	49-3
+48-4	4015-4024	integrate	_	_	_	_
+48-5	4025-4028	all	abstract[240]	giv[240]	coref	56-6[275_240]
+48-6	4029-4032	the	abstract[240]	giv[240]	_	_
+48-7	4033-4041	features	abstract[240]	giv[240]	_	_
+48-8	4042-4044	of	abstract[240]	giv[240]	_	_
+48-9	4045-4049	each	abstract[240]|abstract[241]	giv[240]|giv[241]	_	_
+48-10	4050-4055	point	abstract[240]|abstract[241]	giv[240]|giv[241]	_	_
+48-11	4056-4063	through	_	_	_	_
+48-12	4064-4065	a	event[243]	new[243]	coref	54-1[267_243]
+48-13	4066-4077	convolution	abstract|event[243]	new|new[243]	coref	48-28
+48-14	4078-4087	operation	event[243]	new[243]	_	_
+48-15	4088-4090	to	_	_	_	_
+48-16	4091-4094	get	_	_	_	_
+48-17	4095-4098	the	abstract[245]	giv[245]	coref	49-7[251_245]
+48-18	4099-4106	spatial	abstract[245]	giv[245]	_	_
+48-19	4107-4117	importance	abstract|abstract[245]	giv|giv[245]	_	_
+48-20	4118-4124	vector	abstract[245]	giv[245]	_	_
+48-21	4125-4126	:	abstract[245]	giv[245]	_	_
+48-22	4127-4128	(	abstract[245]	giv[245]	_	_
+48-23	4129-4130	5	abstract[245]	giv[245]	_	_
+48-24	4131-4132	)	abstract[245]	giv[245]	_	_
+48-25	4133-4138	where	abstract[245]|abstract[248]	giv[245]|giv[248]	coref	49-8[0_248]
+48-26	4139-4141	is	abstract[245]|abstract[248]	giv[245]|giv[248]	_	_
+48-27	4142-4145	the	abstract[245]|abstract[248]	giv[245]|giv[248]	_	_
+48-28	4146-4157	convolution	abstract[245]|abstract|abstract[247]|abstract[248]	giv[245]|giv|new[247]|giv[248]	_	_
+48-29	4158-4164	kernel	abstract[245]|abstract[247]|abstract[248]	giv[245]|new[247]|giv[248]	_	_
+48-30	4165-4171	weight	abstract[245]|abstract[248]	giv[245]|giv[248]	_	_
+48-31	4172-4173	.	_	_	_	_
+
+#Text=Then , we normalize to as a weight vector ( 6 ) where represents Sigmoid function .
+49-1	4174-4178	Then	_	_	_	_
+49-2	4179-4180	,	_	_	_	_
+49-3	4181-4183	we	person	giv	ana	56-4
+49-4	4184-4193	normalize	_	_	_	_
+49-5	4194-4196	to	_	_	_	_
+49-6	4197-4199	as	_	_	_	_
+49-7	4200-4201	a	abstract[251]	giv[251]	_	_
+49-8	4202-4208	weight	abstract|abstract[251]	giv|giv[251]	_	_
+49-9	4209-4215	vector	abstract[251]	giv[251]	_	_
+49-10	4216-4217	(	abstract[251]	giv[251]	_	_
+49-11	4218-4219	6	abstract[251]	giv[251]	_	_
+49-12	4220-4221	)	abstract[251]	giv[251]	_	_
+49-13	4222-4227	where	abstract[251]	giv[251]	_	_
+49-14	4228-4238	represents	abstract[251]	giv[251]	_	_
+49-15	4239-4246	Sigmoid	abstract[251]|object|abstract[253]	giv[251]|giv|giv[253]	_	_
+49-16	4247-4255	function	abstract[251]|abstract[253]	giv[251]|giv[253]	_	_
+49-17	4256-4257	.	_	_	_	_
+
+#Text=Finally , the normalized weights are spatially weighted to each pixel to get the new feature : ( 7 )
+50-1	4258-4265	Finally	_	_	_	_
+50-2	4266-4267	,	_	_	_	_
+50-3	4268-4271	the	abstract[254]	new[254]	_	_
+50-4	4272-4282	normalized	abstract[254]	new[254]	_	_
+50-5	4283-4290	weights	abstract[254]	new[254]	_	_
+50-6	4291-4294	are	_	_	_	_
+50-7	4295-4304	spatially	_	_	_	_
+50-8	4305-4313	weighted	_	_	_	_
+50-9	4314-4316	to	_	_	_	_
+50-10	4317-4321	each	abstract[255]	new[255]	_	_
+50-11	4322-4327	pixel	abstract[255]	new[255]	_	_
+50-12	4328-4330	to	_	_	_	_
+50-13	4331-4334	get	_	_	_	_
+50-14	4335-4338	the	abstract[256]	giv[256]	coref	53-18[265_256]
+50-15	4339-4342	new	abstract[256]	giv[256]	_	_
+50-16	4343-4350	feature	abstract[256]	giv[256]	_	_
+50-17	4351-4352	:	_	_	_	_
+50-18	4353-4354	(	_	_	_	_
+50-19	4355-4356	7	_	_	_	_
+50-20	4357-4358	)	_	_	_	_
+
+#Text=2.1.3.
+51-1	4359-4365	2.1.3.	abstract	new	_	_
+
+#Text=Feature Channel Spatial Weight Module ( FCSWM )
+52-1	4366-4373	Feature	abstract[259]|abstract[260]	giv[259]|giv[260]	coref	52-7[0_260]
+52-2	4374-4381	Channel	abstract|abstract[259]|abstract[260]	giv|giv[259]|giv[260]	_	_
+52-3	4382-4389	Spatial	abstract[259]|abstract[260]	giv[259]|giv[260]	_	_
+52-4	4390-4396	Weight	abstract[259]|abstract[260]	giv[259]|giv[260]	_	_
+52-5	4397-4403	Module	abstract[260]	giv[260]	_	_
+52-6	4404-4405	(	_	_	_	_
+52-7	4406-4411	FCSWM	abstract	giv	coref	53-1
+52-8	4412-4413	)	_	_	_	_
+
+#Text=FCSWM combines the channel-wised weighted obtained by FCWM and the spatially weighted obtained by FSWM to generate a new recalibrated feature .
+53-1	4414-4419	FCSWM	abstract	giv	coref	53-15
+53-2	4420-4428	combines	_	_	_	_
+53-3	4429-4432	the	_	_	_	_
+53-4	4433-4446	channel-wised	_	_	_	_
+53-5	4447-4455	weighted	_	_	_	_
+53-6	4456-4464	obtained	_	_	_	_
+53-7	4465-4467	by	_	_	_	_
+53-8	4468-4472	FCWM	abstract	giv	_	_
+53-9	4473-4476	and	_	_	_	_
+53-10	4477-4480	the	_	_	_	_
+53-11	4481-4490	spatially	_	_	_	_
+53-12	4491-4499	weighted	_	_	_	_
+53-13	4500-4508	obtained	_	_	_	_
+53-14	4509-4511	by	_	_	_	_
+53-15	4512-4516	FSWM	abstract	giv	_	_
+53-16	4517-4519	to	_	_	_	_
+53-17	4520-4528	generate	_	_	_	_
+53-18	4529-4530	a	abstract[265]	giv[265]	coref	55-3[0_265]
+53-19	4531-4534	new	abstract[265]	giv[265]	_	_
+53-20	4535-4547	recalibrated	abstract[265]	giv[265]	_	_
+53-21	4548-4555	feature	abstract[265]	giv[265]	_	_
+53-22	4556-4557	.	_	_	_	_
+
+#Text=The combination operation is implemented by addition : ( 8 )
+54-1	4558-4561	The	event[267]	giv[267]	_	_
+54-2	4562-4573	combination	abstract|event[267]	new|giv[267]	_	_
+54-3	4574-4583	operation	event[267]	giv[267]	_	_
+54-4	4584-4586	is	_	_	_	_
+54-5	4587-4598	implemented	_	_	_	_
+54-6	4599-4601	by	_	_	_	_
+54-7	4602-4610	addition	abstract	new	_	_
+54-8	4611-4612	:	_	_	_	_
+54-9	4613-4614	(	_	_	_	_
+54-10	4615-4616	8	_	_	_	_
+54-11	4617-4618	)	_	_	_	_
+
+#Text=encourages original feature maps to be both spatial-wise and channel-wise more informative .
+55-1	4619-4629	encourages	_	_	_	_
+55-2	4630-4638	original	abstract[270]	giv[270]	_	_
+55-3	4639-4646	feature	abstract|abstract[270]	giv|giv[270]	coref	56-8
+55-4	4647-4651	maps	abstract[270]	giv[270]	_	_
+55-5	4652-4654	to	_	_	_	_
+55-6	4655-4657	be	_	_	_	_
+55-7	4658-4662	both	_	_	_	_
+55-8	4663-4675	spatial-wise	_	_	_	_
+55-9	4676-4679	and	_	_	_	_
+55-10	4680-4692	channel-wise	_	_	_	_
+55-11	4693-4697	more	_	_	_	_
+55-12	4698-4709	informative	_	_	_	_
+55-13	4710-4711	.	_	_	_	_
+
+#Text=In EFPN , we replace the initial feature pyramid features by the recalibrated enhanced pyramid features as the input feature of proposal extraction subnet and detection subnet .
+56-1	4712-4714	In	_	_	_	_
+56-2	4715-4719	EFPN	abstract	giv	_	_
+56-3	4720-4721	,	_	_	_	_
+56-4	4722-4724	we	person	giv	_	_
+56-5	4725-4732	replace	_	_	_	_
+56-6	4733-4736	the	abstract[275]	giv[275]	coref	56-12[277_275]
+56-7	4737-4744	initial	abstract[275]	giv[275]	_	_
+56-8	4745-4752	feature	abstract|abstract[275]	giv|giv[275]	_	_
+56-9	4753-4760	pyramid	object|abstract[275]	giv|giv[275]	coref	56-15
+56-10	4761-4769	features	abstract[275]	giv[275]	_	_
+56-11	4770-4772	by	_	_	_	_
+56-12	4773-4776	the	abstract[277]	giv[277]	_	_
+56-13	4777-4789	recalibrated	abstract[277]	giv[277]	_	_
+56-14	4790-4798	enhanced	abstract[277]	giv[277]	_	_
+56-15	4799-4806	pyramid	object|abstract[277]	giv|giv[277]	_	_
+56-16	4807-4815	features	abstract[277]	giv[277]	_	_
+56-17	4816-4818	as	_	_	_	_
+56-18	4819-4822	the	abstract[279]	new[279]	_	_
+56-19	4823-4828	input	abstract|abstract[279]	new|new[279]	_	_
+56-20	4829-4836	feature	abstract[279]	new[279]	_	_
+56-21	4837-4839	of	abstract[279]	new[279]	_	_
+56-22	4840-4848	proposal	abstract[279]|abstract|place[281]|abstract[282]	new[279]|new|new[281]|new[282]	_	_
+56-23	4849-4859	extraction	abstract[279]|place[281]|abstract[282]	new[279]|new[281]|new[282]	_	_
+56-24	4860-4866	subnet	abstract[279]|abstract[282]	new[279]|new[282]	_	_
+56-25	4867-4870	and	abstract[279]	new[279]	_	_
+56-26	4871-4880	detection	abstract[279]|abstract|abstract[284]	new[279]|new|new[284]	_	_
+56-27	4881-4887	subnet	abstract[279]|abstract[284]	new[279]|new[284]	_	_
+56-28	4888-4889	.	_	_	_	_

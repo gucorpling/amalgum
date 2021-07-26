@@ -1,0 +1,147 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1002" relname="preparation">Recently , due to the rapid increase in sensor devices ,</segment>
+<segment id="3" parent="1003" relname="preparation">a large amount of reliable data transmission has required the use of limited energy .</segment>
+<segment id="4" parent="1004" relname="span">Thus , it is urgent to develop a protocol</segment>
+<segment id="5" parent="1005" relname="span">that efficiently processes data with a high amount of devices and energy in the Internet of Things</segment>
+<segment id="6" parent="5" relname="elaboration">( IoT ) environment .</segment>
+<segment id="7" parent="1007" relname="span">IoT devices are mostly occupied by sensor networks</segment>
+<segment id="8" parent="7" relname="elaboration">that require minimum energy consumption and low transfer delay .</segment>
+<segment id="9" parent="1009" relname="preparation">These devices should be able to transmit data as efficiently as possible .</segment>
+<segment id="10" parent="1011" relname="span">In wireless sensor networks</segment>
+<segment id="11" parent="10" relname="elaboration">( WSNs ) ,</segment>
+<segment id="12" parent="1012" relname="contrast">heavy traffic occurs ,</segment>
+<segment id="13" parent="1013" relname="joint">or data rapidly change , for a short period ,</segment>
+<segment id="14" parent="1013" relname="joint">and it is also frequently lost .</segment>
+<segment id="15" parent="1015" relname="span">Therefore , research efforts</segment>
+<segment id="16" parent="1016" relname="span">to reduce transmission delay</segment>
+<segment id="17" parent="16" relname="means">by minimizing energy consumption for devices in WSNs or IoT environments .</segment>
+<segment id="18" parent="1018" relname="span">Typical techniques</segment>
+<segment id="19" parent="18" relname="elaboration">used in the research are duty-cycling .</segment>
+<segment id="20" parent="1020" relname="span">Duty-cycling technology supports periodic switching to listen and sleep modes</segment>
+<segment id="21" parent="1021" relname="span">to reduce energy consumption</segment>
+<segment id="22" parent="21" relname="circumstance">when events occur for IoT devices .</segment>
+<segment id="23" parent="1024" relname="span">Listen mode consumes less power than other protocols</segment>
+<segment id="24" parent="23" relname="elaboration">that consume power for communication</segment>
+<segment id="25" parent="1023" relname="contrast">but do not consume energy in sleep mode .</segment>
+<segment id="26" parent="1026" relname="span">In a WSN , the duty-cycle MAC protocol is divided into a sleep interval and a listening interval ,</segment>
+<segment id="27" parent="1027" relname="span">which can monitor and collect data with less energy</segment>
+<segment id="28" parent="27" relname="circumstance">when events occur .</segment>
+<segment id="29" parent="1009" relname="joint">It is possible to detect events</segment>
+<segment id="30" parent="1030" relname="span">and collect data in various environments</segment>
+<segment id="31" parent="30" relname="means">by sending information on electricity , water , or gas to users .</segment>
+<segment id="32" parent="1032" relname="span">Reliable data collection and detection is crucial for data transmission with minimum energy and delay</segment>
+<segment id="33" parent="1033" relname="span">because data must be transmitted without delay in the event of fire in areas</segment>
+<segment id="34" parent="33" relname="elaboration">where it is difficult to replace batteries .</segment>
+<segment id="35" parent="1035" relname="span">However , the periodic switching mode changes to the listen mode for communication</segment>
+<segment id="36" parent="1036" relname="span">even</segment>
+<segment id="37" parent="36" relname="circumstance">when there is no event .</segment>
+<segment id="38" parent="1034" relname="joint">This results in an unnecessary wastage of energy .</segment>
+<segment id="39" parent="1040" relname="joint">Data transmission in an environment with traffic congestion causes problems of transmission delay ,</segment>
+<segment id="40" parent="1040" relname="joint">and the entire service life of the application is shortened due to the collision .</segment>
+<segment id="41" parent="1043" relname="span">Thus , the use of the existing duty-cycle</segment>
+<segment id="42" parent="41" relname="elaboration">( DC )</segment>
+<segment id="43" parent="1042" relname="same_unit">MAC protocol is not suitable .</segment>
+<segment id="44" parent="1045" relname="span">Therefore , it is necessary to develop a protocol for effective event detection and data collection</segment>
+<segment id="45" parent="44" relname="elaboration">considering various traffic conditions .</segment>
+<segment id="46" parent="1046" relname="same_unit">For example ,</segment>
+<segment id="47" parent="1049" relname="span">if the total number of wake-ups</segment>
+<segment id="48" parent="47" relname="purpose">to listen to an application</segment>
+<segment id="49" parent="1048" relname="same_unit">is determined ,</segment>
+<segment id="50" parent="1050" relname="span">the existing duty-cycle MAC occurs</segment>
+<segment id="51" parent="1051" relname="span">irrespective of the congestion</segment>
+<segment id="52" parent="51" relname="elaboration">occurring at the time of the traffic .</segment>
+<segment id="53" parent="1053" relname="span">This reduces data collisions and transmission delays</segment>
+<segment id="54" parent="53" relname="condition">if the receiver wakes up frequently only at times in heavy traffic .</segment>
+<segment id="55" parent="1055" relname="span">The proposed algorithm increases the number of wake-up times</segment>
+<segment id="56" parent="1056" relname="joint">by reducing the sleep time of the receiver at the peak traffic time</segment>
+<segment id="57" parent="1056" relname="joint">and reduces the number of wake-up in the opposite case .</segment>
+<segment id="58" parent="1034" relname="joint">This demonstrates reduced energy consumption .</segment>
+<segment id="59" parent="1059" relname="span">This paper proposes a new duty-cycle based MAC protocol</segment>
+<segment id="60" parent="59" relname="elaboration">suitable for congested WSNs and IoT .</segment>
+<segment id="61" parent="1063" relname="attribution">According to the degree of network traffic congestion ,</segment>
+<segment id="62" parent="1064" relname="span">the duty-cycle ratio of the receiver and the contention window size information of the senders are broadcast through E-ACK</segment>
+<segment id="63" parent="62" relname="elaboration">( Early Acknowledgment ) ,</segment>
+<segment id="64" parent="1064" relname="elaboration">which reduces the transmission latency and waste of energy .</segment>
+<segment id="65" parent="1066" relname="span">The composition of the paper is described in detail in Section 1 ,</segment>
+<segment id="66" parent="65" relname="elaboration">followed by a summary of related work in Section 2 .</segment>
+<segment id="67" parent="1067" relname="span">Section 3 proposes the operation procedure of the MAC layer .</segment>
+<segment id="68" parent="1068" relname="span">In Section 4 , mathematical modeling is performed</segment>
+<segment id="69" parent="68" relname="purpose">to predict the proposed algorithm and performance .</segment>
+<segment id="70" parent="1069" relname="sequence">In Section 5 , we compare the performance of the proposed algorithm with the energy consumption and average service latency .</segment>
+<segment id="71" parent="1069" relname="sequence">Finally , Section 6 presents conclusions and future research topics .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="1003" relname="joint"/>
+<group id="1005" type="span" parent="4" relname="elaboration"/>
+<group id="1007" type="span" parent="1003" relname="joint"/>
+<group id="1008" type="span" parent="1003" relname="joint"/>
+<group id="1009" type="multinuc" parent="1008" relname="span"/>
+<group id="1010" type="multinuc" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="same_unit"/>
+<group id="1012" type="multinuc" parent="1010" relname="same_unit"/>
+<group id="1013" type="multinuc" parent="1012" relname="contrast"/>
+<group id="1015" type="span" parent="1009" relname="joint"/>
+<group id="1016" type="span" parent="15" relname="purpose"/>
+<group id="1018" type="span" parent="1009" relname="joint"/>
+<group id="1020" type="span" parent="1009" relname="joint"/>
+<group id="1021" type="span" parent="20" relname="purpose"/>
+<group id="1023" type="multinuc" parent="1009" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="contrast"/>
+<group id="1026" type="span" parent="1009" relname="joint"/>
+<group id="1027" type="span" parent="26" relname="elaboration"/>
+<group id="1030" type="span" parent="1009" relname="joint"/>
+<group id="1031" type="multinuc" parent="1009" relname="joint"/>
+<group id="1032" type="span" parent="1031" relname="contrast"/>
+<group id="1033" type="span" parent="32" relname="cause"/>
+<group id="1034" type="multinuc" parent="1031" relname="contrast"/>
+<group id="1035" type="span" parent="1034" relname="joint"/>
+<group id="1036" type="span" parent="35" relname="concession"/>
+<group id="1039" type="span" parent="1034" relname="joint"/>
+<group id="1040" type="multinuc" parent="1039" relname="span"/>
+<group id="1041" type="span" parent="1040" relname="elaboration"/>
+<group id="1042" type="multinuc" parent="1041" relname="span"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="span" parent="1042" relname="elaboration"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="multinuc" parent="1045" relname="elaboration"/>
+<group id="1047" type="span" parent="1046" relname="same_unit"/>
+<group id="1048" type="multinuc" parent="1050" relname="condition"/>
+<group id="1049" type="span" parent="1048" relname="same_unit"/>
+<group id="1050" type="span" parent="1047" relname="span"/>
+<group id="1051" type="span" parent="50" relname="concession"/>
+<group id="1053" type="span" parent="1034" relname="joint"/>
+<group id="1055" type="span" parent="1034" relname="joint"/>
+<group id="1056" type="multinuc" parent="55" relname="means"/>
+<group id="1059" type="span" parent="1034" relname="joint"/>
+<group id="1061" type="span" parent="1034" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="span"/>
+<group id="1063" type="span" parent="1062" relname="span"/>
+<group id="1064" type="span" parent="1063" relname="span"/>
+<group id="1065" type="span" parent="1062" relname="elaboration"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="elaboration"/>
+<group id="1068" type="span" parent="67" relname="elaboration"/>
+<group id="1069" type="multinuc" parent="1034" relname="joint"/>
+	</body>
+</rst>

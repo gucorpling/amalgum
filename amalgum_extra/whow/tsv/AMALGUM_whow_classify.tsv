@@ -1,0 +1,790 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Classify Stars
+1-1	0-8	Classify	_	_	_	_
+1-2	9-14	Stars	person	new	ana	4-1
+
+#Text=Every star is different .
+2-1	15-20	Every	object[2]	new[2]	ana	3-1[0_2]
+2-2	21-25	star	object[2]	new[2]	_	_
+2-3	26-28	is	_	_	_	_
+2-4	29-38	different	_	_	_	_
+2-5	39-40	.	_	_	_	_
+
+#Text=Some are big , some small , some hot , some cold .
+3-1	41-45	Some	object	giv	coref	5-7[7_0]
+3-2	46-49	are	_	_	_	_
+3-3	50-53	big	_	_	_	_
+3-4	54-55	,	_	_	_	_
+3-5	56-60	some	_	_	_	_
+3-6	61-66	small	_	_	_	_
+3-7	67-68	,	_	_	_	_
+3-8	69-73	some	_	_	_	_
+3-9	74-77	hot	_	_	_	_
+3-10	78-79	,	_	_	_	_
+3-11	80-84	some	_	_	_	_
+3-12	85-89	cold	_	_	_	_
+3-13	90-91	.	_	_	_	_
+
+#Text=They can be blue or yellow or red .
+4-1	92-96	They	person	giv	_	_
+4-2	97-100	can	_	_	_	_
+4-3	101-103	be	_	_	_	_
+4-4	104-108	blue	_	_	_	_
+4-5	109-111	or	_	_	_	_
+4-6	112-118	yellow	_	_	_	_
+4-7	119-121	or	_	_	_	_
+4-8	122-125	red	_	_	_	_
+4-9	126-127	.	_	_	_	_
+
+#Text=Stellar classification allows you to describe a star in simple terms .
+5-1	128-135	Stellar	abstract[5]	new[5]	_	_
+5-2	136-150	classification	abstract[5]	new[5]	_	_
+5-3	151-157	allows	_	_	_	_
+5-4	158-161	you	person	acc	_	_
+5-5	162-164	to	_	_	_	_
+5-6	165-173	describe	_	_	_	_
+5-7	174-175	a	object[7]	giv[7]	coref	8-3[11_7]
+5-8	176-180	star	object[7]	giv[7]	_	_
+5-9	181-183	in	_	_	_	_
+5-10	184-190	simple	abstract[8]	new[8]	_	_
+5-11	191-196	terms	abstract[8]	new[8]	_	_
+5-12	197-198	.	_	_	_	_
+
+#Text=Steps
+6-1	199-204	Steps	abstract	new	_	_
+
+#Text=Temperature
+7-1	205-216	Temperature	abstract	new	coref	9-8
+
+#Text=Determine the star 's colour .
+8-1	217-226	Determine	_	_	_	_
+8-2	227-230	the	abstract[12]	new[12]	coref	9-1[0_12]
+8-3	231-235	star	object[11]|abstract[12]	giv[11]|new[12]	coref	24-3[67_11]
+8-4	236-238	's	object[11]|abstract[12]	giv[11]|new[12]	_	_
+8-5	239-245	colour	abstract[12]	new[12]	_	_
+8-6	246-247	.	_	_	_	_
+
+#Text=Colour serves as a rough guide to temperature .
+9-1	248-254	Colour	abstract	giv	coref	21-2[56_0]
+9-2	255-261	serves	_	_	_	_
+9-3	262-264	as	_	_	_	_
+9-4	265-266	a	abstract[14]	new[14]	_	_
+9-5	267-272	rough	abstract[14]	new[14]	_	_
+9-6	273-278	guide	abstract[14]	new[14]	_	_
+9-7	279-281	to	abstract[14]	new[14]	_	_
+9-8	282-293	temperature	abstract[14]|abstract	new[14]|giv	ana	10-8
+9-9	294-295	.	_	_	_	_
+
+#Text=Currently , there are ten colours , each with an associated temperature range .
+10-1	296-305	Currently	_	_	_	_
+10-2	306-307	,	_	_	_	_
+10-3	308-313	there	_	_	_	_
+10-4	314-317	are	_	_	_	_
+10-5	318-321	ten	abstract[16]	new[16]	_	_
+10-6	322-329	colours	abstract[16]	new[16]	_	_
+10-7	330-331	,	abstract[16]	new[16]	_	_
+10-8	332-336	each	abstract[16]|abstract	new[16]|giv	coref	10-12
+10-9	337-341	with	abstract[16]	new[16]	_	_
+10-10	342-344	an	abstract[16]|abstract[19]	new[16]|new[19]	_	_
+10-11	345-355	associated	abstract[16]|abstract[19]	new[16]|new[19]	_	_
+10-12	356-367	temperature	abstract[16]|abstract|abstract[19]	new[16]|giv|new[19]	coref	20-9[55_0]
+10-13	368-373	range	abstract[16]|abstract[19]	new[16]|new[19]	_	_
+10-14	374-375	.	_	_	_	_
+
+#Text=O class stars are blue/UV .
+11-1	376-377	O	abstract[20]|object[21]	new[20]|new[21]	coref|coref	12-1[22_20]|28-12[88_21]
+11-2	378-383	class	abstract[20]|object[21]	new[20]|new[21]	_	_
+11-3	384-389	stars	object[21]	new[21]	_	_
+11-4	390-393	are	_	_	_	_
+11-5	394-401	blue/UV	_	_	_	_
+11-6	402-403	.	_	_	_	_
+
+#Text=B class are blue-white , A class white , F yellow-white , G yellow , K orange and M red .
+12-1	404-405	B	abstract[22]	giv[22]	coref	12-6[23_22]
+12-2	406-411	class	abstract[22]	giv[22]	_	_
+12-3	412-415	are	_	_	_	_
+12-4	416-426	blue-white	_	_	_	_
+12-5	427-428	,	_	_	_	_
+12-6	429-430	A	abstract[23]	giv[23]	coref	14-1[30_23]
+12-7	431-436	class	abstract[23]	giv[23]	_	_
+12-8	437-442	white	_	_	_	_
+12-9	443-444	,	_	_	_	_
+12-10	445-446	F	person	new	_	_
+12-11	447-459	yellow-white	_	_	_	_
+12-12	460-461	,	_	_	_	_
+12-13	462-463	G	person[25]	new[25]	_	_
+12-14	464-470	yellow	person[25]	new[25]	_	_
+12-15	471-472	,	_	_	_	_
+12-16	473-474	K	person[26]	new[26]	_	_
+12-17	475-481	orange	person[26]	new[26]	_	_
+12-18	482-485	and	_	_	_	_
+12-19	486-487	M	person	new	_	_
+12-20	488-491	red	_	_	_	_
+12-21	492-493	.	_	_	_	_
+
+#Text=The other three classes are infrared .
+13-1	494-497	The	abstract[28]	new[28]	ana	15-1[0_28]
+13-2	498-503	other	abstract[28]	new[28]	_	_
+13-3	504-509	three	abstract[28]	new[28]	_	_
+13-4	510-517	classes	abstract[28]	new[28]	_	_
+13-5	518-521	are	_	_	_	_
+13-6	522-530	infrared	_	_	_	_
+13-7	531-532	.	_	_	_	_
+
+#Text=L class appear very deep red in visual light .
+14-1	533-534	L	person|abstract[30]	new|giv[30]	coref|coref	16-1[38_30]|16-6
+14-2	535-540	class	abstract[30]	giv[30]	_	_
+14-3	541-547	appear	_	_	_	_
+14-4	548-552	very	_	_	_	_
+14-5	553-557	deep	_	_	_	_
+14-6	558-561	red	_	_	_	_
+14-7	562-564	in	_	_	_	_
+14-8	565-571	visual	abstract[31]	new[31]	coref	33-6[113_31]
+14-9	572-577	light	abstract[31]	new[31]	_	_
+14-10	578-579	.	_	_	_	_
+
+#Text=Their spectra show alkali metals and metal hydrides .
+15-1	580-585	Their	abstract|abstract[33]	giv|new[33]	ana	17-1[0_33]
+15-2	586-593	spectra	abstract[33]	new[33]	_	_
+15-3	594-598	show	_	_	_	_
+15-4	599-605	alkali	substance[34]	new[34]	_	_
+15-5	606-612	metals	substance[34]	new[34]	_	_
+15-6	613-616	and	_	_	_	_
+15-7	617-622	metal	substance|event[36]	new|new[36]	_	_
+15-8	623-631	hydrides	event[36]	new[36]	_	_
+15-9	632-633	.	_	_	_	_
+
+#Text=T class are cooler than L class .
+16-1	634-635	T	person|abstract[38]	new|giv[38]	coref|coref	16-6[40_38]|19-6
+16-2	636-641	class	abstract[38]	giv[38]	_	_
+16-3	642-645	are	_	_	_	_
+16-4	646-652	cooler	_	_	_	_
+16-5	653-657	than	_	_	_	_
+16-6	658-659	L	person|abstract[40]	giv|giv[40]	coref|coref	18-1[45_40]|19-6[50_0]
+16-7	660-665	class	abstract[40]	giv[40]	_	_
+16-8	666-667	.	_	_	_	_
+
+#Text=Their spectra show methane .
+17-1	668-673	Their	abstract|abstract[42]	giv|giv[42]	coref|coref	17-1[42_0]|19-1[48_42]
+17-2	674-681	spectra	abstract[42]	giv[42]	_	_
+17-3	682-686	show	_	_	_	_
+17-4	687-694	methane	substance	new	_	_
+17-5	695-696	.	_	_	_	_
+
+#Text=Y class are the coolest of all , and apply only to brown dwarves .
+18-1	697-698	Y	abstract|abstract[45]	new|giv[45]	coref	19-6[51_45]
+18-2	699-704	class	abstract[45]	giv[45]	_	_
+18-3	705-708	are	_	_	_	_
+18-4	709-712	the	_	_	_	_
+18-5	713-720	coolest	_	_	_	_
+18-6	721-723	of	_	_	_	_
+18-7	724-727	all	_	_	_	_
+18-8	728-729	,	_	_	_	_
+18-9	730-733	and	_	_	_	_
+18-10	734-739	apply	_	_	_	_
+18-11	740-744	only	_	_	_	_
+18-12	745-747	to	_	_	_	_
+18-13	748-753	brown	animal[46]	new[46]	ana	19-1[0_46]
+18-14	754-761	dwarves	animal[46]	new[46]	_	_
+18-15	762-763	.	_	_	_	_
+
+#Text=Their spectra are different to T and L class , but there is no definite definition .
+19-1	764-769	Their	animal|abstract[48]	giv|giv[48]	_	_
+19-2	770-777	spectra	abstract[48]	giv[48]	_	_
+19-3	778-781	are	_	_	_	_
+19-4	782-791	different	_	_	_	_
+19-5	792-794	to	_	_	_	_
+19-6	795-796	T	person|person[50]|abstract[51]	giv|giv[50]|giv[51]	coref	39-10[138_51]
+19-7	797-800	and	person[50]|abstract[51]	giv[50]|giv[51]	_	_
+19-8	801-802	L	person[50]|abstract[51]	giv[50]|giv[51]	_	_
+19-9	803-808	class	abstract[51]	giv[51]	_	_
+19-10	809-810	,	_	_	_	_
+19-11	811-814	but	_	_	_	_
+19-12	815-820	there	_	_	_	_
+19-13	821-823	is	_	_	_	_
+19-14	824-826	no	abstract[52]	new[52]	_	_
+19-15	827-835	definite	abstract[52]	new[52]	_	_
+19-16	836-846	definition	abstract[52]	new[52]	_	_
+19-17	847-848	.	_	_	_	_
+
+#Text=Put a number after the letter to show precise temperature .
+20-1	849-852	Put	_	_	_	_
+20-2	853-854	a	abstract[53]	new[53]	_	_
+20-3	855-861	number	abstract[53]	new[53]	_	_
+20-4	862-867	after	_	_	_	_
+20-5	868-871	the	object[54]	new[54]	_	_
+20-6	872-878	letter	object[54]	new[54]	_	_
+20-7	879-881	to	_	_	_	_
+20-8	882-886	show	_	_	_	_
+20-9	887-894	precise	abstract[55]	giv[55]	coref	21-8[0_55]
+20-10	895-906	temperature	abstract[55]	giv[55]	_	_
+20-11	907-908	.	_	_	_	_
+
+#Text=Within each colour , there are ten temperature bands , 0-9 , with 0 being hottest .
+21-1	909-915	Within	_	_	_	_
+21-2	916-920	each	abstract[56]	giv[56]	_	_
+21-3	921-927	colour	abstract[56]	giv[56]	_	_
+21-4	928-929	,	_	_	_	_
+21-5	930-935	there	_	_	_	_
+21-6	936-939	are	_	_	_	_
+21-7	940-943	ten	abstract[58]	new[58]	appos	21-11[0_58]
+21-8	944-955	temperature	abstract|abstract[58]	giv|new[58]	coref	25-15
+21-9	956-961	bands	abstract[58]	new[58]	_	_
+21-10	962-963	,	_	_	_	_
+21-11	964-967	0-9	abstract	giv	_	_
+21-12	968-969	,	_	_	_	_
+21-13	970-974	with	_	_	_	_
+21-14	975-976	0	abstract	new	coref	26-1
+21-15	977-982	being	_	_	_	_
+21-16	983-990	hottest	_	_	_	_
+21-17	991-992	.	_	_	_	_
+
+#Text=Thus , A0 is hotter than A5 , which is hotter than A9 , which is hotter than F0 ( as an example )
+22-1	993-997	Thus	_	_	_	_
+22-2	998-999	,	_	_	_	_
+22-3	1000-1002	A0	abstract	new	_	_
+22-4	1003-1005	is	_	_	_	_
+22-5	1006-1012	hotter	_	_	_	_
+22-6	1013-1017	than	_	_	_	_
+22-7	1018-1020	A5	abstract	new	_	_
+22-8	1021-1022	,	_	_	_	_
+22-9	1023-1028	which	_	_	_	_
+22-10	1029-1031	is	_	_	_	_
+22-11	1032-1038	hotter	_	_	_	_
+22-12	1039-1043	than	_	_	_	_
+22-13	1044-1046	A9	abstract	new	_	_
+22-14	1047-1048	,	_	_	_	_
+22-15	1049-1054	which	_	_	_	_
+22-16	1055-1057	is	_	_	_	_
+22-17	1058-1064	hotter	_	_	_	_
+22-18	1065-1069	than	_	_	_	_
+22-19	1070-1072	F0	abstract	new	_	_
+22-20	1073-1074	(	_	_	_	_
+22-21	1075-1077	as	_	_	_	_
+22-22	1078-1080	an	abstract[65]	new[65]	_	_
+22-23	1081-1088	example	abstract[65]	new[65]	_	_
+22-24	1089-1090	)	_	_	_	_
+
+#Text=Size
+23-1	1091-1095	Size	person	new	coref	32-5
+
+#Text=Determine the star 's size .
+24-1	1096-1105	Determine	_	_	_	_
+24-2	1106-1109	the	abstract[68]	new[68]	coref	25-6[71_68]
+24-3	1110-1114	star	object[67]|abstract[68]	giv[67]|new[68]	coref	25-7[70_67]
+24-4	1115-1117	's	object[67]|abstract[68]	giv[67]|new[68]	_	_
+24-5	1118-1122	size	abstract[68]	new[68]	_	_
+24-6	1123-1124	.	_	_	_	_
+
+#Text=A roman numeral , indicating the star 's size , is added after the temperature designation .
+25-1	1125-1126	A	abstract[69]	new[69]	_	_
+25-2	1127-1132	roman	abstract[69]	new[69]	_	_
+25-3	1133-1140	numeral	abstract[69]	new[69]	_	_
+25-4	1141-1142	,	abstract[69]	new[69]	_	_
+25-5	1143-1153	indicating	abstract[69]	new[69]	_	_
+25-6	1154-1157	the	abstract[69]|abstract[71]	new[69]|giv[71]	_	_
+25-7	1158-1162	star	abstract[69]|object[70]|abstract[71]	new[69]|giv[70]|giv[71]	coref	26-5[76_70]
+25-8	1163-1165	's	abstract[69]|object[70]|abstract[71]	new[69]|giv[70]|giv[71]	_	_
+25-9	1166-1170	size	abstract[69]|abstract[71]	new[69]|giv[71]	_	_
+25-10	1171-1172	,	_	_	_	_
+25-11	1173-1175	is	_	_	_	_
+25-12	1176-1181	added	_	_	_	_
+25-13	1182-1187	after	_	_	_	_
+25-14	1188-1191	the	abstract[73]	new[73]	_	_
+25-15	1192-1203	temperature	abstract|abstract[73]	giv|new[73]	coref	32-3
+25-16	1204-1215	designation	abstract[73]	new[73]	_	_
+25-17	1216-1217	.	_	_	_	_
+
+#Text=0 or Ia+ indicates a hypergiant star .
+26-1	1218-1219	0	abstract	giv	_	_
+26-2	1220-1222	or	_	_	_	_
+26-3	1223-1226	Ia+	abstract	new	_	_
+26-4	1227-1236	indicates	_	_	_	_
+26-5	1237-1238	a	object[76]	giv[76]	coref	29-6[98_76]
+26-6	1239-1249	hypergiant	object[76]	giv[76]	_	_
+26-7	1250-1254	star	object[76]	giv[76]	_	_
+26-8	1255-1256	.	_	_	_	_
+
+#Text=Ia , Iab and Ib represent supergiants ( bright , medium , dim ) .
+27-1	1257-1259	Ia	person	new	_	_
+27-2	1260-1261	,	_	_	_	_
+27-3	1262-1265	Iab	abstract	new	_	_
+27-4	1266-1269	and	_	_	_	_
+27-5	1270-1272	Ib	person	new	_	_
+27-6	1273-1282	represent	_	_	_	_
+27-7	1283-1294	supergiants	abstract	new	_	_
+27-8	1295-1296	(	_	_	_	_
+27-9	1297-1303	bright	_	_	_	_
+27-10	1304-1305	,	_	_	_	_
+27-11	1306-1312	medium	place	new	_	_
+27-12	1313-1314	,	_	_	_	_
+27-13	1315-1318	dim	_	_	_	_
+27-14	1319-1320	)	_	_	_	_
+27-15	1321-1322	.	_	_	_	_
+
+#Text=II is bright giants , III giants , IV sub-giants , V main sequence stars ( the part of a stars life that it spends the most time going through ) and VI is sub-dwarfs .
+28-1	1323-1325	II	person	new	coref	28-3[83_0]
+28-2	1326-1328	is	_	_	_	_
+28-3	1329-1335	bright	person[83]|person[84]	giv[83]|giv[84]	coref|coref	28-3[84_83]|28-6[85_84]
+28-4	1336-1342	giants	person[83]|person[84]	giv[83]|giv[84]	_	_
+28-5	1343-1344	,	person[84]	giv[84]	_	_
+28-6	1345-1348	III	person[84]|person[85]	giv[84]|giv[85]	_	_
+28-7	1349-1355	giants	person[84]|person[85]	giv[84]|giv[85]	_	_
+28-8	1356-1357	,	person[84]	giv[84]	_	_
+28-9	1358-1360	IV	person[84]|person[86]	giv[84]|new[86]	_	_
+28-10	1361-1371	sub-giants	person[84]|person[86]	giv[84]|new[86]	_	_
+28-11	1372-1373	,	person[84]	giv[84]	_	_
+28-12	1374-1375	V	person[84]|object[88]	giv[84]|giv[88]	coref	28-21[0_88]
+28-13	1376-1380	main	person[84]|abstract[87]|object[88]	giv[84]|new[87]|giv[88]	_	_
+28-14	1381-1389	sequence	person[84]|abstract[87]|object[88]	giv[84]|new[87]|giv[88]	_	_
+28-15	1390-1395	stars	person[84]|object[88]	giv[84]|giv[88]	_	_
+28-16	1396-1397	(	person[84]	giv[84]	_	_
+28-17	1398-1401	the	person[84]	giv[84]	_	_
+28-18	1402-1406	part	person[84]	giv[84]	_	_
+28-19	1407-1409	of	person[84]	giv[84]	_	_
+28-20	1410-1411	a	person[84]|abstract[90]	giv[84]|new[90]	ana	28-24[0_90]
+28-21	1412-1417	stars	person[84]|object|abstract[90]	giv[84]|giv|new[90]	coref	43-1[157_0]
+28-22	1418-1422	life	person[84]|abstract[90]	giv[84]|new[90]	_	_
+28-23	1423-1427	that	person[84]	giv[84]	_	_
+28-24	1428-1430	it	person[84]|abstract	giv[84]|giv	_	_
+28-25	1431-1437	spends	person[84]	giv[84]	_	_
+28-26	1438-1441	the	person[84]|time[92]	giv[84]|new[92]	_	_
+28-27	1442-1446	most	person[84]|time[92]	giv[84]|new[92]	_	_
+28-28	1447-1451	time	person[84]|time[92]	giv[84]|new[92]	_	_
+28-29	1452-1457	going	person[84]	giv[84]	_	_
+28-30	1458-1465	through	person[84]	giv[84]	_	_
+28-31	1466-1467	)	person[84]	giv[84]	_	_
+28-32	1468-1471	and	person[84]	giv[84]	_	_
+28-33	1472-1474	VI	person[84]|person	giv[84]|new	coref	28-35
+28-34	1475-1477	is	person[84]	giv[84]	_	_
+28-35	1478-1488	sub-dwarfs	person[84]|person	giv[84]|giv	_	_
+28-36	1489-1490	.	_	_	_	_
+
+#Text=A prefix of D indicates a white dwarf star .
+29-1	1491-1492	A	abstract[95]	new[95]	_	_
+29-2	1493-1499	prefix	abstract[95]	new[95]	_	_
+29-3	1500-1502	of	abstract[95]	new[95]	_	_
+29-4	1503-1504	D	abstract[95]|abstract	new[95]|new	_	_
+29-5	1505-1514	indicates	_	_	_	_
+29-6	1515-1516	a	object[98]	giv[98]	_	_
+29-7	1517-1522	white	object[98]	giv[98]	_	_
+29-8	1523-1528	dwarf	person|object[98]	new|giv[98]	coref	30-5[101_0]
+29-9	1529-1533	star	object[98]	giv[98]	_	_
+29-10	1534-1535	.	_	_	_	_
+
+#Text=Examples : DA7 ( white dwarf ) , F5Ia+ ( yellow hypergiant ) , G2V ( yellow main-sequence star ) .
+30-1	1536-1544	Examples	person	new	_	_
+30-2	1545-1546	:	_	_	_	_
+30-3	1547-1550	DA7	abstract	new	_	_
+30-4	1551-1552	(	_	_	_	_
+30-5	1553-1558	white	person[101]	giv[101]	_	_
+30-6	1559-1564	dwarf	person[101]	giv[101]	_	_
+30-7	1565-1566	)	_	_	_	_
+30-8	1567-1568	,	_	_	_	_
+30-9	1569-1574	F5Ia+	abstract	new	appos	30-11[103_0]
+30-10	1575-1576	(	_	_	_	_
+30-11	1577-1583	yellow	abstract[103]	giv[103]	_	_
+30-12	1584-1594	hypergiant	abstract[103]	giv[103]	_	_
+30-13	1595-1596	)	_	_	_	_
+30-14	1597-1598	,	_	_	_	_
+30-15	1599-1602	G2V	abstract	new	coref	31-4
+30-16	1603-1604	(	_	_	_	_
+30-17	1605-1611	yellow	object[105]	new[105]	coref	33-7[112_105]
+30-18	1612-1625	main-sequence	object[105]	new[105]	_	_
+30-19	1626-1630	star	object[105]	new[105]	_	_
+30-20	1631-1632	)	_	_	_	_
+30-21	1633-1634	.	_	_	_	_
+
+#Text=The Sun is G2V .
+31-1	1635-1638	The	organization[106]	new[106]	_	_
+31-2	1639-1642	Sun	organization[106]	new[106]	_	_
+31-3	1643-1645	is	_	_	_	_
+31-4	1646-1649	G2V	abstract	giv	_	_
+31-5	1650-1651	.	_	_	_	_
+
+#Text=Shortcut to Temperature and Size
+32-1	1652-1660	Shortcut	person[108]	new[108]	_	_
+32-2	1661-1663	to	person[108]	new[108]	_	_
+32-3	1664-1675	Temperature	person[108]|abstract	new[108]|giv	_	_
+32-4	1676-1679	and	person[108]	new[108]	_	_
+32-5	1680-1684	Size	person[108]|person	new[108]|giv	_	_
+
+#Text=Use a prism to split the star 's light .
+33-1	1685-1688	Use	_	_	_	_
+33-2	1689-1690	a	object[111]	new[111]	coref	34-24[121_111]
+33-3	1691-1696	prism	object[111]	new[111]	_	_
+33-4	1697-1699	to	_	_	_	_
+33-5	1700-1705	split	_	_	_	_
+33-6	1706-1709	the	abstract[113]	giv[113]	ana	34-1[0_113]
+33-7	1710-1714	star	object[112]|abstract[113]	giv[112]|giv[113]	coref	35-4[123_112]
+33-8	1715-1717	's	object[112]|abstract[113]	giv[112]|giv[113]	_	_
+33-9	1718-1723	light	abstract[113]	giv[113]	_	_
+33-10	1724-1725	.	_	_	_	_
+
+#Text=This will give you a range of colours , called a spectrum , like what you get when you shine a torch through a prism .
+34-1	1726-1730	This	abstract	giv	_	_
+34-2	1731-1735	will	_	_	_	_
+34-3	1736-1740	give	_	_	_	_
+34-4	1741-1744	you	person	acc	ana	34-16
+34-5	1745-1746	a	_	_	_	_
+34-6	1747-1752	range	_	_	_	_
+34-7	1753-1755	of	_	_	_	_
+34-8	1756-1763	colours	abstract[116]	new[116]	_	_
+34-9	1764-1765	,	abstract[116]	new[116]	_	_
+34-10	1766-1772	called	abstract[116]	new[116]	_	_
+34-11	1773-1774	a	abstract[116]|abstract[117]	new[116]|new[117]	coref	35-1[122_117]
+34-12	1775-1783	spectrum	abstract[116]|abstract[117]	new[116]|new[117]	_	_
+34-13	1784-1785	,	_	_	_	_
+34-14	1786-1790	like	_	_	_	_
+34-15	1791-1795	what	_	_	_	_
+34-16	1796-1799	you	person	giv	ana	34-19
+34-17	1800-1803	get	_	_	_	_
+34-18	1804-1808	when	_	_	_	_
+34-19	1809-1812	you	person	giv	ana	44-2
+34-20	1813-1818	shine	_	_	_	_
+34-21	1819-1820	a	object[120]	new[120]	_	_
+34-22	1821-1826	torch	object[120]	new[120]	_	_
+34-23	1827-1834	through	_	_	_	_
+34-24	1835-1836	a	object[121]	giv[121]	_	_
+34-25	1837-1842	prism	object[121]	giv[121]	_	_
+34-26	1843-1844	.	_	_	_	_
+
+#Text=The spectrum of a star should have dark lines on it .
+35-1	1845-1848	The	abstract[122]	giv[122]	coref	37-2[130_122]
+35-2	1849-1857	spectrum	abstract[122]	giv[122]	_	_
+35-3	1858-1860	of	abstract[122]	giv[122]	_	_
+35-4	1861-1862	a	abstract[122]|object[123]	giv[122]|giv[123]	ana	35-11[0_123]
+35-5	1863-1867	star	abstract[122]|object[123]	giv[122]|giv[123]	_	_
+35-6	1868-1874	should	_	_	_	_
+35-7	1875-1879	have	_	_	_	_
+35-8	1880-1884	dark	object[124]	new[124]	ana	36-1[0_124]
+35-9	1885-1890	lines	object[124]	new[124]	_	_
+35-10	1891-1893	on	_	_	_	_
+35-11	1894-1896	it	object	giv	coref	37-3[129_0]
+35-12	1897-1898	.	_	_	_	_
+
+#Text=These are absorption lines .
+36-1	1899-1904	These	object	giv	coref	36-3[128_0]
+36-2	1905-1908	are	_	_	_	_
+36-3	1909-1919	absorption	abstract|object[128]	new|giv[128]	_	_
+36-4	1920-1925	lines	object[128]	giv[128]	_	_
+36-5	1926-1927	.	_	_	_	_
+
+#Text=Compare the star 's spectrum to a database .
+37-1	1928-1935	Compare	_	_	_	_
+37-2	1936-1939	the	abstract[130]	giv[130]	coref	38-7[133_130]
+37-3	1940-1944	star	object[129]|abstract[130]	giv[129]|giv[130]	coref	38-12[0_129]
+37-4	1945-1947	's	object[129]|abstract[130]	giv[129]|giv[130]	_	_
+37-5	1948-1956	spectrum	abstract[130]	giv[130]	_	_
+37-6	1957-1959	to	_	_	_	_
+37-7	1960-1961	a	abstract[131]	new[131]	coref	38-1[132_131]
+37-8	1962-1970	database	abstract[131]	new[131]	_	_
+37-9	1971-1972	.	_	_	_	_
+
+#Text=A good astronomical database should give a typical spectrum for each star type .
+38-1	1973-1974	A	abstract[132]	giv[132]	_	_
+38-2	1975-1979	good	abstract[132]	giv[132]	_	_
+38-3	1980-1992	astronomical	abstract[132]	giv[132]	_	_
+38-4	1993-2001	database	abstract[132]	giv[132]	_	_
+38-5	2002-2008	should	_	_	_	_
+38-6	2009-2013	give	_	_	_	_
+38-7	2014-2015	a	abstract[133]	giv[133]	_	_
+38-8	2016-2023	typical	abstract[133]	giv[133]	_	_
+38-9	2024-2032	spectrum	abstract[133]	giv[133]	_	_
+38-10	2033-2036	for	abstract[133]	giv[133]	_	_
+38-11	2037-2041	each	abstract[133]|abstract[135]	giv[133]|new[135]	ana	39-1[0_135]
+38-12	2042-2046	star	abstract[133]|object|abstract[135]	giv[133]|giv|new[135]	coref	41-15[145_0]
+38-13	2047-2051	type	abstract[133]|abstract[135]	giv[133]|new[135]	_	_
+38-14	2052-2053	.	_	_	_	_
+
+#Text=This is why the type is , sometimes called the spectral class .
+39-1	2054-2058	This	abstract	giv	coref	39-4[137_0]
+39-2	2059-2061	is	_	_	_	_
+39-3	2062-2065	why	_	_	_	_
+39-4	2066-2069	the	abstract[137]	giv[137]	coref	53-12[190_137]
+39-5	2070-2074	type	abstract[137]	giv[137]	_	_
+39-6	2075-2077	is	_	_	_	_
+39-7	2078-2079	,	_	_	_	_
+39-8	2080-2089	sometimes	_	_	_	_
+39-9	2090-2096	called	_	_	_	_
+39-10	2097-2100	the	abstract[138]	giv[138]	_	_
+39-11	2101-2109	spectral	abstract[138]	giv[138]	_	_
+39-12	2110-2115	class	abstract[138]	giv[138]	_	_
+39-13	2116-2117	.	_	_	_	_
+
+#Text=Metallicity
+40-1	2118-2129	Metallicity	abstract	new	_	_
+
+#Text=Determine the proportion of metals ( elements other than hydrogen and helium ) in a star .
+41-1	2130-2139	Determine	_	_	_	_
+41-2	2140-2143	the	abstract[140]	new[140]	_	_
+41-3	2144-2154	proportion	abstract[140]	new[140]	_	_
+41-4	2155-2157	of	abstract[140]	new[140]	_	_
+41-5	2158-2164	metals	abstract[140]|substance	new[140]|new	coref	42-3[148_0]
+41-6	2165-2166	(	_	_	_	_
+41-7	2167-2175	elements	substance[142]	new[142]	coref	45-20[167_142]
+41-8	2176-2181	other	substance[142]	new[142]	_	_
+41-9	2182-2186	than	_	_	_	_
+41-10	2187-2195	hydrogen	substance	new	_	_
+41-11	2196-2199	and	_	_	_	_
+41-12	2200-2206	helium	substance	new	coref	45-26
+41-13	2207-2208	)	_	_	_	_
+41-14	2209-2211	in	_	_	_	_
+41-15	2212-2213	a	object[145]	giv[145]	coref	48-3[175_145]
+41-16	2214-2218	star	object[145]	giv[145]	_	_
+41-17	2219-2220	.	_	_	_	_
+
+#Text=Stars with greater than 1 % metals are termed metal-rich , and are part of something called Population I. Stars with about 0.1 % metals are termed metal-poor , and are part of Population II .
+42-1	2221-2226	Stars	person[146]	new[146]	coref	42-20[152_146]
+42-2	2227-2231	with	person[146]	new[146]	_	_
+42-3	2232-2239	greater	person[146]|substance[148]	new[146]|giv[148]	coref	42-22[154_148]
+42-4	2240-2244	than	person[146]|substance[148]	new[146]|giv[148]	_	_
+42-5	2245-2246	1	person[146]|abstract[147]|substance[148]	new[146]|new[147]|giv[148]	_	_
+42-6	2247-2248	%	person[146]|abstract[147]|substance[148]	new[146]|new[147]|giv[148]	_	_
+42-7	2249-2255	metals	person[146]|substance[148]	new[146]|giv[148]	_	_
+42-8	2256-2259	are	_	_	_	_
+42-9	2260-2266	termed	_	_	_	_
+42-10	2267-2277	metal-rich	_	_	_	_
+42-11	2278-2279	,	_	_	_	_
+42-12	2280-2283	and	_	_	_	_
+42-13	2284-2287	are	_	_	_	_
+42-14	2288-2292	part	_	_	_	_
+42-15	2293-2295	of	_	_	_	_
+42-16	2296-2305	something	abstract[149]	new[149]	_	_
+42-17	2306-2312	called	abstract[149]	new[149]	_	_
+42-18	2313-2323	Population	abstract[149]|abstract	new[149]|new	coref	42-34[155_0]
+42-19	2324-2326	I.	abstract[149]|person	new[149]|new	_	_
+42-20	2327-2332	Stars	abstract[149]|person[152]	new[149]|giv[152]	ana	46-18[0_152]
+42-21	2333-2337	with	abstract[149]|person[152]	new[149]|giv[152]	_	_
+42-22	2338-2343	about	abstract[149]|person[152]|abstract[153]|substance[154]	new[149]|giv[152]|new[153]|giv[154]	coref	43-11[159_154]
+42-23	2344-2347	0.1	abstract[149]|person[152]|abstract[153]|substance[154]	new[149]|giv[152]|new[153]|giv[154]	_	_
+42-24	2348-2349	%	abstract[149]|person[152]|abstract[153]|substance[154]	new[149]|giv[152]|new[153]|giv[154]	_	_
+42-25	2350-2356	metals	abstract[149]|person[152]|substance[154]	new[149]|giv[152]|giv[154]	_	_
+42-26	2357-2360	are	abstract[149]	new[149]	_	_
+42-27	2361-2367	termed	abstract[149]	new[149]	_	_
+42-28	2368-2378	metal-poor	abstract[149]	new[149]	_	_
+42-29	2379-2380	,	abstract[149]	new[149]	_	_
+42-30	2381-2384	and	abstract[149]	new[149]	_	_
+42-31	2385-2388	are	abstract[149]	new[149]	_	_
+42-32	2389-2393	part	abstract[149]	new[149]	_	_
+42-33	2394-2396	of	abstract[149]	new[149]	_	_
+42-34	2397-2407	Population	abstract[149]|abstract[155]	new[149]|giv[155]	coref	43-1[156_155]
+42-35	2408-2410	II	abstract[149]|abstract[155]	new[149]|giv[155]	_	_
+42-36	2411-2412	.	_	_	_	_
+
+#Text=Population II stars formed earlier in the universe , when less metals had been formed .
+43-1	2413-2423	Population	abstract[156]|object[157]	giv[156]|giv[157]	coref	44-6[162_157]
+43-2	2424-2426	II	abstract[156]|object[157]	giv[156]|giv[157]	_	_
+43-3	2427-2432	stars	object[157]	giv[157]	_	_
+43-4	2433-2439	formed	_	_	_	_
+43-5	2440-2447	earlier	_	_	_	_
+43-6	2448-2450	in	_	_	_	_
+43-7	2451-2454	the	place[158]	new[158]	_	_
+43-8	2455-2463	universe	place[158]	new[158]	_	_
+43-9	2464-2465	,	_	_	_	_
+43-10	2466-2470	when	_	_	_	_
+43-11	2471-2475	less	substance[159]	giv[159]	coref	44-8[163_159]
+43-12	2476-2482	metals	substance[159]	giv[159]	_	_
+43-13	2483-2486	had	_	_	_	_
+43-14	2487-2491	been	_	_	_	_
+43-15	2492-2498	formed	_	_	_	_
+43-16	2499-2500	.	_	_	_	_
+
+#Text=Keep your eyes open for stars with no metals .
+44-1	2501-2505	Keep	_	_	_	_
+44-2	2506-2510	your	person|object[161]	giv|new[161]	_	_
+44-3	2511-2515	eyes	object[161]	new[161]	_	_
+44-4	2516-2520	open	_	_	_	_
+44-5	2521-2524	for	_	_	_	_
+44-6	2525-2530	stars	object[162]	giv[162]	coref	45-1[164_162]
+44-7	2531-2535	with	object[162]	giv[162]	_	_
+44-8	2536-2538	no	object[162]|substance[163]	giv[162]|giv[163]	coref	45-29[0_163]
+44-9	2539-2545	metals	object[162]|substance[163]	giv[162]|giv[163]	_	_
+44-10	2546-2547	.	_	_	_	_
+
+#Text=These stars ( Population III ) are expected to have been born just after the Big Bang , when the only elements were hydrogen and helium , and metals did not exist .
+45-1	2548-2553	These	object[164]	giv[164]	coref	46-5[171_164]
+45-2	2554-2559	stars	object[164]	giv[164]	_	_
+45-3	2560-2561	(	_	_	_	_
+45-4	2562-2572	Population	person[165]	new[165]	_	_
+45-5	2573-2576	III	person[165]	new[165]	_	_
+45-6	2577-2578	)	_	_	_	_
+45-7	2579-2582	are	_	_	_	_
+45-8	2583-2591	expected	_	_	_	_
+45-9	2592-2594	to	_	_	_	_
+45-10	2595-2599	have	_	_	_	_
+45-11	2600-2604	been	_	_	_	_
+45-12	2605-2609	born	_	_	_	_
+45-13	2610-2614	just	event[166]	new[166]	_	_
+45-14	2615-2620	after	event[166]	new[166]	_	_
+45-15	2621-2624	the	event[166]	new[166]	_	_
+45-16	2625-2628	Big	event[166]	new[166]	_	_
+45-17	2629-2633	Bang	event[166]	new[166]	_	_
+45-18	2634-2635	,	_	_	_	_
+45-19	2636-2640	when	_	_	_	_
+45-20	2641-2644	the	substance[167]	giv[167]	coref	45-24[0_167]
+45-21	2645-2649	only	substance[167]	giv[167]	_	_
+45-22	2650-2658	elements	substance[167]	giv[167]	_	_
+45-23	2659-2663	were	_	_	_	_
+45-24	2664-2672	hydrogen	substance	giv	_	_
+45-25	2673-2676	and	_	_	_	_
+45-26	2677-2683	helium	substance	giv	_	_
+45-27	2684-2685	,	_	_	_	_
+45-28	2686-2689	and	_	_	_	_
+45-29	2690-2696	metals	substance	giv	_	_
+45-30	2697-2700	did	_	_	_	_
+45-31	2701-2704	not	_	_	_	_
+45-32	2705-2710	exist	_	_	_	_
+45-33	2711-2712	.	_	_	_	_
+
+#Text=As of yet , these stars are only theoretical , but people are looking very hard for them .
+46-1	2713-2715	As	_	_	_	_
+46-2	2716-2718	of	_	_	_	_
+46-3	2719-2722	yet	_	_	_	_
+46-4	2723-2724	,	_	_	_	_
+46-5	2725-2730	these	object[171]	giv[171]	coref	49-2[176_171]
+46-6	2731-2736	stars	object[171]	giv[171]	_	_
+46-7	2737-2740	are	_	_	_	_
+46-8	2741-2745	only	_	_	_	_
+46-9	2746-2757	theoretical	_	_	_	_
+46-10	2758-2759	,	_	_	_	_
+46-11	2760-2763	but	_	_	_	_
+46-12	2764-2770	people	person	new	_	_
+46-13	2771-2774	are	_	_	_	_
+46-14	2775-2782	looking	_	_	_	_
+46-15	2783-2787	very	_	_	_	_
+46-16	2788-2792	hard	_	_	_	_
+46-17	2793-2796	for	_	_	_	_
+46-18	2797-2801	them	person	giv	_	_
+46-19	2802-2803	.	_	_	_	_
+
+#Text=Variability
+47-1	2804-2815	Variability	abstract	new	_	_
+
+#Text=Determine if the star is variable .
+48-1	2816-2825	Determine	_	_	_	_
+48-2	2826-2828	if	_	_	_	_
+48-3	2829-2832	the	object[175]	giv[175]	ana	50-3[0_175]
+48-4	2833-2837	star	object[175]	giv[175]	_	_
+48-5	2838-2840	is	_	_	_	_
+48-6	2841-2849	variable	_	_	_	_
+48-7	2850-2851	.	_	_	_	_
+
+#Text=Not all stars are , but some are , and can be very useful .
+49-1	2852-2855	Not	_	_	_	_
+49-2	2856-2859	all	object[176]	giv[176]	ana	49-7[0_176]
+49-3	2860-2865	stars	object[176]	giv[176]	_	_
+49-4	2866-2869	are	_	_	_	_
+49-5	2870-2871	,	_	_	_	_
+49-6	2872-2875	but	_	_	_	_
+49-7	2876-2880	some	object	giv	_	_
+49-8	2881-2884	are	_	_	_	_
+49-9	2885-2886	,	_	_	_	_
+49-10	2887-2890	and	_	_	_	_
+49-11	2891-2894	can	_	_	_	_
+49-12	2895-2897	be	_	_	_	_
+49-13	2898-2902	very	_	_	_	_
+49-14	2903-2909	useful	_	_	_	_
+49-15	2910-2911	.	_	_	_	_
+
+#Text=Determine if it is an eclipsing binary .
+50-1	2912-2921	Determine	_	_	_	_
+50-2	2922-2924	if	_	_	_	_
+50-3	2925-2927	it	object	giv	coref	50-5[179_0]
+50-4	2928-2930	is	_	_	_	_
+50-5	2931-2933	an	object[179]	giv[179]	coref	53-15[191_179]
+50-6	2934-2943	eclipsing	object[179]	giv[179]	_	_
+50-7	2944-2950	binary	object[179]	giv[179]	_	_
+50-8	2951-2952	.	_	_	_	_
+
+#Text=Eclipsing binaries , like Algol in Perseus , are two stars orbiting each other .
+51-1	2953-2962	Eclipsing	object[180]	new[180]	coref	51-10[183_180]
+51-2	2963-2971	binaries	object[180]	new[180]	_	_
+51-3	2972-2973	,	object[180]	new[180]	_	_
+51-4	2974-2978	like	object[180]	new[180]	_	_
+51-5	2979-2984	Algol	object[180]|person[181]	new[180]|new[181]	_	_
+51-6	2985-2987	in	object[180]|person[181]	new[180]|new[181]	_	_
+51-7	2988-2995	Perseus	object[180]|person[181]|person	new[180]|new[181]|new	_	_
+51-8	2996-2997	,	_	_	_	_
+51-9	2998-3001	are	_	_	_	_
+51-10	3002-3005	two	object[183]	giv[183]	_	_
+51-11	3006-3011	stars	object[183]	giv[183]	_	_
+51-12	3012-3020	orbiting	object[183]	giv[183]	_	_
+51-13	3021-3025	each	object[183]	giv[183]	_	_
+51-14	3026-3031	other	object[183]	giv[183]	_	_
+51-15	3032-3033	.	_	_	_	_
+
+#Text=Determine the amplitude and period of the variation .
+52-1	3034-3043	Determine	_	_	_	_
+52-2	3044-3047	the	abstract[184]	new[184]	_	_
+52-3	3048-3057	amplitude	abstract[184]	new[184]	_	_
+52-4	3058-3061	and	_	_	_	_
+52-5	3062-3068	period	time[185]	new[185]	_	_
+52-6	3069-3071	of	time[185]	new[185]	_	_
+52-7	3072-3075	the	time[185]|abstract[186]	new[185]|new[186]	ana	53-2[0_186]
+52-8	3076-3085	variation	time[185]|abstract[186]	new[185]|new[186]	_	_
+52-9	3086-3087	.	_	_	_	_
+
+#Text=Compare these to the characteristics of known variable types to determine the type of variable star .
+53-1	3088-3095	Compare	_	_	_	_
+53-2	3096-3101	these	abstract	giv	_	_
+53-3	3102-3104	to	_	_	_	_
+53-4	3105-3108	the	abstract[188]	new[188]	_	_
+53-5	3109-3124	characteristics	abstract[188]	new[188]	_	_
+53-6	3125-3127	of	abstract[188]	new[188]	_	_
+53-7	3128-3133	known	abstract[188]|abstract[189]	new[188]|new[189]	_	_
+53-8	3134-3142	variable	abstract[188]|abstract[189]	new[188]|new[189]	_	_
+53-9	3143-3148	types	abstract[188]|abstract[189]	new[188]|new[189]	_	_
+53-10	3149-3151	to	_	_	_	_
+53-11	3152-3161	determine	_	_	_	_
+53-12	3162-3165	the	abstract[190]	giv[190]	_	_
+53-13	3166-3170	type	abstract[190]	giv[190]	_	_
+53-14	3171-3173	of	abstract[190]	giv[190]	_	_
+53-15	3174-3182	variable	abstract[190]|object[191]	giv[190]|giv[191]	_	_
+53-16	3183-3187	star	abstract[190]|object[191]	giv[190]|giv[191]	_	_
+53-17	3188-3189	.	_	_	_	_
+
+#Text=For example , Cepheid variables have periods of days to months and amplitudes of up to 2 magnitudes , whereas Delta Scuti variables have periods of less than 8 hours , and amplitudes of less than 0.9 magnitudes .
+54-1	3190-3193	For	_	_	_	_
+54-2	3194-3201	example	_	_	_	_
+54-3	3202-3203	,	_	_	_	_
+54-4	3204-3211	Cepheid	abstract|abstract[193]	new|new[193]	coref	54-21[201_193]
+54-5	3212-3221	variables	abstract[193]	new[193]	_	_
+54-6	3222-3226	have	_	_	_	_
+54-7	3227-3234	periods	time[194]	new[194]	_	_
+54-8	3235-3237	of	time[194]	new[194]	_	_
+54-9	3238-3242	days	time[194]|time[195]	new[194]|new[195]	_	_
+54-10	3243-3245	to	time[194]|time[195]	new[194]|new[195]	_	_
+54-11	3246-3252	months	time[194]|time[195]|time	new[194]|new[195]|new	_	_
+54-12	3253-3256	and	_	_	_	_
+54-13	3257-3267	amplitudes	abstract[197]	new[197]	_	_
+54-14	3268-3270	of	abstract[197]	new[197]	_	_
+54-15	3271-3273	up	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+54-16	3274-3276	to	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+54-17	3277-3278	2	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+54-18	3279-3289	magnitudes	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+54-19	3290-3291	,	_	_	_	_
+54-20	3292-3299	whereas	_	_	_	_
+54-21	3300-3305	Delta	person|abstract[201]	new|giv[201]	_	_
+54-22	3306-3311	Scuti	person|abstract[201]	new|giv[201]	_	_
+54-23	3312-3321	variables	abstract[201]	giv[201]	_	_
+54-24	3322-3326	have	_	_	_	_
+54-25	3327-3334	periods	time[202]	new[202]	_	_
+54-26	3335-3337	of	time[202]	new[202]	_	_
+54-27	3338-3342	less	time[202]|time[203]	new[202]|new[203]	_	_
+54-28	3343-3347	than	time[202]|time[203]	new[202]|new[203]	_	_
+54-29	3348-3349	8	time[202]|time[203]	new[202]|new[203]	_	_
+54-30	3350-3355	hours	time[202]|time[203]	new[202]|new[203]	_	_
+54-31	3356-3357	,	_	_	_	_
+54-32	3358-3361	and	_	_	_	_
+54-33	3362-3372	amplitudes	abstract[204]	new[204]	_	_
+54-34	3373-3375	of	abstract[204]	new[204]	_	_
+54-35	3376-3380	less	abstract[204]|abstract[205]	new[204]|new[205]	_	_
+54-36	3381-3385	than	abstract[204]|abstract[205]	new[204]|new[205]	_	_
+54-37	3386-3389	0.9	abstract[204]|abstract[205]	new[204]|new[205]	_	_
+54-38	3390-3400	magnitudes	abstract[204]|abstract[205]	new[204]|new[205]	_	_
+54-39	3401-3402	.	_	_	_	_

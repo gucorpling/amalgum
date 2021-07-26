@@ -6,7 +6,7 @@ from src.readdoc import readdoc
 from src.data import Data
 from src.model import ParsingModel
 from src.util import reversedict
-from src.evalparser import evalparser
+from src.evalparser import evalparser, evalparser_multifile
 from glob import glob
 
 PY3 = sys.version_info[0] > 2
@@ -60,6 +60,15 @@ def trainmodel():
     pm.savemodel("models/parsing-model.pickle.gz")
 
 
+def run_merge(paths):
+    files = glob(paths["dis"] + "*.dis")
+    for file_ in files:
+        docname = os.path.basename(file_).replace(".dis", "")
+        xml = paths["xml"] + docname + ".xml"
+        dep = paths["dep"] + docname + ".conllu"
+        merge(file_, xml, dep, docname, as_text=False, outdir=paths["dis"])
+
+
 if __name__ == '__main__':
     p = ArgumentParser()
     p.add_argument("-t","--train", action="store_true", help="train the parser")
@@ -95,10 +104,11 @@ if __name__ == '__main__':
                     overwrite_merge = False
 
             if overwrite_merge:
-                merge(paths)
+                run_merge(paths)
+
         paths["dis"] = opts.testpath
         if overwrite_merge:
-            merge(paths)
+            run_merge(paths)
 
     # Use brown clsuters
     with gzip.open("resources/bc3200.pickle.gz") as fin:
@@ -110,7 +120,7 @@ if __name__ == '__main__':
         # Train model
         trainmodel()
     # Evaluate model on test set
-    evalparser(path="data/test/", report=True,
+    evalparser_multifile(path="data/test/", report=True,
                bcvocab=bcvocab, draw=False,
                withdp=WITHDP,
                fdpvocab="data/resources/word-dict.pickle.gz",

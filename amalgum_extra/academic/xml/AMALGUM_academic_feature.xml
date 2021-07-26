@@ -1,0 +1,1127 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_feature" title="A Vehicle Target Recognition Algorithm for Wide-Angle SAR Based on Joint Feature Set Matching" shortTitle="feature" author="Rongchun Hu, Zhenming Peng, Juan Ma" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/11/1252/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+Feature	NNP	Feature
+Set	NN	set
+Extraction	NN	extraction
+and	CC	and
+Matching	NN	matching
+</s>
+</head>
+<p>
+<s type="decl">
+After	IN	after
+the	DT	the
+previous	JJ	previous
+processing	NN	processing
+,	,	,
+the	DT	the
+obtained	VBN	obtain
+image	NN	image
+is	VBZ	be
+used	VBN	use
+for	IN	for
+feature	NN	feature
+set	NN	set
+extraction	NN	extraction
+.	.	.
+</s>
+<s type="sub">
+It	PRP	it
+can	MD	can
+be	VB	be
+seen	VBN	see
+from	IN	from
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+a	DT	a
+–	SYM	-
+d	NN	would
+that	IN	that
+the	DT	the
+image	NN	image
+obtained	VBN	obtain
+by	IN	by
+the	DT	the
+traditional	JJ	traditional
+backprojection	NN	backprojection
+algorithm	NN	algorithm
+is	VBZ	be
+fuzzy	JJ	fuzzy
+,	,	,
+and	CC	and
+it	PRP	it
+is	VBZ	be
+difficult	JJ	difficult
+to	TO	to
+directly	RB	directly
+extract	VB	extract
+the	DT	the
+shape	NN	shape
+,	,	,
+contour	NN	contour
+,	,	,
+and	CC	and
+other	JJ	other
+features	NNS	feature
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+.	.	.
+</s>
+<s type="decl">
+After	IN	after
+contour	NN	contour
+thinning	NN	thinning
+and	CC	and
+speckle	NN	speckle
+reduction	NN	reduction
+,	,	,
+the	DT	the
+vehicle	NN	vehicle
+contour	NN	contour
+is	VBZ	be
+much	RB	much
+clearer	JJR	clear
+than	IN	than
+before	RB	before
+,	,	,
+and	CC	and
+it	PRP	it
+is	VBZ	be
+convenient	JJ	convenient
+to	TO	to
+detect	VB	detect
+the	DT	the
+contour	NN	contour
+line	NN	line
+,	,	,
+calculate	VB	calculate
+the	DT	the
+rotation	NN	rotation
+angle	NN	angle
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+,	,	,
+and	CC	and
+other	JJ	other
+contour	NN	contour
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+a	DT	a
+vehicle	NN	vehicle
+recognition	NN	recognition
+algorithm	NN	algorithm
+that	WDT	that
+is	VBZ	be
+based	VBN	base
+on	IN	on
+combined	VBN	combine
+matching	NN	matching
+of	IN	of
+contour	NN	contour
+image	NN	image
+feature	NN	feature
+set	NN	set
+and	CC	and
+orthogonal	JJ	orthogonal
+projection	NN	projection
+feature	NN	feature
+set	NN	set
+is	VBZ	be
+proposed	VBN	propose
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+Feature	NN	feature
+Set	NNP	set
+Extraction	NN	extraction
+</s>
+</head>
+<p>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+an	DT	a
+example	NN	example
+of	IN	of
+the	DT	the
+imaging	NN	imaging
+results	NNS	result
+for	IN	for
+four	CD	4
+different	JJ	different
+models	NNS	model
+of	IN	of
+vehicle	NN	vehicle
+at	IN	at
+different	JJ	different
+positions	NNS	position
+and	CC	and
+detection	NN	detection
+heights	NNS	height
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+images	NNS	image
+have	VBP	have
+been	VBN	be
+pre-processed	VBN	pre-process
+by	IN	by
+contour	NN	contour
+thinning	NN	thinning
+,	,	,
+speckle	NN	speckle
+reduction	NN	reduction
+,	,	,
+and	CC	and
+rotation	NN	rotation
+correction	NN	correction
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+a	DT	a
+–	SYM	-
+d	NN	would
+are	VBP	be
+images	NNS	image
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+model	NN	model
+Chevrolet	NNP	Chevrolet
+Impala	NNP	Impala
+LT	NNP	LT
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+e	NN	e
+–	SYM	-
+h	NN	hour
+are	VBP	be
+images	NNS	image
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+model	NN	model
+Mitsubishi	NNP	Mitsubishi
+Galant	NNP	Galant
+ES	NNP	ES
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+i	PRP	I
+–	SYM	-
+l	CD	l
+are	VBP	be
+images	NNS	image
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+model	NN	model
+Toyota	NNP	Toyota
+Highlander	NNP	Highlander
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+m	NN	meter
+–	SYM	-
+p	NN	p
+are	VBP	be
+images	NNS	image
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+model	NN	model
+Chevrolet	NNP	Chevrolet
+HHR	NNP	HHR
+LT	NNP	LT
+.	.	.
+</s>
+</p>
+<p>
+<s type="sub">
+It	PRP	it
+can	MD	can
+be	VB	be
+seen	VBN	see
+from	IN	from
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+that	IN	that
+different	JJ	different
+contour	NN	contour
+sizes	NNS	size
+of	IN	of
+the	DT	the
+same	JJ	same
+model	NN	model
+will	MD	will
+appear	VB	appear
+when	WRB	when
+imaging	NN	imaging
+in	IN	in
+different	JJ	different
+detection	NN	detection
+locations	NNS	location
+and	CC	and
+different	JJ	different
+detection	NN	detection
+heights	NNS	height
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+the	DT	the
+contours	NNS	contour
+of	IN	of
+different	JJ	different
+models	NNS	model
+are	VBP	be
+sometimes	RB	sometimes
+very	RB	very
+similar	JJ	similar
+and	CC	and
+,	,	,
+in	IN	in
+some	DT	some
+cases	NNS	case
+,	,	,
+are	VBP	be
+more	RBR	more
+similar	JJ	similar
+than	IN	than
+the	DT	the
+contours	NNS	contour
+of	IN	of
+the	DT	the
+same	JJ	same
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+if	IN	if
+only	RB	only
+a	DT	a
+simple	JJ	simple
+size	NN	size
+feature	NN	feature
+,	,	,
+such	JJ	such
+as	IN	as
+the	DT	the
+length	NN	length
+or	CC	or
+width	NN	width
+of	IN	of
+the	DT	the
+contour	NN	contour
+,	,	,
+is	VBZ	be
+used	VBN	use
+,	,	,
+it	PRP	it
+is	VBZ	be
+difficult	JJ	difficult
+to	TO	to
+recognize	VB	recognize
+the	DT	the
+model	NN	model
+of	IN	of
+the	DT	the
+vehicle	NN	vehicle
+.	.	.
+</s>
+<s type="decl">
+Accordingly	RB	accordingly
+,	,	,
+we	PRP	we
+consider	VBP	consider
+establishing	VBG	establish
+a	DT	a
+feature	NN	feature
+set	NN	set
+for	IN	for
+each	DT	each
+model	NN	model
+for	IN	for
+recognition	NN	recognition
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+feature	NN	feature
+set	NN	set
+consists	VBZ	consist
+of	IN	of
+two	CD	2
+parts	NNS	part
+,	,	,
+one	CD	one
+is	VBZ	be
+the	DT	the
+selected	VBN	select
+image	NN	image
+data	NNS	datum
+set	NN	set
+and	CC	and
+the	DT	the
+other	JJ	other
+is	VBZ	be
+the	DT	the
+projection	NN	projection
+data	NNS	datum
+set	NN	set
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.1.	CD	4.1.1.
+Selected	VBN	select
+Image	NN	image
+Set	NN	set
+</s>
+</head>
+<p>
+<s type="decl">
+Template	NN	template
+matching	NN	matching
+is	VBZ	be
+a	DT	a
+simple	JJ	simple
+and	CC	and
+direct	JJ	direct
+method	NN	method
+for	IN	for
+image	NN	image
+classification	NN	classification
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+matching	NN	matching
+value	NN	value
+can	MD	can
+be	VB	be
+calculated	VBN	calculate
+between	IN	between
+the	DT	the
+contour	NN	contour
+image	NN	image
+to	TO	to
+be	VB	be
+recognized	VBN	recognize
+and	CC	and
+the	DT	the
+image	NN	image
+in	IN	in
+the	DT	the
+existing	VBG	exist
+image	NN	image
+set	NN	set
+and	CC	and
+then	RB	then
+the	DT	the
+category	NN	category
+of	IN	of
+the	DT	the
+image	NN	image
+with	IN	with
+the	DT	the
+largest	JJS	large
+matching	VBG	match
+value	NN	value
+can	MD	can
+then	RB	then
+be	VB	be
+taken	VBN	take
+as	IN	as
+the	DT	the
+vehicle	NN	vehicle
+recognition	NN	recognition
+result	NN	result
+.	.	.
+</s>
+<s type="decl">
+Obviously	RB	obviously
+,	,	,
+the	DT	the
+more	JJR	more
+images	NNS	image
+in	IN	in
+the	DT	the
+image	NN	image
+set	NN	set
+and	CC	and
+the	DT	the
+more	RBR	more
+representative	JJ	representative
+the	DT	the
+images	NNS	image
+are	VBP	be
+,	,	,
+the	DT	the
+higher	JJR	high
+the	DT	the
+recognition	NN	recognition
+accuracy	NN	accuracy
+is	VBZ	be
+.	.	.
+</s>
+<s type="sub">
+In	IN	in
+extreme	JJ	extreme
+cases	NNS	case
+,	,	,
+if	IN	if
+the	DT	the
+image	NN	image
+set	NN	set
+contains	VBZ	contain
+all	DT	all
+of	IN	of
+the	DT	the
+known	VBN	know
+images	NNS	image
+,	,	,
+then	RB	then
+the	DT	the
+highest	JJS	high
+recognition	NN	recognition
+accuracy	NN	accuracy
+should	MD	should
+ideally	RB	ideally
+be	VB	be
+achieved	VBN	achieve
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+in	IN	in
+reality	NN	reality
+,	,	,
+the	DT	the
+image	NN	image
+set	NN	set
+cannot	MD	cannot
+contain	VB	contain
+all	PDT	all
+the	DT	the
+images	NNS	image
+,	,	,
+because	IN	because
+the	DT	the
+actual	JJ	actual
+images	NNS	image
+are	VBP	be
+endless	JJ	endless
+,	,	,
+and	CC	and
+there	EX	there
+will	MD	will
+always	RB	always
+be	VB	be
+new	JJ	new
+images	NNS	image
+that	WDT	that
+have	VBP	have
+not	RB	not
+appeared	VBN	appear
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+the	DT	the
+image	NN	image
+set	NN	set
+containing	VBG	contain
+all	DT	all
+images	NNS	image
+loses	VBZ	lose
+the	DT	the
+significance	NN	significance
+of	IN	of
+studying	VBG	study
+representative	JJ	representative
+features	NNS	feature
+,	,	,
+and	CC	and
+it	PRP	it
+becomes	VBZ	become
+unnecessarily	RB	unnecessarily
+large	JJ	large
+and	CC	and
+redundant	JJ	redundant
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+this	DT	this
+paper	NN	paper
+proposes	VBZ	propose
+a	DT	a
+simple	JJ	simple
+image	NN	image
+set	NN	set
+generation	NN	generation
+algorithm	NN	algorithm
+.	.	.
+</s>
+<s type="sub">
+The	DT	the
+algorithm	NN	algorithm
+can	MD	can
+preserve	VB	preserve
+as	RB	as
+many	JJ	many
+representative	JJ	representative
+images	NNS	image
+as	IN	as
+possible	JJ	possible
+and	CC	and
+remove	VB	remove
+redundant	JJ	redundant
+images	NNS	image
+as	IN	as
+possible	JJ	possible
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+<hi rend="italic">
+K	CD	K
+</hi>
+denote	VB	denote
+the	DT	the
+total	JJ	total
+number	NN	number
+of	IN	of
+known	VBN	know
+contour	NN	contour
+images	NNS	image
+and	CC	and
+denote	VBP	denote
+the	DT	the
+<hi rend="italic">
+k	NN	k
+</hi>
+-th	NN	-th
+contour	NN	contour
+image	NN	image
+.	.	.
+</s>
+<s type="imp">
+Let	VB	let
+<hi rend="italic">
+N	NN	N
+</hi>
+denote	VB	denote
+the	DT	the
+number	NN	number
+of	IN	of
+vehicle	NN	vehicle
+models	NNS	model
+and	CC	and
+indicate	VB	indicate
+the	DT	the
+<hi rend="italic">
+i	PRP	I
+</hi>
+-th	NN	-th
+model	NN	model
+.	.	.
+</s>
+<s type="decl">
+For	IN	for
+any	DT	any
+contour	NN	contour
+image	NN	image
+,	,	,
+there	EX	there
+is	VBZ	be
+,	,	,
+where	WRB	where
+.	.	.
+</s>
+<s type="decl">
+Let	VB	let
+denote	VB	denote
+the	DT	the
+image	NN	image
+set	NN	set
+corresponding	VBG	correspond
+,	,	,
+and	CC	and
+the	DT	the
+steps	NNS	step
+for	IN	for
+generating	VBG	generate
+the	DT	the
+image	NN	image
+set	NN	set
+are	VBP	be
+as	IN	as
+follows	VBZ	follow
+:	:	:
+</s>
+<list>
+<item>
+<s type="decl">
+All	DT	all
+images	NNS	image
+belonging	VBG	belong
+to	IN	to
+are	VBP	be
+added	VBN	add
+to	IN	to
+the	DT	the
+image	NN	image
+set	NN	set
+,	,	,
+and	CC	and
+an	DT	a
+image	NN	image
+is	VBZ	be
+then	RB	then
+randomly	RB	randomly
+selected	VBN	select
+from	IN	from
+as	IN	as
+the	DT	the
+reference	NN	reference
+image	NN	image
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+The	DT	the
+correlation	NN	correlation
+coefficients	NNS	coefficient
+<hi rend="italic">
+C	NN	C
+</hi>
+of	IN	of
+and	CC	and
+all	DT	all
+other	JJ	other
+model	NN	model
+of	IN	of
+images	NNS	image
+is	VBZ	be
+calculated	VBN	calculate
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+minimum	JJ	minimum
+<hi rend="italic">
+C	NN	C
+</hi>
+min	NN	min
+of	IN	of
+correlation	NN	correlation
+coefficients	NNS	coefficient
+<hi rend="italic">
+C	NNP	C
+</hi>
+is	VBZ	be
+obtained	VBN	obtain
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+equations	NNS	equation
+are	VBP	be
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+13	CD	13
+)	-RRB-	)
+(	-LRB-	(
+14	CD	14
+)	-RRB-	)
+(	-LRB-	(
+15	CD	15
+)	-RRB-	)
+(	-LRB-	(
+16	CD	16
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+mean	NN	mean
+of	IN	of
+the	DT	the
+<hi rend="italic">
+I	NNP	I
+</hi>
+.	.	.
+</s>
+<s type="decl">
+represents	VBZ	represent
+the	DT	the
+correlation	NN	correlation
+coefficient	NN	coefficient
+of	IN	of
+the	DT	the
+overlapping	JJ	overlapping
+region	NN	region
+with	IN	with
+<hi rend="italic">
+Ii	NNP	Ii
+</hi>
+,	,	,
+when	WRB	when
+<hi rend="italic">
+Ij	NNP	Ij
+</hi>
+is	VBZ	be
+shift	NN	shift
+to	IN	to
+(	-LRB-	(
+<hi rend="italic">
+u	JJ	u
+,	,	,
+v	NN	v
+</hi>
+)	-RRB-	)
+,	,	,
+so	RB	so
+the	DT	the
+mean	JJ	mean
+value	NN	value
+is	VBZ	be
+also	RB	also
+the	DT	the
+mean	JJ	mean
+value	NN	value
+of	IN	of
+the	DT	the
+overlapping	JJ	overlapping
+region	NN	region
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+The	DT	the
+correlation	NN	correlation
+coefficients	NNS	coefficient
+of	IN	of
+and	CC	and
+all	DT	all
+of	IN	of
+the	DT	the
+images	NNS	image
+in	IN	in
+are	VBP	be
+calculated	VBN	calculate
+,	,	,
+and	CC	and
+the	DT	the
+image	NN	image
+with	IN	with
+the	DT	the
+correlation	NN	correlation
+coefficient	NN	coefficient
+smaller	JJR	small
+than	IN	than
+is	VBZ	be
+removed	VBN	remove
+from	IN	from
+.	.	.
+</s>
+</item>
+<item>
+<s type="decl">
+A	DT	a
+new	JJ	new
+image	NN	image
+is	VBZ	be
+randomly	RB	randomly
+selected	VBN	select
+from	IN	from
+as	IN	as
+the	DT	the
+reference	NN	reference
+image	NN	image
+,	,	,
+and	CC	and
+then	RB	then
+Step	NNP	step
+2	CD	2
+–	SYM	-
+4	CD	4
+are	VBP	be
+repeated	VBN	repeat
+.	.	.
+</s>
+<s type="decl">
+If	IN	if
+all	RB	all
+the	DT	the
+images	NNS	image
+in	IN	in
+have	VBP	have
+been	VBN	be
+reference	NN	reference
+images	NNS	image
+,	,	,
+the	DT	the
+algorithm	NN	algorithm
+ends	VBZ	end
+.	.	.
+</s>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+is	VBZ	be
+the	DT	the
+generated	VBN	generate
+image	NN	image
+set	NN	set
+.	.	.
+</s>
+</item>
+</list>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+image	NN	image
+set	NN	set
+corresponding	VBG	correspond
+to	IN	to
+each	DT	each
+model	NN	model
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+following	VBG	follow
+the	DT	the
+above	JJ	above
+steps	NNS	step
+for	IN	for
+all	DT	all
+models	NNS	model
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.1.2.	CD	4.1.2.
+</s>
+<s type="frag">
+Projection	NN	projection
+Set	NN	set
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+image	NN	image
+set	NN	set
+that	WDT	that
+was	VBD	be
+obtained	VBN	obtain
+after	IN	after
+selection	NN	selection
+process	NN	process
+retains	VBZ	retain
+some	DT	some
+representative	JJ	representative
+images	NNS	image
+,	,	,
+but	CC	but
+many	JJ	many
+images	NNS	image
+are	VBP	be
+also	RB	also
+removed	VBN	remove
+,	,	,
+and	CC	and
+some	DT	some
+features	NNS	feature
+of	IN	of
+this	DT	this
+model	NN	model
+are	VBP	be
+inevitably	RB	inevitably
+lost	VBN	lose
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+order	NN	order
+to	TO	to
+compensate	VB	compensate
+for	IN	for
+the	DT	the
+feature	NN	feature
+loss	NN	loss
+,	,	,
+the	DT	the
+orthogonal	JJ	orthogonal
+projection	NN	projection
+feature	NN	feature
+of	IN	of
+the	DT	the
+image	NN	image
+is	VBZ	be
+saved	VBN	save
+to	TO	to
+increase	VB	increase
+the	DT	the
+recognition	NN	recognition
+accuracy	NN	accuracy
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+horizontal	JJ	horizontal
+projection	NN	projection
+and	CC	and
+vertical	JJ	vertical
+projection	NN	projection
+have	VBP	have
+obvious	JJ	obvious
+characteristics	NNS	characteristic
+because	IN	because
+the	DT	the
+image	NN	image
+has	VBZ	have
+been	VBN	be
+rotated	VBN	rotate
+before	RB	before
+.	.	.
+</s>
+<s type="decl">
+Additionally	RB	additionally
+,	,	,
+since	IN	since
+the	DT	the
+projection	NN	projection
+data	NNS	datum
+is	VBZ	be
+much	RB	much
+smaller	JJR	small
+than	IN	than
+the	DT	the
+image	NN	image
+data	NNS	datum
+,	,	,
+it	PRP	it
+is	VBZ	be
+very	RB	very
+convenient	JJ	convenient
+and	CC	and
+cost-effective	JJ	cost-effective
+to	TO	to
+store	VB	store
+the	DT	the
+projection	NN	projection
+features	NNS	feature
+,	,	,
+and	CC	and
+the	DT	the
+projection	NN	projection
+features	NNS	feature
+of	IN	of
+all	PDT	all
+the	DT	the
+images	NNS	image
+can	MD	can
+be	VB	be
+saved	VBN	save
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+horizontal	JJ	horizontal
+and	CC	and
+vertical	JJ	vertical
+projection	NN	projection
+of	IN	of
+the	DT	the
+image	NN	image
+is	VBZ	be
+calculated	VBN	calculate
+,	,	,
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+17	CD	17
+)	-RRB-	)
+(	-LRB-	(
+18	CD	18
+)	-RRB-	)
+</s>
+</p>
+</text>

@@ -1,0 +1,947 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_microgrid" title="Fault Ride-Through Enhancement of Grid Supporting Inverter-Based Microgrid Using Delayed Signal Cancellation Algorithm Secondary Control" shortTitle="microgrid" author="Elutunji Buraimoh, Innocent  E. Davidson, Fernando Martinez-Rodrigo" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1996-1073/12/20/3994/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+4.	LS	4.
+Power	NN	Power
+Flow	NN	flow
+and	CC	and
+Switched	VBN	switch
+Reactor	NN	reactor
+</s>
+</head>
+<head>
+<s type="frag">
+4.1.	CD	4.1.
+Voltage	NN	voltage
+Source	NN	source
+Inverter	NN	inverter
+and	CC	and
+Grid	NNP	Grid
+Interactive	NNP	Interactive
+Power	NNP	Power
+Flow	NNP	Flow
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+inverter	NN	inverter
+grid	NN	grid
+supporting	VBG	support
+mode	NN	mode
+,	,	,
+there	EX	there
+is	VBZ	be
+power	NN	power
+interaction	NN	interaction
+with	IN	with
+host	NN	host
+grid	NN	grid
+which	WDT	which
+involves	VBZ	involve
+power	NN	power
+exchange	NN	exchange
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+equivalent	JJ	equivalent
+power	NN	power
+flow	NN	flow
+diagram	NN	diagram
+between	IN	between
+the	DT	the
+inverter-based	JJ	inverter-based
+microgrid	NN	microgrid
+and	CC	and
+the	DT	the
+host	NN	host
+grid	NN	grid
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+6	CD	6
+</s>
+</figure>
+<s type="decl">
+,	,	,
+where	WRB	where
+<hi rend="italic">
+vi	NN	virce
+</hi>
+signifies	VBZ	signify
+the	DT	the
+VSI	NNP	VSI
+voltage	NN	voltage
+and	CC	and
+<hi rend="italic">
+vg	NN	vg
+</hi>
+represents	VBZ	represent
+the	DT	the
+grid	NN	grid
+voltage	NN	voltage
+.	.	.
+</s>
+<s type="decl">
+Similarly	RB	similarly
+,	,	,
+the	DT	the
+inherent	JJ	inherent
+impedances	NNS	impedance
+of	IN	of
+the	DT	the
+inverter	NN	inverter
+and	CC	and
+its	PRP$	its
+filter	NN	filter
+circuit	NN	circuit
+are	VBP	be
+lumped	VBN	lump
+together	RB	together
+as	IN	as
+<hi rend="italic">
+Zi	NNP	Zi
+</hi>
+while	IN	while
+the	DT	the
+grid	NN	grid
+impedance	NN	impedance
+is	VBZ	be
+represented	VBN	represent
+as	IN	as
+<hi rend="italic">
+Zg	NNP	Zg
+</hi>
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+load	NN	load
+current	NN	current
+and	CC	and
+impedance	NN	impedance
+are	VBP	be
+signified	VBN	signify
+by	IN	by
+<hi rend="italic">
+IL	NNP	Il
+</hi>
+and	CC	and
+<hi rend="italic">
+ZL	NNP	ZL
+</hi>
+.	.	.
+</s>
+<s type="decl">
+These	DT	this
+aforementioned	JJ	aforementioned
+impedances	NNS	impedance
+are	VBP	be
+typically	RB	typically
+inductive	JJ	inductive
+owing	VBG	owe
+to	IN	to
+the	DT	the
+significant	JJ	significant
+output	NN	output
+inductance	NN	inductance
+of	IN	of
+the	DT	the
+VSI	NNP	VSI
+.	.	.
+</s>
+<s type="decl">
+Nevertheless	RB	nevertheless
+,	,	,
+this	DT	this
+inverter	NN	inverter
+impedance	NN	impedance
+can	MD	can
+be	VB	be
+greatly	RB	greatly
+influenced	VBN	influence
+by	IN	by
+the	DT	the
+type	NN	type
+of	IN	of
+control	NN	control
+strategy	NN	strategy
+employed	VBN	employ
+,	,	,
+and	CC	and
+grid	NN	grid
+impedance	NN	impedance
+is	VBZ	be
+highly	RB	highly
+resistive	JJ	resistive
+in	IN	in
+low-voltage	JJ	low-voltage
+distribution	NN	distribution
+feeder	NN	feeder
+lines	NNS	line
+.	.	.
+</s>
+<s type="decl">
+Similarly	RB	similarly
+,	,	,
+the	DT	the
+impedance	NN	impedance
+(	-LRB-	(
+resistance	NN	resistance
+and	CC	and
+inductive	JJ	inductive
+reactance	NN	reactance
+)	-RRB-	)
+of	IN	of
+the	DT	the
+grid	NN	grid
+is	VBZ	be
+significantly	RB	significantly
+present	JJ	present
+and	CC	and
+taken	VBN	take
+into	IN	into
+consideration	NN	consideration
+in	IN	in
+microgrids	NNS	microgrid
+located	VBN	locate
+at	IN	at
+a	DT	a
+long	JJ	long
+distance	NN	distance
+away	RB	away
+far	RB	far
+from	IN	from
+the	DT	the
+host	NN	host
+grid	NN	grid
+.	.	.
+</s>
+<s type="decl">
+Consequently	RB	consequently
+,	,	,
+this	DT	this
+work	NN	work
+put	VBD	put
+into	IN	into
+consideration	NN	consideration
+the	DT	the
+line	NN	line
+impedance	NN	impedance
+of	IN	of
+the	DT	the
+grid	NN	grid
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+line	NN	line
+with	IN	with
+the	DT	the
+stipulation	NN	stipulation
+of	IN	of
+the	DT	the
+grid	NN	grid
+codes	NNS	code
+,	,	,
+only	RB	only
+reactive	JJ	reactive
+current	NN	current
+is	VBZ	be
+injected	VBN	inject
+all	RB	all
+through	IN	through
+the	DT	the
+period	NN	period
+of	IN	of
+voltage	NN	voltage
+sag	NN	sag
+.	.	.
+</s>
+<s type="decl">
+Consequently	RB	consequently
+,	,	,
+the	DT	the
+resulting	VBG	result
+compensating	VBG	compensate
+voltage	NN	voltage
+is	VBZ	be
+relatively	RB	relatively
+in	IN	in
+phase	NN	phase
+with	IN	with
+the	DT	the
+grid	NN	grid
+voltage	NN	voltage
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+4.2.	CD	4.2.
+</s>
+<s type="frag">
+Switched	VBN	switch
+Inductance	NN	inductance
+:	:	:
+Sizing	NN	sizing
+and	CC	and
+Switching	NN	switching
+</s>
+</head>
+<p>
+<s type="decl">
+A	DT	a
+microgrid	NN	microgrid
+is	VBZ	be
+to	TO	to
+ensure	VB	ensure
+required	VBN	require
+uninterrupted	JJ	uninterrupted
+supply	NN	supply
+of	IN	of
+quality	JJ	quality
+power	NN	power
+to	IN	to
+the	DT	the
+local	JJ	local
+sensitive	JJ	sensitive
+loads	NNS	load
+besides	IN	besides
+fulfilling	VBG	fulfil
+FRT	NNP	FRT
+requirement	NN	requirement
+of	IN	of
+reactive	JJ	reactive
+power	NN	power
+support	NN	support
+in	IN	in
+the	DT	the
+event	NN	event
+of	IN	of
+disturbance	NN	disturbance
+on	IN	on
+the	DT	the
+main	JJ	main
+grid	NN	grid
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+this	DT	this
+work	NN	work
+,	,	,
+this	DT	this
+is	VBZ	be
+ensured	VBN	ensure
+by	IN	by
+ascertaining	VBG	ascertain
+that	IN	that
+all	RB	all
+the	DT	the
+sections	NNS	section
+in	IN	in
+the	DT	the
+microgrid	NN	microgrid
+are	VBP	be
+supplied	VBN	supply
+with	IN	with
+a	DT	a
+constant	JJ	constant
+voltage	NN	voltage
+at	IN	at
+a	DT	a
+regular	JJ	regular
+frequency	NN	frequency
+.	.	.
+</s>
+<s type="frag">
+The	DT	the
+proposed	VBN	propose
+scheme	NN	scheme
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+5	CD	5
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+implementation	NN	implementation
+of	IN	of
+this	DT	this
+requirement	NN	requirement
+through	IN	through
+an	DT	a
+additional	JJ	additional
+reactive	JJ	reactive
+power	NN	power
+injection	NN	injection
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+VSI	NNP	VSI
+injects	VBZ	inject
+a	DT	a
+significantly	RB	significantly
+high	JJ	high
+amount	NN	amount
+of	IN	of
+reactive	JJ	reactive
+power	NN	power
+in	IN	in
+supporting	VBG	support
+the	DT	the
+utility	NN	utility
+grid	NN	grid
+and	CC	and
+sustain	VB	sustain
+microgrid	NN	microgrid
+load	NN	load
+voltages	NNS	voltage
+since	IN	since
+the	DT	the
+grid	NN	grid
+impedance	NN	impedance
+is	VBZ	be
+usually	RB	usually
+low	JJ	low
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+the	DT	the
+aforementioned	JJ	aforementioned
+secondary	JJ	secondary
+control	NN	control
+based	VBN	base
+LVRT	NNP	LVRT
+schemes	NNS	scheme
+are	VBP	be
+significantly	RB	significantly
+limited	VBN	limit
+in	IN	in
+voltage	NN	voltage
+sag	NN	sag
+compensation	NN	compensation
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+tackle	VB	tackle
+this	DT	this
+problem	NN	problem
+,	,	,
+a	DT	a
+PCC	NNP	PCC
+voltage	NN	voltage
+moderation	NN	moderation
+scheme	NN	scheme
+based	VBN	base
+on	IN	on
+PI	NN	PI
+control	NN	control
+using	VBG	use
+the	DT	the
+DSC	NNP	DSC
+positive	JJ	positive
+and	CC	and
+negative	NN	negative
+is	VBZ	be
+introduced	VBN	introduce
+.	.	.
+</s>
+<s type="decl">
+Furthermore	RB	furthermore
+,	,	,
+under	IN	under
+a	DT	a
+strong	JJ	strong
+(	-LRB-	(
+stiff	JJ	stiff
+)	-RRB-	)
+main	JJ	main
+grid	NN	grid
+connection	NN	connection
+,	,	,
+independent	JJ	independent
+control	NN	control
+of	IN	of
+the	DT	the
+point	NN	point
+of	IN	of
+common	JJ	common
+coupling	NN	coupling
+voltage	NN	voltage
+and	CC	and
+by	IN	by
+extension	NN	extension
+microgrid	NN	microgrid
+voltage	NN	voltage
+is	VBZ	be
+not	RB	not
+sufficient	JJ	sufficient
+for	IN	for
+good	JJ	good
+power	NN	power
+quality	NN	quality
+since	IN	since
+the	DT	the
+host	NN	host
+grid	NN	grid
+imposes	VBZ	impose
+the	DT	the
+voltage	NN	voltage
+.	.	.
+</s>
+<s type="sub">
+Thus	RB	thus
+,	,	,
+control	NN	control
+strategies	NNS	strategy
+may	MD	may
+not	RB	not
+be	VB	be
+able	JJ	able
+to	TO	to
+effectively	RB	effectively
+restore	VB	restore
+the	DT	the
+network	NN	network
+voltage	NN	voltage
+especially	RB	especially
+at	IN	at
+the	DT	the
+PCC	NNP	PCC
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+a	DT	a
+switched	VBN	switch
+inductance	NN	inductance
+is	VBZ	be
+inserted	VBN	insert
+in	IN	in
+series	NN	series
+at	IN	at
+the	DT	the
+PCC	NNP	PCC
+to	IN	to
+the	DT	the
+main	JJ	main
+network	NN	network
+during	IN	during
+a	DT	a
+voltage	NN	voltage
+disturbance	NN	disturbance
+to	TO	to
+increase	VB	increase
+the	DT	the
+network	NN	network
+impedance	NN	impedance
+to	TO	to
+independently	RB	independently
+regulate	VB	regulate
+the	DT	the
+microgrid	NN	microgrid
+voltage	NN	voltage
+irrespective	RB	irrespective
+of	IN	of
+the	DT	the
+host	NN	host
+grid	NN	grid
+condition	NN	condition
+.	.	.
+</s>
+<s type="ger">
+Thus	RB	thus
+,	,	,
+sustaining	VBG	sustain
+the	DT	the
+PCC	NNP	PCC
+voltage	NN	voltage
+at	IN	at
+the	DT	the
+rated	VBN	rate
+magnitude	NN	magnitude
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+appropriate	JJ	appropriate
+sizing	NN	sizing
+and	CC	and
+switching	NN	switching
+of	IN	of
+this	DT	this
+inductance	NN	inductance
+ensure	VBP	ensure
+sustained	JJ	sustained
+microgrid	NN	microgrid
+voltage	NN	voltage
+irrespective	RB	irrespective
+of	IN	of
+a	DT	a
+host	NN	host
+grid	NN	grid
+disturbance	NN	disturbance
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+inductance	NN	inductance
+size	NN	size
+is	VBZ	be
+estimated	VBN	estimate
+in	IN	in
+relation	NN	relation
+to	IN	to
+the	DT	the
+voltage	NN	voltage
+sag	NN	sag
+in	IN	in
+the	DT	the
+worst-case	JJ	worst-case
+scenario	NN	scenario
+which	WDT	which
+must	MD	must
+be	VB	be
+compensated	VBN	compensate
+at	IN	at
+PCC	NNP	PCC
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+also	RB	also
+depends	VBZ	depend
+on	IN	on
+the	DT	the
+expected	VBN	expect
+current	JJ	current
+flow	NN	flow
+through	IN	through
+the	DT	the
+inductance	NN	inductance
+under	IN	under
+voltage	NN	voltage
+sag	NN	sag
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+balance	NN	balance
+between	IN	between
+microgrid	NN	microgrid
+generated	VBN	generate
+power	NN	power
+(	-LRB-	(
+active	JJ	active
+and	CC	and
+reactive	JJ	reactive
+)	-RRB-	)
+and	CC	and
+the	DT	the
+local	JJ	local
+load	NN	load
+consumption	NN	consumption
+determines	VBZ	determine
+the	DT	the
+current	JJ	current
+flow	NN	flow
+(	-LRB-	(
+magnitude	NN	magnitude
+and	CC	and
+phase	NN	phase
+angle	NN	angle
+)	-RRB-	)
+through	IN	through
+the	DT	the
+inductance	NN	inductance
+during	IN	during
+grid	NN	grid
+disturbance	NN	disturbance
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+the	DT	the
+proposed	VBN	propose
+strategy	NN	strategy
+of	IN	of
+this	DT	this
+work	NN	work
+,	,	,
+during	IN	during
+the	DT	the
+grid	NN	grid
+fault	NN	fault
+,	,	,
+the	DT	the
+total	JJ	total
+microgrid	NN	microgrid
+generated	VBN	generate
+active	JJ	active
+power	NN	power
+is	VBZ	be
+commensurate	JJ	commensurate
+with	IN	with
+the	DT	the
+rated	VBN	rate
+local	JJ	local
+load	NN	load
+capacity	NN	capacity
+to	TO	to
+limit	VB	limit
+the	DT	the
+amplitude	NN	amplitude
+of	IN	of
+the	DT	the
+current	JJ	current
+flow	NN	flow
+into	IN	into
+the	DT	the
+main	JJ	main
+grid	NN	grid
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+excess	JJ	excess
+active	JJ	active
+power	NN	power
+may	MD	may
+still	RB	still
+be	VB	be
+supplied	VBN	supply
+to	IN	to
+the	DT	the
+main	JJ	main
+grid	NN	grid
+due	JJ	due
+to	IN	to
+varying	VBG	vary
+load	NN	load
+demand	NN	demand
+and	CC	and
+this	DT	this
+affects	VBZ	affect
+the	DT	the
+inductance	NN	inductance
+size	NN	size
+.	.	.
+</s>
+<s type="decl">
+To	TO	to
+estimate	VB	estimate
+required	VBN	require
+value	NN	value
+for	IN	for
+the	DT	the
+series	NN	series
+inductance	NN	inductance
+,	,	,
+the	DT	the
+load	NN	load
+demand	NN	demand
+is	VBZ	be
+assumed	VBN	assume
+to	TO	to
+be	VB	be
+zero	JJ	zero
+and	CC	and
+the	DT	the
+rated	VBN	rate
+load	NN	load
+power	NN	power
+is	VBZ	be
+assumed	VBN	assume
+generated	VBN	generate
+and	CC	and
+supplied	VBN	supply
+to	IN	to
+the	DT	the
+host	NN	host
+grid	NN	grid
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+phasor	NN	phasor
+diagram	NN	diagram
+of	IN	of
+this	DT	this
+estimation	NN	estimation
+is	VBZ	be
+presented	VBN	present
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+7	CD	7
+</s>
+</figure>
+<s type="decl">
+,	,	,
+where	WRB	where
+<hi rend="italic">
+Vg	NNP	Vg
+</hi>
+represents	VBZ	represent
+the	DT	the
+phase	NN	phase
+voltage	NN	voltage
+of	IN	of
+the	DT	the
+host	NN	host
+grid	NN	grid
+,	,	,
+<hi rend="italic">
+Vmg	NNP	Vmg
+</hi>
+represents	VBZ	represent
+phase	NN	phase
+voltage	NN	voltage
+within	IN	within
+the	DT	the
+microgrid	NN	microgrid
+.	.	.
+</s>
+<s type="decl">
+Similarly	RB	similarly
+,	,	,
+<hi rend="italic">
+Xn	NNP	Xn
+</hi>
+signifies	VBZ	signify
+needed	VBN	need
+switched	VBN	switch
+inductive	JJ	inductive
+reactance	NN	reactance
+while	IN	while
+<hi rend="italic">
+In	IN	in
+</hi>
+signifies	VBZ	signify
+current	JJ	current
+flow	NN	flow
+across	IN	across
+<hi rend="italic">
+Xn	NNP	Xn
+</hi>
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+inverter	NN	inverter
+voltage	NN	voltage
+is	VBZ	be
+therefore	RB	therefore
+given	VBN	give
+by	IN	by
+(	-LRB-	(
+19	CD	19
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+Consequently	RB	consequently
+,	,	,
+the	DT	the
+value	NN	value
+of	IN	of
+the	DT	the
+series	NN	series
+inductance	NN	inductance
+is	VBZ	be
+determined	VBN	determine
+by	IN	by
+solving	VBG	solve
+the	DT	the
+quadratic	JJ	quadratic
+equation	NN	equation
+generated	VBN	generate
+by	IN	by
+making	VBG	make
+the	DT	the
+<hi rend="italic">
+Xn	NNP	Xn
+</hi>
+the	DT	the
+subject	NN	subject
+of	IN	of
+the	DT	the
+formula	NN	formula
+in	IN	in
+Equation	NNP	Equation
+(	-LRB-	(
+18	CD	18
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+It	PRP	it
+is	VBZ	be
+therefore	RB	therefore
+given	VBN	give
+as	IN	as
+(	-LRB-	(
+20	CD	20
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+inverter	NN	inverter
+current	NN	current
+<hi rend="italic">
+Ii	CD	Ii
+</hi>
+is	VBZ	be
+in	IN	in
+phase	NN	phase
+with	IN	with
+the	DT	the
+current	NN	current
+flowing	VBG	flow
+through	IN	through
+the	DT	the
+switched	VBN	switch
+inductance	NN	inductance
+<hi rend="italic">
+Xn	NNP	Xn
+</hi>
+,	,	,
+hence	RB	hence
+angle	NN	angle
+<hi rend="italic">
+θ	NN	θ
+</hi>
+is	VBZ	be
+calculated	VBN	calculate
+from	IN	from
+(	-LRB-	(
+21	CD	21
+)	-RRB-	)
+</s>
+</p>
+</text>

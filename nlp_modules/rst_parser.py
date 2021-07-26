@@ -6,6 +6,7 @@ from nlp_modules.base import NLPModule, PipelineDep
 from lib.dplp_plusplus.src.docreader import DocReader
 from lib.dplp_plusplus.src.make_merge import Sequencer, merge
 from lib.dplp_plusplus.src.evalparser import evalparser
+from nlp_modules.configuration import MODEL_SERVER,RSTDT_MODEL_PATH
 
 PY3 = sys.version_info[0] > 2
 
@@ -55,7 +56,7 @@ class RSTParser(NLPModule):
         # Check the pretrain model
         model_dir = os.path.join(lib_dir, "dplp_plusplus", "models")
         if not os.path.exists(model_dir+os.sep+"rstdt_collapsed.pt"):
-            self.download_file("https://corpling.uis.georgetown.edu/amir/download/rstdt_collapsed.pt", model_dir+'/rstdt_collapsed.pt')
+            self.download_file(MODEL_SERVER + RSTDT_MODEL_PATH, model_dir+'/rstdt_collapsed.pt')
 
     def parse(self, doc_dict):
 
@@ -69,6 +70,8 @@ class RSTParser(NLPModule):
 
     def run(self, input_dir, output_dir):
 
+        import sys
+        sys.setrecursionlimit(3000)
         processing_function = self.parse
 
         # use process_files, inherited from NLPModule, to apply this function to all docs

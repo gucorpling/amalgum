@@ -1,0 +1,185 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Implications from Reviewing GIS-MCDA Studies</segment>
+<segment id="2" parent="1002" relname="span">This section is based on an already published review on MAR suitability mapping</segment>
+<segment id="3" parent="2" relname="elaboration">and focusses on analyzing the relevant parameters and methods for the comprehensive approach to GIS-based suitability mapping by Rahman et al. .</segment>
+<segment id="4" parent="1003" relname="joint">Their approach divides suitability mapping into four main steps .</segment>
+<segment id="5" parent="1007" relname="span">It follows the scheme of ( a ) problem definition , ( b ) screening of suitable areas</segment>
+<segment id="6" parent="5" relname="elaboration">( constraint mapping ) ,</segment>
+<segment id="7" parent="1008" relname="span">( c ) suitability mapping</segment>
+<segment id="8" parent="7" relname="elaboration">including the classification of thematic layers or criteria , standardization , weighting of the criteria , and layer overlaying by decision rule ,</segment>
+<segment id="9" parent="1005" relname="joint">and ( d ) sensitivity analysis .</segment>
+<segment id="10" parent="1011" relname="span">Problem definition is the basis</segment>
+<segment id="11" parent="10" relname="elaboration">of choosing relevant GIS maps</segment>
+<segment id="12" parent="1012" relname="span">and weighting their importance</segment>
+<segment id="13" parent="12" relname="elaboration">for solving the problem statement .</segment>
+<segment id="14" parent="1014" relname="span">As this part of the approach is highly problem-specific ,</segment>
+<segment id="15" parent="14" relname="elaboration">no general statement or implications could be formulated from the review .</segment>
+<segment id="16" parent="1017" relname="span">Constraint mapping identifies the parts of the study area</segment>
+<segment id="17" parent="16" relname="elaboration">that are not suitable for the application of MAR</segment>
+<segment id="18" parent="1018" relname="span">or need to be excluded from the analysis</segment>
+<segment id="19" parent="18" relname="elaboration">as they are , for instance , natural reserves or private land .</segment>
+<segment id="20" parent="1020" relname="joint">This is achieved through threshold values for the GIS criteria</segment>
+<segment id="21" parent="1021" relname="span">and by applying Boolean logic</segment>
+<segment id="22" parent="21" relname="purpose">to clip respective areas from the final map .</segment>
+<segment id="23" parent="1023" relname="span">Half of the analyzed studies used constraint mapping as a tool</segment>
+<segment id="24" parent="23" relname="purpose">to exclude unsuitable areas .</segment>
+<segment id="25" parent="1025" relname="span">As this methodology is widely used ,</segment>
+<segment id="26" parent="1027" relname="span">options</segment>
+<segment id="27" parent="26" relname="elaboration">to constrain single GIS datasets or complete areas from the resulting map</segment>
+<segment id="28" parent="1026" relname="same_unit">were envisaged for the web GIS tool .</segment>
+<segment id="29" parent="1029" relname="span">Suitability mapping is the core of the MCDA process</segment>
+<segment id="30" parent="1030" relname="span">as it ranks the study area</segment>
+<segment id="31" parent="30" relname="elaboration">based on its suitability for the application of MAR .</segment>
+<segment id="32" parent="1031" relname="joint">This step comprises the standardization of GIS maps , the assignment of weights to every map , and the combination of the weights and the standardized maps by decision rule .</segment>
+<segment id="33" parent="1034" relname="span">The most commonly used weight assignment methods are the rating method , the ranking method , the multi-influence factor</segment>
+<segment id="34" parent="33" relname="elaboration">( MIF ) ,</segment>
+<segment id="35" parent="1033" relname="same_unit">and the pairwise comparison .</segment>
+<segment id="36" parent="1036" relname="span">The rating and ranking methods are very simple methods</segment>
+<segment id="37" parent="36" relname="elaboration">comprising manual weight assignment on a predetermined scale .</segment>
+<segment id="38" parent="1038" relname="span">MIF is a graphical weight assignment method</segment>
+<segment id="39" parent="1039" relname="joint">where linkages between GIS datasets are drawn ,</segment>
+<segment id="40" parent="1040" relname="span">and the weights are calculated</segment>
+<segment id="41" parent="40" relname="elaboration">based on the number and the importance of linkages between the criteria .</segment>
+<segment id="42" parent="1041" relname="joint">Pairwise comparison is the most used method for GIS-MCDA in the context of MAR .</segment>
+<segment id="43" parent="1042" relname="joint">The weights are calculated through a matrix-based comparison of pairs of criteria .</segment>
+<segment id="44" parent="1046" relname="span">The methods range from simple</segment>
+<segment id="45" parent="44" relname="restatement">( rating method )</segment>
+<segment id="46" parent="1045" relname="same_unit">to more complex</segment>
+<segment id="47" parent="1045" relname="elaboration">( pairwise comparison ) .</segment>
+<segment id="48" parent="1047" relname="joint">The advantage of the simple methods lies in the easiness of use ,</segment>
+<segment id="49" parent="1050" relname="span">whereas the complex methods , such as pairwise comparison , offer a coefficient</segment>
+<segment id="50" parent="49" relname="elaboration">indicating the consistency of the decision-maker ’s choices .</segment>
+<segment id="51" parent="1051" relname="span">To account for the advantages of both the simple and more complex methods ,</segment>
+<segment id="52" parent="51" relname="elaboration">the rating and ranking method , MIF and pairwise comparison were chosen to be incorporated into the web tool .</segment>
+<segment id="53" parent="1054" relname="span">The decision rule states how the standardized datasets and their weights are combined</segment>
+<segment id="54" parent="53" relname="purpose">to obtain the suitability map .</segment>
+<segment id="55" parent="1056" relname="span">This integration can be based on threshold values</segment>
+<segment id="56" parent="55" relname="restatement">( Boolean logic )</segment>
+<segment id="57" parent="1057" relname="span">or more elaborate integration rules , such as weighted linear combination</segment>
+<segment id="58" parent="57" relname="restatement">( WLC ) .</segment>
+<segment id="59" parent="1059" relname="span">WLC comprises the summation of the weighted and standardized criteria</segment>
+<segment id="60" parent="59" relname="elaboration">and is the most commonly used decision rule .</segment>
+<segment id="61" parent="1061" relname="span">It has been developed further to its derivative analytical hierarchical process</segment>
+<segment id="62" parent="61" relname="restatement">( AHP ) .</segment>
+<segment id="63" parent="1063" relname="span">AHP is the more structured approach</segment>
+<segment id="64" parent="1064" relname="span">that categorizes the GIS maps into hierarchical levels</segment>
+<segment id="65" parent="64" relname="circumstance">before aggregating und summing up the weighted criteria .</segment>
+<segment id="66" parent="1066" relname="span">It is used</segment>
+<segment id="67" parent="66" relname="purpose">to solve more complex decision problems .</segment>
+<segment id="68" parent="1070" relname="span">The two most used methodologies , WLC and AHP , were chosen</segment>
+<segment id="69" parent="68" relname="purpose">to be incorporated into the web tool .</segment>
+<segment id="70" parent="1071" relname="joint">To verify the obtained map ,</segment>
+<segment id="71" parent="1071" relname="joint">a sensitivity analysis should be conducted .</segment>
+<segment id="72" parent="1072" relname="span">It is used</segment>
+<segment id="73" parent="1073" relname="joint">to display the effect of different standardization and weights on the final suitability map</segment>
+<segment id="74" parent="1073" relname="joint">and indicates the robustness of the obtain suitability map .</segment>
+<segment id="75" parent="1075" relname="span">While this is an important factor</segment>
+<segment id="76" parent="1076" relname="span">for strengthening the reliability of suitability maps ,</segment>
+<segment id="77" parent="76" relname="evidence">only 21 % of the reviewed studies conducted this step .</segment>
+<segment id="78" parent="1077" relname="span">All reviewed studies used desktop GIS software for their analysis .</segment>
+<segment id="79" parent="1078" relname="joint">Some studies created their own tools for the analysis ,</segment>
+<segment id="80" parent="1079" relname="joint">e.g. , Rahman et al. developed the GIS-based Gabardine desktop decision support system .</segment>
+<segment id="81" parent="1080" relname="joint">Other studies used tools</segment>
+<segment id="82" parent="1081" relname="joint">available through standard software ,</segment>
+<segment id="83" parent="1082" relname="span">e.g. , an AHP tool has been implemented as an extension for ArcGIS ,</segment>
+<segment id="84" parent="83" relname="elaboration">which has been applied by Anane et al. .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1002" relname="elaboration"/>
+<group id="1004" type="multinuc" parent="1003" relname="joint"/>
+<group id="1005" type="multinuc" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="1005" relname="joint"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="span" parent="1007" relname="elaboration"/>
+<group id="1009" type="multinuc" parent="1004" relname="joint"/>
+<group id="1010" type="multinuc" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="joint"/>
+<group id="1012" type="span" parent="1010" relname="joint"/>
+<group id="1013" type="multinuc" parent="1009" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="joint"/>
+<group id="1015" type="multinuc" parent="1013" relname="joint"/>
+<group id="1016" type="multinuc" parent="1015" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="contrast"/>
+<group id="1018" type="span" parent="1016" relname="contrast"/>
+<group id="1019" type="multinuc" parent="1015" relname="joint"/>
+<group id="1020" type="multinuc" parent="1019" relname="joint"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="multinuc" parent="1019" relname="joint"/>
+<group id="1023" type="span" parent="1022" relname="joint"/>
+<group id="1024" type="multinuc" parent="1022" relname="joint"/>
+<group id="1025" type="span" parent="1024" relname="joint"/>
+<group id="1026" type="multinuc" parent="25" relname="elaboration"/>
+<group id="1027" type="span" parent="1026" relname="same_unit"/>
+<group id="1028" type="multinuc" parent="1024" relname="joint"/>
+<group id="1029" type="span" parent="1028" relname="joint"/>
+<group id="1030" type="span" parent="29" relname="circumstance"/>
+<group id="1031" type="multinuc" parent="1028" relname="joint"/>
+<group id="1032" type="multinuc" parent="1031" relname="joint"/>
+<group id="1033" type="multinuc" parent="1032" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="same_unit"/>
+<group id="1035" type="multinuc" parent="1032" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="1035" relname="joint"/>
+<group id="1038" type="span" parent="1037" relname="joint"/>
+<group id="1039" type="multinuc" parent="38" relname="elaboration"/>
+<group id="1040" type="span" parent="1039" relname="joint"/>
+<group id="1041" type="multinuc" parent="1037" relname="joint"/>
+<group id="1042" type="multinuc" parent="1041" relname="joint"/>
+<group id="1043" type="multinuc" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="span"/>
+<group id="1046" type="span" parent="1045" relname="same_unit"/>
+<group id="1047" type="multinuc" parent="1043" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="span" parent="1050" relname="purpose"/>
+<group id="1052" type="multinuc" parent="1048" relname="joint"/>
+<group id="1053" type="span" parent="1052" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="span"/>
+<group id="1055" type="multinuc" parent="1054" relname="evidence"/>
+<group id="1056" type="span" parent="1055" relname="same_unit"/>
+<group id="1057" type="span" parent="1055" relname="same_unit"/>
+<group id="1058" type="multinuc" parent="1052" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="joint"/>
+<group id="1060" type="multinuc" parent="1058" relname="joint"/>
+<group id="1061" type="span" parent="1060" relname="joint"/>
+<group id="1062" type="multinuc" parent="1060" relname="joint"/>
+<group id="1063" type="span" parent="1062" relname="joint"/>
+<group id="1064" type="span" parent="63" relname="elaboration"/>
+<group id="1065" type="multinuc" parent="1062" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="joint"/>
+<group id="1067" type="multinuc" parent="1065" relname="joint"/>
+<group id="1068" type="span" parent="1067" relname="joint"/>
+<group id="1069" type="span" parent="1068" relname="span"/>
+<group id="1070" type="span" parent="1069" relname="span"/>
+<group id="1071" type="multinuc" parent="1070" relname="purpose"/>
+<group id="1072" type="span" parent="1069" relname="elaboration"/>
+<group id="1073" type="multinuc" parent="72" relname="purpose"/>
+<group id="1074" type="span" parent="1067" relname="joint"/>
+<group id="1075" type="span" parent="1077" relname="concession"/>
+<group id="1076" type="span" parent="75" relname="purpose"/>
+<group id="1077" type="span" parent="1074" relname="span"/>
+<group id="1078" type="multinuc" parent="78" relname="elaboration"/>
+<group id="1079" type="multinuc" parent="1078" relname="joint"/>
+<group id="1080" type="multinuc" parent="1079" relname="joint"/>
+<group id="1081" type="multinuc" parent="1080" relname="joint"/>
+<group id="1082" type="span" parent="1081" relname="joint"/>
+	</body>
+</rst>

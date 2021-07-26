@@ -1,0 +1,605 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_scatterers" title="Kirchhoff Migration for Identifying Unknown Targets Surrounded by Random Scatterers" shortTitle="scatterers" author="Chi  Young Ahn, Taeyoung Ha, Won-Kwang Park" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4446/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+1.	LS	1.
+</s>
+<s type="frag">
+Introduction	NN	introduction
+</s>
+</head>
+<p>
+<s type="decl">
+Inverse	JJ	Inverse
+scattering	NN	scattering
+problems	NNS	problem
+often	RB	often
+involve	VBP	involve
+identifying	VBG	identify
+the	DT	the
+specific	JJ	specific
+characteristics	NNS	characteristic
+(	-LRB-	(
+for	IN	for
+example	NN	example
+,	,	,
+location	NN	location
+,	,	,
+geometry	NN	geometry
+,	,	,
+or	CC	or
+material	NN	material
+properties	NNS	property
+)	-RRB-	)
+of	IN	of
+an	DT	a
+unknown	JJ	unknown
+target	NN	target
+from	IN	from
+scattered	VBN	scatter
+or	CC	or
+far-field	JJ	far-field
+data	NNS	datum
+.	.	.
+</s>
+<s type="decl">
+Such	JJ	such
+problems	NNS	problem
+are	VBP	be
+of	IN	of
+great	JJ	great
+practical	JJ	practical
+importance	NN	importance
+in	IN	in
+fields	NNS	field
+such	JJ	such
+as	IN	as
+mathematics	NN	mathematics
+,	,	,
+physics	NN	physics
+,	,	,
+engineering	NN	engineering
+,	,	,
+and	CC	and
+biomedical	JJ	biomedical
+science	NN	science
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+due	JJ	due
+to	IN	to
+their	PRP$	their
+inherent	JJ	inherent
+nonlinearity	NN	nonlinearity
+and	CC	and
+ill-posedness	NN	ill-posedness
+,	,	,
+they	PRP	they
+remain	VBP	remain
+challenging	JJ	challenging
+.	.	.
+</s>
+<s type="decl">
+Related	JJ	related
+work	NN	work
+can	MD	can
+be	VB	be
+found	VBN	find
+in	IN	in
+and	CC	and
+references	NNS	reference
+therein	RB	therein
+.	.	.
+</s>
+<s type="decl">
+Attempts	NNS	attempt
+to	TO	to
+address	VB	address
+these	DT	this
+types	NNS	type
+of	IN	of
+problems	NNS	problem
+have	VBP	have
+led	VBN	lead
+to	IN	to
+a	DT	a
+search	NN	search
+for	IN	for
+fast	JJ	fast
+and	CC	and
+effective	JJ	effective
+identification	NN	identification
+techniques	NNS	technique
+,	,	,
+and	CC	and
+various	JJ	various
+approaches	NNS	approach
+have	VBP	have
+been	VBN	be
+developed	VBN	develop
+.	.	.
+</s>
+<s type="decl">
+Those	DT	this
+include	VBP	include
+the	DT	the
+MUltiple	NNP	MUltiple
+SIgnal	NNP	SIgnal
+Classification	NNP	Classification
+(	-LRB-	(
+MUSIC	NNP	MUSIC
+)	-RRB-	)
+algorithm	NN	algorithm
+[	-LRB-	[
+11,12,13,14,15	CD	1162638141155
+]	-RRB-	]
+,	,	,
+the	DT	the
+linear	JJ	linear
+and	CC	and
+direct	JJ	direct
+sampling	NN	sampling
+methods	NNS	method
+,	,	,
+and	CC	and
+topological	JJ	topological
+derivatives	NNS	derivative
+[	-LRB-	[
+27,28,29,30,31	CD	2788899930031
+]	-RRB-	]
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+also	RB	also
+refer	VBP	refer
+to	IN	to
+various	JJ	various
+non-iterative	JJ	non-iterative
+imaging	NN	imaging
+techniques	NNS	technique
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Kirchhoff	NNP	Kirchhoff
+and	CC	and
+subspace	NN	subspace
+migration	NN	migration
+are	VBP	be
+also	RB	also
+well-known	JJ	well-known
+non-iterative	JJ	non-iterative
+techniques	NNS	technique
+for	IN	for
+finding	VBG	find
+location/shape	NN	location/shape
+of	IN	of
+unknown	JJ	unknown
+inhomogeneities	NNS	inhomogeneity
+,	,	,
+and	CC	and
+they	PRP	they
+have	VBP	have
+been	VBN	be
+applied	VBN	apply
+to	IN	to
+a	DT	a
+variety	NN	variety
+of	IN	of
+problems	NNS	problem
+(	-LRB-	(
+see	VB	see
+[	-LRB-	[
+38,39,40,41,42,43	CD	38899004144444333
+]	-RRB-	]
+,	,	,
+for	IN	for
+instance	NN	instance
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+Several	JJ	several
+studies	NNS	study
+have	VBP	have
+confirmed	VBN	confirm
+that	IN	that
+they	PRP	they
+are	VBP	be
+fast	JJ	fast
+,	,	,
+stable	JJ	stable
+,	,	,
+and	CC	and
+effective	JJ	effective
+methods	NNS	method
+for	IN	for
+finding	VBG	find
+various	JJ	various
+kinds	NNS	kind
+of	IN	of
+defects	NNS	defect
+without	IN	without
+<hi rend="italic">
+a	DT	a
+priori	JJ	priori
+</hi>
+information	NN	information
+of	IN	of
+unknown	JJ	unknown
+targets	NNS	target
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+most	JJS	most
+of	IN	of
+these	DT	this
+researches	NNS	research
+was	VBD	be
+performed	VBN	perform
+for	IN	for
+homogeneous	JJ	homogeneous
+background	NN	background
+media	NNS	media
+,	,	,
+and	CC	and
+further	JJ	further
+research	NN	research
+is	VBZ	be
+still	RB	still
+needed	VBN	need
+on	IN	on
+the	DT	the
+imaging	NN	imaging
+performance	NN	performance
+of	IN	of
+Kirchhoff	NNP	Kirchhoff
+and	CC	and
+subspace	NN	subspace
+migrations	NNS	migration
+when	WRB	when
+the	DT	the
+unknown	JJ	unknown
+targets	NNS	target
+are	VBP	be
+surrounded	VBN	surround
+by	IN	by
+random	JJ	random
+scatterers	NNS	scatterer
+or	CC	or
+embedded	VBN	embd
+in	IN	in
+an	DT	a
+inhomogeneous	JJ	inhomogeneous
+medium	NN	medium
+.	.	.
+</s>
+<s type="imp">
+Notice	VB	notice
+that	IN	that
+for	IN	for
+subspace	NN	subspace
+migration	NN	migration
+,	,	,
+some	DT	some
+studies	NNS	study
+have	VBP	have
+considered	VBN	consider
+inverse	JJ	inverse
+scattering	NN	scattering
+problems	NNS	problem
+in	IN	in
+random	JJ	random
+media	NNS	media
+,	,	,
+random	JJ	random
+scatterers	NNS	scatterer
+,	,	,
+and	CC	and
+mathematical	JJ	mathematical
+theory	NN	theory
+for	IN	for
+detecting	VBG	detect
+point-like	JJ	point-like
+scatterers	NNS	scatterer
+with	IN	with
+random	JJ	random
+noise	NN	noise
+.	.	.
+</s>
+<s type="decl">
+However	RB	however
+,	,	,
+Kirchhoff	NNP	Kirchhoff
+migration-based	JJ	migration-based
+imaging	NN	imaging
+in	IN	in
+random	JJ	random
+media	NNS	media
+and	CC	and
+related	JJ	related
+mathematical	JJ	mathematical
+theory	NN	theory
+has	VBZ	have
+not	RB	not
+been	VBN	be
+considered	VBN	consider
+yet	RB	yet
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+we	PRP	we
+consider	VBP	consider
+Kirchhoff	NNP	Kirchhoff
+migration	NN	migration
+for	IN	for
+localizing	VBG	localize
+small	JJ	small
+electromagnetic	JJ	electromagnetic
+anomalies	NNS	anomaly
+surrounded	VBN	surround
+by	IN	by
+small	JJ	small
+random	JJ	random
+scatterers	NNS	scatterer
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+carefully	RB	carefully
+analyze	VBP	analyze
+its	PRP$	its
+imaging	NN	imaging
+functions	NNS	function
+by	IN	by
+discovering	VBG	discover
+a	DT	a
+relationship	NN	relationship
+with	IN	with
+the	DT	the
+Bessel	NNP	Bessel
+function	NN	function
+of	IN	of
+the	DT	the
+first	JJ	first
+kind	NN	kind
+of	IN	of
+order	NN	order
+zero	NN	zero
+and	CC	and
+one	CD	one
+.	.	.
+</s>
+<s type="decl">
+This	DT	this
+enables	VBZ	enable
+us	PRP	we
+to	TO	to
+discuss	VB	discuss
+its	PRP$	its
+various	JJ	various
+properties	NNS	property
+and	CC	and
+compare	VB	compare
+the	DT	the
+imaging	NN	imaging
+performance	NN	performance
+with	IN	with
+subspace	NN	subspace
+migration	NN	migration
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+analysis	NN	analysis
+is	VBZ	be
+based	VBN	base
+on	IN	on
+the	DT	the
+structure	NN	structure
+of	IN	of
+the	DT	the
+singular	JJ	singular
+vectors	NNS	vector
+associated	VBN	associate
+with	IN	with
+non-zero	JJ	non-zero
+singular	JJ	singular
+values	NNS	value
+of	IN	of
+so-called	JJ	so-called
+multi-static	JJ	multi-static
+response	NN	response
+(	-LRB-	(
+MSR	NN	MSR
+)	-RRB-	)
+matrix	NN	matrix
+and	CC	and
+asymptotic	JJ	asymptotic
+expansion	NN	expansion
+formula	NN	formula
+in	IN	in
+the	DT	the
+presence	NN	presence
+of	IN	of
+small	JJ	small
+electromagnetic	JJ	electromagnetic
+defects	NNS	defect
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+This	DT	this
+paper	NN	paper
+is	VBZ	be
+organized	VBN	organize
+as	IN	as
+follows	VBZ	follow
+:	:	:
+</s>
+<s type="decl">
+In	IN	in
+Section	NN	section
+2	CD	2
+,	,	,
+we	PRP	we
+introduce	VBP	introduce
+the	DT	the
+two-dimensional	JJ	two-dimensional
+direct	JJ	direct
+scattering	NN	scattering
+problem	NN	problem
+and	CC	and
+asymptotic	JJ	asymptotic
+expansion	NN	expansion
+formula	NN	formula
+that	WDT	that
+holds	VBZ	hold
+in	IN	in
+the	DT	the
+presence	NN	presence
+of	IN	of
+small	JJ	small
+inhomogeneities	NNS	inhomogeneity
+surrounded	VBN	surround
+by	IN	by
+random	JJ	random
+scatterers	NNS	scatterer
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+Section	NN	section
+3	CD	3
+,	,	,
+we	PRP	we
+introduce	VBP	introduce
+the	DT	the
+imaging	NN	imaging
+function	NN	function
+of	IN	of
+Kirchhoff	NNP	Kirchhoff
+migration	NN	migration
+and	CC	and
+its	PRP$	its
+mathematical	JJ	mathematical
+structure	NN	structure
+by	IN	by
+establishing	VBG	establish
+a	DT	a
+relationship	NN	relationship
+with	IN	with
+Bessel	NNP	Bessel
+function	NN	function
+of	IN	of
+order	NN	order
+zero	CD	zero
+and	CC	and
+one	CD	one
+.	.	.
+</s>
+<s type="decl">
+On	IN	on
+the	DT	the
+basis	NN	basis
+of	IN	of
+analyzed	VBN	analyze
+structure	NN	structure
+,	,	,
+we	PRP	we
+discuss	VBP	discuss
+its	PRP$	its
+intrinsic	JJ	intrinsic
+properties	NNS	property
+for	IN	for
+several	JJ	several
+cases	NNS	case
+of	IN	of
+anomalies	NNS	anomaly
+and	CC	and
+random	JJ	random
+scatterers	NNS	scatterer
+,	,	,
+and	CC	and
+compare	VBP	compare
+the	DT	the
+imaging	NN	imaging
+performance	NN	performance
+with	IN	with
+subspace	NN	subspace
+migration	NN	migration
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+Section	NN	section
+4	CD	4
+,	,	,
+we	PRP	we
+present	VBP	present
+some	DT	some
+numerical	JJ	numerical
+simulation	NN	simulation
+results	NNS	result
+to	TO	to
+support	VB	support
+the	DT	the
+analytical	JJ	analytical
+discussion	NN	discussion
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+apply	VBP	apply
+various	JJ	various
+non-iterative	JJ	non-iterative
+techniques	NNS	technique
+for	IN	for
+imaging	NN	imaging
+of	IN	of
+several	JJ	several
+extended	VBN	extend
+targets	NNS	target
+completely	RB	completely
+hidden	VBN	hide
+in	IN	in
+an	DT	a
+inhomogeneous	JJ	inhomogeneous
+medium	NN	medium
+and	CC	and
+discuss	VBP	discuss
+their	PRP$	their
+imaging	NN	imaging
+performances	NNS	performance
+in	IN	in
+Section	NN	section
+5	CD	5
+.	.	.
+</s>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+we	PRP	we
+present	VBP	present
+our	PRP$	our
+conclusion	NN	conclusion
+in	IN	in
+Section	NNP	Section
+6	CD	6
+.	.	.
+</s>
+</p>
+</text>

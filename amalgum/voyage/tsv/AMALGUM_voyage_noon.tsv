@@ -1,0 +1,861 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Watertown ( Massachusetts )
+1-1	0-9	Watertown	place	new	coref	2-1
+1-2	10-11	(	_	_	_	_
+1-3	12-25	Massachusetts	place	new	coref	2-12
+1-4	26-27	)	_	_	_	_
+
+#Text=Watertown is a city in the Greater Boston metropolitan area of Massachusetts .
+2-1	28-37	Watertown	place	giv	coref	2-3[4_0]
+2-2	38-40	is	_	_	_	_
+2-3	41-42	a	place[4]	giv[4]	coref	45-5[0_4]
+2-4	43-47	city	place[4]	giv[4]	_	_
+2-5	48-50	in	place[4]	giv[4]	_	_
+2-6	51-54	the	place[4]|place[6]	giv[4]|new[6]	_	_
+2-7	55-62	Greater	place[4]|place[5]|place[6]	giv[4]|new[5]|new[6]	coref	4-5[0_5]
+2-8	63-69	Boston	place[4]|place[5]|place[6]	giv[4]|new[5]|new[6]	_	_
+2-9	70-82	metropolitan	place[4]|place[6]	giv[4]|new[6]	_	_
+2-10	83-87	area	place[4]|place[6]	giv[4]|new[6]	_	_
+2-11	88-90	of	place[4]|place[6]	giv[4]|new[6]	_	_
+2-12	91-104	Massachusetts	place[4]|place[6]|place	giv[4]|new[6]|giv	coref	8-5
+2-13	105-106	.	_	_	_	_
+
+#Text=By plane
+3-1	107-109	By	_	_	_	_
+3-2	110-115	plane	object	new	_	_
+
+#Text=Logan International Airport in Boston .
+4-1	116-121	Logan	place|place[10]	new|new[10]	_	_
+4-2	122-135	International	place[10]	new[10]	_	_
+4-3	136-143	Airport	place[10]	new[10]	_	_
+4-4	144-146	in	place[10]	new[10]	_	_
+4-5	147-153	Boston	place[10]|place	new[10]|giv	_	_
+4-6	154-155	.	_	_	_	_
+
+#Text=By bus
+5-1	156-158	By	_	_	_	_
+5-2	159-162	bus	object	new	coref	6-3
+
+#Text=MBTA provides bus service .
+6-1	163-167	MBTA	organization	new	_	_
+6-2	168-176	provides	_	_	_	_
+6-3	177-180	bus	object|abstract[15]	giv|new[15]	_	_
+6-4	181-188	service	abstract[15]	new[15]	_	_
+6-5	189-190	.	_	_	_	_
+
+#Text=By car
+7-1	191-193	By	_	_	_	_
+7-2	194-197	car	object	new	_	_
+
+#Text=Interstate 90 ( the Massachusetts Turnpike ) , Exit 17 .
+8-1	198-208	Interstate	place[17]	new[17]	_	_
+8-2	209-211	90	place[17]	new[17]	_	_
+8-3	212-213	(	_	_	_	_
+8-4	214-217	the	place[19]	new[19]	_	_
+8-5	218-231	Massachusetts	place|place[19]	giv|new[19]	_	_
+8-6	232-240	Turnpike	place[19]	new[19]	_	_
+8-7	241-242	)	_	_	_	_
+8-8	243-244	,	_	_	_	_
+8-9	245-249	Exit	place[20]	new[20]	_	_
+8-10	250-252	17	place[20]	new[20]	_	_
+8-11	253-254	.	_	_	_	_
+
+#Text=See
+9-1	255-258	See	_	_	_	_
+
+#Text=Armenian Library and Museum of America , 65 Main St , ☏ +1617 926-2562 .
+10-1	259-267	Armenian	place[21]	new[21]	coref	14-4[36_21]
+10-2	268-275	Library	place[21]	new[21]	_	_
+10-3	276-279	and	_	_	_	_
+10-4	280-286	Museum	place[22]	new[22]	coref	21-1[61_22]
+10-5	287-289	of	place[22]	new[22]	_	_
+10-6	290-297	America	place[22]|place	new[22]|new	coref	13-9[34_0]
+10-7	298-299	,	_	_	_	_
+10-8	300-302	65	person[25]	new[25]	coref	43-4[119_25]
+10-9	303-307	Main	object|person[25]	new|new[25]	coref	26-6
+10-10	308-310	St	person[25]	new[25]	_	_
+10-11	311-312	,	_	_	_	_
+10-12	313-314	☏	_	_	_	_
+10-13	315-320	+1617	_	_	_	_
+10-14	321-329	926-2562	_	_	_	_
+10-15	330-331	.	_	_	_	_
+
+#Text=Th 6PM-9PM , F , Su 1PM-5PM , Sa 10AM-2PM .
+11-1	332-334	Th	_	_	_	_
+11-2	335-342	6PM-9PM	person	new	_	_
+11-3	343-344	,	_	_	_	_
+11-4	345-346	F	abstract	new	_	_
+11-5	347-348	,	_	_	_	_
+11-6	349-351	Su	time	new	coref	27-8
+11-7	352-359	1PM-5PM	abstract	new	_	_
+11-8	360-361	,	_	_	_	_
+11-9	362-364	Sa	person[30]	new[30]	coref	27-6[0_30]
+11-10	365-373	10AM-2PM	person[30]	new[30]	_	_
+11-11	374-375	.	_	_	_	_
+
+#Text=" Where Armenian culture comes alive . "
+12-1	376-377	"	_	_	_	_
+12-2	378-383	Where	_	_	_	_
+12-3	384-392	Armenian	abstract[31]	new[31]	_	_
+12-4	393-400	culture	abstract[31]	new[31]	_	_
+12-5	401-406	comes	_	_	_	_
+12-6	407-412	alive	_	_	_	_
+12-7	413-414	.	_	_	_	_
+12-8	415-416	"	_	_	_	_
+
+#Text=The most extensive collection of Armenian artifacts in North America .
+13-1	417-420	The	object[32]	new[32]	_	_
+13-2	421-425	most	object[32]	new[32]	_	_
+13-3	426-435	extensive	object[32]	new[32]	_	_
+13-4	436-446	collection	object[32]	new[32]	_	_
+13-5	447-449	of	object[32]	new[32]	_	_
+13-6	450-458	Armenian	object[32]|object[33]	new[32]|new[33]	_	_
+13-7	459-468	artifacts	object[32]|object[33]	new[32]|new[33]	_	_
+13-8	469-471	in	object[32]|object[33]	new[32]|new[33]	_	_
+13-9	472-477	North	object[32]|object[33]|place[34]	new[32]|new[33]|giv[34]	_	_
+13-10	478-485	America	object[32]|object[33]|place[34]	new[32]|new[33]|giv[34]	_	_
+13-11	486-487	.	_	_	_	_
+
+#Text=Changing exhibits and an extensive library .
+14-1	488-496	Changing	event[35]	new[35]	_	_
+14-2	497-505	exhibits	event[35]	new[35]	_	_
+14-3	506-509	and	_	_	_	_
+14-4	510-512	an	place[36]	giv[36]	_	_
+14-5	513-522	extensive	place[36]	giv[36]	_	_
+14-6	523-530	library	place[36]	giv[36]	_	_
+14-7	531-532	.	_	_	_	_
+
+#Text=Adults $ 5 , students $ 2 , children under 12 free .
+15-1	533-539	Adults	object	new	_	_
+15-2	540-541	$	_	_	_	_
+15-3	542-543	5	_	_	_	_
+15-4	544-545	,	_	_	_	_
+15-5	546-554	students	person	new	_	_
+15-6	555-556	$	_	_	_	_
+15-7	557-558	2	_	_	_	_
+15-8	559-560	,	_	_	_	_
+15-9	561-569	children	person[39]	new[39]	_	_
+15-10	570-575	under	person[39]	new[39]	_	_
+15-11	576-578	12	person[39]|abstract	new[39]|new	_	_
+15-12	579-583	free	_	_	_	_
+15-13	584-585	.	_	_	_	_
+
+#Text=Arsenal Center for the Arts , 321 Arsenal St , ☏ +1617 923-0100 .
+16-1	586-593	Arsenal	person[41]	new[41]	coref	16-8[0_41]
+16-2	594-600	Center	person[41]	new[41]	_	_
+16-3	601-604	for	person[41]	new[41]	_	_
+16-4	605-608	the	person[41]|abstract[42]	new[41]|new[42]	_	_
+16-5	609-613	Arts	person[41]|abstract[42]	new[41]|new[42]	_	_
+16-6	614-615	,	_	_	_	_
+16-7	616-619	321	place[44]	new[44]	_	_
+16-8	620-627	Arsenal	person|place[44]	giv|new[44]	_	_
+16-9	628-630	St	place[44]	new[44]	_	_
+16-10	631-632	,	_	_	_	_
+16-11	633-634	☏	_	_	_	_
+16-12	635-640	+1617	_	_	_	_
+16-13	641-649	923-0100	_	_	_	_
+16-14	650-651	.	_	_	_	_
+
+#Text=Theatre presentations and a gallery that is open Tu - F noon-5PM .
+17-1	652-659	Theatre	place|event[46]	new|new[46]	_	_
+17-2	660-673	presentations	event[46]	new[46]	_	_
+17-3	674-677	and	_	_	_	_
+17-4	678-679	a	place[47]	new[47]	_	_
+17-5	680-687	gallery	place[47]	new[47]	_	_
+17-6	688-692	that	place[47]	new[47]	_	_
+17-7	693-695	is	place[47]	new[47]	_	_
+17-8	696-700	open	place[47]	new[47]	_	_
+17-9	701-703	Tu	place[47]|person[48]	new[47]|new[48]	coref	67-3[192_48]
+17-10	704-705	-	place[47]|person[48]	new[47]|new[48]	_	_
+17-11	706-707	F	place[47]|person[48]	new[47]|new[48]	_	_
+17-12	708-716	noon-5PM	place[47]|time	new[47]|new	_	_
+17-13	717-718	.	_	_	_	_
+
+#Text=Studios of CatholicTV , 34 Chestnut St , ☏ +1617 923-0220 .
+18-1	719-726	Studios	place[50]	new[50]	_	_
+18-2	727-729	of	place[50]	new[50]	_	_
+18-3	730-740	CatholicTV	place[50]|organization	new[50]|new	_	_
+18-4	741-742	,	_	_	_	_
+18-5	743-745	34	_	_	_	_
+18-6	746-754	Chestnut	person	new	_	_
+18-7	755-757	St	_	_	_	_
+18-8	758-759	,	_	_	_	_
+18-9	760-761	☏	abstract[53]	new[53]	coref	26-9[73_53]
+18-10	762-767	+1617	abstract[53]	new[53]	_	_
+18-11	768-776	923-0220	abstract[53]	new[53]	_	_
+18-12	777-778	.	_	_	_	_
+
+#Text=Tours by appointment only , M - F 10AM-4PM .
+19-1	779-784	Tours	place[54]	new[54]	_	_
+19-2	785-787	by	place[54]	new[54]	_	_
+19-3	788-799	appointment	place[54]|event[55]	new[54]|new[55]	_	_
+19-4	800-804	only	place[54]|event[55]	new[54]|new[55]	_	_
+19-5	805-806	,	_	_	_	_
+19-6	807-808	M	_	_	_	_
+19-7	809-810	-	_	_	_	_
+19-8	811-812	F	person	new	coref	36-6
+19-9	813-821	10AM-4PM	time	new	_	_
+19-10	822-823	.	_	_	_	_
+
+#Text=National Catholic Television Network .
+20-1	824-832	National	organization[59]	new[59]	_	_
+20-2	833-841	Catholic	organization[59]	new[59]	_	_
+20-3	842-852	Television	organization|organization[59]	new|new[59]	_	_
+20-4	853-860	Network	organization[59]	new[59]	_	_
+20-5	861-862	.	_	_	_	_
+
+#Text=American Plumbing Museum , 86 Rosedale Rd , ✉ info@theplumbingmuseum.org .
+21-1	863-871	American	event[60]|place[61]	new[60]|giv[61]	_	_
+21-2	872-880	Plumbing	event[60]|place[61]	new[60]|giv[61]	_	_
+21-3	881-887	Museum	place[61]	giv[61]	_	_
+21-4	888-889	,	_	_	_	_
+21-5	890-892	86	place[63]	new[63]	_	_
+21-6	893-901	Rosedale	place|place[63]	new|new[63]	_	_
+21-7	902-904	Rd	place[63]	new[63]	_	_
+21-8	905-906	,	_	_	_	_
+21-9	907-908	✉	abstract	new	ana	41-3
+21-10	909-935	info@theplumbingmuseum.org	abstract	new	_	_
+21-11	936-937	.	_	_	_	_
+
+#Text=Do
+22-1	938-940	Do	_	_	_	_
+
+#Text=Faire on the Square Festival .
+23-1	941-946	Faire	place[66]	new[66]	_	_
+23-2	947-949	on	place[66]	new[66]	_	_
+23-3	950-953	the	place[66]|place[67]	new[66]|new[67]	_	_
+23-4	954-960	Square	place[66]|place[67]	new[66]|new[67]	_	_
+23-5	961-969	Festival	place[66]|event	new[66]|new	_	_
+23-6	970-971	.	_	_	_	_
+
+#Text=Late September .
+24-1	972-976	Late	time[69]	new[69]	_	_
+24-2	977-986	September	time[69]	new[69]	_	_
+24-3	987-988	.	_	_	_	_
+
+#Text=Eat
+25-1	989-992	Eat	_	_	_	_
+
+#Text=The Halfway Cafe , 394 Main St , ☏ +1617 926-3595 .
+26-1	993-996	The	place[70]	new[70]	coref	52-5[144_70]
+26-2	997-1004	Halfway	place[70]	new[70]	_	_
+26-3	1005-1009	Cafe	place[70]	new[70]	_	_
+26-4	1010-1011	,	_	_	_	_
+26-5	1012-1015	394	person[72]	new[72]	_	_
+26-6	1016-1020	Main	object|person[72]	giv|new[72]	coref	71-8
+26-7	1021-1023	St	person[72]	new[72]	_	_
+26-8	1024-1025	,	_	_	_	_
+26-9	1026-1027	☏	abstract[73]	giv[73]	_	_
+26-10	1028-1033	+1617	abstract[73]	giv[73]	_	_
+26-11	1034-1042	926-3595	abstract[73]	giv[73]	_	_
+26-12	1043-1044	.	_	_	_	_
+
+#Text=M - F 11:30AM-1AM , Sa noon-1AMm Su noon-midnight .
+27-1	1045-1046	M	person[74]	new[74]	coref	53-1[147_74]
+27-2	1047-1048	-	person[74]	new[74]	_	_
+27-3	1049-1050	F	person[74]	new[74]	_	_
+27-4	1051-1062	11:30AM-1AM	time	new	_	_
+27-5	1063-1064	,	_	_	_	_
+27-6	1065-1067	Sa	person	giv	coref	36-9[99_0]
+27-7	1068-1077	noon-1AMm	time[77]	new[77]	_	_
+27-8	1078-1080	Su	time[77]|time	new[77]|giv	coref	36-12[100_0]
+27-9	1081-1094	noon-midnight	time[77]	new[77]	_	_
+27-10	1095-1096	.	_	_	_	_
+
+#Text=Good value choice for a sports bar .
+28-1	1097-1101	Good	abstract[80]	new[80]	_	_
+28-2	1102-1107	value	abstract|abstract[80]	new|new[80]	_	_
+28-3	1108-1114	choice	abstract[80]	new[80]	_	_
+28-4	1115-1118	for	abstract[80]	new[80]	_	_
+28-5	1119-1120	a	abstract[80]|place[82]	new[80]|new[82]	_	_
+28-6	1121-1127	sports	abstract[80]|abstract|place[82]	new[80]|new|new[82]	_	_
+28-7	1128-1131	bar	abstract[80]|place[82]	new[80]|new[82]	_	_
+28-8	1132-1133	.	_	_	_	_
+
+#Text=Check out the 8 for $ 8 specials .
+29-1	1134-1139	Check	_	_	_	_
+29-2	1140-1143	out	_	_	_	_
+29-3	1144-1147	the	abstract[83]	new[83]	_	_
+29-4	1148-1149	8	abstract[83]	new[83]	_	_
+29-5	1150-1153	for	abstract[83]	new[83]	_	_
+29-6	1154-1155	$	abstract[83]	new[83]	_	_
+29-7	1156-1157	8	abstract[83]	new[83]	_	_
+29-8	1158-1166	specials	abstract[83]	new[83]	_	_
+29-9	1167-1168	.	_	_	_	_
+
+#Text=$ .
+30-1	1169-1170	$	_	_	_	_
+30-2	1171-1172	.	_	_	_	_
+
+#Text=Danish Pastry House , 205 Arlington St , Ste 4 , ☏ +1617 926-2747 .
+31-1	1173-1179	Danish	place[84]	new[84]	_	_
+31-2	1180-1186	Pastry	place[84]	new[84]	_	_
+31-3	1187-1192	House	place[84]	new[84]	_	_
+31-4	1193-1194	,	_	_	_	_
+31-5	1195-1198	205	place[86]	new[86]	_	_
+31-6	1199-1208	Arlington	place|place[86]	new|new[86]	_	_
+31-7	1209-1211	St	place[86]	new[86]	_	_
+31-8	1212-1213	,	_	_	_	_
+31-9	1214-1217	Ste	person[87]	new[87]	_	_
+31-10	1218-1219	4	person[87]	new[87]	_	_
+31-11	1220-1221	,	_	_	_	_
+31-12	1222-1223	☏	_	_	_	_
+31-13	1224-1229	+1617	_	_	_	_
+31-14	1230-1238	926-2747	_	_	_	_
+31-15	1239-1240	.	_	_	_	_
+
+#Text=7AM-5PM daily .
+32-1	1241-1248	7AM-5PM	time[88]	new[88]	_	_
+32-2	1249-1254	daily	time[88]	new[88]	_	_
+32-3	1255-1256	.	_	_	_	_
+
+#Text=Great selection of pastry .
+33-1	1257-1262	Great	event[89]	new[89]	_	_
+33-2	1263-1272	selection	event[89]	new[89]	_	_
+33-3	1273-1275	of	event[89]	new[89]	_	_
+33-4	1276-1282	pastry	event[89]|abstract	new[89]|new	_	_
+33-5	1283-1284	.	_	_	_	_
+
+#Text=$ .
+34-1	1285-1286	$	_	_	_	_
+34-2	1287-1288	.	_	_	_	_
+
+#Text=Red Lentil , 600 Mt Auburn St , ☏ +1617 972-9188 .
+35-1	1289-1292	Red	object[91]	new[91]	_	_
+35-2	1293-1299	Lentil	object[91]	new[91]	_	_
+35-3	1300-1301	,	_	_	_	_
+35-4	1302-1305	600	person[94]	new[94]	_	_
+35-5	1306-1308	Mt	place|person[94]	new|new[94]	coref	39-8
+35-6	1309-1315	Auburn	place|person[94]	new|new[94]	coref	39-9
+35-7	1316-1318	St	person[94]	new[94]	_	_
+35-8	1319-1320	,	_	_	_	_
+35-9	1321-1322	☏	_	_	_	_
+35-10	1323-1328	+1617	_	_	_	_
+35-11	1329-1337	972-9188	_	_	_	_
+35-12	1338-1339	.	_	_	_	_
+
+#Text=M - Th 11AM-9:30PM , F 11AM-10PM , Sa 9AM-10PM , Su 9AM-9:30PM .
+36-1	1340-1341	M	abstract[95]|person[96]	new[95]|new[96]	coref	39-11[108_95]
+36-2	1342-1343	-	abstract[95]|person[96]	new[95]|new[96]	_	_
+36-3	1344-1346	Th	abstract[95]|person[96]	new[95]|new[96]	_	_
+36-4	1347-1358	11AM-9:30PM	person[96]	new[96]	_	_
+36-5	1359-1360	,	_	_	_	_
+36-6	1361-1362	F	person	giv	coref	39-13
+36-7	1363-1372	11AM-10PM	time	new	coref	39-14
+36-8	1373-1374	,	_	_	_	_
+36-9	1375-1377	Sa	person[99]	giv[99]	coref	39-16[111_99]
+36-10	1378-1386	9AM-10PM	person[99]	giv[99]	_	_
+36-11	1387-1388	,	_	_	_	_
+36-12	1389-1391	Su	time[100]	giv[100]	coref	39-19[113_100]
+36-13	1392-1402	9AM-9:30PM	time[100]	giv[100]	_	_
+36-14	1403-1404	.	_	_	_	_
+
+#Text=Vegetarian and vegan cuisine .
+37-1	1405-1415	Vegetarian	abstract[101]	new[101]	_	_
+37-2	1416-1419	and	abstract[101]	new[101]	_	_
+37-3	1420-1425	vegan	abstract[101]	new[101]	_	_
+37-4	1426-1433	cuisine	abstract[101]	new[101]	_	_
+37-5	1434-1435	.	_	_	_	_
+
+#Text=$ .
+38-1	1436-1437	$	_	_	_	_
+38-2	1438-1439	.	_	_	_	_
+
+#Text=Celebrity Pizza & Dairy Bar , 684 Mt Auburn St. M - F 11AM-10PM , Sa noon-10PM , Su 1PM-10PM .
+39-1	1440-1449	Celebrity	person|place[103]	new|new[103]	_	_
+39-2	1450-1455	Pizza	place[103]	new[103]	_	_
+39-3	1456-1457	&	place[104]	new[104]	_	_
+39-4	1458-1463	Dairy	place[104]	new[104]	_	_
+39-5	1464-1467	Bar	place[104]	new[104]	_	_
+39-6	1468-1469	,	_	_	_	_
+39-7	1470-1473	684	place[107]	new[107]	_	_
+39-8	1474-1476	Mt	place|place[107]	giv|new[107]	coref	48-5
+39-9	1477-1483	Auburn	place|place[107]	giv|new[107]	coref	48-6
+39-10	1484-1487	St.	place[107]	new[107]	_	_
+39-11	1488-1489	M	abstract[108]	giv[108]	coref	44-1[120_108]
+39-12	1490-1491	-	abstract[108]	giv[108]	_	_
+39-13	1492-1493	F	abstract[108]|person	giv[108]|giv	coref	44-6
+39-14	1494-1503	11AM-10PM	abstract[108]|time	giv[108]|giv	_	_
+39-15	1504-1505	,	_	_	_	_
+39-16	1506-1508	Sa	person[111]	giv[111]	coref	44-9[0_111]
+39-17	1509-1518	noon-10PM	person[111]|time	giv[111]|new	_	_
+39-18	1519-1520	,	_	_	_	_
+39-19	1521-1523	Su	time[113]	giv[113]	coref	44-12[127_113]
+39-20	1524-1532	1PM-10PM	time[113]	giv[113]	_	_
+39-21	1533-1534	.	_	_	_	_
+
+#Text=Great ice cream .
+40-1	1535-1540	Great	substance[114]	new[114]	_	_
+40-2	1541-1544	ice	substance[114]	new[114]	_	_
+40-3	1545-1550	cream	substance[114]	new[114]	_	_
+40-4	1551-1552	.	_	_	_	_
+
+#Text=Check out their delivery service !
+41-1	1553-1558	Check	_	_	_	_
+41-2	1559-1562	out	_	_	_	_
+41-3	1563-1568	their	abstract|abstract[117]	giv|new[117]	_	_
+41-4	1569-1577	delivery	abstract|abstract[117]	new|new[117]	_	_
+41-5	1578-1585	service	abstract[117]	new[117]	_	_
+41-6	1586-1587	!	_	_	_	_
+
+#Text=$ .
+42-1	1588-1589	$	_	_	_	_
+42-2	1590-1591	.	_	_	_	_
+
+#Text=New Ginza , 65 Galen St , ☏ +1617 923-2100 .
+43-1	1592-1595	New	object[118]	new[118]	_	_
+43-2	1596-1601	Ginza	object[118]	new[118]	_	_
+43-3	1602-1603	,	_	_	_	_
+43-4	1604-1606	65	person[119]	giv[119]	_	_
+43-5	1607-1612	Galen	person[119]	giv[119]	_	_
+43-6	1613-1615	St	person[119]	giv[119]	_	_
+43-7	1616-1617	,	_	_	_	_
+43-8	1618-1619	☏	_	_	_	_
+43-9	1620-1625	+1617	_	_	_	_
+43-10	1626-1634	923-2100	_	_	_	_
+43-11	1635-1636	.	_	_	_	_
+
+#Text=M - Th 11:30AM-10PM , F 11:30AM-11PM , Sa noon-11PM , Su noon-10PM .
+44-1	1637-1638	M	abstract[120]|time[121]	giv[120]|new[121]	coref	62-13[179_120]
+44-2	1639-1640	-	abstract[120]|time[121]	giv[120]|new[121]	_	_
+44-3	1641-1643	Th	abstract[120]|time[121]	giv[120]|new[121]	_	_
+44-4	1644-1656	11:30AM-10PM	time[121]	new[121]	_	_
+44-5	1657-1658	,	_	_	_	_
+44-6	1659-1660	F	person	giv	coref	67-5
+44-7	1661-1673	11:30AM-11PM	time	new	_	_
+44-8	1674-1675	,	_	_	_	_
+44-9	1676-1678	Sa	person|time[125]	giv|new[125]	coref|coref	53-8|57-6[162_125]
+44-10	1679-1688	noon-11PM	time[125]|time	new[125]|new	_	_
+44-11	1689-1690	,	time[125]	new[125]	_	_
+44-12	1691-1693	Su	time[125]|time[127]	new[125]|giv[127]	coref	57-8[163_127]
+44-13	1694-1703	noon-10PM	time[125]|time[127]	new[125]|giv[127]	_	_
+44-14	1704-1705	.	_	_	_	_
+
+#Text=The best sushi in Watertown hands down .
+45-1	1706-1709	The	object[128]	new[128]	_	_
+45-2	1710-1714	best	object[128]	new[128]	_	_
+45-3	1715-1720	sushi	object[128]	new[128]	_	_
+45-4	1721-1723	in	object[128]	new[128]	_	_
+45-5	1724-1733	Watertown	object[128]|place	new[128]|giv	_	_
+45-6	1734-1739	hands	object[128]	new[128]	_	_
+45-7	1740-1744	down	object[128]	new[128]	_	_
+45-8	1745-1746	.	_	_	_	_
+
+#Text=Friendly staff and great atmosphere to boot .
+46-1	1747-1755	Friendly	person[130]	new[130]	coref	64-6[186_130]
+46-2	1756-1761	staff	person[130]	new[130]	_	_
+46-3	1762-1765	and	_	_	_	_
+46-4	1766-1771	great	abstract[131]	new[131]	coref	64-1[185_131]
+46-5	1772-1782	atmosphere	abstract[131]	new[131]	_	_
+46-6	1783-1785	to	abstract[131]	new[131]	_	_
+46-7	1786-1790	boot	abstract[131]	new[131]	_	_
+46-8	1791-1792	.	_	_	_	_
+
+#Text=$$ .
+47-1	1793-1795	$$	person	new	coref	65-1
+47-2	1796-1797	.	_	_	_	_
+
+#Text=Sevan Bakery , 599 Mt Auburn St , ☏ +1617 924-9843 .
+48-1	1798-1803	Sevan	person	new	_	_
+48-2	1804-1810	Bakery	_	_	_	_
+48-3	1811-1812	,	_	_	_	_
+48-4	1813-1816	599	place[136]	new[136]	_	_
+48-5	1817-1819	Mt	place|place[136]	giv|new[136]	coref	76-11
+48-6	1820-1826	Auburn	place|place[136]	giv|new[136]	coref	76-12
+48-7	1827-1829	St	place[136]	new[136]	_	_
+48-8	1830-1831	,	_	_	_	_
+48-9	1832-1833	☏	_	_	_	_
+48-10	1834-1839	+1617	abstract[137]	giv[137]	_	_
+48-11	1840-1848	924-9843	abstract[137]	giv[137]	_	_
+48-12	1849-1850	.	_	_	_	_
+
+#Text=M - Sa 8AM-8PM .
+49-1	1851-1852	M	time[138]	new[138]	_	_
+49-2	1853-1854	-	time[138]	new[138]	_	_
+49-3	1855-1857	Sa	time[138]	new[138]	_	_
+49-4	1858-1865	8AM-8PM	person	new	_	_
+49-5	1866-1867	.	_	_	_	_
+
+#Text=Small authentic Armenian bakery .
+50-1	1868-1873	Small	place[140]	new[140]	coref	54-1[153_140]
+50-2	1874-1883	authentic	place[140]	new[140]	_	_
+50-3	1884-1892	Armenian	place[140]	new[140]	_	_
+50-4	1893-1899	bakery	place[140]	new[140]	_	_
+50-5	1900-1901	.	_	_	_	_
+
+#Text=$ .
+51-1	1902-1903	$	_	_	_	_
+51-2	1904-1905	.	_	_	_	_
+
+#Text=Big Sky Bread Bakery & Cafe ( Big Sky ) , 142 Main St , ☏ +1617 332-4445 .
+52-1	1906-1909	Big	place[141]|abstract[143]	new[141]|new[143]	appos	52-8[145_141]
+52-2	1910-1913	Sky	place[141]|abstract[143]	new[141]|new[143]	_	_
+52-3	1914-1919	Bread	object|abstract[143]	new|new[143]	_	_
+52-4	1920-1926	Bakery	abstract[143]	new[143]	_	_
+52-5	1927-1928	&	place[144]	giv[144]	coref	56-3[155_144]
+52-6	1929-1933	Cafe	place[144]	giv[144]	_	_
+52-7	1934-1935	(	_	_	_	_
+52-8	1936-1939	Big	place[145]	giv[145]	_	_
+52-9	1940-1943	Sky	place[145]	giv[145]	_	_
+52-10	1944-1945	)	_	_	_	_
+52-11	1946-1947	,	_	_	_	_
+52-12	1948-1951	142	place[146]	new[146]	_	_
+52-13	1952-1956	Main	place[146]	new[146]	_	_
+52-14	1957-1959	St	place[146]	new[146]	_	_
+52-15	1960-1961	,	place[146]	new[146]	_	_
+52-16	1962-1963	☏	place[146]	new[146]	_	_
+52-17	1964-1969	+1617	place[146]	new[146]	_	_
+52-18	1970-1978	332-4445	place[146]	new[146]	_	_
+52-19	1979-1980	.	_	_	_	_
+
+#Text=M - F 6AM – 6PM , Sa 7AM – 5PM .
+53-1	1981-1982	M	person[147]|time[148]	giv[147]|new[148]	coref	57-1[160_147]
+53-2	1983-1984	-	person[147]|time[148]	giv[147]|new[148]	_	_
+53-3	1985-1986	F	person[147]|time[148]	giv[147]|new[148]	_	_
+53-4	1987-1990	6AM	time[148]	new[148]	_	_
+53-5	1991-1992	–	time[148]	new[148]	_	_
+53-6	1993-1996	6PM	time[148]|abstract	new[148]|new	_	_
+53-7	1997-1998	,	_	_	_	_
+53-8	1999-2001	Sa	person|time[151]	giv|new[151]	coref	57-6
+53-9	2002-2005	7AM	time[151]	new[151]	_	_
+53-10	2006-2007	–	time[151]	new[151]	_	_
+53-11	2008-2011	5PM	time[151]|abstract	new[151]|new	_	_
+53-12	2012-2013	.	_	_	_	_
+
+#Text=Great local bakery .
+54-1	2014-2019	Great	place[153]	giv[153]	_	_
+54-2	2020-2025	local	place[153]	giv[153]	_	_
+54-3	2026-2032	bakery	place[153]	giv[153]	_	_
+54-4	2033-2034	.	_	_	_	_
+
+#Text=$$$ .
+55-1	2035-2038	$$$	_	_	_	_
+55-2	2039-2040	.	_	_	_	_
+
+#Text=SOFRA Bakery & Cafe , 1 Belmont St , Cambridge , ☏ +1617 661-3161 .
+56-1	2041-2046	SOFRA	organization	new	_	_
+56-2	2047-2053	Bakery	_	_	_	_
+56-3	2054-2055	&	place[155]	giv[155]	coref	58-1[165_155]
+56-4	2056-2060	Cafe	place[155]	giv[155]	_	_
+56-5	2061-2062	,	_	_	_	_
+56-6	2063-2064	1	place[157]	new[157]	_	_
+56-7	2065-2072	Belmont	place|place[157]	new|new[157]	coref	76-2
+56-8	2073-2075	St	place[157]	new[157]	_	_
+56-9	2076-2077	,	place[157]	new[157]	_	_
+56-10	2078-2087	Cambridge	place[157]|place	new[157]|new	_	_
+56-11	2088-2089	,	_	_	_	_
+56-12	2090-2091	☏	abstract[159]	new[159]	_	_
+56-13	2092-2097	+1617	abstract[159]	new[159]	_	_
+56-14	2098-2106	661-3161	abstract[159]	new[159]	_	_
+56-15	2107-2108	.	_	_	_	_
+
+#Text=M - F 8AM-7PM , Sa - Su 8AM-6PM .
+57-1	2109-2110	M	person[160]	giv[160]	coref	62-3[175_160]
+57-2	2111-2112	-	person[160]	giv[160]	_	_
+57-3	2113-2114	F	person[160]	giv[160]	_	_
+57-4	2115-2122	8AM-7PM	person[160]	giv[160]	_	_
+57-5	2123-2124	,	_	_	_	_
+57-6	2125-2127	Sa	person|time[162]	giv|giv[162]	coref	62-8[177_0]
+57-7	2128-2129	-	time[162]	giv[162]	_	_
+57-8	2130-2132	Su	time[162]|time[163]	giv[162]|giv[163]	coref	77-1[224_163]
+57-9	2133-2140	8AM-6PM	time[162]|time[163]|abstract	giv[162]|giv[163]|new	ana	59-1
+57-10	2141-2142	.	_	_	_	_
+
+#Text=Small vegan and vegetarian cafe .
+58-1	2143-2148	Small	place[165]	giv[165]	_	_
+58-2	2149-2154	vegan	place[165]	giv[165]	_	_
+58-3	2155-2158	and	place[165]	giv[165]	_	_
+58-4	2159-2169	vegetarian	place[165]	giv[165]	_	_
+58-5	2170-2174	cafe	place[165]	giv[165]	_	_
+58-6	2175-2176	.	_	_	_	_
+
+#Text=It is always crowded and has limited seating , but do n't forget to check out the patio around the side !
+59-1	2177-2179	It	abstract	giv	_	_
+59-2	2180-2182	is	_	_	_	_
+59-3	2183-2189	always	_	_	_	_
+59-4	2190-2197	crowded	_	_	_	_
+59-5	2198-2201	and	_	_	_	_
+59-6	2202-2205	has	_	_	_	_
+59-7	2206-2213	limited	abstract[167]	new[167]	_	_
+59-8	2214-2221	seating	abstract[167]	new[167]	_	_
+59-9	2222-2223	,	_	_	_	_
+59-10	2224-2227	but	_	_	_	_
+59-11	2228-2230	do	_	_	_	_
+59-12	2231-2234	n't	_	_	_	_
+59-13	2235-2241	forget	_	_	_	_
+59-14	2242-2244	to	_	_	_	_
+59-15	2245-2250	check	_	_	_	_
+59-16	2251-2254	out	_	_	_	_
+59-17	2255-2258	the	place[168]	new[168]	coref	69-7[202_168]
+59-18	2259-2264	patio	place[168]	new[168]	_	_
+59-19	2265-2271	around	place[168]	new[168]	_	_
+59-20	2272-2275	the	place[168]|place[169]	new[168]|new[169]	_	_
+59-21	2276-2280	side	place[168]|place[169]	new[168]|new[169]	_	_
+59-22	2281-2282	!	_	_	_	_
+
+#Text=$ .
+60-1	2283-2284	$	_	_	_	_
+60-2	2285-2286	.	_	_	_	_
+
+#Text=Strip T 's , 93 School St , ☏ +1617 923-4330 .
+61-1	2287-2292	Strip	person[170]	new[170]	_	_
+61-2	2293-2294	T	person[170]	new[170]	_	_
+61-3	2295-2297	's	person[170]	new[170]	_	_
+61-4	2298-2299	,	_	_	_	_
+61-5	2300-2302	93	person[172]	new[172]	_	_
+61-6	2303-2309	School	place|person[172]	new|new[172]	_	_
+61-7	2310-2312	St	person[172]	new[172]	_	_
+61-8	2313-2314	,	_	_	_	_
+61-9	2315-2316	☏	abstract[173]	new[173]	_	_
+61-10	2317-2322	+1617	abstract[173]	new[173]	_	_
+61-11	2323-2331	923-4330	abstract[173]	new[173]	_	_
+61-12	2332-2333	.	_	_	_	_
+
+#Text=Lunch : M - F 11AM-4PM , Sa 11:30AM-PM ; dinner : M - Sa 5PM-10PM .
+62-1	2334-2339	Lunch	event[174]	new[174]	coref	67-1[191_174]
+62-2	2340-2341	:	event[174]	new[174]	_	_
+62-3	2342-2343	M	event[174]|person[175]|person[176]	new[174]|giv[175]|giv[176]	coref|ana	62-3[176_175]|69-3[0_176]
+62-4	2344-2345	-	event[174]|person[175]|person[176]	new[174]|giv[175]|giv[176]	_	_
+62-5	2346-2347	F	event[174]|person[175]|person[176]	new[174]|giv[175]|giv[176]	_	_
+62-6	2348-2356	11AM-4PM	event[174]|person[176]	new[174]|giv[176]	_	_
+62-7	2357-2358	,	person[176]	giv[176]	_	_
+62-8	2359-2361	Sa	person[176]|person[177]	giv[176]|giv[177]	coref	62-15[0_177]
+62-9	2362-2372	11:30AM-PM	person[176]|person[177]	giv[176]|giv[177]	_	_
+62-10	2373-2374	;	_	_	_	_
+62-11	2375-2381	dinner	event	new	coref	67-8
+62-12	2382-2383	:	_	_	_	_
+62-13	2384-2385	M	abstract[179]	giv[179]	coref	72-1[208_179]
+62-14	2386-2387	-	abstract[179]	giv[179]	_	_
+62-15	2388-2390	Sa	abstract[179]|person	giv[179]|giv	coref	72-8[211_0]
+62-16	2391-2399	5PM-10PM	abstract[179]|time	giv[179]|new	coref	67-18
+62-17	2400-2401	.	_	_	_	_
+
+#Text=Amazing restaurant specializing in gourmet sandwiches and more .
+63-1	2402-2409	Amazing	place[182]	new[182]	coref	66-1[189_182]
+63-2	2410-2420	restaurant	place[182]	new[182]	_	_
+63-3	2421-2433	specializing	place[182]	new[182]	_	_
+63-4	2434-2436	in	place[182]	new[182]	_	_
+63-5	2437-2444	gourmet	place[182]|abstract|object[184]	new[182]|new|new[184]	_	_
+63-6	2445-2455	sandwiches	place[182]|object[184]	new[182]|new[184]	_	_
+63-7	2456-2459	and	place[182]	new[182]	_	_
+63-8	2460-2464	more	place[182]	new[182]	_	_
+63-9	2465-2466	.	_	_	_	_
+
+#Text=A casual relaxed atmosphere with a great staff !
+64-1	2467-2468	A	abstract[185]	giv[185]	_	_
+64-2	2469-2475	casual	abstract[185]	giv[185]	_	_
+64-3	2476-2483	relaxed	abstract[185]	giv[185]	_	_
+64-4	2484-2494	atmosphere	abstract[185]	giv[185]	_	_
+64-5	2495-2499	with	abstract[185]	giv[185]	_	_
+64-6	2500-2501	a	abstract[185]|person[186]	giv[185]|giv[186]	_	_
+64-7	2502-2507	great	abstract[185]|person[186]	giv[185]|giv[186]	_	_
+64-8	2508-2513	staff	abstract[185]|person[186]	giv[185]|giv[186]	_	_
+64-9	2514-2515	!	_	_	_	_
+
+#Text=$$ .
+65-1	2516-2518	$$	person	giv	coref	70-1
+65-2	2519-2520	.	_	_	_	_
+
+#Text=Stellina Restaurant , 47 Main St , ☏ +1617 924-9475 .
+66-1	2521-2529	Stellina	person|place[189]	new|giv[189]	coref	68-1[197_189]
+66-2	2530-2540	Restaurant	place[189]	giv[189]	_	_
+66-3	2541-2542	,	_	_	_	_
+66-4	2543-2545	47	place[190]	new[190]	_	_
+66-5	2546-2550	Main	place[190]	new[190]	_	_
+66-6	2551-2553	St	place[190]	new[190]	_	_
+66-7	2554-2555	,	_	_	_	_
+66-8	2556-2557	☏	_	_	_	_
+66-9	2558-2563	+1617	_	_	_	_
+66-10	2564-2572	924-9475	_	_	_	_
+66-11	2573-2574	.	_	_	_	_
+
+#Text=Lunch : Tu - F 11:30AM-2PM ; dinner : M - Th 5PM-9:30PM , F - Sa 5PM-10PM , Su 5PM-9PM .
+67-1	2575-2580	Lunch	event[191]	giv[191]	coref	69-4[0_191]
+67-2	2581-2582	:	event[191]	giv[191]	_	_
+67-3	2583-2585	Tu	event[191]|person[192]	giv[191]|giv[192]	_	_
+67-4	2586-2587	-	event[191]|person[192]	giv[191]|giv[192]	_	_
+67-5	2588-2589	F	event[191]|person[192]|person	giv[191]|giv[192]|giv	coref	72-6
+67-6	2590-2601	11:30AM-2PM	event[191]|person[192]|time	giv[191]|giv[192]|new	_	_
+67-7	2602-2603	;	event[191]	giv[191]	_	_
+67-8	2604-2610	dinner	event[191]|event	giv[191]|giv	_	_
+67-9	2611-2612	:	event[191]	giv[191]	_	_
+67-10	2613-2614	M	event[191]	giv[191]	_	_
+67-11	2615-2616	-	event[191]	giv[191]	_	_
+67-12	2617-2619	Th	event[191]	giv[191]	_	_
+67-13	2620-2630	5PM-9:30PM	event[191]	giv[191]	_	_
+67-14	2631-2632	,	event[191]	giv[191]	_	_
+67-15	2633-2634	F	event[191]	giv[191]	_	_
+67-16	2635-2636	-	event[191]	giv[191]	_	_
+67-17	2637-2639	Sa	event[191]	giv[191]	_	_
+67-18	2640-2648	5PM-10PM	event[191]|time	giv[191]|giv	_	_
+67-19	2649-2650	,	_	_	_	_
+67-20	2651-2653	Su	_	_	_	_
+67-21	2654-2661	5PM-9PM	_	_	_	_
+67-22	2662-2663	.	_	_	_	_
+
+#Text=A great upscale restaurant with local music .
+68-1	2664-2665	A	place[197]	giv[197]	_	_
+68-2	2666-2671	great	place[197]	giv[197]	_	_
+68-3	2672-2679	upscale	place[197]	giv[197]	_	_
+68-4	2680-2690	restaurant	place[197]	giv[197]	_	_
+68-5	2691-2695	with	place[197]	giv[197]	_	_
+68-6	2696-2701	local	place[197]|abstract[198]	giv[197]|new[198]	_	_
+68-7	2702-2707	music	place[197]|abstract[198]	giv[197]|new[198]	_	_
+68-8	2708-2709	.	_	_	_	_
+
+#Text=Check out their lunch menu and outdoor patio .
+69-1	2710-2715	Check	_	_	_	_
+69-2	2716-2719	out	_	_	_	_
+69-3	2720-2725	their	person|object[201]	giv|new[201]	_	_
+69-4	2726-2731	lunch	event|object[201]	giv|new[201]	_	_
+69-5	2732-2736	menu	object[201]	new[201]	_	_
+69-6	2737-2740	and	_	_	_	_
+69-7	2741-2748	outdoor	place[202]	giv[202]	_	_
+69-8	2749-2754	patio	place[202]	giv[202]	_	_
+69-9	2755-2756	.	_	_	_	_
+
+#Text=$$ .
+70-1	2757-2759	$$	person	giv	coref	75-1
+70-2	2760-2761	.	_	_	_	_
+
+#Text=Not Your Average Joe 's , 55 Main St , ☏ +1617 926-9229 .
+71-1	2762-2765	Not	_	_	_	_
+71-2	2766-2770	Your	person|person[205]	new|new[205]	appos	71-7[207_205]
+71-3	2771-2778	Average	person[205]	new[205]	_	_
+71-4	2779-2782	Joe	person[205]	new[205]	_	_
+71-5	2783-2785	's	person[205]	new[205]	_	_
+71-6	2786-2787	,	_	_	_	_
+71-7	2788-2790	55	person[207]	giv[207]	coref	82-5[232_207]
+71-8	2791-2795	Main	object|person[207]	giv|giv[207]	_	_
+71-9	2796-2798	St	person[207]	giv[207]	_	_
+71-10	2799-2800	,	_	_	_	_
+71-11	2801-2802	☏	_	_	_	_
+71-12	2803-2808	+1617	_	_	_	_
+71-13	2809-2817	926-9229	_	_	_	_
+71-14	2818-2819	.	_	_	_	_
+
+#Text=M - Th 11:30AM-10PM , F - Sa 11:30AM-11PM , Su noon-10PM .
+72-1	2820-2821	M	abstract[208]	giv[208]	_	_
+72-2	2822-2823	-	abstract[208]	giv[208]	_	_
+72-3	2824-2826	Th	abstract[208]	giv[208]	_	_
+72-4	2827-2839	11:30AM-10PM	time	new	_	_
+72-5	2840-2841	,	_	_	_	_
+72-6	2842-2843	F	person	giv	_	_
+72-7	2844-2845	-	_	_	_	_
+72-8	2846-2848	Sa	person[211]	giv[211]	_	_
+72-9	2849-2861	11:30AM-11PM	person[211]|time	giv[211]|new	_	_
+72-10	2862-2863	,	_	_	_	_
+72-11	2864-2866	Su	_	_	_	_
+72-12	2867-2876	noon-10PM	_	_	_	_
+72-13	2877-2878	.	_	_	_	_
+
+#Text=Classic American cuisine .
+73-1	2879-2886	Classic	abstract[213]	new[213]	_	_
+73-2	2887-2895	American	abstract[213]	new[213]	_	_
+73-3	2896-2903	cuisine	abstract[213]	new[213]	_	_
+73-4	2904-2905	.	_	_	_	_
+
+#Text=A good place to bring kids .
+74-1	2906-2907	A	place[214]	new[214]	_	_
+74-2	2908-2912	good	place[214]	new[214]	_	_
+74-3	2913-2918	place	place[214]	new[214]	_	_
+74-4	2919-2921	to	place[214]	new[214]	_	_
+74-5	2922-2927	bring	place[214]	new[214]	_	_
+74-6	2928-2932	kids	place[214]|person	new[214]|new	_	_
+74-7	2933-2934	.	_	_	_	_
+
+#Text=$$ .
+75-1	2935-2937	$$	person	giv	coref	80-1
+75-2	2938-2939	.	_	_	_	_
+
+#Text=Deluxe Town Diner ( The Town Diner ) , 627 Mt Auburn St , ☏ +1617 926-8400 .
+76-1	2940-2946	Deluxe	person[218]	giv[218]	appos	76-5[219_218]
+76-2	2947-2951	Town	place|person[218]	giv|giv[218]	_	_
+76-3	2952-2957	Diner	person[218]	giv[218]	_	_
+76-4	2958-2959	(	_	_	_	_
+76-5	2960-2963	The	person[219]	giv[219]	_	_
+76-6	2964-2968	Town	person[219]	giv[219]	_	_
+76-7	2969-2974	Diner	person[219]	giv[219]	_	_
+76-8	2975-2976	)	_	_	_	_
+76-9	2977-2978	,	_	_	_	_
+76-10	2979-2982	627	place[222]	new[222]	_	_
+76-11	2983-2985	Mt	place|place[222]	giv|new[222]	_	_
+76-12	2986-2992	Auburn	place|place[222]	giv|new[222]	_	_
+76-13	2993-2995	St	place[222]	new[222]	_	_
+76-14	2996-2997	,	_	_	_	_
+76-15	2998-2999	☏	_	_	_	_
+76-16	3000-3005	+1617	abstract[223]	giv[223]	coref	82-11[233_223]
+76-17	3006-3014	926-8400	abstract[223]	giv[223]	_	_
+76-18	3015-3016	.	_	_	_	_
+
+#Text=Su - Th 7AM-9PM , F - Sa 7AM-10PM .
+77-1	3017-3019	Su	time[224]	giv[224]	_	_
+77-2	3020-3021	-	time[224]	giv[224]	_	_
+77-3	3022-3024	Th	time[224]	giv[224]	_	_
+77-4	3025-3032	7AM-9PM	time[224]	giv[224]	_	_
+77-5	3033-3034	,	time[224]	giv[224]	_	_
+77-6	3035-3036	F	time[224]	giv[224]	_	_
+77-7	3037-3038	-	time[224]	giv[224]	_	_
+77-8	3039-3041	Sa	time[224]	giv[224]	_	_
+77-9	3042-3050	7AM-10PM	time[224]	giv[224]	_	_
+77-10	3051-3052	.	_	_	_	_
+
+#Text=A classic diner .
+78-1	3053-3054	A	place[225]	new[225]	ana	79-1[0_225]
+78-2	3055-3062	classic	place[225]	new[225]	_	_
+78-3	3063-3068	diner	place[225]	new[225]	_	_
+78-4	3069-3070	.	_	_	_	_
+
+#Text=It fills up fast so make sure to come early !
+79-1	3071-3073	It	place	giv	_	_
+79-2	3074-3079	fills	_	_	_	_
+79-3	3080-3082	up	_	_	_	_
+79-4	3083-3087	fast	_	_	_	_
+79-5	3088-3090	so	_	_	_	_
+79-6	3091-3095	make	_	_	_	_
+79-7	3096-3100	sure	_	_	_	_
+79-8	3101-3103	to	_	_	_	_
+79-9	3104-3108	come	_	_	_	_
+79-10	3109-3114	early	_	_	_	_
+79-11	3115-3116	!	_	_	_	_
+
+#Text=$$ .
+80-1	3117-3119	$$	person	giv	_	_
+80-2	3120-3121	.	_	_	_	_
+
+#Text=Sleep
+81-1	3122-3127	Sleep	person	new	_	_
+
+#Text=Super 8 Motel , 100 N Beacon St , ☏ +1617 926-2200 .
+82-1	3128-3133	Super	person[229]	new[229]	_	_
+82-2	3134-3135	8	person[229]	new[229]	_	_
+82-3	3136-3141	Motel	person[229]	new[229]	_	_
+82-4	3142-3143	,	_	_	_	_
+82-5	3144-3147	100	abstract[230]|person[232]	new[230]|giv[232]	_	_
+82-6	3148-3149	N	abstract[230]|person[232]	new[230]|giv[232]	_	_
+82-7	3150-3156	Beacon	place|person[232]	new|giv[232]	_	_
+82-8	3157-3159	St	person[232]	giv[232]	_	_
+82-9	3160-3161	,	_	_	_	_
+82-10	3162-3163	☏	_	_	_	_
+82-11	3164-3169	+1617	abstract[233]	giv[233]	_	_
+82-12	3170-3178	926-2200	abstract[233]	giv[233]	_	_
+82-13	3179-3180	.	_	_	_	_
+
+#Text=Best Western Terrace Inn , 1650 Commonwealth Ave , ☏ +1617 566-6260 .
+83-1	3181-3185	Best	place[234]	new[234]	_	_
+83-2	3186-3193	Western	place[234]	new[234]	_	_
+83-3	3194-3201	Terrace	place[234]	new[234]	_	_
+83-4	3202-3205	Inn	place[234]	new[234]	_	_
+83-5	3206-3207	,	_	_	_	_
+83-6	3208-3212	1650	place[236]	new[236]	_	_
+83-7	3213-3225	Commonwealth	organization|place[236]	new|new[236]	_	_
+83-8	3226-3229	Ave	place[236]	new[236]	_	_
+83-9	3230-3231	,	_	_	_	_
+83-10	3232-3233	☏	_	_	_	_
+83-11	3234-3239	+1617	_	_	_	_
+83-12	3240-3248	566-6260	_	_	_	_
+83-13	3249-3250	.	_	_	_	_

@@ -1,0 +1,897 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_wavelet" title="Nonreference Image Quality Evaluation Algorithm Based on Wavelet Convolutional Neural Network and Information Entropy" shortTitle="wavelet" author="Jinhua Liu, Mulian Xu, Xinye Xu, Yuanyuan Huang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/1099-4300/21/11/1070/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Information	NN	information
+Entropy	NN	entropy
+of	IN	of
+Sub-Band	NNP	Sub-Band
+Image	NN	image
+</s>
+</head>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+Application	NN	Application
+of	IN	of
+the	DT	the
+Discrete	NNP	Discrete
+Wavelet	NNP	Wavelet
+Transform	NNP	Transform
+(	-LRB-	(
+DWT	NNP	DWT
+)	-RRB-	)
+</s>
+</head>
+<p>
+<s type="decl">
+Wavelet	NNP	Wavelet
+transform	NN	transform
+is	VBZ	be
+an	DT	a
+effective	JJ	effective
+tool	NN	tool
+to	TO	to
+combine	VB	combine
+time	NN	time
+domain	NN	domain
+and	CC	and
+frequency	NN	frequency
+domain	NN	domain
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+most	JJS	most
+applications	NNS	application
+,	,	,
+discrete	JJ	discrete
+signals	NNS	signal
+are	VBP	be
+used	VBN	use
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+discrete	JJ	discrete
+wavelet	NN	wavelet
+transform	NN	transform
+(	-LRB-	(
+DWT	NNP	DWT
+)	-RRB-	)
+must	MD	must
+be	VB	be
+used	VBN	use
+instead	RB	instead
+of	IN	of
+continuous	JJ	continuous
+wavelet	NN	wavelet
+transform	NN	transform
+.	.	.
+</s>
+<s type="decl">
+Wavelet	NNP	Wavelet
+transform	NN	transform
+can	MD	can
+decompose	VB	decompose
+the	DT	the
+signal	NN	signal
+by	IN	by
+band-pass	NN	band-pass
+filter	NN	filter
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+result	NN	result
+of	IN	of
+the	DT	the
+band	NN	band
+filtering	NN	filtering
+operation	NN	operation
+will	MD	will
+be	VB	be
+two	CD	2
+different	JJ	different
+signals	NNS	signal
+,	,	,
+one	CD	one
+will	MD	will
+be	VB	be
+related	VBN	relate
+to	IN	to
+the	DT	the
+high	JJ	high
+frequency	NN	frequency
+components	NNS	component
+and	CC	and
+the	DT	the
+other	JJ	other
+related	VBN	relate
+to	IN	to
+the	DT	the
+low	JJ	low
+frequency	NN	frequency
+component	NN	component
+of	IN	of
+the	DT	the
+original	JJ	original
+signal	NN	signal
+.	.	.
+</s>
+</p>
+<p>
+<s type="sub">
+To	TO	to
+compute	VB	compute
+the	DT	the
+DWT	NNP	DWT
+of	IN	of
+an	DT	a
+image	NN	image
+of	IN	of
+size	NN	size
+,	,	,
+it	PRP	it
+must	MD	must
+identify	VB	identify
+the	DT	the
+wavelet	NN	wavelet
+scale	NN	scale
+function	NN	function
+to	TO	to
+define	VB	define
+the	DT	the
+approximation	NN	approximation
+coefficients	NNS	coefficient
+and	CC	and
+the	DT	the
+wavelet	NN	wavelet
+function	NN	function
+responsible	JJ	responsible
+for	IN	for
+horizontal	JJ	horizontal
+,	,	,
+vertical	JJ	vertical
+and	CC	and
+diagonal	JJ	diagonal
+coefficients	NNS	coefficient
+following	VBG	follow
+the	DT	the
+equations	NNS	equation
+below	IN	below
+:	:	:
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+with	IN	with
+:	:	:
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+start	NN	start
+resolution	NN	resolution
+and	CC	and
+the	DT	the
+scale	NN	scale
+parameter	NN	parameter
+<hi rend="italic">
+j	NN	j
+</hi>
+is	VBZ	be
+always	RB	always
+greater	JJR	great
+or	CC	or
+equal	JJ	equal
+to	IN	to
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+general	JJ	general
+,	,	,
+we	PRP	we
+choose	VBP	choose
+and	CC	and
+in	IN	in
+order	NN	order
+that	DT	that
+and	CC	and
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+Calculation	NN	calculation
+of	IN	of
+Information	NN	information
+Entropy	NNP	Entropy
+</s>
+</head>
+<p>
+<s type="sub">
+After	IN	after
+an	DT	a
+image	NN	image
+is	VBZ	be
+transformed	VBN	transform
+by	IN	by
+wavelet	NN	wavelet
+,	,	,
+a	DT	a
+series	NN	series
+of	IN	of
+sub-band	JJ	sub-band
+images	NNS	image
+with	IN	with
+different	JJ	different
+resolutions	NNS	resolution
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+shows	VBZ	show
+the	DT	the
+results	NNS	result
+of	IN	of
+a	DT	a
+Barbara	NNP	Barbara
+image	NN	image
+with	IN	with
+a	DT	a
+size	NN	size
+of	IN	of
+512	CD	512
+×	SYM	×
+512	CD	512
+decomposed	VBN	decompose
+by	IN	by
+two	CD	2
+layers	NNS	layer
+of	IN	of
+wavelets	NNS	wavelet
+.	.	.
+</s>
+<s type="frag">
+The	DT	the
+upper	JJ	upper
+leftmost	JJ	leftmost
+part	NN	part
+of	IN	of
+each	DT	each
+layer	NN	layer
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="decl">
+is	VBZ	be
+a	DT	a
+low-frequency	JJ	low-frequency
+image	NN	image
+,	,	,
+and	CC	and
+the	DT	the
+upper	JJ	upper
+right	JJ	right
+,	,	,
+lower	RBR	low
+left	VBN	leave
+,	,	,
+and	CC	and
+upper	JJ	upper
+right	JJ	right
+corners	NNS	corner
+are	VBP	be
+the	DT	the
+vertical	JJ	vertical
+high-frequency	JJ	high-frequency
+,	,	,
+horizontal	JJ	horizontal
+high-frequency	JJ	high-frequency
+,	,	,
+and	CC	and
+diagonal	JJ	diagonal
+sub-band	NN	sub-band
+images	NNS	image
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+second	JJ	second
+layer	NN	layer
+decomposes	VBZ	decompose
+the	DT	the
+low-frequency	JJ	low-frequency
+image	NN	image
+of	IN	of
+the	DT	the
+first	JJ	first
+layer	NN	layer
+into	IN	into
+a	DT	a
+low-frequency	JJ	low-frequency
+sub-band	NN	sub-band
+image	NN	image
+(	-LRB-	(
+upper	JJ	upper
+left	JJ	left
+corner	NN	corner
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+)	-RRB-	)
+and	CC	and
+a	DT	a
+high-frequency	JJ	high-frequency
+sub-band	NN	sub-band
+image	NN	image
+in	IN	in
+the	DT	the
+vertical	JJ	vertical
+,	,	,
+horizontal	JJ	horizontal
+,	,	,
+and	CC	and
+diagonal	JJ	diagonal
+directions	NNS	direction
+.	.	.
+</s>
+<s type="decl">
+Subsequently	RB	subsequently
+,	,	,
+the	DT	the
+third	JJ	third
+layer	NN	layer
+wavelet	NN	wavelet
+transform	NN	transform
+repeats	VBZ	repeat
+this	DT	this
+process	NN	process
+to	TO	to
+continue	VB	continue
+to	TO	to
+decompose	VB	decompose
+the	DT	the
+low-frequency	JJ	low-frequency
+image	NN	image
+of	IN	of
+the	DT	the
+second	JJ	second
+layer	NN	layer
+,	,	,
+and	CC	and
+the	DT	the
+like	JJ	like
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+above	JJ	above
+evaluation	NN	evaluation
+shows	VBZ	show
+that	IN	that
+the	DT	the
+multiscale	JJ	multiscale
+analysis	NN	analysis
+of	IN	of
+wavelet	NN	wavelet
+transform	NN	transform
+can	MD	can
+efficiently	RB	efficiently
+describe	VB	describe
+the	DT	the
+global	JJ	global
+and	CC	and
+local	JJ	local
+information	NN	information
+of	IN	of
+the	DT	the
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+Generally	RB	generally
+,	,	,
+a	DT	a
+low-frequency	JJ	low-frequency
+image	NN	image
+reflects	VBZ	reflect
+the	DT	the
+global	JJ	global
+information	NN	information
+of	IN	of
+the	DT	the
+entire	JJ	entire
+image	NN	image
+,	,	,
+but	CC	but
+a	DT	a
+high-frequency	NN	high-frequency
+sub-band	NN	sub-band
+image	NN	image
+reflects	VBZ	reflect
+the	DT	the
+local	JJ	local
+details	NNS	detail
+,	,	,
+such	JJ	such
+as	IN	as
+edge	NN	edge
+,	,	,
+contour	NN	contour
+,	,	,
+and	CC	and
+other	JJ	other
+image	NN	image
+areas	NNS	area
+with	IN	with
+mutations	NNS	mutation
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+this	DT	this
+section	NN	section
+calculates	VBZ	calculate
+the	DT	the
+corresponding	JJ	corresponding
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+each	DT	each
+wavelet	NN	wavelet
+sub-band	NN	sub-band
+image	NN	image
+on	IN	on
+the	DT	the
+basis	NN	basis
+of	IN	of
+the	DT	the
+information	NN	information
+of	IN	of
+multiple	JJ	multiple
+directions	NNS	direction
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+each	DT	each
+information	NN	information
+entropy	NN	entropy
+is	VBZ	be
+used	VBN	use
+as	IN	as
+the	DT	the
+visual	JJ	visual
+quality	NN	quality
+weight	NN	weight
+of	IN	of
+the	DT	the
+corresponding	VBG	correspond
+sub-band	NN	sub-band
+image	NN	image
+to	TO	to
+describe	VB	describe
+the	DT	the
+effects	NNS	effect
+of	IN	of
+different	JJ	different
+sub-band	NN	sub-band
+images	NNS	image
+on	IN	on
+the	DT	the
+quality	NN	quality
+of	IN	of
+the	DT	the
+entire	JJ	entire
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+calculation	NN	calculation
+process	NN	process
+of	IN	of
+information	NN	information
+entropy	NN	entropy
+is	VBZ	be
+summarized	VBN	summarize
+as	IN	as
+follows	VBZ	follow
+:	:	:
+</s>
+</p>
+<p>
+<s type="decl">
+Distorted	VBN	Distort
+image	NN	image
+<hi rend="italic">
+I	PRP	I
+</hi>
+is	VBZ	be
+imput	NN	imput
+,	,	,
+and	CC	and
+S-layer	NNP	S-layer
+wavelet	NN	wavelet
+decomposition	NN	decomposition
+is	VBZ	be
+performed	VBN	perform
+for	IN	for
+distorted	VBN	distort
+image	NN	image
+to	TO	to
+obtain	VB	obtain
+low-frequency	JJ	low-frequency
+,	,	,
+horizontal	JJ	horizontal
+,	,	,
+vertical	JJ	vertical
+,	,	,
+and	CC	and
+diagonal	JJ	diagonal
+sub-band	NN	sub-band
+images	NNS	image
+,	,	,
+denoted	VBN	denote
+as	IN	as
+,	,	,
+,	,	,
+,	,	,
+and	CC	and
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+each	DT	each
+sub-band	NN	sub-band
+image	NN	image
+is	VBZ	be
+divided	VBN	divide
+into	IN	into
+image	NN	image
+sub-blocks	NNS	sub-block
+that	WDT	that
+do	VBP	do
+not	RB	not
+overlap	VB	overlap
+,	,	,
+and	CC	and
+the	DT	the
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+each	DT	each
+sub-block	NN	sub-block
+is	VBZ	be
+calculated	VBN	calculate
+.	.	.
+</s>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+the	DT	the
+average	JJ	average
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+all	DT	all
+sub-blocks	NNS	sub-block
+is	VBZ	be
+obtained	VBN	obtain
+and	CC	and
+used	VBN	use
+as	IN	as
+the	DT	the
+visual	JJ	visual
+content	NN	content
+weight	NN	weight
+of	IN	of
+the	DT	the
+cost	NN	cost
+function	NN	function
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+number	NN	number
+of	IN	of
+layers	NNS	layer
+S	RB	S
+of	IN	of
+the	DT	the
+wavelet	NN	wavelet
+decomposition	NN	decomposition
+is	VBZ	be
+set	VBN	set
+to	IN	to
+1	CD	1
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+each	DT	each
+sub-block	NN	sub-block
+is	VBZ	be
+calculated	VBN	calculate
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+where	WRB	where
+denotes	VBZ	denote
+the	DT	the
+probability	NN	probability
+of	IN	of
+wavelet	NN	wavelet
+coefficient	NN	coefficient
+appearing	VBG	appear
+in	IN	in
+the	DT	the
+sub-block	NN	sub-block
+image	NN	image
+,	,	,
+and	CC	and
+.	.	.
+</s>
+<s type="decl">
+represents	VBZ	represent
+the	DT	the
+wavelet	NN	wavelet
+coefficients	NNS	coefficient
+of	IN	of
+the	DT	the
+sub-block	NN	sub-block
+image	NN	image
+,	,	,
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+all	DT	all
+wavelet	NN	wavelet
+coefficients	NNS	coefficient
+of	IN	of
+each	DT	each
+sub-block	NN	sub-block
+image	NN	image
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Generally	RB	generally
+,	,	,
+information	NN	information
+entropy	NN	entropy
+reflects	VBZ	reflect
+the	DT	the
+intensity	NN	intensity
+of	IN	of
+image	NN	image
+information	NN	information
+to	IN	to
+a	DT	a
+certain	JJ	certain
+extent	NN	extent
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+larger	JJR	large
+the	DT	the
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+an	DT	a
+image	NN	image
+,	,	,
+the	DT	the
+larger	JJR	large
+the	DT	the
+amount	NN	amount
+of	IN	of
+information	NN	information
+,	,	,
+and	CC	and
+the	DT	the
+better	JJR	good
+the	DT	the
+visual	JJ	visual
+quality	NN	quality
+of	IN	of
+the	DT	the
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+Moreover	RB	moreover
+,	,	,
+the	DT	the
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+the	DT	the
+image	NN	image
+includes	VBZ	include
+rich	JJ	rich
+structural	JJ	structural
+information	NN	information
+,	,	,
+which	WDT	which
+can	MD	can
+be	VB	be
+used	VBN	use
+to	TO	to
+measure	VB	measure
+the	DT	the
+sensitivity	NN	sensitivity
+of	IN	of
+the	DT	the
+local	JJ	local
+image	NN	image
+.	.	.
+</s>
+<s type="decl">
+Therefore	RB	therefore
+,	,	,
+people	NNS	person
+are	VBP	be
+inclined	VBN	incline
+to	TO	to
+evaluate	VB	evaluate
+the	DT	the
+visual	JJ	visual
+quality	NN	quality
+of	IN	of
+images	NNS	image
+from	IN	from
+areas	NNS	area
+with	IN	with
+high	JJ	high
+acuity	NN	acuity
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+presents	VBZ	present
+the	DT	the
+information	NN	information
+entropy	NN	entropy
+map	NN	map
+of	IN	of
+the	DT	the
+low-frequency	JJ	low-frequency
+and	CC	and
+three	CD	3
+high-frequency	JJ	high-frequency
+sub-band	NN	sub-band
+images	NNS	image
+after	IN	after
+the	DT	the
+wavelet	JJ	wavelet
+transform	NN	transform
+of	IN	of
+Barbara	NNP	Barbara
+image	NN	image
+.	.	.
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="decl">
+also	RB	also
+shows	VBZ	show
+the	DT	the
+large	JJ	large
+amount	NN	amount
+of	IN	of
+structural	JJ	structural
+information	NN	information
+and	CC	and
+the	DT	the
+distribution	NN	distribution
+of	IN	of
+the	DT	the
+information	NN	information
+entropy	NN	entropy
+,	,	,
+which	WDT	which
+is	VBZ	be
+close	JJ	close
+to	IN	to
+the	DT	the
+image	NN	image
+area	NN	area
+of	IN	of
+human	JJ	human
+visual	JJ	visual
+perception	NN	perception
+.	.	.
+</s>
+<s type="sub">
+Therefore	RB	therefore
+,	,	,
+the	DT	the
+wavelet	JJ	wavelet
+information	NN	information
+entropy	NN	entropy
+of	IN	of
+the	DT	the
+image	NN	image
+can	MD	can
+be	VB	be
+used	VBN	use
+as	IN	as
+the	DT	the
+visual	JJ	visual
+weight	NN	weight
+to	TO	to
+improve	VB	improve
+the	DT	the
+subjective	JJ	subjective
+and	CC	and
+objective	JJ	objective
+consistencies	NNS	consistency
+of	IN	of
+the	DT	the
+image	NN	image
+quality	NN	quality
+evaluation	NN	evaluation
+.	.	.
+</s>
+</p>
+</text>

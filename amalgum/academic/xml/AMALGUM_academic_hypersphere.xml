@@ -1,0 +1,575 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_hypersphere" title="An Effective Multiclass Twin Hypersphere Support Vector Machine and Its Practical Engineering Applications" shortTitle="hypersphere" author="Qing Ai, Anna Wang, Aihua Zhang, Wenhui Wang, Yang Wang" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2079-9292/8/10/1195/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+</s>
+<s type="frag">
+Related	JJ	related
+Works	NNS	work
+</s>
+</head>
+<p>
+<s type="decl">
+In	IN	in
+this	DT	this
+paper	NN	paper
+,	,	,
+we	PRP	we
+consider	VBP	consider
+a	DT	a
+multi-class	JJ	multi-class
+classification	NN	classification
+problem	NN	problem
+with	IN	with
+a	DT	a
+training	NN	training
+dataset	NN	dataset
+,	,	,
+where	WRB	where
+<hi rend="italic">
+K	NN	K
+</hi>
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+classes	NNS	class
+and	CC	and
+is	VBZ	be
+the	DT	the
+number	NN	number
+of	IN	of
+the	DT	the
+samples	NNS	sample
+of	IN	of
+the	DT	the
+<hi rend="italic">
+k	NN	k
+</hi>
+-th	NN	-th
+class	NN	class
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+size	NN	size
+of	IN	of
+training	NN	training
+dataset	NN	dataset
+is	VBZ	be
+.	.	.
+</s>
+<s type="imp">
+Denote	VB	denote
+,	,	,
+for	IN	for
+convenience	NN	convenience
+,	,	,
+by	IN	by
+the	DT	the
+sets	NNS	set
+of	IN	of
+samples	NNS	sample
+of	IN	of
+the	DT	the
+<hi rend="italic">
+k	NN	k
+</hi>
+-th	NN	-th
+class	NN	class
+,	,	,
+i.e.	FW	i.e.
+,	,	,
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+Review	NN	review
+of	IN	of
+K-SVCR	NNP	K-SVCR
+Multi-Classifier	NNP	Multi-Classifier
+</s>
+</head>
+<p>
+<s type="decl">
+The	DT	the
+K-SVCR	NNP	K-SVCR
+multi-classifier	NN	multi-classifier
+is	VBZ	be
+based	VBN	base
+on	IN	on
+decomposition-reconstruction	NN	decomposition-reconstruction
+strategy	NN	strategy
+.	.	.
+</s>
+<s type="decl">
+binary	JJ	binary
+SVM	NNP	SVM
+sub-classifiers	NNS	sub-classify
+are	VBP	be
+constructed	VBN	construct
+,	,	,
+each	DT	each
+of	IN	of
+which	WDT	which
+evaluates	VBZ	evaluate
+each	DT	each
+sample	NN	sample
+into	IN	into
+1-vs-1-vs-rest	JJ	1-vs-1-vs-rest
+structure	NN	structure
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+classification	NN	classification
+result	NN	result
+of	IN	of
+K-SVCR	NNP	K-SVCR
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+a	DT	a
+intuitively	RB	intuitively
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+sub-classifier	NN	sub-classifier
+for	IN	for
+two	CD	2
+focused	VBN	focus
+classes	NNS	class
+<hi rend="italic">
+i	PRP	I
+</hi>
+and	CC	and
+<hi rend="italic">
+j	NNP	j
+</hi>
+in	IN	in
+K-SVCR	NNP	K-SVCR
+seeks	VBZ	seek
+an	DT	a
+optimal	JJ	optimal
+hyperplane	NN	hyperplane
+(	-LRB-	(
+1	CD	1
+)	-RRB-	)
+here	RB	here
+is	VBZ	be
+the	DT	the
+normal	JJ	normal
+vector	NN	vector
+and	CC	and
+is	VBZ	be
+the	DT	the
+bias	NN	bias
+term	NN	term
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+optimal	JJ	optimal
+hyperplane	NN	hyperplane
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+resolving	VBG	resolve
+the	DT	the
+following	VBG	follow
+QPP	NNP	QPP
+:	:	:
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+where	WRB	where
+,	,	,
+,	,	,
+,	,	,
+and	CC	and
+,	,	,
+are	VBP	be
+slack	JJ	slack
+variables	NNS	variable
+,	,	,
+the	DT	the
+parameter	NN	parameter
+is	VBZ	be
+restricted	VBN	restrict
+to	IN	to
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+For	IN	for
+a	DT	a
+testing	NN	testing
+sample	NN	sample
+<hi rend="italic">
+x	NN	x
+</hi>
+,	,	,
+the	DT	the
+sub-classifier	NN	sub-classifier
+determines	VBZ	determine
+its	PRP$	its
+class	NN	class
+by	IN	by
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="frag">
+For	IN	for
+the	DT	the
+testing	NN	testing
+</s>
+<s type="decl">
+sample	NN	sample
+<hi rend="italic">
+x	NN	x
+</hi>
+,	,	,
+the	DT	the
+final	JJ	final
+label	NN	label
+can	MD	can
+be	VB	be
+determined	VBN	determine
+by	IN	by
+vote	NN	vote
+rule	NN	rule
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.2.	CD	2.2.
+Review	NN	review
+of	IN	of
+Twin-KSVC	NNP	Twin-KSVC
+Multi-Classifier	NNP	Multi-Classifier
+</s>
+</head>
+<p>
+<s type="decl">
+Twin-KSVC	NNP	Twin-KSVC
+is	VBZ	be
+an	DT	a
+improvement	NN	improvement
+of	IN	of
+K-SVCR	NNP	K-SVCR
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+Twin-KSVC	NNP	Twin-KSVC
+constructs	VBZ	construct
+pairs	NNS	pair
+of	IN	of
+binary	JJ	binary
+TSVM	NNP	TSVM
+sub-classifiers	NNS	sub-classify
+,	,	,
+which	WDT	which
+evaluates	VBZ	evaluate
+each	DT	each
+sample	NN	sample
+into	IN	into
+1-vs-1-vs-rest	JJ	1-vs-1-vs-rest
+structure	NN	structure
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+classification	NN	classification
+result	NN	result
+is	VBZ	be
+intuitively	RB	intuitively
+presented	VBN	present
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+b.	NNP	bear
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+sub-classifiers	NNS	sub-classify
+and	CC	and
+for	IN	for
+two	CD	2
+focused	VBN	focus
+classes	NNS	class
+<hi rend="italic">
+i	PRP	I
+</hi>
+and	CC	and
+<hi rend="italic">
+j	VBN	be
+</hi>
+in	IN	in
+Twin-KSVC	NNP	Twin-KSVC
+seek	VBP	seek
+a	DT	a
+pair	NN	pair
+of	IN	of
+hyperplane	NN	hyperplane
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+are	VBP	be
+the	DT	the
+normal	JJ	normal
+vector	NN	vector
+and	CC	and
+the	DT	the
+bias	NN	bias
+term	NN	term
+of	IN	of
+the	DT	the
+corresponding	JJ	corresponding
+hyperplane	NN	hyperplane
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+two	CD	2
+hyperplanes	NNS	hyperplane
+can	MD	can
+be	VB	be
+obtained	VBN	obtain
+by	IN	by
+resolving	VBG	resolve
+the	DT	the
+QPPs	NNS	QPP
+as	IN	as
+follows	VBZ	follow
+:	:	:
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+are	VBP	be
+slack	JJ	slack
+variables	NNS	variable
+.	.	.
+</s>
+</p>
+<p>
+<s type="frag">
+For	IN	for
+a	DT	a
+testing	NN	testing
+sample	NN	sample
+<hi rend="italic">
+x	NN	x
+</hi>
+,	,	,
+the	DT	the
+sub-classifiers	NNS	sub-classify
+and	CC	and
+assign	VB	assign
+its	PRP$	its
+class	NN	class
+by	IN	by
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+For	IN	for
+the	DT	the
+testing	NN	testing
+sample	NN	sample
+<hi rend="italic">
+x	NN	x
+</hi>
+,	,	,
+the	DT	the
+final	JJ	final
+label	NN	label
+can	MD	can
+be	VB	be
+also	RB	also
+determined	VBN	determine
+by	IN	by
+vote	NN	vote
+rule	NN	rule
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.3.	CD	2.3.
+</s>
+<s type="frag">
+Review	NN	review
+of	IN	of
+THKSVM	NNP	THKSVM
+Multi-Classifier	NNP	Multi-Classifier
+</s>
+</head>
+<p>
+<s type="decl">
+THKSVM	NNP	THKSVM
+(	-LRB-	(
+Twin	NNP	Twin
+Hypersphere	NNP	Hypersphere
+Multiclass	NNP	Multiclass
+Support	NNP	Support
+Vector	NNP	Vector
+Machine	NNP	Machine
+)	-RRB-	)
+integrates	VBZ	integrate
+THSVM	NNP	THSVM
+and	CC	and
+1-vs-rest	JJ	1-vs-rest
+structure	NN	structure
+.	.	.
+</s>
+<s type="decl">
+THKSVM	NNP	THKSVM
+constructs	VBZ	construct
+<hi rend="italic">
+K	CD	K
+</hi>
+hyperspheres	NNS	hypersphere
+in	IN	in
+the	DT	the
+training	NN	training
+stage	NN	stage
+,	,	,
+whose	WP$	whose
+classification	NN	classification
+result	NN	result
+is	VBZ	be
+intuitively	RB	intuitively
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+c.	NNP	c.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+sub-classifier	NN	sub-classifier
+for	IN	for
+the	DT	the
+focused	VBN	focus
+classes	NNS	class
+<hi rend="italic">
+i	PRP	I
+</hi>
+in	IN	in
+THKSVM	NNP	THKSVM
+seeks	VBZ	seek
+a	DT	a
+hypersphere	NN	hypersphere
+(	-LRB-	(
+8	CD	8
+)	-RRB-	)
+where	WRB	where
+and	CC	and
+are	VBP	be
+the	DT	the
+center	NN	center
+and	CC	and
+the	DT	the
+radius	NN	radius
+of	IN	of
+the	DT	the
+corresponding	JJ	corresponding
+hypersphere	NN	hypersphere
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+hypersphere	NN	hypersphere
+can	MD	can
+be	VB	be
+constructed	VBN	construct
+by	IN	by
+resolving	VBG	resolve
+the	DT	the
+following	VBG	follow
+QPP	NNP	QPP
+:	:	:
+(	-LRB-	(
+9	CD	9
+)	-RRB-	)
+where	WRB	where
+,	,	,
+and	CC	and
+are	VBP	be
+slack	JJ	slack
+variables	NNS	variable
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+The	DT	the
+class	NN	class
+of	IN	of
+a	DT	a
+testing	NN	testing
+sample	NN	sample
+<hi rend="italic">
+x	NN	x
+</hi>
+can	MD	can
+be	VB	be
+determined	VBN	determine
+by	IN	by
+(	-LRB-	(
+10	CD	10
+)	-RRB-	)
+</s>
+</p>
+</text>

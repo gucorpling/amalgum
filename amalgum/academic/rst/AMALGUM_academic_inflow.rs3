@@ -1,0 +1,142 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. Computational Settings</segment>
+<segment id="2" parent="1002" relname="preparation">3.1. Computational Domain and Boundary Conditions</segment>
+<segment id="3" parent="1004" relname="span">The computational domain is constructed according to the Architectural Institute of Japan</segment>
+<segment id="4" parent="3" relname="elaboration">( AIJ ) guidelines ,</segment>
+<segment id="5" parent="1003" relname="same_unit">as illustrated in</segment>
+<segment id="6" parent="1006" relname="preparation">Figure 1</segment>
+<segment id="7" parent="1006" relname="joint">a with its main boundary conditions ,</segment>
+<segment id="8" parent="1006" relname="joint">and this domain is used for all the test cases .</segment>
+<segment id="9" parent="1006" relname="joint">Moreover , the corresponding computational settings are summarized in Table 1 .</segment>
+<segment id="10" parent="1012" relname="span">For the ground layer , the grids are refined to gain y+ values between 30 and 300</segment>
+<segment id="11" parent="1013" relname="span">( it is in the accepted range for the wall function approach</segment>
+<segment id="12" parent="11" relname="elaboration">used in the computations ) ,</segment>
+<segment id="13" parent="1012" relname="elaboration">getting nearly 50 nodes below hub height for all the test cases .</segment>
+<segment id="14" parent="1014" relname="same_unit">In order to resolve the strong gradients around the turbine rotor ,</segment>
+<segment id="15" parent="1015" relname="same_unit">a high concentration of grid points is distributed in the vicinity of the rotor ,</segment>
+<segment id="16" parent="1016" relname="span">with the generated mesh</segment>
+<segment id="17" parent="16" relname="elaboration">shown in</segment>
+<segment id="18" parent="1018" relname="preparation">Figure 1</segment>
+<segment id="19" parent="1018" relname="joint">b.</segment>
+<segment id="20" parent="1020" relname="span">Finally , the total number of grid points</segment>
+<segment id="21" parent="20" relname="elaboration">used for the computations is around 3.8 million .</segment>
+<segment id="22" parent="1023" relname="span">Similar grid resolutions have been employed in previous studies</segment>
+<segment id="23" parent="22" relname="elaboration">that used the actuator-type models ,</segment>
+<segment id="24" parent="1024" relname="span">and they have been proven sufficient</segment>
+<segment id="25" parent="24" relname="purpose">to capture the wake characteristics behind a single turbine .</segment>
+<segment id="26" parent="1018" relname="joint">3.2. Isotropic and Anisotropic Inflow Conditions</segment>
+<segment id="27" parent="1018" relname="joint">For every CFD analysis , accurate inflow conditions are paramount to the fidelity of the outcome .</segment>
+<segment id="28" parent="1029" relname="attribution">It was observed</segment>
+<segment id="29" parent="1029" relname="same_unit">that on one hand , wind turbine wake problems are very sensitive to inflow conditions ;</segment>
+<segment id="30" parent="1030" relname="span">on the other hand , different expressions of the inlet profile exist in the literature</segment>
+<segment id="31" parent="30" relname="circumstance">when using the RSM .</segment>
+<segment id="32" parent="1018" relname="joint">Therefore , a sensitive analysis of the influence of incoming wind profiles on the downstream wake flow was performed .</segment>
+<segment id="33" parent="1036" relname="span">The adopted inflow profiles</segment>
+<segment id="34" parent="33" relname="elaboration">( which are classified into isotropic and anisotropic inflow profiles )</segment>
+<segment id="35" parent="1035" relname="same_unit">are listed in Table 2 ,</segment>
+<segment id="36" parent="1035" relname="elaboration">in which the velocity profile u ( z ) is characterized by the power law ,</segment>
+<segment id="37" parent="1034" relname="elaboration">which is widely used in wind engineering applications due to its simplicity and practicality .</segment>
+<segment id="38" parent="1038" relname="span">As regarding the turbulence quantities k , ε , and ω ,</segment>
+<segment id="39" parent="1039" relname="contrast">they are fundamental for the RSM</segment>
+<segment id="40" parent="1040" relname="span">but difficult to be estimated directly ;</segment>
+<segment id="41" parent="1041" relname="span">instead , it is an effective way</segment>
+<segment id="42" parent="41" relname="purpose">to relate them to easily obtained parameters such as the wind speed u and turbulence intensity TI .</segment>
+<segment id="43" parent="1044" relname="span">Therefore , the mostly used relation</segment>
+<segment id="44" parent="43" relname="elaboration">typically resorted to</segment>
+<segment id="45" parent="1045" relname="span">is to derive k</segment>
+<segment id="46" parent="45" relname="means">using Equation ( 6 ) .</segment>
+<segment id="47" parent="1047" relname="span">Accordingly , the values of ε and ω are estimated with the assumption of a local equilibrium ,</segment>
+<segment id="48" parent="47" relname="manner">as given by Equations ( 7 ) and ( 8 ) .</segment>
+<segment id="49" parent="50" relname="attribution">It should be noted</segment>
+<segment id="50" parent="1050" relname="span">that the RSM in ANSYS FLUENT requires boundary conditions for each of the Reynolds stresses .</segment>
+<segment id="51" parent="1052" relname="condition">If their values are not specified explicitly at the inlet ,</segment>
+<segment id="52" parent="1053" relname="span">then the turbulence is assumed to be isotropic</segment>
+<segment id="53" parent="52" relname="elaboration">( as described by Equation ( 9 ) ) ;</segment>
+<segment id="54" parent="1056" relname="span">if the anisotropic property of the atmospheric boundary layer</segment>
+<segment id="55" parent="54" relname="restatement">( ABL )</segment>
+<segment id="56" parent="1055" relname="same_unit">turbulence is considered ,</segment>
+<segment id="57" parent="1057" relname="span">the normal and shear Reynolds stress profiles have the form</segment>
+<segment id="58" parent="57" relname="elaboration">as given in Equation ( 10 ) .</segment>
+<segment id="59" parent="1060" relname="attribution">Note</segment>
+<segment id="60" parent="1060" relname="span">that for these two types of inflow conditions , the profiles of u , TI , ε , and ω are identical ,</segment>
+<segment id="61" parent="1061" relname="joint">in which the variables uhub and TIhub are defined at a reference height , i.e. , hub height ,</segment>
+<segment id="62" parent="1063" relname="span">and α is the power-law exponent</segment>
+<segment id="63" parent="62" relname="elaboration">that can be determined</segment>
+<segment id="64" parent="1063" relname="manner">according to the surface roughness categorization upwind of the site .</segment>
+<segment id="65" parent="1065" relname="preparation">Note that the value of α is set to be 0.15 for all the following test cases .</segment>
+<segment id="66" parent="1067" relname="span">On the other hand , the difference between two sets of profiles reflects in three aspects :</segment>
+<segment id="67" parent="66" relname="elaboration">( 1 ) calculation of the turbulence kinetic energy k ;</segment>
+<segment id="68" parent="1067" relname="elaboration">( 2 ) the expression of each Reynolds stress ;</segment>
+<segment id="69" parent="1066" relname="elaboration">( 3 ) the value of the RSM constant Cμ .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="multinuc" parent="1005" relname="preparation"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1002" relname="span"/>
+<group id="1006" type="multinuc" parent="1005" relname="span"/>
+<group id="1010" type="span" parent="1006" relname="joint"/>
+<group id="1011" type="span" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="10" relname="elaboration"/>
+<group id="1014" type="multinuc" parent="1011" relname="purpose"/>
+<group id="1015" type="multinuc" parent="1014" relname="same_unit"/>
+<group id="1016" type="span" parent="1015" relname="same_unit"/>
+<group id="1017" type="span" parent="1006" relname="joint"/>
+<group id="1018" type="multinuc" parent="1017" relname="span"/>
+<group id="1020" type="span" parent="1018" relname="joint"/>
+<group id="1023" type="span" parent="1018" relname="joint"/>
+<group id="1024" type="span" parent="1018" relname="joint"/>
+<group id="1028" type="span" parent="1018" relname="joint"/>
+<group id="1029" type="multinuc" parent="1028" relname="span"/>
+<group id="1030" type="span" parent="1029" relname="same_unit"/>
+<group id="1033" type="span" parent="1018" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="span"/>
+<group id="1035" type="multinuc" parent="1034" relname="span"/>
+<group id="1036" type="span" parent="1035" relname="same_unit"/>
+<group id="1038" type="span" parent="1018" relname="joint"/>
+<group id="1039" type="multinuc" parent="38" relname="elaboration"/>
+<group id="1040" type="span" parent="1039" relname="contrast"/>
+<group id="1041" type="span" parent="40" relname="elaboration"/>
+<group id="1043" type="multinuc" parent="1018" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="same_unit"/>
+<group id="1045" type="span" parent="1043" relname="same_unit"/>
+<group id="1047" type="span" parent="1018" relname="joint"/>
+<group id="1049" type="span" parent="1018" relname="joint"/>
+<group id="1050" type="span" parent="1051" relname="background"/>
+<group id="1051" type="span" parent="1049" relname="span"/>
+<group id="1052" type="multinuc" parent="1051" relname="span"/>
+<group id="1053" type="span" parent="1052" relname="same_unit"/>
+<group id="1054" type="span" parent="1052" relname="same_unit"/>
+<group id="1055" type="multinuc" parent="1057" relname="condition"/>
+<group id="1056" type="span" parent="1055" relname="same_unit"/>
+<group id="1057" type="span" parent="1054" relname="span"/>
+<group id="1059" type="span" parent="1018" relname="joint"/>
+<group id="1060" type="span" parent="1059" relname="span"/>
+<group id="1061" type="multinuc" parent="60" relname="elaboration"/>
+<group id="1062" type="span" parent="1061" relname="joint"/>
+<group id="1063" type="span" parent="1062" relname="span"/>
+<group id="1064" type="span" parent="1018" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1065" relname="span"/>
+<group id="1067" type="span" parent="1066" relname="span"/>
+	</body>
+</rst>

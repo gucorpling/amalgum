@@ -1,0 +1,154 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">3. Methodology</segment>
+<segment id="2" parent="1003" relname="span">A detailed overview of the methodology</segment>
+<segment id="3" parent="2" relname="elaboration">followed with the core underlying components of the implementation is described in this section .</segment>
+<segment id="4" parent="1005" relname="span">After clarifying the problem formulation and the difficulties</segment>
+<segment id="5" parent="4" relname="purpose">to be resolved in the current work ,</segment>
+<segment id="6" parent="1006" relname="span">insights into the technological means are provided ,</segment>
+<segment id="7" parent="6" relname="elaboration">comprising the multiresolution schema of Nexus . js library , the programming tools and the 3D visualization pipeline .</segment>
+<segment id="8" parent="1008" relname="joint">The case study is presented with emphasis to data acquisition and processing workflow</segment>
+<segment id="9" parent="1009" relname="joint">and finally , the architecture of the platform and its data structure are defined</segment>
+<segment id="10" parent="1009" relname="joint">and analyzed .</segment>
+<segment id="11" parent="1011" relname="preparation">3.1. Problem Definition</segment>
+<segment id="12" parent="1012" relname="same_unit">The main problem</segment>
+<segment id="13" parent="1013" relname="span">in managing heterogeneous datasets of the Cultural Heritage lies in their size ,</segment>
+<segment id="14" parent="13" relname="circumstance">especially when remote access and use over the Internet is entailed .</segment>
+<segment id="15" parent="1015" relname="span">Loading time , lossless transmission , network load and hardware limitations are consequent issues</segment>
+<segment id="16" parent="15" relname="elaboration">that dictate 3D visualization quality , website ’s overall performance and eventually , user ’s engagement and retention .</segment>
+<segment id="17" parent="1016" relname="joint">The amount of 3D and 2D data largely determines their transmission speed to the client browser .</segment>
+<segment id="18" parent="1017" relname="joint">This overall time is bound by the network bandwidth ,</segment>
+<segment id="19" parent="1019" relname="span">namely , the maximum data rate</segment>
+<segment id="20" parent="1020" relname="span">which is specified by the Internet Service Provider</segment>
+<segment id="21" parent="20" relname="restatement">( ISP ) .</segment>
+<segment id="22" parent="1021" relname="joint">Exceeding the bandwidth limit creates congestion points and bottlenecks on the data transmission line .</segment>
+<segment id="23" parent="1023" relname="same_unit">Congestion occurs</segment>
+<segment id="24" parent="1025" relname="circumstance">once the router is running out of available buffer ,</segment>
+<segment id="25" parent="1026" relname="span">an overflow</segment>
+<segment id="26" parent="25" relname="elaboration">which is likely to happen</segment>
+<segment id="27" parent="1026" relname="circumstance">when large amounts of contents are transferred online .</segment>
+<segment id="28" parent="1028" relname="joint">Therefore , the huge 3D models size leads to increased latency , packets loss and poor performance</segment>
+<segment id="29" parent="1028" relname="joint">and the site ceases to be functional .</segment>
+<segment id="30" parent="1031" relname="span">In order to compensate for the transmission delay and network load ,</segment>
+<segment id="31" parent="30" relname="elaboration">the total amount of the 3D models is often reduced .</segment>
+<segment id="32" parent="1032" relname="span">Depending on the editing software , the compression method and the development platform ,</segment>
+<segment id="33" parent="1033" relname="span">the consequences may be loss of geo-referencing</segment>
+<segment id="34" parent="1034" relname="span">as most software impose their own coordinate systems and quality degradation</segment>
+<segment id="35" parent="34" relname="elaboration">related to geometry and texture .</segment>
+<segment id="36" parent="1036" relname="joint">The perceived visual quality is inevitably equated with the visual fidelity of the original models .</segment>
+<segment id="37" parent="1037" relname="joint">Its degradation does not justify their high-cost and time-consuming generation processes</segment>
+<segment id="38" parent="1037" relname="joint">and is not consistent with their role as geospatial and geometrically accurate data .</segment>
+<segment id="39" parent="1039" relname="span">The end users take the visualized cultural assets at face value</segment>
+<segment id="40" parent="1040" relname="sequence">as the rendered appearance is not appealing</segment>
+<segment id="41" parent="1040" relname="sequence">and does n’t correspond to a detailed and realistic representation .</segment>
+<segment id="42" parent="1041" relname="joint">In addition , precise measurement tools cannot be implemented in the context of scientific and professional use .</segment>
+<segment id="43" parent="1043" relname="span">At the same time , the platform ’s development must conform to the practices and the thematic design of an online 3D Cultural Heritage repository</segment>
+<segment id="44" parent="43" relname="purpose">in order to fulfill its purposes .</segment>
+<segment id="45" parent="1045" relname="joint">Besides the aforementioned visualization efficiency ,</segment>
+<segment id="46" parent="1045" relname="joint">basic practices encompass interactivity , data interoperability and information systems .</segment>
+<segment id="47" parent="1046" relname="joint">Their objectives are user ’s familiarization with the cultural resources via easy-to-use interaction components and accessible archiving , multidisciplinary knowledge transfer and obviously digital preservation of its prominent content .</segment>
+<segment id="48" parent="1049" relname="span">Common services comprise manipulation of the 3D scene</segment>
+<segment id="49" parent="48" relname="elaboration">( move , rotate and zoom )</segment>
+<segment id="50" parent="1050" relname="span">using the trackball ,</segment>
+<segment id="51" parent="50" relname="elaboration">highlighted and clickable points of interest with aside relative information and textual labeling .</segment>
+<segment id="52" parent="1052" relname="contrast">The freely navigation is appropriate for artifacts , small-scale assets and flat surfaces</segment>
+<segment id="53" parent="1052" relname="contrast">but rather inadequate for large-scale monuments and complex geometries .</segment>
+<segment id="54" parent="1054" relname="span">Polymorphic and heterogeneous data are usually displayed on independent webpages accordingly to their visualization format or the type of information</segment>
+<segment id="55" parent="54" relname="elaboration">they educe .</segment>
+<segment id="56" parent="1056" relname="span">In the case of image and text incorporation to the 3D visualization page ,</segment>
+<segment id="57" parent="56" relname="elaboration">they undertake a static role with a specific position outside the border of the 3D viewer .</segment>
+<segment id="58" parent="1059" relname="span">Such platforms are insufficient</segment>
+<segment id="59" parent="58" relname="purpose">to spatially relate 3D and 2D information ,</segment>
+<segment id="60" parent="1060" relname="joint">failing to generate a two-way access</segment>
+<segment id="61" parent="1060" relname="joint">and provide an exploratory examination of the data .</segment>
+<segment id="62" parent="1062" relname="span">In terms of programming technique , user interaction requires the design of a coordinated events ’ system</segment>
+<segment id="63" parent="62" relname="purpose">to avoid glitches and delays in response .</segment>
+<segment id="64" parent="1063" relname="span">The hierarchical model of the interface and the WebGL 3D specifications restrict some content and structure adjustments .</segment>
+<segment id="65" parent="1064" relname="joint">Exceeding the canvas element</segment>
+<segment id="66" parent="1065" relname="joint">and executing queries asynchronously ,</segment>
+<segment id="67" parent="1066" relname="same_unit">imitating multi-threading process without runtime errors</segment>
+<segment id="68" parent="1066" relname="same_unit">would attain high-performance and advanced interaction .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="1003" relname="elaboration"/>
+<group id="1005" type="span" parent="1006" relname="circumstance"/>
+<group id="1006" type="span" parent="1004" relname="span"/>
+<group id="1007" type="multinuc" parent="1002" relname="elaboration"/>
+<group id="1008" type="multinuc" parent="1007" relname="joint"/>
+<group id="1009" type="multinuc" parent="1008" relname="joint"/>
+<group id="1010" type="span" parent="1007" relname="joint"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1012" type="multinuc" parent="1011" relname="joint"/>
+<group id="1013" type="span" parent="1012" relname="same_unit"/>
+<group id="1014" type="multinuc" parent="1011" relname="joint"/>
+<group id="1015" type="span" parent="1014" relname="joint"/>
+<group id="1016" type="multinuc" parent="1014" relname="joint"/>
+<group id="1017" type="multinuc" parent="1016" relname="joint"/>
+<group id="1018" type="multinuc" parent="1017" relname="joint"/>
+<group id="1019" type="span" parent="1018" relname="joint"/>
+<group id="1020" type="span" parent="19" relname="elaboration"/>
+<group id="1021" type="multinuc" parent="1018" relname="joint"/>
+<group id="1022" type="multinuc" parent="1021" relname="joint"/>
+<group id="1023" type="multinuc" parent="1022" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="same_unit"/>
+<group id="1025" type="span" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="1022" relname="joint"/>
+<group id="1028" type="multinuc" parent="1027" relname="span"/>
+<group id="1029" type="multinuc" parent="1028" relname="purpose"/>
+<group id="1030" type="span" parent="1029" relname="joint"/>
+<group id="1031" type="span" parent="1030" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="elaboration"/>
+<group id="1033" type="span" parent="32" relname="elaboration"/>
+<group id="1034" type="span" parent="33" relname="circumstance"/>
+<group id="1035" type="multinuc" parent="1029" relname="joint"/>
+<group id="1036" type="multinuc" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="1036" relname="joint"/>
+<group id="1038" type="multinuc" parent="1035" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="joint"/>
+<group id="1040" type="multinuc" parent="39" relname="manner"/>
+<group id="1041" type="multinuc" parent="1038" relname="joint"/>
+<group id="1042" type="multinuc" parent="1041" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="multinuc" parent="1042" relname="joint"/>
+<group id="1045" type="multinuc" parent="1044" relname="joint"/>
+<group id="1046" type="multinuc" parent="1044" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="span"/>
+<group id="1050" type="span" parent="1049" relname="means"/>
+<group id="1051" type="multinuc" parent="1047" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="joint"/>
+<group id="1053" type="multinuc" parent="1051" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="joint"/>
+<group id="1055" type="multinuc" parent="1053" relname="joint"/>
+<group id="1056" type="span" parent="1055" relname="joint"/>
+<group id="1057" type="multinuc" parent="1055" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="joint"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="multinuc" parent="1059" relname="elaboration"/>
+<group id="1061" type="multinuc" parent="1057" relname="joint"/>
+<group id="1062" type="span" parent="1061" relname="joint"/>
+<group id="1063" type="span" parent="1061" relname="joint"/>
+<group id="1064" type="multinuc" parent="64" relname="elaboration"/>
+<group id="1065" type="multinuc" parent="1064" relname="joint"/>
+<group id="1066" type="multinuc" parent="1065" relname="joint"/>
+	</body>
+</rst>

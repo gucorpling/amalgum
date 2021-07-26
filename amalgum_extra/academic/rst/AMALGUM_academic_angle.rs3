@@ -1,0 +1,270 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Principles of Resolver-to-Digital Conversion</segment>
+<segment id="2" parent="1003" relname="joint">In this section we first introduce the basic principle of the resolver and its subsequent demodulation methods ,</segment>
+<segment id="3" parent="1003" relname="joint">and then several previous RDC solutions are presented and evaluated for their advantages and drawbacks .</segment>
+<segment id="4" parent="1005" relname="attribution">2.1.</segment>
+<segment id="5" parent="1005" relname="span">Principle of Resolver</segment>
+<segment id="6" parent="1007" relname="span">A resolver is a position sensor</segment>
+<segment id="7" parent="1008" relname="span">comprising of a stator and a rotor ,</segment>
+<segment id="8" parent="1009" relname="span">which is connected to the shaft of the motor</segment>
+<segment id="9" parent="8" relname="purpose">for detecting its angular position .</segment>
+<segment id="10" parent="1011" relname="span">The stator portion houses three windings ,</segment>
+<segment id="11" parent="1013" relname="span">namely one excitation winding and two output windings</segment>
+<segment id="12" parent="11" relname="elaboration">( sine and cosine windings ) ,</segment>
+<segment id="13" parent="1013" relname="elaboration">of which the voltage output amplitudes are orthogonally symmetric , specifically , sinusoidally and cosinusoidally related to the shaft angle .</segment>
+<segment id="14" parent="1014" relname="span">The excitation winding is responsible for inducing voltage in the rotator windings through electromagnetic induction .</segment>
+<segment id="15" parent="1015" relname="span">With the shaft angle changing ,</segment>
+<segment id="16" parent="1016" relname="joint">amplitudes of the two-phase voltages from sine and cosine output windings are measured</segment>
+<segment id="17" parent="1017" relname="span">and employed</segment>
+<segment id="18" parent="17" relname="purpose">to determine relative position between the stator and rotor .</segment>
+<segment id="19" parent="1019" relname="preparation">Figure 1</segment>
+<segment id="20" parent="1020" relname="span">illustrates the configuration of a resolver and subsequent software-based RDC scheme ,</segment>
+<segment id="21" parent="20" relname="elaboration">which serves as an integrated position estimation system .</segment>
+<segment id="22" parent="1022" relname="span">The excitation windings are usually applied with a sinusoidal reference voltage of constant amplitude and high frequency ,</segment>
+<segment id="23" parent="1024" relname="span">expressed as :</segment>
+<segment id="24" parent="23" relname="elaboration">( 1 )</segment>
+<segment id="25" parent="1025" relname="joint">where A is the amplitude of the reference voltage</segment>
+<segment id="26" parent="1025" relname="joint">and ω ref is the angular frequency .</segment>
+<segment id="27" parent="1029" relname="circumstance">When the rotor rotates ,</segment>
+<segment id="28" parent="1029" relname="span">the output windings will generate amplitude-modulated pair signals as :</segment>
+<segment id="29" parent="1030" relname="span">( 2 )</segment>
+<segment id="30" parent="1031" relname="joint">where K is the effective transformation ratio of the resolver</segment>
+<segment id="31" parent="1031" relname="joint">and θ represents the angular position of the rotor with respect to the stator winding .</segment>
+<segment id="32" parent="1032" relname="joint">These two modulated signals u 1( θ , t )</segment>
+<segment id="33" parent="1033" relname="same_unit">and u 2( θ , t )</segment>
+<segment id="34" parent="1033" relname="same_unit">have the form of sinusoidal and cosinusoidal envelopes .</segment>
+<segment id="35" parent="1036" relname="span">Then , envelope detection is necessary</segment>
+<segment id="36" parent="35" relname="purpose">to obtain the needed signal .</segment>
+<segment id="37" parent="1038" relname="span">In practice , there are always disturbances from imperfect characteristics , namely the amplitude imbalances , DC offsets and imperfect quadrature ,</segment>
+<segment id="38" parent="37" relname="elaboration">which arise from eccentric rotor , unequal winding and non-orthogonal symmetry of the windings .</segment>
+<segment id="39" parent="1041" relname="span">Hence , the signal after envelope detection can be expressed in the form :</segment>
+<segment id="40" parent="39" relname="elaboration">( 3 )</segment>
+<segment id="41" parent="1041" relname="elaboration">where and are the offsets ,</segment>
+<segment id="42" parent="1039" relname="joint">and represents the imperfect quadrature .</segment>
+<segment id="43" parent="1047" relname="span">Preprocessing methods</segment>
+<segment id="44" parent="43" relname="elaboration">( noise reduction , calibration and correction )</segment>
+<segment id="45" parent="1046" relname="same_unit">are carried out</segment>
+<segment id="46" parent="1046" relname="purpose">to result in :</segment>
+<segment id="47" parent="1045" relname="restatement">( 4 )</segment>
+<segment id="48" parent="1048" relname="span">where u sin and u cos are two ortho-symmetric signals ,</segment>
+<segment id="49" parent="48" relname="elaboration">whose trigonometric features aid in subsequent demodulation .</segment>
+<segment id="50" parent="1050" relname="span">Finally , the angular position θ and velocity are calculated through suitable demodulation algorithms</segment>
+<segment id="51" parent="1051" relname="span">( for example , phase-locked loop and arctangent algorithms )</segment>
+<segment id="52" parent="51" relname="purpose">to obtain the estimation speed and position .</segment>
+<segment id="53" parent="54" relname="circumstance">As is demonstrated in the resolver ’s principle ,</segment>
+<segment id="54" parent="1054" relname="span">the orthogonal symmetry of alignment of two output windings results in the orthogonal symmetry of both envelope signals and post-envelope-detection signals .</segment>
+<segment id="55" parent="1056" relname="preparation">2.2.</segment>
+<segment id="56" parent="1057" relname="preparation">Classical Resolver-to-Digital Conversion</segment>
+<segment id="57" parent="1058" relname="preparation">2.2.1. Arctangent Method</segment>
+<segment id="58" parent="1059" relname="span">A straightforward method is to obtain the angular position θ is through arctangent operation of u sin and u cos ,</segment>
+<segment id="59" parent="1060" relname="span">given by :</segment>
+<segment id="60" parent="59" relname="restatement">( 5 )</segment>
+<segment id="61" parent="1063" relname="circumstance">As is clearly indicated by Equation ( 5 ) ,</segment>
+<segment id="62" parent="1063" relname="joint">the arctangent method suffers from its highly nonlinear arctangent operation</segment>
+<segment id="63" parent="1063" relname="joint">and is limited to application on low-speed estimation .</segment>
+<segment id="64" parent="1065" relname="span">Also , with a nonlinear feature , there needs to be a look-up table for the arctangent calculation ,</segment>
+<segment id="65" parent="64" relname="elaboration">which increases the software loads .</segment>
+<segment id="66" parent="1066" relname="span">2.2.2.</segment>
+<segment id="67" parent="1067" relname="span">Conventional PLL-Based ATO</segment>
+<segment id="68" parent="1068" relname="span">As shown in</segment>
+<segment id="69" parent="1070" relname="preparation">Figure 2</segment>
+<segment id="70" parent="1070" relname="span">, the conventional ATO method tracks angular position</segment>
+<segment id="71" parent="70" relname="elaboration">based on PLL technique .</segment>
+<segment id="72" parent="1073" relname="preparation">Figure 2</segment>
+<segment id="73" parent="1074" relname="span">a is the actual form of the ATO ,</segment>
+<segment id="74" parent="73" relname="elaboration">where kI and kP are the coefficients for the integral and proportional terms , respectively ,</segment>
+<segment id="75" parent="1073" relname="joint">and</segment>
+<segment id="76" parent="77" relname="preparation">Figure 2</segment>
+<segment id="77" parent="1076" relname="span">b shows the linearized structure .</segment>
+<segment id="78" parent="1078" relname="joint">The estimated angular position is transformed through trigonometric function</segment>
+<segment id="79" parent="1078" relname="joint">and multiplied by the demodulated signals .</segment>
+<segment id="80" parent="1079" relname="joint">By utilizing the feature of orthogonal symmetry in the resolver signals in Equation ( 4 ) ,</segment>
+<segment id="81" parent="1082" relname="span">the phase error can be derived from the phase detector</segment>
+<segment id="82" parent="81" relname="elaboration">( PD ) ,</segment>
+<segment id="83" parent="1083" relname="span">expressed as :</segment>
+<segment id="84" parent="83" relname="elaboration">( 6 )</segment>
+<segment id="85" parent="1086" relname="circumstance">When the ATO functions properly ,</segment>
+<segment id="86" parent="1087" relname="attribution">the position error is small enough ,</segment>
+<segment id="87" parent="1087" relname="span">that is , ,</segment>
+<segment id="88" parent="87" relname="purpose">so the input error signal can be expressed as .</segment>
+<segment id="89" parent="1089" relname="span">Therefore , linearization of the ATO can be implemented ,</segment>
+<segment id="90" parent="89" relname="attribution">as shown in</segment>
+<segment id="91" parent="1091" relname="preparation">Figure 2</segment>
+<segment id="92" parent="1091" relname="joint">b ,</segment>
+<segment id="93" parent="1093" relname="span">and the closed loop transfer function is derived as :</segment>
+<segment id="94" parent="93" relname="restatement">( 7 )</segment>
+<segment id="95" parent="1095" relname="span">The conventional ATO is a representative closed-loop estimation system</segment>
+<segment id="96" parent="95" relname="elaboration">which overcomes noise</segment>
+<segment id="97" parent="1096" relname="joint">and track the input signal with a relatively high precision .</segment>
+<segment id="98" parent="1097" relname="joint">The linearized structure of the ATO belongs to a type-II system .</segment>
+<segment id="99" parent="1099" relname="span">2.2.3.</segment>
+<segment id="100" parent="99" relname="elaboration">Compensated Type-III ATO</segment>
+<segment id="101" parent="1102" relname="span">In , an acceleration-compensated ATO was proposed</segment>
+<segment id="102" parent="1104" relname="span">by employing the estimated speed</segment>
+<segment id="103" parent="102" relname="purpose">to generate a compensation module for the position error ,</segment>
+<segment id="104" parent="1105" relname="span">comprising a differentiator and a first-order low-pass filter ,</segment>
+<segment id="105" parent="104" relname="elaboration">which finally makes this ATO a type-III system .</segment>
+<segment id="106" parent="1102" relname="elaboration">The actual scheme of this method is shown in</segment>
+<segment id="107" parent="108" relname="preparation">Figure 3</segment>
+<segment id="108" parent="1107" relname="span">and a linearized structure of this ATO is analogous to</segment>
+<segment id="109" parent="1110" relname="preparation">Figure 2</segment>
+<segment id="110" parent="1110" relname="span">b.</segment>
+<segment id="111" parent="110" relname="antithesis">Compared with</segment>
+<segment id="112" parent="1112" relname="preparation">Figure 2</segment>
+<segment id="113" parent="1114" relname="condition">,</segment>
+<segment id="114" parent="1114" relname="span">there is a third parameter T</segment>
+<segment id="115" parent="114" relname="elaboration">representing the time constant of the low-pass filter .</segment>
+<segment id="116" parent="1116" relname="span">The linearized closed-loop transfer function can be denoted as :</segment>
+<segment id="117" parent="116" relname="restatement">( 8 )</segment>
+<segment id="118" parent="1119" relname="span">This compensated type-III ATO has the basic structure</segment>
+<segment id="119" parent="118" relname="elaboration">inherited from the conventional ATO</segment>
+<segment id="120" parent="1122" relname="span">but resolves the steady-error</segment>
+<segment id="121" parent="120" relname="elaboration">of estimating constant acceleration signal</segment>
+<segment id="122" parent="1123" relname="span">( θ = α t 2 ) with a time-saving and simple technique</segment>
+<segment id="123" parent="122" relname="elaboration">of adding a compensation module ,</segment>
+<segment id="124" parent="1124" relname="span">which achieves a higher precision</segment>
+<segment id="125" parent="124" relname="circumstance">in tracking the position of an accelerating motor .</segment>
+<segment id="126" parent="1125" relname="span">However , this method fails to eliminate steady-state error</segment>
+<segment id="127" parent="126" relname="elaboration">resulting from a first- or higher-order acceleration signal .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1018" relname="background"/>
+<group id="1003" type="multinuc" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="1003" relname="elaboration"/>
+<group id="1005" type="span" parent="1004" relname="span"/>
+<group id="1006" type="span" parent="5" relname="elaboration"/>
+<group id="1007" type="span" parent="1006" relname="span"/>
+<group id="1008" type="span" parent="6" relname="elaboration"/>
+<group id="1009" type="span" parent="7" relname="elaboration"/>
+<group id="1010" type="span" parent="1007" relname="elaboration"/>
+<group id="1011" type="span" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="10" relname="elaboration"/>
+<group id="1013" type="span" parent="1012" relname="span"/>
+<group id="1014" type="span" parent="1011" relname="elaboration"/>
+<group id="1015" type="span" parent="14" relname="elaboration"/>
+<group id="1016" type="multinuc" parent="15" relname="elaboration"/>
+<group id="1017" type="span" parent="1016" relname="joint"/>
+<group id="1018" type="span" parent="1001" relname="span"/>
+<group id="1019" type="multinuc" parent="1018" relname="span"/>
+<group id="1020" type="span" parent="1019" relname="joint"/>
+<group id="1022" type="span" parent="1019" relname="joint"/>
+<group id="1023" type="span" parent="22" relname="elaboration"/>
+<group id="1024" type="span" parent="1023" relname="span"/>
+<group id="1025" type="multinuc" parent="1024" relname="elaboration"/>
+<group id="1027" type="span" parent="1019" relname="joint"/>
+<group id="1028" type="span" parent="1027" relname="span"/>
+<group id="1029" type="span" parent="1028" relname="span"/>
+<group id="1030" type="span" parent="28" relname="elaboration"/>
+<group id="1031" type="multinuc" parent="29" relname="elaboration"/>
+<group id="1032" type="multinuc" parent="1028" relname="elaboration"/>
+<group id="1033" type="multinuc" parent="1032" relname="joint"/>
+<group id="1035" type="span" parent="1019" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1036" relname="elaboration"/>
+<group id="1038" type="span" parent="1037" relname="span"/>
+<group id="1039" type="multinuc" parent="1038" relname="elaboration"/>
+<group id="1040" type="span" parent="1039" relname="joint"/>
+<group id="1041" type="span" parent="1040" relname="span"/>
+<group id="1043" type="span" parent="1019" relname="joint"/>
+<group id="1044" type="span" parent="1043" relname="span"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1046" type="multinuc" parent="1045" relname="span"/>
+<group id="1047" type="span" parent="1046" relname="same_unit"/>
+<group id="1048" type="span" parent="1044" relname="elaboration"/>
+<group id="1050" type="span" parent="1019" relname="joint"/>
+<group id="1051" type="span" parent="50" relname="elaboration"/>
+<group id="1053" type="span" parent="1019" relname="joint"/>
+<group id="1054" type="span" parent="1053" relname="span"/>
+<group id="1055" type="span" parent="1054" relname="elaboration"/>
+<group id="1056" type="span" parent="1055" relname="span"/>
+<group id="1057" type="span" parent="1056" relname="span"/>
+<group id="1058" type="span" parent="1057" relname="span"/>
+<group id="1059" type="span" parent="1058" relname="span"/>
+<group id="1060" type="span" parent="58" relname="elaboration"/>
+<group id="1061" type="multinuc" parent="1059" relname="elaboration"/>
+<group id="1062" type="span" parent="1061" relname="joint"/>
+<group id="1063" type="multinuc" parent="1062" relname="span"/>
+<group id="1064" type="span" parent="1061" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1065" relname="elaboration"/>
+<group id="1067" type="span" parent="66" relname="elaboration"/>
+<group id="1068" type="span" parent="67" relname="manner"/>
+<group id="1069" type="span" parent="68" relname="elaboration"/>
+<group id="1070" type="span" parent="1069" relname="span"/>
+<group id="1071" type="span" parent="1019" relname="joint"/>
+<group id="1072" type="span" parent="1075" relname="preparation"/>
+<group id="1073" type="multinuc" parent="1072" relname="span"/>
+<group id="1074" type="span" parent="1073" relname="joint"/>
+<group id="1075" type="span" parent="1071" relname="span"/>
+<group id="1076" type="span" parent="1077" relname="preparation"/>
+<group id="1077" type="span" parent="1075" relname="span"/>
+<group id="1078" type="multinuc" parent="1077" relname="span"/>
+<group id="1079" type="multinuc" parent="1078" relname="means"/>
+<group id="1080" type="multinuc" parent="1079" relname="joint"/>
+<group id="1081" type="span" parent="1080" relname="joint"/>
+<group id="1082" type="span" parent="1081" relname="span"/>
+<group id="1083" type="span" parent="1082" relname="elaboration"/>
+<group id="1084" type="multinuc" parent="1080" relname="joint"/>
+<group id="1085" type="span" parent="1084" relname="joint"/>
+<group id="1086" type="span" parent="1085" relname="span"/>
+<group id="1087" type="span" parent="1086" relname="span"/>
+<group id="1088" type="multinuc" parent="1084" relname="joint"/>
+<group id="1089" type="span" parent="1088" relname="joint"/>
+<group id="1090" type="span" parent="1088" relname="joint"/>
+<group id="1091" type="multinuc" parent="1090" relname="span"/>
+<group id="1092" type="span" parent="1091" relname="joint"/>
+<group id="1093" type="span" parent="1094" relname="preparation"/>
+<group id="1094" type="multinuc" parent="1092" relname="span"/>
+<group id="1095" type="span" parent="1094" relname="joint"/>
+<group id="1096" type="multinuc" parent="1094" relname="joint"/>
+<group id="1097" type="multinuc" parent="1096" relname="joint"/>
+<group id="1098" type="multinuc" parent="1097" relname="joint"/>
+<group id="1099" type="span" parent="1098" relname="joint"/>
+<group id="1100" type="multinuc" parent="1098" relname="joint"/>
+<group id="1101" type="span" parent="1100" relname="joint"/>
+<group id="1102" type="span" parent="1101" relname="span"/>
+<group id="1103" type="multinuc" parent="101" relname="means"/>
+<group id="1104" type="span" parent="1103" relname="same_unit"/>
+<group id="1105" type="span" parent="1103" relname="same_unit"/>
+<group id="1106" type="span" parent="1100" relname="joint"/>
+<group id="1107" type="span" parent="1108" relname="preparation"/>
+<group id="1108" type="span" parent="1106" relname="span"/>
+<group id="1109" type="span" parent="1111" relname="preparation"/>
+<group id="1110" type="span" parent="1109" relname="span"/>
+<group id="1111" type="span" parent="1108" relname="span"/>
+<group id="1112" type="multinuc" parent="1111" relname="span"/>
+<group id="1113" type="span" parent="1112" relname="joint"/>
+<group id="1114" type="span" parent="1113" relname="span"/>
+<group id="1115" type="multinuc" parent="1112" relname="joint"/>
+<group id="1116" type="span" parent="1115" relname="joint"/>
+<group id="1117" type="span" parent="1115" relname="joint"/>
+<group id="1118" type="multinuc" parent="1125" relname="concession"/>
+<group id="1119" type="span" parent="1118" relname="contrast"/>
+<group id="1120" type="span" parent="1118" relname="contrast"/>
+<group id="1121" type="span" parent="1120" relname="span"/>
+<group id="1122" type="span" parent="1121" relname="span"/>
+<group id="1123" type="span" parent="1122" relname="elaboration"/>
+<group id="1124" type="span" parent="1121" relname="elaboration"/>
+<group id="1125" type="span" parent="1117" relname="span"/>
+	</body>
+</rst>

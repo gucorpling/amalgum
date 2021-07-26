@@ -1,0 +1,202 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="evidence" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1004" relname="span">Significant technological progress in image processing algorithms and ability</segment>
+<segment id="3" parent="2" relname="purpose">to improve perception of the world surrounding us</segment>
+<segment id="4" parent="1004" relname="means">using modern deep learning methods</segment>
+<segment id="5" parent="1005" relname="span">has led to invention and enablement of various applications</segment>
+<segment id="6" parent="5" relname="elaboration">that were previously much harder to implement , e.g. , face recognition , objects detection and segmentation or image resolution enhancement .</segment>
+<segment id="7" parent="1008" relname="span">Another factor</segment>
+<segment id="8" parent="7" relname="elaboration">that steers the direction of advances in new applications</segment>
+<segment id="9" parent="1007" relname="same_unit">is the increased capabilities of many electronic digital devices .</segment>
+<segment id="10" parent="1010" relname="span">Medical diagnostics and reasoning systems also benefited from this progress ,</segment>
+<segment id="11" parent="1011" relname="span">allowing for real-time vital signs analysis and tracking</segment>
+<segment id="12" parent="11" relname="means">using standard cameras or wearable devices .</segment>
+<segment id="13" parent="1014" relname="span">The remote measurement of RR has many potential applications in medical diagnostics and screenings</segment>
+<segment id="14" parent="1015" relname="span">like monitoring of newborns or small children in incubators or hospital beds , monitoring of the severe acute respiratory syndrome</segment>
+<segment id="15" parent="14" relname="elaboration">( SARS ) ,</segment>
+<segment id="16" parent="1013" relname="same_unit">support in emotion analysis , etc.</segment>
+<segment id="17" parent="1018" relname="span">The use of thermal cameras was proposed</segment>
+<segment id="18" parent="17" relname="elaboration">to analyze facial images</segment>
+<segment id="19" parent="1019" relname="span">and estimate RR</segment>
+<segment id="20" parent="1020" relname="joint">based on a nasal heat flow</segment>
+<segment id="21" parent="1020" relname="joint">and described in and other papers .</segment>
+<segment id="22" parent="1022" relname="preparation">The typical estimation of RR requires a multi step procedure .</segment>
+<segment id="23" parent="1024" relname="span">First , a Region Of Interest</segment>
+<segment id="24" parent="23" relname="elaboration">( ROI ) is detected for each thermal frame</segment>
+<segment id="25" parent="1026" relname="span">representing the source of thermal changes</segment>
+<segment id="26" parent="25" relname="elaboration">( due to respiration )</segment>
+<segment id="27" parent="1025" relname="same_unit">in the area of nostrils or a mouth .</segment>
+<segment id="28" parent="1029" relname="contrast">The ROI can be specified manually</segment>
+<segment id="29" parent="1030" relname="span">or can be automatically detected</segment>
+<segment id="30" parent="29" relname="elaboration">( in a frame or for each frame )</segment>
+<segment id="31" parent="1031" relname="span">and tracked</segment>
+<segment id="32" parent="31" relname="elaboration">( between frames ) .</segment>
+<segment id="33" parent="1034" relname="span">In , the authors described a particle filter tracker</segment>
+<segment id="34" parent="1035" relname="span">driven by a probabilistic template function</segment>
+<segment id="35" parent="34" relname="elaboration">that was capable of adapting to abrupt positional and physiological changes .</segment>
+<segment id="36" parent="1036" relname="span">Other authors also proposed ROI tracking methods</segment>
+<segment id="37" parent="36" relname="elaboration">( e.g. , ) .</segment>
+<segment id="38" parent="1038" relname="span">In the next step , a single value is calculated</segment>
+<segment id="39" parent="38" relname="purpose">to represent each ROI .</segment>
+<segment id="40" parent="1040" relname="span">A collection of such values forms a signal</segment>
+<segment id="41" parent="40" relname="elaboration">representing local temperature changes in time .</segment>
+<segment id="42" parent="1042" relname="span">Finally , a signal is filtered</segment>
+<segment id="43" parent="1043" relname="joint">( e.g. removing high frequency components )</segment>
+<segment id="44" parent="1043" relname="joint">and a frequency for dominated changes is calculated .</segment>
+<segment id="45" parent="1045" relname="span">It is assumed ,</segment>
+<segment id="46" parent="45" relname="evidence">that this frequency represents the respiratory rate .</segment>
+<segment id="47" parent="1022" relname="joint">In recent years , new portable and cost-effective thermal cameras have been available .</segment>
+<segment id="48" parent="1048" relname="span">For example , FLIR® Lepton family cameras are very small</segment>
+<segment id="49" parent="1049" relname="joint">( e.g. , 10.5 × 11.7 × 6.4 mm , with an internal shutter )</segment>
+<segment id="50" parent="1049" relname="joint">and cost less that 200USD .</segment>
+<segment id="51" parent="1051" relname="span">These features allow to think about wide application of thermal monitoring , e.g. , to support remote diagnosis of elderly people at home</segment>
+<segment id="52" parent="51" relname="elaboration">( e.g. , during a video talk or as a self-diagnostics ) .</segment>
+<segment id="53" parent="1022" relname="joint">However , a spatial resolution of these small thermal cameras is as low as 80 × 60 or 160 × 120 .</segment>
+<segment id="54" parent="1054" relname="span">Small resolution of images could be a problem for detection of facial features or detection of a ROI</segment>
+<segment id="55" parent="54" relname="elaboration">representing respiration-related temperature changes .</segment>
+<segment id="56" parent="1057" relname="span">Different methods have been proposed in ( a visible light spectrum )</segment>
+<segment id="57" parent="1058" relname="span">computer vision</segment>
+<segment id="58" parent="1059" relname="contrast">to improve low resolution images</segment>
+<segment id="59" parent="1060" relname="span">or to detect</segment>
+<segment id="60" parent="59" relname="restatement">( and amplify )</segment>
+<segment id="61" parent="1057" relname="elaboration">small , local changes in videos .</segment>
+<segment id="62" parent="1064" relname="span">Subtle intensity variations</segment>
+<segment id="63" parent="62" relname="elaboration">introduced in thermal videos of a face due to respiratory activities</segment>
+<segment id="64" parent="1063" relname="same_unit">can be enhanced</segment>
+<segment id="65" parent="1066" relname="span">using Eulerian Video Magnification</segment>
+<segment id="66" parent="65" relname="restatement">( EVM )</segment>
+<segment id="67" parent="1065" relname="same_unit">or related algorithms .</segment>
+<segment id="68" parent="1068" relname="span">This technique amplifies intensity differences within a particular frequency spectrum .</segment>
+<segment id="69" parent="1070" relname="span">This works well</segment>
+<segment id="70" parent="1072" relname="span">if the estimate respiratory rate</segment>
+<segment id="71" parent="70" relname="restatement">( frequency )</segment>
+<segment id="72" parent="1071" relname="same_unit">is known .</segment>
+<segment id="73" parent="1070" relname="elaboration">Otherwise , noise and motion artefacts are highly amplified .</segment>
+<segment id="74" parent="1074" relname="span">Therefore , some researchers propose to magnify only selected segments within a video .</segment>
+<segment id="75" parent="1077" relname="span">The EVM algorithm has been already successfully used</segment>
+<segment id="76" parent="75" relname="purpose">for enhancing vital sign signals .</segment>
+<segment id="77" parent="1077" relname="elaboration">Recently , many different deep-learning algorithms for super resolution have been proposed .</segment>
+<segment id="78" parent="1079" relname="attribution">It has been proved</segment>
+<segment id="79" parent="1080" relname="span">that such algorithms can efficiently improve the presentation of details in the processed low-resolution</segment>
+<segment id="80" parent="79" relname="restatement">( LR )</segment>
+<segment id="81" parent="1079" relname="same_unit">visible light images .</segment>
+<segment id="82" parent="1082" relname="span">One of the first method in this area was SRCNN ,</segment>
+<segment id="83" parent="1084" relname="span">which implemented a single Convolutional Neural Network</segment>
+<segment id="84" parent="83" relname="restatement">( CNN )</segment>
+<segment id="85" parent="1084" relname="elaboration">achieving the state-of-the-art restoration quality .</segment>
+<segment id="86" parent="1087" relname="span">Later , different Deep Neural Networks</segment>
+<segment id="87" parent="86" relname="restatement">( DNNs )</segment>
+<segment id="88" parent="1089" relname="span">based solutions have been introduced</segment>
+<segment id="89" parent="88" relname="purpose">to further improve the restoration quality</segment>
+<segment id="90" parent="1089" relname="restatement">( or perception ) .</segment>
+<segment id="91" parent="1093" relname="span">In Kim et al. introduced a novel Deeply Recursive Convolutional Network</segment>
+<segment id="92" parent="91" relname="restatement">( DRCN )</segment>
+<segment id="93" parent="1092" relname="same_unit">model .</segment>
+<segment id="94" parent="1095" relname="span">It utilizes a skip connection</segment>
+<segment id="95" parent="1096" relname="span">correlating a LR input with a high resolution</segment>
+<segment id="96" parent="95" relname="restatement">( HR )</segment>
+<segment id="97" parent="1097" relname="joint">reference data</segment>
+<segment id="98" parent="1098" relname="span">and uses recursive supervision</segment>
+<segment id="99" parent="98" relname="purpose">to minimize the exploding/vanishing gradients problem .</segment>
+<segment id="100" parent="1100" relname="span">Other improvements to SR include the application of residual mappings and gradient clipping</segment>
+<segment id="101" parent="1101" relname="span">( Deeply Recursive Residual Network</segment>
+<segment id="102" parent="101" relname="elaboration">( DRRN ) ) ,</segment>
+<segment id="103" parent="1022" relname="joint">the use of attention networks , the application of multi-scale residual hierarchical networks , etc.</segment>
+<segment id="104" parent="1103" relname="span">The very good results have also been obtained</segment>
+<segment id="105" parent="1104" relname="span">using SR algorithms</segment>
+<segment id="106" parent="105" relname="elaboration">based on generative networks .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1004" type="span" parent="1003" relname="span"/>
+<group id="1005" type="span" parent="1002" relname="same_unit"/>
+<group id="1007" type="multinuc" parent="1001" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1010" type="span" parent="1001" relname="joint"/>
+<group id="1011" type="span" parent="10" relname="elaboration"/>
+<group id="1013" type="multinuc" parent="1001" relname="joint"/>
+<group id="1014" type="span" parent="1013" relname="same_unit"/>
+<group id="1015" type="span" parent="13" relname="elaboration"/>
+<group id="1018" type="span" parent="1001" relname="joint"/>
+<group id="1019" type="span" parent="1001" relname="joint"/>
+<group id="1020" type="multinuc" parent="19" relname="elaboration"/>
+<group id="1021" type="span" parent="1001" relname="joint"/>
+<group id="1022" type="multinuc" parent="1021" relname="span"/>
+<group id="1023" type="multinuc" parent="1022" relname="joint"/>
+<group id="1024" type="span" parent="1023" relname="same_unit"/>
+<group id="1025" type="multinuc" parent="1023" relname="same_unit"/>
+<group id="1026" type="span" parent="1025" relname="same_unit"/>
+<group id="1029" type="multinuc" parent="1022" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="contrast"/>
+<group id="1031" type="span" parent="1022" relname="joint"/>
+<group id="1034" type="span" parent="1022" relname="joint"/>
+<group id="1035" type="span" parent="33" relname="elaboration"/>
+<group id="1036" type="span" parent="1022" relname="joint"/>
+<group id="1038" type="span" parent="1022" relname="joint"/>
+<group id="1040" type="span" parent="1022" relname="joint"/>
+<group id="1042" type="span" parent="1022" relname="joint"/>
+<group id="1043" type="multinuc" parent="42" relname="elaboration"/>
+<group id="1045" type="span" parent="1022" relname="joint"/>
+<group id="1048" type="span" parent="1022" relname="joint"/>
+<group id="1049" type="multinuc" parent="48" relname="elaboration"/>
+<group id="1051" type="span" parent="1022" relname="joint"/>
+<group id="1054" type="span" parent="1022" relname="joint"/>
+<group id="1056" type="span" parent="1022" relname="joint"/>
+<group id="1057" type="span" parent="1056" relname="span"/>
+<group id="1058" type="span" parent="56" relname="elaboration"/>
+<group id="1059" type="multinuc" parent="57" relname="purpose"/>
+<group id="1060" type="span" parent="1059" relname="contrast"/>
+<group id="1062" type="span" parent="1022" relname="joint"/>
+<group id="1063" type="multinuc" parent="1062" relname="span"/>
+<group id="1064" type="span" parent="1063" relname="same_unit"/>
+<group id="1065" type="multinuc" parent="1063" relname="means"/>
+<group id="1066" type="span" parent="1065" relname="same_unit"/>
+<group id="1068" type="span" parent="1022" relname="joint"/>
+<group id="1069" type="span" parent="68" relname="elaboration"/>
+<group id="1070" type="span" parent="1069" relname="span"/>
+<group id="1071" type="multinuc" parent="69" relname="condition"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1074" type="span" parent="1022" relname="joint"/>
+<group id="1075" type="span" parent="74" relname="elaboration"/>
+<group id="1076" type="span" parent="1075" relname="span"/>
+<group id="1077" type="span" parent="1076" relname="span"/>
+<group id="1078" type="span" parent="1076" relname="elaboration"/>
+<group id="1079" type="multinuc" parent="1078" relname="span"/>
+<group id="1080" type="span" parent="1079" relname="same_unit"/>
+<group id="1082" type="span" parent="1022" relname="joint"/>
+<group id="1083" type="span" parent="82" relname="elaboration"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1086" type="span" parent="1022" relname="joint"/>
+<group id="1087" type="span" parent="1086" relname="span"/>
+<group id="1088" type="span" parent="1087" relname="elaboration"/>
+<group id="1089" type="span" parent="1088" relname="span"/>
+<group id="1092" type="multinuc" parent="1022" relname="joint"/>
+<group id="1093" type="span" parent="1092" relname="same_unit"/>
+<group id="1094" type="multinuc" parent="1022" relname="joint"/>
+<group id="1095" type="span" parent="1094" relname="same_unit"/>
+<group id="1096" type="span" parent="94" relname="elaboration"/>
+<group id="1097" type="multinuc" parent="1094" relname="same_unit"/>
+<group id="1098" type="span" parent="1097" relname="joint"/>
+<group id="1100" type="span" parent="1022" relname="joint"/>
+<group id="1101" type="span" parent="100" relname="elaboration"/>
+<group id="1103" type="span" parent="1022" relname="joint"/>
+<group id="1104" type="span" parent="104" relname="means"/>
+	</body>
+</rst>

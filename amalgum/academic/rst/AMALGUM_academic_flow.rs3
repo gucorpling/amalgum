@@ -1,0 +1,132 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1002" relname="span">With the increasingly severe global energy crisis ,</segment>
+<segment id="3" parent="2" relname="elaboration">developing renewable energy has become the consensus of the whole human society .</segment>
+<segment id="4" parent="1003" relname="joint">The development of renewable energy is also an inevitable trend in future power systems .</segment>
+<segment id="5" parent="1005" relname="span">As a widely utilized renewable energy ,</segment>
+<segment id="6" parent="5" relname="elaboration">solar energy has been developing rapidly in the world , especially in China in recent years .</segment>
+<segment id="7" parent="1007" relname="span">According to national energy-related data , by the end of 2018 , China had added 44 GW of PV installations , with a total installed capacity of 174 GW ,</segment>
+<segment id="8" parent="7" relname="elaboration">including 124 GW of centralized PV clusters .</segment>
+<segment id="9" parent="1003" relname="joint">Power flow analysis is one of the most fundamental and heavily used tools in power engineering , such as reactive power optimization , state estimation , and fault diagnosis .</segment>
+<segment id="10" parent="1003" relname="joint">It allows power system analysts to determine the steady state or operating conditions of a power system for a specified set of values , such as load and generation levels .</segment>
+<segment id="11" parent="1003" relname="joint">Power flow calculation is the basis of power flow analysis .</segment>
+<segment id="12" parent="1003" relname="joint">On the one hand , power flow calculation can provide the basis for the selection of electrical equipment and the optimization of power supply schemes for power system planning ;</segment>
+<segment id="13" parent="1013" relname="joint">on the other hand , it can provide the analysis of static security and adjust operation mode for the power system ,</segment>
+<segment id="14" parent="1013" relname="joint">as well as provide the initial data for fault calculation and stability calculation of the power system .</segment>
+<segment id="15" parent="1014" relname="joint">However , due to the fluctuation of PV cells , the original deterministic power flow calculation model is no longer applicable .</segment>
+<segment id="16" parent="17" relname="circumstance">As centralized PV clusters undertake more and more power transmission tasks in the power grid ,</segment>
+<segment id="17" parent="1018" relname="span">its stable operation is crucial to the stability of the entire power grid .</segment>
+<segment id="18" parent="1019" relname="joint">In order to ensure the safe , stable , and reliable operation of power systems ,</segment>
+<segment id="19" parent="1019" relname="joint">it is particularly important to study the uncertain power flow algorithm of centralized PV clusters .</segment>
+<segment id="20" parent="1022" relname="span">At present , there are three main calculation methods for uncertain power flow :</segment>
+<segment id="21" parent="20" relname="elaboration">( 1 ) The fuzzy mathematical method ;</segment>
+<segment id="22" parent="1023" relname="span">( 2 ) the probability power flow method ,</segment>
+<segment id="23" parent="22" relname="elaboration">which mainly includes the analytical method , the approximation method and the simulation method ;</segment>
+<segment id="24" parent="1020" relname="joint">and ( 3 ) interval analysis .</segment>
+<segment id="25" parent="1026" relname="circumstance">When the first and second kinds of methods are adopted ,</segment>
+<segment id="26" parent="1026" relname="span">the probability density function or membership function of uncertain parameters needs to be known ;</segment>
+<segment id="27" parent="1028" relname="attribution">due to the randomness of data ,</segment>
+<segment id="28" parent="1028" relname="joint">these functions are difficult to be determined in practice</segment>
+<segment id="29" parent="1028" relname="joint">and usually rely on presetting .</segment>
+<segment id="30" parent="1031" relname="circumstance">Considering the above limitations ,</segment>
+<segment id="31" parent="1032" relname="span">the third type , the interval analysis method , is considered to be an effective method</segment>
+<segment id="32" parent="31" relname="purpose">to solve the problem of uncertain power flow</segment>
+<segment id="33" parent="1033" relname="span">because it only needs to determine the range of variables ,</segment>
+<segment id="34" parent="33" relname="elaboration">which is simple to model .</segment>
+<segment id="35" parent="1036" relname="span">In addition , interval analysis can avoid the interference of human factors ,</segment>
+<segment id="36" parent="35" relname="elaboration">which has been paid close attention by researchers .</segment>
+<segment id="37" parent="1037" relname="span">Based on the existing research results ,</segment>
+<segment id="38" parent="37" relname="elaboration">the calculation methods of interval power flow are mainly divided into the affine optimization method , the direct optimization method , and the iterative method .</segment>
+<segment id="39" parent="1038" relname="span">In , an affine-based interval power flow analysis method was proposed .</segment>
+<segment id="40" parent="1040" relname="span">By solving a power flow equation and two linear programming problems , the upper and lower bounds of the power flow solutions</segment>
+<segment id="41" parent="40" relname="elaboration">that restrain interval extension were obtained .</segment>
+<segment id="42" parent="1042" relname="span">In , Taylor expansion of intervals was carried out</segment>
+<segment id="43" parent="1043" relname="joint">according to affine ideas ,</segment>
+<segment id="44" parent="1044" relname="span">and interval power flow equations in the Cartesian coordinate system were expanded into three deterministic power flow equations for solution ,</segment>
+<segment id="45" parent="44" relname="elaboration">which avoids interval iteration process .</segment>
+<segment id="46" parent="1045" relname="joint">However , as with , the complexity of the calculation is increased by Taylor expansion .</segment>
+<segment id="47" parent="1047" relname="joint">In , an interval optimization framework was proposed .</segment>
+<segment id="48" parent="1049" relname="span">Upper and lower bounds of power flow solutions were obtained respectively</segment>
+<segment id="49" parent="48" relname="means">by solving two deterministic optimization problems .</segment>
+<segment id="50" parent="1050" relname="span">Reference proposed a new optimization scenario method ,</segment>
+<segment id="51" parent="1051" relname="joint">which regarded the uncertainty of the interval as bounded variables</segment>
+<segment id="52" parent="1052" relname="span">and solved these unknown variables</segment>
+<segment id="53" parent="1053" relname="span">using the two methods of minimum programming model and maximum programming model ,</segment>
+<segment id="54" parent="53" relname="elaboration">which determined the range of interval power flow problem .</segment>
+<segment id="55" parent="1055" relname="span">In , the Ybus Gaussian iterative interval power flow equation in complex affine form was established</segment>
+<segment id="56" parent="55" relname="circumstance">considering the uncertainty of the operation of distributed power supply .</segment>
+<segment id="57" parent="1057" relname="joint">The iterative process was simplified</segment>
+<segment id="58" parent="1058" relname="span">and the accuracy and efficiency of interval power flow calculation were improved</segment>
+<segment id="59" parent="58" relname="means">by using the method of noise element merging .</segment>
+<segment id="60" parent="1059" relname="span">In , the Krawczyk-Moore operator was used</segment>
+<segment id="61" parent="1060" relname="span">to combine interval and affine</segment>
+<segment id="62" parent="1061" relname="span">to achieve the requirement</segment>
+<segment id="63" parent="62" relname="elaboration">of overcoming interval conservatism .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1003" relname="preparation"/>
+<group id="1003" type="multinuc" parent="1001" relname="span"/>
+<group id="1005" type="span" parent="1003" relname="joint"/>
+<group id="1007" type="span" parent="1003" relname="joint"/>
+<group id="1012" type="multinuc" parent="1003" relname="joint"/>
+<group id="1013" type="multinuc" parent="1012" relname="contrast"/>
+<group id="1014" type="multinuc" parent="1012" relname="contrast"/>
+<group id="1016" type="span" parent="1014" relname="joint"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="span"/>
+<group id="1019" type="multinuc" parent="1018" relname="purpose"/>
+<group id="1020" type="multinuc" parent="1017" relname="elaboration"/>
+<group id="1021" type="span" parent="1020" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="span"/>
+<group id="1023" type="span" parent="1022" relname="elaboration"/>
+<group id="1025" type="span" parent="1014" relname="joint"/>
+<group id="1026" type="span" parent="1025" relname="span"/>
+<group id="1027" type="span" parent="26" relname="elaboration"/>
+<group id="1028" type="multinuc" parent="1027" relname="span"/>
+<group id="1030" type="span" parent="1014" relname="joint"/>
+<group id="1031" type="span" parent="1030" relname="span"/>
+<group id="1032" type="span" parent="1031" relname="span"/>
+<group id="1033" type="span" parent="1032" relname="cause"/>
+<group id="1035" type="span" parent="1014" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="span"/>
+<group id="1037" type="span" parent="1036" relname="elaboration"/>
+<group id="1038" type="span" parent="1014" relname="joint"/>
+<group id="1039" type="multinuc" parent="39" relname="means"/>
+<group id="1040" type="span" parent="1039" relname="joint"/>
+<group id="1041" type="multinuc" parent="1039" relname="joint"/>
+<group id="1042" type="span" parent="1041" relname="joint"/>
+<group id="1043" type="multinuc" parent="42" relname="attribution"/>
+<group id="1044" type="span" parent="1043" relname="joint"/>
+<group id="1045" type="multinuc" parent="1041" relname="joint"/>
+<group id="1046" type="multinuc" parent="1045" relname="joint"/>
+<group id="1047" type="multinuc" parent="1046" relname="joint"/>
+<group id="1048" type="multinuc" parent="1047" relname="joint"/>
+<group id="1049" type="span" parent="1048" relname="joint"/>
+<group id="1050" type="span" parent="1048" relname="joint"/>
+<group id="1051" type="multinuc" parent="50" relname="elaboration"/>
+<group id="1052" type="span" parent="1051" relname="joint"/>
+<group id="1053" type="span" parent="52" relname="means"/>
+<group id="1054" type="multinuc" parent="1046" relname="joint"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1056" type="multinuc" parent="1054" relname="joint"/>
+<group id="1057" type="multinuc" parent="1056" relname="joint"/>
+<group id="1058" type="span" parent="1057" relname="joint"/>
+<group id="1059" type="span" parent="1056" relname="joint"/>
+<group id="1060" type="span" parent="60" relname="purpose"/>
+<group id="1061" type="span" parent="61" relname="purpose"/>
+	</body>
+</rst>

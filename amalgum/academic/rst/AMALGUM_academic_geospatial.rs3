@@ -1,0 +1,172 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="manner" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1003" relname="span">In recent years , numerous types of sensors have been connected to the Internet of Things</segment>
+<segment id="3" parent="2" relname="restatement">( IoT )</segment>
+<segment id="4" parent="1002" relname="same_unit">and have produced huge volumes of data with high velocity .</segment>
+<segment id="5" parent="1005" relname="span">A large percentage of these sensor big data is geospatial data ,</segment>
+<segment id="6" parent="1006" relname="span">describing information about physical things in relation to geographic space</segment>
+<segment id="7" parent="6" relname="elaboration">that can be represented in a coordinate system .</segment>
+<segment id="8" parent="1008" relname="preparation">With the advance of IoT technologies , more diverse data have now become available ,</segment>
+<segment id="9" parent="1009" relname="preparation">thereby greatly increasing the amount of geospatial big data .</segment>
+<segment id="10" parent="11" relname="circumstance">Given the general properties of big data ,</segment>
+<segment id="11" parent="1010" relname="span">the unique characteristics of geospatial data create an innovative challenge in data preparation .</segment>
+<segment id="12" parent="1012" relname="preparation">Geospatial data typically include position data .</segment>
+<segment id="13" parent="1013" relname="span">These coordinate data differ from normal string or integer data ,</segment>
+<segment id="14" parent="13" relname="elaboration">requiring the data pre-processing process to include a lot of floating-point arithmetic computations .</segment>
+<segment id="15" parent="1015" relname="span">Examples include transformation in geometry ,</segment>
+<segment id="16" parent="1016" relname="joint">converting coordination reference systems ,</segment>
+<segment id="17" parent="1016" relname="joint">and evaluating spatial relationships .</segment>
+<segment id="18" parent="1018" relname="span">Among these , the most well-known aspect of geospatial data is spatial relationship ,</segment>
+<segment id="19" parent="18" relname="elaboration">describing the relationship of some objects in a specific location to other objects in neighboring locations .</segment>
+<segment id="20" parent="1012" relname="joint">The calculation of spatial relationship is mostly included in spatial analysis</segment>
+<segment id="21" parent="1012" relname="joint">and has been generally regarded as a sophisticated problem .</segment>
+<segment id="22" parent="1022" relname="span">Moreover , processing temporal elements also complicates the handling of geospatial data .</segment>
+<segment id="23" parent="1023" relname="span">To deal with the challenges</segment>
+<segment id="24" parent="23" relname="elaboration">in processing and analyzing geospatial big data , several systems have emerged .</segment>
+<segment id="25" parent="1026" relname="span">Systems</segment>
+<segment id="26" parent="25" relname="elaboration">designed for big data have existed for years</segment>
+<segment id="27" parent="28" relname="concession">( e.g. , Hadoop and Spark ) ;</segment>
+<segment id="28" parent="1027" relname="span">however , they are uninformed about spatial properties .</segment>
+<segment id="29" parent="1030" relname="span">This has led to a number of geospatial systems</segment>
+<segment id="30" parent="29" relname="elaboration">( e.g. , SpatialHadoop and GeoSpark )</segment>
+<segment id="31" parent="1031" relname="span">being developed ,</segment>
+<segment id="32" parent="31" relname="means">mostly by injecting spatial data types or functions inside existing big data systems .</segment>
+<segment id="33" parent="1012" relname="joint">Hadoop , especially , has proven to be a mature big data platform</segment>
+<segment id="34" parent="1034" relname="span">and so several geospatial big data systems have been constructed</segment>
+<segment id="35" parent="34" relname="means">by inserting spatial data awareness into Hadoop .</segment>
+<segment id="36" parent="1036" relname="span">However , it is still not easy for big data software developers to create geospatial applications .</segment>
+<segment id="37" parent="1038" relname="span">Typically ,</segment>
+<segment id="38" parent="37" relname="purpose">to generate a MapReduce job for a required operation in Hadoop ,</segment>
+<segment id="39" parent="1037" relname="same_unit">developers need to program a map and reduce functions .</segment>
+<segment id="40" parent="1040" relname="span">Spatial analysis usually requires handling more than one MapReduce step ,</segment>
+<segment id="41" parent="40" relname="elaboration">where the output of the data from a previous MapReduce step becomes the input to the next MapReduce step .</segment>
+<segment id="42" parent="1043" relname="circumstance">As the complexity level of spatial analysis is increased ,</segment>
+<segment id="43" parent="1043" relname="span">the number of MapReduce steps is also increased ,</segment>
+<segment id="44" parent="1045" relname="span">resulting in augmented difficulties for the developers</segment>
+<segment id="45" parent="44" relname="purpose">to write iterative code</segment>
+<segment id="46" parent="1045" relname="purpose">to define the increasingly more complicated MapReduce steps .</segment>
+<segment id="47" parent="1047" relname="span">To resolve this issue , in our previous work , we found a way</segment>
+<segment id="48" parent="47" relname="purpose">to represent spatial analysis as a sequence of one or more units of spatial or non-spatial operators .</segment>
+<segment id="49" parent="1049" relname="span">This allows developers of geospatial big data applications to create spatial applications</segment>
+<segment id="50" parent="1050" relname="span">by simply combining built-in spatial or non-spatial operators ,</segment>
+<segment id="51" parent="50" relname="manner">without having any detailed knowledge of MapReduce .</segment>
+<segment id="52" parent="1053" relname="circumstance">Once the sequence of operators has been incorporated ,</segment>
+<segment id="53" parent="1053" relname="joint">it is automatically transformed to the map</segment>
+<segment id="54" parent="1053" relname="joint">and reduces jobs in our Hadoop-based geospatial big data system .</segment>
+<segment id="55" parent="1055" relname="span">During this conversion process , our system controls the number of MapReduce steps in such a way</segment>
+<segment id="56" parent="1056" relname="span">as to achieve better performance</segment>
+<segment id="57" parent="56" relname="means">by decreasing the overhead of mapping and reducing .</segment>
+<segment id="58" parent="1035" relname="joint">The challenges for geospatial big data , however , lie in confronting not only how to store and analyze the data ,</segment>
+<segment id="59" parent="1059" relname="span">but also how to transform the data</segment>
+<segment id="60" parent="59" relname="circumstance">while achieving good performance .</segment>
+<segment id="61" parent="1035" relname="joint">Currently , a large amount of geospatial data is continuously provided from many spatial sensors .</segment>
+<segment id="62" parent="1062" relname="span">It is important to analyze this geospatial big data as soon as possible</segment>
+<segment id="63" parent="62" relname="purpose">to extract useful insights .</segment>
+<segment id="64" parent="1065" relname="span">However , the time</segment>
+<segment id="65" parent="64" relname="elaboration">required</segment>
+<segment id="66" parent="1065" relname="purpose">to transform massive amounts of geospatial data into the Hadoop platform has gradually increased .</segment>
+<segment id="67" parent="1068" relname="span">That is , it takes a lot of time</segment>
+<segment id="68" parent="1069" relname="span">to prepare the data</segment>
+<segment id="69" parent="68" relname="elaboration">required for geospatial analysis ,</segment>
+<segment id="70" parent="1067" relname="same_unit">thereby delaying obtaining the results of spatial analysis results .</segment>
+<segment id="71" parent="1073" relname="attribution">For example , we found</segment>
+<segment id="72" parent="1073" relname="span">that it took about 13 hours and 30 minutes</segment>
+<segment id="73" parent="1074" relname="span">to load 821 GB of digital tachograph</segment>
+<segment id="74" parent="73" relname="restatement">( DTG )</segment>
+<segment id="75" parent="1075" relname="span">data</segment>
+<segment id="76" parent="75" relname="means">using the traditional ETL method .</segment>
+<segment id="77" parent="1077" relname="sequence">In the ETL process , data are extracted from data sources ,</segment>
+<segment id="78" parent="1078" relname="span">then transformed ,</segment>
+<segment id="79" parent="1079" relname="joint">involving normalization and cleansing ,</segment>
+<segment id="80" parent="1079" relname="joint">and loaded into the target data base .</segment>
+<segment id="81" parent="1081" relname="span">The conventional ETL system is typically operated on a single machine</segment>
+<segment id="82" parent="81" relname="elaboration">that cannot effectively handle huge volumes of big data .</segment>
+<segment id="83" parent="1082" relname="span">To deal with the considerable quantity of big data in the ETL process ,</segment>
+<segment id="84" parent="1083" relname="span">there have been several attempts in recent years</segment>
+<segment id="85" parent="84" relname="purpose">to utilize a parallelized data processing concept .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1004" relname="background"/>
+<group id="1003" type="span" parent="1002" relname="same_unit"/>
+<group id="1004" type="multinuc" parent="1001" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="joint"/>
+<group id="1006" type="span" parent="5" relname="elaboration"/>
+<group id="1007" type="span" parent="1004" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="span"/>
+<group id="1009" type="multinuc" parent="1008" relname="span"/>
+<group id="1010" type="span" parent="1009" relname="joint"/>
+<group id="1011" type="span" parent="1009" relname="joint"/>
+<group id="1012" type="multinuc" parent="1011" relname="span"/>
+<group id="1013" type="span" parent="1012" relname="joint"/>
+<group id="1015" type="span" parent="1012" relname="joint"/>
+<group id="1016" type="multinuc" parent="15" relname="elaboration"/>
+<group id="1018" type="span" parent="1012" relname="joint"/>
+<group id="1022" type="span" parent="1012" relname="joint"/>
+<group id="1023" type="span" parent="22" relname="purpose"/>
+<group id="1025" type="multinuc" parent="1012" relname="joint"/>
+<group id="1026" type="span" parent="1025" relname="same_unit"/>
+<group id="1027" type="span" parent="1025" relname="same_unit"/>
+<group id="1029" type="span" parent="1012" relname="joint"/>
+<group id="1030" type="span" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="1030" relname="elaboration"/>
+<group id="1033" type="multinuc" parent="1012" relname="joint"/>
+<group id="1034" type="span" parent="1033" relname="contrast"/>
+<group id="1035" type="multinuc" parent="1033" relname="contrast"/>
+<group id="1036" type="span" parent="1035" relname="joint"/>
+<group id="1037" type="multinuc" parent="36" relname="elaboration"/>
+<group id="1038" type="span" parent="1037" relname="same_unit"/>
+<group id="1040" type="span" parent="1035" relname="joint"/>
+<group id="1042" type="span" parent="1035" relname="joint"/>
+<group id="1043" type="span" parent="1042" relname="span"/>
+<group id="1044" type="span" parent="43" relname="elaboration"/>
+<group id="1045" type="span" parent="1044" relname="span"/>
+<group id="1047" type="span" parent="1035" relname="joint"/>
+<group id="1049" type="span" parent="1035" relname="joint"/>
+<group id="1050" type="span" parent="49" relname="means"/>
+<group id="1052" type="span" parent="1035" relname="joint"/>
+<group id="1053" type="multinuc" parent="1052" relname="span"/>
+<group id="1055" type="span" parent="1035" relname="joint"/>
+<group id="1056" type="span" parent="55" relname="purpose"/>
+<group id="1059" type="span" parent="1035" relname="joint"/>
+<group id="1062" type="span" parent="1035" relname="joint"/>
+<group id="1064" type="span" parent="1035" relname="joint"/>
+<group id="1065" type="span" parent="1064" relname="span"/>
+<group id="1066" type="span" parent="1035" relname="joint"/>
+<group id="1067" type="multinuc" parent="1066" relname="span"/>
+<group id="1068" type="span" parent="1067" relname="same_unit"/>
+<group id="1069" type="span" parent="67" relname="purpose"/>
+<group id="1070" type="multinuc" parent="1067" relname="elaboration"/>
+<group id="1071" type="multinuc" parent="1070" relname="joint"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="span" parent="1072" relname="span"/>
+<group id="1074" type="span" parent="72" relname="purpose"/>
+<group id="1075" type="span" parent="1071" relname="same_unit"/>
+<group id="1076" type="multinuc" parent="1070" relname="joint"/>
+<group id="1077" type="multinuc" parent="1076" relname="joint"/>
+<group id="1078" type="span" parent="1077" relname="sequence"/>
+<group id="1079" type="multinuc" parent="78" relname="elaboration"/>
+<group id="1080" type="span" parent="1076" relname="joint"/>
+<group id="1081" type="span" parent="1080" relname="span"/>
+<group id="1082" type="span" parent="1081" relname="purpose"/>
+<group id="1083" type="span" parent="83" relname="elaboration"/>
+	</body>
+</rst>

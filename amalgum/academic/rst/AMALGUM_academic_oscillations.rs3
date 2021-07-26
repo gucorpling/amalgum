@@ -1,0 +1,188 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="evaluation" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="concession" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">1. Introduction</segment>
+<segment id="2" parent="1004" relname="span">Nowadays , distributed energy resources</segment>
+<segment id="3" parent="2" relname="restatement">( DER )</segment>
+<segment id="4" parent="1003" relname="same_unit">are leading the change in power generation</segment>
+<segment id="5" parent="1005" relname="span">as a result of the interest in renewable energy systems</segment>
+<segment id="6" parent="5" relname="elaboration">( RES ) .</segment>
+<segment id="7" parent="1008" relname="span">These DER could be connected to the utility grid or microgrids through three-phase voltage source converters</segment>
+<segment id="8" parent="7" relname="elaboration">( VSCs ) ,</segment>
+<segment id="9" parent="1010" relname="span">consequently , the technical requirements ,</segment>
+<segment id="10" parent="9" relname="elaboration">which must be accomplished by the power converter and its control algorithm ,</segment>
+<segment id="11" parent="1009" relname="same_unit">are growing .</segment>
+<segment id="12" parent="1012" relname="span">The trend in multifrequency control</segment>
+<segment id="13" parent="12" relname="elaboration">using vectorial complex theory has increased the possible features .</segment>
+<segment id="14" parent="1001" relname="joint">Among those possibilities , there is an useful one in power oscillations mitigation .</segment>
+<segment id="15" parent="1016" relname="span">Nevertheless , the techniques and objectives</segment>
+<segment id="16" parent="15" relname="elaboration">fulfilled can vary in each application</segment>
+<segment id="17" parent="1016" relname="circumstance">when dealing with unbalanced grids .</segment>
+<segment id="18" parent="1018" relname="same_unit">Basically ,</segment>
+<segment id="19" parent="20" relname="condition">if the active power oscillations are reduced in the VSC AC side ,</segment>
+<segment id="20" parent="1019" relname="span">the low-frequency ripples in the DC-bus will decrease .</segment>
+<segment id="21" parent="1021" relname="same_unit">Firstly ,</segment>
+<segment id="22" parent="1023" relname="circumstance">when low-frequency DC ripple currents flow through the DC-bus capacitor ,</segment>
+<segment id="23" parent="1023" relname="span">the temperature of the passive component increases ,</segment>
+<segment id="24" parent="23" relname="elaboration">which causes a decreasing lifetime of this component .</segment>
+<segment id="25" parent="1001" relname="joint">The batteries also suffer this problematic effect</segment>
+<segment id="26" parent="1001" relname="joint">and DC microgrids converters also look for reduced voltage oscillations due to power oscillations .</segment>
+<segment id="27" parent="1027" relname="span">Secondly , the DC bus ripple voltage can have a harmful effect on the induction machine performance characteristics as torque pulsations .</segment>
+<segment id="28" parent="1029" relname="span">Besides , on doubly fed induction generators</segment>
+<segment id="29" parent="28" relname="restatement">( DFIGs )</segment>
+<segment id="30" parent="1030" relname="span">for wind turbines , active power oscillations are related to electromagnetic torque ripples</segment>
+<segment id="31" parent="30" relname="elaboration">that increase the mechanical stress on the turbine system .</segment>
+<segment id="32" parent="1001" relname="joint">The harmonic power oscillations in three-phase three-wire AC electrical systems come from the presence of distorted or unbalanced grids .</segment>
+<segment id="33" parent="1033" relname="span">Therefore , the control strategy aims to regulate the instantaneous active power at a constant value</segment>
+<segment id="34" parent="33" relname="means">by injecting the suitable currents into the grid .</segment>
+<segment id="35" parent="1035" relname="span">The current reference could be calculated by means of the active and reactive power theory ,</segment>
+<segment id="36" parent="35" relname="elaboration">first introduced in Reference .</segment>
+<segment id="37" parent="1037" relname="span">From that theory , many works have dealt with the regulation of active power oscillations</segment>
+<segment id="38" parent="37" relname="circumstance">when grid imbalances or grid faults are faced by the power converter .</segment>
+<segment id="39" parent="1039" relname="span">However , these methodologies only remove the second harmonic power ripple</segment>
+<segment id="40" parent="1041" relname="span">due to the appearance of fundamental negative sequence</segment>
+<segment id="41" parent="40" relname="restatement">( FNS )</segment>
+<segment id="42" parent="1043" relname="span">voltage and its interaction with the fundamental positive sequence</segment>
+<segment id="43" parent="42" relname="restatement">( FPS )</segment>
+<segment id="44" parent="1042" relname="same_unit">current .</segment>
+<segment id="45" parent="1045" relname="span">In distorted grids , there are higher even harmonic power ripples due to other harmonic sequence voltages</segment>
+<segment id="46" parent="45" relname="restatement">( −5 , +7 , −11 , +13 ) .</segment>
+<segment id="47" parent="1047" relname="span">Hence , an effective multifrequency current reference calculator is required by the algorithm</segment>
+<segment id="48" parent="47" relname="purpose">to accomplish the power ripple removal .</segment>
+<segment id="49" parent="1050" relname="span">The presented control objective has an unavoidable characteristic in three-phase three-wire systems</segment>
+<segment id="50" parent="49" relname="elaboration">—</segment>
+<segment id="51" parent="1050" relname="elaboration">the elimination of active power oscillations implies more reactive power fluctuations .</segment>
+<segment id="52" parent="1051" relname="contrast">Previous publications such as References claimed the elimination of both active and reactive power oscillations , simultaneously .</segment>
+<segment id="53" parent="1052" relname="joint">However , this approach in three-wire systems leads to the injection of zero-sequence currents .</segment>
+<segment id="54" parent="1052" relname="joint">Hence , the harmonic distortion in the injected current increases dramatically .</segment>
+<segment id="55" parent="1055" relname="span">Even so , there are some works</segment>
+<segment id="56" parent="55" relname="elaboration">where this injection is regulated .</segment>
+<segment id="57" parent="1058" relname="span">In Reference , two control coefficients are added</segment>
+<segment id="58" parent="57" relname="purpose">to control the injection of 3rd order current harmonics ,</segment>
+<segment id="59" parent="1057" relname="span">that is , zero-sequence .</segment>
+<segment id="60" parent="1060" relname="span">Nevertheless , most case studies only consider positive and negative sequences</segment>
+<segment id="61" parent="1061" relname="joint">because zero-sequence voltages of unbalanced voltage dips do not exist in three-wire systems ,</segment>
+<segment id="62" parent="1061" relname="joint">nor can they propagate to the secondary side of star-ungrounded or delta-connected transformers in four-wire systems .</segment>
+<segment id="63" parent="64" relname="concession">Even for unbalanced systems with zero-sequence voltage ,</segment>
+<segment id="64" parent="1063" relname="span">four-leg inverter topologies can eliminate zero-sequence current with appropriate control .</segment>
+<segment id="65" parent="1065" relname="same_unit">The multifrequency current reference calculator purpose ,</segment>
+<segment id="66" parent="67" relname="concession">just taking into account positive and negative sequences ,</segment>
+<segment id="67" parent="1066" relname="span">has been partly fulfilled for DER applications as well as DFIG ones .</segment>
+<segment id="68" parent="1069" relname="span">Both proposals are defined in synchronous reference frames</segment>
+<segment id="69" parent="68" relname="elaboration">( SRF ) ,</segment>
+<segment id="70" parent="1068" relname="same_unit">hence , coordinate transformations are required .</segment>
+<segment id="71" parent="1071" relname="span">This implies online computation of trigonometric functions ,</segment>
+<segment id="72" parent="1072" relname="joint">which is usually performed through tables ,</segment>
+<segment id="73" parent="1073" relname="span">increasing the memory requirements of the algorithm</segment>
+<segment id="74" parent="73" relname="purpose">to get considerable accuracy .</segment>
+<segment id="75" parent="1075" relname="preparation">However , they are unnecessary</segment>
+<segment id="76" parent="1078" relname="span">because the current reference calculation can be directly implemented in the stationary reference frame</segment>
+<segment id="77" parent="76" relname="elaboration">( StRF ) ,</segment>
+<segment id="78" parent="1077" relname="same_unit">as Reference has shown for unbalanced grids .</segment>
+<segment id="79" parent="1080" relname="span">However , the StRF approach has been unemployed for the multifrequency control of instantaneous power ,</segment>
+<segment id="80" parent="79" relname="elaboration">which avoids redundant transformations for each one of the dealt harmonics .</segment>
+<segment id="81" parent="1081" relname="joint">Besides , grid frequency variations are under the scope in recent years</segment>
+<segment id="82" parent="1082" relname="same_unit">and grid frequency offset around its nominal values</segment>
+<segment id="83" parent="1082" relname="same_unit">decreases the quality of injected currents .</segment>
+<segment id="84" parent="1085" relname="span">Therefore , frequency-adaptive techniques must be applied</segment>
+<segment id="85" parent="84" relname="purpose">in order to accomplish the control objective of constant active power ,</segment>
+<segment id="86" parent="1084" relname="same_unit">as is shown in this paper .</segment>
+<segment id="87" parent="1087" relname="span">From the grid code operation point of view , the injected harmonic sequence currents are limited by the total harmonic distortion</segment>
+<segment id="88" parent="87" relname="elaboration">( THD ) standards .</segment>
+<segment id="89" parent="1090" relname="purpose">In order to achieve standards limitations ,</segment>
+<segment id="90" parent="1090" relname="contrast">any of the harmonic sequence currents could be set to zero</segment>
+<segment id="91" parent="1090" relname="contrast">or current HD minimization could be performed .</segment>
+<segment id="92" parent="1092" relname="joint">Both approaches must sacrifice the cancellation of one power ripple component ,</segment>
+<segment id="93" parent="1092" relname="joint">and the smallest power ripple is chosen for the optimum performance .</segment>
+<segment id="94" parent="1092" relname="evaluation">Therefore , the optimum current harmonics shaping is also applied in this proposal .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="multinuc" parent="1001" relname="joint"/>
+<group id="1003" type="multinuc" parent="1002" relname="same_unit"/>
+<group id="1004" type="span" parent="1003" relname="same_unit"/>
+<group id="1005" type="span" parent="1002" relname="same_unit"/>
+<group id="1007" type="multinuc" parent="1001" relname="joint"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1009" type="multinuc" parent="1007" relname="same_unit"/>
+<group id="1010" type="span" parent="1009" relname="same_unit"/>
+<group id="1012" type="span" parent="1001" relname="joint"/>
+<group id="1015" type="span" parent="1001" relname="joint"/>
+<group id="1016" type="span" parent="1015" relname="span"/>
+<group id="1018" type="multinuc" parent="1001" relname="joint"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1021" type="multinuc" parent="1001" relname="joint"/>
+<group id="1022" type="span" parent="1021" relname="same_unit"/>
+<group id="1023" type="span" parent="1022" relname="span"/>
+<group id="1027" type="span" parent="1001" relname="joint"/>
+<group id="1028" type="multinuc" parent="27" relname="elaboration"/>
+<group id="1029" type="span" parent="1028" relname="same_unit"/>
+<group id="1030" type="span" parent="1028" relname="same_unit"/>
+<group id="1033" type="span" parent="1001" relname="joint"/>
+<group id="1035" type="span" parent="1001" relname="joint"/>
+<group id="1037" type="span" parent="1001" relname="joint"/>
+<group id="1038" type="multinuc" parent="1001" relname="joint"/>
+<group id="1039" type="span" parent="1038" relname="sequence"/>
+<group id="1040" type="multinuc" parent="39" relname="cause"/>
+<group id="1041" type="span" parent="1040" relname="same_unit"/>
+<group id="1042" type="multinuc" parent="1040" relname="same_unit"/>
+<group id="1043" type="span" parent="1042" relname="same_unit"/>
+<group id="1044" type="multinuc" parent="1038" relname="sequence"/>
+<group id="1045" type="span" parent="1044" relname="joint"/>
+<group id="1047" type="span" parent="1044" relname="joint"/>
+<group id="1049" type="span" parent="1044" relname="joint"/>
+<group id="1050" type="span" parent="1049" relname="span"/>
+<group id="1051" type="multinuc" parent="1044" relname="joint"/>
+<group id="1052" type="multinuc" parent="1051" relname="contrast"/>
+<group id="1054" type="span" parent="1052" relname="joint"/>
+<group id="1055" type="span" parent="1056" relname="preparation"/>
+<group id="1056" type="multinuc" parent="1054" relname="span"/>
+<group id="1057" type="span" parent="1056" relname="joint"/>
+<group id="1058" type="span" parent="59" relname="attribution"/>
+<group id="1060" type="span" parent="1056" relname="joint"/>
+<group id="1061" type="multinuc" parent="60" relname="cause"/>
+<group id="1063" type="span" parent="1056" relname="joint"/>
+<group id="1065" type="multinuc" parent="1056" relname="joint"/>
+<group id="1066" type="span" parent="1065" relname="same_unit"/>
+<group id="1067" type="multinuc" parent="1056" relname="joint"/>
+<group id="1068" type="multinuc" parent="1067" relname="sequence"/>
+<group id="1069" type="span" parent="1068" relname="same_unit"/>
+<group id="1070" type="multinuc" parent="1067" relname="sequence"/>
+<group id="1071" type="span" parent="1070" relname="joint"/>
+<group id="1072" type="multinuc" parent="71" relname="elaboration"/>
+<group id="1073" type="span" parent="1072" relname="joint"/>
+<group id="1074" type="span" parent="1070" relname="joint"/>
+<group id="1075" type="multinuc" parent="1074" relname="span"/>
+<group id="1076" type="span" parent="1075" relname="joint"/>
+<group id="1077" type="multinuc" parent="1079" relname="concession"/>
+<group id="1078" type="span" parent="1077" relname="same_unit"/>
+<group id="1079" type="span" parent="1076" relname="span"/>
+<group id="1080" type="span" parent="1079" relname="span"/>
+<group id="1081" type="multinuc" parent="1080" relname="elaboration"/>
+<group id="1082" type="multinuc" parent="1081" relname="joint"/>
+<group id="1084" type="multinuc" parent="1075" relname="joint"/>
+<group id="1085" type="span" parent="1084" relname="same_unit"/>
+<group id="1087" type="span" parent="1075" relname="joint"/>
+<group id="1089" type="span" parent="1075" relname="joint"/>
+<group id="1090" type="multinuc" parent="1089" relname="span"/>
+<group id="1091" type="span" parent="1075" relname="joint"/>
+<group id="1092" type="multinuc" parent="1091" relname="span"/>
+	</body>
+</rst>

@@ -1,0 +1,111 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">2. Background</segment>
+<segment id="2" parent="1002" relname="preparation">Problem Formulation and Notation</segment>
+<segment id="3" parent="1003" relname="span">In this problem</segment>
+<segment id="4" parent="3" relname="elaboration">( depicted in</segment>
+<segment id="5" parent="1006" relname="preparation">Figure 1</segment>
+<segment id="6" parent="1006" relname="same_unit">) ,</segment>
+<segment id="7" parent="1008" relname="span">first , a background grid is utilized</segment>
+<segment id="8" parent="7" relname="purpose">to calibrate the corresponding pixel locations for two high-speed cameras ;</segment>
+<segment id="9" parent="1009" relname="span">it can be removed</segment>
+<segment id="10" parent="9" relname="circumstance">once the calibration is completed .</segment>
+<segment id="11" parent="1012" relname="span">Then the two cameras are used</segment>
+<segment id="12" parent="1013" relname="span">to measure the 2D coordinates of the projection of flying debris on the grid wall by lights</segment>
+<segment id="13" parent="12" relname="elaboration">emanating from the camera locations .</segment>
+<segment id="14" parent="1015" relname="span">Using the stereopair of 2D coordinates</segment>
+<segment id="15" parent="1017" relname="span">( i.e. , , , ,</segment>
+<segment id="16" parent="15" relname="elaboration">measured by the two cameras )</segment>
+<segment id="17" parent="1016" relname="same_unit">of the debris ,</segment>
+<segment id="18" parent="1019" relname="span">we try to determine both the position</segment>
+<segment id="19" parent="18" relname="elaboration">( three-translational-DOF , x , y , z )</segment>
+<segment id="20" parent="1021" relname="span">and orientation</segment>
+<segment id="21" parent="20" relname="restatement">( three-rotational-DOF )</segment>
+<segment id="22" parent="1022" relname="span">of the debris ,</segment>
+<segment id="23" parent="1023" relname="span">given the relative locations of the two cameras to the grid wall</segment>
+<segment id="24" parent="23" relname="elaboration">( i.e. , and ) .</segment>
+<segment id="25" parent="1025" relname="preparation">This problem will be solved in two steps :</segment>
+<segment id="26" parent="1026" relname="span">First , for a single compact piece of debris ,</segment>
+<segment id="27" parent="1028" relname="span">considered as a point object</segment>
+<segment id="28" parent="27" relname="elaboration">( only three-translation-DOF is considered ) ,</segment>
+<segment id="29" parent="1027" relname="same_unit">then for rigid body thin plate debris .</segment>
+<segment id="30" parent="1025" relname="joint">The former lays the theoretical foundation for the latter .</segment>
+<segment id="31" parent="1031" relname="span">The notation</segment>
+<segment id="32" parent="31" relname="elaboration">used in the problem is defined as follows .</segment>
+<segment id="33" parent="1033" relname="span">The notation of points and matrices are in upper case letters ,</segment>
+<segment id="34" parent="1034" relname="joint">the position vectors are in bold lowercase letters ,</segment>
+<segment id="35" parent="1034" relname="joint">and vectors are column vectors by default .</segment>
+<segment id="36" parent="1036" relname="span">For example , is the position vector of point ,</segment>
+<segment id="37" parent="36" relname="means">while is the position vector of point .</segment>
+<segment id="38" parent="1038" relname="span">The list of variables</segment>
+<segment id="39" parent="38" relname="elaboration">used in</segment>
+<segment id="40" parent="41" relname="preparation">Figure 1</segment>
+<segment id="41" parent="1040" relname="span">is given below .</segment>
+<segment id="42" parent="1042" relname="preparation">, – points at the lens positions of two cameras –</segment>
+<segment id="43" parent="1043" relname="span">position of a point debris , – projected locations of the debris on the grid wall</segment>
+<segment id="44" parent="1044" relname="span">seen from two cameras</segment>
+<segment id="45" parent="44" relname="elaboration">( i.e. , a stereopair ) ,</segment>
+<segment id="46" parent="1046" relname="preparation">respectively –</segment>
+<segment id="47" parent="1046" relname="joint">distance between cameras – distance between camera lens and the wall along the y -direction ;</segment>
+<segment id="48" parent="1048" relname="span">the wall is parallel to the z ‒ x plane , – distances of points on the wall along the x -axis from the y -axis , – heights of points on the wall along the z -axis from the x ‒ y plane , – angles</segment>
+<segment id="49" parent="48" relname="elaboration">that , rays make with the x ‒ y plane , – angles between the x -axis and the projections of , rays on the x ‒ y plane</segment>
+<segment id="50" parent="1048" relname="elaboration">We need to determine the 3D position of the debris , i.e. , x , y , and z , in terms of these parameters .</segment>
+<group id="1000" type="span" />
+<group id="1001" type="span" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="span"/>
+<group id="1003" type="span" parent="1004" relname="preparation"/>
+<group id="1004" type="multinuc" parent="1002" relname="span"/>
+<group id="1005" type="span" parent="1004" relname="sequence"/>
+<group id="1006" type="multinuc" parent="1005" relname="span"/>
+<group id="1007" type="multinuc" parent="1006" relname="same_unit"/>
+<group id="1008" type="span" parent="1007" relname="same_unit"/>
+<group id="1009" type="span" parent="1007" relname="same_unit"/>
+<group id="1012" type="span" parent="1004" relname="sequence"/>
+<group id="1013" type="span" parent="11" relname="purpose"/>
+<group id="1014" type="multinuc" parent="1004" relname="sequence"/>
+<group id="1015" type="span" parent="1014" relname="same_unit"/>
+<group id="1016" type="multinuc" parent="14" relname="elaboration"/>
+<group id="1017" type="span" parent="1016" relname="same_unit"/>
+<group id="1018" type="multinuc" parent="1014" relname="same_unit"/>
+<group id="1019" type="span" parent="1018" relname="same_unit"/>
+<group id="1020" type="multinuc" parent="1018" relname="same_unit"/>
+<group id="1021" type="span" parent="1020" relname="same_unit"/>
+<group id="1022" type="span" parent="1020" relname="same_unit"/>
+<group id="1023" type="span" parent="22" relname="condition"/>
+<group id="1024" type="span" parent="1004" relname="sequence"/>
+<group id="1025" type="multinuc" parent="1024" relname="span"/>
+<group id="1026" type="span" parent="1025" relname="joint"/>
+<group id="1027" type="multinuc" parent="26" relname="elaboration"/>
+<group id="1028" type="span" parent="1027" relname="same_unit"/>
+<group id="1031" type="span" parent="1025" relname="joint"/>
+<group id="1033" type="span" parent="1025" relname="joint"/>
+<group id="1034" type="multinuc" parent="33" relname="elaboration"/>
+<group id="1036" type="span" parent="1025" relname="joint"/>
+<group id="1037" type="span" parent="1025" relname="joint"/>
+<group id="1038" type="span" parent="1039" relname="preparation"/>
+<group id="1039" type="span" parent="1037" relname="span"/>
+<group id="1040" type="span" parent="1041" relname="preparation"/>
+<group id="1041" type="span" parent="1039" relname="span"/>
+<group id="1042" type="multinuc" parent="1041" relname="span"/>
+<group id="1043" type="span" parent="1042" relname="joint"/>
+<group id="1044" type="span" parent="43" relname="elaboration"/>
+<group id="1045" type="span" parent="1042" relname="joint"/>
+<group id="1046" type="multinuc" parent="1045" relname="span"/>
+<group id="1047" type="span" parent="1046" relname="joint"/>
+<group id="1048" type="span" parent="1047" relname="span"/>
+	</body>
+</rst>

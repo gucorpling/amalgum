@@ -1,0 +1,568 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Supportive care at home with plenty of rest , drinking plenty of fluids and using a pain reliever for aches and pains is adequate for recovery in most cases .
+1-1	0-10	Supportive	abstract[1]	new[1]	_	_
+1-2	11-15	care	abstract[1]	new[1]	_	_
+1-3	16-18	at	abstract[1]	new[1]	_	_
+1-4	19-23	home	abstract[1]|place	new[1]|new	_	_
+1-5	24-28	with	abstract[1]	new[1]	_	_
+1-6	29-35	plenty	abstract[1]|place[3]	new[1]|new[3]	_	_
+1-7	36-38	of	abstract[1]|place[3]	new[1]|new[3]	_	_
+1-8	39-43	rest	abstract[1]|place[3]|abstract	new[1]|new[3]|new	_	_
+1-9	44-45	,	_	_	_	_
+1-10	46-54	drinking	_	_	_	_
+1-11	55-61	plenty	place[5]	new[5]	_	_
+1-12	62-64	of	place[5]	new[5]	_	_
+1-13	65-71	fluids	place[5]|substance	new[5]|new	_	_
+1-14	72-75	and	_	_	_	_
+1-15	76-81	using	_	_	_	_
+1-16	82-83	a	abstract[8]	new[8]	_	_
+1-17	84-88	pain	abstract|abstract[8]	new|new[8]	coref	2-4
+1-18	89-97	reliever	abstract[8]	new[8]	_	_
+1-19	98-101	for	abstract[8]	new[8]	_	_
+1-20	102-107	aches	abstract[8]|abstract	new[8]|new	_	_
+1-21	108-111	and	abstract[8]	new[8]	_	_
+1-22	112-117	pains	abstract[8]|abstract	new[8]|new	_	_
+1-23	118-120	is	_	_	_	_
+1-24	121-129	adequate	_	_	_	_
+1-25	130-133	for	_	_	_	_
+1-26	134-142	recovery	event	new	_	_
+1-27	143-145	in	_	_	_	_
+1-28	146-150	most	event[12]	new[12]	_	_
+1-29	151-156	cases	event[12]	new[12]	_	_
+1-30	157-158	.	_	_	_	_
+
+#Text=A non- aspirin pain reliever should be used for children or adolescents under age 18 .
+2-1	159-160	A	person[15]	new[15]	_	_
+2-2	161-165	non-	person[15]	new[15]	_	_
+2-3	166-173	aspirin	abstract|person[15]	new|new[15]	_	_
+2-4	174-178	pain	abstract|person[15]	giv|new[15]	_	_
+2-5	179-187	reliever	person[15]	new[15]	_	_
+2-6	188-194	should	_	_	_	_
+2-7	195-197	be	_	_	_	_
+2-8	198-202	used	_	_	_	_
+2-9	203-206	for	_	_	_	_
+2-10	207-215	children	person	new	coref	5-4[26_0]
+2-11	216-218	or	_	_	_	_
+2-12	219-230	adolescents	person[17]	new[17]	_	_
+2-13	231-236	under	person[17]	new[17]	_	_
+2-14	237-240	age	person[17]|time[18]	new[17]|new[18]	_	_
+2-15	241-243	18	person[17]|time[18]	new[17]|new[18]	_	_
+2-16	244-245	.	_	_	_	_
+
+#Text=The public should be made aware that there are specific groups of people who appear to be at higher risk of more complicated or severe illness which include :
+3-1	246-249	The	person[19]	new[19]	ana	8-21[44_19]
+3-2	250-256	public	person[19]	new[19]	_	_
+3-3	257-263	should	_	_	_	_
+3-4	264-266	be	_	_	_	_
+3-5	267-271	made	_	_	_	_
+3-6	272-277	aware	_	_	_	_
+3-7	278-282	that	_	_	_	_
+3-8	283-288	there	_	_	_	_
+3-9	289-292	are	_	_	_	_
+3-10	293-301	specific	person[20]	new[20]	_	_
+3-11	302-308	groups	person[20]	new[20]	_	_
+3-12	309-311	of	person[20]	new[20]	_	_
+3-13	312-318	people	person[20]|person[21]	new[20]|new[21]	coref	6-1[28_21]
+3-14	319-322	who	person[20]|person[21]	new[20]|new[21]	_	_
+3-15	323-329	appear	person[20]|person[21]	new[20]|new[21]	_	_
+3-16	330-332	to	person[20]|person[21]	new[20]|new[21]	_	_
+3-17	333-335	be	person[20]|person[21]	new[20]|new[21]	_	_
+3-18	336-338	at	person[20]|person[21]	new[20]|new[21]	_	_
+3-19	339-345	higher	person[20]|person[21]|abstract[22]	new[20]|new[21]|new[22]	coref	8-29[45_22]
+3-20	346-350	risk	person[20]|person[21]|abstract[22]	new[20]|new[21]|new[22]	_	_
+3-21	351-353	of	person[20]|person[21]|abstract[22]	new[20]|new[21]|new[22]	_	_
+3-22	354-358	more	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-23	359-370	complicated	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-24	371-373	or	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-25	374-380	severe	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-26	381-388	illness	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-27	389-394	which	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-28	395-402	include	person[20]|person[21]|abstract[22]|abstract[23]	new[20]|new[21]|new[22]|new[23]	_	_
+3-29	403-404	:	_	_	_	_
+
+#Text=pregnant women ;
+4-1	405-413	pregnant	person[24]	new[24]	_	_
+4-2	414-419	women	person[24]	new[24]	_	_
+4-3	420-421	;	_	_	_	_
+
+#Text=infants , and young children particularly under age 2 ;
+5-1	422-429	infants	person	new	_	_
+5-2	430-431	,	_	_	_	_
+5-3	432-435	and	_	_	_	_
+5-4	436-441	young	person[26]	giv[26]	_	_
+5-5	442-450	children	person[26]	giv[26]	_	_
+5-6	451-463	particularly	person[26]|time[27]	giv[26]|new[27]	coref	6-3[29_27]
+5-7	464-469	under	person[26]|time[27]	giv[26]|new[27]	_	_
+5-8	470-473	age	person[26]|time[27]	giv[26]|new[27]	_	_
+5-9	474-475	2	person[26]|time[27]	giv[26]|new[27]	_	_
+5-10	476-477	;	_	_	_	_
+
+#Text=people of any age with certain chronic health conditions ( including asthma or lung disease , heart disease , diabetes , kidney disease or some neurological conditions ) ;
+6-1	478-484	people	person[28]	giv[28]	coref	7-1[39_28]
+6-2	485-487	of	person[28]	giv[28]	_	_
+6-3	488-491	any	person[28]|time[29]	giv[28]|giv[29]	coref	24-17[118_29]
+6-4	492-495	age	person[28]|time[29]	giv[28]|giv[29]	_	_
+6-5	496-500	with	person[28]	giv[28]	_	_
+6-6	501-508	certain	person[28]|abstract[31]	giv[28]|new[31]	coref	6-25[38_31]
+6-7	509-516	chronic	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-8	517-523	health	person[28]|abstract|abstract[31]	giv[28]|new|new[31]	coref	9-18
+6-9	524-534	conditions	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-10	535-536	(	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-11	537-546	including	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-12	547-553	asthma	person[28]|abstract[31]|abstract	giv[28]|new[31]|new	_	_
+6-13	554-556	or	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-14	557-561	lung	person[28]|abstract[31]|object|abstract[34]	giv[28]|new[31]|new|new[34]	_	_
+6-15	562-569	disease	person[28]|abstract[31]|abstract[34]	giv[28]|new[31]|new[34]	_	_
+6-16	570-571	,	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-17	572-577	heart	person[28]|abstract[31]|abstract[35]	giv[28]|new[31]|new[35]	_	_
+6-18	578-585	disease	person[28]|abstract[31]|abstract[35]	giv[28]|new[31]|new[35]	_	_
+6-19	586-587	,	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-20	588-596	diabetes	person[28]|abstract[31]|abstract	giv[28]|new[31]|new	_	_
+6-21	597-598	,	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-22	599-605	kidney	person[28]|abstract[31]|abstract[37]	giv[28]|new[31]|new[37]	_	_
+6-23	606-613	disease	person[28]|abstract[31]|abstract[37]	giv[28]|new[31]|new[37]	_	_
+6-24	614-616	or	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-25	617-621	some	person[28]|abstract[31]|abstract[38]	giv[28]|new[31]|giv[38]	_	_
+6-26	622-634	neurological	person[28]|abstract[31]|abstract[38]	giv[28]|new[31]|giv[38]	_	_
+6-27	635-645	conditions	person[28]|abstract[31]|abstract[38]	giv[28]|new[31]|giv[38]	_	_
+6-28	646-647	)	person[28]|abstract[31]	giv[28]|new[31]	_	_
+6-29	648-649	;	_	_	_	_
+
+#Text=people with severely compromised immune systems .
+7-1	650-656	people	person[39]	giv[39]	coref	8-3[41_39]
+7-2	657-661	with	person[39]	giv[39]	_	_
+7-3	662-670	severely	person[39]|abstract[40]	giv[39]|new[40]	_	_
+7-4	671-682	compromised	person[39]|abstract[40]	giv[39]|new[40]	_	_
+7-5	683-689	immune	person[39]|abstract[40]	giv[39]|new[40]	_	_
+7-6	690-697	systems	person[39]|abstract[40]	giv[39]|new[40]	_	_
+7-7	698-699	.	_	_	_	_
+
+#Text=Currently , people age 65 or older are the least likely to be infected with the pandemic influenza , but those who do get sick are also at high risk of developing serious complications , just as they are from seasonal flu .
+8-1	700-709	Currently	_	_	_	_
+8-2	710-711	,	_	_	_	_
+8-3	712-718	people	person[41]	giv[41]	ana	8-38[0_41]
+8-4	719-722	age	person[41]	giv[41]	_	_
+8-5	723-725	65	person[41]|abstract	giv[41]|new	_	_
+8-6	726-728	or	person[41]	giv[41]	_	_
+8-7	729-734	older	person[41]	giv[41]	_	_
+8-8	735-738	are	_	_	_	_
+8-9	739-742	the	_	_	_	_
+8-10	743-748	least	_	_	_	_
+8-11	749-755	likely	_	_	_	_
+8-12	756-758	to	_	_	_	_
+8-13	759-761	be	_	_	_	_
+8-14	762-770	infected	_	_	_	_
+8-15	771-775	with	_	_	_	_
+8-16	776-779	the	abstract[43]	new[43]	coref	13-1[0_43]
+8-17	780-788	pandemic	abstract[43]	new[43]	_	_
+8-18	789-798	influenza	abstract[43]	new[43]	_	_
+8-19	799-800	,	_	_	_	_
+8-20	801-804	but	_	_	_	_
+8-21	805-810	those	person[44]	giv[44]	_	_
+8-22	811-814	who	person[44]	giv[44]	_	_
+8-23	815-817	do	person[44]	giv[44]	_	_
+8-24	818-821	get	person[44]	giv[44]	_	_
+8-25	822-826	sick	person[44]	giv[44]	_	_
+8-26	827-830	are	_	_	_	_
+8-27	831-835	also	_	_	_	_
+8-28	836-838	at	_	_	_	_
+8-29	839-843	high	abstract[45]	giv[45]	ana	9-2[0_45]
+8-30	844-848	risk	abstract[45]	giv[45]	_	_
+8-31	849-851	of	abstract[45]	giv[45]	_	_
+8-32	852-862	developing	abstract[45]	giv[45]	_	_
+8-33	863-870	serious	abstract[45]|abstract[46]	giv[45]|new[46]	_	_
+8-34	871-884	complications	abstract[45]|abstract[46]	giv[45]|new[46]	_	_
+8-35	885-886	,	abstract[45]	giv[45]	_	_
+8-36	887-891	just	abstract[45]	giv[45]	_	_
+8-37	892-894	as	abstract[45]	giv[45]	_	_
+8-38	895-899	they	abstract[45]|person	giv[45]|giv	coref	28-14[145_0]
+8-39	900-903	are	abstract[45]	giv[45]	_	_
+8-40	904-908	from	abstract[45]	giv[45]	_	_
+8-41	909-917	seasonal	abstract[45]|event[48]	giv[45]|new[48]	_	_
+8-42	918-921	flu	abstract[45]|event[48]	giv[45]|new[48]	_	_
+8-43	922-923	.	_	_	_	_
+
+#Text=Is it known when the virus will become less virulent and cease becoming a major threat to health and of so when ?
+9-1	924-926	Is	_	_	_	_
+9-2	927-929	it	abstract	giv	coref	12-3[58_0]
+9-3	930-935	known	_	_	_	_
+9-4	936-940	when	_	_	_	_
+9-5	941-944	the	substance[50]	new[50]	coref	10-7[55_50]
+9-6	945-950	virus	substance[50]	new[50]	_	_
+9-7	951-955	will	_	_	_	_
+9-8	956-962	become	_	_	_	_
+9-9	963-967	less	_	_	_	_
+9-10	968-976	virulent	_	_	_	_
+9-11	977-980	and	_	_	_	_
+9-12	981-986	cease	_	_	_	_
+9-13	987-995	becoming	_	_	_	_
+9-14	996-997	a	_	_	_	_
+9-15	998-1003	major	_	_	_	_
+9-16	1004-1010	threat	_	_	_	_
+9-17	1011-1013	to	_	_	_	_
+9-18	1014-1020	health	abstract	giv	ana	10-1
+9-19	1021-1024	and	_	_	_	_
+9-20	1025-1027	of	_	_	_	_
+9-21	1028-1030	so	_	_	_	_
+9-22	1031-1035	when	_	_	_	_
+9-23	1036-1037	?	_	_	_	_
+
+#Text=It is impossible to predict when the pandemic H1N1 virus will become less virulent .
+10-1	1038-1040	It	abstract	giv	_	_
+10-2	1041-1043	is	_	_	_	_
+10-3	1044-1054	impossible	_	_	_	_
+10-4	1055-1057	to	_	_	_	_
+10-5	1058-1065	predict	_	_	_	_
+10-6	1066-1070	when	_	_	_	_
+10-7	1071-1074	the	substance[55]	giv[55]	coref	14-19[69_55]
+10-8	1075-1083	pandemic	plant|substance[55]	new|giv[55]	coref	14-20
+10-9	1084-1088	H1N1	substance|substance[55]	new|giv[55]	coref	12-7
+10-10	1089-1094	virus	substance[55]	giv[55]	_	_
+10-11	1095-1099	will	_	_	_	_
+10-12	1100-1106	become	_	_	_	_
+10-13	1107-1111	less	_	_	_	_
+10-14	1112-1120	virulent	_	_	_	_
+10-15	1121-1122	.	_	_	_	_
+
+#Text=Diagram showing antigenic shift .
+11-1	1123-1130	Diagram	abstract[56]	new[56]	_	_
+11-2	1131-1138	showing	abstract[56]	new[56]	_	_
+11-3	1139-1148	antigenic	abstract[56]|event[57]	new[56]|new[57]	_	_
+11-4	1149-1154	shift	abstract[56]|event[57]	new[56]|new[57]	_	_
+11-5	1155-1156	.	_	_	_	_
+
+#Text=Is there a significant risk of H1N1 mutating and becoming more deadly ?
+12-1	1157-1159	Is	_	_	_	_
+12-2	1160-1165	there	_	_	_	_
+12-3	1166-1167	a	abstract[58]	giv[58]	_	_
+12-4	1168-1179	significant	abstract[58]	giv[58]	_	_
+12-5	1180-1184	risk	abstract[58]	giv[58]	_	_
+12-6	1185-1187	of	abstract[58]	giv[58]	_	_
+12-7	1188-1192	H1N1	abstract[58]|substance	giv[58]|giv	coref	14-21
+12-8	1193-1201	mutating	abstract[58]	giv[58]	_	_
+12-9	1202-1205	and	abstract[58]	giv[58]	_	_
+12-10	1206-1214	becoming	abstract[58]	giv[58]	_	_
+12-11	1215-1219	more	abstract[58]	giv[58]	_	_
+12-12	1220-1226	deadly	abstract[58]	giv[58]	_	_
+12-13	1227-1228	?	_	_	_	_
+
+#Text=Influenza viruses constantly change through a process called antigenic drift .
+13-1	1229-1238	Influenza	abstract|abstract[61]	giv|new[61]	coref|coref	14-2|14-1[65_61]
+13-2	1239-1246	viruses	abstract[61]	new[61]	_	_
+13-3	1247-1257	constantly	_	_	_	_
+13-4	1258-1264	change	_	_	_	_
+13-5	1265-1272	through	_	_	_	_
+13-6	1273-1274	a	event[62]	new[62]	coref	14-5[66_62]
+13-7	1275-1282	process	event[62]	new[62]	_	_
+13-8	1283-1289	called	event[62]	new[62]	_	_
+13-9	1290-1299	antigenic	event[62]|abstract[63]	new[62]|new[63]	_	_
+13-10	1300-1305	drift	event[62]|abstract[63]	new[62]|new[63]	_	_
+13-11	1306-1307	.	_	_	_	_
+
+#Text=All influenza viruses undergo this process but there is no way to predict if , when and how the pandemic H1N1 virus will shift .
+14-1	1308-1311	All	abstract[65]	giv[65]	coref	23-8[112_65]
+14-2	1312-1321	influenza	abstract|abstract[65]	giv|giv[65]	coref	19-18
+14-3	1322-1329	viruses	abstract[65]	giv[65]	_	_
+14-4	1330-1337	undergo	_	_	_	_
+14-5	1338-1342	this	event[66]	giv[66]	_	_
+14-6	1343-1350	process	event[66]	giv[66]	_	_
+14-7	1351-1354	but	_	_	_	_
+14-8	1355-1360	there	_	_	_	_
+14-9	1361-1363	is	_	_	_	_
+14-10	1364-1366	no	_	_	_	_
+14-11	1367-1370	way	_	_	_	_
+14-12	1371-1373	to	_	_	_	_
+14-13	1374-1381	predict	_	_	_	_
+14-14	1382-1384	if	_	_	_	_
+14-15	1385-1386	,	_	_	_	_
+14-16	1387-1391	when	_	_	_	_
+14-17	1392-1395	and	_	_	_	_
+14-18	1396-1399	how	_	_	_	_
+14-19	1400-1403	the	substance[69]	giv[69]	_	_
+14-20	1404-1412	pandemic	plant|substance[69]	giv|giv[69]	coref	19-9
+14-21	1413-1417	H1N1	substance|substance[69]	giv|giv[69]	coref	17-3
+14-22	1418-1423	virus	substance[69]	giv[69]	_	_
+14-23	1424-1428	will	_	_	_	_
+14-24	1429-1434	shift	_	_	_	_
+14-25	1435-1436	.	_	_	_	_
+
+#Text=Are the current anti-flu vaccines effective and how sufficient is the current supply ?
+15-1	1437-1440	Are	_	_	_	_
+15-2	1441-1444	the	substance[70]	new[70]	coref	17-1[77_70]
+15-3	1445-1452	current	substance[70]	new[70]	_	_
+15-4	1453-1461	anti-flu	substance[70]	new[70]	_	_
+15-5	1462-1470	vaccines	substance[70]	new[70]	_	_
+15-6	1471-1480	effective	_	_	_	_
+15-7	1481-1484	and	_	_	_	_
+15-8	1485-1488	how	_	_	_	_
+15-9	1489-1499	sufficient	_	_	_	_
+15-10	1500-1502	is	_	_	_	_
+15-11	1503-1506	the	abstract[71]	new[71]	coref	17-8[0_71]
+15-12	1507-1514	current	abstract[71]	new[71]	_	_
+15-13	1515-1521	supply	abstract[71]	new[71]	_	_
+15-14	1522-1523	?	_	_	_	_
+
+#Text=Can you explain how these anti-virus vaccine work and any possible side effects ?
+16-1	1524-1527	Can	_	_	_	_
+16-2	1528-1531	you	person	acc	_	_
+16-3	1532-1539	explain	_	_	_	_
+16-4	1540-1543	how	_	_	_	_
+16-5	1544-1549	these	substance[73]	new[73]	coref	21-5[99_73]
+16-6	1550-1560	anti-virus	substance[73]	new[73]	_	_
+16-7	1561-1568	vaccine	substance[73]	new[73]	_	_
+16-8	1569-1573	work	_	_	_	_
+16-9	1574-1577	and	_	_	_	_
+16-10	1578-1581	any	abstract[75]	new[75]	coref	24-1[114_75]
+16-11	1582-1590	possible	abstract[75]	new[75]	_	_
+16-12	1591-1595	side	abstract|abstract[75]	new|new[75]	_	_
+16-13	1596-1603	effects	abstract[75]	new[75]	_	_
+16-14	1604-1605	?	_	_	_	_
+
+#Text=The current H1N1 vaccines are effective and supply is sufficient .
+17-1	1606-1609	The	substance[77]	giv[77]	coref	18-5[82_77]
+17-2	1610-1617	current	substance[77]	giv[77]	_	_
+17-3	1618-1622	H1N1	substance|substance[77]	giv|giv[77]	coref	18-5
+17-4	1623-1631	vaccines	substance[77]	giv[77]	_	_
+17-5	1632-1635	are	_	_	_	_
+17-6	1636-1645	effective	_	_	_	_
+17-7	1646-1649	and	_	_	_	_
+17-8	1650-1656	supply	abstract	giv	_	_
+17-9	1657-1659	is	_	_	_	_
+17-10	1660-1670	sufficient	_	_	_	_
+17-11	1671-1672	.	_	_	_	_
+
+#Text=The safety profile of H1N1 vaccines is very good .
+18-1	1673-1676	The	abstract[80]	new[80]	_	_
+18-2	1677-1683	safety	abstract|abstract[80]	new|new[80]	coref	19-14
+18-3	1684-1691	profile	abstract[80]	new[80]	_	_
+18-4	1692-1694	of	abstract[80]	new[80]	_	_
+18-5	1695-1699	H1N1	abstract[80]|substance|substance[82]	new[80]|giv|giv[82]	coref	19-9[87_82]
+18-6	1700-1708	vaccines	abstract[80]|substance[82]	new[80]|giv[82]	_	_
+18-7	1709-1711	is	_	_	_	_
+18-8	1712-1716	very	_	_	_	_
+18-9	1717-1721	good	_	_	_	_
+18-10	1722-1723	.	_	_	_	_
+
+#Text=Outcomes of studies completed to date indicate that pandemic vaccines have a similar safety record as seasonal influenza vaccines .
+19-1	1724-1732	Outcomes	abstract[83]	new[83]	_	_
+19-2	1733-1735	of	abstract[83]	new[83]	_	_
+19-3	1736-1743	studies	abstract[83]|abstract[84]	new[83]|new[84]	_	_
+19-4	1744-1753	completed	abstract[83]|abstract[84]	new[83]|new[84]	_	_
+19-5	1754-1756	to	abstract[83]|abstract[84]	new[83]|new[84]	_	_
+19-6	1757-1761	date	abstract[83]|abstract[84]|time	new[83]|new[84]|new	_	_
+19-7	1762-1770	indicate	_	_	_	_
+19-8	1771-1775	that	_	_	_	_
+19-9	1776-1784	pandemic	plant|substance[87]	giv|giv[87]	coref	19-17[91_87]
+19-10	1785-1793	vaccines	substance[87]	giv[87]	_	_
+19-11	1794-1798	have	_	_	_	_
+19-12	1799-1800	a	abstract[89]	new[89]	_	_
+19-13	1801-1808	similar	abstract[89]	new[89]	_	_
+19-14	1809-1815	safety	abstract|abstract[89]	giv|new[89]	coref	21-2
+19-15	1816-1822	record	abstract[89]	new[89]	_	_
+19-16	1823-1825	as	abstract[89]	new[89]	_	_
+19-17	1826-1834	seasonal	abstract[89]|substance[91]	new[89]|giv[91]	coref	20-1[93_91]
+19-18	1835-1844	influenza	abstract[89]|abstract|substance[91]	new[89]|giv|giv[91]	coref	20-1[92_0]
+19-19	1845-1853	vaccines	abstract[89]|substance[91]	new[89]|giv[91]	_	_
+19-20	1854-1855	.	_	_	_	_
+
+#Text=Pandemic influenza vaccines underwent the same production and testing methods as seasonal vaccines .
+20-1	1856-1864	Pandemic	abstract[92]|substance[93]	giv[92]|giv[93]	coref|coref	20-12[96_93]|22-1[0_92]
+20-2	1865-1874	influenza	abstract[92]|substance[93]	giv[92]|giv[93]	_	_
+20-3	1875-1883	vaccines	substance[93]	giv[93]	_	_
+20-4	1884-1893	underwent	_	_	_	_
+20-5	1894-1897	the	abstract[94]|abstract[95]	new[94]|new[95]	_	_
+20-6	1898-1902	same	abstract[94]|abstract[95]	new[94]|new[95]	_	_
+20-7	1903-1913	production	abstract[94]|abstract[95]	new[94]|new[95]	_	_
+20-8	1914-1917	and	abstract[95]	new[95]	_	_
+20-9	1918-1925	testing	abstract[95]	new[95]	_	_
+20-10	1926-1933	methods	abstract[95]	new[95]	_	_
+20-11	1934-1936	as	abstract[95]	new[95]	_	_
+20-12	1937-1945	seasonal	abstract[95]|substance[96]	new[95]|giv[96]	coref	22-1[106_96]
+20-13	1946-1954	vaccines	abstract[95]|substance[96]	new[95]|giv[96]	_	_
+20-14	1955-1956	.	_	_	_	_
+
+#Text=The safety tracking of the vaccine for adverse events after its distribution and use worldwide has likely been the most thorough and sensitive in history .
+21-1	1957-1960	The	abstract[98]	new[98]	_	_
+21-2	1961-1967	safety	abstract|abstract[98]	giv|new[98]	_	_
+21-3	1968-1976	tracking	abstract[98]	new[98]	_	_
+21-4	1977-1979	of	abstract[98]	new[98]	_	_
+21-5	1980-1983	the	abstract[98]|substance[99]	new[98]|giv[99]	ana	21-11[0_99]
+21-6	1984-1991	vaccine	abstract[98]|substance[99]	new[98]|giv[99]	_	_
+21-7	1992-1995	for	abstract[98]	new[98]	_	_
+21-8	1996-2003	adverse	abstract[98]|event[100]	new[98]|new[100]	_	_
+21-9	2004-2010	events	abstract[98]|event[100]	new[98]|new[100]	_	_
+21-10	2011-2016	after	abstract[98]	new[98]	_	_
+21-11	2017-2020	its	abstract[98]|substance|abstract[102]	new[98]|giv|new[102]	coref	23-13[113_0]
+21-12	2021-2033	distribution	abstract[98]|abstract[102]	new[98]|new[102]	_	_
+21-13	2034-2037	and	abstract[98]	new[98]	_	_
+21-14	2038-2041	use	abstract[98]|abstract[103]	new[98]|new[103]	_	_
+21-15	2042-2051	worldwide	abstract[98]|abstract[103]	new[98]|new[103]	_	_
+21-16	2052-2055	has	_	_	_	_
+21-17	2056-2062	likely	_	_	_	_
+21-18	2063-2067	been	_	_	_	_
+21-19	2068-2071	the	_	_	_	_
+21-20	2072-2076	most	_	_	_	_
+21-21	2077-2085	thorough	_	_	_	_
+21-22	2086-2089	and	_	_	_	_
+21-23	2090-2099	sensitive	_	_	_	_
+21-24	2100-2102	in	_	_	_	_
+21-25	2103-2110	history	abstract	new	_	_
+21-26	2111-2112	.	_	_	_	_
+
+#Text=Influenza vaccines cause antibodies to develop in the body .
+22-1	2113-2122	Influenza	abstract|substance[106]	giv|giv[106]	coref	25-7[0_106]
+22-2	2123-2131	vaccines	substance[106]	giv[106]	_	_
+22-3	2132-2137	cause	_	_	_	_
+22-4	2138-2148	antibodies	substance	new	coref	23-1[109_0]
+22-5	2149-2151	to	_	_	_	_
+22-6	2152-2159	develop	_	_	_	_
+22-7	2160-2162	in	_	_	_	_
+22-8	2163-2166	the	object[108]	new[108]	_	_
+22-9	2167-2171	body	object[108]	new[108]	_	_
+22-10	2172-2173	.	_	_	_	_
+
+#Text=These antibodies provide protection against infection with the viruses that are in the vaccine .
+23-1	2174-2179	These	substance[109]	giv[109]	_	_
+23-2	2180-2190	antibodies	substance[109]	giv[109]	_	_
+23-3	2191-2198	provide	_	_	_	_
+23-4	2199-2209	protection	abstract[110]	new[110]	_	_
+23-5	2210-2217	against	abstract[110]	new[110]	_	_
+23-6	2218-2227	infection	abstract[110]|event[111]	new[110]|new[111]	_	_
+23-7	2228-2232	with	abstract[110]|event[111]	new[110]|new[111]	_	_
+23-8	2233-2236	the	abstract[110]|event[111]|abstract[112]	new[110]|new[111]|giv[112]	coref	25-13[123_112]
+23-9	2237-2244	viruses	abstract[110]|event[111]|abstract[112]	new[110]|new[111]|giv[112]	_	_
+23-10	2245-2249	that	abstract[110]|event[111]|abstract[112]	new[110]|new[111]|giv[112]	_	_
+23-11	2250-2253	are	abstract[110]|event[111]|abstract[112]	new[110]|new[111]|giv[112]	_	_
+23-12	2254-2256	in	abstract[110]|event[111]|abstract[112]	new[110]|new[111]|giv[112]	_	_
+23-13	2257-2260	the	abstract[110]|event[111]|abstract[112]|substance[113]	new[110]|new[111]|giv[112]|giv[113]	coref	24-10[0_113]
+23-14	2261-2268	vaccine	abstract[110]|event[111]|abstract[112]|substance[113]	new[110]|new[111]|giv[112]|giv[113]	_	_
+23-15	2269-2270	.	_	_	_	_
+
+#Text=Possible side effects can depend on the type of vaccine , how it is administered and the age of the recipient .
+24-1	2271-2279	Possible	abstract[114]	giv[114]	_	_
+24-2	2280-2284	side	abstract[114]	giv[114]	_	_
+24-3	2285-2292	effects	abstract[114]	giv[114]	_	_
+24-4	2293-2296	can	_	_	_	_
+24-5	2297-2303	depend	_	_	_	_
+24-6	2304-2306	on	_	_	_	_
+24-7	2307-2310	the	abstract[115]	new[115]	_	_
+24-8	2311-2315	type	abstract[115]	new[115]	_	_
+24-9	2316-2318	of	abstract[115]	new[115]	_	_
+24-10	2319-2326	vaccine	abstract[115]|substance	new[115]|giv	ana	24-13
+24-11	2327-2328	,	_	_	_	_
+24-12	2329-2332	how	_	_	_	_
+24-13	2333-2335	it	substance	giv	_	_
+24-14	2336-2338	is	_	_	_	_
+24-15	2339-2351	administered	_	_	_	_
+24-16	2352-2355	and	_	_	_	_
+24-17	2356-2359	the	time[118]	giv[118]	_	_
+24-18	2360-2363	age	time[118]	giv[118]	_	_
+24-19	2364-2366	of	time[118]	giv[118]	_	_
+24-20	2367-2370	the	time[118]|person[119]	giv[118]|new[119]	_	_
+24-21	2371-2380	recipient	time[118]|person[119]	giv[118]|new[119]	_	_
+24-22	2381-2382	.	_	_	_	_
+
+#Text=There are two main types of vaccines : one is manufactured with inactivated viruses , the other uses live viruses .
+25-1	2383-2388	There	_	_	_	_
+25-2	2389-2392	are	_	_	_	_
+25-3	2393-2396	two	abstract[120]	new[120]	_	_
+25-4	2397-2401	main	abstract[120]	new[120]	_	_
+25-5	2402-2407	types	abstract[120]	new[120]	_	_
+25-6	2408-2410	of	abstract[120]	new[120]	_	_
+25-7	2411-2419	vaccines	abstract[120]|substance	new[120]|giv	coref	26-1[125_0]
+25-8	2420-2421	:	_	_	_	_
+25-9	2422-2425	one	object	new	_	_
+25-10	2426-2428	is	_	_	_	_
+25-11	2429-2441	manufactured	_	_	_	_
+25-12	2442-2446	with	_	_	_	_
+25-13	2447-2458	inactivated	abstract[123]	giv[123]	coref	25-19[124_123]
+25-14	2459-2466	viruses	abstract[123]	giv[123]	_	_
+25-15	2467-2468	,	_	_	_	_
+25-16	2469-2472	the	_	_	_	_
+25-17	2473-2478	other	_	_	_	_
+25-18	2479-2483	uses	_	_	_	_
+25-19	2484-2488	live	abstract[124]	giv[124]	_	_
+25-20	2489-2496	viruses	abstract[124]	giv[124]	_	_
+25-21	2497-2498	.	_	_	_	_
+
+#Text=Inactivated vaccines , administered by injection , commonly cause local reactions such as soreness , swelling and redness at the injection site , and less often can cause fever , muscle- or joint- aches or headache .
+26-1	2499-2510	Inactivated	substance[125]	giv[125]	_	_
+26-2	2511-2519	vaccines	substance[125]	giv[125]	_	_
+26-3	2520-2521	,	substance[125]	giv[125]	_	_
+26-4	2522-2534	administered	substance[125]	giv[125]	_	_
+26-5	2535-2537	by	substance[125]	giv[125]	_	_
+26-6	2538-2547	injection	substance[125]|event	giv[125]|new	coref	26-21
+26-7	2548-2549	,	_	_	_	_
+26-8	2550-2558	commonly	_	_	_	_
+26-9	2559-2564	cause	_	_	_	_
+26-10	2565-2570	local	event[127]	new[127]	_	_
+26-11	2571-2580	reactions	event[127]	new[127]	_	_
+26-12	2581-2585	such	event[127]	new[127]	_	_
+26-13	2586-2588	as	event[127]	new[127]	_	_
+26-14	2589-2597	soreness	event[127]|abstract	new[127]|new	_	_
+26-15	2598-2599	,	event[127]	new[127]	_	_
+26-16	2600-2608	swelling	event[127]|event	new[127]|new	_	_
+26-17	2609-2612	and	event[127]	new[127]	_	_
+26-18	2613-2620	redness	event[127]|abstract[130]	new[127]|new[130]	_	_
+26-19	2621-2623	at	event[127]|abstract[130]	new[127]|new[130]	_	_
+26-20	2624-2627	the	event[127]|abstract[130]|place[132]	new[127]|new[130]|new[132]	_	_
+26-21	2628-2637	injection	event[127]|abstract[130]|event|place[132]	new[127]|new[130]|giv|new[132]	_	_
+26-22	2638-2642	site	event[127]|abstract[130]|place[132]	new[127]|new[130]|new[132]	_	_
+26-23	2643-2644	,	_	_	_	_
+26-24	2645-2648	and	_	_	_	_
+26-25	2649-2653	less	_	_	_	_
+26-26	2654-2659	often	_	_	_	_
+26-27	2660-2663	can	_	_	_	_
+26-28	2664-2669	cause	_	_	_	_
+26-29	2670-2675	fever	abstract	new	_	_
+26-30	2676-2677	,	_	_	_	_
+26-31	2678-2685	muscle-	object	new	_	_
+26-32	2686-2688	or	_	_	_	_
+26-33	2689-2695	joint-	object	new	_	_
+26-34	2696-2701	aches	event	new	coref	28-3
+26-35	2702-2704	or	_	_	_	_
+26-36	2705-2713	headache	abstract	new	_	_
+26-37	2714-2715	.	_	_	_	_
+
+#Text=These symptoms are generally mild , do not need medical attention , and last 1 to 2 days .
+27-1	2716-2721	These	abstract[138]	new[138]	_	_
+27-2	2722-2730	symptoms	abstract[138]	new[138]	_	_
+27-3	2731-2734	are	_	_	_	_
+27-4	2735-2744	generally	_	_	_	_
+27-5	2745-2749	mild	_	_	_	_
+27-6	2750-2751	,	_	_	_	_
+27-7	2752-2754	do	_	_	_	_
+27-8	2755-2758	not	_	_	_	_
+27-9	2759-2763	need	_	_	_	_
+27-10	2764-2771	medical	abstract[139]	new[139]	_	_
+27-11	2772-2781	attention	abstract[139]	new[139]	_	_
+27-12	2782-2783	,	_	_	_	_
+27-13	2784-2787	and	_	_	_	_
+27-14	2788-2792	last	_	_	_	_
+27-15	2793-2794	1	time[140]	new[140]	_	_
+27-16	2795-2797	to	time[140]	new[140]	_	_
+27-17	2798-2799	2	time[140]	new[140]	_	_
+27-18	2800-2804	days	time[140]	new[140]	_	_
+27-19	2805-2806	.	_	_	_	_
+
+#Text=Fever , aches and headaches can occur more frequently in children compared to elderly people .
+28-1	2807-2812	Fever	person	new	_	_
+28-2	2813-2814	,	_	_	_	_
+28-3	2815-2820	aches	event	giv	_	_
+28-4	2821-2824	and	_	_	_	_
+28-5	2825-2834	headaches	abstract	new	_	_
+28-6	2835-2838	can	_	_	_	_
+28-7	2839-2844	occur	_	_	_	_
+28-8	2845-2849	more	_	_	_	_
+28-9	2850-2860	frequently	_	_	_	_
+28-10	2861-2863	in	_	_	_	_
+28-11	2864-2872	children	person	new	_	_
+28-12	2873-2881	compared	_	_	_	_
+28-13	2882-2884	to	_	_	_	_
+28-14	2885-2892	elderly	person[145]	giv[145]	_	_
+28-15	2893-2899	people	person[145]	giv[145]	_	_
+28-16	2900-2901	.	_	_	_	_
