@@ -51,7 +51,7 @@ Current scores on the GUM corpus test set per task:
 | coreference | CoNLL F1 | 51.4 |
 | RST | S / N / R | 77.98 / 61.79 / 44.07 |
 
-* Parsing scores ignore punctuation attachment; punctuation is attached automatically via [udapi](https://udapi.github.io/).
+\* Parsing scores ignore punctuation attachment; punctuation is attached automatically via [udapi](https://udapi.github.io/).
 
 ### Further Information
 Please see [our paper](https://www.aclweb.org/anthology/2020.lrec-1.648.pdf).
