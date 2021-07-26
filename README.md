@@ -1,8 +1,10 @@
-# AMALGUM v0.1
-## Download
-Latest data **without Reddit texts** is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and [`amalgum_balanced/`](https://github.com/gucorpling/amalgum/tree/master/amalgum_balanced). (The `_balanced` variant contains nearly 500,000 tokens for each genre, while the unbalanced variant contains slightly more data.)
+# AMALGUM v0.2
 
-You may [download the data **without Reddit texts** as a zip](https://drive.google.com/file/d/1StyZjJ6u84vZgJ2bIgsuCb037zc36RXB/view?usp=sharing). The complete corpus, with Reddit data, is available upon request: please email [lg876@georgetown.edu](mailto:lg876@georgetown.edu).
+## Download
+
+Latest data **without Reddit texts** is available under [`amalgum/`](https://github.com/gucorpling/amalgum/tree/master/amalgum) and some additional data beyond the target size of 4M tokens [`amalgum_extra/`](https://github.com/gucorpling/amalgum/tree/master/amalgum_extra). (The `amalgum` directory contains around 500,000 tokens for each genre, while the extra directory contains some more data beyond the genre-balanced corpus.)
+
+You may [download the older version 0.1 of the corpus **without Reddit texts** as a zip](https://drive.google.com/file/d/1StyZjJ6u84vZgJ2bIgsuCb037zc36RXB/view?usp=sharing). The complete corpus, with Reddit data, is available upon request: please email [lg876@georgetown.edu](mailto:lg876@georgetown.edu).
 
 ## Description
 AMALGUM (**A** **M**achine-**A**nnotated **L**ookalike of [**GUM**](https://github.com/amir-zeldes/gum)) is an English web corpus spanning 8 genres with 4,000,000 tokens and several annotation layers.
@@ -26,14 +28,14 @@ AMALGUM contains annotations for the following information:
 * [UD](https://universaldependencies.org/u/pos/) and [Extended PTB](https://corpling.uis.georgetown.edu/ptb_tags.html) part of speech tags
 * Lemmas
 * [UD](https://universaldependencies.org/u/dep/) dependency parses
-* (Non-)named entities
-* Coreference
-* Rhetorical structure theory
+* (Non-)named nested entities
+* Coreference resolution
+* Rhetorical Structure Theory discourse parses (constituent and dependency versions)
 * Date/Time annotations in TEI format
 
 These annotations are across four file formats: [GUM-style XML](https://github.com/amir-zeldes/gum), [CONLLU](https://universaldependencies.org/format.html), [WebAnno TSV](https://webanno.github.io/webanno/releases/3.4.5/docs/user-guide.html#sect_webannotsv), and [RS3](https://github.com/gucorpling/rst-xsd).
 
-You can see samples of the data for `bio_doc124`: [xml](https://github.com/gucorpling/amalgum/blob/master/amalgum/xml/amalgum_bio_doc124.xml), [conllu](https://github.com/gucorpling/amalgum/blob/master/amalgum/dep/amalgum_bio_doc124.conllu), [tsv](https://github.com/gucorpling/amalgum/blob/master/amalgum/tsv/amalgum_bio_doc124.tsv), [rs3](https://github.com/gucorpling/amalgum/blob/master/amalgum/rst/amalgum_bio_doc124.rs3)
+You can see samples of the data for `AMALGUM_news_khadr`: [xml](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/xml/AMALGUM_news_khadr.conllu), [conllu](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/dep/AMALGUM_news_khadr.conllu), [tsv](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/tsv/AMALGUM_news_khadr.tsv), [rs3](https://github.com/gucorpling/amalgum/blob/master/amalgum/news/rst/AMALGUM_news_khadr.rs3)
 
 ### Further Information
 Please see [our paper](https://www.aclweb.org/anthology/2020.lrec-1.648.pdf).
@@ -64,7 +66,7 @@ Please see [our paper](https://www.aclweb.org/anthology/2020.lrec-1.648.pdf).
 
 
 # License
-All annotations under the folders `amalgum/` and `amalgum_balanced/` are available under a [Creative Commons Attribution (CC-BY) license, version 4.0](https://creativecommons.org/licenses/by/4.0/). Note that their texts are sourced from the following websites under their own licenses:
+All annotations under the folders `amalgum/` and `amalgum_extra/` are available under a [Creative Commons Attribution (CC-BY) license, version 4.0](https://creativecommons.org/licenses/by/4.0/). Note that their texts are sourced from the following websites under their own licenses:
 
 * `academic`: [MDPI](https://www.mdpi.com/about), [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 * `bio`: [Wikipedia](https://creativecommons.org/licenses/by/4.0/), [CC BY-SA 3.0](https://en.wikipedia.org/wiki/Wikipedia:Text_of_Creative_Commons_Attribution-ShareAlike_3.0_Unported_License)
