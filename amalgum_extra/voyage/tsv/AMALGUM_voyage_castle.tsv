@@ -1,0 +1,857 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=Benešov
+1-1	0-7	Benešov	person	new	_	_
+
+#Text=Benešov is a town in the Czech Republic , notable for nearby Konopiště Castle .
+2-1	8-15	Benešov	place	new	coref	2-3[3_0]
+2-2	16-18	is	_	_	_	_
+2-3	19-20	a	place[3]	giv[3]	coref	9-7[0_3]
+2-4	21-25	town	place[3]	giv[3]	_	_
+2-5	26-28	in	place[3]	giv[3]	_	_
+2-6	29-32	the	place[3]|place[4]	giv[3]|new[4]	coref	18-15[79_4]
+2-7	33-38	Czech	place[3]|place[4]	giv[3]|new[4]	_	_
+2-8	39-47	Republic	place[3]|place[4]	giv[3]|new[4]	_	_
+2-9	48-49	,	place[3]	giv[3]	_	_
+2-10	50-57	notable	place[3]	giv[3]	_	_
+2-11	58-61	for	place[3]	giv[3]	_	_
+2-12	62-68	nearby	place[3]|place[6]	giv[3]|new[6]	coref	5-3[13_6]
+2-13	69-78	Konopiště	place[3]|place|place[6]	giv[3]|new|new[6]	coref	4-1
+2-14	79-85	Castle	place[3]|place[6]	giv[3]|new[6]	_	_
+2-15	86-87	.	_	_	_	_
+
+#Text=Understand
+3-1	88-98	Understand	_	_	_	_
+
+#Text=Konopiště was the residence of Archduke Franz Ferdinand ( heir to the Austro-Hungarian throne ) .
+4-1	99-108	Konopiště	place	giv	coref	4-3[8_0]
+4-2	109-112	was	_	_	_	_
+4-3	113-116	the	place[8]	giv[8]	coref	5-8[0_8]
+4-4	117-126	residence	place[8]	giv[8]	_	_
+4-5	127-129	of	place[8]	giv[8]	_	_
+4-6	130-138	Archduke	place[8]|person[9]	giv[8]|new[9]	appos	4-10[10_9]
+4-7	139-144	Franz	place[8]|person[9]	giv[8]|new[9]	_	_
+4-8	145-154	Ferdinand	place[8]|person[9]	giv[8]|new[9]	_	_
+4-9	155-156	(	_	_	_	_
+4-10	157-161	heir	person[10]	giv[10]	ana	5-1[0_10]
+4-11	162-164	to	person[10]	giv[10]	_	_
+4-12	165-168	the	person[10]|abstract[11]	giv[10]|new[11]	_	_
+4-13	169-185	Austro-Hungarian	person[10]|abstract[11]	giv[10]|new[11]	_	_
+4-14	186-192	throne	person[10]|abstract[11]	giv[10]|new[11]	_	_
+4-15	193-194	)	_	_	_	_
+4-16	195-196	.	_	_	_	_
+
+#Text=He purchased the castle and took up residence several years prior to his assassination in Sarajevo .
+5-1	197-199	He	person	giv	ana	5-13
+5-2	200-209	purchased	_	_	_	_
+5-3	210-213	the	place[13]	giv[13]	coref	10-16[40_13]
+5-4	214-220	castle	place[13]	giv[13]	_	_
+5-5	221-224	and	_	_	_	_
+5-6	225-229	took	_	_	_	_
+5-7	230-232	up	_	_	_	_
+5-8	233-242	residence	place	giv	coref	7-11
+5-9	243-250	several	time[15]	new[15]	_	_
+5-10	251-256	years	time[15]	new[15]	_	_
+5-11	257-262	prior	_	_	_	_
+5-12	263-265	to	_	_	_	_
+5-13	266-269	his	person|event[17]	giv|new[17]	coref|coref	6-1[19_0]|19-19[89_17]
+5-14	270-283	assassination	event[17]	new[17]	_	_
+5-15	284-286	in	event[17]	new[17]	_	_
+5-16	287-295	Sarajevo	event[17]|place	new[17]|new	_	_
+5-17	296-297	.	_	_	_	_
+
+#Text=Archduke Ferdinand married a woman of Czech nobility ( a scandalous affair due to her only being a duchess ) .
+6-1	298-306	Archduke	person[19]	giv[19]	ana	7-9[0_19]
+6-2	307-316	Ferdinand	person[19]	giv[19]	_	_
+6-3	317-324	married	_	_	_	_
+6-4	325-326	a	person[20]	new[20]	ana	6-15[0_20]
+6-5	327-332	woman	person[20]	new[20]	_	_
+6-6	333-335	of	person[20]	new[20]	_	_
+6-7	336-341	Czech	person[20]|organization[21]	new[20]|new[21]	coref	7-4[25_21]
+6-8	342-350	nobility	person[20]|organization[21]	new[20]|new[21]	_	_
+6-9	351-352	(	_	_	_	_
+6-10	353-354	a	event[22]	new[22]	_	_
+6-11	355-365	scandalous	event[22]	new[22]	_	_
+6-12	366-372	affair	event[22]	new[22]	_	_
+6-13	373-376	due	_	_	_	_
+6-14	377-379	to	_	_	_	_
+6-15	380-383	her	person	giv	coref	6-18[24_0]
+6-16	384-388	only	_	_	_	_
+6-17	389-394	being	_	_	_	_
+6-18	395-396	a	person[24]	giv[24]	_	_
+6-19	397-404	duchess	person[24]	giv[24]	_	_
+6-20	405-406	)	_	_	_	_
+6-21	407-408	.	_	_	_	_
+
+#Text=Feeling ostracized from the nobility in Vienna , he chose Konopiště as his residence instead .
+7-1	409-416	Feeling	_	_	_	_
+7-2	417-427	ostracized	_	_	_	_
+7-3	428-432	from	_	_	_	_
+7-4	433-436	the	organization[25]	giv[25]	_	_
+7-5	437-445	nobility	organization[25]	giv[25]	_	_
+7-6	446-448	in	organization[25]	giv[25]	_	_
+7-7	449-455	Vienna	organization[25]|place	giv[25]|new	_	_
+7-8	456-457	,	_	_	_	_
+7-9	458-460	he	person	giv	ana	7-13
+7-10	461-466	chose	_	_	_	_
+7-11	467-476	Konopiště	place	giv	coref	7-13[30_0]
+7-12	477-479	as	_	_	_	_
+7-13	480-483	his	person|place[30]	giv|giv[30]	coref|coref	9-12[0_30]|16-8[65_0]
+7-14	484-493	residence	place[30]	giv[30]	_	_
+7-15	494-501	instead	_	_	_	_
+7-16	502-503	.	_	_	_	_
+
+#Text=Get in
+8-1	504-507	Get	_	_	_	_
+8-2	508-510	in	_	_	_	_
+
+#Text=The best way to get to town , and then to Konopiště , from Prague is by train .
+9-1	511-514	The	place[31]	new[31]	_	_
+9-2	515-519	best	place[31]	new[31]	_	_
+9-3	520-523	way	place[31]	new[31]	_	_
+9-4	524-526	to	place[31]	new[31]	_	_
+9-5	527-530	get	place[31]	new[31]	_	_
+9-6	531-533	to	place[31]	new[31]	_	_
+9-7	534-538	town	place[31]|place	new[31]|giv	coref	10-8
+9-8	539-540	,	place[31]	new[31]	_	_
+9-9	541-544	and	place[31]	new[31]	_	_
+9-10	545-549	then	place[31]	new[31]	_	_
+9-11	550-552	to	place[31]	new[31]	_	_
+9-12	553-562	Konopiště	place[31]|place	new[31]|giv	_	_
+9-13	563-564	,	place[31]	new[31]	_	_
+9-14	565-569	from	place[31]	new[31]	_	_
+9-15	570-576	Prague	place[31]|place	new[31]|new	coref	30-17
+9-16	577-579	is	_	_	_	_
+9-17	580-582	by	_	_	_	_
+9-18	583-588	train	object	new	coref	10-5[37_0]
+9-19	589-590	.	_	_	_	_
+
+#Text=You have to catch a train to Benešov and from there walk 2 km to the castle .
+10-1	591-594	You	person	acc	ana	12-14
+10-2	595-599	have	_	_	_	_
+10-3	600-602	to	_	_	_	_
+10-4	603-608	catch	_	_	_	_
+10-5	609-610	a	object[37]	giv[37]	coref	12-2[47_37]
+10-6	611-616	train	object[37]	giv[37]	_	_
+10-7	617-619	to	_	_	_	_
+10-8	620-627	Benešov	place	giv	_	_
+10-9	628-631	and	_	_	_	_
+10-10	632-636	from	_	_	_	_
+10-11	637-642	there	_	_	_	_
+10-12	643-647	walk	_	_	_	_
+10-13	648-649	2	abstract[39]	new[39]	coref	30-9[140_39]
+10-14	650-652	km	abstract[39]	new[39]	_	_
+10-15	653-655	to	_	_	_	_
+10-16	656-659	the	place[40]	giv[40]	coref	11-8[42_40]
+10-17	660-666	castle	place[40]	giv[40]	_	_
+10-18	667-668	.	_	_	_	_
+
+#Text=To get from the train station to the castle find the yellow tourist trail and follow the markers to the castle .
+11-1	669-671	To	_	_	_	_
+11-2	672-675	get	_	_	_	_
+11-3	676-680	from	_	_	_	_
+11-4	681-684	the	place[41]	new[41]	coref	12-10[49_41]
+11-5	685-690	train	place[41]	new[41]	_	_
+11-6	691-698	station	place[41]	new[41]	_	_
+11-7	699-701	to	_	_	_	_
+11-8	702-705	the	place[42]	giv[42]	coref	11-20[46_42]
+11-9	706-712	castle	place[42]	giv[42]	_	_
+11-10	713-717	find	_	_	_	_
+11-11	718-721	the	place[44]	new[44]	_	_
+11-12	722-728	yellow	place[44]	new[44]	_	_
+11-13	729-736	tourist	abstract|place[44]	new|new[44]	_	_
+11-14	737-742	trail	place[44]	new[44]	_	_
+11-15	743-746	and	_	_	_	_
+11-16	747-753	follow	_	_	_	_
+11-17	754-757	the	object[45]	new[45]	_	_
+11-18	758-765	markers	object[45]	new[45]	_	_
+11-19	766-768	to	_	_	_	_
+11-20	769-772	the	place[46]	giv[46]	coref	12-30[54_46]
+11-21	773-779	castle	place[46]	giv[46]	_	_
+11-22	780-781	.	_	_	_	_
+
+#Text=The departing train schedule is posted very clearly in the train station and you may want to review it to choose a departure time prior to heading up to the castle .
+12-1	782-785	The	abstract[48]	new[48]	_	_
+12-2	786-795	departing	object[47]|abstract[48]	giv[47]|new[48]	_	_
+12-3	796-801	train	object[47]|abstract[48]	giv[47]|new[48]	_	_
+12-4	802-810	schedule	abstract[48]	new[48]	_	_
+12-5	811-813	is	_	_	_	_
+12-6	814-820	posted	_	_	_	_
+12-7	821-825	very	_	_	_	_
+12-8	826-833	clearly	_	_	_	_
+12-9	834-836	in	_	_	_	_
+12-10	837-840	the	place[49]	giv[49]	ana	12-19[0_49]
+12-11	841-846	train	place[49]	giv[49]	_	_
+12-12	847-854	station	place[49]	giv[49]	_	_
+12-13	855-858	and	_	_	_	_
+12-14	859-862	you	person	giv	ana	16-5
+12-15	863-866	may	_	_	_	_
+12-16	867-871	want	_	_	_	_
+12-17	872-874	to	_	_	_	_
+12-18	875-881	review	_	_	_	_
+12-19	882-884	it	place	giv	_	_
+12-20	885-887	to	_	_	_	_
+12-21	888-894	choose	_	_	_	_
+12-22	895-896	a	time[53]	new[53]	coref	29-29[135_53]
+12-23	897-906	departure	event|time[53]	new|new[53]	_	_
+12-24	907-911	time	time[53]	new[53]	_	_
+12-25	912-917	prior	_	_	_	_
+12-26	918-920	to	_	_	_	_
+12-27	921-928	heading	_	_	_	_
+12-28	929-931	up	_	_	_	_
+12-29	932-934	to	_	_	_	_
+12-30	935-938	the	place[54]	giv[54]	coref	14-1[55_54]
+12-31	939-945	castle	place[54]	giv[54]	_	_
+12-32	946-947	.	_	_	_	_
+
+#Text=See
+13-1	948-951	See	_	_	_	_
+
+#Text=The castle , as far as Czech castles go , is not overly impressive .
+14-1	952-955	The	place[55]	giv[55]	ana	15-1[0_55]
+14-2	956-962	castle	place[55]	giv[55]	_	_
+14-3	963-964	,	_	_	_	_
+14-4	965-967	as	_	_	_	_
+14-5	968-971	far	_	_	_	_
+14-6	972-974	as	_	_	_	_
+14-7	975-980	Czech	place[56]	new[56]	_	_
+14-8	981-988	castles	place[56]	new[56]	_	_
+14-9	989-991	go	_	_	_	_
+14-10	992-993	,	_	_	_	_
+14-11	994-996	is	_	_	_	_
+14-12	997-1000	not	_	_	_	_
+14-13	1001-1007	overly	_	_	_	_
+14-14	1008-1018	impressive	_	_	_	_
+14-15	1019-1020	.	_	_	_	_
+
+#Text=It does have a large tower , a mote with two live bears , extensive gardens as well as a lake .
+15-1	1021-1023	It	place	giv	coref	16-3[63_0]
+15-2	1024-1028	does	_	_	_	_
+15-3	1029-1033	have	_	_	_	_
+15-4	1034-1035	a	place[58]	new[58]	_	_
+15-5	1036-1041	large	place[58]	new[58]	_	_
+15-6	1042-1047	tower	place[58]	new[58]	_	_
+15-7	1048-1049	,	_	_	_	_
+15-8	1050-1051	a	object[59]	new[59]	_	_
+15-9	1052-1056	mote	object[59]	new[59]	_	_
+15-10	1057-1061	with	object[59]	new[59]	_	_
+15-11	1062-1065	two	object[59]|animal[60]	new[59]|new[60]	_	_
+15-12	1066-1070	live	object[59]|animal[60]	new[59]|new[60]	_	_
+15-13	1071-1076	bears	object[59]|animal[60]	new[59]|new[60]	_	_
+15-14	1077-1078	,	_	_	_	_
+15-15	1079-1088	extensive	place[61]	new[61]	_	_
+15-16	1089-1096	gardens	place[61]	new[61]	_	_
+15-17	1097-1099	as	_	_	_	_
+15-18	1100-1104	well	_	_	_	_
+15-19	1105-1107	as	_	_	_	_
+15-20	1108-1109	a	place[62]	new[62]	_	_
+15-21	1110-1114	lake	place[62]	new[62]	_	_
+15-22	1115-1116	.	_	_	_	_
+
+#Text=Inside of the castle you can see Archduke Ferdinand 's large collection of weapons , guest room , living quarters , etc. all of which are also not too unique .
+16-1	1117-1123	Inside	_	_	_	_
+16-2	1124-1126	of	_	_	_	_
+16-3	1127-1130	the	place[63]	giv[63]	coref	18-4[76_63]
+16-4	1131-1137	castle	place[63]	giv[63]	_	_
+16-5	1138-1141	you	person	giv	_	_
+16-6	1142-1145	can	_	_	_	_
+16-7	1146-1149	see	_	_	_	_
+16-8	1150-1158	Archduke	person[65]|object[66]	giv[65]|new[66]	coref|coref	17-1[74_66]|24-6[102_65]
+16-9	1159-1168	Ferdinand	person[65]|object[66]	giv[65]|new[66]	_	_
+16-10	1169-1171	's	person[65]|object[66]	giv[65]|new[66]	_	_
+16-11	1172-1177	large	object[66]	new[66]	_	_
+16-12	1178-1188	collection	object[66]	new[66]	_	_
+16-13	1189-1191	of	object[66]	new[66]	_	_
+16-14	1192-1199	weapons	object[66]|object	new[66]|new	_	_
+16-15	1200-1201	,	object[66]	new[66]	_	_
+16-16	1202-1207	guest	object[66]|abstract|place[69]	new[66]|new|new[69]	_	_
+16-17	1208-1212	room	object[66]|place[69]	new[66]|new[69]	_	_
+16-18	1213-1214	,	object[66]	new[66]	_	_
+16-19	1215-1221	living	object[66]|place|place[71]	new[66]|new|new[71]	coref	24-6[103_71]
+16-20	1222-1230	quarters	object[66]|place[71]	new[66]|new[71]	_	_
+16-21	1231-1232	,	object[66]	new[66]	_	_
+16-22	1233-1237	etc.	object[66]	new[66]	_	_
+16-23	1238-1241	all	object[66]	new[66]	_	_
+16-24	1242-1244	of	object[66]	new[66]	_	_
+16-25	1245-1250	which	object[66]	new[66]	_	_
+16-26	1251-1254	are	object[66]	new[66]	_	_
+16-27	1255-1259	also	object[66]	new[66]	_	_
+16-28	1260-1263	not	object[66]	new[66]	_	_
+16-29	1264-1267	too	object[66]	new[66]	_	_
+16-30	1268-1274	unique	object[66]	new[66]	_	_
+16-31	1275-1276	.	_	_	_	_
+
+#Text=The weapon 's and armor collection though is quite impressive .
+17-1	1277-1280	The	object[74]	giv[74]	coref	24-25[112_74]
+17-2	1281-1287	weapon	object[72]|object[74]	new[72]|giv[74]	_	_
+17-3	1288-1290	's	object[72]|object[74]	new[72]|giv[74]	_	_
+17-4	1291-1294	and	object[74]	giv[74]	_	_
+17-5	1295-1300	armor	object|object[74]	new|giv[74]	_	_
+17-6	1301-1311	collection	object[74]	giv[74]	_	_
+17-7	1312-1318	though	_	_	_	_
+17-8	1319-1321	is	_	_	_	_
+17-9	1322-1327	quite	_	_	_	_
+17-10	1328-1338	impressive	_	_	_	_
+17-11	1339-1340	.	_	_	_	_
+
+#Text=The aspect of the castle that does differentiate it from other castle 's in the Czech Republic is that the castle tour will touch on issues that are very much relevant to 20th-century history .
+18-1	1341-1344	The	abstract[75]	new[75]	_	_
+18-2	1345-1351	aspect	abstract[75]	new[75]	_	_
+18-3	1352-1354	of	abstract[75]	new[75]	_	_
+18-4	1355-1358	the	abstract[75]|place[76]	new[75]|giv[76]	ana	18-9[0_76]
+18-5	1359-1365	castle	abstract[75]|place[76]	new[75]|giv[76]	_	_
+18-6	1366-1370	that	abstract[75]	new[75]	_	_
+18-7	1371-1375	does	abstract[75]	new[75]	_	_
+18-8	1376-1389	differentiate	abstract[75]	new[75]	_	_
+18-9	1390-1392	it	abstract[75]|place	new[75]|giv	coref	18-11[78_0]
+18-10	1393-1397	from	abstract[75]	new[75]	_	_
+18-11	1398-1403	other	abstract[75]|place[78]	new[75]|giv[78]	coref	18-21[0_78]
+18-12	1404-1410	castle	abstract[75]|place[78]	new[75]|giv[78]	_	_
+18-13	1411-1413	's	abstract[75]|place[78]	new[75]|giv[78]	_	_
+18-14	1414-1416	in	abstract[75]|place[78]	new[75]|giv[78]	_	_
+18-15	1417-1420	the	abstract[75]|place[78]|place[79]	new[75]|giv[78]|giv[79]	_	_
+18-16	1421-1426	Czech	abstract[75]|place[78]|place[79]	new[75]|giv[78]|giv[79]	_	_
+18-17	1427-1435	Republic	abstract[75]|place[78]|place[79]	new[75]|giv[78]|giv[79]	_	_
+18-18	1436-1438	is	_	_	_	_
+18-19	1439-1443	that	_	_	_	_
+18-20	1444-1447	the	event[81]	new[81]	coref	24-3[101_81]
+18-21	1448-1454	castle	place|event[81]	giv|new[81]	coref	20-8[96_0]
+18-22	1455-1459	tour	event[81]	new[81]	_	_
+18-23	1460-1464	will	_	_	_	_
+18-24	1465-1470	touch	_	_	_	_
+18-25	1471-1473	on	_	_	_	_
+18-26	1474-1480	issues	abstract[82]	new[82]	_	_
+18-27	1481-1485	that	abstract[82]	new[82]	_	_
+18-28	1486-1489	are	abstract[82]	new[82]	_	_
+18-29	1490-1494	very	abstract[82]	new[82]	_	_
+18-30	1495-1499	much	abstract[82]	new[82]	_	_
+18-31	1500-1508	relevant	abstract[82]	new[82]	_	_
+18-32	1509-1511	to	abstract[82]	new[82]	_	_
+18-33	1512-1524	20th-century	abstract[82]|abstract[83]	new[82]|new[83]	coref	20-4[95_83]
+18-34	1525-1532	history	abstract[82]|abstract[83]	new[82]|new[83]	_	_
+18-35	1533-1534	.	_	_	_	_
+
+#Text=The guide will go into some detail about the mysterious death of Crown Prince Rudolph , information about the assassination and the relevance of these events to the decline of the Austro-Hungarian empire in the early 20th century .
+19-1	1535-1538	The	abstract[84]	new[84]	_	_
+19-2	1539-1544	guide	abstract[84]	new[84]	_	_
+19-3	1545-1549	will	_	_	_	_
+19-4	1550-1552	go	_	_	_	_
+19-5	1553-1557	into	_	_	_	_
+19-6	1558-1562	some	abstract[85]	new[85]	_	_
+19-7	1563-1569	detail	abstract[85]	new[85]	_	_
+19-8	1570-1575	about	abstract[85]	new[85]	_	_
+19-9	1576-1579	the	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	coref	19-25[91_87]
+19-10	1580-1590	mysterious	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	_	_
+19-11	1591-1596	death	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	_	_
+19-12	1597-1599	of	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	_	_
+19-13	1600-1605	Crown	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	_	_
+19-14	1606-1612	Prince	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	_	_
+19-15	1613-1620	Rudolph	abstract[85]|event[86]|event[87]	new[85]|new[86]|new[87]	_	_
+19-16	1621-1622	,	abstract[85]|event[87]	new[85]|new[87]	_	_
+19-17	1623-1634	information	abstract[85]|event[87]|abstract[88]	new[85]|new[87]|new[88]	coref	26-8[119_88]
+19-18	1635-1640	about	abstract[85]|event[87]|abstract[88]	new[85]|new[87]|new[88]	_	_
+19-19	1641-1644	the	abstract[85]|event[87]|abstract[88]|event[89]	new[85]|new[87]|new[88]|giv[89]	_	_
+19-20	1645-1658	assassination	abstract[85]|event[87]|abstract[88]|event[89]	new[85]|new[87]|new[88]|giv[89]	_	_
+19-21	1659-1662	and	abstract[85]|event[87]	new[85]|new[87]	_	_
+19-22	1663-1666	the	abstract[85]|event[87]|abstract[90]	new[85]|new[87]|new[90]	_	_
+19-23	1667-1676	relevance	abstract[85]|event[87]|abstract[90]	new[85]|new[87]|new[90]	_	_
+19-24	1677-1679	of	abstract[85]|event[87]|abstract[90]	new[85]|new[87]|new[90]	_	_
+19-25	1680-1685	these	abstract[85]|event[87]|abstract[90]|event[91]	new[85]|new[87]|new[90]|giv[91]	_	_
+19-26	1686-1692	events	abstract[85]|event[87]|abstract[90]|event[91]	new[85]|new[87]|new[90]|giv[91]	_	_
+19-27	1693-1695	to	abstract[85]|event[87]|abstract[90]	new[85]|new[87]|new[90]	_	_
+19-28	1696-1699	the	abstract[85]|event[87]|abstract[90]|event[92]	new[85]|new[87]|new[90]|new[92]	_	_
+19-29	1700-1707	decline	abstract[85]|event[87]|abstract[90]|event[92]	new[85]|new[87]|new[90]|new[92]	_	_
+19-30	1708-1710	of	abstract[85]|event[87]|abstract[90]|event[92]	new[85]|new[87]|new[90]|new[92]	_	_
+19-31	1711-1714	the	abstract[85]|event[87]|abstract[90]|event[92]|place[93]	new[85]|new[87]|new[90]|new[92]|new[93]	_	_
+19-32	1715-1731	Austro-Hungarian	abstract[85]|event[87]|abstract[90]|event[92]|place[93]	new[85]|new[87]|new[90]|new[92]|new[93]	_	_
+19-33	1732-1738	empire	abstract[85]|event[87]|abstract[90]|event[92]|place[93]	new[85]|new[87]|new[90]|new[92]|new[93]	_	_
+19-34	1739-1741	in	abstract[85]|event[87]|abstract[90]|event[92]|place[93]	new[85]|new[87]|new[90]|new[92]|new[93]	_	_
+19-35	1742-1745	the	abstract[85]|event[87]|abstract[90]|event[92]|place[93]|time[94]	new[85]|new[87]|new[90]|new[92]|new[93]|new[94]	coref	31-20[156_94]
+19-36	1746-1751	early	abstract[85]|event[87]|abstract[90]|event[92]|place[93]|time[94]	new[85]|new[87]|new[90]|new[92]|new[93]|new[94]	_	_
+19-37	1752-1756	20th	abstract[85]|event[87]|abstract[90]|event[92]|place[93]|time[94]	new[85]|new[87]|new[90]|new[92]|new[93]|new[94]	_	_
+19-38	1757-1764	century	abstract[85]|event[87]|abstract[90]|event[92]|place[93]|time[94]	new[85]|new[87]|new[90]|new[92]|new[93]|new[94]	_	_
+19-39	1765-1766	.	_	_	_	_
+
+#Text=For those interested 20th-century European history , the castle is definitely worth a visit .
+20-1	1767-1770	For	_	_	_	_
+20-2	1771-1776	those	_	_	_	_
+20-3	1777-1787	interested	_	_	_	_
+20-4	1788-1800	20th-century	abstract[95]	giv[95]	_	_
+20-5	1801-1809	European	abstract[95]	giv[95]	_	_
+20-6	1810-1817	history	abstract[95]	giv[95]	_	_
+20-7	1818-1819	,	_	_	_	_
+20-8	1820-1823	the	place[96]	giv[96]	coref	21-6[99_96]
+20-9	1824-1830	castle	place[96]	giv[96]	_	_
+20-10	1831-1833	is	_	_	_	_
+20-11	1834-1844	definitely	_	_	_	_
+20-12	1845-1850	worth	_	_	_	_
+20-13	1851-1852	a	event[97]	new[97]	_	_
+20-14	1853-1858	visit	event[97]	new[97]	_	_
+20-15	1859-1860	.	_	_	_	_
+
+#Text=There are three tours of the castle :
+21-1	1861-1866	There	_	_	_	_
+21-2	1867-1870	are	_	_	_	_
+21-3	1871-1876	three	event[98]	new[98]	coref	25-6[115_98]
+21-4	1877-1882	tours	event[98]	new[98]	_	_
+21-5	1883-1885	of	event[98]	new[98]	_	_
+21-6	1886-1889	the	event[98]|place[99]	new[98]|giv[99]	coref	28-1[123_99]
+21-7	1890-1896	castle	event[98]|place[99]	new[98]|giv[99]	_	_
+21-8	1897-1898	:	_	_	_	_
+
+#Text=Basic -
+22-1	1899-1904	Basic	_	_	_	_
+22-2	1905-1906	-	_	_	_	_
+
+#Text=Section
+23-1	1907-1914	Section	organization	new	coref	26-1[117_0]
+
+#Text=II - A tour of Ferdinand 's living quarters , guest area , ' harem ' gifted to him by the Turkish Sultan , his arms collection and a modern ' elevator . '
+24-1	1915-1917	II	_	_	_	_
+24-2	1918-1919	-	_	_	_	_
+24-3	1920-1921	A	event[101]	giv[101]	coref	26-4[118_101]
+24-4	1922-1926	tour	event[101]	giv[101]	_	_
+24-5	1927-1929	of	event[101]	giv[101]	_	_
+24-6	1930-1939	Ferdinand	event[101]|person[102]|place[103]|place[104]	giv[101]|giv[102]|giv[103]|giv[104]	coref|ana	24-6[104_103]|24-19[0_102]
+24-7	1940-1942	's	event[101]|person[102]|place[103]|place[104]	giv[101]|giv[102]|giv[103]|giv[104]	_	_
+24-8	1943-1949	living	event[101]|place[103]|place[104]	giv[101]|giv[103]|giv[104]	_	_
+24-9	1950-1958	quarters	event[101]|place[103]|place[104]	giv[101]|giv[103]|giv[104]	_	_
+24-10	1959-1960	,	event[101]|place[104]	giv[101]|giv[104]	_	_
+24-11	1961-1966	guest	event[101]|place[104]|person|place[106]	giv[101]|giv[104]|new|new[106]	_	_
+24-12	1967-1971	area	event[101]|place[104]|place[106]	giv[101]|giv[104]|new[106]	_	_
+24-13	1972-1973	,	event[101]|place[104]	giv[101]|giv[104]	_	_
+24-14	1974-1975	'	event[101]|place[104]|place[107]	giv[101]|giv[104]|new[107]	_	_
+24-15	1976-1981	harem	event[101]|place[104]|place[107]	giv[101]|giv[104]|new[107]	_	_
+24-16	1982-1983	'	event[101]|place[104]|place[107]	giv[101]|giv[104]|new[107]	_	_
+24-17	1984-1990	gifted	event[101]|place[104]|place[107]	giv[101]|giv[104]|new[107]	_	_
+24-18	1991-1993	to	event[101]|place[104]|place[107]	giv[101]|giv[104]|new[107]	_	_
+24-19	1994-1997	him	event[101]|place[104]|place[107]|person	giv[101]|giv[104]|new[107]|giv	ana	24-25
+24-20	1998-2000	by	event[101]|place[104]|place[107]	giv[101]|giv[104]|new[107]	_	_
+24-21	2001-2004	the	event[101]|place[104]|place[107]|person[109]	giv[101]|giv[104]|new[107]|new[109]	_	_
+24-22	2005-2012	Turkish	event[101]|place[104]|place[107]|person[109]	giv[101]|giv[104]|new[107]|new[109]	_	_
+24-23	2013-2019	Sultan	event[101]|place[104]|place[107]|person[109]	giv[101]|giv[104]|new[107]|new[109]	_	_
+24-24	2020-2021	,	event[101]|place[104]	giv[101]|giv[104]	_	_
+24-25	2022-2025	his	event[101]|place[104]|person|object[112]	giv[101]|giv[104]|giv|giv[112]	coref	46-7
+24-26	2026-2030	arms	event[101]|place[104]|object|object[112]	giv[101]|giv[104]|new|giv[112]	_	_
+24-27	2031-2041	collection	event[101]|place[104]|object[112]	giv[101]|giv[104]|giv[112]	_	_
+24-28	2042-2045	and	event[101]|place[104]	giv[101]|giv[104]	_	_
+24-29	2046-2047	a	event[101]|place[104]|place[113]	giv[101]|giv[104]|new[113]	_	_
+24-30	2048-2054	modern	event[101]|place[104]|place[113]	giv[101]|giv[104]|new[113]	_	_
+24-31	2055-2056	'	event[101]|place[104]|place[113]	giv[101]|giv[104]|new[113]	_	_
+24-32	2057-2065	elevator	event[101]|place[104]|place[113]	giv[101]|giv[104]|new[113]	_	_
+24-33	2066-2067	.	_	_	_	_
+24-34	2068-2069	'	_	_	_	_
+
+#Text=Cost : 140 Kč for tours in foreign languages
+25-1	2070-2074	Cost	abstract[114]	new[114]	coref	27-1[120_114]
+25-2	2075-2076	:	abstract[114]	new[114]	_	_
+25-3	2077-2080	140	abstract[114]	new[114]	_	_
+25-4	2081-2083	Kč	abstract[114]	new[114]	_	_
+25-5	2084-2087	for	abstract[114]	new[114]	_	_
+25-6	2088-2093	tours	abstract[114]|event[115]	new[114]|giv[115]	coref	27-6[121_115]
+25-7	2094-2096	in	abstract[114]|event[115]	new[114]|giv[115]	_	_
+25-8	2097-2104	foreign	abstract[114]|event[115]|abstract[116]	new[114]|giv[115]|new[116]	coref	27-8[122_116]
+25-9	2105-2114	languages	abstract[114]|event[115]|abstract[116]	new[114]|giv[115]|new[116]	_	_
+
+#Text=Section III ( extensive tour ) - no information available
+26-1	2115-2122	Section	organization[117]	giv[117]	_	_
+26-2	2123-2126	III	organization[117]	giv[117]	_	_
+26-3	2127-2128	(	_	_	_	_
+26-4	2129-2138	extensive	event[118]	giv[118]	_	_
+26-5	2139-2143	tour	event[118]	giv[118]	_	_
+26-6	2144-2145	)	_	_	_	_
+26-7	2146-2147	-	_	_	_	_
+26-8	2148-2150	no	abstract[119]	giv[119]	_	_
+26-9	2151-2162	information	abstract[119]	giv[119]	_	_
+26-10	2163-2172	available	abstract[119]	giv[119]	_	_
+
+#Text=Cost : 250 Kč for tours in foreign languages
+27-1	2173-2177	Cost	abstract[120]	giv[120]	_	_
+27-2	2178-2179	:	abstract[120]	giv[120]	_	_
+27-3	2180-2183	250	abstract[120]	giv[120]	_	_
+27-4	2184-2186	Kč	abstract[120]	giv[120]	_	_
+27-5	2187-2190	for	abstract[120]	giv[120]	_	_
+27-6	2191-2196	tours	abstract[120]|event[121]	giv[120]|giv[121]	_	_
+27-7	2197-2199	in	abstract[120]|event[121]	giv[120]|giv[121]	_	_
+27-8	2200-2207	foreign	abstract[120]|event[121]|abstract[122]	giv[120]|giv[121]|giv[122]	_	_
+27-9	2208-2217	languages	abstract[120]|event[121]|abstract[122]	giv[120]|giv[121]|giv[122]	_	_
+
+#Text=The castle is open from 09:00 to 17:00 during the summer .
+28-1	2218-2221	The	place[123]	giv[123]	ana	29-4[0_123]
+28-2	2222-2228	castle	place[123]	giv[123]	_	_
+28-3	2229-2231	is	_	_	_	_
+28-4	2232-2236	open	_	_	_	_
+28-5	2237-2241	from	_	_	_	_
+28-6	2242-2247	09:00	time	new	_	_
+28-7	2248-2250	to	_	_	_	_
+28-8	2251-2256	17:00	time	new	_	_
+28-9	2257-2263	during	_	_	_	_
+28-10	2264-2267	the	time[126]	new[126]	_	_
+28-11	2268-2274	summer	time[126]	new[126]	_	_
+28-12	2275-2276	.	_	_	_	_
+
+#Text=During the off-season it is open during most of the day ( with varying hours by month ) except for the months of January and February , during which time the castle is closed .
+29-1	2277-2283	During	_	_	_	_
+29-2	2284-2287	the	event[127]	new[127]	_	_
+29-3	2288-2298	off-season	event[127]	new[127]	_	_
+29-4	2299-2301	it	place	giv	coref	29-31[136_0]
+29-5	2302-2304	is	_	_	_	_
+29-6	2305-2309	open	_	_	_	_
+29-7	2310-2316	during	_	_	_	_
+29-8	2317-2321	most	time[129]	new[129]	_	_
+29-9	2322-2324	of	time[129]	new[129]	_	_
+29-10	2325-2328	the	time[129]	new[129]	_	_
+29-11	2329-2332	day	time[129]	new[129]	_	_
+29-12	2333-2334	(	_	_	_	_
+29-13	2335-2339	with	_	_	_	_
+29-14	2340-2347	varying	time[130]	new[130]	_	_
+29-15	2348-2353	hours	time[130]	new[130]	_	_
+29-16	2354-2356	by	time[130]	new[130]	_	_
+29-17	2357-2362	month	time[130]|time	new[130]|new	coref	29-21[132_0]
+29-18	2363-2364	)	_	_	_	_
+29-19	2365-2371	except	_	_	_	_
+29-20	2372-2375	for	_	_	_	_
+29-21	2376-2379	the	time[132]	giv[132]	_	_
+29-22	2380-2386	months	time[132]	giv[132]	_	_
+29-23	2387-2389	of	time[132]	giv[132]	_	_
+29-24	2390-2397	January	time[132]|time	giv[132]|new	_	_
+29-25	2398-2401	and	time[132]	giv[132]	_	_
+29-26	2402-2410	February	time[132]|time	giv[132]|new	_	_
+29-27	2411-2412	,	time[132]	giv[132]	_	_
+29-28	2413-2419	during	time[132]	giv[132]	_	_
+29-29	2420-2425	which	time[132]|time[135]	giv[132]|giv[135]	_	_
+29-30	2426-2430	time	time[132]|time[135]	giv[132]|giv[135]	_	_
+29-31	2431-2434	the	time[132]|place[136]	giv[132]|giv[136]	coref	30-21[145_136]
+29-32	2435-2441	castle	time[132]|place[136]	giv[132]|giv[136]	_	_
+29-33	2442-2444	is	time[132]	giv[132]	_	_
+29-34	2445-2451	closed	time[132]	giv[132]	_	_
+29-35	2452-2453	.	_	_	_	_
+
+#Text=Museum of historical motorcycles , Konopiste 30 ( 2 km from Benesov , 35 km from Prague , next to the Konopiste castle ) , ☏ +420317702658 , ✉ manasova.p@eltsen.cz .
+30-1	2454-2460	Museum	place[137]	new[137]	coref	31-1[148_137]
+30-2	2461-2463	of	place[137]	new[137]	_	_
+30-3	2464-2474	historical	place[137]|object[138]	new[137]|new[138]	coref	32-32[171_138]
+30-4	2475-2486	motorcycles	place[137]|object[138]	new[137]|new[138]	_	_
+30-5	2487-2488	,	_	_	_	_
+30-6	2489-2498	Konopiste	place[139]	new[139]	coref	30-22[0_139]
+30-7	2499-2501	30	place[139]	new[139]	_	_
+30-8	2502-2503	(	_	_	_	_
+30-9	2504-2505	2	abstract[140]	giv[140]	_	_
+30-10	2506-2508	km	abstract[140]	giv[140]	_	_
+30-11	2509-2513	from	abstract[140]	giv[140]	_	_
+30-12	2514-2521	Benesov	abstract[140]|place	giv[140]|new	coref	37-11
+30-13	2522-2523	,	_	_	_	_
+30-14	2524-2526	35	abstract[142]	new[142]	_	_
+30-15	2527-2529	km	abstract[142]	new[142]	_	_
+30-16	2530-2534	from	abstract[142]	new[142]	_	_
+30-17	2535-2541	Prague	abstract[142]|place	new[142]|giv	_	_
+30-18	2542-2543	,	abstract[142]	new[142]	_	_
+30-19	2544-2548	next	abstract[142]	new[142]	_	_
+30-20	2549-2551	to	abstract[142]	new[142]	_	_
+30-21	2552-2555	the	abstract[142]|place[145]	new[142]|giv[145]	coref	44-8[207_145]
+30-22	2556-2565	Konopiste	abstract[142]|place|place[145]	new[142]|giv|giv[145]	coref	49-4[223_0]
+30-23	2566-2572	castle	abstract[142]|place[145]	new[142]|giv[145]	_	_
+30-24	2573-2574	)	_	_	_	_
+30-25	2575-2576	,	_	_	_	_
+30-26	2577-2578	☏	abstract	new	coref	49-24
+30-27	2579-2592	+420317702658	_	_	_	_
+30-28	2593-2594	,	_	_	_	_
+30-29	2595-2596	✉	_	_	_	_
+30-30	2597-2617	manasova.p@eltsen.cz	person	new	_	_
+30-31	2618-2619	.	_	_	_	_
+
+#Text=The museum shows the factory manufacture ( JAWA , CZ ) and sport successes of the Czech marks in the 20th century .
+31-1	2620-2623	The	place[148]	giv[148]	coref	34-1[179_148]
+31-2	2624-2630	museum	place[148]	giv[148]	_	_
+31-3	2631-2636	shows	_	_	_	_
+31-4	2637-2640	the	abstract[150]	new[150]	appos	31-10[0_150]
+31-5	2641-2648	factory	place|abstract[150]	new|new[150]	_	_
+31-6	2649-2660	manufacture	abstract[150]	new[150]	_	_
+31-7	2661-2662	(	_	_	_	_
+31-8	2663-2667	JAWA	organization	new	_	_
+31-9	2668-2669	,	_	_	_	_
+31-10	2670-2672	CZ	abstract	giv	_	_
+31-11	2673-2674	)	_	_	_	_
+31-12	2675-2678	and	_	_	_	_
+31-13	2679-2684	sport	abstract|event[154]	new|new[154]	_	_
+31-14	2685-2694	successes	event[154]	new[154]	_	_
+31-15	2695-2697	of	event[154]	new[154]	_	_
+31-16	2698-2701	the	event[154]|abstract[155]	new[154]|new[155]	_	_
+31-17	2702-2707	Czech	event[154]|abstract[155]	new[154]|new[155]	_	_
+31-18	2708-2713	marks	event[154]|abstract[155]	new[154]|new[155]	_	_
+31-19	2714-2716	in	event[154]|abstract[155]	new[154]|new[155]	_	_
+31-20	2717-2720	the	event[154]|abstract[155]|time[156]	new[154]|new[155]|giv[156]	_	_
+31-21	2721-2725	20th	event[154]|abstract[155]|time[156]	new[154]|new[155]|giv[156]	_	_
+31-22	2726-2733	century	event[154]|abstract[155]|time[156]	new[154]|new[155]|giv[156]	_	_
+31-23	2734-2735	.	_	_	_	_
+
+#Text=The greatest rarities are : the motorcycle of Frantisek Stastný on which he was many times the world champion , white-gold ČZ 500 Vatikan , Jawa boxer 420 , exhibition of the motorcycles for speedway .
+32-1	2736-2739	The	object[157]	new[157]	coref	32-6[158_157]
+32-2	2740-2748	greatest	object[157]	new[157]	_	_
+32-3	2749-2757	rarities	object[157]	new[157]	_	_
+32-4	2758-2761	are	_	_	_	_
+32-5	2762-2763	:	_	_	_	_
+32-6	2764-2767	the	object[158]|object[159]	giv[158]|giv[159]	coref	32-6[159_158]
+32-7	2768-2778	motorcycle	object[158]|object[159]	giv[158]|giv[159]	_	_
+32-8	2779-2781	of	object[158]|object[159]	giv[158]|giv[159]	_	_
+32-9	2782-2791	Frantisek	object[158]|object[159]|person[160]	giv[158]|giv[159]|new[160]	ana	32-13[0_160]
+32-10	2792-2799	Stastný	object[158]|object[159]|person[160]	giv[158]|giv[159]|new[160]	_	_
+32-11	2800-2802	on	object[158]|object[159]	giv[158]|giv[159]	_	_
+32-12	2803-2808	which	object[158]|object[159]	giv[158]|giv[159]	_	_
+32-13	2809-2811	he	object[158]|object[159]|person|abstract[164]	giv[158]|giv[159]|giv|new[164]	coref	33-10[0_164]
+32-14	2812-2815	was	object[158]|object[159]|abstract[164]	giv[158]|giv[159]|new[164]	_	_
+32-15	2816-2820	many	object[158]|object[159]|time[162]|abstract[164]	giv[158]|giv[159]|new[162]|new[164]	_	_
+32-16	2821-2826	times	object[158]|object[159]|time[162]|abstract[164]	giv[158]|giv[159]|new[162]|new[164]	_	_
+32-17	2827-2830	the	object[158]|object[159]|abstract[164]	giv[158]|giv[159]|new[164]	_	_
+32-18	2831-2836	world	object[158]|object[159]|place|abstract[164]	giv[158]|giv[159]|new|new[164]	_	_
+32-19	2837-2845	champion	object[158]|object[159]|abstract[164]	giv[158]|giv[159]|new[164]	_	_
+32-20	2846-2847	,	object[159]	giv[159]	_	_
+32-21	2848-2858	white-gold	object[159]|person[166]	giv[159]|new[166]	_	_
+32-22	2859-2861	ČZ	object[159]|abstract|person[166]	giv[159]|new|new[166]	_	_
+32-23	2862-2865	500	object[159]|person[166]	giv[159]|new[166]	_	_
+32-24	2866-2873	Vatikan	object[159]|person[166]	giv[159]|new[166]	_	_
+32-25	2874-2875	,	object[159]	giv[159]	_	_
+32-26	2876-2880	Jawa	object[159]|person|abstract[169]	giv[159]|new|new[169]	_	_
+32-27	2881-2886	boxer	object[159]|animal|abstract[169]	giv[159]|new|new[169]	_	_
+32-28	2887-2890	420	object[159]|abstract[169]	giv[159]|new[169]	_	_
+32-29	2891-2892	,	object[159]	giv[159]	_	_
+32-30	2893-2903	exhibition	object[159]|event[170]	giv[159]|new[170]	coref	33-1[173_170]
+32-31	2904-2906	of	object[159]|event[170]	giv[159]|new[170]	_	_
+32-32	2907-2910	the	object[159]|event[170]|object[171]	giv[159]|new[170]|giv[171]	_	_
+32-33	2911-2922	motorcycles	object[159]|event[170]|object[171]	giv[159]|new[170]|giv[171]	_	_
+32-34	2923-2926	for	object[159]|event[170]|object[171]	giv[159]|new[170]|giv[171]	_	_
+32-35	2927-2935	speedway	object[159]|event[170]|object[171]|abstract	giv[159]|new[170]|giv[171]|new	_	_
+32-36	2936-2937	.	_	_	_	_
+
+#Text=The exhibition is completed with video projection and with champion prizes from the winning races .
+33-1	2938-2941	The	event[173]	giv[173]	_	_
+33-2	2942-2952	exhibition	event[173]	giv[173]	_	_
+33-3	2953-2955	is	_	_	_	_
+33-4	2956-2965	completed	_	_	_	_
+33-5	2966-2970	with	_	_	_	_
+33-6	2971-2976	video	object|abstract[175]	new|new[175]	_	_
+33-7	2977-2987	projection	abstract[175]	new[175]	_	_
+33-8	2988-2991	and	_	_	_	_
+33-9	2992-2996	with	_	_	_	_
+33-10	2997-3005	champion	abstract|abstract[177]	giv|new[177]	_	_
+33-11	3006-3012	prizes	abstract[177]	new[177]	_	_
+33-12	3013-3017	from	abstract[177]	new[177]	_	_
+33-13	3018-3021	the	abstract[177]|event[178]	new[177]|new[178]	_	_
+33-14	3022-3029	winning	abstract[177]|event[178]	new[177]|new[178]	_	_
+33-15	3030-3035	races	abstract[177]|event[178]	new[177]|new[178]	_	_
+33-16	3036-3037	.	_	_	_	_
+
+#Text=The museum is open year round from 08:00 to 20:00 .
+34-1	3038-3041	The	place[179]	giv[179]	_	_
+34-2	3042-3048	museum	place[179]	giv[179]	_	_
+34-3	3049-3051	is	_	_	_	_
+34-4	3052-3056	open	_	_	_	_
+34-5	3057-3061	year	_	_	_	_
+34-6	3062-3067	round	_	_	_	_
+34-7	3068-3072	from	_	_	_	_
+34-8	3073-3078	08:00	time	new	_	_
+34-9	3079-3081	to	_	_	_	_
+34-10	3082-3087	20:00	time	new	_	_
+34-11	3088-3089	.	_	_	_	_
+
+#Text=Buy
+35-1	3090-3093	Buy	_	_	_	_
+
+#Text=Blue from Sky - Modre z nebe , Male namesti , ✉ prodejbn@modre-z-nebe.cz .
+36-1	3094-3098	Blue	person[182]	new[182]	_	_
+36-2	3099-3103	from	person[182]	new[182]	_	_
+36-3	3104-3107	Sky	person[182]	new[182]	_	_
+36-4	3108-3109	-	_	_	_	_
+36-5	3110-3115	Modre	_	_	_	_
+36-6	3116-3117	z	_	_	_	_
+36-7	3118-3122	nebe	_	_	_	_
+36-8	3123-3124	,	_	_	_	_
+36-9	3125-3129	Male	_	_	_	_
+36-10	3130-3137	namesti	_	_	_	_
+36-11	3138-3139	,	_	_	_	_
+36-12	3140-3141	✉	_	_	_	_
+36-13	3142-3166	prodejbn@modre-z-nebe.cz	_	_	_	_
+36-14	3167-3168	.	_	_	_	_
+
+#Text=Beautiful small toy and gift shop in the centre of Benesov city .
+37-1	3169-3178	Beautiful	object[183]|place[185]	new[183]|new[185]	_	_
+37-2	3179-3184	small	object[183]|place[185]	new[183]|new[185]	_	_
+37-3	3185-3188	toy	object[183]|place[185]	new[183]|new[185]	_	_
+37-4	3189-3192	and	place[185]	new[185]	_	_
+37-5	3193-3197	gift	object|place[185]	new|new[185]	_	_
+37-6	3198-3202	shop	place[185]	new[185]	_	_
+37-7	3203-3205	in	place[185]	new[185]	_	_
+37-8	3206-3209	the	place[185]|place[186]	new[185]|new[186]	_	_
+37-9	3210-3216	centre	place[185]|place[186]	new[185]|new[186]	_	_
+37-10	3217-3219	of	place[185]|place[186]	new[185]|new[186]	_	_
+37-11	3220-3227	Benesov	place[185]|place[186]|place|place[188]	new[185]|new[186]|giv|new[188]	coref	49-10
+37-12	3228-3232	city	place[185]|place[186]|place[188]	new[185]|new[186]|new[188]	_	_
+37-13	3233-3234	.	_	_	_	_
+
+#Text=World in Puzzle , Prazska 126 , Benesov , ☏ +420317728144 .
+38-1	3235-3240	World	person[189]	new[189]	_	_
+38-2	3241-3243	in	person[189]	new[189]	_	_
+38-3	3244-3250	Puzzle	person[189]	new[189]	_	_
+38-4	3251-3252	,	_	_	_	_
+38-5	3253-3260	Prazska	place[190]	new[190]	_	_
+38-6	3261-3264	126	place[190]	new[190]	_	_
+38-7	3265-3266	,	_	_	_	_
+38-8	3267-3274	Benesov	_	_	_	_
+38-9	3275-3276	,	_	_	_	_
+38-10	3277-3278	☏	_	_	_	_
+38-11	3279-3292	+420317728144	_	_	_	_
+38-12	3293-3294	.	_	_	_	_
+
+#Text=Czech puzzles from different material ( wood , metal , plast )
+39-1	3295-3300	Czech	object[191]	new[191]	coref	41-5[201_191]
+39-2	3301-3308	puzzles	object[191]	new[191]	_	_
+39-3	3309-3313	from	object[191]	new[191]	_	_
+39-4	3314-3323	different	object[191]|substance[192]	new[191]|new[192]	appos	39-7[0_192]
+39-5	3324-3332	material	object[191]|substance[192]	new[191]|new[192]	_	_
+39-6	3333-3334	(	_	_	_	_
+39-7	3335-3339	wood	substance|substance[194]	giv|giv[194]	appos|appos	39-7[194_0]|39-9[0_194]
+39-8	3340-3341	,	substance[194]	giv[194]	_	_
+39-9	3342-3347	metal	substance[194]|substance	giv[194]|giv	_	_
+39-10	3348-3349	,	substance[194]	giv[194]	_	_
+39-11	3350-3355	plast	substance[194]|place	giv[194]|new	_	_
+39-12	3356-3357	)	_	_	_	_
+
+#Text=Wide range of logical games for everyone .
+40-1	3358-3362	Wide	abstract[197]	new[197]	_	_
+40-2	3363-3368	range	abstract[197]	new[197]	_	_
+40-3	3369-3371	of	abstract[197]	new[197]	_	_
+40-4	3372-3379	logical	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+40-5	3380-3385	games	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+40-6	3386-3389	for	abstract[197]|abstract[198]	new[197]|new[198]	_	_
+40-7	3390-3398	everyone	abstract[197]|abstract[198]|person	new[197]|new[198]|new	_	_
+40-8	3399-3400	.	_	_	_	_
+
+#Text=The biggest seller of machanical puzzles in the Czech republic .
+41-1	3401-3404	The	person[200]	new[200]	_	_
+41-2	3405-3412	biggest	person[200]	new[200]	_	_
+41-3	3413-3419	seller	person[200]	new[200]	_	_
+41-4	3420-3422	of	person[200]	new[200]	_	_
+41-5	3423-3433	machanical	person[200]|object[201]	new[200]|giv[201]	_	_
+41-6	3434-3441	puzzles	person[200]|object[201]	new[200]|giv[201]	_	_
+41-7	3442-3444	in	person[200]|object[201]	new[200]|giv[201]	_	_
+41-8	3445-3448	the	person[200]|object[201]|place[203]	new[200]|giv[201]|new[203]	_	_
+41-9	3449-3454	Czech	person[200]|object[201]|person|place[203]	new[200]|giv[201]|new|new[203]	_	_
+41-10	3455-3463	republic	person[200]|object[201]|place[203]	new[200]|giv[201]|new[203]	_	_
+41-11	3464-3465	.	_	_	_	_
+
+#Text=Eat
+42-1	3466-3469	Eat	_	_	_	_
+
+#Text=U Ferdinanda
+43-1	3470-3471	U	place[204]	new[204]	ana	44-1[0_204]
+43-2	3472-3482	Ferdinanda	place[204]	new[204]	_	_
+
+#Text=This is a great pub near the castle 's lake .
+44-1	3483-3487	This	place	giv	coref	44-3[206_0]
+44-2	3488-3490	is	_	_	_	_
+44-3	3491-3492	a	place[206]	giv[206]	_	_
+44-4	3493-3498	great	place[206]	giv[206]	_	_
+44-5	3499-3502	pub	place[206]	giv[206]	_	_
+44-6	3503-3507	near	place[206]	giv[206]	_	_
+44-7	3508-3511	the	place[206]|place[208]	giv[206]|new[208]	_	_
+44-8	3512-3518	castle	place[206]|place[207]|place[208]	giv[206]|giv[207]|new[208]	coref	49-19[230_207]
+44-9	3519-3521	's	place[206]|place[207]|place[208]	giv[206]|giv[207]|new[208]	_	_
+44-10	3522-3526	lake	place[206]|place[208]	giv[206]|new[208]	_	_
+44-11	3527-3528	.	_	_	_	_
+
+#Text=There is an outdoor barbecue where Czech sausage with horseradish and mustard is served among other great meals .
+45-1	3529-3534	There	_	_	_	_
+45-2	3535-3537	is	_	_	_	_
+45-3	3538-3540	an	object[209]	new[209]	_	_
+45-4	3541-3548	outdoor	object[209]	new[209]	_	_
+45-5	3549-3557	barbecue	object[209]	new[209]	_	_
+45-6	3558-3563	where	object[209]	new[209]	_	_
+45-7	3564-3569	Czech	object[209]|substance[210]	new[209]|new[210]	_	_
+45-8	3570-3577	sausage	object[209]|substance[210]	new[209]|new[210]	_	_
+45-9	3578-3582	with	object[209]|substance[210]	new[209]|new[210]	_	_
+45-10	3583-3594	horseradish	object[209]|substance[210]|animal	new[209]|new[210]|new	_	_
+45-11	3595-3598	and	object[209]|substance[210]	new[209]|new[210]	_	_
+45-12	3599-3606	mustard	object[209]|substance[210]|substance	new[209]|new[210]|new	_	_
+45-13	3607-3609	is	object[209]	new[209]	_	_
+45-14	3610-3616	served	object[209]	new[209]	_	_
+45-15	3617-3622	among	object[209]	new[209]	_	_
+45-16	3623-3628	other	object[209]|object[213]	new[209]|new[213]	_	_
+45-17	3629-3634	great	object[209]|object[213]	new[209]|new[213]	_	_
+45-18	3635-3640	meals	object[209]|object[213]	new[209]|new[213]	_	_
+45-19	3641-3642	.	_	_	_	_
+
+#Text=A small local brewery produces ' Ferdinand ' beer which is definitely on par with some of the other larger more well-known Czech breweries .
+46-1	3643-3644	A	organization[214]	new[214]	_	_
+46-2	3645-3650	small	organization[214]	new[214]	_	_
+46-3	3651-3656	local	organization[214]	new[214]	_	_
+46-4	3657-3664	brewery	organization[214]	new[214]	_	_
+46-5	3665-3673	produces	_	_	_	_
+46-6	3674-3675	'	substance[216]	new[216]	coref	47-4[0_216]
+46-7	3676-3685	Ferdinand	person|substance[216]	giv|new[216]	_	_
+46-8	3686-3687	'	substance[216]	new[216]	_	_
+46-9	3688-3692	beer	substance[216]	new[216]	_	_
+46-10	3693-3698	which	substance[216]	new[216]	_	_
+46-11	3699-3701	is	substance[216]	new[216]	_	_
+46-12	3702-3712	definitely	substance[216]	new[216]	_	_
+46-13	3713-3715	on	substance[216]	new[216]	_	_
+46-14	3716-3719	par	substance[216]	new[216]	_	_
+46-15	3720-3724	with	substance[216]	new[216]	_	_
+46-16	3725-3729	some	substance[216]	new[216]	_	_
+46-17	3730-3732	of	substance[216]	new[216]	_	_
+46-18	3733-3736	the	substance[216]|place[217]	new[216]|new[217]	_	_
+46-19	3737-3742	other	substance[216]|place[217]	new[216]|new[217]	_	_
+46-20	3743-3749	larger	substance[216]|place[217]	new[216]|new[217]	_	_
+46-21	3750-3754	more	substance[216]|place[217]	new[216]|new[217]	_	_
+46-22	3755-3765	well-known	substance[216]|place[217]	new[216]|new[217]	_	_
+46-23	3766-3771	Czech	substance[216]|place[217]	new[216]|new[217]	_	_
+46-24	3772-3781	breweries	substance[216]|place[217]	new[216]|new[217]	_	_
+46-25	3782-3783	.	_	_	_	_
+
+#Text=The prices for beer and food are very reasonable .
+47-1	3784-3787	The	abstract[218]	new[218]	_	_
+47-2	3788-3794	prices	abstract[218]	new[218]	_	_
+47-3	3795-3798	for	abstract[218]	new[218]	_	_
+47-4	3799-3803	beer	abstract[218]|substance	new[218]|giv	_	_
+47-5	3804-3807	and	abstract[218]	new[218]	_	_
+47-6	3808-3812	food	abstract[218]|substance	new[218]|new	_	_
+47-7	3813-3816	are	_	_	_	_
+47-8	3817-3821	very	_	_	_	_
+47-9	3822-3832	reasonable	_	_	_	_
+47-10	3833-3834	.	_	_	_	_
+
+#Text=Sleep
+48-1	3835-3840	Sleep	person	new	_	_
+
+#Text=Pension Konopiste , Konopiste 30 ( 2 km from Benesov , 35 km from Praque , next to the Konopiste castle ) , ☏ +420317702658 , ✉ info@pension-konopiste.cz .
+49-1	3841-3848	Pension	abstract[222]	new[222]	appos	49-7[224_222]
+49-2	3849-3858	Konopiste	abstract[222]	new[222]	_	_
+49-3	3859-3860	,	_	_	_	_
+49-4	3861-3870	Konopiste	place[223]	giv[223]	coref	49-20[0_223]
+49-5	3871-3873	30	place[223]	giv[223]	_	_
+49-6	3874-3875	(	_	_	_	_
+49-7	3876-3877	2	abstract[224]|abstract[225]	giv[224]|giv[225]	appos|appos	49-7[225_224]|49-12[227_225]
+49-8	3878-3880	km	abstract[224]|abstract[225]	giv[224]|giv[225]	_	_
+49-9	3881-3885	from	abstract[224]|abstract[225]	giv[224]|giv[225]	_	_
+49-10	3886-3893	Benesov	abstract[224]|abstract[225]|place	giv[224]|giv[225]|giv	_	_
+49-11	3894-3895	,	abstract[225]	giv[225]	_	_
+49-12	3896-3898	35	abstract[225]|abstract[227]	giv[225]|giv[227]	_	_
+49-13	3899-3901	km	abstract[225]|abstract[227]	giv[225]|giv[227]	_	_
+49-14	3902-3906	from	abstract[225]|abstract[227]	giv[225]|giv[227]	_	_
+49-15	3907-3913	Praque	abstract[225]|abstract[227]|place	giv[225]|giv[227]|new	_	_
+49-16	3914-3915	,	abstract[225]|abstract[227]	giv[225]|giv[227]	_	_
+49-17	3916-3920	next	abstract[225]|abstract[227]	giv[225]|giv[227]	_	_
+49-18	3921-3923	to	_	_	_	_
+49-19	3924-3927	the	place[230]	giv[230]	_	_
+49-20	3928-3937	Konopiste	place|place[230]	giv|giv[230]	_	_
+49-21	3938-3944	castle	place[230]	giv[230]	_	_
+49-22	3945-3946	)	_	_	_	_
+49-23	3947-3948	,	_	_	_	_
+49-24	3949-3950	☏	abstract	giv	_	_
+49-25	3951-3964	+420317702658	_	_	_	_
+49-26	3965-3966	,	_	_	_	_
+49-27	3967-3968	✉	_	_	_	_
+49-28	3969-3994	info@pension-konopiste.cz	abstract	new	_	_
+49-29	3995-3996	.	_	_	_	_

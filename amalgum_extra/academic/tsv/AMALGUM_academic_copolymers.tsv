@@ -1,0 +1,745 @@
+#FORMAT=WebAnno TSV 3.2
+#T_SP=webanno.custom.Referent|entity|infstat
+#T_RL=webanno.custom.Coref|type|BT_webanno.custom.Referent
+
+
+#Text=1. Introduction
+1-1	0-2	1.	_	_	_	_
+1-2	3-15	Introduction	abstract	new	_	_
+
+#Text=Cancer is one of the most important and deadly diseases worldwide .
+2-1	16-22	Cancer	abstract	new	coref	3-20
+2-2	23-25	is	_	_	_	_
+2-3	26-29	one	abstract[3]	new[3]	_	_
+2-4	30-32	of	abstract[3]	new[3]	_	_
+2-5	33-36	the	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-6	37-41	most	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-7	42-51	important	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-8	52-55	and	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-9	56-62	deadly	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-10	63-71	diseases	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-11	72-81	worldwide	abstract[3]|abstract[4]	new[3]|new[4]	_	_
+2-12	82-83	.	_	_	_	_
+
+#Text=Reports from the World Health Organization show that almost 1 in 6 deaths worldwide in 2018 were due to cancer .
+3-1	84-91	Reports	abstract[5]	new[5]	_	_
+3-2	92-96	from	abstract[5]	new[5]	_	_
+3-3	97-100	the	abstract[5]|organization[6]	new[5]|new[6]	ana	4-10[0_6]
+3-4	101-106	World	abstract[5]|organization[6]	new[5]|new[6]	_	_
+3-5	107-113	Health	abstract[5]|organization[6]	new[5]|new[6]	_	_
+3-6	114-126	Organization	abstract[5]|organization[6]	new[5]|new[6]	_	_
+3-7	127-131	show	_	_	_	_
+3-8	132-136	that	_	_	_	_
+3-9	137-143	almost	event[7]	new[7]	_	_
+3-10	144-145	1	event[7]	new[7]	_	_
+3-11	146-148	in	event[7]	new[7]	_	_
+3-12	149-150	6	event[7]	new[7]	_	_
+3-13	151-157	deaths	event[7]	new[7]	_	_
+3-14	158-167	worldwide	event[7]	new[7]	_	_
+3-15	168-170	in	_	_	_	_
+3-16	171-175	2018	time	new	_	_
+3-17	176-180	were	_	_	_	_
+3-18	181-184	due	_	_	_	_
+3-19	185-187	to	_	_	_	_
+3-20	188-194	cancer	abstract	giv	coref	4-15
+3-21	195-196	.	_	_	_	_
+
+#Text=Chemotherapy is a common approach for cancer treatment ; it uses drugs to kill cancer cells .
+4-1	197-209	Chemotherapy	abstract	new	coref	4-3[11_0]
+4-2	210-212	is	_	_	_	_
+4-3	213-214	a	abstract[11]	giv[11]	coref	5-9[0_11]
+4-4	215-221	common	abstract[11]	giv[11]	_	_
+4-5	222-230	approach	abstract[11]	giv[11]	_	_
+4-6	231-234	for	abstract[11]	giv[11]	_	_
+4-7	235-241	cancer	abstract[11]|event[12]	giv[11]|new[12]	coref	19-16[114_12]
+4-8	242-251	treatment	abstract[11]|event[12]	giv[11]|new[12]	_	_
+4-9	252-253	;	_	_	_	_
+4-10	254-256	it	organization	giv	_	_
+4-11	257-261	uses	_	_	_	_
+4-12	262-267	drugs	substance	new	coref	9-4
+4-13	268-270	to	_	_	_	_
+4-14	271-275	kill	_	_	_	_
+4-15	276-282	cancer	abstract|animal[16]	giv|new[16]	coref	7-19
+4-16	283-288	cells	animal[16]	new[16]	_	_
+4-17	289-290	.	_	_	_	_
+
+#Text=However , various limitations affect the efficiency of chemotherapy .
+5-1	291-298	However	_	_	_	_
+5-2	299-300	,	_	_	_	_
+5-3	301-308	various	abstract[17]	new[17]	_	_
+5-4	309-320	limitations	abstract[17]	new[17]	_	_
+5-5	321-327	affect	_	_	_	_
+5-6	328-331	the	abstract[18]	new[18]	coref	21-4[122_18]
+5-7	332-342	efficiency	abstract[18]	new[18]	_	_
+5-8	343-345	of	abstract[18]	new[18]	_	_
+5-9	346-358	chemotherapy	abstract[18]|abstract	new[18]|giv	coref	11-1
+5-10	359-360	.	_	_	_	_
+
+#Text=For example , most chemotherapeutics possess poor aqueous solubility , harm normal cell toxicity due to the lack of selectivity , and cause multidrug resistance .
+6-1	361-364	For	_	_	_	_
+6-2	365-372	example	_	_	_	_
+6-3	373-374	,	_	_	_	_
+6-4	375-379	most	substance[20]	new[20]	_	_
+6-5	380-397	chemotherapeutics	substance[20]	new[20]	_	_
+6-6	398-405	possess	_	_	_	_
+6-7	406-410	poor	substance[21]	new[21]	coref	9-23[50_21]
+6-8	411-418	aqueous	substance[21]	new[21]	_	_
+6-9	419-429	solubility	substance[21]	new[21]	_	_
+6-10	430-431	,	_	_	_	_
+6-11	432-436	harm	_	_	_	_
+6-12	437-443	normal	abstract[23]	new[23]	_	_
+6-13	444-448	cell	place|abstract[23]	new|new[23]	_	_
+6-14	449-457	toxicity	abstract[23]	new[23]	_	_
+6-15	458-461	due	_	_	_	_
+6-16	462-464	to	_	_	_	_
+6-17	465-468	the	abstract[24]	new[24]	_	_
+6-18	469-473	lack	abstract[24]	new[24]	_	_
+6-19	474-476	of	abstract[24]	new[24]	_	_
+6-20	477-488	selectivity	abstract[24]|abstract	new[24]|new	_	_
+6-21	489-490	,	_	_	_	_
+6-22	491-494	and	_	_	_	_
+6-23	495-500	cause	_	_	_	_
+6-24	501-510	multidrug	abstract[26]	new[26]	coref	15-16[88_26]
+6-25	511-521	resistance	abstract[26]	new[26]	_	_
+6-26	522-523	.	_	_	_	_
+
+#Text=To handle these shortcomings , researchers have proposed nano-particles as novel drug carriers to help patients cope with cancer .
+7-1	524-526	To	_	_	_	_
+7-2	527-533	handle	_	_	_	_
+7-3	534-539	these	abstract[27]	new[27]	_	_
+7-4	540-552	shortcomings	abstract[27]	new[27]	_	_
+7-5	553-554	,	_	_	_	_
+7-6	555-566	researchers	person	new	_	_
+7-7	567-571	have	_	_	_	_
+7-8	572-580	proposed	_	_	_	_
+7-9	581-595	nano-particles	object	new	_	_
+7-10	596-598	as	_	_	_	_
+7-11	599-604	novel	place[31]	new[31]	_	_
+7-12	605-609	drug	substance|place[31]	new|new[31]	coref	9-17
+7-13	610-618	carriers	place[31]	new[31]	_	_
+7-14	619-621	to	_	_	_	_
+7-15	622-626	help	_	_	_	_
+7-16	627-635	patients	person	new	coref	11-10[67_0]
+7-17	636-640	cope	_	_	_	_
+7-18	641-645	with	_	_	_	_
+7-19	646-652	cancer	abstract	giv	coref	10-28
+7-20	653-654	.	_	_	_	_
+
+#Text=Nanoparticles , like vesicles , nanotubes , micelles , nanofibers , and nanosheet are typically commonly formed by amphiphilic copolymers via self-assembly .
+8-1	655-668	Nanoparticles	object[34]	new[34]	coref	9-1[0_34]
+8-2	669-670	,	object[34]	new[34]	_	_
+8-3	671-675	like	object[34]	new[34]	_	_
+8-4	676-684	vesicles	object[34]|animal	new[34]|new	_	_
+8-5	685-686	,	object[34]	new[34]	_	_
+8-6	687-696	nanotubes	object[34]|object	new[34]|new	_	_
+8-7	697-698	,	object[34]	new[34]	_	_
+8-8	699-707	micelles	object[34]|animal	new[34]|new	_	_
+8-9	708-709	,	object[34]	new[34]	_	_
+8-10	710-720	nanofibers	object[34]|object	new[34]|new	_	_
+8-11	721-722	,	object[34]	new[34]	_	_
+8-12	723-726	and	object[34]	new[34]	_	_
+8-13	727-736	nanosheet	object[34]|object	new[34]|new	_	_
+8-14	737-740	are	_	_	_	_
+8-15	741-750	typically	_	_	_	_
+8-16	751-759	commonly	_	_	_	_
+8-17	760-766	formed	_	_	_	_
+8-18	767-769	by	_	_	_	_
+8-19	770-781	amphiphilic	person[40]	new[40]	coref	24-1[135_40]
+8-20	782-792	copolymers	person[40]	new[40]	_	_
+8-21	793-796	via	_	_	_	_
+8-22	797-810	self-assembly	abstract	new	coref	18-10[104_0]
+8-23	811-812	.	_	_	_	_
+
+#Text=Nanoparticles can encapsulate drugs via physical entrapment or solubilization to achieve various advantages , including controlled drug release , decreased cytotoxicity , increased aqueous solubility , and targeted action site .
+9-1	813-826	Nanoparticles	object	giv	coref	10-3
+9-2	827-830	can	_	_	_	_
+9-3	831-842	encapsulate	_	_	_	_
+9-4	843-848	drugs	substance	giv	coref	22-11
+9-5	849-852	via	_	_	_	_
+9-6	853-861	physical	event[44]	new[44]	_	_
+9-7	862-872	entrapment	event[44]	new[44]	_	_
+9-8	873-875	or	_	_	_	_
+9-9	876-890	solubilization	abstract	new	_	_
+9-10	891-893	to	_	_	_	_
+9-11	894-901	achieve	_	_	_	_
+9-12	902-909	various	abstract[46]	new[46]	_	_
+9-13	910-920	advantages	abstract[46]	new[46]	_	_
+9-14	921-922	,	abstract[46]	new[46]	_	_
+9-15	923-932	including	abstract[46]	new[46]	_	_
+9-16	933-943	controlled	abstract[46]|event[48]	new[46]|new[48]	coref	19-9[112_48]
+9-17	944-948	drug	abstract[46]|substance|event[48]	new[46]|giv|new[48]	coref	10-11
+9-18	949-956	release	abstract[46]|event[48]	new[46]|new[48]	_	_
+9-19	957-958	,	abstract[46]	new[46]	_	_
+9-20	959-968	decreased	abstract[46]|abstract[49]	new[46]|new[49]	coref	21-8[123_49]
+9-21	969-981	cytotoxicity	abstract[46]|abstract[49]	new[46]|new[49]	_	_
+9-22	982-983	,	abstract[46]	new[46]	_	_
+9-23	984-993	increased	abstract[46]|substance[50]	new[46]|giv[50]	_	_
+9-24	994-1001	aqueous	abstract[46]|substance[50]	new[46]|giv[50]	_	_
+9-25	1002-1012	solubility	abstract[46]|substance[50]	new[46]|giv[50]	_	_
+9-26	1013-1014	,	abstract[46]	new[46]	_	_
+9-27	1015-1018	and	abstract[46]	new[46]	_	_
+9-28	1019-1027	targeted	abstract[46]|place[52]	new[46]|new[52]	_	_
+9-29	1028-1034	action	abstract[46]|abstract|place[52]	new[46]|new|new[52]	_	_
+9-30	1035-1039	site	abstract[46]|place[52]	new[46]|new[52]	_	_
+9-31	1040-1041	.	_	_	_	_
+
+#Text=Thus , nanoparticles have opened the door for developing effective drug delivery schemes and have shown substantial potential for applications in life-threatening disease treatments , such as cancer therapy .
+10-1	1042-1046	Thus	_	_	_	_
+10-2	1047-1048	,	_	_	_	_
+10-3	1049-1062	nanoparticles	object	giv	coref	23-10[132_0]
+10-4	1063-1067	have	_	_	_	_
+10-5	1068-1074	opened	_	_	_	_
+10-6	1075-1078	the	object[54]	new[54]	_	_
+10-7	1079-1083	door	object[54]	new[54]	_	_
+10-8	1084-1087	for	_	_	_	_
+10-9	1088-1098	developing	_	_	_	_
+10-10	1099-1108	effective	abstract[57]	new[57]	_	_
+10-11	1109-1113	drug	substance|abstract[57]	giv|new[57]	coref	15-17
+10-12	1114-1122	delivery	abstract|abstract[57]	new|new[57]	coref	19-5[109_0]
+10-13	1123-1130	schemes	abstract[57]	new[57]	_	_
+10-14	1131-1134	and	_	_	_	_
+10-15	1135-1139	have	_	_	_	_
+10-16	1140-1145	shown	_	_	_	_
+10-17	1146-1157	substantial	abstract[58]	new[58]	_	_
+10-18	1158-1167	potential	abstract[58]	new[58]	_	_
+10-19	1168-1171	for	abstract[58]	new[58]	_	_
+10-20	1172-1184	applications	abstract[58]|abstract[59]	new[58]|new[59]	coref	23-7[130_59]
+10-21	1185-1187	in	abstract[58]|abstract[59]	new[58]|new[59]	_	_
+10-22	1188-1204	life-threatening	abstract[58]|abstract[59]|abstract[61]	new[58]|new[59]|new[61]	_	_
+10-23	1205-1212	disease	abstract[58]|abstract[59]|abstract|abstract[61]	new[58]|new[59]|new|new[61]	_	_
+10-24	1213-1223	treatments	abstract[58]|abstract[59]|abstract[61]	new[58]|new[59]|new[61]	_	_
+10-25	1224-1225	,	abstract[58]|abstract[59]|abstract[61]	new[58]|new[59]|new[61]	_	_
+10-26	1226-1230	such	abstract[58]|abstract[59]|abstract[61]	new[58]|new[59]|new[61]	_	_
+10-27	1231-1233	as	abstract[58]|abstract[59]|abstract[61]	new[58]|new[59]|new[61]	_	_
+10-28	1234-1240	cancer	abstract[58]|abstract[59]|abstract[61]|abstract|abstract[63]	new[58]|new[59]|new[61]|giv|new[63]	coref|coref	12-9|12-9[73_63]
+10-29	1241-1248	therapy	abstract[58]|abstract[59]|abstract[61]|abstract[63]	new[58]|new[59]|new[61]|new[63]	_	_
+10-30	1249-1250	.	_	_	_	_
+
+#Text=Chemotherapy usually causes a decline in immunity , causing cancer patients to suffer from bacterial infection or threatening their lives .
+11-1	1251-1263	Chemotherapy	abstract	giv	_	_
+11-2	1264-1271	usually	_	_	_	_
+11-3	1272-1278	causes	_	_	_	_
+11-4	1279-1280	a	event[65]	new[65]	_	_
+11-5	1281-1288	decline	event[65]	new[65]	_	_
+11-6	1289-1291	in	event[65]	new[65]	_	_
+11-7	1292-1300	immunity	event[65]|abstract	new[65]|new	_	_
+11-8	1301-1302	,	_	_	_	_
+11-9	1303-1310	causing	_	_	_	_
+11-10	1311-1317	cancer	person[67]	giv[67]	ana	11-19[0_67]
+11-11	1318-1326	patients	person[67]	giv[67]	_	_
+11-12	1327-1329	to	_	_	_	_
+11-13	1330-1336	suffer	_	_	_	_
+11-14	1337-1341	from	_	_	_	_
+11-15	1342-1351	bacterial	event[68]	new[68]	coref	12-4[71_68]
+11-16	1352-1361	infection	event[68]	new[68]	_	_
+11-17	1362-1364	or	_	_	_	_
+11-18	1365-1376	threatening	_	_	_	_
+11-19	1377-1382	their	person|abstract[70]	giv|new[70]	_	_
+11-20	1383-1388	lives	abstract[70]	new[70]	_	_
+11-21	1389-1390	.	_	_	_	_
+
+#Text=Therefore , avoiding bacterial infection is essential during cancer therapy .
+12-1	1391-1400	Therefore	_	_	_	_
+12-2	1401-1402	,	_	_	_	_
+12-3	1403-1411	avoiding	_	_	_	_
+12-4	1412-1421	bacterial	event[71]	giv[71]	_	_
+12-5	1422-1431	infection	event[71]	giv[71]	_	_
+12-6	1432-1434	is	_	_	_	_
+12-7	1435-1444	essential	_	_	_	_
+12-8	1445-1451	during	_	_	_	_
+12-9	1452-1458	cancer	abstract|abstract[73]	giv|giv[73]	coref|coref	27-16|27-16[161_73]
+12-10	1459-1466	therapy	abstract[73]	giv[73]	_	_
+12-11	1467-1468	.	_	_	_	_
+
+#Text=As a kind of novel antibacterial agent , antimicrobial peptides ( AMPs ) have gained increasing attention over the past few decades .
+13-1	1469-1471	As	_	_	_	_
+13-2	1472-1473	a	_	_	_	_
+13-3	1474-1478	kind	substance[74]	new[74]	_	_
+13-4	1479-1481	of	substance[74]	new[74]	_	_
+13-5	1482-1487	novel	substance[74]	new[74]	_	_
+13-6	1488-1501	antibacterial	substance[74]	new[74]	_	_
+13-7	1502-1507	agent	substance[74]	new[74]	_	_
+13-8	1508-1509	,	_	_	_	_
+13-9	1510-1523	antimicrobial	substance[75]	new[75]	coref	17-5[99_75]
+13-10	1524-1532	peptides	substance[75]	new[75]	_	_
+13-11	1533-1534	(	_	_	_	_
+13-12	1535-1539	AMPs	abstract	new	coref	14-1
+13-13	1540-1541	)	_	_	_	_
+13-14	1542-1546	have	_	_	_	_
+13-15	1547-1553	gained	_	_	_	_
+13-16	1554-1564	increasing	abstract[77]	new[77]	_	_
+13-17	1565-1574	attention	abstract[77]	new[77]	_	_
+13-18	1575-1579	over	_	_	_	_
+13-19	1580-1583	the	time[78]	new[78]	_	_
+13-20	1584-1588	past	time[78]	new[78]	_	_
+13-21	1589-1592	few	time[78]	new[78]	_	_
+13-22	1593-1600	decades	time[78]	new[78]	_	_
+13-23	1601-1602	.	_	_	_	_
+
+#Text=AMPs exhibit excellent antibacterial capability and a unique antibacterial mechanism .
+14-1	1603-1607	AMPs	abstract	giv	coref	15-1
+14-2	1608-1615	exhibit	_	_	_	_
+14-3	1616-1625	excellent	abstract[80]	new[80]	coref	25-16[143_80]
+14-4	1626-1639	antibacterial	abstract[80]	new[80]	_	_
+14-5	1640-1650	capability	abstract[80]	new[80]	_	_
+14-6	1651-1654	and	_	_	_	_
+14-7	1655-1656	a	abstract[81]	new[81]	coref	16-4[91_81]
+14-8	1657-1663	unique	abstract[81]	new[81]	_	_
+14-9	1664-1677	antibacterial	abstract[81]	new[81]	_	_
+14-10	1678-1687	mechanism	abstract[81]	new[81]	_	_
+14-11	1688-1689	.	_	_	_	_
+
+#Text=AMPs achieve their bactericidal effect by physical disruption of bacterial membranes ; however , inducing bacterial drug resistance presents difficulty .
+15-1	1690-1694	AMPs	abstract	giv	ana	15-3
+15-2	1695-1702	achieve	_	_	_	_
+15-3	1703-1708	their	abstract|abstract[84]	giv|new[84]	coref	17-1[98_0]
+15-4	1709-1721	bactericidal	abstract[84]	new[84]	_	_
+15-5	1722-1728	effect	abstract[84]	new[84]	_	_
+15-6	1729-1731	by	_	_	_	_
+15-7	1732-1740	physical	event[85]	new[85]	_	_
+15-8	1741-1751	disruption	event[85]	new[85]	_	_
+15-9	1752-1754	of	event[85]	new[85]	_	_
+15-10	1755-1764	bacterial	event[85]|object[86]	new[85]|new[86]	_	_
+15-11	1765-1774	membranes	event[85]|object[86]	new[85]|new[86]	_	_
+15-12	1775-1776	;	_	_	_	_
+15-13	1777-1784	however	_	_	_	_
+15-14	1785-1786	,	_	_	_	_
+15-15	1787-1795	inducing	_	_	_	_
+15-16	1796-1805	bacterial	abstract[88]	giv[88]	_	_
+15-17	1806-1810	drug	substance|abstract[88]	giv|giv[88]	coref	19-5
+15-18	1811-1821	resistance	abstract[88]	giv[88]	_	_
+15-19	1822-1830	presents	_	_	_	_
+15-20	1831-1841	difficulty	abstract	new	_	_
+15-21	1842-1843	.	_	_	_	_
+
+#Text=Research illustrates that such a unique antibacterial mechanism is relevant to specific AMP structures , including cationic moieties such as lysine and hydrophobic moieties such as phenylalanine .
+16-1	1844-1852	Research	abstract	new	_	_
+16-2	1853-1864	illustrates	_	_	_	_
+16-3	1865-1869	that	_	_	_	_
+16-4	1870-1874	such	abstract[91]	giv[91]	coref	25-11[142_91]
+16-5	1875-1876	a	abstract[91]	giv[91]	_	_
+16-6	1877-1883	unique	abstract[91]	giv[91]	_	_
+16-7	1884-1897	antibacterial	abstract[91]	giv[91]	_	_
+16-8	1898-1907	mechanism	abstract[91]	giv[91]	_	_
+16-9	1908-1910	is	_	_	_	_
+16-10	1911-1919	relevant	_	_	_	_
+16-11	1920-1922	to	_	_	_	_
+16-12	1923-1931	specific	abstract[93]	new[93]	_	_
+16-13	1932-1935	AMP	abstract|abstract[93]	new|new[93]	coref	19-1
+16-14	1936-1946	structures	abstract[93]	new[93]	_	_
+16-15	1947-1948	,	abstract[93]	new[93]	_	_
+16-16	1949-1958	including	abstract[93]	new[93]	_	_
+16-17	1959-1967	cationic	abstract[93]|object[94]	new[93]|new[94]	_	_
+16-18	1968-1976	moieties	abstract[93]|object[94]	new[93]|new[94]	_	_
+16-19	1977-1981	such	abstract[93]|object[94]	new[93]|new[94]	_	_
+16-20	1982-1984	as	abstract[93]|object[94]	new[93]|new[94]	_	_
+16-21	1985-1991	lysine	abstract[93]|object[94]|substance	new[93]|new[94]|new	coref	20-10
+16-22	1992-1995	and	abstract[93]	new[93]	_	_
+16-23	1996-2007	hydrophobic	abstract[93]|object[96]	new[93]|new[96]	coref	24-14[138_96]
+16-24	2008-2016	moieties	abstract[93]|object[96]	new[93]|new[96]	_	_
+16-25	2017-2021	such	abstract[93]|object[96]	new[93]|new[96]	_	_
+16-26	2022-2024	as	abstract[93]|object[96]	new[93]|new[96]	_	_
+16-27	2025-2038	phenylalanine	abstract[93]|object[96]|substance	new[93]|new[96]|new	coref	20-12
+16-28	2039-2040	.	_	_	_	_
+
+#Text=Lots of AMPs are amphiphilic peptides , namely , they are composed of hydrophobic and hydrophilic residues .
+17-1	2041-2045	Lots	abstract[98]	giv[98]	ana	17-10[0_98]
+17-2	2046-2048	of	abstract[98]	giv[98]	_	_
+17-3	2049-2053	AMPs	abstract[98]	giv[98]	_	_
+17-4	2054-2057	are	_	_	_	_
+17-5	2058-2069	amphiphilic	substance[99]	giv[99]	_	_
+17-6	2070-2078	peptides	substance[99]	giv[99]	_	_
+17-7	2079-2080	,	_	_	_	_
+17-8	2081-2087	namely	_	_	_	_
+17-9	2088-2089	,	_	_	_	_
+17-10	2090-2094	they	abstract	giv	coref	18-12[105_0]
+17-11	2095-2098	are	_	_	_	_
+17-12	2099-2107	composed	_	_	_	_
+17-13	2108-2110	of	_	_	_	_
+17-14	2111-2122	hydrophobic	object[101]	new[101]	_	_
+17-15	2123-2126	and	object[101]	new[101]	_	_
+17-16	2127-2138	hydrophilic	object[101]	new[101]	_	_
+17-17	2139-2147	residues	object[101]	new[101]	_	_
+17-18	2148-2149	.	_	_	_	_
+
+#Text=AMP-nanoparticles can be prepared in an aqueous solution through self-assembly of these AMPs .
+18-1	2150-2167	AMP-nanoparticles	substance	new	_	_
+18-2	2168-2171	can	_	_	_	_
+18-3	2172-2174	be	_	_	_	_
+18-4	2175-2183	prepared	_	_	_	_
+18-5	2184-2186	in	_	_	_	_
+18-6	2187-2189	an	substance[103]	new[103]	_	_
+18-7	2190-2197	aqueous	substance[103]	new[103]	_	_
+18-8	2198-2206	solution	substance[103]	new[103]	_	_
+18-9	2207-2214	through	_	_	_	_
+18-10	2215-2228	self-assembly	abstract[104]	giv[104]	coref	25-19[0_104]
+18-11	2229-2231	of	abstract[104]	giv[104]	_	_
+18-12	2232-2237	these	abstract[104]|abstract[105]	giv[104]|giv[105]	coref	20-5[118_105]
+18-13	2238-2242	AMPs	abstract[104]|abstract[105]	giv[104]|giv[105]	_	_
+18-14	2243-2244	.	_	_	_	_
+
+#Text=AMP assemblies are ideal drug delivery systems exhibiting both drug release and antibacterial capabilities during cancer treatment .
+19-1	2245-2248	AMP	abstract|object[107]	giv|new[107]	coref|coref	19-4[110_107]|23-10
+19-2	2249-2259	assemblies	object[107]	new[107]	_	_
+19-3	2260-2263	are	_	_	_	_
+19-4	2264-2269	ideal	object[110]	giv[110]	_	_
+19-5	2270-2274	drug	substance|abstract[109]|object[110]	giv|giv[109]|giv[110]	coref|coref	19-10|32-1[189_109]
+19-6	2275-2283	delivery	abstract[109]|object[110]	giv[109]|giv[110]	_	_
+19-7	2284-2291	systems	object[110]	giv[110]	_	_
+19-8	2292-2302	exhibiting	object[110]	giv[110]	_	_
+19-9	2303-2307	both	object[110]|event[112]	giv[110]|giv[112]	_	_
+19-10	2308-2312	drug	object[110]|substance|event[112]	giv[110]|giv|giv[112]	coref	32-1
+19-11	2313-2320	release	object[110]|event[112]	giv[110]|giv[112]	_	_
+19-12	2321-2324	and	object[110]	giv[110]	_	_
+19-13	2325-2338	antibacterial	object[110]|abstract[113]	giv[110]|new[113]	_	_
+19-14	2339-2351	capabilities	object[110]|abstract[113]	giv[110]|new[113]	_	_
+19-15	2352-2358	during	object[110]	giv[110]	_	_
+19-16	2359-2365	cancer	object[110]|event[114]	giv[110]|giv[114]	coref	33-19[202_114]
+19-17	2366-2375	treatment	object[110]|event[114]	giv[110]|giv[114]	_	_
+19-18	2376-2377	.	_	_	_	_
+
+#Text=Our group has reported several amphiphilic block AMPs containing lysine and phenylalanine .
+20-1	2378-2381	Our	person|organization[116]	acc|new[116]	ana	28-2
+20-2	2382-2387	group	organization[116]	new[116]	_	_
+20-3	2388-2391	has	_	_	_	_
+20-4	2392-2400	reported	_	_	_	_
+20-5	2401-2408	several	abstract[118]	giv[118]	coref	21-1[121_118]
+20-6	2409-2420	amphiphilic	abstract[118]	giv[118]	_	_
+20-7	2421-2426	block	object|abstract[118]	new|giv[118]	coref	29-13
+20-8	2427-2431	AMPs	abstract[118]	giv[118]	_	_
+20-9	2432-2442	containing	abstract[118]	giv[118]	_	_
+20-10	2443-2449	lysine	abstract[118]|substance	giv[118]|giv	_	_
+20-11	2450-2453	and	abstract[118]	giv[118]	_	_
+20-12	2454-2467	phenylalanine	abstract[118]|substance	giv[118]|giv	_	_
+20-13	2468-2469	.	_	_	_	_
+
+#Text=These AMPs exhibit high bactericidal efficiency and low cytotoxicity .
+21-1	2470-2475	These	abstract[121]	giv[121]	coref	22-4[125_121]
+21-2	2476-2480	AMPs	abstract[121]	giv[121]	_	_
+21-3	2481-2488	exhibit	_	_	_	_
+21-4	2489-2493	high	abstract[122]	giv[122]	_	_
+21-5	2494-2506	bactericidal	abstract[122]	giv[122]	_	_
+21-6	2507-2517	efficiency	abstract[122]	giv[122]	_	_
+21-7	2518-2521	and	_	_	_	_
+21-8	2522-2525	low	abstract[123]	giv[123]	coref	34-7[205_123]
+21-9	2526-2538	cytotoxicity	abstract[123]	giv[123]	_	_
+21-10	2539-2540	.	_	_	_	_
+
+#Text=Vesicles formed by these AMPs have good performance when carrying drugs .
+22-1	2541-2549	Vesicles	substance[124]	new[124]	_	_
+22-2	2550-2556	formed	substance[124]	new[124]	_	_
+22-3	2557-2559	by	substance[124]	new[124]	_	_
+22-4	2560-2565	these	substance[124]|abstract[125]	new[124]|giv[125]	coref	24-9[0_125]
+22-5	2566-2570	AMPs	substance[124]|abstract[125]	new[124]|giv[125]	_	_
+22-6	2571-2575	have	_	_	_	_
+22-7	2576-2580	good	abstract[126]	new[126]	_	_
+22-8	2581-2592	performance	abstract[126]	new[126]	_	_
+22-9	2593-2597	when	_	_	_	_
+22-10	2598-2606	carrying	_	_	_	_
+22-11	2607-2612	drugs	substance	giv	_	_
+22-12	2613-2614	.	_	_	_	_
+
+#Text=Motivated by the excellent properties and promising applications of AMP nanoparticles , synthetic amphiphilic AMP – mimetic polymers are proposed .
+23-1	2615-2624	Motivated	_	_	_	_
+23-2	2625-2627	by	_	_	_	_
+23-3	2628-2631	the	abstract[128]|abstract[129]	new[128]|new[129]	coref|coref	25-6[140_128]|25-6[141_129]
+23-4	2632-2641	excellent	abstract[128]|abstract[129]	new[128]|new[129]	_	_
+23-5	2642-2652	properties	abstract[128]|abstract[129]	new[128]|new[129]	_	_
+23-6	2653-2656	and	abstract[129]	new[129]	_	_
+23-7	2657-2666	promising	abstract[129]|abstract[130]	new[129]|giv[130]	coref	35-19[215_130]
+23-8	2667-2679	applications	abstract[129]|abstract[130]	new[129]|giv[130]	_	_
+23-9	2680-2682	of	abstract[129]|abstract[130]	new[129]|giv[130]	_	_
+23-10	2683-2686	AMP	abstract[129]|abstract[130]|abstract|object[132]	new[129]|giv[130]|giv|giv[132]	coref|coref	23-15|25-21[145_132]
+23-11	2687-2700	nanoparticles	abstract[129]|abstract[130]|object[132]	new[129]|giv[130]|giv[132]	_	_
+23-12	2701-2702	,	_	_	_	_
+23-13	2703-2712	synthetic	substance[134]	new[134]	_	_
+23-14	2713-2724	amphiphilic	substance[134]	new[134]	_	_
+23-15	2725-2728	AMP	abstract|substance[134]	giv|new[134]	coref	28-11
+23-16	2729-2730	–	substance[134]	new[134]	_	_
+23-17	2731-2738	mimetic	substance[134]	new[134]	_	_
+23-18	2739-2747	polymers	substance[134]	new[134]	_	_
+23-19	2748-2751	are	_	_	_	_
+23-20	2752-2760	proposed	_	_	_	_
+23-21	2761-2762	.	_	_	_	_
+
+#Text=These amphiphilic copolymers stimulate the structural features of AMPs , that is , cationic and hydrophobic moieties .
+24-1	2763-2768	These	person[135]	giv[135]	coref	25-1[139_135]
+24-2	2769-2780	amphiphilic	person[135]	giv[135]	_	_
+24-3	2781-2791	copolymers	person[135]	giv[135]	_	_
+24-4	2792-2801	stimulate	_	_	_	_
+24-5	2802-2805	the	abstract[136]	new[136]	_	_
+24-6	2806-2816	structural	abstract[136]	new[136]	_	_
+24-7	2817-2825	features	abstract[136]	new[136]	_	_
+24-8	2826-2828	of	abstract[136]	new[136]	_	_
+24-9	2829-2833	AMPs	abstract[136]|abstract	new[136]|giv	coref	25-28[146_0]
+24-10	2834-2835	,	abstract[136]	new[136]	_	_
+24-11	2836-2840	that	abstract[136]	new[136]	_	_
+24-12	2841-2843	is	abstract[136]	new[136]	_	_
+24-13	2844-2845	,	abstract[136]	new[136]	_	_
+24-14	2846-2854	cationic	abstract[136]|object[138]	new[136]|giv[138]	_	_
+24-15	2855-2858	and	abstract[136]|object[138]	new[136]|giv[138]	_	_
+24-16	2859-2870	hydrophobic	abstract[136]|object[138]	new[136]|giv[138]	_	_
+24-17	2871-2879	moieties	abstract[136]|object[138]	new[136]|giv[138]	_	_
+24-18	2880-2881	.	_	_	_	_
+
+#Text=Amphiphilic copolymers not only possess good properties , such as a unique bactericidal mechanism , the capability for self-assembly into nanoparticles that are similar to those of natural AMPs , but also show more convenient synthesis strategy than natural AMPs .
+25-1	2882-2893	Amphiphilic	person[139]	giv[139]	coref	26-18[155_139]
+25-2	2894-2904	copolymers	person[139]	giv[139]	_	_
+25-3	2905-2908	not	_	_	_	_
+25-4	2909-2913	only	_	_	_	_
+25-5	2914-2921	possess	_	_	_	_
+25-6	2922-2926	good	abstract[140]|abstract[141]	giv[140]|giv[141]	coref|coref	34-2[203_140]|34-2[204_141]
+25-7	2927-2937	properties	abstract[140]|abstract[141]	giv[140]|giv[141]	_	_
+25-8	2938-2939	,	abstract[140]|abstract[141]	giv[140]|giv[141]	_	_
+25-9	2940-2944	such	abstract[140]|abstract[141]	giv[140]|giv[141]	_	_
+25-10	2945-2947	as	abstract[140]|abstract[141]	giv[140]|giv[141]	_	_
+25-11	2948-2949	a	abstract[140]|abstract[141]|abstract[142]	giv[140]|giv[141]|giv[142]	_	_
+25-12	2950-2956	unique	abstract[140]|abstract[141]|abstract[142]	giv[140]|giv[141]|giv[142]	_	_
+25-13	2957-2969	bactericidal	abstract[140]|abstract[141]|abstract[142]	giv[140]|giv[141]|giv[142]	_	_
+25-14	2970-2979	mechanism	abstract[140]|abstract[141]|abstract[142]	giv[140]|giv[141]|giv[142]	_	_
+25-15	2980-2981	,	abstract[141]	giv[141]	_	_
+25-16	2982-2985	the	abstract[141]|abstract[143]	giv[141]|giv[143]	coref	27-1[158_143]
+25-17	2986-2996	capability	abstract[141]|abstract[143]	giv[141]|giv[143]	_	_
+25-18	2997-3000	for	abstract[141]|abstract[143]	giv[141]|giv[143]	_	_
+25-19	3001-3014	self-assembly	abstract[141]|abstract[143]|abstract	giv[141]|giv[143]|giv	_	_
+25-20	3015-3019	into	abstract[141]|abstract[143]	giv[141]|giv[143]	_	_
+25-21	3020-3033	nanoparticles	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	coref	30-6[0_145]
+25-22	3034-3038	that	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	_	_
+25-23	3039-3042	are	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	_	_
+25-24	3043-3050	similar	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	_	_
+25-25	3051-3053	to	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	_	_
+25-26	3054-3059	those	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	_	_
+25-27	3060-3062	of	abstract[141]|abstract[143]|object[145]	giv[141]|giv[143]|giv[145]	_	_
+25-28	3063-3070	natural	abstract[141]|abstract[143]|object[145]|abstract[146]	giv[141]|giv[143]|giv[145]|giv[146]	coref	25-39[149_146]
+25-29	3071-3075	AMPs	abstract[141]|abstract[143]|object[145]|abstract[146]	giv[141]|giv[143]|giv[145]|giv[146]	_	_
+25-30	3076-3077	,	_	_	_	_
+25-31	3078-3081	but	_	_	_	_
+25-32	3082-3086	also	_	_	_	_
+25-33	3087-3091	show	_	_	_	_
+25-34	3092-3096	more	abstract[148]	new[148]	_	_
+25-35	3097-3107	convenient	abstract[148]	new[148]	_	_
+25-36	3108-3117	synthesis	abstract|abstract[148]	new|new[148]	_	_
+25-37	3118-3126	strategy	abstract[148]	new[148]	_	_
+25-38	3127-3131	than	_	_	_	_
+25-39	3132-3139	natural	abstract[149]	giv[149]	_	_
+25-40	3140-3144	AMPs	abstract[149]	giv[149]	_	_
+25-41	3145-3146	.	_	_	_	_
+
+#Text=In previous work , Zhou et al. have reported the minimal inhibition concentration ( MIC ) of amphiphilic copolymers was less than 32 μg/mL against both Gram-negative and Gram-positive bacteria .
+26-1	3147-3149	In	_	_	_	_
+26-2	3150-3158	previous	abstract[150]	new[150]	coref	28-2[163_150]
+26-3	3159-3163	work	abstract[150]	new[150]	_	_
+26-4	3164-3165	,	_	_	_	_
+26-5	3166-3170	Zhou	person	new	_	_
+26-6	3171-3173	et	_	_	_	_
+26-7	3174-3177	al.	_	_	_	_
+26-8	3178-3182	have	_	_	_	_
+26-9	3183-3191	reported	_	_	_	_
+26-10	3192-3195	the	substance[153]	new[153]	appos	26-15[0_153]
+26-11	3196-3203	minimal	substance[153]	new[153]	_	_
+26-12	3204-3214	inhibition	event|substance[153]	new|new[153]	_	_
+26-13	3215-3228	concentration	substance[153]	new[153]	_	_
+26-14	3229-3230	(	_	_	_	_
+26-15	3231-3234	MIC	substance	giv	coref	26-21[156_0]
+26-16	3235-3236	)	_	_	_	_
+26-17	3237-3239	of	_	_	_	_
+26-18	3240-3251	amphiphilic	person[155]	giv[155]	coref	28-9[166_155]
+26-19	3252-3262	copolymers	person[155]	giv[155]	_	_
+26-20	3263-3266	was	_	_	_	_
+26-21	3267-3271	less	substance[156]	giv[156]	_	_
+26-22	3272-3276	than	substance[156]	giv[156]	_	_
+26-23	3277-3279	32	substance[156]	giv[156]	_	_
+26-24	3280-3285	μg/mL	substance[156]	giv[156]	_	_
+26-25	3286-3293	against	substance[156]	giv[156]	_	_
+26-26	3294-3298	both	substance[156]|animal[157]	giv[156]|new[157]	coref	28-21[169_157]
+26-27	3299-3312	Gram-negative	substance[156]|animal[157]	giv[156]|new[157]	_	_
+26-28	3313-3316	and	substance[156]|animal[157]	giv[156]|new[157]	_	_
+26-29	3317-3330	Gram-positive	substance[156]|animal[157]	giv[156]|new[157]	_	_
+26-30	3331-3339	bacteria	substance[156]|animal[157]	giv[156]|new[157]	_	_
+26-31	3340-3341	.	_	_	_	_
+
+#Text=The broad antibacterial capability has been proved , which will play a vital role in cancer therapy .
+27-1	3342-3345	The	abstract[158]	giv[158]	_	_
+27-2	3346-3351	broad	abstract[158]	giv[158]	_	_
+27-3	3352-3365	antibacterial	abstract[158]	giv[158]	_	_
+27-4	3366-3376	capability	abstract[158]	giv[158]	_	_
+27-5	3377-3380	has	_	_	_	_
+27-6	3381-3385	been	_	_	_	_
+27-7	3386-3392	proved	_	_	_	_
+27-8	3393-3394	,	_	_	_	_
+27-9	3395-3400	which	_	_	_	_
+27-10	3401-3405	will	_	_	_	_
+27-11	3406-3410	play	_	_	_	_
+27-12	3411-3412	a	abstract[159]	new[159]	_	_
+27-13	3413-3418	vital	abstract[159]	new[159]	_	_
+27-14	3419-3423	role	abstract[159]	new[159]	_	_
+27-15	3424-3426	in	abstract[159]	new[159]	_	_
+27-16	3427-3433	cancer	abstract[159]|abstract|abstract[161]	new[159]|giv|giv[161]	_	_
+27-17	3434-3441	therapy	abstract[159]|abstract[161]	new[159]|giv[161]	_	_
+27-18	3442-3443	.	_	_	_	_
+
+#Text=In our previous work , a series of amphiphilic mimicked AMP copolymers , PCL16- b -Kn , which can inhibit both Gram-negative and Gram-positive bacteria .
+28-1	3444-3446	In	_	_	_	_
+28-2	3447-3450	our	person|abstract[163]|abstract[164]	giv|giv[163]|new[164]	coref|ana	29-2[170_163]|29-6
+28-3	3451-3459	previous	abstract[163]|abstract[164]	giv[163]|new[164]	_	_
+28-4	3460-3464	work	abstract[163]|abstract[164]	giv[163]|new[164]	_	_
+28-5	3465-3466	,	abstract[164]	new[164]	_	_
+28-6	3467-3468	a	abstract[164]	new[164]	_	_
+28-7	3469-3475	series	abstract[164]	new[164]	_	_
+28-8	3476-3478	of	abstract[164]	new[164]	_	_
+28-9	3479-3490	amphiphilic	abstract[164]|person[166]	new[164]|giv[166]	coref	29-12[174_166]
+28-10	3491-3499	mimicked	abstract[164]|person[166]	new[164]|giv[166]	_	_
+28-11	3500-3503	AMP	abstract[164]|abstract|person[166]	new[164]|giv|giv[166]	_	_
+28-12	3504-3514	copolymers	abstract[164]|person[166]	new[164]|giv[166]	_	_
+28-13	3515-3516	,	_	_	_	_
+28-14	3517-3523	PCL16-	abstract	new	coref	33-6[198_0]
+28-15	3524-3525	b	place	new	coref	33-10
+28-16	3526-3529	-Kn	_	_	_	_
+28-17	3530-3531	,	_	_	_	_
+28-18	3532-3537	which	_	_	_	_
+28-19	3538-3541	can	_	_	_	_
+28-20	3542-3549	inhibit	_	_	_	_
+28-21	3550-3554	both	animal[169]	giv[169]	_	_
+28-22	3555-3568	Gram-negative	animal[169]	giv[169]	_	_
+28-23	3569-3572	and	animal[169]	giv[169]	_	_
+28-24	3573-3586	Gram-positive	animal[169]	giv[169]	_	_
+28-25	3587-3595	bacteria	animal[169]	giv[169]	_	_
+28-26	3596-3597	.	_	_	_	_
+
+#Text=In the present work , we studied the self-assembling behavior of these block copolymers in aqueous solutions .
+29-1	3598-3600	In	_	_	_	_
+29-2	3601-3604	the	abstract[170]	giv[170]	_	_
+29-3	3605-3612	present	abstract[170]	giv[170]	_	_
+29-4	3613-3617	work	abstract[170]	giv[170]	_	_
+29-5	3618-3619	,	_	_	_	_
+29-6	3620-3622	we	person	giv	_	_
+29-7	3623-3630	studied	_	_	_	_
+29-8	3631-3634	the	abstract[172]	new[172]	_	_
+29-9	3635-3650	self-assembling	abstract[172]	new[172]	_	_
+29-10	3651-3659	behavior	abstract[172]	new[172]	_	_
+29-11	3660-3662	of	abstract[172]	new[172]	_	_
+29-12	3663-3668	these	abstract[172]|person[174]	new[172]|giv[174]	coref	33-6[197_174]
+29-13	3669-3674	block	abstract[172]|object|person[174]	new[172]|giv|giv[174]	_	_
+29-14	3675-3685	copolymers	abstract[172]|person[174]	new[172]|giv[174]	_	_
+29-15	3686-3688	in	_	_	_	_
+29-16	3689-3696	aqueous	substance[175]	new[175]	_	_
+29-17	3697-3706	solutions	substance[175]	new[175]	_	_
+29-18	3707-3708	.	_	_	_	_
+
+#Text=The morphologies and sizes of nanoparticles were characterized by transmission electron microscopy ( TEM ) and dynamic light scattering ( DLS ) , respectively .
+30-1	3709-3712	The	abstract[176]	new[176]	_	_
+30-2	3713-3725	morphologies	abstract[176]	new[176]	_	_
+30-3	3726-3729	and	_	_	_	_
+30-4	3730-3735	sizes	abstract[177]	new[177]	_	_
+30-5	3736-3738	of	abstract[177]	new[177]	_	_
+30-6	3739-3752	nanoparticles	abstract[177]|object	new[177]|giv	coref	35-5[211_0]
+30-7	3753-3757	were	_	_	_	_
+30-8	3758-3771	characterized	_	_	_	_
+30-9	3772-3774	by	_	_	_	_
+30-10	3775-3787	transmission	object[180]	new[180]	_	_
+30-11	3788-3796	electron	substance|object[180]	new|new[180]	_	_
+30-12	3797-3807	microscopy	object[180]	new[180]	_	_
+30-13	3808-3809	(	_	_	_	_
+30-14	3810-3813	TEM	abstract	new	_	_
+30-15	3814-3815	)	_	_	_	_
+30-16	3816-3819	and	_	_	_	_
+30-17	3820-3827	dynamic	abstract[183]	new[183]	appos	30-21[0_183]
+30-18	3828-3833	light	object|abstract[183]	new|new[183]	_	_
+30-19	3834-3844	scattering	abstract[183]	new[183]	_	_
+30-20	3845-3846	(	_	_	_	_
+30-21	3847-3850	DLS	abstract	giv	_	_
+30-22	3851-3852	)	_	_	_	_
+30-23	3853-3854	,	_	_	_	_
+30-24	3855-3867	respectively	_	_	_	_
+30-25	3868-3869	.	_	_	_	_
+
+#Text=Critical vesiculation concentrations ( CVCs ) were also studied .
+31-1	3870-3878	Critical	abstract[186]	new[186]	appos	31-5[0_186]
+31-2	3879-3891	vesiculation	abstract|abstract[186]	new|new[186]	_	_
+31-3	3892-3906	concentrations	abstract[186]	new[186]	_	_
+31-4	3907-3908	(	_	_	_	_
+31-5	3909-3913	CVCs	abstract	giv	_	_
+31-6	3914-3915	)	_	_	_	_
+31-7	3916-3920	were	_	_	_	_
+31-8	3921-3925	also	_	_	_	_
+31-9	3926-3933	studied	_	_	_	_
+31-10	3934-3935	.	_	_	_	_
+
+#Text=Drug delivery potential was investigated by in vitro and intracellular doxorubicin ( DOX)-release experiments .
+32-1	3936-3940	Drug	substance|abstract[189]|abstract[190]	giv|giv[189]|new[190]	coref|coref	33-16|35-15[213_189]
+32-2	3941-3949	delivery	abstract[189]|abstract[190]	giv[189]|new[190]	_	_
+32-3	3950-3959	potential	abstract[190]	new[190]	_	_
+32-4	3960-3963	was	_	_	_	_
+32-5	3964-3976	investigated	_	_	_	_
+32-6	3977-3979	by	_	_	_	_
+32-7	3980-3982	in	organization[191]|event[194]	new[191]|new[194]	_	_
+32-8	3983-3988	vitro	organization[191]|event[194]	new[191]|new[194]	_	_
+32-9	3989-3992	and	event[194]	new[194]	_	_
+32-10	3993-4006	intracellular	event[192]|event[194]	new[192]|new[194]	appos	32-13[0_192]
+32-11	4007-4018	doxorubicin	event[192]|event[194]	new[192]|new[194]	_	_
+32-12	4019-4020	(	event[194]	new[194]	_	_
+32-13	4021-4033	DOX)-release	event|event[194]	giv|new[194]	_	_
+32-14	4034-4045	experiments	event[194]	new[194]	_	_
+32-15	4046-4047	.	_	_	_	_
+
+#Text=Based on the results , amphiphilic diblock copolymers PCL16- b -Kn could serve as efficient drug carriers for cancer treatment .
+33-1	4048-4053	Based	_	_	_	_
+33-2	4054-4056	on	_	_	_	_
+33-3	4057-4060	the	abstract[195]	new[195]	_	_
+33-4	4061-4068	results	abstract[195]	new[195]	_	_
+33-5	4069-4070	,	_	_	_	_
+33-6	4071-4082	amphiphilic	person[197]|abstract[198]	giv[197]|giv[198]	coref	34-10[0_198]
+33-7	4083-4090	diblock	abstract|person[197]|abstract[198]	new|giv[197]|giv[198]	coref	35-6
+33-8	4091-4101	copolymers	person[197]|abstract[198]	giv[197]|giv[198]	_	_
+33-9	4102-4108	PCL16-	abstract[198]	giv[198]	_	_
+33-10	4109-4110	b	place	giv	coref	34-11
+33-11	4111-4114	-Kn	_	_	_	_
+33-12	4115-4120	could	_	_	_	_
+33-13	4121-4126	serve	_	_	_	_
+33-14	4127-4129	as	_	_	_	_
+33-15	4130-4139	efficient	organization[201]	new[201]	_	_
+33-16	4140-4144	drug	substance|organization[201]	giv|new[201]	coref	35-15
+33-17	4145-4153	carriers	organization[201]	new[201]	_	_
+33-18	4154-4157	for	organization[201]	new[201]	_	_
+33-19	4158-4164	cancer	organization[201]|event[202]	new[201]|giv[202]	_	_
+33-20	4165-4174	treatment	organization[201]|event[202]	new[201]|giv[202]	_	_
+33-21	4175-4176	.	_	_	_	_
+
+#Text=Given the excellent antibacterial properties and low cytotoxicity of PCL16- b -Kn
+34-1	4177-4182	Given	_	_	_	_
+34-2	4183-4186	the	abstract[203]|abstract[204]	giv[203]|giv[204]	_	_
+34-3	4187-4196	excellent	abstract[203]|abstract[204]	giv[203]|giv[204]	_	_
+34-4	4197-4210	antibacterial	abstract[203]|abstract[204]	giv[203]|giv[204]	_	_
+34-5	4211-4221	properties	abstract[203]|abstract[204]	giv[203]|giv[204]	_	_
+34-6	4222-4225	and	abstract[204]	giv[204]	_	_
+34-7	4226-4229	low	abstract[204]|abstract[205]	giv[204]|giv[205]	_	_
+34-8	4230-4242	cytotoxicity	abstract[204]|abstract[205]	giv[204]|giv[205]	_	_
+34-9	4243-4245	of	abstract[204]|abstract[205]	giv[204]|giv[205]	_	_
+34-10	4246-4252	PCL16-	abstract[204]|abstract[205]|abstract	giv[204]|giv[205]|giv	_	_
+34-11	4253-4254	b	abstract[204]|abstract[205]|place	giv[204]|giv[205]|giv	_	_
+34-12	4255-4258	-Kn	abstract[204]|abstract[205]	giv[204]|giv[205]	_	_
+
+#Text=in previous works , such diblock copolymer nanoparticles can be ideal “ armed ” drug delivery systems for applications in nanomedical fields .
+35-1	4259-4261	in	_	_	_	_
+35-2	4262-4270	previous	abstract[208]	new[208]	_	_
+35-3	4271-4276	works	abstract[208]	new[208]	_	_
+35-4	4277-4278	,	_	_	_	_
+35-5	4279-4283	such	object[211]	giv[211]	coref	35-11[214_211]
+35-6	4284-4291	diblock	abstract|person[210]|object[211]	giv|new[210]|giv[211]	_	_
+35-7	4292-4301	copolymer	person[210]|object[211]	new[210]|giv[211]	_	_
+35-8	4302-4315	nanoparticles	object[211]	giv[211]	_	_
+35-9	4316-4319	can	_	_	_	_
+35-10	4320-4322	be	_	_	_	_
+35-11	4323-4328	ideal	object[214]	giv[214]	_	_
+35-12	4329-4330	“	object[214]	giv[214]	_	_
+35-13	4331-4336	armed	object[214]	giv[214]	_	_
+35-14	4337-4338	”	object[214]	giv[214]	_	_
+35-15	4339-4343	drug	substance|abstract[213]|object[214]	giv|giv[213]|giv[214]	_	_
+35-16	4344-4352	delivery	abstract[213]|object[214]	giv[213]|giv[214]	_	_
+35-17	4353-4360	systems	object[214]	giv[214]	_	_
+35-18	4361-4364	for	object[214]	giv[214]	_	_
+35-19	4365-4377	applications	object[214]|abstract[215]	giv[214]|giv[215]	_	_
+35-20	4378-4380	in	object[214]|abstract[215]	giv[214]|giv[215]	_	_
+35-21	4381-4392	nanomedical	object[214]|abstract[215]|abstract[216]	giv[214]|giv[215]|new[216]	_	_
+35-22	4393-4399	fields	object[214]|abstract[215]|abstract[216]	giv[214]|giv[215]|new[216]	_	_
+35-23	4400-4401	.	_	_	_	_

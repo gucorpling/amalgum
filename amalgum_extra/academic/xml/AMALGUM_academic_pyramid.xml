@@ -1,0 +1,1012 @@
+<?xml version='1.0' encoding='utf8'?>
+<text id="AMALGUM_academic_pyramid" title="An Enhanced Feature Pyramid Object Detection Network for Autonomous Driving" shortTitle="pyramid" author="Yutian Wu, Shuming Tang, Shuwei Zhang, Harutoshi Ogai" type="academic" dateCollected="2019-11-03" sourceURL="https://www.mdpi.com/2076-3417/9/20/4363/htm" speakerList="none" speakerCount="0">
+<head>
+<s type="frag">
+2.	LS	2.
+Proposed	VBN	propose
+Method	NN	method
+</s>
+</head>
+<p>
+<s type="decl">
+EFPN	NNP	EFPN
+is	VBZ	be
+our	PRP$	our
+proposed	VBN	propose
+object	NN	object
+detection	NN	detection
+network	NN	network
+.	.	.
+</s>
+<s type="decl">
+Its	PRP$	its
+architecture	NN	architecture
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+1	CD	1
+</s>
+</figure>
+<s type="frag">
+.	.	.
+</s>
+<s type="decl">
+Firstly	RB	firstly
+,	,	,
+in	IN	in
+enhanced	VBN	enhance
+feature	NN	feature
+extraction	NN	extraction
+subnet	NN	subnet
+,	,	,
+we	PRP	we
+generate	VBP	generate
+pyramid	NN	pyramid
+features	NNS	feature
+in	IN	in
+the	DT	the
+same	JJ	same
+way	NN	way
+as	IN	as
+FPN	NNP	FPN
+.	.	.
+</s>
+<s type="decl">
+Features	NNS	feature
+in	IN	in
+each	DT	each
+pyramid	NN	pyramid
+level	NN	level
+are	VBP	be
+weighted	VBN	weight
+by	IN	by
+our	PRP$	our
+proposed	VBN	propose
+FWM	NNP	FWM
+,	,	,
+and	CC	and
+a	DT	a
+new	JJ	new
+enhanced	VBN	enhance
+feature	NN	feature
+pyramid	NN	pyramid
+is	VBZ	be
+reconstructed	VBN	reconstruct
+as	IN	as
+the	DT	the
+input	NN	input
+for	IN	for
+the	DT	the
+following	VBG	follow
+procedure	NN	procedure
+.	.	.
+</s>
+<s type="decl">
+Secondly	RB	secondly
+,	,	,
+in	IN	in
+the	DT	the
+proposal	NN	proposal
+extraction	NN	extraction
+subnet	NN	subnet
+,	,	,
+Region	NNP	Region
+Proposal	NNP	proposal
+Network	NNP	Network
+(	-LRB-	(
+RPN	NNP	RPN
+)	-RRB-	)
+is	VBZ	be
+used	VBN	use
+to	TO	to
+generate	VB	generate
+anchors	NNS	anchor
+of	IN	of
+various	JJ	various
+shapes	NNS	shape
+on	IN	on
+the	DT	the
+enhanced	VBN	enhance
+pyramidal	JJ	pyramidal
+feature	NN	feature
+map	NN	map
+.	.	.
+</s>
+<s type="decl">
+Thirdly	RB	thirdly
+,	,	,
+in	IN	in
+adaptive	JJ	adaptive
+parallel	NN	parallel
+detection	NN	detection
+subnet	NN	subnet
+,	,	,
+ACE	NNP	ACE
+is	VBZ	be
+applied	VBN	apply
+to	TO	to
+extract	VB	extract
+the	DT	the
+feature	NN	feature
+of	IN	of
+ceRoI	NN	ceRoI
+and	CC	and
+RoI	NNP	RoI
+for	IN	for
+each	DT	each
+foreground	JJ	foreground
+RoI	NNP	RoI
+.	.	.
+</s>
+<s type="decl">
+Two	CD	2
+kinds	NNS	kind
+of	IN	of
+RoI	NN	RoI
+features	NNS	feature
+are	VBP	be
+,	,	,
+respectively	RB	respectively
+,	,	,
+fed	VBN	fead
+into	IN	into
+PDB	NNP	PDB
+to	TO	to
+predict	VB	predict
+classification	NN	classification
+and	CC	and
+regression	NN	regression
+as	IN	as
+the	DT	the
+final	JJ	final
+detection	NN	detection
+results	NNS	result
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.	CD	2.1.
+</s>
+<s type="frag">
+Enhanced	NNP	enhance
+Feature	NNP	Feature
+Extraction	NN	extraction
+Subnet	NN	Subnet
+</s>
+</head>
+<p>
+<s type="decl">
+Generally	RB	generally
+,	,	,
+FPN	NNP	FPN
+first	RB	first
+builds	VBZ	build
+the	DT	the
+bottom-up	JJ	bottom-up
+layers	NNS	layer
+by	IN	by
+the	DT	the
+feedforward	JJ	feedforward
+computation	NN	computation
+of	IN	of
+backbone	NN	backbone
+ConvNet	NNP	ConvNet
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+FPN	NNP	FPN
+constructs	VBZ	construct
+each	DT	each
+top-down	JJ	top-down
+feature	NN	feature
+maps	NNS	map
+by	IN	by
+element-wised	VBN	element-wise
+adding	VBG	add
+the	DT	the
+top-down	NN	top-down
+feature	NN	feature
+maps	NNS	map
+of	IN	of
+the	DT	the
+last	JJ	last
+pyramid	NN	pyramid
+level	NN	level
+with	IN	with
+the	DT	the
+bottom-up	JJ	bottom-up
+feature	NN	feature
+maps	NNS	map
+of	IN	of
+the	DT	the
+same	JJ	same
+pyramid	NN	pyramid
+level	NN	level
+,	,	,
+which	WDT	which
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+t	CD	t
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+(	-LRB-	(
+left	RB	left
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+set	NN	set
+of	IN	of
+pyramidal	JJ	pyramidal
+feature	NN	feature
+maps	NNS	map
+built	VBN	build
+by	IN	by
+FPN	NNP	FPN
+is	VBZ	be
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Despite	IN	despite
+such	PDT	such
+a	DT	a
+careful	JJ	careful
+design	NN	design
+for	IN	for
+generating	VBG	generate
+refined	VBN	refine
+merged	VBN	merge
+feature	NN	feature
+maps	NNS	map
+for	IN	for
+different	JJ	different
+levels	NNS	level
+,	,	,
+it	PRP	it
+is	VBZ	be
+not	RB	not
+strong	JJ	strong
+enough	RB	enough
+for	IN	for
+the	DT	the
+information	NN	information
+of	IN	of
+spatial	JJ	spatial
+and	CC	and
+channel	NN	channel
+features	NNS	feature
+to	IN	to
+different	JJ	different
+scaled	VBN	scale
+objects	NNS	object
+.	.	.
+</s>
+<s type="decl">
+We	PRP	we
+hypothesize	VBP	hypothesize
+that	IN	that
+both	CC	both
+spatial-wise	JJ	spatial-wise
+and	CC	and
+channel-wise	JJ	channel-wise
+recalibrating	VBG	recalibrate
+merged	VBN	merge
+feature	NN	feature
+maps	NNS	map
+can	MD	can
+encourage	VB	encourage
+current	JJ	current
+pyramid	NN	pyramid
+layer	NN	layer
+detection	NN	detection
+.	.	.
+</s>
+<s type="decl">
+Hence	RB	hence
+,	,	,
+we	PRP	we
+propose	VBP	propose
+FWM	NNP	FWM
+to	TO	to
+enhance	VB	enhance
+the	DT	the
+pyramid	NN	pyramid
+feature	NN	feature
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+structure	NN	structure
+of	IN	of
+FWM	NNP	FWM
+is	VBZ	be
+shown	VBN	show
+in	IN	in
+</s>
+<figure>
+<s type="frag">
+Figure	NNP	Figure
+2	CD	2
+</s>
+</figure>
+<s type="frag">
+(	-LRB-	(
+right	RB	right
+)	-RRB-	)
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+FWM	NNP	FWM
+starts	VBZ	start
+by	IN	by
+modeling	VBG	model
+the	DT	the
+feature	NN	feature
+dependency	NN	dependency
+of	IN	of
+the	DT	the
+feature	NN	feature
+maps	NNS	map
+in	IN	in
+each	DT	each
+pyramid	NN	pyramid
+level	NN	level
+,	,	,
+and	CC	and
+further	RBR	far
+learns	VBZ	learn
+the	DT	the
+feature	NN	feature
+importance	NN	importance
+vector	NN	vector
+to	TO	to
+recalibrate	VB	recalibrate
+the	DT	the
+feature	NN	feature
+maps	NNS	map
+to	TO	to
+emphasize	VB	emphasize
+the	DT	the
+useful	JJ	useful
+features	NNS	feature
+.	.	.
+</s>
+<s type="decl">
+Specially	RB	specially
+,	,	,
+FWM	NNP	FWM
+in	IN	in
+each	DT	each
+pyramid	NN	pyramid
+level	NN	level
+is	VBZ	be
+in	IN	in
+the	DT	the
+same	JJ	same
+structure	NN	structure
+but	CC	but
+has	VBZ	have
+different	JJ	different
+learnable	JJ	learnable
+weights	NNS	weight
+,	,	,
+which	WDT	which
+results	VBZ	result
+in	IN	in
+different	JJ	different
+calculated	VBN	calculate
+feature	NN	feature
+weights	NNS	weight
+.	.	.
+</s>
+<s type="decl">
+Each	DT	each
+FWM	NNP	FWM
+consists	VBZ	consist
+of	IN	of
+three	CD	3
+sub-modules	NNS	sub-module
+:	:	:
+Feature	NNP	Feature
+Channel	NNP	Channel
+Weight	NNP	Weight
+Module	NNP	Module
+(	-LRB-	(
+FCWM	NNP	FCWM
+)	-RRB-	)
+,	,	,
+Feature	NNP	Feature
+Spatial	NNP	Spatial
+Weight	NNP	Weight
+Module	NNP	Module
+(	-LRB-	(
+FSWM	NNP	FSWM
+)	-RRB-	)
+and	CC	and
+Feature	NNP	Feature
+Channel	NNP	Channel
+Spatial	NNP	Spatial
+Weight	NNP	Weight
+Module	NNP	Module
+(	-LRB-	(
+FCSWM	NNP	FCSWM
+)	-RRB-	)
+.	.	.
+</s>
+<s type="decl">
+FCWM	NNP	FCWM
+and	CC	and
+FSWM	NNP	FSWM
+calculate	VBP	calculate
+the	DT	the
+feature	NN	feature
+importance	NN	importance
+vector	NN	vector
+along	IN	along
+channel	NN	channel
+and	CC	and
+spatial	JJ	spatial
+location	NN	location
+.	.	.
+</s>
+<s type="decl">
+FCSWM	NNP	FCSWM
+combines	VBZ	combine
+the	DT	the
+recalibrated	VBN	recalibrate
+weighted	VBN	weight
+feature	NN	feature
+maps	NNS	map
+after	IN	after
+FCWM	NNP	FCWM
+and	CC	and
+FSWM	NNP	FSWM
+as	IN	as
+the	DT	the
+new	JJ	new
+pyramidal	JJ	pyramidal
+feature	NN	feature
+maps	NNS	map
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+detailed	JJ	detailed
+design	NN	design
+of	IN	of
+the	DT	the
+three	CD	3
+submodules	NNS	submodule
+are	VBP	be
+described	VBN	describe
+in	IN	in
+the	DT	the
+following	VBG	follow
+subsections	NNS	subsection
+.	.	.
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.1.	CD	2.1.1.
+</s>
+<s type="frag">
+Feature	NNP	Feature
+Channel	NNP	Channel
+Weight	NNP	Weight
+Module	NNP	Module
+(	-LRB-	(
+FCWM	NNP	FCWM
+)	-RRB-	)
+</s>
+</head>
+<p>
+<s type="decl">
+FCWM	NNP	FCWM
+focuses	VBZ	focus
+on	IN	on
+enhancing	VBG	enhance
+features	NNS	feature
+along	IN	along
+channel	NN	channel
+of	IN	of
+each	DT	each
+pyramid	NN	pyramid
+level	NN	level
+.	.	.
+</s>
+<s type="decl">
+FCWM	NNP	FCWM
+first	RB	first
+explicitly	RB	explicitly
+models	VBZ	model
+the	DT	the
+dependency	NN	dependency
+of	IN	of
+features	NNS	feature
+along	IN	along
+channel	NN	channel
+and	CC	and
+learns	VBZ	learn
+a	DT	a
+channel	NN	channel
+specific	JJ	specific
+descriptor	NN	descriptor
+through	IN	through
+the	DT	the
+squeeze-and-excitation	NN	squeeze-and-excitation
+method	NN	method
+.	.	.
+</s>
+<s type="decl">
+Then	RB	then
+,	,	,
+it	PRP	it
+emphasizes	VBZ	emphasize
+the	DT	the
+useful	JJ	useful
+channels	NNS	channel
+for	IN	for
+more	RBR	more
+efficient	JJ	efficient
+global	JJ	global
+information	NN	information
+expression	NN	expression
+of	IN	of
+feature	NN	feature
+maps	NNS	map
+in	IN	in
+each	DT	each
+pyramid	NN	pyramid
+level	NN	level
+.	.	.
+</s>
+</p>
+<p>
+<s type="imp">
+Suppose	VB	suppose
+the	DT	the
+feature	NN	feature
+maps	NNS	map
+in	IN	in
+<hi rend="italic">
+n	RB	n
+</hi>
+th	NN	there
+pyramid	NN	pyramid
+level	NN	level
+is	VBZ	be
+,	,	,
+which	WDT	which
+is	VBZ	be
+generated	VBN	generate
+by	IN	by
+FPN	NNP	FPN
+.	.	.
+</s>
+<s type="decl">
+and	CC	and
+are	VBP	be
+the	DT	the
+spatial	JJ	spatial
+height	NN	height
+and	CC	and
+width	NN	width
+of	IN	of
+,	,	,
+respectively	RB	respectively
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+<hi rend="italic">
+i	NN	i
+</hi>
+th	NN	there
+channel	NN	channel
+feature	NN	feature
+is	VBZ	be
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+At	IN	at
+the	DT	the
+beginning	NN	beginning
+,	,	,
+we	PRP	we
+do	VBP	do
+global	JJ	global
+average	NN	average
+pooling	NN	pooling
+on	IN	on
+to	TO	to
+get	VB	get
+the	DT	the
+global	JJ	global
+distribution	NN	distribution
+response	NN	response
+:	:	:
+(	:	(
+1	CD	1
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+use	VBP	use
+two	CD	2
+fully	RB	fully
+connected	VBN	connect
+layers	NNS	layer
+to	TO	to
+map	VB	map
+the	DT	the
+non-linear	JJ	non-linear
+correlation	NN	correlation
+between	IN	between
+all	DT	all
+global	JJ	global
+distribution	NN	distribution
+responses	NNS	response
+and	CC	and
+obtain	VB	obtain
+the	DT	the
+feature	NN	feature
+importance	NN	importance
+vectors	NNS	vector
+:	:	:
+(	-LRB-	(
+2	CD	2
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+weight	NN	weight
+of	IN	of
+the	DT	the
+first	JJ	first
+fully	RB	fully
+connected	VBN	connect
+layer	NN	layer
+.	.	.
+</s>
+<s type="decl">
+is	VBZ	be
+the	DT	the
+weight	NN	weight
+of	IN	of
+the	DT	the
+second	JJ	second
+fully	RB	fully
+connected	VBN	connect
+layer	NN	layer
+.	.	.
+</s>
+<s type="other">
+represents	VBZ	represent
+the	DT	the
+ReLU	NN	ReLU
+function	NN	function
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Then	RB	then
+,	,	,
+we	PRP	we
+normalize	VBP	normalize
+to	IN	to
+as	IN	as
+a	DT	a
+weight	NN	weight
+vector	NN	vector
+:	:	:
+(	-LRB-	(
+3	CD	3
+)	-RRB-	)
+where	WRB	where
+represents	VBZ	represent
+Sigmoid	NNP	Sigmoid
+function	NN	function
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+we	PRP	we
+assign	VBP	assign
+the	DT	the
+weight	NN	weight
+to	IN	to
+the	DT	the
+original	JJ	original
+feature	NN	feature
+and	CC	and
+get	VBP	get
+the	DT	the
+new	JJ	new
+pyramid	NN	pyramid
+feature	NN	feature
+after	IN	after
+channel-wised	JJ	channel-wised
+recalibration	NN	recalibration
+:	:	:
+(	-LRB-	(
+4	CD	4
+)	-RRB-	)
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.2.	CD	2.1.2.
+</s>
+<s type="frag">
+Feature	NNP	Feature
+Spatial	NNP	Spatial
+Weight	NNP	Weight
+Module	NNP	Module
+(	-LRB-	(
+FSWM	NNP	FSWM
+)	-RRB-	)
+</s>
+</head>
+<p>
+<s type="decl">
+Similar	JJ	Similar
+to	IN	to
+the	DT	the
+design	NN	design
+of	IN	of
+FCWM	NNP	FCWM
+,	,	,
+FSWM	NNP	FSWM
+enhances	VBZ	enhance
+the	DT	the
+features	NNS	feature
+along	IN	along
+spatial	JJ	spatial
+location	NN	location
+of	IN	of
+each	DT	each
+pyramid	NN	pyramid
+level	NN	level
+,	,	,
+which	WDT	which
+emphasizes	VBZ	emphasize
+the	DT	the
+effective	JJ	effective
+pixels	NNS	pixel
+and	CC	and
+depresses	VBZ	depress
+the	DT	the
+ineffective	JJ	ineffective
+or	CC	or
+low-effect	JJ	low-effect
+pixels	NNS	pixel
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+We	PRP	we
+define	VBP	define
+as	IN	as
+the	DT	the
+clipping	NN	clipping
+of	IN	of
+all	DT	all
+channel	NN	channel
+features	NNS	feature
+at	IN	at
+each	DT	each
+feature	NN	feature
+point	NN	point
+of	IN	of
+.	.	.
+</s>
+<s type="decl">
+First	RB	first
+,	,	,
+we	PRP	we
+integrate	VBP	integrate
+all	PDT	all
+the	DT	the
+features	NNS	feature
+of	IN	of
+each	DT	each
+point	NN	point
+through	IN	through
+a	DT	a
+convolution	NN	convolution
+operation	NN	operation
+to	TO	to
+get	VB	get
+the	DT	the
+spatial	JJ	spatial
+importance	NN	importance
+vector	NN	vector
+:	:	:
+(	-LRB-	(
+5	CD	5
+)	-RRB-	)
+where	WRB	where
+is	VBZ	be
+the	DT	the
+convolution	NN	convolution
+kernel	NN	kernel
+weight	NN	weight
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Then	RB	then
+,	,	,
+we	PRP	we
+normalize	VBP	normalize
+to	IN	to
+as	IN	as
+a	DT	a
+weight	NN	weight
+vector	NN	vector
+(	-LRB-	(
+6	CD	6
+)	-RRB-	)
+where	WRB	where
+represents	VBZ	represent
+Sigmoid	NNP	Sigmoid
+function	NN	function
+.	.	.
+</s>
+</p>
+<p>
+<s type="decl">
+Finally	RB	finally
+,	,	,
+the	DT	the
+normalized	JJ	normalized
+weights	NNS	weight
+are	VBP	be
+spatially	RB	spatially
+weighted	VBN	weight
+to	IN	to
+each	DT	each
+pixel	NN	pixel
+to	TO	to
+get	VB	get
+the	DT	the
+new	JJ	new
+feature	NN	feature
+:	:	:
+(	-LRB-	(
+7	CD	7
+)	-RRB-	)
+</s>
+</p>
+<head>
+<s type="frag">
+2.1.3.	CD	2.1.3.
+</s>
+<s type="frag">
+Feature	NNP	Feature
+Channel	NNP	Channel
+Spatial	NNP	Spatial
+Weight	NNP	Weight
+Module	NNP	Module
+(	-LRB-	(
+FCSWM	NNP	FCSWM
+)	-RRB-	)
+</s>
+</head>
+<p>
+<s type="decl">
+FCSWM	NNP	FCSWM
+combines	VBZ	combine
+the	DT	the
+channel-wised	VBN	channel-wise
+weighted	VBN	weight
+obtained	VBN	obtain
+by	IN	by
+FCWM	NNP	FCWM
+and	CC	and
+the	DT	the
+spatially	RB	spatially
+weighted	VBN	weight
+obtained	VBN	obtain
+by	IN	by
+FSWM	NNP	FSWM
+to	TO	to
+generate	VB	generate
+a	DT	a
+new	JJ	new
+recalibrated	JJ	recalibrated
+feature	NN	feature
+.	.	.
+</s>
+<s type="decl">
+The	DT	the
+combination	NN	combination
+operation	NN	operation
+is	VBZ	be
+implemented	VBN	implement
+by	IN	by
+addition	NN	addition
+:	:	:
+(	-LRB-	(
+8	CD	8
+)	-RRB-	)
+</s>
+</p>
+<p>
+<s type="decl">
+encourages	VBZ	encourage
+original	JJ	original
+feature	NN	feature
+maps	NNS	map
+to	TO	to
+be	VB	be
+both	CC	both
+spatial-wise	JJ	spatial-wise
+and	CC	and
+channel-wise	JJ	channel-wise
+more	RBR	more
+informative	JJ	informative
+.	.	.
+</s>
+<s type="decl">
+In	IN	in
+EFPN	NNP	EFPN
+,	,	,
+we	PRP	we
+replace	VBP	replace
+the	DT	the
+initial	JJ	initial
+feature	NN	feature
+pyramid	NN	pyramid
+features	NNS	feature
+by	IN	by
+the	DT	the
+recalibrated	VBN	recalibrate
+enhanced	VBN	enhance
+pyramid	NN	pyramid
+features	NNS	feature
+as	IN	as
+the	DT	the
+input	NN	input
+feature	NN	feature
+of	IN	of
+proposal	NN	proposal
+extraction	NN	extraction
+subnet	NN	subnet
+and	CC	and
+detection	NN	detection
+subnet	NN	subnet
+.	.	.
+</s>
+</p>
+</text>

@@ -1,0 +1,223 @@
+<rst>
+<header>
+	<relations>
+			<rel name="purpose" type="rst"/>
+			<rel name="background" type="rst"/>
+			<rel name="elaboration" type="rst"/>
+			<rel name="circumstance" type="rst"/>
+			<rel name="cause" type="rst"/>
+			<rel name="antithesis" type="rst"/>
+			<rel name="condition" type="rst"/>
+			<rel name="preparation" type="rst"/>
+			<rel name="restatement" type="rst"/>
+			<rel name="means" type="rst"/>
+			<rel name="attribution" type="rst"/>
+			<rel name="contrast" type="multinuc"/>
+			<rel name="joint" type="multinuc"/>
+			<rel name="sequence" type="multinuc"/>
+			<rel name="same_unit" type="multinuc"/>
+		</relations>
+</header>
+<body>
+<segment id="1" parent="1001" relname="preparation">4. Feature Set Extraction and Matching</segment>
+<segment id="2" parent="3" relname="circumstance">After the previous processing ,</segment>
+<segment id="3" parent="1003" relname="span">the obtained image is used for feature set extraction .</segment>
+<segment id="4" parent="1005" relname="attribution">It can be seen from</segment>
+<segment id="5" parent="1006" relname="preparation">Figure 2</segment>
+<segment id="6" parent="1009" relname="span">a – d</segment>
+<segment id="7" parent="6" relname="attribution">that the image</segment>
+<segment id="8" parent="1009" relname="elaboration">obtained by the traditional backprojection algorithm is fuzzy ,</segment>
+<segment id="9" parent="1007" relname="joint">and it is difficult to directly extract the shape , contour , and other features of the vehicle .</segment>
+<segment id="10" parent="1011" relname="circumstance">After contour thinning and speckle reduction ,</segment>
+<segment id="11" parent="1012" relname="span">the vehicle contour is much clearer</segment>
+<segment id="12" parent="11" relname="antithesis">than before ,</segment>
+<segment id="13" parent="1013" relname="sequence">and it is convenient to detect the contour line ,</segment>
+<segment id="14" parent="1015" relname="span">calculate the rotation angle of the vehicle , and other contour data .</segment>
+<segment id="15" parent="1017" relname="span">In this paper , a vehicle recognition algorithm</segment>
+<segment id="16" parent="15" relname="elaboration">that is based on combined matching of contour image feature set and orthogonal projection feature set is proposed .</segment>
+<segment id="17" parent="1018" relname="span">4.1. Feature Set Extraction</segment>
+<segment id="18" parent="17" relname="elaboration">Figure 5</segment>
+<segment id="19" parent="1019" relname="joint">shows an example of the imaging results for four different models of vehicle at different positions and detection heights .</segment>
+<segment id="20" parent="1020" relname="span">These images have been pre-processed by contour thinning , speckle reduction , and rotation correction .</segment>
+<segment id="21" parent="22" relname="preparation">Figure 5</segment>
+<segment id="22" parent="1021" relname="span">a – d are images of the vehicle model Chevrolet Impala LT .</segment>
+<segment id="23" parent="24" relname="preparation">Figure 5</segment>
+<segment id="24" parent="1024" relname="span">e – h are images of the vehicle model Mitsubishi Galant ES .</segment>
+<segment id="25" parent="26" relname="preparation">Figure 5</segment>
+<segment id="26" parent="1025" relname="span">i – l are images of the vehicle model Toyota Highlander .</segment>
+<segment id="27" parent="1027" relname="preparation">Figure 5</segment>
+<segment id="28" parent="1027" relname="joint">m – p are images of the vehicle model Chevrolet HHR LT .</segment>
+<segment id="29" parent="1027" relname="joint">It can be seen from</segment>
+<segment id="30" parent="1030" relname="preparation">Figure 5</segment>
+<segment id="31" parent="1031" relname="span">that different contour sizes of the same model will appear</segment>
+<segment id="32" parent="31" relname="circumstance">when imaging in different detection locations and different detection heights .</segment>
+<segment id="33" parent="1030" relname="joint">Moreover , the contours of different models are sometimes very similar</segment>
+<segment id="34" parent="1030" relname="joint">and , in some cases , are more similar than the contours of the same model .</segment>
+<segment id="35" parent="1035" relname="same_unit">Therefore ,</segment>
+<segment id="36" parent="37" relname="condition">if only a simple size feature , such as the length or width of the contour , is used ,</segment>
+<segment id="37" parent="1036" relname="span">it is difficult to recognize the model of the vehicle .</segment>
+<segment id="38" parent="1038" relname="preparation">Accordingly , we consider establishing a feature set for each model for recognition .</segment>
+<segment id="39" parent="1038" relname="joint">The feature set consists of two parts ,</segment>
+<segment id="40" parent="1038" relname="joint">one is the selected image data set</segment>
+<segment id="41" parent="1038" relname="joint">and the other is the projection data set .</segment>
+<segment id="42" parent="1042" relname="preparation">4.1.1. Selected Image Set</segment>
+<segment id="43" parent="1043" relname="preparation">Template matching is a simple and direct method for image classification .</segment>
+<segment id="44" parent="1044" relname="span">The matching value can be calculated between the contour image</segment>
+<segment id="45" parent="1045" relname="span">to be recognized and the image in the existing image set</segment>
+<segment id="46" parent="45" relname="elaboration">and then the category of the image with the largest matching value can then be taken as the vehicle recognition result .</segment>
+<segment id="47" parent="1043" relname="joint">Obviously , the more images in the image set</segment>
+<segment id="48" parent="1048" relname="span">and the more representative the images are ,</segment>
+<segment id="49" parent="48" relname="elaboration">the higher the recognition accuracy is .</segment>
+<segment id="50" parent="1050" relname="same_unit">In extreme cases ,</segment>
+<segment id="51" parent="52" relname="condition">if the image set contains all of the known images ,</segment>
+<segment id="52" parent="1051" relname="span">then the highest recognition accuracy should ideally be achieved .</segment>
+<segment id="53" parent="1053" relname="span">However , in reality , the image set cannot contain all the images ,</segment>
+<segment id="54" parent="1054" relname="joint">because the actual images are endless ,</segment>
+<segment id="55" parent="1055" relname="span">and there will always be new images</segment>
+<segment id="56" parent="55" relname="elaboration">that have not appeared .</segment>
+<segment id="57" parent="1058" relname="span">Moreover , the image set</segment>
+<segment id="58" parent="1059" relname="span">containing all images loses the significance</segment>
+<segment id="59" parent="58" relname="elaboration">of studying representative features ,</segment>
+<segment id="60" parent="1043" relname="joint">and it becomes unnecessarily large and redundant .</segment>
+<segment id="61" parent="1043" relname="joint">Therefore , this paper proposes a simple image set generation algorithm .</segment>
+<segment id="62" parent="1062" relname="span">The algorithm can preserve as many representative images</segment>
+<segment id="63" parent="1063" relname="joint">as possible</segment>
+<segment id="64" parent="1064" relname="span">and remove redundant images</segment>
+<segment id="65" parent="64" relname="elaboration">as possible .</segment>
+<segment id="66" parent="1043" relname="joint">Let K denote the total number of known contour images</segment>
+<segment id="67" parent="1043" relname="joint">and denote the k -th contour image .</segment>
+<segment id="68" parent="1043" relname="joint">Let N denote the number of vehicle models</segment>
+<segment id="69" parent="1043" relname="joint">and indicate the i -th model .</segment>
+<segment id="70" parent="1043" relname="joint">For any contour image , there is , where .</segment>
+<segment id="71" parent="1072" relname="span">Let denote the image set</segment>
+<segment id="72" parent="71" relname="elaboration">corresponding ,</segment>
+<segment id="73" parent="1073" relname="span">and the steps</segment>
+<segment id="74" parent="73" relname="purpose">for generating the image set are as follows :</segment>
+<segment id="75" parent="1077" relname="span">All images</segment>
+<segment id="76" parent="75" relname="elaboration">belonging to are added to the image set ,</segment>
+<segment id="77" parent="1076" relname="joint">and an image is then randomly selected from as the reference image .</segment>
+<segment id="78" parent="1078" relname="span">The correlation coefficients C of and all other model of images is calculated .</segment>
+<segment id="79" parent="1079" relname="span">The minimum C min of correlation coefficients C is obtained .</segment>
+<segment id="80" parent="1084" relname="span">The equations are as follows :</segment>
+<segment id="81" parent="80" relname="restatement">( 13 )</segment>
+<segment id="82" parent="1084" relname="restatement">( 14 )</segment>
+<segment id="83" parent="1083" relname="restatement">( 15 )</segment>
+<segment id="84" parent="1082" relname="restatement">( 16 )</segment>
+<segment id="85" parent="1081" relname="elaboration">where is the mean of the I .</segment>
+<segment id="86" parent="1086" relname="same_unit">represents the correlation coefficient of the overlapping region with Ii ,</segment>
+<segment id="87" parent="88" relname="circumstance">when Ij is shift to ( u , v ) ,</segment>
+<segment id="88" parent="1087" relname="span">so the mean value is also the mean value of the overlapping region .</segment>
+<segment id="89" parent="1074" relname="joint">The correlation coefficients of and all of the images in are calculated ,</segment>
+<segment id="90" parent="1074" relname="joint">and the image with the correlation coefficient smaller than is removed from .</segment>
+<segment id="91" parent="1090" relname="sequence">A new image is randomly selected from as the reference image ,</segment>
+<segment id="92" parent="1091" relname="joint">and then Step 2 – 4 are repeated .</segment>
+<segment id="93" parent="94" relname="condition">If all the images in have been reference images ,</segment>
+<segment id="94" parent="1093" relname="span">the algorithm ends .</segment>
+<segment id="95" parent="1091" relname="joint">Finally , is the generated image set .</segment>
+<segment id="96" parent="1096" relname="span">The image set</segment>
+<segment id="97" parent="1097" relname="span">corresponding to each model can be obtained</segment>
+<segment id="98" parent="97" relname="means">by following the above steps for all models .</segment>
+<segment id="99" parent="1091" relname="joint">4.1.2.</segment>
+<segment id="100" parent="1100" relname="preparation">Projection Set</segment>
+<segment id="101" parent="1102" relname="span">The image set</segment>
+<segment id="102" parent="101" relname="elaboration">that was obtained after selection process retains some representative images ,</segment>
+<segment id="103" parent="1103" relname="joint">but many images are also removed ,</segment>
+<segment id="104" parent="1103" relname="joint">and some features of this model are inevitably lost .</segment>
+<segment id="105" parent="1106" relname="purpose">In order to compensate for the feature loss ,</segment>
+<segment id="106" parent="1106" relname="span">the orthogonal projection feature of the image is saved</segment>
+<segment id="107" parent="106" relname="purpose">to increase the recognition accuracy .</segment>
+<segment id="108" parent="1108" relname="span">The horizontal projection and vertical projection have obvious characteristics</segment>
+<segment id="109" parent="108" relname="cause">because the image has been rotated before .</segment>
+<segment id="110" parent="1110" relname="span">Additionally ,</segment>
+<segment id="111" parent="1111" relname="joint">since the projection data is much smaller than the image data ,</segment>
+<segment id="112" parent="1112" relname="joint">it is very convenient and cost-effective to store the projection features ,</segment>
+<segment id="113" parent="1112" relname="joint">and the projection features of all the images can be saved .</segment>
+<segment id="114" parent="1114" relname="span">The horizontal and vertical projection of the image is calculated , as follows :</segment>
+<segment id="115" parent="114" relname="restatement">( 17 )</segment>
+<segment id="116" parent="1114" relname="restatement">( 18 )</segment>
+<group id="1000" type="span" />
+<group id="1001" type="multinuc" parent="1000" relname="span"/>
+<group id="1002" type="span" parent="1001" relname="joint"/>
+<group id="1003" type="span" parent="1002" relname="span"/>
+<group id="1004" type="span" parent="1003" relname="elaboration"/>
+<group id="1005" type="span" parent="1004" relname="span"/>
+<group id="1006" type="span" parent="1005" relname="span"/>
+<group id="1007" type="multinuc" parent="1010" relname="background"/>
+<group id="1008" type="span" parent="1007" relname="joint"/>
+<group id="1009" type="span" parent="1008" relname="span"/>
+<group id="1010" type="span" parent="1006" relname="span"/>
+<group id="1011" type="multinuc" parent="1010" relname="span"/>
+<group id="1012" type="span" parent="1011" relname="joint"/>
+<group id="1013" type="multinuc" parent="1011" relname="joint"/>
+<group id="1014" type="multinuc" parent="1013" relname="sequence"/>
+<group id="1015" type="span" parent="1014" relname="joint"/>
+<group id="1016" type="span" parent="14" relname="elaboration"/>
+<group id="1017" type="span" parent="1016" relname="span"/>
+<group id="1018" type="span" parent="1017" relname="elaboration"/>
+<group id="1019" type="multinuc" parent="1014" relname="joint"/>
+<group id="1020" type="span" parent="1019" relname="joint"/>
+<group id="1021" type="span" parent="20" relname="elaboration"/>
+<group id="1024" type="span" parent="1001" relname="joint"/>
+<group id="1025" type="span" parent="1001" relname="joint"/>
+<group id="1026" type="span" parent="1001" relname="joint"/>
+<group id="1027" type="multinuc" parent="1026" relname="span"/>
+<group id="1029" type="span" parent="1027" relname="joint"/>
+<group id="1030" type="multinuc" parent="1029" relname="span"/>
+<group id="1031" type="span" parent="1030" relname="joint"/>
+<group id="1035" type="multinuc" parent="1030" relname="joint"/>
+<group id="1036" type="span" parent="1035" relname="same_unit"/>
+<group id="1037" type="span" parent="1030" relname="joint"/>
+<group id="1038" type="multinuc" parent="1037" relname="span"/>
+<group id="1041" type="span" parent="1038" relname="joint"/>
+<group id="1042" type="span" parent="1041" relname="span"/>
+<group id="1043" type="multinuc" parent="1042" relname="span"/>
+<group id="1044" type="span" parent="1043" relname="joint"/>
+<group id="1045" type="span" parent="44" relname="elaboration"/>
+<group id="1048" type="span" parent="1043" relname="joint"/>
+<group id="1050" type="multinuc" parent="1043" relname="joint"/>
+<group id="1051" type="span" parent="1050" relname="same_unit"/>
+<group id="1053" type="span" parent="1043" relname="joint"/>
+<group id="1054" type="multinuc" parent="53" relname="cause"/>
+<group id="1055" type="span" parent="1054" relname="joint"/>
+<group id="1058" type="span" parent="1043" relname="joint"/>
+<group id="1059" type="span" parent="57" relname="elaboration"/>
+<group id="1062" type="span" parent="1043" relname="joint"/>
+<group id="1063" type="multinuc" parent="62" relname="elaboration"/>
+<group id="1064" type="span" parent="1063" relname="joint"/>
+<group id="1070" type="span" parent="1043" relname="joint"/>
+<group id="1071" type="multinuc" parent="1074" relname="preparation"/>
+<group id="1072" type="span" parent="1071" relname="same_unit"/>
+<group id="1073" type="span" parent="1071" relname="same_unit"/>
+<group id="1074" type="multinuc" parent="1070" relname="span"/>
+<group id="1075" type="span" parent="1074" relname="joint"/>
+<group id="1076" type="multinuc" parent="1075" relname="span"/>
+<group id="1077" type="span" parent="1076" relname="joint"/>
+<group id="1078" type="span" parent="1076" relname="elaboration"/>
+<group id="1079" type="span" parent="78" relname="elaboration"/>
+<group id="1080" type="span" parent="79" relname="elaboration"/>
+<group id="1081" type="span" parent="1080" relname="span"/>
+<group id="1082" type="span" parent="1081" relname="span"/>
+<group id="1083" type="span" parent="1082" relname="span"/>
+<group id="1084" type="span" parent="1083" relname="span"/>
+<group id="1086" type="multinuc" parent="1074" relname="joint"/>
+<group id="1087" type="span" parent="1086" relname="same_unit"/>
+<group id="1090" type="multinuc" parent="1074" relname="joint"/>
+<group id="1091" type="multinuc" parent="1090" relname="sequence"/>
+<group id="1093" type="span" parent="1091" relname="joint"/>
+<group id="1096" type="span" parent="1091" relname="joint"/>
+<group id="1097" type="span" parent="96" relname="elaboration"/>
+<group id="1099" type="span" parent="1091" relname="joint"/>
+<group id="1100" type="multinuc" parent="1099" relname="span"/>
+<group id="1101" type="multinuc" parent="1100" relname="joint"/>
+<group id="1102" type="span" parent="1101" relname="contrast"/>
+<group id="1103" type="multinuc" parent="1101" relname="contrast"/>
+<group id="1105" type="span" parent="1100" relname="joint"/>
+<group id="1106" type="span" parent="1105" relname="span"/>
+<group id="1108" type="span" parent="1100" relname="joint"/>
+<group id="1110" type="span" parent="1100" relname="joint"/>
+<group id="1111" type="multinuc" parent="110" relname="cause"/>
+<group id="1112" type="multinuc" parent="1111" relname="joint"/>
+<group id="1113" type="span" parent="1100" relname="joint"/>
+<group id="1114" type="span" parent="1113" relname="span"/>
+	</body>
+</rst>
