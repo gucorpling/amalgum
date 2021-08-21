@@ -1,6 +1,6 @@
-# s_type = decl
 # newdoc id = AMALGUM_news_lands
 # sent_id = AMALGUM_news_lands-1
+# s_type = decl
 # text = Space Shuttle Atlantis lands in California
 1	Space	Space	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:1->3|Entity=(object-1
 2	Shuttle	Shuttle	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	_
@@ -9,19 +9,19 @@
 5	in	in	ADP	IN	_	6	case	6:case	_
 6	California	California	PROPN	NNP	Number=Sing	4	obl	4:obl:in	Entity=(place-2)
 
-# s_type = frag
 # sent_id = AMALGUM_news_lands-2
-# text = Friday , June 22 , 2007
-1	Friday	Friday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-3)
+# s_type = frag
+# text = Friday, June 22, 2007
+1	Friday	Friday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-3)|SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	June	June	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-3
-4	22	22	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	_
+4	22	22	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-3)(time-4)
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-3
-# text = The Space Shuttle Atlantis has performed a successful landing at Edwards Air Force Base in California , completing STS-117 , a troubled but successful mission to upgrade the International Space Station ( ISS ) .
+# s_type = decl
+# text = The Space Shuttle Atlantis has performed a successful landing at Edwards Air Force Base in California, completing STS-117, a troubled but successful mission to upgrade the International Space Station (ISS).
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=ROOT:3|Entity=(object-5
 2	Space	Space	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Shuttle	Shuttle	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	_
@@ -37,10 +37,10 @@
 13	Force	Force	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=organization-9)
 14	Base	Base	PROPN	NNP	Number=Sing	9	nmod	9:nmod:at	_
 15	in	in	ADP	IN	_	16	case	16:case	_
-16	California	California	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	Entity=event-6)place-7)(place-2)
+16	California	California	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	Entity=event-6)place-7)(place-2)|SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
 18	completing	complete	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl	Discourse=result:4->3
-19	STS-117	STS-117	PROPN	NNP	Number=Sing	18	obj	18:obj	Entity=(event-10)
+19	STS-117	STS-117	PROPN	NNP	Number=Sing	18	obj	18:obj	Entity=(event-10)|SpaceAfter=No
 20	,	,	PUNCT	,	_	25	punct	25:punct	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	Entity=(event-10
 22	troubled	troubled	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
@@ -53,14 +53,14 @@
 29	International	International	ADJ	NNP	Number=Sing	31	amod	31:amod	_
 30	Space	Space	PROPN	NNP	Number=Sing	31	compound	31:compound	_
 31	Station	Station	PROPN	NNP	Number=Sing	27	obj	27:obj	Entity=event-10)place-11)
-32	(	(	PUNCT	-LRB-	_	33	punct	33:punct	Discourse=restatement:6->4
-33	ISS	ISS	PROPN	NNP	Number=Sing	31	appos	31:appos	Entity=(organization-12)
-34	)	)	PUNCT	-RRB-	_	33	punct	33:punct	_
+32	(	(	PUNCT	-LRB-	_	33	punct	33:punct	Discourse=restatement:6->4|SpaceAfter=No
+33	ISS	ISS	PROPN	NNP	Number=Sing	31	appos	31:appos	Entity=(organization-12)|SpaceAfter=No
+34	)	)	PUNCT	-RRB-	_	33	punct	33:punct	SpaceAfter=No
 35	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-4
-# text = The mission had a total duration of 13 days , 20 hours and 11 minutes , much longer than originally intended due to a mission extension and a missed landing opportunity .
+# s_type = decl
+# text = The mission had a total duration of 13 days, 20 hours and 11 minutes, much longer than originally intended due to a mission extension and a missed landing opportunity.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:7->3|Entity=(event-10
 2	mission	mission	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=event-10)
 3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -69,13 +69,13 @@
 6	duration	duration	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	13	13	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	Entity=(time-14(time-15
-9	days	day	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	Entity=time-15)
+9	days	day	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	Entity=time-15)|SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	20	20	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	Entity=(time-16
 12	hours	hour	NOUN	NNS	Number=Plur	9	conj	6:nmod:of|9:conj	_
 13	and	and	CCONJ	CC	_	15	cc	15:cc	_
 14	11	11	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	Entity=(time-17
-15	minutes	minute	NOUN	NNS	Number=Plur	12	conj	9:conj|12:conj:and	Entity=time-17)
+15	minutes	minute	NOUN	NNS	Number=Plur	12	conj	9:conj|12:conj:and	Entity=time-17)|SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	much	much	ADV	RB	Degree=Pos	18	advmod	18:advmod	Discourse=elaboration:8->7
 18	longer	long	ADV	RBR	Degree=Cmp	9	amod	9:amod	Entity=time-13)time-14)time-16)
@@ -91,12 +91,12 @@
 28	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	Entity=(event-19
 29	missed	miss	VERB	VBN	Tense=Past|VerbForm=Part	31	amod	31:amod	_
 30	landing	landing	NOUN	NN	Number=Sing	31	compound	31:compound	Entity=(event-6)
-31	opportunity	opportunity	NOUN	NN	Number=Sing	26	conj	18:obl:due_to|26:conj:and	Entity=event-19)
+31	opportunity	opportunity	NOUN	NN	Number=Sing	26	conj	18:obl:due_to|26:conj:and	Entity=event-19)|SpaceAfter=No
 32	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-5
-# text = The landing in California is the result of the latest in a string of difficulties for the mission , as poor weather forced Atlantis first to postpone its landing at the Kennedy Space Center in Florida , then to cancel it altogether , opting instead to land in California .
+# s_type = decl
+# text = The landing in California is the result of the latest in a string of difficulties for the mission, as poor weather forced Atlantis first to postpone its landing at the Kennedy Space Center in Florida, then to cancel it altogether, opting instead to land in California.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:11->3|Entity=(event-6
 2	landing	landing	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	in	in	ADP	IN	_	4	case	4:case	_
@@ -114,7 +114,7 @@
 15	difficulties	difficulty	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	Entity=(abstract-21
 16	for	for	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(event-10
-18	mission	mission	NOUN	NN	Number=Sing	15	nmod	15:nmod:for	Entity=abstract-20)abstract-21)event-10)
+18	mission	mission	NOUN	NN	Number=Sing	15	nmod	15:nmod:for	Entity=abstract-20)abstract-21)event-10)|SpaceAfter=No
 19	,	,	PUNCT	,	_	23	punct	23:punct	_
 20	as	as	SCONJ	IN	_	23	mark	23:mark	Discourse=circumstance:12->11
 21	poor	poor	ADJ	JJ	Degree=Pos	22	amod	22:amod	Entity=(abstract-22
@@ -132,25 +132,25 @@
 33	Space	Space	PROPN	NNP	Number=Sing	34	compound	34:compound	_
 34	Center	Center	PROPN	NNP	Number=Sing	29	nmod	29:nmod:at	_
 35	in	in	ADP	IN	_	36	case	36:case	_
-36	Florida	Florida	PROPN	NNP	Number=Sing	34	nmod	34:nmod:in	Entity=event-6)place-23)(place-24)
+36	Florida	Florida	PROPN	NNP	Number=Sing	34	nmod	34:nmod:in	Entity=event-6)place-23)(place-24)|SpaceAfter=No
 37	,	,	PUNCT	,	_	40	punct	40:punct	_
 38	then	then	ADV	RB	PronType=Dem	40	advmod	40:advmod	Discourse=sequence:13->12
 39	to	to	PART	TO	_	40	mark	40:mark	_
 40	cancel	cancel	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	27	conj	23:xcomp|27:conj	_
 41	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	40	obj	40:obj	Entity=(object-5)
-42	altogether	altogether	ADV	RB	Degree=Pos	40	advmod	40:advmod	_
+42	altogether	altogether	ADV	RB	Degree=Pos	40	advmod	40:advmod	SpaceAfter=No
 43	,	,	PUNCT	,	_	44	punct	44:punct	_
 44	opting	opt	VERB	VBG	VerbForm=Ger	40	advcl	40:advcl	Discourse=elaboration:14->13
 45	instead	instead	ADV	RB	Degree=Pos	44	advmod	44:advmod	_
 46	to	to	PART	TO	_	47	mark	47:mark	_
 47	land	land	VERB	VB	VerbForm=Inf	44	xcomp	44:xcomp	_
 48	in	in	ADP	IN	_	49	case	49:case	_
-49	California	California	PROPN	NNP	Number=Sing	47	obl	47:obl:in	Entity=(place-2)
+49	California	California	PROPN	NNP	Number=Sing	47	obl	47:obl:in	Entity=(place-2)|SpaceAfter=No
 50	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-6
-# text = NASA had previously expressed their desire to avoid a landing in California if possible due to logistical difficulties that would be caused by the diversion .
+# s_type = decl
+# text = NASA had previously expressed their desire to avoid a landing in California if possible due to logistical difficulties that would be caused by the diversion.
 1	NASA	NASA	PROPN	NNP	Abbr=Yes|Number=Sing	4	nsubj	4:nsubj	Discourse=joint:15->3|Entity=(organization-25)
 2	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	previously	previously	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
@@ -175,12 +175,12 @@
 22	caused	cause	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	acl:relcl	18:acl:relcl	_
 23	by	by	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(event-28
-25	diversion	diversion	NOUN	NN	Number=Sing	22	obl	22:obl:by	Entity=abstract-26)abstract-21)event-28)
+25	diversion	diversion	NOUN	NN	Number=Sing	22	obl	22:obl:by	Entity=abstract-26)abstract-21)event-28)|SpaceAfter=No
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-7
-# text = Atlantis will now be flown back to Florida on the back of a modified Boeing 747 at a cost of around US$ 1 million .
+# s_type = decl
+# text = Atlantis will now be flown back to Florida on the back of a modified Boeing 747 at a cost of around US$1 million.
 1	Atlantis	Atlantis	PROPN	NNP	Number=Sing	5	nsubj:pass	5:nsubj:pass	Discourse=joint:19->3|Entity=(object-5)
 2	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 3	now	now	ADV	RB	_	5	advmod	5:advmod	_
@@ -202,14 +202,14 @@
 19	cost	cost	NOUN	NN	Number=Sing	5	obl	5:obl:at	_
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	around	around	ADV	RB	Degree=Pos	23	advmod	23:advmod	Entity=(place-33
-22	US$	US$	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	_
+22	US$	US$	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	SpaceAfter=No
 23	1	1	NUM	CD	NumForm=Digit|NumType=Card	22	dep	22:dep	_
-24	million	1000000	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	Entity=abstract-32)place-33)
+24	million	1000000	NUM	CD	NumForm=Digit|NumType=Card	22	nummod	22:nummod	Entity=abstract-32)place-33)|SpaceAfter=No
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-8
-# text = The flight is expected to begin next Thursday and will take at least a day or two from then .
+# s_type = decl
+# text = The flight is expected to begin next Thursday and will take at least a day or two from then.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=elaboration:20->19|Entity=(event-34
 2	flight	flight	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass|6:nsubj:xsubj	Entity=event-34)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
@@ -228,12 +228,12 @@
 16	or	or	CCONJ	CC	_	17	cc	17:cc	_
 17	two	2	NUM	CD	NumForm=Digit|NumType=Card	15	conj	11:obj|15:conj:or	Entity=(abstract-37)
 18	from	from	ADP	IN	_	19	case	19:case	_
-19	then	then	ADV	RB	PronType=Dem	11	obl	11:obl:from	_
+19	then	then	ADV	RB	PronType=Dem	11	obl	11:obl:from	SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-9
-# text = According to officials at the Kennedy Space Center , the delay is already accounted for as a previously identified possibility as part of plans for the next Atlantis mission , scheduled for departure on October 20 , again for ISS construction work .
+# s_type = decl
+# text = According to officials at the Kennedy Space Center, the delay is already accounted for as a previously identified possibility as part of plans for the next Atlantis mission, scheduled for departure on October 20, again for ISS construction work.
 1	According	accord	VERB	VBG	VerbForm=Ger	3	case	3:case	Discourse=attribution:22->23
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	officials	official	NOUN	NNS	Number=Plur	14	obl	14:obl:according_to	Entity=(person-38
@@ -241,7 +241,7 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(place-23
 6	Kennedy	Kennedy	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 7	Space	Space	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-8	Center	Center	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	Entity=person-38)place-23)
+8	Center	Center	PROPN	NNP	Number=Sing	3	nmod	3:nmod:at	Entity=person-38)place-23)|SpaceAfter=No
 9	,	,	PUNCT	,	_	3	punct	3:punct	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Discourse=joint:23->3|Entity=(abstract-39
 11	delay	delay	NOUN	NN	Number=Sing	14	nsubj:pass	14:nsubj:pass	Entity=abstract-39)
@@ -262,28 +262,28 @@
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(event-10
 27	next	next	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
 28	Atlantis	Atlantis	PROPN	NNP	Number=Sing	29	compound	29:compound	Entity=(object-5)
-29	mission	mission	NOUN	NN	Number=Sing	24	nmod	24:nmod:for	_
+29	mission	mission	NOUN	NN	Number=Sing	24	nmod	24:nmod:for	SpaceAfter=No
 30	,	,	PUNCT	,	_	31	punct	31:punct	_
 31	scheduled	schedule	VERB	VBN	Tense=Past|VerbForm=Part	29	acl	29:acl	Discourse=elaboration:24->23
 32	for	for	ADP	IN	_	33	case	33:case	_
 33	departure	departure	NOUN	NN	Number=Sing	31	obl	31:obl:for	Entity=(event-42
 34	on	on	ADP	IN	_	36	case	36:case	_
 35	October	October	PROPN	NNP	Number=Sing	36	compound	36:compound	Entity=(time-43(time-44)
-36	20	20	NUM	CD	NumForm=Digit|NumType=Card	33	nmod	33:nmod:on	Entity=event-42)time-43)
+36	20	20	NUM	CD	NumForm=Digit|NumType=Card	33	nmod	33:nmod:on	Entity=event-42)time-43)|SpaceAfter=No
 37	,	,	PUNCT	,	_	42	punct	42:punct	_
 38	again	again	ADV	RB	Degree=Pos	42	advmod	42:advmod	Entity=(abstract-45
 39	for	for	ADP	IN	_	42	case	42:case	_
 40	ISS	ISS	PROPN	NNP	Number=Sing	42	compound	42:compound	Entity=(organization-12)
 41	construction	construction	NOUN	NN	Number=Sing	42	compound	42:compound	Entity=(place-46)
-42	work	work	NOUN	NN	Number=Sing	31	obl	31:obl:for	Entity=abstract-41)event-10)abstract-45)
+42	work	work	NOUN	NN	Number=Sing	31	obl	31:obl:for	Entity=abstract-41)event-10)abstract-45)|SpaceAfter=No
 43	.	.	PUNCT	.	_	14	punct	14:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-10
-# text = During this mission , the Atlantis crew added the 17.5 ton S3/S4 Truss , the second of the trusses on the starboard side , as well as adding its associated energy systems , including the unfurling a set of solar arrays with a 240 foot tip-to-tip length .
+# s_type = decl
+# text = During this mission, the Atlantis crew added the 17.5 ton S3/S4 Truss, the second of the trusses on the starboard side, as well as adding its associated energy systems, including the unfurling a set of solar arrays with a 240 foot tip-to-tip length.
 1	During	during	ADP	IN	_	3	case	3:case	Discourse=joint:25->3
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(event-10
-3	mission	mission	NOUN	NN	Number=Sing	8	obl	8:obl:during	Entity=event-10)
+3	mission	mission	NOUN	NN	Number=Sing	8	obl	8:obl:during	Entity=event-10)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(person-47
 6	Atlantis	Atlantis	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(object-5)
@@ -293,7 +293,7 @@
 10	17.5	17.5	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	Entity=(abstract-49
 11	ton	ton	NOUN	NN	Number=Sing	13	compound	13:compound	Entity=abstract-49)
 12	S3/S4	S3/S4	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(abstract-50)
-13	Truss	Truss	PROPN	NNP	Number=Sing	8	obj	8:obj	Entity=object-48)
+13	Truss	Truss	PROPN	NNP	Number=Sing	8	obj	8:obj	Entity=object-48)|SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(time-51
 16	second	second	NOUN	NN	Number=Sing	13	appos	13:appos	Entity=time-51)
@@ -303,7 +303,7 @@
 20	on	on	ADP	IN	_	23	case	23:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(place-53
 22	starboard	starboard	NOUN	NN	Number=Sing	23	compound	23:compound	Entity=(object-54)
-23	side	side	NOUN	NN	Number=Sing	19	nmod	19:nmod:on	Entity=object-52)place-53)
+23	side	side	NOUN	NN	Number=Sing	19	nmod	19:nmod:on	Entity=object-52)place-53)|SpaceAfter=No
 24	,	,	PUNCT	,	_	28	punct	28:punct	_
 25	as	as	ADV	RB	_	28	cc	28:cc	Discourse=joint:26->3
 26	well	well	ADV	RB	Degree=Pos	25	fixed	25:fixed	_
@@ -312,7 +312,7 @@
 29	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	Entity=(object-55(object-48)
 30	associated	associated	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 31	energy	energy	NOUN	NN	Number=Sing	32	compound	32:compound	Entity=(abstract-56)
-32	systems	system	NOUN	NNS	Number=Plur	28	obj	28:obj	_
+32	systems	system	NOUN	NNS	Number=Plur	28	obj	28:obj	SpaceAfter=No
 33	,	,	PUNCT	,	_	36	punct	36:punct	_
 34	including	include	VERB	VBG	VerbForm=Ger	36	case	36:case	Discourse=elaboration:27->26
 35	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	_
@@ -327,12 +327,12 @@
 44	240	240	NUM	CD	NumForm=Digit|NumType=Card	45	nummod	45:nummod	Entity=(abstract-59
 45	foot	foot	NOUN	NN	Number=Sing	47	compound	47:compound	Entity=abstract-59)
 46	tip-to-tip	tip-to-tip	ADJ	JJ	Degree=Pos	47	amod	47:amod	_
-47	length	length	NOUN	NN	Number=Sing	41	nmod	41:nmod:with	Entity=object-55)object-57)abstract-58)
+47	length	length	NOUN	NN	Number=Sing	41	nmod	41:nmod:with	Entity=object-55)object-57)abstract-58)|SpaceAfter=No
 48	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-11
-# text = The arrays will generate power for European and Japanese science laboratories set to be added to the ISS at a later date .
+# s_type = decl
+# text = The arrays will generate power for European and Japanese science laboratories set to be added to the ISS at a later date.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:28->3|Entity=(object-57
 2	arrays	array	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=object-57)
 3	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
@@ -354,16 +354,16 @@
 19	at	at	ADP	IN	_	22	case	22:case	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	Entity=(time-63
 21	later	late	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	date	date	NOUN	NN	Number=Sing	15	obl	15:obl:at	Entity=time-63)
+22	date	date	NOUN	NN	Number=Sing	15	obl	15:obl:at	Entity=time-63)|SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-12
-# text = During the same mission , another solar array was folded up to allow the truss it is mounted to to be relocated later this year .
+# s_type = decl
+# text = During the same mission, another solar array was folded up to allow the truss it is mounted to to be relocated later this year.
 1	During	during	ADP	IN	_	4	case	4:case	Discourse=elaboration:30->28
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(event-10
 3	same	same	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	mission	mission	NOUN	NN	Number=Sing	10	obl	10:obl:during	Entity=event-10)
+4	mission	mission	NOUN	NN	Number=Sing	10	obl	10:obl:during	Entity=event-10)|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	another	another	DET	DT	_	8	det	8:det	Entity=(object-64
 7	solar	solar	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -384,12 +384,12 @@
 22	relocated	relocate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	xcomp	18:xcomp	Entity=object-48)
 23	later	late	ADV	RBR	Degree=Cmp	25	advmod	25:advmod	Entity=(time-65
 24	this	this	DET	DT	Number=Sing|PronType=Dem	25	det	25:det	_
-25	year	year	NOUN	NN	Number=Sing	22	obl:tmod	22:obl:tmod	Entity=time-65)
+25	year	year	NOUN	NN	Number=Sing	22	obl:tmod	22:obl:tmod	Entity=time-65)|SpaceAfter=No
 26	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-13
-# text = The shuttle also left crewmember Clay Anderson at the ISS and returned with ISS crewmember Sunita Williams , who earlier set the record for female space endurance during her latest ISS mission .
+# s_type = decl
+# text = The shuttle also left crewmember Clay Anderson at the ISS and returned with ISS crewmember Sunita Williams, who earlier set the record for female space endurance during her latest ISS mission.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:34->3|Entity=(object-1
 2	shuttle	shuttle	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|12:nsubj	Entity=object-1)
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
@@ -406,7 +406,7 @@
 14	ISS	ISS	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(person-67(organization-12)
 15	crewmember	crewmember	NOUN	NN	Number=Sing	12	obl	12:obl:with|21:nsubj	_
 16	Sunita	Sunita	PROPN	NNP	Number=Sing	15	appos	15:appos	Entity=person-67)
-17	Williams	Williams	PROPN	NNP	Number=Sing	15	appos	15:appos	_
+17	Williams	Williams	PROPN	NNP	Number=Sing	15	appos	15:appos	SpaceAfter=No
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	who	who	PRON	WP	PronType=Rel	21	nsubj	15:ref	Discourse=elaboration:36->35
 20	earlier	early	ADV	RBR	Degree=Cmp	21	advmod	21:advmod	_
@@ -421,14 +421,14 @@
 29	her	her	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	32	nmod:poss	32:nmod:poss	Entity=(event-10(person-67)
 30	latest	late	ADJ	JJS	Degree=Sup	32	amod	32:amod	_
 31	ISS	ISS	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(organization-12)
-32	mission	mission	NOUN	NN	Number=Sing	21	obl	21:obl:during	Entity=event-10)
+32	mission	mission	NOUN	NN	Number=Sing	21	obl	21:obl:during	Entity=event-10)|SpaceAfter=No
 33	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-14
-# text = Although successful , there were numerous problems during the mission .
+# s_type = decl
+# text = Although successful, there were numerous problems during the mission.
 1	Although	although	SCONJ	IN	_	2	mark	2:mark	Discourse=concession:37->38
-2	successful	successful	ADJ	JJ	Degree=Pos	5	advcl	5:advcl:although	_
+2	successful	successful	ADJ	JJ	Degree=Pos	5	advcl	5:advcl:although	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	there	there	PRON	EX	_	5	expl	5:expl	Discourse=preparation:38->39
 5	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -436,12 +436,12 @@
 7	problems	problem	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	_
 8	during	during	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(event-10
-10	mission	mission	NOUN	NN	Number=Sing	7	nmod	7:nmod:during	Entity=abstract-71)event-10)
+10	mission	mission	NOUN	NN	Number=Sing	7	nmod	7:nmod:during	Entity=abstract-71)event-10)|SpaceAfter=No
 11	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-15
-# text = A computer failure in the Russian segments of the ISS almost forced the shuttle 's mission to be extended and left the ISS struggling to maintain thrusters , oxygen generation , carbon dioxide scrubber , and other environmental control systems , and relying on Atlantis to help .
+# s_type = decl
+# text = A computer failure in the Russian segments of the ISS almost forced the shuttle's mission to be extended and left the ISS struggling to maintain thrusters, oxygen generation, carbon dioxide scrubber, and other environmental control systems, and relying on Atlantis to help.
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=joint:39->3|Entity=(event-72
 2	computer	computer	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-73)
 3	failure	failure	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|21:nsubj	_
@@ -455,6 +455,7 @@
 11	almost	almost	ADV	RB	Degree=Pos	12	advmod	12:advmod	_
 12	forced	force	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(event-10
+14-15	shuttle's	_	_	_	_	_	_	_	_
 14	shuttle	shuttle	NOUN	NN	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(object-1
 15	's	's	PART	POS	_	14	case	14:case	Entity=object-1)
 16	mission	mission	NOUN	NN	Number=Sing	12	obj	12:obj	_
@@ -468,32 +469,32 @@
 24	struggling	struggle	VERB	VBG	VerbForm=Ger	21	xcomp	21:xcomp	_
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	maintain	maintain	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
-27	thrusters	thruster	NOUN	NNS	Number=Plur	26	obj	26:obj	Entity=(object-75)
+27	thrusters	thruster	NOUN	NNS	Number=Plur	26	obj	26:obj	Entity=(object-75)|SpaceAfter=No
 28	,	,	PUNCT	,	_	30	punct	30:punct	_
 29	oxygen	oxygen	NOUN	NN	Number=Sing	30	compound	30:compound	Entity=(abstract-76(substance-77)
-30	generation	generation	NOUN	NN	Number=Sing	27	conj	26:obj|27:conj:and	Entity=abstract-76)
+30	generation	generation	NOUN	NN	Number=Sing	27	conj	26:obj|27:conj:and	Entity=abstract-76)|SpaceAfter=No
 31	,	,	PUNCT	,	_	34	punct	34:punct	_
 32	carbon	carbon	NOUN	NN	Number=Sing	33	compound	33:compound	Entity=(person-78(substance-79
 33	dioxide	dioxide	NOUN	NN	Number=Sing	34	compound	34:compound	Entity=substance-79)
-34	scrubber	scrubber	NOUN	NN	Number=Sing	27	conj	26:obj|27:conj:and	Entity=person-78)
+34	scrubber	scrubber	NOUN	NN	Number=Sing	27	conj	26:obj|27:conj:and	Entity=person-78)|SpaceAfter=No
 35	,	,	PUNCT	,	_	40	punct	40:punct	_
 36	and	and	CCONJ	CC	_	40	cc	40:cc	_
 37	other	other	ADJ	JJ	Degree=Pos	40	amod	40:amod	Entity=(object-55
 38	environmental	environmental	ADJ	JJ	Degree=Pos	39	amod	39:amod	Entity=(abstract-80
 39	control	control	NOUN	NN	Number=Sing	40	compound	40:compound	Entity=abstract-80)
-40	systems	system	NOUN	NNS	Number=Plur	27	conj	26:obj|27:conj:and	Entity=object-55)
+40	systems	system	NOUN	NNS	Number=Plur	27	conj	26:obj|27:conj:and	Entity=object-55)|SpaceAfter=No
 41	,	,	PUNCT	,	_	43	punct	43:punct	_
 42	and	and	CCONJ	CC	_	43	cc	43:cc	Discourse=sequence:41->39
 43	relying	rely	VERB	VBG	VerbForm=Ger	26	conj	24:xcomp|26:conj:and	_
 44	on	on	ADP	IN	_	45	case	45:case	_
 45	Atlantis	Atlantis	PROPN	NNP	Number=Sing	43	obl	43:obl:on	Entity=(object-5)
 46	to	to	PART	TO	_	47	mark	47:mark	_
-47	help	help	VERB	VB	VerbForm=Inf	43	advcl	43:advcl:to	_
+47	help	help	VERB	VB	VerbForm=Inf	43	advcl	43:advcl:to	SpaceAfter=No
 48	.	.	PUNCT	.	_	12	punct	12:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-16
-# text = Officials even looked at the possibility of an unprecedented emergency evacuation of the ISS , although astronauts were ultimately able to repair the systems .
+# s_type = decl
+# text = Officials even looked at the possibility of an unprecedented emergency evacuation of the ISS, although astronauts were ultimately able to repair the systems.
 1	Officials	official	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Discourse=joint:42->39|Entity=(person-38)
 2	even	even	ADV	RB	_	3	advmod	3:advmod	_
 3	looked	look	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -507,7 +508,7 @@
 11	evacuation	evacuation	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(organization-12
-14	ISS	ISS	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=abstract-40)event-81)organization-12)
+14	ISS	ISS	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=abstract-40)event-81)organization-12)|SpaceAfter=No
 15	,	,	PUNCT	,	_	20	punct	20:punct	_
 16	although	although	SCONJ	IN	_	20	mark	20:mark	Discourse=concession:43->42
 17	astronauts	astronaut	NOUN	NNS	Number=Plur	20	nsubj	20:nsubj|22:nsubj:xsubj	Entity=(person-83)
@@ -517,37 +518,38 @@
 21	to	to	PART	TO	_	22	mark	22:mark	_
 22	repair	repair	VERB	VB	VerbForm=Inf	20	xcomp	20:xcomp	Entity=(abstract-84)
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(object-55
-24	systems	system	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=object-55)
+24	systems	system	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=object-55)|SpaceAfter=No
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-17
-# text = Other concerns included hail damage , which delayed the mission 's launch ; damage to the thermal blanket , which required a spacewalk to repair ; and discovery of unidentified debris shortly after Atlantis docked with the ISS .
+# s_type = decl
+# text = Other concerns included hail damage, which delayed the mission's launch; damage to the thermal blanket, which required a spacewalk to repair; and discovery of unidentified debris shortly after Atlantis docked with the ISS.
 1	Other	other	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:44->39|Entity=(abstract-85
 2	concerns	concern	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=abstract-85)
 3	included	include	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	hail	hail	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(event-86(event-87)
-5	damage	damage	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj	_
+5	damage	damage	NOUN	NN	Number=Sing	3	obj	3:obj|8:nsubj	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	which	which	PRON	WDT	PronType=Rel	8	nsubj	5:ref	Discourse=elaboration:45->44
 8	delayed	delay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(event-88
+10-11	mission's	_	_	_	_	_	_	_	_
 10	mission	mission	NOUN	NN	Number=Sing	12	nmod:poss	12:nmod:poss	Entity=(event-10
 11	's	's	PART	POS	_	10	case	10:case	Entity=event-10)
-12	launch	launch	NOUN	NN	Number=Sing	8	obj	8:obj	Entity=event-86)event-88)
+12	launch	launch	NOUN	NN	Number=Sing	8	obj	8:obj	Entity=event-86)event-88)|SpaceAfter=No
 13	;	;	PUNCT	:	_	14	punct	14:punct	_
 14	damage	damage	NOUN	NN	Number=Sing	5	conj	3:obj|5:conj:and	Discourse=joint:46->45|Entity=(abstract-89
 15	to	to	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(object-90
 17	thermal	thermal	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	blanket	blanket	NOUN	NN	Number=Sing	14	nmod	14:nmod:to|21:nsubj	_
+18	blanket	blanket	NOUN	NN	Number=Sing	14	nmod	14:nmod:to|21:nsubj	SpaceAfter=No
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	which	which	PRON	WDT	PronType=Rel	21	nsubj	18:ref	Discourse=elaboration:47->46
 21	required	require	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	Entity=(place-91
 23	spacewalk	spacewalk	NOUN	NN	Number=Sing	21	obj	21:obj	_
 24	to	to	PART	TO	_	25	mark	25:mark	Discourse=purpose:48->47
-25	repair	repair	VERB	VB	VerbForm=Inf	23	acl	23:acl:to	Entity=abstract-89)object-90)place-91)(abstract-84)
+25	repair	repair	VERB	VB	VerbForm=Inf	23	acl	23:acl:to	Entity=abstract-89)object-90)place-91)(abstract-84)|SpaceAfter=No
 26	;	;	PUNCT	:	_	28	punct	28:punct	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	Discourse=joint:49->47
 28	discovery	discovery	NOUN	NN	Number=Sing	5	conj	3:obj|5:conj:and	Entity=(event-92
@@ -560,12 +562,12 @@
 35	docked	dock	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	acl	28:acl:after	_
 36	with	with	ADP	IN	_	38	case	38:case	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	Entity=(organization-12
-38	ISS	ISS	PROPN	NNP	Number=Sing	35	obl	35:obl:with	Entity=event-92)organization-12)
+38	ISS	ISS	PROPN	NNP	Number=Sing	35	obl	35:obl:with	Entity=event-92)organization-12)|SpaceAfter=No
 39	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-18
-# text = The mission had to be extended by two days in order to give astronauts time to repair the damaged heat-protection equipment .
+# s_type = decl
+# text = The mission had to be extended by two days in order to give astronauts time to repair the damaged heat-protection equipment.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:51->39|Entity=(event-10
 2	mission	mission	NOUN	NN	Number=Sing	3	nsubj	3:nsubj|6:nsubj:xsubj	Entity=event-10)
 3	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -586,12 +588,12 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(object-95
 19	damaged	damage	VERB	VBN	Tense=Past|VerbForm=Part	21	amod	21:amod	_
 20	heat-protection	heat-protection	NOUN	NN	Number=Sing	21	compound	21:compound	Entity=(abstract-96)
-21	equipment	equipment	NOUN	NN	Number=Sing	17	obj	17:obj	Entity=time-94)object-95)
+21	equipment	equipment	NOUN	NN	Number=Sing	17	obj	17:obj	Entity=time-94)object-95)|SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_lands-19
-# text = NASA officials held an emergency meeting Wednesday while engineers confirmed that they thought the repair would withstand the rigors of re-entry with the Earth 's atmosphere .
+# s_type = decl
+# text = NASA officials held an emergency meeting Wednesday while engineers confirmed that they thought the repair would withstand the rigors of re-entry with the Earth's atmosphere.
 1	NASA	NASA	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=joint:54->39|Entity=(person-38(organization-25)
 2	officials	official	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=person-38)
 3	held	hold	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -615,8 +617,9 @@
 21	re-entry	re-entry	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	Entity=(event-101
 22	with	with	ADP	IN	_	26	case	26:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(abstract-102
+24-25	Earth's	_	_	_	_	_	_	_	_
 24	Earth	Earth	PROPN	NNP	Number=Sing	26	nmod:poss	26:nmod:poss	Entity=(place-103
 25	's	's	PART	POS	_	24	case	24:case	Entity=place-103)
-26	atmosphere	atmosphere	NOUN	NN	Number=Sing	21	nmod	21:nmod:with	Entity=abstract-100)event-101)abstract-102)
+26	atmosphere	atmosphere	NOUN	NN	Number=Sing	21	nmod	21:nmod:with	Entity=abstract-100)event-101)abstract-102)|SpaceAfter=No
 27	.	.	PUNCT	.	_	3	punct	3:punct	_
 

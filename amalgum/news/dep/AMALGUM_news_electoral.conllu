@@ -1,6 +1,6 @@
-# s_type = decl
 # newdoc id = AMALGUM_news_electoral
 # sent_id = AMALGUM_news_electoral-1
+# s_type = decl
 # text = U.S. Congress confirms electoral college vote for Trump presidency
 1	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=preparation:1->3|Entity=(organization-1(place-2)
 2	Congress	Congress	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-1)
@@ -10,23 +10,23 @@
 6	vote	vote	NOUN	NN	Number=Sing	3	obj	3:obj	_
 7	for	for	ADP	IN	_	9	case	9:case	_
 8	Trump	Trump	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(abstract-5(person-6)
-9	presidency	presidency	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	Entity=abstract-3)abstract-5)
+9	presidency	presidency	NOUN	NN	Number=Sing	6	nmod	6:nmod:for	Entity=abstract-3)abstract-5)|SpaceAfter=No
 
-# s_type = frag
 # sent_id = AMALGUM_news_electoral-2
-# text = Monday , January 9 , 2017
-1	Monday	Monday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-7)
+# s_type = frag
+# text = Monday, January 9, 2017
+1	Monday	Monday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-7)|SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-7
-4	9	9	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	_
+4	9	9	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	2017	2017	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-7)(time-8)
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-3
-# text = On Friday , the U.S. Congress completed the official counting of the electoral college votes , confirming Donald Trump 's pending U.S. presidency under their own authority .
+# s_type = decl
+# text = On Friday, the U.S. Congress completed the official counting of the electoral college votes, confirming Donald Trump's pending U.S. presidency under their own authority.
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=ROOT:3
-2	Friday	Friday	PROPN	NNP	Number=Sing	7	obl	7:obl:on	Entity=(time-9)
+2	Friday	Friday	PROPN	NNP	Number=Sing	7	obl	7:obl:on	Entity=(time-9)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(organization-1
 5	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	6	compound	6:compound	_
@@ -39,10 +39,11 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-11
 13	electoral	electoral	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(organization-4
 14	college	college	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=organization-4)
-15	votes	vote	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	Entity=event-10)abstract-11)
+15	votes	vote	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	Entity=event-10)abstract-11)|SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	confirming	confirm	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	Discourse=elaboration:4->3
 18	Donald	Donald	PROPN	NNP	Number=Sing	23	nmod:poss	23:nmod:poss	Entity=(abstract-5(person-6
+19-20	Trump's	_	_	_	_	_	_	_	_
 19	Trump	Trump	PROPN	NNP	Number=Sing	18	flat	18:flat	_
 20	's	's	PART	POS	_	18	case	18:case	Entity=person-6)
 21	pending	pend	VERB	VBG	VerbForm=Ger	23	amod	23:amod	_
@@ -51,25 +52,26 @@
 24	under	under	ADP	IN	_	27	case	27:case	_
 25	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	27	nmod:poss	27:nmod:poss	Entity=(abstract-12(abstract-11)
 26	own	own	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	authority	authority	NOUN	NN	Number=Sing	17	obl	17:obl:under	Entity=abstract-12)
+27	authority	authority	NOUN	NN	Number=Sing	17	obl	17:obl:under	Entity=abstract-12)|SpaceAfter=No
 28	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-4
-# text = In most years , this is a formality , but amid concerns about Trump 's losing the popular vote by a considerable margin , Russian interference in the 2016 presidential election , and allegations that some of the presidential electors who supported Trump may have been ineligible to serve , more eyes than usual have followed the confirmation process .
+# s_type = decl
+# text = In most years, this is a formality, but amid concerns about Trump's losing the popular vote by a considerable margin, Russian interference in the 2016 presidential election, and allegations that some of the presidential electors who supported Trump may have been ineligible to serve, more eyes than usual have followed the confirmation process.
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:5->3
 2	most	most	ADJ	JJS	Degree=Sup	3	amod	3:amod	Entity=(time-13
-3	years	year	NOUN	NNS	Number=Plur	8	nmod	8:nmod:in	Entity=time-13)
+3	years	year	NOUN	NNS	Number=Plur	8	nmod	8:nmod:in	Entity=time-13)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	this	this	PRON	DT	Number=Sing|PronType=Dem	8	nsubj	8:nsubj	Entity=(event-10)
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	_
-8	formality	formality	NOUN	NN	Number=Sing	0	root	0:root	_
+8	formality	formality	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 9	,	,	PUNCT	,	_	56	punct	56:punct	_
 10	but	but	CCONJ	CC	_	56	cc	56:cc	Discourse=concession:6->5
 11	amid	amid	ADP	IN	_	12	case	12:case	_
 12	concerns	concern	NOUN	NNS	Number=Plur	56	obl	56:obl:amid	Entity=(abstract-14
 13	about	about	SCONJ	IN	_	16	mark	16:mark	_
+14-15	Trump's	_	_	_	_	_	_	_	_
 14	Trump	Trump	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Entity=(person-6
 15	's	's	PART	POS	_	14	case	14:case	Entity=person-6)
 16	losing	lose	VERB	VBG	VerbForm=Ger	12	acl	12:acl:about	_
@@ -79,7 +81,7 @@
 20	by	by	ADP	IN	_	23	case	23:case	_
 21	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	Entity=(abstract-15
 22	considerable	considerable	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	margin	margin	NOUN	NN	Number=Sing	16	obl	16:obl:by	Entity=abstract-15)
+23	margin	margin	NOUN	NN	Number=Sing	16	obl	16:obl:by	Entity=abstract-15)|SpaceAfter=No
 24	,	,	PUNCT	,	_	26	punct	26:punct	_
 25	Russian	Russian	ADJ	JJ	Degree=Pos	26	amod	26:amod	Discourse=elaboration:7->6|Entity=(abstract-16
 26	interference	interference	NOUN	NN	Number=Sing	16	conj	12:acl:about|16:conj	_
@@ -87,7 +89,7 @@
 28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(event-17
 29	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	31	compound	31:compound	_
 30	presidential	presidential	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
-31	election	election	NOUN	NN	Number=Sing	26	nmod	26:nmod:in	Entity=abstract-14)abstract-16)event-17)
+31	election	election	NOUN	NN	Number=Sing	26	nmod	26:nmod:in	Entity=abstract-14)abstract-16)event-17)|SpaceAfter=No
 32	,	,	PUNCT	,	_	34	punct	34:punct	_
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
 34	allegations	allegation	NOUN	NNS	Number=Plur	12	conj	12:conj:and|56:obl:amid	Entity=(abstract-18
@@ -105,7 +107,7 @@
 46	been	be	AUX	VBN	Tense=Past|VerbForm=Part	47	cop	47:cop	_
 47	ineligible	ineligible	ADJ	JJ	Degree=Pos	34	acl	34:acl:that	_
 48	to	to	PART	TO	_	49	mark	49:mark	_
-49	serve	serve	VERB	VB	VerbForm=Inf	47	xcomp	47:xcomp	Entity=abstract-18)
+49	serve	serve	VERB	VB	VerbForm=Inf	47	xcomp	47:xcomp	Entity=abstract-18)|SpaceAfter=No
 50	,	,	PUNCT	,	_	12	punct	12:punct	_
 51	more	more	ADJ	JJR	Degree=Cmp	52	amod	52:amod	Discourse=same_unit:10->8|Entity=(object-20
 52	eyes	eye	NOUN	NNS	Number=Plur	56	nsubj	56:nsubj	_
@@ -115,12 +117,12 @@
 56	followed	follow	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	8:conj:but	_
 57	the	the	DET	DT	Definite=Def|PronType=Art	59	det	59:det	Entity=(abstract-21
 58	confirmation	confirmation	NOUN	NN	Number=Sing	59	compound	59:compound	Entity=(event-22)
-59	process	process	NOUN	NN	Number=Sing	56	obj	56:obj	Entity=abstract-21)
+59	process	process	NOUN	NN	Number=Sing	56	obj	56:obj	Entity=abstract-21)|SpaceAfter=No
 60	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-5
-# text = The final count was 304 votes for Trump and 227 for Hilary Clinton , with Colin Powell a distant third at 3 .
+# s_type = decl
+# text = The final count was 304 votes for Trump and 227 for Hilary Clinton, with Colin Powell a distant third at 3.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:12->3|Entity=(abstract-23
 2	final	final	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	count	count	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	Entity=abstract-23)
@@ -133,7 +135,7 @@
 10	227	227	NUM	CD	NumForm=Digit|NumType=Card	6	conj	6:conj:and	Entity=(person-24
 11	for	for	ADP	IN	_	12	case	12:case	_
 12	Hilary	Hilary	PROPN	NNP	Number=Sing	10	nmod	10:nmod:for	Entity=(person-25
-13	Clinton	Clinton	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-25)
+13	Clinton	Clinton	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-25)|SpaceAfter=No
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
 15	with	with	SCONJ	IN	_	16	mark	16:mark	Discourse=elaboration:13->12
 16	Colin	Colin	PROPN	NNP	Number=Sing	6	nmod	6:nmod	Entity=(person-26
@@ -142,12 +144,12 @@
 19	distant	distant	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
 20	third	third	ADJ	JJ	Degree=Pos|NumType=Ord	6	advcl	6:advcl	_
 21	at	at	ADP	IN	_	22	case	22:case	_
-22	3	3	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:at	Entity=(abstract-27)
+22	3	3	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:at	Entity=(abstract-27)|SpaceAfter=No
 23	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-6
-# text = Vice President Joe Biden presided over the U.S. Congress as they counted the electoral votes from the 2016 presidential election .
+# s_type = decl
+# text = Vice President Joe Biden presided over the U.S. Congress as they counted the electoral votes from the 2016 presidential election.
 1	Vice	Vice	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:14->3|Entity=(person-28
 2	President	President	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Joe	Joe	PROPN	NNP	Number=Sing	1	flat	1:flat	_
@@ -167,21 +169,21 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(event-17
 18	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	20	compound	20:compound	_
 19	presidential	presidential	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	election	election	NOUN	NN	Number=Sing	15	nmod	15:nmod:from	Entity=abstract-23)event-17)
-21	.	.	PUNCT	.	_	5	punct	5:punct	_
+20	election	election	NOUN	NN	Number=Sing	15	nmod	15:nmod:from	Entity=abstract-23)event-17)|SpaceAfter=No
+21	.	.	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
 
-# s_type = frag
 # sent_id = AMALGUM_news_electoral-7
-# text = Image : Wikimedia Commons .
-1	Image	image	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:16->17|Entity=(abstract-29)
+# s_type = frag
+# text = Image: Wikimedia Commons.
+1	Image	image	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:16->17|Entity=(abstract-29)|SpaceAfter=No
 2	:	:	PUNCT	:	_	3	punct	3:punct	_
 3	Wikimedia	Wikimedia	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=attribution:17->14|Entity=(organization-30)
-4	Commons	Commons	PROPN	NNP	Number=Sing	1	dep	1:dep	_
+4	Commons	Commons	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-8
-# text = The U.S. Constitution allows Congress to overrule the electoral college by rejecting invalid votes so long as the objections are made by at least one Representative and at least one Senator and , earlier this week , Representative Shiela Jackson Lee , and six other House Democrats attempted to get it to do just that .
+# s_type = decl
+# text = The U.S. Constitution allows Congress to overrule the electoral college by rejecting invalid votes so long as the objections are made by at least one Representative and at least one Senator and, earlier this week, Representative Shiela Jackson Lee, and six other House Democrats attempted to get it to do just that.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:18->3|Entity=(abstract-31
 2	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	3	compound	3:compound	Entity=(place-2)
 3	Constitution	Constitution	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-31)
@@ -213,16 +215,16 @@
 29	least	least	ADJ	JJS	Degree=Sup	30	advmod	30:advmod	_
 30	one	one	NUM	CD	NumForm=Word|NumType=Card	31	nummod	31:nummod	_
 31	Senator	Senator	PROPN	NNP	Number=Sing	26	conj	21:obl:by|26:conj:and	Entity=person-33)person-35)
-32	and	and	CCONJ	CC	_	48	cc	48:cc	Discourse=joint:21->20
+32	and	and	CCONJ	CC	_	48	cc	48:cc	Discourse=joint:21->20|SpaceAfter=No
 33	,	,	PUNCT	,	_	32	punct	32:punct	_
 34	earlier	early	ADV	RBR	Degree=Cmp	36	advmod	36:advmod	Entity=(time-36
 35	this	this	DET	DT	Number=Sing|PronType=Dem	36	det	36:det	_
-36	week	week	NOUN	NN	Number=Sing	48	obl:tmod	48:obl:tmod	Entity=time-36)
+36	week	week	NOUN	NN	Number=Sing	48	obl:tmod	48:obl:tmod	Entity=time-36)|SpaceAfter=No
 37	,	,	PUNCT	,	_	36	punct	36:punct	_
 38	Representative	Representative	PROPN	NNP	Number=Sing	48	nsubj	48:nsubj|50:nsubj:xsubj|53:nsubj:xsubj	Entity=(person-33(person-34
 39	Shiela	Shiela	PROPN	NNP	Number=Sing	38	flat	38:flat	_
 40	Jackson	Jackson	PROPN	NNP	Number=Sing	38	flat	38:flat	_
-41	Lee	Lee	PROPN	NNP	Number=Sing	38	flat	38:flat	Entity=person-34)
+41	Lee	Lee	PROPN	NNP	Number=Sing	38	flat	38:flat	Entity=person-34)|SpaceAfter=No
 42	,	,	PUNCT	,	_	47	punct	47:punct	_
 43	and	and	CCONJ	CC	_	47	cc	47:cc	_
 44	six	6	NUM	CD	NumForm=Digit|NumType=Card	47	nummod	47:nummod	Entity=(person-37
@@ -236,12 +238,12 @@
 52	to	to	PART	TO	_	53	mark	53:mark	_
 53	do	do	VERB	VB	VerbForm=Inf	50	xcomp	50:xcomp	_
 54	just	just	ADV	RB	_	55	advmod	55:advmod	Entity=(event-17
-55	that	that	PRON	DT	Number=Sing|PronType=Dem	53	obj	53:obj	Entity=event-17)
+55	that	that	PRON	DT	Number=Sing|PronType=Dem	53	obj	53:obj	Entity=event-17)|SpaceAfter=No
 56	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-9
-# text = Representative Lee has argued that voter suppression was a serious matter in her home state of Texas .
+# s_type = decl
+# text = Representative Lee has argued that voter suppression was a serious matter in her home state of Texas.
 1	Representative	Representative	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=attribution:22->23|Entity=(person-38
 2	Lee	Lee	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-38)
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
@@ -258,12 +260,12 @@
 14	home	home	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	state	state	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Texas	Texas	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=abstract-39)place-41)(place-42)
+17	Texas	Texas	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=abstract-39)place-41)(place-42)|SpaceAfter=No
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-10
-# text = While the more reserved Jamie Raskin told Politico he would only get involved in the face of " evidence of technological tampering , ballot stuffing or the illegal purging of people from the rolls or exclusion of voters from the polls . "
+# s_type = decl
+# text = While the more reserved Jamie Raskin told Politico he would only get involved in the face of "evidence of technological tampering, ballot stuffing or the illegal purging of people from the rolls or exclusion of voters from the polls."
 1	While	while	SCONJ	IN	_	7	mark	7:mark	Discourse=attribution:24->25
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(person-43
 3	more	more	ADV	RBR	Degree=Cmp	4	advmod	4:advmod	_
@@ -281,11 +283,11 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(abstract-45
 16	face	face	NOUN	NN	Number=Sing	13	obl	13:obl:in	_
 17	of	of	ADP	IN	_	19	case	19:case	_
-18	"	''	PUNCT	``	_	19	punct	19:punct	_
+18	"	''	PUNCT	``	_	19	punct	19:punct	SpaceAfter=No
 19	evidence	evidence	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	Entity=(abstract-46
 20	of	of	ADP	IN	_	22	case	22:case	_
 21	technological	technological	ADJ	JJ	Degree=Pos	22	amod	22:amod	Entity=(event-47
-22	tampering	tampering	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	Entity=event-47)
+22	tampering	tampering	NOUN	NN	Number=Sing	19	nmod	19:nmod:of	Entity=event-47)|SpaceAfter=No
 23	,	,	PUNCT	,	_	25	punct	25:punct	_
 24	ballot	ballot	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(object-48(object-49)
 25	stuffing	stuffing	NOUN	NN	Number=Sing	22	conj	19:nmod:of|22:conj:or	Entity=object-48)
@@ -304,14 +306,14 @@
 38	voters	voter	NOUN	NNS	Number=Plur	36	nmod	36:nmod:of	Entity=(person-54)
 39	from	from	ADP	IN	_	41	case	41:case	_
 40	the	the	DET	DT	Definite=Def|PronType=Art	41	det	41:det	Entity=(event-55
-41	polls	poll	NOUN	NNS	Number=Plur	36	nmod	36:nmod:from	Entity=abstract-45)abstract-46)person-53)event-55)
-42	.	.	PUNCT	.	_	19	punct	19:punct	_
+41	polls	poll	NOUN	NNS	Number=Plur	36	nmod	36:nmod:from	Entity=abstract-45)abstract-46)person-53)event-55)|SpaceAfter=No
+42	.	.	PUNCT	.	_	19	punct	19:punct	SpaceAfter=No
 43	"	''	PUNCT	''	_	19	punct	19:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-11
-# text = However , because these representatives were not able to recruit even one senator to join them , the objections were ruled out of order .
-1	However	however	ADV	RB	_	21	advmod	21:advmod	Discourse=joint:26->3
+# s_type = decl
+# text = However, because these representatives were not able to recruit even one senator to join them, the objections were ruled out of order.
+1	However	however	ADV	RB	_	21	advmod	21:advmod	Discourse=joint:26->3|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	because	because	SCONJ	IN	_	8	mark	8:mark	Discourse=cause:27->26
 4	these	this	DET	DT	Number=Plur|PronType=Dem	5	det	5:det	Entity=(person-56
@@ -326,7 +328,7 @@
 13	senator	senator	NOUN	NN	Number=Sing	10	obj	10:obj|15:nsubj:xsubj	Entity=person-35)
 14	to	to	PART	TO	_	15	mark	15:mark	Discourse=purpose:28->27
 15	join	join	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
-16	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	15	obj	15:obj	Entity=(person-56)
+16	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	15	obj	15:obj	Entity=(person-56)|SpaceAfter=No
 17	,	,	PUNCT	,	_	8	punct	8:punct	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Discourse=same_unit:29->27|Entity=(abstract-32
 19	objections	objection	NOUN	NNS	Number=Plur	21	nsubj:pass	21:nsubj:pass	Entity=abstract-32)
@@ -334,12 +336,12 @@
 21	ruled	rule	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 22	out	out	ADP	IN	_	24	case	24:case	_
 23	of	of	ADP	IN	_	22	fixed	22:fixed	_
-24	order	order	NOUN	NN	Number=Sing	21	obl	21:obl:out_of	Entity=(abstract-57)
+24	order	order	NOUN	NN	Number=Sing	21	obl	21:obl:out_of	Entity=(abstract-57)|SpaceAfter=No
 25	.	.	PUNCT	.	_	21	punct	21:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-12
-# text = The organization Americans Take Action also claimed that roughly fifty presidential electors who supported Trump were ineligible to serve because they lived outside the districts they represented or held other government jobs .
+# s_type = decl
+# text = The organization Americans Take Action also claimed that roughly fifty presidential electors who supported Trump were ineligible to serve because they lived outside the districts they represented or held other government jobs.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:30->31|Entity=(organization-4
 2	organization	organization	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	Americans	American	PROPN	NNPS	Number=Plur	4	nsubj	4:nsubj	Entity=(abstract-58(person-59)
@@ -371,12 +373,12 @@
 29	held	hold	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	22	conj	17:advcl:because|22:conj:or	_
 30	other	other	ADJ	JJ	Degree=Pos	32	amod	32:amod	Entity=(abstract-62
 31	government	government	NOUN	NN	Number=Sing	32	compound	32:compound	Entity=(organization-63)
-32	jobs	job	NOUN	NNS	Number=Plur	29	obj	29:obj	Entity=abstract-62)
+32	jobs	job	NOUN	NNS	Number=Plur	29	obj	29:obj	Entity=abstract-62)|SpaceAfter=No
 33	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-13
-# text = Although they did not claim that the voters in those districts did not actually cast for Trump or that the outcome would have been different with legitimate electors , eliminating those fifty votes would have put Trump below the 270 threshold that he would need to win .
+# s_type = decl
+# text = Although they did not claim that the voters in those districts did not actually cast for Trump or that the outcome would have been different with legitimate electors, eliminating those fifty votes would have put Trump below the 270 threshold that he would need to win.
 1	Although	although	SCONJ	IN	_	5	mark	5:mark	Discourse=attribution:37->38
 2	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-19)
 3	did	do	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux	5:aux	_
@@ -404,7 +406,7 @@
 25	different	different	ADJ	JJ	Degree=Pos	15	conj	5:ccomp|15:conj:or	_
 26	with	with	ADP	IN	_	28	case	28:case	_
 27	legitimate	legitimate	ADJ	JJ	Degree=Pos	28	amod	28:amod	Entity=(person-19
-28	electors	elector	NOUN	NNS	Number=Plur	25	obl	25:obl:with	Entity=person-19)
+28	electors	elector	NOUN	NNS	Number=Plur	25	obl	25:obl:with	Entity=person-19)|SpaceAfter=No
 29	,	,	PUNCT	,	_	36	punct	36:punct	_
 30	eliminating	eliminate	VERB	VBG	VerbForm=Ger	36	csubj	36:csubj	Discourse=elaboration:40->38
 31	those	this	DET	DT	Number=Plur|PronType=Dem	33	det	33:det	Entity=(abstract-11
@@ -423,15 +425,15 @@
 44	would	would	AUX	MD	VerbForm=Fin	45	aux	45:aux	_
 45	need	need	VERB	VB	VerbForm=Inf	41	acl:relcl	41:acl:relcl	_
 46	to	to	PART	TO	_	47	mark	47:mark	Discourse=purpose:42->41
-47	win	win	VERB	VB	VerbForm=Inf	45	xcomp	45:xcomp	Entity=abstract-65)
+47	win	win	VERB	VB	VerbForm=Inf	45	xcomp	45:xcomp	Entity=abstract-65)|SpaceAfter=No
 48	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = sub
 # sent_id = AMALGUM_news_electoral-14
-# text = At that point , the Senate and House of Representatives would have chosen a president from among the three candidates who received the most electoral votes : Trump , Clinton and Powell .
+# s_type = sub
+# text = At that point, the Senate and House of Representatives would have chosen a president from among the three candidates who received the most electoral votes: Trump, Clinton and Powell.
 1	At	at	ADP	IN	_	3	case	3:case	Discourse=elaboration:43->38
 2	that	that	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(time-66
-3	point	point	NOUN	NN	Number=Sing	13	obl	13:obl:at	Entity=time-66)
+3	point	point	NOUN	NN	Number=Sing	13	obl	13:obl:at	Entity=time-66)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(organization-67
 6	Senate	Senate	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Entity=organization-67)
@@ -454,18 +456,18 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(abstract-11
 24	most	most	ADJ	JJS	Degree=Sup	26	amod	26:amod	_
 25	electoral	electoral	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	votes	vote	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=person-70)abstract-11)
+26	votes	vote	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=person-70)abstract-11)|SpaceAfter=No
 27	:	:	PUNCT	:	_	28	punct	28:punct	_
-28	Trump	Trump	PROPN	NNP	Number=Sing	20	appos	20:appos	Discourse=elaboration:45->43|Entity=(person-70(person-6)
+28	Trump	Trump	PROPN	NNP	Number=Sing	20	appos	20:appos	Discourse=elaboration:45->43|Entity=(person-70(person-6)|SpaceAfter=No
 29	,	,	PUNCT	,	_	30	punct	30:punct	_
 30	Clinton	Clinton	PROPN	NNP	Number=Sing	28	conj	20:appos|28:conj:and	Entity=(person-70)
 31	and	and	CCONJ	CC	_	32	cc	32:cc	_
-32	Powell	Powell	PROPN	NNP	Number=Sing	28	conj	20:appos|28:conj:and	Entity=person-70)(person-70)
+32	Powell	Powell	PROPN	NNP	Number=Sing	28	conj	20:appos|28:conj:and	Entity=person-70)(person-70)|SpaceAfter=No
 33	.	.	PUNCT	.	_	13	punct	13:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-15
-# text = Both houses of congress currently have Republican party majorities .
+# s_type = decl
+# text = Both houses of congress currently have Republican party majorities.
 1	Both	both	DET	DT	_	2	det	2:det	Discourse=elaboration:46->43|Entity=(organization-71
 2	houses	house	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
@@ -474,16 +476,16 @@
 6	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	Republican	Republican	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(abstract-72(organization-73
 8	party	party	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=organization-73)
-9	majorities	majority	NOUN	NNS	Number=Plur	6	obj	6:obj	Entity=abstract-72)
+9	majorities	majority	NOUN	NNS	Number=Plur	6	obj	6:obj	Entity=abstract-72)|SpaceAfter=No
 10	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-16
-# text = In the United States , the president is not elected through a direct popular vote .
+# s_type = decl
+# text = In the United States, the president is not elected through a direct popular vote.
 1	In	in	ADP	IN	_	4	case	4:case	Discourse=preparation:47->49
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(place-74
 3	United	Unite	VERB	NNP	Number=Sing	4	amod	4:amod	_
-4	States	State	PROPN	NNPS	Number=Plur	10	obl	10:obl:in	Entity=place-74)
+4	States	State	PROPN	NNPS	Number=Plur	10	obl	10:obl:in	Entity=place-74)|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(person-69
 7	president	president	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	Entity=person-69)
@@ -494,13 +496,13 @@
 12	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	Entity=(abstract-3
 13	direct	direct	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 14	popular	popular	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	vote	vote	NOUN	NN	Number=Sing	10	obl	10:obl:through	Entity=abstract-3)
+15	vote	vote	NOUN	NN	Number=Sing	10	obl	10:obl:through	Entity=abstract-3)|SpaceAfter=No
 16	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-17
-# text = Rather , each U.S. state is given one presidential elector for each of its senators and representatives .
-1	Rather	rather	ADV	RB	_	7	advmod	7:advmod	Discourse=preparation:48->49
+# s_type = decl
+# text = Rather, each U.S. state is given one presidential elector for each of its senators and representatives.
+1	Rather	rather	ADV	RB	_	7	advmod	7:advmod	Discourse=preparation:48->49|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	each	each	DET	DT	_	5	det	5:det	Entity=(place-75
 4	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	5	compound	5:compound	Entity=(place-2)
@@ -516,15 +518,15 @@
 14	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	Entity=(person-70(place-75)
 15	senators	senator	NOUN	NNS	Number=Plur	12	nmod	12:nmod:of	Entity=person-70)
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
-17	representatives	representative	NOUN	NNS	Number=Plur	15	conj	12:nmod:of|15:conj:and	Entity=(person-56)
+17	representatives	representative	NOUN	NNS	Number=Plur	15	conj	12:nmod:of|15:conj:and	Entity=(person-56)|SpaceAfter=No
 18	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-18
-# text = In most states , whoever wins the popular vote within that state is slated to receive all of that state 's electoral votes .
+# s_type = decl
+# text = In most states, whoever wins the popular vote within that state is slated to receive all of that state's electoral votes.
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:49->43
 2	most	most	ADJ	JJS	Degree=Sup	3	amod	3:amod	Entity=(place-74
-3	states	state	NOUN	NNS	Number=Plur	14	obl	14:obl:in	Entity=place-74)
+3	states	state	NOUN	NNS	Number=Plur	14	obl	14:obl:in	Entity=place-74)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	whoever	whoever	PRON	WP	PronType=Int	14	nsubj:pass	14:nsubj:pass|16:nsubj:xsubj	_
 6	wins	win	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	acl	5:acl	_
@@ -541,15 +543,16 @@
 17	all	all	PRON	DT	_	16	obj	16:obj	Entity=(abstract-11
 18	of	of	ADP	IN	_	23	case	23:case	_
 19	that	that	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	_
+20-21	state's	_	_	_	_	_	_	_	_
 20	state	state	NOUN	NN	Number=Sing	23	nmod:poss	23:nmod:poss	Entity=(place-75
 21	's	's	PART	POS	_	20	case	20:case	Entity=place-75)
 22	electoral	electoral	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
-23	votes	vote	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of	Entity=abstract-11)
+23	votes	vote	NOUN	NNS	Number=Plur	17	nmod	17:nmod:of	Entity=abstract-11)|SpaceAfter=No
 24	.	.	PUNCT	.	_	14	punct	14:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-19
-# text = Complicating this process is the fact that while tradition dictates that electors must vote their constituencies , only 28 U.S. states have laws requiring them to do so , and no elector who has broken those laws has ever been prosecuted .
+# s_type = decl
+# text = Complicating this process is the fact that while tradition dictates that electors must vote their constituencies, only 28 U.S. states have laws requiring them to do so, and no elector who has broken those laws has ever been prosecuted.
 1	Complicating	complicate	VERB	VBG	VerbForm=Ger	6	acl	6:acl	Discourse=joint:51->49|Entity=(abstract-77
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(abstract-21
 3	process	process	NOUN	NN	Number=Sing	1	obj	1:obj	Entity=abstract-21)
@@ -565,7 +568,7 @@
 13	must	must	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 14	vote	vote	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
 15	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	Entity=(place-79(person-19)
-16	constituencies	constituency	NOUN	NNS	Number=Plur	14	obj	14:obj	Entity=place-79)
+16	constituencies	constituency	NOUN	NNS	Number=Plur	14	obj	14:obj	Entity=place-79)|SpaceAfter=No
 17	,	,	PUNCT	,	_	10	punct	10:punct	_
 18	only	only	ADV	RB	_	19	advmod	19:advmod	Discourse=same_unit:54->52|Entity=(place-74
 19	28	28	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	_
@@ -577,7 +580,7 @@
 25	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	24	obj	24:obj|27:nsubj:xsubj	Entity=(person-19)
 26	to	to	PART	TO	_	27	mark	27:mark	_
 27	do	do	VERB	VB	VerbForm=Inf	24	xcomp	24:xcomp	_
-28	so	so	ADV	RB	_	27	advmod	27:advmod	Entity=abstract-80)
+28	so	so	ADV	RB	_	27	advmod	27:advmod	Entity=abstract-80)|SpaceAfter=No
 29	,	,	PUNCT	,	_	41	punct	41:punct	_
 30	and	and	CCONJ	CC	_	41	cc	41:cc	Discourse=same_unit:56->54
 31	no	no	DET	DT	Polarity=Neg	32	det	32:det	Entity=(person-76
@@ -590,24 +593,25 @@
 38	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	41	aux	41:aux	Discourse=same_unit:58->56
 39	ever	ever	ADV	RB	Degree=Pos	41	advmod	41:advmod	_
 40	been	be	AUX	VBN	Tense=Past|VerbForm=Part	41	aux:pass	41:aux:pass	_
-41	prosecuted	prosecute	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	22	conj	6:acl:that|22:conj:and	Entity=abstract-77)
+41	prosecuted	prosecute	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	22	conj	6:acl:that|22:conj:and	Entity=abstract-77)|SpaceAfter=No
 42	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-20
-# text = This year , there were seven faithless electors , with two of Trump 's electors and five of Hilary Clinton 's voting their own consciences .
+# s_type = decl
+# text = This year, there were seven faithless electors, with two of Trump's electors and five of Hilary Clinton's voting their own consciences.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	Discourse=preparation:59->60|Entity=(time-81
-2	year	year	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=time-81)
+2	year	year	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=time-81)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	there	there	PRON	EX	_	5	expl	5:expl	_
 5	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	seven	7	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	Entity=(person-19
 7	faithless	faithless	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	electors	elector	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=person-19)
+8	electors	elector	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=person-19)|SpaceAfter=No
 9	,	,	PUNCT	,	_	22	punct	22:punct	_
 10	with	with	SCONJ	IN	_	22	mark	22:mark	Discourse=joint:60->49
 11	two	2	NUM	CD	NumForm=Digit|NumType=Card	22	nsubj	22:nsubj	Entity=(person-82
 12	of	of	ADP	IN	_	15	case	15:case	_
+13-14	Trump's	_	_	_	_	_	_	_	_
 13	Trump	Trump	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	Entity=(person-19(person-6
 14	's	's	PART	POS	_	13	case	13:case	Entity=person-6)
 15	electors	elector	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	Entity=person-19)
@@ -615,17 +619,18 @@
 17	five	5	NUM	CD	NumForm=Digit|NumType=Card	15	conj	11:nmod:of|15:conj:and	Entity=(person-25
 18	of	of	ADP	IN	_	19	case	19:case	_
 19	Hilary	Hilary	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=(person-25
+20-21	Clinton's	_	_	_	_	_	_	_	_
 20	Clinton	Clinton	PROPN	NNP	Number=Sing	19	flat	19:flat	_
 21	's	's	PART	POS	_	19	case	19:case	Entity=person-82)person-25)person-25)
 22	voting	vote	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:with	_
 23	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	Entity=(abstract-83(person-19)
 24	own	own	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	consciences	conscience	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=abstract-83)
+25	consciences	conscience	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=abstract-83)|SpaceAfter=No
 26	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-21
-# text = There were protesters present in the gallery as the votes were counted .
+# s_type = decl
+# text = There were protesters present in the gallery as the votes were counted.
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:61->60
 2	were	be	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	protesters	protester	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	Entity=(person-84
@@ -637,37 +642,37 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(abstract-11
 10	votes	vote	NOUN	NNS	Number=Plur	12	nsubj:pass	12:nsubj:pass	Entity=abstract-11)
 11	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	12:aux:pass	_
-12	counted	count	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl	3:acl:as	Entity=person-84)
+12	counted	count	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	acl	3:acl:as	Entity=person-84)|SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-22
-# text = Three of them were removed by security , with one man shouting " One person , one vote ! "
+# s_type = decl
+# text = Three of them were removed by security, with one man shouting "One person, one vote!"
 1	Three	3	NUM	CD	NumForm=Digit|NumType=Card	5	nsubj:pass	5:nsubj:pass	Discourse=attribution:63->64|Entity=(abstract-85
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	1	nmod	1:nmod:of	Entity=abstract-85)(abstract-11)
 4	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	by	by	ADP	IN	_	7	case	7:case	_
-7	security	security	NOUN	NN	Number=Sing	5	obl	5:obl:by	Entity=(abstract-86)
+7	security	security	NOUN	NN	Number=Sing	5	obl	5:obl:by	Entity=(abstract-86)|SpaceAfter=No
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	with	with	SCONJ	IN	_	12	mark	12:mark	Discourse=joint:64->61
 10	one	one	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	Entity=(person-87
 11	man	man	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	Entity=person-87)
 12	shouting	shout	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl:with	Discourse=attribution:65->66
-13	"	''	PUNCT	``	_	15	punct	15:punct	Discourse=elaboration:66->64
+13	"	''	PUNCT	``	_	15	punct	15:punct	Discourse=elaboration:66->64|SpaceAfter=No
 14	One	one	NUM	CD	NumForm=Word|NumType=Card	15	nummod	15:nummod	Entity=(person-88
-15	person	person	NOUN	NN	Number=Sing	12	ccomp	12:ccomp	Entity=person-88)
+15	person	person	NOUN	NN	Number=Sing	12	ccomp	12:ccomp	Entity=person-88)|SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	one	one	NUM	CD	NumForm=Word|NumType=Card	18	nummod	18:nummod	Entity=(abstract-3
-18	vote	vote	NOUN	NN	Number=Sing	15	appos	15:appos	Entity=abstract-3)
-19	!	!	PUNCT	.	_	15	punct	15:punct	_
+18	vote	vote	NOUN	NN	Number=Sing	15	appos	15:appos	Entity=abstract-3)|SpaceAfter=No
+19	!	!	PUNCT	.	_	15	punct	15:punct	SpaceAfter=No
 20	"	''	PUNCT	''	_	15	punct	15:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-23
-# text = Customarily , the votes are read out loud in alphabetical order by state name .
-1	Customarily	customarily	ADV	RB	Degree=Pos	6	advmod	6:advmod	Discourse=joint:67->64
+# s_type = decl
+# text = Customarily, the votes are read out loud in alphabetical order by state name.
+1	Customarily	customarily	ADV	RB	Degree=Pos	6	advmod	6:advmod	Discourse=joint:67->64|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-11
 4	votes	vote	NOUN	NNS	Number=Plur	6	nsubj:pass	6:nsubj:pass	Entity=abstract-11)
@@ -680,15 +685,15 @@
 11	order	order	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=abstract-57)
 12	by	by	ADP	IN	_	14	case	14:case	_
 13	state	state	NOUN	NN	Number=Sing	14	compound	14:compound	Entity=(abstract-89(place-75)
-14	name	name	NOUN	NN	Number=Sing	6	obl	6:obl:by	Entity=abstract-89)
+14	name	name	NOUN	NN	Number=Sing	6	obl	6:obl:by	Entity=abstract-89)|SpaceAfter=No
 15	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-24
-# text = In U.S. history , objections to electoral votes have been rare and have been overruled by the rest of Congress .
+# s_type = decl
+# text = In U.S. history, objections to electoral votes have been rare and have been overruled by the rest of Congress.
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:68->67
 2	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	3	compound	3:compound	Entity=(abstract-90(place-2)
-3	history	history	NOUN	NN	Number=Sing	11	obl	11:obl:in	Entity=abstract-90)
+3	history	history	NOUN	NN	Number=Sing	11	obl	11:obl:in	Entity=abstract-90)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	objections	objection	NOUN	NNS	Number=Plur	11	nsubj	11:nsubj	Entity=(abstract-32
 6	to	to	ADP	IN	_	8	case	8:case	_
@@ -705,12 +710,12 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(person-91
 18	rest	rest	NOUN	NN	Number=Sing	15	obl	15:obl:by	_
 19	of	of	ADP	IN	_	20	case	20:case	_
-20	Congress	Congress	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=person-91)(organization-1)
+20	Congress	Congress	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=person-91)(organization-1)|SpaceAfter=No
 21	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_electoral-25
-# text = The presidency has gone to someone who lost the popular vote but won the electoral vote five times in U.S. history , most recently to Donald Trump in 2016 and George W. Bush in 2000 .
+# s_type = decl
+# text = The presidency has gone to someone who lost the popular vote but won the electoral vote five times in U.S. history, most recently to Donald Trump in 2016 and George W. Bush in 2000.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:70->68|Entity=(abstract-92
 2	presidency	presidency	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-92)
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
@@ -731,7 +736,7 @@
 18	times	time	NOUN	NNS	Number=Plur	13	obl:npmod	13:obl:npmod	_
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	21	compound	21:compound	Entity=(abstract-90(place-2)
-21	history	history	NOUN	NN	Number=Sing	18	nmod	18:nmod:in	Entity=time-94)abstract-90)
+21	history	history	NOUN	NN	Number=Sing	18	nmod	18:nmod:in	Entity=time-94)abstract-90)|SpaceAfter=No
 22	,	,	PUNCT	,	_	26	punct	26:punct	_
 23	most	most	ADV	RBS	Degree=Sup	24	advmod	24:advmod	Discourse=same_unit:73->72|Entity=(person-6(person-6
 24	recently	recently	ADV	RB	Degree=Pos	26	advmod	26:advmod	_
@@ -745,6 +750,6 @@
 32	W.	W.	PROPN	NNP	Number=Sing	31	flat	31:flat	_
 33	Bush	Bush	PROPN	NNP	Number=Sing	31	flat	31:flat	Entity=person-93)person-6)person-69)
 34	in	in	ADP	IN	_	35	case	35:case	_
-35	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	31	orphan	31:orphan	Entity=(time-96)
+35	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	31	orphan	31:orphan	Entity=(time-96)|SpaceAfter=No
 36	.	.	PUNCT	.	_	4	punct	4:punct	_
 
