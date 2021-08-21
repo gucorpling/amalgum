@@ -1,25 +1,25 @@
-# s_type = frag
 # newdoc id = AMALGUM_academic_graph
 # sent_id = AMALGUM_academic_graph-1
+# s_type = frag
 # text = 2. Laplacian Graph Embedding
 1	2.	2.	X	LS	_	4	dep	4:dep	Discourse=preparation:1->4
 2	Laplacian	Laplacian	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-1(object-2(place-3)
 3	Graph	graph	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=object-2)
 4	Embedding	embedding	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-1)
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-2
+# s_type = frag
 # text = 2.1. One-dimensional Embedding
 1	2.1.	2.1.	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Discourse=preparation:2->4
 2	One-dimensional	One-dimensional	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(abstract-1
 3	Embedding	embedding	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-1)
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-3
-# text = In this paper , we assume an undirected and connected graph .
+# s_type = decl
+# text = In this paper, we assume an undirected and connected graph.
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=preparation:3->4
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(abstract-4
-3	paper	paper	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=abstract-4)
+3	paper	paper	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=abstract-4)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	Entity=(person-5)
 6	assume	assume	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -27,11 +27,11 @@
 8	undirected	undirected	ADJ	JJ	Degree=Pos|Polarity=Neg	11	amod	11:amod	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
 10	connected	connect	VERB	VBN	Tense=Past|VerbForm=Part	8	conj	8:conj:and|11:amod	_
-11	graph	graph	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=abstract-6)
+11	graph	graph	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=abstract-6)|SpaceAfter=No
 12	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-4
+# s_type = decl
 # text = The graph is represented by sets of vertices and edges .
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=ROOT:4|Entity=(abstract-6
 2	graph	graph	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass	Entity=abstract-6)
@@ -45,13 +45,13 @@
 10	edges	edge	NOUN	NNS	Number=Plur	8	conj	6:nmod:of|8:conj:and	Entity=abstract-7)(place-9)
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-5
-# text = Given a weighted graph , edge weights are represented as a weight matrix .
+# s_type = decl
+# text = Given a weighted graph, edge weights are represented as a weight matrix .
 1	Given	give	VERB	VBN	Tense=Past|VerbForm=Part	9	advcl	9:advcl	Discourse=elaboration:5->4
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(abstract-6
 3	weighted	weight	VERB	VBN	Tense=Past|VerbForm=Part	4	amod	4:amod	_
-4	graph	graph	NOUN	NN	Number=Sing	1	obj	1:obj	Entity=abstract-6)
+4	graph	graph	NOUN	NN	Number=Sing	1	obj	1:obj	Entity=abstract-6)|SpaceAfter=No
 5	,	,	PUNCT	,	_	1	punct	1:punct	_
 6	edge	edge	NOUN	NN	Number=Sing	7	compound	7:compound	Discourse=joint:6->5|Entity=(abstract-10(abstract-11)
 7	weights	weight	NOUN	NNS	Number=Plur	9	nsubj:pass	9:nsubj:pass	Entity=abstract-10)
@@ -63,9 +63,9 @@
 13	matrix	matrix	NOUN	NN	Number=Sing	9	obl	9:obl:as	Entity=abstract-12)
 14	.	.	PUNCT	.	_	9	punct	9:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-6
-# text = One-dimensional graph embedding finds a configuration of embedded vertices in one-dimensional space , such that the vertices ’ proximities from the edge weights are preserved as the embedded vertices ’ distances .
+# s_type = decl
+# text = One-dimensional graph embedding finds a configuration of embedded vertices in one-dimensional space, such that the vertices’ proximities from the edge weights are preserved as the embedded vertices’ distances.
 1	One-dimensional	One-dimensional	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=joint:7->4|Entity=(abstract-1
 2	graph	graph	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(abstract-6)
 3	embedding	embedding	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-1)
@@ -77,11 +77,12 @@
 9	vertices	vertice	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	one-dimensional	one-dimensional	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(abstract-15
-12	space	space	NOUN	NN	Number=Sing	9	nmod	9:nmod:in	Entity=abstract-14)abstract-8)abstract-15)
+12	space	space	NOUN	NN	Number=Sing	9	nmod	9:nmod:in	Entity=abstract-14)abstract-8)abstract-15)|SpaceAfter=No
 13	,	,	PUNCT	,	_	25	punct	25:punct	_
 14	such	such	SCONJ	JJ	Degree=Pos	25	mark	25:mark	Discourse=elaboration:8->7
 15	that	that	SCONJ	IN	_	25	mark	25:mark	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(abstract-16
+17-18	vertices’	_	_	_	_	_	_	_	_
 17	vertices	vertice	NOUN	NNS	Number=Plur	19	nmod:poss	19:nmod:poss	Entity=(abstract-8
 18	’	's	PART	POS	_	17	case	17:case	Entity=abstract-8)
 19	proximities	proximity	NOUN	NNS	Number=Plur	25	nsubj:pass	25:nsubj:pass	_
@@ -94,14 +95,15 @@
 26	as	as	ADP	IN	_	31	case	31:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(abstract-17
 28	embedded	embd	VERB	VBN	Tense=Past|VerbForm=Part	29	amod	29:amod	Entity=(abstract-8
+29-30	vertices’	_	_	_	_	_	_	_	_
 29	vertices	vertice	NOUN	NNS	Number=Plur	31	nmod:poss	31:nmod:poss	_
 30	’	's	PART	POS	_	29	case	29:case	Entity=abstract-8)
-31	distances	distance	NOUN	NNS	Number=Plur	25	obl	25:obl:as	Entity=abstract-17)
+31	distances	distance	NOUN	NNS	Number=Plur	25	obl	25:obl:as	Entity=abstract-17)|SpaceAfter=No
 32	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-7
-# text = Assuming each entry of a column vector as coordinates of the embedded vertices , this problem can be solved through minimization of the following objective function .
+# s_type = decl
+# text = Assuming each entry of a column vector as coordinates of the embedded vertices, this problem can be solved through minimization of the following objective function.
 1	Assuming	assume	VERB	VBG	VerbForm=Ger	19	advcl	19:advcl	Discourse=attribution:9->10
 2	each	each	DET	DT	_	3	det	3:det	Entity=(place-18
 3	entry	entry	NOUN	NN	Number=Sing	1	obj	1:obj	_
@@ -114,7 +116,7 @@
 10	of	of	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(abstract-8
 12	embedded	embd	VERB	VBN	Tense=Past|VerbForm=Part	13	amod	13:amod	_
-13	vertices	vertice	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	Entity=place-18)abstract-21)abstract-8)
+13	vertices	vertice	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	Entity=place-18)abstract-21)abstract-8)|SpaceAfter=No
 14	,	,	PUNCT	,	_	1	punct	1:punct	_
 15	this	this	DET	DT	Number=Sing|PronType=Dem	16	det	16:det	Discourse=elaboration:10->7|Entity=(abstract-22
 16	problem	problem	NOUN	NN	Number=Sing	19	nsubj:pass	19:nsubj:pass	Entity=abstract-22)
@@ -127,19 +129,19 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(abstract-24
 24	following	follow	VERB	VBG	VerbForm=Ger	26	amod	26:amod	_
 25	objective	objective	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	function	function	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=abstract-23)abstract-24)
+26	function	function	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=abstract-23)abstract-24)|SpaceAfter=No
 27	.	.	PUNCT	.	_	19	punct	19:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-8
-# text = ( 1 )
-1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=evidence:11->10
-2	1	1	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-25)
+# s_type = frag
+# text = (1)
+1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=evidence:11->10|SpaceAfter=No
+2	1	1	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-25)|SpaceAfter=No
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
-# s_type = sub
 # sent_id = AMALGUM_academic_graph-9
-# text = This function could be minimized when vertices i and j with large are embedded at close coordinates , whereas vertices with small are embedded into distant coordinates .
+# s_type = sub
+# text = This function could be minimized when vertices i and j with large are embedded at close coordinates, whereas vertices with small are embedded into distant coordinates.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	2	det	2:det	Discourse=joint:12->4|Entity=(abstract-24
 2	function	function	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	Entity=abstract-24)
 3	could	could	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
@@ -156,7 +158,7 @@
 14	embedded	embd	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	5	advcl	5:advcl:when	_
 15	at	at	ADP	IN	_	17	case	17:case	_
 16	close	close	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(abstract-21
-17	coordinates	coordinate	NOUN	NNS	Number=Plur	14	obl	14:obl:at	Entity=abstract-21)
+17	coordinates	coordinate	NOUN	NNS	Number=Plur	14	obl	14:obl:at	Entity=abstract-21)|SpaceAfter=No
 18	,	,	PUNCT	,	_	24	punct	24:punct	_
 19	whereas	whereas	SCONJ	IN	_	24	mark	24:mark	Discourse=circumstance:14->12
 20	vertices	vertice	NOUN	NNS	Number=Plur	24	nsubj:pass	24:nsubj:pass	Entity=(abstract-8
@@ -166,15 +168,15 @@
 24	embedded	embd	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	14	advcl	14:advcl:whereas	_
 25	into	into	ADP	IN	_	27	case	27:case	_
 26	distant	distant	ADJ	JJ	Degree=Pos	27	amod	27:amod	Entity=(abstract-27
-27	coordinates	coordinate	NOUN	NNS	Number=Plur	24	obl	24:obl:into	Entity=abstract-27)
+27	coordinates	coordinate	NOUN	NNS	Number=Plur	24	obl	24:obl:into	Entity=abstract-27)|SpaceAfter=No
 28	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-10
-# text = In this study , this mathematical property is applied as follows :
+# s_type = decl
+# text = In this study, this mathematical property is applied as follows:
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=preparation:15->16
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(abstract-28
-3	study	study	NOUN	NN	Number=Sing	9	obl	9:obl:in	Entity=abstract-28)
+3	study	study	NOUN	NN	Number=Sing	9	obl	9:obl:in	Entity=abstract-28)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	7	det	7:det	Entity=(abstract-29
 6	mathematical	mathematical	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -182,21 +184,21 @@
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	applied	apply	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	as	as	SCONJ	IN	_	11	mark	11:mark	_
-11	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:as	_
+11	follows	follow	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	advcl	9:advcl:as	SpaceAfter=No
 12	:	:	PUNCT	:	_	9	punct	9:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-11
-# text = feature classes ( e.g. , land-use category and record ) with a greater degree of object sharing have close coordinates in their embedding space and feature classes with a lesser degree of object sharing have distant coordinates .
+# s_type = decl
+# text = feature classes (e.g., land-use category and record) with a greater degree of object sharing have close coordinates in their embedding space and feature classes with a lesser degree of object sharing have distant coordinates.
 1	feature	feature	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=joint:16->4|Entity=(abstract-30(abstract-31)
 2	classes	class	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	Entity=abstract-30)
-3	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=elaboration:17->16|Entity=(abstract-30
-4	e.g.	e.g.	ADV	FW	Abbr=Yes	7	advmod	7:advmod	Entity=(abstract-30
+3	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=elaboration:17->16|Entity=(abstract-30|SpaceAfter=No
+4	e.g.	e.g.	ADV	FW	Abbr=Yes	7	advmod	7:advmod	Entity=(abstract-30|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	land-use	land-use	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(abstract-32)
 7	category	category	NOUN	NN	Number=Sing	2	appos	2:appos	Entity=abstract-30)
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	record	record	NOUN	NN	Number=Sing	7	conj	2:appos|7:conj:and	Entity=(abstract-30
+9	record	record	NOUN	NN	Number=Sing	7	conj	2:appos|7:conj:and	Entity=(abstract-30|SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
 11	with	with	ADP	IN	_	14	case	14:case	Discourse=same_unit:18->16
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(abstract-33
@@ -224,15 +226,15 @@
 34	sharing	share	VERB	VBG	VerbForm=Ger	31	nmod	31:nmod:of	Entity=abstract-30)abstract-36)
 35	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	parataxis	18:parataxis	_
 36	distant	distant	ADJ	JJ	Degree=Pos	37	amod	37:amod	Entity=(abstract-27
-37	coordinates	coordinate	NOUN	NNS	Number=Plur	35	obj	35:obj	Entity=abstract-27)
+37	coordinates	coordinate	NOUN	NNS	Number=Plur	35	obj	35:obj	Entity=abstract-27)|SpaceAfter=No
 38	.	.	PUNCT	.	_	18	punct	18:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-12
-# text = Equation ( 1 ) can be expressed in a matrix operation form with a Laplacian matrix , and can be represented as Equation ( 2 ) . ( 2 ) where , the Laplacian matrix is defined as Equation ( 3 ) with a vertex degree matrix whose diagonal entries are obtained as and the remaining entries are 0 . ( 3 )
+# s_type = decl
+# text = Equation (1) can be expressed in a matrix operation form with a Laplacian matrix , and can be represented as Equation (2). (2) where, the Laplacian matrix is defined as Equation (3) with a vertex degree matrix whose diagonal entries are obtained as and the remaining entries are 0. (3)
 1	Equation	equation	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass|21:nsubj:pass	Discourse=joint:21->16|Entity=(abstract-37
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	_
-3	1	1	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(abstract-25)
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
+3	1	1	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(abstract-25)|SpaceAfter=No
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	Entity=abstract-37)
 5	can	can	AUX	MD	VerbForm=Fin	7	aux	7:aux	_
 6	be	be	AUX	VB	VerbForm=Inf	7	aux:pass	7:aux:pass	_
@@ -253,14 +255,14 @@
 21	represented	represent	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	conj	7:conj:and	_
 22	as	as	ADP	IN	_	23	case	23:case	_
 23	Equation	Equation	PROPN	NNP	Number=Sing	21	obl	21:obl:as	Entity=(abstract-37
-24	(	(	PUNCT	:	_	25	punct	25:punct	_
-25	2	2	NUM	CD	NumForm=Digit|NumType=Card	23	dep	23:dep	_
-26	)	)	PUNCT	-RRB-	_	25	punct	25:punct	Entity=abstract-37)
+24	(	(	PUNCT	:	_	25	punct	25:punct	SpaceAfter=No
+25	2	2	NUM	CD	NumForm=Digit|NumType=Card	23	dep	23:dep	SpaceAfter=No
+26	)	)	PUNCT	-RRB-	_	25	punct	25:punct	Entity=abstract-37)|SpaceAfter=No
 27	.	.	PUNCT	.	_	29	punct	29:punct	_
-28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=elaboration:23->22
-29	2	2	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	_
+28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=elaboration:23->22|SpaceAfter=No
+29	2	2	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	SpaceAfter=No
 30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	_
-31	where	where	SCONJ	WRB	PronType=Int	37	mark	37:mark	Discourse=elaboration:24->23
+31	where	where	SCONJ	WRB	PronType=Int	37	mark	37:mark	Discourse=elaboration:24->23|SpaceAfter=No
 32	,	,	PUNCT	,	_	31	punct	31:punct	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	Entity=(abstract-12
 34	Laplacian	laplacian	NOUN	NN	Number=Sing	35	compound	35:compound	Entity=(place-3)
@@ -269,8 +271,8 @@
 37	defined	define	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	parataxis	7:parataxis	_
 38	as	as	ADP	IN	_	39	case	39:case	_
 39	Equation	Equation	PROPN	NNP	Number=Sing	37	obl	37:obl:as	Entity=(abstract-37
-40	(	(	PUNCT	-LRB-	_	41	punct	41:punct	_
-41	3	3	NUM	CD	NumForm=Digit|NumType=Card	39	dep	39:dep	_
+40	(	(	PUNCT	-LRB-	_	41	punct	41:punct	SpaceAfter=No
+41	3	3	NUM	CD	NumForm=Digit|NumType=Card	39	dep	39:dep	SpaceAfter=No
 42	)	)	PUNCT	-RRB-	_	41	punct	41:punct	Entity=abstract-37)
 43	with	with	ADP	IN	_	47	case	47:case	_
 44	a	a	DET	DT	Definite=Ind|PronType=Art	47	det	47:det	Entity=(abstract-12
@@ -288,16 +290,16 @@
 56	remaining	remain	VERB	VBG	VerbForm=Ger	57	amod	57:amod	_
 57	entries	entry	NOUN	NNS	Number=Plur	59	nsubj	59:nsubj	Entity=abstract-41)
 58	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	59	cop	59:cop	_
-59	0	0	NUM	CD	NumForm=Digit|NumType=Card	52	conj	47:acl:relcl|52:conj:and	Entity=abstract-12)(abstract-42)
+59	0	0	NUM	CD	NumForm=Digit|NumType=Card	52	conj	47:acl:relcl|52:conj:and	Entity=abstract-12)(abstract-42)|SpaceAfter=No
 60	.	.	PUNCT	.	_	7	punct	7:punct	_
-61	(	(	PUNCT	-LRB-	_	62	punct	62:punct	Discourse=elaboration:27->26
-62	3	3	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	_
+61	(	(	PUNCT	-LRB-	_	62	punct	62:punct	Discourse=elaboration:27->26|SpaceAfter=No
+62	3	3	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	SpaceAfter=No
 63	)	)	PUNCT	-RRB-	_	62	punct	62:punct	_
 
-# s_type = sub
 # sent_id = AMALGUM_academic_graph-13
-# text = Now , the problem can be changed to find a vector that minimizes , and can be represented as Equation ( 4 ) .
-1	Now	now	ADV	RB	_	7	advmod	7:advmod	Discourse=joint:28->16
+# s_type = sub
+# text = Now, the problem can be changed to find a vector that minimizes , and can be represented as Equation (4).
+1	Now	now	ADV	RB	_	7	advmod	7:advmod	Discourse=joint:28->16|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-22
 4	problem	problem	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass|9:nsubj:xsubj	Entity=abstract-22)
@@ -317,21 +319,21 @@
 18	represented	represent	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	conj	11:acl:relcl|13:conj:and	Entity=abstract-19)
 19	as	as	ADP	IN	_	20	case	20:case	_
 20	Equation	Equation	PROPN	NNP	Number=Sing	18	obl	18:obl:as	Entity=(abstract-37
-21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	_
-22	4	4	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=(abstract-43)
-23	)	)	PUNCT	-RRB-	_	22	punct	22:punct	Entity=abstract-37)
+21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	SpaceAfter=No
+22	4	4	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=(abstract-43)|SpaceAfter=No
+23	)	)	PUNCT	-RRB-	_	22	punct	22:punct	Entity=abstract-37)|SpaceAfter=No
 24	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-14
-# text = ( 4 )
-1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=restatement:32->28
-2	4	4	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-43)
+# s_type = frag
+# text = (4)
+1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=restatement:32->28|SpaceAfter=No
+2	4	4	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-43)|SpaceAfter=No
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-15
-# text = Since the value of is vulnerable to the scaling of a vector , a constraint is imposed to remove any such arbitrary scaling effect .
+# s_type = decl
+# text = Since the value of is vulnerable to the scaling of a vector , a constraint is imposed to remove any such arbitrary scaling effect.
 1	Since	since	SCONJ	IN	_	6	mark	6:mark	Discourse=concession:33->34
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-44
 3	value	value	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
@@ -355,12 +357,12 @@
 21	such	such	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 22	arbitrary	arbitrary	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 23	scaling	scaling	NOUN	NN	Number=Sing	24	compound	24:compound	Entity=(abstract-45)
-24	effect	effect	NOUN	NN	Number=Sing	19	obj	19:obj	Entity=abstract-47)
+24	effect	effect	NOUN	NN	Number=Sing	19	obj	19:obj	Entity=abstract-47)|SpaceAfter=No
 25	.	.	PUNCT	.	_	17	punct	17:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-16
-# text = The diagonal matrix provides weights on the vertices , so that the higher is , the more important is that vertex .
+# s_type = decl
+# text = The diagonal matrix provides weights on the vertices, so that the higher is, the more important is that vertex.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:36->16|Entity=(abstract-12
 2	diagonal	diagonal	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	matrix	matrix	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-12)
@@ -368,28 +370,28 @@
 5	weights	weight	NOUN	NNS	Number=Plur	4	obj	4:obj	Entity=(abstract-10)
 6	on	on	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(abstract-8
-8	vertices	vertice	NOUN	NNS	Number=Plur	4	obl	4:obl:on	Entity=abstract-8)
+8	vertices	vertice	NOUN	NNS	Number=Plur	4	obl	4:obl:on	Entity=abstract-8)|SpaceAfter=No
 9	,	,	PUNCT	,	_	18	punct	18:punct	_
 10	so	so	SCONJ	IN	_	18	mark	18:mark	Discourse=purpose:37->36
 11	that	that	ADP	IN	_	10	fixed	10:fixed	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	_
 13	higher	high	ADJ	JJR	Degree=Cmp	14	nsubj	14:nsubj	_
-14	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl	_
+14	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	advcl	18:advcl	SpaceAfter=No
 15	,	,	PUNCT	,	_	14	punct	14:punct	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Discourse=elaboration:38->37
 17	more	more	ADV	RBR	Degree=Cmp	18	advmod	18:advmod	_
 18	important	important	ADJ	JJ	Degree=Pos	4	advcl	4:advcl:so_that	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
 20	that	that	DET	DT	Number=Sing|PronType=Dem	21	det	21:det	Entity=(place-40
-21	vertex	vertex	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	Entity=place-40)
+21	vertex	vertex	NOUN	NN	Number=Sing	18	nsubj	18:nsubj	Entity=place-40)|SpaceAfter=No
 22	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-17
-# text = Equation ( 4 ) with the constraint can be solved by the Lagrange multiplier method as in Equations ( 5 ) – ( 7 ) .
+# s_type = decl
+# text = Equation (4) with the constraint can be solved by the Lagrange multiplier method as in Equations (5)–(7).
 1	Equation	equation	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	Discourse=joint:39->16|Entity=(abstract-37
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	_
-3	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(abstract-43)
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
+3	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(abstract-43)|SpaceAfter=No
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 5	with	with	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(abstract-46
@@ -405,38 +407,38 @@
 16	as	as	SCONJ	IN	_	18	mark	18:mark	_
 17	in	in	ADP	IN	_	18	case	18:case	_
 18	Equations	Equation	PROPN	NNPS	Number=Plur	10	advcl	10:advcl:as	Entity=(abstract-50
-19	(	(	PUNCT	-LRB-	_	20	punct	20:punct	_
-20	5	5	NUM	CD	NumForm=Digit|NumType=Card	10	dep	10:dep	_
-21	)	)	PUNCT	-RRB-	_	20	punct	20:punct	_
-22	–	-	SYM	SYM	_	24	cc	24:cc	_
-23	(	(	PUNCT	-LRB-	_	24	punct	24:punct	_
-24	7	7	NUM	CD	NumForm=Digit|NumType=Card	18	dep	18:dep	_
-25	)	)	PUNCT	-RRB-	_	24	punct	24:punct	Entity=abstract-50)
+19	(	(	PUNCT	-LRB-	_	20	punct	20:punct	SpaceAfter=No
+20	5	5	NUM	CD	NumForm=Digit|NumType=Card	10	dep	10:dep	SpaceAfter=No
+21	)	)	PUNCT	-RRB-	_	20	punct	20:punct	SpaceAfter=No
+22	–	-	SYM	SYM	_	24	cc	24:cc	SpaceAfter=No
+23	(	(	PUNCT	-LRB-	_	24	punct	24:punct	SpaceAfter=No
+24	7	7	NUM	CD	NumForm=Digit|NumType=Card	18	dep	18:dep	SpaceAfter=No
+25	)	)	PUNCT	-RRB-	_	24	punct	24:punct	Entity=abstract-50)|SpaceAfter=No
 26	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-18
-# text = ( 5 ) ( 6 ) ( 7 )
-1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=restatement:40->39
-2	5	5	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-51)
+# s_type = frag
+# text = (5) (6) (7)
+1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=restatement:40->39|SpaceAfter=No
+2	5	5	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-51)|SpaceAfter=No
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
-4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=evaluation:41->39
-5	6	6	NUM	CD	NumForm=Digit|NumType=Card	2	conj	2:conj	Entity=(abstract-52)
+4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=evaluation:41->39|SpaceAfter=No
+5	6	6	NUM	CD	NumForm=Digit|NumType=Card	2	conj	2:conj	Entity=(abstract-52)|SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
-7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=restatement:42->41
-8	7	7	NUM	CD	NumForm=Digit|NumType=Card	5	conj	2:conj|5:conj	Entity=(abstract-53)
+7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=restatement:42->41|SpaceAfter=No
+8	7	7	NUM	CD	NumForm=Digit|NumType=Card	5	conj	2:conj|5:conj	Entity=(abstract-53)|SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-19
-# text = Thus , the solution of one-dimensional embedding , , is obtained by solving the eigenproblem .
-1	Thus	thus	ADV	RB	_	11	advmod	11:advmod	Discourse=joint:43->16
+# s_type = decl
+# text = Thus, the solution of one-dimensional embedding, , is obtained by solving the eigenproblem .
+1	Thus	thus	ADV	RB	_	11	advmod	11:advmod	Discourse=joint:43->16|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-54
 4	solution	solution	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	one-dimensional	one-dimensional	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(abstract-1
-7	embedding	embedding	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-54)abstract-1)
+7	embedding	embedding	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-54)abstract-1)|SpaceAfter=No
 8	,	,	PUNCT	,	_	4	punct	4:punct	_
 9	,	,	PUNCT	,	_	4	punct	4:punct	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
@@ -447,10 +449,10 @@
 15	eigenproblem	eigenproblem	NOUN	NN	Number=Sing	13	obj	13:obj	Entity=abstract-55)
 16	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-20
-# text = However , according to the rank of matrix , there could be more than one eigenvector .
-1	However	however	ADV	RB	_	16	advmod	16:advmod	Discourse=concession:45->46
+# s_type = decl
+# text = However, according to the rank of matrix , there could be more than one eigenvector.
+1	However	however	ADV	RB	_	16	advmod	16:advmod	Discourse=concession:45->46|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	according	accord	VERB	VBG	VerbForm=Ger	6	case	6:case	_
 4	to	to	ADP	IN	_	3	fixed	3:fixed	_
@@ -465,19 +467,19 @@
 13	more	more	ADV	RBR	Degree=Cmp	15	advmod	15:advmod	Entity=(abstract-57
 14	than	than	ADP	IN	_	13	fixed	13:fixed	_
 15	one	one	NUM	CD	NumForm=Word|NumType=Card	16	nummod	16:nummod	_
-16	eigenvector	eigenvector	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-57)
+16	eigenvector	eigenvector	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-57)|SpaceAfter=No
 17	.	.	PUNCT	.	_	16	punct	16:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-21
-# text = In the field of graph spectral theory , the eigenvector corresponding to the smallest eigenvalue larger than 0 is the proven solution , which is called a Fiedler vector .
+# s_type = decl
+# text = In the field of graph spectral theory, the eigenvector corresponding to the smallest eigenvalue larger than 0 is the proven solution, which is called a Fiedler vector.
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=concession:47->43
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-58
 3	field	field	NOUN	NN	Number=Sing	22	nmod	22:nmod:in	_
 4	of	of	ADP	IN	_	7	case	7:case	_
 5	graph	graph	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(abstract-59(abstract-6)
 6	spectral	spectral	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	theory	theory	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	Entity=abstract-58)abstract-59)
+7	theory	theory	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	Entity=abstract-58)abstract-59)|SpaceAfter=No
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(abstract-57
 10	eigenvector	eigenvector	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
@@ -492,20 +494,20 @@
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	cop	22:cop	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(abstract-57
 21	proven	prove	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	solution	solution	NOUN	NN	Number=Sing	0	root	0:root|26:nsubj:pass	_
+22	solution	solution	NOUN	NN	Number=Sing	0	root	0:root|26:nsubj:pass	SpaceAfter=No
 23	,	,	PUNCT	,	_	26	punct	26:punct	_
 24	which	which	PRON	WDT	PronType=Rel	26	nsubj:pass	22:ref	Discourse=elaboration:49->48
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	aux:pass	26:aux:pass	_
 26	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	22	acl:relcl	22:acl:relcl	_
 27	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	Entity=(abstract-19
 28	Fiedler	Fiedler	PROPN	NNP	Number=Sing	29	compound	29:compound	Entity=(person-61)
-29	vector	vector	NOUN	NN	Number=Sing	26	xcomp	26:xcomp	Entity=abstract-57)abstract-19)
+29	vector	vector	NOUN	NN	Number=Sing	26	xcomp	26:xcomp	Entity=abstract-57)abstract-19)|SpaceAfter=No
 30	.	.	PUNCT	.	_	22	punct	22:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-22
-# text = Thus , the coordinates of vertices in one-dimensional embedding are obtained as components of the Fiedler vector as represented by Equation ( 7 ) .
-1	Thus	thus	ADV	RB	_	11	advmod	11:advmod	Discourse=joint:50->47
+# s_type = decl
+# text = Thus, the coordinates of vertices in one-dimensional embedding are obtained as components of the Fiedler vector as represented by Equation (7).
+1	Thus	thus	ADV	RB	_	11	advmod	11:advmod	Discourse=joint:50->47|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-27
 4	coordinates	coordinate	NOUN	NNS	Number=Plur	11	nsubj:pass	11:nsubj:pass	_
@@ -526,36 +528,36 @@
 19	represented	represent	VERB	VBN	Tense=Past|VerbForm=Part	11	advcl	11:advcl:as	_
 20	by	by	ADP	IN	_	21	case	21:case	_
 21	Equation	Equation	PROPN	NNP	Number=Sing	19	obl	19:obl:by	Entity=(abstract-37
-22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	_
-23	7	7	NUM	CD	NumForm=Digit|NumType=Card	21	nmod:tmod	21:nmod:tmod	Entity=(abstract-53)
-24	)	)	PUNCT	-RRB-	_	23	punct	23:punct	Entity=abstract-37)
+22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	SpaceAfter=No
+23	7	7	NUM	CD	NumForm=Digit|NumType=Card	21	nmod:tmod	21:nmod:tmod	Entity=(abstract-53)|SpaceAfter=No
+24	)	)	PUNCT	-RRB-	_	23	punct	23:punct	Entity=abstract-37)|SpaceAfter=No
 25	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-23
+# s_type = frag
 # text = 2.2.
 1	2.2.	2.2.	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Discourse=joint:52->50|Entity=(abstract-63)
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-24
+# s_type = frag
 # text = k-dimensional Embedding
 1	k-dimensional	k-dimensional	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:53->55|Entity=(abstract-1
 2	Embedding	embedding	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-1)
 
-# s_type = imp
 # sent_id = AMALGUM_academic_graph-25
-# text = Now , consider k-dimensional graph embedding .
-1	Now	now	ADV	RB	_	3	advmod	3:advmod	Discourse=preparation:54->55
+# s_type = imp
+# text = Now, consider k-dimensional graph embedding.
+1	Now	now	ADV	RB	_	3	advmod	3:advmod	Discourse=preparation:54->55|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	consider	consider	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	_
 4	k-dimensional	k-dimensional	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(abstract-1
 5	graph	graph	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(abstract-6)
-6	embedding	embedding	NOUN	NN	Number=Sing	3	obj	3:obj	Entity=abstract-1)
+6	embedding	embedding	NOUN	NN	Number=Sing	3	obj	3:obj	Entity=abstract-1)|SpaceAfter=No
 7	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-26
-# text = These embedded coordinates are represented as an matrix , so that the i th row of , , contains the k-dimensional coordinates of vertex .
+# s_type = decl
+# text = These embedded coordinates are represented as an matrix , so that the ith row of , , contains the k-dimensional coordinates of vertex .
 1	These	this	DET	DT	Number=Plur|PronType=Dem	3	det	3:det	Discourse=joint:55->52|Entity=(abstract-27
 2	embedded	embd	VERB	VBN	Tense=Past|VerbForm=Part	3	amod	3:amod	_
 3	coordinates	coordinate	NOUN	NNS	Number=Plur	5	nsubj:pass	5:nsubj:pass	Entity=abstract-27)
@@ -568,7 +570,7 @@
 10	so	so	SCONJ	IN	_	19	mark	19:mark	Discourse=result:56->55
 11	that	that	ADP	IN	_	10	fixed	10:fixed	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-64
-13	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	compound	14:compound	Entity=(abstract-12)
+13	i	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	14	compound	14:compound	Entity=(abstract-12)|SpaceAfter=No
 14	th	th	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	row	row	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	Entity=abstract-64)
 16	of	of	ADP	IN	_	15	case	15:case	_
@@ -582,10 +584,10 @@
 24	vertex	vertex	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	Entity=abstract-65)(place-40)
 25	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-27
-# text = Now , an objective function is defined as Equation ( 8 ) with the constraint , . ( 8 )
-1	Now	now	ADV	RB	_	7	advmod	7:advmod	Discourse=joint:57->55
+# s_type = decl
+# text = Now, an objective function is defined as Equation (8) with the constraint, . (8)
+1	Now	now	ADV	RB	_	7	advmod	7:advmod	Discourse=joint:57->55|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	an	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(abstract-24
 4	objective	objective	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -594,21 +596,21 @@
 7	defined	define	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	as	as	ADP	IN	_	9	case	9:case	_
 9	Equation	Equation	PROPN	NNP	Number=Sing	7	obl	7:obl:as	Entity=(abstract-37
-10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	_
-11	8	8	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=(abstract-66)
+10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	SpaceAfter=No
+11	8	8	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=(abstract-66)|SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	Entity=abstract-37)
 13	with	with	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-46
-15	constraint	constraint	NOUN	NN	Number=Sing	7	obl	7:obl:with	Entity=abstract-46)
+15	constraint	constraint	NOUN	NN	Number=Sing	7	obl	7:obl:with	Entity=abstract-46)|SpaceAfter=No
 16	,	,	PUNCT	,	_	19	punct	19:punct	_
 17	.	.	PUNCT	.	_	7	punct	7:punct	_
-18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	_
-19	8	8	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	_
+18	(	(	PUNCT	-LRB-	_	19	punct	19:punct	SpaceAfter=No
+19	8	8	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	SpaceAfter=No
 20	)	)	PUNCT	-RRB-	_	19	punct	19:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-28
-# text = Sameh and Wisniewski proved that the solution to this trace minimization problem is obtained by the k-eigenvectors of that correspond to its smallest eigenvalues other than 0 .
+# s_type = decl
+# text = Sameh and Wisniewski proved that the solution to this trace minimization problem is obtained by the k-eigenvectors of that correspond to its smallest eigenvalues other than 0.
 1	Sameh	Sameh	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=attribution:58->59|Entity=(person-67)
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	Wisniewski	Wisniewski	PROPN	NNP	Number=Sing	1	conj	1:conj:and|4:nsubj	_
@@ -635,20 +637,20 @@
 24	eigenvalues	eigenvalue	NOUN	NNS	Number=Plur	20	obl	20:obl:to	_
 25	other	other	ADJ	JJ	Degree=Pos	24	amod	24:amod	Entity=abstract-70)abstract-71)
 26	than	than	ADP	IN	_	27	case	27:case	_
-27	0	0	NUM	CD	NumForm=Digit|NumType=Card	25	obl	25:obl:than	Entity=(abstract-42)
+27	0	0	NUM	CD	NumForm=Digit|NumType=Card	25	obl	25:obl:than	Entity=(abstract-42)|SpaceAfter=No
 28	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-29
-# text = Thus , the solution of Equation ( 8 ) is obtained by a matrix , where represents an eigenvector corresponding to eigenvalue under the condition .
-1	Thus	thus	ADV	RB	_	11	advmod	11:advmod	Discourse=joint:61->59
+# s_type = decl
+# text = Thus, the solution of Equation (8) is obtained by a matrix , where represents an eigenvector corresponding to eigenvalue under the condition .
+1	Thus	thus	ADV	RB	_	11	advmod	11:advmod	Discourse=joint:61->59|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-57
 4	solution	solution	NOUN	NN	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
 5	of	of	ADP	IN	_	6	case	6:case	_
 6	Equation	Equation	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-57)(abstract-37)
-7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	_
-8	8	8	NUM	CD	NumForm=Digit|NumType=Card	6	appos	6:appos	Entity=(abstract-37)
+7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
+8	8	8	NUM	CD	NumForm=Digit|NumType=Card	6	appos	6:appos	Entity=(abstract-37)|SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	aux:pass	11:aux:pass	_
 11	obtained	obtain	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -668,10 +670,10 @@
 25	condition	condition	NOUN	NN	Number=Sing	20	obl	20:obl:under	Entity=abstract-12)abstract-57)abstract-72)
 26	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-30
-# text = However , the constraint normalizes the scales of the coordinates in each dimension .
-1	However	however	ADV	RB	_	5	advmod	5:advmod	Discourse=concession:64->61
+# s_type = decl
+# text = However, the constraint normalizes the scales of the coordinates in each dimension.
+1	However	however	ADV	RB	_	5	advmod	5:advmod	Discourse=concession:64->61|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-46
 4	constraint	constraint	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=abstract-46)
@@ -683,13 +685,13 @@
 10	coordinates	coordinate	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 11	in	in	ADP	IN	_	13	case	13:case	_
 12	each	each	DET	DT	_	13	det	13:det	Entity=(abstract-74
-13	dimension	dimension	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	Entity=abstract-73)abstract-65)abstract-74)
+13	dimension	dimension	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	Entity=abstract-73)abstract-65)abstract-74)|SpaceAfter=No
 14	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-31
-# text = Thus , it is necessary to rescale them according to each dimension ’s relative importance .
-1	Thus	thus	ADV	RB	_	5	advmod	5:advmod	Discourse=joint:65->64
+# s_type = decl
+# text = Thus, it is necessary to rescale them according to each dimension’s relative importance.
+1	Thus	thus	ADV	RB	_	5	advmod	5:advmod	Discourse=joint:65->64|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	5	expl	5:expl	Entity=(abstract-74)
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
@@ -700,15 +702,16 @@
 9	according	accord	ADJ	JJ	Degree=Pos	15	case	15:case	Discourse=circumstance:66->65
 10	to	to	ADP	IN	_	9	fixed	9:fixed	_
 11	each	each	DET	DT	_	12	det	12:det	Entity=(abstract-75
+12-13	dimension’s	_	_	_	_	_	_	_	_
 12	dimension	dimension	NOUN	NN	Number=Sing	15	nmod:poss	15:nmod:poss	Entity=(abstract-74
 13	’s	's	PART	POS	_	12	case	12:case	Entity=abstract-74)
 14	relative	relative	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	importance	importance	NOUN	NN	Number=Sing	7	obl	7:obl:accord_to	Entity=abstract-75)
+15	importance	importance	NOUN	NN	Number=Sing	7	obl	7:obl:accord_to	Entity=abstract-75)|SpaceAfter=No
 16	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-32
-# text = Sameh and Wisniewski also proved that the minimum value of in Equation ( 8 ) equals the sum of the corresponding eigenvalues , as shown by Equation ( 9 ) .
+# s_type = decl
+# text = Sameh and Wisniewski also proved that the minimum value of in Equation (8) equals the sum of the corresponding eigenvalues, as shown by Equation (9).
 1	Sameh	Sameh	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=attribution:67->68|Entity=(person-67)
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	Wisniewski	Wisniewski	PROPN	NNP	Number=Sing	1	conj	1:conj:and|5:nsubj	_
@@ -721,8 +724,8 @@
 10	of	of	ADP	IN	_	12	case	12:case	_
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	Equation	Equation	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of_in	Entity=(abstract-37
-13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	_
-14	8	8	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=(abstract-37)
+13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	SpaceAfter=No
+14	8	8	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=(abstract-37)|SpaceAfter=No
 15	)	)	PUNCT	-RRB-	_	14	punct	14:punct	Entity=abstract-44)abstract-37)
 16	equals	equal	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	ccomp	5:ccomp	Discourse=same_unit:69->68
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(abstract-76
@@ -730,28 +733,28 @@
 19	of	of	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(abstract-71
 21	corresponding	corresponding	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
-22	eigenvalues	eigenvalue	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	Entity=abstract-76)abstract-71)
+22	eigenvalues	eigenvalue	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	Entity=abstract-76)abstract-71)|SpaceAfter=No
 23	,	,	PUNCT	,	_	25	punct	25:punct	_
 24	as	as	SCONJ	IN	_	25	mark	25:mark	Discourse=same_unit:70->68
 25	shown	show	VERB	VBN	Tense=Past|VerbForm=Part	16	advcl	16:advcl:as	_
 26	by	by	ADP	IN	_	27	case	27:case	_
 27	Equation	Equation	PROPN	NNP	Number=Sing	25	obl	25:obl:by	Entity=(abstract-37)
-28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	_
-29	9	9	NUM	CD	NumForm=Digit|NumType=Card	27	appos	27:appos	Entity=(abstract-37)
-30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	_
+28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	SpaceAfter=No
+29	9	9	NUM	CD	NumForm=Digit|NumType=Card	27	appos	27:appos	Entity=(abstract-37)|SpaceAfter=No
+30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	SpaceAfter=No
 31	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_academic_graph-33
-# text = ( 9 )
-1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=restatement:71->68
-2	9	9	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-37)
+# s_type = frag
+# text = (9)
+1	(	(	PUNCT	-LRB-	_	2	punct	2:punct	Discourse=restatement:71->68|SpaceAfter=No
+2	9	9	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	Entity=(abstract-37)|SpaceAfter=No
 3	)	)	PUNCT	-RRB-	_	2	punct	2:punct	_
 
-# s_type = sub
 # sent_id = AMALGUM_academic_graph-34
-# text = Accordingly , we can assume the eigenvalue as the amount of either the penalty or the cost caused by the i th dimensional space in the embedding problem .
-1	Accordingly	accordingly	ADV	RB	Degree=Pos	5	advmod	5:advmod	Discourse=joint:72->68
+# s_type = sub
+# text = Accordingly, we can assume the eigenvalue as the amount of either the penalty or the cost caused by the ith dimensional space in the embedding problem.
+1	Accordingly	accordingly	ADV	RB	Degree=Pos	5	advmod	5:advmod	Discourse=joint:72->68|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-77)
 4	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
@@ -771,20 +774,20 @@
 18	caused	cause	VERB	VBN	Tense=Past|VerbForm=Part	17	acl	17:acl	Discourse=elaboration:73->72
 19	by	by	ADP	IN	_	24	case	24:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(abstract-81
-21	i	I	NUM	NNP	Number=Sing	22	nummod	22:nummod	_
+21	i	I	NUM	NNP	Number=Sing	22	nummod	22:nummod	SpaceAfter=No
 22	th	th	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 23	dimensional	dimensional	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	space	space	NOUN	NN	Number=Sing	18	obl	18:obl:by	_
 25	in	in	ADP	IN	_	28	case	28:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(abstract-22
 27	embedding	embedding	NOUN	NN	Number=Sing	28	compound	28:compound	Entity=(abstract-1)
-28	problem	problem	NOUN	NN	Number=Sing	24	nmod	24:nmod:in	Entity=abstract-78)abstract-80)abstract-81)abstract-22)
+28	problem	problem	NOUN	NN	Number=Sing	24	nmod	24:nmod:in	Entity=abstract-78)abstract-80)abstract-81)abstract-22)|SpaceAfter=No
 29	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-35
-# text = So , when , it is appropriate to apply more weight to than in measuring the proximity for a clustering analysis .
-1	So	so	ADV	RB	_	7	advmod	7:advmod	Discourse=joint:74->72
+# s_type = decl
+# text = So, when , it is appropriate to apply more weight to than in measuring the proximity for a clustering analysis.
+1	So	so	ADV	RB	_	7	advmod	7:advmod	Discourse=joint:74->72|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	when	when	SCONJ	WRB	PronType=Int	7	discourse	7:discourse	_
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
@@ -804,17 +807,17 @@
 18	for	for	ADP	IN	_	21	case	21:case	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	Entity=(abstract-84
 20	clustering	clustering	NOUN	NN	Number=Sing	21	compound	21:compound	Entity=(abstract-85)
-21	analysis	analysis	NOUN	NN	Number=Sing	17	nmod	17:nmod:for	Entity=abstract-83)abstract-84)
+21	analysis	analysis	NOUN	NN	Number=Sing	17	nmod	17:nmod:for	Entity=abstract-83)abstract-84)|SpaceAfter=No
 22	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_academic_graph-36
-# text = Based on these mathematical properties , we determined the embedded coordinates as Equation ( 10 ) , because the increase in distance is proportional to that of the root-squared coordinate difference . ( 10 )
+# s_type = decl
+# text = Based on these mathematical properties, we determined the embedded coordinates as Equation (10), because the increase in distance is proportional to that of the root-squared coordinate difference. (10)
 1	Based	base	VERB	VBN	Tense=Past|VerbForm=Part	8	advcl	8:advcl	Discourse=elaboration:75->74
 2	on	on	ADP	IN	_	5	case	5:case	_
 3	these	this	DET	DT	Number=Plur|PronType=Dem	5	det	5:det	Entity=(abstract-86
 4	mathematical	mathematical	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	properties	property	NOUN	NNS	Number=Plur	1	obl	1:obl:on	Entity=abstract-86)
+5	properties	property	NOUN	NNS	Number=Plur	1	obl	1:obl:on	Entity=abstract-86)|SpaceAfter=No
 6	,	,	PUNCT	,	_	1	punct	1:punct	_
 7	we	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	8	nsubj	8:nsubj	Discourse=joint:76->75|Entity=(person-77)
 8	determined	determine	VERB	VBD	Mood=Ind|Number=Plur|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -823,9 +826,9 @@
 11	coordinates	coordinate	NOUN	NNS	Number=Plur	8	obj	8:obj	Entity=abstract-65)
 12	as	as	ADP	IN	_	13	case	13:case	_
 13	Equation	Equation	PROPN	NNP	Number=Sing	8	obl	8:obl:as	Entity=(abstract-37
-14	(	(	PUNCT	-LRB-	_	15	punct	15:punct	_
-15	10	10	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=(abstract-87)
-16	)	)	PUNCT	-RRB-	_	15	punct	15:punct	Entity=abstract-37)
+14	(	(	PUNCT	-LRB-	_	15	punct	15:punct	SpaceAfter=No
+15	10	10	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=(abstract-87)|SpaceAfter=No
+16	)	)	PUNCT	-RRB-	_	15	punct	15:punct	Entity=abstract-37)|SpaceAfter=No
 17	,	,	PUNCT	,	_	24	punct	24:punct	_
 18	because	because	SCONJ	IN	_	24	mark	24:mark	Discourse=cause:77->76
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(abstract-88
@@ -840,9 +843,9 @@
 28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(abstract-90
 29	root-squared	root-squared	ADJ	JJ	Degree=Pos	31	amod	31:amod	_
 30	coordinate	coordinate	NOUN	NN	Number=Sing	31	compound	31:compound	Entity=(abstract-91)
-31	difference	difference	NOUN	NN	Number=Sing	26	nmod	26:nmod:of	Entity=abstract-89)abstract-90)
+31	difference	difference	NOUN	NN	Number=Sing	26	nmod	26:nmod:of	Entity=abstract-89)abstract-90)|SpaceAfter=No
 32	.	.	PUNCT	.	_	8	punct	8:punct	_
-33	(	(	PUNCT	-LRB-	_	34	punct	34:punct	Discourse=restatement:78->77
-34	10	10	NUM	CD	NumForm=Digit|NumType=Card	8	dep	8:dep	_
+33	(	(	PUNCT	-LRB-	_	34	punct	34:punct	Discourse=restatement:78->77|SpaceAfter=No
+34	10	10	NUM	CD	NumForm=Digit|NumType=Card	8	dep	8:dep	SpaceAfter=No
 35	)	)	PUNCT	-RRB-	_	34	punct	34:punct	_
 
