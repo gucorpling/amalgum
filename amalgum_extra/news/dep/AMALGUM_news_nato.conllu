@@ -1,28 +1,28 @@
-# s_type = decl
 # newdoc id = AMALGUM_news_nato
 # sent_id = AMALGUM_news_nato-1
-# text = Merkel : Georgia will join NATO
-1	Merkel	Merkel	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->2|Entity=(person-1)
+# s_type = decl
+# text = Merkel: Georgia will join NATO
+1	Merkel	Merkel	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->2|Entity=(person-1)|SpaceAfter=No
 2	:	:	PUNCT	:	_	5	punct	5:punct	_
 3	Georgia	Georgia	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=preparation:2->4|Entity=(place-2)
 4	will	will	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	join	join	VERB	VB	VerbForm=Inf	1	parataxis	1:parataxis	_
-6	NATO	NATO	PROPN	NNP	Abbr=Yes|Number=Sing	5	obj	5:obj	Entity=(organization-3)
+6	NATO	NATO	PROPN	NNP	Abbr=Yes|Number=Sing	5	obj	5:obj	Entity=(organization-3)|SpaceAfter=No
 
-# s_type = frag
 # sent_id = AMALGUM_news_nato-2
-# text = Sunday , August 17 , 2008
-1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-4)
+# s_type = frag
+# text = Sunday, August 17, 2008
+1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-4)|SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
-4	17	17	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	_
+4	17	17	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-3
-# text = " Georgia will become a NATO member if it wants to , and it does want to , " German Chancellor Angela Merkel said in an apparent change in Germany 's position during her Sunday visit to Tbilisi , Georgia .
-1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=ROOT:4
+# s_type = decl
+# text = "Georgia will become a NATO member if it wants to, and it does want to," German Chancellor Angela Merkel said in an apparent change in Germany's position during her Sunday visit to Tbilisi, Georgia.
+1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=ROOT:4|SpaceAfter=No
 2	Georgia	Georgia	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|7:nsubj:xsubj	Entity=(place-2)
 3	will	will	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 4	become	become	VERB	VB	VerbForm=Inf	24	ccomp	24:ccomp	_
@@ -32,14 +32,14 @@
 8	if	if	SCONJ	IN	_	10	mark	10:mark	Discourse=condition:5->4
 9	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	10	nsubj	10:nsubj|11:nsubj:xsubj	Entity=(place-2)
 10	wants	want	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	advcl	4:advcl:if	_
-11	to	to	PART	TO	_	10	xcomp	10:xcomp	_
+11	to	to	PART	TO	_	10	xcomp	10:xcomp	SpaceAfter=No
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=joint:6->4
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj	16:nsubj|17:nsubj:xsubj	Entity=(place-2)
 15	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	_
 16	want	want	VERB	VB	VerbForm=Inf	4	conj	4:conj:and|24:ccomp	_
-17	to	to	PART	TO	_	16	xcomp	16:xcomp	_
-18	,	,	PUNCT	,	_	4	punct	4:punct	_
+17	to	to	PART	TO	_	16	xcomp	16:xcomp	SpaceAfter=No
+18	,	,	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 19	"	''	PUNCT	''	_	4	punct	4:punct	_
 20	German	German	ADJ	JJ	Degree=Pos	21	amod	21:amod	Discourse=attribution:7->6|Entity=(person-1
 21	Chancellor	Chancellor	PROPN	NNP	Number=Sing	24	nsubj	24:nsubj	_
@@ -51,6 +51,7 @@
 27	apparent	apparent	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	change	change	NOUN	NN	Number=Sing	24	obl	24:obl:in	_
 29	in	in	ADP	IN	_	32	case	32:case	_
+30-31	Germany's	_	_	_	_	_	_	_	_
 30	Germany	Germany	PROPN	NNP	Number=Sing	32	nmod:poss	32:nmod:poss	Entity=(abstract-7(place-8
 31	's	's	PART	POS	_	30	case	30:case	Entity=place-8)
 32	position	position	NOUN	NN	Number=Sing	28	nmod	28:nmod:in	Entity=event-6)abstract-7)
@@ -59,20 +60,22 @@
 35	Sunday	Sunday	PROPN	NNP	Number=Sing	36	compound	36:compound	Entity=(time-4)
 36	visit	visit	NOUN	NN	Number=Sing	24	obl	24:obl:during	_
 37	to	to	ADP	IN	_	38	case	38:case	_
-38	Tbilisi	Tbilisi	PROPN	NNP	Number=Sing	36	nmod	36:nmod:to	Entity=(place-10
+38	Tbilisi	Tbilisi	PROPN	NNP	Number=Sing	36	nmod	36:nmod:to	Entity=(place-10|SpaceAfter=No
 39	,	,	PUNCT	,	_	40	punct	40:punct	_
-40	Georgia	Georgia	PROPN	NNP	Number=Sing	38	appos	38:appos	Entity=event-9)place-10)(place-2)
+40	Georgia	Georgia	PROPN	NNP	Number=Sing	38	appos	38:appos	Entity=event-9)place-10)(place-2)|SpaceAfter=No
 41	.	.	PUNCT	.	_	24	punct	24:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-4
-# text = Merkel 's statement of support for Georgia 's NATO membership was one of the strongest yet .
+# s_type = decl
+# text = Merkel's statement of support for Georgia's NATO membership was one of the strongest yet.
+1-2	Merkel's	_	_	_	_	_	_	_	_
 1	Merkel	Merkel	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=sequence:8->4|Entity=(abstract-11(person-1
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-1)
 3	statement	statement	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	support	support	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	Entity=(abstract-12
 6	for	for	ADP	IN	_	10	case	10:case	_
+7-8	Georgia's	_	_	_	_	_	_	_	_
 7	Georgia	Georgia	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	Entity=(abstract-13(place-2
 8	's	's	PART	POS	_	7	case	7:case	Entity=place-2)
 9	NATO	NATO	PROPN	NNP	Abbr=Yes|Number=Sing	10	compound	10:compound	Entity=(organization-3)
@@ -82,12 +85,13 @@
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	_
 15	strongest	strong	ADJ	JJS	Degree=Sup	12	nmod	12:nmod:of	_
-16	yet	yet	ADV	RB	_	15	advmod	15:advmod	Entity=abstract-14)
+16	yet	yet	ADV	RB	_	15	advmod	15:advmod	Entity=abstract-14)|SpaceAfter=No
 17	.	.	PUNCT	.	_	12	punct	12:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-5
-# text = Tbilisi 's bid to join NATO is fiercely opposed by Moscow .
+# s_type = decl
+# text = Tbilisi's bid to join NATO is fiercely opposed by Moscow.
+1-2	Tbilisi's	_	_	_	_	_	_	_	_
 1	Tbilisi	Tbilisi	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:9->8|Entity=(event-15(place-10
 2	's	's	PART	POS	_	1	case	1:case	Entity=place-10)
 3	bid	bid	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	_
@@ -98,12 +102,12 @@
 8	fiercely	fiercely	ADV	RB	Degree=Pos	9	advmod	9:advmod	_
 9	opposed	oppose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	by	by	ADP	IN	_	11	case	11:case	_
-11	Moscow	Moscow	PROPN	NNP	Number=Sing	9	obl	9:obl:by	Entity=(place-16)
+11	Moscow	Moscow	PROPN	NNP	Number=Sing	9	obl	9:obl:by	Entity=(place-16)|SpaceAfter=No
 12	.	.	PUNCT	.	_	9	punct	9:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-6
-# text = During her meeting with Georgian President Mikheil Saakashvili , Merkel stated that Georgia 's territorial integrity and its independence have to be respected .
+# s_type = decl
+# text = During her meeting with Georgian President Mikheil Saakashvili, Merkel stated that Georgia's territorial integrity and its independence have to be respected.
 1	During	during	ADP	IN	_	3	case	3:case	Discourse=attribution:11->12
 2	her	her	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	Entity=(event-17(person-1)
 3	meeting	meeting	NOUN	NN	Number=Sing	11	obl	11:obl:during	_
@@ -111,11 +115,12 @@
 5	Georgian	Georgian	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(person-18
 6	President	President	NOUN	NN	Number=Sing	3	nmod	3:nmod:with	_
 7	Mikheil	Mikheil	PROPN	NNP	Number=Sing	6	flat	6:flat	_
-8	Saakashvili	Saakashvili	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=event-17)person-18)
+8	Saakashvili	Saakashvili	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=event-17)person-18)|SpaceAfter=No
 9	,	,	PUNCT	,	_	3	punct	3:punct	_
 10	Merkel	Merkel	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	Entity=(person-1)
 11	stated	state	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 12	that	that	SCONJ	IN	_	20	mark	20:mark	Discourse=joint:12->8
+13-14	Georgia's	_	_	_	_	_	_	_	_
 13	Georgia	Georgia	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(abstract-19(place-2
 14	's	's	PART	POS	_	13	case	13:case	Entity=place-2)
 15	territorial	territorial	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -126,12 +131,12 @@
 20	have	have	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	11	ccomp	11:ccomp	_
 21	to	to	PART	TO	_	23	mark	23:mark	_
 22	be	be	AUX	VB	VerbForm=Inf	23	aux:pass	23:aux:pass	_
-23	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	xcomp	20:xcomp	_
+23	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	xcomp	20:xcomp	SpaceAfter=No
 24	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-7
-# text = After the meeting Merkel said she expected a ' very prompt ' withdrawal of Russian forces from Georgia .
+# s_type = decl
+# text = After the meeting Merkel said she expected a 'very prompt' withdrawal of Russian forces from Georgia.
 1	After	after	ADP	IN	_	3	case	3:case	Discourse=attribution:13->14
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-17
 3	meeting	meeting	NOUN	NN	Number=Sing	5	obl	5:obl:after	Entity=event-17)
@@ -140,21 +145,21 @@
 6	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	Discourse=joint:14->8|Entity=(person-1)
 7	expected	expect	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	ccomp	5:ccomp	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(event-21
-9	'	'	PUNCT	``	_	11	punct	11:punct	_
+9	'	'	PUNCT	``	_	11	punct	11:punct	SpaceAfter=No
 10	very	very	ADV	RB	_	11	advmod	11:advmod	_
-11	prompt	prompt	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
+11	prompt	prompt	ADJ	JJ	Degree=Pos	13	amod	13:amod	SpaceAfter=No
 12	'	'	PUNCT	''	_	11	punct	11:punct	_
 13	withdrawal	withdrawal	NOUN	NN	Number=Sing	7	obj	7:obj	_
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	Russian	Russian	ADJ	JJ	Degree=Pos	16	amod	16:amod	Entity=(organization-22
 16	forces	force	NOUN	NNS	Number=Plur	13	nmod	13:nmod:of	_
 17	from	from	ADP	IN	_	18	case	18:case	_
-18	Georgia	Georgia	PROPN	NNP	Number=Sing	16	nmod	16:nmod:from	Entity=event-21)organization-22)(place-2)
+18	Georgia	Georgia	PROPN	NNP	Number=Sing	16	nmod	16:nmod:from	Entity=event-21)organization-22)(place-2)|SpaceAfter=No
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-8
-# text = In a telephone conversation with French president Nicolas Sarkozy on Sunday , Russian president Dmitry Medvedev declared that Russian troops would start their pullout from Georgia on Monday .
+# s_type = decl
+# text = In a telephone conversation with French president Nicolas Sarkozy on Sunday, Russian president Dmitry Medvedev declared that Russian troops would start their pullout from Georgia on Monday.
 1	In	in	ADP	IN	_	4	case	4:case	Discourse=attribution:15->16
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(event-23
 3	telephone	telephone	NOUN	NN	Number=Sing	4	compound	4:compound	_
@@ -165,7 +170,7 @@
 8	Nicolas	Nicolas	PROPN	NNP	Number=Sing	7	flat	7:flat	_
 9	Sarkozy	Sarkozy	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=person-24)
 10	on	on	ADP	IN	_	11	case	11:case	_
-11	Sunday	Sunday	PROPN	NNP	Number=Sing	4	nmod	4:nmod:on	Entity=event-23)(time-4)
+11	Sunday	Sunday	PROPN	NNP	Number=Sing	4	nmod	4:nmod:on	Entity=event-23)(time-4)|SpaceAfter=No
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
 13	Russian	Russian	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(person-25
 14	president	president	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
@@ -182,12 +187,12 @@
 25	from	from	ADP	IN	_	26	case	26:case	_
 26	Georgia	Georgia	PROPN	NNP	Number=Sing	22	obl	22:obl:from	Entity=(place-2)
 27	on	on	ADP	IN	_	28	case	28:case	_
-28	Monday	Monday	PROPN	NNP	Number=Sing	22	obl	22:obl:on	Entity=(time-29)
+28	Monday	Monday	PROPN	NNP	Number=Sing	22	obl	22:obl:on	Entity=(time-29)|SpaceAfter=No
 29	.	.	PUNCT	.	_	17	punct	17:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-9
-# text = Medvedev explained that Russian troops would be withdrawing to a buffer zone and then to the breakaway province of South Ossetia .
+# s_type = decl
+# text = Medvedev explained that Russian troops would be withdrawing to a buffer zone and then to the breakaway province of South Ossetia.
 1	Medvedev	Medvedev	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:17->18|Entity=(person-25)
 2	explained	explain	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	8	mark	8:mark	Discourse=joint:18->8
@@ -208,12 +213,12 @@
 18	province	province	NOUN	NN	Number=Sing	9	conj	9:conj:and|12:case	_
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	South	South	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(place-33(place-34)
-21	Ossetia	Ossetia	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=place-32)place-33)
+21	Ossetia	Ossetia	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=place-32)place-33)|SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-10
-# text = It remains unclear how long the withdrawal will take .
+# s_type = decl
+# text = It remains unclear how long the withdrawal will take.
 1	It	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	2	expl	2:expl	Discourse=joint:19->8|Entity=(place-32)
 2	remains	remain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	unclear	unclear	ADJ	JJ	Degree=Pos|Polarity=Neg	2	xcomp	2:xcomp	_
@@ -222,12 +227,12 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(event-21
 7	withdrawal	withdrawal	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	Entity=event-21)
 8	will	will	AUX	MD	VerbForm=Fin	9	aux	9:aux	_
-9	take	take	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	_
+9	take	take	VERB	VB	VerbForm=Inf	5	acl:relcl	5:acl:relcl	SpaceAfter=No
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-11
-# text = Sarkozy warned Medvedev on Sunday of serious consequences and damage to the Russian relations with the EU , if Russia failed to fully implement the peace plan it signed .
+# s_type = decl
+# text = Sarkozy warned Medvedev on Sunday of serious consequences and damage to the Russian relations with the EU, if Russia failed to fully implement the peace plan it signed.
 1	Sarkozy	Sarkozy	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:20->8|Entity=(person-25)
 2	warned	warn	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	Medvedev	Medvedev	PROPN	NNP	Number=Sing	2	obj	2:obj	Entity=(person-25)
@@ -244,7 +249,7 @@
 14	relations	relation	NOUN	NNS	Number=Plur	10	nmod	10:nmod:to	_
 15	with	with	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(organization-38
-17	EU	EU	PROPN	NNP	Number=Sing	14	nmod	14:nmod:with	Entity=abstract-36)abstract-37)organization-38)
+17	EU	EU	PROPN	NNP	Number=Sing	14	nmod	14:nmod:with	Entity=abstract-36)abstract-37)organization-38)|SpaceAfter=No
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	if	if	SCONJ	IN	_	21	mark	21:mark	Discourse=condition:21->22
 20	Russia	Russia	PROPN	NNP	Number=Sing	21	nsubj	21:nsubj|24:nsubj:xsubj	Entity=(place-16)
@@ -256,16 +261,17 @@
 26	peace	peace	NOUN	NN	Number=Sing	27	compound	27:compound	Entity=(abstract-40)
 27	plan	plan	NOUN	NN	Number=Sing	24	obj	24:obj	_
 28	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	29	nsubj	29:nsubj	Discourse=same_unit:22->20|Entity=(organization-38)
-29	signed	sign	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	acl:relcl	27:acl:relcl	Entity=abstract-39)
+29	signed	sign	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	acl:relcl	27:acl:relcl	Entity=abstract-39)|SpaceAfter=No
 30	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-12
-# text = Earlier this week , Britain 's Foreign Secretary David Miliband stated that the EU should reassess its relations with Russia after its aggressive actions in Georgia .
+# s_type = decl
+# text = Earlier this week, Britain's Foreign Secretary David Miliband stated that the EU should reassess its relations with Russia after its aggressive actions in Georgia.
 1	Earlier	early	ADV	RBR	Degree=Cmp	3	advmod	3:advmod	Discourse=attribution:23->24|Entity=(time-41
 2	this	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	_
-3	week	week	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	Entity=time-41)
+3	week	week	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	Entity=time-41)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
+5-6	Britain's	_	_	_	_	_	_	_	_
 5	Britain	Britain	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	Entity=(person-42(organization-43
 6	's	's	PART	POS	_	5	case	5:case	Entity=organization-43)
 7	Foreign	Foreign	ADJ	NNP	Number=Sing	8	amod	8:amod	_
@@ -287,12 +293,12 @@
 23	aggressive	aggressive	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	actions	action	NOUN	NNS	Number=Plur	16	obl	16:obl:after	_
 25	in	in	ADP	IN	_	26	case	26:case	_
-26	Georgia	Georgia	PROPN	NNP	Number=Sing	24	nmod	24:nmod:in	Entity=event-44)(place-2)
+26	Georgia	Georgia	PROPN	NNP	Number=Sing	24	nmod	24:nmod:in	Entity=event-44)(place-2)|SpaceAfter=No
 27	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-13
-# text = A Russian lawmaker has compared the situation in Georgia to Iraq and the U.S. presence there .
+# s_type = decl
+# text = A Russian lawmaker has compared the situation in Georgia to Iraq and the U.S. presence there.
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=elaboration:26->24|Entity=(person-45
 2	Russian	Russian	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	lawmaker	lawmaker	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=person-45)
@@ -308,19 +314,20 @@
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-48
 14	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	15	compound	15:compound	Entity=(place-49)
 15	presence	presence	NOUN	NN	Number=Sing	11	conj	5:obl:to|11:conj:and	_
-16	there	there	ADV	RB	PronType=Dem	15	advmod	15:advmod	Entity=abstract-48)
+16	there	there	ADV	RB	PronType=Dem	15	advmod	15:advmod	Entity=abstract-48)|SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-14
-# text = Konstantin Kosachev , chair of the Russian parliament 's security committee told reporters when asked about the withdrawal plan :
+# s_type = decl
+# text = Konstantin Kosachev, chair of the Russian parliament's security committee told reporters when asked about the withdrawal plan:
 1	Konstantin	Konstantin	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	Discourse=preparation:27->29|Entity=(person-50
-2	Kosachev	Kosachev	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-50)
+2	Kosachev	Kosachev	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-50)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	chair	chair	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=(person-50
 5	of	of	ADP	IN	_	11	case	11:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(organization-51
 7	Russian	Russian	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(organization-52
+8-9	parliament's	_	_	_	_	_	_	_	_
 8	parliament	parliament	NOUN	NN	Number=Sing	11	nmod:poss	11:nmod:poss	_
 9	's	's	PART	POS	_	8	case	8:case	Entity=organization-52)
 10	security	security	NOUN	NN	Number=Sing	11	compound	11:compound	Entity=(abstract-53)
@@ -332,13 +339,13 @@
 16	about	about	ADP	IN	_	19	case	19:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(abstract-39
 18	withdrawal	withdrawal	NOUN	NN	Number=Sing	19	compound	19:compound	Entity=(event-21)
-19	plan	plan	NOUN	NN	Number=Sing	15	obl	15:obl:about	Entity=abstract-39)
+19	plan	plan	NOUN	NN	Number=Sing	15	obl	15:obl:about	Entity=abstract-39)|SpaceAfter=No
 20	:	:	PUNCT	:	_	12	punct	12:punct	_
 
-# s_type = sub
 # sent_id = AMALGUM_news_nato-15
-# text = " If I would ask you in response to the same question how fast the American forces can leave Iraq , for example , the answer would be as soon as we have guarantees for peace and security there . "
-1	"	''	PUNCT	``	_	30	punct	30:punct	Discourse=joint:29->8
+# s_type = sub
+# text = "If I would ask you in response to the same question how fast the American forces can leave Iraq, for example, the answer would be as soon as we have guarantees for peace and security there."
+1	"	''	PUNCT	``	_	30	punct	30:punct	Discourse=joint:29->8|SpaceAfter=No
 2	If	if	SCONJ	IN	_	5	mark	5:mark	Discourse=condition:30->31
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-55)
 4	would	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
@@ -357,10 +364,10 @@
 17	forces	force	NOUN	NNS	Number=Plur	19	nsubj	19:nsubj	Entity=organization-58)
 18	can	can	AUX	MD	VerbForm=Fin	19	aux	19:aux	_
 19	leave	leave	VERB	VB	VerbForm=Inf	12	acl:relcl	12:acl:relcl	_
-20	Iraq	Iraq	PROPN	NNP	Number=Sing	19	obj	19:obj	Entity=abstract-57)(place-47)
+20	Iraq	Iraq	PROPN	NNP	Number=Sing	19	obj	19:obj	Entity=abstract-57)(place-47)|SpaceAfter=No
 21	,	,	PUNCT	,	_	5	punct	5:punct	_
 22	for	for	ADP	IN	_	23	case	23:case	_
-23	example	example	NOUN	NN	Number=Sing	30	obl	30:obl:for	_
+23	example	example	NOUN	NN	Number=Sing	30	obl	30:obl:for	SpaceAfter=No
 24	,	,	PUNCT	,	_	23	punct	23:punct	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Discourse=condition:32->31|Entity=(abstract-59
 26	answer	answer	NOUN	NN	Number=Sing	30	nsubj	30:nsubj	Entity=abstract-59)
@@ -376,22 +383,22 @@
 36	peace	peace	NOUN	NN	Number=Sing	34	nmod	34:nmod:for	Entity=(abstract-40)
 37	and	and	CCONJ	CC	_	38	cc	38:cc	_
 38	security	security	NOUN	NN	Number=Sing	36	conj	34:nmod:for|36:conj:and	Entity=abstract-61)(abstract-53)
-39	there	there	ADV	RB	PronType=Dem	33	advmod	33:advmod	_
-40	.	.	PUNCT	.	_	30	punct	30:punct	_
+39	there	there	ADV	RB	PronType=Dem	33	advmod	33:advmod	SpaceAfter=No
+40	.	.	PUNCT	.	_	30	punct	30:punct	SpaceAfter=No
 41	"	''	PUNCT	''	_	30	punct	30:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-16
-# text = At the same time , according to Georgian sources , the Russian troops were occupying 13 Georgian villages , pushing the border of Abkhazia into Georgia proper .
+# s_type = decl
+# text = At the same time, according to Georgian sources, the Russian troops were occupying 13 Georgian villages, pushing the border of Abkhazia into Georgia proper.
 1	At	at	ADP	IN	_	4	case	4:case	Discourse=joint:33->29
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(time-41
 3	same	same	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
-4	time	time	NOUN	NN	Number=Sing	15	obl	15:obl:at	Entity=time-41)
+4	time	time	NOUN	NN	Number=Sing	15	obl	15:obl:at	Entity=time-41)|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	according	accord	VERB	VBG	VerbForm=Ger	9	case	9:case	_
 7	to	to	ADP	IN	_	6	fixed	6:fixed	_
 8	Georgian	Georgian	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(abstract-62
-9	sources	source	NOUN	NNS	Number=Plur	15	obl	15:obl:according_to	Entity=abstract-62)
+9	sources	source	NOUN	NNS	Number=Plur	15	obl	15:obl:according_to	Entity=abstract-62)|SpaceAfter=No
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(organization-26
 12	Russian	Russian	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
@@ -400,7 +407,7 @@
 15	occupying	occupy	VERB	VBG	Tense=Pres|VerbForm=Part	0	root	0:root	_
 16	13	13	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	Entity=(place-63
 17	Georgian	Georgian	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	villages	village	NOUN	NNS	Number=Plur	15	obj	15:obj	Entity=place-63)
+18	villages	village	NOUN	NNS	Number=Plur	15	obj	15:obj	Entity=place-63)|SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
 20	pushing	push	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl	Discourse=elaboration:34->33
 21	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(place-64
@@ -409,12 +416,13 @@
 24	Abkhazia	Abkhazia	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=place-64)(person-65)
 25	into	into	ADP	IN	_	26	case	26:case	_
 26	Georgia	Georgia	PROPN	NNP	Number=Sing	20	obl	20:obl:into	Entity=(place-2)
-27	proper	proper	ADJ	JJ	Degree=Pos	26	dep	26:dep	_
+27	proper	proper	ADJ	JJ	Degree=Pos	26	dep	26:dep	SpaceAfter=No
 28	.	.	PUNCT	.	_	15	punct	15:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-17
-# text = Russia 's Defence Ministry spokesman denied the report , saying that " Russian peacekeepers have been given no orders to move to these populated areas , " .
+# s_type = decl
+# text = Russia's Defence Ministry spokesman denied the report, saying that "Russian peacekeepers have been given no orders to move to these populated areas,".
+1-2	Russia's	_	_	_	_	_	_	_	_
 1	Russia	Russia	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	Discourse=joint:35->29|Entity=(person-66(place-16
 2	's	's	PART	POS	_	1	case	1:case	Entity=place-16)
 3	Defence	Defence	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(organization-67(abstract-68)
@@ -422,11 +430,11 @@
 5	spokesman	spokesman	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	Entity=person-66)
 6	denied	deny	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(abstract-69
-8	report	report	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=abstract-69)
+8	report	report	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=abstract-69)|SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	saying	say	VERB	VBG	VerbForm=Ger	6	advcl	6:advcl	Discourse=attribution:36->37
 11	that	that	SCONJ	IN	_	17	mark	17:mark	Discourse=joint:37->29
-12	"	''	PUNCT	``	_	17	punct	17:punct	_
+12	"	''	PUNCT	``	_	17	punct	17:punct	SpaceAfter=No
 13	Russian	Russian	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(person-70
 14	peacekeepers	peacekeeper	NOUN	NNS	Number=Plur	17	nsubj:pass	17:nsubj:pass	Entity=person-70)
 15	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	17	aux	17:aux	_
@@ -439,14 +447,14 @@
 22	to	to	ADP	IN	_	25	case	25:case	_
 23	these	this	DET	DT	Number=Plur|PronType=Dem	25	det	25:det	Entity=(place-72
 24	populated	populate	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
-25	areas	area	NOUN	NNS	Number=Plur	21	obl	21:obl:to	Entity=place-72)
-26	,	,	PUNCT	,	_	17	punct	17:punct	_
-27	"	''	PUNCT	''	_	17	punct	17:punct	_
+25	areas	area	NOUN	NNS	Number=Plur	21	obl	21:obl:to	Entity=place-72)|SpaceAfter=No
+26	,	,	PUNCT	,	_	17	punct	17:punct	SpaceAfter=No
+27	"	''	PUNCT	''	_	17	punct	17:punct	SpaceAfter=No
 28	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-18
-# text = There have also been reports of Russian helicopters setting fire to Georgian National Park near Borzhomi .
+# s_type = decl
+# text = There have also been reports of Russian helicopters setting fire to Georgian National Park near Borzhomi.
 1	There	there	PRON	EX	_	5	expl	5:expl	Discourse=joint:39->29
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 3	also	also	ADV	RB	_	5	advmod	5:advmod	_
@@ -462,15 +470,16 @@
 13	National	National	PROPN	NNP	Number=Sing	14	compound	14:compound	_
 14	Park	Park	PROPN	NNP	Number=Sing	9	obl	9:obl:to	_
 15	near	near	ADP	IN	_	16	case	16:case	_
-16	Borzhomi	Borzhomi	PROPN	NNP	Number=Sing	14	nmod	14:nmod:near	Entity=abstract-73)place-76)(place-77)
+16	Borzhomi	Borzhomi	PROPN	NNP	Number=Sing	14	nmod	14:nmod:near	Entity=abstract-73)place-76)(place-77)|SpaceAfter=No
 17	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-19
-# text = The Russian Defence Ministry 's spokesman expressed his surprise and declared that Russian troops were ready to provide assistance in extinguishing the fire if Georgia made an official request .
+# s_type = decl
+# text = The Russian Defence Ministry's spokesman expressed his surprise and declared that Russian troops were ready to provide assistance in extinguishing the fire if Georgia made an official request.
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=elaboration:40->39|Entity=(person-66
 2	Russian	Russian	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(organization-78(person-70)
 3	Defence	Defence	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(abstract-68)
+4-5	Ministry's	_	_	_	_	_	_	_	_
 4	Ministry	Ministry	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	_
 5	's	's	PART	POS	_	4	case	4:case	Entity=organization-78)
 6	spokesman	spokesman	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|11:nsubj	Entity=person-66)
@@ -496,13 +505,13 @@
 26	made	make	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	advcl	18:advcl:if	_
 27	an	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	Entity=(event-82
 28	official	official	ADJ	JJ	Degree=Pos	29	amod	29:amod	_
-29	request	request	NOUN	NN	Number=Sing	26	obj	26:obj	Entity=event-82)
+29	request	request	NOUN	NN	Number=Sing	26	obj	26:obj	Entity=event-82)|SpaceAfter=No
 30	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-20
-# text = " It is understandable to us that the Georgian authorities are ready to blame the Russian side for any natural disasters on the territory of Georgia , " he said .
-1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=elaboration:45->40
+# s_type = decl
+# text = "It is understandable to us that the Georgian authorities are ready to blame the Russian side for any natural disasters on the territory of Georgia," he said.
+1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=elaboration:45->40|SpaceAfter=No
 2	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	Entity=(abstract-80)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 4	understandable	understandable	ADJ	JJ	Degree=Pos|Polarity=Neg	30	ccomp	30:ccomp	_
@@ -527,16 +536,16 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(place-86
 24	territory	territory	NOUN	NN	Number=Sing	21	nmod	21:nmod:on	_
 25	of	of	ADP	IN	_	26	case	26:case	_
-26	Georgia	Georgia	PROPN	NNP	Number=Sing	24	nmod	24:nmod:of	Entity=event-85)place-86)(place-2)
-27	,	,	PUNCT	,	_	4	punct	4:punct	_
+26	Georgia	Georgia	PROPN	NNP	Number=Sing	24	nmod	24:nmod:of	Entity=event-85)place-86)(place-2)|SpaceAfter=No
+27	,	,	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 28	"	''	PUNCT	''	_	4	punct	4:punct	_
 29	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	nsubj	30:nsubj	Discourse=attribution:46->45|Entity=(person-81)
-30	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+30	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 31	.	.	PUNCT	.	_	30	punct	30:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-21
-# text = Russian troops are still occupying the key towns of Gori , north of Tbilisi , and Senako in the west of Georgia .
+# s_type = decl
+# text = Russian troops are still occupying the key towns of Gori, north of Tbilisi, and Senako in the west of Georgia.
 1	Russian	Russian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:47->45|Entity=(organization-26
 2	troops	troop	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=organization-26)
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
@@ -546,11 +555,11 @@
 7	key	key	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	towns	town	NOUN	NNS	Number=Plur	5	obj	5:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	Gori	Gori	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(place-87
+10	Gori	Gori	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(place-87|SpaceAfter=No
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	north	north	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	Tbilisi	Tbilisi	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	Entity=place-87)(place-10)
+14	Tbilisi	Tbilisi	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	Entity=place-87)(place-10)|SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	and	and	CCONJ	CC	_	17	cc	17:cc	_
 17	Senako	Senako	PROPN	NNP	Number=Sing	10	conj	8:nmod:of|10:conj:and	Entity=(place-88
@@ -558,16 +567,16 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(place-89
 20	west	west	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	_
 21	of	of	ADP	IN	_	22	case	22:case	_
-22	Georgia	Georgia	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=place-63)place-88)place-89)(place-2)
+22	Georgia	Georgia	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=place-63)place-88)place-89)(place-2)|SpaceAfter=No
 23	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-22
-# text = Far from pulling out , Russian military units are entrenching themselves in new positions deeper into Georgia , according to Daily Telegraph .
+# s_type = decl
+# text = Far from pulling out, Russian military units are entrenching themselves in new positions deeper into Georgia, according to Daily Telegraph.
 1	Far	far	SCONJ	RB	Degree=Pos	3	mark	3:mark	Discourse=joint:48->47
 2	from	from	SCONJ	IN	_	3	mark	3:mark	_
 3	pulling	pull	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl:far_from	_
-4	out	out	ADP	RP	_	3	compound:prt	3:compound:prt	_
+4	out	out	ADP	RP	_	3	compound:prt	3:compound:prt	SpaceAfter=No
 5	,	,	PUNCT	,	_	3	punct	3:punct	_
 6	Russian	Russian	ADJ	JJ	Degree=Pos	8	amod	8:amod	Discourse=joint:49->48|Entity=(organization-90
 7	military	military	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -580,17 +589,17 @@
 14	positions	position	NOUN	NNS	Number=Plur	10	obl	10:obl:in	_
 15	deeper	deep	ADV	RBR	Degree=Cmp	14	advmod	14:advmod	Entity=place-91)
 16	into	into	ADP	IN	_	17	case	17:case	_
-17	Georgia	Georgia	PROPN	NNP	Number=Sing	10	obl	10:obl:into	Entity=(place-2)
+17	Georgia	Georgia	PROPN	NNP	Number=Sing	10	obl	10:obl:into	Entity=(place-2)|SpaceAfter=No
 18	,	,	PUNCT	,	_	22	punct	22:punct	_
 19	according	accord	VERB	VBG	VerbForm=Ger	22	case	22:case	Discourse=attribution:50->49
 20	to	to	ADP	IN	_	19	fixed	19:fixed	_
 21	Daily	Daily	ADJ	NNP	Number=Sing	22	amod	22:amod	Entity=(organization-92
-22	Telegraph	Telegraph	PROPN	NNP	Number=Sing	10	obl	10:obl:according_to	Entity=organization-92)
+22	Telegraph	Telegraph	PROPN	NNP	Number=Sing	10	obl	10:obl:according_to	Entity=organization-92)|SpaceAfter=No
 23	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_nato-23
-# text = They have also blown up a strategic Georgian Kaspi railway bridge on the main line connecting the country to its neighbours , essentially severing the last route for freight and trade after Russian soldiers also took control of the Georgian main east-west highway .
+# s_type = decl
+# text = They have also blown up a strategic Georgian Kaspi railway bridge on the main line connecting the country to its neighbours, essentially severing the last route for freight and trade after Russian soldiers also took control of the Georgian main east-west highway.
 1	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	4	nsubj	4:nsubj	Discourse=joint:51->49|Entity=(person-70)
 2	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
@@ -611,7 +620,7 @@
 18	country	country	NOUN	NN	Number=Sing	16	obj	16:obj	Entity=place-86)
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	Entity=(person-98(place-86)
-21	neighbours	neighbour	NOUN	NNS	Number=Plur	16	obl	16:obl:to	Entity=object-93)place-97)person-98)
+21	neighbours	neighbour	NOUN	NNS	Number=Plur	16	obl	16:obl:to	Entity=object-93)place-97)person-98)|SpaceAfter=No
 22	,	,	PUNCT	,	_	24	punct	24:punct	_
 23	essentially	essentially	ADV	RB	Degree=Pos	24	advmod	24:advmod	Discourse=joint:53->52
 24	severing	sever	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	_
@@ -633,6 +642,6 @@
 40	Georgian	Georgian	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 41	main	main	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
 42	east-west	east-west	ADJ	JJ	Degree=Pos	43	amod	43:amod	_
-43	highway	highway	NOUN	NN	Number=Sing	37	nmod	37:nmod:of	Entity=abstract-103)place-104)
+43	highway	highway	NOUN	NN	Number=Sing	37	nmod	37:nmod:of	Entity=abstract-103)place-104)|SpaceAfter=No
 44	.	.	PUNCT	.	_	4	punct	4:punct	_
 
