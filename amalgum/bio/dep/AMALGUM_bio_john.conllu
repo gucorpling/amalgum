@@ -1,27 +1,27 @@
-# s_type = frag
 # newdoc id = AMALGUM_bio_john
 # sent_id = AMALGUM_bio_john-1
-# text = John Hill ( courtier )
+# s_type = frag
+# text = John Hill (courtier)
 1	John	John	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->3|Entity=(person-1
 2	Hill	Hill	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
-3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:2->1
-4	courtier	courtier	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=(person-1)
+3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:2->1|SpaceAfter=No
+4	courtier	courtier	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=(person-1)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-2
-# text = Major-General John " Jack " Hill ( died 22 June 1735 ) was a British army officer and courtier during the reign of Queen Anne .
+# s_type = decl
+# text = Major-General John "Jack" Hill (died 22 June 1735) was a British army officer and courtier during the reign of Queen Anne.
 1	Major-General	Major-General	PROPN	NNP	Number=Sing	17	nsubj	17:nsubj|19:nsubj	Discourse=ROOT:3|Entity=(person-1
 2	John	John	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
-3	"	''	PUNCT	``	_	4	punct	4:punct	_
-4	Jack	Jack	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-1)
+3	"	''	PUNCT	``	_	4	punct	4:punct	SpaceAfter=No
+4	Jack	Jack	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-1)|SpaceAfter=No
 5	"	''	PUNCT	''	_	4	punct	4:punct	_
 6	Hill	Hill	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:4->3
+7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:4->3|SpaceAfter=No
 8	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	acl	1:acl	_
 9	22	22	NUM	CD	NumForm=Digit|NumType=Card	8	obl:tmod	8:obl:tmod	Entity=(time-2
 10	June	June	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(time-3)
-11	1735	1735	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-2)(time-4)
+11	1735	1735	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-2)(time-4)|SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	Discourse=same_unit:5->3
 14	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(person-1(person-1
@@ -35,18 +35,18 @@
 22	reign	reign	NOUN	NN	Number=Sing	17	nmod	17:nmod:during	_
 23	of	of	ADP	IN	_	24	case	24:case	_
 24	Queen	Queen	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	_
-25	Anne	Anne	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-1)person-1)time-6)
+25	Anne	Anne	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-1)person-1)time-6)|SpaceAfter=No
 26	.	.	PUNCT	.	_	17	punct	17:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-3
-# text = While of no particular military ability , his family connections brought him promotion and office until the end of Anne 's reign .
+# s_type = decl
+# text = While of no particular military ability, his family connections brought him promotion and office until the end of Anne's reign.
 1	While	while	SCONJ	IN	_	6	mark	6:mark	Discourse=concession:6->3
 2	of	of	ADP	IN	_	6	case	6:case	_
 3	no	no	DET	DT	Polarity=Neg	6	det	6:det	Entity=(abstract-7
 4	particular	particular	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	military	military	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	ability	ability	NOUN	NN	Number=Sing	11	advcl	11:advcl:while	Entity=abstract-7)
+6	ability	ability	NOUN	NN	Number=Sing	11	advcl	11:advcl:while	Entity=abstract-7)|SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	Discourse=joint:7->6|Entity=(abstract-8(person-1)
 9	family	family	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(abstract-9)
@@ -60,26 +60,27 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(time-13
 18	end	end	NOUN	NN	Number=Sing	11	obl	11:obl:until	_
 19	of	of	ADP	IN	_	22	case	22:case	_
+20-21	Anne's	_	_	_	_	_	_	_	_
 20	Anne	Anne	PROPN	NNP	Number=Sing	22	nmod:poss	22:nmod:poss	Entity=(time-6(person-14
 21	's	's	PART	POS	_	20	case	20:case	Entity=person-14)
-22	reign	reign	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	Entity=time-13)time-6)
+22	reign	reign	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	Entity=time-13)time-6)|SpaceAfter=No
 23	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_bio_john-4
+# s_type = frag
 # text = Early life
 1	Early	early	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:8->9|Entity=(time-15
 2	life	life	NOUN	NN	Number=Sing	0	root	0:root	Entity=time-15)
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-5
-# text = Jack , as he was known , was the youngest son of the merchant Francis Hill and his wife Elizabeth Jenyns , and hence the brother of Abigail Hill , later Baroness Masham .
-1	Jack	Jack	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj|26:nsubj	Discourse=joint:9->3|Entity=(person-1)
+# s_type = decl
+# text = Jack, as he was known, was the youngest son of the merchant Francis Hill and his wife Elizabeth Jenyns, and hence the brother of Abigail Hill, later Baroness Masham.
+1	Jack	Jack	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj|26:nsubj	Discourse=joint:9->3|Entity=(person-1)|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	as	as	SCONJ	IN	_	6	mark	6:mark	Discourse=elaboration:10->9
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass	Entity=(person-1(person-1(person-1)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
-6	known	know	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	acl	11:acl:as	_
+6	known	know	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	acl	11:acl:as	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	Discourse=same_unit:11->9
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	_
@@ -94,7 +95,7 @@
 18	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	Entity=(place-17(person-18(person-19)
 19	wife	wife	NOUN	NN	Number=Sing	14	conj	11:nmod:of|14:conj:and	Entity=person-18)
 20	Elizabeth	Elizabeth	PROPN	NNP	Number=Sing	19	appos	19:appos	_
-21	Jenyns	Jenyns	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=person-1)person-16)place-17)
+21	Jenyns	Jenyns	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=person-1)person-16)place-17)|SpaceAfter=No
 22	,	,	PUNCT	,	_	26	punct	26:punct	_
 23	and	and	CCONJ	CC	_	26	cc	26:cc	Discourse=joint:12->9
 24	hence	hence	ADV	RB	Degree=Pos	26	advmod	26:advmod	Entity=(person-20
@@ -102,20 +103,21 @@
 26	brother	brother	NOUN	NN	Number=Sing	11	conj	11:conj:and	_
 27	of	of	ADP	IN	_	28	case	28:case	_
 28	Abigail	Abigail	PROPN	NNP	Number=Sing	26	nmod	26:nmod:of	Entity=(person-20
-29	Hill	Hill	PROPN	NNP	Number=Sing	28	flat	28:flat	Entity=person-1)person-20)person-20)
+29	Hill	Hill	PROPN	NNP	Number=Sing	28	flat	28:flat	Entity=person-1)person-20)person-20)|SpaceAfter=No
 30	,	,	PUNCT	,	_	32	punct	32:punct	_
 31	later	late	ADV	RB	Degree=Pos	32	advmod	32:advmod	Entity=(person-20
 32	Baroness	Baroness	PROPN	NNP	Number=Sing	28	appos	28:appos	_
-33	Masham	Masham	PROPN	NNP	Number=Sing	32	flat	32:flat	Entity=person-20)
+33	Masham	Masham	PROPN	NNP	Number=Sing	32	flat	32:flat	Entity=person-20)|SpaceAfter=No
 34	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-6
-# text = The failure of his father 's business left the family dependent upon the largesse of their cousin Sarah Churchill , later Duchess of Marlborough .
+# s_type = decl
+# text = The failure of his father's business left the family dependent upon the largesse of their cousin Sarah Churchill, later Duchess of Marlborough.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:13->9|Entity=(event-21
 2	failure	failure	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	of	of	ADP	IN	_	7	case	7:case	_
 4	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	Entity=(abstract-22(person-23(person-1)
+5-6	father's	_	_	_	_	_	_	_	_
 5	father	father	NOUN	NN	Number=Sing	7	nmod:poss	7:nmod:poss	_
 6	's	's	PART	POS	_	5	case	5:case	Entity=person-23)
 7	business	business	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	Entity=event-21)abstract-22)
@@ -130,20 +132,21 @@
 16	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	Entity=(person-26(person-10)
 17	cousin	cousin	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
 18	Sarah	Sarah	PROPN	NNP	Number=Sing	17	appos	17:appos	_
-19	Churchill	Churchill	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=abstract-25)person-26)
+19	Churchill	Churchill	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=abstract-25)person-26)|SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	later	late	ADV	RB	Degree=Pos	22	advmod	22:advmod	Entity=(person-26
 22	Duchess	Duchess	PROPN	NNP	Number=Sing	18	appos	18:appos	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	Marlborough	Marlborough	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=person-26)(place-27)
+24	Marlborough	Marlborough	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=person-26)(place-27)|SpaceAfter=No
 25	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-7
-# text = Sarah paid for Hill 's education at the St Albans Grammar School from 1690 – 1691 , and obtained for him an appointment as a page to Prince George of Denmark in 1692 and then in 1698 as a Groom of the Bedchamber to the Duke of Gloucester .
+# s_type = decl
+# text = Sarah paid for Hill's education at the St Albans Grammar School from 1690–1691, and obtained for him an appointment as a page to Prince George of Denmark in 1692 and then in 1698 as a Groom of the Bedchamber to the Duke of Gloucester.
 1	Sarah	Sarah	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|19:nsubj	Discourse=joint:14->9|Entity=(person-26)
 2	paid	pay	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	for	for	ADP	IN	_	6	case	6:case	_
+4-5	Hill's	_	_	_	_	_	_	_	_
 4	Hill	Hill	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	Entity=(abstract-28
 5	's	's	PART	POS	_	4	case	4:case	_
 6	education	education	NOUN	NN	Number=Sing	2	obl	2:obl:for	Entity=abstract-28)
@@ -154,9 +157,9 @@
 11	Grammar	Grammar	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=(abstract-31)
 12	School	School	PROPN	NNP	Number=Sing	2	obl	2:obl:at	Entity=organization-29)
 13	from	from	ADP	IN	_	14	case	14:case	_
-14	1690	1690	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:from	Entity=(time-32
-15	–	-	SYM	SYM	_	16	case	16:case	_
-16	1691	1691	NUM	CD	NumForm=Digit|NumType=Card	14	nmod	14:nmod:to	Entity=time-32)(time-33)
+14	1690	1690	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:from	Entity=(time-32|SpaceAfter=No
+15	–	-	SYM	SYM	_	16	case	16:case	SpaceAfter=No
+16	1691	1691	NUM	CD	NumForm=Digit|NumType=Card	14	nmod	14:nmod:to	Entity=time-32)(time-33)|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	Discourse=sequence:15->14
 19	obtained	obtain	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
@@ -188,38 +191,40 @@
 45	the	the	DET	DT	Definite=Def|PronType=Art	46	det	46:det	Entity=(organization-42
 46	Duke	Duke	PROPN	NNP	Number=Sing	40	nmod	40:nmod:to	_
 47	of	of	ADP	IN	_	48	case	48:case	_
-48	Gloucester	Gloucester	PROPN	NNP	Number=Sing	46	nmod	46:nmod:of	Entity=person-40)organization-42)(place-43)
+48	Gloucester	Gloucester	PROPN	NNP	Number=Sing	46	nmod	46:nmod:of	Entity=person-40)organization-42)(place-43)|SpaceAfter=No
 49	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-8
-# text = After Gloucester 's death , he briefly returned to Prince George 's household in 1700 .
+# s_type = decl
+# text = After Gloucester's death, he briefly returned to Prince George's household in 1700.
 1	After	after	ADP	IN	_	4	case	4:case	Discourse=circumstance:16->17
+2-3	Gloucester's	_	_	_	_	_	_	_	_
 2	Gloucester	Gloucester	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Entity=(event-44(person-45
 3	's	's	PART	POS	_	2	case	2:case	Entity=person-45)
-4	death	death	NOUN	NN	Number=Sing	8	obl	8:obl:after	Entity=event-44)
+4	death	death	NOUN	NN	Number=Sing	8	obl	8:obl:after	Entity=event-44)|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	Discourse=sequence:17->14|Entity=(person-45)
 7	briefly	briefly	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
 8	returned	return	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	to	to	ADP	IN	_	13	case	13:case	_
 10	Prince	Prince	PROPN	NNP	Number=Sing	13	nmod:poss	13:nmod:poss	Entity=(place-46(person-47
+11-12	George's	_	_	_	_	_	_	_	_
 11	George	George	PROPN	NNP	Number=Sing	10	flat	10:flat	_
 12	's	's	PART	POS	_	10	case	10:case	Entity=person-47)
 13	household	household	NOUN	NN	Number=Sing	8	obl	8:obl:to	Entity=place-46)
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	1700	1700	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-48)
+15	1700	1700	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-48)|SpaceAfter=No
 16	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_bio_john-9
+# s_type = frag
 # text = Military career
 1	Military	military	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:18->19|Entity=(abstract-49
 2	career	career	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-49)
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-10
-# text = The Duke of Marlborough obtained for Hill a captaincy in the Grenadier Guards in November 1702 , and he was made adjutant general to the forces sent into Portugal in 1703 .
+# s_type = decl
+# text = The Duke of Marlborough obtained for Hill a captaincy in the Grenadier Guards in November 1702, and he was made adjutant general to the forces sent into Portugal in 1703.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=sequence:19->14|Entity=(person-50
 2	Duke	Duke	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
@@ -235,7 +240,7 @@
 13	Guards	Guards	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:in	Entity=person-51)organization-52)
 14	in	in	ADP	IN	_	15	case	15:case	_
 15	November	November	PROPN	NNP	Number=Sing	5	obl	5:obl:in	Entity=(time-54
-16	1702	1702	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-54)(time-55)
+16	1702	1702	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-54)(time-55)|SpaceAfter=No
 17	,	,	PUNCT	,	_	21	punct	21:punct	_
 18	and	and	CCONJ	CC	_	21	cc	21:cc	Discourse=joint:20->19
 19	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	nsubj:pass	21:nsubj:pass|23:nsubj:xsubj	Entity=(person-51)
@@ -250,15 +255,15 @@
 28	into	into	ADP	IN	_	29	case	29:case	_
 29	Portugal	Portugal	PROPN	NNP	Number=Sing	27	obl	27:obl:into	Entity=(place-58)
 30	in	in	ADP	IN	_	31	case	31:case	_
-31	1703	1703	NUM	CD	NumForm=Digit|NumType=Card	27	obl	27:obl:in	Entity=organization-57)(time-59)
+31	1703	1703	NUM	CD	NumForm=Digit|NumType=Card	27	obl	27:obl:in	Entity=organization-57)(time-59)|SpaceAfter=No
 32	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-11
-# text = In May 1705 , he was made colonel of the former Lord Stanhope 's Regiment of Foot .
+# s_type = decl
+# text = In May 1705, he was made colonel of the former Lord Stanhope's Regiment of Foot.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=preparation:22->23
 2	May	May	PROPN	NNP	Number=Sing	7	obl	7:obl:in	Entity=(time-60
-3	1705	1705	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-60)(time-61)
+3	1705	1705	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-60)(time-61)|SpaceAfter=No
 4	,	,	PUNCT	,	_	2	punct	2:punct	_
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj:pass	7:nsubj:pass|8:nsubj:xsubj	Entity=(person-51)
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
@@ -268,16 +273,17 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(organization-62
 11	former	former	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(person-63
 12	Lord	Lord	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	_
+13-14	Stanhope's	_	_	_	_	_	_	_	_
 13	Stanhope	Stanhope	PROPN	NNP	Number=Sing	12	flat	12:flat	_
 14	's	's	PART	POS	_	12	case	12:case	Entity=person-63)
 15	Regiment	Regiment	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Foot	Foot	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=organization-62)(person-64)
+17	Foot	Foot	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=organization-62)(person-64)|SpaceAfter=No
 18	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-12
-# text = This rapid rise owed little to military talent ; while partly brought about through the patronage of Marlborough , it was increasingly due to the ascent of his sister Abigail , who was now displacing her cousin the Duchess in Anne 's favour .
+# s_type = decl
+# text = This rapid rise owed little to military talent; while partly brought about through the patronage of Marlborough, it was increasingly due to the ascent of his sister Abigail, who was now displacing her cousin the Duchess in Anne's favour.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Discourse=joint:23->19|Entity=(event-65
 2	rapid	rapid	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	rise	rise	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=event-65)
@@ -285,7 +291,7 @@
 5	little	little	ADJ	JJ	Degree=Pos	4	obj	4:obj	_
 6	to	to	ADP	IN	_	8	case	8:case	_
 7	military	military	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(abstract-66
-8	talent	talent	NOUN	NN	Number=Sing	4	obl	4:obl:to	Entity=abstract-66)
+8	talent	talent	NOUN	NN	Number=Sing	4	obl	4:obl:to	Entity=abstract-66)|SpaceAfter=No
 9	;	;	PUNCT	:	_	23	punct	23:punct	_
 10	while	while	SCONJ	IN	_	12	mark	12:mark	Discourse=concession:24->25
 11	partly	partly	ADV	RB	Degree=Pos	12	advmod	12:advmod	_
@@ -295,7 +301,7 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(abstract-67
 16	patronage	patronage	NOUN	NN	Number=Sing	12	obl	12:obl:through	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	Marlborough	Marlborough	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=abstract-67)(person-50)
+18	Marlborough	Marlborough	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=abstract-67)(person-50)|SpaceAfter=No
 19	,	,	PUNCT	,	_	12	punct	12:punct	_
 20	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	Discourse=joint:25->23|Entity=(place-58)
 21	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
@@ -307,7 +313,7 @@
 27	of	of	ADP	IN	_	29	case	29:case	_
 28	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	29	nmod:poss	29:nmod:poss	Entity=(person-20(person-50)
 29	sister	sister	NOUN	NN	Number=Sing	26	nmod	26:nmod:of	_
-30	Abigail	Abigail	PROPN	NNP	Number=Sing	29	appos	29:appos|35:nsubj	_
+30	Abigail	Abigail	PROPN	NNP	Number=Sing	29	appos	29:appos|35:nsubj	SpaceAfter=No
 31	,	,	PUNCT	,	_	35	punct	35:punct	_
 32	who	who	PRON	WP	PronType=Rel	35	nsubj	30:ref	Discourse=elaboration:26->25
 33	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	35	aux	35:aux	_
@@ -318,16 +324,17 @@
 38	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	Entity=(person-26
 39	Duchess	Duchess	PROPN	NNP	Number=Sing	35	obj	35:obj	Entity=person-26)
 40	in	in	ADP	IN	_	43	case	43:case	_
+41-42	Anne's	_	_	_	_	_	_	_	_
 41	Anne	Anne	PROPN	NNP	Number=Sing	43	nmod:poss	43:nmod:poss	Entity=(abstract-70(person-14
 42	's	's	PART	POS	_	41	case	41:case	Entity=person-14)
-43	favour	favour	NOUN	NN	Number=Sing	35	obl	35:obl:in	Entity=event-68)person-20)abstract-70)
+43	favour	favour	NOUN	NN	Number=Sing	35	obl	35:obl:in	Entity=event-68)person-20)abstract-70)|SpaceAfter=No
 44	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-13
-# text = In 1706 , he and his regiment took part in the expedition under Earl Rivers , originally directed against the coast of France but subsequently diverted to Lisbon .
+# s_type = decl
+# text = In 1706, he and his regiment took part in the expedition under Earl Rivers, originally directed against the coast of France but subsequently diverted to Lisbon.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:27->25
-2	1706	1706	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-71)
+2	1706	1706	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-71)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	Entity=(person-50)
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -340,7 +347,7 @@
 12	expedition	expedition	NOUN	NN	Number=Sing	8	obl	8:obl:in	_
 13	under	under	ADP	IN	_	14	case	14:case	_
 14	Earl	Earl	PROPN	NNP	Number=Sing	12	nmod	12:nmod:under	Entity=(person-73
-15	Rivers	River	PROPN	NNP	Number=Sing	14	flat	14:flat	_
+15	Rivers	River	PROPN	NNP	Number=Sing	14	flat	14:flat	SpaceAfter=No
 16	,	,	PUNCT	,	_	18	punct	18:punct	_
 17	originally	originally	ADV	RB	Degree=Pos	18	advmod	18:advmod	Discourse=elaboration:28->27
 18	directed	direct	VERB	VBN	Tense=Past|VerbForm=Part	14	acl	14:acl	_
@@ -353,14 +360,14 @@
 25	subsequently	subsequently	ADV	RB	Degree=Pos	26	advmod	26:advmod	_
 26	diverted	divert	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	conj	14:acl|18:conj:but	Entity=event-72)person-73)
 27	to	to	ADP	IN	_	28	case	28:case	_
-28	Lisbon	Lisbon	PROPN	NNP	Number=Sing	26	obl	26:obl:to	Entity=(place-76)
+28	Lisbon	Lisbon	PROPN	NNP	Number=Sing	26	obl	26:obl:to	Entity=(place-76)|SpaceAfter=No
 29	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-14
-# text = In 1707 , Hill and the regiment were shipped to Valencia , to take part in the campaign which ended with the Battle of Almansa .
+# s_type = decl
+# text = In 1707, Hill and the regiment were shipped to Valencia, to take part in the campaign which ended with the Battle of Almansa.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:30->27
-2	1707	1707	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=(time-77)
+2	1707	1707	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=(time-77)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Hill	Hill	PROPN	NNP	Number=Sing	9	nsubj:pass	9:nsubj:pass	Entity=(person-16(person-20)
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -369,7 +376,7 @@
 8	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	shipped	ship	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	Valencia	Valencia	PROPN	NNP	Number=Sing	9	obl	9:obl:to	Entity=(place-78)
+11	Valencia	Valencia	PROPN	NNP	Number=Sing	9	obl	9:obl:to	Entity=(place-78)|SpaceAfter=No
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
 13	to	to	PART	TO	_	14	mark	14:mark	Discourse=elaboration:31->30
 14	take	take	VERB	VB	VerbForm=Inf	9	advcl	9:advcl:to	_
@@ -383,19 +390,19 @@
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(event-80
 23	Battle	Battle	PROPN	NNP	Number=Sing	20	obl	20:obl:with	_
 24	of	of	ADP	IN	_	25	case	25:case	_
-25	Almansa	Almansa	PROPN	NNP	Number=Sing	23	nmod	23:nmod:of	Entity=event-79)event-80)(place-81)
+25	Almansa	Almansa	PROPN	NNP	Number=Sing	23	nmod	23:nmod:of	Entity=event-79)event-80)(place-81)|SpaceAfter=No
 26	.	.	PUNCT	.	_	9	punct	9:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-15
-# text = Hill commanded a brigade during the battle , comprising his own regiment with William Steuart 's and Thomas Alnutt 's regiments .
+# s_type = decl
+# text = Hill commanded a brigade during the battle, comprising his own regiment with William Steuart's and Thomas Alnutt's regiments.
 1	Hill	Hill	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:33->30|Entity=(person-20)
 2	commanded	command	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Entity=(abstract-82)
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(organization-83
 4	brigade	brigade	NOUN	NN	Number=Sing	2	obj	2:obj	Entity=organization-83)
 5	during	during	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(event-80
-7	battle	battle	NOUN	NN	Number=Sing	2	obl	2:obl:during	Entity=event-80)
+7	battle	battle	NOUN	NN	Number=Sing	2	obl	2:obl:during	Entity=event-80)|SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	comprising	comprise	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	Discourse=elaboration:34->33
 10	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	Entity=(organization-62(person-73)
@@ -403,18 +410,21 @@
 12	regiment	regiment	NOUN	NN	Number=Sing	9	obj	9:obj	Entity=organization-62)
 13	with	with	ADP	IN	_	21	case	21:case	_
 14	William	William	PROPN	NNP	Number=Sing	21	nmod:poss	21:nmod:poss	Entity=(organization-84(person-85
+15-16	Steuart's	_	_	_	_	_	_	_	_
 15	Steuart	Steuart	PROPN	NNP	Number=Sing	14	flat	14:flat	_
 16	's	's	PART	POS	_	14	case	14:case	Entity=person-85)
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	Thomas	Thomas	PROPN	NNP	Number=Sing	14	conj	14:conj:and|21:nmod:poss	Entity=(person-86
+19-20	Alnutt's	_	_	_	_	_	_	_	_
 19	Alnutt	Alnutt	PROPN	NNP	Number=Sing	14	flat	14:flat	_
 20	's	's	PART	POS	_	14	case	14:case	Entity=person-86)
-21	regiments	regiment	NOUN	NNS	Number=Plur	9	obl	9:obl:with	Entity=organization-84)
+21	regiments	regiment	NOUN	NNS	Number=Plur	9	obl	9:obl:with	Entity=organization-84)|SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-16
-# text = Hill 's brigade attacked the French during the latter stages of the battle and allowed the remaining British forces to retreat in good order , but he and his regiment were captured by the French .
+# s_type = decl
+# text = Hill's brigade attacked the French during the latter stages of the battle and allowed the remaining British forces to retreat in good order, but he and his regiment were captured by the French.
+1-2	Hill's	_	_	_	_	_	_	_	_
 1	Hill	Hill	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:35->30|Entity=(organization-83(person-20
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-20)
 3	brigade	brigade	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|15:nsubj	Entity=organization-83)
@@ -438,7 +448,7 @@
 21	retreat	retreat	VERB	VB	VerbForm=Inf	15	xcomp	15:xcomp	_
 22	in	in	ADP	IN	_	24	case	24:case	_
 23	good	good	ADJ	JJ	Degree=Pos	24	amod	24:amod	Entity=(abstract-90
-24	order	order	NOUN	NN	Number=Sing	21	obl	21:obl:in	Entity=abstract-90)
+24	order	order	NOUN	NN	Number=Sing	21	obl	21:obl:in	Entity=abstract-90)|SpaceAfter=No
 25	,	,	PUNCT	,	_	32	punct	32:punct	_
 26	but	but	CCONJ	CC	_	32	cc	32:cc	Discourse=joint:37->30
 27	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj:pass	32:nsubj:pass	Entity=(person-20)
@@ -449,12 +459,12 @@
 32	captured	capture	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:but	_
 33	by	by	ADP	IN	_	35	case	35:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	Entity=(abstract-88
-35	French	French	PROPN	NNP	Number=Sing	32	obl	32:obl:by	Entity=abstract-88)
+35	French	French	PROPN	NNP	Number=Sing	32	obl	32:obl:by	Entity=abstract-88)|SpaceAfter=No
 36	.	.	PUNCT	.	_	4	punct	4:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-17
-# text = Hill was paroled and returned to England to reform his regiment , which was sent to the Netherlands in summer 1708 and took part in the siege of Mons in 1709 .
+# s_type = decl
+# text = Hill was paroled and returned to England to reform his regiment, which was sent to the Netherlands in summer 1708 and took part in the siege of Mons in 1709.
 1	Hill	Hill	PROPN	NNP	Number=Sing	3	nsubj:pass	3:nsubj:pass|5:nsubj:pass	Discourse=joint:38->30|Entity=(person-20)
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	paroled	parole	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -465,7 +475,7 @@
 8	to	to	PART	TO	_	9	mark	9:mark	Discourse=purpose:40->39
 9	reform	reform	VERB	VB	VerbForm=Inf	5	advcl	5:advcl:to	_
 10	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	11	nmod:poss	11:nmod:poss	Entity=(organization-62(person-20)
-11	regiment	regiment	NOUN	NN	Number=Sing	9	obj	9:obj|15:nsubj:pass	_
+11	regiment	regiment	NOUN	NN	Number=Sing	9	obj	9:obj|15:nsubj:pass	SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	which	which	PRON	WDT	PronType=Rel	15	nsubj:pass	11:ref	Discourse=elaboration:41->40
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	_
@@ -485,17 +495,18 @@
 28	of	of	ADP	IN	_	29	case	29:case	_
 29	Mons	Mons	PROPN	NNP	Number=Sing	27	nmod	27:nmod:of	Entity=event-94)(place-95)
 30	in	in	ADP	IN	_	31	case	31:case	_
-31	1709	1709	NUM	CD	NumForm=Digit|NumType=Card	23	obl	23:obl:in	Entity=(time-96)
+31	1709	1709	NUM	CD	NumForm=Digit|NumType=Card	23	obl	23:obl:in	Entity=(time-96)|SpaceAfter=No
 32	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-18
-# text = On 26 September 1709 , Hill 's regiment was sent to advance the siege lines against the town and had to fight off a sally in which it suffered 150 casualties , including Hill , who was wounded .
+# s_type = decl
+# text = On 26 September 1709, Hill's regiment was sent to advance the siege lines against the town and had to fight off a sally in which it suffered 150 casualties, including Hill, who was wounded.
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=joint:43->30
 2	26	26	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:on	Entity=(time-97
 3	September	September	PROPN	NNP	Number=Sing	2	compound	2:compound	Entity=(time-98)
-4	1709	1709	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-97)(time-96)
+4	1709	1709	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-97)(time-96)|SpaceAfter=No
 5	,	,	PUNCT	,	_	2	punct	2:punct	_
+6-7	Hill's	_	_	_	_	_	_	_	_
 6	Hill	Hill	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	Entity=(organization-62(person-20
 7	's	's	PART	POS	_	6	case	6:case	Entity=person-20)
 8	regiment	regiment	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass|12:nsubj:xsubj|20:nsubj:pass|22:nsubj:xsubj	Entity=organization-62)
@@ -521,36 +532,37 @@
 28	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	29	nsubj	29:nsubj	Entity=(organization-62)
 29	suffered	suffer	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	acl:relcl	25:acl:relcl	_
 30	150	150	NUM	CD	NumForm=Digit|NumType=Card	31	nummod	31:nummod	Entity=(person-101
-31	casualties	casualty	NOUN	NNS	Number=Plur	29	obj	29:obj	_
+31	casualties	casualty	NOUN	NNS	Number=Plur	29	obj	29:obj	SpaceAfter=No
 32	,	,	PUNCT	,	_	34	punct	34:punct	_
 33	including	include	VERB	VBG	VerbForm=Ger	34	case	34:case	_
-34	Hill	Hill	PROPN	NNP	Number=Sing	31	nmod	31:nmod:including|38:nsubj:pass	Entity=(person-20
+34	Hill	Hill	PROPN	NNP	Number=Sing	31	nmod	31:nmod:including|38:nsubj:pass	Entity=(person-20|SpaceAfter=No
 35	,	,	PUNCT	,	_	38	punct	38:punct	_
 36	who	who	PRON	WP	PronType=Rel	38	nsubj:pass	34:ref	Discourse=elaboration:47->45
 37	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	aux:pass	38:aux:pass	_
-38	wounded	wound	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	34	acl:relcl	34:acl:relcl	Entity=person-100)person-101)person-20)
+38	wounded	wound	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	34	acl:relcl	34:acl:relcl	Entity=person-100)person-101)person-20)|SpaceAfter=No
 39	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = imp
 # sent_id = AMALGUM_bio_john-19
+# s_type = imp
 # text = Rise under the Tories
 1	Rise	rise	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:48->30
 2	under	under	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(organization-102
 4	Tories	Tories	PROPN	NNPS	Number=Plur	1	obl	1:obl:under	Entity=organization-102)
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-20
-# text = By 1710 , Hill 's sister , Lady Masham , had supplanted her cousin in the Queen 's affections and now joined Robert Harley to weaken Marlborough and advance her brother .
+# s_type = decl
+# text = By 1710, Hill's sister, Lady Masham, had supplanted her cousin in the Queen's affections and now joined Robert Harley to weaken Marlborough and advance her brother.
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=sequence:49->48
-2	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:by	Entity=(time-103)
+2	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:by	Entity=(time-103)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
+4-5	Hill's	_	_	_	_	_	_	_	_
 4	Hill	Hill	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	Entity=(person-104(person-20
 5	's	's	PART	POS	_	4	case	4:case	Entity=person-20)
-6	sister	sister	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|22:nsubj	Entity=person-104)
+6	sister	sister	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|22:nsubj	Entity=person-104)|SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	Lady	Lady	PROPN	NNP	Number=Sing	6	appos	6:appos	Entity=(person-104
-9	Masham	Masham	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-104)
+9	Masham	Masham	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-104)|SpaceAfter=No
 10	,	,	PUNCT	,	_	6	punct	6:punct	_
 11	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux	12:aux	_
 12	supplanted	supplant	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -558,6 +570,7 @@
 14	cousin	cousin	NOUN	NN	Number=Sing	12	obj	12:obj	Entity=person-69)
 15	in	in	ADP	IN	_	19	case	19:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(abstract-105
+17-18	Queen's	_	_	_	_	_	_	_	_
 17	Queen	Queen	PROPN	NNP	Number=Sing	19	nmod:poss	19:nmod:poss	Entity=(person-106
 18	's	's	PART	POS	_	17	case	17:case	Entity=person-106)
 19	affections	affection	NOUN	NNS	Number=Plur	12	obl	12:obl:in	Entity=abstract-105)
@@ -572,18 +585,18 @@
 28	and	and	CCONJ	CC	_	29	cc	29:cc	Discourse=joint:52->51
 29	advance	advance	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	26	conj	22:xcomp|26:conj:and	_
 30	her	her	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	Entity=(person-20(person-104)
-31	brother	brother	NOUN	NN	Number=Sing	29	obj	29:obj	Entity=person-20)
+31	brother	brother	NOUN	NN	Number=Sing	29	obj	29:obj	Entity=person-20)|SpaceAfter=No
 32	.	.	PUNCT	.	_	12	punct	12:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-21
-# text = The Queen , prompted by Harley , solicited for Hill the colonelcy of the late Earl of Essex 's Regiment of Dragoons .
+# s_type = decl
+# text = The Queen, prompted by Harley, solicited for Hill the colonelcy of the late Earl of Essex's Regiment of Dragoons.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:53->49|Entity=(person-108
-2	Queen	Queen	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Entity=person-108)
+2	Queen	Queen	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Entity=person-108)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	prompted	prompt	VERB	VBN	Tense=Past|VerbForm=Part	8	advcl	8:advcl	Discourse=elaboration:54->53
 5	by	by	ADP	IN	_	6	case	6:case	_
-6	Harley	Harley	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=(person-107)
+6	Harley	Harley	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=(person-107)|SpaceAfter=No
 7	,	,	PUNCT	,	_	4	punct	4:punct	_
 8	solicited	solicit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=same_unit:55->53
 9	for	for	ADP	IN	_	10	case	10:case	_
@@ -595,16 +608,17 @@
 15	late	late	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	Earl	Earl	PROPN	NNP	Number=Sing	20	nmod:poss	20:nmod:poss	_
 17	of	of	ADP	IN	_	18	case	18:case	_
+18-19	Essex's	_	_	_	_	_	_	_	_
 18	Essex	Essex	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=(place-111
 19	's	's	PART	POS	_	18	case	18:case	Entity=person-73)place-111)
 20	Regiment	Regiment	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	_
 21	of	of	ADP	IN	_	22	case	22:case	_
-22	Dragoons	Dragoon	PROPN	NNPS	Number=Plur	20	nmod	20:nmod:of	Entity=person-109)organization-110)(person-112)
+22	Dragoons	Dragoon	PROPN	NNPS	Number=Plur	20	nmod	20:nmod:of	Entity=person-109)organization-110)(person-112)|SpaceAfter=No
 23	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-22
-# text = Marlborough refused to promote Hill over officers more experienced and deserving , placing additional strain on his relationship with the Queen .
+# s_type = decl
+# text = Marlborough refused to promote Hill over officers more experienced and deserving, placing additional strain on his relationship with the Queen.
 1	Marlborough	Marlborough	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	Discourse=joint:56->49|Entity=(person-50)
 2	refused	refuse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
@@ -615,7 +629,7 @@
 8	more	more	ADV	RBR	Degree=Cmp	9	advmod	9:advmod	_
 9	experienced	experienced	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	deserving	deserving	ADJ	JJ	Degree=Pos	9	conj	7:amod|9:conj:and	Entity=person-113)
+11	deserving	deserving	ADJ	JJ	Degree=Pos	9	conj	7:amod|9:conj:and	Entity=person-113)|SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
 13	placing	place	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl	Discourse=result:57->56
 14	additional	additional	ADJ	JJ	Degree=Pos	15	amod	15:amod	Entity=(abstract-114
@@ -625,14 +639,14 @@
 18	relationship	relationship	NOUN	NN	Number=Sing	13	obl	13:obl:on	_
 19	with	with	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(person-108
-21	Queen	Queen	PROPN	NNP	Number=Sing	18	nmod	18:nmod:with	Entity=abstract-115)person-108)
+21	Queen	Queen	PROPN	NNP	Number=Sing	18	nmod	18:nmod:with	Entity=abstract-115)person-108)|SpaceAfter=No
 22	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-23
-# text = In April , he was forced to accede to the Queen 's demand that Hill be promoted brigadier general .
+# s_type = decl
+# text = In April, he was forced to accede to the Queen's demand that Hill be promoted brigadier general.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:58->56
-2	April	April	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(time-116)
+2	April	April	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(time-116)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass|8:nsubj:xsubj	Entity=(person-50)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
@@ -641,6 +655,7 @@
 8	accede	accede	VERB	VB	VerbForm=Inf	6	xcomp	6:xcomp	_
 9	to	to	ADP	IN	_	13	case	13:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(abstract-117
+11-12	Queen's	_	_	_	_	_	_	_	_
 11	Queen	Queen	PROPN	NNP	Number=Sing	13	nmod:poss	13:nmod:poss	Entity=(person-106
 12	's	's	PART	POS	_	11	case	11:case	Entity=person-106)
 13	demand	demand	NOUN	NN	Number=Sing	8	obl	8:obl:to	_
@@ -649,14 +664,14 @@
 16	be	be	AUX	VB	VerbForm=Inf	17	aux:pass	17:aux:pass	_
 17	promoted	promote	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	acl	13:acl:that	_
 18	brigadier	brigadier	NOUN	NN	Number=Sing	19	compound	19:compound	Entity=(person-118)
-19	general	general	ADJ	JJ	Degree=Pos	17	obj	17:obj	Entity=abstract-117)
+19	general	general	ADJ	JJ	Degree=Pos	17	obj	17:obj	Entity=abstract-117)|SpaceAfter=No
 20	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-24
-# text = In May , Hill also received a pension of £ 1000 p.a. during the lifetime of the Queen .
+# s_type = decl
+# text = In May, Hill also received a pension of £1000 p.a. during the lifetime of the Queen.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:60->56
-2	May	May	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(time-60)
+2	May	May	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(time-60)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Hill	Hill	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Entity=(person-20)
 5	also	also	ADV	RB	_	6	advmod	6:advmod	_
@@ -664,7 +679,7 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(abstract-119
 8	pension	pension	NOUN	NN	Number=Sing	6	obj	6:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	£	£	SYM	SYM	_	8	nmod	8:nmod:of	_
+10	£	£	SYM	SYM	_	8	nmod	8:nmod:of	SpaceAfter=No
 11	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	_
 12	p.a.	p.a.	NOUN	NN	Number=Sing	10	amod	10:amod	Entity=abstract-119)
 13	during	during	ADP	IN	_	15	case	15:case	_
@@ -672,12 +687,12 @@
 15	lifetime	lifetime	NOUN	NN	Number=Sing	6	obl	6:obl:during	_
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
-18	Queen	Queen	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=time-120)
+18	Queen	Queen	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=time-120)|SpaceAfter=No
 19	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-25
-# text = Marlborough and the Whigs in Parliament attempted to have Lady Masham removed from Court , an unsuccessful move which ultimately precipitated Marlborough 's own political demise .
+# s_type = decl
+# text = Marlborough and the Whigs in Parliament attempted to have Lady Masham removed from Court, an unsuccessful move which ultimately precipitated Marlborough's own political demise.
 1	Marlborough	Marlborough	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj|9:nsubj:xsubj|12:nsubj:xsubj	Discourse=preparation:61->62|Entity=(person-50(person-50)
 2	and	and	CCONJ	CC	_	4	cc	4:cc	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(person-121
@@ -691,7 +706,7 @@
 11	Masham	Masham	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-104)
 12	removed	remove	VERB	VBN	Tense=Past|VerbForm=Part	9	xcomp	9:xcomp	_
 13	from	from	ADP	IN	_	14	case	14:case	_
-14	Court	Court	PROPN	NNP	Number=Sing	12	obl	12:obl:from	Entity=(place-123)
+14	Court	Court	PROPN	NNP	Number=Sing	12	obl	12:obl:from	Entity=(place-123)|SpaceAfter=No
 15	,	,	PUNCT	,	_	18	punct	18:punct	_
 16	an	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Discourse=joint:62->60|Entity=(event-124
 17	unsuccessful	unsuccessful	ADJ	JJ	Degree=Pos|Polarity=Neg	18	amod	18:amod	_
@@ -699,21 +714,22 @@
 19	which	which	PRON	WDT	PronType=Rel	21	nsubj	18:ref	Discourse=elaboration:63->62
 20	ultimately	ultimately	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
 21	precipitated	precipitate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
+22-23	Marlborough's	_	_	_	_	_	_	_	_
 22	Marlborough	Marlborough	PROPN	NNP	Number=Sing	26	nmod:poss	26:nmod:poss	Entity=(event-125(person-50
 23	's	's	PART	POS	_	22	case	22:case	Entity=person-50)
 24	own	own	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
 25	political	political	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	demise	demise	NOUN	NN	Number=Sing	21	obj	21:obj	Entity=event-124)event-125)
+26	demise	demise	NOUN	NN	Number=Sing	21	obj	21:obj	Entity=event-124)event-125)|SpaceAfter=No
 27	.	.	PUNCT	.	_	7	punct	7:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-26
-# text = Hill , in the meantime , was returned as a Member of Parliament for Lostwithiel in 1710 .
-1	Hill	Hill	PROPN	NNP	Number=Sing	8	nsubj:pass	8:nsubj:pass	Discourse=joint:64->62|Entity=(person-20)
+# s_type = decl
+# text = Hill, in the meantime, was returned as a Member of Parliament for Lostwithiel in 1710.
+1	Hill	Hill	PROPN	NNP	Number=Sing	8	nsubj:pass	8:nsubj:pass	Discourse=joint:64->62|Entity=(person-20)|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	in	in	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(time-126
-5	meantime	meantime	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=time-126)
+5	meantime	meantime	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=time-126)|SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	returned	return	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -725,12 +741,12 @@
 14	for	for	ADP	IN	_	15	case	15:case	_
 15	Lostwithiel	Lostwithiel	PROPN	NNP	Number=Sing	11	nmod	11:nmod:for	Entity=person-127)(place-128)
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-103)
+17	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-103)|SpaceAfter=No
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-27
-# text = He showed little activity in the House of Commons , although , as his one-time patroness , the Duchess of Marlborough sourly noted , he did trouble himself to vote once , when ill , to support Harley 's attacks on Marlborough .
+# s_type = decl
+# text = He showed little activity in the House of Commons, although, as his one-time patroness, the Duchess of Marlborough sourly noted, he did trouble himself to vote once, when ill, to support Harley's attacks on Marlborough.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=elaboration:65->64|Entity=(person-127)
 2	showed	show	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	little	little	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(abstract-129
@@ -739,21 +755,21 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(organization-130
 7	House	House	PROPN	NNP	Number=Sing	2	obl	2:obl:in	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	Commons	Commons	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:of	Entity=organization-130)
+9	Commons	Commons	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:of	Entity=organization-130)|SpaceAfter=No
 10	,	,	PUNCT	,	_	27	punct	27:punct	_
-11	although	although	SCONJ	IN	_	27	mark	27:mark	Discourse=concession:66->68
+11	although	although	SCONJ	IN	_	27	mark	27:mark	Discourse=concession:66->68|SpaceAfter=No
 12	,	,	PUNCT	,	_	11	punct	11:punct	_
 13	as	as	SCONJ	IN	_	23	mark	23:mark	Discourse=circumstance:67->68
 14	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	Entity=(person-131(person-127)
 15	one-time	one-time	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	patroness	patroness	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	Entity=person-131)
+16	patroness	patroness	NOUN	NN	Number=Sing	23	nsubj	23:nsubj	Entity=person-131)|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(person-131
 19	Duchess	Duchess	PROPN	NNP	Number=Sing	16	appos	16:appos	_
 20	of	of	ADP	IN	_	21	case	21:case	_
 21	Marlborough	Marlborough	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=person-131)(place-27)
 22	sourly	sourly	ADV	RB	Degree=Pos	23	advmod	23:advmod	_
-23	noted	note	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	advcl	27:advcl:as	_
+23	noted	note	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	advcl	27:advcl:as	SpaceAfter=No
 24	,	,	PUNCT	,	_	23	punct	23:punct	_
 25	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	27	nsubj	27:nsubj	Discourse=elaboration:68->65|Entity=(person-127)
 26	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	27	aux	27:aux	_
@@ -761,56 +777,58 @@
 28	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	27	obj	27:obj|30:nsubj:xsubj	Entity=(person-127)
 29	to	to	PART	TO	_	30	mark	30:mark	Discourse=purpose:69->68
 30	vote	vote	VERB	VB	VerbForm=Inf	27	xcomp	27:xcomp	_
-31	once	once	ADV	RB	NumType=Mult	30	advmod	30:advmod	_
+31	once	once	ADV	RB	NumType=Mult	30	advmod	30:advmod	SpaceAfter=No
 32	,	,	PUNCT	,	_	34	punct	34:punct	_
 33	when	when	SCONJ	WRB	PronType=Int	34	mark	34:mark	Discourse=circumstance:70->69
-34	ill	ill	ADJ	JJ	Degree=Pos	30	advcl	30:advcl:when	_
+34	ill	ill	ADJ	JJ	Degree=Pos	30	advcl	30:advcl:when	SpaceAfter=No
 35	,	,	PUNCT	,	_	37	punct	37:punct	_
 36	to	to	PART	TO	_	37	mark	37:mark	Discourse=purpose:71->70
 37	support	support	VERB	VB	VerbForm=Inf	30	advcl	30:advcl:to	_
+38-39	Harley's	_	_	_	_	_	_	_	_
 38	Harley	Harley	PROPN	NNP	Number=Sing	40	nmod:poss	40:nmod:poss	Entity=(event-87(person-107
 39	's	's	PART	POS	_	38	case	38:case	Entity=person-107)
 40	attacks	attack	NOUN	NNS	Number=Plur	37	obj	37:obj	_
 41	on	on	ADP	IN	_	42	case	42:case	_
-42	Marlborough	Marlborough	PROPN	NNP	Number=Sing	40	nmod	40:nmod:on	Entity=event-87)(person-50)
+42	Marlborough	Marlborough	PROPN	NNP	Number=Sing	40	nmod	40:nmod:on	Entity=event-87)(person-50)|SpaceAfter=No
 43	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_bio_john-28
+# s_type = frag
 # text = Expedition against Quebec
 1	Expedition	expedition	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:72->74|Entity=(event-72
 2	against	against	ADP	IN	_	3	case	3:case	_
 3	Quebec	Quebec	PROPN	NNP	Number=Sing	1	nmod	1:nmod:against	Entity=event-72)(place-132)
 
-# s_type = frag
 # sent_id = AMALGUM_bio_john-29
-# text = Main article : Quebec Expedition
+# s_type = frag
+# text = Main article: Quebec Expedition
 1	Main	Main	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:73->74|Entity=(abstract-133
-2	article	article	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-133)
+2	article	article	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-133)|SpaceAfter=No
 3	:	:	PUNCT	:	_	5	punct	5:punct	_
 4	Quebec	Quebec	PROPN	NNP	Number=Sing	5	compound	5:compound	Discourse=joint:74->62|Entity=(event-72(place-132)
 5	Expedition	Expedition	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=event-72)
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-30
-# text = Well-connected with the Harley Ministry , Hill 's star continued to rise .
+# s_type = decl
+# text = Well-connected with the Harley Ministry, Hill's star continued to rise.
 1	Well-connected	well-connect	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl	Discourse=elaboration:75->74
 2	with	with	ADP	IN	_	5	case	5:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(organization-134
 4	Harley	Harley	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(person-107)
-5	Ministry	Ministry	PROPN	NNP	Number=Sing	1	obl	1:obl:with	Entity=organization-134)
+5	Ministry	Ministry	PROPN	NNP	Number=Sing	1	obl	1:obl:with	Entity=organization-134)|SpaceAfter=No
 6	,	,	PUNCT	,	_	1	punct	1:punct	_
+7-8	Hill's	_	_	_	_	_	_	_	_
 7	Hill	Hill	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Discourse=joint:76->75|Entity=(person-135(person-20
 8	's	's	PART	POS	_	7	case	7:case	Entity=person-20)
 9	star	star	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|12:nsubj:xsubj	Entity=person-135)
 10	continued	continue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 11	to	to	PART	TO	_	12	mark	12:mark	_
-12	rise	rise	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
+12	rise	rise	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	SpaceAfter=No
 13	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-31
-# text = When Henry St John in 1711 revived a plan for the capture of Quebec , Hill was proposed as commander-in-chief to gain the Queen 's favor .
+# s_type = decl
+# text = When Henry St John in 1711 revived a plan for the capture of Quebec, Hill was proposed as commander-in-chief to gain the Queen's favor.
 1	When	when	SCONJ	WRB	PronType=Int	7	mark	7:mark	Discourse=circumstance:77->78
 2	Henry	Henry	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=(person-136
 3	St	St	PROPN	NNP	Number=Sing	2	flat	2:flat	_
@@ -824,7 +842,7 @@
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(event-139
 12	capture	capture	NOUN	NN	Number=Sing	9	nmod	9:nmod:for	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	Quebec	Quebec	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	Entity=abstract-138)event-139)(place-132)
+14	Quebec	Quebec	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	Entity=abstract-138)event-139)(place-132)|SpaceAfter=No
 15	,	,	PUNCT	,	_	7	punct	7:punct	_
 16	Hill	Hill	PROPN	NNP	Number=Sing	18	nsubj:pass	18:nsubj:pass|22:nsubj:xsubj	Discourse=joint:78->76|Entity=(person-20)
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
@@ -834,20 +852,22 @@
 21	to	to	PART	TO	_	22	mark	22:mark	Discourse=purpose:79->78
 22	gain	gain	VERB	VB	VerbForm=Inf	18	xcomp	18:xcomp	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(abstract-141
+24-25	Queen's	_	_	_	_	_	_	_	_
 24	Queen	Queen	PROPN	NNP	Number=Sing	26	nmod:poss	26:nmod:poss	Entity=(person-106
 25	's	's	PART	POS	_	24	case	24:case	Entity=person-106)
-26	favor	favor	NOUN	NN	Number=Sing	22	obj	22:obj	Entity=abstract-141)
+26	favor	favor	NOUN	NN	Number=Sing	22	obj	22:obj	Entity=abstract-141)|SpaceAfter=No
 27	.	.	PUNCT	.	_	18	punct	18:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-32
-# text = 5000 troops under Hill 's command , in thirty transports escorted by ten ships of the line under Sir Hovenden Walker , embarked for Quebec , but eight transports with 800 men were wrecked in the Saint Lawrence River on 11 August 1711 owing to fogs and gales .
+# s_type = decl
+# text = 5000 troops under Hill's command, in thirty transports escorted by ten ships of the line under Sir Hovenden Walker, embarked for Quebec, but eight transports with 800 men were wrecked in the Saint Lawrence River on 11 August 1711 owing to fogs and gales.
 1	5000	5000	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:80->78|Entity=(person-142
 2	troops	troop	NOUN	NNS	Number=Plur	23	nsubj	23:nsubj	_
 3	under	under	ADP	IN	_	6	case	6:case	_
+4-5	Hill's	_	_	_	_	_	_	_	_
 4	Hill	Hill	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	Entity=(abstract-82(person-20
 5	's	's	PART	POS	_	4	case	4:case	Entity=person-20)
-6	command	command	NOUN	NN	Number=Sing	2	nmod	2:nmod:under	Entity=abstract-82)
+6	command	command	NOUN	NN	Number=Sing	2	nmod	2:nmod:under	Entity=abstract-82)|SpaceAfter=No
 7	,	,	PUNCT	,	_	10	punct	10:punct	_
 8	in	in	ADP	IN	_	10	case	10:case	_
 9	thirty	30	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	Entity=(object-143
@@ -862,11 +882,11 @@
 18	under	under	ADP	IN	_	19	case	19:case	_
 19	Sir	Sir	PROPN	NNP	Number=Sing	11	obl	11:obl:under	Entity=(person-20
 20	Hovenden	Hovenden	PROPN	NNP	Number=Sing	19	flat	19:flat	_
-21	Walker	Walker	PROPN	NNP	Number=Sing	19	flat	19:flat	Entity=person-142)object-143)person-20)
+21	Walker	Walker	PROPN	NNP	Number=Sing	19	flat	19:flat	Entity=person-142)object-143)person-20)|SpaceAfter=No
 22	,	,	PUNCT	,	_	10	punct	10:punct	_
 23	embarked	embark	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=same_unit:82->80
 24	for	for	ADP	IN	_	25	case	25:case	_
-25	Quebec	Quebec	PROPN	NNP	Number=Sing	23	obl	23:obl:for	Entity=(place-132)
+25	Quebec	Quebec	PROPN	NNP	Number=Sing	23	obl	23:obl:for	Entity=(place-132)|SpaceAfter=No
 26	,	,	PUNCT	,	_	34	punct	34:punct	_
 27	but	but	CCONJ	CC	_	34	cc	34:cc	Discourse=contrast:83->82
 28	eight	8	NUM	CD	NumForm=Digit|NumType=Card	29	nummod	29:nummod	Entity=(object-146
@@ -889,21 +909,21 @@
 45	to	to	ADP	IN	_	46	case	46:case	_
 46	fogs	fog	NOUN	NNS	Number=Plur	44	obl	44:obl:to	Entity=(substance-151)
 47	and	and	CCONJ	CC	_	48	cc	48:cc	_
-48	gales	gale	NOUN	NNS	Number=Plur	46	conj	44:obl:to|46:conj:and	Entity=(event-152)
+48	gales	gale	NOUN	NNS	Number=Plur	46	conj	44:obl:to|46:conj:and	Entity=(event-152)|SpaceAfter=No
 49	.	.	PUNCT	.	_	23	punct	23:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-33
-# text = Hill and Walker , after a Council of War , abandoned the enterprise without firing a shot and returned to England .
+# s_type = decl
+# text = Hill and Walker, after a Council of War, abandoned the enterprise without firing a shot and returned to England.
 1	Hill	Hill	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj|19:nsubj	Discourse=joint:85->80|Entity=(person-16(person-20)
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
-3	Walker	Walker	PROPN	NNP	Number=Sing	1	conj	1:conj:and|11:nsubj	Entity=person-16)
+3	Walker	Walker	PROPN	NNP	Number=Sing	1	conj	1:conj:and|11:nsubj	Entity=person-16)|SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	after	after	ADP	IN	_	7	case	7:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(event-153
 7	Council	Council	PROPN	NNP	Number=Sing	11	obl	11:obl:after	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	War	War	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=event-153)(event-154)
+9	War	War	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=event-153)(event-154)|SpaceAfter=No
 10	,	,	PUNCT	,	_	7	punct	7:punct	_
 11	abandoned	abandon	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=elaboration:86->85
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(abstract-155
@@ -915,22 +935,23 @@
 18	and	and	CCONJ	CC	_	19	cc	19:cc	Discourse=joint:88->87
 19	returned	return	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	conj	11:conj:and	_
 20	to	to	ADP	IN	_	21	case	21:case	_
-21	England	England	PROPN	NNP	Number=Sing	19	obl	19:obl:to	Entity=(place-91)
+21	England	England	PROPN	NNP	Number=Sing	19	obl	19:obl:to	Entity=(place-91)|SpaceAfter=No
 22	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-34
-# text = Jonathan Swift , a confidant of Hill , noted that Hill 's friends privately blamed him for his irresolution and lack of leadership .
+# s_type = decl
+# text = Jonathan Swift, a confidant of Hill, noted that Hill's friends privately blamed him for his irresolution and lack of leadership.
 1	Jonathan	Jonathan	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Discourse=attribution:89->90|Entity=(person-157
-2	Swift	Swift	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-157)
+2	Swift	Swift	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-157)|SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(person-157
 5	confidant	confidant	NOUN	NN	Number=Sing	1	appos	1:appos	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	Hill	Hill	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	Entity=person-157)(person-20)
+7	Hill	Hill	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	Entity=person-157)(person-20)|SpaceAfter=No
 8	,	,	PUNCT	,	_	1	punct	1:punct	_
 9	noted	note	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 10	that	that	SCONJ	IN	_	15	mark	15:mark	Discourse=joint:90->85
+11-12	Hill's	_	_	_	_	_	_	_	_
 11	Hill	Hill	PROPN	NNP	Number=Sing	13	nmod:poss	13:nmod:poss	Entity=(person-87(person-20
 12	's	's	PART	POS	_	11	case	11:case	Entity=person-20)
 13	friends	friend	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	Entity=person-87)
@@ -943,18 +964,19 @@
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
 21	lack	lack	NOUN	NN	Number=Sing	19	conj	15:obl:for|19:conj:and	Entity=(abstract-159
 22	of	of	ADP	IN	_	23	case	23:case	_
-23	leadership	leadership	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=abstract-159)(abstract-160)
+23	leadership	leadership	NOUN	NN	Number=Sing	21	nmod	21:nmod:of	Entity=abstract-159)(abstract-160)|SpaceAfter=No
 24	.	.	PUNCT	.	_	9	punct	9:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-35
-# text = Hill 's Tory connections , however , allowed him to escape any check in his career arising from this disaster .
+# s_type = decl
+# text = Hill's Tory connections, however, allowed him to escape any check in his career arising from this disaster.
+1-2	Hill's	_	_	_	_	_	_	_	_
 1	Hill	Hill	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Discourse=joint:91->90|Entity=(abstract-161(person-20
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-20)
 3	Tory	Tory	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-162)
-4	connections	connection	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	Entity=abstract-161)
+4	connections	connection	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	Entity=abstract-161)|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
-6	however	however	ADV	RB	_	8	advmod	8:advmod	_
+6	however	however	ADV	RB	_	8	advmod	8:advmod	SpaceAfter=No
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	allowed	allow	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	obj	8:obj|11:nsubj:xsubj	Entity=(person-20)
@@ -968,28 +990,28 @@
 17	arising	arise	VERB	VBG	VerbForm=Ger	13	acl	13:acl	Discourse=elaboration:92->91
 18	from	from	ADP	IN	_	20	case	20:case	_
 19	this	this	DET	DT	Number=Sing|PronType=Dem	20	det	20:det	Entity=(event-165
-20	disaster	disaster	NOUN	NN	Number=Sing	17	obl	17:obl:from	Entity=abstract-163)event-165)
+20	disaster	disaster	NOUN	NN	Number=Sing	17	obl	17:obl:from	Entity=abstract-163)event-165)|SpaceAfter=No
 21	.	.	PUNCT	.	_	8	punct	8:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_bio_john-36
+# s_type = frag
 # text = Further promotion
 1	Further	further	ADJ	JJR	Degree=Cmp	2	amod	2:amod	Discourse=preparation:93->95|Entity=(event-166
 2	promotion	promotion	NOUN	NN	Number=Sing	0	root	0:root	Entity=event-166)
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-37
-# text = In June 1712 , Hill became Lieutenant-General of the Ordnance , the Whig Thomas Erle having been turned out , and received the office of Governor of Dunkirk after the signing of the Treaty of Utrecht .
+# s_type = decl
+# text = In June 1712, Hill became Lieutenant-General of the Ordnance, the Whig Thomas Erle having been turned out, and received the office of Governor of Dunkirk after the signing of the Treaty of Utrecht.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=preparation:94->95
 2	June	June	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(time-3
-3	1712	1712	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-3)(time-167)
+3	1712	1712	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-3)(time-167)|SpaceAfter=No
 4	,	,	PUNCT	,	_	2	punct	2:punct	_
 5	Hill	Hill	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj|7:nsubj:xsubj|22:nsubj	Entity=(person-20)
 6	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	Lieutenant-General	Lieutenant-General	PROPN	NNP	Number=Sing	6	xcomp	6:xcomp	Entity=(person-168)
 8	of	of	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(organization-169
-10	Ordnance	Ordnance	PROPN	NNP	Number=Sing	7	obl	7:obl:of	Entity=organization-169)
+10	Ordnance	Ordnance	PROPN	NNP	Number=Sing	7	obl	7:obl:of	Entity=organization-169)|SpaceAfter=No
 11	,	,	PUNCT	,	_	18	punct	18:punct	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Discourse=joint:95->91|Entity=(person-86
 13	Whig	Whig	PROPN	NNP	Number=Sing	18	nsubj:pass	18:nsubj:pass	_
@@ -998,7 +1020,7 @@
 16	having	have	AUX	VBG	VerbForm=Ger	18	aux	18:aux	_
 17	been	be	AUX	VBN	Tense=Past|VerbForm=Part	18	aux:pass	18:aux:pass	_
 18	turned	turn	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	advcl	6:advcl	_
-19	out	out	ADP	RP	_	18	compound:prt	18:compound:prt	_
+19	out	out	ADP	RP	_	18	compound:prt	18:compound:prt	SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
 21	and	and	CCONJ	CC	_	22	cc	22:cc	Discourse=joint:96->95
 22	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:and	_
@@ -1015,19 +1037,19 @@
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	Entity=(event-174
 34	Treaty	Treaty	PROPN	NNP	Number=Sing	31	nmod	31:nmod:of	_
 35	of	of	ADP	IN	_	36	case	36:case	_
-36	Utrecht	Utrecht	PROPN	NNP	Number=Sing	34	nmod	34:nmod:of	Entity=event-173)event-174)(place-175)
+36	Utrecht	Utrecht	PROPN	NNP	Number=Sing	34	nmod	34:nmod:of	Entity=event-173)event-174)(place-175)|SpaceAfter=No
 37	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-38
-# text = In July he was promoted major general , and sworn of the Privy Council in November .
+# s_type = decl
+# text = In July he was promoted major general, and sworn of the Privy Council in November.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=elaboration:97->96
 2	July	July	PROPN	NNP	Number=Sing	5	obl	5:obl:in	Entity=(time-176)
 3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj:pass	5:nsubj:pass|10:nsubj:pass	Entity=(person-171)
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass|10:aux:pass	_
 5	promoted	promote	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	major	major	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(person-177
-7	general	general	NOUN	NN	Number=Sing	5	obj	5:obj	Entity=person-177)
+7	general	general	NOUN	NN	Number=Sing	5	obj	5:obj	Entity=person-177)|SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	and	and	CCONJ	CC	_	10	cc	10:cc	Discourse=joint:98->97
 10	sworn	swear	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj:and	_
@@ -1036,12 +1058,12 @@
 13	Privy	Privy	ADJ	NNP	Number=Sing	14	amod	14:amod	_
 14	Council	Council	PROPN	NNP	Number=Sing	10	obl	10:obl:of	Entity=event-153)
 15	in	in	ADP	IN	_	16	case	16:case	_
-16	November	November	PROPN	NNP	Number=Sing	10	obl	10:obl:in	Entity=(time-54)
+16	November	November	PROPN	NNP	Number=Sing	10	obl	10:obl:in	Entity=(time-54)|SpaceAfter=No
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-39
-# text = Perhaps impelled by hopes of a never-offered peerage , he did not stand for election in 1713 .
+# s_type = decl
+# text = Perhaps impelled by hopes of a never-offered peerage, he did not stand for election in 1713.
 1	Perhaps	perhaps	ADV	RB	Degree=Pos	2	advmod	2:advmod	Discourse=preparation:99->101
 2	impelled	impel	VERB	VBN	Tense=Past|VerbForm=Part	13	advcl	13:advcl	_
 3	by	by	ADP	IN	_	4	case	4:case	_
@@ -1049,7 +1071,7 @@
 5	of	of	ADP	IN	_	8	case	8:case	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(person-179
 7	never-offered	never-offered	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-8	peerage	peerage	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-178)person-179)
+8	peerage	peerage	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-178)person-179)|SpaceAfter=No
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	Discourse=preparation:100->101|Entity=(person-179)
 11	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
@@ -1058,14 +1080,14 @@
 14	for	for	ADP	IN	_	15	case	15:case	_
 15	election	election	NOUN	NN	Number=Sing	13	obl	13:obl:for	Entity=(event-180)
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	1713	1713	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:in	Entity=(time-181)
+17	1713	1713	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:in	Entity=(time-181)|SpaceAfter=No
 18	.	.	PUNCT	.	_	13	punct	13:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-40
-# text = In London , Hill was elected to the society of wits headed by Swift and St John , and was known for his great conviviality .
+# s_type = decl
+# text = In London, Hill was elected to the society of wits headed by Swift and St John, and was known for his great conviviality.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:101->96
-2	London	London	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(place-182)
+2	London	London	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=(place-182)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Hill	Hill	PROPN	NNP	Number=Sing	6	nsubj:pass	6:nsubj:pass|21:nsubj:pass	Entity=(person-20)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
@@ -1080,7 +1102,7 @@
 14	Swift	Swift	PROPN	NNP	Number=Sing	12	obl	12:obl:by	Entity=(person-157(person-157)
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
 16	St	St	PROPN	NNP	Number=Sing	14	conj	12:obl:by|14:conj:and	Entity=(person-136
-17	John	John	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=organization-183)person-157)person-136)
+17	John	John	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=organization-183)person-157)person-136)|SpaceAfter=No
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	and	and	CCONJ	CC	_	21	cc	21:cc	Discourse=joint:103->101
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	aux:pass	21:aux:pass	_
@@ -1088,12 +1110,12 @@
 22	for	for	ADP	IN	_	25	case	25:case	_
 23	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	25	nmod:poss	25:nmod:poss	Entity=(abstract-185(person-157)
 24	great	great	ADJ	JJ	Degree=Pos	25	amod	25:amod	_
-25	conviviality	conviviality	NOUN	NN	Number=Sing	21	obl	21:obl:for	Entity=abstract-185)
+25	conviviality	conviviality	NOUN	NN	Number=Sing	21	obl	21:obl:for	Entity=abstract-185)|SpaceAfter=No
 26	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-41
-# text = He returned to Dunkirk in February 1714 as a commissioner to inspect the fortifications , but came back to England in August for the accession of George I .
+# s_type = decl
+# text = He returned to Dunkirk in February 1714 as a commissioner to inspect the fortifications, but came back to England in August for the accession of George I.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|17:nsubj	Discourse=concession:104->106|Entity=(person-157)
 2	returned	return	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	ADP	IN	_	4	case	4:case	_
@@ -1107,7 +1129,7 @@
 11	to	to	PART	TO	_	12	mark	12:mark	Discourse=purpose:105->104
 12	inspect	inspect	VERB	VB	VerbForm=Inf	2	advcl	2:advcl:to	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(place-189
-14	fortifications	fortification	NOUN	NNS	Number=Plur	12	obj	12:obj	Entity=place-189)
+14	fortifications	fortification	NOUN	NNS	Number=Plur	12	obj	12:obj	Entity=place-189)|SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	but	but	CCONJ	CC	_	17	cc	17:cc	Discourse=sequence:106->101
 17	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:but	_
@@ -1121,18 +1143,18 @@
 25	accession	accession	NOUN	NN	Number=Sing	17	obl	17:obl:for	_
 26	of	of	ADP	IN	_	27	case	27:case	_
 27	George	George	PROPN	NNP	Number=Sing	25	nmod	25:nmod:of	Entity=(person-191
-28	I	I	NUM	CD	NumForm=Roman|NumType=Card	27	dep	27:dep	Entity=event-190)person-191)
+28	I	I	NUM	CD	NumForm=Roman|NumType=Card	27	dep	27:dep	Entity=event-190)person-191)|SpaceAfter=No
 29	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_bio_john-42
+# s_type = frag
 # text = Later life
 1	Later	late	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:107->108|Entity=(abstract-192
 2	life	life	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-192)
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-43
-# text = With the death of Anne and the accession of George I , Hill lost his offices , but retained his commission as major-general .
+# s_type = decl
+# text = With the death of Anne and the accession of George I, Hill lost his offices, but retained his commission as major-general.
 1	With	with	ADP	IN	_	3	case	3:case	Discourse=sequence:108->101
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-193
 3	death	death	NOUN	NN	Number=Sing	14	obl	14:obl:with	_
@@ -1143,24 +1165,24 @@
 8	accession	accession	NOUN	NN	Number=Sing	3	conj	3:conj:and|14:obl:with	_
 9	of	of	ADP	IN	_	10	case	10:case	_
 10	George	George	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(person-191
-11	I	I	NUM	CD	NumForm=Roman|NumType=Card	10	amod	10:amod	Entity=event-194)person-191)
+11	I	I	NUM	CD	NumForm=Roman|NumType=Card	10	amod	10:amod	Entity=event-194)person-191)|SpaceAfter=No
 12	,	,	PUNCT	,	_	3	punct	3:punct	_
 13	Hill	Hill	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj|19:nsubj	Discourse=concession:109->110|Entity=(person-20)
 14	lost	lose	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 15	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	Entity=(abstract-195(person-20)
-16	offices	office	NOUN	NNS	Number=Plur	14	obj	14:obj	Entity=abstract-195)
+16	offices	office	NOUN	NNS	Number=Plur	14	obj	14:obj	Entity=abstract-195)|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	but	but	CCONJ	CC	_	19	cc	19:cc	Discourse=elaboration:110->108
 19	retained	retain	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	conj	14:conj:but	_
 20	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	Entity=(abstract-196(person-20)
 21	commission	commission	NOUN	NN	Number=Sing	19	obj	19:obj	_
 22	as	as	ADP	IN	_	23	case	23:case	_
-23	major-general	major-general	NOUN	NN	Number=Sing	21	nmod	21:nmod:as	Entity=abstract-196)(abstract-197)
+23	major-general	major-general	NOUN	NN	Number=Sing	21	nmod	21:nmod:as	Entity=abstract-196)(abstract-197)|SpaceAfter=No
 24	.	.	PUNCT	.	_	14	punct	14:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-44
-# text = He sold his colonelcy to Edward Montagu in July 1715 and retired .
+# s_type = decl
+# text = He sold his colonelcy to Edward Montagu in July 1715 and retired.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|12:nsubj	Discourse=joint:111->108|Entity=(person-20)
 2	sold	sell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(person-198(person-20)
@@ -1172,12 +1194,12 @@
 9	July	July	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Entity=(time-176
 10	1715	1715	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-176)(time-200)
 11	and	and	CCONJ	CC	_	12	cc	12:cc	Discourse=joint:112->111
-12	retired	retire	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
+12	retired	retire	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	SpaceAfter=No
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-45
-# text = Both he and Lady Masham retained Tory sympathies in their later years , which Hill spent at his seat in Egham and his London house in Jermyn Street , where he died .
+# s_type = decl
+# text = Both he and Lady Masham retained Tory sympathies in their later years, which Hill spent at his seat in Egham and his London house in Jermyn Street, where he died.
 1	Both	both	CCONJ	CC	_	2	cc:preconj	2:cc:preconj	Discourse=joint:113->111|Entity=(person-199
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj	6:nsubj	Entity=person-199)
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
@@ -1189,7 +1211,7 @@
 9	in	in	ADP	IN	_	12	case	12:case	_
 10	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	Entity=(time-202(person-203)
 11	later	late	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	years	year	NOUN	NNS	Number=Plur	6	obl	6:obl:in|16:obj	_
+12	years	year	NOUN	NNS	Number=Plur	6	obl	6:obl:in|16:obj	SpaceAfter=No
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	which	which	PRON	WDT	PronType=Rel	16	obj	12:ref	Discourse=elaboration:114->113
 15	Hill	Hill	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Entity=(person-20)
@@ -1205,16 +1227,16 @@
 25	house	house	NOUN	NN	Number=Sing	19	conj	16:obl:at|19:conj:and	_
 26	in	in	ADP	IN	_	28	case	28:case	_
 27	Jermyn	Jermyn	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(place-208(person-209)
-28	Street	Street	PROPN	NNP	Number=Sing	25	nmod	25:nmod:in	Entity=place-208)
+28	Street	Street	PROPN	NNP	Number=Sing	25	nmod	25:nmod:in	Entity=place-208)|SpaceAfter=No
 29	,	,	PUNCT	,	_	32	punct	32:punct	_
 30	where	where	SCONJ	WRB	PronType=Rel	32	mark	32:mark	Discourse=elaboration:115->114
 31	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	32	nsubj	32:nsubj	Entity=(person-199)
-32	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	acl:relcl	25:acl:relcl	Entity=time-202)place-206)
+32	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	25	acl:relcl	25:acl:relcl	Entity=time-202)place-206)|SpaceAfter=No
 33	.	.	PUNCT	.	_	6	punct	6:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_bio_john-46
-# text = He left his estate to his nephew Samuel Masham , 2nd Baron Masham .
+# s_type = decl
+# text = He left his estate to his nephew Samuel Masham, 2nd Baron Masham.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=sequence:116->113|Entity=(person-199)
 2	left	leave	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(place-210(person-199)
@@ -1223,10 +1245,10 @@
 6	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	Entity=(person-211(person-199)
 7	nephew	nephew	NOUN	NN	Number=Sing	2	obl	2:obl:to	_
 8	Samuel	Samuel	PROPN	NNP	Number=Sing	7	appos	7:appos	_
-9	Masham	Masham	PROPN	NNP	Number=Sing	8	flat	8:flat	_
+9	Masham	Masham	PROPN	NNP	Number=Sing	8	flat	8:flat	SpaceAfter=No
 10	,	,	PUNCT	,	_	12	punct	12:punct	_
 11	2nd	2nd	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	_
 12	Baron	Baron	PROPN	NNP	Number=Sing	8	flat	8:flat	_
-13	Masham	Masham	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-211)
+13	Masham	Masham	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-211)|SpaceAfter=No
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
