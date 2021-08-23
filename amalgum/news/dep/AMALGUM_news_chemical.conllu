@@ -1,6 +1,6 @@
-# s_type = decl
 # newdoc id = AMALGUM_news_chemical
 # sent_id = AMALGUM_news_chemical-1
+# s_type = decl
 # text = Syrian army bombs Damascus suburbs after allegedly using chemical weapons on them
 1	Syrian	Syrian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:1->5|Entity=(organization-1
 2	army	army	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=organization-1)
@@ -13,21 +13,21 @@
 9	chemical	chemical	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(object-4
 10	weapons	weapon	NOUN	NNS	Number=Plur	8	obj	8:obj	Entity=object-4)
 11	on	on	ADP	IN	_	12	case	12:case	_
-12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obl	8:obl:on	Entity=(place-2)
+12	them	they	PRON	PRP	Case=Acc|Number=Plur|Person=3|PronType=Prs	8	obl	8:obl:on	Entity=(place-2)|SpaceAfter=No
 
-# s_type = frag
 # sent_id = AMALGUM_news_chemical-2
-# text = Friday , August 23 , 2013
-1	Friday	Friday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:3->5|Entity=(time-5)
+# s_type = frag
+# text = Friday, August 23, 2013
+1	Friday	Friday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:3->5|Entity=(time-5)|SpaceAfter=No
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5
-4	23	23	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	_
+4	23	23	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	2013	2013	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-3
-# text = After the Syrian government denied the army used chemical weapons against the densely populated eastern Ghouta region of Damascus on Wednesday , armed forces heavily bombed the neighborhood yesterday .
+# s_type = decl
+# text = After the Syrian government denied the army used chemical weapons against the densely populated eastern Ghouta region of Damascus on Wednesday, armed forces heavily bombed the neighborhood yesterday.
 1	After	after	SCONJ	IN	_	5	mark	5:mark	Discourse=attribution:4->5
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(organization-7
 3	Syrian	Syrian	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
@@ -48,7 +48,7 @@
 18	of	of	ADP	IN	_	19	case	19:case	_
 19	Damascus	Damascus	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=place-8)(place-3)
 20	on	on	ADP	IN	_	21	case	21:case	_
-21	Wednesday	Wednesday	PROPN	NNP	Number=Sing	8	obl	8:obl:on	Entity=(time-10)
+21	Wednesday	Wednesday	PROPN	NNP	Number=Sing	8	obl	8:obl:on	Entity=(time-10)|SpaceAfter=No
 22	,	,	PUNCT	,	_	5	punct	5:punct	_
 23	armed	armed	ADJ	JJ	Degree=Pos	24	amod	24:amod	Discourse=same_unit:6->5|Entity=(organization-11
 24	forces	force	NOUN	NNS	Number=Plur	26	nsubj	26:nsubj	Entity=organization-11)
@@ -56,12 +56,12 @@
 26	bombed	bomb	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Entity=(event-12)
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(place-13
 28	neighborhood	neighborhood	NOUN	NN	Number=Sing	26	obj	26:obj	Entity=place-13)
-29	yesterday	yesterday	NOUN	NN	Number=Sing	26	obl:tmod	26:obl:tmod	Entity=(time-14)
+29	yesterday	yesterday	NOUN	NN	Number=Sing	26	obl:tmod	26:obl:tmod	Entity=(time-14)|SpaceAfter=No
 30	.	.	PUNCT	.	_	26	punct	26:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-4
-# text = Reports say anywhere between 100 and 1,300 people were killed in Wednesday 's alleged chemical attack , but there are no reports of injuries or deaths in yesterday 's bombings .
+# s_type = decl
+# text = Reports say anywhere between 100 and 1,300 people were killed in Wednesday's alleged chemical attack, but there are no reports of injuries or deaths in yesterday's bombings.
 1	Reports	report	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	Discourse=attribution:7->8|Entity=(abstract-15)
 2	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	anywhere	anywhere	ADV	RB	_	10	advmod	10:advmod	Discourse=joint:8->5
@@ -73,11 +73,12 @@
 9	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
 10	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	ccomp	2:ccomp	_
 11	in	in	ADP	IN	_	16	case	16:case	_
+12-13	Wednesday's	_	_	_	_	_	_	_	_
 12	Wednesday	Wednesday	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(event-17(time-10
 13	's	's	PART	POS	_	12	case	12:case	Entity=time-10)
 14	alleged	allege	VERB	VBN	Tense=Past|VerbForm=Part	16	amod	16:amod	_
 15	chemical	chemical	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	attack	attack	NOUN	NN	Number=Sing	10	obl	10:obl:in	Entity=event-17)
+16	attack	attack	NOUN	NN	Number=Sing	10	obl	10:obl:in	Entity=event-17)|SpaceAfter=No
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	but	but	CCONJ	CC	_	20	cc	20:cc	Discourse=contrast:9->8
 19	there	there	PRON	EX	_	20	expl	20:expl	_
@@ -89,14 +90,15 @@
 25	or	or	CCONJ	CC	_	26	cc	26:cc	_
 26	deaths	death	NOUN	NNS	Number=Plur	24	conj	22:nmod:of|24:conj:or	Entity=abstract-15)(event-19)
 27	in	in	ADP	IN	_	30	case	30:case	_
+28-29	yesterday's	_	_	_	_	_	_	_	_
 28	yesterday	yesterday	NOUN	NN	Number=Sing	30	nmod:poss	30:nmod:poss	Entity=(event-20(time-14
 29	's	's	PART	POS	_	28	case	28:case	Entity=time-14)
-30	bombings	bombing	NOUN	NNS	Number=Plur	20	obl	20:obl:in	Entity=event-20)
+30	bombings	bombing	NOUN	NNS	Number=Plur	20	obl	20:obl:in	Entity=event-20)|SpaceAfter=No
 31	.	.	PUNCT	.	_	2	punct	2:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-5
-# text = Many of those killed appeared to be children .
+# s_type = decl
+# text = Many of those killed appeared to be children.
 1	Many	many	ADJ	JJ	Degree=Pos	5	nsubj	5:nsubj|8:nsubj:xsubj	Discourse=elaboration:10->9
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	those	this	PRON	DT	Number=Plur|PronType=Dem	1	obl	1:obl:of	_
@@ -104,12 +106,12 @@
 5	appeared	appear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	to	to	PART	TO	_	8	mark	8:mark	_
 7	be	be	AUX	VB	VerbForm=Inf	8	cop	8:cop	_
-8	children	child	NOUN	NNS	Number=Plur	5	xcomp	5:xcomp	Entity=(person-21)
+8	children	child	NOUN	NNS	Number=Plur	5	xcomp	5:xcomp	Entity=(person-21)|SpaceAfter=No
 9	.	.	PUNCT	.	_	5	punct	5:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-6
-# text = Some of the pictures and video coming out of the country do n't show blood and dismembered bodies , but instead show , according to witnesses , those who died from apparent suffocation ; some were foaming at the mouth and others were having convulsions .
+# s_type = decl
+# text = Some of the pictures and video coming out of the country don't show blood and dismembered bodies, but instead show, according to witnesses, those who died from apparent suffocation; some were foaming at the mouth and others were having convulsions.
 1	Some	some	PRON	DT	_	14	nsubj	14:nsubj|22:nsubj	Discourse=elaboration:11->9|Entity=(event-17
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(object-22
@@ -121,28 +123,29 @@
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-24
 11	country	country	NOUN	NN	Number=Sing	7	obl	7:obl:out_of	Entity=event-17)abstract-23)place-24)
+12-13	don't	_	_	_	_	_	_	_	_
 12	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	aux	14:aux	_
 13	n't	not	ADV	RB	Polarity=Neg	14	advmod	14:advmod	_
 14	show	show	VERB	VB	VerbForm=Inf	0	root	0:root	_
 15	blood	blood	NOUN	NN	Number=Sing	14	obj	14:obj	Entity=(substance-25)
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	dismembered	dismembered	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(object-26
-18	bodies	body	NOUN	NNS	Number=Plur	15	conj	14:obj|15:conj:and	Entity=object-26)
+18	bodies	body	NOUN	NNS	Number=Plur	15	conj	14:obj|15:conj:and	Entity=object-26)|SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
 20	but	but	CCONJ	CC	_	22	cc	22:cc	Discourse=contrast:13->11
 21	instead	instead	ADV	RB	Degree=Pos	22	advmod	22:advmod	_
-22	show	show	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	conj	14:conj:but	_
+22	show	show	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	14	conj	14:conj:but	SpaceAfter=No
 23	,	,	PUNCT	,	_	26	punct	26:punct	_
 24	according	accord	VERB	VBG	VerbForm=Ger	26	case	26:case	Discourse=attribution:14->15
 25	to	to	ADP	IN	_	24	fixed	24:fixed	_
-26	witnesses	witness	NOUN	NNS	Number=Plur	22	obl	22:obl:according_to	Entity=(person-27)
+26	witnesses	witness	NOUN	NNS	Number=Plur	22	obl	22:obl:according_to	Entity=(person-27)|SpaceAfter=No
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
 28	those	this	PRON	DT	Number=Plur|PronType=Dem	22	obj	22:obj|30:nsubj	Discourse=elaboration:15->13|Entity=(person-28
 29	who	who	PRON	WP	PronType=Rel	30	nsubj	28:ref	Discourse=elaboration:16->15
 30	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	acl:relcl	28:acl:relcl	_
 31	from	from	ADP	IN	_	33	case	33:case	_
 32	apparent	apparent	ADJ	JJ	Degree=Pos	33	amod	33:amod	Entity=(event-29
-33	suffocation	suffocation	NOUN	NN	Number=Sing	30	obl	30:obl:from	Entity=person-28)event-29)
+33	suffocation	suffocation	NOUN	NN	Number=Sing	30	obl	30:obl:from	Entity=person-28)event-29)|SpaceAfter=No
 34	;	;	PUNCT	:	_	37	punct	37:punct	_
 35	some	some	PRON	DT	_	37	nsubj	37:nsubj	Discourse=same_unit:17->15|Entity=(person-27)
 36	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	aux	37:aux	_
@@ -154,12 +157,12 @@
 42	others	other	NOUN	NNS	Number=Plur	44	nsubj	44:nsubj	Entity=(person-31)
 43	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	44	aux	44:aux	_
 44	having	have	VERB	VBG	Tense=Pres|VerbForm=Part	37	conj	37:conj:and	_
-45	convulsions	convulsion	NOUN	NNS	Number=Plur	44	obj	44:obj	Entity=(event-32)
+45	convulsions	convulsion	NOUN	NNS	Number=Plur	44	obj	44:obj	Entity=(event-32)|SpaceAfter=No
 46	.	.	PUNCT	.	_	14	punct	14:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-7
-# text = One video posted to YouTube purportedly shows a young girl who survived the alleged attack , yelling " I ’m alive , I ’m alive . "
+# s_type = decl
+# text = One video posted to YouTube purportedly shows a young girl who survived the alleged attack, yelling "I’m alive, I’m alive."
 1	One	one	NUM	CD	NumForm=Word|NumType=Card	2	nummod	2:nummod	Discourse=joint:19->5|Entity=(abstract-23
 2	video	video	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
 3	posted	post	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	Discourse=elaboration:20->19
@@ -174,32 +177,34 @@
 12	survived	survive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(event-17
 14	alleged	allege	VERB	VBN	Tense=Past|VerbForm=Part	15	amod	15:amod	_
-15	attack	attack	NOUN	NN	Number=Sing	12	obj	12:obj	Entity=person-34)event-17)
+15	attack	attack	NOUN	NN	Number=Sing	12	obj	12:obj	Entity=person-34)event-17)|SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	yelling	yell	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	Discourse=attribution:23->24
-18	"	''	PUNCT	``	_	21	punct	21:punct	Discourse=same_unit:24->21
+18	"	''	PUNCT	``	_	21	punct	21:punct	Discourse=same_unit:24->21|SpaceAfter=No
+19-20	I’m	_	_	_	_	_	_	_	_
 19	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	21	nsubj	21:nsubj	Entity=(person-35)
 20	’m	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	21	cop	21:cop	_
-21	alive	alive	ADJ	JJ	Degree=Pos	17	ccomp	17:ccomp	_
+21	alive	alive	ADJ	JJ	Degree=Pos	17	ccomp	17:ccomp	SpaceAfter=No
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
+23-24	I’m	_	_	_	_	_	_	_	_
 23	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	25	nsubj	25:nsubj	Discourse=same_unit:25->24|Entity=(person-35)
 24	’m	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	25	cop	25:cop	_
-25	alive	alive	ADJ	JJ	Degree=Pos	21	parataxis	21:parataxis	_
-26	.	.	PUNCT	.	_	21	punct	21:punct	_
+25	alive	alive	ADJ	JJ	Degree=Pos	21	parataxis	21:parataxis	SpaceAfter=No
+26	.	.	PUNCT	.	_	21	punct	21:punct	SpaceAfter=No
 27	"	''	PUNCT	''	_	21	punct	21:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-8
-# text = At one point , according to The Washington Post , the girl even tries to convince the hospital official she is still alive .
+# s_type = decl
+# text = At one point, according to The Washington Post, the girl even tries to convince the hospital official she is still alive.
 1	At	at	ADP	IN	_	3	case	3:case	Discourse=joint:26->5
 2	one	one	NUM	CD	NumForm=Word|NumType=Card	3	nummod	3:nummod	Entity=(time-36
-3	point	point	NOUN	NN	Number=Sing	14	obl	14:obl:at	Entity=time-36)
+3	point	point	NOUN	NN	Number=Sing	14	obl	14:obl:at	Entity=time-36)|SpaceAfter=No
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	according	accord	VERB	VBG	VerbForm=Ger	9	case	9:case	_
 6	to	to	ADP	IN	_	5	fixed	5:fixed	_
 7	The	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(organization-37
 8	Washington	Washington	PROPN	NNP	Number=Sing	9	compound	9:compound	_
-9	Post	Post	PROPN	NNP	Number=Sing	14	obl	14:obl:according_to	Entity=organization-37)
+9	Post	Post	PROPN	NNP	Number=Sing	14	obl	14:obl:according_to	Entity=organization-37)|SpaceAfter=No
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Discourse=attribution:27->26|Entity=(person-34
 12	girl	girl	NOUN	NN	Number=Sing	14	nsubj	14:nsubj|16:nsubj:xsubj	Entity=person-34)
@@ -213,12 +218,12 @@
 20	she	she	PRON	PRP	Case=Nom|Gender=Fem|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	Discourse=elaboration:28->27|Entity=(person-34)
 21	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	23	cop	23:cop	_
 22	still	still	ADV	RB	Degree=Pos	23	advmod	23:advmod	_
-23	alive	alive	ADJ	JJ	Degree=Pos	16	ccomp	16:ccomp	_
+23	alive	alive	ADJ	JJ	Degree=Pos	16	ccomp	16:ccomp	SpaceAfter=No
 24	.	.	PUNCT	.	_	14	punct	14:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-9
-# text = The bombings come as United Nations observers began to arrive to investigate claims of chemical weapons use elsewhere in the nation .
+# s_type = decl
+# text = The bombings come as United Nations observers began to arrive to investigate claims of chemical weapons use elsewhere in the nation.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:29->5|Entity=(event-20
 2	bombings	bombing	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=event-20)
 3	come	come	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -239,16 +244,16 @@
 18	elsewhere	elsewhere	ADV	RB	Degree=Pos	21	advmod	21:advmod	Entity=(place-24
 19	in	in	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	_
-21	nation	nation	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	Entity=abstract-44)abstract-45)place-24)
+21	nation	nation	NOUN	NN	Number=Sing	17	nmod	17:nmod:in	Entity=abstract-44)abstract-45)place-24)|SpaceAfter=No
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-10
-# text = According to Russian officials , the Syrian government is ready to give UN observers " maximum cooperation " while they perform their investigation .
+# s_type = decl
+# text = According to Russian officials, the Syrian government is ready to give UN observers "maximum cooperation" while they perform their investigation.
 1	According	accord	VERB	VBG	VerbForm=Ger	4	case	4:case	Discourse=attribution:32->33
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	Russian	Russian	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(person-46
-4	officials	official	NOUN	NNS	Number=Plur	10	obl	10:obl:according_to	Entity=person-46)
+4	officials	official	NOUN	NNS	Number=Plur	10	obl	10:obl:according_to	Entity=person-46)|SpaceAfter=No
 5	,	,	PUNCT	,	_	4	punct	4:punct	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Discourse=attribution:33->36|Entity=(organization-7
 7	Syrian	Syrian	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
@@ -259,21 +264,21 @@
 12	give	give	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
 13	UN	UN	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(person-40(organization-47)
 14	observers	observer	NOUN	NNS	Number=Plur	12	obj	12:obj	Entity=person-40)
-15	"	''	PUNCT	``	_	17	punct	17:punct	_
+15	"	''	PUNCT	``	_	17	punct	17:punct	SpaceAfter=No
 16	maximum	maximum	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(abstract-48
-17	cooperation	cooperation	NOUN	NN	Number=Sing	12	obj	12:obj	Entity=abstract-48)
+17	cooperation	cooperation	NOUN	NN	Number=Sing	12	obj	12:obj	Entity=abstract-48)|SpaceAfter=No
 18	"	''	PUNCT	''	_	17	punct	17:punct	_
 19	while	while	SCONJ	IN	_	21	mark	21:mark	Discourse=circumstance:34->33
 20	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	21	nsubj	21:nsubj	Entity=(person-40)
 21	perform	perform	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	12	advcl	12:advcl:while	_
 22	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	Entity=(abstract-43(person-40)
-23	investigation	investigation	NOUN	NN	Number=Sing	21	obj	21:obj	Entity=abstract-43)
+23	investigation	investigation	NOUN	NN	Number=Sing	21	obj	21:obj	Entity=abstract-43)|SpaceAfter=No
 24	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-11
-# text = " We hope that the results will clarify the issue and will help to dispel numerous speculations around the alleged use of the Syrian chemical weapons while simultaneously creating a positive background for the moves towards the start of the political process of settlement of the Syrian crisis , " Aleksandr Lukashevich , Russia 's foreign minister , said yesterday .
-1	"	''	PUNCT	``	_	3	punct	3:punct	Discourse=attribution:35->36
+# s_type = decl
+# text = "We hope that the results will clarify the issue and will help to dispel numerous speculations around the alleged use of the Syrian chemical weapons while simultaneously creating a positive background for the moves towards the start of the political process of settlement of the Syrian crisis," Aleksandr Lukashevich, Russia's foreign minister, said yesterday.
+1	"	''	PUNCT	``	_	3	punct	3:punct	Discourse=attribution:35->36|SpaceAfter=No
 2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	Entity=(person-49)
 3	hope	hope	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	59	ccomp	59:ccomp	_
 4	that	that	SCONJ	IN	_	8	mark	8:mark	Discourse=joint:36->5
@@ -320,24 +325,25 @@
 45	of	of	ADP	IN	_	48	case	48:case	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	48	det	48:det	Entity=(abstract-58
 47	Syrian	Syrian	ADJ	JJ	Degree=Pos	48	amod	48:amod	_
-48	crisis	crisis	NOUN	NN	Number=Sing	44	nmod	44:nmod:of	Entity=abstract-53)event-54)event-55)abstract-56)event-57)abstract-58)
-49	,	,	PUNCT	,	_	3	punct	3:punct	_
+48	crisis	crisis	NOUN	NN	Number=Sing	44	nmod	44:nmod:of	Entity=abstract-53)event-54)event-55)abstract-56)event-57)abstract-58)|SpaceAfter=No
+49	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 50	"	''	PUNCT	''	_	3	punct	3:punct	_
 51	Aleksandr	Aleksandr	PROPN	NNP	Number=Sing	59	nsubj	59:nsubj	Discourse=attribution:39->38|Entity=(person-59
-52	Lukashevich	Lukashevich	PROPN	NNP	Number=Sing	51	flat	51:flat	Entity=person-59)
+52	Lukashevich	Lukashevich	PROPN	NNP	Number=Sing	51	flat	51:flat	Entity=person-59)|SpaceAfter=No
 53	,	,	PUNCT	,	_	57	punct	57:punct	_
+54-55	Russia's	_	_	_	_	_	_	_	_
 54	Russia	Russia	PROPN	NNP	Number=Sing	57	nmod:poss	57:nmod:poss	Entity=(person-59(place-24
 55	's	's	PART	POS	_	54	case	54:case	Entity=place-24)
 56	foreign	foreign	ADJ	JJ	Degree=Pos	57	amod	57:amod	_
-57	minister	minister	NOUN	NN	Number=Sing	51	appos	51:appos	Entity=person-59)
+57	minister	minister	NOUN	NN	Number=Sing	51	appos	51:appos	Entity=person-59)|SpaceAfter=No
 58	,	,	PUNCT	,	_	51	punct	51:punct	_
 59	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-60	yesterday	yesterday	NOUN	NN	Number=Sing	59	obl:tmod	59:obl:tmod	Entity=(time-14)
+60	yesterday	yesterday	NOUN	NN	Number=Sing	59	obl:tmod	59:obl:tmod	Entity=(time-14)|SpaceAfter=No
 61	.	.	PUNCT	.	_	59	punct	59:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-12
-# text = Syrian officials say the alleged chemical attack was staged and carried out by rebel forces to " draw attention to their cause " ahead of the arrival of UN observers .
+# s_type = decl
+# text = Syrian officials say the alleged chemical attack was staged and carried out by rebel forces to "draw attention to their cause" ahead of the arrival of UN observers.
 1	Syrian	Syrian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=attribution:40->41|Entity=(person-60
 2	officials	official	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=person-60)
 3	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -354,12 +360,12 @@
 14	rebel	rebel	ADJ	JJ	Degree=Pos	15	amod	15:amod	Entity=(organization-11
 15	forces	force	NOUN	NNS	Number=Plur	11	obl	11:obl:by	Entity=organization-11)
 16	to	to	PART	TO	_	18	mark	18:mark	Discourse=purpose:42->41
-17	"	''	PUNCT	``	_	18	punct	18:punct	_
+17	"	''	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 18	draw	draw	VERB	VB	VerbForm=Inf	9	xcomp	9:xcomp	_
 19	attention	attention	NOUN	NN	Number=Sing	18	obj	18:obj	Entity=(event-61)
 20	to	to	ADP	IN	_	22	case	22:case	_
 21	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	Entity=(abstract-62(person-60)
-22	cause	cause	NOUN	NN	Number=Sing	18	obl	18:obl:to	Entity=abstract-62)
+22	cause	cause	NOUN	NN	Number=Sing	18	obl	18:obl:to	Entity=abstract-62)|SpaceAfter=No
 23	"	''	PUNCT	''	_	18	punct	18:punct	_
 24	ahead	ahead	ADV	RB	Degree=Pos	27	case	27:case	Discourse=same_unit:43->41
 25	of	of	ADP	IN	_	24	fixed	24:fixed	_
@@ -367,28 +373,28 @@
 27	arrival	arrival	NOUN	NN	Number=Sing	18	obl	18:obl:ahead_of	_
 28	of	of	ADP	IN	_	30	case	30:case	_
 29	UN	UN	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(person-40(organization-47)
-30	observers	observer	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	Entity=event-42)person-40)
+30	observers	observer	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	Entity=event-42)person-40)|SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-13
-# text = Deputy Secretary-General of the UN , Jan Eliasson , called the alleged chemical attack ' shocking ' and hopes the Syrian government will allow UN observers into the neighborhood as soon as possible .
+# s_type = decl
+# text = Deputy Secretary-General of the UN, Jan Eliasson, called the alleged chemical attack 'shocking' and hopes the Syrian government will allow UN observers into the neighborhood as soon as possible.
 1	Deputy	Deputy	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=joint:44->5|Entity=(person-63
 2	Secretary-General	Secretary-General	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|19:nsubj	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(organization-47
-5	UN	UN	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=person-63)organization-47)
+5	UN	UN	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=person-63)organization-47)|SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
 7	Jan	Jan	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(person-63
-8	Eliasson	Eliasson	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=person-63)
+8	Eliasson	Eliasson	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=person-63)|SpaceAfter=No
 9	,	,	PUNCT	,	_	2	punct	2:punct	_
 10	called	call	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(event-17
 12	alleged	allege	VERB	VBN	Tense=Past|VerbForm=Part	14	amod	14:amod	_
 13	chemical	chemical	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	attack	attack	NOUN	NN	Number=Sing	10	obj	10:obj|16:nsubj:xsubj	Entity=event-17)
-15	'	'	PUNCT	``	_	16	punct	16:punct	_
-16	shocking	shock	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	_
+15	'	'	PUNCT	``	_	16	punct	16:punct	SpaceAfter=No
+16	shocking	shock	ADJ	JJ	Degree=Pos	10	xcomp	10:xcomp	SpaceAfter=No
 17	'	'	PUNCT	''	_	16	punct	16:punct	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	Discourse=sequence:45->44
 19	hopes	hope	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	conj	10:conj:and	_
@@ -405,13 +411,13 @@
 30	as	as	ADV	RB	_	31	advmod	31:advmod	_
 31	soon	soon	ADV	RB	Degree=Pos	24	advmod	24:advmod	_
 32	as	as	SCONJ	IN	_	33	mark	33:mark	_
-33	possible	possible	ADJ	JJ	Degree=Pos	31	advcl	31:advcl:as	_
+33	possible	possible	ADJ	JJ	Degree=Pos	31	advcl	31:advcl:as	SpaceAfter=No
 34	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-14
-# text = " We see the need to investigate this as soon as possible ; no matter what the conclusions , this represents a serious escalation with grave humanitarian and human consequences , " said Eliasson who also added there is no confirmation that chemical weapons were used in Wednesday 's bombing .
-1	"	''	PUNCT	``	_	3	punct	3:punct	Discourse=joint:46->5
+# s_type = decl
+# text = "We see the need to investigate this as soon as possible; no matter what the conclusions, this represents a serious escalation with grave humanitarian and human consequences," said Eliasson who also added there is no confirmation that chemical weapons were used in Wednesday's bombing.
+1	"	''	PUNCT	``	_	3	punct	3:punct	Discourse=joint:46->5|SpaceAfter=No
 2	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	3	nsubj	3:nsubj	Entity=(person-49)
 3	see	see	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	33	ccomp	33:ccomp	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(abstract-64
@@ -422,13 +428,13 @@
 9	as	as	ADV	RB	_	10	advmod	10:advmod	_
 10	soon	soon	ADV	RB	Degree=Pos	7	advmod	7:advmod	Entity=abstract-64)
 11	as	as	SCONJ	IN	_	12	mark	12:mark	_
-12	possible	possible	ADJ	JJ	Degree=Pos	10	advcl	10:advcl:as	_
+12	possible	possible	ADJ	JJ	Degree=Pos	10	advcl	10:advcl:as	SpaceAfter=No
 13	;	;	PUNCT	:	_	21	punct	21:punct	_
 14	no	no	DET	RB	Degree=Pos|Polarity=Neg	15	det	15:det	Discourse=concession:47->46
 15	matter	matter	NOUN	NN	Number=Sing	21	obl:npmod	21:obl:npmod	_
 16	what	what	PRON	WDT	PronType=Int	21	advcl	21:advcl	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(abstract-65
-18	conclusions	conclusion	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	Entity=abstract-65)
+18	conclusions	conclusion	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	Entity=abstract-65)|SpaceAfter=No
 19	,	,	PUNCT	,	_	16	punct	16:punct	_
 20	this	this	PRON	DT	Number=Sing|PronType=Dem	21	nsubj	21:nsubj	Discourse=elaboration:48->47|Entity=(abstract-64)
 21	represents	represent	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	parataxis	3:parataxis	_
@@ -440,8 +446,8 @@
 27	humanitarian	humanitarian	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
 29	human	human	ADJ	JJ	Degree=Pos	27	conj	27:conj:and|30:amod	_
-30	consequences	consequence	NOUN	NNS	Number=Plur	24	nmod	24:nmod:with	Entity=event-66)abstract-67)
-31	,	,	PUNCT	,	_	3	punct	3:punct	_
+30	consequences	consequence	NOUN	NNS	Number=Plur	24	nmod	24:nmod:with	Entity=event-66)abstract-67)|SpaceAfter=No
+31	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 32	"	''	PUNCT	''	_	3	punct	3:punct	_
 33	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=attribution:49->51
 34	Eliasson	Eliasson	PROPN	NNP	Number=Sing	33	nsubj	33:nsubj|37:nsubj	Entity=(person-63
@@ -458,14 +464,15 @@
 45	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	46	aux:pass	46:aux:pass	_
 46	used	use	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	41	acl	41:acl:that	_
 47	in	in	ADP	IN	_	50	case	50:case	_
+48-49	Wednesday's	_	_	_	_	_	_	_	_
 48	Wednesday	Wednesday	PROPN	NNP	Number=Sing	50	nmod:poss	50:nmod:poss	Entity=(event-12(time-10
 49	's	's	PART	POS	_	48	case	48:case	Entity=time-10)
-50	bombing	bombing	NOUN	NN	Number=Sing	46	obl	46:obl:in	Entity=abstract-68)event-12)
+50	bombing	bombing	NOUN	NN	Number=Sing	46	obl	46:obl:in	Entity=abstract-68)event-12)|SpaceAfter=No
 51	.	.	PUNCT	.	_	33	punct	33:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-15
-# text = A previous attempt by the UN to end the violence in Syria failed .
+# s_type = decl
+# text = A previous attempt by the UN to end the violence in Syria failed.
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=elaboration:53->46|Entity=(event-69
 2	previous	previous	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	attempt	attempt	NOUN	NN	Number=Sing	13	nsubj	13:nsubj	_
@@ -478,16 +485,16 @@
 10	violence	violence	NOUN	NN	Number=Sing	8	obj	8:obj	_
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	Syria	Syria	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	Entity=event-69)event-70)(place-71)
-13	failed	fail	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+13	failed	fail	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 14	.	.	PUNCT	.	_	13	punct	13:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-16
-# text = In May of 2012 , a UN convoy was hit by an IED ( improvised explosive device ) while a human rights group reported a Syrian military attack on civilians at a nearby funeral in the town of Khan Sheikhoun in Idlib province .
+# s_type = decl
+# text = In May of 2012, a UN convoy was hit by an IED (improvised explosive device) while a human rights group reported a Syrian military attack on civilians at a nearby funeral in the town of Khan Sheikhoun in Idlib province.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=elaboration:55->53
 2	May	May	PROPN	NNP	Number=Sing	10	obl	10:obl:in	Entity=(time-72
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:of	Entity=time-72)(time-73)
+4	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:of	Entity=time-72)(time-73)|SpaceAfter=No
 5	,	,	PUNCT	,	_	2	punct	2:punct	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(place-74
 7	UN	UN	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-47)
@@ -497,10 +504,10 @@
 11	by	by	ADP	IN	_	13	case	13:case	_
 12	an	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(object-75
 13	IED	IED	NOUN	NN	Number=Sing	10	obl	10:obl:by	Entity=object-75)
-14	(	(	PUNCT	-LRB-	_	17	punct	17:punct	Discourse=elaboration:56->55
+14	(	(	PUNCT	-LRB-	_	17	punct	17:punct	Discourse=elaboration:56->55|SpaceAfter=No
 15	improvised	improvise	VERB	VBN	Tense=Past|VerbForm=Part	16	amod	16:amod	Entity=(object-75
 16	explosive	explosive	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	device	device	NOUN	NN	Number=Sing	13	appos	13:appos	Entity=object-75)
+17	device	device	NOUN	NN	Number=Sing	13	appos	13:appos	Entity=object-75)|SpaceAfter=No
 18	)	)	PUNCT	-RRB-	_	17	punct	17:punct	_
 19	while	while	SCONJ	IN	_	24	mark	24:mark	Discourse=circumstance:57->55
 20	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	Entity=(organization-76
@@ -526,17 +533,17 @@
 40	Sheikhoun	Sheikhoun	PROPN	NNP	Number=Sing	39	flat	39:flat	Entity=person-81)
 41	in	in	ADP	IN	_	43	case	43:case	_
 42	Idlib	Idlib	PROPN	NNP	Number=Sing	43	compound	43:compound	Entity=(place-82
-43	province	province	NOUN	NN	Number=Sing	37	nmod	37:nmod:in	Entity=event-79)place-80)place-82)
+43	province	province	NOUN	NN	Number=Sing	37	nmod	37:nmod:in	Entity=event-79)place-80)place-82)|SpaceAfter=No
 44	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-17
-# text = Later that year in August , a 300 person team left the country after their mandate expired , and was never renewed .
+# s_type = decl
+# text = Later that year in August, a 300 person team left the country after their mandate expired, and was never renewed.
 1	Later	late	ADV	RBR	Degree=Cmp	11	advmod	11:advmod	Discourse=elaboration:58->53
 2	that	that	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Entity=(time-83
 3	year	year	NOUN	NN	Number=Sing	11	obl:tmod	11:obl:tmod	Entity=time-83)
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	August	August	PROPN	NNP	Number=Sing	11	obl	11:obl:in	Entity=(time-84)
+5	August	August	PROPN	NNP	Number=Sing	11	obl	11:obl:in	Entity=(time-84)|SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(organization-85
 8	300	300	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	Entity=(person-86
@@ -548,17 +555,17 @@
 14	after	after	SCONJ	IN	_	17	mark	17:mark	Discourse=circumstance:59->58
 15	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	16	nmod:poss	16:nmod:poss	Entity=(abstract-87(person-78)
 16	mandate	mandate	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	Entity=abstract-87)
-17	expired	expire	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:after	_
+17	expired	expire	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	advcl	11:advcl:after	SpaceAfter=No
 18	,	,	PUNCT	,	_	22	punct	22:punct	_
 19	and	and	CCONJ	CC	_	22	cc	22:cc	Discourse=joint:60->58
 20	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	22:aux:pass	_
 21	never	never	ADV	RB	Polarity=Neg	22	advmod	22:advmod	_
-22	renewed	renew	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	conj	11:conj:and	_
+22	renewed	renew	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	conj	11:conj:and	SpaceAfter=No
 23	.	.	PUNCT	.	_	11	punct	11:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-18
-# text = Commander of the 2012 observation team General Babacar Gaye expressed frustration against both the Syrian armed forces and rebels for not allowing the UN to complete its mission .
+# s_type = decl
+# text = Commander of the 2012 observation team General Babacar Gaye expressed frustration against both the Syrian armed forces and rebels for not allowing the UN to complete its mission.
 1	Commander	commander	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	Discourse=elaboration:61->58|Entity=(person-88
 2	of	of	ADP	IN	_	6	case	6:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(organization-85
@@ -586,22 +593,22 @@
 25	to	to	PART	TO	_	26	mark	26:mark	_
 26	complete	complete	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
 27	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	28	nmod:poss	28:nmod:poss	Entity=(event-91(organization-85)
-28	mission	mission	NOUN	NN	Number=Sing	26	obj	26:obj	Entity=event-91)
+28	mission	mission	NOUN	NN	Number=Sing	26	obj	26:obj	Entity=event-91)|SpaceAfter=No
 29	.	.	PUNCT	.	_	10	punct	10:punct	_
 
-# s_type = frag
 # sent_id = AMALGUM_news_chemical-19
+# s_type = frag
 # text = "
-1	"	''	''	''	_	0	root	0:root	Discourse=elaboration:63->61
+1	"	''	''	''	_	0	root	0:root	Discourse=elaboration:63->61|SpaceAfter=No
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-20
-# text = Initially the ceasefire was respected , violence decreased and we were able to do our work throughout the country , [ but ]
+# s_type = decl
+# text = Initially the ceasefire was respected, violence decreased and we were able to do our work throughout the country, [but]
 1	Initially	initially	ADV	RB	Degree=Pos	5	advmod	5:advmod	Discourse=elaboration:64->63
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-92
 3	ceasefire	ceasefire	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	Entity=event-92)
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
-5	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+5	respected	respect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	violence	violence	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Discourse=joint:65->64|Entity=(event-70)
 8	decreased	decrease	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	parataxis	5:parataxis	_
@@ -615,15 +622,15 @@
 16	work	work	NOUN	NN	Number=Sing	14	obj	14:obj	Entity=abstract-93)
 17	throughout	throughout	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(place-24
-19	country	country	NOUN	NN	Number=Sing	14	obl	14:obl:throughout	Entity=place-24)
+19	country	country	NOUN	NN	Number=Sing	14	obl	14:obl:throughout	Entity=place-24)|SpaceAfter=No
 20	,	,	PUNCT	,	_	22	punct	22:punct	_
-21	[	[	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=evidence:67->66
-22	but	but	CCONJ	CC	_	5	conj	5:conj	_
+21	[	[	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=evidence:67->66|SpaceAfter=No
+22	but	but	CCONJ	CC	_	5	conj	5:conj	SpaceAfter=No
 23	]	]	PUNCT	-RRB-	_	22	punct	22:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-21
-# text = by the middle of June it was clear that the parties were no longer committed to the ceasefire and the result has been an escalation in violence , " said Gaye in 2012 .
+# s_type = decl
+# text = by the middle of June it was clear that the parties were no longer committed to the ceasefire and the result has been an escalation in violence," said Gaye in 2012.
 1	by	by	ADP	IN	_	3	case	3:case	Discourse=attribution:68->69
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(time-94
 3	middle	middle	NOUN	NN	Number=Sing	8	obl	8:obl:by	_
@@ -650,27 +657,28 @@
 24	an	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	Entity=(abstract-97
 25	escalation	escalation	NOUN	NN	Number=Sing	8	conj	8:conj:and|30:ccomp	_
 26	in	in	ADP	IN	_	27	case	27:case	_
-27	violence	violence	NOUN	NN	Number=Sing	25	nmod	25:nmod:in	Entity=abstract-97)(event-70)
-28	,	,	PUNCT	,	_	8	punct	8:punct	_
+27	violence	violence	NOUN	NN	Number=Sing	25	nmod	25:nmod:in	Entity=abstract-97)(event-70)|SpaceAfter=No
+28	,	,	PUNCT	,	_	8	punct	8:punct	SpaceAfter=No
 29	"	''	PUNCT	''	_	8	punct	8:punct	_
 30	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=attribution:71->70
 31	Gaye	Gaye	PROPN	NNP	Number=Sing	30	nsubj	30:nsubj	Entity=(person-88)
 32	in	in	ADP	IN	_	33	case	33:case	_
-33	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	30	obl	30:obl:in	Entity=(time-73)
+33	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	30	obl	30:obl:in	Entity=(time-73)|SpaceAfter=No
 34	.	.	PUNCT	.	_	30	punct	30:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-22
-# text = The UN 's 2012 mandate was to ; " monitor a cessation of armed violence in all its forms by all parties [ and to ] monitor and support the full implementation of the Joint Special Envoy of the United Nations and the League of Arab States six-point-plan . "
+# s_type = decl
+# text = The UN's 2012 mandate was to; "monitor a cessation of armed violence in all its forms by all parties [and to] monitor and support the full implementation of the Joint Special Envoy of the United Nations and the League of Arab States six-point-plan."
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=elaboration:72->69|Entity=(abstract-87
+2-3	UN's	_	_	_	_	_	_	_	_
 2	UN	UN	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	Entity=(organization-98
 3	's	's	PART	POS	_	2	case	2:case	Entity=organization-98)
 4	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	_
 5	mandate	mandate	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	Entity=abstract-87)
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	_
-7	to	to	PART	TO	_	10	mark	10:mark	_
+7	to	to	PART	TO	_	10	mark	10:mark	SpaceAfter=No
 8	;	;	PUNCT	:	_	7	punct	7:punct	_
-9	"	''	PUNCT	``	_	10	punct	10:punct	_
+9	"	''	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
 10	monitor	monitor	VERB	VB	VerbForm=Inf	0	root	0:root	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	Entity=(event-99
 12	cessation	cessation	NOUN	NN	Number=Sing	10	obj	10:obj	_
@@ -684,9 +692,9 @@
 20	by	by	ADP	IN	_	22	case	22:case	_
 21	all	all	DET	DT	_	22	det	22:det	Entity=(organization-96
 22	parties	party	NOUN	NNS	Number=Plur	10	obl	10:obl:by	Entity=organization-96)
-23	[	[	PUNCT	:	_	24	punct	24:punct	Discourse=evidence:73->72
+23	[	[	PUNCT	:	_	24	punct	24:punct	Discourse=evidence:73->72|SpaceAfter=No
 24	and	and	CCONJ	CC	_	27	cc	27:cc	_
-25	to	to	PART	TO	_	27	mark	27:mark	_
+25	to	to	PART	TO	_	27	mark	27:mark	SpaceAfter=No
 26	]	]	PUNCT	-RRB-	_	25	punct	25:punct	_
 27	monitor	monitor	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	10	conj	10:conj:and	Discourse=same_unit:74->72
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
@@ -709,13 +717,13 @@
 45	of	of	ADP	IN	_	47	case	47:case	_
 46	Arab	Arab	ADJ	NNP	Number=Sing	47	amod	47:amod	Entity=(place-105
 47	States	State	PROPN	NNPS	Number=Plur	44	nmod	44:nmod:of	Entity=organization-104)place-105)
-48	six-point-plan	six-point-plan	NOUN	NN	Number=Sing	37	nmod	37:nmod	Entity=event-101)organization-102)
-49	.	.	PUNCT	.	_	10	punct	10:punct	_
+48	six-point-plan	six-point-plan	NOUN	NN	Number=Sing	37	nmod	37:nmod	Entity=event-101)organization-102)|SpaceAfter=No
+49	.	.	PUNCT	.	_	10	punct	10:punct	SpaceAfter=No
 50	"	''	PUNCT	''	_	10	punct	10:punct	_
 
-# s_type = decl
 # sent_id = AMALGUM_news_chemical-23
-# text = Part of the plan included both sides working and cooperating with the UN special envoy , commitment to ceasing hostilities , and the Syrian army ceasing troop and tank movements against rebels in " population centers " throughout the country .
+# s_type = decl
+# text = Part of the plan included both sides working and cooperating with the UN special envoy, commitment to ceasing hostilities, and the Syrian army ceasing troop and tank movements against rebels in "population centers" throughout the country.
 1	Part	part	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:75->5
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-106
@@ -730,12 +738,12 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(person-108
 13	UN	UN	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(organization-47)
 14	special	special	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	envoy	envoy	NOUN	NN	Number=Sing	8	obl	8:obl:with	Entity=person-108)
+15	envoy	envoy	NOUN	NN	Number=Sing	8	obl	8:obl:with	Entity=person-108)|SpaceAfter=No
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	commitment	commitment	NOUN	NN	Number=Sing	7	conj	5:obj|7:conj	Discourse=elaboration:76->75|Entity=(abstract-109
 18	to	to	SCONJ	IN	_	19	mark	19:mark	_
 19	ceasing	cease	VERB	VBG	VerbForm=Ger	17	acl	17:acl:to	_
-20	hostilities	hostility	NOUN	NNS	Number=Plur	19	obj	19:obj	Entity=abstract-109)(event-110)
+20	hostilities	hostility	NOUN	NNS	Number=Plur	19	obj	19:obj	Entity=abstract-109)(event-110)|SpaceAfter=No
 21	,	,	PUNCT	,	_	26	punct	26:punct	_
 22	and	and	CCONJ	CC	_	26	cc	26:cc	Discourse=joint:77->76
 23	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(organization-1
@@ -749,12 +757,12 @@
 31	against	against	ADP	IN	_	32	case	32:case	_
 32	rebels	rebel	NOUN	NNS	Number=Plur	30	nmod	30:nmod:against	Entity=(person-114
 33	in	in	ADP	IN	_	36	case	36:case	_
-34	"	''	PUNCT	``	_	36	punct	36:punct	Entity=(place-115
+34	"	''	PUNCT	``	_	36	punct	36:punct	Entity=(place-115|SpaceAfter=No
 35	population	population	NOUN	NN	Number=Sing	36	compound	36:compound	Entity=(event-116)
-36	centers	center	NOUN	NNS	Number=Plur	32	nmod	32:nmod:in	_
+36	centers	center	NOUN	NNS	Number=Plur	32	nmod	32:nmod:in	SpaceAfter=No
 37	"	''	PUNCT	''	_	36	punct	36:punct	_
 38	throughout	throughout	ADP	IN	_	40	case	40:case	_
 39	the	the	DET	DT	Definite=Def|PronType=Art	40	det	40:det	Entity=(place-24
-40	country	country	NOUN	NN	Number=Sing	36	nmod	36:nmod:throughout	Entity=event-111)person-114)place-115)place-24)
+40	country	country	NOUN	NN	Number=Sing	36	nmod	36:nmod:throughout	Entity=event-111)person-114)place-115)place-24)|SpaceAfter=No
 41	.	.	PUNCT	.	_	5	punct	5:punct	_
 
