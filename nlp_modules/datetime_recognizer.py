@@ -1744,10 +1744,18 @@ class DateTimeRecognizer(NLPModule):
                                     []
                                 )  # rebuild the sentence xml elements for every phrase
                                 phrase = str(df["phrase"].iloc[dateindex])
+
+                                start = int(df['start_index'].iloc[dateindex])
                                 timextype = df["timextype"].iloc[dateindex]
                                 timexvalue = df["timexvalue"].iloc[dateindex]
                                 timexmod = df["timexmod"].iloc[dateindex]
                                 processed = False
+
+                                stext = item.text.split('\n')
+                                stext = [s for s in stext if s]
+
+                                ph = phrase.split(' ')
+                                end = start + len(ph)
 
                                 for n in item:
                                     if processed == True:
@@ -1757,6 +1765,19 @@ class DateTimeRecognizer(NLPModule):
                                         elements.append(n)
                                         continue
 
+                                    """
+                                    Sometimes a partial string match can confuse dates in s' text as being elsewhere.
+                                    If the date phrase is really in the s element's text, make note of that here for later processing
+                                    The check here is more robust than a string match - it looks at the word indices where the phrase is meant to be
+                                    """
+                                    if len(stext) > 0 and start < len(stext) and end < len(stext):
+                                        ph = stext[start:end]
+                                        ph = ' '.join([s.split('\t')[0] for s in ph]) # assumes whitespace delimited sentence
+                                        if ph == phrase:
+                                            # skip the processing for later - build the s's elements in sequence first.
+                                            elements.append(n)
+                                            continue
+
                                     fulltext = n.text.split("\n") + n.tail.split("\n")
                                     fulltext = [f for f in fulltext if f]
                                     fulltext = [f.split("\t")[0] for f in fulltext]
@@ -1764,8 +1785,9 @@ class DateTimeRecognizer(NLPModule):
 
                                     if (
                                         phrase not in fulltext
-                                    ):  # will always be exact match,  not fuzzy
+                                    ):  # Can be a fuzzy match - if two dates have the same text!
                                         elements.append(n)  # move to the next element
+
                                     else:
                                         # its in the text or the tail
                                         attributes = self.timex_to_tei(
@@ -2210,6 +2232,7 @@ class DateTimeRecognizer(NLPModule):
             sorted_dates.append(dates)
             sorted_attribs.append(attributes)
 
+
         return sorted_dates, sorted_attribs
 
     def run(self, input_dir, output_dir):
@@ -2243,17 +2266,18 @@ def main():
     # Testing only
 
     TTG_PATH = "treetagger/bin"
-    BIN_DIR = "<full path to>/amalgum/amalgum/bin/"
+    BIN_DIR = "/home/nitin/Desktop/amalgum/amalgum/bin/"
     config = {"TTG_PATH": TTG_PATH, "BIN_DIR": BIN_DIR}
     dtr = DateTimeRecognizer(config)
     dtr.test_dependencies()
     # filename = 'autogum_bio_doc165.xml' # has an interesting case, see "25 Mar-3 April 2002"
     # filename = 'autogum_bio_doc575.xml' #example of a week of year normalization from timex to tei
-    filename = "autogum_reddit_doc010.xml"  # an example of a weekend normalization
+    # filename = "autogum_reddit_doc010.xml"  # an example of a weekend normalization
     # filename = 'autogum_voyage_doc429.xml'
+    filename = "AMALGUM_bio_editions.xml"  # date in s text is a partial match to date in the s's elements
 
-    input_dir = "<full path to>/amalgum/amalgum/target/04_DepParser"
-    output_dir = "<full path to>/amalgum/amalgum/target/testdate/"
+    input_dir = "/home/nitin/Desktop/amalgum/amalgum/out_one"
+    output_dir = "/home/nitin/Desktop/amalgum/amalgum/out_one"
     dtr.run_debug(filename, input_dir, output_dir)
 
 
