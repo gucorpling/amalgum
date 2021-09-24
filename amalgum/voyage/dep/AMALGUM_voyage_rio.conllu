@@ -1,13 +1,24 @@
+# meta::id = AMALGUM_voyage_rio
+# meta::title = Niter&#243;i
+# meta::shortTitle = rio
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=24659
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_rio
 # sent_id = AMALGUM_voyage_rio-1
 # s_type = frag
 # text = Niterói
+# newpar = head (1 s)
 1	Niterói	Niterói	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->2|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_rio-2
 # s_type = decl
 # text = Niterói (476,000 inhabitants) is a city in the state of Rio de Janeiro, Brazil.
-1	Niterói	Niterói	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=ROOT:2|Entity=(place-1)
+# newpar = p (5 s)
+1	Niterói	Niterói	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=ROOT:2|Entity=(place-1)|XML=<hi rend:::"bold"></hi>
 2	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:3->2|SpaceAfter=No
 3	476,000	476000	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	Entity=(person-2
 4	inhabitants	inhabitant	NOUN	NNS	Number=Plur	1	appos	1:appos	Entity=person-2)|SpaceAfter=No
@@ -19,11 +30,11 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-3
 11	state	state	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	_
 12	of	of	ADP	IN	_	13	case	13:case	_
-13	Rio	Rio	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=(place-4
+13	Rio	Rio	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=(place-4|XML=<ref target:::"Rio%20de%20Janeiro%20%28state%29">
 14	de	de	PROPN	NNP	Number=Sing	13	flat	13:flat	_
-15	Janeiro	Janeiro	PROPN	NNP	Number=Sing	13	flat	13:flat	SpaceAfter=No
+15	Janeiro	Janeiro	PROPN	NNP	Number=Sing	13	flat	13:flat	SpaceAfter=No|XML=</ref>
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	Brazil	Brazil	PROPN	NNP	Number=Sing	13	appos	13:appos	Entity=place-1)place-3)place-4)(place-5)|SpaceAfter=No
+17	Brazil	Brazil	PROPN	NNP	Number=Sing	13	appos	13:appos	Entity=place-1)place-3)place-4)(place-5)|SpaceAfter=No|XML=<ref target:::"Brazil"></ref>
 18	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_voyage_rio-3
@@ -132,22 +143,24 @@
 31	Brazilian	Brazilian	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 32	capital	capital	NOUN	NN	Number=Sing	26	obl	26:obl:to	Entity=place-1)|SpaceAfter=No
 33	,	,	PUNCT	,	_	34	punct	34:punct	_
-34	Brasilia	Brasilia	PROPN	NNP	Number=Sing	32	appos	32:appos	Entity=(place-24)|SpaceAfter=No
+34	Brasilia	Brasilia	PROPN	NNP	Number=Sing	32	appos	32:appos	Entity=(place-24)|SpaceAfter=No|XML=<ref target:::"Brasilia"></ref>
 35	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_voyage_rio-7
 # s_type = frag
 # text = By boat
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:17->18
 2	boat	boat	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-25)
 
 # sent_id = AMALGUM_voyage_rio-8
 # s_type = decl
 # text = The ferry between Rio and Niteroi is a pleasant and affordable trip.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:18->10|Entity=(event-8
 2	ferry	ferry	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
 3	between	between	ADP	IN	_	4	case	4:case	_
-4	Rio	Rio	PROPN	NNP	Number=Sing	2	nmod	2:nmod:between	Entity=(place-26(place-4)
+4	Rio	Rio	PROPN	NNP	Number=Sing	2	nmod	2:nmod:between	Entity=(place-26(place-4)|XML=<ref target:::"Rio%20de%20Janeiro%20%28city%29"></ref>
 5	and	and	CCONJ	CC	_	6	cc	6:cc	_
 6	Niteroi	Niteroi	PROPN	NNP	Number=Sing	4	conj	2:nmod:between|4:conj:and	Entity=event-8)place-26)(place-19)
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	cop	12:cop	_
@@ -187,13 +200,14 @@
 24	adjoining	adjoin	VERB	VBG	VerbForm=Ger	25	amod	25:amod	Entity=(place-29
 25	terminals	terminal	NOUN	NNS	Number=Plur	22	nmod	22:nmod:from	_
 26	at	at	ADP	IN	_	27	case	27:case	_
-27	Praça	Praça	PROPN	NNP	Number=Sing	25	nmod	25:nmod:at	Entity=(place-30
-28	XV	XV	PROPN	NNP	Number=Sing	27	flat	27:flat	Entity=abstract-28)object-25)place-29)place-30)|SpaceAfter=No
+27	Praça	Praça	PROPN	NNP	Number=Sing	25	nmod	25:nmod:at	Entity=(place-30|XML=<hi rend:::"bold">
+28	XV	XV	PROPN	NNP	Number=Sing	27	flat	27:flat	Entity=abstract-28)object-25)place-29)place-30)|SpaceAfter=No|XML=</hi>
 29	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_rio-10
 # s_type = frag
 # text = By car or bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:21->22
 2	car	car	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-31(object-32)
 3	or	or	CCONJ	CC	_	4	cc	4:cc	_
@@ -202,8 +216,9 @@
 # sent_id = AMALGUM_voyage_rio-11
 # s_type = decl
 # text = From Rio you just drive through the longest bridge in Brazil, the Ponte Rio-Niterói; just like the name says it connects both cities.
+# newpar = p (2 s)
 1	From	from	ADP	IN	_	2	case	2:case	Discourse=joint:22->10
-2	Rio	Rio	PROPN	NNP	Number=Sing	5	obl	5:obl:from	Entity=(place-4)
+2	Rio	Rio	PROPN	NNP	Number=Sing	5	obl	5:obl:from	Entity=(place-4)|XML=<ref target:::"Rio%20de%20Janeiro%20%28city%29"></ref>
 3	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-12)
 4	just	just	ADV	RB	_	5	advmod	5:advmod	_
 5	drive	drive	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -265,15 +280,16 @@
 # sent_id = AMALGUM_voyage_rio-13
 # s_type = decl
 # text = If you are coming from Búzios or Cabo Frio you take the highway called "Via-lagos".
+# newpar = p (1 s)
 1	If	if	SCONJ	IN	_	4	mark	4:mark	Discourse=condition:31->32
 2	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj	Entity=(person-12)
 3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	coming	come	VERB	VBG	Tense=Pres|VerbForm=Part	11	advcl	11:advcl:if	_
 5	from	from	ADP	IN	_	6	case	6:case	_
-6	Búzios	Búzios	PROPN	NNP	Number=Sing	4	obl	4:obl:from	Entity=(place-45)
+6	Búzios	Búzios	PROPN	NNP	Number=Sing	4	obl	4:obl:from	Entity=(place-45)|XML=<ref target:::"B%C3%BAzios"></ref>
 7	or	or	CCONJ	CC	_	8	cc	8:cc	_
-8	Cabo	Cabo	PROPN	NNP	Number=Sing	6	conj	4:obl:from|6:conj:or	Entity=(place-46
-9	Frio	Frio	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=place-46)
+8	Cabo	Cabo	PROPN	NNP	Number=Sing	6	conj	4:obl:from|6:conj:or	Entity=(place-46|XML=<ref target:::"Cabo%20Frio">
+9	Frio	Frio	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=place-46)|XML=</ref>
 10	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	11	nsubj	11:nsubj	Discourse=joint:32->22|Entity=(person-12)
 11	take	take	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(place-47
@@ -287,12 +303,14 @@
 # sent_id = AMALGUM_voyage_rio-14
 # s_type = imp
 # text = Get around
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:34->35
 2	around	around	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_rio-15
 # s_type = frag
 # text = On Saturdays and Sundays
+# newpar = p (2 s)
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=joint:35->22
 2	Saturdays	Saturday	NOUN	NNS	Number=Plur	0	root	0:root	Entity=(time-49)
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
@@ -324,7 +342,7 @@
 21	Station	Station	PROPN	NNP	Number=Sing	16	appos	16:appos	Entity=place-58)|SpaceAfter=No
 22	)	)	PUNCT	-RRB-	_	21	punct	21:punct	_
 23	at	at	ADP	IN	_	24	case	24:case	Discourse=same_unit:41->39
-24	10AM	10AM	NUM	CD	NumForm=Word|NumType=Card	10	obl	10:obl:at	Entity=(time-60)|SpaceAfter=No
+24	10AM	10AM	NUM	CD	NumForm=Word|NumType=Card	10	obl	10:obl:at	Entity=(time-60)|SpaceAfter=No|XML=<time when:::"1000"></time>
 25	,	,	PUNCT	,	_	26	punct	26:punct	_
 26	12:30PM	12:30PM	NUM	CD	NumForm=Word|NumType=Card	24	conj	10:obl:at|24:conj:and	Entity=(time-61)
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
@@ -364,6 +382,7 @@
 # sent_id = AMALGUM_voyage_rio-17
 # s_type = decl
 # text = To get to the Oceanic Area you'd better have a car, otherwise take a municipal bus at the Bus Terminal next to the Ferry Station.
+# newpar = p (2 s)
 1	To	to	PART	TO	_	2	mark	2:mark	Discourse=purpose:44->42
 2	get	get	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:to	_
 3	to	to	ADP	IN	_	6	case	6:case	_
@@ -424,15 +443,18 @@
 # sent_id = AMALGUM_voyage_rio-19
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:48->49
 
 # sent_id = AMALGUM_voyage_rio-20
 # s_type = decl
 # text = Niterói Contemporary Art Museum (Museu de Arte Contemporânea de Niterói — MAC), Mirante da Boa Viagem (Get bus 47B from the bus terminal on your left when you exit the ferry station), ☏ +5521 2620-2400 .
-1	Niterói	Niterói	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:49->22|Entity=(place-18(abstract-78(place-1)
+# newpar = list type:::"unordered" (7 s)
+# newpar1 = item (4 s)
+1	Niterói	Niterói	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:49->22|Entity=(place-18(abstract-78(place-1)|XML=<hi rend:::"bold">
 2	Contemporary	contemporary	ADJ	NNP	Number=Sing	3	amod	3:amod	_
 3	Art	Art	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=abstract-78)
-4	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-18)
+4	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-18)|XML=</hi>
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:50->49|SpaceAfter=No
 6	Museu	Museu	PROPN	NNP	Number=Sing	4	appos	4:appos	Entity=(place-79
 7	de	de	PROPN	NNP	Number=Sing	6	flat	6:flat	_
@@ -469,7 +491,7 @@
 38	,	,	PUNCT	,	_	39	punct	39:punct	_
 39	☏	☏	NOUN	NN	Number=Sing	4	parataxis	4:parataxis	Discourse=joint:54->49|Entity=(abstract-81
 40	+5521	+5521	NUM	CD	NumForm=Word|NumType=Card	39	flat	39:flat	_
-41	2620-2400	2620-2400	NUM	CD	NumForm=Word|NumType=Card	39	flat	39:flat	Entity=abstract-81)
+41	2620-2400	2620-2400	NUM	CD	NumForm=Word|NumType=Card	39	flat	39:flat	Entity=abstract-81)|XML=<date from:::"2620" to:::"2400"></date>
 42	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_rio-21
@@ -481,7 +503,7 @@
 4	10AM-6PM	10AM-6PM	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	7PM	7PM	NUM	CD	NumForm=Word|NumType=Card	1	conj	1:conj:or	Entity=(person-84
+7	7PM	7PM	NUM	CD	NumForm=Word|NumType=Card	1	conj	1:conj:or	Entity=(person-84|XML=<time when:::"1900"></time>
 8	during	during	ADP	IN	_	11	case	11:case	_
 9	daylight	daylight	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(time-85(event-86(abstract-87)
 10	savings	saving	NOUN	NNS	Number=Plur	11	compound	11:compound	Entity=event-86)
@@ -493,7 +515,7 @@
 # text = Built in 1996, this intriguing contemporary art museum looks like a flying saucer jutting out over the sea and is worth the visit to Niteroi alone.
 1	Built	build	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl	Discourse=background:56->57
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	1996	1996	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-88)|SpaceAfter=No
+3	1996	1996	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-88)|SpaceAfter=No|XML=<date when:::"1996"></date>
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
 5	this	this	DET	DT	Number=Sing|PronType=Dem	9	det	9:det	Discourse=joint:57->49|Entity=(place-18
 6	intriguing	intrigue	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
@@ -530,10 +552,11 @@
 # sent_id = AMALGUM_voyage_rio-24
 # s_type = frag
 # text = People's Theater (Teatro Popular Oscar Niemeyer) (beyond the Bus Terminal to your left as you exit the Ferry Station), ☏ +5521 8449-7393 .
+# newpar = item (3 s)
 1-2	People's	_	_	_	_	_	_	_	_
-1	People	People	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:61->49|Entity=(place-92(person-93
+1	People	People	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:61->49|Entity=(place-92(person-93|XML=<hi rend:::"bold">
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-93)
-3	Theater	Theater	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-92)
+3	Theater	Theater	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-92)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:62->61|SpaceAfter=No
 5	Teatro	Teatro	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(place-94
 6	Popular	Popular	PROPN	NNP	Number=Sing	5	flat	5:flat	_
@@ -566,7 +589,7 @@
 # text = Opened in 2007
 1	Opened	open	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Discourse=joint:66->49
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-95)
+3	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-95)|XML=<date when:::"2007"></date>
 
 # sent_id = AMALGUM_voyage_rio-26
 # s_type = decl
@@ -600,9 +623,11 @@
 # sent_id = AMALGUM_voyage_rio-27
 # s_type = frag
 # text = Parque da Cidade.
-1	Parque	Parque	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:69->67|Entity=(person-102
+# newpar = list type:::"unordered" (5 s)
+# newpar1 = item (5 s)
+1	Parque	Parque	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:69->67|Entity=(person-102|XML=<hi rend:::"bold">
 2	da	da	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Cidade	Cidade	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-102)|SpaceAfter=No
+3	Cidade	Cidade	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-102)|SpaceAfter=No|XML=</hi>
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_rio-28
@@ -612,12 +637,12 @@
 2	amazing	amazing	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	view	view	NOUN	NN	Number=Sing	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	Rio	Rio	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=(place-4
+5	Rio	Rio	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=(place-4|XML=<ref target:::"Rio%20de%20Janeiro%20%28city%29">
 6	de	de	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	Janeiro	Janeiro	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=abstract-103)place-4)
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=elaboration:71->70|SpaceAfter=No
 9	city	city	NOUN	NN	Number=Sing	5	appos	5:appos	Entity=(place-4)|SpaceAfter=No
-10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	SpaceAfter=No
+10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	SpaceAfter=No|XML=</ref>
 11	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_rio-29
@@ -676,10 +701,12 @@
 # sent_id = AMALGUM_voyage_rio-32
 # s_type = decl
 # text = Fortaleza de Santa Cruz (1555)- located at the Guanabara Bay entrance, this is a big fortress with a close-up view of the Sugar Loaf Mountain from an entirely different angle.
-1	Fortaleza	Fortaleza	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Discourse=joint:76->67|Entity=(place-110
+# newpar = list type:::"unordered" (9 s)
+# newpar1 = item (4 s)
+1	Fortaleza	Fortaleza	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Discourse=joint:76->67|Entity=(place-110|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Santa	Santa	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Cruz	Cruz	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+4	Cruz	Cruz	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:77->76|SpaceAfter=No
 6	1555)-	1555)-	NUM	CD	NumForm=Word|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(time-111)
 7	located	locate	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	1:acl	_
@@ -720,7 +747,7 @@
 5	tours	tour	NOUN	NNS	Number=Plur	0	root	0:root	Entity=event-116)|SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
 7	Thu~Sun	Thu~Sun	PROPN	NNP	Number=Sing	5	dep	5:dep	Discourse=same_unit:80->79|Entity=(abstract-117
-8	10AM-5PM	10AM-5PM	NUM	CD	NumForm=Word|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=abstract-117)(time-118)
+8	10AM-5PM	10AM-5PM	NUM	CD	NumForm=Word|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=abstract-117)(time-118)|XML=<time from:::"1000" to:::"1700"></time>
 9	->	->	PUNCT	RB	Degree=Pos	8	punct	8:punct	_
 
 # sent_id = AMALGUM_voyage_rio-34
@@ -788,7 +815,8 @@
 # sent_id = AMALGUM_voyage_rio-36
 # s_type = imp
 # text = Barao do Rio Branco(1555), Imbui(1863/1901) and São Luis(1715/1775) Forts - enter at Rio Branco Fort in Jurujuba for a guided tours of this and the other 2 forts and ruins overlooking the bay with a splendid view of the surrounding mountains of Niteroi and Rio.
-1	Barao	Barao	PROPN	NNP	Number=Sing	13	compound	13:compound	Discourse=joint:86->84|Entity=(place-127(place-128
+# newpar = item (5 s)
+1	Barao	Barao	PROPN	NNP	Number=Sing	13	compound	13:compound	Discourse=joint:86->84|Entity=(place-127(place-128|XML=<hi rend:::"bold">
 2	do	do	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Rio	Rio	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	Branco(1555	Branco(1555	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-128)|SpaceAfter=No
@@ -800,7 +828,7 @@
 10	São	São	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(person-130
 11	Luis(1715/1775	Luis(1715/1775	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-130)|SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
-13	Forts	fort	NOUN	NNS	Number=Plur	15	obj	15:obj	Discourse=preparation:89->90|Entity=place-127)
+13	Forts	fort	NOUN	NNS	Number=Plur	15	obj	15:obj	Discourse=preparation:89->90|Entity=place-127)|XML=</hi>
 14	-	-	PUNCT	:	_	13	punct	13:punct	_
 15	enter	enter	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=sequence:90->88
 16	at	at	ADP	IN	_	19	case	19:case	_
@@ -873,16 +901,18 @@
 7	.	.	PUNCT	.	_	6	punct	6:punct	_
 8	&	&	CCONJ	CC	_	9	cc	9:cc	Entity=(organization-123
 9	Sun	Sun	PROPN	NNP	Number=Sing	6	conj	1:nmod:minus|6:conj:and	Entity=abstract-121)organization-123)
-10	9:30AM-4PM	9:30AM-4PM	NUM	CD	NumForm=Word|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=person-138)(time-140)
+10	9:30AM-4PM	9:30AM-4PM	NUM	CD	NumForm=Word|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=person-138)(time-140)|XML=<time from:::"0930" to:::"1600"></time>
 
 # sent_id = AMALGUM_voyage_rio-41
 # s_type = frag
 # text = Beaches
+# newpar = head (1 s)
 1	Beaches	beach	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=preparation:96->97|Entity=(place-141)
 
 # sent_id = AMALGUM_voyage_rio-42
 # s_type = decl
 # text = Niterói has a wonderful unique view of Rio and one of the state's most beautiful beaches, Itacoatiara, which can be reached by bus number 38.
+# newpar = p (3 s)
 1	Niterói	Niterói	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:97->95|Entity=(place-1)
 2	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(abstract-142
@@ -902,7 +932,7 @@
 16	beautiful	beautiful	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
 17	beaches	beach	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of|24:nsubj:pass	Entity=place-143)place-141)|SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
-19	Itacoatiara	Itacoatiara	PROPN	NNP	Number=Sing	17	appos	17:appos	Entity=(place-76)|SpaceAfter=No
+19	Itacoatiara	Itacoatiara	PROPN	NNP	Number=Sing	17	appos	17:appos	Entity=(place-76)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 20	,	,	PUNCT	,	_	24	punct	24:punct	_
 21	which	which	PRON	WDT	PronType=Rel	24	nsubj:pass	17:ref	Discourse=elaboration:98->97
 22	can	can	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
@@ -989,6 +1019,7 @@
 # sent_id = AMALGUM_voyage_rio-45
 # s_type = decl
 # text = Not further from here you can find the "lost in time" Itaipu Beach, a fishermen's colony surrounded by sand dunes, a lagoon, a canal, a white church on a hill and some colonial era ruins.
+# newpar = p (5 s)
 1	Not	not	ADV	RB	Polarity=Neg	2	advmod	2:advmod	Discourse=elaboration:107->106
 2	further	far	ADV	RBR	Degree=Cmp	7	advmod	7:advmod	_
 3	from	from	ADP	IN	_	4	case	4:case	_
@@ -1002,8 +1033,8 @@
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	time	time	NOUN	NN	Number=Sing	10	obl	10:obl:in	SpaceAfter=No
 13	"	''	PUNCT	''	_	10	punct	10:punct	_
-14	Itaipu	Itaipu	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(place-77)
-15	Beach	Beach	PROPN	NNP	Number=Sing	7	obj	7:obj	Entity=place-159)|SpaceAfter=No
+14	Itaipu	Itaipu	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(place-77)|XML=<hi rend:::"bold">
+15	Beach	Beach	PROPN	NNP	Number=Sing	7	obj	7:obj	Entity=place-159)|SpaceAfter=No|XML=</hi>
 16	,	,	PUNCT	,	_	20	punct	20:punct	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(place-159
 18-19	fishermen's	_	_	_	_	_	_	_	_
@@ -1076,8 +1107,8 @@
 6	to	to	ADP	IN	_	10	case	10:case	_
 7	next	next	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(person-173(place-174
 8	door	door	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=place-174)
-9	Camboinhas	Camboinhas	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-175)
-10	Beach	Beach	PROPN	NNP	Number=Sing	5	nmod	5:nmod:to	Entity=event-172)person-173)
+9	Camboinhas	Camboinhas	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-175)|XML=<hi rend:::"bold">
+10	Beach	Beach	PROPN	NNP	Number=Sing	5	nmod	5:nmod:to	Entity=event-172)person-173)|XML=</hi>
 11	(	(	PUNCT	-LRB-	_	14	punct	14:punct	Discourse=elaboration:113->112|SpaceAfter=No
 12-13	it's	_	_	_	_	_	_	_	_
 12	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	14	expl	14:expl	Entity=(event-172)
@@ -1180,12 +1211,15 @@
 # sent_id = AMALGUM_voyage_rio-50
 # s_type = imp
 # text = Do
+# newpar = head (1 s)
 1	Do	do	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:125->22
 
 # sent_id = AMALGUM_voyage_rio-51
 # s_type = frag
 # text = Shopping -
-1	Shopping	shopping	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:126->127|Entity=(event-191)
+# newpar = list type:::"unordered" (7 s)
+# newpar1 = item (7 s)
+1	Shopping	shopping	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:126->127|Entity=(event-191)|XML=<hi rend:::"bold"></hi>
 2	-	-	PUNCT	:	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_rio-52
@@ -1326,6 +1360,7 @@
 # sent_id = AMALGUM_voyage_rio-58
 # s_type = decl
 # text = Meanwhile in Downtown (Centro), the Plaza Shopping is the largest shopping mall in town and is conveniently located across from the ferry Station (Estacao das barcas).
+# newpar = p (2 s)
 1	Meanwhile	meanwhile	ADV	RB	Degree=Pos	15	advmod	15:advmod	Discourse=joint:139->127
 2	in	in	ADP	IN	_	3	case	3:case	_
 3	Downtown	Downtown	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	Entity=(place-190)
@@ -1334,8 +1369,8 @@
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
 7	,	,	PUNCT	,	_	3	punct	3:punct	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(event-191
-9	Plaza	Plaza	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-216)
-10	Shopping	Shopping	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|21:nsubj:pass	Entity=event-191)
+9	Plaza	Plaza	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-216)|XML=<hi rend:::"italic">
+10	Shopping	Shopping	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|21:nsubj:pass	Entity=event-191)|XML=</hi>
 11	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(event-217
 13	largest	large	ADJ	JJS	Degree=Sup	15	amod	15:amod	_
@@ -1387,7 +1422,9 @@
 # sent_id = AMALGUM_voyage_rio-60
 # s_type = decl
 # text = Icaraí is to Niteroi what Copacabana is to Rio's residents: the most traditional neighborhood with excellent shopping opportunities and great restaurants.
-1	Icaraí	Icaraí	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:145->127|Entity=(place-192)
+# newpar = list type:::"unordered" (15 s)
+# newpar1 = item (3 s)
+1	Icaraí	Icaraí	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:145->127|Entity=(place-192)|XML=<hi rend:::"bold"></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	to	to	ADP	IN	_	4	case	4:case	_
 4	Niteroi	Niteroi	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(place-19
@@ -1468,7 +1505,8 @@
 # sent_id = AMALGUM_voyage_rio-63
 # s_type = frag
 # text = Nightlife - "São Francisco"
-1	Nightlife	nightlife	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:151->127|Entity=(abstract-228)
+# newpar = item (3 s)
+1	Nightlife	nightlife	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:151->127|Entity=(abstract-228)|XML=<hi rend:::"bold"></hi>
 2	-	-	PUNCT	:	_	4	punct	4:punct	_
 3	"	''	PUNCT	``	_	4	punct	4:punct	SpaceAfter=No
 4	São	São	PROPN	NNP	Number=Sing	1	dep	1:dep	_
@@ -1521,7 +1559,8 @@
 # sent_id = AMALGUM_voyage_rio-66
 # s_type = imp
 # text = Hang-glide from Parque da Cidade (see above)
-1	Hang-glide	hang-glide	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:156->127
+# newpar = item (1 s)
+1	Hang-glide	hang-glide	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:156->127|XML=<hi rend:::"bold"></hi>
 2	from	from	ADP	IN	_	3	case	3:case	_
 3	Parque	Parque	PROPN	NNP	Number=Sing	1	nmod	1:nmod:from	Entity=(person-102
 4	da	da	PROPN	NNP	Number=Sing	3	flat	3:flat	_
@@ -1534,7 +1573,8 @@
 # sent_id = AMALGUM_voyage_rio-67
 # s_type = frag
 # text = Windsurf in Charitas and São Francisco
-1	Windsurf	windsurf	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:158->159|Entity=(event-234)
+# newpar = item (1 s)
+1	Windsurf	windsurf	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:158->159|Entity=(event-234)|XML=<hi rend:::"bold"></hi>
 2	in	in	ADP	IN	_	3	case	3:case	_
 3	Charitas	Charitas	PROPN	NNP	Number=Sing	1	obl	1:obl:in	Entity=(place-108)
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
@@ -1544,8 +1584,9 @@
 # sent_id = AMALGUM_voyage_rio-68
 # s_type = frag
 # text = Cliff Diving in Prainha dew Piratininga
-1	Cliff	Cliff	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:159->127|Entity=(object-235(person-236)
-2	Diving	Diving	PROPN	NNP	Number=Sing	0	root	0:root	_
+# newpar = item (1 s)
+1	Cliff	Cliff	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:159->127|Entity=(object-235(person-236)|XML=<hi rend:::"bold">
+2	Diving	Diving	PROPN	NNP	Number=Sing	0	root	0:root	XML=</hi>
 3	in	in	ADP	IN	_	6	case	6:case	_
 4	Prainha	Prainha	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(person-178(place-179
 5	dew	dew	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=place-179)
@@ -1554,6 +1595,8 @@
 # sent_id = AMALGUM_voyage_rio-69
 # s_type = frag
 # text = Guanabara Bay
+# newpar = item (6 s)
+# newpar1 = hi rend:::"bold" (2 s)
 1	Guanabara	Guanabara	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:160->159|Entity=(place-10(animal-11)
 2	Bay	Bay	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-10)
 
@@ -1617,7 +1660,7 @@
 3	,	,	PUNCT	,	_	1	punct	1:punct	_
 4	departs	depart	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	@	@	SYM	SYM	_	6	case	6:case	_
-6	9:30AM	9:30AM	NUM	CD	NumForm=Word|NumType=Card	4	obl	4:obl:at	Entity=(time-247)
+6	9:30AM	9:30AM	NUM	CD	NumForm=Word|NumType=Card	4	obl	4:obl:at	Entity=(time-247)|XML=<time when:::"0930"></time>
 7	from	from	ADP	IN	_	11	case	11:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-58
 9	Main	Main	ADJ	NNP	Number=Sing	11	amod	11:amod	_

@@ -1,13 +1,24 @@
+# meta::id = AMALGUM_voyage_fuyang
+# meta::title = Fuyang
+# meta::shortTitle = fuyang
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=123925
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_fuyang
 # sent_id = AMALGUM_voyage_fuyang-1
 # s_type = frag
 # text = Fuyang
+# newpar = head (1 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->12|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_fuyang-2
 # s_type = decl
 # text = Fuyang (富阳) is a city within the Hangzhou municipal area in Zhejiang Province.
-1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Discourse=background:2->12|Entity=(place-1)
+# newpar = p (2 s)
+1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Discourse=background:2->12|Entity=(place-1)|XML=<hi rend:::"bold"></hi>
 2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:3->2|SpaceAfter=No
 3	富阳	富阳	ADV	RB	Degree=Pos	1	appos	1:appos	SpaceAfter=No
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
@@ -16,12 +27,12 @@
 7	city	city	NOUN	NN	Number=Sing	0	root	0:root	_
 8	within	within	ADP	IN	_	12	case	12:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(place-2
-10	Hangzhou	Hangzhou	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=(place-3)
+10	Hangzhou	Hangzhou	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=(place-3)|XML=<ref target:::"Hangzhou"></ref>
 11	municipal	municipal	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 12	area	area	NOUN	NN	Number=Sing	7	nmod	7:nmod:within	_
 13	in	in	ADP	IN	_	15	case	15:case	_
-14	Zhejiang	Zhejiang	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(place-4
-15	Province	Province	PROPN	NNP	Number=Sing	12	nmod	12:nmod:in	Entity=place-1)place-2)place-4)|SpaceAfter=No
+14	Zhejiang	Zhejiang	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(place-4|XML=<ref target:::"Zhejiang%20Province">
+15	Province	Province	PROPN	NNP	Number=Sing	12	nmod	12:nmod:in	Entity=place-1)place-2)place-4)|SpaceAfter=No|XML=</ref>
 16	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_voyage_fuyang-3
@@ -77,11 +88,13 @@
 # sent_id = AMALGUM_voyage_fuyang-4
 # s_type = imp
 # text = Understand
+# newpar = head (1 s)
 1	Understand	understand	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:11->12
 
 # sent_id = AMALGUM_voyage_fuyang-5
 # s_type = decl
 # text = Fuyang is a classical example of a traditional southern Chinese city.
+# newpar = p (4 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=ROOT:12|Entity=(place-1)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(place-1
@@ -183,6 +196,7 @@
 # sent_id = AMALGUM_voyage_fuyang-9
 # s_type = decl
 # text = The whole city covers 1830 km², including 16 towns and 9 townships, with a total population over 600,000.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:21->12|Entity=(place-1
 2	whole	whole	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	city	city	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=place-1)
@@ -209,6 +223,7 @@
 # sent_id = AMALGUM_voyage_fuyang-10
 # s_type = decl
 # text = Fuyang, which in ancient times was known as Fuchun, has a long history dating to the beginning of the Qin Dynasty (221BC-206BC).
+# newpar = p (3 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	12	nsubj:pass	8:nsubj:pass|12:nsubj:pass	Discourse=joint:23->12|Entity=(place-1|SpaceAfter=No
 2	,	,	PUNCT	,	_	8	punct	8:punct	_
 3	which	which	PRON	WDT	PronType=Rel	8	nsubj:pass	1:ref	Discourse=elaboration:24->23
@@ -274,7 +289,7 @@
 32	Yuan	Yuan	PROPN	NNP	Number=Sing	33	compound	33:compound	_
 33	Dynasty	Dynasty	PROPN	NNP	Number=Sing	26	nmod	26:nmod:of	Entity=place-26)
 34	(	(	PUNCT	-LRB-	_	35	punct	35:punct	Discourse=elaboration:29->28|SpaceAfter=No
-35	1279-1368	1279-1368	NUM	CD	NumForm=Word|NumType=Card	26	nmod:tmod	26:nmod:tmod	Entity=(time-45)|SpaceAfter=No
+35	1279-1368	1279-1368	NUM	CD	NumForm=Word|NumType=Card	26	nmod:tmod	26:nmod:tmod	Entity=(time-45)|SpaceAfter=No|XML=<date from:::"1279" to:::"1368"></date>
 36	)	)	PUNCT	-RRB-	_	35	punct	35:punct	SpaceAfter=No
 37	,	,	PUNCT	,	_	38	punct	38:punct	_
 38	painter	painter	NOUN	NN	Number=Sing	4	appos	4:appos	Discourse=same_unit:30->28|Entity=(person-25
@@ -326,7 +341,7 @@
 29	Yu	Yu	PROPN	NNP	Number=Sing	12	conj	9:nmod:including|12:conj:and	Entity=(person-51
 30	Dafur	Dafur	PROPN	NNP	Number=Sing	29	flat	29:flat	_
 31	(	(	PUNCT	-LRB-	_	32	punct	32:punct	Discourse=elaboration:35->34|SpaceAfter=No
-32	1896-1945	1896-1945	NUM	CD	NumForm=Word|NumType=Card	29	nmod:tmod	29:nmod:tmod	Entity=(time-52)|SpaceAfter=No
+32	1896-1945	1896-1945	NUM	CD	NumForm=Word|NumType=Card	29	nmod:tmod	29:nmod:tmod	Entity=(time-52)|SpaceAfter=No|XML=<date from:::"1896" to:::"1945"></date>
 33	)	)	PUNCT	-RRB-	_	32	punct	32:punct	Entity=person-51)|SpaceAfter=No
 34	,	,	PUNCT	,	_	36	punct	36:punct	_
 35	famous	famous	ADJ	JJ	Degree=Pos	36	amod	36:amod	Discourse=same_unit:36->34|Entity=(person-51(person-51
@@ -338,12 +353,14 @@
 # sent_id = AMALGUM_voyage_fuyang-13
 # s_type = imp
 # text = Get in
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:37->39
 2	in	in	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_fuyang-14
 # s_type = sub
 # text = If you come from another province, you can go to Hangzhou by train or plane first.
+# newpar = p (7 s)
 1	If	if	SCONJ	IN	_	3	mark	3:mark	Discourse=condition:38->39
 2	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	3	nsubj	3:nsubj	Entity=(person-8)
 3	come	come	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:if	_
@@ -500,12 +517,14 @@
 # sent_id = AMALGUM_voyage_fuyang-21
 # s_type = frag
 # text = By car
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:56->57
 2	car	car	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-67)
 
 # sent_id = AMALGUM_voyage_fuyang-22
 # s_type = decl
 # text = The 320 National Highway stretches across the region.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=joint:57->12|Entity=(place-68
 2	320	320	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
 3	National	National	ADJ	NNP	Number=Sing	4	amod	4:amod	_
@@ -532,6 +551,7 @@
 # sent_id = AMALGUM_voyage_fuyang-24
 # s_type = decl
 # text = Taxi: the basic charge is ¥6, and ¥2/km for the additional mileage.
+# newpar = p (1 s)
 1	Taxi	Taxi	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:59->60|Entity=(object-70)|SpaceAfter=No
 2	:	:	PUNCT	:	_	1	punct	1:punct	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Discourse=joint:60->57|Entity=(abstract-71
@@ -552,6 +572,7 @@
 # sent_id = AMALGUM_voyage_fuyang-25
 # s_type = other
 # text = Fuyang City Bureau of Transportation Tel: 0571-63323866
+# newpar = p (1 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:62->57|Entity=(organization-74(place-1)
 2	City	City	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Bureau	Bureau	PROPN	NNP	Number=Sing	0	root	0:root	_
@@ -564,6 +585,7 @@
 # sent_id = AMALGUM_voyage_fuyang-26
 # s_type = frag
 # text = Fuyang City Motor Transport Bus Company Tel: 571-63322792
+# newpar = p (1 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:64->57|Entity=(person-78(abstract-79(place-1)
 2	City	City	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(place-1)
 3	Motor	Motor	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(object-80)
@@ -577,6 +599,7 @@
 # sent_id = AMALGUM_voyage_fuyang-27
 # s_type = frag
 # text = Fuyang City tourism charter Tel: 0571-23223200, 23223208
+# newpar = p (1 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:66->57|Entity=(abstract-82(place-1
 2	City	City	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-1)
 3	tourism	tourism	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(person-83)
@@ -590,6 +613,7 @@
 # sent_id = AMALGUM_voyage_fuyang-28
 # s_type = frag
 # text = Fuyang City passenger transport station
+# newpar = p (2 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:68->57|Entity=(place-62(abstract-79(place-1)
 2	City	City	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(place-1)
 3	passenger	passenger	NOUN	NN	Number=Sing	4	compound	4:compound	_
@@ -606,6 +630,7 @@
 # sent_id = AMALGUM_voyage_fuyang-30
 # s_type = frag
 # text = Fuyang City
+# newpar = p (2 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:71->57|Entity=(place-1(place-1)
 2	City	City	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-1)
 
@@ -621,6 +646,7 @@
 # sent_id = AMALGUM_voyage_fuyang-32
 # s_type = frag
 # text = Fuyang City Flight
+# newpar = p (2 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:74->57|Entity=(person-87(place-1)
 2	City	City	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Flight	Flight	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-87)
@@ -636,6 +662,7 @@
 # sent_id = AMALGUM_voyage_fuyang-34
 # s_type = ger
 # text = Fuyang City car calling hotline: 16860999
+# newpar = p (1 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:77->57|Entity=(object-67(place-1(place-1)
 2	City	City	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=place-1)
 3	car	car	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=object-67)
@@ -647,6 +674,7 @@
 # sent_id = AMALGUM_voyage_fuyang-35
 # s_type = frag
 # text = Fuyang City Bus Companies
+# newpar = p (2 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:78->57|Entity=(organization-91(place-1(place-1)
 2	City	City	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=place-1)
 3	Bus	Bus	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-78)
@@ -663,6 +691,7 @@
 # sent_id = AMALGUM_voyage_fuyang-37
 # s_type = frag
 # text = Fuyang City new station Tel: 0571-63323648
+# newpar = p (1 s)
 1	Fuyang	Fuyang	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=preparation:81->82|Entity=(place-93(place-1)
 2	City	City	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(place-1)
 3	new	new	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
@@ -674,12 +703,14 @@
 # sent_id = AMALGUM_voyage_fuyang-38
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=joint:83->12
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-7)
 
 # sent_id = AMALGUM_voyage_fuyang-39
 # s_type = frag
 # text = To get to Fuyang from Hangzhou, hop on one of the buses at the Hangzhou-Fuyang bus station located down the block from the Hangzhou Train Station （杭州城站).
+# newpar = p (7 s)
 1	To	to	PART	TO	_	2	mark	2:mark	Discourse=purpose:84->83
 2	get	get	VERB	VB	VerbForm=Inf	8	advcl	8:advcl:to	_
 3	to	to	ADP	IN	_	4	case	4:case	_
@@ -874,15 +905,15 @@
 9	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	10	nsubj	10:nsubj	Entity=(person-98)
 10	ask	ask	VERB	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	31	advcl	31:advcl:if	_
 11	for	for	ADP	IN	_	12	case	12:case	_
-12	Xinchezhan	Xinchezhan	PROPN	NNP	Number=Sing	10	obl	10:obl:for	Entity=(place-124)
+12	Xinchezhan	Xinchezhan	PROPN	NNP	Number=Sing	10	obl	10:obl:for	Entity=(place-124)|XML=<hi rend:::"italic"></hi>
 13	(	(	PUNCT	-LRB-	_	16	punct	16:punct	Discourse=restatement:108->107|SpaceAfter=No
 14	New	New	ADJ	NNP	Number=Sing	16	amod	16:amod	Entity=(place-62
 15	Bus	Bus	PROPN	NNP	Number=Sing	16	compound	16:compound	_
 16	Station	Station	PROPN	NNP	Number=Sing	12	appos	12:appos	Entity=place-62)|SpaceAfter=No
 17	)	)	PUNCT	-RRB-	_	16	punct	16:punct	_
 18	or	or	CCONJ	CC	_	20	cc	20:cc	Discourse=same_unit:109->107
-19	Xinnan	Xinnan	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(place-125(person-126)
-20	Chezhan	Chezhan	PROPN	NNP	Number=Sing	12	conj	10:obl:for|12:conj:or	Entity=place-125)
+19	Xinnan	Xinnan	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(place-125(person-126)|XML=<hi rend:::"italic">
+20	Chezhan	Chezhan	PROPN	NNP	Number=Sing	12	conj	10:obl:for|12:conj:or	Entity=place-125)|XML=</hi>
 21	(	(	PUNCT	-LRB-	_	25	punct	25:punct	Discourse=elaboration:110->109|SpaceAfter=No
 22	New	New	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(place-127
 23	South	South	PROPN	NNP	Number=Sing	25	compound	25:compound	_
@@ -904,6 +935,7 @@
 # sent_id = AMALGUM_voyage_fuyang-46
 # s_type = decl
 # text = An alternative is to catch the slower K514 bus that passes by Six Harmonies Pagoda on the Qiantang River front.
+# newpar = p (1 s)
 1	An	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=joint:112->12|Entity=(abstract-130
 2	alternative	alternative	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=abstract-130)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
@@ -929,12 +961,14 @@
 # sent_id = AMALGUM_voyage_fuyang-47
 # s_type = frag
 # text = By subway
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=joint:114->12
 2	subway	subway	NOUN	NN	Number=Sing	0	root	0:root	Entity=(place-136)
 
 # sent_id = AMALGUM_voyage_fuyang-48
 # s_type = decl
 # text = The Hangzhou government is planning to build a subway to Fuyang, Linan, Yuhang, Shaoxing, and Haining.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:115->12|Entity=(organization-137
 2	Hangzhou	Hangzhou	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(place-3)
 3	government	government	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|7:nsubj:xsubj	Entity=organization-137)
@@ -1016,12 +1050,14 @@
 # sent_id = AMALGUM_voyage_fuyang-52
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:119->120
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-7)
 
 # sent_id = AMALGUM_voyage_fuyang-53
 # s_type = decl
 # text = The main mode of public transportation in Fuyang is its extensive public bus system.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:120->12|Entity=(abstract-150
 2	main	main	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	mode	mode	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	_
@@ -1080,6 +1116,7 @@
 # sent_id = AMALGUM_voyage_fuyang-55
 # s_type = frag
 # text = No.1 bus route:
+# newpar = p (2 s)
 1	No.1	No.1	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=preparation:122->123|Entity=(place-165(place-166)
 2	bus	bus	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-7)
 3	route	route	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-165)|SpaceAfter=No
@@ -1113,6 +1150,7 @@
 # sent_id = AMALGUM_voyage_fuyang-57
 # s_type = frag
 # text = No.2 bus route:
+# newpar = p (2 s)
 1	No.2	No.2	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=preparation:124->125|Entity=(place-165(place-173)
 2	bus	bus	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-7)
 3	route	route	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-165)|SpaceAfter=No
@@ -1154,6 +1192,7 @@
 # sent_id = AMALGUM_voyage_fuyang-59
 # s_type = frag
 # text = No.3 bus route: The new station-personnel-recruiting market; Talent (Human) Resources Market; The personnel market-Okura-Enbo square-Ermao Market-Gym center-integrated market-The Hospital for Women and Children-The Western Station-Transportation Institute-timber market-No.3 Middle School (the new Department of Orthopaedics and Traumatology)
+# newpar = p (1 s)
 1	No.3	No.3	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:127->125|Entity=(place-165(abstract-186)
 2	bus	bus	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-7)
 3	route	route	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-165)|SpaceAfter=No
@@ -1201,6 +1240,7 @@
 # sent_id = AMALGUM_voyage_fuyang-60
 # s_type = frag
 # text = No.4 bus route: South Station-Huawu Bridge-Movie Theater-No.1 primary school-Yu Dafu Park-Movie Theater-Second Enbo Bridge-Chen Jianong-International Trade Building or Cetra Building-Qinwang Bridge-Sanjiang Garden-Kangda Village-Culture and education in Xiyuan-Administrative service centre
+# newpar = p (1 s)
 1	No.4	no.4	NUM	NNP	Number=Sing	3	nummod	3:nummod	Discourse=preparation:132->133|Entity=(place-165
 2	bus	bus	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-7)
 3	route	route	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-165)|SpaceAfter=No
@@ -1235,12 +1275,14 @@
 # sent_id = AMALGUM_voyage_fuyang-61
 # s_type = frag
 # text = By taxi
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:134->135
 2	taxi	taxi	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-216)
 
 # sent_id = AMALGUM_voyage_fuyang-62
 # s_type = decl
 # text = The fare for Fuyang's ubiquitous taxis start at ¥7.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:135->125|Entity=(abstract-217
 2	fare	fare	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	for	for	ADP	IN	_	7	case	7:case	_
@@ -1282,13 +1324,16 @@
 # sent_id = AMALGUM_voyage_fuyang-64
 # s_type = frag
 # text = Fuchun Taoyuan.
-1	Fuchun	Fuchun	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=elaboration:139->136|Entity=(place-223(place-13)
-2	Taoyuan	Taoyuan	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-223)|SpaceAfter=No
+# newpar = list type:::"unordered" (1 s)
+# newpar1 = item (1 s)
+1	Fuchun	Fuchun	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=elaboration:139->136|Entity=(place-223(place-13)|XML=<hi rend:::"bold">
+2	Taoyuan	Taoyuan	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-223)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_fuyang-65
 # s_type = frag
 # text = Public transportation:
+# newpar = p (3 s)
 1	Public	Public	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:140->141|Entity=(abstract-151
 2	transportation	transportation	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-151)|SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
@@ -1316,6 +1361,7 @@
 # sent_id = AMALGUM_voyage_fuyang-68
 # s_type = frag
 # text = 2、Hangzhou jiangsu
+# newpar = p (2 s)
 1	2、Hangzhou	2、Hangzhou	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:143->141|Entity=(person-230(animal-231)
 2	jiangsu	jiangsu	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-230)
 
@@ -1335,12 +1381,14 @@
 # sent_id = AMALGUM_voyage_fuyang-70
 # s_type = frag
 # text = By rickshaw
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=elaboration:145->144
 2	rickshaw	rickshaw	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-233)
 
 # sent_id = AMALGUM_voyage_fuyang-71
 # s_type = decl
 # text = Pedal rickshaws are available throughout Fuyang city.
+# newpar = p (4 s)
 1	Pedal	pedal	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=elaboration:146->145|Entity=(object-234(object-235)
 2	rickshaws	rickshaw	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=object-234)
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
@@ -1428,13 +1476,16 @@
 # sent_id = AMALGUM_voyage_fuyang-75
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:153->154
 
 # sent_id = AMALGUM_voyage_fuyang-76
 # s_type = frag
 # text = Guanshan Park (鹳山公园).
-1	Guanshan	Guanshan	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:154->125|Entity=(place-159(person-160)
-2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)
+# newpar = list type:::"unordered" (80 s)
+# newpar1 = item (3 s)
+1	Guanshan	Guanshan	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:154->125|Entity=(place-159(person-160)|XML=<hi rend:::"bold">
+2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:155->154|SpaceAfter=No
 4	鹳山公园	鹳山公园	NOUN	NN	Number=Sing	2	appos	2:appos	Entity=(place-159)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -1474,8 +1525,9 @@
 # sent_id = AMALGUM_voyage_fuyang-79
 # s_type = frag
 # text = Fuchun Taoyuan (富春桃源).
-1	Fuchun	Fuchun	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:158->154|Entity=(place-223(place-13)
-2	Taoyuan	Taoyuan	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-223)
+# newpar = item (5 s)
+1	Fuchun	Fuchun	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:158->154|Entity=(place-223(place-13)|XML=<hi rend:::"bold">
+2	Taoyuan	Taoyuan	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-223)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:159->158|SpaceAfter=No
 4	富春桃源	富春桃源	PROPN	NNP	Number=Sing	2	dep	2:dep	Entity=(abstract-247)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -1565,9 +1617,10 @@
 # sent_id = AMALGUM_voyage_fuyang-84
 # s_type = frag
 # text = Longmen Ancient town (龙门古镇).
-1	Longmen	Longmen	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:167->164|Entity=(place-262(person-17)
+# newpar = item (7 s)
+1	Longmen	Longmen	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:167->164|Entity=(place-262(person-17)|XML=<hi rend:::"bold">
 2	Ancient	Ancient	ADJ	NNP	Number=Sing	3	amod	3:amod	_
-3	town	town	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-262)
+3	town	town	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-262)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:168->167|SpaceAfter=No
 5	龙门古镇	龙门古镇	X	FW	_	3	dep	3:dep	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
@@ -1686,8 +1739,9 @@
 # sent_id = AMALGUM_voyage_fuyang-91
 # s_type = frag
 # text = Dongwu Park (东吴公园).
-1	Dongwu	Dongwu	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:177->179|Entity=(place-159(place-275)
-2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)
+# newpar = item (8 s)
+1	Dongwu	Dongwu	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:177->179|Entity=(place-159(place-275)|XML=<hi rend:::"bold">
+2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:178->177|SpaceAfter=No
 4	东吴公园	东吴公园	X	FW	_	2	appos	2:appos	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -1824,8 +1878,9 @@
 # sent_id = AMALGUM_voyage_fuyang-99
 # s_type = frag
 # text = Bailong Temple (白龙寺).
-1	Bailong	Bailong	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:187->191|Entity=(place-291(person-292)
-2	Temple	Temple	PROPN	NNP	Number=Sing	0	root	0:root	_
+# newpar = item (1 s)
+1	Bailong	Bailong	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:187->191|Entity=(place-291(person-292)|XML=<hi rend:::"bold">
+2	Temple	Temple	PROPN	NNP	Number=Sing	0	root	0:root	XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:188->187|SpaceAfter=No
 4	白龙寺	白龙寺	NUM	CD	NumForm=Word|NumType=Card	2	dep	2:dep	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	Entity=place-291)|SpaceAfter=No
@@ -1834,8 +1889,9 @@
 # sent_id = AMALGUM_voyage_fuyang-100
 # s_type = frag
 # text = Children Park (儿童公园).
-1	Children	child	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:189->191|Entity=(place-159(person-293)
-2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)
+# newpar = item (2 s)
+1	Children	child	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:189->191|Entity=(place-159(person-293)|XML=<hi rend:::"bold">
+2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:190->189|SpaceAfter=No
 4	儿童公园	儿童公园	NOUN	NN	Number=Sing	2	appos	2:appos	Entity=(place-159)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -1875,8 +1931,9 @@
 # sent_id = AMALGUM_voyage_fuyang-102
 # s_type = frag
 # text = Xinsha island (新沙岛) (Take a boat from near Fuyang High School).
-1	Xinsha	Xinsha	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:193->191|Entity=(place-300(person-301)
-2	island	island	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-300)
+# newpar = item (9 s)
+1	Xinsha	Xinsha	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:193->191|Entity=(place-300(person-301)|XML=<hi rend:::"bold">
+2	island	island	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-300)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:194->193|SpaceAfter=No
 4	新沙岛	新沙岛	NUM	CD	NumForm=Word|NumType=Card	2	appos	2:appos	Entity=(abstract-302)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
@@ -2047,8 +2104,9 @@
 # sent_id = AMALGUM_voyage_fuyang-111
 # s_type = frag
 # text = Tianzhong Mountain (天钟山).
-1	Tianzhong	Tianzhong	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:210->191|Entity=(place-38(place-323)
-2	Mountain	Mountain	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-38)
+# newpar = item (11 s)
+1	Tianzhong	Tianzhong	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:210->191|Entity=(place-38(place-323)|XML=<hi rend:::"bold">
+2	Mountain	Mountain	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-38)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:211->210|SpaceAfter=No
 4	天钟山	天钟山	NUM	CD	NumForm=Word|NumType=Card	2	appos	2:appos	Entity=(abstract-324)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -2320,12 +2378,13 @@
 # sent_id = AMALGUM_voyage_fuyang-122
 # s_type = frag
 # text = Huang Kung-wang Mountain National Forest Park (黄公望森林公园).
-1	Huang	Huang	PROPN	NNP	Number=Sing	6	compound	6:compound	Discourse=joint:231->191|Entity=(place-159(person-345
+# newpar = item (6 s)
+1	Huang	Huang	PROPN	NNP	Number=Sing	6	compound	6:compound	Discourse=joint:231->191|Entity=(place-159(person-345|XML=<hi rend:::"bold">
 2	Kung-wang	Kung-wang	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-345)
 3	Mountain	Mountain	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(place-38)
 4	National	National	ADJ	NNP	Number=Sing	5	amod	5:amod	_
 5	Forest	Forest	PROPN	NNP	Number=Sing	6	compound	6:compound	_
-6	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)
+6	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)|XML=</hi>
 7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:232->231|SpaceAfter=No
 8	黄公望森林公园	黄公望森林公园	X	FW	_	6	appos	6:appos	SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	SpaceAfter=No
@@ -2449,13 +2508,14 @@
 # sent_id = AMALGUM_voyage_fuyang-128
 # s_type = decl
 # text = The base of volplane in Yongan mountain: you can rental a glider here.
+# newpar = item (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:240->191|Entity=(place-378
 2	base	base	NOUN	NN	Number=Sing	11	dislocated	11:dislocated	_
 3	of	of	ADP	IN	_	4	case	4:case	_
 4	volplane	volplane	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	Entity=(plant-379)
 5	in	in	ADP	IN	_	7	case	7:case	_
-6	Yongan	Yongan	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-38(abstract-380)
-7	mountain	mountain	NOUN	NN	Number=Sing	2	nmod	2:nmod:in	Entity=place-378)place-38)|SpaceAfter=No
+6	Yongan	Yongan	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-38(abstract-380)|XML=<hi rend:::"bold">
+7	mountain	mountain	NOUN	NN	Number=Sing	2	nmod	2:nmod:in	Entity=place-378)place-38)|SpaceAfter=No|XML=</hi>
 8	:	:	PUNCT	:	_	2	punct	2:punct	_
 9	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	11	nsubj	11:nsubj	Discourse=elaboration:241->240|Entity=(person-350)
 10	can	can	AUX	MD	VerbForm=Fin	11	aux	11:aux	_
@@ -2505,8 +2565,9 @@
 # sent_id = AMALGUM_voyage_fuyang-130
 # s_type = frag
 # text = Yudafu Park (郁达夫公园).
-1	Yudafu	Yudafu	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:245->191|Entity=(place-159(person-393)
-2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)
+# newpar = item (9 s)
+1	Yudafu	Yudafu	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:245->191|Entity=(place-159(person-393)|XML=<hi rend:::"bold">
+2	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-159)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:246->245|SpaceAfter=No
 4	郁达夫公园	郁达夫公园	NOUN	NN	Number=Sing	2	appos	2:appos	Entity=(place-159)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -2684,8 +2745,9 @@
 # sent_id = AMALGUM_voyage_fuyang-139
 # s_type = frag
 # text = Qinwang Square (秦望广场).
-1	Qinwang	Qinwang	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:268->191|Entity=(place-411(abstract-412)
-2	Square	Square	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-411)
+# newpar = item (6 s)
+1	Qinwang	Qinwang	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:268->191|Entity=(place-411(abstract-412)|XML=<hi rend:::"bold">
+2	Square	Square	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-411)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:269->268|SpaceAfter=No
 4	秦望广场	秦望广场	X	FW	_	2	appos	2:appos	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -2793,11 +2855,12 @@
 # sent_id = AMALGUM_voyage_fuyang-145
 # s_type = frag
 # text = The cultural village of papermaking (造纸文化村).
-1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:282->191|Entity=(place-416
+# newpar = item (5 s)
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:282->191|Entity=(place-416|XML=<hi rend:::"bold">
 2	cultural	cultural	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	village	village	NOUN	NN	Number=Sing	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	papermaking	papermaking	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	Entity=place-416)(place-423)
+5	papermaking	papermaking	NOUN	NN	Number=Sing	3	nmod	3:nmod:of	Entity=place-416)(place-423)|XML=</hi>
 6	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=elaboration:283->282|SpaceAfter=No
 7	造纸文化村	造纸文化村	X	FW	_	3	dep	3:dep	SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	7	punct	7:punct	SpaceAfter=No
@@ -2887,8 +2950,9 @@
 # sent_id = AMALGUM_voyage_fuyang-150
 # s_type = frag
 # text = Tongtian waterfall (通天飞瀑).
-1	Tongtian	Tongtian	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:292->288|Entity=(object-435(person-436)
-2	waterfall	waterfall	NOUN	NN	Number=Sing	0	root	0:root	Entity=object-435)
+# newpar = item (6 s)
+1	Tongtian	Tongtian	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:292->288|Entity=(object-435(person-436)|XML=<hi rend:::"bold">
+2	waterfall	waterfall	NOUN	NN	Number=Sing	0	root	0:root	Entity=object-435)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:293->292|SpaceAfter=No
 4	通天飞瀑	通天飞瀑	X	FW	_	2	dep	2:dep	SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No

@@ -1,13 +1,24 @@
+# meta::id = AMALGUM_voyage_tomioka
+# meta::title = Tomioka
+# meta::shortTitle = tomioka
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=139580
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_tomioka
 # sent_id = AMALGUM_voyage_tomioka-1
 # s_type = frag
 # text = Tomioka
+# newpar = head (1 s)
 1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->6|Entity=(person-1)
 
 # sent_id = AMALGUM_voyage_tomioka-2
 # s_type = decl
 # text = Tomioka (富岡) is a city in southwestern Gunma Prefecture, Japan.
-1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Discourse=preparation:2->6|Entity=(place-2)
+# newpar = p (1 s)
+1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Discourse=preparation:2->6|Entity=(place-2)|XML=<hi rend:::"bold"><ref target:::"http://www.city.tomioka.lg.jp/www/toppage/0000000000000/APM03000.html"></ref></hi>
 2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:3->2|SpaceAfter=No
 3	富岡	富岡	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(place-2)|SpaceAfter=No
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
@@ -16,8 +27,8 @@
 7	city	city	NOUN	NN	Number=Sing	0	root	0:root	_
 8	in	in	ADP	IN	_	11	case	11:case	_
 9	southwestern	southwestern	ADJ	JJ	Degree=Pos	11	amod	11:amod	Entity=(place-3
-10	Gunma	Gunma	PROPN	NNP	Number=Sing	11	compound	11:compound	_
-11	Prefecture	Prefecture	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No
+10	Gunma	Gunma	PROPN	NNP	Number=Sing	11	compound	11:compound	XML=<ref target:::"Gunma">
+11	Prefecture	Prefecture	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	SpaceAfter=No|XML=</ref>
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
 13	Japan	Japan	PROPN	NNP	Number=Sing	11	appos	11:appos	Entity=place-2)place-3)(place-4)|SpaceAfter=No
 14	.	.	PUNCT	.	_	7	punct	7:punct	_
@@ -25,20 +36,22 @@
 # sent_id = AMALGUM_voyage_tomioka-3
 # s_type = frag
 # text = By train
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:5->6
 2	train	train	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-5)
 
 # sent_id = AMALGUM_voyage_tomioka-4
 # s_type = decl
 # text = Tomioka is served by the non-JR Jōshin Line, which runs from the nearby railway hub at Takasaki.
+# newpar = p (3 s)
 1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	3	nsubj:pass	3:nsubj:pass	Discourse=ROOT:6|Entity=(place-2)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	served	serve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	by	by	ADP	IN	_	8	case	8:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(place-6
 6	non-JR	non-JR	ADJ	NNP	Number=Sing|Polarity=Neg	8	amod	8:amod	_
-7	Jōshin	Jōshin	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-7)
-8	Line	Line	PROPN	NNP	Number=Sing	3	obl	3:obl:by|11:nsubj	SpaceAfter=No
+7	Jōshin	Jōshin	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-7)|XML=<hi rend:::"bold">
+8	Line	Line	PROPN	NNP	Number=Sing	3	obl	3:obl:by|11:nsubj	SpaceAfter=No|XML=</hi>
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	which	which	PRON	WDT	PronType=Rel	11	nsubj	8:ref	Discourse=elaboration:7->6
 11	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
@@ -48,7 +61,7 @@
 15	railway	railway	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(place-9)
 16	hub	hub	NOUN	NN	Number=Sing	11	obl	11:obl:from	_
 17	at	at	ADP	IN	_	18	case	18:case	_
-18	Takasaki	Takasaki	PROPN	NNP	Number=Sing	16	nmod	16:nmod:at	Entity=place-6)place-8)(place-10)|SpaceAfter=No
+18	Takasaki	Takasaki	PROPN	NNP	Number=Sing	16	nmod	16:nmod:at	Entity=place-6)place-8)(place-10)|SpaceAfter=No|XML=<ref target:::"Takasaki"></ref>
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-5
@@ -99,6 +112,7 @@
 # sent_id = AMALGUM_voyage_tomioka-7
 # s_type = decl
 # text = Jōshin Railway sells a combination ticket, which covers a return journey between Takasaki and Jōshū-Tomioka and admission to the Silk Mill, for ¥2140 (a saving of ¥440).
+# newpar = p (2 s)
 1	Jōshin	Jōshin	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:12->6|Entity=(organization-16(place-7)
 2	Railway	Railway	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-16)
 3	sells	sell	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -124,7 +138,7 @@
 23	,	,	PUNCT	,	_	26	punct	26:punct	_
 24	for	for	ADP	IN	_	26	case	26:case	_
 25	¥	¥	NUM	CD	NumForm=Word|NumType=Card	26	nummod	26:nummod	SpaceAfter=No
-26	2140	2140	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:for	_
+26	2140	2140	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:for	XML=<date when:::"2140"></date>
 27	(	(	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=elaboration:14->13|SpaceAfter=No
 28	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	Entity=(abstract-23
 29	saving	saving	NOUN	NN	Number=Sing	26	appos	26:appos	_
@@ -155,17 +169,18 @@
 16	)	)	PUNCT	-RRB-	_	10	punct	10:punct	Entity=object-17)
 17	for	for	ADP	IN	_	18	case	18:case	Discourse=same_unit:17->15
 18	¥	¥	NUM	CD	NumForm=Word|NumType=Card	3	obl	3:obl:for	Entity=(abstract-26|SpaceAfter=No
-19	2220	2220	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	Entity=abstract-26)|SpaceAfter=No
+19	2220	2220	NUM	CD	NumForm=Digit|NumType=Card	18	nummod	18:nummod	Entity=abstract-26)|SpaceAfter=No|XML=<date when:::"2220"></date>
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-9
 # s_type = decl
 # text = The Jōshin Line is not covered by the Japan Rail Pass or the JR East Passes, but it is covered by the JR TOKYO Wide Pass, which is available to holders of non-Japanese passports.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=concession:18->19|Entity=(place-6
 2	Jōshin	Jōshin	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Line	Line	PROPN	NNP	Number=Sing	6	nsubj:pass	6:nsubj:pass	Entity=place-6)
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
-5	not	not	ADV	RB	Polarity=Neg	6	advmod	6:advmod	_
+5	not	not	ADV	RB	Polarity=Neg	6	advmod	6:advmod	XML=<hi rend:::"italic"></hi>
 6	covered	cover	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	by	by	ADP	IN	_	11	case	11:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(person-27
@@ -184,10 +199,10 @@
 21	covered	cover	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	6	conj	6:conj:but	_
 22	by	by	ADP	IN	_	27	case	27:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(person-27
-24	JR	JR	PROPN	NNP	Number=Sing	27	compound	27:compound	_
+24	JR	JR	PROPN	NNP	Number=Sing	27	compound	27:compound	XML=<ref target:::"https://www.jreast.co.jp/e/tokyowidepass/">
 25	TOKYO	TOKYO	PROPN	NNP	Number=Sing	27	compound	27:compound	Entity=(place-30)
 26	Wide	Wide	PROPN	NNP	Number=Sing	27	compound	27:compound	_
-27	Pass	Pass	PROPN	NNP	Number=Sing	21	obl	21:obl:by|31:nsubj	SpaceAfter=No
+27	Pass	Pass	PROPN	NNP	Number=Sing	21	obl	21:obl:by|31:nsubj	SpaceAfter=No|XML=</ref>
 28	,	,	PUNCT	,	_	31	punct	31:punct	_
 29	which	which	PRON	WDT	PronType=Rel	31	nsubj	27:ref	Discourse=elaboration:20->19
 30	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	31	cop	31:cop	_
@@ -209,7 +224,7 @@
 5	Jōshin	Jōshin	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-7)
 6	Line	Line	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Entity=place-6)
 7	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
-8	not	not	ADV	RB	Polarity=Neg	9	advmod	9:advmod	_
+8	not	not	ADV	RB	Polarity=Neg	9	advmod	9:advmod	XML=<hi rend:::"italic"></hi>
 9	accept	accept	VERB	VB	VerbForm=Inf	1	ccomp	1:ccomp	_
 10	IC	IC	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(object-33(person-34)
 11	Cards	Cards	PROPN	NNPS	Number=Plur	9	obj	9:obj	Entity=object-33)
@@ -225,14 +240,16 @@
 # sent_id = AMALGUM_voyage_tomioka-11
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:23->27
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-38)
 
 # sent_id = AMALGUM_voyage_tomioka-12
 # s_type = decl
 # text = Tomioka Interchange on the Jōshin-etsu Expressway (about 2.5km south of the Silk Mill) is served by a fairly frequent direct bus service towards Tokyo:
-1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:24->27|Entity=(organization-39(place-2)
-2	Interchange	Interchange	PROPN	NNP	Number=Sing	17	nsubj:pass	17:nsubj:pass	_
+# newpar = p (1 s)
+1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:24->27|Entity=(organization-39(place-2)|XML=<hi rend:::"bold">
+2	Interchange	Interchange	PROPN	NNP	Number=Sing	17	nsubj:pass	17:nsubj:pass	XML=</hi>
 3	on	on	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(place-40
 5	Jōshin-etsu	Jōshin-etsu	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-41)
@@ -262,18 +279,20 @@
 # sent_id = AMALGUM_voyage_tomioka-13
 # s_type = decl
 # text = Seibu Bus and Chikuma Bus run 16 buses a day from Ikebukuro Station East Exit, Shimo-Ochiai Station, Nerima Ward Office, and Kawagoe-Matoba Bus Stop, taking 2 hours 5 minutes (and continuing on to Karuizawa, Komoro or Ueda).
-1	Seibu	Seibu	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:27->6|Entity=(organization-43(animal-44)
-2	Bus	Bus	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Entity=organization-43)
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (2 s)
+1	Seibu	Seibu	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:27->6|Entity=(organization-43(animal-44)|XML=<ref target:::"http://www.seibubus.co.jp/kousoku/line/line_chikuma.html">
+2	Bus	Bus	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Entity=organization-43)|XML=</ref>
 3	and	and	CCONJ	CC	_	5	cc	5:cc	_
-4	Chikuma	Chikuma	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(organization-43(abstract-45)
-5	Bus	Bus	PROPN	NNP	Number=Sing	2	conj	2:conj:and|6:nsubj	Entity=organization-43)
+4	Chikuma	Chikuma	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(organization-43(abstract-45)|XML=<ref target:::"http://www.chikuma-bus.com/home/modules/expres_bus/index.php%3Fcontent_id%3D1">
+5	Bus	Bus	PROPN	NNP	Number=Sing	2	conj	2:conj:and|6:nsubj	Entity=organization-43)|XML=</ref>
 6	run	run	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	16	16	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	Entity=(object-46
 8	buses	bus	NOUN	NNS	Number=Plur	6	obj	6:obj	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(time-47
 10	day	day	NOUN	NN	Number=Sing	8	nmod:tmod	8:nmod:tmod	Entity=time-47)
 11	from	from	ADP	IN	_	13	case	13:case	_
-12	Ikebukuro	Ikebukuro	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(place-48(abstract-49)
+12	Ikebukuro	Ikebukuro	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(place-48(abstract-49)|XML=<ref target:::"Tokyo/Toshima"></ref>
 13	Station	Station	PROPN	NNP	Number=Sing	8	nmod	8:nmod:from	Entity=object-46)place-48)
 14	East	East	ADJ	NNP	Number=Sing	15	amod	15:amod	Entity=(place-50(place-51
 15	Exit	Exit	PROPN	NNP	Number=Sing	13	appos	13:appos	Entity=place-51)|SpaceAfter=No
@@ -281,12 +300,12 @@
 17	Shimo-Ochiai	Shimo-Ochiai	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(place-48(abstract-52)
 18	Station	Station	PROPN	NNP	Number=Sing	13	conj	8:nmod:from|13:conj:and	Entity=place-48)|SpaceAfter=No
 19	,	,	PUNCT	,	_	22	punct	22:punct	_
-20	Nerima	Nerima	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-53(place-54)
+20	Nerima	Nerima	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-53(place-54)|XML=<ref target:::"Tokyo/North"></ref>
 21	Ward	Ward	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(person-55)
 22	Office	Office	PROPN	NNP	Number=Sing	15	conj	13:appos|15:conj	Entity=place-50)place-53)|SpaceAfter=No
 23	,	,	PUNCT	,	_	28	punct	28:punct	_
 24	and	and	CCONJ	CC	_	28	cc	28:cc	_
-25	Kawagoe	Kawagoe	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(place-56(place-57|SpaceAfter=No
+25	Kawagoe	Kawagoe	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(place-56(place-57|SpaceAfter=No|XML=<ref target:::"Kawagoe"></ref>
 26	-Matoba	-Matoba	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=place-57)
 27	Bus	Bus	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(organization-58)
 28	Stop	stop	PROPN	NNP	Number=Sing	13	conj	8:nmod:from|13:conj:and	Entity=place-56)|SpaceAfter=No
@@ -319,12 +338,13 @@
 5	start	start	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	back	back	ADV	RB	Degree=Pos	5	advmod	5:advmod	_
 7	from	from	ADP	IN	_	8	case	8:case	_
-8	Shinjuku	Shinjuku	PROPN	NNP	Number=Sing	5	obl	5:obl:from	Entity=(place-66)|SpaceAfter=No
+8	Shinjuku	Shinjuku	PROPN	NNP	Number=Sing	5	obl	5:obl:from	Entity=(place-66)|SpaceAfter=No|XML=<ref target:::"Tokyo/Shinjuku"></ref>
 9	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-15
 # s_type = decl
 # text = Chikuma Bus also runs 2 buses a day from Tachikawa Station North Exit and Tamagawa-Jōsui Station, taking 2 hours 10 minutes (and continuing on to Komoro or Ueda).
+# newpar = item (1 s)
 1	Chikuma	Chikuma	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:31->27|Entity=(organization-43(abstract-45)
 2	Bus	Bus	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=organization-43)
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
@@ -334,7 +354,7 @@
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(time-47
 8	day	day	NOUN	NN	Number=Sing	6	nmod:tmod	6:nmod:tmod	Entity=time-47)
 9	from	from	ADP	IN	_	11	case	11:case	_
-10	Tachikawa	Tachikawa	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(place-48(abstract-67)
+10	Tachikawa	Tachikawa	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(place-48(abstract-67)|XML=<ref target:::"Tachikawa"></ref>
 11	Station	Station	PROPN	NNP	Number=Sing	6	nmod	6:nmod:from	Entity=object-65)place-48)
 12	North	North	ADJ	NNP	Number=Sing	13	amod	13:amod	Entity=(place-50(place-51
 13	Exit	Exit	PROPN	NNP	Number=Sing	11	appos	11:appos	Entity=place-51)
@@ -361,13 +381,14 @@
 # sent_id = AMALGUM_voyage_tomioka-16
 # s_type = decl
 # text = All of these buses cost ¥2100.
+# newpar = p (2 s)
 1	All	all	PRON	DT	_	5	nsubj	5:nsubj	Discourse=joint:34->27|Entity=(object-65
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	these	this	DET	DT	Number=Plur|PronType=Dem	4	det	4:det	_
 4	buses	bus	NOUN	NNS	Number=Plur	1	nmod	1:nmod:of	Entity=object-65)
 5	cost	cost	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	¥	¥	PUNCT	:	_	7	punct	7:punct	SpaceAfter=No
-7	2100	2100	NUM	CD	NumForm=Digit|NumType=Card	5	obl:tmod	5:obl:tmod	SpaceAfter=No
+7	2100	2100	NUM	CD	NumForm=Digit|NumType=Card	5	obl:tmod	5:obl:tmod	SpaceAfter=No|XML=<date when:::"2100"></date>
 8	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-17
@@ -393,30 +414,30 @@
 # sent_id = AMALGUM_voyage_tomioka-18
 # s_type = decl
 # text = Nippon Chūō Bus runs an overnight service from Osaka Namba (OCAT) and Kyoto Station Hachijō Exit to Nippon Chūō Taxi Tomioka Eigyōsho (on the main road 350m south of Nishi-Tomioka Station and 500m northwest of the Silk Mill), taking 8 hours 15 minutes and ¥9200 (¥16,560 return, valid for 10 days).
-1	Nippon	Nippon	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:37->27|Entity=(organization-43(place-75)
+1	Nippon	Nippon	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:37->27|Entity=(organization-43(place-75)|XML=<ref target:::"http://www.ncbbus.co.jp/hbus/time2.htm">
 2	Chūō	Chūō	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Bus	Bus	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=organization-43)
+3	Bus	Bus	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=organization-43)|XML=</ref>
 4	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(abstract-42
 6	overnight	overnight	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	service	service	NOUN	NN	Number=Sing	4	obj	4:obj	_
 8	from	from	ADP	IN	_	10	case	10:case	_
-9	Osaka	Osaka	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(person-76(place-77)
-10	Namba	Namba	PROPN	NNP	Number=Sing	7	nmod	7:nmod:from	Entity=abstract-42)person-76)
+9	Osaka	Osaka	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(person-76(place-77)|XML=<ref target:::"Osaka"></ref>
+10	Namba	Namba	PROPN	NNP	Number=Sing	7	nmod	7:nmod:from	Entity=abstract-42)person-76)|XML=<ref target:::"Osaka/Minami"></ref>
 11	(	(	PUNCT	-LRB-	_	12	punct	12:punct	Discourse=elaboration:38->37|SpaceAfter=No
 12	OCAT	OCAT	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=(organization-78)|SpaceAfter=No
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 14	and	and	CCONJ	CC	_	18	cc	18:cc	_
-15	Kyoto	Kyoto	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(place-51(place-48(place-79)
+15	Kyoto	Kyoto	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(place-51(place-48(place-79)|XML=<ref target:::"Kyoto"></ref>
 16	Station	Station	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=place-48)
 17	Hachijō	Hachijō	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(abstract-80)
 18	Exit	Exit	PROPN	NNP	Number=Sing	10	conj	7:nmod:from|10:conj:and	Entity=place-51)
 19	to	to	ADP	IN	_	22	case	22:case	_
-20	Nippon	Nippon	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(object-81(place-75)
+20	Nippon	Nippon	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(object-81(place-75)|XML=<hi rend:::"bold">
 21	Chūō	Chūō	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(substance-82)
 22	Taxi	Taxi	PROPN	NNP	Number=Sing	4	obl	4:obl:to	_
 23	Tomioka	Tomioka	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(person-1)
-24	Eigyōsho	Eigyōsho	PROPN	NNP	Number=Sing	22	flat	22:flat	_
+24	Eigyōsho	Eigyōsho	PROPN	NNP	Number=Sing	22	flat	22:flat	XML=</hi>
 25	(	(	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=elaboration:39->38|SpaceAfter=No
 26	on	on	ADP	IN	_	29	case	29:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(place-83
@@ -466,27 +487,29 @@
 5	leaves	leave	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
 6	Tomioka	Tomioka	PROPN	NNP	Number=Sing	5	obj	5:obj	Entity=(place-2)
 7	for	for	ADP	IN	_	8	case	8:case	_
-8	Kansai	Kansai	PROPN	NNP	Number=Sing	5	obl	5:obl:for	Entity=(place-88)
+8	Kansai	Kansai	PROPN	NNP	Number=Sing	5	obl	5:obl:for	Entity=(place-88)|XML=<ref target:::"Kansai"></ref>
 9	after	after	ADP	IN	_	10	case	10:case	_
-10	11:45pm	11:45pm	NUM	CD	NumForm=Word|NumType=Card	5	obl	5:obl:after	Entity=(time-89)|SpaceAfter=No
+10	11:45pm	11:45pm	NUM	CD	NumForm=Word|NumType=Card	5	obl	5:obl:after	Entity=(time-89)|SpaceAfter=No|XML=<time when:::"2345"></time>
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	and	and	CCONJ	CC	_	13	cc	13:cc	Discourse=joint:45->44
 13	arrives	arrive	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	conj	1:ccomp|5:conj:and	_
 14	at	at	ADP	IN	_	15	case	15:case	_
 15	Tomioka	Tomioka	PROPN	NNP	Number=Sing	13	obl	13:obl:at	Entity=(place-2)
 16	before	before	ADP	IN	_	17	case	17:case	_
-17	4:45am	4:45am	NUM	CD	NumForm=Word|NumType=Card	13	obl	13:obl:before	Entity=(time-90)|SpaceAfter=No
+17	4:45am	4:45am	NUM	CD	NumForm=Word|NumType=Card	13	obl	13:obl:before	Entity=(time-90)|SpaceAfter=No|XML=<time when:::"0445"></time>
 18	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-20
 # s_type = imp
 # text = Get around
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:46->47
 2	around	around	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_tomioka-21
 # s_type = decl
 # text = Jōshin Railway offers free bike rentals from 5 of its stations, including Jōshū-Tomioka and Jōshū-Ichinomiya.
+# newpar = p (1 s)
 1	Jōshin	Jōshin	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:47->27|Entity=(organization-16(place-7)
 2	Railway	Railway	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-16)
 3	offers	offer	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -508,14 +531,17 @@
 # sent_id = AMALGUM_voyage_tomioka-22
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:49->50
 
 # sent_id = AMALGUM_voyage_tomioka-23
 # s_type = frag
 # text = Tomioka Silk Mill (富岡製糸場), 1-1 Tomioka (15 minutes walk southwest of Jōshū-Tomioka Station).
-1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:50->47|Entity=(place-22
+# newpar = list type:::"unordered" (4 s)
+# newpar1 = item (4 s)
+1	Tomioka	Tomioka	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:50->47|Entity=(place-22|XML=<hi rend:::"bold">
 2	Silk	Silk	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Mill	Mill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-22)
+3	Mill	Mill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-22)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:51->50|SpaceAfter=No
 5	富岡製糸場	富岡製糸場	X	FW	_	3	appos	3:appos	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
@@ -562,9 +588,9 @@
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	operation	operation	NOUN	NN	Number=Sing	6	acl:relcl	6:acl:relcl	_
 12	between	between	ADP	IN	_	13	case	13:case	_
-13	1872	1872	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod:between	Entity=(time-100)
+13	1872	1872	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod:between	Entity=(time-100)|XML=<date when:::"1872"></date>
 14	and	and	CCONJ	CC	_	15	cc	15:cc	_
-15	1987	1987	NUM	CD	NumForm=Digit|NumType=Card	13	conj	11:nmod:between|13:conj:and	Entity=object-98)(time-101)|SpaceAfter=No
+15	1987	1987	NUM	CD	NumForm=Digit|NumType=Card	13	conj	11:nmod:between|13:conj:and	Entity=object-98)(time-101)|SpaceAfter=No|XML=<date when:::"1987"></date>
 16	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-26
@@ -577,14 +603,14 @@
 5	Historic	Historic	ADJ	NNP	Number=Sing	6	amod	6:amod	_
 6	Site	Site	PROPN	NNP	Number=Sing	3	obj	3:obj	Entity=place-102)
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-103)|SpaceAfter=No
+8	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-103)|SpaceAfter=No|XML=<date when:::"2005"></date>
 9	,	,	PUNCT	,	_	13	punct	13:punct	_
 10	an	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(object-104
 11	Important	important	ADJ	NNP	Number=Sing	13	amod	13:amod	_
 12	Cultural	Cultural	ADJ	NNP	Number=Sing	13	amod	13:amod	_
 13	Property	Property	PROPN	NNP	Number=Sing	6	conj	3:obj|6:conj:and	Entity=object-104)
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	13	orphan	13:orphan	Entity=(time-105)|SpaceAfter=No
+15	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	13	orphan	13:orphan	Entity=(time-105)|SpaceAfter=No|XML=<date when:::"2006"></date>
 16	,	,	PUNCT	,	_	21	punct	21:punct	_
 17	and	and	CCONJ	CC	_	21	cc	21:cc	_
 18	both	both	CCONJ	CC	_	21	cc:preconj	21:cc:preconj	Entity=(object-106
@@ -593,26 +619,28 @@
 21	Treasure	Treasure	PROPN	NNP	Number=Sing	6	conj	3:obj|6:conj:and	Entity=object-106)
 22	and	and	CCONJ	CC	_	27	cc	27:cc	_
 23	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	Entity=(place-107
-24	UNESCO	UNESCO	PROPN	NNP	Abbr=Yes|Number=Sing	26	compound	26:compound	Entity=(abstract-108
+24	UNESCO	UNESCO	PROPN	NNP	Abbr=Yes|Number=Sing	26	compound	26:compound	Entity=(abstract-108|XML=<ref target:::"UNESCO%20World%20Heritage%20site">
 25	World	World	PROPN	NNP	Number=Sing	26	compound	26:compound	_
 26	Heritage	Heritage	PROPN	NNP	Number=Sing	27	compound	27:compound	Entity=abstract-108)
-27	site	site	NOUN	NN	Number=Sing	21	conj	6:conj|21:conj:and	_
+27	site	site	NOUN	NN	Number=Sing	21	conj	6:conj|21:conj:and	XML=</ref>
 28	in	in	ADP	IN	_	29	case	29:case	_
-29	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	21	nmod	21:nmod:in	Entity=place-107)(time-109)|SpaceAfter=No
+29	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	21	nmod	21:nmod:in	Entity=place-107)(time-109)|SpaceAfter=No|XML=<date when:::"2014"></date>
 30	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-27
 # s_type = frag
 # text = ¥1000.
 1	¥	¥	PUNCT	:	_	0	root	0:root	Discourse=elaboration:58->57|SpaceAfter=No
-2	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No
+2	1000	1000	NUM	CD	NumForm=Digit|NumType=Card	0	root	0:root	SpaceAfter=No|XML=<date when:::"1000"></date>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_tomioka-28
 # s_type = frag
 # text = Nukisaki Shrine (貫前神社), 1535 Ichinomiya (15 minutes walk northwest of Jōshū-Ichinomiya Station, 3 stops beyond Jōshū-Tomioka on the Jōshin Line).
-1	Nukisaki	Nukisaki	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:59->50|Entity=(abstract-110(abstract-111)
-2	Shrine	Shrine	PROPN	NNP	Number=Sing	0	root	0:root	Entity=abstract-110)
+# newpar = list type:::"unordered" (14 s)
+# newpar1 = item (3 s)
+1	Nukisaki	Nukisaki	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:59->50|Entity=(abstract-110(abstract-111)|XML=<hi rend:::"bold">
+2	Shrine	Shrine	PROPN	NNP	Number=Sing	0	root	0:root	Entity=abstract-110)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:60->59|SpaceAfter=No
 4	貫前神社	貫前神社	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(abstract-110)|SpaceAfter=No
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
@@ -672,9 +700,10 @@
 # sent_id = AMALGUM_voyage_tomioka-31
 # s_type = frag
 # text = Gunma Safari Park (群馬サファリパーク), 1 Okamoto (15 minutes drive south of Jōshū-Tomioka Station, or 10 minutes drive south of Tomioka Interchange).
-1	Gunma	Gunma	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:65->50|Entity=(place-117(place-3)
+# newpar = item (8 s)
+1	Gunma	Gunma	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:65->50|Entity=(place-117(place-3)|XML=<hi rend:::"bold">
 2	Safari	Safari	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-118)
-3	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-117)
+3	Park	Park	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-117)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:66->65|SpaceAfter=No
 5	群馬サファリパーク	群馬サファリパーク	X	FW	_	3	appos	3:appos	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
@@ -883,16 +912,17 @@
 # sent_id = AMALGUM_voyage_tomioka-39
 # s_type = frag
 # text = Gunma Museum of Natural History (群馬県立自然史博物館), 1674-1 Kamikuroiwa (10 minutes drive from Jōshū-Tomioka Station, 5 minutes drive from Jōshū-Ichinomiya Station, or 25 minutes walk from Jōshū-Nanokaichi Station).
-1	Gunma	Gunma	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:87->50|Entity=(place-147(place-3)
+# newpar = item (3 s)
+1	Gunma	Gunma	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:87->50|Entity=(place-147(place-3)|XML=<hi rend:::"bold">
 2	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	Natural	natural	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(abstract-148
-5	History	History	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=place-147)abstract-148)
+5	History	History	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=place-147)abstract-148)|XML=</hi>
 6	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=elaboration:88->87|SpaceAfter=No
 7	群馬県立自然史博物館	群馬県立自然史博物館	X	FW	_	2	appos	2:appos	SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	7	punct	7:punct	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	1674-1	1674-1	NUM	CD	NumForm=Word|NumType=Card	2	dep	2:dep	_
+10	1674-1	1674-1	NUM	CD	NumForm=Word|NumType=Card	2	dep	2:dep	XML=<date when:::"1674"></date>
 11	Kamikuroiwa	Kamikuroiwa	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(abstract-149)
 12	(	(	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=elaboration:89->87|SpaceAfter=No
 13	10	10	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	Entity=(event-121(time-69
@@ -922,11 +952,11 @@
 # sent_id = AMALGUM_voyage_tomioka-40
 # s_type = frag
 # text = 9:30am-5pm (last admission 4:30pm), closed Mondays.
-1	9:30am-5pm	9:30am-5pm	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Discourse=joint:90->50|Entity=(time-152)
+1	9:30am-5pm	9:30am-5pm	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Discourse=joint:90->50|Entity=(time-152)|XML=<time from:::"0930" to:::"1700"></time>
 2	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:91->90|SpaceAfter=No
 3	last	last	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(event-21
 4	admission	admission	NOUN	NN	Number=Sing	1	parataxis	1:parataxis	_
-5	4:30pm	4:30pm	NUM	CD	NumForm=Word|NumType=Card	4	dep	4:dep	Entity=event-21)|SpaceAfter=No
+5	4:30pm	4:30pm	NUM	CD	NumForm=Word|NumType=Card	4	dep	4:dep	Entity=event-21)|SpaceAfter=No|XML=<time when:::"1630"></time>
 6	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	closed	closed	ADJ	JJ	Degree=Pos	1	parataxis	1:parataxis	Discourse=same_unit:92->90
