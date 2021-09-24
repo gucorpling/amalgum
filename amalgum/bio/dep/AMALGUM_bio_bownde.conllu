@@ -1,22 +1,34 @@
+# meta::id = AMALGUM_bio_bownde
+# meta::title = Nicholas Bownde
+# meta::shortTitle = bownde
+# meta::type = bio
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2009-06-19
+# meta::dateModified = 2019-10-03
+# meta::sourceURL = https://en.wikipedia.org/wiki/Nicholas_Bownde
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_bio_bownde
 # sent_id = AMALGUM_bio_bownde-1
 # s_type = frag
 # text = Nicholas Bownde
+# newpar = head (1 s)
 1	Nicholas	Nicholas	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=ROOT:1|Entity=(person-1
 2	Bownde	Bownde	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
 
 # sent_id = AMALGUM_bio_bownde-2
 # s_type = decl
 # text = Nicholas Bownde, Bownd or Bound (died 1613) was an English clergyman, known for his Christian Sabbatarian writings.
-1	Nicholas	Nicholas	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	Discourse=ROOT:2|Entity=(person-1
-2	Bownde	Bownde	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|SpaceAfter=No
+# newpar = p (1 s)
+1	Nicholas	Nicholas	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	Discourse=ROOT:2|Entity=(person-1|XML=<hi rend:::"bold">
+2	Bownde	Bownde	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	Bownd	Bownd	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-1(person-1)
 5	or	or	CCONJ	CC	_	6	cc	6:cc	_
 6	Bound	Bound	PROPN	NNP	Number=Sing	4	conj	1:appos|4:conj:or	Entity=person-1)(person-1)
 7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:3->2|SpaceAfter=No
 8	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	1	parataxis	1:parataxis	_
-9	1613	1613	NUM	CD	NumForm=Digit|NumType=Card	8	obl:tmod	8:obl:tmod	Entity=(time-2)|SpaceAfter=No
+9	1613	1613	NUM	CD	NumForm=Digit|NumType=Card	8	obl:tmod	8:obl:tmod	Entity=(time-2)|SpaceAfter=No|XML=<date when:::"1613"></date>
 10	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Discourse=same_unit:4->2
 12	an	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(person-1
@@ -26,19 +38,21 @@
 16	known	know	VERB	VBN	Tense=Past|VerbForm=Part	14	acl	14:acl	Discourse=elaboration:5->2
 17	for	for	ADP	IN	_	21	case	21:case	_
 18	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	21	nmod:poss	21:nmod:poss	Entity=(abstract-3(person-1)
-19	Christian	Christian	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
-20	Sabbatarian	Sabbatarian	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(person-4)
+19	Christian	Christian	ADJ	JJ	Degree=Pos	21	amod	21:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Christian_Sabbatarian">
+20	Sabbatarian	Sabbatarian	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(person-4)|XML=</ref>
 21	writings	writing	NOUN	NNS	Number=Plur	16	obl	16:obl:for	Entity=person-1)abstract-3)|SpaceAfter=No
 22	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = AMALGUM_bio_bownde-3
 # s_type = frag
 # text = Life
+# newpar = head (1 s)
 1	Life	life	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:6->7|Entity=(abstract-5)
 
 # sent_id = AMALGUM_bio_bownde-4
 # s_type = decl
 # text = He was son of Robert Bownde (Bound), M.D., physician to the Duke of Norfolk.
+# newpar = p (4 s)
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj:pass	3:nsubj:pass	Discourse=ROOT:7|Entity=(person-1)
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	son	son	NOUN	NN	Number=Sing	0	root	0:root	Entity=(person-6
@@ -54,9 +68,9 @@
 13	physician	physician	NOUN	NN	Number=Sing	5	appos	5:appos	Entity=(person-6
 14	to	to	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(organization-7
-16	Duke	Duke	PROPN	NNP	Number=Sing	13	nmod	13:nmod:to	_
+16	Duke	Duke	PROPN	NNP	Number=Sing	13	nmod	13:nmod:to	XML=<ref target:::"https://en.wikipedia.org/wiki/Duke_of_Norfolk">
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	Norfolk	Norfolk	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=person-6)organization-7)(place-8)|SpaceAfter=No
+18	Norfolk	Norfolk	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=person-6)organization-7)(place-8)|SpaceAfter=No|XML=</ref>
 19	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_bownde-5
@@ -66,16 +80,16 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	educated	educate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	at	at	ADP	IN	_	5	case	5:case	_
-5	Peterhouse	Peterhouse	PROPN	NNP	Number=Sing	3	obl	3:obl:at	Entity=(place-9|SpaceAfter=No
+5	Peterhouse	Peterhouse	PROPN	NNP	Number=Sing	3	obl	3:obl:at	Entity=(place-9|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Peterhouse,_Cambridge">
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	Cambridge	Cambridge	PROPN	NNP	Number=Sing	5	appos	5:appos	Entity=(place-10)|SpaceAfter=No
+7	Cambridge	Cambridge	PROPN	NNP	Number=Sing	5	appos	5:appos	Entity=(place-10)|SpaceAfter=No|XML=</ref>
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	where	where	SCONJ	WRB	PronType=Rel	11	mark	11:mark	Discourse=elaboration:10->9
 10	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	11	nsubj	11:nsubj|17:nsubj:pass|19:nsubj:xsubj|25:nsubj	Entity=(person-6)
 11	graduated	graduate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	acl:relcl	5:acl:relcl	_
 12	B.A.	B.A.	PROPN	NNP	Abbr=Yes|Number=Sing	11	obj	11:obj	Entity=(person-11)
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	1572	1572	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	Entity=(time-12)|SpaceAfter=No
+14	1572	1572	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	Entity=(time-12)|SpaceAfter=No|XML=<date when:::"1572"></date>
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	aux:pass	17:aux:pass	Discourse=sequence:11->7
 17	elected	elect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	11	conj	5:acl:relcl|11:conj:and	_
@@ -89,19 +103,19 @@
 25	graduated	graduate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	conj	5:acl:relcl|11:conj:and	_
 26	M.A.	M.A.	PROPN	NNP	Number=Sing	25	obj	25:obj	Entity=place-9)(person-14)
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	1575	1575	NUM	CD	NumForm=Digit|NumType=Card	25	obl	25:obl:in	Entity=(time-15)|SpaceAfter=No
+28	1575	1575	NUM	CD	NumForm=Digit|NumType=Card	25	obl	25:obl:in	Entity=(time-15)|SpaceAfter=No|XML=<date when:::"1575"></date>
 29	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:13->12|SpaceAfter=No
+30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:13->12|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-1">
 31	1	1	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-16)|SpaceAfter=No
-32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	_
+32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_bownde-6
 # s_type = decl
 # text = On 3 September 1585 he was instituted to the rectory of Norton, Suffolk, a living in the gift of his college.
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=joint:14->7
-2	3	3	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:on	Entity=(time-17
+2	3	3	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:on	Entity=(time-17|XML=<date when:::"1585-09-03">
 3	September	September	PROPN	NNP	Number=Sing	2	compound	2:compound	Entity=(time-18)
-4	1585	1585	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-17)(time-19)
+4	1585	1585	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-17)(time-19)|XML=</date>
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj:pass	7:nsubj:pass	Entity=(person-6)
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	aux:pass	7:aux:pass	_
 7	instituted	institute	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -109,9 +123,9 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(person-20
 10	rectory	rectory	NOUN	NN	Number=Sing	7	obl	7:obl:to	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	Norton	Norton	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=(person-20|SpaceAfter=No
+12	Norton	Norton	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=(person-20|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Norton,_Suffolk">
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	Suffolk	Suffolk	PROPN	NNP	Number=Sing	12	appos	12:appos	Entity=person-20)person-20)|SpaceAfter=No
+14	Suffolk	Suffolk	PROPN	NNP	Number=Sing	12	appos	12:appos	Entity=person-20)person-20)|SpaceAfter=No|XML=</ref>
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(abstract-21
 17	living	living	NOUN	NN	Number=Sing	10	appos	10:appos	_
@@ -133,14 +147,15 @@
 5	at	at	ADP	IN	_	6	case	6:case	_
 6	Cambridge	Cambridge	PROPN	NNP	Number=Sing	3	obl	3:obl:at	Entity=(place-10)
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-25)|SpaceAfter=No
+8	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-25)|SpaceAfter=No|XML=<date when:::"1594"></date>
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_bownde-8
 # s_type = decl
 # text = In 1611 Bownde became minister of the church of St. Andrew the Apostle at Norwich, and he was buried there on 26 December 1613.
+# newpar = p (3 s)
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:16->7
-2	1611	1611	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-26)
+2	1611	1611	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-26)|XML=<date when:::"1611"></date>
 3	Bownde	Bownde	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|5:nsubj:xsubj	Entity=(person-27)
 4	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	minister	minister	NOUN	NN	Number=Sing	4	xcomp	4:xcomp	_
@@ -153,7 +168,7 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(person-29
 13	Apostle	Apostle	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 14	at	at	ADP	IN	_	15	case	15:case	_
-15	Norwich	Norwich	PROPN	NNP	Number=Sing	13	nmod	13:nmod:at	Entity=person-29)(place-30)|SpaceAfter=No
+15	Norwich	Norwich	PROPN	NNP	Number=Sing	13	nmod	13:nmod:at	Entity=person-29)(place-30)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Norwich"></ref>
 16	,	,	PUNCT	,	_	20	punct	20:punct	_
 17	and	and	CCONJ	CC	_	20	cc	20:cc	Discourse=sequence:17->16
 18	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	20	nsubj:pass	20:nsubj:pass	Entity=(person-29)
@@ -161,9 +176,9 @@
 20	buried	bury	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:and	_
 21	there	there	ADV	RB	PronType=Dem	20	advmod	20:advmod	_
 22	on	on	ADP	IN	_	23	case	23:case	_
-23	26	26	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:on	Entity=(time-31
+23	26	26	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:on	Entity=(time-31|XML=<date when:::"1613-12-26">
 24	December	December	PROPN	NNP	Number=Sing	23	compound	23:compound	Entity=(time-32)
-25	1613	1613	NUM	CD	NumForm=Digit|NumType=Card	23	nmod:tmod	23:nmod:tmod	Entity=time-31)(time-2)|SpaceAfter=No
+25	1613	1613	NUM	CD	NumForm=Digit|NumType=Card	23	nmod:tmod	23:nmod:tmod	Entity=time-31)(time-2)|SpaceAfter=No|XML=</date>
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_bownde-9
@@ -174,8 +189,8 @@
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(person-33
 4	widow	widow	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	John	John	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=(person-33
-7	More	more	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-33)person-33)|SpaceAfter=No
+6	John	John	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=(person-33|XML=<ref target:::"https://en.wikipedia.org/wiki/John_More_(Puritan)">
+7	More	more	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-33)person-33)|SpaceAfter=No|XML=</ref>
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(person-33
 10	'	'	PUNCT	``	_	11	punct	11:punct	SpaceAfter=No
@@ -192,8 +207,8 @@
 2	sister	sister	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	_
 3	Anne	Anne	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=person-34)
 4	married	marry	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-5	John	John	PROPN	NNP	Number=Sing	4	obj	4:obj	Entity=(person-33
-6	Dod	Dod	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-33)
+5	John	John	PROPN	NNP	Number=Sing	4	obj	4:obj	Entity=(person-33|XML=<ref target:::"https://en.wikipedia.org/wiki/John_Dod">
+6	Dod	Dod	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-33)|XML=</ref>
 7	and	and	CCONJ	CC	_	11	cc	11:cc	Discourse=joint:20->18
 8	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	Entity=(person-35(person-29)
 9	widowed	widowed	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -203,20 +218,22 @@
 13	her	her	PRON	PRP$	Gender=Fem|Number=Sing|Person=3|Poss=Yes|PronType=Prs	15	nmod:poss	15:nmod:poss	Entity=(person-36(person-35)
 14	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	15	amod	15:amod	_
 15	husband	husband	NOUN	NN	Number=Sing	11	obl	11:obl:as	_
-16	Richard	Richard	PROPN	NNP	Number=Sing	15	appos	15:appos	_
-17	Greenham	Greenham	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-36)|SpaceAfter=No
+16	Richard	Richard	PROPN	NNP	Number=Sing	15	appos	15:appos	XML=<ref target:::"https://en.wikipedia.org/wiki/Richard_Greenham">
+17	Greenham	Greenham	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-36)|SpaceAfter=No|XML=</ref>
 18	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_bownde-11
 # s_type = frag
 # text = Works
+# newpar = head (1 s)
 1	Works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=attribution:21->22
 
 # sent_id = AMALGUM_bio_bownde-12
 # s_type = decl
 # text = In 1595 Bownde published the first edition of his treatise on Sabbath.
+# newpar = p (3 s)
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:22->18
-2	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-37)
+2	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-37)|XML=<date when:::"1595"></date>
 3	Bownde	Bownde	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=(person-27)
 4	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(abstract-38
@@ -226,7 +243,7 @@
 9	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	Entity=(abstract-39(person-27)
 10	treatise	treatise	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	_
 11	on	on	ADP	IN	_	12	case	12:case	_
-12	Sabbath	Sabbath	PROPN	NNP	Number=Sing	10	nmod	10:nmod:on	Entity=abstract-38)abstract-39)(abstract-40)|SpaceAfter=No
+12	Sabbath	Sabbath	PROPN	NNP	Number=Sing	10	nmod	10:nmod:on	Entity=abstract-38)abstract-39)(abstract-40)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Christian_Sabbath"></ref>
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_bownde-13
@@ -261,14 +278,14 @@
 27	rest	rest	VERB	VB	VerbForm=Inf	25	xcomp	25:xcomp	_
 28	on	on	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(time-46
-30	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	31	amod	31:amod	_
+30	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	31	amod	31:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/First_day_of_the_week">
 31	day	day	NOUN	NN	Number=Sing	27	obl	27:obl:on	_
 32	of	of	ADP	IN	_	34	case	34:case	_
 33	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	Entity=(time-47
-34	week	week	NOUN	NN	Number=Sing	31	nmod	31:nmod:of	Entity=time-46)time-47)|SpaceAfter=No
-35	[	[	PUNCT	-LRB-	_	36	punct	36:punct	Discourse=evidence:26->25|SpaceAfter=No
+34	week	week	NOUN	NN	Number=Sing	31	nmod	31:nmod:of	Entity=time-46)time-47)|SpaceAfter=No|XML=</ref>
+35	[	[	PUNCT	-LRB-	_	36	punct	36:punct	Discourse=evidence:26->25|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-2">
 36	2	2	NUM	CD	NumForm=Digit|NumType=Card	25	dep	25:dep	Entity=(abstract-48)|SpaceAfter=No
-37	]	]	PUNCT	-RRB-	_	36	punct	36:punct	_
+37	]	]	PUNCT	-RRB-	_	36	punct	36:punct	XML=</ref>
 38	as	as	ADV	RB	_	39	advmod	39:advmod	Discourse=same_unit:27->25
 39	much	much	ADV	RB	Degree=Pos	25	advmod	25:advmod	_
 40	as	as	SCONJ	IN	_	46	mark	46:mark	_
@@ -276,8 +293,8 @@
 42	Jews	Jew	PROPN	NNPS	Number=Plur	46	nsubj	46:nsubj	Entity=person-49)
 43	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	46	cop	46:cop	_
 44	on	on	ADP	IN	_	46	case	46:case	_
-45	Mosaical	Mosaical	PROPN	NNP	Number=Sing	46	compound	46:compound	Entity=(abstract-40(substance-50)
-46	Sabbath	Sabbath	PROPN	NNP	Number=Sing	39	advcl	39:advcl:as	Entity=abstract-40)|SpaceAfter=No
+45	Mosaical	Mosaical	PROPN	NNP	Number=Sing	46	compound	46:compound	Entity=(abstract-40(substance-50)|XML=<ref target:::"https://en.wikipedia.org/wiki/Biblical_Sabbath">
+46	Sabbath	Sabbath	PROPN	NNP	Number=Sing	39	advcl	39:advcl:as	Entity=abstract-40)|SpaceAfter=No|XML=</ref>
 47	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_bownde-14
@@ -331,21 +348,22 @@
 46	personages	personage	NOUN	NNS	Number=Plur	43	conj	40:nmod:of|43:conj:and	Entity=abstract-61)|SpaceAfter=No
 47	'	'	PUNCT	''	_	43	punct	43:punct	SpaceAfter=No
 48	.	.	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
-49	[	[	PUNCT	-LRB-	_	50	punct	50:punct	Discourse=evidence:32->31|SpaceAfter=No
+49	[	[	PUNCT	-LRB-	_	50	punct	50:punct	Discourse=evidence:32->31|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-3">
 50	3	3	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	Entity=(time-17)|SpaceAfter=No
-51	]	]	PUNCT	-RRB-	_	50	punct	50:punct	_
+51	]	]	PUNCT	-RRB-	_	50	punct	50:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_bownde-15
 # s_type = decl
 # text = The observance of the Lord's Day became a question between the high-church party and the puritans, an early disagreement on doctrine.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:33->34|Entity=(abstract-62
 2	observance	observance	NOUN	NN	Number=Sing	8	nsubj	8:nsubj|10:nsubj:xsubj	_
 3	of	of	ADP	IN	_	7	case	7:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(abstract-63
 5-6	Lord's	_	_	_	_	_	_	_	_
-5	Lord	Lord	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	Entity=(person-44
+5	Lord	Lord	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	Entity=(person-44|XML=<ref target:::"https://en.wikipedia.org/wiki/Lord's_Day">
 6	's	's	PART	POS	_	5	case	5:case	Entity=person-44)
-7	Day	Day	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=abstract-62)abstract-63)
+7	Day	Day	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=abstract-62)abstract-63)|XML=</ref>
 8	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	_
 10	question	question	NOUN	NN	Number=Sing	8	xcomp	8:xcomp	_
@@ -404,6 +422,7 @@
 # sent_id = AMALGUM_bio_bownde-18
 # s_type = decl
 # text = His works are:
+# newpar = p (1 s)
 1	His	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	Discourse=preparation:38->39|Entity=(abstract-72(person-44)
 2	works	work	NOUN	NNS	Number=Plur	0	root	0:root	Entity=abstract-72)
 3	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	cop	2:cop	SpaceAfter=No
@@ -412,6 +431,8 @@
 # sent_id = AMALGUM_bio_bownde-19
 # s_type = frag
 # text = 'Three godly and fruitfull Sermons, declaring how we may be saved in the day of Judgement.
+# newpar = list type:::"unordered" (14 s)
+# newpar1 = item (4 s)
 1	'	'	PUNCT	``	_	6	punct	6:punct	Discourse=joint:39->34|SpaceAfter=No
 2	Three	3	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	Entity=(abstract-73
 3	godly	godly	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -499,12 +520,13 @@
 35	'	'	PUNCT	''	_	36	punct	36:punct	_
 36	Cambridge	Cambridge	PROPN	NNP	Number=Sing	4	dep	4:dep	Entity=(place-10|SpaceAfter=No
 37	,	,	PUNCT	,	_	38	punct	38:punct	_
-38	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	36	nmod:tmod	36:nmod:tmod	Entity=place-10)(time-25)|SpaceAfter=No
+38	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	36	nmod:tmod	36:nmod:tmod	Entity=place-10)(time-25)|SpaceAfter=No|XML=<date when:::"1594"></date>
 39	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_bownde-23
 # s_type = decl
 # text = 'The Doctrine of the Sabbath, plainely layde forth, and soundly proued by testimonies both of holy Scripture, and also of olde and new ecclesiastical writers. . . . Together with the sundry abuses of our time in both these kindes, and how they ought to bee reformed,' London, 1595.
+# newpar = item (3 s)
 1	'	'	PUNCT	``	_	9	punct	9:punct	Discourse=joint:46->44|SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-67
 3	Doctrine	Doctrine	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj|14:nsubj	_
@@ -562,7 +584,7 @@
 55	'	'	PUNCT	''	_	9	punct	9:punct	_
 56	London	London	PROPN	NNP	Number=Sing	9	dep	9:dep	Entity=(place-87|SpaceAfter=No
 57	,	,	PUNCT	,	_	58	punct	58:punct	_
-58	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	56	nmod:tmod	56:nmod:tmod	Entity=place-87)(time-37)|SpaceAfter=No
+58	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	56	nmod:tmod	56:nmod:tmod	Entity=place-87)(time-37)|SpaceAfter=No|XML=<date when:::"1595"></date>
 59	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = AMALGUM_bio_bownde-24
@@ -570,13 +592,13 @@
 # text = Dedicated to Robert Devereux, 2nd Earl of Essex.
 1	Dedicated	dedicate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Discourse=elaboration:48->46
 2	to	to	ADP	IN	_	3	case	3:case	_
-3	Robert	Robert	PROPN	NNP	Number=Sing	1	obl	1:obl:to	Entity=(person-6
+3	Robert	Robert	PROPN	NNP	Number=Sing	1	obl	1:obl:to	Entity=(person-6|XML=<ref target:::"https://en.wikipedia.org/wiki/Robert_Devereux,_2nd_Earl_of_Essex">
 4	Devereux	Devereux	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-6)|SpaceAfter=No
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
 6	2nd	2nd	ADJ	JJ	Degree=Pos|NumType=Ord	7	amod	7:amod	Entity=(person-6
 7	Earl	Earl	PROPN	NNP	Number=Sing	3	appos	3:appos	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	Essex	Essex	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=person-6)(place-88)|SpaceAfter=No
+9	Essex	Essex	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=person-6)(place-88)|SpaceAfter=No|XML=</ref>
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_bio_bownde-25
@@ -587,14 +609,14 @@
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	by	by	ADP	IN	_	6	case	6:case	_
-6	Thomas	Thomas	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=(person-90
-7	Rogers	Rogers	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-90)
+6	Thomas	Thomas	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=(person-90|XML=<ref target:::"https://en.wikipedia.org/wiki/Thomas_Rogers_(clergyman,_died_1616)">
+7	Rogers	Rogers	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-90)|XML=</ref>
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-91)|SpaceAfter=No
+9	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-91)|SpaceAfter=No|XML=<date when:::"1599"></date>
 10	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
-11	[	[	PUNCT	-LRB-	_	12	punct	12:punct	Discourse=evidence:50->49|SpaceAfter=No
+11	[	[	PUNCT	-LRB-	_	12	punct	12:punct	Discourse=evidence:50->49|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-4">
 12	4	4	NUM	CD	NumForm=Digit|NumType=Card	4	dep	4:dep	Entity=(abstract-92)|SpaceAfter=No
-13	]	]	PUNCT	-RRB-	_	12	punct	12:punct	_
+13	]	]	PUNCT	-RRB-	_	12	punct	12:punct	XML=</ref>
 14	Reprinted	reprint	VERB	VBN	Tense=Past|VerbForm=Part	4	advcl	4:advcl	Discourse=preparation:51->52|SpaceAfter=No
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	with	with	ADP	IN	_	17	case	17:case	_
@@ -625,12 +647,13 @@
 41	'	'	PUNCT	''	_	24	punct	24:punct	_
 42	London	London	PROPN	NNP	Number=Sing	14	dep	14:dep	Entity=(place-87|SpaceAfter=No
 43	,	,	PUNCT	,	_	44	punct	44:punct	_
-44	1606	1606	NUM	CD	NumForm=Digit|NumType=Card	42	nmod:tmod	42:nmod:tmod	Entity=place-87)(time-97)|SpaceAfter=No
+44	1606	1606	NUM	CD	NumForm=Digit|NumType=Card	42	nmod:tmod	42:nmod:tmod	Entity=place-87)(time-97)|SpaceAfter=No|XML=<date when:::"1606"></date>
 45	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_bownde-26
 # s_type = decl
 # text = 'Medicines for the Plagve: that is, Godly and fruitfull Sermons vpon part of the twentieth Psalme . . . more particularly applied to this late visitation of the Plague,' London, 1604.
+# newpar = item (1 s)
 1	'	'	PUNCT	``	_	25	punct	25:punct	Discourse=preparation:53->54|SpaceAfter=No
 2	Medicines	Medicine	NOUN	NNS	Number=Plur	25	nsubj:pass	25:nsubj:pass	Entity=(abstract-98
 3	for	for	ADP	IN	_	5	case	5:case	_
@@ -667,12 +690,13 @@
 34	'	'	PUNCT	''	_	25	punct	25:punct	_
 35	London	London	PROPN	NNP	Number=Sing	25	dep	25:dep	SpaceAfter=No
 36	,	,	PUNCT	,	_	37	punct	37:punct	_
-37	1604	1604	NUM	CD	NumForm=Digit|NumType=Card	35	nmod:tmod	35:nmod:tmod	Entity=(time-103)|SpaceAfter=No
+37	1604	1604	NUM	CD	NumForm=Digit|NumType=Card	35	nmod:tmod	35:nmod:tmod	Entity=(time-103)|SpaceAfter=No|XML=<date when:::"1604"></date>
 38	.	.	PUNCT	.	_	25	punct	25:punct	_
 
 # sent_id = AMALGUM_bio_bownde-27
 # s_type = frag
 # text = 'The Holy Exercise of Fasting.
+# newpar = item (3 s)
 1	'	'	PUNCT	``	_	4	punct	4:punct	Discourse=joint:56->54|SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(abstract-104
 3	Holy	Holy	ADJ	NNP	Number=Sing	4	amod	4:amod	_
@@ -708,7 +732,7 @@
 22	'	'	PUNCT	''	_	23	punct	23:punct	_
 23	Cambridge	Cambridge	PROPN	NNP	Number=Sing	1	dep	1:dep	Entity=(place-10|SpaceAfter=No
 24	,	,	PUNCT	,	_	25	punct	25:punct	_
-25	1604	1604	NUM	CD	NumForm=Digit|NumType=Card	23	nmod:tmod	23:nmod:tmod	Entity=place-10)(time-103)|SpaceAfter=No
+25	1604	1604	NUM	CD	NumForm=Digit|NumType=Card	23	nmod:tmod	23:nmod:tmod	Entity=place-10)(time-103)|SpaceAfter=No|XML=<date when:::"1604"></date>
 26	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_bio_bownde-29
@@ -716,8 +740,8 @@
 # text = Dedicated to John Jegon, bishop of Norwich.
 1	Dedicated	dedicate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Discourse=elaboration:58->56
 2	to	to	ADP	IN	_	3	case	3:case	_
-3	John	John	PROPN	NNP	Number=Sing	1	obl	1:obl:to	Entity=(person-33
-4	Jegon	Jegon	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-33)|SpaceAfter=No
+3	John	John	PROPN	NNP	Number=Sing	1	obl	1:obl:to	Entity=(person-33|XML=<ref target:::"https://en.wikipedia.org/wiki/John_Jegon">
+4	Jegon	Jegon	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-33)|SpaceAfter=No|XML=</ref>
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	bishop	bishop	NOUN	NN	Number=Sing	3	appos	3:appos	Entity=(person-33
 7	of	of	ADP	IN	_	8	case	8:case	_
@@ -727,6 +751,7 @@
 # sent_id = AMALGUM_bio_bownde-30
 # s_type = decl
 # text = 'The Vnbeliefe of St. Thomas the Apostle, laid open for the comfort of all that desire to beleeue . . ., ' London, 1608, reprinted, London, 1817.
+# newpar = item (1 s)
 1	'	'	PUNCT	``	_	3	punct	3:punct	Discourse=joint:59->56|SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(person-109
 3	Vnbeliefe	Vnbeliefe	PROPN	NNP	Number=Sing	26	nsubj	26:nsubj	_
@@ -754,19 +779,20 @@
 25	'	'	PUNCT	''	_	3	punct	3:punct	_
 26	London	London	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=same_unit:62->60|Entity=(place-87|SpaceAfter=No
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
-28	1608	1608	NUM	CD	NumForm=Digit|NumType=Card	26	nmod:tmod	26:nmod:tmod	Entity=(time-112)|SpaceAfter=No
+28	1608	1608	NUM	CD	NumForm=Digit|NumType=Card	26	nmod:tmod	26:nmod:tmod	Entity=(time-112)|SpaceAfter=No|XML=<date when:::"1608"></date>
 29	,	,	PUNCT	,	_	30	punct	30:punct	_
 30	reprinted	reprint	VERB	VBN	Tense=Past|VerbForm=Part	26	acl	26:acl	Discourse=elaboration:63->62|SpaceAfter=No
 31	,	,	PUNCT	,	_	32	punct	32:punct	_
 32	London	London	PROPN	NNP	Number=Sing	30	dep	30:dep	Entity=(place-87)|SpaceAfter=No
 33	,	,	PUNCT	,	_	34	punct	34:punct	_
-34	1817	1817	NUM	CD	NumForm=Digit|NumType=Card	30	obl:tmod	30:obl:tmod	Entity=place-87)(time-113)|SpaceAfter=No
+34	1817	1817	NUM	CD	NumForm=Digit|NumType=Card	30	obl:tmod	30:obl:tmod	Entity=place-87)(time-113)|SpaceAfter=No|XML=<date when:::"1817"></date>
 35	.	.	PUNCT	.	_	26	punct	26:punct	_
 
 # sent_id = AMALGUM_bio_bownde-31
 # s_type = decl
 # text = A Treatise ful of Consolation for all that are afflicted in minde or bodie or otherwise ..., Cambridge, 1608; reprinted, London, 1817.
-1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=joint:64->59|Entity=(abstract-39
+# newpar = item (2 s)
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=joint:64->59|Entity=(abstract-39|XML=<hi rend:::"italic">
 2	Treatise	treatise	NOUN	NN	Number=Sing	0	root	0:root	_
 3	ful	ful	NOUN	NN	Number=Sing	2	compound	2:compound	Entity=(abstract-114)
 4	of	of	ADP	IN	_	5	case	5:case	_
@@ -781,18 +807,18 @@
 13	or	or	CCONJ	CC	_	14	cc	14:cc	_
 14	bodie	bodie	NOUN	NN	Number=Sing	12	conj	10:obl:in|12:conj:or	Entity=(person-117)
 15	or	or	CCONJ	CC	_	16	cc	16:cc	_
-16	otherwise	otherwise	ADV	RB	Degree=Pos	14	conj	12:conj|14:conj:or	Entity=abstract-39)
+16	otherwise	otherwise	ADV	RB	Degree=Pos	14	conj	12:conj|14:conj:or	Entity=abstract-39)|XML=</hi>
 17	...	…	PUNCT	:	_	19	punct	19:punct	SpaceAfter=No
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
 19	Cambridge	Cambridge	PROPN	NNP	Number=Sing	2	dep	2:dep	SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	1608	1608	NUM	CD	NumForm=Digit|NumType=Card	19	nmod:tmod	19:nmod:tmod	Entity=(time-112)|SpaceAfter=No
+21	1608	1608	NUM	CD	NumForm=Digit|NumType=Card	19	nmod:tmod	19:nmod:tmod	Entity=(time-112)|SpaceAfter=No|XML=<date when:::"1608"></date>
 22	;	;	PUNCT	:	_	23	punct	23:punct	_
 23	reprinted	reprint	VERB	VBN	Tense=Past|VerbForm=Part	19	parataxis	19:parataxis	Discourse=elaboration:66->64|SpaceAfter=No
 24	,	,	PUNCT	,	_	25	punct	25:punct	_
 25	London	London	PROPN	NNP	Number=Sing	23	obl:tmod	23:obl:tmod	Entity=(place-87)|SpaceAfter=No
 26	,	,	PUNCT	,	_	27	punct	27:punct	_
-27	1817	1817	NUM	CD	NumForm=Digit|NumType=Card	23	obl:tmod	23:obl:tmod	Entity=(time-113)|SpaceAfter=No
+27	1817	1817	NUM	CD	NumForm=Digit|NumType=Card	23	obl:tmod	23:obl:tmod	Entity=(time-113)|SpaceAfter=No|XML=<date when:::"1817"></date>
 28	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_bio_bownde-32
@@ -817,21 +843,22 @@
 # sent_id = AMALGUM_bio_bownde-33
 # s_type = decl
 # text = Bownde has a Latin ode before Peter Baro's Prælectiones in Ionam, 1579; and he edited John More's Table from the Beginning of the World to this Day. Wherein is declared in what yeere of the World everything was done, Cambridge, 1593.
+# newpar = p (1 s)
 1	Bownde	Bownde	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:68->67|Entity=(person-27)
 2	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(abstract-120
 4	Latin	Latin	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	ode	ode	NOUN	NN	Number=Sing	2	obj	2:obj	_
 6	before	before	ADP	IN	_	10	case	10:case	_
-7	Peter	Peter	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	Entity=(person-121(person-122
+7	Peter	Peter	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	Entity=(person-121(person-122|XML=<ref target:::"https://en.wikipedia.org/wiki/Peter_Baro">
 8-9	Baro's	_	_	_	_	_	_	_	_
-8	Baro	Baro	PROPN	NNP	Number=Sing	7	flat	7:flat	_
+8	Baro	Baro	PROPN	NNP	Number=Sing	7	flat	7:flat	XML=</ref>
 9	's	's	PART	POS	_	7	case	7:case	Entity=person-122)
-10	Prælectiones	Prælectiones	PROPN	NNPS	Number=Plur	5	nmod	5:nmod:before	_
+10	Prælectiones	Prælectiones	PROPN	NNPS	Number=Plur	5	nmod	5:nmod:before	XML=<hi rend:::"italic">
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	Ionam	Ionam	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	Entity=(time-123|SpaceAfter=No
+12	Ionam	Ionam	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	Entity=(time-123|SpaceAfter=No|XML=</hi>
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	1579	1579	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=abstract-120)person-121)time-123)(time-123)|SpaceAfter=No
+14	1579	1579	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=abstract-120)person-121)time-123)(time-123)|SpaceAfter=No|XML=<date when:::"1579"></date>
 15	;	;	PUNCT	:	_	18	punct	18:punct	_
 16	and	and	CCONJ	CC	_	18	cc	18:cc	Discourse=joint:69->68
 17	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	18	nsubj	18:nsubj	Entity=(person-122)
@@ -840,7 +867,7 @@
 20-21	More's	_	_	_	_	_	_	_	_
 20	More	more	PROPN	NNP	Number=Sing	19	flat	19:flat	_
 21	's	's	PART	POS	_	19	case	19:case	Entity=person-33)
-22	Table	Table	PROPN	NNP	Number=Sing	18	obj	18:obj	_
+22	Table	Table	PROPN	NNP	Number=Sing	18	obj	18:obj	XML=<hi rend:::"italic">
 23	from	from	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(time-125
 25	Beginning	beginning	NOUN	NN	Number=Sing	22	nmod	22:nmod:from	_
@@ -862,10 +889,10 @@
 41	World	World	PROPN	NNP	Number=Sing	38	nmod	38:nmod:of	Entity=person-127)organization-126)
 42	everything	everything	NOUN	NN	Number=Sing	44	nsubj:pass	44:nsubj:pass	Entity=(abstract-68)
 43	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	44	aux:pass	44:aux:pass	_
-44	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	35	parataxis	35:parataxis	SpaceAfter=No
+44	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	35	parataxis	35:parataxis	SpaceAfter=No|XML=</hi>
 45	,	,	PUNCT	,	_	46	punct	46:punct	_
 46	Cambridge	Cambridge	PROPN	NNP	Number=Sing	44	dep	44:dep	Entity=(place-10|SpaceAfter=No
 47	,	,	PUNCT	,	_	48	punct	48:punct	_
-48	1593	1593	NUM	CD	NumForm=Digit|NumType=Card	46	nmod:tmod	46:nmod:tmod	Entity=place-10)(time-128)|SpaceAfter=No
+48	1593	1593	NUM	CD	NumForm=Digit|NumType=Card	46	nmod:tmod	46:nmod:tmod	Entity=place-10)(time-128)|SpaceAfter=No|XML=<date when:::"1593"></date>
 49	.	.	PUNCT	.	_	2	punct	2:punct	_
 

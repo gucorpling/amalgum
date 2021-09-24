@@ -1,18 +1,30 @@
+# meta::id = AMALGUM_bio_burby
+# meta::title = Cuthbert Burby
+# meta::shortTitle = burby
+# meta::type = bio
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2007-09-13
+# meta::dateModified = 2017-07-26
+# meta::sourceURL = https://en.wikipedia.org/wiki/Cuthbert_Burby
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_bio_burby
 # sent_id = AMALGUM_bio_burby-1
 # s_type = frag
 # text = Cuthbert Burby
+# newpar = head (1 s)
 1	Cuthbert	Cuthbert	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->2|Entity=(person-1
 2	Burby	Burby	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
 
 # sent_id = AMALGUM_bio_burby-2
 # s_type = decl
 # text = Cuthbert Burby (died 1607) was a London bookseller and publisher of the Elizabethan and early Jacobean eras.
-1	Cuthbert	Cuthbert	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj	Discourse=ROOT:2|Entity=(person-1
-2	Burby	Burby	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
+# newpar = p (2 s)
+1	Cuthbert	Cuthbert	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj|12:nsubj	Discourse=ROOT:2|Entity=(person-1|XML=<hi rend:::"bold">
+2	Burby	Burby	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:3->2|SpaceAfter=No
 4	died	die	VERB	VBN	Tense=Past|VerbForm=Part	1	parataxis	1:parataxis	_
-5	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	4	obl:tmod	4:obl:tmod	Entity=(time-2)|SpaceAfter=No
+5	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	4	obl:tmod	4:obl:tmod	Entity=(time-2)|SpaceAfter=No|XML=<date when:::"1607"></date>
 6	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	cop	10:cop	Discourse=same_unit:4->2
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(person-1(person-1
@@ -22,10 +34,10 @@
 12	publisher	publisher	NOUN	NN	Number=Sing	10	conj	10:conj:and	Entity=(person-4
 13	of	of	ADP	IN	_	19	case	19:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(time-5
-15	Elizabethan	Elizabethan	ADJ	JJ	Degree=Pos	19	amod	19:amod	_
+15	Elizabethan	Elizabethan	ADJ	JJ	Degree=Pos	19	amod	19:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Elizabethan_era"></ref>
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	early	early	ADJ	JJ	Degree=Pos	18	advmod	18:advmod	_
-18	Jacobean	Jacobean	PROPN	NNP	Number=Sing	15	conj	15:conj:and|19:compound	_
+18	Jacobean	Jacobean	PROPN	NNP	Number=Sing	15	conj	15:conj:and|19:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/Jacobean_era"></ref>
 19	eras	era	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	Entity=person-1)person-4)time-5)|SpaceAfter=No
 20	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -43,48 +55,50 @@
 9	significant	significant	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(abstract-7
 10	volumes	volume	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	_
 11	of	of	ADP	IN	_	14	case	14:case	_
-12	English	English	ADJ	NNP	Number=Sing	14	amod	14:amod	Entity=(abstract-8
+12	English	English	ADJ	NNP	Number=Sing	14	amod	14:amod	Entity=(abstract-8|XML=<ref target:::"https://en.wikipedia.org/wiki/English_Renaissance_theatre">
 13	Renaissance	Renaissance	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(organization-9)
-14	drama	drama	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	Entity=abstract-8)|SpaceAfter=No
+14	drama	drama	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	Entity=abstract-8)|SpaceAfter=No|XML=</ref>
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	including	include	VERB	VBG	VerbForm=Ger	17	case	17:case	Discourse=elaboration:6->5
 17	works	work	NOUN	NNS	Number=Plur	10	nmod	10:nmod:including	Entity=(abstract-10
 18	by	by	ADP	IN	_	19	case	19:case	_
-19	William	William	PROPN	NNP	Number=Sing	17	nmod	17:nmod:by	Entity=(person-11(person-12
-20	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	19	flat	19:flat	Entity=person-12)|SpaceAfter=No
+19	William	William	PROPN	NNP	Number=Sing	17	nmod	17:nmod:by	Entity=(person-11(person-12|XML=<ref target:::"https://en.wikipedia.org/wiki/William_Shakespeare">
+20	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	19	flat	19:flat	Entity=person-12)|SpaceAfter=No|XML=</ref>
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	Robert	Robert	PROPN	NNP	Number=Sing	19	conj	17:nmod:by|19:conj:and	Entity=(person-13
-23	Greene	Greene	PROPN	NNP	Number=Sing	22	flat	22:flat	Entity=person-13)|SpaceAfter=No
+22	Robert	Robert	PROPN	NNP	Number=Sing	19	conj	17:nmod:by|19:conj:and	Entity=(person-13|XML=<ref target:::"https://en.wikipedia.org/wiki/Robert_Greene_(dramatist)">
+23	Greene	Greene	PROPN	NNP	Number=Sing	22	flat	22:flat	Entity=person-13)|SpaceAfter=No|XML=</ref>
 24	,	,	PUNCT	,	_	25	punct	25:punct	_
-25	John	John	PROPN	NNP	Number=Sing	19	conj	17:nmod:by|19:conj:and	Entity=(person-14
-26	Lyly	Lyly	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=person-14)|SpaceAfter=No
+25	John	John	PROPN	NNP	Number=Sing	19	conj	17:nmod:by|19:conj:and	Entity=(person-14|XML=<ref target:::"https://en.wikipedia.org/wiki/John_Lyly">
+26	Lyly	Lyly	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=person-14)|SpaceAfter=No|XML=</ref>
 27	,	,	PUNCT	,	_	29	punct	29:punct	_
 28	and	and	CCONJ	CC	_	29	cc	29:cc	_
-29	Thomas	Thomas	PROPN	NNP	Number=Sing	19	conj	17:nmod:by|19:conj:and	Entity=(person-15
-30	Nashe	Nashe	PROPN	NNP	Number=Sing	29	flat	29:flat	Entity=abstract-6)abstract-7)abstract-10)person-11)person-15)|SpaceAfter=No
+29	Thomas	Thomas	PROPN	NNP	Number=Sing	19	conj	17:nmod:by|19:conj:and	Entity=(person-15|XML=<ref target:::"https://en.wikipedia.org/wiki/Thomas_Nashe">
+30	Nashe	Nashe	PROPN	NNP	Number=Sing	29	flat	29:flat	Entity=abstract-6)abstract-7)abstract-10)person-11)person-15)|SpaceAfter=No|XML=</ref>
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_burby-4
 # s_type = frag
 # text = Beginnings
+# newpar = head (1 s)
 1	Beginnings	beginning	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=joint:7->5|Entity=(event-16)
 
 # sent_id = AMALGUM_bio_burby-5
 # s_type = decl
 # text = Burby ("sometimes confused with Cuthbert Burbage,"[1] though there is no known connection between the two men) was the son of Edmund Burby, a farmer in Erlsey, Bedfordshire.
+# newpar = p (6 s)
 1	Burby	Burby	PROPN	NNP	Number=Sing	27	nsubj	27:nsubj	Discourse=elaboration:8->7|Entity=(person-17
 2	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:9->8|SpaceAfter=No
 3	"	''	PUNCT	``	_	5	punct	5:punct	SpaceAfter=No
 4	sometimes	sometimes	ADV	RB	_	5	advmod	5:advmod	_
 5	confused	confuse	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	1:acl	_
 6	with	with	ADP	IN	_	7	case	7:case	_
-7	Cuthbert	Cuthbert	PROPN	NNP	Number=Sing	5	obl	5:obl:with	Entity=(person-1
-8	Burbage	Burbage	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=person-17)person-1)|SpaceAfter=No
+7	Cuthbert	Cuthbert	PROPN	NNP	Number=Sing	5	obl	5:obl:with	Entity=(person-1|XML=<ref target:::"https://en.wikipedia.org/wiki/Cuthbert_Burbage">
+8	Burbage	Burbage	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=person-17)person-1)|SpaceAfter=No|XML=</ref>
 9	,	,	PUNCT	,	_	5	punct	5:punct	SpaceAfter=No
 10	"	''	PUNCT	''	_	5	punct	5:punct	SpaceAfter=No
-11	[	[	PUNCT	-LRB-	_	12	punct	12:punct	Discourse=evidence:10->8|SpaceAfter=No
+11	[	[	PUNCT	-LRB-	_	12	punct	12:punct	Discourse=evidence:10->8|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-1">
 12	1	1	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Entity=(abstract-18)|SpaceAfter=No
-13	]	]	PUNCT	-RRB-	_	12	punct	12:punct	_
+13	]	]	PUNCT	-RRB-	_	12	punct	12:punct	XML=</ref>
 14	though	though	SCONJ	IN	_	16	mark	16:mark	Discourse=concession:11->8
 15	there	there	PRON	EX	_	16	expl	16:expl	_
 16	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	advcl	5:advcl:though	_
@@ -108,7 +122,7 @@
 34	in	in	ADP	IN	_	35	case	35:case	_
 35	Erlsey	Erlsey	PROPN	NNP	Number=Sing	33	nmod	33:nmod:in	Entity=person-17)(place-20)|SpaceAfter=No
 36	,	,	PUNCT	,	_	37	punct	37:punct	_
-37	Bedfordshire	Bedfordshire	PROPN	NNP	Number=Sing	35	appos	35:appos	Entity=(place-21)|SpaceAfter=No
+37	Bedfordshire	Bedfordshire	PROPN	NNP	Number=Sing	35	appos	35:appos	Entity=(place-21)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Bedfordshire"></ref>
 38	.	.	PUNCT	.	_	27	punct	27:punct	_
 
 # sent_id = AMALGUM_bio_burby-6
@@ -128,8 +142,8 @@
 12	years	year	NOUN	NNS	Number=Plur	4	obl	4:obl:for	Entity=time-22)
 13	as	as	ADP	IN	_	15	case	15:case	_
 14	of	of	ADP	IN	_	13	fixed	13:fixed	_
-15	Christmas	Christmas	PROPN	NNP	Number=Sing	4	obl	4:obl:as_of	Entity=(time-23
-16	1584	1584	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-23)(time-24)|SpaceAfter=No
+15	Christmas	Christmas	PROPN	NNP	Number=Sing	4	obl	4:obl:as_of	Entity=(time-23|XML=<date when:::"--12-25">
+16	1584	1584	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-23)(time-24)|SpaceAfter=No|XML=</date>
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	and	and	CCONJ	CC	_	19	cc	19:cc	Discourse=joint:14->13
 19	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
@@ -143,12 +157,12 @@
 27	)	)	PUNCT	-RRB-	_	26	punct	26:punct	_
 28	of	of	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(organization-26
-30	Stationers	Stationer	PROPN	NNPS	Number=Plur	31	compound	31:compound	Entity=(person-27)
-31	Company	Company	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=organization-26)
+30	Stationers	Stationer	PROPN	NNPS	Number=Plur	31	compound	31:compound	Entity=(person-27)|XML=<ref target:::"https://en.wikipedia.org/wiki/Worshipful_Company_of_Stationers_and_Newspaper_Makers">
+31	Company	Company	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=organization-26)|XML=</ref>
 32	on	on	ADP	IN	_	33	case	33:case	_
-33	13	13	NUM	CD	NumForm=Digit|NumType=Card	19	obl	19:obl:on	Entity=(time-28
+33	13	13	NUM	CD	NumForm=Digit|NumType=Card	19	obl	19:obl:on	Entity=(time-28|XML=<date when:::"1592-01-13">
 34	January	January	PROPN	NNP	Number=Sing	33	compound	33:compound	Entity=(time-29)
-35	1592	1592	NUM	CD	NumForm=Digit|NumType=Card	33	nmod:tmod	33:nmod:tmod	Entity=time-28)(time-30)|SpaceAfter=No
+35	1592	1592	NUM	CD	NumForm=Digit|NumType=Card	33	nmod:tmod	33:nmod:tmod	Entity=time-28)(time-30)|SpaceAfter=No|XML=</date>
 36	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_burby-7
@@ -160,9 +174,9 @@
 4	in	in	ADP	IN	_	5	case	5:case	_
 5	London	London	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Entity=(place-3)
 6	between	between	ADP	IN	_	7	case	7:case	_
-7	1592	1592	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:between	Entity=(time-30)
+7	1592	1592	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:between	Entity=(time-30)|XML=<date when:::"1592"></date>
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
-9	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	7	conj	2:obl:between|7:conj:and	Entity=(time-2)|SpaceAfter=No
+9	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	7	conj	2:obl:between|7:conj:and	Entity=(time-2)|SpaceAfter=No|XML=<date when:::"1607"></date>
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_bio_burby-8
@@ -211,8 +225,8 @@
 11	"	''	PUNCT	``	_	15	punct	15:punct	SpaceAfter=No
 12	in	in	ADP	IN	_	15	case	15:case	_
 13-14	Paul's	_	_	_	_	_	_	_	_
-13	Paul	Paul	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	Entity=(place-39(person-40
-14	's	's	PART	POS	_	13	case	13:case	Entity=person-40)
+13	Paul	Paul	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	Entity=(place-39(person-40|XML=<ref target:::"https://en.wikipedia.org/wiki/St_Paul's_Cathedral">
+14	's	's	PART	POS	_	13	case	13:case	Entity=person-40)|XML=</ref>
 15	Churchyard	Churchyard	PROPN	NNP	Number=Sing	5	parataxis	5:parataxis	_
 16	at	at	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(abstract-41
@@ -239,13 +253,14 @@
 11	...	…	PUNCT	:	_	10	punct	10:punct	SpaceAfter=No
 12	.	.	PUNCT	.	_	10	punct	10:punct	SpaceAfter=No
 13	"	''	PUNCT	''	_	10	punct	10:punct	SpaceAfter=No
-14	[	[	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=evidence:22->21|SpaceAfter=No
+14	[	[	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=evidence:22->21|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-2">
 15	2	2	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	Entity=(abstract-43)|SpaceAfter=No
-16	]	]	PUNCT	-RRB-	_	15	punct	15:punct	_
+16	]	]	PUNCT	-RRB-	_	15	punct	15:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_burby-11
 # s_type = decl
 # text = Early in his career as a publisher, Burby issued works in the famous controversy between Thomas Nashe and Gabriel Harvey.
+# newpar = p (3 s)
 1	Early	early	ADV	RB	Degree=Pos	10	advmod	10:advmod	Discourse=joint:23->21
 2	in	in	ADP	IN	_	4	case	4:case	_
 3	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(abstract-44(person-40)
@@ -265,8 +280,8 @@
 17	Thomas	Thomas	PROPN	NNP	Number=Sing	15	nmod	15:nmod:between	Entity=(person-46(person-15
 18	Nashe	Nashe	PROPN	NNP	Number=Sing	17	flat	17:flat	Entity=person-15)
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	Gabriel	Gabriel	PROPN	NNP	Number=Sing	17	conj	15:nmod:between|17:conj:and	Entity=(person-47
-21	Harvey	Harvey	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=abstract-10)abstract-45)person-46)person-47)|SpaceAfter=No
+20	Gabriel	Gabriel	PROPN	NNP	Number=Sing	17	conj	15:nmod:between|17:conj:and	Entity=(person-47|XML=<ref target:::"https://en.wikipedia.org/wiki/Gabriel_Harvey#Feud_with_Nashe">
+21	Harvey	Harvey	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=abstract-10)abstract-45)person-46)person-47)|SpaceAfter=No|XML=</ref>
 22	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_bio_burby-12
@@ -301,9 +316,9 @@
 27	just	just	ADV	RB	_	28	advmod	28:advmod	Discourse=elaboration:29->27|Entity=(abstract-31
 28	business	business	NOUN	NN	Number=Sing	23	parataxis	23:parataxis	Entity=abstract-31)|SpaceAfter=No
 29	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
-30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:30->24|SpaceAfter=No
+30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:30->24|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-3">
 31	3	3	NUM	CD	NumForm=Digit|NumType=Card	4	dep	4:dep	Entity=(abstract-50)|SpaceAfter=No
-32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	_
+32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_burby-13
 # s_type = decl
@@ -314,28 +329,30 @@
 4-5	Nashe's	_	_	_	_	_	_	_	_
 4	Nashe	Nashe	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	Entity=(person-51(person-49
 5	's	's	PART	POS	_	4	case	4:case	Entity=person-49)
-6	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	_
+6	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/The_Unfortunate_Traveller">
 7	Unfortunate	unfortunate	ADJ	NNP	Number=Sing	8	amod	8:amod	_
-8	Traveller	Traveller	PROPN	NNP	Number=Sing	3	obj	3:obj	_
+8	Traveller	Traveller	PROPN	NNP	Number=Sing	3	obj	3:obj	XML=</ref></hi>
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=restatement:32->31|SpaceAfter=No
-10	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:tmod	8:nmod:tmod	Entity=(time-52)|SpaceAfter=No
+10	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:tmod	8:nmod:tmod	Entity=(time-52)|SpaceAfter=No|XML=<date when:::"1594"></date>
 11	)	)	PUNCT	-RRB-	_	10	punct	10:punct	Entity=person-51)
 12	and	and	CCONJ	CC	_	14	cc	14:cc	Discourse=joint:33->31
-13	Lenten	Lenten	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(object-53(person-54)
-14	Stuff	Stuff	PROPN	NNP	Number=Sing	8	conj	3:obj|8:conj:and	_
+13	Lenten	Lenten	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(object-53(person-54)|XML=<hi rend:::"italic">
+14	Stuff	Stuff	PROPN	NNP	Number=Sing	8	conj	3:obj|8:conj:and	XML=</hi>
 15	(	(	PUNCT	-LRB-	_	16	punct	16:punct	Discourse=elaboration:34->33|SpaceAfter=No
-16	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=(time-55)|SpaceAfter=No
+16	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=(time-55)|SpaceAfter=No|XML=<date when:::"1599"></date>
 17	)	)	PUNCT	-RRB-	_	16	punct	16:punct	Entity=object-53)|SpaceAfter=No
 18	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_burby-14
 # s_type = frag
 # text = Shakespeare
+# newpar = head (1 s)
 1	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:35->37|Entity=(person-11)
 
 # sent_id = AMALGUM_bio_burby-15
 # s_type = ger
 # text = Regarding Shakespeare:
+# newpar = p (4 s)
 1	Regarding	regard	VERB	VBG	VerbForm=Ger	2	case	2:case	Discourse=preparation:36->37
 2	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-11)|SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
@@ -353,42 +370,42 @@
 8	works	work	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	Entity=abstract-56)abstract-10)|SpaceAfter=No
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Discourse=elaboration:38->37|Entity=(abstract-56(abstract-56
-11	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	_
-12	quarto	quarto	NOUN	NN	Number=Sing	5	appos	5:appos	_
+11	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	12	amod	12:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/First_quarto">
+12	quarto	quarto	NOUN	NN	Number=Sing	5	appos	5:appos	XML=</ref>
 13	of	of	ADP	IN	_	18	case	18:case	_
 14-15	Love's	_	_	_	_	_	_	_	_
-14	Love	Love	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(person-57
+14	Love	Love	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(person-57|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Love's_Labor's_Lost">
 15	's	's	PART	POS	_	14	case	14:case	_
 16-17	Labor's	_	_	_	_	_	_	_	_
 16	Labor	labor	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Entity=person-57)
 17	's	's	PART	POS	_	18	punct	18:punct	_
-18	Lost	lost	VERB	VBN	Tense=Past|VerbForm=Part	12	nmod	12:nmod:of	_
+18	Lost	lost	VERB	VBN	Tense=Past|VerbForm=Part	12	nmod	12:nmod:of	XML=</ref></hi>
 19	(	(	PUNCT	-LRB-	_	20	punct	20:punct	Discourse=elaboration:39->38|SpaceAfter=No
-20	1598	1598	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=(time-58)|SpaceAfter=No
+20	1598	1598	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=(time-58)|SpaceAfter=No|XML=<date when:::"1598"></date>
 21	;	;	PUNCT	:	_	22	punct	22:punct	_
 22	printed	print	VERB	VBN	Tense=Past|VerbForm=Part	12	acl	12:acl	Discourse=elaboration:40->39
 23	by	by	ADP	IN	_	24	case	24:case	_
-24	William	William	PROPN	NNP	Number=Sing	22	obl	22:obl:by	Entity=(person-59
-25	White	White	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-59)|SpaceAfter=No
+24	William	William	PROPN	NNP	Number=Sing	22	obl	22:obl:by	Entity=(person-59|XML=<ref target:::"https://en.wikipedia.org/wiki/William_White_(printer)">
+25	White	White	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-59)|SpaceAfter=No|XML=</ref>
 26	)	)	PUNCT	-RRB-	_	22	punct	22:punct	Entity=abstract-56)|SpaceAfter=No
-27	[	[	PUNCT	-LRB-	_	28	punct	28:punct	Discourse=evidence:41->38|SpaceAfter=No
+27	[	[	PUNCT	-LRB-	_	28	punct	28:punct	Discourse=evidence:41->38|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-4">
 28	4	4	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	Entity=(abstract-60)|SpaceAfter=No
-29	]	]	PUNCT	-RRB-	_	28	punct	28:punct	_
+29	]	]	PUNCT	-RRB-	_	28	punct	28:punct	XML=</ref>
 30	and	and	CCONJ	CC	_	33	cc	33:cc	Discourse=same_unit:42->38
 31	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Entity=(abstract-56
-32	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	33	amod	33:amod	_
-33	quarto	quarto	NOUN	NN	Number=Sing	12	conj	5:appos|12:conj:and	_
+32	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	33	amod	33:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Second_quarto">
+33	quarto	quarto	NOUN	NN	Number=Sing	12	conj	5:appos|12:conj:and	XML=</ref>
 34	of	of	ADP	IN	_	35	case	35:case	_
-35	Romeo	Romeo	PROPN	NNP	Number=Sing	33	nmod	33:nmod:of	Entity=(person-61)
+35	Romeo	Romeo	PROPN	NNP	Number=Sing	33	nmod	33:nmod:of	Entity=(person-61)|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Romeo_and_Juliet">
 36	and	and	CCONJ	CC	_	37	cc	37:cc	_
-37	Juliet	Juliet	PROPN	NNP	Number=Sing	35	conj	33:nmod:of|35:conj:and	Entity=(person-62)
+37	Juliet	Juliet	PROPN	NNP	Number=Sing	35	conj	33:nmod:of|35:conj:and	Entity=(person-62)|XML=</ref></hi>
 38	(	(	PUNCT	-LRB-	_	39	punct	39:punct	Discourse=elaboration:43->42|SpaceAfter=No
-39	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	33	nmod:tmod	33:nmod:tmod	Entity=(time-55)|SpaceAfter=No
+39	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	33	nmod:tmod	33:nmod:tmod	Entity=(time-55)|SpaceAfter=No|XML=<date when:::"1599"></date>
 40	;	;	PUNCT	:	_	41	punct	41:punct	_
 41	printed	print	VERB	VBN	Tense=Past|VerbForm=Part	33	acl	33:acl	Discourse=elaboration:44->43
 42	by	by	ADP	IN	_	43	case	43:case	_
-43	Thomas	Thomas	PROPN	NNP	Number=Sing	41	obl	41:obl:by	Entity=(person-15
-44	Creede	Creede	PROPN	NNP	Number=Sing	43	flat	43:flat	Entity=person-15)|SpaceAfter=No
+43	Thomas	Thomas	PROPN	NNP	Number=Sing	41	obl	41:obl:by	Entity=(person-15|XML=<ref target:::"https://en.wikipedia.org/wiki/Thomas_Creede">
+44	Creede	Creede	PROPN	NNP	Number=Sing	43	flat	43:flat	Entity=person-15)|SpaceAfter=No|XML=</ref>
 45	)	)	PUNCT	-RRB-	_	39	punct	39:punct	Entity=abstract-56)abstract-56)|SpaceAfter=No
 46	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -400,7 +417,7 @@
 3	page	page	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 4	of	of	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(abstract-64
-6	R&J	R&J	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(object-65)
+6	R&J	R&J	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(object-65)|XML=<hi rend:::"italic"></hi>
 7	Q2	Q2	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=object-63)abstract-64)
 8	states	state	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root|26:nsubj:pass	_
 9	that	that	SCONJ	IN	_	15	mark	15:mark	Discourse=joint:46->37
@@ -440,15 +457,15 @@
 43	,	,	PUNCT	,	_	47	punct	47:punct	_
 44	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	Entity=(abstract-69
 45	"	''	PUNCT	``	_	47	punct	47:punct	SpaceAfter=No
-46	bad	bad	ADJ	JJ	Degree=Pos	47	amod	47:amod	_
-47	quarto	quarto	NOUN	NN	Number=Sing	42	appos	42:appos	SpaceAfter=No
+46	bad	bad	ADJ	JJ	Degree=Pos	47	amod	47:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Bad_quarto">
+47	quarto	quarto	NOUN	NN	Number=Sing	42	appos	42:appos	SpaceAfter=No|XML=</ref>
 48	"	''	PUNCT	''	_	47	punct	47:punct	_
 49	printed	print	VERB	VBN	Tense=Past|VerbForm=Part	47	acl	47:acl	Discourse=elaboration:50->49
 50	by	by	ADP	IN	_	51	case	51:case	_
 51	John	John	PROPN	NNP	Number=Sing	49	obl	49:obl:by	Entity=(person-14
 52	Danter	Danter	PROPN	NNP	Number=Sing	51	flat	51:flat	Entity=person-14)
 53	in	in	ADP	IN	_	54	case	54:case	_
-54	1597	1597	NUM	CD	NumForm=Digit|NumType=Card	49	obl	49:obl:in	Entity=abstract-69)(time-70)|SpaceAfter=No
+54	1597	1597	NUM	CD	NumForm=Digit|NumType=Card	49	obl	49:obl:in	Entity=abstract-69)(time-70)|SpaceAfter=No|XML=<date when:::"1597"></date>
 55	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_bio_burby-18
@@ -463,7 +480,7 @@
 6	's	's	PART	POS	_	5	case	5:case	Entity=person-17)
 7	Q1	Q1	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	LLL	LLL	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=object-71)abstract-69)(abstract-72)|SpaceAfter=No
+9	LLL	LLL	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=object-71)abstract-69)(abstract-72)|SpaceAfter=No|XML=<hi rend:::"italic"></hi>
 10	,	,	PUNCT	,	_	14	punct	14:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(abstract-69
 12	earliest	early	ADJ	JJS	Degree=Sup	14	amod	14:amod	_
@@ -510,19 +527,20 @@
 52	quarto	quarto	NOUN	NN	Number=Sing	46	nmod	46:nmod:of|59:nsubj	SpaceAfter=No
 53	"	''	PUNCT	''	_	52	punct	52:punct	_
 54	of	of	ADP	IN	_	55	case	55:case	_
-55	LLL	LLL	PROPN	NNP	Number=Sing	52	nmod	52:nmod:of	Entity=(abstract-72)
+55	LLL	LLL	PROPN	NNP	Number=Sing	52	nmod	52:nmod:of	Entity=(abstract-72)|XML=<hi rend:::"italic"></hi>
 56	that	that	PRON	WDT	PronType=Rel	59	nsubj	52:ref	Discourse=elaboration:57->56
 57	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	59	aux	59:aux	_
 58	not	not	ADV	RB	Polarity=Neg	59	advmod	59:advmod	_
 59	survived	survive	VERB	VBN	Tense=Past|VerbForm=Part	52	acl:relcl	52:acl:relcl	Entity=abstract-76)abstract-69)|SpaceAfter=No
 60	.	.	PUNCT	.	_	24	punct	24:punct	SpaceAfter=No
-61	[	[	PUNCT	-LRB-	_	62	punct	62:punct	Discourse=evidence:58->51|SpaceAfter=No
+61	[	[	PUNCT	-LRB-	_	62	punct	62:punct	Discourse=evidence:58->51|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-5">
 62	5	5	NUM	CD	NumForm=Digit|NumType=Card	24	dep	24:dep	Entity=(abstract-77)|SpaceAfter=No
-63	]	]	PUNCT	-RRB-	_	62	punct	62:punct	_
+63	]	]	PUNCT	-RRB-	_	62	punct	62:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_burby-19
 # s_type = decl
 # text = Burby had subsidiary connections with the Shakespeare canon as well.
+# newpar = p (4 s)
 1	Burby	Burby	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:59->51|Entity=(person-17)
 2	had	have	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	subsidiary	subsidiary	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(abstract-78
@@ -540,14 +558,14 @@
 # text = He published Palladis Tamia (1598) by Francis Meres, which contains an important reference to Shakespeare and a list of Shakespearean works produced up to 1598.
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=elaboration:60->59|Entity=(person-17)
 2	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	Palladis	Palladis	PROPN	NNP	Number=Sing	2	obj	2:obj	Entity=(person-80
-4	Tamia	Tamia	PROPN	NNP	Number=Sing	3	flat	3:flat	_
+3	Palladis	Palladis	PROPN	NNP	Number=Sing	2	obj	2:obj	Entity=(person-80|XML=<hi rend:::"italic">
+4	Tamia	Tamia	PROPN	NNP	Number=Sing	3	flat	3:flat	XML=</hi>
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=restatement:61->60|SpaceAfter=No
-6	1598	1598	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=(time-58)|SpaceAfter=No
+6	1598	1598	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=(time-58)|SpaceAfter=No|XML=<date when:::"1598"></date>
 7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	Entity=person-80)
 8	by	by	ADP	IN	_	9	case	9:case	Discourse=same_unit:62->60
-9	Francis	Francis	PROPN	NNP	Number=Sing	2	obl	2:obl:by|13:nsubj	Entity=(person-81
-10	Meres	Meres	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
+9	Francis	Francis	PROPN	NNP	Number=Sing	2	obl	2:obl:by|13:nsubj	Entity=(person-81|XML=<ref target:::"https://en.wikipedia.org/wiki/Francis_Meres">
+10	Meres	Meres	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No|XML=</ref>
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
 12	which	which	PRON	WDT	PronType=Rel	13	nsubj	9:ref	Discourse=elaboration:63->60
 13	contains	contain	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	acl:relcl	9:acl:relcl	_
@@ -586,19 +604,19 @@
 13	two	2	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 14	quartos	quarto	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 15	of	of	ADP	IN	_	17	case	17:case	_
-16	The	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(abstract-87
+16	The	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(abstract-87|XML=<hi rend:::"italic">
 17	Taming	Taming	PROPN	NNP	Number=Sing	14	nmod	14:nmod:of	_
 18	of	of	ADP	IN	_	20	case	20:case	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	Entity=(person-88
-20	Shrew	Shrew	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=abstract-86)abstract-87)person-88)
+20	Shrew	Shrew	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=abstract-86)abstract-87)person-88)|XML=</hi>
 21	(	(	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=elaboration:68->67|SpaceAfter=No
 22	Q1	Q1	PROPN	NNP	Number=Sing	3	dep	3:dep	SpaceAfter=No
 23	,	,	PUNCT	,	_	24	punct	24:punct	_
-24	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	22	nmod:tmod	22:nmod:tmod	Entity=(time-52)|SpaceAfter=No
+24	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	22	nmod:tmod	22:nmod:tmod	Entity=(time-52)|SpaceAfter=No|XML=<date when:::"1594"></date>
 25	;	;	PUNCT	:	_	26	punct	26:punct	_
 26	Q2	Q2	PROPN	NNP	Number=Sing	22	conj	3:dep|22:conj	SpaceAfter=No
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
-28	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	26	nmod:tmod	26:nmod:tmod	Entity=(time-89)|SpaceAfter=No
+28	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	26	nmod:tmod	26:nmod:tmod	Entity=(time-89)|SpaceAfter=No|XML=<date when:::"1596"></date>
 29	)	)	PUNCT	-RRB-	_	22	punct	22:punct	SpaceAfter=No
 30	,	,	PUNCT	,	_	34	punct	34:punct	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	Discourse=same_unit:69->67|Entity=(abstract-86
@@ -609,15 +627,15 @@
 36-37	Shakespeare's	_	_	_	_	_	_	_	_
 36	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	39	nmod:poss	39:nmod:poss	Entity=(abstract-90(person-11
 37	's	's	PART	POS	_	36	case	36:case	Entity=person-11)
-38	The	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	_
+38	The	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/The_Taming_of_the_Shrew">
 39	Taming	Taming	PROPN	NNP	Number=Sing	34	nmod	34:nmod:of	_
 40	of	of	ADP	IN	_	42	case	42:case	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	42	det	42:det	Entity=(person-88
-42	Shrew	Shrew	PROPN	NNP	Number=Sing	39	nmod	39:nmod:of	Entity=abstract-86)abstract-90)person-88)|SpaceAfter=No
-43	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-44	[	[	PUNCT	-LRB-	_	45	punct	45:punct	Discourse=evidence:70->65|SpaceAfter=No
+42	Shrew	Shrew	PROPN	NNP	Number=Sing	39	nmod	39:nmod:of	Entity=abstract-86)abstract-90)person-88)|SpaceAfter=No|XML=</ref>
+43	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+44	[	[	PUNCT	-LRB-	_	45	punct	45:punct	Discourse=evidence:70->65|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-6">
 45	6	6	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-91)|SpaceAfter=No
-46	]	]	PUNCT	-RRB-	_	45	punct	45:punct	_
+46	]	]	PUNCT	-RRB-	_	45	punct	45:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_burby-22
 # s_type = decl
@@ -631,12 +649,12 @@
 7	early	early	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	quartos	quarto	NOUN	NNS	Number=Plur	4	obj	4:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	Edward	Edward	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(person-93
-11	III	III	NUM	CD	NumForm=Roman|NumType=Card	10	dep	10:dep	_
+10	Edward	Edward	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(person-93|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Edward_III_(play)">
+11	III	III	NUM	CD	NumForm=Roman|NumType=Card	10	dep	10:dep	XML=</ref></hi>
 12	(	(	PUNCT	-LRB-	_	13	punct	13:punct	Discourse=elaboration:72->71|SpaceAfter=No
-13	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:tmod	10:nmod:tmod	Entity=(time-89|SpaceAfter=No
+13	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:tmod	10:nmod:tmod	Entity=(time-89|SpaceAfter=No|XML=<date when:::"1596"></date>
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=time-89)(time-55)|SpaceAfter=No
+15	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=time-89)(time-55)|SpaceAfter=No|XML=<date when:::"1599"></date>
 16	)	)	PUNCT	-RRB-	_	13	punct	13:punct	Entity=abstract-92)person-93)|SpaceAfter=No
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Discourse=same_unit:73->71|Entity=(abstract-73
@@ -644,8 +662,8 @@
 20	play	play	NOUN	NN	Number=Sing	8	appos	8:appos|29:nsubj:pass	_
 21	of	of	ADP	IN	_	24	case	24:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(abstract-94
-23	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(person-11)
-24	Apocrypha	Apocrypha	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=abstract-94)
+23	Shakespeare	Shakespeare	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(person-11)|XML=<ref target:::"https://en.wikipedia.org/wiki/Shakespeare_Apocrypha">
+24	Apocrypha	Apocrypha	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=abstract-94)|XML=</ref>
 25	that	that	PRON	WDT	PronType=Rel	29	nsubj:pass	20:ref	Discourse=elaboration:74->73
 26	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	aux:pass	29:aux:pass	_
 27	most	most	ADV	RBS	Degree=Sup	28	advmod	28:advmod	_
@@ -668,12 +686,14 @@
 # sent_id = AMALGUM_bio_burby-23
 # s_type = frag
 # text = Other drama
+# newpar = head (1 s)
 1	Other	other	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:76->89|Entity=(abstract-8
 2	drama	drama	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-8)
 
 # sent_id = AMALGUM_bio_burby-24
 # s_type = decl
 # text = Burby published a number of other plays, attributed or anonymous, during his career:
+# newpar = p (1 s)
 1	Burby	Burby	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=preparation:77->89|Entity=(person-17)
 2	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(abstract-96
@@ -694,22 +714,25 @@
 # sent_id = AMALGUM_bio_burby-25
 # s_type = frag
 # text = The Cobbler's Prophecy, Robert Wilson (1594)
-1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:79->89|Entity=(abstract-97
+# newpar = list type:::"unordered" (5 s)
+# newpar1 = item (1 s)
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:79->89|Entity=(abstract-97|XML=<hi rend:::"italic">
 2-3	Cobbler's	_	_	_	_	_	_	_	_
 2	Cobbler	Cobbler	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Entity=(person-98
 3	's	's	PART	POS	_	2	case	2:case	Entity=person-98)
 4	Prophecy	Prophecy	PROPN	NNP	Number=Sing	0	root	0:root	Entity=abstract-97)|SpaceAfter=No
-5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	Robert	Robert	PROPN	NNP	Number=Sing	4	dep	4:dep	Discourse=preparation:80->89|Entity=(person-13
-7	Wilson	Wilson	PROPN	NNP	Number=Sing	6	flat	6:flat	_
+5	,	,	PUNCT	,	_	6	punct	6:punct	XML=</hi>
+6	Robert	Robert	PROPN	NNP	Number=Sing	4	dep	4:dep	Discourse=preparation:80->89|Entity=(person-13|XML=<ref target:::"https://en.wikipedia.org/wiki/Robert_Wilson_(dramatist)">
+7	Wilson	Wilson	PROPN	NNP	Number=Sing	6	flat	6:flat	XML=</ref>
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=restatement:81->80|SpaceAfter=No
-9	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:tmod	6:nmod:tmod	Entity=(time-52)|SpaceAfter=No
+9	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	6	nmod:tmod	6:nmod:tmod	Entity=(time-52)|SpaceAfter=No|XML=<date when:::"1594"></date>
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	Entity=person-13)
 
 # sent_id = AMALGUM_bio_burby-26
 # s_type = frag
 # text = George a Greene, or The Pinner of Wakefield (1599)
-1	George	George	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:82->89|Entity=(person-99
+# newpar = item (1 s)
+1	George	George	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:82->89|Entity=(person-99|XML=<hi rend:::"italic">
 2	a	a	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Greene	Greene	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-99)|SpaceAfter=No
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -717,57 +740,61 @@
 6	The	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(place-100
 7	Pinner	Pinner	PROPN	NNP	Number=Sing	1	conj	1:conj:or	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	Wakefield	Wakefield	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=(place-101)
+9	Wakefield	Wakefield	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=(place-101)|XML=</hi>
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	Discourse=elaboration:83->82|SpaceAfter=No
-11	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=(time-55)|SpaceAfter=No
+11	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=(time-55)|SpaceAfter=No|XML=<date when:::"1599"></date>
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	Entity=place-100)
 
 # sent_id = AMALGUM_bio_burby-27
 # s_type = frag
 # text = A Knack to Know an Honest Man (1596)
-1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=preparation:84->89|Entity=(abstract-102
+# newpar = item (1 s)
+1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=preparation:84->89|Entity=(abstract-102|XML=<hi rend:::"italic">
 2	Knack	knack	NOUN	NN	Number=Sing	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	Discourse=purpose:85->84
 4	Know	know	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 5	an	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(place-103
 6	Honest	Honest	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
-7	Man	man	NOUN	NN	Number=Sing	4	obj	4:obj	Entity=place-103)
+7	Man	man	NOUN	NN	Number=Sing	4	obj	4:obj	Entity=place-103)|XML=</hi>
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=restatement:86->85|SpaceAfter=No
-9	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	SpaceAfter=No
+9	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	SpaceAfter=No|XML=<date when:::"1596"></date>
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	Entity=abstract-102)
 
 # sent_id = AMALGUM_bio_burby-28
 # s_type = frag
 # text = Mother Bombie, John Lyly (1594, 1598)
-1	Mother	Mother	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:87->89|Entity=(person-104
-2	Bombie	Bombie	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-104)|SpaceAfter=No
-3	,	,	PUNCT	,	_	4	punct	4:punct	_
+# newpar = item (1 s)
+1	Mother	Mother	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:87->89|Entity=(person-104|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Mother_Bombie">
+2	Bombie	Bombie	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-104)|SpaceAfter=No|XML=</ref>
+3	,	,	PUNCT	,	_	4	punct	4:punct	XML=</hi>
 4	John	John	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Entity=(person-14
 5	Lyly	Lyly	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=restatement:88->87|SpaceAfter=No
-7	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=(time-52|SpaceAfter=No
+7	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=(time-52|SpaceAfter=No|XML=<date when:::"1594"></date>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	1598	1598	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=time-52)(time-58)|SpaceAfter=No
+9	1598	1598	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=time-52)(time-58)|SpaceAfter=No|XML=<date when:::"1598"></date>
 10	)	)	PUNCT	-RRB-	_	7	punct	7:punct	Entity=person-14)
 
 # sent_id = AMALGUM_bio_burby-29
 # s_type = frag
 # text = Orlando Furioso, Robert Greene (1594, 1599).
-1	Orlando	Orlando	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:89->59|Entity=(person-105
+# newpar = item (1 s)
+1	Orlando	Orlando	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:89->59|Entity=(person-105|XML=<hi rend:::"italic">
 2	Furioso	Furioso	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-105)|SpaceAfter=No
-3	,	,	PUNCT	,	_	4	punct	4:punct	_
+3	,	,	PUNCT	,	_	4	punct	4:punct	XML=</hi>
 4	Robert	Robert	PROPN	NNP	Number=Sing	1	conj	1:conj	Entity=(person-13
 5	Greene	Greene	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=restatement:90->89|SpaceAfter=No
-7	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=(time-52|SpaceAfter=No
+7	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=(time-52|SpaceAfter=No|XML=<date when:::"1594"></date>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=time-52)(time-55)|SpaceAfter=No
+9	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	7	nmod:tmod	7:nmod:tmod	Entity=time-52)(time-55)|SpaceAfter=No|XML=<date when:::"1599"></date>
 10	)	)	PUNCT	-RRB-	_	7	punct	7:punct	Entity=person-13)|SpaceAfter=No
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_bio_burby-30
 # s_type = decl
 # text = Burby's relationship with the texts of Robert Greene is worth noting; in addition to Orlando Furioso, Burby issued Greene's pamphlets The Third and Last Part of Coney-Catching and The Repentance of Robert Greene (both 1592).
+# newpar = p (2 s)
 1-2	Burby's	_	_	_	_	_	_	_	_
 1	Burby	Burby	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:91->89|Entity=(abstract-106(person-17
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-17)
@@ -785,31 +812,31 @@
 14	in	in	ADP	IN	_	15	case	15:case	Discourse=joint:92->91
 15	addition	addition	NOUN	NN	Number=Sing	21	obl	21:obl:in	_
 16	to	to	ADP	IN	_	17	case	17:case	_
-17	Orlando	Orlando	PROPN	NNP	Number=Sing	15	nmod	15:nmod:to	Entity=(person-105
+17	Orlando	Orlando	PROPN	NNP	Number=Sing	15	nmod	15:nmod:to	Entity=(person-105|XML=<hi rend:::"italic">
 18	Furioso	Furioso	PROPN	NNP	Number=Sing	17	flat	17:flat	Entity=person-105)|SpaceAfter=No
-19	,	,	PUNCT	,	_	15	punct	15:punct	_
+19	,	,	PUNCT	,	_	15	punct	15:punct	XML=</hi>
 20	Burby	Burby	PROPN	NNP	Number=Sing	21	nsubj	21:nsubj	Entity=(person-17)
 21	issued	issue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	parataxis	11:parataxis	_
 22-23	Greene's	_	_	_	_	_	_	_	_
 22	Greene	Greene	PROPN	NNP	Number=Sing	24	nmod:poss	24:nmod:poss	Entity=(object-108(person-13
 23	's	's	PART	POS	_	22	case	22:case	Entity=person-13)
 24	pamphlets	pamphlet	NOUN	NNS	Number=Plur	21	obj	21:obj	Entity=object-108)
-25	The	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	_
+25	The	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	XML=<hi rend:::"italic">
 26	Third	third	ADJ	JJ	Degree=Pos|NumType=Ord	29	amod	29:amod	_
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
 28	Last	last	PROPN	NNP	Number=Sing	26	conj	26:conj:and|29:compound	_
 29	Part	part	PROPN	NNP	Number=Sing	24	conj	21:obj|24:conj	_
 30	of	of	ADP	IN	_	31	case	31:case	_
-31	Coney-Catching	Coney-Catching	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	Entity=(abstract-109)
+31	Coney-Catching	Coney-Catching	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	Entity=(abstract-109)|XML=</hi>
 32	and	and	CCONJ	CC	_	34	cc	34:cc	_
-33	The	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	Entity=(abstract-110
+33	The	the	DET	DT	Definite=Def|PronType=Art	34	det	34:det	Entity=(abstract-110|XML=<hi rend:::"italic">
 34	Repentance	Repentance	PROPN	NNP	Number=Sing	31	conj	29:nmod:of|31:conj:and	_
 35	of	of	ADP	IN	_	36	case	36:case	_
 36	Robert	Robert	PROPN	NNP	Number=Sing	34	nmod	34:nmod:of	Entity=(person-13
-37	Greene	Greene	PROPN	NNP	Number=Sing	36	flat	36:flat	_
+37	Greene	Greene	PROPN	NNP	Number=Sing	36	flat	36:flat	XML=</hi>
 38	(	(	PUNCT	-LRB-	_	40	punct	40:punct	Discourse=elaboration:93->92|SpaceAfter=No
 39	both	both	PRON	DT	_	40	nummod	40:nummod	_
-40	1592	1592	NUM	CD	NumForm=Digit|NumType=Card	36	dep	36:dep	SpaceAfter=No
+40	1592	1592	NUM	CD	NumForm=Digit|NumType=Card	36	dep	36:dep	SpaceAfter=No|XML=<date when:::"1592"></date>
 41	)	)	PUNCT	-RRB-	_	40	punct	40:punct	Entity=abstract-110)person-13)|SpaceAfter=No
 42	.	.	PUNCT	.	_	11	punct	11:punct	_
 
@@ -818,9 +845,9 @@
 # text = The play George a Greene has sometimes been attributed to Greene's pen.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:94->95|Entity=(place-111(abstract-73
 2	play	play	NOUN	NN	Number=Sing	9	nsubj:pass	9:nsubj:pass	Entity=abstract-73)
-3	George	George	PROPN	NNP	Number=Sing	2	appos	2:appos	_
+3	George	George	PROPN	NNP	Number=Sing	2	appos	2:appos	XML=<hi rend:::"italic">
 4	a	a	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-5	Greene	Greene	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=place-111)
+5	Greene	Greene	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=place-111)|XML=</hi>
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux	9:aux	_
 7	sometimes	sometimes	ADV	RB	_	9	advmod	9:advmod	_
 8	been	be	AUX	VBN	Tense=Past|VerbForm=Part	9	aux:pass	9:aux:pass	_
@@ -835,6 +862,7 @@
 # sent_id = AMALGUM_bio_burby-32
 # s_type = decl
 # text = Burby often worked with the printers John Danter and Simon Stafford, as with many of the texts listed above.
+# newpar = p (1 s)
 1	Burby	Burby	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=joint:95->91|Entity=(person-17)
 2	often	often	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 3	worked	work	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -860,23 +888,25 @@
 # sent_id = AMALGUM_bio_burby-33
 # s_type = frag
 # text = Other works
+# newpar = head (1 s)
 1	Other	other	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:97->99|Entity=(abstract-10
 2	works	work	NOUN	NNS	Number=Plur	0	root	0:root	Entity=abstract-10)
 
 # sent_id = AMALGUM_bio_burby-34
 # s_type = frag
 # text = Also
+# newpar = p (3 s)
 1	Also	also	ADV	RB	_	0	root	0:root	Discourse=preparation:98->99
 
 # sent_id = AMALGUM_bio_burby-35
 # s_type = decl
 # text = in 1594, Burby published The Second Report of Doctor Faustus, Containing His Appearances, and the Deeds of Wagner – an anonymous prose work that elaborated the story of the magician, and which was written to capitalise on the success of Marlowe's famous play Doctor Faustus.
 1	in	in	ADP	IN	_	2	case	2:case	Discourse=joint:99->95
-2	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-52)|SpaceAfter=No
+2	1594	1594	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-52)|SpaceAfter=No|XML=<date when:::"1594"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Burby	Burby	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=(person-17)
 5	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-6	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(abstract-114
+6	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(abstract-114|XML=<hi rend:::"italic">
 7	Second	second	ADJ	NNP	Number=Sing	8	amod	8:amod	_
 8	Report	Report	PROPN	NNP	Number=Sing	5	obj	5:obj	_
 9	of	of	ADP	IN	_	10	case	10:case	_
@@ -891,7 +921,7 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(person-117
 19	Deeds	Deeds	PROPN	NNPS	Number=Plur	15	conj	13:obj|15:conj:and	_
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	Wagner	Wagner	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=abstract-114)person-115)person-117)(person-117)
+21	Wagner	Wagner	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=abstract-114)person-115)person-117)(person-117)|XML=</hi>
 22	–	-	PUNCT	:	_	26	punct	26:punct	_
 23	an	a	DET	DT	Definite=Ind|PronType=Art	26	det	26:det	Entity=(abstract-114
 24	anonymous	anonymous	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
@@ -916,13 +946,13 @@
 43	success	success	NOUN	NN	Number=Sing	40	obl	40:obl:on	_
 44	of	of	ADP	IN	_	48	case	48:case	_
 45-46	Marlowe's	_	_	_	_	_	_	_	_
-45	Marlowe	Marlowe	PROPN	NNP	Number=Sing	48	nmod:poss	48:nmod:poss	Entity=(person-115(abstract-73(person-122
-46	's	's	PART	POS	_	45	case	45:case	Entity=person-122)
+45	Marlowe	Marlowe	PROPN	NNP	Number=Sing	48	nmod:poss	48:nmod:poss	Entity=(person-115(abstract-73(person-122|XML=<ref target:::"https://en.wikipedia.org/wiki/Christopher_Marlowe">
+46	's	's	PART	POS	_	45	case	45:case	Entity=person-122)|XML=</ref>
 47	famous	famous	ADJ	JJ	Degree=Pos	48	amod	48:amod	_
 48	play	play	NOUN	NN	Number=Sing	43	nmod	43:nmod:of	Entity=abstract-73)
-49	Doctor	Doctor	PROPN	NNP	Number=Sing	48	appos	48:appos	_
-50	Faustus	Faustus	PROPN	NNP	Number=Sing	49	flat	49:flat	Entity=abstract-121)person-115)|SpaceAfter=No
-51	.	.	PUNCT	.	_	5	punct	5:punct	_
+49	Doctor	Doctor	PROPN	NNP	Number=Sing	48	appos	48:appos	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/The_Tragical_History_of_Doctor_Faustus">
+50	Faustus	Faustus	PROPN	NNP	Number=Sing	49	flat	49:flat	Entity=abstract-121)person-115)|SpaceAfter=No|XML=</ref>
+51	.	.	PUNCT	.	_	5	punct	5:punct	XML=</hi>
 
 # sent_id = AMALGUM_bio_burby-36
 # s_type = decl
@@ -930,12 +960,12 @@
 1	And	and	CCONJ	CC	_	3	cc	3:cc	Discourse=joint:104->99
 2	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	Entity=(person-115)
 3	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-4	Thomas	Thomas	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(abstract-123(person-15
+4	Thomas	Thomas	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(abstract-123(person-15|XML=<ref target:::"https://en.wikipedia.org/wiki/Thomas_Lodge">
 5-6	Lodge's	_	_	_	_	_	_	_	_
-5	Lodge	Lodge	PROPN	NNP	Number=Sing	4	flat	4:flat	_
+5	Lodge	Lodge	PROPN	NNP	Number=Sing	4	flat	4:flat	XML=</ref>
 6	's	's	PART	POS	_	4	case	4:case	_
 7-8	Wit's	_	_	_	_	_	_	_	_
-7	Wit	Wit	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(person-124)
+7	Wit	Wit	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(person-124)|XML=<hi rend:::"italic">
 8	's	's	PART	POS	_	4	case	4:case	Entity=person-15)
 9	Misery	Misery	PROPN	NNP	Number=Sing	3	obj	3:obj	Entity=abstract-123)
 10	and	and	CCONJ	CC	_	14	cc	14:cc	_
@@ -943,14 +973,15 @@
 12-13	World's	_	_	_	_	_	_	_	_
 12	World	World	PROPN	NNP	Number=Sing	14	nmod:poss	14:nmod:poss	Entity=(organization-126
 13	's	's	PART	POS	_	12	case	12:case	Entity=organization-126)
-14	Madness	Madness	PROPN	NNP	Number=Sing	9	conj	3:obj|9:conj:and	Entity=abstract-125)
+14	Madness	Madness	PROPN	NNP	Number=Sing	9	conj	3:obj|9:conj:and	Entity=abstract-125)|XML=</hi>
 15	in	in	ADP	IN	_	16	case	16:case	_
-16	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-89)|SpaceAfter=No
+16	1596	1596	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-89)|SpaceAfter=No|XML=<date when:::"1596"></date>
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_burby-37
 # s_type = decl
 # text = Burby published other books on a range of subjects.
+# newpar = p (3 s)
 1	Burby	Burby	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=sequence:105->104|Entity=(person-17)
 2	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	other	other	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(abstract-127
@@ -981,21 +1012,21 @@
 13	verse	verse	NOUN	NN	Number=Sing	14	compound	14:compound	Entity=(abstract-133)
 14	anthology	anthology	NOUN	NN	Number=Sing	17	nmod:poss	17:nmod:poss	_
 15-16	England's	_	_	_	_	_	_	_	_
-15	England	England	PROPN	NNP	Number=Sing	17	nmod:poss	17:nmod:poss	Entity=(place-134)
+15	England	England	PROPN	NNP	Number=Sing	17	nmod:poss	17:nmod:poss	Entity=(place-134)|XML=<hi rend:::"italic">
 16	's	's	PART	POS	_	10	case	10:case	Entity=abstract-132)person-13)
-17	Parnassus	Parnassus	PROPN	NNP	Number=Sing	9	obj	9:obj	Entity=animal-131)
+17	Parnassus	Parnassus	PROPN	NNP	Number=Sing	9	obj	9:obj	Entity=animal-131)|XML=</hi>
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	1600	1600	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=person-129)person-130)(time-135)
+19	1600	1600	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=person-129)person-130)(time-135)|XML=<date when:::"1600"></date>
 20	(	(	PUNCT	-LRB-	_	25	punct	25:punct	Discourse=elaboration:108->107|SpaceAfter=No
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(abstract-136
 22	other	other	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	two	2	NUM	CD	NumForm=Digit|NumType=Card	25	nsubj	25:nsubj|28:nsubj	Entity=abstract-136)
 24	being	be	AUX	VBG	VerbForm=Ger	25	cop	25:cop	_
-25	Nicholas	Nicholas	PROPN	NNP	Number=Sing	17	parataxis	17:parataxis	Entity=(person-137
-26	Ling	Ling	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=person-137)
+25	Nicholas	Nicholas	PROPN	NNP	Number=Sing	17	parataxis	17:parataxis	Entity=(person-137|XML=<ref target:::"https://en.wikipedia.org/wiki/Nicholas_Ling">
+26	Ling	Ling	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=person-137)|XML=</ref>
 27	and	and	CCONJ	CC	_	28	cc	28:cc	_
-28	Thomas	Thomas	PROPN	NNP	Number=Sing	25	conj	25:conj:and	Entity=(person-15
-29	Heyes	Heyes	PROPN	NNP	Number=Sing	28	flat	28:flat	Entity=person-15)|SpaceAfter=No
+28	Thomas	Thomas	PROPN	NNP	Number=Sing	25	conj	25:conj:and	Entity=(person-15|XML=<ref target:::"https://en.wikipedia.org/wiki/Thomas_Heyes_(Publisher-bookseller)">
+29	Heyes	Heyes	PROPN	NNP	Number=Sing	28	flat	28:flat	Entity=person-15)|SpaceAfter=No|XML=</ref>
 30	)	)	PUNCT	-RRB-	_	25	punct	25:punct	SpaceAfter=No
 31	.	.	PUNCT	.	_	3	punct	3:punct	_
 
@@ -1035,25 +1066,27 @@
 31	age	age	NOUN	NN	Number=Sing	28	nmod	28:nmod:of	Entity=time-140)|SpaceAfter=No
 32	,	,	PUNCT	,	_	35	punct	35:punct	_
 33	like	like	ADP	IN	_	35	case	35:case	_
-34	The	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	Entity=(abstract-141
+34	The	the	DET	DT	Definite=Def|PronType=Art	35	det	35:det	Entity=(abstract-141|XML=<hi rend:::"italic">
 35	Mirror	Mirror	PROPN	NNP	Number=Sing	28	nmod	28:nmod:like	_
 36	of	of	ADP	IN	_	37	case	37:case	_
-37	Knighhood	Knighhood	PROPN	NNP	Number=Sing	35	nmod	35:nmod:of	Entity=abstract-141)(place-142)
+37	Knighhood	Knighhood	PROPN	NNP	Number=Sing	35	nmod	35:nmod:of	Entity=abstract-141)(place-142)|XML=</hi>
 38	and	and	CCONJ	CC	_	39	cc	39:cc	_
-39	Champions	Champion	PROPN	NNPS	Number=Plur	35	conj	28:nmod:like|35:conj:and	Entity=(person-143
+39	Champions	Champion	PROPN	NNPS	Number=Plur	35	conj	28:nmod:like|35:conj:and	Entity=(person-143|XML=<hi rend:::"italic">
 40	of	of	ADP	IN	_	41	case	41:case	_
 41	Christendom	Christendom	PROPN	NNP	Number=Sing	39	nmod	39:nmod:of	Entity=abstract-10)abstract-138)object-139)person-143)(person-144)|SpaceAfter=No
-42	.	.	PUNCT	.	_	2	punct	2:punct	_
+42	.	.	PUNCT	.	_	2	punct	2:punct	XML=</hi>
 
 # sent_id = AMALGUM_bio_burby-40
 # s_type = frag
 # text = Post mortem
+# newpar = head (1 s)
 1	Post	post	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=preparation:113->116|Entity=(abstract-145(organization-146)
 2	mortem	mortem	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-145)
 
 # sent_id = AMALGUM_bio_burby-41
 # s_type = decl
 # text = The exact date of Burby's death is not known, though it fell between 24 August and 26 September in 1607.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=preparation:114->116|Entity=(time-147
 2	exact	exact	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	date	date	NOUN	NN	Number=Sing	10	nsubj:pass	10:nsubj:pass	_
@@ -1076,14 +1109,14 @@
 19	26	26	NUM	CD	NumForm=Digit|NumType=Card	16	conj	14:obl:between|16:conj:and	Entity=(time-151
 20	September	September	PROPN	NNP	Number=Sing	19	nmod:tmod	19:nmod:tmod	Entity=time-151)
 21	in	in	ADP	IN	_	22	case	22:case	_
-22	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:in	Entity=(time-2)|SpaceAfter=No
+22	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:in	Entity=(time-2)|SpaceAfter=No|XML=<date when:::"1607"></date>
 23	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_bio_burby-42
 # s_type = decl
 # text = In 1609 Burby's widow assigned his copyrights – mainly of theological works – to the publisher's former apprentice Nicholas Bourne.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:116->109
-2	1609	1609	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-152)
+2	1609	1609	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-152)|XML=<date when:::"1609"></date>
 3-4	Burby's	_	_	_	_	_	_	_	_
 3	Burby	Burby	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	Entity=(person-153(person-17
 4	's	's	PART	POS	_	3	case	3:case	Entity=person-17)
@@ -1139,16 +1172,17 @@
 26	Nathaniel	Nathaniel	PROPN	NNP	Number=Sing	24	nmod	24:nmod:with	Entity=(person-160
 27	Butter	Butter	PROPN	NNP	Number=Sing	26	flat	26:flat	Entity=organization-155)abstract-159)person-160)|SpaceAfter=No
 28	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-29	[	[	PUNCT	-LRB-	_	30	punct	30:punct	Discourse=evidence:121->119|SpaceAfter=No
+29	[	[	PUNCT	-LRB-	_	30	punct	30:punct	Discourse=evidence:121->119|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-7">
 30	7	7	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-161)|SpaceAfter=No
-31	]	]	PUNCT	-RRB-	_	30	punct	30:punct	SpaceAfter=No
-32	[	[	PUNCT	-LRB-	_	33	punct	33:punct	Discourse=evidence:122->119|SpaceAfter=No
+31	]	]	PUNCT	-RRB-	_	30	punct	30:punct	SpaceAfter=No|XML=</ref>
+32	[	[	PUNCT	-LRB-	_	33	punct	33:punct	Discourse=evidence:122->119|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-8">
 33	8	8	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-162)|SpaceAfter=No
-34	]	]	PUNCT	-RRB-	_	33	punct	33:punct	_
+34	]	]	PUNCT	-RRB-	_	33	punct	33:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_burby-44
 # s_type = decl
 # text = The overall quality of Burby's work as a publisher has been variously evaluated.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:123->118|Entity=(abstract-163
 2	overall	overall	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	quality	quality	NOUN	NN	Number=Sing	14	nsubj:pass	14:nsubj:pass	_
@@ -1224,14 +1258,14 @@
 13	quarto	quarto	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	SpaceAfter=No
 14	"	''	PUNCT	''	_	13	punct	13:punct	_
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	Romeo	Romeo	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	Entity=(person-61)
+16	Romeo	Romeo	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	Entity=(person-61)|XML=<hi rend:::"italic">
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
 18	Juliet	Juliet	PROPN	NNP	Number=Sing	16	conj	13:nmod:of|16:conj:and	Entity=abstract-166)abstract-169)(person-62)|SpaceAfter=No
-19	,	,	PUNCT	,	_	23	punct	23:punct	_
+19	,	,	PUNCT	,	_	23	punct	23:punct	XML=</hi>
 20-21	Danter's	_	_	_	_	_	_	_	_
 20	Danter	Danter	PROPN	NNP	Number=Sing	23	nmod:poss	23:nmod:poss	Entity=(abstract-170(person-171
 21	's	's	PART	POS	_	20	case	20:case	Entity=person-171)
-22	1597	1597	NUM	CD	NumForm=Digit|NumType=Card	23	compound	23:compound	_
+22	1597	1597	NUM	CD	NumForm=Digit|NumType=Card	23	compound	23:compound	XML=<date when:::"1597"></date>
 23	Q1	Q1	NOUN	NN	Number=Sing	16	appos	16:appos	Entity=abstract-170)|SpaceAfter=No
 24	,	,	PUNCT	,	_	8	punct	8:punct	_
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	cop	26:cop	_
@@ -1250,7 +1284,7 @@
 38	"	''	PUNCT	''	_	37	punct	37:punct	_
 39	quarto	quarto	NOUN	NN	Number=Sing	33	appos	33:appos	_
 40	of	of	ADP	IN	_	41	case	41:case	_
-41	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	39	nmod	39:nmod:of	Entity=abstract-64)(time-55)
+41	1599	1599	NUM	CD	NumForm=Digit|NumType=Card	39	nmod	39:nmod:of	Entity=abstract-64)(time-55)|XML=<date when:::"1599"></date>
 42	–	-	PUNCT	:	_	52	punct	52:punct	_
 43	that	that	SCONJ	IN	_	52	mark	52:mark	Discourse=elaboration:130->129
 44	Q2	Q2	PROPN	NNP	Number=Sing	52	nsubj:pass	52:nsubj:pass	Entity=(abstract-64)
@@ -1266,7 +1300,7 @@
 54	Q1	Q1	PROPN	NNP	Number=Sing	52	obl	52:obl:than	Entity=(abstract-69)|SpaceAfter=No
 55	.	.	PUNCT	.	_	52	punct	52:punct	SpaceAfter=No
 56	"	''	PUNCT	''	_	52	punct	52:punct	SpaceAfter=No
-57	[	[	PUNCT	-LRB-	_	58	punct	58:punct	Discourse=evidence:131->129|SpaceAfter=No
+57	[	[	PUNCT	-LRB-	_	58	punct	58:punct	Discourse=evidence:131->129|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-9">
 58	9	9	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Entity=(abstract-173)|SpaceAfter=No
-59	]	]	PUNCT	-RRB-	_	58	punct	58:punct	_
+59	]	]	PUNCT	-RRB-	_	58	punct	58:punct	XML=</ref>
 
