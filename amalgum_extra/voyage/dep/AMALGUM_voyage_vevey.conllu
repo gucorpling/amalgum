@@ -1,13 +1,24 @@
+# meta::id = AMALGUM_voyage_vevey
+# meta::title = Vevey
+# meta::shortTitle = vevey
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=37919
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_vevey
 # sent_id = AMALGUM_voyage_vevey-1
 # s_type = frag
 # text = Vevey
+# newpar = head (1 s)
 1	Vevey	Vevey	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->13|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_vevey-2
 # s_type = decl
 # text = Vevey is one of the main cities of the Swiss Riviera, in the Lake Geneva Region of Switzerland.
-1	Vevey	Vevey	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=background:2->13|Entity=(place-1)
+# newpar = p (1 s)
+1	Vevey	Vevey	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=background:2->13|Entity=(place-1)|XML=<hi rend:::"bold"><ref target:::"http://www.vevey.ch"></ref></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	one	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Entity=(place-2
 4	of	of	ADP	IN	_	7	case	7:case	_
@@ -21,27 +32,29 @@
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
 13	in	in	ADP	IN	_	17	case	17:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(place-6
-15	Lake	Lake	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-7
+15	Lake	Lake	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-7|XML=<ref target:::"Lake%20Geneva%20Region">
 16	Geneva	Geneva	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=place-7)
-17	Region	Region	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	_
+17	Region	Region	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	XML=</ref>
 18	of	of	ADP	IN	_	19	case	19:case	_
-19	Switzerland	Switzerland	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=place-2)place-6)(place-8)|SpaceAfter=No
+19	Switzerland	Switzerland	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=place-2)place-6)(place-8)|SpaceAfter=No|XML=<ref target:::"Switzerland"></ref>
 20	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-3
 # s_type = frag
 # text = By train
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:3->13
 2	train	train	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-9)
 
 # sent_id = AMALGUM_voyage_vevey-4
 # s_type = decl
 # text = Trains between Geneva and Montreux travel along the northern shore of Lake Geneva and stop in Vevey.
+# newpar = p (3 s)
 1	Trains	train	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj|15:nsubj	Discourse=joint:4->3|Entity=(place-10
 2	between	between	ADP	IN	_	3	case	3:case	_
-3	Geneva	Geneva	PROPN	NNP	Number=Sing	1	nmod	1:nmod:between	Entity=(place-7)
+3	Geneva	Geneva	PROPN	NNP	Number=Sing	1	nmod	1:nmod:between	Entity=(place-7)|XML=<ref target:::"Geneva"></ref>
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
-5	Montreux	Montreux	PROPN	NNP	Number=Sing	3	conj	1:nmod:between|3:conj:and	Entity=place-10)
+5	Montreux	Montreux	PROPN	NNP	Number=Sing	3	conj	1:nmod:between|3:conj:and	Entity=place-10)|XML=<ref target:::"Montreux"></ref>
 6	travel	travel	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	along	along	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(place-11
@@ -69,7 +82,7 @@
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	change	change	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Lausanne	Lausanne	PROPN	NNP	Number=Sing	9	obl	9:obl:in	Entity=(place-13)|SpaceAfter=No
+11	Lausanne	Lausanne	PROPN	NNP	Number=Sing	9	obl	9:obl:in	Entity=(place-13)|SpaceAfter=No|XML=<ref target:::"Lausanne"></ref>
 12	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-6
@@ -86,7 +99,7 @@
 9	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=elaboration:8->7
 10	as	as	ADV	RB	_	12	case	12:case	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	2018	2018	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:as_of	Entity=(time-15)
+12	2018	2018	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:as_of	Entity=(time-15)|XML=<date when:::"2018"></date>
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	Entity=(object-16
 14	return	return	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(event-17)
 15	ticket	ticket	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	Entity=object-16)
@@ -99,23 +112,25 @@
 # sent_id = AMALGUM_voyage_vevey-7
 # s_type = frag
 # text = Gare de Vevey.
-1	Gare	Gare	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:9->7|Entity=(person-19
+1	Gare	Gare	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:9->7|Entity=(person-19|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Vevey	Vevey	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-19)|SpaceAfter=No
+3	Vevey	Vevey	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-19)|SpaceAfter=No|XML=</hi>
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-8
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:10->13
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-20)
 
 # sent_id = AMALGUM_voyage_vevey-9
 # s_type = imp
 # text = Take bus 1 from Montreux or Chateau de Chillon to Vevey's city centre and funicular.
+# newpar = p (1 s)
 1	Take	take	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:11->13
-2	bus	bus	NOUN	NN	Number=Sing	1	obj	1:obj	Entity=(object-20
-3	1	1	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Entity=object-20)
+2	bus	bus	NOUN	NN	Number=Sing	1	obj	1:obj	Entity=(object-20|XML=<ref target:::"http://www.vmcv.ch/">
+3	1	1	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Entity=object-20)|XML=</ref>
 4	from	from	ADP	IN	_	5	case	5:case	_
 5	Montreux	Montreux	PROPN	NNP	Number=Sing	1	obl	1:obl:from	Entity=(place-21)
 6	or	or	CCONJ	CC	_	9	cc	9:cc	_
@@ -135,12 +150,14 @@
 # sent_id = AMALGUM_voyage_vevey-10
 # s_type = frag
 # text = By car
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:12->13
 2	car	car	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-26)
 
 # sent_id = AMALGUM_voyage_vevey-11
 # s_type = decl
 # text = Vevey is next to the east-west autoroute A9, and A12 connects the city to Berne in the northeast.
+# newpar = p (2 s)
 1	Vevey	Vevey	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=ROOT:13|Entity=(place-1)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	next	next	ADV	RB	Degree=Pos	0	root	0:root	_
@@ -188,12 +205,14 @@
 # sent_id = AMALGUM_voyage_vevey-13
 # s_type = imp
 # text = Get around
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:17->18
 2	around	around	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_vevey-14
 # s_type = decl
 # text = You can walk most of the old town but for an excursion take the mountain railway to Pleiades for some great views and skiing in season.
+# newpar = p (2 s)
 1	You	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	3	nsubj	3:nsubj	Discourse=joint:18->13|Entity=(person-12)
 2	can	can	AUX	MD	VerbForm=Fin	3	aux	3:aux|13:aux	_
 3	walk	walk	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -252,6 +271,7 @@
 # sent_id = AMALGUM_voyage_vevey-16
 # s_type = decl
 # text = You can also get a free bike for whole day with CFS 20 deposit, which just in front of "COOP" super market next to the train station.
+# newpar = p (1 s)
 1	You	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj	Discourse=joint:22->21|Entity=(person-12)
 2	can	can	AUX	MD	VerbForm=Fin	4	aux	4:aux	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
@@ -287,11 +307,14 @@
 # sent_id = AMALGUM_voyage_vevey-17
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:24->25
 
 # sent_id = AMALGUM_voyage_vevey-18
 # s_type = frag
 # text = Beautiful views from the lake and the lake shores.
+# newpar = list type:::"unordered" (11 s)
+# newpar1 = item (1 s)
 1	Beautiful	beautiful	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:25->26|Entity=(abstract-40
 2	views	view	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	from	from	ADP	IN	_	5	case	5:case	_
@@ -306,10 +329,11 @@
 # sent_id = AMALGUM_voyage_vevey-19
 # s_type = decl
 # text = Musee l'Histoire de Vevey (from the main train station take the main street, turn left and go along until you'll encounter the signs).
-1	Musee	Musee	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	Discourse=joint:26->13|Entity=(place-53
+# newpar = item (1 s)
+1	Musee	Musee	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	Discourse=joint:26->13|Entity=(place-53|XML=<hi rend:::"bold">
 2	l'Histoire	l'Histoire	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Vevey	Vevey	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-53)
+4	Vevey	Vevey	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-53)|XML=</hi>
 5	(	(	PUNCT	-LRB-	_	11	punct	11:punct	Discourse=elaboration:27->26|SpaceAfter=No
 6	from	from	ADP	IN	_	10	case	10:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(place-50
@@ -339,10 +363,11 @@
 # sent_id = AMALGUM_voyage_vevey-20
 # s_type = frag
 # text = Monument de Henryk Sienkiewicz (in the Grand Hotel du Lac).
-1	Monument	Monument	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:31->26|Entity=(object-56
+# newpar = item (3 s)
+1	Monument	Monument	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:31->26|Entity=(object-56|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Henryk	Henryk	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Sienkiewicz	Sienkiewicz	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+4	Sienkiewicz	Sienkiewicz	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 5	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=elaboration:32->31|SpaceAfter=No
 6	in	in	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(place-43
@@ -411,7 +436,8 @@
 # sent_id = AMALGUM_voyage_vevey-23
 # s_type = frag
 # text = Alimentarium, Quai Perdonnet 25.
-1	Alimentarium	Alimentarium	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:37->36|Entity=(place-65|SpaceAfter=No
+# newpar = item (4 s)
+1	Alimentarium	Alimentarium	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:37->36|Entity=(place-65|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
 3	Quai	Quai	PROPN	NNP	Number=Sing	1	dep	1:dep	Entity=(place-66
 4	Perdonnet	Perdonnet	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=place-66)
@@ -429,9 +455,9 @@
 6	17:00	17:00	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:minus	Entity=time-67)(time-69)|SpaceAfter=No
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
 8	from	from	ADP	IN	_	9	case	9:case	_
-9	October	October	PROPN	NNP	Number=Sing	12	obl	12:obl:from	Entity=(time-70
+9	October	October	PROPN	NNP	Number=Sing	12	obl	12:obl:from	Entity=(time-70|XML=<date when:::"2018-10"></date>
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	March	March	PROPN	NNP	Number=Sing	9	nmod	9:nmod:to	Entity=time-70)(time-71)
+11	March	March	PROPN	NNP	Number=Sing	9	nmod	9:nmod:to	Entity=time-70)(time-71)|XML=<date when:::"2018-03"></date>
 12	closes	close	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
 13	one	one	NUM	CD	NumForm=Word|NumType=Card	14	nummod	14:nummod	Entity=(time-14
 14	hour	hour	NOUN	NN	Number=Sing	15	obl:npmod	15:obl:npmod	Entity=time-14)
@@ -457,9 +483,10 @@
 # sent_id = AMALGUM_voyage_vevey-27
 # s_type = frag
 # text = Villa Le Lac, Route de Lavaux 21 (in the Corseaux district, west of downtown).
-1	Villa	Villa	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:42->41|Entity=(place-76
+# newpar = item (2 s)
+1	Villa	Villa	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:42->41|Entity=(place-76|XML=<hi rend:::"bold">
 2	Le	Le	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Lac	Lac	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
+3	Lac	Lac	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	Route	Route	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Entity=(place-77
 6	de	de	PROPN	NNP	Number=Sing	5	flat	5:flat	_
@@ -485,7 +512,7 @@
 3	Le	Le	PROPN	NNP	Number=Sing	1	obl	1:obl:by	Entity=(person-82
 4	Corbusier	Corbusier	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-82)
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	1923	1923	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-83)|SpaceAfter=No
+6	1923	1923	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-83)|SpaceAfter=No|XML=<date when:::"1923"></date>
 7	,	,	PUNCT	,	_	1	punct	1:punct	_
 8	this	this	PRON	DT	Number=Sing|PronType=Dem	10	nsubj	10:nsubj	Discourse=joint:45->44|Entity=(time-83)
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
@@ -500,25 +527,27 @@
 18	listed	list	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	acl	15:acl:to	_
 19	as	as	ADP	IN	_	23	case	23:case	_
 20	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	Entity=(place-86
-21	world	world	NOUN	NN	Number=Sing	22	compound	22:compound	Entity=(abstract-87
+21	world	world	NOUN	NN	Number=Sing	22	compound	22:compound	Entity=(abstract-87|XML=<ref target:::"world%20heritage%20site">
 22	heritage	heritage	NOUN	NN	Number=Sing	23	compound	23:compound	Entity=abstract-87)
-23	site	site	NOUN	NN	Number=Sing	18	obl	18:obl:as	Entity=place-81)abstract-84)place-85)place-86)|SpaceAfter=No
+23	site	site	NOUN	NN	Number=Sing	18	obl	18:obl:as	Entity=place-81)abstract-84)place-85)place-86)|SpaceAfter=No|XML=</ref>
 24	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-29
 # s_type = frag
 # text = Chaplin's World, Route de Fenil 2, 1804 Corsier-sur-Vevey (3 km from city center), ☏ +41842422422 .
+# newpar = list type:::"unordered" (21 s)
+# newpar1 = item (3 s)
 1-2	Chaplin's	_	_	_	_	_	_	_	_
-1	Chaplin	Chaplin	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=preparation:47->52|Entity=(place-88(person-89
+1	Chaplin	Chaplin	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=preparation:47->52|Entity=(place-88(person-89|XML=<hi rend:::"bold">
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-89)
-3	World	World	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-88)|SpaceAfter=No
+3	World	World	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-88)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	Route	Route	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(place-90
 6	de	de	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	Fenil	Fenil	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 8	2	2	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	1804	1804	NUM	CD	NumForm=Digit|NumType=Card	5	nmod:tmod	5:nmod:tmod	Entity=(time-91)
+10	1804	1804	NUM	CD	NumForm=Digit|NumType=Card	5	nmod:tmod	5:nmod:tmod	Entity=(time-91)|XML=<date when:::"1804"></date>
 11	Corsier-sur-Vevey	Corsier-sur-Vevey	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=place-90)
 12	(	(	PUNCT	-LRB-	_	14	punct	14:punct	Discourse=elaboration:48->47|SpaceAfter=No
 13	3	3	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	Entity=(abstract-92
@@ -553,12 +582,12 @@
 16	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	Entity=(person-97(person-95)
 17	family	family	NOUN	NN	Number=Sing	14	obl	14:obl:with	Entity=person-97)
 18	from	from	ADP	IN	_	19	case	19:case	_
-19	1953	1953	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:from	Entity=(time-98)
+19	1953	1953	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:from	Entity=(time-98)|XML=<date when:::"1953"></date>
 20	to	to	ADP	IN	_	22	case	22:case	_
 21	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	22	nmod:poss	22:nmod:poss	Entity=(event-99(person-95)
 22	death	death	NOUN	NN	Number=Sing	14	obl	14:obl:to	_
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	1977	1977	NUM	CD	NumForm=Digit|NumType=Card	22	nmod	22:nmod:in	Entity=place-94)event-99)(time-100)|SpaceAfter=No
+24	1977	1977	NUM	CD	NumForm=Digit|NumType=Card	22	nmod	22:nmod:in	Entity=place-94)event-99)(time-100)|SpaceAfter=No|XML=<date when:::"1977"></date>
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-31
@@ -624,8 +653,9 @@
 # sent_id = AMALGUM_voyage_vevey-32
 # s_type = frag
 # text = Le Nest, Chaussée de la Guinguette, ☏ +41219244040 .
-1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:56->52|Entity=(person-82
-2	Nest	Nest	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-82)|SpaceAfter=No
+# newpar = item (2 s)
+1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:56->52|Entity=(person-82|XML=<hi rend:::"bold">
+2	Nest	Nest	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-82)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	Chaussée	Chaussée	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(person-113
 5	de	de	PROPN	NNP	Number=Sing	4	flat	4:flat	_
@@ -649,9 +679,10 @@
 # sent_id = AMALGUM_voyage_vevey-34
 # s_type = frag
 # text = Swiss Camera Museum (Museum suisse de l’appareil photographique).
-1	Swiss	Swiss	ADJ	NNP	Number=Sing	3	amod	3:amod	Discourse=joint:58->56|Entity=(place-72
+# newpar = item (1 s)
+1	Swiss	Swiss	ADJ	NNP	Number=Sing	3	amod	3:amod	Discourse=joint:58->56|Entity=(place-72|XML=<hi rend:::"bold">
 2	Camera	Camera	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(person-115)
-3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-72)
+3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-72)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:59->58|SpaceAfter=No
 5	Museum	Museum	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(place-72
 6	suisse	Suisse	PROPN	NNP	Number=Sing	5	flat	5:flat	_
@@ -664,19 +695,21 @@
 # sent_id = AMALGUM_voyage_vevey-35
 # s_type = frag
 # text = Museum de la Confrérie des Vignerons.
-1	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:60->58|Entity=(place-72
+# newpar = item (1 s)
+1	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:60->58|Entity=(place-72|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	la	la	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	Confrérie	Confrérie	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 5	des	des	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-6	Vignerons	Vigneron	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-72)|SpaceAfter=No
+6	Vignerons	Vigneron	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-72)|SpaceAfter=No|XML=</hi>
 7	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-36
 # s_type = frag
 # text = Musée Jenisch, avenue de la Gare.
-1	Musée	Musée	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:61->60|Entity=(place-116
-2	Jenisch	Jenisch	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
+# newpar = item (1 s)
+1	Musée	Musée	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:61->60|Entity=(place-116|XML=<hi rend:::"bold">
+2	Jenisch	Jenisch	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	avenue	avenue	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(place-117
 5	de	de	PROPN	NNP	Number=Sing	4	flat	4:flat	_
@@ -687,10 +720,11 @@
 # sent_id = AMALGUM_voyage_vevey-37
 # s_type = frag
 # text = Swiss museum of games (Musée suisse du jeu), Au Château, ☏ +41219772300 .
-1	Swiss	Swiss	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:62->61|Entity=(place-72
+# newpar = item (1 s)
+1	Swiss	Swiss	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:62->61|Entity=(place-72|XML=<hi rend:::"bold">
 2	museum	museum	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	4	case	4:case	_
-4	games	game	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	Entity=place-72)(abstract-118)
+4	games	game	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	Entity=place-72)(abstract-118)|XML=</hi>
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:63->62|SpaceAfter=No
 6	Musée	Musée	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(place-116
 7	suisse	Suisse	PROPN	NNP	Number=Sing	6	flat	6:flat	_
@@ -708,44 +742,49 @@
 # sent_id = AMALGUM_voyage_vevey-38
 # s_type = frag
 # text = Roman Catholic Church of Notre-Dame.
-1	Roman	Roman	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=joint:64->62|Entity=(organization-120
+# newpar = item (1 s)
+1	Roman	Roman	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=joint:64->62|Entity=(organization-120|XML=<hi rend:::"bold">
 2	Catholic	Catholic	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Church	Church	PROPN	NNP	Number=Sing	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	Notre-Dame	Notre-Dame	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=organization-120)(place-121)|SpaceAfter=No
+5	Notre-Dame	Notre-Dame	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=organization-120)(place-121)|SpaceAfter=No|XML=</hi>
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-39
 # s_type = frag
 # text = Orthodox Church.
-1	Orthodox	Orthodox	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=preparation:65->66|Entity=(organization-120
-2	Church	Church	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-120)|SpaceAfter=No
+# newpar = item (1 s)
+1	Orthodox	Orthodox	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=preparation:65->66|Entity=(organization-120|XML=<hi rend:::"bold">
+2	Church	Church	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-120)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-40
 # s_type = frag
 # text = Swiss Reformed Church of Saint-Martin.
-1	Swiss	Swiss	ADJ	NNP	Number=Sing	3	amod	3:amod	Discourse=joint:66->64|Entity=(organization-122
+# newpar = item (1 s)
+1	Swiss	Swiss	ADJ	NNP	Number=Sing	3	amod	3:amod	Discourse=joint:66->64|Entity=(organization-122|XML=<hi rend:::"bold">
 2	Reformed	reform	VERB	NNP	Number=Sing	3	amod	3:amod	_
 3	Church	Church	PROPN	NNP	Number=Sing	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	Saint-Martin	Saint-Martin	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=organization-122)(place-123)|SpaceAfter=No
+5	Saint-Martin	Saint-Martin	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=organization-122)(place-123)|SpaceAfter=No|XML=</hi>
 6	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-41
 # s_type = frag
 # text = Aile Castle.
-1	Aile	Aile	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:67->68|Entity=(place-124(person-125)
-2	Castle	Castle	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-124)|SpaceAfter=No
+# newpar = item (1 s)
+1	Aile	Aile	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:67->68|Entity=(place-124(person-125)|XML=<hi rend:::"bold">
+2	Castle	Castle	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-124)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-42
 # s_type = decl
 # text = Chemin de fer Blonay-Chamby, Gare de Blonay (regular local trains run from Vevey to Blonay, on the line from Vevey to les Pleiades.
-1	Chemin	Chemin	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:68->66|Entity=(place-126
+# newpar = item (8 s)
+1	Chemin	Chemin	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:68->66|Entity=(place-126|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	fer	fer	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Blonay-Chamby	Blonay-Chamby	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-126)|SpaceAfter=No
+4	Blonay-Chamby	Blonay-Chamby	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-126)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	Gare	Gare	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(person-19
 7	de	de	PROPN	NNP	Number=Sing	6	flat	6:flat	_
@@ -797,9 +836,9 @@
 2	operate	operate	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	weekends	weekend	NOUN	NNS	Number=Plur	2	obj	2:obj	Entity=(time-137)
 4	from	from	ADP	IN	_	5	case	5:case	_
-5	May	May	PROPN	NNP	Number=Sing	2	obl	2:obl:from	Entity=(time-138)
+5	May	May	PROPN	NNP	Number=Sing	2	obl	2:obl:from	Entity=(time-138)|XML=<date when:::"1977-05"></date>
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	October	October	PROPN	NNP	Number=Sing	2	obl	2:obl:to	Entity=(time-70)|SpaceAfter=No
+7	October	October	PROPN	NNP	Number=Sing	2	obl	2:obl:to	Entity=(time-70)|SpaceAfter=No|XML=<date when:::"1977-10"></date>
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	plus	plus	CCONJ	CC	_	11	cc	11:cc	_
 10	Pentecost	Pentecost	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(time-139(time-140)
@@ -812,7 +851,7 @@
 1-2	Switzerland's	_	_	_	_	_	_	_	_
 1	Switzerland	Switzerland	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	Discourse=joint:72->70|Entity=(object-133(place-8
 2	's	's	PART	POS	_	1	case	1:case	Entity=place-8)
-3	première	première	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(place-141)
+3	première	première	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(place-141)|XML=<hi rend:::"italic"></hi>
 4	preserved	preserve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	amod	5:amod	_
 5	railway	railway	NOUN	NN	Number=Sing	0	root	0:root	Entity=object-133)
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
@@ -902,7 +941,7 @@
 7	month	month	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=time-153)time-154)
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	on	on	ADP	IN	_	11	case	11:case	_
-10	Pentecost	Pentecost	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(time-139(time-140)
+10	Pentecost	Pentecost	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(time-139(time-140)|XML=<date when:::"1977-05-29"></date>
 11	Monday	Monday	PROPN	NNP	Number=Sing	1	conj	1:conj:and|4:case	Entity=time-139)
 12	trains	train	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	Entity=(object-127)
 13	operate	operate	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -932,13 +971,16 @@
 # sent_id = AMALGUM_voyage_vevey-50
 # s_type = imp
 # text = Do
+# newpar = head (1 s)
 1	Do	do	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:78->79
 
 # sent_id = AMALGUM_voyage_vevey-51
 # s_type = frag
 # text = Mountain Pelerin.
-1	Mountain	Mountain	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:79->77|Entity=(plant-161(person-162)
-2	Pelerin	Pelerin	PROPN	NNP	Number=Sing	0	root	0:root	Entity=plant-161)|SpaceAfter=No
+# newpar = list type:::"unordered" (11 s)
+# newpar1 = item (8 s)
+1	Mountain	Mountain	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:79->77|Entity=(plant-161(person-162)|XML=<hi rend:::"bold">
+2	Pelerin	Pelerin	PROPN	NNP	Number=Sing	0	root	0:root	Entity=plant-161)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-52
@@ -1127,18 +1169,19 @@
 # sent_id = AMALGUM_voyage_vevey-59
 # s_type = decl
 # text = In the summer you can rent a pedal boat or motor boat and take a trip on the lake.
+# newpar = item (3 s)
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:99->98
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(time-187
 3	summer	summer	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=time-187)
 4	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	6	nsubj	6:nsubj	Entity=(person-188)
 5	can	can	AUX	MD	VerbForm=Fin	6	aux	6:aux|14:aux	_
-6	rent	rent	VERB	VB	VerbForm=Inf	0	root	0:root	_
+6	rent	rent	VERB	VB	VerbForm=Inf	0	root	0:root	XML=<hi rend:::"bold">
 7	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(object-189
 8	pedal	pedal	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=(object-190)
 9	boat	boat	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=object-189)
 10	or	or	CCONJ	CC	_	12	cc	12:cc	_
 11	motor	motor	NOUN	NN	Number=Sing	12	compound	12:compound	Entity=(object-191
-12	boat	boat	NOUN	NN	Number=Sing	9	conj	6:obj|9:conj:or	Entity=object-191)
+12	boat	boat	NOUN	NN	Number=Sing	9	conj	6:obj|9:conj:or	Entity=object-191)|XML=</hi>
 13	and	and	CCONJ	CC	_	14	cc	14:cc	Discourse=joint:100->99
 14	take	take	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	6	conj	6:conj:and	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	Entity=(event-174
@@ -1192,13 +1235,16 @@
 # sent_id = AMALGUM_voyage_vevey-62
 # s_type = imp
 # text = Eat
+# newpar = head (1 s)
 1	Eat	eat	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:104->105
 
 # sent_id = AMALGUM_voyage_vevey-63
 # s_type = frag
 # text = National Bar.
-1	National	National	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=joint:105->102|Entity=(organization-199
-2	Bar	Bar	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-199)|SpaceAfter=No
+# newpar = list type:::"unordered" (12 s)
+# newpar1 = item (6 s)
+1	National	National	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=joint:105->102|Entity=(organization-199|XML=<hi rend:::"bold">
+2	Bar	Bar	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-199)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-64
@@ -1317,10 +1363,11 @@
 # sent_id = AMALGUM_voyage_vevey-69
 # s_type = frag
 # text = Restaurant des Trois Sifflets, Rue du Simplon 1, ☏ +41219211413 .
-1	Restaurant	Restaurant	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:119->117|Entity=(place-211
+# newpar = item (2 s)
+1	Restaurant	Restaurant	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:119->117|Entity=(place-211|XML=<hi rend:::"bold">
 2	des	des	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Trois	Trois	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Sifflets	Sifflet	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-211)|SpaceAfter=No
+4	Sifflets	Sifflet	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-211)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	Rue	Rue	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-212
 7	du	du	PROPN	NNP	Number=Sing	6	flat	6:flat	_
@@ -1347,9 +1394,10 @@
 # sent_id = AMALGUM_voyage_vevey-71
 # s_type = frag
 # text = Restaurant Denis Martin, Rue du Château 2, ☏ +41219211210 .
-1	Restaurant	Restaurant	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:121->120|Entity=(place-211
+# newpar = item (4 s)
+1	Restaurant	Restaurant	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:121->120|Entity=(place-211|XML=<hi rend:::"bold">
 2	Denis	Denis	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Martin	Martin	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-211)|SpaceAfter=No
+3	Martin	Martin	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-211)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	Rue	Rue	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-212
 6	du	du	PROPN	NNP	Number=Sing	5	flat	5:flat	_
@@ -1398,12 +1446,15 @@
 # sent_id = AMALGUM_voyage_vevey-75
 # s_type = imp
 # text = Drink
+# newpar = head (1 s)
 1	Drink	drink	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=attribution:125->126
 
 # sent_id = AMALGUM_voyage_vevey-76
 # s_type = frag
 # text = Charlies (just outside the main town square).
-1	Charlies	charly	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=joint:126->123|Entity=(place-221
+# newpar = list type:::"unordered" (6 s)
+# newpar1 = item (2 s)
+1	Charlies	charly	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=joint:126->123|Entity=(place-221|XML=<hi rend:::"bold"></hi>
 2	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:127->126|SpaceAfter=No
 3	just	just	ADV	RB	_	8	advmod	8:advmod	Entity=(place-209
 4	outside	outside	ADP	IN	_	8	case	8:case	_
@@ -1455,25 +1506,28 @@
 # sent_id = AMALGUM_voyage_vevey-78
 # s_type = frag
 # text = Le V.
-1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:132->128|Entity=(person-82)
-2	V	V	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No
+# newpar = item (1 s)
+1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:132->128|Entity=(person-82)|XML=<hi rend:::"bold">
+2	V	V	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-79
 # s_type = frag
 # text = The Rocking Chair.
-1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:133->132|Entity=(object-227
+# newpar = item (1 s)
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:133->132|Entity=(object-227|XML=<hi rend:::"bold">
 2	Rocking	Rocking	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Chair	Chair	PROPN	NNP	Number=Sing	0	root	0:root	Entity=object-227)|SpaceAfter=No
+3	Chair	Chair	PROPN	NNP	Number=Sing	0	root	0:root	Entity=object-227)|SpaceAfter=No|XML=</hi>
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-80
 # s_type = frag
 # text = le Bout du Monde.
-1	le	le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:134->133|Entity=(person-228
+# newpar = item (2 s)
+1	le	le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:134->133|Entity=(person-228|XML=<hi rend:::"bold">
 2	Bout	Bout	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	du	du	PROPN	NNP	Number=Sing	4	case	4:case	_
-4	Monde	Monde	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-228)|SpaceAfter=No
+4	Monde	Monde	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-228)|SpaceAfter=No|XML=</hi>
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_vevey-81
