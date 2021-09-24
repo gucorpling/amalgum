@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_israeli
+# meta::title = Four Israeli Arabs killed by Army deserter
+# meta::shortTitle = israeli
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2005-08-05
+# meta::dateModified = 2014-03-14
+# meta::sourceURL = https://en.wikinews.org/wiki/Four_Israeli_Arabs_killed_by_Army_deserter
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_israeli
 # sent_id = AMALGUM_news_israeli-1
 # s_type = frag
 # text = Four Israeli Arabs killed by Army deserter
+# newpar = head (1 s)
 1	Four	4	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	Discourse=preparation:1->8|Entity=(person-1
 2	Israeli	Israeli	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	Arabs	Arab	PROPN	NNPS	Number=Plur	0	root	0:root	_
@@ -13,19 +24,21 @@
 # sent_id = AMALGUM_news_israeli-2
 # s_type = frag
 # text = Friday, August 5, 2005
-1	Friday	Friday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->8|Entity=(time-4)|SpaceAfter=No
+# newpar = p (1 s)
+1	Friday	Friday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->8|Entity=(time-4)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
+3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4|XML=<date when:::"2005-08-05">
 4	5	5	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
+6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_israeli-3
 # s_type = decl
 # text = A uniformed AWOL Israeli private suddenly opened fire in a crowded bus, killing 4 Israeli Arabs and wounding 12.
+# newpar = p (3 s)
 1	A	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Discourse=preparation:3->8|Entity=(organization-6
 2	uniformed	uniformed	ADJ	JJ	Degree=Pos|Polarity=Neg	5	amod	5:amod	_
-3	AWOL	AWOL	ADJ	NNP	Number=Sing	5	amod	5:amod	_
+3	AWOL	AWOL	ADJ	NNP	Number=Sing	5	amod	5:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/AWOL"></ref>
 4	Israeli	Israeli	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	private	private	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=organization-6)
 6	suddenly	suddenly	ADV	RB	Degree=Pos	7	advmod	7:advmod	_
@@ -38,8 +51,8 @@
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
 14	killing	kill	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl	Discourse=result:4->3
 15	4	4	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	Entity=(person-1
-16	Israeli	Israeli	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	Arabs	Arab	PROPN	NNPS	Number=Plur	14	obj	14:obj	Entity=person-1)
+16	Israeli	Israeli	ADJ	JJ	Degree=Pos	17	amod	17:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Israeli%20Arab">
+17	Arabs	Arab	PROPN	NNPS	Number=Plur	14	obj	14:obj	Entity=person-1)|XML=</ref>
 18	and	and	CCONJ	CC	_	19	cc	19:cc	Discourse=joint:5->4
 19	wounding	wound	VERB	VBG	VerbForm=Ger	14	conj	7:advcl|14:conj:and	_
 20	12	12	NUM	CD	NumForm=Digit|NumType=Card	19	obj	19:obj	Entity=(person-9)|SpaceAfter=No
@@ -65,7 +78,7 @@
 # s_type = decl
 # text = The Israeli government condemned the random shooting and mobilized troops in anticipation of rioting in northern Israel.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=ROOT:8|Entity=(organization-13
-2	Israeli	Israeli	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+2	Israeli	Israeli	ADJ	JJ	Degree=Pos	3	amod	3:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Israel"></ref>
 3	government	government	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|9:nsubj	Entity=organization-13)
 4	condemned	condemn	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(event-14
@@ -77,7 +90,7 @@
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	anticipation	anticipation	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 13	of	of	ADP	IN	_	14	case	14:case	_
-14	rioting	rioting	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	Entity=(event-16
+14	rioting	rioting	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	Entity=(event-16|XML=<ref target:::"https://en.wikipedia.org/wiki/riot"></ref>
 15	in	in	ADP	IN	_	17	case	17:case	_
 16	northern	northern	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(place-17
 17	Israel	Israel	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	Entity=event-16)place-17)|SpaceAfter=No
@@ -86,6 +99,7 @@
 # sent_id = AMALGUM_news_israeli-6
 # s_type = decl
 # text = The attacker, Eden Natan-Zada, 19, boarded Egged bus 165 en route from Haifa and sat mid-section.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:10->8|Entity=(person-18
 2	attacker	attacker	NOUN	NN	Number=Sing	9	nsubj	9:nsubj|18:nsubj	Entity=person-18)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
@@ -95,13 +109,13 @@
 7	19	19	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=place-19)(abstract-20)|SpaceAfter=No
 8	,	,	PUNCT	,	_	2	punct	2:punct	_
 9	boarded	board	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=same_unit:11->10
-10	Egged	egg	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	Entity=(object-8
+10	Egged	egg	VERB	VBN	Tense=Past|VerbForm=Part	11	amod	11:amod	Entity=(object-8|XML=<ref target:::"https://en.wikipedia.org/wiki/Egged"></ref>
 11	bus	bus	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	165	165	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	Entity=object-8)
 13	en	en	ADP	IN	_	14	case	14:case	_
 14	route	route	NOUN	NN	Number=Sing	9	obl	9:obl:en	Entity=(abstract-21
 15	from	from	ADP	IN	_	16	case	16:case	_
-16	Haifa	Haifa	PROPN	NNP	Number=Sing	14	nmod	14:nmod:from	Entity=abstract-21)(place-22)
+16	Haifa	Haifa	PROPN	NNP	Number=Sing	14	nmod	14:nmod:from	Entity=abstract-21)(place-22)|XML=<ref target:::"https://en.wikipedia.org/wiki/Haifa"></ref>
 17	and	and	CCONJ	CC	_	18	cc	18:cc	Discourse=joint:12->11
 18	sat	sit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	9:conj:and	_
 19	mid-section	mid-section	NOUN	NN	Number=Sing	18	obl:npmod	18:obl:npmod	SpaceAfter=No
@@ -130,7 +144,7 @@
 18	center	center	NOUN	NN	Number=Sing	15	nmod	15:nmod:at	_
 19	of	of	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(place-26
-21	Druze	Druze	ADJ	JJ	Degree=Pos	22	amod	22:amod	_
+21	Druze	Druze	ADJ	JJ	Degree=Pos	22	amod	22:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Druze"></ref>
 22	neighborhood	neighborhood	NOUN	NN	Number=Sing	18	nmod	18:nmod:of	_
 23	of	of	ADP	IN	_	28	case	28:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(place-19
@@ -139,7 +153,7 @@
 27	Arab	Arab	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
 28	town	town	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	_
 29	of	of	ADP	IN	_	30	case	30:case	_
-30	Shefa-Amr	Shefa-Amr	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=(place-27)
+30	Shefa-Amr	Shefa-Amr	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=(place-27)|XML=<ref target:::"https://en.wikipedia.org/wiki/Shefa-Amr"></ref>
 31	in	in	ADP	IN	_	33	case	33:case	_
 32	lower	low	ADJ	JJR	Degree=Cmp	33	amod	33:amod	Entity=(place-28
 33	Galilee	Galilee	PROPN	NNP	Number=Sing	28	nmod	28:nmod:in	Entity=event-24)place-25)place-26)place-19)place-28)|SpaceAfter=No
@@ -168,7 +182,7 @@
 11	head	head	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=object-32)
 12	with	with	ADP	IN	_	14	case	14:case	_
 13	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	Entity=(object-33(person-18)
-14	M16	M16	PROPN	NNP	Number=Sing	6	obl	6:obl:with	Entity=object-33)
+14	M16	M16	PROPN	NNP	Number=Sing	6	obl	6:obl:with	Entity=object-33)|XML=<ref target:::"https://en.wikipedia.org/wiki/M16%20(rifle)"></ref>
 15	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=joint:17->16
 16	began	begin	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	conj	6:conj:and	_
 17	systematically	systematically	ADV	RB	Degree=Pos	16	xcomp	16:xcomp	_
@@ -210,6 +224,7 @@
 # sent_id = AMALGUM_news_israeli-10
 # s_type = decl
 # text = As Natan-Zada was reloading his rifle and a young girl pleaded with him to spare her, Ahayal Jahnawi, 28 began struggling with the gunman.
+# newpar = p (7 s)
 1	As	as	SCONJ	IN	_	4	mark	4:mark	Discourse=joint:22->19
 2	Natan-Zada	Natan-Zada	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=(person-29)
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
@@ -343,9 +358,9 @@
 # sent_id = AMALGUM_news_israeli-16
 # s_type = decl
 # text = Magen David Adom ambulances evacuated the wounded to Rambam Medical Center in Haifa.
-1	Magen	Magen	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:37->19|Entity=(object-57(person-58
+1	Magen	Magen	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:37->19|Entity=(object-57(person-58|XML=<ref target:::"https://en.wikipedia.org/wiki/Magen%20David%20Adom">
 2	David	David	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Adom	Adom	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-58)
+3	Adom	Adom	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-58)|XML=</ref>
 4	ambulances	ambulance	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=object-57)
 5	evacuated	evacuate	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	_
@@ -361,6 +376,7 @@
 # sent_id = AMALGUM_news_israeli-17
 # s_type = decl
 # text = Natan-Zada had been absent without leave from his army unit since mid-June after refusing to participate in preparations for the Gaza pullout.
+# newpar = p (4 s)
 1	Natan-Zada	Natan-Zada	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:38->19|Entity=(person-29)
 2	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	cop	4:cop	_
@@ -372,7 +388,7 @@
 9	army	army	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(organization-62)
 10	unit	unit	NOUN	NN	Number=Sing	4	obl	4:obl:from	Entity=organization-61)
 11	since	since	ADP	IN	_	12	case	12:case	_
-12	mid-June	mid-June	NOUN	NN	Number=Sing	4	obl	4:obl:since	Entity=(time-63)
+12	mid-June	mid-June	NOUN	NN	Number=Sing	4	obl	4:obl:since	Entity=(time-63)|XML=<date when:::"2005-06"></date>
 13	after	after	SCONJ	IN	_	14	mark	14:mark	Discourse=circumstance:39->38
 14	refusing	refuse	VERB	VBG	VerbForm=Ger	4	advcl	4:advcl:after	_
 15	to	to	PART	TO	_	16	mark	16:mark	_
@@ -381,7 +397,7 @@
 18	preparations	preparation	NOUN	NNS	Number=Plur	16	obl	16:obl:in	Entity=(event-64
 19	for	for	ADP	IN	_	22	case	22:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(event-65
-21	Gaza	Gaza	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-66)
+21	Gaza	Gaza	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-66)|XML=<ref target:::"https://en.wikipedia.org/wiki/Gaza"></ref>
 22	pullout	pullout	NOUN	NN	Number=Sing	18	nmod	18:nmod:for	Entity=event-64)event-65)|SpaceAfter=No
 23	.	.	PUNCT	.	_	4	punct	4:punct	_
 
@@ -391,19 +407,19 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=joint:40->19|Entity=(person-29)
 2	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	ADP	IN	_	4	case	4:case	_
-4	Kfar	Kfar	PROPN	NNP	Number=Sing	2	obl	2:obl:to	Entity=(place-67
-5	Tapuach	Tapuach	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=place-67)|SpaceAfter=No
+4	Kfar	Kfar	PROPN	NNP	Number=Sing	2	obl	2:obl:to	Entity=(place-67|XML=<ref target:::"https://en.wikipedia.org/wiki/Kfar%20Tapuach">
+5	Tapuach	Tapuach	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=place-67)|SpaceAfter=No|XML=</ref>
 6	,	,	PUNCT	,	_	11	punct	11:punct	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(place-67
-8	West	West	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(place-68
-9	Bank	Bank	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=place-68)
+8	West	West	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(place-68|XML=<ref target:::"https://en.wikipedia.org/wiki/West%20Bank">
+9	Bank	Bank	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=place-68)|XML=</ref>
 10	Jewish	Jewish	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	settlement	settlement	NOUN	NN	Number=Sing	4	appos	4:appos	_
 12	dominated	dominate	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	Discourse=elaboration:41->40
 13	by	by	ADP	IN	_	17	case	17:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(organization-69
 15	militant	militant	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-16	Kach	Kach	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(person-70)
+16	Kach	Kach	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(person-70)|XML=<ref target:::"https://en.wikipedia.org/wiki/Kach%20and%20Kahane%20Chai"></ref>
 17	movement	movement	NOUN	NN	Number=Sing	12	obl	12:obl:by	Entity=place-67)organization-69)|SpaceAfter=No
 18	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -446,8 +462,8 @@
 9	family	family	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(abstract-76)
 10	home	home	NOUN	NN	Number=Sing	6	obl	6:obl:from	_
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	Rishon	Rishon	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	Entity=(place-77
-13	LeZion	LeZion	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-74)place-75)place-77)
+12	Rishon	Rishon	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	Entity=(place-77|XML=<ref target:::"https://en.wikipedia.org/wiki/Rishon%20LeZion">
+13	LeZion	LeZion	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-74)place-75)place-77)|XML=</ref>
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	Discourse=attribution:47->48
 15	told	tell	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 16	that	that	SCONJ	IN	_	20	mark	20:mark	Discourse=joint:48->19
@@ -463,7 +479,7 @@
 26	officially	officially	ADV	RB	Degree=Pos	27	advmod	27:advmod	_
 27	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	advcl	20:advcl:to	_
 28	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	Entity=(person-80
-29	deserter	deserter	NOUN	NN	Number=Sing	27	xcomp	27:xcomp	Entity=person-80)
+29	deserter	deserter	NOUN	NN	Number=Sing	27	xcomp	27:xcomp	Entity=person-80)|XML=<ref target:::"https://en.wikipedia.org/wiki/deserter"></ref>
 30	and	and	CCONJ	CC	_	32	cc	32:cc	Discourse=joint:50->48
 31	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	32	aux:pass	32:aux:pass	_
 32	advised	advise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	15	conj	15:conj:and	_
@@ -482,37 +498,38 @@
 # sent_id = AMALGUM_news_israeli-21
 # s_type = decl
 # text = Eden had recently become more fanatical and encountered writings on the Internet about revenge and zealots in Judaism published by the outlawed terrorist Kach group in The Way of the Torah.
+# newpar = p (2 s)
 1	Eden	Eden	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj|8:nsubj	Discourse=joint:52->48|Entity=(person-71)
 2	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	recently	recently	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 4	become	become	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	more	more	ADV	RBR	Degree=Cmp	6	advmod	6:advmod	_
-6	fanatical	fanatical	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	_
+6	fanatical	fanatical	ADJ	JJ	Degree=Pos	4	xcomp	4:xcomp	XML=<ref target:::"https://en.wikipedia.org/wiki/fanaticism"></ref>
 7	and	and	CCONJ	CC	_	8	cc	8:cc	Discourse=joint:53->52
 8	encountered	encounter	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 9	writings	writing	NOUN	NNS	Number=Plur	8	obj	8:obj	Entity=(abstract-81
 10	on	on	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(place-82
-12	Internet	Internet	PROPN	NNP	Number=Sing	9	nmod	9:nmod:on	Entity=place-82)
+12	Internet	Internet	PROPN	NNP	Number=Sing	9	nmod	9:nmod:on	Entity=place-82)|XML=<ref target:::"https://en.wikipedia.org/wiki/Internet"></ref>
 13	about	about	ADP	IN	_	14	case	14:case	_
-14	revenge	revenge	NOUN	NN	Number=Sing	9	nmod	9:nmod:about	Entity=(abstract-83)
+14	revenge	revenge	NOUN	NN	Number=Sing	9	nmod	9:nmod:about	Entity=(abstract-83)|XML=<ref target:::"https://en.wikipedia.org/wiki/revenge"></ref>
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	zealots	zealot	NOUN	NNS	Number=Plur	14	conj	9:nmod:about|14:conj:and	Entity=(person-84
+16	zealots	zealot	NOUN	NNS	Number=Plur	14	conj	9:nmod:about|14:conj:and	Entity=(person-84|XML=<ref target:::"https://en.wikipedia.org/wiki/zealot"></ref>
 17	in	in	ADP	IN	_	18	case	18:case	_
 18	Judaism	Judaism	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	Entity=(abstract-85)
 19	published	publish	VERB	VBN	Tense=Past|VerbForm=Part	14	acl	14:acl	Discourse=elaboration:54->53
 20	by	by	ADP	IN	_	25	case	25:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(organization-86
 22	outlawed	outlaw	VERB	VBN	Tense=Past|VerbForm=Part	25	amod	25:amod	_
-23	terrorist	terrorist	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(person-87)
+23	terrorist	terrorist	NOUN	NN	Number=Sing	25	compound	25:compound	Entity=(person-87)|XML=<ref target:::"https://en.wikipedia.org/wiki/terrorism"></ref>
 24	Kach	Kach	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(person-70)
 25	group	group	NOUN	NN	Number=Sing	19	obl	19:obl:by	_
 26	in	in	ADP	IN	_	28	case	28:case	_
-27	The	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(person-88
+27	The	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(person-88|XML=<hi rend:::"italic">
 28	Way	Way	PROPN	NNP	Number=Sing	25	nmod	25:nmod:in	_
 29	of	of	ADP	IN	_	31	case	31:case	_
 30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(abstract-89
-31	Torah	Torah	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=abstract-81)person-84)organization-86)person-88)abstract-89)|SpaceAfter=No
+31	Torah	Torah	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=abstract-81)person-84)organization-86)person-88)abstract-89)|SpaceAfter=No|XML=</hi>
 32	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_news_israeli-22
@@ -553,27 +570,28 @@
 # sent_id = AMALGUM_news_israeli-23
 # s_type = frag
 # text = When called up into the Israel Defense Forces (IDF) for basic training
+# newpar = p (5 s)
 1	When	when	SCONJ	WRB	PronType=Int	2	mark	2:mark	Discourse=sequence:59->52
 2	called	call	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 3	up	up	ADP	RP	_	2	compound:prt	2:compound:prt	_
 4	into	into	ADP	IN	_	8	case	8:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(organization-97
-6	Israel	Israel	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-98)
+6	Israel	Israel	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-98)|XML=<ref target:::"https://en.wikipedia.org/wiki/Israel%20Defense%20Forces">
 7	Defense	Defense	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-99)
-8	Forces	Force	PROPN	NNPS	Number=Plur	2	obl	2:obl:into	Entity=organization-97)
+8	Forces	Force	PROPN	NNPS	Number=Plur	2	obl	2:obl:into	Entity=organization-97)|XML=</ref>
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=elaboration:60->59|SpaceAfter=No
 10	IDF	IDF	PROPN	NNP	Number=Sing	8	appos	8:appos	Entity=(organization-97)|SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 12	for	for	ADP	IN	_	14	case	14:case	_
-13	basic	basic	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(abstract-100
-14	training	training	NOUN	NN	Number=Sing	2	obl	2:obl:for	Entity=abstract-100)
+13	basic	basic	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(abstract-100|XML=<ref target:::"https://en.wikipedia.org/wiki/recruit%20training">
+14	training	training	NOUN	NN	Number=Sing	2	obl	2:obl:for	Entity=abstract-100)|XML=</ref>
 
 # sent_id = AMALGUM_news_israeli-24
 # s_type = frag
 # text = in May 2005
 1	in	in	ADP	IN	_	2	case	2:case	Discourse=joint:61->59
-2	May	May	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(time-101
-3	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-101)(time-5)
+2	May	May	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(time-101|XML=<date when:::"2005-05">
+3	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=time-101)(time-5)|XML=</date>
 
 # sent_id = AMALGUM_news_israeli-25
 # s_type = decl
@@ -656,12 +674,15 @@
 # sent_id = AMALGUM_news_israeli-28
 # s_type = frag
 # text = The dead
+# newpar = head (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:74->59
 2	dead	dead	ADJ	JJ	Degree=Pos	0	root	0:root	_
 
 # sent_id = AMALGUM_news_israeli-29
 # s_type = frag
 # text = Michel Bahus, 56 (bus driver, Christian)
+# newpar = list type:::"unordered" (4 s)
+# newpar1 = item (1 s)
 1	Michel	Michel	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:75->59|Entity=(person-113
 2	Bahus	Bahus	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-113)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
@@ -670,12 +691,13 @@
 6	bus	bus	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(person-115(object-8)
 7	driver	driver	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=person-115)|SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Christian	Christian	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(person-115)|SpaceAfter=No
+9	Christian	Christian	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(person-115)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Christian"></ref>
 10	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_news_israeli-30
 # s_type = frag
 # text = Nader Hayak, 55 (Christian)
+# newpar = item (1 s)
 1	Nader	Nader	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:77->59|Entity=(person-116
 2	Hayak	Hayak	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-116)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
@@ -687,17 +709,19 @@
 # sent_id = AMALGUM_news_israeli-31
 # s_type = frag
 # text = Hazar Turki, 23 (Muslim)
+# newpar = item (1 s)
 1	Hazar	Hazar	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:79->59|Entity=(person-36
 2	Turki	Turki	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-36)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	23	23	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	Entity=(abstract-37)
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:80->79|SpaceAfter=No
-6	Muslim	Muslim	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No
+6	Muslim	Muslim	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Muslim"></ref>
 7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_news_israeli-32
 # s_type = frag
 # text = Dina Turki, 21 (sister of Hazar, Muslim)
+# newpar = item (1 s)
 1	Dina	Dina	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:81->59|Entity=(person-38
 2	Turki	Turki	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-38)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_

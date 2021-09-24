@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_allegations
+# meta::title = Mubarak summoned by Egyptian prosecutors to face allegations of killings and corruption
+# meta::shortTitle = allegations
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2011-04-10
+# meta::dateModified = 2014-12-16
+# meta::sourceURL = https://en.wikinews.org/wiki/Mubarak_summoned_by_Egyptian_prosecutors_to_face_allegations_of_killings_and_corruption
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_allegations
 # sent_id = AMALGUM_news_allegations-1
 # s_type = decl
 # text = Mubarak summoned by Egyptian prosecutors to face allegations of killings and corruption
+# newpar = head (1 s)
 1	Mubarak	Mubarak	PROPN	NNP	Number=Sing	2	nsubj:pass	2:nsubj:pass	Discourse=preparation:1->4|Entity=(person-1)
 2	summoned	summon	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 3	by	by	ADP	IN	_	5	case	5:case	_
@@ -18,26 +29,29 @@
 # sent_id = AMALGUM_news_allegations-2
 # s_type = frag
 # text = Sunday, April 10, 2011
-1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-6)|SpaceAfter=No
+# newpar = p (1 s)
+1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-6)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	April	April	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6
+3	April	April	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6|XML=<date when:::"2011-04-10">
 4	10	10	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)
+6	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_allegations-3
 # s_type = decl
 # text = Hosni Mubarak was ousted as president of Egypt in February.
-1	Hosni	Hosni	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass	Discourse=ROOT:4|Entity=(person-1
-2	Mubarak	Mubarak	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
+1	Hosni	Hosni	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass	Discourse=ROOT:4|Entity=(person-1|XML=<ref target:::"https://en.wikinews.org/wiki/Hosni_Mubarak">
+2	Mubarak	Mubarak	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|XML=</ref>
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	ousted	oust	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	as	as	ADP	IN	_	6	case	6:case	_
 6	president	president	NOUN	NN	Number=Sing	4	obl	4:obl:as	Entity=(person-8
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	Egypt	Egypt	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=person-8)(place-9)
+8	Egypt	Egypt	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=person-8)(place-9)|XML=<ref target:::"https://en.wikinews.org/wiki/Egypt"></ref>
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	February	February	PROPN	NNP	Number=Sing	4	obl	4:obl:in	Entity=(time-10)|SpaceAfter=No
+10	February	February	PROPN	NNP	Number=Sing	4	obl	4:obl:in	Entity=(time-10)|SpaceAfter=No|XML=<date when:::"2011-02"></date>
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_news_allegations-4
@@ -45,7 +59,7 @@
 # text = Image: Executive Office of the President of the United States.
 1	Image	image	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:5->6|Entity=(abstract-11)|SpaceAfter=No
 2	:	:	PUNCT	:	_	4	punct	4:punct	_
-3	Executive	executive	ADJ	NNP	Number=Sing	4	amod	4:amod	Discourse=attribution:6->4
+3	Executive	executive	ADJ	NNP	Number=Sing	4	amod	4:amod	Discourse=attribution:6->4|XML=<ref target:::"https://en.wikipedia.org/wiki/Executive%20Office%20of%20the%20President%20of%20the%20United%20States">
 4	Office	Office	PROPN	NNP	Number=Sing	1	dep	1:dep	_
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(person-12
@@ -53,24 +67,25 @@
 8	of	of	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-13
 10	United	Unite	VERB	NNP	Number=Sing	11	amod	11:amod	_
-11	States	State	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:of	Entity=person-12)place-13)|SpaceAfter=No
+11	States	State	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:of	Entity=person-12)place-13)|SpaceAfter=No|XML=</ref>
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_allegations-5
 # s_type = decl
 # text = Hosni Mubarak, the Egyptian president ousted in February after massive demonstrations, has been summoned by officials in the country to face questions about corruption within his administration and allegations he ordered his forces to kill activists protesting against him.
-1	Hosni	Hosni	PROPN	NNP	Number=Sing	16	nsubj:pass	16:nsubj:pass	Discourse=joint:7->4|Entity=(person-1
-2	Mubarak	Mubarak	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|SpaceAfter=No
+# newpar = p (1 s)
+1	Hosni	Hosni	PROPN	NNP	Number=Sing	16	nsubj:pass	16:nsubj:pass	Discourse=joint:7->4|Entity=(person-1|XML=<ref target:::"https://en.wikinews.org/wiki/Hosni_Mubarak">
+2	Mubarak	Mubarak	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|SpaceAfter=No|XML=</ref>
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(person-1
-5	Egyptian	Egyptian	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
+5	Egyptian	Egyptian	ADJ	JJ	Degree=Pos	6	amod	6:amod	XML=<ref target:::"https://en.wikinews.org/wiki/Egypt"></ref>
 6	president	president	NOUN	NN	Number=Sing	1	appos	1:appos	_
-7	ousted	oust	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	Discourse=elaboration:8->7
+7	ousted	oust	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	Discourse=elaboration:8->7|XML=<ref target:::"https://en.wikipedia.org/wiki/Resignation%20of%20Hosni%20Mubarak"></ref>
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	February	February	PROPN	NNP	Number=Sing	7	obl	7:obl:in	Entity=(time-10)
+9	February	February	PROPN	NNP	Number=Sing	7	obl	7:obl:in	Entity=(time-10)|XML=<date when:::"2012-02"></date>
 10	after	after	ADP	IN	_	12	case	12:case	_
-11	massive	massive	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(event-14
-12	demonstrations	demonstration	NOUN	NNS	Number=Plur	7	obl	7:obl:after	Entity=person-1)event-14)|SpaceAfter=No
+11	massive	massive	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(event-14|XML=<ref target:::"https://en.wikinews.org/wiki/2011_Egyptian_revolution">
+12	demonstrations	demonstration	NOUN	NNS	Number=Plur	7	obl	7:obl:after	Entity=person-1)event-14)|SpaceAfter=No|XML=</ref>
 13	,	,	PUNCT	,	_	1	punct	1:punct	_
 14	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	16	aux	16:aux	Discourse=same_unit:9->7
 15	been	be	AUX	VBN	Tense=Past|VerbForm=Part	16	aux:pass	16:aux:pass	_
@@ -105,6 +120,7 @@
 # sent_id = AMALGUM_news_allegations-6
 # s_type = decl
 # text = The news came hours after Mubarak announced he would cooperate with the investigation into corruption within his regime, and said he would robustly defend himself against what he termed an "unjust" campaign of "distortions, lies and incitement" against him.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:13->14|Entity=(abstract-20
 2	news	news	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-20)
 3	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -174,6 +190,7 @@
 # sent_id = AMALGUM_news_allegations-8
 # s_type = decl
 # text = His two sons have also been summoned by Egyptian prosecutors to answer to allegations of embezzlement of public funds during Mubarak's rule.
+# newpar = p (2 s)
 1	His	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	Discourse=joint:19->4|Entity=(person-31(person-1)
 2	two	2	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	sons	son	NOUN	NNS	Number=Plur	7	nsubj:pass	7:nsubj:pass|12:nsubj:xsubj	Entity=person-31)
@@ -189,7 +206,7 @@
 13	to	to	ADP	IN	_	14	case	14:case	_
 14	allegations	allegation	NOUN	NNS	Number=Plur	12	obl	12:obl:to	Entity=(abstract-32
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	embezzlement	embezzlement	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=(event-33
+16	embezzlement	embezzlement	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=(event-33|XML=<ref target:::"https://en.wikipedia.org/wiki/embezzlement"></ref>
 17	of	of	ADP	IN	_	19	case	19:case	_
 18	public	public	ADJ	JJ	Degree=Pos	19	amod	19:amod	Entity=(abstract-34
 19	funds	fund	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	Entity=abstract-34)
@@ -213,8 +230,8 @@
 8	of	of	ADP	IN	_	9	case	9:case	_
 9	Egypt	Egypt	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=person-37)(place-9)|SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	Ahmed	Ahmed	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(person-37
-12	Nazif	Nazif	PROPN	NNP	Number=Sing	11	flat	11:flat	Entity=person-37)|SpaceAfter=No
+11	Ahmed	Ahmed	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(person-37|XML=<ref target:::"https://en.wikipedia.org/wiki/Ahmed%20Nazif">
+12	Nazif	Nazif	PROPN	NNP	Number=Sing	11	flat	11:flat	Entity=person-37)|SpaceAfter=No|XML=</ref>
 13	,	,	PUNCT	,	_	7	punct	7:punct	_
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 15	taken	take	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	32	ccomp	32:ccomp	_
@@ -243,6 +260,7 @@
 # sent_id = AMALGUM_news_allegations-10
 # s_type = decl
 # text = Mubarak said he would not be returning to politics and he had left office in "the interest of the country".
+# newpar = p (2 s)
 1	Mubarak	Mubarak	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:23->24|Entity=(person-1)
 2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	Discourse=joint:24->4|Entity=(person-1)
@@ -327,7 +345,7 @@
 # sent_id = AMALGUM_news_allegations-12
 # s_type = decl
 # text = I have been in great pain because of the unjust campaigns and untrue allegations targeting myself and my family. —Hosni Mubarak
-1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	Discourse=joint:35->4|Entity=(person-1)
+1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	6	nsubj	6:nsubj	Discourse=joint:35->4|Entity=(person-1)|XML=<hi rend:::"bold">
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	6	aux	6:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	6	cop	6:cop	_
 4	in	in	ADP	IN	_	6	case	6:case	_
@@ -346,14 +364,15 @@
 17	and	and	CCONJ	CC	_	12	cc	12:cc	_
 18	my	my	PRON	PRP$	Number=Sing|Person=1|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	Entity=(person-50(person-1)
 19	family	family	NOUN	NN	Number=Sing	16	conj	15:obj|16:conj	Entity=abstract-48)abstract-47)person-50)|SpaceAfter=No
-20	.	.	PUNCT	.	_	6	punct	6:punct	_
-21	—	—	PUNCT	:	_	22	punct	22:punct	Discourse=attribution:38->35|SpaceAfter=No
-22	Hosni	Hosni	PROPN	NNP	Number=Sing	6	dep	6:dep	_
-23	Mubarak	Mubarak	PROPN	NNP	Number=Sing	22	flat	22:flat	_
+20	.	.	PUNCT	.	_	6	punct	6:punct	XML=</hi>
+21	—	—	PUNCT	:	_	22	punct	22:punct	Discourse=attribution:38->35|SpaceAfter=No|XML=<p>
+22	Hosni	Hosni	PROPN	NNP	Number=Sing	6	dep	6:dep	XML=<ref target:::"https://en.wikinews.org/wiki/Hosni_Mubarak">
+23	Mubarak	Mubarak	PROPN	NNP	Number=Sing	22	flat	22:flat	XML=</ref></p>
 
 # sent_id = AMALGUM_news_allegations-13
 # s_type = decl
 # text = In an audio message which aired today on Al-Arabiya, Mubarak said he would not "stay silent regarding the incitement campaign against me."
+# newpar = p (4 s)
 1	In	in	ADP	IN	_	4	case	4:case	Discourse=elaboration:39->35
 2	an	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(abstract-51
 3	audio	audio	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
@@ -362,7 +381,7 @@
 6	aired	air	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
 7	today	today	NOUN	NN	Number=Sing	6	obl:tmod	6:obl:tmod	Entity=(time-52)
 8	on	on	ADP	IN	_	9	case	9:case	_
-9	Al-Arabiya	Al-Arabiya	PROPN	NNP	Number=Sing	6	obl	6:obl:on	Entity=abstract-51)(organization-53)|SpaceAfter=No
+9	Al-Arabiya	Al-Arabiya	PROPN	NNP	Number=Sing	6	obl	6:obl:on	Entity=abstract-51)(organization-53)|SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Al-Arabiya"></ref></hi>
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 11	Mubarak	Mubarak	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	Discourse=attribution:41->42|Entity=(person-1)
 12	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -455,8 +474,9 @@
 # sent_id = AMALGUM_news_allegations-17
 # s_type = decl
 # text = On Friday, dozens were injured and at least one person killed as the Egyptian army moved into Tahrir Square in Cairo to clear protesters calling for Mubarak to stand trial for corruption.
+# newpar = p (2 s)
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=joint:50->44
-2	Friday	Friday	PROPN	NNP	Number=Sing	6	obl	6:obl:on	Entity=(time-60)|SpaceAfter=No
+2	Friday	Friday	PROPN	NNP	Number=Sing	6	obl	6:obl:on	Entity=(time-60)|SpaceAfter=No|XML=<date when:::"2011-04-08"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	dozens	dozen	NOUN	NNS	Number=Plur	6	nsubj:pass	6:nsubj:pass	Entity=(person-61)
 5	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass|12:aux:pass	_
@@ -473,10 +493,10 @@
 16	army	army	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	Entity=organization-63)
 17	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:as	_
 18	into	into	ADP	IN	_	20	case	20:case	_
-19	Tahrir	Tahrir	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(place-64(place-65)
-20	Square	Square	PROPN	NNP	Number=Sing	17	obl	17:obl:into	_
+19	Tahrir	Tahrir	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(place-64(place-65)|XML=<ref target:::"https://en.wikinews.org/wiki/Tahrir_Square">
+20	Square	Square	PROPN	NNP	Number=Sing	17	obl	17:obl:into	XML=</ref>
 21	in	in	ADP	IN	_	22	case	22:case	_
-22	Cairo	Cairo	PROPN	NNP	Number=Sing	20	nmod	20:nmod:in	Entity=place-64)(place-66)
+22	Cairo	Cairo	PROPN	NNP	Number=Sing	20	nmod	20:nmod:in	Entity=place-64)(place-66)|XML=<ref target:::"https://en.wikinews.org/wiki/Cairo"></ref>
 23	to	to	PART	TO	_	24	mark	24:mark	Discourse=purpose:52->51
 24	clear	clear	VERB	VB	VerbForm=Inf	17	advcl	17:advcl:to	_
 25	protesters	protester	NOUN	NNS	Number=Plur	24	obj	24:obj	Entity=(person-67
@@ -498,8 +518,8 @@
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	denied	deny	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	using	use	VERB	VBG	VerbForm=Ger	4	xcomp	4:xcomp	_
-6	live	live	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(abstract-69
-7	ammunition	ammunition	NOUN	NN	Number=Sing	5	obj	5:obj	Entity=abstract-69)|SpaceAfter=No
+6	live	live	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(abstract-69|XML=<ref target:::"https://en.wikipedia.org/wiki/live%20ammunition">
+7	ammunition	ammunition	NOUN	NN	Number=Sing	5	obj	5:obj	Entity=abstract-69)|SpaceAfter=No|XML=</ref>
 8	,	,	PUNCT	,	_	12	punct	12:punct	_
 9	but	but	CCONJ	CC	_	12	cc	12:cc	Discourse=contrast:55->54
 10	several	several	ADJ	JJ	Degree=Pos	11	amod	11:amod	Entity=(person-15
@@ -512,6 +532,7 @@
 # sent_id = AMALGUM_news_allegations-19
 # s_type = decl
 # text = Three people within Mubarak's administration have been charged with corruption by Egyptian authorities in the wake of Mubarak stepping down from his position as president two months ago after widespread protests in Egypt.
+# newpar = p (3 s)
 1	Three	3	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:56->44|Entity=(person-15
 2	people	person	NOUN	NNS	Number=Plur	9	nsubj:pass	9:nsubj:pass	_
 3	within	within	ADP	IN	_	6	case	6:case	_
@@ -571,16 +592,16 @@
 17	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	18	nmod:poss	18:nmod:poss	Entity=(place-77(person-62)
 18	home	home	NOUN	NN	Number=Sing	15	obl	15:obl:at	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	Sharm	Sharm	PROPN	NNP	Number=Sing	18	nmod	18:nmod:in	Entity=(place-78
-21	el-Sheikh	el-Sheikh	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-78)|SpaceAfter=No
+20	Sharm	Sharm	PROPN	NNP	Number=Sing	18	nmod	18:nmod:in	Entity=(place-78|XML=<ref target:::"https://en.wikinews.org/wiki/Sharm_el-Sheikh">
+21	el-Sheikh	el-Sheikh	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-78)|SpaceAfter=No|XML=</ref>
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
 23	on	on	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(place-79
 25	coast	coast	NOUN	NN	Number=Sing	18	nmod	18:nmod:on	_
 26	of	of	ADP	IN	_	29	case	29:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(place-80
-28	Red	Red	PROPN	NNP	Number=Sing	29	compound	29:compound	_
-29	Sea	Sea	PROPN	NNP	Number=Sing	25	nmod	25:nmod:of	Entity=place-77)place-79)place-80)|SpaceAfter=No
+28	Red	Red	PROPN	NNP	Number=Sing	29	compound	29:compound	XML=<ref target:::"https://en.wikinews.org/wiki/Red_Sea">
+29	Sea	Sea	PROPN	NNP	Number=Sing	25	nmod	25:nmod:of	Entity=place-77)place-79)place-80)|SpaceAfter=No|XML=</ref>
 30	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_allegations-21

@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_strikes
+# meta::title = Israeli air strikes hit government compounds in Gaza
+# meta::shortTitle = strikes
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2008-12-27
+# meta::dateModified = 2015-09-18
+# meta::sourceURL = https://en.wikinews.org/wiki/Israeli_air_strikes_hit_government_compounds_in_Gaza
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_strikes
 # sent_id = AMALGUM_news_strikes-1
 # s_type = frag
 # text = Israeli air strikes hit government compounds in Gaza
+# newpar = head (1 s)
 1	Israeli	Israeli	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=preparation:1->5|Entity=(event-1
 2	air	air	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(abstract-2)
 3	strikes	strike	NOUN	NNS	Number=Plur	0	root	0:root	_
@@ -14,26 +25,29 @@
 # sent_id = AMALGUM_news_strikes-2
 # s_type = frag
 # text = Saturday, December 27, 2008
-1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->5|Entity=(time-6)|SpaceAfter=No
+# newpar = p (1 s)
+1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->5|Entity=(time-6)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	December	December	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6
+3	December	December	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6|XML=<date when:::"2008-12-27">
 4	27	27	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)
+6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_strikes-3
 # s_type = frag
 # text = Map of the Palestinian-Israeli conflict area and War on Terrorism
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Map	map	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:3->5|Entity=(abstract-8
 2	of	of	ADP	IN	_	6	case	6:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(place-9(place-10
-4	Palestinian-Israeli	Palestinian-Israeli	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-5	conflict	conflict	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(event-11)
+4	Palestinian-Israeli	Palestinian-Israeli	ADJ	JJ	Degree=Pos	6	amod	6:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Palestinian-Israeli%20conflict">
+5	conflict	conflict	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(event-11)|XML=</ref>
 6	area	area	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	Entity=place-10)
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	War	War	PROPN	NNP	Number=Sing	6	conj	1:nmod:of|6:conj:and	Entity=(event-12
+8	War	War	PROPN	NNP	Number=Sing	6	conj	1:nmod:of|6:conj:and	Entity=(event-12|XML=<ref target:::"https://en.wikipedia.org/wiki/War%20on%20Terrorism">
 9	on	on	ADP	IN	_	10	case	10:case	_
-10	Terrorism	Terrorism	PROPN	NNP	Number=Sing	8	nmod	8:nmod:on	Entity=abstract-8)place-9)event-12)(abstract-13)
+10	Terrorism	Terrorism	PROPN	NNP	Number=Sing	8	nmod	8:nmod:on	Entity=abstract-8)place-9)event-12)(abstract-13)|XML=</ref>
 
 # sent_id = AMALGUM_news_strikes-4
 # s_type = frag
@@ -46,7 +60,8 @@
 # sent_id = AMALGUM_news_strikes-5
 # s_type = decl
 # text = Israel has launched with at least 30 simultaneous missiles strikes on Hamas installations in Gaza City, causing heavy damage.
-1	Israel	Israel	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=ROOT:5|Entity=(place-15)
+# newpar = p (2 s)
+1	Israel	Israel	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=ROOT:5|Entity=(place-15)|XML=<ref target:::"https://en.wikinews.org/wiki/Israel"></ref>
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	launched	launch	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 4	with	with	ADP	IN	_	10	case	10:case	_
@@ -57,11 +72,11 @@
 9	missiles	missile	NOUN	NNS	Number=Plur	10	compound	10:compound	Entity=(object-16)
 10	strikes	strike	NOUN	NNS	Number=Plur	3	obl	3:obl:with	_
 11	on	on	ADP	IN	_	13	case	13:case	_
-12	Hamas	Hamas	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(place-17(person-18)
+12	Hamas	Hamas	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(place-17(person-18)|XML=<ref target:::"https://en.wikipedia.org/wiki/Hamas"></ref>
 13	installations	installation	NOUN	NNS	Number=Plur	10	nmod	10:nmod:on	_
 14	in	in	ADP	IN	_	16	case	16:case	_
-15	Gaza	Gaza	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(place-19
-16	City	City	PROPN	NNP	Number=Sing	13	nmod	13:nmod:in	Entity=event-1)place-17)place-19)|SpaceAfter=No
+15	Gaza	Gaza	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(place-19|XML=<ref target:::"https://en.wikipedia.org/wiki/Gaza%20City">
+16	City	City	PROPN	NNP	Number=Sing	13	nmod	13:nmod:in	Entity=event-1)place-17)place-19)|SpaceAfter=No|XML=</ref>
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
 18	causing	cause	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	Discourse=result:6->5
 19	heavy	heavy	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(abstract-20
@@ -71,8 +86,8 @@
 # sent_id = AMALGUM_news_strikes-6
 # s_type = decl
 # text = F-16 fighters targeted security compounds in the city’s centre.
-1	F-16	F-16	NOUN	NNS	Number=Plur	2	compound	2:compound	Discourse=joint:7->5|Entity=(person-21(object-22)
-2	fighters	fighter	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=person-21)
+1	F-16	F-16	NOUN	NNS	Number=Plur	2	compound	2:compound	Discourse=joint:7->5|Entity=(person-21(object-22)|XML=<ref target:::"https://en.wikipedia.org/wiki/F-16%20Fighting%20Falcon">
+2	fighters	fighter	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=person-21)|XML=</ref>
 3	targeted	target	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	security	security	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(place-3(abstract-23)
 5	compounds	compound	NOUN	NNS	Number=Plur	3	obj	3:obj	_
@@ -87,6 +102,7 @@
 # sent_id = AMALGUM_news_strikes-7
 # s_type = decl
 # text = The “massive” air strikes on Saturday have claimed at least 220 lives, including Gaza police chief Maj. Gen. Tawfiq Jaber.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Discourse=elaboration:8->7|Entity=(event-1
 2	“	''	PUNCT	``	_	3	punct	3:punct	SpaceAfter=No
 3	massive	massive	ADJ	JJ	Degree=Pos	6	amod	6:amod	SpaceAfter=No
@@ -94,7 +110,7 @@
 5	air	air	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=(abstract-2)
 6	strikes	strike	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	_
 7	on	on	ADP	IN	_	8	case	8:case	_
-8	Saturday	Saturday	PROPN	NNP	Number=Sing	6	nmod	6:nmod:on	Entity=event-1)(time-6)
+8	Saturday	Saturday	PROPN	NNP	Number=Sing	6	nmod	6:nmod:on	Entity=event-1)(time-6)|XML=<date when:::"2008-12-27"></date>
 9	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 10	claimed	claim	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 11	at	at	ADP	IN	_	12	case	12:case	_
@@ -180,7 +196,7 @@
 11	southern	southern	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(place-15
 12	Israel	Israel	PROPN	NNP	Number=Sing	10	obj	10:obj	Entity=place-15)
 13	on	on	ADP	IN	_	14	case	14:case	_
-14	Friday	Friday	PROPN	NNP	Number=Sing	10	obl	10:obl:on	Entity=(time-43)|SpaceAfter=No
+14	Friday	Friday	PROPN	NNP	Number=Sing	10	obl	10:obl:on	Entity=(time-43)|SpaceAfter=No|XML=<date when:::"2008-12-26"></date>
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
 16	damaging	damage	VERB	VBG	VerbForm=Ger	10	advcl	10:advcl	Discourse=elaboration:16->15
 17	an	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	Entity=(place-44
@@ -191,6 +207,7 @@
 # sent_id = AMALGUM_news_strikes-11
 # s_type = decl
 # text = Meanwhile, Hamas declared it would retaliate, by launching rocket attacks on and sending suicide bombers to Israel.
+# newpar = p (3 s)
 1	Meanwhile	meanwhile	ADV	RB	Degree=Pos	4	advmod	4:advmod	Discourse=attribution:17->18|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	Hamas	Hamas	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=(person-18)
@@ -241,8 +258,8 @@
 # text = Palestinian President Mahmoud Abbas, Hamas’ rival, says he “condemns this aggression” and calls for restraint.
 1	Palestinian	Palestinian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:22->5|Entity=(person-52
 2	President	President	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	_
-3	Mahmoud	Mahmoud	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	Abbas	Abbas	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-52)|SpaceAfter=No
+3	Mahmoud	Mahmoud	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Mahmoud%20Abbas">
+4	Abbas	Abbas	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-52)|SpaceAfter=No|XML=</ref>
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6-7	Hamas’	_	_	_	_	_	_	_	_
 6	Hamas	Hamas	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	Entity=(person-52(person-18
@@ -265,20 +282,24 @@
 # sent_id = AMALGUM_news_strikes-14
 # s_type = frag
 # text = Map of the Hamas-run Gaza Strip.
+# newpar = figure (1 s)
+# newpar1 = caption (1 s)
 1	Map	map	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:26->5|Entity=(object-56
 2	of	of	ADP	IN	_	7	case	7:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(place-14
-4	Hamas	Hamas	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-18)|SpaceAfter=No
+4	Hamas	Hamas	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-18)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Hamas"></ref>
 5	-run	-run	ADJ	NNP	Number=Sing	7	amod	7:amod	_
-6	Gaza	Gaza	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-5)
-7	Strip	Strip	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	Entity=object-56)place-14)|SpaceAfter=No
+6	Gaza	Gaza	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-5)|XML=<ref target:::"https://en.wikipedia.org/wiki/Gaza%20Strip">
+7	Strip	Strip	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	Entity=object-56)place-14)|SpaceAfter=No|XML=</ref>
 8	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_strikes-15
 # s_type = decl
 # text = Qassam rocket fired from the Gaza Strip hits southern Ashkelon in Israel.
-1	Qassam	Qassam	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:27->5|Entity=(object-46(abstract-57)
-2	rocket	rocket	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
+# newpar = figure (1 s)
+# newpar1 = caption (1 s)
+1	Qassam	Qassam	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:27->5|Entity=(object-46(abstract-57)|XML=<ref target:::"https://en.wikipedia.org/wiki/Qassam%20rocket">
+2	rocket	rocket	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	XML=</ref>
 3	fired	fire	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	Discourse=elaboration:28->27
 4	from	from	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(place-14
@@ -286,7 +307,7 @@
 7	Strip	Strip	PROPN	NNP	Number=Sing	3	obl	3:obl:from	Entity=object-46)place-14)
 8	hits	hit	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	southern	southern	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(place-58
-10	Ashkelon	Ashkelon	PROPN	NNP	Number=Sing	8	obj	8:obj	_
+10	Ashkelon	Ashkelon	PROPN	NNP	Number=Sing	8	obj	8:obj	XML=<ref target:::"https://en.wikipedia.org/wiki/Ashkelon"></ref>
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	Israel	Israel	PROPN	NNP	Number=Sing	10	nmod	10:nmod:in	Entity=place-58)(place-15)|SpaceAfter=No
 13	.	.	PUNCT	.	_	8	punct	8:punct	_
@@ -294,13 +315,14 @@
 # sent_id = AMALGUM_news_strikes-16
 # s_type = decl
 # text = When the Egyptian-mediated truce terminated last week, Israel warned of their potential to launch a major offensive on Gaza, amid senior leaders’ call to topple Hamas.
+# newpar = p (3 s)
 1	When	when	SCONJ	WRB	PronType=Int	5	mark	5:mark	Discourse=circumstance:29->30
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(event-59
 3	Egyptian-mediated	Egyptian-mediated	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	truce	truce	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=event-59)
 5	terminated	terminate	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	advcl	10:advcl:when	_
-6	last	last	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(time-60
-7	week	week	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=time-60)|SpaceAfter=No
+6	last	last	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(time-60|XML=<date from:::"2008-12-22" to:::"2008-12-28">
+7	week	week	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=time-60)|SpaceAfter=No|XML=</date>
 8	,	,	PUNCT	,	_	5	punct	5:punct	_
 9	Israel	Israel	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Discourse=elaboration:30->27|Entity=(place-15)
 10	warned	warn	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -351,11 +373,11 @@
 19	”	''	PUNCT	''	_	5	punct	5:punct	_
 20	Prime	Prime	ADJ	NNP	Number=Sing	21	amod	21:amod	Discourse=attribution:35->33|Entity=(person-64
 21	Minister	Minister	PROPN	NNP	Number=Sing	24	nsubj	24:nsubj	_
-22	Ehud	Ehud	PROPN	NNP	Number=Sing	21	flat	21:flat	_
-23	Olmert	Olmert	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=person-64)
+22	Ehud	Ehud	PROPN	NNP	Number=Sing	21	flat	21:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Ehud%20Olmert">
+23	Olmert	Olmert	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=person-64)|XML=</ref>
 24	announced	announce	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 25	on	on	ADP	IN	_	26	case	26:case	_
-26	Thursday	Thursday	PROPN	NNP	Number=Sing	24	obl	24:obl:on	Entity=(time-67)|SpaceAfter=No
+26	Thursday	Thursday	PROPN	NNP	Number=Sing	24	obl	24:obl:on	Entity=(time-67)|SpaceAfter=No|XML=<date when:::"2008-12-25"></date>
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
 28	issuing	issue	VERB	VBG	VerbForm=Ger	24	advcl	24:advcl	Discourse=attribution:36->37
 29	a	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	Entity=(abstract-68
@@ -425,6 +447,7 @@
 # sent_id = AMALGUM_news_strikes-19
 # s_type = decl
 # text = Two hours after IAF missiles targeted Hamas installations in the Gaza Strip, Palestinian gunmen launched on Saturday a massive attack with Qassam rockets on Israeli territory.
+# newpar = p (3 s)
 1	Two	2	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:42->5|Entity=(time-80
 2	hours	hour	NOUN	NNS	Number=Plur	16	obl:tmod	16:obl:tmod	_
 3	after	after	SCONJ	IN	_	6	mark	6:mark	_
@@ -442,13 +465,13 @@
 15	gunmen	gunmen	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	Entity=person-82)
 16	launched	launch	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 17	on	on	ADP	IN	_	18	case	18:case	_
-18	Saturday	Saturday	PROPN	NNP	Number=Sing	16	obl	16:obl:on	Entity=(time-6)
+18	Saturday	Saturday	PROPN	NNP	Number=Sing	16	obl	16:obl:on	Entity=(time-6)|XML=<date when:::"2008-12-27"></date>
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	Entity=(event-83
 20	massive	massive	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
 21	attack	attack	NOUN	NN	Number=Sing	16	obj	16:obj	_
 22	with	with	ADP	IN	_	24	case	24:case	_
-23	Qassam	Qassam	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(object-40(abstract-57)
-24	rockets	rocket	NOUN	NNS	Number=Plur	21	nmod	21:nmod:with	Entity=object-40)
+23	Qassam	Qassam	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(object-40(abstract-57)|XML=<ref target:::"https://en.wikipedia.org/wiki/Qassam%20rocket">
+24	rockets	rocket	NOUN	NNS	Number=Plur	21	nmod	21:nmod:with	Entity=object-40)|XML=</ref>
 25	on	on	ADP	IN	_	27	case	27:case	_
 26	Israeli	Israeli	ADJ	JJ	Degree=Pos	27	amod	27:amod	Entity=(place-84
 27	territory	territory	NOUN	NN	Number=Sing	21	nmod	21:nmod:on	Entity=event-83)place-84)|SpaceAfter=No
@@ -459,7 +482,7 @@
 # text = Seven struck Ashkelon, killing one person, while another suffered serious injuries, and four others were moderately wounded when their house was hit.
 1	Seven	7	NUM	CD	NumForm=Digit|NumType=Card	2	nsubj	2:nsubj	Discourse=joint:44->5|Entity=(person-85)
 2	struck	strick	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-3	Ashkelon	Ashkelon	PROPN	NNP	Number=Sing	2	obj	2:obj	Entity=(place-58)|SpaceAfter=No
+3	Ashkelon	Ashkelon	PROPN	NNP	Number=Sing	2	obj	2:obj	Entity=(place-58)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Ashkelon"></ref>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	killing	kill	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	Discourse=elaboration:45->44
 6	one	one	NUM	CD	NumForm=Word|NumType=Card	7	nummod	7:nummod	Entity=(person-86
@@ -495,12 +518,13 @@
 6	Soroka	Soroka	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-88)
 7	hospital	hospital	NOUN	NN	Number=Sing	3	obl	3:obl:to	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	Beersheva	Beersheva	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	Entity=place-35)(place-89)|SpaceAfter=No
+9	Beersheva	Beersheva	PROPN	NNP	Number=Sing	7	nmod	7:nmod:in	Entity=place-35)(place-89)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Beersheva"></ref>
 10	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_strikes-22
 # s_type = decl
 # text = According to the IDF, Hamas militants had further launched more than 110 rockets since Saturday, IDF says.
+# newpar = p (5 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	4	case	4:case	Discourse=attribution:50->51
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(organization-90
@@ -516,7 +540,7 @@
 13	110	110	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	_
 14	rockets	rocket	NOUN	NNS	Number=Plur	10	obj	10:obj	Entity=object-92)
 15	since	since	ADP	IN	_	16	case	16:case	_
-16	Saturday	Saturday	PROPN	NNP	Number=Sing	10	obl	10:obl:since	Entity=(time-6)|SpaceAfter=No
+16	Saturday	Saturday	PROPN	NNP	Number=Sing	10	obl	10:obl:since	Entity=(time-6)|SpaceAfter=No|XML=<date when:::"2008-12-27"></date>
 17	,	,	PUNCT	,	_	10	punct	10:punct	_
 18	IDF	IDF	PROPN	NNP	Number=Sing	19	nsubj	19:nsubj	Discourse=attribution:52->51|Entity=(organization-90)
 19	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
@@ -613,21 +637,22 @@
 13	620	620	NUM	CD	NumForm=Digit|NumType=Card	11	conj	9:obj|11:conj:and	Entity=(abstract-103)
 14	wounded	wound	VERB	VBN	Tense=Past|VerbForm=Part	11	conj	9:obj|11:conj	_
 15	since	since	ADP	IN	_	16	case	16:case	_
-16	Saturday	Saturday	PROPN	NNP	Number=Sing	9	obl	9:obl:since	Entity=(time-6)|SpaceAfter=No
+16	Saturday	Saturday	PROPN	NNP	Number=Sing	9	obl	9:obl:since	Entity=(time-6)|SpaceAfter=No|XML=<date when:::"2008-12-27"></date>
 17	.	.	PUNCT	.	_	9	punct	9:punct	SpaceAfter=No
 18	"	''	PUNCT	''	_	9	punct	9:punct	Entity=(event-104
 
 # sent_id = AMALGUM_news_strikes-27
 # s_type = decl
 # text = The 2008–2009 Israel–Gaza conflict, referred to as "Operation Cast Lead" (מבצע עופרת יצוקה - also known as "Operation Solid Lead") by the Israel Defense Forces (IDF), is an Israeli air strike operation launched on December 27, 2008 at 11:30 am local time (9:30 am UTC) against Hamas targets in the Gaza Strip.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Discourse=elaboration:63->62
-2	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	Entity=(place-15|SpaceAfter=No
+2	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	Entity=(place-15|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/2008 &#8211; 2009%20Israel &#8211; Gaza%20conflict"><date when:::"2008"></date>
 3	–	-	SYM	SYM	_	4	case	4:case	SpaceAfter=No
 4	2009	2009	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:to	Entity=(time-105)
 5	Israel	Israel	PROPN	NNP	Number=Sing	8	compound	8:compound	SpaceAfter=No
 6	–	-	PUNCT	:	_	7	punct	7:punct	SpaceAfter=No
 7	Gaza	Gaza	PROPN	NNP	Number=Sing	2	nmod	2:nmod	Entity=place-15)(place-5)
-8	conflict	conflict	NOUN	NN	Number=Sing	46	nsubj	46:nsubj	SpaceAfter=No
+8	conflict	conflict	NOUN	NN	Number=Sing	46	nsubj	46:nsubj	SpaceAfter=No|XML=</ref>
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	referred	refer	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	8:acl	Discourse=elaboration:64->63
 11	to	to	ADP	IN	_	10	obl	10:obl	_
@@ -668,10 +693,10 @@
 46	operation	operation	NOUN	NN	Number=Sing	0	root	0:root	_
 47	launched	launch	VERB	VBN	Tense=Past|VerbForm=Part	46	acl	46:acl	Discourse=elaboration:71->70
 48	on	on	ADP	IN	_	50	case	50:case	_
-49	December	December	PROPN	NNP	Number=Sing	50	compound	50:compound	Entity=(time-6(time-113)
+49	December	December	PROPN	NNP	Number=Sing	50	compound	50:compound	Entity=(time-6(time-113)|XML=<date when:::"2008-12-27">
 50	27	27	NUM	CD	NumForm=Digit|NumType=Card	47	obl	47:obl:on	SpaceAfter=No
 51	,	,	PUNCT	,	_	52	punct	52:punct	_
-52	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	50	nmod:tmod	50:nmod:tmod	Entity=time-6)(time-7)
+52	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	50	nmod:tmod	50:nmod:tmod	Entity=time-6)(time-7)|XML=</date>
 53	at	at	ADP	IN	_	54	case	54:case	_
 54	11:30	11:30	NUM	CD	NumForm=Word|NumType=Card	46	nmod	46:nmod:at	Entity=(time-114
 55	am	am	NOUN	NN	Number=Sing	54	compound	54:compound	Entity=time-114)(time-115)
@@ -705,11 +730,11 @@
 9	against	against	ADP	IN	_	16	case	16:case	_
 10	daily	daily	ADJ	JJ	Degree=Pos	16	amod	16:amod	Entity=(event-121
 11	Palestinian	Palestinian	ADJ	JJ	Degree=Pos	13	amod	13:amod	Entity=(object-46
-12	Qassam	Qassam	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(abstract-57)
-13	rocket	rocket	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=object-46)
+12	Qassam	Qassam	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(abstract-57)|XML=<ref target:::"https://en.wikipedia.org/wiki/Qassam%20rocket"></ref>
+13	rocket	rocket	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=object-46)|XML=<ref target:::"https://en.wikipedia.org/wiki/List%20of%20Qassam%20rocket%20attacks">
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	mortar	mortar	NOUN	NN	Number=Sing	16	compound	16:compound	Entity=(place-42)
-16	fire	fire	NOUN	NN	Number=Sing	8	nmod	8:nmod:against	_
+16	fire	fire	NOUN	NN	Number=Sing	8	nmod	8:nmod:against	XML=</ref>
 17	on	on	ADP	IN	_	21	case	21:case	_
 18-19	Israel's	_	_	_	_	_	_	_	_
 18	Israel	Israel	PROPN	NNP	Number=Sing	21	nmod:poss	21:nmod:poss	Entity=(place-122(place-15

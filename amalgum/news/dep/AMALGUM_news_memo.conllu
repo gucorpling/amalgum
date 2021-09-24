@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_memo
+# meta::title = John Kerry criticizes news media, joins call for inquiry on Downing Street Memo
+# meta::shortTitle = memo
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2005-06-02
+# meta::dateModified = 2019-10-28
+# meta::sourceURL = https://en.wikinews.org/wiki/John_Kerry_criticizes_news_media%2C_joins_call_for_inquiry_on_Downing_Street_Memo
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_memo
 # sent_id = AMALGUM_news_memo-1
 # s_type = decl
 # text = John Kerry criticizes news media, joins call for inquiry on Downing Street Memo
+# newpar = head (1 s)
 1	John	John	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|7:nsubj	Discourse=preparation:1->4|Entity=(person-1
 2	Kerry	Kerry	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
 3	criticizes	criticize	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -20,16 +31,18 @@
 # sent_id = AMALGUM_news_memo-2
 # s_type = frag
 # text = Thursday, June 2, 2005
-1	Thursday	Thursday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-7)|SpaceAfter=No
+# newpar = p (1 s)
+1	Thursday	Thursday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-7)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	June	June	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-7
+3	June	June	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-7|XML=<date when:::"2005-06-02">
 4	2	2	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-7)(time-8)
+6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-7)(time-8)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_memo-3
 # s_type = decl
 # text = In a swing through South Coast, Florida, former 2004 presidential candidate Senator John Kerry criticized the near silence of the U.S. mass media regarding the so-called "Downing Street Memo".
+# newpar = p (6 s)
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=ROOT:4
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Entity=(event-9
 3	swing	swing	NOUN	NN	Number=Sing	17	obl	17:obl:in	_
@@ -37,15 +50,15 @@
 5	South	South	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(person-10
 6	Coast	Coast	PROPN	NNP	Number=Sing	3	nmod	3:nmod:through	SpaceAfter=No
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	Florida	Florida	PROPN	NNP	Number=Sing	6	appos	6:appos	Entity=event-9)person-10)(place-11)|SpaceAfter=No
+8	Florida	Florida	PROPN	NNP	Number=Sing	6	appos	6:appos	Entity=event-9)person-10)(place-11)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Florida"></ref>
 9	,	,	PUNCT	,	_	3	punct	3:punct	_
 10	former	former	ADJ	JJ	Degree=Pos	13	amod	13:amod	Entity=(person-12
-11	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	13	compound	13:compound	_
+11	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	13	compound	13:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/2004%20presidential%20election"><date when:::"2004"></date>
 12	presidential	presidential	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
-13	candidate	candidate	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	_
+13	candidate	candidate	NOUN	NN	Number=Sing	17	nsubj	17:nsubj	XML=</ref>
 14	Senator	Senator	PROPN	NNP	Number=Sing	13	appos	13:appos	_
-15	John	John	PROPN	NNP	Number=Sing	14	flat	14:flat	_
-16	Kerry	Kerry	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-12)
+15	John	John	PROPN	NNP	Number=Sing	14	flat	14:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/John%20Kerry">
+16	Kerry	Kerry	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-12)|XML=</ref>
 17	criticized	criticize	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(abstract-13
 19	near	near	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
@@ -59,9 +72,9 @@
 27	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	Entity=(person-5
 28	so-called	so-called	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
 29	"	''	PUNCT	``	_	32	punct	32:punct	SpaceAfter=No
-30	Downing	Downing	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(organization-6
+30	Downing	Downing	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(organization-6|XML=<ref target:::"https://en.wikipedia.org/wiki/Downing%20Street%20memo">
 31	Street	Street	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=organization-6)
-32	Memo	Memo	PROPN	NNP	Number=Sing	26	obj	26:obj	SpaceAfter=No
+32	Memo	Memo	PROPN	NNP	Number=Sing	26	obj	26:obj	SpaceAfter=No|XML=</ref>
 33	"	''	PUNCT	''	_	32	punct	32:punct	Entity=abstract-13)organization-2)person-5)|SpaceAfter=No
 34	.	.	PUNCT	.	_	17	punct	17:punct	_
 
@@ -84,7 +97,7 @@
 14	minutes	minute	NOUN	NNS	Number=Plur	12	obj	12:obj	_
 15	of	of	ADP	IN	_	18	case	18:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(event-17
-17	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	18	compound	18:compound	_
+17	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	18	compound	18:compound	XML=<date when:::"2002"></date>
 18	meeting	meeting	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	_
 19	between	between	ADP	IN	_	25	case	25:case	_
 20	top-level	top-level	ADJ	JJ	Degree=Pos	25	amod	25:amod	Entity=(person-18
@@ -102,16 +115,16 @@
 2	memo	memo	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-20)
 3	states	state	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	that	that	SCONJ	IN	_	10	mark	10:mark	Discourse=elaboration:8->5
-5	George	George	PROPN	NNP	Number=Sing	10	nsubj:pass	10:nsubj:pass|13:nsubj:xsubj	Entity=(person-21
+5	George	George	PROPN	NNP	Number=Sing	10	nsubj:pass	10:nsubj:pass|13:nsubj:xsubj	Entity=(person-21|XML=<ref target:::"https://en.wikipedia.org/wiki/George%20W.%20Bush">
 6	W.	W.	PROPN	NNP	Number=Sing	5	flat	5:flat	_
-7	Bush	Bush	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-21)
+7	Bush	Bush	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-21)|XML=</ref>
 8	"	''	PUNCT	``	_	10	punct	10:punct	SpaceAfter=No
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
 10	determined	determine	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	ccomp	3:ccomp	SpaceAfter=No
 11	"	''	PUNCT	''	_	10	punct	10:punct	_
 12	to	to	PART	TO	_	13	mark	13:mark	_
-13	attack	attack	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	_
-14	Iraq	Iraq	PROPN	NNP	Number=Sing	13	obj	13:obj	Entity=(place-22)
+13	attack	attack	VERB	VB	VerbForm=Inf	10	xcomp	10:xcomp	XML=<ref target:::"https://en.wikipedia.org/wiki/2003%20invasion%20of%20Iraq">
+14	Iraq	Iraq	PROPN	NNP	Number=Sing	13	obj	13:obj	Entity=(place-22)|XML=</ref>
 15	long	long	ADV	RB	Degree=Pos	17	advmod	17:advmod	Discourse=circumstance:9->8
 16	before	before	SCONJ	IN	_	17	mark	17:mark	_
 17	going	go	VERB	VBG	VerbForm=Ger	13	advcl	13:advcl:before	_
@@ -199,6 +212,7 @@
 # sent_id = AMALGUM_news_memo-9
 # s_type = decl
 # text = "When I go back [to Washington] on Monday, I am going to raise the issue.
+# newpar = p (4 s)
 1	"	''	PUNCT	``	_	15	punct	15:punct	Discourse=joint:16->4|SpaceAfter=No
 2	When	when	SCONJ	WRB	PronType=Int	4	mark	4:mark	Discourse=circumstance:17->16
 3	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	Entity=(person-35)
@@ -209,7 +223,7 @@
 8	Washington	Washington	PROPN	NNP	Number=Sing	4	obl	4:obl:to	Entity=(person-36)|SpaceAfter=No
 9	]	]	PUNCT	-RRB-	_	8	punct	8:punct	_
 10	on	on	ADP	IN	_	11	case	11:case	_
-11	Monday	Monday	PROPN	NNP	Number=Sing	4	obl	4:obl:on	Entity=(time-37)|SpaceAfter=No
+11	Monday	Monday	PROPN	NNP	Number=Sing	4	obl	4:obl:on	Entity=(time-37)|SpaceAfter=No|XML=<date when:::"2005-05-30"></date>
 12	,	,	PUNCT	,	_	4	punct	4:punct	_
 13	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	15	nsubj	15:nsubj|17:nsubj:xsubj	Discourse=elaboration:18->17|Entity=(person-35)
 14	am	be	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	15	aux	15:aux	_
@@ -296,6 +310,7 @@
 # sent_id = AMALGUM_news_memo-13
 # s_type = decl
 # text = He questioned Americans' understanding of the war and the idea that criticism equals disloyalty, saying,
+# newpar = p (1 s)
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=attribution:27->28|Entity=(person-36)
 2	questioned	question	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3-4	Americans'	_	_	_	_	_	_	_	_
@@ -319,6 +334,7 @@
 # sent_id = AMALGUM_news_memo-14
 # s_type = q
 # text = "Do you think that Americans if they really understood it would feel that way knowing that on Election Day, 77 percent of Americans who voted for Bush believed that weapons of mass destruction had been found and 77 percent believe Saddam did 9/11?
+# newpar = p (2 s)
 1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=attribution:30->31|SpaceAfter=No
 2	Do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj	Entity=(person-43)
@@ -386,9 +402,10 @@
 # sent_id = AMALGUM_news_memo-16
 # s_type = decl
 # text = Representative John Conyers has written to the President regarding the memo:
+# newpar = p (1 s)
 1	Representative	Representative	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=preparation:42->43|Entity=(person-1
-2	John	John	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Conyers	Conyers	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
+2	John	John	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/John%20Conyers">
+3	Conyers	Conyers	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|XML=</ref>
 4	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 5	written	write	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	to	to	ADP	IN	_	8	case	8:case	_
@@ -402,6 +419,7 @@
 # sent_id = AMALGUM_news_memo-17
 # s_type = decl
 # text = "...a debate has raged in the United States over the last year and one half about whether the obviously flawed intelligence that falsely stated that Iraq possessed weapons of mass destruction was a mere 'failure' or the result of intentional manipulation to reach foreordained conclusions supporting the case for war.
+# newpar = p (2 s)
 1	"	''	PUNCT	``	_	6	punct	6:punct	Discourse=sequence:43->41|SpaceAfter=No
 2	...	…	PUNCT	:	_	6	punct	6:punct	SpaceAfter=No
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(abstract-56
@@ -413,9 +431,9 @@
 9	United	Unite	VERB	NNP	Number=Sing	10	amod	10:amod	_
 10	States	State	PROPN	NNPS	Number=Plur	6	obl	6:obl:in	Entity=place-57)
 11	over	over	ADP	IN	_	14	case	14:case	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(time-58
+12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(time-58|XML=<date when:::"2004">
 13	last	last	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	year	year	NOUN	NN	Number=Sing	6	obl	6:obl:over	Entity=time-58)
+14	year	year	NOUN	NN	Number=Sing	6	obl	6:obl:over	Entity=time-58)|XML=</date>
 15	and	and	CCONJ	CC	_	17	cc	17:cc	_
 16	one	one	NUM	CD	NumForm=Word|NumType=Card	17	nummod	17:nummod	Entity=(abstract-59
 17	half	half	NOUN	NN	Number=Sing	14	conj	6:obl:over|14:conj:and	Entity=abstract-59)
@@ -499,6 +517,7 @@
 # sent_id = AMALGUM_news_memo-19
 # s_type = decl
 # text = There is a growing movement on the internet and in Congress for a "Resolution of Inquiry" into issues surrounding the planning and execution of the Iraq war, especially in regard to the Administration's handling of intelligence.
+# newpar = p (3 s)
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:54->50
 2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(organization-65
@@ -545,8 +564,8 @@
 # sent_id = AMALGUM_news_memo-20
 # s_type = decl
 # text = John Dean, a key Watergate figure, wrote in a June 2003 column for findlaw.com, that, "To put it bluntly, if Bush has taken Congress and the nation into war based on bogus information, he is cooked...
-1	John	John	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Discourse=attribution:55->56|Entity=(person-71
-2	Dean	Dean	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-71)|SpaceAfter=No
+1	John	John	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Discourse=attribution:55->56|Entity=(person-71|XML=<ref target:::"https://en.wikipedia.org/wiki/John%20Dean">
+2	Dean	Dean	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-71)|SpaceAfter=No|XML=</ref>
 3	,	,	PUNCT	,	_	7	punct	7:punct	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(person-71
 5	key	key	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -556,8 +575,8 @@
 9	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 10	in	in	ADP	IN	_	14	case	14:case	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(abstract-73
-12	June	June	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-74)
-13	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	14	compound	14:compound	_
+12	June	June	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-74)|XML=<date when:::"2003-06">
+13	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	14	compound	14:compound	XML=</date>
 14	column	column	NOUN	NN	Number=Sing	9	obl	9:obl:in	_
 15	for	for	ADP	IN	_	16	case	16:case	_
 16	findlaw.com	findlaw.com	PROPN	NNP	Number=Sing	14	nmod	14:nmod:for	Entity=abstract-73)(abstract-75)|SpaceAfter=No
@@ -626,6 +645,7 @@
 # sent_id = AMALGUM_news_memo-22
 # s_type = decl
 # text = However, in practical terms impeachment in the U.S. Senate requires a 2/3 majority for conviction, which is unlikely given that 55 out of 100 Senators are Republican.
+# newpar = p (1 s)
 1	However	however	ADV	RB	_	11	advmod	11:advmod	Discourse=contrast:63->60|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	in	in	ADP	IN	_	5	case	5:case	_
@@ -660,6 +680,7 @@
 # sent_id = AMALGUM_news_memo-23
 # s_type = decl
 # text = When asked about the Downing Street Memo on May 23, White House spokesman Scott McClellan said:
+# newpar = p (1 s)
 1	When	when	SCONJ	WRB	PronType=Int	2	mark	2:mark	Discourse=preparation:66->67
 2	asked	ask	VERB	VBN	Tense=Past|VerbForm=Part	17	advcl	17:advcl:when	_
 3	about	about	ADP	IN	_	7	case	7:case	_
@@ -668,8 +689,8 @@
 6	Street	Street	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=organization-6)
 7	Memo	Memo	PROPN	NNP	Number=Sing	2	obl	2:obl:about	Entity=person-5)
 8	on	on	ADP	IN	_	10	case	10:case	_
-9	May	May	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(time-89
-10	23	23	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:on	Entity=time-89)|SpaceAfter=No
+9	May	May	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(time-89|XML=<date when:::"2005-05-23">
+10	23	23	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:on	Entity=time-89)|SpaceAfter=No|XML=</date>
 11	,	,	PUNCT	,	_	2	punct	2:punct	_
 12	White	White	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(person-90(organization-91
 13	House	House	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=organization-91)
@@ -682,6 +703,7 @@
 # sent_id = AMALGUM_news_memo-24
 # s_type = decl
 # text = "If anyone wants to know how the intelligence was used by the administration, all they have to do is go back and look at all the public comments over the course of the lead-up to the war in Iraq, and that's all very public information.
+# newpar = p (2 s)
 1	"	''	PUNCT	''	_	22	punct	22:punct	Discourse=joint:67->63|SpaceAfter=No
 2	If	if	SCONJ	IN	_	4	mark	4:mark	Discourse=attribution:68->69
 3	anyone	anyone	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=(person-92)
@@ -753,6 +775,7 @@
 # sent_id = AMALGUM_news_memo-26
 # s_type = frag
 # text = "
+# newpar = p (2 s)
 1	"	''	''	''	_	0	root	0:root	Discourse=joint:78->63|SpaceAfter=No
 
 # sent_id = AMALGUM_news_memo-27
@@ -798,8 +821,8 @@
 37	critical	critical	ADJ	JJ	Degree=Pos	21	advcl	21:advcl:because	_
 38	in	in	ADP	IN	_	42	case	42:case	_
 39	this	this	DET	DT	Number=Sing|PronType=Dem	42	det	42:det	Entity=(abstract-100
-40	post-September	post-September	ADJ	JJ	Degree=Pos	41	amod	41:amod	_
-41	11th	11th	ADJ	JJ	Degree=Pos|NumType=Ord	42	amod	42:amod	_
+40	post-September	post-September	ADJ	JJ	Degree=Pos	41	amod	41:amod	XML=<date when:::"2005-09-11">
+41	11th	11th	ADJ	JJ	Degree=Pos|NumType=Ord	42	amod	42:amod	XML=</date>
 42	age	age	NOUN	NN	Number=Sing	37	obl	37:obl:in	Entity=abstract-100)|SpaceAfter=No
 43	,	,	PUNCT	,	_	48	punct	48:punct	_
 44	that	that	SCONJ	IN	_	48	mark	48:mark	_

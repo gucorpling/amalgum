@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_strain
+# meta::title = New report details strain on US Army
+# meta::shortTitle = strain
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2006-01-25
+# meta::dateModified = 2015-12-28
+# meta::sourceURL = https://en.wikinews.org/wiki/New_report_details_strain_on_US_Army
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_strain
 # sent_id = AMALGUM_news_strain-1
 # s_type = decl
 # text = New report details strain on US Army
+# newpar = head (1 s)
 1	New	New	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:1->3|Entity=(abstract-1
 2	report	report	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-1)
 3	details	detail	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -13,16 +24,19 @@
 # sent_id = AMALGUM_news_strain-2
 # s_type = frag
 # text = Wednesday, January 25, 2006
-1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No
+# newpar = p (1 s)
+1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
+3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4|XML=<date when:::"2006-01-25">
 4	25	25	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
+6	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_strain-3
 # s_type = frag
 # text = The Pentagon, US Department of Defense building.
+# newpar = figure (1 s)
+# newpar1 = caption (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=ROOT:3|Entity=(organization-6
 2	Pentagon	Pentagon	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-6)|SpaceAfter=No
 3	,	,	PUNCT	,	_	8	punct	8:punct	_
@@ -36,12 +50,13 @@
 # sent_id = AMALGUM_news_strain-4
 # s_type = decl
 # text = A report commissioned under a Pentagon contract to ascertain the effects of the Iraq and Afghanistan wars on recruitment of personnel into the United States Army has been completed.
+# newpar = p (3 s)
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=elaboration:4->3|Entity=(abstract-1
 2	report	report	NOUN	NN	Number=Sing	29	nsubj:pass	29:nsubj:pass	_
 3	commissioned	commission	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	Discourse=elaboration:5->4
 4	under	under	ADP	IN	_	7	case	7:case	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(abstract-10
-6	Pentagon	Pentagon	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(organization-6)
+6	Pentagon	Pentagon	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(organization-6)|XML=<ref target:::"https://en.wikipedia.org/wiki/The%20Pentagon"></ref>
 7	contract	contract	NOUN	NN	Number=Sing	3	obl	3:obl:under	Entity=abstract-1)abstract-10)
 8	to	to	PART	TO	_	9	mark	9:mark	Discourse=purpose:6->5
 9	ascertain	ascertain	VERB	VB	VerbForm=Inf	3	advcl	3:advcl:to	_
@@ -49,9 +64,9 @@
 11	effects	effect	NOUN	NNS	Number=Plur	9	obj	9:obj	_
 12	of	of	ADP	IN	_	17	case	17:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(event-12
-14	Iraq	Iraq	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-13)
+14	Iraq	Iraq	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-13)|XML=<ref target:::"https://en.wikinews.org/wiki/Invasion_of_Iraq"></ref>
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	14	conj	14:conj:and|17:compound	Entity=(place-14)
+16	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	14	conj	14:conj:and|17:compound	Entity=(place-14)|XML=<ref target:::"https://en.wikipedia.org/wiki/U.S.%20invasion%20of%20Afghanistan"></ref>
 17	wars	war	NOUN	NNS	Number=Plur	11	nmod	11:nmod:of	_
 18	on	on	ADP	IN	_	19	case	19:case	_
 19	recruitment	recruitment	NOUN	NN	Number=Sing	17	nmod	17:nmod:on	Entity=(abstract-15
@@ -59,8 +74,8 @@
 21	personnel	personnel	NOUN	NNS	Number=Plur	19	nmod	19:nmod:of	Entity=(person-16)
 22	into	into	ADP	IN	_	26	case	26:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(organization-3
-24	United	Unite	VERB	NNP	Number=Sing	25	amod	25:amod	Entity=(place-17
-25	States	State	PROPN	NNPS	Number=Plur	26	compound	26:compound	Entity=place-17)
+24	United	Unite	VERB	NNP	Number=Sing	25	amod	25:amod	Entity=(place-17|XML=<ref target:::"https://en.wikinews.org/wiki/United_States_of_America">
+25	States	State	PROPN	NNPS	Number=Plur	26	compound	26:compound	Entity=place-17)|XML=</ref>
 26	Army	Army	PROPN	NNP	Number=Sing	19	nmod	19:nmod:into	Entity=abstract-11)event-12)abstract-15)organization-3)
 27	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	29	aux	29:aux	_
 28	been	be	AUX	VBN	Tense=Past|VerbForm=Part	29	aux:pass	29:aux:pass	_
@@ -111,13 +126,14 @@
 7	provided	provide	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 8	to	to	ADP	IN	_	11	case	11:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(organization-25
-10	Associated	Associated	VERB	NNP	Number=Sing	11	amod	11:amod	_
-11	Press	Press	PROPN	NNP	Number=Sing	7	obl	7:obl:to	Entity=organization-25)|SpaceAfter=No
-12	.	.	PUNCT	.	_	7	punct	7:punct	_
+10	Associated	Associated	VERB	NNP	Number=Sing	11	amod	11:amod	XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/Associated_Press">
+11	Press	Press	PROPN	NNP	Number=Sing	7	obl	7:obl:to	Entity=organization-25)|SpaceAfter=No|XML=</ref>
+12	.	.	PUNCT	.	_	7	punct	7:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_strain-7
 # s_type = decl
 # text = As part of the conclusions reached in the Krepinevich report, it notes a drop in Army recruiting for the year 2005, a first since 1999, which came after the Army recently adopted policies of offering increased enlistment incentives.
+# newpar = p (2 s)
 1	As	as	ADP	IN	_	2	case	2:case	Discourse=joint:10->3
 2	part	part	NOUN	NN	Number=Sing	13	obl	13:obl:as	_
 3	of	of	ADP	IN	_	5	case	5:case	_
@@ -137,14 +153,14 @@
 17	Army	Army	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(abstract-29(organization-19)
 18	recruiting	recruiting	NOUN	NN	Number=Sing	15	nmod	15:nmod:in	Entity=abstract-29)
 19	for	for	ADP	IN	_	21	case	21:case	_
-20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(time-30
+20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(time-30|XML=<date when:::"2005">
 21	year	year	NOUN	NN	Number=Sing	15	nmod	15:nmod:for	_
-22	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	21	nmod:tmod	21:nmod:tmod	Entity=object-28)time-30)|SpaceAfter=No
+22	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	21	nmod:tmod	21:nmod:tmod	Entity=object-28)time-30)|SpaceAfter=No|XML=</date>
 23	,	,	PUNCT	,	_	25	punct	25:punct	_
 24	a	a	DET	DT	Definite=Ind|PronType=Art	25	det	25:det	_
 25	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	15	appos	15:appos	_
 26	since	since	ADP	IN	_	27	case	27:case	_
-27	1999	1999	NUM	CD	NumForm=Digit|NumType=Card	25	nmod	25:nmod:since	Entity=(time-31)|SpaceAfter=No
+27	1999	1999	NUM	CD	NumForm=Digit|NumType=Card	25	nmod	25:nmod:since	Entity=(time-31)|SpaceAfter=No|XML=<date when:::"1999"></date>
 28	,	,	PUNCT	,	_	30	punct	30:punct	_
 29	which	which	PRON	WDT	PronType=Rel	30	nsubj	15:ref	Discourse=elaboration:13->12
 30	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	acl:relcl	15:acl:relcl	_
@@ -203,6 +219,7 @@
 # sent_id = AMALGUM_news_strain-9
 # s_type = decl
 # text = In an Krepinevich interview , he said the Army remains an effective force and has plans to expand the number of available combat brigades for use in Iraq and Afghanistan.
+# newpar = p (3 s)
 1	In	in	ADP	IN	_	4	case	4:case	Discourse=attribution:22->24
 2	an	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(event-41
 3	Krepinevich	Krepinevich	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-27)
@@ -321,8 +338,9 @@
 # sent_id = AMALGUM_news_strain-12
 # s_type = decl
 # text = George Joulwan, former NATO commander and retired four-star general in the US Army detailed his observations in an interview given on CNN in December of 2005; "Whether they're broken or not, I think I would say if we don't change the way we're doing business, they're in danger of being fractured and broken, and I would agree with that."
-1	George	George	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Discourse=joint:38->3|Entity=(person-61
-2	Joulwan	Joulwan	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-61)|SpaceAfter=No
+# newpar = p (1 s)
+1	George	George	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Discourse=joint:38->3|Entity=(person-61|XML=<ref target:::"https://en.wikipedia.org/wiki/George%20Joulwan">
+2	Joulwan	Joulwan	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-61)|SpaceAfter=No|XML=</ref>
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	former	former	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(person-61(person-61
 5	NATO	NATO	PROPN	NNP	Abbr=Yes|Number=Sing	6	compound	6:compound	Entity=(organization-62)
@@ -343,11 +361,11 @@
 20	interview	interview	NOUN	NN	Number=Sing	15	obl	15:obl:in	_
 21	given	give	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	20:acl	Discourse=attribution:39->40
 22	on	on	ADP	IN	_	23	case	23:case	_
-23	CNN	CNN	PROPN	NNP	Number=Sing	21	obl	21:obl:on	Entity=(organization-64)
+23	CNN	CNN	PROPN	NNP	Number=Sing	21	obl	21:obl:on	Entity=(organization-64)|XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/CNN"></ref></hi>
 24	in	in	ADP	IN	_	25	case	25:case	_
-25	December	December	PROPN	NNP	Number=Sing	21	obl	21:obl:in	Entity=(time-65
+25	December	December	PROPN	NNP	Number=Sing	21	obl	21:obl:in	Entity=(time-65|XML=<date when:::"2005-12">
 26	of	of	ADP	IN	_	27	case	27:case	_
-27	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	25	nmod	25:nmod:of	Entity=event-41)time-65)(time-66)|SpaceAfter=No
+27	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	25	nmod	25:nmod:of	Entity=event-41)time-65)(time-66)|SpaceAfter=No|XML=</date>
 28	;	;	PUNCT	:	_	38	punct	38:punct	_
 29	"	''	PUNCT	``	_	38	punct	38:punct	Discourse=elaboration:40->38|SpaceAfter=No
 30	Whether	whether	SCONJ	IN	_	33	mark	33:mark	_
@@ -397,12 +415,13 @@
 # sent_id = AMALGUM_news_strain-13
 # s_type = decl
 # text = Defense Secretary Donald H. Rumsfeld's comments made in a news conference at the Pentagon one day after the Associated Press article was published declared that the report "is just not consistent with the facts."
+# newpar = p (2 s)
 1	Defense	Defense	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=attribution:48->52|Entity=(abstract-63(person-71(organization-9)
 2	Secretary	Secretary	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	_
-3	Donald	Donald	PROPN	NNP	Number=Sing	2	flat	2:flat	_
+3	Donald	Donald	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Donald_H._Rumsfeld">
 4	H.	H.	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 5-6	Rumsfeld's	_	_	_	_	_	_	_	_
-5	Rumsfeld	Rumsfeld	PROPN	NNP	Number=Sing	2	flat	2:flat	_
+5	Rumsfeld	Rumsfeld	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=</ref>
 6	's	's	PART	POS	_	2	case	2:case	Entity=person-71)
 7	comments	comment	NOUN	NNS	Number=Plur	25	nsubj	25:nsubj	_
 8	made	make	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	Discourse=elaboration:49->48
@@ -471,6 +490,7 @@
 # sent_id = AMALGUM_news_strain-15
 # s_type = decl
 # text = He supported this with the following comments
+# newpar = p (4 s)
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=preparation:57->58|Entity=(person-71)
 2	supported	support	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	this	this	PRON	DT	Number=Sing|PronType=Dem	2	obj	2:obj	Entity=(event-72)
@@ -569,6 +589,7 @@
 # sent_id = AMALGUM_news_strain-19
 # s_type = decl
 # text = He acknowledged the unique requirements of the campaigns in Iraq and in Afghanistan with the statement that "There is no question if a country is in a conflict and we are in the global war on terror, it requires our forces to do something other than what they do in peacetime."
+# newpar = p (1 s)
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=joint:64->58|Entity=(person-71)
 2	acknowledged	acknowledge	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(abstract-51
@@ -628,6 +649,7 @@
 # sent_id = AMALGUM_news_strain-20
 # s_type = decl
 # text = On the matter of the review of US defense strategy planned for February 2006, he stated that it was "the next step in a long line of bold changes."
+# newpar = p (1 s)
 1	On	on	ADP	IN	_	3	case	3:case	Discourse=joint:69->58
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-96
 3	matter	matter	NOUN	NN	Number=Sing	17	obl	17:obl:on	_
@@ -640,8 +662,8 @@
 10	strategy	strategy	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=abstract-98)
 11	planned	plan	VERB	VBN	Tense=Past|VerbForm=Part	6	acl	6:acl	Discourse=elaboration:70->69
 12	for	for	ADP	IN	_	13	case	13:case	_
-13	February	February	PROPN	NNP	Number=Sing	11	obl	11:obl:for	Entity=(time-99
-14	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=abstract-96)event-97)time-99)(time-5)|SpaceAfter=No
+13	February	February	PROPN	NNP	Number=Sing	11	obl	11:obl:for	Entity=(time-99|XML=<date when:::"2006-02">
+14	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=abstract-96)event-97)time-99)(time-5)|SpaceAfter=No|XML=</date>
 15	,	,	PUNCT	,	_	3	punct	3:punct	_
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	Discourse=attribution:71->72|Entity=(person-71)
 17	stated	state	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -665,10 +687,11 @@
 # sent_id = AMALGUM_news_strain-21
 # s_type = decl
 # text = US Representative John Murtha incited controversy when he called for an early exit from Iraq in the fall of 2005, arguing in part that the US Army was "broken, worn out."
+# newpar = p (1 s)
 1	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=joint:73->58|Entity=(person-102(place-8)
-2	Representative	Representative	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	_
-3	John	John	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	Murtha	Murtha	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-102)
+2	Representative	Representative	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	XML=<ref target:::"https://en.wikinews.org/wiki/US_House_of_Representatives"></ref>
+3	John	John	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/John%20Murtha">
+4	Murtha	Murtha	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-102)|XML=</ref>
 5	incited	incite	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	controversy	controversy	NOUN	NN	Number=Sing	5	obj	5:obj	Entity=(abstract-103)
 7	when	when	SCONJ	WRB	PronType=Int	9	mark	9:mark	Discourse=circumstance:74->76

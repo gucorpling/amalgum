@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_amtrak
+# meta::title = United States: Two killed, more than a hundred injured in Amtrak train collision in South Carolina
+# meta::shortTitle = amtrak
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2018-02-04
+# meta::dateModified = 2018-02-15
+# meta::sourceURL = https://en.wikinews.org/wiki/United_States%3A_Two_killed%2C_more_than_a_hundred_injured_in_Amtrak_train_collision_in_South_Carolina
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_amtrak
 # sent_id = AMALGUM_news_amtrak-1
 # s_type = frag
 # text = United States:
+# newpar = head (2 s)
 1	United	Unite	VERB	NNP	Number=Sing	2	amod	2:amod	Discourse=preparation:1->3|Entity=(place-1
 2	States	State	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=place-1)|SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
@@ -28,60 +39,62 @@
 # sent_id = AMALGUM_news_amtrak-3
 # s_type = frag
 # text = Wednesday, February 7, 2018
-1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=ROOT:3|Entity=(time-8)|SpaceAfter=No
+# newpar = p (1 s)
+1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=ROOT:3|Entity=(time-8)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	February	February	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-8
+3	February	February	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-8|XML=<date when:::"2018-02-07">
 4	7	7	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2018	2018	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-8)(time-9)
+6	2018	2018	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-8)(time-9)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_amtrak-4
 # s_type = decl
 # text = Early on Sunday morning, Amtrak's passenger train number 91, the Silver Star, bound for Miami from New York, slammed into a stationary CSX freight train in Cayce, about ten miles (16 km) south of Columbia, capital of the US state of South Carolina.
+# newpar = p (2 s)
 1	Early	early	ADV	RB	Degree=Pos	24	advmod	24:advmod	Discourse=joint:4->3
 2	on	on	ADP	IN	_	4	case	4:case	_
-3	Sunday	Sunday	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-10
-4	morning	morning	NOUN	NN	Number=Sing	1	nmod	1:nmod:on	Entity=time-10)|SpaceAfter=No
+3	Sunday	Sunday	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-10|XML=<date when:::"2018-02-04">
+4	morning	morning	NOUN	NN	Number=Sing	1	nmod	1:nmod:on	Entity=time-10)|SpaceAfter=No|XML=</date>
 5	,	,	PUNCT	,	_	1	punct	1:punct	_
 6-7	Amtrak's	_	_	_	_	_	_	_	_
-6	Amtrak	Amtrak	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(object-6(organization-5
-7	's	's	PART	POS	_	6	case	6:case	Entity=organization-5)
+6	Amtrak	Amtrak	PROPN	NNP	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(object-6(organization-5|XML=<ref target:::"https://en.wikipedia.org/wiki/Amtrak">
+7	's	's	PART	POS	_	6	case	6:case	Entity=organization-5)|XML=</ref>
 8	passenger	passenger	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	train	train	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	Entity=object-6)
 10	number	number	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	Entity=(place-11
 11	91	91	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	Entity=place-11)|SpaceAfter=No
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(person-12
-14	Silver	Silver	PROPN	NNP	Number=Sing	15	compound	15:compound	_
-15	Star	Star	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=person-12)|SpaceAfter=No
+14	Silver	Silver	PROPN	NNP	Number=Sing	15	compound	15:compound	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Silver%20Star%20(Amtrak%20train)">
+15	Star	Star	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=person-12)|SpaceAfter=No|XML=</ref></hi>
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	bound	bind	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	10:acl	Discourse=joint:5->3
 18	for	for	ADP	IN	_	19	case	19:case	_
-19	Miami	Miami	PROPN	NNP	Number=Sing	17	obl	17:obl:for	Entity=(place-13)
+19	Miami	Miami	PROPN	NNP	Number=Sing	17	obl	17:obl:for	Entity=(place-13)|XML=<ref target:::"https://en.wikinews.org/wiki/Miami"></ref>
 20	from	from	ADP	IN	_	21	case	21:case	_
-21	New	New	PROPN	NNP	Number=Sing	17	obl	17:obl:from	Entity=(place-14
-22	York	York	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=place-14)|SpaceAfter=No
+21	New	New	PROPN	NNP	Number=Sing	17	obl	17:obl:from	Entity=(place-14|XML=<ref target:::"https://en.wikinews.org/wiki/New_York_City">
+22	York	York	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=place-14)|SpaceAfter=No|XML=</ref>
 23	,	,	PUNCT	,	_	10	punct	10:punct	_
 24	slammed	slam	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 25	into	into	ADP	IN	_	30	case	30:case	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	30	det	30:det	Entity=(object-6
 27	stationary	stationary	ADJ	JJ	Degree=Pos	30	amod	30:amod	_
-28	CSX	CSX	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(organization-15)
+28	CSX	CSX	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(organization-15)|XML=<ref target:::"https://en.wikipedia.org/wiki/CSX%20Transportation"></ref>
 29	freight	freight	NOUN	NN	Number=Sing	30	compound	30:compound	Entity=(object-16)
 30	train	train	NOUN	NN	Number=Sing	24	obl	24:obl:into	Entity=object-6)
 31	in	in	ADP	IN	_	32	case	32:case	_
-32	Cayce	Cayce	PROPN	NNP	Number=Sing	24	obl	24:obl:in	Entity=(place-17)|SpaceAfter=No
+32	Cayce	Cayce	PROPN	NNP	Number=Sing	24	obl	24:obl:in	Entity=(place-17)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Cayce,%20South%20Carolina"></ref>
 33	,	,	PUNCT	,	_	36	punct	36:punct	_
 34	about	about	ADV	RB	_	35	advmod	35:advmod	Entity=(abstract-18
 35	ten	10	NUM	CD	NumForm=Digit|NumType=Card	36	nummod	36:nummod	_
-36	miles	mile	NOUN	NNS	Number=Plur	41	obl:npmod	41:obl:npmod	Entity=abstract-18)
+36	miles	mile	NOUN	NNS	Number=Plur	41	obl:npmod	41:obl:npmod	Entity=abstract-18)|XML=<ref target:::"https://en.wikipedia.org/wiki/mile"></ref>
 37	(	(	PUNCT	-LRB-	_	39	punct	39:punct	Discourse=restatement:6->5|SpaceAfter=No
 38	16	16	NUM	CD	NumForm=Digit|NumType=Card	39	nummod	39:nummod	Entity=(abstract-19
-39	km	kilometer	NOUN	NN	Number=Sing	36	appos	36:appos	Entity=abstract-19)|SpaceAfter=No
+39	km	kilometer	NOUN	NN	Number=Sing	36	appos	36:appos	Entity=abstract-19)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/kilometre"></ref>
 40	)	)	PUNCT	-RRB-	_	39	punct	39:punct	_
 41	south	south	ADV	RB	Degree=Pos	24	advmod	24:advmod	Discourse=same_unit:7->5
 42	of	of	ADP	IN	_	43	case	43:case	_
-43	Columbia	Columbia	PROPN	NNP	Number=Sing	41	nmod	41:nmod:of	Entity=(place-20|SpaceAfter=No
+43	Columbia	Columbia	PROPN	NNP	Number=Sing	41	nmod	41:nmod:of	Entity=(place-20|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Columbia,%20South%20Carolina"></ref>
 44	,	,	PUNCT	,	_	45	punct	45:punct	_
 45	capital	capital	NOUN	NN	Number=Sing	43	appos	43:appos	Entity=(place-21
 46	of	of	ADP	IN	_	49	case	49:case	_
@@ -89,8 +102,8 @@
 48	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	49	compound	49:compound	Entity=(place-23)
 49	state	state	NOUN	NN	Number=Sing	45	nmod	45:nmod:of	_
 50	of	of	ADP	IN	_	52	case	52:case	_
-51	South	South	PROPN	NNP	Number=Sing	52	compound	52:compound	Entity=(place-7
-52	Carolina	Carolina	PROPN	NNP	Number=Sing	49	nmod	49:nmod:of	Entity=place-20)place-21)place-22)place-7)|SpaceAfter=No
+51	South	South	PROPN	NNP	Number=Sing	52	compound	52:compound	Entity=(place-7|XML=<ref target:::"https://en.wikinews.org/wiki/South_Carolina">
+52	Carolina	Carolina	PROPN	NNP	Number=Sing	49	nmod	49:nmod:of	Entity=place-20)place-21)place-22)place-7)|SpaceAfter=No|XML=</ref>
 53	.	.	PUNCT	.	_	24	punct	24:punct	_
 
 # sent_id = AMALGUM_news_amtrak-5
@@ -115,16 +128,18 @@
 # sent_id = AMALGUM_news_amtrak-6
 # s_type = frag
 # text = File photo of an Amtrak Silver Star locomotive, 2012.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	File	file	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=sequence:11->5|Entity=(object-26
 2	photo	photo	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	8	case	8:case	_
 4	an	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(object-27
 5	Amtrak	Amtrak	PROPN	NNP	Number=Sing	8	compound	8:compound	_
-6	Silver	Silver	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-12
-7	Star	Star	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=person-12)
+6	Silver	Silver	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-12|XML=<hi rend:::"italic">
+7	Star	Star	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=person-12)|XML=</hi>
 8	locomotive	locomotive	NOUN	NN	Number=Sing	2	nmod	2:nmod:of	SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:tmod	8:nmod:tmod	Entity=object-26)object-27)(time-28)|SpaceAfter=No
+10	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	8	nmod:tmod	8:nmod:tmod	Entity=object-26)object-27)(time-28)|SpaceAfter=No|XML=<date when:::"2012"></date>
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_news_amtrak-7
@@ -132,12 +147,13 @@
 # text = Image: Walter.
 1	Image	image	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:12->13|Entity=(abstract-29)|SpaceAfter=No
 2	:	:	PUNCT	:	_	3	punct	3:punct	_
-3	Walter	Walter	PROPN	NNP	Number=Sing	1	dep	1:dep	Discourse=attribution:13->11|Entity=(person-30)|SpaceAfter=No
+3	Walter	Walter	PROPN	NNP	Number=Sing	1	dep	1:dep	Discourse=attribution:13->11|Entity=(person-30)|SpaceAfter=No|XML=<ref target:::"https://www.flickr.com/people/69094753@N05"></ref>
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_amtrak-8
 # s_type = decl
 # text = The two killed were 54-year-old engineer Michael Kempf of Savannah, Georgia, and 36-year-old conductor Michael Cella of Orange Park, Florida.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=sequence:14->5|Entity=(person-31
 2	two	2	NUM	CD	NumForm=Digit|NumType=Card	6	nsubj	6:nsubj|16:nsubj	_
 3	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	Entity=person-31)
@@ -147,9 +163,9 @@
 7	Michael	Michael	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 8	Kempf	Kempf	PROPN	NNP	Number=Sing	6	flat	6:flat	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	Savannah	Savannah	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=(place-32|SpaceAfter=No
+10	Savannah	Savannah	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=(place-32|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Savannah,%20Georgia"></ref>
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	Georgia	Georgia	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=person-31)place-32)|SpaceAfter=No
+12	Georgia	Georgia	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=person-31)place-32)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Georgia_(US_state)"></ref>
 13	,	,	PUNCT	,	_	16	punct	16:punct	_
 14	and	and	CCONJ	CC	_	16	cc	16:cc	_
 15	36-year-old	36-year-old	ADJ	JJ	Degree=Pos	16	amod	16:amod	Entity=(person-33
@@ -157,25 +173,25 @@
 17	Michael	Michael	PROPN	NNP	Number=Sing	16	flat	16:flat	_
 18	Cella	Cella	PROPN	NNP	Number=Sing	16	flat	16:flat	_
 19	of	of	ADP	IN	_	21	case	21:case	_
-20	Orange	Orange	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(person-33
-21	Park	Park	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	SpaceAfter=No
+20	Orange	Orange	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(person-33|XML=<ref target:::"https://en.wikipedia.org/wiki/Orange%20Park,%20Florida">
+21	Park	Park	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	SpaceAfter=No|XML=</ref>
 22	,	,	PUNCT	,	_	23	punct	23:punct	_
-23	Florida	Florida	PROPN	NNP	Number=Sing	21	appos	21:appos	Entity=person-31)person-33)person-33)(place-34)|SpaceAfter=No
+23	Florida	Florida	PROPN	NNP	Number=Sing	21	appos	21:appos	Entity=person-31)person-33)person-33)(place-34)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Florida"></ref>
 24	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_news_amtrak-9
 # s_type = decl
 # text = Robert Sumwalt, chairman of the National Transportation Safety Board, told a press conference the passenger train had been diverted into a siding by a switch left "literally locked, with a padlock" in that position.
-1	Robert	Robert	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	Discourse=sequence:15->5|Entity=(person-35
-2	Sumwalt	Sumwalt	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-35)|SpaceAfter=No
+1	Robert	Robert	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	Discourse=sequence:15->5|Entity=(person-35|XML=<ref target:::"https://en.wikipedia.org/wiki/Robert%20L.%20Sumwalt%20(U.S.%20government%20official)">
+2	Sumwalt	Sumwalt	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-35)|SpaceAfter=No|XML=</ref>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	chairman	chairman	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=(person-35
 5	of	of	ADP	IN	_	10	case	10:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(organization-36
-7	National	National	ADJ	NNP	Number=Sing	10	amod	10:amod	_
+7	National	National	ADJ	NNP	Number=Sing	10	amod	10:amod	XML=<ref target:::"https://en.wikinews.org/wiki/National_Transportation_Safety_Board">
 8	Transportation	Transportation	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	Safety	Safety	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Board	Board	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=person-35)organization-36)|SpaceAfter=No
+10	Board	Board	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=person-35)organization-36)|SpaceAfter=No|XML=</ref>
 11	,	,	PUNCT	,	_	1	punct	1:punct	_
 12	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	a	a	DET	DT	Definite=Ind|PronType=Art	15	det	15:det	Entity=(event-37
@@ -192,7 +208,7 @@
 24	siding	siding	NOUN	NN	Number=Sing	21	obl	21:obl:into	Entity=place-39)
 25	by	by	ADP	IN	_	27	case	27:case	_
 26	a	a	DET	DT	Definite=Ind|PronType=Art	27	det	27:det	Entity=(object-40
-27	switch	switch	NOUN	NN	Number=Sing	21	obl	21:obl:by	_
+27	switch	switch	NOUN	NN	Number=Sing	21	obl	21:obl:by	XML=<ref target:::"https://en.wikipedia.org/wiki/railroad%20switch"></ref>
 28	left	leave	VERB	VBN	Tense=Past|VerbForm=Part	27	acl	27:acl	Discourse=elaboration:17->16
 29	"	''	PUNCT	``	_	31	punct	31:punct	SpaceAfter=No
 30	literally	literally	ADV	RB	Degree=Pos	31	advmod	31:advmod	_
@@ -210,6 +226,7 @@
 # sent_id = AMALGUM_news_amtrak-10
 # s_type = decl
 # text = The collision happened at about 2:35 am local time (0735 UTC) at a switching yard in the small city of Cayce.
+# newpar = p (5 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=sequence:18->5|Entity=(event-4
 2	collision	collision	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=event-4)
 3	happened	happen	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -217,11 +234,11 @@
 5	about	about	ADV	RB	_	6	advmod	6:advmod	Entity=(time-43
 6	2:35	2:35	NUM	CD	NumForm=Word|NumType=Card	3	obl	3:obl:at	_
 7	am	am	NOUN	NN	Number=Sing	6	compound	6:compound	Entity=time-43)(time-44)
-8	local	local	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(time-45
-9	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	Entity=time-45)
+8	local	local	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(time-45|XML=<ref target:::"https://en.wikipedia.org/wiki/North%20American%20Eastern%20Standard%20Time">
+9	time	time	NOUN	NN	Number=Sing	3	obl:tmod	3:obl:tmod	Entity=time-45)|XML=</ref>
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	Discourse=elaboration:19->18|SpaceAfter=No
 11	0735	0735	NUM	CD	NumForm=Digit|NumType=Card	9	appos	9:appos	Entity=(time-45)
-12	UTC	UTC	PROPN	NNP	Number=Sing	11	dep	11:dep	Entity=(time-46)|SpaceAfter=No
+12	UTC	UTC	PROPN	NNP	Number=Sing	11	dep	11:dep	Entity=(time-46)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/UTC"></ref>
 13	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
 14	at	at	ADP	IN	_	17	case	17:case	Discourse=same_unit:20->18
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(place-47
@@ -317,7 +334,7 @@
 4	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	crumpled	crumpl	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	ccomp	8:ccomp	SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
-7	Reuters	Reuters	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=attribution:27->26|Entity=(organization-54)
+7	Reuters	Reuters	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=attribution:27->26|Entity=(organization-54)|XML=<ref target:::"https://en.wikinews.org/wiki/Reuters"></ref>
 8	reported	report	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 9	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -333,8 +350,8 @@
 7	state	state	NOUN	NN	Number=Sing	8	compound	8:compound	Entity=(place-22)
 8	governor	governor	NOUN	NN	Number=Sing	13	nsubj	13:nsubj|23:nsubj	Entity=person-55)|SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	Henry	Henry	PROPN	NNP	Number=Sing	8	appos	8:appos	Entity=(person-55
-11	McMaster	McMaster	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-55)|SpaceAfter=No
+10	Henry	Henry	PROPN	NNP	Number=Sing	8	appos	8:appos	Entity=(person-55|XML=<ref target:::"https://en.wikipedia.org/wiki/Henry%20McMaster">
+11	McMaster	McMaster	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-55)|SpaceAfter=No|XML=</ref>
 12	,	,	PUNCT	,	_	8	punct	8:punct	_
 13	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Discourse=joint:29->3|Entity=(object-27
@@ -367,14 +384,15 @@
 # sent_id = AMALGUM_news_amtrak-15
 # s_type = decl
 # text = Harrison Cahill, a spokesman for Lexington County, gave a count of 116 injured, up from an initial report of 70; according to Derrec Becker, public information officer for the South Carolina Emergency Management Division, injuries ranged "from cuts and bruises to severe broken bones".
+# newpar = p (3 s)
 1	Harrison	Harrison	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Discourse=joint:32->3|Entity=(person-55
 2	Cahill	Cahill	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-55)|SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(person-55
 5	spokesman	spokesman	NOUN	NN	Number=Sing	1	appos	1:appos	_
 6	for	for	ADP	IN	_	8	case	8:case	_
-7	Lexington	Lexington	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-58(place-59)
-8	County	County	PROPN	NNP	Number=Sing	5	nmod	5:nmod:for	Entity=person-55)organization-58)|SpaceAfter=No
+7	Lexington	Lexington	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-58(place-59)|XML=<ref target:::"https://en.wikipedia.org/wiki/Lexington%20County,%20South%20Carolina">
+8	County	County	PROPN	NNP	Number=Sing	5	nmod	5:nmod:for	Entity=person-55)organization-58)|SpaceAfter=No|XML=</ref>
 9	,	,	PUNCT	,	_	1	punct	1:punct	_
 10	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 11	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	Entity=(abstract-60
@@ -425,7 +443,7 @@
 # s_type = decl
 # text = On Monday a Palmetto Health spokesperson said two patients were in serious and two in critical condition at their facilities.
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=attribution:35->36
-2	Monday	Monday	PROPN	NNP	Number=Sing	7	obl	7:obl:on	Entity=(time-71)
+2	Monday	Monday	PROPN	NNP	Number=Sing	7	obl	7:obl:on	Entity=(time-71)|XML=<date when:::"2018-01-29"></date>
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(person-72
 4	Palmetto	Palmetto	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(organization-73(place-74)
 5	Health	Health	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=organization-73)
@@ -474,12 +492,13 @@
 # sent_id = AMALGUM_news_amtrak-18
 # s_type = decl
 # text = Passenger Derek Pettaway told the CNN network that like most others, he had been sleeping when the collision happened.
+# newpar = p (2 s)
 1	Passenger	passenger	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:39->3|Entity=(person-38
 2	Derek	Derek	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Pettaway	Pettaway	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-38)
 4	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(organization-85
-6	CNN	CNN	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(organization-86)
+6	CNN	CNN	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(organization-86)|XML=<ref target:::"https://en.wikinews.org/wiki/CNN"></ref>
 7	network	network	NOUN	NN	Number=Sing	4	obj	4:obj	Entity=organization-85)
 8	that	that	SCONJ	IN	_	16	mark	16:mark	Discourse=elaboration:40->39
 9	like	like	ADP	IN	_	11	case	11:case	_
@@ -537,6 +556,7 @@
 # sent_id = AMALGUM_news_amtrak-20
 # s_type = decl
 # text = "Key to this investigation is learning why the switch was lined that way", Sumwalt said.
+# newpar = p (3 s)
 1	"	''	PUNCT	``	_	7	punct	7:punct	Discourse=joint:48->3|SpaceAfter=No
 2	Key	key	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=(person-93)
 3	to	to	ADP	IN	_	5	case	5:case	_
@@ -565,14 +585,14 @@
 2	's	's	PART	POS	_	1	case	1:case	Entity=organization-5)
 3	CEO	CEO	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	Entity=person-97)|SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	Richard	Richard	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(person-97
-6	Anderson	Anderson	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-97)|SpaceAfter=No
+5	Richard	Richard	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(person-97|XML=<ref target:::"https://en.wikipedia.org/wiki/Richard%20H.%20Anderson%20(businessman)">
+6	Anderson	Anderson	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-97)|SpaceAfter=No|XML=</ref>
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	speaking	speak	VERB	VBG	VerbForm=Ger	3	acl	3:acl	Discourse=attribution:51->54
 9	to	to	ADP	IN	_	10	case	10:case	_
 10	reporters	reporter	NOUN	NNS	Number=Plur	8	obl	8:obl:to	Entity=(person-98)
 11	on	on	ADP	IN	_	12	case	12:case	_
-12	Sunday	Sunday	PROPN	NNP	Number=Sing	8	obl	8:obl:on	Entity=(time-99)|SpaceAfter=No
+12	Sunday	Sunday	PROPN	NNP	Number=Sing	8	obl	8:obl:on	Entity=(time-99)|SpaceAfter=No|XML=<date when:::"2018-02-04"></date>
 13	,	,	PUNCT	,	_	3	punct	3:punct	_
 14	held	hold	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=attribution:52->54
 15	CSX	CSX	PROPN	NNP	Number=Sing	14	obj	14:obj|16:nsubj:xsubj	Entity=(organization-15)
@@ -633,9 +653,9 @@
 7	braking	braking	NOUN	NN	Number=Sing	5	conj	5:conj:and|8:compound	Entity=(object-106)
 8	system	system	NOUN	NN	Number=Sing	27	nsubj	18:nsubj|27:nsubj	_
 9	called	call	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	8:acl	Discourse=elaboration:61->60
-10	positive	positive	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(abstract-107
+10	positive	positive	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(abstract-107|XML=<ref target:::"https://en.wikipedia.org/wiki/positive%20train%20control">
 11	train	train	NOUN	NN	Number=Sing	12	compound	12:compound	Entity=(object-6)
-12	control	control	NOUN	NN	Number=Sing	9	obj	9:obj	Entity=abstract-107)|SpaceAfter=No
+12	control	control	NOUN	NN	Number=Sing	9	obj	9:obj	Entity=abstract-107)|SpaceAfter=No|XML=</ref>
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	which	which	PRON	WDT	PronType=Rel	18	nsubj	8:ref	Discourse=elaboration:62->60
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
@@ -658,6 +678,7 @@
 # sent_id = AMALGUM_news_amtrak-23
 # s_type = decl
 # text = Several fatal incidents involving Amtrak trains have occurred in the past three months.
+# newpar = p (3 s)
 1	Several	several	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=joint:64->3|Entity=(event-109
 2	fatal	fatal	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	incidents	incident	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
@@ -677,8 +698,8 @@
 # s_type = decl
 # text = On December 18, the inaugural train on a new route in Washington state derailed at high speed while crossing above a highway, killing three;
 1	On	on	ADP	IN	_	3	case	3:case	Discourse=joint:65->3
-2	December	December	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-112
-3	18	18	NUM	CD	NumForm=Digit|NumType=Card	15	obl	15:obl:on	Entity=time-112)|SpaceAfter=No
+2	December	December	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-112|XML=<date when:::"2017-12-18">
+3	18	18	NUM	CD	NumForm=Digit|NumType=Card	15	obl	15:obl:on	Entity=time-112)|SpaceAfter=No|XML=</date>
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(object-6
 6	inaugural	inaugural	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -688,7 +709,7 @@
 10	new	new	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	route	route	NOUN	NN	Number=Sing	7	nmod	7:nmod:on	_
 12	in	in	ADP	IN	_	14	case	14:case	_
-13	Washington	Washington	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(place-22
+13	Washington	Washington	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(place-22|XML=<ref target:::"https://en.wikinews.org/wiki/Washington_(state)"></ref>
 14	state	state	NOUN	NN	Number=Sing	11	nmod	11:nmod:in	Entity=object-6)place-113)place-22)
 15	derailed	derail	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 16	at	at	ADP	IN	_	18	case	18:case	_
@@ -708,19 +729,19 @@
 # s_type = decl
 # text = on January 31, the driver of a garbage truck was killed in Virginia when he collided with an Amtrak train chartered to take Republican lawmakers to a retreat.
 1	on	on	ADP	IN	_	3	case	3:case	Discourse=joint:68->3
-2	January	January	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-117(time-118)
-3	31	31	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:on	Entity=time-117)|SpaceAfter=No
+2	January	January	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-117(time-118)|XML=<date when:::"2018-01-31">
+3	31	31	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:on	Entity=time-117)|SpaceAfter=No|XML=</date>
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(person-119
 6	driver	driver	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass	_
 7	of	of	ADP	IN	_	10	case	10:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(object-120
-9	garbage	garbage	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(organization-121)
-10	truck	truck	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=person-119)object-120)
+9	garbage	garbage	NOUN	NN	Number=Sing	10	compound	10:compound	Entity=(organization-121)|XML=<ref target:::"https://en.wikipedia.org/wiki/garbage%20truck">
+10	truck	truck	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=person-119)object-120)|XML=</ref>
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	12:aux:pass	_
 12	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	Virginia	Virginia	PROPN	NNP	Number=Sing	12	obl	12:obl:in	Entity=(place-122)
+14	Virginia	Virginia	PROPN	NNP	Number=Sing	12	obl	12:obl:in	Entity=(place-122)|XML=<ref target:::"https://en.wikinews.org/wiki/Virginia"></ref>
 15	when	when	SCONJ	WRB	PronType=Int	17	mark	17:mark	Discourse=circumstance:69->68
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj	Entity=(person-119)
 17	collided	collide	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	advcl	12:advcl:when	_
@@ -731,8 +752,8 @@
 22	chartered	charter	VERB	VBN	Tense=Past|VerbForm=Part	21	acl	21:acl	Discourse=elaboration:70->69
 23	to	to	PART	TO	_	24	mark	24:mark	Discourse=purpose:71->70
 24	take	take	VERB	VB	VerbForm=Inf	22	xcomp	22:xcomp	_
-25	Republican	Republican	ADJ	JJ	Degree=Pos	26	amod	26:amod	Entity=(person-123
-26	lawmakers	lawmaker	NOUN	NNS	Number=Plur	24	obj	24:obj	Entity=object-6)person-123)
+25	Republican	Republican	ADJ	JJ	Degree=Pos	26	amod	26:amod	Entity=(person-123|XML=<ref target:::"https://en.wikinews.org/wiki/Republican_Party_(US)"></ref>
+26	lawmakers	lawmaker	NOUN	NNS	Number=Plur	24	obj	24:obj	Entity=object-6)person-123)|XML=<ref target:::"https://en.wikinews.org/wiki/United_States_Congress"></ref>
 27	to	to	ADP	IN	_	29	case	29:case	_
 28	a	a	DET	DT	Definite=Ind|PronType=Art	29	det	29:det	Entity=(place-124
 29	retreat	retreat	NOUN	NN	Number=Sing	24	obl	24:obl:to	Entity=place-124)|SpaceAfter=No

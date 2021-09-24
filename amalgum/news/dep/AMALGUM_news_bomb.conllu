@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_bomb
+# meta::title = 30 dead in Baghdad bomb blasts, hundreds of people injured
+# meta::shortTitle = bomb
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2010-04-04
+# meta::dateModified = 2015-12-29
+# meta::sourceURL = https://en.wikinews.org/wiki/30_dead_in_Baghdad_bomb_blasts%2C_hundreds_of_people_injured
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_bomb
 # sent_id = AMALGUM_news_bomb-1
 # s_type = frag
 # text = 30 dead in Baghdad bomb blasts, hundreds of people injured
+# newpar = head (1 s)
 1	30	30	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=preparation:1->3
 2	dead	dead	ADJ	JJ	Degree=Pos	0	root	0:root	_
 3	in	in	ADP	IN	_	6	case	6:case	_
@@ -17,31 +28,33 @@
 # sent_id = AMALGUM_news_bomb-2
 # s_type = frag
 # text = Sunday, April 4, 2010
-1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-5)|SpaceAfter=No
+# newpar = p (1 s)
+1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-5)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	April	April	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5
+3	April	April	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5|XML=<date when:::"2010-04-04">
 4	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)
+6	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_bomb-3
 # s_type = decl
 # text = Three car bombs were detonated in Baghdad, the capital of Iraq on Sunday morning, killing 30 people.
+# newpar = p (3 s)
 1	Three	3	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	Discourse=ROOT:3|Entity=(object-7
 2	car	car	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-8)
 3	bombs	bomb	NOUN	NNS	Number=Plur	5	nsubj:pass	5:nsubj:pass	Entity=object-7)
 4	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	detonated	detonate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	Baghdad	Baghdad	PROPN	NNP	Number=Sing	5	obl	5:obl:in	Entity=(place-2)|SpaceAfter=No
+7	Baghdad	Baghdad	PROPN	NNP	Number=Sing	5	obl	5:obl:in	Entity=(place-2)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Baghdad"></ref>
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(place-2
 10	capital	capital	NOUN	NN	Number=Sing	7	appos	7:appos	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	Iraq	Iraq	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=place-2)(place-2)
+12	Iraq	Iraq	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=place-2)(place-2)|XML=<ref target:::"https://en.wikinews.org/wiki/Iraq"></ref>
 13	on	on	ADP	IN	_	14	case	14:case	_
-14	Sunday	Sunday	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(time-9
-15	morning	morning	NOUN	NN	Number=Sing	5	obl	5:obl	Entity=time-9)|SpaceAfter=No
+14	Sunday	Sunday	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(time-9|XML=<date when:::"2010-04-04">
+15	morning	morning	NOUN	NN	Number=Sing	5	obl	5:obl	Entity=time-9)|SpaceAfter=No|XML=</date>
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
 17	killing	kill	VERB	VBG	VerbForm=Ger	5	advcl	5:advcl	Discourse=result:4->3
 18	30	30	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	Entity=(person-4
@@ -87,6 +100,7 @@
 # sent_id = AMALGUM_news_bomb-6
 # s_type = decl
 # text = The explosion [at the Iranian embassy] was really strong.
+# newpar = hi rend:::"bold" (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:10->3|Entity=(event-16
 2	explosion	explosion	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 3	[	[	PUNCT	-LRB-	_	7	punct	7:punct	SpaceAfter=No
@@ -143,6 +157,7 @@
 # sent_id = AMALGUM_news_bomb-10
 # s_type = frag
 # text = —Abu Ahmed, witness to the attack
+# newpar = p (1 s)
 1	—	—	PUNCT	:	_	2	punct	2:punct	Discourse=preparation:15->16|SpaceAfter=No
 2	Abu	Abu	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-25
 3	Ahmed	Ahmed	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-25)|SpaceAfter=No
@@ -155,6 +170,7 @@
 # sent_id = AMALGUM_news_bomb-11
 # s_type = decl
 # text = "They were suicide attacks against the Egyptian and Iranian embassies," commented Major General Qassim Atta, who is the spokesperson for the Baghdad operations of the Iraqi security agencies.
+# newpar = p (4 s)
 1	"	''	PUNCT	``	_	5	punct	5:punct	Discourse=joint:16->3|SpaceAfter=No
 2	They	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	5	nsubj	5:nsubj	Entity=(event-24)
 3	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	5	cop	5:cop	_
@@ -264,6 +280,7 @@
 # sent_id = AMALGUM_news_bomb-15
 # s_type = decl
 # text = Atta stated that Iraqi security agencies had barred a car with a bomb in Masbah, central Baghdad.
+# newpar = p (3 s)
 1	Atta	Atta	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:25->26|Entity=(person-29)
 2	stated	state	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	8	mark	8:mark	Discourse=joint:26->16
@@ -333,6 +350,7 @@
 # sent_id = AMALGUM_news_bomb-18
 # s_type = decl
 # text = The explosions which occurred almost simultaneously broke windows in adjoining buildings, sparked exchange of gunfire between the security personnel and the attacker, thereby sending smoke clouds in the sky.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:32->16|Entity=(event-13
 2	explosions	explosion	NOUN	NNS	Number=Plur	7	nsubj	4:nsubj|7:nsubj|13:nsubj	_
 3	which	which	PRON	WDT	PronType=Rel	4	nsubj	2:ref	Discourse=elaboration:33->32
@@ -415,6 +433,7 @@
 # sent_id = AMALGUM_news_bomb-21
 # s_type = decl
 # text = Said Mohammed, a witness of the blast near the Egyptian embassy, said guards had made an attempt to stop the bomber. "
+# newpar = p (3 s)
 1	Said	Said	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	Discourse=attribution:40->41|Entity=(person-64
 2	Mohammed	Mohammed	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-64)|SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
@@ -496,6 +515,7 @@
 # sent_id = AMALGUM_news_bomb-24
 # s_type = decl
 # text = Pieces of shrapnel covered the street in front of the embassy building.
+# newpar = p (2 s)
 1	Pieces	piece	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Discourse=joint:50->47|Entity=(object-71
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	shrapnel	shrapnel	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	Entity=object-71)(object-72)
@@ -540,6 +560,7 @@
 # sent_id = AMALGUM_news_bomb-26
 # s_type = decl
 # text = "The explosion [at the Iranian embassy] was really strong," said Abu Ahmed, a taxi driver who was an eyewitness of one of the blasts.
+# newpar = p (4 s)
 1	"	''	PUNCT	``	_	12	punct	12:punct	Discourse=joint:55->47|SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-16
 3	explosion	explosion	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	_
@@ -617,6 +638,7 @@
 # sent_id = AMALGUM_news_bomb-30
 # s_type = decl
 # text = The frequency of attacks in Iraq has fallen from the levels in 2006 or 2007;
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:62->59|Entity=(abstract-82
 2	frequency	frequency	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
@@ -629,9 +651,9 @@
 10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(abstract-83
 11	levels	level	NOUN	NNS	Number=Plur	8	obl	8:obl:from	_
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod:in	Entity=(time-84)
+13	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod:in	Entity=(time-84)|XML=<date when:::"2006"></date>
 14	or	or	CCONJ	CC	_	15	cc	15:cc	_
-15	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	13	conj	11:nmod:in|13:conj:or	Entity=abstract-83)(time-85)|SpaceAfter=No
+15	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	13	conj	11:nmod:in|13:conj:or	Entity=abstract-83)(time-85)|SpaceAfter=No|XML=<date when:::"2007"></date>
 16	;	;	PUNCT	:	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_news_bomb-31
@@ -641,11 +663,11 @@
 2	figures	figure	NOUN	NNS	Number=Plur	6	nsubj	6:nsubj	Entity=(abstract-86
 3	issued	issue	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	Discourse=elaboration:64->63
 4	on	on	ADP	IN	_	5	case	5:case	_
-5	Thursday	Thursday	PROPN	NNP	Number=Sing	3	obl	3:obl:on	Entity=abstract-86)(time-87)
+5	Thursday	Thursday	PROPN	NNP	Number=Sing	3	obl	3:obl:on	Entity=abstract-86)(time-87)|XML=<date when:::"2010-04-01"></date>
 6	showed	show	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	that	that	SCONJ	IN	_	15	mark	15:mark	Discourse=contrast:65->62
-8	last	last	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(time-88
-9	month	month	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	Entity=time-88)|SpaceAfter=No
+8	last	last	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(time-88|XML=<date when:::"2010-03">
+9	month	month	NOUN	NN	Number=Sing	15	obl:tmod	15:obl:tmod	Entity=time-88)|SpaceAfter=No|XML=</date>
 10	,	,	PUNCT	,	_	9	punct	9:punct	_
 11	367	367	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	Entity=(person-89
 12	Iraqis	Iraqis	PROPN	NNPS	Number=Plur	15	nsubj:pass	15:nsubj:pass	Entity=person-89)
@@ -657,7 +679,7 @@
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	_
 20	highest	high	ADJ	JJS	Degree=Sup	17	appos	17:appos	_
-21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	Entity=(time-90
-22	year	year	NOUN	NN	Number=Sing	20	obl:tmod	20:obl:tmod	Entity=time-90)|SpaceAfter=No
+21	this	this	DET	DT	Number=Sing|PronType=Dem	22	det	22:det	Entity=(time-90|XML=<date when:::"2010">
+22	year	year	NOUN	NN	Number=Sing	20	obl:tmod	20:obl:tmod	Entity=time-90)|SpaceAfter=No|XML=</date>
 23	.	.	PUNCT	.	_	6	punct	6:punct	_
 

@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_extreme
+# meta::title = World Bank says more people are poor, but fewer are in extreme poverty
+# meta::shortTitle = extreme
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2008-08-26
+# meta::dateModified = 2009-02-25
+# meta::sourceURL = https://en.wikinews.org/wiki/World_Bank_says_more_people_are_poor%2C_but_fewer_are_in_extreme_poverty
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_extreme
 # sent_id = AMALGUM_news_extreme-1
 # s_type = decl
 # text = World Bank says more people are poor, but fewer are in extreme poverty
+# newpar = head (1 s)
 1	World	World	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=attribution:1->2|Entity=(organization-1
 2	Bank	Bank	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-1)
 3	says	say	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -20,16 +31,18 @@
 # sent_id = AMALGUM_news_extreme-2
 # s_type = frag
 # text = Wednesday, August 27, 2008
-1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:4->8|Entity=(time-4)|SpaceAfter=No
+# trailing_xml = <figure rend:::"Slum and dirty river.jpg"></figure>
+1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:4->8|Entity=(time-4)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
+3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4|XML=<date when:::"2008-08-27">
 4	27	27	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
+6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_extreme-3
 # s_type = decl
 # text = According to a new study released by the World Bank, more people than thought are considered to be poor in the developing world but the percentage of people in extreme poverty have decreased.
+# newpar = p (5 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	5	case	5:case	Discourse=attribution:5->8
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(abstract-6
@@ -38,8 +51,8 @@
 6	released	release	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	Discourse=elaboration:6->5
 7	by	by	ADP	IN	_	10	case	10:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(organization-1
-9	World	World	ADJ	NNP	Number=Sing	10	amod	10:amod	_
-10	Bank	Bank	PROPN	NNP	Number=Sing	6	obl	6:obl:by	Entity=abstract-6)organization-1)|SpaceAfter=No
+9	World	World	ADJ	NNP	Number=Sing	10	amod	10:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/World%20Bank">
+10	Bank	Bank	PROPN	NNP	Number=Sing	6	obl	6:obl:by	Entity=abstract-6)organization-1)|SpaceAfter=No|XML=</ref>
 11	,	,	PUNCT	,	_	5	punct	5:punct	_
 12	more	more	ADJ	JJR	Degree=Cmp	13	amod	13:amod	Entity=(person-2
 13	people	person	NOUN	NNS	Number=Plur	17	nsubj:pass	17:nsubj:pass|20:nsubj:xsubj	_
@@ -52,16 +65,16 @@
 20	poor	poor	ADJ	JJ	Degree=Pos	17	xcomp	17:xcomp	_
 21	in	in	ADP	IN	_	24	case	24:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(place-7
-23	developing	develop	VERB	VBG	VerbForm=Ger	24	amod	24:amod	_
-24	world	world	NOUN	NN	Number=Sing	20	obl	20:obl:in	Entity=place-7)
+23	developing	develop	VERB	VBG	VerbForm=Ger	24	amod	24:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/developing%20world">
+24	world	world	NOUN	NN	Number=Sing	20	obl	20:obl:in	Entity=place-7)|XML=</ref>
 25	but	but	CCONJ	CC	_	34	cc	34:cc	Discourse=contrast:9->8
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(abstract-8
 27	percentage	percentage	NOUN	NN	Number=Sing	34	nsubj	34:nsubj	_
 28	of	of	ADP	IN	_	29	case	29:case	_
 29	people	person	NOUN	NNS	Number=Plur	27	nmod	27:nmod:of	Entity=(person-2
 30	in	in	ADP	IN	_	32	case	32:case	_
-31	extreme	extreme	ADJ	JJ	Degree=Pos	32	amod	32:amod	Entity=(abstract-3
-32	poverty	poverty	NOUN	NN	Number=Sing	29	nmod	29:nmod:in	Entity=abstract-8)person-2)abstract-3)
+31	extreme	extreme	ADJ	JJ	Degree=Pos	32	amod	32:amod	Entity=(abstract-3|XML=<ref target:::"https://en.wikipedia.org/wiki/extreme%20poverty">
+32	poverty	poverty	NOUN	NN	Number=Sing	29	nmod	29:nmod:in	Entity=abstract-8)person-2)abstract-3)|XML=</ref>
 33	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	34	aux	34:aux	_
 34	decreased	decrease	VERB	VBN	Tense=Past|VerbForm=Part	17	conj	17:conj:but	SpaceAfter=No
 35	.	.	PUNCT	.	_	17	punct	17:punct	_
@@ -75,7 +88,7 @@
 4	that	that	SCONJ	IN	_	10	mark	10:mark	Discourse=joint:11->8
 5	as	as	ADP	IN	_	7	case	7:case	_
 6	of	of	ADP	IN	_	5	fixed	5:fixed	_
-7	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:as_of	Entity=(time-9)|SpaceAfter=No
+7	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:as_of	Entity=(time-9)|SpaceAfter=No|XML=<date when:::"2005"></date>
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	there	there	PRON	EX	_	10	expl	10:expl	_
 10	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
@@ -88,7 +101,7 @@
 17	for	for	ADP	IN	_	20	case	20:case	_
 18	less	less	ADJ	JJR	Degree=Cmp	21	advmod	21:advmod	Entity=(place-10
 19	than	than	ADP	IN	_	18	fixed	18:fixed	_
-20	US$	US$	PROPN	NNP	Number=Sing	16	obl	16:obl:for	SpaceAfter=No
+20	US$	US$	PROPN	NNP	Number=Sing	16	obl	16:obl:for	SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/United%20States%20dollar"></ref>
 21	1.25	1.25	NUM	CD	NumForm=Digit|NumType=Card	20	dep	20:dep	_
 22	per	per	ADP	IN	_	23	case	23:case	_
 23	day	day	NOUN	NN	Number=Sing	21	nmod	21:nmod:per	Entity=person-2)place-10)(time-11)|SpaceAfter=No
@@ -104,7 +117,7 @@
 5	1.9	1.9	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	Entity=(abstract-12
 6	billion	1000000000	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:from|11:nsubj	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:in	Entity=(time-13)|SpaceAfter=No
+8	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:in	Entity=(time-13)|SpaceAfter=No|XML=<date when:::"1981"></date>
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	which	which	PRON	WDT	PronType=Rel	11	nsubj	6:ref	Discourse=elaboration:14->13
 11	equals	equal	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
@@ -145,7 +158,7 @@
 6	on	on	ADP	IN	_	7	case	7:case	_
 7	data	datum	NOUN	NNS	Number=Plur	5	obl	5:obl:on	Entity=(abstract-19
 8	from	from	ADP	IN	_	9	case	9:case	_
-9	1994	1994	NUM	CD	NumForm=Digit|NumType=Card	7	nmod	7:nmod:from	Entity=abstract-18)abstract-19)(time-20)|SpaceAfter=No
+9	1994	1994	NUM	CD	NumForm=Digit|NumType=Card	7	nmod	7:nmod:from	Entity=abstract-18)abstract-19)(time-20)|SpaceAfter=No|XML=<date when:::"1994"></date>
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 11	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	13	expl	13:expl	Discourse=attribution:18->19|Entity=(time-20)
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux:pass	13:aux:pass	_
@@ -160,18 +173,18 @@
 21	in	in	ADP	IN	_	22	case	22:case	_
 22	poverty	poverty	NOUN	NN	Number=Sing	20	nmod	20:nmod:in	Entity=(abstract-3)
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	20	nmod	20:nmod:in	Entity=person-2)(time-21)
+24	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	20	nmod	20:nmod:in	Entity=person-2)(time-21)|XML=<date when:::"2004"></date>
 25	and	and	CCONJ	CC	_	27	cc	27:cc	_
 26	1.5	1.5	NUM	CD	NumForm=Digit|NumType=Card	27	compound	27:compound	Entity=(person-22
 27	billion	1000000000	NUM	CD	NumForm=Digit|NumType=Card	20	conj	16:nsubj|20:conj:and	Entity=person-22)
 28	in	in	ADP	IN	_	29	case	29:case	_
-29	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	27	orphan	27:orphan	Entity=(time-13)|SpaceAfter=No
+29	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	27	orphan	27:orphan	Entity=(time-13)|SpaceAfter=No|XML=<date when:::"1981"></date>
 30	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = AMALGUM_news_extreme-8
 # s_type = decl
 # text = The new data confirm that the world will likely reach the first Millennium Development Goal of halving the 1990 level of poverty by 2015 and that poverty has fallen by about one percentage point a year since 1981.
-1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=attribution:20->21|Entity=(abstract-19
+1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=attribution:20->21|Entity=(abstract-19|XML=<hi rend:::"bold">
 2	new	new	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	data	datum	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=abstract-19)
 4	confirm	confirm	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -189,7 +202,7 @@
 16	of	of	SCONJ	IN	_	17	mark	17:mark	Discourse=elaboration:22->21
 17	halving	halve	VERB	VBG	VerbForm=Ger	15	acl	15:acl:of	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(abstract-26
-19	1990	1990	NUM	CD	NumForm=Digit|NumType=Card	20	compound	20:compound	_
+19	1990	1990	NUM	CD	NumForm=Digit|NumType=Card	20	compound	20:compound	XML=<date when:::"1990"></date>
 20	level	level	NOUN	NN	Number=Sing	17	obj	17:obj	_
 21	of	of	ADP	IN	_	22	case	22:case	_
 22	poverty	poverty	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	Entity=abstract-26)(abstract-3)
@@ -209,11 +222,12 @@
 36	year	year	NOUN	NN	Number=Sing	29	obl:tmod	29:obl:tmod	Entity=time-29)
 37	since	since	ADP	IN	_	38	case	38:case	_
 38	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	29	obl	29:obl:since	Entity=(time-13)|SpaceAfter=No
-39	.	.	PUNCT	.	_	4	punct	4:punct	_
+39	.	.	PUNCT	.	_	4	punct	4:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_extreme-9
 # s_type = frag
 # text = —Justin Lin
+# newpar = p (2 s)
 1	—	—	PUNCT	:	_	2	punct	2:punct	Discourse=preparation:24->25|SpaceAfter=No
 2	Justin	Justin	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-30
 3	Lin	Lin	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-30)
@@ -238,6 +252,7 @@
 # sent_id = AMALGUM_news_extreme-11
 # s_type = decl
 # text = According to one of the report's authors Martin Ravallion, Director of the Development Research Group at the World Bank, "The new estimates are a major advance in poverty measurement because they are based on far better price data for assuring that the poverty lines are comparable across countries.
+# newpar = p (2 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	3	case	3:case	Discourse=attribution:26->27
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	one	one	NUM	CD	NumForm=Word|NumType=Card	30	nmod	30:nmod:according_to	Entity=(person-34
@@ -320,6 +335,7 @@
 # sent_id = AMALGUM_news_extreme-13
 # s_type = decl
 # text = The report concludes that the developing world is on track to meet its goal to cut poverty in half by 2015.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:31->32|Entity=(abstract-36
 2	report	report	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-36)
 3	concludes	conclude	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -340,7 +356,7 @@
 18	in	in	ADP	IN	_	19	case	19:case	_
 19	half	half	NOUN	NN	Number=Sing	16	obl	16:obl:in	_
 20	by	by	ADP	IN	_	21	case	21:case	_
-21	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:by	Entity=abstract-23)(time-27)|SpaceAfter=No
+21	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:by	Entity=abstract-23)(time-27)|SpaceAfter=No|XML=<date when:::"2015"></date>
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_extreme-14
@@ -361,8 +377,9 @@
 # sent_id = AMALGUM_news_extreme-15
 # s_type = decl
 # text = East Asia has seen the biggest drop in poverty since 1981 when 80% of the population was poor.
-1	East	East	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:36->35|Entity=(place-52
-2	Asia	Asia	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=place-52)
+# newpar = p (3 s)
+1	East	East	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:36->35|Entity=(place-52|XML=<ref target:::"https://en.wikipedia.org/wiki/East%20Asia">
+2	Asia	Asia	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=place-52)|XML=</ref>
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 4	seen	see	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(event-53
@@ -371,7 +388,7 @@
 8	in	in	ADP	IN	_	9	case	9:case	_
 9	poverty	poverty	NOUN	NN	Number=Sing	7	nmod	7:nmod:in	Entity=event-53)(abstract-3)
 10	since	since	ADP	IN	_	11	case	11:case	_
-11	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:since	Entity=(time-13)
+11	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:since	Entity=(time-13)|XML=<date when:::"1981"></date>
 12	when	when	SCONJ	WRB	PronType=Int	19	mark	19:mark	Discourse=circumstance:37->36
 13	80	80	NUM	CD	NumForm=Digit|NumType=Card	14	nummod	14:nummod	Entity=(person-54|SpaceAfter=No
 14	%	%	SYM	NN	Number=Sing	19	nsubj	19:nsubj	_
@@ -430,8 +447,9 @@
 # sent_id = AMALGUM_news_extreme-18
 # s_type = decl
 # text = In India, for example, poverty at $1.25 a day increased from 420 million people in 1981 to 455 million in 2005.
+# newpar = p (2 s)
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:42->40
-2	India	India	PROPN	NNP	Number=Sing	13	obl	13:obl:in	Entity=(place-59)|SpaceAfter=No
+2	India	India	PROPN	NNP	Number=Sing	13	obl	13:obl:in	Entity=(place-59)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/India"></ref>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	for	for	ADP	IN	_	5	case	5:case	_
 5	example	example	NOUN	NN	Number=Sing	13	obl	13:obl:for	SpaceAfter=No
@@ -448,12 +466,12 @@
 16	million	1000000	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	_
 17	people	person	NOUN	NNS	Number=Plur	13	obl	13:obl:from	Entity=person-2)
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:in	Entity=(time-13)
+19	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:in	Entity=(time-13)|XML=<date when:::"1981"></date>
 20	to	to	ADP	IN	_	22	case	22:case	_
 21	455	455	NUM	CD	NumForm=Digit|NumType=Card	22	compound	22:compound	Entity=(person-60
 22	million	1000000	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:to	Entity=person-60)
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:in	Entity=(time-9)|SpaceAfter=No
+24	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	13	obl	13:obl:in	Entity=(time-9)|SpaceAfter=No|XML=<date when:::"2005"></date>
 25	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = AMALGUM_news_extreme-19
@@ -481,17 +499,18 @@
 20	42	42	NUM	CD	NumForm=Digit|NumType=Card	21	nummod	21:nummod	Entity=(abstract-64|SpaceAfter=No
 21	%	%	SYM	NN	Number=Sing	18	obl	18:obl:to	Entity=abstract-64)
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:in	Entity=(time-9)
+23	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:in	Entity=(time-9)|XML=<date when:::"2005"></date>
 24	from	from	ADP	IN	_	26	case	26:case	_
 25	60	60	NUM	CD	NumForm=Digit|NumType=Card	26	nummod	26:nummod	Entity=(abstract-65|SpaceAfter=No
 26	%	%	SYM	NN	Number=Sing	18	obl	18:obl:from	Entity=abstract-65)
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:in	Entity=(time-13)|SpaceAfter=No
+28	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:in	Entity=(time-13)|SpaceAfter=No|XML=<date when:::"1981"></date>
 29	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = AMALGUM_news_extreme-20
 # s_type = decl
 # text = The only region that has not seen any significant decrease in poverty is Sub-Saharan Africa where the percentage of people in poverty has stayed the same at 50%.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:44->43|Entity=(place-55
 2	only	only	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	region	region	NOUN	NN	Number=Sing	15	nsubj	7:nsubj|15:nsubj	_
@@ -505,8 +524,8 @@
 11	in	in	ADP	IN	_	12	case	12:case	_
 12	poverty	poverty	NOUN	NN	Number=Sing	10	nmod	10:nmod:in	Entity=place-55)event-66)(abstract-3)
 13	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	Discourse=same_unit:46->44
-14	Sub-Saharan	Sub-Saharan	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(place-55(place-67)
-15	Africa	Africa	PROPN	NNP	Number=Sing	0	root	0:root	_
+14	Sub-Saharan	Sub-Saharan	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(place-55(place-67)|XML=<ref target:::"https://en.wikipedia.org/wiki/Sub-Saharan%20Africa">
+15	Africa	Africa	PROPN	NNP	Number=Sing	0	root	0:root	XML=</ref>
 16	where	where	SCONJ	WRB	PronType=Rel	24	mark	24:mark	Discourse=elaboration:47->46
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(abstract-68
 18	percentage	percentage	NOUN	NN	Number=Sing	24	nsubj	24:nsubj|26:nsubj:xsubj	_
@@ -546,6 +565,7 @@
 # sent_id = AMALGUM_news_extreme-22
 # s_type = frag
 # text = "
+# newpar = p (2 s)
 1	"	''	''	''	_	0	root	0:root	Discourse=joint:49->48|SpaceAfter=No
 
 # sent_id = AMALGUM_news_extreme-23
@@ -563,18 +583,18 @@
 10	reach	reach	VERB	VB	VerbForm=Inf	4	ccomp	4:ccomp	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-23
 12	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	15	amod	15:amod	_
-13	Millennium	Millennium	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(object-24)
+13	Millennium	Millennium	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(object-24)|XML=<ref target:::"https://en.wikipedia.org/wiki/Millennium%20Development%20Goal">
 14	Development	Development	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(person-25)
-15	Goal	Goal	PROPN	NNP	Number=Sing	10	obj	10:obj	_
+15	Goal	Goal	PROPN	NNP	Number=Sing	10	obj	10:obj	XML=</ref>
 16	of	of	SCONJ	IN	_	17	mark	17:mark	Discourse=elaboration:52->51
 17	halving	halve	VERB	VBG	VerbForm=Ger	15	acl	15:acl:of	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(abstract-26
-19	1990	1990	NUM	CD	NumForm=Digit|NumType=Card	20	compound	20:compound	_
+19	1990	1990	NUM	CD	NumForm=Digit|NumType=Card	20	compound	20:compound	XML=<date when:::"1990"></date>
 20	level	level	NOUN	NN	Number=Sing	17	obj	17:obj	_
 21	of	of	ADP	IN	_	22	case	22:case	_
 22	poverty	poverty	NOUN	NN	Number=Sing	20	nmod	20:nmod:of	Entity=abstract-26)(abstract-3)
 23	by	by	ADP	IN	_	24	case	24:case	_
-24	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	17	obl	17:obl:by	Entity=abstract-23)(time-27)
+24	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	17	obl	17:obl:by	Entity=abstract-23)(time-27)|XML=<date when:::"2015"></date>
 25	and	and	CCONJ	CC	_	29	cc	29:cc	Discourse=joint:53->51
 26	that	that	SCONJ	IN	_	29	mark	29:mark	_
 27	poverty	poverty	NOUN	NN	Number=Sing	29	nsubj	29:nsubj	Entity=(abstract-3)
@@ -588,7 +608,7 @@
 35	a	a	DET	DT	Definite=Ind|PronType=Art	36	det	36:det	Entity=(time-29
 36	year	year	NOUN	NN	Number=Sing	29	obl:tmod	29:obl:tmod	Entity=time-29)
 37	since	since	ADP	IN	_	38	case	38:case	_
-38	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	29	obl	29:obl:since	Entity=(time-13)|SpaceAfter=No
+38	1981	1981	NUM	CD	NumForm=Digit|NumType=Card	29	obl	29:obl:since	Entity=(time-13)|SpaceAfter=No|XML=<date when:::"1981"></date>
 39	,	,	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 40	"	''	PUNCT	''	_	4	punct	4:punct	_
 41	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=attribution:54->53
@@ -613,6 +633,7 @@
 # sent_id = AMALGUM_news_extreme-24
 # s_type = frag
 # text = "
+# newpar = p (2 s)
 1	"	''	''	''	_	0	root	0:root	Discourse=joint:55->51|SpaceAfter=No
 
 # sent_id = AMALGUM_news_extreme-25
@@ -651,10 +672,11 @@
 # sent_id = AMALGUM_news_extreme-26
 # s_type = decl
 # text = The report, The Developing World Is Poorer Than We Thought, But No Less Successful in the Fight against Poverty by Shaohua Chen and Martin Ravallion, is based on data from 2005.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:62->56|Entity=(abstract-36
 2	report	report	NOUN	NN	Number=Sing	30	nsubj:pass	30:nsubj:pass	Entity=abstract-36)|SpaceAfter=No
 3	,	,	PUNCT	,	_	8	punct	8:punct	_
-4	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Discourse=joint:63->62|Entity=(place-7
+4	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Discourse=joint:63->62|Entity=(place-7|XML=<hi rend:::"italic">
 5	Developing	Develop	VERB	NNP	Number=Sing	6	amod	6:amod	_
 6	World	World	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|16:nsubj	Entity=place-7)
 7	Is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
@@ -671,7 +693,7 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(event-75
 19	Fight	fight	NOUN	NN	Number=Sing	16	obl	16:obl:in	_
 20	against	against	ADP	IN	_	21	case	21:case	_
-21	Poverty	poverty	NOUN	NN	Number=Sing	19	nmod	19:nmod:against	Entity=(abstract-3)
+21	Poverty	poverty	NOUN	NN	Number=Sing	19	nmod	19:nmod:against	Entity=(abstract-3)|XML=</hi>
 22	by	by	ADP	IN	_	23	case	23:case	_
 23	Shaohua	Shaohua	PROPN	NNP	Number=Sing	19	nmod	19:nmod:by	Entity=(person-76
 24	Chen	Chen	PROPN	NNP	Number=Sing	23	flat	23:flat	Entity=person-76)
@@ -684,6 +706,6 @@
 31	on	on	ADP	IN	_	32	case	32:case	_
 32	data	datum	NOUN	NNS	Number=Plur	30	obl	30:obl:on	Entity=(abstract-19
 33	from	from	ADP	IN	_	34	case	34:case	_
-34	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	32	nmod	32:nmod:from	Entity=abstract-19)(time-9)|SpaceAfter=No
+34	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	32	nmod	32:nmod:from	Entity=abstract-19)(time-9)|SpaceAfter=No|XML=<date when:::"2005"></date>
 35	.	.	PUNCT	.	_	30	punct	30:punct	_
 

@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_farc
+# meta::title = Capture of FARC member creates crisis between Venezuela and Colombia
+# meta::shortTitle = farc
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2005-01-13
+# meta::dateModified = 2008-10-26
+# meta::sourceURL = https://en.wikinews.org/wiki/Capture_of_FARC_member_creates_crisis_between_Venezuela_and_Colombia
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_farc
 # sent_id = AMALGUM_news_farc-1
 # s_type = decl
 # text = Capture of FARC member creates crisis between Venezuela and Colombia
+# newpar = head (1 s)
 1	Capture	capture	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Discourse=preparation:1->4|Entity=(event-1
 2	of	of	ADP	IN	_	4	case	4:case	_
 3	FARC	FARC	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-2(organization-3)
@@ -16,16 +27,18 @@
 # sent_id = AMALGUM_news_farc-2
 # s_type = frag
 # text = Saturday, January 15, 2005
-1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->4|Entity=(time-8)|SpaceAfter=No
+# newpar = figure rend:::"South america.jpg" (0 s)
+1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->4|Entity=(time-8)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-8
+3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-8|XML=<date when:::"2005-01-15">
 4	15	15	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-8)|SpaceAfter=No
+6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-8)|SpaceAfter=No|XML=</date></hi>
 
 # sent_id = AMALGUM_news_farc-3
 # s_type = frag
 # text = South America —
+# newpar = p (5 s)
 1	South	South	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:3->4|Entity=(place-9
 2	America	America	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-9)
 3	—	—	PUNCT	:	_	2	punct	2:punct	_
@@ -34,8 +47,8 @@
 # s_type = decl
 # text = On December 14, Colombian officers arrested Rodrigo Granda, the chief of international relations for the Revolutionary Armed Forces of Colombia - FARC.
 1	On	on	ADP	IN	_	3	case	3:case	Discourse=ROOT:4
-2	December	December	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-10(time-11)
-3	14	14	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:on	Entity=time-10)|SpaceAfter=No
+2	December	December	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-10(time-11)|XML=<date when:::"2005-12-14">
+3	14	14	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:on	Entity=time-10)|SpaceAfter=No|XML=</date>
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	Colombian	Colombian	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(person-12
 6	officers	officer	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	Entity=person-12)
@@ -71,7 +84,7 @@
 7	arrested	arrest	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	ccomp	4:ccomp	_
 8	inside	inside	ADP	IN	_	11	case	11:case	_
 9-10	Venezuela's	_	_	_	_	_	_	_	_
-9	Venezuela	Venezuela	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Entity=(place-18(place-6
+9	Venezuela	Venezuela	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Entity=(place-18(place-6|XML=<ref target:::"https://en.wikipedia.org/wiki/Venezuela"></ref>
 10	's	's	PART	POS	_	9	case	9:case	Entity=place-6)
 11	borders	border	NOUN	NNS	Number=Plur	7	obl	7:obl:inside	Entity=place-18)|SpaceAfter=No
 12	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -147,12 +160,13 @@
 # sent_id = AMALGUM_news_farc-8
 # s_type = decl
 # text = The FARC is considered a terrorist group by the government of Colombia and by the United States , a Colombian ally in the fight against FARC.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:17->14|Entity=(organization-3
 2	FARC	FARC	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass|7:nsubj:xsubj	Entity=organization-3)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
 4	considered	consider	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(organization-26
-6	terrorist	terrorist	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+6	terrorist	terrorist	ADJ	JJ	Degree=Pos	7	amod	7:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/terrorist"></ref>
 7	group	group	NOUN	NN	Number=Sing	4	xcomp	4:xcomp	Entity=organization-26)
 8	by	by	ADP	IN	_	10	case	10:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(organization-22
@@ -162,8 +176,8 @@
 13	and	and	CCONJ	CC	_	17	cc	17:cc	_
 14	by	by	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(organization-27
-16	United	Unite	VERB	NNP	Number=Sing	17	amod	17:amod	_
-17	States	State	PROPN	NNPS	Number=Plur	8	conj	8:conj:and|10:case	Entity=organization-27)
+16	United	Unite	VERB	NNP	Number=Sing	17	amod	17:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/USA">
+17	States	State	PROPN	NNPS	Number=Plur	8	conj	8:conj:and|10:case	Entity=organization-27)|XML=</ref>
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	Entity=(person-28
 20	Colombian	Colombian	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
@@ -178,11 +192,12 @@
 # sent_id = AMALGUM_news_farc-9
 # s_type = decl
 # text = The FARC is a Marxist revolutionary group with about 12,000 members.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:18->14|Entity=(organization-3
-2	FARC	FARC	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=organization-3)
+2	FARC	FARC	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=organization-3)|XML=<ref target:::"https://en.wikipedia.org/wiki/FARC"></ref>
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(organization-3
-5	Marxist	Marxist	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
+5	Marxist	Marxist	ADJ	JJ	Degree=Pos	7	amod	7:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Marxist"></ref>
 6	revolutionary	revolutionary	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	group	group	NOUN	NN	Number=Sing	0	root	0:root	_
 8	with	with	ADP	IN	_	11	case	11:case	_
@@ -203,8 +218,8 @@
 7	Communist	Communist	ADJ	NNP	Number=Sing	8	amod	8:amod	_
 8	Party	Party	PROPN	NNP	Number=Sing	3	obl	3:obl:from	_
 9	of	of	ADP	IN	_	11	case	11:case	_
-10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(time-32
-11	1960s	1960s	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	Entity=organization-31)time-32)|SpaceAfter=No
+10	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(time-32|XML=<date from:::"1960" to:::"1969">
+11	1960s	1960s	NOUN	NNS	Number=Plur	8	nmod	8:nmod:of	Entity=organization-31)time-32)|SpaceAfter=No|XML=</date>
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_farc-11
@@ -242,6 +257,7 @@
 # sent_id = AMALGUM_news_farc-13
 # s_type = decl
 # text = During the Cold War, the movement received some help from the former Soviet Union.
+# newpar = p (3 s)
 1	During	during	ADP	IN	_	4	case	4:case	Discourse=joint:22->14
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(event-36
 3	Cold	cold	ADJ	NNP	Number=Sing	4	amod	4:amod	_
@@ -284,7 +300,7 @@
 20	illegal	illegal	ADJ	JJ	Degree=Pos	21	amod	21:amod	Entity=(event-45
 21	trade	trade	NOUN	NN	Number=Sing	13	conj	11:obl:from|13:conj:and	_
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	cocaine	cocaine	NOUN	NN	Number=Sing	21	nmod	21:nmod:in	Entity=event-45)(substance-46)|SpaceAfter=No
+23	cocaine	cocaine	NOUN	NN	Number=Sing	21	nmod	21:nmod:in	Entity=event-45)(substance-46)|SpaceAfter=No|XML=<ref target:::"http://www.fbi.gov/congress/congress03/mccraw052003.htm"></ref>
 24	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = AMALGUM_news_farc-15
@@ -312,6 +328,7 @@
 # sent_id = AMALGUM_news_farc-16
 # s_type = decl
 # text = The National Memorial Institute for the Prevention of Terrorism, or MIPT, an organization based in Oklahoma, US, has associated FARC with 446 incidents resulting in 955 injuries and 429 fatalities since 1968.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=joint:25->24|Entity=(organization-49
 2	National	National	ADJ	NNP	Number=Sing	4	amod	4:amod	_
 3	Memorial	Memorial	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(place-50)
@@ -347,17 +364,17 @@
 33	429	429	NUM	CD	NumForm=Digit|NumType=Card	34	nummod	34:nummod	Entity=(event-58
 34	fatalities	fatality	NOUN	NNS	Number=Plur	31	conj	28:obl:in|31:conj:and	Entity=event-58)
 35	since	since	ADP	IN	_	36	case	36:case	_
-36	1968	1968	NUM	CD	NumForm=Digit|NumType=Card	28	obl	28:obl:since	Entity=event-56)(time-59)|SpaceAfter=No
+36	1968	1968	NUM	CD	NumForm=Digit|NumType=Card	28	obl	28:obl:since	Entity=event-56)(time-59)|SpaceAfter=No|XML=<date when:::"1968"></date>
 37	.	.	PUNCT	.	_	23	punct	23:punct	_
 
 # sent_id = AMALGUM_news_farc-17
 # s_type = decl
 # text = On September 19, 2004, the FARC killed Luis Eduardo Duque Varon, Antonio Jose Duque Varon, and Alfonso Lopez Nivia, a move supposedly motivated by the victims' involvement with the Self-Defense Forces of Colombia (AUC).
 1	On	on	ADP	IN	_	3	case	3:case	Discourse=joint:29->25
-2	September	September	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-60
+2	September	September	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-60|XML=<date when:::"2004-09-19">
 3	19	19	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:on	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=time-60)(time-61)|SpaceAfter=No
+5	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=time-60)(time-61)|SpaceAfter=No|XML=</date>
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(organization-3
 8	FARC	FARC	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Entity=organization-3)
@@ -401,6 +418,7 @@
 # sent_id = AMALGUM_news_farc-18
 # s_type = decl
 # text = There are evidences that the FARC has liaisons with Latin-American criminals, as for example the Brazilian drug-dealer Fernandinho Beira-Mar arrested by Colombian army in Colombia near the border of Venezuela, Brazil and Colombia.
+# newpar = p (5 s)
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:33->29
 2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	evidences	evidence	NOUN	NNS	Number=Plur	2	nsubj	2:nsubj	Entity=(abstract-70
@@ -419,8 +437,8 @@
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
 17	Brazilian	Brazilian	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	drug-dealer	drug-dealer	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-19	Fernandinho	Fernandinho	PROPN	NNP	Number=Sing	18	flat	18:flat	_
-20	Beira-Mar	Beira-Mar	PROPN	NNP	Number=Sing	18	flat	18:flat	_
+19	Fernandinho	Fernandinho	PROPN	NNP	Number=Sing	18	flat	18:flat	XML=<ref target:::"http://www1.folha.uol.com.br/folha/mundo/ult94u23513.shl">
+20	Beira-Mar	Beira-Mar	PROPN	NNP	Number=Sing	18	flat	18:flat	XML=</ref>
 21	arrested	arrest	VERB	VBN	Tense=Past|VerbForm=Part	18	acl	18:acl	Discourse=elaboration:36->35
 22	by	by	ADP	IN	_	24	case	24:case	_
 23	Colombian	Colombian	ADJ	JJ	Degree=Pos	24	amod	24:amod	Entity=(organization-74
@@ -442,7 +460,7 @@
 # s_type = decl
 # text = Beira-Mar confessed his liaisons with the guerrilla to authorities.
 1	Beira-Mar	Beira-Mar	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:37->33|Entity=(person-77)
-2	confessed	confess	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+2	confessed	confess	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	XML=<ref target:::"http://www1.folha.uol.com.br/folha/cotidiano/ult95u27593.shl"></ref>
 3	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(abstract-71(person-73)
 4	liaisons	liaison	NOUN	NNS	Number=Plur	2	obj	2:obj	_
 5	with	with	ADP	IN	_	7	case	7:case	_
@@ -480,7 +498,7 @@
 5	factories	factory	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 6	in	in	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(place-87
-8	Amazon	Amazon	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	Entity=place-85)place-87)|SpaceAfter=No
+8	Amazon	Amazon	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	Entity=place-85)place-87)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Amazon%20Rainforest"></ref>
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
 10	near	near	ADP	IN	_	12	case	12:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(organization-88
@@ -498,18 +516,19 @@
 4	would	would	AUX	MD	VerbForm=Fin	6	aux	6:aux	_
 5	be	be	AUX	VB	VerbForm=Inf	6	aux:pass	6:aux:pass	_
 6	dispatched	dispatch	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-7	to	to	ADP	IN	_	8	case	8:case	_
+7	to	to	ADP	IN	_	8	case	8:case	XML=<ref target:::"http://www1.folha.uol.com.br/folha/cotidiano/drogas.shtml">
 8	Colombia	Colombia	PROPN	NNP	Number=Sing	6	obl	6:obl:to	Entity=(place-7)|SpaceAfter=No
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	United	Unite	VERB	NNP	Number=Sing	11	amod	11:amod	Entity=(organization-27
 11	States	State	PROPN	NNPS	Number=Plur	8	conj	6:obl:to|8:conj:and	Entity=organization-27)
 12	and	and	CCONJ	CC	_	13	cc	13:cc	_
-13	Brazil	Brazil	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	Entity=(place-76)|SpaceAfter=No
+13	Brazil	Brazil	PROPN	NNP	Number=Sing	8	conj	6:obl:to|8:conj:and	Entity=(place-76)|SpaceAfter=No|XML=</ref>
 14	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_news_farc-23
 # s_type = decl
 # text = The FARC has advocates among some people and organizations in Latin America.
+# newpar = p (21 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:43->42|Entity=(organization-3
 2	FARC	FARC	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-3)
 3	has	have	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -585,8 +604,8 @@
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	revolutionary	revolutionary	ADJ	JJ	Degree=Pos	12	conj	12:conj:and|15:amod	_
 15	magazine	magazine	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	Entity=organization-99)
-16	America	America	PROPN	NNP	Number=Sing	15	appos	15:appos	_
-17	Libre	Libre	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=place-9)|SpaceAfter=No
+16	America	America	PROPN	NNP	Number=Sing	15	appos	15:appos	XML=<ref target:::"http://www.nodo50.org/americalibre/consejo.htm">
+17	Libre	Libre	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=place-9)|SpaceAfter=No|XML=</ref>
 18	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = AMALGUM_news_farc-27
@@ -608,7 +627,7 @@
 14	celebrity	celebrity	NOUN	NN	Number=Sing	2	appos	2:appos	_
 15	in	in	ADP	IN	_	16	case	16:case	_
 16	Brazil	Brazil	PROPN	NNP	Number=Sing	14	nmod	14:nmod:in	Entity=(place-76
-17	PT	PT	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-100)place-76)
+17	PT	PT	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-100)place-76)|XML=<ref target:::"https://en.wikipedia.org/wiki/PT"></ref>
 18	and	and	CCONJ	CC	_	21	cc	21:cc	_
 19	a	a	DET	DT	Definite=Ind|PronType=Art	21	det	21:det	Entity=(person-100
 20	personal	personal	ADJ	JJ	Degree=Pos	21	amod	21:amod	_
@@ -650,9 +669,9 @@
 21	Paulo	Paulo	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=person-105)
 22	newspaper	newspaper	NOUN	NN	Number=Sing	16	nmod	16:nmod:to	Entity=event-103)organization-104)
 23	in	in	ADP	IN	_	25	case	25:case	_
-24	August	August	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(time-106(time-107)
+24	August	August	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(time-106(time-107)|XML=<ref target:::"http://www1.folha.uol.com.br/folha/mundo/ult94u62119.shtml"><date when:::"2003-08-24">
 25	24	24	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	_
-26	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	25	nmod:tmod	25:nmod:tmod	Entity=time-106)(time-108)
+26	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	25	nmod:tmod	25:nmod:tmod	Entity=time-106)(time-108)|XML=</date></ref>
 27	and	and	CCONJ	CC	_	28	cc	28:cc	Discourse=attribution:52->53
 28	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	conj	8:conj:and	_
 29	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	30	nsubj	30:nsubj	Discourse=joint:53->51|Entity=(person-102)
@@ -667,10 +686,10 @@
 38	Salvador	Salvador	PROPN	NNP	Number=Sing	37	flat	37:flat	Entity=place-109)
 39	during	during	ADP	IN	_	41	case	41:case	_
 40	the	the	DET	DT	Definite=Def|PronType=Art	41	det	41:det	Entity=(organization-110
-41	Foro	Foro	PROPN	NNP	Number=Sing	30	obl	30:obl:during	_
+41	Foro	Foro	PROPN	NNP	Number=Sing	30	obl	30:obl:during	XML=<ref target:::"https://en.wikipedia.org/wiki/Foro%20de%20S&#227;o%20Paulo">
 42	de	de	PROPN	NNP	Number=Sing	41	flat	41:flat	_
 43	São	São	PROPN	NNP	Number=Sing	41	flat	41:flat	_
-44	Paulo	Paulo	PROPN	NNP	Number=Sing	41	flat	41:flat	Entity=organization-110)|SpaceAfter=No
+44	Paulo	Paulo	PROPN	NNP	Number=Sing	41	flat	41:flat	Entity=organization-110)|SpaceAfter=No|XML=</ref>
 45	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_news_farc-29
@@ -679,9 +698,9 @@
 1	Olivio	Olivio	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Discourse=sequence:54->53|Entity=(person-111
 2	Dutra	Dutra	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-111)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	Minister	Minister	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-111
+4	Minister	Minister	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-111|XML=<ref target:::"http://www.cidades.gov.br/">
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	Cities	city	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:of	Entity=(place-112
+6	Cities	city	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:of	Entity=(place-112|XML=</ref>
 7	of	of	ADP	IN	_	8	case	8:case	_
 8	Lula	Lula	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=person-111)place-112)(person-100)|SpaceAfter=No
 9	,	,	PUNCT	,	_	1	punct	1:punct	_
@@ -689,15 +708,15 @@
 11	FARC	FARC	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=(person-113(organization-3)
 12	leaders	leader	NOUN	NNS	Number=Plur	10	obj	10:obj	Entity=person-113)
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:in	Entity=(time-114)
+14	2001	2001	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:in	Entity=(time-114)|XML=<date when:::"2001"></date>
 15	when	when	SCONJ	WRB	PronType=Int	23	mark	23:mark	Discourse=circumstance:55->54
 16	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	23	nsubj	23:nsubj	Entity=(person-111)
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(person-111
-19	Rio	Rio	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(place-115
+19	Rio	Rio	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(place-115|XML=<ref target:::"https://en.wikipedia.org/wiki/Rio%20Grande%20do%20Sul">
 20	Grande	Grande	PROPN	NNP	Number=Sing	23	compound	23:compound	_
 21	do	do	PROPN	NNP	Number=Sing	20	flat	20:flat	_
-22	Sul	Sul	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-115)
+22	Sul	Sul	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-115)|XML=</ref>
 23	governor	governor	NOUN	NN	Number=Sing	10	advcl	10:advcl:when	Entity=person-111)|SpaceAfter=No
 24	.	.	PUNCT	.	_	10	punct	10:punct	_
 
@@ -705,19 +724,19 @@
 # s_type = decl
 # text = In March 20, 2002, in Ribeirão Preto was open a pro-FARC comitee by the Sports Secretary Leopoldo Paulino (PSB) in the government of the mayor Antônio Palocci Filho (PT).
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:56->54
-2	March	March	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-116
+2	March	March	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-116|XML=<date when:::"2002-03-20">
 3	20	20	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=time-116)(time-117)|SpaceAfter=No
+5	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=time-116)(time-117)|SpaceAfter=No|XML=</date>
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	Ribeirão	Ribeirão	PROPN	NNP	Number=Sing	11	obl	11:obl:in	Entity=(place-118
-9	Preto	Preto	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=place-118)
-10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	_
+8	Ribeirão	Ribeirão	PROPN	NNP	Number=Sing	11	obl	11:obl:in	Entity=(place-118|XML=<ref target:::"https://en.wikipedia.org/wiki/Ribeir&#227;o%20Preto">
+9	Preto	Preto	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=place-118)|XML=</ref>
+10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	cop	11:cop	XML=<ref target:::"http://www.estadao.com.br/agestado/noticias/2002/mar/20/9.htm">
 11	open	open	ADJ	JJ	Degree=Pos	0	root	0:root	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(organization-119
 13	pro-FARC	pro-FARC	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	comitee	comitee	NOUN	NN	Number=Sing	11	obj	11:obj	_
+14	comitee	comitee	NOUN	NN	Number=Sing	11	obj	11:obj	XML=</ref>
 15	by	by	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(person-120
 17	Sports	Sports	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(abstract-121)
@@ -748,8 +767,8 @@
 2	Palocci	Palocci	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Entity=(person-125)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(person-125
-5	Economy	Economy	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(organization-127)
-6	Minister	Minister	PROPN	NNP	Number=Sing	0	root	0:root	_
+5	Economy	Economy	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(organization-127)|XML=<ref target:::"http://www.brasil.gov.br/estrutura.htm">
+6	Minister	Minister	PROPN	NNP	Number=Sing	0	root	0:root	XML=</ref>
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	Lula	Lula	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(organization-124(person-100)
 9	government	government	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=person-125)organization-124)|SpaceAfter=No
@@ -766,12 +785,12 @@
 6	member	member	NOUN	NN	Number=Sing	0	root	0:root	_
 7	of	of	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(organization-110
-9	Foro	Foro	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	_
+9	Foro	Foro	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	XML=<ref target:::"https://en.wikipedia.org/wiki/Foro%20de%20S&#227;o%20Paulo">
 10	de	de	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 11	São	São	PROPN	NNP	Number=Sing	9	flat	9:flat	_
-12	Paulo	Paulo	PROPN	NNP	Number=Sing	9	flat	9:flat	Entity=organization-110)
+12	Paulo	Paulo	PROPN	NNP	Number=Sing	9	flat	9:flat	Entity=organization-110)|XML=</ref>
 13	since	since	ADP	IN	_	14	case	14:case	_
-14	1990	1990	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:since	Entity=organization-3)(time-128)|SpaceAfter=No
+14	1990	1990	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:since	Entity=organization-3)(time-128)|SpaceAfter=No|XML=<date when:::"1990"></date>
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
 16	organization	organization	NOUN	NN	Number=Sing	9	appos	9:appos	Discourse=elaboration:62->61|Entity=(organization-110
 17	guided	guide	VERB	VBN	Tense=Past|VerbForm=Part	16	acl	16:acl	Discourse=elaboration:63->62
@@ -786,11 +805,11 @@
 # text = Brazilian president Luis Inacio Lula da Silva don't recognize the FARC as a terrorist movement and say they don't have any illegal relationship with the organization.
 1	Brazilian	Brazilian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:64->61|Entity=(person-130
 2	president	president	NOUN	NN	Number=Sing	10	nsubj	10:nsubj|18:nsubj	_
-3	Luis	Luis	PROPN	NNP	Number=Sing	2	flat	2:flat	_
+3	Luis	Luis	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Luis%20Inacio%20Lula%20da%20Silva">
 4	Inacio	Inacio	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 5	Lula	Lula	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 6	da	da	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-7	Silva	Silva	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-130)
+7	Silva	Silva	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-130)|XML=</ref>
 8-9	don't	_	_	_	_	_	_	_	_
 8	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	aux	10:aux	_
 9	n't	not	ADV	RB	Polarity=Neg	10	advmod	10:advmod	_
@@ -825,12 +844,12 @@
 4	Chavez	Chavez	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-132)
 5	already	already	ADV	RB	_	6	advmod	6:advmod	_
 6	admitted	admit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	Discourse=preparation:68->69|Entity=(person-132)
-8	encontered	enconter	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	ccomp	6:ccomp	_
+7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	Discourse=preparation:68->69|Entity=(person-132)|XML=<ref target:::"http://www1.folha.uol.com.br/folha/mundo/ult94u68503.shtml">
+8	encontered	enconter	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	ccomp	6:ccomp	XML=</ref>
 9	FARC	FARC	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(person-113(organization-3)
 10	leaders	leader	NOUN	NNS	Number=Plur	8	obj	8:obj	Entity=person-113)
 11	between	between	ADP	IN	_	12	case	12:case	_
-12	1998-2002.	1998-2002.	NUM	CD	NumForm=Word|NumType=Card	8	obl	8:obl:between	Entity=(time-133)
+12	1998-2002.	1998-2002.	NUM	CD	NumForm=Word|NumType=Card	8	obl	8:obl:between	Entity=(time-133)|XML=<date from:::"1998" to:::"2002"></date>
 
 # sent_id = AMALGUM_news_farc-35
 # s_type = decl
@@ -846,8 +865,8 @@
 9	of	of	ADP	IN	_	11	case	11:case	_
 10	Colombian	Colombian	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(person-135
 11	President	President	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of|15:nsubj	_
-12	Andrés	Andrés	PROPN	NNP	Number=Sing	11	flat	11:flat	_
-13	Pastrana	Pastrana	PROPN	NNP	Number=Sing	11	flat	11:flat	_
+12	Andrés	Andrés	PROPN	NNP	Number=Sing	11	flat	11:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Andr&#233;s%20Pastrana">
+13	Pastrana	Pastrana	PROPN	NNP	Number=Sing	11	flat	11:flat	XML=</ref>
 14	who	who	PRON	WP	PronType=Rel	15	nsubj	11:ref	Discourse=elaboration:70->69
 15	wanted	want	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	acl:relcl	11:acl:relcl	_
 16	to	to	PART	TO	_	17	mark	17:mark	_
@@ -912,7 +931,7 @@
 37	existed	exist	VERB	VBN	Tense=Past|VerbForm=Part	16	ccomp	16:ccomp	SpaceAfter=No
 38	"	''	PUNCT	''	_	37	punct	37:punct	_
 39	(	(	PUNCT	-LRB-	_	40	punct	40:punct	Discourse=attribution:74->73|SpaceAfter=No
-40	audio	audio	NOUN	NN	Number=Sing	37	dep	37:dep	SpaceAfter=No
+40	audio	audio	NOUN	NN	Number=Sing	37	dep	37:dep	SpaceAfter=No|XML=<hi rend:::"bold"><ref target:::"http://www.caracol.com.co/realarchi.asp?id:::137933"></ref></hi>
 41	)	)	PUNCT	-RRB-	_	40	punct	40:punct	SpaceAfter=No
 42	.	.	PUNCT	.	_	16	punct	16:punct	_
 
@@ -958,7 +977,7 @@
 37	Granda	Granda	PROPN	NNP	Number=Sing	36	flat	36:flat	Entity=abstract-150)person-14)|SpaceAfter=No
 38	"	''	PUNCT	''	_	12	punct	12:punct	_
 39	(	(	PUNCT	-LRB-	_	40	punct	40:punct	Discourse=elaboration:78->77|SpaceAfter=No
-40	audio	audio	NOUN	NN	Number=Sing	12	dep	12:dep	SpaceAfter=No
+40	audio	audio	NOUN	NN	Number=Sing	12	dep	12:dep	SpaceAfter=No|XML=<hi rend:::"bold"><ref target:::"http://www.caracol.com.co/realarchi.asp?id:::137936"></ref></hi>
 41	)	)	PUNCT	-RRB-	_	40	punct	40:punct	SpaceAfter=No
 42	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -968,10 +987,10 @@
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=elaboration:79->77|Entity=(organization-104
 2	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	3	compound	3:compound	Entity=(place-55)
 3	newspaper	newspaper	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=organization-104)
-4	Washington	Washington	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(organization-104
+4	Washington	Washington	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(organization-104|XML=<ref target:::"http://eltiempo.terra.com.co/coar/ANALISIS/analisis/ARTICULO-WEB-_NOTA_INTERIOR-1944101.html">
 5	Post	Post	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=organization-104)
 6	also	also	ADV	RB	_	7	advmod	7:advmod	_
-7	accused	accuse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+7	accused	accuse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	XML=</ref>
 8	Chavez	Chavez	PROPN	NNP	Number=Sing	7	obj	7:obj	Entity=(person-132)
 9	of	of	SCONJ	IN	_	10	mark	10:mark	_
 10	giving	give	VERB	VBG	VerbForm=Ger	7	advcl	7:advcl:of	_
@@ -1021,11 +1040,11 @@
 # text = Carlos Ortega said about Chavez in 2004:"In Venezuela Chavez doesn't rule, who rules is Fidel Castro, the narc-guerilla mainly the FARC; in Venezuela who governs is the international terrorism."
 1	Carlos	Carlos	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=attribution:83->84|Entity=(person-100
 2	Ortega	Ortega	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-100)
-3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
+3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	XML=<ref target:::"http://elpais-cali.terra.com.co/historico/feb132004/INT/A713N3.html">
 4	about	about	ADP	IN	_	5	case	5:case	_
 5	Chavez	Chavez	PROPN	NNP	Number=Sing	3	obl	3:obl:about	Entity=(person-132)
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-61)|SpaceAfter=No
+7	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-61)|SpaceAfter=No|XML=<date when:::"2004"></date></ref>
 8	:	:	PUNCT	:	_	15	punct	15:punct	SpaceAfter=No
 9	"	''	PUNCT	``	_	15	punct	15:punct	Discourse=joint:84->80|SpaceAfter=No
 10	In	in	ADP	IN	_	11	case	11:case	_
@@ -1039,8 +1058,8 @@
 17	who	who	PRON	WP	PronType=Rel	18	nsubj	24:ref	Discourse=elaboration:85->84|Entity=(person-130
 18	rules	rule	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	acl:relcl	24:acl:relcl	_
 19	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	cop	20:cop	Discourse=same_unit:86->84
-20	Fidel	Fidel	PROPN	NNP	Number=Sing	15	parataxis	15:parataxis	Entity=(person-130
-21	Castro	Castro	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=person-130)|SpaceAfter=No
+20	Fidel	Fidel	PROPN	NNP	Number=Sing	15	parataxis	15:parataxis	Entity=(person-130|XML=<ref target:::"https://en.wikipedia.org/wiki/Fidel%20Castro">
+21	Castro	Castro	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=person-130)|SpaceAfter=No|XML=</ref>
 22	,	,	PUNCT	,	_	24	punct	24:punct	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	_
 24	narc-guerilla	narc-guerilla	NOUN	NN	Number=Sing	20	appos	18:nsubj|20:appos	Entity=person-130)
@@ -1110,6 +1129,7 @@
 # sent_id = AMALGUM_news_farc-44
 # s_type = decl
 # text = Since the arrest of Granda, Chavez is protesting and accusing Colombian authorities of entering illegally in Venezuela and kidnap.
+# newpar = p (4 s)
 1	Since	since	ADP	IN	_	3	case	3:case	Discourse=joint:92->91
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-13
 3	arrest	arrest	NOUN	NN	Number=Sing	9	obl	9:obl:since	_
@@ -1148,8 +1168,8 @@
 11	Rangel	Rangel	PROPN	NNP	Number=Sing	9	flat	9:flat	_
 12	(	(	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=elaboration:97->96|SpaceAfter=No
 13	newspaper	newspaper	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(organization-104)
-14	Últimas	Eltimas	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(abstract-166)
-15	Noticias	Noticias	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No
+14	Últimas	Eltimas	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(abstract-166)|XML=<hi rend:::"italic">
+15	Noticias	Noticias	PROPN	NNP	Number=Sing	9	flat	9:flat	SpaceAfter=No|XML=</hi>
 16	)	)	PUNCT	-RRB-	_	15	punct	15:punct	Entity=event-103)person-165)
 17	that	that	SCONJ	IN	_	19	mark	19:mark	Discourse=same_unit:98->96
 18	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	19	nsubj	19:nsubj	Entity=(person-165)
@@ -1166,11 +1186,11 @@
 29	captured	capture	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	20	acl	20:acl:that	_
 30	illegally	illegally	ADV	RB	Degree=Pos	29	advmod	29:advmod	_
 31	in	in	ADP	IN	_	32	case	32:case	_
-32	Caracas	Caracas	PROPN	NNP	Number=Sing	29	obl	29:obl:in	Entity=(place-168)
+32	Caracas	Caracas	PROPN	NNP	Number=Sing	29	obl	29:obl:in	Entity=(place-168)|XML=<ref target:::"https://en.wikipedia.org/wiki/Caracas"></ref>
 33	and	and	CCONJ	CC	_	34	cc	34:cc	Discourse=sequence:100->99
 34	moved	move	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	conj	20:acl:that|29:conj:and	Entity=organization-167)
 35	to	to	ADP	IN	_	36	case	36:case	_
-36	Cúcuta	Cúcuta	PROPN	NNP	Number=Sing	34	obl	34:obl:to	Entity=(place-169|SpaceAfter=No
+36	Cúcuta	Cúcuta	PROPN	NNP	Number=Sing	34	obl	34:obl:to	Entity=(place-169|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/C&#250;cuta"></ref>
 37	,	,	PUNCT	,	_	42	punct	42:punct	_
 38	where	where	SCONJ	WRB	PronType=Rel	42	mark	42:mark	Discourse=attribution:101->102
 39	the	the	DET	DT	Definite=Def|PronType=Art	41	det	41:det	Entity=(organization-164
@@ -1182,7 +1202,7 @@
 45	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	46	aux:pass	46:aux:pass	_
 46	done	do	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	42	ccomp	42:ccomp	Entity=place-169)
 47	(	(	PUNCT	-LRB-	_	48	punct	48:punct	Discourse=elaboration:103->102|SpaceAfter=No
-48	audio	audio	NOUN	NN	Number=Sing	29	dep	29:dep	SpaceAfter=No
+48	audio	audio	NOUN	NN	Number=Sing	29	dep	29:dep	SpaceAfter=No|XML=<hi rend:::"bold"><ref target:::"http://www.caracol.com.co/realarchi.asp?id:::138317"></ref></hi>
 49	)	)	PUNCT	-RRB-	_	48	punct	48:punct	SpaceAfter=No
 50	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -1206,7 +1226,7 @@
 15	inside	inside	ADP	IN	_	16	case	16:case	_
 16	Colombia	Colombia	PROPN	NNP	Number=Sing	13	obl	13:obl:inside	Entity=(place-7)
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	Discourse=elaboration:107->106|SpaceAfter=No
-18	audio	audio	NOUN	NN	Number=Sing	8	dep	8:dep	SpaceAfter=No
+18	audio	audio	NOUN	NN	Number=Sing	8	dep	8:dep	SpaceAfter=No|XML=<hi rend:::"bold"><ref target:::"http://www.caracol.com.co/realarchi.asp?id:::138317"></ref></hi>
 19	)	)	PUNCT	-RRB-	_	18	punct	18:punct	SpaceAfter=No
 20	.	.	PUNCT	.	_	8	punct	8:punct	_
 
@@ -1223,7 +1243,7 @@
 8	Granda	Granda	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(person-14)
 9	arrestment	arrestment	NOUN	NN	Number=Sing	5	obl	5:obl:against	Entity=event-13)
 10	and	and	CCONJ	CC	_	11	cc	11:cc	Discourse=attribution:109->110
-11	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	_
+11	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	conj	5:conj:and	XML=<ref target:::"http://www.caracol.com.co/nota.asp?id:::138328"></ref>
 12	that	that	SCONJ	IN	_	22	mark	22:mark	Discourse=joint:110->108
 13	if	if	SCONJ	IN	_	16	mark	16:mark	Discourse=condition:111->112
 14	Colombia	Colombia	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(organization-164(place-7)
@@ -1241,13 +1261,14 @@
 26	legall	legall	ADJ	JJ	Degree=Pos	27	amod	27:amod	Entity=(abstract-172
 27	ways	way	NOUN	NNS	Number=Plur	22	obl	22:obl:by	Entity=abstract-172)
 28	(	(	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=elaboration:113->112|SpaceAfter=No
-29	audio	audio	NOUN	NN	Number=Sing	22	dep	22:dep	SpaceAfter=No
-30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	SpaceAfter=No
+29	audio	audio	NOUN	NN	Number=Sing	22	dep	22:dep	SpaceAfter=No|XML=<ref target:::"http://www.caracol.com.co/realarchi.asp?id:::138328"><hi rend:::"bold"></hi>
+30	)	)	PUNCT	-RRB-	_	29	punct	29:punct	SpaceAfter=No|XML=</ref>
 31	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_farc-48
 # s_type = decl
 # text = According to the Colombian Minister of Defense, Jorge Alberto Uribe, the Colombian government paid a reward for the capture of Roberto Granda.
+# newpar = p (4 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	5	case	5:case	Discourse=attribution:114->115
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(organization-173
@@ -1354,6 +1375,7 @@
 # sent_id = AMALGUM_news_farc-52
 # s_type = decl
 # text = Because of the Granda case the President Hugo Chavez said that the Venezuelan ambassador should leave Bogotá in Colombia and that the trade agreements between Venezuela and Colombia should be paralised.
+# newpar = p (2 s)
 1	Because	because	ADP	IN	_	5	case	5:case	Discourse=attribution:124->125
 2	of	of	ADP	IN	_	1	fixed	1:fixed	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(abstract-150
@@ -1370,7 +1392,7 @@
 14	ambassador	ambassador	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	Entity=person-183)
 15	should	should	AUX	MD	VerbForm=Fin	16	aux	16:aux	_
 16	leave	leave	VERB	VB	VerbForm=Inf	10	ccomp	10:ccomp	_
-17	Bogotá	Bogotá	PROPN	NNP	Number=Sing	16	obj	16:obj	Entity=(place-184)
+17	Bogotá	Bogotá	PROPN	NNP	Number=Sing	16	obj	16:obj	Entity=(place-184)|XML=<ref target:::"https://en.wikipedia.org/wiki/Bogot&#225;"></ref>
 18	in	in	ADP	IN	_	19	case	19:case	_
 19	Colombia	Colombia	PROPN	NNP	Number=Sing	16	obl	16:obl:in	Entity=(place-7)
 20	and	and	CCONJ	CC	_	31	cc	31:cc	Discourse=joint:126->125
@@ -1396,8 +1418,8 @@
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(person-135
 5	Colombian	Colombian	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	President	President	NOUN	NN	Number=Sing	9	nsubj	9:nsubj	_
-7	Alvaro	Alvaro	PROPN	NNP	Number=Sing	6	flat	6:flat	_
-8	Uribe	Uribe	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-135)
+7	Alvaro	Alvaro	PROPN	NNP	Number=Sing	6	flat	6:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Alvaro%20Uribe">
+8	Uribe	Uribe	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-135)|XML=</ref>
 9	do	do	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	2	ccomp	2:ccomp	_
 10	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(abstract-187
 11	public	public	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
@@ -1421,6 +1443,7 @@
 # sent_id = AMALGUM_news_farc-54
 # s_type = decl
 # text = Uribe proposed the creation of a special comissition, so the severe crisis can be resolved.
+# newpar = p (3 s)
 1	Uribe	Uribe	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:129->127|Entity=(person-135)
 2	proposed	propose	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(event-191
@@ -1445,12 +1468,12 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj	Discourse=attribution:131->132|Entity=(person-135)
 2	emphasize	emphasize	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	Colombia	Colombia	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Discourse=joint:132->129|Entity=(place-7)
-4	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux	6:aux	_
+4	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux	6:aux	XML=<ref target:::"http://www.caracol.com.co/nota.asp?id:::138881">
 5	not	not	ADV	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	invaded	invade	VERB	VBN	Tense=Past|VerbForm=Part	2	ccomp	2:ccomp	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(place-189
 8	Venezuelan	Venezuelan	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	territory	territory	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=place-189)|SpaceAfter=No
+9	territory	territory	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=place-189)|SpaceAfter=No|XML=</ref>
 10	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_news_farc-56
@@ -1473,11 +1496,11 @@
 15	clear	clear	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	declaration	declaration	NOUN	NN	Number=Sing	13	obj	13:obj	_
 17	about	about	ADP	IN	_	19	case	19:case	_
-18	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	Entity=(abstract-196(person-132)
+18	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	Entity=(abstract-196(person-132)|XML=<ref target:::"http://eltiempo.terra.com.co/poli/2005-01-16/ARTICULO-WEB-_NOTA_INTERIOR-1944244.html">
 19	position	position	NOUN	NN	Number=Sing	16	nmod	16:nmod:about	_
 20	related	related	ADJ	JJ	Degree=Pos	19	acl	19:acl	_
 21	to	to	ADP	IN	_	23	case	23:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(organization-3
 23	FARC	FARC	PROPN	NNP	Number=Sing	20	obl	20:obl:to	Entity=abstract-195)abstract-196)organization-3)|SpaceAfter=No
-24	.	.	PUNCT	.	_	4	punct	4:punct	_
+24	.	.	PUNCT	.	_	4	punct	4:punct	XML=</ref>
 
