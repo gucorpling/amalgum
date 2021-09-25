@@ -1,6 +1,6 @@
 ## Clean up of xml files
 
-The amalgum xml files have been altered in the following ways: 
+Before being put into the conllu files as xml annnotations, the amalgum xml data was altered in the following ways: 
 - Several tags have been removed ('dd', 'dl', 'dt', 'tbody')
 - Several tags have been mapped to different tag names (see details in ```reduce_xml_tags``` function)
 - Redudant attributes in nested tags have been removed
@@ -32,15 +32,14 @@ In the updated conllu files, there are two places where you'll find xml annotati
 
 ```# newpar = p (4 s)```
 
-This indicates that there is a ```<p>``` tag opening before the start of the sentence that it is a comment on, and that the tag spans 4 sentences before closing. If a sentence has multiple xml comments, the tags open in the order they appear in the comments from top to bottom. 
+This indicates that there is a ```<p>``` tag opening before the start of the sentence that it is a comment on, and that the tag spans 4 sentences before closing. If a sentence has multiple xml comments, the tags open in the order they appear in the comment from top to bottom, and newpar will have an incrementing integer appended to it (e.g. newpar, newpar1, newpar2, etc.). 
 
 Here is a sample xml annotation from the misc. column of a token: 
 
 ```XML=<date when:::"1520"></date>```
 
-The misc. column annotation lists (in order) the tags that open directly before this token and the tags that close directly after this token. In this case, the date tag surrounds just the one token.
+The misc. column annotation lists (in order) the tags that open directly before this token and the tags that close directly after this token. In this case, the date tag surrounds just the one token. (Note that the typical ```=``` for xml attributes has been replaced with ```:::``` within the annotations)
 
 There is also a special sentence level comment specifically for tags that trail directly after a sentence, not spanning any sentences or tokens (these are mainly figures):
 
 ```# trailing_xml = <figure rend:::"Oil Drum.png"></figure>```
-
