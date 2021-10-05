@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_bio_aguado
+# meta::title = Pedro de Aguado
+# meta::shortTitle = aguado
+# meta::type = bio
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2012-07-01
+# meta::dateModified = 2019-03-07
+# meta::sourceURL = https://en.wikipedia.org/wiki/Pedro_de_Aguado
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_bio_aguado
 # sent_id = AMALGUM_bio_aguado-1
 # s_type = frag
 # text = Pedro de Aguado
+# newpar = head (1 s)
 1	Pedro	Pedro	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->2|Entity=(person-1
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Aguado	Aguado	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|SpaceAfter=No
@@ -9,13 +20,14 @@
 # sent_id = AMALGUM_bio_aguado-2
 # s_type = decl
 # text = Pedro de Aguado (1513 or 1538– late 16th or early 17th century) was a Spanish Franciscan friar who spent around 15 years in the New Kingdom of Granada, preaching to the indigenous people.
-1	Pedro	Pedro	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	Discourse=ROOT:2|Entity=(person-1
+# newpar = p (3 s)
+1	Pedro	Pedro	PROPN	NNP	Number=Sing	20	nsubj	20:nsubj	Discourse=ROOT:2|Entity=(person-1|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Aguado	Aguado	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+3	Aguado	Aguado	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:3->2|SpaceAfter=No
-5	1513	1513	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(time-2)
+5	1513	1513	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(time-2)|XML=<date when:::"1513"></date>
 6	or	or	CCONJ	CC	_	7	cc	7:cc	_
-7	1538	1538	NUM	CD	NumForm=Digit|NumType=Card	5	conj	1:nmod:tmod|5:conj:or	Entity=(time-3|SpaceAfter=No
+7	1538	1538	NUM	CD	NumForm=Digit|NumType=Card	5	conj	1:nmod:tmod|5:conj:or	Entity=(time-3|SpaceAfter=No|XML=<date when:::"1538"></date>
 8	–	-	SYM	SYM	_	14	case	14:case	_
 9	late	late	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(time-4
 10	16th	16th	ADJ	JJ	Degree=Pos|NumType=Ord	14	amod	14:amod	_
@@ -27,7 +39,7 @@
 16	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	cop	20:cop	Discourse=same_unit:4->2
 17	a	a	DET	DT	Definite=Ind|PronType=Art	20	det	20:det	Entity=(person-1
 18	Spanish	Spanish	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-19	Franciscan	Franciscan	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
+19	Franciscan	Franciscan	ADJ	JJ	Degree=Pos	20	amod	20:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Franciscan"></ref>
 20	friar	friar	NOUN	NN	Number=Sing	0	root	0:root|22:nsubj	_
 21	who	who	PRON	WP	PronType=Rel	22	nsubj	20:ref	Discourse=elaboration:5->4
 22	spent	spend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	20:acl:relcl	_
@@ -36,16 +48,16 @@
 25	years	year	NOUN	NNS	Number=Plur	22	obj	22:obj	Entity=time-5)
 26	in	in	ADP	IN	_	29	case	29:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(place-6
-28	New	New	ADJ	NNP	Number=Sing	29	amod	29:amod	_
+28	New	New	ADJ	NNP	Number=Sing	29	amod	29:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/New_Kingdom_of_Granada">
 29	Kingdom	Kingdom	PROPN	NNP	Number=Sing	22	obl	22:obl:in	_
 30	of	of	ADP	IN	_	31	case	31:case	_
-31	Granada	Granada	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	Entity=person-1)place-6)(place-7)|SpaceAfter=No
+31	Granada	Granada	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	Entity=person-1)place-6)(place-7)|SpaceAfter=No|XML=</ref>
 32	,	,	PUNCT	,	_	33	punct	33:punct	_
 33	preaching	preach	VERB	VBG	VerbForm=Ger	22	advcl	22:advcl	Discourse=elaboration:6->5
 34	to	to	ADP	IN	_	37	case	37:case	_
 35	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	Entity=(person-8
-36	indigenous	indigenous	ADJ	JJ	Degree=Pos	37	amod	37:amod	_
-37	people	person	NOUN	NNS	Number=Plur	33	obl	33:obl:to	Entity=person-8)|SpaceAfter=No
+36	indigenous	indigenous	ADJ	JJ	Degree=Pos	37	amod	37:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Indigenous_peoples_of_Colombia">
+37	people	person	NOUN	NNS	Number=Plur	33	obl	33:obl:to	Entity=person-8)|SpaceAfter=No|XML=</ref>
 38	.	.	PUNCT	.	_	20	punct	20:punct	_
 
 # sent_id = AMALGUM_bio_aguado-3
@@ -70,8 +82,8 @@
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(object-13
 18	manuscript	manuscript	NOUN	NN	Number=Sing	16	obj	16:obj|25:obj	Entity=object-13)|SpaceAfter=No
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
-20	Recopilación	Recopilación	PROPN	NNP	Number=Sing	18	appos	18:appos	Entity=(object-13
-21	historial	historial	NOUN	NN	Number=Sing	20	flat	20:flat	Entity=object-13)|SpaceAfter=No
+20	Recopilación	Recopilación	PROPN	NNP	Number=Sing	18	appos	18:appos	Entity=(object-13|XML=<hi rend:::"italic">
+21	historial	historial	NOUN	NN	Number=Sing	20	flat	20:flat	Entity=object-13)|SpaceAfter=No|XML=</hi>
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
 23	which	which	PRON	WDT	PronType=Rel	25	obj	18:ref	Discourse=elaboration:9->8
 24	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	25	nsubj	25:nsubj|36:nsubj:xsubj	Entity=(person-1)
@@ -79,9 +91,9 @@
 26	in	in	ADP	IN	_	27	case	27:case	_
 27	Spain	Spain	PROPN	NNP	Number=Sing	25	obl	25:obl:in	Entity=(place-14)
 28	between	between	ADP	IN	_	29	case	29:case	_
-29	1576	1576	NUM	CD	NumForm=Digit|NumType=Card	25	obl	25:obl:between	Entity=(time-15)
+29	1576	1576	NUM	CD	NumForm=Digit|NumType=Card	25	obl	25:obl:between	Entity=(time-15)|XML=<date when:::"1576"></date>
 30	and	and	CCONJ	CC	_	31	cc	31:cc	_
-31	1583	1583	NUM	CD	NumForm=Digit|NumType=Card	29	conj	25:obl:between|29:conj:and	Entity=(time-16)
+31	1583	1583	NUM	CD	NumForm=Digit|NumType=Card	29	conj	25:obl:between|29:conj:and	Entity=(time-16)|XML=<date when:::"1583"></date>
 32	but	but	CCONJ	CC	_	34	cc	34:cc	Discourse=contrast:10->9
 33	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	34	cop	34:cop	_
 34	unable	unable	ADJ	JJ	Degree=Pos|Polarity=Neg	25	conj	18:acl:relcl|25:conj:but	_
@@ -105,22 +117,24 @@
 11	not	not	ADV	RB	Polarity=Neg	12	advmod	12:advmod	_
 12	published	publish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	4	conj	4:conj:but	_
 13	until	until	ADP	IN	_	16	case	16:case	_
-14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(time-4
+14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(time-4|XML=<date from:::"1900" to:::"1999">
 15	twentieth	twentieth	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	century	century	NOUN	NN	Number=Sing	12	obl	12:obl:until	Entity=time-4)|SpaceAfter=No
+16	century	century	NOUN	NN	Number=Sing	12	obl	12:obl:until	Entity=time-4)|SpaceAfter=No|XML=</date>
 17	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
-18	[	[	PUNCT	-LRB-	_	19	punct	19:punct	Discourse=evidence:13->12|SpaceAfter=No
+18	[	[	PUNCT	-LRB-	_	19	punct	19:punct	Discourse=evidence:13->12|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 19	1	1	NUM	CD	NumForm=Digit|NumType=Card	4	dep	4:dep	Entity=(abstract-18)|SpaceAfter=No
-20	]	]	PUNCT	-RRB-	_	19	punct	19:punct	_
+20	]	]	PUNCT	-RRB-	_	19	punct	19:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-5
 # s_type = frag
 # text = Biography
+# newpar = head (1 s)
 1	Biography	biography	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:14->15|Entity=(abstract-19)
 
 # sent_id = AMALGUM_bio_aguado-6
 # s_type = decl
 # text = De Aguado's date of birth is uncertain.
+# newpar = p (2 s)
 1	De	De	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Discourse=joint:15->2|Entity=(time-20(person-21
 2-3	Aguado's	_	_	_	_	_	_	_	_
 2	Aguado	Aguado	PROPN	NNP	Number=Sing	1	flat	1:flat	_
@@ -139,49 +153,50 @@
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	believed	believe	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	by	by	ADP	IN	_	5	case	5:case	_
-5	Juan	Juan	PROPN	NNP	Number=Sing	3	obl	3:obl:by	Entity=(person-23
-6	Friede	Friede	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-23)
+5	Juan	Juan	PROPN	NNP	Number=Sing	3	obl	3:obl:by	Entity=(person-23|XML=<ref target:::"https://en.wikipedia.org/wiki/Juan_Friede">
+6	Friede	Friede	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-23)|XML=</ref>
 7	to	to	PART	TO	_	10	mark	10:mark	_
 8	have	have	AUX	VB	VerbForm=Inf	10	aux	10:aux	_
 9	been	be	AUX	VBN	Tense=Past|VerbForm=Part	10	aux:pass	10:aux:pass	_
 10	baptised	baptise	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	xcomp	3:xcomp	_
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	Valdemoro	Valdemoro	PROPN	NNP	Number=Sing	10	obl	10:obl:in	Entity=(place-24)
+12	Valdemoro	Valdemoro	PROPN	NNP	Number=Sing	10	obl	10:obl:in	Entity=(place-24)|XML=<ref target:::"https://en.wikipedia.org/wiki/Valdemoro"></ref>
 13	on	on	ADP	IN	_	14	case	14:case	_
-14	26	26	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:on	Entity=(time-25
+14	26	26	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:on	Entity=(time-25|XML=<date when:::"1513-01-26">
 15	January	January	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-26)
-16	1513	1513	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=time-25)(time-2)|SpaceAfter=No
+16	1513	1513	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=time-25)(time-2)|SpaceAfter=No|XML=</date>
 17	,	,	PUNCT	,	_	21	punct	21:punct	_
 18	whilst	whilst	SCONJ	IN	_	21	mark	21:mark	Discourse=circumstance:17->16
-19	Guillermo	Guillermo	PROPN	NNP	Number=Sing	21	nsubj	21:nsubj	Entity=(person-27
-20	Morón	Morón	PROPN	NNP	Number=Sing	19	flat	19:flat	Entity=person-27)
+19	Guillermo	Guillermo	PROPN	NNP	Number=Sing	21	nsubj	21:nsubj	Entity=(person-27|XML=<ref target:::"https://en.wikipedia.org/wiki/Guillermo_Mor&#243;n">
+20	Morón	Morón	PROPN	NNP	Number=Sing	19	flat	19:flat	Entity=person-27)|XML=</ref>
 21	argues	argue	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	advcl	10:advcl:whilst	_
 22	for	for	ADP	IN	_	23	case	23:case	_
-23	16	16	NUM	CD	NumForm=Digit|NumType=Card	21	obl	21:obl:for	Entity=(time-28
+23	16	16	NUM	CD	NumForm=Digit|NumType=Card	21	obl	21:obl:for	Entity=(time-28|XML=<date when:::"1538-02-16">
 24	February	February	PROPN	NNP	Number=Sing	23	compound	23:compound	Entity=(time-29)
-25	1538	1538	NUM	CD	NumForm=Digit|NumType=Card	23	nmod:tmod	23:nmod:tmod	Entity=time-28)(time-3)|SpaceAfter=No
+25	1538	1538	NUM	CD	NumForm=Digit|NumType=Card	23	nmod:tmod	23:nmod:tmod	Entity=time-28)(time-3)|SpaceAfter=No|XML=</date>
 26	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-27	[	[	PUNCT	-LRB-	_	28	punct	28:punct	Discourse=evidence:18->17|SpaceAfter=No
+27	[	[	PUNCT	-LRB-	_	28	punct	28:punct	Discourse=evidence:18->17|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-2">
 28	2	2	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-30)|SpaceAfter=No
-29	]	]	PUNCT	-RRB-	_	28	punct	28:punct	SpaceAfter=No
-30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:19->17|SpaceAfter=No
+29	]	]	PUNCT	-RRB-	_	28	punct	28:punct	SpaceAfter=No|XML=</ref>
+30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:19->17|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-3">
 31	3	3	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-31)|SpaceAfter=No
-32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	_
+32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-8
 # s_type = decl
 # text = Arriving in the New World in 1560 or 1561 in Cartagena, his movements are uncertain until his arrival in Bogotá in 1571, although it is likely he soon left Cartagena to minister to the Muisca.
+# newpar = p (3 s)
 1	Arriving	arrive	VERB	VBG	VerbForm=Ger	16	advcl	16:advcl	Discourse=joint:20->15
 2	in	in	ADP	IN	_	5	case	5:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(place-32
 4	New	New	ADJ	NNP	Number=Sing	5	amod	5:amod	_
 5	World	World	PROPN	NNP	Number=Sing	1	obl	1:obl:in	Entity=place-32)
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	1560	1560	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-33)
+7	1560	1560	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-33)|XML=<date when:::"1560"></date>
 8	or	or	CCONJ	CC	_	9	cc	9:cc	_
-9	1561	1561	NUM	CD	NumForm=Digit|NumType=Card	7	conj	1:obl:in|7:conj:or	Entity=(time-34)
+9	1561	1561	NUM	CD	NumForm=Digit|NumType=Card	7	conj	1:obl:in|7:conj:or	Entity=(time-34)|XML=<date when:::"1561"></date>
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Cartagena	Cartagena	PROPN	NNP	Number=Sing	1	obl	1:obl:in	Entity=(place-35)|SpaceAfter=No
+11	Cartagena	Cartagena	PROPN	NNP	Number=Sing	1	obl	1:obl:in	Entity=(place-35)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Cartagena,_Colombia"></ref>
 12	,	,	PUNCT	,	_	1	punct	1:punct	_
 13	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	14	nmod:poss	14:nmod:poss	Discourse=elaboration:21->20|Entity=(abstract-36(person-21)
 14	movements	movement	NOUN	NNS	Number=Plur	16	nsubj	16:nsubj	Entity=abstract-36)
@@ -191,9 +206,9 @@
 18	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	Entity=(event-37(person-21)
 19	arrival	arrival	NOUN	NN	Number=Sing	16	obl	16:obl:until	_
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	Bogotá	Bogotá	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	Entity=(place-38)
+21	Bogotá	Bogotá	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	Entity=(place-38)|XML=<ref target:::"https://en.wikipedia.org/wiki/Bogot&#225;"></ref>
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	1571	1571	NUM	CD	NumForm=Digit|NumType=Card	19	nmod	19:nmod:in	Entity=event-37)(time-39)|SpaceAfter=No
+23	1571	1571	NUM	CD	NumForm=Digit|NumType=Card	19	nmod	19:nmod:in	Entity=event-37)(time-39)|SpaceAfter=No|XML=<date when:::"1571"></date>
 24	,	,	PUNCT	,	_	28	punct	28:punct	_
 25	although	although	SCONJ	IN	_	28	mark	28:mark	Discourse=concession:22->23
 26	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	28	expl	28:expl	Entity=(event-37)
@@ -207,7 +222,7 @@
 34	minister	minister	VERB	VB	VerbForm=Inf	31	advcl	31:advcl:to	_
 35	to	to	ADP	IN	_	37	case	37:case	_
 36	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	Entity=(place-40
-37	Muisca	Muisca	PROPN	NNP	Number=Sing	34	obl	34:obl:to	Entity=place-40)|SpaceAfter=No
+37	Muisca	Muisca	PROPN	NNP	Number=Sing	34	obl	34:obl:to	Entity=place-40)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Muisca_people"></ref>
 38	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = AMALGUM_bio_aguado-9
@@ -215,7 +230,7 @@
 # text = By around 1564 he was a pastor to the Muisca at Cogua, and he was able to build two churches there.
 1	By	by	ADP	IN	_	3	case	3:case	Discourse=sequence:25->20
 2	around	around	ADV	RB	Degree=Pos	3	advmod	3:advmod	Entity=(time-41
-3	1564	1564	NUM	CD	NumForm=Digit|NumType=Card	7	nmod	7:nmod:by	Entity=time-41)
+3	1564	1564	NUM	CD	NumForm=Digit|NumType=Card	7	nmod	7:nmod:by	Entity=time-41)|XML=<date when:::"1564"></date>
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	7	nsubj	7:nsubj	Entity=(person-21)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	cop	7:cop	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(person-21
@@ -224,7 +239,7 @@
 9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(place-40
 10	Muisca	Muisca	PROPN	NNP	Number=Sing	7	nmod	7:nmod:to	_
 11	at	at	ADP	IN	_	12	case	12:case	_
-12	Cogua	Cogua	PROPN	NNP	Number=Sing	10	nmod	10:nmod:at	Entity=person-21)place-40)(place-42)|SpaceAfter=No
+12	Cogua	Cogua	PROPN	NNP	Number=Sing	10	nmod	10:nmod:at	Entity=person-21)place-40)(place-42)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Cogua"></ref>
 13	,	,	PUNCT	,	_	17	punct	17:punct	_
 14	and	and	CCONJ	CC	_	17	cc	17:cc	Discourse=sequence:26->25
 15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj	17:nsubj|19:nsubj:xsubj	Entity=(person-21)
@@ -268,18 +283,19 @@
 25	recognised	recognise	VERB	VBN	Tense=Past|VerbForm=Part	21	acl	21:acl	Discourse=elaboration:30->29
 26	by	by	ADP	IN	_	27	case	27:case	_
 27	King	King	PROPN	NNP	Number=Sing	25	obl	25:obl:by	Entity=(person-48
-28	Philip	Philip	PROPN	NNP	Number=Sing	27	flat	27:flat	_
-29	II	II	NUM	CD	NumForm=Roman|NumType=Card	27	amod	27:amod	Entity=event-47)person-48)|SpaceAfter=No
+28	Philip	Philip	PROPN	NNP	Number=Sing	27	flat	27:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Philip_II_of_Spain">
+29	II	II	NUM	CD	NumForm=Roman|NumType=Card	27	amod	27:amod	Entity=event-47)person-48)|SpaceAfter=No|XML=</ref>
 30	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-31	[	[	PUNCT	-LRB-	_	32	punct	32:punct	Discourse=evidence:31->27|SpaceAfter=No
+31	[	[	PUNCT	-LRB-	_	32	punct	32:punct	Discourse=evidence:31->27|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Fals-Borda-4">
 32	4	4	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-49)|SpaceAfter=No
-33	]	]	PUNCT	-RRB-	_	32	punct	32:punct	_
+33	]	]	PUNCT	-RRB-	_	32	punct	32:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-11
 # s_type = decl
 # text = In 1571, De Aguado moved to Bogotá, and became a "minister provincial" of the local Franciscan Province.
+# newpar = p (9 s)
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:32->25
-2	1571	1571	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-39)|SpaceAfter=No
+2	1571	1571	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-39)|SpaceAfter=No|XML=<date when:::"1571"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	De	De	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj|11:nsubj|14:nsubj:xsubj|15:nsubj:xsubj	Entity=(person-21
 5	Aguado	Aguado	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-21)
@@ -305,7 +321,7 @@
 # s_type = decl
 # text = In 1575, De Aguado was sent by the Province on a mission to Spain to answer charges that the local monks were greedy and abusive.[1]
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:34->25
-2	1575	1575	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:in	Entity=(time-51)|SpaceAfter=No
+2	1575	1575	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:in	Entity=(time-51)|SpaceAfter=No|XML=<date when:::"1575"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	De	De	PROPN	NNP	Number=Sing	7	nsubj:pass	7:nsubj:pass	Entity=(person-21
 5	Aguado	Aguado	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-21)
@@ -331,9 +347,9 @@
 25	and	and	CCONJ	CC	_	26	cc	26:cc	_
 26	abusive	abusive	ADJ	JJ	Degree=Pos	24	conj	18:acl:that|24:conj:and	Entity=abstract-54)|SpaceAfter=No
 27	.	.	PUNCT	.	_	7	punct	7:punct	SpaceAfter=No
-28	[	[	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=evidence:37->34|SpaceAfter=No
+28	[	[	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=evidence:37->34|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 29	1	1	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	Entity=(abstract-18)|SpaceAfter=No
-30	]	]	PUNCT	-RRB-	_	29	punct	29:punct	_
+30	]	]	PUNCT	-RRB-	_	29	punct	29:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-13
 # s_type = decl
@@ -350,11 +366,11 @@
 10	to	to	ADP	IN	_	11	case	11:case	_
 11	Bogotá	Bogotá	PROPN	NNP	Number=Sing	9	obl	9:obl:to	Entity=(place-38)
 12	until	until	ADP	IN	_	13	case	13:case	_
-13	1583	1583	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:until	Entity=(time-16)|SpaceAfter=No
+13	1583	1583	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:until	Entity=(time-16)|SpaceAfter=No|XML=<date when:::"1583"></date>
 14	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
-15	[	[	PUNCT	-LRB-	_	16	punct	16:punct	Discourse=evidence:40->38|SpaceAfter=No
+15	[	[	PUNCT	-LRB-	_	16	punct	16:punct	Discourse=evidence:40->38|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 16	1	1	NUM	CD	NumForm=Digit|NumType=Card	4	dep	4:dep	Entity=(abstract-18)|SpaceAfter=No
-17	]	]	PUNCT	-RRB-	_	16	punct	16:punct	_
+17	]	]	PUNCT	-RRB-	_	16	punct	16:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-14
 # s_type = decl
@@ -373,8 +389,8 @@
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(place-12
 13	region	region	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	Entity=abstract-57)place-12)|SpaceAfter=No
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
-15	Recopilación	Recopilación	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=(object-13
-16	historial	historial	NOUN	NN	Number=Sing	15	flat	15:flat	Entity=object-13)|SpaceAfter=No
+15	Recopilación	Recopilación	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=(object-13|XML=<hi rend:::"italic">
+16	historial	historial	NOUN	NN	Number=Sing	15	flat	15:flat	Entity=object-13)|SpaceAfter=No|XML=</hi>
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
 18	begun	begin	VERB	VBN	Tense=Past|VerbForm=Part	7	acl	7:acl	Discourse=elaboration:42->41
 19	during	during	ADP	IN	_	23	case	23:case	_
@@ -424,9 +440,9 @@
 32	in	in	ADP	IN	_	33	case	33:case	_
 33	Spain	Spain	PROPN	NNP	Number=Sing	24	nmod	24:nmod:in	Entity=abstract-60)(place-14)|SpaceAfter=No
 34	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-35	[	[	PUNCT	-LRB-	_	36	punct	36:punct	Discourse=evidence:46->45|SpaceAfter=No
+35	[	[	PUNCT	-LRB-	_	36	punct	36:punct	Discourse=evidence:46->45|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 36	1	1	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-18)|SpaceAfter=No
-37	]	]	PUNCT	-RRB-	_	36	punct	36:punct	_
+37	]	]	PUNCT	-RRB-	_	36	punct	36:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-16
 # s_type = decl
@@ -475,14 +491,14 @@
 25	Aguado	Aguado	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-21)
 26	obtained	obtain	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	acl:relcl	20:acl:relcl	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	1581	1581	NUM	CD	NumForm=Digit|NumType=Card	26	obl	26:obl:in	Entity=event-67)abstract-69)(time-70)|SpaceAfter=No
+28	1581	1581	NUM	CD	NumForm=Digit|NumType=Card	26	obl	26:obl:in	Entity=event-67)abstract-69)(time-70)|SpaceAfter=No|XML=<date when:::"1581"></date>
 29	,	,	PUNCT	,	_	37	punct	37:punct	_
 30	while	while	SCONJ	IN	_	37	mark	37:mark	Discourse=elaboration:52->48
 31	a	a	DET	DT	Definite=Ind|PronType=Art	33	det	33:det	Entity=(abstract-69
 32	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	33	amod	33:amod	_
 33	licence	licence	NOUN	NN	Number=Sing	37	nsubj:pass	37:nsubj:pass	_
 34	in	in	ADP	IN	_	35	case	35:case	_
-35	1582	1582	NUM	CD	NumForm=Digit|NumType=Card	33	nmod	33:nmod:in	Entity=abstract-69)(time-71)
+35	1582	1582	NUM	CD	NumForm=Digit|NumType=Card	33	nmod	33:nmod:in	Entity=abstract-69)(time-71)|XML=<date when:::"1582"></date>
 36	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	37	aux:pass	37:aux:pass	_
 37	complicated	complicate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	9	advcl	9:advcl:while	_
 38	by	by	ADP	IN	_	41	case	41:case	_
@@ -575,15 +591,16 @@
 37	to	to	ADP	IN	_	38	case	38:case	_
 38	Bogotá	Bogotá	PROPN	NNP	Number=Sing	36	nmod	36:nmod:to	Entity=(place-38)
 39	in	in	ADP	IN	_	40	case	40:case	_
-40	1583	1583	NUM	CD	NumForm=Digit|NumType=Card	36	nmod	36:nmod:in	Entity=abstract-80)abstract-9)event-56)(time-16)|SpaceAfter=No
+40	1583	1583	NUM	CD	NumForm=Digit|NumType=Card	36	nmod	36:nmod:in	Entity=abstract-80)abstract-9)event-56)(time-16)|SpaceAfter=No|XML=<date when:::"1583"></date>
 41	.	.	PUNCT	.	_	5	punct	5:punct	SpaceAfter=No
-42	[	[	PUNCT	-LRB-	_	43	punct	43:punct	Discourse=evidence:63->60|SpaceAfter=No
+42	[	[	PUNCT	-LRB-	_	43	punct	43:punct	Discourse=evidence:63->60|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 43	1	1	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Entity=(abstract-18)|SpaceAfter=No
-44	]	]	PUNCT	-RRB-	_	43	punct	43:punct	_
+44	]	]	PUNCT	-RRB-	_	43	punct	43:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-20
 # s_type = decl
 # text = Dates for De Aguado's death are even less certain than those for his birth; dates vary from 1589[5] to 1595[6] to 1608.[7]
+# newpar = p (5 s)
 1	Dates	date	NOUN	NNS	Number=Plur	10	nsubj	10:nsubj	Discourse=preparation:64->65|Entity=(abstract-82
 2	for	for	ADP	IN	_	6	case	6:case	_
 3	De	De	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	Entity=(event-83(person-21
@@ -604,21 +621,21 @@
 17	dates	date	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	Discourse=joint:65->48|Entity=(time-84)
 18	vary	vary	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	parataxis	10:parataxis	_
 19	from	from	ADP	IN	_	20	case	20:case	_
-20	1589	1589	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:from	Entity=(time-85|SpaceAfter=No
-21	[	[	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=evidence:66->65|SpaceAfter=No
+20	1589	1589	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:from	Entity=(time-85|SpaceAfter=No|XML=<date when:::"1589"></date>
+21	[	[	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=evidence:66->65|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-5">
 22	5	5	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=(abstract-86)|SpaceAfter=No
-23	]	]	PUNCT	-RRB-	_	22	punct	22:punct	Entity=time-85)
+23	]	]	PUNCT	-RRB-	_	22	punct	22:punct	Entity=time-85)|XML=</ref>
 24	to	to	ADP	IN	_	25	case	25:case	_
-25	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:to	Entity=(time-87)|SpaceAfter=No
-26	[	[	PUNCT	-LRB-	_	27	punct	27:punct	Discourse=circumstance:67->65|SpaceAfter=No
+25	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:to	Entity=(time-87)|SpaceAfter=No|XML=<date when:::"1595"></date>
+26	[	[	PUNCT	-LRB-	_	27	punct	27:punct	Discourse=circumstance:67->65|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-6">
 27	6	6	NUM	CD	NumForm=Digit|NumType=Card	18	dep	18:dep	Entity=(abstract-88)|SpaceAfter=No
-28	]	]	PUNCT	-RRB-	_	27	punct	27:punct	_
+28	]	]	PUNCT	-RRB-	_	27	punct	27:punct	XML=</ref>
 29	to	to	ADP	IN	_	30	case	30:case	_
-30	1608	1608	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:to	Entity=(time-89)|SpaceAfter=No
+30	1608	1608	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:to	Entity=(time-89)|SpaceAfter=No|XML=<date when:::"1608"></date>
 31	.	.	PUNCT	.	_	10	punct	10:punct	SpaceAfter=No
-32	[	[	PUNCT	-LRB-	_	33	punct	33:punct	Discourse=evidence:68->65|SpaceAfter=No
+32	[	[	PUNCT	-LRB-	_	33	punct	33:punct	Discourse=evidence:68->65|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-byv-7">
 33	7	7	NUM	CD	NumForm=Digit|NumType=Card	10	dep	10:dep	Entity=(abstract-90)|SpaceAfter=No
-34	]	]	PUNCT	-RRB-	_	33	punct	33:punct	_
+34	]	]	PUNCT	-RRB-	_	33	punct	33:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-21
 # s_type = decl
@@ -641,8 +658,8 @@
 16	notably	notably	ADV	RB	Degree=Pos	18	advmod	18:advmod	Entity=(person-1
 17	by	by	ADP	IN	_	18	case	18:case	_
 18	Fray	Fray	PROPN	NNP	Number=Sing	14	nmod	14:nmod:by|23:nsubj	_
-19	Pedro	Pedro	PROPN	NNP	Number=Sing	18	flat	18:flat	_
-20	Simón	Simón	PROPN	NNP	Number=Sing	18	flat	18:flat	SpaceAfter=No
+19	Pedro	Pedro	PROPN	NNP	Number=Sing	18	flat	18:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Pedro_Sim&#243;n">
+20	Simón	Simón	PROPN	NNP	Number=Sing	18	flat	18:flat	SpaceAfter=No|XML=</ref>
 21	,	,	PUNCT	,	_	23	punct	23:punct	_
 22	who	who	PRON	WP	PronType=Rel	23	nsubj	18:ref	Discourse=elaboration:70->69
 23	appears	appear	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	_
@@ -671,9 +688,9 @@
 46	to	to	ADP	IN	_	47	case	47:case	_
 47	Bogotá	Bogotá	PROPN	NNP	Number=Sing	45	nmod	45:nmod:to	Entity=person-92)person-1)event-93)object-73)abstract-60)event-56)(place-38)|SpaceAfter=No
 48	.	.	PUNCT	.	_	8	punct	8:punct	SpaceAfter=No
-49	[	[	PUNCT	-LRB-	_	50	punct	50:punct	Discourse=evidence:72->69|SpaceAfter=No
+49	[	[	PUNCT	-LRB-	_	50	punct	50:punct	Discourse=evidence:72->69|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 50	1	1	NUM	CD	NumForm=Digit|NumType=Card	8	dep	8:dep	Entity=(abstract-18)|SpaceAfter=No
-51	]	]	PUNCT	-RRB-	_	50	punct	50:punct	_
+51	]	]	PUNCT	-RRB-	_	50	punct	50:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-22
 # s_type = decl
@@ -689,15 +706,15 @@
 9	obtained	obtain	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	in	in	ADP	IN	_	14	case	14:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(time-4
-12	late	late	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
+12	late	late	ADJ	JJ	Degree=Pos	14	amod	14:amod	XML=<date from:::"1766" to:::"1799">
 13	eighteenth	eighteenth	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
-14	century	century	NOUN	NN	Number=Sing	9	obl	9:obl:in	Entity=time-4)
+14	century	century	NOUN	NN	Number=Sing	9	obl	9:obl:in	Entity=time-4)|XML=</date>
 15	by	by	ADP	IN	_	17	case	17:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(person-23
 17	historian	historian	NOUN	NN	Number=Sing	9	obl	9:obl:by	_
-18	Juan	Juan	PROPN	NNP	Number=Sing	17	appos	17:appos	_
+18	Juan	Juan	PROPN	NNP	Number=Sing	17	appos	17:appos	XML=<ref target:::"https://en.wikipedia.org/wiki/Juan_Bautista_Mu&#241;oz">
 19	Bautista	Bautista	PROPN	NNP	Number=Sing	18	flat	18:flat	_
-20	Muñoz	Muñoz	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=person-23)|SpaceAfter=No
+20	Muñoz	Muñoz	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=person-23)|SpaceAfter=No|XML=</ref>
 21	;	;	PUNCT	:	_	24	punct	24:punct	_
 22	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	Discourse=elaboration:76->75|Entity=(object-94(person-21)
 23	collection	collection	NOUN	NN	Number=Sing	24	nsubj	24:nsubj|25:nsubj:xsubj|37:nsubj:pass	Entity=object-94)
@@ -705,9 +722,9 @@
 25	part	part	NOUN	NN	Number=Sing	24	xcomp	24:xcomp	_
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(organization-95
-28	University	University	PROPN	NNP	Number=Sing	25	nmod	25:nmod:of	_
+28	University	University	PROPN	NNP	Number=Sing	25	nmod	25:nmod:of	XML=<ref target:::"https://en.wikipedia.org/wiki/University_of_Valencia">
 29	of	of	ADP	IN	_	30	case	30:case	_
-30	Valencia	Valencia	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=organization-95)(place-96)
+30	Valencia	Valencia	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=organization-95)(place-96)|XML=</ref>
 31	on	on	ADP	IN	_	33	case	33:case	_
 32	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	33	nmod:poss	33:nmod:poss	Entity=(event-83(person-21)
 33	death	death	NOUN	NN	Number=Sing	24	obl	24:obl:on	Entity=event-83)|SpaceAfter=No
@@ -717,11 +734,11 @@
 37	transferred	transfer	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	24	conj	24:conj:and	_
 38	to	to	ADP	IN	_	41	case	41:case	_
 39	the	the	DET	DT	Definite=Def|PronType=Art	41	det	41:det	Entity=(abstract-97
-40	Real	real	ADJ	NNP	Number=Sing	41	amod	41:amod	_
+40	Real	real	ADJ	NNP	Number=Sing	41	amod	41:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Real_Academia_de_la_Historia">
 41	Academia	Academia	PROPN	NNP	Number=Sing	37	obl	37:obl:to	_
 42	de	de	PROPN	NNP	Number=Sing	41	flat	41:flat	_
 43	la	la	PROPN	NNP	Number=Sing	41	flat	41:flat	_
-44	Historia	Historia	PROPN	NNP	Number=Sing	41	flat	41:flat	Entity=abstract-97)
+44	Historia	Historia	PROPN	NNP	Number=Sing	41	flat	41:flat	Entity=abstract-97)|XML=</ref>
 45	after	after	SCONJ	IN	_	50	mark	50:mark	Discourse=circumstance:78->77
 46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	Entity=(organization-95
 47	university	university	NOUN	NN	Number=Sing	50	nsubj:pass	50:nsubj:pass	Entity=organization-95)
@@ -729,13 +746,13 @@
 49	partly	partly	ADV	RB	Degree=Pos	50	advmod	50:advmod	_
 50	destroyed	destroy	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	37	advcl	37:advcl:after	_
 51	in	in	ADP	IN	_	52	case	52:case	_
-52	1812	1812	NUM	CD	NumForm=Digit|NumType=Card	50	obl	50:obl:in	Entity=(time-98)
+52	1812	1812	NUM	CD	NumForm=Digit|NumType=Card	50	obl	50:obl:in	Entity=(time-98)|XML=<date when:::"1812"></date>
 53	during	during	ADP	IN	_	56	case	56:case	_
 54	a	a	DET	DT	Definite=Ind|PronType=Art	56	det	56:det	Entity=(event-99
 55	French	French	ADJ	JJ	Degree=Pos	56	amod	56:amod	_
 56	siege	siege	NOUN	NN	Number=Sing	50	obl	50:obl:during	_
 57	of	of	ADP	IN	_	58	case	58:case	_
-58	Valencia	Valencia	PROPN	NNP	Number=Sing	56	nmod	56:nmod:of	Entity=event-99)(place-96)|SpaceAfter=No
+58	Valencia	Valencia	PROPN	NNP	Number=Sing	56	nmod	56:nmod:of	Entity=event-99)(place-96)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Valencia"></ref>
 59	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = AMALGUM_bio_aguado-23
@@ -748,10 +765,10 @@
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	discovered	discover	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	1845	1845	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-100)
+8	1845	1845	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-100)|XML=<date when:::"1845"></date>
 9	by	by	ADP	IN	_	10	case	10:case	_
-10	Joaquín	Joaquín	PROPN	NNP	Number=Sing	6	obl	6:obl:by	Entity=(person-101
-11	Acosta	Acosta	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-101)|SpaceAfter=No
+10	Joaquín	Joaquín	PROPN	NNP	Number=Sing	6	obl	6:obl:by	Entity=(person-101|XML=<ref target:::"https://en.wikipedia.org/wiki/Joaqu&#237;n_Acosta">
+11	Acosta	Acosta	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-101)|SpaceAfter=No|XML=</ref>
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
 13	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=joint:80->79
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	16	nsubj:pass	16:nsubj:pass	Entity=(object-13)
@@ -765,9 +782,9 @@
 22	latter	latter	ADJ	JJ	Degree=Pos	23	amod	23:amod	_
 23	part	part	NOUN	NN	Number=Sing	16	obl	16:obl:in	_
 24	of	of	ADP	IN	_	27	case	27:case	_
-25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(time-4
+25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(time-4|XML=<date from:::"1800" to:::"1899">
 26	nineteenth	nineteenth	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	century	century	NOUN	NN	Number=Sing	23	nmod	23:nmod:of	Entity=time-4)|SpaceAfter=No
+27	century	century	NOUN	NN	Number=Sing	23	nmod	23:nmod:of	Entity=time-4)|SpaceAfter=No|XML=</date>
 28	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_bio_aguado-24
@@ -780,12 +797,12 @@
 5	not	not	ADV	RB	Polarity=Neg	6	advmod	6:advmod	_
 6	published	publish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	until	until	ADP	IN	_	8	case	8:case	_
-8	1906	1906	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:until	Entity=(time-102)
+8	1906	1906	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:until	Entity=(time-102)|XML=<date when:::"1906"></date>
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=elaboration:82->81|SpaceAfter=No
 10	Part	part	PROPN	NNP	Number=Sing	6	parataxis	6:parataxis	Entity=(abstract-60
 11	I	I	NUM	CD	NumForm=Roman|NumType=Card	10	dep	10:dep	Entity=abstract-60)|SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	Historia	Historia	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=(abstract-60
+13	Historia	Historia	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=(abstract-60|XML=<hi rend:::"italic">
 14	de	de	PROPN	NNP	Number=Sing	15	case	15:case	_
 15	Santa	Santa	PROPN	NNP	Number=Sing	13	nmod	13:nmod:de	_
 16	Marta	Marta	PROPN	NNP	Number=Sing	13	flat	13:flat	_
@@ -793,35 +810,38 @@
 18	Nuevo	Nuevo	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(person-103(abstract-104)
 19	Reino	Reino	PROPN	NNP	Number=Sing	15	conj	13:nmod:de|15:conj:y	_
 20	de	de	PROPN	NNP	Number=Sing	21	case	21:case	_
-21	Granada	Granada	PROPN	NNP	Number=Sing	19	nmod	19:nmod:de	Entity=abstract-60)person-103)(place-7)|SpaceAfter=No
+21	Granada	Granada	PROPN	NNP	Number=Sing	19	nmod	19:nmod:de	Entity=abstract-60)person-103)(place-7)|SpaceAfter=No|XML=</hi>
 22	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
 23	and	and	CCONJ	CC	_	24	cc	24:cc	Discourse=same_unit:83->81
-24	1913	1913	NUM	CD	NumForm=Digit|NumType=Card	10	conj	10:conj:and	Entity=(time-105)
+24	1913	1913	NUM	CD	NumForm=Digit|NumType=Card	10	conj	10:conj:and	Entity=(time-105)|XML=<date when:::"1913"></date>
 25	(	(	PUNCT	-LRB-	_	26	punct	26:punct	Discourse=elaboration:84->83|SpaceAfter=No
 26	Part	part	PROPN	NNP	Number=Sing	24	dep	24:dep	Entity=(abstract-60
 27	II	II	NUM	CD	NumForm=Roman|NumType=Card	26	dep	26:dep	Entity=abstract-60)|SpaceAfter=No
 28	,	,	PUNCT	,	_	29	punct	29:punct	_
-29	Historia	Historia	PROPN	NNP	Number=Sing	26	dep	26:dep	_
+29	Historia	Historia	PROPN	NNP	Number=Sing	26	dep	26:dep	XML=<hi rend:::"italic">
 30	de	de	PROPN	NNP	Number=Sing	31	case	31:case	_
-31	Venezuela	Venezuela	PROPN	NNP	Number=Sing	29	nmod	29:nmod:de	Entity=(place-61)|SpaceAfter=No
+31	Venezuela	Venezuela	PROPN	NNP	Number=Sing	29	nmod	29:nmod:de	Entity=(place-61)|SpaceAfter=No|XML=</hi>
 32	)	)	PUNCT	-RRB-	_	26	punct	26:punct	SpaceAfter=No
 33	.	.	PUNCT	.	_	6	punct	6:punct	SpaceAfter=No
-34	[	[	PUNCT	-LRB-	_	35	punct	35:punct	Discourse=evidence:85->81|SpaceAfter=No
+34	[	[	PUNCT	-LRB-	_	35	punct	35:punct	Discourse=evidence:85->81|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Odyssey-1">
 35	1	1	NUM	CD	NumForm=Digit|NumType=Card	6	dep	6:dep	Entity=(abstract-18)|SpaceAfter=No
-36	]	]	PUNCT	-RRB-	_	35	punct	35:punct	SpaceAfter=No
-37	[	[	PUNCT	-LRB-	_	38	punct	38:punct	Discourse=joint:86->85|SpaceAfter=No
+36	]	]	PUNCT	-RRB-	_	35	punct	35:punct	SpaceAfter=No|XML=</ref>
+37	[	[	PUNCT	-LRB-	_	38	punct	38:punct	Discourse=joint:86->85|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-byv-7">
 38	7	7	NUM	CD	NumForm=Digit|NumType=Card	6	dep	6:dep	Entity=(abstract-90)|SpaceAfter=No
-39	]	]	PUNCT	-RRB-	_	38	punct	38:punct	_
+39	]	]	PUNCT	-RRB-	_	38	punct	38:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_aguado-25
 # s_type = frag
 # text = Works
+# newpar = head (1 s)
 1	Works	work	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=attribution:87->88
 
 # sent_id = AMALGUM_bio_aguado-26
 # s_type = frag
 # text = Historia de Santa Marta y Nuevo Reino de Granada (1906) (Part I, Part II– 1916/17 edition by Jerónimo Bécker)
-1	Historia	Historia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:88->65|Entity=(abstract-60
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (1 s)
+1	Historia	Historia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:88->65|Entity=(abstract-60|XML=<hi rend:::"italic">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Santa	Santa	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	Marta	Marta	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=abstract-60)
@@ -829,39 +849,40 @@
 6	Nuevo	Nuevo	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-103(abstract-104)
 7	Reino	Reino	PROPN	NNP	Number=Sing	1	conj	1:conj:y	_
 8	de	de	PROPN	NNP	Number=Sing	9	case	9:case	_
-9	Granada	Granada	PROPN	NNP	Number=Sing	7	nmod	7:nmod:de	Entity=(place-7
+9	Granada	Granada	PROPN	NNP	Number=Sing	7	nmod	7:nmod:de	Entity=(place-7|XML=</hi>
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	Discourse=elaboration:89->88|SpaceAfter=No
-11	1906	1906	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=(time-102)|SpaceAfter=No
+11	1906	1906	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=(time-102)|SpaceAfter=No|XML=<date when:::"1906"></date>
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	Entity=person-103)place-7)
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	Discourse=elaboration:90->88|SpaceAfter=No
-14	Part	part	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Entity=(abstract-106(abstract-60
-15	I	I	NUM	CD	NumForm=Roman|NumType=Card	14	dep	14:dep	Entity=abstract-60)|SpaceAfter=No
+14	Part	part	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Entity=(abstract-106(abstract-60|XML=<ref target:::"https://archive.org/details/historiadesantam01agua">
+15	I	I	NUM	CD	NumForm=Roman|NumType=Card	14	dep	14:dep	Entity=abstract-60)|SpaceAfter=No|XML=</ref>
 16	,	,	PUNCT	,	_	17	punct	17:punct	_
-17	Part	part	PROPN	NNP	Number=Sing	14	conj	14:conj	Entity=(abstract-60
-18	II	II	NUM	CD	NumForm=Roman|NumType=Card	17	dep	17:dep	SpaceAfter=No
+17	Part	part	PROPN	NNP	Number=Sing	14	conj	14:conj	Entity=(abstract-60|XML=<ref target:::"https://archive.org/details/historiadesantam02agua">
+18	II	II	NUM	CD	NumForm=Roman|NumType=Card	17	dep	17:dep	SpaceAfter=No|XML=</ref>
 19	–	-	PUNCT	:	_	21	punct	21:punct	_
 20	1916/17	1916/17	NUM	CD	NumForm=Word|NumType=Card	21	compound	21:compound	Entity=(abstract-107
 21	edition	edition	NOUN	NN	Number=Sing	14	nmod	14:nmod	_
 22	by	by	ADP	IN	_	23	case	23:case	_
-23	Jerónimo	Jerónimo	PROPN	NNP	Number=Sing	21	nmod	21:nmod:by	Entity=(person-108
-24	Bécker	Bécker	PROPN	NNP	Number=Sing	23	flat	23:flat	Entity=abstract-106)abstract-60)abstract-107)person-108)|SpaceAfter=No
+23	Jerónimo	Jerónimo	PROPN	NNP	Number=Sing	21	nmod	21:nmod:by	Entity=(person-108|XML=<ref target:::"https://en.wikipedia.org/wiki/Jer&#243;nimo_B&#233;cker">
+24	Bécker	Bécker	PROPN	NNP	Number=Sing	23	flat	23:flat	Entity=abstract-106)abstract-60)abstract-107)person-108)|SpaceAfter=No|XML=</ref>
 25	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
 
 # sent_id = AMALGUM_bio_aguado-27
 # s_type = frag
 # text = Historia de Venezuela (1913) (Part I, Part II– 1918/19 edition by Jerónimo Bécker)
-1	Historia	Historia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:91->65|Entity=(abstract-60
+# newpar = item (1 s)
+1	Historia	Historia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:91->65|Entity=(abstract-60|XML=<hi rend:::"italic">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Venezuela	Venezuela	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+3	Venezuela	Venezuela	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:92->91|SpaceAfter=No
-5	1913	1913	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(time-105)|SpaceAfter=No
+5	1913	1913	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=(time-105)|SpaceAfter=No|XML=<date when:::"1913"></date>
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	Entity=abstract-60)
 7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:93->91|SpaceAfter=No
-8	Part	part	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Entity=(abstract-106(abstract-60
-9	I	I	NUM	CD	NumForm=Roman|NumType=Card	8	dep	8:dep	Entity=abstract-60)|SpaceAfter=No
+8	Part	part	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Entity=(abstract-106(abstract-60|XML=<ref target:::"http://www.gutenberg.org/ebooks/39947">
+9	I	I	NUM	CD	NumForm=Roman|NumType=Card	8	dep	8:dep	Entity=abstract-60)|SpaceAfter=No|XML=</ref>
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	Part	part	PROPN	NNP	Number=Sing	8	conj	8:conj	Entity=(abstract-60
-12	II	II	NUM	CD	NumForm=Roman|NumType=Card	11	dep	11:dep	SpaceAfter=No
+11	Part	part	PROPN	NNP	Number=Sing	8	conj	8:conj	Entity=(abstract-60|XML=<ref target:::"http://www.gutenberg.org/ebooks/39948">
+12	II	II	NUM	CD	NumForm=Roman|NumType=Card	11	dep	11:dep	SpaceAfter=No|XML=</ref>
 13	–	-	PUNCT	:	_	15	punct	15:punct	_
 14	1918/19	1918/19	NUM	CD	NumForm=Word|NumType=Card	15	compound	15:compound	Entity=(abstract-109
 15	edition	edition	NOUN	NN	Number=Sing	8	nmod	8:nmod	_

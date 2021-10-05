@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_concorde
+# meta::title = Concorde crash trial begins
+# meta::shortTitle = concorde
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2010-02-02
+# meta::dateModified = 2019-02-06
+# meta::sourceURL = https://en.wikinews.org/wiki/Concorde_crash_trial_begins
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_concorde
 # sent_id = AMALGUM_news_concorde-1
 # s_type = decl
 # text = Concorde crash trial begins
+# newpar = head (1 s)
 1	Concorde	Concorde	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:1->3|Entity=(event-1(event-2(object-3)
 2	crash	crash	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=event-2)
 3	trial	trial	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=event-1)
@@ -10,37 +21,41 @@
 # sent_id = AMALGUM_news_concorde-2
 # s_type = frag
 # text = Wednesday, February 3, 2010
-1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No
+# newpar = p (1 s)
+1	Wednesday	Wednesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	February	February	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
+3	February	February	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4|XML=<date when:::"2010-02-03">
 4	3	3	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
+6	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_concorde-3
 # s_type = frag
 # text = Concorde, a joint Anglo-French project, withdrawn from service in 2003.
+# newpar = figure (1 s)
+# newpar1 = caption (1 s)
 1	Concorde	Concorde	PROPN	NNP	Number=Sing	0	root:pass	_	Discourse=ROOT:3|Entity=(object-3)|SpaceAfter=No
 2	,	,	PUNCT	,	_	8	punct	8:punct	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(abstract-6
 4	joint	joint	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
-5	Anglo	anglo	ADJ	JJ	Degree=Pos	8	amod	8:amod	SpaceAfter=No
+5	Anglo	anglo	ADJ	JJ	Degree=Pos	8	amod	8:amod	SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/United_Kingdom"></ref>
 6	-	-	PUNCT	:	_	7	punct	7:punct	SpaceAfter=No
-7	French	French	ADJ	JJ	Degree=Pos	5	conj	5:conj|8:amod	_
+7	French	French	ADJ	JJ	Degree=Pos	5	conj	5:conj|8:amod	XML=<ref target:::"https://en.wikinews.org/wiki/France"></ref>
 8	project	project	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=abstract-6)|SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
 10	withdrawn	withdraw	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	1:acl	Discourse=elaboration:4->3
 11	from	from	ADP	IN	_	12	case	12:case	_
 12	service	service	NOUN	NN	Number=Sing	10	obl	10:obl:from	Entity=(abstract-7)
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:in	Entity=(time-8)|SpaceAfter=No
+14	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:in	Entity=(time-8)|SpaceAfter=No|XML=<date when:::"2003"></date>
 15	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_news_concorde-4
 # s_type = decl
 # text = A French court Tuesday launched the trial of five men and a US airline over the Concorde disaster.
+# newpar = p (2 s)
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=joint:5->3|Entity=(organization-9
-2	French	French	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+2	French	French	ADJ	JJ	Degree=Pos	3	amod	3:amod	XML=<ref target:::"https://en.wikinews.org/wiki/France"></ref>
 3	court	court	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=organization-9)
 4	Tuesday	Tuesday	ADV	NNP	Number=Sing	5	advmod	5:advmod	Entity=(event-10)
 5	launched	launch	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -51,12 +66,12 @@
 10	men	man	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	Entity=person-11)
 11	and	and	CCONJ	CC	_	14	cc	14:cc	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(organization-12
-13	US	US	ADJ	NNP	Abbr=Yes|Number=Sing	14	amod	14:amod	_
+13	US	US	ADJ	NNP	Abbr=Yes|Number=Sing	14	amod	14:amod	XML=<ref target:::"https://en.wikinews.org/wiki/United_States"></ref>
 14	airline	airline	NOUN	NN	Number=Sing	10	conj	7:nmod:of|10:conj:and	Entity=event-1)organization-12)
 15	over	over	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(event-13
-17	Concorde	Concorde	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(object-3)
-18	disaster	disaster	NOUN	NN	Number=Sing	5	obl	5:obl:over	Entity=event-13)|SpaceAfter=No
+17	Concorde	Concorde	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(object-3)|XML=<ref target:::"https://en.wikipedia.org/wiki/Air%20France%20Flight%204590">
+18	disaster	disaster	NOUN	NN	Number=Sing	5	obl	5:obl:over	Entity=event-13)|SpaceAfter=No|XML=</ref>
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_concorde-5
@@ -74,14 +89,15 @@
 10	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(place-16
 11	hotel	hotel	NOUN	NN	Number=Sing	9	obj	9:obj	_
 12	near	near	ADP	IN	_	13	case	13:case	_
-13	Paris	Paris	PROPN	NNP	Number=Sing	11	nmod	11:nmod:near	Entity=place-16)(place-17)
+13	Paris	Paris	PROPN	NNP	Number=Sing	11	nmod	11:nmod:near	Entity=place-16)(place-17)|XML=<ref target:::"https://en.wikinews.org/wiki/Paris"></ref>
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=(time-18)|SpaceAfter=No
+15	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=(time-18)|SpaceAfter=No|XML=<date when:::"2000"></date>
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_news_concorde-6
 # s_type = decl
 # text = The prosecution case agrees with the facts set out in the final accident report, which, by international law, was written from an entirely different investigation and thus cannot be introduced in court.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=elaboration:8->6|Entity=(abstract-19
 2	prosecution	prosecution	NOUN	NN	Number=Sing	3	compound	3:compound	_
 3	case	case	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-19)
@@ -144,8 +160,8 @@
 20	responsible	responsible	ADJ	JJ	Degree=Pos	2	ccomp	2:ccomp	_
 21	for	for	ADP	IN	_	27	case	27:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(event-2
-23	Air	Air	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(object-15(organization-30
-24	France	France	PROPN	NNP	Number=Sing	23	flat	23:flat	Entity=organization-30)
+23	Air	Air	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(object-15(organization-30|XML=<ref target:::"https://en.wikipedia.org/wiki/Air%20France">
+24	France	France	PROPN	NNP	Number=Sing	23	flat	23:flat	Entity=organization-30)|XML=</ref>
 25-26	jet's	_	_	_	_	_	_	_	_
 25	jet	jet	NOUN	NN	Number=Sing	27	nmod:poss	27:nmod:poss	_
 26	's	's	PART	POS	_	25	case	25:case	Entity=object-15)
@@ -168,17 +184,18 @@
 # sent_id = AMALGUM_news_concorde-8
 # s_type = decl
 # text = Both official investigations found that a Continental Airlines McDonnell Douglas DC-10 had taken off five minutes before Concorde with an improvised repair.
+# newpar = p (3 s)
 1	Both	both	DET	DT	_	3	det	3:det	Discourse=attribution:16->17|Entity=(abstract-34
 2	official	official	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	investigations	investigation	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=abstract-34)
 4	found	find	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	that	that	SCONJ	IN	_	13	mark	13:mark	Discourse=elaboration:17->13
 6	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(organization-35
-7	Continental	Continental	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-30
-8	Airlines	Airline	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=organization-30)
-9	McDonnell	McDonnell	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(organization-36
+7	Continental	Continental	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-30|XML=<ref target:::"https://en.wikinews.org/wiki/Continental_Airlines">
+8	Airlines	Airline	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=organization-30)|XML=</ref>
+9	McDonnell	McDonnell	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(organization-36|XML=<ref target:::"https://en.wikipedia.org/wiki/McDonnell%20Douglas%20DC-10">
 10	Douglas	Douglas	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=organization-36)
-11	DC-10	DC-10	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Entity=organization-35)
+11	DC-10	DC-10	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Entity=organization-35)|XML=</ref>
 12	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	aux	13:aux	_
 13	taken	take	VERB	VBN	Tense=Past|VerbForm=Part	4	ccomp	4:ccomp	_
 14	off	off	ADP	RP	_	13	compound:prt	13:compound:prt	_
@@ -229,7 +246,7 @@
 13	)	)	PUNCT	-RRB-	_	12	punct	12:punct	_
 14	piece	piece	NOUN	NN	Number=Sing	8	obj	8:obj	Discourse=same_unit:23->21
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	titanium	titanium	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=object-44)(object-46)
+16	titanium	titanium	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=object-44)(object-46)|XML=<ref target:::"https://en.wikipedia.org/wiki/titanium"></ref>
 17	on	on	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(place-47
 19	runway	runway	NOUN	NN	Number=Sing	8	obl	8:obl:on	Entity=place-47)|SpaceAfter=No
@@ -238,6 +255,7 @@
 # sent_id = AMALGUM_news_concorde-11
 # s_type = decl
 # text = Prosecutors and investigators concluded that as Concorde struck the part on takeoff a tyre burst and ripped apart, sending chunks of rubber flying.
+# newpar = p (3 s)
 1	Prosecutors	Prosecutor	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Discourse=attribution:24->25|Entity=(person-48)
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	investigators	investigator	NOUN	NNS	Number=Plur	1	conj	1:conj:and|4:nsubj	Entity=(person-49)
@@ -282,8 +300,8 @@
 13	to	to	PART	TO	_	14	mark	14:mark	Discourse=purpose:31->30
 14	trigger	trigger	VERB	VB	VerbForm=Inf	11	advcl	11:advcl:to	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(abstract-56
-16	pressure	pressure	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=(abstract-57)
-17	wave	wave	NOUN	NN	Number=Sing	14	obj	14:obj|19:nsubj	_
+16	pressure	pressure	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=(abstract-57)|XML=<ref target:::"https://en.wikipedia.org/wiki/P-wave">
+17	wave	wave	NOUN	NN	Number=Sing	14	obj	14:obj|19:nsubj	XML=</ref>
 18	that	that	PRON	WDT	PronType=Rel	19	nsubj	17:ref	Discourse=elaboration:32->31
 19	ruptured	rupture	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	acl:relcl	17:acl:relcl	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(object-58
@@ -317,13 +335,14 @@
 21	off	off	ADP	RP	_	20	compound:prt	20:compound:prt	_
 22	bound	bound	ADJ	JJ	Degree=Pos	20	advcl	20:advcl	Discourse=elaboration:36->35
 23	for	for	ADP	IN	_	24	case	24:case	_
-24	New	New	PROPN	NNP	Number=Sing	22	obl	22:obl:for	Entity=(place-62
-25	York	York	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=place-62)|SpaceAfter=No
+24	New	New	PROPN	NNP	Number=Sing	22	obl	22:obl:for	Entity=(place-62|XML=<ref target:::"https://en.wikinews.org/wiki/New_York,_New_York">
+25	York	York	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=place-62)|SpaceAfter=No|XML=</ref>
 26	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_news_concorde-14
 # s_type = decl
 # text = Concorde's pilots attempted to circle round for an emergency landing back at Charles de Gaulle Airport, but instead struck a hotel approximately three kilometres (two miles) from the airport.
+# newpar = p (3 s)
 1-2	Concorde's	_	_	_	_	_	_	_	_
 1	Concorde	Concorde	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:37->3|Entity=(person-63(object-3
 2	's	's	PART	POS	_	1	case	1:case	Entity=object-3)
@@ -338,10 +357,10 @@
 11	landing	landing	NOUN	NN	Number=Sing	6	obl	6:obl:for	_
 12	back	back	ADV	RB	Degree=Pos	11	advmod	11:advmod	Entity=event-64)
 13	at	at	ADP	IN	_	17	case	17:case	_
-14	Charles	Charles	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-65(person-66
+14	Charles	Charles	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(place-65(person-66|XML=<ref target:::"https://en.wikipedia.org/wiki/Charles%20de%20Gaulle%20Airport">
 15	de	de	PROPN	NNP	Number=Sing	14	flat	14:flat	_
 16	Gaulle	Gaulle	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-66)
-17	Airport	Airport	PROPN	NNP	Number=Sing	6	obl	6:obl:at	Entity=place-65)|SpaceAfter=No
+17	Airport	Airport	PROPN	NNP	Number=Sing	6	obl	6:obl:at	Entity=place-65)|SpaceAfter=No|XML=</ref>
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	but	but	CCONJ	CC	_	21	cc	21:cc	Discourse=contrast:38->37
 20	instead	instead	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
@@ -393,7 +412,7 @@
 3	of	of	ADP	IN	_	4	case	4:case	_
 4	victims	victim	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	Entity=person-72)
 5	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
-6	Germans	German	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(person-73
+6	Germans	German	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(person-73|XML=<ref target:::"https://en.wikinews.org/wiki/Germany"></ref>
 7	heading	head	VERB	VBG	VerbForm=Ger	6	acl	6:acl	Discourse=attribution:43->44
 8	to	to	PART	TO	_	9	mark	9:mark	_
 9	meet	meet	VERB	VB	VerbForm=Inf	7	xcomp	7:xcomp	_
@@ -404,7 +423,7 @@
 14	liner	liner	NOUN	NN	Number=Sing	9	obl	9:obl:with	Entity=place-74)
 15	for	for	ADP	IN	_	18	case	18:case	_
 16	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(event-76
-17	Caribbean	Caribbean	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(place-77)
+17	Caribbean	Caribbean	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(place-77)|XML=<ref target:::"https://en.wikinews.org/wiki/Caribbean"></ref>
 18	holiday	holiday	NOUN	NN	Number=Sing	9	obl	9:obl:for	Entity=event-76)|SpaceAfter=No
 19	,	,	PUNCT	,	_	28	punct	28:punct	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Discourse=same_unit:44->42|Entity=(person-78
@@ -415,12 +434,13 @@
 25	passengers	passenger	NOUN	NNS	Number=Plur	21	nmod	21:nmod:of	Entity=person-78)person-79)
 26	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	28	cop	28:cop	_
 27	from	from	ADP	IN	_	28	case	28:case	_
-28	Austria	Austria	PROPN	NNP	Number=Sing	6	parataxis	6:parataxis	Entity=(place-80)|SpaceAfter=No
+28	Austria	Austria	PROPN	NNP	Number=Sing	6	parataxis	6:parataxis	Entity=(place-80)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Austria"></ref>
 29	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_news_concorde-17
 # s_type = decl
 # text = John Taylor, the Continental mechanic who is alleged to have built and fitted the nonstandard part, and his boss Stanley Ford, have been targeted for prosecution.
+# newpar = p (5 s)
 1	John	John	PROPN	NNP	Number=Sing	27	nsubj:pass	27:nsubj:pass	Discourse=elaboration:45->40|Entity=(person-81
 2	Taylor	Taylor	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-81)|SpaceAfter=No
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
@@ -479,16 +499,16 @@
 10	behind	behind	ADP	IN	_	11	case	11:case	_
 11	Concorde	Concorde	PROPN	NNP	Number=Sing	9	nmod	9:nmod:behind|18:nsubj	Entity=(object-3)
 12	-	-	PUNCT	:	_	13	punct	13:punct	_
-13	Aérospatiale	Aérospatiale	PROPN	NNP	Number=Sing	11	conj	9:nmod:behind|11:conj	Entity=(abstract-90|SpaceAfter=No
+13	Aérospatiale	Aérospatiale	PROPN	NNP	Number=Sing	11	conj	9:nmod:behind|11:conj	Entity=(abstract-90|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/A&#233;rospatiale"></ref>
 14	,	,	PUNCT	,	_	18	punct	18:punct	_
 15	who	who	PRON	WP	PronType=Rel	18	nsubj	11:ref	Discourse=elaboration:51->50
 16	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 17	since	since	ADV	RB	Degree=Pos	18	advmod	18:advmod	_
 18	merged	merge	VERB	VBN	Tense=Past|VerbForm=Part	11	acl:relcl	11:acl:relcl	_
 19	into	into	ADP	IN	_	22	case	22:case	_
-20	Airbus	Airbus	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(organization-91(person-92(organization-93)
+20	Airbus	Airbus	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(organization-91(person-92(organization-93)|XML=<ref target:::"https://en.wikinews.org/wiki/Airbus"></ref>
 21	parent	parent	NOUN	NN	Number=Sing	22	compound	22:compound	Entity=person-92)
-22	EADS	Eads	PROPN	NNP	Number=Sing	18	obl	18:obl:into	Entity=person-89)organization-30)abstract-90)organization-91)|SpaceAfter=No
+22	EADS	Eads	PROPN	NNP	Number=Sing	18	obl	18:obl:into	Entity=person-89)organization-30)abstract-90)organization-91)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/EADS"></ref>
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_news_concorde-20
@@ -556,6 +576,7 @@
 # sent_id = AMALGUM_news_concorde-22
 # s_type = decl
 # text = Each individual can be imprisoned for up to three years and fined up to €50,900 (US$71,000.
+# newpar = p (4 s)
 1	Each	each	DET	DT	_	2	det	2:det	Discourse=joint:57->3|Entity=(person-101
 2	individual	individual	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass|12:nsubj:pass	Entity=person-101)
 3	can	can	AUX	MD	VerbForm=Fin	5	aux	5:aux|12:aux	_
@@ -570,10 +591,10 @@
 12	fined	fine	VERB	VBN	Tense=Past|VerbForm=Part	5	conj	5:conj:and	_
 13	up	up	ADV	IN	_	15	advmod	15:advmod	_
 14	to	to	ADP	IN	_	13	fixed	13:fixed	_
-15	€	€	SYM	SYM	_	12	obl	12:obl	SpaceAfter=No
+15	€	€	SYM	SYM	_	12	obl	12:obl	SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Euro"></ref>
 16	50,900	50000	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	_
 17	(	(	PUNCT	-LRB-	_	18	punct	18:punct	Discourse=restatement:59->58|SpaceAfter=No
-18	US$	US$	PROPN	NNP	Number=Sing	15	appos	15:appos	Entity=(place-103|SpaceAfter=No
+18	US$	US$	PROPN	NNP	Number=Sing	15	appos	15:appos	Entity=(place-103|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/United_States_dollar"></ref>
 19	71,000	71000	NUM	CD	NumForm=Digit|NumType=Card	18	dep	18:dep	Entity=place-103)|SpaceAfter=No
 20	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -624,7 +645,7 @@
 # text = TV channel Canal+ previously suggested the investigations and prosecution were a coverup of more serious issues with Concorde.
 1	TV	TV	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=attribution:65->66|Entity=(abstract-107(abstract-108)
 2	channel	channel	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-3	Canal+	Canal+	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=abstract-107)
+3	Canal+	Canal+	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=abstract-107)|XML=<ref target:::"https://en.wikipedia.org/wiki/Canal+"></ref>
 4	previously	previously	ADV	RB	Degree=Pos	5	advmod	5:advmod	_
 5	suggested	suggest	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Discourse=joint:66->3|Entity=(abstract-34(abstract-34
@@ -645,6 +666,7 @@
 # sent_id = AMALGUM_news_concorde-26
 # s_type = decl
 # text = Nothing was allowed to disturb Air France [...]
+# newpar = hi rend:::"bold" (2 s)
 1	Nothing	nothing	NOUN	NN	Number=Sing|Polarity=Neg	3	nsubj:pass	3:nsubj:pass|5:nsubj:xsubj	Discourse=elaboration:67->66|Entity=(person-110)
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	allowed	allow	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -671,6 +693,7 @@
 # sent_id = AMALGUM_news_concorde-28
 # s_type = frag
 # text = —Michel Bourgeois, air accident investigator
+# newpar = p (1 s)
 1	—	—	PUNCT	:	_	2	punct	2:punct	Discourse=elaboration:70->69|SpaceAfter=No
 2	Michel	Michel	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-113
 3	Bourgeois	Bourgeois	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-113)|SpaceAfter=No
@@ -682,6 +705,7 @@
 # sent_id = AMALGUM_news_concorde-29
 # s_type = decl
 # text = The broadcast alleged Concorde erupted into flames long before getting as far down the runway as the strip.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:71->72|Entity=(abstract-115
 2	broadcast	broadcast	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-115)
 3	alleged	allege	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -722,8 +746,8 @@
 14	and	and	CCONJ	CC	_	15	cc	15:cc	Discourse=attribution:77->78
 15	told	tell	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	conj	4:conj:and	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(organization-120
-17	Le	Le	PROPN	NNP	Number=Sing	18	compound	18:compound	_
-18	Parisien	Parisien	PROPN	NNP	Number=Sing	15	obj	15:obj	Entity=organization-120)
+17	Le	Le	PROPN	NNP	Number=Sing	18	compound	18:compound	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Le%20Parisien">
+18	Parisien	Parisien	PROPN	NNP	Number=Sing	15	obj	15:obj	Entity=organization-120)|XML=</ref></hi>
 19	that	that	SCONJ	IN	_	22	mark	22:mark	Discourse=joint:78->3
 20	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	22	nsubj	22:nsubj	Entity=(organization-116)
 21	would	would	AUX	MD	VerbForm=Fin	22	aux	22:aux	_
@@ -770,12 +794,13 @@
 29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	Entity=(organization-128
 30	court	court	NOUN	NN	Number=Sing	20	obl	20:obl:in	_
 31	in	in	ADP	IN	_	32	case	32:case	_
-32	Pontoise	Pontoise	PROPN	NNP	Number=Sing	30	nmod	30:nmod:in	Entity=organization-128)(place-129)|SpaceAfter=No
+32	Pontoise	Pontoise	PROPN	NNP	Number=Sing	30	nmod	30:nmod:in	Entity=organization-128)(place-129)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Pontoise"></ref>
 33	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_concorde-32
 # s_type = decl
 # text = There are 80,000 pages of documents to be presented at trial, and 543 items are to be presented as evidence.
+# newpar = p (4 s)
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:81->3
 2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	80,000	80000	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	Entity=(object-130
@@ -869,6 +894,7 @@
 # sent_id = AMALGUM_news_concorde-36
 # s_type = decl
 # text = The investigation found some contributory causes that can be linked to Air France.
+# newpar = p (6 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:89->3|Entity=(abstract-141
 2	investigation	investigation	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-141)
 3	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -1012,6 +1038,7 @@
 # sent_id = AMALGUM_news_concorde-42
 # s_type = decl
 # text = Few families are represented at the trial, because all the passengers struck a deal with Air France to accept compensation in exchange for waiving their right to take legal action, leaving only those killed in the hotel and the crew.
+# newpar = p (2 s)
 1	Few	Few	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:102->89|Entity=(person-155
 2	families	family	NOUN	NNS	Number=Plur	4	nsubj:pass	4:nsubj:pass	Entity=person-155)
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
@@ -1104,6 +1131,7 @@
 # sent_id = AMALGUM_news_concorde-44
 # s_type = decl
 # text = Captain Christian Marty's family's lawyer, Roland Rappaport, said outside court today that, "[t]his accident should have been avoided.
+# newpar = p (2 s)
 1	Captain	Captain	PROPN	NNP	Number=Sing	5	compound	5:compound	Discourse=attribution:112->113|Entity=(person-151(person-169
 2	Christian	Christian	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3-4	Marty's	_	_	_	_	_	_	_	_
@@ -1181,6 +1209,7 @@
 # sent_id = AMALGUM_news_concorde-46
 # s_type = decl
 # text = Daniel Soulez Larivière, who represents Frantzen, said, "this accident was unforeseeable," and the original investigations should have agreed.
+# newpar = p (5 s)
 1	Daniel	Daniel	PROPN	NNP	Number=Sing	9	nsubj	6:nsubj|9:nsubj	Discourse=joint:120->108|Entity=(person-175
 2	Soulez	Soulez	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Larivière	Larivière	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
@@ -1218,8 +1247,8 @@
 6	similar	similar	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(event-178
 7	incidents	incident	NOUN	NNS	Number=Plur	4	nmod	4:nmod:of	_
 8	in	in	ADP	IN	_	10	case	10:case	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(time-179
-10	1970s	1970s	NOUN	NNS	Number=Plur	7	nmod	7:nmod:in	Entity=time-179)
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(time-179|XML=<date from:::"1970" to:::"1979">
+10	1970s	1970s	NOUN	NNS	Number=Plur	7	nmod	7:nmod:in	Entity=time-179)|XML=</date>
 11	including	include	VERB	VBG	VerbForm=Ger	12	case	12:case	Discourse=elaboration:125->124
 12	one	one	NUM	CD	NumForm=Word|NumType=Card	7	nmod	7:nmod:including|16:nsubj	Entity=(abstract-125
 13	in	in	ADP	IN	_	14	case	14:case	_
@@ -1266,7 +1295,7 @@
 5	service	service	NOUN	NN	Number=Sing	4	obj	4:obj	Entity=(abstract-185)
 6	then	then	ADV	RB	PronType=Dem	4	advmod	4:advmod	_
 7	[	[	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
-8	1979	1979	NUM	CD	NumForm=Digit|NumType=Card	4	dep	4:dep	SpaceAfter=No
+8	1979	1979	NUM	CD	NumForm=Digit|NumType=Card	4	dep	4:dep	SpaceAfter=No|XML=<date when:::"1979"></date>
 9	]	]	PUNCT	-RRB-	_	8	punct	8:punct	SpaceAfter=No
 10	,	,	PUNCT	,	_	4	punct	4:punct	SpaceAfter=No
 11	"	''	PUNCT	''	_	4	punct	4:punct	_
@@ -1300,12 +1329,13 @@
 17	being	be	AUX	VBG	VerbForm=Ger	18	aux:pass	18:aux:pass	_
 18	retired	retire	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	13	advcl	13:advcl:before	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:in	Entity=(time-187)|SpaceAfter=No
+20	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:in	Entity=(time-187)|SpaceAfter=No|XML=<date when:::"2003"></date>
 21	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_concorde-51
 # s_type = decl
 # text = Metzner told the court that former French air accident investigator Michel Bourgeois was to be a key witness.
+# newpar = p (3 s)
 1	Metzner	Metzner	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:135->108|Entity=(person-186)
 2	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(organization-128

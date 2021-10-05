@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_bio_watts
+# meta::title = John Watts (merchant)
+# meta::shortTitle = watts
+# meta::type = bio
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2010-02-11
+# meta::dateModified = 2019-10-01
+# meta::sourceURL = https://en.wikipedia.org/wiki/John_Watts_%28merchant%29
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_bio_watts
 # sent_id = AMALGUM_bio_watts-1
 # s_type = frag
 # text = John Watts (merchant)
+# newpar = head (1 s)
 1	John	John	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->3|Entity=(person-1
 2	Watts	Watts	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:2->1|SpaceAfter=No
@@ -11,14 +22,15 @@
 # sent_id = AMALGUM_bio_watts-2
 # s_type = decl
 # text = Sir John Watts (1554 ca - 1616) was an English merchant and shipowner, active in the East India Company and Virginia Company and Lord Mayor of London in 1606.
-1	Sir	Sir	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj|15:nsubj|28:nsubj	Discourse=ROOT:3|Entity=(person-1
+# newpar = p (1 s)
+1	Sir	Sir	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj|15:nsubj|28:nsubj	Discourse=ROOT:3|Entity=(person-1|XML=<hi rend:::"bold">
 2	John	John	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Watts	Watts	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
+3	Watts	Watts	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:4->3|SpaceAfter=No
-5	1554	1554	NUM	CD	NumForm=Digit|NumType=Card	1	parataxis	1:parataxis	Entity=(time-2
+5	1554	1554	NUM	CD	NumForm=Digit|NumType=Card	1	parataxis	1:parataxis	Entity=(time-2|XML=<date when:::"1554"></date>
 6	ca	can	PROPN	NNP	Number=Sing	5	nmod:tmod	5:nmod:tmod	Entity=(time-3
 7	-	-	SYM	SYM	_	8	case	8:case	_
-8	1616	1616	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:minus	Entity=time-2)time-3)(time-4)|SpaceAfter=No
+8	1616	1616	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:minus	Entity=time-2)time-3)(time-4)|SpaceAfter=No|XML=<date when:::"1616"></date>
 9	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	Discourse=same_unit:5->3
 11	an	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(person-1(person-1
@@ -30,47 +42,49 @@
 17	active	active	ADJ	JJ	Degree=Pos	13	acl	13:acl	Discourse=joint:6->3
 18	in	in	ADP	IN	_	22	case	22:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(organization-6
-20	East	East	PROPN	NNP	Number=Sing	21	compound	21:compound	_
+20	East	East	PROPN	NNP	Number=Sing	21	compound	21:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/East_India_Company">
 21	India	India	PROPN	NNP	Number=Sing	22	compound	22:compound	_
-22	Company	Company	PROPN	NNP	Number=Sing	17	obl	17:obl:in	Entity=organization-6)
+22	Company	Company	PROPN	NNP	Number=Sing	17	obl	17:obl:in	Entity=organization-6)|XML=</ref>
 23	and	and	CCONJ	CC	_	25	cc	25:cc	_
-24	Virginia	Virginia	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(organization-7
-25	Company	Company	PROPN	NNP	Number=Sing	22	conj	17:obl:in|22:conj:and	Entity=person-5)organization-7)
+24	Virginia	Virginia	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(organization-7|XML=<ref target:::"https://en.wikipedia.org/wiki/Virginia_Company">
+25	Company	Company	PROPN	NNP	Number=Sing	22	conj	17:obl:in|22:conj:and	Entity=person-5)organization-7)|XML=</ref>
 26	and	and	CCONJ	CC	_	28	cc	28:cc	_
-27	Lord	Lord	ADJ	NNP	Number=Sing	28	amod	28:amod	Entity=(person-8
+27	Lord	Lord	ADJ	NNP	Number=Sing	28	amod	28:amod	Entity=(person-8|XML=<ref target:::"https://en.wikipedia.org/wiki/Lord_Mayor_of_London">
 28	Mayor	Mayor	PROPN	NNP	Number=Sing	13	conj	13:conj:and	_
 29	of	of	ADP	IN	_	30	case	30:case	_
-30	London	London	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=(place-9)
+30	London	London	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=(place-9)|XML=</ref>
 31	in	in	ADP	IN	_	32	case	32:case	_
-32	1606	1606	NUM	CD	NumForm=Digit|NumType=Card	28	nmod	28:nmod:in	Entity=person-1)person-8)(time-10)|SpaceAfter=No
+32	1606	1606	NUM	CD	NumForm=Digit|NumType=Card	28	nmod	28:nmod:in	Entity=person-1)person-8)(time-10)|SpaceAfter=No|XML=<date when:::"1606"></date>
 33	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = AMALGUM_bio_watts-3
 # s_type = frag
 # text = Life
+# newpar = head (1 s)
 1	Life	life	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:7->9|Entity=(abstract-11)
 
 # sent_id = AMALGUM_bio_watts-4
 # s_type = decl
 # text = The son of Thomas Watts of Buntingford, Hertfordshire, he was owner of the Margaret and John, one of the ships paid by the city of London in 1588 to sail against the Spanish armada.
+# newpar = p (8 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=circumstance:8->9|Entity=(person-12
 2	son	son	NOUN	NN	Number=Sing	11	advcl	11:advcl	_
 3	of	of	ADP	IN	_	4	case	4:case	_
 4	Thomas	Thomas	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=(person-13
 5	Watts	Watts	PROPN	NNP	Number=Sing	4	flat	4:flat	_
 6	of	of	ADP	IN	_	7	case	7:case	_
-7	Buntingford	Buntingford	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=person-12)person-13)(place-14)|SpaceAfter=No
+7	Buntingford	Buntingford	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=person-12)person-13)(place-14)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Buntingford"></ref>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Hertfordshire	Hertfordshire	PROPN	NNP	Number=Sing	4	appos	4:appos	Entity=(place-15)|SpaceAfter=No
+9	Hertfordshire	Hertfordshire	PROPN	NNP	Number=Sing	4	appos	4:appos	Entity=(place-15)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Hertfordshire"></ref>
 10	,	,	PUNCT	,	_	2	punct	2:punct	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	Discourse=joint:9->3|Entity=(person-12)
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	13	cop	13:cop	_
 13	owner	owner	NOUN	NN	Number=Sing	0	root	0:root	Entity=(person-12
 14	of	of	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(person-1(person-1
-16	Margaret	Margaret	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	Entity=person-1)
+16	Margaret	Margaret	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	Entity=person-1)|XML=<hi rend:::"italic"></hi>
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	John	John	PROPN	NNP	Number=Sing	16	conj	13:nmod:of|16:conj:and	Entity=person-12)person-1)(person-1)|SpaceAfter=No
+18	John	John	PROPN	NNP	Number=Sing	16	conj	13:nmod:of|16:conj:and	Entity=person-12)person-1)(person-1)|SpaceAfter=No|XML=<hi rend:::"italic"></hi>
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
 20	one	one	NUM	CD	NumForm=Word|NumType=Card	16	appos	16:appos	Entity=(object-16
 21	of	of	ADP	IN	_	23	case	23:case	_
@@ -81,15 +95,15 @@
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(place-18
 27	city	city	NOUN	NN	Number=Sing	24	obl	24:obl:by	_
 28	of	of	ADP	IN	_	29	case	29:case	_
-29	London	London	PROPN	NNP	Number=Sing	27	nmod	27:nmod:of	Entity=place-18)(place-9)
+29	London	London	PROPN	NNP	Number=Sing	27	nmod	27:nmod:of	Entity=place-18)(place-9)|XML=<ref target:::"https://en.wikipedia.org/wiki/London"></ref>
 30	in	in	ADP	IN	_	31	case	31:case	_
-31	1588	1588	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:in	Entity=object-16)object-17)(time-19)
+31	1588	1588	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:in	Entity=object-16)object-17)(time-19)|XML=<date when:::"1588"></date>
 32	to	to	PART	TO	_	33	mark	33:mark	Discourse=purpose:11->9
 33	sail	sail	VERB	VB	VerbForm=Inf	24	advcl	24:advcl:to	_
 34	against	against	ADP	IN	_	37	case	37:case	_
 35	the	the	DET	DT	Definite=Def|PronType=Art	37	det	37:det	Entity=(person-20
-36	Spanish	Spanish	ADJ	JJ	Degree=Pos	37	amod	37:amod	_
-37	armada	armada	NOUN	NN	Number=Sing	33	obl	33:obl:against	Entity=person-20)|SpaceAfter=No
+36	Spanish	Spanish	ADJ	JJ	Degree=Pos	37	amod	37:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Spanish_armada">
+37	armada	armada	NOUN	NN	Number=Sing	33	obl	33:obl:against	Entity=person-20)|SpaceAfter=No|XML=</ref>
 38	.	.	PUNCT	.	_	13	punct	13:punct	_
 
 # sent_id = AMALGUM_bio_watts-5
@@ -113,7 +127,7 @@
 # s_type = decl
 # text = In 1590 the same ship was one of a fleet of merchantmen coming home from the Mediterranean, which successfully fought and repelled the Spanish galleys near Cadiz.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=sequence:14->12
-2	1590	1590	NUM	CD	NumForm=Digit|NumType=Card	7	nmod	7:nmod:in	Entity=(time-23)
+2	1590	1590	NUM	CD	NumForm=Digit|NumType=Card	7	nmod	7:nmod:in	Entity=(time-23)|XML=<date when:::"1590"></date>
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(object-24
 4	same	same	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	ship	ship	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=object-24)
@@ -132,14 +146,14 @@
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	which	which	PRON	WDT	PronType=Rel	21	nsubj	12:ref	Discourse=elaboration:16->14
 20	successfully	successfully	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
-21	fought	fight	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	_
+21	fought	fight	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	12	acl:relcl	12:acl:relcl	XML=<ref target:::"https://en.wikipedia.org/wiki/Battle_of_the_Strait_of_Gibraltar_(1590)">
 22	and	and	CCONJ	CC	_	23	cc	23:cc	Discourse=joint:17->16
 23	repelled	repel	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	21	conj	12:acl:relcl|21:conj:and	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(object-29
 25	Spanish	Spanish	ADJ	JJ	Degree=Pos	26	amod	26:amod	_
-26	galleys	galley	NOUN	NNS	Number=Plur	21	obj	21:obj|23:obj	Entity=person-25)object-26)object-27)object-29)
+26	galleys	galley	NOUN	NNS	Number=Plur	21	obj	21:obj|23:obj	Entity=person-25)object-26)object-27)object-29)|XML=</ref>
 27	near	near	ADP	IN	_	28	case	28:case	_
-28	Cadiz	Cadiz	PROPN	NNP	Number=Sing	21	obl	21:obl:near	Entity=(place-30)|SpaceAfter=No
+28	Cadiz	Cadiz	PROPN	NNP	Number=Sing	21	obl	21:obl:near	Entity=(place-30)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Cadiz"></ref>
 29	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_bio_watts-7
@@ -159,17 +173,17 @@
 12	equipped	equip	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	financed	finance	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	conj	12:conj:and	_
-15	privateers	privateer	NOUN	NNS	Number=Plur	12	obj	12:obj|14:obj	Entity=(person-32
+15	privateers	privateer	NOUN	NNS	Number=Plur	12	obj	12:obj|14:obj	Entity=(person-32|XML=<ref target:::"https://en.wikipedia.org/wiki/Privateer"></ref>
 16	led	lead	VERB	VBN	Tense=Past|VerbForm=Part	15	acl	15:acl	Discourse=elaboration:21->20
 17	by	by	ADP	IN	_	18	case	18:case	_
-18	Michael	Michael	PROPN	NNP	Number=Sing	16	obl	16:obl:by	Entity=(person-33
-19	Geare	Geare	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=person-33)|SpaceAfter=No
+18	Michael	Michael	PROPN	NNP	Number=Sing	16	obl	16:obl:by	Entity=(person-33|XML=<ref target:::"https://en.wikipedia.org/wiki/Michael_Geare">
+19	Geare	Geare	PROPN	NNP	Number=Sing	18	flat	18:flat	Entity=person-33)|SpaceAfter=No|XML=</ref>
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
-21	William	William	PROPN	NNP	Number=Sing	18	conj	16:obl:by|18:conj:and	Entity=(person-34
-22	Lane	Lane	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=person-34)
+21	William	William	PROPN	NNP	Number=Sing	18	conj	16:obl:by|18:conj:and	Entity=(person-34|XML=<ref target:::"https://en.wikipedia.org/wiki/William_Lane_(died_1618)">
+22	Lane	Lane	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=person-34)|XML=</ref>
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	Christopher	Christopher	PROPN	NNP	Number=Sing	18	conj	16:obl:by|18:conj:and	Entity=(person-35
-25	Newport	Newport	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-32)person-35)|SpaceAfter=No
+24	Christopher	Christopher	PROPN	NNP	Number=Sing	18	conj	16:obl:by|18:conj:and	Entity=(person-35|XML=<ref target:::"https://en.wikipedia.org/wiki/Christopher_Newport">
+25	Newport	Newport	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-32)person-35)|SpaceAfter=No|XML=</ref>
 26	.	.	PUNCT	.	_	12	punct	12:punct	_
 
 # sent_id = AMALGUM_bio_watts-8
@@ -186,32 +200,32 @@
 9	financed	finance	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	12:amod	_
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	organised	organise	VERB	VBN	Tense=Past|VerbForm=Part	9	conj	9:conj:and|12:amod	_
-12	expedition	expedition	NOUN	NN	Number=Sing	7	obj	7:obj	_
+12	expedition	expedition	NOUN	NN	Number=Sing	7	obj	7:obj	XML=<ref target:::"https://en.wikipedia.org/wiki/Watts'_West_Indies_and_Virginia_expedition">
 13	to	to	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(place-38
 15	Spanish	Spanish	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	main	main	NOUN	NN	Number=Sing	12	nmod	12:nmod:to	Entity=place-38)
+16	main	main	NOUN	NN	Number=Sing	12	nmod	12:nmod:to	Entity=place-38)|XML=</ref>
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	1590	1590	NUM	CD	NumForm=Digit|NumType=Card	12	nmod	12:nmod:in	Entity=event-37)(time-23)|SpaceAfter=No
+18	1590	1590	NUM	CD	NumForm=Digit|NumType=Card	12	nmod	12:nmod:in	Entity=event-37)(time-23)|SpaceAfter=No|XML=<date when:::"1590"></date>
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(event-39
-21	expedition	expedition	NOUN	NN	Number=Sing	12	conj	7:obj|12:conj:and	_
+21	expedition	expedition	NOUN	NN	Number=Sing	12	conj	7:obj|12:conj:and	XML=<ref target:::"https://en.wikipedia.org/wiki/Blockade_of_Western_Cuba">
 22	to	to	ADP	IN	_	23	case	23:case	_
-23	Cuba	Cuba	PROPN	NNP	Number=Sing	21	nmod	21:nmod:to	Entity=(place-40)
-24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(time-41
+23	Cuba	Cuba	PROPN	NNP	Number=Sing	21	nmod	21:nmod:to	Entity=(place-40)|XML=</ref>
+24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(time-41|XML=<date when:::"1591">
 25	following	follow	VERB	VBG	VerbForm=Ger	26	amod	26:amod	_
-26	year	year	NOUN	NN	Number=Sing	21	nmod:tmod	21:nmod:tmod	Entity=event-39)time-41)
+26	year	year	NOUN	NN	Number=Sing	21	nmod:tmod	21:nmod:tmod	Entity=event-39)time-41)|XML=</date>
 27	and	and	CCONJ	CC	_	31	cc	31:cc	_
-28	James	James	PROPN	NNP	Number=Sing	31	nmod:poss	31:nmod:poss	Entity=(event-42(person-43
+28	James	James	PROPN	NNP	Number=Sing	31	nmod:poss	31:nmod:poss	Entity=(event-42(person-43|XML=<ref target:::"https://en.wikipedia.org/wiki/James_Lancaster">
 29-30	Lancaster's	_	_	_	_	_	_	_	_
-29	Lancaster	Lancaster	PROPN	NNP	Number=Sing	28	flat	28:flat	_
+29	Lancaster	Lancaster	PROPN	NNP	Number=Sing	28	flat	28:flat	XML=</ref>
 30	's	's	PART	POS	_	28	case	28:case	Entity=person-43)
-31	expedition	expedition	NOUN	NN	Number=Sing	12	conj	7:obj|12:conj:and	_
+31	expedition	expedition	NOUN	NN	Number=Sing	12	conj	7:obj|12:conj:and	XML=<ref target:::"https://en.wikipedia.org/wiki/Capture_of_Recife_(1595)">
 32	to	to	ADP	IN	_	33	case	33:case	_
-33	Recife	Recife	PROPN	NNP	Number=Sing	31	nmod	31:nmod:to	Entity=(place-44)
+33	Recife	Recife	PROPN	NNP	Number=Sing	31	nmod	31:nmod:to	Entity=(place-44)|XML=</ref>
 34	in	in	ADP	IN	_	35	case	35:case	_
-35	April	April	PROPN	NNP	Number=Sing	31	nmod	31:nmod:in	Entity=(time-45
-36	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	35	nmod:tmod	35:nmod:tmod	Entity=event-42)time-45)(time-46)|SpaceAfter=No
+35	April	April	PROPN	NNP	Number=Sing	31	nmod	31:nmod:in	Entity=(time-45|XML=<date when:::"1595-04">
+36	1595	1595	NUM	CD	NumForm=Digit|NumType=Card	35	nmod:tmod	35:nmod:tmod	Entity=event-42)time-45)(time-46)|SpaceAfter=No|XML=</date>
 37	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_bio_watts-9
@@ -237,11 +251,11 @@
 # text = Another in July 1601 took into Plymouth a prize coming from the Indies laden with China silks, satins and taffetas.
 1	Another	another	PRON	DT	_	5	nsubj	5:nsubj	Discourse=elaboration:24->23|Entity=(place-38
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	July	July	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	Entity=(time-52
-4	1601	1601	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=place-38)time-52)(time-53)
+3	July	July	PROPN	NNP	Number=Sing	1	nmod	1:nmod:in	Entity=(time-52|XML=<date when:::"1601-07">
+4	1601	1601	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=place-38)time-52)(time-53)|XML=</date>
 5	took	take	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	into	into	ADP	IN	_	7	case	7:case	_
-7	Plymouth	Plymouth	PROPN	NNP	Number=Sing	5	obl	5:obl:into	Entity=(place-54)
+7	Plymouth	Plymouth	PROPN	NNP	Number=Sing	5	obl	5:obl:into	Entity=(place-54)|XML=<ref target:::"https://en.wikipedia.org/wiki/Plymouth"></ref>
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(object-49
 9	prize	prize	NOUN	NN	Number=Sing	5	obj	5:obj	_
 10	coming	come	VERB	VBG	VerbForm=Ger	9	acl	9:acl	Discourse=elaboration:25->24
@@ -255,7 +269,7 @@
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
 19	satins	satin	NOUN	NNS	Number=Plur	17	conj	14:obl:with|17:conj:and	Entity=(substance-58)
 20	and	and	CCONJ	CC	_	21	cc	21:cc	_
-21	taffetas	taffeta	NOUN	NNS	Number=Plur	17	conj	14:obl:with|17:conj:and	Entity=object-49)(object-59)|SpaceAfter=No
+21	taffetas	taffeta	NOUN	NNS	Number=Plur	17	conj	14:obl:with|17:conj:and	Entity=object-49)(object-59)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Taffeta"></ref>
 22	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_bio_watts-11
@@ -284,18 +298,19 @@
 21	a	a	DET	DT	Definite=Ind|PronType=Art	22	det	22:det	Entity=(person-61
 22	supporter	supporter	NOUN	NN	Number=Sing	18	xcomp	18:xcomp	_
 23	of	of	ADP	IN	_	24	case	24:case	_
-24	Robert	Robert	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=(person-61
+24	Robert	Robert	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=(person-61|XML=<ref target:::"https://en.wikipedia.org/wiki/Robert_Devereux,_2nd_Earl_of_Essex">
 25	Devereux	Devereux	PROPN	NNP	Number=Sing	24	flat	24:flat	Entity=person-61)person-61)|SpaceAfter=No
 26	,	,	PUNCT	,	_	28	punct	28:punct	_
 27	2nd	2nd	ADJ	JJ	Degree=Pos|NumType=Ord	28	amod	28:amod	Entity=(person-61
 28	Earl	Earl	PROPN	NNP	Number=Sing	24	appos	24:appos	_
 29	of	of	ADP	IN	_	30	case	30:case	_
-30	Essex	Essex	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=person-61)(place-62)|SpaceAfter=No
+30	Essex	Essex	PROPN	NNP	Number=Sing	28	nmod	28:nmod:of	Entity=person-61)(place-62)|SpaceAfter=No|XML=</ref>
 31	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_bio_watts-12
 # s_type = decl
 # text = He was one of the founders of the East India Company, and on 11April 1601 was elected its governor, during the imprisonment of Sir Thomas Smythe.
+# newpar = p (5 s)
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	3	nsubj	3:nsubj	Discourse=joint:30->27|Entity=(person-47)
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	cop	3:cop	_
 3	one	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Entity=(person-63
@@ -311,7 +326,7 @@
 13	and	and	CCONJ	CC	_	18	cc	18:cc	Discourse=joint:31->27
 14	on	on	ADP	IN	_	15	case	15:case	_
 15	11April	11April	NUM	CD	NumForm=Word|NumType=Card	18	obl	18:obl:on	Entity=(time-65
-16	1601	1601	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-65)(time-53)
+16	1601	1601	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-65)(time-53)|XML=<date when:::"1601"></date>
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux:pass	18:aux:pass	_
 18	elected	elect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	_
 19	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	20	nmod:poss	20:nmod:poss	Entity=(organization-6)
@@ -321,9 +336,9 @@
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(event-66
 24	imprisonment	imprisonment	NOUN	NN	Number=Sing	18	obl	18:obl:during	_
 25	of	of	ADP	IN	_	26	case	26:case	_
-26	Sir	Sir	PROPN	NNP	Number=Sing	24	nmod	24:nmod:of	Entity=(person-1
+26	Sir	Sir	PROPN	NNP	Number=Sing	24	nmod	24:nmod:of	Entity=(person-1|XML=<ref target:::"https://en.wikipedia.org/wiki/Thomas_Smythe">
 27	Thomas	Thomas	PROPN	NNP	Number=Sing	26	flat	26:flat	_
-28	Smythe	Smythe	PROPN	NNP	Number=Sing	26	flat	26:flat	Entity=event-66)person-1)|SpaceAfter=No
+28	Smythe	Smythe	PROPN	NNP	Number=Sing	26	flat	26:flat	Entity=event-66)person-1)|SpaceAfter=No|XML=</ref>
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_watts-13
@@ -333,14 +348,14 @@
 2	served	serve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	as	as	ADP	IN	_	5	case	5:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(person-67
-5	Sheriff	Sheriff	PROPN	NNP	Number=Sing	2	obl	2:obl:as	_
+5	Sheriff	Sheriff	PROPN	NNP	Number=Sing	2	obl	2:obl:as	XML=<ref target:::"https://en.wikipedia.org/wiki/Sheriff_of_the_City_of_London">
 6	of	of	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(place-18
 8	City	City	PROPN	NNP	Number=Sing	5	nmod	5:nmod:of	_
 9	of	of	ADP	IN	_	10	case	10:case	_
-10	London	London	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=person-67)place-18)
+10	London	London	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=person-67)place-18)|XML=</ref>
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	1597	1597	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:in	Entity=(time-68)|SpaceAfter=No
+12	1597	1597	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:in	Entity=(time-68)|SpaceAfter=No|XML=<date when:::"1597"></date>
 13	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_bio_watts-14
@@ -350,24 +365,24 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-69
 3	accession	accession	NOUN	NN	Number=Sing	9	obl	9:obl:on	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	James	James	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=(person-43
-6	I	I	NUM	CD	NumForm=Roman|NumType=Card	5	dep	5:dep	Entity=event-69)person-43)
+5	James	James	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=(person-43|XML=<ref target:::"https://en.wikipedia.org/wiki/James_I">
+6	I	I	NUM	CD	NumForm=Roman|NumType=Card	5	dep	5:dep	Entity=event-69)person-43)|XML=</ref>
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj:pass	9:nsubj:pass	Entity=(person-43)
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	knighted	knight	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 10	on	on	ADP	IN	_	11	case	11:case	_
 11	26July	26July	PROPN	NNP	Number=Sing	9	obl	9:obl:on	Entity=(time-70
-12	1603	1603	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:tmod	11:nmod:tmod	Entity=time-70)(time-71)|SpaceAfter=No
+12	1603	1603	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:tmod	11:nmod:tmod	Entity=time-70)(time-71)|SpaceAfter=No|XML=<date when:::"1603"></date>
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
 14	becoming	become	VERB	VBG	VerbForm=Ger	9	advcl	9:advcl	Discourse=elaboration:34->33
-15	Lord	Lord	ADJ	NNP	Number=Sing	16	amod	16:amod	Entity=(person-72
+15	Lord	Lord	ADJ	NNP	Number=Sing	16	amod	16:amod	Entity=(person-72|XML=<ref target:::"https://en.wikipedia.org/wiki/Lord_Mayor_of_London">
 16	Mayor	Mayor	PROPN	NNP	Number=Sing	14	xcomp	14:xcomp	_
 17	of	of	ADP	IN	_	18	case	18:case	_
-18	London	London	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=person-72)(place-9)
+18	London	London	PROPN	NNP	Number=Sing	16	nmod	16:nmod:of	Entity=person-72)(place-9)|XML=</ref>
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	1606	1606	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=(time-10|SpaceAfter=No
+20	1606	1606	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=(time-10|SpaceAfter=No|XML=<date when:::"1606"></date>
 21	–	-	SYM	SYM	_	22	case	22:case	SpaceAfter=No
-22	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	20	nmod	20:nmod:to	Entity=time-10)(time-73)|SpaceAfter=No
+22	1607	1607	NUM	CD	NumForm=Digit|NumType=Card	20	nmod	20:nmod:to	Entity=time-10)(time-73)|SpaceAfter=No|XML=<date when:::"1607"></date>
 23	,	,	PUNCT	,	_	29	punct	29:punct	_
 24	at	at	ADP	IN	_	26	case	26:case	Discourse=elaboration:35->34
 25	which	which	DET	WDT	PronType=Int	26	det	26:det	Entity=(time-74
@@ -397,17 +412,17 @@
 49	kingdom	kingdom	NOUN	NN	Number=Sing	46	obl	46:obl:in	Entity=person-78)place-79)|SpaceAfter=No
 50	"	''	PUNCT	''	_	42	punct	42:punct	SpaceAfter=No
 51	.	.	PUNCT	.	_	9	punct	9:punct	SpaceAfter=No
-52	[	[	PUNCT	-LRB-	_	53	punct	53:punct	Discourse=evidence:37->35|SpaceAfter=No
+52	[	[	PUNCT	-LRB-	_	53	punct	53:punct	Discourse=evidence:37->35|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-Bicheno-1">
 53	1	1	NUM	CD	NumForm=Digit|NumType=Card	9	dep	9:dep	Entity=(abstract-80)|SpaceAfter=No
-54	]	]	PUNCT	-RRB-	_	53	punct	53:punct	_
+54	]	]	PUNCT	-RRB-	_	53	punct	53:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_watts-15
 # s_type = decl
 # text = During the following years he was an active member of the Virginia Company.
 1	During	during	ADP	IN	_	4	case	4:case	Discourse=sequence:38->31
-2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(time-81
+2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(time-81|XML=<date when:::"1608">
 3	following	follow	VERB	VBG	VerbForm=Ger	4	amod	4:amod	_
-4	years	year	NOUN	NNS	Number=Plur	9	nmod	9:nmod:during	Entity=time-81)
+4	years	year	NOUN	NNS	Number=Plur	9	nmod	9:nmod:during	Entity=time-81)|XML=</date>
 5	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	nsubj	9:nsubj	Entity=(person-43)
 6	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	cop	9:cop	_
 7	an	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(person-43
@@ -415,8 +430,8 @@
 9	member	member	NOUN	NN	Number=Sing	0	root	0:root	_
 10	of	of	ADP	IN	_	13	case	13:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(organization-7
-12	Virginia	Virginia	PROPN	NNP	Number=Sing	13	compound	13:compound	_
-13	Company	Company	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	Entity=person-43)organization-7)|SpaceAfter=No
+12	Virginia	Virginia	PROPN	NNP	Number=Sing	13	compound	13:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/Virginia_Company">
+13	Company	Company	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	Entity=person-43)organization-7)|SpaceAfter=No|XML=</ref>
 14	.	.	PUNCT	.	_	9	punct	9:punct	_
 
 # sent_id = AMALGUM_bio_watts-16
@@ -435,14 +450,15 @@
 11	of	of	ADP	IN	_	15	case	15:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(organization-7
 13-14	Clothworkers'	_	_	_	_	_	_	_	_
-13	Clothworkers	Clothworker	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	Entity=(person-82
+13	Clothworkers	Clothworker	PROPN	NNP	Number=Sing	15	nmod:poss	15:nmod:poss	Entity=(person-82|XML=<ref target:::"https://en.wikipedia.org/wiki/Clothworkers'_Company">
 14	'	's	PART	POS	_	13	case	13:case	Entity=person-82)
-15	Company	Company	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=person-13)organization-7)|SpaceAfter=No
+15	Company	Company	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=person-13)organization-7)|SpaceAfter=No|XML=</ref>
 16	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_bio_watts-17
 # s_type = decl
 # text = Watts died at his seat in Hertfordshire in September 1616, and was buried on the 7th of the month at Ware.
+# newpar = p (1 s)
 1	Watts	Watts	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|14:nsubj:pass	Discourse=sequence:40->31|Entity=(person-13)
 2	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	at	at	ADP	IN	_	5	case	5:case	_
@@ -451,8 +467,8 @@
 6	in	in	ADP	IN	_	7	case	7:case	_
 7	Hertfordshire	Hertfordshire	PROPN	NNP	Number=Sing	5	nmod	5:nmod:in	Entity=place-83)(place-15)
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	September	September	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Entity=(time-84
-10	1616	1616	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-84)(time-4)|SpaceAfter=No
+9	September	September	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Entity=(time-84|XML=<date when:::"1616-09">
+10	1616	1616	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-84)(time-4)|SpaceAfter=No|XML=</date>
 11	,	,	PUNCT	,	_	14	punct	14:punct	_
 12	and	and	CCONJ	CC	_	14	cc	14:cc	Discourse=joint:41->40
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	14:aux:pass	_
@@ -464,17 +480,19 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(time-85
 20	month	month	NOUN	NN	Number=Sing	17	nmod	17:nmod:of	Entity=time-85)
 21	at	at	ADP	IN	_	22	case	22:case	_
-22	Ware	Ware	PROPN	NNP	Number=Sing	14	obl	14:obl:at	Entity=(place-86)|SpaceAfter=No
+22	Ware	Ware	PROPN	NNP	Number=Sing	14	obl	14:obl:at	Entity=(place-86)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Ware,_Hertfordshire"></ref>
 23	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_bio_watts-18
 # s_type = frag
 # text = Family
+# newpar = head (1 s)
 1	Family	family	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:42->43|Entity=(person-87)
 
 # sent_id = AMALGUM_bio_watts-19
 # s_type = decl
 # text = By his wife Margaret, daughter of Sir James Hawes, knt. (lord mayor in 1574), he left four sons and four daughters.
+# newpar = p (8 s)
 1	By	by	ADP	IN	_	3	case	3:case	Discourse=joint:43->40
 2	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	Entity=(person-1(person-87)
 3	wife	wife	NOUN	NN	Number=Sing	21	obl	21:obl:by	_
@@ -482,16 +500,16 @@
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	daughter	daughter	NOUN	NN	Number=Sing	4	appos	4:appos	Entity=(person-1
 7	of	of	ADP	IN	_	8	case	8:case	_
-8	Sir	Sir	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=(person-1
+8	Sir	Sir	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=(person-1|XML=<ref target:::"https://en.wikipedia.org/wiki/Sir_James_Hawes">
 9	James	James	PROPN	NNP	Number=Sing	8	flat	8:flat	_
-10	Hawes	Hawes	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-1)person-1)|SpaceAfter=No
+10	Hawes	Hawes	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-1)person-1)|SpaceAfter=No|XML=</ref>
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	knt.	knt.	PROPN	NNP	Number=Sing	8	appos	8:appos	Entity=(person-1)
 13	(	(	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=elaboration:44->43|SpaceAfter=No
 14	lord	lord	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(person-1
 15	mayor	mayor	NOUN	NN	Number=Sing	8	appos	8:appos	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	1574	1574	NUM	CD	NumForm=Digit|NumType=Card	15	nmod	15:nmod:in	Entity=person-1)(time-88)|SpaceAfter=No
+17	1574	1574	NUM	CD	NumForm=Digit|NumType=Card	15	nmod	15:nmod:in	Entity=person-1)(time-88)|SpaceAfter=No|XML=<date when:::"1574"></date>
 18	)	)	PUNCT	-RRB-	_	15	punct	15:punct	SpaceAfter=No
 19	,	,	PUNCT	,	_	3	punct	3:punct	_
 20	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	21	nsubj	21:nsubj	Discourse=same_unit:45->43|Entity=(person-87)
@@ -525,34 +543,34 @@
 17	good	good	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 18	service	service	NOUN	NN	Number=Sing	14	obl	14:obl:for	Entity=abstract-91)
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	1625	1625	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:in	Entity=(time-92)|SpaceAfter=No
+20	1625	1625	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:in	Entity=(time-92)|SpaceAfter=No|XML=<date when:::"1625"></date>
 21	;	;	PUNCT	:	_	24	punct	24:punct	_
 22	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	24	nsubj	24:nsubj	Discourse=joint:48->43|Entity=(person-1)
 23	subsequently	subsequently	ADV	RB	Degree=Pos	24	advmod	24:advmod	_
 24	served	serve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	_
 25	under	under	ADP	IN	_	26	case	26:case	_
-26	George	George	PROPN	NNP	Number=Sing	24	obl	24:obl:under	Entity=(person-93
+26	George	George	PROPN	NNP	Number=Sing	24	obl	24:obl:under	Entity=(person-93|XML=<ref target:::"https://en.wikipedia.org/wiki/George_Villiers,_1st_Duke_of_Buckingham">
 27	Villiers	Villiers	PROPN	NNP	Number=Sing	26	flat	26:flat	Entity=person-93)|SpaceAfter=No
 28	,	,	PUNCT	,	_	30	punct	30:punct	_
 29	1st	1st	ADJ	JJ	Degree=Pos|NumType=Ord	30	amod	30:amod	Entity=(person-93
 30	Duke	Duke	PROPN	NNP	Number=Sing	26	appos	26:appos	_
 31	of	of	ADP	IN	_	32	case	32:case	_
-32	Buckingham	Buckingham	PROPN	NNP	Number=Sing	30	nmod	30:nmod:of	Entity=person-93)(place-94)
+32	Buckingham	Buckingham	PROPN	NNP	Number=Sing	30	nmod	30:nmod:of	Entity=person-93)(place-94)|XML=</ref>
 33	in	in	ADP	IN	_	36	case	36:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	Entity=(event-42
-35	Rhé	Rhé	PROPN	NNP	Number=Sing	36	compound	36:compound	Entity=(object-95)
+35	Rhé	Rhé	PROPN	NNP	Number=Sing	36	compound	36:compound	Entity=(object-95)|XML=<ref target:::"https://en.wikipedia.org/wiki/Rh&#233;"></ref>
 36	expedition	expedition	NOUN	NN	Number=Sing	24	obl	24:obl:in	Entity=event-42)|SpaceAfter=No
 37	,	,	PUNCT	,	_	40	punct	40:punct	_
 38	and	and	CCONJ	CC	_	40	cc	40:cc	_
 39	under	under	ADP	IN	_	40	case	40:case	_
-40	Count	Count	PROPN	NNP	Number=Sing	25	conj	25:conj:and|26:case	Entity=(person-96
-41	Mansfeldt	Mansfeldt	PROPN	NNP	Number=Sing	40	flat	40:flat	Entity=person-96)
+40	Count	Count	PROPN	NNP	Number=Sing	25	conj	25:conj:and|26:case	Entity=(person-96|XML=<ref target:::"https://en.wikipedia.org/wiki/Count_Mansfeldt">
+41	Mansfeldt	Mansfeldt	PROPN	NNP	Number=Sing	40	flat	40:flat	Entity=person-96)|XML=</ref>
 42	in	in	ADP	IN	_	44	case	44:case	_
 43	the	the	DET	DT	Definite=Def|PronType=Art	44	det	44:det	Entity=(place-97
-44	Electorate	Electorate	PROPN	NNP	Number=Sing	40	orphan	40:orphan	_
+44	Electorate	Electorate	PROPN	NNP	Number=Sing	40	orphan	40:orphan	XML=<ref target:::"https://en.wikipedia.org/wiki/Electorate_of_the_Palatinate">
 45	of	of	ADP	IN	_	47	case	47:case	_
 46	the	the	DET	DT	Definite=Def|PronType=Art	47	det	47:det	Entity=(place-98
-47	Palatinate	Palatinate	PROPN	NNP	Number=Sing	44	nmod	44:nmod:of	Entity=place-97)place-98)|SpaceAfter=No
+47	Palatinate	Palatinate	PROPN	NNP	Number=Sing	44	nmod	44:nmod:of	Entity=place-97)place-98)|SpaceAfter=No|XML=</ref>
 48	;	;	PUNCT	:	_	50	punct	50:punct	_
 49	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	50	nsubj	50:nsubj|69:nsubj	Discourse=joint:49->43|Entity=(person-1)
 50	married	marry	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	7	parataxis	7:parataxis	_
@@ -566,12 +584,12 @@
 58	and	and	CCONJ	CC	_	59	cc	59:cc	_
 59	aunt	aunt	NOUN	NN	Number=Sing	53	conj	51:appos|53:conj:and	Entity=(person-99
 60	of	of	ADP	IN	_	61	case	61:case	_
-61	Paul	Paul	PROPN	NNP	Number=Sing	59	nmod	59:nmod:of	Entity=(person-99
+61	Paul	Paul	PROPN	NNP	Number=Sing	59	nmod	59:nmod:of	Entity=(person-99|XML=<ref target:::"https://en.wikipedia.org/wiki/Paul_Bayning,_1st_Viscount_Bayning">
 62	Bayning	Bayning	PROPN	NNP	Number=Sing	61	flat	61:flat	Entity=person-99)person-99)person-99)|SpaceAfter=No
 63	,	,	PUNCT	,	_	66	punct	66:punct	_
 64	1st	1st	ADJ	JJ	Degree=Pos|NumType=Ord	66	amod	66:amod	_
 65	Viscount	Viscount	PROPN	NNP	Number=Sing	66	compound	66:compound	Entity=(person-100)
-66	Bayning	Bayning	PROPN	NNP	Number=Sing	61	appos	61:appos	SpaceAfter=No
+66	Bayning	Bayning	PROPN	NNP	Number=Sing	61	appos	61:appos	SpaceAfter=No|XML=</ref>
 67	,	,	PUNCT	,	_	69	punct	69:punct	_
 68	and	and	CCONJ	CC	_	69	cc	69:cc	Discourse=joint:50->43
 69	left	leave	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	50	conj	50:conj:and	_
@@ -617,7 +635,7 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	knighted	knight	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	1642	1642	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-104)|SpaceAfter=No
+5	1642	1642	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-104)|SpaceAfter=No|XML=<date when:::"1642"></date>
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	and	and	CCONJ	CC	_	8	cc	8:cc	Discourse=joint:56->43
 8	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
@@ -644,21 +662,21 @@
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(person-107
 6	governorship	governorship	NOUN	NN	Number=Sing	3	obl	3:obl:from	_
 7	of	of	ADP	IN	_	9	case	9:case	_
-8	Chirk	Chirk	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(place-108(person-109)
-9	Castle	Castle	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=person-107)place-108)|SpaceAfter=No
+8	Chirk	Chirk	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(place-108(person-109)|XML=<ref target:::"https://en.wikipedia.org/wiki/Chirk_Castle">
+9	Castle	Castle	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=person-107)place-108)|SpaceAfter=No|XML=</ref>
 10	,	,	PUNCT	,	_	3	punct	3:punct	_
 11	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	12	nsubj	12:nsubj	Discourse=elaboration:59->58|Entity=(person-107)
 12	attached	attach	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 13	himself	himself	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs|Reflex=Yes	12	obj	12:obj	Entity=(person-107)
 14	to	to	ADP	IN	_	15	case	15:case	_
-15	Arthur	Arthur	PROPN	NNP	Number=Sing	12	obl	12:obl:to	Entity=(person-110
+15	Arthur	Arthur	PROPN	NNP	Number=Sing	12	obl	12:obl:to	Entity=(person-110|XML=<ref target:::"https://en.wikipedia.org/wiki/Arthur_Capell,_1st_Baron_Capell_of_Hadham">
 16	Capell	Capell	PROPN	NNP	Number=Sing	15	flat	15:flat	Entity=person-110)|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	1st	1st	ADJ	JJ	Degree=Pos|NumType=Ord	19	amod	19:amod	Entity=(person-110
 19	Baron	Baron	PROPN	NNP	Number=Sing	15	appos	15:appos	_
 20	Capell	Capell	PROPN	NNP	Number=Sing	15	appos	15:appos	_
 21	of	of	ADP	IN	_	22	case	22:case	_
-22	Hadham	Hadham	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=person-110)(place-111)|SpaceAfter=No
+22	Hadham	Hadham	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=person-110)(place-111)|SpaceAfter=No|XML=</ref>
 23	,	,	PUNCT	,	_	26	punct	26:punct	_
 24	and	and	CCONJ	CC	_	26	cc	26:cc	Discourse=joint:60->59
 25	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	26	cop	26:cop	_
@@ -667,11 +685,11 @@
 28	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(person-113
 29	defenders	defender	NOUN	NNS	Number=Plur	26	nmod	26:nmod:of	_
 30	of	of	ADP	IN	_	32	case	32:case	_
-31	Colchester	Colchester	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(place-108(place-114)
-32	Castle	Castle	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	Entity=person-112)person-113)place-108)
+31	Colchester	Colchester	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(place-108(place-114)|XML=<ref target:::"https://en.wikipedia.org/wiki/Colchester_Castle">
+32	Castle	Castle	PROPN	NNP	Number=Sing	29	nmod	29:nmod:of	Entity=person-112)person-113)place-108)|XML=</ref>
 33	(	(	PUNCT	-LRB-	_	34	punct	34:punct	Discourse=elaboration:61->60|SpaceAfter=No
-34	August	August	PROPN	NNP	Number=Sing	26	dep	26:dep	_
-35	1648	1648	NUM	CD	NumForm=Digit|NumType=Card	34	nmod:tmod	34:nmod:tmod	Entity=(time-115)|SpaceAfter=No
+34	August	August	PROPN	NNP	Number=Sing	26	dep	26:dep	XML=<date when:::"1648-08">
+35	1648	1648	NUM	CD	NumForm=Digit|NumType=Card	34	nmod:tmod	34:nmod:tmod	Entity=(time-115)|SpaceAfter=No|XML=</date>
 36	)	)	PUNCT	-RRB-	_	34	punct	34:punct	SpaceAfter=No
 37	.	.	PUNCT	.	_	12	punct	12:punct	_
 
@@ -692,7 +710,7 @@
 12	discharged	discharge	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	conj	2:conj:and	_
 13	on	on	ADP	IN	_	14	case	14:case	_
 14	11May	11May	PROPN	NNP	Number=Sing	12	obl	12:obl:on	Entity=(time-117
-15	1649	1649	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=time-117)(time-118)|SpaceAfter=No
+15	1649	1649	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=time-117)(time-118)|SpaceAfter=No|XML=<date when:::"1649"></date>
 16	;	;	PUNCT	:	_	21	punct	21:punct	_
 17	however	however	ADV	RB	_	21	advmod	21:advmod	Discourse=joint:65->63|SpaceAfter=No
 18	,	,	PUNCT	,	_	17	punct	17:punct	_
@@ -718,7 +736,7 @@
 # text = After the Restoration he was made receiver for Essex and Hertfordshire.
 1	After	after	ADP	IN	_	3	case	3:case	Discourse=sequence:66->65
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(event-121
-3	Restoration	restoration	NOUN	NN	Number=Sing	6	obl	6:obl:after	Entity=event-121)
+3	Restoration	restoration	NOUN	NN	Number=Sing	6	obl	6:obl:after	Entity=event-121)|XML=<ref target:::"https://en.wikipedia.org/wiki/Restoration_(1660)"></ref>
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass|7:nsubj:xsubj	Entity=(person-107)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	made	make	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -735,7 +753,7 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	2	nsubj	2:nsubj|8:nsubj:pass	Discourse=sequence:67->66|Entity=(person-107)
 2	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	about	about	ADP	IN	_	4	case	4:case	_
-4	1680	1680	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:about	Entity=(time-122)|SpaceAfter=No
+4	1680	1680	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:about	Entity=(time-122)|SpaceAfter=No|XML=<date when:::"1680"></date>
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	and	and	CCONJ	CC	_	8	cc	8:cc	Discourse=joint:68->67
 7	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_

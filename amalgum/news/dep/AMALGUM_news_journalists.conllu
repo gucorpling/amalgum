@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_journalists
+# meta::title = Two Syrian journalists killed around New Year's Day
+# meta::shortTitle = journalists
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2012-01-03
+# meta::dateModified = 2016-04-02
+# meta::sourceURL = https://en.wikinews.org/wiki/Two_Syrian_journalists_killed_around_New_Year%27s_Day
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_journalists
 # sent_id = AMALGUM_news_journalists-1
 # s_type = frag
 # text = Two Syrian journalists killed around New Year's Day
+# newpar = head (1 s)
 1	Two	2	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	Discourse=preparation:1->3|Entity=(person-1
 2	Syrian	Syrian	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	journalists	journalist	NOUN	NNS	Number=Plur	0	root	0:root	_
@@ -16,16 +27,18 @@
 # sent_id = AMALGUM_news_journalists-2
 # s_type = frag
 # text = Tuesday, January 3, 2012
-1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No
+# newpar = p (1 s)
+1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
+3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4|XML=<date when:::"2012-01-03">
 4	3	3	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
+6	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_journalists-3
 # s_type = decl
 # text = The last two journalists reported killed at the turn of the year were Syrians; just at a time when protests and violence in the country are escalating, and the Arab League begins its initial assessment of the situation.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=ROOT:3|Entity=(person-1
 2	last	last	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	two	2	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	_
@@ -39,14 +52,14 @@
 11	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(time-3
 12	year	year	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	Entity=time-6)time-3)
 13	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	Discourse=same_unit:5->3
-14	Syrians	Syrian	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(person-1)|SpaceAfter=No
+14	Syrians	Syrian	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(person-1)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Syria"></ref>
 15	;	;	PUNCT	:	_	19	punct	19:punct	_
 16	just	just	ADV	RB	_	19	advmod	19:advmod	Discourse=joint:6->3|Entity=(time-7
 17	at	at	ADP	IN	_	19	case	19:case	_
 18	a	a	DET	DT	Definite=Ind|PronType=Art	19	det	19:det	_
 19	time	time	NOUN	NN	Number=Sing	14	obl	14:obl:at	_
 20	when	when	SCONJ	WRB	PronType=Int	28	mark	28:mark	Discourse=circumstance:7->6
-21	protests	protest	NOUN	NNS	Number=Plur	28	nsubj	28:nsubj	Entity=(event-8)
+21	protests	protest	NOUN	NNS	Number=Plur	28	nsubj	28:nsubj	Entity=(event-8)|XML=<ref target:::"https://en.wikinews.org/wiki/2011 &#8211; 2012_Syrian_uprising"></ref>
 22	and	and	CCONJ	CC	_	23	cc	23:cc	_
 23	violence	violence	NOUN	NN	Number=Sing	21	conj	21:conj:and|28:nsubj	Entity=(abstract-9
 24	in	in	ADP	IN	_	26	case	26:case	_
@@ -57,8 +70,8 @@
 29	,	,	PUNCT	,	_	34	punct	34:punct	_
 30	and	and	CCONJ	CC	_	34	cc	34:cc	Discourse=joint:8->6
 31	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Entity=(organization-11
-32	Arab	Arab	ADJ	NNP	Number=Sing	33	amod	33:amod	_
-33	League	League	PROPN	NNP	Number=Sing	34	nsubj	34:nsubj	Entity=organization-11)
+32	Arab	Arab	ADJ	NNP	Number=Sing	33	amod	33:amod	XML=<ref target:::"https://en.wikinews.org/wiki/Arab_League">
+33	League	League	PROPN	NNP	Number=Sing	34	nsubj	34:nsubj	Entity=organization-11)|XML=</ref>
 34	begins	begin	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	28	conj	19:acl:when|28:conj:and	_
 35	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	37	nmod:poss	37:nmod:poss	Entity=(abstract-12(organization-11)
 36	initial	initial	ADJ	JJ	Degree=Pos	37	amod	37:amod	_
@@ -71,10 +84,11 @@
 # sent_id = AMALGUM_news_journalists-4
 # s_type = decl
 # text = Shot on December 30, and the first journalist to die in 2012, was veteran journalist Shukri Ratib Abu Burghol.
+# newpar = p (3 s)
 1	Shot	shot	VERB	VBN	Tense=Past|VerbForm=Part	17	acl	17:acl	Discourse=elaboration:9->6|Entity=(person-14
 2	on	on	ADP	IN	_	4	case	4:case	_
-3	December	December	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-15(time-16)
-4	30	30	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	Entity=time-15)|SpaceAfter=No
+3	December	December	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-15(time-16)|XML=<date when:::"2012-12-30">
+4	30	30	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:on	Entity=time-15)|SpaceAfter=No|XML=</date>
 5	,	,	PUNCT	,	_	1	punct	1:punct	_
 6	and	and	CCONJ	CC	_	17	cc	17:cc	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(person-14
@@ -83,7 +97,7 @@
 10	to	to	PART	TO	_	11	mark	11:mark	Discourse=elaboration:10->9
 11	die	die	VERB	VB	VerbForm=Inf	9	acl	9:acl:to	_
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	Entity=person-14)(time-5)|SpaceAfter=No
+13	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	Entity=person-14)(time-5)|SpaceAfter=No|XML=<date when:::"2012"></date>
 14	,	,	PUNCT	,	_	9	punct	9:punct	_
 15	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	Discourse=preparation:11->12
 16	veteran	veteran	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
@@ -115,7 +129,7 @@
 16	radio	radio	NOUN	NN	Number=Sing	17	compound	17:compound	Entity=(organization-20)
 17	station	station	NOUN	NN	Number=Sing	10	obl	10:obl:at	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	Darayya	Darayya	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	Entity=(place-21)|SpaceAfter=No
+19	Darayya	Darayya	PROPN	NNP	Number=Sing	17	nmod	17:nmod:in	Entity=(place-21)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Darayya"></ref>
 20	,	,	PUNCT	,	_	24	punct	24:punct	_
 21	on	on	ADP	IN	_	24	case	24:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(place-22
@@ -125,7 +139,7 @@
 26	the	the	DET	DT	Definite=Def|PronType=Art	29	det	29:det	Entity=(place-23
 27	capital	capital	NOUN	NN	Number=Sing	28	compound	28:compound	Entity=(place-24(place-25)
 28	city	city	NOUN	NN	Number=Sing	29	compound	29:compound	Entity=place-24)
-29	Damascus	Damascus	PROPN	NNP	Number=Sing	24	nmod	24:nmod:of	Entity=organization-19)place-22)place-23)|SpaceAfter=No
+29	Damascus	Damascus	PROPN	NNP	Number=Sing	24	nmod	24:nmod:of	Entity=organization-19)place-22)place-23)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Damascus"></ref>
 30	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_journalists-6
@@ -133,9 +147,9 @@
 # text = According to Reporters Without Borders, he died three days after the shooting at Al Mouwsat Hospital.
 1	According	accord	VERB	VBG	VerbForm=Ger	3	case	3:case	Discourse=attribution:14->15
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
-3	Reporters	Reporter	PROPN	NNP	Number=Sing	8	obl	8:obl:according_to	Entity=(person-26
+3	Reporters	Reporter	PROPN	NNP	Number=Sing	8	obl	8:obl:according_to	Entity=(person-26|XML=<ref target:::"https://en.wikinews.org/wiki/Reporters_Without_Borders">
 4	Without	without	ADP	IN	_	5	case	5:case	_
-5	Borders	Borders	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:without	Entity=person-26)(person-27)|SpaceAfter=No
+5	Borders	Borders	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:without	Entity=person-26)(person-27)|SpaceAfter=No|XML=</ref>
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj	Discourse=joint:15->12|Entity=(person-14)
 8	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -153,6 +167,8 @@
 # sent_id = AMALGUM_news_journalists-7
 # s_type = decl
 # text = The Syrian uprising began 11 months ago with a "Day of Rage" on February 3, last year.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:16->12|Entity=(event-31
 2	Syrian	Syrian	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	uprising	uprising	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=event-31)
@@ -168,11 +184,11 @@
 13	Rage	Rage	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=(person-33)|SpaceAfter=No
 14	"	''	PUNCT	''	_	11	punct	11:punct	Entity=time-2)
 15	on	on	ADP	IN	_	17	case	17:case	_
-16	February	February	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(time-4(time-34)
-17	3	3	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:on	SpaceAfter=No
+16	February	February	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(time-4(time-34)|XML=<date when:::"2011-02-03">
+17	3	3	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:on	SpaceAfter=No|XML=</date>
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
-19	last	last	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(time-3
-20	year	year	NOUN	NN	Number=Sing	17	nmod:tmod	17:nmod:tmod	Entity=time-4)time-3)|SpaceAfter=No
+19	last	last	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(time-3|XML=<date when:::"2011">
+20	year	year	NOUN	NN	Number=Sing	17	nmod:tmod	17:nmod:tmod	Entity=time-4)time-3)|SpaceAfter=No|XML=</date>
 21	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_news_journalists-8
@@ -196,6 +212,7 @@
 # sent_id = AMALGUM_news_journalists-9
 # s_type = decl
 # text = Burghol, 56, was a journalist for about 21 years, working for the newspaper Al-Thawra (The Revolution) whilst also hosting a weekly show for Radio Damascus.
+# newpar = p (3 s)
 1	Burghol	Burghol	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Discourse=joint:18->12|Entity=(person-37|SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
 3	56	56	NUM	CD	NumForm=Digit|NumType=Card	1	nmod:tmod	1:nmod:tmod	Entity=person-37)(abstract-38)|SpaceAfter=No
@@ -212,10 +229,10 @@
 14	for	for	ADP	IN	_	16	case	16:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(organization-40(organization-41
 16	newspaper	newspaper	NOUN	NN	Number=Sing	13	obl	13:obl:for	Entity=organization-41)
-17	Al-Thawra	Al-Thawra	PROPN	NNP	Number=Sing	16	appos	16:appos	Entity=person-37)organization-40)
+17	Al-Thawra	Al-Thawra	PROPN	NNP	Number=Sing	16	appos	16:appos	Entity=person-37)organization-40)|XML=<hi rend:::"italic"></hi>
 18	(	(	PUNCT	-LRB-	_	20	punct	20:punct	Discourse=elaboration:20->19|SpaceAfter=No
-19	The	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(organization-40
-20	Revolution	Revolution	PROPN	NNP	Number=Sing	17	appos	17:appos	Entity=organization-40)|SpaceAfter=No
+19	The	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(organization-40|XML=<hi rend:::"italic">
+20	Revolution	Revolution	PROPN	NNP	Number=Sing	17	appos	17:appos	Entity=organization-40)|SpaceAfter=No|XML=</hi>
 21	)	)	PUNCT	-RRB-	_	20	punct	20:punct	_
 22	whilst	whilst	SCONJ	IN	_	24	mark	24:mark	Discourse=circumstance:21->20
 23	also	also	ADV	RB	_	24	advmod	24:advmod	_
@@ -251,6 +268,7 @@
 # sent_id = AMALGUM_news_journalists-12
 # s_type = decl
 # text = Basil Al-Sayed became the last journalist to die in 2011, shot on December 29 by a sniper in the city of Homs.
+# newpar = p (5 s)
 1	Basil	Basil	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj|6:nsubj:xsubj	Discourse=joint:24->12|Entity=(person-46
 2	Al-Sayed	Al-Sayed	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-46)
 3	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -260,12 +278,12 @@
 7	to	to	PART	TO	_	8	mark	8:mark	Discourse=purpose:25->24
 8	die	die	VERB	VB	VerbForm=Inf	6	acl	6:acl:to	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-47)|SpaceAfter=No
+10	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-47)|SpaceAfter=No|XML=<date when:::"2011"></date>
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	shot	shoot	VERB	VBN	Tense=Past|VerbForm=Part	3	advcl	3:advcl	Discourse=elaboration:26->25
 13	on	on	ADP	IN	_	15	case	15:case	_
-14	December	December	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(time-48(time-16)
-15	29	29	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:on	Entity=time-48)
+14	December	December	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(time-48(time-16)|XML=<date when:::"2012-12-29">
+15	29	29	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:on	Entity=time-48)|XML=</date>
 16	by	by	ADP	IN	_	18	case	18:case	_
 17	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(person-49
 18	sniper	sniper	NOUN	NN	Number=Sing	12	obl	12:obl:by	Entity=person-49)
@@ -273,7 +291,7 @@
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(place-24
 21	city	city	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
 22	of	of	ADP	IN	_	23	case	23:case	_
-23	Homs	Hom	PROPN	NNP	Number=Sing	21	nmod	21:nmod:of	Entity=place-24)(place-50)|SpaceAfter=No
+23	Homs	Hom	PROPN	NNP	Number=Sing	21	nmod	21:nmod:of	Entity=place-24)(place-50)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Homs"></ref>
 24	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_journalists-13
@@ -297,7 +315,7 @@
 16	protesters	protester	NOUN	NNS	Number=Plur	13	obl	13:obl:against	Entity=(person-53
 17	elsewhere	elsewhere	ADV	RB	Degree=Pos	16	advmod	16:advmod	Entity=person-53)
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	Daraa	Daraa	PROPN	NNP	Number=Sing	12	obl	12:obl:in	Entity=(place-54)|SpaceAfter=No
+19	Daraa	Daraa	PROPN	NNP	Number=Sing	12	obl	12:obl:in	Entity=(place-54)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Daraa"></ref>
 20	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_journalists-14
@@ -328,18 +346,18 @@
 5	one	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Entity=(place-57
 6	of	of	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(place-58
-8	hot	hot	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
-9	spots	spot	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	_
+8	hot	hot	ADJ	JJ	Degree=Pos	9	amod	9:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Siege%20of%20Homs">
+9	spots	spot	NOUN	NNS	Number=Plur	5	nmod	5:nmod:of	XML=</ref>
 10	for	for	ADP	IN	_	11	case	11:case	_
 11	protests	protest	NOUN	NNS	Number=Plur	9	nmod	9:nmod:for	Entity=(event-8
 12	against	against	ADP	IN	_	16	case	16:case	_
-13	Bashar	Bashar	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(organization-51(person-59
+13	Bashar	Bashar	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(organization-51(person-59|XML=<ref target:::"https://en.wikinews.org/wiki/Bashar_al-Assad">
 14-15	al-Assad's	_	_	_	_	_	_	_	_
-14	al-Assad	al-Assad	PROPN	NNP	Number=Sing	13	flat	13:flat	_
+14	al-Assad	al-Assad	PROPN	NNP	Number=Sing	13	flat	13:flat	XML=</ref>
 15	's	's	PART	POS	_	13	case	13:case	Entity=person-59)
 16	government	government	NOUN	NN	Number=Sing	11	nmod	11:nmod:against	Entity=organization-51)
 17	during	during	ADP	IN	_	18	case	18:case	_
-18	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod:during	Entity=place-57)place-58)event-8)(time-47)|SpaceAfter=No
+18	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	11	nmod	11:nmod:during	Entity=place-57)place-58)event-8)(time-47)|SpaceAfter=No|XML=<date when:::"2011"></date>
 19	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_journalists-16
@@ -358,7 +376,7 @@
 11	Amr	Amr	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=place-56)
 12	neighbourhood	neighbourhood	NOUN	NN	Number=Sing	14	nsubj:pass	14:nsubj:pass|20:nsubj:pass	Entity=place-61)
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	aux:pass	14:aux:pass	_
-14	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
+14	attacked	attack	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	XML=<ref target:::"https://en.wikipedia.org/wiki/Free%20Syrian%20Army"></ref>
 15	by	by	ADP	IN	_	18	case	18:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(organization-62
 17	Syrian	Syrian	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
@@ -372,20 +390,21 @@
 # sent_id = AMALGUM_news_journalists-17
 # s_type = decl
 # text = The 24-year-old camera operator was a citizen journalist who uploaded his videos to video-sharing sites to spread information about the protests.
+# newpar = p (5 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=joint:33->12|Entity=(person-63
 2	24-year-old	24-year-old	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	camera	camera	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(object-64)
 4	operator	operator	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Entity=person-63)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	cop	8:cop	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(person-63
-7	citizen	citizen	NOUN	NN	Number=Sing	8	compound	8:compound	_
-8	journalist	journalist	NOUN	NN	Number=Sing	0	root	0:root|10:nsubj	_
+7	citizen	citizen	NOUN	NN	Number=Sing	8	compound	8:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/Citizen%20journalism">
+8	journalist	journalist	NOUN	NN	Number=Sing	0	root	0:root|10:nsubj	XML=</ref>
 9	who	who	PRON	WP	PronType=Rel	10	nsubj	8:ref	Discourse=elaboration:34->33
 10	uploaded	upload	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
 11	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	12	nmod:poss	12:nmod:poss	Entity=(abstract-65(person-63)
 12	videos	video	NOUN	NNS	Number=Plur	10	obj	10:obj	Entity=abstract-65)
 13	to	to	ADP	IN	_	15	case	15:case	_
-14	video-sharing	video-shar	VERB	VBG	VerbForm=Ger	15	amod	15:amod	Entity=(place-66
+14	video-sharing	video-shar	VERB	VBG	VerbForm=Ger	15	amod	15:amod	Entity=(place-66|XML=<ref target:::"https://en.wikipedia.org/wiki/Video%20hosting%20service"></ref>
 15	sites	site	NOUN	NNS	Number=Plur	10	obl	10:obl:to	Entity=person-63)place-66)
 16	to	to	PART	TO	_	17	mark	17:mark	Discourse=purpose:35->34
 17	spread	spread	VERB	VB	VerbForm=Inf	10	advcl	10:advcl:to	_
@@ -398,10 +417,10 @@
 # sent_id = AMALGUM_news_journalists-18
 # s_type = decl
 # text = Photojournalists and camera operators have been some of the the most at-risk during the Arab uprisings in Tunisia and Libya.
-1	Photojournalists	Photojournalist	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	Discourse=joint:36->12|Entity=(abstract-68)
+1	Photojournalists	Photojournalist	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	Discourse=joint:36->12|Entity=(abstract-68)|XML=<ref target:::"https://en.wikipedia.org/wiki/Photojournalism"></ref>
 2	and	and	CCONJ	CC	_	4	cc	4:cc	_
-3	camera	camera	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(person-69(object-64)
-4	operators	operator	NOUN	NNS	Number=Plur	1	conj	1:conj:and|7:nsubj	Entity=person-69)
+3	camera	camera	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(person-69(object-64)|XML=<ref target:::"https://en.wikipedia.org/wiki/Camera%20operator">
+4	operators	operator	NOUN	NNS	Number=Plur	1	conj	1:conj:and|7:nsubj	Entity=person-69)|XML=</ref>
 5	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	been	be	AUX	VBN	Tense=Past|VerbForm=Part	7	cop	7:cop	_
 7	some	some	PRON	DT	_	0	root	0:root	_
@@ -415,16 +434,16 @@
 15	Arab	Arab	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	uprisings	uprising	NOUN	NNS	Number=Plur	7	nmod	7:nmod:during	_
 17	in	in	ADP	IN	_	18	case	18:case	_
-18	Tunisia	Tunisia	PROPN	NNP	Number=Sing	16	nmod	16:nmod:in	Entity=(place-71)
+18	Tunisia	Tunisia	PROPN	NNP	Number=Sing	16	nmod	16:nmod:in	Entity=(place-71)|XML=<ref target:::"https://en.wikipedia.org/wiki/Tunisian%20revolution"></ref>
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	Libya	Libya	PROPN	NNP	Number=Sing	18	conj	16:nmod:in|18:conj:and	Entity=event-70)(place-72)|SpaceAfter=No
+20	Libya	Libya	PROPN	NNP	Number=Sing	18	conj	16:nmod:in|18:conj:and	Entity=event-70)(place-72)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/2011%20Libyan%20civil%20war"></ref>
 21	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_news_journalists-19
 # s_type = decl
 # text = Ferzat Jarban — the first known journalist to be killed in Syria — was a freelance camera operator, arrested on November 19 whilst filming protests in Al-Qusayr, Homs Governorate.
-1	Ferzat	Ferzat	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Discourse=joint:37->12|Entity=(person-73
-2	Jarban	Jarban	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-73)
+1	Ferzat	Ferzat	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Discourse=joint:37->12|Entity=(person-73|XML=<ref target:::"https://en.wikipedia.org/wiki/Ferzat%20Jarban">
+2	Jarban	Jarban	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-73)|XML=</ref>
 3	—	—	PUNCT	:	_	7	punct	7:punct	Discourse=elaboration:38->37
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(person-73
 5	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	7	amod	7:amod	_
@@ -444,16 +463,16 @@
 19	,	,	PUNCT	,	_	20	punct	20:punct	_
 20	arrested	arrest	VERB	VBN	Tense=Past|VerbForm=Part	18	acl	18:acl	Discourse=elaboration:41->40
 21	on	on	ADP	IN	_	23	case	23:case	_
-22	November	November	PROPN	NNP	Number=Sing	23	compound	23:compound	Entity=(time-75(time-76)
-23	19	19	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:on	Entity=person-73)time-75)
+22	November	November	PROPN	NNP	Number=Sing	23	compound	23:compound	Entity=(time-75(time-76)|XML=<date when:::"2011-11-19">
+23	19	19	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:on	Entity=person-73)time-75)|XML=</date>
 24	whilst	whilst	SCONJ	IN	_	25	mark	25:mark	Discourse=circumstance:42->40
 25	filming	film	VERB	VBG	VerbForm=Ger	20	advcl	20:advcl:whilst	_
 26	protests	protest	NOUN	NNS	Number=Plur	25	obj	25:obj	Entity=(event-8
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	Al-Qusayr	Al-Qusayr	PROPN	NNP	Number=Sing	26	nmod	26:nmod:in	Entity=event-8)(place-77)|SpaceAfter=No
+28	Al-Qusayr	Al-Qusayr	PROPN	NNP	Number=Sing	26	nmod	26:nmod:in	Entity=event-8)(place-77)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Al-Qusayr,%20Syria"></ref>
 29	,	,	PUNCT	,	_	31	punct	31:punct	_
-30	Homs	Hom	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(place-78(place-50)
-31	Governorate	Governorate	PROPN	NNP	Number=Sing	28	appos	28:appos	Entity=place-78)|SpaceAfter=No
+30	Homs	Hom	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(place-78(place-50)|XML=<ref target:::"https://en.wikipedia.org/wiki/Homs%20Governorate">
+31	Governorate	Governorate	PROPN	NNP	Number=Sing	28	appos	28:appos	Entity=place-78)|SpaceAfter=No|XML=</ref>
 32	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = AMALGUM_news_journalists-20
@@ -512,6 +531,7 @@
 # sent_id = AMALGUM_news_journalists-22
 # s_type = decl
 # text = Currently information is hard to verify and reliable independent sources are largely banned or restricted inside Syria.
+# newpar = p (2 s)
 1	Currently	currently	ADV	RB	Degree=Pos	4	advmod	4:advmod	Discourse=joint:47->12
 2	information	information	NOUN	NN	Number=Sing	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=(abstract-67)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
@@ -582,19 +602,20 @@
 # sent_id = AMALGUM_news_journalists-26
 # s_type = imp
 # text = Add or view comments
-1	Add	add	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:54->56
+1	Add	add	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:54->56|XML=<ref target:::"//en.wikinews.org/w/index.php?title:::Comments:Main_Page&amp;action:::edit&amp;preload:::Wikinews:Commentary_pages_on_news_events/body&amp;editintro:::Template:Editintro_comments&amp;summary:::create">
 2	or	or	CCONJ	CC	_	3	cc	3:cc	_
 3	view	view	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	1	conj	1:conj:or	_
-4	comments	comment	NOUN	NNS	Number=Plur	1	obj	1:obj|3:obj	Entity=(abstract-92)
+4	comments	comment	NOUN	NNS	Number=Plur	1	obj	1:obj|3:obj	Entity=(abstract-92)|XML=</ref>
 
 # sent_id = AMALGUM_news_journalists-27
 # s_type = frag
 # text = At the end of 2011
+# newpar = p (2 s)
 1	At	at	ADP	IN	_	3	case	3:case	Discourse=preparation:55->56
-2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(time-93
+2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(time-93|XML=<date when:::"2011">
 3	end	end	NOUN	NN	Number=Sing	0	root	0:root	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	3	nmod	3:nmod:of	Entity=time-93)(time-47)
+5	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	3	nmod	3:nmod:of	Entity=time-93)(time-47)|XML=</date>
 
 # sent_id = AMALGUM_news_journalists-28
 # s_type = decl
@@ -644,20 +665,21 @@
 # sent_id = AMALGUM_news_journalists-29
 # s_type = decl
 # text = According to Navi Pillay, High Commissioner for Human Rights at the United Nations, more than 5,000 people have been killed during the Syrian uprising, a figure that includes around 300 children.
+# newpar = p (1 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	3	case	3:case	Discourse=attribution:61->62
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
-3	Navi	Navi	PROPN	NNP	Number=Sing	22	obl	22:obl:according_to	Entity=(person-103
-4	Pillay	Pillay	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-103)|SpaceAfter=No
+3	Navi	Navi	PROPN	NNP	Number=Sing	22	obl	22:obl:according_to	Entity=(person-103|XML=<ref target:::"https://en.wikipedia.org/wiki/Navi%20Pillay">
+4	Pillay	Pillay	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-103)|SpaceAfter=No|XML=</ref>
 5	,	,	PUNCT	,	_	7	punct	7:punct	_
-6	High	High	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-103
+6	High	High	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-103|XML=<ref target:::"https://en.wikipedia.org/wiki/High%20Commissioner%20for%20Human%20Rights">
 7	Commissioner	Commissioner	PROPN	NNP	Number=Sing	3	appos	3:appos	_
 8	for	for	ADP	IN	_	10	case	10:case	_
 9	Human	Human	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(abstract-85
-10	Rights	Rights	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:for	Entity=abstract-85)
+10	Rights	Rights	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:for	Entity=abstract-85)|XML=</ref>
 11	at	at	ADP	IN	_	14	case	14:case	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(organization-104
-13	United	Unite	VERB	NNP	Number=Sing	14	amod	14:amod	_
-14	Nations	Nation	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:at	Entity=person-103)organization-104)|SpaceAfter=No
+13	United	Unite	VERB	NNP	Number=Sing	14	amod	14:amod	XML=<ref target:::"https://en.wikinews.org/wiki/United_Nations">
+14	Nations	Nation	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:at	Entity=person-103)organization-104)|SpaceAfter=No|XML=</ref>
 15	,	,	PUNCT	,	_	3	punct	3:punct	_
 16	more	more	ADV	RBR	Degree=Cmp	18	advmod	18:advmod	Entity=(person-89
 17	than	than	ADP	IN	_	16	fixed	16:fixed	_
@@ -683,6 +705,7 @@
 # sent_id = AMALGUM_news_journalists-30
 # s_type = decl
 # text = Three journalists are now known to have been killed in Syria.
+# newpar = p (1 s)
 1	Three	3	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:64->56|Entity=(person-108
 2	journalists	journalist	NOUN	NNS	Number=Plur	5	nsubj:pass	5:nsubj:pass|9:nsubj:xsubj	Entity=person-108)
 3	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	aux:pass	5:aux:pass	_
@@ -699,14 +722,15 @@
 # sent_id = AMALGUM_news_journalists-31
 # s_type = decl
 # text = In December, the Committee to Protect Journalists (CPJ) addressed an open letter to Syrian President Al-Assad calling for the release of all journalists in detention;
+# newpar = p (2 s)
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:65->56
-2	December	December	PROPN	NNP	Number=Sing	12	obl	12:obl:in	Entity=(time-16)|SpaceAfter=No
+2	December	December	PROPN	NNP	Number=Sing	12	obl	12:obl:in	Entity=(time-16)|SpaceAfter=No|XML=<date when:::"2012-12"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(organization-109
-5	Committee	Committee	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	_
+5	Committee	Committee	PROPN	NNP	Number=Sing	12	nsubj	12:nsubj	XML=<ref target:::"https://en.wikipedia.org/wiki/Committee%20to%20Protect%20Journalists">
 6	to	to	PART	TO	_	7	mark	7:mark	Discourse=purpose:66->65
 7	Protect	protect	VERB	VB	VerbForm=Inf	5	acl	5:acl:to	_
-8	Journalists	Journalist	PROPN	NNPS	Number=Plur	7	obj	7:obj	Entity=organization-109)(person-108)
+8	Journalists	Journalist	PROPN	NNPS	Number=Plur	7	obj	7:obj	Entity=organization-109)(person-108)|XML=</ref>
 9	(	(	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=restatement:67->65|SpaceAfter=No
 10	CPJ	CPJ	PROPN	NNP	Number=Sing	5	appos	5:appos	Entity=(organization-109)|SpaceAfter=No
 11	)	)	PUNCT	-RRB-	_	10	punct	10:punct	_
@@ -742,12 +766,13 @@
 8	being	be	AUX	VBG	VerbForm=Ger	9	aux:pass	9:aux:pass	Discourse=elaboration:71->70
 9	detained	detain	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl	7:acl	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=event-114)person-108)(time-47)|SpaceAfter=No
+11	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	9	obl	9:obl:in	Entity=event-114)person-108)(time-47)|SpaceAfter=No|XML=<date when:::"2011"></date>
 12	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_journalists-33
 # s_type = decl
 # text = The CPJ reported that 45 journalists were killed worldwide in 2011, whereas — using differing criteria — Reporters Without Borders state that 66 journalists around the world died in 2011, and assert that, by almost every indicator, violence and censorship against international journalists was worse in 2011, up 16% on their 2010 figures.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:72->73|Entity=(organization-109
 2	CPJ	CPJ	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-109)
 3	reported	report	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -758,7 +783,7 @@
 8	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	ccomp	3:ccomp	_
 9	worldwide	worldwide	ADV	RB	Degree=Pos	8	advmod	8:advmod	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-47)|SpaceAfter=No
+11	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-47)|SpaceAfter=No|XML=<date when:::"2011"></date>
 12	,	,	PUNCT	,	_	22	punct	22:punct	_
 13	whereas	whereas	SCONJ	IN	_	22	mark	22:mark	Discourse=manner:74->73
 14	—	—	PUNCT	:	_	13	punct	13:punct	Discourse=joint:75->74
@@ -821,7 +846,7 @@
 # s_type = imp
 # text = See Syrian citizen journalists risk death, targetted; city of Homs facing starvation
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:83->84
-2	Syrian	Syrian	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(person-115
+2	Syrian	Syrian	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(person-115|XML=<ref target:::"https://en.wikinews.org/wiki/Syrian_citizen_journalists_risk_death,_targetted;_city_of_Homs_facing_starvation">
 3	citizen	citizen	NOUN	NN	Number=Sing	4	compound	4:compound	_
 4	journalists	journalist	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj|13:nsubj	Entity=person-115)
 5	risk	risk	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	ccomp	1:ccomp	_
@@ -833,5 +858,5 @@
 11	of	of	ADP	IN	_	12	case	12:case	_
 12	Homs	Hom	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=place-126)(place-50)
 13	facing	face	VERB	VBG	VerbForm=Ger	5	conj	1:ccomp|5:conj	_
-14	starvation	starvation	NOUN	NN	Number=Sing	13	obj	13:obj	Entity=(abstract-127)
+14	starvation	starvation	NOUN	NN	Number=Sing	13	obj	13:obj	Entity=(abstract-127)|XML=</ref>
 

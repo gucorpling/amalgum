@@ -1,29 +1,42 @@
+# meta::id = AMALGUM_voyage_benguela
+# meta::title = Benguela
+# meta::shortTitle = benguela
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=3403
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_benguela
 # sent_id = AMALGUM_voyage_benguela-1
 # s_type = frag
 # text = Benguela
+# newpar = head (1 s)
 1	Benguela	Benguela	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=ROOT:1|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_benguela-2
 # s_type = decl
 # text = Benguela is a city in Central Angola.
-1	Benguela	Benguela	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=elaboration:2->1|Entity=(place-1)
+# newpar = p (1 s)
+1	Benguela	Benguela	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=elaboration:2->1|Entity=(place-1)|XML=<hi rend:::"bold"></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(place-1
 4	city	city	NOUN	NN	Number=Sing	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
-6	Central	Central	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-2(place-3)
-7	Angola	Angola	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Entity=place-1)place-2)|SpaceAfter=No
+6	Central	Central	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-2(place-3)|XML=<ref target:::"Central%20Angola">
+7	Angola	Angola	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Entity=place-1)place-2)|SpaceAfter=No|XML=</ref>
 8	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-3
 # s_type = imp
 # text = Understand
+# newpar = head (1 s)
 1	Understand	understand	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:3->4
 
 # sent_id = AMALGUM_voyage_benguela-4
 # s_type = frag
 # text = Founded by Portuguese general Manuel Cerveira Pereira in 1617.
+# newpar = p (2 s)
 1	Founded	found	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Discourse=elaboration:4->1
 2	by	by	ADP	IN	_	4	case	4:case	_
 3	Portuguese	Portuguese	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=(event-4(person-5
@@ -32,7 +45,7 @@
 6	Cerveira	Cerveira	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=event-4)
 7	Pereira	Pereira	PROPN	NNP	Number=Sing	4	appos	4:appos	_
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	1617	1617	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-6)|SpaceAfter=No
+9	1617	1617	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:in	Entity=(time-6)|SpaceAfter=No|XML=<date when:::"1617"></date>
 10	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-5
@@ -56,14 +69,17 @@
 # sent_id = AMALGUM_voyage_benguela-6
 # s_type = frag
 # text = By plane
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:6->7
 2	plane	plane	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-11)
 
 # sent_id = AMALGUM_voyage_benguela-7
 # s_type = frag
 # text = Benguela Airport ( BUG Aeroporto de Benguela - 17 de Setembro ).
-1	Benguela	Benguela	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:7->5|Entity=(place-12(place-1)
-2	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-12)
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (2 s)
+1	Benguela	Benguela	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:7->5|Entity=(place-12(place-1)|XML=<hi rend:::"bold">
+2	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-12)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=elaboration:8->7
 4	BUG	BUG	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(place-13
 5	Aeroporto	Aeroporto	PROPN	NNP	Number=Sing	4	flat	4:flat	_
@@ -101,8 +117,9 @@
 # sent_id = AMALGUM_voyage_benguela-9
 # s_type = frag
 # text = Catumbela Airport ( CBT ) (to the north right between Benguela and Lobito.
-1	Catumbela	Catumbela	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:11->9|Entity=(place-17(place-18)
-2	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-17)
+# newpar = item (1 s)
+1	Catumbela	Catumbela	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:11->9|Entity=(place-17(place-18)|XML=<hi rend:::"bold">
+2	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-17)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:12->11
 4	CBT	CBT	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(place-19)
 5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
@@ -114,12 +131,13 @@
 11	between	between	ADP	IN	_	12	case	12:case	_
 12	Benguela	Benguela	PROPN	NNP	Number=Sing	9	nmod	9:nmod:between	Entity=(place-1)
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Lobito	Lobito	PROPN	NNP	Number=Sing	12	conj	9:nmod:between|12:conj:and	Entity=(place-20)|SpaceAfter=No
+14	Lobito	Lobito	PROPN	NNP	Number=Sing	12	conj	9:nmod:between|12:conj:and	Entity=(place-20)|SpaceAfter=No|XML=<ref target:::"Lobito"></ref>
 15	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-10
 # s_type = frag
 # text = ).
+# newpar = p (2 s)
 1	)	)	PUNCT	-RRB-	_	0	root	0:root	Discourse=joint:14->13|SpaceAfter=No
 2	.	.	PUNCT	.	_	0	root	0:root	_
 
@@ -130,20 +148,22 @@
 2	regular	regular	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(abstract-21
 3	service	service	NOUN	NN	Number=Sing	0	root	0:root	_
 4	from	from	ADP	IN	_	5	case	5:case	_
-5	Luanda	Luanda	PROPN	NNP	Number=Sing	3	nmod	3:nmod:from	Entity=(place-22)
+5	Luanda	Luanda	PROPN	NNP	Number=Sing	3	nmod	3:nmod:from	Entity=(place-22)|XML=<ref target:::"Luanda"></ref>
 6	and	and	CCONJ	CC	_	7	cc	7:cc	_
-7	Lubango	Lubango	PROPN	NNP	Number=Sing	5	conj	3:nmod:from|5:conj:and	Entity=abstract-21)(place-23)|SpaceAfter=No
+7	Lubango	Lubango	PROPN	NNP	Number=Sing	5	conj	3:nmod:from|5:conj:and	Entity=abstract-21)(place-23)|SpaceAfter=No|XML=<ref target:::"Lubango"></ref>
 8	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-12
 # s_type = frag
 # text = By car
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:16->17
 2	car	car	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-24)
 
 # sent_id = AMALGUM_voyage_benguela-13
 # s_type = decl
 # text = By road, it is about an seven-hour drive from Luanda, once you clear Luanda's traffic.
+# newpar = p (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=joint:17->15
 2	road	road	NOUN	NN	Number=Sing	9	nmod	9:nmod:by	Entity=(place-25)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
@@ -154,7 +174,7 @@
 8	seven-hour	seven-hour	NOUN	NN	Number=Sing	9	compound	9:compound	_
 9	drive	drive	NOUN	NN	Number=Sing	0	root	0:root	_
 10	from	from	ADP	IN	_	11	case	11:case	_
-11	Luanda	Luanda	PROPN	NNP	Number=Sing	9	nmod	9:nmod:from	Entity=(place-22)|SpaceAfter=No
+11	Luanda	Luanda	PROPN	NNP	Number=Sing	9	nmod	9:nmod:from	Entity=(place-22)|SpaceAfter=No|XML=<ref target:::"Luanda"></ref>
 12	,	,	PUNCT	,	_	15	punct	15:punct	_
 13	once	once	SCONJ	IN	_	15	mark	15:mark	Discourse=circumstance:18->17
 14	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	15	nsubj	15:nsubj	Entity=(person-26)
@@ -168,12 +188,14 @@
 # sent_id = AMALGUM_voyage_benguela-14
 # s_type = frag
 # text = By train
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:19->21
 2	train	train	NOUN	NN	Number=Sing	0	root	0:root	Entity=(place-28)
 
 # sent_id = AMALGUM_voyage_benguela-15
 # s_type = decl
 # text = Travelling by rail is once again an option, but trains are infrequent and slow.
+# newpar = p (3 s)
 1	Travelling	travel	VERB	VBG	VerbForm=Ger	8	csubj	8:csubj	Discourse=concession:20->21
 2	by	by	ADP	IN	_	3	case	3:case	_
 3	rail	rail	NOUN	NN	Number=Sing	1	obl	1:obl:by	Entity=(object-29)
@@ -211,22 +233,22 @@
 15	overnight	overnight	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	train	train	NOUN	NN	Number=Sing	6	conj	2:nsubj|6:conj:and	_
 17	from	from	ADP	IN	_	18	case	18:case	_
-18	Huambo	Huambo	PROPN	NNP	Number=Sing	16	nmod	16:nmod:from	Entity=(place-33)|SpaceAfter=No
+18	Huambo	Huambo	PROPN	NNP	Number=Sing	16	nmod	16:nmod:from	Entity=(place-33)|SpaceAfter=No|XML=<ref target:::"Huambo"></ref>
 19	,	,	PUNCT	,	_	21	punct	21:punct	_
 20	with	with	ADP	IN	_	21	case	21:case	_
 21	connections	connection	NOUN	NNS	Number=Plur	6	nmod	6:nmod:with	Entity=(abstract-34
 22	from	from	ADP	IN	_	23	case	23:case	_
-23	Luao	Luao	PROPN	NNP	Number=Sing	21	nmod	21:nmod:from	Entity=(place-35
+23	Luao	Luao	PROPN	NNP	Number=Sing	21	nmod	21:nmod:from	Entity=(place-35|XML=<ref target:::"Luao"></ref>
 24	next	next	ADV	RB	Degree=Pos	23	amod	23:amod	Entity=place-28)abstract-34)place-35)
 25	to	to	ADP	IN	_	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(place-36
 27	border	border	NOUN	NN	Number=Sing	24	obl	24:obl:to	_
 28	with	with	ADP	IN	_	31	case	31:case	_
 29	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(place-37
-30	Democratic	Democratic	PROPN	NNP	Number=Sing	31	compound	31:compound	_
+30	Democratic	Democratic	PROPN	NNP	Number=Sing	31	compound	31:compound	XML=<ref target:::"Democratic%20Republic%20of%20Congo">
 31	Republic	Republic	PROPN	NNP	Number=Sing	27	nmod	27:nmod:with	_
 32	of	of	ADP	IN	_	33	case	33:case	_
-33	Congo	Congo	PROPN	NNP	Number=Sing	31	nmod	31:nmod:of	Entity=place-36)place-37)|SpaceAfter=No
+33	Congo	Congo	PROPN	NNP	Number=Sing	31	nmod	31:nmod:of	Entity=place-36)place-37)|SpaceAfter=No|XML=</ref>
 34	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-17
@@ -244,11 +266,13 @@
 # sent_id = AMALGUM_voyage_benguela-18
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:24->25
 
 # sent_id = AMALGUM_voyage_benguela-19
 # s_type = decl
 # text = There are some pretty colonial buildings in Benguela.
+# newpar = p (2 s)
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:25->22
 2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	some	some	DET	DT	_	6	det	6:det	Entity=(place-39
@@ -274,11 +298,13 @@
 # sent_id = AMALGUM_voyage_benguela-21
 # s_type = frag
 # text = Beaches
+# newpar = head (1 s)
 1	Beaches	beach	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=preparation:27->28|Entity=(place-41)
 
 # sent_id = AMALGUM_voyage_benguela-22
 # s_type = decl
 # text = There are several beautiful beaches around Benguela, including one right in the city center!
+# newpar = p (6 s)
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:28->25
 2	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	several	several	ADJ	JJ	Degree=Pos	5	amod	5:amod	Entity=(place-41
@@ -309,7 +335,7 @@
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	11	cop	11:cop	_
 10	in	in	ADP	IN	_	11	case	11:case	_
-11	Lobito	Lobito	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(place-20)|SpaceAfter=No
+11	Lobito	Lobito	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(place-20)|SpaceAfter=No|XML=<ref target:::"Lobito"></ref>
 12	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-24
@@ -403,8 +429,10 @@
 # sent_id = AMALGUM_voyage_benguela-28
 # s_type = frag
 # text = Baia Azul (Baia Farta).
-1	Baia	Baia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:38->37|Entity=(person-57
-2	Azul	Azul	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-57)
+# newpar = list type:::"unordered" (13 s)
+# newpar1 = item (6 s)
+1	Baia	Baia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:38->37|Entity=(person-57|XML=<hi rend:::"bold">
+2	Azul	Azul	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-57)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:39->38|SpaceAfter=No
 4	Baia	Baia	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-57
 5	Farta	Farta	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-57)|SpaceAfter=No
@@ -504,8 +532,9 @@
 # sent_id = AMALGUM_voyage_benguela-34
 # s_type = frag
 # text = Caotinha Beach.
-1	Caotinha	Caotinha	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:48->46|Entity=(person-65
-2	Beach	Beach	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-65)|SpaceAfter=No
+# newpar = item (3 s)
+1	Caotinha	Caotinha	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:48->46|Entity=(person-65|XML=<hi rend:::"bold">
+2	Beach	Beach	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-65)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-35
@@ -548,8 +577,9 @@
 # sent_id = AMALGUM_voyage_benguela-37
 # s_type = frag
 # text = Praia Morena.
-1	Praia	Praia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:52->51|Entity=(place-67
-2	Morena	Morena	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-67)|SpaceAfter=No
+# newpar = item (4 s)
+1	Praia	Praia	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:52->51|Entity=(place-67|XML=<hi rend:::"bold">
+2	Morena	Morena	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-67)|SpaceAfter=No|XML=</hi>
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_benguela-38
@@ -622,14 +652,17 @@
 # sent_id = AMALGUM_voyage_benguela-41
 # s_type = frag
 # text = Sleep
+# newpar = head (1 s)
 1	Sleep	sleep	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:58->59|Entity=(person-71)
 
 # sent_id = AMALGUM_voyage_benguela-42
 # s_type = frag
 # text = Praia Morena Hotel, R. José Estevan, 25, ☏ +244916076902 .
-1	Praia	Praia	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:59->57|Entity=(place-44(place-67
+# newpar = list type:::"unordered" (1 s)
+# newpar1 = item (1 s)
+1	Praia	Praia	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:59->57|Entity=(place-44(place-67|XML=<hi rend:::"bold">
 2	Morena	Morena	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-67)
-3	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-44)|SpaceAfter=No
+3	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-44)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	R.	R.	PROPN	NNP	Number=Sing	3	list	3:list	Entity=(person-72
 6	José	José	PROPN	NNP	Number=Sing	5	flat	5:flat	_
@@ -644,15 +677,18 @@
 # sent_id = AMALGUM_voyage_benguela-43
 # s_type = frag
 # text = Outside Benguela
+# newpar = head (1 s)
 1	Outside	outside	ADP	IN	_	2	case	2:case	Discourse=preparation:60->61
 2	Benguela	Benguela	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(place-43)
 
 # sent_id = AMALGUM_voyage_benguela-44
 # s_type = frag
 # text = Hotel Duas Faces (Baia Azul), ☏ +244922508508 .
-1	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:61->59|Entity=(abstract-63
+# newpar = list type:::"unordered" (4 s)
+# newpar1 = item (4 s)
+1	Hotel	Hotel	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:61->59|Entity=(abstract-63|XML=<hi rend:::"bold">
 2	Duas	Duas	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Faces	Face	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=abstract-63)
+3	Faces	Face	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=abstract-63)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:62->61|SpaceAfter=No
 5	Baia	Baia	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(abstract-63
 6	Azul	Azul	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=abstract-63)|SpaceAfter=No
@@ -705,13 +741,16 @@
 # sent_id = AMALGUM_voyage_benguela-48
 # s_type = imp
 # text = Go next
+# newpar = head (1 s)
 1	Go	go	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=attribution:67->68
 2	next	next	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_benguela-49
 # s_type = decl
 # text = Caotinha is on a peninsula west of Benguela.
-1	Caotinha	Caotinha	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:68->66|Entity=(person-79)
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (1 s)
+1	Caotinha	Caotinha	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:68->66|Entity=(person-79)|XML=<hi rend:::"bold"></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	on	on	ADP	IN	_	5	case	5:case	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(place-80
@@ -724,7 +763,8 @@
 # sent_id = AMALGUM_voyage_benguela-50
 # s_type = decl
 # text = Lobito is 33 kilometres north of Benguela.
-1	Lobito	Lobito	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:69->68|Entity=(place-20)
+# newpar = item (1 s)
+1	Lobito	Lobito	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:69->68|Entity=(place-20)|XML=<hi rend:::"bold"><ref target:::"Lobito"></ref></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	33	33	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	Entity=(abstract-81
 4	kilometres	kilometre	NOUN	NNS	Number=Plur	5	obl:tmod	5:obl:tmod	Entity=abstract-81)

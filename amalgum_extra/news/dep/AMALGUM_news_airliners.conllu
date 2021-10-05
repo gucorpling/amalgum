@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_airliners
+# meta::title = Two airliners come within seconds of collision over Indiana, US
+# meta::shortTitle = airliners
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2007-11-17
+# meta::dateModified = 2015-03-05
+# meta::sourceURL = https://en.wikinews.org/wiki/Two_airliners_come_within_seconds_of_collision_over_Indiana%2C_US
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_airliners
 # sent_id = AMALGUM_news_airliners-1
 # s_type = decl
 # text = Two airliners come within seconds of collision over Indiana, US
+# newpar = head (1 s)
 1	Two	2	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=preparation:1->3|Entity=(organization-1
 2	airliners	airliner	NOUN	NNS	Number=Plur	3	nsubj	3:nsubj	Entity=organization-1)
 3	come	come	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -17,16 +28,18 @@
 # sent_id = AMALGUM_news_airliners-2
 # s_type = frag
 # text = Saturday, November 17, 2007
-1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-6)|SpaceAfter=No
+# newpar = p (1 s)
+1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-6)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	November	November	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6
+3	November	November	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6|XML=<date when:::"2007-11-17">
 4	17	17	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)
+6	2007	2007	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_airliners-3
 # s_type = decl
 # text = A midair collision has been narrowly averted between two commercial airliners over Indiana, United States.
+# newpar = p (2 s)
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=ROOT:3|Entity=(event-3
 2	midair	midair	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	collision	collision	NOUN	NN	Number=Sing	7	nsubj:pass	7:nsubj:pass	Entity=event-3)
@@ -39,26 +52,26 @@
 10	commercial	commercial	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	airliners	airliner	NOUN	NNS	Number=Plur	7	obl	7:obl:between	_
 12	over	over	ADP	IN	_	13	case	13:case	_
-13	Indiana	Indiana	PROPN	NNP	Number=Sing	11	nmod	11:nmod:over	Entity=organization-1)(place-4)|SpaceAfter=No
+13	Indiana	Indiana	PROPN	NNP	Number=Sing	11	nmod	11:nmod:over	Entity=organization-1)(place-4)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Indiana"></ref>
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
-15	United	Unite	VERB	NNP	Number=Sing	16	amod	16:amod	Entity=(place-8
-16	States	State	PROPN	NNPS	Number=Plur	13	appos	13:appos	Entity=place-8)|SpaceAfter=No
+15	United	Unite	VERB	NNP	Number=Sing	16	amod	16:amod	Entity=(place-8|XML=<ref target:::"https://en.wikinews.org/wiki/United_States">
+16	States	State	PROPN	NNPS	Number=Plur	13	appos	13:appos	Entity=place-8)|SpaceAfter=No|XML=</ref>
 17	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_news_airliners-4
 # s_type = decl
 # text = A Midwest Airlines plane carrying 24 people and a United Express aircraft carrying 31 people came within 600 vertical feet and 1.3 horizontal miles apart.
 1	A	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Discourse=joint:4->3|Entity=(object-9
-2	Midwest	Midwest	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-10
-3	Airlines	Airline	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=organization-10)
+2	Midwest	Midwest	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-10|XML=<ref target:::"https://en.wikipedia.org/wiki/Midwest%20Airlines">
+3	Airlines	Airline	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=organization-10)|XML=</ref>
 4	plane	plane	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	_
 5	carrying	carry	VERB	VBG	VerbForm=Ger	4	acl	4:acl	Discourse=joint:5->3
 6	24	24	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(person-11
 7	people	person	NOUN	NNS	Number=Plur	5	obj	5:obj	Entity=object-9)person-11)
 8	and	and	CCONJ	CC	_	12	cc	12:cc	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	12	det	12:det	Entity=(object-12
-10	United	Unite	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(organization-13
-11	Express	Express	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=organization-13)
+10	United	Unite	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(organization-13|XML=<ref target:::"https://en.wikipedia.org/wiki/United%20Express">
+11	Express	Express	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=organization-13)|XML=</ref>
 12	aircraft	aircraft	NOUN	NN	Number=Sing	4	conj	4:conj:and|16:nsubj	_
 13	carrying	carry	VERB	VBG	VerbForm=Ger	12	acl	12:acl	Discourse=elaboration:6->5
 14	31	31	NUM	CD	NumForm=Digit|NumType=Card	15	nummod	15:nummod	Entity=(person-14
@@ -78,6 +91,7 @@
 # sent_id = AMALGUM_news_airliners-5
 # s_type = decl
 # text = The eastbound Midwest Airlines jet was accidentally directed to descend into the direct path of the westbound United Express flight.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Discourse=joint:7->3|Entity=(object-17
 2	eastbound	eastbound	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 3	Midwest	Midwest	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(organization-10
@@ -146,11 +160,12 @@
 # sent_id = AMALGUM_news_airliners-7
 # s_type = decl
 # text = The Traffic Collision Avoidance System (TCAS) installed in the cockpits of both aircraft sounded emergency warnings advising the pilots to take evasive action.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Discourse=joint:11->3|Entity=(abstract-29
-2	Traffic	traffic	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(abstract-30(abstract-22)
+2	Traffic	traffic	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(abstract-30(abstract-22)|XML=<ref target:::"https://en.wikipedia.org/wiki/Traffic%20Collision%20Avoidance%20System">
 3	Collision	Collision	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(event-3)
 4	Avoidance	Avoidance	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=abstract-30)
-5	System	system	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Entity=abstract-29)
+5	System	system	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Entity=abstract-29)|XML=</ref>
 6	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=restatement:12->11|SpaceAfter=No
 7	TCAS	TCAS	PROPN	NNP	Number=Sing	5	appos	5:appos	Entity=(abstract-29)|SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
@@ -238,6 +253,7 @@
 # sent_id = AMALGUM_news_airliners-11
 # s_type = sub
 # text = Had the aircraft struck each other, they would have been traveling at a combined speed of about 700 m.p.h. Airspeed would normally be higher, but congestion around O'Hare International Airport had slowed things down.
+# newpar = p (2 s)
 1	Had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	aux	4:aux	Discourse=attribution:23->24
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(object-12
 3	aircraft	aircraft	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=object-12)
@@ -267,9 +283,9 @@
 27	but	but	CCONJ	CC	_	34	cc	34:cc	Discourse=contrast:25->24
 28	congestion	congestion	NOUN	NN	Number=Sing	34	nsubj	34:nsubj	Entity=(abstract-43
 29	around	around	ADP	IN	_	32	case	32:case	_
-30	O'Hare	O'Hare	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(place-44(person-45)
+30	O'Hare	O'Hare	PROPN	NNP	Number=Sing	32	compound	32:compound	Entity=(place-44(person-45)|XML=<ref target:::"https://en.wikipedia.org/wiki/O'Hare%20International%20Airport">
 31	International	International	PROPN	NNP	Number=Sing	32	compound	32:compound	_
-32	Airport	Airport	PROPN	NNP	Number=Sing	28	nmod	28:nmod:around	Entity=abstract-43)place-44)
+32	Airport	Airport	PROPN	NNP	Number=Sing	28	nmod	28:nmod:around	Entity=abstract-43)place-44)|XML=</ref>
 33	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	34	aux	34:aux	_
 34	slowed	slow	VERB	VBN	Tense=Past|VerbForm=Part	25	conj	12:advcl|25:conj:but	_
 35	things	thing	NOUN	NNS	Number=Plur	34	obj	34:obj	Entity=(abstract-46)
@@ -304,17 +320,18 @@
 # sent_id = AMALGUM_news_airliners-13
 # s_type = decl
 # text = Jeffrey Richards, president of the National Air Traffic Controllers Association, told reporters that pilots had mentioned three times in the course of the flight how close aircraft were coming, quoting them as saying to air traffic control on one occasion "Center, you really lined us up on that last clearance."
+# newpar = p (1 s)
 1	Jeffrey	Jeffrey	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Discourse=attribution:27->28|Entity=(person-53
 2	Richards	Richard	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-53)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	president	president	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=(person-53
 5	of	of	ADP	IN	_	11	case	11:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(organization-54
-7	National	National	ADJ	NNP	Number=Sing	11	amod	11:amod	_
+7	National	National	ADJ	NNP	Number=Sing	11	amod	11:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/National%20Air%20Traffic%20Controllers%20Association">
 8	Air	Air	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(person-55)
 9	Traffic	traffic	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(abstract-22)
 10	Controllers	Controllers	PROPN	NNPS	Number=Plur	11	compound	11:compound	Entity=(person-56)
-11	Association	Association	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=person-53)organization-54)|SpaceAfter=No
+11	Association	Association	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	Entity=person-53)organization-54)|SpaceAfter=No|XML=</ref>
 12	,	,	PUNCT	,	_	1	punct	1:punct	_
 13	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 14	reporters	reporter	NOUN	NNS	Number=Plur	13	iobj	13:iobj	Entity=(person-57)
@@ -365,6 +382,7 @@
 # sent_id = AMALGUM_news_airliners-14
 # s_type = decl
 # text = Near air misses are classified on a scale of D to A by the Federal Aviation Authority, A being the most serious.
+# newpar = p (3 s)
 1	Near	near	ADP	IN	_	3	amod	3:amod	Discourse=joint:32->19|Entity=(event-66
 2	air	air	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(place-61)
 3	misses	miss	NOUN	NNS	Number=Plur	5	nsubj:pass	5:nsubj:pass	Entity=event-66)
@@ -379,9 +397,9 @@
 12	A	A	PROPN	NNP	Number=Sing	10	nmod	10:nmod:to	Entity=abstract-67)abstract-68)(abstract-69)
 13	by	by	ADP	IN	_	17	case	17:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(organization-70
-15	Federal	Federal	ADJ	NNP	Number=Sing	16	amod	16:amod	_
+15	Federal	Federal	ADJ	NNP	Number=Sing	16	amod	16:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Federal%20Aviation%20Authority">
 16	Aviation	Aviation	PROPN	NNP	Number=Sing	17	compound	17:compound	_
-17	Authority	Authority	PROPN	NNP	Number=Sing	5	obl	5:obl:by	Entity=organization-70)|SpaceAfter=No
+17	Authority	Authority	PROPN	NNP	Number=Sing	5	obl	5:obl:by	Entity=organization-70)|SpaceAfter=No|XML=</ref>
 18	,	,	PUNCT	,	_	23	punct	23:punct	_
 19	A	a	PRON	DT	Definite=Ind|PronType=Art	23	nsubj	23:nsubj	Discourse=elaboration:33->32|Entity=(abstract-69)
 20	being	be	AUX	VBG	VerbForm=Ger	23	cop	23:cop	_
@@ -454,6 +472,7 @@
 # sent_id = AMALGUM_news_airliners-17
 # s_type = decl
 # text = Richards said that on the night of the incident controllers at Chicago Centre had been working close to the two hour working limit between rest breaks.
+# newpar = p (3 s)
 1	Richards	Richard	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:40->41|Entity=(person-53)
 2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	16	mark	16:mark	Discourse=joint:41->19
@@ -573,6 +592,7 @@
 # sent_id = AMALGUM_news_airliners-20
 # s_type = decl
 # text = Richards said that at the time the building contained a staff of 11 controllers, five trainees and one supervisor, which is one supervisor and one controller lower than usual.
+# newpar = p (3 s)
 1	Richards	Richard	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:54->55|Entity=(person-53)
 2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	that	that	SCONJ	IN	_	9	mark	9:mark	Discourse=joint:55->49
@@ -666,6 +686,7 @@
 # sent_id = AMALGUM_news_airliners-23
 # s_type = decl
 # text = This latest incident raises important safety issues at Chicago Centre, which is currently undergoing a dispute between the controllers union and management over how many controllers are adequate to run the centre.
+# newpar = p (3 s)
 1	This	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Discourse=joint:62->60|Entity=(event-47
 2	latest	late	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	incident	incident	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=event-47)
@@ -769,6 +790,7 @@
 # sent_id = AMALGUM_news_airliners-26
 # s_type = decl
 # text = Skornicka said of the incident that it was "part of a bigger debate taking place," and that she felt "this is just one situation that highlights the need for modernization and overhaul of the air traffic control system."
+# newpar = p (1 s)
 1	Skornicka	Skornicka	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:72->73|Entity=(person-120)
 2	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	of	of	ADP	IN	_	5	case	5:case	_

@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_fighter
+# meta::title = Wikinews interviews Christopher Hill, U.S. Republican Party presidential candidate
+# meta::shortTitle = fighter
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2015-01-05
+# meta::dateModified = 2019-02-27
+# meta::sourceURL = https://en.wikinews.org/wiki/Wikinews_interviews_Christopher_Hill%2C_U.S._Republican_Party_presidential_candidate
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_fighter
 # sent_id = AMALGUM_news_fighter-1
 # s_type = decl
 # text = Wikinews interviews Christopher Hill, U.S. Republican Party presidential candidate
+# newpar = head (1 s)
 1	Wikinews	Wikinews	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=preparation:1->3|Entity=(organization-1)
 2	interviews	interview	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	Christopher	Christopher	PROPN	NNP	Number=Sing	2	obj	2:obj	Entity=(person-2
@@ -16,16 +27,19 @@
 # sent_id = AMALGUM_news_fighter-2
 # s_type = frag
 # text = Tuesday, January 6, 2015
-1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-6)|SpaceAfter=No
+# newpar = p (1 s)
+1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-6)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6
+3	January	January	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6|XML=<date when:::"2015-01-06">
 4	6	6	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)
+6	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-7)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_fighter-3
 # s_type = frag
 # text = Presidential candidate Christopher Hill.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Presidential	Presidential	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=ROOT:3|Entity=(person-3
 2	candidate	candidate	NOUN	NN	Number=Sing	0	root	0:root	Entity=person-3)
 3	Christopher	Christopher	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(person-2
@@ -45,9 +59,10 @@
 # sent_id = AMALGUM_news_fighter-5
 # s_type = decl
 # text = U.S. Air Force veteran and airline pilot Christopher V. Hill of New Hampshire took some time to talk with Wikinews about his campaign for the U.S. Republican Party's 2016 presidential nomination.
-1	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	3	compound	3:compound	Discourse=joint:6->3|Entity=(person-11(organization-12(place-5)
-2	Air	Air	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Force	Force	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=organization-12)
+# newpar = p (1 s)
+1	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	3	compound	3:compound	Discourse=joint:6->3|Entity=(person-11(organization-12(place-5)|XML=<ref target:::"https://en.wikinews.org/wiki/U.S."></ref>
+2	Air	Air	PROPN	NNP	Number=Sing	3	compound	3:compound	XML=<ref target:::"https://en.wikinews.org/wiki/United_States_Air_Force">
+3	Force	Force	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=organization-12)|XML=</ref>
 4	veteran	veteran	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	Entity=person-11)
 5	and	and	CCONJ	CC	_	7	cc	7:cc	_
 6	airline	airline	NOUN	NN	Number=Sing	7	compound	7:compound	Entity=(person-13(organization-14)
@@ -56,39 +71,40 @@
 9	V.	V.	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 10	Hill	Hill	PROPN	NNP	Number=Sing	8	flat	8:flat	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	New	New	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(place-15
-13	Hampshire	Hampshire	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-13)place-15)
+12	New	New	PROPN	NNP	Number=Sing	8	nmod	8:nmod:of	Entity=(place-15|XML=<ref target:::"https://en.wikinews.org/wiki/New_Hampshire">
+13	Hampshire	Hampshire	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-13)place-15)|XML=</ref>
 14	took	take	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 15	some	some	DET	DT	_	16	det	16:det	_
 16	time	time	NOUN	NN	Number=Sing	14	obj	14:obj|18:nsubj:xsubj	_
 17	to	to	PART	TO	_	18	mark	18:mark	Discourse=purpose:7->6
 18	talk	talk	VERB	VB	VerbForm=Inf	14	xcomp	14:xcomp	_
 19	with	with	ADP	IN	_	20	case	20:case	_
-20	Wikinews	Wikinews	PROPN	NNP	Number=Sing	18	obl	18:obl:with	Entity=(organization-1)
+20	Wikinews	Wikinews	PROPN	NNP	Number=Sing	18	obl	18:obl:with	Entity=(organization-1)|XML=<hi rend:::"italic"></hi>
 21	about	about	ADP	IN	_	23	case	23:case	_
 22	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	23	nmod:poss	23:nmod:poss	Entity=(abstract-16(person-13)
 23	campaign	campaign	NOUN	NN	Number=Sing	18	obl	18:obl:about	_
 24	for	for	ADP	IN	_	32	case	32:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(event-17
-26	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	28	compound	28:compound	Entity=(organization-18(place-5)
+26	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	28	compound	28:compound	Entity=(organization-18(place-5)|XML=<ref target:::"https://en.wikinews.org/wiki/Republican_Party_(United_States)">
 27	Republican	Republican	ADJ	NNP	Number=Sing	28	amod	28:amod	_
 28-29	Party's	_	_	_	_	_	_	_	_
-28	Party	Party	PROPN	NNP	Number=Sing	32	nmod:poss	32:nmod:poss	_
+28	Party	Party	PROPN	NNP	Number=Sing	32	nmod:poss	32:nmod:poss	XML=</ref>
 29	's	's	PART	POS	_	28	case	28:case	Entity=organization-18)
-30	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	32	compound	32:compound	_
+30	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	32	compound	32:compound	XML=<ref target:::"https://en.wikinews.org/wiki/United_States_presidential_election,_2016"><date when:::"2016"></date>
 31	presidential	presidential	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-32	nomination	nomination	NOUN	NN	Number=Sing	23	nmod	23:nmod:for	Entity=abstract-16)event-17)|SpaceAfter=No
+32	nomination	nomination	NOUN	NN	Number=Sing	23	nmod	23:nmod:for	Entity=abstract-16)event-17)|SpaceAfter=No|XML=</ref>
 33	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = AMALGUM_news_fighter-6
 # s_type = decl
 # text = Hill served in Operation Desert Storm, flying about fifty combat missions.
+# newpar = p (6 s)
 1	Hill	Hill	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:8->3|Entity=(person-9)
 2	served	serve	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	Operation	Operation	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Entity=(event-19
+4	Operation	Operation	PROPN	NNP	Number=Sing	2	obl	2:obl:in	Entity=(event-19|XML=<ref target:::"https://en.wikipedia.org/wiki/Operation%20Desert%20Storm">
 5	Desert	Desert	PROPN	NNP	Number=Sing	4	flat	4:flat	_
-6	Storm	Storm	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=event-19)|SpaceAfter=No
+6	Storm	Storm	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=event-19)|SpaceAfter=No|XML=</ref>
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	flying	fly	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	Discourse=elaboration:9->8
 9	about	about	ADV	RB	_	10	advmod	10:advmod	Entity=(event-20
@@ -121,16 +137,16 @@
 19	pilot	pilot	NOUN	NN	Number=Sing	15	conj	12:obl:as|15:conj:and	_
 20	for	for	ADP	IN	_	24	case	24:case	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(organization-25
-22	United	Unite	PROPN	NNP	Number=Sing	24	compound	24:compound	_
+22	United	Unite	PROPN	NNP	Number=Sing	24	compound	24:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/United%20Parcel%20Service">
 23	Parcel	Parcel	PROPN	NNP	Number=Sing	24	compound	24:compound	_
-24	Service	Service	PROPN	NNP	Number=Sing	19	nmod	19:nmod:for	Entity=person-13)organization-25)|SpaceAfter=No
+24	Service	Service	PROPN	NNP	Number=Sing	19	nmod	19:nmod:for	Entity=person-13)organization-25)|SpaceAfter=No|XML=</ref>
 25	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_news_fighter-8
 # s_type = decl
 # text = In 2010, he organized the "Pilots and Patriots Defending the Constitution" ahead of the that year's midterm elections.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:12->10
-2	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-26)|SpaceAfter=No
+2	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-26)|SpaceAfter=No|XML=<date when:::"2010"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-9)
 5	organized	organize	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -165,7 +181,7 @@
 6	for	for	ADP	IN	_	7	case	7:case	_
 7	president	president	NOUN	NN	Number=Sing	5	nmod	5:nmod:for	Entity=abstract-16)(person-10)
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:in	Entity=(time-34)|SpaceAfter=No
+9	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:in	Entity=(time-34)|SpaceAfter=No|XML=<date when:::"2012"></date>
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
 11	seeking	seek	VERB	VBG	VerbForm=Ger	2	advcl	2:advcl	Discourse=elaboration:16->15
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(event-17
@@ -195,14 +211,14 @@
 17	votes	vote	NOUN	NNS	Number=Plur	15	obj	15:obj	Entity=abstract-38)
 18	in	in	ADP	IN	_	22	case	22:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(event-39
-20	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-15
+20	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-15|XML=<ref target:::"https://en.wikipedia.org/wiki/New%20Hampshire%20primary">
 21	Hampshire	Hampshire	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-15)
-22	primary	primary	NOUN	NN	Number=Sing	15	obl	15:obl:in	Entity=event-39)
+22	primary	primary	NOUN	NN	Number=Sing	15	obl	15:obl:in	Entity=event-39)|XML=</ref>
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
 24	139	139	NUM	CD	NumForm=Digit|NumType=Card	17	conj	15:obj|17:conj:and	Entity=(abstract-40
 25	in	in	ADP	IN	_	28	case	28:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(event-39
-27	Arizona	Arizona	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(place-41)
+27	Arizona	Arizona	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(place-41)|XML=<ref target:::"https://en.wikinews.org/wiki/Arizona"></ref>
 28	primary	primary	NOUN	NN	Number=Sing	24	nmod	24:nmod:in	Entity=abstract-40)event-39)|SpaceAfter=No
 29	.	.	PUNCT	.	_	6	punct	6:punct	_
 
@@ -210,10 +226,10 @@
 # s_type = decl
 # text = Former Massachusetts governor Mitt Romney ultimately received the nomination and lost to incumbent president Barack Obama.
 1	Former	Former	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=joint:19->10|Entity=(person-42
-2	Massachusetts	Massachusetts	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(place-43)
+2	Massachusetts	Massachusetts	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(place-43)|XML=<ref target:::"https://en.wikinews.org/wiki/Massachusetts"></ref>
 3	governor	governor	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|11:nsubj	_
-4	Mitt	Mitt	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-5	Romney	Romney	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-42)
+4	Mitt	Mitt	PROPN	NNP	Number=Sing	3	flat	3:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Mitt_Romney">
+5	Romney	Romney	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-42)|XML=</ref>
 6	ultimately	ultimately	ADV	RB	Degree=Pos	7	advmod	7:advmod	_
 7	received	receive	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(event-17
@@ -223,25 +239,26 @@
 12	to	to	ADP	IN	_	14	case	14:case	_
 13	incumbent	incumbent	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(person-10
 14	president	president	NOUN	NN	Number=Sing	11	obl	11:obl:to	_
-15	Barack	Barack	PROPN	NNP	Number=Sing	14	flat	14:flat	_
-16	Obama	Obama	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-10)|SpaceAfter=No
+15	Barack	Barack	PROPN	NNP	Number=Sing	14	flat	14:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Barack_Obama">
+16	Obama	Obama	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-10)|SpaceAfter=No|XML=</ref>
 17	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_news_fighter-12
 # s_type = decl
 # text = With Wikinews reporter William S. Saturn‎, Hill discusses his 2016 campaign, his political background, and his policy proposals.
+# newpar = p (1 s)
 1	With	with	ADP	IN	_	3	case	3:case	Discourse=joint:21->10
-2	Wikinews	Wikinews	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(person-44(organization-1)
+2	Wikinews	Wikinews	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(person-44(organization-1)|XML=<hi rend:::"italic"></hi>
 3	reporter	reporter	NOUN	NN	Number=Sing	10	obl	10:obl:with	_
-4	William	William	PROPN	NNP	Number=Sing	3	appos	3:appos	_
+4	William	William	PROPN	NNP	Number=Sing	3	appos	3:appos	XML=<ref target:::"https://en.wikinews.org/wiki/User:William_S._Saturn">
 5	S.	S.	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-44)
-6	Saturn	Saturn	PROPN	NNP	Number=Sing	3	appos	3:appos	SpaceAfter=No
+6	Saturn	Saturn	PROPN	NNP	Number=Sing	3	appos	3:appos	SpaceAfter=No|XML=</ref>
 7	‎	‎	X	FW	_	3	punct	3:punct	SpaceAfter=No
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	Hill	Hill	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Discourse=joint:22->10|Entity=(person-9)
 10	discusses	discuss	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 11	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	13	nmod:poss	13:nmod:poss	Entity=(abstract-16(person-9)
-12	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	13	compound	13:compound	_
+12	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	13	compound	13:compound	XML=<date when:::"2016"></date>
 13	campaign	campaign	NOUN	NN	Number=Sing	10	obj	10:obj	Entity=abstract-16)|SpaceAfter=No
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	17	nmod:poss	17:nmod:poss	Entity=(abstract-45(person-9)
@@ -257,23 +274,26 @@
 # sent_id = AMALGUM_news_fighter-13
 # s_type = frag
 # text = Interview
+# newpar = head (1 s)
 1	Interview	interview	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:23->3|Entity=(event-48)
 
 # sent_id = AMALGUM_news_fighter-14
 # s_type = frag
 # text = ((William S. Saturn))
-1	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:24->23|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No
-3	William	William	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(person-44
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:24->23|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	5	punct	5:punct	SpaceAfter=No|XML=</hi>
+3	William	William	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(person-44|XML=<hi rend:::"bold">
 4	S.	S.	PROPN	NNP	Number=Sing	5	dep	5:dep	_
-5	Saturn	Saturn	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-44)|SpaceAfter=No
-6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
-7	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
+5	Saturn	Saturn	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-44)|SpaceAfter=No|XML=</hi>
+6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+7	)	)	PUNCT	-RRB-	_	5	punct	5:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-15
 # s_type = q
 # text = What qualifications do you have that will assist you in executing the duties of president?
-1	What	what	DET	WDT	PronType=Int	2	det	2:det	Discourse=joint:25->3|Entity=(abstract-49
+1	What	what	DET	WDT	PronType=Int	2	det	2:det	Discourse=joint:25->3|Entity=(abstract-49|XML=<hi rend:::"bold">
 2	qualifications	qualification	NOUN	NNS	Number=Plur	5	obj	5:obj	Entity=abstract-49)
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-50)
@@ -288,17 +308,17 @@
 13	duties	duty	NOUN	NNS	Number=Plur	11	obj	11:obj	_
 14	of	of	ADP	IN	_	15	case	15:case	_
 15	president	president	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	Entity=abstract-51)|SpaceAfter=No
-16	?	?	PUNCT	.	_	5	punct	5:punct	_
+16	?	?	PUNCT	.	_	5	punct	5:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-16
 # s_type = frag
 # text = ((Christopher Hill))
-1	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:28->25|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No
-3	Christopher	Christopher	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-2
-4	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-2)|SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No
-6	)	)	PUNCT	-RRB-	_	4	punct	4:punct	_
+1	(	(	PUNCT	-LRB-	_	4	punct	4:punct	Discourse=restatement:28->25|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	4	punct	4:punct	SpaceAfter=No|XML=</hi>
+3	Christopher	Christopher	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-2|XML=<hi rend:::"bold">
+4	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-2)|SpaceAfter=No|XML=</hi>
+5	)	)	PUNCT	-RRB-	_	4	punct	4:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+6	)	)	PUNCT	-RRB-	_	4	punct	4:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-17
 # s_type = decl
@@ -331,7 +351,7 @@
 4	Oath	Oath	PROPN	NNP	Number=Sing	2	obj	2:obj	_
 5	to	to	ADP	IN	_	7	case	7:case	_
 6	our	our	PRON	PRP$	Number=Plur|Person=1|Poss=Yes|PronType=Prs	7	nmod:poss	7:nmod:poss	Entity=(abstract-30(person-57)
-7	Constitution	Constitution	PROPN	NNP	Number=Sing	4	nmod	4:nmod:to	Entity=abstract-56)abstract-30)
+7	Constitution	Constitution	PROPN	NNP	Number=Sing	4	nmod	4:nmod:to	Entity=abstract-56)abstract-30)|XML=<ref target:::"https://en.wikipedia.org/wiki/United%20States%20Constitution"></ref>
 8	at	at	ADP	IN	_	10	case	10:case	_
 9	22	22	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	Entity=(time-58
 10	years	year	NOUN	NNS	Number=Plur	11	obl:tmod	11:obl:tmod	Entity=time-58)
@@ -405,15 +425,18 @@
 # sent_id = AMALGUM_news_fighter-22
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:40->38|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (3 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:40->38|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-23
 # s_type = wh
 # text = Why run for president?
+# newpar = hi rend:::"bold" (2 s)
 1	Why	why	SCONJ	WRB	PronType=Int	2	advmod	2:advmod	Discourse=joint:41->3
 2	run	run	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	_
 3	for	for	ADP	IN	_	4	case	4:case	_
@@ -446,6 +469,8 @@
 # sent_id = AMALGUM_news_fighter-25
 # s_type = frag
 # text = Hill at the Lesser-known candidates forum in 2011.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:45->3|Entity=(person-2
 2	at	at	ADP	IN	_	6	case	6:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(abstract-67
@@ -453,7 +478,7 @@
 5	candidates	candidate	NOUN	NNS	Number=Plur	6	compound	6:compound	Entity=(person-68)
 6	forum	forum	NOUN	NN	Number=Sing	1	nmod	1:nmod:at	_
 7	in	in	ADP	IN	_	8	case	8:case	_
-8	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:in	Entity=person-2)abstract-67)(time-69)|SpaceAfter=No
+8	2011	2011	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:in	Entity=person-2)abstract-67)(time-69)|SpaceAfter=No|XML=<date when:::"2011"></date>
 9	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_fighter-26
@@ -468,11 +493,11 @@
 # sent_id = AMALGUM_news_fighter-27
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:48->45|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:48->45|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-28
 # s_type = decl
@@ -486,7 +511,7 @@
 7	in	in	ADP	IN	_	10	case	10:case	_
 8	Air	Air	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(abstract-72(organization-55
 9	Force	Force	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=organization-55)
-10	ROTC	ROTC	PROPN	NNP	Abbr=Yes|Number=Sing	6	nmod	6:nmod:in	Entity=person-52)abstract-72)
+10	ROTC	ROTC	PROPN	NNP	Abbr=Yes|Number=Sing	6	nmod	6:nmod:in	Entity=person-52)abstract-72)|XML=<ref target:::"https://en.wikipedia.org/wiki/Reserve%20Officers'%20Training%20Corps"></ref>
 11	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj:pass	13:nsubj:pass|15:nsubj:xsubj	Discourse=circumstance:50->53|Entity=(person-52)
 12	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	13	aux:pass	13:aux:pass	_
 13	chosen	choose	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -499,7 +524,7 @@
 20	Program	Program	PROPN	NNP	Number=Sing	15	obj	15:obj	_
 21	called	call	VERB	VBN	Tense=Past|VerbForm=Part	20	acl	20:acl	Discourse=elaboration:52->51
 22	Euro-	Euro-	PROPN	NNP	Number=Sing	23	compound	23:compound	Entity=(event-74(organization-75(place-76)|SpaceAfter=No
-23	NATO	NATO	PROPN	NNP	Abbr=Yes|Number=Sing	27	compound	27:compound	Entity=organization-75)
+23	NATO	NATO	PROPN	NNP	Abbr=Yes|Number=Sing	27	compound	27:compound	Entity=organization-75)|XML=<ref target:::"https://en.wikinews.org/wiki/NATO"></ref>
 24	Joint	Joint	ADJ	NNP	Number=Sing	27	amod	27:amod	_
 25	Jet	Jet	PROPN	NNP	Number=Sing	26	compound	26:compound	Entity=(person-77
 26	Pilot	Pilot	PROPN	NNP	Number=Sing	27	compound	27:compound	Entity=person-77)
@@ -635,8 +660,8 @@
 9	have	have	VERB	VB	VerbForm=Inf	0	root	0:root	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(object-93
 11	"	''	PUNCT	``	_	13	punct	13:punct	SpaceAfter=No
-12	Bully	Bully	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(person-94)
-13	Pulpit	Pulpit	PROPN	NNP	Number=Sing	9	obj	9:obj	SpaceAfter=No
+12	Bully	Bully	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(person-94)|XML=<ref target:::"https://en.wiktionary.org/wiki/bully%20pulpit">
+13	Pulpit	Pulpit	PROPN	NNP	Number=Sing	9	obj	9:obj	SpaceAfter=No|XML=</ref>
 14	"	''	PUNCT	''	_	13	punct	13:punct	Entity=object-93)
 15	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=joint:68->67
 16	speak	speak	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	9	conj	9:conj:and	_
@@ -679,16 +704,18 @@
 # sent_id = AMALGUM_news_fighter-38
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:72->71|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:72->71|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-39
 # s_type = wh
 # text = Why did you choose to run in the Republican Party?
-1	Why	why	SCONJ	WRB	PronType=Int	4	advmod	4:advmod	Discourse=joint:73->45
+1	Why	why	SCONJ	WRB	PronType=Int	4	advmod	4:advmod	Discourse=joint:73->45|XML=<hi rend:::"bold">
 2	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=(person-50)
 4	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -698,16 +725,16 @@
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(organization-4
 9	Republican	Republican	ADJ	NNP	Number=Sing	10	amod	10:amod	_
 10	Party	Party	PROPN	NNP	Number=Sing	6	obl	6:obl:in	Entity=organization-4)|SpaceAfter=No
-11	?	?	PUNCT	.	_	4	punct	4:punct	_
+11	?	?	PUNCT	.	_	4	punct	4:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-40
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:74->73|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:74->73|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-41
 # s_type = decl
@@ -721,13 +748,13 @@
 7	date	date	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 8	back	back	ADV	RB	Degree=Pos	7	advmod	7:advmod	_
 9	to	to	ADP	IN	_	10	case	10:case	_
-10	1979	1979	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:to	Entity=(time-97)
+10	1979	1979	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:to	Entity=(time-97)|XML=<date when:::"1979"></date>
 11	when	when	SCONJ	WRB	PronType=Int	13	mark	13:mark	Discourse=circumstance:76->75
 12	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	13	nsubj	13:nsubj	Entity=(person-52)
 13	volunteered	volunteer	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	7	advcl	7:advcl:when	_
 14	for	for	ADP	IN	_	15	case	15:case	_
-15	Ronald	Ronald	PROPN	NNP	Number=Sing	13	obl	13:obl:for	Entity=(person-10
-16	Reagan	Reagan	PROPN	NNP	Number=Sing	15	flat	15:flat	Entity=person-10)
+15	Ronald	Ronald	PROPN	NNP	Number=Sing	13	obl	13:obl:for	Entity=(person-10|XML=<ref target:::"https://en.wikinews.org/wiki/Ronald_Reagan">
+16	Reagan	Reagan	PROPN	NNP	Number=Sing	15	flat	15:flat	Entity=person-10)|XML=</ref>
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	19	nmod:poss	19:nmod:poss	Entity=(organization-98(person-10)
 19	campaign	campaign	NOUN	NN	Number=Sing	15	conj	13:obl:for|15:conj:and	_
@@ -804,16 +831,18 @@
 # sent_id = AMALGUM_news_fighter-46
 # s_type = frag
 # text = ((WS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:83->82|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WS	WS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-103)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:83->82|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WS	WS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-103)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-47
 # s_type = wh
 # text = How do you plan to get into the Republican debates and make an impact on polls?
-1	How	how	SCONJ	WRB	PronType=Int	4	advmod	4:advmod	Discourse=joint:84->45
+1	How	how	SCONJ	WRB	PronType=Int	4	advmod	4:advmod	Discourse=joint:84->45|XML=<hi rend:::"bold">
 2	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj|12:nsubj:xsubj	Entity=(person-50)
 4	plan	plan	VERB	VB	VerbForm=Inf	0	root	0:root	_
@@ -829,16 +858,16 @@
 14	impact	impact	NOUN	NN	Number=Sing	12	obj	12:obj	_
 15	on	on	ADP	IN	_	16	case	16:case	_
 16	polls	poll	NOUN	NNS	Number=Plur	14	nmod	14:nmod:on	Entity=abstract-105)(event-106)|SpaceAfter=No
-17	?	?	PUNCT	.	_	4	punct	4:punct	_
+17	?	?	PUNCT	.	_	4	punct	4:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-48
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:86->84|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:86->84|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-49
 # s_type = sub
@@ -892,16 +921,18 @@
 # sent_id = AMALGUM_news_fighter-52
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:93->92|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:93->92|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-53
 # s_type = q
 # text = If you do not receive the Republican nomination, would you consider running as a third party candidate?
-1	If	if	SCONJ	IN	_	5	mark	5:mark	Discourse=condition:94->95
+1	If	if	SCONJ	IN	_	5	mark	5:mark	Discourse=condition:94->95|XML=<hi rend:::"bold">
 2	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	5	nsubj	5:nsubj	Entity=(person-50)
 3	do	do	AUX	VBP	Mood=Ind|Number=Sing|Person=2|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
 4	not	not	ADV	RB	Polarity=Neg	5	advmod	5:advmod	_
@@ -916,19 +947,19 @@
 13	running	run	VERB	VBG	VerbForm=Ger	12	xcomp	12:xcomp	_
 14	as	as	ADP	IN	_	18	case	18:case	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(person-111
-16	third	third	ADJ	JJ	Degree=Pos|NumType=Ord	17	amod	17:amod	_
+16	third	third	ADJ	JJ	Degree=Pos|NumType=Ord	17	amod	17:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Third%20party%20(United%20States)">
 17	party	party	NOUN	NN	Number=Sing	18	compound	18:compound	_
-18	candidate	candidate	NOUN	NN	Number=Sing	13	obl	13:obl:as	Entity=person-111)|SpaceAfter=No
-19	?	?	PUNCT	.	_	12	punct	12:punct	_
+18	candidate	candidate	NOUN	NN	Number=Sing	13	obl	13:obl:as	Entity=person-111)|SpaceAfter=No|XML=</ref>
+19	?	?	PUNCT	.	_	12	punct	12:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-54
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:96->95|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:96->95|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-55
 # s_type = decl
@@ -945,7 +976,7 @@
 10	Republican	Republican	ADJ	NNP	Number=Sing	11	amod	11:amod	_
 11	party	party	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	Entity=person-112)organization-4)
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-113)|SpaceAfter=No
+13	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-113)|SpaceAfter=No|XML=<date when:::"2016"></date>
 14	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_fighter-56
@@ -962,16 +993,18 @@
 # sent_id = AMALGUM_news_fighter-57
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:99->98|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:99->98|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-58
 # s_type = wh
 # text = Other than yourself, which candidates have you supported for president in previous primary campaigns?
-1	Other	other	ADJ	JJ	Degree=Pos	9	advmod	9:advmod	Discourse=joint:100->98
+1	Other	other	ADJ	JJ	Degree=Pos	9	advmod	9:advmod	Discourse=joint:100->98|XML=<hi rend:::"bold">
 2	than	than	ADP	IN	_	3	case	3:case	_
 3	yourself	yourself	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs|Reflex=Yes	1	obl	1:obl:than	Entity=(person-50)|SpaceAfter=No
 4	,	,	PUNCT	,	_	1	punct	1:punct	_
@@ -986,71 +1019,74 @@
 13	previous	previous	ADJ	JJ	Degree=Pos	15	amod	15:amod	Entity=(event-115
 14	primary	primary	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	campaigns	campaign	NOUN	NNS	Number=Plur	9	obl	9:obl:in	Entity=event-115)|SpaceAfter=No
-16	?	?	PUNCT	.	_	9	punct	9:punct	_
+16	?	?	PUNCT	.	_	9	punct	9:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-59
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:102->100|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:102->100|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-60
 # s_type = frag
 # text = Reagan in 80 and 84, [George H. W.] Bush in 88 and 92, [Phil] Gramm in 96, [George W.] Bush in 2000 and 04, Romney in 08.
 1	Reagan	Reagan	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:103->97|Entity=(person-114(person-114
 2	in	in	ADP	IN	_	3	case	3:case	_
-3	80	80	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:in	Entity=(abstract-116)
+3	80	80	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:in	Entity=(abstract-116)|XML=<date when:::"2080"></date>
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	84	84	NUM	CD	NumForm=Digit|NumType=Card	3	conj	1:nmod:in|3:conj:and	Entity=person-114)(abstract-117)|SpaceAfter=No
 6	,	,	PUNCT	,	_	12	punct	12:punct	_
-7	[	[	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=evidence:104->103|Entity=(person-118|SpaceAfter=No
+7	[	[	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=evidence:104->103|Entity=(person-118|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/George_H._W._Bush">
 8	George	George	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 9	H.	H.	PROPN	NNP	Number=Sing	10	compound	10:compound	_
 10	W.	W.	PROPN	NNP	Number=Sing	12	compound	12:compound	SpaceAfter=No
 11	]	]	PUNCT	-RRB-	_	10	punct	10:punct	_
-12	Bush	Bush	PROPN	NNP	Number=Sing	1	conj	1:conj	Discourse=same_unit:105->103
+12	Bush	Bush	PROPN	NNP	Number=Sing	1	conj	1:conj	Discourse=same_unit:105->103|XML=</ref>
 13	in	in	ADP	IN	_	14	case	14:case	_
-14	88	88	NUM	CD	NumForm=Digit|NumType=Card	12	nmod	12:nmod:in	Entity=(abstract-119)
+14	88	88	NUM	CD	NumForm=Digit|NumType=Card	12	nmod	12:nmod:in	Entity=(abstract-119)|XML=<date when:::"2088"></date>
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
 16	92	92	NUM	CD	NumForm=Digit|NumType=Card	14	conj	12:nmod:in|14:conj:and	Entity=person-118)(abstract-120)|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
-18	[	[	PUNCT	-LRB-	_	19	punct	19:punct	Discourse=evidence:106->105|SpaceAfter=No
+18	[	[	PUNCT	-LRB-	_	19	punct	19:punct	Discourse=evidence:106->105|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Phil%20Gramm">
 19	Phil	Phil	PROPN	NNP	Number=Sing	1	conj	1:conj	Entity=(person-121)|SpaceAfter=No
 20	]	]	PUNCT	-RRB-	_	19	punct	19:punct	_
-21	Gramm	Gramm	PROPN	NNP	Number=Sing	1	conj	1:conj	Entity=(abstract-122)
+21	Gramm	Gramm	PROPN	NNP	Number=Sing	1	conj	1:conj	Entity=(abstract-122)|XML=</ref>
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	96	96	NUM	CD	NumForm=Digit|NumType=Card	21	orphan	21:orphan	Entity=(abstract-123)|SpaceAfter=No
+23	96	96	NUM	CD	NumForm=Digit|NumType=Card	21	orphan	21:orphan	Entity=(abstract-123)|SpaceAfter=No|XML=<date when:::"2096"></date>
 24	,	,	PUNCT	,	_	29	punct	29:punct	_
-25	[	[	PUNCT	-LRB-	_	26	punct	26:punct	Discourse=evidence:107->103|Entity=(person-124|SpaceAfter=No
+25	[	[	PUNCT	-LRB-	_	26	punct	26:punct	Discourse=evidence:107->103|Entity=(person-124|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/George_W._Bush">
 26	George	George	PROPN	NNP	Number=Sing	29	compound	29:compound	_
 27	W.	W.	PROPN	NNP	Number=Sing	26	flat	26:flat	SpaceAfter=No
 28	]	]	PUNCT	-RRB-	_	26	punct	26:punct	_
-29	Bush	Bush	PROPN	NNP	Number=Sing	1	conj	1:conj	_
+29	Bush	Bush	PROPN	NNP	Number=Sing	1	conj	1:conj	XML=</ref>
 30	in	in	ADP	IN	_	31	case	31:case	_
-31	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	29	nmod	29:nmod:in	Entity=(time-125)
+31	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	29	nmod	29:nmod:in	Entity=(time-125)|XML=<date when:::"2000"></date>
 32	and	and	CCONJ	CC	_	33	cc	33:cc	_
-33	04	04	NUM	CD	NumForm=Digit|NumType=Card	31	conj	29:nmod:in|31:conj:and	Entity=person-124)(time-126)|SpaceAfter=No
+33	04	04	NUM	CD	NumForm=Digit|NumType=Card	31	conj	29:nmod:in|31:conj:and	Entity=person-124)(time-126)|SpaceAfter=No|XML=<date when:::"2004"></date>
 34	,	,	PUNCT	,	_	35	punct	35:punct	_
 35	Romney	Romney	PROPN	NNP	Number=Sing	1	conj	1:conj	Discourse=joint:108->103|Entity=person-114)(person-127)
 36	in	in	ADP	IN	_	37	case	37:case	_
-37	08	08	NUM	CD	NumForm=Digit|NumType=Card	35	orphan	35:orphan	Entity=(time-128)|SpaceAfter=No
+37	08	08	NUM	CD	NumForm=Digit|NumType=Card	35	orphan	35:orphan	Entity=(time-128)|SpaceAfter=No|XML=<date when:::"2008"></date>
 38	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_fighter-61
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:109->108|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (3 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:109->108|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-62
 # s_type = wh
 # text = What are your thoughts on the job Barack Obama has done as president?
+# newpar = hi rend:::"bold" (2 s)
 1	What	what	PRON	WP	PronType=Int	0	root	0:root	Discourse=question:110->113
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(abstract-129(person-50)
@@ -1082,11 +1118,11 @@
 # sent_id = AMALGUM_news_fighter-64
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:112->111|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:112->111|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-65
 # s_type = decl
@@ -1151,8 +1187,8 @@
 1	His	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	2	nmod:poss	2:nmod:poss	Discourse=joint:121->115|Entity=(abstract-138(person-10)
 2	direction	direction	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 3	to	to	ADP	IN	_	4	case	4:case	_
-4	Eric	Eric	PROPN	NNP	Number=Sing	2	nmod	2:nmod:to	Entity=(person-139
-5	Holder	Holder	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-139)
+4	Eric	Eric	PROPN	NNP	Number=Sing	2	nmod	2:nmod:to	Entity=(person-139|XML=<ref target:::"https://en.wikipedia.org/wiki/Eric%20Holder">
+5	Holder	Holder	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-139)|XML=</ref>
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	enforce	enforce	VERB	VB	VerbForm=Inf	2	acl	2:acl:to	_
 8	some	some	DET	DT	_	9	det	9:det	Entity=(abstract-140
@@ -1168,16 +1204,18 @@
 # sent_id = AMALGUM_news_fighter-69
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:122->121|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:122->121|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-70
 # s_type = wh
 # text = If elected, what would constitute a successful presidency for you?
-1	If	if	SCONJ	IN	_	2	mark	2:mark	Discourse=condition:123->124
+1	If	if	SCONJ	IN	_	2	mark	2:mark	Discourse=condition:123->124|XML=<hi rend:::"bold">
 2	elected	elect	VERB	VBN	Tense=Past|VerbForm=Part	6	advcl	6:advcl:if	SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	what	what	PRON	WP	PronType=Int	6	nsubj	6:nsubj	Discourse=question:124->125
@@ -1188,22 +1226,24 @@
 9	presidency	presidency	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=event-142)
 10	for	for	ADP	IN	_	11	case	11:case	_
 11	you	you	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs	6	obl	6:obl:for	Entity=(person-50)|SpaceAfter=No
-12	?	?	PUNCT	.	_	6	punct	6:punct	_
+12	?	?	PUNCT	.	_	6	punct	6:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-71
 # s_type = frag
 # text = Hill (right) with fellow 2012 presidential candidate Buddy Roemer.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=same_unit:125->121|Entity=(person-9
 2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=elaboration:126->125|SpaceAfter=No
 3	right	right	ADV	RB	Degree=Pos	1	nmod:tmod	1:nmod:tmod	SpaceAfter=No
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
 5	with	with	ADP	IN	_	9	case	9:case	Discourse=same_unit:127->125
 6	fellow	fellow	ADJ	JJ	Degree=Pos	9	amod	9:amod	Entity=(person-143
-7	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	_
+7	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	XML=<date when:::"2012"></date>
 8	presidential	presidential	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	candidate	candidate	NOUN	NN	Number=Sing	1	nmod	1:nmod:with	_
-10	Buddy	Buddy	PROPN	NNP	Number=Sing	9	appos	9:appos	_
-11	Roemer	Roemer	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-9)person-143)|SpaceAfter=No
+10	Buddy	Buddy	PROPN	NNP	Number=Sing	9	appos	9:appos	XML=<ref target:::"https://en.wikinews.org/wiki/Buddy_Roemer">
+11	Roemer	Roemer	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-9)person-143)|SpaceAfter=No|XML=</ref>
 12	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_fighter-72
@@ -1217,11 +1257,11 @@
 # sent_id = AMALGUM_news_fighter-73
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:130->125|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:130->125|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-74
 # s_type = ger
@@ -1234,6 +1274,8 @@
 # sent_id = AMALGUM_news_fighter-75
 # s_type = frag
 # text = Term Limits for Congress and the Courts
+# newpar = list type:::"ordered" (6 s)
+# newpar1 = item (2 s)
 1	Term	term	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=joint:132->115|Entity=(abstract-147(abstract-148)
 2	Limits	limit	NOUN	NNS	Number=Plur	0	root	0:root	_
 3	for	for	ADP	IN	_	4	case	4:case	_
@@ -1255,6 +1297,7 @@
 # sent_id = AMALGUM_news_fighter-77
 # s_type = decl
 # text = Implementing a Tax System that allows working Americans making under $250,000 to keep all of their money.
+# newpar = item (2 s)
 1	Implementing	implement	VERB	VBG	VerbForm=Ger	0	root	0:root	Discourse=elaboration:134->133
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(abstract-152
 3	Tax	Tax	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(abstract-153)
@@ -1296,6 +1339,7 @@
 # sent_id = AMALGUM_news_fighter-79
 # s_type = decl
 # text = Passing a Living Wage program lifting people out of poverty.
+# newpar = item (1 s)
 1	Passing	pass	VERB	VBG	VerbForm=Ger	0	root	0:root	Discourse=elaboration:141->134
 2	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(abstract-156
 3	Living	live	VERB	NNP	Number=Sing	4	amod	4:amod	Entity=(abstract-157
@@ -1311,6 +1355,7 @@
 # sent_id = AMALGUM_news_fighter-80
 # s_type = other
 # text = Returning America to a state of Peace and Security.
+# newpar = item (1 s)
 1	Returning	return	VERB	VBG	VerbForm=Ger	0	root	0:root	Discourse=elaboration:143->141
 2	America	America	PROPN	NNP	Number=Sing	1	obj	1:obj	Entity=(place-59)
 3	to	to	ADP	IN	_	5	case	5:case	_
@@ -1325,16 +1370,18 @@
 # sent_id = AMALGUM_news_fighter-81
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:144->143|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:144->143|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-82
 # s_type = wh
 # text = Which individuals would you like to see in a Hill administration?
-1	Which	which	DET	WDT	PronType=Int	2	det	2:det	Discourse=elaboration:145->143|Entity=(person-163
+1	Which	which	DET	WDT	PronType=Int	2	det	2:det	Discourse=elaboration:145->143|Entity=(person-163|XML=<hi rend:::"bold">
 2	individuals	individual	NOUN	NNS	Number=Plur	7	obj	7:obj	Entity=person-163)
 3	would	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 4	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	Entity=(person-50)
@@ -1345,16 +1392,16 @@
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(organization-164
 10	Hill	Hill	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(person-9)
 11	administration	administration	NOUN	NN	Number=Sing	7	obl	7:obl:in	Entity=organization-164)|SpaceAfter=No
-12	?	?	PUNCT	.	_	5	punct	5:punct	_
+12	?	?	PUNCT	.	_	5	punct	5:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-83
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:146->145|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:146->145|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-84
 # s_type = sub
@@ -1367,9 +1414,9 @@
 6	People	person	NOUN	NNS	Number=Plur	5	obj	5:obj|13:nsubj	Entity=(person-158
 7	from	from	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(place-166
-9	heartland	heartland	NOUN	NN	Number=Sing	6	nmod	6:nmod:from	_
+9	heartland	heartland	NOUN	NN	Number=Sing	6	nmod	6:nmod:from	XML=<ref target:::"https://en.wikipedia.org/wiki/Heartland%20(United%20States)">
 10	of	of	ADP	IN	_	11	case	11:case	_
-11	America	America	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	Entity=place-166)(place-59)
+11	America	America	PROPN	NNP	Number=Sing	9	nmod	9:nmod:of	Entity=place-166)(place-59)|XML=</ref>
 12	that	that	PRON	WDT	PronType=Rel	13	nsubj	6:ref	Discourse=elaboration:148->147
 13	make	make	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	6	acl:relcl	6:acl:relcl	_
 14	this	this	DET	DT	Number=Sing|PronType=Dem	15	det	15:det	Entity=(place-59
@@ -1387,8 +1434,8 @@
 5	many	many	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	decades	decade	NOUN	NNS	Number=Plur	3	obj	3:obj	_
 7	of	of	ADP	IN	_	10	case	10:case	_
-8	Ivy	Ivy	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(person-169(person-169
-9	League	League	PROPN	NNP	Number=Sing	10	compound	10:compound	_
+8	Ivy	Ivy	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(person-169(person-169|XML=<ref target:::"https://en.wikipedia.org/wiki/Ivy%20League">
+9	League	League	PROPN	NNP	Number=Sing	10	compound	10:compound	XML=</ref>
 10	elites	elite	NOUN	NNS	Number=Plur	6	nmod	6:nmod:of	Entity=person-169)
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	Professors	professor	NOUN	NNS	Number=Plur	10	conj	6:nmod:of|10:conj:and	Entity=(person-170
@@ -1400,32 +1447,34 @@
 # sent_id = AMALGUM_news_fighter-86
 # s_type = frag
 # text = ((WSS))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:151->149|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:151->149|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	WSS	WSS	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-65)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-87
 # s_type = q
 # text = Anything else you would like to add?
-1	Anything	anything	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:152->108|Entity=(object-172
+1	Anything	anything	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:152->108|Entity=(object-172|XML=<hi rend:::"bold">
 2	else	else	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 3	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	5	nsubj	5:nsubj|7:nsubj:xsubj	Entity=(person-50)
 4	would	would	AUX	MD	VerbForm=Fin	5	aux	5:aux	_
 5	like	like	VERB	VB	VerbForm=Inf	1	acl:relcl	1:acl:relcl	_
 6	to	to	PART	TO	_	7	mark	7:mark	_
 7	add	add	VERB	VB	VerbForm=Inf	5	xcomp	5:xcomp	Entity=object-172)|SpaceAfter=No
-8	?	?	PUNCT	.	_	5	punct	5:punct	_
+8	?	?	PUNCT	.	_	5	punct	5:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-88
 # s_type = frag
 # text = ((Hill))
-1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:153->152|SpaceAfter=No
-2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No
-3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No
-4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No
-5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
+1	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:153->152|SpaceAfter=No|XML=<hi rend:::"bold">
+2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	SpaceAfter=No|XML=</hi>
+3	Hill	Hill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-9)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
+4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	SpaceAfter=No|XML=<hi rend:::"bold">
+5	)	)	PUNCT	-RRB-	_	3	punct	3:punct	XML=</hi>
 
 # sent_id = AMALGUM_news_fighter-89
 # s_type = frag

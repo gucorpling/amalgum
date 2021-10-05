@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_pipeline
+# meta::title = Protesters arrested after barricading themselves inside portion of Keystone Oil Pipeline
+# meta::shortTitle = pipeline
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2012-12-03
+# meta::dateModified = 2015-02-04
+# meta::sourceURL = https://en.wikinews.org/wiki/Protesters_arrested_after_barricading_themselves_inside_portion_of_Keystone_Oil_Pipeline
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_pipeline
 # sent_id = AMALGUM_news_pipeline-1
 # s_type = decl
 # text = Protesters arrested after barricading themselves inside portion of Keystone Oil Pipeline
+# newpar = head (1 s)
 1	Protesters	protester	NOUN	NNS	Number=Plur	2	nsubj:pass	2:nsubj:pass	Discourse=preparation:1->5|Entity=(person-1)
 2	arrested	arrest	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 3	after	after	SCONJ	IN	_	4	mark	4:mark	Discourse=circumstance:2->1
@@ -17,16 +28,19 @@
 # sent_id = AMALGUM_news_pipeline-2
 # s_type = frag
 # text = Tuesday, December 4, 2012
-1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->5|Entity=(time-6)|SpaceAfter=No
+# newpar = p (1 s)
+1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->5|Entity=(time-6)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	December	December	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6(time-7)
+3	December	December	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-6(time-7)|XML=<date when:::"2012-12-04">
 4	4	4	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-8)
+6	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-6)(time-8)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_pipeline-3
 # s_type = frag
 # text = Matt and Glen
+# newpar = figure (4 s)
+# newpar1 = caption (4 s)
 1	Matt	Matt	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:4->5|Entity=(person-9)
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	Glen	Glen	PROPN	NNP	Number=Sing	1	conj	1:conj:and	_
@@ -76,20 +90,21 @@
 # text = Image: Tar Sands Blockade.
 1	Image	image	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:9->10|Entity=(abstract-18)|SpaceAfter=No
 2	:	:	PUNCT	:	_	5	punct	5:punct	_
-3	Tar	Tar	PROPN	NNP	Number=Sing	5	compound	5:compound	Discourse=attribution:10->6|Entity=(person-19)
+3	Tar	Tar	PROPN	NNP	Number=Sing	5	compound	5:compound	Discourse=attribution:10->6|Entity=(person-19)|XML=<ref target:::"http://www.flickr.com/photos/tarsandsblockade/8240841905/in/photostream">
 4	Sands	Sands	NOUN	NNS	Number=Plur	5	compound	5:compound	Entity=(person-20)
-5	Blockade	Blockade	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No
+5	Blockade	Blockade	PROPN	NNP	Number=Sing	1	dep	1:dep	SpaceAfter=No|XML=</ref>
 6	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_pipeline-7
 # s_type = decl
 # text = Two protesters in the United States who are associated with the 'Tar Sands Blockade' were arrested Monday after they barricaded themselves inside a portion of the Keystone Oil Pipeline under construction in Winona, Texas.
+# newpar = p (2 s)
 1	Two	2	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:11->5|Entity=(person-1
 2	protesters	protester	NOUN	NNS	Number=Plur	18	nsubj:pass	9:nsubj:pass|18:nsubj:pass	_
 3	in	in	ADP	IN	_	6	case	6:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(place-21
-5	United	Unite	VERB	NNP	Number=Sing	6	amod	6:amod	_
-6	States	State	PROPN	NNPS	Number=Plur	2	nmod	2:nmod:in	Entity=place-21)
+5	United	Unite	VERB	NNP	Number=Sing	6	amod	6:amod	XML=<ref target:::"https://en.wikinews.org/wiki/United_States">
+6	States	State	PROPN	NNPS	Number=Plur	2	nmod	2:nmod:in	Entity=place-21)|XML=</ref>
 7	who	who	PRON	WP	PronType=Rel	9	nsubj:pass	2:ref	Discourse=elaboration:12->11
 8	are	be	AUX	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	associated	associate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	2	acl:relcl	2:acl:relcl	_
@@ -112,21 +127,21 @@
 26	portion	portion	NOUN	NN	Number=Sing	22	obl	22:obl:inside	_
 27	of	of	ADP	IN	_	31	case	31:case	_
 28	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(abstract-3
-29	Keystone	Keystone	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(place-4)
+29	Keystone	Keystone	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(place-4)|XML=<ref target:::"https://en.wikipedia.org/wiki/Keystone%20Pipeline">
 30	Oil	Oil	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(person-5)
-31	Pipeline	Pipeline	PROPN	NNP	Number=Sing	26	nmod	26:nmod:of	_
+31	Pipeline	Pipeline	PROPN	NNP	Number=Sing	26	nmod	26:nmod:of	XML=</ref>
 32	under	under	ADP	IN	_	33	case	33:case	Discourse=elaboration:15->14
 33	construction	construction	NOUN	NN	Number=Sing	31	nmod	31:nmod:under	Entity=(event-25
 34	in	in	ADP	IN	_	35	case	35:case	_
-35	Winona	Winona	PROPN	NNP	Number=Sing	33	nmod	33:nmod:in	Entity=(place-26|SpaceAfter=No
+35	Winona	Winona	PROPN	NNP	Number=Sing	33	nmod	33:nmod:in	Entity=(place-26|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Winona,%20Texas"></ref>
 36	,	,	PUNCT	,	_	37	punct	37:punct	_
-37	Texas	Texas	PROPN	NNP	Number=Sing	35	appos	35:appos	Entity=place-24)abstract-3)event-25)place-26)|SpaceAfter=No
+37	Texas	Texas	PROPN	NNP	Number=Sing	35	appos	35:appos	Entity=place-24)abstract-3)event-25)place-26)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Texas"></ref>
 38	.	.	PUNCT	.	_	18	punct	18:punct	_
 
 # sent_id = AMALGUM_news_pipeline-8
 # s_type = decl
 # text = TransCanada, which owns the pipeline, stopped construction once the protest began.
-1	TransCanada	TransCanada	PROPN	NNP	Number=Sing	8	nsubj	4:nsubj|8:nsubj	Discourse=joint:16->5|Entity=(organization-27|SpaceAfter=No
+1	TransCanada	TransCanada	PROPN	NNP	Number=Sing	8	nsubj	4:nsubj|8:nsubj	Discourse=joint:16->5|Entity=(organization-27|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/TransCanada%20Corporation"></ref>
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	which	which	PRON	WDT	PronType=Rel	4	nsubj	1:ref	Discourse=elaboration:17->16
 4	owns	own	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
@@ -144,6 +159,7 @@
 # sent_id = AMALGUM_news_pipeline-9
 # s_type = decl
 # text = "TransCanada Corporation didn’t bother to ask the people of this neighborhood if they wanted to have millions of gallons of poisonous tar sands pumped through their backyards," said one of the protesters inside the pipeline, Matt Almonte in a statement posted to the group's website.
+# newpar = p (3 s)
 1	"	''	PUNCT	``	_	6	punct	6:punct	Discourse=joint:20->5|SpaceAfter=No
 2	TransCanada	TransCanada	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-29(organization-27)
 3	Corporation	Corporation	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj|8:nsubj:xsubj	Entity=organization-29)
@@ -245,7 +261,7 @@
 16	Tar	Tar	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(abstract-22(person-19
 17	Sands	Sands	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-19)
 18	Blockade	Blockade	PROPN	NNP	Number=Sing	12	obl	12:obl:with	Entity=abstract-22)
-19	today	today	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	Entity=(time-42)
+19	today	today	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	Entity=(time-42)|XML=<date when:::"2012-12-03"></date>
 20	to	to	PART	TO	_	21	mark	21:mark	Discourse=attribution:30->31
 21	say	say	VERB	VB	VerbForm=Inf	12	xcomp	12:xcomp	_
 22	loud	loud	ADV	RB	Degree=Pos	21	advmod	21:advmod	_
@@ -276,6 +292,7 @@
 # sent_id = AMALGUM_news_pipeline-12
 # s_type = decl
 # text = According to their website www.tarsandsblockade.org, Almonte and Collins entered the pipeline prior to about 7:30 a.m. local time.
+# newpar = p (6 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	4	case	4:case	Discourse=attribution:33->34
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	their	their	PRON	PRP$	Number=Plur|Person=3|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(abstract-50(abstract-36(abstract-47)
@@ -319,7 +336,7 @@
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
 18	weighing	weigh	VERB	VBG	VerbForm=Ger	14	advcl	14:advcl	Discourse=same_unit:38->36
 19	600	600	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	Entity=(abstract-55
-20	pounds	pound	NOUN	NNS	Number=Plur	18	obj	18:obj	Entity=abstract-55)
+20	pounds	pound	NOUN	NNS	Number=Plur	18	obj	18:obj	Entity=abstract-55)|XML=<ref target:::"https://en.wikipedia.org/wiki/Pound%20(mass)"></ref>
 21	each	each	PRON	DT	_	18	obl:tmod	18:obl:tmod	_
 22	and	and	CCONJ	CC	_	23	cc	23:cc	Discourse=sequence:39->38
 23	locked	lock	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
@@ -428,11 +445,12 @@
 # sent_id = AMALGUM_news_pipeline-18
 # s_type = decl
 # text = In a statement to Wikinews, spokesperson for TransCanada Grady Semmens called the incident "unfortunate" saying, "This project is about supplying Canadian and American oil to U.S. refineries, pushing out more expensive crude oil from foreign regimes that do not support American values of freedom and common sense — Libya, Venezuela and the Middle East."
+# newpar = p (2 s)
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:50->48
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Entity=(abstract-35
 3	statement	statement	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	Wikinews	Wikinews	PROPN	NNP	Number=Sing	3	nmod	3:nmod:to	Entity=abstract-35)(organization-66)|SpaceAfter=No
+5	Wikinews	Wikinews	PROPN	NNP	Number=Sing	3	nmod	3:nmod:to	Entity=abstract-35)(organization-66)|SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/Wikinews"></ref></hi>
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	spokesperson	spokesperson	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	Entity=(person-67
 8	for	for	ADP	IN	_	9	case	9:case	_
@@ -482,13 +500,13 @@
 52	common	common	ADJ	JJ	Degree=Pos	53	amod	53:amod	Entity=(abstract-75
 53	sense	sense	NOUN	NN	Number=Sing	50	conj	48:nmod:of|50:conj:and	Entity=organization-72)abstract-73)abstract-75)
 54	—	—	PUNCT	:	_	55	punct	55:punct	_
-55	Libya	Libya	PROPN	NNP	Number=Sing	42	appos	42:appos	Discourse=same_unit:55->53|Entity=(place-76)|SpaceAfter=No
+55	Libya	Libya	PROPN	NNP	Number=Sing	42	appos	42:appos	Discourse=same_unit:55->53|Entity=(place-76)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Libya"></ref>
 56	,	,	PUNCT	,	_	57	punct	57:punct	_
-57	Venezuela	Venezuela	PROPN	NNP	Number=Sing	55	conj	42:appos|55:conj:and	Entity=(place-77)
+57	Venezuela	Venezuela	PROPN	NNP	Number=Sing	55	conj	42:appos|55:conj:and	Entity=(place-77)|XML=<ref target:::"https://en.wikinews.org/wiki/Venezuela"></ref>
 58	and	and	CCONJ	CC	_	61	cc	61:cc	_
 59	the	the	DET	DT	Definite=Def|PronType=Art	61	det	61:det	Entity=(place-78
-60	Middle	Middle	PROPN	NNP	Number=Sing	61	compound	61:compound	_
-61	East	East	PROPN	NNP	Number=Sing	55	conj	42:appos|55:conj:and	Entity=place-78)|SpaceAfter=No
+60	Middle	Middle	PROPN	NNP	Number=Sing	61	compound	61:compound	XML=<ref target:::"https://en.wikinews.org/wiki/Middle_East">
+61	East	East	PROPN	NNP	Number=Sing	55	conj	42:appos|55:conj:and	Entity=place-78)|SpaceAfter=No|XML=</ref>
 62	.	.	PUNCT	.	_	25	punct	25:punct	SpaceAfter=No
 63	"	''	PUNCT	''	_	25	punct	25:punct	_
 
@@ -530,6 +548,7 @@
 # sent_id = AMALGUM_news_pipeline-20
 # s_type = decl
 # text = "It is unfortunate these protestors are trying to keep thousands of Americans from the jobs they depend on to provide for their families.
+# newpar = p (2 s)
 1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=preparation:60->63|SpaceAfter=No
 2	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	Entity=(abstract-82)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
@@ -584,6 +603,7 @@
 # sent_id = AMALGUM_news_pipeline-22
 # s_type = decl
 # text = Construction on portions of the pipeline were halted in January when the White House denied permits for it to be finished. "
+# newpar = p (2 s)
 1	Construction	construction	NOUN	NN	Number=Sing	8	nsubj:pass	8:nsubj:pass	Discourse=joint:65->63|Entity=(event-25
 2	on	on	ADP	IN	_	3	case	3:case	_
 3	portions	portion	NOUN	NNS	Number=Plur	1	nmod	1:nmod:on	Entity=(abstract-88
@@ -593,11 +613,11 @@
 7	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	aux:pass	8:aux:pass	_
 8	halted	halt	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	January	January	PROPN	NNP	Number=Sing	8	obl	8:obl:in	Entity=(time-89)
+10	January	January	PROPN	NNP	Number=Sing	8	obl	8:obl:in	Entity=(time-89)|XML=<date when:::"2012-01"></date>
 11	when	when	SCONJ	WRB	PronType=Int	15	mark	15:mark	Discourse=circumstance:66->65
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(organization-90
-13	White	White	PROPN	NNP	Number=Sing	14	compound	14:compound	_
-14	House	House	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Entity=organization-90)
+13	White	White	PROPN	NNP	Number=Sing	14	compound	14:compound	XML=<ref target:::"https://en.wikinews.org/wiki/White_House">
+14	House	House	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Entity=organization-90)|XML=</ref>
 15	denied	deny	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	8	advcl	8:advcl:when	_
 16	permits	permit	NOUN	NNS	Number=Plur	15	obj	15:obj	Entity=(abstract-91
 17	for	for	SCONJ	IN	_	21	mark	21:mark	_
@@ -654,15 +674,16 @@
 41	"	''	PUNCT	''	_	6	punct	6:punct	_
 42	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=attribution:73->70
 43	President	President	PROPN	NNP	Number=Sing	42	nsubj	42:nsubj	Entity=(person-98
-44	Barack	Barack	PROPN	NNP	Number=Sing	43	flat	43:flat	_
-45	Obama	Obama	PROPN	NNP	Number=Sing	43	flat	43:flat	Entity=person-98)
+44	Barack	Barack	PROPN	NNP	Number=Sing	43	flat	43:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Barack_Obama">
+45	Obama	Obama	PROPN	NNP	Number=Sing	43	flat	43:flat	Entity=person-98)|XML=</ref>
 46	in	in	ADP	IN	_	47	case	47:case	_
-47	January	January	PROPN	NNP	Number=Sing	42	obl	42:obl:in	Entity=(time-89)|SpaceAfter=No
+47	January	January	PROPN	NNP	Number=Sing	42	obl	42:obl:in	Entity=(time-89)|SpaceAfter=No|XML=<date when:::"2012-01"></date>
 48	.	.	PUNCT	.	_	42	punct	42:punct	_
 
 # sent_id = AMALGUM_news_pipeline-24
 # s_type = decl
 # text = The portion of the pipeline affected by the protesters is part of the 'Gulf Coast Pipeline Project' that is to be about 485 miles long and consist of a "36-inch crude oil pipeline beginning in Cushing, Oklahoma and extending south to Nederland, Texas", says TransCanada on their website.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:74->63|Entity=(abstract-99
 2	portion	portion	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
 3	of	of	ADP	IN	_	5	case	5:case	_
@@ -701,14 +722,14 @@
 36	pipeline	pipeline	NOUN	NN	Number=Sing	29	obl	29:obl:of	_
 37	beginning	begin	VERB	VBG	VerbForm=Ger	36	acl	36:acl	Discourse=elaboration:79->78
 38	in	in	ADP	IN	_	39	case	39:case	_
-39	Cushing	Cushing	PROPN	NNP	Number=Sing	37	obl	37:obl:in	Entity=(place-103|SpaceAfter=No
+39	Cushing	Cushing	PROPN	NNP	Number=Sing	37	obl	37:obl:in	Entity=(place-103|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Cushing,%20Oklahoma"></ref>
 40	,	,	PUNCT	,	_	41	punct	41:punct	_
-41	Oklahoma	Oklahoma	PROPN	NNP	Number=Sing	39	appos	39:appos	Entity=place-103)(place-104)
+41	Oklahoma	Oklahoma	PROPN	NNP	Number=Sing	39	appos	39:appos	Entity=place-103)(place-104)|XML=<ref target:::"https://en.wikinews.org/wiki/Oklahoma"></ref>
 42	and	and	CCONJ	CC	_	43	cc	43:cc	Discourse=joint:80->79
 43	extending	extend	VERB	VBG	VerbForm=Ger	37	conj	36:acl|37:conj:and	_
 44	south	south	ADV	RB	Degree=Pos	43	advmod	43:advmod	Entity=place-10)
 45	to	to	ADP	IN	_	46	case	46:case	_
-46	Nederland	Nederland	PROPN	NNP	Number=Sing	43	obl	43:obl:to	Entity=(place-105|SpaceAfter=No
+46	Nederland	Nederland	PROPN	NNP	Number=Sing	43	obl	43:obl:to	Entity=(place-105|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Nederland,%20Texas"></ref>
 47	,	,	PUNCT	,	_	48	punct	48:punct	_
 48	Texas	Texas	PROPN	NNP	Number=Sing	46	appos	46:appos	Entity=place-105)(place-106)|SpaceAfter=No
 49	"	''	PUNCT	''	_	36	punct	36:punct	SpaceAfter=No

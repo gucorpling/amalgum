@@ -1,7 +1,20 @@
+# meta::id = AMALGUM_interview_shiflett
+# meta::title = part2_Wikinews interviews three figures from Donald Trump's political past
+# meta::shortTitle = shiflett
+# meta::type = interview
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2016-03-12
+# meta::dateModified = 2016-05-16
+# meta::sourceURL = https://en.wikinews.org/wiki/Wikinews_interviews_three_figures_from_Donald_Trump%27s_political_past
+# meta::speakerList = #Stone, #WilliamSSaturn
+# meta::speakerCount = 2
 # newdoc id = AMALGUM_interview_shiflett
 # sent_id = AMALGUM_interview_shiflett-1
 # s_type = decl
 # text = I've been writing an article on Wikipedia about Trump's 2000 presidential campaign.
+# newpar = sp who:::"#WilliamSSaturn" (3 s)
+# newpar1 = p (3 s)
+# newpar2 = hi rend:::"bold" (3 s)
 1-2	I've	_	_	_	_	_	_	_	_
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	4	nsubj	4:nsubj	Discourse=preparation:1->6|Entity=(person-1)
 2	've	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
@@ -15,7 +28,7 @@
 10-11	Trump's	_	_	_	_	_	_	_	_
 10	Trump	Trump	PROPN	NNP	Number=Sing	14	nmod:poss	14:nmod:poss	Entity=(event-4(person-5
 11	's	's	PART	POS	_	10	case	10:case	Entity=person-5)
-12	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	14	compound	14:compound	_
+12	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	14	compound	14:compound	XML=<date when:::"2000"></date>
 13	presidential	presidential	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	campaign	campaign	NOUN	NN	Number=Sing	6	nmod	6:nmod:about	Entity=abstract-2)event-4)|SpaceAfter=No
 15	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -55,6 +68,10 @@
 # sent_id = AMALGUM_interview_shiflett-4
 # s_type = decl
 # text = I have wanted Donald to run since 1988 when I arranged for him to speak to the Portsmouth, New Hampshire Chamber of Commerce.
+# newpar = sp who:::"#Stone" (5 s)
+# newpar1 = p (5 s)
+# newpar2 = list type:::"unordered" (5 s)
+# newpar3 = item (5 s)
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	Discourse=ROOT:6|Entity=(person-6)
 2	have	have	AUX	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	wanted	want	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -62,7 +79,7 @@
 5	to	to	PART	TO	_	6	mark	6:mark	_
 6	run	run	VERB	VB	VerbForm=Inf	3	xcomp	3:xcomp	_
 7	since	since	ADP	IN	_	8	case	8:case	Discourse=elaboration:7->6
-8	1988	1988	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:since	Entity=(time-9)
+8	1988	1988	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:since	Entity=(time-9)|XML=<date when:::"1988"></date>
 9	when	when	SCONJ	WRB	PronType=Int	11	mark	11:mark	Discourse=circumstance:8->7
 10	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	11	nsubj	11:nsubj|15:nsubj:xsubj	Entity=(person-6)
 11	arranged	arrange	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	3	advcl	3:advcl:when	_
@@ -72,10 +89,10 @@
 15	speak	speak	VERB	VB	VerbForm=Inf	11	xcomp	11:xcomp	_
 16	to	to	ADP	IN	_	22	case	22:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(organization-10
-18	Portsmouth	Portsmouth	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-11)|SpaceAfter=No
+18	Portsmouth	Portsmouth	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-11)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Portsmouth,%20New%20Hampshire"></ref>
 19	,	,	PUNCT	,	_	18	punct	18:punct	_
-20	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-12
-21	Hampshire	Hampshire	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-12)
+20	New	New	PROPN	NNP	Number=Sing	22	compound	22:compound	Entity=(place-12|XML=<ref target:::"https://en.wikinews.org/wiki/New_Hampshire">
+21	Hampshire	Hampshire	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=place-12)|XML=</ref>
 22	Chamber	Chamber	PROPN	NNP	Number=Sing	15	obl	15:obl:to	_
 23	of	of	ADP	IN	_	24	case	24:case	_
 24	Commerce	Commerce	PROPN	NNP	Number=Sing	22	nmod	22:nmod:of	Entity=organization-10)(person-13)|SpaceAfter=No
@@ -90,7 +107,7 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	run	run	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-14)
+7	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-14)|XML=<date when:::"2000"></date>
 8	—	—	PUNCT	:	_	10	punct	10:punct	Discourse=preparation:10->14
 9	probably	probably	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
 10	more	more	ADV	RBR	Degree=Cmp	2	advmod	2:advmod	_
@@ -132,12 +149,12 @@
 4	to	to	PART	TO	_	5	mark	5:mark	_
 5	run	run	VERB	VB	VerbForm=Inf	2	xcomp	2:xcomp	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-19)
+7	2012	2012	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-19)|XML=<date when:::"2012"></date>
 8	and	and	CCONJ	CC	_	9	cc	9:cc	Discourse=joint:15->14
 9	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	2	conj	2:conj:and	_
 10	him	he	PRON	PRP	Case=Acc|Gender=Masc|Number=Sing|Person=3|PronType=Prs	9	iobj	9:iobj	Entity=(person-8)
-11	Mitt	Mitt	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Entity=(person-20
-12	Romney	Romney	PROPN	NNP	Number=Sing	11	flat	11:flat	Entity=person-20)
+11	Mitt	Mitt	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Entity=(person-20|XML=<ref target:::"https://en.wikinews.org/wiki/Mitt_Romney">
+12	Romney	Romney	PROPN	NNP	Number=Sing	11	flat	11:flat	Entity=person-20)|XML=</ref>
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	Entity=(person-20
 15	stone-cold	stone-cold	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
@@ -159,10 +176,10 @@
 10	like	like	ADP	IN	_	12	case	12:case	_
 11	that	that	DET	DT	Number=Sing|PronType=Dem	12	det	12:det	Entity=(animal-21
 12	turkey	turkey	NOUN	NN	Number=Sing	2	nmod	2:nmod:like	_
-13	McKay	McKay	PROPN	NNP	Number=Sing	12	flat	12:flat	_
-14	Coppins	Coppins	PROPN	NNP	Number=Sing	12	flat	12:flat	_
+13	McKay	McKay	PROPN	NNP	Number=Sing	12	flat	12:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/McKay%20Coppins">
+14	Coppins	Coppins	PROPN	NNP	Number=Sing	12	flat	12:flat	XML=</ref>
 15	of	of	ADP	IN	_	16	case	16:case	_
-16	BuzzFeed	BuzzFeed	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	Entity=person-20)animal-21)(abstract-22)|SpaceAfter=No
+16	BuzzFeed	BuzzFeed	PROPN	NNP	Number=Sing	13	nmod	13:nmod:of	Entity=person-20)animal-21)(abstract-22)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/BuzzFeed"></ref>
 17	,	,	PUNCT	,	_	2	punct	2:punct	_
 18	look	look	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=joint:19->18
 19	like	like	ADP	IN	_	20	case	20:case	_
@@ -173,7 +190,9 @@
 # sent_id = AMALGUM_interview_shiflett-9
 # s_type = wh
 # text = Why were you willing to join Trump's 2016 presidential campaign after he was quoted in 2008 by The New Yorker describing you as a "stone cold loser" who "always tries taking credit for things he never did"?
-1	Why	why	SCONJ	WRB	PronType=Int	4	advmod	4:advmod	Discourse=question:20->26
+# newpar = sp who:::"#WilliamSSaturn" (1 s)
+# newpar1 = p (1 s)
+1	Why	why	SCONJ	WRB	PronType=Int	4	advmod	4:advmod	Discourse=question:20->26|XML=<hi rend:::"bold">
 2	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=2|Tense=Past|VerbForm=Fin	4	aux	4:aux	_
 3	you	you	PRON	PRP	Case=Nom|Number=Sing|Person=2|PronType=Prs	4	nsubj	4:nsubj|6:nsubj:xsubj	Entity=(person-6)
 4	willing	willing	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -182,7 +201,7 @@
 7-8	Trump's	_	_	_	_	_	_	_	_
 7	Trump	Trump	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Entity=(abstract-24(person-5
 8	's	's	PART	POS	_	7	case	7:case	Entity=person-5)
-9	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	11	compound	11:compound	_
+9	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	11	compound	11:compound	XML=<date when:::"2016"></date>
 10	presidential	presidential	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	campaign	campaign	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=abstract-24)
 12	after	after	SCONJ	IN	_	15	mark	15:mark	Discourse=circumstance:21->22
@@ -192,9 +211,9 @@
 16	in	in	ADP	IN	_	17	case	17:case	_
 17	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	15	obl	15:obl:in	Entity=(time-25)
 18	by	by	ADP	IN	_	21	case	21:case	_
-19	The	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(organization-26
+19	The	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(organization-26|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/The%20New%20Yorker">
 20	New	New	ADJ	NNP	Number=Sing	21	amod	21:amod	_
-21	Yorker	Yorker	PROPN	NNP	Number=Sing	15	obl	15:obl:by	Discourse=same_unit:22->20|Entity=organization-26)
+21	Yorker	Yorker	PROPN	NNP	Number=Sing	15	obl	15:obl:by	Discourse=same_unit:22->20|Entity=organization-26)|XML=</ref></hi>
 22	describing	describe	VERB	VBG	VerbForm=Ger	15	advcl	15:advcl	_
 23	you	you	PRON	PRP	Case=Acc|Number=Sing|Person=2|PronType=Prs	22	obj	22:obj	Entity=(person-6)
 24	as	as	ADP	IN	_	29	case	29:case	_
@@ -216,11 +235,15 @@
 40	never	never	ADV	RB	Polarity=Neg	41	advmod	41:advmod	_
 41	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	38	acl:relcl	38:acl:relcl	Entity=abstract-28)|SpaceAfter=No
 42	"	''	PUNCT	''	_	34	punct	34:punct	SpaceAfter=No
-43	?	?	PUNCT	.	_	4	punct	4:punct	_
+43	?	?	PUNCT	.	_	4	punct	4:punct	XML=</hi>
 
 # sent_id = AMALGUM_interview_shiflett-10
 # s_type = decl
 # text = I probably said some awful things about him too.
+# newpar = sp who:::"#Stone" (4 s)
+# newpar1 = p (4 s)
+# newpar2 = list type:::"unordered" (4 s)
+# newpar3 = item (4 s)
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	Discourse=joint:26->18|Entity=(person-6)
 2	probably	probably	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=1|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -252,8 +275,8 @@
 15	York	York	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=place-33)
 16	governor	governor	NOUN	NN	Number=Sing	10	nmod	10:nmod	Entity=person-32)|SpaceAfter=No
 17	]	]	PUNCT	-RRB-	_	16	punct	16:punct	Entity=abstract-31)
-18	Eliot	Eliot	PROPN	NNP	Number=Sing	16	appos	16:appos|23:nsubj	Discourse=joint:28->26|Entity=(person-32
-19	Spitzer	Spitzer	PROPN	NNP	Number=Sing	18	flat	18:flat	_
+18	Eliot	Eliot	PROPN	NNP	Number=Sing	16	appos	16:appos|23:nsubj	Discourse=joint:28->26|Entity=(person-32|XML=<ref target:::"https://en.wikinews.org/wiki/Eliot_Spitzer">
+19	Spitzer	Spitzer	PROPN	NNP	Number=Sing	18	flat	18:flat	XML=</ref>
 20	who	who	PRON	WP	PronType=Rel	23	nsubj	18:ref	Discourse=elaboration:29->28|Entity=(person-34
 21	was/is	was/i	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	cop	23:cop	_
 22	a	a	DET	DT	Definite=Ind|PronType=Art	23	det	23:det	_
@@ -295,13 +318,16 @@
 # sent_id = AMALGUM_interview_shiflett-14
 # s_type = wh
 # text = What are your thoughts on the 2016 presidential race thus far?
+# newpar = sp who:::"#WilliamSSaturn" (2 s)
+# newpar1 = p (2 s)
+# newpar2 = hi rend:::"bold" (2 s)
 1	What	what	PRON	WP	PronType=Int	0	root	0:root	Discourse=question:33->35
 2	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	1	cop	1:cop	_
 3	your	your	PRON	PRP$	Person=2|Poss=Yes|PronType=Prs	4	nmod:poss	4:nmod:poss	Entity=(abstract-38(person-6)
 4	thoughts	thought	NOUN	NNS	Number=Plur	1	nsubj	1:nsubj	_
 5	on	on	ADP	IN	_	9	case	9:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(event-39
-7	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	_
+7	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	9	compound	9:compound	XML=<date when:::"2016"></date>
 8	presidential	presidential	ADJ	JJ	Degree=Pos	9	amod	9:amod	_
 9	race	race	NOUN	NN	Number=Sing	4	nmod	4:nmod:on	Entity=abstract-38)event-39)
 10	thus	thus	ADV	RB	_	11	advmod	11:advmod	_
@@ -322,6 +348,10 @@
 # sent_id = AMALGUM_interview_shiflett-16
 # s_type = decl
 # text = I strongly support Donald Trump for President.
+# newpar = sp who:::"#Stone" (12 s)
+# newpar1 = p (12 s)
+# newpar2 = list type:::"unordered" (12 s)
+# newpar3 = item (12 s)
 1	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	3	nsubj	3:nsubj	Discourse=joint:35->26|Entity=(person-6)
 2	strongly	strongly	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 3	support	support	VERB	VBP	Mood=Ind|Number=Sing|Person=1|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -444,10 +474,10 @@
 # sent_id = AMALGUM_interview_shiflett-23
 # s_type = decl
 # text = Jeb [Bush] gave Hillary [Clinton] a medal.
-1	Jeb	Jeb	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:47->26|Entity=(person-57)
+1	Jeb	Jeb	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:47->26|Entity=(person-57)|XML=<ref target:::"https://en.wikinews.org/wiki/Jeb_Bush">
 2	[	[	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=evidence:48->47|SpaceAfter=No
 3	Bush	Bush	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(person-57)|SpaceAfter=No
-4	]	]	PUNCT	-RRB-	_	3	punct	3:punct	_
+4	]	]	PUNCT	-RRB-	_	3	punct	3:punct	XML=</ref>
 5	gave	give	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=same_unit:49->47
 6	Hillary	Hillary	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Entity=(object-58(person-55)
 7	[	[	PUNCT	-LRB-	_	8	punct	8:punct	SpaceAfter=No
@@ -507,6 +537,7 @@
 # sent_id = AMALGUM_interview_shiflett-28
 # s_type = decl
 # text = Stone refused to answer additional questions on his recent activities including his potential run for the Libertarian Party's 2016 nomination for U.S. Senate in Florida and his October 2015 book The Clintons' War on Women.
+# newpar = p (3 s)
 1	Stone	Stone	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|4:nsubj:xsubj	Discourse=joint:54->52|Entity=(person-62)
 2	refused	refuse	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	to	to	PART	TO	_	4	mark	4:mark	_
@@ -527,7 +558,7 @@
 18-19	Party's	_	_	_	_	_	_	_	_
 18	Party	Party	PROPN	NNP	Number=Sing	21	nmod:poss	21:nmod:poss	_
 19	's	's	PART	POS	_	18	case	18:case	Entity=organization-67)
-20	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	21	compound	21:compound	_
+20	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	21	compound	21:compound	XML=<date when:::"2016"></date>
 21	nomination	nomination	NOUN	NN	Number=Sing	14	nmod	14:nmod:for	_
 22	for	for	ADP	IN	_	24	case	24:case	_
 23	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	24	compound	24:compound	Entity=(organization-68
@@ -536,16 +567,16 @@
 26	Florida	Florida	PROPN	NNP	Number=Sing	21	nmod	21:nmod:in	Entity=event-65)event-66)(place-69)
 27	and	and	CCONJ	CC	_	31	cc	31:cc	_
 28	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	Entity=(abstract-70(person-62)
-29	October	October	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(time-71)
-30	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	31	compound	31:compound	_
+29	October	October	PROPN	NNP	Number=Sing	31	compound	31:compound	Entity=(time-71)|XML=<date when:::"2015-10">
+30	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	31	compound	31:compound	XML=</date>
 31	book	book	NOUN	NN	Number=Sing	14	conj	10:nmod:including|14:conj:and	Entity=abstract-63)abstract-64)abstract-70)
-32	The	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Entity=(abstract-70
+32	The	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Entity=(abstract-70|XML=<hi rend:::"italic">
 33-34	Clintons'	_	_	_	_	_	_	_	_
 33	Clintons	Clinton	PROPN	NNPS	Number=Plur	35	nmod:poss	35:nmod:poss	Entity=(person-72
 34	'	's	PART	POS	_	33	case	33:case	Entity=person-72)
 35	War	War	PROPN	NNP	Number=Sing	31	appos	31:appos	_
 36	on	on	ADP	IN	_	37	case	37:case	_
-37	Women	woman	PROPN	NNP	Number=Sing	35	nmod	35:nmod:on	Entity=abstract-70)(person-62)|SpaceAfter=No
+37	Women	woman	PROPN	NNP	Number=Sing	35	nmod	35:nmod:on	Entity=abstract-70)(person-62)|SpaceAfter=No|XML=</hi>
 38	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_interview_shiflett-29
@@ -561,19 +592,19 @@
 8	theory	theory	NOUN	NN	Number=Sing	5	obj	5:obj	_
 9	espoused	espouse	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	8:acl	Discourse=elaboration:57->56
 10	by	by	ADP	IN	_	16	case	16:case	_
-11	1996	1996	NUM	CD	NumForm=Digit|NumType=Card	16	compound	16:compound	Entity=(person-75
+11	1996	1996	NUM	CD	NumForm=Digit|NumType=Card	16	compound	16:compound	Entity=(person-75|XML=<date when:::"1996"></date>
 12	Reform	Reform	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(organization-16(organization-17)
 13	Party	Party	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=organization-16)
 14	vice	vice	NOUN	NN	Number=Sing	15	compound	15:compound	Entity=(abstract-76)
 15	presidential	presidential	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	nominee	nominee	NOUN	NN	Number=Sing	9	obl	9:obl:by	_
-17	Pat	Pat	PROPN	NNP	Number=Sing	16	appos	16:appos	_
-18	Choate	Choate	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-75)
+17	Pat	Pat	PROPN	NNP	Number=Sing	16	appos	16:appos	XML=<ref target:::"https://en.wikipedia.org/wiki/Pat%20Choate">
+18	Choate	Choate	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-75)|XML=</ref>
 19	that	that	SCONJ	IN	_	29	mark	29:mark	Discourse=joint:58->52
 20-21	Trump's	_	_	_	_	_	_	_	_
 20	Trump	Trump	PROPN	NNP	Number=Sing	24	nmod:poss	24:nmod:poss	Entity=(abstract-77(event-78(person-5
 21	's	's	PART	POS	_	20	case	20:case	Entity=person-5)
-22	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	24	compound	24:compound	_
+22	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	24	compound	24:compound	XML=<date when:::"2000"></date>
 23	presidential	presidential	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	exploration	exploration	NOUN	NN	Number=Sing	29	nsubj	29:nsubj	Entity=event-78)
 25	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	29	cop	29:cop	_
@@ -618,18 +649,21 @@
 # sent_id = AMALGUM_interview_shiflett-31
 # s_type = frag
 # text = Dave Shiflett
+# newpar = head (1 s)
 1	Dave	Dave	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:62->52|Entity=(person-81
 2	Shiflett	Shiflett	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-81)
 
 # sent_id = AMALGUM_interview_shiflett-32
 # s_type = decl
 # text = Cover of The America We Deserve Image: Renaissance Books.
+# newpar = figure (1 s)
+# newpar1 = caption (1 s)
 1	Cover	cover	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:63->62|Entity=(abstract-82
 2	of	of	ADP	IN	_	4	case	4:case	_
-3	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(place-61
+3	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(place-61|XML=<hi rend:::"italic">
 4	America	America	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	_
 5	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	6	nsubj	6:nsubj	Discourse=preparation:64->65|Entity=(person-29)
-6	Deserve	deserve	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Entity=abstract-82)place-61)
+6	Deserve	deserve	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	4	acl:relcl	4:acl:relcl	Entity=abstract-82)place-61)|XML=</hi>
 7	Image	image	NOUN	NN	Number=Sing	1	nsubj	1:nsubj	Entity=(object-83)|SpaceAfter=No
 8	:	:	PUNCT	:	_	10	punct	10:punct	_
 9	Renaissance	Renaissance	PROPN	NNP	Number=Sing	10	compound	10:compound	Discourse=elaboration:65->63|Entity=(organization-84)
@@ -639,10 +673,11 @@
 # sent_id = AMALGUM_interview_shiflett-33
 # s_type = decl
 # text = Last December, Wikinews reached out to writer Dave Shiflett to talk about his experience with Trump in co-writing The America We Deserve.
+# newpar = p (10 s)
 1	Last	last	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:66->62|Entity=(time-85
 2	December	December	PROPN	NNP	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=time-85)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	Wikinews	Wikinews	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=(organization-86)
+4	Wikinews	Wikinews	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=(organization-86)|XML=<hi rend:::"italic"></hi>
 5	reached	reach	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	out	out	ADP	RP	_	5	compound:prt	5:compound:prt	_
 7	to	to	ADP	IN	_	8	case	8:case	_
@@ -658,10 +693,10 @@
 17	Trump	Trump	PROPN	NNP	Number=Sing	15	nmod	15:nmod:with	Entity=abstract-87)(person-5)
 18	in	in	SCONJ	IN	_	19	mark	19:mark	Discourse=circumstance:68->66
 19	co-writing	co-write	VERB	VBG	VerbForm=Ger	12	advcl	12:advcl:in	_
-20	The	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(place-61
+20	The	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(place-61|XML=<hi rend:::"italic">
 21	America	America	PROPN	NNP	Number=Sing	19	obj	19:obj	_
 22	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	23	nsubj	23:nsubj	Discourse=elaboration:69->68|Entity=(person-29)
-23	Deserve	deserve	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	Entity=place-61)|SpaceAfter=No
+23	Deserve	deserve	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	21	acl:relcl	21:acl:relcl	Entity=place-61)|SpaceAfter=No|XML=</hi>
 24	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_interview_shiflett-34
@@ -671,9 +706,9 @@
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	Shiflett	Shiflett	PROPN	NNP	Number=Sing	11	obl	11:obl:according_to	Entity=(person-81
 4	in	in	ADP	IN	_	7	case	7:case	_
-5	The	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(organization-89
+5	The	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(organization-89|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/The%20American%20Spectator">
 6	American	American	ADJ	NNP	Number=Sing	7	amod	7:amod	_
-7	Spectator	Spectator	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	Entity=person-81)organization-89)|SpaceAfter=No
+7	Spectator	Spectator	PROPN	NNP	Number=Sing	3	nmod	3:nmod:in	Entity=person-81)organization-89)|SpaceAfter=No|XML=</ref></hi>
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	Shiflett	Shiflett	PROPN	NNP	Number=Sing	11	nsubj:pass	11:nsubj:pass	Discourse=joint:71->62|Entity=(person-81)
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
@@ -693,8 +728,8 @@
 24	"	''	PUNCT	``	_	28	punct	28:punct	SpaceAfter=No
 25	most	most	ADV	RBS	Degree=Sup	26	advmod	26:advmod	_
 26	eminent	eminent	ADJ	JJ	Degree=Pos	28	amod	28:amod	_
-27	hack	hack	NOUN	NN	Number=Sing	28	compound	28:compound	Entity=(abstract-91)
-28	writer	writer	NOUN	NN	Number=Sing	22	obj	22:obj	_
+27	hack	hack	NOUN	NN	Number=Sing	28	compound	28:compound	Entity=(abstract-91)|XML=<ref target:::"https://en.wikipedia.org/wiki/hack%20writer">
+28	writer	writer	NOUN	NN	Number=Sing	22	obj	22:obj	XML=</ref>
 29	in	in	ADP	IN	_	30	case	30:case	_
 30	America	America	PROPN	NNP	Number=Sing	28	nmod	28:nmod:in	Entity=(place-61)|SpaceAfter=No
 31	"	''	PUNCT	''	_	28	punct	28:punct	Entity=person-62)abstract-90)person-88)
@@ -737,8 +772,8 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	released	release	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl:in	Entity=(time-94
-6	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	5	nmod:tmod	5:nmod:tmod	Entity=time-94)(time-14)|SpaceAfter=No
+5	January	January	PROPN	NNP	Number=Sing	3	obl	3:obl:in	Entity=(time-94|XML=<date when:::"2000-01">
+6	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	5	nmod:tmod	5:nmod:tmod	Entity=time-94)(time-14)|SpaceAfter=No|XML=</date>
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(time-95
 9	month	month	NOUN	NN	Number=Sing	3	obl:npmod	3:obl:npmod	_
@@ -765,16 +800,16 @@
 8	's	's	PART	POS	_	7	case	7:case	Entity=person-5)
 9	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	10	amod	10:amod	_
 10	book	book	NOUN	NN	Number=Sing	5	obl	5:obl:as	Entity=abstract-70)
-11	The	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(abstract-70
+11	The	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(abstract-70|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/The%20Art%20of%20the%20Deal">
 12	Art	Art	PROPN	NNP	Number=Sing	10	appos	10:appos	_
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(place-96
-15	Deal	Deal	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	Entity=abstract-70)place-96)|SpaceAfter=No
+15	Deal	Deal	PROPN	NNP	Number=Sing	12	nmod	12:nmod:of	Entity=abstract-70)place-96)|SpaceAfter=No|XML=</ref></hi>
 16	,	,	PUNCT	,	_	5	punct	5:punct	_
-17	The	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Discourse=joint:81->62|Entity=(place-61
+17	The	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Discourse=joint:81->62|Entity=(place-61|XML=<hi rend:::"italic">
 18	America	America	PROPN	NNP	Number=Sing	22	nsubj	22:nsubj	_
 19	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	20	nsubj	20:nsubj	Discourse=elaboration:82->81|Entity=(person-29)
-20	Deserve	deserve	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Entity=place-61)
+20	Deserve	deserve	VERB	VBP	Mood=Ind|Number=Plur|Person=1|Tense=Pres|VerbForm=Fin	18	acl:relcl	18:acl:relcl	Entity=place-61)|XML=</hi>
 21	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	22	aux	22:aux	Discourse=same_unit:83->82
 22	had	have	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 23	more	more	ADJ	JJR	Degree=Cmp	24	amod	24:amod	Entity=(abstract-97
@@ -789,7 +824,7 @@
 # s_type = decl
 # text = In November, Trump pointed to the book to claim he recognized the threat of terrorism before the attacks of 9/11; the book does warn of attacks by suitcase nuclear device and anthrax.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:84->62
-2	November	November	PROPN	NNP	Number=Sing	5	obl	5:obl:in	Entity=(time-98)|SpaceAfter=No
+2	November	November	PROPN	NNP	Number=Sing	5	obl	5:obl:in	Entity=(time-98)|SpaceAfter=No|XML=<date when:::"2015-11"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Trump	Trump	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=(person-5)
 5	pointed	point	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -806,9 +841,9 @@
 16	terrorism	terrorism	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=abstract-79)(abstract-99)
 17	before	before	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(event-100
-19	attacks	attack	NOUN	NNS	Number=Plur	12	obl	12:obl:before	_
+19	attacks	attack	NOUN	NNS	Number=Plur	12	obl	12:obl:before	XML=<ref target:::"https://en.wikinews.org/wiki/September_11_attacks">
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	9/11	9/11	NUM	CD	NumForm=Word|NumType=Card	19	nmod	19:nmod:of	Entity=event-100)(event-101)|SpaceAfter=No
+21	9/11	9/11	NUM	CD	NumForm=Word|NumType=Card	19	nmod	19:nmod:of	Entity=event-100)(event-101)|SpaceAfter=No|XML=</ref>
 22	;	;	PUNCT	:	_	26	punct	26:punct	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Discourse=joint:87->86|Entity=(abstract-70
 24	book	book	NOUN	NN	Number=Sing	26	nsubj	26:nsubj	Entity=abstract-70)
@@ -817,11 +852,11 @@
 27	of	of	ADP	IN	_	28	case	28:case	_
 28	attacks	attack	NOUN	NNS	Number=Plur	26	obl	26:obl:of	Entity=(event-100
 29	by	by	ADP	IN	_	32	case	32:case	_
-30	suitcase	suitcase	NOUN	NN	Number=Sing	32	compound	32:compound	Entity=(object-102
+30	suitcase	suitcase	NOUN	NN	Number=Sing	32	compound	32:compound	Entity=(object-102|XML=<ref target:::"https://en.wikipedia.org/wiki/suitcase%20nuclear%20device">
 31	nuclear	nuclear	ADJ	JJ	Degree=Pos	32	amod	32:amod	_
-32	device	device	NOUN	NN	Number=Sing	28	nmod	28:nmod:by	Entity=object-102)
+32	device	device	NOUN	NN	Number=Sing	28	nmod	28:nmod:by	Entity=object-102)|XML=</ref>
 33	and	and	CCONJ	CC	_	34	cc	34:cc	_
-34	anthrax	anthrax	NOUN	NN	Number=Sing	32	conj	28:nmod:by|32:conj:and	Entity=event-100)(substance-103)|SpaceAfter=No
+34	anthrax	anthrax	NOUN	NN	Number=Sing	32	conj	28:nmod:by|32:conj:and	Entity=event-100)(substance-103)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/anthrax"></ref>
 35	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_interview_shiflett-39
@@ -856,14 +891,14 @@
 26	odds	odd	NOUN	NNS	Number=Plur	15	advcl	15:advcl:as	_
 27	with	with	ADP	IN	_	30	case	30:case	_
 28	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	30	nmod:poss	30:nmod:poss	Entity=(abstract-108(person-5)
-29	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	30	compound	30:compound	_
+29	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	30	compound	30:compound	XML=<date when:::"2016"></date>
 30	platform	platform	NOUN	NN	Number=Sing	26	nmod	26:nmod:with	Entity=abstract-108)
 31	including	include	VERB	VBG	VerbForm=Ger	26	case	26:case	Discourse=elaboration:92->91
 32	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	34:det	Entity=(abstract-109
 33	pro-choice	pro-choice	ADJ	JJ	Degree=Pos	34	amod	34:amod	_
 34	position	position	NOUN	NN	Number=Sing	26	obj	26:obj	_
 35	on	on	ADP	IN	_	36	case	36:case	_
-36	abortion	abortion	NOUN	NN	Number=Sing	34	nmod	34:nmod:on	Entity=(abstract-110)
+36	abortion	abortion	NOUN	NN	Number=Sing	34	nmod	34:nmod:on	Entity=(abstract-110)|XML=<ref target:::"https://en.wikinews.org/wiki/Abortion"></ref>
 37	(	(	PUNCT	-LRB-	_	39	punct	39:punct	Discourse=elaboration:93->91|SpaceAfter=No
 38	while	while	SCONJ	IN	_	39	mark	39:mark	Discourse=circumstance:94->93
 39	noting	note	VERB	VBG	VerbForm=Ger	34	acl	34:acl:while	_
@@ -878,9 +913,9 @@
 48	a	a	DET	DT	Definite=Ind|PronType=Art	49	det	49:det	Discourse=same_unit:95->90|Entity=(event-113
 49	ban	ban	NOUN	NN	Number=Sing	34	conj	26:obj|34:conj:and	_
 50	on	on	ADP	IN	_	53	case	53:case	_
-51	assault	assault	NOUN	NN	Number=Sing	52	compound	52:compound	Entity=(abstract-114(object-115(event-116)
+51	assault	assault	NOUN	NN	Number=Sing	52	compound	52:compound	Entity=(abstract-114(object-115(event-116)|XML=<ref target:::"https://en.wikinews.org/wiki/Gun_politics">
 52	weapon	weapon	NOUN	NN	Number=Sing	53	compound	53:compound	Entity=object-115)
-53	ownership	ownership	NOUN	NN	Number=Sing	49	nmod	49:nmod:on	Entity=event-113)abstract-114)
+53	ownership	ownership	NOUN	NN	Number=Sing	49	nmod	49:nmod:on	Entity=event-113)abstract-114)|XML=</ref>
 54	(	(	PUNCT	-LRB-	_	58	punct	58:punct	Discourse=elaboration:96->95|SpaceAfter=No
 55	as	as	SCONJ	IN	_	58	mark	58:mark	_
 56	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	58	cop	58:cop	_
@@ -891,19 +926,19 @@
 61	time	time	NOUN	NN	Number=Sing	58	nmod	58:nmod:at	_
 62	under	under	ADP	IN	_	67	case	67:case	_
 63	the	the	DET	DT	Definite=Def|PronType=Art	67	det	67:det	Entity=(abstract-118
-64	Federal	Federal	ADJ	NNP	Number=Sing	67	amod	67:amod	_
+64	Federal	Federal	ADJ	NNP	Number=Sing	67	amod	67:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Federal%20Assault%20Weapons%20Ban">
 65	Assault	Assault	PROPN	NNP	Number=Sing	66	compound	66:compound	Entity=(abstract-119(person-120)
 66	Weapons	weapon	PROPN	NNPS	Number=Plur	67	compound	67:compound	Entity=abstract-119)
-67	Ban	Ban	PROPN	NNP	Number=Sing	58	nmod	58:nmod:under	Entity=abstract-117)abstract-118)|SpaceAfter=No
+67	Ban	Ban	PROPN	NNP	Number=Sing	58	nmod	58:nmod:under	Entity=abstract-117)abstract-118)|SpaceAfter=No|XML=</ref>
 68	)	)	PUNCT	-RRB-	_	58	punct	58:punct	SpaceAfter=No
 69	,	,	PUNCT	,	_	72	punct	72:punct	_
 70	and	and	CCONJ	CC	_	72	cc	72:cc	Discourse=same_unit:97->95
 71	the	the	DET	DT	Definite=Def|PronType=Art	72	det	72:det	Entity=(event-121
 72	implementation	implementation	NOUN	NN	Number=Sing	34	conj	26:obj|34:conj:and	_
 73	of	of	ADP	IN	_	76	case	76:case	_
-74	single-payer	single-payer	ADJ	JJ	Degree=Pos	76	amod	76:amod	Entity=(abstract-122
+74	single-payer	single-payer	ADJ	JJ	Degree=Pos	76	amod	76:amod	Entity=(abstract-122|XML=<ref target:::"https://en.wikipedia.org/wiki/single-payer%20health%20care">
 75	health	health	NOUN	NN	Number=Sing	76	compound	76:compound	_
-76	care	care	NOUN	NN	Number=Sing	72	nmod	72:nmod:of	Entity=event-121)abstract-122)|SpaceAfter=No
+76	care	care	NOUN	NN	Number=Sing	72	nmod	72:nmod:of	Entity=event-121)abstract-122)|SpaceAfter=No|XML=</ref>
 77	.	.	PUNCT	.	_	15	punct	15:punct	_
 
 # sent_id = AMALGUM_interview_shiflett-40
@@ -922,7 +957,7 @@
 11	increased	increase	VERB	VBN	Tense=Past|VerbForm=Part	12	amod	12:amod	Entity=(abstract-123
 12	pressure	pressure	NOUN	NN	Number=Sing	9	nmod	9:nmod:including	_
 13	on	on	ADP	IN	_	14	case	14:case	_
-14	China	China	PROPN	NNP	Number=Sing	12	nmod	12:nmod:on	Entity=(place-124)|SpaceAfter=No
+14	China	China	PROPN	NNP	Number=Sing	12	nmod	12:nmod:on	Entity=(place-124)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/China"></ref>
 15	,	,	PUNCT	,	_	17	punct	17:punct	_
 16	fair	fair	ADJ	JJ	Degree=Pos	17	amod	17:amod	Entity=(abstract-125
 17	trade	trade	NOUN	NN	Number=Sing	14	conj	12:nmod:on|14:conj:and	Entity=abstract-125)|SpaceAfter=No
@@ -945,7 +980,7 @@
 8-9	Trump's	_	_	_	_	_	_	_	_
 8	Trump	Trump	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Entity=(abstract-24(person-5
 9	's	's	PART	POS	_	8	case	8:case	Entity=person-5)
-10	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	11	compound	11:compound	_
+10	2016	2016	NUM	CD	NumForm=Digit|NumType=Card	11	compound	11:compound	XML=<date when:::"2016"></date>
 11	campaign	campaign	NOUN	NN	Number=Sing	7	obj	7:obj	Entity=abstract-24)
 12	and	and	CCONJ	CC	_	15	cc	15:cc	Discourse=joint:102->101
 13	no	no	ADV	RB	Degree=Pos|Polarity=Neg	14	advmod	14:advmod	_

@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_iran
+# meta::title = Newspaper alleges U.S. drawing up plans to attack Iran
+# meta::shortTitle = iran
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2006-02-12
+# meta::dateModified = 2013-08-25
+# meta::sourceURL = https://en.wikinews.org/wiki/Newspaper_alleges_U.S._drawing_up_plans_to_attack_Iran
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_iran
 # sent_id = AMALGUM_news_iran-1
 # s_type = decl
 # text = Newspaper alleges U.S. drawing up plans to attack Iran
+# newpar = head (1 s)
 1	Newspaper	newspaper	NOUN	NN	Number=Sing	2	nsubj	2:nsubj	Discourse=preparation:1->5|Entity=(organization-1)
 2	alleges	allege	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	2	obj	2:obj	Entity=(place-2)
@@ -15,21 +26,23 @@
 # sent_id = AMALGUM_news_iran-2
 # s_type = frag
 # text = Sunday, February 12, 2006
-1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->5|Entity=(time-5)|SpaceAfter=No
+# newpar = p (1 s)
+1	Sunday	Sunday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->5|Entity=(time-5)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	February	February	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5
+3	February	February	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5|XML=<date when:::"2006-02-12">
 4	12	12	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)
+6	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_iran-3
 # s_type = decl
 # text = The British newspaper Sunday Telegraph has reported on alleged plans for a U.S. attack on Iran.
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=preparation:4->5|Entity=(organization-7(organization-1
-2	British	British	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
+2	British	British	ADJ	JJ	Degree=Pos	3	amod	3:amod	XML=<ref target:::"https://en.wikinews.org/wiki/United_Kingdom"></ref>
 3	newspaper	newspaper	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=organization-1)
-4	Sunday	Sunday	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(time-5)
-5	Telegraph	Telegraph	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=organization-7)
+4	Sunday	Sunday	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(time-5)|XML=<ref target:::"https://en.wikipedia.org/wiki/Sunday%20Telegraph">
+5	Telegraph	Telegraph	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=organization-7)|XML=</ref>
 6	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 7	reported	report	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 8	on	on	ADP	IN	_	10	case	10:case	_
@@ -37,10 +50,10 @@
 10	plans	plan	NOUN	NNS	Number=Plur	7	obl	7:obl:on	_
 11	for	for	ADP	IN	_	14	case	14:case	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(event-8
-13	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	14	compound	14:compound	Entity=(place-2)
+13	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	14	compound	14:compound	Entity=(place-2)|XML=<ref target:::"https://en.wikinews.org/wiki/United_States"></ref>
 14	attack	attack	NOUN	NN	Number=Sing	10	nmod	10:nmod:for	_
 15	on	on	ADP	IN	_	16	case	16:case	_
-16	Iran	Iran	PROPN	NNP	Number=Sing	14	nmod	14:nmod:on	Entity=abstract-3)event-8)(place-4)|SpaceAfter=No
+16	Iran	Iran	PROPN	NNP	Number=Sing	14	nmod	14:nmod:on	Entity=abstract-3)event-8)(place-4)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Iran"></ref>
 17	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_news_iran-4
@@ -73,13 +86,14 @@
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(event-13
 25	development	development	NOUN	NN	Number=Sing	22	nmod	22:nmod:in	_
 26	of	of	ADP	IN	_	28	case	28:case	_
-27	nuclear	nuclear	ADJ	JJ	Degree=Pos	28	amod	28:amod	Entity=(object-14
-28	weapons	weapon	NOUN	NNS	Number=Plur	25	nmod	25:nmod:of	Entity=abstract-11)abstract-12)event-13)object-14)|SpaceAfter=No
+27	nuclear	nuclear	ADJ	JJ	Degree=Pos	28	amod	28:amod	Entity=(object-14|XML=<ref target:::"https://en.wikipedia.org/wiki/Iran%20and%20weapons%20of%20mass%20destruction#Nuclear_weapons">
+28	weapons	weapon	NOUN	NNS	Number=Plur	25	nmod	25:nmod:of	Entity=abstract-11)abstract-12)event-13)object-14)|SpaceAfter=No|XML=</ref>
 29	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_iran-5
 # s_type = decl
 # text = The paper has also reported that the alleged plans to attack Iran may be a possible motivation for the development of nuclear weapons by Iran; there have been other threats of military response by both the U.S. and Israel.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:8->9|Entity=(organization-15
 2	paper	paper	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=organization-15)
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	aux	5:aux	_
@@ -110,7 +124,7 @@
 28	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	29	aux	29:aux	_
 29	been	be	VERB	VBN	Tense=Past|VerbForm=Part	5	parataxis	5:parataxis	_
 30	other	other	ADJ	JJ	Degree=Pos	31	amod	31:amod	Entity=(abstract-17
-31	threats	threat	NOUN	NNS	Number=Plur	29	nsubj	29:nsubj	_
+31	threats	threat	NOUN	NNS	Number=Plur	29	nsubj	29:nsubj	XML=<ref target:::"https://en.wikipedia.org/wiki/2005-2006%20US-Israeli%20threats%20to%20attack%20Iran"></ref>
 32	of	of	ADP	IN	_	34	case	34:case	_
 33	military	military	ADJ	JJ	Degree=Pos	34	amod	34:amod	Entity=(event-18
 34	response	response	NOUN	NN	Number=Sing	31	nmod	31:nmod:of	Entity=event-18)
@@ -119,17 +133,18 @@
 37	the	the	DET	DT	Definite=Def|PronType=Art	38	det	38:det	_
 38	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	31	nmod	31:nmod:by	Entity=place-2)
 39	and	and	CCONJ	CC	_	40	cc	40:cc	_
-40	Israel	Israel	PROPN	NNP	Number=Sing	38	conj	31:nmod:by|38:conj:and	Entity=abstract-17)(place-19)|SpaceAfter=No
+40	Israel	Israel	PROPN	NNP	Number=Sing	38	conj	31:nmod:by|38:conj:and	Entity=abstract-17)(place-19)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Israel"></ref>
 41	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_iran-6
 # s_type = decl
 # text = On February 12, 2006, the Sunday Telegraph claimed that strategists at the Pentagon are "drawing up plans for devastating bombing raids backed by submarine-launched ballistic missile attacks against Iran's nuclear sites" as '"a last resort" for the situation.
+# newpar = p (1 s)
 1	On	on	ADP	IN	_	3	case	3:case	Discourse=attribution:12->13
-2	February	February	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-5
+2	February	February	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-5|XML=<date when:::"2006-02-12">
 3	12	12	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:on	SpaceAfter=No
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
-5	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=time-5)(time-6)|SpaceAfter=No
+5	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=time-5)(time-6)|SpaceAfter=No|XML=</date>
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(organization-7
 8	Sunday	Sunday	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(time-5)
@@ -139,7 +154,7 @@
 12	strategists	strategist	NOUN	NNS	Number=Plur	18	nsubj	18:nsubj	Entity=(person-20
 13	at	at	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(place-21
-15	Pentagon	Pentagon	PROPN	NNP	Number=Sing	12	nmod	12:nmod:at	Entity=person-20)place-21)
+15	Pentagon	Pentagon	PROPN	NNP	Number=Sing	12	nmod	12:nmod:at	Entity=person-20)place-21)|XML=<ref target:::"https://en.wikipedia.org/wiki/Pentagon"></ref>
 16	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	18	aux	18:aux	_
 17	"	''	PUNCT	``	_	18	punct	18:punct	SpaceAfter=No
 18	drawing	draw	VERB	VBG	Tense=Pres|VerbForm=Part	10	ccomp	10:ccomp	_
@@ -177,6 +192,7 @@
 # sent_id = AMALGUM_news_iran-7
 # s_type = decl
 # text = The newspaper also claims that preparations are extremely active, stating, "Central Command and Strategic Command planners are identifying targets, assessing weapon-loads and working on logistics for an operation,".
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:15->16|Entity=(organization-1
 2	newspaper	newspaper	NOUN	NN	Number=Sing	4	nsubj	4:nsubj	Entity=organization-1)
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
@@ -216,18 +232,19 @@
 # sent_id = AMALGUM_news_iran-8
 # s_type = decl
 # text = Assessments of the time scale for Iran to possibly develop nuclear weapons include three to ten years.
+# newpar = p (2 s)
 1	Assessments	Assessment	NOUN	NNS	Number=Plur	13	nsubj	13:nsubj	Discourse=joint:21->5|Entity=(abstract-36
 2	of	of	ADP	IN	_	5	case	5:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(abstract-37
 4	time	time	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(abstract-38)
 5	scale	scale	NOUN	NN	Number=Sing	1	nmod	1:nmod:of	_
 6	for	for	SCONJ	IN	_	10	mark	10:mark	Discourse=purpose:22->21
-7	Iran	Iran	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Entity=(place-4)
+7	Iran	Iran	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Entity=(place-4)|XML=<ref target:::"https://en.wikipedia.org/wiki/Iran%20and%20weapons%20of%20mass%20destruction#Nuclear_weapons">
 8	to	to	PART	TO	_	10	mark	10:mark	_
 9	possibly	possibly	ADV	RB	Degree=Pos	10	advmod	10:advmod	_
 10	develop	develop	VERB	VB	VerbForm=Inf	5	acl	5:acl:for_to	_
 11	nuclear	nuclear	ADJ	JJ	Degree=Pos	12	amod	12:amod	Entity=(object-14
-12	weapons	weapon	NOUN	NNS	Number=Plur	10	obj	10:obj	Entity=abstract-36)abstract-37)object-14)
+12	weapons	weapon	NOUN	NNS	Number=Plur	10	obj	10:obj	Entity=abstract-36)abstract-37)object-14)|XML=</ref>
 13	include	include	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=same_unit:23->22
 14	three	3	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	Entity=(time-39
 15	to	to	ADP	IN	_	16	case	16:case	_
@@ -241,10 +258,10 @@
 1	According	accord	VERB	VBG	VerbForm=Ger	4	case	4:case	Discourse=attribution:24->25
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(organization-40
-4	Centre	Centre	PROPN	NNP	Number=Sing	23	obl	23:obl:according_to	_
+4	Centre	Centre	PROPN	NNP	Number=Sing	23	obl	23:obl:according_to	XML=<ref target:::"https://en.wikipedia.org/wiki/Centre%20for%20Nonproliferation%20Studies">
 5	for	for	ADP	IN	_	7	case	7:case	_
 6	Nonproliferation	Nonproliferation	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(abstract-41(place-42)
-7	Studies	Study	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:for	Entity=organization-40)abstract-41)|SpaceAfter=No
+7	Studies	Study	PROPN	NNPS	Number=Plur	4	nmod	4:nmod:for	Entity=organization-40)abstract-41)|SpaceAfter=No|XML=</ref>
 8	,	,	PUNCT	,	_	4	punct	4:punct	_
 9	cities	city	NOUN	NNS	Number=Plur	23	nsubj	23:nsubj	Entity=(place-43
 10	likely	likely	ADJ	JJ	Degree=Pos	9	amod	9:amod	Discourse=elaboration:25->21
@@ -265,7 +282,7 @@
 25	towns	town	NOUN	NNS	Number=Plur	23	obj	23:obj	_
 26	such	such	ADJ	JJ	Degree=Pos	28	case	28:case	_
 27	as	as	ADP	IN	_	26	fixed	26:fixed	_
-28	Bushehr	Bushehr	PROPN	NNP	Number=Sing	25	nmod	25:nmod:such_as	Entity=(place-46)
+28	Bushehr	Bushehr	PROPN	NNP	Number=Sing	25	nmod	25:nmod:such_as	Entity=(place-46)|XML=<ref target:::"https://en.wikipedia.org/wiki/Bushehr"></ref>
 29	or	or	CCONJ	CC	_	30	cc	30:cc	_
 30	Bushire	Bushire	PROPN	NNP	Number=Sing	28	conj	25:nmod:such_as|28:conj:or	Entity=(place-47)
 31	(	(	PUNCT	-LRB-	_	32	punct	32:punct	SpaceAfter=No
@@ -277,10 +294,10 @@
 37	as	as	ADP	IN	_	38	case	38:case	_
 38	165,000	165000	NUM	CD	NumForm=Digit|NumType=Card	36	obl	36:obl:as	Entity=(abstract-49)
 39	(	(	PUNCT	-LRB-	_	40	punct	40:punct	Discourse=elaboration:29->28|SpaceAfter=No
-40	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	35	nmod:tmod	35:nmod:tmod	Entity=(time-50)|SpaceAfter=No
+40	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	35	nmod:tmod	35:nmod:tmod	Entity=(time-50)|SpaceAfter=No|XML=<date when:::"2005"></date>
 41	)	)	PUNCT	-RRB-	_	40	punct	40:punct	Entity=person-48)
 42	and	and	CCONJ	CC	_	43	cc	43:cc	Discourse=same_unit:30->27
-43	Arak	Arak	PROPN	NNP	Number=Sing	28	conj	25:nmod:such_as|28:conj:and	Entity=(place-51
+43	Arak	Arak	PROPN	NNP	Number=Sing	28	conj	25:nmod:such_as|28:conj:and	Entity=(place-51|XML=<ref target:::"https://en.wikipedia.org/wiki/Arak,%20Iran"></ref>
 44	with	with	ADP	IN	_	46	case	46:case	_
 45	a	a	DET	DT	Definite=Ind|PronType=Art	46	det	46:det	Entity=(person-48
 46	population	population	NOUN	NN	Number=Sing	43	nmod	43:nmod:with	_
@@ -296,12 +313,13 @@
 56	mountain	mountain	NOUN	NN	Number=Sing	57	compound	57:compound	Entity=(place-54)
 57	town	town	NOUN	NN	Number=Sing	28	conj	25:nmod:such_as|28:conj:and	_
 58	of	of	ADP	IN	_	59	case	59:case	_
-59	Natanz	Natanz	PROPN	NNP	Number=Sing	57	nmod	57:nmod:of	Entity=place-45)place-53)(place-55)|SpaceAfter=No
+59	Natanz	Natanz	PROPN	NNP	Number=Sing	57	nmod	57:nmod:of	Entity=place-45)place-53)(place-55)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Natanz"></ref>
 60	.	.	PUNCT	.	_	23	punct	23:punct	_
 
 # sent_id = AMALGUM_news_iran-10
 # s_type = decl
 # text = Just a few days earlier, an InterPress Service article by Gareth Porter reported that two ex-CIA operatives, Paul Pillar and Ellen Laipson, as saying that one of the main reasons motivating Iran to move towards developing nuclear weapons was the belief in a threat of attack by the United States and/or Israel.
+# newpar = p (1 s)
 1	Just	just	ADV	RB	_	4	advmod	4:advmod	Discourse=joint:33->5|Entity=(time-56
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 3	few	few	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
@@ -319,7 +337,7 @@
 15	that	that	SCONJ	IN	_	45	mark	45:mark	_
 16	two	2	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	Entity=(person-62
 17	ex-	ex-	ADJ	JJ	Degree=Pos	19	amod	19:amod	SpaceAfter=No
-18	CIA	CIA	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(organization-63)
+18	CIA	CIA	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(organization-63)|XML=<ref target:::"https://en.wikinews.org/wiki/CIA"></ref>
 19	operatives	operative	NOUN	NNS	Number=Plur	45	nsubj	45:nsubj	Entity=person-62)|SpaceAfter=No
 20	,	,	PUNCT	,	_	21	punct	21:punct	_
 21	Paul	Paul	PROPN	NNP	Number=Sing	19	appos	19:appos	Entity=(person-62(person-62
@@ -349,7 +367,7 @@
 45	belief	belief	NOUN	NN	Number=Sing	28	ccomp	28:ccomp	_
 46	in	in	ADP	IN	_	48	case	48:case	_
 47	a	a	DET	DT	Definite=Ind|PronType=Art	48	det	48:det	Entity=(abstract-66
-48	threat	threat	NOUN	NN	Number=Sing	45	nmod	45:nmod:in	_
+48	threat	threat	NOUN	NN	Number=Sing	45	nmod	45:nmod:in	XML=<ref target:::"https://en.wikipedia.org/wiki/2005-2006%20US-Israeli%20threats%20to%20attack%20Iran">
 49	of	of	ADP	IN	_	50	case	50:case	_
 50	attack	attack	NOUN	NN	Number=Sing	48	nmod	48:nmod:of	Entity=(event-8
 51	by	by	ADP	IN	_	54	case	54:case	_
@@ -357,12 +375,13 @@
 53	United	Unite	VERB	NNP	Number=Sing	54	amod	54:amod	_
 54	States	State	PROPN	NNPS	Number=Plur	50	nmod	50:nmod:by	Entity=place-68)
 55	and/or	and/or	CCONJ	CC	_	56	cc	56:cc	_
-56	Israel	Israel	PROPN	NNP	Number=Sing	54	conj	50:nmod:by|54:conj:and/or	Entity=abstract-64)abstract-66)event-8)place-67)(place-19)|SpaceAfter=No
+56	Israel	Israel	PROPN	NNP	Number=Sing	54	conj	50:nmod:by|54:conj:and/or	Entity=abstract-64)abstract-66)event-8)place-67)(place-19)|SpaceAfter=No|XML=</ref>
 57	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = AMALGUM_news_iran-11
 # s_type = decl
 # text = According to this InterPress Service report, ex-CIA official Paul Pillar led the preparation of all National Intelligence Estimates (NIEs) on Iran from 2000 to 2005 in his role as national intelligence officer for the Near East and South Asia, and told the InterPress Service that all of the NIEs on Iran during that period "addressed the Iranian fears of U.S. attack explicitly and related their desire for nuclear weapons to those fears" and furthermore that "Iranian perceptions of threat, especially from the United States and Israel, were not the only factor, but were in our judgment part of what drove whatever effort they were making to build nuclear weapons."
+# newpar = p (1 s)
 1	According	accord	VERB	VBG	VerbForm=Ger	6	case	6:case	Discourse=attribution:38->39
 2	to	to	ADP	IN	_	1	fixed	1:fixed	_
 3	this	this	DET	DT	Number=Sing|PronType=Dem	6	det	6:det	Entity=(abstract-61
@@ -388,9 +407,9 @@
 23	on	on	ADP	IN	_	24	case	24:case	_
 24	Iran	Iran	PROPN	NNP	Number=Sing	19	nmod	19:nmod:on	Entity=(place-4)
 25	from	from	ADP	IN	_	26	case	26:case	_
-26	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:from	Entity=(time-75)
+26	2000	2000	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:from	Entity=(time-75)|XML=<date when:::"2000"></date>
 27	to	to	ADP	IN	_	28	case	28:case	_
-28	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:to	Entity=(time-50)
+28	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:to	Entity=(time-50)|XML=<date when:::"2005"></date>
 29	in	in	ADP	IN	_	31	case	31:case	_
 30	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	31	nmod:poss	31:nmod:poss	Entity=(abstract-44(person-69)
 31	role	role	NOUN	NN	Number=Sing	12	obl	12:obl:in	_
@@ -488,6 +507,7 @@
 # sent_id = AMALGUM_news_iran-12
 # s_type = decl
 # text = Ellen Laipson, the other ex-CIA official also stated, "the Iranian fear of an attack by the United States has long been a standard element in NIEs [National Intelligence Estimates] on Iran."
+# newpar = p (1 s)
 1	Ellen	Ellen	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Discourse=attribution:47->48|Entity=(person-62
 2	Laipson	Laipson	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-62)|SpaceAfter=No
 3	,	,	PUNCT	,	_	7	punct	7:punct	_
@@ -530,6 +550,7 @@
 # sent_id = AMALGUM_news_iran-13
 # s_type = decl
 # text = Just a few weeks earlier, on January 25, 2006, former UN weapons inspector Hans Blix recommended that the United States give a similar commitment not to attack Iran with either conventional or nuclear weapons, just as it apparently has given to North Korea, stating, "regime changes, we know, from the outside are not that much of a panacea.
+# newpar = p (2 s)
 1	Just	just	ADV	RB	_	4	advmod	4:advmod	Discourse=joint:50->5|Entity=(time-90
 2	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	_
 3	few	few	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
@@ -537,17 +558,17 @@
 5	earlier	early	ADV	RBR	Degree=Cmp	19	advmod	19:advmod	SpaceAfter=No
 6	,	,	PUNCT	,	_	9	punct	9:punct	_
 7	on	on	ADP	IN	_	9	case	9:case	_
-8	January	January	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(time-91
+8	January	January	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(time-91|XML=<date when:::"2006-01-25">
 9	25	25	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:on	SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-91)(time-6)|SpaceAfter=No
+11	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	9	nmod:tmod	9:nmod:tmod	Entity=time-91)(time-6)|SpaceAfter=No|XML=</date>
 12	,	,	PUNCT	,	_	9	punct	9:punct	_
 13	former	former	ADJ	JJ	Degree=Pos	16	amod	16:amod	Entity=(person-92
 14	UN	UN	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(organization-93)
 15	weapons	weapon	NOUN	NNS	Number=Plur	16	compound	16:compound	Entity=(object-14)
 16	inspector	inspector	NOUN	NN	Number=Sing	19	nsubj	19:nsubj	_
-17	Hans	Han	PROPN	NNP	Number=Sing	16	flat	16:flat	_
-18	Blix	Blix	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-92)
+17	Hans	Han	PROPN	NNP	Number=Sing	16	flat	16:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Hans%20Blix">
+18	Blix	Blix	PROPN	NNP	Number=Sing	16	flat	16:flat	Entity=person-92)|XML=</ref>
 19	recommended	recommend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 20	that	that	SCONJ	IN	_	24	mark	24:mark	_
 21	the	the	DET	DT	Definite=Def|PronType=Art	23	det	23:det	Entity=(place-68
@@ -575,8 +596,8 @@
 43	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	44	aux	44:aux	_
 44	given	give	VERB	VBN	Tense=Past|VerbForm=Part	24	advcl	24:advcl:as	_
 45	to	to	ADP	IN	_	47	case	47:case	_
-46	North	North	PROPN	NNP	Number=Sing	47	compound	47:compound	Entity=(place-96
-47	Korea	Korea	PROPN	NNP	Number=Sing	44	obl	44:obl:to	Entity=place-96)|SpaceAfter=No
+46	North	North	PROPN	NNP	Number=Sing	47	compound	47:compound	Entity=(place-96|XML=<ref target:::"https://en.wikinews.org/wiki/North_Korea">
+47	Korea	Korea	PROPN	NNP	Number=Sing	44	obl	44:obl:to	Entity=place-96)|SpaceAfter=No|XML=</ref>
 48	,	,	PUNCT	,	_	49	punct	49:punct	_
 49	stating	state	VERB	VBG	VerbForm=Ger	27	acl	27:acl	Discourse=attribution:53->54|SpaceAfter=No
 50	,	,	PUNCT	,	_	64	punct	64:punct	_

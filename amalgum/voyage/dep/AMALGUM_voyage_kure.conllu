@@ -1,13 +1,24 @@
+# meta::id = AMALGUM_voyage_kure
+# meta::title = Kure
+# meta::shortTitle = kure
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=18489
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_kure
 # sent_id = AMALGUM_voyage_kure-1
 # s_type = frag
 # text = Kure
+# newpar = head (1 s)
 1	Kure	Kure	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->5|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_kure-2
 # s_type = decl
 # text = Kure (呉 ) is a port city in Hiroshima prefecture, Japan.
-1	Kure	Kure	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=background:2->5|Entity=(place-2)
+# newpar = p (2 s)
+1	Kure	Kure	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=background:2->5|Entity=(place-2)|XML=<hi rend:::"bold"></hi>
 2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=restatement:3->2|SpaceAfter=No
 3	呉	呉	X	FW	_	1	appos	1:appos	_
 4	)	)	PUNCT	-RRB-	_	3	punct	3:punct	_
@@ -16,10 +27,10 @@
 7	port	port	NOUN	NN	Number=Sing	8	compound	8:compound	Entity=(object-3)
 8	city	city	NOUN	NN	Number=Sing	0	root	0:root	_
 9	in	in	ADP	IN	_	11	case	11:case	_
-10	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(place-4
-11	prefecture	prefecture	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	Entity=place-2)place-4)|SpaceAfter=No
+10	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(place-4|XML=<ref target:::"Hiroshima%20prefecture">
+11	prefecture	prefecture	NOUN	NN	Number=Sing	8	nmod	8:nmod:in	Entity=place-2)place-4)|SpaceAfter=No|XML=</ref>
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	Japan	Japan	PROPN	NNP	Number=Sing	11	appos	11:appos	Entity=(place-5)|SpaceAfter=No
+13	Japan	Japan	PROPN	NNP	Number=Sing	11	appos	11:appos	Entity=(place-5)|SpaceAfter=No|XML=<ref target:::"Japan"></ref>
 14	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_voyage_kure-3
@@ -40,24 +51,26 @@
 13	after	after	ADP	IN	_	14	case	14:case	_
 14	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	6	nmod	6:nmod:after	Entity=(place-4)
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	Fukuyama	Fukuyama	PROPN	NNP	Number=Sing	14	conj	6:nmod:after|14:conj:and	Entity=place-5)(place-8)|SpaceAfter=No
+16	Fukuyama	Fukuyama	PROPN	NNP	Number=Sing	14	conj	6:nmod:after|14:conj:and	Entity=place-5)(place-8)|SpaceAfter=No|XML=<ref target:::"Fukuyama"></ref>
 17	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_voyage_kure-4
 # s_type = frag
 # text = By plane
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:6->7
 2	plane	plane	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-9)
 
 # sent_id = AMALGUM_voyage_kure-5
 # s_type = decl
 # text = The nearest airport is Hiroshima Airport, which is less than an hour away by car along the Higashihiroshima-Kure Expressway.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:7->5|Entity=(place-10
 2	nearest	near	ADJ	JJS	Degree=Sup	3	amod	3:amod	_
 3	airport	airport	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	Entity=place-10)
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
-5	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-10(place-4)
-6	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root|13:nsubj	SpaceAfter=No
+5	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-10(place-4)|XML=<hi rend:::"bold"><ref target:::"http://www.hij.airport.jp/english/">
+6	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root|13:nsubj	SpaceAfter=No|XML=</ref></hi>
 7	,	,	PUNCT	,	_	13	punct	13:punct	_
 8	which	which	PRON	WDT	PronType=Rel	13	nsubj	6:ref	Discourse=elaboration:8->7|Entity=(time-11
 9	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
@@ -77,8 +90,8 @@
 # sent_id = AMALGUM_voyage_kure-6
 # s_type = decl
 # text = Hiroden Bus runs nine buses a day between Kure and the airport, which take one hour from Kure station (45 minutes from Aki-Aga station) and cost ¥1340 (¥2300 return, valid for seven days).
-1	Hiroden	Hiroden	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:9->7|Entity=(organization-15(person-16)
-2	Bus	Bus	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-15)
+1	Hiroden	Hiroden	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:9->7|Entity=(organization-15(person-16)|XML=<ref target:::"http://www.hiroden.co.jp/bus/airport/kure.html">
+2	Bus	Bus	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-15)|XML=</ref>
 3	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	nine	9	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	Entity=(object-17
 5	buses	bus	NOUN	NNS	Number=Plur	3	obj	3:obj	_
@@ -107,10 +120,10 @@
 28	and	and	CCONJ	CC	_	29	cc	29:cc	Discourse=same_unit:12->10
 29	cost	cost	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	9:acl:relcl|15:conj:and	_
 30	¥	¥	SYM	SYM	_	29	obj	29:obj	SpaceAfter=No
-31	1340	1340	NUM	CD	NumForm=Digit|NumType=Card	30	nummod	30:nummod	Entity=object-17)place-19)place-10)
+31	1340	1340	NUM	CD	NumForm=Digit|NumType=Card	30	nummod	30:nummod	Entity=object-17)place-19)place-10)|XML=<date when:::"1340"></date>
 32	(	(	PUNCT	-LRB-	_	35	punct	35:punct	Discourse=elaboration:13->12|SpaceAfter=No
 33	¥	¥	SYM	SYM	_	34	compound	34:compound	Entity=(event-22|SpaceAfter=No
-34	2300	2300	NUM	CD	NumForm=Digit|NumType=Card	35	nummod	35:nummod	_
+34	2300	2300	NUM	CD	NumForm=Digit|NumType=Card	35	nummod	35:nummod	XML=<date when:::"2300"></date>
 35	return	return	NOUN	NN	Number=Sing	31	appos	31:appos	Entity=event-22)|SpaceAfter=No
 36	,	,	PUNCT	,	_	37	punct	37:punct	_
 37	valid	valid	ADJ	JJ	Degree=Pos	29	advcl	29:advcl	Discourse=same_unit:14->12
@@ -123,12 +136,14 @@
 # sent_id = AMALGUM_voyage_kure-7
 # s_type = frag
 # text = By train
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:15->16
 2	train	train	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-24)
 
 # sent_id = AMALGUM_voyage_kure-8
 # s_type = decl
 # text = Most passengers coming to Kure by rail come through Hiroshima, from where there are three Kure Line trains per hour during the day.
+# newpar = p (3 s)
 1	Most	most	ADJ	JJS	Degree=Sup	2	amod	2:amod	Discourse=joint:16->7|Entity=(person-25
 2	passengers	passenger	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 3	coming	come	VERB	VBG	VerbForm=Ger	2	acl	2:acl	Discourse=joint:17->16
@@ -138,15 +153,15 @@
 7	rail	rail	NOUN	NN	Number=Sing	3	obl	3:obl:by	Entity=person-25)(object-26)
 8	come	come	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 9	through	through	ADP	IN	_	10	case	10:case	_
-10	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	8	obl	8:obl:through	Entity=(place-4|SpaceAfter=No
+10	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	8	obl	8:obl:through	Entity=(place-4|SpaceAfter=No|XML=<ref target:::"Hiroshima"></ref>
 11	,	,	PUNCT	,	_	15	punct	15:punct	_
 12	from	from	ADP	IN	_	13	case	13:case	Discourse=joint:18->16
 13	where	where	SCONJ	WRB	PronType=Rel	15	obl	15:obl:from	_
 14	there	there	PRON	EX	_	15	expl	15:expl	_
 15	are	be	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	10	acl:relcl	10:acl:relcl	_
 16	three	3	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	Entity=(object-27
-17	Kure	Kure	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(place-28(place-2)
-18	Line	Line	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=place-28)
+17	Kure	Kure	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(place-28(place-2)|XML=<hi rend:::"bold">
+18	Line	Line	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=place-28)|XML=</hi>
 19	trains	train	NOUN	NNS	Number=Plur	15	nsubj	15:nsubj	_
 20	per	per	ADP	IN	_	21	case	21:case	_
 21	hour	hour	NOUN	NN	Number=Sing	19	nmod	19:nmod:per	Entity=object-27)(time-11)
@@ -193,12 +208,13 @@
 # sent_id = AMALGUM_voyage_kure-11
 # s_type = decl
 # text = Taking the Kure Line from Mihara to the east takes 1 hour 45 minutes and costs ¥1140.
+# newpar = p (3 s)
 1	Taking	take	VERB	VBG	VerbForm=Ger	10	csubj	10:csubj|16:csubj	Discourse=joint:24->16
 2	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(place-28
 3	Kure	Kure	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(place-2)
 4	Line	Line	PROPN	NNP	Number=Sing	1	obj	1:obj	Entity=place-28)
 5	from	from	ADP	IN	_	6	case	6:case	_
-6	Mihara	Mihara	PROPN	NNP	Number=Sing	1	obl	1:obl:from	Entity=(place-33)
+6	Mihara	Mihara	PROPN	NNP	Number=Sing	1	obl	1:obl:from	Entity=(place-33)|XML=<ref target:::"Mihara"></ref>
 7	to	to	ADP	IN	_	9	case	9:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(place-34
 9	east	east	NOUN	NN	Number=Sing	1	obl	1:obl:to	Entity=place-34)
@@ -210,7 +226,7 @@
 15	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=joint:25->16
 16	costs	cost	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	conj	10:conj:and	_
 17	¥	¥	PUNCT	:	_	18	punct	18:punct	SpaceAfter=No
-18	1140	1140	NUM	CD	NumForm=Digit|NumType=Card	16	obj	16:obj	SpaceAfter=No
+18	1140	1140	NUM	CD	NumForm=Digit|NumType=Card	16	obj	16:obj	SpaceAfter=No|XML=<date when:::"1140"></date>
 19	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_voyage_kure-12
@@ -249,6 +265,7 @@
 # sent_id = AMALGUM_voyage_kure-14
 # s_type = decl
 # text = The Kure Line is valid with the Japan Rail Pass, but JR West offer regional passes as a cheaper alternative to Temporary Visitors with foreign passports:
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:29->16|Entity=(place-28
 2	Kure	Kure	PROPN	NNP	Number=Sing	3	compound	3:compound	_
 3	Line	Line	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=place-28)
@@ -256,9 +273,9 @@
 5	valid	valid	ADJ	JJ	Degree=Pos	0	root	0:root	_
 6	with	with	ADP	IN	_	10	case	10:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(person-39
-8	Japan	Japan	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-5)
+8	Japan	Japan	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-5)|XML=<hi rend:::"bold">
 9	Rail	Rail	PROPN	NNP	Number=Sing	10	compound	10:compound	_
-10	Pass	Pass	PROPN	NNP	Number=Sing	5	obl	5:obl:with	Entity=person-39)|SpaceAfter=No
+10	Pass	Pass	PROPN	NNP	Number=Sing	5	obl	5:obl:with	Entity=person-39)|SpaceAfter=No|XML=</hi>
 11	,	,	PUNCT	,	_	15	punct	15:punct	_
 12	but	but	CCONJ	CC	_	15	cc	15:cc	Discourse=preparation:30->31
 13	JR	JR	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Entity=(person-40
@@ -281,9 +298,11 @@
 # sent_id = AMALGUM_voyage_kure-15
 # s_type = decl
 # text = The Hiroshima-Yamaguchi Pass covers much of the JR network around Hiroshima (as far as Miyoshi and Onomichi), as well as all JR stations in Yamaguchi prefecture.
+# newpar = list type:::"unordered" (11 s)
+# newpar1 = item (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:31->16|Entity=(abstract-45
-2	Hiroshima-Yamaguchi	Hiroshima-Yamaguchi	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-45)
+2	Hiroshima-Yamaguchi	Hiroshima-Yamaguchi	PROPN	NNP	Number=Sing	3	compound	3:compound	XML=<hi rend:::"bold"><ref target:::"https://www.westjr.co.jp/global/en/ticket/pass/hiroshima_yamaguchi/">
+3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-45)|XML=</ref></hi>
 4	covers	cover	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	much	much	ADJ	JJ	Degree=Pos	4	obj	4:obj	_
 6	of	of	ADP	IN	_	9	case	9:case	_
@@ -296,9 +315,9 @@
 13	as	as	ADV	RB	_	14	case	14:case	_
 14	far	far	ADV	RB	Degree=Pos	9	advmod	9:advmod	_
 15	as	as	ADP	IN	_	16	case	16:case	_
-16	Miyoshi	Miyoshi	PROPN	NNP	Number=Sing	14	nmod	14:nmod:as	Entity=(place-47)
+16	Miyoshi	Miyoshi	PROPN	NNP	Number=Sing	14	nmod	14:nmod:as	Entity=(place-47)|XML=<ref target:::"Miyoshi%20%28Hiroshima%29"></ref>
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	Onomichi	Onomichi	PROPN	NNP	Number=Sing	16	conj	14:nmod:as|16:conj:and	Entity=(place-48)|SpaceAfter=No
+18	Onomichi	Onomichi	PROPN	NNP	Number=Sing	16	conj	14:nmod:as|16:conj:and	Entity=(place-48)|SpaceAfter=No|XML=<ref target:::"Onomichi"></ref>
 19	)	)	PUNCT	-RRB-	_	14	punct	14:punct	Entity=abstract-46)|SpaceAfter=No
 20	,	,	PUNCT	,	_	26	punct	26:punct	_
 21	as	as	ADV	RB	_	26	cc	26:cc	Discourse=same_unit:33->31
@@ -331,19 +350,19 @@
 14	trains	train	NOUN	NNS	Number=Plur	9	nmod	9:nmod:of	_
 15	(	(	PUNCT	-LRB-	_	20	punct	20:punct	Discourse=elaboration:35->34|SpaceAfter=No
 16	including	include	VERB	VBG	VerbForm=Ger	20	case	20:case	_
-17	Nozomi	Nozomi	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(object-27(person-54)
+17	Nozomi	Nozomi	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(object-27(person-54)|XML=<hi rend:::"italic"></hi>
 18	and	and	CCONJ	CC	_	19	cc	19:cc	_
-19	Mizuho	Mizuho	PROPN	NNP	Number=Sing	17	conj	17:conj:and|20:compound	Entity=(person-55)
+19	Mizuho	Mizuho	PROPN	NNP	Number=Sing	17	conj	17:conj:and|20:compound	Entity=(person-55)|XML=<hi rend:::"italic"></hi>
 20	trains	train	NOUN	NNS	Number=Plur	14	nmod	14:nmod:including	Entity=object-27)|SpaceAfter=No
 21	)	)	PUNCT	-RRB-	_	20	punct	20:punct	_
 22	between	between	ADP	IN	_	23	case	23:case	Discourse=same_unit:36->34
 23	Mihara	Mihara	PROPN	NNP	Number=Sing	14	nmod	14:nmod:between	Entity=(place-33)
 24	and	and	CCONJ	CC	_	25	cc	25:cc	_
-25	Hakata	Hakata	PROPN	NNP	Number=Sing	23	conj	14:nmod:between|23:conj:and	Entity=(place-56)|SpaceAfter=No
+25	Hakata	Hakata	PROPN	NNP	Number=Sing	23	conj	14:nmod:between|23:conj:and	Entity=(place-56)|SpaceAfter=No|XML=<ref target:::"Fukuoka"></ref>
 26	,	,	PUNCT	,	_	30	punct	30:punct	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	Entity=(object-57
 28	JR	JR	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(person-40)
-29	Miyajima	Miyajima	PROPN	NNP	Number=Sing	30	compound	30:compound	_
+29	Miyajima	Miyajima	PROPN	NNP	Number=Sing	30	compound	30:compound	XML=<ref target:::"Miyajima"></ref>
 30	Ferry	Ferry	PROPN	NNP	Number=Sing	23	conj	14:nmod:between|23:conj	Entity=object-27)object-57)|SpaceAfter=No
 31	,	,	PUNCT	,	_	35	punct	35:punct	_
 32	and	and	CCONJ	CC	_	35	cc	35:cc	_
@@ -364,7 +383,7 @@
 47	Hiro	Hiro	PROPN	NNP	Number=Sing	45	conj	45:conj:and|48:compound	Entity=place-19)(person-36)
 48	stations	station	NOUN	NNS	Number=Plur	43	nmod	43:nmod:from	_
 49	to	to	ADP	IN	_	50	case	50:case	_
-50	Saijō	Saijō	PROPN	NNP	Number=Sing	48	nmod	48:nmod:to	Entity=abstract-29)place-49)(place-59)|SpaceAfter=No
+50	Saijō	Saijō	PROPN	NNP	Number=Sing	48	nmod	48:nmod:to	Entity=abstract-29)place-49)(place-59)|SpaceAfter=No|XML=<ref target:::"Higashihiroshima"></ref>
 51	)	)	PUNCT	-RRB-	_	43	punct	43:punct	Entity=object-51)abstract-29)|SpaceAfter=No
 52	.	.	PUNCT	.	_	5	punct	5:punct	_
 
@@ -392,17 +411,18 @@
 # sent_id = AMALGUM_voyage_kure-18
 # s_type = decl
 # text = The Okayama-Hiroshima-Yamaguchi Pass extends the valid area to Tsuyama and Takamatsu.
+# newpar = item (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:43->31|Entity=(person-39
-2	Okayama-Hiroshima-Yamaguchi	Okayama-Hiroshima-Yamaguchi	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=person-39)
+2	Okayama-Hiroshima-Yamaguchi	Okayama-Hiroshima-Yamaguchi	PROPN	NNP	Number=Sing	3	compound	3:compound	XML=<hi rend:::"bold"><ref target:::"https://www.westjr.co.jp/global/en/ticket/pass/okayama_hiroshima_yamaguchi/">
+3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=person-39)|XML=</ref></hi>
 4	extends	extend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(place-61
 6	valid	valid	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	area	area	NOUN	NN	Number=Sing	4	obj	4:obj	Entity=place-61)
 8	to	to	ADP	IN	_	9	case	9:case	_
-9	Tsuyama	Tsuyama	PROPN	NNP	Number=Sing	4	obl	4:obl:to	Entity=(place-62)
+9	Tsuyama	Tsuyama	PROPN	NNP	Number=Sing	4	obl	4:obl:to	Entity=(place-62)|XML=<ref target:::"Tsuyama"></ref>
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
-11	Takamatsu	Takamatsu	PROPN	NNP	Number=Sing	9	conj	4:obl:to|9:conj:and	Entity=(place-63)|SpaceAfter=No
+11	Takamatsu	Takamatsu	PROPN	NNP	Number=Sing	9	conj	4:obl:to|9:conj:and	Entity=(place-63)|SpaceAfter=No|XML=<ref target:::"Takamatsu"></ref>
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_kure-19
@@ -417,7 +437,7 @@
 7	Shinkansen	Shinkansen	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(abstract-53)
 8	trains	train	NOUN	NNS	Number=Plur	4	obl	4:obl:on	_
 9	between	between	ADP	IN	_	10	case	10:case	_
-10	Okayama	Okayama	PROPN	NNP	Number=Sing	8	nmod	8:nmod:between	Entity=(place-64)
+10	Okayama	Okayama	PROPN	NNP	Number=Sing	8	nmod	8:nmod:between	Entity=(place-64)|XML=<ref target:::"Okayama"></ref>
 11	and	and	CCONJ	CC	_	12	cc	12:cc	_
 12	Hakata	Hakata	PROPN	NNP	Number=Sing	10	conj	8:nmod:between|10:conj:and	Entity=object-27)(place-56)|SpaceAfter=No
 13	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -446,9 +466,10 @@
 # sent_id = AMALGUM_voyage_kure-21
 # s_type = decl
 # text = The San'yō-San'in Pass extends the valid area still further to cover the Urban Network area of Kansai (as far as Tsuruga and Wakayama), much of the San'in region, and both reserved and non-reserved seats of the Shinkansen between Shin-Osaka and Hakata.
+# newpar = item (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:49->31|Entity=(abstract-45
-2	San'yō-San'in	San'yō-San'in	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-45)
+2	San'yō-San'in	San'yō-San'in	PROPN	NNP	Number=Sing	3	compound	3:compound	XML=<hi rend:::"bold"><ref target:::"https://www.westjr.co.jp/global/en/ticket/pass/sanyo_sanin/">
+3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=abstract-45)|XML=</ref></hi>
 4	extends	extend	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(place-61
 6	valid	valid	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -462,14 +483,14 @@
 14	Network	Network	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=place-65)
 15	area	area	NOUN	NN	Number=Sing	11	obj	11:obj	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Kansai	Kansai	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=(place-66)
+17	Kansai	Kansai	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=(place-66)|XML=<ref target:::"Kansai"></ref>
 18	(	(	PUNCT	-LRB-	_	20	punct	20:punct	Discourse=elaboration:51->50|SpaceAfter=No
 19	as	as	ADV	RB	_	20	case	20:case	_
 20	far	far	ADV	RB	Degree=Pos	15	nmod	15:nmod:as	_
 21	as	as	ADP	IN	_	22	case	22:case	_
-22	Tsuruga	Tsuruga	PROPN	NNP	Number=Sing	20	nmod	20:nmod:as	Entity=(place-67)
+22	Tsuruga	Tsuruga	PROPN	NNP	Number=Sing	20	nmod	20:nmod:as	Entity=(place-67)|XML=<ref target:::"Tsuruga"></ref>
 23	and	and	CCONJ	CC	_	24	cc	24:cc	_
-24	Wakayama	Wakayama	PROPN	NNP	Number=Sing	22	conj	20:nmod:as|22:conj:and	Entity=(place-68)|SpaceAfter=No
+24	Wakayama	Wakayama	PROPN	NNP	Number=Sing	22	conj	20:nmod:as|22:conj:and	Entity=(place-68)|SpaceAfter=No|XML=<ref target:::"Wakayama"></ref>
 25	)	)	PUNCT	-RRB-	_	20	punct	20:punct	Entity=place-61)|SpaceAfter=No
 26	,	,	PUNCT	,	_	27	punct	27:punct	_
 27	much	much	ADJ	JJ	Degree=Pos	15	conj	11:obj|15:conj:and	Discourse=same_unit:52->49
@@ -488,7 +509,7 @@
 40	the	the	DET	DT	Definite=Def|PronType=Art	41	det	41:det	Entity=(abstract-53
 41	Shinkansen	Shinkansen	PROPN	NNP	Number=Sing	38	nmod	38:nmod:of	_
 42	between	between	ADP	IN	_	43	case	43:case	_
-43	Shin-Osaka	Shin-Osaka	PROPN	NNP	Number=Sing	41	nmod	41:nmod:between	Entity=(place-71(place-72)
+43	Shin-Osaka	Shin-Osaka	PROPN	NNP	Number=Sing	41	nmod	41:nmod:between	Entity=(place-71(place-72)|XML=<ref target:::"Osaka"></ref>
 44	and	and	CCONJ	CC	_	45	cc	45:cc	_
 45	Hakata	Hakata	PROPN	NNP	Number=Sing	43	conj	41:nmod:between|43:conj:and	Entity=object-70)abstract-53)place-71)(place-56)|SpaceAfter=No
 46	.	.	PUNCT	.	_	4	punct	4:punct	_
@@ -517,9 +538,10 @@
 # sent_id = AMALGUM_voyage_kure-23
 # s_type = decl
 # text = The Kansai-Hiroshima Pass covers the area between Kansai and Hiroshima (including areas of Kansai not included in the San'yō-San'in Pass, such as Shingū and Toyooka), but its western limit is at Iwakuni.
+# newpar = item (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=concession:57->60|Entity=(abstract-45
-2	Kansai-Hiroshima	Kansai-Hiroshima	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|34:nsubj	Entity=abstract-45)
+2	Kansai-Hiroshima	Kansai-Hiroshima	PROPN	NNP	Number=Sing	3	compound	3:compound	XML=<hi rend:::"bold"><ref target:::"https://www.westjr.co.jp/global/en/ticket/pass/kansai_hiroshima/">
+3	Pass	Pass	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|34:nsubj	Entity=abstract-45)|XML=</ref></hi>
 4	covers	cover	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(place-61
 6	area	area	NOUN	NN	Number=Sing	4	obj	4:obj	_
@@ -541,9 +563,9 @@
 22	,	,	PUNCT	,	_	25	punct	25:punct	_
 23	such	such	ADJ	JJ	Degree=Pos	25	case	25:case	_
 24	as	as	ADP	IN	_	23	fixed	23:fixed	_
-25	Shingū	Shingū	PROPN	NNP	Number=Sing	13	nmod	13:nmod:such_as	Entity=(place-75)
+25	Shingū	Shingū	PROPN	NNP	Number=Sing	13	nmod	13:nmod:such_as	Entity=(place-75)|XML=<ref target:::"Shingu"></ref>
 26	and	and	CCONJ	CC	_	27	cc	27:cc	_
-27	Toyooka	Toyooka	PROPN	NNP	Number=Sing	25	conj	13:nmod:such_as|25:conj:and	Entity=place-73)(place-76)|SpaceAfter=No
+27	Toyooka	Toyooka	PROPN	NNP	Number=Sing	25	conj	13:nmod:such_as|25:conj:and	Entity=place-73)(place-76)|SpaceAfter=No|XML=<ref target:::"Toyooka"></ref>
 28	)	)	PUNCT	-RRB-	_	13	punct	13:punct	Entity=place-61)|SpaceAfter=No
 29	,	,	PUNCT	,	_	36	punct	36:punct	_
 30	but	but	CCONJ	CC	_	36	cc	36:cc	Discourse=joint:60->31
@@ -552,7 +574,7 @@
 33	limit	limit	NOUN	NN	Number=Sing	36	nsubj	36:nsubj	Entity=place-77)
 34	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj	_
 35	at	at	ADP	IN	_	36	case	36:case	_
-36	Iwakuni	Iwakuni	PROPN	NNP	Number=Sing	34	obl	34:obl:at	Entity=(place-78)|SpaceAfter=No
+36	Iwakuni	Iwakuni	PROPN	NNP	Number=Sing	34	obl	34:obl:at	Entity=(place-78)|SpaceAfter=No|XML=<ref target:::"Iwakuni"></ref>
 37	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_kure-24
@@ -599,15 +621,17 @@
 # sent_id = AMALGUM_voyage_kure-26
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:66->67
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-80)
 
 # sent_id = AMALGUM_voyage_kure-27
 # s_type = decl
 # text = The Kurea Line (operated by Hiroden Bus and Chūgoku JR Bus) runs very frequently (over 40 buses a day) from central Hiroshima (primarily the Bus Center), taking 40 minutes and costing ¥720 (between Hiroshima Bus Center and Kure Station).
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:67->5|Entity=(place-28
-2	Kurea	Kurea	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(place-81)
-3	Line	Line	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	_
+2	Kurea	Kurea	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(place-81)|XML=<hi rend:::"italic">
+3	Line	Line	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj	XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:68->67|SpaceAfter=No
 5	operated	operate	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	_
 6	by	by	ADP	IN	_	8	case	8:case	_
@@ -661,7 +685,7 @@
 # text = It does not serve Hiroshima Station; for there, you will have to get off at Minami-kuyakusho-mae and change there for a tram.
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	Discourse=joint:76->67|Entity=(place-28)
 2	does	do	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
-3	not	not	ADV	RB	Polarity=Neg	4	advmod	4:advmod	_
+3	not	not	ADV	RB	Polarity=Neg	4	advmod	4:advmod	XML=<hi rend:::"italic"></hi>
 4	serve	serve	VERB	VB	VerbForm=Inf	0	root	0:root	_
 5	Hiroshima	Hiroshima	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-87(place-4)
 6	Station	Station	PROPN	NNP	Number=Sing	4	obj	4:obj	Entity=place-87)|SpaceAfter=No
@@ -688,6 +712,7 @@
 # sent_id = AMALGUM_voyage_kure-29
 # s_type = decl
 # text = Another option is San'yō Bus's Kamagari-Toyohama-Yutaka Line, which runs from both the Bus Center and Hiroshima Station South Exit to some islands which lie in the Seto Inland Sea east of central Kure.
+# newpar = p (2 s)
 1	Another	another	DET	DT	_	2	det	2:det	Discourse=joint:79->67|Entity=(place-91
 2	option	option	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Entity=place-91)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
@@ -695,8 +720,8 @@
 5-6	Bus's	_	_	_	_	_	_	_	_
 5	Bus	Bus	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	_
 6	's	's	PART	POS	_	5	case	5:case	Entity=organization-15)
-7	Kamagari-Toyohama-Yutaka	Kamagari-Toyohama-Yutaka	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-92)
-8	Line	Line	PROPN	NNP	Number=Sing	0	root	0:root|11:nsubj	SpaceAfter=No
+7	Kamagari-Toyohama-Yutaka	Kamagari-Toyohama-Yutaka	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-92)|XML=<hi rend:::"italic">
+8	Line	Line	PROPN	NNP	Number=Sing	0	root	0:root|11:nsubj	SpaceAfter=No|XML=</hi>
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	which	which	PRON	WDT	PronType=Rel	11	nsubj	8:ref	Discourse=elaboration:80->79
 11	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	acl:relcl	8:acl:relcl	_
@@ -753,6 +778,7 @@
 # sent_id = AMALGUM_voyage_kure-31
 # s_type = imp
 # text = For Fukuyama and Mihara, consider taking the bus to Hiroshima Airport (mentioned above) and changing there.
+# newpar = p (1 s)
 1	For	for	ADP	IN	_	2	case	2:case	Discourse=joint:85->67
 2	Fukuyama	Fukuyama	PROPN	NNP	Number=Sing	6	obl	6:obl:for	Entity=(person-100)
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
@@ -777,6 +803,7 @@
 # sent_id = AMALGUM_voyage_kure-32
 # s_type = decl
 # text = Long-distance overnight buses are rare, partly because Kure is so close to Hiroshima.
+# newpar = p (3 s)
 1	Long-distance	Long-distance	ADJ	JJ	Degree=Pos	3	amod	3:amod	Discourse=joint:88->67|Entity=(object-82
 2	overnight	overnight	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	buses	bus	NOUN	NNS	Number=Plur	5	nsubj	5:nsubj	Entity=object-82)
@@ -801,7 +828,7 @@
 3	Bus	Bus	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=organization-15)
 4	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(place-102
-6	Kure-Dream-Osaka-gō	Kure-Dream-Osaka-gō	PROPN	NNP	Number=Sing	4	obj	4:obj	Entity=place-102)
+6	Kure-Dream-Osaka-gō	Kure-Dream-Osaka-gō	PROPN	NNP	Number=Sing	4	obj	4:obj	Entity=place-102)|XML=<hi rend:::"italic"></hi>
 7	as	as	ADP	IN	_	10	case	10:case	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(abstract-103
 9	seasonal	seasonal	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
@@ -822,8 +849,8 @@
 9	Bus	Bus	PROPN	NNP	Number=Sing	3	obl	3:obl:with	Entity=organization-15)|SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Discourse=same_unit:93->91|Entity=(abstract-105
-12	New	New	ADJ	NNP	Number=Sing	13	amod	13:amod	_
-13	Breeze	Breeze	PROPN	NNP	Number=Sing	3	obj	3:obj|17:nsubj	SpaceAfter=No
+12	New	New	ADJ	NNP	Number=Sing	13	amod	13:amod	XML=<hi rend:::"italic">
+13	Breeze	Breeze	PROPN	NNP	Number=Sing	3	obj	3:obj|17:nsubj	SpaceAfter=No|XML=</hi>
 14	,	,	PUNCT	,	_	17	punct	17:punct	_
 15	which	which	PRON	WDT	PronType=Rel	17	nsubj	13:ref	Discourse=elaboration:94->93
 16	usually	usually	ADV	RB	Degree=Pos	17	advmod	17:advmod	_
@@ -843,12 +870,14 @@
 # sent_id = AMALGUM_voyage_kure-35
 # s_type = frag
 # text = By ferry
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:96->97
 2	ferry	ferry	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-108)
 
 # sent_id = AMALGUM_voyage_kure-36
 # s_type = decl
 # text = Kure Central pier is next to the Yamato Museum, and 10 minutes walk from Kure Station.
+# newpar = p (1 s)
 1	Kure	Kure	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:97->67|Entity=(place-109(place-2)
 2	Central	Central	ADJ	NNP	Number=Sing	3	amod	3:amod	_
 3	pier	pier	NOUN	NN	Number=Sing	5	nsubj	5:nsubj|14:nsubj	Entity=place-109)
@@ -871,17 +900,18 @@
 # sent_id = AMALGUM_voyage_kure-37
 # s_type = decl
 # text = The ferry service run by Seto Naikai Kisen and Ishizaki Kisen is the best way to reach Kure from Matsuyama (and by extension much of Western Shikoku).
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:98->97|Entity=(abstract-103
 2	ferry	ferry	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(object-108)
 3	service	service	NOUN	NN	Number=Sing	15	nsubj	15:nsubj	_
 4	run	run	VERB	VBN	Tense=Past|VerbForm=Part	3	acl	3:acl	Discourse=elaboration:99->98
 5	by	by	ADP	IN	_	8	case	8:case	_
-6	Seto	Seto	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(person-112(place-97
+6	Seto	Seto	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(person-112(place-97|XML=<ref target:::"http://setonaikaikisen.co.jp/language/en/">
 7	Naikai	Naikai	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=place-97)
-8	Kisen	Kisen	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=person-112)
+8	Kisen	Kisen	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=person-112)|XML=</ref>
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_
-10	Ishizaki	Ishizaki	PROPN	NNP	Number=Sing	8	conj	4:obl:by|8:conj:and	Entity=(person-113
-11	Kisen	Kisen	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=abstract-103)person-113)
+10	Ishizaki	Ishizaki	PROPN	NNP	Number=Sing	8	conj	4:obl:by|8:conj:and	Entity=(person-113|XML=<ref target:::"http://www.ishizakikisen.co.jp/language/en/">
+11	Kisen	Kisen	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=abstract-103)person-113)|XML=</ref>
 12	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	cop	15:cop	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-103
 14	best	good	ADJ	JJS	Degree=Sup	15	amod	15:amod	_
@@ -890,7 +920,7 @@
 17	reach	reach	VERB	VB	VerbForm=Inf	15	acl	15:acl:to	_
 18	Kure	Kure	PROPN	NNP	Number=Sing	17	obj	17:obj	Entity=(place-2)
 19	from	from	ADP	IN	_	20	case	20:case	_
-20	Matsuyama	Matsuyama	PROPN	NNP	Number=Sing	17	obl	17:obl:from	Entity=(place-114)
+20	Matsuyama	Matsuyama	PROPN	NNP	Number=Sing	17	obl	17:obl:from	Entity=(place-114)|XML=<ref target:::"Matsuyama"></ref>
 21	(	(	PUNCT	-LRB-	_	25	punct	25:punct	Discourse=elaboration:101->100|SpaceAfter=No
 22	and	and	CCONJ	CC	_	25	cc	25:cc	_
 23	by	by	ADP	IN	_	24	case	24:case	_
@@ -898,7 +928,7 @@
 25	much	much	ADJ	JJ	Degree=Pos	20	conj	17:obl:from|20:conj:and	Entity=abstract-103)
 26	of	of	ADP	IN	_	28	case	28:case	_
 27	Western	Western	ADJ	NNP	Number=Sing	28	amod	28:amod	Entity=(place-116
-28	Shikoku	Shikoku	PROPN	NNP	Number=Sing	25	obl	25:obl:of	Entity=place-116)|SpaceAfter=No
+28	Shikoku	Shikoku	PROPN	NNP	Number=Sing	25	obl	25:obl:of	Entity=place-116)|SpaceAfter=No|XML=<ref target:::"Shikoku"></ref>
 29	)	)	PUNCT	-RRB-	_	25	punct	25:punct	SpaceAfter=No
 30	.	.	PUNCT	.	_	15	punct	15:punct	_
 
@@ -910,7 +940,7 @@
 3	choose	choose	VERB	VB	VerbForm=Inf	0	root	0:root	_
 4	between	between	ADP	IN	_	6	case	6:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(object-117
-6	Superjet	Superjet	PROPN	NNP	Number=Sing	3	obl	3:obl:between	Entity=object-117)
+6	Superjet	Superjet	PROPN	NNP	Number=Sing	3	obl	3:obl:between	Entity=object-117)|XML=<hi rend:::"italic"></hi>
 7	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=elaboration:103->102|SpaceAfter=No
 8	6	6	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	Entity=(abstract-118
 9	services	service	NOUN	NNS	Number=Plur	6	appos	6:appos	_
@@ -929,8 +959,8 @@
 22	)	)	PUNCT	-RRB-	_	13	punct	13:punct	_
 23	and	and	CCONJ	CC	_	26	cc	26:cc	Discourse=same_unit:106->104
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(object-57
-25	Cruise	Cruise	PROPN	NNP	Number=Sing	26	compound	26:compound	Entity=(person-120)
-26	Ferry	Ferry	PROPN	NNP	Number=Sing	6	conj	3:obl:between|6:conj:and	_
+25	Cruise	Cruise	PROPN	NNP	Number=Sing	26	compound	26:compound	Entity=(person-120)|XML=<hi rend:::"italic">
+26	Ferry	Ferry	PROPN	NNP	Number=Sing	6	conj	3:obl:between|6:conj:and	XML=</hi>
 27	(	(	PUNCT	-LRB-	_	29	punct	29:punct	Discourse=elaboration:107->106|SpaceAfter=No
 28	9	9	NUM	CD	NumForm=Digit|NumType=Card	29	nummod	29:nummod	_
 29	services	service	NOUN	NNS	Number=Plur	26	dep	26:dep	_
@@ -984,6 +1014,7 @@
 # sent_id = AMALGUM_voyage_kure-40
 # s_type = decl
 # text = It is also possible to take these ferries to Hiroshima Port; the Superjet takes 25 minutes and costs ¥2100, while the Cruise Ferry takes 45 minutes and costs ¥930.
+# newpar = p (2 s)
 1	It	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	4	expl	4:expl	Discourse=joint:112->97|Entity=(place-91)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	also	also	ADV	RB	_	4	advmod	4:advmod	_
@@ -997,19 +1028,19 @@
 11	Port	Port	PROPN	NNP	Number=Sing	6	obl	6:obl:to	Entity=place-127)|SpaceAfter=No
 12	;	;	PUNCT	:	_	15	punct	15:punct	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Discourse=joint:113->97|Entity=(object-117
-14	Superjet	Superjet	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|19:nsubj	Entity=object-117)
+14	Superjet	Superjet	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj|19:nsubj	Entity=object-117)|XML=<hi rend:::"italic"></hi>
 15	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	parataxis	4:parataxis	_
 16	25	25	NUM	CD	NumForm=Digit|NumType=Card	17	nummod	17:nummod	Entity=(time-128
 17	minutes	minute	NOUN	NNS	Number=Plur	15	obj	15:obj	Entity=time-128)
 18	and	and	CCONJ	CC	_	19	cc	19:cc	Discourse=joint:114->97
 19	costs	cost	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	conj	15:conj:and	_
 20	¥	¥	PUNCT	:	_	21	punct	21:punct	SpaceAfter=No
-21	2100	2100	NUM	CD	NumForm=Digit|NumType=Card	19	obj	19:obj	SpaceAfter=No
+21	2100	2100	NUM	CD	NumForm=Digit|NumType=Card	19	obj	19:obj	SpaceAfter=No|XML=<date when:::"2100"></date>
 22	,	,	PUNCT	,	_	27	punct	27:punct	_
 23	while	while	SCONJ	IN	_	27	mark	27:mark	Discourse=concession:115->116
 24	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(object-57
-25	Cruise	Cruise	PROPN	NNP	Number=Sing	26	compound	26:compound	Entity=(person-120)
-26	Ferry	Ferry	PROPN	NNP	Number=Sing	27	nsubj	27:nsubj|31:nsubj	Entity=object-57)
+25	Cruise	Cruise	PROPN	NNP	Number=Sing	26	compound	26:compound	Entity=(person-120)|XML=<hi rend:::"italic">
+26	Ferry	Ferry	PROPN	NNP	Number=Sing	27	nsubj	27:nsubj|31:nsubj	Entity=object-57)|XML=</hi>
 27	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	15	advcl	15:advcl:while	_
 28	45	45	NUM	CD	NumForm=Digit|NumType=Card	29	nummod	29:nummod	Entity=(time-31
 29	minutes	minute	NOUN	NNS	Number=Plur	27	obj	27:obj	Entity=time-31)
@@ -1044,17 +1075,21 @@
 # sent_id = AMALGUM_voyage_kure-42
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:120->122
 
 # sent_id = AMALGUM_voyage_kure-43
 # s_type = frag
 # text = Maritime museums
+# newpar = list type:::"unordered" (1 s)
+# newpar1 = item (1 s)
 1	Maritime	Maritime	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:121->122|Entity=(organization-129
 2	museums	museum	NOUN	NNS	Number=Plur	0	root	0:root	Entity=organization-129)
 
 # sent_id = AMALGUM_voyage_kure-44
 # s_type = decl
 # text = Kure has been one of the main bases for the Japanese Navy, and continues to host much of the Japanese Maritime Self Defense Force (JMSDF).
+# newpar = p (2 s)
 1	Kure	Kure	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|17:nsubj:xsubj	Discourse=joint:122->97|Entity=(place-2)
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux	4:aux	_
 3	been	be	AUX	VBN	Tense=Past|VerbForm=Part	4	cop	4:cop	_
@@ -1130,9 +1165,11 @@
 # sent_id = AMALGUM_voyage_kure-46
 # s_type = frag
 # text = JMSDF Kure Museum (海上自衛隊呉史料館（てつのくじら館）), 5-32 Takaramachi, Kure, Hiroshima prefecture (5 minutes walk from JR Kure Station).
-1	JMSDF	JMSDF	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:128->122|Entity=(place-110(organization-133)
+# newpar = list type:::"unordered" (11 s)
+# newpar1 = item (5 s)
+1	JMSDF	JMSDF	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:128->122|Entity=(place-110(organization-133)|XML=<hi rend:::"bold">
 2	Kure	Kure	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(place-141)
-3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-110)
+3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-110)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:129->128|SpaceAfter=No
 5	海上自衛隊呉史料館（てつのくじら館）	海上自衛隊呉史料館（てつのくじら館）	X	FW	_	3	appos	3:appos	SpaceAfter=No
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
@@ -1217,7 +1254,7 @@
 2	former	former	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 3	JMSDF	JMSDF	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(organization-133)
 4	submarine	submarine	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Entity=object-155)
-5	Akishio	Akishio	PROPN	NNP	Number=Sing	4	appos	4:appos	_
+5	Akishio	Akishio	PROPN	NNP	Number=Sing	4	appos	4:appos	XML=<hi rend:::"italic"></hi>
 6	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 7	on	on	ADP	IN	_	8	case	8:case	_
 8	display	display	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -1236,13 +1273,14 @@
 # sent_id = AMALGUM_voyage_kure-51
 # s_type = frag
 # text = Kure Maritime Museum (Yamato Museum) (呉市海事歴史科学館（大和ミュージアム）), 5-20 Takaramachi, Kure, Hiroshima prefecture (5 minutes walk from JR Kure Station), ☏ +81 823-25-3017 , fax: +81 823-23-7400 .
-1	Kure	Kure	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:137->133|Entity=(place-110(place-141)
+# newpar = item (6 s)
+1	Kure	Kure	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:137->133|Entity=(place-110(place-141)|XML=<hi rend:::"bold">
 2	Maritime	Maritime	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(time-157)
 3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-110)
 4	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=restatement:138->137|SpaceAfter=No
 5	Yamato	Yamato	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-110(person-111)
 6	Museum	Museum	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=place-110)|SpaceAfter=No
-7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	_
+7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	XML=</hi>
 8	(	(	PUNCT	-LRB-	_	9	punct	9:punct	Discourse=restatement:139->137|SpaceAfter=No
 9	呉市海事歴史科学館（大和ミュージアム）	呉市海事歴史科学館（大和ミュージアム）	X	FW	_	3	appos	3:appos	SpaceAfter=No
 10	)	)	PUNCT	-RRB-	_	9	punct	9:punct	SpaceAfter=No
@@ -1301,7 +1339,7 @@
 14	super	super	NOUN	NN	Number=Sing	15	compound	15:compound	_
 15	battleship	battleship	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	SpaceAfter=No
 16	'	'	PUNCT	''	_	15	punct	15:punct	Entity=abstract-161)object-162)
-17	Yamato	Yamato	PROPN	NNP	Number=Sing	15	appos	15:appos	Entity=(person-111)|SpaceAfter=No
+17	Yamato	Yamato	PROPN	NNP	Number=Sing	15	appos	15:appos	Entity=(person-111)|SpaceAfter=No|XML=<hi rend:::"italic"></hi>
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	Discourse=joint:145->137
 20	includes	include	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	conj	4:conj:and	_

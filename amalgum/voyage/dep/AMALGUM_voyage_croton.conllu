@@ -1,43 +1,57 @@
+# meta::id = AMALGUM_voyage_croton
+# meta::title = Croton-on-Hudson
+# meta::shortTitle = croton
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=8566
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_croton
 # sent_id = AMALGUM_voyage_croton-1
 # s_type = frag
 # text = Croton-on-Hudson
+# newpar = head (1 s)
 1	Croton-on-Hudson	Croton-on-Hudson	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->4|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_croton-2
 # s_type = decl
 # text = Croton-on-Hudson is a village in Westchester County, New York.
-1	Croton-on-Hudson	Croton-on-Hudson	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=preparation:2->4|Entity=(place-1)
+# newpar = p (1 s)
+1	Croton-on-Hudson	Croton-on-Hudson	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=preparation:2->4|Entity=(place-1)|XML=<hi rend:::"bold"><ref target:::"http://crotonhudsonny.virtualtownhall.net"></ref></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(place-1
 4	village	village	NOUN	NN	Number=Sing	0	root	0:root	_
 5	in	in	ADP	IN	_	7	case	7:case	_
-6	Westchester	Westchester	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-2(place-3)
-7	County	County	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No
+6	Westchester	Westchester	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-2(place-3)|XML=<ref target:::"Westchester%20County">
+7	County	County	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	SpaceAfter=No|XML=</ref>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	New	New	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(place-4
-10	York	York	PROPN	NNP	Number=Sing	9	flat	9:flat	Entity=place-1)place-2)place-4)|SpaceAfter=No
+9	New	New	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(place-4|XML=<ref target:::"New%20York%20%28state%29">
+10	York	York	PROPN	NNP	Number=Sing	9	flat	9:flat	Entity=place-1)place-2)place-4)|SpaceAfter=No|XML=</ref>
 11	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_croton-3
 # s_type = frag
 # text = By plane
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:3->4
 2	plane	plane	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-5)
 
 # sent_id = AMALGUM_voyage_croton-4
 # s_type = frag
 # text = Westchester County Airport, 240 Airport Road, White Plains, +1 914 995-4860 (airlines).
-1	Westchester	Westchester	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=ROOT:4|Entity=(place-6
+# newpar = list type:::"unordered" (9 s)
+# newpar1 = item (3 s)
+1	Westchester	Westchester	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=ROOT:4|Entity=(place-6|XML=<hi rend:::"bold"><ref target:::"http://whiteplainsairport.com">
 2	County	County	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-6)|SpaceAfter=No
+3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-6)|SpaceAfter=No|XML=</ref></hi>
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	240	240	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(place-7
 6	Airport	Airport	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-8)
 7	Road	Road	PROPN	NNP	Number=Sing	3	list	3:list	Entity=place-7)|SpaceAfter=No
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
-9	White	White	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-9
-10	Plains	Plain	PROPN	NNPS	Number=Plur	3	list	3:list	Entity=place-9)|SpaceAfter=No
+9	White	White	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-9|XML=<ref target:::"White%20Plains%20%28New%20York%29">
+10	Plains	Plain	PROPN	NNPS	Number=Plur	3	list	3:list	Entity=place-9)|SpaceAfter=No|XML=</ref>
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
 12	+1	+1	NUM	CD	NumForm=Word|NumType=Card	3	list	3:list	Entity=(abstract-10
 13	914	914	NUM	CD	NumForm=Digit|NumType=Card	12	flat	12:flat	_
@@ -72,9 +86,10 @@
 # sent_id = AMALGUM_voyage_croton-7
 # s_type = frag
 # text = Stewart International Airport, 1180 First St, New Windsor, +1 845 564-2100.
-1	Stewart	Stewart	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:8->4|Entity=(person-8
+# newpar = item (2 s)
+1	Stewart	Stewart	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:8->4|Entity=(person-8|XML=<hi rend:::"bold"><ref target:::"http://www.stewartintlairport.com">
 2	International	International	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-8)|SpaceAfter=No
+3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-8)|SpaceAfter=No|XML=</ref></hi>
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	1180	1180	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(place-13
 6	First	First	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(organization-14)
@@ -113,25 +128,26 @@
 # sent_id = AMALGUM_voyage_croton-9
 # s_type = decl
 # text = Newark Liberty International Airport, Newark, New Jersey, John F. Kennedy International Airport, and LaGuardia Airport: The three major international airports in the New York City area offer service to just about anywhere.
-1	Newark	Newark	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:11->12|Entity=(person-8(place-22(place-23)
+# newpar = item (4 s)
+1	Newark	Newark	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:11->12|Entity=(person-8(place-22(place-23)|XML=<hi rend:::"bold"><ref target:::"Newark%20Liberty%20International%20Airport">
 2	Liberty	Liberty	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=place-22)
 3	International	International	ADJ	NNP	Number=Sing	4	amod	4:amod	_
-4	Airport	Airport	PROPN	NNP	Number=Sing	32	nsubj	32:nsubj	SpaceAfter=No
+4	Airport	Airport	PROPN	NNP	Number=Sing	32	nsubj	32:nsubj	SpaceAfter=No|XML=</ref></hi>
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	Newark	Newark	PROPN	NNP	Number=Sing	4	appos	4:appos	Entity=(place-23|SpaceAfter=No
+6	Newark	Newark	PROPN	NNP	Number=Sing	4	appos	4:appos	Entity=(place-23|SpaceAfter=No|XML=<ref target:::"Newark%20%28New%20Jersey%29"></ref>
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
-8	New	New	PROPN	NNP	Number=Sing	6	appos	6:appos	Entity=(place-24
-9	Jersey	Jersey	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-8)place-23)place-24)|SpaceAfter=No
+8	New	New	PROPN	NNP	Number=Sing	6	appos	6:appos	Entity=(place-24|XML=<ref target:::"New%20Jersey">
+9	Jersey	Jersey	PROPN	NNP	Number=Sing	8	flat	8:flat	Entity=person-8)place-23)place-24)|SpaceAfter=No|XML=</ref>
 10	,	,	PUNCT	,	_	15	punct	15:punct	_
-11	John	John	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(person-8
+11	John	John	PROPN	NNP	Number=Sing	15	compound	15:compound	Entity=(person-8|XML=<hi rend:::"bold"><ref target:::"John%20F.%20Kennedy%20International%20Airport">
 12	F.	F.	PROPN	NNP	Number=Sing	13	compound	13:compound	_
 13	Kennedy	Kennedy	PROPN	NNP	Number=Sing	15	compound	15:compound	_
 14	International	International	ADJ	NNP	Number=Sing	15	amod	15:amod	_
-15	Airport	Airport	PROPN	NNP	Number=Sing	4	conj	4:conj:and|32:nsubj	Entity=person-8)|SpaceAfter=No
+15	Airport	Airport	PROPN	NNP	Number=Sing	4	conj	4:conj:and|32:nsubj	Entity=person-8)|SpaceAfter=No|XML=</ref></hi>
 16	,	,	PUNCT	,	_	19	punct	19:punct	_
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
-18	LaGuardia	LaGuardia	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(place-6
-19	Airport	Airport	PROPN	NNP	Number=Sing	4	conj	4:conj:and|32:nsubj	Entity=place-6)|SpaceAfter=No
+18	LaGuardia	LaGuardia	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(place-6|XML=<hi rend:::"bold"><ref target:::"http://laguardiaairport.com/">
+19	Airport	Airport	PROPN	NNP	Number=Sing	4	conj	4:conj:and|32:nsubj	Entity=place-6)|SpaceAfter=No|XML=</ref></hi>
 20	:	:	PUNCT	:	_	4	punct	4:punct	_
 21	The	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Discourse=joint:12->4|Entity=(place-19
 22	three	3	NUM	CD	NumForm=Digit|NumType=Card	25	nummod	25:nummod	_
@@ -219,12 +235,14 @@
 # sent_id = AMALGUM_voyage_croton-13
 # s_type = frag
 # text = By car
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=joint:17->12
 2	car	car	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-36)
 
 # sent_id = AMALGUM_voyage_croton-14
 # s_type = imp
 # text = Take 9A North or 9A South depending on where you are coming from.
+# newpar = p (2 s)
 1	Take	take	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:18->12
 2	9A	9A	PROPN	NNP	Number=Sing	1	obj	1:obj	Entity=(person-37
 3	North	North	PROPN	NNP	Number=Sing	2	compound	2:compound	Entity=(organization-38)
@@ -265,17 +283,20 @@
 # sent_id = AMALGUM_voyage_croton-16
 # s_type = frag
 # text = By train
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:21->22
 2	train	train	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-48)
 
 # sent_id = AMALGUM_voyage_croton-17
 # s_type = frag
 # text = Metro-North Railroad – Hudson Line.
-1	Metro-North	Metro-North	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:22->12|Entity=(organization-49(place-50)
+# newpar = list type:::"unordered" (9 s)
+# newpar1 = item (7 s)
+1	Metro-North	Metro-North	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:22->12|Entity=(organization-49(place-50)|XML=<hi rend:::"bold"><ref target:::"http://web.mta.info/mnr/html/mnrmap.htm">
 2	Railroad	Railroad	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-49)
 3	–	-	PUNCT	:	_	5	punct	5:punct	_
 4	Hudson	Hudson	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(place-51
-5	Line	Line	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=place-51)|SpaceAfter=No
+5	Line	Line	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=place-51)|SpaceAfter=No|XML=</ref></hi>
 6	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_croton-18
@@ -341,9 +362,9 @@
 # s_type = decl
 # text = Full weekday and weekend schedules are available online.
 1	Full	full	ADJ	JJ	Degree=Pos	5	amod	5:amod	Discourse=joint:26->22|Entity=(abstract-62
-2	weekday	weekday	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(time-63)
+2	weekday	weekday	NOUN	NN	Number=Sing	5	compound	5:compound	Entity=(time-63)|XML=<ref target:::"http://web.mta.info/mnr/html/planning/schedules/pdf/HUD_JUNE_30_2019_MF.pdf"></ref>
 3	and	and	CCONJ	CC	_	4	cc	4:cc	_
-4	weekend	weekend	NOUN	NN	Number=Sing	2	conj	2:conj:and|5:compound	Entity=(time-64)
+4	weekend	weekend	NOUN	NN	Number=Sing	2	conj	2:conj:and|5:compound	Entity=(time-64)|XML=<ref target:::"http://web.mta.info/mnr/html/planning/schedules/pdf/HUD_JUNE_30_2019_SS.pdf"></ref>
 5	schedules	schedule	NOUN	NNS	Number=Plur	7	nsubj	7:nsubj	Entity=abstract-62)
 6	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
 7	available	available	ADJ	JJ	Degree=Pos	0	root	0:root	_
@@ -363,9 +384,9 @@
 8	of	of	ADP	IN	_	9	case	9:case	_
 9	trains	train	NOUN	NNS	Number=Plur	7	nmod	7:nmod:of	Entity=(place-67
 10	from	from	ADP	IN	_	13	case	13:case	_
-11	New	New	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(place-4
+11	New	New	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(place-4|XML=<ref target:::"New%20York%20City">
 12	York	York	PROPN	NNP	Number=Sing	11	flat	11:flat	_
-13	City	City	PROPN	NNP	Number=Sing	9	nmod	9:nmod:from	Entity=event-66)place-67)place-4)|SpaceAfter=No
+13	City	City	PROPN	NNP	Number=Sing	9	nmod	9:nmod:from	Entity=event-66)place-67)place-4)|SpaceAfter=No|XML=</ref>
 14	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_croton-23
@@ -402,7 +423,8 @@
 # sent_id = AMALGUM_voyage_croton-24
 # s_type = frag
 # text = Amtrak.
-1	Amtrak	Amtrak	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:30->22|Entity=(organization-72)|SpaceAfter=No
+# newpar = item (2 s)
+1	Amtrak	Amtrak	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:30->22|Entity=(organization-72)|SpaceAfter=No|XML=<hi rend:::"bold"><ref target:::"http://www.amtrak.com/"></ref></hi>
 2	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_croton-25
@@ -432,15 +454,18 @@
 # sent_id = AMALGUM_voyage_croton-26
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:32->33
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-74)
 
 # sent_id = AMALGUM_voyage_croton-27
 # s_type = frag
 # text = Bee Line System.
-1	Bee	Bee	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:33->12|Entity=(person-75
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (3 s)
+1	Bee	Bee	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:33->12|Entity=(person-75|XML=<hi rend:::"bold"><ref target:::"http://transportation.westchestergov.com/bee-line-bus">
 2	Line	Line	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	System	system	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-75)|SpaceAfter=No
+3	System	system	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-75)|SpaceAfter=No|XML=</ref></hi>
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_croton-28
@@ -455,8 +480,8 @@
 6	provides	provide	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	access	access	NOUN	NN	Number=Sing	6	obj	6:obj	Entity=(abstract-76
 8	to	to	ADP	IN	_	10	case	10:case	_
-9	White	White	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-9(place-9
-10	Plains	Plain	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:to	Entity=place-9)
+9	White	White	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-9(place-9|XML=<ref target:::"White%20Plains%20%28New%20York%29">
+10	Plains	Plain	PROPN	NNPS	Number=Plur	7	nmod	7:nmod:to	Entity=place-9)|XML=</ref>
 11	and	and	CCONJ	CC	_	13	cc	13:cc	_
 12	other	other	ADJ	JJ	Degree=Pos	13	amod	13:amod	Entity=(place-77
 13	locations	location	NOUN	NNS	Number=Plur	10	conj	7:nmod:to|10:conj:and	_
@@ -486,14 +511,17 @@
 # sent_id = AMALGUM_voyage_croton-30
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:36->37
 
 # sent_id = AMALGUM_voyage_croton-31
 # s_type = frag
 # text = Van Cortlandt Manor, 555 S Riverside Ave, ☏ +1914 271-8981 .
-1	Van	Van	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:37->33|Entity=(person-47
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (3 s)
+1	Van	Van	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:37->33|Entity=(person-47|XML=<hi rend:::"bold">
 2	Cortlandt	Cortlandt	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Manor	Manor	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-47)|SpaceAfter=No
+3	Manor	Manor	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-47)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	555	555	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	Entity=(place-80
 6	S	S	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(person-81)
@@ -545,14 +573,17 @@
 # sent_id = AMALGUM_voyage_croton-34
 # s_type = imp
 # text = Do
+# newpar = head (1 s)
 1	Do	do	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:40->39
 
 # sent_id = AMALGUM_voyage_croton-35
 # s_type = frag
 # text = Old Croton Aqueduct.
-1	Old	Old	ADJ	NNP	Number=Sing	3	amod	3:amod	Discourse=joint:41->39|Entity=(place-91
+# newpar = list type:::"unordered" (5 s)
+# newpar1 = item (5 s)
+1	Old	Old	ADJ	NNP	Number=Sing	3	amod	3:amod	Discourse=joint:41->39|Entity=(place-91|XML=<hi rend:::"bold">
 2	Croton	Croton	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Aqueduct	Aqueduct	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-91)|SpaceAfter=No
+3	Aqueduct	Aqueduct	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-91)|SpaceAfter=No|XML=</hi>
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_croton-36
@@ -594,7 +625,7 @@
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(place-96
 20	north	north	NOUN	NN	Number=Sing	15	obl	15:obl:in	Entity=place-96)
 21	to	to	ADP	IN	_	22	case	22:case	_
-22	Yonkers	Yonkers	PROPN	NNP	Number=Sing	15	obl	15:obl:to	Entity=(place-97)
+22	Yonkers	Yonkers	PROPN	NNP	Number=Sing	15	obl	15:obl:to	Entity=(place-97)|XML=<ref target:::"Yonkers"></ref>
 23	in	in	ADP	IN	_	25	case	25:case	_
 24	the	the	DET	DT	Definite=Def|PronType=Art	25	det	25:det	Entity=(place-98
 25	south	south	NOUN	NN	Number=Sing	15	obl	15:obl:in	Entity=place-94)place-98)|SpaceAfter=No
@@ -651,9 +682,11 @@
 # sent_id = AMALGUM_voyage_croton-40
 # s_type = imp
 # text = Take sailing lessons.
-1	Take	take	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:50->51
+# newpar = list type:::"unordered" (4 s)
+# newpar1 = item (2 s)
+1	Take	take	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:50->51|XML=<hi rend:::"bold">
 2	sailing	sailing	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(event-107(event-108)
-3	lessons	lesson	NOUN	NNS	Number=Plur	1	obj	1:obj	Entity=event-107)|SpaceAfter=No
+3	lessons	lesson	NOUN	NNS	Number=Plur	1	obj	1:obj	Entity=event-107)|SpaceAfter=No|XML=</hi>
 4	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_croton-41
@@ -668,19 +701,20 @@
 7	Senasqua	Senasqua	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-7(abstract-42)
 8	Road	Road	PROPN	NNP	Number=Sing	5	list	5:list	Entity=place-7)|SpaceAfter=No
 9	,	,	PUNCT	,	_	10	punct	10:punct	_
-10	+1	+1	NUM	CD	NumForm=Word|NumType=Card	1	parataxis	1:parataxis	Entity=(abstract-110
-11	914	914	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	SpaceAfter=No
+10	+1	+1	NUM	CD	NumForm=Word|NumType=Card	1	parataxis	1:parataxis	Entity=(abstract-110|XML=<hi rend:::"italic">
+11	914	914	NUM	CD	NumForm=Digit|NumType=Card	10	flat	10:flat	SpaceAfter=No|XML=</hi>
 12	-271-6868	-271-6868	NUM	CD	NumForm=Word|NumType=Card	11	flat	11:flat	Entity=abstract-110)|SpaceAfter=No
 13	,	,	PUNCT	,	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_croton-42
 # s_type = decl
 # text = Go to Teatown Nature Reservation at 1600 Spring Valley road, +1 914 760-2912, They have a kid-friendly nature center there with many East Coast animals on display.
+# newpar = item (2 s)
 1	Go	go	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:52->53
 2	to	to	ADP	IN	_	5	case	5:case	_
-3	Teatown	Teatown	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(place-111(place-112)
+3	Teatown	Teatown	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(place-111(place-112)|XML=<hi rend:::"bold"><ref target:::"http://www.teatown.org/">
 4	Nature	Nature	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(person-113)
-5	Reservation	Reservation	PROPN	NNP	Number=Sing	1	obl	1:obl:to	_
+5	Reservation	Reservation	PROPN	NNP	Number=Sing	1	obl	1:obl:to	XML=</ref></hi>
 6	at	at	ADP	IN	_	10	case	10:case	_
 7	1600	1600	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	Entity=(place-114
 8	Spring	spring	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(place-115
@@ -721,14 +755,17 @@
 # sent_id = AMALGUM_voyage_croton-44
 # s_type = imp
 # text = Buy
+# newpar = head (1 s)
 1	Buy	buy	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=attribution:55->56
 
 # sent_id = AMALGUM_voyage_croton-45
 # s_type = frag
 # text = Groovy on Grand, 119 Grand St. Children's clothing store.
-1	Groovy	Groovy	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:56->53
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (1 s)
+1	Groovy	Groovy	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:56->53|XML=<hi rend:::"bold">
 2	on	on	ADP	IN	_	3	case	3:case	_
-3	Grand	Grand	PROPN	NNP	Number=Sing	1	nmod	1:nmod:on	Entity=(place-55)|SpaceAfter=No
+3	Grand	Grand	PROPN	NNP	Number=Sing	1	nmod	1:nmod:on	Entity=(place-55)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	11	punct	11:punct	_
 5	119	119	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(place-122(person-123(place-124
 6	Grand	Grand	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-55)
@@ -743,10 +780,11 @@
 # sent_id = AMALGUM_voyage_croton-46
 # s_type = frag
 # text = Down Cycles, 2015 Albany Post Rd, ☏ +1914 827-9570 .
-1	Down	down	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=elaboration:57->56|Entity=(event-126
-2	Cycles	Cycles	PROPN	NNPS	Number=Plur	0	root	0:root	SpaceAfter=No
+# newpar = item (2 s)
+1	Down	down	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=elaboration:57->56|Entity=(event-126|XML=<hi rend:::"bold">
+2	Cycles	Cycles	PROPN	NNPS	Number=Plur	0	root	0:root	SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=event-126)(time-127)
+4	2015	2015	NUM	CD	NumForm=Digit|NumType=Card	2	nmod:tmod	2:nmod:tmod	Entity=event-126)(time-127)|XML=<date when:::"2015"></date>
 5	Albany	Albany	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-128(person-129
 6	Post	Post	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=person-129)
 7	Rd	Rd	PROPN	NNP	Number=Sing	2	list	2:list	Entity=place-128)|SpaceAfter=No
@@ -769,13 +807,16 @@
 # sent_id = AMALGUM_voyage_croton-48
 # s_type = frag
 # text = Budget
+# newpar = head (1 s)
 1	Budget	budget	NOUN	NN	Number=Sing	0	root	0:root	Discourse=elaboration:59->58|Entity=(abstract-133)
 
 # sent_id = AMALGUM_voyage_croton-49
 # s_type = frag
 # text = Blue Pig, 121 Maple St.
-1	Blue	Blue	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=elaboration:60->59|Entity=(person-134
-2	Pig	Pig	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-134)|SpaceAfter=No
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (3 s)
+1	Blue	Blue	ADJ	NNP	Number=Sing	2	amod	2:amod	Discourse=elaboration:60->59|Entity=(person-134|XML=<hi rend:::"bold">
+2	Pig	Pig	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-134)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	121	121	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	Entity=(place-135
 5	Maple	Maple	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(person-136)
@@ -813,13 +854,16 @@
 # sent_id = AMALGUM_voyage_croton-52
 # s_type = frag
 # text = Mid-range
+# newpar = head (1 s)
 1	Mid-range	Mid-range	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:63->62|Entity=(object-143)
 
 # sent_id = AMALGUM_voyage_croton-53
 # s_type = frag
 # text = Justin Thyme, 171 Grand St, ☏ +1914 271-0022 .
-1	Justin	Justin	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:64->63|Entity=(person-144
-2	Thyme	Thyme	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-144)|SpaceAfter=No
+# newpar = list type:::"unordered" (34 s)
+# newpar1 = item (2 s)
+1	Justin	Justin	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:64->63|Entity=(person-144|XML=<hi rend:::"bold">
+2	Thyme	Thyme	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-144)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	171	171	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	Entity=(person-145
 5	Grand	Grand	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-55)
@@ -844,10 +888,11 @@
 # sent_id = AMALGUM_voyage_croton-55
 # s_type = frag
 # text = Samuari Habachi Steak House, 352 S. Riverside Ave, ☏ +1914 271-8988 .
-1	Samuari	Samuari	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=elaboration:66->65|Entity=(place-149(place-150
+# newpar = item (4 s)
+1	Samuari	Samuari	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=elaboration:66->65|Entity=(place-149(place-150|XML=<hi rend:::"bold">
 2	Habachi	Habachi	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-150)
 3	Steak	Steak	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(object-151)
-4	House	House	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No
+4	House	House	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	352	352	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	Entity=(place-152
 7	S.	S.	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(person-153)
@@ -912,8 +957,9 @@
 # sent_id = AMALGUM_voyage_croton-59
 # s_type = frag
 # text = Umami Cafe, 325 South Riverside Ave, ☏ +1 914-271-5555 .
-1	Umami	Umami	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:72->70|Entity=(place-163(place-164)
-2	Cafe	Cafe	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-163)|SpaceAfter=No
+# newpar = item (4 s)
+1	Umami	Umami	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:72->70|Entity=(place-163(place-164)|XML=<hi rend:::"bold">
+2	Cafe	Cafe	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-163)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	7	punct	7:punct	_
 4	325	325	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(person-165
 5	South	South	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-40)
@@ -968,12 +1014,13 @@
 # sent_id = AMALGUM_voyage_croton-63
 # s_type = frag
 # text = Memphis Mae’s BBQ Bistro, 173 South Riverside Ave, ☏ +1 914-271-0125 .
-1	Memphis	Memphis	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	Discourse=joint:77->74|Entity=(organization-171(place-172
+# newpar = item (3 s)
+1	Memphis	Memphis	PROPN	NNP	Number=Sing	5	nmod:poss	5:nmod:poss	Discourse=joint:77->74|Entity=(organization-171(place-172|XML=<hi rend:::"bold">
 2-3	Mae’s	_	_	_	_	_	_	_	_
 2	Mae	Mae	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	’s	's	PART	POS	_	1	case	1:case	Entity=place-172)
 4	BBQ	barbecue	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(substance-173)
-5	Bistro	Bistro	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-171)|SpaceAfter=No
+5	Bistro	Bistro	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-171)|SpaceAfter=No|XML=</hi>
 6	,	,	PUNCT	,	_	10	punct	10:punct	_
 7	173	173	NUM	CD	NumForm=Digit|NumType=Card	10	nummod	10:nummod	Entity=(person-174
 8	South	South	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-40)
@@ -1043,8 +1090,9 @@
 # sent_id = AMALGUM_voyage_croton-66
 # s_type = frag
 # text = Hunan Wok, 125 Grand St, ☏ +1 914-271-1371 .
-1	Hunan	Hunan	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:82->80|Entity=(person-178)
-2	Wok	Wok	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+# newpar = item (2 s)
+1	Hunan	Hunan	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:82->80|Entity=(person-178)|XML=<hi rend:::"bold">
+2	Wok	Wok	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	6	punct	6:punct	_
 4	125	125	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	Entity=(person-179
 5	Grand	Grand	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-55)
@@ -1052,7 +1100,7 @@
 7	,	,	PUNCT	,	_	8	punct	8:punct	_
 8	☏	☏	NOUN	NN	Number=Sing	2	list	2:list	Entity=(abstract-166
 9	+1	+1	NUM	CD	NumForm=Word|NumType=Card	8	flat	8:flat	_
-10	914-271-1371	914-271-1371	NUM	CD	NumForm=Word|NumType=Card	9	flat	9:flat	Entity=abstract-166)
+10	914-271-1371	914-271-1371	NUM	CD	NumForm=Word|NumType=Card	9	flat	9:flat	Entity=abstract-166)|XML=<date when:::"1371"></date>
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_croton-67
@@ -1065,11 +1113,12 @@
 # sent_id = AMALGUM_voyage_croton-68
 # s_type = frag
 # text = Grouchy Gabe's Grill, 8 Old Post Road South, ☏ +1 914-271-9690 .
-1	Grouchy	Grouchy	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:84->82|Entity=(person-180(person-181
+# newpar = item (5 s)
+1	Grouchy	Grouchy	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:84->82|Entity=(person-180(person-181|XML=<hi rend:::"bold">
 2-3	Gabe's	_	_	_	_	_	_	_	_
 2	Gabe	Gabe	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	_
 3	's	's	PART	POS	_	2	case	2:case	Entity=person-181)
-4	Grill	Grill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-180)|SpaceAfter=No
+4	Grill	Grill	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-180)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	8	8	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	Entity=(object-182
 7	Old	Old	PROPN	NNP	Number=Sing	9	compound	9:compound	_
@@ -1163,7 +1212,8 @@
 # sent_id = AMALGUM_voyage_croton-73
 # s_type = frag
 # text = Mex-to-go, 345 South Riverside Ave, ☏ +1 914-271-8646 .
-1	Mex-to-go	Mex-to-go	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:92->91|Entity=(animal-198)|SpaceAfter=No
+# newpar = item (5 s)
+1	Mex-to-go	Mex-to-go	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:92->91|Entity=(animal-198)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 2	,	,	PUNCT	,	_	6	punct	6:punct	_
 3	345	345	NUM	CD	NumForm=Digit|NumType=Card	6	nummod	6:nummod	Entity=(place-199
 4	South	South	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-40)
@@ -1239,10 +1289,11 @@
 # sent_id = AMALGUM_voyage_croton-78
 # s_type = frag
 # text = T.K. Casquarelli’s, 440 South Riverside Dr, ☏ +1 914-271-2800 .
-1	T.K.	T.K.	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:98->96|Entity=(person-204
+# newpar = item (3 s)
+1	T.K.	T.K.	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:98->96|Entity=(person-204|XML=<hi rend:::"bold">
 2-3	Casquarelli’s	_	_	_	_	_	_	_	SpaceAfter=No
 2	Casquarelli	Casquarelli	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	’s	's	PART	POS	_	1	case	1:case	Entity=person-204)
+3	’s	's	PART	POS	_	1	case	1:case	Entity=person-204)|XML=</hi>
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	440	440	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	Entity=(person-205
 6	South	South	PROPN	NNP	Number=Sing	8	compound	8:compound	_
@@ -1291,8 +1342,9 @@
 # sent_id = AMALGUM_voyage_croton-81
 # s_type = frag
 # text = Ocean House (Oyster Bar & Grill), 49 North Riverside Ave (Route 9A), ☏ +1 914-271-0702 .
-1	Ocean	Ocean	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:101->99|Entity=(place-210
-2	House	House	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-210)
+# newpar = item (6 s)
+1	Ocean	Ocean	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:101->99|Entity=(place-210|XML=<hi rend:::"bold">
+2	House	House	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-210)|XML=</hi>
 3	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:102->101|SpaceAfter=No
 4	Oyster	Oyster	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(place-211
 5	Bar	Bar	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=place-211)
@@ -1412,15 +1464,18 @@
 # sent_id = AMALGUM_voyage_croton-87
 # s_type = imp
 # text = Drink
+# newpar = head (1 s)
 1	Drink	drink	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:117->118
 
 # sent_id = AMALGUM_voyage_croton-88
 # s_type = frag
 # text = Deprez Wines & Spirits, 440 S Riverside Ave, ☏ +1914 271-3200 .
-1	Deprez	Deprez	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:118->51|Entity=(person-225
+# newpar = list type:::"unordered" (1 s)
+# newpar1 = item (1 s)
+1	Deprez	Deprez	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:118->51|Entity=(person-225|XML=<hi rend:::"bold">
 2	Wines	Wines	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=person-225)
 3	&	&	CCONJ	CC	_	4	cc	4:cc	Entity=(substance-226
-4	Spirits	Spirits	PROPN	NNPS	Number=Plur	2	conj	2:conj:and	Entity=substance-226)|SpaceAfter=No
+4	Spirits	Spirits	PROPN	NNPS	Number=Plur	2	conj	2:conj:and	Entity=substance-226)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	9	punct	9:punct	_
 6	440	440	NUM	CD	NumForm=Digit|NumType=Card	9	nummod	9:nummod	Entity=(place-227
 7	S	S	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(person-81)
@@ -1435,15 +1490,18 @@
 # sent_id = AMALGUM_voyage_croton-89
 # s_type = frag
 # text = Coffee
+# newpar = head (1 s)
 1	Coffee	coffee	NOUN	NN	Number=Sing	0	root	0:root	Discourse=joint:119->118|Entity=(substance-228)
 
 # sent_id = AMALGUM_voyage_croton-90
 # s_type = frag
 # text = Black Cow Coffee Company, 51 Maple St, ☏ +1914 271-7544 .
-1	Black	Black	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:120->118|Entity=(organization-201(person-229
+# newpar = list type:::"unordered" (6 s)
+# newpar1 = item (6 s)
+1	Black	Black	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:120->118|Entity=(organization-201(person-229|XML=<hi rend:::"bold">
 2	Cow	Cow	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=person-229)
 3	Coffee	coffee	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(substance-228)
-4	Company	Company	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-201)|SpaceAfter=No
+4	Company	Company	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-201)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	51	51	NUM	CD	NumForm=Digit|NumType=Card	8	nummod	8:nummod	Entity=(person-136
 7	Maple	Maple	PROPN	NNP	Number=Sing	8	compound	8:compound	_
@@ -1463,13 +1521,13 @@
 4	Tu	Tu	PROPN	NNP	Number=Sing	2	conj	1:dep|2:conj	Discourse=preparation:122->123|Entity=(person-233(person-234)|SpaceAfter=No
 5	-	-	PUNCT	:	_	6	punct	6:punct	SpaceAfter=No
 6	F	F	PROPN	NNP	Number=Sing	4	conj	2:conj|4:conj	Entity=(person-235
-7	6AM-9PM	6AM-9PM	NUM	CD	NumForm=Word|NumType=Card	6	nmod:tmod	6:nmod:tmod	Entity=person-233)person-235)(time-236)|SpaceAfter=No
+7	6AM-9PM	6AM-9PM	NUM	CD	NumForm=Word|NumType=Card	6	nmod:tmod	6:nmod:tmod	Entity=person-233)person-235)(time-236)|SpaceAfter=No|XML=<time when:::"2100"></time>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	Sa	Sa	PROPN	NNP	Number=Sing	1	parataxis	1:parataxis	Discourse=joint:123->118|Entity=(person-237
-10	7AM-9PM	7am-9pm	NUM	CD	NumForm=Word|NumType=Card	9	dep	9:dep	Entity=person-237)
+10	7AM-9PM	7am-9pm	NUM	CD	NumForm=Word|NumType=Card	9	dep	9:dep	Entity=person-237)|XML=<time when:::"0700"></time>
 11	&	&	CCONJ	CC	_	12	cc	12:cc	Entity=(time-238
 12	Su	Su	PROPN	NNP	Number=Sing	9	conj	9:conj:and	_
-13	8AM-3PM	8am-3pm	NUM	CD	NumForm=Word|NumType=Card	12	dep	12:dep	Entity=time-238)|SpaceAfter=No
+13	8AM-3PM	8am-3pm	NUM	CD	NumForm=Word|NumType=Card	12	dep	12:dep	Entity=time-238)|SpaceAfter=No|XML=<time from:::"0800" to:::"1500"></time>
 14	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_croton-92

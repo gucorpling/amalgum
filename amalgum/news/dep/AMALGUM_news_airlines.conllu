@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_airlines
+# meta::title = Malaysia Airlines Flight 17 shot down over eastern Ukraine, killing 298
+# meta::shortTitle = airlines
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2014-07-18
+# meta::dateModified = 2015-08-14
+# meta::sourceURL = https://en.wikinews.org/wiki/Malaysia_Airlines_Flight_17_shot_down_over_eastern_Ukraine%2C_killing_298
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_airlines
 # sent_id = AMALGUM_news_airlines-1
 # s_type = decl
 # text = Malaysia Airlines Flight 17 shot down over eastern Ukraine, killing 298
+# newpar = head (1 s)
 1	Malaysia	Malaysia	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=preparation:1->4|Entity=(event-1(organization-2
 2	Airlines	Airline	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=organization-2)
 3	Flight	Flight	PROPN	NNP	Number=Sing	5	nsubj:pass	5:nsubj:pass	_
@@ -18,20 +29,23 @@
 # sent_id = AMALGUM_news_airlines-2
 # s_type = frag
 # text = Saturday, July 19, 2014
-1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-5)|SpaceAfter=No
+# newpar = p (1 s)
+1	Saturday	Saturday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:3->4|Entity=(time-5)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	July	July	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5
+3	July	July	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-5|XML=<date when:::"2014-07-19">
 4	19	19	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)
+6	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-5)(time-6)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_airlines-3
 # s_type = frag
 # text = File photo from 2010 of Malaysia Airlines Boeing 777 9M-MRD, the aircraft that was shot down.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	File	file	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=ROOT:4|Entity=(object-7
 2	photo	photo	NOUN	NN	Number=Sing	0	root	0:root	_
 3	from	from	ADP	IN	_	4	case	4:case	_
-4	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:from	Entity=(time-8)
+4	2010	2010	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:from	Entity=(time-8)|XML=<date when:::"2010"></date>
 5	of	of	ADP	IN	_	10	case	10:case	_
 6	Malaysia	Malaysia	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(person-9(organization-2
 7	Airlines	Airline	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=organization-2)
@@ -59,33 +73,34 @@
 # sent_id = AMALGUM_news_airlines-5
 # s_type = decl
 # text = Malaysia Airlines Flight 17, a Boeing 777, was shot down by a surface-to-air missile on Thursday according to US officials, over disputed eastern Ukraine by an unidentified party.
-1	Malaysia	Malaysia	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:8->4|Entity=(event-1(organization-2
-2	Airlines	Airline	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=organization-2)
-3	Flight	Flight	PROPN	NNP	Number=Sing	11	nsubj:pass	11:nsubj:pass	_
-4	17	17	NUM	CD	NumForm=Digit|NumType=Card	3	flat	3:flat	Entity=event-1)|SpaceAfter=No
+# newpar = p (1 s)
+1	Malaysia	Malaysia	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:8->4|Entity=(event-1(organization-2|XML=<ref target:::"https://en.wikinews.org/wiki/Malaysia_Airlines">
+2	Airlines	Airline	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=organization-2)|XML=</ref>
+3	Flight	Flight	PROPN	NNP	Number=Sing	11	nsubj:pass	11:nsubj:pass	XML=<ref target:::"https://en.wikipedia.org/wiki/Malaysia%20Airlines%20Flight%2017">
+4	17	17	NUM	CD	NumForm=Digit|NumType=Card	3	flat	3:flat	Entity=event-1)|SpaceAfter=No|XML=</ref>
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(object-14
-7	Boeing	Boeing	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-10)
-8	777	777	NUM	CD	NumForm=Digit|NumType=Card	3	appos	3:appos	Entity=object-14)|SpaceAfter=No
+7	Boeing	Boeing	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(organization-10)|XML=<ref target:::"https://en.wikipedia.org/wiki/Boeing%20777">
+8	777	777	NUM	CD	NumForm=Digit|NumType=Card	3	appos	3:appos	Entity=object-14)|SpaceAfter=No|XML=</ref>
 9	,	,	PUNCT	,	_	3	punct	3:punct	_
 10	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
 11	shot	shoot	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 12	down	down	ADP	RP	_	11	compound:prt	11:compound:prt	_
 13	by	by	ADP	IN	_	16	case	16:case	_
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	Entity=(object-15
-15	surface-to-air	surface-to-air	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
-16	missile	missile	NOUN	NN	Number=Sing	11	obl	11:obl:by	Entity=object-15)
+15	surface-to-air	surface-to-air	ADJ	JJ	Degree=Pos	16	amod	16:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/surface-to-air%20missile">
+16	missile	missile	NOUN	NN	Number=Sing	11	obl	11:obl:by	Entity=object-15)|XML=</ref>
 17	on	on	ADP	IN	_	18	case	18:case	_
-18	Thursday	Thursday	PROPN	NNP	Number=Sing	11	obl	11:obl:on	Entity=(time-16)
+18	Thursday	Thursday	PROPN	NNP	Number=Sing	11	obl	11:obl:on	Entity=(time-16)|XML=<date when:::"2014-07-17"></date>
 19	according	accord	VERB	VBG	VerbForm=Ger	22	case	22:case	Discourse=attribution:9->8
 20	to	to	ADP	IN	_	19	fixed	19:fixed	_
-21	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	22	compound	22:compound	Entity=(person-17
+21	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	22	compound	22:compound	Entity=(person-17|XML=<ref target:::"https://en.wikinews.org/wiki/US"></ref>
 22	officials	official	NOUN	NNS	Number=Plur	11	obl	11:obl:according_to	Entity=person-17)|SpaceAfter=No
 23	,	,	PUNCT	,	_	27	punct	27:punct	_
 24	over	over	ADP	IN	_	27	case	27:case	_
 25	disputed	dispute	VERB	VBN	Tense=Past|VerbForm=Part	27	amod	27:amod	Entity=(place-3
 26	eastern	eastern	ADJ	JJ	Degree=Pos	27	amod	27:amod	_
-27	Ukraine	Ukraine	PROPN	NNP	Number=Sing	11	obl	11:obl:over	Entity=place-3)
+27	Ukraine	Ukraine	PROPN	NNP	Number=Sing	11	obl	11:obl:over	Entity=place-3)|XML=<ref target:::"https://en.wikinews.org/wiki/Ukraine"></ref>
 28	by	by	ADP	IN	_	31	case	31:case	_
 29	an	a	DET	DT	Definite=Ind|PronType=Art	31	det	31:det	Entity=(organization-18
 30	unidentified	unidentified	ADJ	JJ	Degree=Pos|Polarity=Neg	31	amod	31:amod	_
@@ -95,45 +110,46 @@
 # sent_id = AMALGUM_news_airlines-6
 # s_type = decl
 # text = The flight, which departed Amsterdam Airport Schiphol in The Netherlands at 10:15 UTC en route to Kuala Lumpur International Airport in Malaysia, disappeared from radar at 13:15 UTC near Hrabove, a village in the Donetsk Oblast of Ukraine.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:10->13|Entity=(event-1
 2	flight	flight	NOUN	NN	Number=Sing	25	nsubj	5:nsubj|25:nsubj	SpaceAfter=No
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	which	which	PRON	WDT	PronType=Rel	5	nsubj	2:ref	Discourse=elaboration:11->10
 5	departed	depart	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	2	acl:relcl	2:acl:relcl	_
-6	Amsterdam	Amsterdam	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-19(place-20)
+6	Amsterdam	Amsterdam	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-19(place-20)|XML=<ref target:::"https://en.wikipedia.org/wiki/Amsterdam%20Airport%20Schiphol">
 7	Airport	Airport	PROPN	NNP	Number=Sing	5	obj	5:obj	Entity=place-19)
-8	Schiphol	Schiphol	PROPN	NNP	Number=Sing	5	obj	5:obj	Entity=(place-21
+8	Schiphol	Schiphol	PROPN	NNP	Number=Sing	5	obj	5:obj	Entity=(place-21|XML=</ref>
 9	in	in	ADP	IN	_	11	case	11:case	_
-10	The	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-22
-11	Netherlands	Netherlands	PROPN	NNPS	Number=Plur	8	nmod	8:nmod:in	Entity=place-21)place-22)
+10	The	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-22|XML=<ref target:::"https://en.wikinews.org/wiki/The_Netherlands">
+11	Netherlands	Netherlands	PROPN	NNPS	Number=Plur	8	nmod	8:nmod:in	Entity=place-21)place-22)|XML=</ref>
 12	at	at	ADP	IN	_	13	case	13:case	_
 13	10:15	10:15	NUM	CD	NumForm=Word|NumType=Card	5	obl	5:obl:at	Entity=(time-23
 14	UTC	UTC	PROPN	NNP	Number=Sing	13	nmod:tmod	13:nmod:tmod	Entity=time-23)(time-24)
 15	en	en	ADP	IN	_	16	case	16:case	_
 16	route	route	NOUN	NN	Number=Sing	5	obl	5:obl:en	_
 17	to	to	ADP	IN	_	21	case	21:case	_
-18	Kuala	Kuala	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(place-19(place-25
+18	Kuala	Kuala	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(place-19(place-25|XML=<ref target:::"https://en.wikinews.org/wiki/Kuala_Lumpur_International_Airport">
 19	Lumpur	Lumpur	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=place-25)
 20	International	International	ADJ	NNP	Number=Sing	21	amod	21:amod	_
-21	Airport	Airport	PROPN	NNP	Number=Sing	16	nmod	16:nmod:to	_
+21	Airport	Airport	PROPN	NNP	Number=Sing	16	nmod	16:nmod:to	XML=</ref>
 22	in	in	ADP	IN	_	23	case	23:case	_
-23	Malaysia	Malaysia	PROPN	NNP	Number=Sing	21	nmod	21:nmod:in	Entity=event-1)place-19)(place-26)|SpaceAfter=No
+23	Malaysia	Malaysia	PROPN	NNP	Number=Sing	21	nmod	21:nmod:in	Entity=event-1)place-19)(place-26)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Malaysia"></ref>
 24	,	,	PUNCT	,	_	2	punct	2:punct	_
 25	disappeared	disappear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=same_unit:12->10
 26	from	from	ADP	IN	_	27	case	27:case	_
 27	radar	radar	NOUN	NN	Number=Sing	25	obl	25:obl:from	Entity=(abstract-27)
 28	at	at	ADP	IN	_	29	case	29:case	_
 29	13:15	13:15	NUM	CD	NumForm=Word|NumType=Card	25	obl	25:obl:at	Entity=(time-28
-30	UTC	UTC	PROPN	NNP	Number=Sing	29	nmod:tmod	29:nmod:tmod	Entity=time-28)(time-24)
+30	UTC	UTC	PROPN	NNP	Number=Sing	29	nmod:tmod	29:nmod:tmod	Entity=time-28)(time-24)|XML=<ref target:::"https://en.wikipedia.org/wiki/UTC"></ref>
 31	near	near	ADP	IN	_	32	case	32:case	_
-32	Hrabove	Hrabove	PROPN	NNP	Number=Sing	25	obl	25:obl:near	Entity=(place-29)|SpaceAfter=No
+32	Hrabove	Hrabove	PROPN	NNP	Number=Sing	25	obl	25:obl:near	Entity=(place-29)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Hrabove%20(Donetsk%20Oblast)"></ref>
 33	,	,	PUNCT	,	_	35	punct	35:punct	_
 34	a	a	DET	DT	Definite=Ind|PronType=Art	35	det	35:det	Entity=(place-29
 35	village	village	NOUN	NN	Number=Sing	32	appos	32:appos	_
 36	in	in	ADP	IN	_	39	case	39:case	_
 37	the	the	DET	DT	Definite=Def|PronType=Art	39	det	39:det	Entity=(place-30
-38	Donetsk	Donetsk	PROPN	NNP	Number=Sing	39	compound	39:compound	Entity=(place-31)
-39	Oblast	Oblast	PROPN	NNP	Number=Sing	35	nmod	35:nmod:in	_
+38	Donetsk	Donetsk	PROPN	NNP	Number=Sing	39	compound	39:compound	Entity=(place-31)|XML=<ref target:::"https://en.wikinews.org/wiki/Donetsk_Oblast">
+39	Oblast	Oblast	PROPN	NNP	Number=Sing	35	nmod	35:nmod:in	XML=</ref>
 40	of	of	ADP	IN	_	41	case	41:case	_
 41	Ukraine	Ukraine	PROPN	NNP	Number=Sing	39	nmod	39:nmod:of	Entity=place-29)place-30)(place-3)|SpaceAfter=No
 42	.	.	PUNCT	.	_	25	punct	25:punct	_
@@ -178,7 +194,7 @@
 15	forces	force	NOUN	NNS	Number=Plur	11	nmod	11:nmod:between	Entity=organization-37)
 16	and	and	CCONJ	CC	_	20	cc	20:cc	_
 17	pro-	pro-	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(organization-38|SpaceAfter=No
-18	Russian	Russian	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
+18	Russian	Russian	ADJ	JJ	Degree=Pos	20	amod	20:amod	XML=<ref target:::"https://en.wikinews.org/wiki/Russia"></ref>
 19	separatist	separatist	NOUN	NN	Number=Sing	20	compound	20:compound	Entity=(person-39)
 20	forces	force	NOUN	NNS	Number=Plur	15	conj	11:nmod:between|15:conj:and	Entity=place-35)organization-38)|SpaceAfter=No
 21	.	.	PUNCT	.	_	11	punct	11:punct	_
@@ -186,8 +202,9 @@
 # sent_id = AMALGUM_news_airlines-9
 # s_type = decl
 # text = United States officials confirmed the aircraft has been shot down, according to data from a surveillance satellite which showed the last trajectory and impact of the missile.
-1	United	Unite	VERB	NNP	Number=Sing	2	amod	2:amod	Discourse=attribution:18->19|Entity=(person-17(organization-40
-2	States	State	PROPN	NNPS	Number=Plur	3	compound	3:compound	Entity=organization-40)
+# newpar = p (2 s)
+1	United	Unite	VERB	NNP	Number=Sing	2	amod	2:amod	Discourse=attribution:18->19|Entity=(person-17(organization-40|XML=<ref target:::"https://en.wikinews.org/wiki/United_States">
+2	States	State	PROPN	NNPS	Number=Plur	3	compound	3:compound	Entity=organization-40)|XML=</ref>
 3	officials	official	NOUN	NNS	Number=Plur	4	nsubj	4:nsubj	Entity=person-17)
 4	confirmed	confirm	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Discourse=joint:19->13|Entity=(object-11
@@ -226,7 +243,7 @@
 5	to	to	PART	TO	_	11	mark	11:mark	_
 6	be	be	AUX	VB	VerbForm=Inf	11	cop	11:cop	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(object-15
-8	Buk	Buk	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(abstract-46)
+8	Buk	Buk	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(abstract-46)|XML=<ref target:::"https://en.wikipedia.org/wiki/Buk%20missile%20system"></ref>
 9	M1	M1	NUM	CD	NumForm=Word|NumType=Card	11	compound	11:compound	_
 10	surface-to-air	surface-to-air	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
 11	missile	missile	NOUN	NN	Number=Sing	4	xcomp	4:xcomp|14:nsubj:pass	_
@@ -251,6 +268,8 @@
 # sent_id = AMALGUM_news_airlines-11
 # s_type = frag
 # text = Flight path of Malaysia Airlines Flight 17.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Flight	flight	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=preparation:25->33|Entity=(abstract-50(event-1)
 2	path	path	NOUN	NN	Number=Sing	0	root	0:root	_
 3	of	of	ADP	IN	_	6	case	6:case	_
@@ -274,6 +293,7 @@
 # sent_id = AMALGUM_news_airlines-13
 # s_type = decl
 # text = So far no party has claimed responsibility for the attack.
+# newpar = p (4 s)
 1	So	so	ADV	RB	_	2	advmod	2:advmod	Discourse=preparation:28->33
 2	far	far	ADV	RB	Degree=Pos	6	advmod	6:advmod	_
 3	no	no	DET	DT	Polarity=Neg	4	det	4:det	Entity=(organization-18
@@ -307,8 +327,8 @@
 # sent_id = AMALGUM_news_airlines-15
 # s_type = decl
 # text = Pavlo Klimkin, Ukraine's foreign minister, said to The Guardian, "We are absolutely sure and we checked yesterday that no missiles have been taken from the Ukrainian army".
-1	Pavlo	Pavlo	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Discourse=attribution:32->33|Entity=(person-56
-2	Klimkin	Klimkin	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-56)|SpaceAfter=No
+1	Pavlo	Pavlo	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Discourse=attribution:32->33|Entity=(person-56|XML=<ref target:::"https://en.wikipedia.org/wiki/Pavlo%20Klimkin">
+2	Klimkin	Klimkin	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-56)|SpaceAfter=No|XML=</ref>
 3	,	,	PUNCT	,	_	7	punct	7:punct	_
 4-5	Ukraine's	_	_	_	_	_	_	_	_
 4	Ukraine	Ukraine	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	Entity=(person-56(place-3
@@ -318,8 +338,8 @@
 8	,	,	PUNCT	,	_	1	punct	1:punct	_
 9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 10	to	to	ADP	IN	_	12	case	12:case	_
-11	The	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(organization-57
-12	Guardian	Guardian	PROPN	NNP	Number=Sing	9	obl	9:obl:to	Entity=organization-57)|SpaceAfter=No
+11	The	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(organization-57|XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/The_Guardian">
+12	Guardian	Guardian	PROPN	NNP	Number=Sing	9	obl	9:obl:to	Entity=organization-57)|SpaceAfter=No|XML=</ref></hi>
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	"	''	PUNCT	``	_	18	punct	18:punct	Discourse=joint:33->19|SpaceAfter=No
 15	We	we	PRON	PRP	Case=Nom|Number=Plur|Person=1|PronType=Prs	18	nsubj	18:nsubj	Entity=(person-58)
@@ -347,16 +367,16 @@
 # s_type = decl
 # text = The Security Service of Ukraine (SBU) published on YouTube an alleged wiretap of separatist commanders and Russian intelligence officers discussing the shoot-down and acknowledging the aircraft shot down was civilian.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:36->33|Entity=(organization-63
-2	Security	Security	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-64)
+2	Security	Security	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-64)|XML=<ref target:::"https://en.wikipedia.org/wiki/Security%20Service%20of%20Ukraine">
 3	Service	Service	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	Ukraine	Ukraine	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=organization-63)(place-3)
+5	Ukraine	Ukraine	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=organization-63)(place-3)|XML=</ref>
 6	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=restatement:37->36|SpaceAfter=No
 7	SBU	SBU	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(organization-63)|SpaceAfter=No
 8	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
 9	published	publish	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	Discourse=same_unit:38->36
 10	on	on	ADP	IN	_	11	case	11:case	_
-11	YouTube	YouTube	PROPN	NNP	Number=Sing	9	obl	9:obl:on	Entity=(place-65)
+11	YouTube	YouTube	PROPN	NNP	Number=Sing	9	obl	9:obl:on	Entity=(place-65)|XML=<ref target:::"https://en.wikinews.org/wiki/YouTube"></ref>
 12	an	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(abstract-66
 13	alleged	allege	VERB	VBN	Tense=Past|VerbForm=Part	14	amod	14:amod	_
 14	wiretap	wiretap	NOUN	NN	Number=Sing	9	obj	9:obj	_
@@ -383,6 +403,7 @@
 # sent_id = AMALGUM_news_airlines-17
 # s_type = decl
 # text = Meanwhile, Russia's defense ministry has denied involvement, posting a statement on their website which read, "In view of various types of speculation concerning operations of the Russian armed forces in the areas bordering Ukraine, we affirm that the anti-aircraft means of the Russian armed forces did not operate in that region July 17".
+# newpar = p (1 s)
 1	Meanwhile	meanwhile	ADV	RB	Degree=Pos	8	advmod	8:advmod	Discourse=joint:42->33|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3-4	Russia's	_	_	_	_	_	_	_	_
@@ -441,18 +462,19 @@
 55	in	in	ADP	IN	_	57	case	57:case	_
 56	that	that	DET	DT	Number=Sing|PronType=Dem	57	det	57:det	Entity=(place-35
 57	region	region	NOUN	NN	Number=Sing	54	obl	54:obl:in	Entity=place-35)
-58	July	July	PROPN	NNP	Number=Sing	59	compound	59:compound	Entity=(time-82
-59	17	17	NUM	CD	NumForm=Digit|NumType=Card	54	obl:tmod	54:obl:tmod	Entity=time-82)|SpaceAfter=No
+58	July	July	PROPN	NNP	Number=Sing	59	compound	59:compound	Entity=(time-82|XML=<date when:::"2014-07-17">
+59	17	17	NUM	CD	NumForm=Digit|NumType=Card	54	obl:tmod	54:obl:tmod	Entity=time-82)|SpaceAfter=No|XML=</date>
 60	"	''	PUNCT	''	_	42	punct	42:punct	SpaceAfter=No
 61	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_news_airlines-18
 # s_type = decl
 # text = Ukrainian president Petro Poroshenko said, "This was not an 'incident', this was not a 'catastrophe', this was a terrorist act".
+# newpar = p (2 s)
 1	Ukrainian	Ukrainian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=attribution:49->50|Entity=(person-83
 2	president	president	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	_
-3	Petro	Petro	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	Poroshenko	Poroshenko	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-83)
+3	Petro	Petro	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Petro_Poroshenko">
+4	Poroshenko	Poroshenko	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-83)|XML=</ref>
 5	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	13	punct	13:punct	_
 7	"	''	PUNCT	``	_	13	punct	13:punct	Discourse=joint:50->33|SpaceAfter=No
@@ -486,8 +508,8 @@
 1	Malyasian	Malyasian	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=attribution:53->54|Entity=(person-56
 2	prime	prime	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(organization-86)
 3	minister	minister	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	_
-4	Najib	Najib	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-5	Razak	Razak	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-56)|SpaceAfter=No
+4	Najib	Najib	PROPN	NNP	Number=Sing	3	flat	3:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Najib_Razak">
+5	Razak	Razak	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-56)|SpaceAfter=No|XML=</ref>
 6	,	,	PUNCT	,	_	3	punct	3:punct	_
 7	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 8	,	,	PUNCT	,	_	21	punct	21:punct	_
@@ -519,6 +541,7 @@
 # sent_id = AMALGUM_news_airlines-20
 # s_type = decl
 # text = All civilian aircraft have been barred from flying over eastern Ukraine.
+# newpar = p (8 s)
 1	All	all	DET	DT	_	3	det	3:det	Discourse=joint:59->33|Entity=(object-11
 2	civilian	civilian	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	aircraft	aircraft	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass	Entity=object-11)
@@ -537,16 +560,16 @@
 # text = The US's Federal Aviation Adminstration issued a Notice to Airmen (NOTAM) prohibiting flight operations by United States carriers over eastern Ukraine.
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=elaboration:60->59|Entity=(organization-89
 2-3	US's	_	_	_	_	_	_	_	_
-2	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	6	nmod:poss	6:nmod:poss	Entity=(place-90
+2	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	6	nmod:poss	6:nmod:poss	Entity=(place-90|XML=<ref target:::"https://en.wikinews.org/wiki/US"></ref>
 3	's	's	PART	POS	_	2	case	2:case	Entity=place-90)
-4	Federal	Federal	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(abstract-91
+4	Federal	Federal	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(abstract-91|XML=<ref target:::"https://en.wikipedia.org/wiki/Federal%20Aviation%20Adminstration">
 5	Aviation	Aviation	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=abstract-91)
-6	Adminstration	Adminstration	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=organization-89)
+6	Adminstration	Adminstration	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=organization-89)|XML=</ref>
 7	issued	issue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(abstract-92
-9	Notice	Notice	PROPN	NNP	Number=Sing	7	obj	7:obj	_
+9	Notice	Notice	PROPN	NNP	Number=Sing	7	obj	7:obj	XML=<ref target:::"https://en.wikipedia.org/wiki/Notice%20to%20Airmen">
 10	to	to	ADP	IN	_	11	case	11:case	_
-11	Airmen	Airmen	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:to	Entity=(organization-93)
+11	Airmen	Airmen	PROPN	NNPS	Number=Plur	9	nmod	9:nmod:to	Entity=(organization-93)|XML=</ref>
 12	(	(	PUNCT	-LRB-	_	13	punct	13:punct	Discourse=restatement:61->60|SpaceAfter=No
 13	NOTAM	NOTAM	PROPN	NNP	Number=Sing	11	appos	11:appos	Entity=(organization-93)|SpaceAfter=No
 14	)	)	PUNCT	-RRB-	_	13	punct	13:punct	_
@@ -585,7 +608,7 @@
 # sent_id = AMALGUM_news_airlines-23
 # s_type = decl
 # text = Eurocontrol noted airspace was closed up to 32,000 feet.
-1	Eurocontrol	Eurocontrol	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:65->66|Entity=(organization-96)
+1	Eurocontrol	Eurocontrol	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=attribution:65->66|Entity=(organization-96)|XML=<ref target:::"https://en.wikinews.org/wiki/Eurocontrol"></ref>
 2	noted	note	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	airspace	airspace	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	Discourse=joint:66->64|Entity=(place-97)
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
@@ -633,10 +656,10 @@
 15	safe	safe	ADJ	JJ	Degree=Pos	14	xcomp	14:xcomp	_
 16	by	by	ADP	IN	_	21	case	21:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(organization-96
-18	International	International	ADJ	NNP	Number=Sing	21	amod	21:amod	_
+18	International	International	ADJ	NNP	Number=Sing	21	amod	21:amod	XML=<ref target:::"https://en.wikinews.org/wiki/International_Civil_Aviation_Organisation">
 19	Civil	Civil	ADJ	NNP	Number=Sing	20	amod	20:amod	Entity=(abstract-91
 20	Aviation	Aviation	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=abstract-91)
-21	Organisation	Organisation	PROPN	NNP	Number=Sing	14	obl	14:obl:by	Entity=organization-96)
+21	Organisation	Organisation	PROPN	NNP	Number=Sing	14	obl	14:obl:by	Entity=organization-96)|XML=</ref>
 22	(	(	PUNCT	-LRB-	_	23	punct	23:punct	Discourse=elaboration:71->70|SpaceAfter=No
 23	ICAO	ICAO	PROPN	NNP	Number=Sing	21	appos	21:appos	Entity=(organization-96)|SpaceAfter=No
 24	)	)	PUNCT	-RRB-	_	23	punct	23:punct	SpaceAfter=No
@@ -648,10 +671,10 @@
 # text = The] International Air Transportation Association (IATA) has stated that the airspace the aircraft was traversing was not subject to restrictions.
 1	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Discourse=attribution:73->76|SpaceAfter=No
 2	]	]	PUNCT	-RRB-	_	1	punct	1:punct	_
-3	International	International	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(organization-102
+3	International	International	ADJ	NNP	Number=Sing	5	amod	5:amod	Entity=(organization-102|XML=<ref target:::"https://en.wikipedia.org/wiki/International%20Air%20Transportation%20Association">
 4	Air	Air	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	Transportation	Transportation	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=organization-102)
-6	Association	Association	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	Entity=organization-101)
+6	Association	Association	PROPN	NNP	Number=Sing	11	nsubj	11:nsubj	Entity=organization-101)|XML=</ref>
 7	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:74->73|SpaceAfter=No
 8	IATA	IATA	PROPN	NNP	Abbr=Yes|Number=Sing	6	appos	6:appos	Entity=(organization-101)|SpaceAfter=No
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_

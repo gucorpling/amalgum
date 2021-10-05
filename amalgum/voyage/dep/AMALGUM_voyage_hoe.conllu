@@ -1,7 +1,17 @@
+# meta::id = AMALGUM_voyage_hoe
+# meta::title = Plymouth (England)
+# meta::shortTitle = hoe
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=27879
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_hoe
 # sent_id = AMALGUM_voyage_hoe-1
 # s_type = frag
 # text = Plymouth (England)
+# newpar = head (1 s)
 1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->3|Entity=(place-1)
 2	(	(	PUNCT	-LRB-	_	3	punct	3:punct	Discourse=elaboration:2->1|SpaceAfter=No
 3	England	England	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(place-2)|SpaceAfter=No
@@ -10,12 +20,13 @@
 # sent_id = AMALGUM_voyage_hoe-2
 # s_type = decl
 # text = Plymouth is a city in Devon, and the largest city on England's south coast, with a population of 250,000.
-1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|11:nsubj	Discourse=ROOT:3|Entity=(place-1)
+# newpar = p (4 s)
+1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj|11:nsubj	Discourse=ROOT:3|Entity=(place-1)|XML=<hi rend:::"bold"><ref target:::"http://www.visitplymouth.co.uk"></ref></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(place-1(place-1
 4	city	city	NOUN	NN	Number=Sing	0	root	0:root	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	Devon	Devon	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Entity=place-1)(place-3)|SpaceAfter=No
+6	Devon	Devon	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Entity=place-1)(place-3)|SpaceAfter=No|XML=<ref target:::"Devon"></ref>
 7	,	,	PUNCT	,	_	11	punct	11:punct	_
 8	and	and	CCONJ	CC	_	11	cc	11:cc	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	11	det	11:det	Entity=(place-1
@@ -23,7 +34,7 @@
 11	city	city	NOUN	NN	Number=Sing	4	conj	4:conj:and	_
 12	on	on	ADP	IN	_	16	case	16:case	_
 13-14	England's	_	_	_	_	_	_	_	_
-13	England	England	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(place-4(place-2
+13	England	England	PROPN	NNP	Number=Sing	16	nmod:poss	16:nmod:poss	Entity=(place-4(place-2|XML=<ref target:::"England"></ref>
 14	's	's	PART	POS	_	13	case	13:case	Entity=place-2)
 15	south	south	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
 16	coast	coast	NOUN	NN	Number=Sing	11	nmod	11:nmod:on	Entity=place-4)|SpaceAfter=No
@@ -122,15 +133,15 @@
 4	point	point	NOUN	NN	Number=Sing	0	root	0:root|10:obl:from	_
 5	from	from	ADP	IN	_	6	case	6:case	Discourse=elaboration:14->13
 6	which	which	PRON	WDT	PronType=Rel	10	obl	4:ref	_
-7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(person-21
+7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(person-21|XML=<ref target:::"Early%20United%20States%20history">
 8	Pilgrim	Pilgrim	PROPN	NNP	Number=Sing	9	compound	9:compound	_
 9	Fathers	Fathers	PROPN	NNPS	Number=Plur	10	nsubj	10:nsubj	Entity=person-21)
 10	left	leave	VERB	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	4	acl:relcl	4:acl:relcl	_
-11	England	England	PROPN	NNP	Number=Sing	10	obj	10:obj	Entity=(place-2)
+11	England	England	PROPN	NNP	Number=Sing	10	obj	10:obj	Entity=(place-2)|XML=</ref>
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	1620	1620	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:in	Entity=(time-22)
+13	1620	1620	NUM	CD	NumForm=Digit|NumType=Card	10	obl	10:obl:in	Entity=(time-22)|XML=<date when:::"1620"></date>
 14	for	for	ADP	IN	_	15	case	15:case	_
-15	Massachusetts	Massachusetts	PROPN	NNP	Number=Sing	10	obl	10:obl:for	Entity=place-1)(place-23)
+15	Massachusetts	Massachusetts	PROPN	NNP	Number=Sing	10	obl	10:obl:for	Entity=place-1)(place-23)|XML=<ref target:::"Massachusetts"></ref>
 16	-	-	PUNCT	:	_	17	punct	17:punct	Discourse=elaboration:15->14
 17	commemorated	commemorate	VERB	VBN	Tense=Past|VerbForm=Part	10	advcl	10:advcl	Discourse=elaboration:16->15
 18	today	today	NOUN	NN	Number=Sing	17	obl:tmod	17:obl:tmod	Entity=(time-24)
@@ -143,11 +154,13 @@
 # sent_id = AMALGUM_voyage_hoe-6
 # s_type = imp
 # text = Understand
+# newpar = head (1 s)
 1	Understand	understand	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:17->18
 
 # sent_id = AMALGUM_voyage_hoe-7
 # s_type = decl
 # text = Plymouth is one of England's classic ocean cities, and for centuries has been a centre for shipping; first for trade and commercial shipping, and today as a base for the Royal Navy.
+# newpar = p (4 s)
 1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=joint:18->3|Entity=(place-1)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	cop	3:cop	_
 3	one	one	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Entity=(place-26
@@ -247,7 +260,7 @@
 4	location	location	NOUN	NN	Number=Sing	22	nsubj	22:nsubj	_
 5	close	close	ADJ	JJ	Degree=Pos	4	amod	4:amod	Entity=place-1)
 6	to	to	ADP	IN	_	7	case	7:case	_
-7	Dartmoor	Dartmoor	PROPN	NNP	Number=Sing	5	obl	5:obl:to	Entity=(place-46)
+7	Dartmoor	Dartmoor	PROPN	NNP	Number=Sing	5	obl	5:obl:to	Entity=(place-46)|XML=<ref target:::"Dartmoor"></ref>
 8	and	and	CCONJ	CC	_	10	cc	10:cc	_
 9	other	other	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(place-47
 10	sights	sight	NOUN	NNS	Number=Plur	7	conj	5:obl:to|7:conj:and	_
@@ -258,7 +271,7 @@
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(place-48
 16	east	east	NOUN	NN	Number=Sing	10	nmod	10:nmod:to	Entity=place-48)
 17	and	and	CCONJ	CC	_	18	cc	18:cc	_
-18	Cornwall	Cornwall	PROPN	NNP	Number=Sing	13	conj	10:nmod:of|13:conj:and	Entity=(place-49
+18	Cornwall	Cornwall	PROPN	NNP	Number=Sing	13	conj	10:nmod:of|13:conj:and	Entity=(place-49|XML=<ref target:::"Cornwall"></ref>
 19	to	to	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(place-50
 21	west	west	NOUN	NN	Number=Sing	18	nmod	18:nmod:to	Entity=place-47)place-49)place-50)
@@ -280,6 +293,7 @@
 # sent_id = AMALGUM_voyage_hoe-11
 # s_type = decl
 # text = The city was heavily bombed in World War II and much of the city-centre was destroyed.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:25->22|Entity=(place-1
 2	city	city	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	Entity=place-1)
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
@@ -330,8 +344,8 @@
 27	,	,	PUNCT	,	_	28	punct	28:punct	_
 28	constructed	construct	VERB	VBN	Tense=Past|VerbForm=Part	11	advcl	11:advcl	Discourse=elaboration:28->27
 29	in	in	ADP	IN	_	31	case	31:case	_
-30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(time-61
-31	1950s	1950s	NOUN	NNS	Number=Plur	28	obl	28:obl:in	Entity=time-61)|SpaceAfter=No
+30	the	the	DET	DT	Definite=Def|PronType=Art	31	det	31:det	Entity=(time-61|XML=<date from:::"1950" to:::"1959">
+31	1950s	1950s	NOUN	NNS	Number=Plur	28	obl	28:obl:in	Entity=time-61)|SpaceAfter=No|XML=</date>
 32	.	.	PUNCT	.	_	11	punct	11:punct	_
 
 # sent_id = AMALGUM_voyage_hoe-13
@@ -349,10 +363,10 @@
 10	buildings	building	NOUN	NNS	Number=Plur	7	obl	7:obl:of	_
 11	erected	erect	VERB	VBN	Tense=Past|VerbForm=Part	10	acl	10:acl	Discourse=elaboration:30->29
 12	in	in	ADP	IN	_	14	case	14:case	_
-13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(time-64
-14	1960s	1960s	NOUN	NNS	Number=Plur	11	obl	11:obl:in	Entity=time-64)
+13	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(time-64|XML=<date from:::"1960" to:::"1969">
+14	1960s	1960s	NOUN	NNS	Number=Plur	11	obl	11:obl:in	Entity=time-64)|XML=</date>
 15	and	and	CCONJ	CC	_	16	cc	16:cc	_
-16	70s	70s	NOUN	NNS	Number=Plur	14	conj	11:obl:in|14:conj:and	Entity=place-58)(time-65)
+16	70s	70s	NOUN	NNS	Number=Plur	14	conj	11:obl:in|14:conj:and	Entity=place-58)(time-65)|XML=<date from:::"1970" to:::"1979"></date>
 17	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	21	cop	21:cop	_
 18	of	of	ADP	IN	_	21	case	21:case	_
 19	poor	poor	ADJ	JJ	Degree=Pos	21	amod	21:amod	Entity=(abstract-66
@@ -418,6 +432,7 @@
 # sent_id = AMALGUM_voyage_hoe-15
 # s_type = decl
 # text = Plymouth is a friendly city with an egalitarian feel and a sense of openness among its people, and there is less evidence of a sharp divide between rich and poor that is found in much of the southern half of England.
+# newpar = p (3 s)
 1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:35->27|Entity=(place-1)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(place-1
@@ -533,7 +548,7 @@
 14	brooding	brooding	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 15	landscapes	landscape	NOUN	NNS	Number=Plur	6	conj	4:obj|6:conj:or	_
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Dartmoor	Dartmoor	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=place-28)abstract-85)(place-46)|SpaceAfter=No
+17	Dartmoor	Dartmoor	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=place-28)abstract-85)(place-46)|SpaceAfter=No|XML=<ref target:::"Dartmoor"></ref>
 18	,	,	PUNCT	,	_	21	punct	21:punct	_
 19	or	or	CCONJ	CC	_	21	cc	21:cc	Discourse=contrast:44->43
 20	just	just	ADV	RB	_	21	advmod	21:advmod	_
@@ -559,6 +574,7 @@
 # sent_id = AMALGUM_voyage_hoe-18
 # s_type = decl
 # text = A resident of Plymouth is called a Plymothian.
+# newpar = p (4 s)
 1	A	a	DET	DT	Definite=Ind|PronType=Art	2	det	2:det	Discourse=joint:46->27|Entity=(person-87
 2	resident	resident	NOUN	NN	Number=Sing	6	nsubj:pass	6:nsubj:pass|8:nsubj:xsubj	_
 3	of	of	ADP	IN	_	4	case	4:case	_
@@ -566,7 +582,7 @@
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	aux:pass	6:aux:pass	_
 6	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 7	a	a	DET	DT	Definite=Ind|PronType=Art	8	det	8:det	Entity=(person-88
-8	Plymothian	Plymothian	PROPN	NNP	Number=Sing	6	xcomp	6:xcomp	Entity=person-88)|SpaceAfter=No
+8	Plymothian	Plymothian	PROPN	NNP	Number=Sing	6	xcomp	6:xcomp	Entity=person-88)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 9	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_voyage_hoe-19
@@ -667,11 +683,13 @@
 # sent_id = AMALGUM_voyage_hoe-22
 # s_type = frag
 # text = Orientation
+# newpar = head (1 s)
 1	Orientation	Orientation	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:56->57|Entity=(abstract-102)
 
 # sent_id = AMALGUM_voyage_hoe-23
 # s_type = decl
 # text = The city is located at the south-west corner of Devon, with Cornwall beginning immediately to the west of the city.
+# newpar = p (6 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:57->53|Entity=(place-1
 2	city	city	NOUN	NN	Number=Sing	4	nsubj:pass	4:nsubj:pass	Entity=place-1)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	aux:pass	4:aux:pass	_
@@ -725,7 +743,7 @@
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	aux:pass	26:aux:pass	_
 26	called	call	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	dep	12:dep	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(place-108
-28	Hamoaze	Hamoaze	PROPN	NNP	Number=Sing	26	xcomp	26:xcomp	Entity=place-108)|SpaceAfter=No
+28	Hamoaze	Hamoaze	PROPN	NNP	Number=Sing	26	xcomp	26:xcomp	Entity=place-108)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 29	)	)	PUNCT	-RRB-	_	26	punct	26:punct	_
 30	and	and	CCONJ	CC	_	32	cc	32:cc	Discourse=same_unit:64->59
 31	the	the	DET	DT	Definite=Def|PronType=Art	32	det	32:det	Entity=(place-104
@@ -740,7 +758,7 @@
 40	(	(	PUNCT	-LRB-	_	41	punct	41:punct	Discourse=elaboration:65->64|SpaceAfter=No
 41	called	call	VERB	VBN	Tense=Past|VerbForm=Part	32	acl	32:acl	_
 42	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	Entity=(place-109
-43	Cattewater	Cattewater	PROPN	NNP	Number=Sing	41	xcomp	41:xcomp	Entity=place-109)|SpaceAfter=No
+43	Cattewater	Cattewater	PROPN	NNP	Number=Sing	41	xcomp	41:xcomp	Entity=place-109)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 44	)	)	PUNCT	-RRB-	_	41	punct	41:punct	Entity=place-104)place-104)|SpaceAfter=No
 45	.	.	PUNCT	.	_	2	punct	2:punct	_
 
@@ -751,8 +769,8 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(place-13(place-110
 3	south	south	NOUN	NN	Number=Sing	6	nmod	6:nmod:to	Entity=place-110)
 4	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
-5	Plymouth	Plymouth	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-1)
-6	Sound	Sound	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=place-13)
+5	Plymouth	Plymouth	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-1)|XML=<hi rend:::"bold">
+6	Sound	Sound	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Entity=place-13)|XML=</hi>
 7	(	(	PUNCT	-LRB-	_	10	punct	10:punct	Discourse=elaboration:67->66|SpaceAfter=No
 8	everyone	everyone	NOUN	NN	Number=Sing	10	nsubj	10:nsubj	Entity=(person-111)
 9	just	just	ADV	RB	_	10	advmod	10:advmod	_
@@ -888,6 +906,7 @@
 # sent_id = AMALGUM_voyage_hoe-29
 # s_type = decl
 # text = Immediately above the water is a grassy area called Plymouth Hoe (always just called "the Hoe"), whose names comes from a Saxon word for "grassy slope".
+# newpar = p (8 s)
 1	Immediately	immediately	ADV	RB	Degree=Pos	4	advmod	4:advmod	Discourse=joint:78->76|Entity=(substance-39
 2	above	above	ADP	IN	_	4	case	4:case	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	_
@@ -897,8 +916,8 @@
 7	grassy	grassy	ADJ	JJ	Degree=Pos	8	amod	8:amod	_
 8	area	area	NOUN	NN	Number=Sing	0	root	0:root	_
 9	called	call	VERB	VBN	Tense=Past|VerbForm=Part	8	acl	8:acl	Discourse=elaboration:79->78
-10	Plymouth	Plymouth	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	Entity=(place-1)
-11	Hoe	Hoe	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	Entity=(place-80
+10	Plymouth	Plymouth	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	Entity=(place-1)|XML=<hi rend:::"bold">
+11	Hoe	Hoe	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	Entity=(place-80|XML=</hi>
 12	(	(	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=elaboration:80->79|SpaceAfter=No
 13	always	always	ADV	RB	_	15	advmod	15:advmod	_
 14	just	just	ADV	RB	_	15	advmod	15:advmod	_
@@ -968,8 +987,8 @@
 9	grand	grand	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	reconstruction	reconstruction	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	_
 11	of	of	ADP	IN	_	13	case	13:case	_
-12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(time-61
-13	1950s	1950s	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	Entity=place-56)time-61)|SpaceAfter=No
+12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(time-61|XML=<date from:::"1950" to:::"1959">
+13	1950s	1950s	NOUN	NNS	Number=Plur	10	nmod	10:nmod:of	Entity=place-56)time-61)|SpaceAfter=No|XML=</date>
 14	,	,	PUNCT	,	_	4	punct	4:punct	_
 15	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=same_unit:88->87
 16	north	north	ADV	RB	Degree=Pos	15	advmod	15:advmod	_
@@ -1005,7 +1024,7 @@
 45	identify	identify	VERB	VB	VerbForm=Inf	36	acl:relcl	36:acl:relcl	_
 46	from	from	ADP	IN	_	49	case	49:case	_
 47	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	49	nmod:poss	49:nmod:poss	Entity=(place-69(place-136)
-48	1970s	1970s	NOUN	NNS	Number=Plur	49	compound	49:compound	Entity=(time-138)
+48	1970s	1970s	NOUN	NNS	Number=Plur	49	compound	49:compound	Entity=(time-138)|XML=<date from:::"1970" to:::"1979"></date>
 49	tower	tower	NOUN	NN	Number=Sing	45	obl	45:obl:from	Entity=place-136)place-69)|SpaceAfter=No
 50	,	,	PUNCT	,	_	52	punct	52:punct	_
 51	InterCity	InterCity	PROPN	NNP	Number=Sing	52	compound	52:compound	Entity=(place-139(person-140)
@@ -1021,8 +1040,8 @@
 3	spine	spine	NOUN	NN	Number=Sing	7	nsubj	7:nsubj|25:nsubj	SpaceAfter=No
 4	"	''	PUNCT	''	_	3	punct	3:punct	Entity=place-134)
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
-6	Armada	Armada	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-134(place-141)
-7	Way	Way	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-134)|SpaceAfter=No
+6	Armada	Armada	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-134(place-141)|XML=<hi rend:::"bold">
+7	Way	Way	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-134)|SpaceAfter=No|XML=</hi>
 8	,	,	PUNCT	,	_	11	punct	11:punct	_
 9	a	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(place-134
 10	wide	wide	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
@@ -1111,7 +1130,7 @@
 6	Hoe	Hoe	PROPN	NNP	Number=Sing	3	nmod	3:nmod:of	Entity=place-48)place-80)
 7	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(place-127
-9	Barbican	Barbican	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-81)
+9	Barbican	Barbican	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=(place-81)|XML=<hi rend:::"bold"></hi>
 10	area	area	NOUN	NN	Number=Sing	0	root	0:root	_
 11	(	(	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=elaboration:98->97|SpaceAfter=No
 12	with	with	ADP	IN	_	15	case	15:case	_
@@ -1164,10 +1183,11 @@
 # sent_id = AMALGUM_voyage_hoe-37
 # s_type = decl
 # text = The Tourist Information Centre is in the Barbican area, at the quayside just opposite the Mayflower Steps, at 3-5 The Barbican (that's the street address).
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=joint:101->76|Entity=(place-30
-2	Tourist	Tourist	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-156
+2	Tourist	Tourist	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-156|XML=<hi rend:::"bold">
 3	Information	Information	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=abstract-156)
-4	Centre	Centre	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Entity=place-30)
+4	Centre	Centre	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Entity=place-30)|XML=</hi>
 5	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 6	in	in	ADP	IN	_	9	case	9:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(place-127
@@ -1207,7 +1227,7 @@
 5	on	on	ADP	IN	_	6	case	6:case	_
 6	weekdays	weekday	NOUN	NNS	Number=Plur	3	obl	3:obl:on	Entity=(time-160)
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	10AM-4PM	10AM-4PM	NOUN	NN	Number=Sing	3	conj	3:conj:and	Entity=(time-161)
+8	10AM-4PM	10AM-4PM	NOUN	NN	Number=Sing	3	conj	3:conj:and	Entity=(time-161)|XML=<time from:::"1000" to:::"1600"></time>
 9	on	on	ADP	IN	_	10	case	10:case	_
 10	Saturdays	Saturday	NOUN	NNS	Number=Plur	8	orphan	8:orphan	Entity=(time-162)|SpaceAfter=No
 11	,	,	PUNCT	,	_	13	punct	13:punct	_
@@ -1218,11 +1238,13 @@
 # sent_id = AMALGUM_voyage_hoe-39
 # s_type = frag
 # text = Background
+# newpar = head (1 s)
 1	Background	background	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:104->105|Entity=(abstract-164)
 
 # sent_id = AMALGUM_voyage_hoe-40
 # s_type = decl
 # text = Plymouth City is within the historic county of Devon.
+# newpar = p (6 s)
 1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Discourse=joint:105->76|Entity=(place-1
 2	City	City	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-1)
 3	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	cop	7:cop	_
@@ -1251,7 +1273,7 @@
 12	Sudtone	Sudtone	PROPN	NNP	Number=Sing	5	obl	5:obl:as|23:nsubj:pass	SpaceAfter=No
 13	"	''	PUNCT	''	_	12	punct	12:punct	_
 14	(	(	PUNCT	-LRB-	_	15	punct	15:punct	Discourse=elaboration:107->106|SpaceAfter=No
-15	1086	1086	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=(time-169)|SpaceAfter=No
+15	1086	1086	NUM	CD	NumForm=Digit|NumType=Card	12	nmod:tmod	12:nmod:tmod	Entity=(time-169)|SpaceAfter=No|XML=<date when:::"1086"></date>
 16	;	;	PUNCT	:	_	18	punct	18:punct	_
 17	later	late	ADV	RBR	Degree=Cmp	18	advmod	18:advmod	Discourse=joint:108->107|Entity=(place-170
 18	Sutton	Sutton	PROPN	NNP	Number=Sing	12	parataxis	12:parataxis	Entity=place-170)|SpaceAfter=No
@@ -1313,9 +1335,9 @@
 8	silted	silt	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	up	up	ADP	RP	_	8	compound:prt	8:compound:prt	_
 10	in	in	ADP	IN	_	13	case	13:case	_
-11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(time-174
+11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(time-174|XML=<date from:::"1000" to:::"1099">
 12	11th	11th	ADJ	JJ	Degree=Pos|NumType=Ord	13	amod	13:amod	_
-13	century	century	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=time-174)
+13	century	century	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=time-174)|XML=</date>
 14	and	and	CCONJ	CC	_	18	cc	18:cc	Discourse=joint:114->113
 15	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(place-127
 16	area	area	NOUN	NN	Number=Sing	18	nsubj	18:nsubj|21:nsubj:xsubj	Entity=place-127)
@@ -1333,8 +1355,8 @@
 # sent_id = AMALGUM_voyage_hoe-44
 # s_type = decl
 # text = The sea has always been at the heart of Plymouth's story and it has a long and historic seafaring tradition.
-1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:115->117|Entity=(place-15
-2	sea	sea	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Entity=place-15)
+1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:115->117|Entity=(place-15|XML=<hi rend:::"bold">
+2	sea	sea	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	Entity=place-15)|XML=</hi>
 3	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 4	always	always	ADV	RB	_	8	advmod	8:advmod	_
 5	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	cop	8:cop	_
@@ -1409,6 +1431,7 @@
 # sent_id = AMALGUM_voyage_hoe-46
 # s_type = decl
 # text = Plymouth was the home of Elizabethan privateer and hero/villain Sir Francis Drake (though he was born at Tavistock a few miles north), and from here he planned his raids and other maritime adventures.
+# newpar = p (12 s)
 1	Plymouth	Plymouth	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:119->117|Entity=(place-1)
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	the	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(place-1
@@ -1418,9 +1441,9 @@
 7	privateer	privateer	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	_
 8	and	and	CCONJ	CC	_	9	cc	9:cc	_
 9	hero/villain	hero/villain	NOUN	NN	Number=Sing	7	conj	4:nmod:of|7:conj:and	Entity=place-1)(person-186)
-10	Sir	Sir	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(person-186
+10	Sir	Sir	PROPN	NNP	Number=Sing	7	appos	7:appos	Entity=(person-186|XML=<hi rend:::"bold">
 11	Francis	Francis	PROPN	NNP	Number=Sing	10	flat	10:flat	_
-12	Drake	Drake	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-186)
+12	Drake	Drake	PROPN	NNP	Number=Sing	10	flat	10:flat	Entity=person-186)|XML=</hi>
 13	(	(	PUNCT	-LRB-	_	17	punct	17:punct	Discourse=concession:120->119|SpaceAfter=No
 14	though	though	SCONJ	IN	_	17	mark	17:mark	_
 15	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	17	nsubj:pass	17:nsubj:pass	Entity=(person-186)
@@ -1451,7 +1474,7 @@
 # s_type = decl
 # text = In 1588, the English Navy, which was led in part by Drake, set sail from Plymouth to defeat the Spanish Armada.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:122->117
-2	1588	1588	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:in	Entity=(time-191)|SpaceAfter=No
+2	1588	1588	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:in	Entity=(time-191)|SpaceAfter=No|XML=<date when:::"1588"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(organization-35
 5	English	English	ADJ	NNP	Number=Sing	6	amod	6:amod	_
@@ -1472,8 +1495,8 @@
 20	to	to	PART	TO	_	21	mark	21:mark	Discourse=purpose:125->124
 21	defeat	defeat	VERB	VB	VerbForm=Inf	16	advcl	16:advcl:to	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(place-141
-23	Spanish	Spanish	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(abstract-192)
-24	Armada	Armada	PROPN	NNP	Number=Sing	21	obj	21:obj	Entity=place-141)|SpaceAfter=No
+23	Spanish	Spanish	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(abstract-192)|XML=<hi rend:::"bold">
+24	Armada	Armada	PROPN	NNP	Number=Sing	21	obj	21:obj	Entity=place-141)|SpaceAfter=No|XML=</hi>
 25	.	.	PUNCT	.	_	16	punct	16:punct	_
 
 # sent_id = AMALGUM_voyage_hoe-48
@@ -1529,7 +1552,7 @@
 # s_type = decl
 # text = In 1620 the Pilgrim Fathers sailed to the New World after setting into Plymouth for repairs, escaping from religious persecution to eventually set up Plymouth Colony, Massachusetts.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:131->117
-2	1620	1620	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-197)
+2	1620	1620	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-197)|XML=<date when:::"1620"></date>
 3	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(person-198
 4	Pilgrim	Pilgrim	PROPN	NNP	Number=Sing	5	compound	5:compound	_
 5	Fathers	Fathers	PROPN	NNPS	Number=Plur	6	nsubj	6:nsubj	Entity=person-198)
@@ -1611,8 +1634,8 @@
 18	fort	Fort	NOUN	NN	Number=Sing	14	nmod	14:nmod:of	Entity=event-208)place-209)
 19	(	(	PUNCT	-LRB-	_	22	punct	22:punct	Discourse=elaboration:138->137|SpaceAfter=No
 20	the	the	DET	DT	Definite=Def|PronType=Art	22	det	22:det	Entity=(place-98
-21	Royal	Royal	ADJ	NNP	Number=Sing	22	amod	22:amod	_
-22	Citadel	Citadel	PROPN	NNP	Number=Sing	18	appos	18:appos	Entity=place-98)|SpaceAfter=No
+21	Royal	Royal	ADJ	NNP	Number=Sing	22	amod	22:amod	XML=<hi rend:::"bold">
+22	Citadel	Citadel	PROPN	NNP	Number=Sing	18	appos	18:appos	Entity=place-98)|SpaceAfter=No|XML=</hi>
 23	)	)	PUNCT	-RRB-	_	22	punct	22:punct	_
 24	to	to	PART	TO	_	25	mark	25:mark	Discourse=purpose:139->137
 25	protect	protect	VERB	VB	VerbForm=Inf	12	advcl	12:advcl:to	_
@@ -1682,8 +1705,8 @@
 # s_type = decl
 # text = The Royal Dockyard was built in the area, on the banks of the River Tamar, in 1690.
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=elaboration:146->145|Entity=(place-36
-2	Royal	Royal	ADJ	NNP	Number=Sing	3	amod	3:amod	_
-3	Dockyard	Dockyard	PROPN	NNP	Number=Sing	5	nsubj:pass	5:nsubj:pass	Entity=place-36)
+2	Royal	Royal	ADJ	NNP	Number=Sing	3	amod	3:amod	XML=<hi rend:::"bold">
+3	Dockyard	Dockyard	PROPN	NNP	Number=Sing	5	nsubj:pass	5:nsubj:pass	Entity=place-36)|XML=</hi>
 4	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
 5	built	build	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 6	in	in	ADP	IN	_	8	case	8:case	_
@@ -1699,7 +1722,7 @@
 16	Tamar	Tamar	PROPN	NNP	Number=Sing	15	flat	15:flat	Entity=place-216)place-10)|SpaceAfter=No
 17	,	,	PUNCT	,	_	19	punct	19:punct	_
 18	in	in	ADP	IN	_	19	case	19:case	_
-19	1690	1690	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-217)|SpaceAfter=No
+19	1690	1690	NUM	CD	NumForm=Digit|NumType=Card	5	obl	5:obl:in	Entity=(time-217)|SpaceAfter=No|XML=<date when:::"1690"></date>
 20	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_voyage_hoe-56
@@ -1709,7 +1732,7 @@
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	aux:pass	3:aux:pass	_
 3	amalgamated	amalgamate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	1914	1914	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-218)
+5	1914	1914	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-218)|XML=<date when:::"1914"></date>
 6	with	with	ADP	IN	_	8	case	8:case	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(place-180
 8	towns	town	NOUN	NNS	Number=Plur	3	obl	3:obl:with	_
@@ -1728,7 +1751,7 @@
 21	city	city	NOUN	NN	Number=Sing	22	compound	22:compound	Entity=(abstract-219(place-1)
 22	status	status	NOUN	NN	Number=Sing	20	obj	20:obj	Entity=abstract-219)
 23	in	in	ADP	IN	_	24	case	24:case	_
-24	1928	1928	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:in	Entity=place-1)(time-220)|SpaceAfter=No
+24	1928	1928	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:in	Entity=place-1)(time-220)|SpaceAfter=No|XML=<date when:::"1928"></date>
 25	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_hoe-57
@@ -1748,6 +1771,7 @@
 # sent_id = AMALGUM_voyage_hoe-58
 # s_type = decl
 # text = The city was seriously damaged by bombing during the Second World War (1939–45) and the city-centre was extensively redeveloped afterwards.
+# newpar = p (9 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:151->143|Entity=(place-1
 2	city	city	NOUN	NN	Number=Sing	5	nsubj:pass	5:nsubj:pass	Entity=place-1)
 3	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	5	aux:pass	5:aux:pass	_
@@ -1757,13 +1781,13 @@
 7	bombing	bombing	NOUN	NN	Number=Sing	5	obl	5:obl:by	Entity=(event-222)
 8	during	during	ADP	IN	_	12	case	12:case	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(event-53
-10	Second	second	ADJ	NNP	Number=Sing	11	amod	11:amod	_
+10	Second	second	ADJ	NNP	Number=Sing	11	amod	11:amod	XML=<hi rend:::"bold">
 11	World	World	PROPN	NNP	Number=Sing	12	compound	12:compound	_
-12	War	War	PROPN	NNP	Number=Sing	5	obl	5:obl:during	Entity=event-53)
+12	War	War	PROPN	NNP	Number=Sing	5	obl	5:obl:during	Entity=event-53)|XML=</hi>
 13	(	(	PUNCT	-LRB-	_	14	punct	14:punct	Discourse=elaboration:152->151|SpaceAfter=No
-14	1939	1939	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	SpaceAfter=No
+14	1939	1939	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	SpaceAfter=No|XML=<date when:::"1939"></date>
 15	–	-	SYM	SYM	_	16	case	16:case	SpaceAfter=No
-16	45	45	NUM	CD	NumForm=Digit|NumType=Card	14	nmod	14:nmod:to	Entity=(time-223)|SpaceAfter=No
+16	45	45	NUM	CD	NumForm=Digit|NumType=Card	14	nmod	14:nmod:to	Entity=(time-223)|SpaceAfter=No|XML=<date when:::"1945"></date>
 17	)	)	PUNCT	-RRB-	_	14	punct	14:punct	_
 18	and	and	CCONJ	CC	_	23	cc	23:cc	Discourse=same_unit:153->151
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(place-224
@@ -1865,8 +1889,8 @@
 6	large	large	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
 7	buildings	building	NOUN	NNS	Number=Plur	2	obl	2:obl:in|14:nsubj:pass	_
 8	from	from	ADP	IN	_	10	case	10:case	_
-9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(time-237
-10	1950s	1950s	NOUN	NNS	Number=Plur	7	nmod	7:nmod:from	Entity=time-237)
+9	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(time-237|XML=<date from:::"1950" to:::"1959">
+10	1950s	1950s	NOUN	NNS	Number=Plur	7	nmod	7:nmod:from	Entity=time-237)|XML=</date>
 11	that	that	PRON	WDT	PronType=Rel	14	nsubj:pass	7:ref	Discourse=elaboration:160->159
 12	can	can	AUX	MD	VerbForm=Fin	14	aux	14:aux	_
 13	be	be	AUX	VB	VerbForm=Inf	14	aux:pass	14:aux:pass	_
@@ -1923,7 +1947,7 @@
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(time-243
 18	1960s	1960s	NOUN	NNS	Number=Plur	15	obl	15:obl:in	Entity=time-243)
 19	and	and	CCONJ	CC	_	20	cc	20:cc	_
-20	1970s	1970s	NOUN	NNS	Number=Plur	18	conj	15:obl:in|18:conj:and	Entity=(time-244)|SpaceAfter=No
+20	1970s	1970s	NOUN	NNS	Number=Plur	18	conj	15:obl:in|18:conj:and	Entity=(time-244)|SpaceAfter=No|XML=<date from:::"1970" to:::"1979"></date>
 21	,	,	PUNCT	,	_	25	punct	25:punct	_
 22	most	most	ADJ	JJS	Degree=Sup	25	nsubj	25:nsubj	Discourse=elaboration:164->162
 23	of	of	ADP	IN	_	24	case	24:case	_
@@ -1997,6 +2021,7 @@
 # sent_id = AMALGUM_voyage_hoe-67
 # s_type = decl
 # text = With its dramatic coastal setting, the surrounding landscape is quite striking.
+# newpar = p (7 s)
 1	With	with	ADP	IN	_	5	case	5:case	Discourse=joint:171->143
 2	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	5	nmod:poss	5:nmod:poss	Entity=(place-254(place-127)
 3	dramatic	dramatic	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
@@ -2039,7 +2064,7 @@
 6	National	National	ADJ	NNP	Number=Sing	7	amod	7:amod	_
 7	Park	Park	PROPN	NNP	Number=Sing	4	xcomp	4:xcomp	Entity=place-204)
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	1951	1951	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-257)|SpaceAfter=No
+9	1951	1951	NUM	CD	NumForm=Digit|NumType=Card	4	obl	4:obl:in	Entity=(time-257)|SpaceAfter=No|XML=<date when:::"1951"></date>
 10	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_hoe-70

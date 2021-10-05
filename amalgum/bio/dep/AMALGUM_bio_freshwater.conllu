@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_bio_freshwater
+# meta::title = Anthony Morgan of Freshwater
+# meta::shortTitle = freshwater
+# meta::type = bio
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2013-11-08
+# meta::dateModified = 2019-08-26
+# meta::sourceURL = https://en.wikipedia.org/wiki/Anthony_Morgan_of_Freshwater
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_bio_freshwater
 # sent_id = AMALGUM_bio_freshwater-1
 # s_type = frag
 # text = Anthony Morgan of Freshwater
+# newpar = head (1 s)
 1	Anthony	Anthony	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->2|Entity=(person-1
 2	Morgan	Morgan	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	of	of	ADP	IN	_	4	case	4:case	_
@@ -10,19 +21,20 @@
 # sent_id = AMALGUM_bio_freshwater-2
 # s_type = decl
 # text = Major Anthony Morgan (died 1729) of Freshwater, Isle of Wight was a British Army officer, and Whig politician who sat in the House of Commons between 1695 and 1729.
+# newpar = p (2 s)
 1	Major	Major	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj|22:nsubj	Discourse=ROOT:2|Entity=(person-2
-2	Anthony	Anthony	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Morgan	Morgan	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+2	Anthony	Anthony	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=<hi rend:::"bold">
+3	Morgan	Morgan	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:3->2|SpaceAfter=No
 5	died	die	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	1:acl	_
-6	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	5	obl:tmod	5:obl:tmod	Entity=(time-3)|SpaceAfter=No
+6	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	5	obl:tmod	5:obl:tmod	Entity=(time-3)|SpaceAfter=No|XML=<date when:::"1729"></date>
 7	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
 8	of	of	ADP	IN	_	9	case	9:case	Discourse=same_unit:4->3
 9	Freshwater	Freshwater	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	Entity=person-2)(person-1)|SpaceAfter=No
 10	,	,	PUNCT	,	_	11	punct	11:punct	_
-11	Isle	Isle	PROPN	NNP	Number=Sing	9	appos	9:appos	Entity=(place-4
+11	Isle	Isle	PROPN	NNP	Number=Sing	9	appos	9:appos	Entity=(place-4|XML=<ref target:::"https://en.wikipedia.org/wiki/Isle_of_Wight">
 12	of	of	ADP	IN	_	13	case	13:case	_
-13	Wight	Wight	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=place-4)(place-5)
+13	Wight	Wight	PROPN	NNP	Number=Sing	11	nmod	11:nmod:of	Entity=place-4)(place-5)|XML=</ref>
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	cop	18:cop	_
 15	a	a	DET	DT	Definite=Ind|PronType=Art	18	det	18:det	Entity=(person-2(person-2
 16	British	British	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(organization-6(person-7)
@@ -36,11 +48,11 @@
 24	sat	sit	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	acl:relcl	22:acl:relcl	_
 25	in	in	ADP	IN	_	27	case	27:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(organization-9
-27	House	House	PROPN	NNP	Number=Sing	24	obl	24:obl:in	_
+27	House	House	PROPN	NNP	Number=Sing	24	obl	24:obl:in	XML=<ref target:::"https://en.wikipedia.org/wiki/House_of_Commons">
 28	of	of	ADP	IN	_	29	case	29:case	_
-29	Commons	Commons	PROPN	NNPS	Number=Plur	27	nmod	27:nmod:of	Entity=organization-9)
+29	Commons	Commons	PROPN	NNPS	Number=Plur	27	nmod	27:nmod:of	Entity=organization-9)|XML=</ref>
 30	between	between	ADP	IN	_	31	case	31:case	_
-31	1695	1695	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:between	Entity=(time-10)
+31	1695	1695	NUM	CD	NumForm=Digit|NumType=Card	24	obl	24:obl:between	Entity=(time-10)|XML=<date when:::"1695"></date>
 32	and	and	CCONJ	CC	_	33	cc	33:cc	_
 33	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	31	conj	24:obl:between|31:conj:and	Entity=person-2)person-8)(time-3)|SpaceAfter=No
 34	.	.	PUNCT	.	_	18	punct	18:punct	_
@@ -51,23 +63,25 @@
 1	He	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	4	nsubj	4:nsubj	Discourse=joint:6->2|Entity=(person-8)
 2	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	4	cop	4:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(person-8
-4	Lieutenant-Governor	Lieutenant-Governor	PROPN	NNP	Number=Sing	0	root	0:root	_
+4	Lieutenant-Governor	Lieutenant-Governor	PROPN	NNP	Number=Sing	0	root	0:root	XML=<ref target:::"https://en.wikipedia.org/wiki/Lieutenant-Governor_of_the_Isle_of_Wight">
 5	of	of	ADP	IN	_	7	case	7:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(place-5
 7	Isle	Isle	PROPN	NNP	Number=Sing	4	nmod	4:nmod:of	_
 8	of	of	ADP	IN	_	9	case	9:case	_
-9	Wight	Wight	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=person-8)place-5)|SpaceAfter=No
+9	Wight	Wight	PROPN	NNP	Number=Sing	7	nmod	7:nmod:of	Entity=person-8)place-5)|SpaceAfter=No|XML=</ref>
 10	,	,	PUNCT	,	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-4
 # s_type = frag
 # text = Early life
+# newpar = head (1 s)
 1	Early	early	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:7->8|Entity=(time-11
 2	life	life	NOUN	NN	Number=Sing	0	root	0:root	Entity=time-11)
 
 # sent_id = AMALGUM_bio_freshwater-5
 # s_type = decl
 # text = Morgan's parentage is unknown.
+# newpar = p (4 s)
 1-2	Morgan's	_	_	_	_	_	_	_	_
 1	Morgan	Morgan	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:8->2|Entity=(person-12(person-2
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-2)
@@ -91,13 +105,13 @@
 10	Thomas	Thomas	PROPN	NNP	Number=Sing	6	nmod	6:nmod:of	Entity=(person-14
 11	Urry	Urry	PROPN	NNP	Number=Sing	10	flat	10:flat	_
 12	of	of	ADP	IN	_	13	case	13:case	_
-13	Freshwater	Freshwater	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=person-13)person-13)person-14)(person-1)|SpaceAfter=No
+13	Freshwater	Freshwater	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=person-13)person-13)person-14)(person-1)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Freshwater,_Isle_of_Wight">
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
 15	Isle	Isle	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=(place-4
 16	of	of	ADP	IN	_	17	case	17:case	_
-17	Wight	Wight	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=place-4)(place-5)
+17	Wight	Wight	PROPN	NNP	Number=Sing	15	nmod	15:nmod:of	Entity=place-4)(place-5)|XML=</ref>
 18	by	by	ADP	IN	_	19	case	19:case	_
-19	1691	1691	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:by	Entity=(time-15)|SpaceAfter=No
+19	1691	1691	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:by	Entity=(time-15)|SpaceAfter=No|XML=<date when:::"1691"></date>
 20	,	,	PUNCT	,	_	26	punct	26:punct	_
 21	and	and	CCONJ	CC	_	26	cc	26:cc	Discourse=sequence:10->8
 22	by	by	ADP	IN	_	24	case	24:case	_
@@ -129,7 +143,7 @@
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
 14	lieutenant	lieutenant	NOUN	NN	Number=Sing	12	conj	5:conj|12:conj:and	Entity=person-12)(person-21)
 15	by	by	ADP	IN	_	16	case	16:case	_
-16	1691	1691	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:by	Entity=(time-15)|SpaceAfter=No
+16	1691	1691	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:by	Entity=(time-15)|SpaceAfter=No|XML=<date when:::"1691"></date>
 17	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-8
@@ -141,34 +155,36 @@
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	captain	captain	NOUN	NN	Number=Sing	3	conj	3:conj:and	Entity=(person-22)
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	1692	1692	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-23)|SpaceAfter=No
+7	1692	1692	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-23)|SpaceAfter=No|XML=<date when:::"1692"></date>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	guidon	guidon	NOUN	NN	Number=Sing	3	conj	3:conj:and	Discourse=sequence:14->8|Entity=(person-24)
 10	and	and	CCONJ	CC	_	11	cc	11:cc	_
 11	major	major	NOUN	NN	Number=Sing	9	conj	3:conj|9:conj:and	Entity=(person-25)
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	1694	1694	NUM	CD	NumForm=Digit|NumType=Card	9	orphan	9:orphan	Entity=(time-26)
+13	1694	1694	NUM	CD	NumForm=Digit|NumType=Card	9	orphan	9:orphan	Entity=(time-26)|XML=<date when:::"1694"></date>
 14	and	and	CCONJ	CC	_	15	cc	15:cc	Discourse=sequence:15->8
 15	cornet	cornet	NOUN	NN	Number=Sing	3	conj	3:conj:and	Entity=(person-27)
 16	and	and	CCONJ	CC	_	18	cc	18:cc	_
 17	senior	senior	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(person-25
 18	major	major	NOUN	NN	Number=Sing	15	conj	3:conj|15:conj:and	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	1697	1697	NUM	CD	NumForm=Digit|NumType=Card	15	nmod	15:nmod:in	Entity=person-25)(time-28)|SpaceAfter=No
+20	1697	1697	NUM	CD	NumForm=Digit|NumType=Card	15	nmod	15:nmod:in	Entity=person-25)(time-28)|SpaceAfter=No|XML=<date when:::"1697"></date>
 21	.	.	PUNCT	.	_	3	punct	3:punct	SpaceAfter=No
-22	[	[	PUNCT	-LRB-	_	23	punct	23:punct	Discourse=evidence:16->15|SpaceAfter=No
+22	[	[	PUNCT	-LRB-	_	23	punct	23:punct	Discourse=evidence:16->15|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-HOP-1">
 23	1	1	NUM	CD	NumForm=Digit|NumType=Card	3	dep	3:dep	Entity=(abstract-29)|SpaceAfter=No
-24	]	]	PUNCT	-RRB-	_	23	punct	23:punct	_
+24	]	]	PUNCT	-RRB-	_	23	punct	23:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_freshwater-9
 # s_type = frag
 # text = Political career
+# newpar = head (1 s)
 1	Political	political	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:17->18|Entity=(abstract-30
 2	career	career	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-30)
 
 # sent_id = AMALGUM_bio_freshwater-10
 # s_type = decl
 # text = Morgan began building up an electoral influence at Newtown and Yarmouth, and came into conflict with the new governor Lord Cutts who tried to bring the island's constituencies under government control.
+# newpar = p (11 s)
 1	Morgan	Morgan	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj|3:nsubj:xsubj|14:nsubj	Discourse=joint:18->2|Entity=(person-2)
 2	began	begin	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	building	build	VERB	VBG	VerbForm=Ger	2	xcomp	2:xcomp	_
@@ -210,18 +226,18 @@
 # text = At the 1695 English general election Morgan was elected Member of Parliament for Yarmouth and signed the Association.
 1	At	at	ADP	IN	_	6	case	6:case	Discourse=joint:21->18
 2	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(event-40
-3	1695	1695	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	_
+3	1695	1695	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1695_English_general_election"><date when:::"1695"></date>
 4	English	English	ADJ	NNP	Number=Sing	6	amod	6:amod	_
 5	general	general	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	election	election	NOUN	NN	Number=Sing	9	obl	9:obl:at	Entity=event-40)
+6	election	election	NOUN	NN	Number=Sing	9	obl	9:obl:at	Entity=event-40)|XML=</ref>
 7	Morgan	Morgan	PROPN	NNP	Number=Sing	9	nsubj:pass	9:nsubj:pass|10:nsubj:xsubj|16:nsubj:pass	Discourse=same_unit:22->21|Entity=(person-2)
 8	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	aux:pass	9:aux:pass	_
 9	elected	elect	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
-10	Member	Member	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	Entity=(person-41
+10	Member	Member	PROPN	NNP	Number=Sing	9	xcomp	9:xcomp	Entity=(person-41|XML=<ref target:::"https://en.wikipedia.org/wiki/Member_of_Parliament">
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	Parliament	Parliament	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=(organization-42)
+12	Parliament	Parliament	PROPN	NNP	Number=Sing	10	nmod	10:nmod:of	Entity=(organization-42)|XML=</ref>
 13	for	for	ADP	IN	_	14	case	14:case	_
-14	Yarmouth	Yarmouth	PROPN	NNP	Number=Sing	10	nmod	10:nmod:for	Entity=person-41)(place-33)
+14	Yarmouth	Yarmouth	PROPN	NNP	Number=Sing	10	nmod	10:nmod:for	Entity=person-41)(place-33)|XML=<ref target:::"https://en.wikipedia.org/wiki/Yarmouth_(Isle_of_Wight)_(UK_Parliament_constituency)"></ref>
 15	and	and	CCONJ	CC	_	16	cc	16:cc	Discourse=joint:23->22
 16	signed	sign	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	9	conj	9:conj:and	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(organization-43
@@ -243,8 +259,8 @@
 10	22	22	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	Entity=(object-46
 11	shillings	shilling	NOUN	NNS	Number=Plur	4	obl	4:obl:at	Entity=object-46)
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	March	March	PROPN	NNP	Number=Sing	4	obl	4:obl:in	Entity=(time-47
-14	1695	1695	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=time-47)(time-10)
+13	March	March	PROPN	NNP	Number=Sing	4	obl	4:obl:in	Entity=(time-47|XML=<date when:::"1695-03">
+14	1695	1695	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:tmod	13:nmod:tmod	Entity=time-47)(time-10)|XML=</date>
 15	and	and	CCONJ	CC	_	18	cc	18:cc	Discourse=joint:25->24
 16	for	for	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	_
@@ -254,9 +270,9 @@
 21	John	John	PROPN	NNP	Number=Sing	20	flat	20:flat	_
 22	Fenwick	Fenwick	PROPN	NNP	Number=Sing	20	flat	20:flat	Entity=person-41)
 23	on	on	ADP	IN	_	24	case	24:case	_
-24	25	25	NUM	CD	NumForm=Digit|NumType=Card	18	nmod	18:nmod:on	Entity=(time-48
+24	25	25	NUM	CD	NumForm=Digit|NumType=Card	18	nmod	18:nmod:on	Entity=(time-48|XML=<date when:::"1696-11-25">
 25	November	November	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(time-49)
-26	1696	1696	NUM	CD	NumForm=Digit|NumType=Card	24	nmod:tmod	24:nmod:tmod	Entity=time-48)(time-50)|SpaceAfter=No
+26	1696	1696	NUM	CD	NumForm=Digit|NumType=Card	24	nmod:tmod	24:nmod:tmod	Entity=time-48)(time-50)|SpaceAfter=No|XML=</date>
 27	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-13
@@ -267,7 +283,7 @@
 3	electoral	electoral	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	accord	accord	NOUN	NN	Number=Sing	10	obl	10:obl:under	_
 5	of	of	ADP	IN	_	6	case	6:case	_
-6	1697	1697	NUM	CD	NumForm=Digit|NumType=Card	4	nmod	4:nmod:of	Entity=event-51)(time-28)|SpaceAfter=No
+6	1697	1697	NUM	CD	NumForm=Digit|NumType=Card	4	nmod	4:nmod:of	Entity=event-51)(time-28)|SpaceAfter=No|XML=<date when:::"1697"></date>
 7	,	,	PUNCT	,	_	4	punct	4:punct	_
 8	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	10	nsubj:pass	10:nsubj:pass|20:nsubj:pass	Discourse=joint:27->24|Entity=(person-41)
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
@@ -275,10 +291,10 @@
 11	unopposed	unopposed	ADJ	JJ	Degree=Pos|Polarity=Neg	10	advmod	10:advmod	_
 12	at	at	ADP	IN	_	17	case	17:case	_
 13	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(event-52
-14	1698	1698	NUM	CD	NumForm=Digit|NumType=Card	17	compound	17:compound	_
+14	1698	1698	NUM	CD	NumForm=Digit|NumType=Card	17	compound	17:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1698_English_general_election"><date when:::"1698"></date>
 15	English	English	PROPN	NNP	Number=Sing	17	compound	17:compound	Entity=(person-53)
 16	general	general	ADJ	JJ	Degree=Pos	17	amod	17:amod	_
-17	election	election	NOUN	NN	Number=Sing	10	obl	10:obl:at	Entity=event-52)|SpaceAfter=No
+17	election	election	NOUN	NN	Number=Sing	10	obl	10:obl:at	Entity=event-52)|SpaceAfter=No|XML=</ref>
 18	,	,	PUNCT	,	_	20	punct	20:punct	_
 19	and	and	CCONJ	CC	_	20	cc	20:cc	Discourse=joint:28->24
 20	voted	vote	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	conj	10:conj:and	_
@@ -289,9 +305,9 @@
 25	standing	standing	NOUN	NN	Number=Sing	26	compound	26:compound	_
 26	army	army	NOUN	NN	Number=Sing	22	nmod	22:nmod:of	Entity=abstract-54)organization-6)
 27	on	on	ADP	IN	_	28	case	28:case	_
-28	18	18	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:on	Entity=(time-55
+28	18	18	NUM	CD	NumForm=Digit|NumType=Card	20	obl	20:obl:on	Entity=(time-55|XML=<date when:::"1699-01-18">
 29	January	January	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(time-56)
-30	1699	1699	NUM	CD	NumForm=Digit|NumType=Card	28	nmod:tmod	28:nmod:tmod	Entity=time-55)(time-57)|SpaceAfter=No
+30	1699	1699	NUM	CD	NumForm=Digit|NumType=Card	28	nmod:tmod	28:nmod:tmod	Entity=time-55)(time-57)|SpaceAfter=No|XML=</date>
 31	.	.	PUNCT	.	_	10	punct	10:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-14
@@ -308,7 +324,7 @@
 9	general	general	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	elections	election	NOUN	NNS	Number=Plur	3	obl	3:obl:at	_
 11	of	of	ADP	IN	_	12	case	12:case	_
-12	1701	1701	NUM	CD	NumForm=Digit|NumType=Card	10	nmod	10:nmod:of	Entity=event-58)(time-59)
+12	1701	1701	NUM	CD	NumForm=Digit|NumType=Card	10	nmod	10:nmod:of	Entity=event-58)(time-59)|XML=<date when:::"1701"></date>
 13	and	and	CCONJ	CC	_	15	cc	15:cc	Discourse=joint:30->24
 14	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	15	aux:pass	15:aux:pass	_
 15	classed	class	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	conj	3:conj:and	_
@@ -321,7 +337,7 @@
 # s_type = decl
 # text = In 1702, he was appointed Lieutenant-Governor of the Isle of Wight, much to the annoyance of Lord Cutts, who still held a grudge against him and tried to prevent the appointment.
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=joint:31->24
-2	1702	1702	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-61)|SpaceAfter=No
+2	1702	1702	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:in	Entity=(time-61)|SpaceAfter=No|XML=<date when:::"1702"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	6	nsubj:pass	6:nsubj:pass|7:nsubj:xsubj	Entity=(person-41)
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	aux:pass	6:aux:pass	_
@@ -361,10 +377,10 @@
 # text = At the 1702 English general election, Morgan was returned unopposed for Yarmouth again.
 1	At	at	ADP	IN	_	6	case	6:case	Discourse=joint:35->24
 2	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(event-66
-3	1702	1702	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	_
+3	1702	1702	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1702_English_general_election"><date when:::"1702"></date>
 4	English	English	ADJ	NNP	Number=Sing	6	amod	6:amod	_
 5	general	general	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	election	election	NOUN	NN	Number=Sing	10	obl	10:obl:at	Entity=event-66)|SpaceAfter=No
+6	election	election	NOUN	NN	Number=Sing	10	obl	10:obl:at	Entity=event-66)|SpaceAfter=No|XML=</ref>
 7	,	,	PUNCT	,	_	6	punct	6:punct	_
 8	Morgan	Morgan	PROPN	NNP	Number=Sing	10	nsubj:pass	10:nsubj:pass	Entity=(person-2)
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
@@ -384,10 +400,10 @@
 4	again	again	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
 5	at	at	ADP	IN	_	10	case	10:case	_
 6	the	the	DET	DT	Definite=Def|PronType=Art	10	det	10:det	Entity=(event-67
-7	1705	1705	NUM	CD	NumForm=Digit|NumType=Card	10	compound	10:compound	_
+7	1705	1705	NUM	CD	NumForm=Digit|NumType=Card	10	compound	10:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1705_English_general_election"><date when:::"1705"></date>
 8	English	English	ADJ	NNP	Number=Sing	10	amod	10:amod	_
 9	general	general	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
-10	election	election	NOUN	NN	Number=Sing	3	obl	3:obl:at	Entity=event-67)
+10	election	election	NOUN	NN	Number=Sing	3	obl	3:obl:at	Entity=event-67)|XML=</ref>
 11	and	and	CCONJ	CC	_	12	cc	12:cc	Discourse=joint:37->24
 12	voted	vote	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 13	for	for	ADP	IN	_	16	case	16:case	_
@@ -397,9 +413,9 @@
 17	as	as	ADP	IN	_	18	case	18:case	_
 18	Speaker	Speaker	PROPN	NNP	Number=Sing	12	obl	12:obl:as	Entity=(person-70)
 19	on	on	ADP	IN	_	20	case	20:case	_
-20	25	25	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:on	Entity=(time-48
+20	25	25	NUM	CD	NumForm=Digit|NumType=Card	12	obl	12:obl:on	Entity=(time-48|XML=<date when:::"1705-10-25">
 21	October	October	PROPN	NNP	Number=Sing	20	compound	20:compound	Entity=(time-71)
-22	1705	1705	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=time-48)(time-72)|SpaceAfter=No
+22	1705	1705	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=time-48)(time-72)|SpaceAfter=No|XML=</date>
 23	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-18
@@ -419,8 +435,8 @@
 12	regency	regency	NOUN	NN	Number=Sing	13	compound	13:compound	Entity=(organization-75)
 13	bill	bill	NOUN	NN	Number=Sing	9	nmod	9:nmod:of	Entity=abstract-73)abstract-74)
 14	in	in	ADP	IN	_	15	case	15:case	_
-15	February	February	PROPN	NNP	Number=Sing	3	obl	3:obl:in	Entity=(time-76
-16	1706	1706	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-76)(time-77)|SpaceAfter=No
+15	February	February	PROPN	NNP	Number=Sing	3	obl	3:obl:in	Entity=(time-76|XML=<date when:::"1706-02">
+16	1706	1706	NUM	CD	NumForm=Digit|NumType=Card	15	nmod:tmod	15:nmod:tmod	Entity=time-76)(time-77)|SpaceAfter=No|XML=</date>
 17	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-19
@@ -437,10 +453,10 @@
 9	Yarmouth	Yarmouth	PROPN	NNP	Number=Sing	7	nmod	7:nmod:for	Entity=person-78)(place-33)
 10	at	at	ADP	IN	_	15	case	15:case	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(event-79
-12	1708	1708	NUM	CD	NumForm=Digit|NumType=Card	15	compound	15:compound	_
+12	1708	1708	NUM	CD	NumForm=Digit|NumType=Card	15	compound	15:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1708_British_general_election"><date when:::"1708"></date>
 13	British	British	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
 14	general	general	ADJ	JJ	Degree=Pos	15	amod	15:amod	_
-15	election	election	NOUN	NN	Number=Sing	3	obl	3:obl:at	Entity=event-79)
+15	election	election	NOUN	NN	Number=Sing	3	obl	3:obl:at	Entity=event-79)|XML=</ref>
 16	and	and	CCONJ	CC	_	17	cc	17:cc	Discourse=joint:40->39
 17	voted	vote	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	3	conj	3:conj:and	_
 18	for	for	ADP	IN	_	20	case	20:case	_
@@ -450,7 +466,7 @@
 22	Dr	Dr	PROPN	NNP	Number=Sing	20	nmod	20:nmod:of	Entity=(person-81
 23	Sacheverell	Sacheverell	PROPN	NNP	Number=Sing	22	flat	22:flat	Entity=event-80)person-81)
 24	in	in	ADP	IN	_	25	case	25:case	_
-25	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	17	obl	17:obl:in	Entity=(time-82)|SpaceAfter=No
+25	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	17	obl	17:obl:in	Entity=(time-82)|SpaceAfter=No|XML=<date when:::"1710"></date>
 26	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-20
@@ -470,10 +486,10 @@
 12	government	government	NOUN	NN	Number=Sing	10	nmod	10:nmod:of	Entity=event-86)(organization-39)
 13	at	at	ADP	IN	_	18	case	18:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(event-87
-15	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	18	compound	18:compound	_
+15	1710	1710	NUM	CD	NumForm=Digit|NumType=Card	18	compound	18:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1710_British_general_election"><date when:::"1710"></date>
 16	British	British	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
 17	general	general	ADJ	JJ	Degree=Pos	18	amod	18:amod	_
-18	election	election	NOUN	NN	Number=Sing	2	obl	2:obl:at	Entity=event-87)
+18	election	election	NOUN	NN	Number=Sing	2	obl	2:obl:at	Entity=event-87)|XML=</ref>
 19	and	and	CCONJ	CC	_	22	cc	22:cc	Discourse=joint:42->41
 20	did	do	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux	22:aux	_
 21	not	not	ADV	RB	Polarity=Neg	22	advmod	22:advmod	_
@@ -485,18 +501,19 @@
 27	Hanoverian	Hanoverian	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(place-89)
 28	succession	succession	NOUN	NN	Number=Sing	22	advcl	22:advcl	Entity=event-88)|SpaceAfter=No
 29	.	.	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
-30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:43->41|SpaceAfter=No
+30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:43->41|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-HOP-1">
 31	1	1	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	Entity=(abstract-29)|SpaceAfter=No
-32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	_
+32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_freshwater-21
 # s_type = decl
 # text = At the 1715 general election Morgan stood as a Whig at Yarmouth and Newport.
+# newpar = p (7 s)
 1	At	at	ADP	IN	_	5	case	5:case	Discourse=joint:44->41
 2	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(event-90
-3	1715	1715	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	_
+3	1715	1715	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1715_British_general_election"><date when:::"1715"></date>
 4	general	general	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
-5	election	election	NOUN	NN	Number=Sing	7	obl	7:obl:at	Entity=event-90)
+5	election	election	NOUN	NN	Number=Sing	7	obl	7:obl:at	Entity=event-90)|XML=</ref>
 6	Morgan	Morgan	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=(person-2)
 7	stood	stand	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 8	as	as	ADP	IN	_	10	case	10:case	_
@@ -505,7 +522,7 @@
 11	at	at	ADP	IN	_	12	case	12:case	_
 12	Yarmouth	Yarmouth	PROPN	NNP	Number=Sing	7	obl	7:obl:at	Entity=(place-33)
 13	and	and	CCONJ	CC	_	14	cc	14:cc	_
-14	Newport	Newport	PROPN	NNP	Number=Sing	12	conj	7:obl:at|12:conj:and	Entity=(place-91)|SpaceAfter=No
+14	Newport	Newport	PROPN	NNP	Number=Sing	12	conj	7:obl:at|12:conj:and	Entity=(place-91)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Newport_(Isle_of_Wight)_(UK_Parliament_constituency)"></ref>
 15	.	.	PUNCT	.	_	7	punct	7:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-22
@@ -529,9 +546,9 @@
 16	a	a	DET	DT	Definite=Ind|PronType=Art	17	det	17:det	Entity=(event-92
 17	petition	petition	NOUN	NN	Number=Sing	14	obl	14:obl:after	Entity=event-92)
 18	on	on	ADP	IN	_	19	case	19:case	_
-19	12	12	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:on	Entity=(time-93
+19	12	12	NUM	CD	NumForm=Digit|NumType=Card	14	obl	14:obl:on	Entity=(time-93|XML=<date when:::"1717-04-12">
 20	April	April	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(time-94)
-21	1717	1717	NUM	CD	NumForm=Digit|NumType=Card	19	nmod:tmod	19:nmod:tmod	Entity=time-93)(time-95)|SpaceAfter=No
+21	1717	1717	NUM	CD	NumForm=Digit|NumType=Card	19	nmod:tmod	19:nmod:tmod	Entity=time-93)(time-95)|SpaceAfter=No|XML=</date>
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-23
@@ -580,15 +597,15 @@
 17	also	also	ADV	RB	_	18	advmod	18:advmod	_
 18	governor	governor	NOUN	NN	Number=Sing	3	conj	3:conj:and	Entity=(person-35
 19	of	of	ADP	IN	_	21	case	21:case	_
-20	Cowes	Cowes	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(person-35(place-99)
-21	Castle	Castle	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=person-60)person-35)person-35)
+20	Cowes	Cowes	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(person-35(place-99)|XML=<ref target:::"https://en.wikipedia.org/wiki/Cowes_Castle">
+21	Castle	Castle	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=person-60)person-35)person-35)|XML=</ref>
 22	from	from	ADP	IN	_	23	case	23:case	_
-23	1715	1715	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:from	Entity=(time-97)
+23	1715	1715	NUM	CD	NumForm=Digit|NumType=Card	18	obl	18:obl:from	Entity=(time-97)|XML=<date when:::"1715"></date>
 24	until	until	ADP	IN	_	26	case	26:case	_
 25	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	26	nmod:poss	26:nmod:poss	Entity=(event-98(person-60)
 26	death	death	NOUN	NN	Number=Sing	18	obl	18:obl:until	_
 27	in	in	ADP	IN	_	28	case	28:case	_
-28	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	26	nmod	26:nmod:in	Entity=event-98)(time-3)|SpaceAfter=No
+28	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	26	nmod	26:nmod:in	Entity=event-98)(time-3)|SpaceAfter=No|XML=<date when:::"1729"></date>
 29	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-26
@@ -602,10 +619,10 @@
 6	Yarmouth	Yarmouth	PROPN	NNP	Number=Sing	3	obl	3:obl:at	Entity=(place-33)
 7	in	in	ADP	IN	_	12	case	12:case	_
 8	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(event-100
-9	1722	1722	NUM	CD	NumForm=Digit|NumType=Card	12	compound	12:compound	_
+9	1722	1722	NUM	CD	NumForm=Digit|NumType=Card	12	compound	12:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1722_British_general_election"><date when:::"1722"></date>
 10	British	British	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
 11	general	general	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
-12	election	election	NOUN	NN	Number=Sing	3	obl	3:obl:in	Entity=event-100)|SpaceAfter=No
+12	election	election	NOUN	NN	Number=Sing	3	obl	3:obl:in	Entity=event-100)|SpaceAfter=No|XML=</ref>
 13	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-27
@@ -613,10 +630,10 @@
 # text = In the 1727 British general election he changed seats and was returned unopposed at Lymington. [2]
 1	In	in	ADP	IN	_	6	case	6:case	Discourse=joint:53->49
 2	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(event-101
-3	1727	1727	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	_
+3	1727	1727	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/1727_British_general_election"><date when:::"1727"></date>
 4	British	British	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 5	general	general	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
-6	election	election	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=event-101)
+6	election	election	NOUN	NN	Number=Sing	8	obl	8:obl:in	Entity=event-101)|XML=</ref>
 7	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	8	nsubj	8:nsubj|12:nsubj:pass	Entity=(person-60)
 8	changed	change	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	seats	seat	NOUN	NNS	Number=Plur	8	obj	8:obj	Entity=(abstract-102)
@@ -625,15 +642,16 @@
 12	returned	return	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	8	conj	8:conj:and	_
 13	unopposed	unopposed	ADJ	JJ	Degree=Pos|Polarity=Neg	12	advmod	12:advmod	_
 14	at	at	ADP	IN	_	15	case	15:case	_
-15	Lymington	Lymington	PROPN	NNP	Number=Sing	12	obl	12:obl:at	Entity=(place-103)|SpaceAfter=No
+15	Lymington	Lymington	PROPN	NNP	Number=Sing	12	obl	12:obl:at	Entity=(place-103)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Lymington_(UK_Parliament_constituency)"></ref>
 16	.	.	PUNCT	.	_	8	punct	8:punct	_
-17	[	[	PUNCT	-LRB-	_	18	punct	18:punct	Discourse=evidence:55->53|SpaceAfter=No
+17	[	[	PUNCT	-LRB-	_	18	punct	18:punct	Discourse=evidence:55->53|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-HOP2-2">
 18	2	2	NUM	CD	NumForm=Digit|NumType=Card	8	dep	8:dep	Entity=(abstract-104)|SpaceAfter=No
-19	]	]	PUNCT	-RRB-	_	18	punct	18:punct	_
+19	]	]	PUNCT	-RRB-	_	18	punct	18:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_freshwater-28
 # s_type = frag
 # text = Death and legacy
+# newpar = head (1 s)
 1	Death	death	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:56->57|Entity=(abstract-105)
 2	and	and	CCONJ	CC	_	3	cc	3:cc	_
 3	legacy	legacy	NOUN	NN	Number=Sing	1	conj	1:conj:and	Entity=(abstract-106)
@@ -641,12 +659,13 @@
 # sent_id = AMALGUM_bio_freshwater-29
 # s_type = decl
 # text = Morgan died on 19 April 1729.
+# newpar = p (3 s)
 1	Morgan	Morgan	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:57->49|Entity=(person-2)
 2	died	die	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	on	on	ADP	IN	_	4	case	4:case	_
-4	19	19	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:on	Entity=(time-107
+4	19	19	NUM	CD	NumForm=Digit|NumType=Card	2	obl	2:obl:on	Entity=(time-107|XML=<date when:::"1729-04-19">
 5	April	April	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-94)
-6	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-107)(time-3)|SpaceAfter=No
+6	1729	1729	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-107)(time-3)|SpaceAfter=No|XML=</date>
 7	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_bio_freshwater-30
@@ -677,9 +696,9 @@
 23	younger	young	ADJ	JJR	Degree=Cmp	24	amod	24:amod	_
 24	sons	son	NOUN	NNS	Number=Plur	16	obl	16:obl:to	Entity=person-112)|SpaceAfter=No
 25	.	.	PUNCT	.	_	2	punct	2:punct	SpaceAfter=No
-26	[	[	PUNCT	-LRB-	_	27	punct	27:punct	Discourse=evidence:61->60|SpaceAfter=No
+26	[	[	PUNCT	-LRB-	_	27	punct	27:punct	Discourse=evidence:61->60|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-HOP2-2">
 27	2	2	NUM	CD	NumForm=Digit|NumType=Card	2	dep	2:dep	Entity=(abstract-104)|SpaceAfter=No
-28	]	]	PUNCT	-RRB-	_	27	punct	27:punct	_
+28	]	]	PUNCT	-RRB-	_	27	punct	27:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_freshwater-31
 # s_type = decl
@@ -687,7 +706,7 @@
 1	His	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	3	nmod:poss	3:nmod:poss	Discourse=evaluation:62->59|Entity=(person-113(person-110)
 2	second	second	ADJ	JJ	Degree=Pos|NumType=Ord	3	amod	3:amod	_
 3	son	son	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
-4	Maurice	Maurice	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=person-113)
+4	Maurice	Maurice	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=person-113)|XML=<ref target:::"https://en.wikipedia.org/wiki/Maurice_Morgan"></ref>
 5	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	cop	6:cop	_
 6	MP	MP	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(person-113
 7	for	for	ADP	IN	_	8	case	8:case	_

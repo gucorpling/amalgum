@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_palestinians
+# meta::title = Thirteen Israeli soldiers, scores of Palestinians killed in deadly day of fighting in Gaza Strip
+# meta::shortTitle = palestinians
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2014-07-21
+# meta::dateModified = 2015-09-18
+# meta::sourceURL = https://en.wikinews.org/wiki/Thirteen_Israeli_soldiers%2C_scores_of_Palestinians_killed_in_deadly_day_of_fighting_in_Gaza_Strip
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_palestinians
 # sent_id = AMALGUM_news_palestinians-1
 # s_type = decl
 # text = Thirteen Israeli soldiers, scores of Palestinians killed in deadly day of fighting in Gaza Strip
+# newpar = head (1 s)
 1	Thirteen	13	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	Discourse=preparation:1->3|Entity=(person-1
 2	Israeli	Israeli	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	soldiers	soldier	NOUN	NNS	Number=Plur	8	nsubj:pass	8:nsubj:pass	Entity=person-1)|SpaceAfter=No
@@ -22,18 +33,20 @@
 # sent_id = AMALGUM_news_palestinians-2
 # s_type = frag
 # text = Tuesday, July 22, 2014
-1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-7)|SpaceAfter=No
+# newpar = p (1 s)
+1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-7)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	July	July	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-7
+3	July	July	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-7|XML=<date when:::"2014-07-22">
 4	22	22	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-7)(time-8)
+6	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-7)(time-8)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_palestinians-3
 # s_type = decl
 # text = On Sunday, in the deadliest day of fighting for the Israeli military in several years, thirteen Israeli soldiers were reported killed in the Gaza Strip.
+# newpar = p (2 s)
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=ROOT:3
-2	Sunday	Sunday	PROPN	NNP	Number=Sing	22	obl	22:obl:on	Entity=(time-9)|SpaceAfter=No
+2	Sunday	Sunday	PROPN	NNP	Number=Sing	22	obl	22:obl:on	Entity=(time-9)|SpaceAfter=No|XML=<date when:::"2014-07-20"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	in	in	ADP	IN	_	7	case	7:case	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(time-10
@@ -50,15 +63,15 @@
 16	years	year	NOUN	NNS	Number=Plur	13	nmod	13:nmod:in	Entity=time-10)event-5)organization-11)time-12)|SpaceAfter=No
 17	,	,	PUNCT	,	_	7	punct	7:punct	_
 18	thirteen	13	NUM	CD	NumForm=Digit|NumType=Card	20	nummod	20:nummod	Discourse=elaboration:4->3|Entity=(person-1
-19	Israeli	Israeli	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
+19	Israeli	Israeli	ADJ	JJ	Degree=Pos	20	amod	20:amod	XML=<ref target:::"https://en.wikinews.org/wiki/Israel"></ref>
 20	soldiers	soldier	NOUN	NNS	Number=Plur	22	nsubj:pass	22:nsubj:pass|23:nsubj:xsubj	Entity=person-1)
 21	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	22:aux:pass	_
 22	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 23	killed	kill	VERB	VBN	Tense=Past|VerbForm=Part	22	xcomp	22:xcomp	_
 24	in	in	ADP	IN	_	27	case	27:case	_
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(place-6
-26	Gaza	Gaza	PROPN	NNP	Number=Sing	27	compound	27:compound	_
-27	Strip	Strip	PROPN	NNP	Number=Sing	23	obl	23:obl:in	Entity=place-6)|SpaceAfter=No
+26	Gaza	Gaza	PROPN	NNP	Number=Sing	27	compound	27:compound	XML=<ref target:::"https://en.wikinews.org/wiki/Gaza_Strip">
+27	Strip	Strip	PROPN	NNP	Number=Sing	23	obl	23:obl:in	Entity=place-6)|SpaceAfter=No|XML=</ref>
 28	.	.	PUNCT	.	_	22	punct	22:punct	_
 
 # sent_id = AMALGUM_news_palestinians-4
@@ -68,7 +81,7 @@
 2	500	500	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	deaths	death	NOUN	NNS	Number=Plur	8	nsubj:pass	8:nsubj:pass	_
 4	of	of	ADP	IN	_	5	case	5:case	_
-5	Palestinians	Palestinian	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	Entity=event-13)(person-3)
+5	Palestinians	Palestinian	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	Entity=event-13)(person-3)|XML=<ref target:::"https://en.wikinews.org/wiki/Palestine"></ref>
 6	have	have	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	aux	8:aux	_
 7	been	be	AUX	VBN	Tense=Past|VerbForm=Part	8	aux:pass	8:aux:pass	_
 8	reported	report	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
@@ -86,19 +99,20 @@
 19	's	's	PART	POS	_	18	case	18:case	Entity=place-16)
 20	offensive	offensive	NOUN	NN	Number=Sing	16	nmod	16:nmod:of	_
 21	against	against	ADP	IN	_	22	case	22:case	_
-22	Hamas	Hamas	PROPN	NNP	Number=Sing	20	nmod	20:nmod:against	Entity=time-14)event-15)(organization-17)|SpaceAfter=No
+22	Hamas	Hamas	PROPN	NNP	Number=Sing	20	nmod	20:nmod:against	Entity=time-14)event-15)(organization-17)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Hamas"></ref>
 23	.	.	PUNCT	.	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_news_palestinians-5
 # s_type = decl
 # text = Over 67 deaths of Palestinians on Sunday, by one report well over 100 — both civilians and fighters combined — occurred in one area, the Gaza City suburb of Shujai'iya, following heavy fighting and shelling by Israeli forces.
+# newpar = p (1 s)
 1	Over	over	ADV	IN	_	3	advmod	3:advmod	Discourse=elaboration:6->5|Entity=(event-18
 2	67	67	NUM	CD	NumForm=Digit|NumType=Card	3	nummod	3:nummod	_
 3	deaths	death	NOUN	NNS	Number=Plur	22	obl	22:obl	_
 4	of	of	ADP	IN	_	5	case	5:case	_
 5	Palestinians	Palestinian	PROPN	NNPS	Number=Plur	3	nmod	3:nmod:of	Entity=(person-3)
 6	on	on	ADP	IN	_	7	case	7:case	_
-7	Sunday	Sunday	PROPN	NNP	Number=Sing	3	nmod	3:nmod:on	Entity=event-18)(time-9)|SpaceAfter=No
+7	Sunday	Sunday	PROPN	NNP	Number=Sing	3	nmod	3:nmod:on	Entity=event-18)(time-9)|SpaceAfter=No|XML=<date when:::"2014-07-20"></date>
 8	,	,	PUNCT	,	_	3	punct	3:punct	_
 9	by	by	ADP	IN	_	11	case	11:case	Discourse=same_unit:7->6
 10	one	one	NUM	CD	NumForm=Word|NumType=Card	11	nummod	11:nummod	Entity=(abstract-19
@@ -119,11 +133,11 @@
 25	area	area	NOUN	NN	Number=Sing	22	obl	22:obl:in	Entity=place-21)|SpaceAfter=No
 26	,	,	PUNCT	,	_	30	punct	30:punct	_
 27	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	Entity=(place-21
-28	Gaza	Gaza	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(place-22
-29	City	City	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=place-22)
+28	Gaza	Gaza	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=(place-22|XML=<ref target:::"https://en.wikipedia.org/wiki/Gaza%20City">
+29	City	City	PROPN	NNP	Number=Sing	30	compound	30:compound	Entity=place-22)|XML=</ref>
 30	suburb	suburb	NOUN	NN	Number=Sing	25	appos	25:appos	_
 31	of	of	ADP	IN	_	32	case	32:case	_
-32	Shujai'iya	Shujai'iya	PROPN	NNP	Number=Sing	30	nmod	30:nmod:of	Entity=place-21)(place-23)|SpaceAfter=No
+32	Shujai'iya	Shujai'iya	PROPN	NNP	Number=Sing	30	nmod	30:nmod:of	Entity=place-21)(place-23)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Shujai'iya"></ref>
 33	,	,	PUNCT	,	_	36	punct	36:punct	_
 34	following	follow	VERB	VBG	VerbForm=Ger	36	case	36:case	Discourse=circumstance:10->7
 35	heavy	heavy	ADJ	JJ	Degree=Pos	36	amod	36:amod	Entity=(event-5
@@ -138,6 +152,7 @@
 # sent_id = AMALGUM_news_palestinians-6
 # s_type = decl
 # text = Meanwhile, thirteen Israeli soldiers were killed Sunday, including two soldiers who were United States citizens.
+# newpar = p (4 s)
 1	Meanwhile	meanwhile	ADV	RB	Degree=Pos	7	advmod	7:advmod	Discourse=sequence:11->5|SpaceAfter=No
 2	,	,	PUNCT	,	_	1	punct	1:punct	_
 3	thirteen	13	NUM	CD	NumForm=Digit|NumType=Card	5	nummod	5:nummod	Entity=(person-1
@@ -152,8 +167,8 @@
 12	soldiers	soldier	NOUN	NNS	Number=Plur	7	obl	7:obl:including|17:nsubj	_
 13	who	who	PRON	WP	PronType=Rel	17	nsubj	12:ref	Discourse=elaboration:13->12|Entity=(person-27
 14	were	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	17	cop	17:cop	_
-15	United	Unite	VERB	NNP	Number=Sing	16	amod	16:amod	Entity=(organization-28
-16	States	State	PROPN	NNPS	Number=Plur	17	compound	17:compound	Entity=organization-28)
+15	United	Unite	VERB	NNP	Number=Sing	16	amod	16:amod	Entity=(organization-28|XML=<ref target:::"https://en.wikinews.org/wiki/United_States">
+16	States	State	PROPN	NNPS	Number=Plur	17	compound	17:compound	Entity=organization-28)|XML=</ref>
 17	citizens	citizen	NOUN	NNS	Number=Plur	12	acl:relcl	12:acl:relcl	Entity=person-26)person-27)|SpaceAfter=No
 18	.	.	PUNCT	.	_	7	punct	7:punct	_
 
@@ -220,8 +235,8 @@
 5	military	military	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
 6	source	source	NOUN	NN	Number=Sing	7	nsubj	7:nsubj	Entity=person-39)
 7	told	tell	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-8	The	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(organization-40
-9	Guardian	Guardian	PROPN	NNP	Number=Sing	7	obj	7:obj	Entity=organization-40)
+8	The	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(organization-40|XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/The_Guardian">
+9	Guardian	Guardian	PROPN	NNP	Number=Sing	7	obj	7:obj	Entity=organization-40)|XML=</ref></hi>
 10	in	in	ADP	IN	_	11	case	11:case	_
 11	regards	regard	NOUN	NNS	Number=Plur	7	obl	7:obl:in	_
 12	to	to	ADP	IN	_	14	case	14:case	_
@@ -263,27 +278,28 @@
 # sent_id = AMALGUM_news_palestinians-10
 # s_type = decl
 # text = All this occurred while a United Nations Security Council meeting was held in New York City at the request of Jordan.
+# newpar = p (5 s)
 1	All	all	PRON	DT	_	2	det:predet	2:det:predet	Discourse=sequence:24->5|Entity=(person-39
 2	this	this	PRON	DT	Number=Sing|PronType=Dem	3	nsubj	3:nsubj	Entity=person-39)
 3	occurred	occur	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	while	while	SCONJ	IN	_	12	mark	12:mark	Discourse=circumstance:25->24
 5	a	a	DET	DT	Definite=Ind|PronType=Art	10	det	10:det	Entity=(event-46
-6	United	Unite	VERB	NNP	Number=Sing	7	amod	7:amod	Entity=(organization-28
+6	United	Unite	VERB	NNP	Number=Sing	7	amod	7:amod	Entity=(organization-28|XML=<ref target:::"https://en.wikinews.org/wiki/United_Nations_Security_Council">
 7	Nations	Nation	PROPN	NNPS	Number=Plur	10	compound	10:compound	Entity=organization-28)
 8	Security	Security	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(organization-47
-9	Council	Council	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=organization-47)
+9	Council	Council	PROPN	NNP	Number=Sing	10	compound	10:compound	Entity=organization-47)|XML=</ref>
 10	meeting	meeting	NOUN	NN	Number=Sing	12	nsubj:pass	12:nsubj:pass	Entity=event-46)
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	aux:pass	12:aux:pass	_
 12	held	hold	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	3	advcl	3:advcl:while	_
 13	in	in	ADP	IN	_	16	case	16:case	_
-14	New	New	PROPN	NNP	Number=Sing	12	obl	12:obl	Entity=(place-48
+14	New	New	PROPN	NNP	Number=Sing	12	obl	12:obl	Entity=(place-48|XML=<ref target:::"https://en.wikinews.org/wiki/New_York_City">
 15	York	York	PROPN	NNP	Number=Sing	14	flat	14:flat	_
-16	City	City	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=place-48)
+16	City	City	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=place-48)|XML=</ref>
 17	at	at	ADP	IN	_	19	case	19:case	_
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(abstract-49
 19	request	request	NOUN	NN	Number=Sing	12	obl	12:obl:at	_
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	Jordan	Jordan	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=abstract-49)(person-50)|SpaceAfter=No
+21	Jordan	Jordan	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=abstract-49)(person-50)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Jordan"></ref>
 22	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_news_palestinians-11
@@ -297,12 +313,12 @@
 6	meeting	meeting	NOUN	NN	Number=Sing	1	obl	1:obl:after	Entity=event-46)|SpaceAfter=No
 7	,	,	PUNCT	,	_	1	punct	1:punct	_
 8-9	Rwanda's	_	_	_	_	_	_	_	_
-8	Rwanda	Rwanda	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Discourse=attribution:27->28|Entity=(place-52(person-53(place-54
+8	Rwanda	Rwanda	PROPN	NNP	Number=Sing	11	nmod:poss	11:nmod:poss	Discourse=attribution:27->28|Entity=(place-52(person-53(place-54|XML=<ref target:::"https://en.wikinews.org/wiki/Rwanda"></ref>
 9	's	's	PART	POS	_	8	case	8:case	Entity=place-54)
 10	UN	UN	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(organization-55)
 11	ambassador	ambassador	NOUN	NN	Number=Sing	14	nsubj	14:nsubj	Entity=person-53)
-12	Eugene	Eugene	PROPN	NNP	Number=Sing	11	appos	11:appos	_
-13	Gasana	Gasana	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=place-52)
+12	Eugene	Eugene	PROPN	NNP	Number=Sing	11	appos	11:appos	XML=<ref target:::"https://en.wikipedia.org/wiki/Eug&#232;ne-Richard%20Gasana">
+13	Gasana	Gasana	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=place-52)|XML=</ref>
 14	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 15	,	,	PUNCT	,	_	23	punct	23:punct	_
 16	"	''	PUNCT	``	_	23	punct	23:punct	Discourse=sequence:28->5|SpaceAfter=No
@@ -398,18 +414,19 @@
 # sent_id = AMALGUM_news_palestinians-15
 # s_type = decl
 # text = United Nations Secretary-General Ban Ki-moon, who is in Doha, Qatar meeting with Qatar's Emir Sheikh Tamim bin Hamad al-Thani and Palestinian President Mahmoud Abbas, said in a statement, "As I travel the region, I will continue to press for an [immediate] ceasefire — an immediate end to the Israeli military operation in Gaza and the rocket fire by Hamas and Islamic Jihad".
+# newpar = p (4 s)
 1	United	Unite	VERB	NNP	Number=Sing	2	amod	2:amod	Discourse=joint:37->28|Entity=(place-69(organization-28
 2	Nations	Nation	PROPN	NNPS	Number=Plur	3	compound	3:compound	Entity=organization-28)
 3	Secretary-General	Secretary-General	PROPN	NNP	Number=Sing	29	nsubj	29:nsubj	_
-4	Ban	Ban	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-5	Ki-moon	Ki-moon	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No
+4	Ban	Ban	PROPN	NNP	Number=Sing	3	flat	3:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Ban_Ki-moon">
+5	Ki-moon	Ki-moon	PROPN	NNP	Number=Sing	3	flat	3:flat	SpaceAfter=No|XML=</ref>
 6	,	,	PUNCT	,	_	8	punct	8:punct	_
 7	who	who	PRON	WP	PronType=Int	8	nsubj	8:nsubj	Discourse=elaboration:38->37
 8	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	10	cop	10:cop	_
 9	in	in	ADP	IN	_	10	case	10:case	_
-10	Doha	Doha	PROPN	NNP	Number=Sing	3	acl:relcl	3:acl:relcl	Entity=(place-70|SpaceAfter=No
+10	Doha	Doha	PROPN	NNP	Number=Sing	3	acl:relcl	3:acl:relcl	Entity=(place-70|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Doha"></ref>
 11	,	,	PUNCT	,	_	12	punct	12:punct	_
-12	Qatar	Qatar	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=place-70)(place-71)
+12	Qatar	Qatar	PROPN	NNP	Number=Sing	10	appos	10:appos	Entity=place-70)(place-71)|XML=<ref target:::"https://en.wikinews.org/wiki/Qatar"></ref>
 13	meeting	meet	VERB	VBG	VerbForm=Ger	3	acl	3:acl	Discourse=attribution:39->40
 14	with	with	ADP	IN	_	17	case	17:case	_
 15-16	Qatar's	_	_	_	_	_	_	_	_
@@ -417,15 +434,15 @@
 16	's	's	PART	POS	_	15	case	15:case	Entity=place-71)
 17	Emir	Emir	PROPN	NNP	Number=Sing	13	obl	13:obl:with	_
 18	Sheikh	Sheikh	PROPN	NNP	Number=Sing	17	flat	17:flat	_
-19	Tamim	Tamim	PROPN	NNP	Number=Sing	17	flat	17:flat	_
+19	Tamim	Tamim	PROPN	NNP	Number=Sing	17	flat	17:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Tamim%20bin%20Hamad%20Al%20Thani">
 20	bin	bin	PROPN	NNP	Number=Sing	17	flat	17:flat	_
 21	Hamad	Hamad	PROPN	NNP	Number=Sing	17	flat	17:flat	_
-22	al-Thani	al-Thani	PROPN	NNP	Number=Sing	17	flat	17:flat	Entity=person-72)
+22	al-Thani	al-Thani	PROPN	NNP	Number=Sing	17	flat	17:flat	Entity=person-72)|XML=</ref>
 23	and	and	CCONJ	CC	_	25	cc	25:cc	_
 24	Palestinian	Palestinian	PROPN	NNP	Number=Sing	25	compound	25:compound	Entity=(person-73
 25	President	President	PROPN	NNP	Number=Sing	17	conj	13:obl:with|17:conj:and	_
-26	Mahmoud	Mahmoud	PROPN	NNP	Number=Sing	25	flat	25:flat	_
-27	Abbas	Abbas	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=place-69)person-73)|SpaceAfter=No
+26	Mahmoud	Mahmoud	PROPN	NNP	Number=Sing	25	flat	25:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Mahmoud_Abbas">
+27	Abbas	Abbas	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=place-69)person-73)|SpaceAfter=No|XML=</ref>
 28	,	,	PUNCT	,	_	3	punct	3:punct	_
 29	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 30	in	in	ADP	IN	_	32	case	32:case	_
@@ -468,8 +485,8 @@
 67	by	by	ADP	IN	_	68	case	68:case	_
 68	Hamas	Hamas	PROPN	NNP	Number=Sing	66	nmod	66:nmod:by	Entity=(organization-17)
 69	and	and	CCONJ	CC	_	71	cc	71:cc	_
-70	Islamic	Islamic	ADJ	NNP	Number=Sing	71	amod	71:amod	Entity=(organization-79
-71	Jihad	Jihad	PROPN	NNP	Number=Sing	68	conj	66:nmod:by|68:conj:and	Entity=event-75)event-77)organization-79)|SpaceAfter=No
+70	Islamic	Islamic	ADJ	NNP	Number=Sing	71	amod	71:amod	Entity=(organization-79|XML=<ref target:::"https://en.wikinews.org/wiki/Islamic_Jihad_Movement_in_Palestine">
+71	Jihad	Jihad	PROPN	NNP	Number=Sing	68	conj	66:nmod:by|68:conj:and	Entity=event-75)event-77)organization-79)|SpaceAfter=No|XML=</ref>
 72	"	''	PUNCT	''	_	43	punct	43:punct	SpaceAfter=No
 73	.	.	PUNCT	.	_	29	punct	29:punct	_
 
@@ -549,14 +566,15 @@
 # sent_id = AMALGUM_news_palestinians-19
 # s_type = decl
 # text = In response, Israeli Prime Minister Benjamin Netanyahu said in press conference, "We will continue this operation for as long as it takes."
+# newpar = p (4 s)
 1	In	in	ADP	IN	_	2	case	2:case	Discourse=attribution:51->52
 2	response	response	NOUN	NN	Number=Sing	9	obl	9:obl:in	Entity=(abstract-90)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	Israeli	Israeli	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(person-91
 5	Prime	Prime	PROPN	NNP	Number=Sing	6	compound	6:compound	_
 6	Minister	Minister	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	_
-7	Benjamin	Benjamin	PROPN	NNP	Number=Sing	6	flat	6:flat	_
-8	Netanyahu	Netanyahu	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-91)
+7	Benjamin	Benjamin	PROPN	NNP	Number=Sing	6	flat	6:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Benjamin_Netanyahu">
+8	Netanyahu	Netanyahu	PROPN	NNP	Number=Sing	6	flat	6:flat	Entity=person-91)|XML=</ref>
 9	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 10	in	in	ADP	IN	_	12	case	12:case	_
 11	press	press	NOUN	NN	Number=Sing	12	compound	12:compound	Entity=(event-92
@@ -584,7 +602,7 @@
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	appeared	appear	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 4	on	on	ADP	IN	_	5	case	5:case	_
-5	CNN	CNN	PROPN	NNP	Number=Sing	3	obl	3:obl:on	Entity=(organization-93)
+5	CNN	CNN	PROPN	NNP	Number=Sing	3	obl	3:obl:on	Entity=(organization-93)|XML=<ref target:::"https://en.wikinews.org/wiki/CNN"></ref>
 6	saying	say	VERB	VBG	VerbForm=Ger	3	advcl	3:advcl	Discourse=elaboration:55->54
 7	Hamas	Hamas	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Discourse=joint:56->52|Entity=(organization-17)
 8	uses	use	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	ccomp	6:ccomp	_

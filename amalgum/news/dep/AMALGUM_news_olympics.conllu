@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_news_olympics
+# meta::title = Russian government confirms gay protesters to be arrested at Olympics
+# meta::shortTitle = olympics
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2013-08-13
+# meta::dateModified = 2015-03-05
+# meta::sourceURL = https://en.wikinews.org/wiki/Russian_government_confirms_gay_protesters_to_be_arrested_at_Olympics
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_olympics
 # sent_id = AMALGUM_news_olympics-1
 # s_type = decl
 # text = Russian government confirms gay protesters to be arrested at Olympics
+# newpar = head (1 s)
 1	Russian	Russian	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:1->3|Entity=(organization-1
 2	government	government	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=organization-1)
 3	confirms	confirm	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
@@ -16,22 +27,25 @@
 # sent_id = AMALGUM_news_olympics-2
 # s_type = frag
 # text = Tuesday, August 13, 2013
-1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No
+# newpar = p (1 s)
+1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-4)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4
+3	August	August	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-4|XML=<date when:::"2013-08-13">
 4	13	13	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2013	2013	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)
+6	2013	2013	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-4)(time-5)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_olympics-3
 # s_type = frag
 # text = Russian President Vladimir Putin in 2008, along with the Prime Minister, Viktor Zubkov (left), and Deputy Prime Minister, Alexander Zhukov (right).
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Russian	Russian	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=ROOT:3|Entity=(person-6
 2	President	President	PROPN	NNP	Number=Sing	0	root	0:root	_
 3	Vladimir	Vladimir	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 4	Putin	Putin	PROPN	NNP	Number=Sing	2	flat	2:flat	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:in	Entity=(time-7)|SpaceAfter=No
+6	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	2	nmod	2:nmod:in	Entity=(time-7)|SpaceAfter=No|XML=<date when:::"2008"></date>
 7	,	,	PUNCT	,	_	12	punct	12:punct	_
 8	along	along	ADV	RB	Degree=Pos	12	advmod	12:advmod	Entity=(person-8
 9	with	with	ADP	IN	_	12	case	12:case	_
@@ -75,11 +89,12 @@
 # sent_id = AMALGUM_news_olympics-5
 # s_type = decl
 # text = Russia's Interior Ministry confirmed yesterday that the police will enforce the law banning "propaganda of nontraditional sexual relations" during the 2014 Winter Olympics to be held in Sochi in February.
+# newpar = p (1 s)
 1-2	Russia's	_	_	_	_	_	_	_	_
-1	Russia	Russia	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Discourse=attribution:9->10|Entity=(organization-14(place-15
+1	Russia	Russia	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Discourse=attribution:9->10|Entity=(organization-14(place-15|XML=<ref target:::"https://en.wikinews.org/wiki/Russia"></ref>
 2	's	's	PART	POS	_	1	case	1:case	Entity=place-15)
-3	Interior	Interior	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(organization-16)
-4	Ministry	Ministry	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=organization-14)
+3	Interior	Interior	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(organization-16)|XML=<ref target:::"https://en.wikipedia.org/wiki/Ministry%20of%20Internal%20Affairs%20(Russia)">
+4	Ministry	Ministry	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=organization-14)|XML=</ref>
 5	confirmed	confirm	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 6	yesterday	yesterday	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=(time-17)
 7	that	that	SCONJ	IN	_	11	mark	11:mark	Discourse=sequence:10->5
@@ -93,27 +108,28 @@
 15	"	''	PUNCT	``	_	16	punct	16:punct	SpaceAfter=No
 16	propaganda	propaganda	NOUN	NN	Number=Sing	14	obj	14:obj	Entity=(abstract-20
 17	of	of	ADP	IN	_	20	case	20:case	_
-18	nontraditional	nontraditional	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(abstract-21
+18	nontraditional	nontraditional	ADJ	JJ	Degree=Pos	20	amod	20:amod	Entity=(abstract-21|XML=<ref target:::"https://en.wikinews.org/wiki/Homosexuality">
 19	sexual	sexual	ADJ	JJ	Degree=Pos	20	amod	20:amod	_
-20	relations	relation	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	Entity=abstract-20)abstract-21)|SpaceAfter=No
+20	relations	relation	NOUN	NNS	Number=Plur	16	nmod	16:nmod:of	Entity=abstract-20)abstract-21)|SpaceAfter=No|XML=</ref>
 21	"	''	PUNCT	''	_	16	punct	16:punct	_
 22	during	during	ADP	IN	_	26	case	26:case	_
 23	the	the	DET	DT	Definite=Def|PronType=Art	26	det	26:det	Entity=(event-3
-24	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	26	compound	26:compound	_
+24	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	26	compound	26:compound	XML=<ref target:::"https://en.wikinews.org/wiki/2014_Winter_Olympics"><date when:::"2014"></date>
 25	Winter	Winter	PROPN	NNP	Number=Sing	26	compound	26:compound	Entity=(person-22)
-26	Olympics	Olympics	PROPN	NNPS	Number=Plur	14	obl	14:obl:during	_
+26	Olympics	Olympics	PROPN	NNPS	Number=Plur	14	obl	14:obl:during	XML=</ref>
 27	to	to	PART	TO	_	29	mark	29:mark	Discourse=purpose:12->11
 28	be	be	AUX	VB	VerbForm=Inf	29	aux:pass	29:aux:pass	_
 29	held	hold	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	26	acl	26:acl:to	_
 30	in	in	ADP	IN	_	31	case	31:case	_
-31	Sochi	Sochi	PROPN	NNP	Number=Sing	29	obl	29:obl:in	Entity=(place-23)
+31	Sochi	Sochi	PROPN	NNP	Number=Sing	29	obl	29:obl:in	Entity=(place-23)|XML=<ref target:::"https://en.wikinews.org/wiki/Sochi"></ref>
 32	in	in	ADP	IN	_	33	case	33:case	_
-33	February	February	PROPN	NNP	Number=Sing	29	obl	29:obl:in	Entity=abstract-19)event-3)(time-24)|SpaceAfter=No
+33	February	February	PROPN	NNP	Number=Sing	29	obl	29:obl:in	Entity=abstract-19)event-3)(time-24)|SpaceAfter=No|XML=<date when:::"2014-02"></date>
 34	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_olympics-6
 # s_type = decl
 # text = The statement said "law enforcement agencies can have no qualms with people who harbour a nontraditional sexual orientation" so long as they do not promote homosexuality to minors, "do not conduct any kind of provocation and take part in the Olympics peacefully."
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:13->14|Entity=(abstract-25
 2	statement	statement	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-25)
 3	said	say	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -166,6 +182,7 @@
 # sent_id = AMALGUM_news_olympics-7
 # s_type = decl
 # text = The statement continued:
+# newpar = p (2 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=preparation:18->19|Entity=(abstract-25
 2	statement	statement	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=abstract-25)
 3	continued	continue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No
@@ -222,8 +239,9 @@
 # sent_id = AMALGUM_news_olympics-9
 # s_type = decl
 # text = Alexander Zhukov, the deputy Prime Minister and head of the Russian Olympics Committee told the Russian state news agency RIA Novosti: "If a person does not put across his views in the presence of children, no measures against him can be taken.
-1	Alexander	Alexander	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Discourse=attribution:25->26|Entity=(person-10
-2	Zhukov	Zhukov	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-10)|SpaceAfter=No
+# newpar = p (2 s)
+1	Alexander	Alexander	PROPN	NNP	Number=Sing	15	nsubj	15:nsubj	Discourse=attribution:25->26|Entity=(person-10|XML=<ref target:::"https://en.wikipedia.org/wiki/Alexander%20Zhukov">
+2	Zhukov	Zhukov	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-10)|SpaceAfter=No|XML=</ref>
 3	,	,	PUNCT	,	_	7	punct	7:punct	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	7	det	7:det	Entity=(person-10(person-10
 5	deputy	deputy	NOUN	NN	Number=Sing	7	compound	7:compound	_
@@ -242,8 +260,8 @@
 18	state	state	NOUN	NN	Number=Sing	20	compound	20:compound	Entity=(organization-46)
 19	news	news	NOUN	NN	Number=Sing	20	compound	20:compound	Entity=(organization-47)
 20	agency	agency	NOUN	NN	Number=Sing	15	obj	15:obj	Entity=organization-45)
-21	RIA	RIA	PROPN	NNP	Number=Sing	20	appos	20:appos	_
-22	Novosti	Novosti	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=organization-44)|SpaceAfter=No
+21	RIA	RIA	PROPN	NNP	Number=Sing	20	appos	20:appos	XML=<ref target:::"https://en.wikipedia.org/wiki/RIA%20Novosti">
+22	Novosti	Novosti	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=organization-44)|SpaceAfter=No|XML=</ref>
 23	:	:	PUNCT	:	_	46	punct	46:punct	_
 24	"	''	PUNCT	``	_	46	punct	46:punct	Discourse=joint:26->19|SpaceAfter=No
 25	If	if	SCONJ	IN	_	30	mark	30:mark	Discourse=condition:27->28
@@ -306,13 +324,14 @@
 # sent_id = AMALGUM_news_olympics-11
 # s_type = decl
 # text = The International Olympics Committee stated last week they would seek clarification from the Russian government after calls from gay activists to relocate the event.
+# newpar = p (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=elaboration:30->29|Entity=(organization-57
-2	International	International	ADJ	NNP	Number=Sing	4	amod	4:amod	_
+2	International	International	ADJ	NNP	Number=Sing	4	amod	4:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/International%20Olympics%20Committee">
 3	Olympics	Olympics	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(event-3)
-4	Committee	Committee	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=organization-57)
+4	Committee	Committee	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Entity=organization-57)|XML=</ref>
 5	stated	state	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
-6	last	last	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(time-58
-7	week	week	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	Entity=time-58)
+6	last	last	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(time-58|XML=<date from:::"2013-08-12" to:::"2013-08-18">
+7	week	week	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	Entity=time-58)|XML=</date>
 8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	10	nsubj	10:nsubj	Discourse=elaboration:31->30|Entity=(person-51)
 9	would	would	AUX	MD	VerbForm=Fin	10	aux	10:aux	_
 10	seek	seek	VERB	VB	VerbForm=Inf	5	ccomp	5:ccomp	_
@@ -335,10 +354,12 @@
 # sent_id = AMALGUM_news_olympics-12
 # s_type = frag
 # text = Stephen Fry in 2008.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Stephen	Stephen	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:34->19|Entity=(person-62
 2	Fry	Fry	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	in	in	ADP	IN	_	4	case	4:case	_
-4	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:in	Entity=person-62)(time-7)|SpaceAfter=No
+4	2008	2008	NUM	CD	NumForm=Digit|NumType=Card	1	nmod	1:nmod:in	Entity=person-62)(time-7)|SpaceAfter=No|XML=<date when:::"2008"></date>
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_olympics-13
@@ -354,13 +375,14 @@
 # sent_id = AMALGUM_news_olympics-14
 # s_type = decl
 # text = Last week, British actor Stephen Fry wrote an open letter to British Prime Minister David Cameron arguing the Winter Games ought to be relocated, and Russian President Vladimir Putin "is making scapegoats of gay people, just as Hitler did Jews".
-1	Last	last	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:37->19|Entity=(time-58
-2	week	week	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	Entity=time-58)|SpaceAfter=No
+# newpar = p (3 s)
+1	Last	last	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:37->19|Entity=(time-58|XML=<date from:::"2013-08-12" to:::"2013-08-18">
+2	week	week	NOUN	NN	Number=Sing	8	obl:tmod	8:obl:tmod	Entity=time-58)|SpaceAfter=No|XML=</date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
-4	British	British	ADJ	JJ	Degree=Pos	5	amod	5:amod	Entity=(person-64
+4	British	British	ADJ	JJ	Degree=Pos	5	amod	5:amod	Entity=(person-64|XML=<ref target:::"https://en.wikinews.org/wiki/UK"></ref>
 5	actor	actor	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
-6	Stephen	Stephen	PROPN	NNP	Number=Sing	5	flat	5:flat	_
-7	Fry	Fry	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-64)
+6	Stephen	Stephen	PROPN	NNP	Number=Sing	5	flat	5:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Stephen%20Fry">
+7	Fry	Fry	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-64)|XML=</ref>
 8	wrote	write	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 9	an	a	DET	DT	Definite=Ind|PronType=Art	11	det	11:det	Entity=(abstract-65
 10	open	open	ADJ	JJ	Degree=Pos	11	amod	11:amod	_
@@ -369,8 +391,8 @@
 13	British	British	ADJ	NNP	Number=Sing	15	amod	15:amod	_
 14	Prime	Prime	ADJ	NNP	Number=Sing	15	amod	15:amod	_
 15	Minister	Minister	PROPN	NNP	Number=Sing	8	obl	8:obl:to	_
-16	David	David	PROPN	NNP	Number=Sing	15	appos	15:appos	_
-17	Cameron	Cameron	PROPN	NNP	Number=Sing	15	appos	15:appos	_
+16	David	David	PROPN	NNP	Number=Sing	15	appos	15:appos	XML=<ref target:::"https://en.wikinews.org/wiki/David_Cameron">
+17	Cameron	Cameron	PROPN	NNP	Number=Sing	15	appos	15:appos	XML=</ref>
 18	arguing	argue	VERB	VBG	VerbForm=Ger	8	advcl	8:advcl	Discourse=attribution:38->39
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Discourse=elaboration:39->37|Entity=(event-39
 20	Winter	Winter	PROPN	NNP	Number=Sing	21	compound	21:compound	_
@@ -383,8 +405,8 @@
 27	and	and	CCONJ	CC	_	34	cc	34:cc	Discourse=joint:40->39
 28	Russian	Russian	ADJ	JJ	Degree=Pos	29	amod	29:amod	Entity=(person-6
 29	President	President	NOUN	NN	Number=Sing	34	nsubj	34:nsubj	_
-30	Vladimir	Vladimir	PROPN	NNP	Number=Sing	29	flat	29:flat	_
-31	Putin	Putin	PROPN	NNP	Number=Sing	29	flat	29:flat	Entity=person-6)
+30	Vladimir	Vladimir	PROPN	NNP	Number=Sing	29	flat	29:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Vladimir_Putin">
+31	Putin	Putin	PROPN	NNP	Number=Sing	29	flat	29:flat	Entity=person-6)|XML=</ref>
 32	"	''	PUNCT	``	_	34	punct	34:punct	SpaceAfter=No
 33	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	34	aux	34:aux	_
 34	making	make	VERB	VBG	Tense=Pres|VerbForm=Part	8	conj	8:conj:and	_
@@ -395,7 +417,7 @@
 39	,	,	PUNCT	,	_	43	punct	43:punct	_
 40	just	just	ADV	RB	_	43	advmod	43:advmod	Discourse=elaboration:41->40
 41	as	as	SCONJ	IN	_	43	mark	43:mark	_
-42	Hitler	Hitler	PROPN	NNP	Number=Sing	43	nsubj	43:nsubj	Entity=(person-67)
+42	Hitler	Hitler	PROPN	NNP	Number=Sing	43	nsubj	43:nsubj	Entity=(person-67)|XML=<ref target:::"https://en.wikinews.org/wiki/Adolf_Hitler"></ref>
 43	did	do	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	34	advcl	34:advcl:as	_
 44	Jews	Jew	PROPN	NNPS	Number=Plur	43	obj	43:obj	Entity=(person-68)|SpaceAfter=No
 45	"	''	PUNCT	''	_	34	punct	34:punct	SpaceAfter=No
@@ -442,14 +464,15 @@
 # sent_id = AMALGUM_news_olympics-17
 # s_type = decl
 # text = Fry attended a protest in London on Saturday against the Russian laws on homosexuality.
+# newpar = p (7 s)
 1	Fry	Fry	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=joint:46->45|Entity=(person-64)
 2	attended	attend	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	4	det	4:det	Entity=(event-73
 4	protest	protest	NOUN	NN	Number=Sing	2	obj	2:obj	_
 5	in	in	ADP	IN	_	6	case	6:case	_
-6	London	London	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Entity=event-73)(place-74)
+6	London	London	PROPN	NNP	Number=Sing	4	nmod	4:nmod:in	Entity=event-73)(place-74)|XML=<ref target:::"https://en.wikinews.org/wiki/London"></ref>
 7	on	on	ADP	IN	_	8	case	8:case	_
-8	Saturday	Saturday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	Entity=(time-75)
+8	Saturday	Saturday	PROPN	NNP	Number=Sing	2	obl	2:obl:on	Entity=(time-75)|XML=<date when:::"2013-08-10"></date>
 9	against	against	ADP	IN	_	12	case	12:case	_
 10	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(abstract-36
 11	Russian	Russian	ADJ	JJ	Degree=Pos	12	amod	12:amod	_
@@ -478,14 +501,14 @@
 5	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 6	this	this	PRON	DT	Number=Sing|PronType=Dem	5	obj	5:obj	Entity=(event-73)
 7	—	—	PUNCT	:	_	9	punct	9:punct	_
-8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	Discourse=attribution:49->50|Entity=(person-68)
+8	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	9	nsubj	9:nsubj	Discourse=attribution:49->50|Entity=(person-68)|XML=<ref target:::"https://en.wikipedia.org/wiki/Think%20of%20the%20children">
 9	say	say	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	5	parataxis	5:parataxis	_
 10	they	they	PRON	PRP	Case=Nom|Number=Plur|Person=3|PronType=Prs	11	nsubj	11:nsubj	Discourse=elaboration:50->48|Entity=(person-68)
 11	do	do	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	9	ccomp	9:ccomp	_
 12	it	it	PRON	PRP	Case=Acc|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	obj	11:obj	Entity=(event-73)
 13	for	for	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(person-51
-15	children	child	NOUN	NNS	Number=Plur	11	obl	11:obl:for	Entity=person-51)|SpaceAfter=No
+15	children	child	NOUN	NNS	Number=Plur	11	obl	11:obl:for	Entity=person-51)|SpaceAfter=No|XML=</ref>
 16	.	.	PUNCT	.	_	5	punct	5:punct	_
 
 # sent_id = AMALGUM_news_olympics-20
@@ -564,8 +587,9 @@
 # sent_id = AMALGUM_news_olympics-24
 # s_type = decl
 # text = On Twitter, David Cameron responded to Fry's call for a relocation of the Games:
+# newpar = p (4 s)
 1	On	on	ADP	IN	_	2	case	2:case	Discourse=attribution:62->63
-2	Twitter	Twitter	PROPN	NNP	Number=Sing	6	obl	6:obl:on	Entity=(organization-82)|SpaceAfter=No
+2	Twitter	Twitter	PROPN	NNP	Number=Sing	6	obl	6:obl:on	Entity=(organization-82)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Twitter"></ref>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	David	David	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Entity=(person-83
 5	Cameron	Cameron	PROPN	NNP	Number=Sing	4	flat	4:flat	Entity=person-83)
@@ -632,8 +656,8 @@
 14	rather	rather	ADV	RB	_	16	cc	16:cc	Discourse=antithesis:68->67
 15	than	than	ADP	IN	_	14	fixed	14:fixed	_
 16	boycotting	boycot	VERB	VBG	VerbForm=Ger	8	conj	4:ccomp|8:conj:rather_than	_
-17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(event-3
-18	Winter	Winter	PROPN	NNP	Number=Sing	19	compound	19:compound	_
+17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(event-3|XML=<date from:::"2013-12" to:::"2014-03">
+18	Winter	Winter	PROPN	NNP	Number=Sing	19	compound	19:compound	XML=</date>
 19	Olympics	Olympics	PROPN	NNPS	Number=Plur	16	obj	16:obj	Entity=event-3)|SpaceAfter=No
 20	.	.	PUNCT	.	_	4	punct	4:punct	SpaceAfter=No
 21	"	''	PUNCT	''	_	4	punct	4:punct	_
@@ -641,9 +665,10 @@
 # sent_id = AMALGUM_news_olympics-28
 # s_type = decl
 # text = Lord Sebastian Coe, head of the British Olympic Association, also rejected the call for a boycott or relocation:
+# newpar = p (3 s)
 1	Lord	Lord	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Discourse=preparation:69->70|Entity=(person-92
-2	Sebastian	Sebastian	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Coe	Coe	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-92)|SpaceAfter=No
+2	Sebastian	Sebastian	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=<ref target:::"https://en.wikipedia.org/wiki/Sebastian%20Coe">
+3	Coe	Coe	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-92)|SpaceAfter=No|XML=</ref>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	head	head	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=(person-92
 6	of	of	ADP	IN	_	10	case	10:case	_
@@ -710,6 +735,7 @@
 # sent_id = AMALGUM_news_olympics-31
 # s_type = decl
 # text = Coe also argued the Olympics and other sporting events help promote social change:
+# newpar = p (3 s)
 1	Coe	Coe	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=attribution:76->78|Entity=(person-92)
 2	also	also	ADV	RB	_	3	advmod	3:advmod	_
 3	argued	argue	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
@@ -777,10 +803,11 @@
 # sent_id = AMALGUM_news_olympics-34
 # s_type = decl
 # text = U.S. President Barack Obama has also rejected a call for a boycott.
-1	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=joint:84->78|Entity=(person-107(place-108)
+# newpar = p (4 s)
+1	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=joint:84->78|Entity=(person-107(place-108)|XML=<ref target:::"https://en.wikinews.org/wiki/U.S."></ref>
 2	President	President	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	_
-3	Barack	Barack	PROPN	NNP	Number=Sing	2	flat	2:flat	_
-4	Obama	Obama	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-107)
+3	Barack	Barack	PROPN	NNP	Number=Sing	2	flat	2:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Barack_Obama">
+4	Obama	Obama	PROPN	NNP	Number=Sing	2	flat	2:flat	Entity=person-107)|XML=</ref>
 5	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	7	aux	7:aux	_
 6	also	also	ADV	RB	_	7	advmod	7:advmod	_
 7	rejected	reject	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -802,8 +829,8 @@
 6	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(place-111
 7	White	White	ADJ	NNP	Number=Sing	8	amod	8:amod	_
 8	House	House	PROPN	NNP	Number=Sing	4	nmod	4:nmod:at	Entity=event-109)place-111)
-9	last	last	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(time-112
-10	week	week	NOUN	NN	Number=Sing	13	obl:tmod	13:obl:tmod	Entity=time-112)|SpaceAfter=No
+9	last	last	ADJ	JJ	Degree=Pos	10	amod	10:amod	Entity=(time-112|XML=<date from:::"2013-08-12" to:::"2013-08-18">
+10	week	week	NOUN	NN	Number=Sing	13	obl:tmod	13:obl:tmod	Entity=time-112)|SpaceAfter=No|XML=</date>
 11	,	,	PUNCT	,	_	10	punct	10:punct	_
 12	he	he	PRON	PRP	Case=Nom|Gender=Masc|Number=Sing|Person=3|PronType=Prs	13	nsubj	13:nsubj	Entity=(person-107)
 13	stated	state	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	SpaceAfter=No

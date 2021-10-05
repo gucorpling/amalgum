@@ -1,20 +1,31 @@
+# meta::id = AMALGUM_voyage_morgantown
+# meta::title = Morgantown
+# meta::shortTitle = morgantown
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=23016
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_morgantown
 # sent_id = AMALGUM_voyage_morgantown-1
 # s_type = frag
 # text = Morgantown
+# newpar = head (1 s)
 1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->45|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_morgantown-2
 # s_type = decl
 # text = Morgantown is in Monongalia County, West Virginia and is the county seat.
-1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj|13:nsubj	Discourse=background:2->45|Entity=(place-1)
+# newpar = p (4 s)
+1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj|13:nsubj	Discourse=background:2->45|Entity=(place-1)|XML=<hi rend:::"bold"><ref target:::"http://www.morgantown.com/"></ref></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	5	cop	5:cop	_
 3	in	in	ADP	IN	_	5	case	5:case	_
 4	Monongalia	Monongalia	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(place-2(place-3(place-4)
 5	County	County	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
 6	,	,	PUNCT	,	_	7	punct	7:punct	_
-7	West	West	PROPN	NNP	Number=Sing	5	appos	5:appos	Entity=(place-5
-8	Virginia	Virginia	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=place-3)place-5)
+7	West	West	PROPN	NNP	Number=Sing	5	appos	5:appos	Entity=(place-5|XML=<ref target:::"West%20Virginia">
+8	Virginia	Virginia	PROPN	NNP	Number=Sing	7	flat	7:flat	Entity=place-3)place-5)|XML=</ref>
 9	and	and	CCONJ	CC	_	13	cc	13:cc	Discourse=joint:3->2
 10	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	13	cop	13:cop	_
 11	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(place-6
@@ -83,8 +94,8 @@
 26	public	public	ADJ	JJ	Degree=Pos	27	amod	27:amod	Entity=(abstract-17
 27	transportation	transportation	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	Entity=abstract-17)
 28	in	in	ADP	IN	_	30	case	30:case	_
-29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	Entity=(time-18
-30	1970s	1970s	NOUN	NNS	Number=Plur	24	nmod	24:nmod:in	Entity=abstract-16)time-18)
+29	the	the	DET	DT	Definite=Def|PronType=Art	30	det	30:det	Entity=(time-18|XML=<date from:::"1970" to:::"1979">
+30	1970s	1970s	NOUN	NNS	Number=Plur	24	nmod	24:nmod:in	Entity=abstract-16)time-18)|XML=</date>
 31	but	but	CCONJ	CC	_	32	cc	32:cc	Discourse=contrast:8->6
 32	found	find	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	20	conj	17:acl:relcl|20:conj:but	_
 33	no	no	DET	DT	Polarity=Neg	34	det	34:det	Entity=(person-19
@@ -100,15 +111,18 @@
 # sent_id = AMALGUM_voyage_morgantown-6
 # s_type = frag
 # text = By plane
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:9->10
 2	plane	plane	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-22)
 
 # sent_id = AMALGUM_voyage_morgantown-7
 # s_type = frag
 # text = Morgantown Municipal Airport ( MGW ).
-1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:10->6|Entity=(place-23(place-1)
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (2 s)
+1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:10->6|Entity=(place-23(place-1)|XML=<hi rend:::"bold">
 2	Municipal	Municipal	ADJ	NNP	Number=Sing	3	amod	3:amod	_
-3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-23)
+3	Airport	Airport	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-23)|XML=</hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:11->10
 5	MGW	MGW	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(place-24)
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	SpaceAfter=No
@@ -134,9 +148,10 @@
 # sent_id = AMALGUM_voyage_morgantown-9
 # s_type = decl
 # text = Pittsburgh International Airport ( PIT ) is north of Morgantown, and has scheduled commercial service from many airports in the U.S. and other countries.
-1	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:13->12|Entity=(place-29
+# newpar = item (1 s)
+1	Pittsburgh	Pittsburgh	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:13->12|Entity=(place-29|XML=<hi rend:::"bold"><ref target:::"http://www.flypittsburgh.com">
 2	International	International	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Airport	Airport	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|13:nsubj	Entity=place-29)
+3	Airport	Airport	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj|13:nsubj	Entity=place-29)|XML=</ref></hi>
 4	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=elaboration:14->13
 5	PIT	PIT	PROPN	NNP	Number=Sing	3	appos	3:appos	Entity=(place-30)
 6	)	)	PUNCT	-RRB-	_	5	punct	5:punct	_
@@ -164,12 +179,14 @@
 # sent_id = AMALGUM_voyage_morgantown-10
 # s_type = frag
 # text = By car
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:17->19
 2	car	car	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-33)
 
 # sent_id = AMALGUM_voyage_morgantown-11
 # s_type = decl
 # text = Major routes in and out of Morgantown include:
+# newpar = p (1 s)
 1	Major	Major	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:18->19|Entity=(place-34
 2	routes	route	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	_
 3	in	in	ADP	IN	_	7	case	7:case	_
@@ -183,7 +200,9 @@
 # sent_id = AMALGUM_voyage_morgantown-12
 # s_type = frag
 # text = I-79, which runs in a north-south fashion through the eastern side of Morgantown
-1	I-79	I-79	PROPN	NNP	Number=Sing	0	root	0:root|4:nsubj	Discourse=joint:19->10|Entity=(abstract-35|SpaceAfter=No
+# newpar = list type:::"unordered" (7 s)
+# newpar1 = item (1 s)
+1	I-79	I-79	PROPN	NNP	Number=Sing	0	root	0:root|4:nsubj	Discourse=joint:19->10|Entity=(abstract-35|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	which	which	PRON	WDT	PronType=Rel	4	nsubj	1:ref	Discourse=elaboration:20->19
 4	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
@@ -201,7 +220,8 @@
 # sent_id = AMALGUM_voyage_morgantown-13
 # s_type = frag
 # text = I-68, which runs in an east-west fashion through the southern side of Morgantown
-1	I-68	I-68	PROPN	NNP	Number=Sing	0	root	0:root|4:nsubj	Discourse=joint:21->19|Entity=(place-38|SpaceAfter=No
+# newpar = item (1 s)
+1	I-68	I-68	PROPN	NNP	Number=Sing	0	root	0:root|4:nsubj	Discourse=joint:21->19|Entity=(place-38|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
 3	which	which	PRON	WDT	PronType=Rel	4	nsubj	1:ref	Discourse=elaboration:22->21
 4	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
@@ -219,8 +239,9 @@
 # sent_id = AMALGUM_voyage_morgantown-14
 # s_type = frag
 # text = WV 43, a section of the Mon-Fayette Expressway connecting the Morgantown area to Fayette County, Pennsylvania
-1	WV	WV	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:23->21|Entity=(place-40
-2	43	43	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	Entity=place-40)|SpaceAfter=No
+# newpar = item (1 s)
+1	WV	WV	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:23->21|Entity=(place-40|XML=<hi rend:::"bold">
+2	43	43	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	Entity=place-40)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	a	a	DET	DT	Definite=Ind|PronType=Art	5	det	5:det	Entity=(place-40
 5	section	section	NOUN	NN	Number=Sing	1	appos	1:appos	_
@@ -241,8 +262,9 @@
 # sent_id = AMALGUM_voyage_morgantown-15
 # s_type = frag
 # text = US 119, which runs in a north-south fashion through downtown
-1	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	0	root	0:root|5:nsubj	Discourse=joint:25->23|Entity=(place-45
-2	119	119	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	SpaceAfter=No
+# newpar = item (1 s)
+1	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	0	root	0:root|5:nsubj	Discourse=joint:25->23|Entity=(place-45|XML=<hi rend:::"bold">
+2	119	119	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	which	which	PRON	WDT	PronType=Rel	5	nsubj	1:ref	Discourse=elaboration:26->25
 5	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
@@ -256,8 +278,9 @@
 # sent_id = AMALGUM_voyage_morgantown-16
 # s_type = frag
 # text = US 19, which runs through downtown
-1	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	0	root	0:root|5:nsubj	Discourse=joint:27->25|Entity=(place-47
-2	19	19	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	SpaceAfter=No
+# newpar = item (1 s)
+1	US	US	PROPN	NNP	Abbr=Yes|Number=Sing	0	root	0:root|5:nsubj	Discourse=joint:27->25|Entity=(place-47|XML=<hi rend:::"bold">
+2	19	19	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	5	punct	5:punct	_
 4	which	which	PRON	WDT	PronType=Rel	5	nsubj	1:ref	Discourse=elaboration:28->27
 5	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	1	acl:relcl	1:acl:relcl	_
@@ -267,18 +290,21 @@
 # sent_id = AMALGUM_voyage_morgantown-17
 # s_type = frag
 # text = WV 7
-1	WV	WV	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:29->27|Entity=(abstract-48
-2	7	7	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	Entity=abstract-48)
+# newpar = item (1 s)
+1	WV	WV	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:29->27|Entity=(abstract-48|XML=<hi rend:::"bold">
+2	7	7	NUM	CD	NumForm=Digit|NumType=Card	1	dep	1:dep	Entity=abstract-48)|XML=</hi>
 
 # sent_id = AMALGUM_voyage_morgantown-18
 # s_type = frag
 # text = WV 705
-1	WV	WV	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:30->29|Entity=(abstract-49
-2	705	705	NUM	CD	NumForm=Digit|NumType=Card	1	flat	1:flat	Entity=abstract-49)
+# newpar = item (1 s)
+1	WV	WV	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:30->29|Entity=(abstract-49|XML=<hi rend:::"bold">
+2	705	705	NUM	CD	NumForm=Digit|NumType=Card	1	flat	1:flat	Entity=abstract-49)|XML=</hi>
 
 # sent_id = AMALGUM_voyage_morgantown-19
 # s_type = decl
 # text = Morgantown is:
+# newpar = p (1 s)
 1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	2	nsubj	2:nsubj	Discourse=preparation:31->32|Entity=(place-1)
 2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	2	punct	2:punct	_
@@ -286,6 +312,8 @@
 # sent_id = AMALGUM_voyage_morgantown-20
 # s_type = frag
 # text = 77 miles (120 km) south of Pittsburgh, Pennsylvania;
+# newpar = list type:::"unordered" (4 s)
+# newpar1 = item (1 s)
 1	77	77	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:32->30|Entity=(abstract-50
 2	miles	mile	NOUN	NNS	Number=Plur	7	obl:tmod	7:obl:tmod	Entity=abstract-50)
 3	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:33->32|SpaceAfter=No
@@ -302,6 +330,7 @@
 # sent_id = AMALGUM_voyage_morgantown-21
 # s_type = frag
 # text = 385 miles (615 km) north of Charlotte, North Carolina;
+# newpar = item (1 s)
 1	385	385	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:35->32|Entity=(abstract-52
 2	miles	mile	NOUN	NNS	Number=Plur	7	obl:tmod	7:obl:tmod	Entity=abstract-52)
 3	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:36->35|SpaceAfter=No
@@ -319,6 +348,7 @@
 # sent_id = AMALGUM_voyage_morgantown-22
 # s_type = frag
 # text = 528 miles (845 km) east of Chicago, Illinois;
+# newpar = item (1 s)
 1	528	528	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:38->35|Entity=(abstract-56
 2	miles	mile	NOUN	NNS	Number=Plur	7	obl:tmod	7:obl:tmod	Entity=abstract-56)
 3	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:39->38|SpaceAfter=No
@@ -335,6 +365,7 @@
 # sent_id = AMALGUM_voyage_morgantown-23
 # s_type = frag
 # text = 218 miles (350 km) west of Washington, D.C.
+# newpar = item (1 s)
 1	218	218	NUM	CD	NumForm=Digit|NumType=Card	2	nummod	2:nummod	Discourse=joint:41->38|Entity=(abstract-59
 2	miles	mile	NOUN	NNS	Number=Plur	7	obl:npmod	7:obl:npmod	Entity=abstract-59)
 3	(	(	PUNCT	-LRB-	_	5	punct	5:punct	Discourse=restatement:42->41|SpaceAfter=No
@@ -350,13 +381,16 @@
 # sent_id = AMALGUM_voyage_morgantown-24
 # s_type = frag
 # text = By bus
+# newpar = head (1 s)
 1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:44->45
 2	bus	bus	NOUN	NN	Number=Sing	0	root	0:root	Entity=(object-61)
 
 # sent_id = AMALGUM_voyage_morgantown-25
 # s_type = frag
 # text = Megabus.
-1	Megabus	Megabus	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=ROOT:45|Entity=(organization-62)|SpaceAfter=No
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	Megabus	Megabus	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=ROOT:45|Entity=(organization-62)|SpaceAfter=No|XML=<hi rend:::"bold"><ref target:::"http://us.megabus.com"></ref></hi>
 2	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-26
@@ -384,14 +418,16 @@
 # sent_id = AMALGUM_voyage_morgantown-27
 # s_type = imp
 # text = Get around
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:47->48
 2	around	around	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_morgantown-28
 # s_type = decl
 # text = The PRT (Personal Rapid Transit) is a unique urban rail system that provides the primary mode of transportation for students, faculty, and staff of the university, and for residents of the Morgantown area.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=joint:48->45|Entity=(organization-11
-2	PRT	PRT	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Entity=organization-11)
+2	PRT	PRT	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Entity=organization-11)|XML=<hi rend:::"bold"><ref target:::"http://transportation.wvu.edu/prt"></ref></hi>
 3	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=restatement:49->48|SpaceAfter=No
 4	Personal	personal	ADJ	NNP	Number=Sing	6	amod	6:amod	Entity=(organization-15
 5	Rapid	Rapid	PROPN	NNP	Number=Sing	6	compound	6:compound	_
@@ -490,6 +526,8 @@
 # sent_id = AMALGUM_voyage_morgantown-32
 # s_type = decl
 # text = Regular hours (during school year): M-F 6:30AM-10:15PM, Sa 9:30-5PM. No Sunday service, unless the day before classes begin is a Sunday, in which case PRT runs on Saturday hours.
+# newpar = list type:::"unordered" (4 s)
+# newpar1 = item (3 s)
 1	Regular	regular	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=preparation:57->60|Entity=(time-92
 2	hours	hour	NOUN	NNS	Number=Plur	12	nsubj	12:nsubj	_
 3	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:58->57|SpaceAfter=No
@@ -501,10 +539,10 @@
 9	M	M	NOUN	NN	Number=Sing	12	nummod	12:nummod	Discourse=preparation:59->60|Entity=(time-95|SpaceAfter=No
 10	-	-	PUNCT	:	_	11	punct	11:punct	SpaceAfter=No
 11	F	F	PROPN	NNP	Number=Sing	9	nmod	9:nmod	Entity=(person-96)
-12	6:30AM-10:15PM	6:30AM-10:15PM	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Entity=time-95)|SpaceAfter=No
+12	6:30AM-10:15PM	6:30AM-10:15PM	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	Entity=time-95)|SpaceAfter=No|XML=<time from:::"0630" to:::"2215"></time>
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	Sa	Sa	PROPN	NNP	Number=Sing	18	dep	18:dep	Discourse=joint:60->48|Entity=(person-97)
-15	9:30-5PM.	9:30-5PM.	NUM	CD	NumForm=Word|NumType=Card	18	dep	18:dep	_
+15	9:30-5PM.	9:30-5PM.	NUM	CD	NumForm=Word|NumType=Card	18	dep	18:dep	XML=<time when:::"1700"></time>
 16	No	no	DET	DT	Polarity=Neg	18	det	18:det	Entity=(abstract-98
 17	Sunday	Sunday	PROPN	NNP	Number=Sing	18	compound	18:compound	Entity=(person-99)
 18	service	service	NOUN	NN	Number=Sing	12	conj	12:conj	Entity=abstract-98)|SpaceAfter=No
@@ -564,6 +602,7 @@
 # sent_id = AMALGUM_voyage_morgantown-35
 # s_type = frag
 # text = Summer hours: M-F 6:30AM-6:15PM, Sa 9:30AM-5PM.
+# newpar = item (1 s)
 1	Summer	summer	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=preparation:68->69|Entity=(time-92(person-111)
 2	hours	hour	NOUN	NNS	Number=Plur	0	root	0:root	SpaceAfter=No
 3	:	:	PUNCT	:	_	4	punct	4:punct	_
@@ -573,15 +612,16 @@
 7	6:30AM-6:15PM	6:30AM-6:15PM	NUM	CD	NumForm=Word|NumType=Card	2	dep	2:dep	SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	Sa	Sa	PROPN	NNP	Number=Sing	7	conj	2:dep|7:conj	Discourse=same_unit:70->69
-10	9:30AM-5PM	9:30AM-5PM	NUM	CD	NumForm=Word|NumType=Card	9	dep	9:dep	Entity=time-92)|SpaceAfter=No
+10	9:30AM-5PM	9:30AM-5PM	NUM	CD	NumForm=Word|NumType=Card	9	dep	9:dep	Entity=time-92)|SpaceAfter=No|XML=<time when:::"0930"></time>
 11	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-36
 # s_type = decl
 # text = The Mountain Line is a public transit bus system providing service in and around the city of Morgantown.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:71->48|Entity=(abstract-113
-2	Mountain	Mountain	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Line	Line	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Entity=abstract-113)
+2	Mountain	Mountain	PROPN	NNP	Number=Sing	3	compound	3:compound	XML=<hi rend:::"bold"><ref target:::"http://www.busride.org/">
+3	Line	Line	PROPN	NNP	Number=Sing	9	nsubj	9:nsubj	Entity=abstract-113)|XML=</ref></hi>
 4	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	9	cop	9:cop	_
 5	a	a	DET	DT	Definite=Ind|PronType=Art	9	det	9:det	Entity=(abstract-113
 6	public	public	ADJ	JJ	Degree=Pos	7	amod	7:amod	Entity=(organization-15
@@ -639,6 +679,7 @@
 # sent_id = AMALGUM_voyage_morgantown-39
 # s_type = decl
 # text = Since a lot of recreational activities are available close to one another
+# newpar = p (5 s)
 1	Since	since	SCONJ	IN	_	8	mark	8:mark	Discourse=preparation:76->77
 2	a	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Entity=(event-117
 3	lot	lot	NOUN	NN	Number=Sing	8	nsubj	8:nsubj	_
@@ -660,9 +701,9 @@
 3	easily	easily	ADV	RB	Degree=Pos	4	advmod	4:advmod	_
 4	accessible	accessible	ADJ	JJ	Degree=Pos	0	root	0:root	_
 5	by	by	ADP	IN	_	6	case	6:case	_
-6	car	car	NOUN	NN	Number=Sing	4	obl	4:obl:by	Entity=(object-119)
+6	car	car	NOUN	NN	Number=Sing	4	obl	4:obl:by	Entity=(object-119)|XML=<hi rend:::"bold"></hi>
 7	and	and	CCONJ	CC	_	8	cc	8:cc	_
-8	foot	foot	NOUN	NN	Number=Sing	6	conj	4:obl:by|6:conj:and	Entity=(object-120)|SpaceAfter=No
+8	foot	foot	NOUN	NN	Number=Sing	6	conj	4:obl:by|6:conj:and	Entity=(object-120)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 9	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-41
@@ -722,13 +763,16 @@
 # sent_id = AMALGUM_voyage_morgantown-44
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:81->82
 
 # sent_id = AMALGUM_voyage_morgantown-45
 # s_type = frag
 # text = Core Arboretum, ☏ +1304 293-5201 .
-1	Core	Core	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:82->77|Entity=(abstract-130(place-131)
-2	Arboretum	Arboretum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=abstract-130)|SpaceAfter=No
+# newpar = list type:::"unordered" (6 s)
+# newpar1 = item (4 s)
+1	Core	Core	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:82->77|Entity=(abstract-130(place-131)|XML=<hi rend:::"bold">
+2	Arboretum	Arboretum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=abstract-130)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	☏	☏	X	FW	_	2	dep	2:dep	_
 5	+1304	+1304	NUM	CD	NumForm=Word|NumType=Card	4	flat	4:flat	_
@@ -778,10 +822,11 @@
 # sent_id = AMALGUM_voyage_morgantown-49
 # s_type = frag
 # text = Dorsey's Knob.
+# newpar = item (2 s)
 1-2	Dorsey's	_	_	_	_	_	_	_	_
-1	Dorsey	Dorsey	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:87->82|Entity=(object-143(person-144
+1	Dorsey	Dorsey	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:87->82|Entity=(object-143(person-144|XML=<hi rend:::"bold">
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-144)
-3	Knob	Knob	PROPN	NNP	Number=Sing	0	root	0:root	Entity=object-143)|SpaceAfter=No
+3	Knob	Knob	PROPN	NNP	Number=Sing	0	root	0:root	Entity=object-143)|SpaceAfter=No|XML=</hi>
 4	.	.	PUNCT	.	_	3	punct	3:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-50
@@ -805,19 +850,22 @@
 # sent_id = AMALGUM_voyage_morgantown-51
 # s_type = frag
 # text = Museums
+# newpar = head (1 s)
 1	Museums	museum	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=preparation:89->90|Entity=(place-148)
 
 # sent_id = AMALGUM_voyage_morgantown-52
 # s_type = frag
 # text = The Royce J. and Caroline B. Watts Museum, 401 Evansdale Drive, ☏ +1 304-293-4609 , ✉ wattsmuseum@mail.wvu.edu .
-1	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Discourse=joint:90->82|Entity=(place-149
+# newpar = list type:::"unordered" (30 s)
+# newpar1 = item (4 s)
+1	The	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Discourse=joint:90->82|Entity=(place-149|XML=<hi rend:::"bold">
 2	Royce	Royce	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(person-150)
 3	J.	J.	PROPN	NNP	Number=Sing	8	compound	8:compound	_
 4	and	and	CCONJ	CC	_	5	cc	5:cc	_
 5	Caroline	Caroline	PROPN	NNP	Number=Sing	2	conj	2:conj:and|8:compound	Entity=(person-151
 6	B.	B.	PROPN	NNP	Number=Sing	5	flat	5:flat	_
 7	Watts	Watts	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=person-151)
-8	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No
+8	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No|XML=</hi>
 9	,	,	PUNCT	,	_	12	punct	12:punct	_
 10	401	401	NUM	CD	NumForm=Digit|NumType=Card	12	nummod	12:nummod	Entity=(place-152
 11	Evansdale	Evansdale	PROPN	NNP	Number=Sing	12	compound	12:compound	Entity=(place-87)
@@ -837,7 +885,7 @@
 1	MWF	MWF	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:91->90|Entity=(person-155
 2	Sa	Sa	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-155)|SpaceAfter=No
 3	:	:	PUNCT	:	_	8	punct	8:punct	_
-4	1-4PM.	1-4PM.	NUM	CD	NumForm=Word|NumType=Card	8	dep	8:dep	Discourse=elaboration:92->91
+4	1-4PM.	1-4PM.	NUM	CD	NumForm=Word|NumType=Card	8	dep	8:dep	Discourse=elaboration:92->91|XML=<time when:::"1600"></time>
 5	Mineral	Mineral	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-156(place-157(abstract-158(substance-159)
 6	Resources	Resource	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=abstract-158)
 7	Building	Building	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=place-157)
@@ -885,9 +933,10 @@
 # sent_id = AMALGUM_voyage_morgantown-56
 # s_type = frag
 # text = Cook-Hayman Pharmacy Museum, 1132 Health Sciences North, ☏ +1304 293-5212 .
-1	Cook-Hayman	Cook-Hayman	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=elaboration:95->94|Entity=(place-149(person-166)
+# newpar = item (4 s)
+1	Cook-Hayman	Cook-Hayman	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=elaboration:95->94|Entity=(place-149(person-166)|XML=<hi rend:::"bold">
 2	Pharmacy	Pharmacy	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-167)
-3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No
+3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	8	punct	8:punct	_
 5	1132	1132	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(place-55(organization-168
 6	Health	Health	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(abstract-169)
@@ -959,9 +1008,10 @@
 # sent_id = AMALGUM_voyage_morgantown-60
 # s_type = frag
 # text = Morgantown Glass Museum, 1628 Mileground Road, ☏ +1 304-685-5760 , ✉ mgt_glass@hotmail.com .
-1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=elaboration:102->101|Entity=(place-149(place-1)
+# newpar = item (4 s)
+1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=elaboration:102->101|Entity=(place-149(place-1)|XML=<hi rend:::"bold">
 2	Glass	Glass	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(person-186)
-3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No
+3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	1628	1628	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(place-187
 6	Mileground	Mileground	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(abstract-188)
@@ -1005,7 +1055,7 @@
 10	century	century	NOUN	NN	Number=Sing	5	nmod	5:nmod:from	Entity=time-190)
 11	to	to	ADP	IN	_	13	case	13:case	_
 12	around	around	ADP	IN	_	13	case	13:case	_
-13	1980	1980	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:to_around	Entity=(time-191)|SpaceAfter=No
+13	1980	1980	NUM	CD	NumForm=Digit|NumType=Card	1	obl	1:obl:to_around	Entity=(time-191)|SpaceAfter=No|XML=<date when:::"1980"></date>
 14	,	,	PUNCT	,	_	15	punct	15:punct	_
 15	made	make	VERB	VBN	Tense=Past|VerbForm=Part	5	acl	5:acl	Discourse=elaboration:106->105
 16	in	in	ADP	IN	_	17	case	17:case	_
@@ -1034,7 +1084,8 @@
 # sent_id = AMALGUM_voyage_morgantown-64
 # s_type = frag
 # text = Old Morgantown Glass Collector's Guild Glass Museum, 709 Beechurst, ✉ oldmorgantown@aol.com .
-1	Old	Old	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:107->90|Entity=(place-149(person-186
+# newpar = item (2 s)
+1	Old	Old	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:107->90|Entity=(place-149(person-186|XML=<hi rend:::"bold">
 2	Morgantown	Morgantown	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(place-1)
 3	Glass	Glass	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 4-5	Collector's	_	_	_	_	_	_	_	_
@@ -1042,7 +1093,7 @@
 5	's	's	PART	POS	_	4	case	4:case	Entity=person-186)
 6	Guild	Guild	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(place-198)
 7	Glass	Glass	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(person-186)
-8	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No
+8	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No|XML=</hi>
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
 10	709	709	NUM	CD	NumForm=Digit|NumType=Card	11	nummod	11:nummod	Entity=(place-80
 11	Beechurst	Beechurst	PROPN	NNP	Number=Sing	8	list	8:list	Entity=place-80)|SpaceAfter=No
@@ -1057,19 +1108,20 @@
 1	W	W	INTJ	UH	_	3	reparandum	3:reparandum	Discourse=joint:108->90|Entity=(person-97|SpaceAfter=No
 2	-	-	PUNCT	:	_	1	punct	1:punct	SpaceAfter=No
 3	Sa	Sa	PROPN	NNP	Number=Sing	0	root	0:root	_
-4	10AM-3PM	10AM-3PM	NUM	CD	NumForm=Word|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=(abstract-199)|SpaceAfter=No
+4	10AM-3PM	10AM-3PM	NUM	CD	NumForm=Word|NumType=Card	3	nmod:tmod	3:nmod:tmod	Entity=(abstract-199)|SpaceAfter=No|XML=<time from:::"1000" to:::"1500"></time>
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
 6	Su	Su	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(time-200)
-7	1-5PM.	1-5PM.	NUM	CD	NumForm=Word|NumType=Card	3	dep	3:dep	Entity=person-97)
+7	1-5PM.	1-5PM.	NUM	CD	NumForm=Word|NumType=Card	3	dep	3:dep	Entity=person-97)|XML=<time when:::"1700"></time>
 
 # sent_id = AMALGUM_voyage_morgantown-66
 # s_type = frag
 # text = Scott's Run Museum (exit 155 from I-79, Osage), ☏ +304-599-1931 .
+# newpar = item (4 s)
 1-2	Scott's	_	_	_	_	_	_	_	_
-1	Scott	Scott	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Discourse=joint:109->90|Entity=(place-149(person-201
+1	Scott	Scott	PROPN	NNP	Number=Sing	4	nmod:poss	4:nmod:poss	Discourse=joint:109->90|Entity=(place-149(person-201|XML=<hi rend:::"bold">
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-201)
 3	Run	Run	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-202)
-4	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)
+4	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|XML=</hi>
 5	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:110->109|SpaceAfter=No
 6	exit	exit	NOUN	NN	Number=Sing	4	parataxis	4:parataxis	Entity=(place-203
 7	155	155	NUM	CD	NumForm=Digit|NumType=Card	6	dep	6:dep	_
@@ -1080,7 +1132,7 @@
 12	)	)	PUNCT	-RRB-	_	6	punct	6:punct	SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
 14	☏	☏	NOUN	NNS	Number=Plur	4	parataxis	4:parataxis	Discourse=same_unit:111->109|Entity=(abstract-170
-15	+304-599-1931	+304-599-1931	NUM	CD	NumForm=Word|NumType=Card	14	flat	14:flat	Entity=abstract-170)
+15	+304-599-1931	+304-599-1931	NUM	CD	NumForm=Word|NumType=Card	14	flat	14:flat	Entity=abstract-170)|XML=<date when:::"1931"></date>
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-67
@@ -1122,9 +1174,10 @@
 # sent_id = AMALGUM_voyage_morgantown-70
 # s_type = frag
 # text = Morgantown History Museum, 175 Kirk St, ☏ +1 304-319-1800 , ✉ info@morgantownhistorymuseum.org .
-1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:115->90|Entity=(place-149(place-1)
+# newpar = item (4 s)
+1	Morgantown	Morgantown	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:115->90|Entity=(place-149(place-1)|XML=<hi rend:::"bold">
 2	History	History	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-205)
-3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No
+3	Museum	Museum	PROPN	NNP	Number=Sing	0	root	0:root	Entity=place-149)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	175	175	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(person-207
 6	Kirk	Kirk	PROPN	NNP	Number=Sing	7	compound	7:compound	_
@@ -1132,7 +1185,7 @@
 8	,	,	PUNCT	,	_	10	punct	10:punct	_
 9	☏	☏	NUM	CD	NumForm=Word|NumType=Card	10	parataxis	10:parataxis	Entity=(abstract-208)
 10	+1	+1	NUM	CD	NumForm=Word|NumType=Card	3	list	3:list	Entity=(abstract-153
-11	304-319-1800	304-319-1800	NUM	CD	NumForm=Word|NumType=Card	10	flat	10:flat	Entity=abstract-153)
+11	304-319-1800	304-319-1800	NUM	CD	NumForm=Word|NumType=Card	10	flat	10:flat	Entity=abstract-153)|XML=<date when:::"1800"></date>
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
 13	✉	✉	SYM	SYM	_	14	dep	14:dep	_
 14	info@morgantownhistorymuseum.org	info@morgantownhistorymuseum.org	NOUN	NN	Number=Sing	3	list	3:list	Entity=(abstract-209)
@@ -1142,7 +1195,7 @@
 # s_type = frag
 # text = MWFSa 10AM-4PM.
 1	MWFSa	MWFSa	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:116->90|Entity=(organization-210
-2	10AM-4PM	10AM-4PM	NUM	CD	NumForm=Word|NumType=Card	1	dep	1:dep	Entity=organization-210)|SpaceAfter=No
+2	10AM-4PM	10AM-4PM	NUM	CD	NumForm=Word|NumType=Card	1	dep	1:dep	Entity=organization-210)|SpaceAfter=No|XML=<time from:::"1000" to:::"1600"></time>
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-72
@@ -1151,7 +1204,7 @@
 1	Tu	Tu	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:117->90|Entity=(person-211|SpaceAfter=No
 2	,	,	PUNCT	,	_	3	punct	3:punct	SpaceAfter=No
 3	Th	th	PROPN	NNP	Number=Sing	1	compound	1:compound	_
-4	11AM-4PM	11AM-4PM	NUM	CD	NumForm=Word|NumType=Card	1	dep	1:dep	Entity=person-211)|SpaceAfter=No
+4	11AM-4PM	11AM-4PM	NUM	CD	NumForm=Word|NumType=Card	1	dep	1:dep	Entity=person-211)|SpaceAfter=No|XML=<time from:::"1100" to:::"1600"></time>
 5	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-73
@@ -1165,14 +1218,15 @@
 # sent_id = AMALGUM_voyage_morgantown-74
 # s_type = frag
 # text = West Virginia University's Creative Arts Center, ☏ +1 304-293-4841 .
-1	West	West	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:119->90|Entity=(person-89(organization-8(place-5
+# newpar = item (4 s)
+1	West	West	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:119->90|Entity=(person-89(organization-8(place-5|XML=<hi rend:::"bold">
 2	Virginia	Virginia	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=place-5)
 3-4	University's	_	_	_	_	_	_	_	_
 3	University	University	PROPN	NNP	Number=Sing	7	nmod:poss	7:nmod:poss	_
 4	's	's	PART	POS	_	3	case	3:case	Entity=organization-8)
 5	Creative	Creative	ADJ	NNP	Number=Sing	6	amod	6:amod	Entity=(abstract-212
 6	Arts	Art	PROPN	NNPS	Number=Plur	7	compound	7:compound	Entity=abstract-212)
-7	Center	Center	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-89)|SpaceAfter=No
+7	Center	Center	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-89)|SpaceAfter=No|XML=</hi>
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
 9	☏	☏	NOUN	NNS	Number=Plur	7	dep	7:dep	Entity=(abstract-170
 10	+1	+1	NUM	CD	NumForm=Word|NumType=Card	9	flat	9:flat	_
@@ -1185,10 +1239,10 @@
 1	Gallery	Gallery	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=joint:120->119|Entity=(time-213(person-214)
 2	hours	hour	NOUN	NNS	Number=Plur	0	root	0:root	Entity=time-213)
 3	F	F	ADP	IN	_	2	parataxis	2:parataxis	_
-4	noon-9PM	noon-9PM	ADJ	JJ	Degree=Pos	3	obl:tmod	3:obl:tmod	SpaceAfter=No
+4	noon-9PM	noon-9PM	ADJ	JJ	Degree=Pos	3	obl:tmod	3:obl:tmod	SpaceAfter=No|XML=<time when:::"2100"></time>
 5	;	;	PUNCT	:	_	6	punct	6:punct	_
 6	Sa	Sa	PROPN	NNP	Number=Sing	2	parataxis	2:parataxis	Discourse=elaboration:121->120|Entity=(person-97
-7	1PM-9PM.	1PM-9PM.	NUM	CD	NumForm=Word|NumType=Card	6	dep	6:dep	Entity=person-97)|SpaceAfter=No
+7	1PM-9PM.	1PM-9PM.	NUM	CD	NumForm=Word|NumType=Card	6	dep	6:dep	Entity=person-97)|SpaceAfter=No|XML=<time from:::"1300" to:::"2100"></time>
 8	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-76
@@ -1224,9 +1278,10 @@
 # sent_id = AMALGUM_voyage_morgantown-78
 # s_type = frag
 # text = Monongalia Arts Center, 107 High Street (between the historic Hotel Morgan and the old Morgantown Post Office on South High Street), ☏ +1304 292-3325 , ✉ info@monartscenter.com .
-1	Monongalia	Monongalia	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:124->119|Entity=(person-89(place-4)
+# newpar = item (4 s)
+1	Monongalia	Monongalia	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:124->119|Entity=(person-89(place-4)|XML=<hi rend:::"bold">
 2	Arts	Art	PROPN	NNP	Number=Sing	3	compound	3:compound	_
-3	Center	Center	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No
+3	Center	Center	PROPN	NNP	Number=Sing	0	root	0:root	SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	7	punct	7:punct	_
 5	107	107	NUM	CD	NumForm=Digit|NumType=Card	7	nummod	7:nummod	Entity=(place-126
 6	High	High	PROPN	NNP	Number=Sing	7	compound	7:compound	_
@@ -1263,14 +1318,14 @@
 1	M	M	PROPN	NNP	Number=Sing	4	compound	4:compound	Discourse=joint:127->119|Entity=(person-228|SpaceAfter=No
 2	-	-	SYM	SYM	_	3	case	3:case	SpaceAfter=No
 3	F	F	NOUN	NN	Number=Sing	1	nmod	1:nmod:minus	_
-4	11AM	11AM	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	_
+4	11AM	11AM	NUM	CD	NumForm=Word|NumType=Card	0	root	0:root	XML=<time when:::"1100"></time>
 5	-	-	SYM	SYM	_	6	case	6:case	_
-6	7PM	7PM	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:minus	Entity=person-228)(abstract-229)|SpaceAfter=No
+6	7PM	7PM	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:minus	Entity=person-228)(abstract-229)|SpaceAfter=No|XML=<time when:::"1900"></time>
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	Sa	Sa	PROPN	NNP	Number=Sing	9	nmod:tmod	9:nmod:tmod	Entity=(person-228(person-97)
 9	11AM	11AM	NUM	CD	NumForm=Word|NumType=Card	4	conj	4:conj	_
 10	-	-	PUNCT	:	_	11	punct	11:punct	_
-11	4PM	4PM	NUM	CD	NumForm=Word|NumType=Card	9	nmod	9:nmod	Entity=person-228)(abstract-230)|SpaceAfter=No
+11	4PM	4PM	NUM	CD	NumForm=Word|NumType=Card	9	nmod	9:nmod	Entity=person-228)(abstract-230)|SpaceAfter=No|XML=<time when:::"1600"></time>
 12	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-80
@@ -1330,15 +1385,18 @@
 # sent_id = AMALGUM_voyage_morgantown-82
 # s_type = frag
 # text = Spectator sports
+# newpar = head (1 s)
 1	Spectator	spectator	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=preparation:133->134|Entity=(abstract-242(person-243)
 2	sports	sport	NOUN	NNS	Number=Plur	0	root	0:root	Entity=abstract-242)
 
 # sent_id = AMALGUM_voyage_morgantown-83
 # s_type = frag
 # text = West Virginia Mountaineers, WVU Coliseum, 3450 Jerry West Blvd. (between Blue and Gold Gate entrances), toll-free: +1 800 WVU-GAME .
-1	West	West	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:134->119|Entity=(person-7(place-5
+# newpar = list type:::"unordered" (11 s)
+# newpar1 = item (8 s)
+1	West	West	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:134->119|Entity=(person-7(place-5|XML=<hi rend:::"bold">
 2	Virginia	Virginia	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=place-5)
-3	Mountaineers	Mountaineers	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=person-7)|SpaceAfter=No
+3	Mountaineers	Mountaineers	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=person-7)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	6	punct	6:punct	_
 5	WVU	WVU	PROPN	NNP	Number=Sing	6	compound	6:compound	Entity=(place-244
 6	Coliseum	Coliseum	PROPN	NNP	Number=Sing	3	list	3:list	Entity=place-244)|SpaceAfter=No
@@ -1371,7 +1429,7 @@
 3	F	F	NOUN	NN	Number=Sing	1	nmod	1:nmod:minus	_
 4	9AM	9AM	NOUN	NN	Number=Sing	0	root	0:root	SpaceAfter=No
 5	–	-	SYM	SYM	_	6	case	6:case	SpaceAfter=No
-6	5PM	5PM	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:to	Entity=person-251)(abstract-252)|SpaceAfter=No
+6	5PM	5PM	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:to	Entity=person-251)(abstract-252)|SpaceAfter=No|XML=<time when:::"1700"></time>
 7	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_voyage_morgantown-85
@@ -1583,10 +1641,11 @@
 # sent_id = AMALGUM_voyage_morgantown-91
 # s_type = frag
 # text = West Virginia Black Bears, Monongalia County Ballpark (University Town Centre, Granville), ☏ +1304 293-7910 , ✉ wvblackbears@gmail.com .
-1	West	West	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:157->139|Entity=(person-284(place-5)
+# newpar = item (3 s)
+1	West	West	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:157->139|Entity=(person-284(place-5)|XML=<hi rend:::"bold">
 2	Virginia	Virginia	PROPN	NNP	Number=Sing	4	compound	4:compound	_
 3	Black	Black	ADJ	NNP	Number=Sing	4	amod	4:amod	_
-4	Bears	Bears	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=person-284)|SpaceAfter=No
+4	Bears	Bears	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=person-284)|SpaceAfter=No|XML=</hi>
 5	,	,	PUNCT	,	_	8	punct	8:punct	_
 6	Monongalia	Monongalia	PROPN	NNP	Number=Sing	7	compound	7:compound	Entity=(place-285(place-3(place-4)
 7	County	County	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=place-3)
@@ -1624,7 +1683,7 @@
 12	,	,	PUNCT	,	_	16	punct	16:punct	_
 13	after	after	ADP	IN	_	16	case	16:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	16	det	16:det	Entity=(time-288
-15	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	16	compound	16:compound	_
+15	2014	2014	NUM	CD	NumForm=Digit|NumType=Card	16	compound	16:compound	XML=<date when:::"2014"></date>
 16	season	season	NOUN	NN	Number=Sing	6	obl	6:obl:after	Entity=person-284)time-288)|SpaceAfter=No
 17	,	,	PUNCT	,	_	3	punct	3:punct	_
 18	play	play	VERB	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=same_unit:162->160
@@ -1657,9 +1716,9 @@
 2	season	season	NOUN	NN	Number=Sing	3	nsubj	3:nsubj	Entity=time-288)
 3	runs	run	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	from	from	ADP	IN	_	5	case	5:case	_
-5	mid-June	mid-June	NOUN	NN	Number=Sing	3	obl	3:obl:from	Entity=(time-292)
+5	mid-June	mid-June	NOUN	NN	Number=Sing	3	obl	3:obl:from	Entity=(time-292)|XML=<date when:::"2014-06"></date>
 6	to	to	ADP	IN	_	8	case	8:case	_
-7	early	early	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(time-293
-8	September	September	PROPN	NNP	Number=Sing	3	obl	3:obl:to	Entity=time-293)|SpaceAfter=No
+7	early	early	ADJ	JJ	Degree=Pos	8	amod	8:amod	Entity=(time-293|XML=<date when:::"2014-09">
+8	September	September	PROPN	NNP	Number=Sing	3	obl	3:obl:to	Entity=time-293)|SpaceAfter=No|XML=</date>
 9	.	.	PUNCT	.	_	3	punct	3:punct	_
 

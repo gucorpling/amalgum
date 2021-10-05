@@ -1,8 +1,19 @@
+# meta::id = AMALGUM_news_opium
+# meta::title = 2005 Afghan opium harvest begins
+# meta::shortTitle = opium
+# meta::type = news
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2005-05-03
+# meta::dateModified = 2014-06-02
+# meta::sourceURL = https://en.wikinews.org/wiki/2005_Afghan_opium_harvest_begins
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_news_opium
 # sent_id = AMALGUM_news_opium-1
 # s_type = decl
 # text = 2005 Afghan opium harvest begins
-1	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Discourse=preparation:1->3
+# newpar = head (1 s)
+1	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Discourse=preparation:1->3|XML=<date when:::"2005"></date>
 2	Afghan	Afghan	ADJ	JJ	Degree=Pos	3	amod	3:amod	Entity=(event-1(place-2
 3	opium	opium	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=place-2)
 4	harvest	harvest	NOUN	NN	Number=Sing	5	nsubj	5:nsubj	Entity=event-1)
@@ -11,16 +22,19 @@
 # sent_id = AMALGUM_news_opium-2
 # s_type = frag
 # text = Tuesday, May 3, 2005
-1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-3)|SpaceAfter=No
+# newpar = p (1 s)
+1	Tuesday	Tuesday	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=circumstance:2->3|Entity=(time-3)|SpaceAfter=No|XML=<hi rend:::"bold">
 2	,	,	PUNCT	,	_	4	punct	4:punct	_
-3	May	May	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-3
+3	May	May	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(time-3|XML=<date when:::"2005-05-03">
 4	3	3	NUM	CD	NumForm=Digit|NumType=Card	1	appos	1:appos	SpaceAfter=No
 5	,	,	PUNCT	,	_	6	punct	6:punct	_
-6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-3)(time-4)
+6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	4	nmod:tmod	4:nmod:tmod	Entity=time-3)(time-4)|XML=</date></hi>
 
 # sent_id = AMALGUM_news_opium-3
 # s_type = frag
 # text = Opium poppy.
+# newpar = figure (2 s)
+# newpar1 = caption (2 s)
 1	Opium	opium	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=ROOT:3|Entity=(plant-5(place-2)
 2	poppy	poppy	NOUN	NN	Number=Sing	0	root	0:root	Entity=plant-5)|SpaceAfter=No
 3	.	.	PUNCT	.	_	2	punct	2:punct	_
@@ -36,15 +50,16 @@
 # sent_id = AMALGUM_news_opium-5
 # s_type = decl
 # text = Most heroin sold in Europe comes from Afghanistan's poppies.
+# newpar = p (3 s)
 1	Most	most	ADJ	JJS	Degree=Sup	2	amod	2:amod	Discourse=joint:5->3|Entity=(substance-8
-2	heroin	heroin	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	_
+2	heroin	heroin	NOUN	NN	Number=Sing	6	nsubj	6:nsubj	XML=<ref target:::"https://en.wikinews.org/wiki/Heroin"></ref>
 3	sold	sell	VERB	VBN	Tense=Past|VerbForm=Part	2	acl	2:acl	Discourse=elaboration:6->5
 4	in	in	ADP	IN	_	5	case	5:case	_
-5	Europe	Europe	PROPN	NNP	Number=Sing	3	obl	3:obl:in	Entity=substance-8)(place-9)
+5	Europe	Europe	PROPN	NNP	Number=Sing	3	obl	3:obl:in	Entity=substance-8)(place-9)|XML=<ref target:::"https://en.wikinews.org/wiki/Europe"></ref>
 6	comes	come	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 7	from	from	ADP	IN	_	10	case	10:case	_
 8-9	Afghanistan's	_	_	_	_	_	_	_	_
-8	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	Entity=(abstract-10(place-11
+8	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	10	nmod:poss	10:nmod:poss	Entity=(abstract-10(place-11|XML=<ref target:::"https://en.wikinews.org/wiki/Afghanistan"></ref>
 9	's	's	PART	POS	_	8	case	8:case	Entity=place-11)
 10	poppies	poppy	NOUN	NNS	Number=Plur	6	obl	6:obl:from	Entity=abstract-10)|SpaceAfter=No
 11	.	.	PUNCT	.	_	6	punct	6:punct	_
@@ -53,11 +68,11 @@
 # s_type = decl
 # text = This past week, the 2005 opium harvest was in full view and going full speed in Afghanistan.
 1	This	this	DET	DT	Number=Sing|PronType=Dem	3	det	3:det	Discourse=evidence:7->5|Entity=(time-12
-2	past	past	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
-3	week	week	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	Entity=time-12)|SpaceAfter=No
+2	past	past	ADJ	JJ	Degree=Pos	3	amod	3:amod	XML=<date from:::"2005-04-25" to:::"2005-05-01">
+3	week	week	NOUN	NN	Number=Sing	12	obl:tmod	12:obl:tmod	Entity=time-12)|SpaceAfter=No|XML=</date>
 4	,	,	PUNCT	,	_	3	punct	3:punct	_
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(event-1
-6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	8	compound	8:compound	_
+6	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	8	compound	8:compound	XML=<date when:::"2005"></date>
 7	opium	opium	NOUN	NN	Number=Sing	8	compound	8:compound	Entity=(place-2)
 8	harvest	harvest	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|14:nsubj	Entity=event-1)
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
@@ -109,8 +124,9 @@
 # sent_id = AMALGUM_news_opium-8
 # s_type = decl
 # text = Last year 80% of the world's opium came from Afghanistan and production is up over 239% since 2003, according to U.S. government estimates.
-1	Last	last	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:13->5|Entity=(time-21
-2	year	year	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	Entity=time-21)
+# newpar = p (2 s)
+1	Last	last	ADJ	JJ	Degree=Pos	2	amod	2:amod	Discourse=joint:13->5|Entity=(time-21|XML=<date when:::"2004">
+2	year	year	NOUN	NN	Number=Sing	10	obl:tmod	10:obl:tmod	Entity=time-21)|XML=</date>
 3	80	80	NUM	CD	NumForm=Digit|NumType=Card	4	nummod	4:nummod	Entity=(abstract-22|SpaceAfter=No
 4	%	%	SYM	NN	Number=Sing	10	nsubj	10:nsubj	_
 5	of	of	ADP	IN	_	9	case	9:case	_
@@ -118,7 +134,7 @@
 7-8	world's	_	_	_	_	_	_	_	_
 7	world	world	NOUN	NN	Number=Sing	9	nmod:poss	9:nmod:poss	Entity=(place-23
 8	's	's	PART	POS	_	7	case	7:case	Entity=place-23)
-9	opium	opium	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-22)place-2)
+9	opium	opium	NOUN	NN	Number=Sing	4	nmod	4:nmod:of	Entity=abstract-22)place-2)|XML=<ref target:::"https://en.wikinews.org/wiki/Opium"></ref>
 10	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 11	from	from	ADP	IN	_	12	case	12:case	_
 12	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	10	obl	10:obl:from	Entity=(place-11)
@@ -130,7 +146,7 @@
 18	239	239	NUM	CD	NumForm=Digit|NumType=Card	19	nummod	19:nummod	SpaceAfter=No
 19	%	%	SYM	NN	Number=Sing	16	obl:npmod	16:obl:npmod	Entity=abstract-25)
 20	since	since	ADP	IN	_	21	case	21:case	_
-21	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:since	Entity=(time-26)|SpaceAfter=No
+21	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	16	obl	16:obl:since	Entity=(time-26)|SpaceAfter=No|XML=<date when:::"2003"></date>
 22	,	,	PUNCT	,	_	27	punct	27:punct	_
 23	according	accord	VERB	VBG	VerbForm=Ger	27	case	27:case	Discourse=attribution:15->14
 24	to	to	ADP	IN	_	23	fixed	23:fixed	_
@@ -158,15 +174,16 @@
 # sent_id = AMALGUM_news_opium-10
 # s_type = decl
 # text = In 2002 Super Bowl ads, the White House sent out the message that "drugs fund terrorists".
+# newpar = p (4 s)
 1	In	in	ADP	IN	_	5	case	5:case	Discourse=elaboration:17->16
-2	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	Entity=(abstract-32
-3	Super	Super	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-33
-4	Bowl	Bowl	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=person-33)
+2	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	5	compound	5:compound	Entity=(abstract-32|XML=<date when:::"2002"></date>
+3	Super	Super	PROPN	NNP	Number=Sing	4	compound	4:compound	Entity=(person-33|XML=<ref target:::"https://en.wikipedia.org/wiki/Super%20Bowl">
+4	Bowl	Bowl	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=person-33)|XML=</ref>
 5	ads	ad	NOUN	NNS	Number=Plur	10	obl	10:obl:in	Entity=abstract-32)|SpaceAfter=No
 6	,	,	PUNCT	,	_	5	punct	5:punct	_
 7	the	the	DET	DT	Definite=Def|PronType=Art	9	det	9:det	Entity=(organization-34
-8	White	White	ADJ	NNP	Number=Sing	9	amod	9:amod	_
-9	House	House	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Entity=organization-34)
+8	White	White	ADJ	NNP	Number=Sing	9	amod	9:amod	XML=<ref target:::"https://en.wikinews.org/wiki/White_House">
+9	House	House	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Entity=organization-34)|XML=</ref>
 10	sent	send	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 11	out	out	ADP	RP	_	10	compound:prt	10:compound:prt	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	13	det	13:det	Entity=(abstract-35
@@ -188,9 +205,9 @@
 4	a	a	DET	DT	Definite=Ind|PronType=Art	13	det	13:det	Entity=(person-38
 5	former	former	ADJ	JJ	Degree=Pos	13	amod	13:amod	_
 6	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	9	compound	9:compound	Entity=(organization-39(place-28)
-7	Drug	Drug	PROPN	NNP	Number=Sing	9	compound	9:compound	_
+7	Drug	Drug	PROPN	NNP	Number=Sing	9	compound	9:compound	XML=<ref target:::"https://en.wikipedia.org/wiki/Drug%20Enforcement%20Administration">
 8	Enforcement	Enforcement	PROPN	NNP	Number=Sing	9	compound	9:compound	Entity=(person-40)
-9	Administration	Administration	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=organization-39)
+9	Administration	Administration	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=organization-39)|XML=</ref>
 10	(	(	PUNCT	-LRB-	_	11	punct	11:punct	Discourse=attribution:20->19|SpaceAfter=No
 11	DEA	DEA	PROPN	NNP	Number=Sing	9	appos	9:appos	Entity=(organization-39)|SpaceAfter=No
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
@@ -260,6 +277,7 @@
 # sent_id = AMALGUM_news_opium-14
 # s_type = decl
 # text = "The Bush administration has decided not to destroy the opium crop in Afghanistan," stated a U.S. intelligence official returning from Afghanistan in relation to the 60% smaller 2002 crop.
+# newpar = p (3 s)
 1	"	''	PUNCT	``	_	6	punct	6:punct	Discourse=joint:27->5|SpaceAfter=No
 2	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(organization-34
 3	Bush	Bush	PROPN	NNP	Number=Sing	4	compound	4:compound	_
@@ -291,7 +309,7 @@
 29	60	60	NUM	CD	NumForm=Digit|NumType=Card	30	nummod	30:nummod	SpaceAfter=No
 30	%	%	SYM	NN	Number=Sing	31	obl:npmod	31:obl:npmod	_
 31	smaller	small	ADJ	JJR	Degree=Cmp	33	amod	33:amod	_
-32	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	33	compound	33:compound	_
+32	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	33	compound	33:compound	XML=<date when:::"2002"></date>
 33	crop	crop	NOUN	NN	Number=Sing	26	nmod	26:nmod:to	Entity=person-38)plant-17)|SpaceAfter=No
 34	.	.	PUNCT	.	_	17	punct	17:punct	_
 
@@ -338,6 +356,7 @@
 # sent_id = AMALGUM_news_opium-17
 # s_type = decl
 # text = U.S. plans to spray the crops were canceled at the request of Afghan President Hamid Karzai, who has called for jihad or "holy war", but is concerned that aerial spraying could be harmful to the health of Afghan villagers.
+# newpar = p (2 s)
 1	U.S.	U.S.	PROPN	NNP	Abbr=Yes|Number=Sing	2	compound	2:compound	Discourse=concession:36->40|Entity=(abstract-56(place-28)
 2	plans	plan	NOUN	NNS	Number=Plur	8	nsubj:pass	8:nsubj:pass	_
 3	to	to	PART	TO	_	4	mark	4:mark	Discourse=purpose:37->36
@@ -352,14 +371,14 @@
 12	of	of	ADP	IN	_	14	case	14:case	_
 13	Afghan	Afghan	ADJ	JJ	Degree=Pos	14	amod	14:amod	Entity=(person-57
 14	President	President	NOUN	NN	Number=Sing	11	nmod	11:nmod:of|20:nsubj	_
-15	Hamid	Hamid	PROPN	NNP	Number=Sing	14	flat	14:flat	_
-16	Karzai	Karzai	PROPN	NNP	Number=Sing	14	flat	14:flat	SpaceAfter=No
+15	Hamid	Hamid	PROPN	NNP	Number=Sing	14	flat	14:flat	XML=<ref target:::"https://en.wikinews.org/wiki/Hamid_Karzai">
+16	Karzai	Karzai	PROPN	NNP	Number=Sing	14	flat	14:flat	SpaceAfter=No|XML=</ref>
 17	,	,	PUNCT	,	_	20	punct	20:punct	_
 18	who	who	PRON	WP	PronType=Rel	20	nsubj	14:ref	Discourse=elaboration:38->37
 19	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	20	aux	20:aux	_
 20	called	call	VERB	VBN	Tense=Past|VerbForm=Part	14	acl:relcl	14:acl:relcl	_
 21	for	for	ADP	IN	_	22	case	22:case	_
-22	jihad	jihad	NOUN	NN	Number=Sing	20	obl	20:obl:for	Entity=(organization-58)
+22	jihad	jihad	NOUN	NN	Number=Sing	20	obl	20:obl:for	Entity=(organization-58)|XML=<ref target:::"https://en.wikipedia.org/wiki/jihad"></ref>
 23	or	or	CCONJ	CC	_	26	cc	26:cc	_
 24	"	''	PUNCT	``	_	26	punct	26:punct	SpaceAfter=No
 25	holy	holy	ADJ	JJ	Degree=Pos	26	amod	26:amod	Entity=(event-59
@@ -408,6 +427,7 @@
 # sent_id = AMALGUM_news_opium-19
 # s_type = decl
 # text = Karzai has indicated that he may change his mind if other U.S. strategies fail to halt the opium.
+# newpar = p (2 s)
 1	Karzai	Karzai	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=attribution:44->45|Entity=(person-57)
 2	has	have	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	aux	3:aux	_
 3	indicated	indicate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
@@ -442,13 +462,14 @@
 9	in	in	ADP	IN	_	10	case	10:case	_
 10	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	8	nmod	8:nmod:in	Entity=event-66)(place-11)
 11	just	just	ADV	RB	_	13	advmod	13:advmod	Entity=(time-21
-12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	_
-13	year	year	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	Entity=time-21)|SpaceAfter=No
+12	this	this	DET	DT	Number=Sing|PronType=Dem	13	det	13:det	XML=<date when:::"2005">
+13	year	year	NOUN	NN	Number=Sing	2	obl:tmod	2:obl:tmod	Entity=time-21)|SpaceAfter=No|XML=</date>
 14	.	.	PUNCT	.	_	2	punct	2:punct	_
 
 # sent_id = AMALGUM_news_opium-21
 # s_type = ger
 # text = Estimating the value of the crop
+# newpar = head (1 s)
 1	Estimating	estimate	VERB	VBG	VerbForm=Ger	0	root	0:root	Discourse=attribution:48->57
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-67
 3	value	value	NOUN	NN	Number=Sing	1	obj	1:obj	_
@@ -459,15 +480,16 @@
 # sent_id = AMALGUM_news_opium-22
 # s_type = decl
 # text = The CIA reports in From Flowers to Heroin that it takes 10kg of opium to make 1kg of 90% pure heroin.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:49->50|Entity=(organization-68
-2	CIA	CIA	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-68)
+2	CIA	CIA	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-68)|XML=<ref target:::"https://en.wikinews.org/wiki/CIA"></ref>
 3	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	in	in	ADP	IN	_	6	case	6:case	_
-5	From	from	ADP	IN	_	6	case	6:case	_
+5	From	from	ADP	IN	_	6	case	6:case	XML=<hi rend:::"italic">
 6	Flowers	flower	PROPN	NNPS	Number=Plur	3	obl	3:obl:in_from	Entity=(person-69)
 7	to	to	ADP	IN	_	8	case	8:case	_
 8	Heroin	Heroin	PROPN	NNP	Number=Sing	3	obl	3:obl:to	Entity=(abstract-70)
-9	that	that	SCONJ	IN	_	11	mark	11:mark	Discourse=elaboration:50->48
+9	that	that	SCONJ	IN	_	11	mark	11:mark	Discourse=elaboration:50->48|XML=</hi>
 10	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	11	expl	11:expl	Entity=(abstract-70)
 11	takes	take	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	3	ccomp	3:ccomp	_
 12	10kg	10kg	NUM	CD	NumForm=Word|NumType=Card	11	obj	11:obj	Entity=(place-71
@@ -538,12 +560,13 @@
 # sent_id = AMALGUM_news_opium-25
 # s_type = decl
 # text = The Guardian reports that the 2002 opium harvest was 3400 metric tons.
+# newpar = p (4 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	2	det	2:det	Discourse=attribution:58->59|Entity=(organization-81
 2	Guardian	Guardian	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Entity=organization-81)
 3	reports	report	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 4	that	that	SCONJ	IN	_	12	mark	12:mark	Discourse=joint:59->5
 5	the	the	DET	DT	Definite=Def|PronType=Art	8	det	8:det	Entity=(abstract-82
-6	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	8	compound	8:compound	_
+6	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	8	compound	8:compound	XML=<date when:::"2002"></date>
 7	opium	opium	NOUN	NN	Number=Sing	8	compound	8:compound	Entity=(place-2)
 8	harvest	harvest	NOUN	NN	Number=Sing	12	nsubj	12:nsubj	Entity=abstract-82)
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	12	cop	12:cop	_
@@ -564,7 +587,7 @@
 7	CIA	CIA	PROPN	NNP	Number=Sing	4	obl	4:obl:by	Entity=event-84)organization-68)|SpaceAfter=No
 8	,	,	PUNCT	,	_	1	punct	1:punct	_
 9-10	2002's	_	_	_	_	_	_	_	_
-9	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:poss	13:nmod:poss	Discourse=same_unit:62->60|Entity=(event-85(time-86
+9	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	13	nmod:poss	13:nmod:poss	Discourse=same_unit:62->60|Entity=(event-85(time-86|XML=<date when:::"2002"></date>
 10	's	's	PART	POS	_	9	case	9:case	Entity=time-86)
 11	3400	3400	NUM	CD	NumForm=Digit|NumType=Card	13	nummod	13:nummod	_
 12	opium	opium	NOUN	NN	Number=Sing	13	compound	13:compound	Entity=(place-2)
@@ -592,7 +615,7 @@
 7	Board	Board	PROPN	NNP	Number=Sing	16	nmod	16:nmod:according_to	Entity=organization-88)|SpaceAfter=No
 8	,	,	PUNCT	,	_	7	punct	7:punct	_
 9	the	the	DET	DT	Definite=Def|PronType=Art	12	det	12:det	Entity=(abstract-91
-10	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	12	compound	12:compound	_
+10	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	12	compound	12:compound	XML=<date when:::"2003"></date>
 11	opium	opium	NOUN	NN	Number=Sing	12	compound	12:compound	Entity=(place-2)
 12	harvest	harvest	NOUN	NN	Number=Sing	16	nsubj	16:nsubj	Entity=abstract-91)
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	_
@@ -615,13 +638,13 @@
 9	present	present	ADJ	JJ	Degree=Pos	10	amod	10:amod	_
 10	harvast	harvast	NOUN	NN	Number=Sing	6	nmod	6:nmod:of	Entity=animal-94)
 11	over	over	ADP	IN	_	12	case	12:case	_
-12	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:over	Entity=event-93)(time-26)|SpaceAfter=No
+12	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	6	nmod	6:nmod:over	Entity=event-93)(time-26)|SpaceAfter=No|XML=<date when:::"2003"></date>
 13	,	,	PUNCT	,	_	1	punct	1:punct	_
 14	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	15	nsubj	15:nsubj	Discourse=attribution:65->66|Entity=(event-93)
 15	means	mean	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 16	that	that	SCONJ	IN	_	24	mark	24:mark	Discourse=purpose:66->64
 17	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(event-1
-18	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	19	compound	19:compound	_
+18	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	19	compound	19:compound	XML=<date when:::"2005"></date>
 19	harvest	harvest	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	Entity=event-1)
 20	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	24	cop	24:cop	_
 21	about	about	ADV	RB	_	22	advmod	22:advmod	Entity=(abstract-95
@@ -633,8 +656,9 @@
 # sent_id = AMALGUM_news_opium-29
 # s_type = decl
 # text = The 2002 street price of heroin in the UK was about 60 £ per GRAM, or (assuming the present 1.89 USD to 1 £ exchange) 113.40 USD per GRAM.
+# newpar = p (5 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Discourse=sequence:67->64|Entity=(abstract-96
-2	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	4	compound	4:compound	_
+2	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	4	compound	4:compound	XML=<date when:::"2002"></date>
 3	street	street	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(place-75)
 4	price	price	NOUN	NN	Number=Sing	13	nsubj	13:nsubj|30:nsubj	_
 5	of	of	ADP	IN	_	6	case	6:case	_
@@ -763,7 +787,7 @@
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-111
 3	extent	extent	NOUN	NN	Number=Sing	21	obl	21:obl:to	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(abstract-112
-5	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	_
+5	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	6	compound	6:compound	XML=<date when:::"2002"></date>
 6	numbers	number	NOUN	NNS	Number=Plur	8	nsubj	8:nsubj	Entity=abstract-112)
 7	are	be	AUX	VBP	Mood=Ind|Number=Plur|Person=3|Tense=Pres|VerbForm=Fin	8	cop	8:cop	_
 8	valid	valid	ADJ	JJ	Degree=Pos	3	acl	3:acl	_
@@ -774,7 +798,7 @@
 13	value	value	NOUN	NN	Number=Sing	24	nsubj	24:nsubj	_
 14	of	of	ADP	IN	_	17	case	17:case	_
 15	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(event-1
-16	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	17	compound	17:compound	_
+16	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	17	compound	17:compound	XML=<date when:::"2005"></date>
 17	harvest	harvest	NOUN	NN	Number=Sing	13	nmod	13:nmod:of	Entity=abstract-114)event-1)
 18	should	should	AUX	MD	VerbForm=Fin	24	aux	24:aux	_
 19	be	be	AUX	VB	VerbForm=Inf	24	cop	24:cop	_
@@ -797,6 +821,7 @@
 # sent_id = AMALGUM_news_opium-34
 # s_type = decl
 # text = To put these numbers in perspective, the total market capitalization of Ford, General Motors and Daimler Chrysler combined is about 76 billion USD.
+# newpar = p (2 s)
 1	To	to	PART	TO	_	2	mark	2:mark	Discourse=purpose:80->79
 2	put	put	VERB	VB	VerbForm=Inf	25	advcl	25:advcl:to	_
 3	these	this	DET	DT	Number=Plur|PronType=Dem	4	det	4:det	Entity=(abstract-112
@@ -846,6 +871,7 @@
 # sent_id = AMALGUM_news_opium-36
 # s_type = frag
 # text = No Statement by the Financial Action Task Force
+# newpar = head (1 s)
 1	No	no	DET	DT	Polarity=Neg	2	det	2:det	Discourse=joint:83->82|Entity=(abstract-124
 2	Statement	statement	NOUN	NN	Number=Sing	0	root	0:root	_
 3	by	by	ADP	IN	_	8	case	8:case	_
@@ -858,6 +884,7 @@
 # sent_id = AMALGUM_news_opium-37
 # s_type = decl
 # text = The Financial Action Task Force (FATF) was formed to promote harmonization of international antimoney laundering (AML) laws.
+# newpar = p (3 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Discourse=joint:84->83|Entity=(organization-125
 2	Financial	Financial	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-126
 3	Action	Action	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=abstract-126)
@@ -954,6 +981,7 @@
 # sent_id = AMALGUM_news_opium-40
 # s_type = ger
 # text = Estimating the value of the crop
+# newpar = head (1 s)
 1	Estimating	estimate	VERB	VBG	VerbForm=Ger	0	root	0:root	Discourse=joint:93->91
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(abstract-67
 3	value	value	NOUN	NN	Number=Sing	1	obj	1:obj	_
@@ -964,29 +992,32 @@
 # sent_id = AMALGUM_news_opium-41
 # s_type = frag
 # text = CIA.
-1	CIA	CIA	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:94->93|Entity=(organization-68)|SpaceAfter=No
+# newpar = list type:::"unordered" (10 s)
+# newpar1 = item (2 s)
+1	CIA	CIA	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:94->93|Entity=(organization-68)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/Central_Intelligence_Agency"></ref>
 2	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_opium-42
 # s_type = frag
 # text = "From Flowers to Heroin" —CIA, April 25, 2005
 1	"	''	PUNCT	``	_	3	punct	3:punct	Discourse=joint:95->94|SpaceAfter=No
-2	From	from	ADP	IN	_	3	case	3:case	_
+2	From	from	ADP	IN	_	3	case	3:case	XML=<ref target:::"http://www.cia.gov/cia/publications/heroin/flowers_to_heroin.htm">
 3	Flowers	flower	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(person-69
 4	to	to	ADP	IN	_	5	case	5:case	_
-5	Heroin	Heroin	PROPN	NNP	Number=Sing	3	nmod	3:nmod:to	Entity=person-69)(abstract-70)|SpaceAfter=No
+5	Heroin	Heroin	PROPN	NNP	Number=Sing	3	nmod	3:nmod:to	Entity=person-69)(abstract-70)|SpaceAfter=No|XML=</ref>
 6	"	''	PUNCT	''	_	3	punct	3:punct	_
 7	—	—	PUNCT	:	_	8	punct	8:punct	SpaceAfter=No
-8	CIA	CIA	PROPN	NNP	Number=Sing	3	dep	3:dep	SpaceAfter=No
+8	CIA	CIA	PROPN	NNP	Number=Sing	3	dep	3:dep	SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/CIA"></ref></hi>
 9	,	,	PUNCT	,	_	11	punct	11:punct	_
-10	April	April	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(time-143
+10	April	April	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(time-143|XML=<date when:::"2005-04-25">
 11	25	25	NUM	CD	NumForm=Digit|NumType=Card	3	appos	3:appos	SpaceAfter=No
 12	,	,	PUNCT	,	_	13	punct	13:punct	_
-13	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:tmod	11:nmod:tmod	Entity=time-143)(time-4)
+13	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	11	nmod:tmod	11:nmod:tmod	Entity=time-143)(time-4)|XML=</date>
 
 # sent_id = AMALGUM_news_opium-43
 # s_type = frag
 # text = Alan Travis.
+# newpar = item (2 s)
 1	Alan	Alan	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=attribution:96->95|Entity=(person-144
 2	Travis	Travis	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-144)|SpaceAfter=No
 3	.	.	PUNCT	.	_	1	punct	1:punct	_
@@ -995,35 +1026,36 @@
 # s_type = frag
 # text = "UK heroin fight hit by record opium harvest" —Guardian UK, October 26, 2002
 1	"	''	PUNCT	``	_	4	punct	4:punct	Discourse=joint:97->95|SpaceAfter=No
-2	UK	UK	PROPN	NNP	Abbr=Yes|Number=Sing	4	compound	4:compound	Entity=(event-145
+2	UK	UK	PROPN	NNP	Abbr=Yes|Number=Sing	4	compound	4:compound	Entity=(event-145|XML=<ref target:::"http://www.guardian.co.uk/afghanistan/story/0,1284,819638,00.html">
 3	heroin	heroin	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(abstract-70)
 4	fight	fight	NOUN	NN	Number=Sing	0	root	0:root	_
 5	hit	hit	VERB	VBN	Tense=Past|VerbForm=Part	4	acl	4:acl	_
 6	by	by	ADP	IN	_	7	case	7:case	_
 7	record	record	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=(abstract-82
 8	opium	opium	NOUN	NN	Number=Sing	9	compound	9:compound	Entity=(place-2)
-9	harvest	harvest	NOUN	NN	Number=Sing	5	obl	5:obl	Entity=event-145)abstract-82)|SpaceAfter=No
+9	harvest	harvest	NOUN	NN	Number=Sing	5	obl	5:obl	Entity=event-145)abstract-82)|SpaceAfter=No|XML=</ref>
 10	"	''	PUNCT	''	_	4	punct	4:punct	_
 11	—	—	PUNCT	:	_	13	punct	13:punct	SpaceAfter=No
-12	Guardian	Guardian	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(organization-81)
-13	UK	UK	PROPN	NNP	Abbr=Yes|Number=Sing	4	dep	4:dep	SpaceAfter=No
+12	Guardian	Guardian	PROPN	NNP	Number=Sing	13	compound	13:compound	Entity=(organization-81)|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Guardian%20UK">
+13	UK	UK	PROPN	NNP	Abbr=Yes|Number=Sing	4	dep	4:dep	SpaceAfter=No|XML=</ref></hi>
 14	,	,	PUNCT	,	_	16	punct	16:punct	_
-15	October	October	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(time-146(time-147)
+15	October	October	PROPN	NNP	Number=Sing	16	compound	16:compound	Entity=(time-146(time-147)|XML=<date when:::"2002-10-26">
 16	26	26	NUM	CD	NumForm=Digit|NumType=Card	13	appos	13:appos	SpaceAfter=No
 17	,	,	PUNCT	,	_	18	punct	18:punct	_
-18	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	16	nmod:tmod	16:nmod:tmod	Entity=time-146)(time-86)
+18	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	16	nmod:tmod	16:nmod:tmod	Entity=time-146)(time-86)|XML=</date>
 
 # sent_id = AMALGUM_news_opium-45
 # s_type = frag
 # text = UN.
-1	UN	UN	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:98->97|Entity=(organization-148)|SpaceAfter=No
+# newpar = item (2 s)
+1	UN	UN	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:98->97|Entity=(organization-148)|SpaceAfter=No|XML=<ref target:::"https://en.wikinews.org/wiki/United_Nations"></ref>
 2	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_news_opium-46
 # s_type = frag
 # text = "Summary on International Narcotics Control Board (INCB) Press Briefing: Drug Control in Afghanistan" —INCB, 2004
 1	"	''	PUNCT	``	_	2	punct	2:punct	Discourse=joint:99->98|SpaceAfter=No
-2	Summary	summary	NOUN	NN	Number=Sing	0	root	0:root	Entity=(abstract-149
+2	Summary	summary	NOUN	NN	Number=Sing	0	root	0:root	Entity=(abstract-149|XML=<ref target:::"http://www.unis.unvienna.org/unis/en/pressconf/2004/pb20040212.html">
 3	on	on	ADP	IN	_	12	case	12:case	_
 4	International	International	ADJ	NNP	Number=Sing	7	amod	7:amod	Entity=(abstract-150(organization-88
 5	Narcotics	Narcotics	PROPN	NNPS	Number=Plur	7	compound	7:compound	Entity=(substance-89)
@@ -1038,16 +1070,17 @@
 14	Drug	Drug	PROPN	NNP	Number=Sing	15	compound	15:compound	Discourse=same_unit:102->99|Entity=(substance-152)
 15	Control	Control	PROPN	NNP	Number=Sing	2	dep	2:dep	_
 16	in	in	ADP	IN	_	17	case	17:case	_
-17	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	15	nmod	15:nmod:in	Entity=(place-11)|SpaceAfter=No
+17	Afghanistan	Afghanistan	PROPN	NNP	Number=Sing	15	nmod	15:nmod:in	Entity=(place-11)|SpaceAfter=No|XML=</ref>
 18	"	''	PUNCT	''	_	2	punct	2:punct	_
 19	—	—	PUNCT	:	_	20	punct	20:punct	SpaceAfter=No
-20	INCB	INCB	PROPN	NNP	Number=Sing	2	dep	2:dep	SpaceAfter=No
+20	INCB	INCB	PROPN	NNP	Number=Sing	2	dep	2:dep	SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/INCB"></ref></hi>
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
-22	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=(time-153)
+22	2004	2004	NUM	CD	NumForm=Digit|NumType=Card	20	nmod:tmod	20:nmod:tmod	Entity=(time-153)|XML=<date when:::"2004"></date>
 
 # sent_id = AMALGUM_news_opium-47
 # s_type = frag
 # text = DrugScope.
+# newpar = item (2 s)
 1	DrugScope	DrugScope	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:103->99|Entity=(abstract-154)|SpaceAfter=No
 2	.	.	PUNCT	.	_	1	punct	1:punct	_
 
@@ -1055,26 +1088,27 @@
 # s_type = frag
 # text = "HEROIN (AND OTHER OPIATES)" —Drugscope - DrugSearch, April 2005
 1	"	''	PUNCT	``	_	2	punct	2:punct	Discourse=joint:104->103|SpaceAfter=No
-2	HEROIN	Heroin	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-70)
+2	HEROIN	Heroin	PROPN	NNP	Number=Sing	0	root	0:root	Entity=(abstract-70)|XML=<ref target:::"http://www.drugscope.org.uk/druginfo/drugsearch/ds_results.asp?file:::%5Cwip%5C11%5C1%5C1%5Cheroin_opiates.html">
 3	(	(	PUNCT	-LRB-	_	6	punct	6:punct	Discourse=elaboration:105->104|SpaceAfter=No
 4	AND	and	CCONJ	CC	_	6	cc	6:cc	_
 5	OTHER	other	ADJ	JJ	Degree=Pos	6	amod	6:amod	Entity=(person-155
 6	OPIATES	opiate	NOUN	NNS	Number=Plur	2	conj	2:conj:and	Entity=person-155)|SpaceAfter=No
-7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	SpaceAfter=No
+7	)	)	PUNCT	-RRB-	_	6	punct	6:punct	SpaceAfter=No|XML=</ref>
 8	"	''	PUNCT	''	_	2	punct	2:punct	_
 9	—	—	PUNCT	:	_	10	punct	10:punct	SpaceAfter=No
-10	Drugscope	Drugscope	PROPN	NNP	Number=Sing	2	dep	2:dep	_
+10	Drugscope	Drugscope	PROPN	NNP	Number=Sing	2	dep	2:dep	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Drugscope%20-%20DrugSearch">
 11	-	-	PUNCT	:	_	12	punct	12:punct	_
-12	DrugSearch	DrugSearch	PROPN	NNP	Number=Sing	10	dep	10:dep	Entity=(abstract-156)|SpaceAfter=No
+12	DrugSearch	DrugSearch	PROPN	NNP	Number=Sing	10	dep	10:dep	Entity=(abstract-156)|SpaceAfter=No|XML=</ref></hi>
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	April	April	PROPN	NNP	Number=Sing	10	nmod:tmod	10:nmod:tmod	Entity=(time-157)
-15	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:tmod	10:nmod:tmod	Entity=(time-4)
+14	April	April	PROPN	NNP	Number=Sing	10	nmod:tmod	10:nmod:tmod	Entity=(time-157)|XML=<date when:::"2005-04">
+15	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:tmod	10:nmod:tmod	Entity=(time-4)|XML=</date>
 
 # sent_id = AMALGUM_news_opium-49
 # s_type = frag
 # text = "Countries of the World: Gross Domestic Product (GDP) distribution – 2002" —Students of the World, November 23, 2003
+# newpar = item (1 s)
 1	"	''	PUNCT	``	_	2	punct	2:punct	Discourse=preparation:106->107|SpaceAfter=No
-2	Countries	Country	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(place-158
+2	Countries	Country	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=(place-158|XML=<ref target:::"http://www.studentsoftheworld.info/infopays/rank/PIB2.html">
 3	of	of	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(organization-159
 5	World	World	PROPN	NNP	Number=Sing	2	nmod	2:nmod:of	Entity=place-158)organization-159)|SpaceAfter=No
@@ -1087,42 +1121,44 @@
 12	)	)	PUNCT	-RRB-	_	11	punct	11:punct	_
 13	distribution	distribution	NOUN	NN	Number=Sing	2	appos	2:appos	Discourse=same_unit:109->107
 14	–	-	PUNCT	SYM	_	15	punct	15:punct	_
-15	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	13	nmod	13:nmod	Entity=abstract-160)(time-86)|SpaceAfter=No
+15	2002	2002	NUM	CD	NumForm=Digit|NumType=Card	13	nmod	13:nmod	Entity=abstract-160)(time-86)|SpaceAfter=No|XML=<date when:::"2002"></date></ref>
 16	"	''	PUNCT	''	_	2	punct	2:punct	_
 17	—	—	PUNCT	:	_	18	punct	18:punct	Discourse=attribution:110->107|SpaceAfter=No
-18	Students	student	PROPN	NNPS	Number=Plur	2	appos	2:appos	Entity=(person-162
+18	Students	student	PROPN	NNPS	Number=Plur	2	appos	2:appos	Entity=(person-162|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Students%20of%20the%20World">
 19	of	of	ADP	IN	_	21	case	21:case	_
 20	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(organization-159
-21	World	World	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=person-162)organization-159)|SpaceAfter=No
+21	World	World	PROPN	NNP	Number=Sing	18	nmod	18:nmod:of	Entity=person-162)organization-159)|SpaceAfter=No|XML=</ref></hi>
 22	,	,	PUNCT	,	_	24	punct	24:punct	_
-23	November	November	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(time-163
+23	November	November	PROPN	NNP	Number=Sing	24	compound	24:compound	Entity=(time-163|XML=<date when:::"2003-11-23">
 24	23	23	NUM	CD	NumForm=Digit|NumType=Card	2	appos	2:appos	SpaceAfter=No
 25	,	,	PUNCT	,	_	26	punct	26:punct	_
-26	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	24	nmod:tmod	24:nmod:tmod	Entity=time-163)(time-26)
+26	2003	2003	NUM	CD	NumForm=Digit|NumType=Card	24	nmod:tmod	24:nmod:tmod	Entity=time-163)(time-26)|XML=</date>
 
 # sent_id = AMALGUM_news_opium-50
 # s_type = frag
 # text = "Industry Center - Auto & Truck Manufacturers" —Yahoo, May 4, 2005
+# newpar = item (1 s)
 1	"	''	PUNCT	``	_	8	punct	8:punct	Discourse=joint:111->107|SpaceAfter=No
-2	Industry	Industry	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-164(place-165(organization-166)
+2	Industry	Industry	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(organization-164(place-165(organization-166)|XML=<ref target:::"http://biz.yahoo.com/ic/carmfg.html">
 3	Center	Center	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=place-165)
 4	-	-	PUNCT	:	_	3	punct	3:punct	_
 5	Auto	Auto	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(object-167)
 6	&	&	CCONJ	CC	_	7	cc	7:cc	Entity=(person-168
 7	Truck	Truck	PROPN	NNP	Number=Sing	5	conj	5:conj:and|8:compound	Entity=person-168)
-8	Manufacturers	Manufacturers	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=organization-164)|SpaceAfter=No
+8	Manufacturers	Manufacturers	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=organization-164)|SpaceAfter=No|XML=</ref>
 9	"	''	PUNCT	''	_	8	punct	8:punct	_
 10	—	—	PUNCT	:	_	11	punct	11:punct	SpaceAfter=No
-11	Yahoo	Yahoo	PROPN	NNP	Number=Sing	3	parataxis	3:parataxis	Entity=(organization-169)|SpaceAfter=No
+11	Yahoo	Yahoo	PROPN	NNP	Number=Sing	3	parataxis	3:parataxis	Entity=(organization-169)|SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikinews.org/wiki/Yahoo"></ref></hi>
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
-13	May	May	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-170
+13	May	May	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-170|XML=<date when:::"2005-05-04">
 14	4	4	NUM	CD	NumForm=Digit|NumType=Card	11	appos	11:appos	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=time-170)(time-4)
+16	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=time-170)(time-4)|XML=</date>
 
 # sent_id = AMALGUM_news_opium-51
 # s_type = frag
 # text = No Statement by the Financial Action Task Force
+# newpar = head (1 s)
 1	No	no	DET	DT	Polarity=Neg	2	det	2:det	Discourse=attribution:112->113|Entity=(abstract-124
 2	Statement	statement	NOUN	NN	Number=Sing	0	root	0:root	_
 3	by	by	ADP	IN	_	8	case	8:case	_
@@ -1135,20 +1171,22 @@
 # sent_id = AMALGUM_news_opium-52
 # s_type = frag
 # text = "Financial Action Task Force on Money Laundering" —FATF, May 4, 2005
+# newpar = list type:::"unordered" (1 s)
+# newpar1 = item (1 s)
 1	"	''	PUNCT	``	_	5	punct	5:punct	Discourse=joint:113->111|Entity=(organization-125|SpaceAfter=No
-2	Financial	Financial	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-126
+2	Financial	Financial	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-126|XML=<ref target:::"http://www1.oecd.org/fatf/">
 3	Action	Action	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=abstract-126)
 4	Task	Task	PROPN	NNP	Number=Sing	5	compound	5:compound	Entity=(abstract-127)
 5	Force	Force	PROPN	NNP	Number=Sing	0	root	0:root	_
 6	on	on	ADP	IN	_	8	case	8:case	_
 7	Money	Money	PROPN	NNP	Number=Sing	8	compound	8:compound	Entity=(object-171
-8	Laundering	Laundering	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	Entity=object-171)|SpaceAfter=No
+8	Laundering	Laundering	PROPN	NNP	Number=Sing	5	nmod	5:nmod:on	Entity=object-171)|SpaceAfter=No|XML=</ref>
 9	"	''	PUNCT	''	_	5	punct	5:punct	_
 10	—	—	PUNCT	:	_	11	punct	11:punct	SpaceAfter=No
-11	FATF	FATF	PROPN	NNP	Number=Sing	5	dep	5:dep	SpaceAfter=No
+11	FATF	FATF	PROPN	NNP	Number=Sing	5	dep	5:dep	SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/FATF"></ref></hi>
 12	,	,	PUNCT	,	_	14	punct	14:punct	_
-13	May	May	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-170
+13	May	May	PROPN	NNP	Number=Sing	14	compound	14:compound	Entity=(time-170|XML=<date when:::"2005-05-04">
 14	4	4	NUM	CD	NumForm=Digit|NumType=Card	5	nmod:tmod	5:nmod:tmod	SpaceAfter=No
 15	,	,	PUNCT	,	_	16	punct	16:punct	_
-16	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=organization-125)time-170)(time-4)
+16	2005	2005	NUM	CD	NumForm=Digit|NumType=Card	14	nmod:tmod	14:nmod:tmod	Entity=organization-125)time-170)(time-4)|XML=</date>
 

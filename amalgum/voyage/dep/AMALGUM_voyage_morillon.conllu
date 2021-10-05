@@ -1,13 +1,24 @@
+# meta::id = AMALGUM_voyage_morillon
+# meta::title = Morillon
+# meta::shortTitle = morillon
+# meta::author = Wikivoyage community (see URL)
+# meta::type = voyage
+# meta::dateCollected = 2019-11-01
+# meta::sourceURL = https://en.wikivoyage.org/wiki?curid=23021
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_voyage_morillon
 # sent_id = AMALGUM_voyage_morillon-1
 # s_type = frag
 # text = Morillon
+# newpar = head (1 s)
 1	Morillon	Morillon	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->3|Entity=(place-1)
 
 # sent_id = AMALGUM_voyage_morillon-2
 # s_type = decl
 # text = Morillon is a small mountain commune in the Haute Savoie department of the French Alps.
-1	Morillon	Morillon	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Discourse=preparation:2->3|Entity=(place-1)
+# newpar = p (4 s)
+1	Morillon	Morillon	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Discourse=preparation:2->3|Entity=(place-1)|XML=<hi rend:::"bold"><ref target:::"http://www.ot-morillon.fr/index.php%3Flangue%3DGB"></ref></hi>
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	6	cop	6:cop	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(place-1
 4	small	small	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -63,7 +74,7 @@
 12	Antoine	Antoine	PROPN	NNP	Number=Sing	11	flat	11:flat	_
 13	Deneriaz	Deneriaz	PROPN	NNP	Number=Sing	11	flat	11:flat	Entity=place-7)person-15)
 14	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(person-15
-15	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	19	compound	19:compound	_
+15	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	19	compound	19:compound	XML=<date when:::"2006"></date>
 16	Olympic	Olympic	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(event-16)
 17	Downhill	Downhill	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(abstract-17)
 18	Gold	Gold	ADJ	NNP	Number=Sing	19	amod	19:amod	_
@@ -113,14 +124,17 @@
 # sent_id = AMALGUM_voyage_morillon-6
 # s_type = imp
 # text = Get in
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:10->12
 2	in	in	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_morillon-7
 # s_type = frag
 # text = By Road - Driving distance from Calais to Morillon
-1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:11->12
-2	Road	Road	PROPN	NNP	Number=Sing	5	nmod	5:nmod:by	Entity=(abstract-26(person-27)
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (2 s)
+1	By	by	ADP	IN	_	2	case	2:case	Discourse=preparation:11->12|XML=<hi rend:::"bold">
+2	Road	Road	PROPN	NNP	Number=Sing	5	nmod	5:nmod:by	Entity=(abstract-26(person-27)|XML=</hi>
 3	-	-	PUNCT	:	_	2	punct	2:punct	_
 4	Driving	Driving	NOUN	NN	Number=Sing	5	compound	5:compound	Discourse=ROOT:12
 5	distance	distance	NOUN	NN	Number=Sing	0	root	0:root	_
@@ -142,6 +156,7 @@
 # sent_id = AMALGUM_voyage_morillon-9
 # s_type = imp
 # text = From Calais, take A26 Motorway towards Reims and Troyes, then Dijon, Mâcon then ‘Autoroute Blanche’ Motorway (A40 Mâcon – Cluses) Exit Cluses Scionzier.
+# newpar = p (4 s)
 1	From	from	ADP	IN	_	2	case	2:case	Discourse=joint:15->12
 2	Calais	Calais	PROPN	NNP	Number=Sing	4	obl	4:obl:from	Entity=(place-28)|SpaceAfter=No
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
@@ -216,8 +231,10 @@
 # sent_id = AMALGUM_voyage_morillon-13
 # s_type = frag
 # text = By Rail - Cluses 20km - Shuttle bus to Morillon +33 450 98 07 81 or Taxi +33 450 34 90
-1	By	by	ADP	IN	_	2	case	2:case	Discourse=joint:21->20
-2	Rail	Rail	PROPN	NNP	Number=Sing	8	nmod	8:nmod:by	Entity=(object-47(person-48)
+# newpar = list type:::"unordered" (7 s)
+# newpar1 = item (2 s)
+1	By	by	ADP	IN	_	2	case	2:case	Discourse=joint:21->20|XML=<hi rend:::"bold">
+2	Rail	Rail	PROPN	NNP	Number=Sing	8	nmod	8:nmod:by	Entity=(object-47(person-48)|XML=</hi>
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
 4	Cluses	Cluse	PROPN	NNP	Number=Sing	2	appos	2:appos	Entity=(place-39)
 5	20km	20km	NUM	CD	NumForm=Word|NumType=Card	4	dep	4:dep	Entity=(object-49
@@ -267,7 +284,8 @@
 # sent_id = AMALGUM_voyage_morillon-15
 # s_type = frag
 # text = Airports - Geneva 55km - Shuttle bus (about 62€ per pers return
-1	Airports	airport	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=joint:26->20|Entity=(place-55)
+# newpar = item (2 s)
+1	Airports	airport	NOUN	NNS	Number=Plur	0	root	0:root	Discourse=joint:26->20|Entity=(place-55)|XML=<hi rend:::"bold"></hi>
 2	-	-	PUNCT	:	_	3	punct	3:punct	_
 3	Geneva	Geneva	PROPN	NNP	Number=Sing	1	appos	1:appos	Entity=(place-56
 4	55km	55km	NUM	CD	NumForm=Word|NumType=Card	3	dep	3:dep	Entity=place-56)
@@ -314,7 +332,8 @@
 # sent_id = AMALGUM_voyage_morillon-17
 # s_type = frag
 # text = Taxi, ☏ +33450349090 , fax: +33450971443 , ✉ info@giffre-transports.com .
-1	Taxi	Taxi	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:31->28|Entity=(object-70)|SpaceAfter=No
+# newpar = item (3 s)
+1	Taxi	Taxi	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:31->28|Entity=(object-70)|SpaceAfter=No|XML=<hi rend:::"bold"></hi>
 2	,	,	PUNCT	,	_	3	punct	3:punct	_
 3	☏	☏	NOUN	NN	Number=Sing	1	dep	1:dep	Entity=(abstract-71
 4	+33450349090	+33450349090	ADP	IN	_	3	flat	3:flat	Entity=abstract-71)
@@ -366,12 +385,14 @@
 # sent_id = AMALGUM_voyage_morillon-20
 # s_type = imp
 # text = Get around
+# newpar = head (1 s)
 1	Get	get	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:37->38
 2	around	around	ADV	RB	Degree=Pos	1	advmod	1:advmod	_
 
 # sent_id = AMALGUM_voyage_morillon-21
 # s_type = decl
 # text = Morillon is quite small and once you have arrived you can easily get around on foot, however and especially if you are here in the winter and there is not enough snow to ski
+# newpar = p (2 s)
 1	Morillon	Morillon	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=ROOT:38|Entity=(place-1)
 2	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	4	cop	4:cop	_
 3	quite	quite	ADV	RB	_	4	advmod	4:advmod	_
@@ -441,11 +462,14 @@
 # sent_id = AMALGUM_voyage_morillon-23
 # s_type = imp
 # text = See
+# newpar = head (1 s)
 1	See	see	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=preparation:49->51
 
 # sent_id = AMALGUM_voyage_morillon-24
 # s_type = frag
 # text = Le Bourg:
+# newpar = list type:::"unordered" (3 s)
+# newpar1 = item (3 s)
 1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:50->51|Entity=(place-84
 2	Bourg	Bourg	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-84)|SpaceAfter=No
 3	:	:	PUNCT	:	_	1	punct	1:punct	_
@@ -459,8 +483,8 @@
 4	Christopher	Christopher	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-85)
 5	church	church	NOUN	NN	Number=Sing	0	root	0:root	Entity=place-18)
 6	(	(	PUNCT	-LRB-	_	8	punct	8:punct	Discourse=elaboration:52->51|SpaceAfter=No
-7	16th	16th	ADJ	JJ	Degree=Pos|NumType=Ord	8	amod	8:amod	Entity=(time-86
-8	century	century	NOUN	NN	Number=Sing	5	appos	5:appos	Entity=time-86)|SpaceAfter=No
+7	16th	16th	ADJ	JJ	Degree=Pos|NumType=Ord	8	amod	8:amod	Entity=(time-86|XML=<date from:::"1500" to:::"1599">
+8	century	century	NOUN	NN	Number=Sing	5	appos	5:appos	Entity=time-86)|SpaceAfter=No|XML=</date>
 9	)	)	PUNCT	-RRB-	_	8	punct	8:punct	_
 
 # sent_id = AMALGUM_voyage_morillon-26
@@ -486,11 +510,13 @@
 # sent_id = AMALGUM_voyage_morillon-27
 # s_type = frag
 # text = Winter
+# newpar = head (1 s)
 1	Winter	winter	NOUN	NN	Number=Sing	0	root	0:root	Discourse=elaboration:54->53|Entity=(time-80)
 
 # sent_id = AMALGUM_voyage_morillon-28
 # s_type = decl
 # text = Skiing, both cross country and downhill are the primary winter sports in Morillon, the resort website provided in both French and English is located here: and covers the ski area in depth as well as the possibilities of linking up on skis with the surrounding areas that comprise "Le Grand Massif."
+# newpar = p (1 s)
 1	Skiing	skiing	NOUN	NN	Number=Sing	12	nsubj	12:nsubj|30:nsubj	Discourse=elaboration:55->54|Entity=(abstract-91)|SpaceAfter=No
 2	,	,	PUNCT	,	_	5	punct	5:punct	_
 3	both	both	CCONJ	CC	_	5	cc:preconj	5:cc:preconj	Entity=(abstract-91(place-92
@@ -518,7 +544,7 @@
 25	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	26	aux:pass	26:aux:pass	_
 26	located	locate	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	12	parataxis	12:parataxis	_
 27	here	here	ADV	RB	PronType=Dem	26	advmod	26:advmod	SpaceAfter=No
-28	:	:	PUNCT	:	_	30	punct	30:punct	_
+28	:	:	PUNCT	:	_	30	punct	30:punct	XML=<ref target:::"http://www.grand-massif.com/hiver_2007/"></ref>
 29	and	and	CCONJ	CC	_	30	cc	30:cc	Discourse=joint:58->56
 30	covers	cover	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	12	conj	12:conj:and	_
 31	the	the	DET	DT	Definite=Def|PronType=Art	33	det	33:det	Entity=(place-82
@@ -552,11 +578,13 @@
 # sent_id = AMALGUM_voyage_morillon-29
 # s_type = frag
 # text = Summer
+# newpar = head (1 s)
 1	Summer	summer	NOUN	NN	Number=Sing	0	root	0:root	Discourse=preparation:61->62|Entity=(time-104)
 
 # sent_id = AMALGUM_voyage_morillon-30
 # s_type = decl
 # text = In the summer they are replaced by hiking, Mountain bicycling, golf and other adventure activities like rock climbing and white water rafting.
+# newpar = p (1 s)
 1	In	in	ADP	IN	_	3	case	3:case	Discourse=joint:62->42
 2	the	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Entity=(time-104
 3	summer	summer	NOUN	NN	Number=Sing	6	obl	6:obl:in	Entity=time-104)
@@ -586,6 +614,7 @@
 # sent_id = AMALGUM_voyage_morillon-31
 # s_type = decl
 # text = The Golf Highlights are
+# newpar = head (1 s)
 1	The	the	DET	DT	Definite=Def|PronType=Art	3	det	3:det	Discourse=joint:63->62|Entity=(place-115
 2	Golf	Golf	PROPN	NNP	Number=Sing	3	compound	3:compound	Entity=(abstract-107)
 3	Highlights	highlight	NOUN	NNS	Number=Plur	0	root	0:root	Entity=place-115)
@@ -594,12 +623,14 @@
 # sent_id = AMALGUM_voyage_morillon-32
 # s_type = frag
 # text = Golf de Flaine – Les Carroz - Tel : +33 4 50 90 80 74 -- 18 holes, length 4063m, par 63
-1	Golf	Golf	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:64->62|Entity=(abstract-107
+# newpar = list type:::"unordered" (19 s)
+# newpar1 = item (5 s)
+1	Golf	Golf	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:64->62|Entity=(abstract-107|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Flaine	Flaine	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=abstract-107)
 4	–	-	PUNCT	:	_	5	punct	5:punct	_
 5	Les	Les	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(place-116
-6	Carroz	Carroz	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=place-116)
+6	Carroz	Carroz	PROPN	NNP	Number=Sing	5	flat	5:flat	Entity=place-116)|XML=</hi>
 7	-	-	PUNCT	:	_	10	punct	10:punct	_
 8	Tel	Tel	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Entity=(abstract-117)
 9	:	:	PUNCT	:	_	8	punct	8:punct	_
@@ -674,7 +705,8 @@
 # sent_id = AMALGUM_voyage_morillon-37
 # s_type = frag
 # text = Practice de Golf du Lac aux Dames, Samoëns - Tel : +33 4 50 34 40 28
-1	Practice	practice	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:72->62|Entity=(organization-134
+# newpar = item (4 s)
+1	Practice	practice	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:72->62|Entity=(organization-134|XML=<hi rend:::"bold">
 2	de	de	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Golf	Golf	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 4	du	du	PROPN	NNP	Number=Sing	1	flat	1:flat	_
@@ -682,7 +714,7 @@
 6	aux	aux	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 7	Dames	Dames	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=organization-134)|SpaceAfter=No
 8	,	,	PUNCT	,	_	9	punct	9:punct	_
-9	Samoëns	Samoëns	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(place-135)
+9	Samoëns	Samoëns	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(place-135)|XML=</hi>
 10	-	-	PUNCT	:	_	13	punct	13:punct	_
 11	Tel	Tel	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj	Entity=(abstract-117)
 12	:	:	PUNCT	:	_	11	punct	11:punct	_
@@ -724,9 +756,10 @@
 # sent_id = AMALGUM_voyage_morillon-41
 # s_type = decl
 # text = Golf des Gets Tel: +33 4 50 75 87 63
-1	Golf	Golf	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=preparation:77->78|Entity=(abstract-107
+# newpar = item (4 s)
+1	Golf	Golf	PROPN	NNP	Number=Sing	3	nsubj	3:nsubj	Discourse=preparation:77->78|Entity=(abstract-107|XML=<hi rend:::"bold">
 2	des	des	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=abstract-107)
-3	Gets	get	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
+3	Gets	get	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	XML=</hi>
 4	Tel	Tel	PROPN	NNP	Number=Sing	6	nsubj	6:nsubj	Entity=(abstract-117)|SpaceAfter=No
 5	:	:	PUNCT	:	_	4	punct	4:punct	_
 6	+33	+33	NUM	CD	NumForm=Word|NumType=Card	3	dep	3:dep	Discourse=joint:78->62
@@ -786,10 +819,11 @@
 # sent_id = AMALGUM_voyage_morillon-45
 # s_type = frag
 # text = Golf d’Avoriaz, Morzine - Tel: +33 4 50 74 17 08 --
-1	Golf	Golf	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:87->88|Entity=(abstract-107
+# newpar = item (6 s)
+1	Golf	Golf	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:87->88|Entity=(abstract-107|XML=<hi rend:::"bold">
 2	d’Avoriaz	d’Avoriaz	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=abstract-107)|SpaceAfter=No
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
-4	Morzine	Morzine	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(place-144)
+4	Morzine	Morzine	PROPN	NNP	Number=Sing	1	list	1:list	Entity=(place-144)|XML=</hi>
 5	-	-	PUNCT	:	_	8	punct	8:punct	_
 6	Tel	Tel	PROPN	NNP	Number=Sing	8	nsubj	8:nsubj	Entity=(abstract-117)|SpaceAfter=No
 7	:	:	PUNCT	:	_	6	punct	6:punct	_
@@ -858,15 +892,18 @@
 # sent_id = AMALGUM_voyage_morillon-51
 # s_type = frag
 # text = Adventure Activities
+# newpar = head (1 s)
 1	Adventure	adventure	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=joint:98->92|Entity=(abstract-151(event-152)
 2	Activities	Activity	PROPN	NNPS	Number=Plur	0	root	0:root	Entity=abstract-151)
 
 # sent_id = AMALGUM_voyage_morillon-52
 # s_type = frag
 # text = Bureau des Guides, ☏ +33450344312 .
-1	Bureau	Bureau	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:99->92|Entity=(organization-153
+# newpar = list type:::"unordered" (13 s)
+# newpar1 = item (2 s)
+1	Bureau	Bureau	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:99->92|Entity=(organization-153|XML=<hi rend:::"bold">
 2	des	des	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Guides	Guide	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=organization-153)|SpaceAfter=No
+3	Guides	Guide	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=organization-153)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	☏	☏	NOUN	NNS	Number=Plur	1	dep	1:dep	_
 6	+33450344312	+33450344312	NUM	CD	NumForm=Word|NumType=Card	5	flat	5:flat	_
@@ -898,8 +935,9 @@
 # sent_id = AMALGUM_voyage_morillon-54
 # s_type = frag
 # text = Adventures Payraud, ☏ +33450936363 .
-1	Adventures	Adventure	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:101->92|Entity=(person-161
-2	Payraud	Payraud	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-161)|SpaceAfter=No
+# newpar = item (2 s)
+1	Adventures	Adventure	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:101->92|Entity=(person-161|XML=<hi rend:::"bold">
+2	Payraud	Payraud	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-161)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	☏	☏	X	FW	_	1	dep	1:dep	_
 5	+33450936363	+33450936363	NUM	CD	NumForm=Word|NumType=Card	4	flat	4:flat	_
@@ -919,8 +957,9 @@
 # sent_id = AMALGUM_voyage_morillon-56
 # s_type = frag
 # text = Ecolorado Rafting, ☏ +33450344526 .
-1	Ecolorado	Ecolorado	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:103->92|Entity=(object-155(substance-163)
-2	Rafting	Rafting	PROPN	NNP	Number=Sing	0	root	0:root	Entity=object-155)|SpaceAfter=No
+# newpar = item (2 s)
+1	Ecolorado	Ecolorado	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:103->92|Entity=(object-155(substance-163)|XML=<hi rend:::"bold">
+2	Rafting	Rafting	PROPN	NNP	Number=Sing	0	root	0:root	Entity=object-155)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	☏	☏	INTJ	UH	_	2	dep	2:dep	_
 5	+33450344526	+33450344526	NUM	CD	NumForm=Word|NumType=Card	4	flat	4:flat	_
@@ -936,8 +975,9 @@
 # sent_id = AMALGUM_voyage_morillon-58
 # s_type = frag
 # text = Espace Montagne, ☏ +33545218457 .
-1	Espace	Espace	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:105->104|Entity=(abstract-165
-2	Montagne	Montagne	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No
+# newpar = item (2 s)
+1	Espace	Espace	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=elaboration:105->104|Entity=(abstract-165|XML=<hi rend:::"bold">
+2	Montagne	Montagne	PROPN	NNP	Number=Sing	1	flat	1:flat	SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	☏	☏	NUM	CD	NumForm=Word|NumType=Card	2	dep	2:dep	_
 5	+33545218457	+33545218457	NUM	CD	NumForm=Word|NumType=Card	4	flat	4:flat	Entity=abstract-165)
@@ -963,9 +1003,10 @@
 # sent_id = AMALGUM_voyage_morillon-60
 # s_type = frag
 # text = Sixt aventure passion, ☏ +33450341685 .
-1	Sixt	Sixt	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:107->92|Entity=(abstract-167(abstract-168)
+# newpar = item (2 s)
+1	Sixt	Sixt	PROPN	NNP	Number=Sing	3	compound	3:compound	Discourse=joint:107->92|Entity=(abstract-167(abstract-168)|XML=<hi rend:::"bold">
 2	aventure	aventure	NOUN	NN	Number=Sing	3	compound	3:compound	Entity=(event-169)
-3	passion	passion	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-167)|SpaceAfter=No
+3	passion	passion	NOUN	NN	Number=Sing	0	root	0:root	Entity=abstract-167)|SpaceAfter=No|XML=</hi>
 4	,	,	PUNCT	,	_	5	punct	5:punct	_
 5	☏	☏	NOUN	NN	Number=Sing	3	dep	3:dep	Entity=(abstract-170
 6	+33450341685	+33450341685	NUM	CD	NumForm=Word|NumType=Card	5	flat	5:flat	Entity=abstract-170)
@@ -997,8 +1038,9 @@
 # sent_id = AMALGUM_voyage_morillon-62
 # s_type = frag
 # text = Air Samoens, ☏ +33450349580 .
-1	Air	Air	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:109->92|Entity=(abstract-174
-2	Samoens	Samoens	PROPN	NNPS	Number=Plur	1	flat	1:flat	Entity=abstract-174)|SpaceAfter=No
+# newpar = item (2 s)
+1	Air	Air	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:109->92|Entity=(abstract-174|XML=<hi rend:::"bold">
+2	Samoens	Samoens	PROPN	NNPS	Number=Plur	1	flat	1:flat	Entity=abstract-174)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	☏	☏	NOUN	NN	Number=Sing	1	dep	1:dep	_
 5	+33450349580	+33450349580	NUM	CD	NumForm=Word|NumType=Card	4	flat	4:flat	_
@@ -1012,8 +1054,9 @@
 # sent_id = AMALGUM_voyage_morillon-64
 # s_type = frag
 # text = Indiana Parc, ☏ +33450740188 .
-1	Indiana	Indiana	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=elaboration:111->109|Entity=(person-175(place-176)
-2	Parc	Parc	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-175)|SpaceAfter=No
+# newpar = item (1 s)
+1	Indiana	Indiana	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=elaboration:111->109|Entity=(person-175(place-176)|XML=<hi rend:::"bold">
+2	Parc	Parc	PROPN	NNP	Number=Sing	0	root	0:root	Entity=person-175)|SpaceAfter=No|XML=</hi>
 3	,	,	PUNCT	,	_	4	punct	4:punct	_
 4	☏	☏	NOUN	NNS	Number=Plur	2	dep	2:dep	Entity=(abstract-177
 5	+33450740188	+33450740188	NUM	CD	NumForm=Word|NumType=Card	4	flat	4:flat	Entity=abstract-177)
@@ -1022,11 +1065,13 @@
 # sent_id = AMALGUM_voyage_morillon-65
 # s_type = imp
 # text = Buy
+# newpar = head (1 s)
 1	Buy	buy	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:112->92
 
 # sent_id = AMALGUM_voyage_morillon-66
 # s_type = decl
 # text = Being a typical small mountain village there are the rather typical shops:
+# newpar = p (1 s)
 1	Being	be	AUX	VBG	VerbForm=Ger	6	cop	6:cop	Discourse=preparation:113->114
 2	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(place-178
 3	typical	typical	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -1044,7 +1089,9 @@
 # sent_id = AMALGUM_voyage_morillon-67
 # s_type = decl
 # text = Tabac The local newspaper and tobacco shop, also sells items like post cards, maps and souvenirs.
-1	Tabac	Tabac	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Discourse=joint:114->92|Entity=(place-181)
+# newpar = list type:::"unordered" (9 s)
+# newpar1 = item (1 s)
+1	Tabac	Tabac	PROPN	NNP	Number=Sing	10	nsubj	10:nsubj	Discourse=joint:114->92|Entity=(place-181)|XML=<hi rend:::"italic"></hi>
 2	The	the	DET	DT	Definite=Def|PronType=Art	4	det	4:det	Entity=(place-181(organization-182
 3	local	local	ADJ	JJ	Degree=Pos	4	amod	4:amod	_
 4	newspaper	newspaper	NOUN	NN	Number=Sing	1	appos	1:appos	Entity=organization-182)
@@ -1067,8 +1114,9 @@
 # sent_id = AMALGUM_voyage_morillon-68
 # s_type = frag
 # text = Bakery Tiffany
-1	Bakery	bakery	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=joint:116->114|Entity=(organization-189(person-190)
-2	Tiffany	Tiffany	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-189)
+# newpar = item (3 s)
+1	Bakery	bakery	NOUN	NN	Number=Sing	2	compound	2:compound	Discourse=joint:116->114|Entity=(organization-189(person-190)|XML=<hi rend:::"italic">
+2	Tiffany	Tiffany	PROPN	NNP	Number=Sing	0	root	0:root	Entity=organization-189)|XML=</hi>
 
 # sent_id = AMALGUM_voyage_morillon-69
 # s_type = frag
@@ -1101,13 +1149,14 @@
 18	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	_
 19	road	road	NOUN	NN	Number=Sing	12	obl	12:obl:down	_
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	Samoëns	Samoëns	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	Entity=place-195)(place-135)
+21	Samoëns	Samoëns	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	Entity=place-195)(place-135)|XML=<ref target:::"Samo%C3%ABns"></ref>
 
 # sent_id = AMALGUM_voyage_morillon-71
 # s_type = decl
 # text = R.Roux Located in "le Messidor" at the edge of town he is the village butcher, he sells excellent local meat, prepared foods, pizzas, and pastries in the mornings.
-1	R.	R.	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Discourse=joint:120->114|Entity=(person-196|SpaceAfter=No
-2	Roux	Roux	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+# newpar = item (1 s)
+1	R.	R.	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj	Discourse=joint:120->114|Entity=(person-196|SpaceAfter=No|XML=<hi rend:::"italic">
+2	Roux	Roux	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 3	Located	locate	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	1:acl	Discourse=elaboration:121->120
 4	in	in	ADP	IN	_	6	case	6:case	_
 5	"	''	PUNCT	``	_	6	punct	6:punct	SpaceAfter=No
@@ -1146,10 +1195,11 @@
 # sent_id = AMALGUM_voyage_morillon-72
 # s_type = decl
 # text = Kevin's Sports Also located in "le Messidor"
+# newpar = item (2 s)
 1-2	Kevin's	_	_	_	_	_	_	_	_
-1	Kevin	Kevin	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:124->114|Entity=(abstract-205(person-206
+1	Kevin	Kevin	PROPN	NNP	Number=Sing	3	nmod:poss	3:nmod:poss	Discourse=joint:124->114|Entity=(abstract-205(person-206|XML=<hi rend:::"italic">
 2	's	's	PART	POS	_	1	case	1:case	Entity=person-206)
-3	Sports	Sports	PROPN	NNPS	Number=Plur	5	nsubj:pass	5:nsubj:pass	Entity=abstract-205)
+3	Sports	Sports	PROPN	NNPS	Number=Plur	5	nsubj:pass	5:nsubj:pass	Entity=abstract-205)|XML=</hi>
 4	Also	also	ADV	RB	_	5	advmod	5:advmod	_
 5	located	locate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 6	in	in	ADP	IN	_	8	case	8:case	_
@@ -1179,8 +1229,9 @@
 # sent_id = AMALGUM_voyage_morillon-74
 # s_type = decl
 # text = Twinner Sports operated year round by the second local ski hero Phillipe Vernert
-1	Twinner	Twinner	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:126->114|Entity=(abstract-205(person-212)
-2	Sports	Sports	PROPN	NNPS	Number=Plur	3	nsubj:pass	3:nsubj:pass	Entity=abstract-205)
+# newpar = item (2 s)
+1	Twinner	Twinner	PROPN	NNP	Number=Sing	2	compound	2:compound	Discourse=joint:126->114|Entity=(abstract-205(person-212)|XML=<hi rend:::"italic">
+2	Sports	Sports	PROPN	NNPS	Number=Plur	3	nsubj:pass	3:nsubj:pass	Entity=abstract-205)|XML=</hi>
 3	operated	operate	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	Discourse=elaboration:127->126
 4	year	year	NOUN	NN	Number=Sing	5	obl:tmod	5:obl:tmod	Entity=(time-213)
 5	round	round	ADV	RB	Degree=Pos	3	advmod	3:advmod	_
@@ -1217,6 +1268,7 @@
 # sent_id = AMALGUM_voyage_morillon-76
 # s_type = decl
 # text = There is a lively farmers market on Friday mornings in Morillon with local produce, pastries, cheeses, and meats.
+# newpar = p (1 s)
 1	There	there	PRON	EX	_	2	expl	2:expl	Discourse=joint:129->114
 2	is	be	VERB	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	_
 3	a	a	DET	DT	Definite=Ind|PronType=Art	6	det	6:det	Entity=(event-217
@@ -1243,11 +1295,13 @@
 # sent_id = AMALGUM_voyage_morillon-77
 # s_type = imp
 # text = Eat
+# newpar = head (1 s)
 1	Eat	eat	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=joint:130->114
 
 # sent_id = AMALGUM_voyage_morillon-78
 # s_type = frag
 # text = With
+# newpar = p (3 s)
 1	With	with	ADP	IN	_	0	root	0:root	Discourse=sequence:131->130
 
 # sent_id = AMALGUM_voyage_morillon-79
@@ -1293,8 +1347,10 @@
 # sent_id = AMALGUM_voyage_morillon-81
 # s_type = frag
 # text = Le Potet across the river in Verchaix, 10-15€ for entrées
-1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:134->131|Entity=(place-103
-2	Potet	Potet	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+# newpar = list type:::"unordered" (2 s)
+# newpar1 = item (1 s)
+1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:134->131|Entity=(place-103|XML=<hi rend:::"bold">
+2	Potet	Potet	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 3	across	across	ADP	IN	_	5	case	5:case	_
 4	the	the	DET	DT	Definite=Def|PronType=Art	5	det	5:det	Entity=(place-226
 5	river	river	NOUN	NN	Number=Sing	1	nmod	1:nmod:across	Entity=place-226)
@@ -1308,9 +1364,10 @@
 # sent_id = AMALGUM_voyage_morillon-82
 # s_type = decl
 # text = Le Tourne Piere locate a few meters from the center of town, 12-20€ for entrées
-1	Le	Le	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:135->134|Entity=(place-103
+# newpar = item (1 s)
+1	Le	Le	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:135->134|Entity=(place-103|XML=<hi rend:::"bold">
 2	Tourne	Tourne	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-3	Piere	Piere	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-103)
+3	Piere	Piere	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-103)|XML=</hi>
 4	locate	locate	VERB	VBP	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	0	root	0:root	Discourse=joint:136->134
 5	a	a	DET	DT	Definite=Ind|PronType=Art	7	det	7:det	Entity=(object-230
 6	few	few	ADJ	JJ	Degree=Pos	7	amod	7:amod	_
@@ -1328,6 +1385,7 @@
 # sent_id = AMALGUM_voyage_morillon-83
 # s_type = decl
 # text = A wide variety of prepared take away food is also available from R.Roux at the far edge of town and the local Hyper-Markets.
+# newpar = p (1 s)
 1	A	a	DET	DT	Definite=Ind|PronType=Art	3	det	3:det	Discourse=joint:137->134|Entity=(abstract-233
 2	wide	wide	ADJ	JJ	Degree=Pos	3	amod	3:amod	_
 3	variety	variety	NOUN	NN	Number=Sing	11	nsubj	11:nsubj	_
@@ -1357,11 +1415,15 @@
 # sent_id = AMALGUM_voyage_morillon-84
 # s_type = imp
 # text = Drink
+# newpar = head (1 s)
 1	Drink	drink	VERB	VB	Mood=Imp|Person=2|VerbForm=Fin	0	root	0:root	Discourse=attribution:138->139
 
 # sent_id = AMALGUM_voyage_morillon-85
 # s_type = frag
 # text = Bar
+# newpar = list type:::"unordered" (8 s)
+# newpar1 = item (3 s)
+# newpar2 = hi rend:::"bold" (2 s)
 1	Bar	Bar	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:139->134|Entity=(place-237)
 
 # sent_id = AMALGUM_voyage_morillon-86
@@ -1399,14 +1461,15 @@
 24	Current	Current	ADJ	NNP	Number=Sing	25	amod	25:amod	_
 25	Mayor	Mayor	PROPN	NNP	Number=Sing	21	nmod	21:nmod:of	Entity=place-239)person-241)person-241)
 26	(	(	PUNCT	-LRB-	_	27	punct	27:punct	Discourse=elaboration:144->143|SpaceAfter=No
-27	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	6	dep	6:dep	SpaceAfter=No
+27	2006	2006	NUM	CD	NumForm=Digit|NumType=Card	6	dep	6:dep	SpaceAfter=No|XML=<date when:::"2006"></date>
 28	)	)	PUNCT	-RRB-	_	27	punct	27:punct	_
 
 # sent_id = AMALGUM_voyage_morillon-88
 # s_type = decl
 # text = Le Puzze - Located just across from the telecabin this bar is popular with English tourists and serves a limited lunch and dinner menu.
-1	Le	Le	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj|18:nsubj	Discourse=joint:145->139|Entity=(place-103
-2	Puzze	Puzze	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+# newpar = item (1 s)
+1	Le	Le	PROPN	NNP	Number=Sing	13	nsubj	13:nsubj|18:nsubj	Discourse=joint:145->139|Entity=(place-103|XML=<hi rend:::"bold">
+2	Puzze	Puzze	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</hi>
 3	-	-	PUNCT	:	_	4	punct	4:punct	_
 4	Located	locate	VERB	VBN	Tense=Past|VerbForm=Part	1	acl	1:acl	Discourse=elaboration:146->145
 5	just	just	ADV	RB	_	6	advmod	6:advmod	_
@@ -1434,8 +1497,9 @@
 # sent_id = AMALGUM_voyage_morillon-89
 # s_type = frag
 # text = Le Tomawack - The only club in the village.
-1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:148->139|Entity=(place-103
-2	Tomawack	Tomawack	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-103)
+# newpar = item (4 s)
+1	Le	Le	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=joint:148->139|Entity=(place-103|XML=<hi rend:::"bold">
+2	Tomawack	Tomawack	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=place-103)|XML=</hi>
 3	-	-	PUNCT	:	_	6	punct	6:punct	_
 4	The	the	DET	DT	Definite=Def|PronType=Art	6	det	6:det	Entity=(organization-247
 5	only	only	ADJ	JJ	Degree=Pos	6	amod	6:amod	_
@@ -1478,7 +1542,7 @@
 3	operating	operating	NOUN	NN	Number=Sing	4	compound	4:compound	Entity=(abstract-250)
 4	hours	hour	NOUN	NNS	Number=Plur	17	obl	17:obl:with	_
 5	between	between	ADP	IN	_	6	case	6:case	_
-6	12-5am	12-5am	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:between	Entity=(time-251)
+6	12-5am	12-5am	NUM	CD	NumForm=Word|NumType=Card	4	nmod	4:nmod:between	Entity=(time-251)|XML=<time when:::"0500"></time>
 7	on	on	ADP	IN	_	11	case	11:case	_
 8	Friday	Friday	PROPN	NNP	Number=Sing	11	compound	11:compound	Entity=(time-252(time-253)
 9	and	and	CCONJ	CC	_	10	cc	10:cc	_

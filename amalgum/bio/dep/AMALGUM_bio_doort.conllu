@@ -1,7 +1,18 @@
+# meta::id = AMALGUM_bio_doort
+# meta::title = Abraham van der Doort
+# meta::shortTitle = doort
+# meta::type = bio
+# meta::dateCollected = 2019-11-05
+# meta::dateCreated = 2007-05-21
+# meta::dateModified = 2018-04-01
+# meta::sourceURL = https://en.wikipedia.org/wiki/Abraham_van_der_Doort
+# meta::speakerList = none
+# meta::speakerCount = 0
 # newdoc id = AMALGUM_bio_doort
 # sent_id = AMALGUM_bio_doort-1
 # s_type = frag
 # text = Abraham van der Doort
+# newpar = head (1 s)
 1	Abraham	Abraham	PROPN	NNP	Number=Sing	0	root	0:root	Discourse=preparation:1->3|Entity=(person-1
 2	van	van	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	der	der	PROPN	NNP	Number=Sing	1	flat	1:flat	_
@@ -10,36 +21,39 @@
 # sent_id = AMALGUM_bio_doort-2
 # s_type = frag
 # text = Portrait of Abraham van der Doort, by William Dobson.
-1	Portrait	portrait	NOUN	NN	Number=Sing	0	root	0:root	Discourse=elaboration:2->1|Entity=(object-2
+# newpar = figure (1 s)
+# newpar1 = caption (1 s)
+1	Portrait	portrait	NOUN	NN	Number=Sing	0	root	0:root	Discourse=elaboration:2->1|Entity=(object-2|XML=<hi rend:::"italic">
 2	of	of	ADP	IN	_	3	case	3:case	_
 3	Abraham	Abraham	PROPN	NNP	Number=Sing	1	nmod	1:nmod:of	Entity=(person-1
 4	van	van	PROPN	NNP	Number=Sing	3	flat	3:flat	_
 5	der	der	PROPN	NNP	Number=Sing	3	flat	3:flat	_
-6	Doort	Doort	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-1)|SpaceAfter=No
+6	Doort	Doort	PROPN	NNP	Number=Sing	3	flat	3:flat	Entity=person-1)|SpaceAfter=No|XML=</hi>
 7	,	,	PUNCT	,	_	9	punct	9:punct	_
 8	by	by	ADP	IN	_	9	case	9:case	_
-9	William	William	PROPN	NNP	Number=Sing	1	nmod	1:nmod:by	Entity=(person-3
-10	Dobson	Dobson	PROPN	NNP	Number=Sing	9	flat	9:flat	Entity=object-2)person-3)|SpaceAfter=No
+9	William	William	PROPN	NNP	Number=Sing	1	nmod	1:nmod:by	Entity=(person-3|XML=<ref target:::"https://en.wikipedia.org/wiki/William_Dobson">
+10	Dobson	Dobson	PROPN	NNP	Number=Sing	9	flat	9:flat	Entity=object-2)person-3)|SpaceAfter=No|XML=</ref>
 11	.	.	PUNCT	.	_	1	punct	1:punct	_
 
 # sent_id = AMALGUM_bio_doort-3
 # s_type = decl
 # text = Abraham van der Doort (c. 1575/1580? - June 1640) was a Dutch artist.
-1	Abraham	Abraham	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Discourse=ROOT:3|Entity=(person-1
+# newpar = p (2 s)
+1	Abraham	Abraham	PROPN	NNP	Number=Sing	16	nsubj	16:nsubj	Discourse=ROOT:3|Entity=(person-1|XML=<hi rend:::"bold">
 2	van	van	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	der	der	PROPN	NNP	Number=Sing	1	flat	1:flat	_
-4	Doort	Doort	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)
+4	Doort	Doort	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-1)|XML=</hi>
 5	(	(	PUNCT	-LRB-	_	7	punct	7:punct	Discourse=elaboration:4->3|SpaceAfter=No
 6	c.	c.	ADV	FW	Abbr=Yes	7	advmod	7:advmod	Entity=(time-4
 7	1575/1580	1575/1580	NUM	CD	NumForm=Word|NumType=Card	1	parataxis	1:parataxis	SpaceAfter=No
 8	?	?	PUNCT	.	_	7	punct	7:punct	_
 9	-	-	SYM	SYM	_	10	case	10:case	_
-10	June	June	PROPN	NNP	Number=Sing	7	nmod	7:nmod:minus	Entity=(time-5
-11	1640	1640	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:tmod	10:nmod:tmod	Entity=time-4)time-5)(time-6)|SpaceAfter=No
+10	June	June	PROPN	NNP	Number=Sing	7	nmod	7:nmod:minus	Entity=(time-5|XML=<date when:::"1640-06">
+11	1640	1640	NUM	CD	NumForm=Digit|NumType=Card	10	nmod:tmod	10:nmod:tmod	Entity=time-4)time-5)(time-6)|SpaceAfter=No|XML=</date>
 12	)	)	PUNCT	-RRB-	_	7	punct	7:punct	_
 13	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	16	cop	16:cop	Discourse=same_unit:5->3
 14	a	a	DET	DT	Definite=Ind|PronType=Art	16	det	16:det	Entity=(person-1
-15	Dutch	Dutch	ADJ	JJ	Degree=Pos	16	amod	16:amod	_
+15	Dutch	Dutch	ADJ	JJ	Degree=Pos	16	amod	16:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Dutch_people"></ref>
 16	artist	artist	NOUN	NN	Number=Sing	0	root	0:root	Entity=person-1)|SpaceAfter=No
 17	.	.	PUNCT	.	_	16	punct	16:punct	_
 
@@ -49,9 +63,9 @@
 1	As	as	ADP	IN	_	2	case	2:case	Discourse=circumstance:6->7
 2	Keeper	keeper	PROPN	NNP	Number=Sing	14	nmod	14:nmod:as	Entity=(person-7
 3	of	of	ADP	IN	_	8	case	8:case	_
-4	Charles	Charles	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	Entity=(object-8(person-9
+4	Charles	Charles	PROPN	NNP	Number=Sing	8	nmod:poss	8:nmod:poss	Entity=(object-8(person-9|XML=<ref target:::"https://en.wikipedia.org/wiki/Charles_I_of_England">
 5-6	I's	_	_	_	_	_	_	_	_
-5	I	I	NUM	CD	NumForm=Roman|NumType=Card	4	dep	4:dep	_
+5	I	I	NUM	CD	NumForm=Roman|NumType=Card	4	dep	4:dep	XML=</ref>
 6	's	's	PART	POS	_	4	case	4:case	Entity=person-9)
 7	art	art	NOUN	NN	Number=Sing	8	compound	8:compound	Entity=(abstract-10)
 8	collections	collection	NOUN	NNS	Number=Plur	2	nmod	2:nmod:of	Entity=person-7)object-8)|SpaceAfter=No
@@ -60,18 +74,19 @@
 11	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	14	cop	14:cop	_
 12	the	the	DET	DT	Definite=Def|PronType=Art	14	det	14:det	Entity=(person-9
 13	first	first	ADJ	JJ	Degree=Pos|NumType=Ord	14	amod	14:amod	_
-14	Surveyor	Surveyor	PROPN	NNP	Number=Sing	0	root	0:root	_
+14	Surveyor	Surveyor	PROPN	NNP	Number=Sing	0	root	0:root	XML=<ref target:::"https://en.wikipedia.org/wiki/Surveyor_of_the_King's_Pictures">
 15	of	of	ADP	IN	_	19	case	19:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	17	det	17:det	Entity=(object-11
 17-18	King's	_	_	_	_	_	_	_	_
 17	King	King	PROPN	NNP	Number=Sing	19	nmod:poss	19:nmod:poss	Entity=(person-12
 18	's	's	PART	POS	_	17	case	17:case	Entity=person-12)
-19	Pictures	Pictures	PROPN	NNPS	Number=Plur	14	nmod	14:nmod:of	Entity=person-9)object-11)|SpaceAfter=No
+19	Pictures	Pictures	PROPN	NNPS	Number=Plur	14	nmod	14:nmod:of	Entity=person-9)object-11)|SpaceAfter=No|XML=</ref>
 20	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = AMALGUM_bio_doort-5
 # s_type = decl
 # text = Van der Doort's careworn face is familiar from a portrait and engravings held by the National Portrait Gallery in London,[1]
+# newpar = p (9 s)
 1	Van	Van	PROPN	NNP	Number=Sing	6	nmod:poss	6:nmod:poss	Discourse=joint:8->3|Entity=(object-13(person-14
 2	der	der	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3-4	Doort's	_	_	_	_	_	_	_	_
@@ -89,15 +104,15 @@
 14	held	hold	VERB	VBN	Tense=Past|VerbForm=Part	11	acl	11:acl	Discourse=elaboration:9->8
 15	by	by	ADP	IN	_	19	case	19:case	_
 16	the	the	DET	DT	Definite=Def|PronType=Art	19	det	19:det	Entity=(organization-17
-17	National	National	ADJ	NNP	Number=Sing	19	amod	19:amod	_
+17	National	National	ADJ	NNP	Number=Sing	19	amod	19:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/National_Portrait_Gallery_(United_Kingdom)">
 18	Portrait	portrait	PROPN	NNP	Number=Sing	19	compound	19:compound	Entity=(object-2)
-19	Gallery	Gallery	PROPN	NNP	Number=Sing	14	obl	14:obl:by	_
+19	Gallery	Gallery	PROPN	NNP	Number=Sing	14	obl	14:obl:by	XML=</ref>
 20	in	in	ADP	IN	_	21	case	21:case	_
-21	London	London	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	Entity=object-16)organization-17)(place-18)|SpaceAfter=No
+21	London	London	PROPN	NNP	Number=Sing	19	nmod	19:nmod:in	Entity=object-16)organization-17)(place-18)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/London"></ref>
 22	,	,	PUNCT	,	_	24	punct	24:punct	SpaceAfter=No
-23	[	[	PUNCT	-LRB-	_	24	punct	24:punct	Discourse=evidence:10->8|SpaceAfter=No
+23	[	[	PUNCT	-LRB-	_	24	punct	24:punct	Discourse=evidence:10->8|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-1">
 24	1	1	NUM	CD	NumForm=Digit|NumType=Card	8	dep	8:dep	Entity=(abstract-19)|SpaceAfter=No
-25	]	]	PUNCT	-RRB-	_	24	punct	24:punct	_
+25	]	]	PUNCT	-RRB-	_	24	punct	24:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_doort-6
 # s_type = decl
@@ -151,19 +166,19 @@
 17	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	18	aux	18:aux	_
 18	working	work	VERB	VBG	Tense=Pres|VerbForm=Part	7	acl:relcl	7:acl:relcl	_
 19	in	in	ADP	IN	_	20	case	20:case	_
-20	Hamburg	Hamburg	PROPN	NNP	Number=Sing	18	obl	18:obl:in	Entity=(place-25)
+20	Hamburg	Hamburg	PROPN	NNP	Number=Sing	18	obl	18:obl:in	Entity=(place-25)|XML=<ref target:::"https://en.wikipedia.org/wiki/Hamburg"></ref>
 21	in	in	ADP	IN	_	24	case	24:case	_
 22	the	the	DET	DT	Definite=Def|PronType=Art	24	det	24:det	Entity=(time-26
 23	early	early	ADJ	JJ	Degree=Pos	24	amod	24:amod	_
 24	years	year	NOUN	NNS	Number=Plur	18	obl	18:obl:in	_
 25	of	of	ADP	IN	_	28	case	28:case	_
-26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(time-27
+26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(time-27|XML=<date from:::"1600" to:::"1699">
 27	17th	17th	ADJ	JJ	Degree=Pos|NumType=Ord	28	amod	28:amod	_
-28	century	century	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	Entity=time-26)time-27)|SpaceAfter=No
+28	century	century	NOUN	NN	Number=Sing	24	nmod	24:nmod:of	Entity=time-26)time-27)|SpaceAfter=No|XML=</date>
 29	,	,	PUNCT	,	_	31	punct	31:punct	SpaceAfter=No
-30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:15->13|SpaceAfter=No
+30	[	[	PUNCT	-LRB-	_	31	punct	31:punct	Discourse=evidence:15->13|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-2">
 31	2	2	NUM	CD	NumForm=Digit|NumType=Card	5	dep	5:dep	Entity=(abstract-28)|SpaceAfter=No
-32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	_
+32	]	]	PUNCT	-RRB-	_	31	punct	31:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_doort-9
 # s_type = frag
@@ -200,20 +215,20 @@
 5	probably	probably	ADV	RB	Degree=Pos	6	advmod	6:advmod	_
 6	came	come	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 7	to	to	ADP	IN	_	8	case	8:case	_
-8	England	England	PROPN	NNP	Number=Sing	6	obl	6:obl:to	Entity=(place-36)
+8	England	England	PROPN	NNP	Number=Sing	6	obl	6:obl:to	Entity=(place-36)|XML=<ref target:::"https://en.wikipedia.org/wiki/England"></ref>
 9	around	around	ADP	IN	_	10	case	10:case	_
-10	1609	1609	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:around	Entity=(time-37)|SpaceAfter=No
+10	1609	1609	NUM	CD	NumForm=Digit|NumType=Card	6	obl	6:obl:around	Entity=(time-37)|SpaceAfter=No|XML=<date when:::"1609"></date>
 11	,	,	PUNCT	,	_	18	punct	18:punct	_
 12	a	a	DET	DT	Definite=Ind|PronType=Art	14	det	14:det	Entity=(time-26
 13	few	few	ADJ	JJ	Degree=Pos	14	amod	14:amod	_
 14	years	year	NOUN	NNS	Number=Plur	18	obl:tmod	18:obl:tmod	Entity=time-26)
 15	after	after	SCONJ	IN	_	18	mark	18:mark	_
-16	James	James	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj|19:nsubj:xsubj	Entity=(person-38)
-17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	dep	16:dep	Entity=(person-39)
+16	James	James	PROPN	NNP	Number=Sing	18	nsubj	18:nsubj|19:nsubj:xsubj	Entity=(person-38)|XML=<ref target:::"https://en.wikipedia.org/wiki/James_I_of_England">
+17	I	I	PRON	PRP	Case=Nom|Number=Sing|Person=1|PronType=Prs	16	dep	16:dep	Entity=(person-39)|XML=</ref>
 18	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	6	advcl	6:advcl:after	_
-19	King	King	PROPN	NNP	Number=Sing	18	xcomp	18:xcomp	Entity=(person-40
+19	King	King	PROPN	NNP	Number=Sing	18	xcomp	18:xcomp	Entity=(person-40|XML=<ref target:::"https://en.wikipedia.org/wiki/King_of_England">
 20	of	of	ADP	IN	_	21	case	21:case	_
-21	England	England	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=person-40)|SpaceAfter=No
+21	England	England	PROPN	NNP	Number=Sing	19	nmod	19:nmod:of	Entity=person-40)|SpaceAfter=No|XML=</ref>
 22	.	.	PUNCT	.	_	6	punct	6:punct	_
 
 # sent_id = AMALGUM_bio_doort-11
@@ -233,8 +248,8 @@
 11	elder	elder	ADJ	JJR	Degree=Cmp	12	amod	12:amod	_
 12	brother	brother	NOUN	NN	Number=Sing	7	nmod	7:nmod:of	Entity=abstract-41)person-42)|SpaceAfter=No
 13	,	,	PUNCT	,	_	14	punct	14:punct	_
-14	Prince	Prince	PROPN	NNP	Number=Sing	12	appos	12:appos	Entity=(person-42
-15	Henry	Henry	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-42)|SpaceAfter=No
+14	Prince	Prince	PROPN	NNP	Number=Sing	12	appos	12:appos	Entity=(person-42|XML=<ref target:::"https://en.wikipedia.org/wiki/Henry_Frederick_Stuart">
+15	Henry	Henry	PROPN	NNP	Number=Sing	14	flat	14:flat	Entity=person-42)|SpaceAfter=No|XML=</ref>
 16	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_doort-12
@@ -247,7 +262,7 @@
 4	early	early	ADJ	JJ	Degree=Pos	5	amod	5:amod	_
 5	death	death	NOUN	NN	Number=Sing	22	obl	22:obl:after	_
 6	in	in	ADP	IN	_	7	case	7:case	_
-7	1612	1612	NUM	CD	NumForm=Digit|NumType=Card	5	nmod	5:nmod:in	Entity=event-43)(time-44)|SpaceAfter=No
+7	1612	1612	NUM	CD	NumForm=Digit|NumType=Card	5	nmod	5:nmod:in	Entity=event-43)(time-44)|SpaceAfter=No|XML=<date when:::"1612"></date>
 8	,	,	PUNCT	,	_	5	punct	5:punct	_
 9	his	his	PRON	PRP$	Gender=Masc|Number=Sing|Person=3|Poss=Yes|PronType=Prs	10	nmod:poss	10:nmod:poss	Discourse=elaboration:21->19|Entity=(object-45(person-42)
 10	collection	collection	NOUN	NN	Number=Sing	22	nsubj:pass	22:nsubj:pass	_
@@ -259,8 +274,8 @@
 16	coins	coin	NOUN	NNS	Number=Plur	12	conj	10:nmod:of|12:conj:and	Entity=(object-34)
 17	and	and	CCONJ	CC	_	19	cc	19:cc	_
 18	other	other	ADJ	JJ	Degree=Pos	19	amod	19:amod	Entity=(abstract-47
-19	objets	objet	NOUN	NNS	Number=Plur	12	conj	10:nmod:of|12:conj:and	_
-20	d'art	d'art	NOUN	NN	Number=Sing	19	flat	19:flat	Entity=object-45)abstract-47)
+19	objets	objet	NOUN	NNS	Number=Plur	12	conj	10:nmod:of|12:conj:and	XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Objets_d'art">
+20	d'art	d'art	NOUN	NN	Number=Sing	19	flat	19:flat	Entity=object-45)abstract-47)|XML=</ref></hi>
 21	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	22	aux:pass	22:aux:pass	_
 22	inherited	inherit	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 23	by	by	ADP	IN	_	24	case	24:case	_
@@ -291,7 +306,7 @@
 6	as	as	ADP	IN	_	7	case	7:case	_
 7	king	king	NOUN	NN	Number=Sing	3	obl	3:obl:as	Entity=(person-40)
 8	in	in	ADP	IN	_	9	case	9:case	_
-9	1625	1625	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-49)|SpaceAfter=No
+9	1625	1625	NUM	CD	NumForm=Digit|NumType=Card	3	obl	3:obl:in	Entity=(time-49)|SpaceAfter=No|XML=<date when:::"1625"></date>
 10	,	,	PUNCT	,	_	3	punct	3:punct	_
 11	van	van	PROPN	NNP	Number=Sing	14	nsubj	14:nsubj|17:nsubj:xsubj|22:nsubj:xsubj	Discourse=joint:24->21|Entity=(person-14
 12	der	der	PROPN	NNP	Number=Sing	11	flat	11:flat	_
@@ -299,10 +314,10 @@
 14	became	become	VERB	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	0	root	0:root	_
 15	Charles	Charles	PROPN	NNP	Number=Sing	17	nmod:poss	17:nmod:poss	Entity=(person-50(person-51(person-9)|SpaceAfter=No
 16	'	'	SYM	SYM	_	15	case	15:case	_
-17	Groom	Groom	PROPN	NNP	Number=Sing	14	xcomp	14:xcomp	_
+17	Groom	Groom	PROPN	NNP	Number=Sing	14	xcomp	14:xcomp	XML=<ref target:::"https://en.wikipedia.org/wiki/Groom_of_the_Chamber">
 18	of	of	ADP	IN	_	20	case	20:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	20	det	20:det	Entity=(organization-52
-20	Chamber	Chamber	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=person-51)organization-52)|SpaceAfter=No
+20	Chamber	Chamber	PROPN	NNP	Number=Sing	17	nmod	17:nmod:of	Entity=person-51)organization-52)|SpaceAfter=No|XML=</ref>
 21	,	,	PUNCT	,	_	22	punct	22:punct	_
 22	Surveyor	Surveyor	PROPN	NNP	Number=Sing	17	conj	14:xcomp|17:conj	Discourse=elaboration:25->24|Entity=(person-53
 23	of	of	ADP	IN	_	27	case	27:case	_
@@ -318,15 +333,16 @@
 32	coins	coin	NOUN	NNS	Number=Plur	30	obj	30:obj	Entity=object-34)
 33	for	for	ADP	IN	_	36	case	36:case	_
 34	the	the	DET	DT	Definite=Def|PronType=Art	36	det	36:det	Entity=(organization-54
-35	Royal	Royal	ADJ	NNP	Number=Sing	36	amod	36:amod	_
-36	Mint	Mint	PROPN	NNP	Number=Sing	30	obl	30:obl:for	Entity=organization-54)|SpaceAfter=No
+35	Royal	Royal	ADJ	NNP	Number=Sing	36	amod	36:amod	XML=<ref target:::"https://en.wikipedia.org/wiki/Royal_Mint">
+36	Mint	Mint	PROPN	NNP	Number=Sing	30	obl	30:obl:for	Entity=organization-54)|SpaceAfter=No|XML=</ref>
 37	.	.	PUNCT	.	_	14	punct	14:punct	_
 
 # sent_id = AMALGUM_bio_doort-14
 # s_type = decl
 # text = About 1639, van der Doort compiled a manuscript catalogue of the art collection of the King, described by Ellis Waterhouse as "the fullest catalogues of their day in Europe."[3]
+# newpar = p (5 s)
 1	About	about	ADP	IN	_	2	case	2:case	Discourse=elaboration:27->24
-2	1639	1639	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:about	Entity=(time-55)|SpaceAfter=No
+2	1639	1639	NUM	CD	NumForm=Digit|NumType=Card	7	obl	7:obl:about	Entity=(time-55)|SpaceAfter=No|XML=<date when:::"1639"></date>
 3	,	,	PUNCT	,	_	2	punct	2:punct	_
 4	van	van	PROPN	NNP	Number=Sing	7	nsubj	7:nsubj	Entity=(person-14
 5	der	der	PROPN	NNP	Number=Sing	4	flat	4:flat	_
@@ -345,8 +361,8 @@
 18	,	,	PUNCT	,	_	19	punct	19:punct	_
 19	described	describe	VERB	VBN	Tense=Past|VerbForm=Part	7	advcl	7:advcl	Discourse=elaboration:28->27
 20	by	by	ADP	IN	_	21	case	21:case	_
-21	Ellis	Ellis	PROPN	NNP	Number=Sing	19	obl	19:obl:by	Entity=(person-58
-22	Waterhouse	Waterhouse	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=person-58)
+21	Ellis	Ellis	PROPN	NNP	Number=Sing	19	obl	19:obl:by	Entity=(person-58|XML=<ref target:::"https://en.wikipedia.org/wiki/Ellis_Waterhouse">
+22	Waterhouse	Waterhouse	PROPN	NNP	Number=Sing	21	flat	21:flat	Entity=person-58)|XML=</ref>
 23	as	as	ADP	IN	_	27	case	27:case	_
 24	"	''	PUNCT	``	_	27	punct	27:punct	SpaceAfter=No
 25	the	the	DET	DT	Definite=Def|PronType=Art	27	det	27:det	Entity=(object-59
@@ -359,9 +375,9 @@
 32	Europe	Europe	PROPN	NNP	Number=Sing	27	nmod	27:nmod:in	Entity=object-59)(place-61)|SpaceAfter=No
 33	.	.	PUNCT	.	_	27	punct	27:punct	SpaceAfter=No
 34	"	''	PUNCT	''	_	27	punct	27:punct	SpaceAfter=No
-35	[	[	PUNCT	-LRB-	_	36	punct	36:punct	Discourse=evidence:29->27|SpaceAfter=No
+35	[	[	PUNCT	-LRB-	_	36	punct	36:punct	Discourse=evidence:29->27|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-3">
 36	3	3	NUM	CD	NumForm=Digit|NumType=Card	7	dep	7:dep	Entity=(abstract-62)|SpaceAfter=No
-37	]	]	PUNCT	-RRB-	_	36	punct	36:punct	_
+37	]	]	PUNCT	-RRB-	_	36	punct	36:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_doort-15
 # s_type = decl
@@ -377,16 +393,16 @@
 9	was	be	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	10	aux:pass	10:aux:pass	_
 10	preserved	preserve	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	7	acl:relcl	7:acl:relcl	_
 11	by	by	ADP	IN	_	12	case	12:case	_
-12	Elias	Elias	PROPN	NNP	Number=Sing	10	obl	10:obl:by	Entity=(person-63
-13	Ashmole	Ashmole	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-63)
+12	Elias	Elias	PROPN	NNP	Number=Sing	10	obl	10:obl:by	Entity=(person-63|XML=<ref target:::"https://en.wikipedia.org/wiki/Elias_Ashmole">
+13	Ashmole	Ashmole	PROPN	NNP	Number=Sing	12	flat	12:flat	Entity=person-63)|XML=</ref>
 14	and	and	CCONJ	CC	_	17	cc	17:cc	Discourse=joint:32->30
 15	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	17	aux:pass	17:aux:pass	_
 16	now	now	ADV	RB	_	17	advmod	17:advmod	_
 17	held	hold	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	10	conj	7:acl:relcl|10:conj:and	Entity=object-57)
 18	by	by	ADP	IN	_	21	case	21:case	_
 19	the	the	DET	DT	Definite=Def|PronType=Art	21	det	21:det	Entity=(organization-64
-20	Bodleian	Bodleian	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(place-65)
-21	Library	Library	PROPN	NNP	Number=Sing	17	obl	17:obl:by	Entity=organization-64)|SpaceAfter=No
+20	Bodleian	Bodleian	PROPN	NNP	Number=Sing	21	compound	21:compound	Entity=(place-65)|XML=<ref target:::"https://en.wikipedia.org/wiki/Bodleian_Library">
+21	Library	Library	PROPN	NNP	Number=Sing	17	obl	17:obl:by	Entity=organization-64)|SpaceAfter=No|XML=</ref>
 22	,	,	PUNCT	,	_	27	punct	27:punct	_
 23	and	and	CCONJ	CC	_	27	cc	27:cc	Discourse=joint:33->32
 24	in	in	ADP	IN	_	27	case	27:case	_
@@ -434,14 +450,14 @@
 16	and	and	CCONJ	CC	_	19	cc	19:cc	_
 17	English	English	ADJ	JJ	Degree=Pos	18	amod	18:amod	Entity=(person-75(object-76
 18	painting	painting	NOUN	NN	Number=Sing	19	compound	19:compound	Entity=object-76)
-19	virtuosi	virtuosi	NOUN	NN	Number=Sing	13	conj	11:nmod:of|13:conj:and	Entity=abstract-71)abstract-72)person-75)|SpaceAfter=No
+19	virtuosi	virtuosi	NOUN	NN	Number=Sing	13	conj	11:nmod:of|13:conj:and	Entity=abstract-71)abstract-72)person-75)|SpaceAfter=No|XML=<hi rend:::"italic"><ref target:::"https://en.wikipedia.org/wiki/Virtuoso"></ref></hi>
 20	,	,	PUNCT	,	_	6	punct	6:punct	_
 21	Charles	Charles	PROPN	NNP	Number=Sing	23	nsubj	23:nsubj	Discourse=joint:36->35|Entity=(person-9)
 22	had	have	AUX	VBD	Mood=Ind|Number=Sing|Person=3|Tense=Past|VerbForm=Fin	23	aux	23:aux	_
 23	assembled	assemble	VERB	VBN	Tense=Past|VerbForm=Part	0	root	0:root	_
 24	what	what	PRON	WP	PronType=Rel	23	obj	23:obj	_
-25	Oliver	Oliver	PROPN	NNP	Number=Sing	36	nsubj	36:nsubj	Entity=(person-77
-26	Millar	Millar	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=person-77)|SpaceAfter=No
+25	Oliver	Oliver	PROPN	NNP	Number=Sing	36	nsubj	36:nsubj	Entity=(person-77|XML=<ref target:::"https://en.wikipedia.org/wiki/Oliver_Millar">
+26	Millar	Millar	PROPN	NNP	Number=Sing	25	flat	25:flat	Entity=person-77)|SpaceAfter=No|XML=</ref>
 27	,	,	PUNCT	,	_	25	punct	25:punct	_
 28	in	in	SCONJ	IN	_	29	mark	29:mark	_
 29	editing	edit	VERB	VBG	VerbForm=Ger	36	advcl	36:advcl:in	_
@@ -463,16 +479,16 @@
 45	ever	ever	ADV	RB	Degree=Pos	46	advmod	46:advmod	Discourse=elaboration:38->37
 46	made	make	VERB	VBN	Tense=Past|VerbForm=Part	36	ccomp	36:ccomp	SpaceAfter=No
 47	.	.	PUNCT	.	_	23	punct	23:punct	SpaceAfter=No
-48	[	[	PUNCT	-LRB-	_	49	punct	49:punct	Discourse=evidence:39->36|SpaceAfter=No
+48	[	[	PUNCT	-LRB-	_	49	punct	49:punct	Discourse=evidence:39->36|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Main_Page#cite_note-4">
 49	4	4	NUM	CD	NumForm=Digit|NumType=Card	23	dep	23:dep	Entity=(abstract-80)|SpaceAfter=No
-50	]	]	PUNCT	-RRB-	_	49	punct	49:punct	_
+50	]	]	PUNCT	-RRB-	_	49	punct	49:punct	XML=</ref>
 
 # sent_id = AMALGUM_bio_doort-17
 # s_type = decl
 # text = George Vertue's notes on the former Royal Collection were published in 1757, which is the reason that, following its long series of the Vertue notebooks, a collated edition of the four manuscript catalogues was published by the Walpole Society as its Volume 37 (1958–60); it was edited by Millar, who later followed van der Doort as Surveyor of the Queen's Pictures.
-1	George	George	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass	Discourse=joint:40->36|Entity=(person-81
+1	George	George	PROPN	NNP	Number=Sing	4	nsubj:pass	4:nsubj:pass	Discourse=joint:40->36|Entity=(person-81|XML=<ref target:::"https://en.wikipedia.org/wiki/George_Vertue">
 2-3	Vertue's	_	_	_	_	_	_	_	_
-2	Vertue	Vertue	PROPN	NNP	Number=Sing	1	flat	1:flat	_
+2	Vertue	Vertue	PROPN	NNP	Number=Sing	1	flat	1:flat	XML=</ref>
 3	's	's	PART	POS	_	1	case	1:case	Entity=person-81)
 4	notes	note	NOUN	NNS	Number=Plur	11	nsubj:pass	11:nsubj:pass	Entity=(abstract-82
 5	on	on	ADP	IN	_	9	case	9:case	_
@@ -483,7 +499,7 @@
 10	were	be	AUX	VBD	Mood=Ind|Number=Plur|Person=3|Tense=Past|VerbForm=Fin	11	aux:pass	11:aux:pass	_
 11	published	publish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	0	root	0:root	_
 12	in	in	ADP	IN	_	13	case	13:case	_
-13	1757	1757	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	Entity=(time-84)|SpaceAfter=No
+13	1757	1757	NUM	CD	NumForm=Digit|NumType=Card	11	obl	11:obl:in	Entity=(time-84)|SpaceAfter=No|XML=<date when:::"1757"></date>
 14	,	,	PUNCT	,	_	18	punct	18:punct	_
 15	which	which	PRON	WDT	PronType=Int	18	nsubj	18:nsubj	Discourse=preparation:41->44
 16	is	be	AUX	VBZ	Mood=Ind|Number=Sing|Person=3|Tense=Pres|VerbForm=Fin	18	cop	18:cop	_
@@ -512,16 +528,16 @@
 39	published	publish	VERB	VBN	Tense=Past|VerbForm=Part|Voice=Pass	18	acl	18:acl:that	_
 40	by	by	ADP	IN	_	43	case	43:case	_
 41	the	the	DET	DT	Definite=Def|PronType=Art	43	det	43:det	Entity=(organization-89
-42	Walpole	Walpole	PROPN	NNP	Number=Sing	43	compound	43:compound	Entity=(person-90)
-43	Society	Society	PROPN	NNP	Number=Sing	39	obl	39:obl:by	Entity=organization-89)
+42	Walpole	Walpole	PROPN	NNP	Number=Sing	43	compound	43:compound	Entity=(person-90)|XML=<ref target:::"https://en.wikipedia.org/wiki/Walpole_Society">
+43	Society	Society	PROPN	NNP	Number=Sing	39	obl	39:obl:by	Entity=organization-89)|XML=</ref>
 44	as	as	ADP	IN	_	46	case	46:case	_
 45	its	its	PRON	PRP$	Gender=Neut|Number=Sing|Person=3|Poss=Yes|PronType=Prs	46	nmod:poss	46:nmod:poss	Entity=(abstract-91(organization-85)
 46	Volume	Volume	PROPN	NNP	Number=Sing	39	obl	39:obl:as	_
 47	37	37	NUM	CD	NumForm=Digit|NumType=Card	46	dep	46:dep	Entity=abstract-91)
 48	(	(	PUNCT	-LRB-	_	49	punct	49:punct	Discourse=elaboration:45->44|SpaceAfter=No
-49	1958	1958	NUM	CD	NumForm=Digit|NumType=Card	39	dep	39:dep	SpaceAfter=No
+49	1958	1958	NUM	CD	NumForm=Digit|NumType=Card	39	dep	39:dep	SpaceAfter=No|XML=<date when:::"1958"></date>
 50	–	-	SYM	SYM	_	51	case	51:case	SpaceAfter=No
-51	60	60	NUM	CD	NumForm=Digit|NumType=Card	49	nmod	49:nmod:to	Entity=(abstract-92)|SpaceAfter=No
+51	60	60	NUM	CD	NumForm=Digit|NumType=Card	49	nmod	49:nmod:to	Entity=(abstract-92)|SpaceAfter=No|XML=<date when:::"1960"></date>
 52	)	)	PUNCT	-RRB-	_	49	punct	49:punct	Entity=organization-85)|SpaceAfter=No
 53	;	;	PUNCT	:	_	56	punct	56:punct	_
 54	it	it	PRON	PRP	Case=Nom|Gender=Neut|Number=Sing|Person=3|PronType=Prs	56	nsubj:pass	56:nsubj:pass	Discourse=joint:46->44|Entity=(organization-85)
@@ -563,7 +579,7 @@
 12	details	detail	NOUN	NNS	Number=Plur	5	conj	2:obj|5:conj:and	Entity=(abstract-96
 13	of	of	ADP	IN	_	15	case	15:case	_
 14	the	the	DET	DT	Definite=Def|PronType=Art	15	det	15:det	Entity=(abstract-97
-15	provenance	provenance	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	_
+15	provenance	provenance	NOUN	NN	Number=Sing	12	nmod	12:nmod:of	XML=<ref target:::"https://en.wikipedia.org/wiki/Provenance"></ref>
 16	of	of	ADP	IN	_	18	case	18:case	_
 17	the	the	DET	DT	Definite=Def|PronType=Art	18	det	18:det	Entity=(object-11
 18	pictures	picture	NOUN	NNS	Number=Plur	15	nmod	15:nmod:of	SpaceAfter=No
@@ -575,10 +591,10 @@
 24	come	come	VERB	VBN	Tense=Past|VerbForm=Part	18	acl:relcl	18:acl:relcl	_
 25	from	from	ADP	IN	_	28	case	28:case	_
 26	the	the	DET	DT	Definite=Def|PronType=Art	28	det	28:det	Entity=(organization-98
-27	Gonzaga	Gonzaga	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(person-99)
+27	Gonzaga	Gonzaga	PROPN	NNP	Number=Sing	28	compound	28:compound	Entity=(person-99)|XML=<ref target:::"https://en.wikipedia.org/wiki/House_of_Gonzaga"></ref>
 28	inheritance	inheritance	NOUN	NN	Number=Sing	24	obl	24:obl:from	_
 29	in	in	ADP	IN	_	30	case	30:case	_
-30	Mantua	Mantua	PROPN	NNP	Number=Sing	28	nmod	28:nmod:in	Entity=abstract-96)abstract-97)object-11)organization-98)(place-100)|SpaceAfter=No
+30	Mantua	Mantua	PROPN	NNP	Number=Sing	28	nmod	28:nmod:in	Entity=abstract-96)abstract-97)object-11)organization-98)(place-100)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Mantua"></ref>
 31	,	,	PUNCT	,	_	34	punct	34:punct	_
 32	with	with	ADP	IN	_	34	case	34:case	_
 33	a	a	DET	DT	Definite=Ind|PronType=Art	34	det	34:det	Entity=(abstract-101
@@ -595,6 +611,7 @@
 # sent_id = AMALGUM_bio_doort-19
 # s_type = decl
 # text = Van der Doort committed suicide in the summer of 1640, distraught that he may have misplaced one of his master's miniatures.
+# newpar = p (2 s)
 1	Van	Van	PROPN	NNP	Number=Sing	4	nsubj	4:nsubj	Discourse=joint:50->48|Entity=(person-14
 2	der	der	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Doort	Doort	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-14)
@@ -618,7 +635,7 @@
 21-22	master's	_	_	_	_	_	_	_	_
 21	master	master	NOUN	NN	Number=Sing	23	nmod:poss	23:nmod:poss	_
 22	's	's	PART	POS	_	21	case	21:case	Entity=person-108)
-23	miniatures	miniature	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	Entity=object-106)object-107)|SpaceAfter=No
+23	miniatures	miniature	NOUN	NNS	Number=Plur	18	nmod	18:nmod:of	Entity=object-106)object-107)|SpaceAfter=No|XML=<ref target:::"https://en.wikipedia.org/wiki/Portrait_miniature"></ref>
 24	.	.	PUNCT	.	_	4	punct	4:punct	_
 
 # sent_id = AMALGUM_bio_doort-20
@@ -636,7 +653,7 @@
 9	by	by	ADP	IN	_	10	case	10:case	_
 10	auction	auction	NOUN	NN	Number=Sing	8	obl	8:obl:by	Entity=(event-109)
 11	in	in	ADP	IN	_	12	case	12:case	_
-12	1649	1649	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-110)|SpaceAfter=No
+12	1649	1649	NUM	CD	NumForm=Digit|NumType=Card	8	obl	8:obl:in	Entity=(time-110)|SpaceAfter=No|XML=<date when:::"1649"></date>
 13	,	,	PUNCT	,	_	18	punct	18:punct	_
 14	after	after	SCONJ	IN	_	18	mark	18:mark	Discourse=circumstance:55->54
 15	Charles	Charles	PROPN	NNP	Number=Sing	18	nsubj:pass	18:nsubj:pass	Entity=(person-9)
@@ -648,6 +665,7 @@
 # sent_id = AMALGUM_bio_doort-21
 # s_type = decl
 # text = Van der Doort never lost the Dutch accent that is preserved in his copious annotations to the catalogues in his entirely phonetic spelling.
+# newpar = p (1 s)
 1	Van	Van	PROPN	NNP	Number=Sing	5	nsubj	5:nsubj	Discourse=joint:56->53|Entity=(person-14
 2	der	der	PROPN	NNP	Number=Sing	1	flat	1:flat	_
 3	Doort	Doort	PROPN	NNP	Number=Sing	1	flat	1:flat	Entity=person-14)
