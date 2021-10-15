@@ -27,6 +27,7 @@ try:
     from lib.reorder_sgml import reorder
 except ImportError:
     sys.path.append(lib_dir)
+    from reorder_sgml import reorder
 
 TAGS = [
     "sp",
@@ -181,6 +182,17 @@ def tokens2conllu(tokens):
     tl = conllu.TokenList(tokens)
     return tl
 
+def probas2conllu(sentence, sent_probas_labels, new_block):
+    if (new_block):
+        sentence.metadata["newblock"] = "True"
+    for i, token in enumerate(sentence):
+        prob_label = str(sent_probas_labels[i])
+        if (type(token['misc']) is dict):
+                sentence[i]['misc']['probas'] = prob_label
+        else:
+            sentence[i]['misc'] = {'probas': prob_label}
+
+    return sentence
 
 class FlairSentSplitter(NLPModule):
     requires = (PipelineDep.TOKENIZE,)
@@ -270,7 +282,7 @@ class FlairSentSplitter(NLPModule):
         trainer.train(training_dir, learning_rate=0.1, mini_batch_size=16, max_epochs=50)
         self.model = tagger
 
-    def predict(self, tt_sgml, outmode="binary"):
+    def predict(self, tt_sgml, outmode="binary", probas=False):
         def is_tok(sgml_line):
             return len(sgml_line) > 0 and not (sgml_line.startswith("<") and sgml_line.endswith(">"))
 
@@ -325,17 +337,28 @@ class FlairSentSplitter(NLPModule):
             preds = spans
 
         labels = []
+        prob_labels = []
         for idx in final_mapping:
             snum, position = final_mapping[idx]
             if str(flair.__version__).startswith("0.4"):
                 label = 0 if preds[snum].tokens[position].tags["ner"].value == "O" else 1
+                prob_label = preds[snum].tokens[position].tags["ner"].score
+                if label == 0:
+                    prob_label = 1 - prob_label
             else:
                 label = 0 if preds[snum].tokens[position].labels[0].value == "O" else 1
+                prob_label = preds[snum].tokens[position].labels[0].score
+                if label == 0:
+                    prob_label = 1 - prob_label
 
             labels.append(label)
+            prob_labels.append(prob_label)
 
         if outmode == "binary":
-            return labels
+            if probas:
+                return labels, prob_labels
+            else:
+                return labels
 
         # Generate edited XML if desired
         output = []
@@ -358,7 +381,7 @@ class FlairSentSplitter(NLPModule):
 
         return output.strip() + "\n"
 
-    def split(self, context):
+    def split(self, context, probas=False):
         xml_data = context["xml"]
         # Sometimes the tokenizer doesn't newline every elt
         xml_data = xml_data.replace("><", ">\n<")
@@ -374,7 +397,12 @@ class FlairSentSplitter(NLPModule):
         genre = genre[0]
         # don't feed the sentencer our pos and lemma predictions, if we have them
         no_pos_lemma = re.sub(r"([^\n\t]*?)\t[^\n\t]*?\t[^\n\t]*?\n", r"\1\n", xml_data)
-        split_indices = self.predict(no_pos_lemma)
+        result = self.predict(no_pos_lemma, probas=probas)
+        if probas:
+            split_indices = result[0]
+            probas_labels = result[1]
+        else: 
+            split_indices = result
 
         # for xml
         counter = 0
@@ -391,7 +419,10 @@ class FlairSentSplitter(NLPModule):
                         while is_sgml_tag(splitted[rev_counter]):
                             rev_counter -= 1
                         splitted.insert(rev_counter + 1, "</s>")
-                    splitted.append("<s>")
+                    if para:
+                        splitted.append("<s - new block>")
+                    else:
+                        splitted.append("<s>")
                     opened_sent = True
                     para = False
                 counter += 1
@@ -413,16 +444,27 @@ class FlairSentSplitter(NLPModule):
         lines = "\n".join(lines)
         lines = reorder(lines)
 
+        print(lines)
+
         # now, we need to construct the sentences for conllu
         conllu_sentences = []
         tokens = []
         in_sent = False
+        new_block = False
         for i, line in enumerate(lines.strip().split("\n")):
-            if line == "<s>":
+            if line == "<s>" or line == "<s - new block>":
                 in_sent = True
                 if len(tokens) > 0:
-                    conllu_sentences.append(tokens2conllu(tokens))
+                    sentence = tokens2conllu(tokens)
+                    if probas:
+                        sent_probas_labels = probas_labels[:len(tokens)]
+                        probas_labels = probas_labels[len(tokens):]
+                        sentence = probas2conllu(sentence, sent_probas_labels, new_block)
+                    conllu_sentences.append(sentence)
                     tokens = []
+                    new_block = False
+                if line == "<s - new block>":
+                    new_block = True
             elif line == "</s>":
                 in_sent = False
             elif not is_sgml_tag(line):
@@ -431,7 +473,12 @@ class FlairSentSplitter(NLPModule):
                 else:
                     tokens.append(line)
         if len(tokens) > 0:
-            conllu_sentences.append(tokens2conllu(tokens))
+            sentence = tokens2conllu(tokens)
+            if probas:
+                sent_probas_labels = probas_labels[:len(tokens)]
+                probas_labels = probas_labels[len(tokens):]
+                sentence = probas2conllu(sentence, sent_probas_labels, new_block)
+            conllu_sentences.append(sentence)
 
         return {
             "xml": lines,
@@ -461,12 +508,34 @@ if __name__ == "__main__":
         help="output list of binary split indices or TT SGML",
         default="sgml",
     )
+    p.add_argument("-p", "--probas", action="store_true")
 
     opts = p.parse_args()
     sentencer = FlairSentSplitter(config={"LIB_DIR": lib_dir})
     if opts.mode == "train":
         sentencer.train()
     else:
-        sgml = io.open(opts.file, encoding="utf8").read()
-        result = sentencer.predict(sgml, outmode=opts.out_format)
-        print(result)
+        #directory = '/Users/laurenlevine/Documents/AMALGUM/xml_into_conllu/' + opts.file
+        failures = []
+        #for file in os.listdir(directory) :
+        xml_file = '/Users/laurenlevine/Documents/AMALGUM/xml_into_conllu/reddit_xml/AMALGUM_reddit_listen.xml' #+ file
+        print(xml_file)
+        sgml = io.open(xml_file, encoding="utf8").read()
+        #result = sentencer.predict(sgml, outmode=opts.out_format, probas=True)
+        context = {}
+        context['xml'] = sgml
+        #try:
+        result = sentencer.split(context, probas=opts.probas)
+        #conllu_file = opts.file.replace('/xml', '') #
+        conllu_file = file.replace('.xml', '.conllu')
+        conllu_file = '/Users/laurenlevine/Documents/AMALGUM/s_split_probs/reddit/AMALGUM_reddit_listen.xml' # + conllu_file
+        #print(conllu_file)
+        #opts.file.replace('.xml', '.conllu')
+        with open(conllu_file, 'w') as f:
+            # write updated conllu data to new file
+            f.write(result['dep'])
+        #except:
+        #    print("FAILURE in the following file: " + file)
+        #    failures.append(file)
+        print(failures)
+        #print(result['dep'])
