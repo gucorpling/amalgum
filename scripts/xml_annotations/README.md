@@ -30,9 +30,9 @@ The ```add_xml_annotations.py``` file has functions that take an xml file and th
 
 In the updated conllu files, there are two places where you'll find xml annotations. One is as sentence level comments, and the other is as an entry in the misc. column of the tokens. Here is an example of a sentence level comment:
 
-```# newpar = p (4 s)```
+```# newpar = sp who:::"#PsychologicalCable" (36 s) | p (36 s)```
 
-This indicates that there is a ```<p>``` tag opening before the start of the sentence that it is a comment on, and that the tag spans 4 sentences before closing. If a sentence has multiple xml comments, the tags open in the order they appear in the comment from top to bottom, and newpar will have an incrementing integer appended to it (e.g. newpar, newpar1, newpar2, etc.). 
+This comment holds information for 2 different tags, separated by ```|```. This indicates that there is a ```<sp>``` tag opening before the start of the sentence that it is a comment on, that the tag as the attribute ```who=#PsychologicalCable```, and that the tag spans 36 sentences before closing. There is also a ```<p>``` tag following the ```<sp>``` tag that opens before the start of the sentence, and that tag also spans 36 sentences. The information for different tags is separated by ```|```, and the tags open in the order they appear in the comment from left to right.
 
 Here is a sample xml annotation from the misc. column of a token: 
 
