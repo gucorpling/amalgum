@@ -235,11 +235,6 @@ def update_conllu_file(conllu_filepath, updated_conllu_filepath, sentence_level_
 				else:
 					# the tag spans 1 or more sentences
 
-					# generate unique label for the comment
-					newpar_key = 'newpar'
-					if(newpar_num > 0):
-						newpar_key += str(newpar_num)
-
 					# create string of attributes from the tag object
 					attrib_string = ''
 					for attrib in tag['attrib']: 
@@ -254,9 +249,11 @@ def update_conllu_file(conllu_filepath, updated_conllu_filepath, sentence_level_
 						tag_string = tag['text'] + ' ' + attrib_string + '(' + tag_span + ' s)'
 					else:
 						tag_string = tag['text'] + ' (' + tag_span + ' s)'
-					conllu_data[sentence_index].metadata[newpar_key] = tag_string
-					
-					newpar_num += 1
+
+					if("newpar" in conllu_data[sentence_index].metadata):
+						conllu_data[sentence_index].metadata["newpar"] += " | " + tag_string
+					else:	
+						conllu_data[sentence_index].metadata["newpar"] = tag_string
 
 			# add close tags to trailing_xml
 			if (trailing_xml != ''):
@@ -392,26 +389,27 @@ def reconstruct_xml(conllu_filepath, updated_xml_filepath):
 
 			# construct open tag line from the comment
 			if ('newpar' in entry):
-				entry_info = shlex.split(sentence.metadata[entry])
-				tag_name = entry_info[0]
-				tag_span = entry_info[-2][1:]
-				entry_tag = '<' + tag_name
-				tag_attribs = entry_info[1:-2]
-				for attribute in tag_attribs:
-					key, value = attribute.split(":::", 1)
-					entry_tag += ' ' + key + '=\"' + value + '\"'
-				entry_tag += '>'
+				for element_info in sentence.metadata[entry].split(" | "):
+					entry_info = shlex.split(element_info)
+					tag_name = entry_info[0]
+					tag_span = entry_info[-2][1:]
+					entry_tag = '<' + tag_name
+					tag_attribs = entry_info[1:-2]
+					for attribute in tag_attribs:
+						key, value = attribute.split(":::", 1)
+						entry_tag += ' ' + key + '=\"' + value + '\"'
+					entry_tag += '>'
 
-				# store the number of sentences that the tag spans
-				if(int(tag_span) != 0):
-					span_tracker = [[tag_name, int(tag_span)]] + span_tracker
+					# store the number of sentences that the tag spans
+					if(int(tag_span) != 0):
+						span_tracker = [[tag_name, int(tag_span)]] + span_tracker
 
-				# add the line to the xml string
-				xml_string += re.sub(':::', '=', entry_tag) + '\n'
+					# add the line to the xml string
+					xml_string += re.sub(':::', '=', entry_tag) + '\n'
 
-				# close the tag if it doesn't span any sentences
-				if(int(tag_span) == 0):
-					xml_string += '</' + tag_name + '>\n'
+					# close the tag if it doesn't span any sentences
+					if(int(tag_span) == 0):
+						xml_string += '</' + tag_name + '>\n'
 
 			if(entry == 'trailing_xml'):
 				trailing_xml = sentence.metadata[entry]
