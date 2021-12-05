@@ -5,6 +5,7 @@ from enum import Enum
 from glob import glob
 import pmap
 from functools import partial
+from xml_utils import reconstruct_xml
 
 from tqdm import tqdm
 
@@ -221,6 +222,7 @@ class NLPModule(ABC):
                 filepath = os.path.join(subdir, matching_files[0])
                 with io.open(filepath, "r", encoding="utf8") as f:
                     content_dict[subdir.split(os.sep)[-1]] = f.read()
+            content_dict['xml'] = reconstruct_xml(content_dict['depn'])
 
             # run the processing function
             try:
