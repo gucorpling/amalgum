@@ -222,7 +222,7 @@ class NLPModule(ABC):
                 filepath = os.path.join(subdir, matching_files[0])
                 with io.open(filepath, "r", encoding="utf8") as f:
                     content_dict[subdir.split(os.sep)[-1]] = f.read()
-            content_dict['xml'] = reconstruct_xml(content_dict['depn'])
+            content_dict['xml'] = reconstruct_xml(content_dict['dep'])
 
             # run the processing function
             try:
