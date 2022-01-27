@@ -1,3 +1,6 @@
+**Note 2022-01-26**: This code is brittle and you should prefer using [wiki-thresher](https://github.com/lgessler/wiki-thresher) for new scraping.
+Code should remain here for historical purposes.
+
 # Usage
 1. Make sure you've installed the requirements from `../requirements.txt`
 
