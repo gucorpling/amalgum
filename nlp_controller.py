@@ -21,6 +21,7 @@ from nlp_modules.xrenner_coreferencer import XrennerCoref
 from nlp_modules.flair_edu_segmenter import FlairEDUSplitter
 from nlp_modules.rst_parser import RSTParser
 from nlp_modules.datetime_recognizer import DateTimeRecognizer
+from nlp_modules.stanza_tokenizer import StanzaTokenizer
 
 SCRIPT_DIR = os.path.dirname(os.path.realpath(__file__)) + os.sep
 LIB_DIR = SCRIPT_DIR + "lib" + os.sep
@@ -29,6 +30,7 @@ TTG_PATH = "treetagger" + os.sep
 
 MODULES = {
     "tt_tokenizer": TreeTaggerTokenizer,
+    "stanza_tokenizer": StanzaTokenizer,
     "tt_tagger": TreeTaggerTagger,
     "ensemble_tagger": PoSTagger,
     "marmot_tagger": MarmotTagger,
@@ -150,7 +152,8 @@ def main():
         nargs="+",
         choices=MODULES.keys(),
         default=[
-            "tt_tokenizer",
+            # "tt_tokenizer",
+            "stanza_tokenizer",
             "flair_sent_splitter",
             "ensemble_tagger",
             "dep_parser",
