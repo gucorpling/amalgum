@@ -1,6 +1,8 @@
 # AMALGUM v0.2
 
-https://corpling.uis.georgetown.edu/gum/amalgum.html
+AMALGUM is a machine annotated multilayer corpus following the same design and annotation layers as [GUM](https://github.com/amir-zeldes/gum), but substantially larger (around 4M tokens). 
+The goal of this corpus is to close the gap between high quality, richly annotated, but small datasets, and the larger but shallowly annotated corpora that are often scraped from the Web.
+Read more here: https://corpling.uis.georgetown.edu/gum/amalgum.html
 
 ## Download
 
