@@ -40,7 +40,7 @@ def remove_xml(xml_data):
                 if char not in '\n ':
                     idx += 1
                 plain_text += char
-    plain_text = [sent.strip() for sent in plain_text.split('\n\n') if sent]
+    plain_text = [sent.strip() for sent in plain_text.split('\n') if sent]
     return xml_tags, plain_text
 
 
@@ -52,6 +52,15 @@ class StanzaTokenizer(NLPModule):
         self.LIB_DIR = config["LIB_DIR"]
         self.regexxmltag = r"<.*>"
         self.regexxmlunfriendly = r'[&"\'<>]'
+        config = {
+            'processors': 'tokenize,mwt',
+            'lang': 'en',
+            'tokenize_model_path': script_dir + 'tokenize-dependencies'+os.sep+'stanza'+os.sep+'en_gum_tokenizer.pt',
+            'tokenize_no_ssplit': True,
+            'package': 'gum',
+            'use_gpu': True
+        }
+        self.nlp = stanza.Pipeline(**config)
 
     def test_dependencies(self):
          pass
@@ -90,16 +99,7 @@ class StanzaTokenizer(NLPModule):
         # Store xml tags and get plain text
         xml_tags, plain_text = remove_xml(xml_data)
 
-        config = {
-            'processors': 'tokenize,mwt',
-            'lang': 'en',
-            'tokenize_model_path': script_dir+'tokenize-dependencies/en_gum_tokenizer.pt',
-            'tokenize_no_ssplit': True,
-            'package': 'gum',
-            'use_gpu': True
-        }
-        nlp = stanza.Pipeline(**config)
-        doc = nlp(plain_text)
+        doc = self.nlp(plain_text)
         tokenized = [[word.text for word in sentence.words] for sentence in doc.sentences]
 
         char_index = 0
@@ -144,7 +144,7 @@ class StanzaTokenizer(NLPModule):
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
     lib = script_dir + ".." + os.sep + "lib" + os.sep
-    tok = StanzaTokenizer({"LIB_DIR":lib})
+    tok = StanzaTokenizer({"LIB_DIR": lib})
     data = io.open(script_dir + ".." + os.sep + "out_tiny" + os.sep + "autogum_academic_doc000.xml").read()
     tokenized = tok.tokenize(data)
     print(tokenized)
