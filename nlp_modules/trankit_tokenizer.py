@@ -2,7 +2,7 @@ import logging
 import re, os, io
 from base import NLPModule, PipelineDep
 from xml.dom import minidom
-import stanza
+from trankit import Pipeline
 
 script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
 
@@ -44,7 +44,7 @@ def remove_xml(xml_data):
     return xml_tags, plain_text
 
 
-class StanzaTokenizer(NLPModule):
+class TrankitTokenizer(NLPModule):
     requires = ()
     provides = (PipelineDep.TOKENIZE,)
 
@@ -52,18 +52,17 @@ class StanzaTokenizer(NLPModule):
         self.LIB_DIR = config["LIB_DIR"]
         self.regexxmltag = r"<.*>"
         self.regexxmlunfriendly = r'[&"\'<>]'
-        config = {
-            'processors': 'tokenize,mwt',
-            'lang': 'en',
-            'tokenize_model_path': script_dir + 'tokenize-dependencies'+os.sep+'stanza'+os.sep+'en_gum_tokenizer.pt',
-            'tokenize_no_ssplit': True,
-            'package': 'gum',
-            'use_gpu': True
-        }
-        self.nlp = stanza.Pipeline(**config)
+        self.p = Pipeline(lang='customized', cache_dir=script_dir+'tokenize-dependencies'+os.sep+'trankit')
 
     def test_dependencies(self):
-         pass
+        import trankit
+        trankit.verify_customized_pipeline(
+            category='customized',  # pipeline category
+            save_dir=script_dir + 'tokenize-dependencies',  # directory used for saving models in previous steps
+            embedding_name='xlm-roberta-base'
+            # embedding version that we use for training our customized pipeline, by default, it is `xlm-roberta-base`
+        )
+        pass
 
     def tokenize(self, xml_data):
         """Tokenize input XML or plain text into TT SGML format.
@@ -99,8 +98,20 @@ class StanzaTokenizer(NLPModule):
         # Store xml tags and get plain text
         xml_tags, plain_text = remove_xml(xml_data)
 
-        doc = self.nlp(plain_text)
-        tokenized = [[word.text for word in sentence.words] for sentence in doc.sentences]
+        tokenized_doc = [self.p.tokenize(sent, is_sent=True) for sent in plain_text]
+        tokenized = []
+        for s in tokenized_doc:
+            sent = []
+            for i in s['tokens']:
+                token = i['text']
+                if ' ' in token:
+                    token = token.split()
+                    sent.extend(token)
+                else:
+                    sent.append(token)
+            tokenized.append(sent)
+
+        # tokenized = [[i['text'] for i in s['tokens']] for s in tokenized_doc]
 
         char_index = 0
         xml_index = 0
@@ -144,7 +155,7 @@ class StanzaTokenizer(NLPModule):
 if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.realpath(__file__)) + os.sep
     lib = script_dir + ".." + os.sep + "lib" + os.sep
-    tok = StanzaTokenizer({"LIB_DIR": lib})
+    tok = TrankitTokenizer({"LIB_DIR": lib})
     data = io.open(script_dir + ".." + os.sep + "out_tiny" + os.sep + "autogum_academic_doc000.xml").read()
     tokenized = tok.tokenize(data)
     print(tokenized)
