@@ -1,6 +1,9 @@
 import logging
 import re, os, io
-from base import NLPModule, PipelineDep
+try:
+    from .base import NLPModule, PipelineDep
+except:
+    from base import NLPModule, PipelineDep
 from xml.dom import minidom
 from trankit import Pipeline
 
@@ -98,7 +101,7 @@ class TrankitTokenizer(NLPModule):
         # Store xml tags and get plain text
         xml_tags, plain_text = remove_xml(xml_data)
 
-        tokenized_doc = [self.p.tokenize(sent, is_sent=True) for sent in plain_text]
+        tokenized_doc = [self.p.tokenize(sent, is_sent=True) for sent in plain_text if len(sent)>0]
         tokenized = []
         for s in tokenized_doc:
             sent = []
